@@ -311,17 +311,17 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           <div className='max-w-7xl mx-auto text-center'>
 
             <motion.div
-              initial={{ opacity: 0, y: 30 }  } catch (error) {
+              initial={ opacity: 0, y: 30 }  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-              animate={{ opacity: 1, y: 0 }  } catch (error) {
+              animate={ opacity: 1, y: 0 }  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-              transition={{ duration: 0.8 }  } catch (error) {
+              transition={ duration: 0.8 }  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
@@ -348,16 +348,16 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         <section className="relative py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto text-center">
             <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
+              initial={ opacity: 0, y: 30 }
+              animate={ opacity: 1, y: 0 }
+              transition={ duration: 0.8 }
 
         <section className="relative py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto text-center">
             <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
+              initial={ opacity: 0, y: 30 }
+              animate={ opacity: 1, y: 0 }
+              transition={ duration: 0.8 }
 
 "
       <div className="min-h-screen relative z-10">
@@ -387,9 +387,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
           <div className="max - w-7xl mx - auto text - center">;
             <motion.div;
-              initial={{ opacity: 0, coordinate_y: 30 }}
-              animate={{ opacity: 1, coordinate_y: 0 }}
-              transition={{ duration: 0.8 }}
+              initial={ opacity: 0, coordinate_y: 30 }
+              animate={ opacity: 1, coordinate_y: 0 }
+              transition={ duration: 0.8 }
 
               <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12">
                 <div className="bg-gradient-to-br from-cyan-900/50 to-blue-900/50 backdrop-blur-xl rounded-2xl p-6 border border-cyan-500/30">
@@ -999,7 +999,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   onClick={() => {
                     setSearchTerm('');
                     setSelectedCategory('all');
-                  }}
+                  }
                   className='bg-cyan-600 hover:bg-cyan-700 text-white font-semibold py-3 px-6 rounded-xl transition-colors'
 origin/cursor/automate-test-improve-and-merge-code-2533
                     setSelectedCategory('all')
@@ -1013,23 +1013,23 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
           <div className="max-w-4xl mx-auto text-center">
             <motion.div;
-              initial={{ opacity: 0, y: 30 }  } catch (error) {"
+              initial={ opacity: 0, y: 30 }  } catch (error) {"
     console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-              whileInView={{ opacity: 1, y: 0 }  } catch (error) {"
+              whileInView={ opacity: 1, y: 0 }  } catch (error) {"
     console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
   }
 }
 
-              transition={{ duration: 0.8 }  } catch (error) {
+              transition={ duration: 0.8 }  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-              viewport={{ once: true }  } catch (error) {
+              viewport={ once: true }  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
@@ -1054,10 +1054,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
             <motion.div
 
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
+              initial={ opacity: 0, y: 30 }
+              whileInView={ opacity: 1, y: 0 }
+              transition={ duration: 0.8 }
+              viewport={ once: true }
 
                           className="flex - 1 bg - gradient - to - r from - cyan - 600 to - blue - 600 hover:from - cyan - 700 hover:to - blue - 700 text - white font - semibold py - 3 px - 6 rounded - xl transition - all duration - 300 flex items - center justify - center gap - 2 group - hover:scale - 105";
                         >;
@@ -1083,7 +1083,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   on_click={() => {'
                     setSearchTerm (''),'
                     setSelectedCategory ('all');
-                  }}"
+                  }"
                   className="bg - cyan - 600 hover:bg - cyan - 700 text - white font - semibold py - 3 px - 6 rounded - xl transition - colors";
                 >;
                   Clear Filters;
@@ -1097,10 +1097,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
           <div className="max - w-4xl mx - auto text - center">;
             <motion.div;
-              initial={{ opacity: 0, coordinate_y: 30 }}
-              whileInView={{ opacity: 1, coordinate_y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
+              initial={ opacity: 0, coordinate_y: 30 }
+              whileInView={ opacity: 1, coordinate_y: 0 }
+              transition={ duration: 0.8 }
+              viewport={ once: true }
 
                   href={`tel:${contactInfo.mobile}`  } catch (error) {
     console.error("Error:", error);

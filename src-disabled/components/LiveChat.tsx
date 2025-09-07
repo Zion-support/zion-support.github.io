@@ -68,27 +68,27 @@ const LiveChat: React.FC = () => {,
       <motion.button
         onClick={() => setIsOpen(!isOpen)}
         className="fixed bottom-6 right-6 z-50 bg-gradient-to-r from-cyan-400 to-blue-500 text-white p-4 rounded-full shadow-lg hover:from-cyan-500 hover:to-blue-600 transition-all duration-300 group"",
-        whileHover={{ scale: 1.1 }}
-        whileTap={{ scale: 0.95 }}
+        whileHover={ scale: 1.1 }
+        whileTap={ scale: 0.95 }
       >
         <AnimatePresence mode="wait">"
           {isOpen ? (
             <motion.div
               key="close""
-              initial={{ rotate: -90, opacity: 0 }}
-              animate={{ rotate: 0, opacity: 1 }}
-              exit={{ rotate: 90, opacity: 0 }}
-              transition={{ duration: 0.2 }}
+              initial={ rotate: -90, opacity: 0 }
+              animate={ rotate: 0, opacity: 1 }
+              exit={ rotate: 90, opacity: 0 }
+              transition={ duration: 0.2 }
             >
               <X className="w-6 h-6" />"
             </motion.div>
           ) : (
             <motion.div
               key="chat""
-              initial={{ rotate: 90, opacity: 0 }}
-              animate={{ rotate: 0, opacity: 1 }}
-              exit={{ rotate: -90, opacity: 0 }}
-              transition={{ duration: 0.2 }}
+              initial={ rotate: 90, opacity: 0 }
+              animate={ rotate: 0, opacity: 1 }
+              exit={ rotate: -90, opacity: 0 }
+              transition={ duration: 0.2 }
             >
               <MessageCircle className="w-6 h-6" />"
             </motion.div>
@@ -99,8 +99,8 @@ const LiveChat: React.FC = () => {,
         {!isOpen && (
           <motion.div
             className="absolute -top-2 -right-2 bg-red-500 text-white text-xs rounded-full w-6 h-6 flex items-center justify-center"",
-            animate={{ scale: [1, 1.2, 1] }}
-            transition={{ duration: 2, repeat: Infinity }}
+            animate={ scale: [1, 1.2, 1] }
+            transition={ duration: 2, repeat: Infinity }
           >
             1
           </motion.div>
@@ -110,9 +110,9 @@ const LiveChat: React.FC = () => {,
       <AnimatePresence>
         {isOpen && (
           <motion.div
-            initial={{ opacity: 0, y: 20, scale: 0.9 }}
-            animate={{ opacity: 1, y: 0, scale: 1 }}
-            exit={{ opacity: 0, y: 20, scale: 0.9 }}
+            initial={ opacity: 0, y: 20, scale: 0.9 }
+            animate={ opacity: 1, y: 0, scale: 1 }
+            exit={ opacity: 0, y: 20, scale: 0.9 }
 
           >
             {/* Chat Header */}
@@ -135,9 +135,9 @@ const LiveChat: React.FC = () => {,
 
                 <motion.div
                   key={message.id}
-                  initial={{ opacity: 0, y: 10 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.3 }}
+                  initial={ opacity: 0, y: 10 }
+                  animate={ opacity: 1, y: 0 }
+                  transition={ duration: 0.3 }
                   className={`flex ${message.isUser ? 'justify-end' : 'justify-start'}`}`
                 >
                   <div
@@ -150,8 +150,8 @@ const LiveChat: React.FC = () => {,
               ))}
               {isTyping && (
                 <motion.div
-                  initial={{ opacity: 0 }}
-                  animate={{ opacity: 1 }}
+                  initial={ opacity: 0 }
+                  animate={ opacity: 1 }
                   className="flex justify-start""
                 >
 

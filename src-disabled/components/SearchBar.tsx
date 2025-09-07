@@ -54,8 +54,6 @@ import { useOnClickOutside } from '@/hooks/useOnClickOutside';
       })
 
           setSuggestions(data.slice(0, 5)) } else {  const debounced = useDebounce(value, 150)
-  const inputRef = useRef<HTMLInputElement>(null)
-  const containerRef = useRef<HTMLDivElement>(null)
   useEffect(() => {}
     if (!debounced) {}
       setSuggestions([])
@@ -103,7 +101,6 @@ import { slugify } from '@/lib/slugify',;
 import { useDebounce } from '@/hooks/useDebounce',;
 import { useOnClickOutside } from '@/hooks/useOnClickOutside',;
 
-import { useOnClickOutside } from '@/hooks/useOnClickOutside';
 
 /**;
  * SearchBar component props;
@@ -174,13 +171,13 @@ interface SearchBarProps {;
 
         <Input
           ref={inputRef}
-          type="text"
-          id="main-search-input"
-          name="search"
+          type='text'
+          id='main-search-input'
+          name='search'
 
           value={value}
 
-          }}
+          }
 
           onBlur={e => {;
             // Only blur if not clicking on suggestions;
@@ -200,11 +197,11 @@ interface SearchBarProps {;
           }
 
           autoComplete='search';
-          onKeyDown={e => {            if (!focused || suggestions && suggestions.length === 0) {;"
-          className="pl-10 bg-zion-blue border border-zion-blue-light text-white placeholder: text-zion-slate";"
-          aria-autocomplete="list";`
-          aria-activedescendant={highlightedIndex !== -1 ? `suggestion-item-${highlightedIndex}` : undefined}"
-          autoComplete="search";
+          onKeyDown={e => {            if (!focused || suggestions && suggestions.length === 0) {;'
+          className='pl-10 bg-zion-blue border border-zion-blue-light text-white placeholder: text-zion-slate';'
+          aria-autocomplete='list';`
+          aria-activedescendant={highlightedIndex !== -1 ? `suggestion-item-${highlightedIndex}` : undefined}'
+          autoComplete='search';
           onKeyDown={(e) => {;
             if (!focused || suggestions && suggestions.length === 0) {;'
               if (e && e.key === 'Escape') {;
@@ -272,14 +269,14 @@ inputRef.current?.blur();
               default: break;
 
             }
-          }}
+          }
         />
         {value && (
 
-            aria-label="Clear search"
+            aria-label='Clear search'
 
             }
-          }}
+          }
         />;
         {value && (;
 
@@ -293,10 +290,10 @@ inputRef.current?.blur();
 }
 
           <button;
-            aria-label="Clear search""
+            aria-label='Clear search''
           >
-</button>"
-            <X className="h-4 w-4" />"
+</button>'
+            <X className='h-4 w-4' />'
 
           </button>
 pr-12325
@@ -312,7 +309,7 @@ pr-12325
     </div>;
   );
 
-}'"  );
+}''  );
 }
 }
 
@@ -366,8 +363,8 @@ function SearchBar() {}
 
       />;
 
-    </div>;"
-}aria-label="Clear search" > <X className="h-4 w-4" /> </button>) ;"
+    </div>;'
+}aria-label='Clear search' > <X className='h-4 w-4' /> </button>) ;'
 
 }</div> <AutocompleteSuggestionssuggestions= {
   suggestions;
@@ -480,7 +477,7 @@ pr-12325
             e.target.setSelectionRange (
               e.target.value.length,
               e.target.value.length);
-          }}
+          }
           on_blur={e => {}
             // Only blur if not clicking on suggestions;
             const related_target = e.related_target as HTMLElement;
@@ -496,7 +493,7 @@ if (
           }'
           auto_complete='search';
 
-          auto_complete="search";
+          auto_complete='search';
           onKeyDown={(e) => {}
             // Check condition;
 if ( {) {}
@@ -575,13 +572,13 @@ if ( {) {}
               default:;,
                 break }              default: break;
             }
-          }}
+          }
         />;
         {value && (
 
-            aria - label="Clear search";
-          >;"
-            <X className="h - 4 w - 4" />;
+            aria - label='Clear search';
+          >;'
+            <X className='h - 4 w - 4' />;
           </button>)}
       </div>;
       <AutocompleteSuggestions;
@@ -591,8 +588,8 @@ if ( {) {}
             on_click={() => on_change ()}
             <X className='h - 4 w - 4' />          </button>;
 
-            <X className="h - 4 w - 4" />;"
-"
+            <X className='h - 4 w - 4' />;'
+'
 
           </button>)}
 pr-12325
@@ -604,9 +601,9 @@ pr-12325
         list_id = {list_id, }
       />;
     </div>);'
-}/> on_click={';'"
-  () => on_change ('') ";"
-}aria - label="Clear search" > <X className="h - 4 w - 4" /> </button>);
+}/> on_click={';''
+  () => on_change ('') ';'
+}aria - label='Clear search' > <X className='h - 4 w - 4' /> </button>);
 }</div> <AutocompleteSuggestions suggestions= {}
   suggestions;
 }search_term= {}
@@ -619,8 +616,8 @@ pr-12325
   highlighted_index;
 }list_id= {}
   list_id;
-}/> </div>);'"
-}'"  );
+}/> </div>);''
+}''  );
 
 }
 
@@ -637,8 +634,8 @@ pr-12325
 );
 
 }/> onClick={';
-  () => onChange ('') ";
-}aria-label="Clear search" > <X className="h-4 w-4" /> </button>) ;
+  () => onChange ('') ';
+}aria-label='Clear search' > <X className='h-4 w-4' /> </button>) ;
 }</div> <AutocompleteSuggestions suggestions= {;
   suggestions ;
 }searchTerm= {;
@@ -652,4 +649,4 @@ pr-12325
 }listId= {;
   listId ;
 }/> </div>) ;
-}'"
+}''

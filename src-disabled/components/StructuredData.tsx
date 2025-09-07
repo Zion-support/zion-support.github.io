@@ -16,14 +16,14 @@ export const StructuredData = ({ type, data }:,  StructuredDataProps) => {
 <Script
       id="structured-data""
       type="application/ld+json""
-      dangerouslySetInnerHTML={{ __html: getStructuredData() }}
+      dangerouslySetInnerHTML={ __html: getStructuredData() }
     />
   );
 };
 export const OrganizationSchema = () => (
   <StructuredData
     type="Organization""
-    data={{
+    data={
       name: "Zion Tech Group","
       url: "https://ziontechgroup.com","
       logo: "https://ziontechgroup.com/logo.png","
@@ -41,13 +41,13 @@ export const OrganizationSchema = () => (
         "telephone": "+1-555-0123","
         "contactType": "customer service""
       }
-    }}
+    }
   />
 );
 export const WebSiteSchema = () => (
   <StructuredData
     type="WebSite""
-    data={{
+    data={
       name: "Zion Tech Group","
       url: "https://ziontechgroup.com","
       potentialAction: {
@@ -55,6 +55,6 @@ export const WebSiteSchema = () => (
         "target": "https://ziontechgroup.com/search?q={search_term_string}","
         "query-input": "required name=search_term_string""
       }
-    }}
+    }
   />
 );

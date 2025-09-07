@@ -21,10 +21,10 @@ const BlogSection: React.FC = () => {,
   ];
   return (
 
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          viewport={{ once: true }}
+          initial={ opacity: 0, y: 30 }
+          whileInView={ opacity: 1, y: 0 }
+          transition={ duration: 0.8 }
+          viewport={ once: true }
         >
 
           </p>
@@ -32,10 +32,10 @@ const BlogSection: React.FC = () => {,
         {/* Category Filter */}
         <motion.div
 
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          viewport={{ once: true }}
+          initial={ opacity: 0, y: 20 }
+          whileInView={ opacity: 1, y: 0 }
+          transition={ duration: 0.6 }
+          viewport={ once: true }
         >
           {categories.map((category, index) => (
             <button
@@ -56,10 +56,10 @@ const BlogSection: React.FC = () => {,
             <motion.article
               key={post.id}
               className="bg-gray-800/50 backdrop-blur-sm rounded-2xl overflow-hidden hover:bg-gray-800/70 transition-all duration-300 border border-gray-700/50 hover:border-cyan-400/50 group"",
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: index * 0.1 }}
-              viewport={{ once: true }}
+              initial={ opacity: 0, y: 30 }
+              whileInView={ opacity: 1, y: 0 }
+              transition={ duration: 0.6, delay: index * 0.1 }
+              viewport={ once: true }
             >
               <div className="aspect-video bg-gradient-to-br from-cyan-400/20 to-blue-500/20 relative overflow-hidden">"
                 <div className="absolute inset-0 bg-gradient-to-br from-cyan-400/10 to-blue-500/10"></div>"
@@ -95,10 +95,10 @@ const BlogSection: React.FC = () => {,
         {/* View All Posts CTA */}
         <motion.div
 
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.2 }}
-          viewport={{ once: true }}
+          initial={ opacity: 0, y: 20 }
+          whileInView={ opacity: 1, y: 0 }
+          transition={ duration: 0.6, delay: 0.2 }
+          viewport={ once: true }
         >
           <Link to="/blog""
             className="inline-flex items-center bg-gradient-to-r from-cyan-400 to-blue-500 text-black px-8 py-3 rounded-lg font-semibold hover:from-cyan-500 hover:to-blue-600 transition-all duration-300 group"" />,

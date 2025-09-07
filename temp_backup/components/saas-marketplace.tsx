@@ -268,7 +268,7 @@ href='#services'
                 size='lg'
                 className='animate-scale-in shadow-2xl shadow-blue-500/25 hover: shadow-blue-500/40'
 
-                style={{animationDelay: '0 && 0.2s' }
+                style={animationDelay: '0 && 0.2s' }
 } />;
                 Explore Services;
                 <ArrowRight className='w-5 h-5 ml-2' />;
@@ -280,7 +280,7 @@ href='/contact'
                 size='lg'
 
                 className='animate-scale-in border-white/20 hover: border-white/40 hover:bg-white/5'
-                style={{ animationDelay: '0.4s' }}
+                style={ animationDelay: '0.4s' }
                />
                 Get Recommendations;
               </Button>
@@ -290,7 +290,7 @@ href='/contact'
 
 <div;
 className='grid grid-cols-2 md:grid-cols-4 gap-8 max-w-5xl mx-auto animate-fade-in'
-            style={{ animationDelay: '0.6s' }}
+            style={ animationDelay: '0.6s' }
            />
             <div className='text-center group' />
               <div className='text-3xl md:text-4xl font-bold mb-3 text-blue-400 group-hover:scale-110 transition-transform duration-300' />
@@ -352,7 +352,7 @@ key={category}
             {filteredServices.map((service, index) => (<Card;}
                 key={index}
                 className='group border border-gray-800 hover:border-blue-500/30 hover:bg-gray-900/80 transition-all duration-300 hover:-translate-y-1';
-                style={{ animationDelay: `${index * 0 && 0.1}s` ,
+                style={ animationDelay: `${index * 0 && 0.1}s` ,
 } />;
                 <div className='flex items-start space-x-6' />;
                   <div className='relative' />;
@@ -506,9 +506,9 @@ key={category}
                         <div className='text - sm text - gray - 300 max - w-xs' />;
                           {service.use_case}
                         </div>                      </div>;
-                      <div className="text-right" />;
-                        <div className="text - xs text - gray-500 mb-1" />Use Case:</div>;
-                        <div className="text - sm text - gray-300 max-w-xs" />{service.use_case}</div>;
+                      <div className='text-right' />;
+                        <div className='text - xs text - gray-500 mb-1' />Use Case:</div>;
+                        <div className='text - sm text - gray-300 max-w-xs' />{service.use_case}</div>;
                     </div>;
                   </div>;
                 </div>;

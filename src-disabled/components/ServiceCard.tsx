@@ -19,8 +19,8 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
   return (
     <motion.div
       className={`bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow ${className}`}
-      whileHover={{ scale: 1.02 }}
-      whileTap={{ scale: 0.98 }}
+      whileHover={ scale: 1.02 }
+      whileTap={ scale: 0.98 }
     >
       {icon && <div className="text-4xl mb-4">{icon}</div>}
       <h3 className="text-xl font-semibold mb-2 text-gray-900">{title}</h3>

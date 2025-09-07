@@ -125,7 +125,7 @@ function Funnel({ data }: { data: Datum[] }) {
   return (
     <div className="flex flex-col gap-2">
       {data.map((d, i) => (
-        <div key={d.label} className="bg-purple-500 text-white text-sm px-3 py-2 rounded" style={{ width: `${100 - i * 12}%` }}>
+        <div key={d.label} className="bg-purple-500 text-white text-sm px-3 py-2 rounded" style={ width: `${100 - i * 12}%` }>
           {d.label}: {d.value}
         </div>
       ))}

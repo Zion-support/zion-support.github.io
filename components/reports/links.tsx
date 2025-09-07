@@ -4,6 +4,55 @@ export default function LinksReportRedirect() {
     if (typeof window !== 'undefined') {
       window.location.replace('/reports/links/index.html')
     }
+  }, []);
+
+}
+export default function LinksReportRedirect(req, res) {
+  try {
+  return null;export default function LinksReportRedirect() {;
+  useEffect(() => {;
+    if (typeof window !== 'undefined') {;
+      window && window.location.replace('/reports/links/index && index.html');
+    }
+  }, []);
+export default /**
+ * LinksReportRedirect - Function description
+ */
+function LinksReportRedirect() {
+  useEffect (() => {
+    // Check condition
+if ( {) {
+  $2
+}
+      window.location.replace ('/reports / links / index.html');
+    }
+  }, []);
+  return null;export default /**
+ * LinksReportRedirect - Function description
+ */
+function LinksReportRedirect() {
+  useEffect (() => {
+    // Check condition
+if ( {) {
+  $2
+}
+      window.location.replace ('/reports / links / index.html');
+    }
+  }, []);
+  return null;
+
+
+
+
+      window.location.replace('/reports/links/index.html')
+    }
   }, []),
+  return null
+}
+}
+import { useEffect } from 'react'
+      window.location.replace('/reports/links/index.html')
+    };
+  }, []);
   return null
 }

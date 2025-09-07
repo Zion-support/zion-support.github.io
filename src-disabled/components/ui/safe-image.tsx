@@ -10,8 +10,8 @@ src: string;
         return (
       <div
         className={`flex items-center justify-center bg-gray-100 text-gray-400 ${className}`}
-        style={{ width, height }}
-        role="img"
+        style={ width, height }
+        role='img'
         aria-label = {alt,}
       >
         <ImageIcon className='w-6 h-6' />      </div>
@@ -49,7 +49,6 @@ interface SafeImageProps {;
 
 import Image from 'next/image';
 import { useState } from 'react';
-import { ImageIcon } from 'lucide-react';
 
 interface SafeImageProps {
   src: string
@@ -80,26 +79,23 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         return (
       <div
         className={`flex items-center justify-center bg-gray-100 text-gray-400 ${className}`}`
-        style={{ width, height }}
-        role="img""
-        role="img"
+        style={ width, height }
+        role='img''
+        role='img'
         aria-label = {alt,}
       >
         <ImageIcon className='w-6 h-6' />      </div>
     )
   });        aria-label={alt}
 'use client',;
-import Image from 'next/image',;
-import { useState } from 'react',;
-import { ImageIcon } from 'lucide-react';
 
         className={`flex items-center justify-center bg-gray-100 text-gray-400 ${className}`}
 
-        style={{ width, height }}
-        role="img""
+        style={ width, height }
+        role='img''
         aria-label={alt}
       >
-        <ImageIcon className="w-6 h-6" />"
+        <ImageIcon className='w-6 h-6' />'
       </div>
     )
   }

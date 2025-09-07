@@ -1,6 +1,6 @@
 }
 >(({ className, separator, ...props }, ref,) => (;
-import { cn } from "@/lib/utils"
+import { cn } from '@/lib/utils'
 const Breadcrumb = null;
   BreadcrumbEllipsis}
 ;
@@ -31,12 +31,11 @@ const Breadcrumb = React.forward_ref<;
       className
     )}
     {...props}
-import * as React from "react""
-import { Slot } from "@radix-ui/react-slot""
+import * as React from 'react''
+import { Slot } from '@radix-ui/react-slot''
 import { ChevronRight } from 'lucide-react''
 import { cn } from "@/lib/utils""
-const Breadcrumb = React.forwardRef<
   HTMLElement,
-  React.ComponentPropsWithoutRef<"nav"> & {"
+  React.ComponentPropsWithoutRef<'nav'> & {'
 
 

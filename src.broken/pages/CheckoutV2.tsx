@@ -31,7 +31,7 @@ export default function CheckoutV2() {
   const [searchParams] = useSearchParams($2);
   const [items, setItems] = useState<CartItem[]>([]),
   const form = useForm<CheckoutForm>({
-    defaultValues: { name: '', email: '', address: '', city: '', country: '' }}),
+    defaultValues: { name: '', email: '', address: '', city: '', country: '' }),
   const { track } = useFeatureFlags($2);
   useEffect(() => {
     const sku = searchParams.get($2);
@@ -73,12 +73,12 @@ export default function CheckoutV2() {
   },
 
   return (
-    <div className="container max-w-2xl py-10 border-2 border-dashed rounded-md">
-      <h1 className="text-3xl font-bold mb-6">Checkout v2</h1>
-      <div className="grid gap-6">
+    <div className='container max-w-2xl py-10 border-2 border-dashed rounded-md'>
+      <h1 className='text-3xl font-bold mb-6'>Checkout v2</h1>
+      <div className='grid gap-6'>
         <Form {...form}>
-          <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4">
-            <FormField name="name" control={form.control} render={({ field }) => (
+          <form onSubmit={form.handleSubmit(onSubmit)} className='space-y-4'>
+            <FormField name='name' control={form.control} render={({ field }) => (
               <FormItem>
                 <FormLabel>Name</FormLabel>
                 <FormControl>
@@ -87,16 +87,16 @@ export default function CheckoutV2() {
                 <FormMessage />
               </FormItem>
             )} />
-            <FormField name="email" control={form.control} render={({ field }) => (
+            <FormField name='email' control={form.control} render={({ field }) => (
               <FormItem>
                 <FormLabel>Email</FormLabel>
                 <FormControl>
-                  <Input type="email" {...field} />
+                  <Input type='email' {...field} />
                 </FormControl>
                 <FormMessage />
               </FormItem>
             )} />
-            <FormField name="address" control={form.control} render={({ field }) => (
+            <FormField name='address' control={form.control} render={({ field }) => (
               <FormItem>
                 <FormLabel>Address</FormLabel>
                 <FormControl>
@@ -105,7 +105,7 @@ export default function CheckoutV2() {
                 <FormMessage />
               </FormItem>
             )} />
-            <FormField name="city" control={form.control} render={({ field }) => (
+            <FormField name='city' control={form.control} render={({ field }) => (
               <FormItem>
                 <FormLabel>City</FormLabel>
                 <FormControl>
@@ -114,7 +114,7 @@ export default function CheckoutV2() {
                 <FormMessage />
               </FormItem>
             )} />
-            <FormField name="country" control={form.control} render={({ field }) => (
+            <FormField name='country' control={form.control} render={({ field }) => (
               <FormItem>
                 <FormLabel>Country</FormLabel>
                 <FormControl>
@@ -123,12 +123,12 @@ export default function CheckoutV2() {
                 <FormMessage />
               </FormItem>
             )} />
-            <div className="border-t pt-4">
-              <div className="flex justify-between font-semibold mb-4">
+            <div className='border-t pt-4'>
+              <div className='flex justify-between font-semibold mb-4'>
                 <span>Subtotal</span>
                 <span>${subtotal.toFixed(2)}</span>
               </div>
-              <Button className="w-full" type="submit">
+              <Button className='w-full' type='submit'>
                 Pay with Stripe (test)
               </Button>
             </div>
@@ -152,6 +152,6 @@ export default function CheckoutV2() {
 }/> <FormItem> <FormLabel>Country</FormLabel> <FormControl> <Input {
   ...field 
 }/> </FormControl> <FormMessage /> </FormItem>) 
-}/> <div className="border-t pt-4" > <div className="flex justify-between font-semibold mb-4" > <span>Subtotal</span> <span>$ {
+}/> <div className='border-t pt-4' > <div className='flex justify-between font-semibold mb-4' > <span>Subtotal</span> <span>$ {
   subtotal.toFixed (2) 
-}</span> </div> <Button className="w-full" type="submit" > Pay with Stripe (test) </Button> </div> </form> </Form> </div> </div>) 
+}</span> </div> <Button className='w-full' type='submit' > Pay with Stripe (test) </Button> </div> </form> </Form> </div> </div>) 

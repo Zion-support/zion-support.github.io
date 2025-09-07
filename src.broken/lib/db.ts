@@ -29,7 +29,6 @@ async function getList(storeName: string): Promise<any[]> {
 }
 
 async function setList(storeName: string, items: any[]): Promise<void> {
-  const db = await openDB($2);
   return new Promise((resolve, reject) => {
     const tx = db.transaction($2);
     tx.objectStore(storeName).put($2);

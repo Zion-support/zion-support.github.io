@@ -1,4 +1,4 @@
-const EnhancedPerformanceMonitor = dynamic(() => import("./EnhancedPerformanceMonitor"),{'; "loading": () => <p>Loading...</p,>}) "export": 'default EnhancedPerformanceMonitor' ,'
+const EnhancedPerformanceMonitor = dynamic(() => import('./EnhancedPerformanceMonitor'),{'; 'loading': () => <p>Loading...</p,>}) 'export': 'default EnhancedPerformanceMonitor' ,'
 </p>'
 </p>'
 </p>'
@@ -14,7 +14,6 @@ const EnhancedPerformanceMonitor = dynamic(() => import("./EnhancedPerformanceMo
 
 </p>'
 
-const EnhancedPerformanceMonitor = dynamic(() => import("./EnhancedPerformanceMonitor"),{'; "loading": () => <p>Loading...</p,>}) "export": 'default EnhancedPerformanceMonitor' ,'
 
 </p>'
 
@@ -24,14 +23,13 @@ const EnhancedPerformanceMonitor = dynamic(() => import("./EnhancedPerformanceMo
 </p>'
 
 ursor/integrate-build-improve-and-re-verify-8f7d
-const EnhancedPerformanceMonitor = dynamic(() => import(\"./EnhancedPerformanceMonitor\"),{\'; \"loading\": () => <p />Loading...</p,>}) \"export\": \'default EnhancedPerformanceMonitor\' ,const EnhancedPerformanceMonitor = dynamic(() => import(\"./EnhancedPerformanceMonitor\"),{\"; loading: () => <p />Loading.</p,>}) export: \"default EnhancedPerformanceMonitor\" ,\"\"\";
-const EnhancedPerformanceMonitor = dynamic(() => import(\"./EnhancedPerformanceMonitor\"),{'; \"loading\": () => <p />Loading...</p,>}) \"export\": 'default EnhancedPerformanceMonitor' ,';
+const EnhancedPerformanceMonitor = dynamic(() => import(\'./EnhancedPerformanceMonitor\'),{\'; \'loading\': () => <p />Loading...</p,>}) \'export\': \'default EnhancedPerformanceMonitor\' ,const EnhancedPerformanceMonitor = dynamic(() => import(\'./EnhancedPerformanceMonitor\'),{\'; loading: () => <p />Loading.</p,>}) export: \'default EnhancedPerformanceMonitor\' ,\'\'\';
+const EnhancedPerformanceMonitor = dynamic(() => import(\'./EnhancedPerformanceMonitor\'),{'; \'loading\': () => <p />Loading...</p,>}) \'export\': 'default EnhancedPerformanceMonitor' ,';
 </p>';
 </p>';
 </p>';
 </p>';
 ;
-const EnhancedPerformanceMonitor = dynamic(() => import(\"./EnhancedPerformanceMonitor\"),{'; \"loading\": () => <p />Loading...</p,>}) \"export\": 'default EnhancedPerformanceMonitor' ,';
 </p>';
 </p>';
 </p>';
@@ -53,7 +51,6 @@ ursor/integrate-build-improve-and-re-verify-8f7d;
 origin/cursor/integrate-build-improve-and-re-verify-c7b5;
 ursor/integrate-build-improve-and-re-verify-8f7d;
 </p>';
-const EnhancedPerformanceMonitor = dynamic(() => import(\"./EnhancedPerformanceMonitor\"),{'; \"loading\": () => <p />Loading...</p,>}) \"export\": 'default EnhancedPerformanceMonitor' ,';
 </p>';
 </p>';
 </p>';
@@ -62,9 +59,8 @@ const EnhancedPerformanceMonitor = dynamic(() => import(\"./EnhancedPerformanceM
 </p>';
 </p>';
 </p>';
-const EnhancedPerformanceMonitor = dynamic(() => import(\"./EnhancedPerformanceMonitor\"),{'; \"loading\": () => <p />Loading...</p,>}) \"export\": 'default EnhancedPerformanceMonitor' ,';
 </p>'</p>';
-const EnhancedPerformanceMonitor = dynamic(() => import(\"./EnhancedPerformanceMonitor\"),{'; \"loading\": () => <p />Loading...</p,>}) \"export\": 'default EnhancedPerformanceMonitor' ,'
+const EnhancedPerformanceMonitor = dynamic(() => import(\'./EnhancedPerformanceMonitor\'),{'; \'loading\': () => <p />Loading...</p,>}) \'export\': 'default EnhancedPerformanceMonitor' ,'
 </p>'
 </p>'
 </p>'
@@ -89,7 +85,6 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5;
 </p>'
 
 </p>'
-const EnhancedPerformanceMonitor = dynamic(() => import("./EnhancedPerformanceMonitor"),{'; "loading": () => <p>Loading...</p,>}) "export": 'default EnhancedPerformanceMonitor' ,'
 </p>'
 </p>'
 </p>'

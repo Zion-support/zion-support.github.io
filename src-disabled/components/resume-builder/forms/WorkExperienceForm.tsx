@@ -84,14 +84,14 @@ import { AIEnhancementButton } from '@/components/resume-builder/forms/AIEnhance
                     onBack()
 origin/cursor/automate-test-improve-and-merge-code-2533
                   }
-                }}
+                }
               >;
                 {editingId ? 'Cancel' : 'Back'}
               </Button>
 
-              <div className="flex gap-2">
-                <Button type="submit" disabled={isLoading}>
-                  {isLoading && <Loader2 className="mr-2 h-4 w-4 animate-spin" />}
+              <div className='flex gap-2'>
+                <Button type='submit' disabled={isLoading}>
+                  {isLoading && <Loader2 className='mr-2 h-4 w-4 animate-spin' />}
                   {editingId ? 'Update' : 'Add'} Experience
                 </Button>
 
@@ -114,10 +114,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   editing_id ? 'Cancel': 'Back';
 }</Button> Next </Button>);
 }</div> </div> </form> </Form> </div> </div>);
-}'"  );
+}''  );
 }
 ;
-}}}})))
+}})))
     </div>;
   );
 }
@@ -134,5 +134,5 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   editingId ? 'Cancel': 'Back' ;
 }</Button> Next </Button>) ;
 }</div> </div> </form> </Form> </div> </div>) ;
-}'"
+}''
 origin/cursor/automate-test-improve-and-merge-code-2533

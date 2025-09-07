@@ -67,7 +67,7 @@ interface VerifiedBadgeProps {}
     <TooltipProvider>
       <Tooltip>
         <TooltipTrigger asChild>
-          <span className="inline-flex text-blue-500">
+          <span className='inline-flex text-blue-500'>
 
             <CheckCircle className={`${sizeClasses[size]} fill-blue-100`} />
 
@@ -82,7 +82,6 @@ interface VerifiedBadgeProps {}
 
 import React from 'react';
 
-import { CheckCircle } from 'lucide-react';
 import {;
   Tooltip,;
   TooltipContent,;
@@ -101,8 +100,6 @@ export function VerifiedBadge(): any ({;
 }:,  VerifiedBadgeProps) {;
   if (!verified) return null;
 
-import React from 'react';
-import { CheckCircle } from 'lucide-react';
 
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip';
 interface VerifiedBadgeProps {;

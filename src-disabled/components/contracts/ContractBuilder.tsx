@@ -26,7 +26,7 @@ export function ContractBuilder({
   const handleLoadTemplate = null;
           onClose()
 
-        }}
+        }
         talent = {talent,}
         clientName = {clientName,}
         onContractGenerated = {onContractGenerated,}
@@ -233,7 +233,6 @@ import { useState } from "react",
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog",
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs",
 import { Button } from "@/components/ui/button",
-import { Save } from 'lucide-react'
 import { TalentProfile } from "@/types/talent",
 import { ContractForm, ContractFormValues } from "./components/ContractForm",
 import { ContractPreview } from "./components/ContractPreview",
@@ -256,7 +255,6 @@ export function ContractBuilder({
 }: ContractBuilderProps) {
   const [activeTab, setActiveTab] = useState<string>("form"),
   const [generatedContract, setGeneratedContract] = useState<string | null>(null),
-  const [formValues, setFormValues] = useState<ContractFormValues | undefined>(
     undefined
   ),
   const [templateManagerOpen, setTemplateManagerOpen] = useState(false),
@@ -271,14 +269,7 @@ export function ContractBuilder({
     setActiveTab("preview"),
     if (onContractGenerated) {
       onContractGenerated(contract)
-import { useState } from "react",;
-import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog",;
-import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs",;
-import { Button } from "@/components/ui/button",;
 import { Save } from 'lucide-react';
-import { TalentProfile } from "@/types/talent",;
-import { ContractForm, ContractFormValues } from "./components/ContractForm",;
-import { ContractPreview } from "./components/ContractPreview",;
 import { TemplateManager } from "./templates/TemplateManager",;
 import { SmartContractBuilder } from "./SmartContractBuilder",;
 interface ContractBuilderProps {;
@@ -320,7 +311,7 @@ export function ContractBuilder({;
         onClose={() => {;
           setShowSmartContractBuilder(false);
           onClose();
-        }}
+        }
         talent={talent}
         clientName={clientName}
         onContractGenerated={onContractGenerated}

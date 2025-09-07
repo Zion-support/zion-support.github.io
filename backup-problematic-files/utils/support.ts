@@ -30,6 +30,7 @@ export type HelpArticle = {
       heuristicHit = true;
       for (const [kw, _ids] of keywordToArticle.entries()) {
         if (q.includes(kw)) ids.forEach(_(id) => matched.add(id));}
+
     }
   }
 

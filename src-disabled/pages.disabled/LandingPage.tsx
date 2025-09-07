@@ -71,8 +71,6 @@ export default function LandingPage() {
 
 
 export default function LandingPage() {
-  const { t } = useTranslation();
-  const { isRTL } = useLanguage();
 
 
   return (
@@ -130,12 +128,10 @@ import { FeaturesGuideSection } from "@/components/FeaturesGuideSection";
 import { SocialShareSection } from "@/components/SocialShareSection";
 import { useTranslation } from "react-i18next";
 import { useLanguage } from "@/context/LanguageContext";
-import { ArrowRight, Users, Zap, Settings, Search, MessageSquare, Sparkles, BarChart3, Smartphone } from 'lucide-react''
 import { Zap } from 'lucide-react';
 export default function LandingPage() { const { t  } = useTranslation(),
   const { isRTL  } = useLanguage(),
   // Tools and features showcase,
-  const toolsFeatures = [
     {
       title: t("home.tool_ai_matcher"), description: t("home.tool_ai_matcher_desc"),"
       icon: <Sparkles className = "h-6 w-6 text-zion-cyan" />,"
@@ -324,17 +320,11 @@ import { useLanguage } from "@/context/LanguageContext",
 import { ArrowRight, Users, Zap, Settings, Search, MessageSquare, Sparkles, BarChart3, Smartphone } from 'lucide-react'
 
 export default function LandingPage() {
-  const { t } = useTranslation(),
-  const { isRTL } = useLanguage(),
-import { ArrowRight, Users, Zap, Settings, Search, MessageSquare, Sparkles, BarChart3, Smartphone } from 'lucide-react'
-import { Zap } from 'lucide-react';
 
 
 export default function LandingPage() { const { t  } = useTranslation(),
-  const { isRTL  } = useLanguage(),
 
   // Tools and features showcase
-  const toolsFeatures = [
     {
       title: t("home.tool_ai_matcher"),
       description: t("home.tool_ai_matcher_desc"),
@@ -613,7 +603,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     </div>);
 }
 ;
-}}}}})))))]]
+}}})))))]]
       <WaitlistSection />;
       <FloatingCTA />;
     </div>;

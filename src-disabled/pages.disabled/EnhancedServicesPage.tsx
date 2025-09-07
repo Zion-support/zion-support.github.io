@@ -110,7 +110,7 @@ return (
       </motion.div>
 
       {marketStats && (
-        <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.2 }}>
+        <motion.div initial={ opacity: 0, y: 20 } animate={ opacity: 1, y: 0 } transition={ delay: 0.2 }>
           <EnhancedMarketInsights stats={marketStats} />
         </motion.div>
       )}
@@ -136,11 +136,11 @@ return (
 
                   key={item.id}
                   ref={index === services.length - 1 ? lastElementRef : null}
-                  initial={{ opacity: 0, scale: 0.9 }}
-                  animate={{ opacity: 1, scale: 1 }}
-                  exit={{ opacity: 0, scale: 0.9 }}
-                  transition={{ delay: Math.min(index * 0.03, 0.5) }}
-                  whileHover={{ scale: 1.02 }}
+                  initial={ opacity: 0, scale: 0.9 }
+                  animate={ opacity: 1, scale: 1 }
+                  exit={ opacity: 0, scale: 0.9 }
+                  transition={ delay: Math.min(index * 0.03, 0.5) }
+                  whileHover={ scale: 1.02 }
 
                 </motion.div>
               ))}
@@ -152,11 +152,11 @@ return (
         </TabsContent>
       </Tabs>
 
-            initial={{ opacity: 0, scale: 0 }}
-            animate={{ opacity: 1, scale: 1 }}
-            exit={{ opacity: 0, scale: 0 }}
-            whileHover={{ scale: 1.1 }}
-            whileTap={{ scale: 0.9 }}
+            initial={ opacity: 0, scale: 0 }
+            animate={ opacity: 1, scale: 1 }
+            exit={ opacity: 0, scale: 0 }
+            whileHover={ scale: 1.1 }
+            whileTap={ scale: 0.9 }
 
           </motion.button>
         )}

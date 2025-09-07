@@ -1,16 +1,15 @@
-<<<<<<< HEAD
-import React from "react";
-import Head from "next/head";
-import Layout from "../components/layout/Layout";
-import { Satellite, CheckCircle, Globe2 } from "lucide-react";
+import React from 'react';
+import Head from 'next/head';
+import Layout from '../components/layout/Layout';
+import { Satellite, CheckCircle, Globe2 } from 'lucide-react';
 
 const features = [
-  "Mission Control Systems",
-  "Satellite Operations",
-  "Secure Communications",
-  "Earth Observation",
-  "Space Data Analytics",
-  "Mission Planning"
+  'Mission Control Systems',
+  'Satellite Operations',
+  'Secure Communications',
+  'Earth Observation',
+  'Space Data Analytics',
+  'Launch Support'
 ];
 
 export default function SpaceTech() {
@@ -18,8 +17,7 @@ export default function SpaceTech() {
     <Layout>
       <Head>
         <title>Space Technology | Zion Tech Group</title>
-        <meta
-          name="description"
+        <meta name="description"
           content="Space mission control, satellite operations, and secure communications consulting."
         />
         <link rel="canonical" href="https://ziontechgroup.com/space-tech" />
@@ -40,7 +38,7 @@ export default function SpaceTech() {
               <a href="/contact" className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-300">
                 Discuss a Mission
               </a>
-              <a href="/market-pricing" className="px-8 py-4 border border-cyan-500 text-cyan-300 rounded-lg hover:bg-cyan-500 hover:text-white transition-all duration-300">
+              <a href="/market-pricing" className="px-8 py-4 border border-gray-600 text-gray-300 rounded-lg hover:bg-gray-800 transition-all duration-300">
                 See Market Pricing
               </a>
             </div>
@@ -51,61 +49,21 @@ export default function SpaceTech() {
               Capabilities
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-              {features.map((f) => (
-                <div
-                  key={f}
+              {features.map((feature) => (
+                <div key={feature}
                   className="flex items-start gap-3 p-4 rounded-xl bg-black/40 border border-gray-700/60"
                 >
-=======
-import React from 'react';
-import Head from 'next/head';
-import Layout from '../components/layout/Layout';
-import { Satellite, CheckCircle, Globe2 } from 'lucide-react';
-export default function SpaceTechPage() {
-  const features = $2;
-  return (
-    <Layout>
-      <Head>
-        <title>Space Technology | Zion Tech Group</title>
-        <meta name="description" content="Space mission control, satellite operations, and secure communications consulting." />
-        <link rel="canonical" href="https://ziontechgroup.com/space-tech" />
-      </Head>
-      <div className="min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto space-y-12">
-          <header className="text-center">
-            <div className="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-gradient-to-r from-cyan-500 to-purple-600 mb-4">
-              <Satellite className="w-8 h-8 text-white" />
-            </div>
-            <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent mb-4">Space Technology</h1>
-            <p className="text-gray-300 text-lg max-w-3xl mx-auto">Secure, reliable operations for space and earth observation missions.</p>
-            <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4">
-              <a href="/contact" className="px-8 py-4">Discuss a Mission</a>
-              <a href="/market-pricing" className="px-8 py-4">See Market Pricing</a>
-            </div>
-          </header>
-
-          <section>
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 text-center">Capabilities</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-              {features.map((f) => (
-                <div key={f} className="flex items-start gap-3 p-4 rounded-xl bg-black/40 border border-gray-700/60">
->>>>>>> ecc7d9f9794e0ded6a8fec40c9673b04874eb1ff
                   <CheckCircle className="w-5 h-5 text-emerald-400 mt-0.5" />
-                  <span className="text-gray-200">{f}</span>
+                  <span className="text-gray-200">{feature}</span>
                 </div>
               ))}
             </div>
           </section>
 
           <section className="text-center">
-<<<<<<< HEAD
-            <a
-              href="/space-technology"
+            <a href="/space-technology"
               className="inline-flex items-center gap-2 text-cyan-300 hover:text-cyan-200"
             >
-=======
-            <a href="/space-technology" className="inline-flex items-center gap-2 text-cyan-300 hover: text-cyan-200">
->>>>>>> ecc7d9f9794e0ded6a8fec40c9673b04874eb1ff
               <Globe2 className="w-4 h-4" />
               <span>Explore detailed Space Technology offerings</span>
             </a>
@@ -113,10 +71,5 @@ export default function SpaceTechPage() {
         </div>
       </div>
     </Layout>
-<<<<<<< HEAD
   );
 }
-=======
-  )
-}
->>>>>>> ecc7d9f9794e0ded6a8fec40c9673b04874eb1ff

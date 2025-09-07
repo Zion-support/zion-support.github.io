@@ -14,7 +14,6 @@ import { useApiKeys, type ApiKeyScope } from "@/hooks/useApiKeys",;
 import { AlertDialog, AlertDialogAction, AlertDialogCancel, AlertDialogContent, AlertDialogDescription, AlertDialogFooter, AlertDialogHeader, AlertDialogTitle } from "@/components/ui/alert-dialog";
 import CodeBlock from "./CodeBlock";
 export function ApiKeysManager() {
-  const { 
     keys;
     loading;
     newApiKey;
@@ -50,7 +49,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 import CodeBlock from "./CodeBlock",
 export function ApiKeysManager() {
-  const { 
     keys,
     loading, 
     newApiKey,
@@ -61,11 +59,7 @@ export function ApiKeysManager() {
     clearNewApiKey
   } = useApiKeys(),
   const [showCreateDialog, setShowCreateDialog] = useState(false),
-  const [showDeleteConfirm, setShowDeleteConfirm] = useState<string | null>(null),
-  const [showRegenerateConfirm, setShowRegenerateConfirm] = useState<string | null>(null),
   // Create key form state
-  const [keyName, setKeyName] = useState(""),
-  const [selectedScopes, setSelectedScopes] = useState<ApiKeyScope[]>([]),
 
   // Load keys on mount
   useState(() => {
@@ -121,12 +115,10 @@ export function ApiKeysManager() {
     setSelectedScopes([])
   },
 
-  const handleRegenerateKey = async (keyId: string) => {
     await regenerateApiKey(keyId),
     setShowRegenerateConfirm(null)
   },
 
-  const handleRevokeKey = async (keyId: string) => {
     await revokeApiKey(keyId),
     setShowDeleteConfirm(null)
   },
@@ -205,8 +197,6 @@ export function ApiKeysManager() {
                           id={scope.value} 
 import { useState } from "react",;
 import { Check, Clock, Key, MoreVertical, RefreshCw, X } from 'lucide-react';
-import { format } from "date-fns",;
-import { useApiKeys, type ApiKeyScope } from "@/hooks/useApiKeys",;
 import { Button } from "@/components/ui/button",;
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",;
 import { Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog",;
@@ -254,18 +244,15 @@ export function ApiKeysManager() {;
     setShowRegenerateConfirm(null);  useState(() => {;
     fetchApiKeys();
   });
-  const handleCreateKey = async () => {;
     if (keyName && keyName.trim() === "" || selectedScopes && selectedScopes.length === 0) return;
     await createApiKey(keyName, selectedScopes);
     setShowCreateDialog(false);
   -H "Content-Type: application/json"``
   };
   // Reset form when dialog closes
-  const handleDialogClose = () => {
     setKeyName("");,
     setSelectedScopes([]);
   };
-  const handleRegenerateKey = async (keyId:,  string) => {;,
     await regenerateApiKey(keyId);
     setShowRegenerateConfirm(null);
   const handleRevokeKey = async (keyId:,  string) => {;,
@@ -289,7 +276,6 @@ export function ApiKeysManager() {;
   useState(() => {;
     fetchApiKeys();
   }),;
-  const handleCreateKey = async () => {;
     if (keyName.trim() === "" || selectedScopes.length === 0) return,;
     await createApiKey(keyName, selectedScopes),;
     setShowCreateDialog(false),;
@@ -350,7 +336,6 @@ export function ApiKeysManager() {;
     setKeyName('');  -H "Content-Type: application/json"`;`
   };
   // Reset form when dialog closes;
-  const handleDialogClose = () => {;
     setKeyName('');
     setShowCreateDialog(false);
   };
@@ -381,7 +366,6 @@ export function ApiKeysManager() {;
   -H "Content-Type: application/json"`;
   },;
   // Reset form when dialog closes;
-  const handleDialogClose = () => {;
     setKeyName(""),;
     setSelectedScopes([]);
     setShowCreateDialog(false);
@@ -458,32 +442,24 @@ export function ApiKeysManager() {;
     await revokeApiKey(keyId)
     setShowDeleteConfirm(null)
   }
-  const handleRegenerateKey = async (keyId: string,) => {
     clearNewApiKey
   } = useApiKeys(),
   ,
-  const [showCreateDialog, setShowCreateDialog] = useState(false),
-  const [showDeleteConfirm, setShowDeleteConfirm] = useState<string | null>(null),
-  const [showRegenerateConfirm, setShowRegenerateConfirm] = useState<string | null>(null),
   // Create key form state
   const [keyName, setKeyName] = useState(""),",
-  const [selectedScopes, setSelectedScopes] = useState<ApiKeyScope[]>([]),
   // Load keys on mount
   useState(() => {
     fetchApiKeys()
   }),
-  const handleCreateKey = async () => {
     if (keyName.trim() === "" || selectedScopes.length === 0) return,"
     await createApiKey(keyName, selectedScopes),
     setShowCreateDialog(false),
     setKeyName(""),",
     setSelectedScopes([])
   },
-  const handleRegenerateKey = async (keyId:,  string) => {,
     await regenerateApiKey(keyId),
     setShowRegenerateConfirm(null)
   },
-  const handleRevokeKey = async (keyId:,  string) => {,
     await revokeApiKey(keyId),
     setShowDeleteConfirm(null)
   }
@@ -1386,8 +1362,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                           id={scope.value} 
                           checked={selectedScopes.includes(scope.value)}
 
-  const [showDeleteConfirm, setShowDeleteConfirm] = useState<string | null>(null),
-  const [showRegenerateConfirm, setShowRegenerateConfirm] = useState<string | null>(null),
 
                   <Label>Scopes"
                   <div className="grid gap-2 pt-2">"
@@ -1916,7 +1890,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         </AlertDialogContent>;
       </AlertDialog>;
 ;
-}}}}}}}}}}}})))))))))))))))
+}}}}}})))))))))))))))
     </Card>;
   );
 }

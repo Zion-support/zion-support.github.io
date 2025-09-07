@@ -61,8 +61,8 @@ export function MarketplaceErrorBoundary({ children }:,  MarketplaceErrorBoundar
             className='w-full'          >
             Reload Page
           </Button>
-        </div>            variant="outline"
-            className="w-full"
+        </div>            variant='outline'
+            className='w-full'
 import {ErrorBoundary, FallbackProps} from 'react-error-boundary';
 import * as Sentry from '@sentry/nextjs';
 import { mutate } from 'swr';
@@ -77,7 +77,7 @@ import { Alert, AlertDescription, AlertTitle } from '@/components/ui/alert';
 }
     </ErrorBoundary>);
 }
-}}}}}}}
+}}}}
 import React from 'react',;
 import { ErrorBoundary, FallbackProps } from 'react-error-boundary',;
 import * as Sentry from '@sentry/nextjs',;
@@ -103,28 +103,28 @@ function MarketplaceErrorFallback({ error, resetErrorBoundary }: MarketplaceErro
   },
 
   return (
-    <div className="flex items-center justify-center min-h-[400px] p-6">
-      <div className="max-w-md w-full space-y-4">
-        <Alert variant="destructive">
-          <AlertCircle className="h-4 w-4" />
+    <div className='flex items-center justify-center min-h-[400px] p-6'>
+      <div className='max-w-md w-full space-y-4'>
+        <Alert variant='destructive'>
+          <AlertCircle className='h-4 w-4' />
           <AlertTitle>Something went wrong in the marketplace</AlertTitle>
-          <AlertDescription className="mt-2">
+          <AlertDescription className='mt-2'>
             {error?.message || 'An unexpected error occurred while loading marketplace content.'}
           </AlertDescription>
         </Alert>
-        <div className="flex flex-col space-y-2">
+        <div className='flex flex-col space-y-2'>
           <Button 
             onClick={handleRetry}
-            className="w-full"
-            variant="default"
+            className='w-full'
+            variant='default'
           >
-            <RefreshCcw className="mr-2 h-4 w-4" />
+            <RefreshCcw className='mr-2 h-4 w-4' />
             Retry
           </Button>
           <Button 
             onClick={() => window.location.reload()}
-            variant="outline"
-            className="w-full"
+            variant='outline'
+            className='w-full'
           >
             Reload Page
           </Button>
@@ -135,16 +135,16 @@ function MarketplaceErrorFallback({ error, resetErrorBoundary }: MarketplaceErro
           <a
             href='mailto:support@example.com'
             className='text-primary hover:underline'          >
-        <div className="text-center text-sm text-muted-foreground">
+        <div className='text-center text-sm text-muted-foreground'>
           If the problem persists, please{' '}
           <a
-            href="mailto: support@example.com"
-            className="text-primary hover:underline"
-        <div className="text-center text-sm text-muted-foreground">
+            href='mailto: support@example.com'
+            className='text-primary hover:underline'
+        <div className='text-center text-sm text-muted-foreground'>
           If the problem persists, please{' '}
           <a 
-            href="mailto: support@example.com" 
-            className="text-primary hover:underline"
+            href='mailto: support@example.com' 
+            className='text-primary hover:underline'
           >
             contact support
           </Link>
@@ -188,37 +188,37 @@ export function MarketplaceErrorBoundary({
 }
   },;
   return (;
-    <div className="flex items-center justify-center min-h-[400px] p-6">;
-      <div className="max-w-md w-full space-y-4">;
-        <Alert variant="destructive">;
-          <AlertCircle className="h-4 w-4" />;
+    <div className='flex items-center justify-center min-h-[400px] p-6'>;
+      <div className='max-w-md w-full space-y-4'>;
+        <Alert variant='destructive'>;
+          <AlertCircle className='h-4 w-4' />;
           <AlertTitle>Something went wrong in the marketplace</AlertTitle>;
-          <AlertDescription className="mt-2">;
+          <AlertDescription className='mt-2'>;
             {error?.message || 'An unexpected error occurred while loading marketplace content.'}
           </AlertDescription>;
         </Alert>;
-        <div className="flex flex-col space-y-2">;
+        <div className='flex flex-col space-y-2'>;
           <Button;
             onClick={handleRetry}
-            className="w-full";
-            variant="default";
+            className='w-full';
+            variant='default';
           >;
-            <RefreshCcw className="mr-2 h-4 w-4" />;
+            <RefreshCcw className='mr-2 h-4 w-4' />;
             Retry;
           </Button>;
           <Button;
             onClick={() => window.location.reload()}
-            variant="outline";
-            className="w-full";
+            variant='outline';
+            className='w-full';
           >;
             Reload Page;
           </Button>;
         </div>;
-        <div className="text-center text-sm text-muted-foreground">;
+        <div className='text-center text-sm text-muted-foreground'>;
           If the problem persists, please{' '}
           <a;
-            href="mailto: support@example.com";
-            className="text-primary hover:underline";
+            href='mailto: support@example.com';
+            className='text-primary hover:underline';
           >;
             contact support;
           </a>;
@@ -263,7 +263,7 @@ export function MarketplaceErrorBoundary({ children }: MarketplaceErrorBoundaryP
 }
 origin/cursor/automate-test-improve-and-merge-code-2533
             contact support;
-    </div>"
+    </div>'
     <div className='flex items - center justify - center min - h-[400px] p - 6'>;
       <div className='max - w-md w - full space - y-4'>;
         <Alert variant='destructive'>;
@@ -281,19 +281,19 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           <Button;
             on_click={() => window.location.reload ()}
 
-        </div>            variant="outline";"
-        </div>;"
+        </div>            variant='outline';'
+        </div>;'
         <div className='text - center text - sm text - muted - foreground'>;
           <a;
             href='mailto:support@example.com';
             className='text - primary hover:underline'          >;
-        <div className="text - center text - sm text - muted - foreground">;"
-            href="mailto: support@example.com";""
-            className="text - primary hover:underline";"
+        <div className='text - center text - sm text - muted - foreground'>;'
+            href='mailto: support@example.com';''
+            className='text - primary hover:underline';'
           </a>;
         </div>;
     </div>);
-    );"
+    );'
     <div className='flex items-center justify-center min-h-[400px] p-6'>;
       <div className='max-w-md w-full space-y-4'>;
 
@@ -304,15 +304,15 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     <ErrorBoundary;
   },;
   return (;
-    <div className="flex items-center justify-center min-h-[400px] p-6">;"
-      <div className="max-w-md w-full space-y-4">;"
-        <Alert variant="destructive">;"
-          <AlertCircle className="h-4 w-4" />;"
+    <div className='flex items-center justify-center min-h-[400px] p-6'>;'
+      <div className='max-w-md w-full space-y-4'>;'
+        <Alert variant='destructive'>;'
+          <AlertCircle className='h-4 w-4' />;'
 
-          <AlertTitle>Something went wrong in the marketplace;"
-          <AlertDescription className="mt-2">;"
+          <AlertTitle>Something went wrong in the marketplace;'
+          <AlertDescription className='mt-2'>;'
 
-        ;"
+        ;'
         <div className='flex flex-col space-y-2'>;
           <Button onClick={handleRetry} className='w-full' variant='default'>;
 
@@ -324,8 +324,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         <div className='text-center text-sm text-muted-foreground'>;
             href='mailto:support@example && example.com
             className='text-primary hover:underline'>        ;
-        <div className="text-center text-sm text-muted-foreground">;"
-            href="mailto: support@example && example.com"""
+        <div className='text-center text-sm text-muted-foreground'>;'
+            href='mailto: support@example && example.com'''
       FallbackComponent={MarketplaceErrorFallback}
       onError={handleError}>;
 

@@ -7,7 +7,7 @@ interface ScreenReaderOnlyProps {
 const ScreenReaderOnly: React.FC<ScreenReaderOnlyProps> = ({ children }) => {
   return (
     <span
-      style={{
+      style={
         position: 'absolute',
         width: '1px',
         height: '1px',
@@ -17,7 +17,7 @@ const ScreenReaderOnly: React.FC<ScreenReaderOnlyProps> = ({ children }) => {
         clip: 'rect(0, 0, 0, 0)',
         whiteSpace: 'nowrap',
         border: '0'
-      }}
+      }
     >
       {children}
     </span>

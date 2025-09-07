@@ -11,14 +11,14 @@ interface SkeletonProps {
   return (
     <motion.div
       className={`bg-gray-700/50 ${height} ${width} ${rounded ? 'rounded' : ''} ${className}`}`
-      animate={{,
+      animate={,
         opacity: [0.5, 1, 0.5],
-      }}
-      transition={{
+      }
+      transition={
         duration: 1.5,
         repeat: Infinity,
 
-      }}
+      }
     />
   );
 };

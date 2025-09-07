@@ -54,8 +54,8 @@ const PerformancePage: React.FC = () => {
       status: 'completed'
     }
         { name: 'Uptime', value: '99.97%', status: 'excellent', trend: '+0.1%'   } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error('Error:', error);
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
       ]
@@ -67,8 +67,8 @@ const PerformancePage: React.FC = () => {
         { name: 'Memory Usage', value: '67%', status: 'good', trend: '+3%' },
         { name: 'Disk I/O', value: '45 MB/s', status: 'excellent', trend: '+18%' },
         { name: 'Network', value: '1.2 GB/s', status: 'good', trend: '+7%'   } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error('Error:', error);
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
       ]
@@ -80,14 +80,14 @@ const PerformancePage: React.FC = () => {
         { name: 'Core Web Vitals', value: '98/100', status: 'excellent', trend: '+5%' },
         { name: 'Accessibility Score', value: '96/100', status: 'excellent', trend: '+2%' },
         { name: 'SEO Score', value: '94/100', status: 'excellent', trend: '+3%'   } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error('Error:', error);
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
       ]
       } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error('Error:', error);
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
   ];
@@ -113,8 +113,8 @@ const PerformancePage: React.FC = () => {
       summary: 'Stress testing results under high traffic conditions',
       status: 'completed'
       } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error('Error:', error);
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
   ];
@@ -131,55 +131,55 @@ const PerformancePage: React.FC = () => {
     return trend.startsWith('+') ? 'text-green-400' : 'text-red-400';
   }
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-gray-900 text-white">
+    <div className='min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-gray-900 text-white'>
       <Head>
         <title>Performance Reports - bolt.new.zion.app</title>
-        <meta name="description" content="Comprehensive performance metrics and system analytics" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name='description' content='Comprehensive performance metrics and system analytics' />
+        <meta name='viewport' content='width=device-width, initial-scale=1' />
       </Head>
-      <div className="container mx-auto px-4 py-8">
+      <div className='container mx-auto px-4 py-8'>
         {/* Header */}
-        <div className="mb-8">
-          <Link href="/" className="text-cyan-400 hover:text-cyan-300 transition-colors">
+        <div className='mb-8'>
+          <Link href='/' className='text-cyan-400 hover:text-cyan-300 transition-colors'>
             ← Back to Home
           </Link>
-          <h1 className="text-4xl font-bold mt-4 mb-2 bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">
+          <h1 className='text-4xl font-bold mt-4 mb-2 bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent'>
             Performance Reports
           </h1>
-          <p className="text-gray-300 text-lg">
+          <p className='text-gray-300 text-lg'>
             Real-time system performance metrics and analytics dashboard
           </p>
         </div>
         {/* Performance Overview */}
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-8">
-          <div className="bg-white/10 rounded-xl p-6 border border-white/20">
-            <h3 className="text-xl font-semibold mb-4 text-cyan-400">Overall Score</h3>
-            <div className="text-4xl font-bold text-green-400">96.8</div>
-            <p className="text-gray-300 text-sm mt-2">Performance Index</p>
+        <div className='grid grid-cols-1 lg:grid-cols-3 gap-6 mb-8'>
+          <div className='bg-white/10 rounded-xl p-6 border border-white/20'>
+            <h3 className='text-xl font-semibold mb-4 text-cyan-400'>Overall Score</h3>
+            <div className='text-4xl font-bold text-green-400'>96.8</div>
+            <p className='text-gray-300 text-sm mt-2'>Performance Index</p>
           </div>
-          <div className="bg-white/10 rounded-xl p-6 border border-white/20">
-            <h3 className="text-xl font-semibold mb-4 text-cyan-400">Status</h3>
-            <div className="text-2xl font-bold text-green-400">Healthy</div>
-            <p className="text-gray-300 text-sm mt-2">All systems operational</p>
+          <div className='bg-white/10 rounded-xl p-6 border border-white/20'>
+            <h3 className='text-xl font-semibold mb-4 text-cyan-400'>Status</h3>
+            <div className='text-2xl font-bold text-green-400'>Healthy</div>
+            <p className='text-gray-300 text-sm mt-2'>All systems operational</p>
           </div>
-          <div className="bg-white/10 rounded-xl p-6 border border-white/20">
-            <h3 className="text-xl font-semibold mb-4 text-cyan-400">Last Updated</h3>
-            <div className="text-2xl font-bold text-blue-400">2 min ago</div>
-            <p className="text-gray-300 text-sm mt-2">Real-time monitoring</p>
+          <div className='bg-white/10 rounded-xl p-6 border border-white/20'>
+            <h3 className='text-xl font-semibold mb-4 text-cyan-400'>Last Updated</h3>
+            <div className='text-2xl font-bold text-blue-400'>2 min ago</div>
+            <p className='text-gray-300 text-sm mt-2'>Real-time monitoring</p>
           </div>
         </div>
         {/* Performance Metrics */}
-        <div className="mb-8">
-          <h2 className="text-2xl font-bold mb-6 text-white">Performance Metrics</h2>
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
+        <div className='mb-8'>
+          <h2 className='text-2xl font-bold mb-6 text-white'>Performance Metrics</h2>
+          <div className='grid grid-cols-1 lg:grid-cols-3 gap-6'>
             {performanceMetrics.map((section, sectionIndex) => (
-              <div key={sectionIndex} className="bg-white/10 rounded-xl p-6 border border-white/20">
-                <h3 className="text-xl font-semibold mb-4 text-cyan-400">{section.category}</h3>
-                <div className="space-y-4">
+              <div key={sectionIndex} className='bg-white/10 rounded-xl p-6 border border-white/20'>
+                <h3 className='text-xl font-semibold mb-4 text-cyan-400'>{section.category}</h3>
+                <div className='space-y-4'>
                   {section.metrics.map((metric, metricIndex) => (
-                    <div key={metricIndex} className="flex justify-between items-center">
-                      <span className="text-gray-300">{metric.name}</span>
-                      <div className="flex items-center space-x-3">
+                    <div key={metricIndex} className='flex justify-between items-center'>
+                      <span className='text-gray-300'>{metric.name}</span>
+                      <div className='flex items-center space-x-3'>
                         <span className={`font-semibold ${getStatusColor(metric.status)}`}>
                           {metric.value}
                         </span>
@@ -195,23 +195,23 @@ const PerformancePage: React.FC = () => {
           </div>
         </div>
         {/* Recent Reports */}
-        <div className="mb-8">
-          <h2 className="text-2xl font-bold mb-6 text-white">Recent Reports</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className='mb-8'>
+          <h2 className='text-2xl font-bold mb-6 text-white'>Recent Reports</h2>
+          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>
             {recentReports.map((report) => (
-              <div key={report.id} className="bg-white/10 rounded-xl p-6 border border-white/20 hover:border-cyan-400/30 transition-all duration-300">
-                <div className="flex justify-between items-start mb-4">
-                  <h3 className="text-lg font-semibold text-white">{report.title}</h3>
-                  <span className="px-2 py-1 bg-green-500/20 text-green-400 text-xs rounded-full">
+              <div key={report.id} className='bg-white/10 rounded-xl p-6 border border-white/20 hover:border-cyan-400/30 transition-all duration-300'>
+                <div className='flex justify-between items-start mb-4'>
+                  <h3 className='text-lg font-semibold text-white'>{report.title}</h3>
+                  <span className='px-2 py-1 bg-green-500/20 text-green-400 text-xs rounded-full'>
                     {report.status}
                   </span>
                 </div>
-                <p className="text-gray-300 text-sm mb-4">{report.summary}</p>
-                <div className="flex justify-between items-center">
-                  <span className="text-gray-400 text-sm">{report.date}</span>
+                <p className='text-gray-300 text-sm mb-4'>{report.summary}</p>
+                <div className='flex justify-between items-center'>
+                  <span className='text-gray-400 text-sm'>{report.date}</span>
                   <Link
                     href={`/reports/${report.id}`}
-                    className="text-cyan-400 hover:text-cyan-300 text-sm transition-colors"
+                    className='text-cyan-400 hover:text-cyan-300 text-sm transition-colors'
                   >
                     View Report →
                   </Link>
@@ -221,54 +221,54 @@ const PerformancePage: React.FC = () => {
           </div>
         </div>
         {/* Performance Trends */}
-        <div className="mb-8">
-          <h2 className="text-2xl font-bold mb-6 text-white">Performance Trends</h2>
-          <div className="bg-white/10 rounded-xl p-8 border border-white/20">
-            <div className="text-center">
-              <div className="text-6xl font-bold text-cyan-400 mb-4">📈</div>
-              <h3 className="text-xl font-semibold mb-2 text-white">Continuous Improvement</h3>
-              <p className="text-gray-300 mb-6">
+        <div className='mb-8'>
+          <h2 className='text-2xl font-bold mb-6 text-white'>Performance Trends</h2>
+          <div className='bg-white/10 rounded-xl p-8 border border-white/20'>
+            <div className='text-center'>
+              <div className='text-6xl font-bold text-cyan-400 mb-4'>📈</div>
+              <h3 className='text-xl font-semibold mb-2 text-white'>Continuous Improvement</h3>
+              <p className='text-gray-300 mb-6'>
                 Our automated systems continuously monitor and optimize performance
                 ensuring consistent improvement across all metrics.
               </p>
-              <div className="grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
+              <div className='grid grid-cols-2 md:grid-cols-4 gap-4 text-center'>
                 <div>
-                  <div className="text-2xl font-bold text-green-400">+15%</div>
-                  <div className="text-gray-400 text-sm">Avg Response Time</div>
+                  <div className='text-2xl font-bold text-green-400'>+15%</div>
+                  <div className='text-gray-400 text-sm'>Avg Response Time</div>
                 </div>
                 <div>
-                  <div className="text-2xl font-bold text-green-400">+8%</div>
-                  <div className="text-gray-400 text-sm">Throughput</div>
+                  <div className='text-2xl font-bold text-green-400'>+8%</div>
+                  <div className='text-gray-400 text-sm'>Throughput</div>
                 </div>
                 <div>
-                  <div className="text-2xl font-bold text-green-400">+12%</div>
-                  <div className="text-gray-400 text-sm">User Experience</div>
+                  <div className='text-2xl font-bold text-green-400'>+12%</div>
+                  <div className='text-gray-400 text-sm'>User Experience</div>
                 </div>
                 <div>
-                  <div className="text-2xl font-bold text-green-400">+5%</div>
-                  <div className="text-gray-400 text-sm">Efficiency</div>
+                  <div className='text-2xl font-bold text-green-400'>+5%</div>
+                  <div className='text-gray-400 text-sm'>Efficiency</div>
                 </div>
               </div>
             </div>
           </div>
         </div>
         {/* Navigation */}
-        <div className="flex flex-wrap gap-4 justify-center">
+        <div className='flex flex-wrap gap-4 justify-center'>
           <Link
-            href="/reports"
-            className="px-6 py-3 bg-white/10 hover:bg-white/20 border border-white/20 rounded-lg text-white transition-all duration-200 hover:border-cyan-400/50"
+            href='/reports'
+            className='px-6 py-3 bg-white/10 hover:bg-white/20 border border-white/20 rounded-lg text-white transition-all duration-200 hover:border-cyan-400/50'
           >
             All Reports
           </Link>
           <Link
-            href="/reports/updates"
-            className="px-6 py-3 bg-white/10 hover:bg-white/20 border border-white/20 rounded-lg text-white transition-all duration-200 hover:border-blue-400/50"
+            href='/reports/updates'
+            className='px-6 py-3 bg-white/10 hover:bg-white/20 border border-white/20 rounded-lg text-white transition-all duration-200 hover:border-blue-400/50'
           >
             Recent Updates
           </Link>
           <Link
-            href="/automation-health"
-            className="px-6 py-3 bg-white/10 hover:bg-white/20 border border-white/20 rounded-lg text-white transition-all duration-200 hover:border-green-400/50"
+            href='/automation-health'
+            className='px-6 py-3 bg-white/10 hover:bg-white/20 border border-white/20 rounded-lg text-white transition-all duration-200 hover:border-green-400/50'
           >
             System Health
           </Link>

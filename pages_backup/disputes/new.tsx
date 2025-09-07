@@ -98,8 +98,8 @@ const REASONS = [
           headers: { 'Content-Type': 'application/json' },;
           body: JSON.stringify({ files: filePayload })});
         } catch (error) {}
-    console.error("Error:", error);"
-    return res.status(500).json({ error: "Internal server error" });
+    console.error('Error:', error);'
+    return res.status(500).json({ error: 'Internal server error' });
 
   const [talentUserId, setTalentUserId] = useState(talentId || '');
 const [clientUserId, setClientUserId] = useState(
@@ -163,37 +163,37 @@ body: JSON.stringify({ files: filePayload }),
   return (
 
           <div>
-            <label className="block text-sm font-medium">Project ID</label>
+            <label className='block text-sm font-medium'>Project ID</label>
 
-            <input value={projectId} onChange={e => setProjectId(e.target.value)} required className="mt-1 w-full border rounded px-3 py-2 bg-white dark:bg-black" />
-          </div>"
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-            <div>"
-              <label className="block text-sm font-medium">Client User ID</label>"
-              <input value={clientUserId} onChange={e => setClientUserId(e.target.value)} required className="mt-1 w-full border rounded px-3 py-2 bg-white dark:bg-black" />
+            <input value={projectId} onChange={e => setProjectId(e.target.value)} required className='mt-1 w-full border rounded px-3 py-2 bg-white dark:bg-black' />
+          </div>'
+          <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>
+            <div>'
+              <label className='block text-sm font-medium'>Client User ID</label>'
+              <input value={clientUserId} onChange={e => setClientUserId(e.target.value)} required className='mt-1 w-full border rounded px-3 py-2 bg-white dark:bg-black' />
             </div>
-            <div>"
-              <label className="block text-sm font-medium">Talent User ID</label>"
-              <input value={talentUserId} onChange={e => setTalentUserId(e.target.value)} required className="mt-1 w-full border rounded px-3 py-2 bg-white dark:bg-black" />
+            <div>'
+              <label className='block text-sm font-medium'>Talent User ID</label>'
+              <input value={talentUserId} onChange={e => setTalentUserId(e.target.value)} required className='mt-1 w-full border rounded px-3 py-2 bg-white dark:bg-black' />
             </div>
           </div>
-          <div>"
-            <label className="block text-sm font-medium">Reason</label>"
-            <select value={reason} onChange={e => setReason(e.target.value as ReasonType)} className="mt-1 w-full border rounded px-3 py-2 bg-white dark:bg-black">
-              {REASONS.map(r => (<option key={r} value={r}>{r}</option>))  } catch (error) {"
-    console.error("Error:", error);"
-    return res.status(500).json({ error: "Internal server error" });
+          <div>'
+            <label className='block text-sm font-medium'>Reason</label>'
+            <select value={reason} onChange={e => setReason(e.target.value as ReasonType)} className='mt-1 w-full border rounded px-3 py-2 bg-white dark:bg-black'>
+              {REASONS.map(r => (<option key={r} value={r}>{r}</option>))  } catch (error) {'
+    console.error('Error:', error);'
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
             </select>
           </div>
-          <div>"
-            <label className="block text-sm font-medium">Reason Details (optional)</label>"
-            <input value={reasonDetails} onChange={e => setReasonDetails(e.target.value)} className="mt-1 w-full border rounded px-3 py-2 bg-white dark:bg-black" />
+          <div>'
+            <label className='block text-sm font-medium'>Reason Details (optional)</label>'
+            <input value={reasonDetails} onChange={e => setReasonDetails(e.target.value)} className='mt-1 w-full border rounded px-3 py-2 bg-white dark:bg-black' />
           </div>
-          <div>"
-            <label className="block text-sm font-medium">Description</label>"
-            <textarea value={description} onChange={e => setDescription(e.target.value)} required rows={5} className="mt-1 w-full border rounded px-3 py-2 bg-white dark:bg-black" />
+          <div>'
+            <label className='block text-sm font-medium'>Description</label>'
+            <textarea value={description} onChange={e => setDescription(e.target.value)} required rows={5} className='mt-1 w-full border rounded px-3 py-2 bg-white dark:bg-black' />
           </div>
           <div>'
             <label className='block text-sm font-medium'>Attachments</label>
@@ -202,12 +202,12 @@ body: JSON.stringify({ files: filePayload }),
               multiple;
               onChange={e => setFiles(Array.from(e.target.files |[]))}'
               className='mt-1'
-            />"
-            <label className="block text-sm font-medium">Attachments</label>"
-            <input type="file" multiple onChange={e => setFiles(Array.from(e.target.files || []))} className="mt-1" />
-          </div>"
-          <div className="pt-2">'"
-            <button disabled={submitting} className="px-4 py-2 rounded bg-blue-600 text-white hover:bg-blue-700 disabled:opacity-50">{submitting ? 'Submitting...' : 'Submit Dispute'}</button>
+            />'
+            <label className='block text-sm font-medium'>Attachments</label>'
+            <input type='file' multiple onChange={e => setFiles(Array.from(e.target.files || []))} className='mt-1' />
+          </div>'
+          <div className='pt-2'>''
+            <button disabled={submitting} className='px-4 py-2 rounded bg-blue-600 text-white hover:bg-blue-700 disabled:opacity-50'>{submitting ? 'Submitting...' : 'Submit Dispute'}</button>
           </div>
 
           <div className='pt-2'>
@@ -436,9 +436,9 @@ const reader = new FileReader ();
 ;
 
   } catch (error) {
-    console.error("Error:", error);
+    console.error('Error:', error);
 
-    return res.status(500).json({ error: "Internal server error" });
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
 
@@ -450,7 +450,7 @@ const reader = new FileReader ();
 }
 }
   } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error('Error:', error);
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }

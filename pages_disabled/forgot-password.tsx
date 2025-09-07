@@ -26,9 +26,9 @@ export default function ForgotPassword() {
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
         <div className="max-w-md w-full space-y-8">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
+            initial={ opacity: 0, y: 20 }
+            animate={ opacity: 1, y: 0 }
+            transition={ duration: 0.6 }
             className="text-center"
           >
             <Link href="/login" className="inline-flex items-center text-blue-400 hover:text-blue-300 mb-6">
@@ -87,9 +87,9 @@ export default function ForgotPassword() {
                 </>
               ) : (
                 <motion.div
-                  initial={{ opacity: 0, scale: 0.9 }}
-                  animate={{ opacity: 1, scale: 1 }}
-                  transition={{ duration: 0.5 }}
+                  initial={ opacity: 0, scale: 0.9 }
+                  animate={ opacity: 1, scale: 1 }
+                  transition={ duration: 0.5 }
                   className="text-center"
                 >
                   <div className="mx-auto w-16 h-16 bg-green-500/20 rounded-full flex items-center justify-center mb-6">
@@ -109,7 +109,7 @@ export default function ForgotPassword() {
                       onClick={() => {
                         setIsSuccess(false);
                         setEmail('');
-                      }}
+                      }
                       className="w-full py-3 px-4 bg-blue-600 hover:bg-blue-700 text-white rounded-lg transition-colors"
                     >
                       Try Another Email

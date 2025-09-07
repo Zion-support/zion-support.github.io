@@ -77,7 +77,7 @@ export default function ListingDetail() {
   // type argument and cast the result instead to prevent TS2347 errors.
 
                             target.src = "https: //ui-avatars.com/api/?name=" + encodeURIComponent(listing.author.name)
-                          }}
+                          }
                         />
                       </div>
                     ) : (
@@ -158,7 +158,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                           title: 'Payment Processing',
                           description: 'Redirecting to secure checkout...',
                         });
-                      }}
+                      }
                     />) : (
                     <Button;
                       on_click={handle_contact}
@@ -197,7 +197,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                           onError={(e) => {;
                             const target = e.target as HTMLImageElement;
                             target.src = "https: //ui-avatars.com/api/?name=" + encodeURIComponent(listing.author.name);
-                          }}
+                          }
                         />;
                       </div>;
                     ) : (;
@@ -220,14 +220,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                           alt={listing.author.name}
                           className='object - cover';
                           on_error={e => {
-                            const target = e.target as HTMLImageElement;
                             target.src =;
                               'https://ui - avatars.com / api/?name=' +;
-                              encodeURIComponent (listing.author.name);                          }}
+                              encodeURIComponent (listing.author.name);                          }
                         />;
                       </div>) : (                            target.src = "https: //ui - avatars.com / api/?name=" + encodeURIComponent (listing.author.name);
                             target.src = "https: //ui - avatars.com / api/?name=" + encodeURIComponent (listing.author.name);
-                          }}
+                          }
                         />;
                       </div>) : (
                       <div className='h - 12 w - 12 rounded - full bg - zion - purple / 20 flex items - center justify - center'>;

@@ -406,9 +406,9 @@ export default function LoginPage() {
         <div className="max-w-md w-full space-y-8">
           <motion.div
             className="text-center"
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            initial={ opacity: 0, y: 30 }
+            animate={ opacity: 1, y: 0 }
+            transition={ duration: 0.8 }
           >
             <div className="mx-auto h-12 w-12 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full flex items-center justify-center">
               <Shield className="h-6 w-6 text-white" />
@@ -428,17 +428,17 @@ export default function LoginPage() {
           </motion.div>
           <motion.div
             className="mt-8 bg-white py-8 px-6 shadow-lg rounded-lg"
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
+            initial={ opacity: 0, y: 30 }
+            animate={ opacity: 1, y: 0 }
+            transition={ duration: 0.8, delay: 0.2 }
           >
             <form className="space-y-6" onSubmit={handleSubmit}>
               {error && (
                 <motion.div
                   className="bg-red-50 border border-red-200 text-red-600 px-4 py-3 rounded-lg flex items-center"
-                  initial={{ opacity: 0, scale: 0.95 }}
-                  animate={{ opacity: 1, scale: 1 }}
-                  transition={{ duration: 0.3 }}
+                  initial={ opacity: 0, scale: 0.95 }
+                  animate={ opacity: 1, scale: 1 }
+                  transition={ duration: 0.3 }
                 >
                   <AlertCircle className="h-5 w-5 mr-2" />
                   {error}
@@ -572,9 +572,9 @@ export default function LoginPage() {
           </motion.div>
           <motion.div
             className="text-center"
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.4 }}
+            initial={ opacity: 0, y: 30 }
+            animate={ opacity: 1, y: 0 }
+            transition={ duration: 0.8, delay: 0.4 }
           >
             <p className="text-sm text-gray-600">
               Don't have an account?{" "}

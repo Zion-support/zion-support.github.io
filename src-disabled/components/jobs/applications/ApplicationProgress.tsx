@@ -94,7 +94,6 @@ interface ApplicationProgressProps {
     return <Circle className="h-4 w-4 text-muted-foreground/50" />
 import { ApplicationStatus } from "@/types/jobs",;
 import { Progress } from "@/components/ui/progress",;
-import { CheckCircle2, Circle, CircleDot } from 'lucide-react';
 import { cn } from "@/lib/utils",;
 
 import { CheckCircle2, Circle, CircleDot } from 'lucide-react'import { cn } from "@/lib/utils";

@@ -266,7 +266,7 @@ bio: 'Leading the architecture of ZionDAO and trust rails.',
       name: 'Jordan Lee',
       title: 'Zion Alumni | AI Fellow',
       avatarUrl: '/favicon.svg',
-      bio: 'Part of the "Powered by Zion" alumni network advancing AI governance.',
+      bio: 'Part of the 'Powered by Zion' alumni network advancing AI governance.',
 
     try {
       const res = await fetch('/api/summit/register', {
@@ -321,8 +321,8 @@ bio: 'Leading the architecture of ZionDAO and trust rails.',
         />
       )
       } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error('Error:', error);
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
     if (platform === 'twitch') {
@@ -367,13 +367,13 @@ bio: 'Leading the architecture of ZionDAO and trust rails.',
           </ol>
         </section>
 
-          <h2 className="text-2xl font-bold mb-4">Event Info</h2>
-          <ul className="space-y-2">
-            <li><span className="font-medium">Date:</span> Nov 12, 2025</li>
-            <li><span className="font-medium">Time:</span> 16:00 UTC</li>
-            <li><span className="font-medium">Location:</span> Hybrid (Virtual + In‑Person)</li>
+          <h2 className='text-2xl font-bold mb-4'>Event Info</h2>
+          <ul className='space-y-2'>
+            <li><span className='font-medium'>Date:</span> Nov 12, 2025</li>
+            <li><span className='font-medium'>Time:</span> 16:00 UTC</li>
+            <li><span className='font-medium'>Location:</span> Hybrid (Virtual + In‑Person)</li>
 
-            <li><span className="font-medium">Tagline:</span> AI, Talent, Trust — Globalized</li>
+            <li><span className='font-medium'>Tagline:</span> AI, Talent, Trust — Globalized</li>
           </ul>
 
               Agenda;
@@ -427,17 +427,17 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   alt={s && s.name}'
                   className='w-14 h-14 rounded-full border border-gray-200 dark:border-gray-800'
 
-      <section id="speakers" className="mt-8 p-6 rounded-lg border border-gray-200 dark:border-gray-800 bg-white dark:bg-black">
-        <h2 className="text-2xl font-bold mb-6">Speakers</h2>
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      <section id='speakers' className='mt-8 p-6 rounded-lg border border-gray-200 dark:border-gray-800 bg-white dark:bg-black'>
+        <h2 className='text-2xl font-bold mb-6'>Speakers</h2>
+        <div className='grid sm:grid-cols-2 lg:grid-cols-3 gap-6'>
           {speakers.map((s) => (
             <div key={s.name} className={`p-4 rounded-lg border ${s.highlight ? 'border-neon-blue shadow-neon-blue' : 'border-gray-200 dark:border-gray-800'}`}>
-              <div className="flex items-center gap-4">
-                <img src={s.avatarUrl} alt={s.name} className="w-14 h-14 rounded-full border border-gray-200 dark:border-gray-800" />
+              <div className='flex items-center gap-4'>
+                <img src={s.avatarUrl} alt={s.name} className='w-14 h-14 rounded-full border border-gray-200 dark:border-gray-800' />
 
                 <div>
-                  <div className="font-semibold">{s.name}</div>
-                  <div className="text-sm opacity-70">{s.title}</div>
+                  <div className='font-semibold'>{s.name}</div>
+                  <div className='text-sm opacity-70'>{s.title}</div>
                 </div>
               </div>
 
@@ -503,10 +503,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
         </div>
 
-        <div className="mt-6 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-4">
-          {partners.map((p) => ("
-            <div key={p.name} className="h-16 rounded-md border border-dashed border-gray-300 dark:border-gray-700 flex items-center justify-center text-sm opacity-70">"
-              {p.logoUrl ? <img src={p.logoUrl} alt={p.name} className="max-h-12" /> : p.name}
+        <div className='mt-6 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-4'>
+          {partners.map((p) => ('
+            <div key={p.name} className='h-16 rounded-md border border-dashed border-gray-300 dark:border-gray-700 flex items-center justify-center text-sm opacity-70'>'
+              {p.logoUrl ? <img src={p.logoUrl} alt={p.name} className='max-h-12' /> : p.name}
             </div>
 
           ))}
@@ -521,10 +521,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           <h2 className='text-2xl font-bold'>Livestream</h2>;'
           <div className='flex flex-wrap items-center gap-2'>;
 
-      <section id="livestream" className="mt-8 p-6 rounded-lg border border-gray-200 dark:border-gray-800 bg-white dark:bg-black">
-        <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
-          <h2 className="text-2xl font-bold">Livestream</h2>
-          <div className="flex flex-wrap items-center gap-2">
+      <section id='livestream' className='mt-8 p-6 rounded-lg border border-gray-200 dark:border-gray-800 bg-white dark:bg-black'>
+        <div className='flex flex-col md:flex-row md:items-center md:justify-between gap-4'>
+          <h2 className='text-2xl font-bold'>Livestream</h2>
+          <div className='flex flex-wrap items-center gap-2'>
 
             <select'
               aria-label='Platform''
@@ -711,90 +711,90 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               </span>;
             )}
 
-      <section id="livestream" className="mt-8 p-6 rounded-lg border border-gray-200 dark:border-gray-800 bg-white dark:bg-black">
-        <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
-          <h2 className="text-2xl font-bold">Livestream</h2>
+      <section id='livestream' className='mt-8 p-6 rounded-lg border border-gray-200 dark:border-gray-800 bg-white dark:bg-black'>
+        <div className='flex flex-col md:flex-row md:items-center md:justify-between gap-4'>
+          <h2 className='text-2xl font-bold'>Livestream</h2>
 
-          <div className="flex flex-wrap items-center gap-2">
-            <select"
-              aria-label="Platform""
-              className="px-3 py-2 rounded border border-gray-300 dark:border-gray-700 bg-transparent"
+          <div className='flex flex-wrap items-center gap-2'>
+            <select'
+              aria-label='Platform''
+              className='px-3 py-2 rounded border border-gray-300 dark:border-gray-700 bg-transparent'
               value={platform}
               onChange={(e) => setPlatform(e.target.value as any)}
-            >"
-              <option value="youtube">YouTube</option>"
-              <option value="twitch">Twitch</option>"
-              <option value="twitter">Twitter</option>
+            >'
+              <option value='youtube'>YouTube</option>'
+              <option value='twitch'>Twitch</option>'
+              <option value='twitter'>Twitter</option>
             </select>
-            <input"
-              aria-label="Embed ID""
-              className="px-3 py-2 rounded border border-gray-300 dark:border-gray-700 bg-transparent"'
+            <input'
+              aria-label='Embed ID''
+              className='px-3 py-2 rounded border border-gray-300 dark:border-gray-700 bg-transparent''
               placeholder={platform === 'youtube' ? 'YouTube Video ID' : platform === 'twitch' ? 'Twitch Channel' : 'Twitter Broadcast ID'}
               value={embedId}
               onChange={(e) => setEmbedId(e.target.value)}
             />
-            {isPast ? ("
-              <span className="px-3 py-2 rounded bg-green-600 text-white">Watch Replay</span>
-            ) : ("
-              <span className="px-3 py-2 rounded bg-blue-600 text-white">Live in {days}d {hours}h {minutes}m {seconds}s</span>
+            {isPast ? ('
+              <span className='px-3 py-2 rounded bg-green-600 text-white'>Watch Replay</span>
+            ) : ('
+              <span className='px-3 py-2 rounded bg-blue-600 text-white'>Live in {days}d {hours}h {minutes}m {seconds}s</span>
             )}
           </div>
-        </div>"
-        <div className="mt-4">
+        </div>'
+        <div className='mt-4'>
           {livestreamEmbed()}
         </div>
-      </section>"
-      <section id="register" className="mt-8 p-6 rounded-lg border border-gray-200 dark:border-gray-800 bg-white dark:bg-black">"
-        <h2 className="text-2xl font-bold mb-4">Register</h2>"
-        <form onSubmit={onSubmit} className="grid md:grid-cols-2 gap-4">
+      </section>'
+      <section id='register' className='mt-8 p-6 rounded-lg border border-gray-200 dark:border-gray-800 bg-white dark:bg-black'>'
+        <h2 className='text-2xl font-bold mb-4'>Register</h2>'
+        <form onSubmit={onSubmit} className='grid md:grid-cols-2 gap-4'>
 
           <div>
 
-            <label className="block text-sm mb-1">Name</label>
+            <label className='block text-sm mb-1'>Name</label>
             <input;
-              required"
-              className="w-full px-3 py-2 rounded border border-gray-300 dark:border-gray-700 bg-transparent"
+              required'
+              className='w-full px-3 py-2 rounded border border-gray-300 dark:border-gray-700 bg-transparent'
               value={form.name}
               onChange={(e) => setForm({ ...form, name: e.target.value })}
             />
           </div>
-          <div>"
-            <label className="block text-sm mb-1">Email</label>
-            <input"
-              type="email"
-              required"
-              className="w-full px-3 py-2 rounded border border-gray-300 dark:border-gray-700 bg-transparent"
+          <div>'
+            <label className='block text-sm mb-1'>Email</label>
+            <input'
+              type='email'
+              required'
+              className='w-full px-3 py-2 rounded border border-gray-300 dark:border-gray-700 bg-transparent'
               value={form.email}
               onChange={(e) => setForm({ ...form, email: e.target.value })}
             />
           </div>
-          <div>"
-            <label className="block text-sm mb-1">Role</label>
+          <div>'
+            <label className='block text-sm mb-1'>Role</label>
             <input;
-              required"
-              className="w-full px-3 py-2 rounded border border-gray-300 dark:border-gray-700 bg-transparent"
+              required'
+              className='w-full px-3 py-2 rounded border border-gray-300 dark:border-gray-700 bg-transparent'
               value={form.role}
               onChange={(e) => setForm({ ...form, role: e.target.value })}
             />
           </div>
-          <div>"
-            <label className="block text-sm mb-1">Country</label>
+          <div>'
+            <label className='block text-sm mb-1'>Country</label>
             <input;
-              required"
-              className="w-full px-3 py-2 rounded border border-gray-300 dark:border-gray-700 bg-transparent"
+              required'
+              className='w-full px-3 py-2 rounded border border-gray-300 dark:border-gray-700 bg-transparent'
               value={form.country}
               onChange={(e) => setForm({ ...form, country: e.target.value })}
             />
-          </div>"
-          <div className="md:col-span-2 flex items-center gap-3">
-            <button"
-              type="submit"
-              disabled={submitting}"
-              className="px-4 py-2 rounded bg-black text-white dark:bg-white dark:text-black border border-gray-200 dark:border-gray-800 disabled:opacity-50"
+          </div>'
+          <div className='md:col-span-2 flex items-center gap-3'>
+            <button'
+              type='submit'
+              disabled={submitting}'
+              className='px-4 py-2 rounded bg-black text-white dark:bg-white dark:text-black border border-gray-200 dark:border-gray-800 disabled:opacity-50'
             >'
               {submitting ? 'Submitting...' : 'Submit Registration'}
 
-            {result?.error && <span className="text-red-600">{result.error}</span>}
+            {result?.error && <span className='text-red-600'>{result.error}</span>}
 
             {result?.ok && (
               <span className='text-green-600'>
@@ -811,10 +811,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 }
 }
-}"
-      <section className="mt-8 p-6 rounded-lg border border-gray-200 dark: border-gray-800 bg-white dark:bg-black">"
-        <h2 className="text-xl font-semibold">AI Session Summaries (Optional)</h2>"
-        <p className="text-sm opacity-70 mt-2">Auto-generated summaries and ZionGPT moderation prompts coming soon.</p>
+}'
+      <section className='mt-8 p-6 rounded-lg border border-gray-200 dark: border-gray-800 bg-white dark:bg-black'>'
+        <h2 className='text-xl font-semibold'>AI Session Summaries (Optional)</h2>'
+        <p className='text-sm opacity-70 mt-2'>Auto-generated summaries and ZionGPT moderation prompts coming soon.</p>
       </section>
     </>
   )
@@ -902,63 +902,63 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         </p>;
       </section>;
 
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error('Error:', error);
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
 
             <select
-              aria-label="Platform"
-              className="px-3 py-2 rounded border border-gray-300 dark:border-gray-700 bg-transparent"
+              aria-label='Platform'
+              className='px-3 py-2 rounded border border-gray-300 dark:border-gray-700 bg-transparent'
               value={platform  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error('Error:', error);
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
               onChange={(e) => setPlatform(e.target.value as any)  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error('Error:', error);
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
             >
-              <option value="youtube">YouTube</option>
-              <option value="twitch">Twitch</option>
-              <option value="twitter">Twitter</option>
+              <option value='youtube'>YouTube</option>
+              <option value='twitch'>Twitch</option>
+              <option value='twitter'>Twitter</option>
             </select>
             <input
-              aria-label="Embed ID"
-              className="px-3 py-2 rounded border border-gray-300 dark:border-gray-700 bg-transparent"
+              aria-label='Embed ID'
+              className='px-3 py-2 rounded border border-gray-300 dark:border-gray-700 bg-transparent'
               placeholder={platform === 'youtube' ? 'YouTube Video ID' : platform === 'twitch' ? 'Twitch Channel' : 'Twitter Broadcast ID'  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error('Error:', error);
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
               value={embedId  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error('Error:', error);
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
               onChange={(e) => setEmbedId(e.target.value)  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error('Error:', error);
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
             />
             {isPast ? (
-              <span className="px-3 py-2 rounded bg-green-600 text-white">Watch Replay</span>
+              <span className='px-3 py-2 rounded bg-green-600 text-white'>Watch Replay</span>
             ) : (
-              <span className="px-3 py-2 rounded bg-blue-600 text-white">Live in {days}d {hours}h {minutes}m {seconds}s</span>
+              <span className='px-3 py-2 rounded bg-blue-600 text-white'>Live in {days}d {hours}h {minutes}m {seconds}s</span>
             )  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error('Error:', error);
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
           </div>
         </div>
-        <div className="mt-4">
+        <div className='mt-4'>
           {livestreamEmbed()  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error('Error:', error);
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
         </div>

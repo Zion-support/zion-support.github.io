@@ -56,9 +56,9 @@ export default function EnterpriseSolutions() {
           <div className="container mx-auto px-4">
             <motion.div
               className="text-center max-w-4xl mx-auto"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
+              initial={ opacity: 0, y: 20 }
+              animate={ opacity: 1, y: 0 }
+              transition={ duration: 0.8 }
             >
               <h1 className="text-4xl md:text-6xl font-bold mb-6">
                 Enterprise Solutions
@@ -72,8 +72,8 @@ export default function EnterpriseSolutions() {
               <Link href="/contact">
                 <motion.button
                   className="bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-gray-100 transition-colors"
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
+                  whileHover={ scale: 1.05 }
+                  whileTap={ scale: 0.95 }
                 >
                   Get Started
                 </motion.button>
@@ -87,9 +87,9 @@ export default function EnterpriseSolutions() {
           <div className="container mx-auto px-4">
             <motion.div
               className="text-center mb-12"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
+              initial={ opacity: 0, y: 20 }
+              animate={ opacity: 1, y: 0 }
+              transition={ duration: 0.6 }
             >
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
                 Enterprise Features
@@ -119,9 +119,9 @@ export default function EnterpriseSolutions() {
           <div className="container mx-auto px-4">
             <motion.div
               className="text-center mb-12"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
+              initial={ opacity: 0, y: 20 }
+              animate={ opacity: 1, y: 0 }
+              transition={ duration: 0.6 }
             >
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
                 Our Solutions
@@ -136,9 +136,9 @@ export default function EnterpriseSolutions() {
                 <motion.div
                   key={index}
                   className="bg-gray-50 rounded-lg p-8"
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  initial={ opacity: 0, y: 20 }
+                  animate={ opacity: 1, y: 0 }
+                  transition={ duration: 0.6, delay: index * 0.1 }
                 >
                   <h3 className="text-2xl font-semibold text-gray-900 mb-4">{solution.title}</h3>
                   <p className="text-gray-600 mb-6">{solution.description}</p>
@@ -161,9 +161,9 @@ export default function EnterpriseSolutions() {
           <div className="container mx-auto px-4">
             <motion.div
               className="text-center text-white"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
+              initial={ opacity: 0, y: 20 }
+              animate={ opacity: 1, y: 0 }
+              transition={ duration: 0.6 }
             >
               <h2 className="text-3xl md:text-4xl font-bold mb-4">
                 Ready to Transform Your Enterprise?
@@ -174,8 +174,8 @@ export default function EnterpriseSolutions() {
               <Link href="/contact">
                 <motion.button
                   className="bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-gray-100 transition-colors inline-flex items-center"
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
+                  whileHover={ scale: 1.05 }
+                  whileTap={ scale: 0.95 }
                 >
                   Contact Us
                   <ArrowRight className="w-5 h-5 ml-2" />

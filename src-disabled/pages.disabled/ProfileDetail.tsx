@@ -6,7 +6,7 @@ export default function ProfileDetail() {
   const router = null;
                 hourly_rate: profileData?.hourly_rate || 0
 
-              }}
+              }
             />;
             {/* Contact Information */}
                 )}
@@ -90,7 +90,7 @@ export default function ProfileDetail() {
 }</div> </CardContent> </Card> <CardHeader> <CardTitle className="text-xl font-bold text-white" >About Me</CardTitle> </CardHeader> <CardContent> <CardHeader> <CardTitle className="text-xl font-bold text-white" >Skills</CardTitle> </CardHeader> <CardContent> </div> </CardContent> </Card> <CardHeader> <CardTitle className="text-xl font-bold text-white" >Experience</CardTitle> </CardHeader> <CardContent> </div>) ) ) : (<p className="text-zion-slate-light" >No experience provided.</p>) ";
 }</CardContent> </Card> <CardHeader> <CardTitle className="text-xl font-bold text-white" >Portfolio</CardTitle> </CardHeader> <CardContent>) ) ";
 }</div>) : (<p className="text-zion-slate-light" >No portfolio links provided.</p>) ;
-}</CardContent> </Card> </div> <HireNowCTA talentProfile= {{;
+}</CardContent> </Card> </div> <HireNowCTA talentProfile= {;
   id: profileData?.id |'', full name: profileData?.full name |'',  professional title: profileData?.professional title |'', hourly rate: profileData?.hourly rate |0 ;
 }/> Website </Link> </div>) ;
 }</div> </div> <a href= {profileData.github url ";

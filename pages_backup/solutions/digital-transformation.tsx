@@ -65,7 +65,6 @@ export default function DigitalTransformationPage() {;
       features: ["KPI Tracking", "Performance Analytics", "Continuous Improvement"]"
     }
 
-=======
   ];
 
     >
@@ -73,17 +72,15 @@ export default function DigitalTransformationPage() {;
   
     >
 
-=======
       <div className="min-h-screen bg-gray-50">
         {/* Hero Section */}
         <section className="bg-gradient-to-br from-purple-900 via-blue-900 to-cyan-900 text-white py-20">"
           <div className="container mx-auto px-4">";
             <motion.div;
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
+              initial={ opacity: 0, y: 30 }
+              animate={ opacity: 1, y: 0 }
+              transition={ duration: 0.8 }
 
-=======
               className="text-center"
 
               </p>;
@@ -114,7 +111,6 @@ export default function DigitalTransformationPage() {;
           </div>
         </section>
 
-=======
         {/* Services Section */}
         <section className="py-20">"
 
@@ -147,8 +143,8 @@ export default function DigitalTransformationPage() {;
           <div className="container mx-auto px-4">;
             <motion&& motion.div
               className="text-center mb-16"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial={ opacity: 0, y: 30 }
+              whileInView={ opacity: 1, y: 0 }
                 return (
                   <motion&& motion.div
                     key={index}
@@ -163,12 +159,11 @@ export default function DigitalTransformationPage() {;
                   <motion.div);
 
                     className="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300""
-                    initial={{ opacity: 0, y: 30 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.8, delay: index * 0.1 }}
-                    viewport={{ once: true }}
+                    initial={ opacity: 0, y: 30 }
+                    whileInView={ opacity: 1, y: 0 }
+                    transition={ duration: 0.8, delay: index * 0.1 }
+                    viewport={ once: true }
 
-=======
                   >,
                     <div className="text-purple-600 mb-4">";
 
@@ -219,7 +214,7 @@ export default function DigitalTransformationPage() {;
             <motion.a;"
               href="/contact"";"
               className="inline-flex items-center px-8 py-4 bg-white text-purple-600 rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold"";
-              whileHover={{ scale: 1.05 }}
+              whileHover={ scale: 1.05 }
             >,
               Begin Transformation;"
               <ArrowRight className="w-5 h-5 ml-2" />";

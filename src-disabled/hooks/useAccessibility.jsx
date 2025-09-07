@@ -6,5 +6,5 @@ import { useState, useEffect, useCallback } from 'react' export const useAccessi
   const [settings, setSettings] = useState({ fontSize: 'medium',
   colorScheme: 'default', motionPreference: 'no-preference',}
   focusStyle: 'default',}
-})"";
+})\"\";
 }

@@ -1,6 +1,6 @@
 </svg>) 
-}<svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" aria-hidden> <path d="M16.365 1.43c0 1.14-.42 2.18-1.26 3.11-.91 1.02-2.01 1.61-3.2 1.52-.12-1.02.37-2.12 1.21-3.06.86-.97 2.24-1.67 3.25-1.57-.01 0 .01 0 0 0zM20.51 17.14c-.45 1.05-1 2.03-1.66 2.93-.88 1.2-1.59 2.04-2.57 2.05-.97.02-1.28-.66-2.66-.66-1.38 0-1.72.64-2.69.68-1.09.04-1.93-1.02-2.82-2.22-1.54-2.1-2.73-5.93-1.14-8.52.79-1.27 2.2-2.08 3.73-2.1 1.16-.02 2.25.78 2.66.78.4 0 1.51-.96 2.85-.82.49.02 1.88.2 2.77 1.6-.07.05-1.65.97-1.63 2.88.02 2.3 2.06 3.07 2.09 3.08-.02.06-.39 1.36-1.93 1.62z" /> leading-tight"> <div className=" text-[10px] uppercase opacity-80">Download on the</div> <div className=" text-sm font-semibold">App Store</div> </div> </a>) 
-}<svg width="24"height="24"viewBox="0 0 24 24"aria-hidden> g1" x1="100%" y1="0%" > <stop offset="0%" stopColor="#00A0FF" /> <stop offset="100%" stopColor="#00E3FF" /> </linearGradient> <linearGradient id="g2" x1="100%" y1="0%" > <stop offset="0%" stopColor="#FFE000" /> <stop offset="100%" stopColor="#FFA000" /> </linearGradient> <linearGradient id="g3" x1="100%" y1="0%" > <stop offset="0%" stopColor="#FF3A44" /> <stop offset="100%" stopColor="#C31162" /> </linearGradient> <linearGradient id="g4" x1="100%" y1="0%" > <stop offset="0%" stopColor="#32A071" /> <stop offset="100%" stopColor="#00F076" /> </linearGradient> </defs> <path d="M3.6 2.4c-.28.27-.44.66-.44 1.11v16.98c0 .45.16.83.44 1.1l.07.06 9.36-9.36v-.6L3.67 2.33 3.6 2.4z" fill="url (#g1) " /> <path d="M16.2 15.99l-3.17-3.17v-.6l3.17-3.17.09.05 3.76 2.14c1.08.62 1.08 1.64 0 2.26l-3.76 2.14-.09.05z" fill="url (#g2) " /> <path d="M16.29 15.94L13.03 12.68 3.6 22.11c.36.35.95.38 1.63 0l11.06-6.17z" fill="url (#g3) " /> <path d="M16.29 9.06L5.23 2.89C4.55 2.5 3.96 2.54 3.6 2.89l9.43 9.43 3.26-3.26z" fill="url (#g4) " /> </svg> <div className="leading-tight" > <div className="text-[10px] uppercase opacity-80" >Get it on</div> <div className="text-sm font-semibold" >Google Play</div> </div> </a>) 
+}<svg width='24' height='24' viewBox='0 0 24 24' fill='currentColor' aria-hidden> <path d='M16.365 1.43c0 1.14-.42 2.18-1.26 3.11-.91 1.02-2.01 1.61-3.2 1.52-.12-1.02.37-2.12 1.21-3.06.86-.97 2.24-1.67 3.25-1.57-.01 0 .01 0 0 0zM20.51 17.14c-.45 1.05-1 2.03-1.66 2.93-.88 1.2-1.59 2.04-2.57 2.05-.97.02-1.28-.66-2.66-.66-1.38 0-1.72.64-2.69.68-1.09.04-1.93-1.02-2.82-2.22-1.54-2.1-2.73-5.93-1.14-8.52.79-1.27 2.2-2.08 3.73-2.1 1.16-.02 2.25.78 2.66.78.4 0 1.51-.96 2.85-.82.49.02 1.88.2 2.77 1.6-.07.05-1.65.97-1.63 2.88.02 2.3 2.06 3.07 2.09 3.08-.02.06-.39 1.36-1.93 1.62z' /> leading-tight'> <div className=' text-[10px] uppercase opacity-80'>Download on the</div> <div className=' text-sm font-semibold'>App Store</div> </div> </a>) 
+}<svg width='24'height='24'viewBox='0 0 24 24'aria-hidden> g1' x1='100%' y1='0%' > <stop offset='0%' stopColor='#00A0FF' /> <stop offset='100%' stopColor='#00E3FF' /> </linearGradient> <linearGradient id='g2' x1='100%' y1='0%' > <stop offset='0%' stopColor='#FFE000' /> <stop offset='100%' stopColor='#FFA000' /> </linearGradient> <linearGradient id='g3' x1='100%' y1='0%' > <stop offset='0%' stopColor='#FF3A44' /> <stop offset='100%' stopColor='#C31162' /> </linearGradient> <linearGradient id='g4' x1='100%' y1='0%' > <stop offset='0%' stopColor='#32A071' /> <stop offset='100%' stopColor='#00F076' /> </linearGradient> </defs> <path d='M3.6 2.4c-.28.27-.44.66-.44 1.11v16.98c0 .45.16.83.44 1.1l.07.06 9.36-9.36v-.6L3.67 2.33 3.6 2.4z' fill='url (#g1) ' /> <path d='M16.2 15.99l-3.17-3.17v-.6l3.17-3.17.09.05 3.76 2.14c1.08.62 1.08 1.64 0 2.26l-3.76 2.14-.09.05z' fill='url (#g2) ' /> <path d='M16.29 15.94L13.03 12.68 3.6 22.11c.36.35.95.38 1.63 0l11.06-6.17z' fill='url (#g3) ' /> <path d='M16.29 9.06L5.23 2.89C4.55 2.5 3.96 2.54 3.6 2.89l9.43 9.43 3.26-3.26z' fill='url (#g4) ' /> </svg> <div className='leading-tight' > <div className='text-[10px] uppercase opacity-80' >Get it on</div> <div className='text-sm font-semibold' >Google Play</div> </div> </a>) 
 }<button 
 }
 const isMobile = /iPhone|iPad|iPod|Android/i.test(ua)if (isMobile) setVisible(true)}, [])if (!visible);
@@ -33,7 +33,7 @@ href={storeUr,}
               target='_blank'
               rel='noopener noreferrer'
                 setVisible(false);
-              }}
+              }
 
               className='text-xs px-2 py-1 rounded-md hover:bg-gray-100 dark:hover:bg-gray-800'
              />
@@ -229,11 +229,11 @@ src={qrHre,}
           />;
           <div className='text-sm opacity-90' />;
             Scan to open this page on your phone;
-            <div className='opacity-80' />Or tap a store badge above</div>          </div>        <div className="mt-8 flex items-center gap-4" />;
-          <img src={qrHref} alt="QR code to download Zion app" className="h-28 w-28 rounded-lg bg-white/90 p-1 shadow" />;
-          <div className="text-sm opacity-90" />;
+            <div className='opacity-80' />Or tap a store badge above</div>          </div>        <div className='mt-8 flex items-center gap-4' />;
+          <img src={qrHref} alt='QR code to download Zion app' className='h-28 w-28 rounded-lg bg-white/90 p-1 shadow' />;
+          <div className='text-sm opacity-90' />;
             Scan to open this page on your phone;
-            <div className="opacity-80" />Or tap a store badge above</div>;
+            <div className='opacity-80' />Or tap a store badge above</div>;
         </div>;
 
       </section>;
@@ -278,11 +278,11 @@ src={qrHre,}
 
           <div;
 className='flex transition-transform duration-700'
-            style={{}
+            style={}
 }
               transform: `translateX(-${idx * 100}%)`
               width: `${testimonials.length * 100}%`
-            }}
+            }
            />
             {testimonials.map(t => (}
               <div key={t.name} className='w-full md:w-1/3 flex-shrink-0 pr-4' />
@@ -354,17 +354,17 @@ type='submit'
       </section>
     </EnhancedLayout>
   );
-}return (<EnhancedLayout /> <Head /> <title />Zion Mobile App — iOS & Android</title> <meta name="description" content="Hire from anywhere, AI-match instantly, and track milestones on the go with the Zion app." /> <link rel="canonical" href="/download" /> <meta property="og: title" content="Zion Mobile App" /> <meta property="og:description" content="Hire from anywhere. AI-match instantly. Track milestones on the go." /> </Head> <SmartBanner iosUrl= {}
+}return (<EnhancedLayout /> <Head /> <title />Zion Mobile App — iOS & Android</title> <meta name='description' content='Hire from anywhere, AI-match instantly, and track milestones on the go with the Zion app.' /> <link rel='canonical' href='/download' /> <meta property='og: title' content='Zion Mobile App' /> <meta property='og:description' content='Hire from anywhere. AI-match instantly. Track milestones on the go.' /> </Head> <SmartBanner iosUrl= {}
   IOS APP URL}
 }androidUrl= {}
   ANDROID APP URL}
 }deepLink= {}
   DEEP LINK URL,}
-}/> </div> </div> </div> </div> </div> </div> </div> Scan to open this page on your phone <div className="opacity-80"  />Or tap a store badge above</div> </div> </div> </section> </div> <div className="rounded-2xl border border-gray-200 dark:border-gray-800 p-6 bg-white dark:bg-gray-950"  /> <div className="text-lg font-semibold"  />AI-match instantly</div> <p className="mt-2 text-sm opacity-80"  />Smart matching surfaces top candidates in seconds.</p> <div className="mt-4 h-36 rounded-xl bg-gradient-to-br from-purple-100 to-pink-100 dark:from-purple-900/40 dark:to-pink-900/40" /> </div> <div className="rounded-2xl border border-gray-200 dark:border-gray-800 p-6 bg-white dark:bg-gray-950"  /> <div className="text-lg font-semibold"  />Track milestones</div> <p className="mt-2 text-sm opacity-80"  />Manage deliverables, approvals, and progress on the go.</p> <div className="mt-4 h-36 rounded-xl bg-gradient-to-br from-indigo-100 to-blue-100 dark: from-indigo-900/40 dark:to-blue-900/40" /> </div> </section> <StarIcon key= {}
+}/> </div> </div> </div> </div> </div> </div> </div> Scan to open this page on your phone <div className='opacity-80'  />Or tap a store badge above</div> </div> </div> </section> </div> <div className='rounded-2xl border border-gray-200 dark:border-gray-800 p-6 bg-white dark:bg-gray-950'  /> <div className='text-lg font-semibold'  />AI-match instantly</div> <p className='mt-2 text-sm opacity-80'  />Smart matching surfaces top candidates in seconds.</p> <div className='mt-4 h-36 rounded-xl bg-gradient-to-br from-purple-100 to-pink-100 dark:from-purple-900/40 dark:to-pink-900/40' /> </div> <div className='rounded-2xl border border-gray-200 dark:border-gray-800 p-6 bg-white dark:bg-gray-950'  /> <div className='text-lg font-semibold'  />Track milestones</div> <p className='mt-2 text-sm opacity-80'  />Manage deliverables, approvals, and progress on the go.</p> <div className='mt-4 h-36 rounded-xl bg-gradient-to-br from-indigo-100 to-blue-100 dark: from-indigo-900/40 dark:to-blue-900/40' /> </div> </section> <StarIcon key= {}
   i}
 }/>) )
-}<span className="text-sm opacity-80"  />4.9 average rating</span> </div> </div> </div>) )
-}</div> </div> </section> <input type="email" required  /> {}
+}<span className='text-sm opacity-80'  />4.9 average rating</span> </div> </div> </div>) )
+}</div> </div> </section> <input type='email' required  /> {}
   status === 'loading' ? 'Submitting…' : 'Notify me' ,}
-}</button> </form> <span />•</span> <Link href="/download"  /><a className="underline"  />Shareable link: /download</a></a> </div> </section> </EnhancedLayout>)
+}</button> </form> <span />•</span> <Link href='/download'  /><a className='underline'  />Shareable link: /download</a></a> </div> </section> </EnhancedLayout>)
 

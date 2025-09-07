@@ -4,52 +4,52 @@
   description: ', urgency: 'medium,}
 });
   const [submissionStatus, setSubmissionStatus] = useState('idle');
-  const projectTypes = [ {value: 'web-development'}
+  const projectTypes = [ { value: 'web-development',}
   label: 'Web Development', icon: Globe, description: 'Custom websites and web applications,}
-}, {value: 'mobile-app'}
+}, { value: 'mobile-app',}
   label: 'Mobile App Development', icon: Smartphone, description: 'iOS and Android applications,}
-}, {value: 'ai-ml'}
+}, { value: 'ai-ml',}
   label: 'AI & Machine Learning', icon: Brain, description: 'Intelligent automation and analytics,}
-}, {value: 'cloud-infrastructure'}
-  label: 'Cloud Infrastructure', icon: Cloud, description: 'AWS, Azure, GCP solutions'}, {value: 'cybersecurity'}
+}, { value: 'cloud-infrastructure',}
+  label: 'Cloud Infrastructure', icon: Cloud, description: 'AWS, Azure, GCP solutions'}, { value: 'cybersecurity',}
   label: 'Cybersecurity', icon: Shield, description: 'Security audits and implementation,}
-}, {value: 'data-analytics'}
+}, { value: 'data-analytics',}
   label: 'Data Analytics', icon: BarChart3, description: 'Business intelligence and reporting,}
-}, {value: 'ui-ux-design'}
+}, { value: 'ui-ux-design',}
   label: 'UI/UX Design', icon: Palette, description: 'User interface and experience design,}
-}, {value: 'software-development'}
+}, { value: 'software-development',}
   label: 'Custom Software', icon: Code, description: 'Enterprise software solutions,}
-}, {value: 'devops'}
+}, { value: 'devops',}
   label: 'DevOps & CI/CD', icon: Server, description: 'Automation and deployment pipelines,}
-}, {value: 'network-infrastructure'}
+}, { value: 'network-infrastructure',}
   label: 'Network Infrastructure', icon: Wifi, description: 'Network design and setup,}
-}, {value: 'database-design'}
+}, { value: 'database-design',}
   label: 'Database Design', icon: Database, description: 'Database architecture and optimization,}
-}, {value: 'consulting'}
+}, { value: 'consulting',}
   label: 'IT Consulting', icon: Briefcase, description: 'Strategic technology guidance,}
-}] const budgetRanges = [ {value: 'under-10k'}
+}] const budgetRanges = [ { value: 'under-10k',}
   label: 'Under $10,000', description: 'Small projects and MVPs,}
-}, {value: '10k-25k'}
+}, { value: '10k-25k',}
   label: '$10,000 - $25, 000', description: 'Medium-sized applications,}
-}, {value: '25k-50k'}
+}, { value: '25k-50k',}
   label: '$25, 000 - $50,000', description: 'Complex applications,}
-}, {value: '50k-100k'}
+}, { value: '50k-100k',}
   label: '$50,000 - $100, 000', description: 'Enterprise solutions,}
-}, {value: '100k-plus'}
+}, { value: '100k-plus',}
   label: '$100, 000+', description: 'Large-scale projects,}
-}, {value: 'custom'}
+}, { value: 'custom',}
   label: 'Custom Pricing', description: 'Let&quots discuss your needs,}
-}] const timelineOptions = [' {value: 'asap'}
+}] const timelineOptions = [' { value: 'asap',}
   label: 'ASAP', description: 'Immediate start required',}
-}, {value: '1-2-weeks'}
+}, { value: '1-2-weeks',}
   label: '1-2 Weeks', description: 'Quick turnaround needed,}
-}, {value: '1-month'}
+}, { value: '1-month',}
   label: '1 Month', description: 'Standard project timeline,}
-}, {value: '2-3-months'}
+}, { value: '2-3-months',}
   label: '2-3 Months', description: 'Complex project timeline,}
-}, {value: '3-plus-months'}
+}, { value: '3-plus-months',}
   label: '3+ Months', description: 'Long-term project,}
-}, {value: 'flexible'}
+}, { value: 'flexible',}
   label: 'Flexible', description: 'Timeline can be discussed,}
 }] const urgencyLevels = [ { value: 'low',
   label: 'Low', description: 'No immediate deadline',}
@@ -89,7 +89,6 @@ const [formData, setFormData] = useState({}
     urgency: 'medium,
 })';';
 
-const [submissionStatus, setSubmissionStatus] = useState('idle');
   const projectTypes = [];
     {}
 '';
@@ -231,7 +230,7 @@ const budgetRanges = [];
   ]'';
 
 const timelineOptions = ['';
-    {value: 'asap'}
+    { value: 'asap',}
   label: 'ASAP', description: 'Immediate start required',}
 }, {}
 '';
@@ -346,10 +345,10 @@ const isFormValid =;
       <section className='pt-32 pb-20 px-6' />'''';
         <div className='max-w-7xl mx-auto text-center' />;
           <motion.div;
-            initial={{ opacity: 0, y: 30 ,}
+            initial={ opacity: 0, y: 30 ,}
 }
             animate={{ opacity: 1, y: 0 }}
-            transition={{duration: 0.8 }
+            transition={{ duration: 0.8 ,}
 }'''';
            />'''';
             <div className='inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-cyan-400 to-purple-600 rounded-2xl p-4 mb-8' />'''';
@@ -366,11 +365,11 @@ const isFormValid =;
             {/* Benefits */}'''';
             <div className='grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto' />;
               <motion.div;
-                initial={{ opacity: 0, y: 20 ,}
+                initial={ opacity: 0, y: 20 ,}
 }
-                animate={{ opacity: 1, y: 0 ,}
+                animate={ opacity: 1, y: 0 ,}
 }'''';
-                transition={{ duration: 0.6, delay: 0.1 ,}
+                transition={ duration: 0.6, delay: 0.1 ,}
 }'''';
                 className='flex items-center justify-center space-x-3 text-white/80''''';
                />'''';
@@ -378,11 +377,11 @@ const isFormValid =;
                 <span />24-Hour Response</span>;
               </motion.div>;
               <motion.div;
-                initial={{ opacity: 0, y: 20 ,}
+                initial={ opacity: 0, y: 20 ,}
 }
-                animate={{ opacity: 1, y: 0 ,}
+                animate={ opacity: 1, y: 0 ,}
 }'''';
-                transition={{ duration: 0.6, delay: 0.2 ,}
+                transition={ duration: 0.6, delay: 0.2 ,}
 }'''';
                 className='flex items-center justify-center space-x-3 text-white/80''''';
                />'''';
@@ -390,11 +389,11 @@ const isFormValid =;
                 <span />Free Consultation</span>;
               </motion.div>;
               <motion.div;
-                initial={{ opacity: 0, y: 20 ,}
+                initial={ opacity: 0, y: 20 ,}
 }
-                animate={{ opacity: 1, y: 0 ,}
+                animate={ opacity: 1, y: 0 ,}
 }'''';
-                transition={{ duration: 0.6, delay: 0.3 ,}
+                transition={ duration: 0.6, delay: 0.3 ,}
 }'''';
                 className='flex items-center justify-center space-x-3 text-white/80''''';
                />'''';
@@ -413,12 +412,12 @@ const isFormValid =;
             {/* Form */}'''';
             <div className='lg:col-span-2' />;
               <motion.div;
-                initial={{ opacity: 0, x: -30 ,}
+                initial={ opacity: 0, x: -30 ,}
 }
                 whileInView={{ opacity: 1, x: 0 }}
-                viewport={{once: true }
+                viewport={{ once: true ,}
 }'''';
-                transition={{duration: 0.8 }
+                transition={{ duration: 0.8 ,}
 }'''';
                 className='bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20''''';
                />'''';
@@ -661,9 +660,9 @@ const isFormValid =;
                   </button>;
                   {/* Status Messages */}'';
                   {submissionStatus === 'success' && (<motion.div;}
-                      initial={{ opacity: 0, y: 10 ,}
+                      initial={ opacity: 0, y: 10 ,}
 }'''';
-                      animate={{ opacity: 1, y: 0 ,}
+                      animate={ opacity: 1, y: 0 ,}
 }'''';
                       className='flex items-center p-4 bg-green-500/20 border border-green-500/50 rounded-lg''''';
                      />'''';
@@ -675,9 +674,9 @@ const isFormValid =;
                   )}
 '';
                   {submissionStatus === 'error' && (<motion.div;}
-                      initial={{ opacity: 0, y: 10 ,}
+                      initial={ opacity: 0, y: 10 ,}
 }'''';
-                      animate={{ opacity: 1, y: 0 ,}
+                      animate={ opacity: 1, y: 0 ,}
 }'''';
                       className='flex items-center p-4 bg-red-500/20 border border-red-500/50 rounded-lg''''';
                      />'''';
@@ -695,12 +694,12 @@ const isFormValid =;
             <div className='space-y-8' />;
               {/* Contact Information */}
               <motion.div;
-                initial={{ opacity: 0, x: 30 ,}
+                initial={ opacity: 0, x: 30 ,}
 }
                 whileInView={{ opacity: 1, x: 0 }}
-                viewport={{once: true }
+                viewport={{ once: true ,}
 }'''';
-                transition={{duration: 0.8 }
+                transition={{ duration: 0.8 ,}
 }'''';
                 className='bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20''''';
                />'''';
@@ -730,12 +729,12 @@ const isFormValid =;
               </motion.div>;
               {/* Why Choose Us */}
               <motion.div;
-                initial={{ opacity: 0, x: 30 ,}
+                initial={ opacity: 0, x: 30 ,}
 }
                 whileInView={{ opacity: 1, x: 0 }}
-                viewport={{once: true }
+                viewport={{ once: true ,}
 }'''';
-                transition={{ duration: 0.8, delay: 0.2 ,}
+                transition={ duration: 0.8, delay: 0.2 ,}
 }'''';
                 className='bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20''''';
                />'''';
@@ -789,12 +788,12 @@ const isFormValid =;
               </motion.div>;
               {/* Process */}
               <motion.div;
-                initial={{ opacity: 0, x: 30 ,}
+                initial={ opacity: 0, x: 30 ,}
 }
                 whileInView={{ opacity: 1, x: 0 }}
-                viewport={{once: true }
+                viewport={{ once: true ,}
 }'''';
-                transition={{ duration: 0.8, delay: 0.4 ,}
+                transition={ duration: 0.8, delay: 0.4 ,}
 }'''';
                 className='bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20''''';
                />'''';

@@ -24,6 +24,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         </p>
       </div>
     </>
+  );
 
 };
 const endVideoCall = () => {;
@@ -46,4 +47,5 @@ return (<> End Call </Button>) ;
 }'"
 }
 origin/cursor/automate-test-improve-and-merge-code-2533
+}
 }

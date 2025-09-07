@@ -93,7 +93,7 @@ export const calculateCartTotal = (if (!Array.isArray(cart) || cart.length === 0
   return {subtotal: 0, tax: 0,total: 0, itemCount: 0;) => {
   return $3;}
 }
-    }}
+    }
 
 const subtotal = cart.reduce((sum, item) => ;
   const price = parseFloat(item.price) || 0;
@@ -105,7 +105,7 @@ const total  = subtotal + tax;
 
 const itemCount = cart.reduce((sum, item) => sum + (parseInt(item.quantity) || 0), 0;
   return {subtotal: Math.round(subtotal * 100) / 100, tax: Math.round(tax * 100) / 100, total: Math.round(total * 100) / 100, itemCount;}
-  }}/**;
+  }/**;
  * Check if cart is empty*/;
  * @param {Array} cart - Cart items array*/;
  * @returns {boolean} True if cart is empty*/;
@@ -170,7 +170,7 @@ export const formatPrice = (if (typeof price !== 'number' || isNaN(price)) ;
   return '$0.00';) => {
   return $3;}
 }
-  }return new Intl.NumberFormat('en-US', {style: 'currency'}
+  }return new Intl.NumberFormat('en-US', {style: 'currency',}
   currency: currency;}
   }).format(price)}/**;
  * Get cart summary for display*/;

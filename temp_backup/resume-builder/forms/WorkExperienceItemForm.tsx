@@ -1,6 +1,5 @@
 /* eslint-disable */
- >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7 //Define form schema end date: z.date () .optional ();
-is current: z.boolean () .default (false);
+ is current: z.boolean () .default (false);
 description: z.string () .optional ();
 location: z.string () .optional () ;
 });
@@ -10,7 +9,6 @@ type FormValues = z.infer<typeof formSchema>;
 };
 setIsEnhancementDialogOpen (false);
 };
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7 return (<> </FormControl> <FormMessage /> </FormItem>) ;
 }/> <FormField </FormControl> <FormMessage /> </FormItem>) ;
 }/> </div> <div className="grid grid-cols-1 md:grid-cols-2 gap-4" > <FormField </FormControl> <FormMessage /> </FormItem>) ";""
 }/> <FormField <FormLabel>Current Position</FormLabel> <div className="flex items-center gap-2 h-10" > <Switch /> <label htmlFor="current-position" className="text-sm text-muted-foreground" > I currently work here </label> </div> <FormMessage /> </FormItem>) ";""

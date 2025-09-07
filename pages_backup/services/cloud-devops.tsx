@@ -1,7 +1,5 @@
 
 
-=======
-=======
 import React from 'react';
 import Layout from '../../components/Layout';';
 import { Cloud, Server, Database, Shield, Zap, ArrowRight, CheckCircle } from 'lucide-react';
@@ -13,7 +11,6 @@ const features = [
     title: 'Cloud Migration',
 
 
-=======
     description: 'Seamless migration to cloud platforms with minimal downtime and maximum efficiency.',
     benefits: ['Zero-downtime migration', 'Cost optimization', 'Performance improvement', 'Scalability']
     description: 'Seamless migration to cloud platforms with minimal downtime and maximum efficiency.',
@@ -42,8 +39,6 @@ const features = [
 ];
 
 
-=======
-=======
 
   return (
     <>
@@ -66,9 +61,9 @@ export default function CloudDevOpsPage() {
           <div className="max-w-7xl mx-auto px-4">
             <motion.div
 
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}"
+              initial={ opacity: 0, y: 20 }
+              animate={ opacity: 1, y: 0 }
+              transition={ duration: 0.8 }"
               className="text-center"
             >"
               <h1 className="text-4xl md:text-6xl font-bold mb-6">Cloud & DevOps</h1>"
@@ -123,16 +118,14 @@ export default function CloudDevOpsPage() {
         </section>
 
 
-=======
-=======
 
         {/* Tools Section */}
         <section className="py-16 bg-white">
           <div className="max-w-7xl mx-auto px-4">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
+              initial={ opacity: 0, y: 20 }
+              animate={ opacity: 1, y: 0 }
+              transition={ duration: 0.8 }
               className="text-center mb-12"
             >
               <h2 className="text-3xl md:text-4xl font-bold mb-4">Technologies We Use</h2>
@@ -144,9 +137,9 @@ export default function CloudDevOpsPage() {
               {tools.map((tool, index) => (
                 <motion.div
                   key={index}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  initial={ opacity: 0, y: 20 }
+                  animate={ opacity: 1, y: 0 }
+                  transition={ duration: 0.5, delay: index * 0.1 }
                   className="bg-gray-50 rounded-xl p-6 hover:bg-gray-100 transition-colors text-center"
                 >
                   <h3 className="text-lg font-semibold mb-2">{tool.name}</h3>
@@ -161,9 +154,9 @@ export default function CloudDevOpsPage() {
         <section className="py-16 px-4">
           <div className="max-w-7xl mx-auto">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
+              initial={ opacity: 0, y: 20 }
+              animate={ opacity: 1, y: 0 }
+              transition={ duration: 0.8 }
               className="text-center mb-12"
             >
               <h2 className="text-3xl md:text-4xl font-bold mb-4">Our Process</h2>
@@ -180,9 +173,9 @@ export default function CloudDevOpsPage() {
               ].map((phase, index) => (
                 <motion.div
                   key={index}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  initial={ opacity: 0, y: 20 }
+                  animate={ opacity: 1, y: 0 }
+                  transition={ duration: 0.5, delay: index * 0.1 }
                   className="text-center"
                 >
                   <div className="w-12 h-12 bg-blue-600 text-white rounded-full flex items-center justify-center mx-auto mb-4 text-xl font-bold">

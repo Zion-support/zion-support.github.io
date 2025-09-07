@@ -139,9 +139,9 @@ export default function EnterpriseSolutionsPage() {
           <div className="container mx-auto px-4">
             <div className="max-w-6xl mx-auto">
               <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6 }}
+                initial={ opacity: 0, y: 20 }
+                animate={ opacity: 1, y: 0 }
+                transition={ duration: 0.6 }
                 className="text-center"
               >
                 <Building className="w-16 h-16 mx-auto mb-6" />
@@ -176,9 +176,9 @@ export default function EnterpriseSolutionsPage() {
           <div className="container mx-auto px-4">
             <div className="max-w-6xl mx-auto">
               <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.2 }}
+                initial={ opacity: 0, y: 20 }
+                animate={ opacity: 1, y: 0 }
+                transition={ duration: 0.6, delay: 0.2 }
                 className="text-center mb-12"
               >
                 <h2 className="text-4xl font-bold text-gray-900 mb-6">
@@ -193,9 +193,9 @@ export default function EnterpriseSolutionsPage() {
                 {enterpriseFeatures.map((feature, index) => (
                   <motion.div
                     key={index}
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.6, delay: 0.4 + index * 0.1 }}
+                    initial={ opacity: 0, y: 20 }
+                    animate={ opacity: 1, y: 0 }
+                    transition={ duration: 0.6, delay: 0.4 + index * 0.1 }
                     className="bg-white rounded-lg shadow-lg p-8"
                   >
                     <div className="flex items-center mb-4">
@@ -223,9 +223,9 @@ export default function EnterpriseSolutionsPage() {
           <div className="container mx-auto px-4">
             <div className="max-w-6xl mx-auto">
               <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.6 }}
+                initial={ opacity: 0, y: 20 }
+                animate={ opacity: 1, y: 0 }
+                transition={ duration: 0.6, delay: 0.6 }
                 className="text-center mb-12"
               >
                 <h2 className="text-4xl font-bold text-gray-900 mb-6">
@@ -240,9 +240,9 @@ export default function EnterpriseSolutionsPage() {
                 {industries.map((industry, index) => (
                   <motion.div
                     key={index}
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.6, delay: 0.8 + index * 0.1 }}
+                    initial={ opacity: 0, y: 20 }
+                    animate={ opacity: 1, y: 0 }
+                    transition={ duration: 0.6, delay: 0.8 + index * 0.1 }
                     className="bg-gray-50 rounded-lg p-6 hover:shadow-lg transition-shadow"
                   >
                     <industry.icon className="w-8 h-8 text-blue-600 mb-4" />
@@ -268,9 +268,9 @@ export default function EnterpriseSolutionsPage() {
           <div className="container mx-auto px-4">
             <div className="max-w-6xl mx-auto">
               <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 1.0 }}
+                initial={ opacity: 0, y: 20 }
+                animate={ opacity: 1, y: 0 }
+                transition={ duration: 0.6, delay: 1.0 }
                 className="text-center mb-12"
               >
                 <h2 className="text-4xl font-bold text-gray-900 mb-6">
@@ -285,9 +285,9 @@ export default function EnterpriseSolutionsPage() {
                 {benefits.map((benefit, index) => (
                   <motion.div
                     key={index}
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.6, delay: 1.2 + index * 0.1 }}
+                    initial={ opacity: 0, y: 20 }
+                    animate={ opacity: 1, y: 0 }
+                    transition={ duration: 0.6, delay: 1.2 + index * 0.1 }
                     className="text-center"
                   >
                     <div className="bg-white rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-4 shadow-lg">
@@ -308,9 +308,9 @@ export default function EnterpriseSolutionsPage() {
           <div className="container mx-auto px-4">
             <div className="max-w-6xl mx-auto">
               <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 1.4 }}
+                initial={ opacity: 0, y: 20 }
+                animate={ opacity: 1, y: 0 }
+                transition={ duration: 0.6, delay: 1.4 }
                 className="text-center mb-12"
               >
                 <h2 className="text-4xl font-bold text-gray-900 mb-6">
@@ -364,9 +364,9 @@ export default function EnterpriseSolutionsPage() {
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto text-center">
               <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 1.6 }}
+                initial={ opacity: 0, y: 20 }
+                animate={ opacity: 1, y: 0 }
+                transition={ duration: 0.6, delay: 1.6 }
               >
                 <Target className="w-12 h-12 mx-auto mb-6" />
                 <h2 className="text-3xl font-bold mb-4">

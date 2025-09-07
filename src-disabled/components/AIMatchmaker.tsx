@@ -161,7 +161,7 @@ pr-12325
       </CardContent>;
     </Card>);
 }
-}}}}}}}}}
+}}}}}
 }
         </div>
       </CardContent>

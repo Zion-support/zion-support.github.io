@@ -56,8 +56,6 @@ type CarouselContextProps = {carouselRef: ReturnType<typeof useEmblaCarousel />[
   orientation: \"horizontal\" | \"vertical\";}
 } & Omit<CarouselProps \"orientation\" />;
 
-const CarouselContext = React.createContext<CarouselContextProps | null />(null)function useCarousel(): CarouselContextProps ;
-  const context = React.useContext(CarouselContext) as CarouselContextProps | null;
   if (!context) {throw new Error(\"useCarousel must be used within a <Carousel />\")}return context as CarouselContextProps;
 }
 
@@ -79,7 +77,7 @@ const Carousel = React.forwardRef<;
 }import * as React from &quot;react & quot;
 import useEmblaCarousel from &quot;embla - carousel - react & quot;
 import { cn } from &quot;@/lib / utils & quot;
-import { Button } from &quot;@/components / ui / button & quot;}},[scrollPrev, scrollNext];
+import { Button } from &quot;@/components / ui / button & quot;},[scrollPrev, scrollNext];
     )React.useEffect(() => {}
 if (!api || !setApi) {return;}
       }
@@ -121,9 +119,9 @@ if ( {) {$2;}
 }
         return;
       }
-on_select (api)api.on (&quot;re_init & quot;, on_select)api.on (&quot;select & quot;, on_select)return () => {api?.off (&quot;select & quot;, on_select)}}, [api, on_select])return (<CarouselContext.Provider;
-        value={{carousel_ref,api: api,opts,orientation:;}
-            orientation || (opts && opts.axis === &quot;y & quot; ? &quot;vertical & quot; : &quot;horizontal & quot),scroll_prev,scroll_next,canScrollPrev,orientation || (opts && opts.axis === \"y\" ? \"vertical\" : \"horizontal\"),scrollPrev,scrollNext,canScrollPrev,canScrollNext}}
+on_select (api)api.on (&quot;re_init & quot;, on_select)api.on (&quot;select & quot;, on_select)return () => {api?.off (&quot;select & quot;, on_select)}, [api, on_select])return (<CarouselContext.Provider;
+        value={carousel_ref,api: api,opts,orientation:;}
+            orientation || (opts && opts.axis === &quot;y & quot; ? &quot;vertical & quot; : &quot;horizontal & quot),scroll_prev,scroll_next,canScrollPrev,orientation || (opts && opts.axis === \"y\" ? \"vertical\" : \"horizontal\"),scrollPrev,scrollNext,canScrollPrev,canScrollNext}
        />;
         <div;
           ref={ref}

@@ -1,3 +1,18 @@
+import {useAuth} from "@/hooks/useAuth";
+import {Button} from "@/components/ui/button";
+import {Header} from "@/components/Header";
+import {Footer} from "@/components/Footer";
+import {CommunityDiscussion} from "@/components/CommunityDiscussion";
+import {Badge} from "@/components/ui/badge";
+import {UserCheck, Bell, MessageSquare, LogOut, Send, Settings} from "lucide-react";
+import {createTestNotification, createOnboardingNotification, createSystemNotification} from "@/utils/notifications";
+import {NotificationCenter} from "@/components/NotificationCenter";
+import {useToast} from "@/hooks/use-toast";
+import {Link} from "react-router-dom";
+export default function Dashboard() {;
+
+  const { user, logout } = useAuth();
+  const { toast } = useToast();
 import { useAuth } from "@/hooks/useAuth",
 import { Button } from "@/components/ui/button",
 import { Header } from "@/components/Header",
@@ -10,6 +25,24 @@ import { NotificationCenter } from "@/components/NotificationCenter",
 import { useToast } from "@/hooks/use-toast";
 import { Link } from "react-router-dom";
 export default function Dashboard() {
+    const result = await createTestNotification(user && user.id);
+    if (result && result.success) {;
+      toast({;
+        title: "Test notification created",,
+  description: "Check your notification center"});
+    } else {;
+      toast({;
+        title: "Error creating test notification",,
+  description: "Something went wrong",;
+        variant: "destructive"});
+
+  const handleTestNotification = async () => {
+    const result = await createTestNotification(user.id);
+    if (result.success) {
+      toast({
+        title: "Test notification created",
+        description: "Check your notification center",
+      });
   const { user, logout } = useAuth($2);
   const { toast } = useToast($2);
   if (!user) return null,
@@ -68,7 +101,7 @@ export default function Dashboard() {
                     <span className="text-zion-cyan font-medium">65%</span>
                   </div>
                   <div className="w-full bg-zion-blue rounded-full h-2">
-                    <div className="bg-gradient-to-r from-zion-cyan to-zion-purple h-2 rounded-full" style={{ width: "65%" }}></div>
+                    <div className="bg-gradient-to-r from-zion-cyan to-zion-purple h-2 rounded-full" style={ width: "65%" }></div>
                   </div>
                   <div className="flex justify-between items-center">
                     <span className="text-zion-slate-light">Community Points</span>
@@ -77,6 +110,9 @@ export default function Dashboard() {
                   <div className="flex justify-between items-center">
                     <span className="text-zion-slate-light">ZION$ Balance</span>
                     <span className="text-zion-cyan font-medium">
+                      <a href="/wallet" className="hover:underline">View Wallet</Link>                    </span>
+                  </div>
+
                       <a href="/wallet" className="hover:underline">View Wallet</Link>
                     </span>
                   </div>
@@ -103,7 +139,7 @@ export default function Dashboard() {
                           title: "Onboarding notification sent"
                           description: "Check your notification center"
                         })
-                      }}
+                      }
                     >
                       <Settings size={16} className="text-zion-purple" />
                       Send Onboarding Nudge
@@ -118,7 +154,7 @@ export default function Dashboard() {
 
                           description: "Check your notification center"
                         })
-                      }}
+                      }
                     >
                       <Bell size={16} className="text-yellow-500" />
                       Send System Alert
@@ -211,5 +247,16 @@ export default function Dashboard() {
       </div>
       <Footer />
     </>
+                        await createOnboardingNotification({                  <CommunityDiscussion />;
+                </div>;
+              </div>;
+            </div>;
+          </div>;
+        </div>;
+      </div>;
+      <Footer />;
+
+    </>);
+}
   )
 }

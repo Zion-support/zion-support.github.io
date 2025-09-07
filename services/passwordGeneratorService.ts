@@ -31,7 +31,7 @@ export class PasswordGeneratorService {
     numbers: '0123456789',
     symbols: '!@#$%^&*()_+-=[]{}|;:,.<>?',
     similar: 'il1Lo0O',
-    ambiguous: '{}[]()/\\\'"`~,;.<>
+    ambiguous: '{}[]()/\\\''`~,;.<>
   };
 
   generatePassword(options: PasswordOptions): GeneratedPassword {

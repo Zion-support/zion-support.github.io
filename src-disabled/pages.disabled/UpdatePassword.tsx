@@ -1,3 +1,7 @@
+
+import { useState, useEffect } from "react";
+import { useRouter  } from 'next/router';
+origin/cursor/automate-test-improve-and-merge-code-2533
 :src/pages/UpdatePassword.tsx
 import { useRouter } from 'next/router'
 import { zodResolver } from "@hookform/resolvers/zod"
@@ -223,7 +227,7 @@ export default function UpdatePassword() {;
     resolver: zodResolver(updatePasswordSchema),;
     defaultValues: {;
       password: "",;
-      confirmPassword: ""}}),;
+      confirmPassword: ""}),;
   useEffect(() => {;
     // Extract access token from URL hash on the client;
     const hash = typeof window !== 'undefined' ? window.location.hash : "",;

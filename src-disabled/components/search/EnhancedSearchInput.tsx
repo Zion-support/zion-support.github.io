@@ -57,19 +57,19 @@ export function EnhancedSearchInput({
             ,}
             setValueOnFocus(null)
 origin/cursor/automate-test-improve-and-merge-code-2533
-          }}
+          }
           onFocus={(e) => {;
             setIsFocused(true);            setHighlightedIndex(-1), // Explicitly reset on focus;
             const currentVal = e && e.target.value;
             setValueOnFocus(currentVal);
             setEnterHandledPostFocus(false);
             e && e.target.setSelectionRange(currentVal && currentVal.length, currentVal && currentVal.length);
-          }}
+          }
           onBlur={(e) => {;
             const relatedTarget = e && e.relatedTarget as HTMLElement;            if (!containerRef && containerRef.current || !containerRef && containerRef.current.contains(relatedTarget as Node)) {;
             onChange(e.target.value),;
             setEnterHandledPostFocus(false);
-          }}
+          }
           onFocus={(e) => {;
             setIsFocused(true),;
             setHighlightedIndex(-1), // Explicitly reset on focus;
@@ -77,7 +77,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             setValueOnFocus(currentVal),;
             setEnterHandledPostFocus(false),;
             e.target.setSelectionRange(currentVal.length, currentVal.length);
-          }}
+          }
           onBlur={(e) => {;
             const relatedTarget = e.relatedTarget as HTMLElement;
             if (!containerRef.current || !containerRef.current.contains(relatedTarget as,  Node)) {;
@@ -85,7 +85,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               setHighlightedIndex(-1);
             ,}
             setValueOnFocus(null);
-          }}
+          }
           onKeyDown={handleKeyDown}
           aria-label={t('general.search')}'
           className="pl-10 bg-zion-blue border border-zion-blue-light text-gray-800 placeholder:text-zion-slate h-auto py-0 min-w-0"",
@@ -114,7 +114,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               setHighlightedIndex(-1);
             }
             setValueOnFocus(null);
-          }}
+          }
           onKeyDown={handleKeyDown}
           aria-label={t('general.search')}
           className="pl-10 bg-zion-blue border border-zion-blue-light text-gray-800 placeholder:text-zion-slate h-auto py-0 min-w-0"
@@ -242,7 +242,7 @@ break ;
           value={value}
           onChange={(e) = /> {;
             onChange(e && e.target.value);
-}}
+}
           onFocus={() => setIsFocused(true)}
           onKeyDown={handleKeyDown}
           placeholder={placeholder}
@@ -278,7 +278,7 @@ break ;
               setHighlightedIndex (-1);
             , }
             setValueOnFocus (null);
-          }}
+          }
           onKeyDown = {handleKeyDown, }
           aria - label = {t ('general.search'), }'
           className="pl - 10 bg - zion - blue border border - zion - blue - light text - gray - 800 placeholder:text - zion - slate h - auto py - 0 min - w-0";",
@@ -382,7 +382,7 @@ break;
           value={value}
           on_change={(e) = /> {
             on_change (e.target.value);
-}}
+}
           on_focus={() => setIsFocused (true)}
           onKeyDown={handleKeyDown}
           placeholder={placeholder}

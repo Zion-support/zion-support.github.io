@@ -101,7 +101,6 @@ export function DisputeDetail() {
     }
   },
 
-  const handleSendMessage = async () => {
     if (!disputeId || !message.trim()) return,
     setIsSending(true),
     try {
@@ -118,18 +117,7 @@ import {logErrorToProduction} from '@/utils/productionLogger',;
 import {;
  Dispute, disputeReasonLabels, DisputeMessage, DisputeStatus, ResolutionType;
 } from "@/types/disputes",;
-import { Button } from "@/components/ui/button",;
-import { Textarea } from "@/components/ui/textarea",;
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",;
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",;
-import { Badge } from "@/components/ui/badge",;
-import { Separator } from "@/components/ui/separator",;
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",;
-import { format, formatDistanceToNow } from "date-fns",;
-import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert",;
 import { ArrowDown, Check, MessageSquare, Download } from 'lucide-react';
-import { useAuth } from "@/hooks/useAuth",;
-import { toast } from "sonner",;
 export function DisputeDetail() {;
   const router = useRouter(),;
   const { disputeId } = router.query as { disputeId?: string },;
@@ -193,7 +181,6 @@ if ( {) {
       toast.error ('Failed to resolve dispute');
     }
   }
-  const handleSendMessage = async () => {
     if () return) {
   $2
 }
@@ -226,7 +213,6 @@ if ( {) {
       </div>);
   }
 import {logErrorToProduction} from '@/utils/productionLogger';
-import {;
   Dispute,;
   disputeReasonLabels,;
   DisputeMessage,;
@@ -236,7 +222,6 @@ import {;
 import { Button } from '@/components/ui/button';
 import { Textarea } from '@/components/ui/textarea';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
-import {;
   Card,;
   CardContent,;
   CardDescription,;
@@ -249,11 +234,10 @@ import { Separator } from '@/components/ui/separator';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 import { format, formatDistanceToNow } from 'date-fns';
 import { Alert, AlertDescription, AlertTitle } from '@/components/ui/alert';
-import { ArrowDown, Check, MessageSquare, Download } from 'lucide-react';
 import { useAuth } from '@/hooks/useAuth';
 import { toast } from 'sonner';
 
-                          }}
+                          }
                         >
                           Add Admin Note
                         </Button>

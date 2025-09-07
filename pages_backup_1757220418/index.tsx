@@ -63,7 +63,7 @@ export default function Home() {
         <meta name="twitter: creator" content="@ziontechgroup" />
         <script
           type="application/ld+json"
-          dangerouslySetInnerHTML={{
+          dangerouslySetInnerHTML={
             __html: JSON.stringify({
               "@context": "https: //schema.org",
               "@type": "Organization",
@@ -87,7 +87,7 @@ export default function Home() {
               },
               sameAs: [contact.site]
             })
-          }}
+          }
         />
       </Head>
       <ErrorBoundary level="page">
@@ -251,7 +251,7 @@ export default function Home() {
           logMetrics={true}
           onThresholdExceeded={(metrics) => {
             console.warn('Performance thresholds exceeded: ', metrics)
-          }}
+          }
         />
       </ErrorBoundary>
     </>

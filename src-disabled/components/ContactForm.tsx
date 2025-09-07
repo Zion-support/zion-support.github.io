@@ -43,9 +43,9 @@ name: '','
   };
   return (
     <motion.div
-      initial={{ opacity: 0, y: 20 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.8 }}
+      initial={ opacity: 0, y: 20 }
+      animate={ opacity: 1, y: 0 }
+      transition={ duration: 0.8 }
     >
       <Card className="p-4 sm:p-6 lg:p-8 max-w-2xl mx-auto">"
         <h3 className="text-2xl font-bold text-gray-900 mb-6 text-center">"
@@ -53,8 +53,8 @@ name: '','
         </h3>
 {submitStatus === 'success' && ('
           <motion.div
-            initial={{ opacity: 0, scale: 0.8 }}
-            animate={{ opacity: 1, scale: 1 }}
+            initial={ opacity: 0, scale: 0.8 }
+            animate={ opacity: 1, scale: 1 }
             className="mb-6 p-4 bg-green-100 border border-green-400 text-green-700 rounded-lg text-center""
           >
             Thank you for your message! We'll get back to you soon.'
@@ -62,8 +62,8 @@ name: '','
         )}
         {submitStatus === 'error' && ('
           <motion.div
-            initial={{ opacity: 0, scale: 0.8 }}
-            animate={{ opacity: 1, scale: 1 }}
+            initial={ opacity: 0, scale: 0.8 }
+            animate={ opacity: 1, scale: 1 }
             className="mb-6 p-4 bg-red-100 border border-red-400 text-red-700 rounded-lg text-center""
           >
             Sorry, there was an error sending your message. Please try again.
@@ -138,8 +138,8 @@ name: '','
             />
           </div>
           <motion.div
-            whileHover={{ scale: 1.02 }}
-            whileTap={{ scale: 0.98 }}
+            whileHover={ scale: 1.02 }
+            whileTap={ scale: 0.98 }
           >
             <Button
               type="submit""

@@ -4,7 +4,7 @@
   SidebarGroup
   SidebarMenuItem
 
-} from "@/components/ui/sidebar";
+} from '@/components/ui/sidebar';
 
 import { Bell, FileText, Home, Mail, Search, Settings, Users } from 'lucide-react'
 import {
@@ -27,28 +27,28 @@ import {
     <Sidebar>
       <SidebarContent>
 
-          <SidebarMenuItem href="/messaging" icon={<Mail size={16} />}>
+          <SidebarMenuItem href='/messaging' icon={<Mail size={16} />}>
             <span>Messages</span>
-          </SidebarMenuItem>"
-          <SidebarMenuItem href="/notifications" icon={<Bell size={16} />}>
+          </SidebarMenuItem>'
+          <SidebarMenuItem href='/notifications' icon={<Bell size={16} />}>
             <span>Notifications</span>
           </SidebarMenuItem>
 
-        <SidebarGroup title="Content">
+        <SidebarGroup title='Content'>
 
-          <SidebarMenuItem href="/publish" icon={<FileText size={16} />}>
+          <SidebarMenuItem href='/publish' icon={<FileText size={16} />}>
             <span>My Content</span>
-          </SidebarMenuItem>"
-          <SidebarMenuItem href="/analytics" icon={<Search size={16} />}>
+          </SidebarMenuItem>'
+          <SidebarMenuItem href='/analytics' icon={<Search size={16} />}>
             <span>Analytics</span>
           </SidebarMenuItem>
 
-        <SidebarGroup title="Settings">
+        <SidebarGroup title='Settings'>
 
-          <SidebarMenuItem href="/profile" icon={<Users size={16} />}>
+          <SidebarMenuItem href='/profile' icon={<Users size={16} />}>
             <span>Profile</span>
-          </SidebarMenuItem>"
-          <SidebarMenuItem href="/settings" icon={<Settings size={16} />}>
+          </SidebarMenuItem>'
+          <SidebarMenuItem href='/settings' icon={<Settings size={16} />}>
 <SidebarGroup title='Dashboard'>
           <SidebarMenuItem href='/creator-dashboard' icon={<Home size={16} />}>
             <span>Home</span>
@@ -81,7 +81,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 import {;
 
-import {;
   Bell,;
   FileText,;
   Home,;
@@ -123,30 +122,30 @@ import {;
           </SidebarMenuItem>;'
           <SidebarMenuItem href='/settings' icon={<Settings size={16} />}>            <span>Settings</span>            <span>Home</span>;
 
-          <SidebarMenuItem href="/messaging" icon={<Mail size={16} />}>;
+          <SidebarMenuItem href='/messaging' icon={<Mail size={16} />}>;
             <span>Messages</span>;
-          </SidebarMenuItem>;"
-          <SidebarMenuItem href="/notifications" icon={<Bell size={16} />}>;
+          </SidebarMenuItem>;'
+          <SidebarMenuItem href='/notifications' icon={<Bell size={16} />}>;
             <span>Notifications</span>;
           </SidebarMenuItem>;
         </SidebarGroup>;
 
-        <SidebarGroup title="Content">;
+        <SidebarGroup title='Content'>;
 
-          <SidebarMenuItem href="/publish" icon={<FileText size={16} />}>;
+          <SidebarMenuItem href='/publish' icon={<FileText size={16} />}>;
             <span>My Content</span>;
-          </SidebarMenuItem>;"
-          <SidebarMenuItem href="/analytics" icon={<Search size={16} />}>;
+          </SidebarMenuItem>;'
+          <SidebarMenuItem href='/analytics' icon={<Search size={16} />}>;
             <span>Analytics</span>;
           </SidebarMenuItem>;
         </SidebarGroup>;
 
-        <SidebarGroup title="Settings">;
+        <SidebarGroup title='Settings'>;
 
-          <SidebarMenuItem href="/profile" icon={<Users size={16} />}>;
+          <SidebarMenuItem href='/profile' icon={<Users size={16} />}>;
             <span>Profile</span>;
-          </SidebarMenuItem>;"
-          <SidebarMenuItem href="/settings" icon={<Settings size={16} />}>;
+          </SidebarMenuItem>;'
+          <SidebarMenuItem href='/settings' icon={<Settings size={16} />}>;
             <span>Settings</span>;
           </SidebarMenuItem>;
         </SidebarGroup>;

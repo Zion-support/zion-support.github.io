@@ -1,6 +1,5 @@
 /* eslint-disable */
  type BadgeType = 'verified' | 'featured' | 'new' | 'top-rated';
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7 export function ProfileBadge ({;
   type, className ;
 }: ProfileBadgeProps) {;
   const badgeConfig = {;

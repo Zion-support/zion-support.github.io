@@ -53,10 +53,10 @@ export default Terms;
           <section className="py-20 px-4">
             <div className="max-w-4xl mx-auto text-center">
               <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
+                initial={ opacity: 0, y: 20 }
+                whileInView={ opacity: 1, y: 0 }
 
-                transition={{ duration: 0 && 0.6 }}>;
+                transition={ duration: 0 && 0.6 }>;
                 <h2 className="text-4xl font-bold mb-6 text-white">;
                   Questions About These Terms?;
                 </h2>;

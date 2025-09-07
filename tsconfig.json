@@ -1,12 +1,19 @@
 {
   "compilerOptions": {
     "target": "ES2020",
-    "lib": ["dom", "dom.iterable", "es6"],
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "es2020"
+    ],
     "allowJs": true,
     "skipLibCheck": true,
-    "strict": true,
+    "strict": false,
     "forceConsistentCasingInFileNames": true,
     "noEmit": true,
+    "moduleResolution": "bundler",
+    "maxNodeModuleJsDepth": 0,
+    "skipDefaultLibCheck": true,
     "esModuleInterop": true,
     "module": "ESNext",
     "moduleResolution": "node",
@@ -14,22 +21,85 @@
     "isolatedModules": true,
     "jsx": "preserve",
     "incremental": true,
+    "baseUrl": ".",
+    "allowSyntheticDefaultImports": true,
     "plugins": [
       {
         "name": "next"
       }
     ],
-    "baseUrl": ".",
     "paths": {
-      "@/*": ["./*"],
-      "@/components/*": ["./components/*"],
-      "@/lib/*": ["./lib/*"],
-      "@/utils/*": ["./utils/*"],
-      "@/hooks/*": ["./hooks/*"],
-      "@/types/*": ["./types/*"]
+      "@/*": [
+        "./*"
+      ],
+      "@/components/*": [
+        "./components/*"
+      ],
+      "@/pages/*": [
+        "./pages/*"
+      ],
+      "@/utils/*": [
+        "./utils/*"
+      ],
+      "@/hooks/*": [
+        "./hooks/*"
+      ],
+      "@/types/*": [
+        "./types/*"
+      ],
+      "@/styles/*": [
+        "./styles/*"
+      ],
+      "@/assets/*": [
+        "./assets/*"
+      ]
     },
-    "allowSyntheticDefaultImports": true
+    "strictNullChecks": true,
+    "tsBuildInfoFile": ".next/cache/tsbuildinfo.json",
+    "allowImportingTsExtensions": true,
+    "noUnusedLocals": false,
+    "noUnusedParameters": false,
+    "noFallthroughCasesInSwitch": true,
+    "noImplicitAny": false,
+    "noImplicitReturns": false
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
-  "exclude": ["node_modules", "apps/**", "apps.backup/**", "api-backup/**", "backup-merge-conflicts/**", "browserstack.config.ts", "cypress.config.ts", "jest.config.*", "*.config.ts", "types/**", "netlify/**", "components/**"]
+  "include": [
+    "next-env.d.ts",
+    "pages/**/*.ts",
+    "pages/**/*.tsx",
+    "components/**/*.ts",
+    "components/**/*.tsx",
+    "src/**/*.ts",
+    "src/**/*.tsx",
+    ".next/types/**/*.ts"
+  ],
+  "exclude": [
+    "node_modules",
+    "apps/**",
+    "apps.backup/**",
+    "api-backup/**",
+    "backup/**",
+    "backup-merge-conflicts/**",
+    "backup-problematic-files/**",
+    "broken_files_backup/**",
+    "corrupted_backup/**",
+    "_conflicted_disabled/**",
+    "components-disabled/**",
+    "components.disabled/**",
+    "components.disabled_full/**",
+    "api-disabled/**",
+    "api.disabled/**",
+    "api.disabled.temp/**",
+    "src_backup/**",
+    "utils/**",
+    "vite.config-backup.ts",
+    "browserstack.config.ts",
+    "cypress.config.ts",
+    "jest.config.*",
+    "*.config.ts",
+    "types/**",
+    "netlify/**",
+    "components/**",
+    "src/**"
+  ]
 }

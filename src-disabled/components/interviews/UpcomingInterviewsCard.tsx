@@ -33,34 +33,34 @@ const upcoming = interviews
   }, []),
 
     return (
-      <Card className="bg-zion-blue-dark/40 border-zion-blue-light">
-        <CardHeader>"
-          <CardTitle className="text-lg flex items-center">"
-            <Video className="h-5 w-5 mr-2 text-zion-purple" />
+      <Card className='bg-zion-blue-dark/40 border-zion-blue-light'>
+        <CardHeader>'
+          <CardTitle className='text-lg flex items-center'>'
+            <Video className='h-5 w-5 mr-2 text-zion-purple' />
             Upcoming Interviews;
           </CardTitle>
         </CardHeader>
-        <CardContent>"
-          <div className="space-y-4">
-            {[1, 2].map(i => ("
-              <div key={i} className="flex items-center gap-3 animate-pulse">"
-                <div className="w-10 h-10 bg-zion-blue-light/30 rounded-full"></div>"
-                <div className="flex-1">"
-                  <div className="h-4 w-3/4 bg-zion-blue-light/30 rounded mb-2"></div>"
-                  <div className="h-3 w-1/2 bg-zion-blue-light/30 rounded"></div>
+        <CardContent>'
+          <div className='space-y-4'>
+            {[1, 2].map(i => ('
+              <div key={i} className='flex items-center gap-3 animate-pulse'>'
+                <div className='w-10 h-10 bg-zion-blue-light/30 rounded-full'></div>'
+                <div className='flex-1'>'
+                  <div className='h-4 w-3/4 bg-zion-blue-light/30 rounded mb-2'></div>'
+                  <div className='h-3 w-1/2 bg-zion-blue-light/30 rounded'></div>
                 </div>
               </div>
 
-import React, { useEffect, useState } from "react",;
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card",;
-import { Button } from "@/components/ui/button",;
-import { useInterviews } from "@/hooks/useInterviews",;
-import { Interview } from "@/types/interview",;
-import { format, isPast, parseISO } from "date-fns",;
-import Link from "next/link",;
+import React, { useEffect, useState } from 'react',;
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card',;
+import { Button } from '@/components/ui/button',;
+import { useInterviews } from '@/hooks/useInterviews',;
+import { Interview } from '@/types/interview',;
+import { format, isPast, parseISO } from 'date-fns',;
+import Link from 'next/link',;
 
 import { Calendar, Clock, Video } from 'lucide-react';
-import { Avatar } from "@/components/ui/avatar",;
+import { Avatar } from '@/components/ui/avatar',;
 import {logErrorToProduction} from '@/utils/productionLogger',;
 
 import React, { useEffect, useState } from 'react';
@@ -71,7 +71,6 @@ import { useInterviews } from '@/hooks/useInterviews';
 import { Interview } from '@/types/interview';
 import { format, isPast, parseISO } from 'date-fns';
 import Link from 'next/link';
-import { Calendar, Clock, Video } from 'lucide-react';
 
 import { Avatar } from '@/components/ui/avatar';
 import { logErrorToProduction } from '@/utils/productionLogger';
@@ -131,19 +130,19 @@ if ( {) {}
 
   if (upcomingInterviews.length === 0) {
     return (
-      <Card className="bg-zion-blue-dark/40 border-zion-blue-light">
+      <Card className='bg-zion-blue-dark/40 border-zion-blue-light'>
         <CardHeader>
-          <CardTitle className="text-lg flex items-center">
-            <Video className="h-5 w-5 mr-2 text-zion-purple" />
+          <CardTitle className='text-lg flex items-center'>
+            <Video className='h-5 w-5 mr-2 text-zion-purple' />
             Upcoming Interviews
           </CardTitle>
         </CardHeader>
         <CardContent>
-          <div className="text-center py-6">
-            <Calendar className="h-10 w-10 mx-auto mb-2 text-muted-foreground" />
-            <p className="text-sm text-muted-foreground">No upcoming interviews scheduled</p>
-            <Button asChild className="mt-4" variant="outline" size="sm">
-              <Link href="/interviews">Schedule Interview</Link>
+          <div className='text-center py-6'>
+            <Calendar className='h-10 w-10 mx-auto mb-2 text-muted-foreground' />
+            <p className='text-sm text-muted-foreground'>No upcoming interviews scheduled</p>
+            <Button asChild className='mt-4' variant='outline' size='sm'>
+              <Link href='/interviews'>Schedule Interview</Link>
 
             </Button>
           </div>
@@ -151,37 +150,37 @@ if ( {) {}
       </Card>
     )
 
-    <Card className="bg-zion-blue-dark/40 border-zion-blue-light">
+    <Card className='bg-zion-blue-dark/40 border-zion-blue-light'>
       <CardHeader>
-        <CardTitle className="text-lg flex items-center">
-          <Video className="h-5 w-5 mr-2 text-zion-purple" />
+        <CardTitle className='text-lg flex items-center'>
+          <Video className='h-5 w-5 mr-2 text-zion-purple' />
           Upcoming Interviews
         </CardTitle>
       </CardHeader>
       <CardContent>
-        <div className="space-y-4">
+        <div className='space-y-4'>
           {upcomingInterviews.map(interview => {
 
             return (
-              <div key={interview.id} className="flex items-center gap-3">
+              <div key={interview.id} className='flex items-center gap-3'>
 
-                <Avatar className="h-10 w-10 bg-zion-purple/10">
+                <Avatar className='h-10 w-10 bg-zion-purple/10'>
                   {interview.client_avatar || interview.talent_avatar ? (
                     <img;
                       src={interview.client_avatar || interview.talent_avatar}
                       alt={interview.client_name || interview.talent_name}
 
-                    <div className="flex h-full w-full items-center justify-center bg-zion-purple/20 text-zion-purple font-medium">
-                      {(interview.client_name || interview.talent_name || "U").charAt(0)}
+                    <div className='flex h-full w-full items-center justify-center bg-zion-purple/20 text-zion-purple font-medium'>
+                      {(interview.client_name || interview.talent_name || 'U').charAt(0)}
                     </div>
                   )}
                 </Avatar>
 
-                <div className="flex-1">
-                  <div className="flex justify-between items-start">
-                    <p className="font-medium line-clamp-1">
+                <div className='flex-1'>
+                  <div className='flex justify-between items-start'>
+                    <p className='font-medium line-clamp-1'>
 
-                      {interview.title || "Interview"}
+                      {interview.title || 'Interview'}
 
                     </p>
 
@@ -219,9 +218,9 @@ if ( {) {}
                         interview && interview.talent_name ||;'
                         'U';
                       ).charAt(0)}
-                    </div>;"
-            return (<div key={interview && interview.id} className="flex items-center gap-3">;"
-                <Avatar className="h-10 w-10 bg-zion-purple/10">;
+                    </div>;'
+            return (<div key={interview && interview.id} className='flex items-center gap-3'>;'
+                <Avatar className='h-10 w-10 bg-zion-purple/10'>;
                   {/* Assuming AvatarImage and AvatarFallback are part of Avatar or imported separately */}
                   {/* For now, conditional rendering based on available image */}
                   {interview && interview.client_avatar || interview && interview.talent_avatar ? (;
@@ -235,9 +234,9 @@ if ( {) {}
                     )}
                   </div>
 
-                  <div className="flex items-center text-sm text-muted-foreground">
+                  <div className='flex items-center text-sm text-muted-foreground'>
 
-                    <Clock className="h-3 w-3 mr-1" />
+                    <Clock className='h-3 w-3 mr-1' />
                     {formattedDate} at {formattedTime}
                   </div>;
                 </div>;
@@ -246,10 +245,10 @@ if ( {) {}
           })}
         </div>
 
-        <div className="mt-4 pt-3 border-t border-zion-blue-light/40">
-          <Button asChild size="sm" variant="outline" className="w-full">
+        <div className='mt-4 pt-3 border-t border-zion-blue-light/40'>
+          <Button asChild size='sm' variant='outline' className='w-full'>
 
-            <Link href="/interviews">
+            <Link href='/interviews'>
               View All Interviews;
             </Link>
 
@@ -310,7 +309,6 @@ if ( {) {}
             const formatted_date = format (interview_date, 'EEE, MMM d');'
             const formatted_time = format (interview_date, 'h:mm a');
             // Determine if interview is happening soon (within 30,  minutes)            const now = new Date ();
-            const isStartingSoon =;
               interview_date.get_time () - now.get_time () < 30 * 60 * 1000 &&;
               interview_date.get_time () > now.get_time ();
             return ('
@@ -326,17 +324,17 @@ if ( {) {}
                         interview.client_name ||;
 
                     </div>;
-            return (<div key={interview.id} className="flex items - center gap-3">;
-                <Avatar className="h - 10 w - 10 bg - zion-purple / 10">;
+            return (<div key={interview.id} className='flex items - center gap-3'>;
+                <Avatar className='h - 10 w - 10 bg - zion-purple / 10'>;
 
                   {/* Assuming AvatarImage and AvatarFallback are part of Avatar or imported separately */}
                   {/* For now, conditional rendering based on available image */}
                   {interview.client_avatar || interview.talent_avatar ? (
                     <img;
-                      src={interview.client_avatar || interview.talent_avatar || undefined} // Ensure src is string | undefined;"
-                      alt={interview.client_name || interview.talent_name || "User"} // Ensure alt is string;
+                      src={interview.client_avatar || interview.talent_avatar || undefined} // Ensure src is string | undefined;'
+                      alt={interview.client_name || interview.talent_name || 'User'} // Ensure alt is string;
 
-                      {(interview.client_name || interview.talent_name || "U").char_at (0)}
+                      {(interview.client_name || interview.talent_name || 'U').char_at (0)}
                     </div>)}
                 </Avatar>;'
                 <div className='flex - 1'>;'

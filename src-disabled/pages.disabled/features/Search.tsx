@@ -1,4 +1,3 @@
-:src/pages/features/Search.tsx
 
   return (
     <>;
@@ -43,7 +42,7 @@
       {/* Use a normal script tag so JSON-LD is correctly parsed */}
       <script
         type="application/ld+json""
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+        dangerouslySetInnerHTML={ __html: JSON.stringify(schema) }
       ></script>
       <Header />
       <main className="bg-background text-white py-12">"
@@ -65,27 +64,9 @@ import React from "react",
 import { Header } from "@/components/Header",
 import { SEO } from "@/components/SEO",
 import { GradientHeading } from "@/components/GradientHeading",
-:src/pages/features/Search.tsx
-import { Button } from "@/components/ui/button";
-import Link from 'next/link';
-export default function SearchFeature() {
-
-  const schema = {
-    '@context': 'https://schema.org'
-    '@type': 'WebPage'
-    name: 'Advanced Search'
-    description:
-      'Quickly locate products, services and talent using intelligent search filters.'
-    url: 'https://app.ziontechgroup.com/features/search',  };    "@context": "https://schema.org"
-    "@type": "WebPage"
-    "name": "Advanced Search"
-    "description": "Quickly locate products, services and talent using intelligent search filters."
-    "url": "https://app.ziontechgroup.com/features/search"
-  }
 import { Button } from "@/components/ui/button",
 import Link from 'next/link',
 export default function SearchFeature() {
-  const schema = {
     "@context": "https://schema.org",
     "@type": "WebPage",
     "name": "Advanced Search",
@@ -96,11 +77,6 @@ export default function SearchFeature() {
   return (
     <>
       <SEO
-:src/pages/features/Search.tsx
-        title='Advanced Search'
-        description='Find exactly what you need with fast, filterable search powered by Elasticsearch.'
-        keywords='search engine, filtering, tech marketplace search'
-        canonical='https://app.ziontechgroup.com/features/search'
 
         title="Advanced Search"
         description="Find exactly what you need with fast, filterable search powered by Elasticsearch."
@@ -114,7 +90,7 @@ export default function SearchFeature() {
       <script
         type="application/ld+json"
 
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+        dangerouslySetInnerHTML={ __html: JSON.stringify(schema) }
       ></script>
       <Header />
       <main className="bg-background text-white py-12">
@@ -171,7 +147,7 @@ export default function SearchFeature() {
             <Button size="lg" className="bg-zion-purple text-white" asChild>
               <Link href="/search">Try Search</Link>
         type='application/ld+json'
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+        dangerouslySetInnerHTML={ __html: JSON.stringify(schema) }
       ></script>
       <Header />
       <main className='bg-background text-white py-12'>
@@ -229,8 +205,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       </main>
     </>
   )
-:src/pages/features/Search.tsx
-}
 ;
 
 ;
@@ -260,7 +234,7 @@ export default function SearchFeature() {;
       {/* Use a normal script tag so JSON-LD is correctly parsed */}
       <script;
         type="application/ld+json";
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+        dangerouslySetInnerHTML={ __html: JSON.stringify(schema) }
       ></script>;
       <Header />;
       <main className="bg-background text-white py-12">;
@@ -311,7 +285,7 @@ export default function SearchFeature() {;
         </div>;
       </main>;
 ;
-}}})
+}})
     </>;
   );
 }

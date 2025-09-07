@@ -72,15 +72,15 @@ export default function AIBusinessIntelligenceSuite() {
         <section className="relative z-10 pt-32 pb-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <motion.div
-              initial={{ opacity: 0, y: 30}}
-              animate={{ opacity: 1, y: 0}}
-              transition={{ duration: 0.8 }}
+              initial={ opacity: 0, y: 30}
+              animate={ opacity: 1, y: 0}
+              transition={ duration: 0.8 }
               className="text-center mb-16"
             >
               <motion.div
-                initial={{ scale: 0.8, rotate: -5 }}
-                animate={{ scale: 1, rotate: 0}}
-                transition={{ duration: 1, delay: 0.2 }}
+                initial={ scale: 0.8, rotate: -5 }
+                animate={ scale: 1, rotate: 0}
+                transition={ duration: 1, delay: 0.2 }
                 className="mb-8"
               >
                 <div className="inline-flex items-center justify-center w-24 h-24 bg-gradient-to-br from-blue-500 to-indigo-600 rounded-3xl shadow-2xl mb-6 relative overflow-hidden">
@@ -91,20 +91,20 @@ export default function AIBusinessIntelligenceSuite() {
               </motion.div>
 
               <motion.h1 
-                initial={{ opacity: 0, y: 20}}
-                animate={{ opacity: 1, y: 0}}
-                transition={{ duration: 0.8, delay: 0.3 }}
-                initial={{ opacity: 0, y: 20 }  } catch (error) {
+                initial={ opacity: 0, y: 20}
+                animate={ opacity: 1, y: 0}
+                transition={ duration: 0.8, delay: 0.3 }
+                initial={ opacity: 0, y: 20 }  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-                animate={{ opacity: 1, y: 0 }  } catch (error) {
+                animate={ opacity: 1, y: 0 }  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-                transition={{ duration: 0.8, delay: 0.3 }  } catch (error) {
+                transition={ duration: 0.8, delay: 0.3 }  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
@@ -115,20 +115,20 @@ export default function AIBusinessIntelligenceSuite() {
               </motion.h1>
 
               <motion.p 
-                initial={{ opacity: 0, y: 20}}
-                animate={{ opacity: 1, y: 0}}
-                transition={{ duration: 0.8, delay: 0.4 }}
-                initial={{ opacity: 0, y: 20 }  } catch (error) {
+                initial={ opacity: 0, y: 20}
+                animate={ opacity: 1, y: 0}
+                transition={ duration: 0.8, delay: 0.4 }
+                initial={ opacity: 0, y: 20 }  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-                animate={{ opacity: 1, y: 0 }  } catch (error) {
+                animate={ opacity: 1, y: 0 }  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-                transition={{ duration: 0.8, delay: 0.4 }  } catch (error) {
+                transition={ duration: 0.8, delay: 0.4 }  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
@@ -139,20 +139,20 @@ export default function AIBusinessIntelligenceSuite() {
               </motion.p>
 
               <motion.p 
-                initial={{ opacity: 0, y: 20}}
-                animate={{ opacity: 1, y: 0}}
-                transition={{ duration: 0.8, delay: 0.5 }}
-                initial={{ opacity: 0, y: 20 }  } catch (error) {
+                initial={ opacity: 0, y: 20}
+                animate={ opacity: 1, y: 0}
+                transition={ duration: 0.8, delay: 0.5 }
+                initial={ opacity: 0, y: 20 }  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-                animate={{ opacity: 1, y: 0 }  } catch (error) {
+                animate={ opacity: 1, y: 0 }  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-                transition={{ duration: 0.8, delay: 0.5 }  } catch (error) {
+                transition={ duration: 0.8, delay: 0.5 }  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
@@ -163,15 +163,15 @@ export default function AIBusinessIntelligenceSuite() {
               </motion.p>
               {/* Pricing and CTA */}
               <motion.div 
-                initial={{ opacity: 0, y: 20}}
-                animate={{ opacity: 1, y: 0}}
-                transition={{ duration: 0.8, delay: 0.6 }}
+                initial={ opacity: 0, y: 20}
+                animate={ opacity: 1, y: 0}
+                transition={ duration: 0.8, delay: 0.6 }
                 className="flex flex-col sm:flex-row gap-6 justify-center mb-16"
               >
                 <motion.div
-                  whileHover={{ scale: 1.05, y: -2 }}
-                  whileTap={{ scale: 0.95 }}
-                  transition={{ duration: 0.2 }}
+                  whileHover={ scale: 1.05, y: -2 }
+                  whileTap={ scale: 0.95 }
+                  transition={ duration: 0.2 }
                   className="bg-gradient-to-r from-blue-500 to-indigo-600 p-1 rounded-2xl shadow-2xl"
                 >
                   <div className="bg-gray-900 rounded-2xl px-8 py-6">
@@ -190,17 +190,17 @@ export default function AIBusinessIntelligenceSuite() {
                   </div>
                 </motion.div>
                 <motion.div
-                  whileHover={{ scale: 1.05, y: -2 }  } catch (error) {
+                  whileHover={ scale: 1.05, y: -2 }  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-                  whileTap={{ scale: 0.95 }  } catch (error) {
+                  whileTap={ scale: 0.95 }  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-                  transition={{ duration: 0.2, delay: 0.1 }  } catch (error) {
+                  transition={ duration: 0.2, delay: 0.1 }  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
@@ -220,9 +220,9 @@ export default function AIBusinessIntelligenceSuite() {
               </motion.div>
               {/* Key Benefits */}
               <motion.div
-                initial={{ opacity: 0}}
-                animate={{ opacity: 1}}
-                transition={{ duration: 1, delay: 0.8 }}
+                initial={ opacity: 0}
+                animate={ opacity: 1}
+                transition={ duration: 1, delay: 0.8 }
                 className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto"
               >
                 <div className="text-center p-4">
@@ -245,10 +245,10 @@ export default function AIBusinessIntelligenceSuite() {
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-transparent to-gray-900/20">
           <div className="max-w-7xl mx-auto">
             <motion.div
-              initial={{ opacity: 0, y: 20}}
-              whileInView={{ opacity: 1, y: 0}}
-              transition={{ duration: 0.6 }}
-              viewport={{ once: true}}
+              initial={ opacity: 0, y: 20}
+              whileInView={ opacity: 1, y: 0}
+              transition={ duration: 0.6 }
+              viewport={ once: true}
               className="text-center mb-16"
             >
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
@@ -264,11 +264,11 @@ export default function AIBusinessIntelligenceSuite() {
               {features.map((feature, index) => (
                 <motion.div
                   key={index}
-                  initial={{ opacity: 0, y: 20}}
-                  whileInView={{ opacity: 1, y: 0}}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
-                  viewport={{ once: true}}
-                  whileHover={{ scale: 1.02, y: -5 }}
+                  initial={ opacity: 0, y: 20}
+                  whileInView={ opacity: 1, y: 0}
+                  transition={ duration: 0.6, delay: index * 0.1 }
+                  viewport={ once: true}
+                  whileHover={ scale: 1.02, y: -5 }
                   className="group bg-gradient-to-br from-blue-900/20 to-indigo-900/20 border border-blue-500/30 rounded-2xl p-6 hover:border-blue-400/60 hover:shadow-2xl hover:shadow-blue-500/20 transition-all duration-300"
                 >
                   <div className="flex items-center space-x-3 mb-4">
@@ -288,10 +288,10 @@ export default function AIBusinessIntelligenceSuite() {
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <motion.div
-              initial={{ opacity: 0, y: 20}}
-              whileInView={{ opacity: 1, y: 0}}
-              transition={{ duration: 0.6 }}
-              viewport={{ once: true}}
+              initial={ opacity: 0, y: 20}
+              whileInView={ opacity: 1, y: 0}
+              transition={ duration: 0.6 }
+              viewport={ once: true}
               className="text-center mb-16"
             >
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
@@ -307,11 +307,11 @@ export default function AIBusinessIntelligenceSuite() {
               {useCases.map((useCase, index) => (
                 <motion.div
                   key={index}
-                  initial={{ opacity: 0, y: 20}}
-                  whileInView={{ opacity: 1, y: 0}}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
-                  viewport={{ once: true}}
-                  whileHover={{ scale: 1.02, y: -5 }}
+                  initial={ opacity: 0, y: 20}
+                  whileInView={ opacity: 1, y: 0}
+                  transition={ duration: 0.6, delay: index * 0.1 }
+                  viewport={ once: true}
+                  whileHover={ scale: 1.02, y: -5 }
                   className="group bg-gradient-to-br from-green-900/20 to-emerald-900/20 border border-green-500/30 rounded-2xl p-6 hover:border-green-400/60 hover:shadow-2xl hover:shadow-green-500/20 transition-all duration-300"
                 >
                   <div className="flex items-center space-x-3 mb-4">
@@ -333,10 +333,10 @@ export default function AIBusinessIntelligenceSuite() {
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
               {/* Technology Stack */}
               <motion.div
-                initial={{ opacity: 0, x: -20 }}
-                whileInView={{ opacity: 1, x: 0}}
-                transition={{ duration: 0.6 }}
-                viewport={{ once: true}}
+                initial={ opacity: 0, x: -20 }
+                whileInView={ opacity: 1, x: 0}
+                transition={ duration: 0.6 }
+                viewport={ once: true}
               >
                 <h3 className="text-3xl font-bold text-white mb-8">
                   <span className="bg-gradient-to-r from-purple-400 to-pink-500 bg-clip-text text-transparent">
@@ -347,10 +347,10 @@ export default function AIBusinessIntelligenceSuite() {
                   {technology.map((tech, index) => (
                     <motion.div
                       key={index}
-                      initial={{ opacity: 0, y: 10}}
-                      whileInView={{ opacity: 1, y: 0}}
-                      transition={{ duration: 0.4, delay: index * 0.1 }}
-                      viewport={{ once: true}}
+                      initial={ opacity: 0, y: 10}
+                      whileInView={ opacity: 1, y: 0}
+                      transition={ duration: 0.4, delay: index * 0.1 }
+                      viewport={ once: true}
                       className="flex items-center space-x-3 p-3 bg-gray-800/40 rounded-lg border border-gray-700/50"
                     >
                       <div className="w-2 h-2 bg-purple-400 rounded-full"></div>
@@ -361,10 +361,10 @@ export default function AIBusinessIntelligenceSuite() {
               </motion.div>
               {/* Integrations */}
               <motion.div
-                initial={{ opacity: 0, x: 20}}
-                whileInView={{ opacity: 1, x: 0}}
-                transition={{ duration: 0.6 }}
-                viewport={{ once: true}}
+                initial={ opacity: 0, x: 20}
+                whileInView={ opacity: 1, x: 0}
+                transition={ duration: 0.6 }
+                viewport={ once: true}
               >
                 <h3 className="text-3xl font-bold text-white mb-8">
                   <span className="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
@@ -375,10 +375,10 @@ export default function AIBusinessIntelligenceSuite() {
                   {integrations.map((integration, index) => (
                     <motion.div
                       key={index}
-                      initial={{ opacity: 0, y: 10}}
-                      whileInView={{ opacity: 1, y: 0}}
-                      transition={{ duration: 0.4, delay: index * 0.1 }}
-                      viewport={{ once: true}}
+                      initial={ opacity: 0, y: 10}
+                      whileInView={ opacity: 1, y: 0}
+                      transition={ duration: 0.4, delay: index * 0.1 }
+                      viewport={ once: true}
                       className="flex items-center space-x-3 p-3 bg-gray-800/40 rounded-lg border border-gray-700/50"
                     >
                       <div className="w-2 h-2 bg-cyan-400 rounded-full"></div>
@@ -395,10 +395,10 @@ export default function AIBusinessIntelligenceSuite() {
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <motion.div
-              initial={{ opacity: 0, y: 20}}
-              whileInView={{ opacity: 1, y: 0}}
-              transition={{ duration: 0.6 }}
-              viewport={{ once: true}}
+              initial={ opacity: 0, y: 20}
+              whileInView={ opacity: 1, y: 0}
+              transition={ duration: 0.6 }
+              viewport={ once: true}
               className="text-center mb-16"
             >
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
@@ -410,10 +410,10 @@ export default function AIBusinessIntelligenceSuite() {
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               <motion.div
-                initial={{ opacity: 0, y: 20}}
-                whileInView={{ opacity: 1, y: 0}}
-                transition={{ duration: 0.6, delay: 0.1 }}
-                viewport={{ once: true}}
+                initial={ opacity: 0, y: 20}
+                whileInView={ opacity: 1, y: 0}
+                transition={ duration: 0.6, delay: 0.1 }
+                viewport={ once: true}
                 className="bg-gradient-to-br from-yellow-900/20 to-orange-900/20 border border-yellow-500/30 rounded-2xl p-8"
               >
                 <h3 className="text-2xl font-bold text-white mb-6">Competitive Advantage</h3>
@@ -438,10 +438,10 @@ export default function AIBusinessIntelligenceSuite() {
               </motion.div>
 
               <motion.div
-                initial={{ opacity: 0, y: 20}}
-                whileInView={{ opacity: 1, y: 0}}
-                transition={{ duration: 0.6, delay: 0.2 }}
-                viewport={{ once: true}}
+                initial={ opacity: 0, y: 20}
+                whileInView={ opacity: 1, y: 0}
+                transition={ duration: 0.6, delay: 0.2 }
+                viewport={ once: true}
                 className="bg-gradient-to-br from-green-900/20 to-emerald-900/20 border border-green-500/30 rounded-2xl p-8"
               >
                 <h3 className="text-2xl font-bold text-white mb-6">Return on Investment</h3>
@@ -472,10 +472,10 @@ export default function AIBusinessIntelligenceSuite() {
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-transparent to-gray-900/20">
           <div className="max-w-4xl mx-auto text-center">
             <motion.div
-              initial={{ opacity: 0, y: 20}}
-              whileInView={{ opacity: 1, y: 0}}
-              transition={{ duration: 0.6 }}
-              viewport={{ once: true}}
+              initial={ opacity: 0, y: 20}
+              whileInView={ opacity: 1, y: 0}
+              transition={ duration: 0.6 }
+              viewport={ once: true}
             >
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
                 Ready to Transform Your Business Intelligence?
@@ -486,9 +486,9 @@ export default function AIBusinessIntelligenceSuite() {
               
               <div className="flex flex-col sm:flex-row gap-6 justify-center">
                 <motion.div
-                  whileHover={{ scale: 1.05, y: -2 }}
-                  whileTap={{ scale: 0.95 }}
-                  transition={{ duration: 0.2 }}
+                  whileHover={ scale: 1.05, y: -2 }
+                  whileTap={ scale: 0.95 }
+                  transition={ duration: 0.2 }
                 >
                   <Button 
                     href="/contact" 
@@ -504,9 +504,9 @@ export default function AIBusinessIntelligenceSuite() {
                 </motion.div>
 
                 <motion.div
-                  whileHover={{ scale: 1.05, y: -2 }}
-                  whileTap={{ scale: 0.95 }}
-                  transition={{ duration: 0.2, delay: 0.1 }}
+                  whileHover={ scale: 1.05, y: -2 }
+                  whileTap={ scale: 0.95 }
+                  transition={ duration: 0.2, delay: 0.1 }
                 >
                   <Button 
                     href="/contact" 
@@ -532,3 +532,90 @@ export default function AIBusinessIntelligenceSuite() {
     </UltraAdvancedFuturisticBackground>
   )
 }
+import React from 'react'
+import Head from 'next/head'
+import Layout from '../components/layout/Layout'
+const AIBusinessIntelligenceSuite: React.FC = () => {
+  return (
+    <Layout>
+      <Head>
+        <title>AI Business Intelligence Suite - Zion Tech Group</title>
+        <meta name="description" content="Transform data into actionable insights with AI-powered analytics" />
+      </Head>
+      <main className="max-w-7xl mx-auto px-4 py-8">
+        <div className="text-center mb-12">
+          <h1 className="text-4xl font-bold mb-4">AI Business Intelligence Suite</h1>
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            Transform data into actionable insights with our advanced AI-powered business intelligence platform.
+          </p>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+          <div className="bg-white rounded-lg shadow-lg p-6">
+            <h3 className="text-xl font-semibold mb-4">Data Analytics</h3>
+            <p className="text-gray-600 mb-4">
+              Advanced analytics that automatically processes and analyzes your business data.
+            </p>
+            <ul className="text-sm text-gray-500 space-y-2">
+              <li>• Real-time data processing</li>
+              <li>• Predictive analytics</li>
+              <li>• Trend analysis</li>
+              <li>• Performance metrics</li>
+            </ul>
+          </div>
+
+          <div className="bg-white rounded-lg shadow-lg p-6">
+            <h3 className="text-xl font-semibold mb-4">Visualization</h3>
+            <p className="text-gray-600 mb-4">
+              Create interactive dashboards and visualizations that make data easy to understand.
+            </p>
+            <ul className="text-sm text-gray-500 space-y-2">
+              <li>• Interactive dashboards</li>
+              <li>• Custom charts</li>
+              <li>• Real-time updates</li>
+              <li>• Mobile responsive</li>
+            </ul>
+          </div>
+
+          <div className="bg-white rounded-lg shadow-lg p-6">
+            <h3 className="text-xl font-semibold mb-4">AI Insights</h3>
+            <p className="text-gray-600 mb-4">
+              Get AI-powered recommendations and insights to drive business growth.
+            </p>
+            <ul className="text-sm text-gray-500 space-y-2">
+              <li>• Automated insights</li>
+              <li>• Recommendation engine</li>
+              <li>• Anomaly detection</li>
+              <li>• Growth opportunities</li>
+            </ul>
+          </div>
+        </div>
+
+        <div className="bg-gray-900 rounded-2xl px-8 py-6 text-center mb-8">
+          <div className="text-4xl font-bold text-white mb-2">$299</div>
+          <div className="text-blue-200 text-lg mb-4">per month</div>
+          <div className="text-gray-300 mb-6">21-day free trial</div>
+          <a href="/contact" className="w-full bg-gradient-to-r from-blue-500 to-indigo-600 hover:from-blue-600 hover:to-indigo-700 text-white font-bold py-3 px-6 rounded-xl inline-block">
+            Start Free Trial
+          </a>
+        </div>
+
+        <div className="bg-blue-50 rounded-lg p-8 text-center">
+          <h2 className="text-2xl font-bold mb-4">Transform Your Data</h2>
+          <p className="text-lg text-gray-700 mb-6">
+            Unlock the power of your data with our AI-powered business intelligence suite.
+          </p>
+          <div className="flex justify-center gap-4">
+            <a href="/contact" className="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700">
+              Get Started
+            </a>
+            <a href="/about" className="border border-blue-600 text-blue-600 px-6 py-3 rounded-lg hover:bg-blue-50">
+              Learn More
+            </a>
+          </div>
+        </div>
+      </main>
+    </Layout>
+  )
+}
+export default AIBusinessIntelligenceSuite

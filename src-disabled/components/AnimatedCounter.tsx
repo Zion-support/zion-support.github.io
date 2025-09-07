@@ -33,9 +33,9 @@ const AnimatedCounter: React.FC<AnimatedCounterProps> = ({,
   return (
     <motion.span
       className={className}
-      initial={{ opacity: 0, scale: 0.5 }}
-      animate={{ opacity: 1, scale: 1 }}
-      transition={{ duration: 0.5 }}
+      initial={ opacity: 0, scale: 0.5 }
+      animate={ opacity: 1, scale: 1 }
+      transition={ duration: 0.5 }
     >
       {prefix}
       {count.toLocaleString()}

@@ -53,9 +53,9 @@ const Carousel: React.FC<CarouselProps> = ({,
         <AnimatePresence mode="wait">"
           <motion.div
             key={currentIndex}
-            initial={{ opacity: 0, x: 300 }}
-            animate={{ opacity: 1, x: 0 }}
-            exit={{ opacity: 0, x: -300 }}
+            initial={ opacity: 0, x: 300 }
+            animate={ opacity: 1, x: 0 }
+            exit={ opacity: 0, x: -300 }
 
             {items[currentIndex]}
           </motion.div>

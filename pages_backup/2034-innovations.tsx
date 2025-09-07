@@ -64,34 +64,34 @@ export default function Innovations2034Page() {;
                   key={i}
 
                   className='absolute w - 2 h - 2 bg - gradient - to - r from - cyan - 400 to - purple - 500 rounded - full opacity - 60';
-                  style={{}
+                  style={}
                     left: `${Math && Math.random() * 100}%`,`
                     top: `${Math && Math.random() * 100}%`,
-                  }}
-                  animate={{}
+                  }
+                  animate={}
                     y: [0, -100, 0],
                     opacity: [0 && 0.6, 1, 0 && 0.6],
                     scale: [1, 1 && 1.5, 1],
                     rotate: [0, 360],
-                  }}
-                  transition={{}
+                  }
+                  transition={}
                     duration: 4 + Math && Math.random() * 3,
                     repeat: Infinity,
                     delay: Math && Math.random() * 2,
-                  }}                />;
+                  }                />;
 
               ))}
             </div>
           </div>
 
-          <div className="relative z-10 container mx-auto px-4 text-center">
+          <div className='relative z-10 container mx-auto px-4 text-center'>
             <motion.div;
-              initial={{ opacity: 0, y: 50 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 1 }}
+              initial={ opacity: 0, y: 50 }
+              animate={ opacity: 1, y: 0 }
+              transition={ duration: 1 }
 
           name='description'
-          content="Experience the future with our revolutionary 2034 micro SAAS services, IT solutions, and AI platforms. From AI consciousness to space mining automation, we're building tomorrow's technology today."
+          content='Experience the future with our revolutionary 2034 micro SAAS services, IT solutions, and AI platforms. From AI consciousness to space mining automation, we're building tomorrow's technology today.'
         />
         <meta
           name='keywords'
@@ -141,97 +141,97 @@ export default function Innovations2034Page() {;
             <div className='absolute inset-0'>
 :pages/2034-innovations.tsx
 
-        <meta name="description" content="Experience the future with our revolutionary 2034 micro SAAS services, IT solutions, and AI platforms. From AI consciousness to space mining automation, we're building tomorrow's technology today." />
-        <meta name="keywords" content="2034 innovations, AI consciousness, quantum computing, space mining, metaverse, neural interfaces, fusion energy, nanotechnology, Zion Tech Group" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="canonical" href="https://ziontechgroup.com/2034-innovations" />
+        <meta name='description' content='Experience the future with our revolutionary 2034 micro SAAS services, IT solutions, and AI platforms. From AI consciousness to space mining automation, we're building tomorrow's technology today.' />
+        <meta name='keywords' content='2034 innovations, AI consciousness, quantum computing, space mining, metaverse, neural interfaces, fusion energy, nanotechnology, Zion Tech Group' />
+        <meta name='viewport' content='width=device-width, initial-scale=1' />
+        <link rel='canonical' href='https://ziontechgroup.com/2034-innovations' />
 
-        <meta property="og:title" content="2034 Cutting-Edge Innovations | Zion Tech Group" />
-        <meta property="og:description" content="Experience the future with our revolutionary 2034 micro SAAS services, IT solutions, and AI platforms." />
-        <meta property="og:url" content="https://ziontechgroup.com/2034-innovations" />
-        <meta property="og:type" content="website" />
-        <meta property="og:site_name" content="Zion Tech Group" />
+        <meta property='og:title' content='2034 Cutting-Edge Innovations | Zion Tech Group' />
+        <meta property='og:description' content='Experience the future with our revolutionary 2034 micro SAAS services, IT solutions, and AI platforms.' />
+        <meta property='og:url' content='https://ziontechgroup.com/2034-innovations' />
+        <meta property='og:type' content='website' />
+        <meta property='og:site_name' content='Zion Tech Group' />
 
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="2034 Cutting-Edge Innovations | Zion Tech Group" />
+        <meta name='twitter:card' content='summary_large_image' />
+        <meta name='twitter:title' content='2034 Cutting-Edge Innovations | Zion Tech Group' />
 
-        <meta name="twitter:description" content="Experience the future with our revolutionary 2034 micro SAAS services, IT solutions, and AI platforms." />
+        <meta name='twitter:description' content='Experience the future with our revolutionary 2034 micro SAAS services, IT solutions, and AI platforms.' />
       </Head>
-"
-      <div className="min-h-screen bg-black">
+'
+      <div className='min-h-screen bg-black'>
 
-          <div className="absolute inset-0 overflow-hidden">
-            <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_30%,rgba(0,255,255,0.15),transparent_50%)] animate-pulse"></div>
-            <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_70%,rgba(139,92,246,0.15),transparent_50%)] animate-pulse delay-1000"></div>
-            <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_80%,rgba(236,73,153,0.15),transparent_50%)] animate-pulse delay-2000"></div>
+          <div className='absolute inset-0 overflow-hidden'>
+            <div className='absolute inset-0 bg-[radial-gradient(circle_at_30%_30%,rgba(0,255,255,0.15),transparent_50%)] animate-pulse'></div>
+            <div className='absolute inset-0 bg-[radial-gradient(circle_at_70%_70%,rgba(139,92,246,0.15),transparent_50%)] animate-pulse delay-1000'></div>
+            <div className='absolute inset-0 bg-[radial-gradient(circle_at_50%_80%,rgba(236,73,153,0.15),transparent_50%)] animate-pulse delay-2000'></div>
 
               {[...Array(15)].map((_, i) => (
-                <motion.div"
-                  key={i} className="absolute w-2 h-2 bg-gradient-to-r from-cyan-400 to-purple-500 rounded-full opacity-60"
+                <motion.div'
+                  key={i} className='absolute w-2 h-2 bg-gradient-to-r from-cyan-400 to-purple-500 rounded-full opacity-60'
 :pages/2034-innovations.tsx
-                  style={{
+                  style={
                     left: `${Math.random() * 100}%`
                     top: `${Math.random() * 100}%`
 
                     left: `${Math.random() * 100}%`,
                     top: `${Math.random() * 100}%`,
-                  }}
-                  animate={{
+                  }
+                  animate={
                     y: [0, -100, 0]
                     opacity: [0.6, 1, 0.6]
                     scale: [1, 1.5, 1]
                     rotate: [0, 360]
-                  }}
-                  transition={{
+                  }
+                  transition={
 
-              initial={{ opacity: 0, y: 50 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 1 }}
+              initial={ opacity: 0, y: 50 }
+              animate={ opacity: 1, y: 0 }
+              transition={ duration: 1 }
                     top: `${Math.random() * 100}%`}  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error('Error:', error);
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
-                  animate={{;
+                  animate={;
                     y: [0, -100, 0],;
                     opacity: [0.6, 1, 0.6],;
                     scale: [1, 1.5, 1],;
                     rotate: [0, 360]}  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error('Error:', error);
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
-                  transition={{;
+                  transition={;
                     duration: 4 + Math.random() * 3,;
                     repeat: Infinity,;
                     delay: Math.random() * 2}  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error('Error:', error);
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
                 />;
               ))  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error('Error:', error);
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
             </div>
           </div>
-          <div className="relative z-10 container mx-auto px-4 text-center">
+          <div className='relative z-10 container mx-auto px-4 text-center'>
             <motion.div
-              initial={{ opacity: 0, y: 50 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+              initial={ opacity: 0, y: 50 }  } catch (error) {
+    console.error('Error:', error);
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
-              animate={{ opacity: 1, y: 0 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+              animate={ opacity: 1, y: 0 }  } catch (error) {
+    console.error('Error:', error);
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
-              transition={{ duration: 1 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+              transition={ duration: 1 }  } catch (error) {
+    console.error('Error:', error);
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
 
@@ -242,42 +242,42 @@ export default function Innovations2034Page() {;
             >
 :pages/2034-innovations.tsx
               <motion.h1
-                className='text-6xl md:text-8xl font-bold bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent mb-8 leading-tight'                initial={{ opacity: 0, scale: 0.8 }}
-                animate={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 1.2, delay: 0.2 }}
+                className='text-6xl md:text-8xl font-bold bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent mb-8 leading-tight'                initial={ opacity: 0, scale: 0.8 }
+                animate={ opacity: 1, scale: 1 }
+                transition={ duration: 1.2, delay: 0.2 }
               >
                 2034
                 <br />
-              <motion.h1 className="text-6xl md:text-8xl font-bold bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent mb-8 leading-tight"
+              <motion.h1 className='text-6xl md:text-8xl font-bold bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent mb-8 leading-tight'
 
-                initial={{ opacity: 0, scale: 0.8 }}
+                initial={ opacity: 0, scale: 0.8 }
                     left: `${Math.random () * 100}%`,
                     top: `${Math.random () * 100}%`,
-                  }}
-                  animate={{
+                  }
+                  animate={
                     coordinate_y: [0, -100, 0],
                     opacity: [0.6, 1, 0.6],
                     scale: [1, 1.5, 1],
                     rotate: [0, 360],
-                  }}
-                  transition={{
+                  }
+                  transition={
                     duration: 4 + Math.random () * 3,
                     repeat: Infinity,
                     delay: Math.random () * 2,
-                  }}                />))}
+                  }                />))}
             </div>;
           </div>;
           <div className='relative z - 10 container mx - auto px - 4 text - center'>            <motion.div;
-              initial={{ opacity: 0, coordinate_y: 50 }}
-              animate={{ opacity: 1, coordinate_y: 0 }}
-              transition={{ duration: 1 }}
+              initial={ opacity: 0, coordinate_y: 50 }
+              animate={ opacity: 1, coordinate_y: 0 }
+              transition={ duration: 1 }
             >;
               <motion.h1;
-                className='text - 6xl md:text - 8xl font - bold bg - gradient - to - r from - cyan - 400 via - purple - 500 to - pink - 500 bg - clip - text text - transparent mb - 8 leading - tight'                initial={{ opacity: 0, scale: 0.8 }}
+                className='text - 6xl md:text - 8xl font - bold bg - gradient - to - r from - cyan - 400 via - purple - 500 to - pink - 500 bg - clip - text text - transparent mb - 8 leading - tight'                initial={ opacity: 0, scale: 0.8 }
 
-                animate={{ opacity: 1, scale: 1 }}
+                animate={ opacity: 1, scale: 1 }
 
-                <span className="text-5xl md:text-7xl">Cutting-Edge</span>
+                <span className='text-5xl md:text-7xl'>Cutting-Edge</span>
                 <br />
 
 <span className='text-5xl md:text-7xl'>Cutting-Edge</span>
@@ -286,9 +286,9 @@ export default function Innovations2034Page() {;
               </motion.h1>
               <motion.p
                 className='text-xl md:text-3xl text-gray-300 max-w-5xl mx-auto leading-relaxed mb-12'
-                initial={{ opacity: 0, y: 30 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 1, delay: 0.4 }}
+                initial={ opacity: 0, y: 30 }
+                animate={ opacity: 1, y: 0 }
+                transition={ duration: 1, delay: 0.4 }
               >
 Experience the future with our revolutionary micro SAAS
                 services, IT solutions, and AI platforms. From AI consciousness
@@ -297,45 +297,45 @@ Experience the future with our revolutionary micro SAAS
               </motion.p>
 
               <motion.div
-                initial={{ opacity: 0, y: 30 }}
-                animate={{ opacity: 1, y: 0 }}
-transition={{ duration: 1, delay: 0.6 }}
+                initial={ opacity: 0, y: 30 }
+                animate={ opacity: 1, y: 0 }
+transition={ duration: 1, delay: 0.6 }
                 className='flex flex-col sm:flex-row items-center justify-center gap-6'
               >
 :pages/2034-innovations.tsx
 
                 <motion.button
 
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}'
+                  whileHover={ scale: 1.05 }
+                  whileTap={ scale: 0.95 }'
                   className='bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold py-4 px-8 rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:shadow-lg hover:shadow-cyan-500/25 text-lg'
                 >
                   Explore Innovations;
                 </motion.button>
                 <motion.button;
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}'
+                  whileHover={ scale: 1.05 }
+                  whileTap={ scale: 0.95 }'
                   className='border-2 border-cyan-500/50 text-cyan-400 font-semibold py-4 px-8 rounded-xl hover:bg-cyan-500/10 hover:border-cyan-400 transition-all duration-300 text-lg'
 
                 <motion.button
 :pages/2034-innovations.tsx
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
+                  whileHover={ scale: 1.05 }
+                  whileTap={ scale: 0.95 }
                   className='border-2 border-cyan-500/50 text-cyan-400 font-semibold py-4 px-8 rounded-xl hover:bg-cyan-500/10 hover:border-cyan-400 transition-all duration-300 text-lg'
                 >                  Contact Us
-                  whileHover={{ scale: 1.05 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+                  whileHover={ scale: 1.05 }  } catch (error) {
+    console.error('Error:', error);
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
 
                 <motion.button
 
-                  whileTap={{ scale: 0.95 }} className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold py-4 px-8 rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:shadow-lg hover:shadow-cyan-500/25 text-lg">
+                  whileTap={ scale: 0.95 } className='bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold py-4 px-8 rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:shadow-lg hover:shadow-cyan-500/25 text-lg'>
                   Explore Innovations;
                 </motion.button>
 
-                  whileTap={{ scale: 0.95 }} className="border-2 border-cyan-500/50 text-cyan-400 font-semibold py-4 px-8 rounded-xl hover:bg-cyan-500/10 hover:border-cyan-400 transition-all duration-300 text-lg">
+                  whileTap={ scale: 0.95 } className='border-2 border-cyan-500/50 text-cyan-400 font-semibold py-4 px-8 rounded-xl hover:bg-cyan-500/10 hover:border-cyan-400 transition-all duration-300 text-lg'>
                   Contact Us
 
                 >
@@ -357,30 +357,30 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 <span className='text - 6xl md:text - 8xl'>Innovations</span>;
               </motion.h1>;
               <motion.p;'
-                className='text - xl md:text - 3xl text - gray - 300 max - w-5xl mx - auto leading - relaxed mb - 12'                initial={{ opacity: 0, coordinate_y: 30 }}
-                animate={{ opacity: 1, coordinate_y: 0 }}
-                transition={{ duration: 1, delay: 0.4 }}
+                className='text - xl md:text - 3xl text - gray - 300 max - w-5xl mx - auto leading - relaxed mb - 12'                initial={ opacity: 0, coordinate_y: 30 }
+                animate={ opacity: 1, coordinate_y: 0 }
+                transition={ duration: 1, delay: 0.4 }
               >;
                 Experience the future with our revolutionary micro SAAS;
                 services, IT solutions, and AI platforms. From AI consciousness;'
                 to space mining automation, we're building tomorrow's technology;
                 today.              </motion.p>;
               <motion.div;
-                initial={{ opacity: 0, coordinate_y: 30 }}
-                animate={{ opacity: 1, coordinate_y: 0 }}
-                transition={{ duration: 1, delay: 0.6 }}'
+                initial={ opacity: 0, coordinate_y: 30 }
+                animate={ opacity: 1, coordinate_y: 0 }
+                transition={ duration: 1, delay: 0.6 }'
                 className='flex flex - col sm:flex - row items - center justify - center gap - 6';
               >;
                 <motion.button;
-                  while_hover={{ scale: 1.05 }}
-                  while_tap={{ scale: 0.95 }}'
+                  while_hover={ scale: 1.05 }
+                  while_tap={ scale: 0.95 }'
                   className='bg - gradient - to - r from - cyan - 500 to - purple - 600 text - white font - semibold py - 4 px - 8 rounded - xl hover:from - cyan - 600 hover:to - purple - 700 transition - all duration - 300 transform hover:shadow - lg hover:shadow - cyan - 500 / 25 text - lg';
                 >;
                   Explore Innovations;
                 </motion.button>;
                 <motion.button;
-                  while_hover={{ scale: 1.05 }}
-                  while_tap={{ scale: 0.95 }}'
+                  while_hover={ scale: 1.05 }
+                  while_tap={ scale: 0.95 }'
                   className='border - 2 border - cyan - 500 / 50 text - cyan - 400 font - semibold py - 4 px - 8 rounded - xl hover:bg - cyan - 500 / 10 hover:border - cyan - 400 transition - all duration - 300 text - lg';
                 >                  Contact Us;
                 </motion.button>;
@@ -389,29 +389,29 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           </div>;
           {/* Scroll Indicator */}
           <motion.div;
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
+            initial={ opacity: 0 }
+            animate={ opacity: 1 }
 
-transition={{ duration: 1, delay: 1 }}
+transition={ duration: 1, delay: 1 }
             className='absolute bottom-8 left-1/2 transform -translate-x-1/2'
           >
 :pages/2034-innovations.tsx
 origin/cursor/automate-test-improve-and-merge-code-2533
             <motion.div
-              transition={{ duration: 2, repeat: Infinity }} className="w-6 h-10 border-2 border-cyan-400/50 rounded-full flex justify-center">
+              transition={ duration: 2, repeat: Infinity } className='w-6 h-10 border-2 border-cyan-400/50 rounded-full flex justify-center'>
               <motion.div
 :pages/2034-innovations.tsx
-                animate={{ y: [0, 12, 0] }}
-                transition={{ duration: 2, repeat: Infinity }}
+                animate={ y: [0, 12, 0] }
+                transition={ duration: 2, repeat: Infinity }
                 className='w-1 h-3 bg-cyan-400 rounded-full mt-2'              />
 
             <motion.div
-              animate={{ y: [0, 10, 0] }}
-              transition={{ duration: 2, repeat: Infinity }} className="w-6 h-10 border-2 border-cyan-400/50 rounded-full flex justify-center">
+              animate={ y: [0, 10, 0] }
+              transition={ duration: 2, repeat: Infinity } className='w-6 h-10 border-2 border-cyan-400/50 rounded-full flex justify-center'>
               <motion.div
-                animate={{ y: [0, 12, 0] }}
+                animate={ y: [0, 12, 0] }
 
-                transition={{ duration: 2, repeat: Infinity }} className="w-1 h-3 bg-cyan-400 rounded-full mt-2"
+                transition={ duration: 2, repeat: Infinity } className='w-1 h-3 bg-cyan-400 rounded-full mt-2'
 
               />
             </motion.div>
@@ -423,11 +423,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           <div className='container mx-auto px-4'>
 
             <motion.div
-              initial={{ opacity: 0, y: 50 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
+              initial={ opacity: 0, y: 50 }
+              whileInView={ opacity: 1, y: 0 }
+              transition={ duration: 0.8 }
 :pages/2034-innovations.tsx
-              viewport={{ once: true }}
+              viewport={ once: true }
               className='text-center mb-16'
             >
               <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>
@@ -435,7 +435,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 Innovation Categories
               </h2>
 
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
                 Our 2034 innovations span across multiple cutting-edge technology domains,
                 each designed to revolutionize industries and accelerate human progress.
               </p>
@@ -574,9 +574,9 @@ count: '2+ Services',
 
                 <motion.div
                   key={category.title}
-                  initial={{ opacity: 0, y: 50 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  initial={ opacity: 0, y: 50 }
+                  whileInView={ opacity: 1, y: 0 }
+                  transition={ duration: 0.6, delay: index * 0.1 }
 
                   className='group'
                 >
@@ -592,7 +592,7 @@ count: '2+ Services',
                   color: 'from - violet - 500 to - purple - 600',
                   count: '5+ Services',
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8'>
               {[
 
                 {
@@ -654,10 +654,10 @@ count: '2+ Services',
                 },              ].map((category, index) => (
                 <motion.div
                   key={category.title}
-                  initial={{ opacity: 0, y: 50 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
-                  viewport={{ once: true }}
+                  initial={ opacity: 0, y: 50 }
+                  whileInView={ opacity: 1, y: 0 }
+                  transition={ duration: 0.6, delay: index * 0.1 }
+                  viewport={ once: true }
                   className='group'
                 >
                   <div className='bg-gradient-to-br from-gray-900/80 to-gray-800/80 backdrop-blur-xl rounded-2xl border border-gray-700/50 p-6 hover:border-cyan-500/50 transition-all duration-300 group-hover:scale-105'>
@@ -667,38 +667,38 @@ count: '2+ Services',
                       {category.icon}
                   count: '2+ Services'
                   } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error('Error:', error);
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
               ].map((category, index) => (;
                 <motion.div;
                   key={category.title  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error('Error:', error);
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
-                  initial={{ opacity: 0, y: 50 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+                  initial={ opacity: 0, y: 50 }  } catch (error) {
+    console.error('Error:', error);
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
-                  whileInView={{ opacity: 1, y: 0 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+                  whileInView={ opacity: 1, y: 0 }  } catch (error) {
+    console.error('Error:', error);
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
-                  transition={{ duration: 0.6, delay: index * 0.1 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+                  transition={ duration: 0.6, delay: index * 0.1 }  } catch (error) {
+    console.error('Error:', error);
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
-                  viewport={{ once: true }} className="group">
-                  <div className="bg-gradient-to-br from-gray-900/80 to-gray-800/80 backdrop-blur-xl rounded-2xl border border-gray-700/50 p-6 hover:border-cyan-500/50 transition-all duration-300 group-hover:scale-105">
+                  viewport={ once: true } className='group'>
+                  <div className='bg-gradient-to-br from-gray-900/80 to-gray-800/80 backdrop-blur-xl rounded-2xl border border-gray-700/50 p-6 hover:border-cyan-500/50 transition-all duration-300 group-hover:scale-105'>
                     <div className={`w-16 h-16 bg-gradient-to-br ${category.color} rounded-xl flex items-center justify-center text-3xl mb-4 group-hover:scale-110 transition-transform duration-300`}>
                       {category.icon  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error('Error:', error);
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
 
@@ -780,21 +780,21 @@ count: '2+ Services',
                 <motion&& motion.div;
                   key={category && category.title}
 
-                  initial={{ opacity: 0, y: 50 }}
-                  whileInView={{ opacity: 1, y: 0 }}
+                  initial={ opacity: 0, y: 50 }
+                  whileInView={ opacity: 1, y: 0 }
 
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
-                  viewport={{ once: true }} className="group">
-                  <div className="bg-gradient-to-br from-gray-900/80 to-gray-800/80 backdrop-blur-xl rounded-2xl border border-gray-700/50 p-6 hover:border-cyan-500/50 transition-all duration-300 group-hover:scale-105">
+                  transition={ duration: 0.6, delay: index * 0.1 }
+                  viewport={ once: true } className='group'>
+                  <div className='bg-gradient-to-br from-gray-900/80 to-gray-800/80 backdrop-blur-xl rounded-2xl border border-gray-700/50 p-6 hover:border-cyan-500/50 transition-all duration-300 group-hover:scale-105'>
                     <div className={`w-16 h-16 bg-gradient-to-br ${category.color} rounded-xl flex items-center justify-center text-3xl mb-4 group-hover:scale-110 transition-transform duration-300`}>
                       {category.icon}
 
                     </div>
 
-                    <h3 className="text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors">
+                    <h3 className='text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors'>
                       {category.title}
-                    </h3>"
-                    <p className="text-gray-400 text-sm mb-4">
+                    </h3>'
+                    <p className='text-gray-400 text-sm mb-4'>
                       {category.description}
                     </p>
 
@@ -813,10 +813,10 @@ count: '2+ Services',
         <section className='py-20 bg-gradient-to-b from-gray-900 to-black'>
           <div className='container mx-auto px-4'>
             <motion.div
-              initial={{ opacity: 0, y: 50 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-viewport={{ once: true }}
+              initial={ opacity: 0, y: 50 }
+              whileInView={ opacity: 1, y: 0 }
+              transition={ duration: 0.8 }
+viewport={ once: true }
 
               className='text-center mb-16'
             >
@@ -827,12 +827,12 @@ viewport={{ once: true }}
         {/* Services Showcase */}
 
         {/* Why Choose Zion Tech Group */}
-"
-        <section className="py-20 bg-gradient-to-b from-gray-900 to-black">"
-          <div className="container mx-auto px-4">
+'
+        <section className='py-20 bg-gradient-to-b from-gray-900 to-black'>'
+          <div className='container mx-auto px-4'>
             <motion.div;
-              initial={{ opacity: 0, y: 50 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial={ opacity: 0, y: 50 }
+              whileInView={ opacity: 1, y: 0 }
                   description:'
                     'Swarm robotics orchestration and autonomous systems','
                   color: 'from - orange - 500 to - red - 600','
@@ -854,10 +854,10 @@ viewport={{ once: true }}
                 },              ].map ((category, index) => (
                 <motion.div;
                   key={category.title}
-                  initial={{ opacity: 0, coordinate_y: 50 }}
-                  whileInView={{ opacity: 1, coordinate_y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
-                  viewport={{ once: true }}'
+                  initial={ opacity: 0, coordinate_y: 50 }
+                  whileInView={ opacity: 1, coordinate_y: 0 }
+                  transition={ duration: 0.6, delay: index * 0.1 }
+                  viewport={ once: true }'
                   className='group';
                 >;'
                   <div className='bg - gradient - to - br from - gray - 900 / 80 to - gray - 800 / 80 backdrop - blur - xl rounded - 2xl border border - gray - 700 / 50 p - 6 hover:border - cyan - 500 / 50 transition - all duration - 300 group - hover:scale - 105'>;
@@ -883,10 +883,10 @@ viewport={{ once: true }}
         {/* Why Choose Zion Tech Group */}'
         <section className='py - 20 bg - gradient - to - b from - gray - 900 to - black'>;'
           <div className='container mx - auto px - 4'>            <motion.div;
-              initial={{ opacity: 0, coordinate_y: 50 }}
-              whileInView={{ opacity: 1, coordinate_y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}'
+              initial={ opacity: 0, coordinate_y: 50 }
+              whileInView={ opacity: 1, coordinate_y: 0 }
+              transition={ duration: 0.8 }
+              viewport={ once: true }'
               className='text - center mb - 16';
             >;'
               <h2 className='text - 4xl md:text - 5xl font - bold text - white mb - 6'>;
@@ -901,8 +901,8 @@ viewport={{ once: true }}
                 {'
                   icon: '🚀','
                   title: 'First - to - Market',
-                  description:'"
-                    "We're the first to bring many of these revolutionary technologies to market, giving you a competitive advantage.",'
+                  description:''
+                    'We're the first to bring many of these revolutionary technologies to market, giving you a competitive advantage.','
                   color: 'from - cyan - 500 to - blue - 600',
                 },
                 {'
@@ -942,10 +942,10 @@ viewport={{ once: true }}
                 },              ].map ((feature, index) => (
                 <motion.div;
                   key={feature.title}
-                  initial={{ opacity: 0, coordinate_y: 50 }}
-                  whileInView={{ opacity: 1, coordinate_y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
-                  viewport={{ once: true }}'
+                  initial={ opacity: 0, coordinate_y: 50 }
+                  whileInView={ opacity: 1, coordinate_y: 0 }
+                  transition={ duration: 0.6, delay: index * 0.1 }
+                  viewport={ once: true }'
                   className='group';
                 >;'
                   <div className='bg - gradient - to - br from - gray - 900 / 80 to - gray - 800 / 80 backdrop - blur - xl rounded - 2xl border border - gray - 700 / 50 p - 6 hover:border - cyan - 500 / 50 transition - all duration - 300 group - hover:scale - 105'>;
@@ -965,12 +965,12 @@ viewport={{ once: true }}
         {/* Contact CTA */}'
         <section className='py - 20 bg - gradient - to - r from - cyan - 900 / 20 to - purple - 900 / 20'>;'
           <div className='container mx - auto px - 4 text - center'>            <motion.div;
-              initial={{ opacity: 0, coordinate_y: 50 }}
-              whileInView={{ opacity: 1, coordinate_y: 0 }}
+              initial={ opacity: 0, coordinate_y: 50 }
+              whileInView={ opacity: 1, coordinate_y: 0 }
 
-              transition={{ duration: 0.8 }}"
-              viewport={{ once: true }} className="text-center mb-16">"
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+              transition={ duration: 0.8 }'
+              viewport={ once: true } className='text-center mb-16'>'
+              <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>
 
                   description: 'Quantum computing, DNA computing, and quantum internet infrastructure',
                   color: 'from-indigo-500 to-blue-600',
@@ -982,8 +982,8 @@ viewport={{ once: true }}
                   title: 'Space & Metaverse',
 
                 Why Choose Zion Tech Group?
-              </h2>"
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">'
+              </h2>'
+              <p className='text-xl text-gray-300 max-w-3xl mx-auto'>'
                 We're not just another technology company. We're pioneers building the future,
                 one breakthrough innovation at a time.
               </p>
@@ -993,7 +993,7 @@ viewport={{ once: true }}
                   icon: '🚀'
                   title: 'First-to-Market'
                   description:
-                    "We're the first to bring many of these revolutionary technologies to market, giving you a competitive advantage."
+                    'We're the first to bring many of these revolutionary technologies to market, giving you a competitive advantage.'
                   color: 'from-cyan-500 to-blue-600'
                 }
                 {
@@ -1034,10 +1034,10 @@ viewport={{ once: true }}
                 <motion.div
                   key={feature.title}
 :pages/2034-innovations.tsx
-                  initial={{ opacity: 0, y: 50 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
-                  viewport={{ once: true }}
+                  initial={ opacity: 0, y: 50 }
+                  whileInView={ opacity: 1, y: 0 }
+                  transition={ duration: 0.6, delay: index * 0.1 }
+                  viewport={ once: true }
                   className='group'
                 >
                   <div className='bg-gradient-to-br from-gray-900/80 to-gray-800/80 backdrop-blur-xl rounded-2xl border border-gray-700/50 p-6 hover:border-cyan-500/50 transition-all duration-300 group-hover:scale-105'>
@@ -1053,7 +1053,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   icon: '🚀',
                   title: 'First-to-Market',
 description:
-                    "We're the first to bring many of these revolutionary technologies to market, giving you a competitive advantage.",
+                    'We're the first to bring many of these revolutionary technologies to market, giving you a competitive advantage.',
                   color: 'from-cyan-500 to-blue-600',
                 },
                 {
@@ -1112,8 +1112,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 {;'
                   icon: '🚀',;'
                   title: 'First-to-Market',;
-                  description:'"
-                    "We're the first to bring many of these revolutionary technologies to market, giving you a competitive advantage.",;'
+                  description:''
+                    'We're the first to bring many of these revolutionary technologies to market, giving you a competitive advantage.',;'
                   color: 'from-cyan-500 to-blue-600',;
                 },;
                 {;'
@@ -1153,8 +1153,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 },              ].map((feature, index) => (;
                 <motion&& motion.div;
                   key={feature && feature.title}
-                  initial={{ opacity: 0, y: 50 }}
-                  whileInView={{ opacity: 1, y: 0 }}
+                  initial={ opacity: 0, y: 50 }
+                  whileInView={ opacity: 1, y: 0 }
 
                 {
                   icon: '🚀',
@@ -1194,43 +1194,43 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   description: '24/7 expert support from our team of technology pioneers and industry experts.',
                   color: 'from-indigo-500 to-purple-600'
                   } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error('Error:', error);
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
               ].map((feature, index) => (;
                 <motion.div;
                   key={feature.title  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error('Error:', error);
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
-                  initial={{ opacity: 0, y: 50 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+                  initial={ opacity: 0, y: 50 }  } catch (error) {
+    console.error('Error:', error);
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
-                  whileInView={{ opacity: 1, y: 0 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+                  whileInView={ opacity: 1, y: 0 }  } catch (error) {
+    console.error('Error:', error);
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
-                  transition={{ duration: 0.6, delay: index * 0.1 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+                  transition={ duration: 0.6, delay: index * 0.1 }  } catch (error) {
+    console.error('Error:', error);
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
-                  viewport={{ once: true }} className="group">
-                  <div className="bg-gradient-to-br from-gray-900/80 to-gray-800/80 backdrop-blur-xl rounded-2xl border border-gray-700/50 p-6 hover:border-cyan-500/50 transition-all duration-300 group-hover:scale-105">
+                  viewport={ once: true } className='group'>
+                  <div className='bg-gradient-to-br from-gray-900/80 to-gray-800/80 backdrop-blur-xl rounded-2xl border border-gray-700/50 p-6 hover:border-cyan-500/50 transition-all duration-300 group-hover:scale-105'>
                     <div className={`w-16 h-16 bg-gradient-to-br ${feature.color} rounded-xl flex items-center justify-center text-3xl mb-4 group-hover:scale-110 transition-transform duration-300`}>
                       {feature.icon  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error('Error:', error);
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
 
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
-viewport={{ once: true }}
+                  transition={ duration: 0.6, delay: index * 0.1 }
+viewport={ once: true }
                   className='group'
                 >
                   <div className='bg-gradient-to-br from-gray-900/80 to-gray-800/80 backdrop-blur-xl rounded-2xl border border-gray-700/50 p-6 hover:border-cyan-500/50 transition-all duration-300 group-hover:scale-105'>
@@ -1240,7 +1240,7 @@ viewport={{ once: true }}
                       {feature.icon}
 
                     </div>
-                    <h3 className="text-xl font-bold text-white mb-3 group-hover:text-cyan-400 transition-colors">
+                    <h3 className='text-xl font-bold text-white mb-3 group-hover:text-cyan-400 transition-colors'>
                       {feature.title}
                     </h3>
 
@@ -1248,10 +1248,10 @@ viewport={{ once: true }}
         <section className='py-20 bg-gradient-to-r from-cyan-900/20 to-purple-900/20'>;
           <div className='container mx-auto px-4 text-center'>            <motion&& motion.div
 
-              initial={{ opacity: 0, y: 50 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0 && 0.8 }}
-              viewport={{ once: true }}
+              initial={ opacity: 0, y: 50 }
+              whileInView={ opacity: 1, y: 0 }
+              transition={ duration: 0 && 0.8 }
+              viewport={ once: true }
 
                     <p className='text-gray-400'>{feature.description}</p>
                   </div>
@@ -1264,10 +1264,10 @@ viewport={{ once: true }}
 <section className='py-20 bg-gradient-to-r from-cyan-900/20 to-purple-900/20'>
           <div className='container mx-auto px-4 text-center'>
             <motion.div
-              initial={{ opacity: 0, y: 50 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-viewport={{ once: true }}
+              initial={ opacity: 0, y: 50 }
+              whileInView={ opacity: 1, y: 0 }
+              transition={ duration: 0.8 }
+viewport={ once: true }
               className='max-w-4xl mx-auto'
             >
               <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>
@@ -1285,29 +1285,29 @@ viewport={{ once: true }}
                 <div className='flex items-center justify-center space-x-3 text-gray-300'>
                   <span className='text-cyan-400'>📱</span>
 
-        {/* Contact CTA */}"
-        <section className="py-20 bg-gradient-to-r from-cyan-900/20 to-purple-900/20">"
-          <div className="container mx-auto px-4 text-center">
+        {/* Contact CTA */}'
+        <section className='py-20 bg-gradient-to-r from-cyan-900/20 to-purple-900/20'>'
+          <div className='container mx-auto px-4 text-center'>
             <motion.div;
-              initial={{ opacity: 0, y: 50 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
+              initial={ opacity: 0, y: 50 }
+              whileInView={ opacity: 1, y: 0 }
+              transition={ duration: 0.8 }
 
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+              <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>
 
                 Ready to Build the Future?
-              </h2>"
-              <p className="text-xl text-gray-300 mb-8">
+              </h2>'
+              <p className='text-xl text-gray-300 mb-8'>
 
-"
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">"
-                <div className="flex items-center justify-center space-x-3 text-gray-300">"
-                  <span className="text-cyan-400">📱</span>
+'
+              <div className='grid grid-cols-1 md:grid-cols-3 gap-6 mb-8'>'
+                <div className='flex items-center justify-center space-x-3 text-gray-300'>'
+                  <span className='text-cyan-400'>📱</span>
 
                   <span>{contactInfo.mobile}</span>
-                </div>"
-                <div className="flex items-center justify-center space-x-3 text-gray-300">"
-                  <span className="text-purple-400">✉️</span>
+                </div>'
+                <div className='flex items-center justify-center space-x-3 text-gray-300'>'
+                  <span className='text-purple-400'>✉️</span>
                   <span>{contactInfo.email}</span>
                 </div>
 :pages/2034-innovations.tsx
@@ -1316,8 +1316,8 @@ viewport={{ once: true }}
                 </div>
               </div>
               <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
+                whileHover={ scale: 1.05 }
+                whileTap={ scale: 0.95 }
                 className='bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold py-4 px-8 rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:shadow-lg hover:shadow-cyan-500/25 text-lg'
               >                Start Your Innovation Journey
 
@@ -1325,7 +1325,7 @@ viewport={{ once: true }}
               </div>
               <motion.button
 
-                whileTap={{ scale: 0.95 }} className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold py-4 px-8 rounded-xl hover: from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:shadow-lg hover:shadow-cyan-500/25 text-lg">
+                whileTap={ scale: 0.95 } className='bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold py-4 px-8 rounded-xl hover: from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:shadow-lg hover:shadow-cyan-500/25 text-lg'>
 
                 Start Your Innovation Journey
 
@@ -1336,8 +1336,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 </div>
               </div>
               <motion.button
-                whileHover={{ scale: 1.05 }}
-whileTap={{ scale: 0.95 }}
+                whileHover={ scale: 1.05 }
+whileTap={ scale: 0.95 }
                 className='bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold py-4 px-8 rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:shadow-lg hover:shadow-cyan-500/25 text-lg'
               >
                 Start Your Innovation Journey
@@ -1375,8 +1375,8 @@ whileTap={{ scale: 0.95 }}
               </div>;
 
               <motion&& motion.button;
-                whileHover={{ scale: 1 && 1.05 }}
-                whileTap={{ scale: 0 && 0.95 }}'
+                whileHover={ scale: 1 && 1.05 }
+                whileTap={ scale: 0 && 0.95 }'
                 className='bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold py-4 px-8 rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:shadow-lg hover:shadow-cyan-500/25 text-lg'>                Start Your Innovation Journey;
               </motion && motion.button>;
             </motion && motion.div>;
@@ -1414,54 +1414,54 @@ whileTap={{ scale: 0.95 }}
               <motion.button;
 
   )
-        <section className="py-20 bg-gradient-to-r from-cyan-900/20 to-purple-900/20">;
+        <section className='py-20 bg-gradient-to-r from-cyan-900/20 to-purple-900/20'>;
 
-          <div className="container mx-auto px-4 text-center">;
+          <div className='container mx-auto px-4 text-center'>;
             <motion.div;
-              initial={{ opacity: 0, y: 50 }  } catch (error) {"
-    console.error("Error:", error);"
-    return res.status(500).json({ error: "Internal server error" });
+              initial={ opacity: 0, y: 50 }  } catch (error) {'
+    console.error('Error:', error);'
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
-              whileInView={{ opacity: 1, y: 0 }  } catch (error) {"
-    console.error("Error:", error);"
-    return res.status(500).json({ error: "Internal server error" });
+              whileInView={ opacity: 1, y: 0 }  } catch (error) {'
+    console.error('Error:', error);'
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
-              transition={{ duration: 0.8 }  } catch (error) {"
-    console.error("Error:", error);"
-    return res.status(500).json({ error: "Internal server error" });
+              transition={ duration: 0.8 }  } catch (error) {'
+    console.error('Error:', error);'
+    return res.status(500).json({ error: 'Internal server error' });
   }
-}"
-              viewport={{ once: true }} className="max-w-4xl mx-auto">;"
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">;
+}'
+              viewport={ once: true } className='max-w-4xl mx-auto'>;'
+              <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>;
                 Ready to Build the Future?;
-              </h2>;"
-              <p className="text-xl text-gray-300 mb-8">;
+              </h2>;'
+              <p className='text-xl text-gray-300 mb-8'>;
                 Join the ranks of forward-thinking organizations that are already leveraging our 2034 innovations;
                 to transform their industries and accelerate their growth.;
-              </p>;"
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">;"
-                <div className="flex items-center justify-center space-x-3 text-gray-300">;"
-                  <span className="text-cyan-400">📱</span>;
+              </p>;'
+              <div className='grid grid-cols-1 md:grid-cols-3 gap-6 mb-8'>;'
+                <div className='flex items-center justify-center space-x-3 text-gray-300'>;'
+                  <span className='text-cyan-400'>📱</span>;
                   <span>{contactInfo.mobile}</span>;
-                </div>;"
-                <div className="flex items-center justify-center space-x-3 text-gray-300">;"
-                  <span className="text-purple-400">✉️</span>;
+                </div>;'
+                <div className='flex items-center justify-center space-x-3 text-gray-300'>;'
+                  <span className='text-purple-400'>✉️</span>;
                   <span>{contactInfo.email}</span>;
-                </div>;"
-                <div className="flex items-center justify-center space-x-3 text-gray-300">;"
-                  <span className="text-pink-400">📍</span>;
+                </div>;'
+                <div className='flex items-center justify-center space-x-3 text-gray-300'>;'
+                  <span className='text-pink-400'>📍</span>;
                   <span>{contactInfo.address}</span>;
                 </div>;
               </div>;
               <motion.button;
-                whileHover={{ scale: 1.05 }  } catch (error) {"
-    console.error("Error:", error);"
-    return res.status(500).json({ error: "Internal server error" });
+                whileHover={ scale: 1.05 }  } catch (error) {'
+    console.error('Error:', error);'
+    return res.status(500).json({ error: 'Internal server error' });
   }
-}"
-                whileTap={{ scale: 0.95 }} className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold py-4 px-8 rounded-xl hover: from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:shadow-lg hover:shadow-cyan-500/25 text-lg">;
+}'
+                whileTap={ scale: 0.95 } className='bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold py-4 px-8 rounded-xl hover: from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:shadow-lg hover:shadow-cyan-500/25 text-lg'>;
                 Start Your Innovation Journey;
 
               </motion.button>;
@@ -1474,8 +1474,8 @@ whileTap={{ scale: 0.95 }}
     </>;
   );
   } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error('Error:', error);
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
       </div>;

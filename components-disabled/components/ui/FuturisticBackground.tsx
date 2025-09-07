@@ -30,7 +30,7 @@ export default function FuturisticBackground() { return null; }
     </div>;
   );export default function FuturisticBackground() {}
   return (
-    <div className="pointer-events-none absolute inset-0 overflow-hidden">
+    <div className='pointer-events-none absolute inset-0 overflow-hidden'>
 
  */
 function FuturisticBackground() {}

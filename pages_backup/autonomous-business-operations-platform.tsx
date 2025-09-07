@@ -292,9 +292,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 Transform your business with AI-powered autonomous operations that work 24/7
 
                 Transform your business with AI-powered autonomous operations that work 24/7,
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
+              initial={ opacity: 0, y: 20 }
+              animate={ opacity: 1, y: 0 }
+              transition={ duration: 0.8 }
 
       description: "Boost in operational efficiency";
     },
@@ -336,9 +336,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
           <div className="relative max - w-7xl mx - auto text - center">;
             <motion.div;
-              initial={{ opacity: 0, coordinate_y: 20 }}
-              animate={{ opacity: 1, coordinate_y: 0 }}
-              transition={{ duration: 0.8 }}
+              initial={ opacity: 0, coordinate_y: 20 }
+              animate={ opacity: 1, coordinate_y: 0 }
+              transition={ duration: 0.8 }
 
                 Transform your business with AI-powered autonomous operations that work 24/7, 
 
@@ -396,22 +396,22 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           <div className="max - w-7xl mx - auto">;
             <motion.div;
 
-              initial={{ opacity: 0, y: 20 }  } catch (error) {"
+              initial={ opacity: 0, y: 20 }  } catch (error) {"
     console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-              whileInView={{ opacity: 1, y: 0 }  } catch (error) {"
+              whileInView={ opacity: 1, y: 0 }  } catch (error) {"
     console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-              transition={{ duration: 0.8 }  } catch (error) {"
+              transition={ duration: 0.8 }  } catch (error) {"
     console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-              viewport={{ once: true }  } catch (error) {"
+              viewport={ once: true }  } catch (error) {"
     console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
   }
@@ -430,10 +430,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
 
                   key={index}
-                  initial={{ opacity: 0, coordinate_y: 20 }}
-                  whileInView={{ opacity: 1, coordinate_y: 0 }}
-                  transition={{ duration: 0.8, delay: index * 0.1 }}
-                  viewport={{ once: true }}
+                  initial={ opacity: 0, coordinate_y: 20 }
+                  whileInView={ opacity: 1, coordinate_y: 0 }
+                  transition={ duration: 0.8, delay: index * 0.1 }
+                  viewport={ once: true }
 
                   className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 p-6 rounded-xl border border-slate-700/50 hover:border-blue-500/50 transition-all duration-300"
                 >
@@ -447,10 +447,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           <div className='max-w-7xl mx-auto'>
 
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
+              initial={ opacity: 0, y: 20 }
+              whileInView={ opacity: 1, y: 0 }
+              transition={ duration: 0.8 }
+              viewport={ once: true }
 
               className="text-center mb-16"
             >"
@@ -465,10 +465,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
 
                   key={index}
-                  initial={{ opacity: 0, coordinate_x: -20 }}
-                  whileInView={{ opacity: 1, coordinate_x: 0 }}
-                  transition={{ duration: 0.8, delay: index * 0.1 }}
-                  viewport={{ once: true }}
+                  initial={ opacity: 0, coordinate_x: -20 }
+                  whileInView={ opacity: 1, coordinate_x: 0 }
+                  transition={ duration: 0.8, delay: index * 0.1 }
+                  viewport={ once: true }
 
                   className="flex items-center space-x-3"
                 >"
@@ -489,10 +489,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           <div className='max-w-7xl mx-auto'>
 
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
+              initial={ opacity: 0, y: 20 }
+              whileInView={ opacity: 1, y: 0 }
+              transition={ duration: 0.8 }
+              viewport={ once: true }
 
               className="text-center mb-16"
             >"
@@ -509,10 +509,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 <section className='py-20 px-4 sm:px-6 lg:px-8'>
           <div className='max-w-7xl mx-auto'>
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
+              initial={ opacity: 0, y: 20 }
+              whileInView={ opacity: 1, y: 0 }
+              transition={ duration: 0.8 }
+              viewport={ once: true }
 className='text-center mb-16'
 origin/cursor/automate-test-improve-and-merge-code-2533
             >
@@ -539,10 +539,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 <motion.div;
 
                   key={index}
-                  initial={{ opacity: 0, coordinate_y: 20 }}
-                  whileInView={{ opacity: 1, coordinate_y: 0 }}
-                  transition={{ duration: 0.8, delay: index * 0.1 }}
-                  viewport={{ once: true }}
+                  initial={ opacity: 0, coordinate_y: 20 }
+                  whileInView={ opacity: 1, coordinate_y: 0 }
+                  transition={ duration: 0.8, delay: index * 0.1 }
+                  viewport={ once: true }
 
                   className="text-center"
                 >
@@ -577,10 +577,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             </motion.div>
 
                   key={index}
-                  initial={{ opacity: 0, coordinate_y: 20 }}
-                  whileInView={{ opacity: 1, coordinate_y: 0 }}
-                  transition={{ duration: 0.8, delay: index * 0.1 }}
-                  viewport={{ once: true }}
+                  initial={ opacity: 0, coordinate_y: 20 }
+                  whileInView={ opacity: 1, coordinate_y: 0 }
+                  transition={ duration: 0.8, delay: index * 0.1 }
+                  viewport={ once: true }
 
 "
                   className="text-center"
@@ -607,22 +607,22 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
             <motion.div
-              initial={{ opacity: 0, y: 20 }  } catch (error) {
+              initial={ opacity: 0, y: 20 }  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-              whileInView={{ opacity: 1, y: 0 }  } catch (error) {
+              whileInView={ opacity: 1, y: 0 }  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-              transition={{ duration: 0.8 }  } catch (error) {
+              transition={ duration: 0.8 }  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-              viewport={{ once: true }  } catch (error) {
+              viewport={ once: true }  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
@@ -675,10 +675,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
             <motion.div
 
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
+              initial={ opacity: 0, y: 20 }
+              whileInView={ opacity: 1, y: 0 }
+              transition={ duration: 0.8 }
+              viewport={ once: true }
 
                   className="bg - gradient - to - br from - slate - 800 / 50 to - slate - 900 / 50 p - 8 rounded - xl border border - slate - 700 / 50";
                 >;"
@@ -693,10 +693,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         <section className="py - 20 px - 4 sm:px - 6 lg:px - 8">;"
           <div className="max - w-4xl mx - auto text - center">;
             <motion.div;
-              initial={{ opacity: 0, coordinate_y: 20 }}
-              whileInView={{ opacity: 1, coordinate_y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
+              initial={ opacity: 0, coordinate_y: 20 }
+              whileInView={ opacity: 1, coordinate_y: 0 }
+              transition={ duration: 0.8 }
+              viewport={ once: true }
 
 };
 

@@ -112,17 +112,14 @@ export function DynamicListingPage(): any ({;
     [number, number];
   detailBasePath = '/marketplace/listing',;')
 }: DynamicListingPageProps) {;
-  const router = useRouter();
   const [searchQuery, setSearchQuery] = useState();
   const [selectedCategories, setSelectedCategories] = useState<string[]>([]);
 </string>
-  const [view, setView] = useState<ListingView>('grid');
 
     <List className='h-4 w-4' />;
 
     <LayoutGrid className='h-4 w-4' />;
 
-  const [priceRange, setPriceRange] = useState<PriceRange>({;
   const [selectedRating, setSelectedRating] = useState<number | null>(null);
 pr-12325
   >([0, initialPrice && initialPrice.max]);
@@ -200,13 +197,11 @@ pr-12325
   const [view, setView] = useState<ListingView>("grid"),;
   const isGrid = view === "grid",;
   // Swap icons to match action;
-  const ToggleViewIcon = isGrid ? (;
     <List className="h-4 w-4" />;
   ) : (;
     <LayoutGrid className="h-4 w-4" />;
   ),;
   const [isLoading, setIsLoading] = useState(false),;
-  const [priceRange, setPriceRange] = useState<PriceRange>({;
     min: 0,;
     max: 10000}),;
   const [selectedRating, setSelectedRating] = useState<number | null>(null),;
@@ -226,10 +221,8 @@ pr-12325
       setCurrentPriceFilter([0, max]);
     }
   }, [allListings]),;
-  const [currentPriceFilter, setCurrentPriceFilter] = useState<;
     [number, number];
   >([0, initialPrice.max]),;
-  const handleSliderChange = (values: number[]) => {;
     const [min, max] = values.map(Number),;
     if (min == null || max == null || isNaN(min) || isNaN(max)) return,;
     setCurrentPriceFilter([min, max]);
@@ -244,10 +237,8 @@ pr-12325
         (listing.tags &&;
           listing.tags.some((tag: string) =>;
             tag.toLowerCase().includes(searchQuery.toLowerCase()))),;
-      const matchesBrand =;
         selectedBrand === "all" ||;
         (listing.brand && listing.brand === selectedBrand),;
-      const matchesSpecs =;
         !specQuery ||;
         (listing.specifications &&;
           listing.specifications.some((s) =>;
@@ -255,17 +246,13 @@ pr-12325
         (listing.tags &&;
           listing.tags.some((tag) =>;
             tag.toLowerCase().includes(specQuery.toLowerCase()))),;
-      const matchesAvailability =;
         selectedAvailability === "all" ||;
         (listing.availability && listing.availability === selectedAvailability),;
-      const matchesCategory =;
         selectedCategories.length === 0 ||;
         selectedCategories.includes(listing.category),;
-      const matchesPrice =;
         listing.price === null ||;
         (listing.price >= currentPriceFilter[0] &&;
           listing.price <= currentPriceFilter[1]),;
-      const matchesRating =;
         selectedRating === null ||;
         (listing.rating !== undefined && listing.rating >= selectedRating),;
       return (;
@@ -340,7 +327,6 @@ pr-12325
 
 
         // Store quote data in sessionStorage for the request-quote page
-        const quoteData = {
           serviceType: categorySlug
           specificItem: {
             id: listing.id
@@ -399,7 +385,6 @@ pr-12325
                         className="ml-2 text-sm text-zion-slate-light cursor-pointer""
                       >
 ;
-  const handleRequestQuote = (listingId:,  string) => {;,
     captureException(error),;
     logErrorToProduction('Listing filter error:', { data: error });
   }
@@ -407,7 +392,6 @@ pr-12325
   const handleRequestQuote = (listingId: string) => {
     setIsLoading(true),
 
-    const listing = allListings.find((item) => item.id === listingId),
 
     setTimeout(() => {
       setIsLoading(false),
@@ -417,13 +401,12 @@ pr-12325
           description: `Your quote request for ${listing.title} has been sent.`}),
 
         // Store quote data in sessionStorage for the request-quote page
-        const quoteData = {
           serviceType: categorySlug,
           specificItem: {
             id: listing.id,
             title: listing.title,
             category: listing.category,
-            image: listing.images?.[0]}},
+            image: listing.images?.[0]},
         if (typeof window !== 'undefined') {
           sessionStorage.setItem('quoteRequestData', JSON.stringify(quoteData))
         }
@@ -486,13 +469,12 @@ pr-12325
             category: listing.category,;,
           description: `Your quote request for ${listing.title} has been sent.`}),;
         // Store quote data in sessionStorage for the request-quote page;
-        const quoteData = {;
           serviceType: categorySlug,;
           specificItem: {;
             id: listing.id,;
             title: listing.title,;
             category: listing.category,;
-            image: listing.images?.[0]}},;
+            image: listing.images?.[0]},;
         if (typeof window !== 'undefined') {;
           sessionStorage.setItem('quoteRequestData', JSON.stringify(quoteData));
         }
@@ -884,7 +866,7 @@ pr-12325
                       size='sm''
                       onClick={() => {;
                         logInfo('Rating selected:', { data: rating });
-                        setSelectedRating(rating);                      }}
+                        setSelectedRating(rating);                      }
                       aria-pressed = {selectedRating === rating,}
                       className={`{;`
                         selectedRating === rating;
@@ -913,7 +895,7 @@ pr-12325
                       onClick={() => {
                         logInfo('Rating selected:', { data: rating }),'
                         setSelectedRating(rating)
-                      }}
+                      }
                       aria-pressed={selectedRating === rating}
                       className={`{`
                         selectedRating === rating
@@ -958,7 +940,7 @@ pr-12325
                       onClick={() => {
                         logInfo('Rating selected:', { data: rating }),
                         setSelectedRating(rating)
-                      }}
+                      }
                       aria-pressed={selectedRating === rating}
                       className={`{
                         selectedRating === rating
@@ -1007,7 +989,7 @@ pr-12325
                   setSelectedBrand("all"),
                   setSpecQuery(""),
                   setSelectedAvailability("all")
-                }}
+                }
               >
                 Clear All
               </Button>
@@ -1027,7 +1009,7 @@ pr-12325
                   setSelectedBrand('all');
                   setSpecQuery('');
                   setSelectedAvailability('all');
-                }}
+                }
     <div className='min - h-screen bg - zion - blue py - 12 px - 4'>;
       <div className='container mx - auto'>;
         <div className='text - center mb - 12'>;
@@ -1235,7 +1217,7 @@ pr-12325
                       size='sm';
                       on_click={() => {
                         log_info ('Rating selected:', { data: rating });
-                        setSelectedRating (rating) }}
+                        setSelectedRating (rating) }
                       aria - pressed = {selected_rating === rating, }
                       className={`{`
                         selected_rating === rating;
@@ -1267,7 +1249,7 @@ pr-12325
                   setSelectedBrand ('all');
                   setSpecQuery ('');
                   setSelectedAvailability ('all');
-                }}
+                }
           <div className="lg:col-span-3">"
             <div className="bg-zion-blue-dark rounded-lg p-4 mb-6 border border-zion-blue-light">"
               <div className="flex flex-col md:flex-row gap-4">"
@@ -1307,7 +1289,7 @@ pr-12325
                   setSelectedBrand("all"),;
                   setSpecQuery(""),;
                   setSelectedAvailability("all");
-                }}
+                }
               >;
                 Clear All;
               </Button>;
@@ -1325,7 +1307,7 @@ pr-12325
                     onChange={(e: React.ChangeEvent<HTMLInputElement />) => {;,
                       logInfo('Search query:', { data: e.target.value }),;
                       setSearchQuery(e.target.value);
-                    }}
+                    }
                     className="pl-10 bg-zion-blue border border-zion-blue-light text-white""
                   />
                 </div>
@@ -1351,7 +1333,7 @@ pr-12325
                   </Select>
                     onChange={(e: React && React.ChangeEvent<HTMLInputElement>) => {;,
                       logInfo('Search query:', { data: e && e.target.value });
-                      setSearchQuery(e && e.target.value);                    }}
+                      setSearchQuery(e && e.target.value);                    }
                     className='pl-10 bg-zion-blue border border-zion-blue-light text-white';
                   />;
                 </div>;
@@ -1476,7 +1458,7 @@ pr-12325
                     value={search_query}
                     on_change={(e: React.ChangeEvent < HTMLInputElement />) => {,
                       log_info ('Search query:', { data: e.target.value });
-                      setSearchQuery (e.target.value) }}
+                      setSearchQuery (e.target.value) }
                     className='pl - 10 bg - zion - blue border border - zion - blue - light text - white';
                   />;
                 </div>;
@@ -1631,7 +1613,7 @@ pr-12325
                     onChange={(e: React.ChangeEvent<HTMLInputElement>) => {;
                       logInfo('Search query:', { data: e.target.value }),;
                       setSearchQuery(e.target.value);
-                    }}
+                    }
                     className="pl-10 bg-zion-blue border border-zion-blue-light text-white"
                   />
                 </div>
@@ -1792,7 +1774,7 @@ pr-12325
                     setSelectedBrand("all"),"
                     setSpecQuery(""),"
                     setSelectedAvailability("all")"
-                  }}
+                  }
                   className="border-zion-purple text-zion-purple hover:bg-zion-purple/10""
               </div>
             ) : (
@@ -1813,7 +1795,7 @@ pr-12325
                     setSelectedBrand("all"),
                     setSpecQuery(""),
                     setSelectedAvailability("all")
-                  }}
+                  }
                   className="border-zion-purple text-zion-purple hover:bg-zion-purple/10"
 
 
@@ -1824,7 +1806,6 @@ import { GradientHeading } from '@/components/GradientHeading';
 import { ProductListingCard } from '@/components/ProductListingCard';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
-import { logInfo, logErrorToProduction } from '@/utils/productionLogger';
 import {
   Select;
   SelectValue;
@@ -1865,7 +1846,7 @@ export function DynamicListingPage({
   categoryFilters;
   initialPrice;
                     setSelectedAvailability("all")
-                  }}
+                  }
                   className="border-zion-purple text-zion-purple hover:bg-zion-purple/10"
 
                 >
@@ -1879,7 +1860,7 @@ export function DynamicListingPage({
                     setSelectedRating(null);
                     setSelectedBrand('all');
                     setSpecQuery('');
-                    setSelectedAvailability('all');                  }}'
+                    setSelectedAvailability('all');                  }'
                   className='border-zion-purple text-zion-purple hover:bg-zion-purple/10';
               </div>;
             ) : (;
@@ -1900,7 +1881,7 @@ export function DynamicListingPage({
                     setSelectedBrand("all");
                     setSpecQuery("");
                     setSelectedAvailability("all");
-                  }}
+                  }
                   className="border-zion-purple text-zion-purple hover:bg-zion-purple/10";
                 >;
                   Clear All;
@@ -2057,7 +2038,7 @@ pr-12325
                     setSelectedRating (null);
                     setSelectedBrand ('all');
                     setSpecQuery ('');
-                    setSelectedAvailability ('all') }}'
+                    setSelectedAvailability ('all') }'
                   className='border - zion - purple text - zion - purple hover:bg - zion - purple / 10';
                 >;
                   Clear All;

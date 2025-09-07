@@ -205,16 +205,16 @@ if ( {) {}
     drawText('Assets:', 50, y), y -= 16,;
     assets.slice(0, 8).forEach(a => { drawText(`- ${a.filename}`, 60, y), y -= 14 }),;
     if (y < 120) { pdfDoc.addPage([612, 792])   } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error('Error:', error);
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
     if (timeline.length) {;
       y -= 6, drawText('Timeline:', 50, y), y -= 16,;
       timeline.forEach(t => { drawText(`- ${t.label}: ${t.date}`, 60, y), y -= 14 });
       } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error('Error:', error);
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
     const pdfBytes = await pdfDoc.save(),
@@ -230,12 +230,12 @@ if ( {) {}
     const onCopy = () => navigator.clipboard.writeText(text),
 
     return (
-      <div className="p-4 border rounded-lg space-y-2">
-        <div className="flex items-center justify-between">
-          <h4 className="font-semibold">{title}</h4>
-          <button className="text-sm px-3 py-1 rounded bg-gray-100 hover:bg-gray-200" onClick={onCopy}>Copy</button>
+      <div className='p-4 border rounded-lg space-y-2'>
+        <div className='flex items-center justify-between'>
+          <h4 className='font-semibold'>{title}</h4>
+          <button className='text-sm px-3 py-1 rounded bg-gray-100 hover:bg-gray-200' onClick={onCopy}>Copy</button>
         </div>
-        <pre className="whitespace-pre-wrap text-xs bg-gray-50 p-3 rounded max-h-60 overflow-auto">{text}</pre>
+        <pre className='whitespace-pre-wrap text-xs bg-gray-50 p-3 rounded max-h-60 overflow-auto'>{text}</pre>
       </div>
 
   return (
@@ -343,31 +343,31 @@ if ( {) {}
           </div>;
 
             </div>
-            <p className="text-xs text-gray-500 mt-2">Toggle to tailor assets and legal docs.</p>
-          </div>"
-          <div className="p-4 border rounded-lg">"
-            <h3 className="font-semibold mb-2">Organization</h3>"
-            <div className="space-y-2">"
-              <input className="w-full border rounded px-2 py-1" value={companyName} onChange={e=>setCompanyName(e.target.value)} placeholder="Company name" />"
-              <input className="w-full border rounded px-2 py-1" value={raiseAmount} onChange={e=>setRaiseAmount(e.target.value)} placeholder="Seed raise amount" />"
-              <input className="w-full border rounded px-2 py-1" value={tokenName} onChange={e=>setTokenName(e.target.value)} placeholder="Token name" />
+            <p className='text-xs text-gray-500 mt-2'>Toggle to tailor assets and legal docs.</p>
+          </div>'
+          <div className='p-4 border rounded-lg'>'
+            <h3 className='font-semibold mb-2'>Organization</h3>'
+            <div className='space-y-2'>'
+              <input className='w-full border rounded px-2 py-1' value={companyName} onChange={e=>setCompanyName(e.target.value)} placeholder='Company name' />'
+              <input className='w-full border rounded px-2 py-1' value={raiseAmount} onChange={e=>setRaiseAmount(e.target.value)} placeholder='Seed raise amount' />'
+              <input className='w-full border rounded px-2 py-1' value={tokenName} onChange={e=>setTokenName(e.target.value)} placeholder='Token name' />
             </div>
-          </div>"
-          <div className="p-4 border rounded-lg">"
-            <h3 className="font-semibold mb-2">Rollout Timeline</h3>"
-            <div className="space-y-2">"
-              <DatePicker selected={startDate} onChange={(d)=>d && setStartDate(d)} className="w-full border rounded px-2 py-1" />"
-              <button onClick={onGenerateTimeline} className="px-3 py-1 rounded bg-green-600 text-white hover:bg-green-700">Generate</button>
+          </div>'
+          <div className='p-4 border rounded-lg'>'
+            <h3 className='font-semibold mb-2'>Rollout Timeline</h3>'
+            <div className='space-y-2'>'
+              <DatePicker selected={startDate} onChange={(d)=>d && setStartDate(d)} className='w-full border rounded px-2 py-1' />'
+              <button onClick={onGenerateTimeline} className='px-3 py-1 rounded bg-green-600 text-white hover:bg-green-700'>Generate</button>
             </div>
 
             {assets.map(a => (
-              <li key={a.filename} className="flex items-center justify-between border rounded p-2">
-                <span className="text-sm">{a.filename}</span>
-                {a.path ? <a href={a.path} download className="text-blue-600 text-sm">Download</a> : <span className="text-gray-400 text-xs">generated</span>}
+              <li key={a.filename} className='flex items-center justify-between border rounded p-2'>
+                <span className='text-sm'>{a.filename}</span>
+                {a.path ? <a href={a.path} download className='text-blue-600 text-sm'>Download</a> : <span className='text-gray-400 text-xs'>generated</span>}
               </li>
 
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error('Error:', error);
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
 
@@ -392,10 +392,10 @@ if ( {) {}
                   <span className='text-gray-400 text-xs'>generated</span>;
                 )}              </li>;
 
-"
-        <section className="p-4 border rounded-lg">"
-          <h3 className="font-semibold mb-3">Assets Included</h3>"
-          <ul className="grid md:grid-cols-2 gap-3">
+'
+        <section className='p-4 border rounded-lg'>'
+          <h3 className='font-semibold mb-3'>Assets Included</h3>'
+          <ul className='grid md:grid-cols-2 gap-3'>
 
             ))}
 
@@ -404,13 +404,13 @@ if ( {) {}
 
 };
 
-"
-        <section className="p-4 border rounded-lg space-y-4">"
-          <h3 className="font-semibold">Prewritten Press Releases</h3>"
-          <div className="grid md:grid-cols-3 gap-4">"
-            <PressReleaseCard type="seed-round" title="Seed round" />"
-            <PressReleaseCard type="launch" title="Launch" />'"
-            {bundle === 'web3' && <PressReleaseCard type="token-sale" title="Token sale" />}
+'
+        <section className='p-4 border rounded-lg space-y-4'>'
+          <h3 className='font-semibold'>Prewritten Press Releases</h3>'
+          <div className='grid md:grid-cols-3 gap-4'>'
+            <PressReleaseCard type='seed-round' title='Seed round' />'
+            <PressReleaseCard type='launch' title='Launch' />''
+            {bundle === 'web3' && <PressReleaseCard type='token-sale' title='Token sale' />}
               ))}
             </div>
             <p className=&quot;text-xs text-gray-500 mt-2&quot;>Toggle to tailor assets and legal docs.</p>
@@ -474,34 +474,34 @@ if ( {) {}
         </section>;
       </div>;
     </div>;
-"
-                {timeline.map((t)=> (<li key={t.label}><span className="font-medium">{t.label}:</span> {t.date}</li>))  } catch (error) {"
-    console.error("Error:", error);"
-    return res.status(500).json({ error: "Internal server error" });
+'
+                {timeline.map((t)=> (<li key={t.label}><span className='font-medium'>{t.label}:</span> {t.date}</li>))  } catch (error) {'
+    console.error('Error:', error);'
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
               </ul>
-            )  } catch (error) {"
-    console.error("Error:", error);"
-    return res.status(500).json({ error: "Internal server error" });
+            )  } catch (error) {'
+    console.error('Error:', error);'
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
           </div>
         </section>
 
-            {assets.map(a => ("
-              <li key={a.filename} className="flex items-center justify-between border rounded p-2">"
-                <span className="text-sm">{a.filename}</span>"
-                {a.path ? <a href={a.path} download className="text-blue-600 text-sm">Download</Link> : <span className="text-gray-400 text-xs">generated</span>  } catch (error) {"
-    console.error("Error:", error);"
-    return res.status(500).json({ error: "Internal server error" });
+            {assets.map(a => ('
+              <li key={a.filename} className='flex items-center justify-between border rounded p-2'>'
+                <span className='text-sm'>{a.filename}</span>'
+                {a.path ? <a href={a.path} download className='text-blue-600 text-sm'>Download</Link> : <span className='text-gray-400 text-xs'>generated</span>  } catch (error) {'
+    console.error('Error:', error);'
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
               </li>
 
-            ))  } catch (error) {"
-    console.error("Error:", error);"
-    return res.status(500).json({ error: "Internal server error" });
+            ))  } catch (error) {'
+    console.error('Error:', error);'
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
           </ul>
@@ -559,11 +559,11 @@ export default KitPage;
 
 };
 
-        <section className="p-4 border rounded-lg space-y-4">
-          <h3 className="font-semibold">Prewritten Press Releases</h3>
-          <div className="grid md:grid-cols-3 gap-4">
-            <PressReleaseCard type="seed-round" title="Seed round" />
-            <PressReleaseCard type="launch" title="Launch" />
+        <section className='p-4 border rounded-lg space-y-4'>
+          <h3 className='font-semibold'>Prewritten Press Releases</h3>
+          <div className='grid md:grid-cols-3 gap-4'>
+            <PressReleaseCard type='seed-round' title='Seed round' />
+            <PressReleaseCard type='launch' title='Launch' />
 
           </div>
         </section>

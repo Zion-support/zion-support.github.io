@@ -7,11 +7,9 @@ import { ResumePreviewCard } from './ResumePreviewCard';
 import { Resume } from '@/types/resume';
 
 
-import React from 'react';
 import { FileText } from 'lucide-react'
 import { ResumeOption  } from '../resume-selector/types';
 import { ResumePreviewCard  } from './ResumePreviewCard';
-import { Resume } from '@/types/resume';
 
 interface SelectResumeSectionProps {
   resumeOptions: ResumeOption[];
@@ -84,15 +82,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         </>
       )}
   );
-}};
+};
 };
 
     </div>;
   );
 }
 ;
-import React from 'react';
-import { FileText } from 'lucide-react';
 interface ResumeOption {
   id: string;,
   title: string;,
@@ -190,7 +186,6 @@ export const SelectResumeSection: React.FC<SelectResumeSectionProps> = ({,
 };
 
 import React from 'react',;
-import { FileText } from 'lucide-react';
 import { ResumeOption } from '../resume-selector/types',;
 import { ResumePreviewCard } from './ResumePreviewCard',;
 import { Resume } from '@/types/resume',;

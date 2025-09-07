@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 super(props);
     this.state = { hasError: false };
   }
@@ -8,12 +9,19 @@ super(props);
     return this.props.children;
   }
 
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 import React from 'react';
 interface FuturisticServicesShowcaseProps {
   // Add props here as needed
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 }
 
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
 export default function FuturisticServicesShowcase({ }: FuturisticServicesShowcaseProps) {
 
   return (
@@ -22,3 +30,31 @@ export default function FuturisticServicesShowcase({ }: FuturisticServicesShowca
       <p>This component is currently under development.</p>
     </div>
   );
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+}
+
+:src.disabled/components/FuturisticServicesShowcase.jsx
+}
+
+ursor/add-new-services-and-deploy-updates-0462
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+}
+:temp_exclude/src.disabled/components/FuturisticServicesShowcase.jsx
+=======
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+}
+:src.disabled/components/FuturisticServicesShowcase.jsx
+}
+}
+ursor/add-new-services-and-deploy-updates-0462
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+}
+:temp_exclude/src.disabled/components/FuturisticServicesShowcase.jsx
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> merged-prs-20250907-203621

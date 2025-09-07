@@ -500,7 +500,7 @@ export function AIListingForm({ onSubmit, isLoading, initialValues = {} }:,  AIL
   toast ({
   return;
 }/> </div> <div className="space-y-2" > <label htmlFor="category" className="text-sm font-medium text-zion-slate-light" >Category</label> <Input /> </div> <div className="space-y-2" > <label htmlFor="keyFeatures" className="text-sm font-medium text-zion-slate-light" >Key Features (Optional) </label> <Textarea /> </div> <div className="space-y-2" > <label htmlFor="targetAudience" className="text-sm font-medium text-zion-slate-light" >Target Audience (Optional) </label> <Input > {""
-}}}}))
+}}))
   }) => void,
   isLoading: boolean,
   initialValues?: {

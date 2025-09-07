@@ -5,4 +5,4 @@ const EmptyState = (
 }
 }
  ;
-  return()"";
+  return()\"\";

@@ -1,10 +1,10 @@
-import Link from "next/link",
-import { useRouter } from "next/router",
-import { useState } from "react",
-import { cn } from "@/lib/utils",
-import { useAuth } from "@/hooks/useAuth",
-import { useTranslation } from "react-i18next",
-import { useFavorites } from "@/hooks/useFavorites",
+import Link from 'next/link',
+import { useRouter } from 'next/router',
+import { useState } from 'react',
+import { cn } from '@/lib/utils',
+import { useAuth } from '@/hooks/useAuth',
+import { useTranslation } from 'react-i18next',
+import { useFavorites } from '@/hooks/useFavorites',
 
 interface MainNavigationProps {
   isAdmin?: boolean,
@@ -126,7 +126,6 @@ import {;
   Wallet,;'
 } from 'lucide-react';'
 import { LanguageSelector } from '@/components/header/LanguageSelector';
-import {;
   HoverCard,;
   HoverCardTrigger,;
   HoverCardContent,;'
@@ -134,7 +133,6 @@ import {;
 import { MiniCartPreview } from '@/components/cart/MiniCartPreview';'
 import { LoginModal } from '@/components/auth/LoginModal';import { LanguageSelector } from '@/components/header/LanguageSelector';'
 import { HoverCard, HoverCardTrigger, HoverCardContent } from '@/components/ui/hover-card';'
-import { MiniCartPreview } from '@/components/cart/MiniCartPreview';'
 import { LoginModal } from '@/components/auth/LoginModal';
 
 interface MainNavigationProps {;
@@ -227,7 +225,7 @@ interface MainNavigationProps {;
 
         <div
 
-          id="main-navbar-collapse"
+          id='main-navbar-collapse'
 
           className={cn(
 
@@ -243,12 +241,12 @@ interface MainNavigationProps {;
                       : 'text-white hover:bg-zion-purple/10 hover:text-zion-cyan'
                   )}                >
 
-                    "nav-link",
+                    'nav-link',
 
-                    "inline-flex h-9 items-center justify-center rounded-md px-4 text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary",
-                    link.matches(router.pathname)"
-                      ? "bg-zion-purple/20 text-zion-cyan""
-                      : "text-white hover:bg-zion-purple/10 hover:text-zion-cyan"
+                    'inline-flex h-9 items-center justify-center rounded-md px-4 text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary',
+                    link.matches(router.pathname)'
+                      ? 'bg-zion-purple/20 text-zion-cyan''
+                      : 'text-white hover:bg-zion-purple/10 hover:text-zion-cyan'
                   )}
                 >;
 
@@ -351,7 +349,7 @@ export default /**;
       </div>;
     )};
 
-      <div className="hidden lg: flex items-center space-x-1">;
+      <div className='hidden lg: flex items-center space-x-1'>;
         {baseLinks && baseLinks.map((link (;
           <div key={link && link.key}>;
             {link && link.children ? (;
@@ -389,30 +387,30 @@ export default /**;
           <motion.div;
 
   coordinate_x: '100%';
-}}
+}
             animate = {}
   { opacity: 1,
   coordinate_x: 0;
-}}
+}
             exit = {}
   { opacity: 0,'
   coordinate_x: '100%';
 
-}}
-            transition={{ duration: 0.3 }}";
-            className="lg:hidden fixed inset - y-0 right - 0 w - 80 bg - zion - slate - dark border - l border - white / 10 shadow - xl z-50";
-";
-            <div className="p-6">";
-              <div className="flex justify - between items - center mb-8">";
-                <h2 className="text - xl font - bold text-white">Menu</h2>;
+}
+            transition={ duration: 0.3 }';
+            className='lg:hidden fixed inset - y-0 right - 0 w - 80 bg - zion - slate - dark border - l border - white / 10 shadow - xl z-50';
+';
+            <div className='p-6'>';
+              <div className='flex justify - between items - center mb-8'>';
+                <h2 className='text - xl font - bold text-white'>Menu</h2>;
                 <button;
-                  on_click={() => setIsMobileMenuOpen (false)}";
-                  className="p - 2 text - zion - slate - light hover:text - white hover:bg - white / 10 rounded - md transition-colors";
-";
-                  <X className="w - 6 h-6"  />                </button>;
+                  on_click={() => setIsMobileMenuOpen (false)}';
+                  className='p - 2 text - zion - slate - light hover:text - white hover:bg - white / 10 rounded - md transition-colors';
+';
+                  <X className='w - 6 h-6'  />                </button>;
               </div>;
-";
-              <div className="space-y-2">;
+';
+              <div className='space-y-2'>;
 
                 {base_links.map (link: unknown <div key={link.key}>;
                     {link.children ? (
@@ -422,23 +420,23 @@ export default /**;
 
 ;
             {/* Wishlist link */}
-            {isAuthenticated && ("
-              <li className="nav-item">
-                <Link "
-                  href="/wishlist""
-                  aria-label="Wishlist"
+            {isAuthenticated && ('
+              <li className='nav-item'>
+                <Link '
+                  href='/wishlist''
+                  aria-label='Wishlist'
                   onClick={() => setIsMobileMenuOpen(false)}
-                  className={cn("
-                    "nav-link","
-                    "relative inline-flex h-9 w-9 items-center justify-center rounded-md transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary","
-                    router.pathname === "/wishlist""
-                      ? "bg-zion-purple/20 text-zion-cyan""
-                      : "text-white hover:bg-zion-purple/10 hover:text-zion-cyan"
+                  className={cn('
+                    'nav-link','
+                    'relative inline-flex h-9 w-9 items-center justify-center rounded-md transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary','
+                    router.pathname === '/wishlist''
+                      ? 'bg-zion-purple/20 text-zion-cyan''
+                      : 'text-white hover:bg-zion-purple/10 hover:text-zion-cyan'
                   )}
-                >"
-                  <Heart className="w-4 h-4" />
-                  {count > 0 && ("
-                    <span className="absolute -top-1 -right-1 bg-zion-purple text-white text-xs rounded-full h-4 w-4 flex items-center justify-center">
+                >'
+                  <Heart className='w-4 h-4' />
+                  {count > 0 && ('
+                    <span className='absolute -top-1 -right-1 bg-zion-purple text-white text-xs rounded-full h-4 w-4 flex items-center justify-center'>
                       {count}
                     </span>;
                   )}
@@ -448,42 +446,42 @@ export default /**;
 ;
             {/* Wallet link */}
 
-              <li className="nav-item">
-                <Link "
-                  href="/wallet""
-                  aria-label="Wallet"
+              <li className='nav-item'>
+                <Link '
+                  href='/wallet''
+                  aria-label='Wallet'
                   onClick={() => setIsMobileMenuOpen(false)}
-                  className={cn("
-                    "nav-link","
-                    "relative inline-flex h-9 w-9 items-center justify-center rounded-md transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary","
-                    router.pathname === "/wallet""
-                      ? "bg-zion-purple/20 text-zion-cyan""
-                      : "text-white hover:bg-zion-purple/10 hover:text-zion-cyan"
+                  className={cn('
+                    'nav-link','
+                    'relative inline-flex h-9 w-9 items-center justify-center rounded-md transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary','
+                    router.pathname === '/wallet''
+                      ? 'bg-zion-purple/20 text-zion-cyan''
+                      : 'text-white hover:bg-zion-purple/10 hover:text-zion-cyan'
                   )}
-                >"
-                  <Wallet className="w-4 h-4" />
+                >'
+                  <Wallet className='w-4 h-4' />
                 </Link>
               </li>
             )}
 ;
             {/* Messages link */}
 
-              <li className="nav-item">
-                <Link "
-                  href="/messages""
-                  aria-label="Messages"
+              <li className='nav-item'>
+                <Link '
+                  href='/messages''
+                  aria-label='Messages'
                   onClick={() => setIsMobileMenuOpen(false)}
-                  className={cn("
-                    "nav-link","
-                    "relative inline-flex h-9 w-9 items-center justify-center rounded-md transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary","
-                    router.pathname === "/messages""
-                      ? "bg-zion-purple/20 text-zion-cyan""
-                      : "text-white hover:bg-zion-purple/10 hover:text-zion-cyan"
+                  className={cn('
+                    'nav-link','
+                    'relative inline-flex h-9 w-9 items-center justify-center rounded-md transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary','
+                    router.pathname === '/messages''
+                      ? 'bg-zion-purple/20 text-zion-cyan''
+                      : 'text-white hover:bg-zion-purple/10 hover:text-zion-cyan'
                   )}
-                >"
-                  <MessageSquare className="w-4 h-4" />
-                  {unreadCount > 0 && ("
-                    <span className="absolute -top-1 -right-1 bg-red-500 text-white text-xs rounded-full h-4 w-4 flex items-center justify-center">'
+                >'
+                  <MessageSquare className='w-4 h-4' />
+                  {unreadCount > 0 && ('
+                    <span className='absolute -top-1 -right-1 bg-red-500 text-white text-xs rounded-full h-4 w-4 flex items-center justify-center'>'
                       {unreadCount > 9 ? '9+' : unreadCount}
                     </span>;
                   )}
@@ -494,7 +492,7 @@ export default /**;
 
                         : 'text-white hover:bg-zion-purple/10 hover:text-zion-cyan';
                     )} />
-                    <ShoppingCart className="w-4 h-4 mr-1" />"
+                    <ShoppingCart className='w-4 h-4 mr-1' />'
                     {t('nav.cartCart')}'
                     )}
 
@@ -502,32 +500,32 @@ export default /**;
 ;'`
                           {link.name}'`;'`
                           <ChevronDown className={`w-4 h-4 transition-transform ${activeDropdown === link.key ? 'rotate-180' : ''}`}  />                        </button>;
-"
-                        {activeDropdown === link.key && (;""
-                          <div className="ml-4 mt-2 space-y-1">
+'
+                        {activeDropdown === link.key && (;''
+                          <div className='ml-4 mt-2 space-y-1'>
 
                             {link.children.map((child: unknown (
 
                             {link.children.map ((child: unknown (
 
-        {isMobileMenuOpen ? <X className="w-6 h-6"  /> : <Menu className="w-6 h-6"  />}      </button>;
+        {isMobileMenuOpen ? <X className='w-6 h-6'  /> : <Menu className='w-6 h-6'  />}      </button>;
       {/* Mobile Navigation */}
       <AnimatePresence>;
         {isMobileMenuOpen && ;
 
   { opacity: 1,
   x: 0;
-}}
+}
 
-                <h2 className="text-xl font-bold text-white">Menu</h2>;
-                <button"
-                  onClick={() => setIsMobileMenuOpen(false)}";"
-                  className="p-2 text-zion-slate-light hover:text-white hover:bg-white/10 rounded-md transition-colors";"
-";"
-                  <X className="w-6 h-6"  />                </button>;
-              </div>;"
-";"
-              <div className="space-y-2">;
+                <h2 className='text-xl font-bold text-white'>Menu</h2>;
+                <button'
+                  onClick={() => setIsMobileMenuOpen(false)}';'
+                  className='p-2 text-zion-slate-light hover:text-white hover:bg-white/10 rounded-md transition-colors';'
+';'
+                  <X className='w-6 h-6'  />                </button>;
+              </div>;'
+';'
+              <div className='space-y-2'>;
                 {baseLinks && baseLinks.map(link: unknown <div key={link && link.key}>;
                     {link && link.children ? (;
                       <div>;
@@ -541,12 +539,12 @@ export default /**;
                       </div>;
                     ) : (;
 
-                      <span className="absolute -top-1 -right-1 bg-zion-purple text-white text-xs rounded-full h-5 w-5 flex items-center justify-center">
-                  >;"
-                    <ShoppingCart className="w-4 h-4 mr-1" />;'
+                      <span className='absolute -top-1 -right-1 bg-zion-purple text-white text-xs rounded-full h-5 w-5 flex items-center justify-center'>
+                  >;'
+                    <ShoppingCart className='w-4 h-4 mr-1' />;'
                     {t('nav.cartCart')}
-                    {cartCount > 0 && (;"
-                      <span className="absolute -top-1 -right-1 bg-zion-purple text-white text-xs rounded-full h-5 w-5 flex items-center justify-center">;
+                    {cartCount > 0 && (;'
+                      <span className='absolute -top-1 -right-1 bg-zion-purple text-white text-xs rounded-full h-5 w-5 flex items-center justify-center'>;
                         {cartCount}
                       </span>;
 

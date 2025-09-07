@@ -29,8 +29,8 @@ const Button: React.FC<ButtonProps> = ({
   const variantClasses = {
     primary: 'bg-blue-600 text-white hover:bg-blue-700 focus:ring-blue-500',
     secondary: 'bg-gray-600 text-white hover:bg-gray-700 focus:ring-gray-500',
-    outline: 'border-2 border-blue-600 text-blue-600 hover:bg-blue-50 focus:ring-blue-500',
-
+    outline: 'border-2 border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white focus:ring-blue-500',
+    ghost: 'text-blue-600 hover:bg-blue-50 focus:ring-blue-500',
   };
 
   const sizeClasses = {
@@ -47,10 +47,10 @@ const Button: React.FC<ButtonProps> = ({
       className={classes}
       onClick={onClick}
       disabled={disabled || loading}
-      whileHover={{ scale: disabled || loading ? 1 : 1.02 }}
-      whileTap={{ scale: disabled || loading ? 1 : 0.98 }}
+      whileHover={ scale: disabled || loading ? 1 : 1.02 }
+      whileTap={ scale: disabled || loading ? 1 : 0.98 }
     >
-      {loading && <LoadingSpinner size="sm" className="mr-2" />}
+      {loading && <LoadingSpinner size='sm' className='mr-2' />}
       {children}
     </motion.button>
   );

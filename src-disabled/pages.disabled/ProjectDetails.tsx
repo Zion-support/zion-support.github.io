@@ -1,3 +1,4 @@
+import React, { useState, useEffect } from 'react';
 :src/pages/ProjectDetails.tsx
 import React, { useState, useEffect } from "react",
 import Link from 'next/link';
@@ -356,6 +357,7 @@ import { AlertCircle, Calendar, CheckCircle2, Clock, FileText, Layers, MessageSq
 
 function ProjectDetailsContent() {
   const router = null;
+origin/cursor/automate-test-improve-and-merge-code-2533
 
   return (
     <>

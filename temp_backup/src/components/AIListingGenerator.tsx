@@ -29,7 +29,6 @@ case 'targetAudience': const handleGenerate = async () => {;
   if (!title || !category) {;
   toast ({;
   return;
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7 ;'
 }setIsLoading (true);''
 }catch (error) {';''
   logErrorToProduction ('Error generating content:', {;

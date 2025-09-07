@@ -79,7 +79,6 @@ class ChunkErrorHandler {;
   }
 ;
   private handleScriptError(event: ErrorEvent): void {;
-    const { error, filename } = event;
     if (this.isChunkError(error, filename)) {;
       event.preventDefault(), // Prevent the error from bubbling up;
       this.handleChunkError(error, { filename, source: 'script' });
@@ -210,27 +209,26 @@ class ChunkErrorHandler {;
   }
 
     errorDiv.innerHTML = `
-      <div style="text-align: center, padding: 2rem, max-width: 500px,">
-        <h2 style="margin-bottom: 1rem,">Connection Issue</h2>
-        <p style="margin-bottom: 1.5rem, line-height: 1.5,">
+      <div style='text-align: center, padding: 2rem, max-width: 500px,'>
+        <h2 style='margin-bottom: 1rem,'>Connection Issue</h2>
+        <p style='margin-bottom: 1.5rem, line-height: 1.5,'>
 
           We're having trouble loading some parts of the application. 
           This might be due to a poor network connection or a temporary server issue.
-        </p>"
-        <button onclick="window.location.reload()" style="
+        </p>'
+        <button onclick='window.location.reload()' style='
 
 /**
  * Chunk Error Handler - Comprehensive solution for ChunkLoadError recovery
  * Handles automatic retry, cache clearing, and graceful degradation
  */
 
-import { logErrorToProduction } from './productionLogger';
 interface ChunkErrorStats {
   errorCount: number;
   lastErrorTime: number;
   userAgent: string;
 
-        ">
+        '>
           Go Home;
         </button>
       </div>
@@ -268,13 +266,13 @@ interface ChunkErrorStats {
 
           We're having trouble loading some parts of the application.;
           This might be due to a poor network connection or a temporary server issue.;
-        </p>;"
-        <button onclick="window.location.reload()" style=";
+        </p>;'
+        <button onclick='window.location.reload()' style=';
 
-        ">;
+        '>;
           Try Again;
-        </button>;'"
-        <button onclick="window.location.href='/'" style=";
+        </button>;''
+        <button onclick='window.location.href='/'' style=';
 
     document.body.appendChild(errorDiv);
   }
@@ -316,7 +314,6 @@ interface ChunkErrorStats {
   }
   // Public method to reset error state;
   public resetErrorState(): void {}
-    const sessionKey = this && this.getSessionKey();
     this && this.errorStats.delete(sessionKey);
 
   }
@@ -331,25 +328,25 @@ interface ChunkErrorStats {
       z - index: 999999;
       font - family: system - ui, -apple - system, sans - serif;`
     `;`
-    error_div.innerHTML = `;"
-      <div style="text - align: center; padding: 2rem; max - width: 500px;">;"
-        <h2 style="margin - bottom: 1rem;">Connection Issue</h2>;"
-        <p style="margin - bottom: 1.5rem; line - height: 1.5;">;'
+    error_div.innerHTML = `;'
+      <div style='text - align: center; padding: 2rem; max - width: 500px;'>;'
+        <h2 style='margin - bottom: 1rem;'>Connection Issue</h2>;'
+        <p style='margin - bottom: 1.5rem; line - height: 1.5;'>;'
           We're having trouble loading some parts of the application.;
           This might be due to a poor network connection or a temporary server issue.;
-        </p>;"
-        <button onclick="window.location.reload ()" style=";
+        </p>;'
+        <button onclick='window.location.reload ()' style=';
           background: #0070f3;
           color: white;
           border: none;
           padding: 0.75rem 1.5rem;
           border - radius: 0.5rem;
           font - size: 1rem;
-          cursor: pointer;"
-          margin - right: 1rem;        ">;
+          cursor: pointer;'
+          margin - right: 1rem;        '>;
           Try Again;
 
-        <button onclick="window.location.href='/'" style=";
+        <button onclick='window.location.href='/'' style=';
           background: #666;
           color: white;
           border: none;
@@ -357,7 +354,7 @@ interface ChunkErrorStats {
           border - radius: 0.5rem;
           font - size: 1rem;
           cursor: pointer;
-        ">;
+        '>;
           Go Home;
         </button>;
       </div>;
@@ -389,7 +386,7 @@ interface ChunkErrorStats {
 export const chunkErrorHandler = new ChunkErrorHandler ();
 // Export for manual usage;
 
-        <button onclick="window.location.href='/'" style=";
+        <button onclick='window.location.href='/'' style=';
 export default chunkErrorHandler;
 }
 }
@@ -411,7 +408,6 @@ export default chunkErrorHandler;
 ;
   // Public method to reset error state;
   public resetErrorState(): void {;
-    const sessionKey = this.getSessionKey(),;
     this.errorStats.delete(sessionKey);
   }
 }

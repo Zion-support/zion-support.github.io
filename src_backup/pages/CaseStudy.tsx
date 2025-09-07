@@ -86,7 +86,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             </Button>
           <div
 className='prose prose-invert'
-            dangerouslySetInnerHTML={{ __html: study.content }}
+            dangerouslySetInnerHTML={ __html: study.content }
           />
           <p className='mt-8 text-white font-semibold'>
             — {study.author}, {study.role}

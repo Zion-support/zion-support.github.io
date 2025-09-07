@@ -282,8 +282,8 @@ const Services2024Page: React.FC = () => {;
         default: aValue = a.name.toLowerCase();
           bValue = b.name.toLowerCase();
         } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error('Error:', error);
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
 ;
@@ -292,8 +292,8 @@ const Services2024Page: React.FC = () => {;
       } else {;
         return aValue < bValue ? 1 : -1;
         } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error('Error:', error);
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
     });
@@ -309,8 +309,8 @@ const Services2024Page: React.FC = () => {;
     { id: 'marketing', name: 'Marketing & SEO', icon: TrendingUp, count: allServices.filter(s => s.variant.includes('marketing')).length },;
     { id: 'project', name: 'Project Management', icon: Users, count: allServices.filter(s => s.variant.includes('project')).length },;
     { id: 'customer', name: 'Customer Success', icon: CheckCircle, count: allServices.filter(s => s.variant.includes('customer')).length   } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error('Error:', error);
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
   ],
@@ -342,18 +342,18 @@ const Services2024Page: React.FC = () => {;
     <>
       <Head>
         <title>2024 Revolutionary Services - Zion Tech Group</title>
-        <meta name="description" content="Discover our revolutionary 2024 services including AI automation, quantum security, and enterprise IT solutions. Transform your business with cutting-edge technology." />
-        <meta name="keywords" content="AI services, quantum security, enterprise IT, automation, 2024 technology, Zion Tech Group" />
-        <link rel="canonical" href="https://ziontechgroup.com/services-2024" />
+        <meta name='description' content='Discover our revolutionary 2024 services including AI automation, quantum security, and enterprise IT solutions. Transform your business with cutting-edge technology.' />
+        <meta name='keywords' content='AI services, quantum security, enterprise IT, automation, 2024 technology, Zion Tech Group' />
+        <link rel='canonical' href='https://ziontechgroup.com/services-2024' />
       </Head>
       <UltraFuturisticBackground2034 intensity={0.8} theme='quantum' />
       <div className='relative z-10 min-h-screen'>
         {/* Hero Section */}
         <section className='pt-32 pb-20 px-4 sm:px-6 lg:px-8'>
           <div className='max-w-7xl mx-auto text-center'>            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
+              initial={ opacity: 0, y: 20 }
+              animate={ opacity: 1, y: 0 }
+              transition={ duration: 0.8 }
 
 const Services2024Page: React.FC = () => {;
   const [searchQuery, setSearchQuery] = useState('');
@@ -398,8 +398,8 @@ const Services2024Page: React.FC = () => {;
         default: aValue = a.name.toLowerCase();
           bValue = b.name.toLowerCase();
         } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error('Error:', error);
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
 ;
@@ -408,8 +408,8 @@ const Services2024Page: React.FC = () => {;
       } else {;
         return aValue < bValue ? 1 : -1;
         } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error('Error:', error);
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
     });
@@ -425,8 +425,8 @@ const Services2024Page: React.FC = () => {;
     { id: 'marketing', name: 'Marketing & SEO', icon: TrendingUp, count: allServices.filter(s => s.variant.includes('marketing')).length },;
     { id: 'project', name: 'Project Management', icon: Users, count: allServices.filter(s => s.variant.includes('project')).length },;
     { id: 'customer', name: 'Customer Success', icon: CheckCircle, count: allServices.filter(s => s.variant.includes('customer')).length   } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error('Error:', error);
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
   ],
@@ -463,62 +463,62 @@ const Services2024Page: React.FC = () => {;
 
     <>
       <Head>
-        <title>2024 Revolutionary Services - Zion Tech Group</title>"
-        <meta name="description" content="Discover our revolutionary 2024 services including AI automation, quantum security, and enterprise IT solutions. Transform your business with cutting-edge technology." />"
-        <meta name="keywords" content="AI services, quantum security, enterprise IT, automation, 2024 technology, Zion Tech Group" />"
-        <link rel="canonical" href="https://ziontechgroup.com/services-2024" />
+        <title>2024 Revolutionary Services - Zion Tech Group</title>'
+        <meta name='description' content='Discover our revolutionary 2024 services including AI automation, quantum security, and enterprise IT solutions. Transform your business with cutting-edge technology.' />'
+        <meta name='keywords' content='AI services, quantum security, enterprise IT, automation, 2024 technology, Zion Tech Group' />'
+        <link rel='canonical' href='https://ziontechgroup.com/services-2024' />
       </Head>
 
-        <section className="pt-32 pb-20 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto text-center">
+        <section className='pt-32 pb-20 px-4 sm:px-6 lg:px-8'>
+          <div className='max-w-7xl mx-auto text-center'>
             <motion.div
 
         <section className='pt-32 pb-20 px-4 sm:px-6 lg:px-8'>
           <div className='max-w-7xl mx-auto text-center'>
             <motion.div
 origin/cursor/automate-test-improve-and-merge-code-2533
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
+              initial={ opacity: 0, y: 20 }
+              animate={ opacity: 1, y: 0 }
+              transition={ duration: 0.8 }
 
-      <UltraFuturisticBackground2034 intensity={0.8} theme="quantum" />
+      <UltraFuturisticBackground2034 intensity={0.8} theme='quantum' />
 
-      <div className="relative z-10 min-h-screen">
-        {/* Hero Section */  } catch (error) {"
-    console.error("Error:", error);"
-    return res.status(500).json({ error: "Internal server error" });
+      <div className='relative z-10 min-h-screen'>
+        {/* Hero Section */  } catch (error) {'
+    console.error('Error:', error);'
+    return res.status(500).json({ error: 'Internal server error' });
   }
-}"
-        <section className="pt-32 pb-20 px-4 sm:px-6 lg:px-8">"
-          <div className="max-w-7xl mx-auto text-center">
+}'
+        <section className='pt-32 pb-20 px-4 sm:px-6 lg:px-8'>'
+          <div className='max-w-7xl mx-auto text-center'>
             <motion.div;
-              initial={{ opacity: 0, y: 20 }  } catch (error) {"
-    console.error("Error:", error);"
-    return res.status(500).json({ error: "Internal server error" });
+              initial={ opacity: 0, y: 20 }  } catch (error) {'
+    console.error('Error:', error);'
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
-              animate={{ opacity: 1, y: 0 }  } catch (error) {"
-    console.error("Error:", error);"
-    return res.status(500).json({ error: "Internal server error" });
+              animate={ opacity: 1, y: 0 }  } catch (error) {'
+    console.error('Error:', error);'
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
-              transition={{ duration: 0.8 }  } catch (error) {"
-    console.error("Error:", error);"
-    return res.status(500).json({ error: "Internal server error" });
+              transition={ duration: 0.8 }  } catch (error) {'
+    console.error('Error:', error);'
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
 
             >
-              <div className="inline-flex items-center space-x-2 bg-gradient-to-r from-cyan-500/20 to-purple-600/20 border border-cyan-500/30 rounded-full px-6 py-2 mb-8">
-                <Sparkles className="w-5 h-5 text-cyan-400" />
-                <span className="text-cyan-400 font-medium">2024 Revolutionary Services</span>
+              <div className='inline-flex items-center space-x-2 bg-gradient-to-r from-cyan-500/20 to-purple-600/20 border border-cyan-500/30 rounded-full px-6 py-2 mb-8'>
+                <Sparkles className='w-5 h-5 text-cyan-400' />
+                <span className='text-cyan-400 font-medium'>2024 Revolutionary Services</span>
               </div>
 
               <h1 className='text-5xl md:text-7xl font-bold text-white mb-6'>
                 <span className='bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent'>
 :pages/services-2024.tsx
-              <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
-                <span className="bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent">
+              <h1 className='text-5xl md:text-7xl font-bold text-white mb-6'>
+                <span className='bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent'>
 
                   Future-Ready
 
@@ -527,22 +527,22 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 <span className='text-white'>Solutions</span>
               </h1>
 
-              <div className="inline-flex items-center space-x-2 bg-gradient-to-r from-cyan-500/20 to-purple-600/20 border border-cyan-500/30 rounded-full px-6 py-2 mb-8">
-                <Sparkles className="w-5 h-5 text-cyan-400" />
-                <span className="text-cyan-400 font-medium">2024 Revolutionary Services</span>
+              <div className='inline-flex items-center space-x-2 bg-gradient-to-r from-cyan-500/20 to-purple-600/20 border border-cyan-500/30 rounded-full px-6 py-2 mb-8'>
+                <Sparkles className='w-5 h-5 text-cyan-400' />
+                <span className='text-cyan-400 font-medium'>2024 Revolutionary Services</span>
               </div>
 
-              <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
+              <h1 className='text-5xl md:text-7xl font-bold text-white mb-6'>
 
-                <span className="bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent">
+                <span className='bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent'>
 
                   Future-Ready;
                 </span>
               </div>
                   Future-Ready;
                 </span>
-                <br />"
-                <span className="text-white">Solutions</span>
+                <br />'
+                <span className='text-white'>Solutions</span>
               </h1>
 :pages/services-2024.tsx
               <p className='text-xl md:text-2xl text-gray-300 mb-12 max-w-4xl mx-auto leading-relaxed'>
@@ -558,19 +558,19 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   </div>
                   <div className='text-gray-400'>Revolutionary Services</div>
 
-              <p className="text-xl md:text-2xl text-gray-300 mb-12 max-w-4xl mx-auto leading-relaxed">
+              <p className='text-xl md:text-2xl text-gray-300 mb-12 max-w-4xl mx-auto leading-relaxed'>
                 Experience the next generation of AI, quantum security, and enterprise IT solutions. 
                 Transform your business with our revolutionary 2024 service portfolio.
-              </p>"
-              <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-16">"
-                <div className="text-center">"
-                  <div className="text-3xl font-bold text-cyan-400 mb-2">{allServices.length}</div>"
-                  <div className="text-gray-400">Revolutionary Services</div>
+              </p>'
+              <div className='grid grid-cols-1 md:grid-cols-4 gap-8 mb-16'>'
+                <div className='text-center'>'
+                  <div className='text-3xl font-bold text-cyan-400 mb-2'>{allServices.length}</div>'
+                  <div className='text-gray-400'>Revolutionary Services</div>
 
                 </div>
-                <div className="text-center">
-                  <div className="text-3xl font-bold text-purple-400 mb-2">17</div>
-                  <div className="text-gray-400">Service Categories</div>
+                <div className='text-center'>
+                  <div className='text-3xl font-bold text-purple-400 mb-2'>17</div>
+                  <div className='text-gray-400'>Service Categories</div>
                 </div>
 
                 <div className='text-center'>
@@ -615,26 +615,26 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                       className='w-full pl-12 pr-4 py-3 bg-black/50 border border-cyan-500/30 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 focus:ring-1 focus:ring-cyan-400 transition-all duration-200'                    />
 
                     <input
-                      type="text"
-                      placeholder="Search services by name, features, or description..."
+                      type='text'
+                      placeholder='Search services by name, features, or description...'
                       value={searchQuery}
 
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error('Error:', error);
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
 
                     <input
-                      type="text"
+                      type='text'
 
-                      placeholder="Search services by name, features, or description..."
-                      value={searchQuery  } catch (error) {"
-    console.error("Error:", error);"
-    return res.status(500).json({ error: "Internal server error" });
+                      placeholder='Search services by name, features, or description...'
+                      value={searchQuery  } catch (error) {'
+    console.error('Error:', error);'
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
 
-                      onChange={(e) => setSearchQuery(e.target.value)} className="w-full pl-12 pr-4 py-3 bg-black/50 border border-cyan-500/30 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 focus:ring-1 focus:ring-cyan-400 transition-all duration-200"
+                      onChange={(e) => setSearchQuery(e.target.value)} className='w-full pl-12 pr-4 py-3 bg-black/50 border border-cyan-500/30 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 focus:ring-1 focus:ring-cyan-400 transition-all duration-200'
 
                     />
                   </div>
@@ -668,25 +668,25 @@ onChange={e => setSelectedCategory(e.target.value)}
                 <div className='flex space-x-2'>
 :pages/services-2024.tsx
                 {/* Category Filter */  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error('Error:', error);
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
                 <div>;
                   <select;
                     value={selectedCategory  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error('Error:', error);
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
-                    onChange={(e) => setSelectedCategory(e.target.value)} className="w-full px-4 py-3 bg-black/50 border border-cyan-500/30 rounded-lg text-white focus:outline-none focus:border-cyan-400 focus:ring-1 focus:ring-cyan-400 transition-all duration-200">
+                    onChange={(e) => setSelectedCategory(e.target.value)} className='w-full px-4 py-3 bg-black/50 border border-cyan-500/30 rounded-lg text-white focus:outline-none focus:border-cyan-400 focus:ring-1 focus:ring-cyan-400 transition-all duration-200'>
                     {categories.map((category) => (
                       <option key={category.id} value={category.id}>
                         {category.name} ({category.count})
                       </option>
                     ))  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error('Error:', error);
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
                   </select>;
@@ -699,8 +699,8 @@ onChange={e => setSelectedCategory(e.target.value)}
 
                 {/* Sort */  } catch (error) {
 
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error('Error:', error);
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
 
@@ -768,9 +768,9 @@ if ( {) {}
               <div className='grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 8'>                {filtered_services.map ((service, index) => (
                   <motion.div;
                     key={service.id}
-                    initial={{ opacity: 0, coordinate_y: 20 }}
-                    animate={{ opacity: 1, coordinate_y: 0 }}
-                    transition={{ duration: 0.6, delay: index * 0.1 }}'
+                    initial={ opacity: 0, coordinate_y: 20 }
+                    animate={ opacity: 1, coordinate_y: 0 }
+                    transition={ duration: 0.6, delay: index * 0.1 }'
                     className='group';
                   >;'
                     <div className='bg - black / 50 border border - cyan - 500 / 30 rounded - 2xl p - 6 h - full hover:border - cyan - 400 / 50 transition - all duration - 300 hover:transform hover:scale - 105 backdrop - blur - sm'>;
@@ -794,9 +794,9 @@ if ( {) {}
                 {filteredServices.map((service, index) => (
                   <motion.div
                     key={service.id}
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-transition={{ duration: 0.6, delay: index * 0.1 }}
+                    initial={ opacity: 0, y: 20 }
+                    animate={ opacity: 1, y: 0 }
+transition={ duration: 0.6, delay: index * 0.1 }
                     className='group'
                   >
                     <div className='bg-black/50 border border-cyan-500/30 rounded-2xl p-6 h-full hover:border-cyan-400/50 transition-all duration-300 hover:transform hover:scale-105 backdrop-blur-sm'>
@@ -820,55 +820,55 @@ transition={{ duration: 0.6, delay: index * 0.1 }}
                             {service.price}
 
             {filteredServices.length === 0 ? (
-              <div className="text-center py-20">
-                <div className="text-6xl mb-4">🔍</div>
-                <h3 className="text-2xl font-semibold text-white mb-2">No services found</h3>
+              <div className='text-center py-20'>
+                <div className='text-6xl mb-4'>🔍</div>
+                <h3 className='text-2xl font-semibold text-white mb-2'>No services found</h3>
 
-                <p className="text-gray-400">Try adjusting your search criteria or filters.</p>
+                <p className='text-gray-400'>Try adjusting your search criteria or filters.</p>
               </div>
-            ) : ("
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            ) : ('
+              <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
                 {filteredServices.map((service, index) => (
 
                     key={service.id  } catch (error) {
-    console.error("Error:", error);
+    console.error('Error:', error);
 
-    return res.status(500).json({ error: "Internal server error" });
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
-                    initial={{ opacity: 0, y: 20 }  } catch (error) {"
-    console.error("Error:", error);"
-    return res.status(500).json({ error: "Internal server error" });
+                    initial={ opacity: 0, y: 20 }  } catch (error) {'
+    console.error('Error:', error);'
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
-                    animate={{ opacity: 1, y: 0 }  } catch (error) {"
-    console.error("Error:", error);"
-    return res.status(500).json({ error: "Internal server error" });
+                    animate={ opacity: 1, y: 0 }  } catch (error) {'
+    console.error('Error:', error);'
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
 
-                    transition={{ duration: 0.6, delay: index * 0.1 }} className="group">
-                    <div className="bg-black/50 border border-cyan-500/30 rounded-2xl p-6 h-full hover:border-cyan-400/50 transition-all duration-300 hover:transform hover:scale-105 backdrop-blur-sm">
+                    transition={ duration: 0.6, delay: index * 0.1 } className='group'>
+                    <div className='bg-black/50 border border-cyan-500/30 rounded-2xl p-6 h-full hover:border-cyan-400/50 transition-all duration-300 hover:transform hover:scale-105 backdrop-blur-sm'>
                       {/* Service Header */  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error('Error:', error);
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
-                      <div className="flex items-start justify-between mb-4">
-                        <div className="w-12 h-12 bg-gradient-to-r from-cyan-500/20 to-purple-600/20 rounded-lg flex items-center justify-center">
+                      <div className='flex items-start justify-between mb-4'>
+                        <div className='w-12 h-12 bg-gradient-to-r from-cyan-500/20 to-purple-600/20 rounded-lg flex items-center justify-center'>
                           {React.createElement(getVariantIcon(service.variant), {
                             className: `w-6 h-6 text-cyan-400`
                           })  } catch (error) {
 
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error('Error:', error);
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
 
                         </div>
-                        <div className="text-right">
-                          <div className="text-2xl font-bold text-cyan-400">{service.price}</div>
-                          <div className="text-sm text-gray-400">per month</div>
+                        <div className='text-right'>
+                          <div className='text-2xl font-bold text-cyan-400'>{service.price}</div>
+                          <div className='text-sm text-gray-400'>per month</div>
 
                           </div>
                           <div className='text-sm text-gray-400'>per month</div>
@@ -914,23 +914,23 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
                       {/* Features */}
 
-                      <div className="mb-6">
-                        <h4 className="text-sm font-semibold text-gray-400 mb-3 uppercase tracking-wider">Key Features</h4>
+                      <div className='mb-6'>
+                        <h4 className='text-sm font-semibold text-gray-400 mb-3 uppercase tracking-wider'>Key Features</h4>
 
-                        <div className="space-y-2">
-                          {service.features.slice(0, 3).map((feature, featureIndex) => ("
-                            <div key={featureIndex} className="flex items-center space-x-2">"
-                              <CheckCircle className="w-4 h-4 text-green-400 flex-shrink-0" />"
-                              <span className="text-sm text-gray-300">{feature}</span>
+                        <div className='space-y-2'>
+                          {service.features.slice(0, 3).map((feature, featureIndex) => ('
+                            <div key={featureIndex} className='flex items-center space-x-2'>'
+                              <CheckCircle className='w-4 h-4 text-green-400 flex-shrink-0' />'
+                              <span className='text-sm text-gray-300'>{feature}</span>
 
                           {service.features.length > 3 && (
-                            <div className="text-sm text-cyan-400">
+                            <div className='text-sm text-cyan-400'>
                               +{service.features.length - 3} more features
 
                             </div>
 
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error('Error:', error);
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
 
@@ -958,8 +958,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                             <div className='text-sm text-cyan-400'>                              +{service.features.length - 3} more features
                             </div>
                           ))  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error('Error:', error);
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
                           {service.features.length > 3 && (
@@ -988,23 +988,23 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                           <div className='text - sm font - semibold text - white mb - 1'>;
                             {service.customers}
 
-                      <div className="grid grid-cols-3 gap-4 mb-6">
-                        <div className="text-center">
-                          <div className="flex items-center justify-center space-x-1 mb-1">
-                            <Star className="w-4 h-4 text-yellow-400 fill-current" />
+                      <div className='grid grid-cols-3 gap-4 mb-6'>
+                        <div className='text-center'>
+                          <div className='flex items-center justify-center space-x-1 mb-1'>
+                            <Star className='w-4 h-4 text-yellow-400 fill-current' />
 
-                            <span className="text-sm font-semibold text-white">{service.rating}</span>
+                            <span className='text-sm font-semibold text-white'>{service.rating}</span>
 
-                          </div>"
-                          <div className="text-xs text-gray-400">Rating</div>
-                        </div>"
-                        <div className="text-center">"
-                          <div className="text-sm font-semibold text-white mb-1">{service.customers}</div>"
-                          <div className="text-xs text-gray-400">Customers</div>
-                        </div>"
-                        <div className="text-center">"
-                          <div className="text-sm font-semibold text-white mb-1">{service.launchDate}</div>"
-                          <div className="text-xs text-gray-400">Launched</div>
+                          </div>'
+                          <div className='text-xs text-gray-400'>Rating</div>
+                        </div>'
+                        <div className='text-center'>'
+                          <div className='text-sm font-semibold text-white mb-1'>{service.customers}</div>'
+                          <div className='text-xs text-gray-400'>Customers</div>
+                        </div>'
+                        <div className='text-center'>'
+                          <div className='text-sm font-semibold text-white mb-1'>{service.launchDate}</div>'
+                          <div className='text-xs text-gray-400'>Launched</div>
                         </div>
 :pages/services-2024.tsx
 
@@ -1024,9 +1024,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 <div className='flex items-center justify-between'>
 
                         <Link
-                          href={service.link} className="flex items-center space-x-2 text-cyan-400 hover:text-cyan-300 transition-colors duration-200 group">
-                          <span className="font-medium">Learn More</span>
-                          <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-200" />
+                          href={service.link} className='flex items-center space-x-2 text-cyan-400 hover:text-cyan-300 transition-colors duration-200 group'>
+                          <span className='font-medium'>Learn More</span>
+                          <ArrowRight className='w-4 h-4 group-hover:translate-x-1 transition-transform duration-200' />
                         </Link>
 :pages/services-2024.tsx
                         <div className='text-xs text-gray-400 bg-gray-800/50 px-2 py-1 rounded'>
@@ -1044,16 +1044,16 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         {/* CTA Section */}
         <section className='px-4 sm:px-6 lg:px-8 mb-20'>
           <div className='max-w-4xl mx-auto text-center'>            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
+              initial={ opacity: 0, y: 20 }
+              whileInView={ opacity: 1, y: 0 }
+              transition={ duration: 0.8 }
+              viewport={ once: true }
               className='bg-gradient-to-r from-cyan-500/10 to-purple-600/10 border border-cyan-500/30 rounded-2xl p-12 backdrop-blur-sm'
             >
               <h2 className='text-4xl font-bold text-white mb-6'>
 
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error('Error:', error);
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
 
@@ -1062,54 +1062,54 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     </div>
                   </motion.div>
 
-                      <div className="grid grid-cols-3 gap-4 mb-6">;
-                        <div className="text-center">;
-                          <div className="flex items-center justify-center space-x-1 mb-1">;
-                            <Star className="w-4 h-4 text-yellow-400 fill-current" />;
+                      <div className='grid grid-cols-3 gap-4 mb-6'>;
+                        <div className='text-center'>;
+                          <div className='flex items-center justify-center space-x-1 mb-1'>;
+                            <Star className='w-4 h-4 text-yellow-400 fill-current' />;
 
-                            <span className="text-sm font-semibold text-white">{service.rating}</span>;
-                          </div>;"
-                          <div className="text-xs text-gray-400">Rating</div>;
-                        </div>;"
-                        <div className="text-center">;"
-                          <div className="text-sm font-semibold text-white mb-1">{service.customers}</div>;"
-                          <div className="text-xs text-gray-400">Customers</div>;
-                        </div>;"
-                        <div className="text-center">;"
-                          <div className="text-sm font-semibold text-white mb-1">{service.launchDate}</div>;"
-                          <div className="text-xs text-gray-400">Launched</div>;
+                            <span className='text-sm font-semibold text-white'>{service.rating}</span>;
+                          </div>;'
+                          <div className='text-xs text-gray-400'>Rating</div>;
+                        </div>;'
+                        <div className='text-center'>;'
+                          <div className='text-sm font-semibold text-white mb-1'>{service.customers}</div>;'
+                          <div className='text-xs text-gray-400'>Customers</div>;
+                        </div>;'
+                        <div className='text-center'>;'
+                          <div className='text-sm font-semibold text-white mb-1'>{service.launchDate}</div>;'
+                          <div className='text-xs text-gray-400'>Launched</div>;
                         </div>;
                       </div>;
-                      {/* CTA */  } catch (error) {"
-    console.error("Error:", error);"
-    return res.status(500).json({ error: "Internal server error" });
+                      {/* CTA */  } catch (error) {'
+    console.error('Error:', error);'
+    return res.status(500).json({ error: 'Internal server error' });
   }
-}"
-                      <div className="flex items-center justify-between">;
-                        <Link;"
-                          href={service.link} className="flex items-center space-x-2 text-cyan-400 hover:text-cyan-300 transition-colors duration-200 group">;"
-                          <span className="font-medium">Learn More</span>;"
-                          <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-200" />;
-                        </Link>;"
-                        <div className="text-xs text-gray-400 bg-gray-800/50 px-2 py-1 rounded">;'
-                          {service.variant.replace('-futuristic', '').replace('- ')  } catch (error) {"
-    console.error("Error:", error);"
-    return res.status(500).json({ error: "Internal server error" });
+}'
+                      <div className='flex items-center justify-between'>;
+                        <Link;'
+                          href={service.link} className='flex items-center space-x-2 text-cyan-400 hover:text-cyan-300 transition-colors duration-200 group'>;'
+                          <span className='font-medium'>Learn More</span>;'
+                          <ArrowRight className='w-4 h-4 group-hover:translate-x-1 transition-transform duration-200' />;
+                        </Link>;'
+                        <div className='text-xs text-gray-400 bg-gray-800/50 px-2 py-1 rounded'>;'
+                          {service.variant.replace('-futuristic', '').replace('- ')  } catch (error) {'
+    console.error('Error:', error);'
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
                         </div>;
                       </div>;
                     </div>;
                   </motion.div>;
-                ))  } catch (error) {"
-    console.error("Error:", error);"
-    return res.status(500).json({ error: "Internal server error" });
+                ))  } catch (error) {'
+    console.error('Error:', error);'
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
               </div>;
-            )  } catch (error) {"
-    console.error("Error:", error);"
-    return res.status(500).json({ error: "Internal server error" });
+            )  } catch (error) {'
+    console.error('Error:', error);'
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
 
@@ -1122,10 +1122,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           <div className='max-w-4xl mx-auto text-center'>
             <motion.div
 
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0 && 0.8 }}
-              viewport={{ once: true }}'
+              initial={ opacity: 0, y: 20 }
+              whileInView={ opacity: 1, y: 0 }
+              transition={ duration: 0 && 0.8 }
+              viewport={ once: true }'
               className='bg-gradient-to-r from-cyan-500/10 to-purple-600/10 border border-cyan-500/30 rounded-2xl p-12 backdrop-blur-sm'>;'
               <h2 className='text-4xl font-bold text-white mb-6'>;
                 Ready to Transform Your Business?;
@@ -1164,11 +1164,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         {/* CTA Section */}'
         <section className='px - 4 sm:px - 6 lg:px - 8 mb - 20'>;'
           <div className='max - w-4xl mx - auto text - center'>            <motion.div;
-              initial={{ opacity: 0, coordinate_y: 20 }}
-              whileInView={{ opacity: 1, coordinate_y: 0 }}
-              transition={{ duration: 0.8 }}
+              initial={ opacity: 0, coordinate_y: 20 }
+              whileInView={ opacity: 1, coordinate_y: 0 }
+              transition={ duration: 0.8 }
 
-              viewport={{ once: true }}
+              viewport={ once: true }
 
               className='bg - gradient - to - r from - cyan - 500 / 10 to - purple - 600 / 10 border border - cyan - 500 / 30 rounded - 2xl p - 12 backdrop - blur - sm';
             >;'
@@ -1182,28 +1182,28 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 the future of technology.;
               </p>;
 
-viewport={{ once: true }}
+viewport={ once: true }
               className='bg-gradient-to-r from-cyan-500/10 to-purple-600/10 border border-cyan-500/30 rounded-2xl p-12 backdrop-blur-sm'
             >
               <h2 className='text-4xl font-bold text-white mb-6'>
 
                 Ready to Transform Your Business?
-              </h2>"
-              <p className="text-xl text-gray-300 mb-8 leading-relaxed">
+              </h2>'
+              <p className='text-xl text-gray-300 mb-8 leading-relaxed'>
                 Join thousands of businesses already leveraging our revolutionary 2024 services. 
 
-                  href="/contact" className="flex items-center space-x-2 bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-200 shadow-lg hover:shadow-cyan-500/25 font-semibold">
+                  href='/contact' className='flex items-center space-x-2 bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-200 shadow-lg hover:shadow-cyan-500/25 font-semibold'>
 
-                  <Zap className="w-5 h-5" />
+                  <Zap className='w-5 h-5' />
                   <span>Get Started Today</span>
                 </Link>
-                <Link"
-                  href="/pricing-2033" className="flex items-center space-x-2 border border-cyan-500/30 text-cyan-400 px-8 py-4 rounded-lg hover:bg-cyan-500/10 transition-all duration-200 font-semibold">
+                <Link'
+                  href='/pricing-2033' className='flex items-center space-x-2 border border-cyan-500/30 text-cyan-400 px-8 py-4 rounded-lg hover:bg-cyan-500/10 transition-all duration-200 font-semibold'>
 :pages/services-2024.tsx
                   <span>View Pricing Plans</span>
                   <ArrowRight className='w-4 h-4' />                </Link>
 
-                  <ArrowRight className="w-4 h-4" />
+                  <ArrowRight className='w-4 h-4' />
 
                 </Link>
 
@@ -1236,34 +1236,34 @@ export default Services2024Page;
 };
 
 },
-export default Services2024Page,";
-        <section className="px-4 sm:px-6 lg:px-8 mb-20">;"
-          <div className="max-w-4xl mx-auto text-center">;
+export default Services2024Page,';
+        <section className='px-4 sm:px-6 lg:px-8 mb-20'>;'
+          <div className='max-w-4xl mx-auto text-center'>;
             <motion.div;
-              initial={{ opacity: 0, y: 20 }  } catch (error) {"
-    console.error("Error:", error);"
-    return res.status(500).json({ error: "Internal server error" });
+              initial={ opacity: 0, y: 20 }  } catch (error) {'
+    console.error('Error:', error);'
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
-              whileInView={{ opacity: 1, y: 0 }  } catch (error) {"
-    console.error("Error:", error);"
-    return res.status(500).json({ error: "Internal server error" });
+              whileInView={ opacity: 1, y: 0 }  } catch (error) {'
+    console.error('Error:', error);'
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
-              transition={{ duration: 0.8 }  } catch (error) {"
-    console.error("Error:", error);"
-    return res.status(500).json({ error: "Internal server error" });
+              transition={ duration: 0.8 }  } catch (error) {'
+    console.error('Error:', error);'
+    return res.status(500).json({ error: 'Internal server error' });
   }
-}"
-              viewport={{ once: true }} className="bg-gradient-to-r from-cyan-500/10 to-purple-600/10 border border-cyan-500/30 rounded-2xl p-12 backdrop-blur-sm">;"
-              <h2 className="text-4xl font-bold text-white mb-6">;
+}'
+              viewport={ once: true } className='bg-gradient-to-r from-cyan-500/10 to-purple-600/10 border border-cyan-500/30 rounded-2xl p-12 backdrop-blur-sm'>;'
+              <h2 className='text-4xl font-bold text-white mb-6'>;
                 Ready to Transform Your Business?;
-              </h2>;"
-              <p className="text-xl text-gray-300 mb-8 leading-relaxed">;
+              </h2>;'
+              <p className='text-xl text-gray-300 mb-8 leading-relaxed'>;
                 Join thousands of businesses already leveraging our revolutionary 2024 services.;
                 Get started today and experience the future of technology.;
-              </p>;"
-              <div className="flex flex-col sm: flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6">;
+              </p>;'
+              <div className='flex flex-col sm: flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6'>;
                 <Link;'
                   href='/contact';'
                   className='flex items - center space - x-2 bg - gradient - to - r from - cyan - 500 to - purple - 600 text - white px - 8 py - 4 rounded - lg hover:from - cyan - 600 hover:to - purple - 700 transition - all duration - 200 shadow - lg hover:shadow - cyan - 500 / 25 font - semibold';

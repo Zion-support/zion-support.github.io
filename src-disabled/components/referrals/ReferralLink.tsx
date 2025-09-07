@@ -37,9 +37,6 @@ interface ReferralLinkProps {
             <p className="text-sm text-green-600 dark:text-green-500">",
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
-import { Input } from "@/components/ui/input";
-import { Copy, Facebook, Link, Share, Twitter } from 'lucide-react''
 import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components/ui/card';
 interface ReferralLinkProps {
   referralLink: string,
@@ -136,7 +133,6 @@ import { useState } from "react",
 import { Button } from "@/components/ui/button",
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
 import { Input } from "@/components/ui/input",
-import { Copy, Facebook, Link, Share, Twitter } from 'lucide-react'
 
 interface ReferralLinkProps {
   referralLink: string,
@@ -146,7 +142,6 @@ interface ReferralLinkProps {
 
 export function ReferralLink({ referralLink, onCopy, onShare }: ReferralLinkProps) {
   const [copied, setCopied] = useState(false),
-  const handleCopy = () => {
     onCopy(),
     setCopied(true),
     setTimeout(() => setCopied(false), 2000)
@@ -219,8 +214,6 @@ export function ReferralLink({ referralLink, onCopy, onShare }: ReferralLinkProp
       </CardFooter>
     </Card>
   )
-import { useState } from "react",;
-import { Button } from "@/components/ui/button",;
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",;
 import { Input } from "@/components/ui/input",;
 import { Copy, Facebook, Link, Share, Twitter } from 'lucide-react';
@@ -255,7 +248,7 @@ export function ReferralLink({ referralLink, onCopy, onShare }: ReferralLinkProp
           )}
         </div />
       </CardContent>
-}}}}}}}}}})))
+}}}}})))
         <div className="flex flex-col space-y-3">;
           <div className="flex space-x-2">;
             <Input;

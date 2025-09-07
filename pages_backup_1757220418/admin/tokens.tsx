@@ -108,17 +108,17 @@ const AdminTokensPage: React.FC = () => {
     .filter(t => t.status === 'completed' && t.type === 'purchase')
     .reduce((sum, t) => sum + t.amount, 0)
   return (
-    <EnhancedLayout title="Admin: ZION$">
-      <div className="max-w-4xl mx-auto space-y-6">
-        <div className="p-4 border rounded bg-white dark:bg-zinc-900">
-          <h2 className="font-medium mb-3">Issue / Revoke</h2>
-          <div className="grid sm:grid-cols-4 gap-2 text-sm">
-            <input placeholder="userId" className="border rounded px-2 py-1" value={userId} onChange={(e) => setUserId(e.target.value)} />
-            <input type="number" placeholder="amount" className="border rounded px-2 py-1" value={amount} onChange={(e) => setAmount(parseInt(e.target.value |"0"))} />
-            <input placeholder="reason" className="border rounded px-2 py-1" value={reason} onChange={(e) => setReason(e.target.value)} />
-            <div className="flex gap-2">
-              <button className="px-3 py-1 rounded border" onClick={issue}>Issue</button>
-              <button className="px-3 py-1 rounded border" onClick={revoke}>Revoke</button>
+    <EnhancedLayout title='Admin: ZION$'>
+      <div className='max-w-4xl mx-auto space-y-6'>
+        <div className='p-4 border rounded bg-white dark:bg-zinc-900'>
+          <h2 className='font-medium mb-3'>Issue / Revoke</h2>
+          <div className='grid sm:grid-cols-4 gap-2 text-sm'>
+            <input placeholder='userId' className='border rounded px-2 py-1' value={userId} onChange={(e) => setUserId(e.target.value)} />
+            <input type='number' placeholder='amount' className='border rounded px-2 py-1' value={amount} onChange={(e) => setAmount(parseInt(e.target.value |'0'))} />
+            <input placeholder='reason' className='border rounded px-2 py-1' value={reason} onChange={(e) => setReason(e.target.value)} />
+            <div className='flex gap-2'>
+              <button className='px-3 py-1 rounded border' onClick={issue}>Issue</button>
+              <button className='px-3 py-1 rounded border' onClick={revoke}>Revoke</button>
             </div>
           </div>
         </div>

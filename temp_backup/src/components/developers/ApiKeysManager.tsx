@@ -64,7 +64,6 @@ setShowCreateDialog (false);""
 setSelectedScopes ([]);"
 setShowCreateDialog (false) ;""
 };";""`
-======= return `curl -X GET " https://api.ziontechgroup.com/v1/jobs"\\ -H " Authorization: Bearer $ {;""
   key ";""`
 }"\\ -H " Content-Type: application/json"`;""
 };";""

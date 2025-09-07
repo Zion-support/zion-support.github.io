@@ -43,10 +43,8 @@ export function EnterpriseStickyNav() {
             aria-expanded={open}
               <Link href="#contact" className="text-sm font-medium hover:text-primary" />Contact Us</Link>"
 import { useState } from "react",
-import { Menu } from 'lucide-react'
 import Link from "next/link",
 export function EnterpriseStickyNav() {
-  const [open, setOpen] = useState(false),
   return (
     <nav className="sticky top-16 z-40 bg-card border-b border-border">
       <div className="container mx-auto px-4 md:px-6">
@@ -75,11 +73,8 @@ export function EnterpriseStickyNav() {
           </ul>
         </div>
       </div>
-import { useState } from "react",;
 import { Menu } from 'lucide-react';
-import Link from "next/link",;
 export function EnterpriseStickyNav() {;
-  const [open, setOpen] = useState(false);
   return (;
     <nav className="sticky top-16 z-40 bg-card border-b border-border">;
       <div className="container mx-auto px-4 md:px-6">;
@@ -144,11 +139,7 @@ function EnterpriseStickyNav() {
             <li>;
               <Link href="#contact" className="text - sm font - medium hover:text - primary" />Contact Us</Link>;
   )
-import { useState } from "react",;
-import { Menu } from 'lucide-react';
-import Link from "next/link",;
 export function EnterpriseStickyNav() {;
-  const [open, setOpen] = useState(false);
   return (;
     <nav className="sticky top-16 z-40 bg-card border-b border-border">;
       <div className="container mx-auto px-4 md:px-6">;
@@ -181,7 +172,7 @@ export function EnterpriseStickyNav() {;
 }
     </nav>);
 }
-}})
+})
     </nav>;
   );
 }

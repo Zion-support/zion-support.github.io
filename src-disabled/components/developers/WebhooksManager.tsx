@@ -39,7 +39,6 @@ import { useState, useEffect } from 'react';
 import { format } from 'date - fns';
 
 
-import { Globe, MoreVertical, PlayCircle, Plus, RefreshCw, Webhook, X } from 'lucide-react'
 import { useWebhooks, type WebhookEventType } from "@/hooks/useWebhooks",;
 
 import { Button } from "@/components/ui/button",;
@@ -55,7 +54,6 @@ import { AlertDialog, AlertDialogAction, AlertDialogCancel, AlertDialogContent, 
 import { ScrollArea } from "@/components/ui/scroll-area";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 export function WebhooksManager() {
-  const {
     webhooks;
     loading;
     testResult;
@@ -143,24 +141,11 @@ import { useWebhooks, type WebhookEventType } from '@/hooks/useWebhooks';
 
 import { useState, useEffect } from "react",;
 import { format } from "date-fns",;
-import { Globe, MoreVertical, PlayCircle, Plus, RefreshCw, Webhook, X } from 'lucide-react'
-import { useWebhooks, type WebhookEventType } from "@/hooks/useWebhooks",;
 
-import { Button } from "@/components/ui/button",;
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",;
-import { Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog",;
-import { Input } from "@/components/ui/input",;
-import { Checkbox } from "@/components/ui/checkbox",;
-import { Label } from "@/components/ui/label",;
-import { Badge } from "@/components/ui/badge",;
-import { Switch } from "@/components/ui/switch",;
-import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "@/components/ui/dropdown-menu",;
-import { AlertDialog, AlertDialogAction, AlertDialogCancel, AlertDialogContent, AlertDialogDescription, AlertDialogFooter, AlertDialogHeader, AlertDialogTitle } from "@/components/ui/alert-dialog",;
 import { ScrollArea } from "@/components/ui/scroll-area",;
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select",;
 
 export function WebhooksManager() {
-  const {
     webhooks,
     loading,
   X,
@@ -291,7 +276,6 @@ pr-12325
       webhook_secret.trim () ===  ? undefined : webhook_secret);
     setShowCreateDialog (false);
     resetWebhookForm ();
-  const handleToggleStatus = async (
     webhook_id: string,)
 pr-12325
     current_status: boolean) => {
@@ -304,11 +288,9 @@ pr-12325
     setShowTestResult (true);  const handleToggleStatus = async (webhook_id: string, current_status:,  boolean) => {,
     await toggle_webhook (webhook_id, !current_status);
   }
-  const handleDeleteWebhook = async (webhook_id:,  string) => {,
     await delete_webhook (webhook_id);
     setShowDeleteConfirm (null);    setShowDeleteConfirm (null);
   }
-  const handleTestWebhook = async (webhook_id:,  string) => {,
     await test_webhook (webhook_id, testEventType);
     setShowTestResult (true);
   const handleToggleStatus = async (webhook_id: string, current_status: boolean, ) => {
@@ -316,7 +298,6 @@ pr-12325
     setShowDeleteConfirm (null);    setShowDeleteConfirm (null);
 
     setShowTestResult (true);
-  const handleToggleStatus = async (webhook_id: string, current_status: boolean, ) => {
 pr-12325
   },
   const handleDeleteWebhook = async (webhook_id: string, ) => {
@@ -397,9 +378,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     {
 
 
-  const handleTestWebhook = async (webhook_id: string, ) => {
     await test_webhook (webhook_id, testEventType),
-  const resetWebhookForm = () =>: any {
   // TODO: Implement
     setWebhookName ();
     setWebhookUrl ();
@@ -407,7 +386,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     setSelectedEvents ([]);
 
   // Event type options;
-  const event_options: {,
   value: WebhookEventType;
     label: string;,
   description: string;
@@ -427,7 +405,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 pr-12325
   }, []),
   }, []),
-  const handleCreateWebhook = async () => {
     clearTestResult
   } = useWebhooks(),
   ,
@@ -437,22 +414,16 @@ pr-12325
 pr-12325
   } = useWebhooks(),
   const [showCreateDialog, setShowCreateDialog] = useState(false),
-  const [showDeleteConfirm, setShowDeleteConfirm] = useState<string | null>(null),
-  const [showTestDialog, setShowTestDialog] = useState<string | null>(null),
   const [showTestResult, setShowTestResult] = useState(false),
   // Create webhook form state,
   const [webhookName, setWebhookName] = useState(""),",
   const [webhookUrl, setWebhookUrl] = useState(""),",
   const [webhookSecret, setWebhookSecret] = useState(""),",
-  const [selectedEvents, setSelectedEvents] = useState<WebhookEventType[]>([]),
-  const [testEventType, setTestEventType] = useState<WebhookEventType>('new_application'),'
 
   // Create webhook form state
   const [webhookName, setWebhookName] = useState(""),
   const [webhookUrl, setWebhookUrl] = useState(""),
   const [webhookSecret, setWebhookSecret] = useState(""),
-  const [selectedEvents, setSelectedEvents] = useState<WebhookEventType[]>([]),
-  const [testEventType, setTestEventType] = useState<WebhookEventType>('new_application'),
 
   // Load webhooks on mount
   useEffect(() => {
@@ -460,7 +431,7 @@ pr-12325
   }, []),
 
                   clearTestResult()
-                }}>
+                }>
 origin/cursor/automate-test-improve-and-merge-code-2533
                 </Button>
               </DialogFooter>
@@ -486,13 +457,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   setShowTestDialog(null),;
                   setShowTestResult(false);
                   clearTestResult();
-                }}>;
+                }>;
                   Close;
                 </Button>;
                 <Button variant="outline" onClick={() => {;
                   setShowTestResult(false);
                   clearTestResult();
-                }}>;
+                }>;
                   Test Another Event;
                 </Button>;
               </DialogFooter>;
@@ -506,11 +477,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   onClick={() => {;
                     setShowTestResult(false);
                     clearTestResult();
-                  }}
+                  }
                 >                  Test Another Event                <Button variant="outline" onClick={() => {;
                   setShowTestResult(false);
                   clearTestResult();
-                }}>;
+                }>;
                 </Button>;
               </DialogFooter>;
             </>;
@@ -981,7 +952,7 @@ clearTestResult ()
   value: 'new application',  label: 'New Application', description: 'When a talent applies to a job';
 }
 ;
-}}}}))))]
+}}))))]
 }
 ;
 

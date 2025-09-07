@@ -147,11 +147,11 @@ export default function HelpdeskPage() {},
               <div className="lg:col-span-2">
                 <motion.div
                   className="bg-white rounded-lg shadow-lg p-8"
-                  initial={{ opacity: 0, y: 20 }},
+                  initial={ opacity: 0, y: 20 },
   {
-                  animate={{ opacity: 1, y: 0 }},
+                  animate={ opacity: 1, y: 0 },
   {
-                  transition={{ duration: 0.6 }},
+                  transition={ duration: 0.6 },
   {
                 >
                   <h2 className="text-2xl font-bold text-gray-900 mb-6">Submit a Support Ticket</h2>
@@ -308,11 +308,11 @@ export default function HelpdeskPage() {},
   {
                 <motion.div
                   className="bg-white rounded-lg shadow-lg p-6"
-                  initial={{ opacity: 0, x: 20 }},
+                  initial={ opacity: 0, x: 20 },
   {
-                  animate={{ opacity: 1, x: 0 }},
+                  animate={ opacity: 1, x: 0 },
   {
-                  transition={{ duration: 0.6, delay: 0.2 }},
+                  transition={ duration: 0.6, delay: 0.2 },
   {
                 >
                   <h3 className="text-lg font-semibold text-gray-900 mb-4">Contact Support</h3>
@@ -336,11 +336,11 @@ export default function HelpdeskPage() {},
   {
                 <motion.div
                   className="bg-white rounded-lg shadow-lg p-6"
-                  initial={{ opacity: 0, x: 20 }},
+                  initial={ opacity: 0, x: 20 },
   {
-                  animate={{ opacity: 1, x: 0 }},
+                  animate={ opacity: 1, x: 0 },
   {
-                  transition={{ duration: 0.6, delay: 0.4 }},
+                  transition={ duration: 0.6, delay: 0.4 },
   {
                 >
                   <h3 className="text-lg font-semibold text-gray-900 mb-4">Quick FAQ</h3>
@@ -361,11 +361,11 @@ export default function HelpdeskPage() {},
   {
                 <motion.div
                   className="bg-white rounded-lg shadow-lg p-6"
-                  initial={{ opacity: 0, x: 20 }},
+                  initial={ opacity: 0, x: 20 },
   {
-                  animate={{ opacity: 1, x: 0 }},
+                  animate={ opacity: 1, x: 0 },
   {
-                  transition={{ duration: 0.6, delay: 0.6 }},
+                  transition={ duration: 0.6, delay: 0.6 },
   {
                 >
                   <h3 className="text-lg font-semibold text-gray-900 mb-4">Quick Links</h3>

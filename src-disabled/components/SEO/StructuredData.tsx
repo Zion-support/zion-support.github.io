@@ -1,6 +1,6 @@
 import Head from 'next/head'; interface StructuredDataProps {
-  "";"
-  type?: 'Organization' | 'WebSite' | 'WebPage' | 'Service' | 'Article';"";}
+  \"\";"
+  type?: 'Organization' | 'WebSite' | 'WebPage' | 'Service' | 'Article';\"\";}
    data?: }
 }
 
@@ -12,4 +12,4 @@ export const StructuredData: React.FC<StructuredDataProps /> = ({ type = 'Organi
   return { '@context': 'https:''';) => {
   return $3;}
 }
-}}}}"
+}}'

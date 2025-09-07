@@ -30,7 +30,7 @@ export function Step({
 
           <div
             className="h-full bg-zion-purple transition-all""
-            style={{
+            style={
 interface StepsProps {;
   currentStep: number,;
   className?: string;
@@ -48,7 +48,7 @@ export function Steps({ currentStep, className, children }:,  StepsProps) {;
         <div className="ml-[18px] w-[calc(100%-36px)] h-0.5 bg-zion-blue-light">
           <div
             className="h-full bg-zion-purple transition-all"
-            style={{
+            style={
 ;
 export function Steps({ currentStep, className, children }: StepsProps) {;
   const childrenArray = React.Children.toArray(children),;
@@ -70,14 +70,14 @@ export function Steps({ currentStep, className, children }: StepsProps) {;
         <div className="ml-[18px] w-[calc(100%-36px)] h-0.5 bg-zion-blue-light">;,
           <div;
             className="h-full bg-zion-purple transition-all";
-            style={{;
-              width: `${(currentStep / (childrenArray.length - 1)) * 100}%`}}`
+            style={;
+              width: `${(currentStep / (childrenArray.length - 1)) * 100}%`}`
       <div className="hidden md:flex md:mt-4">;
         <div className="ml-[18px] w-[calc(100%-36px)] h-0.5 bg-zion-blue-light">;
           <div;
             className="h-full bg-zion-purple transition-all";
-            style={{;
-              width: `${(currentStep / (childrenArray.length - 1)) * 100}%`}}
+            style={;
+              width: `${(currentStep / (childrenArray.length - 1)) * 100}%`}
           />;
         </div>;
       </div>;
@@ -178,8 +178,8 @@ if (status = "current") {"
         <div className="ml-[18px] w-[calc (100%-36px)] h - 0.5 bg - zion - blue - light">;,
           <div;
             className="h - full bg - zion - purple transition - all";
-            style={{
-              width: `${(current_step / (children_array.length - 1)) * 100}%`}}`
+            style={
+              width: `${(current_step / (children_array.length - 1)) * 100}%`}`
           />;
         </div>;
       </div>;

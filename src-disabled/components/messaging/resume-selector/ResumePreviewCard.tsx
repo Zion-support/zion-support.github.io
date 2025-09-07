@@ -1,19 +1,3 @@
-:src/components/messaging/resume-selector/ResumePreviewCard.tsx
-import React from 'react',
-import { Card, CardContent  } from "@/components/ui/card";
-import { Badge  } from "@/components/ui/badge";
-import { Button } from "@/components/ui/button";
-import { Download } from 'lucide-react'
-import { Resume } from "@/types/resume";
-interface ResumePreviewCardProps {
-  resume: Resume;
-  onDownload: () => void;
-  isLoading: boolean
-export function ResumePreviewCard({
-  resume
-  onDownload
-  isLoading
-}: ResumePreviewCardProps) {
 origin/cursor/automate-test-improve-and-merge-code-2533
 import React from 'react';
 import { Card, CardContent } from '@/components/ui/card';
@@ -133,7 +117,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             onClick={(e) => {
               e.stopPropagation();
               onDownload(resume);
-            }}
+            }
             className="flex-1""
           >
             <Download className="h-4 w-4 mr-2" />"
@@ -145,7 +129,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             onClick={(e) => {
               e.stopPropagation();
               onSelect(resume);
-            }}
+            }
             className="flex-1""
           >
             {isSelected ? 'Selected' : 'Select'}'
@@ -156,11 +140,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   );
 };
 
-import React from 'react',
 import { Card, CardContent } from "@/components/ui/card",
 import { Badge } from "@/components/ui/badge",
 import { Button } from "@/components/ui/button",
-import { Download } from 'lucide-react'
 import { Resume } from "@/types/resume",
 interface ResumePreviewCardProps {
   resume: Resume,
@@ -179,19 +161,6 @@ export function ResumePreviewCard({ resume, onDownload, isLoading }: ResumePrevi
               <p className="text-sm text-zion-cyan">{resume.basic_info.headline}</p>
             )}
           </div>
-:src/components/messaging/resume-selector/ResumePreviewCard.tsx
-          <Button
-            variant='ghost'
-            size='sm'
-            onClick={onDownload}
-            disabled={isLoading}
-            className='h-8 w-8 p-0'          >
-            <Download className='h-4 w-4 text-zion-cyan' />
-            <span className='sr-only'>Download Resume</span>
-          </Button>
-        </div>
-        {resume.basic_info.summary && (
-          <p className='text-xs text-zion-slate line-clamp-2 mb-2'>
           <Button 
             variant="ghost" 
             size="sm" 
@@ -209,7 +178,6 @@ import React from 'react',;
 import { Card, CardContent } from "@/components/ui/card",;
 import { Badge } from "@/components/ui/badge",;
 import { Button } from "@/components/ui/button",;
-import { Download } from 'lucide-react';
 import { Resume } from "@/types/resume",;
 interface ResumePreviewCardProps {;
   resume: Resume,;
@@ -245,18 +213,6 @@ export function ResumePreviewCard({ resume, onDownload, isLoading }: ResumePrevi
           </p>;
         )}
         {resume.skills && resume.skills.length > 0 && (
-:src/components/messaging/resume-selector/ResumePreviewCard.tsx
-          <div className='flex flex-wrap gap-1 mt-2'>
-            {resume.skills.slice(0, 5).map((skill, index) => (
-              <Badge
-                key={index}
-                variant='outline'
-                className='bg-zion-blue-dark/50 text-zion-cyan border-zion-purple/20 text-xs'              >          <div className="flex flex-wrap gap-1 mt-2">
-            {resume.skills.slice(0, 5).map((skill, index) => (
-              <Badge
-                key = {index,}
-                variant="outline"
-                className="bg-zion-blue-dark/50 text-zion-cyan border-zion-purple/20 text-xs"
           <div className="flex flex-wrap gap-1 mt-2">
             {resume.skills.slice(0, 5).map((skill, index) => (
               <Badge 
@@ -268,10 +224,6 @@ export function ResumePreviewCard({ resume, onDownload, isLoading }: ResumePrevi
               </Badge>;
             ))}
             {resume.skills.length > 5 && (
-:src/components/messaging/resume-selector/ResumePreviewCard.tsx
-              <Badge
-                variant='outline'
-                className='bg-zion-blue-dark/50 text-zion-slate border-zion-purple/20 text-xs'              >              <Badge
               <Badge 
                 variant="outline"
                 className="bg-zion-blue-dark/50 text-zion-slate border-zion-purple/20 text-xs"
@@ -281,16 +233,6 @@ export function ResumePreviewCard({ resume, onDownload, isLoading }: ResumePrevi
             )}
           </div>;
         )}
-:src/components/messaging/resume-selector/ResumePreviewCard.tsx
-      </CardContent>
-    </Card>
-  )
-}
-    </Card>;
-  );
-};
-}
-}
       </CardContent>;
     </Card>;
   );

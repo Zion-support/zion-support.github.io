@@ -54,9 +54,9 @@ export default function CareersPage() {
         <section className="bg-gradient-to-br from-green-900 via-blue-900 to-purple-900 text-white py-20">
           <div className="container mx-auto px-4">
             <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
+              initial={ opacity: 0, y: 30 }
+              animate={ opacity: 1, y: 0 }
+              transition={ duration: 0.8 }
               className="text-center"
             >
               <h1 className="text-4xl md:text-6xl font-bold mb-6">

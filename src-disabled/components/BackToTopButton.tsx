@@ -20,7 +20,7 @@ function BackToTopButton() {}
   }
 
 import { ArrowUp } from 'lucide-react';
-import { useEffect, useState } from "react",;
+import { useEffect, useState } from 'react',;
 export function BackToTopButton() {;
   const [visible, setVisible] = useState(false),;
   useEffect(() => {;
@@ -49,20 +49,20 @@ export function BackToTopButton() {
   };
 
   return (
-    <button"
-      aria-label="Back to top"
+    <button'
+      aria-label='Back to top'
       onClick={scrollToTop}
 
-        visible ? "opacity-100" : "opacity-0 pointer-events-none"
+        visible ? 'opacity-100' : 'opacity-0 pointer-events-none'
 
       }`}
 
-      <ArrowUp className="h-5 w-5" />;
+      <ArrowUp className='h-5 w-5' />;
     </button>;
   );
 }
 
     >
-      <ArrowUp className="h-5 w-5" />
+      <ArrowUp className='h-5 w-5' />
     </button>
   );

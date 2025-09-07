@@ -37,10 +37,10 @@ if (onRequestHire) {;
 profile.id || '' ;
 }`);
 //Also call the onViewProfile callback if provided <div> {;
-  profile.hourly rate ? (<div> <span className="text-zion-slate-light text-xs" >Hourly Rate</span> <div className="text-white font-bold" >$ {;"
-  profile.hourly rate ;""
-}/hr</div> </div>) : (</div>) ";""
-}</div> > Hire </Button> <Button > View <ExternalLink className="h-3 w-3 ml-1" /> </Button> </div> </div> {;
+  profile.hourly rate ? (<div> <span className='text-zion-slate-light text-xs' >Hourly Rate</span> <div className='text-white font-bold' >$ {;'
+  profile.hourly rate ;''
+}/hr</div> </div>) : (</div>) ';''
+}</div> > Hire </Button> <Button > View <ExternalLink className='h-3 w-3 ml-1' /> </Button> </div> </div> {;
   /* Hire Request Modal */ ;
 }<HireRequestModal talent= {;
   profile ;
@@ -49,6 +49,6 @@ profile.id || '' ;
 }onClose= {;
   () => setIsHireModalOpen (false) ;
 }userDetails= {;
-  userProfile ;'"
-}/> </>) ;'"'"
-}'"'"'"`
+  userProfile ;''
+}/> </>) ;''''
+}''''''`

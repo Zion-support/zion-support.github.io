@@ -11,7 +11,7 @@ const SkipLink: React.FC<SkipLinkProps> = ({ href, children, className = '' }) =
     <a
       href={href}
       className={`skip-link ${className}`}
-      style={{
+      style={
         position: 'absolute',
         top: '-40px',
         left: '6px',
@@ -24,13 +24,13 @@ const SkipLink: React.FC<SkipLinkProps> = ({ href, children, className = '' }) =
         '&:focus': {
           top: '6px'
         }
-      }}
+      }
       onFocus={(e) => {
         e.currentTarget.style.top = '6px';
-      }}
+      }
       onBlur={(e) => {
         e.currentTarget.style.top = '-40px';
-      }}
+      }
     >
       {children}
     </a>

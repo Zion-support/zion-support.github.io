@@ -8,7 +8,7 @@ export function AdminLayout({ children }: AdminLayoutProps) { return ( <div clas
 }</main> </div> ;
 }
 
-export default AdminLayout';''"'";
+export default AdminLayout';''\"'\";
 
 interface AdminLayoutProps {
   children: React.ReactNode;}
@@ -19,4 +19,4 @@ export function AdminLayout({ children }: AdminLayoutProps) { return ( <div clas
 }</main> </div> ;
 }
 "
-export default AdminLayout';''"'";"
+export default AdminLayout';''\"'\";"

@@ -41,7 +41,7 @@ export function FooterNewsletter(): React.ReactElement {
       const data = await res.json().catch(() => ({})); // Ensure data is an object even on parse error;
       if (res.ok) {'
         if (data.status === 'already_subscribed') {'
-          toast.success(data.message |"You're already subscribed!", {}`
+          toast.success(data.message |'You're already subscribed!', {}`
             id: `${uniqueToastIdBase}-already-subscribed`
           })
         } else {}
@@ -88,7 +88,7 @@ export function FooterNewsletter(): React.ReactElement {
 
   return (
 
-      {emailError && <p className="text-red-500 text-sm mt-1">{emailError}</p>}
+      {emailError && <p className='text-red-500 text-sm mt-1'>{emailError}</p>}
       {/* Honeypot field */}
       <input;
 {/* Honeypot field */}
@@ -96,33 +96,33 @@ export function FooterNewsletter(): React.ReactElement {
         onChange={e => setHoneypot(e && e.target.value)}
         tabIndex={-1}'
         autoComplete='off';'
-        style={{ display: 'none' }}
+        style={ display: 'none' }
       />;
 
-      <Button"
-        type="submit"
+      <Button'
+        type='submit'
         disabled={isSubmitting}
 
-      <Button"
-        type="submit"
+      <Button'
+        type='submit'
         disabled={isSubmitting}'
         className='bg-gradient-to-r from-zion-purple to-zion-purple-dark text-white hover:from-zion-purple-light hover:to-zion-purple'>;
-"
-        type="text"
+'
+        type='text'
 
         value={honeypot}
         onChange={e => setHoneypot(e.target.value)}
         tabIndex={-1}
 
 '
-        type='text'"
-        type="text"
+        type='text''
+        type='text'
 
         value={honeypot}
         onChange={e => setHoneypot(e.target.value)}
         tabIndex={-1}'
         autoComplete='off''
-        style={{ display: 'none' }}
+        style={ display: 'none' }
       />
       <Button'
         type='submit''
@@ -140,15 +140,15 @@ export function FooterNewsletter(): React.ReactElement {
       </Button>
     </form>
 
-        autoComplete="off"
+        autoComplete='off'
 
-        style={{ display: 'none' }}
+        style={ display: 'none' }
       />
-      <Button"
-        type="submit""
-        aria-label="Subscribe to newsletter"
-        disabled={isSubmitting}"
-        className="bg-gradient-to-r from-zion-purple to-zion-purple-dark text-white hover:from-zion-purple-light hover:to-zion-purple";
+      <Button'
+        type='submit''
+        aria-label='Subscribe to newsletter'
+        disabled={isSubmitting}'
+        className='bg-gradient-to-r from-zion-purple to-zion-purple-dark text-white hover:from-zion-purple-light hover:to-zion-purple';
       >;
         {isSubmitting ? (;
           <>;
@@ -182,11 +182,11 @@ export function FooterNewsletter():React.ReactElement {;'
     lastSubmit.current = now,;
 ;
     const trimmedEmail = email.trim(),;
-    if (!EMAIL_REGEX.test(trimmedEmail)) {;"
-      setEmailError("Please enter a valid email address."),;
+    if (!EMAIL_REGEX.test(trimmedEmail)) {;'
+      setEmailError('Please enter a valid email address.'),;
       return;
-    } else {;"
-      setEmailError(""),;
+    } else {;'
+      setEmailError(''),;
     }
 ;
     setIsSubmitting(true),;`
@@ -202,8 +202,8 @@ export function FooterNewsletter():React.ReactElement {;'
       const data = await res.json().catch(() => ({})), // Ensure data is an object even on parse error;
 ;
       if (res.ok) {;'
-        if (data.status === 'already_subscribed') {;'"`
-          toast.success(data.message || "You're already subscribed!", { id:`${uniqueToastIdBase}-already-subscribed` }),;
+        if (data.status === 'already_subscribed') {;''`
+          toast.success(data.message || 'You're already subscribed!', { id:`${uniqueToastIdBase}-already-subscribed` }),;
         } else {;'`
           toast.success(data.message || 'Successfully subscribed to newsletter!', { id:`${uniqueToastIdBase}-success` }),;
         }'
@@ -224,46 +224,46 @@ export function FooterNewsletter():React.ReactElement {;'
   },;
 ;
   return (;
-    <form;"
-      id="footer-newsletter-form";"
-      aria-label="Newsletter sign-up";
-      onSubmit={handleSubmit}"
-      className="flex flex-col space-y-3 sm:flex-row sm:space-y-0 sm:space-x-2";
-    >;"
-      <label htmlFor="newsletter-email" className="sr-only">;
+    <form;'
+      id='footer-newsletter-form';'
+      aria-label='Newsletter sign-up';
+      onSubmit={handleSubmit}'
+      className='flex flex-col space-y-3 sm:flex-row sm:space-y-0 sm:space-x-2';
+    >;'
+      <label htmlFor='newsletter-email' className='sr-only'>;
         Email address for newsletter subscription;
       </label>;
-      <Input;"
-        type="email";"
-        id="newsletter-email";"
-        name="newsletterEmail";"
-        placeholder="Enter your email";"
-        className="flex-grow bg-zion-blue-light dark:bg-zion-blue-dark text-black dark:text-white border-zion-purple/20 focus:border-zion-purple focus:ring-zion-purple placeholder-opacity-50 placeholder:text-center";
+      <Input;'
+        type='email';'
+        id='newsletter-email';'
+        name='newsletterEmail';'
+        placeholder='Enter your email';'
+        className='flex-grow bg-zion-blue-light dark:bg-zion-blue-dark text-black dark:text-white border-zion-purple/20 focus:border-zion-purple focus:ring-zion-purple placeholder-opacity-50 placeholder:text-center';
         value={email}
-        onChange={(e) => setEmail(e.target.value)}"
-        autoComplete="email";
+        onChange={(e) => setEmail(e.target.value)}'
+        autoComplete='email';
         required;
-      />;"
-      {emailError && <p className="text-red-500 text-sm mt-1">{emailError}</p>}
+      />;'
+      {emailError && <p className='text-red-500 text-sm mt-1'>{emailError}</p>}
       {/* Honeypot field */}
-      <input;"
-        type="text";
+      <input;'
+        type='text';
         value={honeypot}
         onChange={(e) => setHoneypot(e.target.value)}
-        tabIndex={-1}"
-        autoComplete="off";'
-        style={{ display:'none' }}
+        tabIndex={-1}'
+        autoComplete='off';'
+        style={ display:'none' }
       />;
-      <Button;"
-        type="submit";"
-        aria-label="Subscribe to newsletter";
-        disabled={isSubmitting}"
-        className="bg-gradient-to-r from-zion-purple to-zion-purple-dark text-white hover:from-zion-purple-light hover:to-zion-purple";
+      <Button;'
+        type='submit';'
+        aria-label='Subscribe to newsletter';
+        disabled={isSubmitting}'
+        className='bg-gradient-to-r from-zion-purple to-zion-purple-dark text-white hover:from-zion-purple-light hover:to-zion-purple';
       >;
         {isSubmitting ? (;
-          <>;"
-            <Loader2 className="h-4 w-4 mr-2 animate-spin" />;"
-            <Loader2 className="h-4 w-4 mr-2 animate-spin" />;
+          <>;'
+            <Loader2 className='h-4 w-4 mr-2 animate-spin' />;'
+            <Loader2 className='h-4 w-4 mr-2 animate-spin' />;
 
             Subscribing...;
           </>;
@@ -284,7 +284,6 @@ import React, { useState, useRef } from 'react';'
 import { Input } from '@/components / ui / input';'
 import { Button } from '@/components / ui / button';'
 import { use_toast } from '@/hooks / use - toast';'
-import { Loader2 } from 'lucide-react';'
 import { logErrorToProduction } from '@/utils / production_logger';
 export function FooterNewsletter (): React.ReactElement {';
   const [email, set_email] = useState ('');'
@@ -296,7 +295,6 @@ export function FooterNewsletter (): React.ReactElement {';
 } finally {}
       setIsSubmitting (false);'
       // console.error ('Newsletter subscription failed:', error)} finally {}
-  const EMAIL_REGEX = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
   const last_submit = useRef (0);
   const handle_submit = async (e: React.FormEvent) => {}
     e.prevent_default ();
@@ -335,8 +333,8 @@ if ( {) {}
         // Check condition;
 if ( {) {}
   $2;
-}'"
-          toast.success (data.message || "You're already subscribed!", {}`
+}''
+          toast.success (data.message || 'You're already subscribed!', {}`
             id: `${uniqueToastIdBase}-already - subscribed`,
           });
         } else {}
@@ -384,7 +382,7 @@ if ( {) {}
         on_change={e => set_honeypot (e.target.value)}
         tab_index={-1}'
         auto_complete='off';'
-        style={{ display: 'none' }}
+        style={ display: 'none' }
       />;
       <Button;'
         type='submit';'
@@ -402,13 +400,13 @@ if ( {) {}
 }
 }
 
-};"
-return (<form id="footer-newsletter-form" aria-label="Newsletter sign-up" onSubmit= {;"
-  handleSubmit ";'"
-}className="flex flex-col space-y-3 sm:flex-row sm:space-y-0 sm:space-x-2" newsletter-email"className="sr-only"> Email address for newsletter subscription </label> <Input className="bg-gradient-to-r from-zion-purple to-zion-purple-dark text-white hover:from-zion-purple-light hover:to-zion-purple"> {'";'"
-  isSubmitting ? (<> <Loader2 className="h-4 w-4 mr-2 animate-spin" /> Subscribing... </>) : ('Subscribe') ;
-}</Button> </form>) ;'"
-}'"
+};'
+return (<form id='footer-newsletter-form' aria-label='Newsletter sign-up' onSubmit= {;'
+  handleSubmit ';''
+}className='flex flex-col space-y-3 sm:flex-row sm:space-y-0 sm:space-x-2' newsletter-email'className='sr-only'> Email address for newsletter subscription </label> <Input className='bg-gradient-to-r from-zion-purple to-zion-purple-dark text-white hover:from-zion-purple-light hover:to-zion-purple'> {'';''
+  isSubmitting ? (<> <Loader2 className='h-4 w-4 mr-2 animate-spin' /> Subscribing... </>) : ('Subscribe') ;
+}</Button> </form>) ;''
+}''
   );
 } ;
 }

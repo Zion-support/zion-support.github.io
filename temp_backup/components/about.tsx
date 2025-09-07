@@ -239,7 +239,7 @@ export default function AboutPage() {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8" />
             {values.map((value, index) => (}
-              <Card key={index} className="card-hover text-center group border-gradient-blue" style={{ animationDelay: `${index * 0.1}s` }} />
+              <Card key={index} className="card-hover text-center group border-gradient-blue" style={ animationDelay: `${index * 0.1}s` } />
                 <div className="relative" />
                   <div className={`w-16 h-16 mx-auto mb-6 rounded-2xl flex items-center justify-center text-2xl bg-gradient-to-br ${value.gradient} shadow-lg group-hover:scale-110 transition-transform duration-300`} />
 
@@ -263,7 +263,7 @@ export default function AboutPage() {
             </p>;
           </div>;
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12" />;
-            {services.map((service, index) => (<Card key={index} className="card-hover group border-gradient-blue" style={{ animationDelay: `${index * 0.1}s` ,
+            {services.map((service, index) => (<Card key={index} className="card-hover group border-gradient-blue" style={ animationDelay: `${index * 0.1}s` ,
 } />;
                 <div className="flex items-start space-x-6" />;
                   <div className="relative" />;

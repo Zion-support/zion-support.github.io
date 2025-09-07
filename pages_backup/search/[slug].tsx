@@ -181,9 +181,9 @@ interface OfflineFilters {
         break;
 
   } catch (error) {
-    console.error("Error:", error);
+    console.error('Error:', error);
 
-    return res.status(500).json({ error: "Internal server error" });
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
 ;
@@ -193,14 +193,14 @@ interface OfflineFilters {;
   minPrice?: number,;
   maxPrice?: number,;
   minRating?: number;
-  } catch (error) {"
-    console.error("Error:", error);"
-    return res.status(500).json({ error: "Internal server error" });
+  } catch (error) {'
+    console.error('Error:', error);'
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
 ;
 function offlineSearch() { return null; }
-    return res.status(500).json({ error: "Internal server error" });
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
 ): { results: SearchResult[], totalCount: number } {;
@@ -221,9 +221,9 @@ function offlineSearch() { return null; }
     price: p.price ?? undefined,;
     rating: p.rating,;
     author: p.author;
-      ? { name: p.author.name, avatar: p.author.avatarUrl   } catch (error) {"
-    console.error("Error:", error);"
-    return res.status(500).json({ error: "Internal server error" });
+      ? { name: p.author.name, avatar: p.author.avatarUrl   } catch (error) {'
+    console.error('Error:', error);'
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
       : undefined,;
@@ -265,57 +265,57 @@ function offlineSearch() { return null; }
   let all = [...productResults, ...talentResults, ...blogResults],;
   if (filters.category) {;
     all = all.filter(r => r.category === filters.category);
-    } catch (error) {"
-    console.error("Error:", error);"
-    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {'
+    console.error('Error:', error);'
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }'
   if (typeof filters.minPrice === 'number') {;
     all = all.filter(r => {;'
       if (r.type === 'product') {;
         return (r.price ?? 0) >= filters.minPrice!;
-        } catch (error) {"
-    console.error("Error:", error);"
-    return res.status(500).json({ error: "Internal server error" });
+        } catch (error) {'
+    console.error('Error:', error);'
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
       return true;
     });
-    } catch (error) {"
-    console.error("Error:", error);"
-    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {'
+    console.error('Error:', error);'
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }'
   if (typeof filters.maxPrice === 'number') {;
     all = all.filter(r => {;'
       if (r.type === 'product') {;
         return (r.price ?? 0) <= filters.maxPrice!;
-        } catch (error) {"
-    console.error("Error:", error);"
-    return res.status(500).json({ error: "Internal server error" });
+        } catch (error) {'
+    console.error('Error:', error);'
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
       return true;
     });
-    } catch (error) {"
-    console.error("Error:", error);"
-    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {'
+    console.error('Error:', error);'
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }'
   if (typeof filters.minRating === 'number') {;
     all = all.filter(r => {;'
       if (r.type === 'product' || r.type === 'talent') {;
         return (r.rating ?? 0) >= filters.minRating!;
-        } catch (error) {"
-    console.error("Error:", error);"
-    return res.status(500).json({ error: "Internal server error" });
+        } catch (error) {'
+    console.error('Error:', error);'
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
       return true;
     });
-    } catch (error) {"
-    console.error("Error:", error);"
-    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {'
+    console.error('Error:', error);'
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
 ;'
@@ -477,8 +477,8 @@ const aRating =
   } else {;
     all.sort((a, b) => a.title.localeCompare(b.title));
     } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error('Error:', error);
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
   const start = (page - 1) * limit;
@@ -511,14 +511,14 @@ export default function SearchResultsPage(): any ({;
   const router = useRouter();
 
   return { results: paginated, totalCount: all.length   } catch (error) {
-    console.error("Error:", error);
+    console.error('Error:', error);
 
-    return res.status(500).json({ error: "Internal server error" });
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
-  } catch (error) {"
-    console.error("Error:", error);"
-    return res.status(500).json({ error: "Internal server error" });
+  } catch (error) {'
+    console.error('Error:', error);'
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
 ;
@@ -684,8 +684,8 @@ fetchResults(searchQuery, nextPage);
     ) {
 
       } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error('Error:', error);
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
 
@@ -973,39 +973,39 @@ return false;
       acc[result.type]!.push(result);
 
         } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error('Error:', error);
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
       } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error('Error:', error);
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
     if (maxPrice && r.type === 'product') {;
       if ((r.price ?? 0) > Number(maxPrice)) {;
         return false;
         } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error('Error:', error);
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
       } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error('Error:', error);
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
     if (minRating && (r.type === 'product' || r.type === 'talent')) {;
       if ((r.rating ?? 0) < Number(minRating)) {;
         return false;
         } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error('Error:', error);
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
       } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error('Error:', error);
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
     return true
@@ -1094,7 +1094,7 @@ if (acc[result.type] = []) {}
                 updated_at: new Date().toISOString(),
                 stock: (result as any).stock,
 in_stock: ((result as any).stock || 0) > 0,
-              }}
+              }
             />
           </div>
         );
@@ -1102,7 +1102,7 @@ in_stock: ((result as any).stock || 0) > 0,
         return (
 <div key={result.id} data-testid='result-card'>
             <TalentCard
-              talent={{
+              talent={
 
                 id: result.id,
                 user_id: result.id,
@@ -1117,38 +1117,38 @@ in_stock: ((result as any).stock || 0) > 0,
                 is_verified: false,
 
                 availability_type: 'available'}  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error('Error:', error);
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
               onViewProfile={(id: string) => {;
                 router.push(`/talent/${id}`);
               }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error('Error:', error);
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
               onRequestHire={(talent) => {;
                 router.push(`/talent/${talent.id}?action=hire`);
               }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error('Error:', error);
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
               isAuthenticated={isAuthenticated  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error('Error:', error);
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
 
 availability_type: 'available',
-              }}
+              }
               onViewProfile={(id: string) => {
                 router.push(`/talent/${id}`);
-              }}
+              }
               onRequestHire={talent => {
                 router.push(`/talent/${talent.id}?action=hire`);
-              }}
+              }
               isAuthenticated={isAuthenticated}
 
             />
@@ -1185,21 +1185,21 @@ availability_type: 'available',
 
   };
 
-          <div key={result.id} data-testid="result-card">
+          <div key={result.id} data-testid='result-card'>
             <CategoryCard
               title={result.title  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error('Error:', error);
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
               description={result.description || ''  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error('Error:', error);
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
               icon={result.image || '📁'  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error('Error:', error);
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
             />;
@@ -1233,8 +1233,8 @@ availability_type: 'available',
       <SEO
 
         <div
-          className="container mx-auto px-4 py-8"
-          data-testid="search-results"
+          className='container mx-auto px-4 py-8'
+          data-testid='search-results'
         >
           {/* Search Header */});
     }
@@ -1245,25 +1245,25 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     <>;
       <SEO
 
-        title={`Search Results for "${query}" - Zion Marketplace`  } catch (error) {
-    console.error("Error:", error);
+        title={`Search Results for '${query}' - Zion Marketplace`  } catch (error) {
+    console.error('Error:', error);
 
-    return res.status(500).json({ error: "Internal server error" });
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }`
-        description={`Find ${query} and more in the Zion marketplace. Discover products, talent, and services.`  } catch (error) {"
-    console.error("Error:", error);"
-    return res.status(500).json({ error: "Internal server error" });
+        description={`Find ${query} and more in the Zion marketplace. Discover products, talent, and services.`  } catch (error) {'
+    console.error('Error:', error);'
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }`
-        keywords={`${query}, search, marketplace, products, talent, services`  } catch (error) {"
-    console.error("Error:", error);"
-    return res.status(500).json({ error: "Internal server error" });
+        keywords={`${query}, search, marketplace, products, talent, services`  } catch (error) {'
+    console.error('Error:', error);'
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }`
-        canonical={`https://app.ziontechgroup.com/search/${slug}`  } catch (error) {"
-    console.error("Error:", error);"
-    return res.status(500).json({ error: "Internal server error" });
+        canonical={`https://app.ziontechgroup.com/search/${slug}`  } catch (error) {'
+    console.error('Error:', error);'
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
       />
@@ -1286,74 +1286,74 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   className='text-gray-600 dark:text-gray-200'
                   data-testid='results-count'>;
                   {filteredResults && filteredResults.length > 0;
-                    ? `Found ${filteredResults && filteredResults.length} results for "${query}"`;
+                    ? `Found ${filteredResults && filteredResults.length} results for '${query}'`;
 
         <div
-          className="container mx-auto px-4 py-8"
-          data-testid="search-results"
+          className='container mx-auto px-4 py-8'
+          data-testid='search-results'
         >
 
           {/* Search Header */  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error('Error:', error);
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
 
-          <div className="mb-8">
-            <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-4">
-              <div className="flex-1">
+          <div className='mb-8'>
+            <div className='flex flex-col lg:flex-row lg:items-center lg:justify-between gap-4'>
+              <div className='flex-1'>
 
-                <h1 className="text-3xl font-bold text-gray-900 dark:text-white mb-2">
+                <h1 className='text-3xl font-bold text-gray-900 dark:text-white mb-2'>
                   Search Results;
                 </h1>
 
-                  className="text-gray-600 dark:text-gray-200"
+                  className='text-gray-600 dark:text-gray-200'
 
-                  data-testid="results-count"
+                  data-testid='results-count'
                 >
-                  {filteredResults.length > 0"`
-                    ? `Found ${filteredResults.length} results for "${query}"`
+                  {filteredResults.length > 0'`
+                    ? `Found ${filteredResults.length} results for '${query}'`
 
-                    : `No results found for "${query}"`}
+                    : `No results found for '${query}'`}
 
                 </p>;
               </div>;
 
               {/* Search Input */}
 
-                <Input"
-                  type="text"
+                <Input'
+                  type='text'
                   value={searchQuery}
                   onChange={(e) => handleSearch(e.target.value)}
 
-                    : `No results found for "${query}"`  } catch (error) {
+                    : `No results found for '${query}'`  } catch (error) {
 
-    console.error("Error:", error);
+    console.error('Error:', error);
 
-    return res.status(500).json({ error: "Internal server error" });
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
 
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error('Error:', error);
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
 
                 <Input
-                  type="text"
+                  type='text'
                   value={searchQuery  } catch (error) {
 
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error('Error:', error);
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
 
-    return res.status(500).json({ error: "Internal server error" });
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
-"
-                  placeholder="Search marketplace...""
-                  className="pl-10"
+'
+                  placeholder='Search marketplace...''
+                  className='pl-10'
                 />
 
               </div>
@@ -1371,8 +1371,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   data-testid='results-count'
                 >
                   {filteredResults.length > 0
-                    ? `Found ${filteredResults.length} results for "${query}"`
-                    : `No results found for "${query}"`}
+                    ? `Found ${filteredResults.length} results for '${query}'`
+                    : `No results found for '${query}'`}
                 </p>
               </div>
               {/* Search Input */}
@@ -1392,10 +1392,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               <div className='flex items-center gap-2 flex-wrap'>
 
                 <Button
-                  variant="outline"
-                  size="sm"
-                  className="flex items-center gap-2"
-                  data-testid="filter-button"
+                  variant='outline'
+                  size='sm'
+                  className='flex items-center gap-2'
+                  data-testid='filter-button'
                 >
 
                 </Button>
@@ -1413,9 +1413,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   data-testid='sort-select';
 
                 router.push (`/talent/${id}`);
-              }}
+              }
               onRequestHire={talent => {}`
-                router.push (`/talent/${talent.id}?action = hire`);              }}
+                router.push (`/talent/${talent.id}?action = hire`);              }
               is_authenticated={is_authenticated}
             />;
           </div>);'
@@ -1438,8 +1438,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 ;
   return (
     <>;
-      <SEO;"`
-        title={`Search Results for "${query}" - Zion Marketplace`}`
+      <SEO;'`
+        title={`Search Results for '${query}' - Zion Marketplace`}`
         description={`Find ${query} and more in the Zion marketplace. Discover products, talent, and services.`}`
         keywords={`${query}, search, marketplace, products, talent, services`}`
         canonical={`https://app.ziontechgroup.com / search/${slug}`}
@@ -1459,9 +1459,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 <p;'
                   className='text - gray - 600 dark:text - gray - 200';'
                   data - testid='results - count'                >;
-                  {filtered_results.length > 0;"`
-                    ? `Found ${filtered_results.length} results for "${query}"`;"`
-                    : `No results found for "${query}"`}
+                  {filtered_results.length > 0;'`
+                    ? `Found ${filtered_results.length} results for '${query}'`;'`
+                    : `No results found for '${query}'`}
                 </p>;
               </div>;
               {/* Search Input */}'
@@ -1499,41 +1499,41 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   <option value='price_desc'>Price: High to Low</option>;
                   <option value='rating'>Highest Rated</option>                </select>;
 
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error('Error:', error);
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
                     </option>;
                   ))  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error('Error:', error);
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
 
                   <input
-                    type="number"
-                    placeholder="Min $"
+                    type='number'
+                    placeholder='Min $'
                     value={minPrice}
                     onChange={(e) => setMinPrice(e.target.value)}
 
                 <div className='flex items-center gap-1'>
-"
-                  <option value="all">All Categories</option>
+'
+                  <option value='all'>All Categories</option>
                   {categories.map((c) => (
                     <option key={c} value={c}>
-                      {c  } catch (error) {"
-    console.error("Error:", error);"
-    return res.status(500).json({ error: "Internal server error" });
+                      {c  } catch (error) {'
+    console.error('Error:', error);'
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
                     </option>;
-                  ))  } catch (error) {"
-    console.error("Error:", error);"
-    return res.status(500).json({ error: "Internal server error" });
+                  ))  } catch (error) {'
+    console.error('Error:', error);'
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
-                </select>"
-                <div className="flex items-center gap-1">
+                </select>'
+                <div className='flex items-center gap-1'>
 
                   <Filter className='h-4 w-4' />
                   Filters
@@ -1567,42 +1567,42 @@ onChange={e => setCategoryFilter(e.target.value)}
 <div className='flex items-center gap-1'>
 
                   <input
-                    type="number"
-                    placeholder="Min $"
+                    type='number'
+                    placeholder='Min $'
                     value={minPrice  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error('Error:', error);
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
                     onChange={(e) => setMinPrice(e.target.value)  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error('Error:', error);
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
 
                   <input
-                    type="number"
+                    type='number'
 
-                    placeholder="Min $"
-                    value={minPrice  } catch (error) {"
-    console.error("Error:", error);"
-    return res.status(500).json({ error: "Internal server error" });
+                    placeholder='Min $'
+                    value={minPrice  } catch (error) {'
+    console.error('Error:', error);'
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
-                    onChange={(e) => setMinPrice(e.target.value)  } catch (error) {"
-    console.error("Error:", error);"
-    return res.status(500).json({ error: "Internal server error" });
+                    onChange={(e) => setMinPrice(e.target.value)  } catch (error) {'
+    console.error('Error:', error);'
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
 
-                    className="w-20 px-2 py-1 border border-gray-300 rounded-md text-sm"
+                    className='w-20 px-2 py-1 border border-gray-300 rounded-md text-sm'
                   />
                   <span>-</span>
-                  <input"
-                    type="number""
-                    placeholder="Max $"
+                  <input'
+                    type='number''
+                    placeholder='Max $'
 
-                    className="w-20 px-2 py-1 border border-gray-300 rounded-md text-sm"
+                    className='w-20 px-2 py-1 border border-gray-300 rounded-md text-sm'
                   />
 
                 </div>
@@ -1616,13 +1616,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 <select
                   value={minRating}
 
-                  className="px-3 py-1 border border-gray-300 rounded-md text-sm"
+                  className='px-3 py-1 border border-gray-300 rounded-md text-sm'
 
                 >
-                  <option value="">All Ratings</option>
-                  <option value="4">4★ & up</option>
-                  <option value="3">3★ & up</option>
-                  <option value="2">2★ & up</option>
+                  <option value=''>All Ratings</option>
+                  <option value='4'>4★ & up</option>
+                  <option value='3'>3★ & up</option>
+                  <option value='2'>2★ & up</option>
                 </select>
               </div>
 
@@ -1650,18 +1650,18 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   data-testid='view-mode-list';'
                   className={viewMode === 'list' ? 'active' : ''}
 
-"
-              <div className="flex items-center gap-2">
+'
+              <div className='flex items-center gap-2'>
 
                 <Button
                   variant={viewMode === 'grid' ? 'default' : 'outline'  } catch (error) {
-    console.error("Error:", error);
+    console.error('Error:', error);
 
-    return res.status(500).json({ error: "Internal server error" });
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
-                >"
-                  <Grid className="h-4 w-4" />
+                >'
+                  <Grid className='h-4 w-4' />
                 </Button>
 
                 >;
@@ -1672,8 +1672,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           </div>;
 
           {/* Loading State */  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error('Error:', error);
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
           {loading && results.length === 0 && (
@@ -1684,7 +1684,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
           {!loading && filteredResults.length === 0 && (
 
-            <div data-testid="search-empty-state">
+            <div data-testid='search-empty-state'>
               <SearchEmptyState onRetry={() => fetchResults(searchQuery)} />
             </div>
 
@@ -1697,24 +1697,24 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
                 <Button
                   variant={viewMode === 'grid' ? 'default' : 'outline'  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error('Error:', error);
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
-                  size="sm"
+                  size='sm'
                   onClick={() => setViewMode('grid')  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error('Error:', error);
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
-                  data-testid="view-mode-grid"
+                  data-testid='view-mode-grid'
                   className={viewMode === 'grid' ? 'active' : ''  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error('Error:', error);
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
                 >
-                  <Grid className="h-4 w-4" />
+                  <Grid className='h-4 w-4' />
                 </Button>
                 <Button
 
@@ -1732,14 +1732,14 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           {loading && results.length === 0 && (
 
           {/* Loading State */  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error('Error:', error);
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
           {loading && results.length === 0 && (
 
           {!loading && filteredResults.length === 0 && (
-            <div data-testid="search-empty-state">
+            <div data-testid='search-empty-state'>
               <SearchEmptyState onRetry={() => fetchResults(searchQuery)} />
             </div>
 
@@ -1925,7 +1925,7 @@ if ( {) {}
 
         query;
         slug;
-        totalCount}}
+        totalCount}
   } catch (error) {'
     logErrorToProduction('Error fetching search results:', { data: error }),'
     const offline = offlineSearch(query, 1, 12, { sortBy: 'relevance' }),
@@ -1934,7 +1934,7 @@ if ( {) {}
         initialResults: offline.results,
         query;
         slug;
-        totalCount: offline.totalCount}}
+        totalCount: offline.totalCount}
   }
 
 };
@@ -1972,22 +1972,22 @@ total_count: offline.total_count,
 ;
 
           )  } catch (error) {
-    console.error("Error:", error);
+    console.error('Error:', error);
 
-    return res.status(500).json({ error: "Internal server error" });
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
 ;
-          {/* Results */  } catch (error) {"
-    console.error("Error:", error);"
-    return res.status(500).json({ error: "Internal server error" });
+          {/* Results */  } catch (error) {'
+    console.error('Error:', error);'
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
-          {filteredResults.length > 0 && (;"
-            <div className="space-y-8">;
+          {filteredResults.length > 0 && (;'
+            <div className='space-y-8'>;
               {Object.entries(groupedResults).map(([type, typeResults]) => (;
-                <div key={type}>;"
-                  <h2 className="text-xl font-semibold text-gray-900 dark:text-white mb-4 capitalize">;
+                <div key={type}>;'
+                  <h2 className='text-xl font-semibold text-gray-900 dark:text-white mb-4 capitalize'>;
                     {type}s ({typeResults.length});
                   </h2>;
                   <div;
@@ -1995,77 +1995,77 @@ total_count: offline.total_count,
                       viewMode === 'grid';'
                         ? 'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6';'
                         : 'space-y-4';
-                      } catch (error) {"
-    console.error("Error:", error);"
-    return res.status(500).json({ error: "Internal server error" });
+                      } catch (error) {'
+    console.error('Error:', error);'
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
                   >;
-                    {typeResults.map(renderResultCard)  } catch (error) {"
-    console.error("Error:", error);"
-    return res.status(500).json({ error: "Internal server error" });
+                    {typeResults.map(renderResultCard)  } catch (error) {'
+    console.error('Error:', error);'
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
                   </div>;
                 </div>;
-              ))  } catch (error) {"
-    console.error("Error:", error);"
-    return res.status(500).json({ error: "Internal server error" });
+              ))  } catch (error) {'
+    console.error('Error:', error);'
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
 ;
-              {/* Load More Button */  } catch (error) {"
-    console.error("Error:", error);"
-    return res.status(500).json({ error: "Internal server error" });
+              {/* Load More Button */  } catch (error) {'
+    console.error('Error:', error);'
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
-              {results.length < totalResults && (;"
-                <div className="flex justify-center py-8">;
+              {results.length < totalResults && (;'
+                <div className='flex justify-center py-8'>;
                   <Button;
-                    onClick={loadMore  } catch (error) {"
-    console.error("Error:", error);"
-    return res.status(500).json({ error: "Internal server error" });
+                    onClick={loadMore  } catch (error) {'
+    console.error('Error:', error);'
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
-                    disabled={loading  } catch (error) {"
-    console.error("Error:", error);"
-    return res.status(500).json({ error: "Internal server error" });
+                    disabled={loading  } catch (error) {'
+    console.error('Error:', error);'
+    return res.status(500).json({ error: 'Internal server error' });
   }
-}"
-                    className="flex items-center gap-2";
+}'
+                    className='flex items-center gap-2';
                   >;
                     {loading ? (;
-                      <>;"
-                        <div className="animate-spin rounded-full h-4 w-4 border-b-2 border-white"></div>;
+                      <>;'
+                        <div className='animate-spin rounded-full h-4 w-4 border-b-2 border-white'></div>;
                         Loading...;
                       </>;
                     ) : (;'
                       'Load More Results';
-                    )  } catch (error) {"
-    console.error("Error:", error);"
-    return res.status(500).json({ error: "Internal server error" });
+                    )  } catch (error) {'
+    console.error('Error:', error);'
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
                   </Button>;
                 </div>;
-              )  } catch (error) {"
-    console.error("Error:", error);"
-    return res.status(500).json({ error: "Internal server error" });
+              )  } catch (error) {'
+    console.error('Error:', error);'
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
             </div>;
-          )  } catch (error) {"
-    console.error("Error:", error);"
-    return res.status(500).json({ error: "Internal server error" });
+          )  } catch (error) {'
+    console.error('Error:', error);'
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
         </div>;
       </div>;
     </>;
   );
-  } catch (error) {"
-    console.error("Error:", error);"
-    return res.status(500).json({ error: "Internal server error" });
+  } catch (error) {'
+    console.error('Error:', error);'
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
 ;
@@ -2099,8 +2099,8 @@ export const getServerSideProps: GetServerSideProps<;
       results = offline.results;
       totalCount = offline.totalCount;
       } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error('Error:', error);
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
 ;
@@ -2110,8 +2110,8 @@ export const getServerSideProps: GetServerSideProps<;
         query,;
         slug,;
         totalCount}  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error('Error:', error);
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
   } catch (error) {
@@ -2124,13 +2124,13 @@ export const getServerSideProps: GetServerSideProps<;
         query,;
         slug;
         totalCount: offline.totalCount}  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error('Error:', error);
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
     } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error('Error:', error);
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
 };

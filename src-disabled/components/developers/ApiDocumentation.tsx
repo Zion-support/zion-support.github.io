@@ -128,7 +128,7 @@ export function ApiDocumentation() {
                   description: 'Filter by job status (new, active, closed)'
                 }
               ]}
-              codeExamples={{
+              codeExamples={
                 curl: `curl -X GET "https://api.ziontechgroup.com/v1/jobs?limit=10&category=development" \\
   -H "Authorization: Bearer YOUR_API_KEY" \\
   -H "Content-Type: application/json"`
@@ -525,10 +525,10 @@ function EndpointSection() {
         </div>
       )}
       {responseExamples && (
-}}}}}}}}}}}}}]]]]]]]]]
+}}}}}}}]]]]]]]]]
 print(data)`;
-              }}
-              responseExamples={{
+              }
+              responseExamples={
                 success: `{
   "data": [
     {
@@ -557,7 +557,7 @@ print(data)`;
   }
 :src/components/developers/ApiDocumentation.tsx
 }`
-              }}
+              }
             />
             <EndpointSection
               method='GET'
@@ -571,13 +571,13 @@ print(data)`;
                   description: 'The job ID'
                   required: true
                 },              ]}
-              codeExamples={{
+              codeExamples={
                 curl: `curl -X GET "https://api.ziontechgroup.com/v1/jobs/job_abc123" \\
   -H "Authorization: Bearer YOUR_API_KEY" \\
   -H "Content-Type: application/json"`
                 javascript: `const jobId = 'job_abc123'
 }`;
-              }}
+              }
             />
             <EndpointSection
               method="GET"
@@ -587,7 +587,7 @@ print(data)`;
               params={[
                 { name: "id", type: "string", description: "The job ID", required: true }
               ]}
-              codeExamples={{
+              codeExamples={
                 curl: `curl -X GET "https://api.ziontechgroup.com/v1/jobs/job_abc123" \\
   -H "Authorization: Bearer YOUR_API_KEY" \\
   -H "Content-Type: application/json"`,
@@ -626,7 +626,7 @@ print(data)`
               params={[;
                 { name: "id", type: "string", description: "The job ID", required: true }
               ]}
-              codeExamples={{;
+              codeExamples={;
                 curl: `curl -X GET "https://api.ziontechgroup.com/v1/jobs/job_abc123" \\;
   -H "Authorization: Bearer YOUR_API_KEY" \\;
   -H "Content-Type: application/json"`,;
@@ -651,8 +651,8 @@ response = requests.get(;
 );
 data = response.json();
 print(data)`;
-              }}
-              responseExamples={{
+              }
+              responseExamples={
                 success: `{
   "data": {
     "id": "job_abc123",
@@ -673,7 +673,7 @@ print(data)`;
     "application_count": 12
   }
 }`
-              }}
+              }
             />
     },
     "status": "active",
@@ -683,7 +683,7 @@ print(data)`;
     "application_count": 12
   }
 }`;
-              }}
+              }
             />
             <EndpointSection
               method="POST"
@@ -745,7 +745,7 @@ print(data)`;
                 { name: "budget.currency", type: "string", description: "Currency code (default: USD)" },
                 { name: "deadline", type: "string", description: "Job deadline (ISO date string)" }
               ]}
-              codeExamples={{
+              codeExamples={
                 curl: `curl -X POST "https://api.ziontechgroup.com/v1/jobs" \\
   -H "Authorization: Bearer YOUR_API_KEY" \\
   -H "Content-Type: application/json" \\
@@ -834,8 +834,8 @@ response = requests.post(;
 );
 data = response.json();
 print(data)`;
-              }}
-              responseExamples={{
+              }
+              responseExamples={
                 success: `{
   "data": {
     "id": "job_def456",
@@ -855,7 +855,7 @@ print(data)`;
     "deadline": "2025-06-30T23:59:59Z"
   }
 }`
-              }}
+              }
             />
           </TabsContent>
           <TabsContent value='talent' className='space-y-6'>
@@ -866,7 +866,7 @@ print(data)`;
     "deadline": "2025-06-30T23:59:59Z"
   }
 }`;
-              }}
+              }
             />
           </TabsContent>
           <TabsContent value="talent" className="space-y-6">
@@ -903,7 +903,7 @@ print(data)`;
                 { name: "skills", type: "string[]", description: "Filter by skills (comma-separated)" },
                 { name: "availability", type: "string", description: "Filter by availability status" }
               ]}
-              codeExamples={{
+              codeExamples={
                 curl: `curl -X GET "https://api.ziontechgroup.com/v1/talent?skills=react,typescript" \\
   -H "Authorization: Bearer YOUR_API_KEY" \\
   -H "Content-Type: application/json"`,
@@ -945,8 +945,8 @@ response = requests.get(;
 );
 data = response.json();
 print(data)`;
-              }}
-              responseExamples={{
+              }
+              responseExamples={
                 success: `{
   "data": [
     {
@@ -969,7 +969,7 @@ print(data)`;
   }
 :src/components/developers/ApiDocumentation.tsx
 }`
-              }}
+              }
             />
             <EndpointSection
               method='GET'
@@ -983,13 +983,13 @@ print(data)`;
                   description: 'The talent ID'
                   required: true
                 },              ]}
-              codeExamples={{
+              codeExamples={
                 curl: `curl -X GET "https://api.ziontechgroup.com/v1/talent/talent_abc123" \\
   -H "Authorization: Bearer YOUR_API_KEY" \\
   -H "Content-Type: application/json"`
                 javascript: `const talentId = 'talent_abc123'
 }`;
-              }}
+              }
             />
             <EndpointSection
               method="GET"
@@ -999,7 +999,7 @@ print(data)`;
               params={[
                 { name: "id", type: "string", description: "The talent ID", required: true }
               ]}
-              codeExamples={{
+              codeExamples={
                 curl: `curl -X GET "https://api.ziontechgroup.com/v1/talent/talent_abc123" \\
   -H "Authorization: Bearer YOUR_API_KEY" \\
   -H "Content-Type: application/json"`,
@@ -1025,8 +1025,8 @@ response = requests.get(
 )
 data = response.json()
 print(data)`
-              }}
-              responseExamples = {{
+              }
+              responseExamples = {
   method: 'GET',
   headers: {
     'Authorization': 'Bearer YOUR_API_KEYContent-Type': 'application/json'
@@ -1039,7 +1039,7 @@ print(data)`
               params={[;
                 { name: "id", type: "string", description: "The talent ID", required: true }
               ]}
-              codeExamples={{;
+              codeExamples={;
                 curl: `curl -X GET "https://api.ziontechgroup.com/v1/talent/talent_abc123" \\;
   -H "Authorization: Bearer YOUR_API_KEY" \\;
   -H "Content-Type: application/json"`,;
@@ -1064,8 +1064,8 @@ response = requests.get(;
 );
 data = response.json();
 print(data)`;
-              }}
-              responseExamples={{
+              }
+              responseExamples={
                 success: `{
   "data": {
     "id": "talent_abc123",
@@ -1095,7 +1095,7 @@ print(data)`;
     ]
   }
 }`
-              }}
+              }
             />
           </TabsContent>
           <TabsContent value='quotes' className='space-y-6'>
@@ -1110,7 +1110,7 @@ print(data)`;
     ];
   }
 }`;
-              }}
+              }
             />
           </TabsContent>
           <TabsContent value="quotes" className="space-y-6">
@@ -1182,7 +1182,7 @@ print(data)`;
                 { name: "requester_name", type: "string", description: "Name of the requester", required: true },
                 { name: "requester_email", type: "string", description: "Email of the requester", required: true }
               ]}
-              codeExamples={{
+              codeExamples={
                 curl: `curl -X POST "https://api.ziontechgroup.com/v1/quotes" \\
   -H "Authorization: Bearer YOUR_API_KEY" \\
   -H "Content-Type: application/json" \\
@@ -1239,8 +1239,8 @@ response = requests.post(
 )
 data = response.json()
 print(data)`
-              }}
-              responseExamples = {{
+              }
+              responseExamples = {
     'Authorization': 'Bearer YOUR_API_KEYContent-Type': 'application/json'
   },
   body: JSON.stringify({
@@ -1278,8 +1278,8 @@ response = requests.post(;
 );
 data = response.json();
 print(data)`;
-              }}
-              responseExamples={{
+              }
+              responseExamples={
                 success: `{
   "data": {
     "id": "quote_def456",
@@ -1298,9 +1298,9 @@ print(data)`;
     "created_at": "2025-05-16T14:30:15Z"
   }
 :src/components/developers/ApiDocumentation.tsx
-}`,              }}
+}`,              }
 }`;
-              }}
+              }
             />
             <EndpointSection
               method="GET"
@@ -1330,7 +1330,7 @@ print(data)`;
                 { name: "limit", type: "integer", description: "Number of results per page (default: 20, max: 100)" },
                 { name: "status", type: "string", description: "Filter by status (new, viewed, replied, archived)" }
               ]}
-              codeExamples={{
+              codeExamples={
                 curl: `curl -X GET "https://api.ziontechgroup.com/v1/quotes" \\
   -H "Authorization: Bearer YOUR_API_KEY" \\
   -H "Content-Type: application/json"`,
@@ -1370,8 +1370,8 @@ response = requests.get(;
 );
 data = response.json();
 print(data)`;
-              }}
-              responseExamples={{
+              }
+              responseExamples={
                 success: `{
   "data": [
     {
@@ -1396,7 +1396,7 @@ print(data)`;
   }
 :src/components/developers/ApiDocumentation.tsx
 }`
-              }}
+              }
             />
           </TabsContent>
           <TabsContent value='webhooks' className='space-y-6'>
@@ -1427,7 +1427,7 @@ function verifyWebhookSignature(payload, signature, secret) {
   const hmac = crypto.createHmac('sha256', secret)
   const expectedSignature = hmac.update(payload).digest('hex')
 }`;
-              }}
+              }
             />
           </TabsContent>
           <TabsContent value="webhooks" className="space-y-6">

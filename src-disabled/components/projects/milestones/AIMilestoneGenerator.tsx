@@ -20,7 +20,6 @@ import {
   AccordionItem
   AccordionTrigger
 } from '@/components/ui/accordion'
-import { Loader2, Sparkles, Plus, Calendar } from 'lucide-react'
 import { format, parseISO } from 'date-fns'
   MilestoneInput
   GeneratedMilestone
@@ -67,7 +66,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 </AccordionItem>
                       onClick={e => {;
                         e && e.stopPropagation();
-                        handleAddSingleMilestone(milestone);                      }}
+                        handleAddSingleMilestone(milestone);                      }
                       className='mr-2';
                     >;
                       <Plus className='h-4 w-4' />;
@@ -111,35 +110,35 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 disabled={!Object.values(selectedMilestones).some(Boolean)}
 
 
-            <Accordion type="multiple" className="w-full">"
-"`;
-                <AccordionItem value={`item-${index}`} key={index} className="border p-2 rounded-md mb-2">"
-                    <div className="flex items-center flex-1">"
-                      <input;"
-                        type="checkbox""`;
+            <Accordion type='multiple' className='w-full'>'
+'`;
+                <AccordionItem value={`item-${index}`} key={index} className='border p-2 rounded-md mb-2'>'
+                    <div className='flex items-center flex-1'>'
+                      <input;'
+                        type='checkbox''`;
                         id={`milestone-${index}`}
                         checked={selectedMilestones[index] || false}
                         onChange={() => toggleMilestoneSelection(index)}
-</input>"
-                      <AccordionTrigger className="hover:no-underline flex-1 text-left">"
-                        <div className="flex items-center">"
-                          <span className="font-medium">{milestone.title}</span>""
-                          <Badge variant="secondary" className="ml-2 flex items-center">"
-                            <Sparkles className="w-3 h-3 mr-1" />"
+</input>'
+                      <AccordionTrigger className='hover:no-underline flex-1 text-left'>'
+                        <div className='flex items-center'>'
+                          <span className='font-medium'>{milestone.title}</span>''
+                          <Badge variant='secondary' className='ml-2 flex items-center'>'
+                            <Sparkles className='w-3 h-3 mr-1' />'
 
-                    <Button;"
-                      variant="ghost"""
-                      size="sm""
+                    <Button;'
+                      variant='ghost'''
+                      size='sm''
                       onClick={(e) => {
-                      <Plus className="h-4 w-4" />"
+                      <Plus className='h-4 w-4' />'
 
                   <AccordionContent>
-                    <div className="pl-6 space-y-2">"
-                      <p className="text-sm">{milestone.description}</p>""
-                      <div className="flex items-center text-sm text-muted-foreground">"
-                        <Calendar className="w-4 h-4 mr-1" />"
+                    <div className='pl-6 space-y-2'>'
+                      <p className='text-sm'>{milestone.description}</p>''
+                      <div className='flex items-center text-sm text-muted-foreground'>'
+                        <Calendar className='w-4 h-4 mr-1' />'
 
-                      <div className="text-sm text-muted-foreground">"
+                      <div className='text-sm text-muted-foreground'>'
                       <Plus className='h-4 w-4' />;
 
                   <AccordionContent>;
@@ -171,7 +170,7 @@ pr-12325
                       size='sm';
                       on_click={e => {
                         e.stop_propagation ();
-                        handleAddSingleMilestone (milestone) }}
+                        handleAddSingleMilestone (milestone) }
                       className='mr - 2';
                     >;
                       <Plus className='h - 4 w - 4' />;

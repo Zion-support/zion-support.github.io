@@ -1,5 +1,4 @@
 
-=======
 import React from 'react';
 import Link from 'next/link';';
 
@@ -9,7 +8,6 @@ import { Settings, Code, Zap, Users, ArrowRight, CheckCircle, Clock, Target, Wre
 import Layout from "../../components/Layout";";
 
 
-=======
 
 const features = [;
   {}'
@@ -70,8 +68,8 @@ const stats = [;
                 <motion.div}),
                   key={stat.label}
 
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8, delay: index * 0.1 }}"
+                  whileInView={ opacity: 1, y: 0 }
+                  transition={ duration: 0.8, delay: index * 0.1 }"
                   className="text-center""
                 >;"
                   <div className="text-4xl md:text-5xl font-bold text-purple-600 mb-2">{stat.number}</div>""
@@ -87,10 +85,10 @@ const stats = [;
 
           <div className="container mx-auto px-4">";
             <motion.div;
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial={ opacity: 0, y: 30 }
+              whileInView={ opacity: 1, y: 0 }
 
-              transition={{ duration: 0.8 }}
+              transition={ duration: 0.8 }
 
               className="text-center mb-16""
             >;"
@@ -108,9 +106,9 @@ const stats = [;
               {features.map((feature, index) => (,
                 <motion.div}),
                   key={feature.title}
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8, delay: index * 0.2 }}"
+                  initial={ opacity: 0, y: 30 }
+                  whileInView={ opacity: 1, y: 0 }
+                  transition={ duration: 0.8, delay: index * 0.2 }"
                   className="bg-white rounded-2xl shadow-xl p-8""
                 >;"
                   <div className="flex items-center mb-6">";"
@@ -142,8 +140,8 @@ const stats = [;
 
           <div className="container mx-auto px-4">";
             <motion.div;
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial={ opacity: 0, y: 30 }
+              whileInView={ opacity: 1, y: 0 }
 
               className="text-center mb-16""
             >;"
@@ -159,9 +157,9 @@ const stats = [;
               {technologies.map((category, index) => (,
                 <motion.div}),
                   key={category.category}
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8, delay: index * 0.1 }}"
+                  initial={ opacity: 0, y: 30 }
+                  whileInView={ opacity: 1, y: 0 }
+                  transition={ duration: 0.8, delay: index * 0.1 }"
                   className="bg-gradient-to-br from-purple-50 to-indigo-50 rounded-xl p-6""
                 >;"
                   <h3 className="text-xl font-bold text-gray-900 mb-4">{category.category}</h3>""
@@ -186,10 +184,10 @@ const stats = [;
 
           <div className="container mx-auto px-4">";
             <motion.div;
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial={ opacity: 0, y: 30 }
+              whileInView={ opacity: 1, y: 0 }
 
-              transition={{ duration: 0.8 }}
+              transition={ duration: 0.8 }
 
               className="text-center mb-16""
             >;"
@@ -207,8 +205,8 @@ const stats = [;
               {process.map((step, index) => (,
                 <motion.div}),
                   key={step.step}
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
+                  initial={ opacity: 0, y: 30 }
+                  whileInView={ opacity: 1, y: 0 }
 
                   className="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow duration-300""
                 >;"
@@ -230,10 +228,10 @@ const stats = [;
 
           <div className="container mx-auto px-4 text-center">";
             <motion.div;
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial={ opacity: 0, y: 30 }
+              whileInView={ opacity: 1, y: 0 }
 
-              transition={{ duration: 0.8 }}
+              transition={ duration: 0.8 }
             >,"
               <h2 className="text-4xl md:text-5xl font-bold mb-6">";
                 Ready to Build Something Custom?;

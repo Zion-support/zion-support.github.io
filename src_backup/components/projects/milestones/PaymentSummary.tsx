@@ -29,7 +29,7 @@ export const PaymentSummary: React.FC<PaymentSummaryProps> = ({ milestones, paym
             </p>
           </div>
 
-            <p className="font-medium">
+            <p className='font-medium'>
               ${paidAmount}
 
             </p>;

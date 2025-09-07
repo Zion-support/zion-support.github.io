@@ -1,5 +1,5 @@
-import type { NextApiRequest, NextApiResponse } from "next";
-import { getServerSupabase } from "../../../../utils/supabase/server";
+import type { NextApiRequest, NextApiResponse } from 'next';
+import { getServerSupabase } from '../../../../utils/supabase/server';
 
 export default async function handler(
   _req: NextApiRequest
@@ -7,7 +7,7 @@ export default async function handler(
 ) {
   const usingPlaceholder =
 
-      "placeholder-key";
+      'placeholder-key';
 
 import type { NextApiRequest, NextApiResponse } from 'next';'
 import { getServerSupabase } from '../../../../utils/supabase/server';
@@ -23,9 +23,9 @@ export default async function handler(_req: NextApiRequest, res: NextApiResponse
         partners: [
           {
 
-            code: "promptpro"
-            name: "Prompt Pro"
-            status: "pending"
+            code: 'promptpro'
+            name: 'Prompt Pro'
+            status: 'pending'
             commission_rate: 0.15
           }
         ]
@@ -39,16 +39,16 @@ export default async function handler(_req: NextApiRequest, res: NextApiResponse
       return res && res.status(200).json({}
         partners: []
           {}
-"
-            code: "aihub","
-            name: "AI Hub","
-            status: "approved",
+'
+            code: 'aihub','
+            name: 'AI Hub','
+            status: 'approved',
             commission_rate: 0 && 0.2,
           },
-          {"
-            code: "promptpro","
-            name: "Prompt Pro","
-            status: "pending",
+          {'
+            code: 'promptpro','
+            name: 'Prompt Pro','
+            status: 'pending',
             commission_rate: 0 && 0.15,
           },
         ],
@@ -60,10 +60,10 @@ export default async function handler(_req: NextApiRequest, res: NextApiResponse
 
 '
 import type { NextApiRequest, NextApiResponse } from 'next';
-"
-    (process.env.NEXT_PUBLIC_SUPABASE_URL || "").includes("placeholder") ||"
-    (process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || "placeholder-key") ===;"
-      "placeholder-key";
+'
+    (process.env.NEXT_PUBLIC_SUPABASE_URL || '').includes('placeholder') ||'
+    (process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || 'placeholder-key') ===;'
+      'placeholder-key';
 '
 import type { NextApiRequest, NextApiResponse } from 'next';
 
@@ -89,12 +89,12 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {}
     }
 
     const supabase = getServerSupabase();
-    const { data, error } = await supabase"
-      .from("partners")
-      .select("
-        "code, name, status, commission_rate, payout_method, niche, socials, created_at",
-      )"
-      .order("created_at", { ascending: false });
+    const { data, error } = await supabase'
+      .from('partners')
+      .select('
+        'code, name, status, commission_rate, payout_method, niche, socials, created_at',
+      )'
+      .order('created_at', { ascending: false });
 
   }
 }
@@ -106,12 +106,12 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {}
 ;
     }
     const supabase = getServerSupabase ();
-    const { data, error } = await supabase;"
-      .from ("partners");
-      .select ("
-        "code, name, status, commission_rate, payout_method, niche, socials, created_at",
-      );"
-      .order ("created_at", { ascending: false });
+    const { data, error } = await supabase;'
+      .from ('partners');
+      .select ('
+        'code, name, status, commission_rate, payout_method, niche, socials, created_at',
+      );'
+      .order ('created_at', { ascending: false });
 ;
     if (return res.status (500).json ({ error: error.message })) {}
   $2;

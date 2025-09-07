@@ -1,3 +1,67 @@
+<<<<<<< HEAD:src-disabled/components/resume-builder/forms/AIEnhancementButton.tsx
+=======
+<<<<<<< HEAD
+import { Button } from '@/components/ui/button'
+import { Sparkles, Loader2 } from 'lucide-react'
+import { useResumeEnhancer } from '@/hooks/useResumeEnhancer'
+interface AIEnhancementButtonProps {
+  currentContent: string
+  enhancementType:
+    | 'summary'
+    | 'work-description'
+    | 'skill-categorization'
+    | 'general'
+  context?: string
+  onEnhanced: (enhancedContent: string) => void
+  buttonText?: string
+  className?: string
+
+
+export function AIEnhancementButton({
+import { Button } from '@/components/ui/button'
+import { Sparkles, Loader2 } from 'lucide-react'
+import { useResumeEnhancer } from '@/hooks/useResumeEnhancer'
+interface AIEnhancementButtonProps {
+  currentContent: string
+  enhancementType:
+    | 'summary'
+    | 'work-description'
+    | 'skill-categorization'
+    | 'general'
+  context?: string
+  onEnhanced: (enhancedContent: string) => void
+  buttonText?: string
+  className?: string
+
+import { useState  } from 'react';
+import { Button  } from '@/components/ui/button';
+import { Sparkles, Loader2 } from 'lucide-react'
+import { useResumeEnhancer } from '@/hooks/useResumeEnhancer';
+interface AIEnhancementButtonProps {
+  currentContent: string;
+  enhancementType: 'summary' | 'work-description' | 'skill-categorization' | 'general';
+  context?: string;
+  onEnhanced: (enhancedContent: string) => void;
+  buttonText?: string;
+  className?: string
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+export function AIEnhancementButton({
+
+  currentContent
+  enhancementType
+  context
+  onEnhanced
+  buttonText = 'Enhance with AI'
+  className
+}: AIEnhancementButtonProps) {
+<<<<<<< HEAD
+  const { enhanceContent, isEnhancing } = useResumeEnhancer()
+  const [error, setError] = useState<string | null>(null)
+  const handleEnhance = async () => {
+    if (!currentContent |currentContent.trim().length < 10) {
+      setError('Please enter at least some basic content before enhancing')
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:src/components/resume-builder/forms/AIEnhancementButton.tsx
 import { useState } from 'react',;
 import { Button } from '@/components/ui/button',;
 import { Sparkles, Loader2 } from 'lucide-react';
@@ -20,11 +84,43 @@ export function AIEnhancementButton({
 
   className
 }:,  AIEnhancementButtonProps) {
-  buttonText = "Enhance with AI","
+  buttonText = 'Enhance with AI','
   className;)
 pr-12325
 }: AIEnhancementButtonProps) {
+  const { enhanceContent, isEnhancing } = useResumeEnhancer()
+  const [error, setError] = useState<string | null>(null)
+  const handleEnhance = async () => {
+    if (!currentContent || currentContent.trim().length < 10) {
+      setError('Please enter at least some basic content before enhancing')
+      return;
+    }
 
+    setError(null)
+    const enhancedContent = await enhanceContent(
+      currentContent,
+      enhancementType,
+      context
+    )
+    if (enhancedContent) {
+      onEnhanced(enhancedContent)
+    }
+  }
+  const { enhanceContent, isEnhancing } = useResumeEnhancer(),
+  const [error, setError] = useState<string | null>(null),
+  
+  const handleEnhance = async () => {
+    if (!currentContent || currentContent.trim().length < 10) {
+      setError('Please enter at least some basic content before enhancing'),
+=======
+
+<<<<<<< HEAD:src-disabled/components/resume-builder/forms/AIEnhancementButton.tsx
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+      return
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:src/components/resume-builder/forms/AIEnhancementButton.tsx
     }
     setError(null)
     const enhancedContent = await enhanceContent(
@@ -56,9 +152,55 @@ export function AIEnhancementButton(): any ({;
       setError('Please enter at least some basic content before enhancing');
       return;
     }
+  }
 
+<<<<<<< HEAD:src-disabled/components/resume-builder/forms/AIEnhancementButton.tsx
+=======
+    }
+  }
+
+  },
+  
+  return (
+    <Button
+      type="button"
+      variant="ghost"
+      size="sm"
+      className={`h-6 gap-1 text-primary hover:text-primary ${className}`}
+      onClick = {handleEnhance,}
+      disabled = {isEnhancing,}
+      {isEnhancing ? (
+        <Loader2 className="h-3 w-3 animate-spin" />
+      ) : (
+      onClick = {handleEnhance,}
+      disabled = {isEnhancing,}
+      onClick={handleEnhance}
+      disabled={isEnhancing}
+    >
+      {isEnhancing ? (
+        <Loader2 className="h-3 w-3 animate-spin" />
+      ) : (
+        <Sparkles className="h-3 w-3" />
+      )}
+      <span className="text-xs">{buttonText}</span>
+    </Button>
+        <Sparkles className='h-3 w-3' />;
+      )};
+      <span className='text-xs'>{buttonText}</span>;
+    </Button>;
+  );      onClick={handleEnhance}
+      disabled={isEnhancing}
+    >
+      {isEnhancing ? (
+        <Loader2 className="h-3 w-3 animate-spin" />
+      ) : (
+        <Sparkles className="h-3 w-3" />
+      )}
+      <span className="text-xs">{buttonText}</span>
+    </Button>
+  )
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:src/components/resume-builder/forms/AIEnhancementButton.tsx
 import { Button } from '@/components / ui / button';
-import { Sparkles, Loader2 } from 'lucide-react';
 
 import { useResumeEnhancer } from '@/hooks / useResumeEnhancer';
 
@@ -68,13 +210,11 @@ import { useResumeEnhancer } from '@/hooks / useResumeEnhancer';
   className,;)
 }: AIEnhancementButtonProps) {;
   const { enhanceContent, isEnhancing } = useResumeEnhancer();
-  const [error, setError] = useState<string | null>(null);
 </string>
     if (!currentContent || currentContent && currentContent.trim().length < 10) {;
       setError('Please enter at least some basic content before enhancing');
 
 import { Button } from '@/components/ui/ button';
-import { Sparkles, Loader2 } from 'lucide-react';
 import { useResumeEnhancer } from '@/hooks/ useResumeEnhancer';
 interface AIEnhancementButtonProps {
   // TODO: Implement
@@ -88,6 +228,7 @@ pr-12325
   class_name?: string;
 
   const [error, set_error] = useState < string | null>(null);
+<<<<<<< HEAD:src-disabled/components/resume-builder/forms/AIEnhancementButton.tsx
   const handle_enhance = async () => {}
     // Check condition;
 if (.length < 10) {) {}
@@ -104,6 +245,14 @@ if (.length < 10) {) {}
     // Check condition;
 if ( {) {}
   $2;
+=======
+  const handle_enhance = async () => {
+    // Check condition
+if (.length < 10) {) {
+  $2
+}
+;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:src/components/resume-builder/forms/AIEnhancementButton.tsx
 }
       on_enhanced (enhanced_content);
     }
@@ -119,21 +268,21 @@ if ( {) {}
 
     >
       {isEnhancing ? (
-        <Loader2 className="h-3 w-3 animate-spin" />
+        <Loader2 className='h-3 w-3 animate-spin' />
       ) : (
 
-        <Sparkles className="h-3 w-3" />
+        <Sparkles className='h-3 w-3' />
       )}
 
-      <span className="text-xs">{buttonText}</span>;
+      <span className='text-xs'>{buttonText}</span>;
     </Button>;
   );
 }
 
     <Button;
-      type="button";
-      variant="ghost";
-      size="sm";
+      type='button';
+      variant='ghost';
+      size='sm';
       className={`h - 6 gap - 1 text - primary hover:text - primary ${class_name}`}
       on_click = {handle_enhance, }
       disabled = {is_enhancing, }
@@ -146,9 +295,9 @@ if ( {) {}
       disabled={is_enhancing}
     >;
       {is_enhancing ? (
-        <Loader2 className="h - 3 w - 3 animate - spin" />) : (
-        <Sparkles className="h - 3 w - 3" />)}
-      <span className="text - xs">{button_text}</span>;
+        <Loader2 className='h - 3 w - 3 animate - spin' />) : (
+        <Sparkles className='h - 3 w - 3' />)}
+      <span className='text - xs'>{button_text}</span>;
     </Button>);
 }
 
@@ -156,15 +305,14 @@ if ( {) {}
 }
 ;
 
+<<<<<<< HEAD:src-disabled/components/resume-builder/forms/AIEnhancementButton.tsx
 import { useState } from 'react';
 import { Button } from '@/components/ui/button';
-import { Sparkles, Loader2 } from 'lucide-react';
 import { useResumeEnhancer } from '@/hooks/useResumeEnhancer';
 
 import { useState  } from 'react';
 import { Button  } from '@/components/ui/button';
 import { Sparkles, Loader2 } from 'lucide-react'
-import { useResumeEnhancer } from '@/hooks/useResumeEnhancer';
 interface AIEnhancementButtonProps {
   currentContent: string;
   enhancementType: 'summary' | 'work-description' | 'skill-categorization' | 'general';
@@ -181,19 +329,19 @@ export function AIEnhancementButton({
 
   return (
     <Button
-      type="button"
-      variant="ghost"
-      size="sm"
+      type='button'
+      variant='ghost'
+      size='sm'
       className={`h-6 gap-1 text-primary hover:text-primary ${className}`}
       onClick={handleEnhance}
       disabled={isEnhancing}
     >
       {isEnhancing ? (
-        <Loader2 className="h-3 w-3 animate-spin" />
+        <Loader2 className='h-3 w-3 animate-spin' />
       ) : (
-        <Sparkles className="h-3 w-3" />
+        <Sparkles className='h-3 w-3' />
       )}
-      <span className="text-xs">{buttonText}</span>
+      <span className='text-xs'>{buttonText}</span>
     </Button>
   )
 }
@@ -209,3 +357,15 @@ export function AIEnhancementButton({
       <span className='text-xs'>{buttonText}</span>
     </Button>
   );
+=======
+<<<<<<< HEAD
+  )
+}
+;
+;
+}
+;
+=======
+;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:src/components/resume-builder/forms/AIEnhancementButton.tsx

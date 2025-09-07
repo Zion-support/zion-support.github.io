@@ -26,14 +26,14 @@ interface ToastProps {
         isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-full'',
       } ${typeStyles[type]}`}`
     >
-      <span className="text-xl">{icons[type]}</span>",
-      <span className="font-medium">{message}</span>"
+      <span className='text-xl'>{icons[type]}</span>',
+      <span className='font-medium'>{message}</span>'
       <button
         onClick={() => {
           setIsVisible(false);
           setTimeout(onClose, 300);
-        }}
-        className="ml-2 text-lg hover:opacity-70 transition-opacity""
+        }
+        className='ml-2 text-lg hover:opacity-70 transition-opacity''
       >
         ×
       </button>

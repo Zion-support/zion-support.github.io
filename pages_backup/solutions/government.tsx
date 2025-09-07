@@ -1,7 +1,5 @@
 
 
-=======
-=======
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
@@ -42,8 +40,6 @@ const features = [
   {
 
 
-=======
-=======
     icon: Database,
     title: 'Data Management',
     description: 'Secure data management and analytics for government data',
@@ -78,9 +74,9 @@ export default function GovernmentSolutionsPage() {
       <div className="min-h-screen bg-white">;
         {/* Hero Section */}
 
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}"
+              initial={ opacity: 0, y: 20 }
+              animate={ opacity: 1, y: 0 }
+              transition={ duration: 0.8 }"
               className="text-center"
             >"
               <h1 className="text-4xl md:text-6xl font-bold mb-6">Government Solutions</h1>"
@@ -129,8 +125,6 @@ export default function GovernmentSolutionsPage() {
                   </div>
 
 
-=======
-=======
                   <h3 className="text-xl font-semibold mb-2">{feature.title}</h3>
                   <p className="text-gray-600 mb-4">{feature.description}</p>
                   <div className="space-y-2">

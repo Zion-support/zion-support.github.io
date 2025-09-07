@@ -1,7 +1,5 @@
 
 
-=======
-=======
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
@@ -38,8 +36,6 @@ const features = [
     icon: Users,
 
 
-=======
-=======
     title: 'Provider Management',
     description: 'Comprehensive provider and staff management solutions',
     benefits: ['Provider profiles', 'Scheduling', 'Communication', 'Performance tracking']
@@ -73,9 +69,9 @@ export default function HealthcareSolutionsPage() {
       <div className="min-h-screen bg-white">;
         {/* Hero Section */}
 
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}"
+              initial={ opacity: 0, y: 20 }
+              animate={ opacity: 1, y: 0 }
+              transition={ duration: 0.8 }"
               className="text-center"
             >"
               <h1 className="text-4xl md:text-6xl font-bold mb-6">Healthcare Solutions</h1>"
@@ -123,8 +119,6 @@ export default function HealthcareSolutionsPage() {
                   </div>
 
 
-=======
-=======
                   <h3 className="text-xl font-semibold mb-2">{feature.title}</h3>
                   <p className="text-gray-600 mb-4">{feature.description}</p>
                   <div className="space-y-2">

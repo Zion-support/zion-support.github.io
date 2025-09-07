@@ -13,19 +13,19 @@ const [selectedCategory, setSelectedCategory] = useState('all')'';
 const [searchTerm, setSearchTerm] = useState('')'';
 
 const categories = ['';
-    {id: 'all'}
+    { id: 'all',}
   name: 'All Services', icon: '🌟',}
 }, '';
-    {id: 'micro-saas'}
+    { id: 'micro-saas',}
   name: 'Micro SAAS', icon: '💻',}
 },'';
-    {id: 'it-services'}
+    { id: 'it-services',}
   name: 'IT Services', icon: '🖥️',}
 }, '';
-    {id: 'ai-services'}
+    { id: 'ai-services',}
   name: 'AI Services', icon: '🤖',}
 },'';
-    {id: 'emerging-tech'}
+    { id: 'emerging-tech',}
   name: 'Emerging Tech', icon: '🚀',}
 }
   ];
@@ -37,7 +37,7 @@ const filteredServices = enhancedServices2025.filter(service => {}
       service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||;
       service.tagline.toLowerCase().includes(searchTerm.toLowerCase())return matchesCategory && matchesSearch;
   })const containerVariants = {}
-    hidden: {opacity: 0}
+    hidden: { opacity: 0,}
 }, visible:  ,
 }
       opacity: 1, transition:  ,
@@ -58,10 +58,10 @@ const filteredServices = enhancedServices2025.filter(service => {}
         <div className='max-w-7xl mx-auto text-center' />'''';
           <motion.h1'''';
             className='text-4xl md:text-6xl font-bold mb-6''';
-            initial={{ opacity: 0, y: 20 ,}
+            initial={ opacity: 0, y: 20 ,}
 }
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{duration: 0.6 }
+            transition={{ duration: 0.6 ,}
 }
            />'''';
             Comprehensive'''';
@@ -72,11 +72,11 @@ const filteredServices = enhancedServices2025.filter(service => {}
           </motion.h1>'''';
           <motion.p'''';
             className='text-xl text-gray-300 mb-8 max-w-4xl mx-auto''';
-            initial={{ opacity: 0, y: 20 ,}
+            initial={ opacity: 0, y: 20 ,}
 }
-            whileInView={{ opacity: 1, y: 0 ,}
+            whileInView={ opacity: 1, y: 0 ,}
 }
-            transition={{ duration: 0.6, delay: 0.2 ,}
+            transition={ duration: 0.6, delay: 0.2 ,}
 }
            />;
             Discover our extensive portfolio of innovative micro SAAS services, enterprise IT solutions, cutting-edge AI services, and emerging;
@@ -84,11 +84,11 @@ const filteredServices = enhancedServices2025.filter(service => {}
           {/* Contact Information */}'''';
           <motion.div'''';
             className='bg-white/10 backdrop-blur-lg rounded-xl p-6 mb-8 max-w-2xl mx-auto''';
-            initial={{ opacity: 0, y: 20 ,}
+            initial={ opacity: 0, y: 20 ,}
 }
-            whileInView={{ opacity: 1, y: 0 ,}
+            whileInView={ opacity: 1, y: 0 ,}
 }
-            transition={{ duration: 0.6, delay: 0.4 ,}
+            transition={ duration: 0.6, delay: 0.4 ,}
 }'''';
            />'''';
             <div className='grid grid-cols-1 md:grid-cols-3 gap-4 text-sm' />'''';
@@ -109,11 +109,11 @@ const filteredServices = enhancedServices2025.filter(service => {}
           {/* Search and Filter */}'''';
           <motion.div'''';
             className='flex flex-col md:flex-row gap-4 justify-center items-center mb-12''';
-            initial={{ opacity: 0, y: 20 ,}
+            initial={ opacity: 0, y: 20 ,}
 }
-            whileInView={{ opacity: 1, y: 0 ,}
+            whileInView={ opacity: 1, y: 0 ,}
 }
-            transition={{ duration: 0.6, delay: 0.6 ,}
+            transition={ duration: 0.6, delay: 0.6 ,}
 }
            />'''';
             <input'''';
@@ -151,7 +151,7 @@ const filteredServices = enhancedServices2025.filter(service => {}
             variants={containerVariants}'''';
             initial='hidden''''';
             whileInView='visible''';
-            viewport={{once: true }
+            viewport={{ once: true ,}
 }
            />;
             {filteredServices.map((service, index) => (<motion.div;}
@@ -273,7 +273,7 @@ const filteredServices = enhancedServices2025.filter(service => {}
             <motion.div'''';}
               className='text-center py-12''';}
               initial={{ opacity: 0 }}
-              animate={{opacity: 1 }
+              animate={{ opacity: 1 ,}
 }'''';
              />'''';
               <p className='text-gray-400 text-lg' />;
@@ -283,7 +283,7 @@ const filteredServices = enhancedServices2025.filter(service => {}
 '';
                   setSelectedCategory('all')'';
                   setSearchTerm('')';';
-                }}'''';
+                }'''';
                 className='mt-4 px-6 py-2 bg-blue-600 text-white rounded-lg hover: bg-blue-700 transition-colors duration-300 '>;
                 View All Services;
               </button>;
@@ -297,21 +297,21 @@ const filteredServices = enhancedServices2025.filter(service => {}
         <div className='max-w-4xl mx-auto text-center' />'''';
           <motion.h2'''';
             className='text-3xl md: text-4xl font-bold text-white mb-6''';
-            initial={{ opacity: 0, y: 20 ,}
+            initial={ opacity: 0, y: 20 ,}
 }
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{duration: 0.6 }
+            transition={{ duration: 0.6 ,}
 }
            />;
             Ready to Transform Your Business?;
           </motion.h2>'''';
           <motion.p'''';
             className='text-xl text-gray-300 mb-8''';
-            initial={{ opacity: 0, y: 20 ,}
+            initial={ opacity: 0, y: 20 ,}
 }
-            whileInView={{ opacity: 1, y: 0 ,}
+            whileInView={ opacity: 1, y: 0 ,}
 }
-            transition={{ duration: 0.6, delay: 0.2 ,}
+            transition={ duration: 0.6, delay: 0.2 ,}
 }
            />'';
             Let&apos;s discuss how our innovative services can help drive your'';
@@ -320,11 +320,11 @@ const filteredServices = enhancedServices2025.filter(service => {}
 '''';
           <motion.div'''';
             className='flex flex-col sm: flex-row gap-4 justify-center mb-8''';
-            initial={{ opacity: 0, y: 20 ,}
+            initial={ opacity: 0, y: 20 ,}
 }
-            whileInView={{ opacity: 1, y: 0 ,}
+            whileInView={ opacity: 1, y: 0 ,}
 }
-            transition={{ duration: 0.6, delay: 0.4 ,}
+            transition={ duration: 0.6, delay: 0.4 ,}
 }
            />'''';
             <Link'''';
@@ -341,11 +341,11 @@ const filteredServices = enhancedServices2025.filter(service => {}
 '''';
           <motion.div'''';
             className='bg-white/10 backdrop-blur-lg rounded-xl p-6 max-w-2xl mx-auto''';
-            initial={{ opacity: 0, y: 20 ,}
+            initial={ opacity: 0, y: 20 ,}
 }
-            whileInView={{ opacity: 1, y: 0 ,}
+            whileInView={ opacity: 1, y: 0 ,}
 }
-            transition={{ duration: 0.6, delay: 0.6 ,}
+            transition={ duration: 0.6, delay: 0.6 ,}
 }'''';
            />'''';
             <h3 className='text-lg font-semibold text-white mb-4' />;
@@ -374,9 +374,9 @@ const filteredServices = enhancedServices2025.filter(service => {}
           <motion.div'''';
             className='mt-8 text-sm text-gray-400''';
             initial={{ opacity: 0 }}
-            whileInView={{opacity: 1 }
+            whileInView={{ opacity: 1 ,}
 }
-            transition={{ duration: 0.6, delay: 0.8 ,}
+            transition={ duration: 0.6, delay: 0.8 ,}
 }
            />;
             <p />Email: kleber@ziontechgroup.com</p>;

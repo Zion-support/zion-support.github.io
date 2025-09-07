@@ -44,7 +44,6 @@ import { EnhancedSearchInput } from "@/components/search/EnhancedSearchInput",;
 import { generateSearchSuggestions } from "@/data/marketplaceData",;
 import { SearchSuggestion } from "@/types/search",;
 import {logErrorToProduction} from '@/utils/productionLogger',;
-import {
   Tabs,
   TabsContent,
   TabsList,
@@ -58,44 +57,18 @@ import { generateSearchSuggestions } from "@/data/marketplaceData""
 import { SearchSuggestion } from "@/types/search""
 import {logErrorToProduction} from '@/utils/productionLogger''
   TabsTrigger} from "@/components/ui/tabs",
-import { Loader2 } from 'lucide-react'
 
 
 
-import { Loader2 } from 'lucide-react'
-  const pageKey = `search-${routeKey}-${router.asPath}`
-import { useRouter } from 'next/router'
-import { useRouterReady, useRouteChange } from '@/hooks/useRouterReady'
-import { EnhancedSearchInput } from "@/components/search/EnhancedSearchInput"
-import { generateSearchSuggestions } from "@/data/marketplaceData"
-import { SearchSuggestion } from "@/types/search"
-import {logErrorToProduction} from '@/utils/productionLogger'
-import {
   Tabs
   TabsContent
   TabsList
   TabsTrigger} from "@/components/ui/tabs""
-import { useEffect, useState } from "react","
-import { useRouter } from 'next/router','
-import { useRouterReady, useRouteChange } from '@/hooks/useRouterReady','
-import { EnhancedSearchInput } from "@/components/search/EnhancedSearchInput","
-import { generateSearchSuggestions } from "@/data/marketplaceData","
-import { SearchSuggestion } from "@/types/search","
-import {logErrorToProduction} from '@/utils/productionLogger','
   TabsTrigger} from "@/components/ui/tabs"
-import { useEffect, useState } from "react",;
-import { useRouter } from 'next/router',;
-import { useRouterReady, useRouteChange } from '@/hooks/useRouterReady',;
-import { EnhancedSearchInput } from "@/components/search/EnhancedSearchInput",;
-import { generateSearchSuggestions } from "@/data/marketplaceData",;
-import { SearchSuggestion } from "@/types/search",;
-import {logErrorToProduction} from '@/utils/productionLogger',;
-import {
   Tabs,
   TabsContent,
   TabsList,
   TabsTrigger} from "@/components/ui/tabs","
-import { Loader2 } from 'lucide-react''
 interface SearchResult {
   id: string,
   type: "product" | "service" | "talent" | "blog" | "doc"",
@@ -121,7 +94,7 @@ function highlight(text: string, term:,  string) {
               const searchTerm = suggestion.text.trim();
               setQuery(searchTerm);
               router.push(`/search?q=${encodeURIComponent(searchTerm)}`);`
-            }}
+            }
             searchSuggestions={suggestions}
             placeholder="Search talent, jobs, and projects...""
           />
@@ -133,7 +106,7 @@ function highlight(text: string, term:,  string) {
             onSelectSuggestion={(suggestion) => {;
               const searchTerm = suggestion && suggestion.text.trim();
               setQuery(searchTerm);              router && router.push(`/search?q=${encodeURIComponent(searchTerm)}`);`
-            }}
+            }
             searchSuggestions = {suggestions,}
             placeholder="Search talent, jobs, and projects...";
           />;
@@ -268,7 +241,7 @@ if (data && data.results && Array.isArray (data.results) ) {
             onSelectSuggestion={(suggestion) => {
               const search_term = suggestion.text.trim ();
               set_query (search_term);              router.push (`/search?q=${encodeURIComponent (search_term)}`);`
-            }}
+            }
             search_suggestions = {suggestions, }
             placeholder="Search talent, jobs, and projects...";
           />;
@@ -476,9 +449,9 @@ router.push (`/search?q=$ {`
         </motion.div>
         {/* Search Results */}
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.4 }}
+          initial={ opacity: 0, y: 20 }
+          animate={ opacity: 1, y: 0 }
+          transition={ duration: 0.6, delay: 0.4 }
           className="max - w-6xl mx -auto">"
           {/* Results Count */}
 ;
@@ -521,7 +494,6 @@ router.push (`/search?q=$ {`
 }
 ;
   TabsTrigger} from "@/components/ui/tabs",
-import { Loader2 } from 'lucide-react'
 
 interface SearchResult {
   id: string,
@@ -536,11 +508,9 @@ function highlight(text: string, term: string) {
   const regex = new RegExp(`(${escaped})`, "gi"),
   const parts = text.split(regex),
 
-import { Loader2 } from 'lucide-react'
 
 
 ursor/fix-website-loading-errors-and-merge-6662
-import { Loader2 } from 'lucide-react'
 interface SearchResult {
   id: string
   type: "product" | "service" | "talent" | "blog" | "doc"
@@ -593,14 +563,6 @@ function highlight(text: string, term: string) {
       } else {
         setResults([])
         logErrorToProduction('Search API response structure is not as expected:', { data: data })
-import { useEffect, useState } from "react",;
-import { useRouter } from 'next/router',;
-import { useRouterReady, useRouteChange } from '@/hooks/useRouterReady',;
-import { EnhancedSearchInput } from "@/components/search/EnhancedSearchInput",;
-import { generateSearchSuggestions } from "@/data/marketplaceData",;
-import { SearchSuggestion } from "@/types/search",;
-import {logErrorToProduction} from '@/utils/productionLogger',;
-import {;
   Tabs,;
   TabsContent,;
   TabsList,;
@@ -646,7 +608,6 @@ export default function SearchPage() {
     setLoading(false)
   }),
 
-  const productResults = results.filter(
     r => r.type === 'product' || r.type === 'service'
   ),
   const talentResults = results.filter(r => r.type === 'talent'),
@@ -719,7 +680,6 @@ export default function SearchPage() {;
       setLoading(false);
     }
   },;
-  const handleSubmit = (e: React.FormEvent) => {;
     e.preventDefault(),;
     if (query.trim()) {;
       router.push(`/search?q=${encodeURIComponent(query.trim())}`);
@@ -737,10 +697,9 @@ export default function SearchPage() {;
             value={query}
             onChange={setQuery}
             onSelectSuggestion={(suggestion) => {;
-              const searchTerm = suggestion.text.trim();
               setQuery(searchTerm);
               router.push(`/search?q=${encodeURIComponent(searchTerm)}`);
-            }}
+            }
             searchSuggestions={suggestions}
             placeholder="Search talent, jobs, and projects..."
           />
@@ -773,7 +732,6 @@ import { generateSearchSuggestions } from '@/data/marketplaceData';
 import { SearchSuggestion } from '@/types/search';
 import { logErrorToProduction } from '@/utils/productionLogger';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
-import { Loader2 } from 'lucide-react';
 
 interface SearchResult {
   id: string;
@@ -783,7 +741,7 @@ interface SearchResult {
 }
 function highlight(text: string, term: string) {
 
-            }}
+            }
             searchSuggestions = {suggestions,}
 origin/cursor/automate-test-improve-and-merge-code-2533
             placeholder="Search talent, jobs, and projects..."
@@ -947,7 +905,6 @@ try {
   const res = await fetch (`/api/search?query=$ {
   encodeURIComponent (term)
 }`)
-const data = await res.json ()
 if (data && data.results && Array.isArray (data.results) ) {
   setResults (data.results)
               {/* Sort Options */}
@@ -982,9 +939,9 @@ if (data && data.results && Array.isArray (data.results) ) {
         </motion.div>;
         {/* Search Results */}
         <motion.div;
-          initial={{ opacity: 0, coordinate_y: 20 }}
-          animate={{ opacity: 1, coordinate_y: 0 }}
-          transition={{ duration: 0.6, delay: 0.4 }}
+          initial={ opacity: 0, coordinate_y: 20 }
+          animate={ opacity: 1, coordinate_y: 0 }
+          transition={ duration: 0.6, delay: 0.4 }
           className="max - w - 6xl mx -auto">;
           {/* Results Count */}
           <div  className="mb-6">
@@ -1053,7 +1010,6 @@ try {;
   const res = await fetch (`/api/search?query=$ {;
   encodeURIComponent (term) ;
 }`);
-const data = await res.json ();
 if (data && data.results && Array.isArray (data.results) ) {;
   setResults (data.results) ;
 }else {;
@@ -1071,7 +1027,6 @@ setResults ([]) ;
   setLoading (false) ;
 
 };
-const handleSubmit = (e: React.FormEvent) => {;
   e.preventDefault ();
 router.push (`/search?q=$ {;
   encodeURIComponent (query.trim () ) ;

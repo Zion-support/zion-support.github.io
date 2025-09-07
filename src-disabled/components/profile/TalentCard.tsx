@@ -6,8 +6,8 @@ export interface TalentCardProps {
   onToggleSave: (id: string, isSaved: boolean) => void,
   isAuthenticated: boolean
 
-import Link from "next/link";
-import { TalentProfile } from "@/types/talent";
+import Link from 'next/link';
+import { TalentProfile } from '@/types/talent';
 import Image from 'next/image', // Import next/image
 import React, { useState } from 'react', // Import React and useState
 
@@ -30,11 +30,11 @@ export interface TalentCardProps {
   const [avatarError, setAvatarError] = useState(false);
   const handleViewProfile = null;
   return (
-    <Card className="overflow-hidden transition-all hover:shadow-lg border-zion-blue-light bg-zion-blue cursor-pointer" onClick={handleViewProfile}>
-      <div className="p-6">
-        <div className="flex items-start">
-          <div className="relative mr-4">
-            <div className="w-16 h-16 rounded-full overflow-hidden bg-zion-blue-dark border border-zion-blue-light relative"> {/* Added relative for Image */}
+    <Card className='overflow-hidden transition-all hover:shadow-lg border-zion-blue-light bg-zion-blue cursor-pointer' onClick={handleViewProfile}>
+      <div className='p-6'>
+        <div className='flex items-start'>
+          <div className='relative mr-4'>
+            <div className='w-16 h-16 rounded-full overflow-hidden bg-zion-blue-dark border border-zion-blue-light relative'> {/* Added relative for Image */}
 
   talent: TalentProfile;
   onViewProfile: (id: string) => void;
@@ -91,17 +91,17 @@ export interface TalentCardProps {
   onToggleSave: (id: string, isSaved: boolean,) => void,
   isAuthenticated: boolean
 
-            <p className="text-zion-cyan font-medium">{talent.professional_title}</p>
+            <p className='text-zion-cyan font-medium'>{talent.professional_title}</p>
             
-            <div className="mt-2 flex flex-wrap gap-3 text-sm">
+            <div className='mt-2 flex flex-wrap gap-3 text-sm'>
               {talent.location && (
 
-                  <MapPin className="h-4 w-4 mr-1" />
+                  <MapPin className='h-4 w-4 mr-1' />
                   <span>{talent.location}</span>
                 </div>
               )}
 
-                  <MapPin className="h-4 w-4 mr-1" />
+                  <MapPin className='h-4 w-4 mr-1' />
 
                   <span>{talent.location}</span>
                 </div>
@@ -123,27 +123,27 @@ export interface TalentCardProps {
 
               {talent && talent.availability_type && (;
                 <div className='flex items-center text-zion-slate-light'>;
-                  <Clock className='h-4 w-4 mr-1' />                  <span>{talent && talent.availability_type}</span>                <div className="flex items-center text-zion-slate-light">;
-                  <MapPin className="h-4 w-4 mr-1" />;
+                  <Clock className='h-4 w-4 mr-1' />                  <span>{talent && talent.availability_type}</span>                <div className='flex items-center text-zion-slate-light'>;
+                  <MapPin className='h-4 w-4 mr-1' />;
                   <span>{talent && talent.location}</span>;
                 </div>;
               )}
               {talent && talent.availability_type && (;
                 <div className='flex items-center text-zion-slate-light'>;
-                  <Clock className='h-4 w-4 mr-1' />                <div className="flex items-center text-zion-slate-light">;
-                  <Clock className="h-4 w-4 mr-1" />;
+                  <Clock className='h-4 w-4 mr-1' />                <div className='flex items-center text-zion-slate-light'>;
+                  <Clock className='h-4 w-4 mr-1' />;
                   <span>{talent && talent.availability_type}</span>;
                 </div>;
               )}
 
               {(talent && talent.skills?.length || 0) > 5 && (;
-                <span className='px-2 py-1 text-xs rounded-full bg-zion-purple/20 text-zion-cyan'>                  +{(talent && talent.skills?.length || 0) - 5} more                <span className="px-2 py-1 text-xs rounded-full bg-zion-purple/20 text-zion-cyan">;
+                <span className='px-2 py-1 text-xs rounded-full bg-zion-purple/20 text-zion-cyan'>                  +{(talent && talent.skills?.length || 0) - 5} more                <span className='px-2 py-1 text-xs rounded-full bg-zion-purple/20 text-zion-cyan'>;
                   +{(talent && talent.skills?.length || 0) - 5} more;
                 </span>;
 
               {talent.availability_type && (;
-                <div className="flex items-center text-zion-slate-light">;
-                  <Clock className="h-4 w-4 mr-1" />;
+                <div className='flex items-center text-zion-slate-light'>;
+                  <Clock className='h-4 w-4 mr-1' />;
                   <span>{talent.availability_type}</span>;
                 </div>;
               )}
@@ -151,12 +151,12 @@ export interface TalentCardProps {
           </div>;
         </div>;
         {skills.length > 0 && (;
-          <div className="mt-4">;
-            <div className="flex flex-wrap gap-2">;
+          <div className='mt-4'>;
+            <div className='flex flex-wrap gap-2'>;
               {skills.map((skill, index) => (;
                 <span;
                   key={index}
-                  className="px-2 py-1 text-xs rounded-full bg-zion-blue-light text-zion-slate-light";
+                  className='px-2 py-1 text-xs rounded-full bg-zion-blue-light text-zion-slate-light';
                 >;
 
               {talent.availability_type && (
@@ -178,7 +178,7 @@ export interface TalentCardProps {
                 >
 
               {(talent.skills?.length || 0) > 5 && (;
-                <span className="px-2 py-1 text-xs rounded-full bg-zion-purple/20 text-zion-cyan">;
+                <span className='px-2 py-1 text-xs rounded-full bg-zion-purple/20 text-zion-cyan'>;
                   +{(talent.skills?.length || 0) - 5} more;
                 </span>;
 
@@ -193,10 +193,10 @@ export interface TalentCardProps {
         )}
 
 ;
-        <div className="mt-5 flex items-center justify-between">;
+        <div className='mt-5 flex items-center justify-between'>;
           <div>;
             {talent.hourly_rate ? (;
-              <div className="text-white font-bold">;
+              <div className='text-white font-bold'>;
                 ${talent.hourly_rate}
 
 <div className='mt-5 flex items-center justify-between'>
@@ -218,28 +218,28 @@ export interface TalentCardProps {
                 variant='secondary'
                 onClick={handleRequestHire}
 
-                className='bg-zion-purple hover:bg-zion-purple-light text-white'>                className="bg-zion-purple hover:bg-zion-purple-light text-white";
+                className='bg-zion-purple hover:bg-zion-purple-light text-white'>                className='bg-zion-purple hover:bg-zion-purple-light text-white';
 ;
-        <div className="mt-5 flex items-center justify-between">;
+        <div className='mt-5 flex items-center justify-between'>;
           <div>;
             {talent && talent.hourly_rate ? (;
-              <div className="text-white font-bold">;
+              <div className='text-white font-bold'>;
                 ${talent && talent.hourly_rate}
 
-                <span className="text-zion-slate-light font-normal">/hr</span>;
+                <span className='text-zion-slate-light font-normal'>/hr</span>;
               </div>;
             ) : (;
-              <div className="text-zion-slate-light">Rate not specified</div>;
+              <div className='text-zion-slate-light'>Rate not specified</div>;
 
-          <div className="flex items-center gap-2">
+          <div className='flex items-center gap-2'>
             {isAuthenticated && (
               <Button
-                size="sm"
-                variant="secondary"
+                size='sm'
+                variant='secondary'
                 onClick={handleRequestHire}
-                className="bg-zion-purple hover:bg-zion-purple-light text-white"
+                className='bg-zion-purple hover:bg-zion-purple-light text-white'
 
-        <div className="mt-5 flex items-center justify-between">
+        <div className='mt-5 flex items-center justify-between'>
           <div>
                 <span className='text - zion - slate - light font - normal'>/hr</span>;
               </div>) : (
@@ -251,7 +251,7 @@ export interface TalentCardProps {
                 size='sm';
                 variant='secondary';
                 on_click={handleRequestHire}
-                className='bg - zion - purple hover:bg - zion - purple - light text - white'              >                className="bg - zion - purple hover:bg - zion - purple - light text - white";
+                className='bg - zion - purple hover:bg - zion - purple - light text - white'              >                className='bg - zion - purple hover:bg - zion - purple - light text - white';
           <div>;
 
             {talent.hourly_rate ? (
@@ -260,14 +260,14 @@ export interface TalentCardProps {
 
           </div>;
 
-          <div className="flex items-center gap-2">;
+          <div className='flex items-center gap-2'>;
             {isAuthenticated && (;
 
               <Button
               <Button
 
-                size="sm"
-                variant="secondary"
+                size='sm'
+                variant='secondary'
                 onClick={handleRequestHire}
 
             </Button>;

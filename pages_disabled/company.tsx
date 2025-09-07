@@ -125,9 +125,9 @@ export default function CompanyPage() {
         <section className="bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20">
           <div className="container mx-auto px-4">
             <motion.div
-    initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
+    initial={ opacity: 0, y: 20 }
+              animate={ opacity: 1, y: 0 }
+              transition={ duration: 0.8 }
               className="text-center max-w-4xl mx-auto"
             >
               <h1 className="text-5xl font-bold mb-6">
@@ -160,9 +160,9 @@ export default function CompanyPage() {
           <div className="container mx-auto px-4">
             <div className="grid lg:grid-cols-2 gap-12 items-center">
               <motion.div
-    initial={{ opacity: 0, x: -20 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.8 }}
+    initial={ opacity: 0, x: -20 }
+                animate={ opacity: 1, x: 0 }
+                transition={ duration: 0.8 }
               >
                 <h2 className="text-4xl font-bold text-gray-900 mb-6">
                   Our Mission & Vision
@@ -192,9 +192,9 @@ export default function CompanyPage() {
                 </div>
               </motion.div>
               <motion.div
-    initial={{ opacity: 0, x: 20 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.8, delay: 0.2 }}
+    initial={ opacity: 0, x: 20 }
+                animate={ opacity: 1, x: 0 }
+                transition={ duration: 0.8, delay: 0.2 }
                 className="bg-gradient-to-br from-blue-50 to-purple-50 rounded-2xl p-8"
               >
                 <div className="text-center">
@@ -228,9 +228,9 @@ export default function CompanyPage() {
         <section className="py-20 bg-white">
           <div className="container mx-auto px-4">
             <motion.div
-    initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
+    initial={ opacity: 0, y: 20 }
+              animate={ opacity: 1, y: 0 }
+              transition={ duration: 0.8 }
               className="text-center mb-16"
             >
               <h2 className="text-4xl font-bold text-gray-900 mb-4">
@@ -246,9 +246,9 @@ export default function CompanyPage() {
               {values.map((value, index) => (
                 <motion.div
     key={index}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: 0.1 * index }}
+                  initial={ opacity: 0, y: 20 }
+                  animate={ opacity: 1, y: 0 }
+                  transition={ duration: 0.6, delay: 0.1 * index }
                   className="bg-gray-50 rounded-xl p-6 hover:shadow-lg transition-shadow duration-300"
                 >
                   <div className="bg-blue-100 w-12 h-12 rounded-lg flex items-center justify-center mb-4">
@@ -270,9 +270,9 @@ export default function CompanyPage() {
         <section className="py-20 bg-gray-50">
           <div className="container mx-auto px-4">
             <motion.div
-    initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
+    initial={ opacity: 0, y: 20 }
+              animate={ opacity: 1, y: 0 }
+              transition={ duration: 0.8 }
               className="text-center mb-16"
             >
               <h2 className="text-4xl font-bold text-gray-900 mb-4">
@@ -287,9 +287,9 @@ export default function CompanyPage() {
               {leadership.map((leader, index) => (
                 <motion.div
     key={index}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: 0.1 * index }}
+                  initial={ opacity: 0, y: 20 }
+                  animate={ opacity: 1, y: 0 }
+                  transition={ duration: 0.6, delay: 0.1 * index }
                   className="bg-white rounded-xl p-6 text-center hover:shadow-lg transition-shadow duration-300"
                 >
                   <div className="w-24 h-24 bg-gray-200 rounded-full mx-auto mb-4 flex items-center justify-center">
@@ -314,9 +314,9 @@ export default function CompanyPage() {
         <section className="py-20 bg-white">
           <div className="container mx-auto px-4">
             <motion.div
-    initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
+    initial={ opacity: 0, y: 20 }
+              animate={ opacity: 1, y: 0 }
+              transition={ duration: 0.8 }
               className="text-center mb-16"
             >
               <h2 className="text-4xl font-bold text-gray-900 mb-4">
@@ -333,9 +333,9 @@ export default function CompanyPage() {
                 {milestones.map((milestone, index) => (
                   <motion.div
     key={index}
-                    initial={{ opacity: 0, x: index % 2 === 0 ? -50 : 50 }}
-                    animate={{ opacity: 1, x: 0 }}
-                    transition={{ duration: 0.6, delay: 0.1 * index }}
+                    initial={ opacity: 0, x: index % 2 === 0 ? -50 : 50 }
+                    animate={ opacity: 1, x: 0 }
+                    transition={ duration: 0.6, delay: 0.1 * index }
                     className={`flex items-center ${index % 2 === 0 ? 'flex-row' : 'flex-row-reverse'}`}
                   >
                     <div className={`w-1/2 ${index % 2 === 0 ? 'pr-8 text-right' : 'pl-8 text-left'}`}>
@@ -366,9 +366,9 @@ export default function CompanyPage() {
         <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
           <div className="container mx-auto px-4">
             <motion.div
-    initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
+    initial={ opacity: 0, y: 20 }
+              animate={ opacity: 1, y: 0 }
+              transition={ duration: 0.8 }
               className="text-center mb-16"
             >
               <h2 className="text-4xl font-bold mb-4">
@@ -383,9 +383,9 @@ export default function CompanyPage() {
               {stats.map((stat, index) => (
                 <motion.div
     key={index}
-                  initial={{ opacity: 0, scale: 0.8 }}
-                  animate={{ opacity: 1, scale: 1 }}
-                  transition={{ duration: 0.6, delay: 0.1 * index }}
+                  initial={ opacity: 0, scale: 0.8 }
+                  animate={ opacity: 1, scale: 1 }
+                  transition={ duration: 0.6, delay: 0.1 * index }
                   className="text-center"
                 >
                   <div className="text-4xl font-bold mb-2">
@@ -404,9 +404,9 @@ export default function CompanyPage() {
         <section className="py-20 bg-gray-50">
           <div className="container mx-auto px-4 text-center">
             <motion.div
-    initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
+    initial={ opacity: 0, y: 20 }
+              animate={ opacity: 1, y: 0 }
+              transition={ duration: 0.8 }
             >
               <h2 className="text-4xl font-bold text-gray-900 mb-6">
                 Ready to Work With Us?

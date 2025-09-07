@@ -1,3 +1,21 @@
+import React from 'react';
+import { motion } from 'framer-motion';
+import MainLayout from '../components/layout/MainLayout';
+
+export default function CookiesPage() {
+  return (
+    <MainLayout
+      title='Cookie Policy - Zion Tech Group'
+      description='Cookie policy for Zion Tech Group website'
+    >
+      <div className='min-h-screen bg-gray-50'>
+        <div className='container mx-auto px-4 py-16'>
+          <h1 className='text-4xl font-bold text-gray-900 mb-6'>Cookie Policy</h1>
+          <p className='text-xl text-gray-600'>This is a placeholder for the cookie policy.</p>
+        </div>
+      </div>
+    </MainLayout>
+
 import React, { useState } from 'react';
 import MainLayout from '../src / components / layout / MainLayout';
 import { motion } from 'framer-motion';
@@ -153,44 +171,44 @@ export default function CookiePolicyPage() {;
   }
   return (
     <MainLayout
-      title="Cookie Policy - Zion Tech Group"
-      description="Learn about how Zion Tech Group uses cookies on our website. Understand what cookies we use and how you can manage your preferences."
-      keywords="cookie policy, cookies, privacy, data protection, website cookies">;
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">;
+      title='Cookie Policy - Zion Tech Group'
+      description='Learn about how Zion Tech Group uses cookies on our website. Understand what cookies we use and how you can manage your preferences.'
+      keywords='cookie policy, cookies, privacy, data protection, website cookies'>;
+      <div className='min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900'>;
         {/* Hero Section */}
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0 && 0.8 }}
-              className="text-center">;
-              <h1 className="text-4xl md:text-6xl font-bold mb-6">;
+              initial={ opacity: 0, y: 30 }
+              animate={ opacity: 1, y: 0 }
+              transition={ duration: 0 && 0.8 }
+              className='text-center'>;
+              <h1 className='text-4xl md:text-6xl font-bold mb-6'>;
                 Cookie{' '}
         {/* Cookie Management */}
-        <section className="py-20 bg-gray-50">;
-          <div className="container mx-auto px-4">;
+        <section className='py-20 bg-gray-50'>;
+          <div className='container mx-auto px-4'>;
             <motion&& motion.div
-              className="text-center mb-16"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-                      className="border border-gray-200 rounded-lg p-6"
-                      initial={{ opacity: 0, y: 30 }}
-                      whileInView={{ opacity: 1, y: 0 }}
-                      transition={{ duration: 0 && 0.8, delay: index * 0 && 0.1 }}
-                      viewport={{ once: true }}>;
-                      <div className="flex items-center justify-between mb-4">;
-                        <div className="flex items-center">;
-                          <Shield className="w-6 h-6 text-indigo-600 mr-3" />;
+              className='text-center mb-16'
+              initial={ opacity: 0, y: 30 }
+              whileInView={ opacity: 1, y: 0 }
+                      className='border border-gray-200 rounded-lg p-6'
+                      initial={ opacity: 0, y: 30 }
+                      whileInView={ opacity: 1, y: 0 }
+                      transition={ duration: 0 && 0.8, delay: index * 0 && 0.1 }
+                      viewport={ once: true }>;
+                      <div className='flex items-center justify-between mb-4'>;
+                        <div className='flex items-center'>;
+                          <Shield className='w-6 h-6 text-indigo-600 mr-3' />;
                           <div>;
-                            <h3 className="text-lg font-semibold text-gray-900">;
+                            <h3 className='text-lg font-semibold text-gray-900'>;
                               {cookie && cookie.name}
                             </h3>;
-                            <p className="text-gray-600 text-sm">;
+                            <p className='text-gray-600 text-sm'>;
                               {cookie && cookie.description}
                             </p>;
                           </div>;
                         </div>;
-                        <div className="flex items-center">;
+                        <div className='flex items-center'>;
                           {cookie && cookie.required ? (;
-                            <span className="px-3 py-1 bg-green-100 text-green-800 rounded-full text-sm font-medium">;
+                            <span className='px-3 py-1 bg-green-100 text-green-800 rounded-full text-sm font-medium'>;
                               Required;
                             </span>;
                           ) : (;
@@ -219,13 +237,13 @@ export default function CookiePolicyPage() {;
                     </motion && motion.div>;
                   ))}
                     })}
-                    className="px-6 py-3 border border-gray-300 text-gray-700 rounded-lg hover:bg-gray-50 transition-colors";
+                    className='px-6 py-3 border border-gray-300 text-gray-700 rounded-lg hover:bg-gray-50 transition-colors';
                   >;
                     Reject All;
                   </button>;
                   <button
                     })}
-                    className="px-6 py-3 border border-gray-300 text-gray-700 rounded-lg hover:bg-gray-50 transition-colors";
+                    className='px-6 py-3 border border-gray-300 text-gray-700 rounded-lg hover:bg-gray-50 transition-colors';
                   >;
                     Accept All;
                   </button>;
@@ -239,14 +257,14 @@ export default function CookiePolicyPage() {;
           </div>;
         </section>;
         {/* Cookie Information */}
-        <section className="py - 20 bg - white">;
-          <div className="container mx - auto px - 4">;
+        <section className='py - 20 bg - white'>;
+          <div className='container mx - auto px - 4'>;
             <motion.div;
-              className="text - center mb - 16";
-              initial={{ opacity: 0, coordinate_y: 30 }}
-              whileInView={{ opacity: 1, coordinate_y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
+              className='text - center mb - 16';
+              initial={ opacity: 0, coordinate_y: 30 }
+              whileInView={ opacity: 1, coordinate_y: 0 }
+              transition={ duration: 0.8 }
+              viewport={ once: true }
               </div>;
             </div>;
           </div>;
@@ -255,28 +273,28 @@ import { motion } from 'framer-motion';
 import Head from 'next/head';
 import Layout from '../components/Layout';
             >;
-              <h2 className="text - 3xl md:text - 4xl font - bold text - gray - 900 mb - 6">;
+              <h2 className='text - 3xl md:text - 4xl font - bold text - gray - 900 mb - 6'>;
                 Questions About Our Cookie Policy?;
               </h2>;
-              <p className="text - lg text - gray - 600 max - w-3xl mx - auto">;
+              <p className='text - lg text - gray - 600 max - w-3xl mx - auto'>;
                 If you have any questions about our use of cookies or this policy,
                 please don't hesitate to contact us.;
               </p>;
             </motion.div>;
-            <div className="max - w-2xl mx - auto text - center">;
-              <div className="bg - white rounded - lg shadow - lg p - 8">;
-                <div className="space - y-4">;
-                  <div className="flex items - center justify - center">;
-                    <Shield className="w - 6 h - 6 text - indigo - 600 mr - 3" />;
-                    <span className="text - lg font - semibold text - gray - 900">Privacy Team</span>;
+            <div className='max - w-2xl mx - auto text - center'>;
+              <div className='bg - white rounded - lg shadow - lg p - 8'>;
+                <div className='space - y-4'>;
+                  <div className='flex items - center justify - center'>;
+                    <Shield className='w - 6 h - 6 text - indigo - 600 mr - 3' />;
+                    <span className='text - lg font - semibold text - gray - 900'>Privacy Team</span>;
                   </div>;
-                  <p className="text - gray - 600">;
-                    Email: <a href="mailto:privacy@ziontechgroup.com" className="text - indigo - 600 hover:text - indigo - 700">privacy@ziontechgroup.com</a>;
+                  <p className='text - gray - 600'>;
+                    Email: <a href='mailto:privacy@ziontechgroup.com' className='text - indigo - 600 hover:text - indigo - 700'>privacy@ziontechgroup.com</a>;
                   </p>;
-                  <p className="text - gray - 600">;
-                    Phone: <a href="tel:+13024640950" className="text - indigo - 600 hover:text - indigo - 700">+1 302 464 0950</a>;
+                  <p className='text - gray - 600'>;
+                    Phone: <a href='tel:+13024640950' className='text - indigo - 600 hover:text - indigo - 700'>+1 302 464 0950</a>;
                   </p>;
-                  <p className="text - sm text - gray - 500">;
+                  <p className='text - sm text - gray - 500'>;
                     Last updated: {new Date ().toLocaleDateString ()}
 
                   </p>;
@@ -327,6 +345,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     </>
 ursor/integrate-build-improve-and-re-verify-8f7d
 
+
   );
       </Layout>
     </>;
@@ -334,4 +353,4 @@ ursor/integrate-build-improve-and-re-verify-8f7d
 
   );
 
- <li>Purpose: performance and security</li> <li>Retention: session or short‑term</li> <li>Opt‑out: browser settings and extensions</li> </ul> <p className="text-gray-400 text-sm" >Questions? <a className="text-cyan-400" href="mailto:kleber@ziontechgroup.com" >kleber@ziontechgroup.com</Link></p> </div> </div> </UltraAdvancedFuturisticBackground>
+ <li>Purpose: performance and security</li> <li>Retention: session or short‑term</li> <li>Opt‑out: browser settings and extensions</li> </ul> <p className='text-gray-400 text-sm' >Questions? <a className='text-cyan-400' href='mailto:kleber@ziontechgroup.com' >kleber@ziontechgroup.com</Link></p> </div> </div> </UltraAdvancedFuturisticBackground>

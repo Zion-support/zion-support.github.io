@@ -1,5 +1,4 @@
 import {
-import {
   // TODO: Implement
 }
 pr-12325
@@ -108,7 +107,7 @@ export const useErrorBoundary = () => {
 export default GlobalErrorBoundary;
 origin/cursor/automate-test-improve-and-merge-code-2533
 
-  Component: React.ComponentType < P>,"
+  Component: React.ComponentType < P>,'
   errorBoundaryProps?: Omit < ErrorBoundaryProps, 'children'>;')
 , ) => {
   const WrappedComponent = (props: P, ) =>: any (

@@ -21,7 +21,6 @@ export function signSession(session: AdminSession): string {
 
 export function verifySessionToken(token: string | undefined): AdminSession | null {
   if (!token) return null,
-  const secret = getEnv($2);
   const parts = token.split($2);
   if (parts.length !== 2) return null,
   const [payload, signature] = parts,

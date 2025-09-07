@@ -1,18 +1,18 @@
 import { NextApiRequest, NextApiResponse } from 'next';
 interface PerformanceMetrics {
-  "responseTime": number;
+  'responseTime': number;
   memoryUsage: number;
   timestamp: string;
   endpoint: string;
   method: string}
 class PerformanceMonitor {
-  private static "instance": PerformanceMonitor;
+  private static 'instance': PerformanceMonitor;
   private metrics: PerformanceMetrics[] = [];
   static getInstance(): PerformanceMonitor {
     if (!PerformanceMonitor.instance) {
       PerformanceMonitor.instance = new PerformanceMonitor()}
     return PerformanceMonitor.instance}
-  recordMetric("metric": PerformanceMetrics) {
+  recordMetric('metric': PerformanceMetrics) {
     this.metrics.push(metric);
     // Keep only last 1000 metrics to prevent memory leaks
     if (this.metrics.length > 1000) {
@@ -38,7 +38,7 @@ const latest = this.metrics[this.metrics.length - 1];
 }
 }
 
-export const performanceMiddleware = ("req": NextApiRequest, "res": NextApiResponse, "next": Function) => {
+export const performanceMiddleware = ('req': NextApiRequest, 'res': NextApiResponse, 'next': Function) => {
   const startTime = Date.now();
   const startMemory = process.memoryUsage().heapUsed;
   res.on('finish', () => {
@@ -46,11 +46,11 @@ export const performanceMiddleware = ("req": NextApiRequest, "res": NextApiRespo
     const endMemory = process.memoryUsage().heapUsed;
     const monitor = PerformanceMonitor.getInstance();
     monitor.recordMetric({
-      "responseTime": 'endTime - startTime',
-      "memoryUsage": endMemory - startMemory,
-      "timestamp": new Date().toISOString(),
-      "endpoint": req.url || '',
-      "method": req.method || ''
+      'responseTime': 'endTime - startTime',
+      'memoryUsage': endMemory - startMemory,
+      'timestamp': new Date().toISOString(),
+      'endpoint': req.url || '',
+      'method': req.method || ''
     })});
   next()}
 }

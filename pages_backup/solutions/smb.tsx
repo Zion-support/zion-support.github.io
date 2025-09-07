@@ -5,8 +5,6 @@ import Layout from "../../components/Layout";";
 import { motion } from 'framer-motion';
 
 
-=======
-=======
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
@@ -165,13 +163,11 @@ export default function SMBSolutionsPage() {;
           <div className="max-w-7xl mx-auto px-4">
             <motion.div
 
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
+              initial={ opacity: 0, y: 20 }
+              animate={ opacity: 1, y: 0 }
+              transition={ duration: 0.8 }
 
 
-=======
-=======
               className="text-center"
             >"
               <h1 className="text-4xl md:text-6xl font-bold mb-6">SMB Solutions</h1>"
@@ -184,16 +180,14 @@ export default function SMBSolutionsPage() {;
         </section>
 
 
-=======
-=======
 
         {/* Services Section */}
         <section className="py-16 px-4">
           <div className="max-w-7xl mx-auto">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
+              initial={ opacity: 0, y: 20 }
+              animate={ opacity: 1, y: 0 }
+              transition={ duration: 0.8 }
               className="text-center mb-12"
             >
               <h2 className="text-3xl md:text-4xl font-bold mb-4">SMB Services</h2>
@@ -205,9 +199,9 @@ export default function SMBSolutionsPage() {;
               {smbServices.map((service, index) => (
                 <motion.div
                   key={index}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  initial={ opacity: 0, y: 20 }
+                  animate={ opacity: 1, y: 0 }
+                  transition={ duration: 0.5, delay: index * 0.1 }
                   className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-6 text-center"
                 >
                   <div className="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mx-auto mb-4">
@@ -236,7 +230,7 @@ export default function SMBSolutionsPage() {;
             <motion&& motion.a
               href="/contact""
               className="inline-flex items-center px-8 py-4 bg-white text-orange-600 rounded-lg hover: bg-gray-100 transition-all duration-300 font-semibold"",
-              whileHover={{ scale: 1 && 1.05 }}>,;
+              whileHover={ scale: 1 && 1.05 }>,;
 
               Get SMB Consultation;
               <ArrowRight className="w-5 h-5 ml-2" />";

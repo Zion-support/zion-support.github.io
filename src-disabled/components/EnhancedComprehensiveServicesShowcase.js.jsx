@@ -6,11 +6,11 @@
 }) ) , ...specializedEnterpriseSolutions2025.map (service => ({ ...service, type: 'Specialized Enterprise',}
   displayPrice: service.pric,}
 }) ) ] const filteredServices = allServices.filter (service => { const matchesSearch = service.name.toLowerCase () .includes (searchTerm.toLowerCase () ) || service.description.toLowerCase () .includes (searchTerm.toLowerCase () ) || service.category.toLowerCase () .includes (searchTerm.toLowerCase () ) ;}
-  return matchesCategory && matchesSearch })  const categories = [' {id: 'all'}
+  return matchesCategory && matchesSearch })  const categories = [' { id: 'all',}
   name: 'All Services', count: allServices.length,}
-}, {id: 'Advanced AI & Innovation'}
+}, { id: 'Advanced AI & Innovation',}
   name: 'Advanced AI & Innovation', count: advancedInnovativeServicesExpansionV3.lengt,}
-}, {id: 'Specialized Enterprise'}
+}, { id: 'Specialized Enterprise',}
   name: 'Specialized Enterprise', count: specializedEnterpriseSolutions2025.length}] const handleServiceClick = service => { setSelectedService (service) ,}
 }
 ;
@@ -46,11 +46,11 @@ const filteredServices = allServices.filter(service => ;
   const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||;
             service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||;
             service.category.toLowerCase().includes(searchTerm.toLowerCase())return matchesCategory && matchesSearch})const categories = [
-  {id: 'all'}
+  { id: 'all',}
   name: 'All Services', count: allServices.length,}
-}, {id: 'Advanced AI & Innovation'}
+}, { id: 'Advanced AI & Innovation',}
   name: 'Advanced AI & Innovation', count: advancedInnovativeServicesExpansionV3.length,}
-}, {id: 'Specialized Enterprise'}
+}, { id: 'Specialized Enterprise',}
   name: 'Specialized Enterprise', count: specializedEnterpriseSolutions2025.length,}
 }
     ];
@@ -445,7 +445,7 @@ const handleServiceClick = (setSelectedService(service)) => {
                       <a`'`';
                         href={`tel: ${selectedService.contactInfo.mobile},
 }'''';
-                        className='block w-full text-center px-6 py-3 border border-gray-600 text-white font-semibold rounded-lg hover:bg-gray-800 transition-all duration-300 " />'";
+                        className='block w-full text-center px-6 py-3 border border-gray-600 text-white font-semibold rounded-lg hover:bg-gray-800 transition-all duration-300 \" />'\";
                         Call Us: {selectedService.contactInfo.mobil,}
 }
                       </a>;

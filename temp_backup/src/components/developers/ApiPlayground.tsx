@@ -35,7 +35,6 @@ params?: Param[] ;
 }: ApiPlaygroundProps) {;
   const [response, setResponse] = useState<string | null> (null);
 const [loading,  setLoading] = useState (false);
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7 params.forEach ( (p) => {;
   const val = paramValues[p.name];
 if (val) searchParams.append (p.name, val) ;
 });

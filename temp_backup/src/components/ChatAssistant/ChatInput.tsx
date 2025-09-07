@@ -14,5 +14,5 @@ const inputRef = useRef<HTMLTextAreaElement> (null);
 //Focus input when component mounts ;
 }
 };'
-> <Send className="h-5 w-5" /> </Button> </form>) ;'"'"
-}'"'"'"
+> <Send className='h-5 w-5' /> </Button> </form>) ;''''
+}''''''

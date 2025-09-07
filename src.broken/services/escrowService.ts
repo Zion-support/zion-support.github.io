@@ -11,13 +11,11 @@ export async function holdInEscrow(params: {
 }
 
 export async function releaseEscrow(paymentIntentId: string) {
-  const { data, error } = await supabase.functions.invoke($2);
   if (error) throw error,
   return data as { message: string}
 }
 
 export async function disputeOrder(orderId: string) {
-  const { data, error } = await supabase.functions.invoke($2);
   if (error) throw error,
   return data as { message: string}
 }

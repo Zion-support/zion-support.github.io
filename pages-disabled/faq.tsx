@@ -208,9 +208,9 @@ export default function FAQPage() {}
           <div className="container mx-auto px-4">"
 </div>
             <motion.div;
-              initial={{ opacity: 0, y: 30 }};
-              animate={{ opacity: 1, y: 0 }};
-              transition={{ duration: 0.8 }};
+              initial={ opacity: 0, y: 30 };
+              animate={ opacity: 1, y: 0 };
+              transition={ duration: 0.8 };
               className="text-center max-w-4xl mx-auto"
             >
 </motion>"
@@ -268,9 +268,9 @@ export default function FAQPage() {}
                   <motion.div;
                     key={index};
                     className="bg-white rounded-lg shadow-md overflow-hidden"
-                    initial={{ opacity: 0, y: 20 }};
-                    animate={{ opacity: 1, y: 0 }};
-                    transition={{ duration: 0.5, delay: index * 0.1 }};
+                    initial={ opacity: 0, y: 20 };
+                    animate={ opacity: 1, y: 0 };
+                    transition={ duration: 0.5, delay: index * 0.1 };
                   >
 </motion>
                     <button;
@@ -287,10 +287,10 @@ export default function FAQPage() {}
                     <AnimatePresence>
 </AnimatePresence>
                         <motion.div;
-                          initial={{ height: 0, opacity: 0 }};
-                          animate={{ height: 'auto', opacity: 1 }}'
-                          exit={{ height: 0, opacity: 0 }};
-                          transition={{ duration: 0.3 }}'
+                          initial={ height: 0, opacity: 0 };
+                          animate={ height: 'auto', opacity: 1 }'
+                          exit={ height: 0, opacity: 0 };
+                          transition={ duration: 0.3 }'
                           className="overflow-hidden"
                         >
 </motion>"
@@ -324,10 +324,10 @@ export default function FAQPage() {}
             <div className="max-w-4xl mx-auto text-center">"
 </div>
               <motion.div;
-                initial={{ opacity: 0, y: 30 }};
-                whileInView={{ opacity: 1, y: 0 }};
-                transition={{ duration: 0.8 }};
-                viewport={{ once: true }};
+                initial={ opacity: 0, y: 30 };
+                whileInView={ opacity: 1, y: 0 };
+                transition={ duration: 0.8 };
+                viewport={ once: true };
               >
 </motion>"
                 <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">"

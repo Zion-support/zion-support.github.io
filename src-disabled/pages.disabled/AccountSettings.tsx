@@ -259,6 +259,13 @@ export default function AccountSettings() {
 const AccountSettings: React.FC = () => {
   return (
 
+
+
+
+
+
+
+
 import { useState } from 'react';
 import { useLocalStorage } from '@/hooks';
 import { Header } from '@/components/Header';
@@ -302,6 +309,7 @@ export default function AccountSettings() {
   const [enableBackup, setEnableBackup] = useLocalStorage('enable_backup', false);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const handleSave = null;
+origin/cursor/automate-test-improve-and-merge-code-2533
 
   return (
     <>
@@ -423,6 +431,13 @@ export default function AccountSettings() {
               </div>
 
               <Separator />
+              
+              <div className="flex items-center justify-between">
+                <div className="space-y-0.5">
+                  <Label htmlFor="backup" className="flex items-center gap-1">
+                    <Database className="h-4 w-4" />
+
+
 
               <div className="flex items-center justify-between">
                 <div className="space-y-0.5">
@@ -478,6 +493,9 @@ export default function AccountSettings() {
               <Button
                 onClick={handleSave}
                 disabled={isSubmitting}
+                className="w-full"
+              >
+                {isSubmitting ? "Saving..." : "Save Settings"}
 :src/pages/AccountSettings.tsx
                 className='w-full'              >
 
@@ -489,6 +507,7 @@ export default function AccountSettings() {
           </Card>
 
           <Card>
+            <CardHeader>
 
               <CardTitle>Web3 Features</CardTitle>
               <CardDescription>
@@ -606,6 +625,8 @@ export default function AccountSettings() {
         </div>
       </main>
     </>
+  );
+
 :src/pages/AccountSettings.tsx
   )
 }
@@ -632,7 +653,11 @@ export default function AccountSettings() {
         </div>;
       </main>;
 
+
+
     </>);
 
 }
 ;
+
+origin/cursor/automate-test-improve-and-merge-code-2533

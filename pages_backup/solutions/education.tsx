@@ -1,7 +1,5 @@
 
 
-=======
-=======
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
@@ -40,8 +38,6 @@ const features = [
     icon: Laptop,
 
 
-=======
-=======
     title: 'Virtual Classrooms',
     description: 'Online learning platform with video conferencing and collaboration',
     benefits: ['Video conferencing', 'Screen sharing', 'Breakout rooms', 'Recording']
@@ -72,9 +68,9 @@ export default function EducationSolutionsPage() {
               <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">
                 Transform education with innovative technology solutions designed
 
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}"
+              initial={ opacity: 0, y: 20 }
+              animate={ opacity: 1, y: 0 }
+              transition={ duration: 0.8 }"
               className="text-center"
             >"
               <h1 className="text-4xl md:text-6xl font-bold mb-6">Education Solutions</h1>"
@@ -123,8 +119,6 @@ export default function EducationSolutionsPage() {
                   </div>
 
 
-=======
-=======
                   <h3 className="text-xl font-semibold mb-2">{feature.title}</h3>
                   <p className="text-gray-600 mb-4">{feature.description}</p>
                   <div className="space-y-2">

@@ -490,7 +490,7 @@ export function ChatBotPanel() {;
           onSubmit={(e) => {}
             e.preventDefault(),
             handleSendMessage()
-          }}"
+          }"
           className="flex items-center gap-2"
         >
           <Input;
@@ -555,7 +555,7 @@ export function ChatBotPanel() {;
           onSubmit={(e) => {;
             e.preventDefault();
             handleSendMessage();
-          }}"
+          }"
           className="flex items-center gap-2";
         >;
           <Input;

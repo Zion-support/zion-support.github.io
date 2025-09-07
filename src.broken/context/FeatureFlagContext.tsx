@@ -37,7 +37,7 @@ export function FeatureFlagProvider({ children }: { children: React.ReactNode })
   const track = $2;
     if (typeof c.track = $2;
   return (
-    <FeatureFlagContext.Provider value={{ isEnabled, getVariant, track }}>
+    <FeatureFlagContext.Provider value={ isEnabled, getVariant, track }>
       {children}
     </FeatureFlagContext.Provider>
   )

@@ -1,7 +1,5 @@
 
 
-=======
-=======
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
@@ -54,8 +52,6 @@ const features = [
   {
 
 
-=======
-=======
     icon: Smartphone,
     title: 'Mobile Commerce',
     description: 'Mobile-optimized shopping experience'
@@ -89,9 +85,9 @@ export default function RetailSolutionsPage() {
       <div className="min-h-screen bg-white">;
         {/* Hero Section */}
 
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}"
+              initial={ opacity: 0, y: 20 }
+              animate={ opacity: 1, y: 0 }
+              transition={ duration: 0.8 }"
               className="text-center"
             >"
               <h1 className="text-4xl md:text-6xl font-bold mb-6">Retail Solutions</h1>"
@@ -138,8 +134,6 @@ export default function RetailSolutionsPage() {
                   </div>
 
 
-=======
-=======
                   <h3 className="text-xl font-semibold mb-2">{feature.title}</h3>
                   <p className="text-gray-600">{feature.description}</p>
                 </motion.div>

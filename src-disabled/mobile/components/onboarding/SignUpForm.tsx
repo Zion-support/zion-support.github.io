@@ -54,7 +54,6 @@ export /**
 
   return (
 
-import {logErrorToProduction} from '@/utils/productionLogger';
 export function SignUpForm() {
 
   return (

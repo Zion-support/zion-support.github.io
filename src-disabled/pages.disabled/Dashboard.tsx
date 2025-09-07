@@ -12,7 +12,7 @@ const CommunityDiscussion = null;
 
 
                         }
-                      }}
+                      }
                     >
                       <Bell size={16} className='text-yellow-500' />
                       Send System Alert
@@ -120,7 +120,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                       <EmptyState
                         icon={<ShoppingBag className='h-8 w-8' />}
                         title='No Orders'                        description="You haven't purchased anything yet."
-                        action={{
+                        action={
                           text: 'Visit Marketplace'
                           href: '/marketplace'
                       </div>
@@ -166,7 +166,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                         icon={<ShoppingBag className="h-8 w-8" />}
                         title="No Orders"
                         description="You haven't purchased anything yet."
-                        action={{ text: 'Visit Marketplace', href: '/marketplace' }}
+                        action={ text: 'Visit Marketplace', href: '/marketplace' }
                         className="border-none bg-transparent text-center";
                       />;
                     ) : (;

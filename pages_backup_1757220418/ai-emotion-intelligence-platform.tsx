@@ -115,42 +115,42 @@ export default function AIEmotionIntelligencePlatform() {
         <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <motion.div
-              initial={{ opacity: 0, y: 30}}
-              animate={{ opacity: 1, y: 0}}
-              transition={{ duration: 0.8 }} className="mb-8">
+              initial={ opacity: 0, y: 30}
+              animate={ opacity: 1, y: 0}
+              transition={ duration: 0.8 } className="mb-8">
               <motion.div
-                initial={{ opacity: 0, scale: 0.8 }}
-                animate={{ opacity: 1, scale: 1}}
-                transition={{ duration: 0.8, delay: 0.2 }} className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-pink-500/20 to-purple-500/20 border border-pink-500/30 text-pink-300 text-sm font-medium mb-6">
+                initial={ opacity: 0, scale: 0.8 }
+                animate={ opacity: 1, scale: 1}
+                transition={ duration: 0.8, delay: 0.2 } className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-pink-500/20 to-purple-500/20 border border-pink-500/30 text-pink-300 text-sm font-medium mb-6">
                 <Sparkles className="w-4 h-4 mr-2" />
                 AI & Customer Experience
               </motion.div>
               <motion.h1
-                initial={{ opacity: 0, y: 30}}
-                animate={{ opacity: 1, y: 0}}
-                transition={{ duration: 0.8, delay: 0.4 }} className="text-5xl md:text-7xl font-bold mb-6">
+                initial={ opacity: 0, y: 30}
+                animate={ opacity: 1, y: 0}
+                transition={ duration: 0.8, delay: 0.4 } className="text-5xl md:text-7xl font-bold mb-6">
                 <span className="bg-gradient-to-r from-pink-400 via-purple-400 to-cyan-400 bg-clip-text text-transparent">
                   AI Emotion Intelligence Platform
                 </span>
               </motion.h1>
               <motion.p
-                initial={{ opacity: 0, y: 30}}
-                animate={{ opacity: 1, y: 0}}
-                transition={{ duration: 0.8, delay: 0.6 }} className="text-2xl md:text-3xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
+                initial={ opacity: 0, y: 30}
+                animate={ opacity: 1, y: 0}
+                transition={ duration: 0.8, delay: 0.6 } className="text-2xl md:text-3xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
                 Real-time emotion analysis and response for customer interactions
               </motion.p>
               <motion.p
-                initial={{ opacity: 0, y: 30}}
-                animate={{ opacity: 1, y: 0}}
-                transition={{ duration: 0.8, delay: 0.8 }} className="text-lg md:text-xl text-gray-400 mb-12 max-w-3xl mx-auto">
+                initial={ opacity: 0, y: 30}
+                animate={ opacity: 1, y: 0}
+                transition={ duration: 0.8, delay: 0.8 } className="text-lg md:text-xl text-gray-400 mb-12 max-w-3xl mx-auto">
                 Advanced AI platform that analyzes customer emotions in real-time across voice, video, and text interactions, providing intelligent responses and sentiment-driven insights for better customer experience.
               </motion.p>
             </motion.div>
             {/* CTA Buttons */}
             <motion.div
-              initial={{ opacity: 0, y: 30}}
-              animate={{ opacity: 1, y: 0}}
-              transition={{ duration: 0.8, delay: 1.0 }} className="flex flex-col sm:flex-row items-center justify-center gap-6 mb-16">
+              initial={ opacity: 0, y: 30}
+              animate={ opacity: 1, y: 0}
+              transition={ duration: 0.8, delay: 1.0 } className="flex flex-col sm:flex-row items-center justify-center gap-6 mb-16">
               <Link
                 href="/contact" className="group relative px-8 py-4 bg-gradient-to-r from-pink-500 to-purple-500 text-white font-semibold rounded-2xl text-lg hover:from-pink-600 hover:to-purple-600 transition-all duration-300 transform hover:scale-105 shadow-2xl hover:shadow-pink-500/25">
                 <span className="relative z-10 flex items-center">
@@ -169,9 +169,9 @@ export default function AIEmotionIntelligencePlatform() {
             </motion.div>
             {/* Key Stats */}
             <motion.div
-              initial={{ opacity: 0, y: 30}}
-              animate={{ opacity: 1, y: 0}}
-              transition={{ duration: 0.8, delay: 1.2 }} className="grid grid-cols-2 md: grid-cols-4 gap-8 mb-16">
+              initial={ opacity: 0, y: 30}
+              animate={ opacity: 1, y: 0}
+              transition={ duration: 0.8, delay: 1.2 } className="grid grid-cols-2 md: grid-cols-4 gap-8 mb-16">
               <div className="text-center">
                 <div className="text-3xl md:text-4xl font-bold text-pink-400 mb-2">27</div>
                 <div className="text-gray-400 text-sm">Emotions Detected</div>
@@ -195,10 +195,10 @@ export default function AIEmotionIntelligencePlatform() {
         <section className="py-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <motion.div
-              initial={{ opacity: 0, y: 30}}
-              whileInView={{ opacity: 1, y: 0}}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true}} className="text-center mb-16">
+              initial={ opacity: 0, y: 30}
+              whileInView={ opacity: 1, y: 0}
+              transition={ duration: 0.8 }
+              viewport={ once: true} className="text-center mb-16">
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
                 Powerful Features for Emotion Intelligence
               </h2>
@@ -210,10 +210,10 @@ export default function AIEmotionIntelligencePlatform() {
               {features.map((feature, index) => (
                 <motion.div
                   key={index}
-                  initial={{ opacity: 0, y: 30}}
-                  whileInView={{ opacity: 1, y: 0}}
-                  transition={{ duration: 0.8, delay: index * 0.1 }}
-                  viewport={{ once: true}} className="group p-8 rounded-2xl bg-gradient-to-br from-white/5 to-white/10 border border-white/10 hover:border-pink-500/30 transition-all duration-300 transform hover:scale-105 hover:bg-white/10">
+                  initial={ opacity: 0, y: 30}
+                  whileInView={ opacity: 1, y: 0}
+                  transition={ duration: 0.8, delay: index * 0.1 }
+                  viewport={ once: true} className="group p-8 rounded-2xl bg-gradient-to-br from-white/5 to-white/10 border border-white/10 hover:border-pink-500/30 transition-all duration-300 transform hover:scale-105 hover:bg-white/10">
                   <div className="w-16 h-16 bg-gradient-to-r from-pink-500 to-purple-500 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
                     <feature.icon className="w-8 h-8 text-white" />
                   </div>
@@ -228,10 +228,10 @@ export default function AIEmotionIntelligencePlatform() {
         <section className="py-20 bg-gradient-to-r from-pink-500/5 to-purple-500/5">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <motion.div
-              initial={{ opacity: 0, y: 30}}
-              whileInView={{ opacity: 1, y: 0}}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true}} className="text-center mb-16">
+              initial={ opacity: 0, y: 30}
+              whileInView={ opacity: 1, y: 0}
+              transition={ duration: 0.8 }
+              viewport={ once: true} className="text-center mb-16">
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
                 Transform Your Business with Emotion AI
               </h2>
@@ -243,10 +243,10 @@ export default function AIEmotionIntelligencePlatform() {
               {useCases.map((useCase, index) => (
                 <motion.div
                   key={index}
-                  initial={{ opacity: 0, y: 30}}
-                  whileInView={{ opacity: 1, y: 0}}
-                  transition={{ duration: 0.8, delay: index * 0.1 }}
-                  viewport={{ once: true}} className="p-8 rounded-2xl bg-gradient-to-br from-white/5 to-white/10 border border-white/10 hover:border-pink-500/30 transition-all duration-300">
+                  initial={ opacity: 0, y: 30}
+                  whileInView={ opacity: 1, y: 0}
+                  transition={ duration: 0.8, delay: index * 0.1 }
+                  viewport={ once: true} className="p-8 rounded-2xl bg-gradient-to-br from-white/5 to-white/10 border border-white/10 hover:border-pink-500/30 transition-all duration-300">
                   <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-cyan-500 rounded-2xl flex items-center justify-center mb-6">
                     <useCase.icon className="w-8 h-8 text-white" />
                   </div>
@@ -261,10 +261,10 @@ export default function AIEmotionIntelligencePlatform() {
         <section id="pricing" className="py-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <motion.div
-              initial={{ opacity: 0, y: 30}}
-              whileInView={{ opacity: 1, y: 0}}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true}} className="text-center mb-16">
+              initial={ opacity: 0, y: 30}
+              whileInView={ opacity: 1, y: 0}
+              transition={ duration: 0.8 }
+              viewport={ once: true} className="text-center mb-16">
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
                 Choose Your Plan
               </h2>
@@ -276,10 +276,10 @@ export default function AIEmotionIntelligencePlatform() {
               {pricing.map((plan, index) => (
                 <motion.div
                   key={index}
-                  initial={{ opacity: 0, y: 30}}
-                  whileInView={{ opacity: 1, y: 0}}
-                  transition={{ duration: 0.8, delay: index * 0.1 }}
-                  viewport={{ once: true}}
+                  initial={ opacity: 0, y: 30}
+                  whileInView={ opacity: 1, y: 0}
+                  transition={ duration: 0.8, delay: index * 0.1 }
+                  viewport={ once: true}
                   className={`relative p-8 rounded-2xl border transition-all duration-300 transform hover:scale-105 ${
                     plan.popular
                       ? 'bg-gradient-to-br from-pink-500/10 to-purple-500/10 border-pink-500/50 shadow-2xl shadow-pink-500/25'
@@ -329,10 +329,10 @@ export default function AIEmotionIntelligencePlatform() {
         <section className="py-20 bg-gradient-to-r from-pink-500/5 to-purple-500/5">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <motion.div
-              initial={{ opacity: 0, y: 30}}
-              whileInView={{ opacity: 1, y: 0}}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true}}
+              initial={ opacity: 0, y: 30}
+              whileInView={ opacity: 1, y: 0}
+              transition={ duration: 0.8 }
+              viewport={ once: true}
             >
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
                 Ready to Get Started?
@@ -392,3 +392,81 @@ export default function AIEmotionIntelligencePlatform() {
     </>
   )
 }
+import React from 'react'
+import Head from 'next/head'
+import Layout from '../components/layout/Layout'
+const AIEmotionIntelligencePlatform: React.FC = () => {
+  return (
+    <Layout>
+      <Head>
+        <title>AI Emotion Intelligence Platform - Zion Tech Group</title>
+        <meta name="description" content="Real-time emotion analysis and response for customer interactions" />
+      </Head>
+      <main className="max-w-7xl mx-auto px-4 py-8">
+        <div className="text-center mb-12">
+          <h1 className="text-4xl font-bold mb-4">AI Emotion Intelligence Platform</h1>
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            Real-time emotion analysis and response for customer interactions powered by advanced AI.
+          </p>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+          <div className="bg-white rounded-lg shadow-lg p-6">
+            <h3 className="text-xl font-semibold mb-4">Emotion Detection</h3>
+            <p className="text-gray-600 mb-4">
+              Analyze customer emotions in real-time across text, voice, and video interactions.
+            </p>
+            <ul className="text-sm text-gray-500 space-y-2">
+              <li>• Text sentiment analysis</li>
+              <li>• Voice emotion recognition</li>
+              <li>• Facial expression analysis</li>
+              <li>• Multi-modal detection</li>
+            </ul>
+          </div>
+
+          <div className="bg-white rounded-lg shadow-lg p-6">
+            <h3 className="text-xl font-semibold mb-4">Response Adaptation</h3>
+            <p className="text-gray-600 mb-4">
+              Automatically adapt responses and actions based on detected emotions.
+            </p>
+            <ul className="text-sm text-gray-500 space-y-2">
+              <li>• Tone adjustment</li>
+              <li>• Escalation triggers</li>
+              <li>• Response personalization</li>
+              <li>• Context awareness</li>
+            </ul>
+          </div>
+
+          <div className="bg-white rounded-lg shadow-lg p-6">
+            <h3 className="text-xl font-semibold mb-4">Emotional Analytics</h3>
+            <p className="text-gray-600 mb-4">
+              Track and analyze emotional trends to improve customer experience.
+            </p>
+            <ul className="text-sm text-gray-500 space-y-2">
+              <li>• Emotion trend analysis</li>
+              <li>• Customer satisfaction metrics</li>
+              <li>• Agent performance insights</li>
+              <li>• Experience optimization</li>
+            </ul>
+          </div>
+        </div>
+
+        <div className="bg-rose-50 rounded-lg p-8 text-center">
+          <h2 className="text-2xl font-bold mb-4">Understand Customer Emotions</h2>
+          <p className="text-lg text-gray-700 mb-6">
+            Enhance customer interactions with AI-powered emotion intelligence and response adaptation.
+          </p>
+          <div className="flex justify-center gap-4">
+            <a href="/contact" className="bg-rose-600 text-white px-6 py-3 rounded-lg hover:bg-rose-700">
+              Get Started
+            </a>
+            <a href="/about" className="border border-rose-600 text-rose-600 px-6 py-3 rounded-lg hover:bg-rose-50">
+              Learn More
+            </a>
+          </div>
+        </div>
+      </main>
+    </Layout>
+  )
+}
+export default AIEmotionIntelligencePlatform

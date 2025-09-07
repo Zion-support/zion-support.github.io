@@ -51,9 +51,9 @@ export default function CaseStudiesPage() {
         <section className="bg-gradient-to-br from-orange-900 via-red-900 to-pink-900 text-white py-20">
           <div className="container mx-auto px-4">
             <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
+              initial={ opacity: 0, y: 30 }
+              animate={ opacity: 1, y: 0 }
+              transition={ duration: 0.8 }
               className="text-center"
             >
               <h1 className="text-4xl md:text-6xl font-bold mb-6">
@@ -81,10 +81,10 @@ export default function CaseStudiesPage() {
               {caseStudies.map((study, index) => (
                 <motion.div
                   key={study.id}
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8, delay: index * 0.1 }}
-                  viewport={{ once: true }}
+                  initial={ opacity: 0, y: 30 }
+                  whileInView={ opacity: 1, y: 0 }
+                  transition={ duration: 0.8, delay: index * 0.1 }
+                  viewport={ once: true }
                   className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow"
                 >
                   <h3 className="text-xl font-semibold text-gray-900 mb-2">

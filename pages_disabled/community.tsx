@@ -174,52 +174,52 @@ export default function Community() {
     <Layout>
       <Head>
         <title>Community - Zion Tech Group</title>
-        <meta name="description" content="Join the Zion Tech Group community. Connect with experts, share knowledge, and learn from industry leaders in AI, cloud computing, and cybersecurity." />
-        <meta name="keywords" content="community, forum, discussions, experts, networking, Zion Tech Group, AI community, tech community" />
-        <link rel="canonical" href="https://ziontechgroup.com/community" />
+        <meta name='description' content='Join the Zion Tech Group community. Connect with experts, share knowledge, and learn from industry leaders in AI, cloud computing, and cybersecurity.' />
+        <meta name='keywords' content='community, forum, discussions, experts, networking, Zion Tech Group, AI community, tech community' />
+        <link rel='canonical' href='https://ziontechgroup.com/community' />
       </Head>
 
-      <div className="min-h-screen bg-gray-50">
+      <div className='min-h-screen bg-gray-50'>
         {/* Hero Section */}
-        <section className="bg-gradient-to-br from-blue-600 to-blue-800 text-white py-20">
-          <div className="container mx-auto px-4">
+        <section className='bg-gradient-to-br from-blue-600 to-blue-800 text-white py-20'>
+          <div className='container mx-auto px-4'>
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              className="text-center max-w-4xl mx-auto"
+              initial={ opacity: 0, y: 20 }
+              animate={ opacity: 1, y: 0 }
+              transition={ duration: 0.6 }
+              className='text-center max-w-4xl mx-auto'
             >
-              <h1 className="text-5xl font-bold mb-6">Join Our Community</h1>
-              <p className="text-xl text-blue-100 mb-8">
+              <h1 className='text-5xl font-bold mb-6'>Join Our Community</h1>
+              <p className='text-xl text-blue-100 mb-8'>
                 Connect with experts, share knowledge, and learn from industry leaders in technology.
               </p>
               
               {/* Search Bar */}
-              <div className="max-w-2xl mx-auto mb-8">
-                <div className="relative">
-                  <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
+              <div className='max-w-2xl mx-auto mb-8'>
+                <div className='relative'>
+                  <Search className='absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5' />
                   <input
-                    type="text"
-                    placeholder="Search discussions, events, or members..."
+                    type='text'
+                    placeholder='Search discussions, events, or members...'
                     value={searchTerm}
                     onChange={(e) => setSearchTerm(e.target.value)}
-                    className="w-full pl-12 pr-4 py-4 rounded-lg text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-300"
+                    className='w-full pl-12 pr-4 py-4 rounded-lg text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-300'
                   />
                 </div>
               </div>
 
               {/* Community Stats */}
-              <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-3xl mx-auto">
+              <div className='grid grid-cols-2 md:grid-cols-4 gap-8 max-w-3xl mx-auto'>
                 {communityStats.map((stat, index) => (
                   <motion.div
                     key={index}
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.6, delay: index * 0.1 }}
-                    className="text-center"
+                    initial={ opacity: 0, y: 20 }
+                    animate={ opacity: 1, y: 0 }
+                    transition={ duration: 0.6, delay: index * 0.1 }
+                    className='text-center'
                   >
-                    <div className="text-3xl font-bold mb-2">{stat.number}</div>
-                    <div className="text-blue-200 text-sm">{stat.label}</div>
+                    <div className='text-3xl font-bold mb-2'>{stat.number}</div>
+                    <div className='text-blue-200 text-sm'>{stat.label}</div>
                   </motion.div>
                 ))}
               </div>
@@ -228,35 +228,35 @@ export default function Community() {
         </section>
 
         {/* Community Features */}
-        <section className="py-20">
-          <div className="container mx-auto px-4">
+        <section className='py-20'>
+          <div className='container mx-auto px-4'>
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              className="text-center mb-16"
+              initial={ opacity: 0, y: 20 }
+              whileInView={ opacity: 1, y: 0 }
+              transition={ duration: 0.6 }
+              className='text-center mb-16'
             >
-              <h2 className="text-4xl font-bold text-gray-900 mb-6">Community Features</h2>
-              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              <h2 className='text-4xl font-bold text-gray-900 mb-6'>Community Features</h2>
+              <p className='text-xl text-gray-600 max-w-3xl mx-auto'>
                 Engage with our community through various channels and activities.
               </p>
             </motion.div>
 
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div className='grid md:grid-cols-2 lg:grid-cols-4 gap-8'>
               {communityFeatures.map((feature, index) => (
                 <motion.div
                   key={index}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
-                  className="bg-white rounded-lg p-6 shadow-lg hover:shadow-xl transition-shadow"
+                  initial={ opacity: 0, y: 20 }
+                  whileInView={ opacity: 1, y: 0 }
+                  transition={ duration: 0.6, delay: index * 0.1 }
+                  className='bg-white rounded-lg p-6 shadow-lg hover:shadow-xl transition-shadow'
                 >
                   <div className={`bg-${feature.color}-100 w-12 h-12 rounded-full flex items-center justify-center mb-4`}>
                     <feature.icon className={`w-6 h-6 text-${feature.color}-600`} />
                   </div>
-                  <h3 className="text-xl font-semibold text-gray-900 mb-2">{feature.title}</h3>
-                  <p className="text-gray-600 mb-3">{feature.description}</p>
-                  <div className="text-sm text-gray-500">{feature.stats}</div>
+                  <h3 className='text-xl font-semibold text-gray-900 mb-2'>{feature.title}</h3>
+                  <p className='text-gray-600 mb-3'>{feature.description}</p>
+                  <div className='text-sm text-gray-500'>{feature.stats}</div>
                 </motion.div>
               ))}
             </div>
@@ -264,11 +264,11 @@ export default function Community() {
         </section>
 
         {/* Tabs Section */}
-        <section className="py-20 bg-white">
-          <div className="container mx-auto px-4">
-            <div className="max-w-6xl mx-auto">
+        <section className='py-20 bg-white'>
+          <div className='container mx-auto px-4'>
+            <div className='max-w-6xl mx-auto'>
               {/* Tab Navigation */}
-              <div className="flex flex-wrap justify-center mb-8 border-b border-gray-200">
+              <div className='flex flex-wrap justify-center mb-8 border-b border-gray-200'>
                 {[
                   { id: 'discussions', label: 'Discussions', icon: MessageSquare },
                   { id: 'events', label: 'Events', icon: Calendar },
@@ -283,7 +283,7 @@ export default function Community() {
                         : 'border-transparent text-gray-500 hover:text-gray-700'
                     }`}
                   >
-                    <tab.icon className="w-5 h-5 mr-2" />
+                    <tab.icon className='w-5 h-5 mr-2' />
                     {tab.label}
                   </button>
                 ))}
@@ -292,34 +292,34 @@ export default function Community() {
               {/* Tab Content */}
               <motion.div
                 key={activeTab}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6 }}
+                initial={ opacity: 0, y: 20 }
+                animate={ opacity: 1, y: 0 }
+                transition={ duration: 0.6 }
               >
                 {activeTab === 'discussions' && (
-                  <div className="space-y-6">
-                    <div className="flex items-center justify-between">
-                      <h3 className="text-2xl font-bold text-gray-900">Recent Discussions</h3>
-                      <div className="flex items-center space-x-2">
-                        <Filter className="w-5 h-5 text-gray-400" />
-                        <span className="text-sm text-gray-500">Filter</span>
+                  <div className='space-y-6'>
+                    <div className='flex items-center justify-between'>
+                      <h3 className='text-2xl font-bold text-gray-900'>Recent Discussions</h3>
+                      <div className='flex items-center space-x-2'>
+                        <Filter className='w-5 h-5 text-gray-400' />
+                        <span className='text-sm text-gray-500'>Filter</span>
                       </div>
                     </div>
                     
                     {filteredDiscussions.map((discussion, index) => (
                       <motion.div
                         key={index}
-                        initial={{ opacity: 0, x: -20 }}
-                        animate={{ opacity: 1, x: 0 }}
-                        transition={{ duration: 0.6, delay: index * 0.1 }}
-                        className="bg-gray-50 rounded-lg p-6 hover:bg-gray-100 transition-colors cursor-pointer"
+                        initial={ opacity: 0, x: -20 }
+                        animate={ opacity: 1, x: 0 }
+                        transition={ duration: 0.6, delay: index * 0.1 }
+                        className='bg-gray-50 rounded-lg p-6 hover:bg-gray-100 transition-colors cursor-pointer'
                       >
-                        <div className="flex items-start justify-between">
-                          <div className="flex-1">
-                            <h4 className="text-lg font-semibold text-gray-900 mb-2">
+                        <div className='flex items-start justify-between'>
+                          <div className='flex-1'>
+                            <h4 className='text-lg font-semibold text-gray-900 mb-2'>
                               {discussion.title}
                             </h4>
-                            <div className="flex items-center space-x-4 text-sm text-gray-500 mb-3">
+                            <div className='flex items-center space-x-4 text-sm text-gray-500 mb-3'>
                               <span>By {discussion.author}</span>
                               <span>•</span>
                               <span>{discussion.replies} replies</span>
@@ -328,21 +328,21 @@ export default function Community() {
                               <span>•</span>
                               <span>{discussion.lastActivity}</span>
                             </div>
-                            <div className="flex items-center space-x-2">
-                              <span className="px-2 py-1 bg-blue-100 text-blue-800 text-xs rounded-full">
+                            <div className='flex items-center space-x-2'>
+                              <span className='px-2 py-1 bg-blue-100 text-blue-800 text-xs rounded-full'>
                                 {discussion.category}
                               </span>
                               {discussion.tags.map((tag, tagIndex) => (
                                 <span
                                   key={tagIndex}
-                                  className="px-2 py-1 bg-gray-200 text-gray-700 text-xs rounded-full"
+                                  className='px-2 py-1 bg-gray-200 text-gray-700 text-xs rounded-full'
                                 >
                                   {tag}
                                 </span>
                               ))}
                             </div>
                           </div>
-                          <ExternalLink className="w-5 h-5 text-gray-400" />
+                          <ExternalLink className='w-5 h-5 text-gray-400' />
                         </div>
                       </motion.div>
                     ))}
@@ -350,21 +350,21 @@ export default function Community() {
                 )}
 
                 {activeTab === 'events' && (
-                  <div className="space-y-6">
-                    <h3 className="text-2xl font-bold text-gray-900">Upcoming Events</h3>
+                  <div className='space-y-6'>
+                    <h3 className='text-2xl font-bold text-gray-900'>Upcoming Events</h3>
                     
                     {upcomingEvents.map((event, index) => (
                       <motion.div
                         key={index}
-                        initial={{ opacity: 0, x: -20 }}
-                        animate={{ opacity: 1, x: 0 }}
-                        transition={{ duration: 0.6, delay: index * 0.1 }}
-                        className="bg-gray-50 rounded-lg p-6 hover:bg-gray-100 transition-colors"
+                        initial={ opacity: 0, x: -20 }
+                        animate={ opacity: 1, x: 0 }
+                        transition={ duration: 0.6, delay: index * 0.1 }
+                        className='bg-gray-50 rounded-lg p-6 hover:bg-gray-100 transition-colors'
                       >
-                        <div className="flex items-start justify-between">
-                          <div className="flex-1">
-                            <div className="flex items-center space-x-3 mb-2">
-                              <h4 className="text-lg font-semibold text-gray-900">
+                        <div className='flex items-start justify-between'>
+                          <div className='flex-1'>
+                            <div className='flex items-center space-x-3 mb-2'>
+                              <h4 className='text-lg font-semibold text-gray-900'>
                                 {event.title}
                               </h4>
                               <span className={`px-2 py-1 text-xs rounded-full ${
@@ -375,23 +375,23 @@ export default function Community() {
                                 {event.type}
                               </span>
                             </div>
-                            <p className="text-gray-600 mb-3">{event.description}</p>
-                            <div className="flex items-center space-x-6 text-sm text-gray-500">
-                              <div className="flex items-center">
-                                <Calendar className="w-4 h-4 mr-1" />
+                            <p className='text-gray-600 mb-3'>{event.description}</p>
+                            <div className='flex items-center space-x-6 text-sm text-gray-500'>
+                              <div className='flex items-center'>
+                                <Calendar className='w-4 h-4 mr-1' />
                                 {event.date}
                               </div>
-                              <div className="flex items-center">
-                                <Clock className="w-4 h-4 mr-1" />
+                              <div className='flex items-center'>
+                                <Clock className='w-4 h-4 mr-1' />
                                 {event.time}
                               </div>
-                              <div className="flex items-center">
-                                <Users className="w-4 h-4 mr-1" />
+                              <div className='flex items-center'>
+                                <Users className='w-4 h-4 mr-1' />
                                 {event.attendees}/{event.maxAttendees} attendees
                               </div>
                             </div>
                           </div>
-                          <button className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors">
+                          <button className='bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors'>
                             Join Event
                           </button>
                         </div>
@@ -401,37 +401,37 @@ export default function Community() {
                 )}
 
                 {activeTab === 'contributors' && (
-                  <div className="space-y-6">
-                    <h3 className="text-2xl font-bold text-gray-900">Top Contributors</h3>
+                  <div className='space-y-6'>
+                    <h3 className='text-2xl font-bold text-gray-900'>Top Contributors</h3>
                     
-                    <div className="grid md:grid-cols-2 gap-6">
+                    <div className='grid md:grid-cols-2 gap-6'>
                       {topContributors.map((contributor, index) => (
                         <motion.div
                           key={index}
-                          initial={{ opacity: 0, y: 20 }}
-                          animate={{ opacity: 1, y: 0 }}
-                          transition={{ duration: 0.6, delay: index * 0.1 }}
-                          className="bg-gray-50 rounded-lg p-6 hover:bg-gray-100 transition-colors"
+                          initial={ opacity: 0, y: 20 }
+                          animate={ opacity: 1, y: 0 }
+                          transition={ duration: 0.6, delay: index * 0.1 }
+                          className='bg-gray-50 rounded-lg p-6 hover:bg-gray-100 transition-colors'
                         >
-                          <div className="flex items-center space-x-4">
-                            <div className="w-12 h-12 bg-blue-600 text-white rounded-full flex items-center justify-center font-semibold">
+                          <div className='flex items-center space-x-4'>
+                            <div className='w-12 h-12 bg-blue-600 text-white rounded-full flex items-center justify-center font-semibold'>
                               {contributor.avatar}
                             </div>
-                            <div className="flex-1">
-                              <h4 className="text-lg font-semibold text-gray-900">
+                            <div className='flex-1'>
+                              <h4 className='text-lg font-semibold text-gray-900'>
                                 {contributor.name}
                               </h4>
-                              <p className="text-gray-600 text-sm mb-2">{contributor.role}</p>
-                              <div className="flex items-center space-x-2 mb-2">
-                                <span className="text-sm text-gray-500">
+                              <p className='text-gray-600 text-sm mb-2'>{contributor.role}</p>
+                              <div className='flex items-center space-x-2 mb-2'>
+                                <span className='text-sm text-gray-500'>
                                   {contributor.contributions} contributions
                                 </span>
                               </div>
-                              <div className="flex flex-wrap gap-1">
+                              <div className='flex flex-wrap gap-1'>
                                 {contributor.badges.map((badge, badgeIndex) => (
                                   <span
                                     key={badgeIndex}
-                                    className="px-2 py-1 bg-yellow-100 text-yellow-800 text-xs rounded-full"
+                                    className='px-2 py-1 bg-yellow-100 text-yellow-800 text-xs rounded-full'
                                   >
                                     {badge}
                                   </span>
@@ -450,23 +450,23 @@ export default function Community() {
         </section>
 
         {/* Join Community CTA */}
-        <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
-          <div className="container mx-auto px-4">
+        <section className='py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white'>
+          <div className='container mx-auto px-4'>
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              className="text-center max-w-4xl mx-auto"
+              initial={ opacity: 0, y: 20 }
+              whileInView={ opacity: 1, y: 0 }
+              transition={ duration: 0.6 }
+              className='text-center max-w-4xl mx-auto'
             >
-              <h2 className="text-4xl font-bold mb-6">Ready to Join Our Community?</h2>
-              <p className="text-xl text-blue-100 mb-8">
+              <h2 className='text-4xl font-bold mb-6'>Ready to Join Our Community?</h2>
+              <p className='text-xl text-blue-100 mb-8'>
                 Connect with thousands of professionals, share your knowledge, and learn from the best in the industry.
               </p>
-              <div className="flex flex-col sm:flex-row justify-center gap-4">
-                <button className="bg-white text-blue-600 hover:bg-gray-100 px-8 py-4 rounded-lg font-semibold transition-colors text-lg">
+              <div className='flex flex-col sm:flex-row justify-center gap-4'>
+                <button className='bg-white text-blue-600 hover:bg-gray-100 px-8 py-4 rounded-lg font-semibold transition-colors text-lg'>
                   Join Now - It's Free
                 </button>
-                <button className="border-2 border-white text-white hover:bg-white hover:text-blue-600 px-8 py-4 rounded-lg font-semibold transition-colors text-lg">
+                <button className='border-2 border-white text-white hover:bg-white hover:text-blue-600 px-8 py-4 rounded-lg font-semibold transition-colors text-lg'>
                   Learn More
                 </button>
               </div>

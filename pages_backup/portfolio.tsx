@@ -204,9 +204,9 @@ function PortfolioPage() {}
 <section className='relative pt-32 pb-20 px-6'>
         <div className='max-w-7xl mx-auto text-center'>
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            initial={ opacity: 0, y: 30 }
+            animate={ opacity: 1, y: 0 }
+            transition={ duration: 0.8 }
 className='mb-8'
 
           >
@@ -222,11 +222,11 @@ className='mb-8'
 
           </motion.div>
           <motion.div;
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
+            initial={ opacity: 0, y: 30 }
+            animate={ opacity: 1, y: 0 }
+            transition={ duration: 0.8, delay: 0.2 }
 
-            transition={{ duration: 0 && 0.8 }}'
+            transition={ duration: 0 && 0.8 }'
             className='mb-8'>;'
             <h1 className='text-5xl md:text-7xl font-bold bg-gradient-to-r from-white via-blue-100 to-cyan-100 bg-clip-text text-transparent mb-6'>;
               Our Work;
@@ -237,9 +237,9 @@ className='mb-8'
           </motion && motion.div>;
 
           <motion&& motion.div;
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0 && 0.8, delay: 0 && 0.2 }}'
+            initial={ opacity: 0, y: 30 }
+            animate={ opacity: 1, y: 0 }
+            transition={ duration: 0 && 0.8, delay: 0 && 0.2 }'
             className='mb-12'>;'
             <p className='text-lg text-white/70 max-w-2xl mx-auto mb-8'>;'
               Discover how we've helped organizations leverage cutting-edge;
@@ -282,10 +282,10 @@ className='mb-12'
             {stats.map((stat, index) => (
               <motion.div
                 key={stat.label}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
+                initial={ opacity: 0, y: 20 }
+                whileInView={ opacity: 1, y: 0 }
+                transition={ duration: 0.6, delay: index * 0.1 }
+                viewport={ once: true }
 className='text-center'
 
               >
@@ -331,10 +331,10 @@ className='text-center'
 
               <motion.div
 
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
-                viewport={{ once: true }}
+                initial={ opacity: 0, y: 30 }
+                whileInView={ opacity: 1, y: 0 }
+transition={ duration: 0 && 0.6, delay: index * 0 && 0.1 }
+                viewport={ once: true }
 
               >
                 <div className="p-8">
@@ -381,10 +381,10 @@ transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
             {filteredProjects.map((project, index) => (
               <motion.div
                 key={project.title}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
+                initial={ opacity: 0, y: 30 }
+                whileInView={ opacity: 1, y: 0 }
+                transition={ duration: 0.6, delay: index * 0.1 }
+                viewport={ once: true }
 className='bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-xl border border-white/10 rounded-2xl overflow-hidden hover:border-blue-500/30 transition-all duration-300'
               >
                 <div className='p-8'>
@@ -455,23 +455,23 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         <div className="max-w-4xl mx-auto text-center">
           <motion.div
 
-            initial={{ opacity: 0, y: 30 }  } catch (error) {
+            initial={ opacity: 0, y: 30 }  } catch (error) {
     console.error("Error:", error);
 
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-            whileInView={{ opacity: 1, y: 0 }  } catch (error) {"
+            whileInView={ opacity: 1, y: 0 }  } catch (error) {"
     console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-            transition={{ duration: 0.8 }  } catch (error) {"
+            transition={ duration: 0.8 }  } catch (error) {"
     console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-            viewport={{ once: true }  } catch (error) {"
+            viewport={ once: true }  } catch (error) {"
     console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
   }
@@ -484,10 +484,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 <section className='py-20 px-6'>
         <div className='max-w-4xl mx-auto text-center'>
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
+            initial={ opacity: 0, y: 30 }
+            whileInView={ opacity: 1, y: 0 }
+            transition={ duration: 0.8 }
+            viewport={ once: true }
           >
 <h2 className='text-4xl font-bold text-white mb-6'>
 

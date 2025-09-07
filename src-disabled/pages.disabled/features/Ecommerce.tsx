@@ -1,4 +1,3 @@
-:src/pages/features/Ecommerce.tsx
 
   return (
     <>;
@@ -30,7 +29,7 @@
       {/* Use a normal script tag so JSON-LD is correctly parsed */}
       <script
         type="application/ld+json""
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+        dangerouslySetInnerHTML={ __html: JSON.stringify(schema) }
       ></script>
       <Header />
       <main className="bg-background text-white py-12">"
@@ -52,27 +51,9 @@ import React from "react",
 import { Header } from "@/components/Header",
 import { SEO } from "@/components/SEO",
 import { GradientHeading } from "@/components/GradientHeading",
-:src/pages/features/Ecommerce.tsx
-import { Button } from "@/components/ui/button";
-import Link from 'next/link';
-export default function Ecommerce() {
-
-  const schema = {
-    '@context': 'https://schema.org'
-    '@type': 'WebPage'
-    name: 'E-commerce Platform'
-    description:
-      'Sell or purchase AI solutions and IT equipment through our secure marketplace.'
-    url: 'https://app.ziontechgroup.com/features/e-commerce',  };    "@context": "https://schema.org"
-    "@type": "WebPage"
-    "name": "E-commerce Platform"
-    "description": "Sell or purchase AI solutions and IT equipment through our secure marketplace."
-    "url": "https://app.ziontechgroup.com/features/e-commerce"
-  }
 import { Button } from "@/components/ui/button",
 import Link from 'next/link',
 export default function Ecommerce() {
-  const schema = {
     "@context": "https://schema.org",
     "@type": "WebPage",
     "name": "E-commerce Platform",
@@ -83,11 +64,6 @@ export default function Ecommerce() {
   return (
     <>
       <SEO
-:src/pages/features/Ecommerce.tsx
-        title='E-commerce Platform'
-        description='Buy and sell hardware, software and services in the Zion marketplace.'
-        keywords='tech marketplace, buy IT hardware, sell AI solutions'
-        canonical='https://app.ziontechgroup.com/features/e-commerce'
 
         title="E-commerce Platform"
         description="Buy and sell hardware, software and services in the Zion marketplace."
@@ -101,7 +77,7 @@ export default function Ecommerce() {
       <script
         type="application/ld+json"
 
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+        dangerouslySetInnerHTML={ __html: JSON.stringify(schema) }
       ></script>
       <Header />
       <main className="bg-background text-white py-12">
@@ -158,7 +134,7 @@ export default function Ecommerce() {
             <Button size="lg" className="bg-zion-purple text-white" asChild>
               <Link href="/marketplace">Start Shopping</Link>
         type='application/ld+json'
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+        dangerouslySetInnerHTML={ __html: JSON.stringify(schema) }
       ></script>
       <Header />
       <main className='bg-background text-white py-12'>
@@ -218,8 +194,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       </main>
     </>
   )
-:src/pages/features/Ecommerce.tsx
-}
 ;
 
 ;
@@ -249,7 +223,7 @@ export default function Ecommerce() {;
       {/* Use a normal script tag so JSON-LD is correctly parsed */}
       <script;
         type="application/ld+json";
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+        dangerouslySetInnerHTML={ __html: JSON.stringify(schema) }
       ></script>;
       <Header />;
       <main className="bg-background text-white py-12">;
@@ -300,7 +274,7 @@ export default function Ecommerce() {;
         </div>;
       </main>;
 ;
-}}})
+}})
     </>;
   );
 }

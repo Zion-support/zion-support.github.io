@@ -20,7 +20,6 @@ import {
   DialogHeader;
 
   DialogTitle} from "@/components/ui/dialog",
-import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
@@ -76,7 +75,7 @@ export function ReviewsModerationTable({
       setViewDetailsOpen(false)
 
         variant: "destructive"})
-    }}),
+    }),
 
   const getInitials = (name: string) => {
     return name
@@ -86,7 +85,6 @@ export function ReviewsModerationTable({
       .toUpperCase()
   },
 
-  const getInitials = (name: string) => {
     return name
       .split(" ")
       .map((n) => n[0])
