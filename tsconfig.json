@@ -1,8 +1,6 @@
 {
   "compilerOptions": {
     "target": "ES2020",
-    "target": "ES2017",
-    "target": "ES2020",
     "lib": [
       "dom",
       "dom.iterable",
@@ -33,20 +31,23 @@
       "@/assets/*": ["./src/assets/*"]
     },
     "allowSyntheticDefaultImports": true,
-    "target": "ES2017",
     "strictNullChecks": true
-    ]
   },
   "include": [
     "next-env.d.ts",
     ".next/types/**/*.ts",
-    "**/*.ts",
-    "**/*.tsx"
+    "src/**/*.ts",
+    "src/**/*.tsx",
+    "pages/**/*.ts",
+    "pages/**/*.tsx",
+    "components/**/*.ts",
+    "components/**/*.tsx"
   ],
   "exclude": [
     "node_modules",
     "lib_backup*",
     "src_backup*",
+    "pages_backup*",
     "corrupted-files-backup*",
     "performance-reports*",
     "log-analysis-reports*",
@@ -55,39 +56,13 @@
     "monitoring*",
     "pm2-automation*",
     "automation/logs*",
-    "automation/backup*"
-  ]
-}
+    "automation/backup*",
     "src.pages.disabled.auto",
     "components.disabled",
     "src.disabled",
-    "src.pages.disabled"
-  ]
-}
-    "src_backup/**",
+    "src.pages.disabled",
     "recovered-branches/**",
     "temp_backup/**",
-    "api.disabled/**",
-    "lib/analytics.ts"
+    "api.disabled/**"
   ]
 }
-    "lib_backup*",
-    "src_backup*",
-    "corrupted-files-backup*",
-    "performance-reports*",
-    "log-analysis-reports*",
-    "link-reports*",
-    "lint-target*",
-    "monitoring*",
-    "pm2-automation*",
-    "automation/logs*",
-    "automation/backup*"
-  ]
-}
-    "src.pages.disabled.auto",
-    "components.disabled",
-    "src.disabled",
-    "src.pages.disabled"
-  ]
-}
-
