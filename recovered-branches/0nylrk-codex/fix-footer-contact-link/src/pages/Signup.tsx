@@ -1,13 +1,14 @@
 
-import { useState } from "react";
-import { Link, Navigate } from "react-router-dom";
-import { useForm, type UseFormReturn } from "react-hook-form";
-import { zodResolver } from "@hookform/resolvers/zod";
-import { z } from "zod";
-import { User, Mail, Lock, Eye, EyeOff, Facebook, Twitter } from "lucide-react";
+import {useState} from "react";
+import {Link, Navigate} from "react-router-dom";
+import {useForm, type, UseFormReturn} from "react-hook-form";
+import {zodResolver} from "@hookform/resolvers/zod";
+import {z} from "zod";
+import {User, Mail, Lock, Eye, EyeOff, Facebook, Twitter} from "lucide-react";
+<<<<<<< HEAD
 
-import { useAuth } from "@/hooks/useAuth";
-import { Button } from "@/components/ui/button";
+import { useAuth } from "@/hooks/useAuth",
+import { Button } from "@/components/ui/button",
 import { Input } from "@/components/ui/input";
 import { Checkbox } from "@/components/ui/checkbox";
 import {
@@ -16,66 +17,69 @@ import {
   FormField;
   FormItem;
   FormLabel;
-  FormMessage} from "@/components/ui/form";
+  FormMessage} from "@/components/ui/form",
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
+// Form validation schema
+const signupSchema = null;
+=======
+import {useAuth} from "@/hooks/useAuth";
+import {Button} from "@/components/ui/button";
+import {Input} from "@/components/ui/input";
+import {Checkbox} from "@/components/ui/checkbox";
+import {Form, FormControl, FormField, FormItem, FormLabel, FormMessage} from "@/components/ui/form";
+import {Header} from "@/components/Header";
+import {Footer} from "@/components/Footer";
 // Form validation schema
 const signupSchema = z
   .object({
     displayName: z.string().min(2, "Name must be at least 2 characters");
-    email: z.string().email("Please enter a valid email"),
+    email: z.string().email("Please enter a valid email")
     password: z.string()
       .min(8, "Password must be at least 8 characters")
       .regex(/[A-Z]/, "Password must contain at least one uppercase letter")
       .regex(/[a-z]/, "Password must contain at least one lowercase letter")
       .regex(/[0-9]/, "Password must contain at least one number");
-    confirmPassword: z.string(),
+    confirmPassword: z.string()
     termsAccepted: z.boolean().refine(val => val === true, {
       message: "You must accept the terms and conditions"})})
   .refine(data => data.password === data.confirmPassword, {
-    message: "Passwords do not match",
-    path: ["confirmPassword"]}),
-
+    message: "Passwords do not match"
+    path: ["confirmPassword"]})
 type SignupFormValues = z.infer<typeof signupSchema>;
-
 export default function Signup() {
   const { signup, loginWithGoogle, loginWithFacebook, loginWithTwitter, isLoading, isAuthenticated, user } = useAuth();
   const [showPassword, setShowPassword] = useState(false);
   const [showConfirmPassword, setShowConfirmPassword] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
-  
   // Initialize react-hook-form
   const form = useForm({
-    resolver: zodResolver(signupSchema),
+    resolver: zodResolver(signupSchema)
     defaultValues: {
-      displayName: "",
-      email: "",
-      password: "",
-      confirmPassword: "",
-      termsAccepted: false}}) as UseFormReturn<SignupFormValues>,
-
+      displayName: ""
+      email: ""
+      password: ""
+      confirmPassword: ""
+      termsAccepted: false}}) as UseFormReturn<SignupFormValues>
   // Form submission handler
   const onSubmit = async (data: SignupFormValues) => {
     if (isSubmitting) return, // Prevent multiple submissions
-    
     setIsSubmitting(true);
     try {
       await signup(data.email, data.password, data.displayName)
     } finally {
       setIsSubmitting(false)
     }
-  };
-
+  }
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
   // Redirect if user is already logged in and has completed profile
   if (isAuthenticated && user?.profileComplete) {
     return <Navigate to="/" />
   }
-  
   // Redirect to onboarding if user is authenticated but hasn't completed profile
   if (isAuthenticated && !user?.profileComplete) {
     return <Navigate to="/onboarding" />
   }
-
   return (
     <>
       <Header />
@@ -93,7 +97,6 @@ export default function Signup() {
                 </Link>
               </p>
             </div>
-
             <div className="bg-zion-blue-dark rounded-lg p-6">
               <Form {...form}>
                 <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6" noValidate>
@@ -119,7 +122,6 @@ export default function Signup() {
                       </FormItem>
                     )}
                   />
-
                   <FormField
                     control={form.control}
                     name="email"
@@ -143,7 +145,6 @@ export default function Signup() {
                       </FormItem>
                     )}
                   />
-
                   <FormField
                     control={form.control}
                     name="password"
@@ -182,7 +183,6 @@ export default function Signup() {
                       </FormItem>
                     )}
                   />
-
                   <FormField
                     control={form.control}
                     name="confirmPassword"
@@ -221,7 +221,6 @@ export default function Signup() {
                       </FormItem>
                     )}
                   />
-
                   <FormField
                     control={form.control}
                     name="termsAccepted"
@@ -250,17 +249,15 @@ export default function Signup() {
                       </FormItem>
                     )}
                   />
-
                   <Button
                     type="submit"
                     className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white"
-                    disabled={isLoading || isSubmitting}
+                    disabled={isLoading |isSubmitting}
                   >
                     {isLoading ? "Creating Account..." : "Create Account"}
                   </Button>
                 </form>
               </Form>
-
               <div className="mt-6">
                 <div className="relative">
                   <div className="absolute inset-0 flex items-center">
@@ -270,14 +267,13 @@ export default function Signup() {
                     <span className="px-2 bg-zion-blue-dark text-zion-slate-light">Or continue with</span>
                   </div>
                 </div>
-
                 <div className="mt-6 grid grid-cols-3 gap-3">
                   <Button
                     type="button"
                     variant="outline"
                     className="w-full border border-zion-blue-light bg-zion-blue-dark text-white hover:bg-zion-blue hover:text-zion-cyan"
                     onClick={() => loginWithGoogle()}
-                    disabled={isLoading || isSubmitting}
+                    disabled={isLoading |isSubmitting}
                   >
                     <span className="sr-only">Sign in with Google</span>
                     <svg className="h-5 w-5" aria-hidden="true" fill="currentColor" viewBox="0 0 24 24">
@@ -292,7 +288,7 @@ export default function Signup() {
                     variant="outline"
                     className="w-full border border-zion-blue-light bg-zion-blue-dark text-white hover:bg-zion-blue hover:text-zion-cyan"
                     onClick={() => loginWithFacebook()}
-                    disabled={isLoading || isSubmitting}
+                    disabled={isLoading |isSubmitting}
                   >
                     <span className="sr-only">Sign in with Facebook</span>
                     <Facebook className="h-5 w-5" />
@@ -302,7 +298,7 @@ export default function Signup() {
                     variant="outline"
                     className="w-full border border-zion-blue-light bg-zion-blue-dark text-white hover:bg-zion-blue hover:text-zion-cyan"
                     onClick={() => loginWithTwitter()}
-                    disabled={isLoading || isSubmitting}
+                    disabled={isLoading |isSubmitting}
                   >
                     <span className="sr-only">Sign in with Twitter</span>
                     <Twitter className="h-5 w-5" />

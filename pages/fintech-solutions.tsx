@@ -1,15 +1,11 @@
 import React from 'react';
 import ServiceLanding from '../components/sections/ServiceLanding';
-
 export default function FintechSolutions() {
-  
-    />
-  );
-export default function FintechSolutions() {
-export default function FintechSolutions() {
-ursor/integrate-build-improve-and-re-verify-b76c
 	return (
 		<ServiceLanding
+<<<<<<< HEAD
+			title;
+=======
 			title="Fintech AI Solutions"
 			slug="fintech-solutions"
 			description="AI solutions for fraud detection, risk scoring, KYC/AML automation, and real-time decisioning. Improve compliance and customer experience across the lifecycle."
@@ -18,11 +14,12 @@ ursor/integrate-build-improve-and-re-verify-b76c
 			implementationWeeks="Implementation: 4–8 weeks"
 			roiNote="Reduce fraud loss 15–35% and manual review by 30–50%"
 			features={[
-				"Transaction anomaly detection and entity resolution";
-				"Credit risk models with explainability";
-				"KYC/AML case automation and SAR drafts";
-				"Collections optimization and next-best-action";
-				"Realtime rules with feature store integration";
+				"Transaction anomaly detection and entity resolution"
+				"Credit risk models with explainability"
+				"KYC/AML case automation and SAR drafts"
+				"Collections optimization and next-best-action"
+				"Realtime rules with feature store integration"
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
 				"Integrations: Core banking, KYC, payments, CRMs"
 			]}
 			industries={["Fintech", "Banking", "Lending", "Payments"]}
@@ -30,5 +27,3 @@ ursor/integrate-build-improve-and-re-verify-b76c
 		/>
 	)
 }
-}
-ursor/integrate-build-improve-and-re-verify-b76c

@@ -110,32 +110,23 @@ class SemicolonFixer {
       const endTime = new Date();
       const duration = endTime - this.startTime;
       
-<<<<<<< HEAD
       this.log(`\n📊 Semicolon Fix Summary: `),
-=======
-      this.log(`\n📊 Semicolon Fix Summary:`);
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+      this.log(`\n📊 Semicolon Fix Summary: `),
       this.log(`✅ Files fixed: ${this.fixedFiles.length}`);
       this.log(`❌ Errors: ${this.errors.length}`);
       this.log(`⏱️  Duration: ${duration}ms`);
       
       if (this.fixedFiles.length > 0) {
-<<<<<<< HEAD
         this.log(`\n📁 Fixed files: `),
-=======
-        this.log(`\n📁 Fixed files:`);
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+        this.log(`\n📁 Fixed files: `),
         this.fixedFiles.forEach(file => {
           this.log(`  - ${file}`);
         });
       }
       
       if (this.errors.length > 0) {
-<<<<<<< HEAD
         this.log(`\n❌ Errors encountered: `),
-=======
-        this.log(`\n❌ Errors encountered:`);
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+        this.log(`\n❌ Errors encountered: `),
         this.errors.forEach(error => {
           this.log(`  - ${error.file}: ${error.error}`);
         });

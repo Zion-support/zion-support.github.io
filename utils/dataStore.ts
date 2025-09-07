@@ -1,25 +1,8 @@
-// Placeholder for dataStore utilities
-export const getReviews = async () => {
-  // Placeholder implementation
-  return [];
-};
-
-export const getReview = async (id: string) => {
-  // Placeholder implementation
-  return null;
-};
-
-export const createReview = async (review: any) => {
-  // Placeholder implementation
-  return { id: Date.now().toString(), ...review };
-};
-
-export const updateReview = async (id: string, updates: any) => {
-  // Placeholder implementation
-  return { id, ...updates };
-};
-
-export const deleteReview = async (id: string) => {
-  // Placeholder implementation
-  return { success: true };
-};
+// Data store utilities
+export const dataStore = {
+  // Add data store functionality here
+  getData: () => []
+  setData: (data: any) => null
+  updateData: (id: string, data: any) => null
+  deleteData: (id: string) => null
+}

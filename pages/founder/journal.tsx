@@ -1,16 +1,9 @@
 import dynamic from 'next/dynamic';
-const BookBuilder = dynamic(() => import('../../components/book/BookBuilder'), {
-  ssr: false,
-});
-
-export default function FounderJournalPage() {
-  return <BookBuilder />;
-const BookBuilder = dynamic(() => import('../../components/book/BookBuilder'), { ssr: false }),
+<<<<<<< HEAD
+const BookBuilder = null;
+=======
+const BookBuilder = dynamic(() => import('../../components/book/BookBuilder'), { ssr: false })
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
 export default function FounderJournalPage() {
   return <BookBuilder />
 }
-const BookBuilder = dynamic(() => import('../../components/book/BookBuilder'), { ssr: false }),
-export default function FounderJournalPage() {
-  return <BookBuilder />
-}
-ursor/integrate-build-improve-and-re-verify-b76c

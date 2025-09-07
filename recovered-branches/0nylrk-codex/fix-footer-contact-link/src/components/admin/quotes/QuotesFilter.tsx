@@ -1,26 +1,36 @@
-import React from "react";
-import { Calendar, RefreshCw } from "@/components/icons";
-import { Card, CardContent } from "@/components/ui/card";
-import { Input } from "@/components/ui/input";
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
-import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover";
-import { Button } from "@/components/ui/button";
-import { Calendar as CalendarComponent } from "@/components/ui/calendar";
+import React from "react",
+import { Calendar, RefreshCw } from "@/components/icons",
+import { Card, CardContent } from "@/components/ui/card",
+import { Input } from "@/components/ui/input",
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select",
+import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover",
+import { Button } from "@/components/ui/button",
+import { Calendar as CalendarComponent } from "@/components/ui/calendar",
 import { format } from "date-fns";
 import type { DateRange } from "@/types/dateRange";
 import type { QuoteStatus } from "@/types/quotes";
 interface QuotesFilterProps {
-  searchQuery: string,
-  setSearchQuery: (value: string) => void,
-  statusFilter: QuoteStatus | 'all',
-  setStatusFilter: (value: QuoteStatus | 'all') => void,
-  archiveFilter: 'active' | 'archived' | 'all',
-  setArchiveFilter: (value: 'active' | 'archived' | 'all') => void,
-  dateRange: DateRange | undefined,
-  setDateRange: (range: DateRange | undefined) => void,
+<<<<<<< HEAD
+  searchQuery: string;
+  setSearchQuery: (value: string) => void;
+  statusFilter: QuoteStatus | 'all';
+  setStatusFilter: (value: QuoteStatus | 'all') => void;
+  archiveFilter: 'active' | 'archived' | 'all';
+  setArchiveFilter: (value: 'active' | 'archived' | 'all') => void;
+  dateRange: DateRange | undefined;
+  setDateRange: (range: DateRange | undefined) => void;
+=======
+  searchQuery: string
+  setSearchQuery: (value: string) => void
+  statusFilter: QuoteStatus | 'all'
+  setStatusFilter: (value: QuoteStatus | 'all') => void
+  archiveFilter: 'active' | 'archived' | 'all'
+  setArchiveFilter: (value: 'active' | 'archived' | 'all') => void
+  dateRange: DateRange | undefined
+  setDateRange: (range: DateRange | undefined) => void
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
   onReset: () => void
 }
-
 export const QuotesFilter: React.FC<QuotesFilterProps> = ({
   searchQuery;
   setSearchQuery;
@@ -29,7 +39,14 @@ export const QuotesFilter: React.FC<QuotesFilterProps> = ({
   archiveFilter;
   setArchiveFilter;
   dateRange;
+<<<<<<< HEAD
   setDateRange;
+  onReset
+}) => {
+  return (
+    <Card className;
+=======
+  setDateRange
   onReset
 }) => {
   return (
@@ -44,7 +61,6 @@ export const QuotesFilter: React.FC<QuotesFilterProps> = ({
               onChange={(e) => setSearchQuery(e.target.value)}
             />
           </div>
-          
           <div>
             <p className="text-zion-slate-light text-sm mb-2">Status</p>
             <Select value={statusFilter} onValueChange={(value: any) => setStatusFilter(value)}>
@@ -61,7 +77,6 @@ export const QuotesFilter: React.FC<QuotesFilterProps> = ({
               </SelectContent>
             </Select>
           </div>
-          
           <div>
             <p className="text-zion-slate-light text-sm mb-2">Archive</p>
             <Select value={archiveFilter} onValueChange={(value: any) => setArchiveFilter(value)}>
@@ -75,7 +90,6 @@ export const QuotesFilter: React.FC<QuotesFilterProps> = ({
               </SelectContent>
             </Select>
           </div>
-          
           <div>
             <p className="text-zion-slate-light text-sm mb-2">Date Range</p>
             <Popover>
@@ -112,10 +126,9 @@ export const QuotesFilter: React.FC<QuotesFilterProps> = ({
             </Popover>
           </div>
         </div>
-        
         <div className="mt-4 flex justify-end">
-          <Button 
-            variant="outline" 
+          <Button
+            variant="outline"
             onClick={onReset}
             className="border-zion-blue-light text-zion-slate-light"
           >
@@ -125,4 +138,5 @@ export const QuotesFilter: React.FC<QuotesFilterProps> = ({
       </CardContent>
     </Card>
   )
-};
+}
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5

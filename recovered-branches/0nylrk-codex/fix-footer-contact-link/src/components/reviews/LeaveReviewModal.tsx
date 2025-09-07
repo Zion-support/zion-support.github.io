@@ -6,19 +6,25 @@ import {
   DialogDescription;
   DialogHeader;
   DialogTitle;
-  DialogTrigger} from "@/components/ui/dialog";
-import { Button } from "@/components/ui/button";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+  DialogTrigger} from "@/components/ui/dialog",
+import { Button } from "@/components/ui/button",
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
 import { ReviewForm } from "./ReviewForm";
 import { useReviews } from "@/hooks/useReviews";
 interface LeaveReviewModalProps {
-  projectId: string,
-  revieweeId: string,
-  revieweeName: string,
-  isOpen: boolean,
+<<<<<<< HEAD
+  projectId: string;
+  revieweeId: string;
+  revieweeName: string;
+  isOpen: boolean;
+=======
+  projectId: string
+  revieweeId: string
+  revieweeName: string
+  isOpen: boolean
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
   onClose: () => void
 }
-
 export function LeaveReviewModal({
   projectId;
   revieweeId;
@@ -27,18 +33,19 @@ export function LeaveReviewModal({
   onClose}: LeaveReviewModalProps) {
   const { userReview, submitReview, updateReview, isSubmitting } = useReviews(projectId);
   const [open, setOpen] = useState(isOpen);
-  
   useEffect(() => {
     setOpen(isOpen)
   }, [isOpen]);
+<<<<<<< HEAD
   
+  const handleOpenChange = null;
+=======
   const handleOpenChange = (open: boolean) => {
-    setOpen(open);
+    setOpen(open)
     if (!open) {
       onClose()
     }
-  };
-  
+  }
   const handleSubmit = async (formValues: any) => {
     if (userReview) {
       // Update existing review
@@ -56,8 +63,8 @@ export function LeaveReviewModal({
       }
       return success
     }
-  };
-  
+  }
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
   return (
     <Dialog open={open} onOpenChange={handleOpenChange}>
       <DialogContent className="max-w-md">
@@ -69,13 +76,12 @@ export function LeaveReviewModal({
             Your feedback helps build a trustworthy community. It will be visible after moderation.
           </DialogDescription>
         </DialogHeader>
-        
         <ReviewForm
           projectId={projectId}
           revieweeId={revieweeId}
           revieweeName={revieweeName}
           onSubmit={handleSubmit}
-          defaultValues={userReview || undefined}
+          defaultValues={userReview |undefined}
           isSubmitting={isSubmitting}
         />
       </DialogContent>

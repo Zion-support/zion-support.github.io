@@ -1,13 +1,11 @@
-// Placeholder for support utilities
-export const detectIntent = async (message: string) => {
-  // Placeholder implementation
-  return {
-    intentMatched: false,
-    matchedArticleIds: []
-  };
-};
-
-export const getMatchedArticles = async (articleIds: string[]) => {
-  // Placeholder implementation
-  return [];
-};
+// Support utilities
+export const support = {
+  // Add support functionality here
+  logEvent: (event: any) => null
+  getArticles: () => []
+  getArticleById: (id: string) => null
+}
+export const logSupportEventToOperator = (event: any) => {
+  // Add support event logging functionality here
+  return null;
+}

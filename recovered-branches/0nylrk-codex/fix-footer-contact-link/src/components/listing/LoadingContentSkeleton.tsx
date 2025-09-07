@@ -1,8 +1,7 @@
 
-import React from "react";
+import React from "react",
 import { Skeleton } from "@/components/ui/skeleton";
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
-
 export function LoadingContentSkeleton() {
   return (
     <Card className="border border-zion-blue-light bg-zion-blue-dark overflow-hidden">
@@ -24,5 +23,5 @@ export function LoadingContentSkeleton() {
         </div>
       </CardContent>
     </Card>
-  )
+  );
 }

@@ -1,13 +1,15 @@
 
-import React from "react";
-import { Button } from "@/components/ui/button";
+import React from "react",
+import { Button } from "@/components/ui/button",
 import { Download, FileText, Mail, BarChart3 } from "lucide-react";
 import { Link } from "react-router-dom";
 export function BillingHeader() {
   return (
     <div className="space-y-2">
       <div className="flex items-center justify-between">
-        <h1 className="text-3xl font-bold tracking-tight">Billing & Invoices</h1>
+        <h1 className="text-3xl font-bold tracking-tight">
+          Billing & Invoices
+        </h1>
         <div className="flex gap-2">
           <Button variant="outline" size="sm" className="gap-1">
             <Download className="h-4 w-4" />
@@ -26,8 +28,9 @@ export function BillingHeader() {
         </div>
       </div>
       <p className="text-muted-foreground">
-        Manage your subscription, view invoice history, and update payment methods.
+        Manage your subscription, view invoice history, and update payment
+        methods.
       </p>
     </div>
-  )
+  );
 }

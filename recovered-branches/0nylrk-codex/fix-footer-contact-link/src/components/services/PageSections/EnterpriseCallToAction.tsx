@@ -13,5 +13,5 @@ export function EnterpriseCallToAction() {
         Need volume pricing or custom SLAs? Contact our enterprise sales team.
       </p>
     </div>
-  )
+  );
 }

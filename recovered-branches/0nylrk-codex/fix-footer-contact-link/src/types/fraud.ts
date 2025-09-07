@@ -1,6 +1,8 @@
 
+<<<<<<< HEAD
+export type FraudSeverity = any;
+=======
 export type FraudSeverity = 'safe' | 'suspicious' | 'dangerous';
-
 export interface FraudFlag {
   id: string;
   user_id: string;
@@ -17,15 +19,15 @@ export interface FraudFlag {
   reviewed_at?: string;
   action_taken?: 'none' | 'warning' | 'suspension' | 'ban';
   gpt_classification?: string;
-  gpt_explanation?: string;
+  gpt_explanation?: string
   is_false_positive?: boolean
 }
-
 export interface FraudStats {
   total_flags: number;
   pending_flags: number;
   suspicious_count: number;
   dangerous_count: number;
-  false_positives: number;
+  false_positives: number
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
   actioned_count: number
 }

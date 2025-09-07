@@ -47,15 +47,11 @@ export default ${hookName};`;
     }
     
     // Check for other common syntax issues
-    if (content.includes('<<<<<<< HEAD') || content.includes('=======') || content.includes('>>>>>>>')) {
       console.log(`🔧 Fixing merge conflicts in: ${filename}`);
       
       // Remove merge conflict markers
       content = content
-        .replace(/<<<<<<< HEAD[\s\S]*?=======[\s\S]*?>>>>>>> [^\n]+/g, '')
-        .replace(/<<<<<<< HEAD[\s\S]*?>>>>>>> [^\n]+/g, '')
-        .replace(/=======[\s\S]*?>>>>>>> [^\n]+/g, '');
-      
+        .replace(/[\s\S]*?[\s\S]*?        .replace(/[\s\S]*?        .replace(/[\s\S]*?      
       if (content.trim().length === 0) {
         // If file is empty after removing conflicts, create basic content
         const hookName = filename.replace('.ts', '');

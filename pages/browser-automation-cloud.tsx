@@ -1,10 +1,6 @@
- export default function BrowserAutomationCloudPage () {
-  return (<> <Head> <title>Browser Automation Cloud | Zion Tech Group</title> </div> </div> </div> </section> </main> </> 
-ursor/integrate-build-improve-and-re-verify-b76c
-import React from 'react';
+import React from 'react',
 import SEO from '../components/SEO';
 import { Check, ExternalLink } from 'lucide-react';
-
 export default function BrowserAutomationCloudPage() {
 	return (
 		<>
@@ -49,4 +45,3 @@ export default function BrowserAutomationCloudPage() {
 		</>
 	)
 }
-ursor/integrate-build-improve-and-re-verify-b76c

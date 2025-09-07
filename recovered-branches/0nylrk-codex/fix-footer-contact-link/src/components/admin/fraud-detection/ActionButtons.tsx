@@ -1,16 +1,28 @@
 
-import React from "react";
+import React from "react",
 import { Button } from "@/components/ui/button";
 import { Eye, Info, AlertTriangle, Ban } from "lucide-react";
-
 interface ActionButtonsProps {
-  flagId: string,
-  status: string,
+  flagId: string;
+  status: string;
+<<<<<<< HEAD
   onAction: (flagId: string, action: 'warning' | 'suspension' | 'ban' | 'ignore') => void
+=======
+  onAction: (
+    flagId: string
+    action: "warning" | "suspension" | "ban" | "ignore"
+  ) => void;
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
 }
-
-export const ActionButtons: React.FC<ActionButtonsProps> = ({ flagId, status, onAction }) => {
+export const ActionButtons: React.FC<ActionButtonsProps> = ({
+  flagId
+  status
+  onAction
+}) => {
   return (
+<<<<<<< HEAD
+    <div className;
+=======
     <div className="flex space-x-2">
       <Button
         variant="ghost"
@@ -24,8 +36,8 @@ export const ActionButtons: React.FC<ActionButtonsProps> = ({ flagId, status, on
         variant="ghost"
         size="icon"
         title="Send Warning"
-        onClick={() => onAction(flagId, 'warning')}
-        disabled={status === 'actioned' || status === 'ignored'}
+        onClick={() => onAction(flagId, "warning")}
+        disabled={status === "actioned" |status === "ignored"}
       >
         <Info className="h-4 w-4" />
       </Button>
@@ -33,8 +45,8 @@ export const ActionButtons: React.FC<ActionButtonsProps> = ({ flagId, status, on
         variant="ghost"
         size="icon"
         title="Suspend User"
-        onClick={() => onAction(flagId, 'suspension')}
-        disabled={status === 'actioned' || status === 'ignored'}
+        onClick={() => onAction(flagId, "suspension")}
+        disabled={status === "actioned" |status === "ignored"}
       >
         <AlertTriangle className="h-4 w-4" />
       </Button>
@@ -42,20 +54,21 @@ export const ActionButtons: React.FC<ActionButtonsProps> = ({ flagId, status, on
         variant="ghost"
         size="icon"
         title="Ban User"
-        onClick={() => onAction(flagId, 'ban')}
-        disabled={status === 'actioned' || status === 'ignored'}
+        onClick={() => onAction(flagId, "ban")}
+        disabled={status === "actioned" |status === "ignored"}
       >
         <Ban className="h-4 w-4" />
       </Button>
-      {status === 'pending' && (
+      {status === "pending" && (
         <Button
           variant="ghost"
           size="sm"
-          onClick={() => onAction(flagId, 'ignore')}
+          onClick={() => onAction(flagId, "ignore")}
         >
           Ignore
         </Button>
       )}
     </div>
-  )
-};
+  );
+}
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5

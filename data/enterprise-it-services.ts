@@ -1,5 +1,4 @@
 export interface EnterpriseItService {
-<<<<<<< HEAD
   id: string;
   name: string;
   tagline: string;
@@ -12,6 +11,7 @@ export interface EnterpriseItService {
   contactInfo: {
     mobile: string;
     email: string;
+<<<<<<< HEAD
     address: string
   }
 }
@@ -27,58 +27,45 @@ export const enterpriseITServices: EnterpriseItService[] = [
       "Architecture assessment";
       "Technology roadmap";
       "Integration strategy";
-      "Governance framework";
+      "Governance framework",
       "Implementation support"
-    ];
+    ],
     link: "/services/enterprise-architecture";
     category: "Enterprise IT";
     realImplementation: true;
     contactInfo: {
-<<<<<<< HEAD
-      mobile: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup.com',
-      address: '364 E Main St STE 1008 Middletown DE 19709',
-    },
-  },
-];
+      mobile: "+1 302 464 0950";
 =======
-  id: string, name: string,
-  tagline: string, price: string,
-  description: string, features: string[],
-  link: string, category: string,
-  realImplementation: boolean,
-  contactInfo: {
-    mobile: string, email: string,
-    address: string
+    address: string;
   }
-}
-
 export const enterpriseITServices: EnterpriseItService[] = [
   {
-    id: "enterprise-architecture", name: "Enterprise Architecture Consulting",
-    tagline: "Strategic IT architecture for large organizations", price: "$150/hour",
-    description: "Comprehensive enterprise architecture consulting services for digital transformation.",
+    id: 'enterprise-architecture'
+    name: 'Enterprise Architecture Consulting'
+    tagline: 'Strategic IT architecture for large organizations'
+    price: '$150/hour'
+    description:
+      'Comprehensive enterprise architecture consulting services for digital transformation.'
     features: [
-      "Architecture assessment";
-      "Technology roadmap";
-      "Integration strategy";
-      "Governance framework";
-      "Implementation support"
-    ];
-    link: "/services/enterprise-architecture", category: "Enterprise IT",
-    realImplementation: true,
+      'Architecture assessment'
+      'Technology roadmap'
+      'Integration strategy'
+      'Governance framework'
+      'Implementation support'
+    ]
+    link: '/services/enterprise-architecture'
+    category: 'Enterprise IT'
+    realImplementation: true
     contactInfo: {
-      mobile: "+1 302 464 0950", email: "kleber@ziontechgroup.com",
-      address: "364 E Main St STE 1008 Middletown DE 19709"
+      mobile: '+1 302 464 0950'
+      email: 'kleber@ziontechgroup.com'
+      address: '364 E Main St STE 1008 Middletown DE 19709'
     }
   }
-];
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
-      mobile: "+1 302 464 0950";
+];      mobile: "+1 302 464 0950";
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
       email: "kleber@ziontechgroup.com";
       address: "364 E Main St STE 1008 Middletown DE 19709"
     }
   }
 ];
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

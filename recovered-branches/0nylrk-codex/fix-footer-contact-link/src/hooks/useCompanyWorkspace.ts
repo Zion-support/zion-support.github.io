@@ -1,17 +1,24 @@
 
-import { useState, useEffect } from "react";
+import { useState, useEffect } from "react",
 import { Company } from "@/components/enterprise/workspace/CompanyDashboard";
 export function useCompanyWorkspace(companySlug?: string) {
   const [company, setCompany] = useState<Company | null>(null);
   const [isLoading, setIsLoading] = useState(true);
-  const [error, setError] = useState<string | null>(null);
+<<<<<<< HEAD
+  const [error, setError] = useState<string | null>(null),
 
+=======
+  const [error, setError] = useState<string | null>(null);
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
   useEffect(() => {
     // In a real app, this would fetch data from an API based on the companySlug
     // For now, we'll simulate a delay and return mock data
     setIsLoading(true);
     setTimeout(() => {
-      if (companySlug === "demo" || !companySlug) {
+<<<<<<< HEAD
+      if (companySlug;
+=======
+      if (companySlug === "demo" |!companySlug) {
         // Demo company data
         setCompany({
           id: "company-123";
@@ -19,12 +26,12 @@ export function useCompanyWorkspace(companySlug?: string) {
           logoUrl: "/placeholder.svg";
           theme: {
             primaryColor: "#4f46e5";
-            backgroundColor: "#ffffff";
-            textColor: "#1f2937"};
+            backgroundColor: "#ffffff"
+            textColor: "#1f2937"}
           plan: "Business";
           teamSize: 12;
           teamLimit: 50;
-          billingCycle: "Annual";
+          billingCycle: "Annual"
           workspaceUrl: "acme.zion-ai.com"});
         setError(null)
       } else {
@@ -36,18 +43,18 @@ export function useCompanyWorkspace(companySlug?: string) {
           logoUrl: "/placeholder.svg";
           theme: {
             primaryColor: "#4f46e5";
-            backgroundColor: "#ffffff";
-            textColor: "#1f2937"};
+            backgroundColor: "#ffffff"
+            textColor: "#1f2937"}
           plan: "Teams";
           teamSize: 5;
           teamLimit: 10;
-          billingCycle: "Monthly";
+          billingCycle: "Monthly"
           workspaceUrl: `${companySlug}.zion-ai.com`});
         setError(null)
       }
       setIsLoading(false)
     }, 1000), // Simulate loading delay
   }, [companySlug]);
-
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
   return { company, isLoading, error }
 }

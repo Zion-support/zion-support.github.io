@@ -1,31 +1,31 @@
+<<<<<<< HEAD
+import React from 'react',
+import Head from 'next/head',
+import Link from 'next/link';
+import { useRouter } from 'next/router';
+export default function ToolResourcePage() {
+  const router = null;
+=======
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
-
-ursor/integrate-build-improve-and-re-verify-b76c
 export default function ToolResourcePage() {
-  const router = useRouter();
-  const { id } = router.query;
-
+  const router = useRouter()
+  const { id } = router.query
   // Tools data - this should match the data in resources.tsx
   const tools = [
     {
-      id: 'automation-assessment',
-      title: 'Automation Readiness Assessment',
-      description:
-        "Evaluate your organization's readiness for AI automation implementation.",
-      description: 'Evaluate your organization\'s readiness for AI automation implementation.',
-      description: 'Evaluate your organization\'s readiness for AI automation implementation.',
-ursor/integrate-build-improve-and-re-verify-b76c
-      type: 'Interactive Tool',
-      estimatedTime: '15 minutes',
+      id: 'automation-assessment'
+      title: 'Automation Readiness Assessment'
+      description: 'Evaluate your organization\'s readiness for AI automation implementation.'
+      type: 'Interactive Tool'
+      estimatedTime: '15 minutes'
       fullContent: `
         <h2>About This Tool</h2>
-        <p>The Automation Readiness Assessment is designed to help organizations evaluate their current 
-        capabilities and identify opportunities for AI automation implementation. This comprehensive assessment 
+        <p>The Automation Readiness Assessment is designed to help organizations evaluate their current
+        capabilities and identify opportunities for AI automation implementation. This comprehensive assessment
         covers technology infrastructure, organizational culture, and business processes.</p>
-        
         <h2>What You'll Learn</h2>
         <p>This assessment will help you understand:</p>
         <ul>
@@ -34,7 +34,6 @@ ursor/integrate-build-improve-and-re-verify-b76c
           <li>Potential challenges and how to address them</li>
           <li>Recommended next steps for your automation journey</li>
         </ul>
-        
         <h2>Assessment Categories</h2>
         <p>The assessment covers several key areas:</p>
         <ul>
@@ -44,7 +43,6 @@ ursor/integrate-build-improve-and-re-verify-b76c
           <li><strong>Data & Analytics:</strong> Data availability, quality, and analytical capabilities</li>
           <li><strong>Leadership & Strategy:</strong> Executive support, strategic alignment, and resource allocation</li>
         </ul>
-        
         <h2>How to Use This Tool</h2>
         <p>To get the most accurate results:</p>
         <ol>
@@ -53,49 +51,30 @@ ursor/integrate-build-improve-and-re-verify-b76c
           <li>Consider involving key stakeholders for broader perspective</li>
           <li>Review results with your team to develop action plans</li>
         </ol>
-        
         <h2>Next Steps After Assessment</h2>
         <p>Once you complete the assessment, you'll receive:</p>
-        <p>Once you complete the assessment, you'll receive: </p>
-        <p>Once you complete the assessment, you'll receive: </p>
-ursor/integrate-build-improve-and-re-verify-b76c
         <ul>
           <li>A detailed readiness score and analysis</li>
           <li>Specific recommendations for improvement</li>
           <li>Prioritized action items</li>
           <li>Resources and tools for implementation</li>
         </ul>
-      `,
-      `;
-ursor/integrate-build-improve-and-re-verify-b76c
+      `
       features: [
         'Comprehensive evaluation frameworkIndustry benchmarkingActionable recommendationsProgress trackingResource library access'
       ]
-    };
+    }
     {
-      id: 'ai-maturity-model',
-      title: 'AI Maturity Model',
-      description:
-        'Assess your current AI capabilities and plan your transformation journey.',
-      `;
-      features: [
-        'Comprehensive evaluation frameworkIndustry benchmarkingActionable recommendationsProgress trackingResource library access'
-      ]
-    };
-    {
-      id: 'ai-maturity-model',
-      title: 'AI Maturity Model',
-      description: 'Assess your current AI capabilities and plan your transformation journey.',
-      description: 'Assess your current AI capabilities and plan your transformation journey.',
-ursor/integrate-build-improve-and-re-verify-b76c
-      type: 'Framework',
-      estimatedTime: '30 minutes',
+      id: 'ai-maturity-model'
+      title: 'AI Maturity Model'
+      description: 'Assess your current AI capabilities and plan your transformation journey.'
+      type: 'Framework'
+      estimatedTime: '30 minutes'
       fullContent: `
         <h2>About This Framework</h2>
-        <p>The AI Maturity Model provides a structured approach to understanding and advancing your 
-        organization's AI capabilities. This framework helps you identify where you are today and 
+        <p>The AI Maturity Model provides a structured approach to understanding and advancing your
+        organization's AI capabilities. This framework helps you identify where you are today and
         create a roadmap for where you want to be tomorrow.</p>
-        
         <h2>Maturity Levels</h2>
         <p>The framework defines five maturity levels:</p>
         <ul>
@@ -105,7 +84,6 @@ ursor/integrate-build-improve-and-re-verify-b76c
           <li><strong>Level 4 - Optimization:</strong> Advanced AI systems with continuous improvement</li>
           <li><strong>Level 5 - Innovation:</strong> AI-driven business transformation and new capabilities</li>
         </ul>
-        
         <h2>Assessment Dimensions</h2>
         <p>The maturity model evaluates several key dimensions:</p>
         <ul>
@@ -115,12 +93,8 @@ ursor/integrate-build-improve-and-re-verify-b76c
           <li><strong>People & Skills:</strong> AI talent, training programs, and organizational capabilities</li>
           <li><strong>Processes & Governance:</strong> AI governance, risk management, and operational processes</li>
         </ul>
-        
         <h2>Using the Framework</h2>
         <p>To effectively use this framework:</p>
-        <p>To effectively use this framework: </p>
-        <p>To effectively use this framework: </p>
-ursor/integrate-build-improve-and-re-verify-b76c
         <ol>
           <li>Assess your current state across all dimensions</li>
           <li>Identify gaps between current and target maturity levels</li>
@@ -128,7 +102,6 @@ ursor/integrate-build-improve-and-re-verify-b76c
           <li>Develop a phased transformation roadmap</li>
           <li>Track progress and adjust plans as needed</li>
         </ol>
-        
         <h2>Benefits of the Framework</h2>
         <p>This framework provides several key benefits:</p>
         <ul>
@@ -138,37 +111,22 @@ ursor/integrate-build-improve-and-re-verify-b76c
           <li>Progress tracking and measurement</li>
           <li>Stakeholder alignment and communication</li>
         </ul>
-      `,
-      `;
-ursor/integrate-build-improve-and-re-verify-b76c
+      `
       features: [
         '5-level maturity frameworkMulti-dimensional assessmentGap analysis toolsTransformation roadmapProgress tracking'
       ]
-    };
+    }
     {
-      id: 'performance-benchmark',
-      title: 'Performance Benchmarking Tool',
-      description:
-        'Compare your automation performance against industry standards.',
-      `;
-      features: [
-        '5-level maturity frameworkMulti-dimensional assessmentGap analysis toolsTransformation roadmapProgress tracking'
-      ]
-    };
-    {
-      id: 'performance-benchmark',
-      title: 'Performance Benchmarking Tool',
-      description: 'Compare your automation performance against industry standards.',
-      description: 'Compare your automation performance against industry standards.',
-ursor/integrate-build-improve-and-re-verify-b76c
-      type: 'Analytics Tool',
-      estimatedTime: '20 minutes',
+      id: 'performance-benchmark'
+      title: 'Performance Benchmarking Tool'
+      description: 'Compare your automation performance against industry standards.'
+      type: 'Analytics Tool'
+      estimatedTime: '20 minutes'
       fullContent: `
         <h2>About This Tool</h2>
-        <p>The Performance Benchmarking Tool helps you compare your automation performance against 
-        industry standards and best practices. This tool provides insights into how your organization 
+        <p>The Performance Benchmarking Tool helps you compare your automation performance against
+        industry standards and best practices. This tool provides insights into how your organization
         performs relative to peers and identifies opportunities for improvement.</p>
-        
         <h2>Benchmarking Categories</h2>
         <p>The tool covers several performance categories:</p>
         <ul>
@@ -178,7 +136,6 @@ ursor/integrate-build-improve-and-re-verify-b76c
           <li><strong>ROI Metrics:</strong> Investment returns, payback periods, and value creation</li>
           <li><strong>Innovation Metrics:</strong> New capabilities, competitive advantages, and market position</li>
         </ul>
-        
         <h2>Industry Benchmarks</h2>
         <p>Compare your performance against:</p>
         <ul>
@@ -187,7 +144,6 @@ ursor/integrate-build-improve-and-re-verify-b76c
           <li><strong>Peer Groups:</strong> Similar-sized organizations with comparable resources</li>
           <li><strong>Historical Trends:</strong> Performance evolution over time</li>
         </ul>
-        
         <h2>How to Use This Tool</h2>
         <p>To get the most value from benchmarking:</p>
         <ol>
@@ -197,7 +153,6 @@ ursor/integrate-build-improve-and-re-verify-b76c
           <li>Develop targeted improvement strategies</li>
           <li>Track progress and measure improvement over time</li>
         </ol>
-        
         <h2>Interpreting Results</h2>
         <p>When analyzing benchmark results:</p>
         <ul>
@@ -207,12 +162,8 @@ ursor/integrate-build-improve-and-re-verify-b76c
           <li>Prioritize actions based on business impact and feasibility</li>
           <li>Use results to drive continuous improvement initiatives</li>
         </ul>
-        
         <h2>Action Planning</h2>
         <p>Based on benchmark results, develop action plans that include:</p>
-        <p>Based on benchmark results, develop action plans that include: </p>
-        <p>Based on benchmark results, develop action plans that include: </p>
-ursor/integrate-build-improve-and-re-verify-b76c
         <ul>
           <li>Specific performance improvement targets</li>
           <li>Resource requirements and investment plans</li>
@@ -220,69 +171,30 @@ ursor/integrate-build-improve-and-re-verify-b76c
           <li>Success metrics and measurement approaches</li>
           <li>Risk mitigation and contingency planning</li>
         </ul>
-      `,
-      features: [
-        'Industry benchmark database',
-        'Performance gap analysis',
-        'Trend analysis tools',
-        'Action planning framework',
-        'Progress tracking',
-      ],
-    },
-      `;
+      `
       features: [
         'Industry benchmark databasePerformance gap analysisTrend analysis toolsAction planning frameworkProgress tracking'
       ]
     }
-      `;
-      features: [
-        'Industry benchmark databasePerformance gap analysisTrend analysis toolsAction planning frameworkProgress tracking'
-      ]
-    }
-ursor/integrate-build-improve-and-re-verify-b76c
-  ];
-
-  const tool = tools.find(t => t.id === id);
-
+  ]
+  const tool = tools.find(t => t.id === id)
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
   if (!tool) {
     return (
       <>
         <Head>
           <title>Tool Resource Not Found | Zion Tech Group</title>
         </Head>
-        <div className='min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 text-white'>
-          <main className='container mx-auto px-6 py-12'>
-            <div className='max-w-4xl mx-auto text-center'>
-              <h1 className='text-4xl font-bold mb-6 text-white'>
-                Tool Resource Not Found
-              </h1>
-              <p className='text-xl text-white/80 mb-8'>
+        <div className="min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 text-white">
+          <main className="container mx-auto px-6 py-12">
+            <div className="max-w-4xl mx-auto text-center">
+              <h1 className="text-4xl font-bold mb-6 text-white">Tool Resource Not Found</h1>
+              <p className="text-xl text-white/80 mb-8">
                 The tool resource you're looking for doesn't exist.
               </p>
               <Link
-                href='/resources'
-                className='inline-flex items-center gap-2 bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-500 hover:to-fuchsia-500 transition-all duration-300'
-        <div className="min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 text-white">
-          <main className="container mx-auto px-6 py-12">
-            <div className="max-w-4xl mx-auto text-center">
-              <h1 className="text-4xl font-bold mb-6 text-white">Tool Resource Not Found</h1>
-              <p className="text-xl text-white/80 mb-8">
-                The tool resource you're looking for doesn't exist.
-              </p>
-              <Link 
                 href="/resources"
                 className="inline-flex items-center gap-2 bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-white px-8 py-4 rounded-lg font-semibold hover: from-cyan-500 hover:to-fuchsia-500 transition-all duration-300"
-        <div className="min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 text-white">
-          <main className="container mx-auto px-6 py-12">
-            <div className="max-w-4xl mx-auto text-center">
-              <h1 className="text-4xl font-bold mb-6 text-white">Tool Resource Not Found</h1>
-              <p className="text-xl text-white/80 mb-8">
-                The tool resource you're looking for doesn't exist.
-              </p>
-              <Link 
-                href="/resources"
-                className="inline-flex items-center gap-2 bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-white px-8 py-4 rounded-lg font-semibold hover: from-cyan-500 hover:to-fuchsia-500 transition-all duration-300"
-ursor/integrate-build-improve-and-re-verify-b76c
               >
                 ← Back to Resources
               </Link>
@@ -290,25 +202,16 @@ ursor/integrate-build-improve-and-re-verify-b76c
           </main>
         </div>
       </>
-    );
     )
-    )
-ursor/integrate-build-improve-and-re-verify-b76c
   }
-
   return (
     <>
       <Head>
         <title>{tool.title} | Zion Tech Group - Tool Resource</title>
-        <meta name='description' content={tool.description} />
-        <meta property='og:title' content={`${tool.title} | Zion Tech Group`} />
-        <meta property='og:description' content={tool.description} />
         <meta name="description" content={tool.description} />
         <meta property="og:title" content={`${tool.title} | Zion Tech Group`} />
         <meta property="og:description" content={tool.description} />
-ursor/integrate-build-improve-and-re-verify-b76c
       </Head>
-      
       <div className="min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 text-white">
         <main className="container mx-auto px-6 py-12">
           <div className="max-w-4xl mx-auto">
@@ -317,7 +220,6 @@ ursor/integrate-build-improve-and-re-verify-b76c
                 ← Back to Resources
               </Link>
             </nav>
-            
             <header className="mb-12">
               <div className="mb-6">
                 <span className="px-3 py-1 bg-green-400/20 text-green-400 text-sm rounded-full border border-green-400/30">
@@ -330,62 +232,15 @@ ursor/integrate-build-improve-and-re-verify-b76c
                 <span>Estimated time: {tool.estimatedTime}</span>
               </div>
             </header>
-
-            <div className='grid grid-cols-1 lg:grid-cols-3 gap-8 mb-12'>
-              <div className='lg:col-span-2'>
-                <div className='bg-white/10 backdrop-blur-xl rounded-2xl p-8 border border-white/20'>
-                  <div
-                    className='prose prose-invert max-w-none'
-        <meta name="description" content={tool.description} />
-        <meta property="og:title" content={`${tool.title} | Zion Tech Group`} />
-        <meta property="og:description" content={tool.description} />
-      </Head>
-      
-      <div className="min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 text-white">
-        <main className="container mx-auto px-6 py-12">
-          <div className="max-w-4xl mx-auto">
-            <nav className="mb-8">
-              <Link href="/resources" className="text-cyan-400 hover:text-cyan-300 transition-colors">
-                ← Back to Resources
-              </Link>
-            </nav>
-            
-            <header className="mb-12">
-              <div className="mb-6">
-                <span className="px-3 py-1 bg-green-400/20 text-green-400 text-sm rounded-full border border-green-400/30">
-                  {tool.type}
-                </span>
-              </div>
-              <h1 className="text-4xl font-bold mb-4 text-white">{tool.title}</h1>
-              <p className="text-xl text-white/80 mb-4">{tool.description}</p>
-              <div className="flex items-center gap-4 text-white/60">
-                <span>Estimated time: {tool.estimatedTime}</span>
-              </div>
-            </header>
-ursor/integrate-build-improve-and-re-verify-b76c
-            
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-12">
               <div className="lg:col-span-2">
                 <div className="bg-white/10 backdrop-blur-xl rounded-2xl p-8 border border-white/20">
-                  <div 
+                  <div
                     className="prose prose-invert max-w-none"
-ursor/integrate-build-improve-and-re-verify-b76c
                     dangerouslySetInnerHTML={{ __html: tool.fullContent }}
                   />
                 </div>
               </div>
-
-              <div className='space-y-6'>
-                <div className='bg-white/10 backdrop-blur-xl rounded-2xl p-6 border border-white/20'>
-                  <h3 className='font-semibold text-green-400 text-lg mb-4'>
-                    Key Features
-                  </h3>
-                  <ul className='space-y-3'>
-                    {tool.features.map((feature, index) => (
-                      <li
-                        key={index}
-                        className='text-white/80 flex items-center gap-3'><div className='w-2 h-2 bg-green-400 rounded-full'></div>
-              
               <div className="space-y-6">
                 <div className="bg-white/10 backdrop-blur-xl rounded-2xl p-6 border border-white/20">
                   <h3 className="font-semibold text-green-400 text-lg mb-4">Key Features</h3>
@@ -393,43 +248,11 @@ ursor/integrate-build-improve-and-re-verify-b76c
                     {tool.features.map((feature, index) => (
                       <li key={index} className="text-white/80 flex items-center gap-3">
                         <div className="w-2 h-2 bg-green-400 rounded-full"></div>
-              
-              <div className="space-y-6">
-                <div className="bg-white/10 backdrop-blur-xl rounded-2xl p-6 border border-white/20">
-                  <h3 className="font-semibold text-green-400 text-lg mb-4">Key Features</h3>
-                  <ul className="space-y-3">
-                    {tool.features.map((feature, index) => (
-                      <li key={index} className="text-white/80 flex items-center gap-3">
-                        <div className="w-2 h-2 bg-green-400 rounded-full"></div>
-ursor/integrate-build-improve-and-re-verify-b76c
                         {feature}
                       </li>
                     ))}
                   </ul>
                 </div>
-
-                <div className='bg-white/10 backdrop-blur-xl rounded-2xl p-6 border border-white/20'>
-                  <h3 className='font-semibold text-blue-400 text-lg mb-4'>
-                    Tool Details
-                  </h3>
-                  <div className='space-y-3'>
-                
-                <div className="bg-white/10 backdrop-blur-xl rounded-2xl p-6 border border-white/20">
-                  <h3 className="font-semibold text-blue-400 text-lg mb-4">Tool Details</h3>
-                  <div className="space-y-3">
-ursor/integrate-build-improve-and-re-verify-b76c
-                    <div>
-                      <span className="text-white/60 text-sm">Type:</span>
-                      <p className="text-white font-medium">{tool.type}</p>
-                    </div>
-                    <div>
-                      <span className='text-white/60 text-sm'>
-                        Time Required:
-                      </span>
-                      <p className='text-white font-medium'>
-                        {tool.estimatedTime}
-                      </p>
-                
                 <div className="bg-white/10 backdrop-blur-xl rounded-2xl p-6 border border-white/20">
                   <h3 className="font-semibold text-blue-400 text-lg mb-4">Tool Details</h3>
                   <div className="space-y-3">
@@ -440,26 +263,15 @@ ursor/integrate-build-improve-and-re-verify-b76c
                     <div>
                       <span className="text-white/60 text-sm">Time Required:</span>
                       <p className="text-white font-medium">{tool.estimatedTime}</p>
-                      <span className="text-white/60 text-sm">Time Required:</span>
-                      <p className="text-white font-medium">{tool.estimatedTime}</p>
-ursor/integrate-build-improve-and-re-verify-b76c
                     </div>
                   </div>
                 </div>
               </div>
             </div>
-
-            <div className='text-center'>
-              <Link
-                href='/contact'
-                className='inline-flex items-center gap-2 bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-500 hover:to-fuchsia-500 transition-all duration-300'
-ursor/integrate-build-improve-and-re-verify-b76c
-            
             <div className="text-center">
-              <Link 
+              <Link
                 href="/contact"
                 className="inline-flex items-center gap-2 bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-white px-8 py-4 rounded-lg font-semibold hover: from-cyan-500 hover:to-fuchsia-500 transition-all duration-300"
-ursor/integrate-build-improve-and-re-verify-b76c
               >
                 Get Started with Your Project
               </Link>
@@ -468,9 +280,5 @@ ursor/integrate-build-improve-and-re-verify-b76c
         </main>
       </div>
     </>
-  );
   )
 }
-  )
-}
-ursor/integrate-build-improve-and-re-verify-b76c

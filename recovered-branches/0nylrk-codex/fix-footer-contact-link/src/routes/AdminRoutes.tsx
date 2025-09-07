@@ -1,17 +1,20 @@
 
-import { Fragment } from "react";
-import { Route, Routes } from "react-router-dom";
-import { ProtectedRoute } from "@/components/ProtectedRoute";
+import {Fragment} from "react";
+import {Route, Routes} from "react-router-dom";
+import {ProtectedRoute} from "@/components/ProtectedRoute";
 // Admin Pages
-import QuoteManager from "@/pages/admin/QuoteManager";
-import ReviewsModeration from "@/pages/admin/ReviewsModeration";
-import WhitelabelManager from "@/pages/admin/WhitelabelManager";
-import PartnerManager from "@/pages/admin/PartnerManager";
-import AppMetadataManager from "@/pages/admin/AppMetadataManager";
-import SupportRequests from "@/pages/admin/SupportRequests";
-import FraudDetection from "@/pages/admin/FraudDetection";
+import QuoteManager from "@/pages/admin/QuoteManager",
+import ReviewsModeration from "@/pages/admin/ReviewsModeration",
+import WhitelabelManager from "@/pages/admin/WhitelabelManager",
+import PartnerManager from "@/pages/admin/PartnerManager",
+import AppMetadataManager from "@/pages/admin/AppMetadataManager",
+import SupportRequests from "@/pages/admin/SupportRequests",
+import FraudDetection from "@/pages/admin/FraudDetection",
 import TokenManager from "@/pages/admin/TokenManager";
 import IntegrationsPage from "@/pages/admin/IntegrationsPage";
+<<<<<<< HEAD
+const AdminRoutes = null;
+=======
 const AdminRoutes = () => {
   return (
     <Routes>
@@ -23,7 +26,6 @@ const AdminRoutes = () => {
           </ProtectedRoute>
         }
       />
-      
       <Route
         path="/admin/reviews"
         element={
@@ -32,7 +34,6 @@ const AdminRoutes = () => {
           </ProtectedRoute>
         }
       />
-      
       <Route
         path="/admin/whitelabel"
         element={
@@ -41,7 +42,6 @@ const AdminRoutes = () => {
           </ProtectedRoute>
         }
       />
-      
       <Route
         path="/admin/partners"
         element={
@@ -50,7 +50,6 @@ const AdminRoutes = () => {
           </ProtectedRoute>
         }
       />
-      
       <Route
         path="/admin/app-metadata"
         element={
@@ -59,7 +58,6 @@ const AdminRoutes = () => {
           </ProtectedRoute>
         }
       />
-      
       <Route
         path="/admin/support-requests"
         element={
@@ -68,7 +66,6 @@ const AdminRoutes = () => {
           </ProtectedRoute>
         }
       />
-      
       <Route
         path="/admin/fraud-detection"
         element={
@@ -77,7 +74,6 @@ const AdminRoutes = () => {
           </ProtectedRoute>
         }
       />
-      
       <Route
         path="/admin/tokens"
         element={
@@ -86,7 +82,6 @@ const AdminRoutes = () => {
           </ProtectedRoute>
         }
       />
-      
       <Route
         path="/admin/integrations"
         element={
@@ -97,6 +92,6 @@ const AdminRoutes = () => {
       />
     </Routes>
   )
-};
-
+}
 export default AdminRoutes;
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5

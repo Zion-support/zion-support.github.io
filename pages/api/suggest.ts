@@ -1,66 +1,39 @@
+<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next';
 
+const SAMPLE_QUERIES = null;
+  for (const s of SAMPLE_QUERIES) {
+    if (!q || s.toLowerCase().includes(q)) suggestions.add(s)
+  }
+  for (const s of SKILLS) {
+    if (!q || s.toLowerCase().includes(q)) suggestions.add(s)
+=======
+import type { NextApiRequest, NextApiResponse } from "next";
 const SAMPLE_QUERIES = [
-  'React developers under $50/hr',
-  'Part-time DevOps jobs in LATAM',
-  'LLM engineers with RAG experience',
-  'Security projects with Zero Trust',
-  'Next.js freelancers in Berlin',
+  "React developers under $50/hr"
+  "Part-time DevOps jobs in LATAM"
+  "AI/ML engineers for startup"
+  "Blockchain developers remote"
+  "UI/UX designers available now"
+  "Full-stack developers with Next.js"
+  "Data scientists with Python"
+  "Mobile app developers iOS/Android"
+  "Cloud architects AWS/Azure"
+  "DevOps engineers with Kubernetes"
 ];
-
-const SKILLS = [
-  'React',
-  'Next.js',
-  'TypeScript',
-  'Node',
-  'Python',
-  'AWS',
-  'Kubernetes',
-  'DevOps',
-  'Docker',
-  'Terraform',
-  'OpenAI',
-  'LangChain',
-  'RAG',
-  'NLP',
-  'PostgreSQL',
-  'Rust',
-  'React developers under $50/hrPart-time DevOps jobs in LATAMLLM engineers with RAG experienceSecurity projects with Zero TrustNext.js freelancers in Berlin'
-];
-
-const SKILLS = [
-  'ReactNext.jsTypeScriptNodePythonAWSKubernetesDevOps', 'DockerTerraformOpenAILangChainRAGNLPPostgreSQLRust'
-  'React developers under $50/hrPart-time DevOps jobs in LATAMLLM engineers with RAG experienceSecurity projects with Zero TrustNext.js freelancers in Berlin'
-];
-
-const SKILLS = [
-  'ReactNext.jsTypeScriptNodePythonAWSKubernetesDevOps', 'DockerTerraformOpenAILangChainRAGNLPPostgreSQLRust'
-ursor/integrate-build-improve-and-re-verify-b76c
-];
-
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  const q = ((req.query.q as string) || '').toLowerCase();
-  const suggestions = new Set<string>();
-
-  res
-    .status(200)
-    .json({ ok: true, suggestions: Array.from(suggestions).slice(0, 8) });
-  for (const s of SAMPLE_QUERIES) {
-    if (!q || s.toLowerCase().includes(q)) suggestions.add(s)
+  if (req.method !== "GET") {
+    res.setHeader("Allow", "GET");
+    return res.status(405).json({ error: "Method not allowed" });
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
   }
-  for (const s of SKILLS) {
-    if (!q || s.toLowerCase().includes(q)) suggestions.add(s)
+  const { q = "" } = req.query;
+  const query = String(q).toLowerCase();
+  if (!query) {
+    return res.status(200).json({ suggestions: SAMPLE_QUERIES.slice(0, 5) });
   }
-
-  res.status(200).json({ ok: true, suggestions: Array.from(suggestions).slice(0, 8) })
+  const suggestions = SAMPLE_QUERIES.filter((s) =>
+    s.toLowerCase().includes(query)
+  ).slice(0, 5);
+  return res.status(200).json({ suggestions });
 }
-  for (const s of SAMPLE_QUERIES) {
-    if (!q || s.toLowerCase().includes(q)) suggestions.add(s)
-  }
-  for (const s of SKILLS) {
-    if (!q || s.toLowerCase().includes(q)) suggestions.add(s)
-  }
-
-  res.status(200).json({ ok: true, suggestions: Array.from(suggestions).slice(0, 8) })
-}
-ursor/integrate-build-improve-and-re-verify-b76c

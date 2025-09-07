@@ -1,30 +1,51 @@
+<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next';
-import { buildPressRelease } from '../../../utils/mediaKit';
-
+import { buildPressRelease } from '[^']*';
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+  try {
+    const { type;
+    res.status(200).json({ ok: true, text, fallback: true })
+  } catch (e: any) {
+    res.status(500).json({ ok: false, error: e?.message || 'Unknown error' })
+=======
+import type { NextApiRequest, NextApiResponse } from "next";
+import { buildPressRelease } from "../../../utils/mediaKit";
 export default async function handler(
-  req: NextApiRequest,
+  req: NextApiRequest
   res: NextApiResponse
 ) {
   try {
     const {
-      type = 'launch',
-      companyName = 'Zion',
-      date = new Date().toISOString().substring(0, 10),
-      raiseAmount,
-      tokenName,
-    } = req.body || {};
-
-    const result = await buildPressRelease({
-      type,
-      companyName,
-      date,
-      raiseAmount,
-      tokenName,
+      type = "launch"
+      companyName = "Zion"
+      date = new Date().toISOString().substring(0, 10)
+      raiseAmount
+      description = "Innovative technology company"
+      contactEmail = "press@zion.com"
+    } = req.body |{}
+    if (req.method !== "POST") {
+      res.setHeader("Allow", "POST");
+      return res.status(405).json({ error: "Method not allowed" });
+    }
+    const pressRelease = await buildPressRelease({
+      type
+      companyName
+      date
+      raiseAmount
+      description
+      contactEmail
     });
-
-    res.status(200).json({ success: true, result });
+    return res.status(200).json({
+      ok: true
+      pressRelease
+      downloadUrl: `/api/media/download/${pressRelease.id}`
+    });
   } catch (error: any) {
-    console.error('Error generating media:', error);
-    res.status(500).json({ error: 'Failed to generate media' });
+    console.error("Press release generation error:", error);
+    return res.status(500).json({
+      ok: false
+      error: "Failed to generate press release"
+    });
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
   }
 }

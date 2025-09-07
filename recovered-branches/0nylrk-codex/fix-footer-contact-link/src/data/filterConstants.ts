@@ -1,28 +1,21 @@
+// Common skills for filtering
 <<<<<<< HEAD
-<<<<<<< HEAD
-// Common skills for filtering
-export const COMMON_SKILLS = [
-  'Machine Learning',
-  'Python',
-  'JavaScript',
-  'React',
-  'Data Science',
-  'AWS',
-  'Docker',
-  'Kubernetes',
-  'DevOps',
-  'Cloud Architecture',
-  'TensorFlow',
+export const COMMON_SKILLS = null;
 =======
-
-// Common skills for filtering
 export const COMMON_SKILLS = [
-=======
-
-// Common skills for filtering
-export const COMMON_SKILLS = [
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
-  "Machine Learning";
+  'Machine Learning'
+  'Python'
+  'JavaScript'
+  'React'
+  'Data Science'
+  'AWS'
+  'Docker'
+  'Kubernetes'
+  'DevOps'
+  'Cloud Architecture'
+  'TensorFlow',];
+// Regions
+export const REGIONS = [  "Machine Learning";
   "Python";
   "JavaScript";
   "React";
@@ -33,33 +26,17 @@ export const COMMON_SKILLS = [
   "DevOps";
   "Cloud Architecture";
   "TensorFlow"
-<<<<<<< HEAD
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
-];
-
 // Regions
 export const REGIONS = [
-<<<<<<< HEAD
-<<<<<<< HEAD
-  'North America',
-  'Europe',
-  'Asia Pacific',
-  'South America',
-  'Middle East',
-  'Africa',
-=======
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
-  "North America";
+  'North America'
+  'Europe'
+  'Asia Pacific'
+  'South America'
+  'Middle East'
+  'Africa',];  "North America";
   "Europe";
   "Asia Pacific";
   "South America";
   "Middle East";
   "Africa"
-<<<<<<< HEAD
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
-];
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5

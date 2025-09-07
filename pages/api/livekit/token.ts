@@ -1,47 +1,50 @@
+<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next';
-import { AccessToken } from 'livekit-server-sdk';
-
-const LIVEKIT_API_KEY = process.env.LIVEKIT_API_KEY || '';
-const LIVEKIT_API_SECRET = process.env.LIVEKIT_API_SECRET || '';
-const LIVEKIT_HOST = process.env.LIVEKIT_HOST || '';
-
+import { AccessToken } from '[^']*';
+const LIVEKIT_API_KEY = null;
+    return res.status(500).json({ error: 'Failed to create token' })
+=======
+import type { NextApiRequest, NextApiResponse } from "next";
+import { AccessToken } from "livekit-server-sdk";
+const LIVEKIT_API_KEY = process.env.LIVEKIT_API_KEY |"";
+const LIVEKIT_API_SECRET = process.env.LIVEKIT_API_SECRET |"";
+const LIVEKIT_HOST = process.env.LIVEKIT_HOST |"";
 export default async function handler(
-  req: NextApiRequest,
+  req: NextApiRequest
   res: NextApiResponse
 ) {
-  if (req.method !== 'POST') {
-    res.setHeader('Allow', 'POST');
-    return res.status(405).json({ error: 'Method not allowed' });
+  if (req.method !== "POST") {
+    res.setHeader("Allow", "POST");
+    return res.status(405).json({ error: "Method not allowed" });
   }
-
   try {
-    const { roomName, participantName, participantIdentity } = req.body;
-
-    if (!roomName || !participantName) {
-      return res.status(400).json({ error: 'Room name and participant name are required' });
+    const { roomName, identity, name, audioOnly } = req.body |{}
+    if (!roomName |!identity) {
+      return res.status(400).json({ error: "Missing roomName or identity" });
     }
-
-    const token = new AccessToken(LIVEKIT_API_KEY, LIVEKIT_API_SECRET, {
-      identity: participantIdentity || participantName,
-      name: participantName,
+    if (!LIVEKIT_API_KEY |!LIVEKIT_API_SECRET |!LIVEKIT_HOST) {
+      return res.status(500).json({ error: "LiveKit env vars not configured" });
+    }
+    const at = new AccessToken(LIVEKIT_API_KEY, LIVEKIT_API_SECRET, {
+      identity: String(identity)
+      name: name ? String(name) : String(identity)
+      ttl: 60 * 60, // 1 hour
     });
-
-    token.addGrant({
-      room: roomName,
-      roomJoin: true,
-      canPublish: true,
-      canSubscribe: true,
+    at.addGrant({
+      roomJoin: true
+      room: String(roomName)
+      canPublish: audioOnly ? false : true
+      canPublishData: true
+      canSubscribe: true
     });
-
-    const jwt = await token.toJwt();
-
-    res.status(200).json({
-      success: true,
-      token: jwt,
-      url: LIVEKIT_HOST,
+    const token = await at.toJwt();
+    return res.status(200).json({
+      token
+      url: LIVEKIT_HOST
     });
-  } catch (error: any) {
-    console.error('Error generating token:', error);
-    res.status(500).json({ error: 'Failed to generate token' });
+  } catch (err: any) {
+    console.error("Token error", err);
+    return res.status(500).json({ error: "Failed to create token" });
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
   }
 }

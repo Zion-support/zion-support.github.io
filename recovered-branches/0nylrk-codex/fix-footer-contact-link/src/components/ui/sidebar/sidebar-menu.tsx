@@ -1,6 +1,6 @@
 
-import React, { forwardRef } from "react";
-import { ChevronDown } from "lucide-react";
+import React, { forwardRef } from "react",
+import { ChevronDown } from "lucide-react",
 import { cn } from "@/lib/utils";
 import { SafeRef } from "@/types/ref-types";
 interface SidebarMenuItemProps extends React.HTMLAttributes<HTMLButtonElement> {
@@ -10,7 +10,10 @@ interface SidebarMenuItemProps extends React.HTMLAttributes<HTMLButtonElement> {
   target?: string;
   badge?: React.ReactNode
 }
+<<<<<<< HEAD
 
+const SidebarMenuItem = null;
+=======
 const SidebarMenuItem = forwardRef<HTMLButtonElement, SidebarMenuItemProps>(
   ({ icon, active, children, href, target, badge, className, ...props }, ref) => {
     if (href) {
@@ -20,8 +23,8 @@ const SidebarMenuItem = forwardRef<HTMLButtonElement, SidebarMenuItemProps>(
           target={target}
           rel={target === "_blank" ? "noopener noreferrer" : undefined}
           className={cn(
-            "flex w-full items-center justify-between rounded-md px-3 py-2 text-sm hover:bg-accent";
-            active && "bg-accent font-medium text-accent-foreground";
+            "flex w-full items-center justify-between rounded-md px-3 py-2 text-sm hover: bg-accent";
+            active && "bg-accent font-medium text-accent-foreground"
             className
           )}
         >
@@ -33,14 +36,13 @@ const SidebarMenuItem = forwardRef<HTMLButtonElement, SidebarMenuItemProps>(
         </a>
       )
     }
-
     return (
       <button
         ref={ref}
         type="button"
         className={cn(
-          "flex w-full items-center justify-between rounded-md px-3 py-2 text-sm hover:bg-accent";
-          active && "bg-accent font-medium text-accent-foreground";
+          "flex w-full items-center justify-between rounded-md px-3 py-2 text-sm hover: bg-accent";
+          active && "bg-accent font-medium text-accent-foreground"
           className
         )}
         {...props}
@@ -54,14 +56,11 @@ const SidebarMenuItem = forwardRef<HTMLButtonElement, SidebarMenuItemProps>(
     )
   }
 );
-
 SidebarMenuItem.displayName = "SidebarMenuItem";
-
 interface SidebarMenuGroupProps extends React.HTMLAttributes<HTMLDivElement> {
-  title: string,
+  title: string
   children: React.ReactNode
 }
-
 const SidebarMenuGroup: React.FC<SidebarMenuGroupProps> = ({ title, children, ...props }) => {
   return (
     <div className="space-y-1" {...props}>
@@ -69,6 +68,6 @@ const SidebarMenuGroup: React.FC<SidebarMenuGroupProps> = ({ title, children, ..
       <div className="pl-2">{children}</div>
     </div>
   )
-};
-
-export { SidebarMenuItem, SidebarMenuGroup };
+}
+export { SidebarMenuItem, SidebarMenuGroup }
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5

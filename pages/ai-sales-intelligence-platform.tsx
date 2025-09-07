@@ -1,20 +1,10 @@
-import ServicePage, {
-  getStaticProps as getSlugStaticProps,;
-} from './services/[slug]';
-
-export default function AISalesIntelligencePlatform() {
-  
-    />
-  );
 import ServicePage, { getStaticProps as getSlugStaticProps } from './services/[slug]';
-
 export default function AISalesIntelligencePlatform() {
-import ServicePage, { getStaticProps as getSlugStaticProps } from './services/[slug]';
-
-export default function AISalesIntelligencePlatform() {
-ursor/integrate-build-improve-and-re-verify-b76c
 	return (
 		<ServiceLanding
+<<<<<<< HEAD
+			title;
+=======
 			title="AI Sales Intelligence Platform"
 			slug="ai-sales-intelligence-platform"
 			description="Auto-prioritize leads, generate personalized outreach, and forecast pipeline with high accuracy. Empower SDRs and AEs with AI copilots embedded in their daily workflows."
@@ -23,11 +13,12 @@ ursor/integrate-build-improve-and-re-verify-b76c
 			implementationWeeks="Implementation: 1–3 weeks"
 			roiNote="Average ROI 3–8x within 60 days"
 			features={[
-				"AI lead scoring using firmographics, intent, and engagement";
-				"One-click hyper-personalized emails and sequences";
-				"Meeting prep briefs and objection handling";
-				"Forecasting with scenario simulations";
-				"CRM automations for notes, tasks, and next steps";
+				"AI lead scoring using firmographics, intent, and engagement"
+				"One-click hyper-personalized emails and sequences"
+				"Meeting prep briefs and objection handling"
+				"Forecasting with scenario simulations"
+				"CRM automations for notes, tasks, and next steps"
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
 				"Integrations: Salesforce, HubSpot, Gmail/Outlook, Gong, Zoom"
 			]}
 			industries={["B2B SaaS", "Professional Services", "Manufacturing"]}
@@ -35,5 +26,3 @@ ursor/integrate-build-improve-and-re-verify-b76c
 		/>
 	)
 }
-}
-ursor/integrate-build-improve-and-re-verify-b76c

@@ -1,33 +1,43 @@
 
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, BarChart, Bar, Legend } from 'recharts';
+import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, BarChart, Bar, Legend  } from 'recharts';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { useState } from "react";
 interface AnalyticsChartProps {
-  title: string,
+<<<<<<< HEAD
+  title: string;
   description?: string;
-  data: any[],
+  data: any[];
   type?: 'line' | 'bar';
-  dataKeys: string[],
+  dataKeys: string[];
+=======
+  title: string
+  description?: string;
+  data: any[]
+  type?: 'line' | 'bar';
+  dataKeys: string[]
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
   timeRange?: string;
   onTimeRangeChange?: (range: string) => void
 }
-
-export function AnalyticsChart({ 
+export function AnalyticsChart({
   title;
-  description, 
-  data, 
+<<<<<<< HEAD
+  description;
+  data;
+  type;
+=======
+  description
+  data
   type = 'line';
-  dataKeys, 
+  dataKeys
   timeRange = '7d';
   onTimeRangeChange
 }: AnalyticsChartProps) {
   const [chartType, setChartType] = useState<'line' | 'bar'>(type);
-  
   const colors = [
     '#8884d8#82ca9d#ffc658#ff8042#0088fe#00C49F#FFBB28#FF8042', '#a4de6c#d0ed57'
   ];
-  
   return (
     <Card className="bg-zion-blue-dark border-zion-blue-light overflow-hidden">
       <CardHeader className="pb-2">
@@ -69,20 +79,20 @@ export function AnalyticsChart({
             {chartType === 'line' ? (
               <LineChart data={data} margin={{ top: 5, right: 30, left: 20, bottom: 25 }}>
                 <CartesianGrid strokeDasharray="3 3" stroke="#354151" />
-                <XAxis 
-                  dataKey="date" 
+                <XAxis
+                  dataKey="date"
                   tick={{ fill: '#b1b9c6', fontSize: 12 }}
                   angle={-30}
                   textAnchor="end"
                   height={50}
                 />
                 <YAxis tick={{ fill: '#b1b9c6', fontSize: 12 }} />
-                <Tooltip 
-                  contentStyle={{ 
-                    backgroundColor: '#1a2332', 
-                    borderColor: '#293445',
+                <Tooltip
+                  contentStyle={{
+                    backgroundColor: '#1a2332'
+                    borderColor: '#293445'
                     color: '#fff'
-                  }} 
+                  }}
                 />
                 <Legend />
                 {dataKeys.map((key, index) => (
@@ -99,27 +109,28 @@ export function AnalyticsChart({
             ) : (
               <BarChart data={data} margin={{ top: 5, right: 30, left: 20, bottom: 25 }}>
                 <CartesianGrid strokeDasharray="3 3" stroke="#354151" />
-                <XAxis 
-                  dataKey="date" 
-                  tick={{ fill: '#b1b9c6', fontSize: 12 }} 
+                <XAxis
+                  dataKey="date"
+                  tick={{ fill: '#b1b9c6', fontSize: 12 }}
                   angle={-30}
                   textAnchor="end"
                   height={50}
                 />
                 <YAxis tick={{ fill: '#b1b9c6', fontSize: 12 }} />
-                <Tooltip 
-                  contentStyle={{ 
-                    backgroundColor: '#1a2332', 
-                    borderColor: '#293445',
+                <Tooltip
+                  contentStyle={{
+                    backgroundColor: '#1a2332'
+                    borderColor: '#293445'
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
                     color: '#fff'
-                  }} 
+                  }}
                 />
                 <Legend />
                 {dataKeys.map((key, index) => (
-                  <Bar 
+                  <Bar
                     key={key}
-                    dataKey={key} 
-                    fill={colors[index % colors.length]} 
+                    dataKey={key}
+                    fill={colors[index % colors.length]}
                     radius={[4, 4, 0, 0]}
                   />
                 ))}

@@ -1,20 +1,14 @@
-import { useEffect } from 'react';
+import { useEffect  } from 'react';
 import { useRouter } from 'next/router';
-
-ursor/integrate-build-improve-and-re-verify-b76c
 export default function ContractBuilderRedirect() {
+<<<<<<< HEAD
+  const router = null;
+  return null
+}
+=======
   const router = useRouter();
   useEffect(() => {
-    router.replace('/automation/contract-builder')
+router.replace('/automation/contract-builder');
   }, [router]);
   return null;
-export default function ContractBuilderRedirect() {
-  const router = useRouter();
-  useEffect(() => {
-    router.replace('/automation/contract-builder')
-  }, [router]);
-  return null
-}
-  return null
-}
-ursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5

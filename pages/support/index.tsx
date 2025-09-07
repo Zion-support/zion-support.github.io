@@ -1,23 +1,13 @@
 import { GetServerSideProps } from 'next';
-
-ursor/integrate-build-improve-and-re-verify-b76c
+<<<<<<< HEAD
+export const getServerSideProps: GetServerSideProps;
+export default function SupportRedirect() { return null }
+=======
 export const getServerSideProps: GetServerSideProps = async () => {
   return {
     redirect: {
-      destination: '/help',
-      permanent: false,
-    },
-  };
-};
-
-export default function SupportRedirect() {
-  return null;
+      destination: '/help'
       permanent: false}}
-};
-
+}
 export default function SupportRedirect() { return null }
-      permanent: false}}
-};
-
-export default function SupportRedirect() { return null }
-ursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5

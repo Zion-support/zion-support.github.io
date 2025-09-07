@@ -6,8 +6,12 @@ interface SidebarSectionProps extends React.HTMLAttributes<HTMLDivElement> {
   title?: string;
   children?: React.ReactNode
 }
-
-export function SidebarSection({ className, title, children, ...props }: SidebarSectionProps) {
+export function SidebarSection({
+  className
+  title
+  children
+  ...props
+}: SidebarSectionProps) {
   return (
     <div className={cn("py-2", className)} {...props}>
       {title && (
@@ -17,5 +21,5 @@ export function SidebarSection({ className, title, children, ...props }: Sidebar
       )}
       <div className="space-y-1">{children}</div>
     </div>
-  )
+  );
 }

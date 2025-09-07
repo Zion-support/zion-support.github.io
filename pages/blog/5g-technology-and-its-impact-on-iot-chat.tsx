@@ -1,21 +1,16 @@
 import type { NextPage } from 'next';
 import Head from 'next/head';
 import Link from 'next/link';
-
-ursor/integrate-build-improve-and-re-verify-b76c
+<<<<<<< HEAD
+const Chat5gTechnologyAndItsImpactOnIotChat: NextPage;
+=======
 const Chat5gTechnologyAndItsImpactOnIotChat: NextPage = () => {
   return (
     <div>
       <Head>
         <title>5gTechnologyAndItsImpactOnIotChat - Zion Tech Solutions</title>
-        <meta
-          name='description'
-          content='5gTechnologyAndItsImpactOnIotChat blog post'
-        />
         <meta name="description" content="5gTechnologyAndItsImpactOnIotChat blog post" />
-ursor/integrate-build-improve-and-re-verify-b76c
       </Head>
-      
       <main>
         <h1>5gTechnologyAndItsImpactOnIotChat</h1>
         <p>Blog content coming soon...</p>
@@ -23,21 +18,6 @@ ursor/integrate-build-improve-and-re-verify-b76c
       </main>
     </div>
   )
-};
-
+}
 export default Chat5gTechnologyAndItsImpactOnIotChat;
-        <meta name="description" content="5gTechnologyAndItsImpactOnIotChat blog post" />
-      </Head>
-      
-      <main>
-        <h1>5gTechnologyAndItsImpactOnIotChat</h1>
-        <p>Blog content coming soon...</p>
-        <Link href="/blog"><a>Back to Blog</a></Link>
-      </main>
-    </div>
-  )
-};
-
-export default Chat5gTechnologyAndItsImpactOnIotChat;
-export default Chat5gTechnologyAndItsImpactOnIotChat;
-ursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5

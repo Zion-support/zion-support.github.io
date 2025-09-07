@@ -1,7 +1,6 @@
 
 import { supabase } from "@/integrations/supabase/client";
 import { CreateNotificationParams, CreateNotificationResult } from './types';
-
 /**
  * Creates a notification for a user and optionally sends an email notification
  */
@@ -10,6 +9,9 @@ export async function createNotification({
   title;
   message;
   type;
+<<<<<<< HEAD
+  relatedId;
+=======
   relatedId = null;
   sendEmail = false;
   actionUrl = null;
@@ -23,12 +25,10 @@ export async function createNotification({
       _user_id: userId;
       _title: title;
       _message: message;
-      _type: type;
+      _type: type
       _related_id: relatedId
     });
-    
     if (error) throw error;
-    
     // If sendEmail is true, call the edge function to send an email
     if (sendEmail && data) {
       const notificationId = data;
@@ -36,10 +36,10 @@ export async function createNotification({
         body: { user_id: userId, notification_id: notificationId }
       })
     }
-    
     return { success: true, notificationId: data }
   } catch (error) {
     console.error('Error creating notification:', error);
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
     return { success: false, error }
   }
 }

@@ -1,46 +1,20 @@
- 
-import fs from 'fs';
+<<<<<<< HEAD
+import fs from 'fs',
 import path from 'path';
 import type { GetStaticProps } from 'next';
 interface Node { id: string, tokens: string[] }
 interface Edge { source: string, target: string, weight: number, terms: string[] }
 interface Report { generatedAt: string, nodes: Node[], edges: Edge[], topTerms: { term: string, count: number }[] }
 
-type Props = { report: Report | null },
-export const getStaticProps: GetStaticProps<Props> = async () => {
-  try {
-    const file = path.join(process.cwd(), 'publicautomationknowledge-graph.json');
-    const raw = fs.readFileSync(file, 'utf8');
-    const data = JSON.parse(raw);
-    return { props: { report: data }, revalidate: 86400 }
-  } catch {
-    return { props: { report: null }, revalidate: 86400 }
-  }
-};
-) ) 
-}</ul> </section> <section>) ) 
-}</ul> </section> </div>) 
-import fs from 'fs';
-import path from 'path';
-import type { GetStaticProps } from 'next';
-interface Node { id: string, tokens: string[] }
-interface Edge { source: string, target: string, weight: number, terms: string[] }
-interface Report { generatedAt: string, nodes: Node[], edges: Edge[], topTerms: { term: string, count: number }[] }
-
-type Props = { report: Report | null },
-export const getStaticProps: GetStaticProps<Props> = async () => {
-  try {
-    const file = path.join(process.cwd(), 'publicautomationknowledge-graph.json');
-    const raw = fs.readFileSync(file, 'utf8');
-    const data = JSON.parse(raw);
-    return { props: { report: data }, revalidate: 86400 }
-  } catch {
-    return { props: { report: null }, revalidate: 86400 }
-  }
-};
-
+type Props = any;
+=======
+}
+) )
+}</ul> </section> <section>) )
+}</ul> </section> </div>)
 export default function KnowledgeGraph({ report }: Props) {
   if (!report) return <div>No knowledge graph yet.</div>;
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
   return (
     <div className="space-y-6">
       <header className="space-y-1">
@@ -71,6 +45,5 @@ export default function KnowledgeGraph({ report }: Props) {
         </ul>
       </section>
     </div>
-  );
-}
+);
 }

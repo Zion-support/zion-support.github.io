@@ -1,15 +1,9 @@
-// Placeholder for search filter utilities
-export const searchAll = (parsed: any, access: any) => {
-  // Placeholder implementation
-  return {
-    all: [],
-    talent: [],
-    jobs: [],
-    projects: []
-  };
-};
-
-export const suggestDidYouMean = (query: string) => {
-  // Placeholder implementation
-  return null;
-};
+// Search filter utilities
+export const filterResults = (results: any[], filters: any) => {
+  // Add search filtering functionality here
+  return results;
+}
+export const sortResults = (results: any[], sortBy: string) => {
+  // Add search sorting functionality here
+  return results;
+}

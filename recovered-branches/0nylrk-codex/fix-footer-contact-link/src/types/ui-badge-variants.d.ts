@@ -1,6 +1,9 @@
 
 // Additional type declaration for the badge variants
-declare type BadgeVariant = 
+<<<<<<< HEAD
+declare type BadgeVariant = any;
+=======
+declare type BadgeVariant =
   | "default"
   | "secondary"
   | "destructive"
@@ -8,3 +11,4 @@ declare type BadgeVariant =
   | "success"
   | "warning"
   | "info";
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5

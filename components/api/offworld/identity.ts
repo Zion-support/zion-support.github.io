@@ -1,27 +1,31 @@
+<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { buildIdentityProfile } from '@/utils/offworld/identity';
-
-export default async function handler(
-  req: NextApiRequest,
-  res: NextApiResponse
-) {
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   try {
     const { address } = req.query as { address?: string };
-    const profile = await buildIdentityProfile(address);
+    const profile = null;
     return res.status(200).json(profile)
+=======
+import type { NextApiRequest, NextApiResponse } from "next";
+import { buildIdentityProfile } from "@/utils/offworld/identity";
+export default async function handler(
+  req: NextApiRequest
+  res: NextApiResponse
+) {
+  try {
+    const { address } = req.query as { address?: string }
+    const profile = await buildIdentityProfile(address);
+    return res.status(200).json(profile);
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
   } catch (e: any) {
     return res.status(500).json({ error: e.message });
   }
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   try {
-    const { address } = req.query as { address?: string };
+    const { address } = req.query as { address?: string }
     const profile = await buildIdentityProfile(address);
-    return res.status(200).json(profile)
+    return res.status(200).json(profile);
   } catch (e: any) {
-    return res.status(500).json({ error: e.message })
-  };
-}
-    return res.status(500).json({ error: e.message })
-  };
+    return res.status(500).json({ error: e.message });
+  }
 }

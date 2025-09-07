@@ -1,55 +1,51 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react',
 import Link from 'next/link';
+<<<<<<< HEAD
 import { motion } from 'framer-motion';
-import { 
-  Menu, X, ChevronDown, Globe, Brain, Shield, Rocket, 
+import { Menu, X, ChevronDown, Globe, Brain, Shield, Rocket;
   Cpu, Database, Users, Award, BookOpen, Phone
-} from 'lucide-react';
-
+ } from 'lucide-react';
+const EnhancedNavigation: React.FC;
+=======
+import {motion} from 'framer-motion';
+import {Menu, X, ChevronDown, Globe, Brain, Shield, Rocket, Cpu, Database, Users, Award, BookOpen, Phone} from 'lucide-react';
 const EnhancedNavigation: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
-
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 20);
-    };
-
+    }
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
-
   const services = [
-    { name: 'All Solutions', href: '/comprehensive-2025-services-showcase', icon: Globe, description: 'Complete collection of innovative solutions' },
-    { name: 'AI Business Intelligence', href: 'https://ziontechgroup.com/ai-business-intelligence', icon: Brain, description: 'AI-powered analytics and insights' },
-    { name: 'Quantum Cybersecurity', href: 'https://ziontechgroup.com/quantum-cybersecurity', icon: Shield, description: 'Quantum-resistant security solutions' },
-    { name: 'Edge Computing', href: 'https://ziontechgroup.com/edge-computing-orchestration', icon: Cpu, description: 'Edge orchestration and IoT management' },
-    { name: 'Space Technology', href: 'https://ziontechgroup.com/space-technology', icon: Rocket, description: 'Space exploration and satellite tech' },
+    { name: 'All Solutions', href: '/comprehensive-2025-services-showcase', icon: Globe, description: 'Complete collection of innovative solutions' }
+    { name: 'AI Business Intelligence', href: 'https://ziontechgroup.com/ai-business-intelligence', icon: Brain, description: 'AI-powered analytics and insights' }
+    { name: 'Quantum Cybersecurity', href: 'https://ziontechgroup.com/quantum-cybersecurity', icon: Shield, description: 'Quantum-resistant security solutions' }
+    { name: 'Edge Computing', href: 'https://ziontechgroup.com/edge-computing-orchestration', icon: Cpu, description: 'Edge orchestration and IoT management' }
+    { name: 'Space Technology', href: 'https://ziontechgroup.com/space-technology', icon: Rocket, description: 'Space exploration and satellite tech' }
     { name: 'Pricing', href: '/pricing-2025', icon: Award, description: 'Transparent pricing for all solutions' }
   ];
-
   const company = [
-    { name: 'About Us', href: '/about', icon: Users, description: 'Learn about our mission and team' },
-    { name: 'Our Work', href: '/portfolio', icon: Award, description: 'See our latest projects and achievements' },
-    { name: 'Content Hub', href: '/reports', icon: BookOpen, description: 'Access autonomous content and insights' },
-    { name: 'Blog & Insights', href: '/blog', icon: BookOpen, description: 'Stay updated with industry trends' },
+    { name: 'About Us', href: '/about', icon: Users, description: 'Learn about our mission and team' }
+    { name: 'Our Work', href: '/portfolio', icon: Award, description: 'See our latest projects and achievements' }
+    { name: 'Content Hub', href: '/reports', icon: BookOpen, description: 'Access autonomous content and insights' }
+    { name: 'Blog & Insights', href: '/blog', icon: BookOpen, description: 'Stay updated with industry trends' }
     { name: 'Contact', href: '/contact', icon: Phone, description: 'Get in touch with our experts' }
   ];
-
   const toggleDropdown = (dropdown: string) => {
-    setActiveDropdown(activeDropdown === dropdown ? null : dropdown);
-  };
-
+    setActiveDropdown(activeDropdown === dropdown ? null : dropdown)
+  }
   const closeAllDropdowns = () => {
     setActiveDropdown(null);
     setIsOpen(false);
-  };
-
+  }
   return (
     <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-      isScrolled 
-        ? 'bg-slate-900/95 backdrop-blur-xl border-b border-white/10 shadow-2xl' 
+      isScrolled
+        ? 'bg-slate-900/95 backdrop-blur-xl border-b border-white/10 shadow-2xl'
         : 'bg-transparent'
     }`}>
       <div className="max-w-7xl mx-auto px-6">
@@ -63,7 +59,6 @@ const EnhancedNavigation: React.FC = () => {
               Zion Tech Group
             </span>
           </Link>
-
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center space-x-8">
             {/* Services Dropdown */}
@@ -73,7 +68,6 @@ const EnhancedNavigation: React.FC = () => {
                 className="flex items-center space-x-1 text-white hover:text-blue-300 transition-colors"><span>Services</span>
                 <ChevronDown className={`w-4 h-4 transition-transform ${activeDropdown === 'services' ? 'rotate-180' : ''}`} />
               </button>
-              
               {activeDropdown === 'services' && (
                 <motion.div
                   initial={{ opacity: 0, y: 10 }}
@@ -100,7 +94,6 @@ const EnhancedNavigation: React.FC = () => {
                 </motion.div>
               )}
             </div>
-
             {/* Company Dropdown */}
             <div className="relative">
               <button
@@ -108,7 +101,6 @@ const EnhancedNavigation: React.FC = () => {
                 className="flex items-center space-x-1 text-white hover:text-blue-300 transition-colors"><span>Company</span>
                 <ChevronDown className={`w-4 h-4 transition-transform ${activeDropdown === 'company' ? 'rotate-180' : ''}`} />
               </button>
-              
               {activeDropdown === 'company' && (
                 <motion.div
                   initial={{ opacity: 0, y: 10 }}
@@ -133,7 +125,6 @@ const EnhancedNavigation: React.FC = () => {
                 </motion.div>
               )}
             </div>
-
             {/* CTA Button */}
             <Link
               href="/contact"
@@ -142,14 +133,12 @@ const EnhancedNavigation: React.FC = () => {
               Get Started
             </Link>
           </div>
-
           {/* Mobile Menu Button */}
           <button
             onClick={() => setIsOpen(!isOpen)}
             className="lg:hidden p-2 text-white hover:text-blue-300 transition-colors">{isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
           </button>
         </div>
-
         {/* Mobile Menu */}
         {isOpen && (
           <motion.div
@@ -175,7 +164,6 @@ const EnhancedNavigation: React.FC = () => {
                   ))}
                 </div>
               </div>
-
               {/* Mobile Company */}
               <div>
                 <h3 className="text-lg font-semibold text-gray-900 mb-4">Company</h3>
@@ -194,7 +182,6 @@ const EnhancedNavigation: React.FC = () => {
                   ))}
                 </div>
               </div>
-
               {/* Mobile CTA */}
               <div className="pt-4 border-t border-gray-200">
                 <Link
@@ -211,6 +198,6 @@ const EnhancedNavigation: React.FC = () => {
       </div>
     </nav>
   );
-};
-
+}
 export default EnhancedNavigation;
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5

@@ -1,34 +1,49 @@
-import { useState, useEffect } from "react";
-import { useNavigate } from "react-router-dom";
-import { GradientHeading } from "@/components/GradientHeading";
-import { ProductListingCard } from "@/components/ProductListingCard";
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Select, SelectValue, SelectTrigger, SelectContent, SelectItem } from "@/components/ui/select";
-import { Skeleton } from "@/components/ui/skeleton";
-import { Slider } from "@/components/ui/slider";
-import { ProductListing, ListingView } from "@/types/listings";
+import { useState, useEffect } from "react",
+import { useNavigate } from "react-router-dom",
+import { GradientHeading } from "@/components/GradientHeading",
+import { ProductListingCard } from "@/components/ProductListingCard",
+import { Button } from "@/components/ui/button",
+import { Input } from "@/components/ui/input",
+import { Select, SelectValue, SelectTrigger, SelectContent, SelectItem } from "@/components/ui/select",
+import { Skeleton } from "@/components/ui/skeleton",
+import { Slider } from "@/components/ui/slider",
+import { ProductListing, ListingView } from "@/types/listings",
 import { Search, Filter, LayoutGrid, List, Star } from "lucide-react";
 import { toast } from "@/hooks/use-toast";
 interface PriceRange {
-  min: number,
+<<<<<<< HEAD
+  min: number;
+=======
+  min: number
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
   max: number
 }
-
 interface DynamicListingPageProps {
-  title: string,
-  description: string,
-  categorySlug: string,
-  listings: ProductListing[],
+<<<<<<< HEAD
+  title: string;
+  description: string;
+  categorySlug: string;
+  listings: ProductListing[];
   categoryFilters: { label: string, value: string }[],
+=======
+  title: string
+  description: string
+  categorySlug: string
+  listings: ProductListing[]
+  categoryFilters: { label: string, value: string }[]
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
   initialPrice?: PriceRange
 }
-
 export function DynamicListingPage({
   title;
   description;
   categorySlug;
-  listings: allListings,
+<<<<<<< HEAD
+  listings: allListings;
+  categoryFilters;
+  initialPrice;
+=======
+  listings: allListings
   categoryFilters;
   initialPrice = { min: 0, max: 10000 }
 }: DynamicListingPageProps) {
@@ -38,75 +53,61 @@ export function DynamicListingPage({
   const [view, setView] = useState<ListingView>("grid");
   const [isLoading, setIsLoading] = useState(false);
   const [priceRange, setPriceRange] = useState<PriceRange>(initialPrice);
-
   const [selectedRating, setSelectedRating] = useState<number | null>(null);
-
   useEffect(() => {
     const listingsWithPrice = allListings.filter(l => l.price !== null);
     if (listingsWithPrice.length > 0) {
-      const min = Math.min(...listingsWithPrice.map(l => l.price || 0));
-      const max = Math.max(...listingsWithPrice.map(l => l.price || 0));
+      const min = Math.min(...listingsWithPrice.map(l => l.price |0));
+      const max = Math.max(...listingsWithPrice.map(l => l.price |0));
       setPriceRange({ min, max })
     }
   }, [allListings]);
-
   const [currentPriceFilter, setCurrentPriceFilter] = useState<[number, number]>([
     initialPrice.min;
     initialPrice.max
   ]);
-
   const handleSliderChange = (values: number[]) => {
     setCurrentPriceFilter([values[0], values[1]])
-  };
-
+  }
   const filteredListings = allListings.filter(listing => {
-    const matchesSearch = !searchQuery || 
-      listing.title.toLowerCase().includes(searchQuery.toLowerCase()) || 
-      listing.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
-      (listing.tags && listing.tags.some((tag: string) => tag.toLowerCase().includes(searchQuery.toLowerCase()))),
-    
-    const matchesCategory = selectedCategory === "all" || listing.category === selectedCategory;
-    
-    const matchesPrice = listing.price === null || (
-      listing.price >= currentPriceFilter[0] && 
+    const matchesSearch = !searchQuery |
+      listing.title.toLowerCase().includes(searchQuery.toLowerCase()) |
+      listing.description.toLowerCase().includes(searchQuery.toLowerCase()) |
+      (listing.tags && listing.tags.some((tag: string) => tag.toLowerCase().includes(searchQuery.toLowerCase())))
+    const matchesCategory = selectedCategory === "all" |listing.category === selectedCategory;
+    const matchesPrice = listing.price === null |(
+      listing.price >= currentPriceFilter[0] &&
       listing.price <= currentPriceFilter[1]
     );
-    
-    const matchesRating = 
-      selectedRating === null || 
+    const matchesRating =
+      selectedRating === null |
       (listing.rating !== undefined && listing.rating >= selectedRating);
-    
     return matchesSearch && matchesCategory && matchesPrice && matchesRating
   });
-
   const handleRequestQuote = (listingId: string) => {
     setIsLoading(true);
-    
     const listing = allListings.find(item => item.id === listingId);
-    
     setTimeout(() => {
-      setIsLoading(false);
+      setIsLoading(false)
       if (listing) {
         toast({
-          title: "Quote Requested",
+          title: "Quote Requested"
           description: `Your quote request for ${listing.title} has been sent.`
         });
-        
         navigate("/request-quote", {
-          state: { 
-            serviceType: categorySlug, 
+          state: {
+            serviceType: categorySlug
             specificItem: {
-              id: listing.id,
-              title: listing.title,
-              category: listing.category,
+              id: listing.id
+              title: listing.title
+              category: listing.category
               image: listing.images?.[0]
             }
           }
         })
       }
     }, 500)
-  };
-
+  }
   return (
     <div className="min-h-screen bg-zion-blue py-12 px-4">
       <div className="container mx-auto">
@@ -116,20 +117,18 @@ export function DynamicListingPage({
             {description}
           </p>
         </div>
-
         <div className="grid grid-cols-1 lg:grid-cols-4 gap-6">
           <div className="lg:col-span-1">
             <div className="bg-zion-blue-dark rounded-lg border border-zion-blue-light p-4 sticky top-6">
               <h3 className="text-lg font-medium text-white mb-4 flex items-center">
                 <Filter className="mr-2 h-5 w-5" /> Filters
               </h3>
-              
               <div className="mb-6">
                 <label className="text-sm font-medium text-zion-slate-light block mb-2">
                   Category
                 </label>
-                <Select 
-                  value={selectedCategory} 
+                <Select
+                  value={selectedCategory}
                   onValueChange={(value: string) => {
                     console.log("Category selected:", value);
                     setSelectedCategory(value)
@@ -148,7 +147,6 @@ export function DynamicListingPage({
                   </SelectContent>
                 </Select>
               </div>
-              
               <div className="mb-6">
                 <label className="text-sm font-medium text-zion-slate-light block mb-2">
                   Price Range
@@ -169,7 +167,6 @@ export function DynamicListingPage({
                   </div>
                 </div>
               </div>
-              
               <div className="mb-6">
                 <label className="text-sm font-medium text-zion-slate-light block mb-2">
                   Minimum Rating
@@ -185,8 +182,8 @@ export function DynamicListingPage({
                         setSelectedRating(rating)
                       }}
                       className={`${
-                        selectedRating === rating 
-                          ? "bg-zion-purple/20 border-zion-purple text-zion-purple" 
+                        selectedRating === rating
+                          ? "bg-zion-purple/20 border-zion-purple text-zion-purple"
                           : "border-zion-blue-light text-zion-slate-light"
                       }`}
                     >
@@ -204,14 +201,13 @@ export function DynamicListingPage({
                   ))}
                 </div>
               </div>
-              
-              <Button 
-                variant="outline" 
+              <Button
+                variant="outline"
                 className="w-full border-zion-purple text-zion-purple hover: bg-zion-purple/10"
                 onClick={() => {
                   console.log("Resetting filters");
                   setSearchQuery("");
-                  setSelectedCategory("all");
+                  setSelectedCategory("all")
                   setCurrentPriceFilter([priceRange.min, priceRange.max]);
                   setSelectedRating(null)
                 }}
@@ -220,7 +216,6 @@ export function DynamicListingPage({
               </Button>
             </div>
           </div>
-          
           <div className="lg:col-span-3">
             <div className="bg-zion-blue-dark rounded-lg p-4 mb-6 border border-zion-blue-light">
               <div className="flex flex-col md:flex-row gap-4">
@@ -237,7 +232,6 @@ export function DynamicListingPage({
                     className="pl-10 bg-zion-blue border border-zion-blue-light text-white"
                   />
                 </div>
-                
                 <div className="flex items-center gap-2 ml-auto">
                   <Button
                     variant="outline"
@@ -258,7 +252,6 @@ export function DynamicListingPage({
                 </div>
               </div>
             </div>
-
             <div className="mb-6">
               <p className="text-zion-slate-light">
                 Showing {filteredListings.length} results
@@ -266,7 +259,6 @@ export function DynamicListingPage({
                 {searchQuery && ` for "${searchQuery}"`}
               </p>
             </div>
-
             {isLoading ? (
               <div className={`grid gap-6 ${view === "grid" ? "grid-cols-1 md:grid-cols-2" : "grid-cols-1"}`}>
                 {[1, 2, 3, 4].map((i) => (
@@ -288,7 +280,7 @@ export function DynamicListingPage({
             ) : filteredListings.length > 0 ? (
               <div className={`grid gap-6 ${view === "grid" ? "grid-cols-1 md:grid-cols-2" : "grid-cols-1"}`}>
                 {filteredListings.map((listing) => (
-                  <ProductListingCard 
+                  <ProductListingCard
                     key={listing.id}
                     listing={listing}
                     view={view}
@@ -300,12 +292,13 @@ export function DynamicListingPage({
               <div className="text-center py-20">
                 <h3 className="text-xl font-bold text-white mb-2">No listings found</h3>
                 <p className="text-zion-slate-light mb-6">Try adjusting your filters or search query</p>
-                <Button 
-                  variant="outline" 
+                <Button
+                  variant="outline"
                   onClick={() => {
                     setSearchQuery("");
                     setSelectedCategory("all");
                     setCurrentPriceFilter([priceRange.min, priceRange.max]);
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
                     setSelectedRating(null)
                   }}
                   className="border-zion-purple text-zion-purple hover:bg-zion-purple/10"

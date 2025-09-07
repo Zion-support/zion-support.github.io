@@ -1,36 +1,29 @@
+<<<<<<< HEAD
 import type { NextPage } from 'next';
 import Head from 'next/head';
 import Link from 'next/link';
-
+const MobileAppDevelopmentChat: NextPage;
+=======
+import type { NextPage } from "next";
+import Head from "next/head";
+import Link from "next/link";
 const MobileAppDevelopmentChat: NextPage = () => {
   return (
     <div>
       <Head>
         <title>MobileAppDevelopmentChat - Zion Tech Solutions</title>
-        <meta name='description' content='MobileAppDevelopmentChat service' />
+        <meta
+          name="description"
+          content="MobileAppDevelopmentChat service"
+        />{" "}
       </Head>
-      
       <main>
         <h1>MobileAppDevelopmentChat</h1>
         <p>Service details coming soon...</p>
         <a href="/services">Back to Services</a>
       </main>
     </div>
-  )
-};
-
+  );
+}
 export default MobileAppDevelopmentChat;
-        <meta name="description" content="MobileAppDevelopmentChat service" />
-      </Head>
-      
-      <main>
-        <h1>MobileAppDevelopmentChat</h1>
-        <p>Service details coming soon...</p>
-        <a href="/services">Back to Services</a>
-      </main>
-    </div>
-  )
-};
-
-export default MobileAppDevelopmentChat;
-export default MobileAppDevelopmentChat;
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5

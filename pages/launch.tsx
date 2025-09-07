@@ -1,23 +1,13 @@
 import type { GetServerSideProps } from 'next';
-
-ursor/integrate-build-improve-and-re-verify-b76c
+<<<<<<< HEAD
+export const getServerSideProps: GetServerSideProps;
+export default function LaunchRedirect() { return null }
+=======
 export const getServerSideProps: GetServerSideProps = async () => {
   return {
     redirect: {
-      destination: '/media/kit',
-      permanent: false,
-    },
-  };
-};
-
-export default function LaunchRedirect() {
-  return null;
+      destination: '/media/kit'
       permanent: false}}
-};
-
+}
 export default function LaunchRedirect() { return null }
-      permanent: false}}
-};
-
-export default function LaunchRedirect() { return null }
-ursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5

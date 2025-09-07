@@ -1,15 +1,25 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
-const fs = require('fs');
->>>>>>> origin/cursor/develop-autonomous-cloud-agents-for-automation-orchestration-ded0
 =======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
 const fs = require('fs');
+const fs = require('fs');
+<<<<<<< HEAD
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+<<<<<<< HEAD
+=======
 =======
 const fs = require('fs');
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
 const path = require('path');
 const { spawnSync } = require('child_process');
 
@@ -21,11 +31,20 @@ function runNode(relPath, args = []) {
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+<<<<<<< HEAD
+=======
 =======
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
 exports.config = {
   schedule: '0 */6 * * *',
 };
@@ -48,8 +67,14 @@ exports.handler = async () => {
 };
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+<<<<<<< HEAD
 >>>>>>> 916d02471c24718d698d51219f240472f9d52b96
 =======
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
 exports.config = { schedule: '15 */6 * * *' };
 
 exports.handler = async () => {
@@ -71,8 +96,14 @@ exports.handler = async () => {
   runNode('automation/advanced-git-sync.cjs');
   return { statusCode: 200, body: JSON.stringify(report) };
 };
+<<<<<<< HEAD
 >>>>>>> origin/cursor/develop-autonomous-cloud-agents-for-automation-orchestration-ded0
 =======
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+<<<<<<< HEAD
+=======
 =======
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381

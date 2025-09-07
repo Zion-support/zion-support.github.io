@@ -1,22 +1,28 @@
 
-import { formatDistanceToNow } from "date-fns";
-import { Link } from "react-router-dom";
-import { Calendar, User, FileText, BarChart } from "lucide-react";
-import { Button } from "@/components/ui/button";
-import { Avatar } from "@/components/ui/avatar";
-import { TableRow, TableCell } from "@/components/ui/table";
-import { JobApplication, ApplicationStatus } from "@/types/jobs";
-import { StatusBadge } from "./StatusBadge";
+import { formatDistanceToNow } from "date-fns",
+import { Link } from "react-router-dom",
+import { Calendar, User, FileText, BarChart } from "lucide-react",
+import { Button } from "@/components/ui/button",
+import { Avatar } from "@/components/ui/avatar",
+import { TableRow, TableCell } from "@/components/ui/table",
+import { JobApplication, ApplicationStatus } from "@/types/jobs",
+import { StatusBadge } from "./StatusBadge",
 import { ScoreBadge } from "./ScoreBadge";
 import { ApplicationActions } from "./ApplicationActions";
 interface ApplicationRowProps {
-  application: JobApplication,
-  processingId: string | null,
-  onViewApplication: (applicationId: string) => Promise<void>,
-  onStatusChange: (applicationId: string, newStatus: ApplicationStatus) => Promise<void>,
+<<<<<<< HEAD
+  application: JobApplication;
+  processingId: string | null;
+  onViewApplication: (applicationId: string) => Promise<void>;
+  onStatusChange: (applicationId: string, newStatus: ApplicationStatus) => Promise<void>;
+=======
+  application: JobApplication
+  processingId: string | null
+  onViewApplication: (applicationId: string) => Promise<void>
+  onStatusChange: (applicationId: string, newStatus: ApplicationStatus) => Promise<void>
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
   onViewScore: (application: JobApplication) => void
 }
-
 export function ApplicationRow({
   application;
   processingId;
@@ -30,9 +36,9 @@ export function ApplicationRow({
         <div className="flex items-center gap-3">
           <Avatar className="h-9 w-9">
             {application.talent_profile?.profile_picture_url ? (
-              <img 
-                src={application.talent_profile.profile_picture_url} 
-                alt={application.talent_profile.full_name} 
+              <img
+                src={application.talent_profile.profile_picture_url}
+                alt={application.talent_profile.full_name}
               />
             ) : (
               <User className="h-5 w-5 text-gray-400" />
@@ -40,10 +46,10 @@ export function ApplicationRow({
           </Avatar>
           <div>
             <div className="font-medium">
-              {application.talent_profile?.full_name || "Unknown"}
+              {application.talent_profile?.full_name |"Unknown"}
             </div>
             <div className="text-xs text-muted-foreground">
-              {application.talent_profile?.professional_title || "Talent"}
+              {application.talent_profile?.professional_title |"Talent"}
             </div>
           </div>
         </div>
@@ -58,9 +64,9 @@ export function ApplicationRow({
         <StatusBadge status={application.status} />
       </TableCell>
       <TableCell>
-        <Button 
-          variant="ghost" 
-          size="sm" 
+        <Button
+          variant="ghost"
+          size="sm"
           onClick={() => onViewScore(application)}
           className="flex items-center gap-1"
         >
@@ -71,7 +77,7 @@ export function ApplicationRow({
       <TableCell>
         {application.resume ? (
           <Button variant="ghost" size="sm" asChild>
-            <a href={application.resume.file_url || "#"} target="_blank" rel="noopener noreferrer">
+            <a href={application.resume.file_url |"#"} target="_blank" rel="noopener noreferrer">
               <FileText className="h-4 w-4 mr-1" /> View
             </a>
           </Button>

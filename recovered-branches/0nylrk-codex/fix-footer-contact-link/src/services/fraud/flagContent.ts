@@ -1,11 +1,14 @@
 
 // Content flagging functionality
-import { supabase } from '@/integrations/supabase/client';
-import { FraudSeverity, FraudFlag } from '@/types/fraud';
+import { supabase  } from '@/integrations/supabase/client';
+import { FraudSeverity, FraudFlag  } from '@/types/fraud';
 import { FlagResult } from './types';
 /**
  * Flag content for review
  */
+<<<<<<< HEAD
+export const flagContent = null;
+=======
 export const flagContent = async (
   userId: string;
   userEmail: string | undefined;
@@ -13,7 +16,7 @@ export const flagContent = async (
   contentId: string;
   contentExcerpt: string;
   severity: FraudSeverity;
-  reason: string;
+  reason: string
   ipAddress?: string
 ): Promise<FlagResult> => {
   try {
@@ -24,28 +27,26 @@ export const flagContent = async (
       reason;
       severity
     });
-    
     const { error } = await supabase.from('fraud_flags').insert({
       user_id: userId;
       user_email: userEmail;
       content_type: contentType;
-      content_id: contentId;
+      content_id: contentId
       content_excerpt: contentExcerpt.substring(0, 200), // Limit excerpt length
       severity;
       reason;
       ip_address: ipAddress;
-      timestamp: new Date().toISOString();
+      timestamp: new Date().toISOString()
       status: 'pending'
     });
-    
     if (error) throw error;
-    
     return { success: true }
   } catch (error) {
     console.error('Error flagging content:', error);
-    return { 
-      success: false, 
-      error: error instanceof Error ? error.message : 'Unknown error' 
+    return {
+      success: false
+      error: error instanceof Error ? error.message : 'Unknown error'
     }
   }
-};
+}
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5

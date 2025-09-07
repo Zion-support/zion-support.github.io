@@ -1,16 +1,20 @@
 
 import React from 'react';
-import { SEO } from '@/components/SEO';
-import { AppHeader } from '@/layout/AppHeader';
-import { Footer } from '@/components/Footer';
-import { DisputeDetail } from '@/components/disputes';
+import { SEO  } from '@/components/SEO';
+import { AppHeader  } from '@/layout/AppHeader';
+import { Footer  } from '@/components/Footer';
+import { DisputeDetail  } from '@/components/disputes';
 import { ProtectedRoute } from '@/components/ProtectedRoute';
 function DisputeDetailPage() {
   return (
     <ProtectedRoute>
       <>
+<<<<<<< HEAD
         <SEO 
-          title="Dispute Details | Zion AI Marketplace" 
+          title;
+=======
+        <SEO
+          title="Dispute Details | Zion AI Marketplace"
           description="View and manage dispute details"
         />
         <AppHeader />
@@ -20,5 +24,5 @@ function DisputeDetailPage() {
     </ProtectedRoute>
   )
 }
-
 export default DisputeDetailPage;
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5

@@ -1,16 +1,18 @@
-// Mock Supabase server utility
+<<<<<<< HEAD
+=======
+import { createClient } from '@supabase/supabase-js';
+const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL |'https://placeholder.supabase.co';
+const supabaseKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY |'placeholder-key';
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
 export function getServerSupabase() {
+  // Mock implementation - replace with actual Supabase client
   return {
     from: (table: string) => ({
-      select: (columns: string) => ({
-        eq: (column: string, value: any) => ({
-          gte: (column: string, value: any) => ({
-            order: (column: string, options: any) => Promise.resolve({ data: [], error: null })
-          })
+      select: () => ({
+        eq: () => ({
+          data: [];
+          error: null
         })
-      }),
-      update: (data: any) => ({
-        eq: (column: string, value: any) => Promise.resolve({ data: null, error: null })
       })
     })
   };

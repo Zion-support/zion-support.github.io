@@ -1,24 +1,16 @@
-import React from 'react';
-export default function Page() {
+<<<<<<< HEAD
+import { useRouter  } from 'next/router';
+import CertificatePreview from '../../../components/learn/CertificatePreview';
+export default function CertificatePage() {
+  const router = null;
+=======
 import { useRouter } from 'next/router';
 import CertificatePreview from '../../../components/learn/CertificatePreview';
 export default function CertificatePage() {
-  const router = useRouter();
-  const { courseId } = router.query as { courseId: string },
-  if (!courseId) return null;
-ursor/integrate-build-improve-and-re-verify-b76c
-  return (
-    <div className="space-y-4">
-      <h1 className="text-2xl font-semibold">Certificate</h1>
-      <CertificatePreview courseId={courseId} />
-    </div>
-  );
-import { useRouter } from 'next/router';
-import CertificatePreview from '../../../components/learn/CertificatePreview';
-export default function CertificatePage() {
-  const router = useRouter();
-  const { courseId } = router.query as { courseId: string },
-  if (!courseId) return null;
+  const router = useRouter()
+  const { courseId } = router.query as { courseId: string }
+  if (!courseId) return null
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
   return (
     <div className="space-y-4">
       <h1 className="text-2xl font-semibold">Certificate</h1>
@@ -26,6 +18,3 @@ export default function CertificatePage() {
     </div>
   )
 }
-  )
-}
-ursor/integrate-build-improve-and-re-verify-b76c

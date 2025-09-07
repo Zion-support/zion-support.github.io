@@ -1,78 +1,93 @@
 #!/usr/bin/env node
-
-import fs from 'fs';
-import path from 'path';
-import { glob } from 'glob';
-
-// Function to fix import statements
-function fixImportStatements(content) {
-  // Fix import statements that use commas instead of semicolons
-  // Pattern: import ... from "..." , -> import ... from "...";
-  content = content.replace(/import\s+.*?\s+from\s+['"][^'"]*['"]\s*,/g, (match) => {
-    return match.replace(/,\s*$/, ';');
-  });
-  
-  // Fix 'use client' statements
-  content = content.replace(/'use client'\s*,/g, "'use client';");
-  
-  // Fix interface declarations that use commas
-  content = content.replace(/interface\s+\w+\s*\{[^}]*\}\s*,/g, (match) => {
-    return match.replace(/,\s*$/, ';');
-  });
-  
-  // Fix type declarations that use commas
-  content = content.replace(/type\s+\w+\s*=\s*[^;]+,\s*$/gm, (match) => {
-    return match.replace(/,\s*$/, ';');
-  });
-  
-  return content;
-}
-
-// Function to process a single file
-function processFile(filePath) {
+import fs from "fs";
+import path from "path";
+function fixImportSyntax(filePath) {
   try {
-    const content = fs.readFileSync(filePath, 'utf8');
-    const fixedContent = fixImportStatements(content);
-    
-    if (content !== fixedContent) {
-      fs.writeFileSync(filePath, fixedContent, 'utf8');
-      console.log(`Fixed: ${filePath}`);
-      return true;
+    let content = fs.readFileSync(filePath, "utf8");
+    let modified = false;
+    // Fix semicolons in import statements
+    const importSemicolonRegex =
+      /import\s*\{([^}]+)\}\s*from\s*['"][^'"]+['"];?/g;
+    content = content.replace(importSemicolonRegex, (match, imports) => {
+      // Replace semicolons with commas in import lists
+      const fixedImports = imports.replace(/;/g, ",");
+      return match.replace(imports, fixedImports);
+    });
+    // Fix missing commas in import statements
+    const importCommaRegex = /import\s*\{([^}]+)\}\s*from\s*['"][^'"]+['"];?/g;
+    content = content.replace(importCommaRegex, (match, imports) => {
+      // Add missing commas between import items
+      const fixedImports = imports
+        .split(/\s+/)
+        .filter((item) => item.trim())
+        .join(", ");
+      return match.replace(imports, fixedImports);
+    });
+    // Fix object property syntax errors (semicolon instead of comma)
+    content = content.replace(/(\w+):\s*([^,}]+);/g, "$1: $2,");
+    // Fix function parameter syntax errors
+    content = content.replace(
+      /function\s*\(([^)]+)\)\s*{/g
+      (match, params) => {
+        const fixedParams = params.replace(/;/g, ",");
+        return match.replace(params, fixedParams);
+      }
+    );
+    if (content !== fs.readFileSync(filePath, "utf8")) {
+      fs.writeFileSync(filePath, content, "utf8");
+      modified = true;
     }
-    return false;
+    return modified;
   } catch (error) {
     console.error(`Error processing ${filePath}:`, error.message);
     return false;
   }
 }
-
-// Main function
-async function main() {
-  const patterns = [
-    'src/**/*.tsx',
-    'src/**/*.ts',
-    'zion-os/**/*.tsx',
-    'zion-os/**/*.ts'
-  ];
-  
-  let totalFiles = 0;
-  let fixedFiles = 0;
-  
-  for (const pattern of patterns) {
-    const files = await glob(pattern, { cwd: process.cwd() });
-    
-    for (const file of files) {
-      totalFiles++;
-      if (processFile(file)) {
-        fixedFiles++;
+function findFilesWithSyntaxErrors(dir) {
+  const files = [];
+  function traverse(currentDir) {
+    const items = fs.readdirSync(currentDir);
+    for (const item of items) {
+      const fullPath = path.join(currentDir, item);
+      const stat = fs.statSync(fullPath);
+      if (stat.isDirectory()) {
+        // Skip certain directories
+        if (
+          [
+            "node_modules"
+            ".git"
+            ".next"
+            "dist"
+            "build"
+            "out"
+            "ai-optimization-backups"
+            "apps.backup"
+            "backup-merge-conflicts"
+            "apps"
+          ].includes(item)
+        ) {
+          continue;
+        }
+        traverse(fullPath);
+      } else if (stat.isFile()) {
+        const ext = path.extname(item);
+        if ([".js", ".jsx", ".ts", ".tsx"].includes(ext)) {
+          files.push(fullPath);
+        }
       }
     }
   }
-  
-  console.log(`\nProcessed ${totalFiles} files, fixed ${fixedFiles} files`);
+  traverse(dir);
+  return files;
 }
-
-// Run the main function
-main().catch(console.error);
-
-export { fixImportStatements, processFile };
+// Main execution
+const files = findFilesWithSyntaxErrors(".");
+let fixedCount = 0;
+console.log(`Found ${files.length} files to check for syntax errors...`);
+for (const file of files) {
+  if (fixImportSyntax(file)) {
+    fixedCount++;
+    console.log(`Fixed syntax in: ${file}`);
+  }
+}
+console.log(`\nFixed syntax errors in ${fixedCount} files.`);

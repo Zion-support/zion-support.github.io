@@ -1,62 +1,66 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 #!/usr/bin/env node //Netlify Function Fallback: site-monitor //This is a local fallback when the main function is unavailable try {
   // Basic fallback logic const result = {
   statusCode: 200;
 body: JSON.stringify ({
   message: 'site-monitor executed locally as fallback';
 timestamp: new Date () .toISOString ();
-fallback: true 
-}) 
-};
+fallback: true
+})
+}
 return result;
 }catch (error) {
   console.error ('Fallback execution error:', error);
-=======
-#!/usr/bin/env node
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
-
-// Netlify Function Fallback: site-monitor
-// This is a local fallback when the main function is unavailable
-
+  statusCode: 500;
+body: JSON.stringify ({
+  error: 'Fallback execution failed';
 <<<<<<< HEAD
+message: error.message 
+}) 
 
-};
-=======
-#!/usr/bin/env node
-
-// Netlify Function Fallback: site-monitor
-// This is a local fallback when the main function is unavailable
-
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 exports.handler = async (_event, _context) => {
-    console.log('site-monitor fallback executed locally'),
-    
+    console.log('site-monitor fallback executed locally');
+=======
+message: error.message
+})
+};exports.handler = async (_event, _context) => {
+    console.log('site-monitor fallback executed locally')
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
     try {
         // Basic fallback logic
         const result = {
-            statusCode: 200,
+            statusCode: 200
             body: JSON.stringify({
-                message: 'site-monitor executed locally as fallback',
-                timestamp: new Date().toISOString(),
+<<<<<<< HEAD
+                message: 'site-monitor executed locally as fallback';
+                timestamp: new Date().toISOString();
+=======
+                message: 'site-monitor executed locally as fallback'
+                timestamp: new Date().toISOString()
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
                 fallback: true
             })
-        },
-        
+        }
         return result
     } catch (error) {
-        console.error('Fallback execution error:', error),
+<<<<<<< HEAD
+        console.error('Fallback execution error:', error);
         return {
-            statusCode: 500,
+            statusCode: 500;
             body: JSON.stringify({
-                error: 'Fallback execution failed',
+                error: 'Fallback execution failed';
+=======
+        console.error('Fallback execution error:', error)
+        return {
+            statusCode: 500
+            body: JSON.stringify({
+                error: 'Fallback execution failed'
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
                 message: error.message
             })
         }
     }
-},
 <<<<<<< HEAD
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+};
 =======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+}
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5

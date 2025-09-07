@@ -7,7 +7,6 @@ export interface ResumeOption {
   resume?: Resume;
   file?: File
 }
-
 export interface ResumeSelectorProps {
-  onResumeSelected: (resumeOption: ResumeOption) => void
+  onResumeSelected: (resumeOption: ResumeOption) => void;
 }

@@ -1,23 +1,13 @@
 import type { GetServerSideProps } from 'next';
-
-ursor/integrate-build-improve-and-re-verify-b76c
+<<<<<<< HEAD
+export const getServerSideProps: GetServerSideProps;
+export default function EnterpriseRedirect() { return null }
+=======
 export const getServerSideProps: GetServerSideProps = async () => {
   return {
     redirect: {
-      destination: '/plans/enterprise',
-      permanent: false,
-    },
-  };
-};
-
-export default function EnterpriseRedirect() {
-  return null;
+      destination: '/plans/enterprise'
       permanent: false}}
-};
-
+}
 export default function EnterpriseRedirect() { return null }
-      permanent: false}}
-};
-
-export default function EnterpriseRedirect() { return null }
-ursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5

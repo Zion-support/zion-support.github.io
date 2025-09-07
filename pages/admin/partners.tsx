@@ -1,129 +1,128 @@
+<<<<<<< HEAD
+import { useEffect, useState  } from 'react';
+export default function AdminPartners() {
+  const [partners, setPartners] = useState<any[]>([]),
+  const [selected, setSelected] = useState<string>(''),
+  const [flags, setFlags] = useState<any[]>([]);
+  useEffect(() => {
+    (async () => {
+      try {
+        const res = null;
+    setFlags(json.flags || [])
+=======
 import React, { useState, useEffect } from 'react';
 import Head from 'next/head';
-import { useEffect, useState } from 'react';
-ursor/integrate-build-improve-and-re-verify-b76c
-
-export default function AdminPartners() {
-  const [partners, setPartners] = useState<any[]>([]);
-  const [selected, setSelected] = useState<string>('');
-  const [flags, setFlags] = useState<any[]>([]);
-
+interface Partner {
+  id: string;
+  code: string;
+  name: string;
+  status: 'active' | 'inactive' | 'pending';
+  commission: number;
+  contactEmail: string;
+  contactPhone: string;
+  joinedAt: string;
+  lastActivity: string;
+  totalReferrals: number;
+  totalEarnings: number;
+const mockPartners: Partner[] = [
+  {
+    id: '1'
+    code: 'PART001'
+    name: 'Tech Solutions Inc.'
+    status: 'active'
+    commission: 15
+    contactEmail: 'contact@techsolutions.com'
+    contactPhone: '+1-555-0123'
+    joinedAt: '2024-01-15T00:00:00Z'
+    lastActivity: '2025-01-15T10:30:00Z'
+    totalReferrals: 25
+    totalEarnings: 12500
+  }
+  {
+    id: '2'
+    code: 'PART002'
+    name: 'Digital Marketing Pro'
+    status: 'active'
+    commission: 12
+    contactEmail: 'hello@digitalmarketingpro.com'
+    contactPhone: '+1-555-0456'
+    joinedAt: '2024-03-20T00:00:00Z'
+    lastActivity: '2025-01-14T16:45:00Z'
+    totalReferrals: 18
+    totalEarnings: 8750
+  }
+  {
+    id: '3'
+    code: 'PART003'
+    name: 'Cloud Services LLC'
+    status: 'pending'
+    commission: 10
+    contactEmail: 'info@cloudservices.com'
+    contactPhone: '+1-555-0789'
+    joinedAt: '2025-01-10T00:00:00Z'
+    lastActivity: '2025-01-10T00:00:00Z'
+    totalReferrals: 0
+    totalEarnings: 0
+  }
+];
+const AdminPartnersPage: React.FC = () => {
+  const [partners, setPartners] = useState<Partner[]>([]);
+  const [loading, setLoading] = useState(true);
+  const [searchTerm, setSearchTerm] = useState('');
+  const [statusFilter, setStatusFilter] = useState('all');
   useEffect(() => {
     // Simulate loading partners
     setTimeout(() => {
       setPartners(mockPartners);
       setLoading(false);
-    }, 1000);
-import { useEffect, useState } from 'react';
-
-export default function AdminPartners() {
-  const [partners, setPartners] = useState<any[]>([]);
-  const [selected, setSelected] = useState<string>('');
-  const [flags, setFlags] = useState<any[]>([]);
-
-  useEffect(() => {
-ursor/integrate-build-improve-and-re-verify-b76c
-    (async () => {
-      try {
-        const res = await fetch('/api/admin/partners/list');
-        const json = await res.json();
-        setPartners(json.partners || [])
-      } catch {}
-    })()
-ursor/integrate-build-improve-and-re-verify-b76c
-  }, []);
-
+    }, 1000);  }, []);
   async function updatePartner(code: string, updates: any) {
     await fetch('/api/admin/partners/update', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ code, ...updates }),
+      method: 'POST'
+      headers: { 'Content-Type': 'application/json' }
+      body: JSON.stringify({ code, ...updates })
     });
     const res = await fetch('/api/admin/partners/list');
     const json = await res.json();
-    setPartners(json.partners || []);
-      body: JSON.stringify({ code, ...updates })});
-    const res = await fetch('/api/admin/partners/list');
-    const json = await res.json();
-    setPartners(json.partners || [])
-      body: JSON.stringify({ code, ...updates })});
-    const res = await fetch('/api/admin/partners/list');
-    const json = await res.json();
-    setPartners(json.partners || [])
-ursor/integrate-build-improve-and-re-verify-b76c
-  }
-
+    setPartners(json.partners |[]);  }
   async function viewFlags(code: string) {
-    setSelected(code);
+    setSelected(code)
     const res = await fetch(
       `/api/admin/partners/fraud-flags?code=${encodeURIComponent(code)}`
     );
-    const res = await fetch(`/api/admin/partners/fraud-flags?code=${encodeURIComponent(code)}`);
-ursor/integrate-build-improve-and-re-verify-b76c
     const json = await res.json();
-    setFlags(json.flags || [])
+    setFlags(json.flags |[]);
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
   }
-
   return (
-    <div className="space-y-6">
-      <h1 className="text-2xl font-semibold">Admin • Partners</h1>
-      <div className="overflow-auto">
-        <table className="min-w-full text-sm">
+    <div className='space-y-6'>
+      <h1 className='text-2xl font-semibold'>Admin • Partners</h1>
+      <div className='overflow-auto'>
+        <table className='min-w-full text-sm'>
           <thead>
-            <tr className="text-left border-b">
-              <th className="py-2 pr-4">Code</th>
-              <th className="py-2 pr-4">Name</th>
-              <th className="py-2 pr-4">Status</th>
-              <th className="py-2 pr-4">Commission</th>
-              <th className="py-2 pr-4">Actions</th>
+            <tr className='text-left border-b'>
+              <th className='py-2 pr-4'>Code</th>
+              <th className='py-2 pr-4'>Name</th>
+              <th className='py-2 pr-4'>Status</th>
+              <th className='py-2 pr-4'>Commission</th>
+              <th className='py-2 pr-4'>Actions</th>
             </tr>
           </thead>
           <tbody>
-            {partners.map((p) => (
-              <tr key={p.code} className="border-b">
-                <td className="py-2 pr-4">{p.code}</td>
-                <td className="py-2 pr-4">{p.name}</td>
-                <td className="py-2 pr-4">{p.status}</td>
-                <td className="py-2 pr-4">
+            {partners.map(p => (
+              <tr key={p.code} className='border-b'>
+                <td className='py-2 pr-4'>{p.code}</td>
+                <td className='py-2 pr-4'>{p.name}</td>
+                <td className='py-2 pr-4'>{p.status}</td>
+                <td className='py-2 pr-4'>
                   <input
-                    type='number'
-    const res = await fetch(`/api/admin/partners/fraud-flags?code=${encodeURIComponent(code)}`);
-    const json = await res.json();
-    setFlags(json.flags || [])
-  }
-
-  return (
-    <div className="space-y-6">
-      <h1 className="text-2xl font-semibold">Admin • Partners</h1>
-      <div className="overflow-auto">
-        <table className="min-w-full text-sm">
-          <thead>
-            <tr className="text-left border-b">
-              <th className="py-2 pr-4">Code</th>
-              <th className="py-2 pr-4">Name</th>
-              <th className="py-2 pr-4">Status</th>
-              <th className="py-2 pr-4">Commission</th>
-              <th className="py-2 pr-4">Actions</th>
-            </tr>
-          </thead>
-          <tbody>
-            {partners.map((p) => (
-              <tr key={p.code} className="border-b">
-                <td className="py-2 pr-4">{p.code}</td>
-                <td className="py-2 pr-4">{p.name}</td>
-                <td className="py-2 pr-4">{p.status}</td>
-                <td className="py-2 pr-4">
-                  <input
-                    type="number"
-                    type="number"
-ursor/integrate-build-improve-and-re-verify-b76c
-                    defaultValue={p.commission_rate}
+                    type='number'                    defaultValue={p.commission_rate}
                     min={0}
                     max={1}
                     step={0.01}
                     onBlur={e =>
                       updatePartner(p.code, {
-                        commission_rate: Number(e.target.value),
+                        commission_rate: Number(e.target.value)
                       })
                     }
                     className='w-24 border rounded px-2 py-1'
@@ -151,46 +150,28 @@ ursor/integrate-build-improve-and-re-verify-b76c
                     onClick={() => viewFlags(p.code)}
                   >
                     Fraud Flags
-                  </button>
-                    onBlur={(e) => updatePartner(p.code, { commission_rate: Number(e.target.value) })}
-                    className="w-24 border rounded px-2 py-1"
-                  />
-                </td>
-                    onBlur={(e) => updatePartner(p.code, { commission_rate: Number(e.target.value) })}
-                    className="w-24 border rounded px-2 py-1"
-                  />
-                </td>
-ursor/integrate-build-improve-and-re-verify-b76c
-                <td className="py-2 pr-4 space-x-2">
-                  <button className="px-2 py-1 rounded border" onClick={() => updatePartner(p.code, { status: 'approved' })}>Approve</button>
-                  <button className="px-2 py-1 rounded border" onClick={() => updatePartner(p.code, { status: 'rejected' })}>Reject</button>
-                  <button className="px-2 py-1 rounded border" onClick={() => viewFlags(p.code)}>Fraud Flags</button>
-ursor/integrate-build-improve-and-re-verify-b76c
-                </td>
+                  </button>                </td>
               </tr>
             ))}
           </tbody>
         </table>
       </div>
-
       {selected && (
         <div className='p-4 rounded border'>
           <h2 className='font-semibold mb-2'>Fraud Flags • {selected}</h2>
           <ul className='list-disc pl-6'>
-        <div className="p-4 rounded border">
-          <h2 className="font-semibold mb-2">Fraud Flags • {selected}</h2>
-          <ul className="list-disc pl-6">
-ursor/integrate-build-improve-and-re-verify-b76c
             {flags.map((f, idx) => (
               <li key={idx}>
-                <span className="font-medium">{f.type}</span> — {f.severity} {f.note && <span className="text-gray-500">({f.note})</span>}
+                <span className='font-medium'>{f.type}</span> — {f.severity}{' '}
+                {f.note && <span className='text-gray-500'>({f.note})</span>}
               </li>
             ))}
-            {flags.length === 0 && <li className="text-gray-500 list-none">No flags</li>}
+            {flags.length === 0 && (
+              <li className='text-gray-500 list-none'>No flags</li>
+            )}
           </ul>
         </div>
-
-        {/* Stats Cards */}
+{/* Stats Cards */}
         <div className="grid grid-cols-1 md:grid-cols-4 gap-4 mb-6">
           <div className="bg-white rounded-lg shadow p-4">
             <h3 className="text-sm font-medium text-gray-500">Total Partners</h3>
@@ -209,7 +190,6 @@ ursor/integrate-build-improve-and-re-verify-b76c
             <p className="text-2xl font-bold text-blue-600">${totalEarnings.toLocaleString()}</p>
           </div>
         </div>
-
         {/* Filters */}
         <div className="bg-white rounded-lg shadow p-6 mb-6">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -236,13 +216,11 @@ ursor/integrate-build-improve-and-re-verify-b76c
             </div>
           </div>
         </div>
-
         {/* Partners Table */}
         <div className="bg-white rounded-lg shadow overflow-hidden">
           <div className="px-6 py-4 border-b">
             <h2 className="text-lg font-semibold">Partners ({filteredPartners.length})</h2>
           </div>
-          
           {loading ? (
             <div className="text-center py-8">Loading partners...</div>
           ) : filteredPartners.length === 0 ? (
@@ -352,23 +330,3 @@ ursor/integrate-build-improve-and-re-verify-b76c
       </main>
     </>
   );
-        <div className="p-4 rounded border">
-          <h2 className="font-semibold mb-2">Fraud Flags • {selected}</h2>
-          <ul className="list-disc pl-6">
-            {flags.map((f, idx) => (
-              <li key={idx}>
-                <span className="font-medium">{f.type}</span> — {f.severity} {f.note && <span className="text-gray-500">({f.note})</span>}
-              </li>
-            ))}
-            {flags.length === 0 && <li className="text-gray-500 list-none">No flags</li>}
-          </ul>
-        </div>
-      )}
-    </div>
-  )
-}
-      )}
-    </div>
-  )
-}
-ursor/integrate-build-improve-and-re-verify-b76c

@@ -1,7 +1,8 @@
- <div> <Head> <title>Index - Zion Tech Solutions</title> <meta name="description" content="Index page" /> </Head> <main> <h1>Index</h1> <p>This page is under construction.</p> </main> </div> export default Index;
-ursor/integrate-build-improve-and-re-verify-b76c
 import type { NextPage } from 'next';
 import Head from 'next/head';
+<<<<<<< HEAD
+const Index: NextPage;
+=======
 const Index: NextPage = () => {
   return (
     <div>
@@ -9,15 +10,12 @@ const Index: NextPage = () => {
         <title>Index - Zion Tech Solutions</title>
         <meta name="description" content="Index page" />
       </Head>
-      
       <main>
         <h1>Index</h1>
         <p>This page is under construction.</p>
       </main>
     </div>
   )
-};
-
+}
 export default Index;
-export default Index;
-ursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5

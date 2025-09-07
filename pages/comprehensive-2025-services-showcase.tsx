@@ -1,89 +1,93 @@
- const filteredServices = innovative2025MicroSaasExpansionV3 .filter (service => {
-  const matchesSearch = service.name.toLowerCase () .includes (searchTerm.toLowerCase () ) || service.description.toLowerCase () .includes (searchTerm.toLowerCase () ) || case 'popularity': return (b.popular ? 1 : 0) - (a.popular ? 1 : 0);
-case 'price': case 'rating': return b.rating - a.rating;
-case 'newest': const containerVariants = {
-  hidden: {
-  opacity: 0 
-};
-visible: {
-  opacity: 1, transition: {
-  staggerChildren: 0.1 
-import React, { useState, useEffect } from 'react';
+<<<<<<< HEAD
+import React, { useState, useEffect } from 'react',
 import Head from 'next/head';
 import { motion, AnimatePresence } from 'framer-motion';
-import { 
-  ArrowRight, Brain, Shield, Rocket, Cpu, Database, Atom, Target, Star, 
+import { ArrowRight, Brain, Shield, Rocket, Cpu, Database, Atom, Target, Star;
   Sparkles, Zap, Users, Award, Clock, CheckCircle, Globe, Code, Server;
   ChevronRight, ExternalLink, TrendingUp, BarChart3, Cloud, Network;
   Search, Filter, Grid, List, Star as StarIcon, Eye, Heart, Share2
-} from 'lucide-react';
-import EnhancedNavigation from '../components/EnhancedNavigation';
+ } from 'lucide-react';
+import EnhancedNavigation from '../components/EnhancedNavigation',
 import EnhancedFooter from '../components/EnhancedFooter';
 import { innovative2025MicroSaasExpansionV3 } from '../data/2025-innovative-micro-saas-expansion-v3';
 export default function Comprehensive2025ServicesShowcase() {
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
-  const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
-  const [sortBy, setSortBy] = useState<'popularity' | 'price' | 'rating' | 'newest'>('popularity');
-ursor/integrate-build-improve-and-re-verify-b76c
+  const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid'),
+  const [sortBy, setSortBy] = useState<'popularity' | 'price' | 'rating' | 'newest'>('popularity'),
 
+  const categories = null;
+=======
+import React, { useState, useEffect } from 'react';
+import Head from 'next/head';
+import { motion, AnimatePresence } from 'framer-motion';
+import {
+  ArrowRight, Brain, Shield, Rocket, Cpu, Database, Atom, Target, Star
+  Sparkles, Zap, Users, Award, Clock, CheckCircle, Globe, Code, Server
+  ChevronRight, ExternalLink, TrendingUp, BarChart3, Cloud, Network
+  Search, Filter, Grid, List, Star as StarIcon, Eye, Heart, Share2
+} from 'lucide-react'
+import EnhancedNavigation from '../components/EnhancedNavigation';
+import EnhancedFooter from '../components/EnhancedFooter';
+import { innovative2025MicroSaasExpansionV3 } from '../data/2025-innovative-micro-saas-expansion-v3';
+export default function Comprehensive2025ServicesShowcase() {
+  const [searchTerm, setSearchTerm] = useState('')
+  const [selectedCategory, setSelectedCategory] = useState('all')
+  const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid')
+  const [sortBy, setSortBy] = useState<'popularity' | 'price' | 'rating' | 'newest'>('popularity')
   const categories = [
-    { id: 'all', name: 'All Services', count: innovative2025MicroSaasExpansionV3.length },
-    { id: 'AI & Analytics', name: 'AI & Analytics', count: innovative2025MicroSaasExpansionV3.filter(s => s.category.includes('AI') && !s.category.includes('Healthcare') && !s.category.includes('HR') && !s.category.includes('Content') && !s.category.includes('Energy')).length },
-    { id: 'AI & Healthcare', name: 'AI & Healthcare', count: innovative2025MicroSaasExpansionV3.filter(s => s.category.includes('Healthcare')).length },
-    { id: 'AI & HR Tech', name: 'AI & HR Tech', count: innovative2025MicroSaasExpansionV3.filter(s => s.category.includes('HR')).length },
-    { id: 'AI & Content Creation', name: 'AI & Content Creation', count: innovative2025MicroSaasExpansionV3.filter(s => s.category.includes('Content')).length },
-    { id: 'AI & Energy', name: 'AI & Energy', count: innovative2025MicroSaasExpansionV3.filter(s => s.category.includes('Energy')).length },
-    { id: 'AI & Robotics', name: 'AI & Robotics', count: innovative2025MicroSaasExpansionV3.filter(s => s.category.includes('Robotics')).length },
-    { id: 'Cybersecurity & Quantum', name: 'Cybersecurity & Quantum', count: innovative2025MicroSaasExpansionV3.filter(s => s.category.includes('Cybersecurity') || s.category.includes('Quantum')).length },
-    { id: 'Edge Computing & IoT', name: 'Edge Computing & IoT', count: innovative2025MicroSaasExpansionV3.filter(s => s.category.includes('Edge') || s.category.includes('IoT')).length },
-    { id: 'Space Technology & Innovation', name: 'Space Technology & Innovation', count: innovative2025MicroSaasExpansionV3.filter(s => s.category.includes('Space')).length },
+    { id: 'all', name: 'All Services', count: innovative2025MicroSaasExpansionV3.length }
+    { id: 'AI & Analytics', name: 'AI & Analytics', count: innovative2025MicroSaasExpansionV3.filter(s => s.category.includes('AI') && !s.category.includes('Healthcare') && !s.category.includes('HR') && !s.category.includes('Content') && !s.category.includes('Energy')).length }
+    { id: 'AI & Healthcare', name: 'AI & Healthcare', count: innovative2025MicroSaasExpansionV3.filter(s => s.category.includes('Healthcare')).length }
+    { id: 'AI & HR Tech', name: 'AI & HR Tech', count: innovative2025MicroSaasExpansionV3.filter(s => s.category.includes('HR')).length }
+    { id: 'AI & Content Creation', name: 'AI & Content Creation', count: innovative2025MicroSaasExpansionV3.filter(s => s.category.includes('Content')).length }
+    { id: 'AI & Energy', name: 'AI & Energy', count: innovative2025MicroSaasExpansionV3.filter(s => s.category.includes('Energy')).length }
+    { id: 'AI & Robotics', name: 'AI & Robotics', count: innovative2025MicroSaasExpansionV3.filter(s => s.category.includes('Robotics')).length }
+    { id: 'Cybersecurity & Quantum', name: 'Cybersecurity & Quantum', count: innovative2025MicroSaasExpansionV3.filter(s => s.category.includes('Cybersecurity') |s.category.includes('Quantum')).length }
+    { id: 'Edge Computing & IoT', name: 'Edge Computing & IoT', count: innovative2025MicroSaasExpansionV3.filter(s => s.category.includes('Edge') |s.category.includes('IoT')).length }
+    { id: 'Space Technology & Innovation', name: 'Space Technology & Innovation', count: innovative2025MicroSaasExpansionV3.filter(s => s.category.includes('Space')).length }
     { id: 'Neural Technology & BCI', name: 'Neural Technology & BCI', count: innovative2025MicroSaasExpansionV3.filter(s => s.category.includes('Neural')).length }
-  ];
-
+  ]
   const filteredServices = innovative2025MicroSaasExpansionV3
     .filter(service => {
-      const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                           service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                           service.tagline.toLowerCase().includes(searchTerm.toLowerCase());
-      const matchesCategory = selectedCategory === 'all' || service.category.includes(selectedCategory);
+      const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) |
+                           service.description.toLowerCase().includes(searchTerm.toLowerCase()) |
+                           service.tagline.toLowerCase().includes(searchTerm.toLowerCase())
+      const matchesCategory = selectedCategory === 'all' |service.category.includes(selectedCategory)
       return matchesSearch && matchesCategory
     })
     .sort((a, b) => {
       switch (sortBy) {
         case 'popularity':
-          return (b.popular ? 1 : 0) - (a.popular ? 1 : 0);
+          return (b.popular ? 1 : 0) - (a.popular ? 1 : 0)
         case 'price':
-          return parseFloat(a.price.replace('$', '')) - parseFloat(b.price.replace('$', ''));
+          return parseFloat(a.price.replace('$', '')) - parseFloat(b.price.replace('$', ''))
         case 'rating':
-          return b.rating - a.rating;
+          return b.rating - a.rating
         case 'newest':
-          return new Date(b.launchDate).getTime() - new Date(a.launchDate).getTime();
+          return new Date(b.launchDate).getTime() - new Date(a.launchDate).getTime()
         default: return 0
       }
-    });
-
+    })
   const containerVariants = {
-    hidden: { opacity: 0 },
+    hidden: { opacity: 0 }
     visible: {
-      opacity: 1,
+      opacity: 1
       transition: {
         staggerChildren: 0.1
       }
     }
-  };
-
+  }
   const itemVariants = {
-    hidden: { opacity: 0, y: 20 },
+    hidden: { opacity: 0, y: 20 }
     visible: {
-      opacity: 1,
-      y: 0,
+      opacity: 1
+      y: 0
       transition: {
         duration: 0.5
       }
     }
-  };
-
+  }
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white overflow-hidden">
       <Head>
@@ -93,11 +97,8 @@ ursor/integrate-build-improve-and-re-verify-b76c
         <meta property="og:description" content="Explore our comprehensive collection of innovative micro SAAS services, AI solutions, quantum technologies, and cutting-edge IT services." />
         <meta name="keywords" content="micro SAAS, AI services, quantum computing, cybersecurity, edge computing, space technology, neural interfaces, Zion Tech Group" />
         <link rel="canonical" href="https://ziontechgroup.com/comprehensive-2025-services-showcase" />
-      
         <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","headline":"Comprehensive 2025 Innovative Services Showcase — Zion Tech Group","url":"https://ziontechgroup.com/comprehensive-2025-services-showcase","isPartOf":{"@type":"WebSite","name":"Zion Tech Group","url":"https://ziontechgroup.com"}}</script></Head>
-
       <EnhancedNavigation />
-
       {/* Hero Section */}
       <section className="relative py-20 px-6">
         <div className="max-w-7xl mx-auto text-center">
@@ -108,7 +109,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
               2025 Innovative Services Showcase
             </h1>
             <p className="text-xl md:text-2xl text-white/80 max-w-4xl mx-auto leading-relaxed mb-8">
-              Discover our comprehensive collection of cutting-edge micro SAAS services, AI solutions;
+              Discover our comprehensive collection of cutting-edge micro SAAS services, AI solutions
               quantum technologies, and revolutionary IT services that are transforming industries worldwide.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
@@ -125,7 +126,6 @@ ursor/integrate-build-improve-and-re-verify-b76c
           </motion.div>
         </div>
       </section>
-
       {/* Search and Filter Section */}
       <section className="py-8 px-6 bg-gradient-to-r from-white/5 to-white/10">
         <div className="max-w-7xl mx-auto">
@@ -141,7 +141,6 @@ ursor/integrate-build-improve-and-re-verify-b76c
                 className="w-full pl-10 pr-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:border-transparent"
               />
             </div>
-
             {/* Category Filter */}
             <div className="flex flex-wrap gap-2">
               {categories.map((category) => (
@@ -156,7 +155,6 @@ ursor/integrate-build-improve-and-re-verify-b76c
                 </button>
               ))}
             </div>
-
             {/* View Mode and Sort */}
             <div className="flex items-center gap-4">
               <div className="flex items-center bg-white/10 rounded-lg p-1">
@@ -173,174 +171,6 @@ ursor/integrate-build-improve-and-re-verify-b76c
                   }`}><List className="w-5 h-5" />
                 </button>
               </div>
-
-}> Ready to Transform Your Business? </h2> <p className="text-xl text-white/70 mb-8 max-w-2xl mx-auto" > Our team of experts is ready to help you implement these cutting-edge solutions and drive innovation in your organization. </p> <div className="flex flex-col sm:flex-row gap-4 justify-center"><a href="mailto:kleber@ziontechgroup.com" className="px-8 py-4 bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-2xl flex items-center justify-center gap-2" > Schedule Consultation <ArrowRight className="w-5 h-5" /> </Link> <a href="tel:+13024640950" className="px-8 py-4 border border-white/20 hover:border-white/40 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105 backdrop-blur-sm bg-white/5 hover:bg-white/10" > Call Us Now </Link> </div> </motion.div> </div> </section> <EnhancedFooter /> </div>) 
-import React, { useState, useEffect } from 'react';
-import Head from 'next/head';
-import { motion, AnimatePresence } from 'framer-motion';
-import { 
-  ArrowRight, Brain, Shield, Rocket, Cpu, Database, Atom, Target, Star, 
-  Sparkles, Zap, Users, Award, Clock, CheckCircle, Globe, Code, Server;
-  ChevronRight, ExternalLink, TrendingUp, BarChart3, Cloud, Network;
-  Search, Filter, Grid, List, Star as StarIcon, Eye, Heart, Share2
-} from 'lucide-react';
-import EnhancedNavigation from '../components/EnhancedNavigation';
-import EnhancedFooter from '../components/EnhancedFooter';
-import { innovative2025MicroSaasExpansionV3 } from '../data/2025-innovative-micro-saas-expansion-v3';
-export default function Comprehensive2025ServicesShowcase() {
-  const [searchTerm, setSearchTerm] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState('all');
-  const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
-  const [sortBy, setSortBy] = useState<'popularity' | 'price' | 'rating' | 'newest'>('popularity');
-
-  const categories = [
-    { id: 'all', name: 'All Services', count: innovative2025MicroSaasExpansionV3.length },
-    { id: 'AI & Analytics', name: 'AI & Analytics', count: innovative2025MicroSaasExpansionV3.filter(s => s.category.includes('AI') && !s.category.includes('Healthcare') && !s.category.includes('HR') && !s.category.includes('Content') && !s.category.includes('Energy')).length },
-    { id: 'AI & Healthcare', name: 'AI & Healthcare', count: innovative2025MicroSaasExpansionV3.filter(s => s.category.includes('Healthcare')).length },
-    { id: 'AI & HR Tech', name: 'AI & HR Tech', count: innovative2025MicroSaasExpansionV3.filter(s => s.category.includes('HR')).length },
-    { id: 'AI & Content Creation', name: 'AI & Content Creation', count: innovative2025MicroSaasExpansionV3.filter(s => s.category.includes('Content')).length },
-    { id: 'AI & Energy', name: 'AI & Energy', count: innovative2025MicroSaasExpansionV3.filter(s => s.category.includes('Energy')).length },
-    { id: 'AI & Robotics', name: 'AI & Robotics', count: innovative2025MicroSaasExpansionV3.filter(s => s.category.includes('Robotics')).length },
-    { id: 'Cybersecurity & Quantum', name: 'Cybersecurity & Quantum', count: innovative2025MicroSaasExpansionV3.filter(s => s.category.includes('Cybersecurity') || s.category.includes('Quantum')).length },
-    { id: 'Edge Computing & IoT', name: 'Edge Computing & IoT', count: innovative2025MicroSaasExpansionV3.filter(s => s.category.includes('Edge') || s.category.includes('IoT')).length },
-    { id: 'Space Technology & Innovation', name: 'Space Technology & Innovation', count: innovative2025MicroSaasExpansionV3.filter(s => s.category.includes('Space')).length },
-    { id: 'Neural Technology & BCI', name: 'Neural Technology & BCI', count: innovative2025MicroSaasExpansionV3.filter(s => s.category.includes('Neural')).length }
-  ];
-
-  const filteredServices = innovative2025MicroSaasExpansionV3
-    .filter(service => {
-      const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                           service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                           service.tagline.toLowerCase().includes(searchTerm.toLowerCase());
-      const matchesCategory = selectedCategory === 'all' || service.category.includes(selectedCategory);
-      return matchesSearch && matchesCategory
-    })
-    .sort((a, b) => {
-      switch (sortBy) {
-        case 'popularity':
-          return (b.popular ? 1 : 0) - (a.popular ? 1 : 0);
-        case 'price':
-          return parseFloat(a.price.replace('$', '')) - parseFloat(b.price.replace('$', ''));
-        case 'rating':
-          return b.rating - a.rating;
-        case 'newest':
-          return new Date(b.launchDate).getTime() - new Date(a.launchDate).getTime();
-        default: return 0
-      }
-    });
-
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.1
-      }
-    }
-  };
-
-  const itemVariants = {
-    hidden: { opacity: 0, y: 20 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: {
-        duration: 0.5
-      }
-    }
-  };
-
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white overflow-hidden">
-      <Head>
-        <title>Comprehensive 2025 Innovative Services Showcase — Zion Tech Group</title>
-        <meta name="description" content="Explore our comprehensive collection of innovative micro SAAS services, AI solutions, quantum technologies, and cutting-edge IT services. Transform your business with Zion Tech Group." />
-        <meta property="og:title" content="Comprehensive 2025 Innovative Services Showcase — Zion Tech Group" />
-        <meta property="og:description" content="Explore our comprehensive collection of innovative micro SAAS services, AI solutions, quantum technologies, and cutting-edge IT services." />
-        <meta name="keywords" content="micro SAAS, AI services, quantum computing, cybersecurity, edge computing, space technology, neural interfaces, Zion Tech Group" />
-        <link rel="canonical" href="https://ziontechgroup.com/comprehensive-2025-services-showcase" />
-      
-        <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","headline":"Comprehensive 2025 Innovative Services Showcase — Zion Tech Group","url":"https://ziontechgroup.com/comprehensive-2025-services-showcase","isPartOf":{"@type":"WebSite","name":"Zion Tech Group","url":"https://ziontechgroup.com"}}</script></Head>
-
-      <EnhancedNavigation />
-
-      {/* Hero Section */}
-      <section className="relative py-20 px-6">
-        <div className="max-w-7xl mx-auto text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}><h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-white via-blue-100 to-cyan-100 bg-clip-text text-transparent">
-              2025 Innovative Services Showcase
-            </h1>
-            <p className="text-xl md:text-2xl text-white/80 max-w-4xl mx-auto leading-relaxed mb-8">
-              Discover our comprehensive collection of cutting-edge micro SAAS services, AI solutions;
-              quantum technologies, and revolutionary IT services that are transforming industries worldwide.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-              <div className="px-6 py-3 bg-gradient-to-r from-blue-600 to-cyan-600 rounded-full text-lg font-semibold">
-                {innovative2025MicroSaasExpansionV3.length}+ Revolutionary Services
-              </div>
-              <div className="px-6 py-3 bg-gradient-to-r from-purple-600 to-pink-600 rounded-full text-lg font-semibold">
-                AI-Powered Solutions
-              </div>
-              <div className="px-6 py-3 bg-gradient-to-r from-green-600 to-teal-600 rounded-full text-lg font-semibold">
-                Quantum-Ready Technology
-              </div>
-            </div>
-          </motion.div>
-        </div>
-      </section>
-
-      {/* Search and Filter Section */}
-      <section className="py-8 px-6 bg-gradient-to-r from-white/5 to-white/10">
-        <div className="max-w-7xl mx-auto">
-          <div className="flex flex-col lg:flex-row gap-6 items-center justify-between">
-            {/* Search Bar */}
-            <div className="relative flex-1 max-w-md">
-              <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
-              <input
-                type="text"
-                placeholder="Search services..."
-                value={searchTerm}
-                onChange={(e) => setSearchTerm(e.target.value)}
-                className="w-full pl-10 pr-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:border-transparent"
-              />
-            </div>
-
-            {/* Category Filter */}
-            <div className="flex flex-wrap gap-2">
-              {categories.map((category) => (
-                <button
-                  key={category.id}
-                  onClick={() => setSelectedCategory(category.id)}
-                  className={`px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300 ${
-                    selectedCategory === category.id
-                      ? 'bg-gradient-to-r from-cyan-500 to-blue-600 text-white'
-                      : 'bg-white/10 text-white/70 hover:bg-white/20 hover:text-white'
-                  }`}>{category.name} ({category.count})
-                </button>
-              ))}
-            </div>
-
-            {/* View Mode and Sort */}
-            <div className="flex items-center gap-4">
-              <div className="flex items-center bg-white/10 rounded-lg p-1">
-                <button
-                  onClick={() => setViewMode('grid')}
-                  className={`p-2 rounded transition-all duration-300 ${
-                    viewMode === 'grid' ? 'bg-cyan-500 text-white' : 'text-white/70 hover:text-white'
-                  }`}><Grid className="w-5 h-5" />
-                </button>
-                <button
-                  onClick={() => setViewMode('list')}
-                  className={`p-2 rounded transition-all duration-300 ${
-                    viewMode === 'list' ? 'bg-cyan-500 text-white' : 'text-white/70 hover:text-white'
-                  }`}><List className="w-5 h-5" />
-                </button>
-              </div>
-
-ursor/integrate-build-improve-and-re-verify-b76c
               <select
                 value={sortBy}
                 onChange={(e) => setSortBy(e.target.value as any)}
@@ -353,7 +183,6 @@ ursor/integrate-build-improve-and-re-verify-b76c
           </div>
         </div>
       </section>
-
       {/* Services Grid */}
       <section className="py-16 px-6">
         <div className="max-w-7xl mx-auto">
@@ -366,7 +195,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
                 key={service.id}
                 variants={itemVariants}
                 className={`group relative ${
-                  viewMode === 'grid' 
+                  viewMode === 'grid'
                     ? 'p-8 rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl'
                     : 'p-6 rounded-xl border border-white/10 bg-gradient-to-r from-white/5 to-white/10 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300'
                 }`}>{/* Popular Badge */}
@@ -375,7 +204,6 @@ ursor/integrate-build-improve-and-re-verify-b76c
                     POPULAR
                   </div>
                 )}
-
                 {/* Service Header */}
                 <div className="flex items-start gap-4 mb-6">
                   <div className={`w-16 h-16 rounded-2xl bg-gradient-to-br ${service.color} p-4 flex items-center justify-center text-2xl`}>
@@ -386,7 +214,6 @@ ursor/integrate-build-improve-and-re-verify-b76c
                     <p className="text-white/70 text-sm leading-relaxed">{service.tagline}</p>
                   </div>
                 </div>
-
                 {/* Price and Rating */}
                 <div className="flex items-center justify-between mb-4">
                   <div className="flex items-center gap-2">
@@ -399,10 +226,8 @@ ursor/integrate-build-improve-and-re-verify-b76c
                     <span className="text-white/60 text-sm">({service.reviews})</span>
                   </div>
                 </div>
-
                 {/* Description */}
                 <p className="text-white/80 leading-relaxed mb-6">{service.description}</p>
-
                 {/* Key Features */}
                 <div className="mb-6">
                   <h4 className="text-white font-semibold mb-3">Key Features:</h4>
@@ -420,11 +245,10 @@ ursor/integrate-build-improve-and-re-verify-b76c
                     )}
                   </div>
                 </div>
-
                 {/* Market Info */}
                 <div className="grid grid-cols-2 gap-4 mb-6 text-sm">
                   <div>
-                    <span className="text-white/60">Market Size: </span>
+                    <span className="text-white/60">Market Size:</span>
                     <div className="text-white font-medium">{service.marketSize}</div>
                   </div>
                   <div>
@@ -432,7 +256,6 @@ ursor/integrate-build-improve-and-re-verify-b76c
                     <div className="text-white font-medium">{service.growthRate}</div>
                   </div>
                 </div>
-
                 {/* ROI and Setup */}
                 <div className="mb-6 p-4 bg-gradient-to-r from-cyan-500/10 to-blue-500/10 rounded-lg border border-cyan-400/20">
                   <div className="text-cyan-400 font-semibold mb-2">🚀 Expected ROI:</div>
@@ -441,7 +264,6 @@ ursor/integrate-build-improve-and-re-verify-b76c
                     Setup Time: {service.setupTime} | Trial: {service.trialDays} days
                   </div>
                 </div>
-
                 {/* Action Buttons */}
                 <div className="flex flex-col sm:flex-row gap-3">
                   <a
@@ -457,7 +279,6 @@ ursor/integrate-build-improve-and-re-verify-b76c
                     Contact Sales
                   </button>
                 </div>
-
                 {/* Contact Info */}
                 <div className="mt-6 pt-4 border-t border-white/10 text-center">
                   <div className="text-white/60 text-sm mb-2">Ready to get started?</div>
@@ -473,7 +294,6 @@ ursor/integrate-build-improve-and-re-verify-b76c
               </motion.div>
             ))}
           </motion.div>
-
           {/* No Results */}
           {filteredServices.length === 0 && (
             <div className="text-center py-20">
@@ -482,7 +302,8 @@ ursor/integrate-build-improve-and-re-verify-b76c
               <p className="text-white/70 mb-6">Try adjusting your search terms or filters</p>
               <button
                 onClick={() => {
-                  setSearchTerm('');
+                  setSearchTerm('')
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
                   setSelectedCategory('all')
                 }}
                 className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg font-semibold text-white hover:from-cyan-600 hover:to-blue-700 transition-all duration-300"
@@ -493,7 +314,6 @@ ursor/integrate-build-improve-and-re-verify-b76c
           )}
         </div>
       </section>
-
       {/* CTA Section */}
       <section className="py-20 px-6 bg-gradient-to-r from-white/5 to-white/10">
         <div className="max-w-4xl mx-auto text-center">
@@ -505,7 +325,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
               Ready to Transform Your Business?
             </h2>
             <p className="text-xl text-white/70 mb-8 max-w-2xl mx-auto">
-              Our team of experts is ready to help you implement these cutting-edge solutions 
+              Our team of experts is ready to help you implement these cutting-edge solutions
               and drive innovation in your organization.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -526,10 +346,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
           </motion.div>
         </div>
       </section>
-
       <EnhancedFooter />
     </div>
   )
 }
-}
-ursor/integrate-build-improve-and-re-verify-b76c

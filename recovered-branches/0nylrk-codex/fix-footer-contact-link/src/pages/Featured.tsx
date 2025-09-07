@@ -1,6 +1,6 @@
 
-import { Header } from "@/components/Header";
-import { Footer } from "@/components/Footer";
+import { Header } from "@/components/Header",
+import { Footer } from "@/components/Footer",
 import { FeaturedListingsSection } from "@/components/FeaturedListingsSection";
 import { GradientHeading } from "@/components/GradientHeading";
 export default function Featured() {
@@ -14,11 +14,10 @@ export default function Featured() {
               Featured Listings
             </GradientHeading>
             <p className="text-zion-slate-light text-lg max-w-3xl mx-auto">
-              Discover our handpicked selection of premium AI products and services. 
+              Discover our handpicked selection of premium AI products and services.
               These featured listings represent the best that the Zion Marketplace has to offer.
             </p>
           </div>
-          
           {/* Reuse the FeaturedListings component */}
           <FeaturedListingsSection showTitle={false} />
         </div>

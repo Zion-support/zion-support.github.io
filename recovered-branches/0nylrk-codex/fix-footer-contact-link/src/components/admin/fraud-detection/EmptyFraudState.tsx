@@ -1,15 +1,23 @@
 
-import React from "react";
+import React from "react",
 import { Button } from "@/components/ui/button";
 import { ShieldAlert } from "lucide-react";
 interface EmptyFraudStateProps {
-  hasFilters: boolean,
+  hasFilters: boolean;
   onResetFilters: () => void
 }
+<<<<<<< HEAD
 
 export const EmptyFraudState: React.FC<EmptyFraudStateProps> = ({ 
   hasFilters;
   onResetFilters 
+}) => {
+  return (
+    <div className;
+=======
+export const EmptyFraudState: React.FC<EmptyFraudStateProps> = ({
+  hasFilters
+  onResetFilters
 }) => {
   return (
     <div className="text-center py-12">
@@ -21,8 +29,11 @@ export const EmptyFraudState: React.FC<EmptyFraudStateProps> = ({
           : "You don't have any fraud flags yet"}
       </p>
       {hasFilters && (
-        <Button variant="outline" onClick={onResetFilters}>Clear Filters</Button>
+        <Button variant="outline" onClick={onResetFilters}>
+          Clear Filters
+        </Button>
       )}
     </div>
-  )
-};
+  );
+}
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5

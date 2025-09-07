@@ -1,6 +1,10 @@
+<<<<<<< HEAD
+export type IntegrationCategory = any;
+  events: ZapierEvent[]
+}
+=======
 export type IntegrationCategory = 'crm' | 'ats';
-export type IntegrationProviderId = | 'salesforce' | 'hubspot' | 'zoho' | 'pipedrive' | 'greenhouse' | 'lever' | 'workable' | 'bamboohr';
-
+export type IntegrationProviderId = | 'salesforce' | 'hubspot' | 'zoho' | 'pipedrive' | 'greenhouse' | 'lever' | 'workable' | 'bamboohr';export type SyncStatus = 'connected' | 'warning' | 'disconnected';
 export type IntegrationProviderId =
   | 'salesforce'
   | 'hubspot'
@@ -10,20 +14,11 @@ export type IntegrationProviderId =
   | 'lever'
   | 'workable'
   | 'bamboohr';
-
 export interface IntegrationProviderMeta {
-  id: IntegrationProviderId, name: string,
-  category: IntegrationCategory, description?: string,
-  id: IntegrationProviderId;
-  name: string;
-  category: IntegrationCategory;
-  description?: string;
-  oauthScopes?: string[];
+  id: IntegrationProviderId, name: string
+  category: IntegrationCategory, description?: string,  oauthScopes?: string[];
   icon?: string
 }
-
-export type SyncStatus = 'connected' | 'warning' | 'disconnected';
-
 export interface SyncRules {
   // CRM rules
   autoCreateContacts?: boolean;
@@ -31,79 +26,34 @@ export interface SyncRules {
   // ATS rules
   autoSyncApplicants?: boolean;
   autoUploadResumes?: boolean;
-  autoUploadResumes?: boolean
-}
-
 export interface ProviderConnection {
   providerId: IntegrationProviderId;
-  status: SyncStatus;
-  autoUploadResumes?: boolean
-}
-
-export interface ProviderConnection {
-  providerId: IntegrationProviderId, status: SyncStatus,
-  accessToken?: string;
-  refreshToken?: string;
+  status: SyncStatus;  accessToken?: string;  refreshToken?: string;
   expiresAt?: number;
   connectedAt?: number;
   syncRules?: SyncRules;
   lastSyncAt?: number;
   lastError?: string | null;
-  lastError?: string | null
-}
-
 export interface SyncLogEntry {
   id: string;
   timestamp: number;
   providerId: IntegrationProviderId;
   level: 'info' | 'warn' | 'error';
   action: string;
-  details?: Record<string, any>
-}
-
+  details?: Record<string, any>;
 export interface ManualOverride {
   jobId: string;
   disableCrmSync?: boolean;
-  disableAtsSync?: boolean
-}
-
+  disableAtsSync?: boolean;
 export interface ZapierEvent {
   id: string;
   type: 'zion.job.posted' | 'zion.talent.matched';
   timestamp: number;
-  payload: Record<string, any>
-}
-
+  payload: Record<string, any>;
 export interface IntegrationsState {
   connections: ProviderConnection[];
   logs: SyncLogEntry[];
   overrides: ManualOverride[];
-  events: ZapierEvent[];
-  lastError?: string | null
+  events: ZapierEvent[];  events: ZapierEvent[]
 }
-
-export interface SyncLogEntry {
-  id: string, timestamp: number,
-  providerId: IntegrationProviderId, level: 'info' | 'warn' | 'error',
-  action: string,
-  details?: Record<string, any>
-}
-
-export interface ManualOverride {
-  jobId: string, disableCrmSync?: boolean,
-  disableAtsSync?: boolean
-}
-
-export interface ZapierEvent {
-  id: string, type: 'zion.job.posted' | 'zion.talent.matched',
-  timestamp: number,
-  payload: Record<string, any>
-}
-
-export interface IntegrationsState {
-  connections: ProviderConnection[], logs: SyncLogEntry[],
-  overrides: ManualOverride[],
-  events: ZapierEvent[]
-}
-  events: ZapierEvent[]
-}
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5

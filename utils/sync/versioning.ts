@@ -1,16 +1,7 @@
-// Placeholder for sync versioning utilities
-export const nextVersionFor = (state: any, entityId: string) => {
-  // Placeholder implementation
-  return (state.latestVersionByEntityId[entityId] || 0) + 1;
-};
-
-export const upsertEvent = (state: any, event: any) => {
-  // Placeholder implementation
-  state.events.push(event);
-  state.latestVersionByEntityId[event.payload.id] = event.version;
-};
-
-export const writeState = (state: any) => {
-  // Placeholder implementation
-  console.log('State written:', state);
-};
+// Versioning utilities
+export const versioning = {
+  // Add versioning functionality here
+  getVersion: () => '1.0.0'
+  compareVersions: (v1: string, v2: string) => 0
+  incrementVersion: (version: string) => version
+}

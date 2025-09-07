@@ -1,16 +1,19 @@
 
-import { Header } from "@/components/header";
-import { Footer } from "@/components/Footer";
-import { JobPostingForm } from "@/components/jobs";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { SEO } from "@/components/SEO";
-import { useAuth } from "@/hooks/useAuth";
+import { Header } from "@/components/header",
+import { Footer } from "@/components/Footer",
+import { JobPostingForm } from "@/components/jobs",
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
+import { SEO } from "@/components/SEO",
+import { useAuth } from "@/hooks/useAuth",
 import { Navigate } from "react-router-dom";
 import { useIsMobile } from "@/hooks/use-mobile";
 export default function PostJob() {
   const { isAuthenticated, isLoading } = useAuth();
+<<<<<<< HEAD
+  const isMobile = null;
+=======
   const isMobile = useIsMobile();
-  
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
   if (isLoading) {
     return (
       <div className="flex items-center justify-center min-h-screen">
@@ -18,12 +21,11 @@ export default function PostJob() {
       </div>
     )
   }
-  
   return (
     <>
-      <SEO 
-        title="Post a Job | Zion AI Marketplace" 
-        description="Post a job to find the perfect AI talent for your project." 
+      <SEO
+        title="Post a Job | Zion AI Marketplace"
+        description="Post a job to find the perfect AI talent for your project."
       />
       <Header />
       <main className={`container mx-auto px-${isMobile ? '2' : '4'} py-${isMobile ? '6' : '12'} max-w-4xl`}>

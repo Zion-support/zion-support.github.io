@@ -1,15 +1,16 @@
- </li>) ) 
-}</ul> </div> </EnhancedLayout>) 
-ursor/integrate-build-improve-and-re-verify-b76c
 import EnhancedLayout from '../../components/layout/EnhancedLayout';
 // @ts-ignore - JSON import import data from '../../data/global-bounties.json';
 export default function GlobalBountiesPage() {
+<<<<<<< HEAD
   const items: any[] = (data?.items || []).slice(0, 100);
+=======
+  const items: any[] = (data?.items |[]).slice(0, 100)
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
   return (
     <EnhancedLayout>
       <div className="max-w-5xl mx-auto py-10">
         <h1 className="text-3xl font-bold">Global Bounties</h1>
-        <p className="mt-2 text-sm text-gray-600 dark:text-gray-300">Updated at {data?.generatedAt || '—'}</p>
+        <p className="mt-2 text-sm text-gray-600 dark:text-gray-300">Updated at {data?.generatedAt |'—'}</p>
         <ul className="mt-6 space-y-4">
           {items.map((it, idx) => (
             <li key={idx} className="p-4 border border-gray-200 dark:border-gray-800 rounded-lg">
@@ -19,7 +20,7 @@ export default function GlobalBountiesPage() {
               <div className="mt-1 text-xs text-gray-500 dark:text-gray-400">
                 {it.repo} · {it.language} · {new Date(it.created_at).toLocaleString()}
               </div>
-              <div className="mt-1 text-xs text-gray-500 dark:text-gray-400">Labels: {(it.labels || []).join(', ')}</div>
+              <div className="mt-1 text-xs text-gray-500 dark:text-gray-400">Labels: {(it.labels |[]).join(', ')}</div>
             </li>
           ))}
         </ul>
@@ -27,5 +28,3 @@ export default function GlobalBountiesPage() {
     </EnhancedLayout>
   )
 }
-}
-ursor/integrate-build-improve-and-re-verify-b76c
