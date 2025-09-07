@@ -1,3 +1,4 @@
+// eslint-disable-next-line react-refresh/only-export-components
 export const metadata = {
   title: 'AI Analytics Dashboard | Zion Tech Group',
   description: 'Transform your data into actionable insights with our AI-powered analytics dashboard. Real-time business intelligence, predictive analytics, and custom reporting.',

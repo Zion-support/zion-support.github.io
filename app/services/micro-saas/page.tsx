@@ -1,5 +1,6 @@
 import Link from 'next/link';
 
+// eslint-disable-next-line react-refresh/only-export-components
 export const metadata = {
   title: 'Micro SaaS Development | Zion Tech Group',
   description: 'Complete micro SaaS development services including AI-powered tools, productivity apps, marketing automation, and business intelligence solutions.',
