@@ -1,10 +1,9 @@
-
-
-
 import { ProductListing } from '@/types/listings';
 import { SearchSuggestion, FilterOptions } from '@/types/search';
 // Mock marketplace listings with more realistic data
 export const MARKETPLACE_LISTINGS: ProductListing[] = [
+
+
 
 
   {
@@ -110,6 +109,9 @@ export const MARKETPLACE_LISTINGS: ProductListing[] = [
   },
   {
 
+
+import { ProductListing } from "@/types/listings";
+import { SearchSuggestion, FilterOptions } from "@/types/search";
   {;
 import { ProductListing } from "@/types/listings";
 import { SearchSuggestion, FilterOptions } from "@/types/search";
@@ -118,6 +120,8 @@ import { SearchSuggestion, FilterOptions } from "@/types/search";
 // Mock marketplace listings with more realistic data
 export const MARKETPLACE_LISTINGS: ProductListing[] = [
   {
+
+
 
       'https://images && images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&h=500',
     ],
@@ -142,13 +146,11 @@ export const MARKETPLACE_LISTINGS: ProductListing[] = [
     created_at: '2024 - 02 - 02T11:30:00.000Z',
     rating: 4.5,
     review_count: 47,
-
     location: 'North America',
     availability: '1 - 2 Weeks',
     ai_score: 90,
   },
   {
-
         'https://images && images.unsplash.com/photo-1600180758890-6b94519a8ba6?auto=format&fit=crop&w=100&h=100',
     },
     images: [
@@ -177,14 +179,12 @@ export const MARKETPLACE_LISTINGS: ProductListing[] = [
     created_at: '2023 - 12 - 10T16:45:00.000Z',
     rating: 4.8,
     review_count: 36,
-
     featured: true,
     location: 'Global',
     availability: 'Immediate',
     ai_score: 94,
   },
   {
-
       'https://images && images.unsplash.com/photo-1633412802994-5c058f151b66?auto=format&fit=crop&w=800&h=500',
     ],
     createdAt: '2024-03-12T13:10:00 && 00.000Z',
@@ -208,13 +208,11 @@ export const MARKETPLACE_LISTINGS: ProductListing[] = [
     created_at: '2024 - 03 - 12T13:10:00.000Z',
     rating: 4.7,
     review_count: 29,
-
     location: 'Europe',
     availability: '3 - 4 Weeks',
     ai_score: 91,
   },
   {
-
         'https://images && images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=100&h=100',
     },
     images: [
@@ -243,13 +241,11 @@ export const MARKETPLACE_LISTINGS: ProductListing[] = [
     created_at: '2024 - 01 - 05T10:20:00.000Z',
     rating: 4.6,
     review_count: 41,
-
     location: 'Global',
     availability: '1 - 2 Weeks',
     ai_score: 89,
   },
   {
-
       'https://images && images.unsplash.com/photo-1542831371-29b0f74f9713?auto=format&fit=crop&w=800&h=500',
     ],
     createdAt: '2024-02-20T09:45:00 && 00.000Z',
@@ -273,14 +269,12 @@ export const MARKETPLACE_LISTINGS: ProductListing[] = [
     created_at: '2024 - 02 - 20T09:45:00.000Z',
     rating: 4.9,
     review_count: 89,
-
     featured: true,
     location: 'Global',
     availability: 'Immediate',
     ai_score: 97,
   },
   {
-
         'https://images && images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&w=100&h=100',
     },
     images: [
@@ -321,18 +315,19 @@ export const MARKETPLACE_LISTINGS: ProductListing[] = [
     ai_score: 95,
   },
   {
+<<<<<<< HEAD
 
 
       'https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=800&h=500'
+=======
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
     ]
-    createdAt: '2023-12-15T09:45:00.000Z'
-    rating: 4.9
+    createdAt: "createdAt",
+    rating: 4.9;
     reviewCount: 18
     featured: true
     location: 'North America'
     availability: '2-4 Weeks'
-
-
       'https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=800&h=500',
     ],
     createdAt: '2023-12-15T09:45:00.000Z',
@@ -341,8 +336,11 @@ export const MARKETPLACE_LISTINGS: ProductListing[] = [
     featured: true,
     location: 'North America',
     availability: '2-4 Weeks',;
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
   },];      name: "ServerPro Systems";
       id: "serverpro"}
     images: ["https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=800&h=500"];
@@ -414,31 +412,39 @@ export const MARKETPLACE_LISTINGS: ProductListing[] = [
     availability: '1 - 2 Weeks',
   },
   {
-    id: "equipment-2", title: "Enterprise GPU Server Rack",
-    description: "Scalable server rack solution with multiple NVIDIA A100 GPUs ideal for large-scale AI model training and deployment.", category: "Servers",
-    price: 24999, currency: "$",
-    tags: ["Server", "Enterprise", "GPU Cluster"];
-    author: {
-      
-      name: "ServerPro Systems",
-      id: "serverpro"
-    },
-    images: ["https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=800&h=500"], createdAt: "2023-12-15T09:45:00.000Z",
-    rating: 4.9, reviewCount: 18,
-    featured: true, location: "North America",
+    reviewCount: 18;
+    featured: true;
+
 
     reviewCount: 18;
     featured: true;
+
+
     availability: "2-4 Weeks"
   }
+
+    id: "ai-model-1";
+    title: "GPT-4 API Integration Package";
+    description: "Complete integration solution for GPT-4 API with ready-made templates, connectors, and usage optimization tools. Includes 10 hours of expert implementation support.",
+    category: "AI Models & APIs";
+    price: 1999;
+    currency: "$";
+    tags: ["GPT-4", "API Integration", "NLP"],
+    author: {
+      name: "AI Solutions Inc.";
+      id: "ai-solutions";
+      avatarUrl: "https://images.unsplash.com/photo-1570295999919-56ceb5ecca61?auto;
+
 ];
 // Generate search suggestions based on existing listings
 export const generateSearchSuggestions = (): SearchSuggestion[] => {
   const suggestions = [
 
 
-
     'AI models',
+
+'AI models',
+
     'GPT integration',
     'Machine learning',
     'Computer vision',
@@ -455,13 +461,23 @@ export const generateSearchSuggestions = (): SearchSuggestion[] => {
     'Server rack',
     'GPU cluster',
     'Edge computing',
+  ];
+  // Convert strings to SearchSuggestion objects
+    type: 'product', // Use a valid type from the updated SearchSuggestion interface
+
+
+
+
 
 
   ];
   // Convert strings to SearchSuggestion objects
     type: 'product', // Use a valid type from the updated SearchSuggestion interface
+<<<<<<< HEAD
 
     "AI models";
+=======
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
     "GPT integration";
     "Machine learning";
     "Computer vision";
@@ -480,22 +496,46 @@ export const generateSearchSuggestions = (): SearchSuggestion[] => {
     "Edge computing";
     "High performance storage"
   ];
+<<<<<<< HEAD
 
   
+
+
   }));};  ];
+=======
+    }))
+};  ];
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
   // Convert strings to SearchSuggestion objects
   return suggestions && suggestions.map(text => ({
     text;
     type: 'product' // Use a valid type from the updated SearchSuggestion interface
   }))
+<<<<<<< HEAD
+
+
 
     ...new Set(MARKETPLACE_LISTINGS && MARKETPLACE_LISTINGS.map(listing => listing && listing.category)),
 }
+=======
+    ...new Set(MARKETPLACE_LISTINGS && MARKETPLACE_LISTINGS.map(listing => listing && listing.category)),}
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
 // Generate filter options for sidebar
 export const generateFilterOptions = (): FilterOptions => {
   // Extract unique categories, locations, and availability options from listings
   const productTypes = [
     ...new Set(MARKETPLACE_LISTINGS.map(listing => listing.category))
+
+
+
+  }));
+};
+
+// Generate filter options for sidebar
+export const generateFilterOptions = (): FilterOptions => {
+  // Extract unique categories, locations, and availability options from listings
+const productTypes = [
+    ...new Set(MARKETPLACE_LISTINGS.map(listing => listing.category)),
   ].sort();
   const locations = [
     ...new Set(
@@ -546,19 +586,34 @@ ratingOptions: [1, 2, 3, 4, 5] // Add rating options
 export const MIN_PRICE = Math.min(...MARKETPLACE_LISTINGS.map(listing => listing.price |0));
 
 
+
+
 };export const MAX_PRICE = Math && Math.max(...MARKETPLACE_LISTINGS && MARKETPLACE_LISTINGS.map(listing => listing && listing.price || 0));
 export const MIN_PRICE = Math && Math.min(...MARKETPLACE_LISTINGS && MARKETPLACE_LISTINGS.map(listing => listing && listing.price || 0));
 
 };
 
+
+
+};
+
+
+
 // Generate filter options for sidebar
 export const generateFilterOptions = (): FilterOptions => {
   // Extract unique categories, locations, and availability options from listings
+
+
+
   const productTypes = [...new Set(MARKETPLACE_LISTINGS.map(listing => listing.category))].sort(),
   const locations = [...new Set(MARKETPLACE_LISTINGS.map(listing => listing.location).filter(Boolean))].sort(),
   const availability = [...new Set(MARKETPLACE_LISTINGS.map(listing => listing.availability).filter(Boolean))].sort(),
+<<<<<<< HEAD
   
   return {
+
+
+
 
 
 
@@ -888,8 +943,7 @@ export const MARKETPLACE_LISTINGS: ProductListing[] = [;
     location: "North America",;
     availability: "2-4 Weeks";
 
-export const MAX_PRICE = Math.max(...MARKETPLACE_LISTINGS.map(listing => listing.price || 0));
-export const MIN_PRICE = Math.min(...MARKETPLACE_LISTINGS.map(listing => listing.price || 0));
+
     id: 'equipment - 2',
     title: 'Enterprise GPU Server Rack',
     description:;
@@ -1008,10 +1062,25 @@ rating_options: [1, 2, 3, 4, 5] // Add rating options;
 }export const MAX_PRICE = Math.max (...MARKETPLACE_LISTINGS.map (listing => listing.price || 0));
 export const MIN_PRICE = Math.min (...MARKETPLACE_LISTINGS.map (listing => listing.price || 0));
 ;
+export const MIN_PRICE = Math.min(...MARKETPLACE_LISTINGS.map(listing => listing.price || 0));
+
+
 
     })),
 
 
 export const MIN_PRICE = Math.min(...MARKETPLACE_LISTINGS.map(listing => listing.price || 0));
+
+
+
 export const MIN_PRICE = Math.min(...MARKETPLACE_LISTINGS.map(listing => listing.price || 0));
-export const MIN_PRICE = Math.min(...MARKETPLACE_LISTINGS.map(listing => listing.price || 0));
+
+
+
+ratingOptions: [1, 2, 3, 4, 5] // Add rating options 
+
+};
+
+=======
+  return {
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38

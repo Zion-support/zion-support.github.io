@@ -1,0 +1,17 @@
+import React from 'react';
+const DigitalTransformation.js = ({ className }) => {return (<div className={className || ''}>;
+      <h1>DigitalTransformation.js</h1>;
+      <p>This component is under development.</p>;
+    </div>;
+  )}
+
+const DigitalTransformation.js = ({ className }) => {
+  return (
+    <div className={className || ''}>
+      <h1>DigitalTransformation.js</h1>
+      <p>This component is under development.</p>
+    </div>
+  )
+}
+}
+
