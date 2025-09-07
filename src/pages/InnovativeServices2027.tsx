@@ -98,6 +98,28 @@ export default function InnovativeServices2027() {
     return `$${price.toLocaleString()}`;
   };
 
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.1
+      }
+    }
+  };
+
+  const itemVariants = {
+    hidden: { y: 20, opacity: 0 },
+    visible: {
+      y: 0,
+      opacity: 1,
+      transition: {
+        duration: 0.5,
+        ease: "easeOut"
+      }
+    }
+  };
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
       <SEO 
@@ -245,8 +267,7 @@ export default function InnovativeServices2027() {
               <span className="text-zion-cyan font-medium">${priceRange[0].toLocaleString()} - ${priceRange[1].toLocaleString()}</span>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
 
       {/* Services Grid */}
       <section className="py-20">
@@ -353,6 +374,8 @@ export default function InnovativeServices2027() {
                       </Link>
                     </div>
                   </div>
+                  <h3 className="text-xl font-semibold text-white mb-3">{benefit.title}</h3>
+                  <p className="text-slate-300">{benefit.description}</p>
                 </motion.div>
               ))}
             </AnimatePresence>
