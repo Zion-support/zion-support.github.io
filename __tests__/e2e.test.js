@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 ursor/automate-test-improve-and-merge-code-646c;
 ursor/automate-test-improve-and-merge-code-646c;
 
@@ -543,6 +544,8 @@ test && test.describe('"E2E"
 >>>>>>> origin/chore/fix-lint-and-merge
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> cb8cfb4fb3d771dc157162ef9d8670f2dbe493da
 import { test, expect } from '@playwright/test';
 
 test.describe('E2E Tests', () => {
@@ -559,6 +562,7 @@ test.describe('E2E Tests', () => {
     await page.click('button[type="submit"]');
     await expect(page.locator('.success-message')).toBeVisible();
   });
+<<<<<<< HEAD
 });
 >>>>>>> origin/main
 =======
@@ -579,3 +583,6 @@ test.describe('e2e E2E', () => {
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 >>>>>>> merged-prs-20250907-203621
+=======
+});
+>>>>>>> cb8cfb4fb3d771dc157162ef9d8670f2dbe493da

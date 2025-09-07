@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import _React from 'react';  import '@testing-library/jest-dom'; import LoadingSpinnerdynamic from '../components/LoadingSpinner.dynamic'; describe('LoadingSpinnerdynamic',() => { test('renders without crashing',() => { render(<LoadingSpinnerdynamic />); expect(screen.getByTestId('loadingspinner.dynamic')).toBeInTheDocument()}); test('displays correct content',() => { render(<LoadingSpinnerdynamic />)}); test('handles user interactions',() => { render(<LoadingSpinnerdynamic />)}); test('applies correct styling',() => { render(<LoadingSpinnerdynamic />)})});
 import _React from 'react';  import '@testing-library/jest-dom'; import LoadingSpinnerdynamic from '../components/LoadingSpinner.dynamic'; describe('LoadingSpinnerdynamic',() => { test('renders without crashing',() => { render(<LoadingSpinnerdynamic />); expect(screen.getByTestId('loadingspinner.dynamic')).toBeInTheDocument()}); test('displays correct content',() => { render(<LoadingSpinnerdynamic />)}); test('handles user interactions',() => { render(<LoadingSpinnerdynamic />)}); test('applies correct styling',() => { render(<LoadingSpinnerdynamic />)})});
 origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
@@ -128,20 +129,26 @@ describe('LoadingSpinnerdynamic'
 
     expect(screen && screen.getByTestId('loadingspinner ; import { render,screen,fireEvent } from "@testing-library/react"; import "@testing-library/jest-dom"; import LoadingSpinnerdynamic from "./components/LoadingSpinner ; describe('LoadingSpinnerdynamic', () => { test("renders without crashing",() => { render(<LoadingSpinnerdynamic />); expect(screen && screen.getByTestId("loadingspinner && loadingspinner.dynamic")).toBeInTheDocument()}); test("displays correct content",() => { render(<LoadingSpinnerdynamic />)}); test("handles user interactions",() => { render(<LoadingSpinnerdynamic />)}); test("applies correct styling"
 =======
+=======
+>>>>>>> cb8cfb4fb3d771dc157162ef9d8670f2dbe493da
 import React from 'react';
 import { render, screen } from '@testing-library/react';
 import '@testing-library/jest-dom';
 import LoadingSpinner from '../components/LoadingSpinner';
+<<<<<<< HEAD
 >>>>>>> origin/main
 =======
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     expect(screen && screen.getByTestId('loadingspinner ; import { render,screen,fireEvent } from "@testing-library/react"; import "@testing-library/jest-dom"; import LoadingSpinnerdynamic from "./components/LoadingSpinner ; describe('LoadingSpinnerdynamic', () => { test("renders without crashing",() => { render(<LoadingSpinnerdynamic />); expect(screen && screen.getByTestId("loadingspinner && loadingspinner.dynamic")).toBeInTheDocument()}); test("displays correct content",() => { render(<LoadingSpinnerdynamic />)}); test("handles user interactions",() => { render(<LoadingSpinnerdynamic />)}); test("applies correct styling"
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+=======
+>>>>>>> cb8cfb4fb3d771dc157162ef9d8670f2dbe493da
 
 describe('LoadingSpinner', () => {
   test('renders without crashing', () => {
     render(<LoadingSpinner />);
+<<<<<<< HEAD
 <<<<<<< HEAD
     expect(screen.getByTestId('loadingspinner.dynamic')).toBeInTheDocument();
   });
@@ -177,6 +184,8 @@ import _React from 'react';  import '@testing-library/jest-dom'; import LoadingS
 <<<<<<< HEAD
 import _React from 'react';  import '@testing-library/jest-dom'; import LoadingSpinnerdynamic from '../components/LoadingSpinner.dynamic'; describe('LoadingSpinnerdynamic',() => { test('renders without crashing',() => { render(<LoadingSpinnerdynamic />); expect(screen.getByTestId('loadingspinner.dynamic')).toBeInTheDocument()}); test('displays correct content',() => { render(<LoadingSpinnerdynamic />)}); test('handles user interactions',() => { render(<LoadingSpinnerdynamic />)}); test('applies correct styling',() => { render(<LoadingSpinnerdynamic />)})});
 =======
+=======
+>>>>>>> cb8cfb4fb3d771dc157162ef9d8670f2dbe493da
     expect(screen.getByTestId('loadingspinner')).toBeInTheDocument();
   });
   test('displays correct content', () => {
@@ -192,6 +201,7 @@ import _React from 'react';  import '@testing-library/jest-dom'; import LoadingS
     // Add styling tests if needed
   });
 });
+<<<<<<< HEAD
 >>>>>>> origin/main
 =======
 <<<<<<< HEAD
@@ -211,3 +221,5 @@ origin/automation-improvements-final
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 >>>>>>> merged-prs-20250907-203621
+=======
+>>>>>>> cb8cfb4fb3d771dc157162ef9d8670f2dbe493da

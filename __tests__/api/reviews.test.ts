@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next'
 
 import type { NextApiRequest, NextApiResponse } from 'next
@@ -1288,6 +1289,8 @@ import { createMocks,RequestMethod } from 'node-mocks-http' import type { NextAp
 
   it('should fail if productId is missing (400)',async () => { const { req,res } = createMocks({ method: 'GET' as RequestMethod query: {} }) await productReviewsHandler( req as NextApiRequest,res as NextApiResponse<GetReviewsSuccessResponse | ErrorResponse> ) expect(res._getStatusCode()).toBe(400) expect(res._getJSONData()).toEqual({ error: 'productId is required in the URL path and must be a string.' }) }) }) })
 =======
+=======
+>>>>>>> cb8cfb4fb3d771dc157162ef9d8670f2dbe493da
 import { createMocks, RequestMethod } from 'node-mocks-http';
 import type { NextApiRequest, NextApiResponse } from 'next';
 import reviewsHandler from '@/pages/api/reviews';
@@ -1344,6 +1347,7 @@ describe('/api/reviews API Endpoint', () => {
       expect(res._getStatusCode()).toBe(201);
     });
   });
+<<<<<<< HEAD
 });
 <<<<<<< HEAD
 >>>>>>> origin/main
@@ -1355,3 +1359,6 @@ describe('/api/reviews API Endpoint', () => {
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 >>>>>>> merged-prs-20250907-203621
+=======
+});
+>>>>>>> cb8cfb4fb3d771dc157162ef9d8670f2dbe493da

@@ -79,11 +79,71 @@ class ComprehensiveErrorFixer {}
           this.log(`  - ${error.file}: ${error.error}`, error");
         });
       }
+<<<<<<< HEAD
+    }
+    
+    this.log(`Fixed ${fixedCount} files`, 'success');
+  }
+
+  fixCommonSyntaxIssues(content) {
+    let fixed = content;
+    
+    // Fix shebang issues
+    fixed = fixed.replace(/^#!/gm, '#!/usr/bin/env node');
+    
+    // Fix import/require issues
+    fixed = fixed.replace(/import\s+{\s*([^}]+)\s*}\s+from\s+['"]([^'"]+)['"];?/g, "const { $1 } = require('$2');");
+    fixed = fixed.replace(/import\s+([^{][^;]+)\s+from\s+['"]([^'"]+)['"];?/g, "const $1 = require('$2');");
+    fixed = fixed.replace(/export\s+default/g, 'module.exports =');
+    fixed = fixed.replace(/export\s+{\s*([^}]+)\s*};?/g, 'module.exports = { $1 };');
+    
+    // Fix class constructor syntax
+    fixed = fixed.replace(/constructor\(\)\s*\{\s*\}/g, 'constructor() {\n    // Constructor\n  }');
+    
+    // Fix template literal issues
+    fixed = fixed.replace(/`([^`]*)\$\{([^}]+)\}([^`]*)`/g, '"$1" + $2 + "$3"');
+    
+    // Fix arrow function issues
+    fixed = fixed.replace(/\(\s*\)\s*=>\s*\{/g, 'function() {');
+    fixed = fixed.replace(/\(\s*([^)]+)\s*\)\s*=>\s*\{/g, 'function($1) {');
+    
+    return fixed;
+  }
+
+  getAllJSFiles() {
+    const files = [];
+    const extensions = ['.js', '.cjs', '.mjs', '.ts', '.tsx', '.jsx'];
+    
+    const scanDirectory = (dir) => {
+      try {
+        if (!fs.existsSync(dir)) {
+          return;
+        }
+        
+        const items = fs.readdirSync(dir);
+        
+        for (const item of items) {
+          const fullPath = path.join(dir, item);
+          const stat = fs.statSync(fullPath);
+          
+          if (stat.isDirectory()) {
+            // Skip node_modules and other common directories
+            if (!['node_modules', '.git', '.next', 'dist', 'build'].includes(item)) {
+              scanDirectory(fullPath);
+            }
+          } else if (extensions.some(ext => item.endsWith(ext))) {
+            files.push(fullPath);
+          }
+        }
+      } catch (error) {
+        this.log(`Error scanning directory ${dir}: ${error.message}`, 'warning');
+=======
       
       return {
         success: this.errors.length === 0,
         fixes: this.fixes,
         errors: this.errors
+>>>>>>> origin/main
       }
     } catch (error) {
       this.log(`❌ Error fixer failed: ${error.message}`, "error);

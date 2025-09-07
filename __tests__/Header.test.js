@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import _React from 'react"  import '@testing-library/jest-dom import Header from '../components/Header" describe('Header',() => {' test('renders without crashing',() => {' render(<Header / / />) expect(screen.getByTestId("header")).toBeInTheDocument();' }) test('displays correct content',() => {' render(<Header / / />) }) test('handles user interactions',() => {' render(<Header / / />) }) test('applies correct styling',() => {' render(<Header / / />) }) })
 
 <<<<<<< HEAD
@@ -43,6 +44,8 @@ import _React from 'react"  import '@testing-library/jest-dom import Header from
 =======
 =======
 >>>>>>> pr/11282
+=======
+>>>>>>> cb8cfb4fb3d771dc157162ef9d8670f2dbe493da
 import React from 'react';
 import { render, screen } from '@testing-library/react';
 import '@testing-library/jest-dom';
@@ -67,6 +70,7 @@ describe('Header', () => {
     // Add styling tests if needed
   });
 });
+<<<<<<< HEAD
 >>>>>>> origin/main
 =======
 <<<<<<< HEAD
@@ -105,3 +109,5 @@ ursor/fix-syntax-push-and-merge-to-main-40de
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 >>>>>>> merged-prs-20250907-203621
+=======
+>>>>>>> cb8cfb4fb3d771dc157162ef9d8670f2dbe493da

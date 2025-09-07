@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -42,11 +43,14 @@ describe('Button'
   test('displays correct content'
 
 >>>>>>> merged-prs-20250907-203621
+=======
+>>>>>>> cb8cfb4fb3d771dc157162ef9d8670f2dbe493da
 import React from 'react';
 import { render, screen } from '@testing-library/react';
 import '@testing-library/jest-dom';
 <<<<<<< HEAD
 import Button from '../components/Button';
+<<<<<<< HEAD
 <<<<<<< HEAD
 import React from \'react\'; import { render,screen } from \'@testing-library/react\'; import \'@testing-library/jest-dom\'; import Button from \'../components/Button\'; describe(\'Button\',() => { test(\'renders without crashing\',() => { render(<Button />); expect(screen.getByRole(\'main\')).toBeInTheDocument()}); test(\'displays correct content\',() => { render(<Button />); expect(screen.getByText(/Zion Tech Group/i)).toBeInTheDocument()})});
 <<<<<<< HEAD
@@ -63,6 +67,8 @@ import _React from 'react'; import { render,screen } from '@testing-library/reac
 =======
 =======
 >>>>>>> pr/11282
+=======
+>>>>>>> cb8cfb4fb3d771dc157162ef9d8670f2dbe493da
 
 describe('Button.test', () => {
   test('renders without crashing', () => {
@@ -82,6 +88,7 @@ describe('Button.test', () => {
     // Add styling tests if needed
   });
 });
+<<<<<<< HEAD
 >>>>>>> origin/main
 =======
 <<<<<<< HEAD
@@ -95,3 +102,5 @@ const React from "react"; import { render,screen } from "@testing-library/react"
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 >>>>>>> merged-prs-20250907-203621
+=======
+>>>>>>> cb8cfb4fb3d771dc157162ef9d8670f2dbe493da

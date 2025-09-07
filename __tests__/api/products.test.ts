@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 ursor/automate-test-improve-and-merge-code-646c;
 import { NextApiRequest,NextApiResponse } from 'next' import { createMocks,createRequest,createResponse } from 'node-mocks-http' import productHandler from '@/pages/api/products/index' import { PrismaClient } from '@prisma/client' jest.mock('@prisma/client',() => { const mPrismaClient = { "product": { "findMany": jest.fn(),"aggregate": jest.fn(),'
 },"productReview": { "aggregate": jest.fn()
@@ -450,6 +451,8 @@ main
 });
 origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 =======
+=======
+>>>>>>> cb8cfb4fb3d771dc157162ef9d8670f2dbe493da
 import { createRequest, createResponse } from 'node-mocks-http';
 import productHandler from '@/pages/api/products/index';
 import { PrismaClient } from '@prisma/client';
@@ -535,6 +538,7 @@ describe('/api/products API Endpoint', () => {
       expect(data.products).toEqual(mockProducts);
     });
   });
+<<<<<<< HEAD
 });
 <<<<<<< HEAD
 >>>>>>> origin/main
@@ -546,3 +550,6 @@ describe('/api/products API Endpoint', () => {
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 >>>>>>> merged-prs-20250907-203621
+=======
+});
+>>>>>>> cb8cfb4fb3d771dc157162ef9d8670f2dbe493da

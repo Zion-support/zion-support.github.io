@@ -2,6 +2,25 @@
 
 import { useEffect } from 'react'
 
+// Type definitions for performance entries
+interface PerformanceEventTiming extends PerformanceEntry {
+  processingStart: number;
+  processingEnd: number;
+  cancelable: boolean;
+  target?: EventTarget;
+}
+
+interface LayoutShiftEntry extends PerformanceEntry {
+  value: number;
+  hadRecentInput: boolean;
+  lastInputTime: number;
+  sources: Array<{
+    node?: Node;
+    previousRect: DOMRectReadOnly;
+    currentRect: DOMRectReadOnly;
+  }>;
+}
+
 export default function PerformanceMonitor() {
   useEffect(() => {
     // Performance monitoring logic
@@ -13,10 +32,12 @@ export default function PerformanceMonitor() {
             console.log('LCP:', entry.startTime)
           }
           if (entry.entryType === 'first-input') {
-            console.log('FID:', entry.processingStart - entry.startTime)
+            const fidEntry = entry as PerformanceEventTiming;
+            console.log('FID:', fidEntry.processingStart - fidEntry.startTime)
           }
           if (entry.entryType === 'layout-shift') {
-            console.log('CLS:', entry.value)
+            const clsEntry = entry as LayoutShiftEntry;
+            console.log('CLS:', clsEntry.value)
           }
         }
       })

@@ -1,9 +1,12 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 it('displays correct content', () => {
 =======
 =======
 >>>>>>> pr/11282
+=======
+>>>>>>> cb8cfb4fb3d771dc157162ef9d8670f2dbe493da
 import React from 'react';
 import { render, screen } from '@testing-library/react';
 import '@testing-library/jest-dom';
@@ -19,6 +22,7 @@ describe('App', () => {
     expect(screen.getByRole('main')).toBeInTheDocument();
   });
   it('displays correct content', () => {
+<<<<<<< HEAD
     render(<App />);
   });
   it('handles user interactions', () => {
@@ -41,13 +45,14 @@ describe('App', () => {
 <<<<<<< HEAD
   it('displays correct content', () => {
 >>>>>>> origin/main
+=======
+>>>>>>> cb8cfb4fb3d771dc157162ef9d8670f2dbe493da
     render(<App />);
-
   });
-
   it('handles user interactions', () => {
     render(<App />);
   });
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
@@ -130,3 +135,6 @@ const { render,screen } from "@testing-library/react"; import { describe,it,expe
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 >>>>>>> merged-prs-20250907-203621
+=======
+});
+>>>>>>> cb8cfb4fb3d771dc157162ef9d8670f2dbe493da

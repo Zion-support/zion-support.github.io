@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 import _React from 'react';  import '@testing-library/jest-dom'; import EnhancedErrorBoundarydynamic from '../components/EnhancedErrorBoundary.dynamic'; describe('EnhancedErrorBoundarydynamic',() => { test('renders without crashing',() => { render(<EnhancedErrorBoundarydynamic />); expect( screen.getByTestId('enhancederrorboundary.dynamic') ).toBeInTheDocument()}); test('displays correct content',() => { render(<EnhancedErrorBoundarydynamic />)}); test('handles user interactions',() => { render(<EnhancedErrorBoundarydynamic />)}); test('applies correct styling',() => { render(<EnhancedErrorBoundarydynamic />)})});
@@ -22,6 +23,8 @@ describe('EnhancedErrorBoundarydynamic', () => {
 =======
 =======
 >>>>>>> pr/11282
+=======
+>>>>>>> cb8cfb4fb3d771dc157162ef9d8670f2dbe493da
 import React from 'react';
 import { render, screen } from '@testing-library/react';
 import '@testing-library/jest-dom';
@@ -31,17 +34,7 @@ describe('EnhancedErrorBoundary.dynamic.test', () => {
 <<<<<<< HEAD
     render(<EnhancedErrorBoundary />);
     expect(screen.getByTestId('enhancederrorboundary')).toBeInTheDocument();
->>>>>>> origin/main
   });
-
-});
-
-});
-
-import _React from 'react';  import '@testing-library/jest-dom'; import EnhancedErrorBoundarydynamic from '../components/EnhancedErrorBoundary.dynamic'; describe('EnhancedErrorBoundarydynamic',() => { test('renders without crashing',() => { render(<EnhancedErrorBoundarydynamic />); expect( screen.getByTestId('enhancederrorboundary.dynamic') ).toBeInTheDocument()}); test('displays correct content',() => { render(<EnhancedErrorBoundarydynamic />)}); test('handles user interactions',() => { render(<EnhancedErrorBoundarydynamic />)}); test('applies correct styling',() => { render(<EnhancedErrorBoundarydynamic />)})});
-
-});
-});
   test('displays correct content', () => {
     render(<EnhancedErrorBoundary />);
     // Add specific content tests based on component
@@ -55,6 +48,7 @@ import _React from 'react';  import '@testing-library/jest-dom'; import Enhanced
     // Add styling tests if needed
   });
 });
+<<<<<<< HEAD
 <<<<<<< HEAD
 const React from "react"; import { render,screen,fireEvent } from "@testing-library/react"; import "@testing-library/jest-dom"; import EnhancedErrorBoundarydynamic from "./components/EnhancedErrorBoundary.dynamic"; describe("EnhancedErrorBoundarydynamic",() => { test("renders without crashing",() => { render(<EnhancedErrorBoundarydynamic />); expect( screen.getByTestId("enhancederrorboundary.dynamic") ).toBeInTheDocument()}); test("displays correct content",() => { render(<EnhancedErrorBoundarydynamic />)}); test("handles user interactions",() => { render(<EnhancedErrorBoundarydynamic />)}); test("applies correct styling",() => { render(<EnhancedErrorBoundarydynamic />)})});''"
 
@@ -133,3 +127,5 @@ const React from "react"; import { render,screen,fireEvent } from "@testing-libr
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 >>>>>>> merged-prs-20250907-203621
+=======
+>>>>>>> cb8cfb4fb3d771dc157162ef9d8670f2dbe493da

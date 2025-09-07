@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import _React from 'react';,
 ';
 import '@testing-library/jest-dom';';
@@ -97,6 +98,8 @@ describe('AnalyticsManager', () => {'
 
 =======
 >>>>>>> pr/11282
+=======
+>>>>>>> cb8cfb4fb3d771dc157162ef9d8670f2dbe493da
 import React from 'react';
 import { render, screen } from '@testing-library/react';
 import '@testing-library/jest-dom';
@@ -105,6 +108,7 @@ describe('AnalyticsManager.test', () => {
   test('renders without crashing', () => {
     expect(true).toBe(true);
   });
+<<<<<<< HEAD
 });
 <<<<<<< HEAD
 
@@ -140,6 +144,8 @@ describe('AnalyticsManager', () => {
     render(<AnalyticsManager />);
     expect(screen.getByTestId('analyticsmanager')).toBeInTheDocument();
   });
+=======
+>>>>>>> cb8cfb4fb3d771dc157162ef9d8670f2dbe493da
   test('displays correct content', () => {
     render(<AnalyticsManager />);
     // Add specific content tests based on component

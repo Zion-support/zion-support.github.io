@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -36,6 +37,10 @@ const services = [;
 
 import React from 'react';
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-88b9
+=======
+
+import React from 'react';
+>>>>>>> cb8cfb4fb3d771dc157162ef9d8670f2dbe493da
 
 function App() {
   return (
@@ -62,6 +67,7 @@ function App() {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> pr/11282
 =======
@@ -73,6 +79,8 @@ function App() {
               Secure, decentralized solutions powered by blockchain technology.
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> cb8cfb4fb3d771dc157162ef9d8670f2dbe493da
         </section>
         
         <section className="py-16 px-4 bg-white">
@@ -156,32 +164,26 @@ function App() {
             <h2 className="text-4xl font-bold mb-8">Ready to Get Started?</h2>
             <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
               Let&apos;s discuss your project and see how we can help transform your business with technology.
+<<<<<<< HEAD
 >>>>>>> origin/main
 =======
 >>>>>>> pr/11282
+=======
+>>>>>>> cb8cfb4fb3d771dc157162ef9d8670f2dbe493da
             </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg text-lg font-semibold transition-colors">
+                Contact Us
+              </button>
+              <button className="border-2 border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white px-8 py-3 rounded-lg text-lg font-semibold transition-colors">
+                View Portfolio
+              </button>
+            </div>
           </div>
-          <div className="bg-white p-6 rounded-lg shadow-lg">"
-            <div className="text-4xl mb-4">☁️</div>"
-            <h3 className="text-xl font-semibold mb-2">Cloud Services</h3>"
-            <p className="text-gray-600">"
-              Scalable cloud infrastructure and deployment solutions.
-            </p>
-          </div>
-        </div>
-        <div className="text-center">"
-          <h2 className="text-3xl font-bold text-gray-900 mb-4">"
-            Why Choose Zion Tech Group?
-          </h2>
-          <p className="text-lg text-gray-600 max-w-3xl mx-auto">"
-            We combine cutting-edge technology with deep industry expertise to deliver,
-solutions that drive real business value. Our team of experts is dedicated,
-to helping you succeed in the digital age.
-          </p>
-        </div>
+        </section>
       </main>
-      <Footer />
     </div>
+<<<<<<< HEAD
 export default function App(): React.JSX.Element {
 }
 return (;
@@ -432,3 +434,9 @@ export default function App() {
 export default App;"
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-88b9
 >>>>>>> merged-prs-20250907-203621
+=======
+  );
+}
+
+export default App;
+>>>>>>> cb8cfb4fb3d771dc157162ef9d8670f2dbe493da

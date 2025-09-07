@@ -1,11 +1,13 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> cb8cfb4fb3d771dc157162ef9d8670f2dbe493da
 import React from 'react';
 import { render, screen } from '@testing-library/react';
 import '@testing-library/jest-dom';
 import AccessibilityManagerdynamic from '../components/AccessibilityManager.dynamic';
->>>>>>> origin/main
 describe('AccessibilityManagerdynamic', () => {
 =======
 import React from 'react';
@@ -16,7 +18,13 @@ describe('AccessibilityManager.dynamic.test', () => {
 >>>>>>> pr/11282
   test('renders without crashing', () => {
     render(<AccessibilityManagerdynamic />);
+<<<<<<< HEAD
     expect(screen.getByTestId('accessibilitymanager.dynamic')).toBeInTheDocument();
+=======
+    expect(
+      screen.getByTestId('accessibilitymanager.dynamic')
+    ).toBeInTheDocument();
+>>>>>>> cb8cfb4fb3d771dc157162ef9d8670f2dbe493da
   });
   test('displays correct content', () => {
     render(<AccessibilityManagerdynamic />);
@@ -27,6 +35,7 @@ describe('AccessibilityManager.dynamic.test', () => {
   test('applies correct styling', () => {
     render(<AccessibilityManagerdynamic />);
   });
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 });
@@ -118,3 +127,6 @@ const React from "react"; import { render,screen,fireEvent } from "@testing-libr
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 >>>>>>> merged-prs-20250907-203621
+=======
+});
+>>>>>>> cb8cfb4fb3d771dc157162ef9d8670f2dbe493da
