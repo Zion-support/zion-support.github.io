@@ -1,59 +1,59 @@
- const serviceCategories = [ {
+const serviceCategories = [ {
   title: '🚀 2028 Futuristic Innovations', services: [ {
   name: 'AI Climate Prediction Platform', href: '/ai-climate-prediction-platform' 
-};
+}
 {
   name: 'Quantum Cybersecurity Firewall', href: '/quantum-cybersecurity-firewall' 
-};
+}
 {
   name: 'Autonomous Drone Delivery Network', href: '/autonomous-drone-delivery-network' 
-};
+}
 {
   name: 'AI Healthcare Diagnosis Platform', href: '/ai-healthcare-diagnosis-platform' 
 }] 
-};
+}
 {
   title: '🏙️ Smart City & Infrastructure', services: [ {
   name: 'Smart City Infrastructure Management', href: '/smart-city-infrastructure-management' 
-};
+}
 {
   name: 'IoT Energy Management System', href: '/iot-energy-management-system' 
-};
+}
 {
   name: 'Digital Twin Manufacturing Platform', href: '/digital-twin-manufacturing-platform' 
-};
+}
 {
   name: 'Autonomous Manufacturing AI', href: '/autonomous-manufacturing-ai' 
 }] 
-};
+}
 {
   title: '⚛️ Quantum & Advanced Tech', services: [ {
   name: 'Quantum Financial Trading Platform', href: '/quantum-financial-trading-platform' 
-};
+}
 {
   name: 'Quantum Machine Learning Platform', href: '/quantum-machine-learning-platform' 
-};
+}
 {
   name: 'Quantum Internet Security Gateway', href: '/quantum-internet-security-gateway' 
-};
+}
 {
   name: 'Quantum Internet Protocol', href: '/quantum-internet-protocol' 
 }] 
-};
+}
 {
   title: '🤖 AI & Machine Learning', services: [ {
   name: 'AI Customer Service Automation', href: '/ai-customer-service-automation' 
-};
+}
 {
   name: 'AI Education Platform', href: '/ai-education-platform' 
-};
+}
 {
   name: 'AI Content Creation Suite', href: '/ai-content-creation-suite' 
-};
+}
 {
   name: 'AI Legal Research Platform', href: '/ai-legal-research-platform' 
 }] 
-}];
+}]
 </div> <div className="absolute -inset-1 bg-gradient-to-r from-purple-600 to-blue-600 rounded-xl blur opacity-75 -z-10" ></div> </div> <div> <h3 className="text-xl font-bold bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent" > Zion Tech Group </h3> <p className="text-sm text-purple-300" >2028 Future Technology</p> </div> </div> </a> </div> </div> > <social.icon className="w-5 h-5" /> </a>) ) 
 }</div> </div> </li>) ) 
 }</ul> </div>) ) 

@@ -1,12 +1,23 @@
- <option>Workforce Dev</option> <option>AI Ethics</option> <option>Digital ID</option> <option>Education</option> </select> </label>) 
-}{
-  result.meta.artifacts?.ipfsCid && (<div>IPFS CID: {
-  result.meta.artifacts.ipfsCid 
-}</div>) 
-}{
-  result.meta.artifacts?.signature && (<div>Signature: {
-  result.meta.artifacts.signature.slice (0, 30) 
-}…</div>) 
-}</div>) 
-}</div> </div> </div>) 
+import React from 'react';
+import Head from 'next/head';
+import Layout from '../../components/layout/Layout';
+
+export default function unbridge() {
+  return (
+    <Layout>
+      <Head>
+        <title>Un Bridge - Zion Tech Group</title>
+        <meta name="description" content="Un Bridge solutions and services." />
+      </Head>
+      
+      <div className="min-h-screen bg-gray-50">
+        <div className="container mx-auto px-6 py-16">
+          <h1 className="text-4xl font-bold text-gray-900 mb-8">Un Bridge</h1>
+          <p className="text-lg text-gray-600">
+            Professional un bridge solutions tailored to your business needs.
+          </p>
+        </div>
+      </div>
+    </Layout>
+  );
 }

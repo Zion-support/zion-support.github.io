@@ -1,3 +1,3 @@
- Join Meeting </button>) 
+Join Meeting </button>) 
 }</div>) 
 }

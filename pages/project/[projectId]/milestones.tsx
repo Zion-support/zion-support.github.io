@@ -1,27 +1,23 @@
- 
-}catch {
-  
-}
-}, [role]);
-return (<div> <Head> <title>Project Milestones</title> <meta name="description" content="Track project deliverables and milestone payments" /> </Head> </div> <MilestoneForm onSubmit= {
-  handleCreate 
-}/> </div>) 
-}{
-  milestones.length === 0 && (<div className="text-gray-600" >No milestones yet. {
-  role !== 'talent' ? 'Create the first one.' : '' 
-}</div>) 
-}{
-  milestones.map ( (m) => (<MilestoneCard key= {
-  m.id 
-}milestone= {
-  m 
-}projectId= {
-  String (projectId) 
-}role= {
-  role 
-}onAction= {
-  handleAction 
-}/>) ) 
-}</div>) 
-}</div> </div> </div>) 
+import React from 'react';
+import Head from 'next/head';
+import Layout from '../components/layout/Layout';
+
+export default function milestones() {
+  return (
+    <Layout>
+      <Head>
+        <title>Milestones - Zion Tech Group</title>
+        <meta name="description" content="Milestones solutions and services." />
+      </Head>
+      
+      <div className="min-h-screen bg-gray-50">
+        <div className="container mx-auto px-6 py-16">
+          <h1 className="text-4xl font-bold text-gray-900 mb-8">Milestones</h1>
+          <p className="text-lg text-gray-600">
+            Professional milestones solutions tailored to your business needs.
+          </p>
+        </div>
+      </div>
+    </Layout>
+  );
 }

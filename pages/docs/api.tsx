@@ -1,7 +1,6 @@
-import React from 'react';
-import Head from 'next/head';
-import Layout from '../../components/Layout';
-
+import React from 'react'
+import Head from 'next/head'
+import Layout from '../../components/Layout'
 export default function APIDocsPage() {
   return (
     <Layout 
@@ -23,5 +22,5 @@ export default function APIDocsPage() {
         </section>
       </div>
     </Layout>
-  );
+  )
 }

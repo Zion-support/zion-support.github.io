@@ -1,9 +1,9 @@
- useEffect ( () => {
+useEffect ( () => {
   if (!isOpen && messages.length === 0) {
   //Seed greeting setMessages ([ 
 }
-}, [isOpen, messages.length]);
-[]);
+}, [isOpen, messages.length])
+[])
 <button aria-label="Open support chat" onClick= {
   () => setIsOpen (true) 
 }className="rounded-full shadow-lg bg-blue-600 text-white w-14 h-14 flex items-center justify-center focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 dark:focus:ring-offset-black" > ? </button>) 

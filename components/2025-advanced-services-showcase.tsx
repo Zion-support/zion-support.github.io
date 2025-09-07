@@ -1,12 +1,12 @@
- const allServices = [ ...advancedEnterpriseServices2025;
-...innovativeMicroSaasExpansion2025;
-...cuttingEdgeITInfrastructureServices ];
+const allServices = [ ...advancedEnterpriseServices2025
+...innovativeMicroSaasExpansion2025
+...cuttingEdgeITInfrastructureServices ]
 // Filter by category if (selectedCategory !== 'all') {
   filtered = filtered.filter (service => {
   
 }// Filter by search term if (searchTerm) {
   filtered = filtered.filter (service => service.name.toLowerCase () .includes (searchTerm.toLowerCase () ) || service.description.toLowerCase () .includes (searchTerm.toLowerCase () ) || service.tagline.toLowerCase () .includes (searchTerm.toLowerCase () ) || getServiceCategory (service) .toLowerCase () .includes (searchTerm.toLowerCase () ) setFilteredServices (filtered) 
-}, [selectedCategory, searchTerm]);
+}, [selectedCategory, searchTerm])
 const ServiceCard = ({
   service 
 }: {
@@ -67,7 +67,7 @@ const ServiceCard = ({
   service.marketPosition 
 }</p> </div> <div className="flex items-center justify-between"> <a href= {
   service.link 
-}className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105" > Learn More <ArrowRight className="w-4 h-4" /> </a> <a > Contact </a> </div> </div> </motion.div>);
+}className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105" > Learn More <ArrowRight className="w-4 h-4" /> </a> <a > Contact </a> </div> </div> </motion.div>)
 const ServiceList = ({
   service 
 }: {
@@ -124,7 +124,7 @@ const ServiceList = ({
   service.marketPosition 
 }</p> </div> </div> <div className="flex items-center gap-4"> <a href= {
   service.link 
-}className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105" > Learn More <ArrowRight className="w-4 h-4" /> </a> <a > Contact Sales </a> </div> </div> </div> </div> </motion.div>);
+}className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105" > Learn More <ArrowRight className="w-4 h-4" /> </a> <a > Contact Sales </a> </div> </div> </div> </div> </motion.div>)
 return (<div className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100 dark:from-gray-900 dark:to-gray-800"> <SEO title="2025 Advanced Services Showcase - Zion Tech Group" description="Discover our comprehensive portfolio of advanced AI services, micro SAAS solutions, and cutting-edge IT infrastructure. Real, innovative, and market-ready solutions for modern businesses." keywords= {
   ["AI services", "micro SAAS", "IT infrastructure", "quantum computing", "enterprise solutions", "Zion Tech Group"] 
 }/> {

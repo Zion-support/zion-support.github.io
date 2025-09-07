@@ -1,3 +1,23 @@
-import Link from 'next/link' import Head from 'next/head' export default function ErrorPage () {
-  return (<> <Head> <title>Authentication Error - Zion Tech Marketplace</title> <meta name="description" content="Authentication error page" /> </Head> <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-red-50 to-orange-100 dark:from-gray-900 dark:to-gray-800 p-4" > <Card className="w-full max-w-md" > <CardHeader className="space-y-1 text-center" > <div className="mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-red-100 dark:bg-red-900/20" > <AlertTriangle className="h-6 w-6 text-red-600 dark:text-red-400" /> </div> <CardTitle className="text-2xl font-bold" >Authentication Error</CardTitle> <p className="text-sm text-muted-foreground" > There was an issue with your authentication request </p> </CardHeader> <CardContent className="space-y-4" > <div className="text-center space-y-4" > <p className="text-sm text-muted-foreground" > This could be due to: </p> <ul className="text-sm text-muted-foreground space-y-1 text-left" > <li>• Invalid email or password</li> <li>• Account not verified</li> <li>• Network connectivity issues</li> <li>• Temporary service unavailability</li> </ul> <div className="pt-4 space-y-2" > <Button asChild className="w-full" > <Link href="/auth/login" > Try Again </Link> </Button> <Button asChild variant="outline" className="w-full" > <Link href="/" > Go to Homepage </Link> </Button> </div> <div className="text-center text-sm text-muted-foreground pt-4" > Need help? <Link href="/contact" className="hover:text-primary" >Contact Support</Link> </div> </div> </CardContent> </Card> </div> </>) 
+import React from 'react';
+import Head from 'next/head';
+import Layout from '../components/layout/Layout';
+
+export default function error() {
+  return (
+    <Layout>
+      <Head>
+        <title>Error - Zion Tech Group</title>
+        <meta name="description" content="Error solutions and services." />
+      </Head>
+      
+      <div className="min-h-screen bg-gray-50">
+        <div className="container mx-auto px-6 py-16">
+          <h1 className="text-4xl font-bold text-gray-900 mb-8">Error</h1>
+          <p className="text-lg text-gray-600">
+            Professional error solutions tailored to your business needs.
+          </p>
+        </div>
+      </div>
+    </Layout>
+  );
 }

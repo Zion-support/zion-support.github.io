@@ -1,3 +1,23 @@
- <Head> <title>Kubernetes RBAC Auditor | Zion Tech Group</title> <meta name="description" content="Detect over-permissive Kubernetes roles and unused bindings with least-privilege recommendations." /> <link rel="canonical" href="https://ziontechgroup.com/kubernetes-rbac-auditor" /> </Head> 
-}</div> <div className="flex gap-3" > <a href="/contact" className="px-6 py-3 rounded-xl bg-gradient-to-r from-sky-600 to-indigo-700 text-white" >Start from $179/mo</Link> <a href="/market-pricing" className="px-6 py-3 rounded-xl border border-gray-700 text-gray-200" >See market pricing</Link> </div> </div> </div> </Layout>) 
+import React from 'react';
+import Head from 'next/head';
+import Layout from '../components/layout/Layout';
+
+export default function kubernetesrbacauditor() {
+  return (
+    <Layout>
+      <Head>
+        <title>Kubernetes Rbac Auditor - Zion Tech Group</title>
+        <meta name="description" content="Kubernetes Rbac Auditor solutions and services." />
+      </Head>
+      
+      <div className="min-h-screen bg-gray-50">
+        <div className="container mx-auto px-6 py-16">
+          <h1 className="text-4xl font-bold text-gray-900 mb-8">Kubernetes Rbac Auditor</h1>
+          <p className="text-lg text-gray-600">
+            Professional kubernetes rbac auditor solutions tailored to your business needs.
+          </p>
+        </div>
+      </div>
+    </Layout>
+  );
 }

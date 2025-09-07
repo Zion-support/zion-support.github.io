@@ -1,31 +1,31 @@
- //Import our enhanced components import EnhancedNavigation from './layout/EnhancedNavigation';
-import EnhancedServiceCard from './ui/EnhancedServiceCard';
-import PerformanceMonitor from './PerformanceMonitor';
-import UltraFuturisticBackground from './ui/UltraFuturisticBackground';
-//Import service data window.addEventListener ('mousemove', handleMouseMove);
-//Combine all revolutionary services const allRevolutionaryServices = [ ...revolutionary2044AdvancedMicroSaas;
-...revolutionary2044ITServices;
-...revolutionary2044AIServices;
-...realEnterpriseMicroSaas2025;
-...innovativeITServicesExpansion2025V3;
-...innovativeAIServicesExpansion2025V3...innovative2025ITInfrastructureServices;
-...innovative2025AIAutonomousServices ];
+//Import our enhanced components import EnhancedNavigation from './layout/EnhancedNavigation'
+import EnhancedServiceCard from './ui/EnhancedServiceCard'
+import PerformanceMonitor from './PerformanceMonitor'
+import UltraFuturisticBackground from './ui/UltraFuturisticBackground'
+//Import service data window.addEventListener ('mousemove', handleMouseMove)
+//Combine all revolutionary services const allRevolutionaryServices = [ ...revolutionary2044AdvancedMicroSaas
+...revolutionary2044ITServices
+...revolutionary2044AIServices
+...realEnterpriseMicroSaas2025
+...innovativeITServicesExpansion2025V3
+...innovativeAIServicesExpansion2025V3...innovative2025ITInfrastructureServices
+...innovative2025AIAutonomousServices ]
 //Filter services by category //Animation variants const containerVariants = {
   hidden: {
   opacity: 0 
-};
+}
 visible: {
   opacity: 1, transition: {
   duration: 0.8, staggerChildren: 0.1 
 }
 }
-};
 }
-};
 }
-};
 }
-};
+}
+}
+}
+}
 return (<> <Head> <title>Zion Tech Group - Revolutionary 2045 Technology Solutions</title> </Head> {
   /* Enhanced Navigation */ 
 }<EnhancedNavigation /> > Zion Tech Group </motion.h1> <motion.p > Pioneering the Future of Technology with Revolutionary AI Consciousness, Quantum Computing, and Autonomous Solutions </motion.p> {
@@ -78,5 +78,5 @@ return (<> <Head> <title>Zion Tech Group - Revolutionary 2045 Technology Solutio
 }<AnimatePresence> {
   showPerformanceMonitor && (<PerformanceMonitor />) 
 }</AnimatePresence> </>) 
-};
-export default EnhancedHomepage;
+}
+export default EnhancedHomepage

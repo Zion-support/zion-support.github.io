@@ -1,4 +1,23 @@
- // Simple client fetch from a volatile in-memory store endpoint (for demo we echo in query) // In a production app, this would fetch from a real DB. fetch (`/api/whitepaper/get?id=$ {
-  id 
-}`) return (</div>) 
+import React from 'react';
+import Head from 'next/head';
+import Layout from '../../components/layout/Layout';
+
+export default function [id]() {
+  return (
+    <Layout>
+      <Head>
+        <title>[Id] - Zion Tech Group</title>
+        <meta name="description" content="[Id] solutions and services." />
+      </Head>
+      
+      <div className="min-h-screen bg-gray-50">
+        <div className="container mx-auto px-6 py-16">
+          <h1 className="text-4xl font-bold text-gray-900 mb-8">[Id]</h1>
+          <p className="text-lg text-gray-600">
+            Professional [id] solutions tailored to your business needs.
+          </p>
+        </div>
+      </div>
+    </Layout>
+  );
 }

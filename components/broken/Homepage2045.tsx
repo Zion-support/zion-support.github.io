@@ -1,7 +1,7 @@
- > <div className="relative" > <Loader2 className="w-16 h-16 text-cyan-400 animate-spin mx-auto mb-4" /> <div className="absolute inset-0 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-full blur-xl opacity-20 animate-pulse" ></div> </div> <p className="text-xl text-gray-300 mb-2" >Loading Zion Tech Group 2045...</p> <p className="text-sm text-gray-500" >Preparing your futuristic digital transformation journey</p> </motion.div> </div>);
+> <div className="relative" > <Loader2 className="w-16 h-16 text-cyan-400 animate-spin mx-auto mb-4" /> <div className="absolute inset-0 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-full blur-xl opacity-20 animate-pulse" ></div> </div> <p className="text-xl text-gray-300 mb-2" >Loading Zion Tech Group 2045...</p> <p className="text-sm text-gray-500" >Preparing your futuristic digital transformation journey</p> </motion.div> </div>)
 useEffect ( () => {
   //Simulate content loading with better timing return () => clearTimeout (timer) 
-}, []);
+}, [])
 //Intersection Observer for better performance useEffect ( () => {
   if (typeof window !== 'undefined' && 'IntersectionObserver' in window) {
   const observer = new (window as any) .IntersectionObserver ( (entries: unknown[]) => {
@@ -9,17 +9,17 @@ useEffect ( () => {
   if (entry.isIntersecting) {
   return () => observer.disconnect () 
 }
-}, []);
-};
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7 const staggerContainer = {
+}, [])
+}
+
   animate: {
   transition: {
   staggerChildren: 0.1, delayChildren: 0.2 
 }
 }
-};
-};
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7 > <span className="bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent" > Future of Technology </span> </motion.h1> <motion.p > Transform your business with Zion Tech Group's revolutionary AI services, quantum computing, and cutting-edge emerging technologies. Leading the future of technology innovation. </motion.p> </motion.div> {
+}
+}
+
   /* CTA Buttons */ 
 }<motion.div > <Link href="/contact" className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-500 text-white rounded-lg font-semibold text-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 shadow-lg shadow-cyan-500/25 hover:shadow-xl hover:shadow-cyan-500/30 transform hover:scale-105" > Get Started </a> <Link href="/services" className="px-8 py-4 border border-cyan-400/50 text-cyan-400 rounded-lg font-semibold text-lg hover:bg-cyan-400/10 transition-all duration-300 transform hover:scale-105" > Explore Services </a> </motion.div> {
   /* Stats */ 
@@ -45,5 +45,5 @@ useEffect ( () => {
   once: true 
 }
 }> Ready to Transform? </span> </h2> <p className="text-xl text-gray-300 mb-8" > Let's discuss how our revolutionary technology solutions can drive your business into the future. </p> <div className="flex flex-col sm:flex-row gap-4 justify-center items-center" > <Link href="/contact" className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-500 text-white rounded-lg font-semibold text-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 shadow-lg shadow-cyan-500/25 hover:shadow-xl hover:shadow-cyan-500/30 transform hover:scale-105" > Get Started </a> <a href="tel:+1 302 464 0950" className="px-8 py-4 border border-cyan-400/50 text-cyan-400 rounded-lg font-semibold text-lg hover:bg-cyan-400/10 transition-all duration-300 transform hover:scale-105" > Call Now </a> </div> </motion.div> </div> </section> </div> </Layout>) 
-};
-export default Homepage2045;
+}
+export default Homepage2045

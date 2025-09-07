@@ -1,5 +1,5 @@
-import React from 'react';
-import Link from 'next/link';
+import React from 'react'
+import Link from 'next/link'
 import { 
   Phone, 
   Mail, 
@@ -46,8 +46,7 @@ import {
   PieChart,
   ClipboardList,
   Layers
-} from 'lucide-react';
-
+} from 'lucide-react'
 const footerSections = [
   {
     title: 'Services',
@@ -127,8 +126,7 @@ const footerSections = [
       { title: 'Get Quote', href: '/quote', icon: FileText }
     ]
   }
-];
-
+]
 const microSaasCategories = [
   { title: 'Marketing Tools', icon: Target, count: 15 },
   { title: 'Productivity', icon: Settings, count: 12 },
@@ -138,8 +136,7 @@ const microSaasCategories = [
   { title: 'Finance', icon: DollarSign, count: 10 },
   { title: 'Design', icon: Paintbrush, count: 6 },
   { title: 'Development', icon: Code, count: 14 }
-];
-
+]
 const aiServiceCategories = [
   { title: 'Machine Learning', icon: Brain, count: 25 },
   { title: 'Computer Vision', icon: Eye, count: 18 },
@@ -147,8 +144,7 @@ const aiServiceCategories = [
   { title: 'Predictive Analytics', icon: TrendingUp, count: 15 },
   { title: 'Robotics', icon: Settings, count: 8 },
   { title: 'Quantum AI', icon: Code, count: 5 }
-];
-
+]
 const itServiceCategories = [
   { title: 'Cloud Computing', icon: Cloud, count: 30 },
   { title: 'Cybersecurity', icon: Shield, count: 25 },
@@ -156,8 +152,7 @@ const itServiceCategories = [
   { title: 'Data Management', icon: HardDrive, count: 15 },
   { title: 'Network Security', icon: Lock, count: 18 },
   { title: 'Infrastructure', icon: Building, count: 22 }
-];
-
+]
 export default function Footer() {
   return (
     <footer className="bg-gray-900 text-white">
@@ -348,5 +343,5 @@ export default function Footer() {
         </div>
       </div>
     </footer>
-  );
+  )
 }

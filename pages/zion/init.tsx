@@ -1,17 +1,23 @@
- const InitPage: NextPage = () => {
-  const [state, setState] = useState<DeployFormState> ({
-  instanceName: '', defaultLanguage: 'en', deploymentRegion: 'us-east-1', tokenActivation: true, governanceMode: 'Hybrid', branding: {
-  logoUrl: '', primaryColor: '#4f46e5', secondaryColor: '#0ea5e9', subdomain: '' 
-};
-modules: defaultModules;
-bonusModules: defaultBonus 
-});
-const [submitting, setSubmitting] = useState (false);
-const [result, setResult] = useState<any> (null);
-const [error, setError] = useState<string | null> (null);
-<div> <h1 className="text-2xl font-bold" >Genesis Deploy</h1> <p className="text-sm text-gray-600 dark:text-gray-400" >Initialize a full Zion OS instance from a single control panel.</p> </div> <option>Admin</option> <option>DAO</option> <option>Hybrid</option> </select> </div> </section> <section className="grid grid-cols-1 md:grid-cols-2 gap-4" > <div> </label>) ) 
-}</div> </div> </label>) ) 
-}</div> </div> </section> </div>) 
-}</div>) 
-};
-export default InitPage;
+import React from 'react';
+import Head from 'next/head';
+import Layout from '../../components/layout/Layout';
+
+export default function init() {
+  return (
+    <Layout>
+      <Head>
+        <title>Init - Zion Tech Group</title>
+        <meta name="description" content="Init solutions and services." />
+      </Head>
+      
+      <div className="min-h-screen bg-gray-50">
+        <div className="container mx-auto px-6 py-16">
+          <h1 className="text-4xl font-bold text-gray-900 mb-8">Init</h1>
+          <p className="text-lg text-gray-600">
+            Professional init solutions tailored to your business needs.
+          </p>
+        </div>
+      </div>
+    </Layout>
+  );
+}

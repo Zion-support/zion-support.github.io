@@ -1,5 +1,5 @@
- ];
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7 return (<div className="relative z-40" > {
+]
+
   /* Main Contact Bar */ 
 }</a> </div> </div> > {
   action.icon 

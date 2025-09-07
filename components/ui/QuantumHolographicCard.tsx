@@ -1,10 +1,9 @@
- 
 }
-};
 }
-};
+}
+}
 }) 
-};
+}
 return (<motion.div > {
   /* Holographic glow effect */ 
 }<motion.div </div> </div> {
@@ -13,5 +12,5 @@ return (<motion.div > {
 }</div> </div> </div> </div> </div> </div> </div> </div> {
   /* CTA Button */ 
 }<motion.a > <span className="mr-2" >Get Started</span> <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" /> </a> </div> </div> </div> </motion.div>) 
-};
-export default QuantumHolographicCard;
+}
+export default QuantumHolographicCard

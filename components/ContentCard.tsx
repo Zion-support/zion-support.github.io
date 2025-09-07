@@ -1,4 +1,4 @@
- const ContentCard: React.FC<ContentCardProps> = ({
+const ContentCard: React.FC<ContentCardProps> = ({
   title, description, href, icon, color, glow, date, category 
 }) => {
   return (<Link href= {
@@ -14,4 +14,4 @@
   date 
 }</span>) 
 }</div> </Link>) 
-};
+}

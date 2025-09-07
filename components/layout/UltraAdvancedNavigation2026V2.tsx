@@ -1,4 +1,4 @@
- </div> </div> <div className="flex items-center space-x-4" > <Link href="/enhanced-services-showcase-2026-v2" className="text-purple-400 hover:text-purple-300 transition-colors" > 🚀 New 2026 Services </a> </div> </div> </div> </div> {
+</div> </div> <div className="flex items-center space-x-4" > <Link href="/enhanced-services-showcase-2026-v2" className="text-purple-400 hover:text-purple-300 transition-colors" > 🚀 New 2026 Services </a> </div> </div> </div> </div> {
   /* Main Navigation */ 
 }<nav className= {
   `fixed top-0 left-0 right-0 z-50 transition-all duration-300 $ {

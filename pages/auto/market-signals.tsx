@@ -1,1 +1,23 @@
- <div> <Head> <title>AI Market Signals Agent</title> <meta name="description" content="Daily curated AI market signals." /> </Head> <main className="space-y-4" > <h1 className="text-2xl font-bold" >AI Market Signals Agent</h1> <p>Runs daily to curate relevant AI/tech market signals and trends and stores them in the repository.</p> <div className="space-y-2" > <Link href="/data/reports/market-signals/latest.json" ><a className="text-blue-600 underline" >Latest Report (JSON) </Link></Link> </div> </main> </div> export default MarketSignals;
+import React from 'react';
+import Head from 'next/head';
+import Layout from '../../components/layout/Layout';
+
+export default function marketsignals() {
+  return (
+    <Layout>
+      <Head>
+        <title>Market Signals - Zion Tech Group</title>
+        <meta name="description" content="Market Signals solutions and services." />
+      </Head>
+      
+      <div className="min-h-screen bg-gray-50">
+        <div className="container mx-auto px-6 py-16">
+          <h1 className="text-4xl font-bold text-gray-900 mb-8">Market Signals</h1>
+          <p className="text-lg text-gray-600">
+            Professional market signals solutions tailored to your business needs.
+          </p>
+        </div>
+      </div>
+    </Layout>
+  );
+}

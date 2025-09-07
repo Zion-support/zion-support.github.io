@@ -1,6 +1,23 @@
- <Head> <title>Post a Job - Zion</title> </Head> <h1 className="text-2xl font-semibold" >Post a Job</h1> <div className="grid md:grid-cols-2 gap-6" > <form className="space-y-4" > <div> </EnhancedButton> <EnhancedButton type="submit" >Post Job</EnhancedButton> </div> </form> <div> <div className="text-sm opacity-70" >Title</div> <div className="font-medium" > {
-  title || 'Untitled job' 
-}</div> </div> <div> </div> </div>) : (<p className="text-sm opacity-80" >Click Preview to see how your job will appear to talent.</p>) 
-}</aside> </div> </div>) 
-};
-export default PostJob;
+import React from 'react';
+import Head from 'next/head';
+import Layout from '../../components/layout/Layout';
+
+export default function post() {
+  return (
+    <Layout>
+      <Head>
+        <title>Post - Zion Tech Group</title>
+        <meta name="description" content="Post solutions and services." />
+      </Head>
+      
+      <div className="min-h-screen bg-gray-50">
+        <div className="container mx-auto px-6 py-16">
+          <h1 className="text-4xl font-bold text-gray-900 mb-8">Post</h1>
+          <p className="text-lg text-gray-600">
+            Professional post solutions tailored to your business needs.
+          </p>
+        </div>
+      </div>
+    </Layout>
+  );
+}

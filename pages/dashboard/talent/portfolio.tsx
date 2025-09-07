@@ -1,19 +1,23 @@
- const data: ResumeData = {
-  name: 'Your Name', contact: {
-  email: 'you@example.com', phone: '+1 555-123-4567', location: 'City, Country' 
-};
-summary: 'AI talent focused on LLM apps and marketplaces.';
-> <option value="light" >Light</option> <option value="dark" >Dark</option> </select> </div> <PdfExportButton targetRef= {
-  ref 
-}fileName= {
-  `resume-$ {
-  data.name.replace (/\s+/g, '-') .toLowerCase () 
-}.pdf` 
-}/> <ResumePreview ref= {
-  ref 
-}data= {
-  data 
-}theme= {
-  theme 
-}/> </div>) 
+import React from 'react';
+import Head from 'next/head';
+import Layout from '../../../../components/layout/Layout';
+
+export default function DashboardTalentPortfolio() {
+  return (
+    <Layout>
+      <Head>
+        <title>Dashboard Talent Portfolio - Zion Tech Group</title>
+        <meta name="description" content="Dashboard Talent Portfolio solutions and services." />
+      </Head>
+      
+      <div className="min-h-screen bg-gray-50">
+        <div className="container mx-auto px-6 py-16">
+          <h1 className="text-4xl font-bold text-gray-900 mb-8">Dashboard Talent Portfolio</h1>
+          <p className="text-lg text-gray-600">
+            Professional dashboard talent portfolio solutions tailored to your business needs.
+          </p>
+        </div>
+      </div>
+    </Layout>
+  );
 }

@@ -1,8 +1,7 @@
- 
 }
-};
 }
-};
+}
+}
 return (<motion.div > {
   /* Background Glow */ 
 }<div className= {
@@ -26,5 +25,5 @@ return (<motion.div > {
   service.features.length - 3 
 }more features </div>) 
 }</div> </div> > <ExternalLink className="w-4 h-4" /> Learn More </motion.a> <motion.a > <ArrowRight className="w-4 h-4" /> </motion.a> </div> </div> </div> </div> 
-};
-export default EnhancedServiceCard;
+}
+export default EnhancedServiceCard

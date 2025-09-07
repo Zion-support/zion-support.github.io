@@ -1,31 +1,31 @@
- export default function PricingComparisonPage () {
+export default function PricingComparisonPage () {
   const serviceComparisons = [ {
   service: 'AI Content Generator', zionPricing: {
   starter: '$19/month', professional: '$49/month', enterprise: '$199/month' 
-};
-competitors: [ ];
-features: [ 'AI-powered content generationMultiple content formatsSEO optimizationTeam collaborationAPI accessCustom templates' ];
-color: 'from-purple-500 to-indigo-600';
+}
+competitors: [ ]
+features: [ 'AI-powered content generationMultiple content formatsSEO optimizationTeam collaborationAPI accessCustom templates' ]
+color: 'from-purple-500 to-indigo-600'
 icon: '🤖' 
-};
+}
 {
   service: 'Cloud Monitoring', zionPricing: {
   starter: '$29/month', professional: '$99/month', enterprise: '$299/month' 
-};
-competitors: [ ];
-features: [ 'Real-time monitoringMulti-cloud supportAI-powered alertingAdvanced analyticsCustom dashboardsAPI access' ];
-color: 'from-green-500 to-emerald-600';
+}
+competitors: [ ]
+features: [ 'Real-time monitoringMulti-cloud supportAI-powered alertingAdvanced analyticsCustom dashboardsAPI access' ]
+color: 'from-green-500 to-emerald-600'
 icon: '☁️' 
-};
+}
 {
   service: 'DevOps Automation', zionPricing: {
   starter: '$39/month', professional: '$129/month', enterprise: '$399/month' 
-};
-competitors: [ ];
-features: [ 'CI/CD pipelinesInfrastructure as CodeSecurity automationMulti-cloud deploymentTeam collaborationCustom integrations' ];
-color: 'from-blue-500 to-cyan-600';
+}
+competitors: [ ]
+features: [ 'CI/CD pipelinesInfrastructure as CodeSecurity automationMulti-cloud deploymentTeam collaborationCustom integrations' ]
+color: 'from-blue-500 to-cyan-600'
 icon: '🚀' 
-}];
+}]
 return (<> <Head> <title>Pricing Comparison - Zion Tech Group | How We Stack Up Against the Competition</title> Pricing Analysis </div> </div> <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-8 leading-tight" > How We Compare to the Competition </h1> <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed mb-12" > See how Zion's micro SaaS services stack up against market leaders. Get professional-grade features at startup-friendly prices. </p> <div className="flex flex-col sm:flex-row gap-4 justify-center" > <Button href="#comparison" variant="primary" size="lg" className="bg-indigo-600 hover:bg-indigo-700 text-white" > View Comparison </Button> <Button href="/pricing" variant="outline" size="lg" className="border-indigo-500 text-indigo-400 hover:bg-indigo-500 hover:text-white" > View Our Pricing </Button> </div> </div> </section> Why Choose Zion? </h2> <p className="text-xl text-gray-400 max-w-3xl mx-auto" > Key insights that make Zion the smart choice for your business. </p> </div> <Card key= {
   index 
 }className="text-center group hover:scale-105 transition-transform duration-300" > <div className= {

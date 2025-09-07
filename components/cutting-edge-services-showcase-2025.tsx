@@ -1,25 +1,25 @@
- ];
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7 const filteredServices = allServices.filter (service => {
+]
+
   const matchesSearch = service.name.toLowerCase () .includes (searchTerm.toLowerCase () ) || service.description.toLowerCase () .includes (searchTerm.toLowerCase () ) || const containerVariants = {
   hidden: {
   opacity: 0 
-};
+}
 visible: {
   opacity: 1, transition: {
   staggerChildren: 0.1 
 }
 }
-};
+}
 const itemVariants = {
   hidden: {
   y: 20, opacity: 0 
-};
+}
 visible: {
   y: 0, opacity: 1, transition: {
   duration: 0.5 
 }
 }
-};
+}
 return (<> <Head> <title>Cutting-Edge Services Showcase 2025 - Zion Tech Group | Future Technology Solutions</title> > Cutting-Edge Services <span className="block text-2xl md:text-3xl lg:text-4xl mt-4 text-white/90" > Showcase 2025 </span> </motion.h1> <motion.p > Discover revolutionary technology solutions that are reshaping industries and defining the future. From AI consciousness to space mining, experience the cutting edge of innovation. </motion.p> {
   /* Hero Stats */ 
 }<motion.div </div>) ) 

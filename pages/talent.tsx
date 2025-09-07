@@ -1,8 +1,7 @@
-import { motion } from 'framer-motion';
-import Head from 'next/head';
-import Layout from '../components/Layout';
-import { Users, MapPin, Clock, Star } from 'lucide-react';
-
+import { motion } from 'framer-motion'
+import Head from 'next/head'
+import Layout from '../components/Layout'
+import { Users, MapPin, Clock, Star } from 'lucide-react'
 const talentPositions = [
   {
     id: 1,
@@ -13,8 +12,7 @@ const talentPositions = [
     experience: "5+ years",
     description: "Lead the development of cutting-edge AI solutions and machine learning models."
   }
-];
-
+]
 export default function TalentPage() {
   return (
     <Layout title="Talent - Zion Tech Group">
@@ -27,5 +25,5 @@ export default function TalentPage() {
         </section>
       </div>
     </Layout>
-  );
+  )
 }

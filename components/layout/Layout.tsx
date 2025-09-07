@@ -1,6 +1,9 @@
-import React, { ReactNode } from 'react';
-import Header from '../Header';
-import Footer from './Footer';
+import React, { ReactNode } from 'react'
+import Header from '../Header'
+import Footer from './Footer'
+interface LayoutProps {
+  children: ReactNode
+}
 
 export default function Layout({ children }: LayoutProps) {
   return (
@@ -10,25 +13,6 @@ export default function Layout({ children }: LayoutProps) {
         {children}
       </main>
       <Footer />
-
-interface LayoutProps {
-  children: ReactNode;
-}
-
-const Layout: React.FC<LayoutProps> = ({ children }) => {
-  return (
-    <div className="min-h-screen flex flex-col">
-      <Header />
-      <main className="flex-1">
-        {children}
-      </main>
-      <Footer />
     </div>
-  );
-<<<<<<< HEAD
+  )
 }
-=======
-};
-
-export default Layout;
->>>>>>> cursor/automate-test-improve-and-merge-code-59d5

@@ -1,13 +1,13 @@
- //Sample content data - in a real implementation, this would come from an API const contentItems: ContentItem[] = [ {
+//Sample content data - in a real implementation, this would come from an API const contentItems: ContentItem[] = [ {
   switch (sortBy) {
-  case 'date': comparison = new Date (a.date) .getTime () - new Date (b.date) .getTime ();
-break;
-case 'relevance': case 'title': comparison = a.title.localeCompare (b.title);
+  case 'date': comparison = new Date (a.date) .getTime () - new Date (b.date) .getTime ()
+break
+case 'relevance': case 'title': comparison = a.title.localeCompare (b.title)
 break 
 }return sortOrder === 'asc' ? comparison : -comparison 
-});
-return filtered;
-}, [searchTerm, selectedCategory, selectedSubcategory, selectedType, selectedRelevance, sortBy, sortOrder]);
+})
+return filtered
+}, [searchTerm, selectedCategory, selectedSubcategory, selectedType, selectedRelevance, sortBy, sortOrder])
 <div> <label className="block text-sm font-medium text-white/70 mb-2" >Category</label> <select > {
   categories.map (category => (<option key= {
   category.id 
@@ -56,9 +56,9 @@ return filtered;
 }> </span> </button>) ) 
 }</div> </div> {
   filteredItems.map ( (item) => {
-  const CategoryIcon = getCategoryIcon (item.category);
-const TypeIcon = getTypeIcon (item.type);
-const category = categories.find (c => c.id === item.category);
+  const CategoryIcon = getCategoryIcon (item.category)
+const TypeIcon = getTypeIcon (item.type)
+const category = categories.find (c => c.id === item.category)
 item.id 
 }className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 to-white/10 p-6 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300 transform hover:scale-105" > <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" /> + {
   item.tags.length - 3 
@@ -69,5 +69,5 @@ item.id
   clearAllFilters 
 }className="px-6 py-2 bg-cyan-500/20 border border-cyan-500/50 rounded-lg text-cyan-300 hover:bg-cyan-500/30 transition-all duration-200" > Reset All Filters </button> </div>) 
 }</div>) 
-};
-export default ContentCategorizer;
+}
+export default ContentCategorizer

@@ -1,31 +1,23 @@
-<<<<<<< HEAD
 import React from 'react';
 import Head from 'next/head';
-import Layout from '../components/Layout';
+import Layout from '../components/layout/Layout';
 
-export default function WebinarsPage() {
+export default function webinars() {
   return (
-    <Layout 
-      title="Webinars - Zion Tech Group"
-      description="Join our educational webinars and learn from industry experts"
-    >
+    <Layout>
+      <Head>
+        <title>Webinars - Zion Tech Group</title>
+        <meta name="description" content="Webinars solutions and services." />
+      </Head>
+      
       <div className="min-h-screen bg-gray-50">
-        <section className="bg-gradient-to-r from-blue-600 to-purple-600 py-20">
-          <div className="container mx-auto px-4">
-            <div className="text-center text-white">
-              <h1 className="text-4xl md:text-6xl font-bold mb-6">
-                Webinars
-              </h1>
-              <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
-                Join our educational webinars and learn from industry experts
-              </p>
-            </div>
-          </div>
-        </section>
+        <div className="container mx-auto px-6 py-16">
+          <h1 className="text-4xl font-bold text-gray-900 mb-8">Webinars</h1>
+          <p className="text-lg text-gray-600">
+            Professional webinars solutions tailored to your business needs.
+          </p>
+        </div>
       </div>
     </Layout>
   );
 }
-=======
- <> <SEO title="Webinars | Zion Tech Group" description="Upcoming webinars and on-demand sessions." canonical="/webinars" /> <div className="container mx-auto px-4 py-16" > <h1 className="text-4xl font-bold mb-4" >Webinars</h1> <p className="text-gray-300" >No upcoming webinars at this time. Check back soon.</p> </div> </> 
->>>>>>> cursor/automate-test-improve-and-merge-code-59d5

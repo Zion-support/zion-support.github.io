@@ -1,52 +1,52 @@
- window.addEventListener ('scroll', handleScroll);
+window.addEventListener ('scroll', handleScroll)
 return () => window.removeEventListener ('scroll', handleScroll) 
-}, []);
-];
+}, [])
+]
 dropdownItems: [ {
   name: 'AI & Machine Learning', href: '/services?category=ai-ml' 
-};
+}
 {
   name: 'Quantum Computing', href: '/services?category=quantum' 
-};
+}
 {
   name: 'Space Technology', href: '/services?category=space' 
-};
+}
 {
   name: 'Biotech & Healthcare', href: '/services?category=biotech' 
-};
+}
 {
   name: 'Financial Services', href: '/services?category=finance' 
-};
+}
 {
   name: 'Cybersecurity', href: '/services?category=security' 
-};
+}
 {
   name: 'Edge Computing', href: '/services?category=edge' 
-};
+}
 {
   name: 'Blockchain', href: '/services?category=blockchain' 
-};
+}
 {
   name: 'View All Services', href: '/services' 
 }] 
-};
+}
 {
   name: 'Solutions', href: '/solutions', hasDropdown: true, dropdownItems: [ {
   name: 'Enterprise Solutions', href: '/solutions?type=enterprise' 
-};
+}
 {
   name: 'Startup Solutions', href: '/solutions?type=startup' 
-};
+}
 {
   name: 'Government Solutions', href: '/solutions?type=government' 
-};
+}
 {
   name: 'Healthcare Solutions', href: '/solutions?type=healthcare' 
-};
+}
 {
   name: 'Financial Solutions', href: '/solutions?type=financial' 
 }] 
-};
+}
 return (<nav className= {
   `fixed top-0 left-0 right-0 z-50 transition-all duration-300 $ {
   isScrolled ? 'bg-black/80 backdrop-blur-xl border-b border-cyan-500/20 shadow-2xl shadow-cyan-500/10' > <Link href="/" className="flex items-center space-x-3 group" > <div className="relative" > <div className="w-10 h-10 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300" > <Zap className="w-6 h-6 text-white" /> </div> <div className="absolute inset-0 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-lg blur-lg opacity-50 group-hover:opacity-75 transition-opacity duration-300" /> </div> <div className="hidden sm:block" > <div className="text-xl font-bold text-white group-hover:text-cyan-400 transition-colors duration-300" > Zion Tech Group </div> <div className="text-xs text-cyan-400" >Revolutionary Technology</div> </div> </a> </motion.div> <span> {
@@ -85,5 +85,5 @@ return (<nav className= {
 }</div>) ) 
 }</div> </div> </div> > Get Started Today </a> </div> </div> </motion.div>) 
 }</AnimatePresence> </nav>) 
-};
-export default EnhancedNavigation;
+}
+export default EnhancedNavigation

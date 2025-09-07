@@ -1,18 +1,17 @@
-import React, { useState, useEffect } from 'react';
-import Head from 'next/head';
-
+import React, { useState, useEffect } from 'react'
+import Head from 'next/head'
 interface AnalyticsData {
-  totalUsers: number;
-  activeUsers: number;
-  totalProjects: number;
-  completedProjects: number;
-  totalRevenue: number;
-  monthlyRevenue: number;
-  averageProjectValue: number;
-  userGrowth: Array<{ month: string; users: number }>;
-  revenueGrowth: Array<{ month: string; revenue: number }>;
-  topFeatures: Array<{ name: string; usage: number }>;
-  userSatisfaction: number;
+  totalUsers: number
+  activeUsers: number
+  totalProjects: number
+  completedProjects: number
+  totalRevenue: number
+  monthlyRevenue: number
+  averageProjectValue: number
+  userGrowth: Array<{ month: string; users: number }>
+  revenueGrowth: Array<{ month: string; revenue: number }>
+  topFeatures: Array<{ name: string; usage: number }>
+  userSatisfaction: number
 }
 
 const mockAnalyticsData: AnalyticsData = {
@@ -51,35 +50,30 @@ const mockAnalyticsData: AnalyticsData = {
     { name: 'Data Analytics', usage: 42 }
   ],
   userSatisfaction: 4.7
-};
-
+}
 const AdminUsageAnalyticsPage: React.FC = () => {
-  const [analytics, setAnalytics] = useState<AnalyticsData | null>(null);
-  const [loading, setLoading] = useState(true);
-  const [timeRange, setTimeRange] = useState<'7d' | '30d' | '90d' | '1y'>('30d');
-  const [selectedMetric, setSelectedMetric] = useState<'users' | 'revenue' | 'projects'>('users');
-
+  const [analytics, setAnalytics] = useState<AnalyticsData | null>(null)
+  const [loading, setLoading] = useState(true)
+  const [timeRange, setTimeRange] = useState<'7d' | '30d' | '90d' | '1y'>('30d')
+  const [selectedMetric, setSelectedMetric] = useState<'users' | 'revenue' | 'projects'>('users')
   useEffect(() => {
     // Simulate loading analytics data
     setTimeout(() => {
-      setAnalytics(mockAnalyticsData);
-      setLoading(false);
-    }, 1000);
-  }, []);
-
+      setAnalytics(mockAnalyticsData)
+      setLoading(false)
+    }, 1000)
+  }, [])
   const formatCurrency = (amount: number) => {
     return new Intl.NumberFormat('en-US', {
       style: 'currency',
       currency: 'USD',
       minimumFractionDigits: 0,
       maximumFractionDigits: 0
-    }).format(amount);
-  };
-
+    }).format(amount)
+  }
   const formatNumber = (num: number) => {
-    return new Intl.NumberFormat('en-US').format(num);
-  };
-
+    return new Intl.NumberFormat('en-US').format(num)
+  }
   if (loading) {
     return (
       <>
@@ -90,7 +84,7 @@ const AdminUsageAnalyticsPage: React.FC = () => {
           <div className="text-center py-8">Loading analytics...</div>
         </main>
       </>
-    );
+    )
   }
 
   if (!analytics) {
@@ -103,7 +97,7 @@ const AdminUsageAnalyticsPage: React.FC = () => {
           <div className="text-center py-8 text-red-600">Failed to load analytics data</div>
         </main>
       </>
-    );
+    )
   }
 
   return (
@@ -250,7 +244,6 @@ const AdminUsageAnalyticsPage: React.FC = () => {
         </div>
       </main>
     </>
-  );
-};
-
-export default AdminUsageAnalyticsPage;
+  )
+}
+export default AdminUsageAnalyticsPage

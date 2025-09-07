@@ -1,18 +1,17 @@
-import React, { useState, useEffect } from 'react';
-import Head from 'next/head';
-
+import React, { useState, useEffect } from 'react'
+import Head from 'next/head'
 interface Partner {
-  id: string;
-  code: string;
-  name: string;
-  status: 'active' | 'inactive' | 'pending';
-  commission: number;
-  contactEmail: string;
-  contactPhone: string;
-  joinedAt: string;
-  lastActivity: string;
-  totalReferrals: number;
-  totalEarnings: number;
+  id: string
+  code: string
+  name: string
+  status: 'active' | 'inactive' | 'pending'
+  commission: number
+  contactEmail: string
+  contactPhone: string
+  joinedAt: string
+  lastActivity: string
+  totalReferrals: number
+  totalEarnings: number
 }
 
 const mockPartners: Partner[] = [
@@ -55,30 +54,26 @@ const mockPartners: Partner[] = [
     totalReferrals: 0,
     totalEarnings: 0
   }
-];
-
+]
 const AdminPartnersPage: React.FC = () => {
-  const [partners, setPartners] = useState<Partner[]>([]);
-  const [loading, setLoading] = useState(true);
-  const [searchTerm, setSearchTerm] = useState('');
-  const [statusFilter, setStatusFilter] = useState('all');
-
+  const [partners, setPartners] = useState<Partner[]>([])
+  const [loading, setLoading] = useState(true)
+  const [searchTerm, setSearchTerm] = useState('')
+  const [statusFilter, setStatusFilter] = useState('all')
   useEffect(() => {
     // Simulate loading partners
     setTimeout(() => {
-      setPartners(mockPartners);
-      setLoading(false);
-    }, 1000);
-  }, []);
-
+      setPartners(mockPartners)
+      setLoading(false)
+    }, 1000)
+  }, [])
   const filteredPartners = partners.filter(partner => {
     const matchesSearch = partner.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          partner.code.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                         partner.contactEmail.toLowerCase().includes(searchTerm.toLowerCase());
-    const matchesStatus = statusFilter === 'all' || partner.status === statusFilter;
-    return matchesSearch && matchesStatus;
-  });
-
+                         partner.contactEmail.toLowerCase().includes(searchTerm.toLowerCase())
+    const matchesStatus = statusFilter === 'all' || partner.status === statusFilter
+    return matchesSearch && matchesStatus
+  })
   const handleStatusChange = (partnerId: string, newStatus: Partner['status']) => {
     setPartners(prev => 
       prev.map(partner => 
@@ -86,23 +81,20 @@ const AdminPartnersPage: React.FC = () => {
           ? { ...partner, status: newStatus }
           : partner
       )
-    );
-  };
-
+    )
+  }
   const getStatusColor = (status: string) => {
     switch (status) {
-      case 'active': return 'bg-green-100 text-green-800';
-      case 'inactive': return 'bg-red-100 text-red-800';
-      case 'pending': return 'bg-yellow-100 text-yellow-800';
-      default: return 'bg-gray-100 text-gray-800';
+      case 'active': return 'bg-green-100 text-green-800'
+      case 'inactive': return 'bg-red-100 text-red-800'
+      case 'pending': return 'bg-yellow-100 text-yellow-800'
+      default: return 'bg-gray-100 text-gray-800'
     }
-  };
-
-  const totalPartners = partners.length;
-  const activePartners = partners.filter(p => p.status === 'active').length;
-  const totalEarnings = partners.reduce((sum, p) => sum + p.totalEarnings, 0);
-  const totalReferrals = partners.reduce((sum, p) => sum + p.totalReferrals, 0);
-
+  }
+  const totalPartners = partners.length
+  const activePartners = partners.filter(p => p.status === 'active').length
+  const totalEarnings = partners.reduce((sum, p) => sum + p.totalEarnings, 0)
+  const totalReferrals = partners.reduce((sum, p) => sum + p.totalReferrals, 0)
   return (
     <>
       <Head>
@@ -280,7 +272,6 @@ const AdminPartnersPage: React.FC = () => {
         </div>
       </main>
     </>
-  );
-};
-
-export default AdminPartnersPage;
+  )
+}
+export default AdminPartnersPage

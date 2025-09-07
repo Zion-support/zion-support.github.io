@@ -1,6 +1,6 @@
- left: `$ {
+left: `$ {
   Math.random () * 100 
-}%`;
+}%`
 top: `$ {
   Math.random () * 100 
 }%` 
@@ -18,7 +18,7 @@ top: `$ {
   /* Main Heading */ 
 }<motion.h1 > <span className="bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent" > The Future of </span> <br /> <span className="text-white" >Technology is Here</span> </motion.h1> {
   /* Subheading */ 
-}<motion.p > Experience the revolution with our cutting-edge AI consciousness, quantum computing;
+}<motion.p > Experience the revolution with our cutting-edge AI consciousness, quantum computing
 space technology, and emerging tech solutions. Transform your business with technologies that were once science fiction. </motion.p> {
   /* CTA Buttons */ 
 }<motion.div > <Link href="/services" className="group inline-flex items-center space-x-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-xl font-semibold text-lg transform transition-all duration-300 hover:shadow-xl hover:shadow-cyan-500/30 hover:shadow-2xl hover:shadow-purple-500/25" > <span>Explore All Services</span> <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" /> </a> <Link </motion.div> {

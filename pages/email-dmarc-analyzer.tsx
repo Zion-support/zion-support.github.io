@@ -1,3 +1,23 @@
- </Head> 
-}</div> <div className="flex gap-3" > <a href="/contact" className="px-6 py-3 rounded-xl bg-gradient-to-r from-amber-600 to-orange-700 text-white" >Start from $39/mo</Link> <a href="/market-pricing" className="px-6 py-3 rounded-xl border border-gray-700 text-gray-200" >See market pricing</Link> </div> </div> </div> </Layout>) 
+import React from 'react';
+import Head from 'next/head';
+import Layout from '../components/layout/Layout';
+
+export default function emaildmarcanalyzer() {
+  return (
+    <Layout>
+      <Head>
+        <title>Email Dmarc Analyzer - Zion Tech Group</title>
+        <meta name="description" content="Email Dmarc Analyzer solutions and services." />
+      </Head>
+      
+      <div className="min-h-screen bg-gray-50">
+        <div className="container mx-auto px-6 py-16">
+          <h1 className="text-4xl font-bold text-gray-900 mb-8">Email Dmarc Analyzer</h1>
+          <p className="text-lg text-gray-600">
+            Professional email dmarc analyzer solutions tailored to your business needs.
+          </p>
+        </div>
+      </div>
+    </Layout>
+  );
 }

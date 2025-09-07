@@ -1,11 +1,10 @@
- try {
-  if (usingPlaceholder) {
-  return res.status (200) .json ({
-  for (const ev of events) {
-  const {
-  count, error 
-}= await supabase .from ('referral events') .select ('*', {
-  count: 'exact', head: true 
-}) .eq ('partner code', code) 
-}
+import { NextApiRequest, NextApiResponse } from 'next';
+
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  if (req.method !== 'GET') {
+    res.setHeader('Allow', ['GET']);
+    return res.status(405).end('Method Not Allowed');
+  }
+  
+  res.status(200).json({ message: 'Endpoint working' });
 }

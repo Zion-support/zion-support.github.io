@@ -1,6 +1,6 @@
-import { motion } from 'framer-motion';
-import Head from 'next/head';
-import Link from 'next/link';
+import { motion } from 'framer-motion'
+import Head from 'next/head'
+import Link from 'next/link'
 import { 
   Calculator, 
   CheckCircle, 
@@ -12,10 +12,9 @@ import {
   DollarSign,
   Users,
   Zap
-} from 'lucide-react';
-import MainLayout from '../src/components/layout/MainLayout';
-import { useState } from 'react';
-
+} from 'lucide-react'
+import MainLayout from '../src/components/layout/MainLayout'
+import { useState } from 'react'
 const serviceTypes = [
   { id: 'ai', name: 'AI Services', description: 'Machine Learning, NLP, Computer Vision' },
   { id: 'it', name: 'IT Services', description: 'Cloud, DevOps, Cybersecurity' },
@@ -25,18 +24,16 @@ const serviceTypes = [
   { id: 'ecommerce', name: 'E-commerce', description: 'Online Stores, Marketplaces' },
   { id: 'enterprise', name: 'Enterprise', description: 'Large-scale Business Solutions' },
   { id: 'custom', name: 'Custom Development', description: 'Tailored Software Solutions' }
-];
-
+]
 const projectSizes = [
   { id: 'small', name: 'Small Project', description: '1-4 weeks', price: '$5,000 - $15,000' },
   { id: 'medium', name: 'Medium Project', description: '1-3 months', price: '$15,000 - $50,000' },
   { id: 'large', name: 'Large Project', description: '3-6 months', price: '$50,000 - $150,000' },
   { id: 'enterprise', name: 'Enterprise', description: '6+ months', price: '$150,000+' }
-];
-
+]
 export default function QuotePage() {
-  const [selectedServices, setSelectedServices] = useState([]);
-  const [selectedSize, setSelectedSize] = useState('');
+  const [selectedServices, setSelectedServices] = useState([])
+  const [selectedSize, setSelectedSize] = useState('')
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -45,22 +42,19 @@ export default function QuotePage() {
     projectDescription: '',
     timeline: '',
     budget: ''
-  });
-
+  })
   const handleServiceToggle = (serviceId) => {
     setSelectedServices(prev => 
       prev.includes(serviceId) 
         ? prev.filter(id => id !== serviceId)
         : [...prev, serviceId]
-    );
-  };
-
+    )
+  }
   const handleSubmit = (e) => {
-    e.preventDefault();
+    e.preventDefault()
     // Handle form submission
-    // console.log('Form submitted:', { selectedServices, selectedSize, formData });
-  };
-
+    // console.log('Form submitted:', { selectedServices, selectedSize, formData })
+  }
   return (
     <MainLayout
       title="Get a Quote - Zion Tech Group"
@@ -358,5 +352,5 @@ export default function QuotePage() {
         </section>
       </div>
     </MainLayout>
-  );
+  )
 }

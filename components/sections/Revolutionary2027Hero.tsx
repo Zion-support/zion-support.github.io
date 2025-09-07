@@ -1,15 +1,15 @@
- const containerVariants = {
+const containerVariants = {
   hidden: {
   opacity: 0 
-};
+}
 visible: {
   opacity: 1, transition: {
   staggerChildren: 0.1 
 }
 }
-};
 }
-};
+}
+}
 return (</div> {
   /* Floating Icons */ 
 }{
@@ -20,7 +20,7 @@ return (</div> {
   /* Scroll Indicator */ 
 }<motion.div > <div className="w-6 h-10 border-2 border-purple-400/50 rounded-full flex justify-center" > <motion.div /> </div> </motion.div> left: `$ {
   Math.random () * 100 
-}%`;
+}%`
 top: `$ {
   Math.random () * 100 
 }%` 
@@ -35,5 +35,5 @@ top: `$ {
 }
 }/>) ) 
 }</div> </section>) 
-};
-export default Revolutionary2027Hero;
+}
+export default Revolutionary2027Hero

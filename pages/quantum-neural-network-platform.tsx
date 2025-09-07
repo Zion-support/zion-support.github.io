@@ -1,11 +1,11 @@
- const QuantumNeuralNetworkPlatform = () => {
+const QuantumNeuralNetworkPlatform = () => {
   const features = [ {
-  "1000x faster neural network training";
-"Quantum-level security and encryption";
-"Scalable consciousness simulation";
-"Real-time quantum decision making";
-"Advanced pattern recognition";
-"Future-proof technology foundation" ];
+  "1000x faster neural network training"
+"Quantum-level security and encryption"
+"Scalable consciousness simulation"
+"Real-time quantum decision making"
+"Advanced pattern recognition"
+"Future-proof technology foundation" ]
 {
   opacity: 0, y: 20 
 }
@@ -37,5 +37,5 @@
   once: true 
 }
 }> Ready to Experience the Future? </h2> <p className="text-xl text-gray-400 mb-8" > Join the quantum revolution and transform your AI capabilities today </p> <div className="flex flex-col sm:flex-row gap-4 justify-center" > <Link href="/contact" className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-500 to-blue-500 text-white font-semibold rounded-lg hover:from-purple-600 hover:to-blue-600 transition-all duration-200 text-lg" > Start Your Journey <Rocket className="ml-2 w-6 h-6" /> </Link> <Link href="/services" className="inline-flex items-center px-8 py-4 border border-purple-500 text-purple-400 font-semibold rounded-lg hover:bg-purple-500 hover:text-white transition-all duration-200 text-lg" > Explore All Services </Link> </div> </motion.div> </div> </section> </div> </>) 
-};
-export default QuantumNeuralNetworkPlatform;
+}
+export default QuantumNeuralNetworkPlatform

@@ -1,14 +1,14 @@
- type Experiment = {
-  title: string;
-hypothesis?: string;
-metric?: string;
-effort?: number;
+type Experiment = {
+  title: string
+hypothesis?: string
+metric?: string
+effort?: number
 impact?: number 
-};
+}
 type Props = {
-  updatedAt: string | null;
+  updatedAt: string | null
 items: Experiment[] 
-};
+}
 export default function CurationPage ({
   updatedAt, items 
 }: Props) {
@@ -21,17 +21,17 @@ export default function CurationPage ({
 }</div> </main>) 
 }return {
   props: {
-  updatedAt: parsed.updatedAt || null;
+  updatedAt: parsed.updatedAt || null
 items: parsed.items || [] 
-};
+}
 revalidate: 300 
 }
 }catch {
   return {
   props: {
-  updatedAt: null;
+  updatedAt: null
 items: [] 
-};
+}
 revalidate: 300 
 }
 }

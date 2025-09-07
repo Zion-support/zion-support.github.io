@@ -1,10 +1,10 @@
- export interface TreeNode {
-  name: string;
-path: string;
-type: "folder" | "file";
-exists?: boolean;
-};
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7 return (<div className="ml-2"> <div className="flex items-center gap-2 py-1"> </button>) : (<span className="inline-block w-4" />) 
+export interface TreeNode {
+  name: string
+path: string
+type: "folder" | "file"
+exists?: boolean
+}
+
 }</div> </div> {
   hasChildren && open && (<div className="ml-4 border-l pl-2"> {
   node.children!.map ( (child) => (<NodeItem key= {
@@ -32,4 +32,4 @@ exists?: boolean;
   onDeploy 
 }/>) ) 
 }</div>) 
-}export default Tree;
+}export default Tree

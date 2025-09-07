@@ -1,20 +1,23 @@
- //Add static/dynamic assets for (const asset of assets) {
-  if (asset.type === 'text' && asset.content != null) {
-  </div>) 
-};
-return (<div> <Head> <title>Media Kit - Zion</title> <meta name="description" content="Zion media kit: brand, assets, legal, and rollout playbooks." /> </Head> </div> </header> <button key= {
-  b 
-}onClick= {
-  () => setBundle (b) 
-}className= {
-  `px-3 py-1 rounded border $ {
-  bundle===b ? 'bg-blue-600 text-white border-blue-600':'bg-white' 
-}` 
-}> {
-  b 
-}</button> 
-}</div> <p className="text-xs text-gray-500 mt-2" >Toggle to tailor assets and legal docs.</p> </div> </ul>) 
-}</div> </section> </li>) ) 
-}</ul> </section> </div> </section> </div> </div>) 
-};
-export default KitPage;
+import React from 'react';
+import Head from 'next/head';
+import Layout from '../components/layout/Layout';
+
+export default function kit() {
+  return (
+    <Layout>
+      <Head>
+        <title>Kit - Zion Tech Group</title>
+        <meta name="description" content="Kit solutions and services." />
+      </Head>
+      
+      <div className="min-h-screen bg-gray-50">
+        <div className="container mx-auto px-6 py-16">
+          <h1 className="text-4xl font-bold text-gray-900 mb-8">Kit</h1>
+          <p className="text-lg text-gray-600">
+            Professional kit solutions tailored to your business needs.
+          </p>
+        </div>
+      </div>
+    </Layout>
+  );
+}

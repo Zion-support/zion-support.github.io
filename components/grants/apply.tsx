@@ -1,4 +1,4 @@
- const save = async (submit: boolean) => {
+const save = async (submit: boolean) => {
   try {
   <option value="">Select sector</option> {
   categories.map ( (c) => <option key= {

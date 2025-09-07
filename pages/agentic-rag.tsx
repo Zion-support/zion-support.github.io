@@ -1,7 +1,6 @@
-import React from 'react';
-import Head from 'next/head';
-import Layout from '../components/layout/Layout';
-
+import React from 'react'
+import Head from 'next/head'
+import Layout from '../components/layout/Layout'
 const AgenticRAG: React.FC = () => {
   return (
     <Layout>
@@ -139,7 +138,6 @@ const AgenticRAG: React.FC = () => {
         </div>
       </main>
     </Layout>
-  );
-};
-
-export default AgenticRAG;
+  )
+}
+export default AgenticRAG

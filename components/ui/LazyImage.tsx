@@ -1,8 +1,8 @@
- useEffect ( () => {
+useEffect ( () => {
   const observer = new IntersectionObserver ( ([entry]) => {
   if (entry.isIntersecting) {
   return () => observer.disconnect () 
-}, [threshold]);
+}, [threshold])
 return (<div className= {
   `relative overflow-hidden $ {
   className 
@@ -26,5 +26,5 @@ return (<div className= {
   imgRef 
 }/>) 
 }</div>) 
-};
-export default LazyImage;
+}
+export default LazyImage

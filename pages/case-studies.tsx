@@ -1,32 +1,23 @@
-<<<<<<< HEAD
 import React from 'react';
 import Head from 'next/head';
-import Link from 'next/link';
-import Layout from '../components/Layout';
+import Layout from '../components/layout/Layout';
 
-export default function CaseStudiesPage() {
+export default function casestudies() {
   return (
-    <Layout 
-      title="Case Studies - Zion Tech Group"
-      description="Explore our successful projects and client success stories"
-    >
+    <Layout>
+      <Head>
+        <title>Case Studies - Zion Tech Group</title>
+        <meta name="description" content="Case Studies solutions and services." />
+      </Head>
+      
       <div className="min-h-screen bg-gray-50">
-        <section className="bg-gradient-to-r from-blue-600 to-purple-600 py-20">
-          <div className="container mx-auto px-4">
-            <div className="text-center text-white">
-              <h1 className="text-4xl md:text-6xl font-bold mb-6">
-                Case Studies
-              </h1>
-              <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
-                Explore our successful projects and client success stories
-              </p>
-            </div>
-          </div>
-        </section>
+        <div className="container mx-auto px-6 py-16">
+          <h1 className="text-4xl font-bold text-gray-900 mb-8">Case Studies</h1>
+          <p className="text-lg text-gray-600">
+            Professional case studies solutions tailored to your business needs.
+          </p>
+        </div>
       </div>
     </Layout>
   );
 }
-=======
- </Head> </section> </Layout> 
->>>>>>> cursor/automate-test-improve-and-merge-code-59d5

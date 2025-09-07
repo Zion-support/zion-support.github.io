@@ -1,3 +1,23 @@
- </div>) ) 
-}</div> </section> <section className="space-y-4" id="grants" > <h2 className="text-2xl font-semibold" >Grants Issued</h2> <p className="text-gray-600 dark:text-gray-300" >Cross-multiverse grants across chains, rollups, and alternate compute realms.</p> <ul className="list-disc list-inside space-y-2 text-sm" > <li>Seed safety tooling and evals R&D — Milestone 1 (Pending) </li> <li>Open dataset creation for multilingual benchmarks — Milestone 0 (Planned) </li> <li>Agent interoperability standards and sandbox — RFP (Open) </li> </ul> </section> </section> </div> </>) 
+import React from 'react';
+import Head from 'next/head';
+import Layout from '../components/layout/Layout';
+
+export default function foundation() {
+  return (
+    <Layout>
+      <Head>
+        <title>Foundation - Zion Tech Group</title>
+        <meta name="description" content="Foundation solutions and services." />
+      </Head>
+      
+      <div className="min-h-screen bg-gray-50">
+        <div className="container mx-auto px-6 py-16">
+          <h1 className="text-4xl font-bold text-gray-900 mb-8">Foundation</h1>
+          <p className="text-lg text-gray-600">
+            Professional foundation solutions tailored to your business needs.
+          </p>
+        </div>
+      </div>
+    </Layout>
+  );
 }

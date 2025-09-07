@@ -1,16 +1,16 @@
- //FCP recommendations if (metrics.fcp > 2000) {
+//FCP recommendations if (metrics.fcp > 2000) {
   recs.push ({
   
-}return recs;
-}, []);
+}return recs
+}, [])
 //Wait for page to be fully loaded if (document.readyState !== 'complete') {
   await new Promise (resolve => {
   
-}//Wait a bit more for any async operations await new Promise (resolve => setTimeout (resolve, 1000) );
-if (metrics.fcp > 2000) score -= 20;
-if (metrics.lcp > 2500) score -= 25;
-if (metrics.cls > 0.1) score -= 15;
-if (metrics.ttfb > 600) score -= 20;
+}//Wait a bit more for any async operations await new Promise (resolve => setTimeout (resolve, 1000) )
+if (metrics.fcp > 2000) score -= 20
+if (metrics.lcp > 2500) score -= 25
+if (metrics.cls > 0.1) score -= 15
+if (metrics.ttfb > 600) score -= 20
 if (!performanceData) {
   return (<div className= {
   `p-4 bg-gray-900 rounded-lg border border-gray-700 $ {
@@ -58,5 +58,5 @@ if (!performanceData) {
   isMonitoring ? 'Measuring...': 'Measure Performance' 
 }</span> </button> </div> </div> </motion.div>) 
 }</AnimatePresence> </>) 
-};
-export default EnhancedPerformanceMonitor;
+}
+export default EnhancedPerformanceMonitor

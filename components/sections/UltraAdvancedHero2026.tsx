@@ -1,23 +1,23 @@
- const containerVariants = {
+const containerVariants = {
   hidden: {
   opacity: 0 
-};
+}
 visible: {
   opacity: 1, transition: {
   staggerChildren: 0.1 
 }
 }
-};
+}
 const itemVariants = {
   hidden: {
   opacity: 0, y: 30 
-};
+}
 visible: {
   opacity: 1, y: 0, transition: {
   duration: 0.8 
 }
 }
-};
+}
 return (</div> <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center" > <motion.div </motion.div> {
   /* Main Heading */ 
 }<motion.h1 > <span className="bg-gradient-to-r from-purple-400 via-pink-400 to-cyan-400 bg-clip-text text-transparent" > The Future </span> <br /> <span className="text-white" > is Now </span> </motion.h1> {

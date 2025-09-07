@@ -1,13 +1,13 @@
- canvas.width = window.innerWidth * (window.devicePixelRatio || 1);
-canvas.height = window.innerHeight * (window.devicePixelRatio || 1);
+canvas.width = window.innerWidth * (window.devicePixelRatio || 1)
+canvas.height = window.innerHeight * (window.devicePixelRatio || 1)
 if (ctx) {
   
 }
-};
-//Update and draw particles //Wrap around edges if (particle.x < 0) particle.x = canvas.width / (window.devicePixelRatio || 1);
-if (particle.x > canvas.width / (window.devicePixelRatio || 1) ) particle.x = 0;
-if (particle.y < 0) particle.y = canvas.height / (window.devicePixelRatio || 1);
-if (particle.y > canvas.height / (window.devicePixelRatio || 1) ) particle.y = 0;
+}
+//Update and draw particles //Wrap around edges if (particle.x < 0) particle.x = canvas.width / (window.devicePixelRatio || 1)
+if (particle.x > canvas.width / (window.devicePixelRatio || 1) ) particle.x = 0
+if (particle.y < 0) particle.y = canvas.height / (window.devicePixelRatio || 1)
+if (particle.y > canvas.height / (window.devicePixelRatio || 1) ) particle.y = 0
 //Draw particle if (maxDistance > 0) {
   particles.forEach ( (otherParticle, otherIndex) => {
   if (index !== otherIndex) {
@@ -15,10 +15,10 @@ if (particle.y > canvas.height / (window.devicePixelRatio || 1) ) particle.y = 0
 }
 }) 
 }
-});
-initParticles ();
-updateParticles ();
-window.addEventListener ('resize', handleResize);
+})
+initParticles ()
+updateParticles ()
+window.addEventListener ('resize', handleResize)
 return (<> {
   /* Fixed Background Canvas */ 
 }<canvas backgroundImage: `linear-gradient (rgba (139, 92, 246, 0.3) 1px, transparent 1px), linear-gradient (90deg, rgba (139, 92, 246, 0.3) 1px, transparent 1px) `, backgroundSize: '50px 50px' 

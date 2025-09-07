@@ -1,4 +1,23 @@
- return (<> <Head> ← Back to Case Studies </Link> </nav> </div>) ) 
-}</div> </section> </div> </div>) ) 
-}</div> </section> This case study demonstrates the real impact of AI automation in content generation. Let's discuss how we can help you achieve similar results. </p> <Link href="/contact" className="bg-gradient-to-r from-purple-400 to-cyan-400 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-500 hover:to-cyan-500 transition-all duration-300" > Get Started </Link> <Link href="/case-studies" className="px-8 py-4 border border-white/20 rounded-lg text-white hover:border-purple-400/50 transition-all duration-300" > View More Case Studies </Link> </div> </div> </section> </div> </main> </div> </>) 
+import React from 'react';
+import Head from 'next/head';
+import Layout from '../../components/layout/Layout';
+
+export default function contentgenerationscale() {
+  return (
+    <Layout>
+      <Head>
+        <title>Content Generation Scale - Zion Tech Group</title>
+        <meta name="description" content="Content Generation Scale solutions and services." />
+      </Head>
+      
+      <div className="min-h-screen bg-gray-50">
+        <div className="container mx-auto px-6 py-16">
+          <h1 className="text-4xl font-bold text-gray-900 mb-8">Content Generation Scale</h1>
+          <p className="text-lg text-gray-600">
+            Professional content generation scale solutions tailored to your business needs.
+          </p>
+        </div>
+      </div>
+    </Layout>
+  );
 }

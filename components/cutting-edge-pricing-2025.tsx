@@ -1,24 +1,24 @@
- const filteredServices = selectedCategory === 'all' ? allServices : allServices.filter (service => service.category === selectedCategory);
+const filteredServices = selectedCategory === 'all' ? allServices : allServices.filter (service => service.category === selectedCategory)
 const containerVariants = {
   hidden: {
   opacity: 0 
-};
+}
 visible: {
   opacity: 1, transition: {
   staggerChildren: 0.1 
 }
 }
-};
+}
 const itemVariants = {
   hidden: {
   y: 20, opacity: 0 
-};
+}
 visible: {
   y: 0, opacity: 1, transition: {
   duration: 0.5 
 }
 }
-};
+}
 return (<> <Head> <title>Cutting-Edge Pricing 2025 - Zion Tech Group | Future Technology Solutions</title> > Cutting-Edge <span className="block text-2xl md:text-3xl lg:text-4xl mt-4 text-white/90" > Pricing 2025 </span> </motion.h1> <motion.p > Experience revolutionary technology at competitive prices. Our cutting-edge services are designed to give you a competitive advantage while maintaining affordability and value. </motion.p> {
   /* Hero Stats */ 
 }<motion.div </div>) ) 

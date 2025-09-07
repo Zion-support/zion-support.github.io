@@ -1,7 +1,6 @@
-import React from 'react';
-import Head from 'next/head';
-import Layout from '../components/layout/Layout';
-
+import React from 'react'
+import Head from 'next/head'
+import Layout from '../components/layout/Layout'
 const AIConsciousnessEvolution2025: React.FC = () => {
   return (
     <Layout>
@@ -74,7 +73,6 @@ const AIConsciousnessEvolution2025: React.FC = () => {
         </div>
       </main>
     </Layout>
-  );
-};
-
-export default AIConsciousnessEvolution2025;
+  )
+}
+export default AIConsciousnessEvolution2025

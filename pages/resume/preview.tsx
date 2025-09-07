@@ -1,21 +1,23 @@
- > <option value="light" >Light</option> <option value="dark" >Dark</option> </select>) ) 
-}</select> </>) 
-}</div> </div> <PdfExportButton targetRef= {
-  targetRef 
-}fileName= {
-  `resume-$ {
-  activeData.name.replace (/\s+/g, '-') .toLowerCase () 
-}.pdf` 
-}/> </div> </div>) 
-}if (!user) {
-  return {
-  redirect: {
-  
-}//Placeholder: fetch resume data for the logged-in user and versions if any const initialData: ResumeData = {
-  name: 'Your Name', contact: {
-  email: 'you@example.com', phone: '+1 555-123-4567', location: 'City, Country', website: 'https://example.com' 
-};
-summary: 'Experienced AI engineer with a focus on LLM apps, autonomous agents, and scalable cloud-native systems.';
-skills: ['AI EngineeringPrompt DesignTypeScriptNode.jsNext.js'];
-technologies: ['OpenAISupabasePostgresVercelDocker'];
-experience: [ 
+import React from 'react';
+import Head from 'next/head';
+import Layout from '../components/layout/Layout';
+
+export default function preview() {
+  return (
+    <Layout>
+      <Head>
+        <title>Preview - Zion Tech Group</title>
+        <meta name="description" content="Preview solutions and services." />
+      </Head>
+      
+      <div className="min-h-screen bg-gray-50">
+        <div className="container mx-auto px-6 py-16">
+          <h1 className="text-4xl font-bold text-gray-900 mb-8">Preview</h1>
+          <p className="text-lg text-gray-600">
+            Professional preview solutions tailored to your business needs.
+          </p>
+        </div>
+      </div>
+    </Layout>
+  );
+}

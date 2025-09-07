@@ -1,12 +1,12 @@
- if (!isOpen) return null;
+if (!isOpen) return null
 async function submit () {
-  if (rating < 1) return onClose (false);
-setLoading (true);
+  if (rating < 1) return onClose (false)
+setLoading (true)
 try {
   
 }catch {
   
-}setLoading (false);
+}setLoading (false)
 onClose (true) 
 }<button key= {
   n 

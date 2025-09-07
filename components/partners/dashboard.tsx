@@ -1,4 +1,3 @@
- 
 }
 }async function fetchUsage () {
   headers: token ? {
@@ -8,10 +7,10 @@
 }: {
   
 }
-});
-const data = await res.json ();
-setUsage (data.summary || null);
-setLoading (false);
+})
+const data = await res.json ()
+setUsage (data.summary || null)
+setLoading (false)
 }
 }
 }return (<div className="min-h-screen bg-gray-50 text-gray-900"> <Head> <title>Zion Partner Dashboard</title> </Head> <div className="max-w-5xl mx-auto py-12 px-4"> <h1 className="text-3xl font-semibold mb-2">Partner Dashboard</h1> <p className="text-gray-600 mb-6">Manage access, view usage, and download SDKs.</p> {

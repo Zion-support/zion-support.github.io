@@ -1,4 +1,4 @@
- const submit = async () => {
+const submit = async () => {
   if (!rating) {
   <button type="button" onClick= {
   () => setRating (rating === 'up' ? null : 'up') 

@@ -1,21 +1,20 @@
-import React, { useState, useEffect } from 'react';
-import Head from 'next/head';
-
+import React, { useState, useEffect } from 'react'
+import Head from 'next/head'
 interface TokenConfig {
-  conversionRate: number;
-  minPurchase: number;
-  maxPurchase: number;
-  enabled: boolean;
+  conversionRate: number
+  minPurchase: number
+  maxPurchase: number
+  enabled: boolean
 }
 
 interface Transaction {
-  id: string;
-  userId: string;
-  amount: number;
-  tokens: number;
-  status: 'pending' | 'completed' | 'failed';
-  createdAt: string;
-  type: 'purchase' | 'refund' | 'bonus';
+  id: string
+  userId: string
+  amount: number
+  tokens: number
+  status: 'pending' | 'completed' | 'failed'
+  createdAt: string
+  type: 'purchase' | 'refund' | 'bonus'
 }
 
 const mockTransactions: Transaction[] = [
@@ -46,78 +45,68 @@ const mockTransactions: Transaction[] = [
     createdAt: '2025-01-14T15:00:00Z',
     type: 'bonus'
   }
-];
-
+]
 const AdminTokensPage: React.FC = () => {
   const [config, setConfig] = useState<TokenConfig>({
     conversionRate: 0.05,
     minPurchase: 10,
     maxPurchase: 1000,
     enabled: true
-  });
-  const [transactions, setTransactions] = useState<Transaction[]>([]);
-  const [loading, setLoading] = useState(true);
-  const [saving, setSaving] = useState(false);
-
+  })
+  const [transactions, setTransactions] = useState<Transaction[]>([])
+  const [loading, setLoading] = useState(true)
+  const [saving, setSaving] = useState(false)
   useEffect(() => {
     // Simulate loading data
     setTimeout(() => {
-      setTransactions(mockTransactions);
-      setLoading(false);
-    }, 1000);
-  }, []);
-
+      setTransactions(mockTransactions)
+      setLoading(false)
+    }, 1000)
+  }, [])
   const handleConfigUpdate = async (updates: Partial<TokenConfig>) => {
-    setSaving(true);
+    setSaving(true)
     try {
       // Simulate API call
-      await new Promise(resolve => setTimeout(resolve, 1000));
-      setConfig(prev => ({ ...prev, ...updates }));
+      await new Promise(resolve => setTimeout(resolve, 1000))
+      setConfig(prev => ({ ...prev, ...updates }))
     } catch (error) {
-      console.error('Error updating config:', error);
+      console.error('Error updating config:', error)
     } finally {
-      setSaving(false);
+      setSaving(false)
     }
-  };
-
+  }
   const handleIssueTokens = async () => {
     if (config.conversionRate <= 0) {
-      alert('Conversion rate must be greater than 0');
-      return;
+      alert('Conversion rate must be greater than 0')
+      return
     }
-    await handleConfigUpdate(config);
-  };
-
+    await handleConfigUpdate(config)
+  }
   const handleRevokeTokens = async () => {
-    await handleConfigUpdate({ enabled: false });
-  };
-
+    await handleConfigUpdate({ enabled: false })
+  }
   const getStatusColor = (status: string) => {
     switch (status) {
-      case 'completed': return 'bg-green-100 text-green-800';
-      case 'pending': return 'bg-yellow-100 text-yellow-800';
-      case 'failed': return 'bg-red-100 text-red-800';
-      default: return 'bg-gray-100 text-gray-800';
+      case 'completed': return 'bg-green-100 text-green-800'
+      case 'pending': return 'bg-yellow-100 text-yellow-800'
+      case 'failed': return 'bg-red-100 text-red-800'
+      default: return 'bg-gray-100 text-gray-800'
     }
-  };
-
+  }
   const getTypeColor = (type: string) => {
     switch (type) {
-      case 'purchase': return 'bg-blue-100 text-blue-800';
-      case 'refund': return 'bg-red-100 text-red-800';
-      case 'bonus': return 'bg-green-100 text-green-800';
-      default: return 'bg-gray-100 text-gray-800';
+      case 'purchase': return 'bg-blue-100 text-blue-800'
+      case 'refund': return 'bg-red-100 text-red-800'
+      case 'bonus': return 'bg-green-100 text-green-800'
+      default: return 'bg-gray-100 text-gray-800'
     }
-  };
-
+  }
   const totalTokensIssued = transactions
     .filter(t => t.status === 'completed')
-    .reduce((sum, t) => sum + t.tokens, 0);
-
+    .reduce((sum, t) => sum + t.tokens, 0)
   const totalRevenue = transactions
     .filter(t => t.status === 'completed' && t.type === 'purchase')
-    .reduce((sum, t) => sum + t.amount, 0);
-
+    .reduce((sum, t) => sum + t.amount, 0)
   return (
     <>
       <Head>
@@ -282,7 +271,6 @@ const AdminTokensPage: React.FC = () => {
         </div>
       </main>
     </>
-  );
-};
-
-export default AdminTokensPage;
+  )
+}
+export default AdminTokensPage

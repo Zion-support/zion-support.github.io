@@ -1,22 +1,23 @@
- 
-}const mockTalent: Talent[] = Array.from ({
-  length: 47 
-}) .map ( (, i) => ({
-  id: String (i + 1), name: `Talent $ {
-  i + 1 
-}`;
-title: 'Full-Stack Developer';
-badges: (i % 3 === 0 ? ['Verified'] : i % 3 === 1 ? ['Pro'] : ['Top Rated']) as Talent['badges'];
-<Head> <title>Talent - Zion</title> </Head> <h1 className="text-2xl font-semibold" >Explore Talent</h1>) 
-}</article>) ) 
-}</div> <Pagination page= {
-  page 
-}pageSize= {
-  pageSize 
-}total= {
-  total 
-}onChange= {
-  setPage 
-}/> </div>) 
-};
-export default TalentDirectory;
+import React from 'react';
+import Head from 'next/head';
+import Layout from '../../components/layout/Layout';
+
+export default function index() {
+  return (
+    <Layout>
+      <Head>
+        <title>Index - Zion Tech Group</title>
+        <meta name="description" content="Index solutions and services." />
+      </Head>
+      
+      <div className="min-h-screen bg-gray-50">
+        <div className="container mx-auto px-6 py-16">
+          <h1 className="text-4xl font-bold text-gray-900 mb-8">Index</h1>
+          <p className="text-lg text-gray-600">
+            Professional index solutions tailored to your business needs.
+          </p>
+        </div>
+      </div>
+    </Layout>
+  );
+}

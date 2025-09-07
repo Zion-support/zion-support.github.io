@@ -1,6 +1,6 @@
-'use client';
+'use client'
 ] 
-}];
+}]
 </div> </div> </div> </div> {
   /* Main Navigation */ 
 }<nav className= {
@@ -53,5 +53,5 @@
 }</AnimatePresence> </div>) ) 
 }</div> > View Pricing </a> <Link > Contact Us </a> </div> </div> </div> </div> </div> </div> </motion.div>) 
 }</AnimatePresence> </>) 
-};
-export default EnhancedNavigation2025;
+}
+export default EnhancedNavigation2025

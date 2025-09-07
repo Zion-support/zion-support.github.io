@@ -1,4 +1,4 @@
- export default function DeFiNexusPlatform () {
+export default function DeFiNexusPlatform () {
   return (<Layout> <Head> <title>DeFi Nexus Platform | Zion Tech Group</title> </Head> {
   /* Hero Section */ 
 }<section className="relative min-h-screen flex items-center justify-center overflow-hidden" > <div className="absolute inset-0 bg-gradient-to-br from-black via-slate-900 to-black" ></div> </div> <div className="relative z-10 text-center px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto" > <motion.div > <div className="inline-flex items-center px-4 py-2 rounded-full bg-green-500/10 border border-green-500/20 text-green-400 text-sm font-medium mb-6" > <TrendingUp className="w-4 h-4 mr-2" /> DeFi & Blockchain </div> <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6" > <span className="bg-gradient-to-r from-green-400 via-emerald-400 to-cyan-400 bg-clip-text text-transparent" > DeFi Nexus </span> <br /> <span className="text-white" >Platform</span> </h1> </p> </motion.div> {

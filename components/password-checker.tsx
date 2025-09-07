@@ -1,11 +1,11 @@
- noSequential: !hasSequentialChars (pass) 
-};
-setChecks (newChecks);
-//Calculate strength score //Bonus for length if (pass.length >= 12) score += 10;
-if (pass.length >= 16) score += 5;
-setStrength (score);
+noSequential: !hasSequentialChars (pass) 
+}
+setChecks (newChecks)
+//Calculate strength score //Bonus for length if (pass.length >= 12) score += 10
+if (pass.length >= 16) score += 5
+setStrength (score)
 //Set strength text and color //Generate suggestions generateSuggestions (newChecks, pass) 
-};
+}
 //Ensure at least one of each required character type result += 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'[Math.floor (Math.random () * 26) ], //Uppercase result += 'abcdefghijklmnopqrstuvwxyz'[Math.floor (Math.random () * 26) ], //Lowercase result += '0123456789'[Math.floor (Math.random () * 10) ], //Number result += '!@#$%^&*'[Math.floor (Math.random () * 8) ], //Symbol //Fill the rest randomly const getCheckIcon = (passed: boolean) => {
   return passed ? (<CheckCircle className="w-5 h-5 text-green-400" />) : (/* Hero Section */ 
 }<section className="pt-32 pb-20 bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900"> <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 text-center"> <div className="mb-8"> <div className="inline-flex items-center px-4 py-2 rounded-full bg-indigo-500/20 border border-indigo-400/30 text-indigo-300 text-sm font-medium mb-6"> <Lock className="w-4 h-4 mr-2" /> Password Security & Analysis </div> </div> <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-8 leading-tight"> Password Strength Checker </h1> <p className="text-xl text-indigo-200 max-w-4xl mx-auto leading-relaxed"> Analyze your password security with our advanced strength checker. Get detailed feedback, suggestions, and generate strong passwords to protect your accounts and data. </p> </div> </section> {

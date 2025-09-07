@@ -1,4 +1,4 @@
- <select className="border rounded px-3 py-2 bg-white dark:bg-black" value= {
+<select className="border rounded px-3 py-2 bg-white dark:bg-black" value= {
   category 
 }onChange= {
   (e) => onChange ({

@@ -1,1 +1,23 @@
- </Head> <div className="min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8" > <div className="max-w-6xl mx-auto space-y-8" > <div className="text-center" > <h1 className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-green-400 via-emerald-400 to-teal-400 bg-clip-text text-transparent" >Biotech AI Research Platform</h1> <p className="mt-4 text-slate-300" >Accelerate discovery with intelligent automation across analysis and experimentation.</p> </div> </div> </div> </div> </div> </div> </Layout> 
+import React from 'react';
+import Head from 'next/head';
+import Layout from '../components/layout/Layout';
+
+export default function biotechairesearchplatform() {
+  return (
+    <Layout>
+      <Head>
+        <title>Biotech Ai Research Platform - Zion Tech Group</title>
+        <meta name="description" content="Biotech Ai Research Platform solutions and services." />
+      </Head>
+      
+      <div className="min-h-screen bg-gray-50">
+        <div className="container mx-auto px-6 py-16">
+          <h1 className="text-4xl font-bold text-gray-900 mb-8">Biotech Ai Research Platform</h1>
+          <p className="text-lg text-gray-600">
+            Professional biotech ai research platform solutions tailored to your business needs.
+          </p>
+        </div>
+      </div>
+    </Layout>
+  );
+}

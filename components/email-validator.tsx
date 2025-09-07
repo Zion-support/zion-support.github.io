@@ -1,19 +1,19 @@
- setIsValidating (true);
-setValidationResults ([]);
-setValidationResults (results);
+setIsValidating (true)
+setValidationResults ([])
+setValidationResults (results)
 setIsValidating (false) 
-};
-typos.includes (domain) );
+}
+typos.includes (domain) )
 const getStatusIcon = (status: string) => {
   switch (status) {
   case 'valid': 
 }
-};
+}
 switch (status) {
-  case 'valid': return 'text-green-400';
-case 'suspicious': return 'text-yellow-400';
-case 'disposable': return 'text-orange-400';
-case 'invalid': return 'text-red-400';
+  case 'valid': return 'text-green-400'
+case 'suspicious': return 'text-yellow-400'
+case 'disposable': return 'text-orange-400'
+case 'invalid': return 'text-red-400'
 default: Email Validation & Verification </div> </div> <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-8 leading-tight" > Email Validator </h1> </p> </div> </section> Validate Your Emails </h2> <p className="text-xl text-gray-400 max-w-3xl mx-auto" > Our advanced validation engine checks multiple factors to ensure email quality and deliverability. </p> </div> Email Input </h3> <div className="flex items-center space-x-2" > <label className="text-sm text-gray-300" >Bulk Mode</label> <input /> </div> </div> <div> <label className="block text-sm font-medium text-gray-300 mb-2" > Email Addresses (One per line) </label> <textarea value= {
   emails 
 }rows= {

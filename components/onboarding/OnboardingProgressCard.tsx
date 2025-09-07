@@ -1,4 +1,4 @@
- <div className= {
+<div className= {
   `h-2 rounded-full bg-gradient-to-r $ {
   highlightColorClass 
 }` 

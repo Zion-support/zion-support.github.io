@@ -1,21 +1,20 @@
-import React, { useState, useEffect } from 'react';
-import Head from 'next/head';
-import Layout from '../components/layout/Layout';
-
+import React, { useState, useEffect } from 'react'
+import Head from 'next/head'
+import Layout from '../components/layout/Layout'
 interface AffiliateStats {
-  totalEarnings: number;
-  monthlyEarnings: number;
-  totalReferrals: number;
-  conversionRate: number;
-  pendingPayouts: number;
+  totalEarnings: number
+  monthlyEarnings: number
+  totalReferrals: number
+  conversionRate: number
+  pendingPayouts: number
 }
 
 interface Referral {
-  id: string;
-  email: string;
-  status: 'pending' | 'converted' | 'paid';
-  commission: number;
-  date: string;
+  id: string
+  email: string
+  status: 'pending' | 'converted' | 'paid'
+  commission: number
+  date: string
 }
 
 const mockStats: AffiliateStats = {
@@ -24,8 +23,7 @@ const mockStats: AffiliateStats = {
   totalReferrals: 45,
   conversionRate: 12.5,
   pendingPayouts: 750
-};
-
+}
 const mockReferrals: Referral[] = [
   {
     id: '1',
@@ -48,32 +46,28 @@ const mockReferrals: Referral[] = [
     commission: 750,
     date: '2025-01-13T09:15:00Z'
   }
-];
-
+]
 const AffiliateDashboard: React.FC = () => {
-  const [stats, setStats] = useState<AffiliateStats | null>(null);
-  const [referrals, setReferrals] = useState<Referral[]>([]);
-  const [loading, setLoading] = useState(true);
-  const [activeTab, setActiveTab] = useState<'overview' | 'referrals' | 'payouts'>('overview');
-
+  const [stats, setStats] = useState<AffiliateStats | null>(null)
+  const [referrals, setReferrals] = useState<Referral[]>([])
+  const [loading, setLoading] = useState(true)
+  const [activeTab, setActiveTab] = useState<'overview' | 'referrals' | 'payouts'>('overview')
   useEffect(() => {
     // Simulate loading data
     setTimeout(() => {
-      setStats(mockStats);
-      setReferrals(mockReferrals);
-      setLoading(false);
-    }, 1000);
-  }, []);
-
+      setStats(mockStats)
+      setReferrals(mockReferrals)
+      setLoading(false)
+    }, 1000)
+  }, [])
   const getStatusColor = (status: string) => {
     switch (status) {
-      case 'converted': return 'bg-green-100 text-green-800';
-      case 'pending': return 'bg-yellow-100 text-yellow-800';
-      case 'paid': return 'bg-blue-100 text-blue-800';
-      default: return 'bg-gray-100 text-gray-800';
+      case 'converted': return 'bg-green-100 text-green-800'
+      case 'pending': return 'bg-yellow-100 text-yellow-800'
+      case 'paid': return 'bg-blue-100 text-blue-800'
+      default: return 'bg-gray-100 text-gray-800'
     }
-  };
-
+  }
   if (loading) {
     return (
       <Layout>
@@ -84,7 +78,7 @@ const AffiliateDashboard: React.FC = () => {
           <div className="text-center py-8">Loading affiliate dashboard...</div>
         </main>
       </Layout>
-    );
+    )
   }
 
   return (
@@ -267,7 +261,6 @@ const AffiliateDashboard: React.FC = () => {
         </div>
       </main>
     </Layout>
-  );
-};
-
-export default AffiliateDashboard;
+  )
+}
+export default AffiliateDashboard

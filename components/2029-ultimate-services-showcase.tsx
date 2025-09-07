@@ -1,26 +1,26 @@
- const filteredServices = allServices.filter (service => {
-  const matchesCategory = selectedCategory === 'all' || (selectedCategory === 'cutting-edge' && cuttingEdge2028MicroSaas.includes (service) ) || (selectedCategory === 'business' && practicalBusinessSolutions2028.includes (service) ) || (selectedCategory === 'ai-autonomous' && advancedAIAutonomousServices2028.includes (service) ) || (selectedCategory === 'quantum-space' && quantumSpaceInnovations2028.includes (service) ) || (selectedCategory === 'ai' && service.category.some (c => c.includes ('AI') || c.includes ('Machine Learning') ) ) || (selectedCategory === 'quantum' && service.category.some (c => c.includes ('Quantum') ) ) || (selectedCategory === 'enterprise' && service.category.some (c => c.includes ('Enterprise') ) );
-const matchesSearch = service.name.toLowerCase () .includes (searchTerm.toLowerCase () ) || service.description.toLowerCase () .includes (searchTerm.toLowerCase () ) || service.category.some (c => c.toLowerCase () .includes (searchTerm.toLowerCase () ) );
+const filteredServices = allServices.filter (service => {
+  const matchesCategory = selectedCategory === 'all' || (selectedCategory === 'cutting-edge' && cuttingEdge2028MicroSaas.includes (service) ) || (selectedCategory === 'business' && practicalBusinessSolutions2028.includes (service) ) || (selectedCategory === 'ai-autonomous' && advancedAIAutonomousServices2028.includes (service) ) || (selectedCategory === 'quantum-space' && quantumSpaceInnovations2028.includes (service) ) || (selectedCategory === 'ai' && service.category.some (c => c.includes ('AI') || c.includes ('Machine Learning') ) ) || (selectedCategory === 'quantum' && service.category.some (c => c.includes ('Quantum') ) ) || (selectedCategory === 'enterprise' && service.category.some (c => c.includes ('Enterprise') ) )
+const matchesSearch = service.name.toLowerCase () .includes (searchTerm.toLowerCase () ) || service.description.toLowerCase () .includes (searchTerm.toLowerCase () ) || service.category.some (c => c.toLowerCase () .includes (searchTerm.toLowerCase () ) )
 const containerVariants = {
   hidden: {
   opacity: 0 
-};
+}
 visible: {
   opacity: 1, transition: {
   staggerChildren: 0.1 
 }
 }
-};
+}
 const itemVariants = {
   hidden: {
   opacity: 0, y: 20 
-};
+}
 visible: {
   opacity: 1, y: 0, transition: {
   duration: 0.5 
 }
 }
-};
+}
 return (<> <Head> <title>2029 Ultimate Services Showcase - Zion Tech Group | Revolutionary Technology Solutions</title> <meta name="description" content="Explore our revolutionary 2029 services including AI Consciousness Evolution, Quantum Time Manipulation, Space Quantum Communication, and autonomous AI systems. Transform your business with future technology." /> <meta name="keywords" content="2029 technology, AI consciousness, quantum computing, space technology, autonomous AI, business automation, micro SAAS, Zion Tech Group" /> <meta name="viewport" content="width=device-width, initial-scale=1" /> <link rel="canonical" href="https://ziontechgroup.com/2029-ultimate-services-showcase" /> {
   /* Open Graph */ 
 }<meta property="og:title" content="2029 Ultimate Services Showcase - Zion Tech Group" /> <meta property="og:description" content="Revolutionary 2029 technology services including AI Consciousness Evolution, Quantum Time Manipulation, and autonomous AI systems." /> <meta property="og:url" content="https://ziontechgroup.com/2029-ultimate-services-showcase" /> <meta property="og:type" content="website" /> {
@@ -41,7 +41,7 @@ return (<> <Head> <title>2029 Ultimate Services Showcase - Zion Tech Group | Rev
   {
   duration: 0.8 
 }
-}className="max-w-4xl mx-auto" > <div className="flex items-center justify-center space-x-2 mb-6"> <div className="w-16 h-16 bg-gradient-to-br from-cyan-400 via-blue-500 to-purple-600 rounded-2xl flex items-center justify-center shadow-2xl"> <Rocket className="w-9 h-9 text-white" /> </div> <div className="w-16 h-16 bg-gradient-to-br from-emerald-400 via-teal-500 to-cyan-600 rounded-2xl flex items-center justify-center shadow-2xl"> <Brain className="w-9 h-9 text-white" /> </div> <div className="w-16 h-16 bg-gradient-to-br from-indigo-400 via-purple-500 to-violet-600 rounded-2xl flex items-center justify-center shadow-2xl"> <Atom className="w-9 h-9 text-white" /> </div> </div> <h1 className="text-5xl md: text-7xl font-bold text-white mb-6"> <span className="bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent"> 2029 Ultimate </span> <br /> <span className="bg-gradient-to-r from-emerald-400 via-teal-500 to-cyan-600 bg-clip-text text-transparent"> Services Showcase </span> </h1> <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed"> Experience the future of technology with our revolutionary AI consciousness, quantum computing;
+}className="max-w-4xl mx-auto" > <div className="flex items-center justify-center space-x-2 mb-6"> <div className="w-16 h-16 bg-gradient-to-br from-cyan-400 via-blue-500 to-purple-600 rounded-2xl flex items-center justify-center shadow-2xl"> <Rocket className="w-9 h-9 text-white" /> </div> <div className="w-16 h-16 bg-gradient-to-br from-emerald-400 via-teal-500 to-cyan-600 rounded-2xl flex items-center justify-center shadow-2xl"> <Brain className="w-9 h-9 text-white" /> </div> <div className="w-16 h-16 bg-gradient-to-br from-indigo-400 via-purple-500 to-violet-600 rounded-2xl flex items-center justify-center shadow-2xl"> <Atom className="w-9 h-9 text-white" /> </div> </div> <h1 className="text-5xl md: text-7xl font-bold text-white mb-6"> <span className="bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent"> 2029 Ultimate </span> <br /> <span className="bg-gradient-to-r from-emerald-400 via-teal-500 to-cyan-600 bg-clip-text text-transparent"> Services Showcase </span> </h1> <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed"> Experience the future of technology with our revolutionary AI consciousness, quantum computing
 space technology, and autonomous systems. Transform your business with innovations that define tomorrow. </p> <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6"> <Link href="/contact" className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-bold rounded-xl hover:from-cyan-600 hover:to-blue-700 transition-all duration-200 shadow-2xl hover:shadow-cyan-500/25 text-lg" > Get Started Today </a> <Link href="/pricing" className="px-8 py-4 border-2 border-cyan-500/50 text-cyan-400 font-bold rounded-xl hover:bg-cyan-500/10 transition-all duration-200 text-lg" > View Pricing </a> </div> {
   /* Stats */ 
 }<div className="grid grid-cols-2 md:grid-cols-4 gap-8 mt-16"> <div className="text-center"> <div className="text-3xl md:text-4xl font-bold text-cyan-400 mb-2"> {

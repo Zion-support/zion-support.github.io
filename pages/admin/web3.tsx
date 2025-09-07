@@ -1,15 +1,14 @@
-import React, { useState, useEffect } from 'react';
-import Head from 'next/head';
-
+import React, { useState, useEffect } from 'react'
+import Head from 'next/head'
 interface Web3Project {
-  id: string;
-  name: string;
-  description: string;
-  status: 'active' | 'inactive' | 'development';
-  blockchain: string;
-  contractAddress?: string;
-  createdAt: string;
-  lastDeployed?: string;
+  id: string
+  name: string
+  description: string
+  status: 'active' | 'inactive' | 'development'
+  blockchain: string
+  contractAddress?: string
+  createdAt: string
+  lastDeployed?: string
 }
 
 const mockWeb3Projects: Web3Project[] = [
@@ -41,47 +40,40 @@ const mockWeb3Projects: Web3Project[] = [
     createdAt: '2024-06-10T00:00:00Z',
     lastDeployed: '2024-12-01T15:30:00Z'
   }
-];
-
+]
 const AdminWeb3Page: React.FC = () => {
-  const [projects, setProjects] = useState<Web3Project[]>([]);
-  const [loading, setLoading] = useState(true);
-  const [filter, setFilter] = useState<'all' | 'active' | 'inactive' | 'development'>('all');
-
+  const [projects, setProjects] = useState<Web3Project[]>([])
+  const [loading, setLoading] = useState(true)
+  const [filter, setFilter] = useState<'all' | 'active' | 'inactive' | 'development'>('all')
   useEffect(() => {
     // Simulate loading Web3 projects
     setTimeout(() => {
-      setProjects(mockWeb3Projects);
-      setLoading(false);
-    }, 1000);
-  }, []);
-
+      setProjects(mockWeb3Projects)
+      setLoading(false)
+    }, 1000)
+  }, [])
   const filteredProjects = projects.filter(project => 
     filter === 'all' || project.status === filter
-  );
-
+  )
   const getStatusColor = (status: string) => {
     switch (status) {
-      case 'active': return 'bg-green-100 text-green-800';
-      case 'inactive': return 'bg-red-100 text-red-800';
-      case 'development': return 'bg-yellow-100 text-yellow-800';
-      default: return 'bg-gray-100 text-gray-800';
+      case 'active': return 'bg-green-100 text-green-800'
+      case 'inactive': return 'bg-red-100 text-red-800'
+      case 'development': return 'bg-yellow-100 text-yellow-800'
+      default: return 'bg-gray-100 text-gray-800'
     }
-  };
-
+  }
   const getBlockchainColor = (blockchain: string) => {
     switch (blockchain.toLowerCase()) {
-      case 'ethereum': return 'bg-blue-100 text-blue-800';
-      case 'polygon': return 'bg-purple-100 text-purple-800';
-      case 'binance': return 'bg-yellow-100 text-yellow-800';
-      default: return 'bg-gray-100 text-gray-800';
+      case 'ethereum': return 'bg-blue-100 text-blue-800'
+      case 'polygon': return 'bg-purple-100 text-purple-800'
+      case 'binance': return 'bg-yellow-100 text-yellow-800'
+      default: return 'bg-gray-100 text-gray-800'
     }
-  };
-
-  const activeProjects = projects.filter(p => p.status === 'active').length;
-  const developmentProjects = projects.filter(p => p.status === 'development').length;
-  const totalProjects = projects.length;
-
+  }
+  const activeProjects = projects.filter(p => p.status === 'active').length
+  const developmentProjects = projects.filter(p => p.status === 'development').length
+  const totalProjects = projects.length
   return (
     <>
       <Head>
@@ -210,7 +202,6 @@ const AdminWeb3Page: React.FC = () => {
         </div>
       </main>
     </>
-  );
-};
-
-export default AdminWeb3Page;
+  )
+}
+export default AdminWeb3Page

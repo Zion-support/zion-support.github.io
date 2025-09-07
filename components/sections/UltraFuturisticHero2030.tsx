@@ -1,4 +1,4 @@
- {
+{
   /* Background Glow Effects */ 
 }<div className="absolute inset-0 pointer-events-none" > <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-purple-500/20 rounded-full blur-3xl" ></div> <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-cyan-500/20 rounded-full blur-3xl" ></div> <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-gradient-to-r from-purple-500/10 to-cyan-500/10 rounded-full blur-3xl" ></div> </div> > <Sparkles className="w-4 h-4 mr-2" /> Welcome to 2030 - The Future is Now </motion.div> <motion.h1 > <span className="bg-gradient-to-r from-purple-400 via-cyan-400 to-emerald-400 bg-clip-text text-transparent" > Zion Tech Group </span> </motion.h1> <motion.p > Transform your business with cutting-edge micro SAAS solutions, enterprise IT services, and revolutionary AI platforms that define the next decade of technological innovation. </motion.p> </motion.div> {
   /* CTA Buttons */ 

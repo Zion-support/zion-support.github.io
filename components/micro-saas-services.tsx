@@ -1,43 +1,43 @@
- export default function MicroSaasServicesPage () {
+export default function MicroSaasServicesPage () {
   const microSaasServices = [ {
   
-};
-marketPrice: '$29-299/month';
-competitors: ['Jasper AICopy.aiWritesonic'];
-website: 'https://ai-content.ziontech.ai';
+}
+marketPrice: '$29-299/month'
+competitors: ['Jasper AICopy.aiWritesonic']
+website: 'https://ai-content.ziontech.ai'
 demo: 'https://demo.ai-content.ziontech.ai' 
-};
-};
-marketPrice: '$19-149/month';
-competitors: ['PingdomGTmetrixWebPageTest'];
-website: 'https://window.window.window.performance.ziontech.ai';
+}
+}
+marketPrice: '$19-149/month'
+competitors: ['PingdomGTmetrixWebPageTest']
+website: 'https://window.window.window.performance.ziontech.ai'
 demo: 'https://demo.window.window.window.performance.ziontech.ai' 
-};
-};
-marketPrice: '$39-199/month';
-competitors: ['AhrefsSEMrushMoz'];
-website: 'https://seo.ziontech.ai';
+}
+}
+marketPrice: '$39-199/month'
+competitors: ['AhrefsSEMrushMoz']
+website: 'https://seo.ziontech.ai'
 demo: 'https://demo.seo.ziontech.ai' 
-};
-};
-marketPrice: '$25-199/month';
-competitors: ['KongTykAWS API Gateway'];
-website: 'https://rate-limiter.ziontech.ai';
+}
+}
+marketPrice: '$25-199/month'
+competitors: ['KongTykAWS API Gateway']
+website: 'https://rate-limiter.ziontech.ai'
 demo: 'https://demo.rate-limiter.ziontech.ai' 
-};
-};
-marketPrice: '$29-199/month';
-competitors: ['MailchimpConvertKitActiveCampaign'];
-website: 'https://email.ziontech.ai';
+}
+}
+marketPrice: '$29-199/month'
+competitors: ['MailchimpConvertKitActiveCampaign']
+website: 'https://email.ziontech.ai'
 demo: 'https://demo.email.ziontech.ai' 
-};
-};
-marketPrice: '$19-129/month';
-competitors: ['BufferHootsuiteLater'];
-website: 'https://social.ziontech.ai';
+}
+}
+marketPrice: '$19-129/month'
+competitors: ['BufferHootsuiteLater']
+website: 'https://social.ziontech.ai'
 demo: 'https://demo.social.ziontech.ai' 
-}];
-return (<> <Head> <title>Micro SaaS Services | Zion Tech Group - Professional Business Solutions</title> <meta name="description" content="Discover our comprehensive suite of micro SaaS services including AI content generation, performance monitoring, SEO analytics, API management, email marketing, and social media scheduling." /> <meta property="og:title" content="Micro SaaS Services | Zion Tech Group" /> <meta property="og:description" content="Professional micro SaaS services for modern businesses. AI-powered solutions with competitive pricing and enterprise-grade features." /> <meta name="twitter:card" content="summary large image" /> </Head> <div className="relative z-10 container-cursor text-center" > <div className="inline-flex items-center px-4 py-2 rounded-full bg-cursor-blue/10 border border-cursor-blue/20 text-cursor-blue text-sm font-medium mb-6" > <span className="w-2 h-2 bg-cursor-blue rounded-full mr-2 animate-pulse" /> Micro SaaS Services </div> <h1 className="text-responsive-xl font-black mb-8 gradient-text text-shadow-lg" > Professional Micro SaaS Solutions </h1> <p className="text-responsive-md text-gray-300 max-w-5xl mx-auto leading-relaxed" > Discover our comprehensive suite of micro SaaS services designed for modern businesses. From AI-powered content generation to enterprise-grade performance monitoring;
+}]
+return (<> <Head> <title>Micro SaaS Services | Zion Tech Group - Professional Business Solutions</title> <meta name="description" content="Discover our comprehensive suite of micro SaaS services including AI content generation, performance monitoring, SEO analytics, API management, email marketing, and social media scheduling." /> <meta property="og:title" content="Micro SaaS Services | Zion Tech Group" /> <meta property="og:description" content="Professional micro SaaS services for modern businesses. AI-powered solutions with competitive pricing and enterprise-grade features." /> <meta name="twitter:card" content="summary large image" /> </Head> <div className="relative z-10 container-cursor text-center" > <div className="inline-flex items-center px-4 py-2 rounded-full bg-cursor-blue/10 border border-cursor-blue/20 text-cursor-blue text-sm font-medium mb-6" > <span className="w-2 h-2 bg-cursor-blue rounded-full mr-2 animate-pulse" /> Micro SaaS Services </div> <h1 className="text-responsive-xl font-black mb-8 gradient-text text-shadow-lg" > Professional Micro SaaS Solutions </h1> <p className="text-responsive-md text-gray-300 max-w-5xl mx-auto leading-relaxed" > Discover our comprehensive suite of micro SaaS services designed for modern businesses. From AI-powered content generation to enterprise-grade performance monitoring
 we deliver professional solutions with competitive pricing and exceptional value. </p> </div> </section> Market Overview & Competitive Analysis </h2> <p className="text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed" > Our services are positioned competitively in growing markets with strong demand and proven business models. </p> </div> </div> </Card>) ) 
 }</div> </div> </section> Our Micro SaaS Services </h2> <p className="text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed" > Each service is designed to solve specific business challenges with professional-grade features and competitive pricing. </p> </div> </div> </div> <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8" > <div> <h4 className="text-lg font-semibold text-white mb-3 flex items-center" > <Zap className="w-5 h-5 mr-2 text-cursor-blue" /> Key Features </h4> </li>) ) 
 }</ul> </div> <div> <h4 className="text-lg font-semibold text-white mb-3 flex items-center" > <Target className="w-5 h-5 mr-2 text-cursor-blue" /> Use Cases </h4> </li>) ) 

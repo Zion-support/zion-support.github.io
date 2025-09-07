@@ -1,4 +1,4 @@
-'use client';
+'use client'
 > {
   /* Badge */ 
 }<motion.div > <Star className="w-5 h-5 text-yellow-400 fill-current" /> <span className="text-white font-medium" >Leading Technology Solutions Provider</span> </motion.div> {
@@ -16,5 +16,5 @@
 }</motion.div> </motion.div> </div> {
   /* Scroll Indicator */ 
 }<motion.div /> </motion.div> </motion.div> </section>) 
-};
-export default HeroSection;
+}
+export default HeroSection

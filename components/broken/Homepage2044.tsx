@@ -1,33 +1,33 @@
- </div>);
-//Memoize expensive computations const allRevolutionaryServices = useMemo ( () => [ ...revolutionary2044AdvancedMicroSaas;
-...revolutionary2044ITServices;
-...revolutionary2044AIServices ], []);
-const featuredServices = useMemo ( () => allRevolutionaryServices.slice (0, 6), [allRevolutionaryServices]);
-], []);
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7 const handleGetStarted = useCallback ( () => {
+</div>)
+//Memoize expensive computations const allRevolutionaryServices = useMemo ( () => [ ...revolutionary2044AdvancedMicroSaas
+...revolutionary2044ITServices
+...revolutionary2044AIServices ], [])
+const featuredServices = useMemo ( () => allRevolutionaryServices.slice (0, 6), [allRevolutionaryServices])
+], [])
+
   //Add analytics tracking if (typeof window !== 'undefined' && (window as any) .gtag) {
   
 }window.location.href = '/revolutionary-2044-pricing-showcase' 
-}, []);
+}, [])
 const handleWatchDemo = useCallback ( () => {
   //Add analytics tracking if (typeof window !== 'undefined' && (window as any) .gtag) {
   
 }window.location.href = '/services' 
-}, []);
+}, [])
 const handleServiceClick = useCallback ( (service: unknown) => {
   //Add analytics tracking if (typeof window !== 'undefined' && (window as any) .gtag) {
   
 }window.location.href = service.slug 
-}, []);
+}, [])
 }
-}, []);
+}, [])
 }
-};
+}
 //Loading state if (isLoading) {
   return (<Layout> <div className="min-h-screen flex items-center justify-center" > <motion.div > <div className="w-16 h-16 border-4 border-cyan-500 border-t-transparent rounded-full animate-spin mx-auto mb-4" ></div> <p className="text-cyan-400 text-lg" >Loading Zion Tech Group...</p> </motion.div> </div> </Layout>) 
 }return (<Layout> <section className="min-h-screen flex items-center justify-center px-4 relative overflow-hidden" aria-labelledby="hero-heading" > left: `$ {
   Math.random () * 100 
-}%`;
+}%`
 top: `$ {
   Math.random () * 100 
 }%` 
@@ -107,5 +107,5 @@ top: `$ {
   once: true 
 }
 }> <h2 className="text-5xl font-bold text-white mb-6" > Ready to Transform Your Business? </h2> <p className="text-xl text-gray-400 mb-12 max-w-3xl mx-auto" > Join thousands of forward-thinking companies already leveraging our revolutionary 2044 technology solutions </p> <div className="flex flex-col sm:flex-row gap-6 justify-center items-center" > <button > <span className="flex items-center" > Start Your Journey <Rocket className="w-7 h-7 ml-4 group-hover:translate-x-1 transition-transform duration-300" /> </span> </button> <button > <span className="flex items-center" > Schedule Demo <Play className="w-7 h-7 ml-4" /> </span> </button> </div> </div> </section> </main> </Layout> </>) 
-};
-export default Homepage2044;
+}
+export default Homepage2044

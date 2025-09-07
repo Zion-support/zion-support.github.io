@@ -1,4 +1,4 @@
- const UltraFuturisticServiceCard2026: React.FC<ServiceCardProps> = ({
+const UltraFuturisticServiceCard2026: React.FC<ServiceCardProps> = ({
   service, variant = 'default' 
 }) => {
   const getVariantStyles = () => {
@@ -6,7 +6,7 @@
   case 'ai': return {
   
 }
-};
+}
 {
   /* Popular Badge */ 
 }{
@@ -35,4 +35,4 @@
 }text-white font-semibold transition-all duration-300 hover:shadow-lg hover:shadow-$ {
   styles.textColor 
 }/25 border border-white/20 hover:border-white/40` 
-}> Get Started </motion.button> </div> export default UltraFuturisticServiceCard2026;
+}> Get Started </motion.button> </div> export default UltraFuturisticServiceCard2026

@@ -1,4 +1,23 @@
- return (<Layout> <Head> <title>Cybersecurity | Zion Tech Group</title> </Head> <div className="min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8" > <div className="max-w-7xl mx-auto space-y-12" > <header className="text-center" > <div className="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-gradient-to-r from-cyan-500 to-purple-600 mb-4" > <Shield className="w-8 h-8 text-white" /> </div> </div> </header> <section> </div>) ) 
-}</div> </section> <section>) ) 
-}</div> </section> </div> </div> </Layout>) 
+import React from 'react';
+import Head from 'next/head';
+import Layout from '../components/layout/Layout';
+
+export default function cybersecurity() {
+  return (
+    <Layout>
+      <Head>
+        <title>Cybersecurity - Zion Tech Group</title>
+        <meta name="description" content="Cybersecurity solutions and services." />
+      </Head>
+      
+      <div className="min-h-screen bg-gray-50">
+        <div className="container mx-auto px-6 py-16">
+          <h1 className="text-4xl font-bold text-gray-900 mb-8">Cybersecurity</h1>
+          <p className="text-lg text-gray-600">
+            Professional cybersecurity solutions tailored to your business needs.
+          </p>
+        </div>
+      </div>
+    </Layout>
+  );
 }

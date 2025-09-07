@@ -1,29 +1,28 @@
- 
 }//Search filter if (searchQuery) {
   filteredServices = filteredServices.filter (service => service.name.toLowerCase () .includes (searchQuery.toLowerCase () ) || service.description.toLowerCase () .includes (searchQuery.toLowerCase () ) || service.tagline.toLowerCase () .includes (searchQuery.toLowerCase () ) || service.category.toLowerCase () .includes (searchQuery.toLowerCase () ) //Sort services filteredServices.sort ( (a, b) => {
   switch (sortBy) {
-  case 'price': case 'popularity': return (b.popular ? 1 : 0) - (a.popular ? 1 : 0);
-case 'category': return a.category.localeCompare (b.category);
+  case 'price': case 'popularity': return (b.popular ? 1 : 0) - (a.popular ? 1 : 0)
+case 'category': return a.category.localeCompare (b.category)
 case 'roi': const containerVariants = {
   hidden: {
   opacity: 0 
-};
+}
 visible: {
   opacity: 1, transition: {
   staggerChildren: 0.1 
 }
 }
-};
+}
 const itemVariants = {
   hidden: {
   y: 20, opacity: 0 
-};
+}
 visible: {
   y: 0, opacity: 1, transition: {
   duration: 0.5 
 }
 }
-};
+}
 > <span className="bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent" > Comprehensive </span> <br /> <span className="text-white" >Pricing & Plans</span> </motion.h1> <motion.p > Transparent pricing for all our revolutionary micro SaaS services. Choose the perfect plan for your business with guaranteed ROI and enterprise-grade reliability. </motion.p> {
   /* Market Stats */ 
 }<motion.div </div>) ) 

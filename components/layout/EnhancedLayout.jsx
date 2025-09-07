@@ -1,5 +1,5 @@
- <EnhancedNavigation /> <main className="flex-1" > {
+<EnhancedNavigation /> <main className="flex-1" > {
   children 
 }</main> <EnhancedFooter /> </div>) 
-};
-export default EnhancedLayout;
+}
+export default EnhancedLayout

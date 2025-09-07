@@ -1,4 +1,4 @@
- > Report abuse </button> </div>) 
+> Report abuse </button> </div>) 
 }</div> </div>) 
-};
-export default ReviewCard;
+}
+export default ReviewCard

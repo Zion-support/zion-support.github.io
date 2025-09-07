@@ -1,7 +1,7 @@
- return (<Suspense fallback= {
+return (<Suspense fallback= {
   fallback 
 }> <LazyLoadedComponent {
   ...props 
 }/> </Suspense>) 
-};
-export default LazyComponent;
+}
+export default LazyComponent

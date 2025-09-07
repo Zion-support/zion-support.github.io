@@ -1,16 +1,16 @@
- resizeCanvas ();
-window.addEventListener ('resize', resizeCanvas);
+resizeCanvas ()
+window.addEventListener ('resize', resizeCanvas)
 // Enhanced theme-based color schemes for 2038 const getThemeColors = () => {
   switch (theme) {
   case 'consciousness': return {
   
 }
-};
-Math.random () > 0.5 ? 'quantum-field' : Math.random () > 0.3 ? 'hologram' : 'particle';
+}
+Math.random () > 0.5 ? 'quantum-field' : Math.random () > 0.3 ? 'hologram' : 'particle'
 particles.push ({
   
 }
-};
+}
 // Enhanced animation loop with consciousness and quantum effects 
 }
 }
@@ -22,20 +22,20 @@ particles.push ({
 }
 }
 }) 
-}// Consciousness wave effects ctx.strokeRect (particle.x - hologramSize / 2;
-particle.y - hologramSize / 2;
-hologramSize;
+}// Consciousness wave effects ctx.strokeRect (particle.x - hologramSize / 2
+particle.y - hologramSize / 2
+hologramSize
 hologramSize) 
-}// Quantum field effects ctx.fillStyle = gradient;
-ctx.fillRect (particle.x - fieldSize / 2;
-particle.y - fieldSize / 2;
-fieldSize;
+}// Quantum field effects ctx.fillStyle = gradient
+ctx.fillRect (particle.x - fieldSize / 2
+particle.y - fieldSize / 2
+fieldSize
 fieldSize) 
 }// Standard particle rendering 
 }// Boundary wrapping with quantum tunneling effect if (particle.x < 0 || particle.x > canvas.width || requestAnimationFrame (animate) 
-};
-initParticles ();
-animate ();
+}
+initParticles ()
+animate ()
 />) ) 
 }</div>) 
 }/>) ) 

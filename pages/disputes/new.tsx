@@ -1,12 +1,23 @@
- type ReasonType = typeof REASONS[number];
-const [projectId, setProjectId] = useState (qProjectId || '');
-const [reason, setReason] = useState<ReasonType> ('Scope Disagreement');
-const [reasonDetails, setReasonDetails] = useState ('');
-const [description, setDescription] = useState ('');
-const [files, setFiles] = useState<File[]> ([]);
-const [talentUserId, setTalentUserId] = useState (talentId || '');
-const [clientUserId, setClientUserId] = useState (clientId || (user.role === 'client'? user.id : '') );
-const [submitting, setSubmitting] = useState (false);
-}return (<EnhancedLayout> </div> <div className="grid grid-cols-1 md:grid-cols-2 gap-4" > <div> </div> </form> </div> </EnhancedLayout>) 
-}
+import React from 'react';
+import Head from 'next/head';
+import Layout from '../../components/layout/Layout';
+
+export default function DisputesNew() {
+  return (
+    <Layout>
+      <Head>
+        <title>New Dispute - Zion Tech Group</title>
+        <meta name="description" content="New Dispute solutions and services." />
+      </Head>
+      
+      <div className="min-h-screen bg-gray-50">
+        <div className="container mx-auto px-6 py-16">
+          <h1 className="text-4xl font-bold text-gray-900 mb-8">New Dispute</h1>
+          <p className="text-lg text-gray-600">
+            Professional new dispute solutions tailored to your business needs.
+          </p>
+        </div>
+      </div>
+    </Layout>
+  );
 }

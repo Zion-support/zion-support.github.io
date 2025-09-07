@@ -1,20 +1,19 @@
-import React, { useState, useEffect } from 'react';
-import Head from 'next/head';
-
+import React, { useState, useEffect } from 'react'
+import Head from 'next/head'
 interface SupportRequest {
-  id: string;
-  userId: string;
-  userName: string;
-  email: string;
-  subject: string;
-  message: string;
-  status: 'open' | 'in_progress' | 'resolved' | 'closed';
-  priority: 'low' | 'medium' | 'high' | 'urgent';
-  category: string;
-  createdAt: string;
-  updatedAt: string;
-  assignedTo?: string;
-  response?: string;
+  id: string
+  userId: string
+  userName: string
+  email: string
+  subject: string
+  message: string
+  status: 'open' | 'in_progress' | 'resolved' | 'closed'
+  priority: 'low' | 'medium' | 'high' | 'urgent'
+  category: string
+  createdAt: string
+  updatedAt: string
+  assignedTo?: string
+  response?: string
 }
 
 const mockSupportRequests: SupportRequest[] = [
@@ -60,23 +59,20 @@ const mockSupportRequests: SupportRequest[] = [
     assignedTo: 'support_agent_2',
     response: 'Thank you for your suggestion! We have added dark mode to our roadmap and will implement it in the next update.'
   }
-];
-
+]
 const AdminSupportRequestsPage: React.FC = () => {
-  const [requests, setRequests] = useState<SupportRequest[]>([]);
-  const [loading, setLoading] = useState(true);
-  const [filter, setFilter] = useState<'all' | 'open' | 'in_progress' | 'resolved' | 'closed'>('all');
-  const [priorityFilter, setPriorityFilter] = useState<'all' | 'low' | 'medium' | 'high' | 'urgent'>('all');
-  const [selectedRequest, setSelectedRequest] = useState<SupportRequest | null>(null);
-
+  const [requests, setRequests] = useState<SupportRequest[]>([])
+  const [loading, setLoading] = useState(true)
+  const [filter, setFilter] = useState<'all' | 'open' | 'in_progress' | 'resolved' | 'closed'>('all')
+  const [priorityFilter, setPriorityFilter] = useState<'all' | 'low' | 'medium' | 'high' | 'urgent'>('all')
+  const [selectedRequest, setSelectedRequest] = useState<SupportRequest | null>(null)
   useEffect(() => {
     // Simulate loading support requests
     setTimeout(() => {
-      setRequests(mockSupportRequests);
-      setLoading(false);
-    }, 1000);
-  }, []);
-
+      setRequests(mockSupportRequests)
+      setLoading(false)
+    }, 1000)
+  }, [])
   const handleStatusChange = (requestId: string, newStatus: SupportRequest['status']) => {
     setRequests(prev => 
       prev.map(request => 
@@ -84,9 +80,8 @@ const AdminSupportRequestsPage: React.FC = () => {
           ? { ...request, status: newStatus, updatedAt: new Date().toISOString() }
           : request
       )
-    );
-  };
-
+    )
+  }
   const handleAssign = (requestId: string, assignedTo: string) => {
     setRequests(prev => 
       prev.map(request => 
@@ -94,39 +89,34 @@ const AdminSupportRequestsPage: React.FC = () => {
           ? { ...request, assignedTo, status: 'in_progress' as const, updatedAt: new Date().toISOString() }
           : request
       )
-    );
-  };
-
+    )
+  }
   const filteredRequests = requests.filter(request => {
-    const statusMatch = filter === 'all' || request.status === filter;
-    const priorityMatch = priorityFilter === 'all' || request.priority === priorityFilter;
-    return statusMatch && priorityMatch;
-  });
-
+    const statusMatch = filter === 'all' || request.status === filter
+    const priorityMatch = priorityFilter === 'all' || request.priority === priorityFilter
+    return statusMatch && priorityMatch
+  })
   const getStatusColor = (status: string) => {
     switch (status) {
-      case 'open': return 'bg-red-100 text-red-800';
-      case 'in_progress': return 'bg-yellow-100 text-yellow-800';
-      case 'resolved': return 'bg-green-100 text-green-800';
-      case 'closed': return 'bg-gray-100 text-gray-800';
-      default: return 'bg-gray-100 text-gray-800';
+      case 'open': return 'bg-red-100 text-red-800'
+      case 'in_progress': return 'bg-yellow-100 text-yellow-800'
+      case 'resolved': return 'bg-green-100 text-green-800'
+      case 'closed': return 'bg-gray-100 text-gray-800'
+      default: return 'bg-gray-100 text-gray-800'
     }
-  };
-
+  }
   const getPriorityColor = (priority: string) => {
     switch (priority) {
-      case 'urgent': return 'bg-red-200 text-red-900';
-      case 'high': return 'bg-orange-100 text-orange-800';
-      case 'medium': return 'bg-yellow-100 text-yellow-800';
-      case 'low': return 'bg-green-100 text-green-800';
-      default: return 'bg-gray-100 text-gray-800';
+      case 'urgent': return 'bg-red-200 text-red-900'
+      case 'high': return 'bg-orange-100 text-orange-800'
+      case 'medium': return 'bg-yellow-100 text-yellow-800'
+      case 'low': return 'bg-green-100 text-green-800'
+      default: return 'bg-gray-100 text-gray-800'
     }
-  };
-
-  const openRequests = requests.filter(r => r.status === 'open');
-  const inProgressRequests = requests.filter(r => r.status === 'in_progress');
-  const resolvedRequests = requests.filter(r => r.status === 'resolved');
-
+  }
+  const openRequests = requests.filter(r => r.status === 'open')
+  const inProgressRequests = requests.filter(r => r.status === 'in_progress')
+  const resolvedRequests = requests.filter(r => r.status === 'resolved')
   return (
     <>
       <Head>
@@ -283,7 +273,6 @@ const AdminSupportRequestsPage: React.FC = () => {
         )}
       </main>
     </>
-  );
-};
-
-export default AdminSupportRequestsPage;
+  )
+}
+export default AdminSupportRequestsPage

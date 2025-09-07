@@ -1,4 +1,4 @@
- </div>) ) 
+</div>) ) 
 }</div> <form > <input className="flex-1 border rounded px-3 py-2 text-sm" placeholder="Ask about the role..." value= {
   input 
 }onChange= {

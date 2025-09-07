@@ -1,12 +1,23 @@
- const [selected, setSelected] = useState<any | null> (null);
-}return (<EnhancedLayout> <div className="max-w-7xl mx-auto" > <div className="flex items-center justify-between mb-4" > <h1 className="text-2xl font-semibold" >Admin Content Review</h1> </div> </div> <div className="overflow-auto border rounded" > <table className="min-w-full text-sm" > <thead className="bg-gray-50 dark:bg-gray-900" > <tr> <th className="text-left px-3 py-2" >ID</th> <th className="text-left px-3 py-2" >Type</th> <th className="text-left px-3 py-2" >User</th> <th className="text-left px-3 py-2" >Reason</th> <th className="text-left px-3 py-2" >AI Scores</th> <th className="text-left px-3 py-2" >Created</th> <th className="text-left px-3 py-2" >Status</th> <th className="text-left px-3 py-2" >Actions</th> </tr> </thead> <tbody>) 
-}</tbody> </table> </div> </div> {
-  selected && (<ModerationModal flag= {
-  selected 
-}onClose= {
-  () => setSelected (null) 
-}onAction= {
-  handleAction 
-}/>) 
-}</EnhancedLayout>) 
+import React from 'react';
+import Head from 'next/head';
+import Layout from '../../components/layout/Layout';
+
+export default function contentreview() {
+  return (
+    <Layout>
+      <Head>
+        <title>Content Review - Zion Tech Group</title>
+        <meta name="description" content="Content Review solutions and services." />
+      </Head>
+      
+      <div className="min-h-screen bg-gray-50">
+        <div className="container mx-auto px-6 py-16">
+          <h1 className="text-4xl font-bold text-gray-900 mb-8">Content Review</h1>
+          <p className="text-lg text-gray-600">
+            Professional content review solutions tailored to your business needs.
+          </p>
+        </div>
+      </div>
+    </Layout>
+  );
 }

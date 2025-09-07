@@ -1,22 +1,22 @@
- //Filter and sort services const filteredServices = services .filter (service => selectedCategory === 'all' || service.category === selectedCategory) .sort ( (a, b) => {
+//Filter and sort services const filteredServices = services .filter (service => selectedCategory === 'all' || service.category === selectedCategory) .sort ( (a, b) => {
   switch (sortBy) {
-  case 'innovation': //Default to 'Advanced' if innovationLevel is not available case 'price': return parseFloat (a.price.replace (/[^0-9.]/g, '') ) - parseFloat (b.price.replace (/[^0-9.]/g, '') );
-case 'rating': return b.rating - a.rating;
-default: return 0;
+  case 'innovation': //Default to 'Advanced' if innovationLevel is not available case 'price': return parseFloat (a.price.replace (/[^0-9.]/g, '') ) - parseFloat (b.price.replace (/[^0-9.]/g, '') )
+case 'rating': return b.rating - a.rating
+default: return 0
 }
-}) .slice (0, maxServices);
+}) .slice (0, maxServices)
 const containerVariants = {
   hidden: {
   opacity: 0 
-};
+}
 visible: {
   opacity: 1, transition: {
   staggerChildren: 0.1 
 }
 }
-};
 }
-};
+}
+}
 > {
   title 
 }</motion.h2> <motion.p > {
@@ -46,5 +46,5 @@ visible: {
   /* Innovation Stats */ 
 }<motion.div </motion.div>) ) 
 }</div> </motion.div> </div> </section>) 
-};
-export default UltraFuturistic2029ServiceShowcase;
+}
+export default UltraFuturistic2029ServiceShowcase

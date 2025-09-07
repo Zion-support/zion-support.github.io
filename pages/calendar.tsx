@@ -1,7 +1,7 @@
-import React from 'react';
-import Head from 'next/head';
-import Link from 'next/link';
-import { motion } from 'framer-motion';
+import React from 'react'
+import Head from 'next/head'
+import Link from 'next/link'
+import { motion } from 'framer-motion'
 import { 
   Calendar, 
   Clock, 
@@ -14,8 +14,7 @@ import {
   Video,
   MessageSquare,
   Building
-} from 'lucide-react';
-
+} from 'lucide-react'
 const timeSlots = [
   { time: "9:00 AM", available: true, type: "Video Call" },
   { time: "9:30 AM", available: true, type: "Phone Call" },
@@ -32,8 +31,7 @@ const timeSlots = [
   { time: "4:00 PM", available: false, type: "Phone Call" },
   { time: "4:30 PM", available: true, type: "Video Call" },
   { time: "5:00 PM", available: true, type: "Phone Call" }
-];
-
+]
 const consultationTypes = [
   {
     title: "Free Discovery Call",
@@ -59,8 +57,7 @@ const consultationTypes = [
     icon: Users,
     features: ["Business analysis", "Digital strategy planning", "ROI projections", "Implementation roadmap"]
   }
-];
-
+]
 const teamMembers = [
   {
     name: "Sarah Johnson",
@@ -90,8 +87,7 @@ const teamMembers = [
     image: "/images/team/david-kim.jpg",
     available: true
   }
-];
-
+]
 export default function CalendarPage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
@@ -380,5 +376,5 @@ export default function CalendarPage() {
         </div>
       </section>
     </div>
-  );
+  )
 }

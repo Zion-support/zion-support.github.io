@@ -1,23 +1,22 @@
-import React, { useState, useEffect } from 'react';
-import Head from 'next/head';
-
+import React, { useState, useEffect } from 'react'
+import Head from 'next/head'
 interface LogEntry {
-  id: string;
-  level: 'debug' | 'info' | 'warn' | 'error' | 'critical';
-  message: string;
-  category: string;
-  component?: string;
-  timestamp: string;
-  sessionId?: string;
-  userId?: string;
+  id: string
+  level: 'debug' | 'info' | 'warn' | 'error' | 'critical'
+  message: string
+  category: string
+  component?: string
+  timestamp: string
+  sessionId?: string
+  userId?: string
   error?: {
-    name: string;
-    stack?: string;
-  };
+    name: string
+    stack?: string
+  }
   performance?: {
-    duration: number;
-    memory?: number;
-  };
+    duration: number
+    memory?: number
+  }
 }
 
 const mockLogs: LogEntry[] = [
@@ -57,70 +56,62 @@ const mockLogs: LogEntry[] = [
       memory: 85
     }
   }
-];
-
+]
 const AdminLogsPage: React.FC = () => {
-  const [logs, setLogs] = useState<LogEntry[]>([]);
-  const [filteredLogs, setFilteredLogs] = useState<LogEntry[]>([]);
-  const [loading, setLoading] = useState(true);
-  const [searchTerm, setSearchTerm] = useState('');
-  const [levelFilter, setLevelFilter] = useState('all');
-  const [categoryFilter, setCategoryFilter] = useState('all');
-
+  const [logs, setLogs] = useState<LogEntry[]>([])
+  const [filteredLogs, setFilteredLogs] = useState<LogEntry[]>([])
+  const [loading, setLoading] = useState(true)
+  const [searchTerm, setSearchTerm] = useState('')
+  const [levelFilter, setLevelFilter] = useState('all')
+  const [categoryFilter, setCategoryFilter] = useState('all')
   useEffect(() => {
     // Simulate loading logs
     setTimeout(() => {
-      setLogs(mockLogs);
-      setFilteredLogs(mockLogs);
-      setLoading(false);
-    }, 1000);
-  }, []);
-
+      setLogs(mockLogs)
+      setFilteredLogs(mockLogs)
+      setLoading(false)
+    }, 1000)
+  }, [])
   useEffect(() => {
-    let filtered = [...logs];
-
+    let filtered = [...logs]
     if (searchTerm) {
       filtered = filtered.filter(log => 
         log.message.toLowerCase().includes(searchTerm.toLowerCase()) ||
         log.category.toLowerCase().includes(searchTerm.toLowerCase()) ||
         (log.component && log.component.toLowerCase().includes(searchTerm.toLowerCase()))
-      );
+      )
     }
 
     if (levelFilter !== 'all') {
-      filtered = filtered.filter(log => log.level === levelFilter);
+      filtered = filtered.filter(log => log.level === levelFilter)
     }
 
     if (categoryFilter !== 'all') {
-      filtered = filtered.filter(log => log.category === categoryFilter);
+      filtered = filtered.filter(log => log.category === categoryFilter)
     }
 
-    setFilteredLogs(filtered);
-  }, [logs, searchTerm, levelFilter, categoryFilter]);
-
+    setFilteredLogs(filtered)
+  }, [logs, searchTerm, levelFilter, categoryFilter])
   const getLevelColor = (level: string) => {
     switch (level) {
-      case 'debug': return 'bg-blue-100 text-blue-800';
-      case 'info': return 'bg-green-100 text-green-800';
-      case 'warn': return 'bg-yellow-100 text-yellow-800';
-      case 'error': return 'bg-red-100 text-red-800';
-      case 'critical': return 'bg-red-200 text-red-900';
-      default: return 'bg-gray-100 text-gray-800';
+      case 'debug': return 'bg-blue-100 text-blue-800'
+      case 'info': return 'bg-green-100 text-green-800'
+      case 'warn': return 'bg-yellow-100 text-yellow-800'
+      case 'error': return 'bg-red-100 text-red-800'
+      case 'critical': return 'bg-red-200 text-red-900'
+      default: return 'bg-gray-100 text-gray-800'
     }
-  };
-
+  }
   const formatPerformance = (performance: LogEntry['performance']) => {
-    if (!performance) return null;
-    const parts = [];
-    if (performance.duration) parts.push(`${performance.duration}ms`);
-    if (performance.memory) parts.push(`${performance.memory}% memory`);
-    return parts.length > 0 ? parts.join(', ') : null;
-  };
-
-  const errorCount = logs.filter(log => log.level === 'error' || log.level === 'critical').length;
-  const warningCount = logs.filter(log => log.level === 'warn').length;
-  const totalCount = logs.length;
-
+    if (!performance) return null
+    const parts = []
+    if (performance.duration) parts.push(`${performance.duration}ms`)
+    if (performance.memory) parts.push(`${performance.memory}% memory`)
+    return parts.length > 0 ? parts.join(', ') : null
+  }
+  const errorCount = logs.filter(log => log.level === 'error' || log.level === 'critical').length
+  const warningCount = logs.filter(log => log.level === 'warn').length
+  const totalCount = logs.length
   return (
     <>
       <Head>
@@ -262,7 +253,6 @@ const AdminLogsPage: React.FC = () => {
         </div>
       </main>
     </>
-  );
-};
-
-export default AdminLogsPage;
+  )
+}
+export default AdminLogsPage

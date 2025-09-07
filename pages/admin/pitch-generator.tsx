@@ -1,46 +1,41 @@
-import React, { useState } from 'react';
-import Head from 'next/head';
-
+import React, { useState } from 'react'
+import Head from 'next/head'
 interface Slide {
-  id: string;
-  title: string;
-  content: string;
+  id: string
+  title: string
+  content: string
   chart?: {
-    type: string;
-    data: Array<{ label: string; value: number }>;
-  };
+    type: string
+    data: Array<{ label: string; value: number }>
+  }
 }
 
 const AdminPitchGeneratorPage: React.FC = () => {
-  const [slides, setSlides] = useState<Slide[]>([]);
-  const [activeIndex, setActiveIndex] = useState(0);
-  const [loading, setLoading] = useState(false);
+  const [slides, setSlides] = useState<Slide[]>([])
+  const [activeIndex, setActiveIndex] = useState(0)
+  const [loading, setLoading] = useState(false)
   const [builder, setBuilder] = useState({
     companyName: '',
     stage: '',
     targetRaise: '',
     assets: [] as string[]
-  });
-
+  })
   const addSlide = () => {
     const newSlide: Slide = {
       id: Date.now().toString(),
       title: 'New Slide',
       content: 'Enter your content here...'
-    };
-    setSlides([...slides, newSlide]);
-  };
-
+    }
+    setSlides([...slides, newSlide])
+  }
   const updateActiveSlide = (updates: Partial<Slide>) => {
     if (activeIndex >= 0 && activeIndex < slides.length) {
-      const updatedSlides = [...slides];
-      updatedSlides[activeIndex] = { ...updatedSlides[activeIndex], ...updates };
-      setSlides(updatedSlides);
+      const updatedSlides = [...slides]
+      updatedSlides[activeIndex] = { ...updatedSlides[activeIndex], ...updates }
+      setSlides(updatedSlides)
     }
-  };
-
-  const activeSlide = slides[activeIndex];
-
+  }
+  const activeSlide = slides[activeIndex]
   return (
     <>
       <Head>
@@ -213,7 +208,6 @@ const AdminPitchGeneratorPage: React.FC = () => {
         </div>
       </main>
     </>
-  );
-};
-
-export default AdminPitchGeneratorPage;
+  )
+}
+export default AdminPitchGeneratorPage

@@ -1,5 +1,23 @@
- return (<Layout> <Head> <title> {
-  service.name 
-}- Zion Tech Group</title>) ) 
-}</ul> </div> <div className="bg-black/30 rounded-2xl border border-emerald-500/30 p-6 h-fit" > <div className="flex items-end justify-between mb-3" > <div> </div> </div> </div> </div> </div> </Layout>) 
+import React from 'react';
+import Head from 'next/head';
+import Layout from '../components/layout/Layout';
+
+export default function pdfrenderapi() {
+  return (
+    <Layout>
+      <Head>
+        <title>Pdf Render Api - Zion Tech Group</title>
+        <meta name="description" content="Pdf Render Api solutions and services." />
+      </Head>
+      
+      <div className="min-h-screen bg-gray-50">
+        <div className="container mx-auto px-6 py-16">
+          <h1 className="text-4xl font-bold text-gray-900 mb-8">Pdf Render Api</h1>
+          <p className="text-lg text-gray-600">
+            Professional pdf render api solutions tailored to your business needs.
+          </p>
+        </div>
+      </div>
+    </Layout>
+  );
 }

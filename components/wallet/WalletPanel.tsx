@@ -1,24 +1,24 @@
- type Summary = {
+type Summary = {
   wallet: {
   userId: string, balance: number 
-};
-transactions: Tx[];
+}
+transactions: Tx[]
 config: {
   usdPerToken: number, symbol: string 
 }
-};
+}
 function getUserId () : string {
-  const userId = useMemo ( () => getUserId (), []);
+  const userId = useMemo ( () => getUserId (), [])
 async function refresh () {
   const res = await fetch (`/api/wallet?userId=$ {
   encodeURIComponent (userId) 
-}`);
-const data = await res.json ();
+}`)
+const data = await res.json ()
 setSummary (data) 
 }useEffect ( () => {
   refresh () 
-}, []);
-["burn", "revoke", "redeem"].includes (t.type) );
+}, [])
+["burn", "revoke", "redeem"].includes (t.type) )
 }catch (e) {
   console.error (e) 
 }
@@ -32,7 +32,7 @@ setSummary (data)
   symbol 
 }for $$ {
   data.usd 
-}credit.`);
+}credit.`)
 refresh () 
 }
 }return (<div className="space-y-6" > <div className="p-4 border rounded-lg bg-white dark:bg-zinc-900" > <div className="flex items-center justify-between" > <div className="flex items-center gap-2" > <span className="text-2xl" >⚡</span> <div> <div className="flex gap-2 items-center"> <button className="px-3 py-1 rounded border" onClick= {

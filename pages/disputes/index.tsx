@@ -1,7 +1,23 @@
- </div> <div className="overflow-auto border rounded" > <table className="min-w-full text-sm" > <thead className="bg-gray-50 dark:bg-gray-900" > <tr> <th className="text-left px-3 py-2" >Case ID</th> <th className="text-left px-3 py-2" >Project</th> <th className="text-left px-3 py-2" >Created At</th> <th className="text-left px-3 py-2" >Status</th> </tr> </thead> <tbody> </tr>) ) 
-}{
-  disputes.length === 0 && (<tr> <td colSpan= {
-  4 
-}className="px-3 py-6 text-center text-sm text-gray-500" >No disputes yet</td> </tr>) 
-}</tbody> </table> </div> </div> </EnhancedLayout>) 
+import React from 'react';
+import Head from 'next/head';
+import Layout from '../../components/layout/Layout';
+
+export default function DisputesIndex() {
+  return (
+    <Layout>
+      <Head>
+        <title>Disputes - Zion Tech Group</title>
+        <meta name="description" content="Disputes solutions and services." />
+      </Head>
+      
+      <div className="min-h-screen bg-gray-50">
+        <div className="container mx-auto px-6 py-16">
+          <h1 className="text-4xl font-bold text-gray-900 mb-8">Disputes</h1>
+          <p className="text-lg text-gray-600">
+            Professional disputes solutions tailored to your business needs.
+          </p>
+        </div>
+      </div>
+    </Layout>
+  );
 }

@@ -1,4 +1,4 @@
- useEffect ( () => {
+useEffect ( () => {
   if (!query) {
   
 }

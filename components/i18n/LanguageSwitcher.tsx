@@ -1,4 +1,4 @@
- > <span className= {
+> <span className= {
   `fi fi-$ {
   localeToFlag[lng] 
 }` 

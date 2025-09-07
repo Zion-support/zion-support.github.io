@@ -1,26 +1,26 @@
- canvas.width = window.innerWidth;
-canvas.height = window.innerHeight;
-let animationId: number;
+canvas.width = window.innerWidth
+canvas.height = window.innerHeight
+let animationId: number
 let particles: Array< {
   
 }
-};
-// Wrap around edges if (particle.x < 0) particle.x = canvas.width;
-if (particle.x > canvas.width) particle.x = 0;
-if (particle.y < 0) particle.y = canvas.height;
-if (particle.y > canvas.height) particle.y = 0;
+}
+// Wrap around edges if (particle.x < 0) particle.x = canvas.width
+if (particle.x > canvas.width) particle.x = 0
+if (particle.y < 0) particle.y = canvas.height
+if (particle.y > canvas.height) particle.y = 0
 // Draw particle // Draw connections particles.forEach ( (otherParticle, otherIndex) => {
   if (index !== otherIndex) {
   
 }
 }) 
-});
-ctx.globalAlpha = 1;
+})
+ctx.globalAlpha = 1
 animationId = requestAnimationFrame (animate) 
-};
-initParticles ();
-animate ();
-window.addEventListener ('resize', handleResize);
+}
+initParticles ()
+animate ()
+window.addEventListener ('resize', handleResize)
 /> {
   /* Floating Circles */ 
 }<motion.div /> {
@@ -37,5 +37,5 @@ window.addEventListener ('resize', handleResize);
 }
 }/>) ) 
 }</div> </div> </div>) 
-};
-export default UltraFuturisticBackground2030;
+}
+export default UltraFuturisticBackground2030

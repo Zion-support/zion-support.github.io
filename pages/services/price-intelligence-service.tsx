@@ -1,1 +1,23 @@
- <div> <Head> <title>PriceIntelligenceService - Zion Tech Solutions</title> <meta name="description" content="PriceIntelligenceService service" /> </Head> <main className="space-y-4" > <h1>PriceIntelligenceService</h1> <p>Service details coming soon...</p> <UseTokensButton serviceId="price-intelligence" /> <Link href="/services" >Back to Services</Link> </main> </div> export default PriceIntelligenceService;
+import React from 'react';
+import Head from 'next/head';
+import Layout from '../components/layout/Layout';
+
+export default function priceintelligenceservice() {
+  return (
+    <Layout>
+      <Head>
+        <title>Price Intelligence Service - Zion Tech Group</title>
+        <meta name="description" content="Price Intelligence Service solutions and services." />
+      </Head>
+      
+      <div className="min-h-screen bg-gray-50">
+        <div className="container mx-auto px-6 py-16">
+          <h1 className="text-4xl font-bold text-gray-900 mb-8">Price Intelligence Service</h1>
+          <p className="text-lg text-gray-600">
+            Professional price intelligence service solutions tailored to your business needs.
+          </p>
+        </div>
+      </div>
+    </Layout>
+  );
+}

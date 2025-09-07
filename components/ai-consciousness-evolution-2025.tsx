@@ -1,7 +1,7 @@
- export default function AIConsciousnessEvolution2025 () {
+export default function AIConsciousnessEvolution2025 () {
   return (<Layout> <Head> <title>AI Consciousness Evolution Platform 2025 - Zion Tech Group</title> left: `$ {
   Math.random () * 100 
-}%`;
+}%`
 top: `$ {
   Math.random () * 100 
 }%` 

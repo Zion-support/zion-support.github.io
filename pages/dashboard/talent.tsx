@@ -1,5 +1,23 @@
- type StepKey = typeof STEPS[number]['key'];
-<EnhancedCard> <div className="flex items-center justify-between" > <div> <h1 className="text-lg font-semibold" >Welcome back</h1> <p className="text-sm text-gray-600 dark:text-gray-300" >Complete onboarding to unlock better matches.</p> </div> </div> </EnhancedCard> <EnhancedCard>) 
-}</li>) ) 
-}</ul> </EnhancedCard> </div>) 
+import React from 'react';
+import Head from 'next/head';
+import Layout from '../../components/layout/Layout';
+
+export default function talent() {
+  return (
+    <Layout>
+      <Head>
+        <title>Talent - Zion Tech Group</title>
+        <meta name="description" content="Talent solutions and services." />
+      </Head>
+      
+      <div className="min-h-screen bg-gray-50">
+        <div className="container mx-auto px-6 py-16">
+          <h1 className="text-4xl font-bold text-gray-900 mb-8">Talent</h1>
+          <p className="text-lg text-gray-600">
+            Professional talent solutions tailored to your business needs.
+          </p>
+        </div>
+      </div>
+    </Layout>
+  );
 }

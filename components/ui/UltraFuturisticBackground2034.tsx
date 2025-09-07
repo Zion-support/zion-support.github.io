@@ -1,24 +1,24 @@
- constructor () {
-  this.x = Math.random () * canvas.width;
-this.y = Math.random () * canvas.height;
-this.vx = (Math.random () - 0.5) * 0.5;
-this.vy = (Math.random () - 0.5) * 0.5;
-this.size = Math.random () * 2 + 1;
+constructor () {
+  this.x = Math.random () * canvas.width
+this.y = Math.random () * canvas.height
+this.vx = (Math.random () - 0.5) * 0.5
+this.vy = (Math.random () - 0.5) * 0.5
+this.size = Math.random () * 2 + 1
 this.color = `hsl ($ {
   Math.random () * 60 + 180 
-}, 70%, 60%) `;
-this.alpha = Math.random () * 0.5 + 0.3;
-this.life = Math.random () * 100 + 50;
+}, 70%, 60%) `
+this.alpha = Math.random () * 0.5 + 0.3
+this.life = Math.random () * 100 + 50
 this.maxLife = this.life 
-}if (this.x < 0 || this.x > canvas.width) this.vx *= -1;
-if (this.y < 0 || this.y > canvas.height) this.vy *= -1;
+}if (this.x < 0 || this.x > canvas.width) this.vx *= -1
+if (this.y < 0 || this.y > canvas.height) this.vy *= -1
 if (this.life <= 0) {
-  // Draw connecting lines ctx.strokeStyle = 'rgba (0, 255, 255, 0.1) ';
-ctx.lineWidth = 0.5;
+  // Draw connecting lines ctx.strokeStyle = 'rgba (0, 255, 255, 0.1) '
+ctx.lineWidth = 0.5
 }
 }requestAnimationFrame (animate) 
-};
-animate ();
+}
+animate ()
 backgroundImage: ` linear-gradient (rgba (0, 255, 255, 0.1) 1px, transparent 1px), linear-gradient (90deg, rgba (0, 255, 255, 0.1) 1px, transparent 1px) `, backgroundSize: '50px 50px' 
 }
 }/> </div> {
@@ -56,5 +56,5 @@ backgroundImage: ` linear-gradient (rgba (0, 255, 255, 0.1) 1px, transparent 1px
 }
 }/>) ) 
 }</div> </div>) 
-};
-export default UltraFuturisticBackground2034;
+}
+export default UltraFuturisticBackground2034

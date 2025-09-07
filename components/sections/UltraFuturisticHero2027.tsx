@@ -1,4 +1,4 @@
- > <h1 className="text-6xl md:text-8xl lg:text-9xl font-bold mb-6 leading-tight" > <span className="bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent" > Welcome to 2027 </span> </h1> <h2 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6" > The Future of <span className="bg-gradient-to-r from-green-400 via-yellow-400 to-orange-400 bg-clip-text text-transparent ml-4" > Technology </span> </h2> </motion.div> {
+> <h1 className="text-6xl md:text-8xl lg:text-9xl font-bold mb-6 leading-tight" > <span className="bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent" > Welcome to 2027 </span> </h1> <h2 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6" > The Future of <span className="bg-gradient-to-r from-green-400 via-yellow-400 to-orange-400 bg-clip-text text-transparent ml-4" > Technology </span> </h2> </motion.div> {
   /* Subtitle */ 
 }<motion.p > Experience revolutionary AI consciousness evolution, quantum computing breakthroughs, and practical micro SAAS solutions that will transform your business beyond imagination. </motion.p> {
   /* CTA Buttons */ 

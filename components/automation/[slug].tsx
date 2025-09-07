@@ -1,6 +1,6 @@
- return (<EnhancedLayout> <Head> <title> {
+return (<EnhancedLayout> <Head> <title> {
   title 
 }- Zion Tech Solutions</title> </Head>) 
 }</EnhancedLayout>) 
-};
-export default AutomationDetail;
+}
+export default AutomationDetail

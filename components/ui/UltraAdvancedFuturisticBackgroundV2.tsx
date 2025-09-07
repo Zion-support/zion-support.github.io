@@ -1,33 +1,33 @@
- canvas.width = window.innerWidth;
-canvas.height = window.innerHeight;
-let animationFrameId: number;
+canvas.width = window.innerWidth
+canvas.height = window.innerHeight
+let animationFrameId: number
 let particles: Array< {
   
 }
-};
-//Update and draw particles //Bounce off edges if (particle.x <= 0 || particle.x >= canvas.width) particle.vx *= -1;
-if (particle.y <= 0 || particle.y >= canvas.height) particle.vy *= -1;
+}
+//Update and draw particles //Bounce off edges if (particle.x <= 0 || particle.x >= canvas.width) particle.vx *= -1
+if (particle.y <= 0 || particle.y >= canvas.height) particle.vy *= -1
 //Reset particle if it dies if (particle.life <= 0) {
   
 }
 }
 }) 
-});
-//Draw quantum matrix overlay ctx.globalAlpha = 0.1;
-ctx.strokeStyle = '#00ffff';
-ctx.lineWidth = 0.5;
+})
+//Draw quantum matrix overlay ctx.globalAlpha = 0.1
+ctx.strokeStyle = '#00ffff'
+ctx.lineWidth = 0.5
 //Vertical lines ctx.strokeStyle = `hsl ($ {
   180 + i * 60 
-}, 100%, 50%) `;
-ctx.lineWidth = 2;
-ctx.beginPath ();
-ctx.arc (centerX, centerY, radius, 0, Math.PI * 2);
+}, 100%, 50%) `
+ctx.lineWidth = 2
+ctx.beginPath ()
+ctx.arc (centerX, centerY, radius, 0, Math.PI * 2)
 ctx.stroke () 
 }animationFrameId = requestAnimationFrame (updateParticles) 
-};
-//Handle resize window.addEventListener ('resize', handleResize);
-initParticles ();
-updateParticles ();
+}
+//Handle resize window.addEventListener ('resize', handleResize)
+initParticles ()
+updateParticles ()
 return (<div className= {
   `relative min-h-screen overflow-hidden $ {
   className 
@@ -50,5 +50,5 @@ return (<div className= {
   i 
 }/>) ) 
 }</svg> </div> </div> </div>) 
-};
-export default UltraAdvancedFuturisticBackgroundV2;
+}
+export default UltraAdvancedFuturisticBackgroundV2

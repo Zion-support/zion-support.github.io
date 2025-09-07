@@ -1,4 +1,4 @@
- Back to Services </Button> </div> </div> Back to Services </Button> </div> </div>) 
+Back to Services </Button> </div> </div> Back to Services </Button> </div> </div>) 
 }return (<> <Head> <Button href="/services" variant="ghost" size="sm" className="text-gray-400 hover:text-white" > <ArrowLeft className="w-4 h-4 mr-2" /> Back to Services </Button> <Button > Visit Service </Button> </div> </div> </nav> {
   /* Service Detail Content */ 
 }<ServiceDetail service= {

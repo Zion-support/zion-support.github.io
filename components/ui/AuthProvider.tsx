@@ -1,13 +1,13 @@
- type UserRole = 'talent' | 'client';
+type UserRole = 'talent' | 'client'
 useEffect ( () => {
   try {
   
 }catch {
   
 }
-}, []);
+}, [])
 }catch {
   
 }
-};
+}
 return (

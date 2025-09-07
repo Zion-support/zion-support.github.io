@@ -1,14 +1,14 @@
- //Search filter if (searchQuery) {
+//Search filter if (searchQuery) {
   filteredServices = filteredServices.filter (service => service.name.toLowerCase () .includes (searchQuery.toLowerCase () ) || service.description.toLowerCase () .includes (searchQuery.toLowerCase () ) || service.tagline.toLowerCase () .includes (searchQuery.toLowerCase () ) || service.category.toLowerCase () .includes (searchQuery.toLowerCase () ) //Sort services filteredServices.sort ( (a, b) => {
   switch (sortBy) {
-  case 'price': return a.price.monthly - b.price.monthly;
-case 'popularity': return (b.popular ? 1 : 0) - (a.popular ? 1 : 0);
-case 'category': return a.category.localeCompare (b.category);
+  case 'price': return a.price.monthly - b.price.monthly
+case 'popularity': return (b.popular ? 1 : 0) - (a.popular ? 1 : 0)
+case 'category': return a.category.localeCompare (b.category)
 case 'roi': {
   
 }
 }
-});
+})
 return (<> <Head> <title>Innovative Micro SAAS Services - Zion Tech Group</title> Revolutionary Innovation </h1> <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed" > Discover the future of technology with our breakthrough micro SAAS services. From quantum AI to autonomous systems, we're redefining what's possible. </p> </div> </div> <div className="text-center" > <div className="text-3xl md:text-4xl font-bold text-purple-400 mb-2" >$25B+</div> <div className="text-gray-400" >Market Value</div> </div> <div className="text-center" > <div className="text-3xl md:text-4xl font-bold text-pink-400 mb-2" >2500%</div> <div className="text-gray-400" >Average ROI</div> </div> <div className="text-center" > <div className="text-3xl md:text-4xl font-bold text-green-400 mb-2" >99.99%</div> <div className="text-gray-400" >Accuracy Rate</div> </div> </div> </div> </div> </div> </div> </section> /> </div> </div> </option>) ) 
 }</select> </div> > {
   priceRanges.map ( (range) => (<option key= {

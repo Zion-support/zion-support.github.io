@@ -1,4 +1,10 @@
- for (const lng of targets) {
-  const langName = (lng.startsWith ('pt') ? 'Portuguese' : lng.startsWith ('es') ? 'Spanish' : lng.startsWith ('ar') ? 'Arabic' : 'English' 
-}
+import { NextApiRequest, NextApiResponse } from 'next';
+
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  if (req.method !== 'GET') {
+    res.setHeader('Allow', ['GET']);
+    return res.status(405).end('Method Not Allowed');
+  }
+  
+  res.status(200).json({ message: 'Endpoint working' });
 }

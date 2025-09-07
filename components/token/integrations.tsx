@@ -1,4 +1,4 @@
- </section> <section className="space-y-4" > <ClientOnlyBridge /> </section> </div>) ) 
+</section> <section className="space-y-4" > <ClientOnlyBridge /> </section> </div>) ) 
 }</div>) 
 }</section> <div> <span className="text-gray-500" >Recommendation:</span> <b> {
   suggestion.recommendation?.chain?.name 

@@ -1,1 +1,23 @@
- <Head> <title>Community | Zion Tech Group</title> <meta name="description" content="Community forum and resources for Zion Tech Group users" /> <link rel="canonical" href="https://ziontechgroup.com/community" /> <meta name="description" content="Join the Zion Tech Group community and stay updated." /> </Head> <div className="p-6 rounded-2xl bg-white/5 border border-white/10"> <h2 className="text-white text-xl font-semibold mb-2">Get Help</h2> <p className="text-slate-300">Visit the <a className="text-cyan-400 underline" href="/support">Support Center</a> or email <a className="text-purple-400" href="mailto:kleber@ziontechgroup.com">kleber@ziontechgroup.com</a>.</p> p-6 rounded-2xl bg-white/5 border border-white/10"> <h2 className=" text-white text-xl font-semibold mb-2">Follow Us</h2> <ul className=" text-slate-300 space-y-1"> <li><a className=" text-cyan-400"href=" https://linkedin.com/company/ziontechgroup"target=" blank"rel=" noopener noreferrer">LinkedIn</Link></li> <li><a className=" text-cyan-400"href=" https://github.com/Zion-Holdings"target=" blank"rel=" noopener noreferrer">GitHub</Link></li> <li><a className=" text-cyan-400"href=" https://instagram.com/ziontechgroup"target=" blank"rel=" noopener noreferrer">Instagram</Link></li> <li><a className=" text-cyan-400"href=" https://youtube.com/@ziontechgroup"target=" blank"rel=" noopener noreferrer" >YouTube</Link></li> </ul> </div> </div> </div> </div> 
+import React from 'react';
+import Head from 'next/head';
+import Layout from '../components/layout/Layout';
+
+export default function community() {
+  return (
+    <Layout>
+      <Head>
+        <title>Community - Zion Tech Group</title>
+        <meta name="description" content="Community solutions and services." />
+      </Head>
+      
+      <div className="min-h-screen bg-gray-50">
+        <div className="container mx-auto px-6 py-16">
+          <h1 className="text-4xl font-bold text-gray-900 mb-8">Community</h1>
+          <p className="text-lg text-gray-600">
+            Professional community solutions tailored to your business needs.
+          </p>
+        </div>
+      </div>
+    </Layout>
+  );
+}

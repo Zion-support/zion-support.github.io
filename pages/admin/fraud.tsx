@@ -1,6 +1,5 @@
-import React from 'react';
-import Head from 'next/head';
-
+import React from 'react'
+import Head from 'next/head'
 const FraudPage: React.FC = () => {
   return (
     <div className="p-6 max-w-7xl mx-auto">
@@ -40,7 +39,6 @@ const FraudPage: React.FC = () => {
         </table>
       </div>
     </div>
-  );
-};
-
-export default FraudPage;
+  )
+}
+export default FraudPage

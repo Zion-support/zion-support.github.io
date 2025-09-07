@@ -15,13 +15,13 @@ import Head from 'next/head' import Link from 'next/link' export default functio
 }
 }const quickActions = [ {
   title: 'Browse Cached Equipment', description: 'View recently visited equipment listings', icon: Search, href: '/equipment', available: true 
-};
+}
 {
   title: 'View Bookmarks', description: 'Access your saved items', icon: Bookmark, href: '/bookmarks', available: true 
-};
+}
 {
   title: 'Visit Marketplace', description: 'Browse all available services and gear', icon: ShoppingCart, href: '/marketplace', available: true 
-};
+}
 {
   title: 'Go to Homepage', description: 'Return to the main page', icon: Home, href: '/', available: true 
 }] return (<> <Head> <title>You're Offline - Zion Tech Marketplace</title> <meta name="description" content="You're currently offline. Some features may not be available." /> <meta name="robots" content="noindex, nofollow" /> </Head> <div className="min-h-screen bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50 dark:from-gray-900 dark:via-blue-900 dark:to-indigo-900" > <div className="container mx-auto px-4 py-8" > <motion.div <motion.div animate= {

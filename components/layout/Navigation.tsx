@@ -1,23 +1,23 @@
- window.addEventListener ('scroll', handleScroll);
+window.addEventListener ('scroll', handleScroll)
 return () => window.removeEventListener ('scroll', handleScroll) 
-}, []);
+}, [])
 const navigationItems = [ {
   name: 'Home', href: '/', icon: Home 
-};
+}
 {
   name: 'Services', href: '/services', icon: Rocket, dropdown: [ {
   name: 'AI Services', href: '/ai-services', icon: Brain, description: 'Revolutionary AI solutions' 
-};
+}
 {
   name: 'IT Services', href: '/it-services', icon: Cpu, description: 'Enterprise IT solutions' 
-};
+}
 {
   name: 'Micro SaaS', href: '/micro-saas', icon: Rocket, description: 'Specialized software solutions' 
-};
+}
 {
   name: 'Innovative Showcase', href: '/innovative-services-showcase', icon: Globe, description: 'Cutting-edge technology' 
 }] 
-};
+}
 return (<> {
   /* Navigation Bar */ 
 }<motion.nav initial= {
@@ -55,5 +55,5 @@ return (<> {
 }</div>) ) 
 }</div> </div> </div> </div> > Get Started Today </motion.a> </div> </div> </motion.div> </motion.div>) 
 }</AnimatePresence> </>) 
-};
-export default Navigation;
+}
+export default Navigation

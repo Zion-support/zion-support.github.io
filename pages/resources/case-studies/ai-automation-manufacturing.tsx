@@ -1,3 +1,23 @@
- return (<> <Head> ← Back to Resources </Link> </nav> Our approach involved deploying autonomous AI systems across three key areas: predictive maintenance;
-quality control, and production optimization. Each system was designed to work independently while sharing data for comprehensive insights. </p> </div> <div className="bg-purple-500/10 rounded-lg p-6 border border-purple-500/20" > <h3 className="text-xl font-semibold text-purple-400 mb-3" >Technology Stack</h3> <p className="text-white/90" > We utilized advanced machine learning algorithms, computer vision systems, IoT sensors, and predictive analytics to create a comprehensive automation solution that could adapt to changing production requirements. </p> </div> <div className="bg-yellow-500/10 rounded-lg p-6 border border-yellow-500/20" > <h3 className="text-xl font-semibold text-yellow-400 mb-3" >Business Impact</h3> <p className="text-white/90" > The implementation resulted in significant improvements across all key metrics, with the most notable being the 40% increase in production efficiency and 60% reduction in unplanned downtime. These improvements directly translated to increased profitability and customer satisfaction. </p> </div> </div> </section> <Link href="/case-studies/ai-automation-manufacturing" className="bg-fuchsia-500/10 rounded-lg p-6 border border-fuchsia-500/20 hover:border-fuchsia-400/50 transition-all duration-300" > <h3 className="text-lg font-semibold text-fuchsia-400 mb-2" >Full Case Study</h3> <p className="text-white/80 text-sm" >Read the complete case study with detailed implementation insights.</p> </Link> <Link href="/resources/whitepapers/autonomous-systems-guide.pdf" className="bg-cyan-500/10 rounded-lg p-6 border border-cyan-500/20 hover:border-cyan-400/50 transition-all duration-300" > <h3 className="text-lg font-semibold text-cyan-400 mb-2" >Autonomous Systems Guide</h3> <p className="text-white/80 text-sm" >Download our comprehensive guide to autonomous technology.</p> </Link> </div> </section> This resource demonstrates the real impact of AI automation in manufacturing. Let's discuss how we can help you achieve similar results. </p> <Link href="/contact" className="bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-500 hover:to-fuchsia-500 transition-all duration-300" > Get Started </Link> <Link href="/resources" className="px-8 py-4 border border-white/20 rounded-lg text-white hover:border-cyan-400/50 transition-all duration-300" > Explore More Resources </Link> </div> </div> </section> </div> </main> </div> </>) 
+import React from 'react';
+import Head from 'next/head';
+import Layout from '../../components/layout/Layout';
+
+export default function aiautomationmanufacturing() {
+  return (
+    <Layout>
+      <Head>
+        <title>Ai Automation Manufacturing - Zion Tech Group</title>
+        <meta name="description" content="Ai Automation Manufacturing solutions and services." />
+      </Head>
+      
+      <div className="min-h-screen bg-gray-50">
+        <div className="container mx-auto px-6 py-16">
+          <h1 className="text-4xl font-bold text-gray-900 mb-8">Ai Automation Manufacturing</h1>
+          <p className="text-lg text-gray-600">
+            Professional ai automation manufacturing solutions tailored to your business needs.
+          </p>
+        </div>
+      </div>
+    </Layout>
+  );
 }

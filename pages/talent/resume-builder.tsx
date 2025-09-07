@@ -1,3 +1,23 @@
- return (<div> <Head> <title>Resume Builder - Zion AI Marketplace</title> </Head> <h1 className="text-2xl font-semibold mb-4" >Resume Builder</h1> </label> </div> </section> <section className="mb-8" > <div className="flex items-center justify-between mb-2" > <h2 className="text-lg font-semibold" >Summary</h2> <div className="flex gap-2" > <AIAssistant </section> <section className="mb-8" > <div className="flex items-center justify-between mb-2" > <h2 className="text-lg font-semibold" >Experience</h2> <AIAssistant </section> <section className="mb-8" > <div className="flex items-center justify-between mb-2" > <h2 className="text-lg font-semibold" >Skills</h2> <AIAssistant </section> </div>) 
-};
-export default ResumeBuilder;
+import React from 'react';
+import Head from 'next/head';
+import Layout from '../../components/layout/Layout';
+
+export default function resumebuilder() {
+  return (
+    <Layout>
+      <Head>
+        <title>Resume Builder - Zion Tech Group</title>
+        <meta name="description" content="Resume Builder solutions and services." />
+      </Head>
+      
+      <div className="min-h-screen bg-gray-50">
+        <div className="container mx-auto px-6 py-16">
+          <h1 className="text-4xl font-bold text-gray-900 mb-8">Resume Builder</h1>
+          <p className="text-lg text-gray-600">
+            Professional resume builder solutions tailored to your business needs.
+          </p>
+        </div>
+      </div>
+    </Layout>
+  );
+}

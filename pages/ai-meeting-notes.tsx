@@ -1,7 +1,6 @@
-import React from 'react';
-import Head from 'next/head';
-import Layout from '../components/layout/Layout';
-
+import React from 'react'
+import Head from 'next/head'
+import Layout from '../components/layout/Layout'
 const AIMeetingNotes: React.FC = () => {
   return (
     <Layout>
@@ -74,7 +73,6 @@ const AIMeetingNotes: React.FC = () => {
         </div>
       </main>
     </Layout>
-  );
-};
-
-export default AIMeetingNotes;
+  )
+}
+export default AIMeetingNotes

@@ -1,20 +1,18 @@
-import React, { useState } from 'react';
-import Head from 'next/head';
-
+import React, { useState } from 'react'
+import Head from 'next/head'
 interface ProviderMeta {
-  id: string;
-  name: string;
-  status: string;
+  id: string
+  name: string
+  status: string
 }
 
 interface ConnectionMap {
-  [key: string]: boolean;
+  [key: string]: boolean
 }
 
 const AdminIntegrationsPage: React.FC = () => {
-  const [providers, setProviders] = useState<ProviderMeta[]>([]);
-  const [connections, setConnections] = useState<ConnectionMap>({});
-
+  const [providers, setProviders] = useState<ProviderMeta[]>([])
+  const [connections, setConnections] = useState<ConnectionMap>({})
   return (
     <div className="p-6 max-w-7xl mx-auto">
       <Head>
@@ -29,7 +27,6 @@ const AdminIntegrationsPage: React.FC = () => {
         <p className="text-gray-600">No integrations configured yet.</p>
       </div>
     </div>
-  );
-};
-
-export default AdminIntegrationsPage;
+  )
+}
+export default AdminIntegrationsPage

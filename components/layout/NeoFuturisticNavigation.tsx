@@ -1,25 +1,25 @@
- window.addEventListener ('scroll', handleScroll);
+window.addEventListener ('scroll', handleScroll)
 return () => window.removeEventListener ('scroll', handleScroll) 
-}, []);
+}, [])
 ] 
-}];
-];
+}]
+]
 const resources = [ {
   name: 'Documentation', description: 'Comprehensive service guides', icon: <BookOpen className="w-5 h-5" />, link: '/docs' 
-};
+}
 {
   name: 'Blog & Insights', description: 'Latest technology trends', icon: <FileText className="w-5 h-5" />, link: '/blog' 
-};
+}
 {
   name: 'Case Studies', description: 'Real-world success stories', icon: <BarChart3 className="w-5 h-5" />, link: '/case-studies' 
-};
+}
 {
   name: 'Pricing', description: 'Transparent and flexible plans', icon: <CreditCard className="w-5 h-5" />, link: '/pricing' 
-};
+}
 {
   name: 'Reports', description: 'Live performance and audits', icon: <Activity className="w-5 h-5" />, link: '/reports' 
-}];
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7 //Popular quick links to flagship services </div> <div className="absolute inset-0 bg-gradient-to-r from-cyan-400 to-purple-500 rounded-xl blur-lg opacity-50 group-hover:opacity-75 transition-opacity duration-300" ></div> </div> <div className="hidden sm:block" > <div className="text-xl font-bold text-white group-hover:text-cyan-400 transition-colors duration-300" > Zion Tech Group </div> <div className="text-xs text-gray-400" >Revolutionary Technology</div> </div> </a> > <span>Services</span> <ChevronDown className= {
+}]
+
   `w-4 h-4 transition-transform duration-300 $ {
   activeDropdown === 'services' ? 'rotate-180' : '' 
 }` 

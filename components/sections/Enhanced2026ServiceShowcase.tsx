@@ -1,10 +1,9 @@
- 
 }
-};
 }
-};
 }
-};
+}
+}
+}
 const renderServiceCard = (service: unknown, index: number) => (<motion.div <span>Popular</span> </div>) 
 }</div> </div>) ) 
 }</div> </div> > <span>Learn More</span> <ArrowRight className="w-4 h-4" /> </motion.button> </div> </div> </div> </div> > <div className="flex items-center justify-center space-x-2 mb-4" > <div className="w-8 h-8 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center" > <Rocket className="w-5 h-5 text-white" /> </div> <span className="text-cyan-400 font-semibold text-sm uppercase tracking-wider" > Innovation 2026 </span> </div> <h2 className="text-4xl md:text-5xl font-bold text-white mb-6" > Next-Generation <span className="block bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent" > AI & IT Services </span> </h2> </p> </motion.div> {

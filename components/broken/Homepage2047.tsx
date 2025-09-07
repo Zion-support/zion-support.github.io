@@ -1,25 +1,25 @@
- window.addEventListener ('mousemove', handleMouseMove);
-window.addEventListener ('scroll', handleScroll);
-//Combine all innovative services const allInnovativeServices = [ ...innovative2025AIAutonomousEcosystemV2;
-...emergingTechBreakthroughs2025V4;
-...innovative2025ITInfrastructureV2 ];
+window.addEventListener ('mousemove', handleMouseMove)
+window.addEventListener ('scroll', handleScroll)
+//Combine all innovative services const allInnovativeServices = [ ...innovative2025AIAutonomousEcosystemV2
+...emergingTechBreakthroughs2025V4
+...innovative2025ITInfrastructureV2 ]
 //Get featured services for rotation const fadeInUp = {
   initial: {
   opacity: 0, y: 60 
-};
+}
 animate: {
   opacity: 1, y: 0 
-};
+}
 transition: {
   duration: 0.6 
 }
-};
+}
 const staggerContainer = {
   animate: {
   staggerChildren: 0.1 
 }
 }
-};
+}
 <UltraFuturisticBackground2047 /> {
   /* Navigation */ 
 }<UltraFuturisticNavigation2047 /> > <div className="space-y-6" > <motion.div > <Sparkles className="w-4 h-4" /> <span>Innovating the Future Since 2025</span> </motion.div> <h1 className="text-5xl md:text-7xl font-bold leading-tight" > <span className="bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent" > Revolutionary </span> <br /> <span className="text-white" >Technology Solutions</span> <br /> <span className="bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 bg-clip-text text-transparent" > for 2047 & Beyond </span> </h1> </p> </div> {
@@ -65,5 +65,5 @@ const staggerContainer = {
 }> <h2 className="text-4xl md:text-5xl font-bold text-white mb-6" > Ready to Transform Your Business? </h2> <p className="text-xl text-gray-300 mb-8 leading-relaxed" > Join thousands of organizations already leveraging our revolutionary AI, quantum, and IT infrastructure solutions </p> <div className="flex flex-col sm:flex-row gap-4 justify-center" > <Link href="/contact" className="bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-8 py-4 rounded-xl font-semibold text-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-200 hover:scale-105 shadow-lg hover:shadow-cyan-500/25" > Get Started Today </a> <Link href="/2025-innovative-services-showcase-v2" className="border border-cyan-500/50 text-cyan-400 px-8 py-4 rounded-xl font-semibold text-lg hover:bg-cyan-500/10 transition-all duration-200" > Explore Services </a> </div> </motion.div> </div> </section> {
   /* Footer */ 
 }<UltraFuturisticFooter2047 /> </div>) 
-};
-export default Homepage2047;
+}
+export default Homepage2047

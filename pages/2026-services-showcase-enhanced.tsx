@@ -1,17 +1,17 @@
- //Combine all 2026 services including new ones const all2026Services = [ ...innovative2026MicroSaasServicesV2;
-...emergingTech2026ServicesV2;
-...enterpriseIT2026ServicesV2;
-...innovative2026AIServicesV3;
-...emergingTech2026ServicesV3;
-...enterpriseIT2026ServicesV3 ];
+//Combine all 2026 services including new ones const all2026Services = [ ...innovative2026MicroSaasServicesV2
+...emergingTech2026ServicesV2
+...enterpriseIT2026ServicesV2
+...innovative2026AIServicesV3
+...emergingTech2026ServicesV3
+...enterpriseIT2026ServicesV3 ]
 //Enhanced categories for 2026 //Search filter if (searchTerm) {
   filtered = filtered.filter (service => service.name.toLowerCase () .includes (searchTerm.toLowerCase () ) || service.description.toLowerCase () .includes (searchTerm.toLowerCase () ) || service.category.toLowerCase () .includes (searchTerm.toLowerCase () ) 
 }//Sort services filtered.sort ( (a, b) => {
   switch (sortBy) {
-  case 'price-low': case 'popularity': return (b.rating * b.reviews) - (a.rating * a.reviews);
-case 'newest': return new Date (b.launchDate) .getTime () - new Date (a.launchDate) .getTime ();
-case 'rating': return filtered;
-}, [all2026Services, searchTerm, selectedCategory, selectedPriceRange, sortBy]);
+  case 'price-low': case 'popularity': return (b.rating * b.reviews) - (a.rating * a.reviews)
+case 'newest': return new Date (b.launchDate) .getTime () - new Date (a.launchDate) .getTime ()
+case 'rating': return filtered
+}, [all2026Services, searchTerm, selectedCategory, selectedPriceRange, sortBy])
 //Service statistics return (<UltraFuturisticBackground variant="holographic" intensity="high" > <div className="min-h-screen" > <Head> <title>Enhanced 2026 Services Showcase - Zion Tech Group</title> <meta name="description" content="Discover our comprehensive collection of innovative 2026 micro SAAS services, AI solutions, quantum computing, and enterprise IT services. Transform your business with cutting-edge technology." /> <meta name="keywords" content="2026 services, micro SAAS, AI services, quantum computing, enterprise IT, blockchain, 5G networks, edge computing, zero trust security" /> <link rel="icon" href="/favicon.svg" /> <motion.div initial= {
   {
   opacity: 0, y: 20 

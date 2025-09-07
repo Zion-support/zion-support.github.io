@@ -1,6 +1,6 @@
-'use client';
-const [isSubmitting, setIsSubmitting] = useState (false);
-const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'> ('idle');
+'use client'
+const [isSubmitting, setIsSubmitting] = useState (false)
+const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'> ('idle')
 > Conversation </span> </h2> <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed" > Ready to transform your business? Get in touch with our team of experts to discuss how we can help you achieve your technology goals. </p> </motion.div> > <div> <h3 className="text-2xl font-bold text-white mb-6" >Get in Touch</h3> <p className="text-gray-300 leading-relaxed mb-8" > Our team is here to help you navigate the complex world of technology and find the perfect solutions for your business needs. Reach out to us today. </p> </div> > <div className="w-12 h-12 bg-gradient-to-r from-blue-600 to-purple-600 rounded-xl flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300" > <info.icon className="w-6 h-6 text-white" /> </div> <div> </p> </div> </motion.a>) ) 
 }</div> {
   /* Additional Info */ 
@@ -21,5 +21,5 @@ const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'> (
   isSubmitting ? (<> <div className="w-5 h-5 border-2 border-white/30 border-t-white rounded-full animate-spin" /> <span>Sending...</span> </>) : (<> <Send className="w-5 h-5" /> <span>Send Message</span> </>) 
 }</button> </form>) 
 }</motion.div> </div> </div> </section>) 
-};
-export default ContactForm;
+}
+export default ContactForm

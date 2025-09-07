@@ -1,20 +1,23 @@
- async function load () {
-  const [courseResp, progResp] = await Promise.all ([ fetch (`/api/learn/courses/$ {
-  courseId 
-}`);
-fetch (`/api/learn/progress?userId=demo-user`) 
-}load () 
-}, [courseId]);
-async function markLessonComplete (lessonId: string) {
-  const completedCount = (progress.completedLessons || []) .includes (lessonId) ? (progress.completedLessons || []) .length if (!course) return <div>Loading...</div>;
-</button> </li>) ) 
-}</ul> </aside>) 
-}</div>) : (<div className="text-sm text-gray-500" >Select a lesson</div>) 
-}) 
-}</div>) : null 
-}{
-  finalPassed && (<CertificatePreview courseId= {
-  courseId 
-}/>) 
-}</section> </div> </div> <div className="space-y-4" > <CoachWidget /> </div> </div> </div>) 
+import React from 'react';
+import Head from 'next/head';
+import Layout from '../../components/layout/Layout';
+
+export default function LearnCourseId() {
+  return (
+    <Layout>
+      <Head>
+        <title>Learn Course - Zion Tech Group</title>
+        <meta name="description" content="Learn Course solutions and services." />
+      </Head>
+      
+      <div className="min-h-screen bg-gray-50">
+        <div className="container mx-auto px-6 py-16">
+          <h1 className="text-4xl font-bold text-gray-900 mb-8">Learn Course</h1>
+          <p className="text-lg text-gray-600">
+            Professional learn course solutions tailored to your business needs.
+          </p>
+        </div>
+      </div>
+    </Layout>
+  );
 }

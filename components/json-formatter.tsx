@@ -1,11 +1,11 @@
- const formatJSON = () => {
+const formatJSON = () => {
   if (!inputJson.trim () ) {
-  ];
-setInputJson (JSON.stringify (sample, null, 2) );
-setFormattedJson ('');
-setIsValid (true);
+  ]
+setInputJson (JSON.stringify (sample, null, 2) )
+setFormattedJson ('')
+setIsValid (true)
 setErrorMessage ('') 
-};
+}
 return (<> <Head> <title>JSON Formatter - Zion Tech Group</title> Professional JSON Tools </div> </div> <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-8 leading-tight" > JSON Formatter </h1> JSON data with advanced features and real-time validation. </p> </div> </section> Format Your JSON Data </h2> <p className="text-xl text-gray-400 max-w-3xl mx-auto" > Our advanced JSON formatter provides multiple formatting options and real-time validation. </p> </div> > <option value= {
   2 
 }>2 spaces</option> <option value= {

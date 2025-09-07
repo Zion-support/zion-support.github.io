@@ -1,2 +1,23 @@
- </Head> <div className="min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8" > <div className="max-w-5xl mx-auto space-y-8" > <h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent" >Market Pricing & References</h1> <p className="text-slate-300" >Below are easy-to-verify vendor references and typical pricing ranges to help you benchmark our offerings.</p> </ul> <div className="text-sm text-slate-400 mt-3" >Typical SMB budgets: $100–$2, 000/month depending on traffic and model choice.</div> </div> </ul> <div className="text-sm text-slate-400 mt-3" >Typical SMB budgets: $200–$5, 000/month based on scale and compliance scope.</div> </div> </ul> <div className="text-sm text-slate-400 mt-3" >Typical SMB budgets: $100–$3, 000/month depending on storage, queries, and concurrency.</div> </div> </ul> <div className="text-sm text-slate-400 mt-3" >Typical SMB budgets: $200–$10, 000/month depending on traffic and workloads.</div> </div> </ul> <div className="text-sm text-slate-400 mt-3" >Typical SMB budgets: $50–$1, 000/month based on dimensions, throughput, and replicas.</div> </ul> </div> </ul> <div className="text-sm text-slate-400 mt-3" >Typical SMB budgets: $100–$1, 500/month depending on MAUs and features.</div> </div> </ul> <div className="text-sm text-slate-400 mt-3" >Typical SMB budgets: $50–$1, 000/month depending on index size and QPS.</div> </div> </ul> <div className="text-sm text-slate-400 mt-3" >Typical SMB budgets: $100–$2, 000/month based on traffic and protections.</div> </div> </ul> <div className="text-sm text-slate-400 mt-3" >Typical SMB budgets: $100–$2, 000/month by data volume and systems.</div> </div> </ul> <div className="text-sm text-slate-400 mt-3" >Typical SMB budgets: $100–$1, 500/month depending on MAUs and features.</div> </div> </div> </div> </div> </Layout>) 
+import React from 'react';
+import Head from 'next/head';
+import Layout from '../components/layout/Layout';
+
+export default function marketpricing() {
+  return (
+    <Layout>
+      <Head>
+        <title>Market Pricing - Zion Tech Group</title>
+        <meta name="description" content="Market Pricing solutions and services." />
+      </Head>
+      
+      <div className="min-h-screen bg-gray-50">
+        <div className="container mx-auto px-6 py-16">
+          <h1 className="text-4xl font-bold text-gray-900 mb-8">Market Pricing</h1>
+          <p className="text-lg text-gray-600">
+            Professional market pricing solutions tailored to your business needs.
+          </p>
+        </div>
+      </div>
+    </Layout>
+  );
 }

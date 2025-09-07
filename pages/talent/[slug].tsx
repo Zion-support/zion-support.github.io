@@ -1,6 +1,23 @@
- <Head> <title> {
-  slug 
-}- Talent - Zion</title> </Head> <header className="flex items-start justify-between gap-4" > <div> </div> </header> <section className="grid md:grid-cols-3 gap-6" > <div className="md:col-span-2 space-y-4" > <div className="border rounded-md p-4" > <h2 className="font-semibold mb-2" >About</h2> <p className="text-sm opacity-90" >Experienced developer specializing in React, Next.js, and Node.js.</p> </div> <div className="border rounded-md p-4" > <h2 className="font-semibold mb-2" >Testimonials</h2> <MicroTestimonial quote="Fantastic work, delivered on time." author="Acme Corp" /> </div> </div> </li>) ) 
-}</ul> </div> </aside> </section> </div>) 
-};
-export default TalentProfile;
+import React from 'react';
+import Head from 'next/head';
+import Layout from '../../components/layout/Layout';
+
+export default function [slug]() {
+  return (
+    <Layout>
+      <Head>
+        <title>[Slug] - Zion Tech Group</title>
+        <meta name="description" content="[Slug] solutions and services." />
+      </Head>
+      
+      <div className="min-h-screen bg-gray-50">
+        <div className="container mx-auto px-6 py-16">
+          <h1 className="text-4xl font-bold text-gray-900 mb-8">[Slug]</h1>
+          <p className="text-lg text-gray-600">
+            Professional [slug] solutions tailored to your business needs.
+          </p>
+        </div>
+      </div>
+    </Layout>
+  );
+}

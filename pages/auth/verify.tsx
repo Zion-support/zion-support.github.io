@@ -1,1 +1,23 @@
- <div> <Head> <title>Verify - Zion Tech Solutions</title> <meta name="description" content="Verify page" /> </Head> <main> <h1>Verify</h1> <p>This page is under construction.</p> </main> </div> export default Verify;
+import React from 'react';
+import Head from 'next/head';
+import Layout from '../../components/layout/Layout';
+
+export default function Verify() {
+  return (
+    <Layout>
+      <Head>
+        <title>Verify - Zion Tech Group</title>
+        <meta name="description" content="Verification page." />
+      </Head>
+      
+      <div className="min-h-screen bg-gray-50">
+        <div className="container mx-auto px-6 py-16">
+          <h1 className="text-4xl font-bold text-gray-900 mb-8">Verify</h1>
+          <p className="text-lg text-gray-600">
+            Verification functionality coming soon.
+          </p>
+        </div>
+      </div>
+    </Layout>
+  );
+}

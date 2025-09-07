@@ -1,4 +1,4 @@
- return (<div className="border rounded-lg p-4 bg-white shadow-sm" > <div className="flex items-start justify-between" > <div> <div className= {
+return (<div className="border rounded-lg p-4 bg-white shadow-sm" > <div className="flex items-start justify-between" > <div> <div className= {
   'h-2 w-2 rounded-full ' + (idx <= currentIndex ? 'bg-green-600' : 'bg-gray-300') 
 }title= {
   step 

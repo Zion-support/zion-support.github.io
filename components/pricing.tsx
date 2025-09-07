@@ -1,9 +1,9 @@
- //Get unique services by ID const uniqueServices = allServices.filter ( (service, index, self) => index === self.findIndex (s => s.id === service.id) );
-//Get all categories const categories = ['All', ...Array.from (new Set (uniqueServices.map (s => Array.isArray (s.category) ? s.category[0] : s.category) ) ) ];
+//Get unique services by ID const uniqueServices = allServices.filter ( (service, index, self) => index === self.findIndex (s => s.id === service.id) )
+//Get all categories const categories = ['All', ...Array.from (new Set (uniqueServices.map (s => Array.isArray (s.category) ? s.category[0] : s.category) ) ) ]
 //Price ranges //Filter services const filteredServices = uniqueServices.filter (service => {
-  const matchesCategory = selectedCategory === 'All' || (Array.isArray (service.category) ? service.category.includes (selectedCategory) : service.category === selectedCategory);
-(selectedPriceRange === 'Under $1K' && price < 1000) || (selectedPriceRange === '$1K - $5K' && price >= 1000 && price < 5000) || (selectedPriceRange === '$5K - $20K' && price >= 5000 && price < 20000) || (selectedPriceRange === '$20K+' && price >= 20000);
-const filteredServices = selectedCategory === 'All' ? microSaasServices : microSaasServices.filter (service => service.category === selectedCategory);
+  const matchesCategory = selectedCategory === 'All' || (Array.isArray (service.category) ? service.category.includes (selectedCategory) : service.category === selectedCategory)
+(selectedPriceRange === 'Under $1K' && price < 1000) || (selectedPriceRange === '$1K - $5K' && price >= 1000 && price < 5000) || (selectedPriceRange === '$5K - $20K' && price >= 5000 && price < 20000) || (selectedPriceRange === '$20K+' && price >= 20000)
+const filteredServices = selectedCategory === 'All' ? microSaasServices : microSaasServices.filter (service => service.category === selectedCategory)
 return (<UltraFuturisticBackground2029> <Head> <title>Revolutionary 2029 Technology Pricing | Zion Tech Group</title> </Head> <UltraFuturisticNavigation2029 /> > <h1 className="text-5xl md:text-6xl font-bold text-white mb-6" > <span className="bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent" > Revolutionary 2029 </span> <br /> <span className="text-white" >Technology Pricing</span> </h1> <p className="text-xl text-gray-300 mb-8" > Transparent pricing for our cutting-edge technology services that are already operational and delivering transformative results </p> > {
   categories.map (category => (<option key= {
   category 

@@ -1,10 +1,23 @@
- useEffect ( () => {
-  async function load () {
-  if (loading) return <div>Loading...</div>;
-if (!data) return <div>Error loading data</div>;
-return (<div className="space-y-6" > <div className="flex items-end justify-between" > <div> </div> </div>) ) 
-}</div> </div> <div className="border rounded p-4" > <div className="font-medium mb-2" >Top Holders (approx) </div> <table className="w-full text-sm" > <thead> <tr className="text-left text-gray-500" > <th className="py-1" >Address</th> <th className="py-1" >Net Delta</th> </tr> </thead> <tbody> </tr>) ) 
-}</tbody> </table> </div> </section>) ) 
-}</ul>) : (<div className="text-sm text-gray-600" >No active proposals.</div>) 
-}</div> </div> <div className="text-xs text-gray-500 mt-1" >Weekly updates via Etherscan</div> </div> </section> </div>) 
+import React from 'react';
+import Head from 'next/head';
+import Layout from '../../components/layout/Layout';
+
+export default function DaoIndex() {
+  return (
+    <Layout>
+      <Head>
+        <title>DAO - Zion Tech Group</title>
+        <meta name="description" content="DAO solutions and services." />
+      </Head>
+      
+      <div className="min-h-screen bg-gray-50">
+        <div className="container mx-auto px-6 py-16">
+          <h1 className="text-4xl font-bold text-gray-900 mb-8">DAO</h1>
+          <p className="text-lg text-gray-600">
+            Professional DAO solutions tailored to your business needs.
+          </p>
+        </div>
+      </div>
+    </Layout>
+  );
 }

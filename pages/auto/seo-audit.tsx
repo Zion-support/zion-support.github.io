@@ -1,1 +1,23 @@
- <div> <Head> <title>Autonomous SEO Auditor</title> <meta name="description" content="Automated SEO health reports." /> </Head> <main className="space-y-4" > <h1 className="text-2xl font-bold" >Autonomous SEO Auditor</h1> <p>Scans pages to detect missing meta tags and basic SEO issues and commits a structured report.</p> <div> <Link href="/data/reports/seo/latest.json" ><a className="text-blue-600 underline" >Latest SEO Report (JSON) </Link></Link> </div> </main> </div> export default SEOAudit;
+import React from 'react';
+import Head from 'next/head';
+import Layout from '../../components/layout/Layout';
+
+export default function seoaudit() {
+  return (
+    <Layout>
+      <Head>
+        <title>Seo Audit - Zion Tech Group</title>
+        <meta name="description" content="Seo Audit solutions and services." />
+      </Head>
+      
+      <div className="min-h-screen bg-gray-50">
+        <div className="container mx-auto px-6 py-16">
+          <h1 className="text-4xl font-bold text-gray-900 mb-8">Seo Audit</h1>
+          <p className="text-lg text-gray-600">
+            Professional seo audit solutions tailored to your business needs.
+          </p>
+        </div>
+      </div>
+    </Layout>
+  );
+}

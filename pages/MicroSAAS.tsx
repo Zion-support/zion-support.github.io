@@ -1,8 +1,7 @@
-import { Star } from 'lucide-react';
-import Head from 'next/head';
-import Link from 'next/link';
-import Layout from '../components/Layout';
-
+import { Star } from 'lucide-react'
+import Head from 'next/head'
+import Link from 'next/link'
+import Layout from '../components/Layout'
 export default function MicroSAAS() {
   const microSAASServices = [
     {
@@ -53,8 +52,7 @@ export default function MicroSAAS() {
       savings: "Save up to $40/month",
       category: "Productivity"
     }
-  ];
-
+  ]
   return (
     <Layout 
       title="Micro SaaS Solutions - Zion Tech Group" 
@@ -186,5 +184,5 @@ export default function MicroSAAS() {
         </section>
       </div>
     </Layout>
-  );
+  )
 }

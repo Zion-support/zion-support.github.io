@@ -1,14 +1,14 @@
- setIsShortening (true);
-//Simulate API call delay setShortenedUrls (prev => [newShortUrl, ...prev]);
-setLongUrl ('');
-setCustomAlias ('');
+setIsShortening (true)
+//Simulate API call delay setShortenedUrls (prev => [newShortUrl, ...prev])
+setLongUrl ('')
+setCustomAlias ('')
 setIsShortening (false) 
-};
+}
 const incrementClicks = (id: number) => {
   setShortenedUrls (prev => prev.map (url => url.id === id ? {
   ...url, clicks: url.clicks + 1 
 }: url) ) 
-};
+}
 return (<> <Head> </p> </div> </section> /> </div> {
   /* Custom Alias */ 
 }<div> <label className="block text-sm font-medium text-gray-300 mb-2" > Custom Alias (Optional) </label> <div className="flex space-x-2" > <span className="inline-flex items-center px-3 py-3 bg-gray-600 border border-gray-500 rounded-l-lg text-gray-300 text-sm" > zion.tech/ </span> <input /> </div> <p className="text-xs text-gray-400 mt-1" > Leave empty for auto-generated alias </p> </div> <Button > {

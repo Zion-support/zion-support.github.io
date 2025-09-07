@@ -1,13 +1,13 @@
- const [isSubmitting, setIsSubmitting] = useState (false);
-const [submitSuccess, setSubmitSuccess] = useState (false);
-//Get popular services for showcase const popularServices = [ ...innovativeAIServices2029.filter (s => s.popular);
-...quantumSpaceInnovations2029.filter (s => s.popular);
-...enterpriseITInnovations2029.filter (s => s.popular);
-...innovativeMicroSaas2029.filter (s => s.popular) ].slice (0, 6);
-setIsSubmitting (false);
-setSubmitSuccess (true);
-//Reset form after 3 seconds ];
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7 > <h1 className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent mb-6" > Let's Transform Your Business </h1> Contact us today for a free consultation and discover how our revolutionary micro SaaS services can accelerate your growth. </p> </motion.div> {
+const [isSubmitting, setIsSubmitting] = useState (false)
+const [submitSuccess, setSubmitSuccess] = useState (false)
+//Get popular services for showcase const popularServices = [ ...innovativeAIServices2029.filter (s => s.popular)
+...quantumSpaceInnovations2029.filter (s => s.popular)
+...enterpriseITInnovations2029.filter (s => s.popular)
+...innovativeMicroSaas2029.filter (s => s.popular) ].slice (0, 6)
+setIsSubmitting (false)
+setSubmitSuccess (true)
+//Reset form after 3 seconds ]
+
   /* Stats Grid */ 
 }<motion.div > {
   stats.map ( (stat, index) => (<motion.div key= {

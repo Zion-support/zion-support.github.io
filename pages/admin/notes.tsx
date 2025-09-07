@@ -1,15 +1,14 @@
-import React, { useState, useEffect } from 'react';
-import Head from 'next/head';
-
+import React, { useState, useEffect } from 'react'
+import Head from 'next/head'
 interface Note {
-  id: string;
-  title: string;
-  content: string;
-  author: string;
-  createdAt: string;
-  updatedAt: string;
-  tags: string[];
-  isPrivate: boolean;
+  id: string
+  title: string
+  content: string
+  author: string
+  createdAt: string
+  updatedAt: string
+  tags: string[]
+  isPrivate: boolean
 }
 
 const mockNotes: Note[] = [
@@ -43,35 +42,30 @@ const mockNotes: Note[] = [
     tags: ['meeting', 'team', 'hiring'],
     isPrivate: false
   }
-];
-
+]
 const AdminNotesPage: React.FC = () => {
-  const [notes, setNotes] = useState<Note[]>([]);
-  const [loading, setLoading] = useState(true);
-  const [searchTerm, setSearchTerm] = useState('');
-  const [filterTag, setFilterTag] = useState('');
-  const [showPrivate, setShowPrivate] = useState(false);
-  const [isAdmin, setIsAdmin] = useState(true);
-
+  const [notes, setNotes] = useState<Note[]>([])
+  const [loading, setLoading] = useState(true)
+  const [searchTerm, setSearchTerm] = useState('')
+  const [filterTag, setFilterTag] = useState('')
+  const [showPrivate, setShowPrivate] = useState(false)
+  const [isAdmin, setIsAdmin] = useState(true)
   useEffect(() => {
     // Simulate loading notes
     setTimeout(() => {
-      setNotes(mockNotes);
-      setLoading(false);
-    }, 1000);
-  }, []);
-
+      setNotes(mockNotes)
+      setLoading(false)
+    }, 1000)
+  }, [])
   const filteredNotes = notes.filter(note => {
     const matchesSearch = note.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          note.content.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                         note.author.toLowerCase().includes(searchTerm.toLowerCase());
-    const matchesTag = !filterTag || note.tags.includes(filterTag);
-    const matchesPrivacy = !note.isPrivate || showPrivate;
-    return matchesSearch && matchesTag && matchesPrivacy;
-  });
-
-  const allTags = Array.from(new Set(notes.flatMap(note => note.tags)));
-
+                         note.author.toLowerCase().includes(searchTerm.toLowerCase())
+    const matchesTag = !filterTag || note.tags.includes(filterTag)
+    const matchesPrivacy = !note.isPrivate || showPrivate
+    return matchesSearch && matchesTag && matchesPrivacy
+  })
+  const allTags = Array.from(new Set(notes.flatMap(note => note.tags)))
   return (
     <>
       <Head>
@@ -188,7 +182,6 @@ const AdminNotesPage: React.FC = () => {
         )}
       </main>
     </>
-  );
-};
-
-export default AdminNotesPage;
+  )
+}
+export default AdminNotesPage

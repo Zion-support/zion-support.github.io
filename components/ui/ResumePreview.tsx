@@ -1,4 +1,4 @@
- </h2>);
+</h2>)
 return (<div ref= {
   ref 
 }className= {
@@ -37,6 +37,6 @@ return (<div ref= {
 }</div>) ) 
 }</div> </section>) : null 
 }</div> </div>) 
-});
-ResumePreview.displayName = 'ResumePreview';
-export default ResumePreview;
+})
+ResumePreview.displayName = 'ResumePreview'
+export default ResumePreview

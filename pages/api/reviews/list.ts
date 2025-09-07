@@ -1,3 +1,10 @@
- x.projectId === r.projectId && x.fromRole !== r.fromRole && x.toRole !== r.toRole && x.approved && (targetType === 'talent' && p.talentSlug === targetId) || (targetType === 'client' && p.clientId === targetId) ) ) .length;
-}
+import { NextApiRequest, NextApiResponse } from 'next';
+
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  if (req.method !== 'GET') {
+    res.setHeader('Allow', ['GET']);
+    return res.status(405).end('Method Not Allowed');
+  }
+  
+  res.status(200).json({ message: 'Endpoint working' });
 }

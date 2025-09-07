@@ -1,4 +1,23 @@
- return (<Layout> <Head> <title>Space Technology | Zion Tech Group</title> </Head> <div className="min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8" > <div className="max-w-7xl mx-auto space-y-12" > <header className="text-center" > <div className="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-gradient-to-r from-cyan-500 to-purple-600 mb-4" > <Satellite className="w-8 h-8 text-white" /> </div> </div> </header> <section> <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 text-center" >Capabilities</h2> <div className="grid grid-cols-1 md:grid-cols-2 gap-4" > {
-  features.map ( (f) => (</div>) ) 
-}</div> </section> <span>Explore detailed Space Technology offerings</span> </Link> </section> </div> </div> </Layout>) 
+import React from 'react';
+import Head from 'next/head';
+import Layout from '../components/layout/Layout';
+
+export default function spacetech() {
+  return (
+    <Layout>
+      <Head>
+        <title>Space Tech - Zion Tech Group</title>
+        <meta name="description" content="Space Tech solutions and services." />
+      </Head>
+      
+      <div className="min-h-screen bg-gray-50">
+        <div className="container mx-auto px-6 py-16">
+          <h1 className="text-4xl font-bold text-gray-900 mb-8">Space Tech</h1>
+          <p className="text-lg text-gray-600">
+            Professional space tech solutions tailored to your business needs.
+          </p>
+        </div>
+      </div>
+    </Layout>
+  );
 }

@@ -1,25 +1,25 @@
- setIsSearching (true);
+setIsSearching (true)
 //Simulate search delay setTimeout ( () => {
   const results = allServices.filter (service => {
-  const matchesSearch = service.title.toLowerCase () .includes (searchTerm.toLowerCase () ) || service.description.toLowerCase () .includes (searchTerm.toLowerCase () ) || service.category.toLowerCase () .includes (searchTerm.toLowerCase () ) || service.technology.toLowerCase () .includes (searchTerm.toLowerCase () );
+  const matchesSearch = service.title.toLowerCase () .includes (searchTerm.toLowerCase () ) || service.description.toLowerCase () .includes (searchTerm.toLowerCase () ) || service.category.toLowerCase () .includes (searchTerm.toLowerCase () ) || service.technology.toLowerCase () .includes (searchTerm.toLowerCase () )
 switch (filters.priceRange) {
-  case 'under-500': matchesPrice = price < 500;
-break;
-case '500-1000': matchesPrice = price >= 500 && price < 1000;
-break;
-case '1000-2500': matchesPrice = price >= 1000 && price < 2500;
-break;
+  case 'under-500': matchesPrice = price < 500
+break
+case '500-1000': matchesPrice = price >= 500 && price < 1000
+break
+case '1000-2500': matchesPrice = price >= 1000 && price < 2500
+break
 case 'over-2500': 
 }return matchesSearch && matchesCategory && matchesStatus && matchesTechnology && matchesPrice 
-});
+})
 //Sort results const sortedResults = results.sort ( (a, b) => {
   switch (sortBy) {
-  case 'relevance': return b.relevance - a.relevance;
-case 'price-low': case 'name': return a.title.localeCompare (b.title);
-case 'status': setSearchResults (sortedResults);
+  case 'relevance': return b.relevance - a.relevance
+case 'price-low': case 'name': return a.title.localeCompare (b.title)
+case 'status': setSearchResults (sortedResults)
 setIsSearching (false) 
 }, 500) 
-};
+}
 //Handle search on Enter key </Head> <SmartHeader /> <motion.div initial= {
   {
   opacity: 0, y: 30 
@@ -96,7 +96,7 @@ setIsSearching (false)
   term 
 }onClick= {
   () => {
-  setSearchTerm (term);
+  setSearchTerm (term)
 performSearch () 
 }
 }className="px-3 py-1 bg-white/10 hover:bg-white/20 rounded-full text-sm text-white/70 hover:text-white transition-colors" term 

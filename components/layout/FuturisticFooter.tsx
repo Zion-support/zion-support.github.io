@@ -1,4 +1,4 @@
- </div> <span className="text-xl font-bold bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent" > Zion Tech Group </span> </div> </a>) ) 
+</div> <span className="text-xl font-bold bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent" > Zion Tech Group </span> </div> </a>) ) 
 }</div> </div> {
   /* Quick Links */ 
 }<div> <h3 className="text-lg font-semibold text-white mb-6 flex items-center" > <ArrowRight className="w-5 h-5 text-blue-400 mr-2" /> Quick Links </h3> </li>) ) 

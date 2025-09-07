@@ -1,7 +1,6 @@
-import React from 'react';
-import Head from 'next/head';
-import Layout from '../components/layout/Layout';
-
+import React from 'react'
+import Head from 'next/head'
+import Layout from '../components/layout/Layout'
 const AIMarketResearch: React.FC = () => {
   return (
     <Layout>
@@ -74,7 +73,6 @@ const AIMarketResearch: React.FC = () => {
         </div>
       </main>
     </Layout>
-  );
-};
-
-export default AIMarketResearch;
+  )
+}
+export default AIMarketResearch

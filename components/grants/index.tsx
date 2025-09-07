@@ -1,5 +1,5 @@
- const categories: GrantCategory[] = ['Ecosystem ToolsTalent DevelopmentRegional ExpansionResearch Grants'];
-const statuses: GrantStatus[] = ['DraftSubmittedUnder ReviewApprovedRejected'];
+const categories: GrantCategory[] = ['Ecosystem ToolsTalent DevelopmentRegional ExpansionResearch Grants']
+const statuses: GrantStatus[] = ['DraftSubmittedUnder ReviewApprovedRejected']
 <option value="">All Sectors</option> {
   categories.map ( (c) => (<option key= {
   c 

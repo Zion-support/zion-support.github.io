@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
-import Link from 'next/link';
-import { motion } from 'framer-motion';
+import React, { useState } from 'react'
+import Link from 'next/link'
+import { motion } from 'framer-motion'
 import { 
   Menu, 
   X, 
@@ -77,8 +77,7 @@ import {
   TrendingUp as Growth,
   Clock as Time,
   DollarSign as Money
-} from 'lucide-react';
-
+} from 'lucide-react'
 const navigationItems = [
   {
     title: 'Services',
@@ -409,8 +408,7 @@ const navigationItems = [
       }
     ]
   }
-];
-
+]
 const quickLinks = [
   { title: 'Pricing', href: '/pricing', icon: DollarSign },
   { title: 'Contact', href: '/contact', icon: Phone },
@@ -418,12 +416,10 @@ const quickLinks = [
   { title: 'Status', href: '/status', icon: BarChart3 },
   { title: 'Free Consultation', href: '/consultation', icon: Calendar },
   { title: 'Get Quote', href: '/quote', icon: FileText }
-];
-
+]
 export default function Navigation() {
-  const [isOpen, setIsOpen] = useState(false);
-  const [activeSubmenu, setActiveSubmenu] = useState<string | null>(null);
-
+  const [isOpen, setIsOpen] = useState(false)
+  const [activeSubmenu, setActiveSubmenu] = useState<string | null>(null)
   return (
     <nav className="bg-white shadow-lg sticky top-0 z-50">
       {/* Top Bar */}
@@ -605,5 +601,5 @@ export default function Navigation() {
         )}
       </div>
     </nav>
-  );
+  )
 }

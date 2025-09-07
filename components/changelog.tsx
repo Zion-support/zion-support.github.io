@@ -1,4 +1,4 @@
- {
+{
   generatedAt && (<p className="mt-2 text-sm text-gray-600" >Generated: {
   generatedAt 
 }</p>) 

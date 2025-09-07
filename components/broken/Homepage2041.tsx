@@ -1,16 +1,16 @@
- if (searchQuery.trim () ) {
+if (searchQuery.trim () ) {
   window.location.href = `/services?search=$ {
   encodeURIComponent (searchQuery.trim () ) 
 }` 
 }
-};
-const featuredServices = [ ...innovative2041MicroSaasServices.filter (s => s.popular) .slice (0, 3);
-...innovative2041ITServices.filter (s => s.popular) .slice (0, 2);
-...innovative2041AIServices.filter (s => s.popular) .slice (0, 1) ];
-];
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7 return (<Layout> <section className="min-h-screen flex items-center justify-center px-4 relative overflow-hidden" aria-labelledby="hero-heading" > left: `$ {
+}
+const featuredServices = [ ...innovative2041MicroSaasServices.filter (s => s.popular) .slice (0, 3)
+...innovative2041ITServices.filter (s => s.popular) .slice (0, 2)
+...innovative2041AIServices.filter (s => s.popular) .slice (0, 1) ]
+]
+
   Math.random () * 100 
-}%`;
+}%`
 top: `$ {
   Math.random () * 100 
 }%` 
@@ -63,5 +63,5 @@ top: `$ {
   testimonial.name 
 }</motion.div>) ) 
 }</motion.div> </div> </section> > <h2 className="text-5xl md:text-6xl font-bold text-white mb-8" > Ready to Shape the Future? </h2> <p className="text-xl text-gray-300 mb-12 leading-relaxed" > Join the technological revolution with our cutting-edge 2041 services. Transform your business, accelerate innovation, and lead the future of technology. </p> <Link href="/contact" className="px-10 py-5 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-2xl font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 flex items-center justify-center gap-3" > <Sparkles className="w-6 h-6" /> Start Your Journey </a> <Link href="/2041-futuristic-services-showcase" className="px-10 py-5 border-2 border-cyan-500/50 text-cyan-400 rounded-2xl font-semibold hover:bg-cyan-500/10 transition-all duration-300 flex items-center justify-center gap-3" > <Target className="w-6 h-6" /> Explore Services </a> </div> </motion.div> </div> </section> </main> </Layout>) 
-};
-export default Homepage2041;
+}
+export default Homepage2041

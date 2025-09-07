@@ -1,7 +1,6 @@
-import React from 'react';
-import Head from 'next/head';
-import Layout from '../components/layout/Layout';
-
+import React from 'react'
+import Head from 'next/head'
+import Layout from '../components/layout/Layout'
 const AdvancedITInfrastructureServices: React.FC = () => {
   return (
     <Layout>
@@ -113,7 +112,6 @@ const AdvancedITInfrastructureServices: React.FC = () => {
         </div>
       </main>
     </Layout>
-  );
-};
-
-export default AdvancedITInfrastructureServices;
+  )
+}
+export default AdvancedITInfrastructureServices

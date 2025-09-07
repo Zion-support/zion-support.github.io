@@ -1,4 +1,4 @@
- export default function ServicesShowcase2028 () {
+export default function ServicesShowcase2028 () {
   return (<> <Head> <title>2028 Futuristic Services Showcase - Zion Tech Group</title> <meta name="description" content="Explore our cutting-edge 2028 services including AI, quantum computing, autonomous systems, and futuristic innovations. Transform your business with next-generation technology." /> <meta name="keywords" content="2028 technology, AI services, quantum computing, autonomous systems, futuristic innovations, Zion Tech Group" /> <meta property="og:title" content="2028 Futuristic Services Showcase - Zion Tech Group" /> <meta property="og:description" content="Explore our cutting-edge 2028 services including AI, quantum computing, autonomous systems, and futuristic innovations." /> <meta property="og:url" content="https://ziontechgroup.com/2028-services-showcase" /> <meta property="og:type" content="website" /> <link rel="canonical" href="https://ziontechgroup.com/2028-services-showcase" /> </Head> <UltraFuturisticNavigation2028 /> {
   /* Hero Section */ 
 }<section className="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-black via-purple-900/20 to-blue-900/20 overflow-hidden"> {
@@ -119,7 +119,7 @@
   {
   once: true 
 }
-}className="text-center p-8 bg-gradient-to-br from-purple-900/20 to-blue-900/20 border border-purple-500/30 rounded-2xl" > <TrendingUp className="w-16 h-16 text-green-400 mx-auto mb-6" /> <h3 className="text-2xl font-bold text-white mb-4">Market Growth</h3> <p className="text-purple-300 mb-6"> Our services target markets with exponential growth potential;
+}className="text-center p-8 bg-gradient-to-br from-purple-900/20 to-blue-900/20 border border-purple-500/30 rounded-2xl" > <TrendingUp className="w-16 h-16 text-green-400 mx-auto mb-6" /> <h3 className="text-2xl font-bold text-white mb-4">Market Growth</h3> <p className="text-purple-300 mb-6"> Our services target markets with exponential growth potential
 with some sectors growing at 300-800% annually. </p> <div className="text-3xl font-bold text-green-400">500%+</div> <div className="text-purple-300">Average Annual Growth</div> </motion.div> <motion.div initial= {
   {
   opacity: 0, y: 30 

@@ -1,6 +1,5 @@
-import React from 'react';
-import Head from 'next/head';
-
+import React from 'react'
+import Head from 'next/head'
 const AutomationStatus: React.FC = () => {
   return (
     <div>
@@ -13,7 +12,6 @@ const AutomationStatus: React.FC = () => {
         <p>This page is under construction.</p>
       </main>
     </div>
-  );
-};
-
-export default AutomationStatus;
+  )
+}
+export default AutomationStatus

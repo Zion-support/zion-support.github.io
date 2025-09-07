@@ -1,31 +1,31 @@
- canvas.width = window.innerWidth;
-canvas.height = window.innerHeight;
+canvas.width = window.innerWidth
+canvas.height = window.innerHeight
 //Quantum particle system const particles: Array< {
-  life: Math.random () * 100;
+  life: Math.random () * 100
 maxLife: 100 
 }) 
-}//Animation loop //Wrap around edges if (particle.x < 0) particle.x = canvas.width;
-if (particle.x > canvas.width) particle.x = 0;
-if (particle.y < 0) particle.y = canvas.height;
-if (particle.y > canvas.height) particle.y = 0;
+}//Animation loop //Wrap around edges if (particle.x < 0) particle.x = canvas.width
+if (particle.x > canvas.width) particle.x = 0
+if (particle.y < 0) particle.y = canvas.height
+if (particle.y > canvas.height) particle.y = 0
 //Draw particle //Reset particle if it dies if (particle.life <= 0) {
   particles[index] = {
   x: Math.random () * canvas.width, y: Math.random () * canvas.height, vx: (Math.random () - 0.5) * 2, vy: (Math.random () - 0.5) * 2, size: Math.random () * 3 + 1, color: `hsl ($ {
   Math.random () * 360 
-}, 70%, 60%) `;
-life: 100;
+}, 70%, 60%) `
+life: 100
 maxLife: 100 
 }
 }
-});
+})
 //Draw quantum entanglement lines 
 }
 }) 
-});
+})
 requestAnimationFrame (animate) 
-};
-animate ();
-//Handle resize window.addEventListener ('resize', handleResize);
+}
+animate ()
+//Handle resize window.addEventListener ('resize', handleResize)
 /> {
   /* Triangle */ 
 }<motion.div /> {
@@ -50,5 +50,5 @@ animate ();
   i 
 }/>) ) 
 }</svg> </div> </div>) 
-};
-export default UltraFuturisticBackground;
+}
+export default UltraFuturisticBackground

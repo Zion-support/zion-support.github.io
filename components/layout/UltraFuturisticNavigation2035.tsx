@@ -1,9 +1,9 @@
- ] 
-}];
-];
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7 window.addEventListener ('scroll', handleScroll);
+] 
+}]
+]
+
 return () => window.removeEventListener ('scroll', handleScroll) 
-}, []);
+}, [])
 </div> <div> <div className="text-xl font-bold bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent" > Zion Tech Group </div> <div className="text-xs text-gray-400" >Revolutionary Technology</div> </div> </a> > {
   item.icon 
 }<span> {
@@ -91,5 +91,5 @@ return () => window.removeEventListener ('scroll', handleScroll)
 }>) ) 
 }</div> </div> </div> </div> </div> </div> </div> </motion.div>) 
 }</AnimatePresence> </div> </nav>) 
-};
-export default UltraFuturisticNavigation2035;
+}
+export default UltraFuturisticNavigation2035

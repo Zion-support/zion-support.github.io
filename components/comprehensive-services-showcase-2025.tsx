@@ -1,18 +1,18 @@
- ];
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7 //Filter by search term if (searchTerm) {
+]
+
   filtered = filtered.filter (service => service.name.toLowerCase () .includes (searchTerm.toLowerCase () ) || service.description.toLowerCase () .includes (searchTerm.toLowerCase () ) || service.tagline.toLowerCase () .includes (searchTerm.toLowerCase () ) 
 }//Sort services filtered.sort ( (a, b) => {
   switch (sortBy) {
-  case 'popular': return b.customers - a.customers;
-case 'rating': return b.rating - a.rating;
-case 'newest': return new Date (b.launchDate) .getTime () - new Date (a.launchDate) .getTime ();
+  case 'popular': return b.customers - a.customers
+case 'rating': return b.rating - a.rating
+case 'newest': return new Date (b.launchDate) .getTime () - new Date (a.launchDate) .getTime ()
 case 'price-low': setFilteredServices (filtered) 
-}, [searchTerm, selectedCategory, selectedPriceRange, sortBy]);
+}, [searchTerm, selectedCategory, selectedPriceRange, sortBy])
 }
-};
+}
 description"content=" Explore our complete portfolio of innovative micro SAAS, AI, IT, and emerging technology services. Find the perfect solution for your business needs."/> <meta name=" keywords"content=" micro SAAS, AI services, IT solutions, quantum computing, emerging technology, business solutions, Zion Tech Group"/> </Head> left: `$ {
   Math.random () * 100 
-}%`;
+}%`
 top: `$ {
   Math.random () * 100 
 }%` 

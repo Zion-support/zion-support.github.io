@@ -1,8 +1,8 @@
-import { Star } from 'lucide-react';
-import Head from 'next/head';
-import Link from 'next/link';
-import { motion } from 'framer-motion';
-import Layout from '../components/Layout';
+import { Star } from 'lucide-react'
+import Head from 'next/head'
+import Link from 'next/link'
+import { motion } from 'framer-motion'
+import Layout from '../components/Layout'
 import { 
   Server, 
   Shield, 
@@ -29,8 +29,7 @@ import {
   MapPin,
   FileText,
   Cpu
-} from 'lucide-react';
-
+} from 'lucide-react'
 const itServices = [
   {
     category: "Managed IT Services",
@@ -193,8 +192,7 @@ const itServices = [
       }
     ]
   }
-];
-
+]
 const microSaaS = [
   {
     name: "IT Asset Management",
@@ -273,8 +271,7 @@ const microSaaS = [
     pricing: "$79/month per user",
     icon: Wifi
   }
-];
-
+]
 const processSteps = [
   {
     step: "01",
@@ -301,15 +298,13 @@ const processSteps = [
     title: "Optimization",
     description: "Ongoing optimization and updates to keep your IT infrastructure current."
   }
-];
-
+]
 const stats = [
   { number: "99.9%", label: "Uptime Guarantee" },
   { number: "15min", label: "Response Time" },
   { number: "500+", label: "IT Projects Completed" },
   { number: "24/7", label: "Support Available" }
-];
-
+]
 export default function ITServices() {
   return (
     <Layout 
@@ -611,5 +606,5 @@ export default function ITServices() {
         </div>
       </section>
     </Layout>
-  );
+  )
 }

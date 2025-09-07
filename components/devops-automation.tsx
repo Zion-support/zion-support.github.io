@@ -1,4 +1,4 @@
- export default function DevOpsAutomationPage () {
+export default function DevOpsAutomationPage () {
   const features = [ {
   return (<> <Head> <title>DevOps Automation - Zion Tech Group | Professional CI/CD & Infrastructure Automation</title> DevOps Automation Platform </div> </div> <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-8 leading-tight" > DevOps Automation </h1> </p> <div className="flex flex-col sm:flex-row gap-4 justify-center" > <Button href="#pricing" variant="primary" size="lg" className="bg-blue-600 hover:bg-blue-700 text-white" > Start Free Trial </Button> <Button href="#demo" variant="outline" size="lg" className="border-blue-500 text-blue-400 hover:bg-blue-500 hover:text-white" > Watch Demo </Button> </div> </div> </section> Complete DevOps Automation Suite </h2> <p className="text-xl text-gray-400 max-w-3xl mx-auto" > Everything you need to automate your development and deployment processes. </p> </div> <Card key= {
   index 

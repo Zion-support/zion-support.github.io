@@ -1,94 +1,94 @@
- export default function ApiToolsPage () {
+export default function ApiToolsPage () {
   const apiTools = [ {
-  category: 'Development';
-color: 'bg-gradient-to-br from-blue-500 to-cyan-600';
-gradient: 'from-blue-400 to-cyan-500';
-website: 'https://codegen.api';
-docs: 'https://docs.codegen.api';
-github: 'https://github.com/codegen-api';
-status: 'Live';
-users: '15, 000+';
-rating: 4.8;
+  category: 'Development'
+color: 'bg-gradient-to-br from-blue-500 to-cyan-600'
+gradient: 'from-blue-400 to-cyan-500'
+website: 'https://codegen.api'
+docs: 'https://docs.codegen.api'
+github: 'https://github.com/codegen-api'
+status: 'Live'
+users: '15, 000+'
+rating: 4.8
 responseTime: '<100ms' 
-};
-category: 'Data';
-color: 'bg-gradient-to-br from-green-500 to-emerald-600';
-gradient: 'from-green-400 to-emerald-500';
-website: 'https://datasync.api';
-docs: 'https://docs.datasync.api';
-github: 'https://github.com/datasync-api';
-status: 'Live';
-users: '8, 500+';
-rating: 4.9;
+}
+category: 'Data'
+color: 'bg-gradient-to-br from-green-500 to-emerald-600'
+gradient: 'from-green-400 to-emerald-500'
+website: 'https://datasync.api'
+docs: 'https://docs.datasync.api'
+github: 'https://github.com/datasync-api'
+status: 'Live'
+users: '8, 500+'
+rating: 4.9
 responseTime: '<50ms' 
-};
-category: 'Location';
-color: 'bg-gradient-to-br from-purple-500 to-pink-600';
-gradient: 'from-purple-400 to-pink-500';
-website: 'https://geo.api';
-docs: 'https://docs.geo.api';
-github: 'https://github.com/geo-api';
-status: 'Live';
-users: '12, 000+';
-rating: 4.7;
+}
+category: 'Location'
+color: 'bg-gradient-to-br from-purple-500 to-pink-600'
+gradient: 'from-purple-400 to-pink-500'
+website: 'https://geo.api'
+docs: 'https://docs.geo.api'
+github: 'https://github.com/geo-api'
+status: 'Live'
+users: '12, 000+'
+rating: 4.7
 responseTime: '<75ms' 
-};
-category: 'Security';
-color: 'bg-gradient-to-br from-red-500 to-orange-600';
-gradient: 'from-red-400 to-orange-500';
-website: 'https://authguard.api';
-docs: 'https://docs.authguard.api';
-github: 'https://github.com/authguard-api';
-status: 'Live';
-users: '6, 800+';
-rating: 4.9;
+}
+category: 'Security'
+color: 'bg-gradient-to-br from-red-500 to-orange-600'
+gradient: 'from-red-400 to-orange-500'
+website: 'https://authguard.api'
+docs: 'https://docs.authguard.api'
+github: 'https://github.com/authguard-api'
+status: 'Live'
+users: '6, 800+'
+rating: 4.9
 responseTime: '<25ms' 
-};
-category: 'Integration';
-color: 'bg-gradient-to-br from-yellow-500 to-orange-600';
-gradient: 'from-yellow-400 to-orange-500';
-website: 'https://webhookhub.api';
-docs: 'https://docs.webhookhub.api';
-github: 'https://github.com/webhookhub-api';
-status: 'Live';
-users: '9, 200+';
-rating: 4.8;
+}
+category: 'Integration'
+color: 'bg-gradient-to-br from-yellow-500 to-orange-600'
+gradient: 'from-yellow-400 to-orange-500'
+website: 'https://webhookhub.api'
+docs: 'https://docs.webhookhub.api'
+github: 'https://github.com/webhookhub-api'
+status: 'Live'
+users: '9, 200+'
+rating: 4.8
 responseTime: '<30ms' 
-};
-category: 'AI/ML';
-color: 'bg-gradient-to-br from-indigo-500 to-purple-600';
-gradient: 'from-indigo-400 to-purple-500';
-website: 'https://nlp.api';
-docs: 'https://docs.nlp.api';
-github: 'https://github.com/nlp-api';
-status: 'Live';
-users: '11, 500+';
-rating: 4.7;
+}
+category: 'AI/ML'
+color: 'bg-gradient-to-br from-indigo-500 to-purple-600'
+gradient: 'from-indigo-400 to-purple-500'
+website: 'https://nlp.api'
+docs: 'https://docs.nlp.api'
+github: 'https://github.com/nlp-api'
+status: 'Live'
+users: '11, 500+'
+rating: 4.7
 responseTime: '<200ms' 
-};
-category: 'Analytics';
-color: 'bg-gradient-to-br from-teal-500 to-cyan-600';
-gradient: 'from-teal-400 to-cyan-500';
-website: 'https://analytics.api';
-docs: 'https://docs.analytics.api';
-github: 'https://github.com/analytics-api';
-status: 'Live';
-users: '7, 800+';
-rating: 4.8;
+}
+category: 'Analytics'
+color: 'bg-gradient-to-br from-teal-500 to-cyan-600'
+gradient: 'from-teal-400 to-cyan-500'
+website: 'https://analytics.api'
+docs: 'https://docs.analytics.api'
+github: 'https://github.com/analytics-api'
+status: 'Live'
+users: '7, 800+'
+rating: 4.8
 responseTime: '<150ms' 
-};
-category: 'Security';
-color: 'bg-gradient-to-br from-gray-500 to-slate-600';
-gradient: 'from-gray-400 to-slate-500';
-website: 'https://encrypt.api';
-docs: 'https://docs.encrypt.api';
-github: 'https://github.com/encrypt-api';
-status: 'Live';
-users: '4, 200+';
-rating: 4.9;
+}
+category: 'Security'
+color: 'bg-gradient-to-br from-gray-500 to-slate-600'
+gradient: 'from-gray-400 to-slate-500'
+website: 'https://encrypt.api'
+docs: 'https://docs.encrypt.api'
+github: 'https://github.com/encrypt-api'
+status: 'Live'
+users: '4, 200+'
+rating: 4.9
 responseTime: '<20ms' 
-}];
-const filteredTools = selectedCategory === 'All' ? apiTools : apiTools.filter (tool => tool.category === selectedCategory);
+}]
+const filteredTools = selectedCategory === 'All' ? apiTools : apiTools.filter (tool => tool.category === selectedCategory)
 return (<> <Head> <title>API Tools & Developer Services | Zion Tech Group - Powerful APIs for Modern Applications</title> <meta name="description" content="Discover powerful APIs and developer tools for building modern applications. From AI-powered code generation to real-time data synchronization, we provide the building blocks you need." /> <meta property="og:title" content="API Tools & Developer Services | Zion Tech Group" /> <meta property="og:description" content="Powerful APIs and developer tools for modern applications. AI, security, analytics, and more." /> <meta name="twitter:card" content="summary large image" /> </Head> <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center" > <div className="inline-flex items-center px-4 py-2 rounded-full bg-indigo-500/10 border border-indigo-500/20 text-indigo-400 text-sm font-medium mb-6" > <Terminal className="w-4 h-4 mr-2" /> Developer-First API Solutions </div> <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-8 text-white leading-tight" > Powerful API Tools & Services </h1> <p className="text-xl sm:text-2xl text-gray-300 max-w-4xl mx-auto mb-12 leading-relaxed" > Build faster, scale better, and deliver more with our comprehensive collection of developer APIs. Each tool is designed for performance, reliability, and ease of integration. </p> key= {
   category 
 }onClick= {

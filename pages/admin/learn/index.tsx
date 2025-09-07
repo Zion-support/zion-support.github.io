@@ -1,10 +1,8 @@
-import React, { useState } from 'react';
-import Head from 'next/head';
-
+import React, { useState } from 'react'
+import Head from 'next/head'
 const AdminLearnPage: React.FC = () => {
-  const [selectedCategory, setSelectedCategory] = useState('');
-  const [selectedLevel, setSelectedLevel] = useState('');
-
+  const [selectedCategory, setSelectedCategory] = useState('')
+  const [selectedLevel, setSelectedLevel] = useState('')
   const categories = [
     'AI Development',
     'Freelancing', 
@@ -14,10 +12,8 @@ const AdminLearnPage: React.FC = () => {
     'Mobile Development',
     'DevOps',
     'Data Science'
-  ];
-
-  const levels = ['Beginner', 'Intermediate', 'Advanced'];
-
+  ]
+  const levels = ['Beginner', 'Intermediate', 'Advanced']
   return (
     <>
       <Head>
@@ -101,7 +97,6 @@ const AdminLearnPage: React.FC = () => {
         </div>
       </main>
     </>
-  );
-};
-
-export default AdminLearnPage;
+  )
+}
+export default AdminLearnPage

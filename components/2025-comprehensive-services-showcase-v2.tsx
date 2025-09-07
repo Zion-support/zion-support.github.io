@@ -1,10 +1,10 @@
- const staggerContainer = {
+const staggerContainer = {
   animate: {
   transition: {
   staggerChildren: 0.1 
 }
 }
-};
+}
 const serviceCategories = [ {
   return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"> <SEO title="2025 Comprehensive Services Showcase V2 | Zion Tech Group" description="Discover our comprehensive portfolio of innovative micro SAAS, IT infrastructure, AI services, industry solutions, and emerging technology breakthroughs. Transform your business with cutting-edge solutions." keywords= {
   ["micro SAAS", "IT infrastructure", "AI services", "industry solutions", "emerging technology", "Zion Tech Group"] 

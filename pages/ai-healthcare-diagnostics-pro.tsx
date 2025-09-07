@@ -1,7 +1,6 @@
-import React from 'react';
-import Head from 'next/head';
-import Layout from '../components/layout/Layout';
-
+import React from 'react'
+import Head from 'next/head'
+import Layout from '../components/layout/Layout'
 const AIHealthcareDiagnosticsPro: React.FC = () => {
   return (
     <Layout>
@@ -90,7 +89,6 @@ const AIHealthcareDiagnosticsPro: React.FC = () => {
         </div>
       </main>
     </Layout>
-  );
-};
-
-export default AIHealthcareDiagnosticsPro;
+  )
+}
+export default AIHealthcareDiagnosticsPro

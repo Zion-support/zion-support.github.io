@@ -1,54 +1,54 @@
- featured: true 
-};
+featured: true 
+}
 {
-  title: 'Cybersecurity Partnership with Global Tech Leaders';
-excerpt: 'Strategic collaboration to advance AI-powered threat detection and response systems.';
-author: 'Partnerships Team';
-date: '2025-01-10';
-const [searchQuery, setSearchQuery] = useState ('');
-const [selectedCategory, setSelectedCategory] = useState ('all');
-const [selectedYear, setSelectedYear] = useState ('all');
+  title: 'Cybersecurity Partnership with Global Tech Leaders'
+excerpt: 'Strategic collaboration to advance AI-powered threat detection and response systems.'
+author: 'Partnerships Team'
+date: '2025-01-10'
+const [searchQuery, setSearchQuery] = useState ('')
+const [selectedCategory, setSelectedCategory] = useState ('all')
+const [selectedYear, setSelectedYear] = useState ('all')
 const categories = [ {
   id: 'all', name: 'All News', icon: Newspaper, count: 45 
-};
+}
 {
   id: 'ai', name: 'AI & Technology', icon: Brain, count: 18 
-};
+}
 {
   id: 'quantum', name: 'Quantum Computing', icon: Atom, count: 12 
-};
+}
 {
   id: 'space', name: 'Space Technology', icon: Rocket, count: 8 
-};
+}
 {
   id: 'security', name: 'Cybersecurity', icon: Shield, count: 7 
-}];
+}]
 const years = [ {
   id: 'all', name: 'All Years' 
-};
+}
 {
   id: '2025', name: '2025' 
-};
+}
 {
   id: '2024', name: '2024' 
-};
+}
 {
   id: '2023', name: '2023' 
-}];
-TrendingUp, Lightbulb, Rocket, Globe, Shield, Zap;
+}]
+TrendingUp, Lightbulb, Rocket, Globe, Shield, Zap
 Clock, BookOpen, Video, Podcast, FileText, Search 
-}from 'lucide-react';
-import Link from 'next/link';
-return (<UltraFuturisticBackground> <div className="min-h-screen" > <Head> <title>News & Updates - Zion Tech Group | Latest Technology Insights & Company Updates</title> <meta name="description" content="Stay updated with Zion Tech Group's latest news, product launches, partnerships, and industry insights. Read about our breakthroughs in AI, quantum computing, and emerging technologies." /> </Head> id: 1;
-title: "Zion Tech Group Launches Revolutionary Quantum AI Platform";
-excerpt: "Our latest quantum AI platform combines quantum computing with artificial intelligence to deliver unprecedented performance and capabilities for enterprise applications.";
-category: "Product Launch";
-author: "Zion Tech Group Team";
-date: "2025-01-15";
-readTime: "5 min read";
-image: "/images/news/quantum-ai-launch.jpg";
+}from 'lucide-react'
+import Link from 'next/link'
+return (<UltraFuturisticBackground> <div className="min-h-screen" > <Head> <title>News & Updates - Zion Tech Group | Latest Technology Insights & Company Updates</title> <meta name="description" content="Stay updated with Zion Tech Group's latest news, product launches, partnerships, and industry insights. Read about our breakthroughs in AI, quantum computing, and emerging technologies." /> </Head> id: 1
+title: "Zion Tech Group Launches Revolutionary Quantum AI Platform"
+excerpt: "Our latest quantum AI platform combines quantum computing with artificial intelligence to deliver unprecedented performance and capabilities for enterprise applications."
+category: "Product Launch"
+author: "Zion Tech Group Team"
+date: "2025-01-15"
+readTime: "5 min read"
+image: "/images/news/quantum-ai-launch.jpg"
 tags: ["Quantum Computing", "AI", "Product Launch" ] 
-};
+}
 export default function News () {
   const featuredNews = [ {
   export default function NewsPage () {
@@ -80,140 +80,140 @@ export default function News () {
 }import {
   {
   {
-  Search, Calendar, Clock, User, Tag;
-ArrowRight, ExternalLink, TrendingUp;
+  Search, Calendar, Clock, User, Tag
+ArrowRight, ExternalLink, TrendingUp
 BookOpen, Globe, Video 
-}from 'lucide-react';
-import Link from 'next/link';
+}from 'lucide-react'
+import Link from 'next/link'
 export default function News () {
-  const [searchTerm, setSearchTerm] = useState ('');
-const [selectedCategory, setSelectedCategory] = useState ('all');
+  const [searchTerm, setSearchTerm] = useState ('')
+const [selectedCategory, setSelectedCategory] = useState ('all')
 const categories = [ {
   id: 'all', name: 'All News', count: 24 
-};
+}
 {
   id: 'ai', name: 'AI & Consciousness', count: 8 
-};
+}
 {
   id: 'quantum', name: 'Quantum Computing', count: 6 
-};
+}
 {
   id: 'enterprise', name: 'Enterprise IT', count: 5 
-};
+}
 {
   id: 'research', name: 'Research & Development', count: 3 
-};
+}
 {
   id: 'industry', name: 'Industry Insights', count: 2 
-}];
+}]
 const featuredNews = [ {
-  id: 1;
-title: 'Zion Tech Group Launches Revolutionary AI Consciousness Platform';
-excerpt: 'Our latest breakthrough in artificial consciousness technology promises to revolutionize how businesses interact with AI systems, enabling unprecedented levels of understanding and collaboration.';
-category: 'ai';
-author: 'Dr. Sarah Chen';
-date: '2024-01-15';
-readTime: '5 min read';
-image: '/images/news/ai-consciousness-launch.jpg';
-featured: true;
+  id: 1
+title: 'Zion Tech Group Launches Revolutionary AI Consciousness Platform'
+excerpt: 'Our latest breakthrough in artificial consciousness technology promises to revolutionize how businesses interact with AI systems, enabling unprecedented levels of understanding and collaboration.'
+category: 'ai'
+author: 'Dr. Sarah Chen'
+date: '2024-01-15'
+readTime: '5 min read'
+image: '/images/news/ai-consciousness-launch.jpg'
+featured: true
 tags: ['AI ConsciousnessPlatform LaunchInnovation'] 
-};
+}
 {
-  id: 2;
-title: 'Quantum Computing Breakthrough: Achieving 1000+ Qubit Stability';
-excerpt: 'Our quantum research team has achieved a major milestone in quantum computing stability, opening new possibilities for complex computational problems.';
-category: 'quantum';
-author: 'Prof. Michael Rodriguez';
-date: '2024-01-12';
-readTime: '7 min read';
-image: '/images/news/quantum-breakthrough.jpg';
-featured: true;
+  id: 2
+title: 'Quantum Computing Breakthrough: Achieving 1000+ Qubit Stability'
+excerpt: 'Our quantum research team has achieved a major milestone in quantum computing stability, opening new possibilities for complex computational problems.'
+category: 'quantum'
+author: 'Prof. Michael Rodriguez'
+date: '2024-01-12'
+readTime: '7 min read'
+image: '/images/news/quantum-breakthrough.jpg'
+featured: true
 tags: ['Quantum ComputingResearchBreakthrough'] 
-}];
+}]
 const latestNews = [ {
-  id: 3;
-title: 'Enterprise AI Adoption: Trends and Best Practices for 2024';
-excerpt: 'Discover the key trends driving AI adoption in enterprise environments and learn best practices for successful implementation.';
-category: 'enterprise';
-author: 'Jennifer Kim';
-date: '2024-01-10';
-readTime: '4 min read';
-image: '/images/news/enterprise-ai-trends.jpg';
+  id: 3
+title: 'Enterprise AI Adoption: Trends and Best Practices for 2024'
+excerpt: 'Discover the key trends driving AI adoption in enterprise environments and learn best practices for successful implementation.'
+category: 'enterprise'
+author: 'Jennifer Kim'
+date: '2024-01-10'
+readTime: '4 min read'
+image: '/images/news/enterprise-ai-trends.jpg'
 tags: ['Enterprise AIBest Practices2024 Trends'] 
-};
+}
 {
-  id: 4;
-title: 'The Future of Autonomous Business Systems';
-excerpt: 'Exploring how autonomous systems are reshaping business operations and what this means for the future of work.';
-category: 'research';
-author: 'Dr. Alex Thompson';
-date: '2024-01-08';
-readTime: '6 min read';
-image: '/images/news/autonomous-systems.jpg';
+  id: 4
+title: 'The Future of Autonomous Business Systems'
+excerpt: 'Exploring how autonomous systems are reshaping business operations and what this means for the future of work.'
+category: 'research'
+author: 'Dr. Alex Thompson'
+date: '2024-01-08'
+readTime: '6 min read'
+image: '/images/news/autonomous-systems.jpg'
 tags: ['Autonomous SystemsFuture of WorkInnovation'] 
-};
+}
 {
-  id: 5;
-title: 'Cybersecurity in the Age of AI: New Threats and Solutions';
-excerpt: 'How artificial intelligence is both creating new cybersecurity challenges and providing innovative solutions to protect digital assets.';
-category: 'enterprise';
-author: 'Marcus Johnson';
-date: '2024-01-05';
-readTime: '5 min read';
-image: '/images/news/ai-cybersecurity.jpg';
+  id: 5
+title: 'Cybersecurity in the Age of AI: New Threats and Solutions'
+excerpt: 'How artificial intelligence is both creating new cybersecurity challenges and providing innovative solutions to protect digital assets.'
+category: 'enterprise'
+author: 'Marcus Johnson'
+date: '2024-01-05'
+readTime: '5 min read'
+image: '/images/news/ai-cybersecurity.jpg'
 tags: ['CybersecurityAI SecurityDigital Protection'] 
-};
+}
 {
-  id: 6;
-title: 'Quantum Machine Learning: Bridging Two Revolutionary Technologies';
-excerpt: 'Our research team explores the intersection of quantum computing and machine learning, revealing exciting possibilities for the future.';
-category: 'quantum';
-author: 'Dr. Elena Petrova';
-date: '2024-01-03';
-readTime: '8 min read';
-image: '/images/news/quantum-ml.jpg';
+  id: 6
+title: 'Quantum Machine Learning: Bridging Two Revolutionary Technologies'
+excerpt: 'Our research team explores the intersection of quantum computing and machine learning, revealing exciting possibilities for the future.'
+category: 'quantum'
+author: 'Dr. Elena Petrova'
+date: '2024-01-03'
+readTime: '8 min read'
+image: '/images/news/quantum-ml.jpg'
 tags: ['Quantum MLResearchTechnology Convergence'] 
-}];
+}]
 const industryInsights = [ {
-  id: 7;
-title: 'The Rise of Conscious AI: Ethical Considerations and Business Impact';
-excerpt: 'Examining the ethical implications of AI consciousness and how businesses can navigate this new frontier responsibly.';
-category: 'industry';
-author: 'Dr. Robert Chang';
-date: '2024-01-01';
-readTime: '6 min read';
+  id: 7
+title: 'The Rise of Conscious AI: Ethical Considerations and Business Impact'
+excerpt: 'Examining the ethical implications of AI consciousness and how businesses can navigate this new frontier responsibly.'
+category: 'industry'
+author: 'Dr. Robert Chang'
+date: '2024-01-01'
+readTime: '6 min read'
 tags: ['AI EthicsBusiness ImpactConsciousness'] 
-};
+}
 {
-  id: 8;
-title: 'Micro-SaaS Revolution: How Small Teams Are Building Big Solutions';
-excerpt: 'Exploring the growing trend of micro-SaaS companies and how they are disrupting traditional software markets.';
-category: 'industry';
-author: 'Lisa Wang';
-date: '2023-12-28';
-readTime: '4 min read';
+  id: 8
+title: 'Micro-SaaS Revolution: How Small Teams Are Building Big Solutions'
+excerpt: 'Exploring the growing trend of micro-SaaS companies and how they are disrupting traditional software markets.'
+category: 'industry'
+author: 'Lisa Wang'
+date: '2023-12-28'
+readTime: '4 min read'
 tags: ['Micro-SaaSStartupsSoftware Industry'] 
-}];
+}]
 const upcomingEvents = [ {
-  id: 1;
-title: 'AI Consciousness Summit 2024';
-type: 'Conference';
-date: '2024-02-15';
-time: '9:00 AM - 6:00 PM';
-location: 'San Francisco, CA';
-description: 'Join industry leaders and researchers for a deep dive into the future of AI consciousness technology.';
+  id: 1
+title: 'AI Consciousness Summit 2024'
+type: 'Conference'
+date: '2024-02-15'
+time: '9:00 AM - 6:00 PM'
+location: 'San Francisco, CA'
+description: 'Join industry leaders and researchers for a deep dive into the future of AI consciousness technology.'
 registration: 'https://ziontechgroup.com/events/ai-consciousness-summit-2024' 
-};
+}
 {
-  id: 2;
-title: 'Quantum Computing Workshop';
-type: 'Workshop';
-date: '2024-02-22';
-time: '1:00 PM - 5:00 PM';
-location: 'Virtual';
-description: 'Hands-on workshop covering quantum computing fundamentals and practical applications.';
+  id: 2
+title: 'Quantum Computing Workshop'
+type: 'Workshop'
+date: '2024-02-22'
+time: '1:00 PM - 5:00 PM'
+location: 'Virtual'
+description: 'Hands-on workshop covering quantum computing fundamentals and practical applications.'
 registration: 'https://ziontechgroup.com/events/quantum-workshop' 
-}];
+}]
 const matchesSearch = article.title.toLowerCase () .includes (searchTerm.toLowerCase () ) || article.excerpt.toLowerCase () .includes (searchTerm.toLowerCase () ) || > Latest News & Insights </motion.h1> <motion.p > Stay updated with the latest developments in AI consciousness, quantum computing, and emerging technologies from Zion Tech Group. </motion.p> {
   /* Search and Filter */ 
 }<motion.div > <div className="relative mb-8" > <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" /> <input key= {
@@ -229,8 +229,8 @@ const matchesSearch = article.title.toLowerCase () .includes (searchTerm.toLower
 }({
   category.count 
 }) </button>) ) 
-}</div> </motion.div> </div> </section> <motion.h2 'All NewsCompany NewsPartnershipsAI & EthicsQuantum TechnologySpace TechnologyMicro SAASIT Services';
-'MetaverseIndustry Insights'];
+}</div> </motion.div> </div> </section> <motion.h2 'All NewsCompany NewsPartnershipsAI & EthicsQuantum TechnologySpace TechnologyMicro SAASIT Services'
+'MetaverseIndustry Insights']
 > Latest News & Insights </motion.h1> <motion.p > Stay updated with the latest developments in AI, quantum computing, space technology, and more from Zion Tech Group. </motion.p> <motion.div > <a href="#featured" className="bg-gradient-to-r from-purple-500 to-pink-600 hover:from-purple-600 hover:to-pink-700 text-white px-8 py-3 rounded-lg font-semibold transition-all duration-300 flex items-center space-x-2" > <span>Read Featured News</span> <ArrowRight className="w-5 h-5" /> </a> <a href="#insights" className="border border-purple-500 text-purple-400 hover:bg-purple-500 hover:text-white px-8 py-3 rounded-lg font-semibold transition-all duration-300" > Industry Insights </a> </motion.div> </div> </section> <button key= {
   index 
 }className= {
@@ -296,7 +296,7 @@ const matchesSearch = article.title.toLowerCase () .includes (searchTerm.toLower
   {
   once: true 
 }
-}> <h2 className="text-4xl font-bold text-white mb-4" > Media Inquiries </h2> <p className="text-xl text-gray-300 mb-8" > For press inquiries, media interviews, or additional information;
+}> <h2 className="text-4xl font-bold text-white mb-4" > Media Inquiries </h2> <p className="text-xl text-gray-300 mb-8" > For press inquiries, media interviews, or additional information
 please contact our communications team. </p> <div className="flex flex-col sm:flex-row gap-4 justify-center" > <a href="/contact" className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-600 to-cyan-600 text-white font-semibold rounded-lg hover:from-purple-700 hover:to-cyan-700 transition-all duration-300 transform hover:scale-105" > Contact Media Team <Mic className="ml-2 w-5 h-5" /> </a> <a href="/press" className="inline-flex items-center px-8 py-4 border-2 border-purple-500 text-purple-400 font-semibold rounded-lg hover:bg-purple-500 hover:text-white transition-all duration-300" > Press Kit </a> </div> </motion.div> </div> </section> </div> </Layout> <motion.div initial= {
   {
   opacity: 0, y: 20 
@@ -331,45 +331,45 @@ please contact our communications team. </p> <div className="flex flex-col sm:fl
   once: true 
 }
 }> <h2 className="text-4xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-pink-600 bg-clip-text text-transparent" > Get in Touch </h2> <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto" > Have questions about our news or want to learn more about our latest developments? Contact our team. </p> <span>Contact Us</span> <ArrowRight className="w-5 h-5" /> </a> <a href="/about" className="border border-purple-500 text-purple-400 hover:bg-purple-500 hover:text-white px-8 py-3 rounded-lg font-semibold transition-all duration-300" > About Zion Tech Group </a> </div> </motion.div> </div> </section> </div>) 
-}title: "Partnership with TechCorp Announced for Cloud Infrastructure";
-excerpt: "Strategic collaboration to deliver next-generation cloud automation solutions for enterprise clients worldwide.";
-date: "2025-01-18";
-category: "Partnerships";
-author: "Sarah Chen";
-readTime: "2 min read";
+}title: "Partnership with TechCorp Announced for Cloud Infrastructure"
+excerpt: "Strategic collaboration to deliver next-generation cloud automation solutions for enterprise clients worldwide."
+date: "2025-01-18"
+category: "Partnerships"
+author: "Sarah Chen"
+readTime: "2 min read"
 image: "🤝" 
-};
-};
+}
+}
 {
-  id: 6;
-title: "Annual Sustainability Report Published";
-excerpt: "Comprehensive overview of our environmental impact and commitment to sustainable technology development.";
-date: "2025-01-14";
-category: "Sustainability";
-author: "Lisa Park";
-readTime: "6 min read";
+  id: 6
+title: "Annual Sustainability Report Published"
+excerpt: "Comprehensive overview of our environmental impact and commitment to sustainable technology development."
+date: "2025-01-14"
+category: "Sustainability"
+author: "Lisa Park"
+readTime: "6 min read"
 image: "🌱" 
-};
+}
 {
-  id: 7;
-title: "Customer Success Story: Retail Automation";
-excerpt: "How we helped a major retailer increase efficiency by 300% through intelligent automation systems.";
-date: "2025-01-13";
-category: "Case Studies";
-author: "Alex Thompson";
-readTime: "4 min read";
+  id: 7
+title: "Customer Success Story: Retail Automation"
+excerpt: "How we helped a major retailer increase efficiency by 300% through intelligent automation systems."
+date: "2025-01-13"
+category: "Case Studies"
+author: "Alex Thompson"
+readTime: "4 min read"
 image: "📊" 
-};
+}
 {
-  id: 8;
-title: "New Research Paper on Autonomous Systems";
-excerpt: "Published in leading AI journal, our research explores the future of self-managing technology infrastructure.";
-date: "2025-01-12";
-category: "Research";
-author: "Prof. Maria Garcia";
-readTime: "7 min read";
+  id: 8
+title: "New Research Paper on Autonomous Systems"
+excerpt: "Published in leading AI journal, our research explores the future of self-managing technology infrastructure."
+date: "2025-01-12"
+category: "Research"
+author: "Prof. Maria Garcia"
+readTime: "7 min read"
 image: "📚" 
-}];
+}]
 min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 text-white"> <main className=" container mx-auto px-6 py-12"> <section className=" text-center mb-16"> <h1 className=" text-5xl font-extrabold mb-6 bg-gradient-to-r from-cyan-400 to-fuchsia-400 bg-clip-text text-transparent"> Latest News </h1> > {
   category 
 }</button>) ) 

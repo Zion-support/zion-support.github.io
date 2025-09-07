@@ -1,28 +1,28 @@
- const features = [ {
-  setIsTesting (true);
+const features = [ {
+  setIsTesting (true)
 //Simulate API testing setTimeout ( () => {
   setTestResults ({
   endpoint: apiEndpoint, status: 'success', responseTime: '245ms', statusCode: 200, tests: [ {
   name: 'Response Time', status: 'pass', value: '245ms', threshold: '<500ms' 
-};
+}
 {
   name: 'Status Code', status: 'pass', value: '200', threshold: '200' 
-};
+}
 {
   name: 'Response Format', status: 'pass', value: 'JSON', threshold: 'Valid JSON' 
-};
+}
 {
   name: 'Authentication', status: 'pass', value: 'Valid', threshold: 'Authenticated' 
-};
+}
 {
   name: 'Rate Limiting', status: 'pass', value: 'Within limits', threshold: 'No throttling' 
-}];
+}]
 recommendations: [ 'Consider implementing response caching for better performanceMonitor response times during peak usageImplement rate limiting headers for better API documentation' ] 
-});
+})
 setIsTesting (false) 
 }, 3000) 
-};
-return (<> <Head> <title>API Testing Suite - Zion Tech Group | Comprehensive API Testing & Monitoring Tool</title> <meta name="description" content="Test, monitor, and optimize your APIs with our comprehensive testing suite. Functional, performance, and security testing for REST, GraphQL, and SOAP APIs." /> <meta property="og:title" content="API Testing Suite - Zion Tech Group" /> <meta property="og:description" content="Comprehensive API testing tool with functional, performance, and security testing capabilities." /> <meta name="twitter:card" content="summary large image" /> </Head> <div className="relative z-10 container-cursor text-center" > <div className="inline-flex items-center px-4 py-2 rounded-full bg-indigo-500/10 border border-indigo-500/20 text-indigo-400 text-sm font-medium mb-6" > <Code className="w-4 h-4 mr-2" /> Professional API Testing </div> <h1 className="text-responsive-xl font-black mb-8 gradient-text text-shadow-lg" > API Testing Suite </h1> <p className="text-responsive-md text-gray-300 max-w-5xl mx-auto leading-relaxed mb-12" > Test, monitor, and optimize your APIs with our comprehensive testing suite. Functional, performance;
+}
+return (<> <Head> <title>API Testing Suite - Zion Tech Group | Comprehensive API Testing & Monitoring Tool</title> <meta name="description" content="Test, monitor, and optimize your APIs with our comprehensive testing suite. Functional, performance, and security testing for REST, GraphQL, and SOAP APIs." /> <meta property="og:title" content="API Testing Suite - Zion Tech Group" /> <meta property="og:description" content="Comprehensive API testing tool with functional, performance, and security testing capabilities." /> <meta name="twitter:card" content="summary large image" /> </Head> <div className="relative z-10 container-cursor text-center" > <div className="inline-flex items-center px-4 py-2 rounded-full bg-indigo-500/10 border border-indigo-500/20 text-indigo-400 text-sm font-medium mb-6" > <Code className="w-4 h-4 mr-2" /> Professional API Testing </div> <h1 className="text-responsive-xl font-black mb-8 gradient-text text-shadow-lg" > API Testing Suite </h1> <p className="text-responsive-md text-gray-300 max-w-5xl mx-auto leading-relaxed mb-12" > Test, monitor, and optimize your APIs with our comprehensive testing suite. Functional, performance
 and security testing for REST, GraphQL, and SOAP APIs. Ensure your APIs are reliable, fast, and secure. </p> > {
   isTesting ? (<> <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white mr-2" /> Testing API... </>) : (<> <Play className="w-5 h-5 mr-2" /> Test API Endpoint </>) 
 }</Button> </div> <div className="flex flex-col sm:flex-row gap-6 justify-center" > <Button href="#pricing" variant="outline" size="lg" className="border-indigo-500 text-indigo-400 hover:bg-indigo-500 hover:text-white shadow-2xl" > View Pricing </Button> <Button href="/contact" variant="outline" size="lg" className="border-gray-500 text-gray-400 hover:bg-gray-500 hover:text-white shadow-2xl" > Schedule Demo </Button> </div> </div> </section> Powerful Testing Features </h2> <p className="text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed" > Our API testing suite provides everything you need to ensure your APIs are reliable, performant, and secure. </p> </div> </div> <div className= {

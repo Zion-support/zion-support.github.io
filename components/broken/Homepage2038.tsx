@@ -1,4 +1,4 @@
- return (<Layout> {
+return (<Layout> {
   /* Main Content */ 
 }</div> <div className="text-center max-w-5xl mx-auto relative z-10" > <motion.div > {
   /* Company Badge */ 
@@ -63,5 +63,5 @@
 }> <UltraFuturisticServiceCard2038 /> </motion.div>) ) 
 }</div> <div className="text-center" > <Link href="/it-services" > <motion.button > View All IT Services </motion.button> </a> </div> </div> </section> > <h2 className="text-5xl md:text-6xl font-bold mb-8 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent" > Why Choose Zion Tech Group? </h2> <p className="text-xl text-gray-300 max-w-4xl mx-auto" > We're not just building technology - we're shaping the future of human consciousness and computing </p> </motion.div> </motion.div>) ) 
 }</div> </div> </section> > <h2 className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent" > Ready to Shape the Future? </h2> <p className="text-xl text-gray-300 max-w-3xl mx-auto" > Join the revolution in AI consciousness, quantum computing, and next-generation technology. Let's build the future together. </p> <div className="flex flex-col sm:flex-row gap-6 justify-center" > <Link href="/contact" > <motion.button > <span className="flex items-center gap-3" > Get Started Today <ArrowRight className="w-6 h-6" /> </span> </motion.button> </a> <Link href="/services" > <motion.button > Explore Our Services </motion.button> </a> </div> </motion.div> </div> </section> </main> </Layout>) 
-};
-export default Homepage2038;
+}
+export default Homepage2038

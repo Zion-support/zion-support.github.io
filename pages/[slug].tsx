@@ -1,18 +1,17 @@
-import React from 'react';
-import Head from 'next/head';
-import { GetStaticPaths, GetStaticProps } from 'next';
-import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground';
-import Button from '../components/ui/Button';
-
+import React from 'react'
+import Head from 'next/head'
+import { GetStaticPaths, GetStaticProps } from 'next'
+import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground'
+import Button from '../components/ui/Button'
 interface Service {
-  id: string;
-  name: string;
-  description: string;
-  slug: string;
+  id: string
+  name: string
+  description: string
+  slug: string
 }
 
 interface ServicePageProps {
-  service: Service;
+  service: Service
 }
 
 const ServicePage: React.FC<ServicePageProps> = ({ service }) => {
@@ -33,33 +32,28 @@ const ServicePage: React.FC<ServicePageProps> = ({ service }) => {
         </div>
       </div>
     </UltraFuturisticBackground>
-  );
-};
-
+  )
+}
 export const getStaticPaths: GetStaticPaths = async () => {
   // Return empty paths for now - this can be populated with actual services
   return {
     paths: [],
     fallback: false
-  };
-};
-
+  }
+}
 export const getStaticProps: GetStaticProps = async ({ params }) => {
-  const slug = params?.slug as string;
-  
+  const slug = params?.slug as string
   // Mock service data - replace with actual data fetching
   const service: Service = {
     id: slug,
     name: 'Service Name',
     description: 'Service description',
     slug: slug
-  };
-
+  }
   return {
     props: {
       service
     }
-  };
-};
-
-export default ServicePage;
+  }
+}
+export default ServicePage

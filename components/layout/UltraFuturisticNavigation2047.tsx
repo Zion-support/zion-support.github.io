@@ -1,11 +1,11 @@
- ] 
-}];
+] 
+}]
 useEffect ( () => {
   const handleResize = () => {
   if (window.innerWidth >= 1024) {
-  window.addEventListener ('resize', handleResize);
+  window.addEventListener ('resize', handleResize)
 return () => window.removeEventListener ('resize', handleResize) 
-}, []);
+}, [])
 </div> <span className="text-xl font-bold bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent" > Zion Tech Group </span> </a> </div> > <div className= {
   `p-2 rounded-lg bg-gradient-to-r $ {
   child.color || 'from-gray-500 to-slate-500' 
@@ -31,5 +31,5 @@ return () => window.removeEventListener ('resize', handleResize)
 }</AnimatePresence> </div>) ) 
 }</div> </div> <div className="px-3 pt-2" > <Link > Get Started <ArrowRight className="ml-2 w-4 h-4" /> </a> </div> </div> </div> </motion.div>) 
 }</AnimatePresence> </nav>) 
-};
-export default UltraFuturisticNavigation2047;
+}
+export default UltraFuturisticNavigation2047

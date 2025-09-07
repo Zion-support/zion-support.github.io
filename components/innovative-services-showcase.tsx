@@ -1,15 +1,15 @@
- const containerVariants = {
+const containerVariants = {
   hidden: {
   opacity: 0 
-};
+}
 visible: {
   opacity: 1, transition: {
   staggerChildren: 0.1, delayChildren: 0.2 
 }
 }
-};
 }
-};
+}
+}
 > <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight" > <span className="bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent" > Innovative </span> <br /> <span className="text-white" >Services Showcase</span> </h1> <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed" > Experience the future of technology with our most revolutionary and cutting-edge services. These are the innovations that will transform industries and reshape the world. </p> </div> </div> </motion.div> </div> </section> > <h2 className="text-4xl md:text-5xl font-bold text-white mb-6" > <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent" > Featured </span> Innovative Services </h2> <p className="text-xl text-gray-300 max-w-3xl mx-auto" > Our most revolutionary services that are pushing the boundaries of what's possible </p> </motion.div> </li>) ) 
 }</ul> </div> <div className="flex flex-col sm:flex-row gap-3" > <a > <span>Learn More</span> <ExternalLink className="w-5 h-5" /> </a> <a href="/contact" className="border-2 border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-black font-bold py-3 px-6 rounded-full text-center transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30" > Get Started </a> </div> </div> </motion.div>) ) 
 }</div> </div> </section> > <h2 className="text-4xl md:text-5xl font-bold text-white mb-6" > <span className="bg-gradient-to-r from-emerald-400 to-teal-400 bg-clip-text text-transparent" > Emerging </span> Tech Services </h2> <p className="text-xl text-gray-300 max-w-3xl mx-auto" > Discover the latest technologies that are emerging and transforming industries </p> </motion.div> <motion.div key= {

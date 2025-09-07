@@ -1,8 +1,8 @@
- setRoom (r);
-setConnectedAt (Date.now () );
-rebuild (r);
+setRoom (r)
+setConnectedAt (Date.now () )
+rebuild (r)
 // eslint-disable-next-line react-hooks/exhaustive-deps 
-}, [serverUrl, token, startMode]);
+}, [serverUrl, token, startMode])
 </div> <div className= {
   `flex-1 p-4 grid gap-4 $ {
   gridCols 

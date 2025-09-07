@@ -1,3 +1,23 @@
- </Head> 
-}</div> <div className="flex gap-3" > <a href="/contact" className="px-6 py-3 rounded-xl bg-gradient-to-r from-rose-600 to-pink-700 text-white" >Start from $129/mo</Link> <a href="/market-pricing" className="px-6 py-3 rounded-xl border border-gray-700 text-gray-200" >See market pricing</Link> </div> </div> </div> </Layout>) 
+import React from 'react';
+import Head from 'next/head';
+import Layout from '../components/layout/Layout';
+
+export default function apilatencyslotracker() {
+  return (
+    <Layout>
+      <Head>
+        <title>Api Latency Slo Tracker - Zion Tech Group</title>
+        <meta name="description" content="Api Latency Slo Tracker solutions and services." />
+      </Head>
+      
+      <div className="min-h-screen bg-gray-50">
+        <div className="container mx-auto px-6 py-16">
+          <h1 className="text-4xl font-bold text-gray-900 mb-8">Api Latency Slo Tracker</h1>
+          <p className="text-lg text-gray-600">
+            Professional api latency slo tracker solutions tailored to your business needs.
+          </p>
+        </div>
+      </div>
+    </Layout>
+  );
 }

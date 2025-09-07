@@ -1,9 +1,23 @@
- ] 
-}];
-Industry-Specific Solutions </h1> <p className="text-xl text-gray-600 max-w-4xl mx-auto" > We deliver tailored technology solutions designed specifically for your industry. From healthcare AI to smart manufacturing, our solutions address real business challenges and drive measurable results. </p> </div> </li>) ) 
-}</ul> </div> </li>) ) 
-}</ul> </div> </span> </div> <Link > Learn More </Link> </div>) ) 
-}</div> </div>) ) 
-}</div> Success Stories </h2> <p className="text-xl mb-6 opacity-90" > See how our solutions have transformed businesses across industries </p> <div className="grid md:grid-cols-3 gap-6 mb-8" > <div> <h3 className="font-semibold mb-2" >🏥 Healthcare Provider</h3> <p>40% reduction in diagnostic time with AI-powered imaging</p> </div> <div> <h3 className="font-semibold mb-2" >🏭 Manufacturing Company</h3> <p>60% decrease in downtime with IoT predictive maintenance</p> </div> <div> <h3 className="font-semibold mb-2" >🏦 Financial Institution</h3> <p>80% reduction in fraud losses with AI risk assessment</p> </div> </div> <Link href="/contact" className="bg-white text-purple-600 hover:bg-gray-100 px-8 py-3 rounded-lg font-semibold transition-colors" > View Case Studies </Link> </div> Need a Custom Solution? </h2> <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto" > Can't find exactly what you need? Our expert team can design and develop custom solutions tailored to your specific requirements and industry challenges. </p> <div className="grid md:grid-cols-3 gap-6 mb-8" > <div className="text-center" > <div className="text-4xl mb-4" >🔧</div> <h3 className="text-xl font-semibold mb-2" >Custom Development</h3> <p className="text-gray-600" >Tailored solutions built from the ground up</p> </div> <div className="text-center" > <div className="text-4xl mb-4" >🔗</div> <h3 className="text-xl font-semibold mb-2" >System Integration</h3> <p className="text-gray-600" >Seamless integration with existing systems</p> </div> <div className="text-center" > <div className="text-4xl mb-4" >📚</div> <h3 className="text-xl font-semibold mb-2" >Training & Support</h3> <p className="text-gray-600" >Comprehensive training and ongoing support</p> </div> </div> <Link href="/contact" className="bg-purple-600 hover:bg-purple-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors" > Discuss Custom Solutions </Link> </div> Ready to Transform Your Business? </h2> <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto" > Let's discuss how our industry-specific solutions can address your unique challenges and drive measurable business outcomes. </p> <div className="flex justify-center gap-4 mb-8" > <Link > Schedule Consultation </Link> <Link href="/contact" className="bg-transparent border-2 border-purple-600 text-purple-600 hover:bg-purple-600 hover:text-white px-8 py-3 rounded-lg font-semibold transition-colors" > Request Demo </Link> </div> <div className="grid md:grid-cols-3 gap-6 text-sm text-gray-600" > <div> <h3 className="font-semibold mb-2" >📱 Mobile</h3> <p>+1 302 464 0950</p> </div> <div> <h3 className="font-semibold mb-2" >✉️ Email</h3> <p>kleber@ziontechgroup.com</p> </div> <div> <h3 className="font-semibold mb-2" >🌐 Website</h3> <p>https://ziontechgroup.com</p> </div> </div> </div> </main> </div>) 
-};
-export default SolutionsPage;
+import React from 'react';
+import Head from 'next/head';
+import Layout from '../../components/layout/Layout';
+
+export default function index() {
+  return (
+    <Layout>
+      <Head>
+        <title>Index - Zion Tech Group</title>
+        <meta name="description" content="Index solutions and services." />
+      </Head>
+      
+      <div className="min-h-screen bg-gray-50">
+        <div className="container mx-auto px-6 py-16">
+          <h1 className="text-4xl font-bold text-gray-900 mb-8">Index</h1>
+          <p className="text-lg text-gray-600">
+            Professional index solutions tailored to your business needs.
+          </p>
+        </div>
+      </div>
+    </Layout>
+  );
+}

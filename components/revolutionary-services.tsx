@@ -1,28 +1,28 @@
- //Search filter if (searchQuery) {
+//Search filter if (searchQuery) {
   filteredServices = filteredServices.filter (service => service.name.toLowerCase () .includes (searchQuery.toLowerCase () ) || service.description.toLowerCase () .includes (searchQuery.toLowerCase () ) || service.tagline.toLowerCase () .includes (searchQuery.toLowerCase () ) || service.category.toLowerCase () .includes (searchQuery.toLowerCase () ) //Sort services filteredServices.sort ( (a, b) => {
   switch (sortBy) {
-  case 'price': case 'popularity': return (b.popular ? 1 : 0) - (a.popular ? 1 : 0);
-case 'category': return a.category.localeCompare (b.category);
+  case 'price': case 'popularity': return (b.popular ? 1 : 0) - (a.popular ? 1 : 0)
+case 'category': return a.category.localeCompare (b.category)
 case 'roi': const containerVariants = {
   hidden: {
   opacity: 0 
-};
+}
 visible: {
   opacity: 1, transition: {
   staggerChildren: 0.1 
 }
 }
-};
+}
 const itemVariants = {
   hidden: {
   y: 20, opacity: 0 
-};
+}
 visible: {
   y: 0, opacity: 1, transition: {
   duration: 0.5 
 }
 }
-};
+}
 > <span className="bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent" > Revolutionary </span> <br /> <span className="text-white" >Micro SaaS Services</span> </motion.h1> <motion.p > Experience the future of technology with our revolutionary micro SaaS platform. Quantum AI, autonomous systems, space technology, and cutting-edge solutions that redefine what's possible. </motion.p> {
   /* Service Count Stats */ 
 }<motion.div </div> <div className="text-center" > <div className="text-3xl font-bold text-purple-400 mb-2" >99.99%</div> <div className="text-gray-400" >Accuracy Rate</div> </div> <div className="text-center" > <div className="text-3xl font-bold text-green-400 mb-2" >21</div> <div className="text-gray-400" >Day Free Trial</div> </div> <div className="text-center" > <div className="text-3xl font-bold text-pink-400 mb-2" >2000%+</div> <div className="text-gray-400" >Average ROI</div> </div> </motion.div> {

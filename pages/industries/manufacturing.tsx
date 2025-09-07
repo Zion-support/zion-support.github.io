@@ -1,8 +1,7 @@
-import { motion } from 'framer-motion';
-import Link from 'next/link';
-import Layout from '../../components/Layout';
-import { Settings, Brain, Shield, BarChart3, CheckCircle, ArrowRight, Cpu, Wrench, Activity, Database, FileText, Users } from 'lucide-react';
-
+import { motion } from 'framer-motion'
+import Link from 'next/link'
+import Layout from '../../components/Layout'
+import { Settings, Brain, Shield, BarChart3, CheckCircle, ArrowRight, Cpu, Wrench, Activity, Database, FileText, Users } from 'lucide-react'
 const solutions = [
   {
     title: 'Smart Manufacturing Platform',
@@ -28,8 +27,7 @@ const solutions = [
     icon: BarChart3,
     features: ['Demand Forecasting', 'Inventory Optimization', 'Supplier Management', 'Logistics Tracking']
   }
-];
-
+]
 const benefits = [
   {
     title: 'Increased Efficiency',
@@ -51,8 +49,7 @@ const benefits = [
     description: 'Comprehensive analytics help make informed manufacturing decisions',
     icon: Database
   }
-];
-
+]
 export default function ManufacturingPage() {
   return (
     <Layout>
@@ -204,5 +201,5 @@ export default function ManufacturingPage() {
         </section>
       </div>
     </Layout>
-  );
+  )
 }

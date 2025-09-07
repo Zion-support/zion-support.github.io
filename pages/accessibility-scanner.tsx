@@ -1,6 +1,5 @@
-import React from 'react';
-import Head from 'next/head';
-
+import React from 'react'
+import Head from 'next/head'
 const AccessibilityScannerPage: React.FC = () => {
   return (
     <>
@@ -20,7 +19,6 @@ const AccessibilityScannerPage: React.FC = () => {
         </div>
       </div>
     </>
-  );
-};
-
-export default AccessibilityScannerPage;
+  )
+}
+export default AccessibilityScannerPage

@@ -1,3 +1,3 @@
- </div> </div> </div>) 
-};
-export default ReviewSummary;
+</div> </div> </div>) 
+}
+export default ReviewSummary

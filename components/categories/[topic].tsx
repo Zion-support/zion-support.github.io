@@ -1,4 +1,4 @@
- const TopicPage: NextPage<Props> = ({
+const TopicPage: NextPage<Props> = ({
   topic, posts 
 }) => {
   return (<div> <Head> <title> {
@@ -29,5 +29,5 @@
 }) 
 }/> </div>) ) 
 }</div> <div className="mt-6" ><Link href="/blog" className="underline" >Back to Blog</a></div> </div> </div>) 
-};
-export default TopicPage;
+}
+export default TopicPage

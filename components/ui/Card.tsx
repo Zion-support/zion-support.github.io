@@ -1,4 +1,4 @@
- return (<div className= {
+return (<div className= {
   classes 
 }style= {
   style 
@@ -6,5 +6,5 @@
   onClick 
 }>) 
 }</div>) 
-};
-export default Card;
+}
+export default Card

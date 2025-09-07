@@ -1,40 +1,40 @@
- //Category filter if (selectedCategory !== 'all') {
+//Category filter if (selectedCategory !== 'all') {
   filtered = filtered.filter (service => {
   switch (selectedCategory) {
-  case 'ai': return service.category?.includes ('AI');
-case 'quantum': return service.category?.includes ('Quantum');
-case 'enterprise': return service.category?.includes ('Enterprise');
-case 'micro-saas': return service.category?.includes ('Micro SaaS');
+  case 'ai': return service.category?.includes ('AI')
+case 'quantum': return service.category?.includes ('Quantum')
+case 'enterprise': return service.category?.includes ('Enterprise')
+case 'micro-saas': return service.category?.includes ('Micro SaaS')
 case 'emerging': switch (selectedPriceRange) {
-  case 'low': return price < 500;
-case 'medium': return price >= 500 && price <= 1000;
+  case 'low': return price < 500
+case 'medium': return price >= 500 && price <= 1000
 case 'high': 
 }//Search filter if (searchTerm) {
   filtered = filtered.filter (service => service.name.toLowerCase () .includes (searchTerm.toLowerCase () ) || service.description.toLowerCase () .includes (searchTerm.toLowerCase () ) || service.category.toLowerCase () .includes (searchTerm.toLowerCase () ) //Sort filtered.sort ( (a, b) => {
   switch (sortBy) {
-  case 'price': case 'rating': return b.rating - a.rating;
-case 'popularity': return filtered;
-}, [allServices, selectedCategory, selectedPriceRange, searchTerm, sortBy]);
+  case 'price': case 'rating': return b.rating - a.rating
+case 'popularity': return filtered
+}, [allServices, selectedCategory, selectedPriceRange, searchTerm, sortBy])
 const containerVariants = {
   hidden: {
   opacity: 0 
-};
+}
 visible: {
   opacity: 1, transition: {
   staggerChildren: 0.1 
 }
 }
-};
+}
 const itemVariants = {
   hidden: {
   y: 20, opacity: 0 
-};
+}
 visible: {
   y: 0, opacity: 1, transition: {
   duration: 0.5 
 }
 }
-};
+}
 return (<> <Head> <title>2026 Innovative Services Showcase - Zion Tech Group</title> /> <UltraAdvancedNavigation2026 /> > <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent mb-6" > 2026 Innovative Services </h1> <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed" > Discover the future of technology with our cutting-edge 2026 services. From AI-powered solutions to quantum computing and emerging technologies, transform your business with next-generation innovation. </p> </motion.div> <motion.div </div> <div className="bg-gradient-to-r from-purple-600/20 to-pink-600/20 backdrop-blur-sm border border-purple-500/30 rounded-full px-6 py-3" > <span className="text-purple-400 font-semibold" >AI-Powered</span> </div> <div className="bg-gradient-to-r from-green-600/20 to-emerald-600/20 backdrop-blur-sm border border-green-500/30 rounded-full px-6 py-3" > <span className="text-green-400 font-semibold" >Quantum Ready</span> </div> <div className="bg-gradient-to-r from-orange-600/20 to-red-600/20 backdrop-blur-sm border border-orange-500/30 rounded-full px-6 py-3" > <span className="text-orange-400 font-semibold" >Future-Proof</span> </div> </motion.div> {
   /* Search and Filters */ 
 }<motion.div > <div className="relative mb-8" > <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" /> <input key= {

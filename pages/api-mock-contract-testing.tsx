@@ -1,4 +1,23 @@
- return (<Layout> <Head> <title>API Mock & Contract Testing | Zion Tech Group</title>) ) 
-}</ul> </div>) ) 
-}</div> </div> <div className="text-center" > <a href="/contact" className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-3 rounded-xl" >Book a Demo</Link> </div> </div> </div> </div> </Layout>) 
+import React from 'react';
+import Head from 'next/head';
+import Layout from '../components/layout/Layout';
+
+export default function apimockcontracttesting() {
+  return (
+    <Layout>
+      <Head>
+        <title>Api Mock Contract Testing - Zion Tech Group</title>
+        <meta name="description" content="Api Mock Contract Testing solutions and services." />
+      </Head>
+      
+      <div className="min-h-screen bg-gray-50">
+        <div className="container mx-auto px-6 py-16">
+          <h1 className="text-4xl font-bold text-gray-900 mb-8">Api Mock Contract Testing</h1>
+          <p className="text-lg text-gray-600">
+            Professional api mock contract testing solutions tailored to your business needs.
+          </p>
+        </div>
+      </div>
+    </Layout>
+  );
 }

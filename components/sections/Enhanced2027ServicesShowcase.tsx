@@ -1,8 +1,8 @@
- //Filter and sort services const filteredServices = all2027Services .filter (service => {
-  const matchesSearch = service.name.toLowerCase () .includes (searchTerm.toLowerCase () ) || service.description.toLowerCase () .includes (searchTerm.toLowerCase () ) || case 'name': return a.name.localeCompare (b.name);
+//Filter and sort services const filteredServices = all2027Services .filter (service => {
+  const matchesSearch = service.name.toLowerCase () .includes (searchTerm.toLowerCase () ) || service.description.toLowerCase () .includes (searchTerm.toLowerCase () ) || case 'name': return a.name.localeCompare (b.name)
 case 'price': 
-};
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7 > <h2 className="text-5xl font-bold mb-6" > <span className="bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent" > 2027 Revolutionary Services </span> </h2> and transforms your business into a future-ready powerhouse. </p> </motion.div> {
+}
+
   /* Search and Filters */ 
 }<motion.div /> </div> </div> > {
   categories.map ( (category) => (<option key= {
@@ -52,5 +52,5 @@ case 'price':
 }{
   /* CTA Section */ 
 }<motion.div > Ready to Transform Your Business? </h3> <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto" > Our team of experts is ready to help you implement these revolutionary services and achieve unprecedented growth. Let's build the future together. </p> <div className="flex flex-col sm:flex-row gap-4 justify-center items-center" > <Link href="/contact" className="inline-flex items-center space-x-2 bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-xl font-semibold text-lg transform transition-all duration-300 hover:scale-105 hover:shadow-xl hover:shadow-purple-500/25" > <span>Get Started Today</span> <ArrowRight className="w-5 h-5" /> </a> <Link href="/pricing" className="inline-flex items-center space-x-2 bg-gradient-to-r from-gray-700 to-gray-800 text-white px-8 py-4 rounded-xl font-semibold text-lg transform transition-all duration-300 hover:scale-105 hover:shadow-xl border border-gray-600/50" > <span>View Pricing</span> <TrendingUp className="w-5 h-5" /> </a> </div> </div> </motion.div> </div> </section>) 
-};
-export default Enhanced2027ServicesShowcase;
+}
+export default Enhanced2027ServicesShowcase

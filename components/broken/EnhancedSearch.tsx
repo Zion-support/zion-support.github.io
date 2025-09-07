@@ -1,24 +1,24 @@
- //Mock search results - in real app, this would come from API const mockSearchResults: SearchResult[] = [ {
+//Mock search results - in real app, this would come from API const mockSearchResults: SearchResult[] = [ {
   
-}];
-setIsSearching (true);
+}]
+setIsSearching (true)
 //Simulate API call delay setTimeout ( () => {
   const filteredResults = mockSearchResults.filter (result => {
-  const matchesQuery = result.name.toLowerCase () .includes (searchQuery.toLowerCase () ) || result.description.toLowerCase () .includes (searchQuery.toLowerCase () ) || result.category.toLowerCase () .includes (searchQuery.toLowerCase () );
-const matchesFilters = selectedFilters.length === 0 || selectedFilters.some (filter => result.category.toLowerCase () .includes (filter.toLowerCase () ) || result.type.toLowerCase () .includes (filter.toLowerCase () ) );
-setResults (sortedResults);
-setShowResults (true);
+  const matchesQuery = result.name.toLowerCase () .includes (searchQuery.toLowerCase () ) || result.description.toLowerCase () .includes (searchQuery.toLowerCase () ) || result.category.toLowerCase () .includes (searchQuery.toLowerCase () )
+const matchesFilters = selectedFilters.length === 0 || selectedFilters.some (filter => result.category.toLowerCase () .includes (filter.toLowerCase () ) || result.type.toLowerCase () .includes (filter.toLowerCase () ) )
+setResults (sortedResults)
+setShowResults (true)
 setIsSearching (false) 
 }, 300) 
-}, 300);
-[selectedFilters]);
-[selectedFilters]);
+}, 300)
+[selectedFilters])
+[selectedFilters])
 //Close search on outside click useEffect ( () => {
   const handleClickOutside = (event: MouseEvent) => {
   if (searchRef.current && !searchRef.current.contains (event.target as Node) ) {
   
 }
-}, []);
+}, [])
 //Handle filter toggle const toggleFilter = (filterId: string) => {
   setSelectedFilters (prev => prev.includes (filterId) ? prev.filter (id => id !== filterId) return (<div className= {
   `relative $ {
@@ -173,7 +173,7 @@ setIsSearching (false)
 }</div> </div> </div>) 
 }</div> </motion.div>) 
 }</AnimatePresence> </div>) 
-};
-// Debounce utility function function debounce<T extends (...args: unknown[]) => any> (func: T;
+}
+// Debounce utility function function debounce<T extends (...args: unknown[]) => any> (func: T
 wait: number 
-}export default EnhancedSearch;
+}export default EnhancedSearch

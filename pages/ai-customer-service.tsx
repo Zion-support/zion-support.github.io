@@ -1,7 +1,6 @@
-import React from 'react';
-import Head from 'next/head';
-import Layout from '../components/layout/Layout';
-
+import React from 'react'
+import Head from 'next/head'
+import Layout from '../components/layout/Layout'
 const AICustomerService: React.FC = () => {
   return (
     <Layout>
@@ -18,7 +17,6 @@ const AICustomerService: React.FC = () => {
         </section>
       </main>
     </Layout>
-  );
-};
-
-export default AICustomerService;
+  )
+}
+export default AICustomerService

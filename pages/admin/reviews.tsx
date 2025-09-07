@@ -1,16 +1,15 @@
-import React, { useState, useEffect } from 'react';
-import Head from 'next/head';
-
+import React, { useState, useEffect } from 'react'
+import Head from 'next/head'
 interface Review {
-  id: string;
-  userId: string;
-  userName: string;
-  rating: number;
-  comment: string;
-  status: 'pending' | 'approved' | 'rejected';
-  createdAt: string;
-  projectId?: string;
-  projectName?: string;
+  id: string
+  userId: string
+  userName: string
+  rating: number
+  comment: string
+  status: 'pending' | 'approved' | 'rejected'
+  createdAt: string
+  projectId?: string
+  projectName?: string
 }
 
 const mockReviews: Review[] = [
@@ -47,21 +46,18 @@ const mockReviews: Review[] = [
     projectId: 'proj3',
     projectName: 'Web Application'
   }
-];
-
+]
 const AdminReviewsPage: React.FC = () => {
-  const [reviews, setReviews] = useState<Review[]>([]);
-  const [loading, setLoading] = useState(true);
-  const [filter, setFilter] = useState<'all' | 'pending' | 'approved' | 'rejected'>('all');
-
+  const [reviews, setReviews] = useState<Review[]>([])
+  const [loading, setLoading] = useState(true)
+  const [filter, setFilter] = useState<'all' | 'pending' | 'approved' | 'rejected'>('all')
   useEffect(() => {
     // Simulate loading reviews
     setTimeout(() => {
-      setReviews(mockReviews);
-      setLoading(false);
-    }, 1000);
-  }, []);
-
+      setReviews(mockReviews)
+      setLoading(false)
+    }, 1000)
+  }, [])
   const handleStatusChange = (reviewId: string, newStatus: Review['status']) => {
     setReviews(prev => 
       prev.map(review => 
@@ -69,26 +65,22 @@ const AdminReviewsPage: React.FC = () => {
           ? { ...review, status: newStatus }
           : review
       )
-    );
-  };
-
+    )
+  }
   const filteredReviews = reviews.filter(review => 
     filter === 'all' || review.status === filter
-  );
-
-  const pendingReviews = reviews.filter(r => r.status === 'pending');
-  const approvedReviews = reviews.filter(r => r.status === 'approved');
-  const rejectedReviews = reviews.filter(r => r.status === 'rejected');
-
+  )
+  const pendingReviews = reviews.filter(r => r.status === 'pending')
+  const approvedReviews = reviews.filter(r => r.status === 'approved')
+  const rejectedReviews = reviews.filter(r => r.status === 'rejected')
   const getStatusColor = (status: string) => {
     switch (status) {
-      case 'approved': return 'bg-green-100 text-green-800';
-      case 'rejected': return 'bg-red-100 text-red-800';
-      case 'pending': return 'bg-yellow-100 text-yellow-800';
-      default: return 'bg-gray-100 text-gray-800';
+      case 'approved': return 'bg-green-100 text-green-800'
+      case 'rejected': return 'bg-red-100 text-red-800'
+      case 'pending': return 'bg-yellow-100 text-yellow-800'
+      default: return 'bg-gray-100 text-gray-800'
     }
-  };
-
+  }
   const renderStars = (rating: number) => {
     return Array.from({ length: 5 }, (_, i) => (
       <span
@@ -97,9 +89,8 @@ const AdminReviewsPage: React.FC = () => {
       >
         ★
       </span>
-    ));
-  };
-
+    ))
+  }
   return (
     <>
       <Head>
@@ -226,7 +217,6 @@ const AdminReviewsPage: React.FC = () => {
         )}
       </main>
     </>
-  );
-};
-
-export default AdminReviewsPage;
+  )
+}
+export default AdminReviewsPage

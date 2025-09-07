@@ -1,22 +1,10 @@
- const state = readState ();
-const events = filterEventsByScope (state.events, state.config.scope);
-const totalsByToken: Record<string number> = {
+import { NextApiRequest, NextApiResponse } from 'next';
+
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  if (req.method !== 'GET') {
+    res.setHeader('Allow', ['GET']);
+    return res.status(405).end('Method Not Allowed');
+  }
   
-};
-const contributionsBySubject: Record<string number> = {
-  
-};
-let globalVotes = 0;
-for (const e of events) {
-  
-}
-}const topContributors = Object.entries (contributionsBySubject) .map ( ([subjectId, score]) => ({
-  subjectId, score 
-}) ) .sort ( (a, b) => b.score - a.score) .slice (0, 10);
-return res.status (200) .json ({
-  treasuryTotals: totalsByToken;
-topContributors;
-totalVoteCount: globalVotes;
-lastSyncedAt: state.lastSyncedAt 
-}) 
+  res.status(200).json({ message: 'Endpoint working' });
 }

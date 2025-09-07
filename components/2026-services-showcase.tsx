@@ -1,5 +1,5 @@
- // Filter and sort services const filteredServices = allServices .filter (service => {
-  const matchesSearch = service.name.toLowerCase () .includes (searchTerm.toLowerCase () ) || service.description.toLowerCase () .includes (searchTerm.toLowerCase () ) || case 'rating': return b.rating - a.rating;
+// Filter and sort services const filteredServices = allServices .filter (service => {
+  const matchesSearch = service.name.toLowerCase () .includes (searchTerm.toLowerCase () ) || service.description.toLowerCase () .includes (searchTerm.toLowerCase () ) || case 'rating': return b.rating - a.rating
 case 'customers': return (<UltraAdvancedFuturisticBackground intensity="extreme" colorScheme="quantum-fusion" particleCount= {
   600 
 }animationSpeed= {
@@ -24,7 +24,7 @@ case 'customers': return (<UltraAdvancedFuturisticBackground intensity="extreme"
   {
   duration: 0.8 
 }
-}> <h1 className="text-5xl md: text-7xl font-bold mb-6"> <span className="bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400 bg-clip-text text-transparent"> 2026 Revolutionary Services </span> </h1> <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed"> Discover the future of technology with our revolutionary AI, quantum computing;
+}> <h1 className="text-5xl md: text-7xl font-bold mb-6"> <span className="bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400 bg-clip-text text-transparent"> 2026 Revolutionary Services </span> </h1> <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed"> Discover the future of technology with our revolutionary AI, quantum computing
 emerging technologies, and comprehensive IT solutions </p> {
   /* Service Statistics */ 
 }<div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12"> <div className="text-center p-4 bg-gray-800/30 rounded-xl border border-gray-700/50 backdrop-blur-sm"> <div className="text-3xl font-bold text-cyan-400 mb-2"> {

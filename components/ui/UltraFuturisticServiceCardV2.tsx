@@ -1,4 +1,3 @@
- 
 }const UltraFuturisticServiceCardV2: React.FC<ServiceCardProps> = ({
   service, index 
 }) => {
@@ -6,12 +5,12 @@
   switch (category.toLowerCase () ) {
   case 'ai & consciousness': 
 }
-};
+}
 const getGradientClass = (color: string) => {
   if (color.includes ('from-') && color.includes ('to-') ) {
-  return color;
+  return color
 }return 'from-cyan-500 to-blue-500' 
-};
+}
 {
   opacity: 0, y: 50, scale: 0.9 
 }
@@ -42,5 +41,5 @@ const getGradientClass = (color: string) => {
 }> <span className="relative z-10 flex items-center space-x-2" > <span>Learn More</span> <ArrowRight className="w-4 h-4 group-hover/btn:translate-x-1 transition-transform duration-200" /> </span> </motion.a> </div> {
   /* Hover overlay */ 
 }<motion.div /> </div> </motion.div>) 
-};
-export default UltraFuturisticServiceCardV2;
+}
+export default UltraFuturisticServiceCardV2

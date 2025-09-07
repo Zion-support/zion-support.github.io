@@ -1,7 +1,6 @@
-import React from 'react';
-import Head from 'next/head';
-import Layout from '../components/layout/Layout';
-
+import React from 'react'
+import Head from 'next/head'
+import Layout from '../components/layout/Layout'
 const AIBusinessIntelligenceSuite: React.FC = () => {
   return (
     <Layout>
@@ -83,7 +82,6 @@ const AIBusinessIntelligenceSuite: React.FC = () => {
         </div>
       </main>
     </Layout>
-  );
-};
-
-export default AIBusinessIntelligenceSuite;
+  )
+}
+export default AIBusinessIntelligenceSuite

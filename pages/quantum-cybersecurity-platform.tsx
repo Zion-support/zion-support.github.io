@@ -1,4 +1,23 @@
- <Head> <title>Quantum Cybersecurity Platform | Zion Tech Group</title> <meta name="description" content="Next-gen quantum-resistant cybersecurity solutions for enterprise workloads." /> <link rel="canonical" href="https://ziontechgroup.com/quantum-cybersecurity-platform" /> </Head> </header> <section className="grid grid-cols-1 md:grid-cols-3 gap-6" > {
-  [) ) 
-}</section> <div className="text-center" > <Button href="/contact" className="px-8 py-4 bg-gradient-to-r from-cyan-600 to-blue-700 text-white" >Contact Security Team</Button> </div> </div> </div> </>) 
+import React from 'react';
+import Head from 'next/head';
+import Layout from '../components/layout/Layout';
+
+export default function quantumcybersecurityplatform() {
+  return (
+    <Layout>
+      <Head>
+        <title>Quantum Cybersecurity Platform - Zion Tech Group</title>
+        <meta name="description" content="Quantum Cybersecurity Platform solutions and services." />
+      </Head>
+      
+      <div className="min-h-screen bg-gray-50">
+        <div className="container mx-auto px-6 py-16">
+          <h1 className="text-4xl font-bold text-gray-900 mb-8">Quantum Cybersecurity Platform</h1>
+          <p className="text-lg text-gray-600">
+            Professional quantum cybersecurity platform solutions tailored to your business needs.
+          </p>
+        </div>
+      </div>
+    </Layout>
+  );
 }

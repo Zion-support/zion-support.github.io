@@ -1,9 +1,23 @@
- const keyFeatures = useMemo ( () => {
-  return featuresInput .split ('\n') <div> <label className="block text-sm font-medium mb-1" >Service Title</label> <input required /> </div> <div> <label className="block text-sm font-medium mb-1" >Target Audience</label> <input required /> </div> <div> <label className="block text-sm font-medium mb-1" >Key Features (one per line) </label> <textarea required /> </div> <div> <label className="block text-sm font-medium mb-1" >Tone</label> <select > <option value="professional" >Professional</option> <option value="friendly" >Friendly</option> <option value="persuasive" >Persuasive</option> <option value="technical" >Technical</option> </select> </div> <div> <label className="block text-sm font-medium mb-1" >Additional Notes (optional) </label> <textarea /> </div> <div className="flex items-center gap-3" > <button > {
-  loading ? 'Generating…' : 'Generate Description' 
-}</button> <button onClick= {
-  handleCopy 
-}className="rounded-md border border-gray-300 dark:border-gray-700 px-3 py-1 text-sm hover:bg-gray-50 dark:hover:bg-gray-800" > Copy </button> <button > Accept </button> </div> </div> <textarea) 
-}</div>) 
-}</div>) 
+import React from 'react';
+import Head from 'next/head';
+import Layout from '../components/layout/Layout';
+
+export default function descriptiongenerator() {
+  return (
+    <Layout>
+      <Head>
+        <title>Description Generator - Zion Tech Group</title>
+        <meta name="description" content="Description Generator solutions and services." />
+      </Head>
+      
+      <div className="min-h-screen bg-gray-50">
+        <div className="container mx-auto px-6 py-16">
+          <h1 className="text-4xl font-bold text-gray-900 mb-8">Description Generator</h1>
+          <p className="text-lg text-gray-600">
+            Professional description generator solutions tailored to your business needs.
+          </p>
+        </div>
+      </div>
+    </Layout>
+  );
 }

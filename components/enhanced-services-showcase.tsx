@@ -1,30 +1,30 @@
- //Combine all services for comprehensive showcase const allServices = [ ...nextGenerationAIServices;
-...cuttingEdgeITServices;
-...innovativeMicroSaasV2Services;
-...enhancedRealMicroSaasServices;
-...innovativeAIServices;
-...quantumSpaceServices;
-...enterpriseITServices;
-...realMarketServices;
-...newVerifiedServicesQ22025 ];
+//Combine all services for comprehensive showcase const allServices = [ ...nextGenerationAIServices
+...cuttingEdgeITServices
+...innovativeMicroSaasV2Services
+...enhancedRealMicroSaasServices
+...innovativeAIServices
+...quantumSpaceServices
+...enterpriseITServices
+...realMarketServices
+...newVerifiedServicesQ22025 ]
 //Filter and sort services const filteredServices = React.useMemo ( () => {
   let filtered = allServices.filter (service => {
-  const matchesCategory = selectedCategory === 'all' || (selectedCategory === 'next-gen-ai' && nextGenerationAIServices.includes (service) ) || (selectedCategory === 'cutting-edge-it' && cuttingEdgeITServices.includes (service) ) || (selectedCategory === 'innovative-saas' && innovativeMicroSaasV2Services.includes (service) ) || (selectedCategory === 'quantum-space' && quantumSpaceServices.includes (service) ) || (selectedCategory === 'enterprise' && enterpriseITServices.includes (service) );
-const matchesSearch = service.name.toLowerCase () .includes (searchTerm.toLowerCase () ) || service.description.toLowerCase () .includes (searchTerm.toLowerCase () ) || service.category.toLowerCase () .includes (searchTerm.toLowerCase () ) || (service.tagline && service.tagline.toLowerCase () .includes (searchTerm.toLowerCase () ) );
-return filtered;
-}, [allServices, selectedCategory, searchTerm, sortBy]);
+  const matchesCategory = selectedCategory === 'all' || (selectedCategory === 'next-gen-ai' && nextGenerationAIServices.includes (service) ) || (selectedCategory === 'cutting-edge-it' && cuttingEdgeITServices.includes (service) ) || (selectedCategory === 'innovative-saas' && innovativeMicroSaasV2Services.includes (service) ) || (selectedCategory === 'quantum-space' && quantumSpaceServices.includes (service) ) || (selectedCategory === 'enterprise' && enterpriseITServices.includes (service) )
+const matchesSearch = service.name.toLowerCase () .includes (searchTerm.toLowerCase () ) || service.description.toLowerCase () .includes (searchTerm.toLowerCase () ) || service.category.toLowerCase () .includes (searchTerm.toLowerCase () ) || (service.tagline && service.tagline.toLowerCase () .includes (searchTerm.toLowerCase () ) )
+return filtered
+}, [allServices, selectedCategory, searchTerm, sortBy])
 const containerVariants = {
   hidden: {
   opacity: 0 
-};
+}
 visible: {
   opacity: 1, transition: {
   staggerChildren: 0.1, delayChildren: 0.2 
 }
 }
-};
 }
-};
+}
+}
 <motion.div initial= {
   {
   opacity: 0, y: 30 
@@ -190,4 +190,4 @@ visible: {
 }> {
   children 
 }</button>) 
-};
+}

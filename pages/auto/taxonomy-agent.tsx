@@ -1,1 +1,23 @@
- <div> <Head> <title>AI Taxonomy Tagger Agent</title> <meta name="description" content="Daily AI-generated page tags." /> </Head> <main className="space-y-4" > <h1 className="text-2xl font-bold" >AI Taxonomy Tagger Agent</h1> <p>Suggests topic tags for each page to improve discovery and navigation.</p> <Link href="/data/reports/taxonomy/latest.json" ><a className="text-blue-600 underline" >Latest Taxonomy Report (JSON) </Link></Link> </main> </div> export default TaxonomyAgent;
+import React from 'react';
+import Head from 'next/head';
+import Layout from '../../components/layout/Layout';
+
+export default function taxonomyagent() {
+  return (
+    <Layout>
+      <Head>
+        <title>Taxonomy Agent - Zion Tech Group</title>
+        <meta name="description" content="Taxonomy Agent solutions and services." />
+      </Head>
+      
+      <div className="min-h-screen bg-gray-50">
+        <div className="container mx-auto px-6 py-16">
+          <h1 className="text-4xl font-bold text-gray-900 mb-8">Taxonomy Agent</h1>
+          <p className="text-lg text-gray-600">
+            Professional taxonomy agent solutions tailored to your business needs.
+          </p>
+        </div>
+      </div>
+    </Layout>
+  );
+}

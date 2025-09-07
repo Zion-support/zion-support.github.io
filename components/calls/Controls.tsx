@@ -1,4 +1,4 @@
- </button> <button onClick= {
+</button> <button onClick= {
   toggleCam 
 }className= {
   `px-4 py-2 rounded $ {

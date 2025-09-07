@@ -1,4 +1,4 @@
- export default function AIServices () {
+export default function AIServices () {
   return (<QuantumHolographicMatrixBackground intensity= {
   1.5 
 }> <Head> <title>AI Services | Zion Tech Group</title> </div>) ) 

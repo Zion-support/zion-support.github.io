@@ -1,4 +1,4 @@
- {
+{
   /* Robots Meta */ 
 }{
   noindex && <meta name="robots" content="noindex" /> 
@@ -68,5 +68,5 @@
 }
 }/>) 
 }</Head>) 
-};
-export default SEO;
+}
+export default SEO

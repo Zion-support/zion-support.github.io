@@ -1,27 +1,27 @@
- const filteredServices = ultimateFuturisticServices2025.filter (service => {
+const filteredServices = ultimateFuturisticServices2025.filter (service => {
   const matchesSearch = service.name.toLowerCase () .includes (searchTerm.toLowerCase () ) || service.description.toLowerCase () .includes (searchTerm.toLowerCase () ) || const sortedServices = [...filteredServices].sort ( (a, b) => {
   switch (sortBy) {
-  case 'price-low': case 'rating': return b.rating - a.rating;
+  case 'price-low': case 'rating': return b.rating - a.rating
 case 'customers': const containerVariants = {
   hidden: {
   opacity: 0 
-};
+}
 visible: {
   opacity: 1, transition: {
   staggerChildren: 0.1 
 }
 }
-};
+}
 const itemVariants = {
   hidden: {
   y: 20, opacity: 0 
-};
+}
 visible: {
   y: 0, opacity: 1, transition: {
   duration: 0.5 
 }
 }
-};
+}
 return (<Layout> <Head> <title>Ultimate Futuristic Services Showcase 2025 | Zion Tech Group</title> <motion.div initial= {
   {
   opacity: 0, y: 30 

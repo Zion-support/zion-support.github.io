@@ -1,25 +1,25 @@
- const containerVariants = {
+const containerVariants = {
   hidden: {
   opacity: 0, y: 20 
-};
+}
 visible: {
-  opacity: 1;
-y: 0;
+  opacity: 1
+y: 0
 transition: {
-  duration: 0.6;
+  duration: 0.6
 ease: "easeOut" as const 
 }
-};
+}
 hover: {
-  y: -10;
+  y: -10
 transition: {
-  duration: 0.3;
+  duration: 0.3
 ease: "easeOut" as const 
 }
 }
-};
 }
-};
+}
+}
 > {
   /* Glow Effect */ 
 }<div className= {
@@ -30,7 +30,7 @@ ease: "easeOut" as const
   {
   background: `linear-gradient (135deg, $ {
   service.color 
-}) `;
+}) `
 transform: isHovered ? 'scale (1.05) ' : 'scale (1) ' 
 }
 }/> {
@@ -73,5 +73,5 @@ transform: isHovered ? 'scale (1.05) ' : 'scale (1) '
 }</motion.button> </div> {
   /* Expand/Collapse Indicator */ 
 }<motion.div > <ArrowRight className="w-5 h-5 text-gray-400" /> </motion.div> </div> </div> </motion.div>) 
-};
-export default UltraAdvancedServiceCard;
+}
+export default UltraAdvancedServiceCard
