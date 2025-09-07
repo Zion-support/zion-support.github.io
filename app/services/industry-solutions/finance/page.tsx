@@ -1,38 +1,20 @@
 import Link from "next/link";
 
 export const metadata = {
-<<<<<<< HEAD
-
-  title: 'Finance | Zion Tech Group',
-  description: 'Professional finance services for your business needs.',
-  keywords: 'finance, services, business, technology'
+  title: "Finance Industry Solutions | Zion Tech Group",
+  description: "Professional finance industry solutions for your business needs.",
+  keywords: "finance-industry-solutions, services, business, technology"
 };
 
-export default function ServicePage() {
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      <div className="container mx-auto px-4 py-16">
-        <div className="text-center mb-16">
-          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-            Finance
-          </h1>
-          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-            Professional finance services for your business needs.
-=======
-  title: "Finance | Zion Tech Group",
-  description: "Professional finance services for your business needs.",
-  keywords: "finance, services, business, technology"
-};
-
-export default function FinancePage() {
+export default function FinanceIndustrySolutionsPage() {
   return (
     <div className="max-w-6xl mx-auto px-4 py-12">
       <div className="text-center mb-16">
         <h1 className="text-4xl font-bold text-gray-900 mb-6">
-          Finance
+          Finance Industry Solutions
         </h1>
         <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-          Professional finance services for your business needs.
+          Professional finance industry solutions for your business needs.
         </p>
       </div>
 
@@ -42,11 +24,10 @@ export default function FinancePage() {
             <span className="text-2xl">💰</span>
           </div>
           <h3 className="text-xl font-semibold text-gray-900 mb-4">
-            Financial Management
+            Financial Solutions
           </h3>
           <p className="text-gray-600">
-            Comprehensive financial management solutions for your business.
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-17f0
+            Comprehensive financial solutions tailored to the finance industry.
           </p>
         </div>
 
@@ -55,32 +36,32 @@ export default function FinancePage() {
             <span className="text-2xl">📊</span>
           </div>
           <h3 className="text-xl font-semibold text-gray-900 mb-4">
-            Financial Analytics
+            Analytics & Insights
           </h3>
           <p className="text-gray-600">
-            Advanced financial analytics and reporting for better decision making.
+            Get insights from financial data to improve your business strategy.
           </p>
         </div>
 
         <div className="bg-white p-8 rounded-xl shadow-lg border border-gray-200 hover:shadow-xl transition-shadow">
           <div className="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mb-6">
-            <span className="text-2xl">🔒</span>
+            <span className="text-2xl">🎯</span>
           </div>
           <h3 className="text-xl font-semibold text-gray-900 mb-4">
-            Security & Compliance
+            Custom Solutions
           </h3>
           <p className="text-gray-600">
-            Secure financial systems with compliance and regulatory support.
+            Create custom finance solutions tailored to your specific needs.
           </p>
         </div>
       </div>
 
       <div className="text-center">
         <h2 className="text-3xl font-bold text-gray-900 mb-6">
-          Ready to Transform Your Finance Operations?
+          Ready to Transform Your Finance Industry Solutions?
         </h2>
         <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
-          Contact us today to discuss your finance technology needs and implement powerful solutions.
+          Contact us today to discuss your finance industry needs and create intelligent solutions.
         </p>
         <a
           href="/contact"
@@ -91,9 +72,4 @@ export default function FinancePage() {
       </div>
     </div>
   );
-<<<<<<< HEAD
 }
-
-=======
-}
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-17f0

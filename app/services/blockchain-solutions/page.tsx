@@ -1,12 +1,9 @@
-<<<<<<< HEAD
-=======
 import Link from "next/link";
 
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-17f0
 export const metadata = {
-  title: 'Blockchain Solutions | Zion Tech Group',
-  description: 'Professional blockchain solutions services for your business needs.',
-  keywords: 'blockchain-solutions, services, business, technology'
+  title: "Blockchain Solutions | Zion Tech Group",
+  description: "Professional blockchain solutions for your business needs.",
+  keywords: "blockchain-solutions, services, business, technology"
 };
 
 export default function BlockchainSolutionsPage() {
@@ -17,54 +14,54 @@ export default function BlockchainSolutionsPage() {
           Blockchain Solutions
         </h1>
         <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-          Comprehensive blockchain solutions including smart contracts, DeFi platforms, NFT marketplaces, and enterprise blockchain integration.
+          Professional blockchain solutions for your business needs.
         </p>
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
         <div className="bg-white p-8 rounded-xl shadow-lg border border-gray-200 hover:shadow-xl transition-shadow">
           <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-6">
-            <span className="text-2xl">⛓️</span>
+            <span className="text-2xl">🔗</span>
           </div>
           <h3 className="text-xl font-semibold text-gray-900 mb-4">
-            Smart Contracts
+            Blockchain Technology
           </h3>
           <p className="text-gray-600">
-            Develop and deploy secure smart contracts for various blockchain platforms.
+            Implement blockchain technology to enhance security and transparency.
           </p>
         </div>
 
         <div className="bg-white p-8 rounded-xl shadow-lg border border-gray-200 hover:shadow-xl transition-shadow">
           <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mb-6">
-            <span className="text-2xl">💰</span>
+            <span className="text-2xl">🔒</span>
           </div>
           <h3 className="text-xl font-semibold text-gray-900 mb-4">
-            DeFi Platforms
+            Security & Trust
           </h3>
           <p className="text-gray-600">
-            Build decentralized finance platforms with advanced trading and lending features.
+            Ensure security and trust with blockchain-based solutions.
           </p>
         </div>
 
         <div className="bg-white p-8 rounded-xl shadow-lg border border-gray-200 hover:shadow-xl transition-shadow">
           <div className="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mb-6">
-            <span className="text-2xl">🎨</span>
+            <span className="text-2xl">🎯</span>
           </div>
           <h3 className="text-xl font-semibold text-gray-900 mb-4">
-            NFT Marketplaces
+            Custom Solutions
           </h3>
           <p className="text-gray-600">
-            Create NFT marketplaces with minting, trading, and auction capabilities.
+            Create custom blockchain solutions tailored to your specific needs.
           </p>
         </div>
       </div>
 
       <div className="text-center">
         <h2 className="text-3xl font-bold text-gray-900 mb-6">
-          Ready to Build on Blockchain?
+          Ready to Implement Blockchain Solutions?
         </h2>
         <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
-          Contact us today to discuss your blockchain needs and implement cutting-edge solutions.
+          Contact us today to discuss your blockchain needs and create intelligent solutions.
         </p>
         <a
           href="/contact"

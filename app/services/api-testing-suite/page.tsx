@@ -1,26 +1,9 @@
-<<<<<<< HEAD
+import Link from "next/link";
 
 export const metadata = {
-  title: 'Api Testing Suite | Zion Tech Group',
-  description: 'Professional api testing suite services for your business needs.',
-  keywords: 'api-testing-suite, services, business, technology'
-};
-
-export default function ServicePage() {
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      <div className="container mx-auto px-4 py-16">
-        <div className="text-center mb-16">
-          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-            Api Testing Suite
-          </h1>
-          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-            Professional api testing suite services for your business needs.
-=======
-export const metadata = {
-  title: 'API Testing Suite | Zion Tech Group',
-  description: 'Professional API testing suite services for your business needs.',
-  keywords: 'api-testing-suite, services, business, technology'
+  title: "API Testing Suite | Zion Tech Group",
+  description: "Professional API testing suite services for your business needs.",
+  keywords: "api-testing-suite, services, business, technology"
 };
 
 export default function APITestingSuitePage() {
@@ -31,21 +14,20 @@ export default function APITestingSuitePage() {
           API Testing Suite
         </h1>
         <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-          Comprehensive API testing solutions with automated testing, performance monitoring, and security validation.
+          Professional API testing suite services for your business needs.
         </p>
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
         <div className="bg-white p-8 rounded-xl shadow-lg border border-gray-200 hover:shadow-xl transition-shadow">
           <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-6">
-            <span className="text-2xl">🔧</span>
+            <span className="text-2xl">🔍</span>
           </div>
           <h3 className="text-xl font-semibold text-gray-900 mb-4">
-            Automated Testing
+            API Testing
           </h3>
           <p className="text-gray-600">
-            Comprehensive automated API testing with intelligent test case generation.
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-17f0
+            Comprehensive API testing to ensure reliability and performance.
           </p>
         </div>
 
@@ -54,22 +36,22 @@ export default function APITestingSuitePage() {
             <span className="text-2xl">⚡</span>
           </div>
           <h3 className="text-xl font-semibold text-gray-900 mb-4">
-            Performance Monitoring
+            Performance Testing
           </h3>
           <p className="text-gray-600">
-            Real-time performance monitoring and optimization for your APIs.
+            Test API performance under various conditions and loads.
           </p>
         </div>
 
         <div className="bg-white p-8 rounded-xl shadow-lg border border-gray-200 hover:shadow-xl transition-shadow">
           <div className="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mb-6">
-            <span className="text-2xl">🔒</span>
+            <span className="text-2xl">🛡️</span>
           </div>
           <h3 className="text-xl font-semibold text-gray-900 mb-4">
-            Security Validation
+            Security Testing
           </h3>
           <p className="text-gray-600">
-            Comprehensive security testing and vulnerability assessment for APIs.
+            Ensure API security with comprehensive security testing.
           </p>
         </div>
       </div>
@@ -79,7 +61,7 @@ export default function APITestingSuitePage() {
           Ready to Test Your APIs?
         </h2>
         <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
-          Contact us today to discuss your API testing needs and implement comprehensive testing solutions.
+          Contact us today to discuss your API testing needs and create intelligent solutions.
         </p>
         <a
           href="/contact"
@@ -90,9 +72,4 @@ export default function APITestingSuitePage() {
       </div>
     </div>
   );
-<<<<<<< HEAD
 }
-
-=======
-}
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-17f0

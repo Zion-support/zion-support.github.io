@@ -1,27 +1,9 @@
 import Link from "next/link";
 
 export const metadata = {
-<<<<<<< HEAD
-
-  title: 'Digital Transformation | Zion Tech Group',
-  description: 'Professional digital transformation services for your business needs.',
-  keywords: 'digital-transformation, services, business, technology'
-};
-
-export default function ServicePage() {
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      <div className="container mx-auto px-4 py-16">
-        <div className="text-center mb-16">
-          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-            Digital Transformation
-          </h1>
-          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-            Professional digital transformation services for your business needs.
-=======
   title: "Digital Transformation | Zion Tech Group",
-  description: "Complete digital transformation solutions including process automation, legacy modernization, and digital strategy consulting. Transform your business for the digital age.",
-  keywords: "digital transformation, process automation, legacy modernization, digital strategy, business transformation"
+  description: "Professional digital transformation services for your business needs.",
+  keywords: "digital-transformation, services, business, technology"
 };
 
 export default function DigitalTransformationPage() {
@@ -32,7 +14,7 @@ export default function DigitalTransformationPage() {
           Digital Transformation
         </h1>
         <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-          Complete digital transformation solutions including process automation, legacy modernization, and digital strategy consulting. Transform your business for the digital age.
+          Professional digital transformation services for your business needs.
         </p>
       </div>
 
@@ -42,35 +24,34 @@ export default function DigitalTransformationPage() {
             <span className="text-2xl">🔄</span>
           </div>
           <h3 className="text-xl font-semibold text-gray-900 mb-4">
-            Process Automation
+            Business Transformation
           </h3>
           <p className="text-gray-600">
-            Automate repetitive tasks and streamline business processes for increased efficiency.
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-17f0
+            Transform your business with digital technology and processes.
           </p>
         </div>
 
         <div className="bg-white p-8 rounded-xl shadow-lg border border-gray-200 hover:shadow-xl transition-shadow">
           <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mb-6">
-            <span className="text-2xl">🏗️</span>
+            <span className="text-2xl">⚡</span>
           </div>
           <h3 className="text-xl font-semibold text-gray-900 mb-4">
-            Legacy Modernization
+            Efficiency Boost
           </h3>
           <p className="text-gray-600">
-            Modernize legacy systems and infrastructure for better performance and security.
+            Improve efficiency and productivity with digital solutions.
           </p>
         </div>
 
         <div className="bg-white p-8 rounded-xl shadow-lg border border-gray-200 hover:shadow-xl transition-shadow">
           <div className="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mb-6">
-            <span className="text-2xl">📊</span>
+            <span className="text-2xl">🎯</span>
           </div>
           <h3 className="text-xl font-semibold text-gray-900 mb-4">
-            Digital Strategy
+            Custom Solutions
           </h3>
           <p className="text-gray-600">
-            Comprehensive digital strategy consulting to guide your transformation journey.
+            Create custom digital transformation solutions tailored to your specific needs.
           </p>
         </div>
       </div>
@@ -80,7 +61,7 @@ export default function DigitalTransformationPage() {
           Ready to Transform Your Business?
         </h2>
         <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
-          Contact us today to discuss your digital transformation needs and implement comprehensive solutions.
+          Contact us today to discuss your digital transformation needs and create intelligent solutions.
         </p>
         <a
           href="/contact"
@@ -91,9 +72,4 @@ export default function DigitalTransformationPage() {
       </div>
     </div>
   );
-<<<<<<< HEAD
 }
-
-=======
-}
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-17f0

@@ -1,24 +1,6 @@
 import Link from "next/link";
 
 export const metadata = {
-<<<<<<< HEAD
-
-  title: 'Project Management | Zion Tech Group',
-  description: 'Professional project management services for your business needs.',
-  keywords: 'project-management, services, business, technology'
-};
-
-export default function ServicePage() {
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      <div className="container mx-auto px-4 py-16">
-        <div className="text-center mb-16">
-          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-            Project Management
-          </h1>
-          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-            Professional project management services for your business needs.
-=======
   title: "Project Management | Zion Tech Group",
   description: "Professional project management services for your business needs.",
   keywords: "project-management, services, business, technology"
@@ -42,45 +24,44 @@ export default function ProjectManagementPage() {
             <span className="text-2xl">📋</span>
           </div>
           <h3 className="text-xl font-semibold text-gray-900 mb-4">
-            Task Tracking
+            Project Management
           </h3>
           <p className="text-gray-600">
-            Comprehensive task tracking and management for efficient project execution.
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-17f0
+            Manage projects effectively with our comprehensive project management services.
           </p>
         </div>
 
         <div className="bg-white p-8 rounded-xl shadow-lg border border-gray-200 hover:shadow-xl transition-shadow">
           <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mb-6">
-            <span className="text-2xl">👥</span>
+            <span className="text-2xl">⚡</span>
           </div>
           <h3 className="text-xl font-semibold text-gray-900 mb-4">
-            Team Collaboration
+            Quick Setup
           </h3>
           <p className="text-gray-600">
-            Advanced team collaboration tools for seamless project coordination.
+            Set up project management workflows quickly and efficiently.
           </p>
         </div>
 
         <div className="bg-white p-8 rounded-xl shadow-lg border border-gray-200 hover:shadow-xl transition-shadow">
           <div className="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mb-6">
-            <span className="text-2xl">📊</span>
+            <span className="text-2xl">🎯</span>
           </div>
           <h3 className="text-xl font-semibold text-gray-900 mb-4">
-            Progress Reporting
+            Custom Solutions
           </h3>
           <p className="text-gray-600">
-            Detailed progress reporting and analytics for project insights.
+            Create custom project management solutions tailored to your specific needs.
           </p>
         </div>
       </div>
 
       <div className="text-center">
         <h2 className="text-3xl font-bold text-gray-900 mb-6">
-          Ready to Manage Your Projects?
+          Ready to Enhance Your Project Management?
         </h2>
         <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
-          Contact us today to discuss your project management needs and implement powerful solutions.
+          Contact us today to discuss your project management needs and create intelligent solutions.
         </p>
         <a
           href="/contact"
@@ -91,9 +72,4 @@ export default function ProjectManagementPage() {
       </div>
     </div>
   );
-<<<<<<< HEAD
 }
-
-=======
-}
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-17f0

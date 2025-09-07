@@ -1,14 +1,9 @@
 import Link from "next/link";
 
 export const metadata = {
-  title: "Data Analytics & BI | Zion Tech Group",
-<<<<<<< HEAD
-  description: "Advanced data analytics, business intelligence, and machine learning solutions to transform raw data into actionable insights.",
-  keywords: 'data-analytics, services, business, technology'
-};
-=======
-  description: "Transform your data into actionable insights with advanced analytics, real-time dashboards, and AI-powered business intelligence solutions.",
-  keywords: "data analytics, business intelligence, data visualization, predictive analytics, data engineering"
+  title: "Data Analytics | Zion Tech Group",
+  description: "Professional data analytics services for your business needs.",
+  keywords: "data-analytics, services, business, technology"
 };
 
 export default function DataAnalyticsPage() {
@@ -16,10 +11,10 @@ export default function DataAnalyticsPage() {
     <div className="max-w-6xl mx-auto px-4 py-12">
       <div className="text-center mb-16">
         <h1 className="text-4xl font-bold text-gray-900 mb-6">
-          Data Analytics & BI
+          Data Analytics
         </h1>
         <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-          Transform your data into actionable insights with advanced analytics, real-time dashboards, and AI-powered business intelligence solutions.
+          Professional data analytics services for your business needs.
         </p>
       </div>
 
@@ -29,44 +24,44 @@ export default function DataAnalyticsPage() {
             <span className="text-2xl">📊</span>
           </div>
           <h3 className="text-xl font-semibold text-gray-900 mb-4">
-            Advanced Analytics
+            Data Analysis
           </h3>
           <p className="text-gray-600">
-            Sophisticated analytics algorithms to extract meaningful insights from complex datasets.
+            Analyze your data to uncover insights and trends.
           </p>
         </div>
 
         <div className="bg-white p-8 rounded-xl shadow-lg border border-gray-200 hover:shadow-xl transition-shadow">
           <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mb-6">
-            <span className="text-2xl">📈</span>
+            <span className="text-2xl">🔍</span>
           </div>
           <h3 className="text-xl font-semibold text-gray-900 mb-4">
-            Real-time Dashboards
+            Insights & Reports
           </h3>
           <p className="text-gray-600">
-            Interactive dashboards with real-time data visualization and monitoring.
+            Get detailed insights and reports from your data.
           </p>
         </div>
 
         <div className="bg-white p-8 rounded-xl shadow-lg border border-gray-200 hover:shadow-xl transition-shadow">
           <div className="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mb-6">
-            <span className="text-2xl">🧠</span>
+            <span className="text-2xl">🎯</span>
           </div>
           <h3 className="text-xl font-semibold text-gray-900 mb-4">
-            AI-Powered BI
+            Custom Solutions
           </h3>
           <p className="text-gray-600">
-            AI-powered business intelligence for predictive analytics and automated insights.
+            Create custom data analytics solutions tailored to your specific needs.
           </p>
         </div>
       </div>
 
       <div className="text-center">
         <h2 className="text-3xl font-bold text-gray-900 mb-6">
-          Ready to Transform Your Data?
+          Ready to Analyze Your Data?
         </h2>
         <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
-          Contact us today to discuss your data analytics needs and implement powerful BI solutions.
+          Contact us today to discuss your data analytics needs and create intelligent solutions.
         </p>
         <a
           href="/contact"
@@ -78,4 +73,3 @@ export default function DataAnalyticsPage() {
     </div>
   );
 }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-17f0

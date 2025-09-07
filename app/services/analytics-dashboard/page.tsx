@@ -1,11 +1,9 @@
-export const metadata = {
-<<<<<<< HEAD
+import Link from "next/link";
 
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-17f0
-  title: 'Analytics Dashboard | Zion Tech Group',
-  description: 'Professional analytics dashboard services for your business needs.',
-  keywords: 'analytics-dashboard, services, business, technology'
+export const metadata = {
+  title: "Analytics Dashboard | Zion Tech Group",
+  description: "Professional analytics dashboard services for your business needs.",
+  keywords: "analytics-dashboard, services, business, technology"
 };
 
 export default function AnalyticsDashboardPage() {
@@ -16,7 +14,7 @@ export default function AnalyticsDashboardPage() {
           Analytics Dashboard
         </h1>
         <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-          Build powerful analytics dashboards with real-time data visualization, custom metrics, and business intelligence.
+          Professional analytics dashboard services for your business needs.
         </p>
       </div>
 
@@ -26,22 +24,22 @@ export default function AnalyticsDashboardPage() {
             <span className="text-2xl">📊</span>
           </div>
           <h3 className="text-xl font-semibold text-gray-900 mb-4">
-            Real-time Visualization
+            Data Visualization
           </h3>
           <p className="text-gray-600">
-            Interactive dashboards with real-time data visualization and monitoring.
+            Create interactive dashboards to visualize your data effectively.
           </p>
         </div>
 
         <div className="bg-white p-8 rounded-xl shadow-lg border border-gray-200 hover:shadow-xl transition-shadow">
           <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mb-6">
-            <span className="text-2xl">📈</span>
+            <span className="text-2xl">🔍</span>
           </div>
           <h3 className="text-xl font-semibold text-gray-900 mb-4">
-            Custom Metrics
+            Real-time Analytics
           </h3>
           <p className="text-gray-600">
-            Create and track custom metrics tailored to your business needs.
+            Get real-time insights and analytics from your data.
           </p>
         </div>
 
@@ -50,20 +48,20 @@ export default function AnalyticsDashboardPage() {
             <span className="text-2xl">🎯</span>
           </div>
           <h3 className="text-xl font-semibold text-gray-900 mb-4">
-            Business Intelligence
+            Custom Dashboards
           </h3>
           <p className="text-gray-600">
-            Advanced analytics and insights to drive data-driven decision making.
+            Create custom dashboards tailored to your specific needs.
           </p>
         </div>
       </div>
 
       <div className="text-center">
         <h2 className="text-3xl font-bold text-gray-900 mb-6">
-          Ready to Build Your Dashboard?
+          Ready to Create Your Analytics Dashboard?
         </h2>
         <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
-          Contact us today to discuss your analytics needs and implement powerful dashboard solutions.
+          Contact us today to discuss your analytics needs and create intelligent solutions.
         </p>
         <a
           href="/contact"
@@ -74,9 +72,4 @@ export default function AnalyticsDashboardPage() {
       </div>
     </div>
   );
-<<<<<<< HEAD
 }
-
-=======
-}
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-17f0

@@ -1,14 +1,9 @@
-<<<<<<< HEAD
+import Link from "next/link";
 
 export const metadata = {
-  title: 'Ai Healthcare Analytics | Zion Tech Group',
-  description: 'Professional ai healthcare analytics services for your business needs.',
-=======
-export const metadata = {
-  title: 'AI Healthcare Analytics | Zion Tech Group',
-  description: 'Professional AI healthcare analytics services for your business needs.',
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-17f0
-  keywords: 'ai-healthcare-analytics, services, business, technology'
+  title: "AI Healthcare Analytics | Zion Tech Group",
+  description: "Professional AI healthcare analytics services for your business needs.",
+  keywords: "ai-healthcare-analytics, services, business, technology"
 };
 
 export default function AIHealthcareAnalyticsPage() {
@@ -19,7 +14,7 @@ export default function AIHealthcareAnalyticsPage() {
           AI Healthcare Analytics
         </h1>
         <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-          Advanced AI analytics solutions for healthcare organizations to improve patient outcomes and operational efficiency.
+          Professional AI healthcare analytics services for your business needs.
         </p>
       </div>
 
@@ -29,10 +24,10 @@ export default function AIHealthcareAnalyticsPage() {
             <span className="text-2xl">🏥</span>
           </div>
           <h3 className="text-xl font-semibold text-gray-900 mb-4">
-            Patient Analytics
+            Healthcare Analytics
           </h3>
           <p className="text-gray-600">
-            AI-powered analysis of patient data to improve diagnosis and treatment outcomes.
+            AI-powered healthcare analytics to improve patient care and outcomes.
           </p>
         </div>
 
@@ -41,32 +36,32 @@ export default function AIHealthcareAnalyticsPage() {
             <span className="text-2xl">📊</span>
           </div>
           <h3 className="text-xl font-semibold text-gray-900 mb-4">
-            Operational Analytics
+            Data Insights
           </h3>
           <p className="text-gray-600">
-            Optimize hospital operations and resource allocation using AI-driven insights.
+            Uncover insights from healthcare data to improve decision-making.
           </p>
         </div>
 
         <div className="bg-white p-8 rounded-xl shadow-lg border border-gray-200 hover:shadow-xl transition-shadow">
           <div className="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mb-6">
-            <span className="text-2xl">🔬</span>
+            <span className="text-2xl">🔍</span>
           </div>
           <h3 className="text-xl font-semibold text-gray-900 mb-4">
-            Research Analytics
+            Predictive Modeling
           </h3>
           <p className="text-gray-600">
-            Accelerate medical research with AI-powered data analysis and pattern recognition.
+            Build predictive models to forecast healthcare trends and outcomes.
           </p>
         </div>
       </div>
 
       <div className="text-center">
         <h2 className="text-3xl font-bold text-gray-900 mb-6">
-          Ready to Transform Healthcare?
+          Ready to Enhance Your Healthcare Analytics?
         </h2>
         <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
-          Contact us today to discuss your healthcare analytics needs and implement AI-powered solutions.
+          Contact us today to discuss your healthcare analytics needs and create intelligent solutions.
         </p>
         <a
           href="/contact"
@@ -77,9 +72,4 @@ export default function AIHealthcareAnalyticsPage() {
       </div>
     </div>
   );
-<<<<<<< HEAD
 }
-
-=======
-}
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-17f0

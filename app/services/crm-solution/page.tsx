@@ -1,26 +1,9 @@
-<<<<<<< HEAD
+import Link from "next/link";
 
 export const metadata = {
-  title: 'Crm Solution | Zion Tech Group',
-  description: 'Professional crm solution services for your business needs.',
-  keywords: 'crm-solution, services, business, technology'
-};
-
-export default function ServicePage() {
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      <div className="container mx-auto px-4 py-16">
-        <div className="text-center mb-16">
-          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-            Crm Solution
-          </h1>
-          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-            Professional crm solution services for your business needs.
-=======
-export const metadata = {
-  title: 'CRM Solution | Zion Tech Group',
-  description: 'Professional crm solution services for your business needs.',
-  keywords: 'crm-solution, services, business, technology'
+  title: "CRM Solution | Zion Tech Group",
+  description: "Professional CRM solution services for your business needs.",
+  keywords: "crm-solution, services, business, technology"
 };
 
 export default function CRMSolutionPage() {
@@ -31,7 +14,7 @@ export default function CRMSolutionPage() {
           CRM Solution
         </h1>
         <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-          Comprehensive CRM solution with lead management, sales tracking, customer insights, and automation features.
+          Professional CRM solution services for your business needs.
         </p>
       </div>
 
@@ -41,11 +24,10 @@ export default function CRMSolutionPage() {
             <span className="text-2xl">👥</span>
           </div>
           <h3 className="text-xl font-semibold text-gray-900 mb-4">
-            Lead Management
+            Customer Management
           </h3>
           <p className="text-gray-600">
-            Comprehensive lead management system with automated scoring and nurturing.
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-17f0
+            Manage customer relationships effectively with our CRM solution.
           </p>
         </div>
 
@@ -54,10 +36,10 @@ export default function CRMSolutionPage() {
             <span className="text-2xl">📊</span>
           </div>
           <h3 className="text-xl font-semibold text-gray-900 mb-4">
-            Sales Tracking
+            Analytics & Insights
           </h3>
           <p className="text-gray-600">
-            Track sales performance and pipeline with detailed analytics and reporting.
+            Get insights from customer data to improve your CRM strategy.
           </p>
         </div>
 
@@ -66,20 +48,20 @@ export default function CRMSolutionPage() {
             <span className="text-2xl">🎯</span>
           </div>
           <h3 className="text-xl font-semibold text-gray-900 mb-4">
-            Customer Insights
+            Custom Solutions
           </h3>
           <p className="text-gray-600">
-            Gain valuable insights into customer behavior and preferences for better engagement.
+            Create custom CRM solutions tailored to your specific needs.
           </p>
         </div>
       </div>
 
       <div className="text-center">
         <h2 className="text-3xl font-bold text-gray-900 mb-6">
-          Ready to Implement Your CRM?
+          Ready to Enhance Your CRM?
         </h2>
         <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
-          Contact us today to discuss your CRM needs and implement powerful solution.
+          Contact us today to discuss your CRM needs and create intelligent solutions.
         </p>
         <a
           href="/contact"
@@ -90,9 +72,4 @@ export default function CRMSolutionPage() {
       </div>
     </div>
   );
-<<<<<<< HEAD
 }
-
-=======
-}
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-17f0

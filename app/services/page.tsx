@@ -1,46 +1,9 @@
-<<<<<<< HEAD
-import ComprehensiveServicesShowcase2025 from '../../components/ComprehensiveServicesShowcase2025';
-
-export const metadata = {
-  title: 'Comprehensive Services 2025 | Zion Tech Group - AI, Micro SaaS & IT Solutions',
-  description: 'Explore our extensive portfolio of 20+ innovative micro SAAS solutions, AI services, and IT solutions. From AI customer insights to blockchain solutions, we deliver enterprise-grade services that drive business transformation.',
-  keywords: 'micro saas, ai services, it solutions, business automation, cloud infrastructure, cybersecurity, data analytics, project management, e-commerce, healthcare, edtech, blockchain, fintech, enterprise solutions',
-  authors: [{ name: 'Zion Tech Group' }],
-  openGraph: {
-    title: 'Comprehensive Services 2025 | Zion Tech Group',
-    description: 'Explore our extensive portfolio of innovative micro SAAS solutions, AI services, and IT solutions designed to transform your business.',
-    type: 'website',
-    locale: 'en_US',
-    siteName: 'Zion Tech Group',
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: 'Comprehensive Services 2025 | Zion Tech Group',
-    description: 'Explore our extensive portfolio of innovative micro SAAS solutions, AI services, and IT solutions designed to transform your business.',
-  },
-  robots: {
-    index: true,
-    follow: true,
-    googleBot: {
-      index: true,
-      follow: true,
-      'max-video-preview': -1,
-      'max-image-preview': 'large',
-      'max-snippet': -1,
-    },
-  },
-};
-
-export default function ServicePage() {
-  return <ComprehensiveServicesShowcase2025 />;
-}
-=======
 import Link from "next/link";
 
 export const metadata = {
   title: "Services | Zion Tech Group",
-  description: "Comprehensive technology services including AI development, micro SaaS solutions, financial technology, healthcare technology, and educational technology. Transform your business with cutting-edge solutions.",
-  keywords: "AI services, micro SaaS, FinTech, HealthTech, EdTech, technology solutions, software development, digital transformation"
+  description: "Professional services for your business needs.",
+  keywords: "services, business, technology"
 };
 
 export default function ServicesPage() {
@@ -48,47 +11,47 @@ export default function ServicesPage() {
     <div className="max-w-6xl mx-auto px-4 py-12">
       <div className="text-center mb-16">
         <h1 className="text-4xl font-bold text-gray-900 mb-6">
-          Our Services
+          Services
         </h1>
         <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-          Comprehensive technology services including AI development, micro SaaS solutions, financial technology, healthcare technology, and educational technology. Transform your business with cutting-edge solutions.
+          Professional services for your business needs.
         </p>
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
         <div className="bg-white p-8 rounded-xl shadow-lg border border-gray-200 hover:shadow-xl transition-shadow">
           <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-6">
-            <span className="text-2xl">🤖</span>
+            <span className="text-2xl">🚀</span>
           </div>
           <h3 className="text-xl font-semibold text-gray-900 mb-4">
-            AI Development
+            Business Solutions
           </h3>
           <p className="text-gray-600">
-            Advanced AI solutions including machine learning, natural language processing, and computer vision.
+            Comprehensive business solutions tailored to your specific needs.
           </p>
         </div>
 
         <div className="bg-white p-8 rounded-xl shadow-lg border border-gray-200 hover:shadow-xl transition-shadow">
           <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mb-6">
-            <span className="text-2xl">🚀</span>
+            <span className="text-2xl">⚡</span>
           </div>
           <h3 className="text-xl font-semibold text-gray-900 mb-4">
-            Micro SaaS
+            Quick Delivery
           </h3>
           <p className="text-gray-600">
-            Complete micro SaaS development services for niche markets and specialized business needs.
+            Deliver solutions quickly and efficiently with modern technology.
           </p>
         </div>
 
         <div className="bg-white p-8 rounded-xl shadow-lg border border-gray-200 hover:shadow-xl transition-shadow">
           <div className="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mb-6">
-            <span className="text-2xl">💰</span>
+            <span className="text-2xl">🎯</span>
           </div>
           <h3 className="text-xl font-semibold text-gray-900 mb-4">
-            FinTech Solutions
+            Custom Solutions
           </h3>
           <p className="text-gray-600">
-            Secure financial technology solutions including payment processing, trading platforms, and risk management.
+            Create custom solutions tailored to your specific business needs.
           </p>
         </div>
       </div>
@@ -98,7 +61,7 @@ export default function ServicesPage() {
           Ready to Transform Your Business?
         </h2>
         <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
-          Contact us today to discuss your technology needs and implement cutting-edge solutions.
+          Contact us today to discuss your business needs and create intelligent solutions.
         </p>
         <a
           href="/contact"
@@ -109,5 +72,4 @@ export default function ServicesPage() {
       </div>
     </div>
   );
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-17f0
 }

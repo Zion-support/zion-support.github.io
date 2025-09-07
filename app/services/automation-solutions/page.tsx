@@ -1,11 +1,9 @@
-export const metadata = {
-  title: 'Automation Solutions | Zion Tech Group',
-<<<<<<< HEAD
+import Link from "next/link";
 
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-17f0
-  description: 'Professional automation solutions services for your business needs.',
-  keywords: 'automation-solutions, services, business, technology'
+export const metadata = {
+  title: "Automation Solutions | Zion Tech Group",
+  description: "Professional automation solutions for your business needs.",
+  keywords: "automation-solutions, services, business, technology"
 };
 
 export default function AutomationSolutionsPage() {
@@ -16,7 +14,7 @@ export default function AutomationSolutionsPage() {
           Automation Solutions
         </h1>
         <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-          Intelligent automation solutions including RPA, workflow automation, AI-powered automation, and business process optimization.
+          Professional automation solutions for your business needs.
         </p>
       </div>
 
@@ -26,10 +24,10 @@ export default function AutomationSolutionsPage() {
             <span className="text-2xl">🤖</span>
           </div>
           <h3 className="text-xl font-semibold text-gray-900 mb-4">
-            RPA Solutions
+            Business Automation
           </h3>
           <p className="text-gray-600">
-            Robotic Process Automation to automate repetitive tasks and improve efficiency.
+            Automate business processes and workflows using AI technology.
           </p>
         </div>
 
@@ -38,22 +36,22 @@ export default function AutomationSolutionsPage() {
             <span className="text-2xl">⚡</span>
           </div>
           <h3 className="text-xl font-semibold text-gray-900 mb-4">
-            Workflow Automation
+            Efficiency Boost
           </h3>
           <p className="text-gray-600">
-            Streamline business processes with intelligent workflow automation.
+            Improve efficiency and productivity with automated solutions.
           </p>
         </div>
 
         <div className="bg-white p-8 rounded-xl shadow-lg border border-gray-200 hover:shadow-xl transition-shadow">
           <div className="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mb-6">
-            <span className="text-2xl">🧠</span>
+            <span className="text-2xl">🎯</span>
           </div>
           <h3 className="text-xl font-semibold text-gray-900 mb-4">
-            AI-Powered Automation
+            Custom Solutions
           </h3>
           <p className="text-gray-600">
-            Advanced AI-powered automation for complex business processes and decision making.
+            Create custom automation solutions tailored to your specific needs.
           </p>
         </div>
       </div>
@@ -63,7 +61,7 @@ export default function AutomationSolutionsPage() {
           Ready to Automate Your Business?
         </h2>
         <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
-          Contact us today to discuss your automation needs and implement intelligent solutions.
+          Contact us today to discuss your automation needs and create intelligent solutions.
         </p>
         <a
           href="/contact"
@@ -74,9 +72,4 @@ export default function AutomationSolutionsPage() {
       </div>
     </div>
   );
-<<<<<<< HEAD
 }
-
-=======
-}
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-17f0

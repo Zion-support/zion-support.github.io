@@ -1,12 +1,9 @@
-export const metadata = {
-<<<<<<< HEAD
+import Link from "next/link";
 
-  title: 'Crm Platform | Zion Tech Group',
-=======
-  title: 'CRM Platform | Zion Tech Group',
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-17f0
-  description: 'Professional crm platform services for your business needs.',
-  keywords: 'crm-platform, services, business, technology'
+export const metadata = {
+  title: "CRM Platform | Zion Tech Group",
+  description: "Professional CRM platform services for your business needs.",
+  keywords: "crm-platform, services, business, technology"
 };
 
 export default function CRMPlatformPage() {
@@ -17,7 +14,7 @@ export default function CRMPlatformPage() {
           CRM Platform
         </h1>
         <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-          Build powerful CRM platforms with lead management, sales tracking, and customer insights. Professional CRM solutions starting at $20k.
+          Professional CRM platform services for your business needs.
         </p>
       </div>
 
@@ -27,10 +24,10 @@ export default function CRMPlatformPage() {
             <span className="text-2xl">👥</span>
           </div>
           <h3 className="text-xl font-semibold text-gray-900 mb-4">
-            Lead Management
+            Customer Management
           </h3>
           <p className="text-gray-600">
-            Comprehensive lead management system with automated scoring and nurturing.
+            Manage customer relationships effectively with our CRM platform.
           </p>
         </div>
 
@@ -39,10 +36,10 @@ export default function CRMPlatformPage() {
             <span className="text-2xl">📊</span>
           </div>
           <h3 className="text-xl font-semibold text-gray-900 mb-4">
-            Sales Tracking
+            Analytics & Insights
           </h3>
           <p className="text-gray-600">
-            Track sales performance and pipeline with detailed analytics and reporting.
+            Get insights from customer data to improve your CRM strategy.
           </p>
         </div>
 
@@ -51,20 +48,20 @@ export default function CRMPlatformPage() {
             <span className="text-2xl">🎯</span>
           </div>
           <h3 className="text-xl font-semibold text-gray-900 mb-4">
-            Customer Insights
+            Custom Solutions
           </h3>
           <p className="text-gray-600">
-            Gain valuable insights into customer behavior and preferences for better engagement.
+            Create custom CRM solutions tailored to your specific needs.
           </p>
         </div>
       </div>
 
       <div className="text-center">
         <h2 className="text-3xl font-bold text-gray-900 mb-6">
-          Ready to Build Your CRM?
+          Ready to Enhance Your CRM?
         </h2>
         <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
-          Contact us today to discuss your CRM needs and implement powerful platform solutions.
+          Contact us today to discuss your CRM needs and create intelligent solutions.
         </p>
         <a
           href="/contact"
@@ -75,9 +72,4 @@ export default function CRMPlatformPage() {
       </div>
     </div>
   );
-<<<<<<< HEAD
 }
-
-=======
-}
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-17f0

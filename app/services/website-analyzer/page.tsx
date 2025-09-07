@@ -1,22 +1,3 @@
-<<<<<<< HEAD
-
-export const metadata = {
-  title: 'Website Analyzer | Zion Tech Group',
-  description: 'Professional website analyzer services for your business needs.',
-  keywords: 'website-analyzer, services, business, technology'
-};
-
-export default function ServicePage() {
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      <div className="container mx-auto px-4 py-16">
-        <div className="text-center mb-16">
-          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-            Website Analyzer
-          </h1>
-          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-            Professional website analyzer services for your business needs.
-=======
 import Link from "next/link";
 
 export const metadata = {
@@ -46,49 +27,31 @@ export default function WebsiteAnalyzerPage() {
             Website Analysis
           </h3>
           <p className="text-gray-600">
-            Comprehensive website analysis tools for performance and optimization insights.
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-17f0
+            Analyze your website's performance, SEO, and user experience.
           </p>
         </div>
 
         <div className="bg-white p-8 rounded-xl shadow-lg border border-gray-200 hover:shadow-xl transition-shadow">
           <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mb-6">
-            <span className="text-2xl">⚡</span>
+            <span className="text-2xl">📊</span>
           </div>
           <h3 className="text-xl font-semibold text-gray-900 mb-4">
-            Performance Monitoring
+            Analytics & Insights
           </h3>
           <p className="text-gray-600">
-            Real-time performance monitoring and optimization recommendations.
+            Get insights from website data to improve your online presence.
           </p>
         </div>
 
         <div className="bg-white p-8 rounded-xl shadow-lg border border-gray-200 hover:shadow-xl transition-shadow">
           <div className="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mb-6">
-            <span className="text-2xl">📊</span>
+            <span className="text-2xl">🎯</span>
           </div>
-<<<<<<< HEAD
-          
-          <div className="bg-gray-800 rounded-lg p-6">
-            <h3 className="text-xl font-bold text-white mb-4">24/7 Support</h3>
-            <p className="text-gray-300">
-              Round-the-clock support to ensure your website analyzer solutions run smoothly.
-            </p>
-          </div>
-
-        </div>
-      </div>
-    </div>
-  );
-
-}
-
-=======
           <h3 className="text-xl font-semibold text-gray-900 mb-4">
-            Analytics & Reporting
+            Custom Solutions
           </h3>
           <p className="text-gray-600">
-            Detailed analytics and reporting for website performance insights.
+            Create custom website analysis solutions tailored to your specific needs.
           </p>
         </div>
       </div>
@@ -98,7 +61,7 @@ export default function WebsiteAnalyzerPage() {
           Ready to Analyze Your Website?
         </h2>
         <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
-          Contact us today to discuss your website analysis needs and implement powerful solutions.
+          Contact us today to discuss your website analysis needs and create intelligent solutions.
         </p>
         <a
           href="/contact"
@@ -110,4 +73,3 @@ export default function WebsiteAnalyzerPage() {
     </div>
   );
 }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-17f0

@@ -217,7 +217,7 @@ export default function Resources() {
       <SEO 
         title="Resources - Zion Tech Group"
         description="Access our comprehensive library of resources including blog posts, case studies, white papers, webinars, and documentation to help you stay informed and make better technology decisions."
-        canonical="https://ziontechgroup.com/resources"
+        url="/resources"
       />
       
       {/* Hero Section */}

@@ -1,11 +1,9 @@
-<<<<<<< HEAD
+import Link from "next/link";
 
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-17f0
 export const metadata = {
-  title: 'Automated Workflow Builder | Zion Tech Group',
-  description: 'Professional automated workflow builder services for your business needs.',
-  keywords: 'automated-workflow-builder, services, business, technology'
+  title: "Automated Workflow Builder | Zion Tech Group",
+  description: "Professional automated workflow builder services for your business needs.",
+  keywords: "automated-workflow-builder, services, business, technology"
 };
 
 export default function AutomatedWorkflowBuilderPage() {
@@ -16,71 +14,54 @@ export default function AutomatedWorkflowBuilderPage() {
           Automated Workflow Builder
         </h1>
         <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-          Build intelligent workflows with drag-and-drop automation, AI-powered decision making, and seamless integrations.
+          Professional automated workflow builder services for your business needs.
         </p>
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
         <div className="bg-white p-8 rounded-xl shadow-lg border border-gray-200 hover:shadow-xl transition-shadow">
           <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-6">
-            <span className="text-2xl">🔧</span>
+            <span className="text-2xl">🔄</span>
           </div>
           <h3 className="text-xl font-semibold text-gray-900 mb-4">
-            Drag-and-Drop Builder
+            Workflow Automation
           </h3>
           <p className="text-gray-600">
-            Intuitive visual workflow builder with drag-and-drop functionality.
+            Automate business processes and workflows using AI technology.
           </p>
         </div>
 
         <div className="bg-white p-8 rounded-xl shadow-lg border border-gray-200 hover:shadow-xl transition-shadow">
           <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mb-6">
-            <span className="text-2xl">🤖</span>
+            <span className="text-2xl">⚡</span>
           </div>
           <h3 className="text-xl font-semibold text-gray-900 mb-4">
-            AI-Powered Logic
+            Quick Setup
           </h3>
           <p className="text-gray-600">
-            Intelligent decision making and conditional logic powered by AI.
+            Set up automated workflows quickly and efficiently.
           </p>
         </div>
 
         <div className="bg-white p-8 rounded-xl shadow-lg border border-gray-200 hover:shadow-xl transition-shadow">
           <div className="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mb-6">
-            <span className="text-2xl">🔗</span>
+            <span className="text-2xl">🎯</span>
           </div>
-<<<<<<< HEAD
-          
-          <div className="bg-gray-800 rounded-lg p-6">
-            <h3 className="text-xl font-bold text-white mb-4">24/7 Support</h3>
-            <p className="text-gray-300">
-              Round-the-clock support to ensure your automated workflow builder solutions run smoothly.
-            </p>
-          </div>
-
-        </div>
-      </div>
-    </div>
-  );
-
-}
-
-=======
           <h3 className="text-xl font-semibold text-gray-900 mb-4">
-            Seamless Integrations
+            Custom Workflows
           </h3>
           <p className="text-gray-600">
-            Connect with hundreds of tools and services through pre-built integrations.
+            Create custom workflows tailored to your specific needs.
           </p>
         </div>
       </div>
 
       <div className="text-center">
         <h2 className="text-3xl font-bold text-gray-900 mb-6">
-          Ready to Build Your Workflows?
+          Ready to Automate Your Workflows?
         </h2>
         <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
-          Contact us today to discuss your workflow automation needs and implement intelligent solutions.
+          Contact us today to discuss your workflow automation needs and create intelligent solutions.
         </p>
         <a
           href="/contact"
@@ -92,4 +73,3 @@ export default function AutomatedWorkflowBuilderPage() {
     </div>
   );
 }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-17f0

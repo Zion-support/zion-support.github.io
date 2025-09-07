@@ -1,25 +1,9 @@
+import Link from "next/link";
+
 export const metadata = {
-<<<<<<< HEAD
-
-  title: 'Ai Chatbot | Zion Tech Group',
-  description: 'Professional ai chatbot services for your business needs.',
-  keywords: 'ai-chatbot, services, business, technology'
-};
-
-export default function ServicePage() {
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      <div className="container mx-auto px-4 py-16">
-        <div className="text-center mb-16">
-          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-            Ai Chatbot
-          </h1>
-          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-            Professional ai chatbot services for your business needs.
-=======
-  title: 'AI Chatbot Development | Zion Tech Group',
-  description: 'Build intelligent AI chatbots with natural language processing, multi-channel support, and custom integrations. Professional chatbot solutions starting at $8k.',
-  keywords: 'ai-chatbot, services, business, technology'
+  title: "AI Chatbot | Zion Tech Group",
+  description: "Professional AI chatbot services for your business needs.",
+  keywords: "ai-chatbot, services, business, technology"
 };
 
 export default function AIChatbotPage() {
@@ -27,10 +11,10 @@ export default function AIChatbotPage() {
     <div className="max-w-6xl mx-auto px-4 py-12">
       <div className="text-center mb-16">
         <h1 className="text-4xl font-bold text-gray-900 mb-6">
-          AI Chatbot Development
+          AI Chatbot
         </h1>
         <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-          Build intelligent AI chatbots with natural language processing, multi-channel support, and custom integrations. Professional chatbot solutions starting at $8k.
+          Professional AI chatbot services for your business needs.
         </p>
       </div>
 
@@ -40,11 +24,10 @@ export default function AIChatbotPage() {
             <span className="text-2xl">🤖</span>
           </div>
           <h3 className="text-xl font-semibold text-gray-900 mb-4">
-            Natural Language Processing
+            Custom Chatbots
           </h3>
           <p className="text-gray-600">
-            Advanced NLP capabilities for understanding and responding to user queries naturally.
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-17f0
+            Build intelligent chatbots tailored to your specific business requirements.
           </p>
         </div>
 
@@ -53,22 +36,22 @@ export default function AIChatbotPage() {
             <span className="text-2xl">💬</span>
           </div>
           <h3 className="text-xl font-semibold text-gray-900 mb-4">
-            Multi-Channel Support
+            Natural Language Processing
           </h3>
           <p className="text-gray-600">
-            Deploy across websites, mobile apps, social media, and messaging platforms.
+            Advanced NLP capabilities for natural and engaging conversations.
           </p>
         </div>
 
         <div className="bg-white p-8 rounded-xl shadow-lg border border-gray-200 hover:shadow-xl transition-shadow">
           <div className="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mb-6">
-            <span className="text-2xl">🔧</span>
+            <span className="text-2xl">🔗</span>
           </div>
           <h3 className="text-xl font-semibold text-gray-900 mb-4">
-            Custom Integrations
+            Multi-Channel Integration
           </h3>
           <p className="text-gray-600">
-            Seamlessly integrate with your existing systems and databases.
+            Deploy chatbots across multiple channels including web, mobile, and social media.
           </p>
         </div>
       </div>
@@ -78,7 +61,7 @@ export default function AIChatbotPage() {
           Ready to Build Your AI Chatbot?
         </h2>
         <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
-          Contact us today to discuss your chatbot requirements and get started with a custom solution.
+          Contact us today to discuss your chatbot needs and create intelligent conversational solutions.
         </p>
         <a
           href="/contact"
@@ -89,9 +72,4 @@ export default function AIChatbotPage() {
       </div>
     </div>
   );
-<<<<<<< HEAD
 }
-
-=======
-}
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-17f0

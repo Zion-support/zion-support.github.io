@@ -1,22 +1,3 @@
-<<<<<<< HEAD
-
-export const metadata = {
-  title: 'Expense Tracker | Zion Tech Group',
-  description: 'Professional expense tracker services for your business needs.',
-  keywords: 'expense-tracker, services, business, technology'
-};
-
-export default function ServicePage() {
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      <div className="container mx-auto px-4 py-16">
-        <div className="text-center mb-16">
-          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-            Expense Tracker
-          </h1>
-          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-            Professional expense tracker services for your business needs.
-=======
 import Link from "next/link";
 
 export const metadata = {
@@ -46,8 +27,7 @@ export default function ExpenseTrackerPage() {
             Expense Tracking
           </h3>
           <p className="text-gray-600">
-            Comprehensive expense tracking and categorization for better financial management.
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-17f0
+            Track and manage business expenses effectively with our expense tracker.
           </p>
         </div>
 
@@ -56,22 +36,22 @@ export default function ExpenseTrackerPage() {
             <span className="text-2xl">📊</span>
           </div>
           <h3 className="text-xl font-semibold text-gray-900 mb-4">
-            Reporting
+            Analytics & Insights
           </h3>
           <p className="text-gray-600">
-            Detailed expense reports and analytics for better financial insights.
+            Get insights from expense data to improve your financial management.
           </p>
         </div>
 
         <div className="bg-white p-8 rounded-xl shadow-lg border border-gray-200 hover:shadow-xl transition-shadow">
           <div className="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mb-6">
-            <span className="text-2xl">🔍</span>
+            <span className="text-2xl">🎯</span>
           </div>
           <h3 className="text-xl font-semibold text-gray-900 mb-4">
-            Receipt Management
+            Custom Solutions
           </h3>
           <p className="text-gray-600">
-            Digital receipt management and storage for easy expense documentation.
+            Create custom expense tracking solutions tailored to your specific needs.
           </p>
         </div>
       </div>
@@ -81,7 +61,7 @@ export default function ExpenseTrackerPage() {
           Ready to Track Your Expenses?
         </h2>
         <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
-          Contact us today to discuss your expense tracking needs and implement powerful solutions.
+          Contact us today to discuss your expense tracking needs and create intelligent solutions.
         </p>
         <a
           href="/contact"
@@ -92,9 +72,4 @@ export default function ExpenseTrackerPage() {
       </div>
     </div>
   );
-<<<<<<< HEAD
 }
-
-=======
-}
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-17f0

@@ -1,27 +1,9 @@
 import Link from "next/link";
 
 export const metadata = {
-<<<<<<< HEAD
-
-  title: 'Email Automation | Zion Tech Group',
-  description: 'Professional email automation services for your business needs.',
-  keywords: 'email-automation, services, business, technology'
-};
-
-export default function ServicePage() {
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      <div className="container mx-auto px-4 py-16">
-        <div className="text-center mb-16">
-          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-            Email Automation
-          </h1>
-          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-            Professional email automation services for your business needs.
-=======
   title: "Email Automation | Zion Tech Group",
-  description: "Build powerful email automation platforms with drip campaigns, personalization, and analytics. Professional email marketing solutions starting at $12k.",
-  keywords: "email automation, drip campaigns, email marketing, personalization, email analytics"
+  description: "Professional email automation services for your business needs.",
+  keywords: "email-automation, services, business, technology"
 };
 
 export default function EmailAutomationPage() {
@@ -32,7 +14,7 @@ export default function EmailAutomationPage() {
           Email Automation
         </h1>
         <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-          Build powerful email automation platforms with drip campaigns, personalization, and analytics. Professional email marketing solutions starting at $12k.
+          Professional email automation services for your business needs.
         </p>
       </div>
 
@@ -42,11 +24,10 @@ export default function EmailAutomationPage() {
             <span className="text-2xl">📧</span>
           </div>
           <h3 className="text-xl font-semibold text-gray-900 mb-4">
-            Drip Campaigns
+            Email Automation
           </h3>
           <p className="text-gray-600">
-            Automated email sequences that nurture leads and convert prospects into customers.
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-17f0
+            Automate email campaigns and communications using AI technology.
           </p>
         </div>
 
@@ -55,10 +36,10 @@ export default function EmailAutomationPage() {
             <span className="text-2xl">🎯</span>
           </div>
           <h3 className="text-xl font-semibold text-gray-900 mb-4">
-            Personalization
+            Targeted Campaigns
           </h3>
           <p className="text-gray-600">
-            Dynamic content personalization based on user behavior and preferences.
+            Create targeted email campaigns that resonate with your audience.
           </p>
         </div>
 
@@ -70,17 +51,17 @@ export default function EmailAutomationPage() {
             Analytics & Insights
           </h3>
           <p className="text-gray-600">
-            Comprehensive analytics and insights for email campaign optimization.
+            Track and analyze email performance to improve your campaigns.
           </p>
         </div>
       </div>
 
       <div className="text-center">
         <h2 className="text-3xl font-bold text-gray-900 mb-6">
-          Ready to Automate Your Email Marketing?
+          Ready to Automate Your Email Campaigns?
         </h2>
         <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
-          Contact us today to discuss your email automation needs and implement powerful solutions.
+          Contact us today to discuss your email automation needs and create intelligent solutions.
         </p>
         <a
           href="/contact"
@@ -91,9 +72,4 @@ export default function EmailAutomationPage() {
       </div>
     </div>
   );
-<<<<<<< HEAD
 }
-
-=======
-}
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-17f0

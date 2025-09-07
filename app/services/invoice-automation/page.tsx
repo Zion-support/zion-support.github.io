@@ -1,52 +1,3 @@
-<<<<<<< HEAD
-
-export const metadata = {
-  title: 'Invoice Automation | Zion Tech Group',
-  description: 'Professional invoice automation services for your business needs.',
-  keywords: 'invoice-automation, services, business, technology'
-};
-
-export default function ServicePage() {
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      <div className="container mx-auto px-4 py-16">
-        <div className="text-center mb-16">
-          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-            Invoice Automation
-          </h1>
-          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-            Professional invoice automation services for your business needs.
-          </p>
-        </div>
-        
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          <div className="bg-gray-800 rounded-lg p-6">
-            <h3 className="text-xl font-bold text-white mb-4">Expert Solutions</h3>
-            <p className="text-gray-300">
-              Tailored invoice automation solutions designed for your specific business requirements.
-            </p>
-          </div>
-          
-          <div className="bg-gray-800 rounded-lg p-6">
-            <h3 className="text-xl font-bold text-white mb-4">Advanced Technology</h3>
-            <p className="text-gray-300">
-              Cutting-edge technology and best practices to deliver exceptional results.
-            </p>
-          </div>
-          
-          <div className="bg-gray-800 rounded-lg p-6">
-            <h3 className="text-xl font-bold text-white mb-4">24/7 Support</h3>
-            <p className="text-gray-300">
-              Round-the-clock support to ensure your invoice automation solutions run smoothly.
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-  );
-}
-
-=======
 import Link from "next/link";
 
 export const metadata = {
@@ -76,31 +27,31 @@ export default function InvoiceAutomationPage() {
             Automated Invoicing
           </h3>
           <p className="text-gray-600">
-            Automated invoice generation and processing for streamlined billing.
+            Automate invoice generation and processing using AI technology.
           </p>
         </div>
 
         <div className="bg-white p-8 rounded-xl shadow-lg border border-gray-200 hover:shadow-xl transition-shadow">
           <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mb-6">
-            <span className="text-2xl">💳</span>
+            <span className="text-2xl">⚡</span>
           </div>
           <h3 className="text-xl font-semibold text-gray-900 mb-4">
-            Payment Processing
+            Quick Processing
           </h3>
           <p className="text-gray-600">
-            Integrated payment processing for faster invoice collection.
+            Process invoices quickly and efficiently with automated workflows.
           </p>
         </div>
 
         <div className="bg-white p-8 rounded-xl shadow-lg border border-gray-200 hover:shadow-xl transition-shadow">
           <div className="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mb-6">
-            <span className="text-2xl">📊</span>
+            <span className="text-2xl">🎯</span>
           </div>
           <h3 className="text-xl font-semibold text-gray-900 mb-4">
-            Analytics & Reporting
+            Custom Solutions
           </h3>
           <p className="text-gray-600">
-            Comprehensive analytics and reporting for invoice management insights.
+            Create custom invoice automation solutions tailored to your specific needs.
           </p>
         </div>
       </div>
@@ -110,7 +61,7 @@ export default function InvoiceAutomationPage() {
           Ready to Automate Your Invoicing?
         </h2>
         <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
-          Contact us today to discuss your invoice automation needs and implement powerful solutions.
+          Contact us today to discuss your invoice automation needs and create intelligent solutions.
         </p>
         <a
           href="/contact"
@@ -122,4 +73,3 @@ export default function InvoiceAutomationPage() {
     </div>
   );
 }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-17f0

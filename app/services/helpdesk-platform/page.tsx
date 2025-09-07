@@ -1,27 +1,9 @@
 import Link from "next/link";
 
 export const metadata = {
-<<<<<<< HEAD
-
-  title: 'Helpdesk Platform | Zion Tech Group',
-  description: 'Professional helpdesk platform services for your business needs.',
-  keywords: 'helpdesk-platform, services, business, technology'
-};
-
-export default function ServicePage() {
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      <div className="container mx-auto px-4 py-16">
-        <div className="text-center mb-16">
-          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-            Helpdesk Platform
-          </h1>
-          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-            Professional helpdesk platform services for your business needs.
-=======
   title: "Helpdesk Platform | Zion Tech Group",
-  description: "Build comprehensive helpdesk platforms with ticket management, knowledge base, and customer support tools. Professional helpdesk solutions starting at $14k.",
-  keywords: "helpdesk platform, ticket management, knowledge base, customer support, helpdesk development"
+  description: "Professional helpdesk platform services for your business needs.",
+  keywords: "helpdesk-platform, services, business, technology"
 };
 
 export default function HelpdeskPlatformPage() {
@@ -32,55 +14,54 @@ export default function HelpdeskPlatformPage() {
           Helpdesk Platform
         </h1>
         <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-          Build comprehensive helpdesk platforms with ticket management, knowledge base, and customer support tools. Professional helpdesk solutions starting at $14k.
+          Professional helpdesk platform services for your business needs.
         </p>
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
         <div className="bg-white p-8 rounded-xl shadow-lg border border-gray-200 hover:shadow-xl transition-shadow">
           <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-6">
-            <span className="text-2xl">🎫</span>
+            <span className="text-2xl">🎧</span>
           </div>
           <h3 className="text-xl font-semibold text-gray-900 mb-4">
-            Ticket Management
+            Customer Support
           </h3>
           <p className="text-gray-600">
-            Comprehensive ticket management system for efficient customer support.
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-17f0
+            Provide excellent customer support with our helpdesk platform.
           </p>
         </div>
 
         <div className="bg-white p-8 rounded-xl shadow-lg border border-gray-200 hover:shadow-xl transition-shadow">
           <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mb-6">
-            <span className="text-2xl">📚</span>
+            <span className="text-2xl">⚡</span>
           </div>
           <h3 className="text-xl font-semibold text-gray-900 mb-4">
-            Knowledge Base
+            Quick Response
           </h3>
           <p className="text-gray-600">
-            Self-service knowledge base for customers to find answers quickly.
+            Respond to customer inquiries quickly and efficiently.
           </p>
         </div>
 
         <div className="bg-white p-8 rounded-xl shadow-lg border border-gray-200 hover:shadow-xl transition-shadow">
           <div className="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mb-6">
-            <span className="text-2xl">👥</span>
+            <span className="text-2xl">📊</span>
           </div>
           <h3 className="text-xl font-semibold text-gray-900 mb-4">
-            Team Collaboration
+            Analytics & Insights
           </h3>
           <p className="text-gray-600">
-            Advanced team collaboration tools for efficient support operations.
+            Track and analyze customer support performance to improve service.
           </p>
         </div>
       </div>
 
       <div className="text-center">
         <h2 className="text-3xl font-bold text-gray-900 mb-6">
-          Ready to Build Your Helpdesk Platform?
+          Ready to Enhance Your Customer Support?
         </h2>
         <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
-          Contact us today to discuss your helpdesk needs and create a powerful support platform.
+          Contact us today to discuss your helpdesk needs and create intelligent solutions.
         </p>
         <a
           href="/contact"
@@ -91,9 +72,4 @@ export default function HelpdeskPlatformPage() {
       </div>
     </div>
   );
-<<<<<<< HEAD
 }
-
-=======
-}
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-17f0

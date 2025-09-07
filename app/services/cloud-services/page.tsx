@@ -1,11 +1,9 @@
-export const metadata = {
-  title: 'Cloud Services | Zion Tech Group',
-<<<<<<< HEAD
+import Link from "next/link";
 
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-17f0
-  description: 'Professional cloud services services for your business needs.',
-  keywords: 'cloud-services, services, business, technology'
+export const metadata = {
+  title: "Cloud Services | Zion Tech Group",
+  description: "Professional cloud services for your business needs.",
+  keywords: "cloud-services, services, business, technology"
 };
 
 export default function CloudServicesPage() {
@@ -16,7 +14,7 @@ export default function CloudServicesPage() {
           Cloud Services
         </h1>
         <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-          Comprehensive cloud solutions including migration, architecture, optimization, and management. AWS, Azure, GCP expertise with cost optimization and security.
+          Professional cloud services for your business needs.
         </p>
       </div>
 
@@ -26,34 +24,34 @@ export default function CloudServicesPage() {
             <span className="text-2xl">☁️</span>
           </div>
           <h3 className="text-xl font-semibold text-gray-900 mb-4">
-            Cloud Migration
+            Cloud Infrastructure
           </h3>
           <p className="text-gray-600">
-            Seamlessly migrate your applications and data to the cloud with minimal downtime.
+            Build and manage cloud infrastructure for your business needs.
           </p>
         </div>
 
         <div className="bg-white p-8 rounded-xl shadow-lg border border-gray-200 hover:shadow-xl transition-shadow">
           <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mb-6">
-            <span className="text-2xl">🏗️</span>
+            <span className="text-2xl">⚡</span>
           </div>
           <h3 className="text-xl font-semibold text-gray-900 mb-4">
-            Cloud Architecture
+            Scalability
           </h3>
           <p className="text-gray-600">
-            Design scalable and secure cloud architectures for your business needs.
+            Scale your applications and services with cloud technology.
           </p>
         </div>
 
         <div className="bg-white p-8 rounded-xl shadow-lg border border-gray-200 hover:shadow-xl transition-shadow">
           <div className="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mb-6">
-            <span className="text-2xl">🔒</span>
+            <span className="text-2xl">🎯</span>
           </div>
           <h3 className="text-xl font-semibold text-gray-900 mb-4">
-            Security & Compliance
+            Custom Solutions
           </h3>
           <p className="text-gray-600">
-            Implement robust security measures and ensure compliance with industry standards.
+            Create custom cloud solutions tailored to your specific needs.
           </p>
         </div>
       </div>
@@ -63,7 +61,7 @@ export default function CloudServicesPage() {
           Ready to Move to the Cloud?
         </h2>
         <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
-          Contact us today to discuss your cloud needs and implement comprehensive solutions.
+          Contact us today to discuss your cloud needs and create intelligent solutions.
         </p>
         <a
           href="/contact"
@@ -74,9 +72,4 @@ export default function CloudServicesPage() {
       </div>
     </div>
   );
-<<<<<<< HEAD
 }
-
-=======
-}
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-17f0

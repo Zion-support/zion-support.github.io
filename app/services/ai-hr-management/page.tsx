@@ -1,26 +1,9 @@
-<<<<<<< HEAD
+import Link from "next/link";
 
 export const metadata = {
-  title: 'Ai Hr Management | Zion Tech Group',
-  description: 'Professional ai hr management services for your business needs.',
-  keywords: 'ai-hr-management, services, business, technology'
-};
-
-export default function ServicePage() {
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      <div className="container mx-auto px-4 py-16">
-        <div className="text-center mb-16">
-          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-            Ai Hr Management
-          </h1>
-          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-            Professional ai hr management services for your business needs.
-=======
-export const metadata = {
-  title: 'AI HR Management | Zion Tech Group',
-  description: 'Professional AI HR management services for your business needs.',
-  keywords: 'ai-hr-management, services, business, technology'
+  title: "AI HR Management | Zion Tech Group",
+  description: "Professional AI HR management services for your business needs.",
+  keywords: "ai-hr-management, services, business, technology"
 };
 
 export default function AIHRManagementPage() {
@@ -31,7 +14,7 @@ export default function AIHRManagementPage() {
           AI HR Management
         </h1>
         <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-          Streamline your human resources processes with AI-powered tools for recruitment, employee management, and performance analytics.
+          Professional AI HR management services for your business needs.
         </p>
       </div>
 
@@ -41,23 +24,22 @@ export default function AIHRManagementPage() {
             <span className="text-2xl">👥</span>
           </div>
           <h3 className="text-xl font-semibold text-gray-900 mb-4">
-            Smart Recruitment
+            HR Automation
           </h3>
           <p className="text-gray-600">
-            AI-powered candidate screening and matching for better hiring decisions.
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-17f0
+            Automate HR processes and workflows using AI technology.
           </p>
         </div>
 
         <div className="bg-white p-8 rounded-xl shadow-lg border border-gray-200 hover:shadow-xl transition-shadow">
           <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mb-6">
-            <span className="text-2xl">📈</span>
+            <span className="text-2xl">📊</span>
           </div>
           <h3 className="text-xl font-semibold text-gray-900 mb-4">
-            Performance Analytics
+            Analytics & Insights
           </h3>
           <p className="text-gray-600">
-            Track and analyze employee performance with AI-driven insights and recommendations.
+            Get insights from HR data to improve employee satisfaction and performance.
           </p>
         </div>
 
@@ -66,20 +48,20 @@ export default function AIHRManagementPage() {
             <span className="text-2xl">🎯</span>
           </div>
           <h3 className="text-xl font-semibold text-gray-900 mb-4">
-            Employee Engagement
+            Talent Management
           </h3>
           <p className="text-gray-600">
-            Improve employee satisfaction and retention with AI-powered engagement tools.
+            Optimize talent acquisition and management with AI-powered tools.
           </p>
         </div>
       </div>
 
       <div className="text-center">
         <h2 className="text-3xl font-bold text-gray-900 mb-6">
-          Ready to Transform Your HR?
+          Ready to Transform Your HR Management?
         </h2>
         <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
-          Contact us today to discuss your HR management needs and implement AI-powered solutions.
+          Contact us today to discuss your HR management needs and create intelligent solutions.
         </p>
         <a
           href="/contact"
@@ -90,9 +72,4 @@ export default function AIHRManagementPage() {
       </div>
     </div>
   );
-<<<<<<< HEAD
 }
-
-=======
-}
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-17f0

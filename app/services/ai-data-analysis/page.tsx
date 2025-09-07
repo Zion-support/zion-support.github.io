@@ -1,25 +1,9 @@
+import Link from "next/link";
+
 export const metadata = {
-<<<<<<< HEAD
-
-  title: 'Ai Data Analysis | Zion Tech Group',
-  description: 'Professional ai data analysis services for your business needs.',
-  keywords: 'ai-data-analysis, services, business, technology'
-};
-
-export default function ServicePage() {
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      <div className="container mx-auto px-4 py-16">
-        <div className="text-center mb-16">
-          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-            Ai Data Analysis
-          </h1>
-          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-            Professional ai data analysis services for your business needs.
-=======
-  title: 'AI Data Analysis | Zion Tech Group',
-  description: 'Professional AI data analysis services for your business needs.',
-  keywords: 'ai-data-analysis, services, business, technology'
+  title: "AI Data Analysis | Zion Tech Group",
+  description: "Professional AI data analysis services for your business needs.",
+  keywords: "ai-data-analysis, services, business, technology"
 };
 
 export default function AIDataAnalysisPage() {
@@ -30,7 +14,7 @@ export default function AIDataAnalysisPage() {
           AI Data Analysis
         </h1>
         <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-          Transform your data into actionable insights with AI-powered analysis, predictive modeling, and automated reporting.
+          Professional AI data analysis services for your business needs.
         </p>
       </div>
 
@@ -40,11 +24,10 @@ export default function AIDataAnalysisPage() {
             <span className="text-2xl">📊</span>
           </div>
           <h3 className="text-xl font-semibold text-gray-900 mb-4">
-            Predictive Analytics
+            Advanced Analytics
           </h3>
           <p className="text-gray-600">
-            Use machine learning to predict future trends and make data-driven decisions.
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-17f0
+            AI-powered data analysis to uncover insights and patterns in your data.
           </p>
         </div>
 
@@ -53,10 +36,10 @@ export default function AIDataAnalysisPage() {
             <span className="text-2xl">🔍</span>
           </div>
           <h3 className="text-xl font-semibold text-gray-900 mb-4">
-            Pattern Recognition
+            Predictive Modeling
           </h3>
           <p className="text-gray-600">
-            Identify hidden patterns and correlations in your data automatically.
+            Build predictive models to forecast trends and make data-driven decisions.
           </p>
         </div>
 
@@ -65,20 +48,20 @@ export default function AIDataAnalysisPage() {
             <span className="text-2xl">📈</span>
           </div>
           <h3 className="text-xl font-semibold text-gray-900 mb-4">
-            Automated Reporting
+            Real-time Insights
           </h3>
           <p className="text-gray-600">
-            Generate comprehensive reports and dashboards automatically.
+            Get real-time insights and recommendations from your data.
           </p>
         </div>
       </div>
 
       <div className="text-center">
         <h2 className="text-3xl font-bold text-gray-900 mb-6">
-          Ready to Analyze Your Data?
+          Ready to Unlock Your Data's Potential?
         </h2>
         <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
-          Contact us today to discuss your data analysis needs and implement AI-powered insights.
+          Contact us today to discuss your data analysis needs and create intelligent solutions.
         </p>
         <a
           href="/contact"
@@ -89,9 +72,4 @@ export default function AIDataAnalysisPage() {
       </div>
     </div>
   );
-<<<<<<< HEAD
 }
-
-=======
-}
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-17f0

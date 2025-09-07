@@ -1,22 +1,3 @@
-<<<<<<< HEAD
-
-export const metadata = {
-  title: 'Email Campaign Manager | Zion Tech Group',
-  description: 'Professional email campaign manager services for your business needs.',
-  keywords: 'email-campaign-manager, services, business, technology'
-};
-
-export default function ServicePage() {
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      <div className="container mx-auto px-4 py-16">
-        <div className="text-center mb-16">
-          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-            Email Campaign Manager
-          </h1>
-          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-            Professional email campaign manager services for your business needs.
-=======
 import Link from "next/link";
 
 export const metadata = {
@@ -43,23 +24,22 @@ export default function EmailCampaignManagerPage() {
             <span className="text-2xl">📧</span>
           </div>
           <h3 className="text-xl font-semibold text-gray-900 mb-4">
-            Campaign Creation
+            Campaign Management
           </h3>
           <p className="text-gray-600">
-            Create and manage email campaigns with our intuitive campaign manager.
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-17f0
+            Manage email campaigns effectively with our campaign manager.
           </p>
         </div>
 
         <div className="bg-white p-8 rounded-xl shadow-lg border border-gray-200 hover:shadow-xl transition-shadow">
           <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mb-6">
-            <span className="text-2xl">📅</span>
+            <span className="text-2xl">🎯</span>
           </div>
           <h3 className="text-xl font-semibold text-gray-900 mb-4">
-            Scheduling
+            Targeted Campaigns
           </h3>
           <p className="text-gray-600">
-            Advanced scheduling features for optimal email delivery timing.
+            Create targeted email campaigns that resonate with your audience.
           </p>
         </div>
 
@@ -68,10 +48,10 @@ export default function EmailCampaignManagerPage() {
             <span className="text-2xl">📊</span>
           </div>
           <h3 className="text-xl font-semibold text-gray-900 mb-4">
-            Performance Tracking
+            Analytics & Insights
           </h3>
           <p className="text-gray-600">
-            Track campaign performance with detailed analytics and reporting.
+            Track and analyze email performance to improve your campaigns.
           </p>
         </div>
       </div>
@@ -81,7 +61,7 @@ export default function EmailCampaignManagerPage() {
           Ready to Manage Your Email Campaigns?
         </h2>
         <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
-          Contact us today to discuss your email campaign management needs and implement powerful solutions.
+          Contact us today to discuss your email campaign management needs and create intelligent solutions.
         </p>
         <a
           href="/contact"
@@ -92,9 +72,4 @@ export default function EmailCampaignManagerPage() {
       </div>
     </div>
   );
-<<<<<<< HEAD
 }
-
-=======
-}
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-17f0

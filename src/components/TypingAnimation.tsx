@@ -1,11 +1,12 @@
 import React, { useState, useEffect } from 'react';
-interface TypingAnimationProps  {text: string;
+
+interface TypingAnimationProps {
+  text: string;
   speed?: number;
   delay?: number;
   className?: string;
   showCursor?: boolean;
   onComplete?: () => void;
-<<<<<<< HEAD
 }
 
 const TypingAnimation: React.FC<TypingAnimationProps> = ({
@@ -14,7 +15,7 @@ const TypingAnimation: React.FC<TypingAnimationProps> = ({
   delay = 0,
   className = '',
   showCursor = true,
-  onComplete,
+  onComplete
 }) => {
   const [displayedText, setDisplayedText] = useState('');
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -28,26 +29,31 @@ const TypingAnimation: React.FC<TypingAnimationProps> = ({
       }, speed);
 
       return () => clearTimeout(timeout);
-    } else if (!isComplete) {
+    } else if (currentIndex === text.length && !isComplete) {
       setIsComplete(true);
       onComplete?.();
     }
   }, [currentIndex, text, speed, onComplete, isComplete]);
 
+  useEffect(() => {
+    if (delay > 0) {
+      const timeout = setTimeout(() => {
+        setCurrentIndex(0);
+      }, delay);
+      return () => clearTimeout(timeout);
+    } else {
+      setCurrentIndex(0);
+    }
+  }, [delay]);
+
   return (
     <span className={className}>
       {displayedText}
-      {showCursor && <span className="animate-pulse">|</span>}
+      {showCursor && (
+        <span className="animate-pulse">|</span>
+      )}
     </span>
   );
 };
 
 export default TypingAnimation;
-=======
-}const TypingAnimation: React.FC<TypingAnimationProps> = ({text,speed = 100,delay = 0,className = '',showCursor = true,onComplete,}) => {const [displayedText, setDisplayedText] = useState('')const [currentIndex, setCurrentIndex] = useState(0)const [isComplete, setIsComplete]  = useState(false)useEffect(() => {if (currentIndex < text.length) {const timeout = setTimeout(() => {setDisplayedText(prev => prev + text[currentIndex])setCurrentIndex(prev => prev + 1)}, speed)return () => clearTimeout(timeout)} else if (!isComplete) {setIsComplete(true)onComplete?.()}
-  }, [currentIndex, text, speed, onComplete, isComplete])return (<span className={className}>;
-      {displayedText}
-      {showCursor && <span className="animate-pulse">|</span>}
-    </span>;
-  )}export default TypingAnimation;
->>>>>>> cursor/expand-services-advertise-and-build-project-e77d

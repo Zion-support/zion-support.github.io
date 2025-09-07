@@ -1,24 +1,6 @@
 import Link from "next/link";
 
 export const metadata = {
-<<<<<<< HEAD
-
-  title: 'Social Media Management | Zion Tech Group',
-  description: 'Professional social media management services for your business needs.',
-  keywords: 'social-media-management, services, business, technology'
-};
-
-export default function ServicePage() {
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      <div className="container mx-auto px-4 py-16">
-        <div className="text-center mb-16">
-          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-            Social Media Management
-          </h1>
-          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-            Professional social media management services for your business needs.
-=======
   title: "Social Media Management | Zion Tech Group",
   description: "Professional social media management services for your business needs.",
   keywords: "social-media-management, services, business, technology"
@@ -42,35 +24,34 @@ export default function SocialMediaManagementPage() {
             <span className="text-2xl">📱</span>
           </div>
           <h3 className="text-xl font-semibold text-gray-900 mb-4">
-            Content Management
+            Social Media Management
           </h3>
           <p className="text-gray-600">
-            Comprehensive content management tools for all social media platforms.
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-17f0
+            Manage your social media presence effectively across all platforms.
           </p>
         </div>
 
         <div className="bg-white p-8 rounded-xl shadow-lg border border-gray-200 hover:shadow-xl transition-shadow">
           <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mb-6">
-            <span className="text-2xl">📅</span>
+            <span className="text-2xl">📊</span>
           </div>
           <h3 className="text-xl font-semibold text-gray-900 mb-4">
-            Scheduling
+            Analytics & Insights
           </h3>
           <p className="text-gray-600">
-            Advanced scheduling features for optimal content posting timing.
+            Track and analyze social media performance to improve your strategy.
           </p>
         </div>
 
         <div className="bg-white p-8 rounded-xl shadow-lg border border-gray-200 hover:shadow-xl transition-shadow">
           <div className="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mb-6">
-            <span className="text-2xl">📊</span>
+            <span className="text-2xl">🎯</span>
           </div>
           <h3 className="text-xl font-semibold text-gray-900 mb-4">
-            Analytics
+            Custom Solutions
           </h3>
           <p className="text-gray-600">
-            Detailed analytics and reporting for social media performance insights.
+            Create custom social media management solutions tailored to your specific needs.
           </p>
         </div>
       </div>
@@ -80,7 +61,7 @@ export default function SocialMediaManagementPage() {
           Ready to Manage Your Social Media?
         </h2>
         <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
-          Contact us today to discuss your social media management needs and implement powerful solutions.
+          Contact us today to discuss your social media management needs and create intelligent solutions.
         </p>
         <a
           href="/contact"
@@ -91,9 +72,4 @@ export default function SocialMediaManagementPage() {
       </div>
     </div>
   );
-<<<<<<< HEAD
 }
-
-=======
-}
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-17f0

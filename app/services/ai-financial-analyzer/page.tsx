@@ -1,26 +1,9 @@
-<<<<<<< HEAD
+import Link from "next/link";
 
 export const metadata = {
-  title: 'Ai Financial Analyzer | Zion Tech Group',
-  description: 'Professional ai financial analyzer services for your business needs.',
-  keywords: 'ai-financial-analyzer, services, business, technology'
-};
-
-export default function ServicePage() {
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      <div className="container mx-auto px-4 py-16">
-        <div className="text-center mb-16">
-          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-            Ai Financial Analyzer
-          </h1>
-          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-            Professional ai financial analyzer services for your business needs.
-=======
-export const metadata = {
-  title: 'AI Financial Analyzer | Zion Tech Group',
-  description: 'Professional AI financial analyzer services for your business needs.',
-  keywords: 'ai-financial-analyzer, services, business, technology'
+  title: "AI Financial Analyzer | Zion Tech Group",
+  description: "Professional AI financial analyzer services for your business needs.",
+  keywords: "ai-financial-analyzer, services, business, technology"
 };
 
 export default function AIFinancialAnalyzerPage() {
@@ -31,7 +14,7 @@ export default function AIFinancialAnalyzerPage() {
           AI Financial Analyzer
         </h1>
         <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-          Intelligent financial analysis tools powered by AI to help you make informed investment and business decisions.
+          Professional AI financial analyzer services for your business needs.
         </p>
       </div>
 
@@ -41,45 +24,44 @@ export default function AIFinancialAnalyzerPage() {
             <span className="text-2xl">💰</span>
           </div>
           <h3 className="text-xl font-semibold text-gray-900 mb-4">
-            Investment Analysis
+            Financial Analysis
           </h3>
           <p className="text-gray-600">
-            AI-powered analysis of investment opportunities and portfolio performance.
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-17f0
+            AI-powered financial analysis to uncover insights and trends in your financial data.
           </p>
         </div>
 
         <div className="bg-white p-8 rounded-xl shadow-lg border border-gray-200 hover:shadow-xl transition-shadow">
           <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mb-6">
-            <span className="text-2xl">📊</span>
+            <span className="text-2xl">📈</span>
           </div>
           <h3 className="text-xl font-semibold text-gray-900 mb-4">
-            Financial Reporting
+            Predictive Modeling
           </h3>
           <p className="text-gray-600">
-            Automated generation of comprehensive financial reports and insights.
+            Build predictive models to forecast financial trends and make informed decisions.
           </p>
         </div>
 
         <div className="bg-white p-8 rounded-xl shadow-lg border border-gray-200 hover:shadow-xl transition-shadow">
           <div className="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mb-6">
-            <span className="text-2xl">🎯</span>
+            <span className="text-2xl">🔍</span>
           </div>
           <h3 className="text-xl font-semibold text-gray-900 mb-4">
-            Risk Management
+            Risk Assessment
           </h3>
           <p className="text-gray-600">
-            Advanced risk assessment and management strategies using machine learning.
+            Assess financial risks and opportunities using AI-powered analysis.
           </p>
         </div>
       </div>
 
       <div className="text-center">
         <h2 className="text-3xl font-bold text-gray-900 mb-6">
-          Ready to Analyze Your Finances?
+          Ready to Enhance Your Financial Analysis?
         </h2>
         <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
-          Contact us today to discuss your financial analysis needs and implement AI-powered solutions.
+          Contact us today to discuss your financial analysis needs and create intelligent solutions.
         </p>
         <a
           href="/contact"
@@ -90,9 +72,4 @@ export default function AIFinancialAnalyzerPage() {
       </div>
     </div>
   );
-<<<<<<< HEAD
 }
-
-=======
-}
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-17f0

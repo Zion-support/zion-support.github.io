@@ -1,22 +1,3 @@
-<<<<<<< HEAD
-
-export const metadata = {
-  title: 'Social Media Scheduler | Zion Tech Group',
-  description: 'Professional social media scheduler services for your business needs.',
-  keywords: 'social-media-scheduler, services, business, technology'
-};
-
-export default function ServicePage() {
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      <div className="container mx-auto px-4 py-16">
-        <div className="text-center mb-16">
-          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-            Social Media Scheduler
-          </h1>
-          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-            Professional social media scheduler services for your business needs.
-=======
 import Link from "next/link";
 
 export const metadata = {
@@ -46,20 +27,19 @@ export default function SocialMediaSchedulerPage() {
             Content Scheduling
           </h3>
           <p className="text-gray-600">
-            Advanced content scheduling tools for optimal social media posting.
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-17f0
+            Schedule social media content across all platforms automatically.
           </p>
         </div>
 
         <div className="bg-white p-8 rounded-xl shadow-lg border border-gray-200 hover:shadow-xl transition-shadow">
           <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mb-6">
-            <span className="text-2xl">🔄</span>
+            <span className="text-2xl">🎯</span>
           </div>
           <h3 className="text-xl font-semibold text-gray-900 mb-4">
-            Automation
+            Optimal Timing
           </h3>
           <p className="text-gray-600">
-            Automated posting and content management for consistent social media presence.
+            Find the best times to post for maximum engagement.
           </p>
         </div>
 
@@ -67,28 +47,11 @@ export default function SocialMediaSchedulerPage() {
           <div className="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mb-6">
             <span className="text-2xl">📊</span>
           </div>
-<<<<<<< HEAD
-          
-          <div className="bg-gray-800 rounded-lg p-6">
-            <h3 className="text-xl font-bold text-white mb-4">24/7 Support</h3>
-            <p className="text-gray-300">
-              Round-the-clock support to ensure your social media scheduler solutions run smoothly.
-            </p>
-          </div>
-
-        </div>
-      </div>
-    </div>
-  );
-
-}
-
-=======
           <h3 className="text-xl font-semibold text-gray-900 mb-4">
-            Performance Tracking
+            Analytics & Insights
           </h3>
           <p className="text-gray-600">
-            Real-time performance tracking and optimization for scheduled content.
+            Track and analyze social media performance to improve your strategy.
           </p>
         </div>
       </div>
@@ -98,7 +61,7 @@ export default function SocialMediaSchedulerPage() {
           Ready to Schedule Your Social Media?
         </h2>
         <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
-          Contact us today to discuss your social media scheduling needs and implement powerful solutions.
+          Contact us today to discuss your social media scheduling needs and create intelligent solutions.
         </p>
         <a
           href="/contact"
@@ -110,4 +73,3 @@ export default function SocialMediaSchedulerPage() {
     </div>
   );
 }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-17f0
