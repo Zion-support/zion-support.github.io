@@ -1,23 +1,47 @@
-
-
-
-export interface FeedbackRecord {;
-
-// Mock feedback store utility;
-
-export function tryWriteToFirestore(doc: any): Promise<boolean> {
-</boolean>
-
-  metadata: Record < string, any>;
-  created_at: string;,
-  ip: string;
+export interface Feedback {
+  id: string;
+  userId: string;
+  content: string;
+  rating: number;
+  category: string;
+  createdAt: string;
+  status: 'pending' | 'reviewed' | 'resolved';
 }
 
-const feedbackData: FeedbackRecord[] = [];
+export interface FeedbackStore {
+  feedback: Feedback[];
+  addFeedback: (feedback: Omit<Feedback, 'id' | 'createdAt'>) => void;
+  updateFeedback: (id: string, updates: Partial<Feedback>) => void;
+  getFeedback: (id: string) => Feedback | undefined;
+  getAllFeedback: () => Feedback[];
+}
 
-export async function saveFeedbackFallback(
+class FeedbackStoreImpl implements FeedbackStore {
+  feedback: Feedback[] = [];
 
-  feedback: FeedbackRecord,)
-): Promise<void> {
-</void>
+  addFeedback(feedback: Omit<Feedback, 'id' | 'createdAt'>): void {
+    const newFeedback: Feedback = {
+      ...feedback,
+      id: Math.random().toString(36).substr(2, 9),
+      createdAt: new Date().toISOString()
+    };
+    this.feedback.push(newFeedback);
+  }
 
+  updateFeedback(id: string, updates: Partial<Feedback>): void {
+    const index = this.feedback.findIndex(f => f.id === id);
+    if (index !== -1) {
+      this.feedback[index] = { ...this.feedback[index], ...updates };
+    }
+  }
+
+  getFeedback(id: string): Feedback | undefined {
+    return this.feedback.find(f => f.id === id);
+  }
+
+  getAllFeedback(): Feedback[] {
+    return [...this.feedback];
+  }
+}
+
+export const feedbackStore = new FeedbackStoreImpl();

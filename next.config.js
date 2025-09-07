@@ -1,31 +1,21 @@
-// Bundle analyzer removed due to platform compatibility issues
-
+/** @type {import('next').NextConfig} */
 const nextConfig = {
-  compress: true,
-  poweredByHeader: false,
-  generateEtags: true,
-  
-  // Disable linting during build
+  reactStrictMode: true,
+  experimental: {
+    optimizeCss: true,
+    optimizePackageImports: ['lucide-react']
+  },
   eslint: {
-    ignoreDuringBuilds: true,
+    ignoreDuringBuilds: false
   },
-  
-  // Disable type checking during build
   typescript: {
-    ignoreBuildErrors: true,
+    ignoreBuildErrors: false
   },
-  
-  // Webpack configuration simplified - Next.js handles TypeScript natively
-  webpack: (config, { buildId, dev, isServer, defaultLoaders, webpack }) => {
-    return config;
-  },
-  
   // Image optimization
   images: {
     domains: ['localhost'],
     formats: ['image/webp', 'image/avif'],
   },
-  
   // Security headers
   async headers() {
     return [
@@ -48,7 +38,6 @@ const nextConfig = {
       },
     ];
   },
-  
   // Redirects
   async redirects() {
     return [
@@ -59,23 +48,12 @@ const nextConfig = {
       },
     ];
   },
-  
-  
-  // Experimental features
-  experimental: {
-    optimizeCss: true,
-  },
-  
-  // Output configuration
-  // output: 'standalone', // Commented out to fix build issues
-  
   // Trailing slash
   trailingSlash: false,
-  
   // Environment variables
   env: {
     CUSTOM_KEY: process.env.CUSTOM_KEY,
   },
 };
 
-module.exports = nextConfig;
+export default nextConfig;
