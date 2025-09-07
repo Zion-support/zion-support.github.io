@@ -360,17 +360,17 @@ class AdvancedPerformanceOptimizer {;
 ;
     // Performance recommendations;
     const metrics = this.optimizationResults.performanceMetrics;
-    if (metrics.score < 80) {;
-      recommendations.push({;
-        "type": 'performance-improvement',
-        "priority": 'high',
-        "description": `Performance score is ${metrics.score}/100 - needs improvement`,
-        "actions": [;
-          'Optimize build process',
-          'Reduce bundle size',
-          'Implement code splitting',
-          'Optimize images';
-        ];
+    if (metrics.score < 80) {
+      recommendations.push({
+        type: 'performance-improvement',
+        priority: 'high',
+        description: `Performance score is ${metrics.score}/100 - needs improvement`,
+        actions: [
+
+
+
+
+        ],
       });
     }
 ;
@@ -390,8 +390,8 @@ class AdvancedPerformanceOptimizer {;
         "actions": [;
           `${highImpact} high-impact optimizations`,
           `${mediumImpact} medium-impact optimizations`,
-          'Review and implement suggested changes';
-        ];
+
+        ],
       });
     }
 ;
@@ -430,17 +430,32 @@ class AdvancedPerformanceOptimizer {;
     const i = Math.floor(Math.log(bytes) / Math.log(k));
     return parseFloat((bytes / Math.pow(k, i)).toFixed(2)) + ' ' + sizes[i];
   }
-;
-  saveResults() {;
-    const reportFile = path.join(this.projectRoot, 'logs', `performance-optimization-${Date.now()}.json`);
-    fs.writeFileSync(reportFile, JSON.stringify(this.optimizationResults, null, 2));
-;
-    console.log('📊 Optimization "Results": ');
-    console.log(`- Bundle "size": ${this.formatBytes(this.optimizationResults.bundleAnalysis.totalSize)}`);
-    console.log(`- Performance "score": ${this.optimizationResults.performanceMetrics.score}/100`);
-    console.log(`- Optimizations "found": ${this.optimizationResults.optimizations.length}`);
-    console.log(`- "Recommendations": ${this.optimizationResults.recommendations.length}`);
-    console.log(`- Report saved "to": ${reportFile}`);
+
+  saveResults() {
+    const reportFile = path.join(
+      this.projectRoot,
+
+      `performance-optimization-${Date.now()}.json`
+    );
+    fs.writeFileSync(
+      reportFile,
+      JSON.stringify(this.optimizationResults, null, 2)
+    );
+
+    console.log('📊 Optimization Results:');
+    console.log(
+      `- Bundle size: ${this.formatBytes(this.optimizationResults.bundleAnalysis.totalSize)}`
+    );
+    console.log(
+      `- Performance score: ${this.optimizationResults.performanceMetrics.score}/100`
+    );
+    console.log(
+      `- Optimizations found: ${this.optimizationResults.optimizations.length}`
+    );
+    console.log(
+      `- Recommendations: ${this.optimizationResults.recommendations.length}`
+    );
+    console.log(`- Report saved to: ${reportFile}`);
   }
 }
 ;

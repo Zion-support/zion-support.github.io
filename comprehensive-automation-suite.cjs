@@ -85,26 +85,26 @@ class ComprehensiveAutomationSuite {
     try {
       // Install missing dependencies
       const installResult = await this.runCommand(
-        'npm install',
-        'Install Dependencies'
+
+
       );
 
       // Install ESLint dependencies
       const eslintResult = await this.runCommand(
-        'npm install @eslint/js --save-dev',
-        'Install ESLint JS'
+
+
       );
 
       // Install accessibility plugins
       const a11yResult = await this.runCommand(
-        'npm install eslint-plugin-jsx-a11y --save-dev',
-        'Install Accessibility Plugin'
+
+
       );
 
       // Install performance tools
       const perfResult = await this.runCommand(
-        'npm install lighthouse --save-dev',
-        'Install Lighthouse'
+
+
       );
 
       this.results.dependencyFix = {
@@ -133,20 +133,20 @@ class ComprehensiveAutomationSuite {
     try {
       // Run TypeScript check
       const typeCheckResult = await this.runCommand(
-        'npx tsc --noEmit --skipLibCheck',
-        'TypeScript Check'
+
+
       );
 
       // Run ESLint with basic rules
       const lintResult = await this.runCommand(
-        'npx eslint . --max-warnings 1000',
-        'ESLint Check'
+
+
       );
 
       // Fix common issues
       const fixResult = await this.runCommand(
-        'npx eslint . --fix --max-warnings 1000',
-        'ESLint Fix'
+
+
       );
 
       this.results.codeQuality = {
@@ -175,14 +175,14 @@ class ComprehensiveAutomationSuite {
     try {
       // Run npm audit
       const auditResult = await this.runCommand(
-        'npm audit --audit-level moderate',
-        'Security Audit'
+
+
       );
 
       // Check for vulnerabilities
       const vulnerabilityCheck = await this.runCommand(
-        'npm audit --json',
-        'Vulnerability Check'
+
+
       );
 
       this.results.securityAudit = {
@@ -211,14 +211,14 @@ class ComprehensiveAutomationSuite {
 
       // Production build
       const productionBuild = await this.runCommand(
-        'npm run build',
-        'Production Build'
+
+
       );
 
       // Check build output
       const buildCheck = await this.runCommand(
-        'ls -la .next',
-        'Build Output Check'
+
+
       );
 
       this.results.buildOptimization = {
@@ -247,14 +247,14 @@ class ComprehensiveAutomationSuite {
     try {
       // Generate sitemap
       const sitemapResult = await this.runCommand(
-        'node scripts/generate-sitemap.cjs',
-        'Generate Sitemap'
+
+
       );
 
       // Generate search index
       const searchIndexResult = await this.runCommand(
-        'node scripts/generate-search-index.cjs',
-        'Generate Search Index'
+
+
       );
 
       this.results.seoOptimization = {
@@ -284,13 +284,13 @@ class ComprehensiveAutomationSuite {
       // Run accessibility checks with basic rules
       const accessibilityCheck = await this.runCommand(
         'npx eslint . --rule "jsx-a11y/alt-text: warn" --rule "jsx-a11y/aria-role: warn"',
-        'Accessibility Check'
+
       );
 
       // Check for keyboard navigation
       const keyboardCheck = await this.runCommand(
         'npx eslint . --rule "jsx-a11y/tabindex-no-positive: warn"',
-        'Keyboard Navigation Check'
+
       );
 
       this.results.accessibilityImprovements = {
@@ -318,14 +318,14 @@ class ComprehensiveAutomationSuite {
     try {
       // Analyze bundle size
       const bundleAnalysis = await this.runCommand(
-        'npm run build:analyze',
-        'Bundle Analysis'
+
+
       );
 
       // Check for performance issues
       const performanceCheck = await this.runCommand(
-        'npm run build',
-        'Performance Build Check'
+
+
       );
 
       this.results.performanceOptimization = {
@@ -412,11 +412,11 @@ class ComprehensiveAutomationSuite {
     };
 
     fs.writeFileSync(
-      'comprehensive-automation-report.json',
+
       JSON.stringify(report, null, 2)
     );
     this.log(
-      '\n📄 Detailed report saved to comprehensive-automation-report.json'
+
     );
   }
 

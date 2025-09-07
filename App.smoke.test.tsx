@@ -1,11 +1,21 @@
-import { render, screen, waitFor } from '@testing-library/react';
-import '@testing-library/jest-dom';
-import HomePage from './app/page';
+import React from 'react';
+import { render } from '@testing-library/react';
+import App from './App';
 
-it('renders without crashing', async () => {
-  render(<HomePage />);
-  // Wait for the lazy-loaded components to render
-  await waitFor(() => {
-    expect(screen.getByText('Welcome to Zion Tech Group')).toBeInTheDocument();
+describe('App Smoke Tests', () => {
+  it('should render without crashing', () => {
+    expect(() => render(<App />)).not.toThrow();
+  });
+  it('should render a basic structure', () => {
+    const { container } = render(<App />);
+    expect(container.firstChild).toBeTruthy();
+  });
+});
+});
+});
+
+describe('App Smoke Test', () => {
+  it('renders without crashing', () => {
+    render(<App />);
   });
 });

@@ -9,15 +9,15 @@ export default {;
     "react/react-in-jsx-scope": "off",
     "no-undef": "off";
   },
-  "ignorePatterns": [;
-    "node_modules/",
-    ".next/",
-    "out/",
-    "dist/",
-    "build/",
-    "coverage/",
-    "*.config.js",
-    "*.config.cjs",
-    "*.config.mjs";
-  ];
+  ignorePatterns: [
+
+
+
+
+
+
+
+
+
+  ],
 };

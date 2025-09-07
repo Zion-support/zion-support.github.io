@@ -10,10 +10,10 @@ class AISecurityIntelligence {
   constructor() {
     this.logFile = path.join(
       __dirname,
-      '..',
-      '..',
-      'automation-reports',
-      'ai-security.log'
+
+
+
+
     );
     this.ensureLogDir();
   }
@@ -88,10 +88,10 @@ class AISecurityIntelligence {
       outdated: 12,
       deprecated: 3,
       suggestions: [
-        'Update React to latest stable version',
-        'Replace deprecated packages',
-        'Review third-party dependencies for security';
-      ];
+
+
+
+      ],
     };
 ;
     return dependencies;
@@ -103,17 +103,17 @@ class AISecurityIntelligence {
     const codeSecurity = {
       score: 78,
       issues: [
-        'Potential XSS vulnerability in user input',
-        'Missing input validation',
-        'Hardcoded secrets in configuration',
-        'Insecure random number generation';
+
+
+
+
       ],
       suggestions: [
-        'Implement input sanitization',
-        'Add comprehensive input validation',
-        'Use environment variables for secrets',
-        'Use crypto.randomBytes for secure random generation';
-      ];
+
+
+
+
+      ],
     };
 ;
     return codeSecurity;
@@ -125,17 +125,17 @@ class AISecurityIntelligence {
     const configuration = {
       score: 82,
       issues: [
-        'Missing Content Security Policy',
-        'Insecure CORS configuration',
-        'Missing security headers',
-        'Insecure session configuration';
+
+
+
+
       ],
       suggestions: [
-        'Implement CSP headers',
-        'Configure CORS properly',
-        'Add security headers middleware',
-        'Use secure session configuration';
-      ];
+
+
+
+
+      ],
     };
 ;
     return configuration;
@@ -145,16 +145,16 @@ class AISecurityIntelligence {
     this.log('💡 Generating security recommendations...');
 
     return [
-      'Implement automated security scanning in CI/CD',
-      'Set up dependency vulnerability monitoring',
-      'Add security headers middleware',
-      'Implement rate limiting',
-      'Add input validation and sanitization',
-      'Use HTTPS everywhere',
-      'Implement proper authentication and authorization',
-      'Add security logging and monitoring',
-      'Regular security audits and penetration testing',
-      'Implement secure coding practices',
+
+
+
+
+
+
+
+
+
+
     ];
   }
 ;
@@ -172,10 +172,10 @@ class AISecurityIntelligence {
 
     const reportPath = path.join(
       __dirname,
-      '..',
-      '..',
-      'automation-reports',
-      'ai-security-report.json'
+
+
+
+
     );
     fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
     this.log(`📊 Report saved to: ${reportPath}`);

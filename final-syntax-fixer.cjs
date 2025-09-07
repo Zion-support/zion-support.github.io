@@ -1,198 +1,108 @@
 #!/usr/bin/env node
+
 const fs = require('fs');
 const path = require('path');
+const { execSync } = require('child_process');
 
 class FinalSyntaxFixer {
   constructor() {
     this.projectRoot = process.cwd();
     this.fixedFiles = [];
+    this.errors = [];
   }
 
-  log(message, type = 'INFO') {
-    const timestamp = new Date().toISOString();
-    const prefix = {'INFO': 'ℹ️', 'SUCCESS': '✅', 'ERROR': '❌', 'WARNING': '⚠️', 'PROGRESS': '🔄'}[type] || 'ℹ️';
-    console.log(`${prefix} [${timestamp}] ${message}`);
+  log(message) {
+    console.log(`[${new Date().toISOString()}] ${message}`);
   }
 
-  fixESLintConfig() {
-    // Remove the .js file and ensure we have .cjs
-    const jsPath = path.join(this.projectRoot, 'eslint.config.js');
-    const cjsPath = path.join(this.projectRoot, 'eslint.config.cjs');
+  getAllFiles(dir, extensions = ['.js', '.jsx', '.ts', '.tsx', '.cjs', '.mjs']) {
+    let files = [];
+    const items = fs.readdirSync(dir);
     
-    if (fs.existsSync(jsPath)) {
-      fs.unlinkSync(jsPath);
-      this.log('Removed eslint.config.js', 'SUCCESS');
+    for (const item of items) {
+      const fullPath = path.join(dir, item);
+      const stat = fs.statSync(fullPath);
+      
+      if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules' && item !== '.next') {
+        files = files.concat(this.getAllFiles(fullPath, extensions));
+      } else if (stat.isFile() && extensions.some(ext => item.endsWith(ext))) {
+        files.push(fullPath);
+      }
     }
     
-    if (!fs.existsSync(cjsPath)) {
-      const config = `module.exports = {
-  "extends": [
-    "next/core-web-vitals",
-    "eslint:recommended"
-  ],
-  "rules": {
-    "no-unused-vars": "warn",
-    "no-console": "warn",
-    "prefer-const": "warn"
-  },
-  "env": {
-    "browser": true,
-    "es2021": true,
-    "node": true
-  },
-  "parserOptions": {
-    "ecmaVersion": "latest",
-    "sourceType": "module"
-  }
-};`;
-      fs.writeFileSync(cjsPath, config);
-      this.log('Created eslint.config.cjs', 'SUCCESS');
-    }
+    return files;
   }
 
-  fixDesignMapFile() {
-    const filePath = path.join(this.projectRoot, 'pages/design-map.tsx');
+  fixSyntaxErrors(filePath) {
     try {
       let content = fs.readFileSync(filePath, 'utf8');
+      const originalContent = content;
+
+      // Fix common syntax errors
+      content = content.replace(/\/\* \/\* Brain \*\/ \*\//g, '// Brain');
+      content = content.replace(/\/\* Brain \*\//g, '// Brain');
+      content = content.replace(/,\s*\/\* Brain \*\/\s*,/g, ', Brain,');
+      content = content.replace(/,\s*\/\* Brain \*\/\s*\)/g, ' // Brain)');
+      content = content.replace(/,\s*\/\* Brain \*\/\s*\]/g, ' // Brain]');
+      content = content.replace(/,\s*\/\* Brain \*\/\s*}/g, ' // Brain}');
       
-      // Fix malformed JSX elements
-      content = content.replace(/<(\w+)\s*\/>/g, '<$1 />');
-      content = content.replace(/<(\w+)\s*\/\s*>/g, '<$1 />');
+      // Fix duplicate declarations
+      content = content.replace(/const\s*{\s*execSync\s*}\s*=\s*require\([^)]+\);\s*const\s*{\s*execSync\s*}\s*=\s*require\([^)]+\);/g, 'const { execSync } = require(\'child_process\');');
       
-      // Fix specific malformed elements
-      content = content.replace(/<h1 className="text-2xl font-semibold" \/>Zion OS Design Map<\/h1>/g, 
-        '<h1 className="text-2xl font-semibold">Zion OS Design Map</h1>');
+      // Fix malformed comments
+      content = content.replace(/}\s*\)\s*;\s*jest\.clearAllMocks\(\)\s*}\s*\)\s*;/g, '});');
       
-      content = content.replace(/<section className="space-y-6" \/>/g, '<section className="space-y-6">');
-      content = content.replace(/<div className="flex items-center justify-between" \/>/g, '<div className="flex items-center justify-between">');
-      content = content.replace(/<div className="flex gap-2" \/>/g, '<div className="flex gap-2">');
+      // Fix orphaned strings
+      content = content.replace(/^\s*['"][^'"]*['"]\s*,?\s*$/gm, '');
       
-      // Fix malformed anchor tags
-      content = content.replace(/<a;\s*href="([^"]+)"/g, '<a href="$1"');
+      // Fix malformed imports
+      content = content.replace(/import\s*{\s*([^}]+)\s*}\s*from\s*['"]([^'"]+)['"]\s*;\s*import\s*{\s*([^}]+)\s*}\s*from\s*['"]([^'"]+)['"]\s*;/g, 'import { $1, $3 } from \'$2\';');
+
+      if (content !== originalContent) {
+        fs.writeFileSync(filePath, content, 'utf8');
+        this.log(`✅ Fixed syntax errors in: ${path.relative(this.projectRoot, filePath)}`);
+        this.fixedFiles.push(filePath);
+        return true;
+      }
       
-      fs.writeFileSync(filePath, content);
-      this.log('Fixed design-map.tsx', 'SUCCESS');
-      this.fixedFiles.push(filePath);
+      return false;
     } catch (error) {
-      this.log(`Error fixing design-map.tsx: ${error.message}`, 'ERROR');
+      this.log(`❌ Failed to fix: ${path.relative(this.projectRoot, filePath)} - ${error.message}`);
+      this.errors.push({ file: filePath, error: error.message });
+      return false;
     }
   }
 
-  fixPricingFile() {
-    const filePath = path.join(this.projectRoot, 'pages/pricing.tsx');
-    try {
-      let content = fs.readFileSync(filePath, 'utf8');
-      
-      // Fix malformed import statements
-      content = content.replace(/getServicesByCategory,\s*\}/g, 'getServicesByCategory,');
-      content = content.replace(/getPopularServices,\s*\}/g, 'getPopularServices,');
-      
-      fs.writeFileSync(filePath, content);
-      this.log('Fixed pricing.tsx', 'SUCCESS');
-      this.fixedFiles.push(filePath);
-    } catch (error) {
-      this.log(`Error fixing pricing.tsx: ${error.message}`, 'ERROR');
-    }
-  }
-
-  fixPrivacyFile() {
-    const filePath = path.join(this.projectRoot, 'pages/privacy.tsx');
-    try {
-      let content = fs.readFileSync(filePath, 'utf8');
-      
-      // Fix malformed JSX
-      content = content.replace(/<MainLayout;/g, '<MainLayout');
-      
-      fs.writeFileSync(filePath, content);
-      this.log('Fixed privacy.tsx', 'SUCCESS');
-      this.fixedFiles.push(filePath);
-    } catch (error) {
-      this.log(`Error fixing privacy.tsx: ${error.message}`, 'ERROR');
-    }
-  }
-
-  fixSpaceTechFile() {
-    const filePath = path.join(this.projectRoot, 'pages/space-tech.tsx');
-    try {
-      let content = fs.readFileSync(filePath, 'utf8');
-      
-      // Fix malformed JSX
-      content = content.replace(/<Layout \/>/g, '<Layout>');
-      content = content.replace(/<Head \/>/g, '<Head>');
-      content = content.replace(/<title \/>Space Technology \| Zion Tech Group<\/title>/g, 
-        '<title>Space Technology | Zion Tech Group</title>');
-      content = content.replace(/<meta;/g, '<meta');
-      
-      fs.writeFileSync(filePath, content);
-      this.log('Fixed space-tech.tsx', 'SUCCESS');
-      this.fixedFiles.push(filePath);
-    } catch (error) {
-      this.log(`Error fixing space-tech.tsx: ${error.message}`, 'ERROR');
-    }
-  }
-
-  fixTeamFile() {
-    const filePath = path.join(this.projectRoot, 'pages/team.tsx');
-    try {
-      let content = fs.readFileSync(filePath, 'utf8');
-      
-      // Fix malformed import statements
-      content = content.replace(/Code,\s*\}/g, 'Code,');
-      content = content.replace(/Shield,\s*\}/g, 'Shield,');
-      
-      fs.writeFileSync(filePath, content);
-      this.log('Fixed team.tsx', 'SUCCESS');
-      this.fixedFiles.push(filePath);
-    } catch (error) {
-      this.log(`Error fixing team.tsx: ${error.message}`, 'ERROR');
-    }
-  }
-
-  fixJestTestFile() {
-    const filePath = path.join(this.projectRoot, 'src/__tests__/App.test.jsx');
-    try {
-      let content = fs.readFileSync(filePath, 'utf8');
-      
-      // Fix malformed Jest mock
-      content = content.replace(/jest\.mock\('\.\.\/pages\/Index', \(\) => \{\s*return function MockIndex\(\) \{\s*return <div data-testid='index-page' \/>Index Page<\/div>;\s*\}\s*\}\);';/g, 
-        `jest.mock('../pages/Index', () => {
-  return function MockIndex() {
-    return <div data-testid='index-page'>Index Page</div>;
-  };
-});`);
-      
-      fs.writeFileSync(filePath, content);
-      this.log('Fixed App.test.jsx', 'SUCCESS');
-      this.fixedFiles.push(filePath);
-    } catch (error) {
-      this.log(`Error fixing App.test.jsx: ${error.message}`, 'ERROR');
-    }
-  }
-
-  fixAllFiles() {
+  async run() {
     this.log('🔧 Starting final syntax fixing...');
     
-    this.fixESLintConfig();
-    this.fixDesignMapFile();
-    this.fixPricingFile();
-    this.fixPrivacyFile();
-    this.fixSpaceTechFile();
-    this.fixTeamFile();
-    this.fixJestTestFile();
+    const files = this.getAllFiles(this.projectRoot);
+    this.log(`📁 Found ${files.length} files to check`);
     
-    this.log(`\n📊 Final syntax fixer completed`);
-    this.log(`Files fixed: ${this.fixedFiles.length}`);
+    let fixedCount = 0;
     
-    if (this.fixedFiles.length > 0) {
-      this.log('\n✅ Fixed files:');
-      this.fixedFiles.forEach(file => {
-        this.log(`  - ${file}`);
+    for (const file of files) {
+      if (this.fixSyntaxErrors(file)) {
+        fixedCount++;
+      }
+    }
+    
+    this.log(`\n📊 Fix Summary:`);
+    this.log(`   - Files processed: ${files.length}`);
+    this.log(`   - Files fixed: ${fixedCount}`);
+    this.log(`   - Errors: ${this.errors.length}`);
+    
+    if (this.errors.length > 0) {
+      this.log(`\n❌ Files with errors:`);
+      this.errors.forEach(({ file, error }) => {
+        this.log(`   - ${path.relative(this.projectRoot, file)}: ${error}`);
       });
     }
+    
+    this.log('🎉 Final syntax fixing completed!');
   }
 }
 
+// Run the fixer
 const fixer = new FinalSyntaxFixer();
-fixer.fixAllFiles();
-
-module.exports = FinalSyntaxFixer;
+fixer.run().catch(console.error);

@@ -165,9 +165,11 @@ function main() {;
       console.log('   1. Run tests to ensure everything works');
       console.log('   2. Push changes to remote repository');
       console.log('   3. Verify the merge on GitHub');
-    } else {;
-      console.log('\n⚠️  Conflicts were resolved but merge could not be committed.');
-      console.log('📋 Manual steps "required": ');
+    } else {
+      console.log(
+
+      );
+      console.log('📋 Manual steps required:');
       console.log('   1. Review the resolved files');
       console.log('   2. "Run": git commit -m "Resolve merge conflicts"');
       console.log('   3. Push changes to remote repository');

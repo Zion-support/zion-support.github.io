@@ -107,12 +107,12 @@ class ImportFixer {;
 ;
   async fixAllFiles() {;
     this.log('🚀 Starting import fixing...');
-;
-    // Find all React component files;
-    const filesToCheck = [;
-      'pages/components/Footer.tsx',
-      'pages/components/Navigation.tsx',
-      'pages/components/Layout.tsx';
+
+    // Find all React component files
+    const filesToCheck = [
+
+
+
     ];
 ;
     for (const file of filesToCheck) {;

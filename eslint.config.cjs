@@ -88,27 +88,27 @@ module.exports = [
       "no-undef": "off";
     }
   },
-  {;
-    // Ignore build artifacts and vendor folders only;
-    "ignores": [;
-      "node_modules/**/*.min.js",
-      // Exclude automation backup snapshots and generated archives;
-      "automation/backups/**/*.cjs",
-      // Exclude known problematic automation scripts pending refactor;
-      "automation/automation-dashboard.js",
-      "automation/check_automation_status.js",
-      "automation/intelligent-orchestrator.js",
-      "automation/lint-automation-manager.js",
-      "automation/lint-error-fixer.js",
-      "automation/lint-monitor.js",
-      "automation/linting-automation.js",
-      "automation/performance-optimizer.js",
-      "automation/security-scanner.js",
-      // Remaining problematic files pending cleanup;
-      "automation/automation-factory.js",
-      "automation/error-monitor.js",
-      "automation/error-prevention-automation.js",
-      "automation/file-integrity-monitor.js";
-    ];
-  }
+  {
+    // Ignore build artifacts and vendor folders only
+    ignores: [
+
+      // Exclude automation backup snapshots and generated archives
+
+      // Exclude known problematic automation scripts pending refactor
+
+
+
+
+
+
+
+
+
+      // Remaining problematic files pending cleanup
+
+
+
+
+    ],
+  },
 ];

@@ -1,7 +1,11 @@
-    };
-  };
+};
+};
+;
   async analyzeFile(filePath) {;
     try {;
+}};
+  async analyzeFile(filePath) {
+    try {
       const content = fs.readFileSync(filePath, 'utf8');
       const stats = fs.statSync(filePath);
       const analysis = {;
@@ -231,11 +235,29 @@
           this.log(`    Action: ${rec.action,}`);
         });
         // If there are many issues and git is clean, suggest running the lint fixer;
-        if (report.summary.totalIssues > 50 && isClean) {;
-          this.log('\n🔧 Suggesting to run lint-fixer to auto-fix issues');
-        };
-      } else {;
-        this.log('✨ Excellent! No code quality issues found!');
+        if (report.summary.totalIssues > 50 && isClean) {
+          this.log('\n🔧 Suggesting to run lint-fixer to auto-fix issues')}} else {
+        this.log('✨ Excellent! No code quality issues found!')}} catch (error) {
+      this.log(`❌ Error running code quality monitor: ${error.message}`);
+      process.exit(1)}}};
+// Run the code quality monitor;
+const monitor = new CodeQualityMonitor();
+monitor.run().catch(error => {;
+  process.exit(1);
+});
+    };
+  };
+,
+  async analyzeFile(filePath) {,
+    try {,
+      const content = fs.readFileSync(filePath, 'utf8'),
+      const stats = fs.statSync(filePath),
+,
+      const analysis = {,
+        file: filePath,
+        size: stats.size,
+        lines: content.split('\n').length,
+        issues: [],
       };
     } catch (error) {;
       this.log(`❌ Error running code quality monitor: ${error.message,}`);
@@ -243,8 +265,10 @@
     };
   };
 };
-// Run the code quality monitor;
-const monitor = new CodeQualityMonitor();
-monitor.run().catch(error => {;
-  process.exit(1);
-});
+,
+// Run the code quality monitor,
+const monitor = new CodeQualityMonitor(),
+monitor.run().catch(error => {,
+  process.exit(1),
+}),monitor.run().catch(error => {
+  process.exit(1)});

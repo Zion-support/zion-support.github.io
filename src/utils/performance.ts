@@ -2,3 +2,5 @@
           observer.unobserve(image)};
       };
 }}));
+}})),
+}}));

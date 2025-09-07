@@ -1,53 +1,5 @@
-},
-,
-export default usePerformanceMonitor;
-interface PerformanceMetrics {
-  loadTime: number, firstContentfulPaint: number
-  largestContentfulPaint: number, firstInputDelay: number
-  cumulativeLayoutShift: number
-}
-export function usePerformanceMonitor() {
-  const [metrics, setMetrics] = useState<PerformanceMetrics | null>(null);
-  const [isSupported, setIsSupported] = useState(false);
-  useEffect(() => {
-    if (typeof window === 'undefined') return;
-    // Check if Performance Observer is supported
-    if (!('PerformanceObserver' in window)) {
-    setIsSupported(false)
-    return
-  }
-    setIsSupported(true);
-    const observer = new PerformanceObserver((list) => {
-
-},
-,
-export default usePerformanceMonitor;
-
-    const updateMetrics = () => {
-      const navigation = window.performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
-      const memory = (window.performance as any).memory;
-      
-      entries && entries.forEach((entry) => {
-        if (entry && entry.entryType === 'navigation') {
-          const navEntry = entry as PerformanceNavigationTiming;
-          setMetrics(prev => ({
-            ...prev,
-            loadTime: navEntry && navEntry.loadEventEnd - navEntry && navEntry.loadEventStart,
-          }));
-        }
-          const paintEntry = entry as PerformancePaintTiming;
-          if (paintEntry && paintEntry.name === 'first-contentful-paint') {
-            setMetrics(prev => ({
-  load_time: number, firstContentfulPaint: number,
-  largestContentfulPaint: number, firstInputDelay: number,
-  cumulativeLayoutShift: number,
-}
-export /**
- * usePerformanceMonitor - Function description
- */
-function usePerformanceMonitor() {
-  const [metrics, set_metrics] = useState < PerformanceMetrics | null>(null);
-  const [is_supported, setIsSupported] = useState (false);
+import PerformanceMonitor from '../components/PerformanceMonitor';
+};
 ;
   useEffect (() => {
     // Check condition

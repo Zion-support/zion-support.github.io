@@ -13,14 +13,27 @@ console.log('🏥 Starting enhanced health monitoring...');
 
 class EnhancedHealthMonitor {
   constructor() {
-    this.healthMetrics = {
-      timestamp: new Date().toISOString(),
-      systemHealth: {},
-      applicationHealth: {},
-      performanceMetrics: {},
-      errorMetrics: {},
-      recommendations: []
-    };
+    this.logFile = path.join(
+      __dirname,
+
+
+
+    );
+    this.ensureLogDir();
+  }
+
+  ensureLogDir() {
+    const logDir = path.dirname(this.logFile);
+    if (!fs.existsSync(logDir)) {
+      fs.mkdirSync(logDir, { recursive: true });
+    }
+  }
+
+  log(message) {
+    const timestamp = new Date().toISOString();
+    const logMessage = `[${timestamp}] ${message}`;
+    console.log(logMessage);
+    fs.appendFileSync(this.logFile, logMessage + '\n');
   }
 
   async checkSystemHealth() {
@@ -273,21 +286,28 @@ class EnhancedHealthMonitor {
     }
   }
 
-  checkBuildErrors() {
-    const buildErrors = [];
-    
-    try {
-      // Try to run build to check for errors
-      execSync('npm run build', { stdio: 'pipe', timeout: 30000 });
-    } catch (error) {
-      buildErrors.push({
-        type: 'Build Error',
-        message: error.message,
-        severity: 'high'
-      });
-    }
-    
-    return buildErrors;
+  generateHealthReport(healthCheck) {
+    this.log('📊 Generating health report...');
+
+    const report = {
+      ...healthCheck,
+      summary: {
+        overallStatus: this.calculateOverallStatus(healthCheck),
+        score: this.calculateHealthScore(healthCheck),
+        recommendations: this.generateHealthRecommendations(healthCheck),
+      },
+    };
+
+    const reportPath = path.join(
+      __dirname,
+
+
+
+    );
+    fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
+    this.log(`📊 Report saved to: ${reportPath}`);
+
+    return report;
   }
 
   generateHealthScore() {

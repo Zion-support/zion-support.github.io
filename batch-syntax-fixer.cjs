@@ -16,20 +16,19 @@
 // Run the fixer;
 const fixer = new BatchSyntaxFixer();
 fixer.run().catch(console.error);
-
-#!/usr/bin/env node;
-const fs = require('fs');
-const path = require('path');
-const { execSync } = require('child_process');
-      /import\s*{\s*([^}]+)\s*}\s*from\s*['"]([^'"]+)['"]\s*import\s*{\s*([^}]+)\s*}\s*from\s*['"]([^'')];
-      ";
-      /import\s*{[^}]+}\s*from\s*['"][^''];
-    content = content.replace(/['"]\s*;\s*['')];
-    content = content.replace(/['"]\s*;\s*([^'"]*)\s*[''];
-      /\[\s*['"]\s*;\s*([^'')];
-      ";
-      /\[\s*['"]\s*([^'')];
-      ";
+=======#!/usr/bin/env node;
+const fs = require('fs')
+const path = require('path')
+const { execSync } = require('child_process')
+      /import\s*{\s*([^}]+)\s*}\s*from\s*['"]([^'"]+)['"]\s*import\s*{\s*([^}]+)\s*}\s*from\s*['"]([^'')]
+      "
+      /import\s*{[^}]+}\s*from\s*['"][^'']
+    content = content.replace(/['"]\s*;\s*['')]
+    content = content.replace(/['"]\s*;\s*([^'"]*)\s*['']
+      /\[\s*['"]\s*;\s*([^'')]
+      "
+      /\[\s*['"]\s*([^'')]
+      "
     content = content.replace(/{\s*['"]\s*;\s*([^'"]*)\s*['"]\s*:/g, "}
     content = content.replace(/:\s*['"]\s*;\s*([^'"]*)\s*['"]\s*,/g, ";
       /:\s*['"]\s*;\s*([^'')];

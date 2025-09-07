@@ -47,21 +47,21 @@ function mergePR(prNumber, branchName) {;
   );
 ;
   if (!checkoutResult) return false;
-;
-  // Merge with main;
-  const mergeResult = runGitCommand(;
-    'git merge main',
-    `Merging main into ${branchName}`;
+
+  // Merge with main
+  const mergeResult = runGitCommand(
+
+    `Merging main into ${branchName}`
   );
 ;
   if (!mergeResult) {;
     // If merge fails, resolve conflicts by accepting main branch changes;
     console.log('⚠️  Merge conflicts detected, resolving...');
-;
-    // Get list of conflicted files;
-    const conflictedFiles = runGitCommand(;
-      'git diff --name-only --diff-filter=U',
-      'Getting conflicted files';
+
+    // Get list of conflicted files
+    const conflictedFiles = runGitCommand(
+
+
     );
 ;
     if (conflictedFiles) {;

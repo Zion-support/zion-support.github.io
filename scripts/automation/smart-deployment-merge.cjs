@@ -16,11 +16,15 @@ class SmartDeploymentMerge {;
     };
     this.deploymentData = this.loadDeploymentData();
   }
-;
-  loadDeploymentData() {;
-    const dataFile = path.join(this.projectRoot, 'logs', 'deployment-data.json');
-    try {;
-      if (fs.existsSync(dataFile)) {;
+
+  loadDeploymentData() {
+    const dataFile = path.join(
+      this.projectRoot,
+
+
+    );
+    try {
+      if (fs.existsSync(dataFile)) {
         return JSON.parse(fs.readFileSync(dataFile, 'utf8'));
       }
     } catch (error) {;
@@ -34,9 +38,13 @@ class SmartDeploymentMerge {;
       "lastDeployment": null;
     };
   }
-;
-  saveDeploymentData() {;
-    const dataFile = path.join(this.projectRoot, 'logs', 'deployment-data.json');
+
+  saveDeploymentData() {
+    const dataFile = path.join(
+      this.projectRoot,
+
+
+    );
     fs.writeFileSync(dataFile, JSON.stringify(this.deploymentData, null, 2));
   }
 ;
@@ -517,8 +525,12 @@ class SmartDeploymentMerge {;
       "error": error.message,
       "stack": error.stack;
     };
-;
-    const errorFile = path.join(this.projectRoot, 'logs', 'deployment-errors.json');
+
+    const errorFile = path.join(
+      this.projectRoot,
+
+
+    );
     let errors = [];
 ;
     try {;

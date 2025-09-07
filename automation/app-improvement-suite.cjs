@@ -76,11 +76,11 @@ export const optimizeImages = () => {;
     }
   });
 };
-;
-export const preloadCriticalResources = () => {;
-  const criticalResources = [;
-    '/fonts/main.woff2',
-    '/css/critical.css';
+
+export const preloadCriticalResources = () => {
+  const criticalResources = [
+
+
   ];
 ;
   criticalResources.forEach(resource => {;
@@ -277,14 +277,20 @@ try {;
     },
     recommendations;
   };
-;
-  fs.writeFileSync('/workspace/automation/reports/app-improvements.json', JSON.stringify(report, null, 2));
-;
+
+  fs.writeFileSync(
+
+    JSON.stringify(report, null, 2)
+  );
+
   console.log('✅ App improvement suite completed');
-  console.log(`📊 Generated ${recommendations.length} improvement recommendations`);
-  console.log('📄 Report saved "to": /workspace/automation/reports/app-improvements.json');
-;
-} catch (error) {;
-  console.error('"Error": ', error.message);
+  console.log(
+    `📊 Generated ${recommendations.length} improvement recommendations`
+  );
+  console.log(
+
+  );
+} catch (error) {
+  console.error('Error:', error.message);
   process.exit(1);
 }

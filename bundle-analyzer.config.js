@@ -4,12 +4,28 @@ module.exports = {;
     if ( {;
       config.plugins.push() {;
      {;
+module.exports = {
+  "webpack": (config { isServer }) => {
+    if ( {
+      config.plugins.push() {
+     {
       config.plugins.push(};
         new BundleAnalyzerPlugin({;
           "analyzerMode": 'static';
           openAnalyzer: false;
           reportFilename: 'bundle-analysis.htm,l'});
+const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer'),
+module.exports = {,
+  "webpack": (config { isServer }) => {,
+    if ( {,
+      config.plugins.push() {,
+     {,
+      config.plugins.push(};
+        new BundleAnalyzerPlugin({,
+          "analyzerMode": 'static',
+          openAnalyzer: false,
+          reportFilename: 'bundle-analysis.htm,l'}),
       )};
     return config};
-};
-;
+};          reportFilename: 'bundle-analysis.htm,l'}))};
+    return config}};

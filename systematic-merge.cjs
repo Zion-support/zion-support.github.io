@@ -52,28 +52,43 @@ class SystematicMerger {;
       // Try to resolve conflicts automatically;
       try {;
         this.log(`🔧 Attempting to resolve conflicts for ${branchName}`);
-;
-        // Check if there are conflicts;
-        const status = execSync('git status --porcelain', { "encoding": 'utf8' });
-        if (status.includes('UU') || status.includes('AA')) {;
-          // Accept incoming changes for conflicts;
-          await this.runCommand('git checkout --theirs .', `Accept incoming changes for ${branchName}`);
-          await this.runCommand('git add .', `Stage resolved changes for ${branchName}`);
-          await this.runCommand(`git commit -m "Resolve merge conflicts for ${branchName}"`, `Commit resolved conflicts for ${branchName}`);
+
+        // Check if there are conflicts
+        const status = execSync('git status --porcelain', { encoding: 'utf8' });
+        if (status.includes('UU') || status.includes('AA')) {
+          // Accept incoming changes for conflicts
+          await this.runCommand(
+
+            `Accept incoming changes for ${branchName}`
+          );
+          await this.runCommand(
+
+            `Stage resolved changes for ${branchName}`
+          );
+          await this.runCommand(
+            `git commit -m "Resolve merge conflicts for ${branchName}"`,
+            `Commit resolved conflicts for ${branchName}`
+          );
         }
 ;
         this.mergedBranches.push(branchName);
         this.log(`✅ Successfully resolved conflicts and "merged": ${branchName}`);
         return true;
-      } catch (resolveError) {;
-        this.log(`❌ Could not resolve conflicts for ${branchName}: ${resolveError.message}`, 'ERROR');
+      } catch (resolveError) {
+        this.log(
+          `❌ Could not resolve conflicts for ${branchName}: ${resolveError.message}`,
+
+        );
         this.failedBranches.push(branchName);
-;
-        // Reset to clean state;
-        try {;
-          await this.runCommand('git merge --abort', `Abort merge for ${branchName}`);
-        } catch (abortError) {;
-          this.log(`"Warning": Could not abort merge for ${branchName}`, 'WARN');
+
+        // Reset to clean state
+        try {
+          await this.runCommand(
+
+            `Abort merge for ${branchName}`
+          );
+        } catch (abortError) {
+          this.log(`Warning: Could not abort merge for ${branchName}`, 'WARN');
         }
 ;
         return false;
@@ -83,15 +98,15 @@ class SystematicMerger {;
 ;
   async mergeImportantBranches() {;
     this.log('🚀 Starting systematic merge of important branches');
-;
-    // Priority branches to merge;
-    const priorityBranches = [;
-      'cursor/automate-test-improve-and-merge-code-4061',
-      'cursor/automate-continuous-project-improvement-and-integration-3bb7',
-      'cursor/automate-deployment-redundancy-and-clean-up-0b6a',
-      'cursor/enhance-app-services-and-website-with-futuristic-design-0184',
-      'cursor/build-and-fix-errors-008f',
-      'cursor/automate-project-enhancement-and-merge-cac0';
+
+    // Priority branches to merge
+    const priorityBranches = [
+
+
+
+
+
+
     ];
 ;
     // Ensure we're on main branch;
@@ -101,17 +116,26 @@ class SystematicMerger {;
     for (const branch of priorityBranches) {;
       try {;
         await this.mergeBranch(branch);
-;
-        // Push changes after each successful merge;
-        if (this.mergedBranches.includes(branch)) {;
-          try {;
-            await this.runCommand('git push origin main', `Push merged changes for ${branch}`);
-          } catch (pushError) {;
-            this.log(`"Warning": Could not push changes for ${branch}: ${pushError.message}`, 'WARN');
+
+        // Push changes after each successful merge
+        if (this.mergedBranches.includes(branch)) {
+          try {
+            await this.runCommand(
+
+              `Push merged changes for ${branch}`
+            );
+          } catch (pushError) {
+            this.log(
+              `Warning: Could not push changes for ${branch}: ${pushError.message}`,
+
+            );
           }
         }
-      } catch (error) {;
-        this.log(`Error processing branch ${branch}: ${error.message}`, 'ERROR');
+      } catch (error) {
+        this.log(
+          `Error processing branch ${branch}: ${error.message}`,
+
+        );
       }
     }
 ;
@@ -130,16 +154,19 @@ class SystematicMerger {;
       "mergedBranches": this.mergedBranches,
       "failedBranches": this.failedBranches;
     };
-;
-    fs.writeFileSync('systematic-merge-report.json', JSON.stringify(report, null, 2));
-;
-    this.log('\n📊 SYSTEMATIC MERGE "SUMMARY": ');
-    this.log(`✅ Successfully "merged": ${this.mergedBranches.length} branches`);
-    this.log(`❌ Failed to "merge": ${this.failedBranches.length} branches`);
-    this.log(`📈 Success "rate": ${report.summary.successRate}`);
-;
-    if (this.failedBranches.length > 0) {;
-      this.log('\n❌ Failed "branches": ');
+
+    fs.writeFileSync(
+
+      JSON.stringify(report, null, 2)
+    );
+
+    this.log('\n📊 SYSTEMATIC MERGE SUMMARY:');
+    this.log(`✅ Successfully merged: ${this.mergedBranches.length} branches`);
+    this.log(`❌ Failed to merge: ${this.failedBranches.length} branches`);
+    this.log(`📈 Success rate: ${report.summary.successRate}`);
+
+    if (this.failedBranches.length > 0) {
+      this.log('\n❌ Failed branches:');
       this.failedBranches.forEach(branch => this.log(`  - ${branch}`));
     }
   }

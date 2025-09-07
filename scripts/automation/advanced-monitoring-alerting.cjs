@@ -170,16 +170,24 @@ class AdvancedMonitoringAlerting {;
       performanceMetrics.errorRate = Math.random() * 2;
 ;
       this.monitoringData.performanceMetrics = performanceMetrics;
-;
-      console.log(`📊 Performance "Metrics": `);
-      console.log(`  - Build "time": ${performanceMetrics.buildTime}ms`);
-      console.log(`  - Test "time": ${performanceMetrics.testTime}ms`);
-      console.log(`  - Bundle "size": ${this.formatBytes(performanceMetrics.bundleSize)}`);
-      console.log(`  - Response "time": ${performanceMetrics.responseTime.toFixed(2)}ms`);
-      console.log(`  - Error "rate": ${performanceMetrics.errorRate.toFixed(2)}%`);
-;
-    } catch (error) {;
-      console.log('⚠️  Application performance monitoring "failed": ', error.message);
+
+      console.log(`📊 Performance Metrics:`);
+      console.log(`  - Build time: ${performanceMetrics.buildTime}ms`);
+      console.log(`  - Test time: ${performanceMetrics.testTime}ms`);
+      console.log(
+        `  - Bundle size: ${this.formatBytes(performanceMetrics.bundleSize)}`
+      );
+      console.log(
+        `  - Response time: ${performanceMetrics.responseTime.toFixed(2)}ms`
+      );
+      console.log(
+        `  - Error rate: ${performanceMetrics.errorRate.toFixed(2)}%`
+      );
+    } catch (error) {
+      console.log(
+
+        error.message
+      );
     }
   }
 ;
@@ -317,8 +325,13 @@ class AdvancedMonitoringAlerting {;
       const avgBuildTime = recentData.reduce((sum, data) => sum + (data.performanceMetrics?.buildTime || 0), 0) / recentData.length;
       if (currentData.performanceMetrics.buildTime > avgBuildTime * 1.2) {;
         trends.performanceTrend = 'degrading';
-        trends.recommendations.push('Build time is increasing - consider optimization');
-      } else if (currentData.performanceMetrics.buildTime < avgBuildTime * 0.8) {;
+        trends.recommendations.push(
+
+        );
+      } else if (
+        currentData.performanceMetrics.buildTime <
+        avgBuildTime * 0.8
+      ) {
         trends.performanceTrend = 'improving';
       }
 ;
@@ -326,7 +339,9 @@ class AdvancedMonitoringAlerting {;
       const avgMemory = recentData.reduce((sum, data) => sum + (data.systemHealth?.memory || 0), 0) / recentData.length;
       if (currentData.systemHealth.memory > avgMemory * 1.1) {;
         trends.systemHealthTrend = 'degrading';
-        trends.recommendations.push('Memory usage is increasing - monitor for leaks');
+        trends.recommendations.push(
+
+        );
       }
     }
 ;
@@ -337,11 +352,15 @@ class AdvancedMonitoringAlerting {;
     console.log(`  - System health "trend": ${trends.systemHealthTrend}`);
     console.log(`  - "Recommendations": ${trends.recommendations.length}`);
   }
-;
-  loadHistoricalData() {;
-    const dataFile = path.join(this.projectRoot, 'logs', 'monitoring-history.json');
-    try {;
-      if (fs.existsSync(dataFile)) {;
+
+  loadHistoricalData() {
+    const dataFile = path.join(
+      this.projectRoot,
+
+
+    );
+    try {
+      if (fs.existsSync(dataFile)) {
         return JSON.parse(fs.readFileSync(dataFile, 'utf8'));
       }
     } catch (error) {;
@@ -349,9 +368,13 @@ class AdvancedMonitoringAlerting {;
     }
     return [];
   }
-;
-  saveHistoricalData() {;
-    const dataFile = path.join(this.projectRoot, 'logs', 'monitoring-history.json');
+
+  saveHistoricalData() {
+    const dataFile = path.join(
+      this.projectRoot,
+
+
+    );
     let historicalData = this.loadHistoricalData();
 ;
     // Add current data;
@@ -447,10 +470,14 @@ class AdvancedMonitoringAlerting {;
     const i = Math.floor(Math.log(bytes) / Math.log(k));
     return parseFloat((bytes / Math.pow(k, i)).toFixed(2)) + ' ' + sizes[i];
   }
-;
-  saveMonitoringData() {;
-    // Save current monitoring data;
-    const reportFile = path.join(this.projectRoot, 'logs', `monitoring-${Date.now()}.json`);
+
+  saveMonitoringData() {
+    // Save current monitoring data
+    const reportFile = path.join(
+      this.projectRoot,
+
+      `monitoring-${Date.now()}.json`
+    );
     fs.writeFileSync(reportFile, JSON.stringify(this.monitoringData, null, 2));
 ;
     // Save to historical data;

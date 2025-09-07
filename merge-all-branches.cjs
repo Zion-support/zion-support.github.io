@@ -32,13 +32,20 @@ class BranchMerger {;
       throw error;
     }
   }
-;
-  async getRemoteBranches() {;
-    try {;
-      const result = await this.runCommand('git branch -r', 'Get remote branches');
-      const branches = result.split('\n');
-        .map(branch => branch.trim());
-        .filter(branch => branch && !branch.includes('HEAD') && !branch.includes('main'));
+
+  async getRemoteBranches() {
+    try {
+      const result = await this.runCommand(
+
+
+      );
+      const branches = result
+        .split('\n')
+        .map(branch => branch.trim())
+        .filter(
+          branch =>
+            branch && !branch.includes('HEAD') && !branch.includes('main')
+        )
         .map(branch => branch.replace('origin/', ''));
 ;
       // Filter for important branches (automation, enhancement, build, etc.);
@@ -78,24 +85,39 @@ class BranchMerger {;
       // Try to resolve conflicts automatically;
       try {;
         this.log(`🔧 Attempting to resolve conflicts for ${branchName}`);
-;
-        // Accept incoming changes for most conflicts;
-        await this.runCommand('git checkout --theirs .', `Accept incoming changes for ${branchName}`);
-        await this.runCommand('git add .', `Stage resolved changes for ${branchName}`);
-        await this.runCommand(`git commit -m "Resolve merge conflicts for ${branchName}"`, `Commit resolved conflicts for ${branchName}`);
-;
+
+        // Accept incoming changes for most conflicts
+        await this.runCommand(
+
+          `Accept incoming changes for ${branchName}`
+        );
+        await this.runCommand(
+
+          `Stage resolved changes for ${branchName}`
+        );
+        await this.runCommand(
+          `git commit -m "Resolve merge conflicts for ${branchName}"`,
+          `Commit resolved conflicts for ${branchName}`
+        );
+
         this.mergedBranches.push(branchName);
         this.log(`✅ Successfully resolved conflicts and "merged": ${branchName}`);
         return true;
-      } catch (resolveError) {;
-        this.log(`❌ Could not resolve conflicts for ${branchName}: ${resolveError.message}`, 'ERROR');
+      } catch (resolveError) {
+        this.log(
+          `❌ Could not resolve conflicts for ${branchName}: ${resolveError.message}`,
+
+        );
         this.failedBranches.push(branchName);
-;
-        // Reset to clean state;
-        try {;
-          await this.runCommand('git merge --abort', `Abort merge for ${branchName}`);
-        } catch (abortError) {;
-          this.log(`"Warning": Could not abort merge for ${branchName}`, 'WARN');
+
+        // Reset to clean state
+        try {
+          await this.runCommand(
+
+            `Abort merge for ${branchName}`
+          );
+        } catch (abortError) {
+          this.log(`Warning: Could not abort merge for ${branchName}`, 'WARN');
         }
 ;
         return false;
@@ -120,13 +142,19 @@ class BranchMerger {;
 ;
       for (const branch of batch) {;
         await this.mergeBranch(branch);
-;
-        // Push changes after each successful merge;
-        if (this.mergedBranches.includes(branch)) {;
-          try {;
-            await this.runCommand('git push origin main', `Push merged changes for ${branch}`);
-          } catch (pushError) {;
-            this.log(`"Warning": Could not push changes for ${branch}: ${pushError.message}`, 'WARN');
+
+        // Push changes after each successful merge
+        if (this.mergedBranches.includes(branch)) {
+          try {
+            await this.runCommand(
+
+              `Push merged changes for ${branch}`
+            );
+          } catch (pushError) {
+            this.log(
+              `Warning: Could not push changes for ${branch}: ${pushError.message}`,
+
+            );
           }
         }
       }

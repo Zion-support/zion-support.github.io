@@ -2,8 +2,11 @@
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
+;
 class TestAutomation {;
   constructor() {;
+class TestAutomation {
+  constructor() {
     this.projectRoot = process.cwd();
     this.logFile = path.join(this.projectRoot, 'logs/pm2/test-automation.log');
     this.reportFile = path.join(this.projectRoot, 'logs/pm2/test-report.json');
@@ -163,12 +166,60 @@ class TestAutomation {;
       this.log(`Duration: ${duration,}ms`);
       if (report.recommendations.length > 0) {;
         this.log('\n💡 Recommendations: ');
-        report.recommendations.forEach(rec => {;
-          this.log(`  [${rec.priority.toUpperCase(),}] ${rec.message}`);
-          this.log(`    Action: ${rec.action,}`);
-        });
-      } else {;
-        this.log('\n✨ All tests passed!');
+        report.recommendations.forEach(rec => {
+          this.log(`  [${rec.priority.toUpperCase()}] ${rec.message}`);
+          this.log(`    Action: ${rec.action}`)})} else {
+        this.log('\n✨ All tests passed!')}} catch (error) {
+      this.log(`❌ Error running test automation: ${error.message}`);
+      process.exit(1)}}};
+// Run the test automation;
+const testAutomation = new TestAutomation();
+testAutomation.run().catch(error => {;
+  process.exit(1);
+});
+#!/usr/bin/env node,
+const fs = require('fs'),
+const path = require('path'),
+const { execSync } = require('child_process'),
+,
+class TestAutomation {,
+  constructor() {,
+    this.projectRoot = process.cwd(),
+    this.logFile = path.join(this.projectRoot, 'logs/pm2/test-automation.log'),
+    this.reportFile = path.join(this.projectRoot, 'logs/pm2/test-report.json'),
+    this.startTime = Date.now(),
+  };
+,
+  log(message) {,
+    const timestamp = new Date().toISOString(),
+    const logMessage = `[${timestamp}] ${message}\n`,
+,
+    try {,
+      fs.appendFileSync(this.logFile, logMessage),
+    } catch (error) {,
+      console.error('Error writing to log file:', error.message),
+    };
+  };
+,
+  async runTests() {,
+    try {,
+      this.log('🧪 Running test suite...'),
+,
+      const startTime = Date.now(),
+,
+      // Run tests,
+      const testResult = execSync('npm test', {,
+        cwd: this.projectRoot,
+        stdio: 'pipe',
+        encoding: 'utf8',
+      }),
+,
+      const duration = Date.now() - startTime,
+,
+      return {,
+        success: true,
+        output: testResult,
+        duration: duration,
       };
     } catch (error) {;
       this.log(`❌ Error running test automation: ${error.message,}`);
@@ -176,8 +227,10 @@ class TestAutomation {;
     };
   };
 };
-// Run the test automation;
-const testAutomation = new TestAutomation();
-testAutomation.run().catch(error => {;
-  process.exit(1);
-});
+,
+// Run the test automation,
+const testAutomation = new TestAutomation(),
+testAutomation.run().catch(error => {,
+  process.exit(1),
+}),testAutomation.run().catch(error => {
+  process.exit(1)});

@@ -266,8 +266,8 @@ class MasterAutomation {
     // Check git status
     try {
       const gitResult = await this.runCommand(
-        'git status --porcelain',
-        'Git status check'
+
+
       );
       status.gitStatus = gitResult.success ? 'clean' : 'dirty';
     } catch (_error) {
@@ -277,8 +277,8 @@ class MasterAutomation {
     // Check dependencies
     try {
       const depsResult = await this.runCommand(
-        'npm list --depth=0',
-        'Dependencies check'
+
+
       );
       status.dependenciesStatus = depsResult.success ? 'installed' : 'missing';
     } catch (_error) {

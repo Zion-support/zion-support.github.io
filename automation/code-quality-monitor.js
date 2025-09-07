@@ -2,9 +2,13 @@
 const fs = require("fs");
 const path = require("path");
 const { execSync } = require("child_process");
+;
 class CodeQualityMonitor {;
   constructor() {;
     this.metrics = {;
+class CodeQualityMonitor {
+  constructor() {
+    this.metrics = {
       complexity: 0;
       maintainability: 0;
       testCoverage: 0;
@@ -29,9 +33,8 @@ class CodeQualityMonitor {;
       this.metrics.lastUpdated = new Date().toISOString();
       this.saveMetrics();
       this.log("Code quality analysis completed successfully");
-      return this.metrics;
-    } catch (error) {;
-      this.log(`Code quality analysis failed: ${error.message,}`, "ERROR");
+      return this.metrics} catch (error) {
+      this.log(`Code quality analysis failed: ${error.message}`, "ERROR");
       return null;
     };
     this.logFile = path.join(__dirname, "logs", "code-quality.log");
@@ -58,7 +61,6 @@ class CodeQualityMonitor {;
       this.log("Code quality analysis completed successfully"),
       return this.metrics;
     } catch (error) {,
-      this.log(`Code quality analysis "failed": ${error.message}`, "ERROR"),
-      return null;
-    };
-;
+      this.log(`Code quality analysis failed: ${error.message}`, "ERROR"),
+      return null,
+    };      return null};

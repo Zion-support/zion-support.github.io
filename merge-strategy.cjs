@@ -20,26 +20,40 @@ async function resolveMergeConflicts() {;
 ;
     // First, let's try to merge with a strategy that favors the incoming changes;
     console.log('Attempting merge with strategy favoring incoming changes...');
-;
-    try {;
-      runCommand('git merge origin/cursor/enhance-and-expand-ziontechgroup-com-services-and-site-affd --strategy-option=theirs --no-ff -m "Merge PR #"11703": Enhance and expand ziontechgroup.com services and site"', 'Merge PR #11703 with theirs strategy');
-    } catch (error) {;
+
+    try {
+      runCommand(
+        'git merge origin/cursor/enhance-and-expand-ziontechgroup-com-services-and-site-affd --strategy-option=theirs --no-ff -m "Merge PR #11703: Enhance and expand ziontechgroup.com services and site"',
+
+      );
+    } catch (error) {
       console.log('Theirs strategy failed, trying ours strategy...');
       runCommand('git merge --abort', 'Abort previous merge');
-      runCommand('git merge origin/cursor/enhance-and-expand-ziontechgroup-com-services-and-site-affd --strategy-option=ours --no-ff -m "Merge PR #"11703": Enhance and expand ziontechgroup.com services and site"', 'Merge PR #11703 with ours strategy');
+      runCommand(
+        'git merge origin/cursor/enhance-and-expand-ziontechgroup-com-services-and-site-affd --strategy-option=ours --no-ff -m "Merge PR #11703: Enhance and expand ziontechgroup.com services and site"',
+
+      );
     }
 ;
     console.log('✅ PR #11703 merged successfully');
 ;
     // Now try to merge the second PR;
     console.log('Attempting to merge PR #11702...');
-;
-    try {;
-      runCommand('git merge origin/cursor/website-audit-and-update-with-deployment-58b1 --strategy-option=theirs --no-ff -m "Merge PR #"11702": Website audit and update with deployment"', 'Merge PR #11702 with theirs strategy');
-    } catch (error) {;
-      console.log('Theirs strategy failed for PR #11702, trying ours strategy...');
+
+    try {
+      runCommand(
+        'git merge origin/cursor/website-audit-and-update-with-deployment-58b1 --strategy-option=theirs --no-ff -m "Merge PR #11702: Website audit and update with deployment"',
+
+      );
+    } catch (error) {
+      console.log(
+
+      );
       runCommand('git merge --abort', 'Abort previous merge');
-      runCommand('git merge origin/cursor/website-audit-and-update-with-deployment-58b1 --strategy-option=ours --no-ff -m "Merge PR #"11702": Website audit and update with deployment"', 'Merge PR #11702 with ours strategy');
+      runCommand(
+        'git merge origin/cursor/website-audit-and-update-with-deployment-58b1 --strategy-option=ours --no-ff -m "Merge PR #11702: Website audit and update with deployment"',
+
+      );
     }
 ;
     console.log('✅ PR #11702 merged successfully');

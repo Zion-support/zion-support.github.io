@@ -97,25 +97,27 @@ async function runAllAutomations() {;
 ;
   return { results, successCount, failureCount };
 }
-;
-// Generate comprehensive report;
-function generateReport(results) {;
-  const report = {;
-    "timestamp": new Date().toISOString(),
-    "summary": {;
-      "totalTasks": results.results.length,
-      "successful": results.successCount,
-      "failed": results.failureCount,
-      "successRate": ((results.successCount / results.results.length) * 100).toFixed(2) + '%';
+
+// Generate comprehensive report
+function generateReport(results) {
+  const report = {
+    timestamp: new Date().toISOString(),
+    summary: {
+      totalTasks: results.results.length,
+      successful: results.successCount,
+      failed: results.failureCount,
+      successRate:
+        ((results.successCount / results.results.length) * 100).toFixed(2) +
+
     },
-    "tasks": results.results,
-    "recommendations": [;
-      'Continue monitoring build and test status',
-      'Address any critical failures immediately',
-      'Review and fix linting issues',
-      'Optimize performance based on analysis results',
-      'Implement security recommendations';
-    ];
+    tasks: results.results,
+    recommendations: [
+
+
+
+
+
+    ],
   };
 ;
   // Ensure reports directory exists;
@@ -123,10 +125,10 @@ function generateReport(results) {;
   if (!fs.existsSync(reportsDir)) {;
     fs.mkdirSync(reportsDir, { "recursive": true });
   }
-;
-  fs.writeFileSync(;
-    '/workspace/automation/reports/master-automation-report.json',
-    JSON.stringify(report, null, 2);
+
+  fs.writeFileSync(
+
+    JSON.stringify(report, null, 2)
   );
 ;
   return report;
@@ -150,11 +152,15 @@ async function main() {;
     }
 ;
     console.log('\n✅ Master automation orchestration completed');
-    console.log('📄 Detailed report saved "to": /workspace/automation/reports/master-automation-report.json');
-;
-    // Return success/failure based on critical tasks;
-    const criticalFailures = results.results.filter(r => r.critical && r.status === 'failed');
-    if (criticalFailures.length > 0) {;
+    console.log(
+
+    );
+
+    // Return success/failure based on critical tasks
+    const criticalFailures = results.results.filter(
+      r => r.critical && r.status === 'failed'
+    );
+    if (criticalFailures.length > 0) {
       console.log('\n⚠️ Critical tasks failed - manual intervention required');
       process.exit(1);
     } else {;

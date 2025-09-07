@@ -323,15 +323,18 @@ module.exports = SecurityAuditor;`;
         "totalImprovements": this.improvements.length;
       }
     };
-;
-    fs.writeFileSync('app-analysis-report.json', JSON.stringify(report, null, 2));
-;
-    console.log('\n📊 App Analysis "Report": ');
-    console.log(`❌ Issues "found": ${this.issues.length}`);
-    console.log(`🚀 Improvements "suggested": ${this.improvements.length}`);
-;
-    if (this.issues.length > 0) {;
-      console.log('\"nIssues": ');
+
+    fs.writeFileSync(
+
+      JSON.stringify(report, null, 2)
+    );
+
+    console.log('\n📊 App Analysis Report:');
+    console.log(`❌ Issues found: ${this.issues.length}`);
+    console.log(`🚀 Improvements suggested: ${this.improvements.length}`);
+
+    if (this.issues.length > 0) {
+      console.log('\nIssues:');
       this.issues.forEach(issue => console.log(`  - ${issue}`));
     }
 ;

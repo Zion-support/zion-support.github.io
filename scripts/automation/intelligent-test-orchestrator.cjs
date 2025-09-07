@@ -23,7 +23,7 @@ class IntelligentTestOrchestrator {
 
     const logFile = path.join(
       this.logsDir,
-      'intelligent-test-orchestrator.log'
+
     );
     fs.appendFileSync(logFile, logMessage + '\n');
   }

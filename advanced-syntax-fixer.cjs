@@ -19,18 +19,36 @@ function fixAdvancedSyntaxIssues(filePath) {;
     content = content.replace(/&quot;/g, '"');
     content = content.replace(/&lt;/g, '<');
     content = content.replace(/&gt;/g, '>');
-;
-    // Fix import statements;
-    content = content.replace(/import React from 'react',/g, 'import React from \'react\';');
-    content = content.replace(/import React from "react",/g, 'import React from "react";');
-    content = content.replace(/import { JSX } from 'react',/g, 'import { JSX } from \'react\';');
-;
-    // Fix export statements;
-    content = content.replace(/export default function (\w+)\(\): JSX\.Element \{/g, 'export default function $1(): JSX.Element {');
-    content = content.replace(/export interface (\w+) \{;/g, 'export interface $1 {');
-    content = content.replace(/export const (\w+): (\w+)\[\] = \[;/g, 'export const $"1": $2[] = [];');
-;
-    // Fix JSX syntax;
+
+    // Fix import statements
+    content = content.replace(
+      /import React from 'react',/g,
+      "import React from 'react';"
+    );
+    content = content.replace(
+      /import React from "react",/g,
+      'import React from "react";'
+    );
+    content = content.replace(
+      /import { JSX } from 'react',/g,
+      "import { JSX } from 'react';"
+    );
+
+    // Fix export statements
+    content = content.replace(
+      /export default function (\w+)\(\): JSX\.Element \{/g,
+
+    );
+    content = content.replace(
+      /export interface (\w+) \{;/g,
+
+    );
+    content = content.replace(
+      /export const (\w+): (\w+)\[\] = \[;/g,
+
+    );
+
+    // Fix JSX syntax
     content = content.replace(/&lt;main&gt;/g, '<main>');
     content = content.replace(/&lt;\/main&gt;/g, '</main>');
     content = content.replace(/&lt;div&gt;/g, '<div>');
@@ -52,9 +70,12 @@ function fixAdvancedSyntaxIssues(filePath) {;
     // Fix semicolon issues;
     content = content.replace(/;\s*,/g, ';');
     content = content.replace(/,\s*;/g, ';');
-;
-    // Fix React component syntax;
-    content = content.replace(/const (\w+) = \(\) => \{/g, 'const $1 = () => {');
+
+    // Fix React component syntax
+    content = content.replace(
+      /const (\w+) = \(\) => \{/g,
+
+    );
     content = content.replace(/export default (\w+),/g, 'export default $1;');
 ;
     // Fix TypeScript interface syntax;
@@ -75,15 +96,25 @@ function fixAdvancedSyntaxIssues(filePath) {;
 ;
     // Fix console statements;
     content = content.replace(/console\.log\(/g, '// console.log(');
-;
-    // Fix specific parsing errors;
-    content = content.replace(/import React from 'react',/g, 'import React from \'react\';');
-    content = content.replace(/import { JSX } from 'react',/g, 'import { JSX } from \'react\';');
-    content = content.replace(/export default function App\(\): JSX\.Element \{/g, 'export default function App(): JSX.Element {');
-;
-    // Fix vite config issues;
-    if (filePath.includes('vite.config.ts')) {;
-      content = content.replace(/import { defineConfig,splitVendorChunkPlugin } from 'vite', import react from '@vitejs\/plugin-react', import path from '"node": path', export default defineConfig\(\{/g;
+
+    // Fix specific parsing errors
+    content = content.replace(
+      /import React from 'react',/g,
+      "import React from 'react';"
+    );
+    content = content.replace(
+      /import { JSX } from 'react',/g,
+      "import { JSX } from 'react';"
+    );
+    content = content.replace(
+      /export default function App\(\): JSX\.Element \{/g,
+
+    );
+
+    // Fix vite config issues
+    if (filePath.includes('vite.config.ts')) {
+      content = content.replace(
+        /import { defineConfig,splitVendorChunkPlugin } from 'vite', import react from '@vitejs\/plugin-react', import path from 'node: path', export default defineConfig\(\{/g,
         `import { defineConfig, splitVendorChunkPlugin } from 'vite';
 import react from '@vitejs/plugin-react';
 import path from '"node": path';

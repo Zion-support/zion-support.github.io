@@ -19,27 +19,13 @@ class ComprehensiveSyntaxFixer {
     }
   }
 
-  log(message) {
-    console.log(`[${new Date().toISOString()}] ${message}`);
-  }
+    // Fix export statements with trailing commas
+    if (content.includes('export interface')) {
+      content = content.replace(
+        /export interface (\w+) \{/g,
 
-  getAllFiles(dir, extensions) {
-    let files = [];
-    try {
-      const items = fs.readdirSync(dir);
-      
-      for (const item of items) {
-        const fullPath = path.join(dir, item);
-        const stat = fs.statSync(fullPath);
-        
-        if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules' && item !== 'dist' && item !== 'build') {
-          files = files.concat(this.getAllFiles(fullPath, extensions));
-        } else if (extensions.some(ext => item.endsWith(ext))) {
-          files.push(fullPath);
-        }
-      }
-    } catch (error) {
-      // Skip directories that can't be read
+      );
+      fixed = true;
     }
     
     return files;
@@ -176,41 +162,14 @@ class ComprehensiveSyntaxFixer {
     }
   }
 
-  async run() {
-    this.log('🔧 Starting Comprehensive Syntax Fixer');
-    
-    // Fix specific critical files first
-    this.fixSpecificFiles();
-    
-    // Get all files to fix
-    const extensions = ['.ts', '.tsx', '.js', '.jsx', '.json'];
-    const files = this.getAllFiles(this.projectRoot, extensions);
-    
-    this.log(`Found ${files.length} files to check`);
-    
-    let fixedCount = 0;
-    const maxFiles = Math.min(files.length, 500); // Limit to prevent timeout
-    
-    for (let i = 0; i < maxFiles; i++) {
-      const file = files[i];
-      if (this.fixFileSyntax(file)) {
-        fixedCount++;
-      }
-    }
-    
-    // Generate report
-    const report = {
-      timestamp: new Date().toISOString(),
-      totalFiles: maxFiles,
-      fixedFiles: fixedCount,
-      errors: this.errors.length,
-      fixedFileList: this.fixedFiles,
-      errorList: this.errors
-    };
-    
-    fs.writeFileSync(
-      path.join(this.reportsDir, 'syntax-fix-report.json'),
-      JSON.stringify(report, null, 2)
+    // Fix semicolon issues
+    content = content.replace(/;\s*,/g, ';');
+    content = content.replace(/,\s*;/g, ';');
+
+    // Fix React component syntax
+    content = content.replace(
+      /const (\w+) = \(\) => \{/g,
+
     );
     
     this.log(`🎉 Syntax fixing completed`);

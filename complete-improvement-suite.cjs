@@ -41,17 +41,34 @@ class CompleteImprovementSuite {;
       return { "success": false, "error": error.message };
     }
   }
-;
-  async resolveMergeConflicts() {;
-    this.log('🔍 Checking for merge conflicts...');
-    const result = await this.runCommand('git status --porcelain', 'Check git status');
-;
-    if (result.success && result.output.stdout.includes('UU')) {;
-      this.log('⚠️ Merge conflicts detected, attempting to resolve...');
-      // Add basic conflict resolution logic here;
-      this.stats.mergeConflicts.resolved++;
-    } else {;
-      this.log('✅ No merge conflicts found');
+
+  async resolveMergeConflicts() {
+    this.log('🔧 Phase "1": Resolving Merge Conflicts');
+
+    try {
+      const files = this.getAllFiles(this.projectRoot, ['.tsx',
+
+
+
+
+
+      ]);
+      let resolvedCount = 0;
+
+      for (const file of files) {
+        if (this.hasMergeConflicts(file)) {
+          if (this.resolveFileConflicts(file)) {
+            resolvedCount++;
+          }
+        }
+      }
+
+      this.results.mergeConflicts.resolved = resolvedCount;
+      this.log(`✅ Resolved merge conflicts in ${resolvedCount} files`);
+      return resolvedCount;
+    } catch (error) {
+      this.log(`❌ Error resolving merge "conflicts": ${error.message}`);
+      return 0;
     }
   }
 ;
@@ -100,9 +117,9 @@ class CompleteImprovementSuite {;
 
     try {
       const files = this.getAllFiles(path.join(this.projectRoot, 'src'), ['.tsx',
-        '.ts',
-        '.jsx',
-        '.js',
+
+
+
       ]);
       let fixedCount = 0;
 
@@ -207,7 +224,9 @@ class CompleteImprovementSuite {;
     try {
       const content = fs.readFileSync(filePath, 'utf8');
       return (
-        content.includes('
+        content.includes('<<<<<<< HEAD') ||
+        content.includes('=======') ||
+        content.includes('>>>>>>>')
       );
     } catch (error) {
       return false;
@@ -221,13 +240,11 @@ class CompleteImprovementSuite {;
 
       // Remove merge conflict markers and keep HEAD version
       content = content.replace(
-        /
-        '$1'
+        /<<<<<<< HEAD\n(.*?)\n=======\n(.*?)\n        '$1'
       );
 
       // Clean up any remaining markers
-      content = content.replace(/>>>>>>> [^\n]+\n/g, '');
-
+      content = content.replace(/
       if (content !== originalContent) {
         fs.writeFileSync(filePath, content, 'utf8');
         this.log(
@@ -331,30 +348,3 @@ class CompleteImprovementSuite {;
 // Run the complete improvement suite
 const suite = new CompleteImprovementSuite();
 suite.run().catch(console.error);
-
-#!/usr/bin/env node;
-const fs = require('fs')
-const path = require('path')
-const { execSync } = require('child_process')
-    this.reportsDir = path.join(this.projectRoot, 'improvement-reports')
-        "encoding"
-    this.log(' Phase "1")
-    this.log(' Phase "2")
-    this.log(' Phase "3")
-        "name"
-        "name"
-        "name"
-    this.log(' Phase "4")
-    const commands = [{ cmd: 'git add .', "desc"}]
-        "cmd": 'git commit -m "feat: Complete improvement suite - merge conflicts, syntax fixes, and enhancements"
-        "desc"
-      { "cmd": 'git push origin main', "desc"}
-        /import\s*{\s*([^}]+)\s*}\s*from\s*['"]([^'')]
-        "
-      content = content.replace(/['"];\s*['')]
-          "
-        "endpoints"
-        "format"
-                "name"
-                "chunks"
-cursor/fix-lint-push-and-merge-to-main-f3c1;

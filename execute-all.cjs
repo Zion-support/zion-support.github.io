@@ -1,13 +1,13 @@
 #!/usr/bin/env node;
 // Simple execution script for all automation tasks;
 console.log('🚀 Starting Comprehensive Automation Execution...');
-;
-const scripts = [;
-  'git-resolution.cjs',
-  'run-all-automations.cjs',
-  'comprehensive-improvements.cjs',
-  'final-automation-orchestrator.cjs',
-  'final-automation-suite.cjs';
+
+const scripts = [
+
+
+
+
+
 ];
 ;
 async function runScript(scriptPath) {;

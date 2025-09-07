@@ -67,10 +67,10 @@ class SEOOptimizer {
   analyzeMetaTags(content, filePath) {
     const metaPatterns = [
       {
-        name: 'Missing Title Tag',
-        pattern: /<title>/gi,
-        severity: 'high',
-        recommendation: 'Add unique, descriptive title tags for each page'
+        type: 'meta_tags',
+        priority: 'high',
+        description:
+
       },
       {
         name: 'Missing Meta Description',

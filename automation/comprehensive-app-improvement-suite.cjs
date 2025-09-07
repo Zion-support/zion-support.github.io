@@ -102,10 +102,14 @@ async function runAllImprovements() {;
 ;
   results.endTime = new Date().toISOString();
   results.totalDuration = Date.now() - new Date(results.startTime).getTime();
-;
-  // Generate report;
-  const reportPath = path.join(__dirname, 'reports', `improvement-report-${Date.now()}.json`);
-  fs.mkdirSync(path.dirname(reportPath), { "recursive": true });
+
+  // Generate report
+  const reportPath = path.join(
+    __dirname,
+
+    `improvement-report-${Date.now()}.json`
+  );
+  fs.mkdirSync(path.dirname(reportPath), { recursive: true });
   fs.writeFileSync(reportPath, JSON.stringify(results, null, 2));
 ;
   console.log('\n📊 COMPREHENSIVE IMPROVEMENT REPORT');

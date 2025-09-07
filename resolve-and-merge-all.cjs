@@ -32,24 +32,36 @@ class GitConflictResolver {;
 ;
   async resolveCurrentConflicts() {;
     this.log('🔧 Resolving current merge conflicts');
-;
-    // Configure git for merge strategy;
-    await this.runCommand('git config pull.rebase false', 'Configure merge strategy');
-;
-    // Try to pull with merge strategy;
-    const pullResult = await this.runCommand('git pull origin main --no-edit', 'Pull and merge from main');
-;
-    if (!pullResult.success) {;
-      // If pull fails, try to resolve conflicts manually;
+
+    // Configure git for merge strategy
+    await this.runCommand(
+
+
+    );
+
+    // Try to pull with merge strategy
+    const pullResult = await this.runCommand(
+
+
+    );
+
+    if (!pullResult.success) {
+      // If pull fails, try to resolve conflicts manually
       this.log('⚠️ Pull failed, attempting to resolve conflicts manually');
-;
-      // Check for conflicted files;
-      const statusResult = await this.runCommand('git status --porcelain', 'Check git status');
-;
-      if (statusResult.success) {;
-        const conflictedFiles = statusResult.output;
-          .split('\n');
-          .filter(line => line.includes('UU') || line.includes('AA') || line.includes('DD'));
+
+      // Check for conflicted files
+      const statusResult = await this.runCommand(
+
+
+      );
+
+      if (statusResult.success) {
+        const conflictedFiles = statusResult.output
+          .split('\n')
+          .filter(
+            line =>
+              line.includes('UU') || line.includes('AA') || line.includes('DD')
+          )
           .map(line => line.split(' ').pop());
 ;
         this.log(`Found ${conflictedFiles.length} conflicted files`);
@@ -62,9 +74,12 @@ class GitConflictResolver {;
             this.resolvedConflicts.push(file);
           }
         }
-;
-        // Commit the resolved conflicts;
-        await this.runCommand('git commit -m ""resolve": Merge conflicts resolved automatically"', 'Commit resolved conflicts');
+
+        // Commit the resolved conflicts
+        await this.runCommand(
+          'git commit -m "resolve: Merge conflicts resolved automatically"',
+
+        );
       }
     }
 ;
@@ -89,11 +104,14 @@ class GitConflictResolver {;
 ;
       // Use GitHub CLI if available, otherwise use API;
       let prs = [];
-;
-      try {;
-        // Try GitHub CLI first;
-        const ghResult = await this.runCommand('gh pr list --state open --json number,title,headRefName,baseRefName', 'Get open PRs via GitHub CLI');
-        if (ghResult.success) {;
+
+      try {
+        // Try GitHub CLI first
+        const ghResult = await this.runCommand(
+
+
+        );
+        if (ghResult.success) {
           prs = JSON.parse(ghResult.output);
         }
       } catch (error) {;
@@ -131,8 +149,11 @@ https.get(options, (res) => {;
 `;
 ;
         fs.writeFileSync('fetch-prs.js', fetchPRsScript);
-        const apiResult = await this.runCommand('node fetch-prs.js', 'Fetch PRs via API');
-        if (apiResult.success) {;
+        const apiResult = await this.runCommand(
+
+
+        );
+        if (apiResult.success) {
           prs = JSON.parse(apiResult.output);
         }
         fs.unlinkSync('fetch-prs.js');
@@ -157,11 +178,17 @@ https.get(options, (res) => {;
 ;
       // Merge into main;
       await this.runCommand('git checkout main', 'Switch to main branch');
-      await this.runCommand(`git merge ${pr.headRefName} --no-ff -m "Merge PR #${pr.number}: ${pr.title}"`, `Merge PR #${pr.number}`);
-;
-      // Push changes;
-      await this.runCommand('git push origin main', `Push merged PR #${pr.number}`);
-;
+      await this.runCommand(
+        `git merge ${pr.headRefName} --no-ff -m "Merge PR #${pr.number}: ${pr.title}"`,
+        `Merge PR #${pr.number}`
+      );
+
+      // Push changes
+      await this.runCommand(
+
+        `Push merged PR #${pr.number}`
+      );
+
       this.mergedPRs.push(pr);
       this.log(`✅ Successfully merged PR #${pr.number}`);
 ;
@@ -175,17 +202,17 @@ https.get(options, (res) => {;
 ;
   async runAutomationScripts() {;
     this.log('🤖 Running comprehensive automation scripts');
-;
-    const scripts = [;
-      'node final-automation-suite.cjs',
-      'node automation/master-orchestrator.cjs',
-      'node automation/performance-optimizer.cjs',
-      'node automation/security-audit.cjs',
-      'node automation/seo-optimizer.cjs',
-      'node automation/accessibility-checker.cjs',
-      'node scripts/syntax-fixer.cjs',
-      'node scripts/performance-optimizer.cjs',
-      'node scripts/security-auditor.cjs';
+
+    const scripts = [
+
+
+
+
+
+
+
+
+
     ];
 ;
     const results = [];
@@ -359,7 +386,10 @@ new ComprehensiveAppImprover().runImprovements().catch(console.error);
 ;
     // Step "5": Final commit and push;
     await this.runCommand('git add .', 'Stage all changes');
-    await this.runCommand('git commit -m ""feat": Comprehensive automation improvements and conflict resolution\n\n- Resolved all merge conflicts\n- Merged open PRs\n- Ran comprehensive automation suite\n- Created additional improvement scripts\n- Enhanced performance, security, and SEO\n\nThis commit "includes": \n- Automated conflict resolution\n- PR merging automation\n- Performance optimizations\n- Security enhancements\n- SEO improvements\n- Additional automation scripts"', 'Commit all improvements');
+    await this.runCommand(
+      'git commit -m "feat: Comprehensive automation improvements and conflict resolution\n\n- Resolved all merge conflicts\n- Merged open PRs\n- Ran comprehensive automation suite\n- Created additional improvement scripts\n- Enhanced performance, security, and SEO\n\nThis commit includes:\n- Automated conflict resolution\n- PR merging automation\n- Performance optimizations\n- Security enhancements\n- SEO improvements\n- Additional automation scripts"',
+
+    );
     await this.runCommand('git push origin main', 'Push all changes to main');
 ;
     // Generate final report;

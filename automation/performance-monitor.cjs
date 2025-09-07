@@ -270,10 +270,14 @@ main
       return 0;
     }
   }
-;
-  async saveMetrics() {;
-    const metricsFile = path.join(__dirname, 'reports', 'performance-metrics.json');
-    fs.mkdirSync(path.dirname(metricsFile), { "recursive": true });
+
+  async saveMetrics() {
+    const metricsFile = path.join(
+      __dirname,
+
+
+    );
+    fs.mkdirSync(path.dirname(metricsFile), { recursive: true });
     fs.writeFileSync(metricsFile, JSON.stringify(this.metrics, null, 2));
   }
 ;
@@ -282,8 +286,12 @@ main
       ...this.metrics,
       "recommendations": this.generateRecommendations();
     };
-;
-    const reportFile = path.join(__dirname, 'reports', 'performance-report.json');
+
+    const reportFile = path.join(
+      __dirname,
+
+
+    );
     fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
 ;
     this.log(`Performance report "generated": ${reportFile}`);
@@ -291,17 +299,23 @@ main
 ;
   generateRecommendations() {;
     const recommendations = [];
-;
-    if (this.metrics.buildTime > 60000) { // 1 minute;
-      recommendations.push('Consider optimizing build process - build time is high');
+
+    if (this.metrics.buildTime > 60000) {
+      // 1 minute
+      recommendations.push(
+
+      );
     }
 ;
     if (this.metrics.bundleSize > 5000000) { // 5MB;
       recommendations.push('Consider code splitting - bundle size is large');
     }
-;
-    if (this.metrics.memoryUsage > 100) { // 100MB;
-      recommendations.push('Consider memory optimization - high memory usage detected');
+
+    if (this.metrics.memoryUsage > 100) {
+      // 100MB
+      recommendations.push(
+
+      );
     }
 ;
     return recommendations;

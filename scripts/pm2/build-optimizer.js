@@ -1,7 +1,11 @@
-    };
-  };
+};
+};
+;
   async analyzeBuild() {;
     try {;
+}};
+  async analyzeBuild() {
+    try {
       this.log('🏗️  Analyzing current build...');
       if (!fs.existsSync('dist')) {;
         this.log('📦 Building project first...');
@@ -220,13 +224,31 @@
       this.log(`Duration: ${duration,}ms`);
       if (report.optimizations.length > 0) {;
         this.log('\n💡 Optimization Recommendations: ');
-        report.optimizations.forEach(opt => {;
-          this.log(`  [${opt.priority.toUpperCase(),}] ${opt.message}`);
-          this.log(`    Action: ${opt.action,}`);
-          this.log(`    Impact: ${opt.impact,}`);
-        });
-      } else {;
-        this.log('\n✨ Build is well optimized!');
+        report.optimizations.forEach(opt => {
+          this.log(`  [${opt.priority.toUpperCase()}] ${opt.message}`);
+          this.log(`    Action: ${opt.action}`);
+          this.log(`    Impact: ${opt.impact}`)})} else {
+        this.log('\n✨ Build is well optimized!')}} catch (error) {
+      this.log(`❌ Error running build optimizer: ${error.message}`);
+      process.exit(1)}}};
+// Run the build optimizer;
+const optimizer = new BuildOptimizer();
+optimizer.run().catch(error => {;
+  process.exit(1);
+});
+    };
+  };
+,
+  async analyzeBuild() {,
+    try {,
+      this.log('🏗️  Analyzing current build...'),
+,
+      if (!fs.existsSync('dist')) {,
+        this.log('📦 Building project first...'),
+        execSync('npm run build', {,
+          cwd: this.projectRoot,
+          stdio: 'pipe',
+        }),
       };
     } catch (error) {;
       this.log(`❌ Error running build optimizer: ${error.message,}`);
@@ -234,8 +256,10 @@
     };
   };
 };
-// Run the build optimizer;
-const optimizer = new BuildOptimizer();
-optimizer.run().catch(error => {;
-  process.exit(1);
-});
+,
+// Run the build optimizer,
+const optimizer = new BuildOptimizer(),
+optimizer.run().catch(error => {,
+  process.exit(1),
+}),optimizer.run().catch(error => {
+  process.exit(1)});

@@ -21,6 +21,7 @@ class QuickSyntaxFixer {;
       const originalContent = fs.readFileSync(filePath, 'utf8');
       const content = originalContent
         // Remove merge conflict markers
+        .replace(/<<<<<<< HEAD[\s\S]*?=======[\s\S]*?        .replace(/^>>>>>>>.*$/gm, '')
 
         // Fix module.exports
         .replace(/module\.exports\s*=\s*{;/g, 'module.exports = {')
@@ -53,17 +54,17 @@ class QuickSyntaxFixer {;
 ;
   async run() {;
     this.log('🚀 Starting Quick Syntax Fixer');
-;
-    // Fix critical files first;
-    const criticalFiles = [;
-      'components/AccessibilityEnhancer.tsx',
-      '.eslintrc.js',
-      'ecosystem.config.cjs',
-      'run-automation-suite.cjs',
-      'scripts/fix-syntax-errors.cjs',
-      'scripts/performance-monitor.cjs',
-      'scripts/security-audit.cjs',
-      'scripts/health-check.cjs';
+
+    // Fix critical files first
+    const criticalFiles = [
+
+
+
+
+
+
+
+
     ];
 ;
     let fixedCount = 0;

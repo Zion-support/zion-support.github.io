@@ -32,9 +32,12 @@ class DeploymentAndMerge {;
 ;
   async checkCurrentBranch() {;
     this.log('\n🔍 CHECKING CURRENT BRANCH');
-    const result = await this.runCommand('git branch --show-current', 'Get Current Branch');
-    if (result.success) {;
-      this.log(`Current "branch": ${result.output.trim()}`);
+    const result = await this.runCommand(
+
+
+    );
+    if (result.success) {
+      this.log(`Current branch: ${result.output.trim()}`);
       return result.output.trim();
     }
     return null;
@@ -42,8 +45,11 @@ class DeploymentAndMerge {;
 ;
   async checkGitStatus() {;
     this.log('\n📊 CHECKING GIT STATUS');
-    const statusResult = await this.runCommand('git status --porcelain', 'Check Git Status');
-    if (statusResult.success) {;
+    const statusResult = await this.runCommand(
+
+
+    );
+    if (statusResult.success) {
       const changes = statusResult.output.trim();
       if (changes) {;
         this.log('Uncommitted changes "detected": ');
@@ -59,11 +65,14 @@ class DeploymentAndMerge {;
 ;
   async runFinalTests() {;
     this.log('\n🧪 RUNNING FINAL TESTS');
-;
-    // Run smoke tests;
-    const smokeTests = await this.runCommand('npm run "test": smoke', 'Smoke Tests');
-;
-    // Run build test;
+
+    // Run smoke tests
+    const smokeTests = await this.runCommand(
+
+
+    );
+
+    // Run build test
     const buildTest = await this.runCommand('npm run build', 'Build Test');
 ;
     return smokeTests.success && buildTest.success;
@@ -84,12 +93,15 @@ class DeploymentAndMerge {;
       if (currentBranch !== 'main') {;
         await this.runCommand('git checkout main', 'Ensure on Main Branch');
       }
-;
-      // Merge the feature branch;
-      const mergeResult = await this.runCommand('git merge cursor/automate-test-improve-and-merge-code-1436', 'Merge Feature Branch');
-;
-      if (mergeResult.success) {;
-        // Push merged changes;
+
+      // Merge the feature branch
+      const mergeResult = await this.runCommand(
+
+
+      );
+
+      if (mergeResult.success) {
+        // Push merged changes
         await this.runCommand('git push origin main', 'Push Merged Changes');
         return true;
       }
@@ -114,27 +126,30 @@ class DeploymentAndMerge {;
         "automationScriptsCreated": true,
         "codeQualityImproved": true;
       },
-      "filesModified": [;
-        'pages/index.tsx',
-        'components/PerformanceMonitor.tsx',
-        'eslint.config.js',
-        'jest.config.smoke.cjs',
-        'jest.setup.js',
-        'comprehensive-automation-runner.cjs',
-        'enhanced-automation-suite.cjs',
-        'deployment-and-merge.cjs';
+      filesModified: [
+
+
+
+
+
+
+
+
       ],
-      "status": 'Ready for Production',
-      "nextSteps": [;
-        'Monitor application performance',
-        'Address remaining linting warnings',
-        'Implement continuous integration',
-        'Add more comprehensive testing';
-      ];
+      status: 'Ready for Production',
+      nextSteps: [
+
+
+
+
+      ],
     };
-;
-    fs.writeFileSync('deployment-summary.json', JSON.stringify(summary, null, 2));
-    this.log('Deployment summary "created": deployment-summary.json');
+
+    fs.writeFileSync(
+
+      JSON.stringify(summary, null, 2)
+    );
+    this.log('Deployment summary created: deployment-summary.json');
   }
 ;
   async run() {;

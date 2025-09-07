@@ -2,12 +2,12 @@
 const { execSync } = require('child_process');
 ;
 console.log('🚀 Starting Deployment Process...');
-;
-const steps = [;
-  { "name": 'Install Dependencies', "command": 'npm ci' },
-  { "name": 'Run Tests', "command": 'npm run "test": smoke' },
-  { "name": 'Build Application', "command": 'npm run build' },
-  { "name": 'Deploy to Production', "command": 'npm run "deploy": production' }
+
+const steps = [
+  { name: 'Install Dependencies', command: 'npm ci' },
+  { name: 'Run Tests', command: 'npm run test:smoke' },
+  { name: 'Build Application', command: 'npm run build' },
+  { name: 'Deploy to Production', command: 'npm run deploy:production' }
 ];
 ;
 steps.forEach(step => {;

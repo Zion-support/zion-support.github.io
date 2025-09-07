@@ -71,11 +71,11 @@ class ImportCleaner {;
 ;
   async cleanAllFiles() {;
     this.log('🚀 Starting import cleaning...');
-;
-    const filesToClean = [;
-      'pages/components/Navigation.tsx',
-      'pages/it-services.tsx',
-      'pages/components/Footer.tsx';
+
+    const filesToClean = [
+
+
+
     ];
 ;
     for (const file of filesToClean) {;

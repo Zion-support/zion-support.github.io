@@ -36,9 +36,12 @@ class MergeConflictResolver {;
 ;
   async resolveMergeConflicts() {;
     this.log('Resolving merge conflicts...', 'PROGRESS');
-;
-    // Check current status;
-    const status = await this.runCommand('git status --porcelain', 'Check git status');
+
+    // Check current status
+    const status = await this.runCommand(
+
+
+    );
     if (!status.success) return false;
 ;
     // If there are conflicts, resolve them;
@@ -47,9 +50,12 @@ class MergeConflictResolver {;
 ;
       // Add all files to resolve conflicts;
       await this.runCommand('git add .', 'Add all files to resolve conflicts');
-;
-      // Commit the resolution;
-      await this.runCommand('git commit -m "Resolve merge conflicts automatically"', 'Commit conflict resolution');
+
+      // Commit the resolution
+      await this.runCommand(
+        'git commit -m "Resolve merge conflicts automatically"',
+
+      );
     }
 ;
     return true;
@@ -57,24 +63,36 @@ class MergeConflictResolver {;
 ;
   async handleGitOperations() {;
     this.log('Handling git operations...', 'PROGRESS');
-;
-    // Try to pull latest changes;
-    await this.runCommand('git pull origin main --no-edit', 'Pull latest changes');
-;
-    // Resolve any conflicts;
+
+    // Try to pull latest changes
+    await this.runCommand(
+
+
+    );
+
+    // Resolve any conflicts
     await this.resolveMergeConflicts();
 ;
     // Add all changes;
     await this.runCommand('git add .', 'Add all changes');
-;
-    // Commit changes;
-    await this.runCommand('git commit -m ""feat": Comprehensive automation improvements and fixes\n\n- Fixed syntax errors and build issues\n- Resolved merge conflicts\n- Enhanced automation scripts\n- Added performance optimizations\n- Improved security configurations\n- Created comprehensive monitoring system"', 'Commit improvements');
-;
-    // Push to current branch;
-    const branchResult = await this.runCommand('git branch --show-current', 'Get current branch');
-    if (branchResult.success) {;
+
+    // Commit changes
+    await this.runCommand(
+      'git commit -m "feat: Comprehensive automation improvements and fixes\n\n- Fixed syntax errors and build issues\n- Resolved merge conflicts\n- Enhanced automation scripts\n- Added performance optimizations\n- Improved security configurations\n- Created comprehensive monitoring system"',
+
+    );
+
+    // Push to current branch
+    const branchResult = await this.runCommand(
+
+
+    );
+    if (branchResult.success) {
       const currentBranch = branchResult.output.trim();
-      await this.runCommand(`git push origin ${currentBranch}`, 'Push to current branch');
+      await this.runCommand(
+        `git push origin ${currentBranch}`,
+
+      );
     }
   }
 ;
@@ -85,11 +103,14 @@ class MergeConflictResolver {;
     try {;
       execSync('gh --version', { "stdio": 'ignore' });
       this.log('GitHub CLI found', 'SUCCESS');
-;
-      // List open PRs;
-      const prsResult = await this.runCommand('gh pr list --state open', 'List open PRs');
-      if (prsResult.success && prsResult.output.trim()) {;
-        this.log('Open PRs "found": ', 'INFO');
+
+      // List open PRs
+      const prsResult = await this.runCommand(
+
+
+      );
+      if (prsResult.success && prsResult.output.trim()) {
+        this.log('Open PRs found:', 'INFO');
         console.log(prsResult.output);
 ;
         // Get PR numbers;
@@ -110,12 +131,15 @@ class MergeConflictResolver {;
       this.log('GitHub CLI not available, skipping PR operations', 'WARNING');
     }
   }
-;
-  async run() {;
-    this.log('🚀 Starting Merge Conflict Resolution and PR Management', 'PROGRESS');
-;
-    try {;
-      // Handle git operations;
+
+  async run() {
+    this.log(
+
+
+    );
+
+    try {
+      // Handle git operations
       await this.handleGitOperations();
 ;
       // Check and merge PRs;

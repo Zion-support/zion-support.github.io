@@ -271,8 +271,12 @@ if (require.main === module) {;
 }
 ;
 module.exports = IntelligentErrorDetector;`;
-;
-    const scriptPath = path.join(this.projectRoot, 'automation', 'intelligent-error-detector.cjs');
+
+    const scriptPath = path.join(
+      this.projectRoot,
+
+
+    );
     fs.writeFileSync(scriptPath, script);
     this.improvements.push('Created intelligent error detector');
     this.log('✅ Created intelligent error detector');
@@ -427,8 +431,12 @@ if (require.main === module) {;
 }
 ;
 module.exports = PerformanceMonitor;`;
-;
-    const scriptPath = path.join(this.projectRoot, 'automation', 'performance-monitor.cjs');
+
+    const scriptPath = path.join(
+      this.projectRoot,
+
+
+    );
     fs.writeFileSync(scriptPath, script);
     this.improvements.push('Created performance monitor');
     this.log('✅ Created performance monitor');
@@ -624,8 +632,12 @@ if (require.main === module) {;
 }
 ;
 module.exports = SecurityScanner;`;
-;
-    const scriptPath = path.join(this.projectRoot, 'automation', 'security-scanner.cjs');
+
+    const scriptPath = path.join(
+      this.projectRoot,
+
+
+    );
     fs.writeFileSync(scriptPath, script);
     this.improvements.push('Created security scanner');
     this.log('✅ Created security scanner');
@@ -772,8 +784,12 @@ if (require.main === module) {;
 }
 ;
 module.exports = GitWorkflowAutomator;`;
-;
-    const scriptPath = path.join(this.projectRoot, 'automation', 'git-workflow-automator.cjs');
+
+    const scriptPath = path.join(
+      this.projectRoot,
+
+
+    );
     fs.writeFileSync(scriptPath, script);
     this.improvements.push('Created Git workflow automator');
     this.log('✅ Created Git workflow automator');
@@ -789,21 +805,32 @@ module.exports = GitWorkflowAutomator;`;
       this.createPerformanceMonitor();
       this.createSecurityScanner();
       this.createGitWorkflowAutomator();
-;
-      // Run the new scripts;
-      await this.runCommand('node automation/intelligent-error-detector.cjs', 'Run error detector');
-      await this.runCommand('node automation/performance-monitor.cjs', 'Run performance monitor');
-      await this.runCommand('node automation/security-scanner.cjs', 'Run security scanner');
-;
+
+      // Run the new scripts
+      await this.runCommand(
+
+
+      );
+      await this.runCommand(
+
+
+      );
+      await this.runCommand(
+
+
+      );
+
       this.log('\\n📊 ADVANCED AUTOMATION IMPROVEMENTS COMPLETED');
       this.log('='.repeat(60));
       this.log(`Total "improvements": ${this.improvements.length}`);
       this.improvements.forEach((improvement, index) => {;
         this.log(`${index + 1}. ${improvement}`);
       });
-;
-    } catch (error) {;
-      this.log(`Advanced automation improvements "failed": ${error.message}`, 'ERROR');
+    } catch (error) {
+      this.log(
+        `Advanced automation improvements failed: ${error.message}`,
+
+      );
     }
   }
 }

@@ -8,6 +8,10 @@ const fs = require("fs");
 const path = require("path");
 const { execSync } = require("child_process");
 
+const fs = require('fs');
+const path = require('path');
+const { execSync } = require('child_process');
+
 class PerformanceOptimizer {
   constructor() {
     this.projectRoot = process.cwd();
@@ -69,24 +73,288 @@ class PerformanceOptimizer {
     }
   }
 
-  getDirectorySize(dir) {
-    let totalSize = 0;
+  analyzeBundleSize() {
+    try {
+      // Check if dist directory exists
+      const distPath = path.join(__dirname, '..', 'dist');
+      if (!fs.existsSync(distPath)) {
+        return { error: 'Build directory not found. Run npm run build first.' };
+      }
+
+      const files = this.getFilesRecursively(distPath);
+      let totalSize = 0;
+      let gzippedSize = 0;
+      
+      files.forEach(file => {
+        const stats = fs.statSync(file);
+        totalSize += stats.size;
+        
+        // Estimate gzipped size (roughly 30% of original)
+        gzippedSize += Math.floor(stats.size * 0.3);
+      });
+
+      return {
+        totalSize: this.formatBytes(totalSize),
+        gzippedSize: this.formatBytes(gzippedSize),
+        fileCount: files.length,
+        recommendations: this.getBundleRecommendations(totalSize, files.length)
+      };
+    } catch (error) {
+      return { error: error.message };
+    }
+  }
+function log(message, level = 'INFO') {
+  const timestamp = new Date().toISOString();
+  console.log(`[${timestamp}] [${level}] ${message}`)}
+
+function createPerformanceOptimizations() {
+  log('⚡ Creating performance optimizations...');
+  
+  // Create a performance monitoring component
+  const performanceMonitorContent = `import React, { useEffect, useState } from 'react';
+
+interface PerformanceMetrics {
+  loadTime: number;
+  memoryUsage: number;
+  renderTime: number}
+
+const PerformanceMonitor: React.FC = () => {
+  const [metrics, setMetrics] = useState<PerformanceMetrics>({
+    loadTime: 0,
+    memoryUsage: 0,
+    renderTime: 0
+  });
+
+  useEffect(() => {
+    const startTime = performance.now();
     
-    const scanDirectory = (currentDir) => {
-      try {
-        const items = fs.readdirSync(currentDir);
-        for (const item of items) {
-          const fullPath = path.join(currentDir, item);
-          const stat = fs.statSync(fullPath);
-          
-          if (stat.isDirectory()) {
-            scanDirectory(fullPath);
-          } else {
-            totalSize += stat.size;
-          }
+    // Measure page load time
+    if (window.performance.timing) {
+      const loadTime = window.performance.timing.loadEventEnd - window.performance.timing.navigationStart;
+      setMetrics(prev => ({ ...prev, loadTime }))}
+
+    // Measure memory usage (if available)
+    if ('memory' in performance) {
+      const memory = (performance as any).memory;
+      setMetrics(prev => ({ 
+        ...prev, 
+        memoryUsage: Math.round(memory.usedJSHeapSize / 1024 / 1024) 
+      }))}
+
+    // Measure render time
+    const endTime = performance.now();
+    setMetrics(prev => ({ ...prev, renderTime: Math.round(endTime - startTime) }))}, []);
+
+  return (
+    <div className="bg- gray-100 p-4 rounded-lg">
+      <h3 className=" text-lg font-semibold mb-4">Performance Metrics</h3>
+      <div className=" grid grid-cols-1 md:grid-cols-3 gap-4">
+        <div className="bg- white p-3 rounded">
+          <div className=" text-sm text-gray-600">Load Time</div>
+          <div className=" text-2xl font-bold text-blue-600">{metrics.loadTime}ms</div>
+        </div>
+        <div className="bg- white p-3 rounded">
+          <div className=" text-sm text-gray-600">Memory Usage</div>
+          <div className=" text-2xl font-bold text-green-600">{metrics.memoryUsage}MB</div>
+        </div>
+        <div className="bg- white p-3 rounded">
+          <div className=" text-sm text-gray-600">Render Time</div>
+          <div className=" text-2xl font-bold text-purple-600">{metrics.renderTime}ms</div>
+        </div>
+      </div>
+    </div>
+  )};
+
+export default PerformanceMonitor;
+`;
+
+  const performancePath = path.join(process.cwd(), 'src/components/PerformanceMonitor.tsx');
+  fs.writeFileSync(performancePath, performanceMonitorContent);
+  log('Created PerformanceMonitor component')}
+
+function createBundleAnalyzer() {
+  log('📊 Creating bundle analyzer...');
+  
+  const bundleAnalyzerContent = `import React, { useEffect, useState } from 'react';
+
+interface BundleInfo {
+  totalSize: number;
+  jsSize: number;
+  cssSize: number;
+  imageSize: number}
+
+const BundleAnalyzer: React.FC = () => {
+  const [bundleInfo, setBundleInfo] = useState<BundleInfo>({
+    totalSize: 0,
+    jsSize: 0,
+    cssSize: 0,
+    imageSize: 0
+  });
+
+  useEffect(() => {
+    // Simulate bundle analysis
+    const analyzeBundle = () => {
+      // In a real implementation, this would analyze the actual bundle
+      setBundleInfo({
+        totalSize: 1024 * 1024, // 1MB
+        jsSize: 800 * 1024,      // 800KB
+        cssSize: 200 * 1024,     // 200KB
+        imageSize: 24 * 1024     // 24KB
+      })};
+
+    analyzeBundle()}, []);
+
+  getFilesRecursively(dir) {
+    let files = [];
+    const items = fs.readdirSync(dir);
+    
+    items.forEach(item => {
+      const fullPath = path.join(dir, item);
+      const stat = fs.statSync(fullPath);
+      
+      if (stat.isDirectory()) {
+        files = files.concat(this.getFilesRecursively(fullPath));
+      } else {
+        files.push(fullPath);
+      }
+    });
+    
+    return files;
+  }
+
+  formatBytes(bytes) {
+    if (bytes === 0) return '0 Bytes';
+    const k = 1024;
+    const sizes = ['Bytes', 'KB', 'MB', 'GB'];
+    const i = Math.floor(Math.log(bytes) / Math.log(k));
+    return parseFloat((bytes / Math.pow(k, i)).toFixed(2)) + ' ' + sizes[i];
+  }
+    return parseFloat((bytes / Math.pow(k, i)).toFixed(2)) + ' ' + sizes[i]};
+
+  getBundleRecommendations(totalSize, fileCount) {
+    const recommendations = [];
+    
+    if (totalSize > 1024 * 1024) { // > 1MB
+      recommendations.push('Consider code splitting to reduce initial bundle size');
+    }
+    
+    if (fileCount > 50) {
+      recommendations.push('Consider consolidating small files');
+    }
+    
+    recommendations.push('Enable gzip compression on your server');
+    recommendations.push('Use CDN for static assets');
+    
+    return recommendations;
+  }
+
+  optimizeImages() {
+    try {
+      const publicPath = path.join(__dirname, '..', 'public');
+      if (!fs.existsSync(publicPath)) {
+        return { error: 'Public directory not found' };
+      }
+
+      const imageFiles = this.getImageFiles(publicPath);
+      let totalSize = 0;
+      let optimizedCount = 0;
+      
+      imageFiles.forEach(file => {
+        const stats = fs.statSync(file);
+        totalSize += stats.size;
+        
+        // Check if image is already optimized (WebP, compressed)
+        if (file.endsWith('.webp') || file.endsWith('.avif')) {
+          optimizedCount++;
         }
-      } catch (error) {
-        // Ignore permission errors
+      });
+        <div className=" space-y-2">
+          <div className=" flex justify-between items-center p-2 bg-blue-50 rounded">
+            <span>JavaScript</span>
+            <span className=" font-medium">{formatBytes(bundleInfo.jsSize)}</span>
+          </div>
+          
+          <div className=" flex justify-between items-center p-2 bg-green-50 rounded">
+            <span>CSS</span>
+            <span className=" font-medium">{formatBytes(bundleInfo.cssSize)}</span>
+          </div>
+          
+          <div className=" flex justify-between items-center p-2 bg-purple-50 rounded">
+            <span>Images</span>
+            <span className=" font-medium">{formatBytes(bundleInfo.imageSize)}</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  )};
+
+      return {
+        totalImages: imageFiles.length,
+        optimizedImages: optimizedCount,
+        totalSize: this.formatBytes(totalSize),
+        recommendations: this.getImageRecommendations(imageFiles)
+      };
+    } catch (error) {
+      return { error: error.message };
+    }
+  }
+
+  getImageFiles(dir) {
+    const imageExtensions = ['.jpg', '.jpeg', '.png', '.gif', '.webp', '.avif', '.svg'];
+    const files = this.getFilesRecursively(dir);
+    
+    return files.filter(file => {
+      const ext = path.extname(file).toLowerCase();
+      return imageExtensions.includes(ext);
+    });
+  }
+
+  getImageRecommendations(imageFiles) {
+    const recommendations = [];
+    
+    const unoptimizedImages = imageFiles.filter(file => 
+      !file.endsWith('.webp') && !file.endsWith('.avif')
+    );
+    
+    if (unoptimizedImages.length > 0) {
+      recommendations.push(`Convert ${unoptimizedImages.length} images to WebP format`);
+    }
+    
+    recommendations.push('Use responsive images with srcset');
+    recommendations.push('Implement lazy loading for images');
+    
+    return recommendations;
+  }
+
+  analyzeDependencies() {
+    try {
+      const packageJsonPath = path.join(__dirname, '..', 'package.json');
+      const packageJson = JSON.parse(fs.readFileSync(packageJsonPath, 'utf8'));
+      
+      const dependencies = Object.keys(packageJson.dependencies || {});
+      const devDependencies = Object.keys(packageJson.devDependencies || {});
+      
+      return {
+        totalDependencies: dependencies.length + devDependencies.length,
+        productionDependencies: dependencies.length,
+        devDependencies: devDependencies.length,
+        potentialUnused: this.findUnusedDependencies(dependencies),
+        recommendations: this.getDependencyRecommendations(dependencies, devDependencies)
+      };
+    } catch (error) {
+      return { error: error.message };
+    }
+  }
+
+  findUnusedDependencies(dependencies) {
+    // This is a simplified check - in a real scenario, you'd use tools like depcheck
+    const potentiallyUnused = [];
+    
+    // Check for common unused dependencies
+    const commonUnused = ['lodash', 'moment', 'jquery'];
+    commonUnused.forEach(dep => {
+      if (dependencies.includes(dep)) {
+        potentiallyUnused.push(dep);
       }
     };
     
@@ -316,94 +584,38 @@ class PerformanceOptimizer {
   }
 
   generateRecommendations() {
-    const recommendations = [];
-    
-    if (this.optimizations.filter(o => o.priority === "high").length > 0) {
-      recommendations.push("Address high-priority optimizations immediately");
-    }
-    
-    if (this.metrics.buildTime > 60000) {
-      recommendations.push("Consider implementing build caching strategies");
-    }
-    
-    if (this.metrics.dependencies.outdated > 5) {
-      recommendations.push("Regularly update dependencies to maintain security and performance");
-    }
-    
-    recommendations.push("Implement continuous performance monitoring");
-    recommendations.push("Set up automated performance testing in CI/CD");
-    recommendations.push("Regularly audit and optimize bundle size");
-    
-    return recommendations;
+    return [
+
+
+
+
+
+
+
+
+
+
+    ];
   }
 
-  generateMarkdownReport(report) {
-    return `# Performance Optimization Report
-
-**Generated:** ${report.timestamp}
-
-## Metrics Summary
-- **Build Time:** ${report.metrics.buildTime > 0 ? (report.metrics.buildTime / 1000).toFixed(2) + 's' : 'Failed'}
-- **Static Bundle Size:** ${report.metrics.bundleSize.static ? (report.metrics.bundleSize.static / 1024 / 1024).toFixed(2) + 'MB' : 'N/A'}
-- **Total Dependencies:** ${report.metrics.dependencies.total || 0}
-- **Outdated Dependencies:** ${report.metrics.dependencies.outdated || 0}
-- **Lint Issues:** ${report.metrics.performance.lintIssues || 0}
-- **TypeScript Errors:** ${report.metrics.performance.typeErrors || 0}
-
-## Optimization Summary
-- **Total Optimizations:** ${report.summary.totalOptimizations}
-- **High Priority:** ${report.summary.highPriority}
-- **Medium Priority:** ${report.summary.mediumPriority}
-- **Low Priority:** ${report.summary.lowPriority}
-
-## Optimizations by Priority
-
-### High Priority
-${report.optimizations
-  .filter(o => o.priority === "high")
-  .map(o => `- **${o.title}** (${o.category})\n  - ${o.description}\n  - Action: ${o.action}`)
-  .join('\n')}
-
-### Medium Priority
-${report.optimizations
-  .filter(o => o.priority === "medium")
-  .map(o => `- **${o.title}** (${o.category})\n  - ${o.description}\n  - Action: ${o.action}`)
-  .join('\n')}
-
-### Low Priority
-${report.optimizations
-  .filter(o => o.priority === "low")
-  .map(o => `- **${o.title}** (${o.category})\n  - ${o.description}\n  - Action: ${o.action}`)
-  .join('\n')}
-
-## Recommendations
-${report.recommendations.map(item => `- ${item}`).join('\n')}
-`;
+  saveReport(report) {
+    const reportFile = path.join(__dirname, '..', 'logs', 'performance-report.json');
+    fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
+    this.log(`Performance report saved to: ${reportFile}`);
   }
+  const bundlePath = path.join(process.cwd(), 'src/components/BundleAnalyzer.tsx');
+  fs.writeFileSync(bundlePath, bundleAnalyzerContent);
+  log('Created BundleAnalyzer component')}
 
-  async run() {
-    this.log("🚀 Starting Performance Optimization Analysis...");
-    
-    try {
-      await this.analyzeBundleSize();
-      await this.analyzeDependencies();
-      await this.measureBuildTime();
-      await this.analyzeCodeQuality();
-      
-      this.generateOptimizations();
-      const report = this.generateReport();
-      
-      this.log("🎉 Performance optimization analysis completed!", "success");
-      this.log(`📊 Generated ${this.optimizations.length} optimization recommendations`);
-      
-      return report;
-    } catch (error) {
-      this.log(`❌ Performance optimization failed: ${error.message}`, "error");
-      throw error;
-    }
-  }
-;
-;
+function main() {
+  log('🚀 Starting Performance Optimizations');
+  
+  try {
+    createPerformanceOptimizations();
+    createBundleAnalyzer();
+    log('✅ Performance optimizations completed successfully')} catch (error) {
+    log(`❌ Performance optimizations failed: ${error.message}`, 'ERROR');
+    process.exit(1)}
 }
 
 // Main execution

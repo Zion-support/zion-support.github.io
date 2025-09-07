@@ -2,8 +2,11 @@
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
+;
 class GitWorkflow {;
   constructor() {;
+class GitWorkflow {
+  constructor() {
     this.projectRoot = process.cwd();
     this.logFile = path.join(this.projectRoot, 'logs/pm2/git-workflow.log');
     this.reportFile = path.join(this.projectRoot, 'logs/pm2/git-workflow-report.json');
@@ -262,12 +265,66 @@ class GitWorkflow {;
       this.log(`Duration: ${duration,}ms`);
       if (report.recommendations.length > 0) {;
         this.log('\n💡 Recommendations: ');
-        report.recommendations.forEach(rec => {;
-          this.log(`  [${rec.priority.toUpperCase(),}] ${rec.message}`);
-          this.log(`    Action: ${rec.action,}`);
-        });
-      } else {;
-        this.log('\n✨ Git workflow is healthy!');
+        report.recommendations.forEach(rec => {
+          this.log(`  [${rec.priority.toUpperCase()}] ${rec.message}`);
+          this.log(`    Action: ${rec.action}`)})} else {
+        this.log('\n✨ Git workflow is healthy!')}} catch (error) {
+      this.log(`❌ Error running git workflow monitor: ${error.message}`);
+      process.exit(1)}}};
+// Run the git workflow monitor;
+const gitWorkflow = new GitWorkflow();
+gitWorkflow.run().catch(error => {;
+  process.exit(1);
+});
+#!/usr/bin/env node,
+const fs = require('fs'),
+const path = require('path'),
+const { execSync } = require('child_process'),
+,
+class GitWorkflow {,
+  constructor() {,
+    this.projectRoot = process.cwd(),
+    this.logFile = path.join(this.projectRoot, 'logs/pm2/git-workflow.log'),
+    this.reportFile = path.join(this.projectRoot, 'logs/pm2/git-workflow-report.json'),
+    this.startTime = Date.now(),
+  };
+,
+  log(message) {,
+    const timestamp = new Date().toISOString(),
+    const logMessage = `[${timestamp}] ${message}\n`,
+,
+    try {,
+      fs.appendFileSync(this.logFile, logMessage),
+    } catch (error) {,
+      console.error('Error writing to log file:', error.message),
+    };
+  };
+,
+  async checkGitStatus() {,
+    try {,
+      this.log('📋 Checking git status...'),
+,
+      const status = execSync('git status --porcelain', {,
+        cwd: this.projectRoot,
+        encoding: 'utf8',
+      }),
+,
+      const branches = execSync('git branch -a', {,
+        cwd: this.projectRoot,
+        encoding: 'utf8',
+      }),
+,
+      const currentBranch = execSync('git branch --show-current', {,
+        cwd: this.projectRoot,
+        encoding: 'utf8',
+      }).trim(),
+,
+      return {,
+        success: true,
+        hasChanges: status.trim().length > 0,
+        changes: status.trim().split('\n').filter(line => line.trim()),
+        branches: branches.trim().split('\n'),
+        currentBranch: currentBranch,
       };
     } catch (error) {;
       this.log(`❌ Error running git workflow monitor: ${error.message,}`);
@@ -275,8 +332,11 @@ class GitWorkflow {;
     };
   };
 };
-// Run the git workflow monitor;
-const gitWorkflow = new GitWorkflow();
-gitWorkflow.run().catch(error => {;
-  process.exit(1);
-});
+,
+// Run the git workflow monitor,
+const gitWorkflow = new GitWorkflow(),
+gitWorkflow.run().catch(error => {,
+  process.exit(1),
+}),
+gitWorkflow.run().catch(error => {
+  process.exit(1)});
