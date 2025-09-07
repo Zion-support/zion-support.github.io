@@ -1,5 +1,4 @@
-<<<<<<< HEAD
-=======
+
 import React from 'react',
 import SEO from '../components/SEO';
 import Link from 'next/link';
@@ -15,7 +14,6 @@ export default function RAGEvaluationLabPage() {
 							</div>
 						))}
 					</div>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 
   return (
     <>;
@@ -34,47 +32,7 @@ export default function RAGEvaluationLabPage() {
                 <p className='mt-2 text-sm text-gray-300'>{f && f.desc}</p>;
               </div>;
             ))}
-<<<<<<< HEAD
-                    /mo;
-                  </span>;
-                </p>;
-              </div>;
-						<Link href="/contact" className="px-5 py-3 rounded-lg bg-cyan-400 text-black font-semibold">Start Evaluating</Link>
-						<a href="mailto:kleber@ziontechgroup.com" className="px-5 py-3 rounded-lg border border-white/20">Email: kleber@ziontechgroup.com</a>
-						<span className="text-gray-400">Call: +1 302 464 0950</span>
-					</div>
-				</div>
-			</section>
-		</>
-	)
-}
-          <div className='mt - 12 flex flex - wrap items - center gap - 4'>;
-            <Link;
-              href='/contact';
-              className='px - 5 py - 3 rounded - lg bg - cyan - 400 text - black font - semibold';
-            >;
-              Start Evaluating;
-            </Link>;
-            <a;
-              href='mailto:kleber@ziontechgroup.com';
-              className='px - 5 py - 3 rounded - lg border border - white / 20';
-            >;
-              Email: kleber@ziontechgroup.com;
-            </a>;
-            <span className='text - gray - 400'>Call: +1 302 464 0950</span>;
-          </div>;
-        </div>;
-      </section>;
-    </>);					<div className="mt - 12 flex flex - wrap items-center gap-4">;
-      <Link href="/contact" className="px - 5 py - 3 rounded - lg bg - cyan - 400 text-black font-semibold">Start Evaluating</Link>;
-      <a href="mailto:kleber@ziontechgroup.com" className="px - 5 py - 3 rounded-lg border border-white / 20">Email: kleber@ziontechgroup.com</a>;
-      <span className="text-gray-400">Call: +1 302 464 0950</span>;
-    </div>;
-    </div>;
-  </section>;
-  </>);
-}
-=======
+
           </div>
           <div className='mt-12'>
             <h2 className='text-2xl font-semibold'>Pricing</h2>
@@ -161,4 +119,3 @@ export default function RAGEvaluationLabPage() {
       </section>
     </>
   );
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

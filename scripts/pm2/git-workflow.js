@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> d0a9ec4ff3a15c755bf51b53a72e5129849de793
+
             }).trim(),
 ,
             const commitCount = execSync(`git rev-list --count origin/${branchName}`, {,
@@ -309,34 +305,13 @@
     } catch (error) {,;
       this.log(`❌ Error running git workflow: monitor: ${error.message}`),;
       process.exit(1);
-<<<<<<< HEAD
+
 =======
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 #!/usr/bin/env node;
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
-<<<<<<< HEAD
 
-class GitWorkflow {
-  constructor() {
-    this.projectRoot = process.cwd();
-    this.logFile = path.join(this.projectRoot, 'logs/pm2/git-workflow.log');
-    this.reportFile = path.join(this.projectRoot, 'logs/pm2/git-workflow-report.json');
-    this.startTime = Date.now();
-  }
-
-  log(message) {
-    const timestamp = new Date().toISOString();
-    const logMessage = `[${timestamp}] ${message}\n`;
-    try {
-      fs.appendFileSync(this.logFile, logMessage);
-    } catch (error) {
-      console.error('Error writing to log file: ', error.message);
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
->>>>>>> d0a9ec4ff3a15c755bf51b53a72e5129849de793
     }
   }
 
@@ -384,9 +359,7 @@ class GitWorkflow {
       }).trim().split('\n');
       const branchInfo = [];
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
+
       for (const branch of branches) {
         const branchName = branch.replace('origin/', '').trim();
         if (branchName && !branchName.includes('HEAD')) {
@@ -641,7 +614,6 @@ if (require.main === module) {
 }
 
 module.exports = GitWorkflow;
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 ;
 class GitWorkflow {; constructor() {; this.projectRoot = process.cwd(); this.logFile = path.join(this.projectRoot, 'logs/pm2/git-workflow.log'); this.reportFile = path.join(this.projectRoot, 'logs/pm2/git-workflow-report.json'); this.startTime = Date.now()};
@@ -694,6 +666,4 @@ class GitWorkflow {; constructor() {; this.projectRoot = process.cwd(); this.log
 // Run the git workflow monitor;
 const gitWorkflow = new GitWorkflow();
 gitWorkflow.run().catch(error = > {; process.exit(1)});
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 =======
->>>>>>> d0a9ec4ff3a15c755bf51b53a72e5129849de793

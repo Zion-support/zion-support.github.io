@@ -32,21 +32,4 @@
       </ul>
     </div>
   );
-<<<<<<< HEAD
-export async function getStaticProps() {;
-  try{;
-    const p = path && path.join(process && process.cwd(),'datagovernanceproposals && datagovernanceproposals.json');
-    const raw = fs && fs.readFileSync(p,'utf8');
-    return { props: { data: JSON && JSON.parse(raw) } }
-  }catch{;
-  try{
-    </div>;
-  );
-}
 
-}
-    return { props: { data: { updated_at: null, proposals: [] } } }
-  }
-}
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

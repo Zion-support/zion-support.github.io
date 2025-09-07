@@ -1,5 +1,4 @@
-<<<<<<< HEAD
-=======
+
 import React from 'react';
 import Head from 'next/head';
 
@@ -263,4 +262,3 @@ export default function Terms() {
     </>
   );
 }
->>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0

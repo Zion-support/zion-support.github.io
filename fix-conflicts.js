@@ -6,13 +6,10 @@ function fixMergeConflicts(filePath) {
     let content = fs.readFileSync(filePath, 'utf8');
     
     // Remove merge conflict markers and keep the newer content (after =======)
-    content = content.replace(/<<<<<<< HEAD[\s\S]*?=======([\s\S]*?)>>>>>>> [^\n]*/g, '$1');
-    
+    content = content.replace(/([\s\S]*?)    
     // Remove any remaining conflict markers
-    content = content.replace(/<<<<<<< HEAD[\s\S]*?=======[\s\S]*?>>>>>>> [^\n]*/g, '');
-    content = content.replace(/<<<<<<< HEAD[\s\S]*?=======/g, '');
-    content = content.replace(/=======[\s\S]*?>>>>>>> [^\n]*/g, '');
-    
+    content = content.replace(/[\s\S]*?    content = content.replace(//g, '');
+    content = content.replace(/=======[\s\S]*?    
     fs.writeFileSync(filePath, content);
     console.log(`Fixed: ${filePath}`);
   } catch (error) {

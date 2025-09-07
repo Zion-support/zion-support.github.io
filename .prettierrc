@@ -1,15 +1,4 @@
 {
-<<<<<<< HEAD
-  "semi": false,
-  "singleQuote": true,
-  "tabWidth": 2,
-  "trailingComma": "es5",
-  "printWidth": 80,
-  "bracketSpacing": true,
-  "arrowParens": "avoid",
-  "endOfLine": "lf"
-}
-=======
   "semi": true,
   "trailingComma": "es5",
   "singleQuote": true,
@@ -24,4 +13,3 @@
   "jsxSingleQuote": true,
   "proseWrap": "preserve"
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

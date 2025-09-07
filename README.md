@@ -11,21 +11,7 @@ Zion Tech Group is a cutting-edge technology company specializing in AI-powered 
 - **Custom Development**: Tailored software solutions for unique business needs
 
 ## 🛠️ Technology Stack
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-- **Frontend**: React 18, TypeScript, Vite
-- **Styling**: Tailwind CSS, Custom CSS
-- **Routing**: React Router DOM
-- **Icons**: Lucide React
-- **SEO**: React Helmet Async
-- **Animations**: Framer Motion
-- **Build Tool**: Vite with ESBuild
-- **Package Manager**: npm
-
-## 📦 Installation
-=======
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 A modern, responsive website built with Next.js showcasing comprehensive technology services including AI, IT solutions, micro SaaS development, and more.
 
 ## 🚀 Features
@@ -82,8 +68,7 @@ A modern, responsive website built with Next.js showcasing comprehensive technol
 - E-commerce Solutions
 
 ## 🚀 Getting Started
-<<<<<<< HEAD
-=======
+
 A modern, responsive website built with React, TypeScript, and Vite, showcasing Zion Tech Group's comprehensive technology solutions.
 
 ## 🚀 Features
@@ -109,10 +94,7 @@ A modern, responsive website built with React, TypeScript, and Vite, showcasing 
 - **Package Manager**: npm
 
 ## 📦 Installation
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
 =======
->>>>>>> main
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 
 1. Clone the repository:
 ```bash
@@ -120,34 +102,23 @@ git clone https://github.com/Zion-Holdings/zion.app.git
 cd zion.app
 ```
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-- Node.js 18+
-- npm or yarn
+
 =======
-=======
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 2. Install dependencies:
 ```bash
 npm install
 ```
-<<<<<<< HEAD
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
+
 =======
 - Node.js 18+
 - npm or yarn
->>>>>>> main
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 
 3. Start the development server:
 ```bash
 npm run dev
 ```
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
+
 4. Open your browser and navigate to `http://localhost:3000`
 
 ## 🏗️ Build for Production
@@ -158,7 +129,6 @@ npm run build
 
 The built files will be in the `dist` directory, ready for deployment.
 =======
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 1. Clone the repository:
 
 ```bash
@@ -186,32 +156,12 @@ npm run dev
 npm run build
 npm start
 ```
-<<<<<<< HEAD
-=======
->>>>>>> main
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+
 
 ## 📁 Project Structure
 
 ```
-<<<<<<< HEAD
-├── pages/                 # Next.js pages
-│   ├── index.tsx         # Homepage
-│   ├── about.tsx         # About page
-│   ├── services.tsx      # Services overview
-│   ├── ai-services.tsx   # AI services page
-│   ├── blockchain.tsx    # Blockchain services
-│   ├── micro-saas.tsx    # Micro SaaS services
-│   ├── pricing.tsx       # Pricing page
-│   └── contact.tsx       # Contact page
-├── components/           # Reusable components
-├── styles/              # Global styles
-├── public/              # Static assets
-├── ecosystem.config.cjs # PM2 configuration
-└── package.json         # Dependencies and scripts
-```
 
-=======
 4. Open your browser and navigate to `http://localhost:3000`
 
 ## 🏗️ Build for Production
@@ -226,59 +176,7 @@ The built files will be in the `dist` directory, ready for deployment.
 
 ```
 =======
-<<<<<<< HEAD
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
-src/
-├── components/          # Reusable UI components
-│   ├── Button.tsx      # Enhanced button component
-│   ├── Card.tsx        # Card component
-│   ├── Footer.tsx      # Footer component
-│   ├── Header.tsx      # Header with navigation
-│   ├── LoadingSpinner.tsx # Loading indicators
-│   ├── SEOHead.tsx     # SEO meta tags
-│   ├── ServiceCard.tsx # Service display cards
-│   ├── Toast.tsx       # Notification system
-│   └── layout/
-│       └── Sidebar.tsx # Sidebar navigation
-├── contexts/           # React contexts
-│   └── ToastContext.tsx # Global toast management
-├── pages/              # Page components
-│   ├── About.tsx       # About page
-│   ├── Contact.tsx     # Contact form
-│   ├── Home.tsx        # Homepage
-│   ├── Pricing.tsx     # Pricing plans
-│   └── Services.tsx    # Services showcase
-├── App.tsx             # Main app component
-├── main.tsx           # Application entry point
-└── index.css          # Global styles
-```
 
-## 🎨 Components
-
-### Button Component
-Enhanced button with multiple variants and loading states:
-- `primary` - Gradient blue to purple
-- `secondary` - Glass morphism effect
-- `outline` - Border only
-- `ghost` - Minimal styling
-- `danger` - Red styling for destructive actions
-
-### Toast Notifications
-Global notification system with context:
-- Success, Error, Warning, Info types
-- Auto-dismiss with customizable duration
-- Smooth animations and transitions
-
-### Service Cards
-Interactive service display cards with:
-- Hover effects and animations
-- Feature lists with bullet points
-- Icon support
-- Responsive design
-
-<<<<<<< HEAD
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
 =======
 ├── pages/                 # Next.js pages
 │   ├── index.tsx         # Homepage
@@ -296,35 +194,13 @@ Interactive service display cards with:
 └── package.json         # Dependencies and scripts
 ```
 
->>>>>>> main
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 ## 🔧 Available Scripts
 
 - `npm run dev` - Start development server
 - `npm run build` - Build for production
 - `npm run start` - Start production server
 - `npm run lint` - Run ESLint
-<<<<<<< HEAD
-<<<<<<< HEAD
-- `npm run lint:fix` - Fix ESLint errors
 
-## 🎨 Design System
-
-<<<<<<< HEAD
-The project uses a consistent design system with:
-
-- **Colors**: Blue primary (#2563eb), with complementary grays and accent colors
-- **Typography**: Inter font family with responsive sizing
-- **Spacing**: Consistent spacing scale using Tailwind's spacing system
-- **Components**: Reusable components with consistent styling
-
-## 📱 Responsive Design
-
-- **Mobile**: Optimized for mobile devices (320px+)
-- **Tablet**: Responsive design for tablet screens (768px+)
-- **Desktop**: Full desktop experience (1024px+)
-- **Large Screens**: Optimized for large displays (1280px+)
-=======
 ### Frontend
 - **React 18.2.0** - Modern React with concurrent features
 - **TypeScript 5.6.3** - Type-safe JavaScript development
@@ -359,7 +235,6 @@ The website is built with a mobile-first approach:
 - **Mobile**: Stacked layouts with touch-friendly interactions
 - **Tablet**: Adjusted grid layouts for medium screens
 - **Desktop**: Full-featured layouts with hover effects and advanced navigation
->>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 
 ### UI Components
 - **Radix UI** - Accessible component primitives
@@ -367,17 +242,7 @@ The website is built with a mobile-first approach:
 - **React Hook Form** - Performant forms with validation
 - **Zod** - TypeScript-first schema validation
 
-<<<<<<< HEAD
-### State Management & Data
-- **Redux Toolkit** - Modern Redux with best practices
-- **React Query** - Server state management
-- **React Router DOM** - Client-side routing
 
-### Performance & Monitoring
-- **Performance Observer API** - Real-time performance monitoring
-- **Intersection Observer** - Efficient lazy loading
-- **Service Worker** - Advanced caching and offline support
-=======
 ### Main Navigation
 
 - **Home** (`/`) - Landing page with hero section and service overview
@@ -393,34 +258,10 @@ The website is built with a mobile-first approach:
 - Organized into logical sections (Services, Solutions, Company, Resources, Support)
 - Social media links and contact information
 - Newsletter signup and trust indicators
->>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 
 ## 📱 Features
 
-<<<<<<< HEAD
-### Core Services
-- **AI & Machine Learning Solutions**
-- **Quantum Computing Platform**
-- **Cybersecurity Services**
-- **Cloud Infrastructure**
-- **Digital Transformation**
-- **Micro SaaS Solutions**
 
-### Advanced Capabilities
-- **Autonomous Business Operations**
-- **AI-Powered Analytics**
-- **Quantum Neural Networks**
-- **Predictive Maintenance**
-- **Real-time Monitoring**
-- **Intelligent Automation**
-
-### User Experience
-- **Responsive Design** - Works perfectly on all devices
-- **Dark/Light Mode** - User preference support
-- **Internationalization** - Multi-language support ready
-- **Progressive Enhancement** - Works without JavaScript
-- **Accessibility First** - Inclusive design principles
-=======
 ### Frontend Framework
 
 - **Next.js 15.5.2** - React framework with SSR capabilities
@@ -444,7 +285,6 @@ The website is built with a mobile-first approach:
 - **Lazy Loading** - Components loaded on demand
 - **Image Optimization** - Next.js image optimization
 - **Code Splitting** - Automatic bundle splitting
->>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 
 ## 🚀 Getting Started
 
@@ -486,9 +326,7 @@ The website is built with a mobile-first approach:
    yarn build
    ```
 
-<<<<<<< HEAD
-### Available Scripts
-=======
+
 ### Build for Production
 
 ```bash
@@ -591,7 +429,6 @@ npm start
 - Configure analytics and monitoring
 
 ## 📜 Available Scripts
->>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 
 - `npm run dev` - Start development server
 - `npm run build` - Build for production
@@ -704,7 +541,6 @@ VITE_SENTRY_DSN=your-sentry-dsn
 - **Older Versions**: Progressive enhancement
 
 ## 📈 Analytics & Monitoring
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-4210
 
 ### Performance Monitoring
 - **Core Web Vitals**: Real-time tracking
@@ -712,42 +548,17 @@ VITE_SENTRY_DSN=your-sentry-dsn
 - **Error Tracking**: Sentry integration
 - **Analytics**: Google Analytics 4
 
-<<<<<<< HEAD
-- Meta tags for all pages
-- Open Graph tags for social sharing
-- Structured data markup
-- Semantic HTML structure
-- Optimized images and assets
-- Fast loading times
-=======
+
 ### User Behavior
 - **Page Views**: Navigation tracking
 - **User Engagement**: Interaction metrics
 - **Conversion Tracking**: Goal completion
 - **A/B Testing**: Experiment framework
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-4210
 
 ## ♿ Accessibility
 
-<<<<<<< HEAD
-- WCAG 2.1 AA compliant
-- Proper ARIA labels
-- Keyboard navigation support
-- Screen reader friendly
-- High contrast support
-- Focus management
 
-## 🚀 Performance
-
-- Next.js optimization features
-- Image optimization
-- Code splitting
-- Lazy loading
-- Bundle analysis
-- Performance monitoring
 =======
-=======
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 - `npm run type-check` - Run TypeScript checks
 
 ## 🌐 Deployment
@@ -796,9 +607,7 @@ The project is configured for deployment on:
 - **Twitter Cards** - Twitter sharing optimization
 - **Sitemap** - Automatic sitemap generation
 - **Robots.txt** - Search engine directives
-<<<<<<< HEAD
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
+
 =======
 - `npm run lint:fix` - Fix ESLint errors
 
@@ -844,20 +653,10 @@ The project uses a consistent design system with:
 - Lazy loading
 - Bundle analysis
 - Performance monitoring
->>>>>>> main
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 
 ## 🤝 Contributing
 
-<<<<<<< HEAD
-1. Fork the repository
-<<<<<<< HEAD
-<<<<<<< HEAD
-2. Create a feature branch (`git checkout -b feature/amazing-feature`)
-3. Commit your changes (`git commit -m 'Add some amazing feature'`)
-4. Push to the branch (`git push origin feature/amazing-feature`)
-5. Open a Pull Request
-=======
+
 ### Build Process
 1. **Code Quality**: ESLint and TypeScript checking
 2. **Testing**: Unit and integration tests
@@ -884,7 +683,6 @@ The project uses a consistent design system with:
 3. Make changes with tests
 4. Submit pull request
 5. Code review and approval
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-4210
 =======
 ### Development Workflow
 
@@ -908,25 +706,11 @@ For technical support or questions about the website:
 - **Email**: contact@ziontechgroup.com
 - **Documentation**: Check the `/docs` section
 - **Issues**: Use the GitHub issues page
->>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 
 ## 📄 License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-<<<<<<< HEAD
 
-## 📞 Contact
-
-- **Website**: [Zion Tech Group](https://zion.app)
-- **Email**: contact@zion.app
-- **Phone**: +1 (555) 123-4567
-
-## 🙏 Acknowledgments
-
-- Next.js team for the amazing framework
-- Tailwind CSS for the utility-first CSS framework
-- Lucide React for the beautiful icons
-=======
 # Zion Tech Group - AI-Powered Technology Solutions
 
 ## 🚀 Overview
@@ -951,7 +735,6 @@ Zion Tech Group is a cutting-edge technology company specializing in AI-powered 
 - **Frontend**: React, Next.js, TypeScript, Tailwind CSS
 - **Backend**: Node.js, Express, Fastify
 - **Database**: MongoDB, PostgreSQL
->>>>>>> d0a9ec4ff3a15c755bf51b53a72e5129849de793
 - **Cloud**: AWS, Azure, Google Cloud
 - **AI/ML**: OpenAI, TensorFlow, PyTorch
 - **DevOps**: Docker, Kubernetes, PM2

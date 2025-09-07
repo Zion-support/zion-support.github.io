@@ -1,4 +1,3 @@
-import React, { JSX } from 'react';
 import React from 'react';
 import Header from './src/components/Header';
 import Footer from './src/components/Footer';
@@ -52,18 +51,10 @@ export default function App() {
     },
   ];
 
-export default function App(): JSX.Element {
 export default function App(): React.JSX.Element {
-export default function App(): React.JSX.Element {
-export default function App(): JSX.Element {
   return (
     <main>
       <h1>Hello App</h1>
-    </main>
-
-  return (
-    <main>
-
     </main>
   );
 }

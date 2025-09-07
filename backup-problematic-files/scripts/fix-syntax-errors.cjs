@@ -55,8 +55,7 @@ const path = require('path')
     // Fix missing semicolons
     content = content.replace(/([^;}])\n/g, '$1;\n');
     // Fix merge conflict markers
-    content = content.replace(/<<<<<<< HEAD[\s\S]*?=======[\s\S]*?>>>>>>> [^\n]+/g, '');
-    
+    content = content.replace(/[\s\S]*?    
     // Fix common JSX issues
     content = content.replace(/<([A-Z][a-zA-Z0-9]*)\s*\/>/g, '<$1 />');
     // Fix missing commas in objects

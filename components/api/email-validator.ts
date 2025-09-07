@@ -1,32 +1,4 @@
-<<<<<<< HEAD
-interface EmailValidationResult {
-  email: string;
-  is_valid: boolean;
-interface EmailValidationResult {
-  email: string;
-  isValid: boolean;
-  score: number;
-  suggestions: string[];
-  details: {
-    hasValidFormat: boolean;
-    hasValidDomain: boolean;
-    hasValidMX: boolean;
-  }
-  try {
-    const { email } = req && req.body;
-    // Extract domain
-    const domain = email && email.split('@')[1];
-    const hasValidDomain = domain && domain.length > 0;
-    // Check for common disposable email providers
-    const disposableDomains = [
-      'tempmail && tempmail.org',
-      'guerrillamail && guerrillamail.com',
-      'mailinator && mailinator.com',
-      '10minutemail && 10minutemail.com',
-      'temp-mail && mail.org',
-      'sharklasers && sharklasers.com',
-      'getairmail && getairmail.com',
-=======
+
     isRoleBased: boolean;
     isFreeProvider: boolean
   }
@@ -83,7 +55,6 @@ return res.status(405).json({ error: 'Method not allowed' });
       'yandex.com',
     ];
     const isFreeProvider = freeProviders.some(provider => domain === provider);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
     // Calculate score (0-100)
     let score = 100;
     if (!hasValidFormat) score -= 50;
@@ -94,44 +65,7 @@ return res.status(405).json({ error: 'Method not allowed' });
     // Generate suggestions
     const suggestions: string[] = []
     if (!hasValidFormat) {
-<<<<<<< HEAD
-  } catch (error) {
-    console && console.error('Email validation error:', error);
-    res && res.status(500).json({ error: 'Internal server error' });
-  }      email;
-      isValid: score >= 70;
-      score: Math && Math.max(0, score);
-        hasValidFormat,
-        hasValidDomain,
-        hasValidMX: true, // Simplified for demo;
-        is_disposable,
-        isRoleBased,
-        isFreeProvider,
-      },
-    }
-;
-    res.status (200).json (result);
-  } catch (error) {
-    console.error ('Email validation error:', error);
-    res.status (500).json ({ error: 'Internal server error' });
-  }      email;
-      is_valid: score >= 70;
-      score: Math.max (0, score);
-      suggestions;
-      details: {
-        hasValidFormat;
-        hasValidDomain;
-        hasValidMX: true, // Simplified for demo;
-        is_disposable;
-        isRoleBased;
-        isFreeProvider}
-    }
-;
-    res.status (200).json (result);
-  } catch (error) {
-    console.error ('Email validation error:', error);
-    res.status (500).json ({ error: 'Internal server error' });
-=======
+
 suggestions.push('Check email format (should be user@domain.com)');
     }
     if (isDisposable) {
@@ -163,6 +97,5 @@ suggestions.push('Check email format (should be user@domain.com)');
     res.status(500).json({ error: 'Internal server error' });
   }
     res.status(500).json({ error: 'Internal server error' })
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
   }
 }

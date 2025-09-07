@@ -1,30 +1,4 @@
-<<<<<<< HEAD
-  Menu,
-  X,
-  ChevronDown,
-  Search,
-  User,
-  Settings,
-  LogOut,
-  Bell,
-  Globe,
-  Zap,
-  Brain,
-  Rocket,
-  Dna,
-  DollarSign,
-  Lock,
-  Wifi,
-  Truck,
-  Gamepad2,
-  Bot,
-  Factory,
-  Car,;
-} from "lucide-react";
-import Link from "next/link";
-interface EnhancedNavigationProps {;
-  className?: string;
-=======
+
 ursor/automate-test-fix-improve-and-merge-code-48f3
   const [servicesOpen, setServicesOpen] = useState(false)
   const [solutionsOpen, setSolutionsOpen] = useState(false)
@@ -213,7 +187,6 @@ ursor/automate-test-fix-improve-and-merge-code-48f3
       </div>
     </nav>
   )
->>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 }
 
 const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({

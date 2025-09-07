@@ -1,5 +1,4 @@
-<<<<<<< HEAD
-=======
+
 import React from 'react';
 import { render, screen, fireEvent } from '@testing-library/react';
 import '@testing-library/jest-dom';
@@ -26,4 +25,3 @@ describe('SEOEnhancerdynamic', () => {
     // Add styling tests if needed
   });
 });
->>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0

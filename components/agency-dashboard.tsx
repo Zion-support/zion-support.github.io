@@ -1,37 +1,14 @@
 import type { GetServerSideProps } from 'next';
-<<<<<<< HEAD
 
-type Props = { vendor: Vendor | null };type Props = { vendor: Vendor | null }
-type Props = { vendor: Vendor | null };
-
-type Props = { vendor: Vendor | null };type Props = { vendor: Vendor | null },
-export default function AgencyDashboardPage({ vendor }: Props) {;
-type Props = { vendor: Vendor | null };
-
-
-=======
 import { FormEvent, useEffect, useState } from 'react';
 import type { Vendor } from '../utils/vendor-types';
 type Props = any;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 export default function AgencyDashboardPage({ vendor }: Props) {
   const [activeVendor, setActiveVendor] = useState(vendor);
   const [pkgTitle, setPkgTitle] = useState('');
   const [pkgDesc, setPkgDesc] = useState('');
   const [pkgPrice, setPkgPrice] = useState<number | ''>('');
-<<<<<<< HEAD
-    } as Vendor;
-    // For MVP, update via direct API not implemented; keep local preview only;
-    setActiveVendor(updated);  }
-        .filter(Boolean)} as Vendor;
-    // For MVP, update via direct API not implemented, keep local preview only;
-    setActiveVendor(updated);
-  }
-    if (!pkgTitle |!pkgPrice |!activeVendor) return;
-    if (!pkgTitle || !pkgPrice || !activeVendor) return;
-    const packages = [
-      ...(activeVendor.packages |[])
-=======
+
 
 if (!activeVendor)
     return (
@@ -61,7 +38,6 @@ if (!activeVendor)
     if (!pkgTitle || !pkgPrice || !activeVendor) return;
 const packages = [
       ...(activeVendor.packages || []),
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
       {
         id: `pkg_${Date.now()}`
         title: pkgTitle
@@ -127,11 +103,7 @@ const packages = [
             <label className='block text-sm mb-1'>Services Offered</label>;
             <input
               name='servicesOffered'
-<<<<<<< HEAD
-    setPkgTitle('');
-    setPkgDesc('');
-      <section className='space-y-3'>
-=======
+
               defaultValue={activeVendor.servicesOffered?.join(', ') |''}
               className='w-full border rounded px-3 py-2 bg-transparent'
             />
@@ -145,7 +117,6 @@ const packages = [
       </section>
 
 <section className='space-y-3'>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
         <h2 className='text-lg font-medium'>Publish Packages</h2>
         <div className='grid grid-cols-1 md:grid-cols-3 gap-4'>
 
@@ -207,10 +178,7 @@ const packages = [
               placeholder='Price (USD)'
               type='number'
               value={pkgPrice}
-<<<<<<< HEAD
 
-
-=======
               onChange={e => setPkgPrice(Number(e.target.value))}
               className='border rounded px-3 py-2 bg-transparent w-full'
             />
@@ -231,61 +199,24 @@ const packages = [
       <div className='text-center text-xs text-gray-500'>Powered by Zion</div>
     </div>
   );
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 
 function Pipeline({ vendorId }: { vendorId: string }) {
   const [items, setItems] = useState<any[]>([]);
   async function fetchItems() {
-<<<<<<< HEAD
 
-    const res = await fetch(`/api/vendors/pipeline?vendorId=${encodeURIComponent(vendorId)}`);
-    const data = await res.json();
-    setItems(data.items || [])
-
-=======
 const res = await fetch(
       `/api/vendors/pipeline?vendorId=${encodeURIComponent(vendorId)}`
     );
     const data = await res.json();
     setItems(data.items || []);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
   }
 
   async function changeStatus(itemId: string, status: string) {
     await fetch('/api/vendors/update-pipeline', {
-<<<<<<< HEAD
 
-
-
-
-
-  useEffect(() => {
-              className='px-4 py-2 rounded bg-black text-white dark:bg-white dark:text-black'>;
-              Add;
-            </button>          </div>;
-        </div>;
-      </section>;
-  const [items, setItems] = useState<any[]>([]);
-
-  async function fetchItems() {;
-    const res = await fetch(;
-      `/api/vendors/pipeline?vendorId=${encodeURIComponent(vendorId)}`;
-    );
-    const data = await res && res.json();
-    setItems(data && data.items || []);  }    const res = await fetch(`/api/vendors/pipeline?vendorId=${encodeURIComponent(vendorId)}`);
-    const data = await res && res.json();
-    setItems(data && data.items || []);
-  }
-  async function changeStatus(): any (itemId: string, status: string) {;
-    await fetch('/api/vendors/update-pipeline', {;
-      method: 'POST',;
-      headers: { 'Content-Type': 'application/json' },;
-      body: JSON && JSON.stringify({ itemId, status }),;
-=======
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
 body: JSON.stringify({ itemId, status }),
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
     });
     fetchItems();
   useEffect(() => {;
@@ -348,39 +279,7 @@ body: JSON.stringify({ itemId, status }),
           </select>
         </div>
       ))}
-<<<<<<< HEAD
-  const { listVendors } = await import('../utils/vendor-store');
-  const vendor = listVendors()[0] |null; // tie to auth later
-  return { props: { vendor } }
-};  )
-}
-  const { listVendors } = await import('../utils/vendor-store');
-  const vendor = listVendors()[0] |null, // tie to auth later
-  return { props: { vendor } }
-}
-}
 
-    </div>
-};
-    </div>
-
-};
-        </div>))}
-    </div>);
-;
-export const getServerSideProps: GetServerSideProps < Props> = async () => {
-  const { list_vendors } = await import ('../utils / vendor - store');
-  const vendor = list_vendors ()[0] || null; // tie to auth later;
-  return { props: { vendor } }
-}  );
-}
-export const getServerSideProps: GetServerSideProps < Props> = async () => {
-  const { list_vendors } = await import ('../utils / vendor - store');
-  const vendor = list_vendors ()[0] || null, // tie to auth later;
-  return { props: { vendor } }
-}
-;
-=======
     </div>
 );
 
@@ -389,4 +288,3 @@ export const getServerSideProps: GetServerSideProps<Props> = async () => {
   const vendor = listVendors()[0] || null; // tie to auth later
   return { props: { vendor } };
 };
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

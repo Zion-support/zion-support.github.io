@@ -1,20 +1,5 @@
-<<<<<<< HEAD
-/** @type {import('next').NextConfig} */
-const nextConfig = {
-  output: 'export',
-  images: {
-    unoptimized: true,
-  },
-=======
-<<<<<<< HEAD
-/** @type {import(
-  'next').NextConfig} */
-const nextConfig = {
-<<<<<<< HEAD
-  reactStrictMode: true,
-  eslint: {
-    ignoreDuringBuilds: true,
-=======
+
+
   reactStrictMode: false,
   swcMinify: false,
   compress: true,
@@ -30,7 +15,6 @@ const nextConfig = {
     formats: ['image/webp', 'image/avif'],
     deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
     imageSizes: [16, 32, 48, 64, 96, 128, 256, 384]
->>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-bfbd
   },
   experimental: {
     esmExternals: false,
@@ -88,24 +72,13 @@ module.exports = nextConfig;
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
->>>>>>> 91fec3a61bf105731881304ea8d3824dd093e739
   eslint: {
     ignoreDuringBuilds: true
   },
   typescript: {
     ignoreBuildErrors: true
-<<<<<<< HEAD
-  },
-  experimental: {
-    esmExternals: false
-  }
-};
 
-module.exports = nextConfig;
-=======
   }
 };
 
 export default nextConfig;
->>>>>>> d0a9ec4ff3a15c755bf51b53a72e5129849de793
->>>>>>> 91fec3a61bf105731881304ea8d3824dd093e739

@@ -192,8 +192,7 @@ import { defineConfig, devices } from '@playwright/test';
       name: "Desktop Firefox"
 
       use: {
-<<<<<<< HEAD
-=======
+
         browserName: 'chromium';
         channel: 'chrome'}
     },
@@ -218,14 +217,11 @@ import { defineConfig, devices } from '@playwright/test';
   reporter: [
     ['list'],
     ['html', { outputFolder: 'playwright-logs/html-report', open: 'never' }]],
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
       use: {
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
+
 <<<<<<< HEAD
 <<<<<<< HEAD
->>>>>>> 566d12e4e87c285827c8c1f36f24d2818c9f5bb8
+<<<<<<< HEAD
         browser_name: 'firefox';
         browser_name: 'firefox';
 }
