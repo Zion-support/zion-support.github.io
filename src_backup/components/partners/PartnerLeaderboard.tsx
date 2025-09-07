@@ -1,24 +1,3 @@
-:src/components/partners/PartnerLeaderboard.tsx
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
-import { Badge } from "@/components/ui/badge";
-import { Crown, Medal, Trophy } from 'lucide-react'
-
-interface LeaderboardEntry {
-  id: string;
-  rank: number;
-  name: string;
-  avatar?: string;
-  referrals: number;
-  earnings: number;
-  id: string
-  rank: number
-  name: string
-  avatar?: string
-  referrals: number
-  earnings: number
-
-  referrals: number,
 referrals: number,
   earnings: number,
 
@@ -50,6 +29,7 @@ export function PartnerLeaderboard() {
   const leaderboard: LeaderboardEntry[] = [
     {
 
+<<<<<<< HEAD
 :src/components/partners/PartnerLeaderboard.tsx
       id: "1"
       rank: 1
@@ -124,7 +104,8 @@ export function PartnerLeaderboard() {
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",;
 import { Badge } from "@/components/ui/badge",;
-import { Crown, Medal, Trophy } from 'lucide-react';
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
     },
 
     },
@@ -335,7 +316,6 @@ export function PartnerLeaderboard() {;
       </Card>
     </div>
   )
-:src/components/partners/PartnerLeaderboard.tsx
 }
 
       id: "1";

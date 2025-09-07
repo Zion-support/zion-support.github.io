@@ -1,4 +1,37 @@
+<<<<<<< HEAD
+import { Link  } from 'react-router-dom';'
+import { Logo  } from './Logo';'
+import { UserMenu  } from './UserMenu';'
+import { LanguageSelector  } from './LanguageSelector';'
+import { MainNavigation  } from '@/layout/MainNavigation';'
+import { useAuth  } from '@/hooks/useAuth';'
+import { useWhitelabel  } from '@/context/WhitelabelContext';'
+import { EnhancedSearchInput } from '@/components/search/EnhancedSearchInput','
+import { generateSearchSuggestions } from '@/data/marketplaceData','
+import { useNavigate } from 'react-router-dom';'
+import { useState } from 'react';  customTheme?: {'
+    }
+    'primaryColor': string;
+    'backgroundColor': string,
+'textColor': string
+=======
 import React from 'react';
+<<<<<<< HEAD
+
+import React from 'react';
+=======
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+import React from 'react';
+=======
+<<<<<<< HEAD
+
+
+
+import React from 'react';
+>>>>>>> merged-prs-20250907-203621
 import { Link  } from 'react-router-dom';
 import { Logo  } from './Logo';
 import { UserMenu  } from './UserMenu';
@@ -10,6 +43,7 @@ import { EnhancedSearchInput } from "@/components/search/EnhancedSearchInput",
 import { generateSearchSuggestions } from "@/data/marketplaceData",
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";
+<<<<<<< HEAD
 export interface HeaderProps {
   hideLogin?: boolean,
   customLogo?: string,
@@ -29,7 +63,406 @@ export interface HeaderProps {
     backgroundColor: string
     textColor: string
   }
+=======
+=======
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+
+import { Link  } from 'react-router-dom';
+import { Logo  } from './Logo';
+import { UserMenu  } from './UserMenu';
+import { LanguageSelector  } from './LanguageSelector';
+import { MainNavigation  } from '@/layout/MainNavigation';
+import { useAuth  } from '@/hooks/useAuth';
+import { useWhitelabel  } from '@/context/WhitelabelContext';
+import { EnhancedSearchInput } from "@/components/search/EnhancedSearchInput",;
+import { generateSearchSuggestions } from "@/data/marketplaceData",;
+import { useNavigate } from "react-router-dom";
+
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+import {Link} from 'react-router-dom';
+import {Logo} from './Logo';
+import {UserMenu} from './UserMenu';
+import {LanguageSelector} from './LanguageSelector';
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+import {MainNavigation} from '@/layout/MainNavigation';
+import {useAuth} from '@/hooks/useAuth';
+import {useWhitelabel} from '@/context/WhitelabelContext';
+import {EnhancedSearchInput} from "@/components/search/EnhancedSearchInput";
+import {generateSearchSuggestions} from "@/data/marketplaceData";
+import {useNavigate} from "react-router-dom";
+import {useState} from "react";
+export interface HeaderProps {;
+  hideLogin?: boolean;
+  customLogo?: string;
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+
+  // If we have a white-label tenant and no specific customTheme is provided;'
+  // use the tenant's primary color;
+  const effectiveTheme = customTheme || (isWhitelabel ? {;
+'
+import React from 'react';
+<<<<<<< HEAD
+  const { user } = useAuth();
+  const { isWhitelabel, primaryColor } = useWhitelabel();
+  const navigate = useNavigate();"
+  const [query, setQuery] = useState("");
+  const searchSuggestions = generateSearchSuggestions();
+    primaryColor;'
+    backgroundColor: '#0f172a', // Default dark background;'
+    textColor: '#ffffff', // Default light text;
+  } : undefined);
+
+import {MainNavigation} from '@/layout/MainNavigation';
+import {useAuth} from '@/hooks/useAuth';
+import {useWhitelabel} from '@/context/WhitelabelContext';
+import {EnhancedSearchInput} from "@/components/search/EnhancedSearchInput";
+import {generateSearchSuggestions} from "@/data/marketplaceData";
+import {useNavigate} from "react-router-dom";
+import {useState} from "react";
+export interface HeaderProps {;
+  hideLogin?: boolean;
+  customLogo?: string;
+
+import React from 'react',
+import { Link } from 'react-router-dom',
+import { Logo } from './Logo',
+import { UserMenu } from './UserMenu',
+import { LanguageSelector } from './LanguageSelector',
+import { MainNavigation } from '@/layout/MainNavigation',
+import { useAuth } from '@/hooks/useAuth',
+import { useWhitelabel } from '@/context/WhitelabelContext',
+import { EnhancedSearchInput } from "@/components/search/EnhancedSearchInput",
+import { generateSearchSuggestions } from "@/data/marketplaceData",
+import { useNavigate } from "react-router-dom",
+import { useState } from "react",
+
+export interface HeaderProps {}
+  hideLogin?: boolean,
+  customLogo?: string,
+
+  customTheme?: {
+
+export interface HeaderProps {}
+  hideLogin?: boolean,
+  customLogo?: string,
+;
+  customTheme?: {};
+    primaryColor: string;
+    backgroundColor: string;
+    textColor: string;
+
+  }
 }
+
+export function Header({ hideLogin = false, customLogo, customTheme }: HeaderProps) {;
+=======
+  const { user } = useAuth();
+  const { isWhitelabel, primaryColor } = useWhitelabel();
+  const navigate = useNavigate();"
+  const [query, setQuery] = useState("");
+  const searchSuggestions = generateSearchSuggestions();
+    primaryColor;'
+    backgroundColor: '#0f172a', // Default dark background;'
+    textColor: '#ffffff', // Default light text;
+  } : undefined);
+
+import {MainNavigation} from '@/layout/MainNavigation';
+import {useAuth} from '@/hooks/useAuth';
+import {useWhitelabel} from '@/context/WhitelabelContext';
+import {EnhancedSearchInput} from "@/components/search/EnhancedSearchInput";
+import {generateSearchSuggestions} from "@/data/marketplaceData";
+import {useNavigate} from "react-router-dom";
+import {useState} from "react";
+export interface HeaderProps {;
+  hideLogin?: boolean;
+  customLogo?: string;
+
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+import React from 'react',
+import { Link } from 'react-router-dom',
+import { Logo } from './Logo',
+import { UserMenu } from './UserMenu',
+import { LanguageSelector } from './LanguageSelector',
+import { MainNavigation } from '@/layout/MainNavigation',
+import { useAuth } from '@/hooks/useAuth',
+import { useWhitelabel } from '@/context/WhitelabelContext',
+import { EnhancedSearchInput } from "@/components/search/EnhancedSearchInput",
+import { generateSearchSuggestions } from "@/data/marketplaceData",
+import { useNavigate } from "react-router-dom",
+import { useState } from "react",
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+export interface HeaderProps {}
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+
+export interface HeaderProps {
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+  hideLogin?: boolean,
+  customLogo?: string,
+
+<<<<<<< HEAD
+export interface HeaderProps {
+  hideLogin?: boolean,
+  customLogo?: string,
+export interface HeaderProps {
+  hideLogin?: boolean,
+  customLogo?: string,
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+  customTheme?: {
+
+export interface HeaderProps {}
+  hideLogin?: boolean,
+  customLogo?: string,
+;
+  customTheme?: {};
+    primaryColor: string;
+    backgroundColor: string;
+    textColor: string;
+
+>>>>>>> origin/resolved-merge-conflicts
+  }
+}
+export function Header() {;
+  }
+  const { user } = useAuth();
+  const { isWhitelabel, primaryColor } = useWhitelabel();
+  const navigate = useNavigate();
+  const [query, setQuery] = useState('');'
+  const searchSuggestions = generateSearchSuggestions();
+<<<<<<< HEAD
+=======
+export function Header({ hideLogin = false, customLogo, customTheme }: HeaderProps) {
+  const { user } = useAuth();
+  const { isWhitelabel, primaryColor } = useWhitelabel();
+  const navigate = useNavigate();
+  const [query, setQuery] = useState("");
+  const searchSuggestions = generateSearchSuggestions();
+  // If we have a white-label tenant and no specific customTheme is provided;
+  // use the tenant's primary color
+  const effectiveTheme = customTheme |(isWhitelabel ? {
+    primaryColor;
+    backgroundColor: '#0f172a', // Default dark background
+    textColor: '#ffffff', // Default light text
+  } : undefined);
+  const { user } = useAuth(),
+  const { isWhitelabel, primaryColor } = useWhitelabel(),
+  const navigate = useNavigate(),
+  const [query, setQuery] = useState(""),
+  const searchSuggestions = generateSearchSuggestions(),
+  
+  // If we have a white-label tenant and no specific customTheme is provided,
+  // use the tenant's primary color
+  const effectiveTheme = customTheme || (isWhitelabel ? {
+    primaryColor,
+    backgroundColor: '#0f172a', // Default dark background
+    textColor: '#ffffff', // Default light text
+  } : undefined),
+
+
+  
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+
+  const { user } = useAuth();
+  const { isWhitelabel, primaryColor } = useWhitelabel();
+  const navigate = useNavigate();"
+  const [query, setQuery] = useState("");
+  const searchSuggestions = generateSearchSuggestions();
+<<<<<<< HEAD
+>>>>>>> origin/resolved-merge-conflicts
+export function Header() {
+  }
+  const { user } = useAuth();
+  const { isWhitelabel, primaryColor } = useWhitelabel();
+  const navigate = useNavigate();
+  const [query, setQuery] = useState('');'
+  const searchSuggestions = generateSearchSuggestions();
+  // If we have a white-label tenant and no specific customTheme is provided;
+  // use the tenant's primary color'
+  const effectiveTheme = customTheme |(isWhitelabel ? {
+    }
+    primaryColor;
+    'backgroundColor': '#0f172a', // Default dark background'
+    'textColor': '#ffffff', // Default light text'
+  } : undefined);
+const { user } = useAuth(),;
+const { isWhitelabel, primaryColor } = useWhitelabel(),;
+const navigate = useNavigate(),;
+const [query, setQuery] = useState(''),;'
+const searchSuggestions = generateSearchSuggestions(),;
+  // If we have a white-label tenant and no specific customTheme is provided,
+  // use the tenant's primary color'
+  const effectiveTheme = customTheme || (isWhitelabel ? {
+    }
+    primaryColor,
+    'backgroundColor': '#0f172a', // Default dark background'
+    'textColor': '#ffffff', // Default light text'
+  } : undefined),
+<<<<<<< HEAD
+            <EnhancedSearchInput,
+value={query}
+=======
+
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+  const headerStyle = effectiveTheme ? {
+    backgroundColor: effectiveTheme.backgroundColor
+    color: effectiveTheme.textColor
+
+    borderColor: `${effectiveTheme.primaryColor}20`
+
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+
+  } : {},
+
+
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault()
+    if (query.trim()) {
+
+  const headerStyle = effectiveTheme ? {;
+    backgroundColor: effectiveTheme && effectiveTheme.backgroundColor,;
+    color: effectiveTheme && effectiveTheme.textColor,;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+    borderColor: `${effectiveTheme && effectiveTheme.primaryColor}20`;
+  } : {};
+
+  const handleSubmit = (e: React && React.FormEvent) => {;
+    e && e.preventDefault(),;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+
+      setQuery("");
+    }
+
+<<<<<<< HEAD
+=======
+=======
+    if (query && query.trim()) {;
+      navigate(`/search?q=${encodeURIComponent(query)}`);
+      setQuery("");
+    }
+
+  };
+
+
+  },
+  
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+  return (
+    <header"
+      className="sticky top-0 z-50 w-full border-b border-zion-purple/20 bg-zion-blue-dark/90 backdrop-blur-md"
+
+<<<<<<< HEAD
+          <EnhancedSearchInput;
+            value={query}
+            onChange={setQuery}
+            searchSuggestions={searchSuggestions}
+=======
+<<<<<<< HEAD
+          <EnhancedSearchInput;
+=======
+      style={headerStyle}>;
+      <div className="container flex h-16 items-center px-4 sm:px-6">;
+        <Logo customLogo={customLogo} customColor={effectiveTheme?.primaryColor} />;
+
+        <div className="ml-6 flex-1">;
+          <MainNavigation />;
+        </div>;
+        <form onSubmit={handleSubmit} className="hidden md:block w-64 mx-4">;
+
+<<<<<<< HEAD
+  } : {}
+  } : {},
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault()
+    if (query.trim()) {
+      navigate(`/search?q=${encodeURIComponent(query)}`),
+      setQuery("")
+    }
+  }
+
+  },
+  
+  return (
+    <header
+      className="sticky top-0 z-50 w-full border-b border-zion-purple/20 bg-zion-blue-dark/90 backdrop-blur-md"
+      style={headerStyle}
+    >
+      <div className="container flex h-16 items-center px-4 sm:px-6">
+        <Logo customLogo={customLogo} customColor={effectiveTheme?.primaryColor} />
+        <div className="ml-6 flex-1">
+          <MainNavigation />
+        </div>
+        <form onSubmit={handleSubmit} className="hidden md:block w-64 mx-4">
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+          <EnhancedSearchInput
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+            value={query}
+            onChange={setQuery}
+            searchSuggestions={searchSuggestions}
+<<<<<<< HEAD
+          />
+        </form>
+        <div className="flex items-center gap-2">
+          <LanguageSelector />
+
+
+
+          {!hideLogin && <UserMenu />}
+        </div>
+      </div>
+    </header>
+  )
+}
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+
+            value={query}
+>>>>>>> origin/resolved-merge-conflicts
+            onChange={setQuery}
+            searchSuggestions={searchSuggestions}          {!hideLogin && <UserMenu />}
+        </div>
+      </div>
+    </header>
+  )
+}
+<<<<<<< HEAD
 export function Header({ hideLogin = false, customLogo, customTheme }: HeaderProps) {
   const { user } = useAuth($2);
   const { isWhitelabel, primaryColor } = useWhitelabel($2);
@@ -37,6 +470,56 @@ export function Header({ hideLogin = false, customLogo, customTheme }: HeaderPro
   const [query, setQuery] = useState($2);
   const searchSuggestions = generateSearchSuggestions($2);
   // If we have a white-label tenant and no specific customTheme is provided,
+=======
+
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+          {!hideLogin && <UserMenu />}
+        </div>
+      </div>
+    </header>
+  )
+}
+<<<<<<< HEAD
+=======
+=======
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+import React from 'react',;
+import { Link } from 'react-router-dom',;
+import { Logo } from './Logo',;
+import { UserMenu } from './UserMenu',;
+import { LanguageSelector } from './LanguageSelector',;
+import { MainNavigation } from '@/layout/MainNavigation',;
+import { useAuth } from '@/hooks/useAuth',;
+import { useWhitelabel } from '@/context/WhitelabelContext',;
+import { EnhancedSearchInput } from "@/components/search/EnhancedSearchInput",;
+import { generateSearchSuggestions } from "@/data/marketplaceData",;
+import { useNavigate } from "react-router-dom",;
+import { useState } from "react",;
+export interface HeaderProps {;
+  hideLogin?: boolean;
+  customLogo?: string;
+  customTheme?: {;
+    primaryColor: string,;
+    backgroundColor: string,;
+    textColor: string;
+  }
+}
+
+export function Header(): any ({ hideLogin = false, customLogo, customTheme }: HeaderProps) {;
+  const { user } = useAuth();
+  const { isWhitelabel, primaryColor } = useWhitelabel();
+  const navigate = useNavigate();
+  const [query, setQuery] = useState("");
+  const searchSuggestions = generateSearchSuggestions();
+  // If we have a white-label tenant and no specific customTheme is provided;
+>>>>>>> origin/resolved-merge-conflicts
   // use the tenant's primary color
   const effectiveTheme = $2;
     backgroundColor: '#0f172a', // Default dark background
@@ -52,33 +535,476 @@ export function Header({ hideLogin = false, customLogo, customTheme }: HeaderPro
     e.preventDefault($2);
     if (query.trim()) {
       navigate(`/search?q = $2;
-      setQuery("")
+      setQuery('')
     }
   },
   
   return (
     <header
-      className="sticky top-0 z-50 w-full border-b border-zion-purple/20 bg-zion-blue-dark/90 backdrop-blur-md"
+      className='sticky top-0 z-50 w-full border-b border-zion-purple/20 bg-zion-blue-dark/90 backdrop-blur-md'
       style={headerStyle}
     >
-      <div className="container flex h-16 items-center px-4 sm:px-6">
+      <div className='container flex h-16 items-center px-4 sm:px-6'>
         <Logo customLogo={customLogo} customColor={effectiveTheme?.primaryColor} />
-        <div className="ml-6 flex-1">
+        <div className='ml-6 flex-1'>
           <MainNavigation />
         </div>
-        <form onSubmit={handleSubmit} className="hidden md:block w-64 mx-4">
+        <form onSubmit={handleSubmit} className='hidden md:block w-64 mx-4'>
           <EnhancedSearchInput
             value={query}
             onChange={setQuery}
             searchSuggestions={searchSuggestions}
+<<<<<<< HEAD
+
+=======
+<<<<<<< HEAD
+
+=======
+<<<<<<< HEAD
+>>>>>>> origin/resolved-merge-conflicts
           />
         </form>
-        <div className="flex items-center gap-2">
+        <div className='flex items-center gap-2'>
           <LanguageSelector />
+<<<<<<< HEAD
+=======
+=======
+
+<<<<<<< HEAD
+
+
+          />;
+        </form>;
+        <div className="flex items-center gap-2">;
+          <LanguageSelector />;
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+          />;
+        </form>;
+
+        <div className="flex items-center gap-2">;
+          <LanguageSelector />;
+
+/>;
+        </form>;
+        <div className="flex items-center gap-2">;
+          <LanguageSelector />;
+
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
           {!hideLogin && <UserMenu />}
         </div>
       </div>
     </header>
   )
 }
+<<<<<<< HEAD
+import {MainNavigation} from '@/layout / MainNavigation';'
+import {use_auth} from '@/hooks / use_auth';'
+import {use_whitelabel} from '@/context / WhitelabelContext';'
+import { EnhancedSearchInput } from '@/components / search / EnhancedSearchInput';'
+import { generateSearchSuggestions } from '@/data / marketplace_data';'
+import { use_navigate } from './react-router-dom';'
+import { useState } from './react';'
+export interface HeaderProps {
+  }
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
 ;
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+
+import React from 'react',;
+import { Link } from 'react-router-dom',;
+import { Logo } from './Logo',;
+import { UserMenu } from './UserMenu',;
+import { LanguageSelector } from './LanguageSelector',;
+import { MainNavigation } from '@/layout/MainNavigation',;
+import { useAuth } from '@/hooks/useAuth',;
+import { useWhitelabel } from '@/context/WhitelabelContext',;
+import { EnhancedSearchInput } from "@/components/search/EnhancedSearchInput",;
+import { generateSearchSuggestions } from "@/data/marketplaceData",;
+import { useNavigate } from "react-router-dom",;
+
+import { useState } from "react",;
+export interface HeaderProps {;
+  hideLogin?: boolean;
+  customLogo?: string;
+  customTheme?: {;
+    primaryColor: string,;
+    backgroundColor: string,;
+    textColor: string;
+  }
+}
+
+export function Header(): any ({ hideLogin = false, customLogo, customTheme }: HeaderProps) {;
+  const { user } = useAuth();
+  const { isWhitelabel, primaryColor } = useWhitelabel();
+  const navigate = useNavigate();"
+  const [query, setQuery] = useState("");
+  const searchSuggestions = generateSearchSuggestions();
+  // If we have a white-label tenant and no specific customTheme is provided;'
+  // use the tenant's primary color;
+  const effectiveTheme = customTheme |(isWhitelabel ? {}
+    primaryColor;'
+    backgroundColor: '#0f172a', // Default dark background;'
+    textColor: '#ffffff', // Default light text;
+  } : undefined);
+  const headerStyle = effectiveTheme ? {}
+    backgroundColor: effectiveTheme.backgroundColor;
+    color: effectiveTheme.textColor;`
+    borderColor: `${effectiveTheme.primaryColor}20`
+  } : {}
+  const handleSubmit = (e: React.FormEvent) => {}
+    e.preventDefault()
+    if (query.trim()) {}`
+      navigate(`/search?q=${encodeURIComponent(query)}`);"
+      setQuery("");
+    }
+
+  return (
+    <header"
+      className="sticky top-0 z-50 w-full border-b border-zion-purple/20 bg-zion-blue-dark/90 backdrop-blur-md"
+      style={headerStyle}
+    >"
+      <div className="container flex h-16 items-center px-4 sm:px-6">
+        <Logo customLogo={customLogo} customColor={effectiveTheme?.primaryColor} />"
+        <div className="ml-6 flex-1">
+          <MainNavigation />
+        </div>"
+        <form onSubmit={handleSubmit} className="hidden md:block w-64 mx-4">
+          <EnhancedSearchInput;
+            value={query}
+            onChange={setQuery}
+            searchSuggestions={searchSuggestions}
+
+          {!hideLogin && <UserMenu />}
+        </div>
+      </div>
+    </header>
+  )
+}
+
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+import {MainNavigation} from '@/layout / MainNavigation';
+import {use_auth} from '@/hooks / use_auth';
+import {use_whitelabel} from '@/context / WhitelabelContext';
+import { EnhancedSearchInput } from '@/components / search / EnhancedSearchInput';
+import { generateSearchSuggestions } from '@/data / marketplace_data';
+import { use_navigate } from './react-router-dom';
+
+import { useState } from './react';
+export interface HeaderProps {};
+>>>>>>> origin/resolved-merge-conflicts
+  hide_login?: boolean;
+  custom_logo?: string;
+  custom_theme?: {
+    }
+    'primary_color': string,
+    'background_color': string,
+    'text_color': string;
+  }
+}
+export /**
+ * Header - Function description
+ */
+function Header() {
+  }
+  const { user } = use_auth ();
+  const { is_whitelabel, primary_color } = use_whitelabel ();
+  const navigate = use_navigate ();
+  const [query, set_query] = useState ('');'
+  const search_suggestions = generateSearchSuggestions ();
+<<<<<<< HEAD
+;
+=======
+
+import React from 'react',;
+import { Link } from 'react-router-dom',;
+import { Logo } from './Logo',;
+import { UserMenu } from './UserMenu',;
+import { LanguageSelector } from './LanguageSelector',;
+import { MainNavigation } from '@/layout/MainNavigation',;
+import { useAuth } from '@/hooks/useAuth',;
+import { useWhitelabel } from '@/context/WhitelabelContext',;
+import { useNavigate } from "react-router-dom",""
+import { useState } from "react","
+export interface HeaderProps {
+  // TODO: Implement
+}
+  hideLogin?: boolean,
+  customLogo?: string,
+
+  // TODO: Implement
+  customTheme?: {
+
+    primaryColor: string;,
+  backgroundColor: string;
+    textColor: string;
+
+export function Header({ hideLogin = false, customLogo, customTheme }: HeaderProps) {;
+  const navigate = useNavigate();"
+export function Header({ hideLogin = false, customLogo, customTheme }: HeaderProps) {
+  // If we have a white-label tenant and no specific customTheme is provided;"
+  // use the tenant's primary color;
+  const effectiveTheme = customTheme |(isWhitelabel ? {
+    primaryColor;
+    textColor: '#ffffff', // Default light text;')
+  const { user } = useAuth(),
+  const { isWhitelabel, primaryColor } = useWhitelabel(),
+  const navigate = useNavigate(),
+  const [query, setQuery] = useState(""),"
+  const searchSuggestions = generateSearchSuggestions(),
+  // If we have a white-label tenant and no specific customTheme is provided,"
+  // use the tenant's primary color;
+  const effectiveTheme = customTheme || (isWhitelabel ? {
+    primaryColor,
+  } : undefined),
+  const headerStyle = effectiveTheme ? {
+    backgroundColor: effectiveTheme.backgroundColor;,
+  color: effectiveTheme.textColor;
+    borderColor: `${effectiveTheme.primaryColor}20`
+
+  const headerStyle = effectiveTheme ? {;
+    backgroundColor: effectiveTheme && effectiveTheme.backgroundColor,;
+    color: effectiveTheme && effectiveTheme.textColor,;`;
+    borderColor: `${effectiveTheme && effectiveTheme.primaryColor}20`;
+  } : {};
+
+  const handleSubmit = (e: React && React.FormEvent) => {;
+    e && e.preventDefault(),;
+    if (query && query.trim()) {;`;
+      navigate(`/search?q=${encodeURIComponent(query)}`);
+      setQuery("");"
+
+  return (
+    <header;"
+      className="sticky top-0 z-50 w-full border-b border-zion-purple/20 bg-zion-blue-dark/90 backdrop-blur-md""
+      style={headerStyle}>;
+</header>"
+      <div className="container flex h-16 items-center px-4 sm:px-6">;"
+</div>
+        <Logo customLogo={customLogo} customColor={effectiveTheme?.primaryColor} />;
+
+"
+        <div className="ml-6 flex-1">;"
+          <MainNavigation />;
+
+        </div>;"
+        <form onSubmit={handleSubmit} className="hidden md:block w-64 mx-4">;"
+</form>
+          <EnhancedSearchInput;
+            value={query}
+            onChange={setQuery}
+            searchSuggestions={searchSuggestions}
+
+          {!hideLogin && <UserMenu />}
+
+    </header>
+      style={headerStyle}
+    >
+      <div className="container flex h-16 items-center px-4 sm:px-6">"
+        <Logo customLogo={customLogo} customColor={effectiveTheme?.primaryColor} />
+        <div className="ml-6 flex-1">"
+          <MainNavigation />
+
+        </div>"
+        <form onSubmit={handleSubmit} className="hidden md:block w-64 mx-4">"
+
+          />;
+
+        </form>;"
+        <div className="flex items-center gap-2">;"
+          <LanguageSelector />;
+
+          {!hideLogin && <UserMenu />}
+</UserMenu>
+        </div>
+      </div>
+    </header>
+
+    <header;"
+      className="sticky top - 0 z - 50 w - full border - b border - zion - purple / 20 bg - zion - blue - dark / 90 backdrop - blur - md";"
+      style={header_style}
+    >;
+      <div className="container flex h - 16 items - center px - 4 sm:px - 6">;"
+        <Logo custom_logo={custom_logo} custom_color={effective_theme?.primary_color} />;
+        <div className="ml - 6 flex - 1">;"
+
+        <form on_submit={handle_submit} className="hidden md:block w - 64 mx - 4">;"
+            on_change={set_query}
+            search_suggestions={search_suggestions}
+
+        <div className="flex items - center gap - 2">;"
+
+          {!hide_login && <UserMenu />}
+
+        </div>;
+      </div>;)
+    </header>);
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+    <header ;"
+      className="sticky top-0 z-50 w-full border-b border-zion-purple/20 bg-zion-blue-dark/90 backdrop-blur-md";"
+
+    </header>;"
+return (<header <div className="ml-6 flex-1" > <MainNavigation /> </div> <EnhancedSearchInput value= {"
+}/> </form> <div className="flex items-center gap-2" > <LanguageSelector /> {"
+  !hideLogin && <UserMenu /> 
+}</div> </div> </header>) 
+}
+<<<<<<< HEAD
+;
+=======
+;
+=======
+
+import React from 'react',;
+import { Link } from 'react-router-dom',;
+import { Logo } from './Logo',;
+import { UserMenu } from './UserMenu',;
+import { LanguageSelector } from './LanguageSelector',;
+import { MainNavigation } from '@/layout/MainNavigation',;
+import { useAuth } from '@/hooks/useAuth',;
+import { useWhitelabel } from '@/context/WhitelabelContext',;
+import { EnhancedSearchInput } from "@/components/search/EnhancedSearchInput",;
+import { generateSearchSuggestions } from "@/data/marketplaceData",;
+import { useNavigate } from "react-router-dom",;
+import { useState } from "react",;
+;
+export interface HeaderProps {;
+  hideLogin?:boolean,;
+  customLogo?:string,;
+  customTheme?:{;
+    primaryColor:string,;
+    backgroundColor:string,;
+    textColor:string;
+  },;
+}
+<<<<<<< HEAD
+;
+export function Header({ hideLogin = false, customLogo, customTheme } HeaderProps) {;
+  const { user } = useAuth(),;
+  const { isWhitelabel, primaryColor } = useWhitelabel(),;
+  const navigate = useNavigate(),;
+  const [query, setQuery] = useState(""),;
+  const searchSuggestions = generateSearchSuggestions(),;
+  ;
+  // If we have a white-label tenant and no specific customTheme is provided,;
+  // use the tenant's primary color;
+  const effectiveTheme = customTheme || (isWhitelabel ? {;
+    primaryColor,;
+    backgroundColor:'#0f172a', // Default dark background;
+    textColor:'#ffffff', // Default light text;
+  } undefined),;
+  ;
+  const headerStyle = effectiveTheme ? {;
+    backgroundColor:effectiveTheme.backgroundColor,;
+    color:effectiveTheme.textColor,;
+    borderColor:`${effectiveTheme.primaryColor}20`;
+  } {},;
+;
+  const handleSubmit = (e:React.FormEvent) => {;
+    e.preventDefault(),;
+    if (query.trim()) {;
+      navigate(`/search?q=${encodeURIComponent(query)}`),;
+      setQuery(""),;
+    }
+  },;
+  ;
+  return (;
+    <header ;
+      className="sticky top-0 z-50 w-full border-b border-zion-purple/20 bg-zion-blue-dark/90 backdrop-blur-md";
+      style={headerStyle}
+    >;
+      <div className="container flex h-16 items-center px-4 sm:px-6">;
+        <Logo customLogo={customLogo} customColor={effectiveTheme?.primaryColor} />;
+;
+        <div className="ml-6 flex-1">;
+          <MainNavigation />;
+        </div>;
+        <form onSubmit={handleSubmit} className="hidden md:block w-64 mx-4">;
+          <EnhancedSearchInput;
+            value={query}
+            onChange={setQuery}
+            searchSuggestions={searchSuggestions}
+          />;
+        </form>;
+;
+        <div className="flex items-center gap-2">;
+          <LanguageSelector />;
+          {!hideLogin && <UserMenu />}
+        </div>;
+      </div>;
+    </header>;
+  ),; export interface HeaderProps {
+  hideLogin?: boolean;
+customLogo?: string;
+customTheme?: {
+  primaryColor: string;
+backgroundColor: string;
+textColor: string 
+}
+}export function Header ({
+  hideLogin = false, customLogo, customTheme 
+}: HeaderProps) {
+  //If we have a white-label tenant and no specific customTheme is provided;
+//use the tenant's primary color const effectiveTheme = customTheme || (isWhitelabel ? {
+  primaryColor;
+backgroundColor: '#0f172a', //Default dark background textColor: '#ffffff', //Default light text 
+}: undefined);
+const headerStyle = effectiveTheme ? {
+  backgroundColor: effectiveTheme.backgroundColor;
+color: effectiveTheme.textColor;
+borderColor: `$ {
+  effectiveTheme.primaryColor 
+}20` 
+}: {
+  
+};
+const handleSubmit = (e: React.FormEvent) => {
+  e.preventDefault ();
+}
+};
+return (<header <div className="ml-6 flex-1" > <MainNavigation /> </div> <EnhancedSearchInput value= {
+  query 
+}onChange= {
+  setQuery 
+}searchSuggestions= {
+  searchSuggestions 
+}/> </form> <div className="flex items-center gap-2" > <LanguageSelector /> {
+  !hideLogin && <UserMenu /> 
+}</div> </div> </header>) 
+}
+;
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts

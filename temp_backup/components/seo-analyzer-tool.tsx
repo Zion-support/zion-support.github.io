@@ -31,7 +31,7 @@ icon: <Search className='w-8 h-8 text-white' />,
       icon: <BarChart3 className='w-8 h-8 text-white' />
       title: 'Competitive Analysis',
   description:
-        "Analyze your competitors' SEO strategies and identify opportunities to outperform them."
+        'Analyze your competitors' SEO strategies and identify opportunities to outperform them.'
       color: 'bg-gradient-to-br from-purple-500 to-indigo-600',
   gradient: 'from-purple-400 to-indigo-500'}
    ,}
@@ -113,7 +113,7 @@ const features = [
     {icon: <BarChart3 className='w-8 h-8 text-white' />;
       title: 'Competitive Analysis';
       description:;
-        "Analyze your competitors' SEO strategies and identify opportunities to outperform them.";
+        'Analyze your competitors' SEO strategies and identify opportunities to outperform them.';
       color: 'bg-gradient-to-br from-purple-500 to-indigo-600';}
       gradient: 'from-purple-400 to-indigo-500';}
     }
@@ -146,7 +146,7 @@ const features = [
         'Discover high-value keywords and analyze search intent to optimize your content strategy.',color: 'bg-gradient-to-br from-blue-500 to-cyan-600',
   gradient: 'from-blue-400 to-cyan-500',},{icon: <BarChart3 className='w-8 h-8 text-white' />,title: 'Competitive Analysis',}
   description:;}
-        "Analyze your competitors' SEO strategies and identify opportunities to outperform them.",color: 'bg-gradient-to-br from-purple-500 to-indigo-600',
+        'Analyze your competitors' SEO strategies and identify opportunities to outperform them.',color: 'bg-gradient-to-br from-purple-500 to-indigo-600',
   gradient: 'from-purple-400 to-indigo-500',},{icon: <Zap className='w-8 h-8 text-white' />,title: 'AI-Powered Insights',}
   description:;}
         'Get intelligent recommendations and actionable insights to improve your search rankings.',color: 'bg-gradient-to-br from-orange-500 to-red-600',
@@ -270,7 +270,7 @@ recommendations: [ 'Optimize meta descriptions for better click-through ratesImp
 keywords: [ {
   keyword: 'website optimization', volume: '12K', difficulty: 'medium' 
 }
-          {{keyword: 'website optimization';
+          {keyword: 'website optimization';
             volume: '12K';}
             difficulty: 'medium';}
           }
@@ -350,7 +350,7 @@ keywords: [ {
         </title>
         <meta;
 name='description'
-          content="Analyze your website's SEO performance with our comprehensive tool. Get detailed insights, keyword research, and optimization recommendations to improve search rankings."
+          content='Analyze your website's SEO performance with our comprehensive tool. Get detailed insights, keyword research, and optimization recommendations to improve search rankings.'
         />
         <meta;
 property='og: title'
@@ -365,19 +365,19 @@ property='og:description'
 
       {/* Hero Section *,}
 }
-      <section className="relative section-padding bg-gradient-cursor overflow-hidden" />;
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(34,197,94,0 && 0.08),transparent_50%)]" />;
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,rgba(34,197,94,0 && 0.06),transparent_50%)]" />;
-        <div className="absolute inset-0 bg-grid opacity-10" />;
-        <div className="relative z-10 container-cursor text-center" />;
-          <div className="inline-flex items-center px-4 py-2 rounded-full bg-green-500/10 border border-green-500/20 text-green-400 text-sm font-medium mb-6" />;
-            <Search className="w-4 h-4 mr-2" />;
+      <section className='relative section-padding bg-gradient-cursor overflow-hidden' />;
+        <div className='absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(34,197,94,0 && 0.08),transparent_50%)]' />;
+        <div className='absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,rgba(34,197,94,0 && 0.06),transparent_50%)]' />;
+        <div className='absolute inset-0 bg-grid opacity-10' />;
+        <div className='relative z-10 container-cursor text-center' />;
+          <div className='inline-flex items-center px-4 py-2 rounded-full bg-green-500/10 border border-green-500/20 text-green-400 text-sm font-medium mb-6' />;
+            <Search className='w-4 h-4 mr-2' />;
             Professional SEO Analysis;
           </div>;
-          <h1 className="text-responsive-xl font-black mb-8 gradient-text text-shadow-lg" />;
+          <h1 className='text-responsive-xl font-black mb-8 gradient-text text-shadow-lg' />;
             SEO Analyzer Tool;
           </h1>;
-          <p className="text-responsive-md text-gray-300 max-w-5xl mx-auto leading-relaxed mb-12" />;
+          <p className='text-responsive-md text-gray-300 max-w-5xl mx-auto leading-relaxed mb-12' />;
             Analyze your website's SEO performance with our comprehensive tool. Get detailed insights, keyword research, and optimization recommendations to improve your search rankings and drive more organic traffic.;
           </p>;
 
@@ -405,29 +405,29 @@ type='url'
           </p>;}
           {/* URL Input */}
 
-          <div className="max-w-2xl mx-auto mb-8" />
-            <div className="flex flex-col sm:flex-row gap-4" />
+          <div className='max-w-2xl mx-auto mb-8' />
+            <div className='flex flex-col sm:flex-row gap-4' />
               <input;
-type="url"
-                placeholder="Enter your website URL (e && e.g., https: //example && example.com)"
+type='url'
+                placeholder='Enter your website URL (e && e.g., https: //example && example.com)'
 
                 value={url}
                 onChange={(e) = /> setUrl(e && e.target.value,}
 }
-                className="flex-1 px-6 py-4 bg-gray-800 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent";
+                className='flex-1 px-6 py-4 bg-gray-800 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent';
               />;
               <Button;
                 onClick={handleAnalyzeSEO}
 
-                size="lg"
-                className="bg-gradient-to-r from-green-500 to-emerald-600 hover: from-green-600 hover:to-emerald-700 text-white shadow-2xl hover-glow whitespace-nowrap"
+                size='lg'
+                className='bg-gradient-to-r from-green-500 to-emerald-600 hover: from-green-600 hover:to-emerald-700 text-white shadow-2xl hover-glow whitespace-nowrap'
 
 
                 disabled={isAnalyzing |!url.trim(,}
 }
                />;
                 {isAnalyzing ? (<>;
-                    <div className='animate-spin rounded-full h-5 w-5 border-b-2 border-white mr-2' />                    <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white mr-2" />;
+                    <div className='animate-spin rounded-full h-5 w-5 border-b-2 border-white mr-2' />                    <div className='animate-spin rounded-full h-5 w-5 border-b-2 border-white mr-2' />;
                     Analyzing...;
                   </>;
                 ) : (<>;
@@ -480,7 +480,7 @@ you dominate search rankings.
               <Card;}
 key={index}
                 className='card-hover group border-gradient-green'
-                style={{ animationDelay: `${index * 0.1}s` }}
+                style={ animationDelay: `${index * 0.1}s` }
                />
                 <div className='flex items-start space-x-6' />
                   <div className='relative' />
@@ -532,7 +532,7 @@ actionable insights and recommendations.
               <Card;}
 key={index}
                 className='card-hover border-gradient-green';
-                style={{ animationDelay: `${index * 0.1}s` ,
+                style={ animationDelay: `${index * 0.1}s` ,
 }
                />;
                 <div className='flex items-center mb-6' />;
@@ -744,7 +744,7 @@ className={`px-2 py-1 rounded text-xs ${
             {pricing.map((plan, index) => (<Card;}
                 key={index}
                 className={`card-hover border-gradient-green ${plan.popular ? 'ring-2 ring-green-500 scale-105' : ''}`}
-                style={{ animationDelay: `${index * 0.1}s` ,
+                style={ animationDelay: `${index * 0.1}s` ,
 }
                />;
                 {plan.popular && (<div className='absolute -top-4 left-1/2 transform -translate-x-1/2' />;
@@ -807,13 +807,13 @@ href='/contact'
 }>
 
                   Get Started;
-                  <ArrowRight className='w-5 h-5 ml-2' />                </Button>                  href="/contact";
-                  size="lg";
+                  <ArrowRight className='w-5 h-5 ml-2' />                </Button>                  href='/contact';
+                  size='lg';
                   className={`w-full ${plan && plan.popular ? 'bg-gradient-to-r from-green-500 to-emerald-600 hover: from-green-600 hover:to-emerald-700' : 'bg-gray-700 hover:bg-gray-600'} text-white,
 }>
 
                   Get Started;
-                  <ArrowRight className="w-5 h-5 ml-2" />;
+                  <ArrowRight className='w-5 h-5 ml-2' />;
               </Card>;
             ))}
       {/* CTA Section */}

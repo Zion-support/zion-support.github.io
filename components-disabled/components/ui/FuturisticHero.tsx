@@ -37,7 +37,7 @@ function FuturisticHero() {}
             </a>;
           </Link>;
         </div>;
-          <p className="text-sm text-gray-700 dark:text-gray-300">
+          <p className='text-sm text-gray-700 dark:text-gray-300'>
 
           </p>
         </div>

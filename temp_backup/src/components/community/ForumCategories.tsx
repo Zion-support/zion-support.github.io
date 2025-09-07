@@ -1,6 +1,10 @@
 /* eslint-disable */
+<<<<<<< HEAD
+ {;
+=======
  >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7 const categories: ForumCategoryInfo[] = [ const visibleCategories = categories.filter (category => !category.adminOnly || isAdmin);
 {;
+>>>>>>> origin/resolved-merge-conflicts
   visibleCategories.map ( (category) => {;
   const Icon = iconMap[category.icon as keyof typeof iconMap];
 return (<Link key= {;

@@ -173,6 +173,48 @@ class BuildMonitor {
       healthScore: this.calculateHealthScore(results),
       recommendations: this.generateRecommendations(results)
     }
+module.exports = BuildMonitor;
+ursor/automate-test-improve-and-merge-code-646c;
+const fs = require('fs)const path = require('path'),const { execSync } = require(child_process')class BuildMonitor {constructor() {this.logFile = path.join(__dirname, 'logsbuild-monitor.log)this.reportFile = path.join(__dirname, 'reportsbuild-status.json')this.alertThreshold = 3; // Alert after 3 consecutive failures;
+
+const fs = require('fs);
+const path = require('path'),
+  const { execSync } = require(child_process');
+class BuildMonitor {
+  constructor() {
+    this.logFile = path.join(__dirname, 'logsbuild-monitor.log);
+    this.reportFile = path.join(__dirname, 'reportsbuild-status.json');
+    this.alertThreshold = 3; // Alert after 3 consecutive failures
+    this.consecutiveFailures = 0;
+  log(message, level = INFO') {const timestamp = new Date().toISOString(),const logMessage = `[${timestamp}] [${level}] ${message}\n`;
+    console.log(logMessage.trim())fs.appendFileSync(this.logFile, logMessage)}
+  async checkBuildHealth() {const results = {timestamp: new Date().toISOString(),build: { status: 'unknown, duration: 0, errors: [] },lint: { status: 'unknown', issues: [] },typeCheck: { status: unknown', errors: [] },dependencies: { status: 'unknown, outdated: [] }
+    }try {// Check build;
+      this.log('Checking build status...')const buildStart = Date.now(),try {execSync(yarn build', {stdio: 'pipe,timeout: 300000, // 5 minutes timeout;
+          cwd: process.cwd()})results.build.status = 'success';
+        results.build.duration = Date.now() - buildStart;
+        this.consecutiveFailures = 0,this.log(Build check: SUCCESS')} catch (error) {results.build.status = 'failed;
+        results.build.duration = Date.now() - buildStart;
+        results.build.errors = this.parseErrors(error.stdout || error.message)this.consecutiveFailures++,this.log(`Build check: FAILED (${this.consecutiveFailures} consecutive failures)`, 'ERROR')}
+      // Check linting (non-blocking)try {execSync(yarn lint', { stdio: 'pipe, cwd: process.cwd() })results.lint.status = 'success',this.log(Lint check: SUCCESS')} catch (error) {results.lint.status = 'failed;
+        results.lint.issues = this.parseLintIssues(error.stdout || error.message),this.log('Lint check: ISSUES FOUNDWARN')}
+      // Check TypeScript (non-blocking)try {execSync(npx tsc --noEmit --skipLibCheck', { stdio: 'pipe, cwd: process.cwd() })results.typeCheck.status = 'success',this.log(TypeScript check: SUCCESS')} catch (error) {results.typeCheck.status = 'failed;
+        results.typeCheck.errors = this.parseTypeErrors(error.stdout || error.message),this.log('TypeScript check: ERRORS FOUNDWARN')}
+      // Check dependencies;
+      try {const outdated = execSync(yarn outdated --json', {stdio: 'pipe,cwd: process.cwd()})results.dependencies.status = 'success';
+        results.dependencies.outdated = JSON.parse(outdated),this.log(Dependencies check: SUCCESS')} catch (error) {results.dependencies.status = 'warning,this.log('Dependencies check: Some packages may be outdatedWARN')}
+  parseErrors(output) {const errors = [];
+    const lines = output.split('\n),lines.forEach(line => {if (line.includes('Error:') || line.includes(SyntaxError:')) {errors.push(line.trim())}
+    })parseLintIssues(output) {const issues = [];
+    const lines = output.split('\n),lines.forEach(line => {if (line.includes('error') || line.includes(warning')) {issues.push(line.trim())}
+    })parseTypeErrors(output) {const errors = [];
+    const lines = output.split('\n),lines.forEach(line => {if (line.includes('error TS')) {errors.push(line.trim())}
+    })// Create alert file for other processes to pick up;
+      const alertData = {type: 'build_failure,consecutiveFailures: this.consecutiveFailures,timestamp: new Date().toISOString(),lastError: results.build.errors[0] || 'Unknown error',results: results;
+      }fs.writeFileSync(path.join(__dirname, alertsbuild-failure-alert.json'),JSON.stringify(alertData, null, 2))}
+  }
+  async generateReport(results) {// Read previous report for trends;
+    let previousReport = null,if (fs.existsSync(this.reportFile)) {try {previousReport = JSON.parse(fs.readFileSync(this.reportFile, 'utf8))} catch (error) {this.log('Could not read previous reportWARN')}
     fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2))
     this.log(`Build health report updated: ${this.reportFile}`)
     return report
@@ -308,12 +350,12 @@ class BuildMonitor {
           let content = fs.readFileSync(file, 'utf8')
           let modified = false
           // Fix common issues'
-          if (content.includes("'") && !content.includes("'")) {'"
-            content = content.replace(/'/g, "'")
+          if (content.includes(''') && !content.includes(''')) {''
+            content = content.replace(/'/g, ''')
             modified = true
-          }'"
-          if (content.includes('"') && !content.includes('"')) {'"
-            content = content.replace(/"/g, '"')
+          }''
+          if (content.includes(''') && !content.includes(''')) {''
+            content = content.replace(/'/g, ''')
             modified = true
           // Fix missing semicolons'
           if (content.includes('export const') && !content.includes(';')) {'
@@ -349,16 +391,16 @@ class BuildMonitor {
   generateBuildSuggestions($2) {}
     const suggestions = []
     const errorText = errors.toLowerCase();'
-    if (errorText.includes('typescript')) {'"
-      suggestions.push('Run "npm run type-check" to identify TypeScript errors');'
+    if (errorText.includes('typescript')) {''
+      suggestions.push('Run 'npm run type-check' to identify TypeScript errors');'
       suggestions.push('Check for missing type annotations')
     }'
-    if (errorText.includes('eslint')) {'"
-      suggestions.push('Run "npm run lint:fix" to auto-fix linting issues');'
+    if (errorText.includes('eslint')) {''
+      suggestions.push('Run 'npm run lint:fix' to auto-fix linting issues');'
       suggestions.push('Check for unused variables and imports')
     }'
-    if (errorText.includes('module not found')) {'"
-      suggestions.push('Run "npm install" to install missing dependencies');'
+    if (errorText.includes('module not found')) {''
+      suggestions.push('Run 'npm install' to install missing dependencies');'
       suggestions.push('Check import paths and file locations')
     }'
     if (errorText.includes('syntax')) {'
@@ -431,4 +473,143 @@ if (require.main === module) {
       console.log('Usage: node build-monitor.js [start|stop|status|check|build|stats]');
   }
 }
+module.exports = BuildMonitor;
+
+const fs = require('fs);
+const path = require('path'),
+  const { execSync } = require(child_process');
+class BuildMonitor {
+  constructor() {
+    this.logFile = path.join(__dirname, 'logsbuild-monitor.log);
+    this.reportFile = path.join(__dirname, 'reportsbuild-status.json');
+    this.alertThreshold = 3; // Alert after 3 consecutive failures
+    this.consecutiveFailures = 0;
+  log(message, level = INFO') {
+    const timestamp = new Date().toISOString(),
+  const logMessage = `[${timestamp}] [${level}] ${message}\n`;
+    console.log(logMessage.trim());
+    fs.appendFileSync(this.logFile, logMessage)}
+  async checkBuildHealth() {
+    const results = {
+      timestamp: new Date().toISOString(),
+      build: { status: 'unknown, duration: 0, errors: [] },
+      lint: { status: 'unknown', issues: [] },
+      typeCheck: { status: unknown', errors: [] },
+      dependencies: { status: 'unknown, outdated: [] }
+    };
+    try {
+      // Check build
+      this.log('Checking build status...');
+      const buildStart = Date.now(),
+  try {
+        execSync(yarn build', { 
+          stdio: 'pipe, 
+          timeout: 300000, // 5 minutes timeout
+          cwd: process.cwd()
+        });
+        results.build.status = 'success';
+        results.build.duration = Date.now() - buildStart;
+        this.consecutiveFailures = 0,
+  this.log(Build check: SUCCESS')} catch (error) {
+        results.build.status = 'failed;
+        results.build.duration = Date.now() - buildStart;
+        results.build.errors = this.parseErrors(error.stdout || error.message);
+        this.consecutiveFailures++,
+  this.log(`Build check: FAILED (${this.consecutiveFailures} consecutive failures)`, 'ERROR')}
+      // Check linting (non-blocking)
+      try {
+        execSync(yarn lint', { stdio: 'pipe, cwd: process.cwd() });
+        results.lint.status = 'success',
+  this.log(Lint check: SUCCESS')} catch (error) {
+        results.lint.status = 'failed;
+        results.lint.issues = this.parseLintIssues(error.stdout || error.message),
+  this.log('Lint check: ISSUES FOUNDWARN')}
+      // Check TypeScript (non-blocking)
+      try {
+        execSync(npx tsc --noEmit --skipLibCheck', { stdio: 'pipe, cwd: process.cwd() });
+        results.typeCheck.status = 'success',
+  this.log(TypeScript check: SUCCESS')} catch (error) {
+        results.typeCheck.status = 'failed;
+        results.typeCheck.errors = this.parseTypeErrors(error.stdout || error.message),
+  this.log('TypeScript check: ERRORS FOUNDWARN')}
+      // Check dependencies
+      try {
+        const outdated = execSync(yarn outdated --json', { 
+          stdio: 'pipe, 
+          cwd: process.cwd() 
+        });
+        results.dependencies.status = 'success';
+        results.dependencies.outdated = JSON.parse(outdated),
+  this.log(Dependencies check: SUCCESS')} catch (error) {
+        results.dependencies.status = 'warning,
+  this.log('Dependencies check: Some packages may be outdatedWARN')}
+  parseErrors(output) {
+    const errors = [];
+    const lines = output.split('\n),
+  lines.forEach(line => {
+      if (line.includes('Error:') || line.includes(SyntaxError:')) {
+        errors.push(line.trim())}
+    });
+  parseLintIssues(output) {
+    const issues = [];
+    const lines = output.split('\n),
+  lines.forEach(line => {
+      if (line.includes('error') || line.includes(warning')) {
+        issues.push(line.trim())}
+    });
+  parseTypeErrors(output) {
+    const errors = [];
+    const lines = output.split('\n),
+  lines.forEach(line => {
+      if (line.includes('error TS')) {
+        errors.push(line.trim())}
+    });
+      // Create alert file for other processes to pick up
+      const alertData = {
+        type: 'build_failure,
+        consecutiveFailures: this.consecutiveFailures,
+        timestamp: new Date().toISOString(),
+        lastError: results.build.errors[0] || 'Unknown error',
+        results: results
+      };
+      fs.writeFileSync(
+        path.join(__dirname, alertsbuild-failure-alert.json'),
+        JSON.stringify(alertData, null, 2)
+      )}
+  }
+  async generateReport(results) {
+    // Read previous report for trends
+    let previousReport = null,
+  if (fs.existsSync(this.reportFile)) {
+      try {
+        previousReport = JSON.parse(fs.readFileSync(this.reportFile, 'utf8))} catch (error) {
+        this.log('Could not read previous reportWARN')}
+    }
+    const report = {
+      ...results,
+      trends: {
+        consecutiveFailures: this.consecutiveFailures,
+        improvementSinceLastRun: previousReport ? 
+          (results.build.status === success' && previousReport.build.status === 'failed) : false,
+        degradationSinceLastRun: previousReport ?
+          (results.build.status === 'failed' && previousReport.build.status === success') : false
+      },
+      healthScore: this.calculateHealthScore(results),
+      recommendations: this.generateRecommendations(results)
+    };
+    if (results.build.status === 'failed) score -= 40;
+    if (results.lint.status === 'failed') score -= 20;
+    if (results.typeCheck.status === failed') score -= 20,
+  if (results.dependencies.status === 'warning) score -= 10;
+    try {
+      const results = await this.checkBuildHealth();
+      await this.sendAlert(results);
+      const report = await this.generateReport(results),
+  this.log(`Build health check completed. Health score: ${report.healthScore}/100`);
+// Main execution
+if (require.main === module) {
+  const monitor = new BuildMonitor(),
+
+
+module.exports = BuildMonitor;
 module.exports = BuildMonitor;

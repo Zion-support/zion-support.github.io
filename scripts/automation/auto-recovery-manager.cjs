@@ -1,13 +1,46 @@
+<<<<<<< HEAD
+#!/""usr/bin/env""
+const fs = require("fs");
+const path = require("path");
+const { execSync } = require("child_process");
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+>>>>>>> merged-prs-20250907-203621
 #!/""usr/bin/env""
 const fs = require("fs")
 const path = require("path")
 const { execSync } = require("child_process")
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     this.logsPath = path.join(this.workspacePath, "logs")
     this.reportsPath = path.join(this.workspacePath, "automation-reports")
   ["this.logsPath", "this.reportsPath"]
   fs.mkdirSync(dir, { "recursive"})
   log(message, level = "INFO")
     console.log(")
+<<<<<<< HEAD
+const logFile = path.join(this.logsPath, "auto-recovery-manager.log");
+    fs.appendFileSync(logFile, logMessage + "\n")
+  log(message, level = "INFO")
+const logMessage = "[${timestamp}] [${level}] ${message}";
+    console.log(")
+const logFile = path.join(this.logsPath, "auto-recovery-manager.log");
+    fs.appendFileSync(logFile, logMessage + "\n")
+  this.log(" Detecting system issues...")
+const checks = ["{ "name": "npm"", ""command": "npm --version"", ""issue": "npm not available" }", "];
+=======
     const logFile = path.join(this.logsPath, "auto-recovery-manager.log")
     fs.appendFileSync(logFile, logMessage + "\n")
   log(message, level = "INFO")
@@ -17,6 +50,7 @@ const { execSync } = require("child_process")
     fs.appendFileSync(logFile, logMessage + "\n")
   this.log(" Detecting system issues...")
     const checks = ["{ "name": "npm"", ""command": "npm --version"", ""issue": "npm not available" }", "]
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   "name": "node"", ""command": "node --version"", ""issue": "Node.js not available"", "}", "{ "name": "git"", ""command": "git --version"", ""issue": "Git not available" }", "{ "name": "disk-space"", ""command": "df -h ."", ""issue": "Low disk space" }", "{ "name": "memory"", ""command": "free -h"", ""issue": "Low memory" }", ""
   "cwd"
           "stdio": "pipe"
@@ -27,7 +61,15 @@ const { execSync } = require("child_process")
           "severity": "high"
 "
     // Check for project-specific issues"
+<<<<<<< HEAD
+const projectIssues = await this.checkProjectIssues();";
+=======
     const projectIssues = await this.checkProjectIssues();"
+<<<<<<< HEAD
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     issues.push(...projectIssues);"
 this.log(Found ${issues.length} system issues")
     if (!fs.existsSync(path.join(this.workspacePath, "package.json")
@@ -46,16 +88,44 @@ this.log(Found ${issues.length} system issues")
         "description": "package.json file is missing"
         "severity": "critical"
     if (!fs.existsSync(path.join(this.workspacePath, "node_modules")
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   "type": "project"
         "name": "missing-dependencies"
         "description": "node_modules directory is missing"
         "severity": "high"
+<<<<<<< HEAD
+const content = fs.readFileSync(filePath, "utf8");
+          content.includes("")
+  "type": "corruption"
+            "name": "merge-conflicts","description": "Merge conflicts detected in ${filePath}"
+            "severity": "high"
+=======
+<<<<<<< HEAD
+    if (!fs.existsSync(path.join(this.workspacePath, "package.json")
+  "type": "project"
+        "name": "missing-package-json"
+        "description": "package.json file is missing"
+        "severity": "critical"
+    if (!fs.existsSync(path.join(this.workspacePath, "node_modules")
+  "type": "project"
+        "name": "missing-dependencies"
+        "description": "node_modules directory is missing"
+        "severity": "high"
+=======
+>>>>>>> merged-prs-20250907-203621
   const content = fs.readFileSync(filePath, "utf8")
           content.includes("")
           content.includes(">>>>>>>")
   "type": "corruption"
             "name": "merge-conflicts","description": "Merge conflicts detected in ${filePath}"
             "severity": "high"
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
             "file"
         if (content.includes("") || content.includes("")
   "type": "corruption"
@@ -106,6 +176,7 @@ this.log(Found ${issues.length} system issues")
   "cwd"
         "stdio": "pipe"
         "timeout"
+<<<<<<< HEAD
       this.log(" npm recovered successfully")
   this.log(` Failed to recover "npm": ${error.message  }`, "ERROR"`)
   this.log(" Recovering Node.js...")
@@ -176,6 +247,22 @@ this.log(Found ${issues.length} system issues")
         "timeout"
       this.log(" Dependencies recovered successfully")
       return true} catch (error) {  this.log(` Failed to recover "dependencies": ${error.message  }`, "ERROR"`)
+let content = fs.readFileSync(filePath, "utf8");
+        /\n[\s\S]*?\n        "$1"
+      content = content.replace(/\n?/g, "")
+let content = fs.readFileSync(filePath, "utf8");
+        /\n[\s\S]*?\n        "$1"
+      content = content.replace(/\n?/g, ")
+  this.log( Failed to recover merge conflicts in ${filePath  }: ${error.message}")
+=======
+<<<<<<< HEAD
+
+        /\n[\s\S]*?\n        "$1"
+      content = content.replace(/\n?/g, )
+  this.log( Failed to recover merge conflicts in ${filePath  }: ${error.message})
+=======
+      this.log(" Dependencies recovered successfully")
+      return true} catch (error) {  this.log(` Failed to recover "dependencies": ${error.message  }`, "ERROR"`)
       let content = fs.readFileSync(filePath, "utf8")
         /\n[\s\S]*?\n        "$1"
       content = content.replace(/\n?/g, "")
@@ -183,33 +270,74 @@ this.log(Found ${issues.length} system issues")
         /\n[\s\S]*?\n        "$1"
       content = content.replace(/\n?/g, ")
   this.log( Failed to recover merge conflicts in ${filePath  }: ${error.message}")
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
         "
   this.log( Failed to recover merge conflicts in ${filePath}: ${error.message}")
         "ERROR"
         `ERROR
   this.log(" Recovering encoding issues in ${filePath}...")
+<<<<<<< HEAD
+const encodings = ["utf8", "latin1", "cp1252"];
+          fs.writeFileSync(filePath, content, ")
+const encodings = ["utf8", "latin1", "cp1252"];
+          fs.writeFileSync(filePath, content, "utf8")
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+=======
+>>>>>>> merged-prs-20250907-203621
       const encodings = ["utf8", "latin1", "cp1252"]
           fs.writeFileSync(filePath, content, ")
       const encodings = ["utf8", "latin1", "cp1252"]
           fs.writeFileSync(filePath, content, "utf8")
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
           this.log( Encoding issues recovered in ${filePath} using ${encoding}")
   this.log( Failed to recover encoding issues in ${filePath  }: ${error.message}")
         "
   this.log( Failed to recover encoding issues in ${filePath}: ${error.message}")
         "ERROR"
         `ERROR
+<<<<<<< HEAD
+  this.log(" Recovering unreadable file ${filePath}...")
+const backupPath = filePath + ".backup";
+let content = "";
+  case ".js"
+        case ".jsx"
+=======
+<<<<<<< HEAD
+
+        case ".jsx"
+          content = // Recovered file\nconsole.log("File recovered");\n
+        case .ts"
+        case ".tsx
+          content = // Recovered file\nexport {}\n"
+        "default
+          content = // Recovered file\n"
+this.log( Unreadable file "recovered)
+        ERROR"
+=======
   this.log(" Recovering unreadable file ${filePath}...")
       const backupPath = filePath + ".backup"
       let content = ""
   case ".js"
         case ".jsx"
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
           content = "// Recovered file\nconsole.log("File recovered");\n"
         case ".ts"
         case ".tsx"
           content = "// Recovered file\nexport {};\n"
         "default": content = "// Recovered file\n"
+<<<<<<< HEAD
+const backupPath = filePath + ".backup";
+let content = ";
+=======
       const backupPath = filePath + ".backup"
       let content = "
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   case ".js"
         case ".jsx"
           content = "// Recovered file\nconsole.log(""File recovered");\n"
@@ -220,10 +348,13 @@ this.log(Found ${issues.length} system issues")
           content = "// Recovered file\n"
 this.log( Unreadable file "recovered")
         "ERROR"
+<<<<<<< HEAD
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   this.log( Failed to recover unreadable file ${filePath}: ${error.message}")
         "ERROR"
       this.log( Failed to recover unreadable file ${filePath}: ${error.message}")
-        "ERROR"
         "ERROR"
   this.log(" Generating auto-recovery report...")
   "timestamp"
@@ -231,6 +362,14 @@ this.log( Unreadable file "recovered")
         "recoveredIssues"
         "recoveryRate"
       "recoveryResults"
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+=======
+      recommendations": ["Review recovered files to ensure they meet your requirements, Consider implementing backup strategies for critical files", "Monitor system resources regularly, Implement automated testing to catch issues early", "]
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
       "recommendations": ["Review recovered files to ensure they meet your requirements"", "Consider implementing backup strategies for critical files", "Monitor system resources regularly"", "Implement automated testing to catch issues early", ""]
       this.reportsPath,auto-recovery-manager-report.json"
   "timestamp"
@@ -238,7 +377,48 @@ this.log( Unreadable file "recovered")
         "recoveredIssues"
         "recoveryRate"
       "recoveryResults"
+<<<<<<< HEAD
+      "recommendations": ["Review recovered files to ensure they meet your requirements", "Consider implementing backup strategies for critical files", "Monitor system resources regularly", "Implement automated testing to catch issues early", "]
+=======
+<<<<<<< HEAD
+
+      "recommendations": ["Review recovered files to ensure they meet your requirements", "Consider implementing backup strategies for critical files", "Monitor system resources regularly", "Implement automated testing to catch issues early", "]
       "recommendations": ["Review recovered files to ensure they meet your requirements", "Consider implementing backup strategies for critical files", "Monitor system resources regularly", "Implement automated testing to catch issues early", "]
       "recommendations": ["Review recovered files to ensure they meet your requirements", "Consider implementing backup strategies for critical files", "Monitor system resources regularly", "Implement automated testing to catch issues early", "]
 
 
+
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+      "recommendations": ["Review recovered files to ensure they meet your requirements", "Consider implementing backup strategies for critical files", "Monitor system resources regularly", "Implement automated testing to catch issues early", "]
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+<<<<<<< HEAD
+      "recommendations": ["Review recovered files to ensure they meet your requirements", "Consider implementing backup strategies for critical files", "Monitor system resources regularly", "Implement automated testing to catch issues early", "]
+=======
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+=======
+      "recommendations": ["Review recovered files to ensure they meet your requirements", "Consider implementing backup strategies for critical files", "Monitor system resources regularly", "Implement automated testing to catch issues early", "]
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
+<<<<<<< HEAD
+=======
+
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
+>>>>>>> cursor/automate-test-improve-and-merge-code-18b6
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc

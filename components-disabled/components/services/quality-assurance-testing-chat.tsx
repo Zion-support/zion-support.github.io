@@ -8,11 +8,34 @@ const QualityAssuranceTestingChat: NextPage = () => ;
 
 ;
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+  return (<div>;
+import type { NextPage } from "next";"
+import Head from "next/head";"
+import Link from "next/link";"
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 const QualityAssuranceTestingChat: NextPage = () => ;
   return (<div />;
 import type { NextPage } from \"next\";
 import Head from \"next/head\";
 import Link from \"next/link\";
+<<<<<<< HEAD
+>>>>>>> origin/chore/fix-lint-and-merge
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
 const QualityAssuranceTestingChat: NextPage = () => {;
   return (
@@ -92,6 +115,23 @@ name=\"description\"}
 
 export default QualityAssuranceTestingChat;
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+  return (<div>;
+      <Head>;
+        <title>QualityAssuranceTestingChat - Zion Tech Solutions</title>;
+        <title>QualityAssuranceTestingChat - Zion Tech Solutions</title>;
+        <title>QualityAssuranceTestingChat - Zion Tech Solutions</title>;
+        <title>QualityAssuranceTestingChat - Zion Tech Solutions</title>;
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 const QualityAssuranceTestingChat: NextPage = () => ;
   return (<div />;
       <Head />;
@@ -99,6 +139,14 @@ const QualityAssuranceTestingChat: NextPage = () => ;
         <title />QualityAssuranceTestingChat - Zion Tech Solutions</title>;
         <title />QualityAssuranceTestingChat - Zion Tech Solutions</title>;
         <title />QualityAssuranceTestingChat - Zion Tech Solutions</title>;
+<<<<<<< HEAD
+>>>>>>> origin/chore/fix-lint-and-merge
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 ursor/fix-website-loading-errors-and-merge-6662;
   );
 }
@@ -107,7 +155,21 @@ ursor/fix-website-loading-errors-and-merge-6662;
 export default QualityAssuranceTestingChat;
 
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
 const QualityAssuranceTestingChat: NextPage = () => {
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+const "QualityAssuranceTestingChat": NextPage = () => {
+=======
+const QualityAssuranceTestingChat: NextPage = () => {
+>>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
  ;
   return (
     <div />
@@ -120,6 +182,23 @@ import type { NextPage } from './next';
 import Head from './next / head';
 import Link from './next / link';
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+  return (<div>;
+}
+return (;
+    <div>;
+      <Head>;
+        <title > QualityAssuranceTestingChat - Zion Tech Solutions</title>;
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 const QualityAssuranceTestingChat: NextPage = () => ;
   return (<div />;
 const QualityAssuranceTestingChat: NextPage = () => {
@@ -127,6 +206,14 @@ const QualityAssuranceTestingChat: NextPage = () => {
     <div />;
       <Head />;
         <title  /> QualityAssuranceTestingChat - Zion Tech Solutions</title>;
+<<<<<<< HEAD
+>>>>>>> origin/chore/fix-lint-and-merge
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
         <meta;
           name=\"description\";}
           content=\"QualityAssuranceTestingChat service\";}
@@ -154,10 +241,32 @@ export default QualityAssuranceTestingChat;<div />;
     </div>;
   )},export default QualityAssuranceTestingChat;
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+  return (<div>;
+      <Head>;
+        <title>QualityAssuranceTestingChat - Zion Tech Solutions</title>;
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 const QualityAssuranceTestingChat: NextPage = () => ;
   return (<div />;
       <Head />;
         <title />QualityAssuranceTestingChat - Zion Tech Solutions</title>;
+<<<<<<< HEAD
+>>>>>>> origin/chore/fix-lint-and-merge
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
         <meta;
           name=\"description\";
           content=\"QualityAssuranceTestingChat service\";
@@ -181,7 +290,20 @@ export default QualityAssuranceTestingChat;<title />QualityAssuranceTestingChat 
 
 ;
 export default QualityAssuranceTestingChat;
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
 const QualityAssuranceTestingChat: NextPage = () => {
+>>>>>>> origin/chore/fix-lint-and-merge
+=======
+const QualityAssuranceTestingChat: NextPage = () => {
+=======
+<<<<<<< HEAD
+=======
+const QualityAssuranceTestingChat: NextPage = () => {
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
  ;
   return (
     <div />
@@ -203,7 +325,20 @@ name=\"description\"}
 
 export default QualityAssuranceTestingChat;
 export default QualityAssuranceTestingChat;
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
 const QualityAssuranceTestingChat: NextPage = () => {
+>>>>>>> origin/chore/fix-lint-and-merge
+=======
+const QualityAssuranceTestingChat: NextPage = () => {
+=======
+<<<<<<< HEAD
+=======
+const QualityAssuranceTestingChat: NextPage = () => {
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
  ;
   return (
     <div />
@@ -228,7 +363,20 @@ export default QualityAssuranceTestingChat;
         <title />QualityAssuranceTestingChat - Zion Tech Solutions</title>
         <title />QualityAssuranceTestingChat - Zion Tech Solutions</title>
 ;
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
 const QualityAssuranceTestingChat: NextPage = () => {
+>>>>>>> origin/chore/fix-lint-and-merge
+=======
+const QualityAssuranceTestingChat: NextPage = () => {
+=======
+<<<<<<< HEAD
+=======
+const QualityAssuranceTestingChat: NextPage = () => {
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
  ;
   return (
     <div />

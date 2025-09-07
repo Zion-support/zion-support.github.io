@@ -160,7 +160,11 @@
   href: '/compliance'}
 },
 '; ]'; ';' const socialLinks = ['';' { name: 'Facebook'}
+<<<<<<< HEAD
+  href: 'https:'''';';}
+=======
   href: 'https:'''";";}
+>>>>>>> origin/resolved-merge-conflicts
  import { Link } from 'react-router-dom' import { motion } from 'framer-motion' import {  Zap, Brain, Shield, Cloud, Rocket, Heart, ShoppingCart, Phone, Mail, MapPin, Globe, MessageCircle, ArrowRight, Facebook, Twitter, Linkedin, Instagram, Youtube, Github } from 'lucide-react'  export function EnhancedFooter() { const footerSections = [ { title: 'AI & Machine Learning', ';' links: ['';'   { name: 'AI Business Intelligence'}
   href: '/services/ai-business-intelligence'}
 },
@@ -322,5 +326,5 @@
 '';'   { name: 'Compliance'}
   href: '/compliance'}
 },
-']'; ';' const socialLinks = ['';' { name: 'Facebook'}"
-  href: 'https:'''"";}"
+']'; ';' const socialLinks = ['';' { name: 'Facebook'}'
+  href: 'https:''''';}'

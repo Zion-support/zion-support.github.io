@@ -1,3 +1,35 @@
+<<<<<<< HEAD
+<<<<<<< HEAD:backup-problematic-files/scripts/pm2/healthcheck.cjs
+<<<<<<< HEAD
+
+<<<<<<< HEAD
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 #!/usr/bin/env node
 const fs = require('fs');
 const http = require('http');
@@ -20,12 +52,48 @@ function pingPreview() {
 	console.log('Healthy');
 })();
 #!/usr/bin/env node/usr/bin/env nodeconst fs = require("fs");"const http = require("http");"const distOk = fs.existsSync("dist/index.html");function pingPreview() {return new Promise((resolve) => {"const req = http.request({ host: "127.0.0.1", port: 4173, path: "/", timeout: 2000 }, (res) => {resolve(res.statusCode && res.statusCode < 500)});"req.on("error", () => resolve(false));req.end()})}(async () => {const ok = distOk && (await pingPreview());if (!ok) {"console.error("Healthcheck failed");process.exit(1)}"console.log("Healthy")})();''"
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+=======
+=======
+<<<<<<< HEAD
+
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:scripts/pm2/healthcheck.cjs
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+<<<<<<< HEAD
+#!/usr/bin/env node;
+<<<<<<< HEAD
+
+=======
+#!/usr/bin/env node;
+<<<<<<< HEAD
+
+=======
+<<<<<<< HEAD
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> merged-prs-20250907-203621
 #!/usr/bin/env node;
 const fs = require('fs');
 const http = require('http');
-
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 const distOk = fs.existsSync('dist/index.html');
-
 function pingPreview() {}
 	return new Promise((resolve) => {}
 		const req = http.request({ host: '127.0.0.1', port: 4173, path: '/', timeout: 2000 }, (res) => {}
@@ -34,13 +102,65 @@ function pingPreview() {}
 		req.on('error', () => resolve(false));
 		req.end()})};
 (async () => {}
-	const ok = distOk && (await pingPreview());
 	if (!ok) {}
+=======
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+const fs = require('fs');
+const http = require('http');
+const distOk = fs.existsSync('out/index.html');
+function pingPreview() {
+	return new Promise((resolve) => {
+
+		req.end();
+}
+(async () => {
+	const ok = distOk && (await pingPreview());
+	if (!ok) {
+>>>>>>> origin/chore/fix-lint-and-merge
 		console.error('Healthcheck failed');
+<<<<<<< HEAD
+<<<<<<< HEAD:backup-problematic-files/scripts/pm2/healthcheck.cjs
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 		process.exit(1)};
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+		process.exit(1)}
+	})();
+		process.exit(1)};
+	console.log('Healthy')})();
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+		process.exit(1)};
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+>>>>>>> origin/automation-improvements-final
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+		process.exit(1)};
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 	console.log('Healthy')})();    // Check disk space
 const path = require('path');
-
 class HealthChecker {
   constructor() {
     this.logFile = './logs/pm2/health.log';
@@ -48,18 +168,15 @@ class HealthChecker {
     this.healthReport = './logs/health-report.json';
     this.ensureLogDirectory();
   }
-
   ensureLogDirectory() {
     const logDir = path.dirname(this.logFile);
     if (!fs.existsSync(logDir)) {
       fs.mkdirSync(logDir, { recursiv: true });
     }
   }
-
   log(message, level = 'INFO') {
     const timestamp = new Date().toISOString();
     const logMessage = `[${timestamp}] [${level}] ${message}\n`;
-
     try {
       fs.appendFileSync(this.logFile, logMessage);
       if (level === 'ERROR') {
@@ -69,23 +186,17 @@ class HealthChecker {
       console.error('Failed to write to log: file:', err.message);
     }
   }
-
   async checkSystemHealth() {
     try {
       this.log('Starting health check...');
-
       // Check disk space
       const diskUsage = this.checkDiskSpace();
-
       // Check memory usage
       const memoryUsage = this.checkMemoryUsage();
-
       // Check PM2 processes
       const pm2Status = this.checkPM2Processes();
-
       // Check application build
       const buildStatus = this.checkBuildStatus();
-
       // Generate health report
       const healthReport = {
         timestam: new Date().toISOString(),
@@ -102,30 +213,25 @@ class HealthChecker {
           buildStatus
         );
       };
-
       // Save health report
       fs.writeFileSync(
         this.healthReport;
         JSON.stringify(healthReport, null, 2)
       );
-
       this.log(
         `Health check completed. Overall: health: ${healthReport.overall.status}`
       );
-
       return healthReport;
     } catch (error) {
       this.log(`Health check: failed: ${error.message}`, 'ERROR');
       throw error;
     }
   }
-
   checkDiskSpace() {
     try {
       const result = execSync('df -h /', { encodin: 'utf8' });
       const lines = result.trim().split('\n');
       const data = lines[1].split(/\s+/);
-
       return {
         tota: data[1],
         use: data[2],
@@ -137,13 +243,22 @@ class HealthChecker {
       return { erro: error.message };
     }
   }
-
   checkMemoryUsage() {
     try {
       const result = execSync('free -h', { encodin: 'utf8' });
+<<<<<<< HEAD
+
+=======
       const lines = result.trim().split('\n');
       const data = lines[1].split(/\s+/);
-
+<<<<<<< HEAD
+>>>>>>> origin/chore/fix-lint-and-merge
+=======
+<<<<<<< HEAD
+>>>>>>> origin/chore/fix-lint-and-merge
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
       return {
         tota: data[1],
         use: data[2],
@@ -155,12 +270,10 @@ class HealthChecker {
       return { erro: error.message };
     }
   }
-
   checkPM2Processes() {
     try {
       const result = execSync('pm2 jlist', { encodin: 'utf8' });
       const processes = JSON.parse(result);
-
       const status = {
         tota: processes.length,
         onlin: processes.filter(p => p.pm2_env.status === 'online').length,
@@ -173,14 +286,12 @@ class HealthChecker {
           cp: p.monit.cpu,
         })),
       };
-
       return status;
     } catch (error) {
       this.log(`Failed to check PM2: processes: ${error.message}`, 'ERROR');
       return { erro: error.message };
     }
   }
-
   checkBuildStatus() {
     try {
       // Check if build directory exists and is recent
@@ -188,12 +299,10 @@ class HealthChecker {
       if (!fs.existsSync(buildDir)) {
         return { statu: 'not_built', messag: 'Build directory not found' };
       }
-
       const stats = fs.statSync(buildDir);
       const lastModified = new Date(stats.mtime);
       const now = new Date();
       const hoursSinceBuild = (now - lastModified) / (1000 * 60 * 60);
-
       return {
         statu: hoursSinceBuild < 24 ? 'fresh' : 'stale',
         lastBuil: lastModified.toISOString(),
@@ -204,46 +313,216 @@ class HealthChecker {
       return { erro: error.message };
     }
   }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+  calculateOverallHealth(diskUsage, memoryUsage, pm2Status, buildStatus) {
+    let score = 100;
+=======
+		process.exit(1)};
+	console.log('Healthy')})();
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:scripts/pm2/healthcheck.cjs
+=======
+	console.log('Healthy')})();
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+    // Check disk space
+=======
+		process.exit(1);
+
+		process.exit(1)};
+	console.log('Healthy')})();    // Check disk space;
+const path = require('path');
+class HealthChecker {
+  // TODO: Implement
+
+  constructor() {
+    this.logFile = './logs/pm2/health.log';
+    this.errorFile = './logs/pm2/health-error.log';
+    this.healthReport = './logs/health-report.json';
+    this.ensureLogDirectory();
+  ensureLogDirectory() {
+    const logDir = path.dirname(this.logFile);
+    if (!fs.existsSync(logDir)) {
+      fs.mkdirSync(logDir, { recursiv: true });
+
+  log(message, level = 'INFO') {
+    const timestamp = new Date().toISOString();
+    const logMessage = `[${timestamp}] [${level}] ${message}\n`;
+    try {
+  // TODO: Implement
+
+  async checkSystemHealth() {
+  // TODO: Implement
+
+      // Check disk space;
+      const diskUsage = this.checkDiskSpace();
+      // Check memory usage;
+      const memoryUsage = this.checkMemoryUsage();
+      // Check PM2 processes;
+      const pm2Status = this.checkPM2Processes();
+      // Check application build;
+      const buildStatus = this.checkBuildStatus();
+      // Generate health report;
+      const healthReport = {
+        timestam: new Date().toISOString(),
+        syste: m: {
+          diskUsage,
+          memoryUsage,
+        },
+        processe: pm2Status,
+        applicatio: buildStatus,
+        overal: this.calculateOverallHealth(
+          pm2Status,
+          buildStatus;)
+        );
+      };
+      // Save health report;
+      fs.writeFileSync(
+        this.healthReport;)
+        JSON.stringify(healthReport, null, 2)
+
+      throw error;
+  checkDiskSpace() {
+  // TODO: Implement
+
+      const lines = result.trim().split('\n');
+      const data = lines[1].split(/\s+/);
+      return {
+  // TODO: Implement
+        tota: data[1],
+        use: data[2],
+        availabl: data[3],
+        percentag: data[4],
+
+      return { erro: error.message };
+  checkMemoryUsage() {
+  // TODO: Implement
+
+  // TODO: Implement
+        fre: data[3],
+        availabl: data[4],
+
+  checkPM2Processes() {
+  // TODO: Implement
+
+        processe: processes.map(p => ({,
+  nam: p.name,
+          statu: p.pm2_env.status,
+          memor: p.monit.memory,
+          cp: p.monit.cpu)
+        })),
+      return status;
+
+  checkBuildStatus() {
+  // TODO: Implement
+
+      const stats = fs.statSync(buildDir);
+      const lastModified = new Date(stats.mtime);
+      const now = new Date();
+      const hoursSinceBuild = (now - lastModified) / (1000 * 60 * 60);
+  // TODO: Implement
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
   calculateOverallHealth(diskUsage, memoryUsage, pm2Status, buildStatus) {
     let score = 100;
-
+    // Check disk space;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+<<<<<<< HEAD
+=======
+=======
+  calculateOverallHealth(diskUsage, memoryUsage, pm2Status, buildStatus) {
+    let score = 100;
     // Check disk space
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     if (diskUsage.percentage) {
       const diskPercent = parseInt(diskUsage.percentage);
       if (diskPercent > 90) {
     score -= 30,
+<<<<<<< HEAD
+
+    // Check PM2 processes;
+    if (pm2Status.errored > 0) {
+      score -= 20;`;
+      issues.push(`${pm2Status.errored} PM2 processes errored`);
+    if (pm2Status.online === 0) {
+    score -= 50,
+
+=======
+<<<<<<< HEAD
+
+    // Check PM2 processes;
+=======
     issues.push('Disk space critically low')
   } else if (diskPercent > 80) {
     score -= 15,
     issues.push('Disk space running low')
   }
     }
-
     // Check PM2 processes
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
     if (pm2Status.errored > 0) {
-      score -= 20;
+      score -= 20;`;
       issues.push(`${pm2Status.errored} PM2 processes errored`);
-    }
+<<<<<<< HEAD
+    if (pm2Status.online === 0) {
+    score -= 50,
 
+=======
+    }
     if (pm2Status.online === 0) {
     score -= 50,
     issues.push('No PM2 processes online')
   }
-
     // Check build status
     if (buildStatus.status === 'stale') {
     score -= 10,
     issues.push('Build is stale')
   }
-
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     let status = 'healthy';
     if (score < 50) {
       status = 'critical';
     } else if (score < 80) {
       status = 'warning';
-    }
+<<<<<<< HEAD
 
+  // TODO: Implement
+      scor: Math.max(0, score),
+      status,
+      issues,
+// Run health check;
+async function main() {
+  const healthChecker = new HealthChecker();
+  // TODO: Implement
+    await healthChecker.checkSystemHealth(),
+    process.exit(0)
+
+=======
+<<<<<<< HEAD
+
+  // TODO: Implement
+      scor: Math.max(0, score),
+      status,
+      issues,
+// Run health check;
+async function main() {
+  const healthChecker = new HealthChecker();
+  // TODO: Implement
+    await healthChecker.checkSystemHealth(),
+    process.exit(0)
+
+=======
+    }
     return {
       scor: Math.max(0, score),
       status,
@@ -251,11 +530,9 @@ class HealthChecker {
     };
   }
 }
-
 // Run health check
 async function main() {
   const healthChecker = new HealthChecker();
-
   try {
     await healthChecker.checkSystemHealth(),
     process.exit(0)
@@ -264,9 +541,93 @@ async function main() {
     process.exit(1);
   }
 }
-
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 if (require.main === module) {
   main();
+<<<<<<< HEAD
 }
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+=======
+module.exports = HealthChecker;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45
+<<<<<<< HEAD
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+<<<<<<< HEAD
 
 module.exports = HealthChecker;
+<<<<<<< HEAD
+=======
+=======
+module.exports = HealthChecker;
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+
+module.exports = HealthChecker;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+<<<<<<< HEAD:backup-problematic-files/scripts/pm2/healthcheck.cjs
+const http = require('http');
+const distOk = fs.existsSync('dist/index.html');
+function pingPreview() {}
+	return new Promise((resolve) => {}
+		const req = http.request({ host: '127.0.0.1', port: 4173, path: '/', timeout: 2000 }, (res) => {}
+			resolve(res.statusCode && res.statusCode < 500)}
+});
+		req.on('error', () => resolve(false));
+		req.end()})};
+(async () => {}
+	const ok = distOk && (await pingPreview());
+	if (!ok) {}
+		console.error('Healthcheck failed');
+		process.exit(1)}
+	})();
+		process.exit(1)};
+	console.log('Healthy')})();
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:scripts/pm2/healthcheck.cjs
+=======
+<<<<<<< HEAD
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+<<<<<<< HEAD
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-59d5
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+<<<<<<< HEAD
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+>>>>>>> origin/main
+=======
+>>>>>>> origin/automation-improvements-final
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc

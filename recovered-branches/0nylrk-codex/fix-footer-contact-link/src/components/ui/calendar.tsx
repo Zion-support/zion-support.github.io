@@ -1,3 +1,27 @@
+<<<<<<< HEAD
+import React from 'react';'
+import * as React from "react";"
+import {ChevronLeft, ChevronRight} from "lucide-react";"
+import {DayPicker} from "react-day-picker";"
+import {cn} from "@/lib/utils";"
+import {buttonVariants} from "@/components/ui/button";"
+import * as React from "react","
+import { ChevronLeft, ChevronRight } from "lucide-react","
+import { DayPicker } from "react-day-picker","
+import { cn } from "@/lib/utils","
+import { buttonVariants } from "@/components/ui/button","
+export type CalendarProps = React.ComponentProps<typeof DayPicker>,
+function Calendar() {
+}
+return (;
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+import React from 'react';
+
+=======
 import * as React from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { DayPicker } from "react-day-picker";
@@ -8,12 +32,78 @@ function Calendar({
   className,
   classNames,
   showOutsideDays = $2;
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+import React from 'react';
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+
+
+import React from 'react';
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+
+<<<<<<< HEAD
+=======
+=======
+import React from 'react';
+
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+import * as React from "react";
+import {ChevronLeft, ChevronRight} from "lucide-react";
+import {DayPicker} from "react-day-picker";
+import {cn} from "@/lib/utils";
+import {buttonVariants} from "@/components/ui/button";
+<<<<<<< HEAD
+
+export type CalendarProps = React.ComponentProps<typeof DayPicker>;
+
+=======
+<<<<<<< HEAD
+
+export type CalendarProps = React.ComponentProps<typeof DayPicker>;
+
+=======
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+export type CalendarProps = React.ComponentProps<typeof DayPicker>;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+import * as React from "react",
+import { ChevronLeft, ChevronRight } from "lucide-react",
+import { DayPicker } from "react-day-picker",
+import { cn } from "@/lib/utils",
+import { buttonVariants } from "@/components/ui/button",
+>>>>>>> origin/chore/fix-lint-and-merge
+export type CalendarProps = React.ComponentProps<typeof DayPicker>,
+
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+function Calendar({
+  className,
+  classNames,
+  showOutsideDays = true,
+>>>>>>> merged-prs-20250907-203621
   ...props
 }: CalendarProps) {
   return (
     <DayPicker
       showOutsideDays={showOutsideDays}
       className={cn("p-3", className)}
+<<<<<<< HEAD
       classNames = $2;
         month: "space-y-4",
         caption: "flex justify-center pt-1 relative items-center",
@@ -21,29 +111,531 @@ function Calendar({
         nav: "space-x-1 flex items-center",
         nav_button: cn($2);
           "h-7 w-7 bg-transparent p-0 opacity-50 hover:opacity-100"
-        ),
-        nav_button_previous: "absolute left-1",
-        nav_button_next: "absolute right-1",
-        table: "w-full border-collapse space-y-1",
-        head_row: "flex",
-        head_cell:
-          "text-muted-foreground rounded-md w-9 font-normal text-[0.8rem]",
-        row: "flex w-full mt-2",
-        cell: "h-9 w-9 text-center text-sm p-0 relative [&:has([aria-selected].day-range-end)]:rounded-r-md [&:has([aria-selected].day-outside)]:bg-accent/50 [&:has([aria-selected])]:bg-accent first:[&:has([aria-selected])]:rounded-l-md last:[&:has([aria-selected])]:rounded-r-md focus-within:relative focus-within:z-20",
-        day: cn($2);
-          "h-9 w-9 p-0 font-normal aria-selected:opacity-100"
-        ),
-        day_range_end: "day-range-end",
-        day_selected:
-          "bg-primary text-primary-foreground hover:bg-primary hover:text-primary-foreground focus:bg-primary focus:text-primary-foreground",
-        day_today: "bg-accent text-accent-foreground",
-        day_outside:
-          "day-outside text-muted-foreground opacity-50 aria-selected:bg-accent/50 aria-selected:text-muted-foreground aria-selected:opacity-30",
-        day_disabled: "text-muted-foreground opacity-50",
-        day_range_middle:
-          "aria-selected:bg-accent aria-selected:text-accent-foreground",
-        day_hidden: "invisible",
+=======
+      classNames={{
+        months: "flex flex-col sm:flex-row space-y-4 sm:space-x-4 sm:space-y-0"
+        month: "space-y-4"
+        caption: "flex justify-center pt-1 relative items-center"
+        caption_label: "text-sm font-medium"
+        nav: "space-x-1 flex items-center"
+        nav_button: cn(
+          buttonVariants({ variant: "outline" })
+          "h-7 w-7 bg-transparent p-0 opacity-50 hover: opacity-100"
+        )
+        nav_button_previous: "absolute left-1"
+        nav_button_next: "absolute right-1"
+        table: "w-full border-collapse space-y-1"
+        head_row: "flex"
+        head_cell: "text-muted-foreground rounded-md w-9 font-normal text-[0.8rem]"
+        row: "flex w-full mt-2"
+        cell: "h-9 w-9 text-center text-sm p-0 relative [&:has([aria-selected].day-range-end)]:rounded-r-md [&:has([aria-selected].day-outside)]:bg-accent/50 [&:has([aria-selected])]:bg-accent first:[&:has([aria-selected])]:rounded-l-md last:[&:has([aria-selected])]:rounded-r-md focus-within:relative focus-within:z-20"
+        day: cn(
+          buttonVariants({ variant: "ghost" })
+          "h-9 w-9 p-0 font-normal aria-selected: opacity-100"
+        )
+        day_range_end: "day-range-end"
+        day_selected: "bg-primary text-primary-foreground hover:bg-primary hover:text-primary-foreground focus:bg-primary focus:text-primary-foreground"
+        day_today: "bg-accent text-accent-foreground"
+        day_outside: "day-outside text-muted-foreground opacity-50 aria-selected:bg-accent/50 aria-selected:text-muted-foreground aria-selected:opacity-30"
+        day_disabled: "text-muted-foreground opacity-50"
+        day_range_middle: "aria-selected:bg-accent aria-selected:text-accent-foreground"
+        day_hidden: "invisible"
         ...classNames}}
-      components = $2;
-        IconRight: ({ ..._props }) => <ChevronRight className = $2;
+      components={{
+        IconLeft: ({ ..._props }) => <ChevronLeft className="h-4 w-4" />
+          buttonVariants({ variant: "outline" }),
+          "h-7 w-7 bg-transparent p-0 opacity-50 hover:opacity-100"
+=======
+
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+function Calendar({
+  className,
+  classNames,
+  showOutsideDays = true,
+  ...props
+}: CalendarProps) {
+  return (
+<<<<<<< HEAD
+=======
+>>>>>>> origin/resolved-merge-conflicts
+    <DayPicker;
+      showOutsideDays={showOutsideDays}
+        "day": cn(
+          buttonVariants({ "variant": "ghost" })"
+          "h-9 w-9 p-0 font-normal aria-"selected": opacity-100""
+        )
+        "day_range_end": "day_range_end","
+    "day_selected": "bg-primary text-primary-foreground "hover":bg-primary "hover":text-primary-foreground "focus":bg-primary "focus":text-primary-foreground""
+        "day_today": "bg-accent text-accent-foreground""
+        "day_outside": "day-outside text-muted-foreground opacity-50 aria-"selected":bg-accent/50 aria-"selected":text-muted-foreground aria-"selected":opacity-30""
+        "day_disabled": "text-muted-foreground opacity-50""
+        "day_range_middle": "aria-"selected":bg-accent aria-"selected":text-accent-foreground""
+        "day_hidden": "invisible""
+        ...classNames}
+      components={
+        }
+        "IconRight": ({ ..._props }) => <ChevronRight className="h-4 w-4" />}"
+import * as React from "react";"
+import { ChevronLeft, ChevronRight } from "lucide-react";"
+import { DayPicker } from "react-day-picker",;"
+import { cn } from "@/lib/utils",;"
+import { buttonVariants } from "@/components/ui/button",;"
+export type CalendarProps = React.ComponentProps<typeof DayPicker>,;
+function Calendar() {;
+  }
+  return (;
+    <DayPicker;
+      showOutsideDays={showOutsideDays}
+      className={cn("p-3", className)}"
+      classNames={;
+        }
+        "months": "flex flex-col "sm":flex-row space-y-4 "sm":space-x-4 "sm":space-y-0",;"
+        "month": "space-y-4",;"
+        "caption": "flex justify-center pt-1 relative items-center",;"
+        "caption_label": "text-sm font-medium",;"
+        "nav": "space-x-1 flex items-center",;"
+        "nav_button": cn(;
+          buttonVariants({ "variant": "outline" }),;"
+          "h-7 w-7 bg-transparent p-0 opacity-50 "hover":opacity-100";"
+        ),;
+        "nav_button_previous": "absolute left-1",;"
+        "nav_button_next": "absolute right-1",;"
+        "table": "w-full border-collapse space-y-1",;"
+        "head_row": "flex",;"
+        "head_cell":;
+          "text-muted-foreground rounded-md w-9 font-normal text-[0.8rem]",;"
+        "row": "flex w-full mt-2",;"
+        "cell": "h-9 w-9 text-center text-sm p-0 relative [&:has([aria-selected].day-range-end)]:rounded-r-md [&:has([aria-selected].day-outside)]:bg-accent/50 [&:has([aria-selected])]:bg-accent "first":[&:has([aria-selected])]:rounded-l-md "last":[&:has([aria-selected])]:rounded-r-md focus-"within":relative focus-"within":z-20",;"
+        "day": cn(;
+          buttonVariants({ "variant": "ghost" }),;"
+          "h-9 w-9 p-0 font-normal aria-"selected":opacity-100";"
+        ),;
+<<<<<<< HEAD
+        "day_range_end": "day-range-end",;"
+        "day_selected":;
+          "bg-primary text-primary-foreground "hover":bg-primary "hover":text-primary-foreground "focus":bg-primary "focus":text-primary-foreground",;"
+        "day_today": "bg-accent text-accent-foreground",;"
+        "day_outside":;
+          "day-outside text-muted-foreground opacity-50 aria-"selected":bg-accent/50 aria-"selected":text-muted-foreground aria-"selected":opacity-30",;"
+        "day_disabled": "text-muted-foreground opacity-50",;"
+        "day_range_middle":;
+          "aria-"selected":bg-accent aria-"selected":text-accent-foreground",;"
+        "day_hidden": "invisible",;"
+        ...classNames}
+      components={;
+        }
+        "IconLeft": ({ ..._props }) => <ChevronLeft className="h-4 w-4" />,;  return ("
+    <DayPicker;
+      showOutsideDays={showOutsideDays}
+          buttonVariants({ "variant": "outline" }),"
+          "h-7 w-7 bg-transparent p-0 opacity-50 "hover":opacity-100""
+=======
+        day_range_end: "day-range-end",;
+        day_selected:;
+          "bg-primary text-primary-foreground hover:bg-primary hover:text-primary-foreground focus:bg-primary focus:text-primary-foreground",;
+        day_today: "bg-accent text-accent-foreground",;
+        day_outside:;
+          "day-outside text-muted-foreground opacity-50 aria-selected:bg-accent/50 aria-selected:text-muted-foreground aria-selected:opacity-30",;
+        day_disabled: "text-muted-foreground opacity-50",;
+        day_range_middle:;
+          "aria-selected:bg-accent aria-selected:text-accent-foreground",;
+        day_hidden: "invisible",;
+        ...classNames}}
+      components={{;
+        IconLeft: ({ ..._props }) => <ChevronLeft className="h-4 w-4" />,;
+
+
+
+
+function Calendar({
+export type CalendarProps = React && React.ComponentProps<typeof DayPicker>;
+function Calendar(): any ({;
+  className;
+  classNames;
+  showOutsideDays = true;
+  ...props;
+}: CalendarProps) {;
+import * as React from './react';
+import { ChevronLeft, ChevronRight } from './lucide-react';
+import { DayPicker } from './react - day - picker';
+import { cn } from '@/lib / utils';
+import { button_variants } from '@/components / ui / button';
+export type CalendarProps = React.ComponentProps < typeof DayPicker>;
+;
+/**
+ * Calendar - Function description
+ */
+function Calendar() {
+  return (
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+    <DayPicker;
+      showOutsideDays={showOutsideDays}
+<<<<<<< HEAD
+=======
+        day: cn(
+          buttonVariants({ variant: "ghost" })
+          "h-9 w-9 p-0 font-normal aria-selected: opacity-100"
+        )
+        day_range_end: "day-range-end"
+        day_selected: "bg-primary text-primary-foreground hover:bg-primary hover:text-primary-foreground focus:bg-primary focus:text-primary-foreground"
+        day_today: "bg-accent text-accent-foreground"
+        day_outside: "day-outside text-muted-foreground opacity-50 aria-selected:bg-accent/50 aria-selected:text-muted-foreground aria-selected:opacity-30"
+        day_disabled: "text-muted-foreground opacity-50"
+        day_range_middle: "aria-selected:bg-accent aria-selected:text-accent-foreground"
+        day_hidden: "invisible"
+        ...classNames}}
+      components={{
+        IconRight: ({ ..._props }) => <ChevronRight className="h-4 w-4" />}}
+
+  classNames,;
+  showOutsideDays = true,;
+  ...props;
+}: CalendarProps) {}
+  return (
+    <DayPicker;
+      showOutsideDays={showOutsideDays}
+        day: cn("
+          buttonVariants({ variant: "ghost" })"
+          "h-9 w-9 p-0 font-normal aria-selected: opacity-100"
+        )"
+        day_range_end: "day-range-end""
+        day_selected: "bg-primary text-primary-foreground hover:bg-primary hover:text-primary-foreground focus:bg-primary focus:text-primary-foreground""
+        day_today: "bg-accent text-accent-foreground""
+        day_outside: "day-outside text-muted-foreground opacity-50 aria-selected:bg-accent/50 aria-selected:text-muted-foreground aria-selected:opacity-30""
+        day_disabled: "text-muted-foreground opacity-50""
+        day_range_middle: "aria-selected:bg-accent aria-selected:text-accent-foreground""
+        day_hidden: "invisible"
+        ...classNames}}
+      components={{"
+        IconRight: ({ ..._props }) => <ChevronRight className="h-4 w-4" />}}"
+import * as React from "react",;"
+import { ChevronLeft, ChevronRight } from "lucide-react",;"
+import { DayPicker } from "react-day-picker",;"
+import { cn } from "@/lib/utils",;"
+import { buttonVariants } from "@/components/ui/button",;
+export type CalendarProps = React.ComponentProps<typeof DayPicker>,;
+function Calendar() { return null; }
+      showOutsideDays={showOutsideDays}"
+      className={cn("p-3", className)}
+      classNames={{;"
+        months: "flex flex-col sm:flex-row space-y-4 sm:space-x-4 sm:space-y-0",;"
+        month: "space-y-4",;"
+        caption: "flex justify-center pt-1 relative items-center",;"
+        caption_label: "text-sm font-medium",;"
+        nav: "space-x-1 flex items-center",;
+        nav_button: cn(;"
+          buttonVariants({ variant: "outline" }),;"
+          "h-7 w-7 bg-transparent p-0 opacity-50 hover:opacity-100";
+        ),;"
+        nav_button_previous: "absolute left-1",;"
+        nav_button_next: "absolute right-1",;"
+        table: "w-full border-collapse space-y-1",;"
+        head_row: "flex",;
+        head_cell:;"
+          "text-muted-foreground rounded-md w-9 font-normal text-[0.8rem]",;"
+        row: "flex w-full mt-2",;"
+        cell: "h-9 w-9 text-center text-sm p-0 relative [&:has([aria-selected].day-range-end)]:rounded-r-md [&:has([aria-selected].day-outside)]:bg-accent/50 [&:has([aria-selected])]:bg-accent first:[&:has([aria-selected])]:rounded-l-md last:[&:has([aria-selected])]:rounded-r-md focus-within:relative focus-within:z-20",;
+        day: cn(;"
+          buttonVariants({ variant: "ghost" }),;"
+          "h-9 w-9 p-0 font-normal aria-selected:opacity-100";
+        ),;"
+        day_range_end: "day-range-end",;
+        day_selected:;"
+          "bg-primary text-primary-foreground hover:bg-primary hover:text-primary-foreground focus:bg-primary focus:text-primary-foreground",;"
+        day_today: "bg-accent text-accent-foreground",;
+        day_outside:;"
+          "day-outside text-muted-foreground opacity-50 aria-selected:bg-accent/50 aria-selected:text-muted-foreground aria-selected:opacity-30",;"
+        day_disabled: "text-muted-foreground opacity-50",;
+        day_range_middle:;"
+          "aria-selected:bg-accent aria-selected:text-accent-foreground",;"
+        day_hidden: "invisible",;
+        ...classNames}}
+
+          "h-7 w-7 bg-transparent p-0 opacity-50 hover:opacity-100"
+
+        ),"
+        nav_button_previous: "absolute left-1","
+        nav_button_next: "absolute right-1","
+        table: "w-full border-collapse space-y-1","
+        head_row: "flex",
+"
+        IconLeft: ({ ..._props }) => <ChevronLeft className="h-4 w-4" />,;
+"
+        IconRight: ({ ..._props }) => <ChevronRight className="h-4 w-4" />}}
+
+        IconRight: ({ ..._props }) => <ChevronRight className="h-4 w-4" />}}
+>>>>>>> origin/chore/fix-lint-and-merge
+
+          buttonVariants({ variant: "outline" }),
+          "h-7 w-7 bg-transparent p-0 opacity-50 hover:opacity-100"
+
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> origin/resolved-merge-conflicts
+        ),
+        "nav_button_previous": "absolute left-1","
+        "nav_button_next": "absolute right-1","
+        "table": "w-full border-collapse space-y-1","
+        "head_row": "flex","
+        "IconLeft": ({ ..._props }) => <ChevronLeft className="h-4 w-4" />,;"
+        "IconRight": ({ ..._props }) => <ChevronRight className="h-4 w-4" />}"
+        "IconRight": ({ ..._props }) => <ChevronRight className="h-4 w-4" />}"
+      {...props}
+    />;
+  );
+}
+<<<<<<< HEAD
+Calendar.displayName = "Calendar","
 export { Calendar },
+Calendar.displayName = "Calendar";"
+export { Calendar };
+      className={cn ("p - 3", class_name)}"
+      class_names={
+        }
+        "months": "flex flex - col "sm":flex - row space - y-4 "sm":space - x-4 "sm":space - y-0","
+        "month": "space - y-4","
+        "caption": "flex justify - center pt - 1 relative items - center","
+        "caption_label": "text - sm font - medium","
+        "nav": "space - x-1 flex items - center","
+        "nav_button": cn (
+          button_variants ({ "variant": "outline" }),"
+          "h - 7 w - 7 bg - transparent p - 0 opacity - 50 "hover": opacity - 100"),"
+        "nav_button_previous": "absolute left - 1","
+        "nav_button_next": "absolute right - 1","
+        "table": "w - full border - collapse space - y-1","
+        "head_row": "flex","
+        "head_cell": "text - muted - foreground rounded - md w - 9 font - normal text-[0.8rem]","
+        "row": "flex w - full mt - 2","
+        "cell": "h - 9 w - 9 text - center text - sm p - 0 relative [&:has ([aria - selected].day - range - end)]:rounded - r-md [&:has ([aria - selected].day - outside)]:bg - accent / 50 [&:has ([aria - selected])]:bg - accent "first":[&:has ([aria - selected])]:rounded - l-md "last":[&:has ([aria - selected])]:rounded - r-md focus - "within":relative focus - "within":z - 20","
+        "day": cn (
+          button_variants ({ "variant": "ghost" }),"
+          "h - 9 w - 9 p - 0 font - normal aria - "selected": opacity - 100"),"
+        "day_range_end": "day - range - end","
+        "day_selected": "bg - primary text - primary - foreground "hover":bg - primary "hover":text - primary - foreground "focus":bg - primary "focus":text - primary - foreground","
+        "day_today": "bg - accent text - accent - foreground","
+        "day_outside": "day - outside text - muted - foreground opacity - 50 aria - "selected":bg - accent / 50 aria - "selected":text - muted - foreground aria - "selected":opacity - 30","
+        "day_disabled": "text - muted - foreground opacity - 50","
+        "day_range_middle": "aria - "selected":bg - accent aria - "selected":text - accent - foreground","
+        "day_hidden": "invisible","
+        ...class_names}
+      components={
+        }
+        "IconLeft": ({ ..._props }) => <ChevronLeft className="h - 4 w-4" />,"
+        "IconRight": ({ ..._props }) => <ChevronRight className="h - 4 w-4" />}"
+      {...props}
+    />);
+}
+Calendar.display_name = "Calendar";"
+;
+export { Calendar }
+;
+Calendar.displayName = "Calendar","
+export { Calendar },
+Calendar.displayName = "Calendar";"
+export { Calendar }
+}
+=======
+
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+export { Calendar },
+Calendar.displayName = "Calendar";"
+export { Calendar }
+}
+=======
+Calendar.displayName = "Calendar",
+
+export { Calendar },";
+Calendar.displayName = "Calendar";
+export { Calendar };
+
+<<<<<<< HEAD
+=======
+=======
+Calendar && Calendar.displayName = "Calendar";
+
+
+Calendar && Calendar.displayName = "Calendar";
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+      className={cn ("p - 3", class_name)}
+      class_names={{"
+        months: "flex flex - col sm:flex - row space - y-4 sm:space - x-4 sm:space - y-0","
+        month: "space - y-4","
+        caption: "flex justify - center pt - 1 relative items - center","
+        caption_label: "text - sm font - medium","
+        nav: "space - x-1 flex items - center",
+        nav_button: cn ("
+          button_variants ({ variant: "outline" }),"
+          "h - 7 w - 7 bg - transparent p - 0 opacity - 50 hover: opacity - 100"),"
+        nav_button_previous: "absolute left - 1","
+        nav_button_next: "absolute right - 1","
+        table: "w - full border - collapse space - y-1","
+        head_row: "flex","
+        head_cell: "text - muted - foreground rounded - md w - 9 font - normal text-[0.8rem]","
+        row: "flex w - full mt - 2","
+        cell: "h - 9 w - 9 text - center text - sm p - 0 relative [&:has ([aria - selected].day - range - end)]:rounded - r-md [&:has ([aria - selected].day - outside)]:bg - accent / 50 [&:has ([aria - selected])]:bg - accent first:[&:has ([aria - selected])]:rounded - l-md last:[&:has ([aria - selected])]:rounded - r-md focus - within:relative focus - within:z - 20",
+        day: cn ("
+          button_variants ({ variant: "ghost" }),"
+          "h - 9 w - 9 p - 0 font - normal aria - selected: opacity - 100"),"
+        day_range_end: "day - range - end","
+        day_selected: "bg - primary text - primary - foreground hover:bg - primary hover:text - primary - foreground focus:bg - primary focus:text - primary - foreground","
+        day_today: "bg - accent text - accent - foreground","
+        day_outside: "day - outside text - muted - foreground opacity - 50 aria - selected:bg - accent / 50 aria - selected:text - muted - foreground aria - selected:opacity - 30","
+        day_disabled: "text - muted - foreground opacity - 50","
+        day_range_middle: "aria - selected:bg - accent aria - selected:text - accent - foreground","
+        day_hidden: "invisible",
+        ...class_names}}
+
+      {...props}
+    />);
+}"
+Calendar.display_name = "Calendar";
+;
+export { Calendar };
+;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+
+        IconRight: ({ ..._props }) => <ChevronRight className="h-4 w-4" />}}
+      {...props}
+    />
+  )
+}
+Calendar.displayName = "Calendar";
+export { Calendar }
+<<<<<<< HEAD
+
+=======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+
+<<<<<<< HEAD
+        IconRight: ({ ..._props }) => <ChevronRight className="h-4 w-4" />}}
+      {...props}
+    />
+  )
+}
+Calendar.displayName = "Calendar";
+export { Calendar }
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+Calendar.displayName = "Calendar",
+
+export { Calendar },";
+Calendar.displayName = "Calendar";
+<<<<<<< HEAD
+>>>>>>> origin/chore/fix-lint-and-merge
+=======
+<<<<<<< HEAD
+>>>>>>> origin/chore/fix-lint-and-merge
+=======
+<<<<<<< HEAD
+import * as React from "react",;
+import { ChevronLeft, ChevronRight } from "lucide-react",;
+import { DayPicker } from "react-day-picker",;
+;
+import { cn } from "@/lib/utils",;
+import { buttonVariants } from "@/components/ui/button",;
+;
+export type CalendarProps = React.ComponentProps<typeof DayPicker>,;
+;
+function Calendar({;
+  className,;
+  classNames,;
+  showOutsideDays = true,;
+  ...props;
+} CalendarProps) {;
+  return (;
+    <DayPicker;
+      showOutsideDays={showOutsideDays}
+      className={cn("p-3", className)}
+      classNames={{;
+        months:"flex flex-col sm:flex-row space-y-4 sm:space-x-4 sm:space-y-0",;
+        month:"space-y-4",;
+        caption:"flex justify-center pt-1 relative items-center",;
+        caption_label:"text-sm font-medium",;
+        nav:"space-x-1 flex items-center",;
+        nav_button:cn(;
+          buttonVariants({ variant:"outline" }),;
+          "h-7 w-7 bg-transparent p-0 opacity-50 hover:opacity-100";
+        ),;
+        nav_button_previous:"absolute left-1",;
+        nav_button_next:"absolute right-1",;
+        table:"w-full border-collapse space-y-1",;
+        head_row:"flex",;
+        head_cell:;
+          "text-muted-foreground rounded-md w-9 font-normal text-[0.8rem]",;
+        row:"flex w-full mt-2",;
+        cell:"h-9 w-9 text-center text-sm p-0 relative [&:has([aria-selected].day-range-end)]:rounded-r-md [&:has([aria-selected].day-outside)]:bg-accent/50 [&:has([aria-selected])]:bg-accent first:[&:has([aria-selected])]:rounded-l-md last:[&:has([aria-selected])]:rounded-r-md focus-within:relative focus-within:z-20",;
+        day:cn(;
+          buttonVariants({ variant:"ghost" }),;
+          "h-9 w-9 p-0 font-normal aria-selected:opacity-100";
+        ),;
+        day_range_end:"day-range-end",;
+        day_selected:;
+          "bg-primary text-primary-foreground hover:bg-primary hover:text-primary-foreground focus:bg-primary focus:text-primary-foreground",;
+        day_today:"bg-accent text-accent-foreground",;
+        day_outside:;
+          "day-outside text-muted-foreground opacity-50 aria-selected:bg-accent/50 aria-selected:text-muted-foreground aria-selected:opacity-30",;
+        day_disabled:"text-muted-foreground opacity-50",;
+        day_range_middle:;
+          "aria-selected:bg-accent aria-selected:text-accent-foreground",;
+        day_hidden:"invisible",;
+        ...classNames}}
+      components={{;
+        IconLeft:({ ..._props }) => <ChevronLeft className="h-4 w-4" />,;
+        IconRight:({ ..._props }) => <ChevronRight className="h-4 w-4" />}}
+      {...props}
+    />;
+  ),;
+}
+Calendar.displayName = "Calendar",;
+;
+export { Calendar },; export type CalendarProps = React.ComponentProps<typeof DayPicker>;
+  className, classNames, showOutsideDays = true, ...props 
+}: CalendarProps) {
+  return (<DayPicker showOutsideDays= {
+  showOutsideDays 
+});
+nav button previous: "absolute left-1";
+nav button next: "absolute right-1";
+table: "w-full border-collapse space-y-1";
+head row: "flex";
+head cell: "text-muted-foreground rounded-md w-9 font-normal text-[0.8rem]";
+row: "flex w-full mt-2";
+cell: "h-9 w-9 text-center text-sm p-0 relative [&:has ([aria-selected].day-range-end) ]:rounded-r-md [&:has ([aria-selected].day-outside) ]:bg-accent/50 [&:has ([aria-selected]) ]:bg-accent first:[&:has ([aria-selected]) ]:rounded-l-md last:[&:has ([aria-selected]) ]:rounded-r-md focus-within:relative focus-within:z-20";
+day: cn ();
+day range end: "day-range-end";
+day selected: "bg-primary text-primary-foreground hover:bg-primary hover:text-primary-foreground focus:bg-primary focus:text-primary-foreground";
+day today: "bg-accent text-accent-foreground";
+day outside: "day-outside text-muted-foreground opacity-50 aria-selected:bg-accent/50 aria-selected:text-muted-foreground aria-selected:opacity-30";
+day disabled: "text-muted-foreground opacity-50";
+day range middle: "aria-selected:bg-accent aria-selected:text-accent-foreground";
+day hidden: "invisible";
+...classNames 
+}
+}/>) 
+}
+export { Calendar };
+export { Calendar };
+=======
+
+export { Calendar };
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts

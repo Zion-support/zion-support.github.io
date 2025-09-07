@@ -1,12 +1,137 @@
+<<<<<<< HEAD
+=======
+export function Web3Login() {
+  const { loginWithWeb3 } = useAuth(),
+  const [isLoading, setIsLoading] = useState(false),
+
+<<<<<<< HEAD
+  const handleWeb3Login = async () => {
+    try {
+=======
+import {useState} from "react";
+import {Button} from "@/components/ui/button";
+import {useAuth} from "@/hooks/useAuth";
+import {Wallet} from "@/components/icons";
+import {toast} from "sonner";
+export function Web3Login() {;
+<<<<<<< HEAD
+  const { loginWithWeb3 } = useAuth();
+  const [isLoading, setIsLoading] = useState(false);
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+
+      // Check if wallet is available
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+  const handleWeb3Login = async () => {;
+    try {;
+      setIsLoading(true);
+
+<<<<<<< HEAD
+=======
+
+  const handleWeb3Login = async () => {
+    try {
+
+      // Check if wallet is available
+<<<<<<< HEAD
+
+  const handleWeb3Login = async () => {;
+    try {;
+      setIsLoading(true);
+
+          description: "Please install MetaMask or another compatible wallet"})
+        return;
+      }
+      await loginWithWeb3()
+    } catch (error: any) {"
+      toast("Login failed", {"
+        description: error.message |"Failed to connect wallet"})"
+      console.error("Web3 login error:", error)
+    } finally {}
+      setIsLoading(false)
+
+=======
+      const ethereum = (window as any).ethereum;
+<<<<<<< HEAD
+  const { loginWithWeb3 } = useAuth();
+  const [isLoading, setIsLoading] = useState(false);
+>>>>>>> merged-prs-20250907-203621
 import { useState } from "react",
 import { Button } from "@/components/ui/button",
 import { useAuth } from "@/hooks/useAuth",
 import { Wallet } from "@/components/icons";
 import { toast } from "sonner";
+<<<<<<< HEAD
+=======
+import { Wallet } from "@/components/icons",
+import { toast } from "sonner",
+export function Web3Login() {
+  const { loginWithWeb3 } = useAuth(),
+  const [isLoading, setIsLoading] = useState(false),
+
+  const handleWeb3Login = async () => {
+    try {
+      setIsLoading(true);
+      setIsLoading(true),
+      
+      // Check if wallet is available
+      const ethereum = (window as any).ethereum,
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+      if (!ethereum) {
+        toast("Web3 wallet not found", {
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+          description: "Please install MetaMask or another compatible wallet"})
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+        return;
+      }
+      await loginWithWeb3()
+    } catch (error: any) {"
+      toast("Login failed", {"
+        description: error.message |"Failed to connect wallet"})"
+      console.error("Web3 login error:", error)
+    } finally {}
+      setIsLoading(false)
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+      // Check if wallet is available;
+      const ethereum = (window as any).ethereum;
+      if (!ethereum) {;
+        toast("Web3 wallet not found", {;
+          description: "Please install MetaMask or another compatible wallet"}),;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+        return;
+      }
+      await loginWithWeb3();
+<<<<<<< HEAD
+
+<<<<<<< HEAD
+=======
+=======
+    } catch (error: any) {;
+      toast("Login failed", {;
+        description: error && error.message || "Failed to connect wallet"}),;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+      console && console.error("Web3 login error:", error);
+    } finally {;
+      setIsLoading(false);
+    }
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 export function Web3Login() {
   const { loginWithWeb3 } = useAuth($2);
   const [isLoading, setIsLoading] = useState($2);
-  const handleWeb3Login = async () => {
     try {
       setIsLoading($2);
       // Check if wallet is available
@@ -23,32 +148,579 @@ export function Web3Login() {
       console.error("Web3 login error:", error)
     } finally {
       setIsLoading(false)
+=======
+
+>>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+=======
+  }
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     }
+
   },
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+    }
+  }
+  },
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
   return (
-    <Button
-      type="button"
-      variant="outline"
+    <Button"
+      type="button""
+      variant="outline""
       className="w-full border border-zion-blue-light bg-zion-blue-dark text-white hover:bg-zion-blue hover:text-zion-cyan"
       onClick={handleWeb3Login}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> merged-prs-20250907-203621
       disabled={isLoading}
     >
-      {isLoading ? (
-        <span className="flex items-center">
-          <svg className="animate-spin -ml-1 mr-2 h-4 w-4 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
-            <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
+      {isLoading ? ("
+        <span className="flex items-center">"
+          <svg className="animate-spin -ml-1 mr-2 h-4 w-4 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">"
+            <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>"
             <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
           </svg>
           Connecting...
         </span>
       ) : (
-        <>
-          <span className="sr-only">Sign in with Web3</span>
+        <>"
+          <span className="sr-only">Sign in with Web3</span>"
           <Wallet className="h-5 w-5" />
         </>
+
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
       )}
     </Button>
   )
 }
+<<<<<<< HEAD
+
+=======
+<<<<<<< HEAD
 ;
+=======
+<<<<<<< HEAD
+
+=======
+=======
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+import { useState } from "react",;
+import { Button } from "@/components/ui/button",;
+import { useAuth } from "@/hooks/useAuth",;
+import { Wallet } from "@/components/icons",;
+
+import { toast } from "sonner",;
+export function Web3Login() { return null; }
+  const { loginWithWeb3 } = useAuth(),;
+  const [isLoading, setIsLoading] = useState(false),;
+  const handleWeb3Login = async () => {;
+    try {;
+      setIsLoading(true),;
+      // Check if wallet is available;
+      const ethereum = (window as any).ethereum,;
+      if (!ethereum) {;"
+        toast("Web3 wallet not found", {;"
+          description: "Please install MetaMask or another compatible wallet"}),;
+        return;
+      }
+;
+      await loginWithWeb3();
+    } catch (error: any) {;"
+      toast("Login failed", {;"
+        description: error.message || "Failed to connect wallet"});"
+      console.error("Web3 login error:", error);
+    } finally {;
+      setIsLoading(false);
+    }
+  };
+  return (;
+    <Button;"
+      type="button";"
+      variant="outline";"
+      className="w-full border border-zion-blue-light bg-zion-blue-dark text-white hover:bg-zion-blue hover:text-zion-cyan";
+      onClick={handleWeb3Login}
+      disabled={isLoading}
+    >;
+
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+      {isLoading ? (;"
+        <span className="flex items-center">;"
+          <svg className="animate-spin -ml-1 mr-2 h-4 w-4 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">;"
+            <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>;
+
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+import { useState } from "react",;
+import { Button } from "@/components/ui/button",;
+import { useAuth } from "@/hooks/useAuth",;
+import { Wallet } from "@/components/icons",;
+import { toast } from "sonner",;
+;
+export function Web3Login() {;
+  const { loginWithWeb3 } = useAuth(),;
+  const [isLoading, setIsLoading] = useState(false),;
+;
+  const handleWeb3Login = async () => {;
+    try {;
+      setIsLoading(true),;
+      ;
+      // Check if wallet is available;
+      const ethereum = (window as any).ethereum,;
+      if (!ethereum) {;
+        toast("Web3 wallet not found", {;
+          description:"Please install MetaMask or another compatible wallet"}),;
+        return,;
+      }
+      ;
+      await loginWithWeb3(),;
+      ;
+    } catch (error:any) {;
+      toast("Login failed", {;
+        description:error.message || "Failed to connect wallet"}),;
+      console.error("Web3 login error:", error),;
+    } finally {;
+      setIsLoading(false),;
+    }
+  },;
+;
+  return (;
+    <Button;
+      type="button";
+      variant="outline";
+      className="w-full border border-zion-blue-light bg-zion-blue-dark text-white hover:bg-zion-blue hover:text-zion-cyan";
+      onClick={handleWeb3Login}
+      disabled={isLoading}
+    >;
+      {isLoading ? (;
+        <span className="flex items-center">;
+          <svg className="animate-spin -ml-1 mr-2 h-4 w-4 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">;
+            <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>;
+            <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>;
+=======
+      {isLoading ? (;
+        <span className="flex items-center">;
+          <svg className="animate-spin -ml-1 mr-2 h-4 w-4 text-white" xmlns="http://www && www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">;
+            <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>;
+            <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5 && 8V0C5.373 0 0 5 && 5.373 0 12h4zm2 5 && 5.291A7.962 7 && 7.962 0 014 12H0c0 3 && 3.042 1 && 1.135 5 && 5.824 3 7 && 7.938l3-2 && 2.647z"></path>;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+          </svg>;
+          Connecting...;
+        </span>;
+      ) : (;
+        <>;"
+          <span className="sr-only">Sign in with Web3</span>;"
+          <Wallet className="h-5 w-5" />;
+        </>;
+
+<<<<<<< HEAD
+      )}
+
+=======
+<<<<<<< HEAD
+      )}
+
+import { toast } from './sonner';
+export /**;
+ * Web3Login - Function description;
+ */
+function Web3Login() {}
+  const { loginWithWeb3 } = use_auth ();
+  const [is_loading, setIsLoading] = useState (false);
+
+  const handleWeb3Login = async () => {
+    try {
+  // TODO: Implement
+}
+      setIsLoading(true),
+
+      // Check if wallet is available;
+      const ethereum = (window as any).ethereum;"
+import { useState } from "react",""
+import { Button } from "@/components/ui/button",""
+import { useAuth } from "@/hooks/useAuth",""
+import { Wallet } from "@/components/icons";""
+import { toast } from "sonner";""
+import { Wallet } from "@/components/icons",""
+import { toast } from "sonner","
+
+      // Check if wallet is available;
+      const ethereum = (window as any).ethereum,
+      if (!ethereum) {"
+        toast("Web3 wallet not found", {")"
+          description: "Please install MetaMask or another compatible wallet"})"
+        return;
+      await loginWithWeb3()
+    } catch (error: any) {"
+      toast("Login failed", {")"
+        description: error.message |"Failed to connect wallet"})""
+      console.error("Web3 login error:", error)"
+    } finally {
+  // TODO: Implement
+      setIsLoading(false)
+
+      // Check if wallet is available;
+      const ethereum = (window as any).ethereum;
+      if (!ethereum) {;"
+        toast("Web3 wallet not found", {;")"
+          description: "Please install MetaMask or another compatible wallet"}),;"
+
+      await loginWithWeb3();
+
+    } catch (error: any) {;"
+      toast("Login failed", {;")"
+        description: error && error.message || "Failed to connect wallet"}),;""
+      console && console.error("Web3 login error:", error);"
+    } finally {;
+      setIsLoading(false);
+
+  },
+
+  return (
+    <Button;"
+      type="button"""
+      variant="outline"""
+      className="w-full border border-zion-blue-light bg-zion-blue-dark text-white hover:bg-zion-blue hover:text-zion-cyan""
+      onClick={handleWeb3Login}
+
+      disabled={isLoading}
+    >
+"
+        <span className="flex items-center">"
+</span>"
+          <svg className="animate-spin -ml-1 mr-2 h-4 w-4 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">"
+</svg>"
+            <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>""
+            <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>"
+          </svg>
+        </span>
+        <>"
+          <span className="sr-only">Sign in with Web3</span>""
+          <Wallet className="h-5 w-5" />"
+
+        </>
+
+)
+      )}
+      type="button";""
+      variant="outline";""
+      className="w-full border border-zion-blue-light bg-zion-blue-dark text-white hover:bg-zion-blue hover:text-zion-cyan";"
+    >;
+        <span className="flex items-center">;"
+          <svg className="animate-spin -ml-1 mr-2 h-4 w-4 text-white" xmlns="http://www && www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">;"
+            <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>;""
+            <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5 && 8V0C5.373 0 0 5 && 5.373 0 12h4zm2 5 && 5.291A7.962 7 && 7.962 0 014 12H0c0 3 && 3.042 1 && 1.135 5 && 5.824 3 7 && 7.938l3-2 && 2.647z"></path>;""
+          <svg className="animate-spin -ml-1 mr-2 h-4 w-4 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">;"
+            <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>;"
+          </svg>;
+        </span>;
+        <>;"
+          <span className="sr-only">Sign in with Web3</span>;""
+          <Wallet className="h-5 w-5" />;"
+
+        </>;
+
+    ;
+      className="w - full border border - zion - blue - light bg - zion - blue - dark text - white hover:bg - zion - blue hover:text - zion - cyan";"
+      on_click={handleWeb3Login}
+      disabled={is_loading}
+        <span className="flex items - center">;"
+          <svg className="animate - spin -ml - 1 mr - 2 h - 4 w - 4 text - white" xmlns="http://www.w3.org / 2000 / svg" fill="none" view_box="0 0 24 24">;"
+            <circle className="opacity - 25" cx="12" cy="12" r="10" stroke="current_color" stroke_width="4"></circle>;""
+            <path className="opacity - 75" fill="current_color" d="M4 12a8 8 0 018 - 8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3 - 2.647z"></path>;"
+        </span>) : (
+          <span className="sr - only">Sign in with Web3</span>;""
+          <Wallet className="h - 5 w - 5" />;"
+        </>)}
+    </Button>);
+
+  ),; export function Web3Login () {
+  const {
+  loginWithWeb3 
+}= useAuth ();
+const [isLoading, setIsLoading] = useState (false);
+const handleWeb3Login = async () => {
+  try {
+  setIsLoading (true);
+//Check if wallet is available const ethereum = (window as any) .ethereum;
+if (!ethereum) {
+  return;
+}await loginWithWeb3 () 
+}finally {
+  setIsLoading (false) 
+}
+};
+return (<Button type="button" variant="outline" className="w-full border border-zion-blue-light bg-zion-blue-dark text-white hover:bg-zion-blue hover:text-zion-cyan" onClick= {
+  handleWeb3Login 
+    );"
+return (<Button type="button" variant="outline" className="w-full border border-zion-blue-light bg-zion-blue-dark text-white hover:bg-zion-blue hover:text-zion-cyan" onClick= {"
+  handleWeb3Login;
+}disabled= {
+  isLoading;
+}> {
+  isLoading ? (<span className="flex items-center" > <svg className="animate-spin -ml-1 mr-2 h-4 w-4 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" > <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" ></circle> <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z" ></path> sr-only">Sign in with Web3</span> <Wallet className=" h-5 w-5" /> </>) 
+}</Button>) 
+}
+      )}
+    </Button>;
+  );
+}
+;
+=======
+
+
+      )}
+
+      )}
+    </Button>;
+import { useState } from './react';
+import { Button } from '@/components / ui / button';
+import { use_auth } from '@/hooks / use_auth';
+import { Wallet } from '@/components / icons';
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+import { toast } from './sonner';
+export /**;
+ * Web3Login - Function description;
+ */
+function Web3Login() {}
+  const { loginWithWeb3 } = use_auth ();
+  const [is_loading, setIsLoading] = useState (false);
+<<<<<<< HEAD
+
+  const handleWeb3Login = async () => {
+    try {
+  // TODO: Implement
+}
+      setIsLoading(true),
+
+      // Check if wallet is available;
+      const ethereum = (window as any).ethereum;"
+import { useState } from "react",""
+import { Button } from "@/components/ui/button",""
+import { useAuth } from "@/hooks/useAuth",""
+import { Wallet } from "@/components/icons";""
+import { toast } from "sonner";""
+import { Wallet } from "@/components/icons",""
+import { toast } from "sonner","
+
+      // Check if wallet is available;
+      const ethereum = (window as any).ethereum,
+      if (!ethereum) {"
+        toast("Web3 wallet not found", {")"
+          description: "Please install MetaMask or another compatible wallet"})"
+        return;
+      await loginWithWeb3()
+    } catch (error: any) {"
+      toast("Login failed", {")"
+        description: error.message |"Failed to connect wallet"})""
+      console.error("Web3 login error:", error)"
+    } finally {
+  // TODO: Implement
+      setIsLoading(false)
+
+      // Check if wallet is available;
+      const ethereum = (window as any).ethereum;
+      if (!ethereum) {;"
+        toast("Web3 wallet not found", {;")"
+          description: "Please install MetaMask or another compatible wallet"}),;"
+
+      await loginWithWeb3();
+
+    } catch (error: any) {;"
+      toast("Login failed", {;")"
+        description: error && error.message || "Failed to connect wallet"}),;""
+      console && console.error("Web3 login error:", error);"
+    } finally {;
+      setIsLoading(false);
+
+  },
+
+  return (
+    <Button;"
+      type="button"""
+      variant="outline"""
+      className="w-full border border-zion-blue-light bg-zion-blue-dark text-white hover:bg-zion-blue hover:text-zion-cyan""
+      onClick={handleWeb3Login}
+
+      disabled={isLoading}
+    >
+"
+        <span className="flex items-center">"
+</span>"
+          <svg className="animate-spin -ml-1 mr-2 h-4 w-4 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">"
+</svg>"
+            <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>""
+            <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>"
+          </svg>
+        </span>
+        <>"
+          <span className="sr-only">Sign in with Web3</span>""
+          <Wallet className="h-5 w-5" />"
+
+        </>
+
+)
+      )}
+      type="button";""
+      variant="outline";""
+      className="w-full border border-zion-blue-light bg-zion-blue-dark text-white hover:bg-zion-blue hover:text-zion-cyan";"
+    >;
+        <span className="flex items-center">;"
+          <svg className="animate-spin -ml-1 mr-2 h-4 w-4 text-white" xmlns="http://www && www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">;"
+            <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>;""
+            <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5 && 8V0C5.373 0 0 5 && 5.373 0 12h4zm2 5 && 5.291A7.962 7 && 7.962 0 014 12H0c0 3 && 3.042 1 && 1.135 5 && 5.824 3 7 && 7.938l3-2 && 2.647z"></path>;""
+          <svg className="animate-spin -ml-1 mr-2 h-4 w-4 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">;"
+            <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>;"
+          </svg>;
+        </span>;
+        <>;"
+          <span className="sr-only">Sign in with Web3</span>;""
+          <Wallet className="h-5 w-5" />;"
+
+        </>;
+
+    ;
+      className="w - full border border - zion - blue - light bg - zion - blue - dark text - white hover:bg - zion - blue hover:text - zion - cyan";"
+      on_click={handleWeb3Login}
+      disabled={is_loading}
+        <span className="flex items - center">;"
+          <svg className="animate - spin -ml - 1 mr - 2 h - 4 w - 4 text - white" xmlns="http://www.w3.org / 2000 / svg" fill="none" view_box="0 0 24 24">;"
+            <circle className="opacity - 25" cx="12" cy="12" r="10" stroke="current_color" stroke_width="4"></circle>;""
+            <path className="opacity - 75" fill="current_color" d="M4 12a8 8 0 018 - 8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3 - 2.647z"></path>;"
+        </span>) : (
+          <span className="sr - only">Sign in with Web3</span>;""
+          <Wallet className="h - 5 w - 5" />;"
+        </>)}
+    </Button>);
+
+=======
+;
+  const handleWeb3Login = async () => {
+    try {
+      setIsLoading (true);
+;
+      // Check if wallet is available;
+      const ethereum = (window as any).ethereum;
+      // Check condition
+if ( {) {
+  $2
+}
+        toast ("Web3 wallet not found", {
+          description: "Please install MetaMask or another compatible wallet"}),
+        return;
+      }
+      await loginWithWeb3 ();
+    } catch (error: any) {
+      toast ("Login failed", {
+        description: error.message || "Failed to connect wallet"}),
+      console.error ("Web3 login error:", error);
+    } finally {
+      setIsLoading (false);
+    }
+  }
+;
+  return (
+    <Button;
+      type="button";
+      variant="outline";
+      className="w - full border border - zion - blue - light bg - zion - blue - dark text - white hover:bg - zion - blue hover:text - zion - cyan";
+      on_click={handleWeb3Login}
+      disabled={is_loading}
+    >;
+      {is_loading ? (
+        <span className="flex items - center">;
+          <svg className="animate - spin -ml - 1 mr - 2 h - 4 w - 4 text - white" xmlns="http://www.w3.org / 2000 / svg" fill="none" view_box="0 0 24 24">;
+            <circle className="opacity - 25" cx="12" cy="12" r="10" stroke="current_color" stroke_width="4"></circle>;
+            <path className="opacity - 75" fill="current_color" d="M4 12a8 8 0 018 - 8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3 - 2.647z"></path>;
+          </svg>;
+          Connecting...;
+        </span>) : (
+        <>;
+          <span className="sr - only">Sign in with Web3</span>;
+          <Wallet className="h - 5 w - 5" />;
+        </>)}
+    </Button>);
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+  ),; export function Web3Login () {
+  const {
+  loginWithWeb3 
+}= useAuth ();
+const [isLoading, setIsLoading] = useState (false);
+const handleWeb3Login = async () => {
+  try {
+  setIsLoading (true);
+//Check if wallet is available const ethereum = (window as any) .ethereum;
+if (!ethereum) {
+  return;
+}await loginWithWeb3 () 
+}finally {
+  setIsLoading (false) 
+}
+<<<<<<< HEAD
+};
+return (<Button type="button" variant="outline" className="w-full border border-zion-blue-light bg-zion-blue-dark text-white hover:bg-zion-blue hover:text-zion-cyan" onClick= {
+  handleWeb3Login 
+    );"
+return (<Button type="button" variant="outline" className="w-full border border-zion-blue-light bg-zion-blue-dark text-white hover:bg-zion-blue hover:text-zion-cyan" onClick= {"
+  handleWeb3Login;
+}disabled= {
+  isLoading;
+=======
+<<<<<<< HEAD
+};
+return (<Button type="button" variant="outline" className="w-full border border-zion-blue-light bg-zion-blue-dark text-white hover:bg-zion-blue hover:text-zion-cyan" onClick= {
+  handleWeb3Login 
+}disabled= {
+  isLoading 
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+}> {
+  isLoading ? (<span className="flex items-center" > <svg className="animate-spin -ml-1 mr-2 h-4 w-4 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" > <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" ></circle> <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z" ></path> sr-only">Sign in with Web3</span> <Wallet className=" h-5 w-5" /> </>) 
+}</Button>) 
+}
+      )}
+    </Button>;
+  );
+}
+<<<<<<< HEAD
+;
+=======
+;
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc

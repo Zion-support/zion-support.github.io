@@ -1,3 +1,11 @@
+<<<<<<< HEAD
+:src_backup/pages/AccountSettings.tsx
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 :src/pages/AccountSettings.tsx
 import { useState  } from 'react';
 import { useLocalStorage  } from '@/hooks';
@@ -86,7 +94,32 @@ export default function AccountSettings() {
     } catch (error: any) {
       toast.error(error.message |'Failed to connect wallet')
     }
+<<<<<<< HEAD
+=======
   }
+import { useState } from react',
+import { useLocalStorage } from '@/hooks,
+import { Header } from @/components/Header',
+import { SEO } from '@/components/SEO,
+import { useAuth } from @/hooks/useAuth',
+import { Button } from '@/components/ui/button,
+import { Input } from @/components/ui/input',
+import { Wallet, Database, Save } from 'lucide-react;
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from @/components/ui/card',
+import { Separator } from '@/components/ui/separator,
+import { Switch } from @/components/ui/switch',
+import { Label } from '@/components/ui/label,
+import { toast } from sonner',
+import { logInfo, logErrorToProduction } from '@/utils/productionLogger,
+export default function AccountSettings() {
+  const { user } = useAuth(),
+  const [displayWeb3, setDisplayWeb3] = useLocalStorage(display_web3', false),
+  const [didHandle, setDidHandle] = useLocalStorage('did_handle, '),
+  const [enableBackup, setEnableBackup] = useLocalStorage('enable_backup, false),
+  const [isSubmitting, setIsSubmitting] = useState(false),
+    setIsSubmitting(true),
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 import { useState } from 'react',;
 import { useLocalStorage } from '@/hooks',;
 import { Header } from '@/components/Header',;
@@ -109,6 +142,10 @@ export default function AccountSettings() {;
   const [isSubmitting, setIsSubmitting] = useState(false),;
   const handleSave = () => {;
     setIsSubmitting(true),;
+<<<<<<< HEAD
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     // Simulate API call;
     setTimeout(() => {;
       try {;
@@ -259,6 +296,33 @@ export default function AccountSettings() {
 const AccountSettings: React.FC = () => {
   return (
 
+<<<<<<< HEAD
+:src_backup/pages/AccountSettings.tsx
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+
+
+
+
+
+
+
+<<<<<<< HEAD
+=======
+import { useState } from 'react;
+import { useLocalStorage } from @/hooks';
+import { Header } from '@/components/Header;
+import { SEO } from @/components/SEO';
+import { useAuth } from '@/hooks/useAuth;
+import { Button } from @/components/ui/button';
+import { Input } from '@/components/ui/input;
+import { Wallet, Database, Save } from lucide-react';
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 import { useState } from 'react';
 import { useLocalStorage } from '@/hooks';
 import { Header } from '@/components/Header';
@@ -268,6 +332,10 @@ import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Wallet, Database, Save } from 'lucide-react';
 import {
+<<<<<<< HEAD
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   Card,
   CardContent,
   CardDescription,
@@ -302,15 +370,40 @@ export default function AccountSettings() {
   const [enableBackup, setEnableBackup] = useLocalStorage('enable_backup', false);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const handleSave = null;
+<<<<<<< HEAD
+:src_backup/pages/AccountSettings.tsx
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
 
   return (
     <>
       <SEO title="Account Settings" description="Manage your account" />"
       <Header />
+<<<<<<< HEAD
+:src_backup/pages/AccountSettings.tsx
 :src/pages/AccountSettings.tsx
       <main className='container mx-auto py-8 px-4'>
         <h1 className='text-3xl font-bold mb-6 text-white'>Account Settings</h1>
         <div className='grid gap-6 md:grid-cols-2'>
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> merged-prs-20250907-203621
+:src/pages/AccountSettings.tsx
+      <main className='container mx-auto py-8 px-4>
+        <h1 className=text-3xl font-bold mb-6 text-white'>Account Settings</h1>
+        <div className='grid gap-6 md:grid-cols-2>
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
       <main className="container mx-auto py-8 px-4">
         <h1 className="text-3xl font-bold mb-6 text-white">Account Settings</h1>
@@ -329,6 +422,10 @@ export default function AccountSettings() {
                 Manage your personal information and privacy
               </CardDescription>
             </CardHeader>
+<<<<<<< HEAD
+:src_backup/pages/AccountSettings.tsx
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
               <CardDescription>;
                 Manage your personal information and privacy;
@@ -351,10 +448,21 @@ export default function AccountSettings() {
                   <Button
                     variant='outline'
                     onClick={handleConnectWallet}
+<<<<<<< HEAD
                     type='button'
 :src/pages/AccountSettings.tsx
                     className='flex items-center gap-1'                  >
                     <Wallet className='h-4 w-4' />
+=======
+<<<<<<< HEAD
+                    type=button'
+:src/pages/AccountSettings.tsx
+                    className='flex items-center gap-1                  >
+                    <Wallet className=h-4 w-4' />
+=======
+                    type='button'
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
             <CardContent className="space-y-6">
               <div className="space-y-2">
@@ -391,6 +499,14 @@ export default function AccountSettings() {
                   Link your decentralized identity to display on your profile
                 </p>
               </div>
+<<<<<<< HEAD
+:src_backup/pages/AccountSettings.tsx
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 :src/pages/AccountSettings.tsx
               <div className='flex items-center justify-between'>
                 <div className='space-y-0.5'>
@@ -405,10 +521,19 @@ export default function AccountSettings() {
                   onCheckedChange={setDisplayWeb3}                />
               </div>
               <Separator />
+<<<<<<< HEAD
               <div className='flex items-center justify-between'>
                 <div className='space-y-0.5'>
                   <Label htmlFor='backup' className='flex items-center gap-1'>
                     <Database className='h-4 w-4' />
+=======
+              <div className='flex items-center justify-between>
+                <div className=space-y-0.5'>
+                  <Label htmlFor='backup className=flex items-center gap-1'>
+                    <Database className='h-4 w-4 />
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
               <div className="flex items-center justify-between">
                 <div className="space-y-0.5">
@@ -423,6 +548,23 @@ export default function AccountSettings() {
               </div>
 
               <Separator />
+<<<<<<< HEAD
+:src_backup/pages/AccountSettings.tsx
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+              
+              <div className="flex items-center justify-between">
+                <div className="space-y-0.5">
+                  <Label htmlFor="backup" className="flex items-center gap-1">
+                    <Database className="h-4 w-4" />
+
+
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
 
               <div className="flex items-center justify-between">
                 <div className="space-y-0.5">
@@ -436,6 +578,14 @@ export default function AccountSettings() {
                   </p>
                 </div>
                 <Switch
+<<<<<<< HEAD
+:src_backup/pages/AccountSettings.tsx
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 :src/pages/AccountSettings.tsx
                   id='backup'
                   checked={enableBackup}
@@ -446,6 +596,8 @@ export default function AccountSettings() {
                   Data will be backed up to decentralized storage. This feature
                   is in beta.
                 </div>
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
 
                   checked={enableBackup}
                   onCheckedChange={setEnableBackup}
@@ -478,8 +630,27 @@ export default function AccountSettings() {
               <Button
                 onClick={handleSave}
                 disabled={isSubmitting}
+<<<<<<< HEAD
+:src_backup/pages/AccountSettings.tsx
+                className="w-full"
+              >
+                {isSubmitting ? "Saving..." : "Save Settings"}
 :src/pages/AccountSettings.tsx
                 className='w-full'              >
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+                className="w-full"
+                className="w-full
+              >
+                {isSubmitting ? Saving..." : "Save Settings}
+>>>>>>> merged-prs-20250907-203621
+:src/pages/AccountSettings.tsx
+                className=w-full'              >
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
                 {isSubmitting ? 'Saving...' : 'Save Settings'}
 
@@ -489,6 +660,17 @@ export default function AccountSettings() {
           </Card>
 
           <Card>
+<<<<<<< HEAD
+:src_backup/pages/AccountSettings.tsx
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+            <CardHeader>
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
 
               <CardTitle>Web3 Features</CardTitle>
               <CardDescription>
@@ -558,7 +740,6 @@ export default function AccountSettings() {
                   </div>
                 )}
               </div>
-:src/pages/AccountSettings.tsx
 
               <div>
                 <h3 className="font-medium mb-2">Backup Status</h3>
@@ -587,8 +768,6 @@ export default function AccountSettings() {
 
                     </p>
                   </div>
-                </div>
-              </div>
 
                   className="w-full"
                   disabled={!enableBackup}
@@ -606,9 +785,21 @@ export default function AccountSettings() {
         </div>
       </main>
     </>
+<<<<<<< HEAD
+:src_backup/pages/AccountSettings.tsx
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+  );
+
+>>>>>>> merged-prs-20250907-203621
 :src/pages/AccountSettings.tsx
   )
 }
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
 
   );
 
@@ -631,8 +822,34 @@ export default function AccountSettings() {
           </Card>;
         </div>;
       </main>;
+<<<<<<< HEAD
+:src_backup/pages/AccountSettings.tsx
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+
+
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
 
     </>);
 
 }
+<<<<<<< HEAD
 ;
+:src_backup/pages/AccountSettings.tsx
+=======
+<<<<<<< HEAD
+;
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+
+origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+;
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621

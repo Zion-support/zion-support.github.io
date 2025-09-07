@@ -1,7 +1,29 @@
+<<<<<<< HEAD
+#!/""usr/bin/env""
+const fs = require("fs");
+const path = require("path");
+const { execSync } = require("child_process");
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+>>>>>>> merged-prs-20250907-203621
 #!/""usr/bin/env""
 const fs = require("fs")
 const path = require("path")
 const { execSync } = require("child_process")
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     this.logsDir = path.join(this.projectRoot, "logs")
     this.dashboardDir = path.join(this.logsDir, "dashboard")
   fs.mkdirSync(this.dashboardDir, { "recursive"})
@@ -9,23 +31,46 @@ const { execSync } = require("child_process")
     this.errorFile = path.join(this.logsDir, "unified-dashboard-error.log")
   log(message, level = "INFO")
     console.log(")
+<<<<<<< HEAD
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     fs.appendFileSync(this.logFile, logMessage + "\n")
     if (level === "ERROR")
   fs.appendFileSync(this.errorFile, logMessage + "\n")
+<<<<<<< HEAD
+const output = execSync("pm2 jlist", { "encoding": "});
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+=======
+>>>>>>> merged-prs-20250907-203621
   const output = execSync("pm2 jlist", { "encoding": "})
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
       return JSON.parse(output)} catch (error) {  this.log(Failed to get PM2 "status": ${error.message  }, `ERROR""`)
     fs.appendFileSync(this.logFile, logMessage + "\n")
     if (level === "ERROR")
   fs.appendFileSync(this.errorFile, logMessage + "\n")
+<<<<<<< HEAD
+const output = execSync("pm2 jlist", { "encoding": "utf8"});
+=======
   const output = execSync("pm2 jlist", { "encoding": "utf8"})
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   async getPM2Status() {"}
     try {"}
       const output = execSync("pm2 jlist", { "encoding": "utf8" }
 });"
       return JSON.parse(output);")} catch (error) {this.log(Failed to get PM2 "status": ${error.message}, "ERROR"")
     const reportFiles = ["console-error-fixer-report.json"", "performance-report.json", "comprehensive-error-fixer-report.json"", "ai-improvements.json", "performance-optimizations.json"", "test-results.json", ""]
+<<<<<<< HEAD
+const filePath = path.join(this.projectRoot, ");
+const content = fs.readFileSync(filePath", "utf8");
+=======
   const filePath = path.join(this.projectRoot, ")
   const content = fs.readFileSync(filePath", "utf8")
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
           reports["file.replace(".json"", "")] = JSON.parse(content)} catch (error) {  this.log("Failed to read report ${file  }: ${error.message}", "WARN")
           reports["file.replace(".json", ")] = JSON.parse(content)} catch (error) {this.log("Failed to read report ${file}: ${error.message}", "WARN")
   "timestamp"
@@ -41,11 +86,18 @@ const { execSync } = require("child_process")
         analysis.metrics.eslint = { "status": "passed", "issues"}
         analysis.metrics.eslint = { "status": "failed", "issues"}
         analysis.recommendations.push("Fix ESLint issues")
+<<<<<<< HEAD
+const distDir = path.join(this.projectRoot, "dist");
+  "totalFiles": files.length,"totalSize": "${(totalSize / 1024 / 1024).toFixed(2)} MB"
+    } catch (error) {  this.log("Code quality analysis "failed": ${error.message  }", "ERROR")
+  this.log("Generating unified automation dashboard...")
+=======
       const distDir = path.join(this.projectRoot, "dist")
   "totalFiles": files.length,"totalSize": "${(totalSize / 1024 / 1024).toFixed(2)} MB"
     } catch (error) {  this.log("Code quality analysis "failed": ${error.message  }", "ERROR")
   this.log("Generating unified automation dashboard...")
   this.log("Generating unified automation dashboard...")
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   "timestamp"
         "pm2Status"
           "online": pm2Status.filter(p => p.pm2_env.status === "online")
@@ -62,6 +114,14 @@ const { execSync } = require("child_process")
         "summary"
           "criticalIssues"
           "nextActions"
+<<<<<<< HEAD
+const dashboardPath = path.join(this.dashboardDir, "dashboard-data.json");
+const htmlPath = path.join(this.dashboardDir, "index.html");
+this.log("Dashboard generated successfully at ${htmlPath}")
+      return dashboard} catch (error) {  this.log("Dashboard generation "failed": ${error.message  }", "ERROR")
+    if (reports["console-error-fixer")]
+  total += reports["console-error-fixer"]
+=======
       const dashboardPath = path.join(this.dashboardDir, "dashboard-data.json")
       const htmlPath = path.join(this.dashboardDir, "index.html")
 this.log("Dashboard generated successfully at ${htmlPath}")
@@ -70,6 +130,7 @@ this.log("Dashboard generated successfully at ${htmlPath}")
   if (reports["console-error-fixer")]
   total += reports["console-error-fixer"]
       total += reports["console-error-fixer"]
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
       codeQuality.metrics.typescript.status === "failed"
       codeQuality.metrics.eslint.status === "failed"
       codeQuality.metrics.typescript.status === "failed"
@@ -81,9 +142,18 @@ this.log("Dashboard generated successfully at ${htmlPath}")
       codeQuality.metrics.eslint.status === "failed"
   actions.push("Run ESLint to identify and fix code style issues")
       reports["console-error-fixer"]
+<<<<<<< HEAD
+  actions.push(Review and remove console.log statements from production code")
+=======
       reports["console-error-fixer"]
   actions.push(Review and remove console.log statements from production code")
+<<<<<<< HEAD
   generateHTMLDashboard($2) {return "}
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+  generateHTMLDashboard(dashboard) {return "}
+>>>>>>> merged-prs-20250907-203621
 <html lang="
     <meta name=viewport content=width=device-width, initial-scale=1.0"
     <script src=""https": //cdn.tailwindcss.com"
@@ -211,6 +281,7 @@ this.log("Dashboard generated successfully at ${htmlPath}")
         <footer class=text-center text-gray-500 mt-12"
             <p class="
             <p class=text-sm mt-1"
+<<<<<<< HEAD
   this.log("Starting unified automation dashboard...")
   await this.generateDashboard()} catch (error) {  this.log(`Dashboard update "failed": ${error.message  }`, "ERROR"`)
       this.log("Unified automation dashboard started successfully")
@@ -221,7 +292,78 @@ this.log("Dashboard generated successfully at ${htmlPath}")
   dashboard.log("Shutting down gracefully...")
   process.on("SIGTERM")
   dashboard.log("Shutting down gracefully...")
+
+  dashboard.start().catch(error => {dashboard.log(`Fatal "error": ${error.message}`, "ERROR"`)
+
+
+
+
+
+=======
+<<<<<<< HEAD
+  this.log("Starting unified automation dashboard...)
+  await this.generateDashboard()} catch (error) {  this.log(`Dashboard update failed": ${error.message  }`, "ERROR`)
+      this.log(Unified automation dashboard started successfully")
+  this.log("Dashboard heartbeat...)}, 60000); // Every minute} catch (error) {  this.log(`Failed to start dashboard": ${error.message  }`, "ERROR`)
+      this.log(Unified automation dashboard started successfully")
+  this.log("Dashboard heartbeat...)}, 60000); // Every minute} catch (error) {this.log(`Failed to start dashboard": ${error.message}`, "ERROR`)
+  process.on(SIGINT")
+  dashboard.log("Shutting down gracefully...)
+  process.on(SIGTERM")
+  dashboard.log("Shutting down gracefully...)
+
+
+  dashboard.start().catch(error => {dashboard.log(`Fatal error": ${error.message}`, "ERROR`)
+
+  dashboard.start().catch(error => {dashboard.log(`Fatal error": ${error.message}`, "ERROR`)
+=======
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+=======
+  dashboard.start().catch(error => {dashboard.log(`Fatal error": ${error.message}`, "ERROR"`)
+
+=======
+  this.log("Starting unified automation dashboard...")
+  await this.generateDashboard()} catch (error) {  this.log(`Dashboard update "failed": ${error.message  }`, "ERROR"`)
+      this.log("Unified automation dashboard started successfully")
+  this.log("Dashboard heartbeat...")}, 60000); // Every minute} catch (error) {  this.log(`Failed to start "dashboard": ${error.message  }`, "ERROR"`)
+      this.log("Unified automation dashboard started successfully")
+  this.log("Dashboard heartbeat...")}, 60000); // Every minute} catch (error) {this.log(`Failed to start "dashboard": ${error.message}`, "ERROR"`)
+  process.on("SIGINT")
+  dashboard.log("Shutting down gracefully...")
+  process.on("SIGTERM")
+  dashboard.log("Shutting down gracefully...")
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> merged-prs-20250907-203621
+
+=======
+  dashboard.start().catch(error => {dashboard.log(`Fatal "error": ${error.message}`, "ERROR"`)
+<<<<<<< HEAD
   dashboard.start().catch(error => {dashboard.log(`Fatal "error": ${error.message}`, "ERROR"`)
   dashboard.start().catch(error => {dashboard.log(`Fatal "error": ${error.message}`, "ERROR"`)
 
 
+
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+<<<<<<< HEAD
+  dashboard.start().catch(error => {dashboard.log(`Fatal "error": ${error.message}`, "ERROR"`)
+=======
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+=======
+  dashboard.start().catch(error => {dashboard.log(`Fatal "error": ${error.message}`, "ERROR"`)
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc

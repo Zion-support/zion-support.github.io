@@ -1,3 +1,8 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD:src.broken/components/profile/HireNowCTA.js
+ursor/fix-syntax-push-and-merge-to-main-40de
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 :src/components/profile/HireNowCTA.jsx
 import React, {useState} from 'react';
 import {Button} from "../ui/Button";
@@ -14,6 +19,13 @@ export function HireNowCTA("props": "any) {;
         "message": '';
     });
     const handleSubmit = ("props": "any) => {;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
         e.preventDefault();
         if (onHire) {;
             onHire(formData)"}
@@ -87,12 +99,40 @@ export function HireNowCTA("props": "any) {;
     </Card>)}
 ;
 export default HireNowCTA;
+<<<<<<< HEAD
+=======
+ursor/add-new-services-and-deploy-updates-0462
+ursor/fix-syntax-push-and-merge-to-main-40de
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+
+export function HireNowCTA({ talentName, hourlyRate, onHire }) {
+
+    const [isFormOpen, setIsFormOpen] = useState(false);
+    const [formData, setFormData] = useState({'
+        projectDescription: '','
+        budget: '','
+        startDate: '','
+        message: ''
+
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36:backup-problematic-files/src.broken/components/profile/HireNowCTA.js
+>>>>>>> merged-prs-20250907-203621
 import React, { useState } from 'react';
 import { Button } from '../ui/Button';
 import { Card, CardContent, CardHeader, CardTitle } from '../ui/Card';
 import { Input } from '../ui/Input';
 import { Textarea } from '../ui/Textarea';
 import { DollarSign, MessageSquare } from 'lucide-react';
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 export function HireNowCTA({ talentName, hourlyRate, onHire }) {
     const [isFormOpen, setIsFormOpen] = useState(false);
     const [formData, setFormData] = useState({
@@ -100,19 +140,79 @@ export function HireNowCTA({ talentName, hourlyRate, onHire }) {
         budget: '',
         startDate: '',
         message: ''
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD:src.broken/components/profile/HireNowCTA.js
+ursor/fix-syntax-push-and-merge-to-main-40de
+>>>>>>> merged-prs-20250907-203621
 :src/components/profile/HireNowCTA.jsx
     }
     );
     const handleSubmit = (props: any) => {
     });
     const handleSubmit = (e) => {
+<<<<<<< HEAD
+=======
+ursor/add-new-services-and-deploy-updates-0462
+ursor/fix-syntax-push-and-merge-to-main-40de
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36:backup-problematic-files/src.broken/components/profile/HireNowCTA.js
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+        e.preventDefault();
+
+        if (onHire) {
+
+            onHire(formData);
+        }
+        // Reset form and close;
+        setFormData({'
+            projectDescription: '','
+            budget: '','
+            startDate: '',
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD:src.broken/components/profile/HireNowCTA.js
+ursor/fix-syntax-push-and-merge-to-main-40de
+:src/components/profile/HireNowCTA.jsx
+            message: ''}
+>>>>>>> merged-prs-20250907-203621
     );
         setIsFormOpen(false)};
             message: ''
         });
         setIsFormOpen(false);
     };
+<<<<<<< HEAD
     const handleChange = (e) => {
+=======
+ursor/add-new-services-and-deploy-updates-0462
+ursor/fix-syntax-push-and-merge-to-main-40de
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+
+    );
+        setIsFormOpen(false)};
+            message: ''
+        });
+        setIsFormOpen(false)
+};    const handleChange = (e) => {
+
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36:backup-problematic-files/src.broken/components/profile/HireNowCTA.js
+    const handleChange = (e) => {
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
         setFormData(prev => ({
             ...prev,
             [e.target.name]: e.target.value
@@ -181,5 +281,25 @@ export function HireNowCTA({ talentName, hourlyRate, onHire }) {
 
           </form>)}
       </CardContent>
+<<<<<<< HEAD
     </Card>);
+=======
+<<<<<<< HEAD
+    </Card>);
+=======
+    </Card>);
+<<<<<<< HEAD:src.broken/components/profile/HireNowCTA.js
 }
+<<<<<<< HEAD
+=======
+}
+}
+ursor/add-new-services-and-deploy-updates-0462
+ursor/fix-syntax-push-and-merge-to-main-40de
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36:backup-problematic-files/src.broken/components/profile/HireNowCTA.js
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc

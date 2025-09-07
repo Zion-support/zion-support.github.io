@@ -1,6 +1,3 @@
-:src/components/support/ChatBotPanel.tsx
-import React, { useState, useRef, useEffect } from "react";
-import { logDebug, logErrorToProduction  } from '@/utils/productionLogger';
 import { Button } from "@/components/ui/button",
 import { Input } from "@/components/ui/input",
 import { ScrollArea } from "@/components/ui/scroll-area",
@@ -8,6 +5,7 @@ import { Separator } from "@/components/ui/separator",
 import { toast } from "@/components/ui/use-toast",
 import { cn } from "@/lib/utils",
 import { ChatMessage } from "./ChatMessage",
+<<<<<<< HEAD
 :src/components/support/ChatBotPanel.tsx
 import { QuickReplyButton } from "./QuickReplyButton";
 import { Send, Loader2 } from 'lucide-react'
@@ -36,6 +34,8 @@ export function ChatBotPanel() {
       content: "Hi! How can I help you?"
       sender: "bot"
       timestamp: new Date()}])
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
 
   id: string,
   content: string,"
@@ -50,13 +50,6 @@ export function ChatBotPanel() {
       content: "Hi! How can I help you?",
       sender: "bot",
       timestamp: new Date()}]),
-:src/components/support/ChatBotPanel.tsx
-  const [inputValue, setInputValue] = useState("")
-  const [isLoading, setIsLoading] = useState(false)
-  const [failedAttempts, setFailedAttempts] = useState(0)
-  const scrollAreaRef = useRef<HTMLDivElement>(null)
-  const inputRef = useRef<HTMLInputElement>(null)
-  const { theme } = useTheme()
   const [inputValue, setInputValue] = useState(""),
   const [isLoading, setIsLoading] = useState(false),
   const [failedAttempts, setFailedAttempts] = useState(0),
@@ -68,32 +61,6 @@ export function ChatBotPanel() {
   useEffect(() => {
     if (scrollAreaRef.current) {
       scrollAreaRef.current.scrollTop = scrollAreaRef.current.scrollHeight
-:src/components/support/ChatBotPanel.tsx
-    }
-  }, [messages])
-  // Focus input when component mounts
-  useEffect((,) => {
-    if (inputRef.current) {
-      inputRef.current.focus()
-    }
-  }, [])
-  const handleSendMessage = async (text: string = inputValue) => {
-    if (!text.trim()) return
-      timestamp: new Date()}
-        timestamp: new Date()}
-        description: "We're having trouble connecting to our support service."})
-      id: `bot-escalation-${Date.now()}`
-      content: "I'm having trouble understanding your request. Would you like to speak with a human support agent or send an email to our support team?"
-      sender: "bot"
-      timestamp: new Date()}
-  const handleQuickReply = (text: string,) => {
-    handleSendMessage(text)
-  }
-
-  )
-}
-  )
-}
 import React, { useState, useRef, useEffect } from "react",;
 import { logDebug, logErrorToProduction } from '@/utils/productionLogger',;
 import { Button } from "@/components/ui/button",;
@@ -490,7 +457,7 @@ export function ChatBotPanel() {;
           onSubmit={(e) => {}
             e.preventDefault(),
             handleSendMessage()
-          }}"
+          }"
           className="flex items-center gap-2"
         >
           <Input;
@@ -518,10 +485,6 @@ export function ChatBotPanel() {;
       </div>
     </div>
   )
-:src/components/support/ChatBotPanel.tsx
-}
-  )
-}
 ;
       {failedAttempts >= 3 && (;"
         <div className="px-4 py-3 border-t border-zion-purple/10">;"
@@ -555,7 +518,7 @@ export function ChatBotPanel() {;
           onSubmit={(e) => {;
             e.preventDefault();
             handleSendMessage();
-          }}"
+          }"
           className="flex items-center gap-2";
         >;
           <Input;

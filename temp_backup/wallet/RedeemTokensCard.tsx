@@ -3,14 +3,14 @@
   {;
   {;
   Gift,  ArrowRight, ExternalLink ;
-  } from "lucide-react";
+  } from 'lucide-react';
 import {;
   Dialog;
   DialogContent;
   DialogDescription;
   DialogHeader;
   DialogTitle;
-  DialogTrigger} from "@/components/ui/dialog",type RewardOption = any;
+  DialogTrigger} from '@/components/ui/dialog',type RewardOption = any;
   Card;
   CardContent;
   CardDescription;
@@ -40,7 +40,7 @@ import { Button } from '@/components/ui/button'; import { Gift, ArrowRight, Exte
   DialogDescription,
   DialogHeader,
   DialogTitle,
-  DialogTrigger} from "@/components/ui/dialog",
+  DialogTrigger} from '@/components/ui/dialog',
 
   Card
   CardContent
@@ -94,14 +94,14 @@ const handleRedeem = async (option: RewardOption) => {;
 await spendTokens (option.cost, `Redeemed: $ {;
   option.title ;`
 }`);
-setOpen (false) ;"
-};""
-flex items-center gap-2"> <Gift className=" h-5 w-5"/> Redeem Rewards </CardTitle> <CardDescription>Exchange your ZION$ for rewards and perks</CardDescription> </CardHeader> <CardContent> <Dialog open= {;
-  open ;"
-}onOpenChange= {;""
-  setOpen ";""
-}> <DialogTrigger asChild> <Button className=" w-full">View Available Rewards</Button> </DialogTrigger> <DialogContent> <DialogHeader> <DialogTitle>Available Rewards</DialogTitle> <DialogDescription> Exchange your tokens for these rewards. You currently have {;""
-  wallet?.balance || 0 ";""
-}ZION$. </DialogDescription> </DialogHeader> > Redeem <ArrowRight className=" ml-1 h-3 w-3" /> </Button> </div> </div>) ) ;'"
-}</div> </Button> </div> </DialogContent> </Dialog> </CardContent> </Card>) ;'"'"
-}'"'"'"`
+setOpen (false) ;'
+};''
+flex items-center gap-2'> <Gift className=' h-5 w-5'/> Redeem Rewards </CardTitle> <CardDescription>Exchange your ZION$ for rewards and perks</CardDescription> </CardHeader> <CardContent> <Dialog open= {;
+  open ;'
+}onOpenChange= {;''
+  setOpen ';''
+}> <DialogTrigger asChild> <Button className=' w-full'>View Available Rewards</Button> </DialogTrigger> <DialogContent> <DialogHeader> <DialogTitle>Available Rewards</DialogTitle> <DialogDescription> Exchange your tokens for these rewards. You currently have {;''
+  wallet?.balance || 0 ';''
+}ZION$. </DialogDescription> </DialogHeader> > Redeem <ArrowRight className=' ml-1 h-3 w-3' /> </Button> </div> </div>) ) ;''
+}</div> </Button> </div> </DialogContent> </Dialog> </CardContent> </Card>) ;''''
+}''''''`

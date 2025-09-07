@@ -221,29 +221,29 @@ name='description'
               key={i}
 
               className='absolute w-2 h-2 bg-cyan-400 rounded-full opacity-20'
-              animate={{
+              animate={
 
                 x: [0, 100, 0]
                 y: [0, -100, 0]}
                 opacity: [0.2, 0.8, 0.2]}
-              }}              transition={{
+              }              transition={
                 duration: 10 + i * 2;
 repeat: Infinity;
 delay: i * 0.5}
 }
-              }}
-              style={{left: `${Math.random() * 10}
+              }
+              style={left: `${Math.random() * 10}
 }%`,top: `${Math.random() * 10,}
-}%`,}}
+}%`,}
             />;
           ))}
         </div>;
 <div className='relative z-10 text-center px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto' />;
           <motion.div;
-            initial={{ opacity: 0, y: 30 ,}
+            initial={ opacity: 0, y: 30 ,}
 }
-            animate={{ opacity: 1, y: 0 }}
-            transition={{duration: 0.8 }
+            animate={ opacity: 1, y: 0 }
+            transition={duration: 0.8 }
 }
            />;
 <h1 className='text-4xl sm:text-5xl lg:text-7xl font-bold text-white mb-6' />;
@@ -274,11 +274,11 @@ delay: i * 0.5}
                 {label: 'Emerging Tech'}
   value: emergingTechServicesEnhanced2025.length,icon: <Atom className='w-8 h-8' />,},].map((stat, index) => (<motion.div;
                   key={stat.label}
-                  initial={{ opacity: 0, y: 20 ,}
+                  initial={ opacity: 0, y: 20 ,}
 }
-                  animate={{ opacity: 1, y: 0 ,}
+                  animate={ opacity: 1, y: 0 ,}
 }
-                  transition={{ duration: 0.8, delay: 0.2 + index * 0.1 }}
+                  transition={ duration: 0.8, delay: 0.2 + index * 0.1 }
 
 className='text-center'
                  />
@@ -439,12 +439,12 @@ onClick={() = /> setViewMode('list')}
             {filteredServices.map((service, index) => (}
               <motion.div;}
 key={service.id}
-                initial={{ opacity: 0, y: 20 ,}
+                initial={ opacity: 0, y: 20 ,}
 }
-                animate={{ opacity: 1, y: 0 ,}
+                animate={ opacity: 1, y: 0 ,}
 }
 
-                transition={{ duration: 0.5, delay: index * 0.1 }}
+                transition={ duration: 0.5, delay: index * 0.1 }
 
 className='group relative bg-gradient-to-br from-gray-900/50 to-black/50 backdrop-blur-lg border border-cyan-500/20 rounded-2xl p-6 hover:border-cyan-400/40 hover:shadow-2xl hover:shadow-cyan-500/20 transition-all duration-300'
                />
@@ -466,20 +466,20 @@ className={`inline-flex items-center px-3 py-1 rounded-full text-xs font-medium 
       <div className='max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8 py - 12' />;
         {/* Results Count */}
         <div className='mb - 8' />;
-          <p className='text - gray - 400' />            Showing {filtered_services.length} of {all_services.length} services      <div className="max - w-7xl mx - auto px - 4 sm:px - 6 lg:px-8 py-12" />;
+          <p className='text - gray - 400' />            Showing {filtered_services.length} of {all_services.length} services      <div className='max - w-7xl mx - auto px - 4 sm:px - 6 lg:px-8 py-12' />;
         {/* Results Count */}
-        <div className="mb-8" />;
-          <p className="text-gray-400" />;
+        <div className='mb-8' />;
+          <p className='text-gray-400' />;
           </p>;
         </div>;
-        {view_mode === 'grid' ? (<div className='grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 8' />            {filtered_services.map ((service, index) => (          <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols-3 gap-8" />;}
+        {view_mode === 'grid' ? (<div className='grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 8' />            {filtered_services.map ((service, index) => (          <div className='grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols-3 gap-8' />;}
             {filtered_services.map ((service, index) => (<motion.div;}
                 key={service.id}
-                initial={{ opacity: 0, coordinate_y: 20 ,}
+                initial={ opacity: 0, coordinate_y: 20 ,}
 }
-                animate={{ opacity: 1, coordinate_y: 0 ,}
+                animate={ opacity: 1, coordinate_y: 0 ,}
 }
-                transition={{ duration: 0.5, delay: index * 0.1 }}
+                transition={ duration: 0.5, delay: index * 0.1 }
                 className='group relative bg - gradient - to - br from - gray - 900 / 50 to - black / 50 backdrop - blur - lg border border - cyan - 500 / 20 rounded - 2xl p - 6 hover:border - cyan - 400 / 40 hover:shadow - 2xl hover:shadow - cyan - 500 / 20 transition - all duration - 300' />
 
                 {/* Category Badge *,}
@@ -575,11 +575,11 @@ className={`inline-flex items-center px-3 py-1 rounded-full text-xs font-medium 
             {filteredServices.map((service, index) => (}
               <motion.div;}
 key={service.id}
-                initial={{ opacity: 0, x: -20 ,}
+                initial={ opacity: 0, x: -20 ,}
 }
-                animate={{ opacity: 1, x: 0 ,}
+                animate={ opacity: 1, x: 0 ,}
 }
-                transition={{ duration: 0.5, delay: index * 0.1 }}
+                transition={ duration: 0.5, delay: index * 0.1 }
 
 className='group bg-gradient-to-r from-gray-900/50 to-black/50 backdrop-blur-lg border border-cyan-500/20 rounded-xl p-6 hover:border-cyan-400/40 hover:shadow-xl hover:shadow-cyan-500/20 transition-all duration-300'
                />
@@ -656,9 +656,9 @@ className={`inline-flex items-center px-3 py-1 rounded-full text-xs font-medium 
                       </div>
                     </div>
 
-                          className={`inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-gradient-to-r ${getCategoryColor(service && service.category)} text-white mt-2`}>                          {service && service.category}                      <div className="text-right" />;
-                        <div className="text-3xl font-bold text-cyan-400 mb-2" />{service && service.price}</div>;
-                        <div className="text-gray-500 text-sm" />/month</div>;
+                          className={`inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-gradient-to-r ${getCategoryColor(service && service.category)} text-white mt-2`}>                          {service && service.category}                      <div className='text-right' />;
+                        <div className='text-3xl font-bold text-cyan-400 mb-2' />{service && service.price}</div>;
+                        <div className='text-gray-500 text-sm' />/month</div>;
                         <span className={`inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-gradient-to-r ${getCategoryColor(service && service.category)} text-white mt-2`} />
 
                         </span>;
@@ -694,10 +694,10 @@ className={`inline-flex items-center px-3 py-1 rounded-full text-xs font-medium 
                         </span>;
                         <span className='text-gray-500' />market</span>                      </div>;
                     </div>;
-                    {/* Features */}                      <div className="flex items-center space-x-1 text-gray-400" />;
-                        <Globe className="w-4 h-4" />;
-                        <span className="text-white font-medium" />{service && service.marketSize}</span>;
-                        <span className="text-gray-500" />market</span>;
+                    {/* Features */}                      <div className='flex items-center space-x-1 text-gray-400' />;
+                        <Globe className='w-4 h-4' />;
+                        <span className='text-white font-medium' />{service && service.marketSize}</span>;
+                        <span className='text-gray-500' />market</span>;
                     </div>;
 
                     {/* Features */}
@@ -739,11 +739,11 @@ key={idx}
                       <div className='text-xs text-gray-500' />;
                         Launched: {' '}
                         {new Date(service && service.launchDate).toLocaleDateString(,}
-}                      </div>                    <div className="flex items-center justify-between" />;
-                      <button className="bg-gradient-to-r from-cyan-500 to-blue-600 hover: from-cyan-600 hover:to-blue-700 text-white font-medium py-3 px-6 rounded-xl transition-all duration-200 hover:shadow-lg hover:shadow-cyan-500/25 group-hover:scale-105" />;
+}                      </div>                    <div className='flex items-center justify-between' />;
+                      <button className='bg-gradient-to-r from-cyan-500 to-blue-600 hover: from-cyan-600 hover:to-blue-700 text-white font-medium py-3 px-6 rounded-xl transition-all duration-200 hover:shadow-lg hover:shadow-cyan-500/25 group-hover:scale-105' />;
                         Learn More;
                       </button>;
-                      <div className="text-xs text-gray-500" />;
+                      <div className='text-xs text-gray-500' />;
                         Launched: {new Date(service && service.launchDate).toLocaleDateString(,}
 }
                     </div>;
@@ -774,10 +774,10 @@ onClick={() = /> {;
                 setSelectedCategory('All Services');
 }
 setSelectedPriceRange('all');}
-              }}
+              }
               className='bg-gradient-to-r from-cyan-500 to-blue-600 hover: from-cyan-600 hover:to-blue-700 text-white font-medium py-3 px-6 rounded-xl transition-all duration-200'
-              }}
-              className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-medium py-3 px-6 rounded-xl transition-all duration-200"
+              }
+              className='bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-medium py-3 px-6 rounded-xl transition-all duration-200'
             >
               Clear All Filters;
             </button>
@@ -790,11 +790,11 @@ setSelectedPriceRange('all');}
 <div className='bg-gradient-to-r from-cyan-500/10 to-blue-500/10 border-t border-cyan-500/20' />;
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 text-center' />;
           <motion.div;
-            initial={{ opacity: 0, y: 30 ,}
+            initial={ opacity: 0, y: 30 ,}
 }
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{once: true }
+            whileInView={ opacity: 1, y: 0 }
+            transition={ duration: 0.8 }
+            viewport={once: true }
 }
 
            />
@@ -837,27 +837,27 @@ case 'price-low': setFilteredServices (filtered)
 }
 case 'rating': return b.rating - a.rating;}
 case 'newest': return new Date (b.launchDate) .getTime () - new Date (a.launchDate) .getTime ()case 'price-low': setFilteredServices (filtered)}, [searchTerm, selectedCategory, selectedPriceRange, sortBy])}
-description"content=" Explore our complete portfolio of innovative micro SAAS, AI, IT, and emerging technology services. Find the perfect solution for your business needs."/> <meta name=" keywords"content=" micro SAAS, AI services, IT solutions, quantum computing, emerging technology, business solutions, Zion Tech Group"/> </Head> left: `$ {Math.random () * 100;}
+description'content=' Explore our complete portfolio of innovative micro SAAS, AI, IT, and emerging technology services. Find the perfect solution for your business needs.'/> <meta name=' keywords'content=' micro SAAS, AI services, IT solutions, quantum computing, emerging technology, business solutions, Zion Tech Group'/> </Head> left: `$ {Math.random () * 100;}
 }%`;
 top: `$ {Math.random () * 100;}
 }%`;
-}/>) )}</div> <div className=" relative z-10 text-center px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto" /> <motion.div initial= {{opacity: 0, y: 30;}
-}animate= {{opacity: 1, y: 0;}
-}transition= {{{opacity: 0, y: 30;}
-}whileInView= {{opacity: 1, y: 0;}
-}transition= {{once: true;}
-} /> <h2 className=" text-4xl font-bold text-white mb-6" /> Ready to Transform Your Business? </h2> <p className=" text-xl text-cyan-300 mb-8 max-w-3xl mx-auto" /> Our team of experts is ready to help you implement the perfect solution for your needs. Get in touch today and discover how our innovative services can drive your success. </p> <a href=" /contact"className=" bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-medium py-4 px-8 rounded-xl transition-all duration-200 hover:shadow-lg hover:shadow-cyan-500/25 hover:scale-105" /> Get Started Today </a> <a href=" /pricing"className=" border border-cyan-500/50 text-cyan-300 hover:text-white hover:bg-gradient-to-r hover:from-cyan-500/20 hover:to-blue-500/20 font-medium py-4 px-8 rounded-xl transition-all duration-200"  /> View Pricing Plans </a> </div> </motion && motion.div> </div> </div> </Layout>)   )once: true;
-}> <h2 className=" text-4xl font-bold text-white mb-6" /> Ready to Transform Your Business? </h2> <p className=" text-xl text-cyan-300 mb-8 max-w-3xl mx-auto" /> Our team of experts is ready to help you implement the perfect solution for your needs. Get in touch today and discover how our innovative services can drive your success. </p> <a href=" /contact"className=" bg-gradient-to-r from-cyan-500 to-blue-600 hover: from-cyan-600 hover:to-blue-700 text-white font-medium py-4 px-8 rounded-xl transition-all duration-200 hover:shadow-lg hover:shadow-cyan-500/25 hover:scale-105" /> Get Started Today </a> <a href=" /pricing"className=" border border-cyan-500/50 text-cyan-300 hover:text-white hover:bg-gradient-to-r hover:from-cyan-500/20 hover:to-blue-500/20 font-medium py-4 px-8 rounded-xl transition-all duration-200"  /> View Pricing Plans </a> </div> </motion.div> </div> </div> </Layout>)   ,
+}/>) )}</div> <div className=' relative z-10 text-center px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto' /> <motion.div initial= {opacity: 0, y: 30;}
+}animate= {opacity: 1, y: 0;}
+}transition= {{opacity: 0, y: 30;}
+}whileInView= {opacity: 1, y: 0;}
+}transition= {once: true;}
+} /> <h2 className=' text-4xl font-bold text-white mb-6' /> Ready to Transform Your Business? </h2> <p className=' text-xl text-cyan-300 mb-8 max-w-3xl mx-auto' /> Our team of experts is ready to help you implement the perfect solution for your needs. Get in touch today and discover how our innovative services can drive your success. </p> <a href=' /contact'className=' bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-medium py-4 px-8 rounded-xl transition-all duration-200 hover:shadow-lg hover:shadow-cyan-500/25 hover:scale-105' /> Get Started Today </a> <a href=' /pricing'className=' border border-cyan-500/50 text-cyan-300 hover:text-white hover:bg-gradient-to-r hover:from-cyan-500/20 hover:to-blue-500/20 font-medium py-4 px-8 rounded-xl transition-all duration-200'  /> View Pricing Plans </a> </div> </motion && motion.div> </div> </div> </Layout>)   )once: true;
+}> <h2 className=' text-4xl font-bold text-white mb-6' /> Ready to Transform Your Business? </h2> <p className=' text-xl text-cyan-300 mb-8 max-w-3xl mx-auto' /> Our team of experts is ready to help you implement the perfect solution for your needs. Get in touch today and discover how our innovative services can drive your success. </p> <a href=' /contact'className=' bg-gradient-to-r from-cyan-500 to-blue-600 hover: from-cyan-600 hover:to-blue-700 text-white font-medium py-4 px-8 rounded-xl transition-all duration-200 hover:shadow-lg hover:shadow-cyan-500/25 hover:scale-105' /> Get Started Today </a> <a href=' /pricing'className=' border border-cyan-500/50 text-cyan-300 hover:text-white hover:bg-gradient-to-r hover:from-cyan-500/20 hover:to-blue-500/20 font-medium py-4 px-8 rounded-xl transition-all duration-200'  /> View Pricing Plans </a> </div> </motion.div> </div> </div> </Layout>)   ,
 }
       <div className='bg - gradient - to - r from - cyan - 500 / 10 to - blue - 500 / 10 border - t border - cyan - 500 / 20' />;
-        <div className='max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8 py - 20 text - center' />          <motion.div      <div className="bg - gradient - to - r from - cyan - 500 / 10 to - blue - 500 / 10 border - t border-cyan-500 / 20" />;
-        <div className="max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8 py-20 text-center" />;
+        <div className='max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8 py - 20 text - center' />          <motion.div      <div className='bg - gradient - to - r from - cyan - 500 / 10 to - blue - 500 / 10 border - t border-cyan-500 / 20' />;
+        <div className='max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8 py-20 text-center' />;
           <motion.div;
-            initial={{ opacity: 0, coordinate_y: 30 ,}
+            initial={ opacity: 0, coordinate_y: 30 ,}
 }
-            whileInView={{ opacity: 1, coordinate_y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{once: true }
+            whileInView={ opacity: 1, coordinate_y: 0 }
+            transition={ duration: 0.8 }
+            viewport={once: true }
 }
            />;
             <h2 className='text - 4xl font - bold text - white mb - 6' />;
@@ -878,21 +878,21 @@ top: `$ {Math.random () * 100;}
                 href='/pricing';
                 className='border border - cyan - 500 / 50 text - cyan - 300 hover:text - white hover:bg - gradient - to - r hover:from - cyan - 500 / 20 hover:to - blue - 500 / 20 font - medium py - 4 px - 8 rounded - xl transition - all duration - 200'               />              Ready to Transform Your Business?;
             </h2>;
-            <p className="text - xl text - cyan - 300 mb - 8 max-w-3xl mx-auto" />;
+            <p className='text - xl text - cyan - 300 mb - 8 max-w-3xl mx-auto' />;
               Our team of experts is ready to help you implement the perfect solution for your needs.;
               Get in touch today and discover how our innovative services can drive your success.;
             </p>;
-            <div className="flex flex - col sm: flex - row items - center justify - center space - y-4 sm:space-y-0 sm:space-x-6" />;
+            <div className='flex flex - col sm: flex - row items - center justify - center space - y-4 sm:space-y-0 sm:space-x-6' />;
               <a;
-                href="/contact";
-                className="bg - gradient - to - r from - cyan - 500 to - blue - 600 hover:from - cyan - 600 hover:to - blue - 700 text - white font - medium py - 4 px - 8 rounded - xl transition - all duration - 200 hover:shadow - lg hover:shadow - cyan-500 / 25 hover:scale-105" />
+                href='/contact';
+                className='bg - gradient - to - r from - cyan - 500 to - blue - 600 hover:from - cyan - 600 hover:to - blue - 700 text - white font - medium py - 4 px - 8 rounded - xl transition - all duration - 200 hover:shadow - lg hover:shadow - cyan-500 / 25 hover:scale-105' />
 
                 Get Started Today;
               </a>;
               <a;
                 href='/pricing';
-                className='border border - cyan - 500 / 50 text - cyan - 300 hover:text - white hover:bg - gradient - to - r hover:from - cyan - 500 / 20 hover:to - blue - 500 / 20 font - medium py - 4 px - 8 rounded - xl transition - all duration - 200'                href="/pricing";
-                className="border border - cyan - 500 / 50 text - cyan - 300 hover:text - white hover:bg - gradient - to - r hover:from - cyan - 500 / 20 hover:to - blue - 500 / 20 font - medium py - 4 px - 8 rounded - xl transition-all duration-200" />
+                className='border border - cyan - 500 / 50 text - cyan - 300 hover:text - white hover:bg - gradient - to - r hover:from - cyan - 500 / 20 hover:to - blue - 500 / 20 font - medium py - 4 px - 8 rounded - xl transition - all duration - 200'                href='/pricing';
+                className='border border - cyan - 500 / 50 text - cyan - 300 hover:text - white hover:bg - gradient - to - r hover:from - cyan - 500 / 20 hover:to - blue - 500 / 20 font - medium py - 4 px - 8 rounded - xl transition-all duration-200' />
 
                 View Pricing Plans;
               </a>;
@@ -904,31 +904,31 @@ top: `$ {Math.random () * 100;}
   return b.customers - a.customers;}
 case 'rating': return b.rating - a.rating;}
 case 'newest': return new Date (b.launch_date) .get_time () - new Date (a.launch_date) .get_time ()case 'price - low': setFilteredServices (filtered)}, [search_term, selected_category, selectedPriceRange, sort_by])}
-description"content=" Explore our complete portfolio of innovative micro SAAS, AI, IT, and emerging technology services. Find the perfect solution for your business needs."/> <meta name=" keywords"content=" micro SAAS, AI services, IT solutions, quantum computing, emerging technology, business solutions, Zion Tech Group"/> </Head> left: `$ {Math.random () * 100;}
+description'content=' Explore our complete portfolio of innovative micro SAAS, AI, IT, and emerging technology services. Find the perfect solution for your business needs.'/> <meta name=' keywords'content=' micro SAAS, AI services, IT solutions, quantum computing, emerging technology, business solutions, Zion Tech Group'/> </Head> left: `$ {Math.random () * 100;}
 }%`;
 top: `$ {Math.random () * 100;}
 }%`;
-}/>) )}</div> <div className=" relative z - 10 text - center px - 4 sm:px - 6 lg:px - 8 max-w-6xl mx-auto" /> <motion.div initial= {{opacity: 0, coordinate_y: 30;}
-}animate= {{opacity: 1, coordinate_y: 0;}
-}transition= {{duration: 0.8;}
-} /> <h1 className=" text - 4xl sm: text - 5xl lg:text - 7xl font - bold text-white mb-6" /> <span className=" bg - gradient - to - r from - cyan - 400 via - blue - 500 to - purple - 600 bg - clip-text text-transparent" /> Comprehensive </span> <br /> <span className=" text-white" />Services Showcase</span> </h1> </motion.div>) ,
+}/>) )}</div> <div className=' relative z - 10 text - center px - 4 sm:px - 6 lg:px - 8 max-w-6xl mx-auto' /> <motion.div initial= {opacity: 0, coordinate_y: 30;}
+}animate= {opacity: 1, coordinate_y: 0;}
+}transition= {duration: 0.8;}
+} /> <h1 className=' text - 4xl sm: text - 5xl lg:text - 7xl font - bold text-white mb-6' /> <span className=' bg - gradient - to - r from - cyan - 400 via - blue - 500 to - purple - 600 bg - clip-text text-transparent' /> Comprehensive </span> <br /> <span className=' text-white' />Services Showcase</span> </h1> </motion.div>) ,
 }</div> /> </div> </div> </motion.div> </div> </div> key= {category.name;}
 }on_click= {() => setSelectedCategory (category.name)}className= {`flex items - center space - x-2 px - 4 py - 2 rounded - lg text - sm font - medium transition - all duration - 200 $ {selected_category === category.name ? 'bg - gradient - to - r from - cyan - 500 to - blue - 600 text - white shadow - lg shadow - cyan - 500 / 25' : 'bg - white / 10 text - gray - 300 hover:bg - white / 20 hover:text - white';}
 }`;
 }> </span> </button>) )}</div> </option>) )}</select> {/* Sort Options */;}
 }<select </option />) )}</select> <button on_click= {() = /> setViewMode ('grid')}className= {`p - 2 rounded - md transition - all duration - 200 $ {view_mode === 'grid' ? 'bg - cyan - 500 text - white' : 'text - gray - 400 hover:text - white';}
 }`;
-}> <Grid3X3 className=" w-4 h-4"/> </button> <button on_click= {() = /> setViewMode ('list')}className= {`p - 2 rounded - md transition - all duration - 200 $ {view_mode === 'list' ? 'bg - cyan - 500 text - white' : 'text - white';}
+}> <Grid3X3 className=' w-4 h-4'/> </button> <button on_click= {() = /> setViewMode ('list')}className= {`p - 2 rounded - md transition - all duration - 200 $ {view_mode === 'list' ? 'bg - cyan - 500 text - white' : 'text - white';}
 }`;
 
-}> <List className=" w-4 h-4"/> </button> </div> </div> </div> </div> </div> + {}
+}> <List className=' w-4 h-4'/> </button> </div> </div> </div> </div> </div> + {}
   service.features.length - 3;}
 }more features </div>);
 }</div> </div> Learn More </button> </motion.div>) );
 }</div> </span> </div> </div> </div>) );
 }</div> </div> </div> </div> </div> </div> </motion.div>) );
 }</div>);
-}</div> <h3 className=" text - 2xl font - bold text-white mb-2" />No services found</h3> <p className=" text - gray-400 mb-6" /> Try adjusting your search terms or filters to find what you're looking for. </p> <button on_click= {
+}</div> <h3 className=' text - 2xl font - bold text-white mb-2' />No services found</h3> <p className=' text - gray-400 mb-6' /> Try adjusting your search terms or filters to find what you're looking for. </p> <button on_click= {
   () = /> {}
   > Clear All Filters </button> </div>);}
 }</div> <motion.div initial= {
@@ -940,7 +940,7 @@ top: `$ {Math.random () * 100;}
 }transition= {
   {
   duration: 0.8
-}> <h1 className=" text - 4xl sm:text - 5xl lg:text - 7xl font - bold text-white mb-6"> <span className=" bg - gradient - to - r from - cyan - 400 via - blue - 500 to - purple - 600 bg - clip-text text-transparent"> Comprehensive </span> <br /> <span className=" text-white">Services Showcase</span> </h1> </motion.div>) )
+}> <h1 className=' text - 4xl sm:text - 5xl lg:text - 7xl font - bold text-white mb-6'> <span className=' bg - gradient - to - r from - cyan - 400 via - blue - 500 to - purple - 600 bg - clip-text text-transparent'> Comprehensive </span> <br /> <span className=' text-white'>Services Showcase</span> </h1> </motion.div>) )
 }</div> /> </div> </div> </motion.div> </div> </div> key= {
 
   category.name
@@ -969,5 +969,5 @@ top: `$ {Math.random () * 100;}
 
   once: true }
 ,}
-} /> <h2 className=" text-4xl font-bold text-white mb-6" /> Ready to Transform Your Business? </h2> <p className=" text-xl text-cyan-300 mb-8 max-w-3xl mx-auto" /> Our team of experts is ready to help you implement the perfect solution for your needs. Get in touch today and discover how our innovative services can drive your success. </p> <a href=" /contact"className=" bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-medium py-4 px-8 rounded-xl transition-all duration-200 hover:shadow-lg hover:shadow-cyan-500/25 hover:scale-105" /> Get Started Today </a> <a href=" /pricing"className=" border border-cyan-500/50 text-cyan-300 hover:text-white hover:bg-gradient-to-r hover:from-cyan-500/20 hover:to-blue-500/20 font-medium py-4 px-8 rounded-xl transition-all duration-200"  /> View Pricing Plans </a> </div> </motion.div> </div> </div> </Layout>)
+} /> <h2 className=' text-4xl font-bold text-white mb-6' /> Ready to Transform Your Business? </h2> <p className=' text-xl text-cyan-300 mb-8 max-w-3xl mx-auto' /> Our team of experts is ready to help you implement the perfect solution for your needs. Get in touch today and discover how our innovative services can drive your success. </p> <a href=' /contact'className=' bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-medium py-4 px-8 rounded-xl transition-all duration-200 hover:shadow-lg hover:shadow-cyan-500/25 hover:scale-105' /> Get Started Today </a> <a href=' /pricing'className=' border border-cyan-500/50 text-cyan-300 hover:text-white hover:bg-gradient-to-r hover:from-cyan-500/20 hover:to-blue-500/20 font-medium py-4 px-8 rounded-xl transition-all duration-200'  /> View Pricing Plans </a> </div> </motion.div> </div> </div> </Layout>)
 

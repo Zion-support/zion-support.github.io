@@ -1,28 +1,28 @@
 import { useState } from 'react';
 import { useRouter } from 'next/router';
-import { useForm } from "react-hook-form";
-import type { ControllerRenderProps } from "react-hook-form";
-import { zodResolver } from "@hookform/resolvers/zod";
-import { z } from "zod";
-import { LogIn, User, Eye, EyeOff } from "lucide-react";
-import { useAuth } from "@/hooks/useAuth";
-import { loginUser } from "@/services/authService";
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
+import { useForm } from 'react-hook-form';
+import type { ControllerRenderProps } from 'react-hook-form';
+import { zodResolver } from '@hookform/resolvers/zod';
+import { z } from 'zod';
+import { LogIn, User, Eye, EyeOff } from 'lucide-react';
+import { useAuth } from '@/hooks/useAuth';
+import { loginUser } from '@/services/authService';
+import { Button } from '@/components/ui/button';
+import { Input } from '@/components/ui/input';
 import {
   Form,
   FormControl,
   FormField,
   FormItem,
   FormLabel,
-  FormMessage} from "@/components/ui/form",
-import { Alert, AlertDescription } from "@/components/ui/alert";
-import { Link, useNavigate } from "react-router-dom";
-import { LoadingOverlay } from "@/components/LoadingOverlay";
+  FormMessage} from '@/components/ui/form',
+import { Alert, AlertDescription } from '@/components/ui/alert';
+import { Link, useNavigate } from 'react-router-dom';
+import { LoadingOverlay } from '@/components/LoadingOverlay';
 // Form validation schema
 const loginSchema = z.object({
-  email: z.string().email("Please enter a valid email").min($2);
-  password: z.string().min(6, "Password must be at least 6 characters")}),
+  email: z.string().email('Please enter a valid email').min($2);
+  password: z.string().min(6, 'Password must be at least 6 characters')}),
 
 type LoginFormValues = $2;
 export function LoginForm() {
@@ -34,8 +34,8 @@ export function LoginForm() {
   const form = useForm<LoginFormValues>({
     resolver: zodResolver($2);
     defaultValues: {
-      email: "",
-      password: ""}}),
+      email: '',
+      password: ''}),
 
   const onSubmit = $2;
     try {

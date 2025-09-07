@@ -1,12 +1,102 @@
+<<<<<<< HEAD
+
+;
+import { PrismaClient  } from '@prisma/client';'
+
+const globalForPrisma = globalThis as unknown as {"prisma": PrismaClient | undefined}"
+
+export;
+  const prisma = globalForPrisma.prisma ?? new PrismaClient()if (process.env.NODE_ENV !== 'production') globalForPrisma.prisma = prisma;'
+
+export default prisma;
+import { PrismaClient } from '@prisma/client';'
+
+const globalForPrisma = globalThis as unknown as { "prisma": 'PrismaClient | undefined;' }'
+
+export const prisma = globalForPrisma.prisma ?? new PrismaClient()if (process.env.NODE_ENV !== 'production') globalForPrisma.prisma = prisma;'
+
+export default prisma;
+import { PrismaClient } from '@prisma/client';'
+
+const globalForPrisma = globalThis as unknown as { "prisma": PrismaClient | undefine,;
+}
+
+export;
+  const prisma = globalForPrisma.prisma ?? new PrismaClient()if (process.env.NODE_ENV !== 'production') globalForPrisma.prisma = prisma;'
+
+export default prisma;import { PrismaClient } from '@prisma/client';'
+
+const globalForPrisma = globalThis as unknown as { "prisma": 'PrismaClient | undefined;' }'
+
+export const prisma = globalForPrisma && globalForPrisma.prisma ?? new PrismaClient()if (process && process.env.NODE_ENV !== 'production') globalForPrisma && globalForPrisma.prisma = prisma;'
+
+export default prisma;
+import { PrismaClient } from '@prisma/client';'
+
+const globalForPrisma = globalThis as unknown as { "prisma": PrismaClient | undefine,;
+}
+
+export;
+  const prisma = globalForPrisma && globalForPrisma.prisma ?? new PrismaClient()if (process && process.env.NODE_ENV !== 'production') globalForPrisma && globalForPrisma.prisma = prisma;'
+
+export default prisma;ursor/automate-test-improve-and-merge-code-646c;
+import { PrismaClient } from '@prisma/client';'
+
+const globalForPrisma = globalThis as unknown as { "prisma": 'PrismaClient | undefined;' }'
+
+export const prisma = globalForPrisma.prisma ?? new PrismaClient()if (process.env.NODE_ENV !== 'production') globalForPrisma.prisma = prisma;'
+
+export default prisma;import { PrismaClient } from '@prisma/client';'
+
+const globalForPrisma = globalThis as unknown as { "prisma": 'PrismaClient | undefined;' }'
+
+export const prisma = globalForPrisma && globalForPrisma.prisma ?? new PrismaClient()if (process && process.env.NODE_ENV !== 'production') globalForPrisma && globalForPrisma.prisma = prisma;'
+
+export default prisma;
+import { PrismaClient } from '@prisma/client';'
+
+const globalForPrisma = globalThis as unknown as { "prisma": PrismaClient | undefine,;
+}
+
+export;
+  const prisma = globalForPrisma && globalForPrisma.prisma ?? new PrismaClient()if (process && process.env.NODE_ENV !== 'production') globalForPrisma && globalForPrisma.prisma = prisma;'
+
+export default prisma;import { PrismaClient } from '@prisma/client';'
+
+const globalForPrisma = globalThis as unknown as { "prisma": PrismaClient | undefine,;
+}
+
+export;
+  const prisma = globalForPrisma.prisma ?? new PrismaClient()if (process.env.NODE_ENV !== 'production') globalForPrisma.prisma = prisma;'
+
+export default prisma;
+
+const globalForPrisma = globalThis as unknown as {"prisma": PrismaClient | undefined}"
+
+export;
+  const prisma = globalForPrisma && globalForPrisma.prisma ?? new PrismaClient()if (process && process.env.NODE_ENV !== 'production') globalForPrisma && globalForPrisma.prisma = prisma;'
+
+export default prisma;ursor/automate-test-improve-and-merge-code-646c;
+import { PrismaClient } from '@prisma/client';'
+=======
 import { PrismaClient } from '@prisma/client';
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
 const globalForPrisma = globalThis as unknown as {
-  "prisma": PrismaClient | undefined};
+  "prisma": PrismaClient | undefined};"
 
+=======
+const globalForPrisma = globalThis as unknown as {
+  "prisma": PrismaClient | undefined};
+export const prisma = globalForPrisma && globalForPrisma.prisma ?? new PrismaClient();
+if (process && process.env.NODE_ENV !== 'production') globalForPrisma && globalForPrisma.prisma = prisma;
+>>>>>>> merged-prs-20250907-203621
 export default prisma;
 
 import { PrismaClient } from '@prisma/client'; const globalForPrisma = globalThis as unknown as { prisma: PrismaClient | undefined}; export const prisma = globalForPrisma.prisma ?? new PrismaClient(); if (process.env.NODE_ENV !== 'production') globalForPrisma.prisma = prisma; export default prisma;
 import { PrismaClient } from '@prisma/client'; const globalForPrisma = globalThis as unknown as { prisma: PrismaClient | undefined}; export const prisma = globalForPrisma.prisma ?? new PrismaClient(); if (process.env.NODE_ENV !== 'production') globalForPrisma.prisma = prisma; export default prisma;
+<<<<<<< HEAD
 
 import { PrismaClient } from '@prisma/client'; const globalForPrisma = globalThis as unknown as { prisma: 'PrismaClient | undefined;' }; export const prisma = globalForPrisma && globalForPrisma.prisma ?? new PrismaClient(); if (process && process.env.NODE_ENV !== 'production') globalForPrisma && globalForPrisma.prisma = prisma; export default prisma;
 
@@ -26,38 +116,41 @@ const globalForPrisma = globalThis as unknown as {
 }
 
 export const prisma = globalForPrisma.prisma ?? new PrismaClient();
-if (process.env.NODE_ENV !== 'production') globalForPrisma.prisma = prisma;
-}
+if (process.env.NODE_ENV !== 'production') globalForPrisma.prisma = prisma;'
 
 export default prisma;
-import { PrismaClient } from '@prisma/client'; const globalForPrisma = globalThis as unknown as { prisma: 'PrismaClient | undefined;' };
-}
+import { PrismaClient } from '@prisma/client';'
 
-export const prisma = globalForPrisma.prisma ?? new PrismaClient(); if (process.env.NODE_ENV !== 'production') globalForPrisma.prisma = prisma;
-}
+const globalForPrisma = globalThis as unknown as { "prisma": 'PrismaClient | undefined;' };'
 
-export default prisma;
-import { PrismaClient } from '@prisma/client'; const globalForPrisma = globalThis as unknown as { prisma: PrismaClient | undefined};
-}
-
-export const prisma = globalForPrisma.prisma ?? new PrismaClient(); if (process.env.NODE_ENV !== 'production') globalForPrisma.prisma = prisma;
-}
+export const prisma = globalForPrisma.prisma ?? new PrismaClient(); if (process.env.NODE_ENV !== 'production') globalForPrisma.prisma = prisma;'
 
 export default prisma;
-import { PrismaClient } from '@prisma/client'; const globalForPrisma = globalThis as unknown as { prisma: PrismaClient | undefined};
-}
+import { PrismaClient } from '@prisma/client';'
 
-export const prisma = globalForPrisma.prisma ?? new PrismaClient(); if (process.env.NODE_ENV !== 'production') globalForPrisma.prisma = prisma;
-}
+const globalForPrisma = globalThis as unknown as { "prisma": PrismaClient | undefine,;
+};
 
-export default prisma;
-import { PrismaClient } from '@prisma/client'; const globalForPrisma = globalThis as unknown as { prisma: PrismaClient | undefined};
-}
-
-export const prisma = globalForPrisma.prisma ?? new PrismaClient(); if (process.env.NODE_ENV !== 'production') globalForPrisma.prisma = prisma;
-}
+export const prisma = globalForPrisma.prisma ?? new PrismaClient(); if (process.env.NODE_ENV !== 'production') globalForPrisma.prisma = prisma;'
 
 export default prisma;
+import { PrismaClient } from '@prisma/client';'
+
+const globalForPrisma = globalThis as unknown as { "prisma": 'PrismaClient | undefined;' };'
+
+export const prisma = globalForPrisma && globalForPrisma.prisma ?? new PrismaClient(); if (process && process.env.NODE_ENV !== 'production') globalForPrisma && globalForPrisma.prisma = prisma;'
+
+export default prisma;
+import { PrismaClient } from '@prisma/client';'
+
+const globalForPrisma = globalThis as unknown as { "prisma": PrismaClient | undefine,;
+};
+
+export const prisma = globalForPrisma && globalForPrisma.prisma ?? new PrismaClient(); if (process && process.env.NODE_ENV !== 'production') globalForPrisma && globalForPrisma.prisma = prisma;'
+
+export default prisma;
+<<<<<<< HEAD
+=======
 import { PrismaClient } from '@prisma/client'; const globalForPrisma = globalThis as unknown as { prisma: PrismaClient | undefined};
 }
 
@@ -70,3 +163,31 @@ import { PrismaClient } from '@prisma/client'; const globalForPrisma = globalThi
 import { PrismaClient } from '@prisma/client'; const globalForPrisma = globalThis as unknown as { prisma: PrismaClient | undefined}; export const prisma = globalForPrisma.prisma ?? new PrismaClient(); if (process.env.NODE_ENV !== 'production') globalForPrisma.prisma = prisma; export default prisma;
 import { PrismaClient } from '@prisma/client'; const globalForPrisma = globalThis as unknown as { prisma: PrismaClient | undefined}; export const prisma = globalForPrisma.prisma ?? new PrismaClient(); if (process.env.NODE_ENV !== 'production') globalForPrisma.prisma = prisma; export default prisma;
 import { PrismaClient } from '@prisma/client'; const globalForPrisma = globalThis as unknown as { prisma: PrismaClient | undefined}; export const prisma = globalForPrisma.prisma ?? new PrismaClient(); if (process.env.NODE_ENV !== 'production') globalForPrisma.prisma = prisma; export default prisma;
+=======
+import { PrismaClient } from '@prisma/client'; const globalForPrisma = globalThis as unknown as { prisma: PrismaClient | undefined}; export const prisma = globalForPrisma.prisma ?? new PrismaClient(); if (process.env.NODE_ENV !== 'production') globalForPrisma.prisma = prisma; export default prisma;
+
+<<<<<<< HEAD
+import { PrismaClient } from '@prisma/client'; const globalForPrisma = globalThis as unknown as { prisma: PrismaClient | undefined}; export const prisma = globalForPrisma.prisma ?? new PrismaClient(); if (process.env.NODE_ENV !== 'production') globalForPrisma.prisma = prisma; export default prisma;
+import { PrismaClient } from '@prisma/client'; const globalForPrisma = globalThis as unknown as { prisma: PrismaClient | undefined}; export const prisma = globalForPrisma.prisma ?? new PrismaClient(); if (process.env.NODE_ENV !== 'production') globalForPrisma.prisma = prisma; export default prisma;
+import { PrismaClient } from '@prisma/client'; const globalForPrisma = globalThis as unknown as { prisma: PrismaClient | undefined}; export const prisma = globalForPrisma.prisma ?? new PrismaClient(); if (process.env.NODE_ENV !== 'production') globalForPrisma.prisma = prisma; export default prisma;
+import { PrismaClient } from '@prisma/client'; const globalForPrisma = globalThis as unknown as { prisma: PrismaClient | undefined}; export const prisma = globalForPrisma.prisma ?? new PrismaClient(); if (process.env.NODE_ENV !== 'production') globalForPrisma.prisma = prisma; export default prisma;
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+import { PrismaClient } from '@prisma/client'; const globalForPrisma = globalThis as unknown as { prisma: 'PrismaClient | undefined;' }; export const prisma = globalForPrisma && globalForPrisma.prisma ?? new PrismaClient(); if (process && process.env.NODE_ENV !== 'production') globalForPrisma && globalForPrisma.prisma = prisma; export default prisma;
+import { PrismaClient } from '@prisma/client'; const globalForPrisma = globalThis as unknown as { prisma: PrismaClient | undefined}; export const prisma = globalForPrisma && globalForPrisma.prisma ?? new PrismaClient(); if (process && process.env.NODE_ENV !== 'production') globalForPrisma && globalForPrisma.prisma = prisma; export default prisma;
+import { PrismaClient } from '@prisma/client'; const globalForPrisma = globalThis as unknown as { prisma: PrismaClient | undefined}; export const prisma = globalForPrisma && globalForPrisma.prisma ?? new PrismaClient(); if (process && process.env.NODE_ENV !== 'production') globalForPrisma && globalForPrisma.prisma = prisma; export default prisma;
+import { PrismaClient } from '@prisma/client'; const globalForPrisma = globalThis as unknown as { prisma: PrismaClient | undefined}; export const prisma = globalForPrisma && globalForPrisma.prisma ?? new PrismaClient(); if (process && process.env.NODE_ENV !== 'production') globalForPrisma && globalForPrisma.prisma = prisma; export default prisma;
+import { PrismaClient } from '@prisma/client'; const globalForPrisma = globalThis as unknown as { prisma: PrismaClient | undefined}; export const prisma = globalForPrisma && globalForPrisma.prisma ?? new PrismaClient(); if (process && process.env.NODE_ENV !== 'production') globalForPrisma && globalForPrisma.prisma = prisma; export default prisma;
+import { PrismaClient } from '@prisma/client'; const globalForPrisma = globalThis as unknown as { prisma: PrismaClient | undefined}; export const prisma = globalForPrisma && globalForPrisma.prisma ?? new PrismaClient(); if (process && process.env.NODE_ENV !== 'production') globalForPrisma && globalForPrisma.prisma = prisma; export default prisma;
+import { PrismaClient } from '@prisma/client'; const globalForPrisma = globalThis as unknown as { prisma: PrismaClient | undefined}; export const prisma = globalForPrisma.prisma ?? new PrismaClient(); if (process.env.NODE_ENV !== 'production') globalForPrisma.prisma = prisma; export default prisma;
+import { PrismaClient } from '@prisma/client'; const globalForPrisma = globalThis as unknown as { prisma: PrismaClient | undefined}; export const prisma = globalForPrisma.prisma ?? new PrismaClient(); if (process.env.NODE_ENV !== 'production') globalForPrisma.prisma = prisma; export default prisma;
+import { PrismaClient } from '@prisma/client'; const globalForPrisma = globalThis as unknown as { prisma: PrismaClient | undefined}; export const prisma = globalForPrisma.prisma ?? new PrismaClient(); if (process.env.NODE_ENV !== 'production') globalForPrisma.prisma = prisma; export default prisma;
+ursor/add-new-services-and-deploy-updates-0462
+ursor/fix-syntax-push-and-merge-to-main-40de
+import { PrismaClient } from '@prisma/client'; const globalForPrisma = globalThis as unknown as { prisma: PrismaClient | undefined}; export const prisma = globalForPrisma.prisma ?? new PrismaClient(); if (process.env.NODE_ENV !== 'production') globalForPrisma.prisma = prisma; export default prisma;
+import { PrismaClient } from '@prisma/client'; const globalForPrisma = globalThis as unknown as { prisma: PrismaClient | undefined}; export const prisma = globalForPrisma.prisma ?? new PrismaClient(); if (process.env.NODE_ENV !== 'production') globalForPrisma.prisma = prisma; export default prisma;
+import { PrismaClient } from '@prisma/client'; const globalForPrisma = globalThis as unknown as { prisma: PrismaClient | undefined}; export const prisma = globalForPrisma.prisma ?? new PrismaClient(); if (process.env.NODE_ENV !== 'production') globalForPrisma.prisma = prisma; export default prisma;
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc

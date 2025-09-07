@@ -188,7 +188,7 @@ Competition;
         </title>
         <meta;
 name='description'
-          content="See how Zion's micro SaaS services compare to market leaders. Detailed pricing analysis showing significant cost savings and better value."
+          content='See how Zion's micro SaaS services compare to market leaders. Detailed pricing analysis showing significant cost savings and better value.'
         />
         <meta;
 property='og:title'
@@ -196,7 +196,7 @@ property='og:title'
         />
         <meta;
 property='og:description'
-          content="Compare Zion's pricing to Jasper AI, Datadog, GitHub Actions and more. Save 30-60% with better features."
+          content='Compare Zion's pricing to Jasper AI, Datadog, GitHub Actions and more. Save 30-60% with better features.'
         />
         <meta name='twitter: card' content='summary_large_image' />
       <div className='min-h-screen bg-black' />
@@ -230,13 +230,13 @@ icon: '🤖'
                 See exactly how each service compares in features, pricing, and;
                 value.              </p>;
             </div>;
-            {service_comparisons.map ((service, service_index) => (        <section id="comparison" className="py - 24 bg-gray-800" />;
-          <div className="max - w-7xl mx - auto px - 4 sm:px-6 lg:px-8" />;
-            <div className="text-center mb-20" />;
-              <h2 className="text - 3xl sm:text - 4xl font - bold text-white mb-8" />;
+            {service_comparisons.map ((service, service_index) => (        <section id='comparison' className='py - 24 bg-gray-800' />;
+          <div className='max - w-7xl mx - auto px - 4 sm:px-6 lg:px-8' />;
+            <div className='text-center mb-20' />;
+              <h2 className='text - 3xl sm:text - 4xl font - bold text-white mb-8' />;
                 Detailed Service Comparison;
               </h2>;
-              <p className="text - xl text - gray - 400 max-w-3xl mx-auto" />;
+              <p className='text - xl text - gray - 400 max-w-3xl mx-auto' />;
                 See exactly how each service compares in features, pricing, and value.;}
             </div>;}
             {service_comparisons.map ((service, service_index) => (<div key={service_index} className='mb - 24' />;
@@ -372,8 +372,8 @@ key={conIndex}
                           <div className='text-center' />;
                             <p className='text-green-400 font-semibold text-sm' />;
                               {competitor && competitor.savings}
-                            </p>                          </div>                          <div className="text-center" />;
-                            <p className="text-green-400 font-semibold text-sm" />{competitor && competitor.savings}</p>;
+                            </p>                          </div>                          <div className='text-center' />;
+                            <p className='text-green-400 font-semibold text-sm' />{competitor && competitor.savings}</p>;
                           </div>;
                         </div>;
                       </Card>;

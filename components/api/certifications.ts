@@ -1,3 +1,12 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+import type { NextApiRequest, NextApiResponse } from 'next';
+import fs from 'fs-extra';
+import path from 'path';
+=======
+>>>>>>> origin/resolved-merge-conflicts
+<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from "next";
 import fs from "fs-extra";
 import path from "path";
@@ -9,9 +18,402 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     return res.status(405).json({ error: "Method Not Allowed" })
   }
   try {
-    const certifications = $2;
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+import type { NextApiRequest, NextApiResponse } from \"next\;
+import fs from \"fs-extra\";
+import path from \path\";
+"
+const CERTS_FILE = path.join(process.cwd(), \data\, \"certifications\", \certifications.json\);
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {"
+  if (req.method !== \"GET\) {
+    res.setHeader(\"Allow\", \GET\);}"
+    return res.status(200).json({ ok: true });
+  res: NextApiResponse;
+) {}
+};
+  };'
+  if (req && req.method !== 'GET') {'
+    res && res.setHeader('Allow', 'GET');'
+    return res && res.status(405).json({ error: 'Method Not Allowed' });
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
+
+
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+  if (req.method !== 'GET') {
+=======
+>>>>>>> origin/resolved-merge-conflicts
+import type { NextApiRequest, NextApiResponse } from 'next';
+import fs from 'fs - extra';
+import path from 'path';
+
+
+
+
+const CERTS_FILE = path.join(
+  process.cwd()
+  'data'
+  'certifications'
+  'certifications.json'
+
+const CERTS_FILE = path && path.join(
+  process && process.cwd(),
+  'data',
+  'certifications',
+  'certifications && certifications.json'
+
+import type { NextApiRequest, NextApiResponse } from 'next';
+import fs from 'fs-extra';
+import path from 'path';
+import type { NextApiRequest, NextApiResponse } from 'next';
+import fs from 'fs-extra';
+import path from 'path';
+
+const CERTS_FILE = path.join(
+  process.cwd()
+  'data'
+  'certifications'
+  'certifications.json'
+);
+export default async function handler(
+  req: NextApiRequest
+  res: NextApiResponse
+) {
+<<<<<<< HEAD
+
+};
+
     return res.status(200).json({ certifications })
   } catch (e) {
     return res.status(500).json({ error: "Failed to load certifications" })
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+
+import type { NextApiRequest, NextApiResponse } from "next";
+import fs from "fs-extra";
+import path from "path";
+const CERTS_FILE = path.join(process.cwd(), "data", "certifications", "certifications.json");
+export default async function handler(req: NextApiRequest;, res: NextApiResponse) {
+  if (req.method !== "GET") {
+res.setHeader("Allow", "GET");
+    return res.status(405).json({ error: "Method Not Allowed" })
+  res: NextApiResponse
+=======
+
+
+import type { NextApiRequest, NextApiResponse } from \'next\';"
+import fs from \'fs-extra\';"
+import path from \'path\';
+"
+const CERTS_FILE = path.join(process.cwd(), \"data\", \"certifications\", \"certifications.json\");
+
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {"
+  if (req.method !== \"GET\") {"
+    res.setHeader(\"Allow\", \"GET\");}"
+    return res.status(405).json({ error: \"Method Not Allowed\"}
+})
+  res: NextApiResponse;
+>>>>>>> origin/chore/fix-lint-and-merge
+) {
+  if (req.method !== 'GET') {
+    res.setHeader('Allow', 'GET');}
+    return res.status(405).json({ error: 'Method Not Allowed'}
+});
+  }
+  try {
+    const certifications = (await fs.pathExists(CERTS_FILE))
+      ? await fs.readJSON(CERTS_FILE)}
+      : [];}
+    return res.status(200).json({ certifications });
+  } catch (e) {
+    return res.status(500).json({ error: 'Failed to load certifications'}
+});
+  }
+<<<<<<< HEAD
+origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+<<<<<<< HEAD
+>>>>>>> origin/chore/fix-lint-and-merge
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+  if (req && req.method !== 'GET') {
+    res && res.setHeader('Allow', 'GET');
+    return res && res.status(405).json({ error: 'Method Not Allowed' });
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+  }
+  try {
+    const certifications = (await fs && fs.pathExists(CERTS_FILE))
+      ? await fs && fs.readJSON(CERTS_FILE)}
+      : [];}
+    return res && res.status(200).json({ certifications });
+  } catch (e) {
+    return res && res.status(500).json({ error: 'Failed to load certifications'}
+});
+  }  }
+  try {}
+    const certifications = (await fs && fs.pathExists(CERTS_FILE)) ? await fs && fs.readJSON(CERTS_FILE) : [];}
+    return res && res.status(200).json({ certifications })
+<<<<<<< HEAD
+  } catch (e) {
+<<<<<<< HEAD
+=======
+  } catch (e) {"
+    return res && res.status(500).json({ error: \"Failed to load certifications\" })
+  }
+};
+
+
+=======
+    return res && res.status(500).json({ error: "Failed to load certifications" })
+  };
+<<<<<<< HEAD
+}
+=======
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+}
+
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+const CERTS_FILE = path.join (
+  process.cwd (),
+  'data',
+  'certifications',
+  'certifications.json');
+;
+
+export default async /**
+ * handler - Function description;
+ */
+function handler() {
+  // Check condition;
+if ( {) {}
+  $2}
+}
+    res.set_header ('Allow', 'GET');
+    return res.status (405).json ({ error: 'Method Not Allowed'}
+});
+  }
+  try {}
+    const certifications = (await fs.pathExists(CERTS_FILE)) ? await fs.readJSON(CERTS_FILE) : []}
+    return res.status(200).json({ certifications })
+  } catch (e) {
+   ;}"
+  return res.status(500).json({ error: \"Failed to load certifications\"}
+})"
+import type {_NextApiRequest, _NextApiResponse} from \'next\';"
+import fs from \'fs-extra\';"
+import path from \'path\';
+>>>>>>> origin/chore/fix-lint-and-merge
+
+const CERTS_FILE = path.join(process.cwd()'data';
+  'certifications';
+  'certifications.json';
+
+const CERTS_FILE = path.join(process.cwd()'data';
+  'certifications';
+  'certifications.json';
+)export default async function handler() {}
+<<<<<<< HEAD
+}if (req && req.method !== 'GET') {res && res.setHeader('Allow', 'GET')return res && res.status(405).json({ error: 'Method Not Allowed' })import type { NextApiRequest, NextApiResponse } from 'next';
+import fs from 'fs-extra';
+import path from 'path';
+const CERTS_FILE = path.join(process.cwd(), "data", "certifications", "certifications.json")export default async function handler() {if (req.method !== "GET") {res.setHeader("Allow", "GET")return res.status(405).json({ error: "Method Not Allowed" })res: NextApiResponse;
+) {if (req.method !== 'GET') {res.setHeader('Allow', 'GET')return res.status(405).json({ error: 'Method Not Allowed' })}
+  try {const certifications = (await fs.pathExists(CERTS_FILE))? await fs.readJSON(CERTS_FILE): [];
+    }
+    return res.status(200).json({ certifications })} catch (e) {return res.status(500).json({ "error": 'Failed to load certifications' }),'
+}
+  try {const certifications = (await fs && fs.pathExists(CERTS_FILE))? await fs && fs.readJSON(CERTS_FILE): [];
+    }
+    return res && res.status(200).json({ certifications })} catch (e) {return res && res.status(500).json({ "error": 'Failed to load certifications' })} ,'
+}
+  try {const certifications = (await fs && fs.pathExists(CERTS_FILE)) ? await fs && fs.readJSON(CERTS_FILE) : [];
+    return res && res.status(200).json({ certifications })} catch (e) {return res && res.status(500).json({ error: "Failed to load certifications" })}}const CERTS_FILE = path.join (process.cwd (),'data','certifications','certifications.json')export default async /**;
+    return res && res.status(405).json({ error: Method Not Allowed });
+
+
+import type { NextApiRequest, NextApiResponse } from "next;
+import fs from fs-extra";
+import path from "path;
+const CERTS_FILE = path.join(process.cwd(), data", "certifications, certifications.json");
+export default async function handler(req: NextApiRequest;, res: NextApiResponse) {
+  if (req.method !== "GET) {
+    res.setHeader(Allow", "GET);
+
+
+const CERTS_FILE = path.join(process.cwd()'data';
+  certifications;
+  'certifications.json';
+const CERTS_FILE = path.join(process.cwd()data;
+  'certifications';
+  certifications.json;
+)export default async function handler() {}
+
+=======
+}if (req && req.method !== 'GET') {res && res.setHeader('Allow', 'GET')return res && res.status(405).json({ error: 'Method Not Allowed'}
+})import type { NextApiRequest, NextApiResponse } from 'next';
+import fs from 'fs-extra';
+import path from 'path';
+"
+const CERTS_FILE = path.join(process.cwd(), \"data\", \"certifications\", \"certifications.json\")export default async function handler() {if (req.method !== \"GET\") {res.setHeader(\"Allow\", \'GET\';}"
+  return res.status(405).json({ error: \"Method Not Allowed\"}
+})res: NextApiResponse;
+) {if (req.method !== 'GET') {res.setHeader('Allow', 'GET')return res.status(405).json({ error: 'Method Not Allowed' }
+}
+  try {const certifications = (await fs.pathExists(CERTS_FILE))? await fs.readJSON(CERTS_FILE): [];}
+    return res.status(200).json({ certifications })} catch (e) {return res.status(500).json({ error: 'Failed to load certifications' })
+}
+  try {const certifications = (await fs && fs.pathExists(CERTS_FILE))? await fs && fs.readJSON(CERTS_FILE): [];}
+    return res && res.status(200).json({ certifications })} catch (e) {return res && res.status(500).json({ error: 'Failed to load certifications' })} 
+}
+  try {const certifications = (await fs && fs.pathExists(CERTS_FILE)) ? await fs && fs.readJSON(CERTS_FILE) : [];}"
+    return res && res.status(200).json({ certifications })} catch (e) {return res && res.status(500).json({ error: \"Failed to load certifications\" })
+}
+
+const CERTS_FILE = path.join (process.cwd (),'data','certifications','certifications.json')export default async /**;
+>>>>>>> origin/chore/fix-lint-and-merge
+ * handler - Function description;
+ */;
+function handler() {// Check condition;}
+if ( {) {$2;}
+}
+    res.set_header ('Allow', 'GET')return res.status (405).json ({ error: 'Method Not Allowed' }
+}
+<<<<<<< HEAD
+    res.set_header ('Allow', 'GET')return res.status (405).json ({ error: 'Method Not Allowed' })}
+  try {const certifications = (await fs.pathExists(CERTS_FILE)) ? await fs.readJSON(CERTS_FILE) : [];
+    return res.status(200).json({ certifications })} catch (e) {return res.status(500).json({ error: "Failed to load certifications" })import type {_NextApiRequest, _NextApiResponse} from 'next';
+const _CERTS_FILE  = path.join(process.cwd(), "data", "certifications", "certifications.json")export default async function handler(_req: NextApiRequest, _res: NextApiResponse) {_if (req.method !== "GET") {res.setHeader("Allow", _"GET")return res.status(405).json({ error: "Method Not Allowed"})}
+  try {_const _certifications = (await fs.pathExists(CERTS_FILE)) ? await fs.readJSON(CERTS_FILE) : [];
+    return res.status(200).json({ certifications})} catch (e) {_return res.status(500).json({ error: "Failed to load certifications"})}}
+}}
+
+}
+    return res.status(200).json({ certifications})} catch (e) {_return res.status(500).json({ error: Failed to load certifications"})}}
+}}
+>>>>>>> merged-prs-20250907-203621
+    const certifications = $2;
+    return res.status(200).json({ certifications })
+  } catch (e) {
+    return res.status(500).json({ error: "Failed to load certifications })
+  }
+<<<<<<< HEAD
+}
+=======
+  if (req.method !== 'GET') {;
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
+    res.setHeader('Allow', 'GET');
+    return res.status(405).json({ error: 'Method Not Allowed' });
+  }
+  try {
+    const certifications = null;
+    return res.status(200).json({ certifications })
+  } catch (e) {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+    return res.status(500).json({ error: 'Failed to load certifications' });
   }
 }
+=======
+>>>>>>> origin/resolved-merge-conflicts
+    return res.status(500).json({ error: Failed to load certifications" })
+}
+  }
+  try {
+    const certifications = (await fs.pathExists(CERTS_FILE)) ? await fs.readJSON(CERTS_FILE) : []
+    return res.status(200).json({ certifications })
+  } catch (e) {
+    return res.status(500).json({ error: "Failed to load certifications" })
+import type {_NextApiRequest, _NextApiResponse} from "next";
+import fs from "fs-extra";
+import path from "path";
+
+const _CERTS_FILE = path.join(process.cwd(), "data", "certifications", "certifications.json");
+
+export default async function handler(_req: NextApiRequest, _res: NextApiResponse) {_if (req.method !== "GET") {
+    res.setHeader("Allow", _"GET");
+    return res.status(405).json({ error: "Method Not Allowed"});
+  }
+  try {_const _certifications = (await fs.pathExists(CERTS_FILE)) ? await fs.readJSON(CERTS_FILE) : [];
+    return res.status(200).json({ certifications});
+  } catch (e) {_return res.status(500).json({ error: "Failed to load certifications"});
+
+  }
+
+}
+<<<<<<< HEAD
+}
+origin/cursor/automate-test-improve-and-merge-code-2533
+
+}
+
+"
+=======
+  try {const certifications = (await fs.pathExists(CERTS_FILE)) ? await fs.readJSON(CERTS_FILE) : [];}"
+    return res.status(200).json({ certifications })} catch (e) {return res.status(500).json({ error: \"Failed to load certifications\"}
+})import type {_NextApiRequest, _NextApiResponse} from 'next';
+"
+const _CERTS_FILE = path.join(process.cwd(), \"data\", \"certifications\", \"certifications.json\")export default async function handler(_req: NextApiRequest, _res: NextApiResponse) {_if (req.method !== \"GET\") {res.setHeader(\"Allow\", _\'GET\';}"
+  return res.status(405).json({ error: \"Method Not Allowed\"}
+}
+  try {;
+  const _certifications = (await fs.pathExists(CERTS_FILE)) ? await fs.readJSON(CERTS_FILE) : [];}
+}
+    return res.status(200).json({ certifications});"
+  } catch (e) {_return res.status(500).json({ error: \"Failed to load certifications}
+});
+
+  }
+
+}
+}
+
+}
+
+"
+>>>>>>> origin/chore/fix-lint-and-merge
+=======
+<<<<<<< HEAD
+  if (req.method !== 'GET') {;
+    res.setHeader('Allow', 'GET');
+    return res.status(405).json({ error: 'Method Not Allowed' });
+
+  }
+  try {
+    const certifications = null;
+    return res.status(200).json({ certifications })
+  } catch (e) {
+    return res.status(500).json({ error: "Failed to load certifications" })
+};
+  };
+}
+}
+  };
+}
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> merged-prs-20250907-203621
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts

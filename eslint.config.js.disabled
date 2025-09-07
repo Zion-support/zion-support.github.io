@@ -213,6 +213,10 @@ export default [
       'no-console': 'off'
     }
   }
+<<<<<<< HEAD:eslint.config.js.disabled
+];
+=======
+<<<<<<< HEAD:_conflicted_disabled/eslint.config.js.disabled
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD:eslint.config.js.disabled
@@ -239,3 +243,7 @@ export default [
 >>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb:eslint.config.js
 >>>>>>> cursor/automate-test-improve-and-merge-code-dd7a
 >>>>>>> ff8ab052546903d473828d12895ca8f8ebc39a58
+=======
+];
+>>>>>>> merged-prs-20250907-203621:eslint.config.js.disabled
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc:_conflicted_disabled/eslint.config.js.disabled

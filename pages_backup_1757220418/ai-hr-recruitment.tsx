@@ -80,7 +80,7 @@ export default function AIHRRecruitmentPage() {
             <a href="/contact" className="bg-teal-600 text-white px-6 py-3 rounded-lg hover: bg-teal-700">
               Get Started
             </a>
-            <a href="/about" className="border border-teal-600 text-teal-600 px-6 py-3 rounded-lg hover:bg-teal-50">
+            <a href="/about className=border border-teal-600 text-teal-600 px-6 py-3 rounded-lg hover:bg-teal-50">
               Learn More
             </a>
           </div>
@@ -88,4 +88,12 @@ export default function AIHRRecruitmentPage() {
       </main>
     </Layout>
   )
+<<<<<<< HEAD
 }
+=======
+<<<<<<< HEAD
+}
+=======
+}
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc

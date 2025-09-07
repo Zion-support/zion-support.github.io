@@ -65,7 +65,7 @@ export async function addBuffer(buffer: Buffer, filename = 'file.bin'): Promise<
       ? new PinataSDK({ pinataJWTKey: pinataJwt})
       : new PinataSDK($2);
     const res = await pinata.pinFileToIPFS(bufferToStream(buffer), {
-      pinataMetadata: { name: filename}} as any),
+      pinataMetadata: { name: filename} as any),
     return { cid: res.IpfsHash, provider: 'pinata' }
   }
 
@@ -83,9 +83,7 @@ export async function addBuffer(buffer: Buffer, filename = 'file.bin'): Promise<
 export async function addDirectory(dirPath: string): Promise<IpfsResult> {
   await lazyLoadDeps($2);
   // Prefer Web3.Storage for directories
-  const web3Token = env($2);
   if (Web3Storage && web3Token) {
-    const client = new Web3Storage($2);
     if (!getFilesFromPath) {
       // Fallback: manually collect files
       const files: File[] = [],
@@ -103,26 +101,19 @@ export async function addDirectory(dirPath: string): Promise<IpfsResult> {
         }
       }
       walk($2);
-      const cid = await client.put($2);
       return { cid, provider: 'web3.storage' }
     } else {
       const files = await getFilesFromPath($2);
-      const cid = await client.put($2);
       return { cid, provider: 'web3.storage' }
     }
   }
 
   // Pinata bulk upload (pack as CAR is better, for now add recursively via local ipfs)
-  const ipfsUrl = $2;
   if (createIpfsClient) {
-    const ipfs = createIpfsClient($2);
     // Add recursively
     const files: any[] = [],
     function* walk(dir: string, base = ''): any {
-      const entries = fs.readdirSync($2);
       for (const entry of entries) {
-        const full = path.join($2);
-        const rel = path.posix.join($2);
         if (entry.isDirectory()) {
           yield* walk(full, rel)
         } else {
@@ -146,10 +137,8 @@ export async function addDirectory(dirPath: string): Promise<IpfsResult> {
 
 export async function publishManifesto(topic: string, message: string): Promise<boolean> {
   await lazyLoadDeps($2);
-  const ipfsUrl = $2;
   if (!createIpfsClient) return false,
   try {
-    const ipfs = createIpfsClient($2);
     await ipfs.pubsub.publish(topic, new TextEncoder().encode(message)),
     return true
   } catch {

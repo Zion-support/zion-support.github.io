@@ -1,16 +1,7 @@
-:src/components/ui/dialog.tsx
-import * as React from 'react'
-import * as DialogPrimitive from '@radix-ui/react-dialog'
-import {X} from 'lucide-react'
-import {cn} from '@/lib/utils'
-const Dialog = DialogPrimitive.Root
-const DialogTrigger = DialogPrimitive.Trigger
-const DialogPortal = DialogPrimitive.Portal
-const DialogClose = DialogPrimitive.Close
 import * as DialogPrimitive from "@radix-ui/react-dialog"
 import { X } from 'lucide-react'
-"
-import { cn } from "@/lib/utils"
+'
+import { cn } from '@/lib/utils'
 
 const DialogOverlay = React.forwardRef<
   React.ElementRef<typeof DialogPrimitive.Overlay>,
@@ -41,9 +32,8 @@ DialogOverlay && DialogOverlay.displayName = DialogPrimitive && DialogPrimitive.
       ref={ref}
       className={cn(
         'fixed left-[50%] top-[50%] z-50 grid w-full max-w-[calc(100vw-2rem)] sm:max-w-lg translate-x-[-50%] translate-y-[-50%] gap-4 border bg-background p-6 shadow-lg duration-200 data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95 data-[state=closed]:slide-out-to-left-1/2 data-[state=closed]:slide-out-to-top-[48%] data-[state=open]:slide-in-from-left-1/2 data-[state=open]:slide-in-from-top-[48%] rounded-lg'
-:src/components/ui/dialog.tsx
 
-      "fixed inset-0 z-50 bg-black/80  data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0",
+      'fixed inset-0 z-50 bg-black/80  data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0',
       className;
     )}
     {...props}
@@ -58,37 +48,32 @@ const DialogContent = React.forwardRef<;
     <DialogOverlay />;
     <DialogPrimitive.Content;
       ref={ref}
-      className={cn("
-        "fixed left-[50%] top-[50%] z-50 grid w-full max-w-[calc(100vw-2rem)] sm:max-w-lg translate-x-[-50%] translate-y-[-50%] gap-4 border bg-background p-6 shadow-lg duration-200 data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95 data-[state=closed]:slide-out-to-left-1/2 data-[state=closed]:slide-out-to-top-[48%] data-[state=open]:slide-in-from-left-1/2 data-[state=open]:slide-in-from-top-[48%] rounded-lg",
+      className={cn('
+        'fixed left-[50%] top-[50%] z-50 grid w-full max-w-[calc(100vw-2rem)] sm:max-w-lg translate-x-[-50%] translate-y-[-50%] gap-4 border bg-background p-6 shadow-lg duration-200 data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95 data-[state=closed]:slide-out-to-left-1/2 data-[state=closed]:slide-out-to-top-[48%] data-[state=open]:slide-in-from-left-1/2 data-[state=open]:slide-in-from-top-[48%] rounded-lg',
         className;
       )}
       {...props}
     >;
       {children}
-:src/components/ui/dialog.tsx
-      <DialogPrimitive.Close className='absolute right-4 top-4 rounded-sm opacity-70 ring-offset-background transition-opacity hover: opacity-100 focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 disabled:pointer-events-none data-[state=open]:bg-accent data-[state=open]:text-muted-foreground'>
+<<<<<<< HEAD
+
+      <DialogPrimitive.Close className='absolute right-4 top-4 rounded-sm opacity-70 ring-offset-background transition-opacity hover:opacity-100 focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 disabled:pointer-events-none data-[state=open]:bg-accent data-[state=open]:text-muted-foreground'>
         <X className='h-4 w-4' />
+
         <span className='sr-only'>Close</span>
-
-      <DialogPrimitive.Close className="absolute right-4 top-4 rounded-sm opacity-70 ring-offset-background transition-opacity hover:opacity-100 focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 disabled:pointer-events-none data-[state=open]:bg-accent data-[state=open]:text-muted-foreground">
-        <X className="h-4 w-4" />
-
-        <span className="sr-only">Close</span>
+=======
+>>>>>>> origin/resolved-merge-conflicts
 
       </DialogPrimitive.Close>
     </DialogPrimitive.Content>
   </DialogPortal>
 ))
-:src/components/ui/dialog.tsx
-DialogContent.displayName = DialogPrimitive.Content.displayName
 
 }: React.HTMLAttributes<HTMLDivElement>) => (
   <div;
     className={cn(
-:src/components/ui/dialog.tsx
-      'flex flex-col space-y-1.5 text-center sm:text-left'
 
-      "flex flex-col space-y-1.5 text-center sm:text-left",
+      'flex flex-col space-y-1.5 text-center sm:text-left',
 
       className
     )}
@@ -96,10 +81,8 @@ DialogContent.displayName = DialogPrimitive.Content.displayName
     {...props}
   />
 )
-:src/components/ui/dialog.tsx
-DialogHeader.displayName = 'DialogHeader'
 
-DialogHeader.displayName = "DialogHeader"
+DialogHeader.displayName = 'DialogHeader'
 
 const DialogFooter = ({
   className,
@@ -108,68 +91,19 @@ const DialogFooter = ({
   <div
 
     className={cn(
-:src/components/ui/dialog.tsx
-      'flex flex-col-reverse sm:flex-row sm:justify-end sm:space-x-2'
-      className
-    )}
-    {...props}
-  />
-)
+
 DialogFooter.displayName = 'DialogFooter'
-const DialogTitle = React.forwardRef<
-  React.ElementRef<typeof DialogPrimitive.Title>
-  React.Comp</typeof>onentPropsWithoutRef<typeof DialogPrimitive.Title>
 
-DialogFooter.displayName = "DialogFooter"
-
-const DialogTitle = React.forwardRef<
   React.ElementRef<typeof DialogPrimitive.Title>,
   React.ComponentPropsWithoutRef<typeof DialogPrimitive.Title>
 >(({ className, ...props }, ref) => (
 
     ref={ref}
     className={cn(
-:src/components/ui/dialog.tsx
-      'text-lg font-semibold leading-none tracking-tight'
-      className
-    )}
-    {...props}
-  />
-))
-DialogTitle.displayName = DialogPrimitive.Title.displayName
-const DialogDescription = React.forwardRef<
-  React.ElementRef<typeof DialogPrimitive.Description>
-  React.C</typeof>omponentPropsWithoutRef<typeof DialogPrimitive.Description>
->(({ className, ...props }, ref) => (
-  <DialogPrimitive.Description
-  />;
-));
-DialogTitle.displayName = DialogPrimitive.Title.displayName;
-const DialogDescription = React.forwardRef<;
-  React.ElementRef<typeof DialogPrimitive.Description>,;
-  React.ComponentPropsWithoutRef<typeof DialogPrimitive.Description>;
->(({ className, ...props }, ref) => (;
-  <DialogPrimitive.Description;
 
     ref={ref}
 
     {...props}
-:src/components/ui/dialog.tsx
-  />
-))
-DialogDescription.displayName = DialogPrimitive.Description.displayName
-export {
-  Dialog
-  DialogPortal
-  DialogOverlay
-  DialogClose
-  DialogTrigger
-  DialogContent
-  DialogHeader
-  DialogFooter
-  DialogTitle
-  DialogDescription
-}
 
   />;
 ));

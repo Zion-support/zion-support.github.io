@@ -1,40 +1,519 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    
+    return this.props.children;
+  }
+}
+import React from 'react';
+
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+import {useEffect, useState} from "react";
+import {useNavigate, useSearchParams} from "react-router-dom";
+import {EnhancedSearchInput} from "@/components/search/EnhancedSearchInput";
+import {generateSearchSuggestions} from "@/data/marketplaceData";
+import {SearchSuggestion} from "@/types/search";
+import {useAISearch} from "@/hooks/useAISearch";
+import {AppLayout} from "@/layout/AppLayout";
+<<<<<<< HEAD
+
+  const [params] = useSearchParams();
+  const navigate = useNavigate();
+
+  const [params] = useSearchParams();
+
+  const navigate = useNavigate();
+
+  const suggestions: SearchSuggestion[] = generateSearchSuggestions(),
+
+=======
+<<<<<<< HEAD
+
+  const [params] = useSearchParams();
+  const navigate = useNavigate();
+=======
+export default function SearchPage() {;
+<<<<<<< HEAD
+  const [params] = useSearchParams();
+  const navigate = useNavigate();
+  const [params] = useSearchParams();
+  const navigate = useNavigate();
+  const initial = params.get("q") || "";
+  const [query, setQuery] = useState(initial);
+  const { results, loading, search } = useAISearch();
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 import { useEffect, useState } from "react",
 import { useNavigate, useSearchParams } from "react-router-dom",
 import { EnhancedSearchInput } from "@/components/search/EnhancedSearchInput",
 import { generateSearchSuggestions } from "@/data/marketplaceData",
 import { SearchSuggestion } from "@/types/search",
 import { useAISearch } from "@/hooks/useAISearch";
+
 import { AppLayout } from "@/layout/AppLayout";
+<<<<<<< HEAD
+=======
 export default function SearchPage() {
-  const [params] = useSearchParams($2);
-  const navigate = useNavigate($2);
-  const initial = $2;
-  const [query, setQuery] = useState($2);
-  const { results, loading, search } = useAISearch($2);
-  const suggestions: SearchSuggestion[] = generateSearchSuggestions($2);
+  const [params] = useSearchParams();
+
+  const navigate = useNavigate();
+  const initial = params.get("q") |"";
+  const [query, setQuery] = useState(initial);
+  const { results, loading, search } = useAISearch();
+  const suggestions: SearchSuggestion[] = generateSearchSuggestions()
+import { useAISearch } from "@/hooks/useAISearch",
+import { AppLayout } from "@/layout/AppLayout",
+export default function SearchPage() {
+  const [params] = useSearchParams(),
+  const navigate = useNavigate(),
+  const initial = params.get("q") || "",
+  const [query, setQuery] = useState(initial),
+  const { results, loading, search } = useAISearch(),
+  const suggestions: SearchSuggestion[] = generateSearchSuggestions(),
+
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+
+  const [params] = useSearchParams();
+
+  const navigate = useNavigate();
+
+  const suggestions: SearchSuggestion[] = generateSearchSuggestions(),
+
+import { useEffect, useState } from "react",
+import { useNavigate, useSearchParams } from "react-router-dom",
+import { EnhancedSearchInput } from "@/components/search/EnhancedSearchInput",
+import { generateSearchSuggestions } from "@/data/marketplaceData",
+import { SearchSuggestion } from "@/types/search",
+import { useAISearch } from "@/hooks/useAISearch";
+
+import { AppLayout } from "@/layout/AppLayout";
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+export default function SearchPage() {};
+  const [params] = useSearchParams();
+
+  const navigate = useNavigate();"
+  const initial = params.get("q") |"";
+  const [query, setQuery] = useState(initial);
+  const { results, loading, search } = useAISearch();
+  const suggestions: SearchSuggestion[] = generateSearchSuggestions()"
+import { useAISearch } from "@/hooks/useAISearch","
+import { AppLayout } from "@/layout/AppLayout",
+export default function SearchPage() {}
+  const [params] = useSearchParams(),
+  const navigate = useNavigate(),"
+  const initial = params.get("q") || "",
+  const [query, setQuery] = useState(initial),
+
+  const [params] = useSearchParams();
+
+  const navigate = useNavigate();
+
+  const suggestions: SearchSuggestion[] = generateSearchSuggestions(),
+
+<<<<<<< HEAD
+  }, [initial]),
+
+  const handleSubmit = (e: React.FormEvent) => {}
+    e.preventDefault(),
+    navigate(`/search?q=${encodeURIComponent(query)}`),
+    search(query)
+  },
+
+  return (
+
+    <AppLayout>;
+      <main className="container mx-auto px-4 py-8">;
+        <form onSubmit={handleSubmit} className="mb-6">;
+
+=======
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   useEffect(() => {
     if (initial) {
       search(initial)
     }
+<<<<<<< HEAD
+  }, [initial]),
+=======
+
+  const initial = params && params.get("q") || "";
+  const [query, setQuery] = useState(initial);
+  const { results, loading, search } = useAISearch();
+  const suggestions: SearchSuggestion[] = generateSearchSuggestions(),;
+
+import { useEffect, useState } from "react",;
+import { useNavigate, useSearchParams } from "react-router-dom",;
+import { EnhancedSearchInput } from "@/components/search/EnhancedSearchInput",;
+import { generateSearchSuggestions } from "@/data/marketplaceData",;
+import { SearchSuggestion } from "@/types/search",;
+import { useAISearch } from "@/hooks/useAISearch",;
+import { AppLayout } from "@/layout/AppLayout",;
+;
+export default function SearchPage() {;
+  const [params] = useSearchParams(),;
+  const navigate = useNavigate(),;
+  const initial = params.get("q") || "",;
+  const [query, setQuery] = useState(initial),;
+  const { results, loading, search } = useAISearch(),;
+  const suggestions:SearchSuggestion[] = generateSearchSuggestions(),;
+;
+  useEffect(() => {;
+    if (initial) {;
+      search(initial);
+    }
+
+  }, [initial]);
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault()
+    navigate(`/search?q=${encodeURIComponent(query)}`);
+<<<<<<< HEAD
+    search(query)
+  }
+=======
+    search(query);
+  };
+
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
   }, [initial]),
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault($2);
-    navigate(`/search?q = $2;
+  const handleSubmit = (e: React.FormEvent) => {}
+    e.preventDefault(),
+    navigate(`/search?q=${encodeURIComponent(query)}`),
     search(query)
   },
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+  return (
+
+    <AppLayout>;
+      <main className="container mx-auto px-4 py-8">;
+        <form onSubmit={handleSubmit} className="mb-6">;
+<<<<<<< HEAD
+>>>>>>> merged-prs-20250907-203621
+
+=======
+<<<<<<< HEAD
 
   return (
     <AppLayout>
       <main className="container mx-auto px-4 py-8">
         <form onSubmit={handleSubmit} className="mb-6">
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
           <EnhancedSearchInput
+
+            value={query}
+            onChange={setQuery}
+            searchSuggestions={suggestions}"
+            placeholder="Search talent, jobs, and projects..."
+<<<<<<< HEAD
+
+=======
+<<<<<<< HEAD
+          />
+        </form>
+=======
+
+<<<<<<< HEAD
+=======
+          />;
+        </form>;
+
+
+
+
+<<<<<<< HEAD
+          />
+        </form>
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+import { useEffect, useState } from "react",;
+import { useNavigate, useSearchParams } from "react-router-dom",;
+import { EnhancedSearchInput } from "@/components/search/EnhancedSearchInput",;
+import { generateSearchSuggestions } from "@/data/marketplaceData",;
+import { SearchSuggestion } from "@/types/search",;
+import { useAISearch } from "@/hooks/useAISearch",;
+import { AppLayout } from "@/layout/AppLayout",;
+export default function SearchPage() {;
+  const [params] = useSearchParams(),;
+  const navigate = useNavigate(),;
+  const initial = params.get("q") || "",;
+  const [query, setQuery] = useState(initial),;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+  const { results, loading, search } = useAISearch(),;
+  const suggestions: SearchSuggestion[] = generateSearchSuggestions(),;
+  useEffect(() => {;
+    if (initial) {;
+      search(initial);
+    }
+  }, [initial]),;
+  const handleSubmit = (e: React.FormEvent) => {;
+
+    navigate(`/search?q=${encodeURIComponent(query)}`);
+    search(query);
+  };
+  return (;
+
+        <form onSubmit={handleSubmit} className="mb-6">;
+          <EnhancedSearchInput;
+            value={query}
+            onChange={setQuery}
+
+            placeholder="Search talent, jobs, and projects...";
+          />;
+        </form>;
+<<<<<<< HEAD
+
+=======
+<<<<<<< HEAD
+          />;
+        </form>;
+=======
+
+<<<<<<< HEAD
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+        {loading && <p className="text-zion-slate-light">Searching...</p>}
+        {!loading && results && results.length === 0 && (;"
+          <p className="text-zion-slate-light">No results found.</p>;
+        )}
+        {!loading && results && results.length > 0 && (;"
+          <div className="space-y-4">;
+            {results && results.map((r) => (;
+              <div;`
+                key={`${r && r.type}-${r && r.id}`}"
+                className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-4">;"
+                <p className="text-xs uppercase text-zion-slate-light mb-1">;
+                  {r && r.type}
+                </p>;"
+                <h3 className="text-lg font-bold text-white">{r && r.title}</h3>;"
+                <p className="text-zion-slate-light">{r && r.description}</p>;
+              </div>;
+            ))}
+<<<<<<< HEAD
+
+=======
+<<<<<<< HEAD
+
+=======
+  }, [initial]),;
+;
+  const handleSubmit = (e:React.FormEvent) => {;
+    e.preventDefault(),;
+    navigate(`/search?q=${encodeURIComponent(query)}`),;
+    search(query),;
+  },;
+;
+  return (;
+    <AppLayout>;
+      <main className="container mx-auto px-4 py-8">;
+        <form onSubmit={handleSubmit} className="mb-6">;
+          <EnhancedSearchInput;
             value={query}
             onChange={setQuery}
             searchSuggestions={suggestions}
-            placeholder="Search talent, jobs, and projects..."
-          />
-        </form>
+            placeholder="Search talent, jobs, and projects...";
+          />;
+        </form>;
+;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+        {loading && <p className="text-zion-slate-light">Searching...</p>}
+        {!loading && results.length === 0 && (;
+          <p className="text-zion-slate-light">No results found.</p>;
+        )}
+        {!loading && results.length > 0 && (;
+          <div className="space-y-4">;
+            {results.map((r) => (;
+              <div;
+                key={`${r.type}-${r.id}`}
+                className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-4";
+              >;
+                <p className="text-xs uppercase text-zion-slate-light mb-1">;
+                  {r.type}
+                </p>;
+                <h3 className="text-lg font-bold text-white">{r.title}</h3>;
+                <p className="text-zion-slate-light">{r.description}</p>;
+              </div>;            ))}
+          </div>;
+        )}
+      </main>;
+    </AppLayout>;
+<<<<<<< HEAD
+
+=======
+<<<<<<< HEAD
+
+=======
+import { useEffect, useState } from './react';
+import { use_navigate, useSearchParams } from './react-router-dom';
+import { EnhancedSearchInput } from '@/components / search / EnhancedSearchInput';
+import { generateSearchSuggestions } from '@/data / marketplace_data';
+import { SearchSuggestion } from '@/types / search';
+import { useAISearch } from '@/hooks / useAISearch';
+import { AppLayout } from '@/layout / AppLayout';
+export default /**
+ * SearchPage - Function description
+ */
+function SearchPage() {
+  const [params] = useSearchParams ();
+  const navigate = use_navigate ();
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+  const initial = params.get ("q") || "";
+  const [query, set_query] = useState (initial);
+  const { results, loading, search } = useAISearch ();
+  const suggestions: SearchSuggestion[] = generateSearchSuggestions (),
+
+}
+      search (initial);
+    }
+  }, [initial]);
+;
+
+    navigate (`/search?q=${encodeURIComponent (query)}`);
+    search (query);
+  }
+;
+  return (
+
+        <form on_submit={handle_submit} className="mb - 6">;
+          <EnhancedSearchInput;
+            value={query}
+    ;
+      <main className="container mx - auto px - 4 py - 8">;"
+        <form on_submit={handle_submit} className="mb - 6">;"
+            on_change={set_query}
+
+                <p className="text - zion - slate - light">{r.description}</p>;
+
+              </div>))}
+          </div>)}
+      </main>;
+    </AppLayout>);
+}
+<<<<<<< HEAD
+
+=======
+<<<<<<< HEAD
+
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+  ),;}
+ const suggestions: SearchSuggestion[] = generateSearchSuggestions ();
+  loading && <p className="text-zion-slate-light">Searching...</p> 
+}{
+  !loading && results.length === 0 && (<p className="text-zion-slate-light">No results found.</p>) 
+}{
+  !loading && results.length > 0 && (<div className="space-y-4"> {
+  results.map ( (r) => (<div key= {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+    );"
+  loading && <p className="text-zion-slate-light">Searching...</p>""
+  !loading && results.length === 0 && (<p className="text-zion-slate-light">No results found.</p>)""
+  !loading && results.length > 0 && (<div className="space-y-4"> {"
+</div>)
+  results.map ( (r) => (<div key= {`;
+  `$ {
+  r.type;
+}-$ {
+  r.id;`;
+}` "
+}className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-4" > <p className="text-xs uppercase text-zion-slate-light mb-1"> {"
+}</p> <h3 className="text-lg font-bold text-white"> {"
+</h3>"
+}</h3> <p className="text-zion-slate-light"> {"
+</p>)
+}</p> </div>) ) 
+}</div>) 
+}</main> ) "
+          <p className="text-zion-slate-light">No results found.</p>""
+          <div className="space-y-4">"
+                className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-4""
+<<<<<<< HEAD
+=======
+              >
+                <p className="text-xs uppercase text-zion-slate-light mb-1">"
+                </p>"
+                <h3 className="text-lg font-bold text-white">{r.title}</h3>""
+                <p className="text-zion-slate-light">{r.description}</p>"
+      </main>
+    </AppLayout>
+  )
+}
+=======
+  `$ {
+  r.type 
+}-$ {
+  r.id 
+}` 
+}className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-4" > <p className="text-xs uppercase text-zion-slate-light mb-1"> {
+  r.type 
+}</p> <h3 className="text-lg font-bold text-white"> {
+  r.title 
+}</h3> <p className="text-zion-slate-light"> {
+  r.description 
+}</p> </div>) ) 
+}</div>) 
+}</main> </AppLayout>) 
+}
+>>>>>>> merged-prs-20250907-203621
         {loading && <p className="text-zion-slate-light">Searching...</p>}
         {!loading && results.length === 0 && (
           <p className="text-zion-slate-light">No results found.</p>
@@ -45,17 +524,24 @@ export default function SearchPage() {
               <div
                 key={`${r.type}-${r.id}`}
                 className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-4"
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
               >
-                <p className="text-xs uppercase text-zion-slate-light mb-1">
-                  {r.type}
-                </p>
-                <h3 className="text-lg font-bold text-white">{r.title}</h3>
-                <p className="text-zion-slate-light">{r.description}</p>
-              </div>
-            ))}
-          </div>
-        )}
+                <p className="text-xs uppercase text-zion-slate-light mb-1">"
+                </p>"
+                <h3 className="text-lg font-bold text-white">{r.title}</h3>""
+                <p className="text-zion-slate-light">{r.description}</p>"
       </main>
     </AppLayout>
   )
+<<<<<<< HEAD
 }
+=======
+}
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc

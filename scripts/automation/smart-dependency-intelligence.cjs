@@ -1,8 +1,35 @@
+<<<<<<< HEAD
+#!/""usr/bin/env""
+const fs = require("fs");
+const path = require("path");
+const { execSync, spawn } = require("child_process");
+const crypto = require("crypto");
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+>>>>>>> merged-prs-20250907-203621
 #!/""usr/bin/env""
 const fs = require("fs")
 const path = require("path")
 const { execSync, spawn } = require("child_process")
 const crypto = require("crypto")
+<<<<<<< HEAD
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
       this.projectRoot,logs"
       "smart-dependency-intelligence.log"
       this.projectRoot,logs"
@@ -11,10 +38,20 @@ const crypto = require("crypto")
       "dependency-predictions.json"
   fs.mkdirSync(logsDir, { "recursive"})
   log(message, level = "INFO")
+<<<<<<< HEAD
+return JSON.parse(fs.readFileSync(this.intelligenceLog, "utf8");
+    } catch (error) {  this.log(`Failed to load intelligence "data": ${error.message  }`, "WARN"`)
+  "dependencyHistory"
+=======
+<<<<<<< HEAD
+
+=======
   log(message, level = "INFO")
   return JSON.parse(fs.readFileSync(this.intelligenceLog, "utf8")
     } catch (error) {  this.log(`Failed to load intelligence "data": ${error.message  }`, "WARN"`)
   "dependencyHistory"
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
       "issuePatterns"
       "optimizationHistory"
       "predictions"
@@ -82,16 +119,32 @@ const crypto = require("crypto")
   this.log(Smart Dependency Intelligence "failed": ${error.message}")
         "ERROR"
   this.log(`Analyzing current dependencies...``)
+<<<<<<< HEAD
+const packagePath = path.join(this.projectRoot, "package.json");
+const packageLockPath = path.join(this.projectRoot, "package-lock.json");
+throw new Error("package.json not found");
+const packageJson = JSON.parse(fs.readFileSync(packagePath, "utf8");
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+=======
+>>>>>>> merged-prs-20250907-203621
   const packagePath = path.join(this.projectRoot, "package.json")
       const packageLockPath = path.join(this.projectRoot, "package-lock.json")
   throw new Error("package.json not found")
       const packageJson = JSON.parse(fs.readFileSync(packagePath, "utf8")
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   "totalDependencies"
         "dependencies"
         "packageLockExists"
         "lastUpdated"
       for (const ["name", "version")]
+<<<<<<< HEAD
+=======
       for (const ["name", "version")]
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
       return analysis} catch (error) {  this.log(`Failed to analyze "dependencies": ${error.message  }`, "ERROR"`)
       "currentVersion"
       "latestVersion"
@@ -103,16 +156,31 @@ const crypto = require("crypto")
       "recommendations"
         this.generateDependencyRecommendations(analysis)} catch (error) {  analysis.recommendations.push(`Failed to "analyze"`})
   "encoding": "utf8"
+<<<<<<< HEAD
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   this.log(Failed to get latest version for ${packageName  }: ${error.message}")
         "WARN"
   try {const result = execSync("})
   "encoding": "utf8"
   this.log(Failed to get latest version for ${packageName}: ${error.message}")
+<<<<<<< HEAD
+        "WARN"
+const currentParts = current.replace(/^[\^~]/, `").split("."`);
+const latestParts = latest.split(".");
+const currentPart = parseInt(currentParts[i] || "0");
+const latestPart = parseInt(latestParts[i] || "0");
+=======
+<<<<<<< HEAD
+
+=======
         "WARN"
       const currentParts = current.replace(/^[\^~]/, `").split("."`)
       const latestParts = latest.split(".")
   const currentPart = parseInt(currentParts[i] || "0")
         const latestPart = parseInt(latestParts[i] || "0")
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   "type": "SECURITY_VULNERABILITY"
           "severity"
           "description"
@@ -120,7 +188,11 @@ const crypto = require("crypto")
           "recommendedAction": "Update to latest version"
         vulnerableVersion.startsWith("<")
         vulnerableVersion.startsWith("<=")
+<<<<<<< HEAD
+return "LOW";
+=======
     return "LOW"
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   "type": "COMPATIBILITY_ISSUE"
           "severity": "MEDIUM"
           "description"
@@ -145,6 +217,15 @@ const crypto = require("crypto")
         "priority": "LOW"
         "description": "Consider alternatives for better performance"
         "action": "research_alternatives"
+<<<<<<< HEAD
+const result = execSync("npm outdated --json", { "encoding": "utf8"});
+return JSON.parse(error.stdout || "{  }");
+return JSON.parse(error.stdout || "{}");
+const result = execSync("npm audit --json", { "encoding": "utf8"});
+return JSON.parse(error.stdout || "{  }");
+return JSON.parse(error.stdout || "{}");
+  return { "vulnerabilities"}
+=======
   const result = execSync("npm outdated --json", { "encoding": "utf8"})
   return JSON.parse(error.stdout || "{  }")
   return JSON.parse(error.stdout || "{}")
@@ -153,6 +234,7 @@ const crypto = require("crypto")
   return JSON.parse(error.stdout || "{}")
   return { "vulnerabilities"}
       return { "vulnerabilities"}
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   this.log("Predicting potential dependency issues...")
   "type": "SECURITY_ISSUE_PREDICTION"
           "package"
@@ -202,7 +284,10 @@ const crypto = require("crypto")
         "estimatedImpact": "HIGH"
         "risk": "LOW"
       p => p.probability === "MEDIUM"
+<<<<<<< HEAD
+=======
       p => p.probability === "MEDIUM"
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   "type": "PLANNED_OPTIMIZATION"
         "priority": "MEDIUM"
         "description"
@@ -220,6 +305,10 @@ const crypto = require("crypto")
   this.log("Applying intelligent optimizations...")
   if (optimization.priority === "HIGH" && optimization.risk === "LOW")
               "appliedAt"
+<<<<<<< HEAD
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   this.log(Failed to apply optimization ${optimization.type  }: ${error.message}")
             "
   this.log(Failed to apply optimization ${optimization.type}: ${error.message}")
@@ -233,18 +322,35 @@ this.log("Applied ${appliedOptimizations.length} optimizations")
   return await this.runNpmAuditFix()} else if (optimization.action.includes("npm update")
       case "PERFORMANCE_OPTIMIZATION"
       "default"
+<<<<<<< HEAD
+        return { success: false, "message": "Unknown optimization type"}
+    return { "success": false, "message": "Optimization not implemented"}
+const result = execSync("npm audit fix", { "encoding": "utf8"});
+=======
+<<<<<<< HEAD
+
+=======
         return { success: false, "message": "Unknown optimization type"}
     return { "success": false, "message": "Optimization not implemented"}
   const result = execSync("npm audit fix", { "encoding": "utf8"})
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   "success"
         "message": "Security audit fix completed"
         "output"
   return { "success": false, "message"}
+<<<<<<< HEAD
+const result = execSync("npm update", { "encoding": "utf8"});
+=======
   const result = execSync("npm update", { "encoding": "utf8"})
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
       return { "success": true, "message": "Dependencies updated", "output"}
   return { "success": false, "message"}
     return { "success": true, "message": "Performance optimization completed"}
   this.log("Updating intelligence data...")
+<<<<<<< HEAD
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   "timestamp"
       "dependencies"
       "predictions"
@@ -314,7 +420,57 @@ this.log("Intelligence report "generated": ${reportPath}")
   this.log(Smart Dependency Intelligence "failed": ${error.message}")
         "ERROR"
   console.log(` Smart Dependency Intelligence completed``)
+<<<<<<< HEAD
+
+  console.error(" Smart Dependency Intelligence "failed": ")
   console.error(" Smart Dependency Intelligence "failed": ")
   console.error(" Smart Dependency Intelligence "failed": ")
 
 
+
+=======
+<<<<<<< HEAD
+
+<<<<<<< HEAD
+=======
+
+  console.error(" Smart Dependency Intelligence "failed: )
+
+  console.error(" Smart Dependency Intelligence "failed: )
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+  console.error(" Smart Dependency Intelligence "failed": ")
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+<<<<<<< HEAD
+  console.error(" Smart Dependency Intelligence "failed": ")
+>>>>>>> origin/chore/fix-lint-and-merge
+=======
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+  console.error(" Smart Dependency Intelligence "failed": ")
+<<<<<<< HEAD
+
+<<<<<<< HEAD
+
+
+
+
+=======
+=======
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc

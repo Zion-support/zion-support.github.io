@@ -1,11 +1,48 @@
+<<<<<<< HEAD
+#!/""usr/bin/env""
+const { execSync } = require("child_process");
+const fs = require("fs");
+const path = require("path");
+console.log(""🤖 Starting intelligent error fixer...")
+const { execSync } = require("child_process");
+const fs = require("fs");
+const path = require("path");
+// console.log(""🤖 Starting intelligent error fixer...")
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+>>>>>>> merged-prs-20250907-203621
 #!/""usr/bin/env""
 const { execSync } = require("child_process")
 const fs = require("fs")
 const path = require("path")
 console.log(""🤖 Starting intelligent error fixer...")
 const { execSync } = require("child_process")
+<<<<<<< HEAD
 
+=======
+const fs = require("fs")
+const path = require("path")
+>>>>>>> merged-prs-20250907-203621
 // console.log(""🤖 Starting intelligent error fixer...")
+  console.log(`🤖 Running intelligent error fixer at ${new Date().toISOString()}
+// console.log(`" Fixing missing dependencies..."`)
+>>>>>>> origin/chore/fix-lint-and-merge
+console.log("🤖 Starting intelligent error fixer...")
+// console.log(🤖 Starting intelligent error fixer...")
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   console.log(`🤖 Running intelligent error fixer at ${new Date().toISOString()}
 // console.log(`" Fixing missing dependencies..."`)
 console.log("🤖 Starting intelligent error fixer...")
@@ -16,6 +53,7 @@ console.log("🤖 Starting intelligent error fixer...")
 // console.log(" Fixing syntax errors...")
     console.log(" Running auto-fix commands...")
   "timestamp"
+<<<<<<< HEAD
       "totalFixes"
       "status": "completed"
       "summary": Intelligent error fixer completed with ${totalFixes} fixes applied"
@@ -26,6 +64,101 @@ console.log("🤖 Starting intelligent error fixer...")
     console.log(" Fixing syntax errors...")
     console.log(" Running auto-fix commands...")
   "timestamp"
+      "totalFixes"
+      "status": "completed"
+      "summary": Intelligent error fixer completed with ${totalFixes} fixes applied"
+      process.cwd(),intelligent-error-fixer-report.json"
+    );console.log( Report saved "to": ${reportPath}"")
+  console.error(" Intelligent error fixer "failed": ")
+const missingDeps = ["react-error-boundary"", "@""types/react-error-boundary""", "react-helmet-async"", "@""types/react-helmet-async""", ""];
+  try {console.log(`� Installing ${dep}...`);execSync(`npm install ${dep}`, { "stdio": "pipe"`})
+const missingDeps = ["react-error-boundary", "@"types/react-error-boundary"", "react-helmet-async", "@"types/react-helmet-async"", "];
+  try {console.log(`� Installing ${dep}...`);execSync(`npm install ${dep}`, { "stdio": "pipe"`})
+  "pattern"
+        /import\s+\{\s*ErrorBoundary\s*\}\s+from\s+[""]react-error-boundary["];?/g, ""replacement": "import { ErrorBoundary } from react-error-boundary";"", ""description": "Fix react-error-boundary import"", "}", "
+  "pattern": /:\s*any\s*;/g", ""replacement": ": unknown;"", ""description": "Replace any with unknown"", "}", "
+  "pattern": /const\s+(\w+)\s*:\s*any\s*=/g", ""replacement": "const $1: unknown ="", ""description": "Fix any type annotations"", "}", "
+  "pattern": /function\s+(\w+)\s*\(\s*\)\s*:\s*any\s*{/g", ""replacement": "function $1(): unknown {"", ""description": "Fix function return types"", "}", ""
+  if (file.endsWith(".tsx") || file.endsWith(".ts")
+let content = fs.readFileSync(file, "utf8");
+const lintingFixes = ["];
+  "pattern": /console\.log\(/g", ""replacement": "// console.log(""", ""description": "Comment out console.log statements"", "}", ")
+  "pattern": /console\.error\(/g", ""replacement": "// console.error("", ""description": "Comment out console.error statements"", "}", ")
+  "pattern": /console\.warn\(/g", ""replacement": "// console.warn("", ""description": "Comment out console.warn statements"", "}", ")
+  "pattern": /\/\*\s*eslint-disable\s*\*\//g", ""replacement": "/* eslint-disable */"", ""description": "Fix eslint-disable comments"", "}", ""
+let content = fs.readFileSync(file, "utf8");
+const lintingFixes = ["];
+  "pattern": /console\.log\(/g", ""replacement": "// console.log("", ""description": "Comment out console.log statements", "}", ")
+  "pattern": /console\.error\(/g", ""replacement": "// console.error(", ""description": "Comment out console.error statements", "}", ")
+  "pattern": /console\.warn\(/g", ""replacement": "// console.warn(", ""description": "Comment out console.warn statements", "}", ")
+  "pattern": /\/\*\s*eslint-disable\s*\*\//g", ""replacement": "/* eslint-disable */", ""description": "Fix eslint-disable comments", "}", "
+let content = fs.readFileSync(file, "utf8");
+let originalContent = content;";
+=======
+<<<<<<< HEAD
+
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+"
+      for (const fix of lintingFixes) {"}
+        if (fix.pattern.test(content)) {"}
+    } catch (error) {  console.log(⚠  Could not fix ${file  }: ${error.message}``)} catch (error) {console.log(⚠  Could not fix ${file}: ${error.message}```)
+const buildFixes = ["];
+  "pattern": /Cannot find module "react-error-boundary"/g", ""action"
+  execSync("npm install react-error-boundary", "{ "stdio": "pipe"})
+// console.log("" Installed react-error-boundary")
+  console.log(""⚠  Could not install react-error-boundary")
+const buildFixes = ["];
+  "pattern": /Cannot find module "react-error-boundary"/g", ""action"
+  execSync("npm install react-error-boundary"", "{ "stdio": "pipe"})
+// console.log(" Installed react-error-boundary")
+  console.log(""⚠  Could not install react-error-boundary")
+      }", ""description": "Install missing react-error-boundary"", "}", "
+  "pattern": /Cannot find module "react-helmet-async"/g", ""action"
+  execSync("npm install react-helmet-async"", "{ "stdio": "pipe"})
+// console.log(" Installed react-helmet-async")
+  console.log("⚠  Could not install react-helmet-async")
+      }", ""description": "Install missing react-helmet-async"", "}", ""
+  execSync("npm run build", { "stdio": "pipe"})
+const buildOutput = error.stdout || error.stderr || "";
+  if (fix.pattern.test(buildOutput)) {console.log( Applying build "fix"})
+  console.log("⚠  Could not install react-error-boundary")
+      }", ""description": "Install missing react-error-boundary", "}", "
+  "pattern": /Cannot find module "react-helmet-async"/g", ""action"
+  execSync("npm install react-helmet-async", "{ "stdio": "pipe"})
+// console.log(" Installed react-helmet-async")
+  console.log("⚠  Could not install react-helmet-async")
+      }", ""description": "Install missing react-helmet-async", "}", "
+  execSync("npm run build", { "stdio": "pipe"})
+const buildOutput = error.stdout || error.stderr || ";
+  if (fix.pattern.test(buildOutput)) {console.log( Applying build "fix"})
+let content = fs.readFileSync(file, "utf8");
+const syntaxFixes = ["];
+  "pattern": /(\w+)\s*=\s*(\w+)\s*$/gm", ""replacement": "$1 = $2;"", ""condition"
+            !line.includes("import")
+            !line.includes("export")
+            !line.includes("function")", "}", "
+  "pattern": /{\s*$/gm", ""replacement": "{\n"", ""condition": () => true", "}", "
+  "pattern": /", "\s*}/g", ""replacement": "}"", ""condition": () => true", "}", ""
+  content = content.replace(fix.pattern, fix.replacement);console.log( Applied syntax fix in ${file}"")
+  const autoFixCommands = ["npm run lint -- --fix", "npx prettier --write .", "npm run format", "]
+  const autoFixCommands = ["npm run lint -- --fix"", "npx prettier --write .", "npm run format"", ""]
+  const autoFixCommands = ["npm run lint -- --fix"", "npx prettier --write .", "npm run format"", ""];"
+"
+  for (const command of autoFixCommands) {"}
+    try {"}
+      console.log(" "Running": ${command}")
+      execSync(command, { "stdio": "pipe" }
+});console.log(" "Completed": ${command}")
+      fixes++} catch (error) {  console.log("⚠  Command "failed": ${command  } - ${error.message}")
+
+<<<<<<< HEAD
+const sourceDirs = ["src", "components", "pages"];
+=======
+
+=======
+  const sourceDirs = ["src", components, "pages"]
+
+=======
       "totalFixes"
       "status": "completed"
       "summary": Intelligent error fixer completed with ${totalFixes} fixes applied"
@@ -108,7 +241,45 @@ console.log("🤖 Starting intelligent error fixer...")
       execSync(command, { "stdio": "pipe" }
 });console.log(" "Completed": ${command}")
       fixes++} catch (error) {  console.log("⚠  Command "failed": ${command  } - ${error.message}")
+<<<<<<< HEAD
+
+  const sourceDirs = ["src", "components", "pages"]
   const sourceDirs = ["src", "components", "pages"]
   const sourceDirs = ["src", "components", "pages"]
 
 
+
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+  const sourceDirs = ["src", "components", "pages"]
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+<<<<<<< HEAD
+  const sourceDirs = ["src", "components", "pages"]
+=======
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+=======
+  const sourceDirs = ["src", "components", "pages"]
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
+<<<<<<< HEAD
+=======
+
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
+>>>>>>> cursor/automate-test-improve-and-merge-code-18b6
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc

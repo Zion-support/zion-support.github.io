@@ -1,61 +1,42 @@
-import React from 'react'
-import { Metadata } from 'next'
+import React from 'react';
 
-export const metadata: Metadata = {
-  title: 'Micro Saas | Zion Tech Group',
-  description: 'Professional micro saas services for your business needs.',
-  keywords: 'micro saas, services, business, technology'
-}
+export const metadata = {
+  title: 'Micro SaaS Development | Zion Tech Group',
+  description: 'End-to-end micro SaaS development with billing, auth, analytics, and growth features. From MVP to scale.',
+};
 
-export default function ServicePage() {
+export default function MicroSaaSPage() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      <div className="container mx-auto px-4 py-16">
+    <div className="min-h-screen bg-gray-50 py-12">
+      <div className="max-w-6xl mx-auto px-4">
         <div className="text-center mb-16">
-          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-            Micro Saas
-          </h1>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Professional micro saas services for your business needs.
+          <h1 className="text-5xl font-bold text-gray-900 mb-6">Micro SaaS Development</h1>
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            Build and scale your micro SaaS business with our comprehensive development services.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-          <div className="bg-gray-800 rounded-lg p-6">
-            <div className="text-4xl mb-4">🚀</div>
-            <h3 className="text-xl font-bold text-white mb-4">Fast & Reliable</h3>
-            <p className="text-gray-300">
-              High-performance solutions that deliver results quickly and consistently.
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="bg-white p-6 rounded-lg shadow-md">
+            <h2 className="text-2xl font-semibold text-gray-900 mb-4">MVP Development</h2>
+            <p className="text-gray-600">
+              Rapid development of minimum viable products to validate your business idea quickly.
             </p>
           </div>
-          
-          <div className="bg-gray-800 rounded-lg p-6">
-            <div className="text-4xl mb-4">🔧</div>
-            <h3 className="text-xl font-bold text-white mb-4">Easy Integration</h3>
-            <p className="text-gray-300">
-              Seamlessly integrate with your existing systems and workflows.
+          <div className="bg-white p-6 rounded-lg shadow-md">
+            <h2 className="text-2xl font-semibold text-gray-900 mb-4">Billing Integration</h2>
+            <p className="text-gray-600">
+              Seamless payment processing and subscription management for your SaaS platform.
             </p>
           </div>
-          
-          <div className="bg-gray-800 rounded-lg p-6">
-            <div className="text-4xl mb-4">📈</div>
-            <h3 className="text-xl font-bold text-white mb-4">Scalable Solutions</h3>
-            <p className="text-gray-300">
-              Grow with your business with our flexible and scalable platform.
+          <div className="bg-white p-6 rounded-lg shadow-md">
+            <h2 className="text-2xl font-semibold text-gray-900 mb-4">User Authentication</h2>
+            <p className="text-gray-600">
+              Secure user management and authentication systems for your application.
             </p>
           </div>
-        </div>
-
-        <div className="text-center">
-          <h2 className="text-3xl font-bold text-white mb-6">Ready to Get Started?</h2>
-          <p className="text-lg text-gray-300 mb-8">
-            Contact us today to learn how our micro saas services can transform your business.
-          </p>
-          <button className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-lg transition-colors duration-200">
-            Contact Sales
-          </button>
         </div>
       </div>
     </div>
-  )
+  );
 }

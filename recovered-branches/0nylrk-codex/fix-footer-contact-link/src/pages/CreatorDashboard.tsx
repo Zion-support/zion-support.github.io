@@ -1,7 +1,23 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+import {SidebarProvider, SidebarTrigger} from "@/components/ui/sidebar";
+import {AppSidebar} from "@/components/creator/CreatorSidebar";
+import {Header} from "@/components/Header";
+import {Footer} from "@/components/Footer";
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> merged-prs-20250907-203621
 import { SidebarProvider, SidebarTrigger } from "@/components/ui/sidebar",
 import { AppSidebar } from "@/components/creator/CreatorSidebar",
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
+<<<<<<< HEAD
 export default function CreatorDashboard() {
   return (
     <SidebarProvider>
@@ -19,8 +35,63 @@ export default function CreatorDashboard() {
                     {/* Only use allowed Lucide icons */}
                     <span className="text-zion-purple">
                       <svg width="28" height="28"><use href="#lucide-bar-chart" /></svg>
+=======
+import { Header } from "@/components/Header",
+import { Footer } from "@/components/Footer",
+=======
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+
+import { SidebarProvider, SidebarTrigger } from "@/components/ui/sidebar",
+import { AppSidebar } from "@/components/creator/CreatorSidebar",
+import { Header } from "@/components/Header";
+import { Footer } from "@/components/Footer";
+import { Header } from "@/components/Header",
+
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+export default function CreatorDashboard() {
+
+  return (
+    <SidebarProvider>"
+      <div className="min-h-screen flex w-full bg-zion-blue">
+        <AppSidebar />"
+        <div className="flex flex-col w-full">
+          <Header />"
+          <main className="flex-1 p-6 md:p-10 bg-zion-blue">"
+            <h1 className="text-2xl font-bold text-white mb-8">;
+              Creator Dashboard;
+            </h1>"
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+              {/* Example Stat Card */}"
+              <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 transition-shadow hover:shadow-lg">"
+                <div className="flex items-center gap-3 mb-2">"
+                  <span className="bg-zion-purple/20 rounded-full p-2">
+                    {/* Only use allowed Lucide icons */}"
+                    <span className="text-zion-purple">"
+                      <svg width="28" height="28">"
+                        <use href="#lucide-bar-chart" />
+                      </svg>
+>>>>>>> merged-prs-20250907-203621
                     </span>
+                  </span>"
+                  <span className="text-zion-slate-light font-medium">
+                    Analytics;
                   </span>
+<<<<<<< HEAD
+                </div>"
+                <div className="text-3xl text-white font-bold">"
+                  23,400{" "}"
+                  <span className="text-zion-cyan text-lg font-normal">
+                    Views;
+                  </span>
+                </div>
+=======
+<<<<<<< HEAD
                   <span className="text-zion-slate-light font-medium">Analytics</span>
                 </div>
                 <div className="text-3xl text-white font-bold">23,400 <span className="text-zion-cyan text-lg font-normal">Views</span></div>
@@ -30,8 +101,35 @@ export default function CreatorDashboard() {
                   <span className="bg-zion-purple/20 rounded-full p-2">
                     <span className="text-zion-purple">
                       <svg width="28" height="28"><use href="#lucide-file-text" /></svg>
-                    </span>
+=======
+                </div>"
+                <div className="text-3xl text-white font-bold">"
+                  23,400{" "}"
+                  <span className="text-zion-cyan text-lg font-normal">
+                    Views;
                   </span>
+                </div>
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+              </div>"
+              <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 transition-shadow hover:shadow-lg">"
+                <div className="flex items-center gap-3 mb-2">"
+                  <span className="bg-zion-purple/20 rounded-full p-2">"
+                    <span className="text-zion-purple">"
+                      <svg width="28" height="28">"
+                        <use href="#lucide-file-text" />
+                      </svg>
+>>>>>>> merged-prs-20250907-203621
+                    </span>
+                  </span>"
+                  <span className="text-zion-slate-light font-medium">
+                    Your Posts;
+                  </span>
+<<<<<<< HEAD
+                </div>"
+                <div className="text-3xl text-white font-bold">12</div>
+              </div>
+=======
+<<<<<<< HEAD
                   <span className="text-zion-slate-light font-medium">Your Posts</span>
                 </div>
                 <div className="text-3xl text-white font-bold">12</div>
@@ -41,7 +139,31 @@ export default function CreatorDashboard() {
               <h2 className="text-xl font-bold text-white mb-4">Welcome back, Creator!</h2>
               <p className="text-zion-slate text-lg mb-2 max-w-prose">
                 Create new content, monitor your analytics, or manage your account using the sidebar menu.
+=======
+                </div>"
+                <div className="text-3xl text-white font-bold">12</div>
+              </div>
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+            </div>"
+            <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6">"
+              <h2 className="text-xl font-bold text-white mb-4">
+                Welcome back, Creator!
+              </h2>"
+              <p className="text-zion-slate text-lg mb-2 max-w-prose">
+                Create new content, monitor your analytics, or manage your;
+                account using the sidebar menu.
+<<<<<<< HEAD
               </p>
+
+=======
+>>>>>>> merged-prs-20250907-203621
+              </p>
+
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
               {/* Placeholder for more creator-specific content */}
             </div>
           </main>
@@ -50,7 +172,277 @@ export default function CreatorDashboard() {
       </div>
       <SidebarTrigger />
     </SidebarProvider>
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
   )
 }
 }
 ;
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+}
+import { SidebarProvider, SidebarTrigger } from "@/components/ui/sidebar";"
+import { AppSidebar } from "@/components/creator/CreatorSidebar";"
+import { Header } from "@/components/Header",;"
+=======
+
+<<<<<<< HEAD
+=======
+=======
+  )
+}
+=======
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+import { SidebarProvider, SidebarTrigger } from "@/components/ui/sidebar",;
+import { AppSidebar } from "@/components/creator/CreatorSidebar",;
+import { Header } from "@/components/Header",;
+import { Footer } from "@/components/Footer";
+<<<<<<< HEAD
+
+>>>>>>> origin/chore/fix-lint-and-merge
+export default function CreatorDashboard() {;
+  return (
+
+=======
+<<<<<<< HEAD
+
+>>>>>>> origin/chore/fix-lint-and-merge
+=======
+<<<<<<< HEAD
+
+import { SidebarProvider, SidebarTrigger } from "@/components/ui/sidebar",;
+import { AppSidebar } from "@/components/creator/CreatorSidebar",;
+import { Header } from "@/components/Header",;
+import { Footer } from "@/components/Footer",;
+;
+export default function CreatorDashboard() {;
+  return (;
+export default function CreatorDashboard() {;
+  return (;
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+export default function CreatorDashboard() {;
+  return (
+<<<<<<< HEAD
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+    <SidebarProvider>;
+      <div className="min-h-screen flex w-full bg-zion-blue">;
+        <AppSidebar />;
+        <div className="flex flex-col w-full">;
+          <Header />;
+          <main className="flex-1 p-6 md:p-10 bg-zion-blue">;
+            <h1 className="text-2xl font-bold text-white mb-8">Creator Dashboard</h1>;
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">;
+<<<<<<< HEAD
+
+=======
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+import { SidebarProvider, SidebarTrigger } from '@/components / ui / sidebar';
+import { AppSidebar } from '@/components / creator / CreatorSidebar';
+import { Header } from '@/components / Header';
+import { Footer } from '@/components / Footer';
+export default /**
+ * CreatorDashboard - Function description
+ */
+function CreatorDashboard() {
+  return (
+    <SidebarProvider>;
+      <div className="min - h-screen flex w - full bg - zion-blue">;
+        <AppSidebar />;
+        <div className="flex flex - col w-full">;
+          <Header />;
+          <main className="flex - 1 p - 6 md:p - 10 bg - zion-blue">;
+            <h1 className="text - 2xl font - bold text - white mb-8">Creator Dashboard</h1>;
+            <div className="grid grid - cols - 1 md:grid - cols - 2 gap - 6 mb-8">;
+              {/* Example Stat Card */}
+              <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 transition-shadow hover:shadow-lg">;
+                <div className="flex items-center gap-3 mb-2">;
+                  <span className="bg-zion-purple/20 rounded-full p-2">;
+                    {/* Only use allowed Lucide icons */}
+                    <span className="text-zion-purple">;
+                      <svg width="28" height="28"><use href="#lucide-bar-chart" /></svg>;
+                    </span>;
+                  </span>;
+                  <span className="text-zion-slate-light font-medium">Analytics</span>;
+                </div>;
+                <div className="text-3xl text-white font-bold">23,400 <span className="text-zion-cyan text-lg font-normal">Views</span></div>;
+              </div>;
+              <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 transition-shadow hover:shadow-lg">;
+                <div className="flex items-center gap-3 mb-2">;
+                  <span className="bg-zion-purple/20 rounded-full p-2">;
+                    <span className="text-zion-purple">;
+                      <svg width="28" height="28"><use href="#lucide-file-text" /></svg>;
+                    </span>;
+                  </span>;
+                  <span className="text-zion-slate-light font-medium">Your Posts</span>;
+                </div>;
+                <div className="text-3xl text-white font-bold">12</div>;
+              </div>;
+            </div>;
+            <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6">;
+              <h2 className="text-xl font-bold text-white mb-4">Welcome back, Creator!</h2>;
+              <p className="text-zion-slate text-lg mb-2 max-w-prose">;
+                Create new content, monitor your analytics, or manage your account using the sidebar menu.;
+              </p>;
+<<<<<<< HEAD
+
+=======
+<<<<<<< HEAD
+
+=======
+              {/* Placeholder for more creator - specific content */}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+            </div>;
+          </main>;
+          <Footer />;
+        </div>;
+      </div>;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+
+}
+
+}
+    </SidebarProvider>);
+
+import { SidebarProvider, SidebarTrigger } from "@/components/ui/sidebar",;
+import { AppSidebar } from "@/components/creator/CreatorSidebar",;
+import { Header } from "@/components/Header",;
+import { Footer } from "@/components/Footer";
+export default function CreatorDashboard() {;
+  return (
+    <SidebarProvider>;
+      <div className="min-h-screen flex w-full bg-zion-blue">;
+        <AppSidebar />;
+        <div className="flex flex-col w-full">;
+          <Header />;
+          <main className="flex-1 p-6 md:p-10 bg-zion-blue">;
+            <h1 className="text-2xl font-bold text-white mb-8">Creator Dashboard</h1>;
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">;
+
+import { SidebarProvider, SidebarTrigger } from '@/components / ui / sidebar';
+import { AppSidebar } from '@/components / creator / CreatorSidebar';
+import { Header } from '@/components / Header';
+import { Footer } from '@/components / Footer';
+export default /**
+ * CreatorDashboard - Function description
+ */
+function CreatorDashboard() {
+  return (
+    <SidebarProvider>;
+      <div className="min - h-screen flex w - full bg - zion-blue">;
+        <AppSidebar />;
+        <div className="flex flex - col w-full">;
+          <Header />;
+          <main className="flex - 1 p - 6 md:p - 10 bg - zion-blue">;
+            <h1 className="text - 2xl font - bold text - white mb-8">Creator Dashboard</h1>;
+            <div className="grid grid - cols - 1 md:grid - cols - 2 gap - 6 mb-8">;
+              {/* Example Stat Card */}
+              <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 transition-shadow hover:shadow-lg">;
+                <div className="flex items-center gap-3 mb-2">;
+                  <span className="bg-zion-purple/20 rounded-full p-2">;
+                    {/* Only use allowed Lucide icons */}
+                    <span className="text-zion-purple">;
+                      <svg width="28" height="28"><use href="#lucide-bar-chart" /></svg>;
+                    </span>;
+                  </span>;
+                  <span className="text-zion-slate-light font-medium">Analytics</span>;
+                </div>;
+                <div className="text-3xl text-white font-bold">23,400 <span className="text-zion-cyan text-lg font-normal">Views</span></div>;
+              </div>;
+              <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 transition-shadow hover:shadow-lg">;
+                <div className="flex items-center gap-3 mb-2">;
+                  <span className="bg-zion-purple/20 rounded-full p-2">;
+                    <span className="text-zion-purple">;
+                      <svg width="28" height="28"><use href="#lucide-file-text" /></svg>;
+                    </span>;
+                  </span>;
+                  <span className="text-zion-slate-light font-medium">Your Posts</span>;
+                </div>;
+                <div className="text-3xl text-white font-bold">12</div>;
+              </div>;
+            </div>;
+            <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6">;
+              <h2 className="text-xl font-bold text-white mb-4">Welcome back, Creator!</h2>;
+              <p className="text-zion-slate text-lg mb-2 max-w-prose">;
+                Create new content, monitor your analytics, or manage your account using the sidebar menu.;
+              </p>;
+            </div>;
+          </main>;
+          <Footer />;
+        </div>;
+      </div>;
+      <SidebarTrigger />;    </SidebarProvider>);
+}
+
+    </SidebarProvider>);
+}
+    </SidebarProvider>;
+  ),;}
+ export default function CreatorDashboard() { return null; }
+  return (min-h-screen flex w-full bg-zion-blue"> <AppSidebar /> <div className=" flex flex-col w-full"> <Header /> <main className=" flex-1 p-6 md:p-10 bg-zion-blue"> <h1 className=" text-2xl font-bold text-white mb-8">Creator Dashboard</h1> <div className=" grid grid-cols-1 md:grid-cols-2 gap-6 mb-8"> {}
+  /* Example Stat Card */ "
+}</span> </span> <span className=" text-zion-slate-light font-medium">Analytics</span> </div> <div className=" text-3xl text-white font-bold">23, 400 <span className=" text-zion-cyan text-lg font-normal">Views</span></div> </div> <div className=" bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 transition-shadow hover:shadow-lg"> <div className=" flex items-center gap-3 mb-2"> <span className=" bg-zion-purple/20 rounded-full p-2"> <span className=" text-zion-purple"> <svg width=" 28"height=" 28"><use href=" #lucide-file-text"/></svg> </span> </span> <span className=" text-zion-slate-light font-medium">Your Posts</span> </div> <div className=" text-3xl text-white font-bold">12</div> </div> </div> <div className=" bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6"> <h2 className=" text-xl font-bold text-white mb-4">Welcome back, Creator!</h2> <p className=" text-zion-slate text-lg mb-2 max-w-prose" > Create new content, monitor your analytics, or manage your account using the sidebar menu. </p> {}
+<<<<<<< HEAD
+=======
+  /* Placeholder for more creator-specific content */ 
+}</div> </main> <Footer /> </div> </div> <SidebarTrigger /> </SidebarProvider>) 
+}
+};
+;
+}
+;
+
+"
+=======
+      <SidebarTrigger />;
+    </SidebarProvider>);
+}
+<<<<<<< HEAD
+    </SidebarProvider>;
+  ),;}
+ export default function CreatorDashboard () {
+  return (min-h-screen flex w-full bg-zion-blue"> <AppSidebar /> <div className=" flex flex-col w-full"> <Header /> <main className=" flex-1 p-6 md:p-10 bg-zion-blue"> <h1 className=" text-2xl font-bold text-white mb-8">Creator Dashboard</h1> <div className=" grid grid-cols-1 md:grid-cols-2 gap-6 mb-8"> {
+  /* Example Stat Card */ 
+}</span> </span> <span className=" text-zion-slate-light font-medium">Analytics</span> </div> <div className=" text-3xl text-white font-bold">23, 400 <span className=" text-zion-cyan text-lg font-normal">Views</span></div> </div> <div className=" bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 transition-shadow hover:shadow-lg"> <div className=" flex items-center gap-3 mb-2"> <span className=" bg-zion-purple/20 rounded-full p-2"> <span className=" text-zion-purple"> <svg width=" 28"height=" 28"><use href=" #lucide-file-text"/></svg> </span> </span> <span className=" text-zion-slate-light font-medium">Your Posts</span> </div> <div className=" text-3xl text-white font-bold">12</div> </div> </div> <div className=" bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6"> <h2 className=" text-xl font-bold text-white mb-4">Welcome back, Creator!</h2> <p className=" text-zion-slate text-lg mb-2 max-w-prose" > Create new content, monitor your analytics, or manage your account using the sidebar menu. </p> {
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+  /* Placeholder for more creator-specific content */ 
+}</div> </main> <Footer /> </div> </div> <SidebarTrigger /> </SidebarProvider>) 
+}
+};
+;
+}
+;
+<<<<<<< HEAD
+
+"
+=======
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc

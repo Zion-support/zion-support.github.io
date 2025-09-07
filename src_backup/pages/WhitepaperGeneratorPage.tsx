@@ -89,11 +89,19 @@ import React, { useState, useEffect, useCallback } from 'react',
 import { supabase } from '@/integrations/supabase/client',
 import WhitepaperSectionEditor from '@/components/WhitepaperSectionEditor',
 import WhitepaperPreviewPanel from '@/components/WhitepaperPreviewPanel', // Import the new preview panel
+<<<<<<< HEAD
+import { Button } from '@/components/ui/button',
+import { Input } from '@/components/ui/input',
+import { Trash2, Download, Share2 } from 'lucide-react'
+import { Send } from 'lucide-react', // Added Send icon
+import { toast } from 'sonner',
+=======
 import { Button } from "@/components/ui/button",
 import { Input } from "@/components/ui/input",
 import { Trash2, Download, Share2 } from 'lucide-react'
 import { Send } from 'lucide-react', // Added Send icon
 import { toast } from "sonner",
+>>>>>>> origin/resolved-merge-conflicts
 import { logErrorToProduction } from '@/utils/productionLogger',
 interface WhitepaperSection {
   id: string;
@@ -104,8 +112,13 @@ import React, { useState, useEffect, useCallback } from 'react',;
 import { supabase } from '@/integrations/supabase/client',;
 import WhitepaperSectionEditor from '@/components/WhitepaperSectionEditor',;
 import WhitepaperPreviewPanel from '@/components/WhitepaperPreviewPanel', // Import the new preview panel;
+<<<<<<< HEAD
+import { Button } from '@/components/ui/button',;
+import { Input } from '@/components/ui/input',;
+=======
 import { Button } from "@/components/ui/button",;
 import { Input } from "@/components/ui/input",;
+>>>>>>> origin/resolved-merge-conflicts
 import { Trash2, Download, Share2 } from 'lucide-react';
         useCases,;
         rewardsLogic,;
@@ -203,7 +216,6 @@ interface DistributionChartItem {
     );
   };
 
-  const assembleMarkdownContent = (): string => {
     let mdContent = `# ${tokenName} - Whitepaper\n\n`
     mdContent += `**Total Supply:** ${tokenSupply}\n\n`
     sections.forEach(section => {
@@ -253,7 +265,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
   const handleGenerateShareableLink = async () => {
     if (sections.length === 0) {
+<<<<<<< HEAD
+      toast.error('Please generate the whitepaper content first before creating a shareable link.'),
+=======
       toast.error("Please generate the whitepaper content first before creating a shareable link."),
+>>>>>>> origin/resolved-merge-conflicts
       return
     }
     setIsSharing(true),
@@ -280,11 +296,19 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       setShareableLink(link),
       setCurrentSharedWhitepaperId((response as any).id),
       setCurrentSharedWhitepaperIsPublic((response as any).is_public),
+<<<<<<< HEAD
+      toast.success('Shareable link generated!')
+    } catch (e: any) {
+      logErrorToProduction(e instanceof Error ? e.message : String(e), e instanceof Error ? e : undefined, { message: 'Error generating shareable link' }),
+      setError('Failed to generate shareable link: ' + e.message),
+      toast.error('Failed to generate shareable link.')
+=======
       toast.success("Shareable link generated!")
     } catch (e: any) {
       logErrorToProduction(e instanceof Error ? e.message : String(e), e instanceof Error ? e : undefined, { message: 'Error generating shareable link' }),
       setError("Failed to generate shareable link: " + e.message),
       toast.error("Failed to generate shareable link.")
+>>>>>>> origin/resolved-merge-conflicts
     } finally {
       setIsSharing(false)
     }
@@ -292,7 +316,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
   const handleTogglePublicStatus = async () => {
     if (!currentSharedWhitepaperId || currentSharedWhitepaperIsPublic === null) {
+<<<<<<< HEAD
+        toast.error('No shareable whitepaper selected or status is unknown.'),
+=======
         toast.error("No shareable whitepaper selected or status is unknown."),
+>>>>>>> origin/resolved-merge-conflicts
         return
     }
     // Optimistically update UI, or wait for response for certainty
@@ -302,7 +330,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
     try {
         const { data: response, error: funcError } = await supabase.functions.invoke('set-shared-whitepaper-public-status', {
+<<<<<<< HEAD
+            body: { whitepaperId: currentSharedWhitepaperId, isPublic: newPublicStatus }),
+=======
             body: { whitepaperId: currentSharedWhitepaperId, isPublic: newPublicStatus }}),
+>>>>>>> origin/resolved-merge-conflicts
         if (funcError) throw new Error(`Supabase function error: ${funcError.message}`),
         if (!response) throw new Error('No response received from set-shared-whitepaper-public-status function'),
         if ((response as any).error) throw new Error(`Error from set-shared-whitepaper-public-status: ${(response as any).error}`),
@@ -312,8 +344,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
     } catch (e: any) {
         logErrorToProduction(e instanceof Error ? e.message : String(e), e instanceof Error ? e : undefined, { message: 'Error toggling public status' }),
+<<<<<<< HEAD
+        setError('Failed to update public status: ' + e.message),
+        toast.error('Failed to update public status.'),
+=======
         setError("Failed to update public status: " + e.message),
         toast.error("Failed to update public status."),
+>>>>>>> origin/resolved-merge-conflicts
         // Revert optimistic update if it failed:
         // setCurrentSharedWhitepaperIsPublic(!newPublicStatus)
     }
@@ -321,7 +358,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
   const handleSubmitToCounsel = async () => {
     if (sections.length === 0) {
+<<<<<<< HEAD
+        toast.error('Please generate and finalize the whitepaper before submitting.'),
+=======
         toast.error("Please generate and finalize the whitepaper before submitting."),
+>>>>>>> origin/resolved-merge-conflicts
         return
     }
     setIsSubmittingToCounsel(true),
@@ -331,7 +372,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         let whitepaperIdToSubmit = currentSharedWhitepaperId,
 
         if (!linkToSubmit || !whitepaperIdToSubmit) {
+<<<<<<< HEAD
+            toast.info('Generating a shareable link first to submit to counsel...'),
+=======
             toast.info("Generating a shareable link first to submit to counsel..."),
+>>>>>>> origin/resolved-merge-conflicts
             const whitepaperPayload = { tokenName, tokenSupply, sections, distributionChartData, distributionBreakdown },
             const { data: linkResponse, error: linkFuncError } = await supabase.functions.invoke('create-shared-whitepaper', {
                 body: whitepaperPayload}),
@@ -349,9 +394,15 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
         // Ensure it's public before submitting, or handle as per requirements
         if (currentSharedWhitepaperIsPublic === false) {
+<<<<<<< HEAD
+            toast.info('Making whitepaper public before submitting to counsel...'),
+            const { data: statusResponse, error: statusError } = await supabase.functions.invoke('set-shared-whitepaper-public-status', {
+                body: { whitepaperId: whitepaperIdToSubmit, isPublic: true }),
+=======
             toast.info("Making whitepaper public before submitting to counsel..."),
             const { data: statusResponse, error: statusError } = await supabase.functions.invoke('set-shared-whitepaper-public-status', {
                 body: { whitepaperId: whitepaperIdToSubmit, isPublic: true }}),
+>>>>>>> origin/resolved-merge-conflicts
             if (statusError) throw new Error(`Failed to make whitepaper public: ${statusError.message}`),
             if (!statusResponse) throw new Error('No response received from set-shared-whitepaper-public-status function'),
             if ((statusResponse as any).error) throw new Error((statusResponse as any).error),
@@ -360,14 +411,22 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       pdf.save(`${slugify(tokenName || 'whitepaper')}_whitepaper.pdf`);
     } catch (e: any) {;
       logErrorToProduction(e instanceof Error ? e.message : String(e), e instanceof Error ? e : undefined, { message: 'Error downloading PDF' }),;
+<<<<<<< HEAD
+      setError('Failed to download PDF file. ' + e.message);
+=======
       setError("Failed to download PDF file. " + e.message);
+>>>>>>> origin/resolved-merge-conflicts
     } finally {;
       setIsDownloading(false);
     }
   },;
   const handleGenerateShareableLink = async () => {;
     if (sections.length === 0) {;
+<<<<<<< HEAD
+      toast.error('Please generate the whitepaper content first before creating a shareable link.'),;
+=======
       toast.error("Please generate the whitepaper content first before creating a shareable link."),;
+>>>>>>> origin/resolved-merge-conflicts
       return;
     }
     setIsSharing(true),;
@@ -392,18 +451,30 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       setShareableLink(link),;
       setCurrentSharedWhitepaperId((response as any).id),;
       setCurrentSharedWhitepaperIsPublic((response as any).is_public),;
+<<<<<<< HEAD
+      toast.success('Shareable link generated!');
+    } catch (e: any) {;
+      logErrorToProduction(e instanceof Error ? e.message : String(e), e instanceof Error ? e : undefined, { message: 'Error generating shareable link' }),;
+      setError('Failed to generate shareable link: ' + e.message),;
+      toast.error('Failed to generate shareable link.');
+=======
       toast.success("Shareable link generated!");
     } catch (e: any) {;
       logErrorToProduction(e instanceof Error ? e.message : String(e), e instanceof Error ? e : undefined, { message: 'Error generating shareable link' }),;
       setError("Failed to generate shareable link: " + e.message),;
       toast.error("Failed to generate shareable link.");
+>>>>>>> origin/resolved-merge-conflicts
     } finally {;
       setIsSharing(false);
     }
   },;
   const handleTogglePublicStatus = async () => {;
     if (!currentSharedWhitepaperId || currentSharedWhitepaperIsPublic === null) {;
+<<<<<<< HEAD
+        toast.error('No shareable whitepaper selected or status is unknown.'),;
+=======
         toast.error("No shareable whitepaper selected or status is unknown."),;
+>>>>>>> origin/resolved-merge-conflicts
         return;
     }
     // Optimistically update UI, or wait for response for certainty;
@@ -411,7 +482,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     // For optimistic update: // setCurrentSharedWhitepaperIsPublic(newPublicStatus),;
     try {;
         const { data: response, error: funcError } = await supabase.functions.invoke('set-shared-whitepaper-public-status', {;
+<<<<<<< HEAD
+            body: { whitepaperId: currentSharedWhitepaperId, isPublic: newPublicStatus }),;
+=======
             body: { whitepaperId: currentSharedWhitepaperId, isPublic: newPublicStatus }}),;
+>>>>>>> origin/resolved-merge-conflicts
         if (funcError) throw new Error(`Supabase function error: ${funcError.message}`),;
         if (!response) throw new Error('No response received from set-shared-whitepaper-public-status function'),;
         if ((response as any).error) throw new Error(`Error from set-shared-whitepaper-public-status: ${(response as any).error}`),;
@@ -419,15 +494,24 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         toast.success(`Whitepaper is now ${(response as any).is_public ? 'public' : 'private'}.`);
     } catch (e: any) {;
         logErrorToProduction(e instanceof Error ? e.message : String(e), e instanceof Error ? e : undefined, { message: 'Error toggling public status' }),;
+<<<<<<< HEAD
+        setError('Failed to update public status: ' + e.message),;
+        toast.error('Failed to update public status.'),;
+=======
         setError("Failed to update public status: " + e.message),;
         toast.error("Failed to update public status."),;
+>>>>>>> origin/resolved-merge-conflicts
         // Revert optimistic update if it failed:;
         // setCurrentSharedWhitepaperIsPublic(!newPublicStatus);
     }
   },;
   const handleSubmitToCounsel = async () => {;
     if (sections.length === 0) {;
+<<<<<<< HEAD
+        toast.error('Please generate and finalize the whitepaper before submitting.'),;
+=======
         toast.error("Please generate and finalize the whitepaper before submitting."),;
+>>>>>>> origin/resolved-merge-conflicts
         return;
     }
     setIsSubmittingToCounsel(true),;
@@ -436,7 +520,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         let linkToSubmit = shareableLink,;
         let whitepaperIdToSubmit = currentSharedWhitepaperId,;
         if (!linkToSubmit || !whitepaperIdToSubmit) {;
+<<<<<<< HEAD
+            toast.info('Generating a shareable link first to submit to counsel...'),;
+=======
             toast.info("Generating a shareable link first to submit to counsel..."),;
+>>>>>>> origin/resolved-merge-conflicts
             const whitepaperPayload = { tokenName, tokenSupply, sections, distributionChartData, distributionBreakdown },;
             const { data: linkResponse, error: linkFuncError } = await supabase.functions.invoke('create-shared-whitepaper', {;
                 body: whitepaperPayload}),;
@@ -453,9 +541,15 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 ;
         // Ensure it's public before submitting, or handle as per requirements;
         if (currentSharedWhitepaperIsPublic === false) {;
+<<<<<<< HEAD
+            toast.info('Making whitepaper public before submitting to counsel...'),;
+            const { data: statusResponse, error: statusError } = await supabase.functions.invoke('set-shared-whitepaper-public-status', {;
+                body: { whitepaperId: whitepaperIdToSubmit, isPublic: true }),;
+=======
             toast.info("Making whitepaper public before submitting to counsel..."),;
             const { data: statusResponse, error: statusError } = await supabase.functions.invoke('set-shared-whitepaper-public-status', {;
                 body: { whitepaperId: whitepaperIdToSubmit, isPublic: true }}),;
+>>>>>>> origin/resolved-merge-conflicts
             if (statusError) throw new Error(`Failed to make whitepaper public: ${statusError.message}`),;
             if (!statusResponse) throw new Error('No response received from set-shared-whitepaper-public-status function'),;
             if ((statusResponse as any).error) throw new Error((statusResponse as any).error),;
@@ -472,12 +566,21 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         if (!notifyResponse) throw new Error('No response received from notify-legal-team function'),
         if ((notifyResponse as any).error) throw new Error(`Error from notify-legal-team: ${(notifyResponse as any).error}`),
 
+<<<<<<< HEAD
+        toast.success('Whitepaper submitted to counsel successfully!')
+
+    } catch (e: any) {
+        logErrorToProduction(e instanceof Error ? e.message : String(e), e instanceof Error ? e : undefined, { message: 'Error submitting to counsel' }),
+        setError('Failed to submit to counsel: ' + e.message),
+        toast.error('Failed to submit to counsel: ' + e.message)
+=======
         toast.success("Whitepaper submitted to counsel successfully!")
 
     } catch (e: any) {
         logErrorToProduction(e instanceof Error ? e.message : String(e), e instanceof Error ? e : undefined, { message: 'Error submitting to counsel' }),
         setError("Failed to submit to counsel: " + e.message),
         toast.error("Failed to submit to counsel: " + e.message)
+>>>>>>> origin/resolved-merge-conflicts
     } finally {
         setIsSubmittingToCounsel(false)
     }
@@ -585,7 +688,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   variant='ghost'
                   size='icon'
             ))}
+<<<<<<< HEAD
+            <Button type='button' onClick={addDistributionItem} variant='outline' className='w-full'>Add Distribution Item</Button>
+=======
             <Button type="button" onClick={addDistributionItem} variant="outline" className="w-full">Add Distribution Item</Button>
+>>>>>>> origin/resolved-merge-conflicts
             <div>
               rows={3}
             />;
@@ -598,9 +705,15 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             <label
               htmlFor='legalDisclaimers'
           {shareableLink && !isSharing && currentSharedWhitepaperId && (
+<<<<<<< HEAD
+            <div className='mt-4 p-3 border rounded-md bg-green-50'>
+              <div className='flex justify-between items-center'>
+                <label className='block text-sm font-medium text-green-700'>Shareable Link:</label>
+=======
             <div className="mt-4 p-3 border rounded-md bg-green-50">
               <div className="flex justify-between items-center">
                 <label className="block text-sm font-medium text-green-700">Shareable Link:</label>
+>>>>>>> origin/resolved-merge-conflicts
                 <Button
               )}
             </div>
@@ -623,6 +736,20 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               Submitting to counsel...
             </p>
           )}
+<<<<<<< HEAD
+                type='button'
+                onClick={handleSubmitToCounsel}
+                disabled={isSubmittingToCounsel || isLoading || isSharing || isDownloading}
+                variant='default'
+                size='lg'
+                className='w-full mt-4 bg-indigo-600 hover:bg-indigo-700 text-white'
+            >
+                <Send className='mr-2 h-4 w-4' />
+                {isSubmittingToCounsel ? 'Submitting...' : 'Submit to Counsel'}
+            </Button>;
+          )}
+           {isSubmittingToCounsel && <p className='text-center text-sm text-blue-600'>Submitting to counsel...</p>}
+=======
                 type="button"
                 onClick={handleSubmitToCounsel}
                 disabled={isSubmittingToCounsel || isLoading || isSharing || isDownloading}
@@ -635,6 +762,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             </Button>;
           )}
            {isSubmittingToCounsel && <p className="text-center text-sm text-blue-600">Submitting to counsel...</p>}
+>>>>>>> origin/resolved-merge-conflicts
 
 
 
@@ -702,6 +830,20 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               Submitting to counsel...
             </p>
           )}
+<<<<<<< HEAD
+                type='button'
+                onClick={handleSubmitToCounsel}
+                disabled={isSubmittingToCounsel || isLoading || isSharing || isDownloading}
+                variant='default'
+                size='lg'
+                className='w-full mt-4 bg-indigo-600 hover:bg-indigo-700 text-white'
+            >
+                <Send className='mr-2 h-4 w-4' />
+                {isSubmittingToCounsel ? 'Submitting...' : 'Submit to Counsel'}
+            </Button>;
+          )}
+           {isSubmittingToCounsel && <p className='text-center text-sm text-blue-600'>Submitting to counsel...</p>}
+=======
                 type="button"
                 onClick={handleSubmitToCounsel}
                 disabled={isSubmittingToCounsel || isLoading || isSharing || isDownloading}
@@ -714,6 +856,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             </Button>;
           )}
            {isSubmittingToCounsel && <p className="text-center text-sm text-blue-600">Submitting to counsel...</p>}
+>>>>>>> origin/resolved-merge-conflicts
 
         </form>
         {/* Section Editors */}
@@ -727,12 +870,21 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           </div>
         )}
         {rawDraft && (
+<<<<<<< HEAD
+            <div className='mt-6 p-3 border rounded-md'>
+            <Button onClick={() => setShowRawDraft(!showRawDraft)} variant='outline' size='sm' className='w-full'>
+                {showRawDraft ? 'Hide' : 'Show'} Raw Generated Text
+            </Button>
+            {showRawDraft && (
+                <pre className='mt-2 p-2 bg-gray-50 text-xs whitespace-pre-wrap break-all max-h-60 overflow-y-auto rounded'>
+=======
             <div className="mt-6 p-3 border rounded-md">
             <Button onClick={() => setShowRawDraft(!showRawDraft)} variant="outline" size="sm" className="w-full">
                 {showRawDraft ? 'Hide' : 'Show'} Raw Generated Text
             </Button>
             {showRawDraft && (
                 <pre className="mt-2 p-2 bg-gray-50 text-xs whitespace-pre-wrap break-all max-h-60 overflow-y-auto rounded">
+>>>>>>> origin/resolved-merge-conflicts
                 {rawDraft}
                 </pre>;
             )}
@@ -742,7 +894,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       </div>
       {/* Right Column: Preview Panel - Pass ref here */}
 
+<<<<<<< HEAD
+'';
+=======
 '";
+>>>>>>> origin/resolved-merge-conflicts
 ;
 }
 }
@@ -750,7 +906,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         )}
       </div>
       {/* Right Column: Preview Panel - Pass ref here */}
+<<<<<<< HEAD
+      <div id='preview-panel-content' ref={previewPanelRef} className='md:w-1/2 lg:w-3/5 xl:w-2/3 p-1'>
+=======
       <div id="preview-panel-content" ref={previewPanelRef} className="md:w-1/2 lg:w-3/5 xl:w-2/3 p-1">
+>>>>>>> origin/resolved-merge-conflicts
         <WhitepaperPreviewPanel
             sections={sections}
             distributionChartData={distributionChartData}
@@ -774,5 +934,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     </div>);
 }
 export default WhitepaperGeneratorPage
+<<<<<<< HEAD
+''
+=======
 '"
+>>>>>>> origin/resolved-merge-conflicts
 origin/cursor/automate-test-improve-and-merge-code-2533

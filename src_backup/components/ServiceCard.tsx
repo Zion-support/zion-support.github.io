@@ -20,10 +20,17 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
     <motion.div;
       className={`bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 ${className}`}`;
 
+<<<<<<< HEAD
+      whileHover={ y: -5 }
+      initial={ opacity: 0, y: 20 }
+      animate={ opacity: 1, y: 0 }
+      transition={ duration: 0.5 }
+=======
       whileHover={{ y: -5 }}
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5 }}
+>>>>>>> origin/resolved-merge-conflicts
 ;
     >;
 </motion>'';

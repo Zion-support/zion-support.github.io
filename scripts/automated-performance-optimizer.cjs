@@ -1,8 +1,44 @@
+<<<<<<< HEAD
 #!/usr/bin/env node;
+const fs = require("child_process");
+const path = require("child_process");
+const { execSync } = require("child_process");
+    this.reportsDir = path.join(this.projectRoot, "automation-reports")
+=======
+<<<<<<< HEAD
+#!/usr/bin/env node;
+=======
+<<<<<<< HEAD
+
+#!/usr/bin/env node;
+
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+#!/usr/bin/env node;
+>>>>>>> merged-prs-20250907-203621
 const fs = require("child_process")
 const path = require("child_process")
 const { execSync } = require("child_process")
     this.reportsDir = path.join(this.projectRoot, "automation-reports")
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
       fs.mkdirSync(this.reportsDir, { "recursive"})
     this.log(" Analyzing bundle size...")
     const buildDir = path.join(this.projectRoot, ".next")
@@ -33,10 +69,26 @@ const { execSync } = require("child_process")
     const srcDir = path.join(this.projectRoot, "src")
     const pagesDir = path.join(this.projectRoot, "pages")
     const analysis = {"dynamicImports": 0,"lazyComponents": 0,"largeComponents"}
+<<<<<<< HEAD
+const files = fs.readdirSync(dir, { "withFileTypes"});
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+const codeExtensions = [".js", ".jsx", ".ts", ".tsx"];
+const content = fs.readFileSync(filePath, "utf8");
+const lines = content.split("\n");
+=======
+>>>>>>> merged-prs-20250907-203621
     const files = fs.readdirSync(dir, { "withFileTypes"})
     const codeExtensions = [".js", ".jsx", ".ts", ".tsx"]
       const content = fs.readFileSync(filePath, "utf8")
       const lines = content.split("\n")
+<<<<<<< HEAD
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
       if (lines > 150 && content.includes("export default") && content.includes("function") || content.includes("const") && content.includes("=")
         analysis.largeComponents.push({"file": path.relative(this.projectRoot, filePath),"lines"}
       if (content.includes("import") && content.includes("from") && !content.includes("import(")
@@ -59,6 +111,7 @@ const { execSync } = require("child_process")
     this.log(" Starting Performance Optimizer")
     const results = {"timestamp"}
     const reportFile = path.join(this.reportsDir, "performance-optimization-report.json")
+<<<<<<< HEAD
     this.log(` Performance optimization report "generated"`)
 // console.log("\n� Performance Analysis "Summary": ")
     console.log(`�  Total "images"`)
@@ -66,7 +119,74 @@ const { execSync } = require("child_process")
     console.log(`⚡ Lazy "components"`)
     console.log(` Optimization "recommendations"`)
     const highPriority = recommendations.filter(r => r.priority === "high")
+
+      console.log("\n� High Priority "Optimizations")
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+
+
+
+
+
+<<<<<<< HEAD
+=======
+      console.log("\n� High Priority "Optimizations)
+=======
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+=======
+      console.log(\n� High Priority "Optimizations")
+
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+>>>>>>> merged-prs-20250907-203621
+    this.log(` Performance optimization report "generated"`)
+// console.log("\n� Performance Analysis "Summary": ")
+    console.log(`�  Total "images"`)
+// console.log(`� Dynamic "imports"`)
+    console.log(`⚡ Lazy "components"`)
+    console.log(` Optimization "recommendations"`)
+    const highPriority = recommendations.filter(r => r.priority === "high")
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> merged-prs-20250907-203621
+
+=======
+      console.log("\n� High Priority "Optimizations")
+<<<<<<< HEAD
       console.log("\n� High Priority "Optimizations")
       console.log("\n� High Priority "Optimizations")
 
 
+
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+<<<<<<< HEAD
+      console.log("\n� High Priority "Optimizations")
+=======
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+=======
+      console.log("\n� High Priority "Optimizations")
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc

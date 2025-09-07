@@ -1,3 +1,37 @@
+export type { Milestone, MilestoneStatus, MilestoneActivity } from './milestones/types';
 
-export { useMilestones } from './milestones/useMilestones',
-export type { Milestone, MilestoneStatus, MilestoneActivity } from './milestones/types',
+<<<<<<< HEAD
+export { useMilestones } from './milestones/useMilestones',;
+
+export type { Milestone, MilestoneStatus, MilestoneActivity } from './milestones/types';
+export { useMilestones } from './milestones/useMilestones',;
+=======
+<<<<<<< HEAD
+export { useMilestones } from './milestones/useMilestones',;
+
+export type { Milestone, MilestoneStatus, MilestoneActivity } from './milestones/types';
+export { useMilestones } from './milestones/useMilestones',;
+=======
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+export { useMilestones } from './milestones/useMilestones',;
+
+
+export type { Milestone, MilestoneStatus, MilestoneActivity } from './milestones/types';
+export { use_milestones } from './milestones / use_milestones';
+export type { Milestone, MilestoneStatus, MilestoneActivity } from './milestones / types';
+;
+<<<<<<< HEAD
+export { useMilestones } from './milestones/useMilestones';
+export { useMilestones } from './milestones/useMilestones',;
+export type { Milestone, MilestoneStatus, MilestoneActivity } from './milestones/types';
+export { useMilestones } from './milestones/useMilestones',;
+export type { Milestone, MilestoneStatus, MilestoneActivity } from './milestones/types';
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc

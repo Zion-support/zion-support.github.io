@@ -55,7 +55,6 @@ return [ {
 }
 }async createAPIKey (name: string, permissions: string[], rateLimit: RateLimitConfig) : Promise<APIKey> {
   try {
-  const response = await fetch (`$ {
   this.baseUrl 
 }/rate-limiter/api-keys`, {
   method: 'POST', headers: {

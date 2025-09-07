@@ -1,0 +1,40 @@
+const partners = [ { \"name\": \'Partner: A,\',\"logo\": \'https:\''\'";\",;
+const partners = [ { \"name\": \'Partner: A,\',\"logo\": \'https:\''\'";\",;
+const partners = [ { \"name\": \'Partner: A,\',\"logo\": \'https:\''\'";\",;
+:src.disabled/components/summit/PartnersSection.js.jsx
+const partners = [ { \"name\": \'Partner: A,\',\"logo\": \'https:\''\'";\",;
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+const partners = [ { \"name\": \'Partner: A,\',\"logo\": \'https:\''\'";\",;
+:temp_exclude/src.disabled/components/summit/PartnersSection.js.jsx
+const partners = [ { \"name\": \'Partner: A,\',\"logo\": \'https:\''\'";\",;
+const partners = [ { name: "Partner: A,",logo: "https:"""";",;'"'"
+const partners = [ { name: "Partner: A,",logo: "https:"""";",;'"'"
+const partners = [ { \"name\": \'Partner: A,\',\"logo\": \'https:\''\'";\",;
+const partners = [ { name: "Partner: A,",logo: "https:"""";",;'"'"
+const partners = [ { name: "Partner: A,",logo: "https:"""";",;'"'"
+import React from 'react';'
+const PartnersSection.js = ({ className }) => {
+  return ('
+    <div className={className || ''}>'
+</div>
+      <h1>PartnersSection.js</h1>
+      <p>This component is under development.</p>
+    </div>
+<<<<<<< HEAD
+  )
+};
+=======
+<<<<<<< HEAD
+  )
+};
+=======
+  );
+};
+
+<<<<<<< HEAD
+export default PartnersSection.js;
+=======
+export default PartnersSection.js;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc

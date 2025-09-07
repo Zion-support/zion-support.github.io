@@ -1,13 +1,34 @@
 #!/usr/bin/env node
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 const fs = require('fs');
 const path = require('path');
 
 /**
  * Generate search index for the application
  */
+<<<<<<< HEAD
+=======
+=======
+=======
+/**
+ * Search Index Generator;
+ * Generates search index for the application;
+ */
+
+const fs = require('fs');
+const path = require('path');
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 class SearchIndexGenerator {
+  // TODO: Implement
+}
   constructor() {
+<<<<<<< HEAD
     this.index = {
       pages: [],
       metadata: {
@@ -256,6 +277,10 @@ class SearchIndexGenerator {
   }
 }
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 // Run the search index generator
 if (require.main === module) {
   const generator = new SearchIndexGenerator();
@@ -263,3 +288,21 @@ if (require.main === module) {
 }
 
 module.exports = SearchIndexGenerator;
+=======
+
+module.exports = SearchIndexGenerator;
+=======
+
+
+  generateIndex() {
+    try {
+  // TODO: Implement
+      const pages = [
+        {
+
+      return { success: false, error: error.message };
+
+const generator = new SearchIndexGenerator();
+generator.generateIndex();
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621

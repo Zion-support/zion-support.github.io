@@ -18,6 +18,11 @@ export default function industrysolutions() {
           </p>
         </div>
       </div>
+<<<<<<< HEAD
     </Layout>
   );
+=======
+    </>
+  )
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 }

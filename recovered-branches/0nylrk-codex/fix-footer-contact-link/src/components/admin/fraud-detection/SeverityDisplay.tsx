@@ -1,3 +1,34 @@
+<<<<<<< HEAD
+severity: string;
+}
+export const SeverityDisplay: React.FC < SeverityDisplayProps> = ({
+  severity,
+
+    <SeverityIndicator
+      severity={severity as "safe" | "suspicious" | "dangerous"}
+      showIcon={true}
+      showText={true}
+    />
+  );
+}
+
+export const SeverityDisplay: React.FC<SeverityDisplayProps> = ({ severity }) => {
+  return (
+    />;
+);
+    <SeverityIndicator 
+      severity={severity as "safe" | "suspicious" | "dangerous"} 
+import React from "react",;
+import { SeverityIndicator } from "@/components/ui/severity-indicator",;
+interface SeverityDisplayProps {;
+  severity: string;
+}
+;
+export const SeverityDisplay: React.FC<SeverityDisplayProps> = ({ severity }) => {;
+  return (;
+    <SeverityIndicator;
+=======
+<<<<<<< HEAD
 import React from "react";
 import { SeverityIndicator } from "@/components/ui/severity-indicator";
 interface SeverityDisplayProps {
@@ -7,3 +38,232 @@ export const SeverityDisplay: React.FC<SeverityDisplayProps> = ({ severity }) =>
   return (
     <SeverityIndicator 
       severity = $2;
+=======
+<<<<<<< HEAD
+severity: string;
+=======
+}) => {
+export const SeverityDisplay: React.FC<SeverityDisplayProps> = ({;
+  severity,;
+}) => {;
+  return (
+    <SeverityIndicator;
+      severity={severity as "safe" | "suspicious" | "dangerous"}
+      show_icon={true}
+      show_text={true}
+    />);
+}
+;
+
+
+
+interface SeverityDisplayProps {
+  severity: string
+}
+
+
+import React from "react";
+import { SeverityIndicator } from "@/components/ui/severity-indicator";
+import React from "react",
+import { SeverityIndicator } from "@/components/ui/severity-indicator",
+
+import React from "react",
+import { SeverityIndicator } from "@/components/ui/severity-indicator",
+interface SeverityDisplayProps {
+  severity: string
+}
+export const SeverityDisplay: React.FC<SeverityDisplayProps> = ({
+  severity
+}) => {
+  return (
+
+    <SeverityIndicator
+      severity={severity as "safe" | "suspicious" | "dangerous"}
+      showIcon={true}
+      showText={true}
+
+<<<<<<< HEAD
+import React from "react";
+import { SeverityIndicator } from "@/components/ui/severity-indicator";
+
+import React from "react",
+import { SeverityIndicator } from "@/components/ui/severity-indicator",
+
+interface SeverityDisplayProps {
+  severity: string
+}
+export const SeverityDisplay: React.FC<SeverityDisplayProps> = ({
+  severity
+}) => {
+  return (
+<SeverityIndicator
+      severity={severity as "safe" | "suspicious" | "dangerous"}
+      showIcon={true}
+      showText={true}
+/>
+  );
+
+}
+    />
+  );
+}
+
+
+export const SeverityDisplay: React.FC<SeverityDisplayProps> = ({ severity }) => {
+  return (
+    />;
+);
+    <SeverityIndicator 
+      severity={severity as "safe" | "suspicious" | "dangerous"} 
+import React from "react",;
+import { SeverityIndicator } from "@/components/ui/severity-indicator",;
+interface SeverityDisplayProps {;
+  severity: string;
+}
+;
+export const SeverityDisplay: React.FC<SeverityDisplayProps> = ({ severity }) => {;
+  return (;
+    <SeverityIndicator;
+
+import React from "react",;
+import { SeverityIndicator } from "@/components/ui/severity-indicator",;
+;
+interface SeverityDisplayProps {;
+  severity:string;
+}
+;
+export const SeverityDisplay:React.FC<SeverityDisplayProps> = ({ severity }) => {;
+  return (;
+    <SeverityIndicator ;
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+      severity={severity as "safe" | "suspicious" | "dangerous"} ;
+      showIcon={true}
+      showText={true}
+    />;
+  );
+
+<<<<<<< HEAD
+=======
+};
+  ),;
+},; interface SeverityDisplayProps {
+  severity: string 
+}severity 
+=======
+
+import React from './react';
+import { SeverityIndicator  } from '@/components / ui / severity - indicator';
+interface SeverityDisplayProps {
+  severity: string;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+}
+export const SeverityDisplay: React.FC < SeverityDisplayProps> = ({
+  severity,
+
+<<<<<<< HEAD
+    <SeverityIndicator
+      severity={severity as "safe" | "suspicious" | "dangerous"}
+      showIcon={true}
+      showText={true}
+    />
+  );
+}
+
+export const SeverityDisplay: React.FC<SeverityDisplayProps> = ({ severity }) => {
+  return (
+    />;
+);
+    <SeverityIndicator 
+      severity={severity as "safe" | "suspicious" | "dangerous"} 
+import React from "react",;
+import { SeverityIndicator } from "@/components/ui/severity-indicator",;
+interface SeverityDisplayProps {;
+  severity: string;
+}
+;
+export const SeverityDisplay: React.FC<SeverityDisplayProps> = ({ severity }) => {;
+  return (;
+    <SeverityIndicator;
+      severity={severity as "safe" | "suspicious" | "dangerous"} ;
+      showIcon={true}
+      showText={true}
+    />;
+  );
+
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+}) => {
+
+  return (
+
+}) => {}
+export const SeverityDisplay: React.FC<SeverityDisplayProps> = ({;
+  severity,;
+}) => {;
+  return (
+
+    <SeverityIndicator;
+      severity={severity as "safe" | "suspicious" | "dangerous"}
+      show_icon={true}
+      show_text={true}
+    />);
+}
+;
+
+  severity: string
+}
+
+};
+    <SeverityIndicator
+
+      severity={severity as "safe" | "suspicious" | "dangerous"}
+      showIcon={true}
+      showText={true}
+    <SeverityIndicator "
+      severity={severity as "safe" | "suspicious" | "dangerous"} "
+import React from "react",;"
+import { SeverityIndicator } from "@/components/ui/severity-indicator",;
+interface SeverityDisplayProps {;
+  severity: string;
+}
+;
+export const SeverityDisplay: React.FC<SeverityDisplayProps> = ({ severity }) => {;
+  return (;
+    <SeverityIndicator;"
+      severity={severity as "safe" | "suspicious" | "dangerous"} ;
+      showIcon={true}
+      showText={true}
+    />;
+  );
+    />
+  )
+};
+  ),;
+
+      severity={severity as "safe" | "suspicious" | "dangerous"}
+      show_icon={true}
+      show_text={true}
+    />);
+}
+;
+
+}
+
+};
+<<<<<<< HEAD
+};
+=======
+};
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+}) => {
+  return (<SeverityIndicator />) 
+};
+};
+<<<<<<< HEAD
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc

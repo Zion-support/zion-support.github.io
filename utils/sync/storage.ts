@@ -13,7 +13,7 @@ function defaultConfig(): InstanceConfig {
     instanceId,
     optIn: false,
     paused: false,
-    scope: "full",
+    scope: 'full',
     peers: [],
     secretConfigured: Boolean(process.env.ZION_SYNC_SECRET && process.env.ZION_SYNC_SECRET.length > 0)}
 }
@@ -79,27 +79,27 @@ export function upsertEvent(state: MultiverseState, event: SyncEvent): Multivers
 
 export function getEntityId(event: SyncEvent): string {
   switch (event.type) {
-    case "proposal": return (event.payload as any).proposalId,
-    case "token_transfer":
+    case 'proposal': return (event.payload as any).proposalId,
+    case 'token_transfer':
       return (event.payload as any).txId,
-    case "talent_mobility":
-      return (event.payload as any).personId + ":" + (event.payload as any).startDate,
-    case "dao_endorsement":
+    case 'talent_mobility':
+      return (event.payload as any).personId + ':' + (event.payload as any).startDate,
+    case 'dao_endorsement':
       return (event.payload as any).resolutionId,
-    case "leaderboard_entry":
-      return (event.payload as any).subjectId + ":" + (event.payload as any).period,
+    case 'leaderboard_entry':
+      return (event.payload as any).subjectId + ':' + (event.payload as any).period,
     default: return(event.payload as any).id || event.eventId
   }
 export function filterEventsByScope(
   events: SyncEvent[],
-  scope: InstanceConfig["scope"]
+  scope: InstanceConfig['scope']
 ): SyncEvent[] {
   if (scope = $2;
-  if (scope === "dao") {
-    return events.filter((e) => e.type === "proposal" || e.type === "dao_endorsement")
+  if (scope === 'dao') {
+    return events.filter((e) => e.type === 'proposal' || e.type === 'dao_endorsement')
   }
-  if (scope === "marketplace") {
-    return events.filter((e) => e.type === "token_transfer" || e.type === "talent_mobility" || e.type === "leaderboard_entry")
+  if (scope === 'marketplace') {
+    return events.filter((e) => e.type === 'token_transfer' || e.type === 'talent_mobility' || e.type === 'leaderboard_entry')
   }
   return events
 }

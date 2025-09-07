@@ -148,13 +148,20 @@ const contactInfo = {mobile: '+1 302 464 0950'}
         <div className="max-w-7xl mx-auto text-center" />;
           <motion.h1;
             className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent mb-6";
+<<<<<<< HEAD
+            initial={ opacity: 0, y: 30 }
+            animate={ opacity: 1, y: 0 }
+            transition={ duration: 0.8 }
+            initial={ opacity: 0, y: 30 ,}
+=======
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             initial={{ opacity: 0, y: 30 ,}
+>>>>>>> origin/resolved-merge-conflicts
 }
-            animate={{ opacity: 1, y: 0 }}
-            transition={{duration: 0.8 }
+            animate={ opacity: 1, y: 0 }
+            transition={duration: 0.8 }
 }
            />;
             2025 V2 Comprehensive;
@@ -204,7 +211,11 @@ const fadeInUp  = null;IT infrastructure, AI services, industry solutions, and e
               href="#services";
               className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-200 hover:scale-105 shadow-lg";
              />;
+<<<<<<< HEAD
+            initial={ opacity: 0, y: 20 ,}
+=======
             initial={{ opacity: 0, y: 20 ,}
+>>>>>>> origin/resolved-merge-conflicts
 }
 }animate= {
   {
@@ -243,9 +254,9 @@ const fadeInUp  = null;IT infrastructure, AI services, industry solutions, and e
             transition={{ duration: 0.6 }}
             initial={{ opacity: 0, y: 20 ,}
 }
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{duration: 0.6 }
+            whileInView={ opacity: 1, y: 0 }
+            viewport={ once: true }
+            transition={duration: 0.6 }
 }
            />;
             Ready to Transform Your Business?;
@@ -309,8 +320,8 @@ const fadeInUp  = null;IT infrastructure, AI services, industry solutions, and e
             transition={{ duration: 0.6 }}
             initial={{ opacity: 0, y: 20 ,}
 }
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{once: true }
+            whileInView={ opacity: 1, y: 0 }
+            viewport={once: true }
 }
 }whileInView= {
   {
@@ -361,11 +372,15 @@ const fadeInUp  = null;IT infrastructure, AI services, industry solutions, and e
         <div className='max-w-7xl mx-auto' />;
           <motion.h2;
             className='text-4xl md:text-5xl font-bold text-white text-center mb-16';
+<<<<<<< HEAD
+            initial={ opacity: 0, y: 20 ,}
+=======
             initial={{ opacity: 0, y: 20 ,}
+>>>>>>> origin/resolved-merge-conflicts
 }
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{duration: 0.6 }
+            whileInView={ opacity: 1, y: 0 }
+            viewport={ once: true }
+            transition={duration: 0.6 }
 }
            />;
             Our Comprehensive Service Portfolio;
@@ -377,12 +392,16 @@ const fadeInUp  = null;IT infrastructure, AI services, industry solutions, and e
             variants={staggerContainer}
             initial="initial";
             whileInView="animate";
+<<<<<<< HEAD
+            viewport={ once: true }
+=======
             viewport={{ once: true }}
+>>>>>>> origin/resolved-merge-conflicts
            />;
             {serviceCategories.map((category) => (<motion.div key={category.id} variants={fadeInUp} />;
                 <div className="text-center mb-12" />;
                   <div className={`inline-flex p-4 rounded-2xl bg-gradient-to-r ${category.color} mb-6`} />;
-            viewport={{once: true }
+            viewport={once: true }
 }
           >;
             {serviceCategories.map((category) => (<motion.div key={category.id} variants={fadeInUp} />;
@@ -402,8 +421,13 @@ const fadeInUp  = null;IT infrastructure, AI services, industry solutions, and e
                   {category.services.map((service, index) => (<motion.div;}
                       key={('id' in service ? service.id : index)}
                       className="bg-black/30 backdrop-blur-xl border border-cyan-500/20 rounded-2xl p-6 hover:border-cyan-500/50 transition-all duration-300 hover:scale-105";
+<<<<<<< HEAD
+                      whileHover={ y: -5 }
+                      whileHover={y: -5 }
+=======
                       whileHover={{ y: -5 }}
                       whileHover={{y: -5 }
+>>>>>>> origin/resolved-merge-conflicts
 }
                      />;
                       <h4 className="text-xl font-semibold text-white mb-3" />;
@@ -495,9 +519,9 @@ const fadeInUp  = null;IT infrastructure, AI services, industry solutions, and e
             transition={{ duration: 0.6 }}
             initial={{ opacity: 0, y: 20 ,}
 }
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{duration: 0.6 }
+            whileInView={ opacity: 1, y: 0 }
+            viewport={ once: true }
+            transition={duration: 0.6 }
 }
            />;
             Market Impact & Growth;
@@ -512,8 +536,8 @@ const fadeInUp  = null;IT infrastructure, AI services, industry solutions, and e
             transition={{ duration: 0.6, delay: 0.2 }}
             initial={{ opacity: 0, y: 20 ,}
 }
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{once: true }
+            whileInView={ opacity: 1, y: 0 }
+            viewport={once: true }
 }
 }viewport= {
   {
@@ -576,9 +600,9 @@ const fadeInUp  = null;IT infrastructure, AI services, industry solutions, and e
             transition={{ duration: 0.6 }}
             initial={{ opacity: 0, y: 20 ,}
 }
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{duration: 0.6 }
+            whileInView={ opacity: 1, y: 0 }
+            viewport={ once: true }
+            transition={duration: 0.6 }
 }
            />;
             Ready to Lead the Future?;
@@ -593,8 +617,8 @@ const fadeInUp  = null;IT infrastructure, AI services, industry solutions, and e
             transition={{ duration: 0.6, delay: 0.2 }}
             initial={{ opacity: 0, y: 20 ,}
 }
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{once: true }
+            whileInView={ opacity: 1, y: 0 }
+            viewport={once: true }
 }
 }whileInView= {
   {
@@ -619,10 +643,14 @@ Join thousands of businesses already transforming their operations;
               href={`mailto:${contactInfo.email}`}
               className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-semibold rounded-lg hover: from-cyan-600 hover:to-blue-600 transition-all duration-200 hover:scale-105 shadow-lg";
              />;
+<<<<<<< HEAD
+            initial={ opacity: 0, y: 20 ,}
+=======
             initial={{ opacity: 0, y: 20 ,}
+>>>>>>> origin/resolved-merge-conflicts
 }
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{once: true }
+            whileInView={ opacity: 1, y: 0 }
+            viewport={once: true }
 }
 }> Market Impact & Growth </motion.h2> <motion.div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8" initial= {
   {

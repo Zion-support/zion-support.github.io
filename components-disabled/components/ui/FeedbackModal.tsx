@@ -39,10 +39,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     onClose(true)
   }
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/40">"
-      <div className="bg-white w-full max-w-md rounded shadow-lg p-5 space-y-4">"
-        <div className="text-lg font-medium">Was this helpful?</div>"
-        <div className="flex gap-2">
+    <div className='fixed inset-0 z-50 flex items-center justify-center bg-black/40'>'
+      <div className='bg-white w-full max-w-md rounded shadow-lg p-5 space-y-4'>'
+        <div className='text-lg font-medium'>Was this helpful?</div>'
+        <div className='flex gap-2'>
           {[1,2,3,4,5].map(n => (
   async function submit() {
     if (rating < 1) return onClose(false);

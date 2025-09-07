@@ -53,7 +53,7 @@ interface ProgressiveLoadingProps {
   {;
   delay: index * 0.1 ;
 }
-}> </div>) : index === activeStep ? (<LoadingSpinner size="sm" variant="primary" />) : (<div className="h-4 w-4 rounded-full border-2 border-muted" />) ;
+}> </div>) : index === activeStep ? (<LoadingSpinner size='sm' variant='primary' />) : (<div className='h-4 w-4 rounded-full border-2 border-muted' />) ;
 }</motion.div>) ) ;
 }</div> </div>) ;
 };
@@ -85,10 +85,10 @@ const getErrorConfig = () => {;''
   scale: 1, opacity: 1 ;
 }
 }transition= {;
-  {;"
-  duration: 0.3 ;"'"
-}";'"'"
-}> Error Details (Development) </summary> <pre className="mt-2 p-2 bg-muted rounded text-xs overflow-auto" > {';''
+  {;'
+  duration: 0.3 ;'''
+}';''''
+}> Error Details (Development) </summary> <pre className='mt-2 p-2 bg-muted rounded text-xs overflow-auto' > {';''
   typeof error === 'string' ? error : error.message ;
 }</pre> </details>) ;
 }</Button>) ;
@@ -102,12 +102,12 @@ const getErrorConfig = () => {;''
   card: `grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-$ {;'
   columns ;''`
 }gap-6`;';''
-list: 'space-y-4';';''"
-table: 'space-y-2' ;""
-};";""
-<> <Skeleton variant="rectangular" className="h-32" /> <div className="space-y-2" > <Skeleton variant="text" className="h-6 w-3/4" /> <Skeleton variant="text" lines= {;""
-  2 ";""
-}/> <div className="flex gap-2" > <Skeleton variant="text" className="h-4 w-16" /> <Skeleton variant="text" className="h-4 w-20" /> </div> </div> </>) ;
+list: 'space-y-4';';'''
+table: 'space-y-2' ;''
+};';''
+<> <Skeleton variant='rectangular' className='h-32' /> <div className='space-y-2' > <Skeleton variant='text' className='h-6 w-3/4' /> <Skeleton variant='text' lines= {;''
+  2 ';''
+}/> <div className='flex gap-2' > <Skeleton variant='text' className='h-4 w-16' /> <Skeleton variant='text' className='h-4 w-20' /> </div> </div> </>) ;
 }</div> </div>) ;
 }</div>) ;
 }</CardContent> </Card>) ) ;
@@ -119,6 +119,6 @@ table: 'space-y-2' ;""
   itemCount && (<span> {;
   itemCount ;
 }items loaded</span>) ;
-}</div>) ;'"
-};'"'"
-'"'"'"`
+}</div>) ;''
+};''''
+''''''`

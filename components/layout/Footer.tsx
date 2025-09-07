@@ -1,24 +1,105 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/resolved-merge-conflicts
+import React from 'react';
+import Link from 'next/link';
+
+const Footer: React.FC = () => {
+<<<<<<< HEAD
+  const currentYear = new Date().getFullYear();
+  
+=======
+	const currentYear = new Date().getFullYear();
+	return (
+		<footer className="border-t bg-white mt-16">
+			<div className="mx-auto max-w-7xl px-4 py-10 grid gap-8 md:grid-cols-3 text-sm">
+				<div>
+					<h3 className="font-semibold mb-3">Zion Tech Group</h3>
+					<p className="text-gray-600">Building practical AI and modern web solutions.</p>
+				</div>
+				<div>
+					<h4 className="font-semibold mb-3">Company</h4>
+					<ul className="space-y-2 text-gray-700">
+						<li><Link href="/about" className="hover:text-blue-600">About</Link></li>
+						<li><Link href="/services" className="hover:text-blue-600">Services</Link></li>
+						<li><Link href="/contact" className="hover:text-blue-600">Contact</Link></li>
+					</ul>
+				</div>
+				<div>
+					<h4 className="font-semibold mb-3">Legal</h4>
+					<ul className="space-y-2 text-gray-700">
+						<li><Link href="/privacy" className="hover:text-blue-600">Privacy</Link></li>
+						<li><Link href="/terms" className="hover:text-blue-600">Terms</Link></li>
+					</ul>
+				</div>
+			</div>
+			<div className="mx-auto max-w-7xl px-4 py-4 text-xs text-gray-500 border-t">
+				© {currentYear} Zion Tech Group. All rights reserved.
+			</div>
+		</footer>
+	);
+};
+
+export default Footer;
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+import React from 'react';
+import Link from 'next/link';
+
+
+
+import {
+  Phone
+  Mail
+  MapPin
+  Facebook
+  Twitter
+  Linkedin
+  Instagram
+  Code
+  Smartphone
+  Cloud
+  Database
+  Shield
+  Zap
+=======
+
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    return this.props.children;
+  }
+}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 import React from 'react';
 import Link from 'next/link';
 <<<<<<< HEAD
-import { Mail, Phone, MapPin, Facebook, Twitter, Linkedin, Instagram } from 'lucide-react';
+import { Mail, Phone, MapPin, Facebook, Twitter, Linkedin, Instagram, Github } from 'lucide-react';
 =======
 import { Mail, Phone, MapPin, Linkedin, Twitter, Github } from 'lucide-react';
->>>>>>> ecc7d9f9794e0ded6a8fec40c9673b04874eb1ff
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-88b9
 
 const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();
 
-  const services = [
 <<<<<<< HEAD
-    { name: 'AI Services', href: '/ai-services' },
-    { name: 'IT Services', href: '/it-services' },
-    { name: 'Micro SaaS', href: '/micro-saas' },
-    { name: 'Cloud Solutions', href: '/cloud-solutions' },
-    { name: 'Cybersecurity', href: '/security' },
-    { name: 'Data Analytics', href: '/data-analytics' }
-=======
+  const services = [
     { name: 'AI Development', href: '/services/ai-development' },
     { name: 'Cloud Solutions', href: '/services/cloud-solutions' },
     { name: 'Web Development', href: '/services/web-development' },
@@ -27,23 +108,18 @@ const Footer: React.FC = () => {
     { name: 'IoT Platforms', href: '/services/iot-platforms' },
     { name: 'Data Analytics', href: '/services/data-analytics' },
     { name: 'Cybersecurity', href: '/services/cybersecurity' },
->>>>>>> ecc7d9f9794e0ded6a8fec40c9673b04874eb1ff
   ];
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 
   const company = [
     { name: 'About Us', href: '/about' },
-<<<<<<< HEAD
-    { name: 'Our Team', href: '/team' },
-    { name: 'Careers', href: '/careers' },
-    { name: 'News', href: '/news' },
-    { name: 'Contact', href: '/contact' }
-=======
     { name: 'Our Team', href: '/about#team' },
     { name: 'Careers', href: '/careers' },
     { name: 'News & Updates', href: '/blog' },
     { name: 'Privacy Policy', href: '/privacy' },
     { name: 'Terms of Service', href: '/terms' },
->>>>>>> ecc7d9f9794e0ded6a8fec40c9673b04874eb1ff
   ];
 
   const resources = [
@@ -51,16 +127,6 @@ const Footer: React.FC = () => {
     { name: 'Case Studies', href: '/case-studies' },
     { name: 'Documentation', href: '/docs' },
     { name: 'Support', href: '/support' },
-<<<<<<< HEAD
-    { name: 'FAQ', href: '/faq' }
-  ];
-
-  const socialLinks = [
-    { name: 'Facebook', href: '#', icon: Facebook },
-    { name: 'Twitter', href: '#', icon: Twitter },
-    { name: 'LinkedIn', href: '#', icon: Linkedin },
-    { name: 'Instagram', href: '#', icon: Instagram }
-=======
     { name: 'FAQ', href: '/faq' },
   ];
 
@@ -68,147 +134,266 @@ const Footer: React.FC = () => {
     { name: 'LinkedIn', href: 'https://linkedin.com/company/zion-tech-group', icon: Linkedin },
     { name: 'Twitter', href: 'https://twitter.com/ziontechgroup', icon: Twitter },
     { name: 'GitHub', href: 'https://github.com/zion-tech-group', icon: Github },
->>>>>>> ecc7d9f9794e0ded6a8fec40c9673b04874eb1ff
   ];
 
-  return (
-    <footer className="bg-gray-900 text-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {/* Company Info */}
-          <div className="lg:col-span-1">
-            <div className="text-2xl font-bold text-blue-400 mb-4">Zion Tech Group</div>
-            <p className="text-gray-300 mb-6">
-<<<<<<< HEAD
-              Leading technology solutions provider helping businesses transform their digital presence with cutting-edge AI, cloud architecture, and innovative development services.
-=======
-              Leading technology solutions provider helping businesses transform their digital presence;
-              with cutting-edge AI, cloud architecture, and innovative development services.
->>>>>>> ecc7d9f9794e0ded6a8fec40c9673b04874eb1ff
-            </p>
-            <div className="flex space-x-4">
-              {socialLinks.map((social) => (
-                <a
-                  key={social.name}
-                  href={social.href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-gray-400 hover:text-blue-400 transition-colors"
-                  aria-label={social.name}
-                >
-                  <social.icon className="h-5 w-5" />
-                </a>
-              ))}
-            </div>
-          </div>
-          {/* Services */}
-          <div>
-            <h3 className="text-lg font-semibold mb-4">Services</h3>
-            <ul className="space-y-2">
-              {services.map((service) => (
-                <li key={service.name}>
-                  <Link
-                    href={service.href}
-                    className="text-gray-300 hover:text-blue-400 transition-colors"
-                  >
-                    {service.name}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-          {/* Company */}
-          <div>
-            <h3 className="text-lg font-semibold mb-4">Company</h3>
-            <ul className="space-y-2">
-              {company.map((item) => (
-                <li key={item.name}>
-                  <Link
-                    href={item.href}
-                    className="text-gray-300 hover:text-blue-400 transition-colors"
-                  >
-                    {item.name}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-          {/* Resources & Contact */}
-          <div>
-            <h3 className="text-lg font-semibold mb-4">Resources</h3>
-            <ul className="space-y-2 mb-6">
-              {resources.map((resource) => (
-                <li key={resource.name}>
-                  <Link
-                    href={resource.href}
-                    className="text-gray-300 hover:text-blue-400 transition-colors"
-                  >
-                    {resource.name}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-            <h3 className="text-lg font-semibold mb-4">Contact</h3>
-            <div className="space-y-2">
-              <div className="flex items-center text-gray-300">
-                <Mail className="h-4 w-4 mr-2" />
-                <a href="mailto:info@ziontechgroup.com" className="hover:text-blue-400">
-                  info@ziontechgroup.com
-                </a>
-              </div>
-              <div className="flex items-center text-gray-300">
-                <Phone className="h-4 w-4 mr-2" />
-<<<<<<< HEAD
-                <a href="tel:+13024640950" className="hover:text-blue-400">
-                  +1 302 464 0950
-=======
-                <a href="tel:+1-555-123-4567" className="hover:text-blue-400">
-                  +1 (555) 123-4567
->>>>>>> ecc7d9f9794e0ded6a8fec40c9673b04874eb1ff
-                </a>
-              </div>
-              <div className="flex items-start text-gray-300">
-                <MapPin className="h-4 w-4 mr-2 mt-0.5" />
-                <span>
-<<<<<<< HEAD
-                  364 E Main St STE 1008<br />
-                  Middletown DE 19709
-=======
-                  123 Tech Street<br />
-                  San Francisco, CA 94105
->>>>>>> ecc7d9f9794e0ded6a8fec40c9673b04874eb1ff
-                </span>
-              </div>
-            </div>
-          </div>
-        </div>
-<<<<<<< HEAD
+const company = [;
+    { "name": 'About Us', "href": '/about','
+},
+  { "name": 'Our Team', "href": '/team','
+},
+  { "name": 'Careers', "href": '/careers','
+},
+  { "name": 'News', "href": '/news','
+},
+{ "name": 'Contact', "href": '/contact','
+}
+  ];
 
-=======
->>>>>>> ecc7d9f9794e0ded6a8fec40c9673b04874eb1ff
-        {/* Bottom Section */}
-        <div className="border-t border-gray-700 mt-8 pt-8">
-          <div className="flex flex-col md:flex-row justify-between items-center">
-            <p className="text-gray-300 text-sm">
+const company = [
+    { name: 'About Us'}
+  href: '/about'}
+},
+  { name: 'Our Team'}
+  href: '/team'}
+},
+  { name: 'Careers'}
+  href: '/careers'}
+},
+  { name: 'News'}
+  href: '/news'}
+},
+{ name: 'Contact'}
+  href: '/contact'}
+}
+  ];
+
+const resources = [
+    { name: 'Documentation'}
+  href: '/docs'}
+},
+  { name: 'API Reference'}
+  href: '/api'}
+},
+  { name: 'Blog'}
+  href: '/blog'}
+},
+  { name: 'Case Studies'}
+  href: '/case-studies'}
+},
+{ name: 'White Papers'}
+  href: '/white-papers'}
+}
+  ];import { Phone,Mail,MapPin,Facebook,Twitter,Linkedin,Instagram,Code,Smartphone,Cloud,Database,Shield,Zap;}
+ } from 'lucide-react';
+
+const Footer: React.FC = () => {const currentYear = new Date().getFullYear(;
+  const services = [
+  import { 
+  Phone, 
+  Mail, 
+  MapPin, 
+  Facebook, 
+  Twitter, 
+  Linkedin, 
+  Instagram,
+  Code,
+  Smartphone,
+  Cloud,
+  Database,
 <<<<<<< HEAD
-              © {currentYear} Zion Tech Group. All rights reserved.
+  Shield}
+  Zap;}
 =======
-              &copy; {currentYear} Zion Tech Group. All rights reserved.
->>>>>>> ecc7d9f9794e0ded6a8fec40c9673b04874eb1ff
-            </p>
-            <div className="flex space-x-6 mt-4 md:mt-0">
-              <Link href="/privacy" className="text-gray-300 hover:text-blue-400 text-sm">
-                Privacy Policy
-              </Link>
-              <Link href="/terms" className="text-gray-300 hover:text-blue-400 text-sm">
-                Terms of Service
-              </Link>
-              <Link href="/sitemap" className="text-gray-300 hover:text-blue-400 text-sm">
-                Sitemap
-              </Link>
-            </div>
-          </div>
+  Shield,
+  Zap;
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+} from 'lucide-react';
+
+const Footer: React.FC = () => {
+
+  const currentYear = new Date().getFullYear()
+ ;
+  const services = [
+<<<<<<< HEAD
+    { name: 'Web Development'}
+  href: '/services/web-development'}
+}
+{ name: 'Mobile Apps'}
+  href: '/services/mobile-apps'}
+}
+    { name: 'AI Solutions'}
+  href: '/services/ai-solutions'}
+}
+    { name: 'Cloud Services'}
+  href: '/services/cloud-services'}
+}
+=======
+    { name: 'Web Development', href: '/services/web-development' }
+{ name: 'Mobile Apps', href: '/services/mobile-apps' }
+    { name: 'AI Solutions', href: '/services/ai-solutions' }
+    { name: 'Cloud Services', href: '/services/cloud-services' }
+  ];
+  const solutions = [
+    { name: 'E-commerce', href: '/solutions/ecommerce' }
+    { name: 'CRM Systems', href: '/solutions/crm' }
+    { name: 'Data Analytics', href: '/solutions/analytics' }
+    { name: 'Automation', href: '/solutions/automation' }
+  ];
+  const company = [
+    { name: 'About Us', href: '/about' }
+{ name: 'Our Team', href: '/team' }
+    { name: 'Careers', href: '/careers' }
+    { name: 'Contact', href: '/contact' }
+    { name: 'Privacy Policy', href: '/privacy' }
+    { name: 'Terms of Service', href: '/terms' }
+  ];
+  const socialLinks = [
+    { name: 'Facebook', href: '#', icon: Facebook }
+    { name: 'Twitter', href: '#', icon: Twitter }
+    { name: 'LinkedIn', href: '#', icon: Linkedin }
+    { name: 'Instagram', href: '#', icon: Instagram }
+
+<<<<<<< HEAD
+=======
+import { ;
+  Phone, ;
+  Mail, ;
+  MapPin, ;
+  Facebook, ;
+  Twitter, ;
+  Linkedin, ;
+  Instagram,;
+  Code,;
+  Smartphone,;
+  Cloud,;
+  Database,;
+  Shield,;
+  Zap;
+} from 'lucide-react';
+
+const Footer: React.FC = () => {;
+  const currentYear = new Date().getFullYear(),;
+
+  const services = [;
+    { name: 'Web Development', href: '/services/web-development' },;
+    { name: 'Mobile Apps', href: '/services/mobile-apps' },;
+    { name: 'AI Solutions', href: '/services/ai-solutions' },;
+    { name: 'Cloud Services', href: '/services/cloud-services' },;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+  ];
+
+const solutions = [
+  ];
+
+const company = [
+    { name: 'Careers'}
+  href: '/careers'}
+},
+  { name: 'Contact'}
+  href: '/contact'}
+},
+  { name: 'Privacy Policy'}
+  href: '/privacy'}
+},
+{ name: 'Terms of Service'}
+  href: '/terms'}
+}
+  ];
+
+const socialLinks = [
+  ];
+<<<<<<< HEAD
+  return (<footer className=\"bg-gray-900 text-white\"    />;"
+      <div className=\"container mx-auto px-4 py-12\"    />;"
+        <div className=\"grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8\"    />;
+          {/* Company Info */}"
+          <div className=\"lg:col-span-2\"    />;"
+            <div className=\"flex items-center space-x-2 mb-4\"    />;"
+              <div className=\"w-8 h-8 bg-blue-600 rounded-lg flex items-center justify-center\"    />;"
+                <Code className=\"w-5 h-5 text-white\"    />;
+              </div>;"
+              <span className=\"text-xl font-bold\"    />Zion Tech Group</span>;
+            </div>;"
+            <p className=\"text-gray-400 mb-6 max-w-sm\"    />;
+              Transforming businesses through innovative technology solutions.;
+              We deliver cutting-edge software, AI, and cloud services.;
+            </p>;"
+            <div className=\"space-y-3\"    />;"
+              <div className=\"flex items-center space-x-3\"    />;"
+                <Phone className=\"w-4 h-4 text-blue-400\"    />;"
+                <a href=\"tel:+13024640950\" className=\"text-gray-400 hover:text-white transition-colors\"    />;
+                  +1 302 464 0950;
+                </a>;
+              </div>;"
+              <div className=\"flex items-center space-x-3\"    />;"
+                <Mail className=\"w-4 h-4 text-blue-400\"    />;"
+                <a href=\"mailto:kleber@ziontechgroup.com\" className=\"text-gray-400 hover:text-white transition-colors\"    />;
+                  kleber@ziontechgroup.com;
+                </a>;
+              </div>;"
+              <div className=\"flex items-center space-x-3\"    />;"
+                <MapPin className=\"w-4 h-4 text-blue-400\"    />;"
+                <span className=\"text-gray-400\"    />;
+                  364 E Main St STE 1008<br    />;
+
+<<<<<<< HEAD
+const solutions = [
+  ];
+
+const company = [
+      { name: 'Careers'}
+  href: '/careers'}
+},
+
+      { name: 'Contact'}
+  href: '/contact'}
+},
+
+      { name: 'Privacy Policy'}
+  href: '/privacy'}
+},
+
+    { name: 'Terms of Service'}
+  href: '/terms'}
+}
+  ];
+
+const socialLinks = [
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+  ];
+>>>>>>> origin/resolved-merge-conflicts
+  return (
+    <footer className="border-t bg-white mt-16">
+      <div className="mx-auto max-w-7xl px-4 py-10 grid gap-8 md:grid-cols-3 text-sm">
+        <div>
+          <h3 className="font-semibold mb-3">Zion Tech Group</h3>
+          <p className="text-gray-600">Building practical AI and modern web solutions.</p>
         </div>
+        <div>
+          <h4 className="font-semibold mb-3">Company</h4>
+          <ul className="space-y-2 text-gray-700">
+            <li><Link href="/about" className="hover:text-blue-600">About</Link></li>
+            <li><Link href="/services" className="hover:text-blue-600">Services</Link></li>
+            <li><Link href="/contact" className="hover:text-blue-600">Contact</Link></li>
+          </ul>
+        </div>
+        <div>
+          <h4 className="font-semibold mb-3">Legal</h4>
+          <ul className="space-y-2 text-gray-700">
+            <li><Link href="/privacy" className="hover:text-blue-600">Privacy</Link></li>
+            <li><Link href="/terms" className="hover:text-blue-600">Terms</Link></li>
+          </ul>
+        </div>
+      </div>
+      <div className="mx-auto max-w-7xl px-4 py-4 text-xs text-gray-500 border-t">
+        © {currentYear} Zion Tech Group. All rights reserved.
       </div>
     </footer>
   );
@@ -218,6 +403,22 @@ const Footer: React.FC = () => {
 export default Footer;
 =======
 export default Footer;
+<<<<<<< HEAD
+=======
+
+export default Footer;
+"
+>>>>>>> origin/chore/fix-lint-and-merge
+=======
+<<<<<<< HEAD
+}
+}
+}
+}
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 =======
                   key = $2;
                   href = $2;
@@ -293,5 +494,6 @@ export default Footer;
           </div>,
         </div>,
         {/* Bottom Section */},
->>>>>>> origin/merge-automation-changes
->>>>>>> ecc7d9f9794e0ded6a8fec40c9673b04874eb1ff
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-88b9
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> origin/resolved-merge-conflicts

@@ -38,6 +38,20 @@ class ConflictResolver {
       let content = fs.readFileSync(filePath, 'utf8');
       const originalContent = content;
 
+      for (let i = 0; i < lines.length; i++) {
+        const line = lines[i];
+
+        if (line.includes('')) {
+          takeHead = false;
+          continue;
+        } else if (line.includes('>>>>>>>')) {
+          inConflict = false;
+          continue;
+        }
+
+        if (!inConflict || (inConflict && takeHead)) {
+          resolvedLines.push(line);
+      // Remove merge conflict markers
       // Remove merge conflict markers
       content = content.replace(/
       content = content.replace(/

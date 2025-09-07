@@ -16,7 +16,10 @@ class ComprehensiveSyntaxFixerEnhanced {;
     if (!fs.existsSync(this.reportsDir)) {;
       fs.mkdirSync(this.reportsDir, { "recursive": true });
     }
+<<<<<<< HEAD
   }
+=======
+>>>>>>> origin/resolved-merge-conflicts
 ;
   log(message) {;
     console.log(`[${new Date().toISOString()}] ${message}`);
@@ -36,7 +39,10 @@ class ComprehensiveSyntaxFixerEnhanced {;
       this.log(`❌ "Failed": ${description} - ${error.message}`);
       return { "success": false, "error": error.message };
     }
+<<<<<<< HEAD
   }
+=======
+>>>>>>> origin/resolved-merge-conflicts
 ;
   async fixCommonSyntaxErrors() {;
     this.log('🔧 Fixing common syntax errors...');
@@ -84,7 +90,10 @@ class ComprehensiveSyntaxFixerEnhanced {;
             modified = true;
             this.fixesApplied++;
           }
+<<<<<<< HEAD
         }
+=======
+>>>>>>> origin/resolved-merge-conflicts
 ;
         if (modified) {;
           fs.writeFileSync(file, content);
@@ -96,8 +105,11 @@ class ComprehensiveSyntaxFixerEnhanced {;
       } catch (error) {;
         this.log(`❌ Error processing ${file}: ${error.message}`);
       }
+<<<<<<< HEAD
     }
   }
+=======
+>>>>>>> origin/resolved-merge-conflicts
 ;
   async getFilesToProcess() {;
     const extensions = ['.js', '.jsx', '.ts', '.tsx', '.cjs', '.mjs'];
@@ -112,7 +124,10 @@ class ComprehensiveSyntaxFixerEnhanced {;
         } else if (stat.isFile() && extensions.includes(path.extname(item))) {;
           files.push(fullPath);
         }
+<<<<<<< HEAD
       }
+=======
+>>>>>>> origin/resolved-merge-conflicts
     };
     scanDirectory(this.projectRoot);
     return files;
@@ -139,7 +154,6 @@ class ComprehensiveSyntaxFixerEnhanced {;
     if (!lintResult.success) {;
       this.log('⚠️ Linting failed, but continuing with other fixes...');
     }
-  }
 ;
   async runTypeChecking() {;
     this.log('🔍 Running type checking...');
@@ -147,7 +161,6 @@ class ComprehensiveSyntaxFixerEnhanced {;
     if (!typeResult.success) {;
       this.log('⚠️ Type checking failed, but continuing...');
     }
-  }
 ;
   async runTests() {;
     this.log('🧪 Running tests...');
@@ -155,7 +168,6 @@ class ComprehensiveSyntaxFixerEnhanced {;
     if (!testResult.success) {;
       this.log('⚠️ Tests failed, but continuing...');
     }
-  }
 ;
   async runBuild() {;
     this.log('🏗️ Running build...');
@@ -163,7 +175,10 @@ class ComprehensiveSyntaxFixerEnhanced {;
     if (!buildResult.success) {;
       this.log('⚠️ Build failed, but continuing...');
     }
+<<<<<<< HEAD
   }
+=======
+>>>>>>> origin/resolved-merge-conflicts
 ;
   generateReport() {;
     const report = {;
@@ -206,8 +221,11 @@ class ComprehensiveSyntaxFixerEnhanced {;
       this.log(`❌ Comprehensive Syntax Fixer Enhanced "failed": ${error.message}`);
       throw error;
     }
+<<<<<<< HEAD
   }
 }
+=======
+>>>>>>> origin/resolved-merge-conflicts
 ;
 // Run if called directly;
 if (require.main === module) {;

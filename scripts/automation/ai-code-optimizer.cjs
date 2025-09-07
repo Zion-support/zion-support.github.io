@@ -1,7 +1,29 @@
+<<<<<<< HEAD
+#!/""usr/bin/env""
+const fs = require("fs");
+const path = require("path");
+const { execSync } = require("child_process");
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+>>>>>>> merged-prs-20250907-203621
 #!/""usr/bin/env""
 const fs = require("fs")
 const path = require("path")
 const { execSync } = require("child_process")
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   "performance"
       "memory"
       "security"
@@ -20,6 +42,16 @@ const { execSync } = require("child_process")
 // console.log("" Starting AI Code Optimization...")
       console.log(" AI Code Optimization completed successfully")
   console.error(" AI Code Optimization "failed": ")
+<<<<<<< HEAD
+  console.log(" Analyzing codebase for optimization opportunities...")
+const srcDir = path.join(process.cwd(), ";
+  console.log(" Analyzing codebase for optimization opportunities...")
+const srcDir = path.join(process.cwd(), "src";
+const items = await fs.readdir(dir, { "withFileTypes"});
+    } catch (error) {  console.log(⚠  Could not read directory ${dir  }: ${error.message}```)
+return [".js", ".jsx", ".ts", ".tsx", ".vue"];
+const content = await fs.readFile(filePath, "utf8");
+=======
   console.error(" AI Code Optimization "failed": ")
   console.log(" Analyzing codebase for optimization opportunities...")
     const srcDir = path.join(process.cwd(), "
@@ -29,6 +61,7 @@ const { execSync } = require("child_process")
     } catch (error) {  console.log(⚠  Could not read directory ${dir  }: ${error.message}```)
     return [".js", ".jsx", ".ts", ".tsx", ".vue"]
   const content = await fs.readFile(filePath, "utf8")
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
       this.optimizations.accessibility.push(...analysis.accessibility)} catch (error) {  console.log("⚠  Could not analyze file ${filePath  }: ${error.message}")
   "performance"
       "memory"
@@ -37,6 +70,10 @@ const { execSync } = require("child_process")
       "accessibility"
     if (content.includes("useEffect(() => {"}
   "type": "performance"
+<<<<<<< HEAD
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
         "file"
         "issue": "Missing dependency array in useEffect"
         "suggestion": "Add dependency array to prevent unnecessary re-renders"
@@ -56,6 +93,12 @@ const { execSync } = require("child_process")
     if (content.includes("useState(") && content.includes("useEffect(")
   "type": "memory"
         "file"
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
         "issue": "Potential memory leak with useState and useEffect"
         "suggestion": "Add cleanup function to useEffect"
         "priority": "high"
@@ -84,9 +127,16 @@ const { execSync } = require("child_process")
         "priority": "medium"
 // console.log("" Identifying optimization opportunities...")
   console.log("" Identifying optimization opportunities...")
+<<<<<<< HEAD
+return analysis;")}";
+"
+  async identifyOptimizationOpportunities() {"}
+=======
     return analysis;")}"
 "
   async identifyOptimizationOpportunities() {"}
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 // console.log(" Identifying optimization opportunities...")
 console.log(` Found ${totalOptimizations} optimization "opportunities"`)
       "Memory"
@@ -96,10 +146,22 @@ console.log(` Found ${totalOptimizations} optimization "opportunities"`)
   console.log(` Applying optimizations...``)
   if (optimization.priority === "critical")
   if (optimization.priority === "high")
+<<<<<<< HEAD
+        appliedCount++;")}")}"
+const content = await fs.readFile(filePath, "utf8");
+=======
+<<<<<<< HEAD
+
+=======
   if (optimization.priority === "high")
   if (optimization.priority === "high")
         appliedCount++;")}")}"
       const content = await fs.readFile(filePath, "utf8")
+<<<<<<< HEAD
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
         this.backupDir,${path.basename(filePath)}.backup.${Date.now()}"
   case "performance"
         case "memory"
@@ -124,6 +186,12 @@ console.log(` Found ${totalOptimizations} optimization "opportunities"`)
     if (optimization.issue.includes("XSS vulnerability")
         /""dangerouslySetInnerHTML/g"",// "TODO": Sanitize content before using dangerouslySetInnerHTML"
       // Add sanitization comment"
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
       optimized = optimized.replace(")
         /""dangerouslySetInnerHTML/g"",// "TODO": Sanitize content before using dangerouslySetInnerHTML"
     if (optimization.issue.includes("eval()"
@@ -137,10 +205,18 @@ console.log(` Found ${totalOptimizations} optimization "opportunities"`)
   console.log("" Measuring improvements...")
       this.analysisResults.securityFixes = this.optimizations.security.length} catch (error) {  console.log("⚠  Could not measure "improvements"})
   execSync("npm run build", { "stdio": "pipe"})
+<<<<<<< HEAD
+const { execSync } = require("child_process");
+const output = execSync("ps aux | grep node", { "encoding": "utf8"});
+const lines = output.split("\n");
+  "timestamp"
+=======
   const { execSync } = require("child_process")
       const output = execSync("ps aux | grep node", { "encoding": "utf8"})
       const lines = output.split("\n")
   "timestamp"
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
       "summary"
         "optimizationsApplied"
         "performanceGains"
@@ -156,7 +232,57 @@ console.log( AI optimization report saved to ${reportPath}")
   recommendations.push("� Memory optimization opportunities available")
   recommendations.push(♿ Accessibility improvements recommended for better user experience")
   console.log("🤖 Starting AI Code Optimizer...")
+<<<<<<< HEAD
+
+  console.error(" AI Code Optimizer "failed")
   console.error(" AI Code Optimizer "failed")
   console.error(" AI Code Optimizer "failed")
 
 
+
+=======
+<<<<<<< HEAD
+
+<<<<<<< HEAD
+=======
+
+  console.error( AI Code Optimizer failed")
+
+  console.error(" AI Code Optimizer failed)
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+  console.error(" AI Code Optimizer "failed")
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+<<<<<<< HEAD
+  console.error(" AI Code Optimizer "failed")
+>>>>>>> origin/chore/fix-lint-and-merge
+=======
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+  console.error(" AI Code Optimizer "failed")
+<<<<<<< HEAD
+
+<<<<<<< HEAD
+
+
+
+
+=======
+=======
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc

@@ -1,7 +1,7 @@
-import React, { useState, useEffect } from 'react';
-import Link from 'next/link';
-import { useRouter } from 'next/router';
-import { motion, AnimatePresence } from 'framer-motion';
+import React, { useState, useEffect } from 'react;
+import Link from next/link';
+import { useRouter } from 'next/router;
+import { motion, AnimatePresence } from framer-motion';
 import {
   X,
   Menu,
@@ -34,8 +34,7 @@ import {
   BookOpen,
   Target,
   TrendingUp,
-  Star,
-} from 'lucide-react';
+  Star} from 'lucide-react;
 
 interface SidebarItem {
   name: string;
@@ -53,203 +52,160 @@ interface SidebarItem {
 
 const sidebarSections = [
   {
-    title: 'Revolutionary Services',
+    title: Revolutionary Services',
     icon: Zap,
-    color: 'from-cyan-500 to-blue-600',
+    color: 'from-cyan-500 to-blue-600,
     items: [
       {
-        name: 'AI & Consciousness',
-        href: '/ai-services',
+        name: AI & Consciousness',
+        href: '/ai-services,
         icon: Brain,
-        description: 'Advanced AI consciousness and evolution platforms',
+        description: Advanced AI consciousness and evolution platforms',
         children: [
           {
-            name: 'AI Consciousness Evolution',
-            href: '/ai-consciousness-evolution',
-          },
-          { name: 'AI Autonomous Ecosystem', href: '/ai-autonomous-ecosystem' },
-          { name: 'AI Ethics & Governance', href: '/ai-ethics-governance' },
-          { name: 'AI Creativity Studio', href: '/ai-creativity-studio' },
-          { name: 'AI Education Platform', href: '/ai-education-platform' },
+            name: 'AI Consciousness Evolution,
+            href: /ai-consciousness-evolution'},
+          { name: 'AI Autonomous Ecosystem, href: /ai-autonomous-ecosystem' },
+          { name: 'AI Ethics & Governance, href: /ai-ethics-governance' },
+          { name: 'AI Creativity Studio, href: /ai-creativity-studio' },
+          { name: 'AI Education Platform, href: /ai-education-platform' },
           {
-            name: 'AI Healthcare Diagnostics',
-            href: '/ai-healthcare-diagnostics',
-          },
+            name: 'AI Healthcare Diagnostics,
+            href: /ai-healthcare-diagnostics'},
           {
-            name: 'AI Financial Intelligence',
-            href: '/ai-financial-intelligence',
-          },
+            name: 'AI Financial Intelligence,
+            href: /ai-financial-intelligence'},
           {
-            name: 'AI Sustainability Platform',
-            href: '/ai-sustainability-platform',
-          },
+            name: 'AI Sustainability Platform,
+            href: /ai-sustainability-platform'},
           {
-            name: 'AI Emotional Intelligence',
-            href: '/ai-emotional-intelligence-platform',
-          },
+            name: 'AI Emotional Intelligence,
+            href: /ai-emotional-intelligence-platform'},
           {
-            name: 'AI Legal Contract Analyzer',
-            href: '/ai-legal-contract-analyzer',
-          },
-        ],
-      },
+            name: 'AI Legal Contract Analyzer,
+            href: /ai-legal-contract-analyzer'}]},
       {
-        name: 'Quantum Computing',
-        href: '/quantum-services',
+        name: 'Quantum Computing,
+        href: /quantum-services',
         icon: Atom,
-        description: 'Next-generation quantum computing solutions',
+        description: 'Next-generation quantum computing solutions,
         children: [
           {
-            name: 'Quantum Cloud Infrastructure',
-            href: '/quantum-cloud-infrastructure',
-          },
-          { name: 'Quantum Bio-Computing', href: '/quantum-bio-computing' },
-          { name: 'Quantum Energy Platform', href: '/quantum-energy-platform' },
+            name: Quantum Cloud Infrastructure',
+            href: '/quantum-cloud-infrastructure},
+          { name: Quantum Bio-Computing', href: '/quantum-bio-computing },
+          { name: Quantum Energy Platform', href: '/quantum-energy-platform },
           {
-            name: 'Quantum Materials Discovery',
-            href: '/quantum-materials-discovery',
-          },
-          { name: 'Quantum Robotics', href: '/quantum-robotics' },
+            name: Quantum Materials Discovery',
+            href: '/quantum-materials-discovery},
+          { name: Quantum Robotics', href: '/quantum-robotics },
           {
-            name: 'Quantum Internet Security',
-            href: '/quantum-internet-security',
-          },
+            name: Quantum Internet Security',
+            href: '/quantum-internet-security},
           {
-            name: 'Quantum Logistics',
-            href: '/quantum-logistics-optimization',
-          },
+            name: Quantum Logistics',
+            href: '/quantum-logistics-optimization},
           {
-            name: 'Quantum Cybersecurity',
-            href: '/quantum-cybersecurity-platform',
-          },
-        ],
-      },
+            name: Quantum Cybersecurity',
+            href: '/quantum-cybersecurity-platform}]},
       {
-        name: 'Enterprise IT',
-        href: '/enterprise-it',
+        name: Enterprise IT',
+        href: '/enterprise-it,
         icon: Shield,
-        description: 'Enterprise-grade IT infrastructure and security',
+        description: Enterprise-grade IT infrastructure and security',
         children: [
           {
-            name: 'Edge Computing Orchestrator',
-            href: '/edge-computing-orchestration',
-          },
+            name: 'Edge Computing Orchestrator,
+            href: /edge-computing-orchestration'},
           {
-            name: 'Zero Trust Security Platform',
-            href: '/zero-trust-network-architecture',
-          },
+            name: 'Zero Trust Security Platform,
+            href: /zero-trust-network-architecture'},
           {
-            name: 'Blockchain Enterprise Platform',
-            href: '/blockchain-infrastructure-platform',
-          },
-          { name: 'AI-Powered DevOps', href: '/ai-powered-devops' },
-          { name: 'Quantum Networking', href: '/quantum-networking' },
+            name: 'Blockchain Enterprise Platform,
+            href: /blockchain-infrastructure-platform'},
+          { name: 'AI-Powered DevOps, href: /ai-powered-devops' },
+          { name: 'Quantum Networking, href: /quantum-networking' },
           {
-            name: 'Autonomous IT Operations',
-            href: '/autonomous-it-operations',
-          },
-          { name: 'Quantum Data Center', href: '/quantum-data-center' },
-          { name: 'Quantum Cloud Migration', href: '/quantum-cloud-migration' },
-        ],
-      },
-    ],
-  },
+            name: 'Autonomous IT Operations,
+            href: /autonomous-it-operations'},
+          { name: 'Quantum Data Center, href: /quantum-data-center' },
+          { name: 'Quantum Cloud Migration, href: /quantum-cloud-migration' }]}]},
   {
-    title: 'Innovation Hub',
+    title: 'Innovation Hub,
     icon: Rocket,
-    color: 'from-purple-500 to-pink-600',
+    color: from-purple-500 to-pink-600',
     items: [
       {
-        name: 'Research & Development',
-        href: '/research-development',
+        name: 'Research & Development,
+        href: /research-development',
         icon: Lightbulb,
-        description: 'Cutting-edge research and innovation',
+        description: 'Cutting-edge research and innovation,
         children: [
-          { name: 'AI Research Lab', href: '/ai-research-lab' },
-          { name: 'Quantum Research Center', href: '/quantum-research-center' },
-          { name: 'Biotech Innovation Hub', href: '/biotech-innovation-hub' },
-          { name: 'Space Technology Lab', href: '/space-technology-lab' },
-          { name: 'Green Technology Center', href: '/green-technology-center' },
-        ],
-      },
+          { name: AI Research Lab', href: '/ai-research-lab },
+          { name: Quantum Research Center', href: '/quantum-research-center },
+          { name: Biotech Innovation Hub', href: '/biotech-innovation-hub },
+          { name: Space Technology Lab', href: '/space-technology-lab },
+          { name: Green Technology Center', href: '/green-technology-center }]},
       {
-        name: 'Future Technologies',
-        href: '/future-technologies',
+        name: Future Technologies',
+        href: '/future-technologies,
         icon: Sparkles,
-        description: 'Emerging technologies and trends',
+        description: Emerging technologies and trends',
         children: [
-          { name: 'Metaverse Platform', href: '/metaverse-platform' },
+          { name: 'Metaverse Platform, href: /metaverse-platform' },
           {
-            name: 'Neural Interface Technology',
-            href: '/neural-interface-technology',
-          },
-          { name: 'Holographic Computing', href: '/holographic-computing' },
-          { name: 'Time Crystal Computing', href: '/time-crystal-computing' },
+            name: 'Neural Interface Technology,
+            href: /neural-interface-technology'},
+          { name: 'Holographic Computing, href: /holographic-computing' },
+          { name: 'Time Crystal Computing, href: /time-crystal-computing' },
           {
-            name: 'Consciousness Upload Platform',
-            href: '/consciousness-upload-platform',
-          },
-        ],
-      },
-    ],
-  },
+            name: 'Consciousness Upload Platform,
+            href: /consciousness-upload-platform'}]}]},
   {
-    title: 'Company',
+    title: 'Company,
     icon: Globe,
-    color: 'from-green-500 to-teal-600',
+    color: from-green-500 to-teal-600',
     items: [
       {
-        name: 'About Us',
-        href: '/about',
+        name: 'About Us,
+        href: /about',
         icon: Users,
-        description: 'Learn about our mission and vision',
-      },
+        description: 'Learn about our mission and vision},
       {
-        name: 'Leadership',
-        href: '/leadership',
+        name: Leadership',
+        href: '/leadership,
         icon: Award,
-        description: 'Meet our executive team',
-      },
+        description: Meet our executive team'},
       {
-        name: 'Careers',
-        href: '/careers',
+        name: 'Careers,
+        href: /careers',
         icon: Target,
-        description: 'Join our innovative team',
-      },
+        description: 'Join our innovative team},
       {
-        name: 'News & Media',
-        href: '/news',
+        name: News & Media',
+        href: '/news,
         icon: FileText,
-        description: 'Latest news and press releases',
-      },
-    ],
-  },
+        description: Latest news and press releases'}]},
   {
-    title: 'Support',
+    title: 'Support,
     icon: HelpCircle,
-    color: 'from-orange-500 to-red-600',
+    color: from-orange-500 to-red-600',
     items: [
       {
-        name: 'Documentation',
-        href: '/docs',
+        name: 'Documentation,
+        href: /docs',
         icon: BookOpen,
-        description: 'Technical documentation and guides',
-      },
+        description: 'Technical documentation and guides},
       {
-        name: 'Contact',
-        href: '/contact',
+        name: Contact',
+        href: '/contact,
         icon: Phone,
-        description: 'Get in touch with our team',
-      },
+        description: Get in touch with our team'},
       {
-        name: 'Status',
-        href: '/status',
+        name: 'Status,
+        href: /status',
         icon: BarChart3,
-        description: 'System status and uptime',
-      },
-    ],
-  },
-];
+        description: 'System status and uptime}]}];
 
 interface EnhancedSidebar2025Props {
   isOpen: boolean;
@@ -258,8 +214,7 @@ interface EnhancedSidebar2025Props {
 
 const EnhancedSidebar2025: React.FC<EnhancedSidebar2025Props> = ({
   isOpen,
-  onClose,
-}) => {
+  onClose}) => {
   const router = useRouter();
   const [expandedSections, setExpandedSections] = useState<string[]>([]);
   const [expandedItems, setExpandedItems] = useState<string[]>([]);
@@ -270,7 +225,7 @@ const EnhancedSidebar2025: React.FC<EnhancedSidebar2025Props> = ({
         ? prev.filter(title => title !== sectionTitle)
         : [...prev, sectionTitle]
     );
-  };
+  }
 
   const toggleItem = (itemName: string) => {
     setExpandedItems(prev =>
@@ -278,7 +233,7 @@ const EnhancedSidebar2025: React.FC<EnhancedSidebar2025Props> = ({
         ? prev.filter(name => name !== itemName)
         : [...prev, itemName]
     );
-  };
+  }
 
   const isActive = (href: string) => router.pathname === href;
 
@@ -290,62 +245,62 @@ const EnhancedSidebar2025: React.FC<EnhancedSidebar2025Props> = ({
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
-          className="fixed inset-0 bg-black bg-opacity-50 z-40 lg:hidden"
+          className="fixed inset-0 bg-black bg-opacity-50 z-40 lg:hidden
           onClick={onClose}
         />
       )}
 
       {/* Sidebar */}
       <motion.div
-        initial={{ x: '-100%' }}
-        animate={{ x: isOpen ? 0 : '-100%' }}
-        exit={{ x: '-100%' }}
-        transition={{ type: 'spring', damping: 25, stiffness: 200 }}
-        className="fixed top-0 left-0 h-full w-80 bg-white shadow-2xl z-50 lg:translate-x-0 lg:static lg:shadow-none"
+        initial={{ x: -100%' }}
+        animate={{ x: isOpen ? 0 : '-100% }}
+        exit={{ x: -100%' }}
+        transition={{ type: 'spring, damping: 25, stiffness: 200 }}
+        className=fixed top-0 left-0 h-full w-80 bg-white shadow-2xl z-50 lg:translate-x-0 lg:static lg:shadow-none"
       >
-        <div className="flex flex-col h-full">
+        <div className="flex flex-col h-full>
           {/* Header */}
-          <div className="flex items-center justify-between p-6 border-b border-gray-200">
-            <div className="flex items-center">
-              <div className="w-10 h-10 bg-gradient-to-r from-blue-600 to-purple-600 rounded-xl flex items-center justify-center">
-                <span className="text-white font-bold text-lg">Z</span>
+          <div className=flex items-center justify-between p-6 border-b border-gray-200">
+            <div className="flex items-center>
+              <div className=w-10 h-10 bg-gradient-to-r from-blue-600 to-purple-600 rounded-xl flex items-center justify-center">
+                <span className="text-white font-bold text-lg>Z</span>
               </div>
-              <div className="ml-3">
-                <h1 className="text-xl font-bold text-gray-900">Zion Tech</h1>
-                <p className="text-sm text-gray-500">2025 Edition</p>
+              <div className=ml-3">
+                <h1 className="text-xl font-bold text-gray-900>Zion Tech</h1>
+                <p className=text-sm text-gray-500">2025 Edition</p>
               </div>
             </div>
             <button
               onClick={onClose}
-              className="lg:hidden p-2 rounded-lg hover:bg-gray-100 transition-colors"
+              className="lg:hidden p-2 rounded-lg hover:bg-gray-100 transition-colors
             >
-              <X className="w-6 h-6" />
+              <X className=w-6 h-6" />
             </button>
           </div>
 
           {/* Navigation */}
-          <div className="flex-1 overflow-y-auto p-4">
-            <div className="space-y-6">
+          <div className="flex-1 overflow-y-auto p-4>
+            <div className=space-y-6">
               {sidebarSections.map((section, sectionIndex) => (
                 <div key={sectionIndex}>
                   <button
                     onClick={() => toggleSection(section.title)}
-                    className="w-full flex items-center justify-between p-3 rounded-lg hover:bg-gray-50 transition-colors"
+                    className="w-full flex items-center justify-between p-3 rounded-lg hover:bg-gray-50 transition-colors
                   >
-                    <div className="flex items-center">
+                    <div className=flex items-center">
                       <div
                         className={`w-8 h-8 bg-gradient-to-r ${section.color} rounded-lg flex items-center justify-center mr-3`}
                       >
-                        <section.icon className="w-4 h-4 text-white" />
+                        <section.icon className="w-4 h-4 text-white />
                       </div>
-                      <span className="font-semibold text-gray-900">
+                      <span className=font-semibold text-gray-900">
                         {section.title}
                       </span>
                     </div>
                     {expandedSections.includes(section.title) ? (
-                      <ChevronDown className="w-5 h-5 text-gray-500" />
+                      <ChevronDown className="w-5 h-5 text-gray-500 />
                     ) : (
-                      <ChevronRight className="w-5 h-5 text-gray-500" />
+                      <ChevronRight className=w-5 h-5 text-gray-500" />
                     )}
                   </button>
 
@@ -353,9 +308,9 @@ const EnhancedSidebar2025: React.FC<EnhancedSidebar2025Props> = ({
                     {expandedSections.includes(section.title) && (
                       <motion.div
                         initial={{ opacity: 0, height: 0 }}
-                        animate={{ opacity: 1, height: 'auto' }}
+                        animate={{ opacity: 1, height: auto' }}
                         exit={{ opacity: 0, height: 0 }}
-                        className="mt-2 space-y-1"
+                        className="mt-2 space-y-1
                       >
                         {section.items.map((item, itemIndex) => (
                           <div key={itemIndex}>
@@ -364,15 +319,15 @@ const EnhancedSidebar2025: React.FC<EnhancedSidebar2025Props> = ({
                               onClick={onClose}
                               className={`flex items-center p-3 rounded-lg transition-colors ${
                                 isActive(item.href)
-                                  ? 'bg-blue-50 text-blue-700 border-l-4 border-blue-600'
-                                  : 'text-gray-700 hover:bg-gray-50'
+                                  ? 'bg-blue-50 text-blue-700 border-l-4 border-blue-600
+                                  : text-gray-700 hover:bg-gray-50'
                               }`}
                             >
-                              <item.icon className="w-5 h-5 mr-3" />
-                              <div className="flex-1">
-                                <div className="font-medium">{item.name}</div>
+                              <item.icon className=w-5 h-5 mr-3" />
+                              <div className="flex-1>
+                                <div className=font-medium">{item.name}</div>
                                 {item.description && (
-                                  <div className="text-sm text-gray-500">
+                                  <div className="text-sm text-gray-500>
                                     {item.description}
                                   </div>
                                 )}
@@ -383,12 +338,12 @@ const EnhancedSidebar2025: React.FC<EnhancedSidebar2025Props> = ({
                                     e.preventDefault();
                                     toggleItem(item.name);
                                   }}
-                                  className="p-1 hover:bg-gray-200 rounded"
+                                  className=p-1 hover:bg-gray-200 rounded"
                                 >
                                   {expandedItems.includes(item.name) ? (
-                                    <ChevronDown className="w-4 h-4" />
+                                    <ChevronDown className="w-4 h-4 />
                                   ) : (
-                                    <ChevronRight className="w-4 h-4" />
+                                    <ChevronRight className=w-4 h-4" />
                                   )}
                                 </button>
                               )}
@@ -399,9 +354,9 @@ const EnhancedSidebar2025: React.FC<EnhancedSidebar2025Props> = ({
                                 {expandedItems.includes(item.name) && (
                                   <motion.div
                                     initial={{ opacity: 0, height: 0 }}
-                                    animate={{ opacity: 1, height: 'auto' }}
+                                    animate={{ opacity: 1, height: 'auto }}
                                     exit={{ opacity: 0, height: 0 }}
-                                    className="ml-8 mt-1 space-y-1"
+                                    className="ml-8 mt-1 space-y-1
                                   >
                                     {item.children.map((child, childIndex) => (
                                       <Link
@@ -410,8 +365,8 @@ const EnhancedSidebar2025: React.FC<EnhancedSidebar2025Props> = ({
                                         onClick={onClose}
                                         className={`block p-2 rounded-lg text-sm transition-colors ${
                                           isActive(child.href)
-                                            ? 'bg-blue-50 text-blue-700'
-                                            : 'text-gray-600 hover:bg-gray-50'
+                                            ? bg-blue-50 text-blue-700'
+                                            : 'text-gray-600 hover:bg-gray-50
                                         }`}
                                       >
                                         {child.name}
@@ -432,24 +387,24 @@ const EnhancedSidebar2025: React.FC<EnhancedSidebar2025Props> = ({
           </div>
 
           {/* Footer */}
-          <div className="p-4 border-t border-gray-200">
-            <div className="flex items-center space-x-4">
+          <div className=p-4 border-t border-gray-200">
+            <div className="flex items-center space-x-4>
               <a
-                href="https://linkedin.com/company/ziontechgroup"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="p-2 text-gray-400 hover:text-blue-600 transition-colors"
+                href=https://linkedin.com/company/ziontechgroup"
+                target="_blank
+                rel=noopener noreferrer"
+                className="p-2 text-gray-400 hover:text-blue-600 transition-colors
               >
-                <Globe className="w-5 h-5" />
+                <Globe className=w-5 h-5" />
               </a>
               <a
-                href="mailto:info@ziontechgroup.com"
-                className="p-2 text-gray-400 hover:text-gray-600 transition-colors"
+                href="mailto:info@ziontechgroup.com
+                className=p-2 text-gray-400 hover:text-gray-600 transition-colors"
               >
-                <Mail className="w-5 h-5" />
+                <Mail className="w-5 h-5 />
               </a>
             </div>
-            <p className="mt-2 text-xs text-gray-500">
+            <p className=mt-2 text-xs text-gray-500">
               © 2025 Zion Tech Group. All rights reserved.
             </p>
           </div>
@@ -457,16 +412,15 @@ const EnhancedSidebar2025: React.FC<EnhancedSidebar2025Props> = ({
       </motion.div>
     </>
   );
-};
+}
 
 export default EnhancedSidebar2025;
 origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 
-import React, { useState, useEffect } from 'react';
-import Link from 'next/link';
-import { useRouter } from 'next/router';
-import { motion, AnimatePresence } from 'framer-motion';
-import {
+import React, { useState, useEffect } from react';
+import Link from 'next/link;
+import { useRouter } from next/router';
+import { motion, AnimatePresence } from 'framer-motion;
   X,
   Menu,
   Home,
@@ -498,8 +452,7 @@ import {
   BookOpen,
   Target,
   TrendingUp,
-  Star,
-} from 'lucide-react';
+  Star} from lucide-react';
 
 interface SidebarItem {
   name: string;
@@ -515,236 +468,184 @@ interface SidebarItem {
   category?: string;
 }
 
-const sidebarSections = [
   {
-    title: 'Revolutionary Services',
+    title: 'Revolutionary Services,
     icon: Zap,
-    color: 'from-cyan-500 to-blue-600',
+    color: from-cyan-500 to-blue-600',
     items: [
       {
-        name: 'AI & Consciousness',
-        href: '/ai-services',
+        name: 'AI & Consciousness,
+        href: /ai-services',
         icon: Brain,
-        description: 'Advanced AI consciousness and evolution platforms',
+        description: 'Advanced AI consciousness and evolution platforms,
         children: [
           {
-            name: 'AI Consciousness Evolution',
-            href: '/ai-consciousness-evolution',
-          },
-          { name: 'AI Autonomous Ecosystem', href: '/ai-autonomous-ecosystem' },
-          { name: 'AI Ethics & Governance', href: '/ai-ethics-governance' },
-          { name: 'AI Creativity Studio', href: '/ai-creativity-studio' },
-          { name: 'AI Education Platform', href: '/ai-education-platform' },
+            name: AI Consciousness Evolution',
+            href: '/ai-consciousness-evolution},
+          { name: AI Autonomous Ecosystem', href: '/ai-autonomous-ecosystem },
+          { name: AI Ethics & Governance', href: '/ai-ethics-governance },
+          { name: AI Creativity Studio', href: '/ai-creativity-studio },
+          { name: AI Education Platform', href: '/ai-education-platform },
           {
-            name: 'AI Healthcare Diagnostics',
-            href: '/ai-healthcare-diagnostics',
-          },
+            name: AI Healthcare Diagnostics',
+            href: '/ai-healthcare-diagnostics},
           {
-            name: 'AI Financial Intelligence',
-            href: '/ai-financial-intelligence',
-          },
+            name: AI Financial Intelligence',
+            href: '/ai-financial-intelligence},
           {
-            name: 'AI Sustainability Platform',
-            href: '/ai-sustainability-platform',
-          },
+            name: AI Sustainability Platform',
+            href: '/ai-sustainability-platform},
           {
-            name: 'AI Emotional Intelligence',
-            href: '/ai-emotional-intelligence-platform',
-          },
+            name: AI Emotional Intelligence',
+            href: '/ai-emotional-intelligence-platform},
           {
-            name: 'AI Legal Contract Analyzer',
-            href: '/ai-legal-contract-analyzer',
-          },
-        ],
-      },
+            name: AI Legal Contract Analyzer',
+            href: '/ai-legal-contract-analyzer}]},
       {
-        name: 'Quantum Computing',
-        href: '/quantum-services',
+        name: Quantum Computing',
+        href: '/quantum-services,
         icon: Atom,
-        description: 'Next-generation quantum computing solutions',
+        description: Next-generation quantum computing solutions',
         children: [
           {
-            name: 'Quantum Cloud Infrastructure',
-            href: '/quantum-cloud-infrastructure',
-          },
-          { name: 'Quantum Bio-Computing', href: '/quantum-bio-computing' },
-          { name: 'Quantum Energy Platform', href: '/quantum-energy-platform' },
+            name: 'Quantum Cloud Infrastructure,
+            href: /quantum-cloud-infrastructure'},
+          { name: 'Quantum Bio-Computing, href: /quantum-bio-computing' },
+          { name: 'Quantum Energy Platform, href: /quantum-energy-platform' },
           {
-            name: 'Quantum Materials Discovery',
-            href: '/quantum-materials-discovery',
-          },
-          { name: 'Quantum Robotics', href: '/quantum-robotics' },
+            name: 'Quantum Materials Discovery,
+            href: /quantum-materials-discovery'},
+          { name: 'Quantum Robotics, href: /quantum-robotics' },
           {
-            name: 'Quantum Internet Security',
-            href: '/quantum-internet-security',
-          },
+            name: 'Quantum Internet Security,
+            href: /quantum-internet-security'},
           {
-            name: 'Quantum Logistics',
-            href: '/quantum-logistics-optimization',
-          },
+            name: 'Quantum Logistics,
+            href: /quantum-logistics-optimization'},
           {
-            name: 'Quantum Cybersecurity',
-            href: '/quantum-cybersecurity-platform',
-          },
-        ],
-      },
+            name: 'Quantum Cybersecurity,
+            href: /quantum-cybersecurity-platform'}]},
       {
-        name: 'Enterprise IT',
-        href: '/enterprise-it',
+        name: 'Enterprise IT,
+        href: /enterprise-it',
         icon: Shield,
-        description: 'Enterprise-grade IT infrastructure and security',
+        description: 'Enterprise-grade IT infrastructure and security,
         children: [
           {
-            name: 'Edge Computing Orchestrator',
-            href: '/edge-computing-orchestration',
-          },
+            name: Edge Computing Orchestrator',
+            href: '/edge-computing-orchestration},
           {
-            name: 'Zero Trust Security Platform',
-            href: '/zero-trust-network-architecture',
-          },
+            name: Zero Trust Security Platform',
+            href: '/zero-trust-network-architecture},
           {
-            name: 'Blockchain Enterprise Platform',
-            href: '/blockchain-infrastructure-platform',
-          },
-          { name: 'AI-Powered DevOps', href: '/ai-powered-devops' },
-          { name: 'Quantum Networking', href: '/quantum-networking' },
+            name: Blockchain Enterprise Platform',
+            href: '/blockchain-infrastructure-platform},
+          { name: AI-Powered DevOps', href: '/ai-powered-devops },
+          { name: Quantum Networking', href: '/quantum-networking },
           {
-            name: 'Autonomous IT Operations',
-            href: '/autonomous-it-operations',
-          },
-          { name: 'Quantum Data Center', href: '/quantum-data-center' },
-          { name: 'Quantum Cloud Migration', href: '/quantum-cloud-migration' },
-        ],
-      },
-    ],
-  },
+            name: Autonomous IT Operations',
+            href: '/autonomous-it-operations},
+          { name: Quantum Data Center', href: '/quantum-data-center },
+          { name: Quantum Cloud Migration', href: '/quantum-cloud-migration }]}]},
   {
-    title: 'Innovation Hub',
+    title: Innovation Hub',
     icon: Rocket,
-    color: 'from-purple-500 to-pink-600',
+    color: 'from-purple-500 to-pink-600,
     items: [
       {
-        name: 'Research & Development',
-        href: '/research-development',
+        name: Research & Development',
+        href: '/research-development,
         icon: Lightbulb,
-        description: 'Cutting-edge research and innovation',
+        description: Cutting-edge research and innovation',
         children: [
-          { name: 'AI Research Lab', href: '/ai-research-lab' },
-          { name: 'Quantum Research Center', href: '/quantum-research-center' },
-          { name: 'Biotech Innovation Hub', href: '/biotech-innovation-hub' },
-          { name: 'Space Technology Lab', href: '/space-technology-lab' },
-          { name: 'Green Technology Center', href: '/green-technology-center' },
-        ],
-      },
+          { name: 'AI Research Lab, href: /ai-research-lab' },
+          { name: 'Quantum Research Center, href: /quantum-research-center' },
+          { name: 'Biotech Innovation Hub, href: /biotech-innovation-hub' },
+          { name: 'Space Technology Lab, href: /space-technology-lab' },
+          { name: 'Green Technology Center, href: /green-technology-center' }]},
       {
-        name: 'Future Technologies',
-        href: '/future-technologies',
+        name: 'Future Technologies,
+        href: /future-technologies',
         icon: Sparkles,
-        description: 'Emerging technologies and trends',
+        description: 'Emerging technologies and trends,
         children: [
-          { name: 'Metaverse Platform', href: '/metaverse-platform' },
+          { name: Metaverse Platform', href: '/metaverse-platform },
           {
-            name: 'Neural Interface Technology',
-            href: '/neural-interface-technology',
-          },
-          { name: 'Holographic Computing', href: '/holographic-computing' },
-          { name: 'Time Crystal Computing', href: '/time-crystal-computing' },
+            name: Neural Interface Technology',
+            href: '/neural-interface-technology},
+          { name: Holographic Computing', href: '/holographic-computing },
+          { name: Time Crystal Computing', href: '/time-crystal-computing },
           {
-            name: 'Consciousness Upload Platform',
-            href: '/consciousness-upload-platform',
-          },
-        ],
-      },
-    ],
-  },
+            name: Consciousness Upload Platform',
+            href: '/consciousness-upload-platform}]}]},
   {
-    title: 'Company',
+    title: Company',
     icon: Globe,
-    color: 'from-green-500 to-teal-600',
+    color: 'from-green-500 to-teal-600,
     items: [
       {
-        name: 'About Us',
-        href: '/about',
+        name: About Us',
+        href: '/about,
         icon: Users,
-        description: 'Learn about our mission and vision',
-      },
+        description: Learn about our mission and vision'},
       {
-        name: 'Leadership',
-        href: '/leadership',
+        name: 'Leadership,
+        href: /leadership',
         icon: Award,
-        description: 'Meet our executive team',
-      },
+        description: 'Meet our executive team},
       {
-        name: 'Careers',
-        href: '/careers',
+        name: Careers',
+        href: '/careers,
         icon: Target,
-        description: 'Join our innovative team',
-      },
+        description: Join our innovative team'},
       {
-        name: 'News & Media',
-        href: '/news',
+        name: 'News & Media,
+        href: /news',
         icon: FileText,
-        description: 'Latest news and press releases',
-      },
-    ],
-  },
+        description: 'Latest news and press releases}]},
   {
-    title: 'Support',
+    title: Support',
     icon: HelpCircle,
-    color: 'from-orange-500 to-red-600',
+    color: 'from-orange-500 to-red-600,
     items: [
       {
-        name: 'Documentation',
-        href: '/docs',
+        name: Documentation',
+        href: '/docs,
         icon: BookOpen,
-        description: 'Technical documentation and guides',
-      },
+        description: Technical documentation and guides'},
       {
-        name: 'Contact',
-        href: '/contact',
+        name: 'Contact,
+        href: /contact',
         icon: Phone,
-        description: 'Get in touch with our team',
-      },
+        description: 'Get in touch with our team},
       {
-        name: 'Status',
-        href: '/status',
+        name: Status',
+        href: '/status,
         icon: BarChart3,
-        description: 'System status and uptime',
-      },
-    ],
-  },
-];
+        description: System status and uptime'}]}];
 
 interface EnhancedSidebar2025Props {
   isOpen: boolean;
   onClose: () => void;
 }
 
-const EnhancedSidebar2025: React.FC<EnhancedSidebar2025Props> = ({
   isOpen,
-  onClose,
-}) => {
-  const router = useRouter();
-  const [expandedSections, setExpandedSections] = useState<string[]>([]);
-  const [expandedItems, setExpandedItems] = useState<string[]>([]);
+  onClose}) => {
 
-  const toggleSection = (sectionTitle: string) => {
     setExpandedSections(prev =>
       prev.includes(sectionTitle)
         ? prev.filter(title => title !== sectionTitle)
         : [...prev, sectionTitle]
     );
-  };
+  }
 
-  const toggleItem = (itemName: string) => {
     setExpandedItems(prev =>
       prev.includes(itemName)
         ? prev.filter(name => name !== itemName)
         : [...prev, itemName]
     );
-  };
+  }
 
-  const isActive = (href: string) => router.pathname === href;
 
   return (
     <>
@@ -754,62 +655,62 @@ const EnhancedSidebar2025: React.FC<EnhancedSidebar2025Props> = ({
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
-          className="fixed inset-0 bg-black bg-opacity-50 z-40 lg:hidden"
+          className="fixed inset-0 bg-black bg-opacity-50 z-40 lg:hidden
           onClick={onClose}
         />
       )}
 
       {/* Sidebar */}
       <motion.div
-        initial={{ x: '-100%' }}
-        animate={{ x: isOpen ? 0 : '-100%' }}
-        exit={{ x: '-100%' }}
-        transition={{ type: 'spring', damping: 25, stiffness: 200 }}
-        className="fixed top-0 left-0 h-full w-80 bg-white shadow-2xl z-50 lg:translate-x-0 lg:static lg:shadow-none"
+        initial={{ x: '-100% }}
+        animate={{ x: isOpen ? 0 : -100%' }}
+        exit={{ x: '-100% }}
+        transition={{ type: spring', damping: 25, stiffness: 200 }}
+        className=fixed top-0 left-0 h-full w-80 bg-white shadow-2xl z-50 lg:translate-x-0 lg:static lg:shadow-none"
       >
-        <div className="flex flex-col h-full">
+        <div className="flex flex-col h-full>
           {/* Header */}
-          <div className="flex items-center justify-between p-6 border-b border-gray-200">
-            <div className="flex items-center">
-              <div className="w-10 h-10 bg-gradient-to-r from-blue-600 to-purple-600 rounded-xl flex items-center justify-center">
-                <span className="text-white font-bold text-lg">Z</span>
+          <div className=flex items-center justify-between p-6 border-b border-gray-200">
+            <div className="flex items-center>
+              <div className=w-10 h-10 bg-gradient-to-r from-blue-600 to-purple-600 rounded-xl flex items-center justify-center">
+                <span className="text-white font-bold text-lg>Z</span>
               </div>
-              <div className="ml-3">
-                <h1 className="text-xl font-bold text-gray-900">Zion Tech</h1>
-                <p className="text-sm text-gray-500">2025 Edition</p>
+              <div className=ml-3">
+                <h1 className="text-xl font-bold text-gray-900>Zion Tech</h1>
+                <p className=text-sm text-gray-500">2025 Edition</p>
               </div>
             </div>
             <button
               onClick={onClose}
-              className="lg:hidden p-2 rounded-lg hover:bg-gray-100 transition-colors"
+              className="lg:hidden p-2 rounded-lg hover:bg-gray-100 transition-colors
             >
-              <X className="w-6 h-6" />
+              <X className=w-6 h-6" />
             </button>
           </div>
 
           {/* Navigation */}
-          <div className="flex-1 overflow-y-auto p-4">
-            <div className="space-y-6">
+          <div className="flex-1 overflow-y-auto p-4>
+            <div className=space-y-6">
               {sidebarSections.map((section, sectionIndex) => (
                 <div key={sectionIndex}>
                   <button
                     onClick={() => toggleSection(section.title)}
-                    className="w-full flex items-center justify-between p-3 rounded-lg hover:bg-gray-50 transition-colors"
+                    className="w-full flex items-center justify-between p-3 rounded-lg hover:bg-gray-50 transition-colors
                   >
-                    <div className="flex items-center">
+                    <div className=flex items-center">
                       <div
                         className={`w-8 h-8 bg-gradient-to-r ${section.color} rounded-lg flex items-center justify-center mr-3`}
                       >
-                        <section.icon className="w-4 h-4 text-white" />
+                        <section.icon className="w-4 h-4 text-white />
                       </div>
-                      <span className="font-semibold text-gray-900">
+                      <span className=font-semibold text-gray-900">
                         {section.title}
                       </span>
                     </div>
                     {expandedSections.includes(section.title) ? (
-                      <ChevronDown className="w-5 h-5 text-gray-500" />
+                      <ChevronDown className="w-5 h-5 text-gray-500 />
                     ) : (
-                      <ChevronRight className="w-5 h-5 text-gray-500" />
+                      <ChevronRight className=w-5 h-5 text-gray-500" />
                     )}
                   </button>
 
@@ -817,9 +718,9 @@ const EnhancedSidebar2025: React.FC<EnhancedSidebar2025Props> = ({
                     {expandedSections.includes(section.title) && (
                       <motion.div
                         initial={{ opacity: 0, height: 0 }}
-                        animate={{ opacity: 1, height: 'auto' }}
+                        animate={{ opacity: 1, height: 'auto }}
                         exit={{ opacity: 0, height: 0 }}
-                        className="mt-2 space-y-1"
+                        className="mt-2 space-y-1
                       >
                         {section.items.map((item, itemIndex) => (
                           <div key={itemIndex}>
@@ -828,15 +729,15 @@ const EnhancedSidebar2025: React.FC<EnhancedSidebar2025Props> = ({
                               onClick={onClose}
                               className={`flex items-center p-3 rounded-lg transition-colors ${
                                 isActive(item.href)
-                                  ? 'bg-blue-50 text-blue-700 border-l-4 border-blue-600'
-                                  : 'text-gray-700 hover:bg-gray-50'
+                                  ? bg-blue-50 text-blue-700 border-l-4 border-blue-600'
+                                  : 'text-gray-700 hover:bg-gray-50
                               }`}
                             >
-                              <item.icon className="w-5 h-5 mr-3" />
-                              <div className="flex-1">
-                                <div className="font-medium">{item.name}</div>
+                              <item.icon className=w-5 h-5 mr-3" />
+                              <div className="flex-1>
+                                <div className=font-medium">{item.name}</div>
                                 {item.description && (
-                                  <div className="text-sm text-gray-500">
+                                  <div className="text-sm text-gray-500>
                                     {item.description}
                                   </div>
                                 )}
@@ -847,12 +748,12 @@ const EnhancedSidebar2025: React.FC<EnhancedSidebar2025Props> = ({
                                     e.preventDefault();
                                     toggleItem(item.name);
                                   }}
-                                  className="p-1 hover:bg-gray-200 rounded"
+                                  className=p-1 hover:bg-gray-200 rounded"
                                 >
                                   {expandedItems.includes(item.name) ? (
-                                    <ChevronDown className="w-4 h-4" />
+                                    <ChevronDown className="w-4 h-4 />
                                   ) : (
-                                    <ChevronRight className="w-4 h-4" />
+                                    <ChevronRight className=w-4 h-4" />
                                   )}
                                 </button>
                               )}
@@ -863,9 +764,9 @@ const EnhancedSidebar2025: React.FC<EnhancedSidebar2025Props> = ({
                                 {expandedItems.includes(item.name) && (
                                   <motion.div
                                     initial={{ opacity: 0, height: 0 }}
-                                    animate={{ opacity: 1, height: 'auto' }}
+                                    animate={{ opacity: 1, height: auto' }}
                                     exit={{ opacity: 0, height: 0 }}
-                                    className="ml-8 mt-1 space-y-1"
+                                    className="ml-8 mt-1 space-y-1
                                   >
                                     {item.children.map((child, childIndex) => (
                                       <Link
@@ -874,8 +775,8 @@ const EnhancedSidebar2025: React.FC<EnhancedSidebar2025Props> = ({
                                         onClick={onClose}
                                         className={`block p-2 rounded-lg text-sm transition-colors ${
                                           isActive(child.href)
-                                            ? 'bg-blue-50 text-blue-700'
-                                            : 'text-gray-600 hover:bg-gray-50'
+                                            ? 'bg-blue-50 text-blue-700
+                                            : text-gray-600 hover:bg-gray-50'
                                         }`}
                                       >
                                         {child.name}
@@ -896,24 +797,24 @@ const EnhancedSidebar2025: React.FC<EnhancedSidebar2025Props> = ({
           </div>
 
           {/* Footer */}
-          <div className="p-4 border-t border-gray-200">
-            <div className="flex items-center space-x-4">
+          <div className=p-4 border-t border-gray-200">
+            <div className="flex items-center space-x-4>
               <a
-                href="https://linkedin.com/company/ziontechgroup"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="p-2 text-gray-400 hover:text-blue-600 transition-colors"
+                href=https://linkedin.com/company/ziontechgroup"
+                target="_blank
+                rel=noopener noreferrer"
+                className="p-2 text-gray-400 hover:text-blue-600 transition-colors
               >
-                <Globe className="w-5 h-5" />
+                <Globe className=w-5 h-5" />
               </a>
               <a
-                href="mailto:info@ziontechgroup.com"
-                className="p-2 text-gray-400 hover:text-gray-600 transition-colors"
+                href="mailto:info@ziontechgroup.com
+                className=p-2 text-gray-400 hover:text-gray-600 transition-colors"
               >
-                <Mail className="w-5 h-5" />
+                <Mail className="w-5 h-5 />
               </a>
             </div>
-            <p className="mt-2 text-xs text-gray-500">
+            <p className=mt-2 text-xs text-gray-500">
               © 2025 Zion Tech Group. All rights reserved.
             </p>
           </div>
@@ -921,8 +822,7 @@ const EnhancedSidebar2025: React.FC<EnhancedSidebar2025Props> = ({
       </motion.div>
     </>
   );
-};
+}
 
 export default EnhancedSidebar2025;
 origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
->>>>>>> cursor/automate-test-improve-and-merge-code-dd7a
