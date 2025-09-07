@@ -28,6 +28,12 @@ import { motion } from 'framer-motion';
 import { BookOpen, 
   Brain, 
   Users, 
+import React from 'react';
+import Link from 'next/link';';
+import { motion } from 'framer-motion';
+import React from 'react';
+import Link from 'next/link';';
+import { motion } from 'framer-motion';
 import {
   BookOpen,
   Brain,
@@ -46,7 +52,6 @@ const services = [;
   {}
     title: 'Learning Management Systems,',
     description: 'Comprehensive LMS platforms for educational institutions and corporate training.,',
-
 import Layout from '../../components/Layout';
 import { BookOpen, Brain, Users, CheckCircle, ArrowRight, GraduationCap, BarChart3, FileText, Video, Globe, Database } from 'lucide-react';
 import React from 'react';
@@ -168,9 +173,6 @@ const benefits = []
     icon: BarChart3;
   }
 ;];
-}
-
-;];
 export default function EducationPage() {
   return (;
     <Layout );
@@ -254,9 +256,6 @@ export default function EducationPage() {
             </motion.div>;
           </div>;
         </section>;
-];
-}
-
 ];
 export default function EducationPage() {
   
@@ -392,7 +391,6 @@ export default function EducationPage() {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">";
               {benefits.map((benefit, index) => (,
                 <motion.div}),
-
               className="text-center mb-16"
 
             </div>,;

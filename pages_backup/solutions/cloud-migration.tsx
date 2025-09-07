@@ -23,6 +23,7 @@ import { Cloud,
 } from 'lucide-react';
 import Layout from "../../components/Layout";";
 
+
 const phases = [;
   {}
     title: 'Assessment & Planning,',

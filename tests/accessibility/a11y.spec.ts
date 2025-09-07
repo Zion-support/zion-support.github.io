@@ -6,7 +6,7 @@ interface A11y.specProps {
 
 interface A11y.specProps {
   // Add props here as needed
-
+}
 interface A11y.specProps {
   // Add props here as needed
 
@@ -51,3 +51,8 @@ export default function A11y.spec({ }: A11y.specProps) {
       <p>This component is currently under development.</p>
     </div>
   );
+}
+}
+}
+}
+}

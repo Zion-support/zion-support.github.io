@@ -47,18 +47,8 @@ import {}
 const features = [
   {
     icon: ShoppingCart,
-import Layout from '../../components/Layout';
-import { ShoppingCart, Users, BarChart, Smartphone, Package } from 'lucide-react';
-import React from 'react';
-import Layout from '../../components/Layout';';
-import { ShoppingCart, Users, BarChart, Smartphone, Package, CheckCircle, ArrowRight } from 'lucide-react';
-import Layout from '../../components/Layout';
-import { ShoppingCart, Users, BarChart3, Smartphone, CheckCircle, ArrowRight } from 'lucide-react';
-const features = [;
-  {}
-    icon: ShoppingCart,
-    title: 'E-commerce Platforms,',
-    description: 'Custom e-commerce solutions that provide seamless shopping experiences across all devices.'';
+    title: 'E-commerce Platform',
+    description: 'Complete online shopping experience with advanced features'
   },
   {}
     icon: Users,
@@ -81,13 +71,14 @@ const features = [;
     description: 'End-to-end supply chain visibility and optimization using AI and machine learning.'';
     icon: Smartphone,
     title: 'Mobile Commerce',
-
-    description: 'Mobile-optimized shopping experience'
-  }
-];
-}
-
-export default function RetailSolutionsPage() {
+    description: 'Mobile-first shopping experience and mobile app solutions'
+  },
+  {
+    icon: CheckCircle,
+    title: 'Inventory Management',
+    description: 'Real-time inventory tracking and automated reordering'
+  },
+  {
     icon: ArrowRight,
     title: 'Omnichannel',
     description: 'Seamless integration across all sales channels'
@@ -169,6 +160,21 @@ const benefits = [
   'Mobile-first customer engagement'
 ];
 export default function RetailSolutions() {
+    icon: Smartphone,
+    title: 'Mobile Commerce',
+    description: 'Mobile-optimized shopping experience'
+  }
+];
+
+export default function RetailSolutionsPage() {
+  return (
+    <Layout
+      title="Retail Solutions - Zion Tech Group"
+      description="Comprehensive retail technology solutions for e-commerce, omnichannel retail, and customer experience optimization."
+      keywords="retail solutions, e-commerce, omnichannel retail, customer experience, inventory management, retail analytics"
+    >
+      <div className="min-h-screen bg-white">
+        {/* Hero Section */}
         <section className="bg-gradient-to-r from-purple-600 to-pink-700 text-white py-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center">
@@ -230,16 +236,11 @@ export default function RetailSolutions() {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             </motion.div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            </motion.div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-                  <h3 className="text-xl font-semibold mb-2">{feature.title}</h3>
-                  <p className="text-gray-600">{feature.description}</p>
-                </motion.div>
-              ))}
-            </div>
-          </div>
-        </section>
-
+              {features.map((feature, index) => (
+                <div key={index} className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
+                  <div className="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mb-6">
+                    <feature.icon className="w-6 h-6 text-purple-600" />
+                  </div>
                   <h3 className="text-xl font-semibold text-gray-900 mb-4">
                     {feature.title}
                   </h3>
@@ -324,6 +325,10 @@ export default function RetailSolutions() {
                   <ArrowRight className="w-5 h-5 ml-2" />
                 </button>
               </div>
+                  <h3 className="text-xl font-semibold mb-2">{feature.title}</h3>
+                  <p className="text-gray-600">{feature.description}</p>
+                </motion.div>
+              ))}
             </div>
 
           </div>

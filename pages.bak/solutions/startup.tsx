@@ -17,3 +17,6 @@ export default function Startup({ }: StartupProps) {
       <p>This component is currently under development.</p>
     </div>
   );
+}
+}
+}

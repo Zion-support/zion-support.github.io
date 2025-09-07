@@ -198,8 +198,6 @@ async function startAutomation() {;
     // Show status;
     console.log(,;
   📊 PM2 Status: ');
-    console.log(,;
-  📊 PM2 Status: ');
     console.log(,
   📊 PM2 Status: ')
     console.log(,

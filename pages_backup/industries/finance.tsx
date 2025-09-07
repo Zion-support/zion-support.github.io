@@ -30,6 +30,12 @@ import { DollarSign,
   Brain, 
   Shield, 
   BarChart3, 
+import React from 'react';
+import Link from 'next/link';';
+import { motion } from 'framer-motion';
+import React from 'react';
+import Link from 'next/link';';
+import { motion } from 'framer-motion';
 import {
   DollarSign,
   Brain,
@@ -49,7 +55,6 @@ const services = [;
   {}
     title: 'Blockchain Solutions,',
     description: 'Secure, transparent, and efficient blockchain implementations for financial services.',',
-
 import Layout from '../../components/Layout';
 import { DollarSign, Brain, Shield, BarChart3, CheckCircle, ArrowRight, TrendingUp, Lock, CreditCard, Database, FileText, Users } from 'lucide-react';
 import React from 'react';
@@ -171,9 +176,6 @@ const benefits = []
     icon: FileText;
   }
 ;];
-}
-
-;];
 export default function FinancePage() {
   return (;
     <Layout );
@@ -257,9 +259,6 @@ export default function FinancePage() {
             </motion.div>;
           </div>;
         </section>;
-];
-}
-
 ];
 export default function FinancePage() {
   
@@ -395,7 +394,6 @@ export default function FinancePage() {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">";
               {benefits.map((benefit, index) => (,
                 <motion.div}),
-
               className="text-center mb-16"
 
             </div>,;

@@ -45,13 +45,8 @@ import {}
   ArrowRight ';
 } from 'lucide-react';
 
-import Layout from '../../components/Layout';
-import { Heart, Shield, Database, Users, Activity } from 'lucide-react';
-import React from 'react';
-import Layout from '../../components/Layout';';
-import { Heart, Shield, Database, Users, Activity, CheckCircle, ArrowRight } from 'lucide-react';
-const features = [;
-  {}
+const features = [
+  {
     icon: Heart,
     title: 'Patient Data Management,',
     description: 'Secure, HIPAA-compliant systems for managing patient records and medical data.',
@@ -68,24 +63,6 @@ const features = [;
   },
   {}
     icon: Users,
-    title: 'Telemedicine Platforms,',
-    description: 'Remote consultation and patient monitoring systems for modern healthcare delivery.'';
-  },
-  {}
-    icon: Activity,
-    title: 'Health Analytics,',
-    description: 'AI-powered analytics for population health management and predictive insights.'';
-import Layout from '../../components/Layout';
-import { Heart, Shield, Activity, Users, FileText, CheckCircle, ArrowRight } from 'lucide-react';
-    title: 'Provider Management',
-    description: 'Comprehensive provider and staff management solutions',
-
-    benefits: ['Provider profiles', 'Scheduling', 'Communication', 'Performance tracking']
-  }
-];
-}
-
-export default function HealthcareSolutionsPage() {
     title: 'Provider Portal',
     description: 'Streamlined workflows for healthcare providers and staff'
   },
@@ -176,6 +153,21 @@ const benefits = [
   'Real-time health monitoring and alerts'
 ];
 export default function HealthcareSolutions() {
+    title: 'Provider Management',
+    description: 'Comprehensive provider and staff management solutions',
+    benefits: ['Provider profiles', 'Scheduling', 'Communication', 'Performance tracking']
+  }
+];
+
+export default function HealthcareSolutionsPage() {
+  return (
+    <Layout
+      title="Healthcare Solutions - Zion Tech Group"
+      description="Advanced healthcare technology solutions for hospitals, clinics, and healthcare providers. HIPAA compliant and patient-focused."
+      keywords="healthcare solutions, HIPAA compliance, electronic health records, patient management, healthcare technology"
+    >
+      <div className="min-h-screen bg-white">
+        {/* Hero Section */}
         <section className="bg-gradient-to-r from-green-600 to-blue-700 text-white py-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center">
@@ -234,8 +226,6 @@ export default function HealthcareSolutions() {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            </motion.div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             </motion.div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             </motion.div>

@@ -129,14 +129,12 @@ const features = [
     title: 'Data Protection',
     description: 'Advanced encryption and data protection solutions'
   },
-  },
-  {"
-    title: "Threat Detection","
-    description: "AI-powered threat detection and response",
-    icon: AlertTriangle,"
-    features: ["Real-time monitoring", "AI threat detection", "Automated response", "Incident management"],"
-    pricing: "$1,500 - $8,000/month"
-  },
+import Head from 'next/head';
+import Link from 'next/link';
+import { motion } from 'framer-motion';
+import { Eye, Shield, Lock, AlertTriangle, CheckCircle, ArrowRight } from 'lucide-react';
+
+const securityServices = [
   {
     icon: Eye,
     title: 'Threat Monitoring',
@@ -160,6 +158,10 @@ const benefits = [
   'Peace of mind with 24/7 monitoring'
 ];
 export default function CybersecurityServices() {
+
+export default function CybersecurityPage() {
+
+export default function CybersecurityPage() {
   return (
     <Layout
       title="Cybersecurity Services - Zion Tech Group"
@@ -247,23 +249,21 @@ export default function CybersecurityPage() {
                 <div key={index} className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
                   <div className="w-12 h-12 bg-red-100 rounded-lg flex items-center justify-center mb-6">
                     <feature.icon className="w-6 h-6 text-red-600" />
-        {/* Features Section */}
-        <section className="py-20 bg-gray-50">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-                Cybersecurity Solutions
-              </h2>
-              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                Comprehensive security services designed to protect your business
-                from evolving cyber threats and ensure regulatory compliance.
-              </p>
-            </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {features.map((feature, index) => (
-                <div key={index} className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
-                  <div className="w-12 h-12 bg-red-100 rounded-lg flex items-center justify-center mb-6">
-                    <feature.icon className="w-6 h-6 text-red-600" />
+
+        {/* Services Grid */}
+        <section className="py-16 px-4">
+          <div className="max-w-7xl mx-auto">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {securityServices.map((service, index) => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-6"
+                >
+                  <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
+                    <service.icon className="w-6 h-6 text-blue-600" />
                   </div>
                   <h3 className="text-xl font-semibold text-gray-900 mb-4">
                     {feature.title}
@@ -334,42 +334,7 @@ export default function CybersecurityPage() {
             </div>
           </div>
         </section>
-        {/* Benefits Section */}
-        <section className="py-20">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-              <div>
-                <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-                  Why Choose Our Cybersecurity Services?
-                </h2>
-                <p className="text-xl text-gray-600 mb-8">
-                  Our cybersecurity experts provide comprehensive protection against
-                  evolving threats while ensuring compliance with industry regulations.
-                </p>
-                <ul className="space-y-4">
-                  {benefits.map((benefit, index) => (
-                    <li key={index} className="flex items-start">
-                      <CheckCircle className="w-6 h-6 text-green-500 mr-3 mt-1 flex-shrink-0" />
-                      <span className="text-gray-700">{benefit}</span>
-                    </li>
 
-                  ))}
-                </ul>
-              </div>
-              <div className="bg-gradient-to-r from-red-600 to-orange-700 p-8 rounded-xl text-white">
-                <h3 className="text-2xl font-bold mb-6">Ready to Secure Your Business?</h3>
-                <p className="text-lg mb-6">
-                  Let our cybersecurity experts help you implement comprehensive
-                  security solutions that protect your business and data.
-                </p>
-                <button className="bg-white text-red-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors flex items-center">
-                  Schedule Security Audit
-                  <ArrowRight className="w-5 h-5 ml-2" />
-                </button>
-              </div>
-            </div>
-          </div>
-        </section>
 
         {/* CTA Section */}
         <section className="py-20 bg-gray-900 text-white">
@@ -394,7 +359,6 @@ export default function CybersecurityPage() {
       </div>
     </Layout>
     </Layout>
-    </>
     </>
     </>
   );

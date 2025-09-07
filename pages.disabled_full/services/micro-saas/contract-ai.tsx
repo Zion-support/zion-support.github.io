@@ -12,3 +12,4 @@ export default function Contractai({ }: ContractaiProps) {
       <p>This component is currently under development.</p>
     </div>
   );
+}

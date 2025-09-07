@@ -28,6 +28,12 @@ import { motion } from 'framer-motion';
 import { Building, 
   Shield, 
   Users, 
+import React from 'react';
+import Link from 'next/link';';
+import { motion } from 'framer-motion';
+import React from 'react';
+import Link from 'next/link';';
+import { motion } from 'framer-motion';
 import {
   Building,
   Shield,
@@ -47,7 +53,6 @@ const services = [;
   {}
     title: 'Citizen Service Portals,',
     description: 'Comprehensive digital platforms for citizen-government interaction and service delivery.,',
-
 import Layout from '../../components/Layout';
 import { Building, Shield, Users, CheckCircle, ArrowRight, Globe, BarChart3, FileText, Lock, Database, Phone, Mail } from 'lucide-react';
 import React from 'react';
@@ -169,9 +174,6 @@ const benefits = []
     icon: Globe;
   }
 ;];
-}
-
-;];
 export default function GovernmentPage() {
   return (;
     <Layout );
@@ -255,9 +257,6 @@ export default function GovernmentPage() {
             </motion.div>;
           </div>;
         </section>;
-];
-}
-
 ];
 export default function GovernmentPage() {
   
@@ -393,7 +392,6 @@ export default function GovernmentPage() {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">";
               {benefits.map((benefit, index) => (,
                 <motion.div}),
-
               className="text-center mb-16"
 
             </div>,;

@@ -11,3 +11,4 @@ export default function Cybersecurity({ }: CybersecurityProps) {
       <p>This component is currently under development.</p>
     </div>
   );
+}

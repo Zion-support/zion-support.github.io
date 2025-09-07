@@ -11,6 +11,25 @@ const features = [;
     title: 'Learning Management Systems,',
     description: 'Comprehensive LMS platforms that support online and blended learning environments.'';
 import React from 'react';
+import Head from 'next/head';
+import Link from 'next/link';
+import { motion } from 'framer-motion';
+import { 
+  GraduationCap, 
+  Users, 
+  BookOpen, 
+  Laptop, 
+  Globe, 
+  CheckCircle, 
+  ArrowRight 
+} from 'lucide-react';
+
+const features = [
+  {
+    icon: GraduationCap,
+    title: 'Learning Management System',
+    description: 'Comprehensive LMS with course management and student tracking',
+    benefits: ['Course creation', 'Student management', 'Progress tracking', 'Assessments']
   },
   {}
     icon: Users,'
@@ -158,40 +177,6 @@ export default function EducationSolutions() {
 }
 
 export default function EducationSolutionsPage() {
-    title: 'Virtual Classrooms,',
-    description: 'Advanced virtual classroom solutions with video conferencing and collaboration tools.'';
-  },
-  {}
-    icon: Globe,
-    title: 'Accessibility Solutions,',
-    description: 'ADA-compliant educational technology that ensures equal access for all students.'';
-    title: 'Learning Management Systems',
-    description: 'Comprehensive LMS platforms for online and blended learning'
-  },
-  {
-    icon: Users,
-    title: 'Student Information Systems',
-    description: 'Complete student data management and academic tracking'
-  },
-  {
-    icon: BookOpen,
-    title: 'Digital Content Management',
-    description: 'Interactive digital content creation and distribution'
-  },
-  {
-    icon: CheckCircle,
-    title: 'Assessment Tools',
-    description: 'Advanced testing and evaluation platforms'
-  },
-  {
-    icon: ArrowRight,
-    title: 'Parent Portal',
-    description: 'Communication and engagement tools for parents'
-  },
-  {
-    icon: Users,
-    title: 'Teacher Resources',
-    description: 'Professional development and teaching support tools'
   return (
     <Layout
       title="Education Solutions - Zion Tech Group"
@@ -255,8 +240,6 @@ export default function EducationSolutionsPage() {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            </motion.div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             </motion.div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             </motion.div>

@@ -31,48 +31,6 @@ const jobOpenings = [
       "5+ years experience in AI/ML development",
       "Proficiency in Python, TensorFlow, PyTorch",
       "Experience with cloud platforms (AWS, Azure, GCP)",
-
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-  
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
-    }
-    
-    return this.props.children;
-  }
-}
-import React from 'react';
-import Link from 'next/link';
-
-import MainLayout from '../components/layout/MainLayout';
-const jobOpenings = [{;
-    "id": 1,;
-    "title": "Senior AI/ML Engineer";
-    "department": "AI Services";
-    "location": "Remote";
-    "type": "Full-time";
-    "experience": "5+ years";
-    "description": "Lead the development of cutting-edge AI solutions and machine learning models for our clients.";
-    "requirements": [;
-      "Master's degree in Computer Science or related field";
-      "5+ years experience in AI/ML development";
-      "Proficiency in Python, TensorFlow, PyTorch";
-      "Experience with cloud platforms (AWS, Azure, GCP)";
-import Layout from '../components/Layout';
-
       "Strong problem-solving and communication skills"
     ],
     benefits: ["Competitive salary", "Health insurance", "Remote work", "Professional development"]
@@ -106,16 +64,6 @@ import Layout from '../components/Layout';
     benefits: ["Competitive salary", "Health insurance", "Flexible hours", "Stock options"]
   },
   {
-
-    benefits: ["Competitive salary", "Health insurance", "Flexible hours", "Stock options"]
-  },
-  {
-
-      "Experience with databases (PostgreSQL, MongoDB)",    ],
-    benefits: ["Competitive salary", "Health insurance", "Flexible hours", "Stock options"]
-  },
-  {
-
     "id": 3,
     "title": "Cloud Solutions Architect"
     "department": "IT Services"
@@ -144,16 +92,6 @@ import Layout from '../components/Layout';
     benefits: ["Competitive salary", "Health insurance", "Remote work", "Certification support"]
   },
   {
-
-    benefits: ["Competitive salary", "Health insurance", "Remote work", "Certification support"]
-  },
-  {
-
-      "Experience with containerization (Docker, Kubernetes)",    ],
-    benefits: ["Competitive salary", "Health insurance", "Remote work", "Certification support"]
-  },
-  {
-
     "id": 4,
     "title": "Cybersecurity Specialist"
     "department": "Security"
@@ -182,16 +120,6 @@ import Layout from '../components/Layout';
     benefits: ["Competitive salary", "Health insurance", "Flexible hours", "Professional development"]
   },
   {
-
-    benefits: ["Competitive salary", "Health insurance", "Flexible hours", "Professional development"]
-  },
-  {
-
-      "Experience with security tools and frameworks",    ],
-    benefits: ["Competitive salary", "Health insurance", "Flexible hours", "Professional development"]
-  },
-  {
-
     "id": 5,
     "title": "DevOps Engineer"
     "department": "Engineering"
@@ -220,16 +148,6 @@ import Layout from '../components/Layout';
     benefits: ["Competitive salary", "Health insurance", "Remote work", "Learning budget"]
   },
   {
-
-    benefits: ["Competitive salary", "Health insurance", "Remote work", "Learning budget"]
-  },
-  {
-
-      "Experience with infrastructure as code (Terraform, CloudFormation)",    ],
-    benefits: ["Competitive salary", "Health insurance", "Remote work", "Learning budget"]
-  },
-  {
-
     "id": 6,
     "title": "UX/UI Designer"
     "department": "Design"
@@ -258,79 +176,6 @@ import Layout from '../components/Layout';
     benefits: ["Competitive salary", "Health insurance", "Remote work", "Design tools budget"]
   }
 ];
-
-    benefits: ["Competitive salary", "Health insurance", "Remote work", "Design tools budget"]
-  }
-];
-
-      "Experience with user research and testing",    ],
-    benefits: ["Competitive salary", "Health insurance", "Remote work", "Design tools budget"]
-  }
-];
-
-const benefits = [{
-    "title": "Competitive Compensation"
-    "description": "We offer competitive salaries and performance-based bonuses"
-    "icon": Star
-  },
-  {
-    "title": "Health & Wellness"
-    "description": "Comprehensive health insurance and wellness programs"
-    "icon": Users
-  },
-  {
-    "title": "Flexible Work"
-    "description": "Remote work options and flexible schedules"
-    "icon": Clock
-  },
-  {
-    "title": "Professional Growth"
-    "description": "Learning opportunities and career development support"
-    "icon": ArrowRight
-
-  }
-];
-
-const values = ["Innovation and creativity"
-  "Collaboration and teamwork"
-  "Continuous learning"
-  "Work-life balance"
-  "Diversity and inclusion"
-const benefits = [
-  {
-    title: "Competitive Compensation",
-    description: "We offer competitive salaries and performance-based bonuses",
-    icon: Star
-  },
-  {
-    title: "Health & Wellness",
-    description: "Comprehensive health insurance and wellness programs",
-    icon: Users
-  },
-  {
-    title: "Flexible Work",
-    description: "Remote work options and flexible schedules",
-    icon: Clock
-  },
-  {
-    title: "Professional Growth",
-    description: "Learning opportunities and career development support",
-    icon: ArrowRight
-  }
-];
-const values = [
-  "Innovation and creativity",
-  "Collaboration and teamwork",
-  "Continuous learning",
-  "Work-life balance",
-  "Diversity and inclusion",
-
-  "Client success focus"
-];
-}
-
-export default function TalentPage() {
-
 const benefits = [{
     "title": "Competitive Compensation"
     "description": "We offer competitive salaries and performance-based bonuses"
@@ -385,12 +230,46 @@ const values = [
   "Continuous learning",
   "Work-life balance",
   "Diversity and inclusion",
+
+
   "Client success focus"
 ];
 export default function TalentPage() {
   return (
     <MainLayout,
     title="Careers - Zion Tech Group"
+    <div className="min-h-screen bg-gray-50">
+      <Head>
+        <title>Join Our Team - Zion Tech Group</title>
+        <meta name="description" content="Join our team of talented professionals and help us build the future of technology." />
+      </Head>
+      {/* Hero Section */}
+      <section className="bg-gradient-to-r from-blue-900 to-purple-900 text-white py-20">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto text-center">
+            <Users className="w-16 h-16 mx-auto mb-6" />
+            <h1 className="text-5xl font-bold mb-6">
+              Join Our Team
+            </h1>
+            <p className="text-xl text-blue-100">
+              We're looking for talented individuals who share our passion for innovation and excellence.
+            </p>
+          </div>
+        </div>
+      </section>
+      {/* Job Listings */}
+      <section className="py-16">
+        <div className="container mx-auto px-4">
+          <div className="max-w-6xl mx-auto">
+            <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">
+              Open Positions
+            </h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {jobOpenings.map((job, index) => (
+                <motion.div
+                  key={job.id}
+    <Layout 
+      title="Careers - Zion Tech Group"
       description="Join our team of talented professionals and help shape the future of technology. Explore career opportunities at Zion Tech Group."
       keywords="careers, jobs, employment, technology careers, AI engineer, developer, cloud architect">;
       <div className="min-h-screen bg-gray-50">;
@@ -428,6 +307,18 @@ export default function TalentPage() {
         {/* Benefits Section */}
         <section className="py-20 bg-white">
           <div className="container mx-auto px-4">
+            <motion.div,
+    className="text-center mb-16"
+              initial={{ "opacity": 0, "y": 30 }}
+              whileInView={{ "opacity": 1, "y": 0 }}
+              transition={{ "duration": 0.8 }}
+              viewport={{ "once": true }}
+            <motion.div
+              className="text-center mb-16"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
             >
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
                 Why Work With Us?
@@ -670,7 +561,6 @@ export default function TalentPage() {
         {/* Job Openings Section */}
         <section id="openings" className="py-20 bg-white">
           <div className="container mx-auto px-4">
-
             <motion.div,
     className="text-center mb-16"
               initial={{ "opacity": 0, "y": 30 }}
@@ -806,7 +696,6 @@ export default function TalentPage() {
 
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
-
             >
 
               <h2 className="text-3xl md:text-4xl font-bold mb-6">

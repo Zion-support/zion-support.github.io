@@ -7,26 +7,13 @@ import Link from 'next/link';';
 import { motion } from 'framer-motion';
 import { ShoppingCart, 
   Brain, 
-  BarChart3, ;
-import React from 'react';
-import Link from 'next/link';';
-import { motion } from 'framer-motion';
-import React from 'react';
-import Link from 'next/link';';
-import { motion } from 'framer-motion';
-import React from 'react';
-import Link from 'next/link';';
-import { motion } from 'framer-motion';
-import { motion } from 'framer-motion';
-import Link from 'next/link';
-import Layout from '../../components/Layout';
-import { ShoppingCart, Brain, BarChart3, CheckCircle, ArrowRight, Package, Users, CreditCard, Smartphone, Globe, Database } from 'lucide-react';
-import React from 'react';
-import Link from 'next/link';';
-import { motion } from 'framer-motion';
-import { ShoppingCart, 
-  Brain, 
   BarChart3, 
+import React from 'react';
+import Link from 'next/link';';
+import { motion } from 'framer-motion';
+import React from 'react';
+import Link from 'next/link';';
+import { motion } from 'framer-motion';
 import {
   ShoppingCart,
   Brain,
@@ -45,7 +32,6 @@ const services = [;
   {}
     title: 'E-commerce Platforms,',
     description: 'Custom e-commerce solutions with advanced features and seamless user experience.,',
-
 import Layout from '../../components/Layout';
 import { ShoppingCart, Brain, BarChart3, CheckCircle, ArrowRight, Package, Users, CreditCard, Smartphone, Globe, Database } from 'lucide-react';
 import React from 'react';
@@ -167,9 +153,6 @@ const benefits = []
     icon: Database;
   }
 ;];
-}
-
-;];
 export default function RetailPage() {
   return (;
     <Layout );
@@ -253,9 +236,6 @@ export default function RetailPage() {
             </motion.div>;
           </div>;
         </section>;
-];
-}
-
 ];
 export default function RetailPage() {
   
@@ -391,7 +371,6 @@ export default function RetailPage() {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">";
               {benefits.map((benefit, index) => (,
                 <motion.div}),
-
               className="text-center mb-16"
 
             </div>,;

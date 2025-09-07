@@ -35,3 +35,4 @@ export default function Platformengineering({ }: PlatformengineeringProps) {
       <p>This component is currently under development.</p>
     </div>
   );
+}

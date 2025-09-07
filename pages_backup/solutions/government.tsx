@@ -45,13 +45,13 @@ import {}
   ArrowRight ';
 } from 'lucide-react';
 
-import Layout from '../../components/Layout';
-import { Shield, Users, FileText, Globe, Database } from 'lucide-react';
-import React from 'react';
-import Layout from '../../components/Layout';';
-import { Shield, Users, FileText, Globe, Database, CheckCircle, ArrowRight } from 'lucide-react';
-const features = [;
-  {}
+const features = [
+  {
+    icon: Building2,
+    title: 'Digital Government Services',
+    description: 'Citizen-facing digital services and online portals'
+  },
+  {
     icon: Shield,
     title: 'Cybersecurity & Compliance,',
     description: 'FISMA, FedRAMP, and other government security standards compliance solutions.',
@@ -66,27 +66,7 @@ const features = [;
     title: 'Document Management,',
     description: 'Secure document management and workflow systems for government operations.'';
   },
-  {}
-    icon: Globe,
-    title: 'Open Data Platforms,',
-    description: 'Public data portals and open government initiatives for transparency and accountability.'';
-  },
-  {}
-    icon: Database,
-    title: 'Data Analytics,',
-    description: 'Government data analytics and business intelligence for informed decision making.'';
-import Layout from '../../components/Layout';
-import { Building2, Shield, Users, FileText, CheckCircle, ArrowRight } from 'lucide-react';
-    icon: Database,
-    title: 'Data Management',
-    description: 'Secure data management and analytics for government data',
-
-    benefits: ['Data governance', 'Analytics', 'Reporting', 'Integration']
-  }
-];
-}
-
-export default function GovernmentSolutionsPage() {
+  {
     icon: CheckCircle,
     title: 'Workflow Automation',
     description: 'Automated government processes and approvals'
@@ -173,6 +153,22 @@ const benefits = [
   'Increased government efficiency'
 ];
 export default function GovernmentSolutions() {
+    icon: Database,
+    title: 'Data Management',
+    description: 'Secure data management and analytics for government data',
+    benefits: ['Data governance', 'Analytics', 'Reporting', 'Integration']
+  }
+];
+
+export default function GovernmentSolutionsPage() {
+  return (
+    <Layout
+      title="Government Solutions - Zion Tech Group"
+      description="Comprehensive government technology solutions for public sector organizations. Digital services, citizen engagement, and government process automation."
+      keywords="government solutions, digital government, public sector, citizen services, government technology, e-government"
+    >
+      <div className="min-h-screen bg-white">
+        {/* Hero Section */}
         <section className="bg-gradient-to-r from-gray-700 to-blue-800 text-white py-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center">
@@ -232,8 +228,6 @@ export default function GovernmentSolutions() {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            </motion.div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             </motion.div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             </motion.div>

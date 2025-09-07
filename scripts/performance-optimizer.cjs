@@ -1,38 +1,28 @@
-#!/usr/bin/env node;
+#!/usr/bin/env node
+
 const fs = require('fs');
 const path = require('path');
-const { execSync } = require('child_process');
-;
-;
-  getFilesRecursively(dir) {;
-    let files = [];
-    const items = fs.readdirSync(dir);
-;
-    items.forEach(item => {;
-      const fullPath = path.join(dir, item);
-      const stat = fs.statSync(fullPath);
-;
-      if (stat.isDirectory()) {;
-        files = files.concat(this.getFilesRecursively(fullPath));
-      } else {;
-        files.push(fullPath);
-      }
-    });
-;
-    return files;
+
+class PerformanceOptimizer {
+  constructor() {
+    this.metrics = {
+      bundleSize: 0,
+      loadTime: 0,
+      memoryUsage: 0,
+      timestamp: new Date().toISOString()
+    };
   }
-;
-  formatBytes(bytes) {;
-    if (bytes === 0) return '0 Bytes';
-    const k = 1024;
-    const sizes = ['Bytes', 'KB', 'MB', 'GB'];
-    const i = Math.floor(Math.log(bytes) / Math.log(k));
-;
-  getBundleRecommendations(totalSize, fileCount) {;
-    const recommendations = [];
-;
-    if (totalSize > 1024 * 1024) { // > 1MB;
-      recommendations.push('Consider code splitting to reduce initial bundle size');
+
+  async analyzeBundleSize() {
+    try {
+      const buildDir = path.join(process.cwd(), '.next');
+      if (fs.existsSync(buildDir)) {
+        const stats = fs.statSync(buildDir);
+        this.metrics.bundleSize = stats.size;
+        console.log(`Bundle size: ${(this.metrics.bundleSize / 1024 / 1024).toFixed(2)} MB`);
+      }
+    } catch (error) {
+      console.error('Error analyzing bundle size:', error);
     }
 ;
     if (fileCount > 50) {;
@@ -44,54 +34,52 @@ const { execSync } = require('child_process');
 ;
     return recommendations;
   }
-;
-  optimizeImages() {;
-    try {;
-      const publicPath = path.join(__dirname, '..', 'public');
-      if (!fs.existsSync(publicPath)) {;
-        return { "error": 'Public directory not found' };
-      }
-;
-      const imageFiles = this.getImageFiles(publicPath);
-      let totalSize = 0;
-      let optimizedCount = 0;
-;
-      imageFiles.forEach(file => {;
-        const stats = fs.statSync(file);
-        totalSize += stats.size;
-;
-;
-      return {;
-        "totalImages": imageFiles.length,
-        "optimizedImages": optimizedCount,
-        "totalSize": this.formatBytes(totalSize),
-        "recommendations": this.getImageRecommendations(imageFiles);
-      };
-    } catch (error) {;
-      return { "error": error.message };
+
+  async analyzeMemoryUsage() {
+    const usage = process.memoryUsage();
+    this.metrics.memoryUsage = usage.heapUsed / 1024 / 1024;
+    console.log(`Memory usage: ${this.metrics.memoryUsage.toFixed(2)} MB`);
+  }
+
+  async generateReport() {
+    const report = {
+      timestamp: this.metrics.timestamp,
+      bundleSize: this.metrics.bundleSize,
+      memoryUsage: this.metrics.memoryUsage,
+      recommendations: this.generateRecommendations()
+    };
+
+    const reportPath = path.join(process.cwd(), 'performance-optimization-report.json');
+    fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
+    console.log(`Performance report generated: ${reportPath}`);
+  }
+
+  generateRecommendations() {
+    const recommendations = [];
+    
+    if (this.metrics.bundleSize > 1000000) {
+      recommendations.push('Consider code splitting to reduce bundle size');
     }
+    if (this.metrics.memoryUsage > 100) {
+      recommendations.push('Consider optimizing memory usage');
+    }
+    
+    return recommendations;
+  }
+
+  async run() {
+    console.log('🚀 Starting Performance Optimization');
+    await this.analyzeBundleSize();
+    await this.analyzeMemoryUsage();
+    await this.generateReport();
   }
 ;
 ;
 }
-;
-// Run the optimizer;
-const optimizer = new PerformanceOptimizer();
-optimizer.optimizePerformance().then(report => {;
-  if (report) {;
-    console.log('\n📊 Performance Optimization Report');
-    console.log('=====================================');
-    console.log(`Bundle "Size": ${report.bundleSize.totalSize || 'N/A'}`);
-    console.log(`Gzipped "Size": ${report.bundleSize.gzippedSize || 'N/A'}`);
-    console.log(`Total "Images": ${report.imageOptimization.totalImages || 0}`);
-    console.log(`Optimized "Images": ${report.imageOptimization.optimizedImages || 0}`);
-    console.log(`Total "Dependencies": ${report.dependencies.totalDependencies || 0}`);
-    console.log(`\"nRecommendations": `);
-    report.recommendations.forEach((rec, index) => {;
-      console.log(`${index + 1}. ${rec}`);
-    });
-  }
-}).catch(error => {;
-  console.error('Error running performance "optimizer": ', error.message);
-  process.exit(1);
-});
+
+if (require.main === module) {
+  const optimizer = new PerformanceOptimizer();
+  optimizer.run().catch(console.error);
+}
+
+module.exports = PerformanceOptimizer;

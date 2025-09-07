@@ -45,13 +45,8 @@ import {}
   ArrowRight ';
 } from 'lucide-react';
 
-import Layout from '../../components/Layout';
-import { DollarSign, Shield, TrendingUp, Users, Database } from 'lucide-react';
-import React from 'react';
-import Layout from '../../components/Layout';';
-import { DollarSign, Shield, TrendingUp, Users, Database, CheckCircle, ArrowRight } from 'lucide-react';
-const features = [;
-  {}
+const features = [
+  {
     icon: DollarSign,
     title: 'Financial Data Management,',
     description: 'Secure, real-time financial data processing and analytics for informed decision making.',
@@ -68,24 +63,6 @@ const features = [;
   },
   {}
     icon: Users,
-    title: 'Customer Experience,',
-    description: 'Digital banking and financial services platforms that enhance customer engagement.'';
-  },
-  {}
-    icon: Database,
-    title: 'Fraud Detection,',
-    description: 'Real-time fraud detection and prevention systems using advanced analytics.'';
-import Layout from '../../components/Layout';
-import { DollarSign, Shield, TrendingUp, Users, FileText, CheckCircle, ArrowRight } from 'lucide-react';
-    title: 'User Management',
-    description: 'Secure user management with role-based access control',
-
-    benefits: ['User provisioning', 'Role management', 'Access control', 'Audit logs']
-  }
-];
-}
-
-export default function FinanceSolutionsPage() {
     title: 'Customer Portal',
     description: 'Secure customer-facing applications and services'
   },
@@ -176,6 +153,21 @@ const benefits = [
   'Faster transaction processing'
 ];
 export default function FinanceSolutions() {
+    title: 'User Management',
+    description: 'Secure user management with role-based access control',
+    benefits: ['User provisioning', 'Role management', 'Access control', 'Audit logs']
+  }
+];
+
+export default function FinanceSolutionsPage() {
+  return (
+    <Layout
+      title="Finance Solutions - Zion Tech Group"
+      description="Secure financial technology solutions for banks, fintech companies, and financial institutions. Regulatory compliant and secure."
+      keywords="finance solutions, fintech, banking technology, financial services, regulatory compliance, risk management"
+    >
+      <div className="min-h-screen bg-white">
+        {/* Hero Section */}
         <section className="bg-gradient-to-r from-blue-600 to-green-700 text-white py-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center">
@@ -234,8 +226,6 @@ export default function FinanceSolutions() {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            </motion.div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             </motion.div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             </motion.div>

@@ -1,8 +1,11 @@
-const \"Contact\": NextPage = () => {
-import React, { useState } from 'react';
-import Head from 'next/head';
-import Link from 'next/link';
-import { motion } from 'framer-motion';
+const SEO = dynamic(() => import(\'../src/components/SEO\'), { \"ssr\": false })
+const PageTransition = dynamic(() => import(\'../src/components/PageTransition\'), { \"ssr\": false })
+const \"ContactPage\": React.FC = () => {
+import React from 'react'
+import dynamic from 'next/dynamic'
+import Head from 'next/head'
+import Link from 'next/link'
+import { motion } from 'framer-motion'
 import { 
   Phone, 
   Mail, 
@@ -42,6 +45,14 @@ const "ContactPage": React.FC = () => {
       "link": null
     }
   ]
+  const services = [\"AI & Machine Learning Solutions\",
+    \"IT Infrastructure & Support\",
+    \"Micro SaaS Development\",
+    \"Cybersecurity Services\",
+    \"Cloud & DevOps Solutions\",
+    \"Blockchain Technology\",
+    \"Digital Transformation\",
+    \"Consulting & Strategy\"
   const services = ["AI & Machine Learning Solutions",
     "IT Infrastructure & Support",
     "Micro SaaS Development",
@@ -98,6 +109,7 @@ const "ContactPage": React.FC = () => {
               </motion.div>
             </div>
           </section>
+const \"Contact\": NextPage = () => {
 import type { NextPage } from 'next';
 import MainLayout from '../components/layout/MainLayout';
 import { Mail, Phone, MapPin, Clock, Send } from 'lucide-react';
@@ -415,6 +427,8 @@ const "Contact": NextPage = () => {
               </motion.div>
               <div className=\"grid grid-cols-1 md: gri d-cols-2 lg: gri d-cols-4 gap-8\">
               <div className="grid grid-cols-1 md: gri d-cols-2 lg: gri d-cols-4 gap-8">
+              <div className=\"grid grid-cols-1 md: gri d-cols-2 lg: gri d-cols-4 gap-8\">
+              <div className="grid grid-cols-1 md: gri d-cols-2 lg: gri d-cols-4 gap-8">
                 {contactInfo.map((info, index) => (
                   <motion.div
                     key={index}
@@ -464,6 +478,8 @@ const "Contact": NextPage = () => {
               </motion.div>
               <div className=\"max-w-4xl mx-auto\">
               <div className="max-w-4xl mx-auto">
+              <div className=\"max-w-4xl mx-auto\">
+              <div className="max-w-4xl mx-auto">
                 <motion.form
                   initial={{ opacity: 0, \"y\": 20 }}
                   animate={{ \"opacity\": 1, \"y\": 0 }}
@@ -496,6 +512,8 @@ const "Contact": NextPage = () => {
                        />
                     </div>
                   </div>
+                  <div className=\"grid grid-cols-1 md: gri d-cols-2 gap-6 mb-6\">
+                  <div className="grid grid-cols-1 md: gri d-cols-2 gap-6 mb-6">
                   <div className=\"grid grid-cols-1 md: gri d-cols-2 gap-6 mb-6\">
                   <div className="grid grid-cols-1 md: gri d-cols-2 gap-6 mb-6">
                     <div>
@@ -567,6 +585,8 @@ const "Contact": NextPage = () => {
                 </motion.form>
       <div className=\"min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900\">
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+      <div className=\"min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900\">
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
         {/* Hero Section */}
         <section className=\"relative py-20 px-4\">
           <div className=\"max-w-7xl mx-auto\">
@@ -635,6 +655,8 @@ const "Contact": NextPage = () => {
                         />
                       </div>
                     </div>
+                    <div className=\"grid grid-cols-1 md:grid-cols-2 gap-6\">
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div className=\"grid grid-cols-1 md:grid-cols-2 gap-6\">
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                       <div>
@@ -728,6 +750,8 @@ const "Contact": NextPage = () => {
                 </div>
                 <div className=\"space-y-6\">
                 <div className="space-y-6">
+                <div className=\"space-y-6\">
+                <div className="space-y-6">
                   {contactInfo.map((info, index) => (
                     <div key={index} className=\"flex items-start space-x-4 p-4 bg-slate-800/30 rounded-lg border border-slate-700\">
                       <div className=\"w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-lg flex items-center justify-center flex-shrink-0\">
@@ -789,4 +813,5 @@ export default ContactPage
     </>
   );
 }
+  import React from 'react' import dynamic from 'next/dynamic' import Head from 'next/head' import Link from 'next/link' import { motion } from 'framer-motion' import { Phone,Mail,MapPin,Clock,ArrowRight,Send,MessageCircle,Globe } from 'lucide-react'  import React,{ useState } from 'react'; import { Helmet } from 'react-helmet-async'; import { Mail,Phone,MapPin,Clock,Send,CheckCircle } from 'lucide-react';
   import React from 'react' import dynamic from 'next/dynamic' import Head from 'next/head' import Link from 'next/link' import { motion } from 'framer-motion' import { Phone,Mail,MapPin,Clock,ArrowRight,Send,MessageCircle,Globe } from 'lucide-react'  import React,{ useState } from 'react'; import { Helmet } from 'react-helmet-async'; import { Mail,Phone,MapPin,Clock,Send,CheckCircle } from 'lucide-react';

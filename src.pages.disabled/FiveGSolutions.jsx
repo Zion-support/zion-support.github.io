@@ -44,3 +44,7 @@ export default function FiveGSolutions({ }: FiveGSolutionsProps) {
       <p>This component is currently under development.</p>
     </div>
   );
+}
+}
+}
+}

@@ -8,27 +8,13 @@ import { motion } from 'framer-motion';
 import { Settings, 
   Brain, 
   Shield, 
-  BarChart3, ;
-import React from 'react';
-import Link from 'next/link';';
-import { motion } from 'framer-motion';
-import React from 'react';
-import Link from 'next/link';';
-import { motion } from 'framer-motion';
-import React from 'react';
-import Link from 'next/link';';
-import { motion } from 'framer-motion';
-import { motion } from 'framer-motion';
-import Link from 'next/link';
-import Layout from '../../components/Layout';
-import { Settings, Brain, Shield, BarChart3, CheckCircle, ArrowRight, Cpu, Wrench, Activity, Database, FileText, Users } from 'lucide-react';
-import React from 'react';
-import Link from 'next/link';';
-import { motion } from 'framer-motion';
-import { Settings, 
-  Brain, 
-  Shield, 
   BarChart3, 
+import React from 'react';
+import Link from 'next/link';';
+import { motion } from 'framer-motion';
+import React from 'react';
+import Link from 'next/link';';
+import { motion } from 'framer-motion';
 import {
   Settings,
   Brain,
@@ -48,7 +34,6 @@ const services = [;
   {}
     title: 'Smart Factory Solutions,',
     description: 'IoT-enabled manufacturing systems for intelligent production management.,',
-
 import Layout from '../../components/Layout';
 import { Settings, Brain, Shield, BarChart3, CheckCircle, ArrowRight, Cpu, Wrench, Activity, Database, FileText, Users } from 'lucide-react';
 import React from 'react';
@@ -170,9 +155,6 @@ const benefits = []
     icon: BarChart3;
   }
 ;];
-}
-
-;];
 export default function ManufacturingPage() {
   return (;
     <Layout );
@@ -256,9 +238,6 @@ export default function ManufacturingPage() {
             </motion.div>;
           </div>;
         </section>;
-];
-}
-
 ];
 export default function ManufacturingPage() {
   
@@ -396,7 +375,6 @@ export default function ManufacturingPage() {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">";
               {benefits.map((benefit, index) => (,
                 <motion.div}),
-
               className="text-center mb-16"
 
             >
@@ -438,7 +416,6 @@ export default function ManufacturingPage() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-
             >,
               <h2 className="text-4xl md:text-5xl font-bold mb-6">";
                 Ready to Transform Manufacturing?;

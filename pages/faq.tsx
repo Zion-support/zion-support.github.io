@@ -3,45 +3,24 @@ import Head from 'next/head';
 
 export default function FaqPage() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      <Head>
-        <title>Faq | Zion Tech Group</title>
-        <meta name="description" content="Professional faq solutions for your business." />
-      </Head>
-      
-      <div className="container mx-auto px-4 py-16">
-        <div className="text-center mb-16">
-          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-            Faq
-          </h1>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Professional faq solutions for your business.
-          </p>
-        </div>
-        
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          <div className="bg-gray-800 rounded-lg p-6">
-            <h3 className="text-xl font-bold text-white mb-4">Feature 1</h3>
-            <p className="text-gray-300">
-              Professional solutions for your business needs.
-            </p>
+    <Layout 
+      title="FAQ - Zion Tech Group"
+      description="Frequently asked questions about our services and solutions"
+    >
+      <div className="min-h-screen bg-gray-50">
+        <section className="bg-gradient-to-r from-blue-600 to-purple-600 py-20">
+          <div className="container mx-auto px-4">
+            <div className="text-center text-white">
+              <h1 className="text-4xl md:text-6xl font-bold mb-6">
+                Frequently Asked Questions
+              </h1>
+              <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
+                Find answers to common questions about our services
+              </p>
+            </div>
           </div>
-          
-          <div className="bg-gray-800 rounded-lg p-6">
-            <h3 className="text-xl font-bold text-white mb-4">Feature 2</h3>
-            <p className="text-gray-300">
-              Advanced technology solutions.
-            </p>
-          </div>
-          
-          <div className="bg-gray-800 rounded-lg p-6">
-            <h3 className="text-xl font-bold text-white mb-4">Feature 3</h3>
-            <p className="text-gray-300">
-              Scalable and reliable solutions.
-            </p>
-          </div>
-        </div>
+        </section>
       </div>
-    </div>
+    </Layout>
   );
 }
