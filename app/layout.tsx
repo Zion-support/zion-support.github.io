@@ -5,7 +5,6 @@ import './globals.css'
 =======
 >>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
 import type { Metadata } from 'next';
-<<<<<<< HEAD
 import React from 'react';
 import Header from './components/Header';
 import Footer from './components/Footer';
@@ -21,7 +20,6 @@ import { Inter } from 'next/font/google';
 import './globals.css';
 import PerformanceMonitor from './components/PerformanceMonitor';
 
-// eslint-disable-next-line react-refresh/only-export-components
 export const metadata: Metadata = {
   title: 'Zion Tech Group - Leading AI and Technology Solutions',
 <<<<<<< HEAD

@@ -20,13 +20,13 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     `- Level: ${level || 'Mid'}\n` +
     `- Location: ${location || 'Remote'}\n` +
     `- Key skills: ${(skills || []).join(', ')}\n` +
-    `- Responsibilities: ${(responsibilities || []).join(', ')}\n` +
-    `Output a JSON object with title, summary, requirements, responsibilities, and benefits.`;
+    `- Responsibilities: ${(responsibilities || []).join('; ')}\n` +
+    `Include sections: About the role, Responsibilities, Requirements, Nice to Have, Compensation, Benefits, EEO statement.`;
 
-  try {
-    const result = await generateText(prompt, { maxTokens: 1500 });
-    res.status(200).json(JSON.parse(result));
-  } catch (error: any) {
-    res.status(500).json({ error: error.message });
-  }
+  const text = await generateText(
+    prompt,
+    'You are an expert technical recruiter and compensation analyst.'
+  );
+  
+  return res.status(200).json({ jobDescription: text });
 }
