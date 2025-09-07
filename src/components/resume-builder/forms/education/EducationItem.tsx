@@ -4,6 +4,7 @@ import { EducationItemProps  } from './types';
 import { Button   } from '@/components/ui/button';
 import { Card, CardContent   } from '@/components/ui/card';
 import { Education   } from '@/types/resume';
+
 export function EducationItem() {export function EducationItem() {import { format  } from 'date-fns';
 import { Card, CardContent  } from '@/components/ui/card';
 import { Education  } from '@/types/resume';
@@ -48,8 +49,8 @@ import { Education  } from '@/types/resume';
               variant='ghost';
               size='icon';
               onClick={() => onDelete(education.id!)}
-              aria-label='Delete education';
-            >;
+              aria-label='Delete education'>
+
               <Trash2 className='h-4 w-4' />;
             </Button>;
           </div>;
@@ -83,6 +84,7 @@ import { Card, CardContent  } from '@/components / ui / card';
 import { Education  } from '@/types / resume';
 import { EducationItemProps } from './types'; import { Edit, Trash2  } from 'lucide-react';
 import { Button  } from '@/components / ui / button';
+
 export /**;
  * EducationItem - Function description;
  */;

@@ -4,7 +4,8 @@
       // Check condition;
 if ( {) {$2;
 }
-        await supabase;.from('model_versions').update({ active: false }).eq('purpose', purpose)}// Update this model;import { Loader2, RefreshCw, Play, CheckCircle, AlertCircle  } from 'lucide-react';
+        await supabase;.from('model_versions').update({ active: false,
+}).eq('purpose', purpose)}// Update this model;import { Loader2, RefreshCw, Play, CheckCircle, AlertCircle  } from 'lucide-react';
 import { supabase   } from '@/integrations/supabase/client';
 import { ModelConfig   } from '@/utils/zion-gpt';
 import { logErrorToProduction } from '@/utils/productionLogger';
@@ -17,22 +18,34 @@ import { Loader2,RefreshCw,Play,CheckCircle,AlertCircle} from 'lucide-react';
 import { supabase  } from '@/integrations/supabase/client';
 import { ModelConfig  } from '@/utils/zion-gpt';
 import { logErrorToProduction  } from '@/utils/productionLogger';
+
 interface ModelVersionData extends ModelConfig  {trainingStatus: 'queued' | 'running' | 'succeeded' | 'failed';
   errorMessage?: string;
 }await supabase;
-        .from ('model_versions').update ({ active: !current_active }).eq ('id', model_id),// Refresh the model list;
+        .from ('model_versions').update ({ active: !current_active,
+}).eq ('id', model_id),// Refresh the model list;
       fetch_models ()}
       // Update this model;
       await supabase;
-        .from('model_versions').update({ active: !currentActive }).eq('id', modelId)// Refresh the model list;
-      fetchModels()} catch (error) {logErrorToProduction('Error toggling model active state:', { data: error })}} catch (error) {logErrorToProduction ('Error toggling model active state:', { data: error })}.order('createdAt', { ascending: false }),const toggleModelActive = async (modelId: string, currentActive: boolean, purpose: string,) => {try {// If activating, deactivate all other models with the same purpose;
+        .from('model_versions').update({ active: !currentActive,
+}).eq('id', modelId)// Refresh the model list;
+      fetchModels()} catch (error) {logErrorToProduction('Error toggling model active state:', { data: error }),
+} catch (error) {logErrorToProduction ('Error toggling model active state:', { data: error },
+}.order('createdAt', { ascending: false,
+}),const toggleModelActive = async (modelId: string, currentActive: boolean, purpose: string,) => {try {// If activating, deactivate all other models with the same purpose;
       if (!currentActive) {await supabase;
-          .from('model_versions').update({ active: false }).eq('purpose', purpose)}// Update this model;
+          .from('model_versions').update({ active: false,
+}).eq('purpose', purpose)}// Update this model;
       await supabase;
-        .from('model_versions').update({ active: !currentActive }).eq('id', modelId),// Refresh the model list;
+        .from('model_versions').update({ active: !currentActive,
+}).eq('id', modelId),// Refresh the model list;
       fetchModels()} catch (error) {logErrorToProduction('Error toggling model active state:', { data: error })}
-  }},export function ZionGPTModelManager() {const [models, setModels] = useState<ModelVersionData[]>([]),const [isLoading, setIsLoading] = useState(true)const [activeJobs, setActiveJobs] = useState<{[key: string]: boolean}>({}),// Fetch model data on component mount;
-  useEffect(() => {fetchModels()}, []),const fetchModels  = null;return (<Card className="w-full">;
+  ,
+},export function ZionGPTModelManager() {const [models, setModels] = useState<ModelVersionData[]>([]),const [isLoading, setIsLoading] = useState(true);
+  const [activeJobs, setActiveJobs] = useState<{[key: string]: boolean}>(,
+}),// Fetch model data on component mount;
+  useEffect(() => {
+fetchModels()}, []),const fetchModels  = null;return (<Card className="w-full">;
       <CardHeader className="flex flex-row items-center justify-between">;
         <div>;
           <CardTitle>ZionGPT Models</CardTitle>;
@@ -83,8 +96,8 @@ interface ModelVersionData extends ModelConfig  {trainingStatus: 'queued' | 'run
                         {activeJobs[model && model.id] ? (<Loader2 className="h-4 w-4 animate-spin" />;
                         ) : (<RefreshCw className="h-4 w-4" />;{model.trainingStatus === 'queued' || model.trainingStatus === 'running' ? (<Button;
                         variant="ghost";
-                        size="sm";
-                      >;
+                        size="sm">
+
                         {activeJobs[model.id] ? (<Loader2 className="h-4 w-4 animate-spin" />;
                         ) : (<RefreshCw className="h-4 w-4" />;
                         )}<span className="ml-1">Check</span>;

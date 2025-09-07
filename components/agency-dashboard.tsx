@@ -1,14 +1,19 @@
 import type { GetServerSideProps } from 'next';
-<<<<<<< HEAD
+
 
 import { FormEvent, useEffect, useState } from 'react';
 import type { Vendor } from '../utils/vendor-types';
+
 type Props = any;
+
 export default function AgencyDashboardPage({ vendor }: Props) {
   const [activeVendor, setActiveVendor] = useState(vendor);
-  const [pkgTitle, setPkgTitle] = useState('');
-  const [pkgDesc, setPkgDesc] = useState('');
-  const [pkgPrice, setPkgPrice] = useState<number | ''>('');
+
+const [pkgTitle, setPkgTitle] = useState('');
+
+const [pkgDesc, setPkgDesc] = useState('');
+
+const [pkgPrice, setPkgPrice] = useState<number | ''>('');
 
 
 if (!activeVendor)
@@ -18,8 +23,10 @@ if (!activeVendor)
 
   async function saveProfile(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
-    const formData = new FormData(e.currentTarget);
-    const updated = {
+
+const formData = new FormData(e.currentTarget);
+
+const updated = {
 ...activeVendor,
       name: String(formData.get('name') || activeVendor.name),
       about: String(formData.get('about') || activeVendor.about || ''),
@@ -37,6 +44,7 @@ if (!activeVendor)
   }
   function addPackage() {
     if (!pkgTitle || !pkgPrice || !activeVendor) return;
+
 const packages = [
       ...(activeVendor.packages || []),
       {
@@ -44,39 +52,37 @@ const packages = [
         title: pkgTitle
         description: pkgDesc
         priceUsd: Number(pkgPrice)
-      }
+     ,
+}
 
 
   function addPackage() {;
-=======
-type Props = { vendor: Vendor | null }type Props = { vendor: Vendor | null }
-type Props = { vendor: Vendor | null }type Props = { vendor: Vendor | null }type Props = { vendor: Vendor | null },export default function AgencyDashboardPage() {type Props = { vendor: Vendor | null }import { FormEvent, useEffect, useState  } from 'react';
-import type { Vendor } from '../utils/vendor-types';
-type Props = any;export default function AgencyDashboardPage() {const [activeVendor, setActiveVendor] = useState(vendor)const [pkgTitle, setPkgTitle] = useState('')const [pkgDesc, setPkgDesc] = useState('')const [pkgPrice, setPkgPrice]  = useState<number | ''>('')} as Vendor;
-    // For MVP, update via direct API not implemented; keep local preview only;
-    setActiveVendor(updated)}
-        .filter(Boolean)} as Vendor;
-    // For MVP, update via direct API not implemented, keep local preview only;
-    setActiveVendor(updated)}
-    if (!pkgTitle |!pkgPrice |!activeVendor) return;
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-2a0c
+
     if (!pkgTitle || !pkgPrice || !activeVendor) return;
-    const packages = [;
-      ...(activeVendor.packages |[])if (!activeVendor)return (<div className='text-gray-500'>No vendor found. Please apply first.</div>;
-    )async function saveProfile() {e.preventDefault()const formData = new FormData(e.currentTarget)const updated = {...activeVendor,name: String(formData.get('name') || activeVendor.name),about: String(formData.get('about') || activeVendor.about || ''),servicesOffered: String(formData.get('servicesOffered') |;
+
+const packages = [
+  ...(activeVendor.packages |[])if (!activeVendor;
+  return (<div className='text-gray-500'>No vendor found. Please apply first.</div>;
+    )async function saveProfile() {e.preventDefault()const formData = new FormData(e.currentTarget;
+  const updated = {...activeVendor,name: String(formData.get('name') || activeVendor.name),about: String(formData.get('about') || activeVendor.about || ''),servicesOffered: String(formData.get('servicesOffered') |;
           activeVendor.servicesOffered?.join(',') |;
           '';
       ).split(',').map(s => s.trim()).filter(Boolean)} as Vendor;
     // For MVP, update via direct API not implemented; keep local preview only;
     setActiveVendor(updated)}
   function addPackage() {if (!pkgTitle || !pkgPrice || !activeVendor) return;
-const packages = [;
-      ...(activeVendor.packages || []),{id: `pkg_${Date.now()}`;
+
+const packages = [
+  ...(activeVendor.packages || []),{id: `pkg_${Date.now(,
+}`;
         title: pkgTitle;
         description: pkgDesc;
-        priceUsd: Number(pkgPrice)}function addPackage() {if (!pkgTitle || !pkgPrice || !activeVendor) return;
-    const packages = [;
-      ...(activeVendor && activeVendor.packages || []),{id: `pkg_${Date && Date.now()}`,title: pkgTitle,description: pkgDesc,priceUsd: Number(pkgPrice),},];
+        priceUsd: Number(pkgPrice,
+}function addPackage() {if (!pkgTitle || !pkgPrice || !activeVendor) return;
+
+const packages = [
+  ...(activeVendor && activeVendor.packages || []),{id: `pkg_${Date && Date.now(,
+}`,title: pkgTitle,description: pkgDesc,priceUsd: Number(pkgPrice),},];
     setActiveVendor({ ...activeVendor, packages })setPkgTitle('')setPkgDesc('')setPkgPrice('')}
         .filter(Boolean)} as Vendor;
     // For MVP, update via direct API not implemented, keep local preview only;
@@ -109,7 +115,7 @@ const packages = [;
           </div>;
           <div className='md:col-span-2'>;
             <label className='block text-sm mb-1'>Services Offered</label>;
-<<<<<<< HEAD
+
             <input
               name='servicesOffered'
 
@@ -129,25 +135,7 @@ const packages = [;
         <h2 className='text-lg font-medium'>Publish Packages</h2>
         <div className='grid grid-cols-1 md:grid-cols-3 gap-4'>
 
-=======
-            <input;
-              name='servicesOffered';
-    setPkgTitle('')setPkgDesc('')<section className='space-y-3'>;
-              defaultValue={activeVendor.servicesOffered?.join(', ') |''}
-              className='w-full border rounded px-3 py-2 bg-transparent';
-            />;
-          </div>;
-          <div className='md:col-span-2'>;
-            <button className='px-4 py-2 rounded bg-black text-white dark:bg-white dark:text-black'>;
-              Save;
-            </button>;
-          </div>;
-        </form>;
-      </section>;
-<section className='space-y-3'>;
-        <h2 className='text-lg font-medium'>Publish Packages</h2>;
-        <div className='grid grid-cols-1 md:grid-cols-3 gap-4'>;
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-2a0c
+
     <div className="space-y-8">;
       <div className="flex items-center justify-between">;
         <h1 className="text-2xl font-semibold">Agency Dashboard</h1>;
@@ -196,7 +184,7 @@ const packages = [;
             className='border rounded px-3 py-2 bg-transparent';
           />;
           <div className='flex gap-2'>;
-<<<<<<< HEAD
+
             <input
               placeholder='Price (USD)'
               type='number'
@@ -207,7 +195,7 @@ const packages = [;
             />
             <button
               onClick={addPackage}
-              className='px-4 py-2 rounded bg-black text-white dark:bg-white dark:text-black'
+              className='px-4 py-2 rounded bg-black text-white dark: bg-white dark:text-black'
             >
               Add
             </button>
@@ -217,20 +205,23 @@ const packages = [;
 
 <section className='space-y-3'>
         <h2 className='text-lg font-medium'>Project Pipeline</h2>
-        <Pipeline vendorId={activeVendor.id} />
+        <Pipeline vendorId={activeVendor.i,
+} />
       </section>
       <div className='text-center text-xs text-gray-500'>Powered by Zion</div>
     </div>
   );
 
-function Pipeline({ vendorId }: { vendorId: string }) {
+function Pipeline({ vendorId }: { vendorId: string,
+}) {
   const [items, setItems] = useState<any[]>([]);
   async function fetchItems() {
 
 const res = await fetch(
       `/api/vendors/pipeline?vendorId=${encodeURIComponent(vendorId)}`
     );
-    const data = await res.json();
+
+const data = await res.json();
     setItems(data.items || []);
   }
 
@@ -238,11 +229,13 @@ const res = await fetch(
     await fetch('/api/vendors/update-pipeline', {
 
       method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
+      headers: { 'Content-Type': 'application/json',
+},
 body: JSON.stringify({ itemId, status }),
     });
     fetchItems();
-  useEffect(() => {;
+  useEffect(() => {
+;
 
   }
 
@@ -252,39 +245,7 @@ body: JSON.stringify({ itemId, status }),
     <div className='space-y-2'>;
       {items && items.length === 0 && (;
         <div className='text-sm text-gray-500'>No leads yet.</div>;
-=======
-            <input;
-              placeholder='Price (USD)';
-              type='number';
-              value={pkgPrice}onChange={e => setPkgPrice(Number(e.target.value))}
-              className='border rounded px-3 py-2 bg-transparent w-full';
-            />;
-            <button;
-              onClick={addPackage}
-              className='px-4 py-2 rounded bg-black text-white dark:bg-white dark:text-black';
-            >;
-              Add;
-            </button>;
-          </div>;
-        </div>;
-      </section>;
-<section className='space-y-3'>;
-        <h2 className='text-lg font-medium'>Project Pipeline</h2>;
-        <Pipeline vendorId={activeVendor.id} />;
-      </section>;
-      <div className='text-center text-xs text-gray-500'>Powered by Zion</div>;
-    </div>;
-  )function Pipeline() {const [items, setItems] = useState<any[]>([])async function fetchItems() {const res = await fetch(`/api/vendors/pipeline?vendorId=${encodeURIComponent(vendorId)}`)const data = await res.json()setItems(data.items || [])const res = await fetch(`/api/vendors/pipeline?vendorId=${encodeURIComponent(vendorId)}`;
-    )const data = await res.json()setItems(data.items || [])}async function changeStatus() {await fetch('/api/vendors/update-pipeline', {useEffect(() => {className='px-4 py-2 rounded bg-black text-white dark:bg-white dark:text-black'>;
-              Add;
-            </button>          </div>;
-        </div>;
-      </section>;
-  const [items, setItems]  = useState<any[]>([])async function fetchItems() {const res = await fetch(`/api/vendors/pipeline?vendorId=${encodeURIComponent(vendorId)}`;
-    )const data = await res && res.json()setItems(data && data.items || [])}    const res = await fetch(`/api/vendors/pipeline?vendorId=${encodeURIComponent(vendorId)}`)const data = await res && res.json()setItems(data && data.items || [])}
-  async function changeStatus(): any (itemId: string, status: string) {await fetch('/api/vendors/update-pipeline', {method: 'POST',headers: { 'Content-Type': 'application/json' },body: JSON && JSON.stringify({ itemId, status }),method: 'POST',headers: { 'Content-Type': 'application/json' },body: JSON.stringify({ itemId, status }),})fetchItems()useEffect(() => {}fetchItems()}, [])return (<div className='space-y-2'>;
-      {items && items.length === 0 && (<div className='text-sm text-gray-500'>No leads yet.</div>;
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-2a0c
+
       )}
       {items && items.map(item => (<div;
           key={item && item.id}
@@ -298,8 +259,8 @@ body: JSON.stringify({ itemId, status }),
           <select;
             defaultValue={item && item.status}
             onChange={e => changeStatus(item && item.id, e && e.target.value)}
-            className='border rounded px-2 py-1 bg-transparent text-sm';
-          >;
+            className='border rounded px-2 py-1 bg-transparent text-sm'>
+
             <option value='lead'>Lead</option>;
             <option value='qualified'>Qualified</option>;
             <option value='proposal'>Proposal</option>;
@@ -312,13 +273,17 @@ body: JSON.stringify({ itemId, status }),
             <option value="in_progress">In Progress</option>;
             <option value="complete">Complete</option>;
             <option value="lost">Lost</option>;
-  const { listVendors } = await import('../utils/vendor-store')const vendor = listVendors()[0] |null; // tie to auth later;
+
+const { listVendors } = await import('../utils/vendor-store')const vendor = listVendors()[0] |null; // tie to auth later;
   return { props: { vendor } }
 })}
-  const { listVendors } = await import('../utils/vendor-store')const vendor = listVendors()[0] || null; // tie to auth later;
-  return { props: { vendor } }})defaultValue={item.status}
+
+const { listVendors,
+} = await import('../utils/vendor-store')const vendor = listVendors()[0] || null; // tie to auth later;
+  return { props: { vendor } }})defaultValue={item.statu,
+}
             onChange={e => changeStatus(item.id, e.target.value)}
-<<<<<<< HEAD
+
             className='border rounded px-2 py-1 bg-transparent text-sm'
           >
             <option value='lead'>Lead</option>
@@ -335,36 +300,11 @@ body: JSON.stringify({ itemId, status }),
 );
 
 export const getServerSideProps: GetServerSideProps<Props> = async () => {
-  const { listVendors } = await import('../utils/vendor-store');
-  const vendor = listVendors()[0] || null; // tie to auth later
-  return { props: { vendor } };
+  const { listVendors,
+} = await import('../utils/vendor-store');
+
+const vendor = listVendors()[0] || null; // tie to auth later
+  return { props: { vendor } },
 };
-=======
-            className='border rounded px-2 py-1 bg-transparent text-sm';
-          >;
-            <option value='lead'>Lead</option>;
-            <option value='qualified'>Qualified</option>;
-            <option value='proposal'>Proposal</option>;
-            <option value='in_progress'>In Progress</option>;
-            <option value='complete'>Complete</option>;
-            <option value='lost'>Lost</option>;
-          </select>;
-        </div>;
-      ))}const { listVendors } = await import('../utils/vendor-store')const vendor = listVendors()[0] |null; // tie to auth later;
-  return { props: { vendor } }
-})}
-  const { listVendors } = await import('../utils/vendor-store')const vendor = listVendors()[0] |null, // tie to auth later;
-  return { props: { vendor } }
-}
-}</div>;
-}</div>;
-}</div>))}
-    </div>)export const getServerSideProps: GetServerSideProps < Props> = async () => {const { list_vendors } = await import ('../utils / vendor - store')const vendor = list_vendors ()[0] || null; // tie to auth later;
-  return { props: { vendor } }
-}  )}
-export const getServerSideProps: GetServerSideProps < Props> = async () => {const { list_vendors } = await import ('../utils / vendor - store')const vendor = list_vendors ()[0] || null, // tie to auth later;
-  return { props: { vendor } }
-}</div>;
-)export const getServerSideProps: GetServerSideProps<Props> = async () => {const { listVendors } = await import('../utils/vendor-store')const vendor = listVendors()[0] || null; // tie to auth later;
-  return { props: { vendor } }}
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-2a0c
+
+

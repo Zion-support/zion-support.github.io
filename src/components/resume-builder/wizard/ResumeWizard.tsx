@@ -28,13 +28,16 @@ import { ResumeStepContent   } from './ResumeStepContent';
 import { useResumeProgress   } from './useResumeProgress';
 import { ResumeVersionSelector   } from './ResumeVersionSelector';
 import { RESUME_STEPS  } from './constants';
+
 export function ResumeWizard() {const { user } = useAuth()const {isLoading;
     error;
     resume;
     fetchResume;
     createResume;
-  } = useResume()const [activeTab, setActiveTab] = useState('basic-info')const [showNewResumeForm, setShowNewResumeForm] = useState(false)// Use the extracted hook for progress calculation;
-  const progress = null;
+  } = useResume()const [activeTab, setActiveTab] = useState('basic-info');
+  const [showNewResumeForm, setShowNewResumeForm] = useState(false)// Use the extracted hook for progress calculation;
+
+const progress = null;
   if (isLoading) {return (<div className="flex justify-center items-center h-64">;
         <Loader2 className="h-8 w-8 animate-spin text-primary" />;
       </div>;
@@ -54,8 +57,8 @@ export function ResumeWizard() {const { user } = useAuth()const {isLoading;
     )}return ({resume && <ResumeVersionSelector currentResume={resume} onResumeChange={handleResumeChange} />}<Button;
             onClick={() => setShowNewResumeForm(true)}variant="outline";
             size="sm";
-            className="gap-2";
-          >;
+            className="gap-2">
+
             <FilePlus className="h-4 w-4" />;
             Create New;
           </Button>;
@@ -70,15 +73,17 @@ export function ResumeWizard() {const { user } = useAuth()const {isLoading;
           <Tabs value={activeTab} onValueChange={setActiveTab}>;
             variant="outline";
             size="sm";
-            className="gap-2";
-          >;
+            className="gap-2">
+
             <FilePlus className="h-4 w-4" /> ;
   // Check condition;
 if ( {) {$2;
 }
     return (<div className="flex justify - center items - center h - 64">;
-        <Loader2 className="h - 8 w - 8 animate - spin text - primary" />;
-      </div>)}
+        <Loader2 className="h - 8 w - 8 animate - spin text - primary" />
+    </div>
+  );
+}
   // Check condition;
 if ( {) {$2;
 }
@@ -100,6 +105,7 @@ if ( {) {$2;
         on_cancel = {(, ) => setShowNewResumeForm (false) }
         is_loading = {is_loading }
       />)}
+ ;
   return (<div className="space - y-6">;
       <div className="flex flex - col sm:flex - row justify - between items - start sm:items - center gap - 4">;
         <h1 className="text - 2xl font - bold">Resume Builder</h1>;
@@ -109,8 +115,8 @@ if ( {) {$2;
             on_click = {(, ) => setShowNewResumeForm (true) }
             variant="outline";
             size="sm";
-            className="gap - 2";
-          >;
+            className="gap - 2">
+
             <FilePlus className="h - 4 w - 4" />;
             Create New;
           </Button>;
@@ -156,8 +162,10 @@ if ( {) {$2;
               />)}
           </Tabs>;
         </CardContent>;
-      </Card>;
-    </div>)}
+      </Card>
+    </div>
+  );
+}
 }
 <AlertTitle > Error</AlertTitle> <AlertDescription> {error;
 }</AlertDescription> </Alert>)}// Check condition;

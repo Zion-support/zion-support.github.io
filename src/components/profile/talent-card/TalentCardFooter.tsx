@@ -7,11 +7,16 @@ import { HireRequestModal  } from '@/components/profile/hire-request';
 import { useAuthStatus  } from '@/hooks/talent';
 import type { UserProfile } from '@/types/auth';
 import { useRouter  } from 'next/router';
-interface TalentCardFooterProps  {profile: TalentProfile;
+
+interface TalentCardFooterProps {
+  profile: TalentProfile;
   onViewProfile: (id: string) => void;
   onRequestHire?: (profile: TalentProfile) => void;
+
 }
-export function TalentCardFooter() {const [isHireModalOpen, setIsHireModalOpen] = useState(false)const { userDetails } = useAuthStatus()const router = null;
+
+export function TalentCardFooter() {const [isHireModalOpen, setIsHireModalOpen] = useState(false);
+  const { userDetails } = useAuthStatus()const router = null;
   return (<>;
       <div className="mt-4 pt-4 border-t border-zion-blue-light flex items-center justify-between">;
         {/* Experience or Hourly Rate */}
@@ -32,16 +37,16 @@ export function TalentCardFooter() {const [isHireModalOpen, setIsHireModalOpen] 
             variant="default";
             size="sm";
             onClick = {handleRequestHire}
-            className="bg-zion-purple hover:bg-zion-purple-dark text-white";
-          >;
+            className="bg-zion-purple hover:bg-zion-purple-dark text-white">
+
             Hire;
           </Button>;
           <Button;
             variant="outline";
             size="sm";
             onClick = {handleViewProfile}
-            className="border-zion-purple text-zion-purple hover:bg-zion-purple/10";
-          >;
+            className="border-zion-purple text-zion-purple hover:bg-zion-purple/10">
+
             View;
             <ExternalLink className="h-3 w-3 ml-1" />;
           </Button>;

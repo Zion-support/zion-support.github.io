@@ -1,32 +1,76 @@
 import React, { createContext, useContext, useState, useCallback, ReactNode } from 'react';
+
 export interface Toast  {id: string;
   type: 'success' | 'error' | 'warning' | 'info';
   title: string;
   message?: string;
   duration?: number;
-}interface ToastContextType  {toasts: Toast[];
+}
+
+interface ToastContextType {
+  toasts: Toast[];
   addToast: (toast: Omit<Toast, 'id'>) => void;
   removeToast: (id: string) => void;
   clearToasts: () => void;
-}const ToastContext  = createContext<ToastContextType | undefined>(undefined)export const useToast = () => {const context = useContext(ToastContext)if (!context) {throw new Error('useToast must be used within a ToastProvider')}
+
+}
+
+const ToastContext = createContext<ToastContextType | undefined>(undefined)export const useToast = () => ;
+  const context = useContext(ToastContext)if (!context) {throw new Error('useToast must be used within a ToastProvider')}
+ ;
   return context;
-}interface ToastProviderProps  {children: ReactNode;
-}export const ToastProvider: React.FC<ToastProviderProps> = ({ children }) => {const [toasts, setToasts]  = useState<Toast[]>([])const addToast = useCallback((toast: Omit<Toast, 'id'>) => {const id = Math.random().toString(36).substr(2, 9)const newToast  = { ...toast, id }setToasts(prev => [...prev, newToast])// Auto remove toast after duration;
-    const duration = toast.duration || 5000;
+}
+
+interface ToastProviderProps {
+  children: ReactNode;
+
+}
+
+export const ToastProvider: React.FC<ToastProviderProps> = ({ children   ,
+}) => {
+
+
+const [toasts, setToasts]  = useState<Toast[]>([])const addToast = useCallback((toast: Omit<Toast, 'id'>) => {const id = Math.random().toString(36).substr(2, 9;
+  const newToast  = { ...toast, id }setToasts(prev => [...prev, newToast])// Auto remove toast after duration;
+
+const duration = toast.duration || 5000;
     if (duration > 0) {setTimeout(() => {removeToast(id)}, duration)}
-  }, [])const removeToast = useCallback((id: string) => {setToasts(prev => prev.filter(toast => toast.id !== id))}, [])const clearToasts = useCallback(() => {setToasts([])}, [])return (<ToastContext.Provider value={{ toasts, addToast, removeToast, clearToasts }}>;
+  }, [])const removeToast = useCallback((id: string) => {setToasts(prev => prev.filter(toast => toast.id !== id),
+}, [];
+  const clearToasts = useCallback(() => {setToasts([])}, [];
+  return (<ToastContext.Provider value={{ toasts, addToast, removeToast, clearToasts }}>;
       {children}
       <ToastContainer toasts={toasts} onRemove={removeToast} />;
     </ToastContext.Provider>;
-  )}interface ToastContainerProps  {toasts: Toast[];
+  )}
+
+interface ToastContainerProps {
+  toasts: Toast[];
   onRemove: (id: string) => void;
-}const ToastContainer: React.FC<ToastContainerProps> = ({ toasts, onRemove }) => {if (toasts.length === 0) return null;return (<div className="fixed top-4 right-4 z-50 space-y-2">;
+
+}
+
+const ToastContainer: React.FC<ToastContainerProps> = ({ toasts, onRemove    }) => {
+
+
+if (toasts.length = == 0);
+  return null;return (<div className="fixed top-4 right-4 z-50 space-y-2">;
       {toasts.map(toast => (<ToastItem key={toast.id} toast={toast} onRemove={onRemove} />;
       ))}
     </div>;
-  )}interface ToastItemProps  {toast: Toast;
+  )}
+
+interface ToastItemProps {
+  toast: Toast;
   onRemove: (id: string) => void;
-}const ToastItem: React.FC<ToastItemProps> = ({ toast, onRemove }) => {const getToastStyles = () => {const baseStyles  = "max-w-sm w-full bg-white shadow-lg rounded-lg pointer-events-auto ring-1 ring-black ring-opacity-5 overflow-hidden";switch (toast.type) {case 'success':;
+
+}
+
+const ToastItem: React.FC<ToastItemProps> = ({ toast, onRemove    }) => {
+
+
+const getToastStyles = () => ;
+  const baseStyles  = "max-w-sm w-full bg-white shadow-lg rounded-lg pointer-events-auto ring-1 ring-black ring-opacity-5 overflow-hidden";switch (toast.type) {case 'success':;
         return `${baseStyles} border-l-4 border-green-400`;
       case 'error':;
         return `${baseStyles} border-l-4 border-red-400`;
@@ -37,7 +81,9 @@ export interface Toast  {id: string;
       default:;
         return baseStyles;
     }
-  }const getIconStyles = () => {switch (toast.type) {case 'success':;
+  }
+
+const getIconStyles = () => {switch (toast.type) {case 'success':;
         return "text-green-400";
       case 'error':;
         return "text-red-400";
@@ -48,7 +94,9 @@ export interface Toast  {id: string;
       default:;
         return "text-gray-400";
     }
-  }const getIcon = () => {switch (toast.type) {case 'success':;
+  }
+
+const getIcon = () => {switch (toast.type) {case 'success':;
         return (<svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">;
             <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />;
           </svg>;
@@ -70,7 +118,8 @@ export interface Toast  {id: string;
   }return (<div className={getToastStyles()}>;
       <div className="p-4">;
         <div className="flex items-start">;
-          <div className={`flex-shrink-0 ${getIconStyles()}`}>;
+          <div className={`flex-shrink-0 ${getIconStyles()}`}>
+
             {getIcon()}
           </div>;
           <div className="ml-3 w-0 flex-1">;

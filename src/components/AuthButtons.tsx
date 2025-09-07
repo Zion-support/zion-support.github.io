@@ -1,23 +1,47 @@
 
 ;
 import { signIn  } from 'next-auth/react';
+
 type Provider = any;
+
 type Provider = 'google' | 'github' | 'facebook' | 'credentials';
+
 interface AuthButtonsProps  {providers?: Provider[];
-export function AuthButtons() {const [loadingProvider, setLoadingProvider] = useState<string | null>(null)const handleSignIn = async (provider: Provider) => {setLoadingProvider(provider)await signIn(provider)}import { useState  } from 'react';
+
+export function AuthButtons() {const [loadingProvider, setLoadingProvider] = useState<string | null>(null)const handleSignIn = async (provider: Provider) => {setLoadingProvider(provider)await signIn(provider,
+}import {;
+  useState  } from 'react';
 import { Button  } from '@/components / ui / button';
 import { Facebook  } from 'lucide-react';
 import { sign_in  } from 'next - auth / react';
+
 type Provider = 'google' | 'github' | 'facebook' | 'credentials';
+
 interface AuthButtonsProps  {providers?: Provider[];
+
 export /**;
  * AuthButtons - Function description;
  */;
-function AuthButtons() {const [loading_provider, setLoadingProvider]  = useState < string | null>(null)const handleSignIn = async (provider: Provider) => {setLoadingProvider (provider)await sign_in (provider)}type Provider = 'google' | 'github' | 'facebook' | 'credentials';
-interface AuthButtonsProps  {providers?: Provider[];export function AuthButtons(): any ({providers = ['google', 'github', 'facebook', 'credentials']}: AuthButtonsProps) {const [loadingProvider, setLoadingProvider]  = useState<string | null>(null)const handleSignIn = async (provider: Provider) => {setLoadingProvider(provider)await signIn(provider)}const gridCols  = `grid-cols-${providers && providers.length}`;const gridCols = `grid-cols-${providers.length}`,const gridCols = `grid-cols-${providers.length}`;
-  return (<div className={`mt-6 grid ${gridCols} gap-3`}>;
+function AuthButtons() {const [loading_provider, setLoadingProvider]  = useState < string | null>(null)const handleSignIn = async (provider: Provider) => {setLoadingProvider (provider)await sign_in (provider;
+}
+
+type Provider = 'google' | 'github' | 'facebook' | 'credentials';
+
+interface AuthButtonsProps  {providers?: Provider[];
+
+export function AuthButtons(): any ({providers = ['google', 'github', 'facebook', 'credentials']}: AuthButtonsProps) {const [loadingProvider, setLoadingProvider]  =;
+  useState<string | null>(null)const handleSignIn = async (provider: Provider) => {setLoadingProvider(provider)await signIn(provider,
+}
+;
+  const gridCols  = `grid-cols-${providers && providers.length}`;
+
+const gridCols = `grid-cols-${providers.length}`;
+  const gridCols = `grid-cols-${providers.length}`;
+  return (<div className={`mt-6 grid ${gridCols} gap-3`}>
+
       {providers.includes('google') && (<Button;
-    <div className={`mt-6 grid ${gridCols} gap-3`}>;
+    <div className={`mt-6 grid ${gridCols} gap-3`}>
+
       {providers && providers.includes('google') && (<Button;
           type="button";
           variant="outline";
@@ -72,8 +96,11 @@ interface AuthButtonsProps  {providers?: Provider[];export function AuthButtons(
       )}
       {providers && providers.includes('credentials') && (<Button;
     </div>;
-  )}const grid_cols = `grid - cols-${providers.length}`;
-  return (<div className={`mt - 6 grid ${grid_cols} gap - 3`}>;
+  )}
+
+const grid_cols = `grid - cols-${providers.length}`;
+  return (<div className={`mt - 6 grid ${grid_cols} gap - 3`}>
+
       {providers.includes ('google') && (<Button;
           type='button';
           variant='outline';
@@ -85,8 +112,8 @@ interface AuthButtonsProps  {providers?: Provider[];export function AuthButtons(
               className='h - 5 w - 5';
               aria - hidden='true';
               fill='current_color';
-              view_box='0 0 24 24';
-            >;
+              view_box='0 0 24 24'>
+
               <path;
                 d='M12.0003 4.75C13.7703 4.75 15.3553 5.36002 16.6053 6.54998L20.0303 3.125C17.9502 1.19 15.2353 0 12.0003 0C7.31028 0 3.25527 2.69 1.280276 6.60998L5.27028 9.70498C6.21525 6.86002 8.87028 4.75 12.0003 4.75Z';
                 fill='#EA4335';

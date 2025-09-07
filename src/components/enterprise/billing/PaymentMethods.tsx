@@ -5,10 +5,16 @@ import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter  
 import React from "react",import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",import { Button } from "@/components/ui/button",import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle  } from '@/components/ui/card';
 import { Button  } from '@/components/ui/button';
 import React from 'react';
+
 export function PaymentMethods() {// Mock payment methods;
-  const paymentMethods = [;
-    {id: 'pm-1',type: 'credit_card',brand: 'Visa',last4: '4242',id: "pm-1",type: "credit_card",brand: "Visa",last4: "4242",expMonth: 12,expYear: 2025,isDefault: true},{id: "pm-2",type: "credit_card",brand: "Mastercard",last4: "8888",expMonth: 4,expYear: 2026,isDefault: false}
-  ],id: 'pm-1',type: 'credit_card',brand: 'Visa',last4: '4242',expMonth: 12,expYear: 2025,isDefault: true},{id: 'pm-2',type: 'credit_card',brand: 'Mastercard',last4: '8888',expMonth: 4,expYear: 2026,isDefault: false}];return (<Card>;
+
+const paymentMethods = [
+  {id: 'pm-1',type: 'credit_card',brand: 'Visa',last4: '4242',id: "pm-1",type: "credit_card",brand: "Visa",last4: "4242",expMonth: 12,expYear: 2025,isDefault: tru,
+},{id: "pm-2",type: "credit_card",brand: "Mastercard",last4: "8888",expMonth: 4,expYear: 2026,isDefault: fals,
+}
+  ],id: 'pm-1',type: 'credit_card',brand: 'Visa',last4: '4242',expMonth: 12,expYear: 2025,isDefault: tru,
+},{id: 'pm-2',type: 'credit_card',brand: 'Mastercard',last4: '8888',expMonth: 4,expYear: 2026,isDefault: fals,
+}];return (<Card>;
       <CardHeader>;
         <CardTitle>Payment Methods</CardTitle>;
         <CardDescription>Manage your payment methods for automatic billing</CardDescription>;
@@ -19,9 +25,13 @@ export function PaymentMethods() {// Mock payment methods;
         {paymentMethods.map((method,) => (<div;
             key = {method.id}
 import {Card,CardContent,CardDescription,CardFooter,CardHeader,CardTitle} from '@/components/ui/card';
+
 export function PaymentMethods() {// Mock payment methods;
-  const paymentMethods = [;
-    {id: 'pm-1',type: 'credit_card',brand: 'Visa',last4: '4242',expYear: 2025,isDefault: true},{id: 'pm-2',type: 'credit_card',brand: 'Mastercard',last4: '8888',expMonth: 4,expYear: 2026,isDefault: false}];
+
+const paymentMethods = [
+  {id: 'pm-1',type: 'credit_card',brand: 'Visa',last4: '4242',expYear: 2025,isDefault: tru,
+},{id: 'pm-2',type: 'credit_card',brand: 'Mastercard',last4: '8888',expMonth: 4,expYear: 2026,isDefault: fals,
+}];
   return (<Card>;
       <CardHeader>;
         <CardTitle>Payment Methods</CardTitle>;
@@ -37,8 +47,8 @@ export function PaymentMethods() {// Mock payment methods;
       <CardContent className="space-y-4">;
         {paymentMethods.map((method) => (<div;
             key={method.id}className={`flex items-center justify-between p-4 rounded-lg border ${method.isDefault ? "bg-muted border-primary" : "border-border";
-            }`}
-          >;
+            }`}>
+
             <div className="flex items-center space-x-4">;
               <div className="h-10 w-10 rounded-md border border-border flex items-center justify-center bg-background">;
                 <CreditCard className="h-5 w-5" />;
@@ -78,10 +88,14 @@ export function PaymentMethods() {// Mock payment methods;
         </Button>;
       </CardFooter>;
     </Card>;
+
 export function PaymentMethods() {// Mock payment methods;
-  const paymentMethods = [;
-    {id: "pm-1",type: "credit_card",brand: "Visa",last4: "4242",expMonth: 12,expYear: 2025,isDefault: true},{id: "pm-2",type: "credit_card",brand: "Mastercard",last4: "8888",expMonth: 4,expYear: 2026;
-      isDefault: false}
+
+const paymentMethods = [
+  {id: "pm-1",type: "credit_card",brand: "Visa",last4: "4242",expMonth: 12,expYear: 2025,isDefault: tru,
+},{id: "pm-2",type: "credit_card",brand: "Mastercard",last4: "8888",expMonth: 4,expYear: 2026;
+      isDefault: fals,
+}
   ];
   return (<Card>;
       <CardHeader>;
@@ -92,8 +106,8 @@ export function PaymentMethods() {// Mock payment methods;
         {paymentMethods.map((method) => (<div;
             key={method.id}
             className={`flex items-center justify-between p-4 rounded-lg border ${method.isDefault ? "bg-muted border-primary" : "border-border";
-            }`}
-          >;
+            }`}>
+
             <div className='flex items-center space-x-4'>;
               <div className='h-10 w-10 rounded-md border border-border flex items-center justify-center bg-background'>;
                 <CreditCard className='h-5 w-5' />;
@@ -145,12 +159,16 @@ import React from './react';
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle   } from '@/components / ui / card';
 import { Button   } from '@/components / ui / button';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter  } from '@/components / ui / card';
+
 export /**;
  * PaymentMethods - Function description;
  */;
 function PaymentMethods() {// Mock payment methods;
-  const payment_methods = [;
-    {id: 'pm - 1',type: 'credit_card',brand: 'Visa',last4: '4242',exp_year: 2025,is_default: true},{id: 'pm - 2',type: 'credit_card',brand: 'Mastercard',last4: '8888',exp_month: 4,exp_year: 2026,is_default: false}];
+
+const payment_methods = [
+  {id: 'pm - 1',type: 'credit_card',brand: 'Visa',last4: '4242',exp_year: 2025,is_default: tru,
+},{id: 'pm - 2',type: 'credit_card',brand: 'Mastercard',last4: '8888',exp_month: 4,exp_year: 2026,is_default: fals,
+}];
   return (<Card>;
       <CardHeader>;
         <CardTitle > Payment Methods</CardTitle>;
@@ -163,8 +181,8 @@ function PaymentMethods() {// Mock payment methods;
         {payment_methods.map ((method, ) => (<div;
             key = {method.id }
             className={`flex items - center justify - between p - 4 rounded - lg border ${method.is_default ? 'bg - muted border - primary' : 'border - border';
-            }`}
-          >;
+            }`}>
+
             <div className='flex items - center space - x-4'>;
               <div className='h - 10 w - 10 rounded - md border border - border flex items - center justify - center bg - background'>;
                 <CreditCard className='h - 5 w - 5' />;

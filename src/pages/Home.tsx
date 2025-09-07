@@ -31,87 +31,104 @@ import BlogSection from "../components/BlogSection";
 
 // Track scroll depth function
 const trackScrollDepth = (depth: number) => {
-  console.log(`Scroll depth: ${depth}%`);
+  console.log(`Scroll depth: ${dept,
+}%`);
   // Add analytics tracking here
 };
 
 // Track button click function
 const trackButtonClick = (action: string, section: string) => {
-  console.log(`Button clicked: ${action} in ${section}`);
+  console.log(`Button clicked: ${action} in ${sectio,
+}`);
   // Add analytics tracking here
 };
 
 const Home: React.FC = () => {
+ ;
   const services = [
     {
       icon: <Code className="w-8 h-8" />,
       title: "AI Services",
       description: "Custom AI solutions powered by machine learning and deep learning technologies",
       href: "/services/ai-services"
-    },
+   ,
+},
     {
       icon: <Database className="w-8 h-8" />,
       title: "IT Services",
       description: "Comprehensive IT infrastructure and digital transformation solutions",
       href: "/services/it-services"
-    },
+   ,
+},
     {
       icon: <Smartphone className="w-8 h-8" />,
       title: "Micro SaaS",
       description: "Scalable software-as-a-service solutions for growing businesses",
       href: "/services/micro-saas"
-    },
+   ,
+},
     {
       icon: <Shield className="w-8 h-8" />,
       title: "Cybersecurity",
       description: "Advanced security solutions to protect your digital assets",
       href: "/services/cybersecurity"
-    },
+   ,
+},
     {
       icon: <Cloud className="w-8 h-8" />,
       title: "Cloud Solutions",
       description: "Scalable cloud infrastructure and migration services",
       href: "/services/cloud-solutions"
-    },
+   ,
+},
     {
       icon: <Globe className="w-8 h-8" />,
       title: "Data Analytics",
       description: "Transform data into actionable insights with advanced analytics",
       href: "/services/data-analytics"
-    }
+   ,
+}
   ];
 
-  const stats = [
-    { number: "500+", label: "Projects Completed" },
-    { number: "100+", label: "Happy Clients" },
-    { number: "5+", label: "Years Experience" },
-    { number: "24/7", label: "Support Available" }
+const stats = [
+    { number: "500+", label: "Projects Completed",
+},
+    { number: "100+", label: "Happy Clients",
+},
+    { number: "5+", label: "Years Experience",
+},
+    { number: "24/7", label: "Support Available",
+}
   ];
 
-  const features = [
+const features = [
     {
       icon: <Zap className="w-6 h-6" />,
       title: "Lightning Fast",
       description: "Optimized solutions that deliver exceptional performance"
-    },
+   ,
+},
     {
       icon: <Shield className="w-6 h-6" />,
       title: "Secure & Reliable",
       description: "Enterprise-grade security with 99.9% uptime guarantee"
-    },
+   ,
+},
     {
       icon: <Users className="w-6 h-6" />,
       title: "Expert Team",
       description: "Experienced professionals with deep technical expertise"
-    },
+   ,
+},
     {
       icon: <Award className="w-6 h-6" />,
       title: "Proven Results",
       description: "Track record of successful projects and satisfied clients"
-    }
+   ,
+}
   ];
 
-  const testimonials = [
+const testimonials = [
     {
       name: 'Sarah Johnson',
       role: 'CEO, TechCorp',
@@ -134,10 +151,14 @@ const Home: React.FC = () => {
 
   // Track scroll depth
   React.useEffect(() => {
+
     const handleScroll = () => {
-      const scrollTop = window.pageYOffset;
-      const docHeight = document.documentElement.scrollHeight - window.innerHeight;
-      const scrollPercent = (scrollTop / docHeight) * 100;
+     ;
+  const scrollTop = window.pageYOffset;
+
+const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+
+const scrollPercent = (scrollTop / docHeight) * 100;
       
       if (scrollPercent > 25 && scrollPercent <= 50) {
         trackScrollDepth(25);
@@ -172,14 +193,18 @@ const Home: React.FC = () => {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 relative">
             <motion.div 
               className="text-center"
-              initial={{ opacity: 0, y: 30 }}
+              initial={{ opacity: 0, y: 30 ,
+}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
+              transition={{ duration: 0.8 ,
+}
             >
               <motion.h1 
                 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight"
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
+                initial={{ opacity: 0, y: 20 ,
+}
+                animate={{ opacity: 1, y: 0 ,
+}
                 transition={{ duration: 0.8, delay: 0.2 }}
               >
                 Transform Your Business with{' '}
@@ -187,25 +212,32 @@ const Home: React.FC = () => {
                   <TypingAnimation
                     text="AI-Powered Solutions"
                     speed={100}
-                    delay={1000}
+                    delay={100,
+}
                     className="inline-block"
                   />
                 </span>
               </motion.h1>
               <motion.p 
                 className="text-xl md:text-2xl text-gray-300 mb-12 max-w-4xl mx-auto leading-relaxed"
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: 0.4 }}
+                initial={{ opacity: 0, y: 20 ,
+}
+                animate={{ opacity: 1, y: 0 ,
+}
+                transition={{ duration: 0.8, delay: 0.4 ,
+}
               >
                 Leading provider of cutting-edge AI, IT, and digital transformation solutions. 
                 We help businesses scale, innovate, and succeed in the digital age.
               </motion.p>
               <motion.div 
                 className="flex flex-col sm:flex-row gap-4 justify-center mb-16"
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: 0.6 }}
+                initial={{ opacity: 0, y: 20 ,
+}
+                animate={{ opacity: 1, y: 0 ,
+}
+                transition={{ duration: 0.8, delay: 0.6 ,
+}
               >
               <Link
                 to="/services"
@@ -218,23 +250,27 @@ const Home: React.FC = () => {
               <Link
                 to="/contact"
                 onClick={() => trackButtonClick('get_consultation', 'hero')}
-                className="group border-2 border-white/20 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white/10 transition-all duration-300 flex items-center justify-center"
+                className="group border-2 border-white/20 text-white px-8 py-4 rounded-lg font-semibold text-lg hover: bg-white/10 transition-all duration-300 flex items-center justify-center"
               >
                 Get Free Consultation
                 <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </Link>
               </motion.div>
 
-              {/* Stats */}
+              {/* Stats *,
+}
               <motion.div 
                 className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto"
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: 0.8 }}
+                initial={{ opacity: 0, y: 20 ,
+}
+                animate={{ opacity: 1, y: 0 ,
+}
+                transition={{ duration: 0.8, delay: 0.8 ,
+}
               >
                 {stats.map((stat, index) => (
                   <div key={index} className="text-center">
-                    <div className="text-3xl md:text-4xl font-bold text-white mb-2">
+                    <div className="text-3xl md: text-4xl font-bold text-white mb-2">
                       {stat.number}
                     </div>
                     <div className="text-gray-400 text-sm md:text-base">
@@ -250,7 +286,8 @@ const Home: React.FC = () => {
         {/* Services Section */}
         <div className="py-20 bg-gray-900/50">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <ScrollAnimation animation="slideUp" delay={0.2}>
+            <ScrollAnimation animation="slideUp" delay={0.,
+}>
               <div className="text-center mb-16">
                 <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
                   Our <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500">Services</span>
@@ -267,7 +304,7 @@ const Home: React.FC = () => {
                   key={index}
                   animation="scale"
                   delay={index * 0.1}
-                  className="group bg-gray-800/50 backdrop-blur-sm rounded-2xl p-8 hover:bg-gray-800/70 transition-all duration-300 border border-gray-700/50 hover:border-cyan-400/50"
+                  className="group bg-gray-800/50 backdrop-blur-sm rounded-2xl p-8 hover: bg-gray-800/70 transition-all duration-300 border border-gray-700/50 hover:border-cyan-400/50"
                 >
                   <div className="text-cyan-400 mb-4 group-hover:scale-110 transition-transform duration-300">
                     {service.icon}
@@ -295,7 +332,8 @@ const Home: React.FC = () => {
         <div className="py-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <ParallaxSection speed={0.3} direction="up">
-              <ScrollAnimation animation="slideUp" delay={0.2}>
+              <ScrollAnimation animation="slideUp" delay={0.,
+}>
                 <div className="text-center mb-16">
                   <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
                     Why Choose <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500">Zion Tech</span>?
@@ -315,7 +353,7 @@ const Home: React.FC = () => {
                   delay={index * 0.1}
                   className="text-center group"
                 >
-                  <div className="w-16 h-16 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
+                  <div className="w-16 h-16 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-full flex items-center justify-center mx-auto mb-4 group-hover: scale-110 transition-transform duration-300">
                     <div className="text-black">
                       {feature.icon}
                     </div>
@@ -400,14 +438,17 @@ const Home: React.FC = () => {
           </div>
         </div>
 
-        {/* CTA Section */}
+        {/* CTA Section *,
+}
         <div className="py-20 bg-gradient-to-r from-cyan-600/20 to-blue-600/20">
           <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
             <motion.div
-              initial={{ opacity: 0, y: 30 }}
+              initial={{ opacity: 0, y: 30 ,
+}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
+              viewport={{ once: true ,
+}
             >
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
                 Ready to Transform Your Business?
@@ -415,7 +456,7 @@ const Home: React.FC = () => {
               <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
                 Let&apos;s discuss your project and discover how our AI-powered solutions can accelerate your growth.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <div className="flex flex-col sm: flex-row gap-4 justify-center">
                 <Link
                   to="/contact"
                   className="group bg-gradient-to-r from-cyan-400 to-blue-500 text-black px-8 py-4 rounded-lg font-semibold text-lg hover:from-cyan-500 hover:to-blue-600 transition-all duration-300 flex items-center justify-center"
@@ -436,7 +477,8 @@ const Home: React.FC = () => {
         </div>
       </div>
     </>
-  );
+  ),
 };
+
 
 export default Home;

@@ -3,12 +3,19 @@
 import type { NextPage } from 'next';
 import Head from 'next/head';
 import Link from 'next/link';
-const SecurityAuditingChat: NextPage = () => {return (<div>;
+
+const SecurityAuditingChat: NextPage = () => ;
+  return (<div>;
       <Head>;
-const SecurityAuditingChat: NextPage = () => {return (<div>;
+
+const SecurityAuditingChat: NextPage = () => ;
+  return (<div>;
       <Head>;
         <title>SecurityAuditingChat - Zion Tech Solutions</title>;
-        <meta name="description" content="SecurityAuditingChat service" />{" "}const SecurityAuditingChat: NextPage = () => {return (<div>;
+        <meta name = "description" content="SecurityAuditingChat service" />{" "}
+;
+  const SecurityAuditingChat: NextPage = () => ;
+  return (<div>;
       <Head></Head>;<meta name="description" content="SecurityAuditingChat service" />;
       </Head>;
       </Head>;<meta name="description" content="SecurityAuditingChat service" />;
@@ -18,21 +25,21 @@ import type { NextPage } from "next";
 import Head from "next/head";
 import Link from "next/link";
 
-
 const SecurityAuditingChat: NextPage = () => {
+ ;
   return (
     <div>
       <Head>
-
-const SecurityAuditingChat: NextPage = () => {;
+;
+  const SecurityAuditingChat: NextPage = () => {;
   return (
     <div>;
       <Head>;
         <title>SecurityAuditingChat - Zion Tech Solutions</title>;
-        <meta name="description" content="SecurityAuditingChat service" />{" "}
-
-
-const SecurityAuditingChat: NextPage = () => {
+        <meta name = "description" content="SecurityAuditingChat service" />{" "}
+;
+  const SecurityAuditingChat: NextPage = () => {
+ ;
   return (
     <div>
       <Head>
@@ -61,12 +68,14 @@ const SecurityAuditingChat: NextPage = () => {
       </main>;
     </div>;
   )}
+
 export default SecurityAuditingChat;<title>SecurityAuditingChat - Zion Tech Solutions</title>;
         <title>SecurityAuditingChat - Zion Tech Solutions</title>;
 ursor/fix-website-loading-errors-and-merge-6662;
         <title>SecurityAuditingChat - Zion Tech Solutions</title>;
   );
 }
+
 export default SecurityAuditingChat;
 
 
@@ -76,7 +85,9 @@ export default SecurityAuditingChat;
 import type { NextPage } from './next';
 import Head from './next / head';
 import Link from './next / link';
-const SecurityAuditingChat: NextPage = () => {return (<div>;
+
+const SecurityAuditingChat: NextPage = () => ;
+  return (<div>;
       <Head>;
         <title > SecurityAuditingChat - Zion Tech Solutions</title>;
         <meta name="description" content="SecurityAuditingChat service" />{" "}
@@ -85,8 +96,12 @@ const SecurityAuditingChat: NextPage = () => {return (<div>;
         <h1 > SecurityAuditingChat</h1>;
         <p > Service details coming soon...</p>;
         <a href="/services">Back to Services</a>;
-      </main>;
-    </div>)}export default SecurityAuditingChat;<div>;
+      </main>
+    </div>
+  );
+}
+
+export default SecurityAuditingChat;<div>;
       <Head>;
         <title>SecurityAuditingChat - Zion Tech Solutions</title>;
         <meta name=&quot;description&quot; content=&quot;SecurityAuditingChat service&quot; />;
@@ -98,7 +113,9 @@ const SecurityAuditingChat: NextPage = () => {return (<div>;
       </main>;
     </div>;
   )},export default SecurityAuditingChat;
-const SecurityAuditingChat: NextPage = () => {return (<div>;
+
+const SecurityAuditingChat: NextPage = () => ;
+  return (<div>;
       <Head>;
         <title>SecurityAuditingChat - Zion Tech Solutions</title>;
         <meta name="description" content="SecurityAuditingChat service" />{" "}
@@ -110,11 +127,13 @@ const SecurityAuditingChat: NextPage = () => {return (<div>;
       </main>;
     </div>;
   )}
+
 export default SecurityAuditingChat;<title>SecurityAuditingChat - Zion Tech Solutions</title>;
         <title>SecurityAuditingChat - Zion Tech Solutions</title>;
-    </div>);
-}
-;
+    </div>)
+};
+
+
 export default SecurityAuditingChat;
 ;
     <div>
@@ -137,6 +156,7 @@ export default SecurityAuditingChat
 
 
 const SecurityAuditingChat: NextPage = () => {
+ ;
   return (
     <div>
       <Head>
@@ -151,6 +171,7 @@ const SecurityAuditingChat: NextPage = () => {
     </div>
   );
 }
+
 export default SecurityAuditingChat;
 
         <title>SecurityAuditingChat - Zion Tech Solutions</title>

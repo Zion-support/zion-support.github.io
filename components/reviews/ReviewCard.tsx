@@ -1,4 +1,5 @@
 type Props = any;
+
 export default ReviewCard;
       <div className='flex items-center justify-between mb-2'>;
         <div className='flex items-center gap-2'>;
@@ -27,17 +28,22 @@ export default ReviewCard;
       <p className='text-sm leading-6'>{review.text}</p>;
       <div className='flex flex-wrap gap-2 mt-3'>;
         {typeof review.categories?.communication === 'number' && (<span className='pill'>;
-            Communication: {review.categories.communication}★;
+            Communication: {review.categories.communicatio,
+}★;
           </span>;
         )}
         {typeof review.categories?.qualityOfWork === 'number' && (<span className='pill'>;
-            Quality: {review.categories.qualityOfWork}★;
+            Quality: {review.categories.qualityOfWor,
+}★;
           </span>;
         )}
         {typeof review.categories?.timeliness === 'number' && (<span className='pill'>;
-            Timeliness: {review.categories.timeliness}★;
+            Timeliness: {review.categories.timelines,
+}★;
           </span>;
         )}
       </div>;
     </div>;
-  )}export default ReviewCard;
+  )}
+
+export default ReviewCard;

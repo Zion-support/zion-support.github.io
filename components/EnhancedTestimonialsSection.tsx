@@ -8,14 +8,19 @@ import { Star;
   Award;
   TrendingUp;
   CheckCircle;Star,Quote,Users,Award,} from 'lucide-react';
-interface Testimonial  {interface Testimonial  {id: string;
+
+interface Testimonial {
+  interface Testimonial  {id: string;
   name: string;
   title: string;
   company: string;
   content: string;
   rating: number;
   avatar: string;category: string;
-}const EnhancedTestimonialsSection: React.FC;category: string;  id: string;
+
+}
+
+const EnhancedTestimonialsSection: React.FC;category: string;  id: string;
   name: string;
   title: string;
   company: string;
@@ -24,20 +29,33 @@ interface Testimonial  {interface Testimonial  {id: string;
   avatar: string;
   category: string;
   category: string;  id: string,name: string,title: string,company: string,content: string,rating: number,avatar: string,}
-const EnhancedTestimonialsSection: React.FC = () => {const testimonials: Testimonial[] = [;
+
+const EnhancedTestimonialsSection: React.FC = () => ;
+  const testimonials: Testimonial[] = [;
     {id: '1',name: 'Dr. Sarah Chen',title: 'CTO',company: 'Quantum Dynamics Inc.',content:;
         'Zion Tech Group transformed our AI infrastructure completely. Their quantum cybersecurity solution prevented multiple sophisticated attacks and their AI business intelligence platform gave us insights we never had before. ROI exceeded 400% within 8 months.',rating: 5,avatar: 'SC',category: 'AI & Security',},{id: '2',name: 'Marcus Rodriguez',title: 'VP of Engineering',company: 'SpaceTech Ventures',content:;
         'Working with Zion Tech Group on our space technology platform was game-changing. Their edge computing orchestration and AI-powered mission planning reduced our satellite deployment time by 60% and increased mission success rate to 98%.',rating: 5,avatar: 'MR',category: 'Space Technology',},{id: '3',name: 'Dr. Emily Watson',title: 'Research Director',company: 'NeuralLink Research',content:;
         "Zion Tech Group's neural interface development tools are revolutionary. Their AI consciousness simulation platform accelerated our research by 3x and opened new possibilities we hadn't considered. The team's expertise is unmatched.",rating: 5,avatar: 'EW',category: 'Emerging Tech',},{id: '4',name: 'James Thompson',title: 'CEO',company: 'EdgeFlow Systems',content:;
         'The edge computing orchestration solution from Zion Tech Group transformed our IoT infrastructure. We saw 50% latency reduction and 40% cost savings while improving reliability. Their support team is incredibly responsive.',rating: 5,avatar: 'JT',category: 'Infrastructure',},{id: '5',name: 'Dr. Lisa Park',title: 'Chief Innovation Officer',company: 'FutureTech Labs',content:;
         "Zion Tech Group's quantum AI neural networks are cutting-edge. We've achieved breakthroughs in consciousness simulation that seemed impossible. Their technology is truly ahead of its time.",rating: 5,avatar: 'LP',category: 'Quantum AI',},{id: '6',name: 'Robert Kim',title: 'Head of Digital Transformation',company: 'Global Innovations Corp',content:;
-        "Implementing Zion Tech Group's AI business intelligence suite revolutionized our decision-making process. We now have real-time insights across all departments, leading to 35% faster market response and 28% cost optimization.",rating: 5,avatar: 'RK',category: 'AI & Analytics',},];const stats = [;
-    { number: '500+', label: 'Projects Delivered', icon: CheckCircle },{ number: '50+', label: 'Enterprise Clients', icon: Users },{ number: '99.9%', label: 'Client Satisfaction', icon: Award },{ number: '4.9/5', label: 'Average Rating', icon: Star },];
-  const renderStars = (rating: number) => {return Array.from({ length: 5 }, (_, i) => (<Star;
+        "Implementing Zion Tech Group's AI business intelligence suite revolutionized our decision-making process. We now have real-time insights across all departments, leading to 35% faster market response and 28% cost optimization.",rating: 5,avatar: 'RK',category: 'AI & Analytics',},];
+
+const stats = [
+  { number: '500+', label: 'Projects Delivered', icon: CheckCircle,
+},{ number: '50+', label: 'Enterprise Clients', icon: Users,
+},{ number: '99.9%', label: 'Client Satisfaction', icon: Award,
+},{ number: '4.9/5', label: 'Average Rating', icon: Star,
+},];
+
+const renderStars = (rating: number) => ;
+  return Array.from({ length: 5,
+}, (_, i) => (<Star;
         key={i}
         className={`w - 4 h - 4 ${i < rating ? 'text - yellow - 400 fill - current' : 'text - gray - 400';
         }`}{/* Stats Section */}
-        <div className='grid grid-cols-2 md:grid-cols-4 gap-8 mb-16'>  }
+        <div className = 'grid grid-cols-2 md: grid-cols-4 gap-8 mb-16'> ,
+}
+ ;
   return (<section className="py-24 px-6 relative overflow-hidden">;
       {/* Background */}
         {/* Stats Section */}
@@ -119,9 +137,10 @@ const EnhancedTestimonialsSection: React.FC = () => {const testimonials: Testimo
 <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>;
           {testimonials.map(testimonial => (<div;
               key={testimonial.id}
-              className='group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl hover:border-blue-400/30 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl';
-            >;
-              {/* Quote Icon */}
+              className='group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl hover: border-blue-400/30 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl'>
+
+              {/* Quote Icon *,
+}
               <div className='absolute top-4 right-4 text-blue-400/20 group-hover:text-blue-400/40 transition-colors duration-300'>;
                 <Quote className='w-8 h-8' />;
               </div>;
@@ -239,14 +258,14 @@ const EnhancedTestimonialsSection: React.FC = () => {const testimonials: Testimo
                 className="px-8 py-4 bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-2xl">;
                 Start Your Success Story;
               </a>;href='mailto:kleber@ziontechgroup.com?subject=Client Success Story Discussion';
-                className='px-8 py-4 bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-2xl';
-              >;
+                className='px-8 py-4 bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-2xl'>
+
                 Start Your Success Story;
               </a>;
               <a;
 href='tel:+13024640950';
-                className='px-8 py-4 border border-white/20 hover:border-white/40 rounded-full font-semibold text-lg transition-all duration-300 backdrop-blur-sm bg-white/5 hover:bg-white/10';
-              >;
+                className='px-8 py-4 border border-white/20 hover:border-white/40 rounded-full font-semibold text-lg transition-all duration-300 backdrop-blur-sm bg-white/5 hover:bg-white/10'>
+
                 Schedule a Call;
               </a>;
             </div>;
@@ -255,9 +274,18 @@ href='tel:+13024640950';
             </div>;
           </div>;
         </div>;
-      </div>;export default EnhancedTestimonialsSection;
-    </section>)}export default EnhancedTestimonialsSection)}export default EnhancedTestimonialsSection;)export default EnhancedTestimonialsSection;  )}
-export default EnhancedTestimonialsSection;export default EnhancedTestimonialsSection;{/* Trust Indicators */}
+      </div>;
+
+export default EnhancedTestimonialsSection;
+    </section>)}
+
+export default EnhancedTestimonialsSection)}
+
+export default EnhancedTestimonialsSection;)export default EnhancedTestimonialsSection;  )}
+
+export default EnhancedTestimonialsSection;
+
+export default EnhancedTestimonialsSection;{/* Trust Indicators */}
 <div className='mt-16 text-center'>;
           <div className='inline-flex items-center gap-8 text-white/60 text-sm'>;
             <div className='flex items-center gap-2'>;
@@ -281,4 +309,6 @@ export default EnhancedTestimonialsSection;export default EnhancedTestimonialsSe
         </div>;
       </div>;
     </section>;
-)}export default EnhancedTestimonialsSection;
+)}
+
+export default EnhancedTestimonialsSection;

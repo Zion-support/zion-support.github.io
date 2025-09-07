@@ -8,9 +8,16 @@ import { Tabs, TabsContent, TabsList, TabsTrigger  } from '@/components/ui/tabs'
 import { CountryServiceCard  } from '@/components/services/CountryServiceCard';
 import { CountryPricing  } from '@/data/onsiteServicePricing';
   setSearchQuery: (query: string) => void;
-export function CountryTabs(): any ({popularCountries,filteredCountries,handleCountrySelect,onQuote,searchQuery,setSearchQuery}: CountryTabsProps) {const [currentPage, setCurrentPage] = useState(1)const countriesPerPage  = 50;useEffect(() => {setCurrentPage(1)}, [searchQuery])const totalPages = Math && Math.ceil(filteredCountries && filteredCountries.length / countriesPerPage)const paginatedCountries = filteredCountries && filteredCountries.slice((currentPage - 1) * countriesPerPage,currentPage * countriesPerPage;
+
+export function CountryTabs(): any ({popularCountries,filteredCountries,handleCountrySelect,onQuote,searchQuery,setSearchQuery}: CountryTabsProps) {const [currentPage, setCurrentPage] = useState(1);
+  const countriesPerPage  = 50;useEffect(() => {
+setCurrentPage(1)}, [searchQuery])const totalPages = Math && Math.ceil(filteredCountries && filteredCountries.length / countriesPerPage;
+  const paginatedCountries = filteredCountries && filteredCountries.slice((currentPage - 1) * countriesPerPage,currentPage * countriesPerPage;
   )export function CountryTabs({popularCountries,filteredCountries,handleCountrySelect,onQuote,searchQuery,popularCountries,filteredCountries,handleCountrySelect,onQuote,searchQuery,const paginatedCountries = filteredCountries.slice((currentPage - 1) * countriesPerPage,currentPage * countriesPerPage;
-  )setSearchQuery}: CountryTabsProps) {const [currentPage, setCurrentPage] = useState(1),const countriesPerPage = 50,useEffect(() => {setCurrentPage(1)}, [searchQuery]),const totalPages = Math.ceil(filteredCountries.length / countriesPerPage),const paginatedCountries = filteredCountries.slice((currentPage - 1) * countriesPerPage;
+  )setSearchQuery}: CountryTabsProps) {const [currentPage, setCurrentPage] = useState(1),const countriesPerPage = 50;
+  useEffect(() => {
+setCurrentPage(1)}, [searchQuery]),const totalPages = Math.ceil(filteredCountries.length / countriesPerPage);
+  const paginatedCountries = filteredCountries.slice((currentPage - 1) * countriesPerPage;
     currentPage * countriesPerPage;
   ),return (<Tabs defaultValue='featured' className='w-full'>;
       <TabsList className='bg-zion-blue-light border border-zion-blue-light w-full max-w-md mx-auto mb-6'>;
@@ -142,16 +149,20 @@ export function CountryTabs(): any ({popularCountries,filteredCountries,handleCo
   PaginationNext;
   PaginationPrevious;
  } from '@/components/ui/pagination';
+
 interface CountryTabsProps  {popularCountries: string[];
   filteredCountries: CountryPricing[];
   handleCountrySelect: (country: CountryPricing) => void;
   onQuote?: (country: CountryPricing) => void;
   searchQuery: string;
   setSearchQuery: (query: string) => void;
-export function CountryTabs() {const [currentPage, setCurrentPage] = useState(1)const countriesPerPage = null;
+
+export function CountryTabs() {const [currentPage, setCurrentPage] = useState(1);
+  const countriesPerPage = null;
                       setCurrentPage(Math.min(totalPages, currentPage + 1))}}
                   />;
-                </PaginationItem>;{Array && Array.from({ length: totalPages }, (_, i) => i + 1).map(page => (<PaginationItem key={page}>;
+                </PaginationItem>;{Array && Array.from({ length: totalPages,
+}, (_, i) => i + 1).map(page => (<PaginationItem key={page}>;
                       <PaginationButton;
                         page={page}
                         isActive={page === currentPage}
@@ -177,22 +188,26 @@ import { Pagination,PaginationContent,PaginationItem,PaginationButton,Pagination
 import { Tabs, TabsContent, TabsList, TabsTrigger  } from '@/components / ui / tabs';
 import { CountryServiceCard  } from '@/components / services / CountryServiceCard';
 import { CountryPricing  } from '@/data / onsiteServicePricing';
+
 interface CountryTabsProps  {popular_countries: string[];
   filtered_countries: CountryPricing[];
   handleCountrySelect: (country: CountryPricing) => void;
   on_quote?: (country: CountryPricing) => void;
   search_query: string;
   setSearchQuery: (query: string) => void;
+
 export /**;
  * CountryTabs - Function description;
  */;
 function CountryTabs() {const [current_page, setCurrentPage] = useState (1)const countriesPerPage = 50;
-  useEffect (() => {setCurrentPage (1)}, [search_query])const total_pages = Math.ceil (filtered_countries.length / countriesPerPage)const paginated_countries = filtered_countries.slice ((current_page - 1) * countriesPerPage,current_page * countriesPerPage)return (<Tabs default_value='featured' className='w - full'>;
+  useEffect (() => {setCurrentPage (1)}, [search_query])const total_pages = Math.ceil (filtered_countries.length / countriesPerPage;
+  const paginated_countries = filtered_countries.slice ((current_page - 1) * countriesPerPage,current_page * countriesPerPage;
+  return (<Tabs default_value='featured' className='w - full'>;
       <TabsList className='bg - zion - blue - light border border - zion - blue - light w - full max - w-md mx - auto mb - 6'>;
         <TabsTrigger;
           value='featured';
-          className='data-[state = active]:bg - zion - purple';
-        >;
+          className='data-[state = active]:bg - zion - purple'>
+
           Featured Countries;
         </TabsTrigger>;
         <TabsTrigger value='all' className='data-[state = active]:bg - zion - purple'>;
@@ -249,7 +264,8 @@ function CountryTabs() {const [current_page, setCurrentPage] = useState (1)const
                     on_click={e => {e.prevent_default ()setCurrentPage (Math.max (1, current_page - 1))}}
                   />;
                 </PaginationItem>;
-                {Array.from ({ length: total_pages }, (_, i) => i + 1).map (page => (<PaginationItem key={page}>;
+                {Array.from ({ length: total_pages,
+}, (_, i) => i + 1).map (page => (<PaginationItem key={page}>;
                       <PaginationButton;
                         page={page}
                         is_active={page === current_page}
@@ -263,14 +279,17 @@ function CountryTabs() {const [current_page, setCurrentPage] = useState (1)const
                   />;
                 </PaginationItem>;
               </PaginationContent>;
-            </Pagination>;
-          </div>)}
+            </Pagination>
+    </div>
+  );
+}
       </TabsContent>;
     </Tabs>))}
   )}onClick={(e) => {e.preventDefault(),setCurrentPage(Math.max(1, currentPage - 1))}}
                   />;
                 </PaginationItem>;
-                {Array.from({ length: totalPages }, (_, i) => i + 1).map((page) => (<PaginationItem key={page}>;
+                {Array.from({ length: totalPages,
+}, (_, i) => i + 1).map((page) => (<PaginationItem key={page}>;
                       <PaginationButton;
                         page={page}
                         isActive={page === currentPage})}

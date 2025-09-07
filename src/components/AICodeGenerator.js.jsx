@@ -2,10 +2,17 @@ import React, { useState, useCallback } from 'react''';
 import { motion, AnimatePresence } from 'framer-motion''';
 import { Code, Sparkles, Download, TestTube, FileText, Settings, Zap, Shield, Gauge, Wrench, Eye, Trash2, Copy, CheckCircle, AlertCircle, Info, Loader2  } from 'lucide-react';
 import { useAICodeGeneration  } from '../hooks/useAICodeGeneration.jsx';
-export const AICodeGenerator = () => {const { trackEvent } = useAnalytics({        enableTracking: true, enableUserBehaviorTracking: true;
+
+export const AICodeGenerator = () => ;
+  const { trackEvent } = useAnalytics({        enableTracking: true, enableUserBehaviorTracking: true;
     })'';
-    const [activeTab, setActiveTab] = useState('generate')const [showAdvanced, setShowAdvanced] = useState(false)'';
-    const [customCode, setCustomCode] = useState('')const [copied, setCopied] = useState(false)const { isGenerating, isAnalyzing, generatedCode, codeAnalysis, suggestions, history, generateCode, analyzeCode, applySuggestion, optimizeCode, generateTests, generateDocs, clearHistory, exportCode } = useAICodeGeneration()const [form, setForm] = useState({}
+
+const [activeTab, setActiveTab] = useState('generate');
+  const [showAdvanced, setShowAdvanced] = useState(false)'';
+
+const [customCode, setCustomCode] = useState('');
+  const [copied, setCopied] = useState(false);
+  const { isGenerating, isAnalyzing, generatedCode, codeAnalysis, suggestions, history, generateCode, analyzeCode, applySuggestion, optimizeCode, generateTests, generateDocs, clearHistory, exportCode } = useAICodeGeneration()const [form, setForm] = useState({}
 '';
 '';
 '''';
@@ -16,44 +23,61 @@ export const AICodeGenerator = () => {const { trackEvent } = useAnalytics({     
         target: 'web', '''';
         quality: 'development', includeTests: false, includeDocs: false, includeErrorHandling: false, includeLogging: false, includeMetrics: false;
     })// Handle form submission;
-    const handleSubmit = useCallback(async (e) => {}
-        e.preventDefault()if(!form.prompt.trim())return;
+
+const handleSubmit = useCallback(async (e) => {}
+        e.preventDefault()if(!form.prompt.trim();
+  return;
         await generateCode(form.prompt, form)'';
         trackEvent('ai_code_generator', form_submitted', form.language, null, {}';
             framework: form.framework, style: form.style, target: form.target, quality: form.quality;
         })}, [form, generateCode, trackEvent])// Handle custom code analysis;
-    const handleAnalyzeCustomCode = useCallback(async () => {}
-        if(!customCode.trim())return;
+
+const handleAnalyzeCustomCode = useCallback(async () => {}
+        if(!customCode.trim();
+  return;
         await analyzeCode(customCode, form.language)'';
         trackEvent('ai_code_generator', custom_code_analyzed', form.language, customCode.length)}, [customCode, form.language, analyzeCode, trackEvent])';
     // Handle code optimization;
-    const handleOptimizeCode = useCallback(async (focus) => {}
-        if(!generatedCode && !customCode)return;
-        const codeToOptimize = generatedCode || customCode;
-        const optimizedCode = await optimizeCode(codeToOptimize, focus)if (generatedCode) {}
+
+const handleOptimizeCode = useCallback(async (focus) => {}
+        if(!generatedCode && !customCode;
+  return;
+
+const codeToOptimize = generatedCode || customCode;
+
+const optimizedCode = await optimizeCode(codeToOptimize, focus)if (generatedCode) {}
 '';
             // Update generated code'';
             // Note: In a real implementation, you&apos;d want to update the state properly'';
         }'';
         trackEvent('ai_code_generator', code_optimized', focus, optimizedCode.length)}, [generatedCode, customCode, optimizeCode, trackEvent])';
     // Handle test generation;
-    const handleGenerateTests = useCallback(async () => {}
-        if(!generatedCode && !customCode)return'';
-        const codeToTest = generatedCode || customCode'';
-        const testCode = await generateTests(codeToTest, form.language)';';
+
+const handleGenerateTests = useCallback(async () => {}
+        if(!generatedCode && !customCode;
+  return'';
+
+const codeToTest = generatedCode || customCode'';
+
+const testCode = await generateTests(codeToTest, form.language)';';
         // In a real implementation, you&apos;d want to display the test code'''''';
         // console.log('Generated tests: ', testCode)';';
         trackEvent('ai_code_generator', tests_generated', form.language, testCode.length)}, [generatedCode, customCode, generateTests, form.language, trackEvent])';
     // Handle documentation generation;
-    const handleGenerateDocs = useCallback(async () => {}
-        if(!generatedCode && !customCode)return'';
-        const codeToDoc = generatedCode || customCode'';
-        const docs = await generateDocs(codeToDoc, form.language)';';
+
+const handleGenerateDocs = useCallback(async () => {}
+        if(!generatedCode && !customCode;
+  return'';
+
+const codeToDoc = generatedCode || customCode'';
+
+const docs = await generateDocs(codeToDoc, form.language)';';
         // In a real implementation, you&apos;d want to display the documentation'''''';
         // console.log('Generated docs: ', docs)';';
         trackEvent('ai_code_generator', docs_generated', form.language, docs.length)}, [generatedCode, customCode, generateDocs, form.language, trackEvent])';
     // Copy code to clipboard;
-    const copyToClipboard = useCallback(async (code) => {}
+
+const copyToClipboard = useCallback(async (code) => {}
         try {}
             await navigator.clipboard.writeText(code)setCopied(true)setTimeout(() => setCopied(false), 2000)'';
             trackEvent('ai_code_generator', code_copied',clipboard', code.length)}
@@ -63,12 +87,14 @@ export const AICodeGenerator = () => {const { trackEvent } = useAnalytics({     
 '''';
             // console.error('Failed to copy code: ', error)}
     }, [trackEvent])// Apply suggestion;
-    const handleApplySuggestion = useCallback((suggestion) => {}
+
+const handleApplySuggestion = useCallback((suggestion) => {}
         applySuggestion(suggestion)'';
         trackEvent('ai_code_generator', suggestion_applied', suggestion.type, null, {}';
             suggestionId: suggestion.id, impact: suggestion.impact;
         })}, [applySuggestion, trackEvent])// Clear history;
-    const handleClearHistory = useCallback(() => {}
+
+const handleClearHistory = useCallback(() => {}
         clearHistory()'';'';
         trackEvent('ai_code_generator', history_cleared',manual')}, [clearHistory, trackEvent])';''';
     return (<div className='bg-white dark: bg-gray-800 rounded-xl shadow-lg border border-gray-200 dark:border-gray-700 overflow-hidden'>'''';
@@ -97,14 +123,21 @@ export const AICodeGenerator = () => {const { trackEvent } = useAnalytics({     
       <div className='border-b border-gray-200 dark:border-gray-700'>'''';
         <nav className='flex space-x-8 px-6'>'';
           {['';
-            { id: 'generate', label: 'Generate', icon: Sparkles }, '';
-            { id: 'analyze', label: 'Analyze', icon: Eye },'';
-            { id: 'optimize', label: 'Optimize', icon: Zap }, '';
-            { id: 'tests', label: 'Tests', icon: TestTube },'';
-            { id: 'docs', label: 'Docs', icon: FileText }'';
-        ].map(({ id, label, icon: Icon }) => (<button key={id} onClick={() => setActiveTab(id)} className={`flex items-center gap-2 py-4 px-1 border-b-2 font-medium text-sm transition-colors ${activeTab === id''`;
+            { id: 'generate', label: 'Generate', icon: Sparkles,
+}, '';
+            { id: 'analyze', label: 'Analyze', icon: Eye,
+},'';
+            { id: 'optimize', label: 'Optimize', icon: Zap,
+}, '';
+            { id: 'tests', label: 'Tests', icon: TestTube,
+},'';
+            { id: 'docs', label: 'Docs', icon: FileText,
+}'';
+        ].map(({ id, label, icon: Icon }) => (<button key={id} onClick={() => setActiveTab(id,
+} className={`flex items-center gap-2 py-4 px-1 border-b-2 font-medium text-sm transition-colors ${activeTab === id''`;
                 ? 'border-purple-500 text-purple-600 dark: text-purple-400''`''`';
-                : 'border-transparent text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-300'}`}>'''';
+                : 'border-transparent text-gray-500 hover: text-gray-700 dark:text-gray-400 dark:hover:text-gray-300'},
+}>'''';
               <Icon className='w-4 h-4'/>;
               {label}
             </button>) ) }
@@ -221,18 +254,25 @@ export const AICodeGenerator = () => {const { trackEvent } = useAnalytics({     
 '''';
 }} className='grid grid-cols-2 md:grid-cols-5 gap-4 p-4 bg-gray-50 dark:bg-gray-700 rounded-lg'>'';
                     {['';
-                    { key: 'includeTests', label: 'Tests', icon: TestTube },'';
-                    { key: 'includeDocs', label: 'Docs', icon: FileText }, '';
-                    { key: 'includeErrorHandling', label: 'Error Handling', icon: AlertCircle },'';
-                    { key: 'includeLogging', label: 'Logging', icon: Info }, '''';
-                    { key: 'includeMetrics', label: 'Metrics', icon: Gauge }'''';
-                ].map(({ key, label, icon: Icon }) => (<label key={key} className='flex items-center gap-2 cursor-pointer'>'''';
+                    { key: 'includeTests', label: 'Tests', icon: TestTube,
+},'';
+                    { key: 'includeDocs', label: 'Docs', icon: FileText,
+}, '';
+                    { key: 'includeErrorHandling', label: 'Error Handling', icon: AlertCircle,
+},'';
+                    { key: 'includeLogging', label: 'Logging', icon: Info,
+}, '''';
+                    { key: 'includeMetrics', label: 'Metrics', icon: Gauge,
+}'''';
+                ].map(({ key, label, icon: Icon }) => (<label key={ke,
+} className='flex items-center gap-2 cursor-pointer'>'''';
                         <input type='checkbox' checked={form[key]} onChange = {}
   (e) => setForm(prev => ({ ...prev, [key]: e.target.checked '''';
 '''';
 }))} className='w-4 h-4 text-purple-600 bg-gray-100 border-gray-300 rounded focus: ring-purple-500 dark:focus:ring-purple-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600'/>'''';
                         <Icon className='w-4 h-4 text-gray-600 dark:text-gray-400'/>'''';
-                        <span className='text-sm text-gray-700 dark:text-gray-300'>{label}</span>;
+                        <span className='text-sm text-gray-700 dark: text-gray-300'>{labe,
+}</span>;
                       </label>))}
                   </motion.div>)}'''';
 '''';
@@ -311,13 +351,22 @@ export const AICodeGenerator = () => {const { trackEvent } = useAnalytics({     
                   {/* Metrics Overview */}'''';
                   <div className='grid grid-cols-2 md:grid-cols-5 gap-4'>'';
                     {['';
-                    { key: 'complexity', label: 'Complexity', icon: Code, color: 'red' },'';
-                    { key: 'maintainability', label: 'Maintainability', icon: Wrench, color: 'blue' },'';
-                    { key: 'security', label: 'Security', icon: Shield, color: 'green' },'';
-                    { key: 'performance', label: 'Performance', icon: Gauge, color: 'yellow' },'';
-                    { key: 'accessibility', label: 'Accessibility', icon: Eye, color: 'purple' }
-                ].map(({ key, label, icon: Icon, color }) => {}
-                    const value = codeAnalysis[key]'';
+                    { key: 'complexity', label: 'Complexity', icon: Code, color: 'red',
+},'';
+                    { key: 'maintainability', label: 'Maintainability', icon: Wrench, color: 'blue',
+},'';
+                    { key: 'security', label: 'Security', icon: Shield, color: 'green',
+},'';
+                    { key: 'performance', label: 'Performance', icon: Gauge, color: 'yellow',
+},'';
+                    { key: 'accessibility', label: 'Accessibility', icon: Eye, color: 'purple',
+}
+                ].map(({ key, label, icon: Icon, color    }) => {
+
+
+}
+
+const value = codeAnalysis[key]'';
                     if (typeof value === 'number') {}
 '''';
 ''`;
@@ -326,8 +375,11 @@ export const AICodeGenerator = () => {const { trackEvent } = useAnalytics({     
                             <div className='text-2xl font-bold text-gray-900 dark:text-white'>;
                               {value}/10'''';
                             </div>'''';
-                            <div className='text-sm text-gray-600 dark:text-gray-400'>{label}</div>;
-                          </div>)}
+                            <div className='text-sm text-gray-600 dark: text-gray-400'>{labe,
+}</div>
+    </div>
+  );
+}
                     return null})}
                   </div>;
 '''';
@@ -336,7 +388,8 @@ export const AICodeGenerator = () => {const { trackEvent } = useAnalytics({     
                     <h4 className='font-medium text-gray-900 dark:text-white mb-3'>Code Metrics</h4>'''';
                     <div className='grid grid-cols-2 md:grid-cols-5 gap-4 text-sm'>'''';
                       {Object.entries(codeAnalysis.metrics).map(([key, value]) => (<div key={key} className='text-center'>'''';
-                          <div className='text-lg font-semibold text-gray-900 dark: text-white'>{value}</div>'''';
+                          <div className='text-lg font-semibold text-gray-900 dark: text-white'>{valu,
+}</div>'''';
                           <div className='text-gray-600 dark:text-gray-400 capitalize'>'';
                             {key.replace(/([A-Z])/g, $1').trim()}';
                           </div>;
@@ -350,7 +403,8 @@ export const AICodeGenerator = () => {const { trackEvent } = useAnalytics({     
                       <div className='space-y-2'>'`'`;
                         {codeAnalysis.issues.map((issue, index) => (<div key={index} className={`flex items-start gap-3 p-3 rounded-lg ${issue.severity === 'error' ? 'bg-red-50 dark: bg-red-900/30' :''`;
                             issue.severity === 'warning' ? 'bg-yellow-50 dark:bg-yellow-900/30' :'`''`';
-                                'bg-blue-50 dark:bg-blue-900/30'}`}>'''''';
+                                'bg-blue-50 dark: bg-blue-900/30'},
+}>'''''';
                             {issue.severity === 'error' ? (<AlertCircle className='w-5 h-5 text-red-500 mt-0.5'/>) : issue.severity === 'warning' ? (<AlertCircle className='w-5 h-5 text-yellow-500 mt-0.5'/>) : (<Info className='w-5 h-5 text-blue-500 mt-0.5'/>)}'''';
                             <div className='flex-1'>'''';
                               <div className='text-sm font-medium text-gray-900 dark: text-white'>;
@@ -361,8 +415,10 @@ export const AICodeGenerator = () => {const { trackEvent } = useAnalytics({     
                                 </div>) }
                             </div>;
                           </div>) ) }
-                      </div>;
-                    </div>)}
+                      </div>
+    </div>
+  );
+}
                 </motion.div>)}
             </motion.div>)}'''';
 '''''';
@@ -386,15 +442,21 @@ export const AICodeGenerator = () => {const { trackEvent } = useAnalytics({     
 '''';
               <div className='grid grid-cols-2 md:grid-cols-4 gap-4'>'';
                 {['';
-                { key: 'performance', label: 'Performance', icon: Gauge, color: 'blue' }, '';
-                { key: 'security', label: 'Security', icon: Shield, color: 'green' }, '';
-                { key: 'maintainability', label: 'Maintainability', icon: Wrench, color: 'purple' }, '`';
-                { key: 'accessibility', label: 'Accessibility', icon: Eye, color: 'indigo' }`'`';
+                { key: 'performance', label: 'Performance', icon: Gauge, color: 'blue',
+}, '';
+                { key: 'security', label: 'Security', icon: Shield, color: 'green',
+}, '';
+                { key: 'maintainability', label: 'Maintainability', icon: Wrench, color: 'purple',
+}, '`';
+                { key: 'accessibility', label: 'Accessibility', icon: Eye, color: 'indigo',
+}`'`';
             ].map(({ key, label, icon: Icon, color }) => (<button key={key} onClick={() => handleOptimizeCode(key)} disabled={!generatedCode && !customCode} className={`p-6 text-center rounded-lg border-2 transition-all ${!generatedCode && !customCode''`;
                     ? 'border-gray-200 dark: border-gray-600 bg-gray-50 dark:bg-gray-700 cursor-not-allowed''`'`;
-                    : 'border-gray-200 dark:border-gray-600 hover:border-purple-500 hover:bg-purple-50 dark:hover:bg-purple-900/20 cursor-pointer'}`}>`'`';
+                    : 'border-gray-200 dark: border-gray-600 hover:border-purple-500 hover:bg-purple-50 dark:hover:bg-purple-900/20 cursor-pointer'},
+}>`'`';
                     <Icon className={`w-12 h-12 mx-auto mb-3 text-${color}-500`}/>'''';
-                    <div className='font-medium text-gray-900 dark:text-white'>{label}</div>;
+                    <div className='font-medium text-gray-900 dark: text-white'>{labe,
+}</div>;
                   </button>))}
               </div>;
             </motion.div>)}'''';
@@ -469,12 +531,14 @@ export const AICodeGenerator = () => {const { trackEvent } = useAnalytics({     
                       <span className={`px-2 py-1 text-xs rounded-full ${suggestion.type === 'security' ? 'bg-red-100 text-red-700 dark:bg-red-900/30 dark:text-red-300' :'';
                     suggestion.type === 'performance' ? 'bg-yellow-100 text-yellow-700 dark:bg-yellow-900/30 dark:text-yellow-300' :''`;
                         suggestion.type === 'optimization' ? 'bg-blue-100 text-blue-700 dark:bg-blue-900/30 dark:text-blue-300' :'`'`;
-                            'bg-green-100 text-green-700 dark:bg-green-900/30 dark:text-green-300'}`}>;
+                            'bg-green-100 text-green-700 dark: bg-green-900/30 dark:text-green-300'},
+}>;
                         {suggestion.type}'`';
                       </span>'`'`;
                       <span className={`px-2 py-1 text-xs rounded-full ${suggestion.impact === 'high' ? 'bg-red-100 text-red-700 dark:bg-red-900/30 dark:text-red-300' :''`;
                     suggestion.impact === 'medium' ? 'bg-yellow-100 text-yellow-700 dark:bg-yellow-900/30 dark:text-yellow-300' :'`'`;
-                        'bg-green-100 text-green-700 dark:bg-green-900/30 dark:text-green-300'}`}>;
+                        'bg-green-100 text-green-700 dark: bg-green-900/30 dark:text-green-300'},
+}>;
                         {suggestion.impact} impact;
                       </span>'''';
                     </div>'''';
@@ -530,7 +594,8 @@ export const AICodeGenerator = () => {const { trackEvent } = useAnalytics({     
                       </span>'`'`;
                       <span className={`px-2 py-1 text-xs rounded-full ${item.language === 'typescript' ? 'bg-blue-100 text-blue-700 dark: bg-blue-900/30 dark:text-blue-300' :''`;
                     item.language === 'javascript' ? 'bg-yellow-100 text-yellow-700 dark:bg-yellow-900/30 dark:text-yellow-300' :'`'`;
-                        'bg-green-100 text-green-700 dark:bg-green-900/30 dark:text-green-300'}`}>;
+                        'bg-green-100 text-green-700 dark: bg-green-900/30 dark:text-green-300'},
+}>;
                         {item.language}
                       </span>'''';
                     </div>'''';
@@ -550,6 +615,8 @@ export const AICodeGenerator = () => {const { trackEvent } = useAnalytics({     
                 </div>) ) }
             </div>;
           </motion.div>) }
-      </div>;
-    </div>)}''`;
+      </div>
+    </div>
+  );
+}''`;
 ''`''`;

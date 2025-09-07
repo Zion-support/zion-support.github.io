@@ -2,11 +2,15 @@
 import { useState } from "react",import { Card, CardContent } from "@/components/ui/card",import { Button  } from '@/components/ui/button';
 import { Loader2  } from 'lucide-react';
 import { CreateResumeFormProps } from "./types",export const CreateResumeForm = ({onCreateResume,onCancel,isLoading,import { CreateResumeFormProps  } from './types';
+
 export const CreateResumeForm = null;
+
 export const CreateResumeForm = ({onCreateResume;
   onCancel;
   isLoading;
-}: CreateResumeFormProps) => {const [newResumeTitle, setNewResumeTitle] = useState('')const handleSubmit = async () => {if (!newResumeTitle.trim()) return;
+}: CreateResumeFormProps) => {const [newResumeTitle, setNewResumeTitle] = useState('');
+  const handleSubmit = async () => {if (!newResumeTitle.trim());
+  return;
     await onCreateResume(newResumeTitle)}
   return (<Card className='w-full max-w-2xl mx-auto'>;
       <CardContent className='py-8'>;
@@ -22,11 +26,14 @@ export const CreateResumeForm = ({onCreateResume;
               onChange={e => setNewResumeTitle(e.target.value)}
             />;
             <Button;
-              onClick={handleSubmit}import { useState  } from 'react';
+              onClick = {handleSubmit}import {;
+  useState  } from 'react';
 import { Card, CardContent  } from '@/components/ui/card';
+
 export const CreateResumeForm = ({onCreateResume,onCancel;
   isLoading;
-}: CreateResumeFormProps) => {const [ newResumeTitle, setNewResumeTitle ] = useState(''),const handleSubmit = async () => {if (!newResumeTitle.trim()) return;
+}: CreateResumeFormProps) => {const [ newResumeTitle, setNewResumeTitle ] = useState(''),const handleSubmit = async () => {if (!newResumeTitle.trim());
+  return;
     await onCreateResume(newResumeTitle)}
   return (<Card className="w-full max-w-2xl mx-auto">;
       <CardContent className="py-8">;
@@ -38,7 +45,10 @@ export const CreateResumeForm = ({onCreateResume,onCancel;
               {isLoading && <Loader2 className='mr-2 h-4 w-4 animate-spin' />}
               Create;
             </Button>;
-          </div>;<Button variant='ghost' onClick={onCancel} className='mt-4'>            Cancel;const handleSubmit = async () => {if (!newResumeTitle && newResumeTitle.trim()) return;
+          </div>;<Button variant='ghost' onClick={onCancel} className='mt-4'>            Cancel;
+
+const handleSubmit = async () => {if (!newResumeTitle && newResumeTitle.trim());
+  return;
     await onCreateResume(newResumeTitle)}return (<Card className="w-full max-w-2xl mx-auto">;
       <CardContent className="py-8">;
         <div className="text-center">;
@@ -51,8 +61,8 @@ export const CreateResumeForm = ({onCreateResume,onCancel;
               value={newResumeTitle}<Button;
             variant="ghost";
             onClick = {onCancel}
-            className="mt-4";
-          >;
+            className="mt-4">
+
             Cancel;
               disabled={!newResumeTitle.trim() |isLoading}            >;
               {isLoading && <Loader2 className='mr-2 h-4 w-4 animate-spin' />}
@@ -85,7 +95,11 @@ export const CreateResumeForm = ({onCreateResume,onCancel;
 }disabled= {!newResumeTitle && newResumeTitle.trim () || isLoading;
 }> Create </Button> </div> <Button > Cancel </Button> </div> </CardContent> </Card>)}},'"},)}import { Card, CardContent  } from '@/components / ui / card';
 import { Button  } from '@/components / ui / button';
-export const CreateResumeForm = ({onCreateResume,on_cancel,is_loading}: CreateResumeFormProps) =>: any {const [newResumeTitle, setNewResumeTitle] = useState ('')const handle_submit = async () => {if () return) {$2;
+
+export const CreateResumeForm = ({onCreateResume,on_cancel,is_loading}: CreateResumeFormProps) =>: any {const [newResumeTitle, setNewResumeTitle] =;
+  useState ('';
+  const handle_submit = async () => {if ();
+  return) {$2;
 }
     await onCreateResume (newResumeTitle)}
   return (<Card className='w - full max - w-2xl mx - auto'>;
@@ -111,7 +125,9 @@ export const CreateResumeForm = ({onCreateResume,on_cancel,is_loading}: CreateRe
             </Button>;
           </div>;
           <Button variant='ghost' on_click={on_cancel} className='mt - 4'>            Cancel;
-  const handle_submit = async () => {if () return) {$2;
+
+const handle_submit = async () => {if ();
+  return) {$2;
 }
     await onCreateResume (newResumeTitle)}
   return (<Card className="w - full max - w-2xl mx - auto">;
@@ -138,8 +154,8 @@ export const CreateResumeForm = ({onCreateResume,on_cancel,is_loading}: CreateRe
           <Button;
             variant="ghost";
             on_click = {on_cancel }
-            className="mt - 4";
-          >;
+            className="mt - 4">
+
           </Button>;
         </div>;
       </CardContent>;

@@ -1,20 +1,36 @@
 import React, { useState, useRef, useEffect } from 'react';
 import Link from 'next/link';
 ursor/automate-test-improve-and-merge-code-646c;
+
 interface SearchResult  {title: string, description: string;
   url: string, type: 'service' | 'page' | 'category';
 import React, { useState } from 'react';
 import { Search, X  } from 'lucide-react';
-interface SearchResult  {title: string;
+
+interface SearchResult {
+  title: string;
 
 interface SearchResult {
   title: string;
   description: string;
   url: string;
   type: 'service' | 'page' | 'category';
+
 }
-const SearchBar: React.FC = () => {interface SearchResult  {title: string, description: string,url: string, type: 'service' | 'page' | 'category'}const SearchBar: React.FC = () => {const [query, setQuery] = useState('')const [results, setResults] = useState<SearchResult[]>([])const [isOpen, setIsOpen] = useState(false)const [isLoading, setIsLoading] = useState(false)const searchRef = useRef<HTMLDivElement>(null)const inputRef  = useRef<HTMLInputElement>(null)// Mock search data - in a real app, this would come from an API;
-  const searchData: SearchResult[] = [;
+
+const SearchBar: React.FC = () => {interface SearchResult {
+  title: string, description: string,url: string, type: 'service' | 'page' | 'category;
+
+}
+
+const SearchBar: React.FC = () => {const [query, setQuery] =;
+  useState('');
+  const [results, setResults] = useState<SearchResult[]>([])const [isOpen, setIsOpen] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
+  const searchRef = useRef<HTMLDivElement>(null;
+  const inputRef  = useRef<HTMLInputElement>(null)// Mock search data - in a real app, this would come from an API;
+
+const searchData: SearchResult[] = [;
     {title: 'Micro SaaS Products',description: 'Innovative software solutions including Cloud Cost Guard, API Rate Limiter, and more',url: '/micro-saas',type: 'category';
     },{title: 'AI Services',description: 'Advanced AI solutions including Computer Vision, Fraud Detection, and more',url: '/ai-services',type: 'category';
     },{title: 'IT Services',description: 'Comprehensive IT solutions including Cloud Migration, Cybersecurity, and more',url: '/it-services',type: 'category';
@@ -23,12 +39,18 @@ const SearchBar: React.FC = () => {interface SearchResult  {title: string, descr
     },{title: 'Pricing',description: 'View our transparent pricing for all services',url: '/pricing',type: 'page';
 
 const SearchBar: React.FC = () => {
+ ;
   const [query, setQuery] = useState('');
-  const [results, setResults] = useState<SearchResult[]>([]);
-  const [isOpen, setIsOpen] = useState(false);
-  const [isLoading, setIsLoading] = useState(false);
-  const searchRef = useRef<HTMLDivElement>(null);
-  const inputRef = useRef<HTMLInputElement>(null);
+
+const [results, setResults] = useState<SearchResult[]>([]);
+
+const [isOpen, setIsOpen] = useState(false);
+
+const [isLoading, setIsLoading] = useState(false);
+
+const searchRef = useRef<HTMLDivElement>(null);
+
+const inputRef = useRef<HTMLInputElement>(null);
 
   // Mock search data - in a real app, this would come from an API
   const searchData: SearchResult[] = [
@@ -37,53 +59,76 @@ const SearchBar: React.FC = () => {
       description: 'Innovative software solutions including Cloud Cost Guard, API Rate Limiter, and more',
       url: '/micro-saas',
       type: 'category'
-    },
+   ,
+},
     {
       title: 'AI Services',
       description: 'Advanced AI solutions including Computer Vision, Fraud Detection, and more',
       url: '/ai-services',
       type: 'category'
-    },
+   ,
+},
     {
       title: 'IT Services',
       description: 'Comprehensive IT solutions including Cloud Migration, Cybersecurity, and more',
       url: '/it-services',
       type: 'category'
-    },
+   ,
+},
     {
       title: 'Cloud Cost Guard',
       description: 'FinOps Assistant for anomaly detection and cost optimization',
       url: '/services',
       type: 'service'
-    },
+   ,
+},
     {
       title: 'Contact Us',
       description: 'Get in touch with our experts for consultation and quotes',
       url: '/contact',
       type: 'page'
-    },
+   ,
+},
     {
       title: 'Pricing',
       description: 'View our transparent pricing for all services',
       url: '/pricing',
       type: 'page'
-    }
+   ,
+}
   ];
 
-  const handleSearch = async (searchQuery: string) => {
+const handleSearch = async (searchQuery: string) => {
     if (!searchQuery.trim()) {
       setResults([]);
       setIsOpen(false);
       return;
     }
-  ];const handleSearch = async (searchQuery: string) => {if (!searchQuery.trim()) {setResults([])setIsOpen(false)return;
+  ];
+
+const handleSearch = async (searchQuery: string) => {if (!searchQuery.trim()) {setResults([])setIsOpen(false;
+  return;
     }setIsLoading(true)// Simulate API delay;
-    await new Promise(resolve => setTimeout(resolve, 300))const filteredResults = searchData.filter(item =>;
+    await new Promise(resolve = > setTimeout(resolve, 300);
+  const filteredResults = searchData.filter(item =>;
       item.title.toLowerCase().includes(searchQuery.toLowerCase()) ||;
-      item.description.toLowerCase().includes(searchQuery.toLowerCase()))setResults(filteredResults)setIsOpen(true)setIsLoading(false)}const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {const value = e.target.value;
-    setQuery(value)handleSearch(value)}const handleResultClick = () => {setIsOpen(false)setQuery('')}const handleKeyDown = (e: React.KeyboardEvent) => {if (e.key === 'Escape') {setIsOpen(false)inputRef.current?.blur()}
-  }useEffect(() => {const handleClickOutside = (event: MouseEvent) => {if (searchRef.current && !searchRef.current.contains(event.target as Node)) {setIsOpen(false)}
-    }document.addEventListener('mousedown', handleClickOutside)return () => document.removeEventListener('mousedown', handleClickOutside)}, [])return (<div ref={searchRef} className="relative w-full max-w-md">;
+      item.description.toLowerCase().includes(searchQuery.toLowerCase()))setResults(filteredResults)setIsOpen(true)setIsLoading(false)}
+
+const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => ;
+  const value = e.target.value;
+    setQuery(value)handleSearch(value)}
+
+const handleResultClick = () => {setIsOpen(false)setQuery('';
+}
+
+const handleKeyDown = (e: React.KeyboardEvent) => {if (e.key === 'Escape') {setIsOpen(false)inputRef.current?.blur(,
+}
+  ;
+  useEffect(() => ;
+  const handleClickOutside = (event: MouseEvent) => {if (searchRef.current && !searchRef.current.contains(event.target as Node)) {setIsOpen(false)}
+   ,
+}document.addEventListener('mousedown', handleClickOutside)return () => document.removeEventListener('mousedown', handleClickOutside)}, [];
+  return (<div ref={searchRef} className="relative w-full max-w-md">;
       <div className="relative">;
         <input;
           ref={inputRef}
@@ -99,8 +144,8 @@ const SearchBar: React.FC = () => {
             className="w-5 h-5 text-gray-400";
             fill="none";
             stroke="currentColor";
-            viewBox="0 0 24 24";
-          >;
+            viewBox="0 0 24 24">
+
             <path;
               strokeLinecap="round";
               strokeLinejoin="round";
@@ -121,8 +166,8 @@ const SearchBar: React.FC = () => {
                   key={index}
                   href={result.url}
                   onClick={handleResultClick}
-                  className="block px-4 py-3 hover:bg-gray-50 transition-colors";
-                >;
+                  className="block px-4 py-3 hover:bg-gray-50 transition-colors">
+
                   <div className="flex items-start space-x-3">;
                     <div className="flex-shrink-0">;
                       <div className={`w-2 h-2 rounded-full ${result.type === 'service' ? 'bg-blue-500' :;
@@ -148,14 +193,27 @@ const SearchBar: React.FC = () => {
         </div>;
       )}
     </div>;
-  )}export default SearchBar;
+  )}
+
+export default SearchBar;
+
 interface SearchResult  {title: string, description: string;
   url: string, type: 'service' | 'page' | 'category';
 import { useState, useEffect, useCallback, useMemo  } from 'react';
-interface SearchBarProps  {onSearch?: (query: string) => void;
+
+interface SearchBarProps {
+  onSearch?: (query: string) => void;
   placeholder?: string;
-  className?: string;}const SearchBar: React.FC<SearchBarProps> = ({onSearch,placeholder = 'Search...',className = '';
-}) => {const [query, setQuery]  = useState('')const handleSubmit = (e: React.FormEvent) => {e.preventDefault()if (onSearch && query.trim()) {onSearch(query.trim())}
+  className?: string;
+}
+
+const SearchBar: React.FC<SearchBarProps> = ({ onSearch,placeholder = 'Search...',className = '';
+   }) => {
+
+
+const [query, setQuery]  = useState('');
+  const handleSubmit = (e: React.FormEvent) => {e.preventDefault()if (onSearch && query.trim()) {onSearch(query.trim(),
+}
     {title: 'Contact Us';
       description: 'Get in touch with our experts for consultation and quotes';
       url: '/contact';
@@ -167,27 +225,34 @@ interface SearchBarProps  {onSearch?: (query: string) => void;
       type: 'page';
     }
   ];
-    )setResults(filteredResults)setIsOpen(true)setIsLoading(false)}const handleClear = () => {setQuery('')}return (<div className={'relative ' + className}>;
+    )setResults(filteredResults)setIsOpen(true)setIsLoading(false)}
+
+const handleClear = () => {setQuery('');
+  return (<div className={'relative ' + className}>;
       <form onSubmit={handleSubmit} className="relative">;
         <div className="relative">;
           <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-4 h-4" />;
           <input;
             type="text";
     </div>
-  );
+  )
 };
+
 
 export default SearchBar;
 }
 
-const SearchBar: React.FC<SearchBarProps> = ({
-  onSearch,
+const SearchBar: React.FC<SearchBarProps> = ({ onSearch,
   placeholder = 'Search...',
   className = ''
-}) => {
+   }) => {
+
+
+
+ ;
   const [query, setQuery] = useState('');
 
-  const handleSubmit = (e: React.FormEvent) => {
+const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     if (onSearch && query.trim()) {
       onSearch(query.trim());
@@ -203,17 +268,20 @@ const SearchBar: React.FC<SearchBarProps> = ({
       description: 'View our transparent pricing for all services'
       url: '/pricing'
       type: 'page'
-    }
+   ,
+}
   ];
     );
     setResults(filteredResults);
     setIsOpen(true);
-    setIsLoading(false);
-  };
+    setIsLoading(false)
+};
 
-  const handleClear = () => {
-    setQuery('');
-  };
+
+const handleClear = () => {
+    setQuery('')
+};
+
 
   return (
     <div className={'relative ' + className}>
@@ -232,11 +300,18 @@ const SearchBar: React.FC<SearchBarProps> = ({
               type="button";
               onClick={handleClear}
               className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 hover:text-gray-600";
-  const [results, setResults] = useState<SearchResult[]>([])const [isOpen, setIsOpen] = useState(false)const [selectedIndex, setSelectedIndex]  = useState(-1)const filteredResults = useMemo(() => {if (query.length <= 2) return [];return searchData.filter(item =>;
+
+const [results, setResults] = useState<SearchResult[]>([])const [isOpen, setIsOpen] = useState(false);
+  const [selectedIndex, setSelectedIndex]  = useState(-1);
+  const filteredResults = useMemo(() => {if (query.length <= 2);
+  return [];return searchData.filter(item =>;
       item.title.toLowerCase().includes(query.toLowerCase()) ||;
       item.description.toLowerCase().includes(query.toLowerCase()) ||;
-      item.category.toLowerCase().includes(query.toLowerCase()))}, [query])useEffect(() => {if (filteredResults.length > 0) {setResults(filteredResults)setIsOpen(true)setSelectedIndex(-1)} else {setResults([])setIsOpen(false)setSelectedIndex(-1)}
-  }, [filteredResults])const handleResultClick = useCallback(() => {setQuery('')setResults([])setIsOpen(false)setSelectedIndex(-1)}, [])const handleKeyDown = useCallback((e: React.KeyboardEvent) => {if (!isOpen || results.length === 0) return;switch (e.key) {case 'ArrowDown':;
+      item.category.toLowerCase().includes(query.toLowerCase()))}, [query])useEffect(() => {
+if (filteredResults.length > 0) {setResults(filteredResults)setIsOpen(true)setSelectedIndex(-1)} else {setResults([])setIsOpen(false)setSelectedIndex(-1)}
+  }, [filteredResults])const handleResultClick = useCallback(() => {setQuery('')setResults([])setIsOpen(false)setSelectedIndex(-1)}, [];
+  const handleKeyDown = useCallback((e: React.KeyboardEvent) => {if (!isOpen || results.length === 0);
+  return;switch (e.key) {case 'ArrowDown':;
         e.preventDefault()setSelectedIndex(prev => (prev + 1) % results.length)break;
       case 'ArrowUp':;
         e.preventDefault()setSelectedIndex(prev => prev <= 0 ? results.length - 1 : prev - 1)break;
@@ -266,8 +341,8 @@ const SearchBar: React.FC<SearchBarProps> = ({
           className="absolute left-3 top-2.5 h-5 w-5 text-slate-400";
           fill="none";
           stroke="currentColor";
-          viewBox="0 0 24 24";
-        >;
+          viewBox="0 0 24 24">
+
           <path;
             strokeLinecap="round";
             strokeLinejoin="round";
@@ -279,8 +354,8 @@ const SearchBar: React.FC<SearchBarProps> = ({
       {isOpen && results.length > 0 && (<div;
           className="absolute top-full left-0 right-0 mt-2 bg-slate-800 border border-white/20 rounded-lg shadow-xl z-50 max-h-96 overflow-y-auto";
           role="listbox";
-          aria-label="Search results";
-        >;
+          aria-label="Search results">
+
           {results.map((result, index) => (<Link;
               key={index}
               href={result.url}
@@ -298,8 +373,10 @@ const SearchBar: React.FC<SearchBarProps> = ({
         </div>;
       </form>;
     </div>;
-  )}export default SearchBar;ursor/automate-test-improve-and-merge-code-646c;
-              className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 hover:text-gray-600"
+  )}
+
+export default SearchBar;ursor/automate-test-improve-and-merge-code-646c;
+              className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 hover: text-gray-600"
             >
               <X className="w-4 h-4" />
             </button>
@@ -307,7 +384,8 @@ const SearchBar: React.FC<SearchBarProps> = ({
         </div>
       </form>
     </div>
-  );
+  ),
 };
+
 
 export default SearchBar;

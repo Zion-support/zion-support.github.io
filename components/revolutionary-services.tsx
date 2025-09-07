@@ -1,6 +1,8 @@
 
-class ErrorBoundary extends React.Component {constructor(props) {super(props)this.state = { hasError: false }}static getDerivedStateFromError(error) {return { hasError: true }}componentDidCatch(error, errorInfo) {console.error('Error caught by boundary:', error, errorInfo)}
-  render() {if (this.state.hasError) {return <div>Something went wrong.</div>;
+class ErrorBoundary extends React.Component {constructor(props) {super(props)this.state = { hasError: false }}static getDerivedStateFromError(error) {return { hasError: true ,
+}componentDidCatch(error, errorInfo) {console.error('Error caught by boundary:', error, errorInfo)}
+  render() {if (this.state.hasError) ;
+  return <div>Something went wrong.</div>;
     }
     return this.props.children;
   }
@@ -83,7 +85,7 @@ import UltraFuturisticCard from '../components/ui/UltraFuturisticCard';
   getRevolutionaryServicesByCategory;
   getPopularRevolutionaryServices;
   getRevolutionaryServicesByPriceRange;
-<<<<<<< HEAD
+
   revolutionaryMicroSaasServices,
   revolutionaryServiceCategories,
   getRevolutionaryServicesByCategory,
@@ -100,27 +102,38 @@ import {;
 } from '../data/revolutionary-micro-saas-services';
 
 import { motion, AnimatePresence } from 'framer-motion';
+
 export default function RevolutionaryServicesPage() {
   const [selectedCategory, setSelectedCategory] = useState('All');
-  const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid'),
-  const [priceRange, setPriceRange] = useState('All');
-  const [searchQuery, setSearchQuery] = useState('');
-  const [sortBy, setSortBy] = useState('name');
-  const [showFilters, setShowFilters] = useState(false);
 
-    { value: 'All', label: 'All Prices' },
+const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid'),
+  const [priceRange, setPriceRange] = useState('All');
+
+const [searchQuery, setSearchQuery] = useState('');
+
+const [sortBy, setSortBy] = useState('name');
+
+const [showFilters, setShowFilters] = useState(false);
+
+    { value: 'All', label: 'All Prices',
+},
 { value: '0-1000', label: '$0 - $1,000' },
     { value: '1001-2500', label: '$1,001 - $2,500' },
     { value: '2501-5000', label: '$2,501 - $5,000' },
     { value: '5001+', label: '$5,001+' },
   ];
 
-  const sortOptions = [
-    { value: 'name', label: 'Name A-Z' },
-    { value: 'price', label: 'Price Low-High' },
-    { value: 'popularity', label: 'Most Popular' },
-    { value: 'category', label: 'Category' },
-{ value: 'roi', label: 'Highest ROI' },
+const sortOptions = [
+    { value: 'name', label: 'Name A-Z',
+},
+    { value: 'price', label: 'Price Low-High',
+},
+    { value: 'popularity', label: 'Most Popular',
+},
+    { value: 'category', label: 'Category',
+},
+{ value: 'roi', label: 'Highest ROI',
+},
   ];
   // Filter and sort services
   let filteredServices = revolutionaryMicroSaasServices;
@@ -165,61 +178,7 @@ return (
 
 default:
         return a.name.localeCompare(b.name);
-=======
-  revolutionaryMicroSaasServices,revolutionaryServiceCategories,getRevolutionaryServicesByCategory,getPopularRevolutionaryServices,getRevolutionaryServicesByPriceRange,import {revolutionaryMicroSaasServices,revolutionaryServiceCategories,getRevolutionaryServicesByCategory,getPopularRevolutionaryServices,getRevolutionaryServicesByPriceRange,} from '../data/revolutionary-micro-saas-services';
-import { motion, AnimatePresence } from 'framer-motion';import Button from '../components/ui/Button';
-import { Check, Star, Zap, Shield, Users, Globe, ArrowRight, ExternalLink, TrendingUp, Clock, Target, Building, Rocket, Award, DollarSign, ChartBar, Lock, Cpu, Database, Cloud, Smartphone, Palette, Search, MessageSquare, FileText, Calendar, CreditCard, BarChart3, Settings, Zap as ZapIcon, Code, BookOpen, Activity, Database as DatabaseIcon, Play, Mail, Phone, MapPin, Filter, Grid, List, ChevronDown, ChevronUp, Sparkles, FlaskConical, Dna, Car, Leaf, Factory, Truck, Microscope, GraduationCap, ShieldCheck, Brain, Atom, Globe2, Bot, Eye, Trophy, FlaskConical as FlaskIcon, Dna as DnaIcon, Car as CarIcon, Leaf as LeafIcon, Factory as FactoryIcon, Truck as TruckIcon, Microscope as MicroscopeIcon, GraduationCap as GraduationCapIcon, ShieldCheck as ShieldCheckIcon  } from 'lucide-react';
-import { revolutionaryMicroSaasServices, revolutionaryServiceCategories, getRevolutionaryServicesByCategory, getPopularRevolutionaryServices, getRevolutionaryServicesByPriceRange  } from '../data/revolutionary-micro-saas-services';
-import { motion, AnimatePresence  } from 'framer-motion';
-import { Zap, Star, Calendar  } from 'lucide-react';
-export default function RevolutionaryServicesPage() {const [selectedCategory, setSelectedCategory] = useState('All')const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid'),const [priceRange, setPriceRange] = useState('All')const [searchQuery, setSearchQuery] = useState('')const [sortBy, setSortBy] = useState('name')const [showFilters, setShowFilters]  = useState(false)const priceRanges = [;
-    { value: 'All', label: 'All Prices' },{ value: '0-1000', label: '$0 - $1,000' },{ value: '1001-2500', label: '$1,001 - $2,500' },{ value: '2501-5000', label: '$2,501 - $5,000' },{ value: '5001+', label: '$5,001+' },  ];    { value: '0-1000', label: '$0 - $1,000' }{ value: '1001-2500', label: '$1,001 - $2,500' }{ value: '2501-5000', label: '$2,501 - $5,000' }{ value: '5001+', label: '$5,001+' }
-  const sortOptions = [;
-    { value: 'name', label: 'Name A-Z' },{ value: 'price', label: 'Price Low-High' },{ value: 'popularity', label: 'Most Popular' },{ value: 'category', label: 'Category' },{ value: 'roi', label: 'Highest ROI' },  ];    { value: 'roi', label: 'Highest ROI' }
-  ];
-  // Price range filter;
-  if (priceRange !== 'All') {const [min, max] = priceRange;
-      .split('-').map(p => (p === '+' ? Infinity : parseInt(p)))filteredServices = getRevolutionaryServicesByPriceRange(min, max)}
-  // Price range filter;
-  if (priceRange !== 'All') {const [min, max] = priceRange.split('-').map(p => p === '+' ? Infinity : parseInt(p))filteredServices = getRevolutionaryServicesByPriceRange(min, max)}
-  // Price range filter;
-  if (priceRange !== 'All') {const [min, max] = priceRange;
-      .split('-').map(p => (p === '+' ? Infinity : parseInt(p)))filteredServices = getRevolutionaryServicesByPriceRange(min, max)const [min, max] = priceRange && priceRange.split('-').map(p => p === '+' ? Infinity : parseInt(p))filteredServices = getRevolutionaryServicesByPriceRange(min, max)}{ value: 'All', label: 'All Prices' },{ value: '0-1000', label: '$0 - $1,000' },{ value: '1001-2500', label: '$1,001 - $2,500' },{ value: '2501-5000', label: '$2,501 - $5,000' },{ value: '5001+', label: '$5,001+' },];const sortOptions = [;
-    { value: 'name', label: 'Name A-Z' },{ value: 'price', label: 'Price Low-High' },{ value: 'popularity', label: 'Most Popular' },{ value: 'category', label: 'Category' },{ value: 'roi', label: 'Highest ROI' },];
-  // Filter and sort services;
-  let filteredServices = revolutionaryMicroSaasServices;
-  // Category filter;
-  if (selectedCategory !== 'All') {filteredServices = getRevolutionaryServicesByCategory(selectedCategory)}// Price range filter;
-  if (priceRange !== 'All') {const [min, max] = priceRange;
-      .split('-').map(p => (p === '+' ? Infinity : parseInt(p)))filteredServices = getRevolutionaryServicesByPriceRange(min, max)}
-  // Search filter;
-  if (searchQuery) {filteredServices = filteredServices.filter(service =>;
-        service.name.toLowerCase().includes(searchQuery.toLowerCase()) |;
-        service.description.toLowerCase().includes(searchQuery.toLowerCase()) |;
-        service.tagline.toLowerCase().includes(searchQuery.toLowerCase()) |;
-        service.category.toLowerCase().includes(searchQuery.toLowerCase()))}// Sort services;
-  filteredServices.sort((a, b) => {switch (sortBy) {case 'price':;
-return (parseFloat(a.price.replace('$', '').replace(',', '')) -;
-          parseFloat(b.price.replace('$', '').replace(',', '')))case 'popularity':;
-        return (b.popular ? 1 : 0) - (a.popular ? 1 : 0)case 'category':;
-        return a.category.localeCompare(b.category)case 'roi':;
-        return bRoi - aRoi;default:;
-        return a && a.name.localeCompare(b && b.name)}      default: return a && a.name.localeCompare(b && b.name)}
-  })const contactInfo = {mobile: '+1 302 464 0950';
-    email: 'kleber@ziontechgroup.com';
-    address: '364 E Main St STE 1008 Middletown DE 19709';
-    website: 'https://ziontechgroup.com',  }website: 'https://ziontechgroup.com';
-  }
-    }
-  })const contact_info = {mobile: '+1 302 464 0950',email: 'kleber@ziontechgroup.com',address: '364 E Main St STE 1008 Middletown DE 19709',default:;
-        return a.name.localeCompare(b.name)}
-  })const contactInfo = {mobile: '+1 302 464 0950',email: 'kleber@ziontechgroup.com',address: '364 E Main St STE 1008 Middletown DE 19709',website: 'https://ziontechgroup.com',}const popularServices = getPopularRevolutionaryServices()// Enhanced service categories with better descriptions;
-  const enhancedCategories = [;
-    {name: 'Quantum AI & Cognitive Computing',description:;
-        'Revolutionary quantum AI solutions with human-level reasoning capabilities',icon: <Brain className='w-6 h-6' />,count: revolutionaryMicroSaasServices.filter(s => s.category === 'Quantum AI & Cognitive Computing';
-      ).length;
-      color: 'from-purple-500 to-indigo-600';
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-2a0c
+
     }
       name: 'Autonomous Manufacturing & Industry 4.0';
       description:;
@@ -283,7 +242,7 @@ return (parseFloat(a.price.replace('$', '').replace(',', '')) -;
       ).length;
       color: 'from-emerald-500 to-green-600';
     }
-<<<<<<< HEAD
+
     {
       name: 'Autonomous Vehicles & Smart Transportation'
       description:
@@ -293,7 +252,8 @@ return (parseFloat(a.price.replace('$', '').replace(',', '')) -;
         s => s.category === 'Autonomous Vehicles & Smart Transportation'
       ).length
       color: 'from-emerald-500 to-green-600'
-    }
+   ,
+}
     {
       name: 'Smart Energy & Renewable Energy'
       description:
@@ -306,20 +266,17 @@ return (parseFloat(a.price.replace('$', '').replace(',', '')) -;
     },
   ];
 
-  const containerVariants = {
-    hidden: { opacity: 0 }
-=======
-    {name: 'Smart Energy & Renewable Energy';
-      description:;
-        'AI platforms for smart energy grids and renewable energy optimization';
-      icon: <LeafIcon className='w-6 h-6' />;
-      count: revolutionaryMicroSaasServices.filter(s => s.category === 'Smart Energy & Renewable Energy';
-      ).length,color: 'from-yellow-500 to-orange-600',},];const containerVariants = {hidden: { opacity: 0 }
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-2a0c
+const containerVariants = {
+    hidden: { opacity: 0,
+}
+
     website: 'https://ziontechgroup.com',  }    website: 'https://ziontechgroup.com';
-  }const popular_services  = getPopularRevolutionaryServices ()// Enhanced service categories with better descriptions;
-  const enhanced_categories = [;
-    {name: 'Quantum AI & Cognitive Computing',description:;
+  }
+
+const popular_services  = getPopularRevolutionaryServices ()// Enhanced service categories with better descriptions;
+
+const enhanced_categories = [
+  {name: 'Quantum AI & Cognitive Computing',description:;
         'Revolutionary quantum AI solutions with human - level reasoning capabilities',icon: <Brain className='w - 6 h - 6' />,count: revolutionaryMicroSaasServices.filter (string => s.category === 'Quantum AI & Cognitive Computing').length,color: 'from - purple - 500 to - indigo - 600',},name: 'Autonomous Manufacturing & Industry 4.0',description:;
         'Next - generation autonomous manufacturing with zero human intervention',icon: <Factory className='w - 6 h - 6' />,count: revolutionaryMicroSaasServices.filter (string => s.category === 'Autonomous Manufacturing & Industry 4.0').length,color: 'from - orange - 500 to - red - 600',},{name: 'Quantum Blockchain & DeFi',description:;
         'Quantum - secured blockchain platforms with infinite scalability',icon: <Globe className='w - 6 h - 6' />,count: revolutionaryMicroSaasServices.filter (string => s.category === 'Quantum Blockchain & DeFi').length,color: 'from - green - 500 to - emerald - 600',},{name: 'AI Biomedical Research & Drug Discovery',description:;
@@ -329,9 +286,10 @@ return (parseFloat(a.price.replace('$', '').replace(',', '')) -;
         'AI platforms for autonomous vehicles and smart transportation',icon: <CarIcon className='w - 6 h - 6' />,count: revolutionaryMicroSaasServices.filter (string => s.category === 'Autonomous Vehicles & Smart Transportation').length,color: 'from - emerald - 500 to - green - 600',},{name: 'Smart Energy & Renewable Energy',description:;
         'AI platforms for smart energy grids and renewable energy optimization',icon: <LeafIcon className='w - 6 h - 6' />,count: revolutionaryMicroSaasServices.filter (string => s.category === 'Smart Energy & Renewable Energy').length,color: 'from - yellow - 500 to - orange - 600',},  ];      description: 'AI platforms for smart energy grids and renewable energy optimization',icon: <LeafIcon className="w - 6 h - 6" />,count: revolutionaryMicroSaasServices.filter (string => s.category === 'Smart Energy & Renewable Energy').length,color: 'from - yellow - 500 to - orange - 600';
     }
-<<<<<<< HEAD
-  const container_variants = {
-    hidden: { opacity: 0 },
+
+const container_variants = {
+    hidden: { opacity: 0,
+},
     visible: {
       opacity: 1
       transition: {
@@ -341,8 +299,9 @@ staggerChildren: 0.1,
     },
   };
 
-  const itemVariants = {
-    hidden: { y: 20, opacity: 0 }
+const itemVariants = {
+    hidden: { y: 20, opacity: 0,
+}
     visible: {
       y: 0
       opacity: 1
@@ -365,8 +324,9 @@ duration: 0.5,
     }
   };
 
-  const itemVariants = {;
-    hidden: { y: 20, opacity: 0 },;
+const itemVariants = {
+  hidden: { y: 20, opacity: 0,
+},;
     visible: {;
       y: 0,;
       opacity: 1,;
@@ -376,13 +336,7 @@ duration: 0.5,
     },;
   return (
     <UltraFuturisticBackground variant='quantum' intensity='high'>;
-=======
-  const container_variants = {hidden: { opacity: 0 },visible: {opacity: 1;
-      transition: {staggerChildren: 0.1,},},}const itemVariants = {hidden: { y: 20, opacity: 0 }
-    visible: {y: 0;
-      opacity: 1;
-      transition: {duration: 0.5,},},duration: 0.5,},},}return (<UltraFuturisticBackground variant='quantum' intensity='high'>;
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-2a0c
+
       <div className='min-h-screen'>;
         <Head>;
           <title>Revolutionary Micro SaaS Services | Zion Tech Group - Quantum AI;
@@ -390,7 +344,11 @@ duration: 0.5,
           </title>;
       }
     }
-  }const itemVariants = {hidden: { y: 20, opacity: 0 },visible: {y: 0,opacity: 1,transition: {duration: 0 && 0.5,},},return (<UltraFuturisticBackground variant='quantum' intensity='high'>;
+  }
+
+const itemVariants = {hidden: { y: 20, opacity: 0,
+},visible: {y: 0,opacity: 1,transition: {duration: 0 && 0.5,},};
+  return (<UltraFuturisticBackground variant='quantum' intensity='high'>;
       <div className='min-h-screen'>;
         <Head>;
           <title>Revolutionary Micro SaaS Services | Zion Tech Group - Quantum AI,Autonomous Systems, Space Technology;
@@ -417,36 +375,27 @@ duration: 0.5,
             content='https://ziontechgroup && ziontechgroup.com/revolutionary-services';
           />;
           <meta property='og:type' content='website' />;
-<<<<<<< HEAD
+
           <link
             rel='canonical'
 
-            href='https://ziontechgroup.com/revolutionary-services'
+            href='https: //ziontechgroup.com/revolutionary-services'
           />
         </Head>
-=======
-          <link;
-            rel='canonical';
-                </span>;
-                <br />;
-                <span className="text-white">Micro SaaS Services</span>;
-              </motion.h1>;
-              <motion.p;
-                className="text-xl md:text-2xl text-gray-300 mb-12 leading-relaxed";
-            href='https://ziontechgroup.com/revolutionary-services';
-          />;
-        </Head>;
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-2a0c
-        {/* Hero Section */}
+
+        {/* Hero Section *,
+}
         <section className='relative py-20 overflow-hidden'>;
           <div className='container mx-auto px-4 text-center'>;
             <div className='max-w-5xl mx-auto'>;
               <motion.h1;
                 className='text-6xl md:text-8xl font-bold mb-8 futuristic-glow';
-                initial={{ opacity: 0, y: 30 }}
+                initial={{ opacity: 0, y: 30 ,
+}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8 }}
-<<<<<<< HEAD
+                transition={{ duration: 0.8 ,
+}
+
               >
 <span className='bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent'>
                   Revolutionary
@@ -456,9 +405,12 @@ duration: 0.5,
               </motion.h1>
               <motion.p
                 className='text-xl md:text-2xl text-gray-300 mb-12 leading-relaxed'
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: 0.2 }}
+                initial={{ opacity: 0, y: 20 ,
+}
+                animate={{ opacity: 1, y: 0 ,
+}
+                transition={{ duration: 0.8, delay: 0.2 ,
+}
               >
 
 Experience the future of technology with our revolutionary micro
@@ -468,8 +420,10 @@ Experience the future of technology with our revolutionary micro
               {/* Service Count Stats */}
               <motion.div
                 className='grid grid-cols-2 md:grid-cols-4 gap-6 mb-16'
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
+                initial={{ opacity: 0, y: 20 ,
+}
+                animate={{ opacity: 1, y: 0 ,
+}
                 transition={{ duration: 0.8, delay: 0.4 }}
               >
 
@@ -498,99 +452,17 @@ Experience the future of technology with our revolutionary micro
                   <div className='text-gray-400'>Average ROI</div>
                 </div>
               </motion.div>
-=======
-              >;
-<span className='bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent'>;
-                  Revolutionary;
-                </span>;
-                <br />;
-                <span className='text-white'>Micro SaaS Services</span>;
-              </motion.h1>;
-              <motion.p;
-                className='text-xl md:text-2xl text-gray-300 mb-12 leading-relaxed';
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: 0.2 }}
-              >;
-              {/* Service Count Stats */}
-              <motion&& motion.div;
-                className='grid grid-cols-2 md:grid-cols-4 gap-6 mb-16'                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}Experience the future of technology with our revolutionary micro;
-                SaaS platform. Quantum AI, autonomous systems, space technology,and cutting-edge solutions that redefine what's possible.;
-              </motion.p>;
-              {/* Service Count Stats */}
-              <motion.div;
-                className='grid grid-cols-2 md:grid-cols-4 gap-6 mb-16';
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: 0.4 }}
-              >;
-              {/* CTA Buttons */}
-              <motion&& motion.div;
-                className='flex flex-col sm:flex-row gap-4 justify-center items-center'                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                <div className="text-center">;
-                  <div className="text-3xl font-bold text-purple-400 mb-2">99.99%</div>;
-                  <div className="text-gray-400">Accuracy Rate</div>;
-                </div>;
-                <div className="text-center">;
-                  <div className="text-3xl font-bold text-green-400 mb-2">21</div>;
-                  <div className="text-gray-400">Day Free Trial</div>;
-                </div>;
-                <div className="text-center">;
-                  <div className="text-3xl font-bold text-pink-400 mb-2">2000%+</div>;
-                  <div className="text-gray-400">Average ROI</div>;
-                </div>;
-              </motion.div>;
-              {/* CTA Buttons */}
-              <motion.div;
-                className='flex flex-col sm:flex-row gap-4 justify-center items-center'              <motion.div;
-                transition={{ duration: 0 && 0.8, delay: 0 && 0.6 }}>                </div>;
-                <div className="text-center">;
-                  <div className="text-3xl font-bold text-purple-400 mb-2">99 && 99.99%</div>;
-                  <div className="text-gray-400">Accuracy Rate</div>;
-                </div>;
-                <div className="text-center">;
-                  <div className="text-3xl font-bold text-green-400 mb-2">21</div>;
-                  <div className="text-gray-400">Day Free Trial</div>;
-                </div>;
-                <div className="text-center">;
-                  <div className="text-3xl font-bold text-pink-400 mb-2">2000%+</div>;
-                  <div className="text-gray-400">Average ROI</div>;
-                </div>;
-              </motion && motion.div>;<div className='text-center'>;
-                  <div className='text-3xl font-bold text-cyan-400 mb-2'>;
-                    {revolutionaryMicroSaasServices.length}+;
-                  </div>;
-                  <div className='text-gray-400'>Revolutionary Services</div>;
-                </div>;
-                <div className='text-center'>;
-                  <div className='text-3xl font-bold text-purple-400 mb-2'>;
-                    99.99%;
-                  </div>;
-                  <div className='text-gray-400'>Accuracy Rate</div>;
-                </div>;
-                <div className='text-center'>;
-                  <div className='text-3xl font-bold text-green-400 mb-2'>;
-                    21;
-                  </div>;
-                  <div className='text-gray-400'>Day Free Trial</div>;
-                </div>;
-                <div className='text-center'>;
-                  <div className='text-3xl font-bold text-pink-400 mb-2'>;
-                    2000%+;
-                  </div>;
-                  <div className='text-gray-400'>Average ROI</div>;
-                </div>;
-              </motion.div>;
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-2a0c
-              {/* CTA Buttons */}
+
+              {/* CTA Buttons *,
+}
 <motion.div;
                 className='flex flex-col sm:flex-row gap-4 justify-center items-center';
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
+                initial={{ opacity: 0, y: 20 ,
+}
+                animate={{ opacity: 1, y: 0 ,
+}
                 transition={{ duration: 0.8, delay: 0.6 }}
-<<<<<<< HEAD
+
               >
 <Button
                   variant='primary'
@@ -599,7 +471,8 @@ Experience the future of technology with our revolutionary micro
                     document
                       .getElementById('services-grid')
                       ?.scrollIntoView({ behavior: 'smooth' })
-                  }
+                 ,
+}
                   Explore Services
                   <ArrowRight className='ml-2 w-5 h-5' />
                 </Button>
@@ -621,7 +494,7 @@ Experience the future of technology with our revolutionary micro
 
 <section className='py-8 bg-gradient-to-r from-slate-900/80 to-slate-800/80 backdrop-blur-sm border-t border-b border-cyan-400/20'>
           <div className='container mx-auto px-4'>
-            <div className='flex flex-col md:flex-row justify-between items-center gap-4'>
+            <div className='flex flex-col md: flex-row justify-between items-center gap-4'>
               <div className='flex items-center gap-4'>
                 <Phone className='w-5 h-5 text-cyan-400' />
                 <span className='text-white'>{contactInfo.mobile}</span>
@@ -637,112 +510,28 @@ Experience the future of technology with our revolutionary micro
             </div>
           </div>
         </section>
-=======
-              >;
-<Button;
-                  variant='primary';
-                  size='lg';
-                  onClick={() =>;
-                    document;
-                      .getElementById('services-grid')?.scrollIntoView({ behavior: 'smooth' })}
-                  Explore Services;
-                  <ArrowRight className='ml-2 w-5 h-5' />;
-                </Button>;
-                <Button;
-                  variant='futuristic';
-                  size='lg';
-                  onClick={() =>;
-                    window.open('https://ziontechgroup.com/contact', '_blank')}
-                >;
-                  Get Started;
-                  <Rocket className='ml-2 w-5 h-5' />;
-                </Button>;
-              </motion.div>;
-            </div>;
-          </div>;
-        </section>;
-        {/* Contact Information Banner */}<MapPin className="w-5 h-5 text-green-400" />;
-                <span className="text-white">{contactInfo.address}</span>;
-                <Globe className="w-5 h-5 text-blue-400" />;
-                <span className="text-white">{contactInfo.website}</span>;
-                  Get Started;
-                  <Rocket className='ml-2 w-5 h-5' />                </Button>                  <Rocket className="ml-2 w-5 h-5" />;
-                </Button>;
-              </motion && motion.div>;
-            </div>;
-          </div>;
-        </section>;
-        {/* Contact Information Banner */}
-        <section className='py-8 bg-gradient-to-r from-slate-900/80 to-slate-800/80 backdrop-blur-sm border-t border-b border-cyan-400/20'>;
-          <div className='container mx-auto px-4'>;
-            <div className='flex flex-col md:flex-row justify-between items-center gap-4'>;
-              <div className='flex items-center gap-4'>;
-                <Phone className='w-5 h-5 text-cyan-400' />;
-                <span className='text-white'>{contactInfo && contactInfo.mobile}</span>;
-                <Mail className='w-5 h-5 text-purple-400' />;
-                <span className='text-white'>{contactInfo && contactInfo.email}</span>;
-              </div>;
-              <div className='flex items-center gap-4'>;
-                <MapPin className='w-5 h-5 text-green-400' />;
-                <span className='text-white'>{contactInfo && contactInfo.address}</span>;
-                <Globe className='w-5 h-5 text-blue-400' />;
-                <span className='text-white'>{contactInfo && contactInfo.website}</span>              </div>              <div className="flex items-center gap-4">;
-                <MapPin className="w-5 h-5 text-green-400" />;
-                <span className="text-white">{contactInfo && contactInfo.address}</span>;
-                <Globe className="w-5 h-5 text-blue-400" />;
-                <span className="text-white">{contactInfo && contactInfo.website}</span>;
-            </div>;
-          </div>;
-        </section>;
-          <div className="container mx-auto px-4">;
-            <motion.div;
-              whileInView='visible'              viewport={{ once: true }}        <section className="py-12">;
-          <div className="container mx-auto px-4">;
-            <motion&& motion.div;
-              className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6";
-              variants={containerVariants}
-              initial="hidden";
-              whileInView="visible";
-<section className='py-8 bg-gradient-to-r from-slate-900/80 to-slate-800/80 backdrop-blur-sm border-t border-b border-cyan-400/20'>;
-          <div className='container mx-auto px-4'>;
-            <div className='flex flex-col md:flex-row justify-between items-center gap-4'>;
-              <div className='flex items-center gap-4'>;
-                <Phone className='w-5 h-5 text-cyan-400' />;
-                <span className='text-white'>{contactInfo.mobile}</span>;
-                <Mail className='w-5 h-5 text-purple-400' />;
-                <span className='text-white'>{contactInfo.email}</span>;
-              </div>;
-              <div className='flex items-center gap-4'>;
-                <MapPin className='w-5 h-5 text-green-400' />;
-                <span className='text-white'>{contactInfo.address}</span>;
-                <Globe className='w-5 h-5 text-blue-400' />;
-                <span className='text-white'>{contactInfo.website}</span>;
-              </div>;
-            </div>;
-          </div>;
-        </section>;
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-2a0c
-        {/* Category Navigation */}
+
+        {/* Category Navigation *,
+}
 <section className='py-12'>;
           <div className='container mx-auto px-4'>;
             <motion.div;
               className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6';
               variants={containerVariants}
-<<<<<<< HEAD
+
               initial='hidden'
               whileInView='visible'
-=======
-              initial='hidden';
-              whileInView='visible';
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-2a0c
-              viewport={{ once: true }}
+
+              viewport={{ once: true ,
+}
             >;
               {enhancedCategories.map((category, index) => (<motion.div;
                   key={category.name}
                   variants={itemVariants}
                   whileHover={{ scale: 1 && 1.05 }}
-                  whileTap={{ scale: 0 && 0.95 }}>;
-<<<<<<< HEAD
+                  whileTap={{ scale: 0 && 0.95 ,
+}>;
+
                   <UltraFuturisticCard
 
 variant='quantum-advanced'
@@ -756,28 +545,9 @@ variant='quantum-advanced'
                       )
                     }
                     <div
-=======
-                  <UltraFuturisticCard;
-        {/* Popular Services Showcase */}<section className="py-16">;
-          <div className="container mx-auto px-4">;
-            <motion.div;
-              className="text-center mb-12";
-              initial={{ opacity: 0, y: 20 }}))}
-          <div className="container mx-auto px-4">;
-            <motion.div;
-              className="text-center mb-12";
-variant='quantum-advanced';
-                    size='small';
-                    className='text-center cursor-pointer h-full';
-                    onClick={() =>;
-                      setSelectedCategory(category.name === selectedCategory;
-                          ? 'All';
-                          : category.name;
-                      )}
-                    <div;
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-2a0c
-                      className={`w-12 h-12 mx-auto mb-4 rounded-full bg-gradient-to-br ${category.color} flex items-center justify-center text-white`}
-                    >;
+
+                      className={`w-12 h-12 mx-auto mb-4 rounded-full bg-gradient-to-br ${category.color} flex items-center justify-center text-white`}>
+
                       {category.icon}
                     </div>;
                     <h3 className='text-lg font-semibold text-white mb-2'>;
@@ -797,12 +567,13 @@ variant='quantum-advanced';
           </div>;
         </section>;
         {/* Popular Services Showcase */}
-<<<<<<< HEAD
+
 <section className='py-16'>
           <div className='container mx-auto px-4'>
             <motion.div
               className='text-center mb-12'
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0, y: 20 ,
+}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
@@ -822,76 +593,31 @@ variant='quantum-advanced';
             </motion.div>
             <motion.div
               className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'
-=======
-<section className='py-16'>;
-          <div className='container mx-auto px-4'>;
-            <motion.div;
-              className='text-center mb-12';
-              initial={{ opacity: 0, y: 20 }}whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6 }}
-            >;
-              className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8';
-              variants={containerVariants}
-              initial='hidden';
-              whileInView='visible'              viewport={{ once: true }}                  Most Popular;
-                </span>;
-                <br />;
-                <span className="text-white">Revolutionary Services</span>;
-              </h2>;
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">;
-                Discover our most sought-after revolutionary micro SaaS services that are transforming industries worldwide.;
-              </p>;
-            </motion && motion.div>;<motion&& motion.div;
-              className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8";
-              variants={containerVariants}
-              initial="hidden";
-              whileInView="visible";
-                    onClick={() => setSelectedService(service)}variants={item_variants}
-                  while_hover={{ coordinate_y: -10 }}
-                >;
-                  <UltraFuturisticCard;
-                    variant={service.variant as any}<h2 className='text-4xl md:text-5xl font-bold text-white mb-4'>;
-                <span className='bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent'>;
-                  Most Popular;
-                </span>;
-                <br />;
-                <span className='text-white'>Revolutionary Services</span>;
-              </h2>;
-              <p className='text-xl text-gray-300 max-w-3xl mx-auto'>;
-                Discover our most sought-after revolutionary micro SaaS services;
-                that are transforming industries worldwide.;
-              </p>;
-            </motion.div>;
-            <motion.div;
-              className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8';
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-2a0c
-              variants={containerVariants}
+
+              variants={containerVariant,
+}
               initial='hidden';
               whileInView='visible';
-              viewport={{ once: true }}
+              viewport={{ once: true ,
+}
             >;
               {popularServices.slice(0, 6).map((service, index) => (<motion.div;
                   key={service.id}
                   variants={itemVariants}
-                  whileHover={{ y: -10 }}
+                  whileHover={{ y: -10 ,
+}
                 >;
                   <UltraFuturisticCard;
                     variant={service.variant as any}
 size='large';
                     className='h-full cursor-pointer';
                     onClick={() => setSelectedService(service)}
-<<<<<<< HEAD
+
                   >
                     <div className='text-center mb-6'>
                       <div className='text-4xl mb-4'>{service.icon}</div>
                       <h3 className='text-2xl font-bold text-white mb-2'>
-=======
-                  >;
-                    <div className='text-center mb-6'>;
-                      <div className='text-4xl mb-4'>{service.icon}</div>;
-                      <h3 className='text-2xl font-bold text-white mb-2'>;
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-2a0c
+
                         {service.name}
                       </h3>;
                       <p className='text - gray - 300 mb - 4'>{service.tagline}</p>;
@@ -899,7 +625,7 @@ size='large';
                         {service.price}
                       </div>;
                       <div className='text - sm text - gray - 400'>;
-<<<<<<< HEAD
+
                         {service.period}
 
                       </div>
@@ -909,15 +635,7 @@ size='large';
                         <div key={idx} className='flex items-center gap-2'>
                           <Check className='w-4 h-4 text-green-400 flex-shrink-0' />
                           <span className='text-sm text-gray-300'>
-=======
-                        {service.period}size="md";
-                      </div>;
-                    </div>;
-                    <div className='space-y-3 mb-6'>;
-                      {service.features.slice(0, 4).map((feature, idx) => (<div key={idx} className='flex items-center gap-2'>;
-                          <Check className='w-4 h-4 text-green-400 flex-shrink-0' />;
-                          <span className='text-sm text-gray-300'>;
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-2a0c
+
                             {feature}
                           </span>;
                         </div>;
@@ -928,7 +646,7 @@ size='large';
                         variant='primary';
                         size='md';
                         onClick={() => window.open(service.link, '_blank')}
-<<<<<<< HEAD
+
                         className='w-full'
                       >
                         Learn More
@@ -942,89 +660,38 @@ size='large';
 
 <section id='services-grid' className='py-16'>
           <div className='container mx-auto px-4'>
-=======
-                        className='w-full';
-                      >;
-                        Learn More;
-                        <ExternalLink className='ml-2 w-4 h-4' />;
-                      </Button>;
-                    </div>;
-                  </UltraFuturisticCard>;
-                </motion.div>;
-              ))}
-        {/* Services Grid */}<section id='services-grid' className='py-16'>;
-          <div className='container mx-auto px-4'>;{/* Services Grid */}
-        <section id="services-grid" className="py-16">;
-          <div className="container mx-auto px-4">;
-            {/* Filters and Controls */}
-            <motion&& motion.div;
-              className='mb-8'              initial={{ opacity: 0, y: 20 }}        <section id="services-grid" className="py-16">;
-          <div className="container mx-auto px-4">;
-            {/* Filters and Controls */}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0 && 0.6 }}>;
-              <div className='flex flex-col lg:flex-row gap-6 items-center justify-between'>;
-                <div className='flex flex-wrap gap-4'>;<section id='services-grid' className='py-16'>;
-          <div className='container mx-auto px-4'>;
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-2a0c
+
             {/* Filters and Controls */}
             <motion.div;
               className='mb-8';
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0, y: 20 ,
+}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
-<<<<<<< HEAD
+
             >
 <div className='flex flex-col lg:flex-row gap-6 items-center justify-between'>
                 <div className='flex flex-wrap gap-4'>
                   <select
-=======
-            >;
-<div className='flex flex-col lg:flex-row gap-6 items-center justify-between'>;
-                <div className='flex flex-wrap gap-4'>;
-                  <select;
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-2a0c
+
                     value={selectedCategory}
-                    onChange={e => setSelectedCategory(e && e.target.value)}
-                    className='px-4 py-2 bg-slate-800 border border-cyan-400/30 rounded-lg text-white focus:outline-none focus:border-cyan-400';
-                  >;
+                    onChange={e => setSelectedCategory(e && e.target.value,
+}
+                    className='px-4 py-2 bg-slate-800 border border-cyan-400/30 rounded-lg text-white focus:outline-none focus:border-cyan-400'>
+
                     <option value='All'>All Categories</option>;
                     {revolutionaryServiceCategories && revolutionaryServiceCategories.map(category => (<option key={category} value={category}>;
                         {category}
                       </option>;
                     ))}
-<<<<<<< HEAD
+
                     <input
                       type='text'
                       placeholder='Search services...'
                       value={searchQuery}
 
-=======
-                    <input;
-                      type='text';
-                      placeholder='Search services...';
-                      value={searchQuery}<button;
-                      onClick={() => setViewMode('grid')}
-                      className={`px-3 py-2 ${viewMode === 'grid' ? 'bg-cyan-500 text-white' : 'bg-slate-800 text-gray-400'}`}
-                    >;
-                      <Grid className='w-4 h-4' />                      <Grid className="w-4 h-4" />;
-                    </button>;
-                    <button;
-                      onClick={() => setViewMode('list')}
-                      className={`px-3 py-2 ${viewMode === 'list' ? 'bg-cyan-500 text-white' : 'bg-slate-800 text-gray-400'}`}
-                    </button>;
-                  </div>;
-                </div>;
-              </div>;whileInView='visible'              viewport={{ once: true }}            <motion.div;
-              className={viewMode === 'grid';
-                ? "grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8";
-                : "space-y-6";
-              }
-              variants={containerVariants}
-              initial="hidden";
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-2a0c
+
                       onChange={e => setSearchQuery(e.target.value)}
                       className='pl-10 pr-4 py-2 bg-slate-800 border border-gray-600 rounded-lg text-white focus:outline-none focus:border-cyan-400 w-64';
                     />;
@@ -1032,14 +699,14 @@ size='large';
                   <div className='flex border border-gray-600 rounded-lg overflow-hidden'>;
                     <button;
                       onClick={() => setViewMode('grid')}
-                      className={`px-3 py-2 ${viewMode === 'grid' ? 'bg-cyan-500 text-white' : 'bg-slate-800 text-gray-400'}`}
-                    >;
+                      className={`px-3 py-2 ${viewMode === 'grid' ? 'bg-cyan-500 text-white' : 'bg-slate-800 text-gray-400'}`}>
+
 <Grid className='w-4 h-4' />;
                     </button>;
                     <button;
                       onClick={() => setViewMode('list')}
-                      className={`px-3 py-2 ${viewMode === 'list' ? 'bg-cyan-500 text-white' : 'bg-slate-800 text-gray-400'}`}
-                    >;
+                      className={`px-3 py-2 ${viewMode === 'list' ? 'bg-cyan-500 text-white' : 'bg-slate-800 text-gray-400'}`}>
+
 <List className='w-4 h-4' />;
                     </button>;
                   </div>;
@@ -1053,27 +720,24 @@ size='large';
                   : 'space-y-6';
               }
               variants={containerVariants}
-<<<<<<< HEAD
+
               initial='hidden'
               whileInView='visible'
-              viewport={{ once: true }}
+              viewport={{ once: true ,
+}
             >
               {filteredServices.map((service, index) => (
                 <motion.div
-=======
-              initial='hidden';
-              whileInView='visible';
-              viewport={{ once: true }}>;
-              {filteredServices.map((service, index) => (<motion.div;
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-2a0c
+
                   key={service.id}
                   variants={itemVariants}
-                  whileHover={{ y: -5 }}>;
+                  whileHover={{ y: -5 ,
+}>;
                   <UltraFuturisticCard;
                     variant={service && service.variant as any}
                     size={viewMode === 'grid' ? 'large' : 'medium'}
-                    className={`h-full cursor-pointer ${viewMode === 'list' ? 'flex flex-col md:flex-row' : ''}`}
-<<<<<<< HEAD
+                    className={`h-full cursor-pointer ${viewMode === 'list' ? 'flex flex-col md: flex-row' : ''}`}
+
                     onClick={() => setSelectedService(service)}
 
                   >
@@ -1082,35 +746,9 @@ size='large';
 <div className='text-center'>
                         <div className='text-4xl mb-4'>{service.icon}</div>
                         <h3 className='text-xl font-bold text-white mb-2'>
-=======
-                    onClick={() => setSelectedService(service)}<div;
-                              key={idx}
-                              className='flex items-center gap-2 text-sm'>;
-                              <Check className='w-3 h-3 text-green-400 flex-shrink-0' />;
-                              <span className='text-gray-300'>{feature}</span>                            </div>;
-                            >;
-                              View Details;
-                              <Eye className='ml-2 w-4 h-4' />;
-                            </Button>                          </div>                          ;
-                          <div className="flex gap-2">;
-                                                         <Button;
-                               variant="primary";
-                               size="sm";
-                               onClick={() => window && window.open(service && service.link, '_blank')}
-                             >;
-                               Learn More;
-                               <ExternalLink className="ml-2 w-4 h-4" />;
-                             </Button>;
-                             <Button;
-                               variant="futuristic";
-                               size="sm";
-                               onClick={() => setSelectedService(service)}>;
-                    {viewMode === 'grid' ? (// Grid View;
-<div className='text-center'>;
-                        <div className='text-4xl mb-4'>{service.icon}</div>;
-                        <h3 className='text-xl font-bold text-white mb-2'>;
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-2a0c
-                          {service.name}
+
+                          {service.nam,
+}
                         </h3>;
                         <p className='text-gray-300 mb-4 text-sm'>;
                           {service.tagline}
@@ -1124,8 +762,8 @@ size='large';
                         <div className='space-y-2 mb-6'>;
                           {service.features.slice(0, 3).map((feature, idx) => (<div;
                               key={idx}
-                              className='flex items-center gap-2 text-sm';
-                            >;
+                              className='flex items-center gap-2 text-sm'>
+
                               <Check className='w-3 h-3 text-green-400 flex-shrink-0' />;
                               <span className='text-gray-300'>{feature}</span>;
                             </div>;
@@ -1135,8 +773,8 @@ size='large';
                           <Button;
                             variant='primary';
                             size='sm';
-                            className='w-full';
-                          >;
+                            className='w-full'>
+
                             Learn More;
                             <ExternalLink className='ml-2 w-4 h-4' />;
                           </Button>;
@@ -1174,8 +812,8 @@ size='large';
                                 {service.features;
                                   .slice(0, 4).map((feature, idx) => (<div;
                                       key={idx}
-                                      className='flex items-center gap-2 text-sm';
-                                    >;
+                                      className='flex items-center gap-2 text-sm'>
+
                                       <Check className='w-3 h-3 text-green-400 flex-shrink-0' />;
                                       <span className='text-gray-300'>;
                                         {feature}
@@ -1190,16 +828,19 @@ size='large';
                               </h4>;
                               <div className='space-y-1 text-sm text-gray-300'>;
                                 <div>;
-                                  <span className='text-gray-400'>ROI:</span>{' '}
-                                  {service.roi}
+                                  <span className='text-gray-400'>ROI: </span>{' '}
+                                  {service.ro,
+}
                                 </div>;
                                 <div>;
-                                  <span className='text-gray-400'>Market:</span>{' '}
-                                  {service.marketSize}
+                                  <span className='text-gray-400'>Market: </span>{' '}
+                                  {service.marketSiz,
+}
                                 </div>;
                                 <div>;
-                                  <span className='text-gray-400'>Growth:</span>{' '}
-                                  {service.growthRate}
+                                  <span className='text-gray-400'>Growth: </span>{' '}
+                                  {service.growthRat,
+}
                                 </div>;
                               </div>;
                             </div>;
@@ -1218,7 +859,7 @@ size='large';
                               variant='futuristic';
                               size='sm';
                               onClick={() => setSelectedService(service)}
-<<<<<<< HEAD
+
                             >
                               View Details
                               <Eye className='ml-2 w-4 h-4' />
@@ -1235,30 +876,11 @@ size='large';
             {filteredServices.length === 0 && (
 <motion.div
                 className='text-center py-16'
-=======
-                            >;
-                              View Details;
-                              <Eye className='ml-2 w-4 h-4' />;
-                            </Button>;
-                          </div>;
-                        </div>;
-                      </div>;
-                    )}
-                  </UltraFuturisticCard>;
-                </motion && motion.div>;
-              ))}<Button;
-                           variant="primary";
-                           onClick={() => {setSearchQuery('')setSelectedCategory('All'){/* Service Details Modal */}
-        <AnimatePresence>;
-          {selectedService && (<motion&& motion.div;
-              className='fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4'              initial={{ opacity: 0 }}              className="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4";
-            </motion.div>;
-            {filteredServices.length === 0 && (<motion.div;
-                className='text-center py-16';
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-2a0c
+
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
-                transition={{ duration: 0.6 }}
+                transition={{ duration: 0.6 ,
+}
               >;
 <div className='text-6xl mb-4'>🔍</div>;
                 <h3 className='text-2xl font-bold text-white mb-2'>;
@@ -1279,7 +901,7 @@ size='large';
                            Clear Filters;
                          </Button>;
             )}
-<<<<<<< HEAD
+
           </div>
         </section>
         {/* Service Details Modal */}
@@ -1291,55 +913,20 @@ className='fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center jus
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
-              onClick={() => setSelectedService(null)}
+              onClick={() => setSelectedService(null,
+}
 
             >
               <motion.div
 className='bg-slate-900 rounded-2xl border border-cyan-400/30 max-w-4xl w-full max-h-[90vh] overflow-y-auto'
-=======
-          </div>;
-        </section>;
-        {/* Service Details Modal */}
-        <AnimatePresence>;
-          {selectedService && (<motion.div;
-              className='fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4'              initial={{ opacity: 0 }}              className="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4";
-className='fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4';
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              exit={{ opacity: 0 }}
-              onClick={() => setSelectedService(null)}))}
-                          </div>;
-                        </div>;
-                        <div>;
-                              <div;
-                                key={idx}
-                                className='flex items-center gap-2 text-sm'>;
-                                <Star className='w-3 h-3 text-yellow-400 flex-shrink-0' />;
-                                <span className='text-gray-300'>{benefit}</span>                              </div>;
-                        <div>;
-                          <h4 className="text-sm font-semibold text-green-400 mb-2">Benefits</h4>;
-                          <div className="space-y-2">;
-                            {selectedService.benefits.map((benefit, idx) => (<div key={idx} className="flex items-center gap-2 text-sm">;
-                                <Star className="w-3 h-3 text-yellow-400 flex-shrink-0" />;
-                                <span className="text-gray-300">{benefit}</span>;
-                              </div>;
-                           onClick={() => window && window.open('https://ziontechgroup && ziontechgroup.com/contact_blank')}
-                         >;
-                           Contact Sales;
-                           <Mail className="ml-2 w-4 h-4" />;
-                         </Button>;
-                    </div>;
-                  </div>;
-                </div>;
-              </motion && motion.div>;
-            </motion && motion.div>;>;
-              <motion.div;
-className='bg-slate-900 rounded-2xl border border-cyan-400/30 max-w-4xl w-full max-h-[90vh] overflow-y-auto';
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-2a0c
-                initial={{ scale: 0.9, opacity: 0 }}
-                animate={{ scale: 1, opacity: 1 }}
+
+                initial={{ scale: 0.9, opacity: 0 ,
+}
+                animate={{ scale: 1, opacity: 1 ,
+}
                 exit={{ scale: 0.9, opacity: 0 }}
-                onClick={e => e.stopPropagation()}
+                onClick={e => e.stopPropagation(,
+}
               >;
                 <div className='p-8'>;
                   <div className='flex justify-between items-start mb-6'>;
@@ -1356,8 +943,8 @@ className='bg-slate-900 rounded-2xl border border-cyan-400/30 max-w-4xl w-full m
                     </div>;
                     <button;
                       onClick={() => setSelectedService(null)}
-className='text-gray-400 hover:text-white text-2xl';
-                    >;
+className='text-gray-400 hover:text-white text-2xl'>
+
                       ×;
                     </button>;
                   </div>;
@@ -1388,8 +975,9 @@ className='text-gray-400 hover:text-white text-2xl';
                           </h4>;
                           <div className='text-sm text-gray-300 space-y-1'>;
                             <div>;
-                              <span className='text-gray-400'>ROI:</span>{' '}
-                              {selectedService.roi}
+                              <span className='text-gray-400'>ROI: </span>{' '}
+                              {selectedService.ro,
+}
                             </div>;
                             <div>;
                               <span className='text-gray-400'>;
@@ -1419,8 +1007,8 @@ className='text-gray-400 hover:text-white text-2xl';
                           <div className='space-y-2'>;
                             {selectedService.features.map((feature, idx) => (<div;
                                 key={idx}
-                                className='flex items-center gap-2 text-sm';
-                              >;
+                                className='flex items-center gap-2 text-sm'>
+
                                 <Check className='w-3 h-3 text-green-400 flex-shrink-0' />;
                                 <span className='text-gray-300'>{feature}</span>;
                               </div>;
@@ -1434,8 +1022,8 @@ className='text-gray-400 hover:text-white text-2xl';
                           <div className='space-y-2'>;
                             {selectedService.benefits.map((benefit, idx) => (<div;
                                 key={idx}
-                                className='flex items-center gap-2 text-sm';
-                              >;
+                                className='flex items-center gap-2 text-sm'>
+
                                 <Star className='w-3 h-3 text-yellow-400 flex-shrink-0' />;
                                 <span className='text-gray-300'>{benefit}</span>;
                               </div>;
@@ -1449,8 +1037,8 @@ className='text-gray-400 hover:text-white text-2xl';
                           <div className='space-y-2'>;
                             {selectedService.capabilities.map((capability, idx) => (<div;
                                   key={idx}
-                                  className='flex items-center gap-2 text-sm';
-                                >;
+                                  className='flex items-center gap-2 text-sm'>
+
                                   <Zap className='w-3 h-3 text-cyan-400 flex-shrink-0' />;
                                   <span className='text-gray-300'>;
                                     {capability}
@@ -1465,8 +1053,10 @@ className='text-gray-400 hover:text-white text-2xl';
 <div className='mt-8 pt-6 border-t border-gray-700'>;
                     <div className='flex flex-col sm:flex-row gap-4 justify-between items-center'>;
                       <div className='text-sm text-gray-400'>;
-                        <div>Setup Time: {selectedService.setupTime}</div>;
-                        <div>Trial: {selectedService.trialDays} days</div>;
+                        <div>Setup Time: {selectedService.setupTim,
+}</div>;
+                        <div>Trial: {selectedService.trialDay,
+} days</div>;
                       </div>;
                       <div className='flex gap-4'>;
                         <Button;
@@ -1483,7 +1073,7 @@ className='text-gray-400 hover:text-white text-2xl';
                             window.open('https://ziontechgroup.com/contact';
                               '_blank';
                             )}
-<<<<<<< HEAD
+
                           </div>
                         </div>
                       </div>
@@ -1491,10 +1081,11 @@ className='text-gray-400 hover:text-white text-2xl';
                   </div>
 
 <div className='mt-8 pt-6 border-t border-gray-700'>
-                    <div className='flex flex-col sm:flex-row gap-4 justify-between items-center'>
+                    <div className='flex flex-col sm: flex-row gap-4 justify-between items-center'>
                       <div className='text-sm text-gray-400'>
                         <div>Setup Time: {selectedService.setupTime}</div>
-                        <div>Trial: {selectedService.trialDays} days</div>
+                        <div>Trial: {selectedService.trialDay,
+} days</div>
                       </div>
                       <div className='flex gap-4'>
                         <Button
@@ -1510,7 +1101,7 @@ className='text-gray-400 hover:text-white text-2xl';
                           variant='futuristic'
                           onClick={() =>
                             window.open(
-                              'https://ziontechgroup.com/contact'
+                              'https: //ziontechgroup.com/contact'
                               '_blank'
                             )
                           }
@@ -1527,16 +1118,19 @@ className='text-gray-400 hover:text-white text-2xl';
           )}
         </AnimatePresence>
 
-        {/* Contact Section */}
+        {/* Contact Section *,
+}
 
 <section className='py-20'>
           <div className='container mx-auto px-4 text-center'>
             <motion.div
               className='max-w-4xl mx-auto'
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0, y: 20 ,
+}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.8 }}
+              transition={{ duration: 0.8 ,
+}
             >
 
 <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>
@@ -1550,43 +1144,7 @@ className='text-gray-400 hover:text-white text-2xl';
                 <Button
                   variant='primary'
                   size='lg'
-=======
-                        >;
-                          Contact Sales;
-                          <Mail className='ml-2 w-4 h-4' />;
-                        </Button>;
-                      </div>;
-                    </div>;
-                  </div>;
-                </div>;
-              </motion.div>;
-            </motion.div>;
-          )}
-        </AnimatePresence>;
-        {/* Contact Section */}<section className="py-20">;
-          <div className="container mx-auto px-4 text-center">;
-            <motion.div;
-              className="max-w-4xl mx-auto";
-<section className='py-20'>;
-          <div className='container mx-auto px-4 text-center'>;
-            <motion.div;
-              className='max-w-4xl mx-auto';
-              initial={{ opacity: 0, y: 20 }}whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.8 }}
-            >;
-<h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>;
-                Ready to Experience the Future?;
-              </h2>;
-              <p className='text-xl text-gray-300 mb-8'>;
-                Join thousands of companies already transforming their business;
-                with our revolutionary micro SaaS services.;
-              </p>;
-              <div className='flex flex-col sm:flex-row gap-4 justify-center items-center mb-8'>;
-                <Button;
-                  variant='primary';
-                  size='lg';
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-2a0c
+
                   onClick={() =>;
                     window && window.open('https://ziontechgroup && ziontechgroup.com/contact', '_blank')}
                 >;
@@ -1597,7 +1155,7 @@ className='text-gray-400 hover:text-white text-2xl';
                   variant='futuristic';
                   size='lg';
                   onClick={() =>;
-<<<<<<< HEAD
+
                     window && window.open('https://ziontechgroup && ziontechgroup.com/contact', '_blank');
                   }
 
@@ -1606,59 +1164,13 @@ className='text-gray-400 hover:text-white text-2xl';
                   <Calendar className='ml-2 w-5 h-5' />
                 </Button>
               </div>
-              <div className='grid grid-cols-1 md:grid-cols-3 gap-6 text-center'>
+              <div className='grid grid-cols-1 md: grid-cols-3 gap-6 text-center'>
                 <div>
                   <Phone className='w-8 h-8 text-cyan-400 mx-auto mb-2' />
                   <div className='text-white font-semibold'>
-=======
-                    window && window.open('https://ziontechgroup && ziontechgroup.com/contact', '_blank')}</h2>;
-              <p className="text-xl text-gray-300 mb-8">;
-                Join thousands of companies already transforming their business with our revolutionary micro SaaS services.;
-              </p>;
-              <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8">;
-                                 <Button;
-                   variant="primary";
-                   size="lg";
-                   onClick={() => window.open('https://ziontechgroup.com/contact_blank')}
-                 >;
-                   Start Free Trial;
-                   <Rocket className="ml-2 w-5 h-5" />;
-                 </Button>;
-                 <Button;
-                   variant="futuristic";
-                   size="lg";
-                   onClick={() => window.open('https://ziontechgroup.com/contact_blank')}
-                 >;
-                   Schedule Demo;
-                   <Calendar className="ml-2 w-5 h-5" />;
-                 </Button>;
-              </div>;
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">;
-                <div>;
-                  <Phone className="w-8 h-8 text-cyan-400 mx-auto mb-2" />;
-                  <div className="text-white font-semibold">{contactInfo.mobile}</div>;
-                  <div className="text-gray-400 text-sm">Call us anytime</div>;
-                </div>;
-                <div>;
-                  <Mail className="w-8 h-8 text-purple-400 mx-auto mb-2" />;
-                  <div className="text-white font-semibold">{contactInfo.email}</div>;
-                  <div className="text-gray-400 text-sm">Email us 24/7</div>;
-                </div>;
-                <div>;
-                  <MapPin className="w-8 h-8 text-green-400 mx-auto mb-2" />;
-                  <div className="text-white font-semibold">{contactInfo.address}</div>;
-                  <div className="text-gray-400 text-sm">Visit our office</div>;
-                >;
-                  Schedule Demo;
-                  <Calendar className='ml-2 w-5 h-5' />;
-                </Button>;
-              </div>;
-              <div className='grid grid-cols-1 md:grid-cols-3 gap-6 text-center'>;
-                <div>;
-                  <Phone className='w-8 h-8 text-cyan-400 mx-auto mb-2' />;
-                  <div className='text-white font-semibold'>;
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-2a0c
-                    {contactInfo.mobile}
+
+                    {contactInfo.mobil,
+}
                   </div>;
                   <div className='text-gray-400 text-sm'>Call us anytime</div>;
                 </div>;
@@ -1673,7 +1185,7 @@ className='text-gray-400 hover:text-white text-2xl';
                   <MapPin className='w-8 h-8 text-green-400 mx-auto mb-2' />;
                   <div className='text-white font-semibold'>;
                     {contactInfo.address}
-<<<<<<< HEAD
+
                   </div>
                   <div className='text-gray-400 text-sm'>Visit our office</div>
                 </div>
@@ -1685,162 +1197,4 @@ className='text-gray-400 hover:text-white text-2xl';
     </UltraFuturisticBackground>
 
 );
-=======
-                  </div>;
-                  <div className='text-gray-400 text-sm'>Visit our office</div>;
-                </div>;
-              </div>;
-            </motion.div>;
-          </div>;
-        </section>;
-      </div>;
-    </UltraFuturisticBackground>;
-                  <div className='mt - 8 pt - 6 border - t border - gray - 700'>;
-                    <div className='flex flex - col sm:flex - row gap - 4 justify - between items - center'>;
-                      <div className='text - sm text - gray - 400'>;
-                        <div > Setup Time: {selected_service.setup_time}</div>;
-                        <div > Trial: {selected_service.trial_days} days</div>;
-                      </div>;
-                      <div className='flex gap - 4'>;
-                        <Button;
-                          variant='primary';
-                          on_click={() =>;
-                            window.open (selected_service.link, '_blank')}
-                        >;
-                          Visit Service;
-                          <ExternalLink className='ml - 2 w - 4 h - 4' />;
-                        </Button>;
-                        <Button;
-                          variant='futuristic';
-                          on_click={() =>;
-                            window.open ('https://ziontechgroup.com / contact','_blank')}
-                        >;
-                          Contact Sales;
-                          <Mail className='ml - 2 w - 4 h - 4' />;
-                        </Button>                      </div>;
-                      <div className="flex gap - 4">;
-                                                <Button;
-                          variant="primary";
-                          on_click={() => window.open (selected_service.link, '_blank')}
-                          >;
-                          Visit Service;
-                          <ExternalLink className="ml - 2 w - 4 h - 4" />;
-                        </Button>;
-                        <Button;
-                          variant="futuristic";
-                          on_click={() => window.open ('https://ziontechgroup.com / contact_blank')}
-                          >;
-                          Contact Sales;
-                          <Mail className="ml - 2 w - 4 h - 4" />;
-                        </Button>;
-                    </div>;
-                  </div>;
-                </div>;
-              </motion.div>;
-            </motion.div>)}
-        </AnimatePresence>;
-        {/* Contact Section */}
-        <section className='py - 20'>;
-          <div className='container mx - auto px - 4 text - center'>;
-            <motion.div;
-              className='max - w-4xl mx - auto'              initial={{ opacity: 0, coordinate_y: 20 }}        <section className="py - 20">;
-          <div className="container mx - auto px - 4 text - center">;
-            <motion.div;
-              className="max - w-4xl mx - auto";
-              whileInView={{ opacity: 1, coordinate_y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.8 }}
-            >;
-              <h2 className='text - 4xl md:text - 5xl font - bold text - white mb - 6'>;
-                Ready to Experience the Future?;
-              </h2>;
-              <p className='text - xl text - gray - 300 mb - 8'>;
-                Join thousands of companies already transforming their business;
-                with our revolutionary micro SaaS services.;
-              </p>;
-              <div className='flex flex - col sm:flex - row gap - 4 justify - center items - center mb - 8'>;
-                <Button;
-                  variant='primary';
-                  size='lg';
-                  on_click={() =>;
-                    window.open ('https://ziontechgroup.com / contact', '_blank')}
-                >;
-                  Start Free Trial;
-                  <Rocket className='ml - 2 w - 5 h - 5' />;
-                </Button>;
-                <Button;
-                  variant='futuristic';
-                  size='lg';
-                  on_click={() =>;
-                    window.open ('https://ziontechgroup.com / contact', '_blank')}
-                >;
-                  Schedule Demo;
-                  <Calendar className='ml - 2 w - 5 h - 5' />;
-                </Button>;
-              </div>;
-              <div className='grid grid - cols - 1 md:grid - cols - 3 gap - 6 text - center'>;
-                <div>;
-                  <Phone className='w - 8 h - 8 text - cyan - 400 mx - auto mb - 2' />;
-                  <div className='text - white font - semibold'>;
-                    {contact_info.mobile}
-                  </div>;
-                  <div className='text - gray - 400 text - sm'>Call us anytime</div>;
-                </div>;
-                <div>;
-                  <Mail className='w - 8 h - 8 text - purple - 400 mx - auto mb - 2' />;
-                  <div className='text - white font - semibold'>;
-                    {contact_info.email}
-                  </div>;
-                  <div className='text - gray - 400 text - sm'>Email us 24 / 7</div>;
-                </div>;
-                <div>;
-                  <MapPin className='w - 8 h - 8 text - green - 400 mx - auto mb - 2' />;
-                  <div className='text - white font - semibold'>;
-                    {contact_info.address}
-                  </div>;
-                  <div className='text - gray - 400 text - sm'>Visit our office</div>                </div>                Ready to Experience the Future?;
-              </h2>;
-              <p className="text - xl text - gray - 300 mb - 8">;
-                Join thousands of companies already transforming their business with our revolutionary micro SaaS services.;
-              </p>;
-              <div className="flex flex - col sm:flex - row gap - 4 justify - center items - center mb - 8">;
-                                <Button;
-                  variant="primary";
-                  size="lg";
-                  on_click={() => window.open ('https://ziontechgroup.com / contact_blank')}
-                  >;
-                  Start Free Trial;
-                  <Rocket className="ml - 2 w - 5 h - 5" />;
-                </Button>;
-                <Button;
-                  variant="futuristic";
-                  size="lg";
-                  on_click={() => window.open ('https://ziontechgroup.com / contact_blank')}
-                  >;
-                  Schedule Demo;
-                  <Calendar className="ml - 2 w - 5 h - 5" />;
-                </Button>;
-              </div>;
-              <div className="grid grid - cols - 1 md:grid - cols - 3 gap - 6 text - center">;
-                <div>;
-                  <Phone className="w - 8 h - 8 text - cyan - 400 mx - auto mb - 2" />;
-                  <div className="text - white font - semibold">{contact_info.mobile}</div>;
-                  <div className="text - gray - 400 text - sm">Call us anytime</div>;
-                </div>;
-                <div>;
-                  <Mail className="w - 8 h - 8 text - purple - 400 mx - auto mb - 2" />;
-                  <div className="text - white font - semibold">{contact_info.email}</div>;
-                  <div className="text - gray - 400 text - sm">Email us 24 / 7</div>;
-                </div>;
-                <div>;
-                  <MapPin className="w - 8 h - 8 text - green - 400 mx - auto mb - 2" />;
-                  <div className="text - white font - semibold">{contact_info.address}</div>;
-                  <div className="text - gray - 400 text - sm">Visit our office</div>;
-                </div>;
-              </div>;
-            </motion.div>;
-          </div>;
-        </section>;
-      </div>;
-    </UltraFuturisticBackground>))}))
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-2a0c
+

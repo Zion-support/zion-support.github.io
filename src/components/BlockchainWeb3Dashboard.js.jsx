@@ -1,23 +1,31 @@
 import { useState, useCallback  } from 'react';
 import { motion, AnimatePresence  } from 'framer-motion';
 import { Wallet, Smartphone, Coins, Image, TrendingUp, BarChart3, Plus, Send, Download, Loader2  } from 'lucide-react';
-export const BlockchainWeb3Dashboard = ({ className = '' }) => {const { trackEvent } = useAnalytics({        enableTracking: true, enableUserBehaviorTracking: true;
+
+export const BlockchainWeb3Dashboard = ({ className = '' }) => ;
+  const { trackEvent } = useAnalytics({        enableTracking: true, enableUserBehaviorTracking: true;
     })'';
-    const [activeTab, setActiveTab] = useState('overview')const [showMintNFT, setShowMintNFT] = useState(false)const [showSendTransaction, setShowSendTransaction] = useState(false)const { wallet, contracts, nfts, defiPositions, transactions, metrics, isConnecting, isProcessing, connectWallet, disconnectWallet, switchNetwork, addContract, mintNFT, sendTransaction, createDeFiPosition } = useBlockchainWeb3()const [nftForm, setNftForm] = useState({}
+
+const [activeTab, setActiveTab] = useState('overview');
+  const [showMintNFT, setShowMintNFT] = useState(false);
+  const [showSendTransaction, setShowSendTransaction] = useState(false);
+  const { wallet, contracts, nfts, defiPositions, transactions, metrics, isConnecting, isProcessing, connectWallet, disconnectWallet, switchNetwork, addContract, mintNFT, sendTransaction, createDeFiPosition } = useBlockchainWeb3()const [nftForm, setNftForm] = useState({}
 '';
 '';
 '''';
         name: '', '''';
         description: '','''';
         image: '';
-    })const [transactionForm, setTransactionForm] = useState({}
+    });
+  const [transactionForm, setTransactionForm] = useState({}
 '';
 '';
 '''';
         to: '', '''';
         value: '','''';
         data: '';
-    })const handleConnectWallet = useCallback(async () => {}
+    });
+  const handleConnectWallet = useCallback(async () => {}
         try {}
             await connectWallet()'';
             trackEvent('blockchain', dashboard',wallet_connected')}
@@ -29,13 +37,15 @@ export const BlockchainWeb3Dashboard = ({ className = '' }) => {const { trackEve
     }, [connectWallet, trackEvent])const handleMintNFT = useCallback(async () => {}
         if(nftForm.name.trim() && wallet) {}
             try {}
-                const metadata = {}
+;
+  const metadata = {}
   name: nftForm.name, description: nftForm.description, image: nftForm.image || `https://via.placeholder.com/300x300/6366f1/ffffff?text=${nftForm.name```;
 ```'`';
 }`'';
                 }';';
                 await mintNFT(contracts[1]?.address || '', metadata)';';
-                setNftForm({ name: '', description: '', image: '' })'';
+                setNftForm({ name: '', description: '', image: '',
+})'';
                 setShowMintNFT(false)';';
                 trackEvent('blockchain', dashboard',nft_minted')}
             catch (error) {}
@@ -48,7 +58,8 @@ export const BlockchainWeb3Dashboard = ({ className = '' }) => {const { trackEve
         if(transactionForm.to.trim() && transactionForm.value && wallet) {}
             try {}
                 await sendTransaction(transactionForm.to, transactionForm.value, transactionForm.data || null)'';
-                setTransactionForm({ to: '', value: '', data: '' })setShowSendTransaction(false)'';
+                setTransactionForm({ to: '', value: '', data: '',
+})setShowSendTransaction(false)'';
                 trackEvent('blockchain', dashboard',transaction_sent')}
             catch (error) {}
 '';
@@ -62,9 +73,11 @@ export const BlockchainWeb3Dashboard = ({ className = '' }) => {const { trackEve
             case 'confirmed': return 'text-green-600 bg-green-100';
             case 'pending': return 'text-yellow-600 bg-yellow-100';
             case 'failed': return 'text-red-600 bg-red-100';
-            default: return 'text-gray-600 bg-gray-100'}`;
+            default: return 'text-gray-600 bg-gray-100,
+}`;
     }`;
-    return (<div className={`bg-white dark:bg-gray-900 rounded-lg shadow-lg border border-gray-200 dark:border-gray-700 ${className}`}>'''';
+    return (<div className={`bg-white dark: bg-gray-900 rounded-lg shadow-lg border border-gray-200 dark:border-gray-700 ${className},
+}>'''';
       {/* Header */}'''';
       <div className='flex items-center justify-between p-4 border-b border-gray-200 dark:border-gray-700'>'''';
         <div className='flex items-center space-x-3'>'''';
@@ -110,14 +123,16 @@ export const BlockchainWeb3Dashboard = ({ className = '' }) => {const { trackEve
                         <label className='block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1'>;
                           Network'''';
                         </label>'''';
-                        <p className='text-lg text-gray-900 dark:text-white'>{wallet.network}</p>;
+                        <p className='text-lg text-gray-900 dark: text-white'>{wallet.networ,
+}</p>;
                       </div>;
                       '''';
                       <div>'''';
                         <label className='block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1'>;
                           Chain ID'''';
                         </label>'''';
-                        <p className='text-lg text-gray-900 dark:text-white'>{wallet.chainId}</p>;
+                        <p className='text-lg text-gray-900 dark: text-white'>{wallet.chainI,
+}</p>;
                       </div>;
                     </div>;
                   </div>'''';
@@ -135,8 +150,10 @@ export const BlockchainWeb3Dashboard = ({ className = '' }) => {const { trackEve
                         <span>Mint NFT</span>;
                       </button>;
                     </div>;
-                  </div>;
-                </div>)}
+                  </div>
+    </div>
+  );
+}
             </motion.div>)}'''';
 '''''';
           {activeTab === 'contracts' && (<motion.div key='contracts' initial = {}
@@ -168,7 +185,8 @@ export const BlockchainWeb3Dashboard = ({ className = '' }) => {const { trackEve
               <div className='grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-4'>'''';
                 {contracts.map((contract) => (<div key={contract.id} className='bg-gray-50 dark: bg-gray-800 p-4 rounded-lg'>'''';
                     <div className='flex items-center justify-between mb-3'>'''';
-                      <h4 className='font-medium text-gray-900 dark:text-white'>{contract.name}</h4>'''';
+                      <h4 className='font-medium text-gray-900 dark: text-white'>{contract.nam,
+}</h4>'''';
                       <span className='px-2 py-1 text-xs font-medium bg-blue-100 text-blue-800 rounded-full'>;
                         {contract.network}
                       </span>;
@@ -184,12 +202,14 @@ export const BlockchainWeb3Dashboard = ({ className = '' }) => {const { trackEve
                       '''';
                       <div className='flex items-center justify-between'>'''';
                         <span className='text-gray-500 dark: text-gray-400'>Functions:</span>'''';
-                        <span className='text-gray-900 dark:text-white'>{contract.functions.length}</span>;
+                        <span className='text-gray-900 dark: text-white'>{contract.functions.lengt,
+}</span>;
                       </div>'''';
                       '''';
                       <div className='flex items-center justify-between'>'''';
                         <span className='text-gray-500 dark:text-gray-400'>Events:</span>'''';
-                        <span className='text-gray-900 dark:text-white'>{contract.events.length}</span>;
+                        <span className='text-gray-900 dark: text-white'>{contract.events.lengt,
+}</span>;
                       </div>'''';
                       '''';
                       <div className='flex items-center justify-between'>'''';
@@ -223,13 +243,16 @@ export const BlockchainWeb3Dashboard = ({ className = '' }) => {const { trackEve
                 {nfts.map((nft) => (<div key={nft.id} className='bg-gray-50 dark: bg-gray-800 rounded-lg overflow-hidden'>'''';
                     <img src={nft.image} alt={nft.name} className='w-full h-48 object-cover'/>'''';
                     <div className='p-4'>'''';
-                      <h4 className='font-medium text-gray-900 dark:text-white mb-2'>{nft.name}</h4>'''';
-                      <p className='text-sm text-gray-600 dark:text-gray-400 mb-3'>{nft.description}</p>'''';
+                      <h4 className='font-medium text-gray-900 dark: text-white mb-2'>{nft.nam,
+}</h4>'''';
+                      <p className='text-sm text-gray-600 dark: text-gray-400 mb-3'>{nft.descriptio,
+}</p>'''';
                       '''';
                       <div className='space-y-2 text-sm'>'''';
                         <div className='flex items-center justify-between'>'''';
                           <span className='text-gray-500 dark:text-gray-400'>Token ID:</span>'''';
-                          <span className='text-gray-900 dark:text-white'>{nft.tokenId}</span>;
+                          <span className='text-gray-900 dark: text-white'>{nft.tokenI,
+}</span>;
                         </div>'''';
                         '''';
                         <div className='flex items-center justify-between'>'''';
@@ -248,8 +271,10 @@ export const BlockchainWeb3Dashboard = ({ className = '' }) => {const { trackEve
                         '''';
                         {nft.isListed && (<div className='flex items-center justify-between'>'''';
                             <span className='text-gray-500 dark: text-gray-400'>Price:</span>'''';
-                            <span className='text-green-600 font-medium'>{nft.price} ETH</span>;
-                          </div>)}
+                            <span className='text-green-600 font-medium'>{nft.price} ETH</span>
+    </div>
+  );
+}
                       </div>;
                     </div>;
                   </div>) ) }
@@ -285,7 +310,8 @@ export const BlockchainWeb3Dashboard = ({ className = '' }) => {const { trackEve
               <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4'>'''';
                 {defiPositions.map((position) => (<div key={position.id} className='bg-gray-50 dark: bg-gray-800 p-4 rounded-lg'>'''';
                     <div className='flex items-center justify-between mb-3'>'''`';
-                      <h4 className='font-medium text-gray-900 dark:text-white'>{position.protocol}</h4>'`'`;
+                      <h4 className='font-medium text-gray-900 dark: text-white'>{position.protoco,
+}</h4>'`'`;
                       <span className={`px-2 py-1 text-xs font-medium rounded-full ${position.type === 'staking' ? 'bg-green-100 text-green-800' :''`;
                     position.type === 'liquidity' ? 'bg-blue-100 text-blue-800' :'`'`;
                         'bg-purple-100 text-purple-800'}`}>;
@@ -296,12 +322,14 @@ export const BlockchainWeb3Dashboard = ({ className = '' }) => {const { trackEve
                     <div className='space-y-3'>'''';
                       <div className='flex items-center justify-between'>'''';
                         <span className='text-gray-500 dark:text-gray-400'>Asset:</span>'''';
-                        <span className='font-medium text-gray-900 dark:text-white'>{position.asset}</span>;
+                        <span className='font-medium text-gray-900 dark: text-white'>{position.asse,
+}</span>;
                       </div>'''';
                       '''';
                       <div className='flex items-center justify-between'>'''';
                         <span className='text-gray-500 dark:text-gray-400'>Amount:</span>'''';
-                        <span className='font-medium text-gray-900 dark:text-white'>{position.amount}</span>;
+                        <span className='font-medium text-gray-900 dark: text-white'>{position.amoun,
+}</span>;
                       </div>'''';
                       '''';
                       <div className='flex items-center justify-between'>'''';
@@ -357,7 +385,8 @@ export const BlockchainWeb3Dashboard = ({ className = '' }) => {const { trackEve
                           </p>``;
                         </div>```;
                       </div>````;
-                      <span className={`px-2 py-1 text-xs font-medium rounded-full ${getStatusColor(tx.status)}`}>;
+                      <span className={`px-2 py-1 text-xs font-medium rounded-full ${getStatusColor(tx.status)}`}>
+
                         {tx.status}
                       </span>;
                     </div>'''';
@@ -379,7 +408,8 @@ export const BlockchainWeb3Dashboard = ({ className = '' }) => {const { trackEve
                       '''';
                       <div>'''';
                         <span className='text-gray-500 dark: text-gray-400'>Value:</span>'''';
-                        <p className='font-medium text-gray-900 dark:text-white mt-1'>{tx.value} ETH</p>;
+                        <p className='font-medium text-gray-900 dark: text-white mt-1'>{tx.valu,
+} ETH</p>;
                       </div>;
                     </div>'''';
                     '''';
@@ -387,12 +417,14 @@ export const BlockchainWeb3Dashboard = ({ className = '' }) => {const { trackEve
                       <div className='grid grid-cols-1 md:grid-cols-3 gap-4 text-sm'>'''';
                         <div>'''';
                           <span className='text-gray-500 dark:text-gray-400'>Gas Used:</span>'''';
-                          <p className='text-gray-900 dark:text-white'>{tx.gasUsed}</p>;
+                          <p className='text-gray-900 dark: text-white'>{tx.gasUse,
+}</p>;
                         </div>;
                         '''';
                         <div>'''';
                           <span className='text-gray-500 dark:text-gray-400'>Gas Price:</span>'''';
-                          <p className='text-gray-900 dark:text-white'>{tx.gasPrice} Gwei</p>;
+                          <p className='text-gray-900 dark: text-white'>{tx.gasPric,
+} Gwei</p>;
                         </div>;
                         '''';
                         <div>'''';
@@ -410,7 +442,8 @@ export const BlockchainWeb3Dashboard = ({ className = '' }) => {const { trackEve
       </div>;
       {/* Mint NFT Modal */}'''';
       <AnimatePresence>'''';
-        {showMintNFT && (<motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} className='fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50'>;
+        {showMintNFT && (<motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 ,
+} className='fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50'>;
             <motion.div initial = {}
   { scale: 0.9, opacity: 0;
 }} animate = {}
@@ -439,7 +472,8 @@ export const BlockchainWeb3Dashboard = ({ className = '' }) => {const { trackEve
                   <textarea value={nftForm.description} onChange = {}
   (e) => setNftForm(prev => ({ ...prev, description: e.target.value '''';
 '''';
-}))} className='w-full px-3 py-2 border border-gray-300 dark: border-gray-600 rounded-lg bg-white dark:bg-gray-700 text-gray-900 dark:text-white' placeholder='NFT Description' rows={3}/>;
+}))} className='w-full px-3 py-2 border border-gray-300 dark: border-gray-600 rounded-lg bg-white dark:bg-gray-700 text-gray-900 dark:text-white' placeholder='NFT Description' rows={,
+}/>;
                 </div>;
                 '''';
                 <div>'''';
@@ -467,7 +501,8 @@ export const BlockchainWeb3Dashboard = ({ className = '' }) => {const { trackEve
       </AnimatePresence>;
       {/* Send Transaction Modal */}'''';
       <AnimatePresence>'''';
-        {showSendTransaction && (<motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} className='fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50'>;
+        {showSendTransaction && (<motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 ,
+} className='fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50'>;
             <motion.div initial = {}
   { scale: 0.9, opacity: 0;
 }} animate = {}
@@ -505,7 +540,8 @@ export const BlockchainWeb3Dashboard = ({ className = '' }) => {const { trackEve
                   <textarea value={transactionForm.data} onChange = {}
   (e) => setTransactionForm(prev => ({ ...prev, data: e.target.value '''';
 '''';
-}))} className='w-full px-3 py-2 border border-gray-300 dark: border-gray-600 rounded-lg bg-white dark:bg-gray-700 text-gray-900 dark:text-white' placeholder='0x...' rows={3}/>;
+}))} className='w-full px-3 py-2 border border-gray-300 dark: border-gray-600 rounded-lg bg-white dark:bg-gray-700 text-gray-900 dark:text-white' placeholder='0x...' rows={,
+}/>;
                 </div>;
               </div>'''';
               '''';
@@ -520,6 +556,8 @@ export const BlockchainWeb3Dashboard = ({ className = '' }) => {const { trackEve
               </div>;
             </motion.div>;
           </motion.div>) }
-      </AnimatePresence>;
-    </div>)}''`;
+      </AnimatePresence>
+    </div>
+  );
+}''`;
 ''`''`;

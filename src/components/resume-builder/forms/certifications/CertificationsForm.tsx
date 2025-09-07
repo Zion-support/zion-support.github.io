@@ -30,14 +30,25 @@ import { format   } from 'date-fns';
 import { CertificationsList   } from './CertificationsList';
 import { CertificationFormFields   } from './CertificationFormFields';
 import { CertificationFormValues, certificationSchema  } from './types';
-interface CertificationsFormProps  {resumeId: string;
+
+interface CertificationsFormProps {
+  resumeId: string;
   certifications: Certification[];
   onComplete: () => void;
   onBack: () => void;
-  }const handleEdit = (cert: Certification) => {setEditingId(cert.id!)form.reset({...cert;
+  
+}
+
+const handleEdit = (cert: Certification) => {setEditingId(cert.id!)form.reset({...cert;
   }
-  const handleEdit = (cert: Certification) => {setEditingId(cert.id!)form.reset({...cert,issue_date: formatDateValue(cert.issue_date),expiration_date: formatDateValue(cert.expiration_date)})}const handleDelete = async (id: string) => {if (confirm('Are you sure you want to delete this certification?')) {await deleteCertification(id)}
-  }
+
+const handleEdit = (cert: Certification) => {setEditingId(cert.id!)form.reset({...cert,issue_date: formatDateValue(cert.issue_date),expiration_date: formatDateValue(cert.expiration_date)},
+}
+;
+  const handleDelete = async (id: string) => {if (confirm('Are you sure you want to delete this certification?')) {await deleteCertification(id)}
+ ,
+}
+ ;
   return (<div className='space-y-6'>;
       <div>;
         <h2 className='text-xl font-semibold mb-2'>;
@@ -61,14 +72,15 @@ interface CertificationsFormProps  {resumeId: string;
         <Form {...form}>;
           <form;
             onSubmit={form.handleSubmit(handleAddOrUpdate)}
-            className='space-y-4';
-          >;
+            className='space-y-4'>
+
             <CertificationFormFields form={form} />;
             {error && <Alert variant="destructive"><AlertDescription>{error}</AlertDescription></Alert>}<div className="flex justify-between pt-2">;
               <Button;
                 type='button';
                 variant='outline';
-                onClick={() => {if (editingId) {setEditingId(null),setEditingId(null),form.reset({name: '',issuing_organization: '',issue_date: '',expiration_date: '',credential_id: '',setEditingId(null),setEditingId(null),form.reset({name: '',issuing_organization: '',issue_date: '',expiration_date: '',credential_id: '',credential_url: ''})name: '';
+                onClick={() => {if (editingId) {setEditingId(null),setEditingId(null),form.reset({name: '',issuing_organization: '',issue_date: '',expiration_date: '',credential_id: '',setEditingId(null),setEditingId(null),form.reset({name: '',issuing_organization: '',issue_date: '',expiration_date: '',credential_id: '',credential_url: ',
+})name: '';
                       issuing_organization: '';
                       issue_date: '';
                       expiration_date: '';
@@ -89,7 +101,8 @@ interface CertificationsFormProps  {resumeId: string;
                 type='button';
                 variant='outline';
                 onClick={() => {if (editingId) {setEditingId(null)form && form.reset({name: '',issuing_organization: '',issue_date: '',expiration_date: '',credential_id: '',credential_url: ''})} else {onBack()}
-                }}
+                ,
+}
               >;
                 {editingId ? 'Cancel' : 'Back'}</Button>;
               <div className="flex gap-2">;
@@ -125,9 +138,15 @@ if ( {) {$2;
 }
         form.reset ({name: '',issuing_organization: '',issue_date: '',expiration_date: '',credential_id: '',credential_url: ''})setEditingId (null)}
     } catch (err: any) {set_error (err.message || 'An error occurred')}
-  }
-  const handle_edit = (cert: Certification) =>: any {setEditingId (cert.id!)form.reset ({...cert}
-  const handle_edit = (cert: Certification) =>: any {setEditingId (cert.id!)form.reset ({issue_date: formatDateValue (cert.issue_date),expiration_date: formatDateValue (cert.expiration_date)})}
+ ,
+}
+
+const handle_edit = (cert: Certification) =>: any {setEditingId (cert.id!)form.reset ({...cer;
+}
+
+const handle_edit = (cert: Certification) =>: any {setEditingId (cert.id!)form.reset ({issue_date: formatDateValue (cert.issue_date),expiration_date: formatDateValue (cert.expiration_date)},
+}
+;
   const handle_delete = async (id: string, ) => {if () {) {$2;
 }
       await delete_certification (id)}
@@ -153,8 +172,8 @@ if ( {) {$2;
         <Form {...form}>;
           <form;
             on_submit={form.handle_submit (handleAddOrUpdate)}
-            className='space - y-4';
-          >;
+            className='space - y-4'>
+
             <CertificationFormFields form={form} />;
             {error && (<Alert variant='destructive'>;
                 <AlertDescription>{error}</AlertDescription>;
@@ -167,7 +186,8 @@ if ( {) {$2;
 if ( {) {$2;
 }
                     setEditingId (null)form.reset ({name: '',issuing_organization: '',issue_date: '',expiration_date: '',credential_id: '',credential_url: ''})} else {on_back ()}
-                }}
+                ,
+}
               >;
                 {editing_id ? 'Cancel' : 'Back'}
               </Button>;
@@ -183,6 +203,8 @@ if ( {) {$2;
             </div>;
           </form>;
         </Form>;
-      </div>;
-    </div>)}> {editing_id ? 'Cancel' : 'Back';
+      </div>
+    </div>
+  );
+}> {editing_id ? 'Cancel' : 'Back';
 }</Button> Next </Button> </div> </div> </form> </Form> </div> </div>)}'"}}}'";

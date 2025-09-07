@@ -1,41 +1,7 @@
 {
 
-<<<<<<< HEAD
-=======
 
 
-      "warnings": []
-    },
-    "accessibilityImprovement": {
-      "success": false,
-
-      "duration": 9692,
-
-      "errors": [],
-      "warnings": []
-    },
-    "performanceOptimization": {
-      "success": true,
-
-      "duration": 7154,
-
-      "errors": [],
-      "warnings": []
-    },
-    "deployment": {
-      "success": true,
-
-      "duration": 2037,
-
-      "errors": [],
-      "warnings": []
-    }
-
-  "timestamp": "2025-09-06T17:31:43.872Z",
-  "duration": "46s",
-  "timestamp": "2025-09-06T20:40:15.907Z",
-  "duration": "124s",
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
   "timestamp": "2025-09-06T17:31:43.872Z",
   "duration": "46s",
   "results": {
@@ -78,14 +44,14 @@
     "totalErrors": 5
   "timestamp": "2025-09-06T10:42:27.266Z",
   "totalDuration": 60241,
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
+
   "successfulTasks": 6,
   "totalTasks": 8,
   "results": {
     "dependencyFix": {
       "success": true,
       "duration": 7037,
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
+
       "duration": 22421,
 ursor/automate-test-improve-and-merge-code-e883
   "timestamp": "2025-09-06T08:34:04.724Z",
@@ -94,30 +60,30 @@ ursor/automate-test-improve-and-merge-code-e883
     "dependencyFix": {
       "success": true,
       "duration": 84429,
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+
       "errors": [],
       "warnings": []
     },
     "codeQuality": {
       "success": false,
       "duration": 27333,
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
+
       "duration": 27631,
 ursor/automate-test-improve-and-merge-code-e883
       "success": true,
       "duration": 56422,
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+
       "errors": [],
       "warnings": []
     },
     "securityAudit": {
       "success": true,
       "duration": 1719,
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
+
       "duration": 1683,
 ursor/automate-test-improve-and-merge-code-e883
       "duration": 1450,
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+
       "duration": 1719,
       "errors": [],
       "warnings": []
@@ -125,11 +91,11 @@ ursor/automate-test-improve-and-merge-code-e883
     "buildOptimization": {
       "success": true,
       "duration": 6250,
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
+
       "duration": 6198,
 ursor/automate-test-improve-and-merge-code-e883
       "duration": 11039,
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+
       "duration": 6250,
       "errors": [],
       "warnings": []
@@ -138,7 +104,7 @@ ursor/automate-test-improve-and-merge-code-e883
       "success": false,
       "duration": 39,
 "errors": [],
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
+
       "success": true,
       "duration": 46,
       "errors": [],
@@ -146,17 +112,17 @@ ursor/automate-test-improve-and-merge-code-e883
       "success": false,
       "duration": 0,
       "errors": [],
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+
       "warnings": []
     },
     "accessibilityImprovement": {
       "success": false,
       "duration": 9508,
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
+
       "duration": 9692,
 ursor/automate-test-improve-and-merge-code-e883
       "duration": 0,
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+
       "duration": 9508,
       "errors": [],
       "warnings": []
@@ -164,12 +130,12 @@ ursor/automate-test-improve-and-merge-code-e883
     "performanceOptimization": {
       "success": true,
       "duration": 6736,
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
+
       "duration": 7154,
 ursor/automate-test-improve-and-merge-code-e883
       "success": false,
       "duration": 0,
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+
       "errors": [],
       "warnings": []
     },
@@ -179,14 +145,14 @@ ursor/automate-test-improve-and-merge-code-e883
       "errors": [],
       "warnings": []
     }
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+
     "totalErrors": 6
 ursor/automate-test-improve-and-merge-code-646c
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+
       "errors": [],
       "warnings": []
     }
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
+
   }
 }
       "success": false,
@@ -201,9 +167,9 @@ ursor/automate-test-improve-and-merge-code-646c
     "failedTasks": 4
   }
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+
   }
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-2a0c
+
   "timestamp": "2025-09-06T22:31:53.549Z",
   "totalDuration": 106111,
   "successfulTasks": 3,

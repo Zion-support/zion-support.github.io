@@ -274,10 +274,9 @@ import { define_config, devices } from '@playwright / test',export default defin
       name: "Desktop Firefox"
 
       use: {
-<<<<<<< HEAD
 
-=======
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-2a0c
+
+
         browserName: 'chromium';
         channel: 'chrome'}
     },
@@ -303,13 +302,12 @@ import { define_config, devices } from '@playwright / test',export default defin
     ['list'],
     ['html', { outputFolder: 'playwright-logs/html-report', open: 'never' }]],
       use: {
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-2a0c
+
+
+
+
+
         browser_name: 'firefox';
         browser_name: 'firefox';
 }

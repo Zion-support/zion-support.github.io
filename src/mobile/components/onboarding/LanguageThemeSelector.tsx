@@ -28,13 +28,20 @@ import { Card, CardContent  } from '@/components/ui/card';
 import React, { useState } from "react",import { Button } from "@/components/ui/button",interface Language  {code: string;
   name: string;
   flag: string;
+
 const languages: Language[] = [;
-  { code: 'en', name: 'English', flag: '🇺🇸' }
-  { code: 'es', name: 'Español', flag: '🇪🇸' }
-  { code: 'fr', name: 'Français', flag: '🇫🇷' }
-  { code: 'de', name: 'Deutsch', flag: '🇩🇪' }
-  { code: 'zh', name: '中文', flag: '🇨🇳' }
+  { code: 'en', name: 'English', flag: '🇺🇸',
+}
+  { code: 'es', name: 'Español', flag: '🇪🇸',
+}
+  { code: 'fr', name: 'Français', flag: '🇫🇷',
+}
+  { code: 'de', name: 'Deutsch', flag: '🇩🇪',
+}
+  { code: 'zh', name: '中文', flag: '🇨🇳',
+}
 ];
+
 export function LanguageThemeSelector() {const { theme, setTheme } = useTheme()const [selectedLanguage, setSelectedLanguage] = useState<string>("en"),return (<div className='space-y-8 px-4'>;
       <div className='space-y-2'>;
         <h2 className='text-xl font-medium'>Select your language</h2>;
@@ -132,11 +139,19 @@ export function LanguageThemeSelector() {const { theme, setTheme } = useTheme()c
   )}import { Button  } from '@/components / ui / button';
 import { use_theme  } from '@/hooks / use_theme';
 import { Card, CardContent  } from '@/components / ui / card';
+
 interface Language  {code: string;
   name: string;
   flag: string;
+
 const languages: Language[] = [;
-  { code: 'en', name: 'English', flag: '🇺🇸' },{ code: 'es', name: 'Español', flag: '🇪🇸' },{ code: 'fr', name: 'Français', flag: '🇫🇷' },{ code: 'de', name: 'Deutsch', flag: '🇩🇪' },{ code: 'zh', name: '中文', flag: '🇨🇳' }];
+  { code: 'en', name: 'English', flag: '🇺🇸',
+},{ code: 'es', name: 'Español', flag: '🇪🇸',
+},{ code: 'fr', name: 'Français', flag: '🇫🇷',
+},{ code: 'de', name: 'Deutsch', flag: '🇩🇪',
+},{ code: 'zh', name: '中文', flag: '🇨🇳',
+}];
+
 export /**;
  * LanguageThemeSelector - Function description;
  */;

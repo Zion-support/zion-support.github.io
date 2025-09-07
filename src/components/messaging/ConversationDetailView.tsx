@@ -1,7 +1,11 @@
 
 ;
                     src = {activeConversation && activeConversation.context_data.image_url}
-                    alt = {activeConversation && activeConversation.context_data.title || "Context"}const { user } = useAuth()const {activeConversation;
+                    alt = {activeConversation && activeConversation.context_data.title || "Context;
+}
+
+const { user } = useAuth(;
+  const {activeConversation;
     activeMessages;
     sendMessage;
 import React, { useState, useEffect, useRef } from 'react';
@@ -14,10 +18,12 @@ import { AspectRatio   } from '@/components/ui/aspect-ratio';
 import { useAuth   } from '@/hooks/useAuth';
 import { MessageBubble   } from './MessageBubble';
 import { DateDivider  } from './DateDivider';
+
 export function ConversationDetailView() {const { user } = useAuth()const {activeConversation;
     activeMessages;
     sendMessage;loadMessages;
-  } = useMessaging()const [messageText, setMessageText] = useState('')const messagesEndRef = null;
+  } = useMessaging()const [messageText, setMessageText] = useState('');
+  const messagesEndRef = null;
   return (<div className="flex-1 flex flex-col h-full">;
       {/* Header */}
       <div className="p-4 border-b border-zion-purple/20 bg-zion-blue-dark/30">;
@@ -50,8 +56,10 @@ export function ConversationDetailView() {const { user } = useAuth()const {activ
                     className="object-cover";
                     loading="lazy";
                   />;
-                </AspectRatio>;
-              </div>            )}
+                </AspectRatio>
+    </div>
+  );
+}
             <div>;
               <div className="font-medium text-white mb-1">;
                 {activeConversation.context_type === 'job' ? 'Regarding Job:' :;
@@ -99,7 +107,16 @@ import { Avatar, AvatarFallback, AvatarImage  } from '@/components/ui/avatar';
 import { AspectRatio  } from '@/components/ui/aspect-ratio';
 import { useAuth  } from '@/hooks/useAuth';
 import { MessageBubble  } from './MessageBubble';
-export function ConversationDetailView() {const { user } = useAuth()const { currentConversation, sendMessage, messages, loading } = useMessaging()const [newMessage, setNewMessage] = useState('')const [isSending, setIsSending] = useState(false)const messagesEndRef  = useRef<HTMLDivElement>(null)const scrollToBottom = () => {messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' })}useEffect(() => {scrollToBottom()}, [messages])const handleSendMessage = async (e: React.FormEvent) => {e.preventDefault()if (!newMessage.trim() || !currentConversation) return;setIsSending(true)try {await sendMessage({content: newMessage,recipientId: currentConversation.participantId,conversationId: currentConversation.id})setNewMessage('')} catch (error) {console.error('Failed to send message:', error)} finally {setIsSending(false)}
+
+export function ConversationDetailView() {const { user } = useAuth()const { currentConversation, sendMessage, messages, loading } = useMessaging()const [newMessage, setNewMessage] = useState('');
+  const [isSending, setIsSending] = useState(false);
+  const messagesEndRef = useRef<HTMLDivElement>(null)const scrollToBottom = () => {messagesEndRef.current?.scrollIntoView({ behavior: 'smooth',
+});
+  useEffect(() => {
+scrollToBottom()}, [messages];
+  const handleSendMessage = async (e: React.FormEvent) => {e.preventDefault()if (!newMessage.trim() || !currentConversation);
+  return;setIsSending(true)try {await sendMessage({content: newMessage,recipientId: currentConversation.participantId,conversationId: currentConversation.id})setNewMessage('',
+} catch (error) {console.error('Failed to send message:', error)} finally {setIsSending(false)}
   }if (!currentConversation) {return (<div className="flex items-center justify-center h-full">;
         <div className="text-center">;
           <MessageSquare className="mx-auto h-12 w-12 text-gray-400" />;
@@ -144,8 +161,10 @@ export function ConversationDetailView() {const { user } = useAuth()const { curr
             </div>;
           </div>;
         ) : (messages.map((message, index) => {const isUserMessage = message.senderId === user?.id;
-            const prevMessage = messages[index - 1];
-            const showDateDivider = !prevMessage ||;
+
+const prevMessage = messages[index - 1];
+
+const showDateDivider = !prevMessage ||;
               format(new Date(message.timestamp), 'yyyy-MM-dd') !==;
               format(new Date(prevMessage.timestamp), 'yyyy-MM-dd')return (<div key={message.id}>;
                 {showDateDivider && (<DateDivider date={message.timestamp} />;
@@ -188,8 +207,8 @@ export function ConversationDetailView() {const { user } = useAuth()const { curr
           />;
           <Button;
             type="submit";
-            className="bg-zion-purple hover: bg-zion-purple-dark text-white";
-          >;Send;
+            className="bg-zion-purple hover: bg-zion-purple-dark text-white">
+Send;
           </Button>;
         </form>;
       </div>;

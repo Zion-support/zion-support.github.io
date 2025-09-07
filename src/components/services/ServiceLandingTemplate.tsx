@@ -9,42 +9,65 @@ import { GradientHeading  } from '@/components/GradientHeading';
 import { Button  } from '@/components/ui/button';
 import { Card, CardContent, CardFooter  } from '@/components/ui/card';
 import Image from 'next/image';
-export interface Benefit  {title: string;
+
+export interface Benefit {
+  title: string;
   description: string;
   icon?: React.ReactNode;
+
 }
+
 export interface Testimonial  {name: string;role?: string;
   text: string;
   avatar?: string;
-}interface ServiceLandingTemplateProps  {title: string;
+}
+
+interface ServiceLandingTemplateProps {
+  title: string;
   subtitle: string;
   heroImage?: string;
   description: string;
   benefits: Benefit[];
   testimonials: Testimonial[];
   ctaText: string;
+
 export interface Benefit  {title: string,description: string,icon?: React.ReactNode;
+
 export interface Benefit  {title: string;
   description: string;
   icon?: React.ReactNode;
+
 }
+
 export interface Testimonial  {name: string;
   role?: string;
   text: string;
   avatar?: string;}
+
 interface ServiceLandingTemplateProps  {title: string;
   subtitle: string;
   description: string;
   benefits: Benefit[];
-  features?: string[];stats?: Array<{ label: string; value: string }>;
+  features?: string[];stats?: Array<{ label: string; value: string,
+}>;
   ctaText: string;
   ctaLink: string;
-import React from "react",import { GradientHeading } from "@/components/GradientHeading",import { Button } from "@/components/ui/button",import { Card, CardContent, CardFooter } from "@/components/ui/card",import Image from "next/image",export interface Benefit  {title: string,description: string,icon?: React.ReactNode;
+import React from "react",import { GradientHeading } from "@/components/GradientHeading",import { Button } from "@/components/ui/button",import { Card, CardContent, CardFooter } from "@/components/ui/card",import Image from "next/image",export interface Benefit {
+  title: string,description: string,icon?: React.ReactNode;
+
 }
-export const ServiceLandingTemplate: React.FC < ServiceLandingTemplateProps> = ({export interface Benefit  {title: string;
+
+export const ServiceLandingTemplate: React.FC < ServiceLandingTemplateProps> = ({export interface Benefit {
+  title: string;
   description: string;
   icon?: React.ReactNode;
-}export const ServiceLandingTemplate: React.FC<ServiceLandingTemplateProps> = ({title,subtitle,heroImage,heroImage,description,benefits,export const ServiceLandingTemplate: React.FC<ServiceLandingTemplateProps> = ({title,subtitle,description,benefits,features = [],stats = [],ctaText,ctaLink}) => {return (</p>;
+
+}
+
+export const ServiceLandingTemplate: React.FC<ServiceLandingTemplateProps> = ({ title,subtitle,heroImage,heroImage,description,benefits,export const ServiceLandingTemplate: React.FC<ServiceLandingTemplateProps> = ({title,subtitle,description,benefits,features = [],stats = [],ctaText,ctaLink   }) => {
+
+;
+  return (</p>;
   testimonials,ctaText,return (<div className="bg-background text-white">;
       <section className="bg-zion-blue py-16 px-4 text-center">;
         <div className="container mx-auto">;
@@ -139,8 +162,8 @@ export const ServiceLandingTemplate: React.FC < ServiceLandingTemplateProps> = (
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>;
             {benefits.map((benefit, idx) => (<div;
                 key={idx}
-                className='bg-zion-blue-dark p-6 rounded-lg border border-zion-purple/20 text-center';
-              >;
+                className='bg-zion-blue-dark p-6 rounded-lg border border-zion-purple/20 text-center'>
+
                 {benefit.icon && (<div className='mb-4 flex justify-center text-zion-cyan'>;
                     {benefit.icon}
                   </div>;
@@ -160,8 +183,8 @@ export const ServiceLandingTemplate: React.FC < ServiceLandingTemplateProps> = (
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>;
             {testimonials.map((t, idx) => (<Card;
                 key={idx}
-                className='bg-zion-blue-dark border-zion-purple/30';
-              >;
+                className='bg-zion-blue-dark border-zion-purple/30'>
+
                 <CardContent className='pt-6'>;
                   <p className='text-gray-200 mb-6'>"{t.text}"</p>;
                 </CardContent>;
@@ -284,13 +307,14 @@ className='rounded-full mr-4';
             href={ctaLink}
             className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors inline-block">;
             className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors inline-block">;
-            className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors inline-block";
-          >;
+            className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors inline-block">
+
             className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors inline-block">;
             className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors inline-block">;
-            className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors inline-block";
-          >;
-            {ctaText}</a>;
+            className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover: bg-gray-100 transition-colors inline-block">
+
+            {ctaTex,
+}</a>;
         </div>;
       </section>;
     </div>;
@@ -302,8 +326,8 @@ className='rounded-full mr-4';
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">;
             {benefits.map((benefit, idx) => (<div;
                 key={idx}
-                className="bg-zion-blue-dark p-6 rounded-lg border border-zion-purple/20 text-center";
-              >;
+                className="bg-zion-blue-dark p-6 rounded-lg border border-zion-purple/20 text-center">
+
                 {benefit.icon && (<div className="mb-4 flex justify-center text-zion-cyan">;
                     {benefit.icon}
                   </div>;
@@ -327,8 +351,8 @@ className='rounded-full mr-4';
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">;
             {testimonials.map((t, idx) => (<Card;
                 key={idx}
-                className="bg-zion-blue-dark border-zion-purple/30";
-              >;
+                className="bg-zion-blue-dark border-zion-purple/30">
+
                 <CardContent className="pt-6">;
                   <p className="text-gray-200 mb-6">"{t.text}"</p>;
                 </CardContent>;
@@ -361,8 +385,8 @@ className='rounded-full mr-4';
         <Button;
           size="lg";
           className="bg-gradient-to-r from-zion-purple to-zion-purple-dark text-white";
-          asChild;
-        >;
+          asChild>
+
           <a href={ctaLink}>{ctaText}</a>;
           <a href={ctaLink}>{ctaText}</a>;
           <a href={ctaLink}>{ctaText}</Link>;
@@ -392,19 +416,22 @@ className='rounded-full mr-4';
           </p>;
           <a;
             href={cta_link}
-            className="bg - white text - blue - 600 px - 8 py - 3 rounded - lg font - semibold hover:bg - gray - 100 transition - colors inline - block";
-          >;
-            {cta_text}
+            className="bg - white text - blue - 600 px - 8 py - 3 rounded - lg font - semibold hover: bg - gray - 100 transition - colors inline - block">
+
+            {cta_tex,
+}
           </a>;
         </div>;
-      </section>;
-    </div>)}}}
+      </section>
+    </div>
+  );
+}}}
 },<section className='py-12 bg-zion-blue-dark text-center'>;
         <Button;
           size='lg';
           className='bg-gradient-to-r from-zion-purple to-zion-purple-dark text-white';
-          asChild;
-        >;
+          asChild>
+
           <a href={ctaLink}>{ctaText}</a>;
         </Button>;
       </section>;

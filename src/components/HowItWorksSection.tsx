@@ -1,7 +1,9 @@
 import React from 'react';
 import { FileText, Search, Handshake, Check  } from 'lucide-react';
-const HowItWorksSection: React.FC = () => {const steps = [;
-    {number: '01',title: 'Consultation',description: 'We start with a detailed consultation to understand your business needs and challenges.',icon: <FileText className="w-8 h-8" />;
+
+const HowItWorksSection: React.FC = () => ;
+  const steps = [
+  {number: '01',title: 'Consultation',description: 'We start with a detailed consultation to understand your business needs and challenges.',icon: <FileText className="w-8 h-8" />;
     },{number: '02',title: 'Strategy & Planning',description: 'Our experts develop a customized strategy and implementation plan tailored to your goals.',icon: <Search className="w-8 h-8" />;
     },{number: '03',title: 'Implementation',description: 'We implement the solution with minimal disruption to your existing operations.',icon: <Handshake className="w-8 h-8" />;
     },{number: '04',title: 'Support & Optimization',description: 'Ongoing support and continuous optimization to ensure maximum value and performance.',icon: <Check className="w-8 h-8" />;
@@ -47,4 +49,6 @@ const HowItWorksSection: React.FC = () => {const steps = [;
         </div>;
       </div>;
     </section>;
-  )}export default HowItWorksSection;
+  )}
+
+export default HowItWorksSection;

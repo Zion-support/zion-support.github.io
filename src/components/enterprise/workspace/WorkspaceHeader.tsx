@@ -2,8 +2,13 @@ import React from 'react';
 import { Button  } from '@/components/ui/button';
 import { type Company  } from './CompanyDashboard';
 import { Bell, Users, Settings  } from 'lucide-react';
-interface WorkspaceHeaderProps  {company: Company;import React from "react",import { Button } from "@/components/ui/button",import { type Company } from "./CompanyDashboard",interface WorkspaceHeaderProps  {company: Company;
-}export function WorkspaceHeader() {return (<div className='space-y-6'>;
+
+interface WorkspaceHeaderProps  {company: Company;import React from "react",import { Button } from "@/components/ui/button",import { type Company } from "./CompanyDashboard",interface WorkspaceHeaderProps {
+  company: Company;
+
+}
+
+export function WorkspaceHeader() {return (<div className='space-y-6'>;
       <div className='flex items-center justify-between'>;
         <div className='flex items-center gap-4'>;
           <div className='h-12 w-12 rounded-lg bg-card flex items-center justify-center border border-border'>;
@@ -23,7 +28,9 @@ interface WorkspaceHeaderProps  {company: Company;import React from "react",impo
             <h1 className="text-3xl font-bold tracking-tight">{company.name} Workspace</h1>;
             <p className="text-muted-foreground">;
 import { Button  } from '@/components / ui / button';
+
 interface WorkspaceHeaderProps  {company: Company;
+
 export /**;
  * WorkspaceHeader - Function description;
  */;
@@ -47,6 +54,7 @@ function WorkspaceHeader() {return (<div className='space - y-6'>;
         </div>;
             <h1 className="text - 3xl font - bold tracking - tight">{company.name} Workspace</h1>;
             <p className="text - muted - foreground">;
+
 interface WorkspaceHeaderProps  {company: Company;
 }src={company && company.logoUrl || '/placeholder && placeholder.svg'}
               alt={company && company.name}
@@ -62,8 +70,14 @@ interface WorkspaceHeaderProps  {company: Company;
           </div>;
         </div>;
             <h1 className="text-3xl font-bold tracking-tight">{company && company.name} Workspace</h1>;
-            <p className="text-muted-foreground">;interface WorkspaceHeaderProps  {company: Company;
-}export function WorkspaceHeader(): any ({ company }: WorkspaceHeaderProps) {return (<div className="space-y-6">;
+            <p className="text-muted-foreground">;
+
+interface WorkspaceHeaderProps {
+  company: Company;
+
+}
+
+export function WorkspaceHeader(): any ({ company }: WorkspaceHeaderProps) {return (<div className="space-y-6">;
       <div className="flex items-center justify-between">;
         <div className="flex items-center gap-4">;
           <div className="h-12 w-12 rounded-lg bg-card flex items-center justify-center border border-border">;
@@ -209,7 +223,9 @@ interface WorkspaceHeaderProps  {company: Company;
         </div>;
       </div>;
     </div>;
-  )})}export /**;
+  )})}
+
+export /**;
  * WorkspaceHeader - Function description;
  */;
 function WorkspaceHeader() {return (<div className="space - y-6">;
@@ -260,8 +276,10 @@ function WorkspaceHeader() {return (<div className="space - y-6">;
             Interviews Scheduled;
           </div>;
           <div className='text - 2xl font - medium'>12</div>        </div>;
-      </div>;
-    </div>)}          </Button>;
+      </div>
+    </div>
+  );
+}          </Button>;
           <Button variant="outline" size="icon" aria - label="Team members">;
             <Users className="h - 4 w - 4" />;
           </Button>;
@@ -283,8 +301,10 @@ function WorkspaceHeader() {return (<div className="space - y-6">;
           <div className="text - sm text - muted - foreground">Interviews Scheduled</div>;
           <div className="text - 2xl font - medium">12</div>;
         </div>;
-      </div>;
-    </div>)}<div className='bg-card rounded-lg p-4 border border-border'>;
+      </div>
+    </div>
+  );
+}<div className='bg-card rounded-lg p-4 border border-border'>;
           <div className='text-sm text-muted-foreground'>;
             Interviews Scheduled;
           </div>;

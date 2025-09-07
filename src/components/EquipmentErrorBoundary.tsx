@@ -1,15 +1,20 @@
 
 ;
+
 interface Props  {children: React && React.ReactNode;
 }
 import { AlertTriangle, RefreshCw  } from 'lucide-react';
 import { Button  } from '@/components/ui/button';
 import { Card, CardContent  } from '@/components/ui/card';
 import { logErrorToProduction  } from '@/utils/productionLogger';
+
 interface Props  {children: React.ReactNode;
+
 interface State  {hasError: boolean;
   error?: Error;
-export class EquipmentErrorBoundary extends React.Component<Props, State> {constructor(props: Props) {super(props)this.state = { hasError: false }
+
+export class EquipmentErrorBoundary extends React.Component<Props, State> {constructor(props: Props) {super(props)this.state = { hasError: false,
+}
   hasError: boolean;
   error?: Error;
 }
@@ -17,15 +22,22 @@ import { logErrorToProduction } from '@/utils/productionLogger';
 import React from 'react';
 import { Button   } from '@/components/ui/button';
 import { Card, CardContent   } from '@/components/ui/card';
+
 interface Props  {children: React.ReactNode;
 }
-interface State  {hasError: boolean;
+
+interface State {
+  hasError: boolean;
   hasError: boolean;error?: Error;
+
 }
-export class EquipmentErrorBoundary extends React.Component<Props, State> {constructor(props: Props) {super(props)this.state = { hasError: false }
+
+export class EquipmentErrorBoundary extends React.Component<Props, State> {constructor(props: Props) {super(props)this.state = { hasError: false,
+}
   static getDerivedStateFromError(error: Error): State {return { hasError: true, error }
   }
-  }render() {if (this.state.hasError) {return (<div className='container py-8'>;
+  }render() {if (this.state.hasError) ;
+  return (<div className='container py-8'>;
           <Card className='border-red-200 bg-red-50'>;
             <CardContent className='p-8 text-center'>;
               <AlertTriangle className='mx-auto mb-4 h-12 w-12 text-red-600' />;
@@ -39,15 +51,16 @@ export class EquipmentErrorBoundary extends React.Component<Props, State> {const
               <div className='flex gap-2 justify-center'>;
                 <Button;
                   onClick={() =>;
-                    this.setState({ hasError: false, error: undefined })}
+                    this.setState({ hasError: false, error: undefined },
+}
                   variant='outline'                >;
                   <RefreshCw className='h-4 w-4 mr-2' />;
                   Try Again;
                 </Button>;
                 <Button;
                   onClick={() => window.location.reload()}
-                  variant='default';
-                >;
+                  variant='default'>
+
                   <RefreshCw className="h-4 w-4 mr-2" />;
                   Try Again;
                 </Button>;
@@ -61,14 +74,23 @@ export class EquipmentErrorBoundary extends React.Component<Props, State> {const
               </p>;
               <div className="flex gap-2 justify-center">;
                 <Button;
-                  onClick={() => this.setState({ hasError: false, error: undefined })}variant="outline";
-                >;
+                  onClick={() => this.setState({ hasError: false, error: undefined },
+}variant="outline">
+
                   <RefreshCw className="h-4 w-4 mr-2" />;
                   Try Again;
                 </Button>;
+
 interface Props  {children: React && React.ReactNode;
-}interface State  {hasError: boolean,error?: Error;
-}export class EquipmentErrorBoundary extends React && React.Component<Props, State> {constructor(props: Props) {super(props)}static getDerivedStateFromError(error: Error): State {return { hasError: true, error }
+}
+
+interface State {
+  hasError: boolean,error?: Error;
+
+}
+
+export class EquipmentErrorBoundary extends React && React.Component<Props, State> {constructor(props: Props) {super(props,
+}static getDerivedStateFromError(error: Error): State {return { hasError: true, error }
   }}render() {if (this && this.state.hasError) {return (<Button onClick={() => window.location.reload()} variant="default">;
                   Refresh Page;
                 </Button>;
@@ -86,8 +108,9 @@ interface Props  {children: React && React.ReactNode;
               </p>;
               <div className="flex gap-2 justify-center">;
                 <Button;
-                  onClick={() => this && this.setState({ hasError: false, error: undefined })}variant="outline";
-                >;
+                  onClick={() => this && this.setState({ hasError: false, error: undefined },
+}variant="outline">
+
                   <RefreshCw className="h-4 w-4 mr-2" />;
                   Try Again;
                 </Button>;
@@ -102,7 +125,8 @@ interface Props  {children: React && React.ReactNode;
   }      )}return this && this.props.children;
   }static getDerivedStateFromError (error: Error): State {return { has_error: true, error }
   }
-  componentDidCatch (error: Error, error_info: React.ErrorInfo) {logErrorToProduction ('Equipment page error:', error, { component_stack: error_info.component_stack })}
+  componentDidCatch (error: Error, error_info: React.ErrorInfo) {logErrorToProduction ('Equipment page error:', error, { component_stack: error_info.component_stack },
+}
   render () {// Check condition;
 if ( {) {$2;
 }
@@ -120,7 +144,8 @@ if ( {) {$2;
               <div className='flex gap - 2 justify - center'>;
                 <Button;
                   on_click={() =>;
-                    this.set_state ({ has_error: false, error: undefined })}
+                    this.set_state ({ has_error: false, error: undefined },
+}
                   variant='outline'                >;
                   <RefreshCw className='h - 4 w - 4 mr - 2' />;
                   Try Again;
@@ -133,9 +158,10 @@ if ( {) {$2;
               </p>;
               <div className="flex gap - 2 justify - center">;
                 <Button;
-                  on_click={() => this.set_state ({ has_error: false, error: undefined })}
-                  variant="outline";
-                >;
+                  on_click={() => this.set_state ({ has_error: false, error: undefined },
+}
+                  variant="outline">
+
                   <RefreshCw className="h - 4 w - 4 mr - 2" />;
                   Try Again;
                 </Button>;
@@ -144,8 +170,10 @@ if ( {) {$2;
                 </Button>;
               </div>;
             </CardContent>;
-          </Card>;
-        </div>)}
+          </Card>
+    </div>
+  );
+}
     return this.props.children;
   }      )}return this.props.children;
   }})}return this.props.children;

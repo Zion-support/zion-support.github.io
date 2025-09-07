@@ -2,6 +2,7 @@ import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import { Award,Best,Code,Cross,Globe,Mobile,Regular,Smartphone,Today,User,Users,Zap,} from 'lucide-react';
+
 export default function WebDevelopment() {return (<>;
       <Head>;
         <title>Web Development Services - Zion Tech Group</title>;
@@ -32,14 +33,14 @@ export default function WebDevelopment() {return (<>;
             <div className="flex flex-col sm:flex-row justify-center gap-4 mb-12">;
               <Link;
                 href="/contact";
-                className="bg-green-600 hover:bg-green-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors cursor-pointer inline-block text-lg";
-              >;
+                className="bg-green-600 hover:bg-green-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors cursor-pointer inline-block text-lg">
+
                 Get Started Today;
               </Link>;
               <Link;
                 href="/services";
-                className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-green-900 px-8 py-4 rounded-lg font-semibold transition-colors cursor-pointer inline-block text-lg";
-              >;
+                className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-green-900 px-8 py-4 rounded-lg font-semibold transition-colors cursor-pointer inline-block text-lg">
+
                 View All Services;
               </Link>;
             </div>;
@@ -243,14 +244,14 @@ export default function WebDevelopment() {return (<>;
             <div className="flex flex-col sm:flex-row justify-center gap-4">;
               <Link;
                 href="/contact";
-                className="bg-white text-green-600 hover:bg-gray-100 px-8 py-4 rounded-lg font-semibold transition-colors cursor-pointer inline-block text-lg";
-              >;
+                className="bg-white text-green-600 hover:bg-gray-100 px-8 py-4 rounded-lg font-semibold transition-colors cursor-pointer inline-block text-lg">
+
                 Start Your Project;
               </Link>;
               <Link;
                 href="/services";
-                className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-green-600 px-8 py-4 rounded-lg font-semibold transition-colors cursor-pointer inline-block text-lg";
-              >;
+                className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-green-600 px-8 py-4 rounded-lg font-semibold transition-colors cursor-pointer inline-block text-lg">
+
                 View All Services;
               </Link>;
             </div>;

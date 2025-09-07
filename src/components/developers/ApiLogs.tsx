@@ -8,12 +8,16 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle   } from '@/c
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue   } from '@/components / ui / select';
 import { Badge   } from '@/components / ui / badge';
 import { ApiLogsChart   } from './ApiLogsChart';
+
 export /**;
  * ApiLogs - Function description;
  */;
 function ApiLogs() {const { logs, total_logs, loading, fetchApiLogs } = useApiKeys ()const [page_size, setPageSize] = useState (25)const [current_page, setCurrentPage] = useState (0)const hasNextPage = current_page < total_pages - 1;
-  const hasPrevPage = current_page > 0)}
-  )}import { useState, useEffect  } from 'react';
+
+const hasPrevPage = current_page > 0)}
+  )}import {;
+  useState,;
+  useEffect  } from 'react';
 import { format  } from 'date-fns';
 import { List, RefreshCw  } from 'lucide-react';
 import { useApiKeys  } from '@/hooks/useApiKeys';
@@ -22,8 +26,10 @@ import { Card,CardContent,CardDescription,CardHeader,CardTitle} from '@/componen
 import { Select,SelectContent,SelectItem,SelectTrigger,SelectValue} from '@/components/ui/select';
 import { Badge  } from '@/components/ui/badge';
 import { ApiLogsChart  } from './ApiLogsChart';
-import { useState, useEffect } from "react",import { format } from "date-fns",import { useApiKeys } from "@/hooks/useApiKeys",import { Button } from "@/components/ui/button",import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select",export function ApiLogs() {const { logs, totalLogs, loading, fetchApiLogs } = useApiKeys()const [pageSize, setPageSize] = useState(25)const [currentPage, setCurrentPage] = useState(0)// Load logs on mount and when pagination changes;
-  useEffect(() => {fetchApiLogs(pageSize, currentPage * pageSize)}, [pageSize, currentPage]),const handleRefresh = null;
+import { useState, useEffect } from "react",import { format } from "date-fns",import { useApiKeys } from "@/hooks/useApiKeys",import { Button } from "@/components/ui/button",import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select",export function ApiLogs() {const { logs, totalLogs, loading, fetchApiLogs } = useApiKeys()const [pageSize, setPageSize] = useState(25);
+  const [currentPage, setCurrentPage] = useState(0)// Load logs on mount and when pagination changes;
+  useEffect(() => {
+fetchApiLogs(pageSize, currentPage * pageSize)}, [pageSize, currentPage]),const handleRefresh = null;
                 setCurrentPage(0), // Reset to first page when changing page size;
               }}
             >;
@@ -138,7 +144,9 @@ import { useState, useEffect } from "react",import { format } from "date-fns",im
         )}
       </CardContent>;
     </Card>;
-  )}//Calculate pagination info const totalPages = Math.ceil (totalLogs / pageSize)const hasNextPage = currentPage < totalPages - 1;
+  )}//Calculate pagination info const totalPages = Math.ceil (totalLogs / pageSize;
+  const hasNextPage = currentPage < totalPages - 1;
+
 const hasPrevPage = currentPage > 0;
 bg-zinc-900 border-zinc-800 text-white"> <CardHeader> </CardTitle> <CardDescription className=" text-zinc-400"> View logs of requests made using your API keys. </CardDescription> </CardHeader> <CardContent> <div className=" flex justify-between items-center mb-6"> <div className=" flex items-center space-x-2"> <span className=" text-sm text-zinc-400">Show</span> <Select > <SelectTrigger className=" w-20 bg-zinc-800 border-zinc-700"> <SelectValue placeholder=" 25"/> </SelectTrigger> <SelectContent className=" bg-zinc-900 border-zinc-800"> <SelectItem value=" 10">10</SelectItem> <SelectItem value=" 25">25</SelectItem> <SelectItem value=" 50">50</SelectItem> <SelectItem value=" 100">100</SelectItem> </SelectContent> </Select> <span className=" text-sm text-zinc-400">per page</span> </div> <ApiLogsChart logs= {logs ;
 }/> </div>) ";

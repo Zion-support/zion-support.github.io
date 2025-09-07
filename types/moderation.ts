@@ -9,9 +9,14 @@ export interface ModerationResult  {id: string;
   adminNotes?: string;
   adminId: string;
   reason?: string;
-  createdAt: string;export type ModerationStatus  = 'pending' | 'approved' | 'removed' | 'warned' | 'banned';export interface ModerationAction  {id: string;
+  createdAt: string;
+
+export type ModerationStatus  = 'pending' | 'approved' | 'removed' | 'warned' | 'banned';
+
+export interface ModerationAction  {id: string;
 
 ;
+
 export interface ModerationAction {
   id: string;
   type: "approve" | "remove" | "warn" | "ban";
@@ -24,6 +29,7 @@ export interface ModerationAction {
 
 }
 }
+
 export interface ModerationFlag  {export interface ModerationFlag  {id: string;
   type: "spam" | "inappropriate" | "harassment" | "other";
   content: string;
@@ -35,8 +41,12 @@ export interface ModerationFlag  {export interface ModerationFlag  {id: string;
   updatedAt: string;
   adminNotes?: string;
 }}
+
 export interface ModerationFlag  {}
-export interface ModerationFlag {}export interface ModerationRule  {id: string;
+
+export interface ModerationFlag {}
+
+export interface ModerationRule  {id: string;
   name: string;
   pattern: string;
   action: 'approve' | 'reject' | 'flag';

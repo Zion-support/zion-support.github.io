@@ -4,8 +4,10 @@ import { Brain, CheckCircle, ArrowRight, Zap, Users, Lightbulb, BarChart3  } fro
 import { Card, CardContent, CardHeader, CardTitle } from './ui/card'';''';
 import { Button } from './ui/button'';''';
 import { Badge  } from './ui/badge';
+
 const AdvancedServiceRecommendation = () => {}
-    const [clientProfile, setClientProfile] = useState({}
+;
+  const [clientProfile, setClientProfile] = useState({}
 '';
 '';
 '''';
@@ -14,28 +16,39 @@ const AdvancedServiceRecommendation = () => {}
         budget: '', '''';
         timeline: '','''';
         technologyMaturity: '', primaryGoals[], challenges[];
-    })const [recommendations, setRecommendations] = useState([])'';
-    const [isAnalyzing, setIsAnalyzing] = useState(false)'';
-    const [showResults, setShowResults] = useState(false)';';
-    const industries = ['''';
+    });
+  const [recommendations, setRecommendations] = useState([])'';
+
+const [isAnalyzing, setIsAnalyzing] = useState(false)'';
+
+const [showResults, setShowResults] = useState(false)';';
+
+const industries = ['''';
         'Technology', Healthcare',Financial Services', Manufacturing',Retail', Education',Government', Energy',Transportation', Media'''';
     ]';';
-    const compSizes = ['''';
+
+const compSizes = ['''';
         'Startup (1-50 employees), Small Business (51-200 employees), Medium Business (201-1000 employees), Enterprise (1000+ employees)''';
     ]';';
-    const budgets = ['''';
+
+const budgets = ['''';
         'Under $50K', $50K-$200K',$200K-$500K', $500K-$1M',$1M+''';
     ]';';
-    const technologyMaturityLevels = ['''';
+
+const technologyMaturityLevels = ['''';
         'Early Adopter', Growing',Mature', Advanced',Innovation Leader''';
     ]';';
-    const primaryGoals = ['''';
+
+const primaryGoals = ['''';
         'Cost Reduction', Revenue Growth',Operational Efficiency', Digital Transformation',Innovation', Competitive Advantage',Customer Experience', Risk Management',Sustainability''';
     ]';';
-    const challenges = ['''';
-        'Legacy Systems', Data Security',Scalability Issues', Talent Shortage',Regulatory Compliance', Integration Complexity',Performance Issues', Cost Management',Technology Debt';
-    ];
-    const mockServices = [];
+
+const challenges = ['''';
+        'Legacy Systems', Data Security',Scalability Issues', Talent Shortage',Regulatory Compliance', Integration Complexity',Performance Issues', Cost Management',Technology Debt'
+];
+
+
+const mockServices = [];
         {}
 '';
 '';
@@ -95,20 +108,23 @@ const AdvancedServiceRecommendation = () => {}
             email: 'kleber@ziontechgroup.com';
         }
     ];
-    const calculateMatchScore = (service, profile) => {}
+
+const calculateMatchScore = (service, profile) => {}
         let score = 0;
         // Industry match;
         if(service.targetAudience?.some((audience) => audience.toLowerCase().includes(profile.industry.toLowerCase()))) {}
             score += 25}'';
         // Budget compatibility'';
-        const servicePrice = parseInt(service.price.replace(/[^0-9]/g,))'';
+
+const servicePrice = parseInt(service.price.replace(/[^0-9]/g,))'';
         if (profile.budget === 'Under $50K' && servicePrice < 50)score += 20'';
         else if (profile.budget === '$50K-$200K' && servicePrice >= 50 && servicePrice < 200)score += 20'';
         else if (profile.budget === '$200K-$500K' && servicePrice >= 200 && servicePrice < 500)score += 20'';
         else if (profile.budget === '$500K-$1M' && servicePrice >= 500 && servicePrice < 1000)score += 20'';
         else if (profile.budget === '$1M+' && servicePrice >= 1000)score += 20'';
         // Timeline compatibility'';
-        const serviceDuration = parseInt(service.duration.split('-')[0])'';
+
+const serviceDuration = parseInt(service.duration.split('-')[0])'';
         if (profile.timeline === 'Immediate (0-3 months)' && serviceDuration <= 3)score += 15'';
         else if (profile.timeline === 'Short-term (3-6 months)' && serviceDuration <= 6)score += 15'';
         else if (profile.timeline === 'Medium-term (6-12 months)' && serviceDuration <= 12)score += 15'';
@@ -124,14 +140,18 @@ const AdvancedServiceRecommendation = () => {}
         else if (profile.technologyMaturity === 'Early Adopter' && ['basic-services', consulting'].includes(service.category))';
             score += 20;
         // Goal alignment;
-        const goalMatches = profile.primaryGoals.filter(goal => service.benefits.some ( (benefit) => benefit.toLowerCase () .includes(goal.toLowerCase () ) ) ) .length;
+
+const goalMatches = profile.primaryGoals.filter(goal => service.benefits.some ( (benefit) => benefit.toLowerCase () .includes(goal.toLowerCase () ) ) ) .length;
         score += (goalMatches / profile.primaryGoals.length) * 20;
         return Math.min(100, score) }
-    const generateRecommendations = () => {}
+
+const generateRecommendations = () => {}
         setIsAnalyzing(true)// Simulate analysis time;
         setTimeout(() => {}
-            const recs = mockServices.map(service => {}
-                const matchScore = calculateMatchScore(service, clientProfile)let priority;
+
+const recs = mockServices.map(service => {}
+;
+  const matchScore = calculateMatchScore(service, clientProfile)let priority;
                 if (matchScore >= 80)'';
                     priority = 'High';
                 else if (matchScore >= 60)'';
@@ -145,20 +165,24 @@ const AdvancedServiceRecommendation = () => {}
                     complexity = 'Moderate';
                 else'';
                     complexity = 'Simple';
-                const reasoning = [];
+
+const reasoning = [];
                     `High match with ${clientProfile.industry} industry requirements`, ``;
                     `Budget alignment with ${clientProfile.budget} range`,``;
                     `Timeline compatibility with ${clientProfile.timeline} expectations`, ``;
                     `Technology maturity level appropriate for ${clientProfile.technologyMaturity}`;
                 ]'';
-                const expectedROI = matchScore >= 80 ? 'High ROI expected' : '';
+
+const expectedROI = matchScore >= 80 ? 'High ROI expected' : '';
                     matchScore >= 60 ? 'Moderate ROI expected' : 'ROI to be evaluated';
-                const timeToValue = complexity === 'Simple' ? '2-4 months' :'';
+
+const timeToValue = complexity === 'Simple' ? '2-4 months' :'';
                     complexity === 'Moderate' ? '4-8 months' : '8-12 months';
                 return {}
                     service, matchScore, reasoning, priority, implementationComplexity: complexity, expectedROI, timeToValue;
                 }}) .sort((a, b) => b.matchScore - a.matchScore)setRecommendations(recs)setIsAnalyzing(false)setShowResults(true) }, 2000) }
-    const getPriorityColor = (priority) => {}
+
+const getPriorityColor = (priority) => {}
         switch (priority) {}
 '';
 '';
@@ -168,8 +192,10 @@ const AdvancedServiceRecommendation = () => {}
             case 'Low': return 'bg-green-100 text-green-800''';
             default: return 'bg-gray-100 text-gray-800'}
     }
-    const getComplexityColor = (complexity) => {}
-        switch (complexity) {}
+
+const getComplexityColor = (complexity) => {}
+        switch (complexity) ,
+}
 '';
 '';
 '''';
@@ -178,8 +204,11 @@ const AdvancedServiceRecommendation = () => {}
             case 'Simple': return 'bg-green-100 text-green-800''';
             default: return 'bg-gray-100 text-gray-800'}
     }
-    const isFormComplete = () => {}
-        return clientProfile.industry && clientProfile.compSize && clientProfile.budget &&;
+
+const isFormComplete = () => ,
+}
+       ;
+  return clientProfile.industry && clientProfile.compSize && clientProfile.budget &&;
             clientProfile.timeline && clientProfile.technologyMaturity &&'''';
             clientProfile.primaryGoals.length > 0 && clientProfile.challenges.length > 0}';''';
     return (<div className='max-w-7xl mx-auto p-6'>;
@@ -202,7 +231,8 @@ const AdvancedServiceRecommendation = () => {}
 }} animate = {}
   { opacity: 1, y: 0 '''';
 '''';
-}} transition={{ delay: 0.1 }} className='bg-white rounded-lg shadow-lg p-6 mb-8'>'''';
+}} transition={{ delay: 0.1 ,
+} className='bg-white rounded-lg shadow-lg p-6 mb-8'>'''';
         <h2 className='text-2xl font-bold text-zion-blue-dark mb-6 flex items-center gap-2'>'''';
           <Brain className='w-6 h-6 text-zion-cyan'/>;
           Tell Us About Your Business;
@@ -276,7 +306,8 @@ const AdvancedServiceRecommendation = () => {}
 }) ) }
                 else {}
 '''';
-                    setClientProfile(prev => ({ ...prev, primaryGoals: prev.primaryGoals.filter(g => g !== goal) }))}'''';
+                    setClientProfile(prev => ({ ...prev, primaryGoals: prev.primaryGoals.filter(g => g !== goal) }),
+}'''';
             }} className='rounded text-zion-cyan'/>'''';
                 <span className='text-sm text-zion-slate-light'>{goal}</span>;
               </label>))}
@@ -294,7 +325,8 @@ const AdvancedServiceRecommendation = () => {}
 }) ) }
                 else {}
 '''';
-                    setClientProfile(prev => ({ ...prev, challenges: prev.challenges.filter(c => c !== challenge) }))}'''';
+                    setClientProfile(prev => ({ ...prev, challenges: prev.challenges.filter(c => c !== challenge) }),
+}'''';
             }} className='rounded text-zion-cyan'/>'''';
                 <span className='text-sm text-zion-slate-light'>{challenge}</span>;
               </label>))}
@@ -302,7 +334,8 @@ const AdvancedServiceRecommendation = () => {}
         </div>'''';
 '''';
         <div className='mt-8 text-center'>'''';
-          <Button className='bg-gradient-to-r from-zion-cyan to-zion-purple hover: from-zion-cyan-dark hover:to-zion-purple-dark text-lg px-8 py-4' onClick={generateRecommendations} disabled={!isFormComplete() || isAnalyzing}>'''';
+          <Button className='bg-gradient-to-r from-zion-cyan to-zion-purple hover: from-zion-cyan-dark hover:to-zion-purple-dark text-lg px-8 py-4' onClick={generateRecommendations} disabled={!isFormComplete() || isAnalyzin,
+}>'''';
             {isAnalyzing ? (<>'''';
                 <div className='animate-spin rounded-full h-5 w-5 border-b-2 border-white mr-2'></div>;
                 Analyzing Your Profile...'''';
@@ -318,7 +351,8 @@ const AdvancedServiceRecommendation = () => {}
   { opacity: 0, y: 20;
 }} animate = {}
   { opacity: 1, y: 0';';
-}} transition={{ delay: 0.2 }}>'''';
+}} transition={{ delay: 0.2 ,
+}>'''';
           <h2 className='text-2xl font-bold text-zion-blue-dark mb-6 text-center'>;
             Your Personalized Service Recommendations;
           </h2>'''';
@@ -328,7 +362,8 @@ const AdvancedServiceRecommendation = () => {}
   { opacity: 0, x: -20;
 }} animate = {}
   { opacity: 1, x: 0';';
-}} transition={{ delay: 0.1 * index }}>'''';
+}} transition={{ delay: 0.1 * index ,
+}>'''';
                 <Card className='hover:shadow-lg transition-shadow'>'''';
                   <CardHeader>'''';
                     <div className='flex items-start justify-between'>'''';
@@ -342,13 +377,16 @@ const AdvancedServiceRecommendation = () => {}
                         '''';
                         <div className='flex flex-wrap gap-2 mb-4'>;
                           <Badge className={getPriorityColor(rec.priority)}>;
-                            Priority: {rec.priority}
+                            Priority: {rec.priorit,
+}
                           </Badge>;
                           <Badge className={getComplexityColor (rec.implementationComplexity) }>;
-                            Complexity: {rec.implementationComplexity}'''';
+                            Complexity: {rec.implementationComplexit,
+}'''';
                           </Badge>'''';
                           <Badge className='bg-zion-cyan/10 text-zion-cyan'>;
-                            Match Score: {rec.matchScore}%;
+                            Match Score: {rec.matchScor,
+}%;
                           </Badge>;
                         </div>;
                       </div>'''';
@@ -402,7 +440,8 @@ const AdvancedServiceRecommendation = () => {}
                         </div>'''';
                         '''';
                         <div className='mt-4'>'''';
-                          <Button className='w-full bg-gradient-to-r from-zion-cyan to-zion-purple hover: from-zion-cyan-dark hover:to-zion-purple-dark' onClick = {}
+                          <Button className='w-full bg-gradient-to-r from-zion-cyan to-zion-purple hover: from-zion-cyan-dark hover:to-zion-purple-dark' onClick = ,
+}
 '';
   () => window.open(rec.service.link, _blank')';
 }>'''';
@@ -422,7 +461,8 @@ const AdvancedServiceRecommendation = () => {}
 }} animate = {}
   { opacity: 1, y: 0 '''';
 '''';
-}} transition={{ delay: 0.4 }} className='mt-12 text-center'>'''';
+}} transition={{ delay: 0.4 ,
+} className='mt-12 text-center'>'''';
             <div className='bg-gradient-to-r from-zion-purple via-zion-blue-light to-zion-cyan rounded-lg p-8 text-white'>'''';
               <h3 className='text-3xl font-bold mb-4'>Ready to Get Started?</h3>'''';
               <p className='text-xl mb-6 max-w-2xl mx-auto'>;
@@ -430,7 +470,8 @@ const AdvancedServiceRecommendation = () => {}
                 for your business needs. Contact us today for a personalized consultation.'''';
               </p>'''';
               <div className='flex flex-col sm:flex-row gap-4 justify-center'>'''';
-                <Button className='bg-white text-zion-purple hover:bg-zion-slate-light' onClick = {}
+                <Button className='bg-white text-zion-purple hover: bg-zion-slate-light' onClick = ,
+}
 '';
   () => window.open('mailto: kleber@ziontechgroup.com?subject=Service Recommendation Consultation', _blank')';
 '''';
@@ -438,7 +479,8 @@ const AdvancedServiceRecommendation = () => {}
                   <Users className='w-5 h-5 mr-2'/>;
                   Get Expert Consultation'''';
                 </Button>'''';
-                <Button variant='outline' className='border-white text-white hover: bg-white hover:text-zion-purple' onClick = {}
+                <Button variant='outline' className='border-white text-white hover: bg-white hover:text-zion-purple' onClick = ,
+}
 '';
   () => window.open('tel: +13024640950', _blank')';
 '''';
@@ -451,5 +493,15 @@ const AdvancedServiceRecommendation = () => {}
           </motion.div>;
         </motion.div>)}
     </div>)}
+
 export default AdvancedServiceRecommendation;
-export { AdvancedServiceRecommendation }export { AdvancedServiceRecommendation }export { AdvancedServiceRecommendation }export { AdvancedServiceRecommendation }export { AdvancedServiceRecommendation }
+
+export { AdvancedServiceRecommendation }
+
+export { AdvancedServiceRecommendation }
+
+export { AdvancedServiceRecommendation }
+
+export { AdvancedServiceRecommendation }
+
+export { AdvancedServiceRecommendation }

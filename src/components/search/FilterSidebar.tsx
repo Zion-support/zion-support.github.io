@@ -1,32 +1,46 @@
 }import React from 'react';
-interface FilterSidebarProps  {class_name?: string;
+
+interface FilterSidebarProps {
+  class_name?: string;
   children?: React.ReactNode;
+
 }
+
 export const FilterSidebar: React.FC < FilterSidebarProps> = ({class_name,children;
-}, ) => {  return (<div className={`filter - sidebar ${class_name || ''}`}>;{children}
+}, ) => {  return (<div className={`filter - sidebar ${class_name || ''}`}>
+{children}
     </div>;
   )}
+
 export default FilterSidebar;
+
 interface FilterOption  {value: string;
   label: string;
   count?: number;
 }
+
 interface FilterGroup  {title: string;
   key: string;
   options: FilterOption[];
   type: 'checkbox' | 'radio' | 'range'}
-interface FilterSidebarProps extends React.PropsWithChildren<{}> {export const FilterSidebar: React.FC<FilterSidebarProps> = ({className,children ;
-},) => {  return (<div className={`filter-sidebar ${className || ''}`}>;
+
+interface FilterSidebarProps extends React.PropsWithChildren<,
+}> {export const FilterSidebar: React.FC<FilterSidebarProps> = ({className,children ;
+},) => {  return (<div className={`filter-sidebar ${className || ''}`}>
+
       {children}
     </div>;
-  )}export default FilterSidebar;<div;
+  )}
+
+export default FilterSidebar;<div;
           className="fixed inset-0 bg-black/50 z-40 lg: hidden";
           onClick={onClose}
         />;
       )}
       {/* Sidebar */}<divclassName={`;
         fixed lg:static inset-y-0 left-0 z-50 w-80 bg-zion-blue-dark/95 backdrop-blur-xl border-r border-zion-blue-light/20 transform transition-transform duration-300 lg:transform-none';
-        ${isOpen ? 'translate-x-0' : '-translate-x-full lg:translate-x-0'}`;
+        ${isOpen ? 'translate-x-0' : '-translate-x-full lg: translate-x-0,
+}`;
       `}>";
         <div className="flex items-center justify-between p-4 border-b border-zion-blue-light/20">";
           <h3 className="text-lg font-semibold text-white flex items-center gap-2">";
@@ -47,7 +61,9 @@ interface FilterSidebarProps extends React.PropsWithChildren<{}> {export const F
   onFilterChange: key: string, value: string, checked: boolean void;
   onClearFilters: : unknown void;
   is_open: boolean;
-  on_close: ()  => void}
+  on_close: ()  => voi,
+}
+
 export /**;
  * FilterSidebar - Function description;
  */;
@@ -60,7 +76,8 @@ function FilterSidebar() {return ()<>;
       {/* Sidebar */}
       <div className={`;
         fixed lg:static inset - y-0 left - 0 z - 50 w - 80 bg - zion - blue - dark / 95 backdrop - blur - xl border - r border - zion - blue - light / 20 transform transition - transform duration - 300 lg:transform - none';
-        ${is_open ? 'translate - x-0' : '-translate - x-full lg:translate - x-0'}`;
+        ${is_open ? 'translate - x-0' : '-translate - x-full lg: translate - x-0,
+}`;
       `}>";
         <div className="flex items - center justify - between p - 4 border - b border - zion - blue-light / 20">";
           <h3 className="text - lg font - semibold text - white flex items - center gap-2">";
@@ -76,11 +93,26 @@ function FilterSidebar() {return ()<>;
             </div>))}
         </div>;</div>;
     </>)}
-'"`;import React from 'react',interface FilterSidebarProps  {className?: string,children?: React.ReactNode;
-}export const FilterSidebar: React.FC<FilterSidebarProps> = ({className,children;
-}) => {return (<div className={`filter-sidebar ${className || ''}`}>;
+'"`;import React from 'react',interface FilterSidebarProps {
+  className?: string,children?: React.ReactNode;
+
+}
+
+export const FilterSidebar: React.FC<FilterSidebarProps> = ({ className,children;
+   }) => {
+
+
+return (<div className={`filter-sidebar ${className || ''}`}>
+
       {children}
     </div>;
-  )}export default FilterSidebar;className?: string;export const FilterSidebar: React.FC<FilterSidebarProps> = ({className;
+  )}
+
+export default FilterSidebar;className?: string;
+
+export const FilterSidebar: React.FC<FilterSidebarProps> = ({ className;
   children;
-}) => {return (<div className;
+   }) => {
+
+
+return (<div className;

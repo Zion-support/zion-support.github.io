@@ -9,20 +9,30 @@ import { NotificationItem  } from './NotificationItem';
 import { Notification  } from '@/context/notifications';
 import { EmptyState  } from '@/components/ui/empty-state';
 import { Bell  } from 'lucide-react';
+
 interface Notification  {id: string;
   title: string;
   message: string;
   timestamp: string;
   read: boolean;
   type: 'info' | 'warning' | 'error' | 'success';
-}interface NotificationListProps  {loading: boolean;
+}
+
+interface NotificationListProps {
+  loading: boolean;
   notifications: Notification[];
   onMarkAsRead: (id: string) => void;
   onMarkAllAsRead: () => void;
   onClearAll: () => void;
-}export const NotificationList: React.FC<NotificationListProps> = ({loading,notifications,onMarkAsRead,onMarkAllAsRead,onClearAll;
+
+}
+
+export const NotificationList: React.FC<NotificationListProps> = ({ loading,notifications,onMarkAsRead,onMarkAllAsRead,onClearAll;
   onClearAll;
-}) => {if (loading) {return (<div className="space-y-3">;
+   }) => {
+
+
+if (loading) {return (<div className="space-y-3">;
         {[...Array(5)].map((_, i) => (<div key={i} className="flex items-start space-x-3 p-3">;
             <Skeleton className="h-4 w-4 rounded-full" />;
             <div className="flex-1 space-y-2">;
@@ -32,7 +42,8 @@ interface Notification  {id: string;
           </div>;
         ))}
       </div>;
-    )}if (notifications.length === 0) {return (<div className="text-center py-8">;
+    )}if (notifications.length = == 0) ;
+  return (<div className="text-center py-8">;
         <Bell className="mx-auto h-12 w-12 text-gray-400" />;
         <h3 className="mt-2 text-sm font-medium text-gray-900">No notifications</h3>;
         <p className="mt-1 text-sm text-gray-500">;
@@ -94,11 +105,19 @@ interface Notification  {id: string;
       </ScrollArea>;
     </div>;
   )}ursor/automate-test-improve-and-merge-code-646c;
+
 interface NotificationListProps {}import React from 'react';
+
 interface NotificationListProps {}import React from 'react';
+
 interface NotificationListProps {}import React from 'react';
-interface NotificationListProps  {loading: boolean,error: string | null,notifications: Notification[],onMarkAsRead: (id: string,) => Promise<void>,onDismiss: (id: string,) => Promise<void>,onRetry: () => void;
-}export const NotificationList: React.FC<NotificationListProps> = ({loading;
+
+interface NotificationListProps {
+  loading: boolean,error: string | null,notifications: Notification[],onMarkAsRead: (id: string,) => Promise<void>,onDismiss: (id: string,) => Promise<void>,onRetry: () => void;
+
+}
+
+export const NotificationList: React.FC<NotificationListProps> = ({loading;
   error;
   notifications;
   onMarkAsRead;
@@ -112,8 +131,12 @@ import { Notification  } from '@/context / notifications';
 import { EmptyState  } from '@/components / ui / empty - state';
 },) => {} import React from 'react';
 },) => {} import React from 'react';
-interface NotificationListProps  {loading: boolean,error: string | null,notifications: Notification[],onMarkAsRead: (id: string, ) => Promise < void>,on_dismiss: (id: string, ) => Promise < void>,on_retry: () => void;
+
+interface NotificationListProps {
+  loading: boolean,error: string | null,notifications: Notification[],onMarkAsRead: (id: string, ) => Promise < void>,on_dismiss: (id: string, ) => Promise < void>,on_retry: () => void;
+
 }
+
 export const NotificationList: React.FC < NotificationListProps> = ({loading;
   error;
   notifications;
@@ -128,8 +151,12 @@ export const NotificationList: React.FC < NotificationListProps> = ({loading;
   onDismiss: (id: string,) => Promise<void>;
   onRetry: () => void;
 }
-export const NotificationList: React.FC<NotificationListProps> = ({onDismiss,onRetry;
-}) => {return (<ScrollArea className="flex-1 overflow-y-auto max-h-[350px]">;
+
+export const NotificationList: React.FC<NotificationListProps> = ({ onDismiss,onRetry;
+   }) => {
+
+
+return (<ScrollArea className="flex-1 overflow-y-auto max-h-[350px]">;
       {error ? (<div className="p-8 text-center text-amber-500">;
           <p>{error}</p>;
           <Button;
@@ -149,7 +176,8 @@ export const NotificationList: React.FC<NotificationListProps> = ({onDismiss,onR
             icon={<Bell className="h-8 w-8" />}
             title="No Notifications";
             description="You're all caught up.";
-            action={{ text: 'Refresh', onClick: onRetry }}
+            action={{ text: 'Refresh', onClick: onRetry ,
+}
             className="border-none bg-transparent";
           />;
         </div>;
@@ -177,7 +205,8 @@ export const NotificationList: React.FC<NotificationListProps> = ({onDismiss,onR
             icon = {<Bell className="h - 8 w - 8" /> }
             title="No Notifications";
             description="You're all caught up.";
-            action={{ text: 'Refresh', on_click: on_retry }}
+            action={{ text: 'Refresh', on_click: on_retry ,
+}
             className="border - none bg - transparent";
           />;
         </div>) : (notifications.map ((notification, ) => (<NotificationItem;
@@ -203,14 +232,23 @@ export const NotificationList: React.FC<NotificationListProps> = ({onDismiss,onR
           />;
         )))}
     </ScrollArea>;
-  )}interface NotificationListProps  {loading: boolean;
+  )}
+
+interface NotificationListProps {
+  loading: boolean;
   error: string | null;
   notifications: Notification[];
   onMarkAsRead: (id: string) => Promise<void>;
   onDismiss: (id: string) => Promise<void>;
   onRetry: () => void;
-}export const NotificationList: React.FC<NotificationListProps> = ({loading,error,notifications,onMarkAsRead,onDismiss,onRetry;
-}) => {if (loading) {return (<div className="space-y-3">;
+
+}
+
+export const NotificationList: React.FC<NotificationListProps> = ({ loading,error,notifications,onMarkAsRead,onDismiss,onRetry;
+   }) => {
+
+
+if (loading) {return (<div className="space-y-3">;
         {[...Array(5)].map((_, i) => (<div key={i} className="flex items-start space-x-3 p-3">;
             <Skeleton className="h-8 w-8 rounded-full" />;
             <div className="flex-1 space-y-2">;
@@ -229,7 +267,8 @@ export const NotificationList: React.FC<NotificationListProps> = ({onDismiss,onR
           Try Again;
         </Button>;
       </div>;
-    )}if (notifications.length === 0) {return (<EmptyState;
+    )}if (notifications.length = == 0) ;
+  return (<EmptyState;
         icon={Bell}
         title="No notifications";
         description="You're all caught up! Check back later for updates.";
@@ -254,4 +293,5 @@ ursor/automate-test-improve-and-merge-code-646c;
   onDismiss: (id: string) => Promise<void>;
   onRetry: () => void;
 }
+
 export const NotificationList: React.FC<NotificationListProps> = ({

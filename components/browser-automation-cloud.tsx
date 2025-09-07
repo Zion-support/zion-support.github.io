@@ -1,27 +1,30 @@
-class ErrorBoundary extends React.Component {constructor(props) {super(props)this.state = { hasError: false }}static getDerivedStateFromError(error) {return { hasError: true }}componentDidCatch(error, errorInfo) {console.error('Error caught by boundary:', error, errorInfo)}render() {if (this.state.hasError) {return <div>Something went wrong.</div>;
+class ErrorBoundary extends React.Component {constructor(props) {super(props)this.state = { hasError: false }}static getDerivedStateFromError(error) {return { hasError: true ,
+}componentDidCatch(error, errorInfo) {console.error('Error caught by boundary:', error, errorInfo)}render() {if (this.state.hasError) ;
+  return <div>Something went wrong.</div>;
     }return this.props.children;
   }
 }import React from 'react';
 import SEO from '../components / SEO';
 import { Check, ExternalLink } from 'lucide-react';
-export default function BrowserAutomationCloudPage() {const features = [;
-    'Parallel Playwright/Puppeteer execution','Queued jobs with retries and rate limits','Artifacts: HAR, traces, screenshots, videos','Rotating proxies and geo targeting','Webhook callbacks and REST API'];const features = [;
-    'Parallel Playwright/Puppeteer execution';
+
+export default function BrowserAutomationCloudPage() {const features = [
+  'Parallel Playwright/Puppeteer execution','Queued jobs with retries and rate limits','Artifacts: HAR, traces, screenshots, videos','Rotating proxies and geo targeting','Webhook callbacks and REST API'];
+
+const features = [
+  'Parallel Playwright/Puppeteer execution';
     'Queued jobs with retries and rate limits';
     'Artifacts: HAR, traces, screenshots, videos';
     'Rotating proxies and geo targeting';
-    'Webhook callbacks and REST API';
-  ];
+    'Webhook callbacks and REST API'
+];
+
   return (<>;
       <SEO;
         title='Browser Automation Cloud';
         description='Parallel Playwright/Puppeteer automation at scale with queues, storage, and proxies.';
 import {Check, ExternalLink} from 'lucide-react';
 
-
-
-
-  const features = [
+const features = [
     'Parallel Playwright/Puppeteer execution'
     'Queued jobs with retries and rate limits'
     'Artifacts: HAR, traces, screenshots, videos'
@@ -77,20 +80,23 @@ import {Check, ExternalLink} from 'lucide-react';
               className='inline-flex items-center gap-2 text-cyan-400 hover:text-cyan-300'>;
               <ExternalLink className='w-4 h-4' /> Puppeteer;className='inline-flex items-center gap-2 text-cyan-400 hover:text-cyan-300'>;
               <ExternalLink className='w-4 h-4' /> Puppeteer;
+
 export default /**;
  * BrowserAutomationCloudPage - Function description;
  */;
-function BrowserAutomationCloudPage() {const features = [;
-    'Parallel Playwright / Puppeteer execution','Queued jobs with retries and rate limits','Artifacts: HAR, traces, screenshots, videos','Rotating proxies and geo targeting','Webhook callbacks and REST API';
+function BrowserAutomationCloudPage() {const features = [
+  'Parallel Playwright / Puppeteer execution','Queued jobs with retries and rate limits','Artifacts: HAR, traces, screenshots, videos','Rotating proxies and geo targeting','Webhook callbacks and REST API';
     'Webhook callbacks and REST API';
-    'Webhook callbacks and REST API';
-  ];return (<>;
+    'Webhook callbacks and REST API'
+];
+return (<>;
+
 export default /**
  * BrowserAutomationCloudPage - Function description
  */
 function BrowserAutomationCloudPage() {
-  const features = [;
-    'Parallel Playwright / Puppeteer execution',
+  const features = [
+  'Parallel Playwright / Puppeteer execution',
     'Queued jobs with retries and rate limits',
     'Artifacts: HAR, traces, screenshots, videos',
     'Rotating proxies and geo targeting',
@@ -115,8 +121,8 @@ function BrowserAutomationCloudPage() {
           <div className='mt - 8 grid sm:grid - cols - 2 gap - 6'>;
             {features.map (function => (<div;
                 key={f}
-                className='flex items - start space - x-3 p - 4 rounded - xl bg - white / 5 border border - white / 10';
-              >;
+                className='flex items - start space - x-3 p - 4 rounded - xl bg - white / 5 border border - white / 10'>
+
                 <Check className='w - 5 h - 5 text - cyan - 400 mt - 1' />;
                 <p className='text - gray - 200'>{f}</p>;
               </div>))}
@@ -124,30 +130,30 @@ function BrowserAutomationCloudPage() {
           <div className='mt - 8 flex flex - wrap items - center gap - 4'>;
             <a;
               href='/contact';
-              className='px - 5 py - 3 rounded - lg bg - white text - black font - semibold hover:bg - gray - 200';
-            >;
+              className='px - 5 py - 3 rounded - lg bg - white text - black font - semibold hover:bg - gray - 200'>
+
               Start from $99 / mo;
             </a>;
             <a;
               href='/market - pricing';
-              className='px - 5 py - 3 rounded - lg border border - white / 20 text - white hover:bg - white / 10';
-            >;
+              className='px - 5 py - 3 rounded - lg border border - white / 20 text - white hover:bg - white / 10'>
+
               Market Pricing;
             </a>;
             <a;
               href='https://playwright.dev/';
               target='_blank';
               rel='noreferrer';
-              className='inline - flex items - center gap - 2 text - cyan - 400 hover:text - cyan - 300';
-            >;
+              className='inline - flex items - center gap - 2 text - cyan - 400 hover:text - cyan - 300'>
+
               <ExternalLink className='w - 4 h - 4' /> Playwright;
             </a>;
             <a;
               href='https://pptr.dev/';
               target='_blank';
               rel='noreferrer';
-              className='inline - flex items - center gap - 2 text - cyan - 400 hover:text - cyan - 300';
-            >;
+              className='inline - flex items - center gap - 2 text - cyan - 400 hover:text - cyan - 300'>
+
               <ExternalLink className='w - 4 h - 4' /> Puppeteer;
             </a>;
           </div>;
@@ -182,19 +188,26 @@ function BrowserAutomationCloudPage() {
     </section>;
   </main>;
   </>)}</>)}
-  </>)}const features = [;
-		'Parallel Playwright/Puppeteer executionQueued jobs with retries and rate limitsArtifacts: HAR, traces, screenshots, videosRotating proxies and geo targetingWebhook callbacks and REST API';
-	];
+  </>)}
+
+const features = [
+  'Parallel Playwright/Puppeteer executionQueued jobs with retries and rate limitsArtifacts: HAR, traces, screenshots, videosRotating proxies and geo targetingWebhook callbacks and REST API'
+];
+
 import React from 'react',import SEO from '../components/SEO';
 import { Check, ExternalLink  } from 'lucide-react';
-export default function BrowserAutomationCloudPage() {export default function BrowserAutomationCloudPage() {export default function BrowserAutomationCloudPage() {const features = [;
-    'Parallel Playwright/Puppeteer execution','Queued jobs with retries and rate limits','Artifacts: HAR, traces, screenshots, videos','Rotating proxies and geo targeting','Webhook callbacks and REST API'];const features = [;
-    'Parallel Playwright/Puppeteer execution';
+
+export default function BrowserAutomationCloudPage() {export default function BrowserAutomationCloudPage() {export default function BrowserAutomationCloudPage() {const features = [
+  'Parallel Playwright/Puppeteer execution','Queued jobs with retries and rate limits','Artifacts: HAR, traces, screenshots, videos','Rotating proxies and geo targeting','Webhook callbacks and REST API'];
+
+const features = [
+  'Parallel Playwright/Puppeteer execution';
     'Queued jobs with retries and rate limits';
     'Artifacts: HAR, traces, screenshots, videos';
     'Rotating proxies and geo targeting';
     'Webhook callbacks and REST API';
-	const features = null;
+
+const features = null;
 	return (];
   return (<>;
       <SEO;
@@ -214,7 +227,8 @@ export default function BrowserAutomationCloudPage() {export default function Br
             {features.map(f => (<div;
   </>)
 }
-	const features = [
+
+const features = [
 		'Parallel Playwright/Puppeteer executionQueued jobs with retries and rate limitsArtifacts: HAR, traces, screenshots, videosRotating proxies and geo targetingWebhook callbacks and REST API'
 	];
 import React from 'react',
@@ -229,10 +243,11 @@ export default function BrowserAutomationCloudPage() {
     'Queued jobs with retries and rate limits',
     'Artifacts: HAR, traces, screenshots, videos',
     'Rotating proxies and geo targeting',
-    'Webhook callbacks and REST API',;
-  ];
+    'Webhook callbacks and REST API',
+];
 
-  const features = [
+
+const features = [
     'Parallel Playwright/Puppeteer execution'
     'Queued jobs with retries and rate limits'
     'Artifacts: HAR, traces, screenshots, videos'
@@ -254,12 +269,13 @@ export default function BrowserAutomationCloudPage() {
             Scale Playwright/Puppeteer tasks for testing, scraping, and robotic
             process automation with enterprise-grade reliability.
           </p>
-          <div className='mt-8 grid sm:grid-cols-2 gap-6'>
+          <div className='mt-8 grid sm: grid-cols-2 gap-6'>
             {features.map(f => (
               <div
-                key={f}
-                className='flex items-start space-x-3 p-4 rounded-xl bg-white/5 border border-white/10';
-              >;
+                key={,
+}
+                className='flex items-start space-x-3 p-4 rounded-xl bg-white/5 border border-white/10'>
+
                 <Check className='w-5 h-5 text-cyan-400 mt-1' />;
                 <p className='text-gray-200'>{f}</p>;
               </div>;
@@ -268,30 +284,30 @@ export default function BrowserAutomationCloudPage() {
           <div className='mt-8 flex flex-wrap items-center gap-4'>;
             <a;
               href='/contact';
-              className='px-5 py-3 rounded-lg bg-white text-black font-semibold hover:bg-gray-200';
-            >;
+              className='px-5 py-3 rounded-lg bg-white text-black font-semibold hover:bg-gray-200'>
+
               Start from $99/mo;
             </a>;
             <a;
               href='/market-pricing';
-              className='px-5 py-3 rounded-lg border border-white/20 text-white hover:bg-white/10';
-            >;
+              className='px-5 py-3 rounded-lg border border-white/20 text-white hover:bg-white/10'>
+
               Market Pricing;
             </a>;
             <a;
               href='https://playwright.dev/';
               target='_blank';
               rel='noreferrer';
-              className='inline-flex items-center gap-2 text-cyan-400 hover:text-cyan-300';
-            >;
+              className='inline-flex items-center gap-2 text-cyan-400 hover:text-cyan-300'>
+
               <ExternalLink className='w-4 h-4' /> Playwright;
             </a>;
             <a;
               href='https://pptr.dev/';
               target='_blank';
               rel='noreferrer';
-              className='inline-flex items-center gap-2 text-cyan-400 hover:text-cyan-300';
-            >;
+              className='inline-flex items-center gap-2 text-cyan-400 hover:text-cyan-300'>
+
               <ExternalLink className='w-4 h-4' /> Puppeteer;
             </a>;
           </div>;
@@ -370,7 +386,7 @@ export default function BrowserAutomationCloudPage() {
 				<section className="max-w-5xl mx-auto">
 					<h1 className="text-4xl font-extrabold tracking-tight">Browser Automation Cloud</h1>
 					<p className="mt-4 text-lg text-gray-300">Scale Playwright/Puppeteer tasks for testing, scraping, and robotic process automation with enterprise-grade reliability.</p>
-					<div className="mt-8 grid sm:grid-cols-2 gap-6">
+					<div className="mt-8 grid sm: grid-cols-2 gap-6">
 						{features.map((f) => (
 							<div key={f} className="flex items-start space-x-3 p-4 rounded-xl bg-white/5 border border-white/10">
 								<Check className="w-5 h-5 text-cyan-400 mt-1" />
@@ -399,5 +415,5 @@ export default function BrowserAutomationCloudPage() {
 
 	)
 }
-	)
+	),
 }

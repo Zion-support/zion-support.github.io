@@ -2,25 +2,89 @@ import React from 'react';
 import { Link  } from 'react-router-dom';
 import { Mail, Phone,MapPin, Twitter,Linkedin, Facebook,Instagram, Youtube,ArrowRight, Shield,Zap, Users,Globe;
  } from 'lucide-react';
-export function Footer() {const currentYear  = new Date().getFullYear()const footerSections = [;
-    {title: 'Services', links: [;
-        { name: 'AI Services', href: '/services/ai' }, { name: 'Cloud Solutions', href: '/services/cloud' }, { name: 'Cybersecurity', href: '/services/cybersecurity' }, { name: 'IT Infrastructure', href: '/services/infrastructure' }, { name: 'Digital Transformation', href: '/services/transformation' }, { name: 'Consulting', href: '/services/consulting' }
+
+export function Footer() {const currentYear = new Date().getFullYear(;
+  const footerSections = [
+  {title: 'Services', links: [;
+          { name: 'AI Services', href: '/services/ai',
+},
+   { name: 'Cloud Solutions', href: '/services/cloud',
+},
+   { name: 'Cybersecurity', href: '/services/cybersecurity',
+},
+   { name: 'IT Infrastructure', href: '/services/infrastructure',
+},
+   { name: 'Digital Transformation', href: '/services/transformation',
+},
+ { name: 'Consulting', href: '/services/consulting',
+}
       ];
     }, {title: 'Solutions',links: [;
-        { name: 'Industry Solutions', href: '/solutions/industry' },{ name: 'Manufacturing', href: '/solutions/manufacturing' },{ name: 'Financial Services', href: '/solutions/financial' },{ name: 'Healthcare', href: '/solutions/healthcare' },{ name: 'Retail', href: '/solutions/retail' },{ name: 'Education', href: '/solutions/education' }
+          { name: 'Industry Solutions', href: '/solutions/industry',
+},
+  { name: 'Manufacturing', href: '/solutions/manufacturing',
+},
+  { name: 'Financial Services', href: '/solutions/financial',
+},
+  { name: 'Healthcare', href: '/solutions/healthcare',
+},
+  { name: 'Retail', href: '/solutions/retail',
+},
+{ name: 'Education', href: '/solutions/education',
+}
       ];
     }, {title: 'Company',links: [;
-        { name: 'About Us', href: '/about' },{ name: 'Team', href: '/about/team' },{ name: 'Careers', href: '/careers' },{ name: 'Partners', href: '/partners' },{ name: 'News', href: '/news' },{ name: 'Events', href: '/events' }
+          { name: 'About Us', href: '/about',
+},
+  { name: 'Team', href: '/about/team',
+},
+  { name: 'Careers', href: '/careers',
+},
+  { name: 'Partners', href: '/partners',
+},
+  { name: 'News', href: '/news',
+},
+{ name: 'Events', href: '/events',
+}
       ];
     }, {title: 'Resources',links: [;
-        { name: 'Case Studies', href: '/case-studies' },{ name: 'Research & Development', href: '/research-development' },{ name: 'Blog', href: '/blog' },{ name: 'White Papers', href: '/white-papers' },{ name: 'Webinars', href: '/webinars' },{ name: 'Documentation', href: '/docs' }
+          { name: 'Case Studies', href: '/case-studies',
+},
+  { name: 'Research & Development', href: '/research-development',
+},
+  { name: 'Blog', href: '/blog',
+},
+  { name: 'White Papers', href: '/white-papers',
+},
+  { name: 'Webinars', href: '/webinars',
+},
+{ name: 'Documentation', href: '/docs',
+}
       ];
     }, {title: 'Support',links: [;
-        { name: 'Help Center', href: '/support' },{ name: 'Training', href: '/training' },{ name: 'Contact', href: '/contact' },{ name: 'Request Quote', href: '/request-quote' },{ name: 'Status', href: '/status' },{ name: 'API Documentation', href: '/api' }
+          { name: 'Help Center', href: '/support',
+},
+  { name: 'Training', href: '/training',
+},
+  { name: 'Contact', href: '/contact',
+},
+  { name: 'Request Quote', href: '/request-quote',
+},
+  { name: 'Status', href: '/status',
+},
+{ name: 'API Documentation', href: '/api',
+}
       ];
     }
-  ];const socialLinks = [;
-    { name: 'Twitter', href: 'https://twitter.com/ziontechgroup', icon: Twitter }, { name: 'LinkedIn', href: 'https://linkedin.com/company/ziontechgroup', icon: Linkedin },{ name: 'Facebook', href: 'https://facebook.com/ziontechgroup', icon: Facebook }, { name: 'Instagram', href: 'https://instagram.com/ziontechgroup', icon: Instagram },{ name: 'YouTube', href: 'https://youtube.com/@ziontechgroup', icon: Youtube }
+  ];
+
+const socialLinks = [
+  { name: 'Twitter', href: 'https://twitter.com/ziontechgroup', icon: Twitter,
+}, { name: 'LinkedIn', href: 'https://linkedin.com/company/ziontechgroup', icon: Linkedin,
+},{ name: 'Facebook', href: 'https://facebook.com/ziontechgroup', icon: Facebook,
+}, { name: 'Instagram', href: 'https://instagram.com/ziontechgroup', icon: Instagram,
+},{ name: 'YouTube', href: 'https://youtube.com/@ziontechgroup', icon: Youtube,
+}
   ];return (<footer className="bg-zion-blue-dark border-t border-zion-purple/20">;
       {/* Main Footer Content */}
       <div className="container mx-auto px-4 py-16">;
@@ -62,8 +126,8 @@ export function Footer() {const currentYear  = new Date().getFullYear()const foo
                 {section.links.map((link) => (<li key={link.name}>;
                     <Link;
                       to={link.href}
-                      className="text-zion-slate-light hover: text-zion-cyan transition-colors text-sm flex items-center group";
-                    >;
+                      className="text-zion-slate-light hover: text-zion-cyan transition-colors text-sm flex items-center group">
+
                       <ArrowRight className="h-3 w-3 mr-2 opacity-0 group-hover:opacity-100 transition-opacity" />;
                       {link.name}
                     </Link>;

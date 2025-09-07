@@ -30,6 +30,7 @@ import { GradientHeading  } from './GradientHeading';
 import { Button  } from './ui/button';
 import { CheckCircle2  } from 'lucide-react';
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow  } from './ui/table';
+
 export function ComparisonSection() {return (<section className="py-20 bg-zion-blue-dark">;
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">;
         <div className="text-center mb-12">;
@@ -49,6 +50,7 @@ export function ComparisonSection() {return (<section className="py-20 bg-zion-b
                   <TableHead className="text-white text-center">Savings</TableHead>;
 import { Button  } from './ui / button';
 import { Table,TableBody,TableCell,TableHead,TableHeader,TableRow} from './ui / table';
+
 export /**;
  * ComparisonSection - Function description;
  */;
@@ -86,18 +88,23 @@ function ComparisonSection() {return (<section className='py - 20 bg - zion - bl
               </TableHeader>;
               <TableBody>;
                 {[;
-                  {service: 'Server Hosting',traditional: '$1, 200 / mo',zion: '$650 / mo',savings: '45%'},TableBody,TableCell,TableHead,TableHeader,TableRow} from './ui/table';
+                  {service: 'Server Hosting',traditional: '$1, 200 / mo',zion: '$650 / mo',savings: '45%,
+},TableBody,TableCell,TableHead,TableHeader,TableRow} from './ui/table';
 import { GradientHeading } from "./GradientHeading",</TableHead>;
                 </TableRow>;
               </TableHeader>;
               <TableBody>;
                 {[;
-{service: 'Server Hosting',traditional: '$1,200/mo',zion: '$650/mo',savings: '45%'},{service: 'IT Equipment';
+{service: 'Server Hosting',traditional: '$1,200/mo',zion: '$650/mo',savings: '45%,
+},{service: 'IT Equipment';
                     traditional: 'Full Purchase';
                     zion: 'Flexible Rental';
                     savings: '60%';
                   }
-                  {service: '24 / 7 Support',traditional: '$2, 500 / mo',zion: '$950 / mo',savings: '62%'},{service: 'Storage Solutions',traditional: '$800 / mo',zion: '$350 / mo',savings: '56%'},{service: 'Marketplace Listings',traditional: '$99 / mo',zion: 'Free',savings: '100%'}].map ((item, index) => (<TableRow key={index} className='border - b border - zion - blue'>;
+                  {service: '24 / 7 Support',traditional: '$2, 500 / mo',zion: '$950 / mo',savings: '62%,
+},{service: 'Storage Solutions',traditional: '$800 / mo',zion: '$350 / mo',savings: '56%,
+},{service: 'Marketplace Listings',traditional: '$99 / mo',zion: 'Free',savings: '100%,
+}].map ((item, index) => (<TableRow key={index} className='border - b border - zion - blue'>;
                     <TableCell className='font - medium text - white'>;{item.service}
                     </TableCell>;
                     <TableCell className='text - center text - zion - slate - light'>;
@@ -136,7 +143,12 @@ import { Button } from "./ui/button",import { Table, TableBody, TableCell, Table
               </TableHeader>;
               <TableBody>;
                 {[;
-                  { service: "Server Hosting", traditional: "$1,200/mo", zion: "$650/mo", savings: "45%" },{ service: "IT Equipment", traditional: "Full Purchase", zion: "Flexible Rental", savings: "60%" },{ service: "24/7 Support", traditional: "$2,500/mo", zion: "$950/mo", savings: "62%" },{ service: "Storage Solutions", traditional: "$800/mo", zion: "$350/mo", savings: "56%" }{ service: "Marketplace Listings", traditional: "$99/mo", zion: "Free", savings: "100%" }].map((item, index) => (<TableRow key={index} className="border-b border-zion-blue">;
+                  { service: "Server Hosting", traditional: "$1,200/mo", zion: "$650/mo", savings: "45%",
+},{ service: "IT Equipment", traditional: "Full Purchase", zion: "Flexible Rental", savings: "60%",
+},{ service: "24/7 Support", traditional: "$2,500/mo", zion: "$950/mo", savings: "62%",
+},{ service: "Storage Solutions", traditional: "$800/mo", zion: "$350/mo", savings: "56%",
+}{ service: "Marketplace Listings", traditional: "$99/mo", zion: "Free", savings: "100%",
+}].map((item, index) => (<TableRow key={index} className="border-b border-zion-blue">;
                     <TableCell className="font-medium text-white">{item.service}</TableCell>;
                     <TableCell className="text-center text-zion-slate-light">{item.traditional}</TableCell>;
                     <TableCell className="text-center text-zion-cyan font-semibold">{item.zion}</TableCell>;
@@ -179,6 +191,7 @@ import { Button } from "./ui/button",import { Table, TableBody, TableCell, Table
           </div>;
         </div>;
       </div>;
+
 export function ComparisonSection() {return (<section className="py-20 bg-zion-blue-dark">;
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">;
         <div className="text-center mb-12">;
@@ -193,6 +206,7 @@ export function ComparisonSection() {return (<section className="py-20 bg-zion-b
               <TableHeader>;
                 <TableRow className="border-b border-zion-purple/20">;</section>;
 import {Table,TableBody,TableCell,TableHead,TableHeader,TableRow} from './ui/table';
+
 export function ComparisonSection() {return (<section className='py-20 bg-zion-blue-dark'>;
       <div className='container mx-auto px-4 sm:px-6 lg:px-8'>;
         <div className='text-center mb-12'>;
@@ -224,7 +238,12 @@ export function ComparisonSection() {return (<section className='py-20 bg-zion-b
                   <TableHead className="text-white text-center">Savings</TableHead>;</TableHeader>;
               <TableBody>;
                 {[;
-                  {service: 'Server Hosting',traditional: '$1,200/mo',zion: '$650/mo',savings: '45%'},{service: 'IT Equipment',traditional: 'Full Purchase',zion: 'Flexible Rental',savings: '60%'},{service: '24/7 Support',traditional: '$2,500/mo',zion: '$950/mo',savings: '62%'},{service: 'Storage Solutions',traditional: '$800/mo',zion: '$350/mo',savings: '56%'},{service: 'Marketplace Listings',traditional: '$99/mo',zion: 'Free',savings: '100%'}].map((item, index) => (<TableRow key={index} className='border-b border-zion-blue'>;
+                  {service: 'Server Hosting',traditional: '$1,200/mo',zion: '$650/mo',savings: '45%,
+},{service: 'IT Equipment',traditional: 'Full Purchase',zion: 'Flexible Rental',savings: '60%,
+},{service: '24/7 Support',traditional: '$2,500/mo',zion: '$950/mo',savings: '62%,
+},{service: 'Storage Solutions',traditional: '$800/mo',zion: '$350/mo',savings: '56%,
+},{service: 'Marketplace Listings',traditional: '$99/mo',zion: 'Free',savings: '100%,
+}].map((item, index) => (<TableRow key={index} className='border-b border-zion-blue'>;
                     <TableCell className='font-medium text-white'>;
                       {item && item.service}
                     </TableCell>;
@@ -237,7 +256,9 @@ export function ComparisonSection() {return (<section className='py-20 bg-zion-b
                     <TableCell className='text-center text-green-400 font-bold'>;
                       {item && item.savings}
                     </TableCell>                  </TableRow>;
-                  { service: "Marketplace Listings", traditional: "$99/mo", zion: "Free", savings: "100%" }].map((item, index) => (                  { service: "Marketplace Listings", traditional: "$99/mo", zion: "Free", savings: "100%" }].map((item, index) => (<TableRow key={index} className="border-b border-zion-blue">;
+                  { service: "Marketplace Listings", traditional: "$99/mo", zion: "Free", savings: "100%",
+}].map((item, index) => (                  { service: "Marketplace Listings", traditional: "$99/mo", zion: "Free", savings: "100%",
+}].map((item, index) => (<TableRow key={index} className="border-b border-zion-blue">;
                     <TableCell className="font-medium text-white">{item && item.service}</TableCell>;
                     <TableCell className="text-center text-zion-slate-light">{item && item.traditional}</TableCell>;
                     <TableCell className="text-center text-zion-cyan font-semibold">{item && item.zion}</TableCell>;
@@ -254,7 +275,9 @@ export function ComparisonSection() {return (<section className='py-20 bg-zion-b
                 </span>;
                 <span className='block text-sm text-zion-slate-light mt-1'>;
                     </TableCell>                  </TableRow>;
-                  { service: "Marketplace Listings", traditional: "$99 / mo", zion: "Free", savings: "100%" }].map ((item, index) => (                  { service: "Marketplace Listings", traditional: "$99 / mo", zion: "Free", savings: "100%" }].map ((item, index) => (<TableRow key={index} className="border - b border - zion - blue">;
+                  { service: "Marketplace Listings", traditional: "$99 / mo", zion: "Free", savings: "100%",
+}].map ((item, index) => (                  { service: "Marketplace Listings", traditional: "$99 / mo", zion: "Free", savings: "100%",
+}].map ((item, index) => (<TableRow key={index} className="border - b border - zion - blue">;
                     <TableCell className="font - medium text - white">{item.service}</TableCell>;
                     <TableCell className="text - center text - zion - slate - light">{item.traditional}</TableCell>;
                     <TableCell className="text - center text - zion - cyan font - semibold">{item.zion}</TableCell>;

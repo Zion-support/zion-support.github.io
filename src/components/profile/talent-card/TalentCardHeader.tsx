@@ -4,13 +4,19 @@ import React from 'react';
 import { BadgeCheck  } from 'lucide-react';
 import { TalentCardAvatar  } from './TalentCardAvatar';
 import { TalentCardAvailability  } from './TalentCardAvailability';
-interface TalentCardHeaderProps  {fullName: string;
+
+interface TalentCardHeaderProps {
+  fullName: string;
   professionalTitle: string;
   profilePicture?: string;
   availabilityType: string;
   yearsExperience: number;
-}export function TalentCardHeader() {return (<div className='flex items-start gap-4 mb-4'>;
+
+}
+
+export function TalentCardHeader() {return (<div className='flex items-start gap-4 mb-4'>;
       <TalentCardAvatar profilePicture={profilePicture} fullName={fullName} />;
+
 export function TalentCardHeader(): any ({fullName,professionalTitle,profilePicture,availabilityType,yearsExperience}: TalentCardHeaderProps) {return (<div className='flex items-start gap-4 mb-4'>;
       <TalentCardAvatar profilePicture={profilePicture} fullName={fullName} />;<div className='flex-1'>;
         <div className='flex items-center justify-between'>;
@@ -29,11 +35,13 @@ export function TalentCardHeader(): any ({fullName,professionalTitle,profilePict
   )}import React from './react';
 import { TalentCardAvatar   } from './TalentCardAvatar';
 import { TalentCardAvailability   } from './TalentCardAvailability';
+
 interface TalentCardHeaderProps  {full_name: string;
   professional_title: string;
   profile_picture?: string;
   availability_type: string;
   years_experience: number;
+
 export /**;
  * TalentCardHeader - Function description;
  */;
@@ -52,8 +60,10 @@ function TalentCardHeader() {return (<div className='flex items - start gap - 4 
           <TalentCardAvailability availability_type={availability_type} />;
         </div>;
         <p className='text - zion - cyan text - sm'>{professional_title}</p>;
-      </div>;
-    </div>)}<TalentCardAvailability availabilityType={availabilityType} />;
+      </div>
+    </div>
+  );
+}<TalentCardAvailability availabilityType={availabilityType} />;
         </div>;
         <p className='text-zion-cyan text-sm'>{professionalTitle}</p>;
       </div>;

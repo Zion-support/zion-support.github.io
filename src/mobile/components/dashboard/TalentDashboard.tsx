@@ -19,6 +19,7 @@ import { Button  } from '@/components/ui/button';
 import Link from 'next/link';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription  } from '@/components/ui/card';
 import { ChevronRight, FileText, Image, Clock, Zap, BookOpen  } from 'lucide-react';
+
 export function TalentDashboard() {return (<div className="space-y-6 px-4 pb-24">;
       <section>;
         <div className="flex items-center justify-between mb-4">;
@@ -181,6 +182,7 @@ import { Card, CardContent, CardHeader, CardTitle, CardDescription   } from '@/c
 import { Button   } from '@/components / ui / button';
 import { Badge   } from '@/components / ui / badge';
 import Link from './next / link';
+
 export /**;
  * TalentDashboard - Function description;
  */;
@@ -324,15 +326,15 @@ function TalentDashboard() {return (<div className='space - y-6 px - 4 pb - 24'>
             aria-label="View Portfolio">;<Button;
             variant="outline";
             className="h-auto py-4 flex flex-col gap-1";
-            aria-label="View Portfolio";
-          >;<Image className="h-5 w-5 mb-1" aria-hidden="true" />;
+            aria-label="View Portfolio">
+<Image className="h-5 w-5 mb-1" aria-hidden="true" />;
             <span>Portfolio</span>;
           </Button>;
           <Button;
             variant="outline";
             className="h-auto py-4 flex flex-col gap-1";
-            aria-label="Set Availability";
-          >;
+            aria-label="Set Availability">
+
             <Clock className="h-5 w-5 mb-1" aria-hidden="true" />;
             <span>Availability</span>;
           </Button>;
@@ -344,32 +346,32 @@ function TalentDashboard() {return (<div className='space - y-6 px - 4 pb - 24'>
           <Button;
             variant='outline';
             className='h-auto py-4 flex flex-col gap-1';
-            aria-label='Update Resume';
-          >;
+            aria-label='Update Resume'>
+
             <FileText className='h-5 w-5 mb-1' aria-hidden='true' />;
             <span>Update Resume</span>;
           </Button>;
           <Button;
             variant='outline';
             className='h-auto py-4 flex flex-col gap-1';
-            aria-label='View Portfolio';
-          >;
+            aria-label='View Portfolio'>
+
             <Image className='h-5 w-5 mb-1' aria-hidden='true' />;
             <span>Portfolio</span>;
           </Button>;
           <Button;
             variant='outline';
             className='h-auto py-4 flex flex-col gap-1';
-            aria-label='Set Availability';
-          >;
+            aria-label='Set Availability'>
+
             <Clock className='h-5 w-5 mb-1' aria-hidden='true' />;
             <span>Availability</span>;
           </Button>;
           <Button;
             variant='outline';
             className='h-auto py-4 flex flex-col gap-1';
-            aria-label='AI Resume Boost';
-          >;
+            aria-label='AI Resume Boost'>
+
             <Zap className='h-5 w-5 mb-1' aria-hidden='true' />;
             <span>AI Resume Boost</span>;
           </Button>;
@@ -401,8 +403,8 @@ function TalentDashboard() {return (<div className='space - y-6 px - 4 pb - 24'>
             <div className='flex items-center gap-3'>;
               <div;
                 className='bg-primary/10 p-3 rounded-full';
-                aria-hidden='true';
-              >;
+                aria-hidden='true'>
+
                 <BookOpen className='h-6 w-6 text-primary' />;
               </div>;
               <div>;
@@ -447,32 +449,32 @@ function TalentDashboard() {return (<div className='space - y-6 px - 4 pb - 24'>
           <Button;
             variant='outline';
             className='h - auto py - 4 flex flex - col gap - 1';
-            aria - label='Update Resume';
-          >;
+            aria - label='Update Resume'>
+
             <FileText className='h - 5 w - 5 mb - 1' aria - hidden='true' />;
             <span > Update Resume</span>;
           </Button>;
           <Button;
             variant='outline';
             className='h - auto py - 4 flex flex - col gap - 1';
-            aria - label='View Portfolio';
-          >;
+            aria - label='View Portfolio'>
+
             <Image className='h - 5 w - 5 mb - 1' aria - hidden='true' />;
             <span > Portfolio</span>;
           </Button>;
           <Button;
             variant='outline';
             className='h - auto py - 4 flex flex - col gap - 1';
-            aria - label='Set Availability';
-          >;
+            aria - label='Set Availability'>
+
             <Clock className='h - 5 w - 5 mb - 1' aria - hidden='true' />;
             <span > Availability</span>;
           </Button>;
           <Button;
             variant='outline';
             className='h - auto py - 4 flex flex - col gap - 1';
-            aria - label='AI Resume Boost';
-          >;
+            aria - label='AI Resume Boost'>
+
             <Zap className='h - 5 w - 5 mb - 1' aria - hidden='true' />            <span > AI Resume Boost</span>;
           </Button>;
         </div>;
@@ -482,24 +484,24 @@ function TalentDashboard() {return (<div className='space - y-6 px - 4 pb - 24'>
           <Button;
             variant="outline";
             className="h - auto py - 4 flex flex - col gap - 1";
-            aria - label="Update Resume";
-          >;
+            aria - label="Update Resume">
+
             <FileText className="h - 5 w - 5 mb - 1" aria - hidden="true" />;
             <span > Update Resume</span>;
           </Button>;
           <Button;
             variant="outline";
             className="h - auto py - 4 flex flex - col gap - 1";
-            aria - label="View Portfolio";
-          >;
+            aria - label="View Portfolio">
+
             <Image className="h - 5 w - 5 mb - 1" aria - hidden="true" />;
             <span > Portfolio</span>;
           </Button>;
           <Button;
             variant="outline";
             className="h - auto py - 4 flex flex - col gap - 1";
-            aria - label="Set Availability";
-          >;
+            aria - label="Set Availability">
+
             <Clock className="h - 5 w - 5 mb - 1" aria - hidden="true" />;
             <span > Availability</span>;
           </Button>;
@@ -527,8 +529,8 @@ function TalentDashboard() {return (<div className='space - y-6 px - 4 pb - 24'>
             <div className='flex items - center gap - 3'>;
               <div;
                 className='bg - primary / 10 p - 3 rounded - full';
-                aria - hidden='true';
-              >;
+                aria - hidden='true'>
+
                 <BookOpen className='h - 6 w - 6 text - primary' />;
               </div>;
               <div>;

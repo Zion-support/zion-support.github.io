@@ -1,9 +1,34 @@
-import { GetServerSideProps } from 'next'; const Sitemap = () => { return null}export const getServerSideProps: GetServerSideProps = async ({ res }) => { const baseUrl = 'https: const staticPages = [ '','/about','/services','/services-catalog','/micro-saas','/ai-services','/it-services','/cloud-devops','/cybersecurity','/quantum-computing','/docs','/pricing','/contact','/faq','/privacy','/terms' ]; const sitemap = `<?xml version="1.0" encoding="UTF-8"?> <urlset xmlns="http: ${staticPages .map((page) => { return ` <url> <loc>${baseUrl}${page}</loc> <lastmod>${new Date().toISOString()}</lastmod> <changefreq>weekly</changefreq> <priority>${page === '' ? '1.0' : '0.8'}</priority> </url> `}) .join('')} </urlset> `; res.setHeader('Content-Type','text/xml')res.write(sitemap)res.end()return { props: {}}}export default Sitemap;
+import { GetServerSideProps } from 'next';
+
+const Sitemap = () => {;
+  return nul;
+}
+
+export const getServerSideProps: GetServerSideProps = async ({ res   ,
+}) => {
+
+
+ const baseUrl = 'https:;
+  const staticPages = [ '','/about','/services','/services-catalog','/micro-saas','/ai-services','/it-services','/cloud-devops','/cybersecurity','/quantum-computing','/docs','/pricing','/contact','/faq','/privacy','/terms' ];
+
+const sitemap = `<?xml version="1.0" encoding="UTF-8"?> <urlset xmlns="http: ${staticPages .map((page) => {;
+  return ` <url> <loc>${baseUrl}${page}</loc> <lastmod>${new Date().toISOString()}</lastmod> <changefreq>weekly</changefreq> <priority>${page === '' ? '1.0' : '0.8'}</priority> </url> `}) .join('')} </urlset> `; res.setHeader('Content-Type','text/xml')res.write(sitemap)res.end()return { props: {},
+}
+
+export default Sitemap;
+
 const Sitemap = () => {
+ ;
   return null};
-export const "getServerSideProps": GetServerSideProps = async ({ res }) => {
+
+export const "getServerSideProps": GetServerSideProps = async ({ res    }) => {
+
+
+
+ ;
   const baseUrl = '"https": //ziontechgroup.com';
-  const staticPages = ['',
+
+const staticPages = ['',
     '/about',
     '/services',
     '/services-catalog',
@@ -20,11 +45,13 @@ export const "getServerSideProps": GetServerSideProps = async ({ res }) => {
     '/privacy',
     '/terms'
   ];
-  const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
+
+const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
     <urlset xmlns=""http": //www.sitemaps.org/schemas/sitemap/0.9">
       ${staticPages
         .map((page) => {
-          return `
+         ;
+  return `
             <url>
               <loc>${baseUrl}${page}</loc>
               <lastmod>${new Date().toISOString()}</lastmod>
@@ -40,14 +67,31 @@ export const "getServerSideProps": GetServerSideProps = async ({ res }) => {
   res.end();
   return {
     "props": {}}};
+
 export default Sitemap;
-import { GetServerSideProps } from 'next'; const Sitemap = () => { return null}; export const getServerSideProps: GetServerSideProps = async ({ res }) => { const baseUrl = 'https: const staticPages = [ '','/about','/services','/services-catalog','/micro-saas','/ai-services','/it-services','/cloud-devops','/cybersecurity','/quantum-computing','/docs','/pricing','/contact','/faq','/privacy','/terms' ]; const sitemap = `<?xml version="1.0" encoding="UTF-8"?> <urlset xmlns="http: ${staticPages .map((page) => { return ` <url> <loc>${baseUrl}${page}</loc> <lastmod>${new Date().toISOString()}</lastmod> <changefreq>weekly</changefreq> <priority>${page === '' ? '1.0' : '0.8'}</priority> </url> `}) .join('')} </urlset> `; res.setHeader('Content-Type','text/xml'); res.write(sitemap); res.end(); return { props: {}}}; export default Sitemap;
+import { GetServerSideProps } from 'next';
+
+const Sitemap = () => {;
+  return null};
+
+export const getServerSideProps: GetServerSideProps = async ({ res   ,
+}) => {
+
+
+ const baseUrl = 'https:;
+  const staticPages = [ '','/about','/services','/services-catalog','/micro-saas','/ai-services','/it-services','/cloud-devops','/cybersecurity','/quantum-computing','/docs','/pricing','/contact','/faq','/privacy','/terms' ];
+
+const sitemap = `<?xml version="1.0" encoding="UTF-8"?> <urlset xmlns="http: ${staticPages .map((page) => {;
+  return ` <url> <loc>${baseUrl}${page}</loc> <lastmod>${new Date().toISOString()}</lastmod> <changefreq>weekly</changefreq> <priority>${page === '' ? '1.0' : '0.8'}</priority> </url> `}) .join('')} </urlset> `; res.setHeader('Content-Type','text/xml'); res.write(sitemap); res.end(); return { props: {},
+};
+
+export default Sitemap;
 import { MetadataRoute } from 'next';
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = 'https://ziontechgroup.com';
 
-  const routes = [
+const routes = [
     '',
     '/about',
     '/services',
@@ -73,7 +117,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/admin/os-deploy'
   ];
 
-  const aiServices = [
+const aiServices = [
     '/ai-autonomous-business-manager',
     '/ai-autonomous-business-operations',
     '/ai-autonomous-business-platform',
@@ -161,7 +205,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/accessibility-scanner'
   ];
 
-  const quantumServices = [
+const quantumServices = [
     '/quantum-neural-network-platform',
     '/quantum-cloud-infrastructure',
     '/quantum-financial-trading',
@@ -170,15 +214,15 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/quantum-private-network-solutions-2026'
   ];
 
-  const networkServices = [
+const networkServices = [
     '/5g-enterprise-network',
     '/5g-enterprise-solutions',
     '/5g-network-optimization'
   ];
 
-  const complianceServices = ['/soc2-compliance-automation'];
+const complianceServices = ['/soc2-compliance-automation'];
 
-  const allRoutes = [
+const allRoutes = [
     ...routes,
     ...aiServices,
     ...quantumServices,
@@ -187,9 +231,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
   ];
 
   return allRoutes.map(route => ({
-    url: `${baseUrl}${route}`,
+    url: `${baseUrl}${rout,
+}`,
     lastModified: new Date(),
     changeFrequency: 'weekly',
     priority: route === '' ? 1 : 0.8
-  }));
+ ,
+}));
 }

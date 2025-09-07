@@ -1,9 +1,11 @@
 ;import { Link  } from 'react-router-dom';
 import { Home  } from 'lucide-react';
+
 export const ErrorPage = ({}
   statusCode = 404, ';';
   title = 'Page Not Found', ';';
   message = 'The page you are looking for does not exist.'}) => {}
+ ;
   return()"";
     <div className='min-h-screen bg-zion-blue flex items-center justify-center'>'''';
       <div className='text-center text-white'>'''';
@@ -21,5 +23,6 @@ export const ErrorPage = ({}
       </div>;
     </div>;
   )}
+
 export default ErrorPage'';"";
 '''''"'";

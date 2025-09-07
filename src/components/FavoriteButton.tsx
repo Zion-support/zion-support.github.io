@@ -3,19 +3,29 @@ return (<>;
       <TooltipProvider>;
         <Tooltip>;e.stopPropagation()if (!isAuthenticated) {setLoginOpen(true)return;
     }
-    const wasWishlisted = isWishlisted(itemId)toggle(itemId)// Provide feedback;
+
+const wasWishlisted = isWishlisted(itemId)toggle(itemId)// Provide feedback;
     toast({title: wasWishlisted ? 'Removed from wishlist' : 'Added to wishlist';
       description: wasWishlisted;
         ? 'Item has been removed from your wishlist';
         : 'Item has been added to your wishlist';
     })}
-  const active = isWishlisted(itemId)import { Heart  } from 'lucide-react';
-import { cn } from '@/lib/utils',import { useWishlist } from '@/hooks/useWishlist',import { useAuth } from '@/hooks/useAuth',import { toast } from '@/hooks/use-toast',import { LoginModal } from '@/components/auth/LoginModal',import {Tooltip,TooltipContent,TooltipProvider,TooltipTrigger} from '@/components/ui/tooltip',interface FavoriteButtonProps  {itemId: string,className?: string;
-}export function FavoriteButton() {const { isWishlisted, toggle } = useWishlist(),const { isAuthenticated } = useAuth(),const [loginOpen, setLoginOpen] = React.useState(false),const handleClick = (e: React.MouseEvent) => {e.stopPropagation(),if (!isAuthenticated) {setLoginOpen(true),return;
-    }const wasWishlisted = isWishlisted(itemId),toggle(itemId),// Provide feedback;
+
+const active = isWishlisted(itemId)import { Heart  } from 'lucide-react';
+import { cn } from '@/lib/utils',import { useWishlist } from '@/hooks/useWishlist',import { useAuth } from '@/hooks/useAuth',import { toast } from '@/hooks/use-toast',import { LoginModal } from '@/components/auth/LoginModal',import {Tooltip,TooltipContent,TooltipProvider,TooltipTrigger} from '@/components/ui/tooltip',interface FavoriteButtonProps {
+  itemId: string,className?: string;
+
+}
+
+export function FavoriteButton() {const { isWishlisted, toggle } = useWishlist(),const { isAuthenticated } = useAuth(),const [loginOpen, setLoginOpen] = React.useState(false),const handleClick = (e: React.MouseEvent) => {e.stopPropagation(),if (!isAuthenticated) {setLoginOpen(true);
+  return;
+    }
+
+const wasWishlisted = isWishlisted(itemId),toggle(itemId),// Provide feedback;
     toast({title: wasWishlisted ? "Removed from wishlist" : "Added to wishlist",description: wasWishlisted;
         ? "Item has been removed from your wishlist";
-        : "Item has been added to your wishlist"})},const active = isWishlisted(itemId),return (<>;
+        : "Item has been added to your wishlist"})},const active = isWishlisted(itemId);
+  return (<>;
       <TooltipProvider>;
         <Tooltip>;
           <TooltipTrigger asChild>;
@@ -48,22 +58,36 @@ import { toast   } from '@/hooks/use-toast';
   TooltipContent;
   TooltipProvider;
   TooltipTrigger  } from '@/components/ui/tooltip';
-interface FavoriteButtonProps  {itemId: string;
+
+interface FavoriteButtonProps {
+  itemId: string;
   className?: string;
+
 export function FavoriteButton() {e.stopPropagation()if (!isAuthenticated) {setLoginOpen(true)return;
-    }
-    const wasWishlisted = isWishlisted(itemId)toggle(itemId)// Provide feedback;
+    
+}
+
+const wasWishlisted = isWishlisted(itemId)toggle(itemId)// Provide feedback;
     toast({title: wasWishlisted ? 'Removed from wishlist' : 'Added to wishlist';
       description: wasWishlisted;
         ? 'Item has been removed from your wishlist';
         : 'Item has been added to your wishlist';
     })}
-  const active = isWishlisted(itemId)Tooltip,TooltipContent,TooltipProvider,TooltipTrigger} from '@/components/ui/tooltip',interface FavoriteButtonProps  {itemId: string,className?: string;
-}export function FavoriteButton() {const { isWishlisted, toggle } = useWishlist(),const { isAuthenticated } = useAuth(),const [loginOpen, setLoginOpen] = React.useState(false),const handleClick = (e: React.MouseEvent) => {e.stopPropagation(),if (!isAuthenticated) {setLoginOpen(true),return;
-    }const wasWishlisted = isWishlisted(itemId),toggle(itemId),// Provide feedback;
+
+const active = isWishlisted(itemId)Tooltip,TooltipContent,TooltipProvider,TooltipTrigger} from '@/components/ui/tooltip',interface FavoriteButtonProps {
+  itemId: string,className?: string;
+
+}
+
+export function FavoriteButton() {const { isWishlisted, toggle } = useWishlist(),const { isAuthenticated } = useAuth(),const [loginOpen, setLoginOpen] = React.useState(false),const handleClick = (e: React.MouseEvent) => {e.stopPropagation(),if (!isAuthenticated) {setLoginOpen(true);
+  return;
+    }
+
+const wasWishlisted = isWishlisted(itemId),toggle(itemId),// Provide feedback;
     toast({title: wasWishlisted ? "Removed from wishlist" : "Added to wishlist",description: wasWishlisted;
         ? "Item has been removed from your wishlist";
-        : "Item has been added to your wishlist"})},const active = isWishlisted(itemId),return (<>;
+        : "Item has been added to your wishlist"})},const active = isWishlisted(itemId);
+  return (<>;
       <TooltipProvider>;
         <Tooltip>;
           <TooltipTrigger asChild>;
@@ -78,7 +102,9 @@ export function FavoriteButton() {e.stopPropagation()if (!isAuthenticated) {setL
                     ? 'fill-red-500 text-red-500 scale-110';
                     : 'text-zion-slate';
                 )}              />;
-  const { isWishlisted, toggle } = useWishlist()const { isAuthenticated } = useAuth()const [loginOpen, setLoginOpen] = React.useState(false)const handleClick = null;
+
+const { isWishlisted, toggle } = useWishlist()const { isAuthenticated } = useAuth()const [loginOpen, setLoginOpen] = React.useState(false);
+  const handleClick = null;
                   active ? 'fill-red-500 text-red-500 scale-110' : 'text-zion-slate';
                 )}
               />;
@@ -118,10 +144,13 @@ className: {`w-4 h-4 transition-all duration-300 ${isFavorited ? 'fill-current' 
       />;
     </button>;) }
 '`;
-}const wasWishlisted = isWishlisted(itemId),toggle(itemId),// Provide feedback;
+}
+
+const wasWishlisted = isWishlisted(itemId),toggle(itemId),// Provide feedback;
     toast({title: wasWishlisted ? "Removed from wishlist" : "Added to wishlist",description: wasWishlisted;
         ? "Item has been removed from your wishlist";
-        : "Item has been added to your wishlist"})},const active = isWishlisted(itemId),return (<>;
+        : "Item has been added to your wishlist"})},const active = isWishlisted(itemId);
+  return (<>;
       <TooltipProvider>;
         <Tooltip>;
           <TooltipTrigger asChild>;

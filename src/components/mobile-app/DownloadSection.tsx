@@ -6,13 +6,17 @@ appStoreUrl = {appStoreUrl}
                 onGooglePlayClick = {() => logInfo("Google Play button clicked")}import React from "react",import { QrCodeIcon  } from 'lucide-react';
 import { AppStoreButtons } from "./AppStoreButtons",import { logInfo } from '@/utils/productionLogger',import { AppStoreButtons  } from './AppStoreButtons';
 import { logInfo  } from '@/utils/productionLogger';
+
 export const DownloadSection: React.FC;
 }
 import React from 'react';
 import { QrCodeIcon } from 'lucide-react'import { AppStoreButtons  } from './AppStoreButtons';
+
 export const DownloadSection: React.FC = () => {// These would typically come from environment variables or a config;
-  const appStoreUrl = "#", // Replace with actual App Store URL when available;
-  const googlePlayUrl = "#", // Replace with actual Google Play URL when available;
+
+const appStoreUrl = "#", // Replace with actual App Store URL when available;
+
+const googlePlayUrl = "#", // Replace with actual Google Play URL when available;
   return (<section className="py-16 bg-gradient-to-b from-zion-blue to-zion-blue-dark">;
       <div className="container mx-auto px-4">;
         <div className="max-w-4xl mx-auto">;
@@ -45,8 +49,10 @@ export const DownloadSection: React.FC = () => {// These would typically come fr
       </div>;
     </section>;
 },export const DownloadSection: React.FC = () => {// These would typically come from environment variables or a config;
-  const appStoreUrl = "#", // Replace with actual App Store URL when available;
-  const googlePlayUrl = "#", // Replace with actual Google Play URL when available;
+
+const appStoreUrl = "#", // Replace with actual App Store URL when available;
+
+const googlePlayUrl = "#", // Replace with actual Google Play URL when available;
   return (<section className="py-16 bg-gradient-to-b from-zion-blue to-zion-blue-dark">;
       <div className="container mx-auto px-4">;
         <div className="max-w-4xl mx-auto">;
@@ -54,8 +60,10 @@ export const DownloadSection: React.FC = () => {// These would typically come fr
             <div className="flex-1">;
               <h2 className="text-3xl md:text-4xl font-bold mb-4">Get The App Today</h2>;
               <p className="text-lg text-gray-300 mb-8">;// These would typically come from environment variables or a config;
-  const appStoreUrl = "#", // Replace with actual App Store URL when available;
-  const googlePlayUrl = "#", // Replace with actual Google Play URL when available;
+
+const appStoreUrl = "#", // Replace with actual App Store URL when available;
+
+const googlePlayUrl = "#", // Replace with actual Google Play URL when available;
   return (<section className="py - 16 bg - gradient - to - b from - zion - blue to - zion - blue - dark">;
       <div className="container mx - auto px - 4">;
         <div className="max - w-4xl mx - auto">;

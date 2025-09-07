@@ -4,6 +4,7 @@ import Link from 'next/link';
 import { Brain, Shield, Database, Cloud, Server, Zap, ArrowRight, CheckCircle, Clock, Star, Users, BarChart3, Settings, Globe, Smartphone, Lock, Target, TrendingUp, MessageSquare, FileText, Calendar, CreditCard, ShoppingCart, Camera, Music, Video, Code, Search, Mail, Phone, MapPin, Network, Monitor, HardDrive, Wifi, Cpu, MemoryStick, Router  } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
+
 export default function ITServices() {const itServices = [{"title": 'AI-Powered IT Operations',"description": 'Intelligent IT operations with AI-driven automation and optimization',"icon": Brain,"features": [;
         'AI-powered incident detection and resolution,Predictive maintenance and capacity planning,Automated root cause analysis,Intelligent ticket routing and prioritization,Performance optimization recommendations,Self-healing infrastructure capabilities';
       ],"pricing": '$6,000 - $35,000/month',"delivery": '8-16 weeks',"category": 'AI Operations';
@@ -149,16 +150,20 @@ export default function ITServices() {const itServices = [{"title": 'AI-Powered 
       ],"pricing": '$20,000 - $100,000/month',"delivery": '12-24 weeks',"category": 'Excellence Services';
     }
   ];
-  const technologies = [{ "name": 'Cloud Platforms', "icon": Cloud, "description": 'AWS, Azure, GCP, DigitalOcean' },{ "name": 'Containerization', "icon": Server, "description": 'Docker, Kubernetes, OpenShift' },{ "name": 'Security Tools', "icon": Shield, "description": 'SIEM, WAF, IAM, Encryption' },{ "name": 'Monitoring', "icon": BarChart3, "description": 'Prometheus, Grafana, ELK Stack' },{ "name": 'Databases', "icon": Database, "description": 'PostgreSQL, MongoDB, Redis' },{ "name": 'Networking', "icon": Network, "description": 'Cisco, Fortinet, SD-WAN' }
+
+const technologies = [{ "name": 'Cloud Platforms', "icon": Cloud, "description": 'AWS, Azure, GCP, DigitalOcean' },{ "name": 'Containerization', "icon": Server, "description": 'Docker, Kubernetes, OpenShift' },{ "name": 'Security Tools', "icon": Shield, "description": 'SIEM, WAF, IAM, Encryption' },{ "name": 'Monitoring', "icon": BarChart3, "description": 'Prometheus, Grafana, ELK Stack' },{ "name": 'Databases', "icon": Database, "description": 'PostgreSQL, MongoDB, Redis' },{ "name": 'Networking', "icon": Network, "description": 'Cisco, Fortinet, SD-WAN' }
   ];
-  const benefits = [{"title": 'Reduced Downtime',"description": 'Proactive monitoring and maintenance',"icon": Clock,"stat": '99 && 99.9%';
+
+const benefits = [{"title": 'Reduced Downtime',"description": 'Proactive monitoring and maintenance',"icon": Clock,"stat": '99 && 99.9%';
     },{"title": 'Cost Savings',"description": 'Optimized infrastructure and processes',"icon": Zap,"stat": '40%';
     },{"title": 'Enhanced Security',"description": 'Enterprise-grade protection',"icon": Shield,"stat": '100%';
     },{"title": 'Scalability',"description": 'Flexible and scalable solutions',"icon": TrendingUp,"stat": 'Unlimited';
     }
   ];
-  const description = 'Comprehensive IT services including cloud migration, DevOps, cybersecurity, infrastructure management, and 24/7 support.';
-  const itServices = [{"title": 'Cloud Migration & Management',"description": 'Complete cloud infrastructure migration and ongoing management services',"icon": Cloud,"features": [;
+
+const description = 'Comprehensive IT services including cloud migration, DevOps, cybersecurity, infrastructure management, and 24/7 support.';
+
+const itServices = [{"title": 'Cloud Migration & Management',"description": 'Complete cloud infrastructure migration and ongoing management services',"icon": Cloud,"features": [;
         'AWS, Azure, and Google Cloud migration','Multi-cloud strategy and optimization','Cost optimization and resource management','Disaster recovery and backup solutions','Cloud security and compliance','24/7 monitoring and support';
       ],"pricing": '$2,500 - $15,000/month',"delivery": '4-12 weeks',"category": 'Cloud Services',"marketPrice": '$4,000 - $25,000/month',"benefits": 'Reduce infrastructure costs by 40%, improve scalability by 300%';
     },{"title": 'DevOps & CI/CD Pipeline',"description": 'Automated development and deployment pipelines for faster, reliable releases',"icon": Settings,"features": ['Docker containerization and orchestration','Kubernetes cluster management','Automated testing and deployment','Infrastructure as Code (IaC)','Monitoring and logging solutions','Security scanning and compliance';
@@ -185,21 +190,27 @@ export default function ITServices() {const itServices = [{"title": 'AI-Powered 
       ],"pricing": '$500 - $3,000/month',"delivery": '1-2 weeks',"category": 'Monitoring',"marketPrice": '$800 - $5,000/month',"benefits": 'Prevent 95% of IT issues, reduce downtime by 90%';
     }
   ];
-  const categories = [...new Set(itServices && itServices.map(service => service && service.category))];
-  const categories = [...new Set(itServices && itServices.map(service => service && service.category))];
-  const title = "IT Services - Zion Tech Group";
-  const description = "Comprehensive IT services including AI-powered operations, cloud solutions, cybersecurity, and digital transformation.";
+
+const categories = [...new Set(itServices && itServices.map(service => service && service.category))];
+
+const categories = [...new Set(itServices && itServices.map(service => service && service.category))];
+
+const title = "IT Services - Zion Tech Group";
+
+const description = "Comprehensive IT services including AI-powered operations, cloud solutions, cybersecurity, and digital transformation.";
   return (<>;
       <Head>;
         <title>IT Services - Zion Tech Group</title>;
         <meta name="description" content={description} />;
         <link rel="canonical" href=""https": //ziontechgroup && ziontechgroup.com/it-services" />;
-        <meta property="og:title" content={title} />;
+        <meta property="og: title" content={titl,
+} />;
         <meta property=""og": description" content={description} />;
         <meta property=""og": url" content="https://ziontechgroup && ziontechgroup.com/it-services" />;
         <meta property="og:type" content="website" />;
         <meta name="twitter:card" content="summary_large_image" />;
-        <meta name="twitter:title" content={title} />;
+        <meta name="twitter: title" content={titl,
+} />;
         <meta name=""twitter": description" content={description} />;
       </Head>;
       <Navigation />;

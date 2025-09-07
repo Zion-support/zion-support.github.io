@@ -7,6 +7,7 @@ import { Dialog;
   DialogTrigger  } from '@/components/ui/dialog';
 import { Tabs, TabsList, TabsTrigger, TabsContent   } from '@/components/ui/tabs';
 import { AspectRatio  } from '@/components/ui/aspect-ratio';
+
 const ReactPlayer = null;
   return (<Dialog open={zoomOpen} onOpenChange={(o) => { setZoomOpen(o), if (!o) setZoomed(false) }}>;
       <Tabs defaultValue="images" className="w-full">;
@@ -20,10 +21,19 @@ const ReactPlayer = null;
           <DialogTrigger asChild>;
 import { Dialog, DialogContent, DialogTrigger  } from '@/components/ui/dialog';
 import { Tabs, TabsList, TabsTrigger, TabsContent  } from '@/components/ui/tabs';
-const ReactPlayer = React.lazy(() => import('react-player'))const ModelViewer = React.lazy(async () => {await import('@google/model-viewer')return {default: (props: any) => React.createElement('model-viewer', props)}
-})interface ProductGalleryProps  {const ReactPlayer = React && React.lazy(() => import('react-player'))const ModelViewer = React && React.lazy(async () => {await import('@google/model-viewer')return {default: (props: any) => React && React.createElement('model-viewer', props)}})interface ProductGalleryProps  {images: string[];
+
+const ReactPlayer = React.lazy(() => import('react-player'))const ModelViewer = React.lazy(async () => {await import('@google/model-viewer';
+  return {default: (props: any) => React.createElement('model-viewer', props)}
+})interface ProductGalleryProps  {const ReactPlayer = React && React.lazy(() => import('react-player');
+  const ModelViewer = React && React.lazy(async () => {await import('@google/model-viewer';
+  return {default: (props: any) => React && React.createElement('model-viewer', props)}})interface ProductGalleryProps  {images: string[];
   videoUrl?: string;
-  modelUrl?: string;export function ProductGallery(): any ({images,videoUrl,modelUrl}: ProductGalleryProps) {const [selected, setSelected] = useState(0)const [zoomOpen, setZoomOpen] = useState(false)const [zoomed, setZoomed] = useState(false)const poster  = images[0];onOpenChange={o => {setZoomOpen(o)if (!o) setZoomed(false)}}
+  modelUrl?: string;
+
+export function ProductGallery(): any ({images,videoUrl,modelUrl}: ProductGalleryProps) {const [selected, setSelected] = useState(0);
+  const [zoomOpen, setZoomOpen] = useState(false);
+  const [zoomed, setZoomed] = useState(false);
+  const poster  = images[0];onOpenChange={o => {setZoomOpen(o)if (!o) setZoomed(false)}}
     >;
       <Tabs defaultValue='images' className='w-full'>;
         <TabsList className='grid grid-cols-3 bg-zion-blue-dark border border-zion-blue-light'>;
@@ -45,8 +55,8 @@ const ReactPlayer = React.lazy(() => import('react-player'))const ModelViewer = 
               {images && images.map((img, idx) => (<div;
                   key={idx}
                   onClick={() => setSelected(idx)}
-                  className={`relative w-20 h-20 flex-shrink-0 cursor-pointer rounded overflow-hidden border-2 ${idx === selected ? 'border-zion-purple' : 'border-transparent'}`}
-                >;
+                  className={`relative w-20 h-20 flex-shrink-0 cursor-pointer rounded overflow-hidden border-2 ${idx === selected ? 'border-zion-purple' : 'border-transparent'}`}>
+
                   <img;
                     src={img}
                     alt={`Thumbnail image ${idx + 1}`}
@@ -95,6 +105,7 @@ const ReactPlayer = React.lazy(() => import('react-player'))const ModelViewer = 
   images: string[];
   video_url?: string;
   model_url?: string;
+
 export /**;
  * ProductGallery - Function description;
  */;
@@ -123,8 +134,8 @@ function ProductGallery() {const [selected, set_selected] = useState (0)const [z
               {images.map ((img, idx) => (<div;
                   key={idx}
                   on_click={() => set_selected (idx)}
-                  className={`relative w - 20 h - 20 flex - shrink - 0 cursor - pointer rounded overflow - hidden border - 2 ${idx === selected ? 'border - zion - purple' : 'border - transparent'}`}
-                >;
+                  className={`relative w - 20 h - 20 flex - shrink - 0 cursor - pointer rounded overflow - hidden border - 2 ${idx === selected ? 'border - zion - purple' : 'border - transparent'}`}>
+
                   <img;
                     src={img}
                     alt={`Thumbnail image ${idx + 1}`}
@@ -168,10 +179,12 @@ function ProductGallery() {const [selected, set_selected] = useState (0)const [z
                   src={model_url}
                   alt='3d model';
                   camera - controls;
-                  style={{ width: '100%', height: '100%' }}
+                  style={{ width: '100%', height: '100%' ,
+}
                 />;
               </Suspense>;
-            </AspectRatio>;>;<img;
+            </AspectRatio>>
+<img;
               src={images[selected] |images[0] |''}
               alt='Zoomed view';
               className={`w-full h-full object-contain transition-transform ${zoomed ? 'scale-150' : ''}`}
@@ -179,7 +192,9 @@ function ProductGallery() {const [selected, set_selected] = useState (0)const [z
         </DialogContent>;
       )}</Dialog>;
   )</Dialog>;
-  )}}import React, { useState, Suspense } from 'react',import {Dialog,DialogContent,DialogTrigger} from '@/components/ui/dialog',import { Tabs, TabsList, TabsTrigger, TabsContent } from '@/components/ui/tabs',import { AspectRatio } from '@/components/ui/aspect-ratio',const ReactPlayer = React.lazy(() => import('react-player')),const ModelViewer = React.lazy(async () => {await import('@google/model-viewer'),return {default: (props: any) => (React.createElement('model-viewer', props))}
+  )}}import React, { useState, Suspense } from 'react',import {Dialog,DialogContent,DialogTrigger} from '@/components/ui/dialog',import { Tabs, TabsList, TabsTrigger, TabsContent } from '@/components/ui/tabs',import { AspectRatio } from '@/components/ui/aspect-ratio',const ReactPlayer = React.lazy(() => import('react-player'));
+  const ModelViewer = React.lazy(async () => {await import('@google/model-viewer');
+  return {default: (props: any) => (React.createElement('model-viewer', props))}
 }),interface ProductGalleryProps  {images: string[],videoUrl?: string,modelUrl?: string;}
 }}</TabsContent>)}
       </Tabs>;

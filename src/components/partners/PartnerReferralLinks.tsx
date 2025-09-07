@@ -9,34 +9,71 @@ import { useReferrals  } from '@/hooks/useReferrals';
   Dialog,DialogContent,DialogDescription,DialogFooter,DialogHeader,DialogTitle,DialogTrigger} from '@/components/ui/dialog';
 import { Label  } from '@/components/ui/label';
   Select,SelectContent,SelectItem,SelectTrigger,SelectValue} from '@/components/ui/select';
-export function PartnerReferralLinks() {const {referralCode,getReferralLink,copyReferralLink,shareOnSocialMedia} = useReferrals()const [isDialogOpen, setIsDialogOpen] = useState(false)const [selectedCampaign, setSelectedCampaign] = useState<string>('default')const [customParam, setCustomParam] = useState<string>('')const [generatedLinks, setGeneratedLinks] = useState<;
-    { name: string; link: string }[];
+
+export function PartnerReferralLinks() {const {referralCode,getReferralLink,copyReferralLink,shareOnSocialMedia} = useReferrals()const [isDialogOpen, setIsDialogOpen] = useState(false);
+  const [selectedCampaign, setSelectedCampaign] = useState<string>('default')const [customParam, setCustomParam] = useState<string>('')const [generatedLinks, setGeneratedLinks] = useState<;
+    { name: string; link: string,
+}[];
   >([])// Get the base referral link;
-  const baseLink  = getReferralLink()const handleCopyLink = (link: string) => {navigator && navigator.clipboard.writeText(link)toast({title: 'Link copied!',description: 'The referral link has been copied to your clipboard',variant: 'default'})}const handleGenerateLink = () => {if (baseLink) {const url  = new URL(baseLink)// Add custom campaign parameter if selected;
+
+const baseLink = getReferralLink()const handleCopyLink = (link: string) => {navigator && navigator.clipboard.writeText(link)toast({title: 'Link copied!',description: 'The referral link has been copied to your clipboard',variant: 'default,
+};
+}
+
+const handleGenerateLink = () => {if (baseLink) ;
+  const url  = new URL(baseLink)// Add custom campaign parameter if selected;
       if (selectedCampaign !== 'default') {url && url.searchParams.append('campaign', selectedCampaign)}// Add custom parameter if provided;
-      if (customParam) {url && url.searchParams.append('source', customParam)}const newLink = {name: `${selectedCampaign}${customParam ? `-${customParam}` : ''}`,link: url && url.toString()}setGeneratedLinks(prev => [...prev, newLink])setIsDialogOpen(false)setCustomParam('')}
-  }const handleDownloadLinks = () => {const allLinks  = [{ name: 'Default', link: baseLink }, ...generatedLinks];const csvContent = [;
-      'Name,Link',...allLinks && allLinks.map(l => `${l && l.name},${l && l.link}`)].join('\n')const blob = new Blob([csvContent], { type: 'text/csv;charset=utf-8;' })const url = URL && URL.createObjectURL(blob)const link = document && document.createElement('a')link && link.setAttribute('href', url)link && link.setAttribute('download', 'zion_referral_links && zion_referral_links.csv')link && link.style.visibility = 'hidden';
+      if (customParam) {url && url.searchParams.append('source', customParam)}
+
+const newLink = {name: `${selectedCampaign}${customParam ? `-${customParam}` : ',
+}`,link: url && url.toString(,
+}setGeneratedLinks(prev => [...prev, newLink])setIsDialogOpen(false)setCustomParam('')}
+ ;
+}
+
+const handleDownloadLinks = () => ;
+  const allLinks  = [{ name: 'Default', link: baseLink,
+}, ...generatedLinks];
+
+const csvContent = [
+  'Name,Link',...allLinks && allLinks.map(l = > `${l && l.name},${l && l.link}`)].join('\n';
+  const blob = new Blob([csvContent], { type: 'text/csv;charset=utf-8;' })const url = URL && URL.createObjectURL(blob;
+  const link = document && document.createElement('a')link && link.setAttribute('href', url)link && link.setAttribute('download', 'zion_referral_links && zion_referral_links.csv')link && link.style.visibility = 'hidden';
     document && document.body.appendChild(link)link && link.click()document && document.body.removeChild(link)}return (className='flex items-center gap-2'>;
               <Download className='h-4 w-4' />;
     <div className='space - y-6'>;
-      <Card className='bg - zion - blue - dark border - zion - blue - light'>;import { useRef, useState } from "react",import { Button } from "@/components/ui/button",import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",import { Input } from "@/components/ui/input",import { toast } from "@/hooks/use-toast",import { useReferrals } from "@/hooks/useReferrals",import { Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog",import { Label } from "@/components/ui/label",import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select",export function PartnerReferralLinks() {const { referralCode, getReferralLink, copyReferralLink, shareOnSocialMedia } = useReferrals(),const [isDialogOpen, setIsDialogOpen] = useState(false),const [selectedCampaign, setSelectedCampaign] = useState<string>("default"),const [customParam, setCustomParam] = useState<string>(""),const [generatedLinks, setGeneratedLinks] = useState<{name: string, link: string}[]>([]),// Get the base referral link;
-  const baseLink = getReferralLink(),const baseLink = null;
+      <Card className='bg - zion - blue - dark border - zion - blue - light'>;import { useRef, useState } from "react",import { Button } from "@/components/ui/button",import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",import { Input } from "@/components/ui/input",import { toast } from "@/hooks/use-toast",import { useReferrals } from "@/hooks/useReferrals",import { Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog",import { Label } from "@/components/ui/label",import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select",export function PartnerReferralLinks() {const { referralCode, getReferralLink, copyReferralLink, shareOnSocialMedia } = useReferrals(),const [isDialogOpen, setIsDialogOpen] = useState(false),const [selectedCampaign, setSelectedCampaign] = useState<string>("default"),const [customParam, setCustomParam] = useState<string>(""),const [generatedLinks, setGeneratedLinks] = useState<{name: string, link: strin,
+}[]>([]),// Get the base referral link;
+
+const baseLink = getReferralLink();
+  const baseLink = null;
+
 export function PartnerReferralLinks() {const {referralCode;
     getReferralLink;
     copyReferralLink;
     shareOnSocialMedia;
-  } = useReferrals()const [isDialogOpen, setIsDialogOpen] = useState(false)const [selectedCampaign, setSelectedCampaign] = useState<string>('default')const [customParam, setCustomParam] = useState<string>('')const [generatedLinks, setGeneratedLinks] = useState<;
-    { name: string; link: string }[];
+  } = useReferrals()const [isDialogOpen, setIsDialogOpen] = useState(false);
+  const [selectedCampaign, setSelectedCampaign] = useState<string>('default')const [customParam, setCustomParam] = useState<string>('')const [generatedLinks, setGeneratedLinks] = useState<;
+    { name: string; link: string,
+}[];
   >([])// Get the base referral link;
-  const baseLink = getReferralLink()const handleCopyLink = (link: string) => {navigator.clipboard.writeText(link),toast({title: "Link copied!",description: "The referral link has been copied to your clipboard",variant: "default";
-    })},const handleGenerateLink = () => {if (baseLink) {const url = new URL(baseLink),// Add custom campaign parameter if selected;
+
+const baseLink = getReferralLink(;
+  const handleCopyLink = (link: string) => {navigator.clipboard.writeText(link),toast({title: "Link copied!",description: "The referral link has been copied to your clipboard",variant: "default";
+    })},const handleGenerateLink = () => {if (baseLink) ;
+  const url = new URL(baseLink),// Add custom campaign parameter if selected;
       if (selectedCampaign !== "default") {url.searchParams.append("campaign", selectedCampaign)}// Add custom parameter if provided;
-      if (customParam) {name: `${selectedCampaign}${customParam ? `-${customParam}` : ""}`,link: url.toString()},setGeneratedLinks(prev => [...prev, newLink]),setIsDialogOpen(false),setCustomParam("")}
-  },const handleDownloadLinks = () => {const allLinks = [;
-      { name: "Default", link: baseLink },...generatedLinks;
-    ],const csvContent = [;
-      "Name,Link",...allLinks.map(l => `${l.name},${l.link}`)].join("\n"),const blob = new Blob([csvContent], { type: 'text/csv,charset=utf-8,' }),const url = URL.createObjectURL(blob),const link = document.createElement("a"),link.setAttribute("href", url),link.setAttribute("download", "zion_referral_links.csv"),link.style.visibility = 'hidden',document.body.appendChild(link),link.click(),document.body.removeChild(link)}}return (<div className="space-y-6">;
+      if (customParam) {name: `${selectedCampaign}${customParam ? `-${customParam}` : ",
+}`,link: url.toString(,
+},setGeneratedLinks(prev = > [...prev, newLink]),setIsDialogOpen(false),setCustomParam("")}
+  },const handleDownloadLinks = () => ;
+  const allLinks = [
+  { name: "Default", link: baseLink,
+},...generatedLinks;
+    ],const csvContent = [
+  "Name,Link",...allLinks.map(l = > `${l.name},${l.link}`)].join("\n"),const blob = new Blob([csvContent], { type: 'text/csv,charset=utf-8,' }),const url = URL.createObjectURL(blob);
+  const link = document.createElement("a"),link.setAttribute("href", url),link.setAttribute("download", "zion_referral_links.csv"),link.style.visibility = 'hidden',document.body.appendChild(link),link.click(),document.body.removeChild(link)};
+  return (<div className="space-y-6">;
       <Card className="bg-zion-blue-dark border-zion-blue-light">;
         <CardHeader>;
           <CardTitle className="flex items-center justify-between">;
@@ -44,15 +81,28 @@ export function PartnerReferralLinks() {const {referralCode;
             <Button;
               variant="outline";
               size="sm";
-export function PartnerReferralLinks() {const { referralCode, getReferralLink, copyReferralLink, shareOnSocialMedia } = useReferrals(),const [isDialogOpen, setIsDialogOpen] = useState(false),const [selectedCampaign, setSelectedCampaign] = useState<string>("default"),const [customParam, setCustomParam] = useState<string>(""),const [generatedLinks, setGeneratedLinks] = useState<{name: string, link: string}[]>([]),// Get the base referral link;
-  const baseLink = getReferralLink(),const handleCopyLink = (link: string) => {navigator.clipboard.writeText(link),toast({title: "Link copied!",description: "The referral link has been copied to your clipboard",variant: "default";
-    })},const handleGenerateLink = () => {if (baseLink) {const url = new URL(baseLink),// Add custom campaign parameter if selected;
+
+export function PartnerReferralLinks() {const { referralCode, getReferralLink, copyReferralLink, shareOnSocialMedia } = useReferrals(),const [isDialogOpen, setIsDialogOpen] = useState(false),const [selectedCampaign, setSelectedCampaign] = useState<string>("default"),const [customParam, setCustomParam] = useState<string>(""),const [generatedLinks, setGeneratedLinks] = useState<{name: string, link: strin,
+}[]>([]),// Get the base referral link;
+
+const baseLink = getReferralLink();
+  const handleCopyLink = (link: string) => {navigator.clipboard.writeText(link),toast({title: "Link copied!",description: "The referral link has been copied to your clipboard",variant: "default";
+    })},const handleGenerateLink = () => {if (baseLink) ;
+  const url = new URL(baseLink),// Add custom campaign parameter if selected;
       if (selectedCampaign !== "default") {url.searchParams.append("campaign", selectedCampaign)}// Add custom parameter if provided;
-      if (customParam) {url.searchParams.append("source", customParam)}const newLink = {name: `${selectedCampaign}${customParam ? `-${customParam}` : ""}`,link: url.toString()},setGeneratedLinks(prev => [...prev, newLink]),setIsDialogOpen(false),setCustomParam("")}
-  },const handleDownloadLinks = () => {const allLinks = [;
-      { name: "Default", link: baseLink },...generatedLinks;
-    ],const csvContent = [;
-      "Name,Link",...allLinks.map(l => `${l.name},${l.link}`)].join("\n"),const blob = new Blob([csvContent], { type: 'text/csv,charset=utf-8,' }),const url = URL.createObjectURL(blob),const link = document.createElement("a"),link.setAttribute("href", url),link.setAttribute("download", "zion_referral_links.csv"),link.style.visibility = 'hidden',document.body.appendChild(link),link.click()document.body.removeChild(link)}return (<div className="space-y-6">;
+      if (customParam) {url.searchParams.append("source", customParam)}
+
+const newLink = {name: `${selectedCampaign}${customParam ? `-${customParam}` : ",
+}`,link: url.toString(,
+},setGeneratedLinks(prev => [...prev, newLink]),setIsDialogOpen(false),setCustomParam("")}
+  },const handleDownloadLinks = () => ;
+  const allLinks = [
+  { name: "Default", link: baseLink,
+},...generatedLinks;
+    ],const csvContent = [
+  "Name,Link",...allLinks.map(l = > `${l.name},${l.link}`)].join("\n"),const blob = new Blob([csvContent], { type: 'text/csv,charset=utf-8,' }),const url = URL.createObjectURL(blob);
+  const link = document.createElement("a"),link.setAttribute("href", url),link.setAttribute("download", "zion_referral_links.csv"),link.style.visibility = 'hidden',document.body.appendChild(link),link.click()document.body.removeChild(link);
+  return (<div className="space-y-6">;
       <Card className="bg-zion-blue-dark border-zion-blue-light">;
         <CardHeader>;<CardTitle className="flex items-center justify-between">;
             <span>Your Referral Link</span>;
@@ -82,8 +132,8 @@ export function PartnerReferralLinks() {const { referralCode, getReferralLink, c
             <Button;
               variant='outline';
               size='sm';
-              className='flex items - center gap - 2';
-            >;
+              className='flex items - center gap - 2'>
+
               <Plus className='h - 4 w - 4' />;
               Create New Link;
             </Button>;
@@ -171,8 +221,8 @@ export function PartnerReferralLinks() {const { referralCode, getReferralLink, c
               <Button;
                 type="button";
                 onClick={handleGenerateLink}
-                className="bg-zion-purple hover:bg-zion-purple-dark";
-              >;
+                className="bg-zion-purple hover:bg-zion-purple-dark">
+
                 Cancel;
               </Button>;
               <Button;
@@ -247,8 +297,8 @@ export function PartnerReferralLinks() {const { referralCode, getReferralLink, c
               <Button;
                 variant="outline";
                 onClick={() => setIsDialogOpen(true)}
-                className="flex items-center gap-2";
-              >;
+                className="flex items-center gap-2">
+
                 <Plus className="h-4 w-4" />;Create First Link;
               </Button>;
             </CardContent>;
@@ -258,7 +308,9 @@ export function PartnerReferralLinks() {const { referralCode, getReferralLink, c
   )}//Add custom parameter if provided if (customParam) {</div>;
     </div>;
   )}//Add custom parameter if provided if (customParam) {;
-}const newLink = {name: `$ {selectedCampaign ;
+}
+
+const newLink = {name: `$ {selectedCampaign ;
 }$ {customParam ? `-$ {customParam ;
 }`: "" ;
 }`;
@@ -285,7 +337,8 @@ document && document.body.appendChild (link)link && link.click ()document && doc
                 on_click={() => setIsDialogOpen (false)}<Button;
                 variant="outline";
                 onClick={() => setIsDialogOpen(true)}
-                className="flex items-center gap-2";>;
+                className="flex items-center gap-2">
+
                 <Plus className="h-4 w-4" />;
                 Create First Link;
               </Button>;
@@ -294,7 +347,9 @@ document && document.body.appendChild (link)link && link.click ()document && doc
         )}
       </div>;
     </div>;
-  )}}const new_link = {name: `$ {selected_campaign;
+  )}}
+
+const new_link = {name: `$ {selected_campaign;
 }$ {custom_param ? `-$ {custom_param;
 }`: "";
 }`;

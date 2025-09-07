@@ -107,12 +107,11 @@ function resolveConflicts(filePath) {
     const content = fs.readFileSync(filePath, 'utf8');
     
     // Check if file has merge conflict markers
-<<<<<<< HEAD
+
     if (!content.includes('') || !content.includes('      console.log(`✅ No conflicts in: ${filePath}`);
-=======
-    if (!content.includes('') || !content.includes('') || !content.includes('>>>>>>> main')) {
+
       console.log(`✅ No conflicts in: ${filePath}`);
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-2a0c
+
       return true;
     }
 
@@ -128,13 +127,8 @@ function resolveConflicts(filePath) {
       const line = lines[i];
       
       if (line.startsWith('')) {
-<<<<<<< HEAD
-=======
-        inConflict = true;
-        conflictType = 'head';
-        continue;
-      } else if (line.startsWith('')) {
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-2a0c
+
+
         conflictType = 'main';
         continue;
       } else if (line.startsWith('        inConflict = false;

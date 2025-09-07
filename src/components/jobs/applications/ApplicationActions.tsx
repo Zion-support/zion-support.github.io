@@ -13,11 +13,16 @@ import { DropdownMenu;
  } from '@/components/ui/dropdown-menu';
 import { Eye, ChevronDown, Loader2  } from 'lucide-react';
 import { JobApplication, ApplicationStatus  } from '@/types/jobs';
-interface ApplicationActionsProps  {application: JobApplication;
+
+interface ApplicationActionsProps {
+  application: JobApplication;
   processingId: string | null;
   onViewApplication: (applicationId: string) => Promise<void>;
   onStatusChange: (applicationId: string, newStatus: ApplicationStatus) => Promise<void>;
-}export function ApplicationActions() {return (<div className='flex items-center justify-end gap-2'>;
+
+}
+
+export function ApplicationActions() {return (<div className='flex items-center justify-end gap-2'>;
       <Button;
         variant='outline';
         size='sm';
@@ -55,8 +60,12 @@ interface ApplicationActionsProps  {application: JobApplication;
           </DropdownMenuItem>;
           <DropdownMenuItem;
             onClick={() => onStatusChange(application.id, 'rejected')}className='text-red-600'          >            onClick={() => onStatusChange(application.id, "hired")}import Link from "next/link",DropdownMenu,DropdownMenuContent,DropdownMenuItem,DropdownMenuTrigger;
-} from "@/components/ui/dropdown-menu",import { Button } from "@/components/ui/button",import { JobApplication, ApplicationStatus } from "@/types/jobs",interface ApplicationActionsProps  {application: JobApplication,processingId: string | null,onViewApplication: (applicationId: string) => Promise<void>,onStatusChange: (applicationId: string, newStatus: ApplicationStatus) => Promise<void>;
-}export function ApplicationActions() {return (<div className="flex items-center justify-end gap-2">;
+} from "@/components/ui/dropdown-menu",import { Button } from "@/components/ui/button",import { JobApplication, ApplicationStatus } from "@/types/jobs",interface ApplicationActionsProps {
+  application: JobApplication,processingId: string | null,onViewApplication: (applicationId: string) => Promise<void>,onStatusChange: (applicationId: string, newStatus: ApplicationStatus) => Promise<void>;
+
+}
+
+export function ApplicationActions() {return (<div className="flex items-center justify-end gap-2">;
       <Button;
         variant="outline";
         size="sm";
@@ -95,8 +104,8 @@ interface ApplicationActionsProps  {application: JobApplication;
           <DropdownMenuItem;
             onClick={() => onStatusChange(application.id, "rejected")}
             className="text-red-600";
-            className='text-red-600';
-          >;
+            className='text-red-600'>
+
             Reject;
           </DropdownMenuItem>;
         </DropdownMenuContent>;
@@ -104,8 +113,8 @@ interface ApplicationActionsProps  {application: JobApplication;
       <Button;
         variant="default";
         size="sm";
-        asChild;
-      >;
+        asChild>
+
             onClick={() => onStatusChange(application && application.id, 'hired')}          >;
             Shortlist;
           </DropdownMenuItem>;
@@ -129,8 +138,13 @@ interface ApplicationActionsProps  {application: JobApplication;
             className="text-red-600";import Link from 'next / link';
 import { DropdownMenu,DropdownMenuContent,DropdownMenuItem,DropdownMenuTrigger} from '@/components / ui / dropdown - menu';
 import { Button  } from '@/components / ui / button';
-interface ApplicationActionsProps  {application: JobApplication,processingId: string | null,onViewApplication: (applicationId: string) => Promise<void>,onStatusChange: (applicationId: string, newStatus: ApplicationStatus) => Promise<void>;
-}export function ApplicationActions() {return (<div className="flex items-center justify-end gap-2">;
+
+interface ApplicationActionsProps {
+  application: JobApplication,processingId: string | null,onViewApplication: (applicationId: string) => Promise<void>,onStatusChange: (applicationId: string, newStatus: ApplicationStatus) => Promise<void>;
+
+}
+
+export function ApplicationActions() {return (<div className="flex items-center justify-end gap-2">;
       <Button;
         variant="outline";
         size="sm";
@@ -170,7 +184,8 @@ interface ApplicationActionsProps  {application: JobApplication,processingId: st
           </DropdownMenuItem>;
           <DropdownMenuItem;
             on_click={() => onStatusChange (application.id, "rejected")}
-            className="text - red - 600";>;
+            className="text - red - 600">
+
             Reject;
           </DropdownMenuItem>;
         </DropdownMenuContent>;
@@ -179,12 +194,14 @@ interface ApplicationActionsProps  {application: JobApplication,processingId: st
       <Button;
         variant="default";
         size="sm";
-        as_child;
-      >;
+        as_child>
+
           Contact;
         </Link>;
-      </Button>;
-    </div>)}<Button variant='default' size='sm' asChild>;
+      </Button>
+    </div>
+  );
+}<Button variant='default' size='sm' asChild>;
         <Link href={`/messages?talentId=${application.talent_id}`}>;
           Contact;
         </Link>;

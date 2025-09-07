@@ -4,6 +4,7 @@ import Footer from '../components/Footer';
 import SEO from '../components/SEO';
 
 const Support: React.FC = () => {
+ ;
   return (
     <>
       <SEO title="Support" description="Support page" url="/support" />
@@ -18,7 +19,8 @@ const Support: React.FC = () => {
         <Footer />
       </div>
     </>
-  );
+  )
 };
+
 
 export default Support;

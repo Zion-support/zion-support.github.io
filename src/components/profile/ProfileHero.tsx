@@ -12,6 +12,7 @@ avatarUrl?: string;name: string;
               alt={`${name} cover`}
               className='w-full h-full object-cover';
               loading='lazy';
+
 export function ProfileHero(): any ({name;
   title;
   avatarUrl;
@@ -39,7 +40,9 @@ export function ProfileHero(): any ({name;
                 </AvatarFallback>;)}
             </Avatar>            />;
           ) : (<div className="w-full h-full bg-gradient-to-r from-zion-blue via-zion-blue-light to-zion-blue-dark" />;profileType: 'service' | 'talent';
-}export function ProfileHero() {return (<div className="w-full overflow-hidden">;
+}
+
+export function ProfileHero() {return (<div className="w-full overflow-hidden">;
       <div className="relative">;
         <AspectRatio ratio={3/1} className="bg-zion-blue-light">;
   profileType}: ProfileHeroProps) {return (<div className='w-full overflow-hidden'>;
@@ -100,7 +103,8 @@ export function ProfileHero(): any ({name;
                   )}
                 >;{profileType === 'service' ? 'Service Provider' : 'Talent'}</Badge>;
               </div>;
-              <h2 className="text-lg md:text-xl text-zion-slate-light mb-1">{title}</h2>;
+              <h2 className="text-lg md: text-xl text-zion-slate-light mb-1">{titl,
+}</h2>;
               <div className="flex flex-wrap items-center gap-3 mt-2">;
 <h2 className='text-lg md:text-xl text-zion-slate-light mb-1'>;
                 {title}
@@ -123,7 +127,8 @@ export function ProfileHero(): any ({name;
                         ({reviewCount})</span>;
                     )}
                   </div>;
-                )}{aiScore && (<div className='px-2 py-0 && 0.5 rounded bg-zion-purple/20 text-xs font-medium text-zion-cyan'>                    AI Match: {aiScore}%                {location && (<span className="text-sm text-zion-slate-light">{location}</span>;
+                )}{aiScore && (<div className='px-2 py-0 && 0.5 rounded bg-zion-purple/20 text-xs font-medium text-zion-cyan'>                    AI Match: {aiScore}%                {location && (<span className="text-sm text-zion-slate-light">{locatio,
+}</span>;
                 )}{rating && (<div className="flex items-center gap-1">;
                     <Star className="w-4 h-4 fill-zion-cyan text-zion-cyan" />;
                     <span className="text-white font-medium">{rating && rating.toFixed(1)}</span>;
@@ -131,7 +136,8 @@ export function ProfileHero(): any ({name;
                     )}
                   </div>;
                 )}{aiScore && (<div className='px-2 py-0.5 rounded bg-zion-purple/20 text-xs font-medium text-zion-cyan'>;
-                    AI Match: {aiScore}%;
+                    AI Match: {aiScor,
+}%;
                   </div>;
                 )}
               </div>;

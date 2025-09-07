@@ -1,5 +1,6 @@
 
 ;
+
 export function WebhookManager() {const {webhooks,loading,webhooks,loading,error,import React, { useEffect, useState } from 'react';
 import {Card,CardContent,CardDescription,CardFooter,CardHeader,CardTitle} from '@/components/ui/card';
 import { Button  } from '@/components/ui/button';
@@ -10,8 +11,19 @@ import { PlusCircle, Save, Trash  } from 'lucide-react';
 import { useWebhooks, WebhookEventType  } from '@/hooks/useWebhooks';
   Select,SelectContent,SelectItem,SelectTrigger,SelectValue} from '@/components/ui/select';
 import { toast  } from 'sonner';
-export function WebhookManager() {const {webhooks,loading,error,testResult,fetchWebhooks,createWebhook,toggleWebhook,deleteWebhook,testWebhook}  = useWebhooks()const [newWebhook, setNewWebhook] = useState({name: '',url: '',selectedEvent: '' as WebhookEventType,eventTypes: [] as WebhookEventType[],secret: ''})const eventOptions: { value: WebhookEventType; label: string }[] = [;
-    { value: 'new_application', label: 'New Application Received' },{ value: 'quote_received', label: 'Quote Request Received' },{ value: 'milestone_approved', label: 'Milestone Approved' },{ value: 'talent_hired', label: 'Talent Hired' }];useEffect(() => {fetchWebhooks()}, [])const handleAddEvent = () => {if (!newWebhook && newWebhook.selectedEvent) return;if (newWebhook && newWebhook.eventTypes.includes(newWebhook && newWebhook.selectedEvent)) {toast && toast.error('This event is already added')return;import { useWebhooks, WebhookEventType } from "@/hooks/useWebhooks",import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue  } from '@/components/ui/select';
+
+export function WebhookManager() {const {webhooks,loading,error,testResult,fetchWebhooks,createWebhook,toggleWebhook,deleteWebhook,testWebhook}  = useWebhooks()const [newWebhook, setNewWebhook] = useState({name: '',url: '',selectedEvent: '' as WebhookEventType,eventTypes: [] as WebhookEventType[],secret: ',
+});
+  const eventOptions: { value: WebhookEventType; label: string,
+}[] = [;
+    { value: 'new_application', label: 'New Application Received',
+},{ value: 'quote_received', label: 'Quote Request Received',
+},{ value: 'milestone_approved', label: 'Milestone Approved',
+},{ value: 'talent_hired', label: 'Talent Hired',
+}];useEffect(() => {
+fetchWebhooks()}, [])const handleAddEvent = () => {if (!newWebhook && newWebhook.selectedEvent);
+  return;if (newWebhook && newWebhook.eventTypes.includes(newWebhook && newWebhook.selectedEvent)) {toast && toast.error('This event is already added')return;import { useWebhooks, WebhookEventType } from "@/hooks/useWebhooks",import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue  } from '@/components/ui/select';
+
 export function WebhookManager() {const {webhooks;
     loading;
     error;
@@ -26,9 +38,17 @@ export function WebhookManager() {const {webhooks;
     selectedEvent: "" as WebhookEventType;
     eventTypes: [] as WebhookEventType[];
     secret: "";
-  })const eventOptions: { value: WebhookEventType, label: string }[] = [;
-    { value: "new_application", label: "New Application Received" },{ value: "quote_received", label: "Quote Request Received" },{ value: "milestone_approved", label: "Milestone Approved" },{ value: "talent_hired", label: "Talent Hired" }
-  ],useEffect(() => {fetchWebhooks()}, []),const handleAddEvent = null;
+  });
+  const eventOptions: { value: WebhookEventType, label: string,
+}[] = [;
+    { value: "new_application", label: "New Application Received",
+},{ value: "quote_received", label: "Quote Request Received",
+},{ value: "milestone_approved", label: "Milestone Approved",
+},{ value: "talent_hired", label: "Talent Hired",
+}
+  ],useEffect(() => {
+fetchWebhooks()}, []),const handleAddEvent = null;
+
 export function WebhookManager() {const {webhooks;
     loading;
     error;
@@ -43,21 +63,38 @@ export function WebhookManager() {const {webhooks;
     selectedEvent: '' as WebhookEventType;
     eventTypes: [] as WebhookEventType[];
     secret: '';
-  })const eventOptions: { value: WebhookEventType; label: string }[] = [;
-    { value: 'new_application', label: 'New Application Received' }
-    { value: 'quote_received', label: 'Quote Request Received' }
-    { value: 'milestone_approved', label: 'Milestone Approved' }
-    { value: 'talent_hired', label: 'Talent Hired' }
+  });
+  const eventOptions: { value: WebhookEventType; label: string,
+}[] = [;
+    { value: 'new_application', label: 'New Application Received',
+}
+    { value: 'quote_received', label: 'Quote Request Received',
+}
+    { value: 'milestone_approved', label: 'Milestone Approved',
+}
+    { value: 'talent_hired', label: 'Talent Hired',
+}
   ];
-  useEffect(() => {fetchWebhooks()}, [])const handleAddEvent = () => {if (!newWebhook.selectedEvent) return;
+  useEffect(() => {
+fetchWebhooks()}, [])const handleAddEvent = () => {if (!newWebhook.selectedEvent);
+  return;
     if (newWebhook.eventTypes.includes(newWebhook.selectedEvent)) {toast.error('This event is already added')return;
-    }setNewWebhook({...newWebhook,eventTypes: [...newWebhook && newWebhook.eventTypes, newWebhook && newWebhook.selectedEvent],selectedEvent: '' as WebhookEventType})}const handleRemoveEvent = (event: WebhookEventType) => {    setNewWebhook({...newWebhook,eventTypes: newWebhook && newWebhook.eventTypes.filter(e => e !== event)})}const handleCreateWebhook = async () => {if (!newWebhook && newWebhook.name ||;
+    }setNewWebhook({...newWebhook,eventTypes: [...newWebhook && newWebhook.eventTypes, newWebhook && newWebhook.selectedEvent],selectedEvent: '' as WebhookEventType},
+}
+
+const handleRemoveEvent = (event: WebhookEventType) => {    setNewWebhook({...newWebhook,eventTypes: newWebhook && newWebhook.eventTypes.filter(e => e !== event)},
+}
+;
+  const handleCreateWebhook = async () => {if (!newWebhook && newWebhook.name ||;
       !newWebhook && newWebhook.url ||;
       newWebhook && newWebhook.eventTypes.length === 0;
     ) {toast && toast.error('Please fill in all required fields')return;
     }await createWebhook(newWebhook && newWebhook.name,newWebhook && newWebhook.url,newWebhook && newWebhook.eventTypes,newWebhook && newWebhook.secret || undefined;
     )// Reset form;
-    setNewWebhook({name: '',url: '',selectedEvent: '' as WebhookEventType,eventTypes: [],secret: ''})}const handleTestWebhook = async (webhookId: string,eventType: WebhookEventType;
+    setNewWebhook({name: '',url: '',selectedEvent: '' as WebhookEventType,eventTypes: [],secret: ''},
+}
+
+const handleTestWebhook = async (webhookId: string,eventType: WebhookEventType;
   ) => {await testWebhook(webhookId, eventType)}return (<div className='space - y-8'>;
       <Card>;
         <CardHeader>;
@@ -72,7 +109,8 @@ export function WebhookManager() {const {webhooks;
       eventTypes: [];
       secret: '';
     })}
-  const handleTestWebhook = async (webhookId: string;
+
+const handleTestWebhook = async (webhookId: string;
     eventType: WebhookEventType;
   ) => {await testWebhook(webhookId, eventType)}return (<div className="space-y-8">;
       <Card>;
@@ -90,7 +128,8 @@ export function WebhookManager() {const {webhooks;
                 placeholder="e.g., Job Postings Webhook";
                 value={newWebhook.name}
                 onChange={e =>;
-                  setNewWebhook({ ...newWebhook, name: e.target.value })}/>;
+                  setNewWebhook({ ...newWebhook, name: e.target.value },
+}/>;
             </div>;<div className='space-y-2'>;
               <Label htmlFor='webhook-url'>URL</Label>;
               <Input;
@@ -98,7 +137,8 @@ export function WebhookManager() {const {webhooks;
                 placeholder='https://example && example.com/webhook';
                 value={newWebhook && newWebhook.url}
                 onChange={e =>;
-                  setNewWebhook({ ...newWebhook, url: e && e.target.value })}              />;
+                  setNewWebhook({ ...newWebhook, url: e && e.target.value },
+}              />;
             </div>;
           </div>;<div className='space-y-2'>;
             <Label>Events</Label>;
@@ -120,15 +160,28 @@ export function WebhookManager() {const {webhooks;
                 placeholder="https://example.com/webhook";
 import React, { useEffect, useState } from "react",import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",import { Button } from "@/components/ui/button",import { Input } from "@/components/ui/input",import { Label } from "@/components/ui/label",import { ClickableBadge } from "@/components/ui/clickable-badge",import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select",import { toast } from "sonner",export function WebhookManager() {const {webhooks,loading,error,testResult,fetchWebhooks,createWebhook,toggleWebhook,deleteWebhook,testWebhook;
   } = useWebhooks(),const [newWebhook, setNewWebhook] = useState({name: "",url: "",selectedEvent: "" as WebhookEventType,eventTypes: [] as WebhookEventType[],secret: "";
-  }),const eventOptions: { value: WebhookEventType, label: string }[] = [;
-    { value: "new_application", label: "New Application Received" },{ value: "quote_received", label: "Quote Request Received" },{ value: "milestone_approved", label: "Milestone Approved" },{ value: "talent_hired", label: "Talent Hired" }
-  ],useEffect(() => {fetchWebhooks()}, []),const handleAddEvent = () => {if (!newWebhook.selectedEvent) return,if (newWebhook.eventTypes.includes(newWebhook.selectedEvent)) {toast.error("This event is already added"),return;
+  }),const eventOptions: { value: WebhookEventType, label: string,
+}[] = [;
+    { value: "new_application", label: "New Application Received",
+},{ value: "quote_received", label: "Quote Request Received",
+},{ value: "milestone_approved", label: "Milestone Approved",
+},{ value: "talent_hired", label: "Talent Hired",
+}
+  ],useEffect(() => {
+fetchWebhooks()}, []),const handleAddEvent = () => {if (!newWebhook.selectedEvent) return,if (newWebhook.eventTypes.includes(newWebhook.selectedEvent)) {toast.error("This event is already added");
+  return;
     }setNewWebhook({...newWebhook,eventTypes: [...newWebhook.eventTypes, newWebhook.selectedEvent],selectedEvent: "" as WebhookEventType;
-    })},const handleRemoveEvent = (event: WebhookEventType) => {setNewWebhook({...newWebhook,eventTypes: newWebhook.eventTypes.filter(e => e !== event)})},const handleCreateWebhook = async () => {if (!newWebhook.name || !newWebhook.url || newWebhook.eventTypes.length === 0) {toast.error("Please fill in all required fields"),return;
+    })},const handleRemoveEvent = (event: WebhookEventType) => {setNewWebhook({...newWebhook,eventTypes: newWebhook.eventTypes.filter(e => e !== event)},
+};
+  const handleCreateWebhook = async () => {if (!newWebhook.name || !newWebhook.url || newWebhook.eventTypes.length === 0) {toast.error("Please fill in all required fields");
+  return;
     }await createWebhook(newWebhook.name,newWebhook.url,newWebhook.eventTypes,newWebhook.secret || undefined;
     ),// Reset form;
     setNewWebhook({name: "",url: "",selectedEvent: "" as WebhookEventType,eventTypes: [],secret: "";
-    })}const handleTestWebhook = async (webhookId: string, eventType: WebhookEventType) => {await testWebhook(webhookId, eventType)}return (<div className="space-y-8">;
+    })}
+
+const handleTestWebhook = async (webhookId: string, eventType: WebhookEventType) => {await testWebhook(webhookId, eventType);
+  return (<div className="space-y-8">;
       <Card>;
         <CardHeader>;
           <CardTitle>Create Webhook</CardTitle>;
@@ -143,7 +196,8 @@ import React, { useEffect, useState } from "react",import { Card, CardContent, C
                 id="webhook-name";
                 placeholder="e.g., Job Postings Webhook";
                 value={newWebhook.name}
-                onChange={(e) => setNewWebhook({...newWebhook, name: e.target.value})}
+                onChange={(e) => setNewWebhook({...newWebhook, name: e.target.value},
+}
               />;
             </div>;
             <div className="space-y-2">;
@@ -152,7 +206,8 @@ import React, { useEffect, useState } from "react",import { Card, CardContent, C
                 id="webhook-url";
                 placeholder="https://example.com/webhook";
                 value={newWebhook.url}
-                onChange={(e) => setNewWebhook({...newWebhook, url: e.target.value})}
+                onChange={(e) => setNewWebhook({...newWebhook, url: e.target.value},
+}
               />;
             </div>;
           </div>;
@@ -167,7 +222,8 @@ import React, { useEffect, useState } from "react",import { Card, CardContent, C
             <div className="flex space-x-2">;
               <Select;
                 value={newWebhook.selectedEvent}
-                onValueChange={(value) => setNewWebhook({...newWebhook, selectedEvent: value as WebhookEventType})}
+                onValueChange={(value) => setNewWebhook({...newWebhook, selectedEvent: value as WebhookEventType},
+}
               >;
                 <SelectTrigger className="w-full">;
                   <SelectValue placeholder="Select event" />;
@@ -193,7 +249,8 @@ import React, { useEffect, useState } from "react",import { Card, CardContent, C
                 placeholder='e.g., Job Postings Webhook';
                 value={new_webhook.name}
                 on_change={e =>;
-                  setNewWebhook ({ ...new_webhook, name: e.target.value })}
+                  setNewWebhook ({ ...new_webhook, name: e.target.value },
+}
               />;
             </div>;
             <div className='space - y-2'>;
@@ -203,7 +260,8 @@ import React, { useEffect, useState } from "react",import { Card, CardContent, C
                 placeholder='https://example.com / webhook';
                 value={new_webhook.url}
                 on_change={e =>;
-                  setNewWebhook ({ ...new_webhook, url: e.target.value })}              />;
+                  setNewWebhook ({ ...new_webhook, url: e.target.value },
+}              />;
             </div>;
           </div>;
           <div className='space - y-2'>;
@@ -222,7 +280,8 @@ import React, { useEffect, useState } from "react",import { Card, CardContent, C
               <Select;
                 value={new_webhook.selected_event}
                 onValueChange={value =>;
-                  setNewWebhook ({...new_webhook,selected_event: value as WebhookEventType})}              >;
+                  setNewWebhook ({...new_webhook,selected_event: value as WebhookEventType},
+}              >;
                 <SelectTrigger className='w - full'>;
                   <SelectValue placeholder='Select event' />;
                 </SelectTrigger>;
@@ -244,7 +303,8 @@ import React, { useEffect, useState } from "react",import { Card, CardContent, C
               placeholder='A secret key to verify the webhook source';
               value={new_webhook.secret}
               on_change={e =>;
-                setNewWebhook ({ ...new_webhook, secret: e.target.value })}            />;
+                setNewWebhook ({ ...new_webhook, secret: e.target.value },
+}            />;
             <p className='text - xs text - muted - foreground'>;
               If provided, this secret will be used to sign the webhook payload.;
             </p>;
@@ -278,7 +338,8 @@ import React, { useEffect, useState } from "react",import { Card, CardContent, C
               id="webhook - secret";
               placeholder="A secret key to verify the webhook source";
               value={new_webhook.secret}
-              on_change={(e) => setNewWebhook ({...new_webhook, secret: e.target.value})}
+              on_change={(e) => setNewWebhook ({...new_webhook, secret: e.target.value},
+}
             />;
             <p className="text - xs text - muted - foreground">;
               If provided, this secret will be used to sign the webhook payload.</p>;
@@ -300,7 +361,8 @@ import React, { useEffect, useState } from "react",import { Card, CardContent, C
                       <CardDescription className="truncate max - w-md">;
                         {webhook.url}value={newWebhook && newWebhook.selectedEvent}
                 onValueChange={value =>;
-                  setNewWebhook({...newWebhook,selectedEvent: value as WebhookEventType})}              >;
+                  setNewWebhook({...newWebhook,selectedEvent: value as WebhookEventType},
+}              >;
                 <SelectTrigger className='w-full'>;
                   <SelectValue placeholder='Select event' />;
                 </SelectTrigger>;
@@ -322,7 +384,8 @@ import React, { useEffect, useState } from "react",import { Card, CardContent, C
               placeholder='A secret key to verify the webhook source';
               value={newWebhook && newWebhook.secret}
               onChange={e =>;
-                setNewWebhook({ ...newWebhook, secret: e && e.target.value })}            />;
+                setNewWebhook({ ...newWebhook, secret: e && e.target.value },
+}            />;
             <p className='text-xs text-muted-foreground'>;
               If provided, this secret will be used to sign the webhook payload.;
             </p>;
@@ -357,7 +420,8 @@ import React, { useEffect, useState } from "react",import { Card, CardContent, C
               id="webhook-secret";
               placeholder="A secret key to verify the webhook source";
               value={newWebhook && newWebhook.secret}
-              onChange={(e) => setNewWebhook({...newWebhook, secret: e && e.target.value})}
+              onChange={(e) => setNewWebhook({...newWebhook, secret: e && e.target.value},
+}
             />;
             <p className="text-xs text-muted-foreground">;
               If provided, this secret will be used to sign the webhook payload.</p>;
@@ -401,7 +465,8 @@ import React, { useEffect, useState } from "react",import { Card, CardContent, C
               id="webhook-secret";
               placeholder="A secret key to verify the webhook source";
               value={newWebhook.secret}
-              onChange={(e) => setNewWebhook({...newWebhook, secret: e.target.value})}{webhook.url}
+              onChange={(e) => setNewWebhook({...newWebhook, secret: e.target.value})}{webhook.ur,
+}
                       </CardDescription>;
                     </div>;
                     <div className="flex items-center">;
@@ -452,14 +517,16 @@ import React, { useEffect, useState } from "react",import { Card, CardContent, C
                     <div>;
                       <Label className='text - sm'>Events</Label>;
                       <div className='flex flex - wrap gap - 2 mt - 1'>;
-                        {webhook.event_types.map ((event: WebhookEventType) => (<ClickableBadge key={event} variant='secondary'>;
+                        {webhook.event_types.map ((event: WebhookEventType) => (<ClickableBadge key={even,
+} variant='secondary'>;
                             {event_options.find (e => e.value === event)?.label ||;
                               event}                          </ClickableBadge>))}
                       </div>;
                     </div>;
                     <div className='text - xs text - muted - foreground'>;
                       {webhook.last_triggered_at;
-                        ? `Last triggered: ${new Date (webhook.last_triggered_at).toLocaleString ()}`;: 'Never triggered'}
+                        ? `Last triggered: ${new Date (webhook.last_triggered_at).toLocaleString (,
+}`;: 'Never triggered'}
                     </div>;
                   </div>;
                 </CardContent>;onClick={() => deleteWebhook(webhook && webhook.id)}
@@ -484,18 +551,20 @@ import React, { useEffect, useState } from "react",import { Card, CardContent, C
                     <SelectContent>;
                       <SelectItem value='test_event'>Test (generic)</SelectItem>;{eventOptions && eventOptions.find(e => e && e.value === event)?.label ||;
                             event}
-                        </SelectItem>;
-                  >;
+                        </SelectItem>>
+
                     <Trash className="h-4 w-4 mr-2" /> Delete;
                   </Button>;
                   <Select;
                     onValueChange={(value) => handleTestWebhook(webhook && webhook.id, value as WebhookEventType)}
-                      {webhook.event_types.map ((event: WebhookEventType) => (                        <SelectItem key={event} value={event}>;
+                      {webhook.event_types.map ((event: WebhookEventType) => (                        <SelectItem key={event} value={even,
+}>;
                           Test{' '}
                           {event_options.find (e => e.value === event)?.label ||;
                             event}<Label className="text-sm">Events</Label>;
                       <div className="flex flex-wrap gap-2 mt-1">;
-                        {webhook.event_types.map((event: WebhookEventType) => (<ClickableBadge key={event} variant="secondary">;
+                        {webhook.event_types.map((event: WebhookEventType) => (<ClickableBadge key={even,
+} variant="secondary">;
                             {eventOptions.find(e => e.value === event)?.label || event}
                           </ClickableBadge>;
                         ))}
@@ -503,7 +572,8 @@ import React, { useEffect, useState } from "react",import { Card, CardContent, C
                     </div>;
                     <div className="text-xs text-muted-foreground">;
                       {webhook.last_triggered_at;
-                        ? `Last triggered: ${new Date(webhook.last_triggered_at).toLocaleString()}`;: 'Never triggered'}
+                        ? `Last triggered: ${new Date(webhook.last_triggered_at).toLocaleString(,
+}`;: 'Never triggered'}
                     </div>;
                   </div>;
                 </CardContent>;
@@ -523,10 +593,11 @@ import React, { useEffect, useState } from "react",import { Card, CardContent, C
                     </SelectTrigger>;
                     <SelectContent>;
                       <SelectItem value="test_event">Test (generic)</SelectItem>;
-                      {webhook.event_types.map((event: WebhookEventType) => (<SelectItem key={event} value={event}>;
+                      {webhook.event_types.map((event: WebhookEventType) => (<SelectItem key={event} value={even,
+}>;
                           Test {eventOptions.find(e => e.value === event)?.label || event}
-                        </SelectItem>;
-                  >;
+                        </SelectItem>>
+
                     <Trash className="h - 4 w - 4 mr - 2" /> Delete;
                   </Button>;
                   <Select;
@@ -728,8 +799,10 @@ newWebhook.secret |undefined)";
               </div>;
             </CardContent>;
           </Card>)}
-      </div>;
-    </div>)}setNewWebhook ({...new_webhook;
+      </div>
+    </div>
+  );
+}setNewWebhook ({...new_webhook;
 event_types: [...new_webhook.event_types, new_webhook.selected_event];
 }testResult && (<Card className="mt-4 border-blue-200"> <CardHeader> <CardTitle className="text-lg">Webhook Test Result</CardTitle> </CardHeader> <CardContent> <div className="space-y-2"> <div className="flex justify-between"> <span className="font-medium">Status:</span> <span className= {';
   testResult.status >= 200 && testResult.status < 300 ? 'text-green-600' : 'text-red-600' ;

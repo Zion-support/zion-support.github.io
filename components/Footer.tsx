@@ -30,9 +30,17 @@ import Link from 'next/link';
 import { motion  } from 'framer-motion';
 import { MapPin,Phone,Mail,Facebook,Twitter,Linkedin,Instagram,Github;
  } from 'lucide-react';
-const socialLinks = [;
-  { name: 'Facebook', href: '#', icon: Facebook },{ name: 'Twitter', href: '#', icon: Twitter },{ name: 'LinkedIn', href: '#', icon: Linkedin },{ name: 'Instagram', href: '#', icon: Instagram },{ name: 'GitHub', href: '#', icon: Github }
-];export default function Footer() {return (<footer className="bg-gray-900 text-white">;
+
+const socialLinks = [
+  { name: 'Facebook', href: '#', icon: Facebook,
+},{ name: 'Twitter', href: '#', icon: Twitter,
+},{ name: 'LinkedIn', href: '#', icon: Linkedin,
+},{ name: 'Instagram', href: '#', icon: Instagram,
+},{ name: 'GitHub', href: '#', icon: Github,
+}
+];
+
+export default function Footer() {return (<footer className="bg-gray-900 text-white">;
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">;
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">;
           <div className="col-span-1 md:col-span-2">;
@@ -45,10 +53,12 @@ const socialLinks = [;
               {socialLinks.map((link) => (<a;
                   key={link.name}
                   href={link.href}
-                  className="text-gray-400 hover:text-white transition-colors";
-                >;
+                  className="text-gray-400 hover:text-white transition-colors">
+
                   <link.icon className="h-5 w-5" />;
-export default function Footer() {export default function Footer() {export default function Footer() {const currentYear = new Date().getFullYear()const footerLinks = {services: [;
+
+export default function Footer() {export default function Footer() {export default function Footer() {const currentYear = new Date().getFullYear(;
+  const footerLinks = {services: [;
 import React from './react';
 import Link from './next / link';
   Phone;
@@ -63,39 +73,99 @@ import Link from './next / link';
 origin/main;
 import { Phone, Mail, MapPin, Facebook, Twitter, Linkedin, Instagram, ArrowRight  } from 'lucide-react';
 origin/automation-improvements-final;
-export default function Footer() {export default function Footer() {const currentYear = new Date().getFullYear()const footerLinks = {services: [;
-      { name: "AI Services", href: "/ai-services" },{ name: "IT Services", href: "/it-services" },{ name: "Micro SaaS", href: "/micro-saas" },export default function Footer() {const currentYear = new Date().getFullYear()const footerLinks = {services: [;
-      { name: "Blockchain", href: "/blockchain" },{ name: "IoT Solutions", href: "/iot" },{ name: "Cybersecurity", href: "/cybersecurity" }
-      { name: "Cybersecurity", href: "/cybersecurity" }
+
+export default function Footer() {export default function Footer() {const currentYear = new Date().getFullYear(;
+  const footerLinks = {services: [;
+      { name: "AI Services", href: "/ai-services",
+},{ name: "IT Services", href: "/it-services",
+},{ name: "Micro SaaS", href: "/micro-saas",
+},export default function Footer() {const currentYear = new Date().getFullYear(;
+  const footerLinks = {services: [;
+      { name: "Blockchain", href: "/blockchain",
+},{ name: "IoT Solutions", href: "/iot",
+},{ name: "Cybersecurity", href: "/cybersecurity",
+}
+      { name: "Cybersecurity", href: "/cybersecurity",
+}
     ],solutions: [;
-      { name: "Enterprise Solutions", href: "/enterprise" }
-      { name: "Startup Solutions", href: "/startup" }
-      { name: "E-commerce", href: "/ecommerce" }
-      { name: "Healthcare", href: "/industries/healthcare" }
-      { name: "Finance", href: "/industries/finance" }
-      { name: "Education", href: "/industries/education" }
+      { name: "Enterprise Solutions", href: "/enterprise",
+}
+      { name: "Startup Solutions", href: "/startup",
+}
+      { name: "E-commerce", href: "/ecommerce",
+}
+      { name: "Healthcare", href: "/industries/healthcare",
+}
+      { name: "Finance", href: "/industries/finance",
+}
+      { name: "Education", href: "/industries/education",
+}
     ];
     company: [;
-      { name: "About Us", href: "/about" }
-      { name: "Our Team", href: "/team" }
-      { name: "Careers", href: "/careers" }
-      { name: "Case Studies", href: "/case-studies" }
-      { name: "News", href: "/news" }
-      { name: "Contact", href: "/contact" }
+      { name: "About Us", href: "/about",
+}
+      { name: "Our Team", href: "/team",
+}
+      { name: "Careers", href: "/careers",
+}
+      { name: "Case Studies", href: "/case-studies",
+}
+      { name: "News", href: "/news",
+}
+      { name: "Contact", href: "/contact",
+}
     ];
     resources: [;
-      { name: "Blog", href: "/blog" },{ name: "Documentation", href: "/docs" },{ name: "API Reference", href: "/api" },{ name: "Tutorials", href: "/tutorials" },{ name: "White Papers", href: "/white - papers" },{ name: "Support", href: "/support" }
-      { name: "Support", href: "/support" }
-    ],const currentYear = new Date().getFullYear()const footerLinks = {services: [;
-      { name: "AI Services", href: "/ai-services" },{ name: "IT Services", href: "/it-services" },{ name: "Micro SaaS", href: "/micro-saas" },{ name: "Blockchain", href: "/blockchain" },{ name: "IoT Solutions", href: "/iot" },{ name: "Cybersecurity", href: "/cybersecurity" }],solutions: [;
-      { name: "Enterprise Solutions", href: "/enterprise" },{ name: "Startup Solutions", href: "/startup" },{ name: "E-commerce", href: "/ecommerce" },{ name: "Healthcare", href: "/industries/healthcare" },{ name: "Finance", href: "/industries/finance" },{ name: "Education", href: "/industries/education" }],company: [;
-      { name: "About Us", href: "/about" },{ name: "Our Team", href: "/team" },{ name: "Careers", href: "/careers" },{ name: "Case Studies", href: "/case-studies" },{ name: "News", href: "/news" },{ name: "Contact", href: "/contact" }],resources: [;
-      { name: "Blog", href: "/blog" },{ name: "Documentation", href: "/docs" },{ name: "API Reference", href: "/api" },{ name: "Tutorials", href: "/tutorials" },{ name: "White Papers", href: "/white-papers" },{ name: "Support", href: "/support" }]}{ name: "Blog", href: "/blog" }
-      { name: "Documentation", href: "/docs" }
-      { name: "API Reference", href: "/api" }
-      { name: "Tutorials", href: "/tutorials" }
-      { name: "White Papers", href: "/white-papers" }
-      { name: "Support", href: "/support" }
+      { name: "Blog", href: "/blog",
+},{ name: "Documentation", href: "/docs",
+},{ name: "API Reference", href: "/api",
+},{ name: "Tutorials", href: "/tutorials",
+},{ name: "White Papers", href: "/white - papers",
+},{ name: "Support", href: "/support",
+}
+      { name: "Support", href: "/support",
+}
+    ],const currentYear = new Date().getFullYear(;
+  const footerLinks = {services: [;
+      { name: "AI Services", href: "/ai-services",
+},{ name: "IT Services", href: "/it-services",
+},{ name: "Micro SaaS", href: "/micro-saas",
+},{ name: "Blockchain", href: "/blockchain",
+},{ name: "IoT Solutions", href: "/iot",
+},{ name: "Cybersecurity", href: "/cybersecurity",
+}],solutions: [;
+      { name: "Enterprise Solutions", href: "/enterprise",
+},{ name: "Startup Solutions", href: "/startup",
+},{ name: "E-commerce", href: "/ecommerce",
+},{ name: "Healthcare", href: "/industries/healthcare",
+},{ name: "Finance", href: "/industries/finance",
+},{ name: "Education", href: "/industries/education",
+}],company: [;
+      { name: "About Us", href: "/about",
+},{ name: "Our Team", href: "/team",
+},{ name: "Careers", href: "/careers",
+},{ name: "Case Studies", href: "/case-studies",
+},{ name: "News", href: "/news",
+},{ name: "Contact", href: "/contact",
+}],resources: [;
+      { name: "Blog", href: "/blog",
+},{ name: "Documentation", href: "/docs",
+},{ name: "API Reference", href: "/api",
+},{ name: "Tutorials", href: "/tutorials",
+},{ name: "White Papers", href: "/white-papers",
+},{ name: "Support", href: "/support" },
+}{ name: "Blog", href: "/blog",
+}
+      { name: "Documentation", href: "/docs",
+}
+      { name: "API Reference", href: "/api",
+}
+      { name: "Tutorials", href: "/tutorials",
+}
+      { name: "White Papers", href: "/white-papers",
+}
+      { name: "Support", href: "/support",
+}
     ];
   }
   return (<footer className="bg-gray-900 text-white">;
@@ -126,19 +196,63 @@ export default function Footer() {export default function Footer() {const curren
                   Middletown DE 19709;
                 </span>;
                 <span>364 E Main St STE 1008<br />Middletown DE 19709</span>;
-import { Mail, Phone, MapPin, Linkedin, Twitter, Github, Facebook, Instagram } from lucide-react';const Footer: React.FC = () => {const currentYear = new Date().getFullYear(),const services = {'AI Solutions: [;
-      { name: 'AI-Powered Email Responder', href: /ai-services#ai-email-responder' },{ name: 'AI Content Generation, href: '/ai-services#ai-content-generation' },{ name: Computer Vision Solutions', href: '/ai-services#computer-vision },{ name: 'Natural Language Processing', href: /ai-services#nlp' },{ name: 'Machine Learning Models, href: '/ai-services#machine-learning' },{ name: AI Analytics Platform', href: '/ai-services#ai-analytics }
+import { Mail, Phone, MapPin, Linkedin, Twitter, Github, Facebook, Instagram } from lucide-react';
+
+const Footer: React.FC = () => {const currentYear = new Date().getFullYear();
+  const services = {'AI Solutions: [;
+      { name: 'AI-Powered Email Responder', href: /ai-services#ai-email-responder',
+},{ name: 'AI Content Generation, href: '/ai-services#ai-content-generation',
+},{ name: Computer Vision Solutions', href: '/ai-services#computer-vision,
+},{ name: 'Natural Language Processing', href: /ai-services#nlp',
+},{ name: 'Machine Learning Models, href: '/ai-services#machine-learning',
+},{ name: AI Analytics Platform', href: '/ai-services#ai-analytics,
+}
     ],'IT Services': [;
-      { name: Cloud Migration', href: '/it-services#cloud-migration },{ name: 'Cybersecurity Solutions', href: /it-services#cybersecurity' },{ name: 'DevOps Automation, href: '/it-services#devops' },{ name: Infrastructure Management', href: '/it-services#infrastructure },{ name: 'Data Analytics', href: /it-services#data-analytics' },{ name: 'Network Security, href: '/it-services#network-security' }
+      { name: Cloud Migration', href: '/it-services#cloud-migration,
+},{ name: 'Cybersecurity Solutions', href: /it-services#cybersecurity',
+},{ name: 'DevOps Automation, href: '/it-services#devops',
+},{ name: Infrastructure Management', href: '/it-services#infrastructure,
+},{ name: 'Data Analytics', href: /it-services#data-analytics',
+},{ name: 'Network Security, href: '/it-services#network-security',
+}
     ],Micro SAAS': [;
-      { name: 'CRM Solutions, href: '/micro-saas#crm' },{ name: Project Management', href: '/micro-saas#project-management },{ name: 'Email Marketing', href: /micro-saas#email-marketing' },{ name: 'AI Content Tools, href: '/micro-saas#ai-content-tools' },{ name: Analytics Dashboard', href: '/micro-saas#analytics-dashboard },{ name: 'Automation Tools', href: /micro-saas#automation-tools' }
+      { name: 'CRM Solutions, href: '/micro-saas#crm',
+},{ name: Project Management', href: '/micro-saas#project-management,
+},{ name: 'Email Marketing', href: /micro-saas#email-marketing',
+},{ name: 'AI Content Tools, href: '/micro-saas#ai-content-tools',
+},{ name: Analytics Dashboard', href: '/micro-saas#analytics-dashboard,
+},{ name: 'Automation Tools', href: /micro-saas#automation-tools',
+}
     ];
-  }const company = [;
-    { name: 'About Us, href: '/about' },{ name: Our Team', href: '/team },{ name: 'Careers', href: /careers' },{ name: 'Case Studies, href: '/case-studies' },{ name: Blog', href: '/blog },{ name: 'Press', href: /press' }
-  ];const resources = [;
-    { name: 'Documentation, href: '/docs' },{ name: API Reference', href: '/api-docs },{ name: 'Tutorials', href: /tutorials' },{ name: 'Support, href: '/support' },{ name: FAQ', href: '/faq },{ name: 'Contact', href: /contact' }
-  ];const socialLinks = [;
-    { name: 'LinkedIn, href: 'https://linkedin.com/company/ziontechgroup', icon: Linkedin },{ name: Twitter', href: 'https://twitter.com/ziontechgroup, icon: Twitter },{ name: 'GitHub', href: https://github.com/ziontechgroup', icon: Github },{ name: 'Facebook, href: 'https://facebook.com/ziontechgroup', icon: Facebook },{ name: Instagram', href: 'https://instagram.com/ziontechgroup', icon: Instagram }
+  }
+
+const company = [
+  { name: 'About Us, href: '/about',
+},{ name: Our Team', href: '/team,
+},{ name: 'Careers', href: /careers',
+},{ name: 'Case Studies, href: '/case-studies',
+},{ name: Blog', href: '/blog,
+},{ name: 'Press', href: /press',
+}
+  ];
+
+const resources = [
+  { name: 'Documentation, href: '/docs',
+},{ name: API Reference', href: '/api-docs,
+},{ name: 'Tutorials', href: /tutorials',
+},{ name: 'Support, href: '/support',
+},{ name: FAQ', href: '/faq,
+},{ name: 'Contact', href: /contact',
+}
+  ];
+
+const socialLinks = [
+  { name: 'LinkedIn, href: 'https://linkedin.com/company/ziontechgroup', icon: Linkedin,
+},{ name: Twitter', href: 'https://twitter.com/ziontechgroup, icon: Twitter,
+},{ name: 'GitHub', href: https://github.com/ziontechgroup', icon: Github,
+},{ name: 'Facebook, href: 'https://facebook.com/ziontechgroup', icon: Facebook,
+},{ name: Instagram', href: 'https://instagram.com/ziontechgroup', icon: Instagram,
+}
   ];return (<footer className="bg-gray-900 text-white>;
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">;
         <div className=grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">;
@@ -191,11 +305,16 @@ import {
 } from 'lucide-react';
 
 const socialLinks = [
-  { name: 'Facebook', href: '#', icon: Facebook },
-  { name: 'Twitter', href: '#', icon: Twitter },
-  { name: 'LinkedIn', href: '#', icon: Linkedin },
-  { name: 'Instagram', href: '#', icon: Instagram },
-  { name: 'GitHub', href: '#', icon: Github }
+  { name: 'Facebook', href: '#', icon: Facebook,
+},
+  { name: 'Twitter', href: '#', icon: Twitter,
+},
+  { name: 'LinkedIn', href: '#', icon: Linkedin,
+},
+  { name: 'Instagram', href: '#', icon: Instagram,
+},
+  { name: 'GitHub', href: '#', icon: Github,
+}
 ];
 
 export default function Footer() {
@@ -214,7 +333,7 @@ export default function Footer() {
                 <a
                   key={link.name}
                   href={link.href}
-                  className="text-gray-400 hover:text-white transition-colors"
+                  className="text-gray-400 hover: text-white transition-colors"
                 >
                   <link.icon className="h-5 w-5" />
                 </a>
@@ -233,7 +352,8 @@ export default function Footer() {
                   <br />
                   Middletown DE 19709
                 </span>
-            {/* Contact Info */}
+            {/* Contact Info *,
+}
               </div>;
             </div>;
           </div>;
@@ -241,11 +361,22 @@ export default function Footer() {
 ursor/automate-test-improve-and-merge-code-646c;
 import React from 'react';
   MapPin,Phone,Mail,Facebook,Twitter,Linkedin,Instagram,Github;
-} from 'lucide-react';const socialLinks = [;
-  { name: 'Facebook', href: '#', icon: Facebook },{ name: 'Twitter', href: '#', icon: Twitter },{ name: 'LinkedIn', href: '#', icon: Linkedin },{ name: 'Instagram', href: '#', icon: Instagram },{ name: 'GitHub', href: '#', icon: Github }
-];export default function Footer() {return (<footer className="bg-gray-900 text-white">;
+} from 'lucide-react';
+
+const socialLinks = [
+  { name: 'Facebook', href: '#', icon: Facebook,
+},{ name: 'Twitter', href: '#', icon: Twitter,
+},{ name: 'LinkedIn', href: '#', icon: Linkedin,
+},{ name: 'Instagram', href: '#', icon: Instagram,
+},{ name: 'GitHub', href: '#', icon: Github,
+}
+];
+
+export default function Footer() {return (<footer className="bg-gray-900 text-white">;
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">;
-const Footer: React.FC = () => {return (<footer className="bg-gray-800 text-white">;
+
+const Footer: React.FC = () => ;
+  return (<footer className="bg-gray-800 text-white">;
       <div className="max-w-7xl mx-auto py-12 px-4 sm: px-6 lg:px-8">;
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">;
           <div className="col-span-1 md:col-span-2">;
@@ -258,8 +389,8 @@ const Footer: React.FC = () => {return (<footer className="bg-gray-800 text-whit
               {socialLinks.map((link) => (<a;
                   key={link.name}
                   href={link.href}
-                  className="text-gray-400 hover:text-white transition-colors";
-                >;
+                  className="text-gray-400 hover:text-white transition-colors">
+
                   <link.icon className="h-5 w-5" />;
                 </a>;
               ))}
@@ -276,9 +407,10 @@ ursor/automate-test-improve-and-merge-code-646c;
             <h3 className="text-lg font-semibold mb-4">Services</h3>;
             <ul className="space-y-2">;
               {footerLinks.services.map((link) => (<li key={link.name}>;
-                    className="text-gray-300 hover:text-white transition-colors";
-                  >;
-                    {link.name}
+                    className="text-gray-300 hover: text-white transition-colors">
+
+                    {link.nam,
+}
                   </Link>;
                 </li>;
             <h3 className="text-lg font-semibold mb-6>Services</h3>;
@@ -289,9 +421,10 @@ ursor/automate-test-improve-and-merge-code-646c;
                     {links.slice(0, 3).map((link) => (<li key={link.name}>;
                         <Link;
                           href={link.href}
-                          className="text-sm text-gray-300 hover:text-white transition-colors";
-                        >;
-                          {link.name}
+                          className="text-sm text-gray-300 hover: text-white transition-colors">
+
+                          {link.nam,
+}
                         </Link>;
                       </li>;
                     ))}
@@ -302,9 +435,10 @@ ursor/automate-test-improve-and-merge-code-646c;
             <ul className="space-y-2">
               {footerLinks.services.map((link) => (
                 <li key={link.name}>
-                    className="text-gray-300 hover:text-white transition-colors"
+                    className="text-gray-300 hover: text-white transition-colors"
                   >
-                    {link.name}
+                    {link.nam,
+}
                   </Link>
                 </li>
 
@@ -320,12 +454,13 @@ ursor/automate-test-improve-and-merge-code-646c;
                       <li key={link.name}>
                         <Link
                           href={link.href}
-                          className="text-sm text-gray-300 hover:text-white transition-colors"
+                          className="text-sm text-gray-300 hover: text-white transition-colors"
                         >
                           {link.name}
                         </Link>
                       </li>
-                    ))}
+                    ),
+}
                   </ul>
                 </div>
             <div className="space-y-3">;
@@ -427,9 +562,10 @@ ursor/automate-test-improve-and-merge-code-646c;
               {resources.map((link) => (<li key={link.name}>;
                   <Link;
                     href={link.href}
-                    className="text-gray-300 hover:text-blue-400 transition-colors duration-200";
-                  >;
-                    {link.name}
+                    className="text-gray-300 hover: text-blue-400 transition-colors duration-200">
+
+                    {link.nam,
+}
                   </Link>;
                 </li>;
               ))}
@@ -449,9 +585,10 @@ ursor/automate-test-improve-and-merge-code-646c;
               {footerLinks && footerLinks.resources.map((link) => (<li key={link && link.name}>;
                   <Link;
                     href={link.href}
-                    className="text-gray-300 hover:text-white transition-colors";
-                  >;
-                    {link.name}
+                    className="text-gray-300 hover: text-white transition-colors">
+
+                    {link.nam,
+}
                   </Link>;
                 </li>;
               ))}
@@ -465,24 +602,24 @@ ursor/automate-test-improve-and-merge-code-646c;
                 href="https://linkedin.com/company/zion-tech-group";
                 target="_blank";
                 rel="noopener noreferrer";
-                className="text-gray-400 hover:text-white transition-colors";
-              >;
+                className="text-gray-400 hover:text-white transition-colors">
+
                 <Linkedin className="w-5 h-5" />;
               </a>;
               <a;
                 href="https://twitter.com/ziontechgroup";
                 target="_blank";
                 rel="noopener noreferrer";
-                className="text-gray-400 hover:text-white transition-colors";
-              >;
+                className="text-gray-400 hover:text-white transition-colors">
+
                 <Twitter className="w-5 h-5" />;
               </a>;
               <a;
                 href="https://facebook.com/ziontechgroup";
                 target="_blank";
                 rel="noopener noreferrer";
-                className="text-gray-400 hover:text-white transition-colors";
-              >;
+                className="text-gray-400 hover:text-white transition-colors">
+
                 <Facebook className="w-5 h-5" />;
               </a>;
               <a;
@@ -491,8 +628,8 @@ ursor/automate-test-improve-and-merge-code-646c;
                 rel="noopener noreferrer";
               <Link;
                 href="/privacy";
-                className="text-gray-400 hover:text-white transition-colors";
-              >;
+                className="text-gray-400 hover:text-white transition-colors">
+
               <Link href="/privacy" className="text-gray-400 hover:text-white transition-colors">;
             {/* Social Links */}
             <div className=mt-6">;
@@ -576,12 +713,13 @@ ursor/automate-test-improve-and-merge-code-646c;
                 <li key={link.name}>
                   <Link
                     href={link.href}
-                    className="text-gray-300 hover:text-blue-400 transition-colors duration-200"
+                    className="text-gray-300 hover: text-blue-400 transition-colors duration-200"
                   >
                     {link.name}
                   </Link>
                 </li>
-              ))}
+              ),
+}
             </ul>
           </div>
           
@@ -652,8 +790,8 @@ ursor/automate-test-improve-and-merge-code-646c;
               <Link href="/privacy" className=text-gray-400 hover:text-white transition-colors">;
               <Link;
                 href="/privacy";
-                className="text-gray-400 hover:text-white transition-colors";
-              >;
+                className="text-gray-400 hover:text-white transition-colors">
+
                 Privacy Policy;
               </Link>;
                 className="text-gray-400 hover:text-white transition-colors">;
@@ -687,8 +825,8 @@ ursor/automate-test-improve-and-merge-code-646c;
                 <svg;
                   className="h-6 w-6";
                   fill="currentColor";
-                  viewBox="0 0 24 24";
-                >;
+                  viewBox="0 0 24 24">
+
                   <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />;
                 </svg>;
               </a>;
@@ -697,8 +835,8 @@ ursor/automate-test-improve-and-merge-code-646c;
                 <svg;
                   className="h-6 w-6";
                   fill="currentColor";
-                  viewBox="0 0 24 24";
-                >;
+                  viewBox="0 0 24 24">
+
                   <path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z" />;
                 </svg>;
               </a>;
@@ -707,8 +845,8 @@ ursor/automate-test-improve-and-merge-code-646c;
                 <svg;
                   className="h-6 w-6";
                   fill="currentColor";
-                  viewBox="0 0 24 24";
-                >;
+                  viewBox="0 0 24 24">
+
                   <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />;
                 </svg>;
               </a>;
@@ -720,32 +858,32 @@ ursor/automate-test-improve-and-merge-code-646c;
               <li>;
                 <Link;
                   href="/services";
-                  className="text-gray-300 hover:text-white";
-                >;
+                  className="text-gray-300 hover:text-white">
+
                   Web Development;
                 </Link>;
               </li>;
               <li>;
                 <Link;
                   href="/services";
-                  className="text-gray-300 hover:text-white";
-                >;
+                  className="text-gray-300 hover:text-white">
+
                   Mobile Apps;
                 </Link>;
               </li>;
               <li>;
                 <Link;
                   href="/services";
-                  className="text-gray-300 hover:text-white";
-                >;
+                  className="text-gray-300 hover:text-white">
+
                   Cloud Solutions;
                 </Link>;
               </li>;
               <li>;
                 <Link;
                   href="/services";
-                  className="text-gray-300 hover:text-white";
-                >;
+                  className="text-gray-300 hover:text-white">
+
                   AI & ML;
                 </Link>;
               </li>;
@@ -762,16 +900,16 @@ ursor/automate-test-improve-and-merge-code-646c;
               <li>;
                 <Link;
                   href="/contact";
-                  className="text-gray-300 hover:text-white";
-                >;
+                  className="text-gray-300 hover:text-white">
+
                   Contact;
                 </Link>;
               </li>;
               <li>;
                 <Link;
                   href="/careers";
-                  className="text-gray-300 hover:text-white";
-                >;
+                  className="text-gray-300 hover:text-white">
+
                   Careers;
                 </Link>;
               </li>;
@@ -792,14 +930,14 @@ ursor/automate-test-improve-and-merge-code-646c;
             <div className="flex space-x-6 mt-4 md: mt-0">;
               <Link;
                 href="/privacy";
-                className="text-gray-300 hover:text-white text-sm";
-              >;
+                className="text-gray-300 hover:text-white text-sm">
+
                 Privacy Policy;
               </Link>;
               <Link;
                 href="/terms";
-                className="text-gray-300 hover:text-white text-sm";
-              >;
+                className="text-gray-300 hover:text-white text-sm">
+
                 Terms of Service;
               </Link>;
             </div>;
@@ -808,7 +946,9 @@ ursor/automate-test-improve-and-merge-code-646c;
       </div>;
     </footer>;
   )}ursor/automate-test-improve-and-merge-code-646c;
-}}export default Footer;
+}}
+
+export default Footer;
               <Link
         
         <div className="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">

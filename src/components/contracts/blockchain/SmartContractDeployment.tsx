@@ -12,8 +12,13 @@ import { Loader2, ShieldCheck, Download  } from 'lucide-react';
 import { toast  } from 'sonner';
 import { logErrorToProduction  } from '@/utils/productionLogger';
 import React, { useState } from "react",import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",import { Button } from "@/components/ui/button",import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group",import { Label } from "@/components/ui/label",import { Input } from "@/components/ui/input",import { Switch } from "@/components/ui/switch",import { BlockchainNetwork, DeploymentOptions } from "@/types/smart-contracts",import { logErrorToProduction } from '@/utils/productionLogger';
-interface SmartContractDeploymentProps  {solidityCode: string,onDeploy: (options: DeploymentOptions) => Promise<void>,isDeploying: boolean;
-}export function SmartContractDeployment() {const [deploymentOptions, setDeploymentOptions] = useState<DeploymentOptions>({network: 'none';
+
+interface SmartContractDeploymentProps {
+  solidityCode: string,onDeploy: (options: DeploymentOptions) => Promise<void>,isDeploying: boolean;
+
+}
+
+export function SmartContractDeployment() {const [deploymentOptions, setDeploymentOptions] = useState<DeploymentOptions>({network: 'none';
     useEscrow: true;
     deployToChain: false;
     walletAddress: '';import React, { useState } from './react';
@@ -26,8 +31,12 @@ import { Switch   } from '@/components / ui / switch';
 import { BlockchainNetwork, DeploymentOptions   } from '@/types / smart - contracts';
 import { Loader2, ShieldCheck, Download } from 'lucide-react'import { toast   } from './sonner';
 import { logErrorToProduction } from '@/utils / production_logger';
-interface SmartContractDeploymentProps  {solidity_code: string,on_deploy: (options: DeploymentOptions, ) => Promise < void>,is_deploying: boolean;
+
+interface SmartContractDeploymentProps {
+  solidity_code: string,on_deploy: (options: DeploymentOptions, ) => Promise < void>,is_deploying: boolean;
+
 }
+
 export /**;
  * SmartContractDeployment - Function description;
  */;
@@ -38,14 +47,26 @@ if ( {) {$2;
       toast.error ("Please enter a wallet address for blockchain deployment")return;
     }
     try {await on_deploy (deployment_options)} catch (error) {logErrorToProduction ('Deployment error:', { data: error })}
-  }}),const handleDeployContract = async () => {if (deploymentOptions.deployToChain && !deploymentOptions.walletAddress) {toast.error("Please enter a wallet address for blockchain deployment"),return;
-import { toast } from "sonner",import {logErrorToProduction} from '@/utils/productionLogger',interface SmartContractDeploymentProps  {solidityCode: string,onDeploy: (options: DeploymentOptions) => Promise<void>,isDeploying: boolean;
-}export function SmartContractDeployment() {const [deploymentOptions, setDeploymentOptions] = useState<DeploymentOptions>({network: 'none',useEscrow: true,deployToChain: false,walletAddress: '';
-  }),const handleDeployContract = async () => {if (deploymentOptions.deployToChain && !deploymentOptions.walletAddress) {toast.error("Please enter a wallet address for blockchain deployment"),return;
+  ,
+}),const handleDeployContract = async () => {if (deploymentOptions.deployToChain && !deploymentOptions.walletAddress) {toast.error("Please enter a wallet address for blockchain deployment");
+  return;
+import { toast } from "sonner",import {logErrorToProduction} from '@/utils/productionLogger',interface SmartContractDeploymentProps {
+  solidityCode: string,onDeploy: (options: DeploymentOptions) => Promise<void>,isDeploying: boolean;
+
+}
+
+export function SmartContractDeployment() {const [deploymentOptions, setDeploymentOptions] = useState<DeploymentOptions>({network: 'none',useEscrow: true,deployToChain: false,walletAddress: '';
+  }),const handleDeployContract = async () => {if (deploymentOptions.deployToChain && !deploymentOptions.walletAddress) {toast.error("Please enter a wallet address for blockchain deployment");
+  return;
     }try {await onDeploy(deploymentOptions)} catch (error) {logErrorToProduction('Deployment error:', { data: error })}
-  },const handleDownloadSolidity = () => {// Create a blob from the Solidity code;
-    const blob = new Blob([solidityCode], { type: 'text/plain' }),const url = URL.createObjectURL(blob),// Create a temporary anchor to trigger download;
-    const a = document.createElement('a'),a.href = url,a.download = 'ZionContract.sol',document.body.appendChild(a),a.click(),// Clean up;
+ ,
+},const handleDownloadSolidity = () => {// Create a blob from the Solidity code;
+
+const blob = new Blob([solidityCode], { type: 'text/plain',
+});
+  const url = URL.createObjectURL(blob),// Create a temporary anchor to trigger download;
+
+const a = document.createElement('a'),a.href = url,a.download = 'ZionContract.sol',document.body.appendChild(a),a.click(),// Clean up;
     URL.revokeObjectURL(url),document.body.removeChild(a),toast.success("Solidity contract downloaded")},return (<Card className="w-full">;
       <CardHeader>;
         <CardTitle className="flex items-center gap-2">;
@@ -60,28 +81,51 @@ import { toast } from "sonner",import {logErrorToProduction} from '@/utils/produ
           <div className="flex items-center space-x-2">;
             <Switch;
   },const handleDownloadSolidity = () => {// Create a blob from the Solidity code;
-    const blob = new Blob([solidityCode], { type: 'text/plain' }),const url = URL.createObjectURL(blob),// Create a temporary anchor to trigger download;
-    const a = document.createElement('a'),a.href = url,a.download = 'ZionContract.sol',document.body.appendChild(a),a.click(),// Clean up;
+
+const blob = new Blob([solidityCode], { type: 'text/plain',
+});
+  const url = URL.createObjectURL(blob),// Create a temporary anchor to trigger download;
+
+const a = document.createElement('a'),a.href = url,a.download = 'ZionContract.sol',document.body.appendChild(a),a.click(),// Clean up;
     URL.revokeObjectURL(url),document.body.removeChild(a),toast.success("Solidity contract downloaded")},return (import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle  } from '@/components/ui/card';
 import { Loader2, ShieldCheck, Download } from 'lucide-react'import { toast  } from 'sonner';
-interface SmartContractDeploymentProps  {solidityCode: string,onDeploy: (options: DeploymentOptions,) => Promise<void>,isDeploying: boolean;
-}export function SmartContractDeployment(): any ({solidityCode;
+
+interface SmartContractDeploymentProps {
+  solidityCode: string,onDeploy: (options: DeploymentOptions,) => Promise<void>,isDeploying: boolean;
+
+}
+
+export function SmartContractDeployment(): any ({solidityCode;
   onDeploy;
   isDeploying;
 }: SmartContractDeploymentProps) {const [deploymentOptions, setDeploymentOptions] = useState<DeploymentOptions>({network: 'none',useEscrow: true,deployToChain: false,walletAddress: '';
-  })const handleDeployContract = async () => {if (deploymentOptions && deploymentOptions.deployToChain && !deploymentOptions && deploymentOptions.walletAddress) {toast && toast.error("Please enter a wallet address for blockchain deployment")return;
+  })const handleDeployContract = async () => {if (deploymentOptions && deploymentOptions.deployToChain && !deploymentOptions && deploymentOptions.walletAddress) {toast && toast.error("Please enter a wallet address for blockchain deployment";
+  return;
     }try {await onDeploy(deploymentOptions)} catch (error) {logErrorToProduction('Deployment error:', { data: error })}
-  }const handleDownloadSolidity = () => {// Create a blob from the Solidity code;
-    const blob = new Blob([solidityCode], { type: 'text/plain' }),const url  = URL && URL.createObjectURL(blob)// Create a temporary anchor to trigger download;
-    const a = document && document.createElement('a')a && a.href = url;
+ ,
+}
+
+const handleDownloadSolidity = () => {// Create a blob from the Solidity code;
+
+const blob = new Blob([solidityCode], { type: 'text/plain',
+});
+  const url  = URL && URL.createObjectURL(blob)// Create a temporary anchor to trigger download;
+
+const a = document && document.createElement('a')a && a.href = url;
     a && a.download = 'ZionContract && ZionContract.sol';
     document && document.body.appendChild(a)a && a.click()// Clean up;
     URL && URL.revokeObjectURL(url)document && document.body.removeChild(a)toast && toast.success("Solidity contract downloaded")}return (<Card className="w-full">;
       <CardHeader>;
         <CardTitle className="flex items-center gap-2">;
-          <ShieldCheck className="h-5 w-5 text-primary" />;const handleDownloadSolidity = () =>: any {// Create a blob from the Solidity code;
-    const blob = new Blob ([solidity_code], { type: 'text / plain' }),const url = URL.createObjectURL (blob)// Create a temporary anchor to trigger download;
-    const array = document.create_element ('a')a.href = url;
+          <ShieldCheck className="h-5 w-5 text-primary" />;
+
+const handleDownloadSolidity = () =>: any {// Create a blob from the Solidity code;
+
+const blob = new Blob ([solidity_code], { type: 'text / plain',
+});
+  const url = URL.createObjectURL (blob)// Create a temporary anchor to trigger download;
+
+const array = document.create_element ('a')a.href = url;
     a.download = 'ZionContract.sol';
     document.body.append_child (a)a.click ()// Clean up;
     URL.revokeObjectURL (url)document.body.remove_child (a)toast.success ("Solidity contract downloaded")}
@@ -116,8 +160,8 @@ interface SmartContractDeploymentProps  {solidityCode: string,onDeploy: (options
                 <RadioGroup;
                   defaultValue={deploymentOptions.network}
                   onValueChange={(value) => setDeploymentOptions({...deploymentOptions,network: value as BlockchainNetwork;onValueChange={(value) => setDeploymentOptions({...deploymentOptions,network: value as BlockchainNetwork;})}
-                  className="flex flex-col space-y-1";
-                >;
+                  className="flex flex-col space-y-1">
+
                   <div className="flex items-center space-x-2">;
                     <RadioGroupItem value="ethereum" id="ethereum" />;
                     <Label htmlFor="ethereum">Ethereum (higher fees, more secure)</Label>;
@@ -163,8 +207,8 @@ interface SmartContractDeploymentProps  {solidityCode: string,onDeploy: (options
             </>;
           )}onCheckedChange={(checked) => setDeploymentOptions({...deploymentOptions;
                     useEscrow: checked;})}
-                  className="flex flex-col space-y-1";
-                >;
+                  className="flex flex-col space-y-1">
+
                   <div className="flex items-center space-x-2">;
                     <RadioGroupItem value="ethereum" id="ethereum" />;
                     <Label htmlFor="ethereum">Ethereum (higher fees, more secure)</Label>;
@@ -252,8 +296,8 @@ interface SmartContractDeploymentProps  {solidityCode: string,onDeploy: (options
                   default_value={deployment_options.network}
                   onValueChange={(value) => setDeploymentOptions ({...deployment_options;                    network: value as BlockchainNetwork;
                   })}
-                  className="flex flex - col space - y-1";
-                >;
+                  className="flex flex - col space - y-1">
+
                   <div className="flex items - center space - x-2">;
                     <RadioGroupItem value="ethereum" id="ethereum" />;
                     <Label html_for="ethereum">Ethereum (higher fees, more secure)</Label>;

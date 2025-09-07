@@ -2,25 +2,31 @@ import * as React from 'react';
 import Head from 'next/head';
 import Layout from '../components/Layout';
 import Link from 'next/link';
-const blogPosts = [;
-  { id: 1, title: 'The Future of AI in Business: 2025 Trends', excerpt: 'Explore AI trends transforming businesses.', author: 'Dr. Sarah Chen', date: '2024-01-15', readTime: '5 min read' },{ id: 2, title: 'Micro SaaS: Building Scalable Solutions', excerpt: 'Build and scale micro SaaS apps.', author: 'Michael Rodriguez', date: '2024-01-12', readTime: '7 min read' }
+
+const blogPosts = [
+  { id: 1, title: 'The Future of AI in Business: 2025 Trends', excerpt: 'Explore AI trends transforming businesses.', author: 'Dr. Sarah Chen', date: '2024-01-15', readTime: '5 min read',
+},{ id: 2, title: 'Micro SaaS: Building Scalable Solutions', excerpt: 'Build and scale micro SaaS apps.', author: 'Michael Rodriguez', date: '2024-01-12', readTime: '7 min read',
+}
 ];
+
 export default function BlogPage() {return (<Layout;
       title="Technology Blog - Zion Tech Group";
       description="Stay updated with the latest insights, trends, and best practices in technology, AI, cloud computing, and digital transformation.";
-      keywords="technology blog, AI insights, cloud computing, cybersecurity, digital transformation, tech trends";
-    >;
+      keywords="technology blog, AI insights, cloud computing, cybersecurity, digital transformation, tech trends">
+
       <div className="min-h-screen bg-gray-50">;
         {/* Hero Section */}
         <section className="bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20">;
           <div className="container mx-auto px-4">;
             <div className="max-w-4xl mx-auto text-center">;
               <motion.div;
-                initial={{ opacity: 0, y: 30 }}
+                initial={{ opacity: 0, y: 30 ,
+}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8 }}
-                className="mb-8";
-              >;
+                transition={{ duration: 0.8 ,
+}
+                className="mb-8">
+
                 <h1 className="text-4xl md:text-6xl font-bold mb-6">;
                   Technology Insights & Trends;
                 </h1>;
@@ -41,9 +47,12 @@ export default function BlogPage() {return (<Layout;
                   {blogPosts.map((post, index) => (<motion.article;
                       key={post.id}
                       className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300";
-                      initial={{ opacity: 0, y: 20 }}
-                      animate={{ opacity: 1, y: 0 }}
-                      transition={{ duration: 0.5, delay: index * 0.1 }}
+                      initial={{ opacity: 0, y: 20 ,
+}
+                      animate={{ opacity: 1, y: 0 ,
+}
+                      transition={{ duration: 0.5, delay: index * 0.1 ,
+}
                     >;
                       <div className="aspect-w-16 aspect-h-9">;
                         <img;
@@ -83,8 +92,8 @@ export default function BlogPage() {return (<Layout;
                         </div>;
                         <Link;
                           href={`/blog/${post.id}`}
-                          className="inline-flex items-center text-blue-600 hover:text-blue-700 font-medium group";
-                        >;
+                          className="inline-flex items-center text-blue-600 hover:text-blue-700 font-medium group">
+
                           Read More;
                           <ArrowRight className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" />;
                         </Link>;
@@ -118,9 +127,10 @@ export default function BlogPage() {return (<Layout;
                       Categories;
                     </h3>;
                     <div className="space-y-2">;
-                          className="flex items-center justify-between py-2 px-3 rounded-lg hover:bg-gray-50 transition-colors";
-                        >;
-                          <span className="text-gray-700">{category.name}</span>;
+                          className="flex items-center justify-between py-2 px-3 rounded-lg hover: bg-gray-50 transition-colors">
+
+                          <span className="text-gray-700">{category.nam,
+}</span>;
                           <span className="bg-gray-100 text-gray-600 text-xs px-2 py-1 rounded-full">;
                             {category.count}
                           </span>;

@@ -1,10 +1,19 @@
 }
 }
-import _React from 'react'; const ComprehensiveServices = () => { return ( <div> <h1>ComprehensiveServices</h1> <p>Component placeholder</p> </div> )}export default ComprehensiveServices;
+import _React from 'react';
+
+const ComprehensiveServices = () => {;
+  return ( <div> <h1>ComprehensiveServices</h1> <p>Component placeholder</p> </div> ;
+}
+
+export default ComprehensiveServices;
 import React from 'react';
+
 interface ComprehensiveServicesProps {
   // Add props here as needed
+
 }
+
 export default function ComprehensiveServices({}: ComprehensiveServicesProps) {
   return (
     <div>
@@ -15,4 +24,9 @@ export default function ComprehensiveServices({}: ComprehensiveServicesProps) {
 }
 }
 }
-import _React from 'react'; const ComprehensiveServices = () => { return ( <div> <h1>ComprehensiveServices</h1> <p>Component placeholder</p> </div> )}; export default ComprehensiveServices;
+import _React from 'react';
+
+const ComprehensiveServices = () => {;
+  return ( <div> <h1>ComprehensiveServices</h1> <p>Component placeholder</p> </div> )};
+
+export default ComprehensiveServices;

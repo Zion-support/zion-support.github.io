@@ -3,11 +3,14 @@
 import type { NextPage } from 'next';
 import Head from 'next/head';
 import Link from 'next/link';
-const BusinessIntelligenceChat: NextPage = () => {return (<div>;
+
+const BusinessIntelligenceChat: NextPage = () => ;
+  return (<div>;
 
 import type { NextPage } from "next";
 import Head from "next/head";
 import Link from "next/link";
+
 const BusinessIntelligenceChat: NextPage = () => {;
   return (
     <div>;
@@ -38,7 +41,11 @@ const BusinessIntelligenceChat: NextPage = () => {;
       </main>;
     </div>;
   )}
-export default BusinessIntelligenceChat;const BusinessIntelligenceChat: NextPage = () => {return (<div>;
+
+export default BusinessIntelligenceChat;
+
+const BusinessIntelligenceChat: NextPage = () => ;
+  return (<div>;
       <Head>;
         <title>BusinessIntelligenceChat - Zion Tech Solutions</title>;
         <title>BusinessIntelligenceChat - Zion Tech Solutions</title>;
@@ -47,13 +54,11 @@ export default BusinessIntelligenceChat;const BusinessIntelligenceChat: NextPage
 ursor/fix-website-loading-errors-and-merge-6662;
   );
 }
+
 export default BusinessIntelligenceChat;
 
-
-
-
-
 const BusinessIntelligenceChat: NextPage = () => {
+ ;
   return (
     <div>
       <Head>
@@ -67,7 +72,9 @@ const BusinessIntelligenceChat: NextPage = () => {
 import type { NextPage } from './next';
 import Head from './next / head';
 import Link from './next / link';
-const BusinessIntelligenceChat: NextPage = () => {return (<div>;
+
+const BusinessIntelligenceChat: NextPage = () => ;
+  return (<div>;
       <Head>;
         <title > BusinessIntelligenceChat - Zion Tech Solutions</title>;
         <meta;
@@ -79,8 +86,12 @@ const BusinessIntelligenceChat: NextPage = () => {return (<div>;
         <h1 > BusinessIntelligenceChat</h1>;
         <p > Service details coming soon...</p>;
         <a href="/services">Back to Services</a>;
-      </main>;
-    </div>)}export default BusinessIntelligenceChat;<div>;
+      </main>
+    </div>
+  );
+}
+
+export default BusinessIntelligenceChat;<div>;
       <Head>;
         <title>BusinessIntelligenceChat - Zion Tech Solutions</title>;
         <meta name=&quot;description&quot; content=&quot;BusinessIntelligenceChat service&quot; />;
@@ -92,7 +103,9 @@ const BusinessIntelligenceChat: NextPage = () => {return (<div>;
       </main>;
     </div>;
   )},export default BusinessIntelligenceChat;
-const BusinessIntelligenceChat: NextPage = () => {return (<div>;
+
+const BusinessIntelligenceChat: NextPage = () => ;
+  return (<div>;
       <Head>;
         <title>BusinessIntelligenceChat - Zion Tech Solutions</title>;
         <meta;
@@ -107,11 +120,13 @@ const BusinessIntelligenceChat: NextPage = () => {return (<div>;
       </main>;
     </div>;
   )}
+
 export default BusinessIntelligenceChat;<title>BusinessIntelligenceChat - Zion Tech Solutions</title>;
         <title>BusinessIntelligenceChat - Zion Tech Solutions</title>;
-    </div>);
-}
-;
+    </div>)
+};
+
+
 export default BusinessIntelligenceChat;
 ;
     <div>
@@ -134,6 +149,7 @@ export default BusinessIntelligenceChat
 
 
 const BusinessIntelligenceChat: NextPage = () => {
+ ;
   return (
     <div>
       <Head>
@@ -151,6 +167,7 @@ const BusinessIntelligenceChat: NextPage = () => {
     </div>
   );
 }
+
 export default BusinessIntelligenceChat;
 
         <title>BusinessIntelligenceChat - Zion Tech Solutions</title>

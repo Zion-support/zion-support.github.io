@@ -1,10 +1,9 @@
 import React from 'react';
 
-<<<<<<< HEAD
+
 import Link from 'next/link';
 
-=======
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-2a0c
+
 
 export const metadata = {
   title: 'Ai Financial Analytics | Zion Tech Group',

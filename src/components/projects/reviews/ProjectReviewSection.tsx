@@ -1,14 +1,25 @@
 
-export function ProjectReviewSection() {const { user } = useAuth(),const { reviews, userReview, isLoading, reportReview } = useReviews(project.id),const [isReviewModalOpen, setIsReviewModalOpen] = useState(false),const isCompleted = project.status === "completed",const isClient = user?.id === project.client_id,const isTalent = user?.id === project.talent_id,const clientProfile = project?.talent_profile,const talentProfile = project.talent_profile,// Determine who the current user needs to review;
-  const revieweeId = isClient ? project.talent_id : project.client_id,const revieweeName = isClient;
+export function ProjectReviewSection() {const { user } = useAuth(),const { reviews, userReview, isLoading, reportReview } = useReviews(project.id),const [isReviewModalOpen, setIsReviewModalOpen] = useState(false),const isCompleted = project.status === "completed",const isClient = user?.id === project.client_id,const isTalent = user?.id === project.talent_id,const clientProfile = project?.talent_profile;
+  const talentProfile = project.talent_profile,// Determine who the current user needs to review;
+
+const revieweeId = isClient ? project.talent_id : project.client_id;
+  const revieweeName = isClient;
     ? talentProfile?.full_name || "Talent";
-    : clientProfile?.full_name || "Client",const canLeaveReview = isCompleted && (isClient || isTalent) && !userReview,const hasLeftReview = userReview != null,export function ProjectReviewSection() {const { user } = useAuth(),const { reviews, userReview, isLoading, reportReview } = useReviews(project.id),const [isReviewModalOpen, setIsReviewModalOpen] = useState(false),const isCompleted = project.status === "completed",const isClient = user?.id === project.client_id,const isTalent = user?.id === project.talent_id,const clientProfile = project?.talent_profile,const talentProfile = project.talent_profile,// Determine who the current user needs to review;
-  const revieweeId = isClient ? project.talent_id : project.client_id,const revieweeName = isClient;
+    : clientProfile?.full_name || "Client",const canLeaveReview = isCompleted && (isClient || isTalent) && !userReview,const hasLeftReview = userReview != null,export function ProjectReviewSection() {const { user } = useAuth(),const { reviews, userReview, isLoading, reportReview } = useReviews(project.id),const [isReviewModalOpen, setIsReviewModalOpen] =;
+  useState(false),const isCompleted = project.status === "completed",const isClient = user?.id === project.client_id,const isTalent = user?.id === project.talent_id,const clientProfile = project?.talent_profile;
+  const talentProfile = project.talent_profile,// Determine who the current user needs to review;
+
+const revieweeId = isClient ? project.talent_id : project.client_id;
+  const revieweeName = isClient;
     ? talentProfile?.full_name || "Talent";
-    : clientProfile?.full_name || "Client",const canLeaveReview = isCompleted && (isClient || isTalent) && !userReview,const hasLeftReview = userReview != null,import { Button } from "@/components/ui/button",import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",import { ReviewsList } from "@/components/reviews/ReviewsList",import { LeaveReviewModal } from "@/components/reviews/LeaveReviewModal",import { useReviews  } from '@/hooks/useReviews';
+    : clientProfile?.full_name || "Client",const canLeaveReview = isCompleted && (isClient || isTalent) && !userReview;
+  const hasLeftReview = userReview != null,import { Button } from "@/components/ui/button",import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",import { ReviewsList } from "@/components/reviews/ReviewsList",import { LeaveReviewModal } from "@/components/reviews/LeaveReviewModal",import { useReviews  } from '@/hooks/useReviews';
 import { useAuth  } from '@/hooks/useAuth';
+
 interface ProjectReviewSectionProps  {project: Project;
-export function ProjectReviewSection() {const { user } = useAuth()const { reviews, userReview, isLoading, reportReview } = useReviews(project.id)const [isReviewModalOpen, setIsReviewModalOpen] = useState(false)const isCompleted = null;
+
+export function ProjectReviewSection() {const { user } = useAuth()const { reviews, userReview, isLoading, reportReview } = useReviews(project.id)const [isReviewModalOpen, setIsReviewModalOpen] = useState(false);
+  const isCompleted = null;
 import { Button  } from '@/components/ui/button';
 import { Card;
   CardContent;
@@ -18,20 +29,31 @@ import { Card;
  } from '@/components/ui/card';
 import { ReviewsList  } from '@/components/reviews/ReviewsList';
 import { LeaveReviewModal  } from '@/components/reviews/LeaveReviewModal';
+
 interface ProjectReviewSectionProps  {project: Project;
+
 export function ProjectReviewSection() {const { user } = useAuth()const { reviews, userReview, isLoading, reportReview } = useReviews(project.id;
-  )const [isReviewModalOpen, setIsReviewModalOpen] = useState(false)const isCompleted = project.status === 'completed';
-  const isClient = user?.id === project.client_id;
-  const isTalent = user?.id === project.talent_id;
-  const clientProfile = project?.talent_profile;
-  const talentProfile = project.talent_profile;
+  )const [isReviewModalOpen, setIsReviewModalOpen] = useState(false);
+  const isCompleted = project.status === 'completed';
+
+const isClient = user?.id === project.client_id;
+
+const isTalent = user?.id === project.talent_id;
+
+const clientProfile = project?.talent_profile;
+
+const talentProfile = project.talent_profile;
   // Determine who the current user needs to review;
-  const revieweeId = isClient ? project.talent_id : project.client_id;
-  const revieweeName = isClient;
+
+const revieweeId = isClient ? project.talent_id : project.client_id;
+
+const revieweeName = isClient;
     ? talentProfile?.full_name |'Talent';
     : clientProfile?.full_name |'Client';
-  const canLeaveReview = isCompleted && (isClient |isTalent) && !userReview;
-  const hasLeftReview = userReview != null;
+
+const canLeaveReview = isCompleted && (isClient |isTalent) && !userReview;
+
+const hasLeftReview = userReview != null;
   return (<Card className='mt-6'>;
       <CardHeader>;
         <CardTitle className='flex items-center gap-2'>;
@@ -111,22 +133,32 @@ import { ReviewsList  } from '@/components / reviews / ReviewsList';
 import { LeaveReviewModal  } from '@/components / reviews / LeaveReviewModal';
 import { use_reviews  } from '@/hooks / use_reviews';
 import { use_auth  } from '@/hooks / use_auth';
+
 interface ProjectReviewSectionProps  {project: Project;
+
 export /**;
  * ProjectReviewSection - Function description;
  */;
 function ProjectReviewSection() {const { user } = use_auth ()const { reviews, user_review, is_loading, report_review } = use_reviews (project.id)const [isReviewModalOpen, setIsReviewModalOpen] = useState (false)const is_completed = project.status === 'completed';
-  const is_client = user?.id === project.client_id;
-  const is_talent = user?.id === project.talent_id;
-  const client_profile = project?.talent_profile;
-  const talent_profile = project.talent_profile;
+
+const is_client = user?.id === project.client_id;
+
+const is_talent = user?.id === project.talent_id;
+
+const client_profile = project?.talent_profile;
+
+const talent_profile = project.talent_profile;
   // Determine who the current user needs to review;
-  const reviewee_id = is_client ? project.talent_id : project.client_id;
-  const reviewee_name = is_client;
+
+const reviewee_id = is_client ? project.talent_id : project.client_id;
+
+const reviewee_name = is_client;
     ? talent_profile?.full_name || 'Talent';
     : client_profile?.full_name || 'Client';
-  const canLeaveReview = is_completed && (is_client || is_talent) && !user_review;
-  const hasLeftReview = user_review != null;
+
+const canLeaveReview = is_completed && (is_client || is_talent) && !user_review;
+
+const hasLeftReview = user_review != null;
   return (<Card className='mt - 6'>;
       <CardHeader>;
         <CardTitle className='flex items - center gap - 2'>;
@@ -177,8 +209,10 @@ function ProjectReviewSection() {const { user } = use_auth ()const { reviews, us
             <p className='text - sm text - muted - foreground'>;
               After the project is marked as completed, both parties will be;
               able to leave reviews;
-            </p>;
-          </div>)}
+            </p>
+    </div>
+  );
+}
       </CardContent>;
       {/* Review Modal */}
       {(isClient || isTalent) && (<LeaveReviewModal;

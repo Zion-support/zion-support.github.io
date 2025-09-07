@@ -4,13 +4,17 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from './ui/
 import {}
   COMPREHENSIVE_SERVICES,'';
   CONTACT_INFO} from '@/data/comprehensiveServices';
+
 export function ServicesComparisonTable() {}
 '';
 '';
 '''';
-  const serviceCategories = ['AI Services', IT Services',Micro SAAS'];
-  const getFeatureIcon = hasFeature => {}
-    return hasFeature ? (<Check className='w-4 h-4 text-green-500' />'''';
+
+const serviceCategories = ['AI Services', IT Services',Micro SAAS'];
+
+const getFeatureIcon = hasFeature => {}
+   ;
+  return hasFeature ? (<Check className='w-4 h-4 text-green-500' />'''';
     ) : ('''';
       <X className='w-4 h-4 text-red-500' />;
     )}';';
@@ -29,8 +33,11 @@ export function ServicesComparisonTable() {}
 '''';
         {/* Service Categories Overview */}'''';
         <div className='grid grid-cols-1 md:grid-cols-3 gap-6 mb-12'>;
-          {serviceCategories.map(category => {}
-            const services = getCategoryServices(category)const avgPrice =;
+          {serviceCategories.map(category = > ;
+}
+
+const services = getCategoryServices(category;
+  const avgPrice =;
               services.reduce((sum, service) => sum + (service.price || 0), 0) /;
               services.length;
             return()<Card'''';

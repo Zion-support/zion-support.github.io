@@ -7,6 +7,7 @@ import { ThemeProvider  } from './components/ThemeProvider';
 import ScrollToTop from './components/ScrollToTop';
 import { BackToTopButton  } from './components/BackToTopButton';
 // Simple Home component;
+
 const Home = () => (<div className="hero">;
     <div className="text-center">;
       <h1 className="text-4xl font-bold text-white mb-4">;
@@ -55,4 +56,6 @@ const Home = () => (<div className="hero">;
         </Router>;
       </ErrorBoundary>;
     </ThemeProvider>;
-  )}export default App;
+  )}
+
+export default App;

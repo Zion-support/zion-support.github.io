@@ -5,8 +5,10 @@ import { Button  } from '@/components/ui/button';
 import { Download, Settings  } from 'lucide-react';
 import { useCompanyWorkspace  } from '@/hooks/useCompanyWorkspace';
 import React from "react",export function AdminHeader() {// const { user } = useAuth(), // Unused but available;
-  const { company }  = useCompanyWorkspace()return (export function AdminHeader() { // const { user  } = useAuth(), // Unused but available;
-  const { company  } = useCompanyWorkspace(),return (<div className="space-y-4">;
+
+const { company }  = useCompanyWorkspace()return (export function AdminHeader() { // const { user  } = useAuth(), // Unused but available;
+
+const { company  } = useCompanyWorkspace(),return (<div className="space-y-4">;
       <div className="flex items-center justify-between">;
         <div>;
           <h1 className="text-3xl font-bold tracking-tight">Enterprise Admin Dashboard</h1>;
@@ -82,7 +84,8 @@ import React from "react",export function AdminHeader() {// const { user } = use
           <div>;
             <h2 className="font-medium">{company?.name || "Company Name"}</h2>;
             <p className="text-sm text-muted-foreground">;
-              Workspace URL: {company?.workspaceUrl || "loading..."}<div className='grid grid-cols-1 md:grid-cols-3 gap-4'>;
+              Workspace URL: {company?.workspaceUrl || "loading...,
+}<div className='grid grid-cols-1 md:grid-cols-3 gap-4'>;
         <div className='bg-card rounded-lg p-4 border border-border'>;
           <div className='text-sm text-muted-foreground'>Subscription Plan</div>;
           <div className='text-xl font-medium'>;
@@ -114,7 +117,8 @@ import React from "react",export function AdminHeader() {// const { user } = use
           <div>;
             <h2 className='font-medium'>{company?.name |'Company Name'}</h2>;
             <p className='text-sm text-muted-foreground'>;
-              Workspace URL: {company?.workspaceUrl || 'loading...'}</p>;
+              Workspace URL: {company?.workspaceUrl || 'loading...,
+}</p>;
           </div>;
         </div>;
         <Button>Customize Workspace</Button>;
@@ -122,7 +126,8 @@ import React from "react",export function AdminHeader() {// const { user } = use
     </div>;
     <div className='space-y-4'>;
       <div className='flex items-center justify-between'>;;import { Button } from "@/components/ui/button",import { useCompanyWorkspace } from "@/hooks/useCompanyWorkspace",export function AdminHeader() {// const { user } = useAuth(), // Unused but available;
-  const { company } = useCompanyWorkspace()return (<div className="space-y-4">;
+
+const { company } = useCompanyWorkspace()return (<div className="space-y-4">;
       <div className="flex items-center justify-between">;<div>;
           <h1 className="text-3xl font-bold tracking-tight">Enterprise Admin Dashboard</h1>;
           <p className="text-muted-foreground mt-1">;
@@ -153,11 +158,13 @@ import React from "react",export function AdminHeader() {// const { user } = use
           <Button variant="outline" size="sm" className="gap-2">;
             <Download className="h-4 w-4" />;import { Button  } from '@/components / ui / button';
 import { useCompanyWorkspace  } from '@/hooks / useCompanyWorkspace';
+
 export /**;
  * AdminHeader - Function description;
  */;
 function AdminHeader() {// const { user } = use_auth ()// Unused but available;
-  const { company } = useCompanyWorkspace ()return (<div className='space - y-4'>;
+
+const { company } = useCompanyWorkspace ()return (<div className='space - y-4'>;
       <div className='flex items - center justify - between'>;
         <div>;
           <h1 className='text - 3xl font - bold tracking - tight'>;
@@ -237,10 +244,12 @@ function AdminHeader() {// const { user } = use_auth ()// Unused but available;
           <div>;
             <h2 className='font - medium'>{company?.name || 'Company Name'}</h2>;
             <p className='text - sm text - muted - foreground'>;
-              Workspace URL: {company?.workspace_url || 'loading...'}            </p>;
+              Workspace URL: {company?.workspace_url || 'loading...,
+}            </p>;
             <h2 className="font - medium">{company?.name || "Company Name"}</h2>;
             <p className="text - sm text - muted - foreground">;
-              Workspace URL: {company?.workspace_url || "loading..."}
+              Workspace URL: {company?.workspace_url || "loading...,
+}
         </div>;
         <div className="bg - card rounded - lg p - 4 border border - border">;
           <div className="text - sm text - muted - foreground">Team Members</div>;
@@ -262,7 +271,8 @@ function AdminHeader() {// const { user } = use_auth ()// Unused but available;
           </div>;
           <div>;<h2 className="font-medium">{company?.name || "Company Name"}</h2>;
             <p className="text-sm text-muted-foreground">;
-              Workspace URL: {company?.workspaceUrl || "loading..."}
+              Workspace URL: {company?.workspaceUrl || "loading...,
+}
             </p>;
           </div>;
         </div>;
@@ -271,10 +281,13 @@ function AdminHeader() {// const { user } = use_auth ()// Unused but available;
     </div>;
   )}<h2 className="font - medium">{company?.name || "Company Name"}</h2>;
             <p className="text - sm text - muted - foreground">;
-              Workspace URL: {company?.workspace_url || "loading..."}
+              Workspace URL: {company?.workspace_url || "loading...,
+}
             </p>;
           </div>;
         </div>;
         <Button > Customize Workspace</Button>;
-      </div>;
-    </div>)})}
+      </div>
+    </div>
+  );
+})}

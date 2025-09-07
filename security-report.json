@@ -2,7 +2,7 @@
 
 
 
->>>>>>> main
+
 ursor/automate-test-improve-and-merge-code-646c
   "timestamp": "2025-09-04T21:58:25.812Z",
   "issues": [],
@@ -16,9 +16,9 @@ ursor/automate-test-improve-and-merge-code-646c
 
 
 
->>>>>>> origin/main
->>>>>>> origin/main
->>>>>>> main
+
+
+
 ursor/automate-test-improve-and-merge-code-646c
   "timestamp": "2025-09-05T02:59:20.583Z",
   "overallStatus": "secure",
@@ -42,7 +42,7 @@ ursor/automate-test-improve-and-merge-code-646c
   }
   "timestamp": "2025-09-06T04:56:16.606Z",
   "vulnerabilities": [
-<<<<<<< HEAD
+
     {
       "file": "/workspace/package.json",
       "type": "potential_hardcoded_secret",
@@ -53,22 +53,4 @@ ursor/automate-test-improve-and-merge-code-646c
   "mediumSeverity": 0,
   "lowSeverity": 0
 }
-=======
-    "Dependency vulnerabilities found",
-    "XSS risk in SEOEnhancer.tsx",
-    "Code injection risk in helpers.js"
-  ],
-  "recommendations": [
-    "Run \"npm audit fix\" to resolve dependency issues",
-    "Sanitize HTML in SEOEnhancer.tsx",
-    "Remove eval/Function usage in helpers.js",
-    "Configure HTTPS for production"
-  ],
-  "summary": [
-    "🟠 Moderate security concerns",
-    "Security Score: 55/100",
-    "Vulnerabilities: 3",
-    "Recommendations: 4"
-  ]
-}
->>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
+

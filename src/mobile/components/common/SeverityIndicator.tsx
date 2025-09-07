@@ -1,12 +1,17 @@
 import React from 'react';
 import { cn  } from '@/lib/utils';
 import { AlertTriangle, AlertCircle, CheckCircle  } from 'lucide-react';
-interface SeverityIndicatorProps  {severity: "safe" | "suspicious" | "dangerous";
+
+interface SeverityIndicatorProps {
+  severity: "safe" | "suspicious" | "dangerous";
   showIcon?: boolean;
   showText?: boolean;
   size?: "sm" | "md" | "lg";
   className?: string;
-}export function SeverityIndicator() {const getSeverityIcon = () => {switch (severity) {case 'dangerous':;
+
+}
+
+export function SeverityIndicator() {const getSeverityIcon = () => {switch (severity) {case 'dangerous':;
           />;
         )case 'suspicious':;
           />;

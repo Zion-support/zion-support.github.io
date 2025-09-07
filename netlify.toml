@@ -43,23 +43,9 @@ Cross-Origin-Resource-Policy = "same-origin"
 X-Permitted-Cross-Domain-Policies = "none"
 Origin-Agent-Cluster = "?1"
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-# Static redirects for exported site
-=======
-=======
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-2a0c
-# SPA fallback for client-side routing
-[[redirects]]
-from = "/*"
-to = "/index.html"
-status = 200
 
-# Static redirects for specific routes
-<<<<<<< HEAD
->>>>>>> 79992479b4902964b4a5ef1267a2a2e3ae279c60
-=======
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-2a0c
+
+
 [[redirects]]
 from = "/ai-customer-success-platform"
 to = "/services/ai-customer-success-platform/"
@@ -98,12 +84,5 @@ status = 301
 [[redirects]]
 from = "/affiliate-attribution-suite"
 to = "/services/affiliate-attribution-suite/"
-<<<<<<< HEAD
-<<<<<<< HEAD
-status = 301
-=======
-status = 301
->>>>>>> 79992479b4902964b4a5ef1267a2a2e3ae279c60
-=======
-status = 301
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-2a0c
+
+

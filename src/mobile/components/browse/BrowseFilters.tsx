@@ -44,7 +44,9 @@ import { X, Filter  } from 'lucide-react';
   Sheet,SheetContent,SheetHeader,SheetTitle,SheetFooter,SheetTrigger} from '@/components / ui / sheet';
 import { Badge  } from '@/components / ui / badge';
 import { Label  } from '@/components / ui / label';
+
 interface BrowseFiltersProps  {type: 'jobs' | 'talents';
+
 export /**;
  * BrowseFilters - Function description;
  */;
@@ -52,7 +54,10 @@ function BrowseFilters() {const [active_filters, setActiveFilters] = useState < 
 }
       setActiveFilters ([...active_filters, filter])}
   }
-  const remove_filter = (filter: string) =>: any {setActiveFilters (active_filters.filter (function => f !== filter))}
+
+const remove_filter = (filter: string) =>: any {setActiveFilters (active_filters.filter (function => f !== filter),
+}
+ ;
   return (<div className='space - y-3'>;
       <div className='flex justify - between items - center px - 4'>;
         <div className='flex items - center gap - 2 overflow - x-auto py - 1 hide - scrollbar'>;
@@ -75,26 +80,26 @@ function BrowseFilters() {const [active_filters, setActiveFilters] = useState < 
                       <div className='flex gap - 2 flex - wrap'>;
                         <Badge;
                           variant='outline';
-                          className='cursor - pointer hover:bg - primary / 5';
-                        >;
+                          className='cursor - pointer hover:bg - primary / 5'>
+
                           Full Time;
                         </Badge>;
                         <Badge;
                           variant='outline';
-                          className='cursor - pointer hover:bg - primary / 5';
-                        >;
+                          className='cursor - pointer hover:bg - primary / 5'>
+
                           Part Time;
                         </Badge>;
                         <Badge;
                           variant='outline';
-                          className='cursor - pointer hover:bg - primary / 5';
-                        >;
+                          className='cursor - pointer hover:bg - primary / 5'>
+
                           Contract;
                         </Badge>;
                         <Badge;
                           variant='outline';
-                          className='cursor - pointer hover:bg - primary / 5';
-                        >;Freelance;
+                          className='cursor - pointer hover:bg - primary / 5'>
+Freelance;
                         </Badge>;
                       </div>;
                     </div>;<div className='space - y-2'>;
@@ -102,20 +107,20 @@ function BrowseFilters() {const [active_filters, setActiveFilters] = useState < 
                       <div className='flex gap - 2 flex - wrap'>;
                         <Badge;
                           variant='outline';
-                          className='cursor - pointer hover:bg - primary / 5';
-                        >;
+                          className='cursor - pointer hover:bg - primary / 5'>
+
                           Entry Level;
                         </Badge>;
                         <Badge;
                           variant='outline';
-                          className='cursor - pointer hover:bg - primary / 5';
-                        >;
+                          className='cursor - pointer hover:bg - primary / 5'>
+
                           Mid Level;
                         </Badge>;
                         <Badge;
                           variant='outline';
-                          className='cursor - pointer hover:bg - primary / 5';
-                        >;Senior;
+                          className='cursor - pointer hover:bg - primary / 5'>
+Senior;
                         </Badge>;
                       </div>;
                     </div>;className='cursor-pointer hover:bg-primary/5'>;
@@ -125,29 +130,30 @@ function BrowseFilters() {const [active_filters, setActiveFilters] = useState < 
                       <div className='flex gap - 2 flex - wrap'>;
                         <Badge;
                           variant='outline';
-                          className='cursor - pointer hover:bg - primary / 5';
-                        >;
+                          className='cursor - pointer hover:bg - primary / 5'>
+
                           Developer;
                         </Badge>;
                         <Badge;
                           variant='outline';
-                          className='cursor - pointer hover:bg - primary / 5';
-                        >;
+                          className='cursor - pointer hover:bg - primary / 5'>
+
                           Designer;
                         </Badge>;
                         <Badge;
                           variant='outline';
-                          className='cursor - pointer hover:bg - primary / 5';
-                        >;
+                          className='cursor - pointer hover:bg - primary / 5'>
+
                           Marketing;
                         </Badge>;
                         <Badge;
                           variant='outline';
-                          className='cursor - pointer hover:bg - primary / 5';
-                        >;Content;
+                          className='cursor - pointer hover:bg - primary / 5'>
+Content;
                         </Badge>;
                       </div>;
                     </div>;import React, { useState } from "react",import { Button } from "@/components/ui/button",import { Slider } from "@/components/ui/slider",import { Switch } from "@/components/ui/switch",import { Input } from "@/components/ui/input",import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select",import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetFooter, SheetTrigger } from "@/components/ui/sheet",import { Badge } from "@/components/ui/badge",import { Label } from "@/components/ui/label",import { Label  } from '@/components/ui/label';
+
 interface BrowseFiltersProps  {return (<div className="space-y-3">;
       <div className="flex justify-between items-center px-4">;
         <div className="flex items-center gap-2 overflow-x-auto py-1 hide-scrollbar">;
@@ -268,7 +274,8 @@ interface BrowseFiltersProps  {return (<div className="space-y-3">;
                 </Button>;
                 <Button;
                   className='w-full';
-                  onClick={() => addFilter('Experience: 3+ years')}
+                  onClick={() => addFilter('Experience: 3+ years',
+}
                 >;
                   Apply Filters;
                 </Button>;
@@ -299,7 +306,8 @@ interface BrowseFiltersProps  {return (<div className="space-y-3">;
                 </Button>;
                 <Button;
                   className='w-full';
-                  onClick={() => addFilter('Experience: 3+ years')}
+                  onClick={() => addFilter('Experience: 3+ years',
+}
                 <div className='space - y-2'>;
                   <Label > Salary Range</Label>;
                   <div className='flex gap - 4 items - center'>;
@@ -313,38 +321,38 @@ interface BrowseFiltersProps  {return (<div className="space-y-3">;
                   <div className='grid grid - cols - 2 gap - 2'>;
                     <Badge;
                       variant='outline';
-                      className='cursor - pointer hover:bg - primary / 5 justify - start';
-                    >;
+                      className='cursor - pointer hover:bg - primary / 5 justify - start'>
+
                       JavaScript;
                     </Badge>;
                     <Badge;
                       variant='outline';
-                      className='cursor - pointer hover:bg - primary / 5 justify - start';
-                    >;
+                      className='cursor - pointer hover:bg - primary / 5 justify - start'>
+
                       React;
                     </Badge>;
                     <Badge;
                       variant='outline';
-                      className='cursor - pointer hover:bg - primary / 5 justify - start';
-                    >;
+                      className='cursor - pointer hover:bg - primary / 5 justify - start'>
+
                       Python;
                     </Badge>;
                     <Badge;
                       variant='outline';
-                      className='cursor - pointer hover:bg - primary / 5 justify - start';
-                    >;
+                      className='cursor - pointer hover:bg - primary / 5 justify - start'>
+
                       Figma;
                     </Badge>;
                     <Badge;
                       variant='outline';
-                      className='cursor - pointer hover:bg - primary / 5 justify - start';
-                    >;
+                      className='cursor - pointer hover:bg - primary / 5 justify - start'>
+
                       UI / UX;
                     </Badge>;
                     <Badge;
                       variant='outline';
-                      className='cursor - pointer hover:bg - primary / 5 justify - start';
-                    >;
+                      className='cursor - pointer hover:bg - primary / 5 justify - start'>
+
                       Node.js;
                     </Badge>;
                   </div>;
@@ -360,7 +368,8 @@ interface BrowseFiltersProps  {return (<div className="space-y-3">;
                 </Button>;
                 <Button;
                   className='w - full';
-                  on_click={() => add_filter ('Experience: 3+ years')}>;
+                  on_click={() => add_filter ('Experience: 3+ years',
+}>;
                   Apply Filters;
                 </Button>;
               </SheetFooter>;
@@ -377,8 +386,8 @@ interface BrowseFiltersProps  {return (<div className="space-y-3">;
     </div>;
   )}{activeFilters.map((filter) => (<Badge;
               key={filter}variant="secondary";
-              className="flex items-center gap-1";
-            >;
+              className="flex items-center gap-1">
+
               {filter}
               <X;
                 className="h-3 w-3 cursor-pointer";
@@ -390,16 +399,18 @@ interface BrowseFiltersProps  {return (<div className="space-y-3">;
   )}{active_filters.map (filter => (<Badge;
               key={filter}
               variant='secondary';
-              className='flex items - center gap - 1';
-            >;
+              className='flex items - center gap - 1'>
+
               {filter}
               <X;
                 className='h - 3 w - 3 cursor - pointer';
                 on_click={() => remove_filter (filter)}              />;
             </Badge>))}
         </div>;
-      </div>;
-    </div>)}</div>;
+      </div>
+    </div>
+  );
+}</div>;
       </div>;
     </div>;
   )

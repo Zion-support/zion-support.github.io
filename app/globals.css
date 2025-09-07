@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 /* Basic global styles */
 body {
   margin: 0;
@@ -41,35 +41,5 @@ body {
 
 ::-webkit-scrollbar-thumb:hover {
   background: #a8a8a8;
-=======
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
 
-@layer base {
-  html {
-    font-family: system-ui, sans-serif;
-  }
-  * {
-    @apply border-gray-200;
-  }
-}
-
-@layer components {
-  .btn {
-    @apply px-4 py-2 rounded-lg font-medium transition-colors;
-  }
-  .btn-primary {
-    @apply bg-blue-600 text-white hover:bg-blue-700;
-  }
-  .btn-secondary {
-    @apply bg-gray-200 text-gray-900 hover:bg-gray-300;
-  }
-}
-
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-2a0c
 }

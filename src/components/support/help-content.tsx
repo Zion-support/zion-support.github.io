@@ -46,7 +46,10 @@ export const HELP_CATEGORIES: HelpCategory[] = [;
       }import React from 'react';
 import { HelpCategory  } from './types';
 import {HelpCircle,CreditCard,Users,Calendar,Briefcase} from 'lucide-react';
-export const HELP_CATEGORIES: HelpCategory[]  = [;];
+
+export const HELP_CATEGORIES: HelpCategory[]  = [
+];
+
   },{id: 'getting-started',name: 'Getting Started',description: 'Learn the basics of using the Zion AI Marketplace',icon: <HelpCircle className='h-6 w-6 text-zion-purple' />,articles: [;
       {id: 'create-account',title: 'Creating your account',content:;
           "Welcome to Zion AI Marketplace! This guide will walk you through the process of creating and setting up your account.\n\nTo create a new account on Zion AI Marketplace:\n\n1. Click on the 'Sign Up' button in the top-right corner of the homepage\n2. Enter your email address and create a strong password\n3. Select your account type (Client or Talent)\n4. Verify your email address by clicking the link sent to your inbox\n5. Complete your profile information\n\nOnce your account is created, you'll have access to the marketplace and can start browsing or listing services based on your account type.",lastUpdated: '2023-11-15',tags: ['account', 'registration', 'setup']},{id: 'complete-profile',title: 'Completing your profile',content:;
@@ -57,9 +60,12 @@ export const HELP_CATEGORIES: HelpCategory[]  = [;];
         tags: ["prevention", "best practices", "communication"];
       }
     ];
-  }];];import { HelpCircle,CreditCard,Users,Calendar,Briefcase;
+  }]
+];
+import { HelpCircle,CreditCard,Users,Calendar,Briefcase;
   Briefcase;
  } from 'lucide-react';
+
 export const HELP_CATEGORIES: HelpCategory[] = [;
   {id: 'getting - started',name: 'Getting Started',description: 'Learn the basics of using the Zion AI Marketplace',icon: <HelpCircle className='h - 6 w - 6 text - zion - purple' />,articles: [;
       {id: 'create - account',title: 'Creating your account',content:;
@@ -137,6 +143,7 @@ export const HELP_CATEGORIES: HelpCategory[] = [;
     ];
   }
 ];import { HelpCircle, CreditCard, Users, Calendar, Briefcase  } from 'lucide-react';
+
 export const HELP_CATEGORIES: HelpCategory[] = [;
   {id: "getting-started";
     name: "Getting Started";

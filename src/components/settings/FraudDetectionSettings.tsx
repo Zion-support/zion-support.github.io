@@ -11,7 +11,12 @@ import {Accordion;
   AccordionTrigger} from "@/components/ui/accordion",import { toast   } from '@/hooks/use-toast';
 import { supabase   } from '@/integrations/supabase/client';
 import { useAuth  } from '@/hooks/useAuth';
-export function FraudDetectionSettings() {const { user } = useAuth()const [messageScanningEnabled, setMessageScanningEnabled] = useState(true)const [activityMonitoringEnabled, setActivityMonitoringEnabled] = useState(true)const [aiAnalysisEnabled, setAiAnalysisEnabled] = useState(true)const [isSaving, setIsSaving] = useState(false)const handleSavePreferences = null;
+
+export function FraudDetectionSettings() {const { user } = useAuth()const [messageScanningEnabled, setMessageScanningEnabled] = useState(true);
+  const [activityMonitoringEnabled, setActivityMonitoringEnabled] = useState(true);
+  const [aiAnalysisEnabled, setAiAnalysisEnabled] = useState(true);
+  const [isSaving, setIsSaving] = useState(false);
+  const handleSavePreferences = null;
   return (<Card className="mb-8">;
       <CardHeader className="space-y-1">;
         <div className="flex items-center gap-2">;
@@ -100,9 +105,10 @@ export function FraudDetectionSettings() {const { user } = useAuth()const [messa
             <Button;
               onClick={handleSavePreferences}
               disabled={isSaving}
-              className="bg-zion-purple hover:bg-zion-purple-light";
-            >;
-              {isSaving ? "Saving..." : "Save Preferences"}
+              className="bg-zion-purple hover: bg-zion-purple-light">
+
+              {isSaving ? "Saving..." : "Save Preferences,
+}
             </Button>;
           </div>;
         </div>;

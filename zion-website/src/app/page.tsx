@@ -2,7 +2,8 @@
 import React from 'react';
 import { LightBulbIcon,CpuChipIcon,GlobeAltIcon,ShieldCheckIcon,ChartBarIcon,UserGroupIcon;
  } from '@heroicons/react/24/outline';
-const features = [;
+
+const features = [
   {name: 'AI-Powered Research',description: 'Cutting-edge artificial intelligence that accelerates research and discovery across all domains.',icon: LightBulbIcon;
   },{name: 'Quantum Computing',description: 'Next-generation quantum neural networks for solving complex computational problems.',icon: CpuChipIcon;
   },{name: 'Global Solutions',description: 'Worldwide deployment of autonomous business operations and digital transformation.',icon: GlobeAltIcon;
@@ -10,7 +11,9 @@ const features = [;
   },{name: 'Analytics & Insights',description: 'Real-time data analysis and predictive modeling for informed decision making.',icon: ChartBarIcon;
   },{name: 'Team Collaboration',description: 'Seamless integration tools for distributed teams and remote work environments.',icon: UserGroupIcon;
   }
-];export default function HomePage() {return (<div className="min-h-screen bg-white">;
+];
+
+export default function HomePage() {return (<div className="min-h-screen bg-white">;
       {/* Hero Section */}
       <div className="relative bg-gradient-to-r from-blue-600 to-purple-700">;
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">;
@@ -88,8 +91,8 @@ const features = [;
             <div className="mt - 10 flex items - center justify - center gap-x-6">;
               <a;
                 href="/contact";
-                className="rounded - md bg - blue - 600 px - 3.5 py - 2.5 text - sm font - semibold text - white shadow - sm hover:bg - blue - 500 focus - visible:outline focus - visible:outline - 2 focus - visible:outline - offset - 2 focus - visible:outline - blue - 600 transition - all duration - 200 hover:scale-105";
-              >;
+                className="rounded - md bg - blue - 600 px - 3.5 py - 2.5 text - sm font - semibold text - white shadow - sm hover:bg - blue - 500 focus - visible:outline focus - visible:outline - 2 focus - visible:outline - offset - 2 focus - visible:outline - blue - 600 transition - all duration - 200 hover:scale-105">
+
                 Get Started;
               </a>;
               <a href="/about" className="text - sm font - semibold leading - 6 text - white hover:text - blue - 400 transition - colors duration-200">;
@@ -165,8 +168,8 @@ const features = [;
           <div className="grid max - w-xl grid - cols - 1 gap - 8 lg:max - w-none lg:grid - cols-2">;
             {solutions.map ((solution) => (<article;
                 key={solution.name}
-                className="flex flex - col items - start group bg - white / 5 p - 8 rounded - 2xl backdrop - blur - sm hover:bg - white / 10 transition - all duration - 300 hover:scale-105";
-              >;
+                className="flex flex - col items - start group bg - white / 5 p - 8 rounded - 2xl backdrop - blur - sm hover:bg - white / 10 transition - all duration - 300 hover:scale-105">
+
                 <div className="flex items - center gap - x-4 text-xs">;
                   <time date_time="2024" className="text - gray-400">;
                     2024;
@@ -190,8 +193,8 @@ const features = [;
           <div className="mt-10 flex items-center justify-center gap-x-6">;
             <a;
               href="/contact";
-              className="rounded-md bg-white px-3.5 py-2.5 text-sm font-semibold text-gray-900 shadow-sm hover:bg-gray-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white transition-all duration-200 hover:scale-105";
-            >;
+              className="rounded-md bg-white px-3.5 py-2.5 text-sm font-semibold text-gray-900 shadow-sm hover:bg-gray-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white transition-all duration-200 hover:scale-105">
+
               Get Started;
             </a>;
             <a href="/solutions" className="text-sm font-semibold leading-6 text-white hover:text-blue-400 transition-colors duration-200">;
@@ -225,8 +228,8 @@ const features = [;
           <div className="mt - 10 flex items - center justify - center gap-x-6">;
             <a;
               href="/contact";
-              className="rounded - md bg - white px - 3.5 py - 2.5 text - sm font - semibold text - gray - 900 shadow - sm hover:bg - gray - 100 focus - visible:outline focus - visible:outline - 2 focus - visible:outline - offset - 2 focus - visible:outline - white transition - all duration - 200 hover:scale-105";
-            >;
+              className="rounded - md bg - white px - 3.5 py - 2.5 text - sm font - semibold text - gray - 900 shadow - sm hover:bg - gray - 100 focus - visible:outline focus - visible:outline - 2 focus - visible:outline - offset - 2 focus - visible:outline - white transition - all duration - 200 hover:scale-105">
+
               Get Started;
             </a>;
             <a href="/solutions" className="text - sm font - semibold leading - 6 text - white hover:text - blue - 400 transition - colors duration-200">;
@@ -234,8 +237,10 @@ const features = [;
             </a>;
           </div>;
         </div>;
-      </div>;
-    </div>)}
+      </div>
+    </div>
+  );
+}
                     </a>;
                   </h3>;
                   <p className="mt-5 line-clamp-3 text-sm leading-6 text-gray-300">{solution.description}</p>;
@@ -264,8 +269,8 @@ const features = [;
           <div className="mt-10 flex items-center justify-center gap-x-6">;
             <a;
               href="/contact";
-              className="rounded-md bg-white px-3.5 py-2.5 text-sm font-semibold text-gray-900 shadow-sm hover:bg-gray-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white transition-all duration-200 hover:scale-105";
-            >;
+              className="rounded-md bg-white px-3.5 py-2.5 text-sm font-semibold text-gray-900 shadow-sm hover:bg-gray-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white transition-all duration-200 hover:scale-105">
+
               Get Started;
           </div>        </div>;
       </div>;

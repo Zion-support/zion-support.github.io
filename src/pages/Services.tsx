@@ -7,6 +7,7 @@ import Footer from '../components/Footer';
 import SEO from '../components/SEO';
 
 const Services: React.FC = () => {
+ ;
   const services = [
     {
       icon: <Code className="w-12 h-12" />,
@@ -22,7 +23,8 @@ const Services: React.FC = () => {
       ],
       pricing: 'Starting at $5,000/month',
       href: '/services/ai-services'
-    },
+   ,
+},
     {
       icon: <Database className="w-12 h-12" />,
       title: 'IT Services',
@@ -37,7 +39,8 @@ const Services: React.FC = () => {
       ],
       pricing: 'Starting at $3,000/month',
       href: '/services/it-services'
-    },
+   ,
+},
     {
       icon: <Smartphone className="w-12 h-12" />,
       title: 'Micro SaaS',
@@ -52,7 +55,8 @@ const Services: React.FC = () => {
       ],
       pricing: 'Starting at $2,500/month',
       href: '/services/micro-saas'
-    },
+   ,
+},
     {
       icon: <Shield className="w-12 h-12" />,
       title: 'Cybersecurity',
@@ -67,7 +71,8 @@ const Services: React.FC = () => {
       ],
       pricing: 'Starting at $4,000/month',
       href: '/services/cybersecurity'
-    },
+   ,
+},
     {
       icon: <Cloud className="w-12 h-12" />,
       title: 'Cloud Solutions',
@@ -82,7 +87,8 @@ const Services: React.FC = () => {
       ],
       pricing: 'Starting at $3,500/month',
       href: '/services/cloud-solutions'
-    },
+   ,
+},
     {
       icon: <Globe className="w-12 h-12" />,
       title: 'Data Analytics',
@@ -97,10 +103,11 @@ const Services: React.FC = () => {
       ],
       pricing: 'Starting at $2,800/month',
       href: '/services/data-analytics'
-    }
+   ,
+}
   ];
 
-  const additionalServices = [
+const additionalServices = [
     {
       icon: <Zap className="w-8 h-8" />,
       title: 'Automation Solutions',
@@ -112,7 +119,8 @@ const Services: React.FC = () => {
       title: 'Machine Learning Consulting',
       description: 'Expert guidance on ML implementation',
       pricing: '$200/hour'
-    },
+   ,
+},
     {
       icon: <Cpu className="w-8 h-8" />,
       title: 'DevOps & CI/CD',
@@ -136,7 +144,8 @@ const Services: React.FC = () => {
       title: 'Team Augmentation',
       description: 'Scale your team with expert developers',
       pricing: '$150/hour'
-    }
+   ,
+}
   ];
 
   return (
@@ -156,7 +165,7 @@ const Services: React.FC = () => {
         <section className="pt-20 pb-16 px-4">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
-              <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
+              <h1 className="text-5xl md: text-7xl font-bold text-white mb-6">
                 Our <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500">Services</span>
               </h1>
               <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
@@ -167,14 +176,15 @@ const Services: React.FC = () => {
           </div>
         </section>
 
-        {/* Services Grid */}
+        {/* Services Grid *,
+}
         <section className="py-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {services.map((service, index) => (
                 <div
                   key={index}
-                  className="group bg-gray-800/50 backdrop-blur-sm rounded-2xl p-8 hover:bg-gray-800/70 transition-all duration-300 border border-gray-700/50 hover:border-cyan-400/50"
+                  className="group bg-gray-800/50 backdrop-blur-sm rounded-2xl p-8 hover: bg-gray-800/70 transition-all duration-300 border border-gray-700/50 hover:border-cyan-400/50"
                 >
                   <div className="text-cyan-400 mb-6 group-hover:scale-110 transition-transform duration-300">
                     {service.icon}
@@ -185,7 +195,8 @@ const Services: React.FC = () => {
                   </h3>
                   
                   <p className="text-gray-300 mb-6 leading-relaxed">
-                    {service.description}
+                    {service.descriptio,
+}
                   </p>
 
                   <ul className="space-y-2 mb-6">
@@ -208,7 +219,7 @@ const Services: React.FC = () => {
 
                   <Link
                     to={service.href}
-                    className="inline-flex items-center text-cyan-400 hover:text-cyan-300 font-medium group-hover:translate-x-1 transition-all duration-300"
+                    className="inline-flex items-center text-cyan-400 hover: text-cyan-300 font-medium group-hover:translate-x-1 transition-all duration-300"
                   >
                     Learn More
                     <ArrowRight className="ml-2 w-4 h-4" />
@@ -219,7 +230,8 @@ const Services: React.FC = () => {
           </div>
         </section>
 
-        {/* Additional Services Section */}
+        {/* Additional Services Section *,
+}
         <section className="py-20 bg-gray-900/50">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
@@ -235,7 +247,7 @@ const Services: React.FC = () => {
               {additionalServices.map((service, index) => (
                 <div
                   key={index}
-                  className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 hover:bg-gray-800/70 transition-all duration-300 border border-gray-700/50 hover:border-cyan-400/50"
+                  className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 hover: bg-gray-800/70 transition-all duration-300 border border-gray-700/50 hover:border-cyan-400/50"
                 >
                   <div className="text-cyan-400 mb-4">
                     {service.icon}
@@ -329,7 +341,8 @@ const Services: React.FC = () => {
         <Footer />
       </div>
     </>
-  );
+  ),
 };
+
 
 export default Services;

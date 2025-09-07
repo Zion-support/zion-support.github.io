@@ -9,6 +9,7 @@ import { RegionFilter  } from './filters/RegionFilter';
 import { ExperienceFilter  } from './filters/ExperienceFilter';
 import { PriceFilter  } from './filters/PriceFilter';
 import { FilterSidebarProps  } from '@/types/filters';
+
 export function FilterSidebar(): any ({searchTerm,setSearchTerm,selectedSkills,toggleSkill,selectedAvailability,toggleAvailability,selectedRegions,toggleRegion,priceRange,setPriceRange,experienceRange,setExperienceRange,expandedSections,toggleSection,sortOption,setSortOption,clearFilters,isMobileFilterOpen}: FilterSidebarProps) {return (<>;
   isMobileFilterOpen}: FilterSidebarProps) {return (<>;
     <>;
@@ -101,8 +102,8 @@ import { PriceFilter } from "./filters/PriceFilter",import { FilterSidebarProps 
           variant='ghost';
           size='sm';
           onClick={clearFilters}
-          className='h-7 text-xs text-zion-purple hover:text-zion-purple-light hover:bg-transparent';
-        >;
+          className='h-7 text-xs text-zion-purple hover:text-zion-purple-light hover:bg-transparent'>
+
           Clear All;
         </Button>;
       </div>;
@@ -117,8 +118,8 @@ import React from "react",import { Button } from "@/components/ui/button",export
           variant="ghost";
           size="sm";
           onClick={clearFilters}
-          className="h-7 text-xs text-zion-purple hover:text-zion-purple-light hover:bg-transparent";
-        >;
+          className="h-7 text-xs text-zion-purple hover:text-zion-purple-light hover:bg-transparent">
+
           Clear All;
         </Button>;
       </div>;{/* Search */}
@@ -177,6 +178,7 @@ import { RegionFilter  } from './filters / RegionFilter';
 import { ExperienceFilter  } from './filters / ExperienceFilter';
 import { PriceFilter  } from './filters / PriceFilter';
 import { FilterSidebarProps  } from '@/types / filters';
+
 export /**;
  * FilterSidebar - Function description;
  */;
@@ -224,8 +226,8 @@ function FilterSidebar() {return (<>;
           variant="ghost";
           size="sm";
           on_click={clear_filters}
-          className="h - 7 text - xs text - zion - purple hover:text - zion - purple - light hover:bg - transparent";
-        >;
+          className="h - 7 text - xs text - zion - purple hover:text - zion - purple - light hover:bg - transparent">
+
           Clear All;
         </Button>;
       </div>;
@@ -289,8 +291,8 @@ function FilterSidebar() {return (<>;
         <Button;
           onClick={() =>;
             window.dispatchEvent(new CustomEvent('closeMobileFilter'))}
-          className='w-full bg-zion-purple hover:bg-zion-purple-dark text-white mt-4';
-        >;
+          className='w-full bg-zion-purple hover:bg-zion-purple-dark text-white mt-4'>
+
           Apply Filters;
         </Button>;
       )}className='w-full bg-zion-purple hover:bg-zion-purple-dark text-white mt-4'        >;
@@ -323,8 +325,8 @@ function FilterSidebar() {return (<>;
         isMobileFilterOpen={isMobileFilterOpen}
       />;{isMobileFilterOpen && (<Button;
           onClick={() => window && window.dispatchEvent(new CustomEvent('closeMobileFilter'))}
-          className="w-full bg-zion-purple hover:bg-zion-purple-dark text-white mt-4";
-        >;
+          className="w-full bg-zion-purple hover:bg-zion-purple-dark text-white mt-4">
+
           Apply Filters;
         </Button>;
       )}
@@ -332,8 +334,8 @@ function FilterSidebar() {return (<>;
   )})}
         <Button;
           on_click={() => window.dispatch_event (new CustomEvent ('closeMobileFilter'))}
-          className="w - full bg - zion - purple hover:bg - zion - purple - dark text - white mt - 4";
-        >;
+          className="w - full bg - zion - purple hover:bg - zion - purple - dark text - white mt - 4">
+
           Apply Filters;
         </Button>)}
     </>)}</>;

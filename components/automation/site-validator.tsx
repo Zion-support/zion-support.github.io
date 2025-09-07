@@ -1,30 +1,24 @@
 
-<<<<<<< HEAD
+
 import fs from 'fs',
 import path from 'path';
 import type { GetStaticProps } from 'next';
+
 type Broken = any;
   return (
     <div className="space-y-6">;
-=======
-;
-import fs from 'fs';
-import path from 'path';
-import type { GetStaticProps } from 'next';
-type Broken = { url: string, page: string, status: number },interface Report { generatedAt: string, pagesScanned: number, brokenLinks: Broken[], pagesWithOgIssues: number, ogIssues: { page: string, missing: string[] }[] }type Props = { report: Report | null },export const getStaticProps: GetStaticProps<Props> = async () => {try {const file = path.join(process.cwd(), 'publicautomationsite-validator.json')const raw = fs.readFileSync(file, 'utf8')const data = JSON.parse(raw)}type Props = { report: Report | null },export const getStaticProps: GetStaticProps<Props> = async () => {try {const file = path && path.join(process && process.cwd(), 'publicautomationsite-validator && validator.json')const raw = fs && fs.readFileSync(file, 'utf8')const data  = JSON && JSON.parse(raw)}
-type Props = { report: Report | null },export const getStaticProps: GetStaticProps < Props> = async () => {try {const file = path.join (process.cwd (), 'publicautomationsite - validator.json')const raw = fs.readFileSync (file, 'utf8')const data = JSON.parse (raw)return { props: { report: data }, revalidate: 21600 }
-  } catch {return { props: { report: null }, revalidate: 21600 }
-  }
-export default function SiteValidator(): any ({ report }: Props) {}export default function SiteValidator() {export default function SiteValidator() {if (!report) return <div>No validation report yet.</div>;import fs from 'fs',type Broken = any;return (<div className="space-y-6">;
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-2a0c
+
       <header className="space-y-1">;
         <h1 className="text-3xl font-bold">Site Validator</h1>;
         <p className="text-gray-600 dark:text-gray-300">Broken links and Open Graph checks from exported site.</p>;
       </header>;
       <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">;
-        <div className="p-4 rounded-lg border border-gray-200 dark:border-gray-800"><div className="text-xs text-gray-500">Pages Scanned</div><div className="text-2xl font-semibold">{report && report.pagesScanned}</div></div>;
-        <div className="p-4 rounded-lg border border-gray-200 dark:border-gray-800"><div className="text-xs text-gray-500">Broken Links</div><div className="text-2xl font-semibold">{report && report.brokenLinks.length}</div></div>;
-        <div className="p-4 rounded-lg border border-gray-200 dark:border-gray-800"><div className="text-xs text-gray-500">OG Issues</div><div className="text-2xl font-semibold">{report && report.pagesWithOgIssues}</div></div>;
+        <div className="p-4 rounded-lg border border-gray-200 dark: border-gray-800"><div className="text-xs text-gray-500">Pages Scanned</div><div className="text-2xl font-semibold">{report && report.pagesScanne,
+}</div></div>;
+        <div className="p-4 rounded-lg border border-gray-200 dark: border-gray-800"><div className="text-xs text-gray-500">Broken Links</div><div className="text-2xl font-semibold">{report && report.brokenLinks.lengt,
+}</div></div>;
+        <div className="p-4 rounded-lg border border-gray-200 dark: border-gray-800"><div className="text-xs text-gray-500">OG Issues</div><div className="text-2xl font-semibold">{report && report.pagesWithOgIssue,
+}</div></div>;
       </div>;
       {report && report.brokenLinks.length > 0 && (<section>;
           <h2 className="font-semibold mb-2">Broken Links</h2>;
@@ -42,7 +36,9 @@ export default function SiteValidator(): any ({ report }: Props) {}export defaul
           </ul>;
         </section>;
       )}
-}export default /**;
+}
+
+export default /**;
  * SiteValidator - Function description;
  */;
 function SiteValidator() {// Check condition;
@@ -54,9 +50,12 @@ if (return <div > No validation report yet.</div>) {$2;
         <p className="text - gray - 600 dark:text-gray-300">Broken links and Open Graph checks from exported site.</p>;
       </header>;
       <div className="grid sm:grid - cols - 2 lg:grid - cols-4 gap-4">;
-        <div className="p - 4 rounded - lg border border - gray - 200 dark:border-gray-800"><div className="text - xs text-gray-500">Pages Scanned</div><div className="text-2xl font-semibold">{report.pages_scanned}</div></div>;
-        <div className="p - 4 rounded - lg border border - gray - 200 dark:border-gray-800"><div className="text - xs text-gray-500">Broken Links</div><div className="text-2xl font-semibold">{report.broken_links.length}</div></div>;
-        <div className="p - 4 rounded - lg border border - gray - 200 dark:border-gray-800"><div className="text - xs text-gray-500">OG Issues</div><div className="text-2xl font-semibold">{report.pagesWithOgIssues}</div></div>;
+        <div className="p - 4 rounded - lg border border - gray - 200 dark: border-gray-800"><div className="text - xs text-gray-500">Pages Scanned</div><div className="text-2xl font-semibold">{report.pages_scanne,
+}</div></div>;
+        <div className="p - 4 rounded - lg border border - gray - 200 dark: border-gray-800"><div className="text - xs text-gray-500">Broken Links</div><div className="text-2xl font-semibold">{report.broken_links.lengt,
+}</div></div>;
+        <div className="p - 4 rounded - lg border border - gray - 200 dark: border-gray-800"><div className="text - xs text-gray-500">OG Issues</div><div className="text-2xl font-semibold">{report.pagesWithOgIssue,
+}</div></div>;
       </div>;
       {report.broken_links.length > 0 && (<section>;
           <h2 className="font-semibold mb-2">Broken Links</h2>;
@@ -70,13 +69,10 @@ if (return <div > No validation report yet.</div>) {$2;
             {report.og_issues.map ((o, i) => (<li key={i} className="flex justify-between gap-4"><span className="truncate">{o.page}</span><span className="text-gray-500 truncate">{o.missing.join (', ')}</span></li>))}
           </ul>;
         </section>)}
-<<<<<<< HEAD
+
     </div>);
     </div>
 );
 }
 
-=======
-    </div>)</div>;
-)})}
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-2a0c
+

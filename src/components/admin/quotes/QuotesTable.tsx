@@ -2,7 +2,10 @@
 ;
   isLoading: boolean,updateStatus: (id: string, status: QuoteStatus) => void,toggleArchive: (id: string, isArchived: boolean) => void,deleteQuote: (id: string) => void,onViewDetails: (quote: QuoteRequest) => void;
 }}
-export const QuotesTable: React.FC<QuotesTableProps> = ({}
+
+export const QuotesTable: React.FC<QuotesTableProps> = (,
+}
+
 export const QuotesTable: React.FC<QuotesTableProps> = ({quotes;
   isArchived = false;
   isLoading;
@@ -36,8 +39,8 @@ export const QuotesTable: React.FC<QuotesTableProps> = ({quotes;
               </TableCell>;
             </TableRow>;
           ) : (quotes.map(quote => (<TableRow;
-                key={quote.id}className="border-zion-blue-light hover:bg-zion-blue";
-              >;
+                key={quote.id}className="border-zion-blue-light hover:bg-zion-blue">
+
                 <TableCell className="text-white">;
                   {quote.talent_name |'Unknown Talent'}
                 </TableCell>;
@@ -53,9 +56,13 @@ import {DropdownMenu;
 } from '@/components / ui / dropdown - menu'; import { QuoteStatusBadge   } from '@/components / quotes / QuoteStatusBadge';
 import type { QuoteRequest, QuoteStatus } from '@/types / quotes';
 import { format_date  } from '@/utils / date_utils';
-interface QuotesTableProps  {quotes: QuoteRequest[],is_archived?: boolean;
+
+interface QuotesTableProps {
+  quotes: QuoteRequest[],is_archived?: boolean;
   is_loading: boolean,update_status: (id: string, status: QuoteStatus, ) => void,toggle_archive: (id: string, is_archived: boolean, ) => void,delete_quote: (id: string, ) => void,onViewDetails: (quote: QuoteRequest, ) => void;
+
 }
+
 export const QuotesTable: React.FC < QuotesTableProps> = ({quotes;
   is_archived = false;
   is_loading;
@@ -88,8 +95,8 @@ export const QuotesTable: React.FC < QuotesTableProps> = ({quotes;
               </TableCell>;
             </TableRow>) : (quotes.map (quote => (<TableRow;
                 key = {quote.id }
-                className="border - zion - blue - light hover:bg - zion - blue";
-              >;
+                className="border - zion - blue - light hover:bg - zion - blue">
+
                 <TableCell className="text - white">;
                   {quote.talent_name || 'Unknown Talent'}
                 </TableCell>;
@@ -163,8 +170,8 @@ import { formatDate } from '@/utils/dateUtils';
                             Archive;
                           </DropdownMenuItem>;
                           <DropdownMenuItem;
-                            onClick={() => {if (window.confirm('Are you sure you want to delete this quote request? This action cannot be undone.')) {deleteQuote(quote.id)className="text-red-500";
-                          >;
+                            onClick={() => {if (window.confirm('Are you sure you want to delete this quote request? This action cannot be undone.')) {deleteQuote(quote.id)className="text-red-500">
+
                             <Trash2 className="h-4 w-4 mr-2" />;
                             Delete;
                           </DropdownMenuItem>;
@@ -173,9 +180,13 @@ import { formatDate } from '@/utils/dateUtils';
 import React from "react",import { Eye, MoreHorizontal, Archive, Trash2  } from 'lucide-react';
   Table,TableBody,TableCell,TableHead,TableHeader,TableRow;
 } from "@/components/ui/table",import { Button } from "@/components/ui/button",DropdownMenu,DropdownMenuContent,DropdownMenuItem,DropdownMenuTrigger;
-} from "@/components/ui/dropdown-menu",import { QuoteStatusBadge } from "@/components/quotes/QuoteStatusBadge",import type { QuoteRequest, QuoteStatus } from "@/types/quotes",import { formatDate } from "@/utils/dateUtils",interface QuotesTableProps  {quotes: QuoteRequest[],isArchived?: boolean;
+} from "@/components/ui/dropdown-menu",import { QuoteStatusBadge } from "@/components/quotes/QuoteStatusBadge",import type { QuoteRequest, QuoteStatus } from "@/types/quotes",import { formatDate } from "@/utils/dateUtils",interface QuotesTableProps {
+  quotes: QuoteRequest[],isArchived?: boolean;
   isLoading: boolean,updateStatus: (id: string, status: QuoteStatus,) => void,toggleArchive: (id: string, isArchived: boolean,) => void,deleteQuote: (id: string,) => void,onViewDetails: (quote: QuoteRequest,) => void;
-}export const QuotesTable: React.FC<QuotesTableProps> = ({quotes;
+
+}
+
+export const QuotesTable: React.FC<QuotesTableProps> = ({quotes;
   isArchived = false;
   isLoading;
   updateStatus;
@@ -291,8 +302,8 @@ import React from "react",import { Eye, MoreHorizontal, Archive, Trash2  } from 
                           </DropdownMenuItem>;
                           <DropdownMenuItem;
                             onClick = {() => {if (window && window.confirm('Are you sure you want to delete this quote request? This action cannot be undone.')) {deleteQuote(quote && quote.id)}}}
-                            className="text-red-500";
-                          >;
+                            className="text-red-500">
+
                             <Trash2 className="h-4 w-4 mr-2" />;
                             Delete;
                           </DropdownMenuItem>;
@@ -383,8 +394,8 @@ import React from "react",import { Eye, MoreHorizontal, Archive, Trash2  } from 
                             on_click = {() => {if () {) {$2;
 }
                                 delete_quote (quote.id)} }}
-                            className="text - red - 500";
-                          >;
+                            className="text - red - 500">
+
                             <Trash2 className="h - 4 w - 4 mr - 2" />;
                             Delete;
                           </DropdownMenuItem>;
@@ -394,8 +405,10 @@ import React from "react",import { Eye, MoreHorizontal, Archive, Trash2  } from 
                 </TableCell>;
               </TableRow>)))}
         </TableBody>;
-      </Table>;
-    </div>)}'";Table;
+      </Table>
+    </div>
+  );
+}'";Table;
   TableBody;
   TableCell;
   TableHead;
@@ -408,6 +421,7 @@ import React from "react",import { Eye, MoreHorizontal, Archive, Trash2  } from 
   DropdownMenuTrigger;
 } from "@/components/ui/dropdown-menu",import { QuoteStatusBadge  } from '@/components/quotes/QuoteStatusBadge';
 import { formatDate  } from '@/utils/dateUtils';
+
 interface QuotesTableProps  {quotes: QuoteRequest[];
   isArchived?: boolean;
   isLoading: boolean;
@@ -429,12 +443,16 @@ interface QuotesTableProps  {quotes: QuoteRequest[];
   DropdownMenuItem;
   DropdownMenuTrigger;
 } from "@/components/ui/dropdown-menu"; import { QuoteStatusBadge  } from '@/components/quotes/QuoteStatusBadge';
-interface QuotesTableProps  {quotes: QuoteRequest[];
+
+interface QuotesTableProps {
+  quotes: QuoteRequest[];
   isArchived?: boolean;
   isLoading: boolean;
   updateStatus: (id: string, status: QuoteStatus,) => void;
   toggleArchive: (id: string, isArchived: boolean,) => void;
   deleteQuote: (id: string,) => void;
   onViewDetails: (quote: QuoteRequest,) => void;
+
 }
+
 export const QuotesTable: React.FC<QuotesTableProps> = ({

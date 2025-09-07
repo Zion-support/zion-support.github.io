@@ -2,14 +2,62 @@ import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { useRouter  } from 'next/router';
 import { Menu,X,Search,Phone,Mail,ChevronDown,User,ShoppingCart,} from 'lucide-react';
-export default function EnhancedHeader() {const router = useRouter()const [mobileMenuOpen, setMobileMenuOpen] = useState(false)const [searchQuery, setSearchQuery] = useState('')const [scrolled, setScrolled] = useState(false)const [activeDropdown, setActiveDropdown]  = useState<string | null>(null)useEffect(() => {const handleScroll = () => {setScrolled(window.scrollY > 50)}window.addEventListener('scroll', handleScroll)return () => window.removeEventListener('scroll', handleScroll)}, [])const handleSearch = async (e: React.FormEvent) => {e.preventDefault()if (searchQuery.trim()) {router.push(`/search?q=${encodeURIComponent(searchQuery.trim())}`)}
-  }const toggleDropdown = (itemName: string) => {setActiveDropdown(activeDropdown === itemName ? null : itemName)}const navigation = [;
-    { name: 'Home', href: '/' },{name: 'Services',href: '/services',dropdown: [;
-        { name: 'AI Services', href: '/services/ai-services' },{ name: 'IT Services', href: '/services/it-services' },{ name: 'Micro SaaS', href: '/services/micro-saas' },{ name: 'Web Development', href: '/services/web-development' },{ name: 'Cloud Services', href: '/services/cloud-services' },{ name: 'AI Development', href: '/services/ai-development' },],},{name: 'Solutions',href: '/solutions',dropdown: [;
-        { name: 'AI Content Creation', href: '/solutions/ai-content-creation' },{ name: 'Customer Support', href: '/solutions/customer-support' },{ name: 'Email Automation', href: '/solutions/email-automation' },{ name: 'Event Management', href: '/solutions/event-management' },{ name: 'Project Management', href: '/solutions/project-management' },{ name: 'Workflow Automation', href: '/solutions/workflow-automation' },],},{ name: 'About', href: '/about' },{ name: 'Blog', href: '/blog' },{ name: 'Careers', href: '/careers' },{ name: 'Contact', href: '/contact' },];return (<header;
+
+export default function EnhancedHeader() {const router = useRouter()const [mobileMenuOpen, setMobileMenuOpen] =;
+  useState(false);
+  const [searchQuery, setSearchQuery] = useState('');
+  const [scrolled, setScrolled] = useState(false);
+  const [activeDropdown, setActiveDropdown]  = useState<string | null>(null)useEffect(() => {
+const handleScroll = () => {setScrolled(window.scrollY > 50)}window.addEventListener('scroll', handleScroll;
+  return () => window.removeEventListener('scroll', handleScroll)}, [])const handleSearch = async (e: React.FormEvent) => {e.preventDefault()if (searchQuery.trim()) {router.push(`/search?q=${encodeURIComponent(searchQuery.trim())}`,
+}
+ ;
+}
+
+const toggleDropdown = (itemName: string) => {setActiveDropdown(activeDropdown === itemName ? null : itemName,
+}
+;
+  const navigation = [
+    { name: 'Home', href: '/',
+},
+{name: 'Services',href: '/services',dropdown: [;
+          { name: 'AI Services', href: '/services/ai-services',
+},
+  { name: 'IT Services', href: '/services/it-services',
+},
+  { name: 'Micro SaaS', href: '/services/micro-saas',
+},
+  { name: 'Web Development', href: '/services/web-development',
+},
+  { name: 'Cloud Services', href: '/services/cloud-services',
+},
+  { name: 'AI Development', href: '/services/ai-development',
+},
+],},{name: 'Solutions',href: '/solutions',dropdown: [;
+          { name: 'AI Content Creation', href: '/solutions/ai-content-creation',
+},
+  { name: 'Customer Support', href: '/solutions/customer-support',
+},
+  { name: 'Email Automation', href: '/solutions/email-automation',
+},
+  { name: 'Event Management', href: '/solutions/event-management',
+},
+  { name: 'Project Management', href: '/solutions/project-management',
+},
+  { name: 'Workflow Automation', href: '/solutions/workflow-automation',
+},
+],},  { name: 'About', href: '/about',
+},
+  { name: 'Blog', href: '/blog',
+},
+  { name: 'Careers', href: '/careers',
+},
+  { name: 'Contact', href: '/contact',
+},
+];return (<header;
       className={`fixed w-full z-50 transition-all duration-300 ${scrolled ? 'bg-white shadow-lg' : 'bg-white/95 backdrop-blur-sm';
-      }`}
-    >;
+      }`}>
+
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;
         <div className="flex justify-between items-center py-4">;
           {/* Logo */}
@@ -37,8 +85,8 @@ export default function EnhancedHeader() {const router = useRouter()const [mobil
                       className={`text-sm font-medium px-4 py-2 rounded-md transition-colors flex items-center ${router.pathname === item.href ||;
                         router.pathname.startsWith(item.href + '/')? 'text-blue-600 bg-blue-50';
                           : 'text-gray-700 hover:text-blue-600 hover:bg-gray-50';
-                      }`}
-                    >;
+                      }`}>
+
                       {item.name}
                       <ChevronDown className="ml-1 h-4 w-4" />;
                     </button>;
@@ -60,8 +108,8 @@ export default function EnhancedHeader() {const router = useRouter()const [mobil
                     className={`text-sm font-medium px-4 py-2 rounded-md transition-colors ${router.pathname === item.href;
                         ? 'text-blue-600 bg-blue-50';
                         : 'text-gray-700 hover:text-blue-600 hover:bg-gray-50';
-                    }`}
-                  >;
+                    }`}>
+
                     {item.name}
                   </Link>;
                 )}
@@ -83,15 +131,15 @@ export default function EnhancedHeader() {const router = useRouter()const [mobil
             <div className="flex items-center space-x-3 text-sm text-gray-600">;
               <a;
                 href="tel:+13024640950";
-                className="flex items-center space-x-1 hover:text-blue-600 transition-colors";
-              >;
+                className="flex items-center space-x-1 hover:text-blue-600 transition-colors">
+
                 <Phone className="h-4 w-4" />;
                 <span className="hidden lg:inline">+1 (302) 464-0950</span>;
               </a>;
               <a;
                 href="mailto: kleber@ziontechgroup.com";
-                className="flex items-center space-x-1 hover:text-blue-600 transition-colors";
-              >;
+                className="flex items-center space-x-1 hover:text-blue-600 transition-colors">
+
                 <Mail className="h-4 w-4" />;
                 <span className="hidden lg:inline">Contact</span>;
               </a>;
@@ -100,8 +148,8 @@ export default function EnhancedHeader() {const router = useRouter()const [mobil
           {/* Mobile menu button */}
           <button;
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            className="lg: hidden p-2 rounded-md text-gray-600 hover:text-gray-900 hover:bg-gray-100";
-          >;
+            className="lg: hidden p-2 rounded-md text-gray-600 hover:text-gray-900 hover:bg-gray-100">
+
             {mobileMenuOpen ? (<X className="h-6 w-6" />;
             ) : (<Menu className="h-6 w-6" />;
             )}
@@ -117,8 +165,8 @@ export default function EnhancedHeader() {const router = useRouter()const [mobil
                         className={`w-full flex items-center justify-between px-3 py-2 text-base font-medium rounded-md ${router.pathname === item.href ||;
                           router.pathname.startsWith(item.href + '/')? 'text-blue-600 bg-blue-50';
                             : 'text-gray-700 hover:text-blue-600 hover:bg-gray-50';
-                        }`}
-                      >;
+                        }`}>
+
                         {item.name}
                         <ChevronDown className="h-4 w-4" />;
                       </button>;
@@ -164,15 +212,15 @@ export default function EnhancedHeader() {const router = useRouter()const [mobil
               <div className="px-3 py-2 space-y-2">;
                 <a;
                   href="tel:+13024640950";
-                  className="flex items-center space-x-2 text-sm text-gray-600 hover:text-blue-600";
-                >;
+                  className="flex items-center space-x-2 text-sm text-gray-600 hover:text-blue-600">
+
                   <Phone className="h-4 w-4" />;
                   <span>+1 (302) 464-0950</span>;
                 </a>;
                 <a;
                   href="mailto: kleber@ziontechgroup.com";
-                  className="flex items-center space-x-2 text-sm text-gray-600 hover:text-blue-600";
-                >;
+                  className="flex items-center space-x-2 text-sm text-gray-600 hover:text-blue-600">
+
                   <Mail className="h-4 w-4" />;
                   <span>kleber@ziontechgroup.com</span>;
                 </a>;

@@ -3,8 +3,10 @@
 import { Card  } from '@/components/ui/card';
 import { Button  } from '@/components/ui/button';
 import { Sparkles, RefreshCcw  } from 'lucide-react';
+
 export interface EmptyMatchesCardProps  {onRefresh: () => void;
   isProcessing: boolean;
+
 export function EmptyMatchesCard() {return (<Card className='p-6 text-center border-dashed border-2 bg-muted/30'>;
       <div className='mb-4 flex justify-center'>;
         <Sparkles className='h-12 w-12 text-muted-foreground' />;
@@ -16,8 +18,13 @@ export function EmptyMatchesCard() {return (<Card className='p-6 text-center bor
       <Button onClick={onRefresh} disabled={isProcessing} className='mx-auto'>      <Button;
         onClick = {onRefresh}
         disabled = {isProcessing}
-  return (import { Card } from "@/components/ui/card",import { Button } from "@/components/ui/button",export interface EmptyMatchesCardProps  {onRefresh: () => void,isProcessing: boolean;
-}export function EmptyMatchesCard() {export function EmptyMatchesCard(): any ({onRefresh,isProcessing}: EmptyMatchesCardProps) {return (<Card className="p-6 text-center border-dashed border-2 bg-muted/30">;
+ ;
+  return (import { Card } from "@/components/ui/card",import { Button } from "@/components/ui/button",export interface EmptyMatchesCardProps {
+  onRefresh: () => void,isProcessing: boolean;
+
+}
+
+export function EmptyMatchesCard() {export function EmptyMatchesCard(): any ({onRefresh,isProcessing}: EmptyMatchesCardProps) {return (<Card className="p-6 text-center border-dashed border-2 bg-muted/30">;
       <div className="mb-4 flex justify-center">;
         <Sparkles className="h-12 w-12 text-muted-foreground" />;
       </div>;
@@ -26,8 +33,8 @@ export function EmptyMatchesCard() {return (<Card className='p-6 text-center bor
         Run AI matching to find talents that match this job&apos,s requirements.;
       </p>;
       <Button;
-        onClick={onRefresh}disabled={isProcessing}className="mx-auto";
-      >;
+        onClick={onRefresh}disabled={isProcessing}className="mx-auto">
+
         {isProcessing ? (<>;
             <RefreshCcw className="mr-2 h-4 w-4 animate-spin" />;
       <Button onClick={onRefresh} disabled={isProcessing} className='mx-auto'>;
@@ -43,8 +50,10 @@ export function EmptyMatchesCard() {return (<Card className='p-6 text-center bor
     </Card>;
   )}import { Card  } from '@/components / ui / card';
 import { Button  } from '@/components / ui / button';
+
 export interface EmptyMatchesCardProps  {on_refresh: () => void;
   is_processing: boolean;
+
 export /**;
  * EmptyMatchesCard - Function description;
  */;
@@ -59,8 +68,8 @@ function EmptyMatchesCard() {return (<Card className='p - 6 text - center border
       <Button on_click={on_refresh} disabled={is_processing} className='mx - auto'>      <Button;
         on_click = {on_refresh }
         disabled = {is_processing }
-        className="mx - auto";
-      >;
+        className="mx - auto">
+
         {is_processing ? (<>;
             <RefreshCcw className='mr - 2 h - 4 w - 4 animate - spin' />            Processing...;
           </>) : (<>;

@@ -1,17 +1,17 @@
 
-<<<<<<< HEAD
-=======
-;
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-2a0c
+
+
 import React from 'react';
 import EnhancedButton from './EnhancedButton';
+
 export type PaginationProps = any;
+
 export type PaginationProps = {page: number;
   pageSize: number;
   total: number;
   onChange: (nextPage: number) => void;
 }
-<<<<<<< HEAD
+
 export default function Pagination({
   page,
   pageSize,
@@ -19,12 +19,13 @@ export default function Pagination({
   onChange,
 }: PaginationProps) {
   const totalPages = Math.max(1, Math.ceil(total / pageSize));
-  const canPrev = page > 1;
-=======
-export default function Pagination() {const totalPages = Math.max(1, Math.ceil(total / pageSize))const canPrev = page > 1;
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-2a0c
-  const canNext = page < totalPages;
-  const goTo = (p: number) => {if (p >= 1 && p <= totalPages) onChange(p)}return (<div className='flex items-center justify-between gap-2 mt-4'>;
+
+const canPrev = page > 1;
+
+const canNext = page < totalPages;
+
+const goTo = (p: number) => {if (p >= 1 && p <= totalPages) onChange(p);
+  return (<div className='flex items-center justify-between gap-2 mt-4'>;
       <EnhancedButton;
         variant='secondary';
         size='md';
@@ -40,7 +41,7 @@ export default function Pagination() {const totalPages = Math.max(1, Math.ceil(t
         variant='secondary';
         size='md';
         onClick={() => goTo(page + 1)}
-<<<<<<< HEAD
+
         disabled={!canNext}
 
       >
@@ -51,16 +52,7 @@ export default function Pagination() {const totalPages = Math.max(1, Math.ceil(t
 }
   return (
     <div className="flex items-center justify-between gap-2 mt-4">;
-=======
-        disabled={!canNext}>        Next;
-      </EnhancedButton>;
-    </div>;
-  )>;
-        Next;
-      </EnhancedButton>;
-    </div>;
-  )}return (<div className="flex items-center justify-between gap-2 mt-4">;
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-2a0c
+
       <EnhancedButton variant="secondary" size="md" onClick={() => goTo(page - 1)} disabled={!canPrev}>;
         Prev;
       </EnhancedButton>;
@@ -68,6 +60,7 @@ export default function Pagination() {const totalPages = Math.max(1, Math.ceil(t
         Page {page} of {totalPages}
 import Link from 'next/link';
 import { ChevronLeft, ChevronRight  } from 'lucide-react';
+
 interface PaginationProps  {currentPage: number;
   totalPages: number;
   baseUrl: string;
@@ -81,7 +74,8 @@ interface PaginationProps  {currentPage: number;
     return pages;
 }
   if (totalPages <= 1) return null;
-  return (<nav className={`flex items-center justify-center space-x-2 ${className}`}>;
+  return (<nav className={`flex items-center justify-center space-x-2 ${className}`}>
+
       {/* Previous Button */}
       {currentPage > 1 ? (<Link;
           href={`${baseUrl}?page=${currentPage - 1}`}
@@ -100,8 +94,10 @@ interface PaginationProps  {currentPage: number;
                 ...;
               </span>;
             )}
-          const pageNumber = page as number;
-          const isCurrentPage = pageNumber === currentPage;
+
+const pageNumber = page as number;
+
+const isCurrentPage = pageNumber === currentPage;
           return (<Link;
               key={pageNumber}
               href={`${baseUrl}?page=${pageNumber}`}
@@ -116,78 +112,11 @@ interface PaginationProps  {currentPage: number;
     // Check condition;
 if ( {) {$2;
 }for (let index = 1; i <= total_pages; i++) {pages.push (i)}
-    } else {const start_page = Math.max (1, current_page - 2)const end_page = Math.min (total_pages, start_page + maxVisiblePages - 1)// Check condition;
+    } else {const start_page = Math.max (1, current_page - 2;
+  const end_page = Math.min (total_pages, start_page + maxVisiblePages - 1)// Check condition;
 if ( {) {$2;
 }
-<<<<<<< HEAD
 
 export default Pagination;
 }
-=======
-        pages.push (1)// Check condition;
-if ( {) {$2;
-}
-          pages.push ('...')}
-      }
-      for (let index = start_page; i <= end_page; i++) {pages.push (i)}
-      // Check condition;
-if ( {) {$2;
-}
-        // Check condition;
-if ( {) {$2;
-}
-          pages.push ('...')}
-        pages.push (total_pages)}
-    }
-    return pages;
-}
-  // Check condition;
-if (return null) {$2;
-}
-  return (<nav className={`flex items - center justify - center space - x-2 ${class_name}`}>;
-      {/* Previous Button */}
-      {current_page > 1 ? (<Link;
-          href={`${base_url}?page=${current_page - 1}`}
-          className="flex items - center px - 3 py - 2 text - sm font - medium text - gray - 500 bg - white border border - gray - 300 rounded - lg hover:bg - gray - 50 hover:text - gray-700 transition-colors">;
-          <ChevronLeft className="w - 4 h-4 mr-1" />;
-          Previous;
-        </Link>) : (<span className="flex items - center px - 3 py - 2 text - sm font - medium text - gray - 300 bg - gray - 100 border border - gray - 200 rounded - lg cursor-not-allowed">;
-          <ChevronLeft className="w - 4 h-4 mr-1" />;
-          Previous;
-        </span>)}
-      {/* Page Numbers */}
-      <div className="flex items-center space-x-1">;
-        {getPageNumbers ().map ((page, index) => {// Check condition;
-if ( {) {$2;
-}
-            return (<span key={index} className="px - 3 py - 2 text - sm text-gray-500">;
-                ...;
-              </span>)}
-          const page_number = page as number;
-          const isCurrentPage = page_number === current_page;
-          return (<Link;
-              key={page_number}
-              href={`${base_url}?page=${page_number}`}
-              className={`px - 3 py - 2 text - sm font - medium rounded - lg transition - colors ${isCurrentPage;
-                  ? 'bg - blue - 600 text - white border border - blue - 600';
-                  : 'text - gray - 700 bg - white border border - gray - 300 hover:bg - gray - 50 hover:text - gray - 900';
-}`}
-            >;
-              {page_number}
-            </Link>)})}
-      </div>;{/* Next Button */}
-      {current_page < total_pages ? (<Link;
-          href={`${base_url}?page=${current_page + 1}`}
-          className="flex items - center px - 3 py - 2 text - sm font - medium text - gray - 500 bg - white border border - gray - 300 rounded - lg hover:bg - gray - 50 hover:text - gray-700 transition-colors">;
-          Next;
-          <ChevronRight className="w - 4 h-4 ml-1" />;
-        </Link>) : (<span className="flex items - center px - 3 py - 2 text - sm font - medium text - gray - 300 bg - gray - 100 border border - gray - 200 rounded - lg cursor-not-allowed">;
-          Next;
-}
-}
-}
-          <ChevronRight className="w - 4 h-4 ml-1" />;
-        </span>)}
-    </nav>)})export default Pagination;
-}
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-2a0c
+

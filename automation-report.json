@@ -1,39 +1,7 @@
 {
 
-<<<<<<< HEAD
-=======
-  "timestamp": "2025-09-05T15:52:31.442Z",
-  "totalDuration": 19528,
-  "successfulPhases": 3,
-  "totalPhases": 7,
-  "results": {
-    "syntaxFixes": {
-      "success": true,
-      "duration": 1,
-  "timestamp": "2025-09-06T17:32:48.376Z",
-  "duration": "64s",
-  "results": {
-    "tests": {
-      "passed": 0,
-      "failed": 2,
-      "errors": [
-        "Command failed: npm test -- --passWithNoTests\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\nSyntaxError: Unexpected token '}'\n    at compileSourceTextModule (node:internal/modules/esm/utils:344:16)\n    at ModuleLoader.moduleStrategy (node:internal/modules/esm/translators:105:18)\n    at #translate (node:internal/modules/esm/loader:534:12)\n    at ModuleLoader.loadAndTranslate (node:internal/modules/esm/loader:581:27)\n    at async ModuleJob._link (node:internal/modules/esm/module_job:116:19)\n",
-        "spawnSync /bin/sh ENOBUFS"
-      ]
-    },
-    "builds": {
-      "success": true,
-ursor/automate-test-improve-and-merge-code-646c
-  "timestamp": "2025-09-05T15:52:31.442Z",
-  "totalDuration": 19528,
-  "successfulPhases": 3,
-  "totalPhases": 7,
-  "results": {
-    "syntaxFixes": {
-      "success": true,
-      "duration": 1,
 
->>>>>>> main
+
 ursor/automate-test-improve-and-merge-code-646c
       "errors": []
     },
@@ -70,7 +38,7 @@ ursor/automate-test-improve-and-merge-code-646c
       "success": true,
       "duration": 1355,
       "errors": []
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-2a0c
+
   "timestamp": "2025-09-06T22:31:53.507Z",
   "summary": {
     "totalScripts": 8,
@@ -154,7 +122,7 @@ ursor/automate-test-improve-and-merge-code-646c
       "errors": [
         "Command failed: npm run lint:fix\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\n(node:6058) ESLintIgnoreWarning: The \".eslintignore\" file is no longer supported. Switch to using the \"ignores\" property in \"eslint.config.js\": https://eslint.org/docs/latest/use/configure/migration-guide#ignoring-files\n(Use `node --trace-warnings ...` to show where the warning was created)\n\nOops! Something went wrong! :(\n\nESLint: 9.34.0\n\nA configuration object specifies rule \"@typescript-eslint/no-unused-vars\", but could not find plugin \"@typescript-eslint\".\n\nCommon causes of this problem include:\n\n1. The \"@typescript-eslint\" plugin is not defined in your configuration file.\n2. The \"@typescript-eslint\" plugin is not defined within the same configuration object in which the \"@typescript-eslint/no-unused-vars\" rule is applied.\n\n"
       ]
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
+
       "error": "Command failed: npm run lint:fix\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\n(node:3808) ESLintIgnoreWarning: The \".eslintignore\" file is no longer supported. Switch to using the \"ignores\" property in \"eslint.config.js\": https://eslint.org/docs/latest/use/configure/migration-guide#ignoring-files\n(Use `node --trace-warnings ...` to show where the warning was created)\n\nOops! Something went wrong! :(\n\nESLint: 9.35.0\n\nA config object is using the \"extends\" key, which is not supported in flat config system.\n\nInstead of \"extends\", you can include config objects that you'd like to extend from directly in the flat config array.\n\nIf you're using \"extends\" in your config file, please see the following:\nhttps://eslint.org/docs/latest/use/configure/migration-guide#predefined-and-shareable-configs\n\nIf you're not using \"extends\" directly (it may be coming from a plugin), please see the following:\nhttps://eslint.org/docs/latest/use/configure/migration-guide#using-eslintrc-configs-in-flat-config\n"
     },
     {
@@ -222,7 +190,7 @@ ursor/automate-test-improve-and-merge-code-646c
     "lintingSuccess": false,
     "securityIssuesFixed": 0,
     "improvementsCreated": 1
->>>>>>> main
+
 ursor/automate-test-improve-and-merge-code-646c
   }
   ],
@@ -234,6 +202,6 @@ ursor/automate-test-improve-and-merge-code-646c
     "Regular security audits"
   ]
   }
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
+
   }
 }

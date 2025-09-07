@@ -4,11 +4,13 @@ import Link from 'next/link';
 import { ShieldAlert  } from 'lucide-react';
 import { RaiseDisputeButton  } from '@/components/disputes/RaiseDisputeButton';
 import { Button   } from '@/components/ui/button';
+
 interface ProjectActionsProps  {projectId: string;
   isUnderDispute: boolean;
   disputeId?: string;
   isTalent: boolean;
   onAddMilestone: () => void;
+
 export function ProjectActions() {return (<div className='flex gap-2'>;
       {isUnderDispute && disputeId ? (<Button variant='outline' asChild>;
           <Link href={`/dashboard/disputes/${disputeId}`}>;

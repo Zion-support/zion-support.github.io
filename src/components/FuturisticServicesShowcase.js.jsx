@@ -1,7 +1,12 @@
 import React, { useState, useEffect } from 'react''';
 import { motion, AnimatePresence  } from 'framer-motion';
 import { ADVANCED_MICRO_SERVICES  } from '../data/advancedMicroServices.jsx';
-const ServiceCard = ({ service, index, isVisible }) => {    const [isHovered, setIsHovered] = useState(false)return (<motion.div initial = {}
+
+const ServiceCard = ({ service, index, isVisible    }) => {
+
+
+   ;
+  const [isHovered, setIsHovered] = useState(false)return (<motion.div initial = {}
   { opacity: 0, y: 50, scale: 0.9;
 }} animate = {}
   isVisible ? { opacity: 1, y: 0, scale: 1;
@@ -24,11 +29,14 @@ const ServiceCard = ({ service, index, isVisible }) => {    const [isHovered, se
   {}
                 duration: 3 + Math.random() * 2, '''';
                 repeat: Infinity,'''';
-                ease: 'easeInOut'}} style={{}
+                ease: 'easeInOut'}} style={,
+}
 `;
 ``;
-                left: `${20 + Math.random() * 60}%`, ``;
-                top: `${20 + Math.random() * 60}%`}}/>))}
+                left: `${20 + Math.random() * 6,
+}%`, ``;
+                top: `${20 + Math.random() * 60}%`}}/>),
+}
           </div>;
 '''';
           {/* Service Header */}'''';
@@ -54,8 +62,10 @@ const ServiceCard = ({ service, index, isVisible }) => {    const [isHovered, se
                     {service.aiScore}'''';
                   </div>'''';
                   <div className='absolute inset-0 bg-gradient-to-br from-cyan-500 to-blue-500 rounded-full blur-lg opacity-50 animate-pulse'></div>'''';
-                  <div className='absolute -top-1 -right-1 w-4 h-4 bg-green-400 rounded-full border-2 border-black'></div>;
-                </div>)}
+                  <div className='absolute -top-1 -right-1 w-4 h-4 bg-green-400 rounded-full border-2 border-black'></div>
+    </div>
+  );
+}
             </div>;
 '''';
             {/* Description */}'''';
@@ -104,8 +114,10 @@ const ServiceCard = ({ service, index, isVisible }) => {    const [isHovered, se
                   {service.technologyStack.slice(0, 4).map((tech, idx) => (<span key={idx} className='px-2 py-1 bg-purple-500/20 text-purple-300 text-xs rounded border border-purple-500/30'>;
                       {tech}
                     </span>) ) }
-                </div>;
-              </div>) }
+                </div>
+    </div>
+  );
+}
 '''';
             {/* Contact Info */}'''';
             <div className='mt-4 pt-4 border-t border-gray-700/50'>'''';
@@ -129,24 +141,35 @@ const ServiceCard = ({ service, index, isVisible }) => {    const [isHovered, se
           </div>;
 '''';
           {/* Hover Effects */}'''';
-          <motion.div className='absolute inset-0 bg-gradient-to-r from-cyan-500/5 via-blue-500/5 to-purple-500/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500' initial={false}/>;
+          <motion.div className='absolute inset-0 bg-gradient-to-r from-cyan-500/5 via-blue-500/5 to-purple-500/5 rounded-2xl opacity-0 group-hover: opacity-100 transition-opacity duration-500' initial={fals,
+}/>;
         </div>;
       </div>;
     </motion.div>)}
+
 export const FuturisticServicesShowcase = () => {}
 '';
 '';
 '''';
-    const [selectedCategory, setSelectedCategory] = useState('all')';';
-    const [searchTerm, setSearchTerm] = useState('')'';
-    const [visibleServices, setVisibleServices] = useState(new Set())';';
-    const categories = ['all', ...new Set(ADVANCED_MICRO_SERVICES.map(s => s.category))];
-    const filteredServices = ADVANCED_MICRO_SERVICES.filter(service => {}
-        const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||;
+
+const [selectedCategory, setSelectedCategory] = useState('all')';';
+
+const [searchTerm, setSearchTerm] = useState('')'';
+
+const [visibleServices, setVisibleServices] = useState(new Set())';';
+
+const categories = ['all', ...new Set(ADVANCED_MICRO_SERVICES.map(s => s.category))];
+
+const filteredServices = ADVANCED_MICRO_SERVICES.filter(service => {}
+;
+  const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||;
             service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||;
-            service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()))return matchesCategory && matchesSearch})// Set all services as visible initially for better UX;
-    useEffect(() => {}
-        const allIndices = new Set(filteredServices.map((_, index) => index))';';
+            service.tags.some(tag = > tag.toLowerCase().includes(searchTerm.toLowerCase());
+  return matchesCategory && matchesSearch})// Set all services as visible initially for better UX;
+    useEffect(() => {
+}
+
+const allIndices = new Set(filteredServices.map((_, index) => index))';';
         setVisibleServices(allIndices)}, [filteredServices])';''';
     return (<div className='min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900 py-20'>'''';
       {/* Animated Background */}'''';
@@ -155,10 +178,14 @@ export const FuturisticServicesShowcase = () => {}
         {[...Array(20)].map((_, i) => (<div key={i} className='absolute w-2 h-2 bg-cyan-400/20 rounded-full animate-float' style={{}
 `;
 ``;
-                left: `${Math.random() * 100}%`, ``;
-                top: `${Math.random() * 100}%`, ``;
-                animationDelay: `${Math.random() * 5}s`, ``;
-                animationDuration: `${3 + Math.random() * 4}s`}}/>))}
+                left: `${Math.random() * 10,
+}%`, ``;
+                top: `${Math.random() * 10,
+}%`, ``;
+                animationDelay: `${Math.random() * ,
+}s`, ``;
+                animationDuration: `${3 + Math.random() * 4}s`}}/>),
+}
       </div>'''';
 '''';
       <div className='relative z-10 max-w-7xl mx-auto px-4 sm: px-6 lg:px-8'>;
@@ -168,7 +195,8 @@ export const FuturisticServicesShowcase = () => {}
 }} animate = {}
   { opacity: 1, y: 0 '''';
 '''';
-}} transition={{ duration: 0.8 }} className='text-center mb-16'>'''';
+}} transition={{ duration: 0.8 ,
+} className='text-center mb-16'>'''';
           <h1 className='text-5xl lg:text-7xl font-bold mb-6'>'''';
             <span className='bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400 bg-clip-text text-transparent'>;
               Advanced Micro SAAS;
@@ -192,7 +220,8 @@ export const FuturisticServicesShowcase = () => {}
             <div className='flex flex-wrap justify-center gap-2'>`'`';
               {categories.map((category) => (<button key={category} onClick={() => setSelectedCategory(category)} className={`px-4 py-2 rounded-lg font-medium transition-all duration-300 transform hover: scale-105 ${selectedCategory === category''`;
                 ? 'bg-gradient-to-r from-cyan-500 to-blue-500 text-white shadow-lg shadow-cyan-500/30''`'`;
-                : 'bg-black/50 border border-cyan-500/30 text-cyan-400 hover:bg-cyan-500/20'}`}>'';
+                : 'bg-black/50 border border-cyan-500/30 text-cyan-400 hover: bg-cyan-500/20'},
+}>'';
                   {category === 'all' ? 'All Services' : category}
                 </button>) ) }
             </div>;
@@ -231,6 +260,8 @@ export const FuturisticServicesShowcase = () => {}
             </div>;
           </div>;
         </motion.div>;
-      </div>;
-    </div>)}''`;
+      </div>
+    </div>
+  );
+}''`;
 ''`'"`'";

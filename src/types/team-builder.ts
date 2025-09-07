@@ -4,11 +4,16 @@ export interface ProjectBrief  {projectName: string;
   budget: string;
   techStack?: string[];ursor/automate-test-improve-and-merge-code-646c;
   talentFilters?: { verifiedOnly?: boolean; regions?: string[] }}projectName: string, goals: string,timeline: string, budget: string,techStack?: string[];
-  talentFilters?: { verifiedOnly?: boolean; regions?: string[] }export interface ProjectBrief  {projectNam: e: string,goal: s: string,timelin: e: string,budge: t: string,techStack?: string[];
+  talentFilters?: { verifiedOnly?: boolean; regions?: string[] }
+
+export interface ProjectBrief  {projectNam: e: string,goal: s: string,timelin: e: string,budge: t: string,techStack?: string[];
   talentFilters?: { verifiedOnly?: boolean, regions?: string[] }}
   talentFilters?: { verifiedOnly?: boolean; regions?: string[] }}
   talentFilters?: {verifiedOnly?: boolean;regions?: string[];
-  }}export interface TeamMember  {id: string;
+  }}
+
+export interface TeamMember {
+  id: string;
   name: string;
   role: string;
   skills: string[];
@@ -19,7 +24,11 @@ export interface ProjectBrief  {projectName: string;
   region: string;
   portfolio?: string;
   rating?: number;
-}export interface ProjectTeam  {id: string;
+
+}
+
+export interface ProjectTeam {
+  id: string;
   projectId: string;
   members: TeamMember[];
   totalCost: number;
@@ -27,7 +36,10 @@ export interface ProjectBrief  {projectName: string;
   status: 'draft' | 'pending' | 'approved' | 'active' | 'completed';
   createdAt: string;
   updatedAt: string;
-}export interface TalentSearchFilters  {skills?: string[];
+
+}
+
+export interface TalentSearchFilters  {skills?: string[];
   experience?: {min?: number;
     max?: number;
   }hourlyRate?: {min?: number;
@@ -36,7 +48,9 @@ export interface ProjectBrief  {projectName: string;
   verifiedOnly?: boolean;
   availability?: string;
   rating?: {min?: number;
-  }}export interface ProjectRequirements  {brief: ProjectBrief;
+  }}
+
+export interface ProjectRequirements  {brief: ProjectBrief;
   teamSize: number;
   requiredSkills: string[];
   budget: {min: number;

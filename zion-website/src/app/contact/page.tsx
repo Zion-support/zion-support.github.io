@@ -1,22 +1,29 @@
 
 import React from 'react';
+
 export default function ContactPage() {{name: 'Email';
     description: 'Get in touch with our team';
     value: 'contact@ziontechgroup.com';
     href: 'mailto:contact@ziontechgroup.com';
-    icon: EnvelopeIcon}
+    icon: EnvelopeIco,
+}
   {{question: 'What industries do you serve?';
     answer: 'We serve a wide range of industries including healthcare, finance, manufacturing, retail, and technology. Our AI solutions are designed to be adaptable across different sectors.'}
   {{question: 'Do you provide ongoing support?';
     answer: 'Yes, we provide comprehensive ongoing support including technical assistance, updates, training, and optimization services to ensure your AI solutions continue to deliver value.'}
   {return (<div className="bg-black">;
       {/* Hero section */}
-      <div className=&quot;relative isolate px - 6 pt - 14 lg:px - 8&quot;>;
-        <div className=&quot;mx - auto max - w-2xl py - 32 sm:py - 48 lg:py - 56 & quot;>;
-          <div className=&quot;text - center & quot;>;
-            <h1 className=&quot;text - 4xl font - bold tracking - tight text - white sm:text - 6xl & quot;>;
+      <div className=&quot;relative isolate px - 6 pt - 14 lg:px - 8&quot>
+
+        <div className=&quot;mx - auto max - w-2xl py - 32 sm:py - 48 lg:py - 56 & quot>
+
+          <div className=&quot;text - center & quot>
+
+            <h1 className=&quot;text - 4xl font - bold tracking - tight text - white sm: text - 6xl & quot>
+
               Get in{' '}
-      {/* Contact methods */}
+      {/* Contact methods *,
+}
       <div className="mx-auto max-w-7xl px-6 sm:px-6 lg:px-8">;
         <div className="mx-auto max-w-2xl lg:text-center">;
           <h2 className="text-base font-semibold leading-7 text-blue-400">Contact Us</h2>;
@@ -29,7 +36,9 @@ export default function ContactPage() {{name: 'Email';
             {contactMethods.map((method) => (<div key={method.name} className="flex flex-col group">;
                 <dt className="flex items-center gap-x-3 text-base font-semibold leading-7 text-white">;
                   <method.icon className="h-5 w-5 flex-none text-blue-400" aria-hidden="true" />;
-                  {method.name}export default function ContactPage() {return (<div className="min-h-screen bg-white">;
+                  {method.name}
+
+export default function ContactPage() {return (<div className="min-h-screen bg-white">;
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">;
         <div className="text-center mb-16">;
           <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">;
@@ -79,8 +88,8 @@ export default function ContactPage() {{name: 'Email';
                 <dt className="flex items-center gap-x-3 text-base font-semibold leading-7 text-white">;
                   <method.icon className="h-5 w-5 flex-none text-blue-400" aria-hidden="true" />;
                   {method.name}
-                </dt>;
-                    >;
+                </dt>>
+
                       {method.value} <span aria-hidden="true">→</span>;
                     </Link>;
                   </p>;
@@ -138,8 +147,8 @@ export default function ContactPage() {{name: 'Email';
               </div>;
               <button;
                 type="submit";
-                className="w-full bg-blue-600 text-white py-2 px-4 rounded-md hover:bg-blue-700 transition-colors";
-              >;
+                className="w-full bg-blue-600 text-white py-2 px-4 rounded-md hover:bg-blue-700 transition-colors">
+
                 Send Message;
               </button>;
             </form>;
@@ -157,45 +166,59 @@ export default function ContactPage() {{name: 'Email';
                 </div>;
               </div>;
             </div>;
-            <div className=&quot;mt - 8 flex justify - end & quot;>;
+            <div className=&quot;mt - 8 flex justify - end & quot>
+
               <button;
                 type=&quot;submit & quot;
-                className=&quot;rounded - md bg - blue - 600 px - 3.5 py - 2.5 text - center text - sm font - semibold text - white shadow - sm hover:bg - blue - 500 focus - visible:outline focus - visible:outline - 2 focus - visible:outline - offset - 2 focus - visible:outline - blue - 600 transition - all duration - 200 hover:scale - 105 & quot;
-              >;
+                className=&quot;rounded - md bg - blue - 600 px - 3.5 py - 2.5 text - center text - sm font - semibold text - white shadow - sm hover:bg - blue - 500 focus - visible:outline focus - visible:outline - 2 focus - visible:outline - offset - 2 focus - visible:outline - blue - 600 transition - all duration - 200 hover:scale - 105 & quot>
+
                 Send message;
               </button>;
             </div>;
           </form>;
         </div>;
       </div>;{/* Office locations */}
-      <div className=&quot;mx - auto mt - 32 max - w-7xl px - 6 sm:mt - 40 lg:px - 8&quot;>;
-        <div className=&quot;mx - auto max - w-2xl lg:text - center & quot;>;
+      <div className=&quot;mx - auto mt - 32 max - w-7xl px - 6 sm:mt - 40 lg:px - 8&quot>
+
+        <div className=&quot;mx - auto max - w-2xl lg:text - center & quot>
+
           <h2 className=&quot;text - base font - semibold leading - 7 text - blue - 400 & quot;>Global Presence</h2>;
-          <p className=&quot;mt - 2 text - 3xl font - bold tracking - tight text - white sm:text - 4xl & quot;>;
+          <p className=&quot;mt - 2 text - 3xl font - bold tracking - tight text - white sm:text - 4xl & quot>
+
             Visit our offices worldwide;
           </p>;
         </div>;
-        <div className=&quot;mx - auto mt - 16 max - w-2xl sm:mt - 20 lg:mt - 24 lg:max - w-none & quot;>;
-          <div className=&quot;grid max - w-xl grid - cols - 1 gap - 8 lg:max - w-none lg:grid - cols - 3&quot;>;
-            {office_locations.map ((office) => (<div key={office.name} className=&quot;bg - white / 5 p - 8 rounded - 2xl backdrop - blur - sm hover:bg - white / 10 transition - all duration - 300 & quot;>;
-                <div className=&quot;flex items - center gap - x-3 mb - 4&quot;>;
+        <div className=&quot;mx - auto mt - 16 max - w-2xl sm:mt - 20 lg:mt - 24 lg:max - w-none & quot>
+
+          <div className=&quot;grid max - w-xl grid - cols - 1 gap - 8 lg: max - w-none lg:grid - cols - 3&quot>
+
+            {office_locations.map ((office) => (<div key={office.nam,
+} className=&quot;bg - white / 5 p - 8 rounded - 2xl backdrop - blur - sm hover:bg - white / 10 transition - all duration - 300 & quot>
+
+                <div className=&quot;flex items - center gap - x-3 mb - 4&quot>
+
                   <MapPinIcon className=&quot;h - 8 w - 8 text - blue - 400 & quot; />;
                   <h3 className=&quot;text - xl font - semibold text - white & quot;>{office.name}</h3>;
                 </div>;
-                <div className=&quot;space - y-3 text - gray - 300 & quot;>;
-                  <p className=&quot;flex items - start gap - 2&quot;>;
+                <div className=&quot;space - y-3 text - gray - 300 & quot>
+
+                  <p className=&quot;flex items - start gap - 2&quot>
+
                     <MapPinIcon className=&quot;h - 5 w - 5 text - blue - 400 mt - 0.5 flex - shrink - 0&quot; />;
                     {office.address}
                   </p>;
-                  <p className=&quot;flex items - center gap - 2&quot;>;
+                  <p className=&quot;flex items - center gap - 2&quot>
+
                     <PhoneIcon className=&quot;h - 5 w - 5 text - blue - 400 & quot; />;
                     {office.phone}
                   </p>;
-                  <p className=&quot;flex items - center gap - 2&quot;>;
+                  <p className=&quot;flex items - center gap - 2&quot>
+
                     <EnvelopeIcon className=&quot;h - 5 w - 5 text - blue - 400 & quot; />;
                     {office.email}
                   </p>;
-                  <p className=&quot;flex items - center gap - 2&quot;>;
+                  <p className=&quot;flex items - center gap - 2&quot>
+
                     <ClockIcon className=&quot;h - 5 w - 5 text - blue - 400 & quot; />;
                     {office.hours}
                   </p>;
@@ -218,7 +241,8 @@ export default function ContactPage() {{name: 'Email';
                 <dt className="text-lg font-semibold leading-7 text-white mb-4">;
                   {faq.question}
                 </dt>;
-                <dd className=&quot;text - base leading - 7 text - gray - 300 & quot;>;
+                <dd className=&quot;text - base leading - 7 text - gray - 300 & quot>
+
             Common questions;
           </p>;
         </div>;
@@ -244,8 +268,8 @@ export default function ContactPage() {{name: 'Email';
           <div className="mt-10 flex items-center justify-center gap-x-6">;
             <a;
               href="/solutions";
-              className="rounded-md bg-blue-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-blue-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600 transition-all duration-200 hover:scale-105";
-            >;
+              className="rounded-md bg-blue-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-blue-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600 transition-all duration-200 hover:scale-105">
+
               Explore Solutions;
             </Link>;
             <a href="/about" className="text-sm font-semibold leading-6 text-white hover:text-blue-400 transition-colors duration-200">;
@@ -254,4 +278,6 @@ export default function ContactPage() {{name: 'Email';
         </div>;
       </div>;
     </div>;
-  )}export default Page;
+  )}
+
+export default Page;

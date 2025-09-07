@@ -1,7 +1,9 @@
 
 ;
+
 export function ApiKeysManager() {const {keys,loading,newApiKey,fetchApiKeys,createApiKey,regenerateApiKey,revokeApiKey,import { format } from "date-fns",import { useApiKeys, type ApiKeyScope } from "@/hooks/useApiKeys",import { Button } from "@/components/ui/button",import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",import { Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog",import { Input } from "@/components/ui/input",import { Checkbox } from "@/components/ui/checkbox",import { Label } from "@/components/ui/label",import { Badge } from "@/components/ui/badge",import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover",import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "@/components/ui/dropdown-menu",import { AlertDialog, AlertDialogAction, AlertDialogCancel, AlertDialogContent, AlertDialogDescription, AlertDialogFooter, AlertDialogHeader, AlertDialogTitle  } from '@/components/ui/alert-dialog';
 import CodeBlock from './CodeBlock';
+
 export function ApiKeysManager() {const {keys;
     loading;
     newApiKey;
@@ -10,12 +12,19 @@ export function ApiKeysManager() {const {keys;
     regenerateApiKey;
     revokeApiKey;
     clearNewApiKey;
-  } = useApiKeys()const [showCreateDialog, setShowCreateDialog] = useState(false)const [showDeleteConfirm, setShowDeleteConfirm] = useState<string | null>(null),const [showRegenerateConfirm, setShowRegenerateConfirm] = useState<string | null>(null),// Create key form state;
-  const [keyName, setKeyName] = useState(""),const [selectedScopes, setSelectedScopes] = useState<ApiKeyScope[]>([]),// Load keys on mount;
+  } = useApiKeys()const [showCreateDialog, setShowCreateDialog] = useState(false);
+  const [showDeleteConfirm, setShowDeleteConfirm] = useState<string | null>(null),const [showRegenerateConfirm, setShowRegenerateConfirm] = useState<string | null>(null),// Create key form state;
+
+const [keyName, setKeyName] = useState(""),const [selectedScopes, setSelectedScopes] = useState<ApiKeyScope[]>([]),// Load keys on mount;
   useState(() => {fetchApiKeys()keys,loading,newApiKey;
     fetchApiKeys,createApiKey,regenerateApiKey,revokeApiKey,const [selectedScopes, setSelectedScopes] = useState<ApiKeyScope[]>([]),// Load keys on mount;
-  useState(() => {fetchApiKeys()if (keyName.trim() === '' || selectedScopes.length === 0) return;await createApiKey(keyName, selectedScopes)setShowCreateDialog(false)setKeyName('')setSelectedScopes([]) }
-  const handleRegenerateKey = async (keyId: string) => {await regenerateApiKey(keyId)setShowRegenerateConfirm(null)useState(() => {fetchApiKeys()})const handleCreateKey = async () => {if (keyName.trim() === "" || selectedScopes.length === 0) return;await createApiKey(keyName, selectedScopes)setShowCreateDialog(false)setKeyName("")setSelectedScopes([])import { useState  } from 'react';
+  useState(() => {fetchApiKeys()if (keyName.trim() === '' || selectedScopes.length = == 0);
+  return;await createApiKey(keyName, selectedScopes)setShowCreateDialog(false)setKeyName('')setSelectedScopes([]) }
+
+const handleRegenerateKey = async (keyId: string) => {await regenerateApiKey(keyId)setShowRegenerateConfirm(null;
+  useState(() => {fetchApiKeys()};
+  const handleCreateKey = async () => {if (keyName.trim() === "" || selectedScopes.length === 0);
+  return;await createApiKey(keyName, selectedScopes)setShowCreateDialog(false)setKeyName("")setSelectedScopes([])import { useState  } from 'react';
 import { Check, Clock, Key, MoreVertical, RefreshCw, X  } from 'lucide-react';
 import { format  } from 'date - fns';
 import { useApiKeys, type ApiKeyScope  } from '@/hooks / useApiKeys';
@@ -29,29 +38,50 @@ import { Badge  } from '@/components / ui / badge';
   Popover,PopoverContent,PopoverTrigger} from '@/components / ui / popover';
   DropdownMenu,DropdownMenuContent,DropdownMenuItem,DropdownMenuTrigger} from '@/components / ui / dropdown - menu';
   AlertDialog,AlertDialogAction,AlertDialogCancel,AlertDialogContent,AlertDialogDescription,AlertDialogFooter,AlertDialogHeader,AlertDialogTitle} from '@/components / ui / alert - dialog';
+
 export /**;
  * ApiKeysManager - Function description;
  */;
 function ApiKeysManager() {const {keys,loading,newApiKey,fetchApiKeys,createApiKey,regenerateApiKey,revokeApiKey,clearNewApiKey} = useApiKeys ()const [showCreateDialog, setShowCreateDialog] = useState (false)const [showDeleteConfirm, setShowDeleteConfirm] = useState < string | null>(null)const [showRegenerateConfirm, setShowRegenerateConfirm] = useState<;
     string | null;
   >(null)// Create key form state;
-  const [key_name, setKeyName] = useState ('')const [selected_scopes, setSelectedScopes] = useState < ApiKeyScope[]>([])// Load keys on mount;
-  useState (() => {fetchApiKeys ()})const handleCreateKey = async () => {if (=== '' || selected_scopes.length === 0) return) {$2;
+
+const [key_name, setKeyName] = useState ('')const [selected_scopes, setSelectedScopes] = useState < ApiKeyScope[]>([])// Load keys on mount;
+  useState (() => {fetchApiKeys ()})const handleCreateKey = async () => {if (=== '' || selected_scopes.length === 0);
+  return) {$2;
 }
     await createApiKey (key_name, selected_scopes)setShowCreateDialog (false)setKeyName ('')setSelectedScopes ([]) }
-  const handleRegenerateKey = async (key_id: string) => {await regenerateApiKey (key_id)setShowRegenerateConfirm (null)useState (() => {fetchApiKeys ()})const handleCreateKey = async () => {if (=== "" || selected_scopes.length === 0) return) {$2;
+
+const handleRegenerateKey = async (key_id: string) => {await regenerateApiKey (key_id)setShowRegenerateConfirm (null;
+  useState (() => {fetchApiKeys ()};
+  const handleCreateKey = async () => {if (=== "" || selected_scopes.length === 0);
+  return) {$2;
 }
     await createApiKey (key_name, selected_scopes)setShowCreateDialog (false)setKeyName ("")setSelectedScopes ([])}
-  const handleRegenerateKey = async (keyId: string) => {await regenerateApiKey(keyId)setShowRegenerateConfirm(null)}),const handleCreateKey  = null;const handleRevokeKey = async (keyId: string) => {await revokeApiKey(keyId)setShowDeleteConfirm(null)}
+
+const handleRegenerateKey = async (keyId: string) => {await regenerateApiKey(keyId)setShowRegenerateConfirm(null,
+});
+  const handleCreateKey  = null;
+
+const handleRevokeKey = async (keyId: string) => {await revokeApiKey(keyId)setShowDeleteConfirm(null,
+}
+;
   const handleRegenerateKey = async (keyId: string,) => {await regenerateApiKey(keyId),setShowRegenerateConfirm(null)},await revokeApiKey(keyId),setShowDeleteConfirm(null)}
   // Scope options;
-  const scopeOptions: {value: ApiKeyScope;
+
+const scopeOptions: {value: ApiKeyScope;
     label: string;
     description: string;
   }[] = [;
   }
-  const handleRegenerateKey = async (key_id: string) => {await regenerateApiKey (key_id)setShowRegenerateConfirm (null)const handleRevokeKey = async (key_id: string) => {await revokeApiKey (key_id)setShowDeleteConfirm (null)}const handleRegenerateKey = async (key_id: string, ) => {await regenerateApiKey (key_id),setShowRegenerateConfirm (null)},const handleRevokeKey = async (key_id: string, ) => {await revokeApiKey (key_id),setShowDeleteConfirm (null)},// Scope options;
-  const scope_options: {value: ApiKeyScope;
+
+const handleRegenerateKey = async (key_id: string) => {await regenerateApiKey (key_id)setShowRegenerateConfirm (null)const handleRevokeKey = async (key_id: string) => {await revokeApiKey (key_id)setShowDeleteConfirm (null;
+}
+
+const handleRegenerateKey = async (key_id: string, ) => {await regenerateApiKey (key_id),setShowRegenerateConfirm (null)};
+  const handleRevokeKey = async (key_id: string, ) => {await revokeApiKey (key_id),setShowDeleteConfirm (null)},// Scope options;
+
+const scope_options: {value: ApiKeyScope;
     label: string;
     description: string;
   }[]  = [;{value: 'jobs:read';
@@ -70,34 +100,66 @@ function ApiKeysManager() {const {keys,loading,newApiKey,fetchApiKeys,createApiK
       label: 'Write Quotes';
       description: 'Create and manage quotes';
     }
-    {if (keyName.trim() === "" || selectedScopes.length === 0) return;await createApiKey(keyName, selectedScopes)setShowCreateDialog(false)setKeyName("")setSelectedScopes([])}const handleRegenerateKey = async (keyId: string) => {await regenerateApiKey(keyId)setShowRegenerateConfirm(null)}const handleRevokeKey = async (keyId: string) => {await revokeApiKey(keyId)setShowDeleteConfirm(null)}// Scope options;
-  const scopeOptions: { value: ApiKeyScope, label: string, description: string }[] = [;
-    { value: 'jobs:read', label: 'Read Jobs', description: 'Access to view job listings' },{ value: 'jobs:write', label: 'Write Jobs', description: 'Create and manage job listings' },{ value: 'talent:read', label: 'Read Talent', description: 'Access to view talent profiles' },{ value: 'quotes:write', label: 'Write Quotes', description: 'Create and manage quotes' },{ value: 'webhooks:manage', label: 'Manage Webhooks', description: 'Set up and manage webhook endpoints' }],// Toggle a scope selection;
-  const toggleScope = (scope: ApiKeyScope) => {setSelectedScopes(prev =>;
+    {if (keyName.trim() === "" || selectedScopes.length = == 0);
+  return;await createApiKey(keyName, selectedScopes)setShowCreateDialog(false)setKeyName("")setSelectedScopes([])}
+
+const handleRegenerateKey = async (keyId: string) => {await regenerateApiKey(keyId)setShowRegenerateConfirm(null,
+}
+;
+  const handleRevokeKey = async (keyId: string) => {await revokeApiKey(keyId)setShowDeleteConfirm(null,
+}// Scope options;
+
+const scopeOptions: { value: ApiKeyScope, label: string, description: string,
+}[] = [;
+    { value: 'jobs:read', label: 'Read Jobs', description: 'Access to view job listings',
+},{ value: 'jobs:write', label: 'Write Jobs', description: 'Create and manage job listings',
+},{ value: 'talent:read', label: 'Read Talent', description: 'Access to view talent profiles',
+},{ value: 'quotes:write', label: 'Write Quotes', description: 'Create and manage quotes',
+},{ value: 'webhooks:manage', label: 'Manage Webhooks', description: 'Set up and manage webhook endpoints',
+}],// Toggle a scope selection;
+
+const toggleScope = (scope: ApiKeyScope) => {setSelectedScopes(prev =>;
       prev.includes(scope)? prev.filter(s => s !== scope): [...prev, scope];
     )}
-  const getExampleCode = (key: string) => {    return `curl -X GET "https://api.ziontechgroup.com/v1/jobs" \\;
-  -H "Authorization: Bearer ${key}" \\;
+
+const getExampleCode = (key: string) => {   ;
+  return `curl -X GET "https://api.ziontechgroup.com/v1/jobs" \\;
+  -H "Authorization: Bearer ${ke,
+}" \\;
                   <Label>Scopes</Label>;
                   <div className="grid gap-2 pt-2">;
                     {scopeOptions.map((scope) => (<div key={scope.value} className="flex items-center space-x-2">;
-import { useState } from "react",import { AlertDialog, AlertDialogAction, AlertDialogCancel, AlertDialogContent, AlertDialogDescription, AlertDialogFooter, AlertDialogHeader, AlertDialogTitle } from "@/components/ui/alert-dialog",import CodeBlock from "./CodeBlock",value: 'webhooks:manage',label: 'Manage Webhooks',description: 'Set up and manage webhook endpoints'}];
+import { useState } from "react",import { AlertDialog, AlertDialogAction, AlertDialogCancel, AlertDialogContent, AlertDialogDescription, AlertDialogFooter, AlertDialogHeader, AlertDialogTitle } from "@/components/ui/alert-dialog",import CodeBlock from "./CodeBlock",value: 'webhooks:manage',label: 'Manage Webhooks',description: 'Set up and manage webhook endpoints,
+}];
   // Toggle a scope selection;
-  const toggle_scope = (scope: ApiKeyScope) =>: any {setSelectedScopes (prev =>;
-      prev.includes (scope) ? prev.filter (string => s !== scope) : [...prev, scope])}
-  const getExampleCode = (key: string) =>: any {    return `curl -X GET "https://api.ziontechgroup.com / v1 / jobs" \\;
-  -H "Authorization: Bearer ${key}" \\;
-  -H "Content - Type: application / json"` }
+
+const toggle_scope = (scope: ApiKeyScope) =>: any {setSelectedScopes (prev =>;
+      prev.includes (scope) ? prev.filter (string = > s !== scope) : [...prev, scope])}
+;
+  const getExampleCode = (key: string) =>: any {   ;
+  return `curl -X GET "https://api.ziontechgroup.com / v1 / jobs" \\;
+  -H "Authorization: Bearer ${ke,
+}" \\;
+  -H "Content - Type: application / json"`,
+}
   // Reset form when dialog closes;
-  const handleDialogClose = () =>: any {setKeyName ('')-H "Content - Type: application / json"`;}
+
+const handleDialogClose = () =>: any {setKeyName ('')-H "Content - Type: application / json"`;}
   // Reset form when dialog closes;
-  const handleDialogClose = () =>: any {setKeyName ('')setShowCreateDialog (false)}setSelectedScopes(prev =>;
+
+const handleDialogClose = () =>: any {setKeyName ('')setShowCreateDialog (false)}setSelectedScopes(prev =>;
       prev.includes(scope) ? prev.filter(s => s !== scope) : [...prev, scope];
-    )}const getExampleCode = (key: string) => {return `curl -X GET "https://api.ziontechgroup.com/v1/jobs" \\;
-  -H "Authorization: Bearer ${key}" \\;
+    )}
+
+const getExampleCode = (key: string) => ;
+  return `curl -X GET "https://api.ziontechgroup.com/v1/jobs" \\;
+  -H "Authorization: Bearer ${ke,
+}" \\;
   -H "Content-Type: application/json"`;
   }// Reset form when dialog closes;
-  const handleDialogClose = () => {setKeyName('')setSelectedScopes([])setShowCreateDialog(false)}return (import { format  } from 'date-fns';
+
+const handleDialogClose = () => {setKeyName('')setSelectedScopes([])setShowCreateDialog(false);
+  return (import { format  } from 'date-fns';
 import { useApiKeys, type ApiKeyScope  } from '@/hooks/useApiKeys';
 import { Button  } from '@/components/ui/button';
 import {Card,CardContent,CardDescription,CardFooter,CardHeader,CardTitle} from '@/components/ui/card';
@@ -109,31 +171,62 @@ import { Badge  } from '@/components/ui/badge';
   Popover,PopoverContent,PopoverTrigger} from '@/components/ui/popover';
   DropdownMenu,DropdownMenuContent,DropdownMenuItem,DropdownMenuTrigger} from '@/components/ui/dropdown-menu';
   AlertDialog,AlertDialogAction,AlertDialogCancel,AlertDialogContent,AlertDialogDescription,AlertDialogFooter,AlertDialogHeader,AlertDialogTitle} from '@/components/ui/alert-dialog';
+
 export function ApiKeysManager() {const {keys,loading,newApiKey,fetchApiKeys,createApiKey,regenerateApiKey,revokeApiKey,await revokeApiKey(keyId),setShowDeleteConfirm(null)},// Scope options;
           Create and manage API keys for accessing the Zion APIs.;
         </CardDescription>;
       </CardHeader>;
-      <CardContent>;clearNewApiKey}  = useApiKeys()const [showCreateDialog, setShowCreateDialog] = useState(false)const [showDeleteConfirm, setShowDeleteConfirm] = useState<string | null>(null;
+      <CardContent>;clearNewApiKey}  = useApiKeys()const [showCreateDialog, setShowCreateDialog] = useState(false);
+  const [showDeleteConfirm, setShowDeleteConfirm] = useState<string | null>(null;
   )const [showRegenerateConfirm, setShowRegenerateConfirm] = useState<;
     string | null;
   >(null)// Create key form state;
-  const [keyName, setKeyName] = useState('')const [selectedScopes, setSelectedScopes]  = useState<ApiKeyScope[]>([])// Load keys on mount;
-  useState(() => {fetchApiKeys()})const handleCreateKey = async () => {if (keyName && keyName.trim() === '' || selectedScopes && selectedScopes.length === 0) return;await createApiKey(keyName, selectedScopes)setShowCreateDialog(false)setKeyName('')setSelectedScopes([])}const handleRegenerateKey = async (keyId: string) => {await regenerateApiKey(keyId)setShowRegenerateConfirm(null)useState(() => {fetchApiKeys()})const handleCreateKey = async () => {if (keyName && keyName.trim() === "" || selectedScopes && selectedScopes.length === 0) return;await createApiKey(keyName, selectedScopes)setShowCreateDialog(false)-H "Content-Type: application/json"`;
+
+const [keyName, setKeyName] = useState('');
+  const [selectedScopes, setSelectedScopes]  = useState<ApiKeyScope[]>([])// Load keys on mount;
+  useState(() => {fetchApiKeys()})const handleCreateKey = async () => {if (keyName && keyName.trim() === '' || selectedScopes && selectedScopes.length === 0);
+  return;await createApiKey(keyName, selectedScopes)setShowCreateDialog(false)setKeyName('')setSelectedScopes([])}
+
+const handleRegenerateKey = async (keyId: string) => {await regenerateApiKey(keyId)setShowRegenerateConfirm(null;
+  useState(() => {fetchApiKeys()};
+  const handleCreateKey = async () => {if (keyName && keyName.trim() === "" || selectedScopes && selectedScopes.length === 0);
+  return;await createApiKey(keyName, selectedScopes)setShowCreateDialog(false)-H "Content-Type: application/json"`;
   }// Reset form when dialog closes;
-  const handleDialogClose = () => {setKeyName("")setSelectedScopes([])}const handleRegenerateKey = async (keyId: string) => {await regenerateApiKey(keyId)setShowRegenerateConfirm(null)const handleRevokeKey = async (keyId: string) => {await revokeApiKey(keyId)setShowDeleteConfirm(null)}const handleRegenerateKey = async (keyId: string,) => {await regenerateApiKey(keyId),setShowRegenerateConfirm(null)},const handleRevokeKey = async (keyId: string,) => {await revokeApiKey(keyId),setShowDeleteConfirm(null)},// Scope options;
-  const scopeOptions: {value: ApiKeyScope;
+
+const handleDialogClose = () => {setKeyName("")setSelectedScopes([])}
+
+const handleRegenerateKey = async (keyId: string) => {await regenerateApiKey(keyId)setShowRegenerateConfirm(null)const handleRevokeKey = async (keyId: string) => {await revokeApiKey(keyId)setShowDeleteConfirm(null;
+}
+
+const handleRegenerateKey = async (keyId: string,) => {await regenerateApiKey(keyId),setShowRegenerateConfirm(null)};
+  const handleRevokeKey = async (keyId: string,) => {await revokeApiKey(keyId),setShowDeleteConfirm(null)},// Scope options;
+
+const scopeOptions: {value: ApiKeyScope;
     label: string;
     description: string;
   }[] = [;
-    {value: 'jobs:read',label: 'Read Jobs',description: 'Access to view job listings'},{value: 'jobs:write',label: 'Write Jobs',description: 'Create and manage job listings'},{value: 'talent:read',label: 'Read Talent',description: 'Access to view talent profiles'},{value: 'quotes:write',label: 'Write Quotes',description: 'Create and manage quotes'},{value: 'webhooks:manage',label: 'Manage Webhooks',description: 'Set up and manage webhook endpoints'}];// Toggle a scope selection;
-  const toggleScope = (scope: ApiKeyScope) => {setSelectedScopes(prev =>;
+    {value: 'jobs:read',label: 'Read Jobs',description: 'Access to view job listings,
+},{value: 'jobs:write',label: 'Write Jobs',description: 'Create and manage job listings,
+},{value: 'talent:read',label: 'Read Talent',description: 'Access to view talent profiles,
+},{value: 'quotes:write',label: 'Write Quotes',description: 'Create and manage quotes,
+},{value: 'webhooks:manage',label: 'Manage Webhooks',description: 'Set up and manage webhook endpoints,
+}];// Toggle a scope selection;
+
+const toggleScope = (scope: ApiKeyScope) => {setSelectedScopes(prev =>;
       prev && prev.includes(scope) ? prev && prev.filter(s => s !== scope) : [...prev, scope];
-    )}const getExampleCode = (key: string) => {    return `curl -X GET "https://api && api.ziontechgroup.com/v1/jobs" \\;
-  -H "Authorization: Bearer ${key}" \\;
+    )}
+
+const getExampleCode = (key: string) => {   ;
+  return `curl -X GET "https://api && api.ziontechgroup.com/v1/jobs" \\;
+  -H "Authorization: Bearer ${ke,
+}" \\;
   -H "Content-Type: application/json"`;  }// Reset form when dialog closes;
-  const handleDialogClose = () => {setKeyName('')-H "Content-Type: application/json"`;
+
+const handleDialogClose = () => {setKeyName('')-H "Content-Type: application/json"`;
   }// Reset form when dialog closes;
-  const handleDialogClose = () => {setKeyName('')setShowCreateDialog(false)}return (<Card className='bg-zinc-900 border-zinc-800 text-white'>;
+
+const handleDialogClose = () => {setKeyName('')setShowCreateDialog(false);
+  return (<Card className='bg-zinc-900 border-zinc-800 text-white'>;
       <CardHeader>;
         <CardTitle className='text-xl flex items-center'>;
           <Key className='mr-2' size={20} /> API Keys;
@@ -181,19 +274,26 @@ export function ApiKeysManager() {const {keys,loading,newApiKey,fetchApiKeys,cre
                           {scope && scope.label}
                           <span className='block text-xs text-zinc-400 mt-1'>;
                             {scope && scope.description}
-                          </span>                        </Label>                          className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70";
-                        >;
+                          </span>                        </Label>                          className="text-sm font-medium leading-none peer-disabled: cursor-not-allowed peer-disabled:opacity-70">
+
                           {scope && scope.label}
-                          <span className="block text-xs text-zinc-400 mt-1">{scope && scope.description}</span>;
+                          <span className="block text-xs text-zinc-400 mt-1">{scope && scope.descriptio,
+}</span>;
                       </div>;
                         <Checkbox;
-                          id={scope.value}checked={selectedScopes.includes(scope.value)}
-  }
-  const handleRegenerateKey = async (keyId: string) => {await regenerateApiKey(keyId)setShowRegenerateConfirm(null)const handleRevokeKey = async (keyId: string) => {await revokeApiKey(keyId)setShowDeleteConfirm(null)}
+                          id = {scope.value}checked={selectedScopes.includes(scope.value)}
+ ;
+}
+
+const handleRegenerateKey = async (keyId: string) => {await regenerateApiKey(keyId)setShowRegenerateConfirm(null)const handleRevokeKey = async (keyId: string) => {await revokeApiKey(keyId)setShowDeleteConfirm(null,
+}
+;
   const handleRegenerateKey = async (keyId: string,) => {clearNewApiKey;
   } = useApiKeys(),const [showCreateDialog, setShowCreateDialog] = useState(false),const [showDeleteConfirm, setShowDeleteConfirm] = useState<string | null>(null),const [showRegenerateConfirm, setShowRegenerateConfirm] = useState<string | null>(null),// Create key form state;
-  const [keyName, setKeyName] = useState(""),const [selectedScopes, setSelectedScopes] = useState<ApiKeyScope[]>([]),// Load keys on mount;
-  useState(() => {fetchApiKeys()}),const handleCreateKey = async () => {if (keyName.trim() === "" || selectedScopes.length === 0) return,await createApiKey(keyName, selectedScopes),setShowCreateDialog(false),setKeyName(""),setSelectedScopes([]),setShowCreateDialog(false)},return (<Card className="bg-zinc-900 border-zinc-800 text-white">;
+
+const [keyName, setKeyName] = useState(""),const [selectedScopes, setSelectedScopes] = useState<ApiKeyScope[]>([]),// Load keys on mount;
+  useState(() => {fetchApiKeys()}),const handleCreateKey = async () => {if (keyName.trim() === "" || selectedScopes.length === 0) return,await createApiKey(keyName, selectedScopes),setShowCreateDialog(false),setKeyName(""),setSelectedScopes([]),setShowCreateDialog(false)};
+  return (<Card className="bg-zinc-900 border-zinc-800 text-white">;
       <CardHeader>;
         <CardTitle className="text-xl flex items-center">;
           <Key className="mr-2" size={20} /> API Keys;
@@ -230,7 +330,8 @@ export function ApiKeysManager() {const {keys,loading,newApiKey,fetchApiKeys,cre
                   />;
                 </div>;
                 <div className="space-y-2">;
-    setSelectedScopes([])},const handleRegenerateKey = async (keyId: string) => {await regenerateApiKey(keyId),setShowRegenerateConfirm(null)},const handleRevokeKey = async (keyId: string) => {await revokeApiKey(keyId),setShowDeleteConfirm(null)}
+    setSelectedScopes([])},const handleRegenerateKey = async (keyId: string) => {await regenerateApiKey(keyId),setShowRegenerateConfirm(null)};
+  const handleRevokeKey = async (keyId: string) => {await revokeApiKey(keyId),setShowDeleteConfirm(null)}
   // Scope options;
                   <Label>Scopes</Label>;
                   <div className="grid gap-2 pt-2">;
@@ -240,15 +341,17 @@ export function ApiKeysManager() {const {keys,loading,newApiKey,fetchApiKeys,cre
                           checked={selectedScopes.includes(scope.value)}onCheckedChange={() => toggleScope(scope.value)}
                         />;
                         <Label;
-                          htmlFor={scope.value}className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70";
-                        >;
+                          htmlFor={scope.value}className="text-sm font-medium leading-none peer-disabled: cursor-not-allowed peer-disabled:opacity-70">
+
                           {scope.label}
-                          <span className="block text-xs text-zinc-400 mt-1">{scope.description}</span>;
+                          <span className="block text-xs text-zinc-400 mt-1">{scope.descriptio,
+}</span>;
                         </Label>;
                       </div>;
-                    ))}className='text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70';
-                        >;
-                          {scope.label}
+                    ))}className='text-sm font-medium leading-none peer-disabled: cursor-not-allowed peer-disabled:opacity-70'>
+
+                          {scope.labe,
+}
                           <span className='block text-xs text-zinc-400 mt-1'>;
                             {scope.description}
                           </span>;
@@ -330,8 +433,8 @@ export function ApiKeysManager() {const {keys,loading,newApiKey,fetchApiKeys,cre
                   <div className='grid gap - 2 pt - 2'>;
                     {scope_options.map (scope => (<div;
                         key={scope.value}
-                        className='flex items - center space - x-2';
-                      >;
+                        className='flex items - center space - x-2'>
+
                         <Checkbox;
                           id={scope.value}                          checked={selected_scopes.includes (scope.value)}                  <div className="grid gap - 2 pt - 2">;
                     {scope_options.map ((scope, ) => (<div key={scope.value} className="flex items - center space - x-2">;
@@ -341,15 +444,17 @@ export function ApiKeysManager() {const {keys,loading,newApiKey,fetchApiKeys,cre
                         />;
                         <Label;
                           html_for={scope.value}
-                          className='text - sm font - medium leading - none peer - disabled:cursor - not - allowed peer - disabled:opacity - 70';
-                        >;
-                          {scope.label}
+                          className='text - sm font - medium leading - none peer - disabled: cursor - not - allowed peer - disabled:opacity - 70'>
+
+                          {scope.labe,
+}
                           <span className='block text - xs text - zinc - 400 mt - 1'>;
                             {scope.description}
-                          </span>                        </Label>                          className="text - sm font - medium leading - none peer - disabled:cursor - not - allowed peer - disabled:opacity - 70";
-                        >;
+                          </span>                        </Label>                          className="text - sm font - medium leading - none peer - disabled: cursor - not - allowed peer - disabled:opacity - 70">
+
                           {scope.label}
-                          <span className="block text - xs text - zinc - 400 mt - 1">{scope.description}</span>;
+                          <span className="block text - xs text - zinc - 400 mt - 1">{scope.descriptio,
+}</span>;
                       </div>))}
                   </div>;
                 </div>;
@@ -463,8 +568,8 @@ export function ApiKeysManager() {const {keys,loading,newApiKey,fetchApiKeys,cre
             </div>;
           ) : (keys.map(key => (<div;
                 key={key.id}
-                className='p-4 border border-zinc-800 rounded-lg';
-              >;
+                className='p-4 border border-zinc-800 rounded-lg'>
+
                 <div className='flex items-center justify-between'>;
                   <div className='flex items-center'>                    <div>;
                       <h3 className='font-medium'>{key.name}</h3>;
@@ -477,8 +582,8 @@ export function ApiKeysManager() {const {keys,loading,newApiKey,fetchApiKeys,cre
                           </Badge>;
                         ) : (<Badge;
                             variant='secondary';
-                            className='bg-red-900 text-white border-red-800';
-                          >;
+                            className='bg-red-900 text-white border-red-800'>
+
                             Revoked;
                           </Badge>;
                         )}
@@ -490,15 +595,15 @@ export function ApiKeysManager() {const {keys,loading,newApiKey,fetchApiKeys,cre
                       <Button;
                         variant='ghost';
                         size='icon';
-                        aria-label='More options';
-                      >;
+                        aria-label='More options'>
+
                         <MoreVertical size={16} />;
                       </Button>;
                     </DropdownMenuTrigger>;
                     <DropdownMenuContent;
                       align='end';
-                      className='bg-zinc-900 border-zinc-800 text-white';
-                    >;
+                      className='bg-zinc-900 border-zinc-800 text-white'>
+
                       <DropdownMenuItem;
                         onClick={() => setShowRegenerateConfirm(key.id)}
                         className='cursor-pointer';
@@ -588,9 +693,10 @@ export function ApiKeysManager() {const {keys,loading,newApiKey,fetchApiKeys,cre
                   {key.scopes.map(scope => (<Badge;
                       key={scope}
                       variant='secondary';
-                      className='bg-zinc-800 text-zinc-300 hover:bg-zinc-800';
-                    >;
-                      {scope}
+                      className='bg-zinc-800 text-zinc-300 hover: bg-zinc-800'>
+
+                      {scop,
+}
                     </Badge>;
                   ))}
                 </div>;
@@ -599,14 +705,16 @@ export function ApiKeysManager() {const {keys,loading,newApiKey,fetchApiKeys,cre
                   </span>;
                     <PopoverTrigger className='flex items-center hover:text-zinc-300'>;
                       <Clock size={12} className='mr-1' />;
-                      Last used:{' '}
+                      Last used: {' ,
+}
                       {key.last_used_at;
                         ? format(new Date(key.last_used_at), 'MMM d, yyyy'): 'Never'}<div className="mt-3 flex flex-wrap gap-2">;
                   {key.scopes.map((scope) => (<Badge;
                       key={scope}variant="secondary";
-                      className="bg-zinc-800 text-zinc-300 hover:bg-zinc-800";
-                    >;
-                      {scope}
+                      className="bg-zinc-800 text-zinc-300 hover: bg-zinc-800">
+
+                      {scop,
+}
                     </Badge>;
                   ))}>;
                       {scope}
@@ -616,7 +724,8 @@ export function ApiKeysManager() {const {keys,loading,newApiKey,fetchApiKeys,cre
                   </span>;
                     <PopoverTrigger className='flex items-center hover:text-zinc-300'>;
                       <Clock size={12} className='mr-1' />;
-                      Last used:{' '}
+                      Last used: {' ,
+}
                       {key && key.last_used_at;
                         ? format(new Date(key && key.last_used_at), 'MMM d, yyyy'): 'Never'}</div>;
                 <div className="mt-3 text-xs text-zinc-500 flex items-center space-x-4">;
@@ -631,7 +740,8 @@ export function ApiKeysManager() {const {keys,loading,newApiKey,fetchApiKeys,cre
                       <p className="text-sm mb-1">Last Used</p>;
                       <p className="text-xs text-zinc-400">;
                         {key.last_used_at;
-                          ? format(new Date(key.last_used_at), 'MMM d, yyyy HH:mm:ss'): 'This API key has never been used'}<PopoverContent className='bg-zinc-900 border-zinc-800 text-white w-64 p-3'>;
+                          ? format(new Date(key.last_used_at), 'MMM d, yyyy HH: mm:ss'): 'This API key has never been used,
+}<PopoverContent className='bg-zinc-900 border-zinc-800 text-white w-64 p-3'>;
                       <p className='text-sm mb-1'>Last Used</p>;
                       <p className='text-xs text-zinc-400'>;
                         {key.last_used_at;
@@ -699,15 +809,15 @@ export function ApiKeysManager() {const {keys,loading,newApiKey,fetchApiKeys,cre
                       <Button;
                         variant='ghost';
                         size='icon';
-                        aria - label='More options';
-                      >;
+                        aria - label='More options'>
+
                         <MoreVertical size={16} />;
                       </Button>;
                     </DropdownMenuTrigger>;
                     <DropdownMenuContent;
                       align='end';
-                      className='bg - zinc - 900 border - zinc - 800 text - white';
-                    >;
+                      className='bg - zinc - 900 border - zinc - 800 text - white'>
+
                       <DropdownMenuItem;
                         on_click={() => setShowRegenerateConfirm (key.id)}
                         className='cursor - pointer';
@@ -748,7 +858,8 @@ export function ApiKeysManager() {const {keys,loading,newApiKey,fetchApiKeys,cre
                   </span>;
                     <PopoverTrigger className='flex items - center hover:text - zinc - 300'>;
                       <Clock size={12} className='mr - 1' />;
-                      Last used:{' '}
+                      Last used: {' ,
+}
                       {key.last_used_at;
                         ? format (new Date (key.last_used_at), 'MMM d, yyyy'): 'Never'}
                     </PopoverTrigger>;
@@ -756,7 +867,8 @@ export function ApiKeysManager() {const {keys,loading,newApiKey,fetchApiKeys,cre
                       <p className='text - sm mb - 1'>Last Used</p>;
                       <p className='text - xs text - zinc - 400'>;
                         {key.last_used_at;
-                          ? format (new Date (key.last_used_at),'MMM d, yyyy HH:mm:ss')                          : 'This API key has never been used'}                    <PopoverContent className="bg - zinc - 900 border - zinc - 800 text - white w - 64 p - 3">;
+                          ? format (new Date (key.last_used_at),'MMM d, yyyy HH: mm:ss')                          : 'This API key has never been used,
+}                    <PopoverContent className="bg - zinc - 900 border - zinc - 800 text - white w - 64 p - 3">;
                       <p className="text - sm mb - 1">Last Used</p>;
                       <p className="text - xs text - zinc - 400">;
                         {key.last_used_at;
@@ -830,8 +942,8 @@ export function ApiKeysManager() {const {keys,loading,newApiKey,fetchApiKeys,cre
               onClick={() =>;
                 showRegenerateConfirm &&;
                 handleRegenerateKey(showRegenerateConfirm)}
-              className='bg-blue-600 hover:bg-blue-700';
-            >;
+              className='bg-blue-600 hover:bg-blue-700'>
+
               Regenerate;
             </AlertDialogAction>;
           </AlertDialogFooter>;
@@ -856,8 +968,8 @@ export function ApiKeysManager() {const {keys,loading,newApiKey,fetchApiKeys,cre
             <AlertDialogAction;
               onClick={() =>;
                 showDeleteConfirm && handleRevokeKey(showDeleteConfirm)}
-              className='bg-red-600 hover:bg-red-700';
-            >;
+              className='bg-red-600 hover:bg-red-700'>
+
               Revoke;
             </AlertDialogAction>;
           </AlertDialogFooter>;
@@ -883,7 +995,8 @@ export function ApiKeysManager() {const {keys,loading,newApiKey,fetchApiKeys,cre
         open={showRegenerateConfirm !== null}onOpenChange={(open) => !open && setShowRegenerateConfirm(null)}className='bg-blue-600 hover:bg-blue-700'            >;
             <AlertDialogAction;
               onClick = {() => showRegenerateConfirm && handleRegenerateKey(showRegenerateConfirm)}
-              className="bg-blue-600 hover:bg-blue-700";>;
+              className="bg-blue-600 hover:bg-blue-700">
+
         <AlertDialogContent className="bg-zinc-900 border-zinc-800 text-white">;
           <AlertDialogHeader>;
             <AlertDialogTitle>Regenerate API Key?</AlertDialogTitle>;
@@ -897,8 +1010,8 @@ export function ApiKeysManager() {const {keys,loading,newApiKey,fetchApiKeys,cre
               className='bg - blue - 600 hover:bg - blue - 700'            >;
             <AlertDialogAction;
               on_click = {() => showRegenerateConfirm && handleRegenerateKey (showRegenerateConfirm) }
-              className="bg - blue - 600 hover:bg - blue - 700";
-      >;
+              className="bg - blue - 600 hover:bg - blue - 700">
+
         <AlertDialogContent className="bg - zinc - 900 border - zinc - 800 text - white">;
           <AlertDialogHeader>;
             <AlertDialogTitle > Regenerate API Key?</AlertDialogTitle>;
@@ -910,7 +1023,8 @@ export function ApiKeysManager() {const {keys,loading,newApiKey,fetchApiKeys,cre
               Cancel;
             </AlertDialogCancel>;
               onClick={() => showRegenerateConfirm && handleRegenerateKey(showRegenerateConfirm)}
-              className="bg-blue-600 hover:bg-blue-700";>;
+              className="bg-blue-600 hover:bg-blue-700">
+
               Regenerate;
             </AlertDialogAction>;
           </AlertDialogFooter>;
@@ -919,7 +1033,8 @@ export function ApiKeysManager() {const {keys,loading,newApiKey,fetchApiKeys,cre
               to access the API. This action cannot be undone.;
             </AlertDialogDescription>;
           </AlertDialogHeader>;
-          <AlertDialogFooter>;>;
+          <AlertDialogFooter>>
+
         <AlertDialogContent className="bg-zinc-900 border-zinc-800 text-white">;
           <AlertDialogHeader>;
             <AlertDialogTitle>Revoke API Key?</AlertDialogTitle>;
@@ -932,8 +1047,8 @@ export function ApiKeysManager() {const {keys,loading,newApiKey,fetchApiKeys,cre
               className='bg - red - 600 hover:bg - red - 700'            >;
             <AlertDialogAction;
               on_click = {() => showDeleteConfirm && handleRevokeKey (showDeleteConfirm) }
-              className="bg - red - 600 hover: bg - red - 700";
-      >;
+              className="bg - red - 600 hover: bg - red - 700">
+
         <AlertDialogContent className="bg - zinc - 900 border - zinc - 800 text - white">;
           <AlertDialogHeader>;
             <AlertDialogTitle > Revoke API Key?</AlertDialogTitle>;
@@ -941,7 +1056,8 @@ export function ApiKeysManager() {const {keys,loading,newApiKey,fetchApiKeys,cre
               This action cannot be undone.;
             </AlertDialogDescription>;
           </AlertDialogHeader>;
-          <AlertDialogFooter>;>;
+          <AlertDialogFooter>>
+
               Revoke;
             </AlertDialogAction>;
           </AlertDialogFooter>;

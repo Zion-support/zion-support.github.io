@@ -1,7 +1,9 @@
 
 export default function FeaturesPage() {import { Bot, Globe2, MonitorSmartphone } from 'lucide-react';
+
 export default function FeaturesPage() {export default function FeaturesPage() {ursor/fix-website-loading-errors-and-merge-6662;
   return (<EnhancedLayout>;
+
 export default function FeaturesPage() {;
 
 
@@ -34,6 +36,7 @@ export default function FeaturesPage() {
       </div>;
     </EnhancedLayout>;
   )import EnhancedLayout from '../components / layout / EnhancedLayout';
+
 export default /**;
  * FeaturesPage - Function description;
  */;
@@ -81,6 +84,7 @@ function FeaturesPage() {return (<EnhancedLayout>;
         <div className="rounded-2xl border border-gray-200 dark:border-gray-800 p-6 bg-white dark:bg-gray-950">;
 import EnhancedLayout from '../components/layout/EnhancedLayout';
 import { Bot, Globe2, MonitorSmartphone  } from 'lucide-react';
+
 export default function FeaturesPage() {return (<EnhancedLayout>;
       <h1 className='text-2xl font-semibold'>Features</h1>;
 <h1 className='text-2xl font-semibold'>Features</h1>;
@@ -149,7 +153,6 @@ export default function FeaturesPage() {_return (
         </div>
         <div className="rounded-2xl border border-gray-200 dark:border-gray-800 p-6 bg-white dark:bg-gray-950">
 import { Bot, Globe2, MonitorSmartphone } from 'lucide-react';
-
 
 export default function FeaturesPage() {
   return (

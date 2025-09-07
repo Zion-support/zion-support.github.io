@@ -7,6 +7,7 @@ import {}
   Award'''' } from 'lucide-react''';
 import { Link  } from 'react-router-dom';
 // Import the new service data;
+
 const serviceCategories = [];
   {}
 '';
@@ -28,29 +29,44 @@ const serviceCategories = [];
     color: 'from-blue-600 to-cyan-600', services: revolutionary2027AIInnovationServices;
   }
 ];
+
 export function ComprehensiveServicesShowcase() {}
 '';
 '';
 '''';
-  const [selectedCategory, setSelectedCategory] = useState('micro-saas')const [selectedService, setSelectedService] = useState(null)const containerVariants = {}
-    hidden: { opacity: 0 }, visible: {}
-      opacity: 1, transition: {}
+
+const [selectedCategory, setSelectedCategory] = useState('micro-saas');
+  const [selectedService, setSelectedService] = useState(null);
+  const containerVariants = {}
+    hidden: { opacity: 0,
+}, visible:  ,
+}
+      opacity: 1, transition:  ,
+}
         staggerChildren: 0.1, delayChildren: 0.2;
       }
     }
-  }const itemVariants = {}
+  }
+
+const itemVariants = {}
   hidden: { y: 20, opacity: 0;
-}, visible: {}
-      y: 0, opacity: 1, transition: {}
+}, visible:  ,
+}
+      y: 0, opacity: 1, transition:  ,
+}
 '''';
         duration: 0.5,'''';
         ease: 'easeOut''';
       }
     }
-  }const cardVariants = {}
+  }
+
+const cardVariants = {}
   hidden: { scale: 0.95, opacity: 0;
-}, visible: {}
-      scale: 1, opacity: 1, transition: {}
+}, visible:  ,
+}
+      scale: 1, opacity: 1, transition:  ,
+}
 '''';
         duration: 0.4, '''';
         ease: 'easeOut''';
@@ -69,7 +85,8 @@ export function ComprehensiveServicesShowcase() {}
           animate = {}
   { opacity: 1, y: 0;
 }}
-          transition={{ duration: 0.6 }}'''';
+          transition={{ duration: 0.6 ,
+}'''';
         >'''';
           <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>;
             Revolutionary 2027 Services'''';
@@ -140,8 +157,8 @@ export function ComprehensiveServicesShowcase() {}
           className='grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8''''';
           variants={containerVariants}'''';
           initial='hidden''''';
-          animate='visible''';
-        >;
+          animate='visible'''>
+
           {currentServices.map((service) => (<motion.div'''';
               key={service.id}'''';
               className='group cursor-pointer''';
@@ -164,8 +181,10 @@ export function ComprehensiveServicesShowcase() {}
                   <div className='text-4xl'>{service.icon}</div>'''';
                   {service.popular && ('''';
                     <div className='bg-gradient-to-r from-yellow-500 to-orange-500 text-white text-xs px-3 py-1 rounded-full font-medium'>;
-                      Popular;
-                    </div>) }
+                      Popular
+    </div>
+  );
+}
                 </div>;
 '''';
                 {/* Service Info */}'''';
@@ -277,7 +296,8 @@ export function ComprehensiveServicesShowcase() {}
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            onClick={ () => setSelectedService (null) }
+            onClick={ () => setSelectedService (null),
+}
           >'''';
             <motion.div'''';
               className='bg-zion-slate-dark rounded-2xl p-8 max-w-4xl w-full max-h-[90vh] overflow-y-auto''';

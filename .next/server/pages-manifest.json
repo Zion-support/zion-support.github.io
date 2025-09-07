@@ -1,5 +1,21 @@
 {
   "/_app": "pages/_app.js",
   "/_error": "pages/_error.js",
+  "/AIServices": "pages/AIServices.js",
+  "/About": "pages/About.js",
+  "/CloudMigration": "pages/CloudMigration.js",
+  "/Cybersecurity": "pages/Cybersecurity.js",
+  "/FAQ": "pages/FAQ.js",
+  "/Contact": "pages/Contact.js",
+  "/ITServices": "pages/ITServices.js",
+  "/MicroSaaS": "pages/MicroSaaS.js",
+  "/MobileDevelopment": "pages/MobileDevelopment.js",
+  "/NotFound": "pages/NotFound.js",
+  "/Home": "pages/Home.js",
+  "/Privacy": "pages/Privacy.js",
+  "/Resources": "pages/Resources.js",
+  "/Terms": "pages/Terms.js",
+  "/Support": "pages/Support.js",
+  "/Services": "pages/Services.js",
   "/_document": "pages/_document.js"
 }

@@ -4,6 +4,7 @@ import Footer from '../components/Footer';
 import SEO from '../components/SEO';
 
 const FAQ: React.FC = () => {
+ ;
   return (
     <>
       <SEO title="FAQ" description="FAQ page" url="/faq" />
@@ -18,7 +19,8 @@ const FAQ: React.FC = () => {
         <Footer />
       </div>
     </>
-  );
+  )
 };
+
 
 export default FAQ;

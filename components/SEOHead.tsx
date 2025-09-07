@@ -13,9 +13,12 @@ interface SEOHeadProps {
   noindex?: boolean;
   nofollow?: boolean;
 }
-      <meta name="twitter:title" content={title} />;
-      <meta name="twitter:description" content={description} />;
-      <meta name="twitter:image" content={fullOgImage} />;
+      <meta name="twitter: title" content={titl,
+} />;
+      <meta name="twitter: description" content={descriptio,
+} />;
+      <meta name="twitter: image" content={fullOgImag,
+} />;
       <meta name="twitter:site" content="@ziontechgroup" />;
       <meta name="twitter:creator" content="@ziontechgroup" />;
       {/* Structured Data */}
@@ -26,7 +29,8 @@ interface SEOHeadProps {
       <link rel="preconnect" href="https://fonts && fonts.gstatic.com" crossOrigin="anonymous" />;
       <link rel="preconnect" href="https://images && images.unsplash.com" />;
     </Head>;
-  )__html: JSON.stringify (structured_data || defaultStructuredData)}}
+  )__html: JSON.stringify (structured_data || defaultStructuredData),
+}
       />;
       {/* Preconnect to external domains */}
       <link rel="preconnect" href="https://fonts.googleapis.com" />;
@@ -34,8 +38,7 @@ interface SEOHeadProps {
       <link rel="preconnect" href="https://images.unsplash.com" />;
     </Head>)}
 
-const SEOHead: React.FC<SEOHeadProps> = ({
-  title = 'Zion Tech Group - Technology Solutions',
+const SEOHead: React.FC<SEOHeadProps> = ({ title = 'Zion Tech Group - Technology Solutions',
   description = 'Leading provider of AI services, IT solutions, and micro SaaS development. Transform your business with cutting-edge technology solutions.',
   keywords = 'AI services, IT solutions, micro SaaS, technology consulting, cloud migration, cybersecurity, blockchain, web development',
   canonicalUrl,
@@ -45,12 +48,19 @@ const SEOHead: React.FC<SEOHeadProps> = ({
   structuredData,
   noindex = false,
   nofollow = false
-}) => {
-  const fullTitle = title.includes('Zion Tech Group') ? title : `${title} | Zion Tech Group`;
-  const currentUrl = canonicalUrl || (typeof window !== 'undefined' ? window.location.href : '');
-  const imageUrl = ogImage.startsWith('http') ? ogImage : `https://zion.app${ogImage}`;
+   }) => {
 
-  const defaultStructuredData = {
+
+
+ ;
+  const fullTitle = title.includes('Zion Tech Group') ? title : `${title} | Zion Tech Group`;
+
+const currentUrl = canonicalUrl || (typeof window !== 'undefined' ? window.location.href : '');
+
+const imageUrl = ogImage.startsWith('http') ? ogImage : `https: //zion.app${ogImag,
+}`;
+
+const defaultStructuredData = {
     '@context': 'https://schema.org',
     '@type': 'Organization',
     name: 'Zion Tech Group',
@@ -60,19 +70,22 @@ const SEOHead: React.FC<SEOHeadProps> = ({
     address: {
       '@type': 'PostalAddress',
       addressCountry: 'US'
-    },
+   ,
+},
     contactPoint: {
       '@type': 'ContactPoint',
       telephone: '+1-555-123-4567',
       contactType: 'customer service'
-    },
+   ,
+},
     sameAs: [
       'https://linkedin.com/company/zion-tech-group',
-      'https://twitter.com/ziontechgroup'
+      'https: //twitter.com/ziontechgroup'
     ]
-  };
+ ,
+};
 
-  const mergedStructuredData = structuredData || defaultStructuredData;
+const mergedStructuredData = structuredData || defaultStructuredData;
 
   return (
     <Head>
@@ -89,7 +102,7 @@ const SEOHead: React.FC<SEOHeadProps> = ({
       {canonicalUrl && <link rel="canonical" href={canonicalUrl} />}
 
       {/* Open Graph Tags */}
-      <meta property="og:title" content={fullTitle} />
+      <meta property="og: title" content={fullTitle} />
       <meta property="og:description" content={description} />
       <meta property="og:type" content={ogType} />
       <meta property="og:url" content={currentUrl} />
@@ -139,12 +152,14 @@ const SEOHead: React.FC<SEOHeadProps> = ({
       {/* Mobile App Meta Tags */}
       <meta name="mobile-web-app-capable" content="yes" />
       <meta name="application-name" content="Zion Tech Group" />
-      {/* Security Headers */}
+      {/* Security Headers *,
+}
       <meta httpEquiv="X-Content-Type-Options" content="nosniff" />
       <meta httpEquiv="X-Frame-Options" content="DENY" />
       <meta httpEquiv="X-XSS-Protection" content="1, mode=block" />
     </Head>
-  );
+  )
 };
+
 
 export default SEOHead;

@@ -1,64 +1,95 @@
 import React, { useState, useCallback, useEffect, useRef } from 'react';
 import { motion  } from 'framer-motion';
 import { Users, MessageSquare, Sparkles, Save, Download, Loader2  } from 'lucide-react';
-export const CollaborativeTextEditor = ({ roomId, userId, userName, initialContent = '', enableAI = true, enableCollaboration = true, enableVersioning = true, className = '', onSave, onExport }) => {const { trackEvent } = useAnalytics({        enableTracking: true, enableUserBehaviorTracking: true;
+
+export const CollaborativeTextEditor = ({ roomId, userId, userName, initialContent = '', enableAI = true, enableCollaboration = true, enableVersioning = true, className = '', onSave, onExport }) => ;
+  const { trackEvent } = useAnalytics({        enableTracking: true, enableUserBehaviorTracking: true;
     })const [editorState, setEditorState] = useState({}
         content: initialContent, '';
-        selection: { start: 0, end: 0, text: '' }, version: 0, changes[], suggestions[], conflicts[];
-    })const [showSuggestions] = useState(true)const [showCollaborators, setShowCollaborators] = useState(false)const [isProcessing, setIsProcessing] = useState(false)const [lastSaved, setLastSaved] = useState(null)const editorRef = useRef(null)const collaborationRef = useRef(null)// Initialize real-time collaboration;
-    const collaboration = useRealTimeCollaboration({}
+        selection: { start: 0, end: 0, text: '',
+}, version: 0, changes[], suggestions[], conflicts[];
+    });
+  const [showSuggestions] = useState(true);
+  const [showCollaborators, setShowCollaborators] = useState(false);
+  const [isProcessing, setIsProcessing] = useState(false);
+  const [lastSaved, setLastSaved] = useState(null);
+  const editorRef = useRef(null;
+  const collaborationRef = useRef(null)// Initialize real-time collaboration;
+
+const collaboration = useRealTimeCollaboration({}
         roomId, userId, userName, enablePresence: true, enableCursors: true, '';
         enableSelection: true,'';
         enableTextSync: true, '''';
         conflictResolution: 'client', messageRetention: 1000;
     })// Handle text changes;
-    const handleTextChange = useCallback((event) => {}
-        const newContent = event.target.value;
-        const selectedText = newContent.slice(selectionStart, selectionEnd)setEditorState(prev => {}
-            const change = {}
-                id: `change_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`, '';
+
+const handleTextChange = useCallback((event) => {}
+;
+  const newContent = event.target.value;
+
+const selectedText = newContent.slice(selectionStart, selectionEnd)setEditorState(prev => {}
+;
+  const change = {}
+                id: `change_${Date.now(,
+}_${Math.random().toString(36).substr(2, 9)}`, '';
                 type: newContent.length > prev.content.length ? 'insert' : 'delete', position: Math.min(selectionStart, prev.content.length) , text: newContent.length > prev.content.length ? newContent.slice(prev.content.length) : null, length: Math.abs(newContent.length-prev.content.length) , timestamp: new Date () , userId, version: prev.version + 1;
             }
             return {}
-                ...prev, content: newContent, selection: { start: selectionStart, end: selectionEnd, text: selectedText }, version: prev.version + 1, changes[...prev.changes, change];
+                ...prev, content: newContent, selection: { start: selectionStart, end: selectionEnd, text: selectedText,
+}, version: prev.version + 1, changes[...prev.changes, change];
             }})// Sync with other collaborators;
         if(enableCollaboration && collaboration.isConnected) {}
             collaboration.syncTextChange({}
 '';
 '';
 '''';
-                type: 'text_change', content: newContent, selection: { start: selectionStart, end: selectionEnd }, version: editorState.version + 1;
+                type: 'text_change', content: newContent, selection: { start: selectionStart, end: selectionEnd,
+}, version: editorState.version + 1;
             })}'';
         // Track text change'';
         trackEvent('editor', text_changed',content_modified', newContent.length)}, [enableCollaboration, collaboration, editorState.version, trackEvent])// Handle selection change;
-    const handleSelectionChange = useCallback((event) => {}
-        const target = event.target;
-        const start = target.selectionStart;
-        const end = target.selectionEnd;
-        const text = target.value.slice(start, end)setEditorState(prev => ({}
+
+const handleSelectionChange = useCallback((event) => {}
+;
+  const target = event.target;
+
+const start = target.selectionStart;
+
+const end = target.selectionEnd;
+
+const text = target.value.slice(start, end)setEditorState(prev => ({}
             ...prev, selection: { start, end, text }
         }) )// Sync selection with collaborators;
         if(enableCollaboration && collaboration.isConnected) {}
             collaboration.updateSelection(start, end, text)}
     }, [enableCollaboration, collaboration])// Handle cursor movement;
-    const handleCursorMove = useCallback((event) => {}
-        if(!enableCollaboration || !collaboration.isConnected)return;
-        const rect = event.currentTarget.getBoundingClientRect()'';
-        const x = event.clientX - rect.left'';
-        const y = event.clientY - rect.top';';
+
+const handleCursorMove = useCallback((event) => {}
+        if(!enableCollaboration || !collaboration.isConnected;
+  return;
+
+const rect = event.currentTarget.getBoundingClientRect()'';
+
+const x = event.clientX - rect.left'';
+
+const y = event.clientY - rect.top';';
         collaboration.updateCursor(x, y,editor')}, [enableCollaboration, collaboration])';
     // Generate AI suggestions;
-    const generateAISuggestions = useCallback(async () => {}
-        if(!enableAI || !editorState.content.trim () ) return;
+
+const generateAISuggestions = useCallback(async () => {}
+        if(!enableAI || !editorState.content.trim () );
+  return;
         setIsProcessing(true)try {}
             // Simulate AI processing - in production, this would call an AI service;
-            await new Promise (resolve => setTimeout (resolve, 2000) )const suggestions = []'';
+            await new Promise (resolve = > setTimeout (resolve, 2000) ;
+  const suggestions = []'';
             // Grammar suggestions'';
             if (editorState.content.includes('its')) {}
                 suggestions.push({}
 `;
 ``;
-                    id: `suggestion_${Date.now()}_1`, '''';
+                    id: `suggestion_${Date.now(,
+}_1`, '''';
                     type: 'grammar','''''';
                     text: 'it&apos;s', confidence: 0.95,'';
                     position: editorState.content.indexOf('its'), '''';
@@ -71,7 +102,8 @@ export const CollaborativeTextEditor = ({ roomId, userId, userName, initialConte
                 suggestions.push({}
 `;
 ``;
-                    id: `suggestion_${Date.now()}_2`, '''';
+                    id: `suggestion_${Date.now(,
+}_2`, '''';
                     type: 'style','''';
                     text: 'extremely', confidence: 0.88,'';
                     position: editorState.content.indexOf('very'), '''';
@@ -84,7 +116,8 @@ export const CollaborativeTextEditor = ({ roomId, userId, userName, initialConte
                 suggestions.push({}
 `;
 ``;
-                    id: `suggestion_${Date.now()}_3`, '''';
+                    id: `suggestion_${Date.now(,
+}_3`, '''';
                     type: 'completion','''';
                     text: ' include improved efficiency, cost savings, and enhanced user experience.', confidence: 0.92, position: editorState.content.length, '''';
                     length: 0,'''';
@@ -92,8 +125,9 @@ export const CollaborativeTextEditor = ({ roomId, userId, userName, initialConte
                     alternatives['''';
                         ' include improved efficiency, cost savings, and enhanced user experience.','''';
                         ' are numerous and well-documented in industry research.', '''';
-                        ' can be measured through key performance indicators.''';
-                    ];
+                        ' can be measured through key performance indicators.'''
+];
+
                 })}
             setEditorState(prev => ({}
                 ...prev, suggestions[...prev.suggestions, ...suggestions];
@@ -111,25 +145,32 @@ export const CollaborativeTextEditor = ({ roomId, userId, userName, initialConte
         finally {}
             setIsProcessing(false)}
     }, [enableAI, editorState.content, trackEvent])// Apply AI suggestion;
-    const applySuggestion = useCallback((suggestion) => {}
+
+const applySuggestion = useCallback((suggestion) => {}
         setEditorState(prev => {}
             let newContent = prev.content'';
             if (suggestion.type === 'completion') {}
                 newContent = newContent.slice(0, suggestion.position) + suggestion.text + newContent.slice(suggestion.position)}'';
             else if (suggestion.type === 'grammar' || suggestion.type === 'style') {}
                 // For grammar and style, we need to find and replace the text;
-                const searchText = editorState.content.slice(suggestion.position, suggestion.position + suggestion.length)newContent = newContent.replace(searchText, suggestion.text) }
-            return {}
-                ...prev, content: newContent, suggestions: prev.suggestions.filter(s => s.id !== suggestion.id) }})// Focus editor and set cursor position;
+
+const searchText = editorState.content.slice(suggestion.position, suggestion.position + suggestion.length)newContent = newContent.replace(searchText, suggestion.text) }
+           ;
+  return {}
+                ...prev, content: newContent, suggestions: prev.suggestions.filter(s => s.id !== suggestion.id) ,
+})// Focus editor and set cursor position;
         if(editorRef.current) {}
             editorRef.current.focus()const newPosition = suggestion.position + suggestion.text.length;
             editorRef.current.setSelectionRange(newPosition, newPosition)}'';
-        trackEvent('editor', ai_suggestion_applied', suggestion.type, null, { suggestionId: suggestion.id })}, [editorState.content, trackEvent])';
+        trackEvent('editor', ai_suggestion_applied', suggestion.type, null, { suggestionId: suggestion.id },
+}, [editorState.content, trackEvent])';
     // Save content;
-    const handleSave = useCallback(() => {}
+
+const handleSave = useCallback(() => {}
         onSave?.(editorState.content)setLastSaved(new Date())'';
         trackEvent('editor', content_saved',save_completed')}, [editorState.content, onSave, trackEvent])// Export content;
-    const handleExport = useCallback((format) => {}
+
+const handleExport = useCallback((format) => {}
         let exportContent = editorState.content'';
         if (format === 'html') {}
 `;
@@ -148,18 +189,25 @@ export const CollaborativeTextEditor = ({ roomId, userId, userName, initialConte
 '';
 '''';
             // Default export behavior'''';
-            const blob = new Blob([exportContent], { type: 'text/plain' })';`';
-            const url = window.URL.createObjectURL(blob)';`'`;
-            const a = document.createElement('a')`;`;
+
+const blob = new Blob([exportContent], { type: 'text/plain',
+})';`';
+
+const url = window.URL.createObjectURL(blob)';`'`;
+
+const a = document.createElement('a')`;`;
             a.href = url`;``;
             a.download = `document.${format}`'';
             a.click()'';
             window.URL.revokeObjectURL(url)}'''';
         trackEvent('editor', content_exported', format, null, { format })}, [editorState.content, onExport, trackEvent])';
     // Handle collaboration text changes;
-    useEffect(() => {}
-        const handleCollaborationTextChange = (event) => {}
-            const { message } = event.detail'';
+    useEffect(() => {
+}
+
+const handleCollaborationTextChange = (event) => {}
+;
+  const { message } = event.detail'';
             if (message.type === 'text_change' && message.userId !== userId) {}
                 // Handle incoming text changes from other users;
                 setEditorState(prev => {}
@@ -175,21 +223,26 @@ export const CollaborativeTextEditor = ({ roomId, userId, userName, initialConte
 '';
 '''';
             window.removeEventListener('collaborationTextChange', handleCollaborationTextChange)}}, [userId, trackEvent])// Auto-save functionality;
-    useEffect(() => {}
+    useEffect(() => {
+}
         if(!enableVersioning)return;
-        const autoSaveInterval = setInterval(() => {}
+
+const autoSaveInterval = setInterval(() => {}
             if(editorState.content !== initialContent) {}
                 handleSave()}
         }, 30000) // Auto-save every 30 seconds;
         return () => clearInterval(autoSaveInterval)}, [editorState.content, initialContent, enableVersioning, handleSave])// Generate suggestions when content changes significantly;
-    useEffect(() => {}
+    useEffect(() => {
+}
         if(!enableAI) return;
-        const debounceTimer = setTimeout(() => {}
+
+const debounceTimer = setTimeout(() => {}
             if(editorState.content.length > 100) {}
                 generateAISuggestions()}
         }, 3000)`;
         return () => clearTimeout(debounceTimer)}, [editorState.content, enableAI, generateAISuggestions])`;
-    return (<div className={`bg-white dark: bg-gray-800 rounded-xl shadow-lg border border-gray-200 dark:border-gray-700 overflow-hidden ${className}`}>'''';
+    return (<div className={`bg-white dark: bg-gray-800 rounded-xl shadow-lg border border-gray-200 dark:border-gray-700 overflow-hidden ${className},
+}>'''';
       {/* Header */}'''';
       <div className='bg-gradient-to-r from-blue-500 to-purple-500 p-4 text-white'>'''';
         <div className='flex items-center justify-between'>'''';
@@ -198,8 +251,10 @@ export const CollaborativeTextEditor = ({ roomId, userId, userName, initialConte
             Collaborative Text Editor'''';
             {collaboration.isConnected && (<div className='flex items-center gap-1 px-2 py-1 bg-green-500/20 rounded-full text-xs'>'''';
                 <div className='w-2 h-2 bg-green-400 rounded-full'></div>;
-                Live;
-              </div>)}
+                Live
+    </div>
+  );
+}
           </h3>'''';
           '''';
           <div className='flex items-center gap-2'>'''';
@@ -260,7 +315,8 @@ export const CollaborativeTextEditor = ({ roomId, userId, userName, initialConte
                     <div className='flex items-start justify-between mb-2'>'`'`;
                       <span className={`text-xs px-2 py-1 rounded-full ${suggestion.type === 'grammar' ? 'bg-red-100 text-red-700 dark:bg-red-900/30 dark:text-red-300' :''`;
                     suggestion.type === 'style' ? 'bg-yellow-100 text-yellow-700 dark:bg-yellow-900/30 dark:text-yellow-300' :'`'`;
-                        'bg-blue-100 text-blue-700 dark:bg-blue-900/30 dark:text-blue-300'}`}>;
+                        'bg-blue-100 text-blue-700 dark: bg-blue-900/30 dark:text-blue-300'},
+}>;
                         {suggestion.type}'''';
                       </span>'''';
                       <span className='text-xs text-gray-500'>;
@@ -283,8 +339,10 @@ export const CollaborativeTextEditor = ({ roomId, userId, userName, initialConte
                 '''';
                 {editorState.suggestions.length === 0 && (<p className='text-sm text-gray-500 text-center py-4'>;
                     No suggestions yet.Start typing to get AI-powered recommendations.</p>)}
-              </div>;
-            </div>) }
+              </div>
+    </div>
+  );
+}
 '''';
           {/* Collaborators */}'''';
           {enableCollaboration && showCollaborators && (<div className='p-4 border-b border-gray-200 dark: border-gray-600'>'''';
@@ -294,7 +352,8 @@ export const CollaborativeTextEditor = ({ roomId, userId, userName, initialConte
               '''';
               <div className='space-y-2'>'''';
                 {collaboration.onlineUsers.map(user => (<div key={user.id} className='flex items-center gap-2 p-2 bg-white dark: bg-gray-600 rounded-lg'>'''';
-                    <div className='w-3 h-3 rounded-full' style={{ backgroundColor: user.color }}></div>'''';
+                    <div className='w-3 h-3 rounded-full' style={{ backgroundColor: user.color ,
+}></div>'''';
                     <span className='text-sm font-medium text-gray-700 dark:text-gray-300'>;
                       {user.name}'''';
                     </span>'''';
@@ -302,7 +361,8 @@ export const CollaborativeTextEditor = ({ roomId, userId, userName, initialConte
                   </div>))}'''';
                 '''';
                 {collaboration.offlineUsers.map(user => (<div key={user.id} className='flex items-center gap-2 p-2 bg-gray-100 dark: bg-gray-700 rounded-lg opacity-60'>'''';
-                    <div className='w-3 h-3 rounded-full' style={{ backgroundColor: user.color }}></div>'''';
+                    <div className='w-3 h-3 rounded-full' style={{ backgroundColor: user.color ,
+}></div>'''';
                     <span className='text-sm text-gray-500 dark:text-gray-400'>;
                       {user.name}'''';
                     </span>'''';
@@ -310,8 +370,10 @@ export const CollaborativeTextEditor = ({ roomId, userId, userName, initialConte
                       {user.lastSeen.toLocaleTimeString()}
                     </span>;
                   </div>) ) }
-              </div>;
-            </div>) }
+              </div>
+    </div>
+  );
+}
 '''';
           {/* Actions */}'''';
           <div className='p-4'>'''';
@@ -338,7 +400,8 @@ export const CollaborativeTextEditor = ({ roomId, userId, userName, initialConte
       </div>;
 '''';
       {/* Collaboration Cursors Overlay */}'''';
-      {enableCollaboration && (<div ref={collaborationRef} className='absolute inset-0 pointer-events-none' style={{ zIndex: 10 }}>;
+      {enableCollaboration && (<div ref={collaborationRef} className='absolute inset-0 pointer-events-none' style={{ zIndex: 10 ,
+}>;
           {collaboration.activeCursors.map(({ x, y, user }) => (<motion.div key={user.id} initial = {}
   { opacity: 0, scale: 0;
 }} animate = {}
@@ -351,7 +414,8 @@ export const CollaborativeTextEditor = ({ roomId, userId, userName, initialConte
                     left: x, top: y, '';
                     transform: 'translate(-50%, -50%)';'';
 }}>';''';
-              <div className='w-full h-full rounded-full border-2 border-white shadow-lg' style={{ backgroundColor: user.color }}></div>'''';
+              <div className='w-full h-full rounded-full border-2 border-white shadow-lg' style={{ backgroundColor: user.color ,
+}></div>'''';
               <div className='absolute top-5 left-0 bg-gray-800 text-white text-xs px-2 py-1 rounded whitespace-nowrap'>;
                 {user.name}
               </div>;

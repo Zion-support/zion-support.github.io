@@ -18,12 +18,14 @@ import { Button } from '@/components/ui/button'; import { Gift, ArrowRight, Exte
   DialogTitle;
   DialogTrigger;
 } from '@/components/ui/dialog';
+
 type RewardOption = {id: string;
 title: string;
 description: string;
 cost: number;';
 type: 'credit' | 'feature' | 'course';
 }
+
 const REWARD_OPTIONS: RewardOption[] = [;
   {id: 'premium-week';
     title: 'Premium Week';
@@ -45,8 +47,12 @@ const REWARD_OPTIONS: RewardOption[] = [;
     type: 'credit';
   }
 ];
-export function RedeemTokensCard() {const { wallet, spendTokens } = useWallet()const [open, setOpen] = useState(false)const handleRedeem = async (option: RewardOption) => {if (!wallet |wallet.balance < option.cost) return;
-    await spendTokens(option.cost, `Redeemed: ${option.title}`)setOpen(false)}
+
+export function RedeemTokensCard() {const { wallet, spendTokens } = useWallet()const [open, setOpen] = useState(false);
+  const handleRedeem = async (option: RewardOption) => {if (!wallet |wallet.balance < option.cost);
+  return;
+    await spendTokens(option.cost, `Redeemed: ${option.title}`)setOpen(false,
+}
   return (<Card>;
       <CardHeader>;
         <CardTitle className='flex items-center gap-2'>;

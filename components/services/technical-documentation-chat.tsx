@@ -3,11 +3,14 @@
 import type { NextPage } from 'next';
 import Head from 'next/head';
 import Link from 'next/link';
-const TechnicalDocumentationChat: NextPage = () => {return (<div>;
+
+const TechnicalDocumentationChat: NextPage = () => ;
+  return (<div>;
 
 import type { NextPage } from "next";
 import Head from "next/head";
 import Link from "next/link";
+
 const TechnicalDocumentationChat: NextPage = () => {;
   return (
     <div>;
@@ -38,7 +41,11 @@ const TechnicalDocumentationChat: NextPage = () => {;
       </main>;
     </div>;
   )}
-export default TechnicalDocumentationChat;const TechnicalDocumentationChat: NextPage = () => {return (<div>;
+
+export default TechnicalDocumentationChat;
+
+const TechnicalDocumentationChat: NextPage = () => ;
+  return (<div>;
       <Head>;
         <title>TechnicalDocumentationChat - Zion Tech Solutions</title>;
         <title>TechnicalDocumentationChat - Zion Tech Solutions</title>;
@@ -47,13 +54,11 @@ export default TechnicalDocumentationChat;const TechnicalDocumentationChat: Next
 ursor/fix-website-loading-errors-and-merge-6662;
   );
 }
+
 export default TechnicalDocumentationChat;
 
-
-
-
-
 const TechnicalDocumentationChat: NextPage = () => {
+ ;
   return (
     <div>
       <Head>
@@ -67,7 +72,9 @@ const TechnicalDocumentationChat: NextPage = () => {
 import type { NextPage } from './next';
 import Head from './next / head';
 import Link from './next / link';
-const TechnicalDocumentationChat: NextPage = () => {return (<div>;
+
+const TechnicalDocumentationChat: NextPage = () => ;
+  return (<div>;
       <Head>;
         <title > TechnicalDocumentationChat - Zion Tech Solutions</title>;
         <meta;
@@ -79,8 +86,12 @@ const TechnicalDocumentationChat: NextPage = () => {return (<div>;
         <h1 > TechnicalDocumentationChat</h1>;
         <p > Service details coming soon...</p>;
         <a href="/services">Back to Services</a>;
-      </main>;
-    </div>)}export default TechnicalDocumentationChat;<div>;
+      </main>
+    </div>
+  );
+}
+
+export default TechnicalDocumentationChat;<div>;
       <Head>;
         <title>TechnicalDocumentationChat - Zion Tech Solutions</title>;
         <meta name=&quot;description&quot; content=&quot;TechnicalDocumentationChat service&quot; />;
@@ -92,7 +103,9 @@ const TechnicalDocumentationChat: NextPage = () => {return (<div>;
       </main>;
     </div>;
   )},export default TechnicalDocumentationChat;
-const TechnicalDocumentationChat: NextPage = () => {return (<div>;
+
+const TechnicalDocumentationChat: NextPage = () => ;
+  return (<div>;
       <Head>;
         <title>TechnicalDocumentationChat - Zion Tech Solutions</title>;
         <meta;
@@ -107,11 +120,13 @@ const TechnicalDocumentationChat: NextPage = () => {return (<div>;
       </main>;
     </div>;
   )}
+
 export default TechnicalDocumentationChat;<title>TechnicalDocumentationChat - Zion Tech Solutions</title>;
         <title>TechnicalDocumentationChat - Zion Tech Solutions</title>;
-    </div>);
-}
-;
+    </div>)
+};
+
+
 export default TechnicalDocumentationChat;
 ;
     <div>
@@ -134,6 +149,7 @@ export default TechnicalDocumentationChat
 
 
 const TechnicalDocumentationChat: NextPage = () => {
+ ;
   return (
     <div>
       <Head>
@@ -151,6 +167,7 @@ const TechnicalDocumentationChat: NextPage = () => {
     </div>
   );
 }
+
 export default TechnicalDocumentationChat;
 
         <title>TechnicalDocumentationChat - Zion Tech Solutions</title>

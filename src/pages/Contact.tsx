@@ -8,6 +8,7 @@ import SEO from '../components/SEO';
 import ScrollAnimation from '../components/ScrollAnimation';
 
 const Contact: React.FC = () => {
+ ;
   const [formData, setFormData] = useState({
     firstName: '',
     lastName: '',
@@ -15,33 +16,38 @@ const Contact: React.FC = () => {
     company: '',
     service: '',
     message: ''
-  });
+ ,
+});
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     setFormData({
       ...formData,
       [e.target.name]: e.target.value,
-    });
-  };
+    })
+};
 
-  const handleSubmit = (e: React.FormEvent) => {
+
+const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     // Handle form submission
     console.log('Form submitted:', formData);
     
     // Create mailto link with form data
     const subject = `Contact Form Submission - ${formData.service}`;
-    const body = `
+
+const body = `
 Name: ${formData.firstName} ${formData.lastName}
 Email: ${formData.email}
 Company: ${formData.company}
 Service Interest: ${formData.service}
 
 Message:
-${formData.message}
+${formData.messag,
+}
     `;
-    
-    const mailtoLink = `mailto:kleber@ziontechgroup.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+
+const mailtoLink = `mailto: kleber@ziontechgroup.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body,
+}`;
     window.open(mailtoLink);
     
     // Reset form
@@ -52,10 +58,12 @@ ${formData.message}
       company: '',
       service: '',
       message: ''
-    });
+   ,
+});
     
-    alert('Thank you for your message! We will get back to you within 24 hours.');
-  };
+    alert('Thank you for your message! We will get back to you within 24 hours.')
+};
+
 
   return (
     <>
@@ -75,7 +83,7 @@ ${formData.message}
             <div className="max-w-7xl mx-auto">
               <ScrollAnimation animation="slideUp" delay={0.2}>
                 <div className="text-center mb-16">
-                  <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
+                  <h1 className="text-5xl md: text-7xl font-bold text-white mb-6">
                     Get In <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500">Touch</span>
                   </h1>
                   <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
@@ -201,7 +209,8 @@ ${formData.message}
                 </ScrollAnimation>
 
                 {/* Contact Info */}
-                <ScrollAnimation animation="slideUp" delay={0.4}>
+                <ScrollAnimation animation="slideUp" delay={0.,
+}>
                   <div className="space-y-8">
                     <div>
                       <h2 className="text-3xl font-bold text-white mb-6">Contact Information</h2>
@@ -270,7 +279,7 @@ ${formData.message}
 
           {/* Additional Contact Methods */}
           <section className="py-20 bg-gray-900/50">
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">
               <div className="text-center mb-16">
                 <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
                   Other Ways to <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500">Connect</span>
@@ -311,7 +320,8 @@ ${formData.message}
             </div>
           </section>
 
-          {/* FAQ Section */}
+          {/* FAQ Section *,
+}
           <section className="py-20">
             <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
               <div className="text-center mb-16">
@@ -357,7 +367,8 @@ ${formData.message}
         <Footer />
       </div>
     </>
-  );
+  )
 };
+
 
 export default Contact;

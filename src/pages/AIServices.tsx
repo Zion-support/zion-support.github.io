@@ -9,12 +9,14 @@ import SEO from '../components/SEO';
 import ScrollAnimation from '../components/ScrollAnimation';
 
 const AIServices: React.FC = () => {
+ ;
   const services = [
     {
       icon: <Brain className="w-8 h-8" />,
       title: 'Machine Learning Models',
       description: 'Custom ML models tailored to your specific business needs and data patterns.'
-    },
+   ,
+},
     {
       icon: <Zap className="w-8 h-8" />,
       title: 'Natural Language Processing',
@@ -24,7 +26,8 @@ const AIServices: React.FC = () => {
       icon: <Target className="w-8 h-8" />,
       title: 'Computer Vision',
       description: 'Image and video analysis solutions for automation and intelligent decision making.'
-    }
+   ,
+}
   ];
 
   return (
@@ -65,7 +68,7 @@ const AIServices: React.FC = () => {
                     animation="scale"
                     delay={index * 0.1}
                   >
-                    <Card className="p-8 bg-gray-800/50 backdrop-blur-sm border-gray-700/50 hover:bg-gray-800/70 transition-all duration-300 hover:border-cyan-400/50">
+                    <Card className="p-8 bg-gray-800/50 backdrop-blur-sm border-gray-700/50 hover: bg-gray-800/70 transition-all duration-300 hover:border-cyan-400/50">
                       <div className="text-cyan-400 mb-4">
                         {service.icon}
                       </div>
@@ -88,5 +91,6 @@ const AIServices: React.FC = () => {
     </>
   );
 };
+
 
 export default AIServices;

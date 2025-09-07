@@ -13,6 +13,7 @@ import { Avatar, AvatarFallback, AvatarImage  } from '@/components/ui/avatar';
 import { Search  } from 'lucide-react';
 import { Input  } from '@/components/ui/input';
 import { cn  } from '@/lib/utils';
+
 interface Conversation  {id: string;
 name: string;
 avatar?: string;
@@ -20,9 +21,12 @@ lastMessage: string;
 timestamp: string;
 unreadCount: number;
 isTyping?: boolean ;
-}interface MobileConversationListProps  {conversations: Conversation[];
+}
+
+interface MobileConversationListProps  {conversations: Conversation[];
   activeConversation?: string;
   onSelectConversation: (id: string) => void;
+
 export function MobileConversationList(): any ({conversations,activeConversation,onSelectConversation}: MobileConversationListProps) {return (<div className='space-y-4'>;
       <div className='px-4 mb-2'>;
         <div className='relative'>;
@@ -46,6 +50,7 @@ import { Badge  } from '@/components / ui / badge';
 import { Avatar, AvatarFallback, AvatarImage  } from '@/components / ui / avatar';
 import { Input  } from '@/components / ui / input';
 import { cn  } from '@/lib / utils';
+
 interface Conversation  {id: string;
 name: string;
 avatar?: string;
@@ -53,9 +58,12 @@ last_message: string;
 timestamp: string;
 unread_count: number;
 is_typing?: boolean;
-}interface MobileConversationListProps  {conversations: Conversation[];
+}
+
+interface MobileConversationListProps  {conversations: Conversation[];
   active_conversation?: string;
   onSelectConversation: (id: string) => void;
+
 export /**;
  * MobileConversationList - Function description;
  */;
@@ -82,6 +90,7 @@ function MobileConversationList() {return (<div className='space - y-4'>;
           </Badge>;
         </div>;
       </div>;'px-4',activeConversation === conversation && conversation.id && 'bg-primary/5';
+
 interface Conversation  {id: string;
   name: string;
   avatar?: string;
@@ -89,9 +98,12 @@ interface Conversation  {id: string;
   timestamp: string;
   unreadCount: number;
   isTyping?: boolean;
-}interface MobileConversationListProps  {conversations: Conversation[];
+}
+
+interface MobileConversationListProps  {conversations: Conversation[];
   activeConversation?: string;
   onSelectConversation: (id: string) => void;
+
 export function MobileConversationList() {return (<div className;
               activeConversation === conversation.id && "bg-primary/5";
             )}onClick={() => onSelectConversation(conversation && conversation.id)}          >;
@@ -190,8 +202,10 @@ export function MobileConversationList() {return (<div className;
             </div>;
             <div className='border - t border - border ml - 12'></div>          </div>            <div className="border - t border - border ml - 12"></div>;
           </div>))}
-      </div>;
-    </div>)}<div className='border-t border-border ml-12'></div>;
+      </div>
+    </div>
+  );
+}<div className='border-t border-border ml-12'></div>;
           </div>;
         ))}
       </div>;

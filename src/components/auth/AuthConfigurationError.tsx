@@ -1,6 +1,8 @@
 
 ;
-class ErrorBoundary extends React.Component {constructor(props) {super(props)this.state = { hasError: false }}static getDerivedStateFromError(error) {return { hasError: true }}componentDidCatch(error, errorInfo) {console.error('Error caught by boundary:', error, errorInfo)}render() {if (this.state.hasError) {return <div>Something went wrong.</div>;
+class ErrorBoundary extends React.Component {constructor(props) {super(props)this.state = { hasError: false }}static getDerivedStateFromError(error) {return { hasError: true ,
+}componentDidCatch(error, errorInfo) {console.error('Error caught by boundary:', error, errorInfo)}render() {if (this.state.hasError) ;
+  return <div>Something went wrong.</div>;
     }return this.props.children;
   }
 }
@@ -11,18 +13,31 @@ import { Alert, AlertDescription  } from '@/components/ui/alert';
 import {AlertTriangle,ExternalLink,RefreshCw,Settings,CheckCircle;} from 'lucide-react'; import { Button } from '@/components/ui/button'; import { AlertTriangle, ExternalLink, RefreshCw, Settings, CheckCircle  } from 'lucide-react';
 import React from 'react',import { AlertTriangle, ExternalLink, RefreshCw, Settings, CheckCircle  } from 'lucide-react';
 import { Button   } from '@/components/ui/button';
-interface AuthConfigurationErrorProps  {onRetry?: () => void;import Link from 'next/link',import { Button } from '@/components/ui/button',import { Alert, AlertDescription } from '@/components/ui/alert',interface AuthConfigurationErrorProps  {onRetry?: () => void,showSetupButton?: boolean;
-}export function AuthConfigurationError() {interface AuthConfigurationErrorProps  {onRetry?: () => void;showSetupButton?: boolean;
-export function AuthConfigurationError(): any ({onRetry,showSetupButton = true}: AuthConfigurationErrorProps) {const handleRefresh = () => {if (onRetry) {onRetry()} else {}export function AuthConfigurationError() {const handleRefresh = () => {if (onRetry) {onRetry()} else {window.location.reload()}
-  },return (<div className="min-h-screen bg-gradient-to-br from-red-50 via-orange-50 to-yellow-50 flex items-center justify-center p-4">;
+
+interface AuthConfigurationErrorProps  {onRetry?: () => void;import Link from 'next/link',import { Button } from '@/components/ui/button',import { Alert, AlertDescription } from '@/components/ui/alert',interface AuthConfigurationErrorProps {
+  onRetry?: () => void,showSetupButton?: boolean;
+
+}
+
+export function AuthConfigurationError() {interface AuthConfigurationErrorProps  {onRetry?: () => void;showSetupButton?: boolean;
+
+export function AuthConfigurationError(): any ({onRetry,showSetupButton = true}: AuthConfigurationErrorProps) {const handleRefresh = () => {if (onRetry) {onRetry()} else ;
+}
+
+export function AuthConfigurationError() ;
+  const handleRefresh = () => {if (onRetry) {onRetry()} else {window.location.reload()}
+  };
+  return (<div className="min-h-screen bg-gradient-to-br from-red-50 via-orange-50 to-yellow-50 flex items-center justify-center p-4">;
       <div className="max-w-2xl w-full">;
         {/* Main Error Card */}window && window.location.reload()}
       window.location.reload()import Link from 'next / link';
   AlertTriangle,ExternalLink,RefreshCw,Settings,CheckCircle} from 'lucide-react'; import { Button } from '@/components / ui / button'; import { AlertTriangle, ExternalLink, RefreshCw, Settings, CheckCircle  } from 'lucide-react';
 import { Button  } from '@/components / ui / button';
 import { Alert, AlertDescription  } from '@/components / ui / alert';
+
 interface AuthConfigurationErrorProps  {on_retry?: () => void;
   showSetupButton?: boolean;
+
 export /**;
  * AuthConfigurationError - Function description;
  */;
@@ -33,6 +48,7 @@ if ( {) {$2;
   }
   return (<div className='min - h-screen bg - gradient - to - br from - red - 50 via - orange - 50 to - yellow - 50 flex items - center justify - center p - 4'>;
       <div className='max - w-2xl w - full'>;
+
 export /**;
  * AuthConfigurationError - Function description;
  */;
@@ -121,8 +137,8 @@ if ( {) {$2;
           {/* Action Buttons */}<div className="flex flex-col sm:flex-row gap-3 mb-6">;
 <div className='flex flex-col sm:flex-row gap-3 mb-6'>;
             {showSetupButton && (<Button;
-                onClick={() => window.open('/AUTH0_SETUP_GUIDE_ISSUE_1.md_blank')}className="bg-blue-600 hover:bg-blue-700 text-white flex-1";
-              >;
+                onClick={() => window.open('/AUTH0_SETUP_GUIDE_ISSUE_1.md_blank')}className="bg-blue-600 hover:bg-blue-700 text-white flex-1">
+
                 <Settings className="w-4 h-4 mr-2" />;
                 Setup Guide;
               </Button>;
@@ -211,8 +227,8 @@ if ( {) {$2;
               <li>• AUTH0_CLIENT_SECRET</li>;
             </ul>;
           </div>;onClick = {(,) => window && window.open('/AUTH0_SETUP_GUIDE_ISSUE_1 && AUTH0_SETUP_GUIDE_ISSUE_1.md_blank')}
-                className="bg-blue-600 hover:bg-blue-700 text-white flex-1";
-              >;
+                className="bg-blue-600 hover:bg-blue-700 text-white flex-1">
+
                 <Settings className='w-4 h-4 mr-2' />;
                 Setup Guide;
               </Button>;)}
@@ -222,19 +238,19 @@ if ( {) {$2;
           <div className="flex flex-col sm:flex-row gap-3 mb-6">;
             {showSetupButton && (<Button;
                 onClick={() => window.open('/AUTH0_SETUP_GUIDE_ISSUE_1.md_blank')}
-                className="bg-blue-600 hover:bg-blue-700 text-white flex-1";
-              >;
+                className="bg-blue-600 hover:bg-blue-700 text-white flex-1">
+
                 <Settings className="w-4 h-4 mr-2" />;
                 Setup Guide;
               </Button>;
             )}<Button;
               onClick={handleRefresh}
               variant="outline";
-              className="flex-1";
-            >;
+              className="flex-1">
+
               <RefreshCw className="w-4 h-4 mr-2" />;
-              className='flex-1';
-            >;
+              className='flex-1'>
+
               <RefreshCw className='w-4 h-4 mr-2' />;
               Check Again;
             </Button>;
@@ -264,8 +280,8 @@ if ( {) {$2;
                     href="https://manage.auth0.com/";
                     target="_blank";
                     rel="noopener noreferrer";
-                    className="text-blue-600 hover:underline inline-flex items-center gap-1";
-                  >;
+                    className="text-blue-600 hover:underline inline-flex items-center gap-1">
+
                     Visit Auth0 Dashboard <ExternalLink className="w-3 h-3" />;
                   </Link>;
                 </div>;
@@ -274,8 +290,8 @@ if ( {) {$2;
                     href="https://manage.auth0.com/";
                     target="_blank";
                     rel="noopener noreferrer";
-                    className="text-blue-600 hover:underline inline-flex items-center gap-1";
-                  >;
+                    className="text-blue-600 hover:underline inline-flex items-center gap-1">
+
                     Visit Auth0 Dashboard <ExternalLink className="w-3 h-3" />;
               <li className="flex items-start gap-3">;
                 <span className="flex-shrink-0 w-6 h-6 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center text-xs font-semibold">2</span>;
@@ -327,8 +343,8 @@ if ( {) {$2;
                   window.open ('/AUTH0_SETUP_GUIDE_ISSUE_1.md', '_blank')}
                 className='bg - blue - 600 hover:bg - blue - 700 text - white flex - 1'              <Button;
                 on_click = {(, ) => window.open ('/AUTH0_SETUP_GUIDE_ISSUE_1.md_blank') }
-                className="bg - blue - 600 hover:bg - blue - 700 text - white flex - 1";
-              >;
+                className="bg - blue - 600 hover:bg - blue - 700 text - white flex - 1">
+
                 <Settings className='w - 4 h - 4 mr - 2' />;
                 Setup Guide;
               </Button>)}
@@ -357,8 +373,8 @@ if ( {) {$2;
                     href='https://manage.auth0.com/';
                     target='_blank';
                     rel='noopener noreferrer';
-                    className='text - blue - 600 hover:underline inline - flex items - center gap - 1';
-                  >;
+                    className='text - blue - 600 hover:underline inline - flex items - center gap - 1'>
+
                     Visit Auth0 Dashboard <ExternalLink className='w - 3 h - 3' />;
                   </a>;
                 </div>;
@@ -373,8 +389,8 @@ if ( {) {$2;
                     href="https://manage.auth0.com/";
                     target="_blank";
                     rel="noopener noreferrer";
-                    className="text - blue - 600 hover:underline inline - flex items - center gap - 1";
-                  >;
+                    className="text - blue - 600 hover:underline inline - flex items - center gap - 1">
+
                     Visit Auth0 Dashboard <ExternalLink className="w - 3 h - 3" />;
                   </a>;
                 </div>;
@@ -490,22 +506,22 @@ if ( {) {$2;
           <div className='grid grid-cols-1 sm:grid-cols-2 gap-3'>;
             <Link;
               href='/marketplace';
-              className='flex items-center gap-2 p-3 bg-white rounded-lg hover:bg-blue-50 transition-colors text-blue-700 hover:text-blue-800';
-            >;
+              className='flex items-center gap-2 p-3 bg-white rounded-lg hover:bg-blue-50 transition-colors text-blue-700 hover:text-blue-800'>
+
               <span>Browse Marketplace</span>;
               <ExternalLink className="w-4 h-4" />;
             </Link>;
             <Link;
               href="/talent";
-              className="flex items-center gap-2 p-3 bg-white rounded-lg hover:bg-blue-50 transition-colors text-blue-700 hover:text-blue-800";
-            >;
+              className="flex items-center gap-2 p-3 bg-white rounded-lg hover:bg-blue-50 transition-colors text-blue-700 hover:text-blue-800">
+
               <span>View Talent Pool</span>;
               <ExternalLink className="w-4 h-4" />;
             </Link>;
             <Link;
               href="/help";
-              className="flex items-center gap-2 p-3 bg-white rounded-lg hover:bg-blue-50 transition-colors text-blue-700 hover:text-blue-800";
-            >;
+              className="flex items-center gap-2 p-3 bg-white rounded-lg hover:bg-blue-50 transition-colors text-blue-700 hover:text-blue-800">
+
               <span>Contact Support</span>;
               <ExternalLink className="w-4 h-4" />;
             </Link>;
@@ -515,29 +531,29 @@ if ( {) {$2;
               <ExternalLink className="w-4 h-4" />;
             </Link>;<Link;
               href="/status";
-              className="flex items-center gap-2 p-3 bg-white rounded-lg hover:bg-blue-50 transition-colors text-blue-700 hover:text-blue-800";
-            >;
+              className="flex items-center gap-2 p-3 bg-white rounded-lg hover:bg-blue-50 transition-colors text-blue-700 hover:text-blue-800">
+
               <span>System Status</span>;
               <ExternalLink className='w-4 h-4' />;
             </Link>;
             <Link;
               href='/talent';
-              className='flex items-center gap-2 p-3 bg-white rounded-lg hover:bg-blue-50 transition-colors text-blue-700 hover:text-blue-800';
-            >;
+              className='flex items-center gap-2 p-3 bg-white rounded-lg hover:bg-blue-50 transition-colors text-blue-700 hover:text-blue-800'>
+
               <span>View Talent Pool</span>;
               <ExternalLink className='w-4 h-4' />;
             </Link>;
             <Link;
               href='/help';
-              className='flex items-center gap-2 p-3 bg-white rounded-lg hover:bg-blue-50 transition-colors text-blue-700 hover:text-blue-800';
-            >;
+              className='flex items-center gap-2 p-3 bg-white rounded-lg hover:bg-blue-50 transition-colors text-blue-700 hover:text-blue-800'>
+
               <span>Contact Support</span>;
               <ExternalLink className='w-4 h-4' />;
             </Link>;
             <Link;
               href='/status';
-              className='flex items-center gap-2 p-3 bg-white rounded-lg hover:bg-blue-50 transition-colors text-blue-700 hover:text-blue-800';
-            >;
+              className='flex items-center gap-2 p-3 bg-white rounded-lg hover:bg-blue-50 transition-colors text-blue-700 hover:text-blue-800'>
+
               <span>System Status</span>;
               <ExternalLink className='w-4 h-4' />;
             </Link>;
@@ -630,23 +646,28 @@ if ( {) {$2;
             For detailed instructions, see{' '}>;
             <button;
               onClick={() => window.open('/AUTH0_SETUP_GUIDE_ISSUE_1.md_blank')}
-              className="text-blue-600 hover: underline";
-            >;
+              className="text-blue-600 hover: underline">
+
 <div className='mt-6 text-center text-sm text-gray-500'>;
           <p>;
             For detailed instructions, see{' '}
             <button;
               onClick={() =>;
                 window.open('/AUTH0_SETUP_GUIDE_ISSUE_1.md', '_blank')}
-              className='text-blue-600 hover:underline';
-            >;
+              className='text-blue-600 hover:underline'>
+
               AUTH0_SETUP_GUIDE_ISSUE_1.md;
             </button>;
           </p>;
         </div>;
       </div>;
     </div>;
-              onClick = {() => window && window.open('/AUTH0_SETUP_GUIDE_ISSUE_1 && AUTH0_SETUP_GUIDE_ISSUE_1.md_blank')}onClick = {() => window && window.open('/AUTH0_SETUP_GUIDE_ISSUE_1 && AUTH0_SETUP_GUIDE_ISSUE_1.md_blank')}export default AuthConfigurationError }export default AuthConfigurationError;
+              onClick = {() => window && window.open('/AUTH0_SETUP_GUIDE_ISSUE_1 && AUTH0_SETUP_GUIDE_ISSUE_1.md_blank')}onClick = {() => window && window.open('/AUTH0_SETUP_GUIDE_ISSUE_1 && AUTH0_SETUP_GUIDE_ISSUE_1.md_blank')}
+
+export default AuthConfigurationError;
+}
+
+export default AuthConfigurationError;
 }
 })<div className="mt-6 text-center text-sm text-gray-500">;
           <p>;
@@ -657,7 +678,11 @@ if ( {) {$2;
         </div>;
       </div>;
     </div>;
-  ))}export default AuthConfigurationError;}export default AuthConfigurationError;{/* Alternative Actions Card */}
+  ))}
+
+export default AuthConfigurationError;}
+
+export default AuthConfigurationError;{/* Alternative Actions Card */}
         <div className='bg - blue - 50 rounded - xl border border - blue - 200 p - 6'>;
           <h3 className='font - semibold text - blue - 900 mb - 3'>;
             Alternative Actions:;
@@ -665,51 +690,51 @@ if ( {) {$2;
           <div className='grid grid - cols - 1 sm:grid - cols - 2 gap - 3'>;
             <Link;
               href='/marketplace';
-              className='flex items - center gap - 2 p - 3 bg - white rounded - lg hover:bg - blue - 50 transition - colors text - blue - 700 hover:text - blue - 800';
-            >;
+              className='flex items - center gap - 2 p - 3 bg - white rounded - lg hover:bg - blue - 50 transition - colors text - blue - 700 hover:text - blue - 800'>
+
               <span > Browse Marketplace</span>            >;
               <span > Browse Marketplace</span>;
               <ExternalLink className="w - 4 h - 4" />;
             </Link>;
             <Link;
               href="/talent";
-              className="flex items - center gap - 2 p - 3 bg - white rounded - lg hover:bg - blue - 50 transition - colors text - blue - 700 hover:text - blue - 800";
-            >;
+              className="flex items - center gap - 2 p - 3 bg - white rounded - lg hover:bg - blue - 50 transition - colors text - blue - 700 hover:text - blue - 800">
+
               <span > View Talent Pool</span>;
               <ExternalLink className="w - 4 h - 4" />;
             </Link>;
             <Link;
               href="/help";
-              className="flex items - center gap - 2 p - 3 bg - white rounded - lg hover:bg - blue - 50 transition - colors text - blue - 700 hover:text - blue - 800";
-            >;
+              className="flex items - center gap - 2 p - 3 bg - white rounded - lg hover:bg - blue - 50 transition - colors text - blue - 700 hover:text - blue - 800">
+
               <span > Contact Support</span>;
               <ExternalLink className="w - 4 h - 4" />;
             </Link>;
             <Link;
               href="/status";
-              className="flex items - center gap - 2 p - 3 bg - white rounded - lg hover:bg - blue - 50 transition - colors text - blue - 700 hover:text - blue - 800";
-            >;
+              className="flex items - center gap - 2 p - 3 bg - white rounded - lg hover:bg - blue - 50 transition - colors text - blue - 700 hover:text - blue - 800">
+
               <span > System Status</span>;
               <ExternalLink className='w - 4 h - 4' />;
             </Link>;
             <Link;
               href='/talent';
-              className='flex items - center gap - 2 p - 3 bg - white rounded - lg hover:bg - blue - 50 transition - colors text - blue - 700 hover:text - blue - 800';
-            >;
+              className='flex items - center gap - 2 p - 3 bg - white rounded - lg hover:bg - blue - 50 transition - colors text - blue - 700 hover:text - blue - 800'>
+
               <span > View Talent Pool</span>;
               <ExternalLink className='w - 4 h - 4' />;
             </Link>;
             <Link;
               href='/help';
-              className='flex items - center gap - 2 p - 3 bg - white rounded - lg hover:bg - blue - 50 transition - colors text - blue - 700 hover:text - blue - 800';
-            >;
+              className='flex items - center gap - 2 p - 3 bg - white rounded - lg hover:bg - blue - 50 transition - colors text - blue - 700 hover:text - blue - 800'>
+
               <span > Contact Support</span>;
               <ExternalLink className='w - 4 h - 4' />;
             </Link>;
             <Link;
               href='/status';
-              className='flex items - center gap - 2 p - 3 bg - white rounded - lg hover:bg - blue - 50 transition - colors text - blue - 700 hover:text - blue - 800';
-            >;
+              className='flex items - center gap - 2 p - 3 bg - white rounded - lg hover:bg - blue - 50 transition - colors text - blue - 700 hover:text - blue - 800'>
+
               <span > System Status</span>;
               <ExternalLink className='w - 4 h - 4' />            </Link>              <ExternalLink className="w - 4 h - 4" />;
             </Link>;
@@ -732,8 +757,10 @@ if ( {) {$2;
               <code className="bg - green - 100 text - green - 800 px - 3 py - 1 rounded text - sm">;
                 npm run setup:auth0;
               </code>;
-            </div>;
-          </div>)}
+            </div>
+    </div>
+  );
+}
         {/* Footer */}
         <div className='mt - 6 text - center text - sm text - gray - 500'>;
           <p>;
@@ -753,4 +780,7 @@ if ( {) {$2;
         </div>;
       </div>;
     </div>)export default AuthConfigurationError }
-export default AuthConfigurationError}export default AuthConfigurationError;)export default AuthConfigurationError;
+
+export default AuthConfigurationError}
+
+export default AuthConfigurationError;)export default AuthConfigurationError;

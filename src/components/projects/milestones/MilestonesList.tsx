@@ -1,15 +1,18 @@
 
 if (isLoading) {return ())}
       </div>;
-    )}if (milestones.length === 0 && !showAddForm) {return (<EmptyState;
+    )}if (milestones.length = == 0 && !showAddForm) ;
+  return (<EmptyState;
         icon = {<span className="text-3xl">📊</span>}
         title="No Milestones Yet";
         description={isClient ?;
           "Break down the project into manageable milestones to track progress and payments." :;
           "No milestones have been created for this project yet."}
         action={isClient ?;
-          {text: "Create First Milestone",onClick: () => setShowAddForm(true)} : undefined;
-        }}if (milestones && milestones.length === 0 && !showAddForm) {return (<EmptyState;
+          {text: "Create First Milestone",onClick: () => setShowAddForm(true,
+} : undefined;
+        }}if (milestones && milestones.length = == 0 && !showAddForm) ;
+  return (<EmptyState;
         icon = {<span className="text-3xl">📊</span>}
         title="No Milestones Yet";
         description = {isClient ? ;
@@ -76,8 +79,10 @@ if ( {) {$2;
           <Button on_click={(, ) => setShowAddForm (true)}>;
             <Plus className="h - 4 w - 4 mr - 2" />;
             Add Milestone;
-          </Button>;
-        </div>)}
+          </Button>
+    </div>
+  );
+}
       {showAddForm && (<Card>;
           <CardContent className="pt - 6">;
             <h3 className="text - lg font - medium mb - 4">Create New Milestone</h3>;
@@ -101,8 +106,10 @@ if ( {) {$2;
             on_approve = {on_approve }
             on_reject = {on_reject }
           />))}
-      </div>;
-    </div>)}
+      </div>
+    </div>
+  );
+}
 ";<AddMilestoneForm;
 import React, { useState } from 'react';
 import { Milestone,MilestoneStatus,MilestoneActivity} from '@/hooks/useMilestones';
@@ -121,7 +128,9 @@ import { AddMilestoneForm   } from './AddMilestoneForm';
 import { Button   } from '@/components/ui/button';
 import { Card, CardContent   } from '@/components/ui/card';
 // lucide-react doesn't export PlusIcon, use our icon wrapper;
-interface MilestonesListProps  {milestones: Milestone[];
+
+interface MilestonesListProps {
+  milestones: Milestone[];
   activities: Record<string, MilestoneActivity[]>,isLoading: boolean;
   isClient: boolean;
   onCreateMilestone: (data: any) => Promise<Milestone | null>;
@@ -130,5 +139,7 @@ interface MilestonesListProps  {milestones: Milestone[];
   isSubmitting: boolean;
   onApprove?: (id: string) => Promise<void>;
   onReject?: (id: string) => Promise<void>;
+
 }
+
 export const MilestonesList: React.FC<MilestonesListProps> = ({

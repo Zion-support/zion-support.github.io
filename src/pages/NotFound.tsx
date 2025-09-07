@@ -7,6 +7,7 @@ import Footer from '../components/Footer';
 import SEO from '../components/SEO';
 
 const NotFound: React.FC = () => {
+ ;
   return (
     <>
       <SEO
@@ -23,7 +24,7 @@ const NotFound: React.FC = () => {
             <div className="text-9xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500 mb-8">
               404
             </div>
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+            <h1 className="text-4xl md: text-6xl font-bold text-white mb-6">
               Page Not Found
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
@@ -48,7 +49,8 @@ const NotFound: React.FC = () => {
         <Footer />
       </div>
     </>
-  );
+  ),
 };
+
 
 export default NotFound;

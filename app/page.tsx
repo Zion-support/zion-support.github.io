@@ -79,13 +79,10 @@ export default function HomePage() {
   return (
     <div className="space-y-16">
       {/* Hero Section */}
-<<<<<<< HEAD
+
       <section className="text-center py-20 bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50 rounded-lg relative overflow-hidden" role="banner">
         {/* Animated background elements */}
-=======
-      <section className="text-center py-24 bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50 rounded-2xl relative overflow-hidden" role="banner">
-        {/* Enhanced animated background elements */}
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-2a0c
+
         <div className="absolute inset-0 overflow-hidden">
           <div className="absolute -top-8 -left-8 w-80 h-80 bg-gradient-to-r from-blue-200 to-blue-300 rounded-full mix-blend-multiply filter blur-xl opacity-60 animate-float"></div>
           <div className="absolute -bottom-12 -right-8 w-80 h-80 bg-gradient-to-r from-purple-200 to-purple-300 rounded-full mix-blend-multiply filter blur-xl opacity-60 animate-float" style={{ animationDelay: '2s' }}></div>
@@ -159,7 +156,7 @@ export default function HomePage() {
         <div className="text-center mb-12">
           <h2 id="services-heading" className="text-3xl font-bold text-gray-900 mb-4">
             Our Core Services
-<<<<<<< HEAD
+
           </h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
             From AI-powered automation to complete IT infrastructure.
@@ -252,14 +249,13 @@ export default function HomePage() {
         <div className="text-center mb-16">
           <h2 id="why-choose-heading" className="text-4xl font-bold text-gray-900 mb-6 animate-fade-in">
             Why Choose Zion Tech Group?
-=======
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-2a0c
+
           </h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
             From AI-powered automation to complete IT infrastructure.
           </p>
         </div>
-<<<<<<< HEAD
+
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8" role="list" aria-label="Key advantages and benefits">
           <div className="text-center p-8 bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 group">
             <div className="w-20 h-20 bg-gradient-to-br from-blue-100 to-blue-200 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
@@ -314,93 +310,7 @@ export default function HomePage() {
       {/* CTA Section */}
       <section className="text-center py-20 bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-700 rounded-lg relative overflow-hidden" role="complementary" aria-labelledby="cta-heading">
         {/* Animated background elements */}
-=======
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" role="list" aria-label="Core service offerings">
-          <ServiceCard
-            title="Micro SaaS Solutions"
-            href="/services/micro-saas"
-            description="Scalable, secure micro SaaS products that solve specific business challenges with modern architecture."
-            bullets={[
-              "Custom web applications",
-              "API development",
-              "Database design",
-              "User authentication",
-              "Payment integration"
-            ]}
-            icon="🚀"
-          />
-          <ServiceCard
-            title="AI & Machine Learning"
-            href="/services/ai-ml"
-            description="Intelligent automation, predictive analytics, and custom AI models tailored to your business needs."
-            bullets={[
-              "Custom AI models",
-              "Predictive analytics",
-              "Natural language processing",
-              "Computer vision",
-              "Process automation"
-            ]}
-            icon="🤖"
-          />
-          <ServiceCard
-            title="Cloud Infrastructure"
-            href="/services/cloud"
-            description="Scalable cloud solutions, DevOps, and infrastructure management for enterprise applications."
-            bullets={[
-              "AWS/Azure/GCP migration",
-              "Container orchestration",
-              "CI/CD pipelines",
-              "Monitoring & logging",
-              "Cost optimization"
-            ]}
-            icon="☁️"
-          />
-          <ServiceCard
-            title="Blockchain Solutions"
-            href="/services/blockchain"
-            description="Smart contracts, DeFi platforms, and blockchain integration for secure, transparent operations."
-            bullets={[
-              "Smart contract development",
-              "DeFi protocols",
-              "NFT marketplaces",
-              "Token economics",
-              "Security auditing"
-            ]}
-            icon="⛓️"
-          />
-          <ServiceCard
-            title="Data Analytics"
-            href="/services/analytics"
-            description="Transform raw data into actionable insights with advanced analytics and visualization tools."
-            bullets={[
-              "Data warehousing",
-              "Business intelligence",
-              "Real-time dashboards",
-              "Predictive modeling",
-              "Data visualization"
-            ]}
-            icon="📊"
-          />
-          <ServiceCard
-            title="Cybersecurity"
-            href="/services/security"
-            description="Comprehensive security solutions to protect your digital assets and ensure compliance."
-            bullets={[
-              "Security audits",
-              "Penetration testing",
-              "Compliance consulting",
-              "Incident response",
-              "Security training"
-            ]}
-            icon="🔒"
-          />
-        </div>
-      </section>
 
-      {/* Why Choose Us */}
-      <section className="py-20 bg-gradient-to-br from-gray-50 via-blue-50 to-indigo-50 rounded-2xl relative overflow-hidden" aria-labelledby="why-choose-heading">
-        {/* Background decoration */}
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-2a0c
         <div className="absolute inset-0 overflow-hidden">
           <div className="absolute top-0 right-0 w-64 h-64 bg-gradient-to-l from-blue-100 to-transparent rounded-full filter blur-2xl opacity-30"></div>
           <div className="absolute bottom-0 left-0 w-64 h-64 bg-gradient-to-r from-purple-100 to-transparent rounded-full filter blur-2xl opacity-30"></div>
@@ -467,80 +377,8 @@ export default function HomePage() {
           </div>
         </div>
       </section>
-<<<<<<< HEAD
-=======
 
-      {/* CTA Section */}
-      <section className="text-center py-24 bg-gradient-to-br from-blue-600 via-purple-600 to-indigo-700 rounded-2xl relative overflow-hidden" role="complementary" aria-labelledby="cta-heading">
-        {/* Enhanced animated background elements */}
-        <div className="absolute inset-0 overflow-hidden">
-          <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-blue-600/20 to-purple-600/20"></div>
-          <div className="absolute -top-8 -left-8 w-96 h-96 bg-white/10 rounded-full mix-blend-multiply filter blur-2xl opacity-60 animate-float"></div>
-          <div className="absolute -bottom-12 -right-8 w-96 h-96 bg-white/10 rounded-full mix-blend-multiply filter blur-2xl opacity-60 animate-float" style={{ animationDelay: '2s' }}></div>
-          <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-80 h-80 bg-white/5 rounded-full mix-blend-multiply filter blur-3xl opacity-50 animate-pulse-slow"></div>
-          <div className="absolute top-1/4 right-1/4 w-32 h-32 bg-gradient-to-r from-cyan-300/20 to-cyan-400/20 rounded-full mix-blend-multiply filter blur-xl opacity-60 animate-pulse-slow"></div>
-          <div className="absolute bottom-1/4 left-1/4 w-24 h-24 bg-gradient-to-r from-pink-300/20 to-pink-400/20 rounded-full mix-blend-multiply filter blur-xl opacity-60 animate-pulse-slow" style={{ animationDelay: '1s' }}></div>
-        </div>
-        
-        <div className="relative z-10">
-          <div className="inline-block mb-8 animate-bounce-in">
-            <span className="text-6xl animate-wiggle">💼</span>
-          </div>
-          <h2 id="cta-heading" className="text-5xl md:text-7xl font-bold text-white mb-8 animate-fade-in">
-            Ready to Transform Your Business?
-          </h2>
-          <p className="text-2xl text-blue-100 mb-4 max-w-4xl mx-auto animate-slide-up font-medium">
-            Let&apos;s discuss your project and create a custom solution that drives
-            real business value.
-          </p>
-          <p className="text-lg text-blue-200 mb-12 max-w-3xl mx-auto animate-slide-up" style={{ animationDelay: '0.1s' }}>
-            Our team has delivered 1000+ successful projects across various industries.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-6 justify-center animate-slide-up" style={{ animationDelay: '0.3s' }}>
-            <Link
-              href="/contact"
-              className="group bg-white text-blue-600 px-12 py-6 rounded-2xl font-bold text-xl hover:bg-blue-50 transition-all duration-300 transform hover:scale-105 focus:outline-none focus:ring-4 focus:ring-white focus:ring-offset-2 shadow-2xl hover:shadow-3xl animate-glow"
-              aria-label="Contact us to get started with your project"
-            >
-              <span className="flex items-center justify-center gap-3">
-                Get Started Today
-                <span className="group-hover:translate-x-1 transition-transform duration-300">🚀</span>
-              </span>
-            </Link>
-            <Link
-              href="/services"
-              className="group border-2 border-white text-white px-12 py-6 rounded-2xl font-bold text-xl hover:bg-white hover:text-blue-600 transition-all duration-300 transform hover:scale-105 focus:outline-none focus:ring-4 focus:ring-white focus:ring-offset-2 shadow-xl hover:shadow-2xl"
-              aria-label="Explore our services"
-            >
-              <span className="flex items-center justify-center gap-3">
-                View Our Services
-                <span className="group-hover:translate-x-1 transition-transform duration-300">→</span>
-              </span>
-            </Link>
-          </div>
-          
-          {/* Trust indicators */}
-          <div className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-8 animate-slide-up" style={{ animationDelay: '0.5s' }}>
-            <div className="text-center">
-              <div className="text-2xl md:text-3xl font-bold text-white mb-2">500+</div>
-              <div className="text-sm md:text-base text-blue-200">Happy Clients</div>
-            </div>
-            <div className="text-center">
-              <div className="text-2xl md:text-3xl font-bold text-white mb-2">1000+</div>
-              <div className="text-sm md:text-base text-blue-200">Projects Delivered</div>
-            </div>
-            <div className="text-center">
-              <div className="text-2xl md:text-3xl font-bold text-white mb-2">99.9%</div>
-              <div className="text-sm md:text-base text-blue-200">Success Rate</div>
-            </div>
-            <div className="text-center">
-              <div className="text-2xl md:text-3xl font-bold text-white mb-2">24/7</div>
-              <div className="text-sm md:text-base text-blue-200">Support Available</div>
-            </div>
-          </div>
-        </div>
-      </section>
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-2a0c
+
     </div>
   );
 }

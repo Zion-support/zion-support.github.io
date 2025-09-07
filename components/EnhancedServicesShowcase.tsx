@@ -18,8 +18,11 @@ import { Brain;
   Filter;
   ChevronDown;
   Brain,Shield,Rocket,Cpu,Database,Atom,Users,CheckCircle,TrendingUp,Clock,Star,Filter,ChevronDown,} from 'lucide-react';
+
 interface Service  {Brain,Shield,Rocket,Cpu,Database,Atom,Users,CheckCircle,TrendingUp,Clock,Star,} from 'lucide-react';;
-interface Service  {id: string;
+
+interface Service {
+  id: string;
   name: string;
   tagline: string;
   category: string;
@@ -32,11 +35,18 @@ interface Service  {id: string;
   roi: string;
   market_size: string;
   growth_rate: string;
-  popular?: boolean;];icon: React.ComponentType<any>;
+  popular?: boolean
+];
+icon: React.ComponentType<any>;
   color: string;
-}const EnhancedServicesShowcase: React.FC;
+
+}
+
+const EnhancedServicesShowcase: React.FC;
   color: string;} from 'lucide-react';
-interface Service  {id: string;
+
+interface Service {
+  id: string;
   name: string;
   tagline: string;
   category: string;
@@ -52,8 +62,12 @@ interface Service  {id: string;
   popular?: boolean;
   icon: React.ComponentType<any>;
   color: string;
+
 }
-const EnhancedServicesShowcase: React.FC = () => {const [selectedCategory, setSelectedCategory] = useState<string>('all')const [searchTerm, setSearchTerm] = useState('')const services: Service[] = [;
+
+const EnhancedServicesShowcase: React.FC = () => {const [selectedCategory, setSelectedCategory] = useState<string>('all')const [searchTerm, setSearchTerm] =;
+  useState('';
+  const services: Service[] = [;
     {id: 'ai-bi',name: 'AI Business Intelligence',tagline:;
         'Transform data into actionable insights with AI-powered analytics',category: 'AI & Analytics',price: '$499',period: '/month',setupTime: '2-3 weeks',customers: '150+',features: [;
         'AI-powered dashboards','Predictive analytics','Real-time insights','Custom reporting',],benefits: [;
@@ -77,8 +91,9 @@ const EnhancedServicesShowcase: React.FC = () => {const [selectedCategory, setSe
         'Edge node management';
         'IoT device management';
         'Real-time monitoring';
-        'Auto-scaling';
-      ];
+        'Auto-scaling'
+];
+
       benefits: [;
         'Mission success rate 95%+','Reduced launch costs','Advanced capabilities',],roi: 'Average 5.2x ROI within 12 months',marketSize: '$8B',growthRate: '45% YoY',popular: true,icon: Rocket,color: 'from-violet-500 to-purple-500',},{id: 'neural-interface',name: 'Neural Interface Development',tagline:;
         'Build the future of human-computer interaction with neural interfaces',category: 'Emerging Tech',price: '$899',period: '/month',setupTime: '6-8 weeks',customers: '40+',features: [;
@@ -87,16 +102,25 @@ const EnhancedServicesShowcase: React.FC = () => {const [selectedCategory, setSe
         'Quantum neural networks';
         'Consciousness simulation';
         'Advanced learning';
-        'Quantum optimization';
-      ];
+        'Quantum optimization'
+];
+
       benefits: [;
-        'Unprecedented AI capabilities','Breakthrough research','Competitive advantage',],roi: 'Average 8.5x ROI within 24 months',marketSize: '$2B',growthRate: '89% YoY',popular: true,icon: Atom,color: 'from-blue-500 to-cyan-500',},];const categories = [;
-    'all',...Array.from(new Set(services.map(s => s.category))),];const filteredServices = services.filter(service => {const matchesCategory =;
+        'Unprecedented AI capabilities','Breakthrough research','Competitive advantage',],roi: 'Average 8.5x ROI within 24 months',marketSize: '$2B',growthRate: '89% YoY',popular: true,icon: Atom,color: 'from-blue-500 to-cyan-500',},];
+
+const categories = [
+  'all',...Array.from(new Set(services.map(s => s.category))),];
+
+const filteredServices = services.filter(service => ;
+  const matchesCategory =;
       selectedCategory === 'all' || service.category === selectedCategory;
-    const matchesSearch =;
+
+const matchesSearch =;
       service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||;
       service.tagline.toLowerCase().includes(searchTerm.toLowerCase())return matchesCategory && matchesSearch;
-  })const getCategoryIcon = (category: string) => {const iconMap: { [key: string]: React.ComponentType<any> } = {'AI & Analytics': Brain,Security: Shield,Infrastructure: Cpu,'Space Tech': Rocket,'Emerging Tech': Brain,'Quantum AI': Atom,}return iconMap[category] || Brain;
+  })const getCategoryIcon = (category: string) => ;
+  const iconMap: { [key: string]: React.ComponentType<any>,
+} = {'AI & Analytics': Brain,Security: Shield,Infrastructure: Cpu,'Space Tech': Rocket,'Emerging Tech': Brain,'Quantum AI': Atom,}return iconMap[category] || Brain;
   }return (<section id='services' className='py-24 px-6 relative overflow-hidden'>;
       {/* Background */}}return (<section id="services" className="py-24 px-6 relative overflow-hidden">;
       {/* Background */}
@@ -106,9 +130,10 @@ const EnhancedServicesShowcase: React.FC = () => {const [selectedCategory, setSe
             <select;
               value={selectedCategory}
               onChange={(e) => setSelectedCategory(e.target.value)}
-              className="px-6 py-3 bg-white/5 border border-white/10 rounded-xl text-white focus:outline-none focus:border-blue-400 transition-colors duration-300 appearance-none pr-12";
-            >;
-              {categories.map((category) => (<option key={category} value={category} className="bg-slate-800 text-white">;
+              className="px-6 py-3 bg-white/5 border border-white/10 rounded-xl text-white focus: outline-none focus:border-blue-400 transition-colors duration-300 appearance-none pr-12">
+
+              {categories.map((category) => (<option key={category} value={categor,
+} className="bg-slate-800 text-white">;
       <div className='absolute inset-0 bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950'>;
         <div className='absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(59,130,246,0.1),transparent_50%)]' />;
         <div className='absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(168,85,247,0.1),transparent_50%)]' />;
@@ -133,13 +158,13 @@ const EnhancedServicesShowcase: React.FC = () => {const [selectedCategory, setSe
             <select;
               value={selectedCategory}
               onChange={e => setSelectedCategory(e.target.value)}
-              className='px-6 py-3 bg-white/5 border border-white/10 rounded-xl text-white focus:outline-none focus:border-blue-400 transition-colors duration-300 appearance-none pr-12';
-            >;
+              className='px-6 py-3 bg-white/5 border border-white/10 rounded-xl text-white focus:outline-none focus:border-blue-400 transition-colors duration-300 appearance-none pr-12'>
+
               {categories.map(category => (<option;
                   key={category}
                   value={category}
-                  className='bg-slate-800 text-white';
-                >;
+                  className='bg-slate-800 text-white'>
+
                   {category === 'all' ? 'All Categories' : category}
                 </option>;
               ))}</select>;
@@ -171,9 +196,10 @@ const EnhancedServicesShowcase: React.FC = () => {const [selectedCategory, setSe
 <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>;
           {filteredServices.map((service, index) => (<div;
               key={service.id}
-              className='group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl';
-            >;
-              {/* Popular Badge */}
+              className='group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl hover: border-cyan-400/30 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl'>
+
+              {/* Popular Badge *,
+}
               {service.popular && (<div className='absolute top-4 right-4 z-20'>;
                   <div className='bg-gradient-to-r from-yellow-500 to-orange-500 text-black text-xs font-bold px-3 py-1 rounded-full flex items-center gap-1'>;
                     <Star className='w-3 h-3' />;
@@ -205,15 +231,25 @@ const EnhancedServicesShowcase: React.FC = () => {const [selectedCategory, setSe
                 {/* Icon and Category */}
                 <div className='flex items-center justify-between mb-4'>;
                   <div;
-      color: 'from - blue - 500 to - cyan - 500',},];const categories = [;
-    'all',...Array.from (new Set (services.map (string => s.category))),const filtered_services = services.filter (service => {const matches_category =;
+      color: 'from - blue - 500 to - cyan - 500',},];
+
+const categories = [
+  'all',...Array.from (new Set (services.map (string = > s.category))),const filtered_services = services.filter (service => ;
+  const matches_category =;
       selected_category === 'all' || service.category === selected_category;
-    const matches_search =;
+
+const matches_search =;
       service.name.toLowerCase ().includes (search_term.toLowerCase ()) ||;
-      service.tagline.toLowerCase ().includes (search_term.toLowerCase ())return matches_category && matches_search;  })const getCategoryIcon = (category: string) =>: any {const icon_map: { [key: string]: React.ComponentType < any> } = {    const matches_category = selected_category === 'all' || service.category === selected_category;
-    const matches_search = service.name.toLowerCase ().includes (search_term.toLowerCase ()) ||;
+      service.tagline.toLowerCase ().includes (search_term.toLowerCase ())return matches_category && matches_search;  })const getCategoryIcon = (category: string) =>: any {const icon_map: { [key: string]: React.ComponentType < any>,
+} = {   ;
+  const matches_category = selected_category === 'all' || service.category === selected_category;
+
+const matches_search = service.name.toLowerCase ().includes (search_term.toLowerCase ()) ||;
                         service.tagline.toLowerCase ().includes (search_term.toLowerCase ())return matches_category && matches_search;
-  const getCategoryIcon = (category: string) =>: any {const icon_map: { [key: string]: React.ComponentType < any> } = {'AI & Analytics': Brain,Security: Shield,Infrastructure: Cpu,'Space Tech': Rocket,'Emerging Tech': Brain,'Quantum AI': Atom,}
+
+const getCategoryIcon = (category: string) =>: any ;
+  const icon_map: { [key: string]: React.ComponentType < any>,
+} = {'AI & Analytics': Brain,Security: Shield,Infrastructure: Cpu,'Space Tech': Rocket,'Emerging Tech': Brain,'Quantum AI': Atom,}
     return icon_map[category] || Brain;
   }return (<section id='services' className='py - 24 px - 6 relative overflow - hidden'>;
       {/* Background */}
@@ -234,8 +270,10 @@ const EnhancedServicesShowcase: React.FC = () => {const [selectedCategory, setSe
             business and accelerate innovation          </p>;
         </div>;
         {/* Filters */}
-        <div className='flex flex - col md:flex - row gap - 4 mb - 12 justify - center items - center'>    }
-    return icon_map[category] || Brain;
+        <div className = 'flex flex - col md: flex - row gap - 4 mb - 12 justify - center items - center'>   ,
+}
+   ;
+  return icon_map[category] || Brain;
   }return (<section id="services" className="py - 24 px-6 relative overflow-hidden">;
       {/* Background */}
       <div className="absolute inset - 0 bg - gradient - to - br from - slate - 950 via - slate - 900 to-slate-950">;
@@ -261,8 +299,8 @@ const EnhancedServicesShowcase: React.FC = () => {const [selectedCategory, setSe
             <select;
               value={selected_category}
               on_change={e => setSelectedCategory (e.target.value)}
-              className='px - 6 py - 3 bg - white / 5 border border - white / 10 rounded - xl text - white focus:outline - none focus:border - blue - 400 transition - colors duration - 300 appearance - none pr - 12';
-            >;
+              className='px - 6 py - 3 bg - white / 5 border border - white / 10 rounded - xl text - white focus:outline - none focus:border - blue - 400 transition - colors duration - 300 appearance - none pr - 12'>
+
               {categories.map (category => (<option;
                   key={category}
                   value={category}
@@ -275,9 +313,10 @@ const EnhancedServicesShowcase: React.FC = () => {const [selectedCategory, setSe
             <select;
               value={selected_category}
               on_change={(e) => setSelectedCategory (e.target.value)}
-              className="px - 6 py - 3 bg - white / 5 border border - white / 10 rounded - xl text - white focus:outline - none focus:border - blue - 400 transition - colors duration - 300 appearance-none pr-12";
-            >;
-              {categories.map ((category) => (<option key={category} value={category} className="bg - slate-800 text-white">;
+              className="px - 6 py - 3 bg - white / 5 border border - white / 10 rounded - xl text - white focus: outline - none focus:border - blue - 400 transition - colors duration - 300 appearance-none pr-12">
+
+              {categories.map ((category) => (<option key={category} value={categor,
+} className="bg - slate-800 text-white">;
                   {category === 'all' ? 'All Categories' : category}
                 </option>))}
             </select>;
@@ -312,22 +351,26 @@ const EnhancedServicesShowcase: React.FC = () => {const [selectedCategory, setSe
         <div className='grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 8'>;
           {filtered_services.map ((service, index) => (<div;
               key={service.id}
-              className='group relative overflow - hidden rounded - 2xl border border - white / 10 bg - gradient - to - br from - white / 5 to - white / 10 backdrop - blur - xl hover:border - cyan - 400 / 30 transition - all duration - 300 transform hover:scale - 105 hover:shadow - 2xl';
-            >;
-              {/* Popular Badge */}
+              className='group relative overflow - hidden rounded - 2xl border border - white / 10 bg - gradient - to - br from - white / 5 to - white / 10 backdrop - blur - xl hover: border - cyan - 400 / 30 transition - all duration - 300 transform hover:scale - 105 hover:shadow - 2xl'>
+
+              {/* Popular Badge *,
+}
               {service.popular && (<div className='absolute top - 4 right - 4 z - 20'>;
                   <div className='bg - gradient - to - r from - yellow - 500 to - orange - 500 text - black text - xs font - bold px - 3 py - 1 rounded - full flex items - center gap - 1'>;
                     <Star className='w - 3 h - 3' />                    Popular          {filtered_services.map ((service, index) => (<div;
               key={service.id}
-              className="group relative overflow - hidden rounded - 2xl border border - white / 10 bg - gradient - to - br from - white / 5 to - white / 10 backdrop - blur - xl hover:border - cyan - 400 / 30 transition - all duration - 300 transform hover:scale-105 hover:shadow-2xl";
-            >;
-              {/* Popular Badge */}
+              className="group relative overflow - hidden rounded - 2xl border border - white / 10 bg - gradient - to - br from - white / 5 to - white / 10 backdrop - blur - xl hover: border - cyan - 400 / 30 transition - all duration - 300 transform hover:scale-105 hover:shadow-2xl">
+
+              {/* Popular Badge *,
+}
               {service.popular && (<div className="absolute top - 4 right-4 z-20">;
                   <div className="bg - gradient - to - r from - yellow - 500 to - orange - 500 text - black text - xs font - bold px - 3 py - 1 rounded - full flex items-center gap-1">;
                     <Star className="w-3 h-3" />;
                     Popular;
-                  </div>;
-                </div>)}
+                  </div>
+    </div>
+  );
+}
               {/* Service Content */}
               <div className='p - 8'>;
               {/* Service Content */}
@@ -341,8 +384,8 @@ const EnhancedServicesShowcase: React.FC = () => {const [selectedCategory, setSe
                 {/* Icon and Category */}
                 <div className='flex items - center justify - between mb - 4'>;
                   <div;
-                    className={`w - 16 h - 16 rounded - 2xl bg - gradient - to - br ${service.color} p - 4 flex items - center justify - center text - 2xl`}
-                  >;
+                    className={`w - 16 h - 16 rounded - 2xl bg - gradient - to - br ${service.color} p - 4 flex items - center justify - center text - 2xl`}>
+
                     <service.icon className='w - 8 h - 8 text - white' />;
                   </div>;
                   <div className='text - right'>;
@@ -352,15 +395,18 @@ const EnhancedServicesShowcase: React.FC = () => {const [selectedCategory, setSe
                     <div className='text - xs text - white / 40'>;
                       {service.category}
                 <div className="flex items-center justify-between mb-4">;
-                  <div className={`w-16 h-16 rounded-2xl bg-gradient-to-br ${service.color} p-4 flex items-center justify-center text-2xl`}>;
+                  <div className={`w-16 h-16 rounded-2xl bg-gradient-to-br ${service.color} p-4 flex items-center justify-center text-2xl`}>
+
                     <service.icon className="w-8 h-8 text-white" />;
                   </div>;
                   <div className="text-right">;
-                    <div className="text-xs text-white/60 mb-1">{getCategoryIcon(service.category)({ className: 'w-3 h-3' })}</div>;
+                    <div className="text-xs text-white/60 mb-1">{getCategoryIcon(service.category)({ className: 'w-3 h-3' },
+}</div>;
                     <div className="text-xs text-white/40">{service.category}</div>;
                   </div>;
                 </div>;
-                    className={`w-16 h-16 rounded-2xl bg-gradient-to-br ${service && service.color} p-4 flex items-center justify-center text-2xl`}>;
+                    className={`w-16 h-16 rounded-2xl bg-gradient-to-br ${service && service.color} p-4 flex items-center justify-center text-2xl`}>
+
                     <service && service.icon className='w-8 h-8 text-white' />;
                   </div>;
                   <div className='text-right'>;
@@ -373,11 +419,13 @@ const EnhancedServicesShowcase: React.FC = () => {const [selectedCategory, setSe
                 </div>;
                 {/* Service Info */}                {/* Icon and Category */}
                 <div className="flex items-center justify-between mb-4">;
-                  <div className={`w-16 h-16 rounded-2xl bg-gradient-to-br ${service && service.color} p-4 flex items-center justify-center text-2xl`}>;
+                  <div className={`w-16 h-16 rounded-2xl bg-gradient-to-br ${service && service.color} p-4 flex items-center justify-center text-2xl`}>
+
                     <service && service.icon className="w-8 h-8 text-white" />;
                   </div>;
                   <div className="text-right">;
-                    <div className="text-xs text-white/60 mb-1">{getCategoryIcon(service && service.category)({ className: 'w-3 h-3' })}</div>;
+                    <div className="text-xs text-white/60 mb-1">{getCategoryIcon(service && service.category)({ className: 'w-3 h-3' },
+}</div>;
                     <div className="text-xs text-white/40">{service && service.category}</div>;
                   </div>;
                 </div>;
@@ -426,8 +474,8 @@ const EnhancedServicesShowcase: React.FC = () => {const [selectedCategory, setSe
                   <div className='space-y-2'>;
                     {service.features.slice(0, 3).map((feature, idx) => (<div;
                         key={idx}
-                        className='flex items-center gap-2 text-xs text-white/70';
-                      >;
+                        className='flex items-center gap-2 text-xs text-white/70'>
+
                         <CheckCircle className='w-3 h-3 text-green-400' />;
                         {feature}
                       </div>;
@@ -442,8 +490,8 @@ const EnhancedServicesShowcase: React.FC = () => {const [selectedCategory, setSe
                   <div className='space-y-2'>;
                     {service.benefits.slice(0, 2).map((benefit, idx) => (<div;
                         key={idx}
-                        className='flex items-center gap-2 text-xs text-white/70';
-                      >;
+                        className='flex items-center gap-2 text-xs text-white/70'>
+
                         <TrendingUp className='w-3 h-3 text-blue-400' />;
                         {benefit}
                       </div>;
@@ -455,7 +503,8 @@ const EnhancedServicesShowcase: React.FC = () => {const [selectedCategory, setSe
                   <div className="text-xs text-white/60 mb-2">ROI & Market Position</div>;
                   <div className="text-xs text-white/80 leading-relaxed">{service.roi}</div>;
                   <div className="mt-2 text-xs text-white/60">;
-                    Market: {service.marketSize} • Growth: {service.growthRate}{/* Benefits */}))}<div className='mb-6 p-4 bg-white/5 rounded-lg'>;
+                    Market: {service.marketSize} • Growth: {service.growthRate}{/* Benefits */}),
+}<div className='mb-6 p-4 bg-white/5 rounded-lg'>;
                   <div className='text-xs text-white/60 mb-2'>;
                     ROI & Market Position;
                   </div>;
@@ -463,7 +512,8 @@ const EnhancedServicesShowcase: React.FC = () => {const [selectedCategory, setSe
                     {service.roi}
                   </div>;
                   <div className='mt-2 text-xs text-white/60'>;
-                    Market: {service.marketSize} • Growth: {service.growthRate}</div>;
+                    Market: {service.marketSize} • Growth: {service.growthRat,
+}</div>;
                 </div>;
                   </div>;
                 </div>;
@@ -475,7 +525,8 @@ const EnhancedServicesShowcase: React.FC = () => {const [selectedCategory, setSe
                   <div className='text-xs text-white/80 leading-relaxed'>;
                     {service && service.roi}
                   </div>;
-                  <div className='mt-2 text-xs text-white/60'>                    Market: {service && service.marketSize} • Growth: {service && service.growthRate}                <div className="mb-6 p-4 bg-white/5 rounded-lg">;
+                  <div className='mt-2 text-xs text-white/60'>                    Market: {service && service.marketSize} • Growth: {service && service.growthRat,
+}                <div className="mb-6 p-4 bg-white/5 rounded-lg">;
                   <div className="text-xs text-white/60 mb-2">ROI & Market Position</div>;
                   <div className="text-xs text-white/80 leading-relaxed">{service && service.roi}</div>;
                   <div className="mt-2 text-xs text-white/60">;
@@ -488,22 +539,25 @@ const EnhancedServicesShowcase: React.FC = () => {const [selectedCategory, setSe
               </div>;
                 <div className="flex gap-3">;
                   <button;
-                    onClick={() => window.location.href = `mailto:kleber@ziontechgroup.com?subject=Inquiry about ${service.name}`}
+                    onClick={() => window.location.href = `mailto: kleber@ziontechgroup.com?subject=Inquiry about ${service.name},
+}
                     className="flex-1 px-4 py-3 bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 rounded-xl font-semibold text-white transition-all duration-300 transform hover:scale-105";
 <div className='flex gap-3'>;
                   <button;
                     onClick={() =>;
-                      (window.location.href = `mailto:kleber@ziontechgroup.com?subject=Inquiry about ${service.name}`)}
-                    className='flex-1 px-4 py-3 bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 rounded-xl font-semibold text-white transition-all duration-300 transform hover:scale-105';
-                  >;
+                      (window.location.href = `mailto: kleber@ziontechgroup.com?subject=Inquiry about ${service.name}`,
+}
+                    className='flex-1 px-4 py-3 bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 rounded-xl font-semibold text-white transition-all duration-300 transform hover:scale-105'>
+
                     Get Started;
                   </button>;
                   <button;
                     className="px-4 py-3 border border-white/20 hover:border-white/40 rounded-xl font-semibold text-white transition-all duration-300 backdrop-blur-sm bg-white/5 hover:bg-white/10";
 onClick={() =>;
-                      (window.location.href = `mailto:kleber@ziontechgroup.com?subject=Demo request for ${service.name}`)}
-                    className='px-4 py-3 border border-white/20 hover:border-white/40 rounded-xl font-semibold text-white transition-all duration-300 backdrop-blur-sm bg-white/5 hover:bg-white/10';
-                  >;
+                      (window.location.href = `mailto: kleber@ziontechgroup.com?subject=Demo request for ${service.name}`,
+}
+                    className='px-4 py-3 border border-white/20 hover:border-white/40 rounded-xl font-semibold text-white transition-all duration-300 backdrop-blur-sm bg-white/5 hover:bg-white/10'>
+
                     Demo;
                   </button>;
                 </div>;
@@ -583,34 +637,43 @@ onClick={() =>;
             <div className="flex flex - col sm: flex - row gap-4 justify-center">;
               <a;
                 href="mailto:kleber@ziontechgroup.com?subject = Consultation Request";
-                className="px - 8 py - 4 bg - gradient - to - r from - blue - 600 to - cyan - 600 hover:from - blue - 700 hover:to - cyan - 700 rounded - full font - semibold text - lg transition - all duration - 300 transform hover:scale-105 hover:shadow-2xl";
-              >;
+                className="px - 8 py - 4 bg - gradient - to - r from - blue - 600 to - cyan - 600 hover:from - blue - 700 hover:to - cyan - 700 rounded - full font - semibold text - lg transition - all duration - 300 transform hover:scale-105 hover:shadow-2xl">
+
                 Schedule Consultation;
               </a>;
               <a;
                 href='tel:+13024640950';
                 className='px - 8 py - 4 border border - white / 20 hover:border - white / 40 rounded - full font - semibold text - lg transition - all duration - 300 backdrop - blur - sm bg - white / 5 hover:bg - white / 10'                href="tel:+13024640950";
-                className="px - 8 py - 4 border border - white / 20 hover:border - white / 40 rounded - full font - semibold text - lg transition - all duration - 300 backdrop - blur - sm bg-white / 5 hover:bg-white / 10";
-              >;
+                className="px - 8 py - 4 border border - white / 20 hover:border - white / 40 rounded - full font - semibold text - lg transition - all duration - 300 backdrop - blur - sm bg-white / 5 hover:bg-white / 10">
+
                 Call Now;
               </a>;
             </div>;
           </div>;
         </div>;
       </div>;
-export default EnhancedServicesShowcase;  )}export default EnhancedServicesShowcase;
-    </section>)}export default EnhancedServicesShowcase)}export default EnhancedServicesShowcase;)export default EnhancedServicesShowcase;  )}
+
+export default EnhancedServicesShowcase;  )}
+
+export default EnhancedServicesShowcase;
+    </section>)}
+
+export default EnhancedServicesShowcase)}
+
+export default EnhancedServicesShowcase;)export default EnhancedServicesShowcase;  )}
+
 export default EnhancedServicesShowcase;}
 }
+
 export default EnhancedServicesShowcase;href='mailto:kleber@ziontechgroup.com?subject=Consultation Request';
-                className='px-8 py-4 bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-2xl';
-              >;
+                className='px-8 py-4 bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-2xl'>
+
                 Schedule Consultation;
               </a>;
               <a;
 href='tel:+13024640950';
-                className='px-8 py-4 border border-white/20 hover:border-white/40 rounded-full font-semibold text-lg transition-all duration-300 backdrop-blur-sm bg-white/5 hover:bg-white/10';
-              >;
+                className='px-8 py-4 border border-white/20 hover:border-white/40 rounded-full font-semibold text-lg transition-all duration-300 backdrop-blur-sm bg-white/5 hover:bg-white/10'>
+
                 Call Now;
               </a>;
             </div>;
@@ -618,4 +681,6 @@ href='tel:+13024640950';
         </div>;
       </div>;
     </section>;
-)}export default EnhancedServicesShowcase;
+)}
+
+export default EnhancedServicesShowcase;

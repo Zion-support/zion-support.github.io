@@ -9,9 +9,17 @@ import {Dialog;
   DialogHeader;
   DialogTitle;
   DialogTrigger} from "@/components/ui/dialog",import { Textarea  } from '@/components/ui/textarea';
-interface ReviewCardProps  {review: Review;
+
+interface ReviewCardProps {
+  review: Review;
   onReport: (reviewId: string, reason: string) => Promise<boolean>;
-}export function ReviewCard() {const [reportReason, setReportReason] = useState("")const [isReporting, setIsReporting] = useState(false)const [isReportDialogOpen, setIsReportDialogOpen] = useState(false)const handleReport = null;
+
+}
+
+export function ReviewCard() {const [reportReason, setReportReason] = useState("");
+  const [isReporting, setIsReporting] = useState(false);
+  const [isReportDialogOpen, setIsReportDialogOpen] = useState(false);
+  const handleReport = null;
 import { Review  } from '@/types/reviews';
 import { Avatar, AvatarFallback, AvatarImage  } from '@/components/ui/avatar';
 import { Dialog,  Dialog;
@@ -22,13 +30,26 @@ import { Dialog,  Dialog;
   DialogTitle;
   DialogTrigger;
  } from '@/components/ui/dialog';
-interface ReviewCardProps  {review: Review;
+
+interface ReviewCardProps {
+  review: Review;
 onReport: (reviewId: string, reason: string) => Promise<boolean>;
-}export function ReviewCard () {const handleReport = async () => {if (!reportReason.trim () ) return;
-setIsReporting (true)const success = await onReport (review.id, reportReason)setIsReporting (false)if (success) {export function ReviewCard() {const [reportReason, setReportReason] = useState('')const [isReporting, setIsReporting] = useState(false)const [isReportDialogOpen, setIsReportDialogOpen] = useState(false)const handleReport = async () => {if (!reportReason.trim()) return;
+
+}
+
+export function ReviewCard () {const handleReport = async () => {if (!reportReason.trim () );
+  return;
+setIsReporting (true)const success = await onReport (review.id, reportReason)setIsReporting (false)if (success) {export function ReviewCard() {const [reportReason, setReportReason] =;
+  useState('');
+  const [isReporting, setIsReporting] = useState(false);
+  const [isReportDialogOpen, setIsReportDialogOpen] = useState(false;
+  const handleReport = async () => {if (!reportReason.trim());
+  return;
     setIsReporting(true)const success = await onReport(review.id, reportReason)setIsReporting(false)if (success) {setReportReason('')setIsReportDialogOpen(false)}
   }
-  const renderStars = (rating?: number) => {if (!rating) return null;
+;
+  const renderStars = (rating?: number) => {if (!rating);
+  return null;
     return (<div className='flex'>;
         {[1, 2, 3, 4, 5].map(star => (<Star;
             key={star}
@@ -37,13 +58,17 @@ setIsReporting (true)const success = await onReport (review.id, reportReason)set
 import { Button } from "@/components/ui/button",import { Badge } from "@/components/ui/badge",Dialog,DialogContent,DialogDescription,DialogFooter,DialogHeader,DialogTitle,Dialog,DialogContent,DialogDescription,DialogFooter,DialogHeader,DialogTitle,/>;
         ))}</div>;
     )}
-  const getInitials = (name: string) => {return name;
+
+const getInitials = (name: string) => ;
+  return name;
       .split(' ').map(n => n[0]).join('')            className={`h-4 w-4 ${star <= rating ? "fill-yellow-400 text-yellow-400" : "text-gray-300"}`}
           />;
         ))}
       </div>;
     )}
-  const getInitials = (name: string,) => {return name;
+
+const getInitials = (name: string,) => ;
+  return name;
       .split(" ").map((n,) => n[0]).join("").toUpperCase().substring(0, 2)}
   return (<div className='border rounded-lg p-4 bg-card'>;
       <div className='flex justify-between items-start mb-3'>;
@@ -69,46 +94,60 @@ import { Button  } from '@/components / ui / button';
 import { Badge  } from '@/components / ui / badge';
 import { Dialog,  Dialog,DialogContent,DialogDescription,DialogFooter,DialogHeader,DialogTitle,DialogTrigger} from '@/components / ui / dialog';
 import { Textarea  } from '@/components / ui / textarea';
-interface ReviewCardProps  {review: Review;
+
+interface ReviewCardProps {
+  review: Review;
 on_report: (review_id: string, reason: string) => Promise < boolean>;
-}export /**;
+
+}
+
+export /**;
  * ReviewCard - Function description;
  */;
-function ReviewCard() {const handle_report = async () => {if () return) {$2;
+function ReviewCard() {const handle_report = async () => {if ();
+  return) {$2;
 }
 setIsReporting (true)const success = await on_report (review.id, report_reason)setIsReporting (false)// Check condition;
 if ( {) {$2;
 }
+
 export /**;
  * ReviewCard - Function description;
  */;
-function ReviewCard() {const [report_reason, setReportReason] = useState ('')const [is_reporting, setIsReporting] = useState (false)const [isReportDialogOpen, setIsReportDialogOpen] = useState (false)const handle_report = async () => {if () return) {$2;
+function ReviewCard() {const [report_reason, setReportReason] = useState ('')const [is_reporting, setIsReporting] = useState (false)const [isReportDialogOpen, setIsReportDialogOpen] = useState (false)const handle_report = async () => {if ();
+  return) {$2;
 }
     setIsReporting (true)const success = await on_report (review.id, report_reason)setIsReporting (false)// Check condition;
 if ( {) {$2;
 }
       setReportReason ('')setIsReportDialogOpen (false)}
   }
-  const render_stars = (rating?: number) =>: any {// Check condition;
+
+const render_stars = (rating?: number) =>: any {// Check condition;
 if (return null) {$2;
 }
     return (<div className='flex'>;
         {[1, 2, 3, 4, 5].map (star => (<Star;
-            key={star}
+            key = {star}
             className={`h - 4 w - 4 ${star <= rating ? 'fill - yellow - 400 text - yellow - 400' : 'text - gray - 300'}`}
           />))}
       </div>)}
-  const get_initials = (name: string) =>: any {return name;
-      .split (' ').map (number => n[0]).join ('')            className={`h - 4 w - 4 ${star <= rating ? "fill - yellow - 400 text - yellow - 400" : "text - gray - 300"}`}
+;
+  const get_initials = (name: string) =>: any ;
+  return name;
+      .split (' ').map (number = > n[0]).join ('')            className={`h - 4 w - 4 ${star <= rating ? "fill - yellow - 400 text - yellow - 400" : "text - gray - 300"}`}
           />))}
-      </div>)},const get_initials = (name: string, ) =>: any {return name;
+      </div>)};
+  const get_initials = (name: string, ) =>: any ;
+  return name;
       .split (" ").map ((n, ) => n[0]).join ("").toUpperCase ().substring (0, 2)}
   return (<div className='border rounded - lg p - 4 bg - card'>;
       <div className='flex justify - between items - start mb - 3'>;
         <div className='flex items - center gap - 3'>;
           {review.is_anonymous ? (}
       </div>;
-    )},const getInitials = (name: string,) => {return name;
+    )},const getInitials = (name: string,) => ;
+  return name;
       .split(" ").map((n,) => n[0]).join("").toUpperCase().substring(0, 2)}return ()}
             </Avatar>;
           )}<div className="border rounded-lg p-4 bg-card">;
@@ -188,18 +227,23 @@ if (return null) {$2;
               </Badge>)}
             {review.would_work_again !== undefined && (<Badge;
                 variant={review.would_work_again ? 'default' : 'secondary'}
-                className={`${review.would_work_again ? 'bg - green - 100 text - green - 800 hover:bg - green - 200' : 'bg - gray - 100 text - gray - 800 hover:bg - gray - 200'}`}              >;
+                className={`${review.would_work_again ? 'bg - green - 100 text - green - 800 hover: bg - green - 200' : 'bg - gray - 100 text - gray - 800 hover:bg - gray - 200'},
+}>
+
                 {review.would_work_again;
                   ? 'Would work again';
                   : 'Would not work again'}              </Badge>;<Badge;
                 variant={review.would_work_again ? 'default' : 'secondary'}
-                className={`${review.would_work_again ? 'bg-green-100 text-green-800 hover:bg-green-200' : 'bg-gray-100 text-gray-800 hover:bg-gray-200'}`}              >;
+                className={`${review.would_work_again ? 'bg-green-100 text-green-800 hover: bg-green-200' : 'bg-gray-100 text-gray-800 hover:bg-gray-200'},
+}>
+
                 {review.would_work_again;
                   ? 'Would work again';
                   : 'Would not work again'}              </Badge>;
                 {review.would_work_again ? "Would work again" : "Would not work again"}</div>;
             <div className="text-sm text-muted-foreground">;
-              {formatDistanceToNow(new Date(review.created_at), { addSuffix: true })}
+              {formatDistanceToNow(new Date(review.created_at), { addSuffix: true },
+}
             </div>;
           </div>;
         </div>;
@@ -220,7 +264,8 @@ if (return null) {$2;
               {review.is_anonymous ? "Anonymous" : review.reviewer_profile?.display_name || "User"}
             </div>;
             <div className="text - sm text - muted - foreground">;
-              {formatDistanceToNow (new Date (review.created_at), { add_suffix: true })}
+              {formatDistanceToNow (new Date (review.created_at), { add_suffix: true },
+}
             </div>;
           </div>;
         </div>;
@@ -259,16 +304,18 @@ if (return null) {$2;
             )}
             {review.would_work_again !== undefined && (<Badge;
                 variant={review.would_work_again ? "default" : "secondary"}
-                className={`${review.would_work_again ? "bg-green-100 text-green-800 hover:bg-green-200" : "bg-gray-100 text-gray-800 hover:bg-gray-200"}`}
-              >;
-                {review.would_work_again ? "Would work again" : "Would not work again"}<div>;
+                className={`${review.would_work_again ? "bg-green-100 text-green-800 hover: bg-green-200" : "bg-gray-100 text-gray-800 hover:bg-gray-200"}`}>
+
+                {review.would_work_again ? "Would work again" : "Would not work again,
+}<div>;
             <div className='font-medium'>;
               {review && review.is_anonymous;
                 ? 'Anonymous';
                 : review && review.reviewer_profile?.display_name || 'User'}
             </div>;
             <div className='text-sm text-muted-foreground'>;
-              {formatDistanceToNow(new Date(review && review.created_at), {addSuffix: true})}
+              {formatDistanceToNow(new Date(review && review.created_at), {addSuffix: true},
+}
             </div>;
           </div>;
         </div>;<div className='flex'>{renderStars(review && review.rating)}</div>;
@@ -300,7 +347,9 @@ if (return null) {$2;
               </Badge>;
             )}{review && review.would_work_again !== undefined && (<Badge;
                 variant={review && review.would_work_again ? 'default' : 'secondary'}
-                className={`${review && review.would_work_again ? 'bg-green-100 text-green-800 hover:bg-green-200' : 'bg-gray-100 text-gray-800 hover:bg-gray-200'}`}>;
+                className={`${review && review.would_work_again ? 'bg-green-100 text-green-800 hover: bg-green-200' : 'bg-gray-100 text-gray-800 hover:bg-gray-200'},
+}>
+
                 {review && review.would_work_again;
                   ? 'Would work again';
                   : 'Would not work again'}              </Badge>;
@@ -310,7 +359,8 @@ if (return null) {$2;
               {review && review.is_anonymous ? "Anonymous" : review && review.reviewer_profile?.display_name || "User"}
             </div>;
             <div className="text-sm text-muted-foreground">;
-              {formatDistanceToNow(new Date(review && review.created_at), { addSuffix: true })}
+              {formatDistanceToNow(new Date(review && review.created_at), { addSuffix: true },
+}
             </div>;
           </div>;
         </div>;<div className="flex">;
@@ -334,8 +384,10 @@ if (return null) {$2;
               </Badge>;
             )}{review && review.would_work_again !== undefined && (<Badge;
                 variant={review && review.would_work_again ? "default" : "secondary"}
-                className={`${review && review.would_work_again ? "bg-green-100 text-green-800 hover:bg-green-200" : "bg-gray-100 text-gray-800 hover:bg-gray-200"}`}>;
-                {review && review.would_work_again ? "Would work again" : "Would not work again"}
+                className={`${review && review.would_work_again ? "bg-green-100 text-green-800 hover: bg-green-200" : "bg-gray-100 text-gray-800 hover:bg-gray-200"}`}>
+
+                {review && review.would_work_again ? "Would work again" : "Would not work again,
+}
               </Badge>;
             )}
           </div>;
@@ -377,8 +429,10 @@ if (return null) {$2;
             <Button variant="ghost" size="sm" className="text-muted-foreground">;
               <Flag className="h-3 w-3 mr-1" />;
               </Badge>)}
-          </div>;
-        </div>)}
+          </div>
+    </div>
+  );
+}
       <div className='mt - 3 flex justify - end'>;
         <Dialog open={isReportDialogOpen} onOpenChange={setIsReportDialogOpen}>;
           <DialogTrigger as_child>;
@@ -458,8 +512,10 @@ if (return null) {$2;
             </DialogFooter>;
           </DialogContent>;
         </Dialog>;
-      </div>;
-    </div>)}</div>)}";
+      </div>
+    </div>
+  );
+}</div>)}";
 return (<div className="border rounded - lg p - 4 bg - card"> <div className="flex justify - between items - start mb - 3"> <div className="flex items - center gap - 3"> {";
   review.is anonymous ? (<Avatar> <AvatarFallback className="bg - muted"> <User className="h - 4 w - 4" /> </AvatarFallback> </Avatar>) : (<Avatar> {review.reviewer profile?.avatar url ? (<AvatarImage src= {review.reviewer profile.avatar url;
 }alt= {review.reviewer profile.display name;

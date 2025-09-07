@@ -1,10 +1,19 @@
 }
 }
-import _React from 'react'; const Blockchain = () => { return ( <div> <h1>Blockchain</h1> <p>Component placeholder</p> </div> )}export default Blockchain;
+import _React from 'react';
+
+const Blockchain = () => {;
+  return ( <div> <h1>Blockchain</h1> <p>Component placeholder</p> </div> ;
+}
+
+export default Blockchain;
 import React from 'react';
+
 interface BlockchainProps {
   // Add props here as needed
+
 }
+
 export default function Blockchain({}: BlockchainProps) {
   return (
     <div>
@@ -15,4 +24,9 @@ export default function Blockchain({}: BlockchainProps) {
 }
 }
 }
-import _React from 'react'; const Blockchain = () => { return ( <div> <h1>Blockchain</h1> <p>Component placeholder</p> </div> )}; export default Blockchain;
+import _React from 'react';
+
+const Blockchain = () => {;
+  return ( <div> <h1>Blockchain</h1> <p>Component placeholder</p> </div> )};
+
+export default Blockchain;

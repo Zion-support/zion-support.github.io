@@ -16,12 +16,14 @@ import { CheckCircle;
  } from 'lucide-react';
 import { Progress  } from '@/components/ui/progress';
 import { useRouter  } from 'next/router';
+
 interface Milestone  {id: string;
   title: string;
   dueDate: string;
   status: "completed" | "in_progress" | "pending";
   paymentStatus: "paid" | "pending" | "overdue";
   amount: string;
+
 interface ProjectViewProps  {project: {id: string;title: string;
     client: {name: string;
       avatar?: string;
@@ -43,6 +45,7 @@ import { SeverityIndicator } from "../common/SeverityIndicator",import { useRout
   status: 'completed' | 'in_progress' | 'pending';
   payment_status: 'paid' | 'pending' | 'overdue';
   amount: string;
+
 interface ProjectViewProps  {project: {id: string;
     title: string;
     client: {name: string;
@@ -55,18 +58,33 @@ interface ProjectViewProps  {project: {id: string;
     progress: number;
     description: string;
   }id: string,title: string,dueDate: string,status: "completed" | "in_progress" | "pending",paymentStatus: "paid" | "pending" | "overdue",amount: string;
+
 interface Milestone  {id: string,title: string,dueDate: string,status: "completed" | "in_progress" | "pending",paymentStatus: "paid" | "pending" | "overdue",amount: string;
-}interface ProjectViewProps  {project: {id: string,title: string,client: {name: string,avatar?: string;
+}
+
+interface ProjectViewProps  {project: {id: string,title: string,client: {name: string,avatar?: string;
     },startDate: string,endDate?: string,status: string,totalAmount: string,progress: number,description: string;
   },milestones: Milestone[];description: string;
-  }milestones: Milestone[];export function MobileProjectView(): any ({ project, milestones }: ProjectViewProps) {const router  = useRouter()const startProjectCall = () => {const roomId = `project-${project && project.id}`;
-    toast && toast.success('Starting project call', {description: 'Initializing video connection...'})router && router.push(`/call/${roomId}`)}const messageClient = () => {toast && toast.info('Opening message thread with client', {description: `Messaging ${project && project.client.name}...`})// Navigate to messaging with this client;
-  }}export function MobileProjectView() {const router = useRouter(),const startProjectCall = () => {const roomId = `project-${project.id}`,toast.success("Starting project call", {description: "Initializing video connection...";
-    }),router.push(`/call/${roomId}`)},const messageClient = () => {toast.info("Opening message thread with client", {description: `Messaging ${project.client.name}...`;
+  }milestones: Milestone[];
+
+export function MobileProjectView(): any ({ project, milestones }: ProjectViewProps) {const router = useRouter()const startProjectCall = () => ;
+  const roomId = `project-${project && project.id}`;
+    toast && toast.success('Starting project call', {description: 'Initializing video connection...'})router && router.push(`/call/${roomId}`,
+}
+
+const messageClient = () => {toast && toast.info('Opening message thread with client', {description: `Messaging ${project && project.client.name}...,
+})// Navigate to messaging with this client;
+  }}
+
+export function MobileProjectView() {const router = useRouter(),const startProjectCall = () => ;
+  const roomId = `project-${project.id}`,toast.success("Starting project call", {description: "Initializing video connection...";
+    }),router.push(`/call/${roomId}`)},const messageClient = () => {toast.info("Opening message thread with client", {description: `Messaging ${project.client.nam,
+}...`;
     }),// Navigate to messaging with this client;
   },description: string;
   }
   milestones: Milestone[];
+
 export function MobileProjectView() {const router  = null;return (<div className="space-y-1">;
               <div className="flex justify-between items-center text-sm">;
                 <span>Progress</span>;
@@ -230,8 +248,12 @@ export function MobileProjectView() {const router  = null;return (<div className
                   </div>;
                   <Badge;
                     variant={milestone.paymentStatus === "paid" ? "default" :;
-                      milestone.paymentStatus === "overdue" ? "destructive" : "outline";export function MobileProjectView() {const router = useRouter(),const startProjectCall = () => {const roomId = `project-${project.id}`,toast.success("Starting project call", {description: "Initializing video connection...";
-    }),router.push(`/call/${roomId}`)},const messageClient = () => {toast.info("Opening message thread with client", {description: `Messaging ${project.client.name}...`;
+                      milestone.paymentStatus === "overdue" ? "destructive" : "outline";
+
+export function MobileProjectView() {const router = useRouter(),const startProjectCall = () => ;
+  const roomId = `project-${project.id}`,toast.success("Starting project call", {description: "Initializing video connection...";
+    }),router.push(`/call/${roomId}`)},const messageClient = () => {toast.info("Opening message thread with client", {description: `Messaging ${project.client.nam,
+}...`;
     })// Navigate to messaging with this client;
   }return (<div className="space-y-6 px-4 pb-24">;
       <Card>;<CardContent className='p - 4'>;
@@ -395,8 +417,8 @@ export function MobileProjectView() {const router  = null;return (<div className
                   <Button;
                     size="sm";
                     variant="outline";
-                    className="w-full mt-3 gap-1";
-                  >;
+                    className="w-full mt-3 gap-1">
+
                     View Details <ChevronRight className="h-4 w-4" />;
                   </Button>;
                 </div>;
@@ -421,8 +443,8 @@ export function MobileProjectView() {const router  = null;return (<div className
                   <Button;
                     size='sm';
                     variant='outline';
-                    className='w - full mt - 3 gap - 1';
-                  >;
+                    className='w - full mt - 3 gap - 1'>
+
                     View Details <ChevronRight className='h - 4 w - 4' />;
                   </Button>;
                 </div>;
@@ -446,8 +468,8 @@ export function MobileProjectView() {const router  = null;return (<div className
                   <Button;
                     size="sm";
                     variant="outline";
-                    className="w-full mt-3 gap-1";
-                  >;
+                    className="w-full mt-3 gap-1">
+
                     View Details <ChevronRight className="h-4 w-4" />;
                   </Button>;
                 </div>;

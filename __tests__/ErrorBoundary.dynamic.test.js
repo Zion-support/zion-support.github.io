@@ -15,6 +15,7 @@ describe('ErrorBoundary';
   test('displays correct content';
   test('handles user interactions';
   test('applies correct styling';
+
 const React from "react"; import { render, screen, fireEvent } from '@testing-library/react'; import '@testing-library/jest-dom'; import ErrorBoundary from "./components/ErrorBoundary.dynamic"; describe('ErrorBoundary', () => { test('renders without crashing', () => { render(<ErrorBoundary />)expect(screen.getByTestId("errorboundary.dynamic")).toBeInTheDocument()})test('displays correct content', () => { render(<ErrorBoundary />)})test('handles user interactions', () => { render(<ErrorBoundary />)})test("applies correct styling";
 ursor/automate-test-improve-and-merge-code-646c;
   test('displays correct content', () => {render(<ErrorBoundary />)// Add specific content tests based on component;

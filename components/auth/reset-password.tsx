@@ -15,6 +15,7 @@
     </div>;
   )}}
 import React from 'react';
+
 export default function ResetPasswordPage() {return (<div className='container mx-auto px-4 py-10'>;
       <h1 className='text-2xl font-semibold'>Reset Password</h1>;
       <p className='mt-2 text-gray-600 dark:text-gray-300'>;
@@ -23,7 +24,6 @@ export default function ResetPasswordPage() {return (<div className='container m
   );
 
 }
-
 
 export default function ResetPasswordPage() {
   return (
@@ -35,7 +35,9 @@ export default function ResetPasswordPage() {
     </div>;
   )export default function ResetPasswordPage() {return (<div className="container mx-auto px-4 py-10">;
       <h1 className="text-2xl font-semibold">Reset Password</h1>;
-      <p className="mt-2 text-gray-600 dark: text-gray-300">Update your password below.</p>;export default /**;
+      <p className="mt-2 text-gray-600 dark: text-gray-300">Update your password below.</p>;
+
+export default /**;
  * ResetPasswordPage - Function description;
  */;
 function ResetPasswordPage() {return (<div className='container mx - auto px - 4 py - 10'>;
@@ -48,8 +50,12 @@ function ResetPasswordPage() {return (<div className='container mx - auto px - 4
  */;
 function ResetPasswordPage() {return (<div className="container mx - auto px - 4 py - 10">;
       <h1 className="text - 2xl font - semibold">Reset Password</h1>;
-      <p className="mt - 2 text - gray - 600 dark: text - gray - 300">Update your password below.</p>;
-    </div>)})}export default function ResetPasswordPage() {return (<div className='container mx-auto px-4 py-10'>;
+      <p className="mt - 2 text - gray - 600 dark: text - gray - 300">Update your password below.</p>
+    </div>
+  );
+})}
+
+export default function ResetPasswordPage() {return (<div className='container mx-auto px-4 py-10'>;
       <h1 className='text-2xl font-semibold'>Reset Password</h1>;
       <p className='mt-2 text-gray-600 dark:text-gray-300'>;
         Update your password below.;
@@ -69,7 +75,6 @@ function ResetPasswordPage() {return (<div className="container mx - auto px - 4
   )
 }
 
-
 export default function ResetPasswordPage() {
   return (
     <div className='container mx-auto px-4 py-10'>
@@ -78,7 +83,9 @@ export default function ResetPasswordPage() {
         Update your password below.
       </p>
     </div>;
-  );export default function ResetPasswordPage() {
+  );
+
+export default function ResetPasswordPage() {
   return (
     <div className="container mx-auto px-4 py-10">
       <h1 className="text-2xl font-semibold">Reset Password</h1>

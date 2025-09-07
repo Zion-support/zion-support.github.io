@@ -1,6 +1,8 @@
 
 ;
-import { useState } from 'react',import { Button } from '@/components/ui/button',import { Input } from '@/components/ui/input',import { Label } from '@/components/ui/label',import { Textarea } from '@/components/ui/textarea',try {on_submit ({ email, address })} finally {class ErrorBoundary extends React.Component {constructor(props) {super(props)this.state = { hasError: false }}static getDerivedStateFromError(error) {return { hasError: true }}componentDidCatch(error, errorInfo) {console.error('Error caught by boundary:', error, errorInfo)}render() {if (this.state.hasError) {return <div>Something went wrong.</div>;
+import { useState } from 'react',import { Button } from '@/components/ui/button',import { Input } from '@/components/ui/input',import { Label } from '@/components/ui/label',import { Textarea } from '@/components/ui/textarea',try {on_submit ({ email, address })} finally {class ErrorBoundary extends React.Component {constructor(props) {super(props)this.state = { hasError: false }}static getDerivedStateFromError(error) {return { hasError: true ,
+}componentDidCatch(error, errorInfo) {console.error('Error caught by boundary:', error, errorInfo)}render() {if (this.state.hasError) ;
+  return <div>Something went wrong.</div>;
     }return this.props.children;
   }
 }
@@ -13,6 +15,7 @@ import { Textarea  } from '@/components/ui/textarea';
 import {Dialog,DialogContent,DialogDescription,DialogFooter,DialogHeader,DialogTitle} from '@/components/ui/dialog';
 import { User, Mail, MapPin, CreditCard  } from 'lucide-react';
 import { isProdDomain  } from '@/utils/getStripe';
+
 interface GuestCheckoutModalProps  {import { useState   } from 'react';
 import { Button   } from '@/components/ui/button';
 import { Input   } from '@/components/ui/input';
@@ -29,10 +32,17 @@ import { Dialog;
   DialogHeader;
   DialogTitle;
  } from '@/components/ui/dialog';
+
 interface GuestCheckoutModalProps  {open: boolean;
   onOpenChange: (open: boolean) => void;
-  onSubmit: (details: { email: string; address: string }) => void;
-export default function GuestCheckoutModal(): any ({open,onOpenChange,onSubmit}: GuestCheckoutModalProps) {const [email, setEmail] = useState('')const [address, setAddress] = useState('')const [isSubmitting, setIsSubmitting]  = useState(false)const handleSubmit = async (e: React && React.FormEvent) => {e && e.preventDefault()if (!email || !address) {alert('Please fill in all required fields')return;
+  onSubmit: (details: { email: string; address: string,
+}) => void;
+
+export default function GuestCheckoutModal(): any ({open,onOpenChange,onSubmit}: GuestCheckoutModalProps) {const [email, setEmail] = useState('');
+  const [address, setAddress] = useState('');
+  const [isSubmitting, setIsSubmitting]  = useState(false);
+  const handleSubmit = async (e: React && React.FormEvent) => {e && e.preventDefault()if (!email || !address) {alert('Please fill in all required fields';
+  return;
     }setIsSubmitting(true)try {onSubmit({ email, address })} finally {setIsSubmitting(false)}
   }}
   },const handleSubmit  = null;return (<Dialog open={open} onOpenChange={onOpenChange}>;
@@ -97,17 +107,18 @@ export default function GuestCheckoutModal(): any ({open,onOpenChange,onSubmit}:
               type="button";
               variant="outline";
               onClick={() => onOpenChange(false)}
-              className="border-zion-cyan/30 text-zion-slate-light hover:bg-zion-cyan/10";
-            >;
+              className="border-zion-cyan/30 text-zion-slate-light hover:bg-zion-cyan/10">
+
               Cancel;
             </Button>;
             <Button;
               type="submit";
               disabled={isSubmitting || !email || !address}
-              className="bg-zion-cyan hover:bg-zion-cyan/90 text-zion-blue";
-            >;
+              className="bg-zion-cyan hover: bg-zion-cyan/90 text-zion-blue">
+
               value={email || ''}
-              onChange={e => setEmail(e && e.target.value || '')}
+              onChange={e => setEmail(e && e.target.value || '',
+}
               placeholder='your && your.email@example && example.com'              required;
               className='bg-zion-blue-light border-zion-cyan/30 text-white placeholder:text-zion-slate-light';
             />;
@@ -139,14 +150,16 @@ export default function GuestCheckoutModal(): any ({open,onOpenChange,onSubmit}:
         </DialogHeader>;
         {!isProdDomain () && (<div className='rounded - md bg - amber - 500 / 20 p - 2 text - center text - amber - 400'>;
             Pay with test data – use card 4242 4242 4242 4242 and any future;
-            date.;
-          </div>)}
+            date.
+    </div>
+  );
+}
         <form on_submit={handle_submit} className='space - y-4'>;
           <div className='space - y-2'>;
             <Label;
               html_for='guest - email';
-              className='text - white flex items - center gap - 2';
-            >;
+              className='text - white flex items - center gap - 2'>
+
               <Mail className='h - 4 w - 4 text - zion - cyan' />;
               Email Address;
             </Label>;
@@ -162,8 +175,8 @@ export default function GuestCheckoutModal(): any ({open,onOpenChange,onSubmit}:
           <div className='space - y-2'>;
             <Label;
               html_for='guest - address';
-              className='text - white flex items - center gap - 2';
-            >;
+              className='text - white flex items - center gap - 2'>
+
               <MapPin className='h - 4 w - 4 text - zion - cyan' />;
               Shipping Address;
             </Label>;

@@ -14,10 +14,13 @@ import { AlertCircle } from 'lucide-react'import { use_router  } from 'next / ro
 import { Alert, AlertDescription   } from '@/components / ui / alert';
 import { PasswordStrengthMeter   } from '@/components / PasswordStrengthMeter';
 import { logErrorToProduction } from '@/utils / production_logger';
+
 export /**;
  * SignUpForm - Function description;
  */;
-function SignUpForm() {const router = use_router ()const { sign_up, login, loginWithGoogle } = use_auth ()const [form_data, setFormData] = useState ({email: "",password: "",name: ""})}
+function SignUpForm() {const router = use_router ()const { sign_up, login, loginWithGoogle } = use_auth (;
+  const [form_data, setFormData] = useState ({email: "",password: "",name: ""},
+}
     if (!formData.email.trim()) {errors.email = 'Email is required';
     } else if (!emailRegex.test(formData.email)) {errors.email = 'Invalid email address';
     }
@@ -26,13 +29,18 @@ function SignUpForm() {const router = use_router ()const { sign_up, login, login
     }if (Object.keys(errors).length > 0) {setFieldErrors(errors)setIsLoading(false)return;
     }
     try {setShowVerificationMessage(false), // Reset verification message;
-      if (signupMode) {const result = await signUp(formData.email, formData.password, {name: formData.name})if (result?.error) {throw new Error(result.error as any), // Cast to any if type is AuthError;if (Object.keys(errors).length > 0) {setFieldErrors(errors),setIsLoading(false),return;
+      if (signupMode) {const result = await signUp(formData.email, formData.password, {name: formData.nam,
+})if (result?.error) {throw new Error(result.error as any), // Cast to any if type is AuthError;if (Object.keys(errors).length > 0) {setFieldErrors(errors),setIsLoading(false),return;
     }try {setShowVerificationMessage(false), // Reset verification message;
       if (signupMode) {if (result?.error) {throw new Error(result.error as any), // Cast to any if type is AuthError;
         }if (result?.emailVerificationRequired) {setShowVerificationMessage(true)} else {// Only navigate if email verification is not required;
           router.push("/mobile")if (result?.emailVerificationRequired) {setShowVerificationMessage(true)} else {// Only navigate if email verification is not required;if (error) {throw new Error(error)}router.push("/mobile")router.push("/mobile")}
     } catch (err: any) {logErrorToProduction('Signup/Login error:', { data: err })setError(err.message |'An unexpected error occurred. Please try again.')} finally {setIsLoading(false)}
-  }const handleGoogleLogin = async () => {try {await loginWithGoogle()} catch (err: any) {}},import React, { useState } from "react",import { Label } from "@/components/ui/label",import { Input } from "@/components/ui/input",import { Button } from "@/components/ui/button",import { LoadingSpinner  } from '@/components/ui/enhanced-loading-states';
+  }
+
+const handleGoogleLogin = async () => {try {await loginWithGoogle()} catch (err: any) {,
+},import React, {;
+  useState } from "react",import { Label } from "@/components/ui/label",import { Input } from "@/components/ui/input",import { Button } from "@/components/ui/button",import { LoadingSpinner  } from '@/components/ui/enhanced-loading-states';
 import { useRouter   } from 'next/router';
 import Link from 'next/link',import { useAuth } from "@/context/auth/AuthProvider",import { Alert, AlertDescription } from "@/components/ui/alert",export function SignUpForm() {const router  = null;return (<div className="space-y-2">;
         <Button;
@@ -50,8 +58,8 @@ import Link from 'next/link',import { useAuth } from "@/context/auth/AuthProvide
         </Button>;
         <Button;
           variant="outline";
-          className="w-full py-6 relative";
-        >;
+          className="w-full py-6 relative">
+
           <svg viewBox="0 0 24 24" className="h-5 w-5 mr-2" xmlns="http://www.w3.org/2000/svg">;
             <path d="M24 12.073c0-5.8-4.85-10.5-10.826-10.5-6.02 0-10.93 4.7-10.93 10.5 0 5.234 3.875 9.575 8.95 10.359v-7.318h-2.696v-3.041h2.696V9.898c0-2.586 1.581-4.016 4.003-4.016 1.159 0 2.37.204 2.37.204v2.543h-1.334c-1.316 0-1.727.8-1.727 1.622v1.95h2.938l-.47 3.04h-2.468v7.318C20.125 21.648 24 17.307 24 12.073z" fill="#1877F2" />;
           </svg>;
@@ -100,8 +108,8 @@ import Link from 'next/link',import { useAuth } from "@/context/auth/AuthProvide
         </Button>;
         <Button;
           variant="outline";
-          className="w - full py - 6 relative";
-        >;
+          className="w - full py - 6 relative">
+
           <svg view_box="0 0 24 24" className="h - 5 w - 5 mr - 2" xmlns="http://www.w3.org / 2000 / svg">;
             <path d="M24 12.073c0 - 5.8 - 4.85 - 10.5 - 10.826 - 10.5 - 6.02 0 - 10.93 4.7 - 10.93 10.5 0 5.234 3.875 9.575 8.95 10.359v - 7.318h - 2.696v - 3.041h2.696V9.898c0 - 2.586 1.581 - 4.016 4.003 - 4.016 1.159 0 2.37.204 2.37.204v2.543h - 1.334c - 1.316 0 - 1.727.8 - 1.727 1.622v1.95h2.938l-.47 3.04h - 2.468v7.318C20.125 21.648 24 17.307 24 12.073z" fill="#1877F2" />;</svg>;
           Continue with Facebook;
@@ -251,8 +259,8 @@ import Link from 'next/link',import { useAuth } from "@/context/auth/AuthProvide
           href="/login";
           className="p-0 h-auto text-zion-cyan hover: text-zion-cyan-light cursor-pointer">;<Link;
           href="/login";
-          className="p-0 h-auto text-zion-cyan hover: text-zion-cyan-light cursor-pointer";
-        >;Sign In;
+          className="p-0 h-auto text-zion-cyan hover: text-zion-cyan-light cursor-pointer">
+Sign In;
         </Link>;
       </p>;
     </div>;
@@ -274,9 +282,9 @@ if ( {) {$2;
 }</p>) ";
 }</div> <div className="space - y-2" > <Label html_for="password" >Password</Label> <Input)}</div> <Button > {";
   is_loading ? (<> <LoadingSpinner size="sm" className="mr - 2" /> Please wait... </>) : (signup_mode ? "Create Account" : "Sign In") ";
-}</Button> </form> <Link href="/login" className="p - 0 h - auto text - zion - cyan hover: text - zion - cyan - light cursor - pointer" > Sign In </Link> </p> </div>)}"}
-}className="p-0 h-auto text-zion-cyan hover: text-zion-cyan-light cursor-pointer";
-        >;
+}</Button> </form> <Link href="/login" className="p - 0 h - auto text - zion - cyan hover: text - zion - cyan - light cursor - pointer" > Sign In </Link> </p> </div>)}"},
+}className="p-0 h-auto text-zion-cyan hover: text-zion-cyan-light cursor-pointer">
+
           Sign In;
         </Link>;
       </p>;
@@ -296,4 +304,5 @@ if ( {) {$2;
 }</p>) ";
 }</div> <div className="space-y-2" > <Label htmlFor="password" >Password</Label> <Input)}</div> <Button > {";
   isLoading ? (<> <LoadingSpinner size="sm" className="mr-2" /> Please wait... </>) : (signupMode ? "Create Account" : "Sign In") ";
-}</Button> </form> <Link href="/login" className="p-0 h-auto text-zion-cyan hover: text-zion-cyan-light cursor-pointer" > Sign In </Link> </p> </div>)}";
+}</Button> </form> <Link href="/login" className="p-0 h-auto text-zion-cyan hover: text-zion-cyan-light cursor-pointer" > Sign In </Link> </p> </div>,
+}";

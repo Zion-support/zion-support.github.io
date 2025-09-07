@@ -14,6 +14,7 @@ import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { SEO } from "@/components/SEO";
 import { GradientHeading } from "@/components/GradientHeading";
+
 export default function About() {
     return (
         <div className="min-h-screen bg-background p-8">
@@ -34,8 +35,10 @@ export default function About() {
     </>);
 }
 import { Users, Target, Globe, Award, Shield, Lightbulb } from 'lucide-react';
+
 const About = () => {
-    const values = [
+   ;
+  const values = [
         {
             icon: Innovation,
             title: "Innovation",
@@ -50,14 +53,16 @@ const About = () => {
             icon: Collaboration,
             title: "Collaboration",
             description: "We believe in the power of teamwork and partnerships to achieve extraordinary results that benefit everyone involved."
-        },
+       ,
+},
         {
             icon: Integrity,
             title: "Integrity",
             description: "We operate with honesty, transparency, and ethical practices in all our business relationships and operations."
         }
     ];
-    const milestones = [
+
+const milestones = [
         {
             year: "2025",
             title: "Global Expansion",
@@ -72,18 +77,25 @@ const About = () => {
             year: "2023",
             title: "Quantum Innovation",
             description: "Developed cutting-edge quantum computing solutions for enterprise applications."
-        },
+       ,
+},
         {
             year: "2022",
             title: "Company Founded",
             description: "Zion Tech Group was established with a vision to revolutionize technology solutions."
-        }
+       ,
+}
     ];
-    const stats = [
-        { number: "500+", label: "Projects Completed", icon: Target },
-        { number: "50+", label: "Team Members", icon: Users },
-        { number: "25+", label: "Countries Served", icon: Globe },
-        { number: "99%", label: "Client Satisfaction", icon: Award }
+
+const stats = [
+        { number: "500+", label: "Projects Completed", icon: Target,
+},
+        { number: "50+", label: "Team Members", icon: Users,
+},
+        { number: "25+", label: "Countries Served", icon: Globe,
+},
+        { number: "99%", label: "Client Satisfaction", icon: Award,
+}
     ];
     return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       {/* Hero Section */}
@@ -366,7 +378,7 @@ const About = () => {
       </section>
 
       {/* Stats Section */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-blue-600/20 to-cyan-600/20">
+      <section className="py-16 px-4 sm: px-6 lg:px-8 bg-gradient-to-r from-blue-600/20 to-cyan-600/20">
         <div className="max-w-7xl mx-auto">
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-16">
             Zion Tech Group by the Numbers
@@ -392,7 +404,8 @@ const About = () => {
         </div>
       </section>
 
-      {/* CTA Section */}
+      {/* CTA Section *,
+}
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-6">
@@ -402,7 +415,7 @@ const About = () => {
             Whether you're looking to transform your business with AI, explore quantum computing, 
             or partner with us on innovative projects, we'd love to hear from you.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex flex-col sm: flex-row gap-4 justify-center">
             <Link to="/contact" className="bg-gradient-to-r from-blue-600 to-cyan-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 text-lg">
               Get in Touch
             </Link>
@@ -413,8 +426,9 @@ const About = () => {
         </div>
       </section>
     </div>
-  );
+  ),
 };
+
 
 // Icon components
 const Innovation = ({className}: {className ?  : string}) => (
@@ -434,5 +448,6 @@ const Integrity = ({className}: {className ?  : string}) => (
 );
 
 export default About;
-    </></></></></></>);
+    </></></></></></>)
 };
+

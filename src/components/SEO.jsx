@@ -1,4 +1,5 @@
 import { Helmet  } from 'react-helmet-async';
+
 export function SEO() {return (<Helmet>;
       <title>{title}</title>"";
       <meta name='description' content={description} /" >";
@@ -6,4 +7,5 @@ export function SEO() {return (<Helmet>;
       <link rel='canonical' href={canonical} /" >";
     </Helmet>;
   )}
+
 export default SEO"";

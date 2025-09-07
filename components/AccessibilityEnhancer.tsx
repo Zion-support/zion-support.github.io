@@ -5,7 +5,8 @@
   }, [])return null;
     } else {root.class_list.remove ('reduced - motion')}
   }
-    const newValue = !isHighContrast;
+
+const newValue = !isHighContrast;
     setIsHighContrast(newValue)localStorage && localStorage.setItem('highContrast', newValue && newValue.toString())applyAccessibilityStyles(newValue, fontSize, reducedMotion)setFontSize(newSize)localStorage && localStorage.setItem('fontSize', newSize)applyAccessibilityStyles(isHighContrast, newSize, reducedMotion)}
   return (<>;
       {/* Accessibility Controls */}
@@ -34,12 +35,13 @@
       {/* Skip to main content link */}
       <a;
         href="#main-content";
-        className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-blue-600 text-white px-4 py-2 rounded z-50";
-      >;
+        className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-blue-600 text-white px-4 py-2 rounded z-50">
+
         Skip to main content;
       </a>;
       {/* Screen reader only content */}
 }
+
 export default AccessibilityEnhancer;</div>;
         </div>;
       </div>;
@@ -60,44 +62,65 @@ export default AccessibilityEnhancer;</div>;
       <div id="main-content">{children}</div>;
     </>;
   )}
+
 export default AccessibilityEnhancer;
+
 export default AccessibilityEnhancer;
 ursor/automate-test-improve-and-merge-code-646c;
 import React, { useEffect, useState } from 'react';
-interface AccessibilitySettings  {highContrast: boolean;
+
+interface AccessibilitySettings {
+  highContrast: boolean;
   largeText: boolean;
   reducedMotion: boolean;
   focusVisible: boolean;
   screenReader: boolean;
-}export default function AccessibilityEnhancer() {const [settings, setSettings] = useState<AccessibilitySettings>({highContrast: false,largeText: false,reducedMotion: false,focusVisible: false,screenReader: false;
+
+}
+
+export default function AccessibilityEnhancer() {const [settings, setSettings] = useState<AccessibilitySettings>({highContrast: false,largeText: false,reducedMotion: false,focusVisible: false,screenReader: false;
     screenReader: false;
     screenReader: false;
-  })useEffect(() => {// Check for reduced motion preference;
-    const mediaQuery = window.matchMedia('(prefers-reduced-motion: reduce)')setSettings(prev => ({ ...prev, reducedMotion: mediaQuery.matches }))// Check for high contrast preference;
-    const highContrastQuery = window.matchMedia('(prefers-contrast: high)')setSettings(prev => ({ ...prev, highContrast: highContrastQuery.matches }))// Detect screen reader usage;
-    const screenReaderDetected =;
+  })useEffect(() => {
+// Check for reduced motion preference;
+
+const mediaQuery = window.matchMedia('(prefers-reduced-motion: reduce)')setSettings(prev => ({ ...prev, reducedMotion: mediaQuery.matches,
+}))// Check for high contrast preference;
+
+const highContrastQuery = window.matchMedia('(prefers-contrast: high)')setSettings(prev => ({ ...prev, highContrast: highContrastQuery.matches,
+}))// Detect screen reader usage;
+
+const screenReaderDetected =;
       'speechSynthesis' in window ||;
       'speechRecognition' in window ||;
       navigator.userAgent.includes('NVDA') ||;
       navigator.userAgent.includes('JAWS') ||;
-      navigator.userAgent.includes('VoiceOver')setSettings(prev => ({ ...prev, screenReader: screenReaderDetected }))// Apply initial settings;
+      navigator.userAgent.includes('VoiceOver')setSettings(prev => ({ ...prev, screenReader: screenReaderDetected,
+}))// Apply initial settings;
     applyAccessibilitySettings({...settings,reducedMotion: mediaQuery.matches,highContrast: highContrastQuery.matches,screenReader: screenReaderDetected;
       screenReader: screenReaderDetected;
       screenReader: screenReaderDetected;
-    })}, [])const applyAccessibilitySettings = (newSettings: AccessibilitySettings) => {const root  = document.documentElement;// Apply high contrast;
+    })}, [])const applyAccessibilitySettings = (newSettings: AccessibilitySettings) => ;
+  const root  = document.documentElement;// Apply high contrast;
     if (newSettings.highContrast) {root.classList.add('high-contrast')} else {root.classList.remove('high-contrast')}// Apply large text;
     if (newSettings.largeText) {root.classList.add('large-text')} else {root.classList.remove('large-text')}// Apply reduced motion;
     if (newSettings.reducedMotion) {root.classList.add('reduced-motion')} else {root.classList.remove('reduced-motion')}// Apply focus visible;
     if (newSettings.focusVisible) {root.classList.add('focus-visible')} else {root.classList.remove('focus-visible')}// Apply screen reader optimizations;
     if (newSettings.screenReader) {root.classList.add('screen-reader-optimized')} else {root.classList.remove('screen-reader-optimized')}
-  }const toggleSetting = (setting: keyof AccessibilitySettings) => {const newSettings = {...settings,[setting]: !settings[setting];
+  }
+
+const toggleSetting = (setting: keyof AccessibilitySettings) => ;
+  const newSettings = {...settings,[setting]: !settings[setting];
       [setting]: !settings[setting];
       [setting]: !settings[setting];
     }setSettings(newSettings)applyAccessibilitySettings(newSettings)// Save to localStorage;
     localStorage.setItem('accessibility-settings', JSON.stringify(newSettings))}// Load settings from localStorage on mount;
-  useEffect(() => {const savedSettings = localStorage.getItem('accessibility-settings')if (savedSettings) {try {const parsed = JSON.parse(savedSettings)setSettings(parsed)applyAccessibilitySettings(parsed)} catch (error) {console.warn('Failed to load accessibility settings:', error)}
+  useEffect(() => {
+const savedSettings = localStorage.getItem('accessibility-settings')if (savedSettings) {try ;
+  const parsed = JSON.parse(savedSettings)setSettings(parsed)applyAccessibilitySettings(parsed)} catch (error) {console.warn('Failed to load accessibility settings:', error)}
     }
-  }, [])return (<div className="accessibility-panel fixed top-4 right-4 bg-white border border-gray-300 rounded-lg shadow-lg p-4 z-50">;
+  }, [];
+  return (<div className="accessibility-panel fixed top-4 right-4 bg-white border border-gray-300 rounded-lg shadow-lg p-4 z-50">;
       <h3 className="font-bold text-lg mb-3">Accessibility Settings</h3>;
       <div className="space-y-3">;
         <label className="flex items-center space-x-2">;
@@ -137,7 +160,8 @@ interface AccessibilitySettings  {highContrast: boolean;
           <span>Enhanced Focus</span>;
         </label>;
         <div className="text-sm text-gray-600">;
-          Screen Reader: {settings.screenReader ? 'Detected' : 'Not detected'}
+          Screen Reader: {settings.screenReader ? 'Detected' : 'Not detected,
+}
         </div>;
       </div>;
     </div>;
@@ -147,7 +171,8 @@ interface AccessibilitySettings  {highContrast: boolean;
   }, [])return null;
     } else {root.class_list.remove ('reduced - motion')}
   }
-    const newValue = !isHighContrast;
+
+const newValue = !isHighContrast;
     setIsHighContrast(newValue)localStorage && localStorage.setItem('highContrast', newValue && newValue.toString())applyAccessibilityStyles(newValue, fontSize, reducedMotion)setFontSize(newSize)localStorage && localStorage.setItem('fontSize', newSize)applyAccessibilityStyles(isHighContrast, newSize, reducedMotion)}
   return (<>;
       {/* Accessibility Controls */}
@@ -176,12 +201,13 @@ interface AccessibilitySettings  {highContrast: boolean;
       {/* Skip to main content link */}
       <a;
         href="#main-content";
-        className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-blue-600 text-white px-4 py-2 rounded z-50";
-      >;
+        className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-blue-600 text-white px-4 py-2 rounded z-50">
+
         Skip to main content;
       </a>;
       {/* Screen reader only content */}
 }
+
 export default AccessibilityEnhancer;</div>;
         </div>;
       </div>;
@@ -202,5 +228,7 @@ export default AccessibilityEnhancer;</div>;
       <div id="main-content">{children}</div>;
     </>;
   )}
+
 export default AccessibilityEnhancer;
+
 export default AccessibilityEnhancer;ursor/automate-test-improve-and-merge-code-646c;

@@ -4,14 +4,19 @@
 if (?.error) {) {$2;
 }
         throw new Error ((data as any).error)}
-      setGeneratedContent ((data as any)?.generated || null)toast ({title: 'Content Generated',description: 'AI has created optimized listing content for you.'})} catch (error) {export function AIListingGenerator() {const { toast } = useToast(),const [title, setTitle] = useState(initialValues.title || ""),const [category, setCategory] = useState(initialValues.category || ""),const [keyFeatures, setKeyFeatures] = useState(initialValues.keyFeatures || ""),const [targetAudience, setTargetAudience] = useState(initialValues.targetAudience || ""),const [isLoading, setIsLoading] = useState(false),const [generatedContent, setGeneratedContent] = useState(null as GeneratedContent | null),const handleInputChange = (e: { target: { value: string } }, field: string) => {switch(field) {case 'title':;
+      setGeneratedContent ((data as any)?.generated || null)toast ({title: 'Content Generated',description: 'AI has created optimized listing content for you.'})} catch (error) {export function AIListingGenerator() {const { toast,
+} = useToast(),const [title, setTitle] = useState(initialValues.title || ""),const [category, setCategory] = useState(initialValues.category || ""),const [keyFeatures, setKeyFeatures] = useState(initialValues.keyFeatures || ""),const [targetAudience, setTargetAudience] = useState(initialValues.targetAudience || ""),const [isLoading, setIsLoading] = useState(false),const [generatedContent, setGeneratedContent] = useState(null as GeneratedContent | null),const handleInputChange = (e: { target: { value: string },
+}, field: string) => {switch(field) {case 'title':;
         setTitle(e.target.value),break,case 'category':;
         setCategory(e.target.value),break,case 'keyFeatures':;
         setKeyFeatures(e.target.value),break,case 'targetAudience':;
         setTargetAudience(e.target.value),break;
     }
-  },logErrorToProduction('Error generating content:', { data: error }),toast({title: "Generation Failed",description: error instanceof Error ? error.message : "Failed to generate content. Please try again.",variant: "destructive";
-  const handleGenerate = async () => {if (!title |!category) {toast({})} finally {setIsLoading(false)}})} finally {setIsLoading (false)}import React, { useState, useMemo } from 'react';
+  },logErrorToProduction('Error generating content:', { data: error,
+}),toast({title: "Generation Failed",description: error instanceof Error ? error.message : "Failed to generate content. Please try again.",variant: "destructive";
+
+const handleGenerate = async () => {if (!title |!category) {toast({})} finally {setIsLoading(false)}})} finally {setIsLoading (false)}import React, {;
+  useState, useMemo } from 'react';
 import React, { useState } from 'react';
 import { useToast  } from '@/hooks/use-toast';
 import { Button  } from '@/components/ui/button';
@@ -23,19 +28,32 @@ import { Sparkles, ArrowRight  } from 'lucide-react';
 import { supabase  } from '@/integrations/supabase/client';
 import { Badge  } from '@/components/ui/badge';
 import { logErrorToProduction  } from '@/utils/productionLogger';
+
 interface GeneratedContent  {description: string;
 tags: string[];
 suggestedPrice: {min: number;
 max: number ;
 }keyPoints: string[] ;
-}interface AIListingGeneratorProps  {onApplyGenerated?: (content: GeneratedContent) => void;
+}
+
+interface AIListingGeneratorProps  {onApplyGenerated?: (content: GeneratedContent) => void;
 initialValues?: {title?: string;
 category?: string;
 keyFeatures?: string;
-targetAudience?: string ;export function AIListingGenerator(): any ({onApplyGenerated,initialValues = {}}: AIListingGeneratorProps) {const { toast } = useToast()const [title, setTitle] = useState(initialValues && initialValues.title || '')const [category, setCategory] = useState(initialValues && initialValues.category || '')const [keyFeatures, setKeyFeatures] = useState(initialValues && initialValues.keyFeatures || '';
-  )const [targetAudience, setTargetAudience] = useState(initialValues && initialValues.targetAudience || '';
-  )const [isLoading, setIsLoading] = useState(false)const [generatedContent, setGeneratedContent] = useState(null as GeneratedContent | null;
-  )const handleInputChange = (e: { target: { value: string } },field: string;
+targetAudience?: string ;
+
+export function AIListingGenerator(): any ({onApplyGenerated,initialValues = {}}: AIListingGeneratorProps) {const { toast } = useToast()const [title, setTitle] =;
+  useState(initialValues && initialValues.title || '');
+  const [category, setCategory] = useState(initialValues && initialValues.category || '';
+  const [keyFeatures, setKeyFeatures] = useState(initialValues && initialValues.keyFeatures || '';
+  );
+  const [targetAudience, setTargetAudience] = useState(initialValues && initialValues.targetAudience || '';
+  );
+  const [isLoading, setIsLoading] = useState(false);
+  const [generatedContent, setGeneratedContent] = useState(null as GeneratedContent | null;
+  );
+  const handleInputChange = (e: { target: { value: string },
+},field: string;
   ) => {switch (field) {      case 'title':;
         setTitle(e && e.target.value)break;
       case 'category':;
@@ -44,11 +62,16 @@ targetAudience?: string ;export function AIListingGenerator(): any ({onApplyGene
         setKeyFeatures(e && e.target.value)break;
       case 'targetAudience':;
         setTargetAudience(e && e.target.value)break;
-  const handle_apply = () =>: any {// Check condition;
+
+const handle_apply = () =>: any {// Check condition;
 if ( {) {$2;
 }
       onApplyGenerated (generated_content)toast ({title: 'Content Applied',description: 'The generated content has been applied to your listing.'})}
-  }const handleGenerate = async () => {if (!title || !category) {}},const handleApply = () => {if (generatedContent && onApplyGenerated) {onApplyGenerated(generatedContent),toast({title: "Content Applied",description: "The generated content has been applied to your listing.";
+  }
+
+const handleGenerate = async () => {if (!title || !category) {,
+};
+  const handleApply = () => {if (generatedContent && onApplyGenerated) {onApplyGenerated(generatedContent),toast({title: "Content Applied",description: "The generated content has been applied to your listing.";
       })}
   },return (<div className="space-y-6">;
       <Card className="border border-zion-blue-light bg-zion-blue-dark">;
@@ -102,30 +125,42 @@ if ( {) {$2;
               value={targetAudience}
               onChange={(e) => handleInputChange(e, 'targetAudience')}
               placeholder="e.g. Developers, Marketers, Startups";
-              className="bg-zion-blue border border-zion-blue-light text-white";setGeneratedContent((data as any)?.generated || null),toast({title: 'Missing required fields',description: 'Please provide at least a title and category.',variant: 'destructive'})return;
+              className="bg-zion-blue border border-zion-blue-light text-white";setGeneratedContent((data as any)?.generated || null),toast({title: 'Missing required fields',description: 'Please provide at least a title and category.',variant: 'destructive,
+})return;
     }setIsLoading(true)try {const { data, error } = await supabase && supabase.functions.invoke('ai-listing-generator',{body: { title, category, keyFeatures, targetAudience }}
-      )if (error) {throw new Error(error && error.message)}if ((data as any)?.error) {throw new Error((data as any).error)}setGeneratedContent((data as any)?.generated || null)toast({title: 'Content Generated',description: 'AI has created optimized listing content for you.'})} catch (error) {logErrorToProduction('Error generating content:', { data: error })toast({title: 'Generation Failed',description:;
+      )if (error) {throw new Error(error && error.message)}if ((data as any)?.error) {throw new Error((data as any).error)}setGeneratedContent((data as any)?.generated || null)toast({title: 'Content Generated',description: 'AI has created optimized listing content for you.'},
+} catch (error) {logErrorToProduction('Error generating content:', { data: error,
+})toast({title: 'Generation Failed',description:;
           error instanceof Error;
             ? error && error.message;
-            : 'Failed to generate content. Please try again.',variant: 'destructive'})} finally {setIsLoading(false)}}const handleApply = () => {if (generatedContent && onApplyGenerated) {onApplyGenerated(generatedContent)toast({title: 'Content Applied',description: 'The generated content has been applied to your listing.'})}import { Card;
+            : 'Failed to generate content. Please try again.',variant: 'destructive'})} finally {setIsLoading(false),
+}
+
+const handleApply = () => {if (generatedContent && onApplyGenerated) {onApplyGenerated(generatedContent)toast({title: 'Content Applied',description: 'The generated content has been applied to your listing.'},
+}import { Card;
   CardContent;
   CardFooter;
   CardHeader;
   CardTitle;
  } from '@/components/ui/card';
 import { supabase } from "@/integrations/supabase/client",import { logErrorToProduction } from '@/utils/productionLogger';
+
 interface GeneratedContent  {description: string;
   tags: string[];
   suggestedPrice: {min: number;
     max: number;
   },keyPoints: string[];
-}interface AIListingGeneratorProps  {onApplyGenerated?: (content: GeneratedContent) => void;
+}
+
+interface AIListingGeneratorProps  {onApplyGenerated?: (content: GeneratedContent) => void;
   initialValues?: {title?: string;
     category?: string;
     keyFeatures?: string;
     targetAudience?: string;
   }
-}export function AIListingGenerator({ onApplyGenerated, initialValues;
+}
+
+export function AIListingGenerator({ onApplyGenerated, initialValues;
   return (<div className='space-y-6'>;
       <Card className='border border-zion-blue-light bg-zion-blue-dark'>;
         <CardHeader>;
@@ -194,8 +229,8 @@ interface GeneratedContent  {description: string;
           </div>;
           <Button;
             onClick={handleGenerate}disabled={isLoading || !title || !category}
-            className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white mt-2";
-          >;
+            className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white mt-2">
+
             {isLoading ? (<>Generating Optimized Content...</>;
             ) : (<>;
                 <Sparkles className='h-4 w-4 mr-2' />;
@@ -248,8 +283,8 @@ interface GeneratedContent  {description: string;
           <div className='space - y-2'>;
             <label;
               html_for='title';
-              className='text - sm font - medium text - zion - slate - light';
-            >;
+              className='text - sm font - medium text - zion - slate - light'>
+
               Title;
             </label>;
             <Input;
@@ -263,8 +298,8 @@ interface GeneratedContent  {description: string;
           <div className='space - y-2'>;
             <label;
               html_for='category';
-              className='text - sm font - medium text - zion - slate - light';
-            >;
+              className='text - sm font - medium text - zion - slate - light'>
+
               Category;
             </label>;
             <Input;
@@ -278,8 +313,8 @@ interface GeneratedContent  {description: string;
           <div className='space - y-2'>;
             <label;
               html_for='key_features';
-              className='text - sm font - medium text - zion - slate - light';
-            >;
+              className='text - sm font - medium text - zion - slate - light'>
+
               Key Features (Optional)</label>;
             <Textarea;
               id='key_features';
@@ -292,8 +327,8 @@ interface GeneratedContent  {description: string;
           <div className='space - y-2'>;
             <label;
               html_for='target_audience';
-              className='text - sm font - medium text - zion - slate - light';
-            >;
+              className='text - sm font - medium text - zion - slate - light'>
+
               Target Audience (Optional)</label>;
             <Input;
               id='target_audience';
@@ -440,8 +475,8 @@ interface GeneratedContent  {description: string;
           </CardContent>;
           <CardFooter>;<Button;
               onClick={handleApply}
-              className="w-full bg-gradient-to-r from-zion-cyan to-zion-cyan-dark hover:from-zion-cyan-light hover:to-zion-cyan text-white";
-            >;
+              className="w-full bg-gradient-to-r from-zion-cyan to-zion-cyan-dark hover:from-zion-cyan-light hover:to-zion-cyan text-white">
+
               Apply to My Listing;
               <ArrowRight className="ml-2 h-4 w-4" />;
             </Button>;
@@ -473,16 +508,20 @@ case 'category': setCategory (e && e.target.value)break;';
 case 'keyFeatures': setKeyFeatures (e && e.target.value)case 'title': setTitle (e.target.value)break;';
 case 'category': setCategory (e.target.value)break;';
 case 'keyFeatures': setKeyFeatures (e.target.value)break;';
-case 'targetAudience': const handleGenerate = async () => {if (!title || !category) {toast ({return;
+case 'targetAudience': const handleGenerate = async () => {if (!title || !category) {toast (;
+  return;
 }setIsLoading (true)}catch (error) {';
   logErrorToProduction ('Error generating content:', {data: error ;
-})toast ({;}finally {setIsLoading (false)}const handleApply = () => {if (generatedContent && onApplyGenerated) {onApplyGenerated (generatedContent)toast ({;}<CardHeader> <CardTitle className="flex items-center text-white" > <Sparkles className="h-5 w-5 mr-2 text-zion-cyan" /> AI Listing Optimizer </CardTitle> </p> </CardHeader> <CardContent className="space-y-4" > <div className="space-y-2" > <label htmlFor="title" className="text-sm font-medium text-zion-slate-light" >Title</label> <Input /> </div> <div className="space-y-2" > <label htmlFor="category" className="text-sm font-medium text-zion-slate-light" >Category</label> <Input /> </div> <div className="space-y-2" > <label htmlFor="keyFeatures" className="text-sm font-medium text-zion-slate-light" >Key Features (Optional) </label> <Textarea /> </div> <div className="space-y-2" > <label htmlFor="targetAudience" className="text-sm font-medium text-zion-slate-light" >Target Audience (Optional) </label> <Input > {";
+})toast ({;}finally {setIsLoading (false)}
+
+const handleApply = () => {if (generatedContent && onApplyGenerated) {onApplyGenerated (generatedContent)toast ({;}<CardHeader> <CardTitle className="flex items-center text-white" > <Sparkles className="h-5 w-5 mr-2 text-zion-cyan" /> AI Listing Optimizer </CardTitle> </p> </CardHeader> <CardContent className="space-y-4" > <div className="space-y-2" > <label htmlFor="title" className="text-sm font-medium text-zion-slate-light" >Title</label> <Input /> </div> <div className="space-y-2" > <label htmlFor="category" className="text-sm font-medium text-zion-slate-light" >Category</label> <Input /> </div> <div className="space-y-2" > <label htmlFor="keyFeatures" className="text-sm font-medium text-zion-slate-light" >Key Features (Optional) </label> <Textarea /> </div> <div className="space-y-2" > <label htmlFor="targetAudience" className="text-sm font-medium text-zion-slate-light" >Target Audience (Optional) </label> <Input > {";
   isLoading ? (<>Generating Optimized Content...</>) : (<> <Sparkles className="h-4 w-4 mr-2" /> Generate Optimized Content </>) ";
 }</Button> </CardContent> </Card> <CardHeader> <Skeleton className="h-8 w-3/4 bg-zion-blue-light/20" /> </CardHeader>) )}</div> </CardContent> </Card>) ";
 }<CardHeader> <CardTitle className="text-white" >Generated Content</CardTitle> </CardHeader> <CardContent className="space-y-4" > <div> <h3 className="text-sm font-medium text-zion-slate-light mb-2" >Description</h3> <p className="text-white" > {generatedContent && generatedContent.description ;generatedContent.description ;}</p> </div> <div>) )}</div> </div> <div>) ) ";
 }</ul> </div> </CardContent> <CardFooter> <Button > Apply to My Listing <ArrowRight className="ml-2 h-4 w-4" /> </Button> </CardFooter> </Card>)}</div>)}'"  )})data: error;
 })data: error;
 })toast ({}finally {setIsLoading (false)}
+
 const handleApply = () => {if (generatedContent && onApplyGenerated) {onApplyGenerated (generatedContent)toast ({}
 <CardHeader> <CardTitle className="flex items-center text-white" > <Sparkles className="h-5 w-5 mr-2 text-zion-cyan" /> AI Listing Optimizer </CardTitle> </p> </CardHeader> <CardContent className="space-y-4" > <div className="space-y-2" > <label htmlFor="title" className="text-sm font-medium text-zion-slate-light" >Title</label> <Input /> </div> <div className="space-y-2" > <label htmlFor="category" className="text-sm font-medium text-zion-slate-light" >Category</label> <Input /> </div> <div className="space-y-2" > <label htmlFor="keyFeatures" className="text-sm font-medium text-zion-slate-light" >Key Features (Optional) </label> <Textarea /> </div> <div className="space-y-2" > <label htmlFor="targetAudience" className="text-sm font-medium text-zion-slate-light" >Target Audience (Optional) </label> <Input > {";
   isLoading ? (<>Generating Optimized Content...</>) : (<> <Sparkles className="h-4 w-4 mr-2" /> Generate Optimized Content </>) ";
@@ -492,7 +531,9 @@ const handleApply = () => {if (generatedContent && onApplyGenerated) {onApplyGen
 }</ul> </div> </CardContent> <CardFooter> <Button > Apply to My Listing <ArrowRight className="ml-2 h-4 w-4" /> </Button> </CardFooter> </Card>)}</div>)}'"  )}
   )}
     </div>;
-  )}toast ({}finally {setIsLoading (false)}const handle_apply = () =>: any {// Check condition;
+  )}toast ({}finally {setIsLoading (false)}
+
+const handle_apply = () =>: any {// Check condition;
 if ( {) {$2;
 }
   onApplyGenerated (generated_content)toast ({}<CardHeader> <CardTitle className="flex items - center text - white" > <Sparkles className="h - 5 w - 5 mr - 2 text - zion - cyan" /> AI Listing Optimizer </CardTitle> </p> </CardHeader> <CardContent className="space - y-4" > <div className="space - y-2" > <label html_for="title" className="text - sm font - medium text - zion - slate - light" >Title</label> <Input /> </div> <div className="space - y-2" > <label html_for="category" className="text - sm font - medium text - zion - slate - light" >Category</label> <Input /> </div> <div className="space - y-2" > <label html_for="key_features" className="text - sm font - medium text - zion - slate - light" >Key Features (Optional) </label> <Textarea /> </div> <div className="space - y-2" > <label html_for="target_audience" className="text - sm font - medium text - zion - slate - light" >Target Audience (Optional) </label> <Input > {";

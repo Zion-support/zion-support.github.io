@@ -1,13 +1,18 @@
 
 ;
-  const handleSaveNotes = () => {const handleSaveNotes = () => {// Here you would save the notes to the database;
+
+const handleSaveNotes = () => ;
+  const handleSaveNotes = () => {// Here you would save the notes to the database;
     // For now, we'll just show a toast;
-    toast({title: 'Notes saved',description: 'Your notes have been saved'})setShowNotes(false)}
-  const handleHireConfirmed = () => {// Hiring process completed via the modal;
+    toast({title: 'Notes saved',description: 'Your notes have been saved'})setShowNotes(false,
+}
+
+const handleHireConfirmed = () => {// Hiring process completed via the modal;
     toast({title: 'Hiring process initiated';
       description: 'Offer has been sent to the talent.';
     })}import { useState  } from 'react';
-  const candidateName = application.talent_profile?.full_name || 'Candidate';
+
+const candidateName = application.talent_profile?.full_name || 'Candidate';
 // Local stub is used in place of the @hello-pangea/dnd package which isn't;
 // available in this environment.;
 import { Draggable } from "@/lib/dnd-stub",import { formatDistanceToNow } from "date-fns",import Link from "next/link",import { JobApplication } from "@/types/jobs",import { Card, CardContent } from "@/components/ui/card",import { Avatar as AvatarPrimitive } from "@/components/ui/avatar", // Renamed to avoid conflict;
@@ -20,16 +25,22 @@ import {DropdownMenu;
   DropdownMenuTrigger} from "@/components/ui/dropdown-menu",import { ScoreBadge } from "@/components/jobs/applications/ScoreBadge",import { toast  } from '@/hooks/use-toast';
 import { HireConfirmationModal  } from './HireConfirmationModal';
 import Image from 'next/image', // Import next/image;
+
 interface CandidateCardProps  {application: JobApplication;
   index: number;
-export function CandidateCard() {const [showNotes, setShowNotes] = useState(false)const [notes, setNotes] = useState(application.notes || "")const [showHireModal, setShowHireModal] = useState(false)const [avatarError, setAvatarError] = useState(false)// Check if application is stalled (no activity for 7 days)const isStalled  = null;return (<>;
+
+export function CandidateCard() {const [showNotes, setShowNotes] = useState(false);
+  const [notes, setNotes] = useState(application.notes || "");
+  const [showHireModal, setShowHireModal] = useState(false);
+  const [avatarError, setAvatarError] = useState(false)// Check if application is stalled (no activity for 7 days)const isStalled  = null;return (<>;
       <Draggable draggableId={application.id} index={index}>;
         {provided => (<Card;
             className='mb-2 p-0 shadow-sm border';
             ref={provided.innerRef}            {...provided.draggableProps}title: "Notes saved",description: "Your notes have been saved";
     }),setShowNotes(false)},const handleHireConfirmed = () => {// Hiring process completed via the modal;
     toast({title: "Hiring process initiated",description: "Offer has been sent to the talent.";
-    })},const candidateName = application.talent_profile?.full_name || "Candidate",return (<>;
+    })},const candidateName = application.talent_profile?.full_name || "Candidate";
+  return (<>;
       <Draggable draggableId={application.id} index={index}>;
         {(provided) => (<Card;
             className="mb-2 p-0 shadow-sm border";
@@ -46,14 +57,28 @@ import { Avatar as AvatarPrimitive } from '@/components/ui/avatar'; // Renamed t
 import {DropdownMenu,DropdownMenuContent,DropdownMenuItem,DropdownMenuTrigger} from '@/components/ui/dropdown-menu';
 import { ScoreBadge  } from '@/components/jobs/applications/ScoreBadge';
 import Image from 'next/image'; // Import next/image;
+
 interface CandidateCardProps  {application: JobApplication;
-  index: number;export function CandidateCard(): any ({ application, index }: CandidateCardProps) {const [showNotes, setShowNotes] = useState(false)const [notes, setNotes] = useState(application && application.notes || '')const [showHireModal, setShowHireModal] = useState(false)const [avatarError, setAvatarError]  = useState(false)// Check if application is stalled (no activity for 7 days)const isStalled =;
+  index: number;
+
+export function CandidateCard(): any ({ application, index }: CandidateCardProps) {const [showNotes, setShowNotes] = useState(false);
+  const [notes, setNotes] = useState(application && application.notes || '');
+  const [showHireModal, setShowHireModal] = useState(false);
+  const [avatarError, setAvatarError]  = useState(false)// Check if application is stalled (no activity for 7 days)const isStalled =;
     application && application.updated_at &&;
     new Date(application && application.updated_at).getTime() <;
-      Date && Date.now() - 7 * 24 * 60 * 60 * 1000;const handleSaveNotes = () => {// Here you would save the notes to the database;
+      Date && Date.now() - 7 * 24 * 60 * 60 * 1000;
+
+const handleSaveNotes = () => {// Here you would save the notes to the database;
     // For now, we'll just show a toast;
-    toast({title: 'Notes saved',description: 'Your notes have been saved'})setShowNotes(false)}const handleHireConfirmed = () => {// Hiring process completed via the modal;
-    toast({title: 'Hiring process initiated',description: 'Offer has been sent to the talent.'})}const candidateName  = application && application.talent_profile?.full_name || 'Candidate';return (<>;<Draggable draggableId={application.id} index={index}>;
+    toast({title: 'Notes saved',description: 'Your notes have been saved'})setShowNotes(false,
+}
+
+const handleHireConfirmed = () => {// Hiring process completed via the modal;
+    toast({title: 'Hiring process initiated',description: 'Offer has been sent to the talent.'},
+}
+
+const candidateName  = application && application.talent_profile?.full_name || 'Candidate';return (<>;<Draggable draggableId={application.id} index={index}>;
         {(provided) => (<Card;
             className="mb-2 p-0 shadow-sm border";
             ref={provided.innerRef}
@@ -136,7 +161,8 @@ interface CandidateCardProps  {application: JobApplication;
               <div className='flex flex-wrap gap-2 items-center text-xs text-muted-foreground mb-2'>;
                 <div className='flex items-center'>;
                   <Calendar className='h-3 w-3 mr-1' />;
-                  {formatDistanceToNow(new Date(application && application.created_at), {addSuffix: true})}
+                  {formatDistanceToNow(new Date(application && application.created_at), {addSuffix: true},
+}
                 </div>;{isStalled && (<div className='flex items-center text-amber-500'>;
                     <AlertTriangle className='h-3 w-3 mr-1' />;
                     Stalled;
@@ -166,8 +192,8 @@ interface CandidateCardProps  {application: JobApplication;
                   variant="outline";
                   size="sm";
                   className="flex-1";
-                  asChild;
-                >;
+                  asChild>
+
                   <Link href={`/messages?talentId=${application.talent_id}`}>;
                     <MessageSquare className='h-3 w-3 mr-1' /> Message;
                   </Link>;
@@ -176,8 +202,8 @@ interface CandidateCardProps  {application: JobApplication;
                   variant="outline";
                   size="sm";
                   className="flex-1";
-                  asChild;
-                >;
+                  asChild>
+
                   {application.resume?.file_url ? (<div className='flex justify-between mt-2 gap-1'>;
                 <Button variant='outline' size='sm' className='flex-1' asChild>;
                   <Link href={`/messages?talentId=${application && application.talent_id}`}>;
@@ -241,8 +267,10 @@ import { Textarea   } from '@/components / ui / textarea';
 import { ScoreBadge  } from '@/components / jobs / applications / ScoreBadge';
 import { toast  } from '@/hooks / use - toast';
 import Image from 'next / image'; // Import next / image;
+
 interface CandidateCardProps  {application: JobApplication;
   index: number;
+
 export /**;
  * CandidateCard - Function description;
  */;
@@ -250,12 +278,17 @@ function CandidateCard() {const [show_notes, setShowNotes] = useState (false)con
     application.updated_at &&;
     new Date (application.updated_at).get_time () <;
       Date.now () - 7 * 24 * 60 * 60 * 1000;
-  const handleSaveNotes = () =>: any {// Here you would save the notes to the database;
+
+const handleSaveNotes = () =>: any {// Here you would save the notes to the database;
     // For now, we'll just show a toast;
-    toast ({title: 'Notes saved',description: 'Your notes have been saved'})setShowNotes (false)}
-  const handleHireConfirmed = () =>: any {// Hiring process completed via the modal;
-    toast ({title: 'Hiring process initiated',description: 'Offer has been sent to the talent.'})}
-  const candidate_name = application.talent_profile?.full_name || 'Candidate';
+    toast ({title: 'Notes saved',description: 'Your notes have been saved'})setShowNotes (false,
+}
+
+const handleHireConfirmed = () =>: any {// Hiring process completed via the modal;
+    toast ({title: 'Hiring process initiated',description: 'Offer has been sent to the talent.'},
+}
+
+const candidate_name = application.talent_profile?.full_name || 'Candidate';
   return (<>;
       <Draggable draggable_id={application.id} index={index}>;
         {provided => (<Card;
@@ -316,8 +349,8 @@ function CandidateCard() {const [show_notes, setShowNotes] = useState (false)con
                         <a;
                           href={application.resume.file_url}
                           target='_blank';
-                          rel='noopener noreferrer';
-                        >;
+                          rel='noopener noreferrer'>
+
                           View Resume;
                         </a>;
                       </DropdownMenuItem>)}
@@ -328,18 +361,23 @@ function CandidateCard() {const [show_notes, setShowNotes] = useState (false)con
               <div className='flex flex - wrap gap - 2 items - center text - xs text - muted - foreground mb - 2'>;
                 <div className='flex items - center'>;
                   <Calendar className='h - 3 w - 3 mr - 1' />;
-                  {formatDistanceToNow (new Date (application.created_at), {add_suffix: true})}
+                  {formatDistanceToNow (new Date (application.created_at), {add_suffix: true},
+}
                 </div>;
                 {is_stalled && (<div className='flex items - center text - amber - 500'>;
                     <AlertTriangle className='h - 3 w - 3 mr - 1' />;
-                    Stalled;
-                  </div>)}
+                    Stalled
+    </div>
+  );
+}
               </div>;
               {/* Match Score */}
               {application.match_score !== null &&;
                 application.match_score !== undefined && (<div className='mb - 2'>;
-                    <ScoreBadge application={application} />;
-                  </div>)}
+                    <ScoreBadge application={application} />
+    </div>
+  );
+}
               {/* Notes Section */}
               {show_notes && (<div className='mt - 2'>;
                   <Textarea;
@@ -351,8 +389,10 @@ function CandidateCard() {const [show_notes, setShowNotes] = useState (false)con
                     <Button size='sm' on_click={handleSaveNotes}>;
                       Save Notes;
                     </Button>;
-                  </div>;
-                </div>)}
+                  </div>
+    </div>
+  );
+}
               {/* Action Buttons */}
               <div className='flex justify - between mt - 2 gap - 1'>;
                 <Button variant='outline' size='sm' className='flex - 1' as_child>;
@@ -364,8 +404,8 @@ function CandidateCard() {const [show_notes, setShowNotes] = useState (false)con
                   {application.resume?.file_url ? (<a;
                       href={application.resume.file_url}
                       target='_blank';
-                      rel='noopener noreferrer';
-                    >;
+                      rel='noopener noreferrer'>
+
                       <FileText className='h - 3 w - 3 mr - 1' /> Resume;
                     </a>) : (<span>;
                       <FileText className='h - 3 w - 3 mr - 1' /> No Resume;

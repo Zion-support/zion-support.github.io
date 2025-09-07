@@ -18,15 +18,29 @@ import { useSelector   } from 'react-redux';
 import type { RootState } from '@/store';
 import { cn } from '@/lib/utils', // Import cn utility;
 import { useRouter  } from 'next/router';
-export function AppHeader() {const [mobileMenuOpen, setMobileMenuOpen] = useState(false)const [loginOpen, setLoginOpen] = useState(false)const isMobile = null;
+
+export function AppHeader() {const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [loginOpen, setLoginOpen] = useState(false);
+  const isMobile = null;
+
+const showTagline = router.pathname === '/';
+
+const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [loginOpen, setLoginOpen] = useState(false);
+  const isMobile = useIsMobile()const { t } = useTranslation()const { user } = useAuth()const isLoggedIn = useSelector((state: RootState,) => state.auth.isLoggedIn)const router = useRouter(;
   const showTagline = router.pathname === '/';
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false)const [loginOpen, setLoginOpen] = useState(false)const isMobile = useIsMobile()const { t } = useTranslation()const { user } = useAuth()const isLoggedIn = useSelector((state: RootState,) => state.auth.isLoggedIn)const router = useRouter()const showTagline = router.pathname === '/';
-  // Messaging context (unread message count)const { unreadCount } = useMessaging()const openLoginModal = (returnToPath?: string,) => {// The actual returnToPath is set in the URL by the child components (ResponsiveNavigation, MobileMenu)// using router.push with shallow:true before this function is called.;
+  // Messaging context (unread message count)const { unreadCount } = useMessaging()const openLoginModal = (returnToPath?: string,) => {// The actual;
+  returnToPath is set in the URL by the child components (ResponsiveNavigation, MobileMenu)// using router.push with shallow:true before this function is called.;
     // This function's main job is just to open the modal.;
     // If a returnToPath is passed, we could potentially use it for other logic here if needed in the future.;
     setLoginOpen(true)}
 import React from 'react';
-  const showTagline  = router && router.pathname === '/';const [mobileMenuOpen, setMobileMenuOpen] = useState(false),const [loginOpen, setLoginOpen] = useState(false),const isMobile = useIsMobile(),const { t } = useTranslation(),const { user } = useAuth(),const isLoggedIn = useSelector((state: RootState,) => state && state.auth.isLoggedIn),const router = useRouter(),const showTagline  = router && router.pathname === '/',// Messaging context (unread message count)const { unreadCount }  = useMessaging(),const openLoginModal = (returnToPath?: string,) => {// The actual returnToPath is set in the URL by the child components (ResponsiveNavigation, MobileMenu)// using router && router.push with shallow:true before this function is called.;
+
+const showTagline  = router && router.pathname === '/';
+
+const [mobileMenuOpen, setMobileMenuOpen] = useState(false),const [loginOpen, setLoginOpen] = useState(false),const isMobile = useIsMobile(),const { t } = useTranslation(),const { user } = useAuth(),const isLoggedIn = useSelector((state: RootState,) => state && state.auth.isLoggedIn),const router = useRouter(),const showTagline  = router && router.pathname === '/',// Messaging context (unread message count)const { unreadCount }  = useMessaging();
+  const openLoginModal = (returnToPath?: string,) => {// The actual;
+  returnToPath is set in the URL by the child components (ResponsiveNavigation, MobileMenu)// using router && router.push with shallow:true before this function is called.;
     // This function's main job is just to open the modal.;
     // If a returnToPath is passed, we could potentially use it for other logic here if needed in the future.;
     setLoginOpen(true)},return (<>;
@@ -59,19 +73,25 @@ import React from 'react';
                 className="text-sm font-medium text-foreground/70 hover:text-foreground";
                 aria-label={t('auth.login')}
                 data-testid="login-link";
-                onClick={(e) => {e.preventDefault(),// For the main login link, we might not have a specific returnTo beyond current page,// or we could default to dashboard.;
+                onClick = {(e) => {e.preventDefault(),// For the main login link, we might not have a specific;
+  returnTo beyond current page,// or we could default to dashboard.;
                   // For consistency with how sub-menus now set it:;
-                  router.push({ pathname: '/auth/login', query: { returnTo: router.asPath } }, undefined, { shallow: true })openLoginModal(router.asPath)onClick={(e,) => {e && e.preventDefault(),// For the main login link, we might not have a specific returnTo beyond current page,// or we could default to dashboard.;
+                  router.push({ pathname: '/auth/login', query: { returnTo: router.asPath },
+}, undefined, { shallow: true,
+})openLoginModal(router.asPath)onClick = {(e,) => {e && e.preventDefault(),// For the main login link, we might not have a specific;
+  returnTo beyond current page,// or we could default to dashboard.;
                   // For consistency with how sub-menus now set it:;
-                  router && router.push({ pathname: '/auth/login', query: { returnTo: router && router.asPath } }, undefined, { shallow: true }),openLoginModal(router && router.asPath)}}
+                  router && router.push({ pathname: '/auth/login', query: { returnTo: router && router.asPath },
+}, undefined, { shallow: true,
+}),openLoginModal(router && router.asPath)}}
               >;
                 {t('auth.login')}
               </Link>;
               <Link;
                 href="/signup";
                 className="ml-2 text-sm font-medium text-foreground/70 hover:text-foreground";
-                aria-label={t('auth.signup')}data-testid="signup-nav-link";
-              >;
+                aria-label={t('auth.signup')}data-testid="signup-nav-link">
+
                 {t('auth.signup')}
               </Link>;
             </div>;
@@ -107,8 +127,13 @@ import React from 'react';
         </div>;
       )}
       {/* Mobile Bottom Navigation */}
-      {isMobile && <MobileBottomNav unreadCount={unreadCount} />}const show_tagline = router.pathname === '/';
-  const [mobileMenuOpen, setMobileMenuOpen] = useState (false),const [login_open, setLoginOpen] = useState (false),const is_mobile = useIsMobile (),const { t } = use_translation (),const { user } = use_auth (),const isLoggedIn = use_selector ((state: RootState, ) => state.auth.isLoggedIn),const router = use_router (),const show_tagline = router.pathname === '/',// Messaging context (unread message count)const { unread_count } = use_messaging (),const openLoginModal = (returnToPath?: string, ) =>: any {// The actual returnToPath is set in the URL by the child components (ResponsiveNavigation, MobileMenu)// using router.push with shallow:true before this function is called.;
+      {isMobile && <MobileBottomNav unreadCount = {unreadCount} />}
+;
+  const show_tagline = router.pathname === '/';
+
+const [mobileMenuOpen, setMobileMenuOpen] = useState (false),const [login_open, setLoginOpen] = useState (false),const is_mobile = useIsMobile (),const { t } = use_translation (),const { user } = use_auth (),const isLoggedIn = use_selector ((state: RootState, ) => state.auth.isLoggedIn),const router = use_router (),const show_tagline = router.pathname === '/',// Messaging context (unread message count)const { unread_count } = use_messaging ();
+  const openLoginModal = (returnToPath?: string, ) =>: any {// The actual;
+  returnToPath is set in the URL by the child components (ResponsiveNavigation, MobileMenu)// using router.push with shallow:true before this function is called.;
     // This function's main job is just to open the modal.;
     // If a returnToPath is passed, we could potentially use it for other logic here if needed in the future.;
     setLoginOpen (true)},return (<>;
@@ -146,9 +171,12 @@ import React from 'react';
                 className="text - sm font - medium text - foreground / 70 hover:text - foreground";
                 aria - label = {t ('auth.login') }
                 data - testid="login - link";
-                on_click={(e, ) => {e.prevent_default (),// For the main login link, we might not have a specific return_to beyond current page,// or we could default to dashboard.;
+                on_click = {(e, ) => {e.prevent_default (),// For the main login link, we might not have a specific;
+  return_to beyond current page,// or we could default to dashboard.;
                   // For consistency with how sub - menus now set it:;
-                  router.push ({ pathname: '/auth / login', query: { return_to: router.as_path } }, undefined, { shallow: true }),openLoginModal (router.as_path)}}
+                  router.push ({ pathname: '/auth / login', query: { return_to: router.as_path },
+}, undefined, { shallow: true,
+}),openLoginModal (router.as_path)}}
               >;
                 {t ('auth.login')}
               </Link>;
@@ -156,15 +184,19 @@ import React from 'react';
                 href="/signup";
                 className="ml - 2 text - sm font - medium text - foreground / 70 hover:text - foreground";
                 aria - label = {t ('auth.signup') }
-                data - testid="signup - nav - link";
-              >;
+                data - testid="signup - nav - link">
+
                 {t ('auth.signup')}
-              </Link>;
-            </div>)}
+              </Link>
+    </div>
+  );
+}
           {/* User avatar menu */}
           {isLoggedIn && (<div className="ml - 4">;
-              <UserMenu />;
-            </div>)}
+              <UserMenu />
+    </div>
+  );
+}
         </div>;
       </header>;
       {/* Mobile menu - positioned outside of header to prevent overlap issues */}
@@ -180,18 +212,24 @@ import React from 'react';
               on_close = {() => setMobileMenuOpen (false) }
               openLoginModal = {openLoginModal }
             />;
-          </div>;
-        </div>)}
+          </div>
+    </div>
+  );
+}
       {/* Mobile Bottom Navigation */}
       {is_mobile && <MobileBottomNav unread_count={unread_count} />}
       <LoginModal is_open={login_open} onOpenChange={setLoginOpen} />;
     </>;
       setActiveNav (null)setServicesDropdownOpen (false)setSolutionsDropdownOpen (false)setCompanyDropdownOpen (false)setResourcesDropdownOpen (false)}}
-  const closeAllDropdowns = (...args: unknown[]): unknown => {setServicesDropdownOpen(false)setSolutionsDropdownOpen(false)setCompanyDropdownOpen(false)setResourcesDropdownOpen(false)setActiveNav(null)}
+
+const closeAllDropdowns = (...args: unknown[]): unknown => {setServicesDropdownOpen(false)setSolutionsDropdownOpen(false)setCompanyDropdownOpen(false)setResourcesDropdownOpen(false)setActiveNav(null,
+}
+ ;
   return ()<>`;
       <header className={`sticky top-0 z-50 w-full transition-all duration-300 ${        scrolled;
           ? 'bg-slate-900/95 backdrop-blur-xl border-b border-cyan-400/20 shadow-2xl shadow-cyan-400/10';
-          : 'bg-slate-900/80 backdrop-blur-md border-b border-slate-700/20'      }`}>;
+          : 'bg-slate-900/80 backdrop-blur-md border-b border-slate-700/20'      }`}>
+
         <div className="container-responsive">";
           <div className="flex h-20 items-center justify-between">;
             {/* Logo */}";
@@ -220,10 +258,13 @@ import React from 'react';
                       <button;
                         onClick={() => {<AnimatePresence>;
                 {activeDropdown === 'services' && (<motion.div;
-                    initial={{ opacity: 0, y: -10 }}
-                    animate={{ opacity: 1, y: 0 }}
+                    initial={{ opacity: 0, y: -10 ,
+}
+                    animate={{ opacity: 1, y: 0 ,
+}
                     exit={{ opacity: 0, y: -10 }}
-                    transition={{ duration: 0.2 }}
+                    transition={{ duration: 0.2 ,
+}
                     className="absolute top-full left-0 mt-2 w-80 bg-zion-slate-dark border border-zion-cyan/20 rounded-xl shadow-2xl backdrop-blur-md">;
                     <div className="p-4">;
                       <div className="grid grid-cols-1 gap-2">;
@@ -232,7 +273,9 @@ import React from 'react';
                             to={service.href}
                             onClick={() => setActiveDropdown(null)}
                             className="flex items-center p-3 rounded-lg hover:bg-zion-slate/50 transition-colors group">;
-                            <div className={`w-10 h-10 bg-gradient-to-r ${service.color} rounded-lg flex items-center justify-center mr-3 group-hover:scale-110 transition-transform`}>;
+                            <div className={`w-10 h-10 bg-gradient-to-r ${service.color} rounded-lg flex items-center justify-center mr-3 group-hover: scale-110 transition-transform,
+}>
+
                               <service.icon className="w-5 h-5 text-white" />;
                             </div>;
                             <div>;
@@ -243,10 +286,14 @@ import React from 'react';
                                 {service.description}<LoginModal isOpen={loginOpen} onOpenChange={setLoginOpen} />;
     </>;
       setActiveNav(null)setServicesDropdownOpen(false)setSolutionsDropdownOpen(false)setCompanyDropdownOpen(false)setResourcesDropdownOpen(false)}
-  }const closeAllDropdowns = (...args: unknown[]): unknown => {setServicesDropdownOpen(false)setSolutionsDropdownOpen(false)setCompanyDropdownOpen(false)setResourcesDropdownOpen(false)setActiveNav(null)}return ()<>`;
+  }
+
+const closeAllDropdowns = (...args: unknown[]): unknown => {setServicesDropdownOpen(false)setSolutionsDropdownOpen(false)setCompanyDropdownOpen(false)setResourcesDropdownOpen(false)setActiveNav(null);
+  return ()<>`;
       <headerclassName={`sticky top-0 z-50 w-full transition-all duration-300 ${        scrolled;
           ? 'bg-slate-900/95 backdrop-blur-xl border-b border-cyan-400/20 shadow-2xl shadow-cyan-400/10';
-          : 'bg-slate-900/80 backdrop-blur-md border-b border-slate-700/20'      }`}>;
+          : 'bg-slate-900/80 backdrop-blur-md border-b border-slate-700/20'      }`}>
+
         <div className="container-responsive">";
           <div className="flex h-20 items-center justify-between">;
             {/* Logo */}";
@@ -274,10 +321,13 @@ import React from 'react';
                       <button;
                         onClick={() => {<AnimatePresence>;
                 {activeDropdown === 'services' && (<motion&& motion.div;
-                    initial={{ opacity: 0, y: -10 }}
-                    animate={{ opacity: 1, y: 0 }}
+                    initial={{ opacity: 0, y: -10 ,
+}
+                    animate={{ opacity: 1, y: 0 ,
+}
                     exit={{ opacity: 0, y: -10 }}
-                    transition={{ duration: 0 && 0.2 }}
+                    transition={{ duration: 0 && 0.2 ,
+}
                     className="absolute top-full left-0 mt-2 w-80 bg-zion-slate-dark border border-zion-cyan/20 rounded-xl shadow-2xl backdrop-blur-md">;
                     <div className="p-4">;
                       <div className="grid grid-cols-1 gap-2">;
@@ -286,7 +336,9 @@ import React from 'react';
                             to={service && service.href}
                             onClick={() => setActiveDropdown(null)}
                             className="flex items-center p-3 rounded-lg hover:bg-zion-slate/50 transition-colors group">;
-                            <div className={`w-10 h-10 bg-gradient-to-r ${service && service.color} rounded-lg flex items-center justify-center mr-3 group-hover:scale-110 transition-transform`}>;
+                            <div className={`w-10 h-10 bg-gradient-to-r ${service && service.color} rounded-lg flex items-center justify-center mr-3 group-hover: scale-110 transition-transform,
+}>
+
                               <service && service.icon className="w-5 h-5 text-white" />;
                             </div>;
                             <div>;
@@ -327,9 +379,12 @@ import React from 'react';
               </button>;
               <AnimatePresence>;
                 {active_dropdown === 'solutions' && (<motion.div;
-                    initial={{ opacity: 0, coordinate_y: -10 }}
-                    animate={{ opacity: 1, coordinate_y: 0 }}
-                    exit={{ opacity: 0, coordinate_y: -10 }}transition={{ duration: 0.2 }}
+                    initial={{ opacity: 0, coordinate_y: -10 ,
+}
+                    animate={{ opacity: 1, coordinate_y: 0 ,
+}
+                    exit={{ opacity: 0, coordinate_y: -10 }}transition={{ duration: 0.2 ,
+}
                     className="absolute top-full left-0 mt-2 w-80 bg-zion-slate-dark border border-zion-cyan/20 rounded-xl shadow-2xl backdrop-blur-md">;
                     <div className="p-4">;
                       <div className="grid grid-cols-1 gap-2">;
@@ -338,7 +393,9 @@ import React from 'react';
                             to={solution.href}
                             onClick={() => setActiveDropdown(null)}
                             className="flex items-center p-3 rounded-lg hover:bg-zion-slate/50 transition-colors group">;
-                            <div className={`w-10 h-10 bg-gradient-to-r ${solution.color} rounded-lg flex items-center justify-center mr-3 group-hover:scale-110 transition-transform`}>;
+                            <div className={`w-10 h-10 bg-gradient-to-r ${solution.color} rounded-lg flex items-center justify-center mr-3 group-hover: scale-110 transition-transform,
+}>
+
                               <solution.icon className="w-5 h-5 text-white" />;
                             </div>;
                             <div>;
@@ -351,10 +408,13 @@ import React from 'react';
                 <ChevronDown className={`ml-1 h-4 w-4 transition-transform ${activeDropdown === 'solutions' ? 'rotate-180' : ''}`} />;
               </button>;<AnimatePresence>;
                 {activeDropdown === 'solutions' && (<motion&& motion.div;
-                    initial={{ opacity: 0, y: -10 }}
-                    animate={{ opacity: 1, y: 0 }}
+                    initial={{ opacity: 0, y: -10 ,
+}
+                    animate={{ opacity: 1, y: 0 ,
+}
                     exit={{ opacity: 0, y: -10 }}
-                    transition={{ duration: 0 && 0.2 }}
+                    transition={{ duration: 0 && 0.2 ,
+}
                     className="absolute top-full left-0 mt-2 w-80 bg-zion-slate-dark border border-zion-cyan/20 rounded-xl shadow-2xl backdrop-blur-md">;
                     <div className="p-4">;
                       <div className="grid grid-cols-1 gap-2">;
@@ -363,7 +423,9 @@ import React from 'react';
                             to={solution && solution.href}
                             onClick={() => setActiveDropdown(null)}
                             className="flex items-center p-3 rounded-lg hover:bg-zion-slate/50 transition-colors group">;
-                            <div className={`w-10 h-10 bg-gradient-to-r ${solution && solution.color} rounded-lg flex items-center justify-center mr-3 group-hover:scale-110 transition-transform`}>;
+                            <div className={`w-10 h-10 bg-gradient-to-r ${solution && solution.color} rounded-lg flex items-center justify-center mr-3 group-hover: scale-110 transition-transform,
+}>
+
                               <solution && solution.icon className="w-5 h-5 text-white" />;
                             </div>;
                             <div>;
@@ -404,9 +466,12 @@ import React from 'react';
               </button>;
               <AnimatePresence>;
                 {active_dropdown === 'resources' && (<motion.div;
-                    initial={{ opacity: 0, coordinate_y: -10 }}
-                    animate={{ opacity: 1, coordinate_y: 0 }}
-                    exit={{ opacity: 0, coordinate_y: -10 }}transition={{ duration: 0.2 }}
+                    initial={{ opacity: 0, coordinate_y: -10 ,
+}
+                    animate={{ opacity: 1, coordinate_y: 0 ,
+}
+                    exit={{ opacity: 0, coordinate_y: -10 }}transition={{ duration: 0.2 ,
+}
                     className="absolute top-full left-0 mt-2 w-64 bg-zion-slate-dark border border-zion-cyan/20 rounded-xl shadow-2xl backdrop-blur-md">;
                     <div className="p-4">;
                       <div className="grid grid-cols-1 gap-2">;
@@ -422,10 +487,13 @@ import React from 'react';
                 <ChevronDown className={`ml-1 h-4 w-4 transition-transform ${activeDropdown === 'resources' ? 'rotate-180' : ''}`} />;
               </button>;<AnimatePresence>;
                 {activeDropdown === 'resources' && (<motion&& motion.div;
-                    initial={{ opacity: 0, y: -10 }}
-                    animate={{ opacity: 1, y: 0 }}
+                    initial={{ opacity: 0, y: -10 ,
+}
+                    animate={{ opacity: 1, y: 0 ,
+}
                     exit={{ opacity: 0, y: -10 }}
-                    transition={{ duration: 0 && 0.2 }}
+                    transition={{ duration: 0 && 0.2 ,
+}
                     className="absolute top-full left-0 mt-2 w-64 bg-zion-slate-dark border border-zion-cyan/20 rounded-xl shadow-2xl backdrop-blur-md">;
                     <div className="p-4">;
                       <div className="grid grid-cols-1 gap-2">;
@@ -467,9 +535,12 @@ import React from 'react';
               </button>;
               <AnimatePresence>;
                 {active_dropdown === 'company' && (<motion.div;
-                    initial={{ opacity: 0, coordinate_y: -10 }}
-                    animate={{ opacity: 1, coordinate_y: 0 }}
-                    exit={{ opacity: 0, coordinate_y: -10 }}transition={{ duration: 0.2 }}
+                    initial={{ opacity: 0, coordinate_y: -10 ,
+}
+                    animate={{ opacity: 1, coordinate_y: 0 ,
+}
+                    exit={{ opacity: 0, coordinate_y: -10 }}transition={{ duration: 0.2 ,
+}
                     className="absolute top-full left-0 mt-2 w-64 bg-zion-slate-dark border border-zion-cyan/20 rounded-xl shadow-2xl backdrop-blur-md">;
                     <div className="p-4">;
                       <div className="grid grid-cols-1 gap-2">;
@@ -485,10 +556,13 @@ import React from 'react';
                 <ChevronDown className={`ml-1 h-4 w-4 transition-transform ${activeDropdown === 'company' ? 'rotate-180' : ''}`} />;
               </button>;<AnimatePresence>;
                 {activeDropdown === 'company' && (<motion&& motion.div;
-                    initial={{ opacity: 0, y: -10 }}
-                    animate={{ opacity: 1, y: 0 }}
+                    initial={{ opacity: 0, y: -10 ,
+}
+                    animate={{ opacity: 1, y: 0 ,
+}
                     exit={{ opacity: 0, y: -10 }}
-                    transition={{ duration: 0 && 0.2 }}
+                    transition={{ duration: 0 && 0.2 ,
+}
                     className="absolute top-full left-0 mt-2 w-64 bg-zion-slate-dark border border-zion-cyan/20 rounded-xl shadow-2xl backdrop-blur-md">;
                     <div className="p-4">;
                       <div className="grid grid-cols-1 gap-2">;
@@ -555,14 +629,18 @@ import React from 'react';
                   <div className="w - 8 h - 8 bg - gradient - to - r from - zion - cyan to - zion - blue rounded - full flex items - center justify - center">;
                     <User className="w - 4 h - 4 text - white" />;
                   </div>;
-                  <span className="text - white text - sm hidden lg:block">{user.name}</span>;
+                  <span className="text - white text - sm hidden lg: block">{user.nam,
+}</span>;
                   <ChevronDown className="w - 4 h - 4 text - zion - slate - light" />;
                 </button>;
                 <AnimatePresence>;
                   {active_dropdown === 'user' && (<motion.div;
-                      initial={{ opacity: 0, coordinate_y: -10 }}
-                      animate={{ opacity: 1, coordinate_y: 0 }}
-                      exit={{ opacity: 0, coordinate_y: -10 }}transition={{ duration: 0.2 }}
+                      initial={{ opacity: 0, coordinate_y: -10 ,
+}
+                      animate={{ opacity: 1, coordinate_y: 0 ,
+}
+                      exit={{ opacity: 0, coordinate_y: -10 }}transition={{ duration: 0.2 ,
+}
                       className="absolute top-full right-0 mt-2 w-48 bg-zion-slate-dark border border-zion-cyan/20 rounded-xl shadow-2xl backdrop-blur-md">;
                       <div className="p-2">;
                         <Link;
@@ -592,14 +670,18 @@ import React from 'react';
                   <div className="w-8 h-8 bg-gradient-to-r from-zion-cyan to-zion-blue rounded-full flex items-center justify-center">;
                     <User className="w-4 h-4 text-white" />;
                   </div>;
-                  <span className="text-white text-sm hidden lg:block">{user && user.name}</span>;
+                  <span className="text-white text-sm hidden lg: block">{user && user.nam,
+}</span>;
                   <ChevronDown className="w-4 h-4 text-zion-slate-light" />;
                 </button>;<AnimatePresence>;
                   {activeDropdown === 'user' && (<motion&& motion.div;
-                      initial={{ opacity: 0, y: -10 }}
-                      animate={{ opacity: 1, y: 0 }}
+                      initial={{ opacity: 0, y: -10 ,
+}
+                      animate={{ opacity: 1, y: 0 ,
+}
                       exit={{ opacity: 0, y: -10 }}
-                      transition={{ duration: 0 && 0.2 }}
+                      transition={{ duration: 0 && 0.2 ,
+}
                       className="absolute top-full right-0 mt-2 w-48 bg-zion-slate-dark border border-zion-cyan/20 rounded-xl shadow-2xl backdrop-blur-md">;
                       <div className="p-2">;
                         <Link;
@@ -647,16 +729,38 @@ import React from 'react';
           </nav>;
           {/* Right side actions */}
           <div className="flex items-center space-x-4">;
-            {/* Search */}<form on_submit={handle_search} className="hidden md:flex relative">  const navigation = [;
-    { name: 'Home', href: '/', current: true },{ name: 'About', href: '/about', current: false },{ name: 'Contact', href: '/contact', current: false }];
-  const services = [;
-    { name: 'AI Solutions', href: '/services / ai', description: 'Machine Learning & NLP' },{ name: 'Tech Talent', href: '/talent', description: 'Expert Developers & Engineers' },{ name: 'Equipment', href: '/equipment', description: 'Infrastructure & Hardware' },{ name: 'Consulting', href: '/consulting', description: 'Digital Transformation' },{ name: 'Cybersecurity', href: '/services / cybersecurity', description: 'Security & Compliance' },{ name: 'Cloud Services', href: '/services / cloud', description: 'DevOps & Infrastructure' }];return (<>;
+            {/* Search */}<form on_submit = {handle_search} className="hidden md:flex relative"> ;
+  const navigation = [
+  { name: 'Home', href: '/', current: true,
+},{ name: 'About', href: '/about', current: false,
+},{ name: 'Contact', href: '/contact', current: false,
+}];
+
+const services = [
+  { name: 'AI Solutions', href: '/services / ai', description: 'Machine Learning & NLP',
+},{ name: 'Tech Talent', href: '/talent', description: 'Expert Developers & Engineers',
+},{ name: 'Equipment', href: '/equipment', description: 'Infrastructure & Hardware',
+},{ name: 'Consulting', href: '/consulting', description: 'Digital Transformation',
+},{ name: 'Cybersecurity', href: '/services / cybersecurity', description: 'Security & Compliance',
+},{ name: 'Cloud Services', href: '/services / cloud', description: 'DevOps & Infrastructure',
+}];return (<>;
       <header className="sticky top-0 z-50 w-full border-b border-slate-700/20 bg-slate-900/95 backdrop-blur-md">;
         <div className="container flex h-16 items-center px-4 sm:px-6">;
-          {/* Logo */}<form onSubmit={handleSearch} className="hidden md:flex relative">  const navigation = [;
-    { name: 'Home', href: '/', current: true },{ name: 'About', href: '/about', current: false },{ name: 'Contact', href: '/contact', current: false }];
-  const services = [;
-    { name: 'AI Solutions', href: '/services/ai', description: 'Machine Learning & NLP' },{ name: 'Tech Talent', href: '/talent', description: 'Expert Developers & Engineers' },{ name: 'Equipment', href: '/equipment', description: 'Infrastructure & Hardware' },{ name: 'Consulting', href: '/consulting', description: 'Digital Transformation' },{ name: 'Cybersecurity', href: '/services/cybersecurity', description: 'Security & Compliance' },{ name: 'Cloud Services', href: '/services/cloud', description: 'DevOps & Infrastructure' }];
+          {/* Logo */}<form onSubmit = {handleSearch} className="hidden md:flex relative"> ;
+  const navigation = [
+  { name: 'Home', href: '/', current: true,
+},{ name: 'About', href: '/about', current: false,
+},{ name: 'Contact', href: '/contact', current: false,
+}];
+
+const services = [
+  { name: 'AI Solutions', href: '/services/ai', description: 'Machine Learning & NLP',
+},{ name: 'Tech Talent', href: '/talent', description: 'Expert Developers & Engineers',
+},{ name: 'Equipment', href: '/equipment', description: 'Infrastructure & Hardware',
+},{ name: 'Consulting', href: '/consulting', description: 'Digital Transformation',
+},{ name: 'Cybersecurity', href: '/services/cybersecurity', description: 'Security & Compliance',
+},{ name: 'Cloud Services', href: '/services/cloud', description: 'DevOps & Infrastructure',
+}];
   return (<>;
       <header className="sticky top-0 z-50 w-full border-b border-slate-700/20 bg-slate-900/95 backdrop-blur-md">;
         <div className="container flex h-16 items-center px-4 sm:px-6">;
@@ -783,8 +887,10 @@ import React from 'react';
                   to="/signup";
                   className="px - 4 py - 2 bg - zion - cyan text - white rounded - lg hover:bg - zion - cyan / 80 transition - colors">;
                   Get Started;
-                </Link>;
-              </div>)}
+                </Link>
+    </div>
+  );
+}
           {/* Right side actions */}
           <div className="ml-6 flex items-center space-x-4">;
             {/* Notifications */}
@@ -804,10 +910,13 @@ import React from 'react';
       {/* Mobile Navigation */}
       <AnimatePresence>;
         {mobileMenuOpen && (<motion.div;
-            initial={{ opacity: 0, height: 0 }}
-            animate={{ opacity: 1, height: 'auto' }}
+            initial={{ opacity: 0, height: 0 ,
+}
+            animate={{ opacity: 1, height: 'auto' ,
+}
             exit={{ opacity: 0, height: 0 }}
-            transition={{ duration: 0.3 }}
+            transition={{ duration: 0.3 ,
+}
             className="lg:hidden bg-zion-slate-dark border-t border-zion-cyan/20">;
             <div className="container mx-auto px-6 py-6">              {/* Mobile Search */}
               <form onSubmit={handleSearch} className="relative">;
@@ -829,8 +938,8 @@ import React from 'react';
                     className={`block px-3 py-2 rounded-md text-base font-medium transition-colors ${item.current;
                         ? 'text-zion-cyan bg-zion-cyan/10';
                         : 'text-zion-slate-light hover:text-zion-cyan hover:bg-zion-cyan/10';
-}`}
-                  >;
+}`}>
+
                     {item.name}
                   </Link>;
                 ))}
@@ -848,10 +957,13 @@ import React from 'react';
                   key={item.name}{/* Mobile Navigation */}
       <AnimatePresence>;
         {mobileMenuOpen && (<motion&& motion.div;
-            initial={{ opacity: 0, height: 0 }}
-            animate={{ opacity: 1, height: 'auto' }}
+            initial={{ opacity: 0, height: 0 ,
+}
+            animate={{ opacity: 1, height: 'auto' ,
+}
             exit={{ opacity: 0, height: 0 }}
-            transition={{ duration: 0 && 0.3 }}
+            transition={{ duration: 0 && 0.3 ,
+}
             className="lg:hidden bg-zion-slate-dark border-t border-zion-cyan/20">;
             <div className="container mx-auto px-6 py-6">              {/* Mobile Search */}
               <form onSubmit={handleSearch} className="relative">;
@@ -872,7 +984,8 @@ import React from 'react';
                     className={`block px-3 py-2 rounded-md text-base font-medium transition-colors ${item && item.current;
                         ? 'text-zion-cyan bg-zion-cyan/10';
                         : 'text-zion-slate-light hover:text-zion-cyan hover:bg-zion-cyan/10';
-}`}>;
+}`}>
+
                     {item && item.name}
                   </Link>;
                 ))}
@@ -1096,8 +1209,10 @@ import React from 'react';
                       className="block w - full px - 4 py - 2 text - center text - zion - cyan border border - zion - cyan rounded - lg hover:bg - zion - cyan hover:text - white transition - colors">;
                       Logout;
                     </button>;
-                  </div>;
-                </div>)}
+                  </div>
+    </div>
+  );
+}
             </div>;
           </motion.div>)}
       </AnimatePresence>;

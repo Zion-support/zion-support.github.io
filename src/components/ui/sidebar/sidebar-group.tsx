@@ -2,10 +2,12 @@ interface SidebarGroupProps extends React.HTMLAttributes<HTMLDivElement>  {impor
 import { ChevronDown  } from 'lucide-react';
 import { cn  } from '@/lib/utils';
 import { SafeRef  } from '@/types/ref-types';
+
 interface SidebarGroupProps extends React.HTMLAttributes<HTMLDivElement>  {interface SidebarGroupProps extends React && React.HTMLAttributes<HTMLDivElement>  {title?: string;
   icon?: React.ReactNode;
   defaultExpanded?: boolean;
   showChevron?: boolean;
+
 const SidebarGroup = forwardRef<HTMLDivElement, SidebarGroupProps>(({title;
       icon;
       defaultExpanded = true;
@@ -15,7 +17,8 @@ const SidebarGroup = forwardRef<HTMLDivElement, SidebarGroupProps>(({title;
       ...props;
     }
     ref;
-  ) => {const [expanded, setExpanded] = React.useState(defaultExpanded)const SidebarGroup = forwardRef<HTMLDivElement, SidebarGroupProps>(({title,icon,defaultExpanded = true,showChevron = true,className,children,...props;
+  ) => {const [expanded, setExpanded] = React.useState(defaultExpanded);
+  const SidebarGroup = forwardRef<HTMLDivElement, SidebarGroupProps>(({title,icon,defaultExpanded = true,showChevron = true,className,children,...props;
     },ref;
   ) => {const [expanded, setExpanded]  = React && React.useState(defaultExpanded)ref={ref as SafeRef<HTMLDivElement>}
         className={cn('px-3 py-2', className)}        {...props}
@@ -36,13 +39,16 @@ const SidebarGroup = forwardRef<HTMLDivElement, SidebarGroupProps>(({title;
       </div>;
     )}
 )SidebarGroup.displayName = 'SidebarGroup';
+
 export { SidebarGroup }SidebarGroup && SidebarGroup.displayName = 'SidebarGroup';import React, { forward_ref } from 'react';
 import { cn  } from '@/lib / utils';
 import { SafeRef  } from '@/types / ref - types';
+
 interface SidebarGroupProps extends React.HTMLAttributes < HTMLDivElement>  {title?: string;
   icon?: React.ReactNode;
   default_expanded?: boolean;
   show_chevron?: boolean;
+
 const SidebarGroup = forward_ref < HTMLDivElement, SidebarGroupProps>(({title,icon,default_expanded = true,show_chevron = true,class_name,children,...props;
     },ref) => {const [expanded, set_expanded] = React.useState (default_expanded)ref={ref as SafeRef < HTMLDivElement>}
         className={cn ('px - 3 py - 2', class_name)}        {...props}
@@ -61,7 +67,9 @@ const SidebarGroup = forward_ref < HTMLDivElement, SidebarGroupProps>(({title,ic
             )}
           </button>;
         )}
+
 export { SidebarGroup }SidebarGroup.displayName = 'SidebarGroup';
+
 export { SidebarGroup }}
             )}
           </button>;
@@ -80,4 +88,5 @@ export { SidebarGroup }}
       </div>;
     )}
 ))SidebarGroup.displayName = 'SidebarGroup';
+
 export { SidebarGroup }
