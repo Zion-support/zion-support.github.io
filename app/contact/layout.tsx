@@ -6,6 +6,8 @@ export const metadata: Metadata = {
   keywords: 'contact, AI solutions, micro SaaS, IT services, business consultation'
 };
 
+import React from 'react';
+
 export default function ContactLayout({
   children,
 }: {
