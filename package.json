@@ -5,11 +5,12 @@
   "type": "module",
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
-    "clean": "rm -rf .next && rm -rf out",
-    "export": "next build && next export",
+    "build": "node --max-old-space-size=8192 ./node_modules/.bin/next build",
     "start": "next start",
     "export": "next export",
+    "lint": "next lint",
+    "lint:fix": "next lint --fix",
+    "type-check": "tsc --noEmit",
     "test": "jest --config jest.config.cjs",
     "test:smoke": "jest --config jest.config.smoke.cjs --passWithNoTests",
     "test:watch": "jest --watch --config jest.config.ts",
@@ -18,10 +19,7 @@
     "check": "npm run lint && npm run type-check && npm run test:smoke",
     "clean": "rm -rf .next out dist",
     "precommit": "npm run check",
-    "prepare": "echo \"Husky prepare script disabled\"",
-    "type-check": "node --max-old-space-size=8192 ./node_modules/.bin/tsc --noEmit --skipLibCheck",
-    "lint": "node --max-old-space-size=4096 ./node_modules/.bin/eslint . --max-warnings 1000",
-    "lint:fix": "node --max-old-space-size=4096 ./node_modules/.bin/eslint . --fix --max-warnings 1000"
+    "prepare": "echo \"Husky prepare script disabled\""
   },
   "dependencies": {
     "@babel/core": "^7.28.4",
@@ -110,12 +108,12 @@
     "web-vitals": "^5.1.0"
   },
   "devDependencies": {
-    "@axe-core/cli": "^4.10.2",
-    "@axe-core/react": "^4.10.2",
-    "@babel/plugin-transform-class-properties": "^7.27.1",
+    "@babel/plugin-proposal-class-properties": "^7.18.6",
+    "@babel/plugin-transform-runtime": "^7.28.3",
     "@babel/preset-env": "^7.28.3",
     "@babel/preset-react": "^7.27.1",
     "@babel/preset-typescript": "^7.27.1",
+    "@eslint/eslintrc": "^3.3.1",
     "@eslint/js": "^9.35.0",
     "@next/eslint-plugin-next": "^15.5.2",
     "@playwright/test": "^1.55.0",
