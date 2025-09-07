@@ -31,7 +31,10 @@ export default [
         'warn',
         { argsIgnorePattern: '^_' }
       ],
+<<<<<<< HEAD
       // '@typescript-eslint/no-explicit-any': 'warn', // Disabled due to plugin config issue
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-e453
     },
   },
   {
