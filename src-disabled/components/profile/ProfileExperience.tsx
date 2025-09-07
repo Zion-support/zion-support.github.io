@@ -41,10 +41,10 @@ export function ProfileExperience({ experience }: ProfileExperienceProps) {
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 <div key={exp.id} className="flex">
 
-            <div className="mr-4">
-              <div className="h-10 w-10 rounded-full bg-zion-purple/20 flex items-center justify-center">
+            <div className='mr-4'>
+              <div className='h-10 w-10 rounded-full bg-zion-purple/20 flex items-center justify-center'>
 
-                <Briefcase className="h-5 w-5 text-zion-purple" />
+                <Briefcase className='h-5 w-5 text-zion-purple' />
               </div>
             </div>
 <<<<<<< HEAD
@@ -133,7 +133,7 @@ export function ProfileExperience({ experience }: ProfileExperienceProps) {;
               <div className='text-sm text-zion-slate-light mb-2'>;
                 {exp && exp.startDate} - {exp && exp.current ? 'Present' : exp && exp.endDate}
               </div>;
-              <p className='text-zion-slate'>{exp && exp.description}</p>            </div>              <p className="text-zion-slate">{exp && exp.description}</p>;
+              <p className='text-zion-slate'>{exp && exp.description}</p>            </div>              <p className='text-zion-slate'>{exp && exp.description}</p>;
 
 =======
               <h4 className="text-white font-medium">{exp.role}</h4>;

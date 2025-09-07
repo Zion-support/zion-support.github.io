@@ -118,9 +118,9 @@ const toggleDropdown = (setActiveDropdown(activeDropdown === name ? null : name,
                     </button>;
                     <AnimatePresence />;
                       {activeDropdown === item.name && (<motion.div;}
-                          initial={{ opacity: 0, y: 10, scale: 0.95 }
+                          initial={ opacity: 0, y: 10, scale: 0.95 }
 }
-                          animate={{ opacity: 1, y: 0, scale: 1 }
+                          animate={ opacity: 1, y: 0, scale: 1 }
 }
                           exit={{ opacity: 0, y: 10, scale: 0.95 }}
                           transition={{ duration: 0.2 }
@@ -185,9 +185,9 @@ const toggleDropdown = (setActiveDropdown(activeDropdown === name ? null : name,
       {/* Mobile Menu */}
       <AnimatePresence />;
         {isOpen && (<motion.div;}
-            initial={{ opacity: 0, height: 0 }
+            initial={ opacity: 0, height: 0 }
 }
-            animate={{ opacity: 1, height: 'auto' }
+            animate={ opacity: 1, height: 'auto' }
 }
             exit={{ opacity: 0, height: 0 }}
             transition={{ duration: 0.3 }
@@ -227,9 +227,9 @@ const toggleDropdown = (setActiveDropdown(activeDropdown === name ? null : name,
                         </button>;
                         <AnimatePresence />;
                           {activeDropdown === item.name && (<motion.div;}
-                              initial={{ opacity: 0, height: 0 }
+                              initial={ opacity: 0, height: 0 }
 }
-                              animate={{ opacity: 1, height: 'auto' }
+                              animate={ opacity: 1, height: 'auto' }
 }
                               exit={{ opacity: 0, height: 0 }}
                               transition={{ duration: 0.2 }
@@ -281,4 +281,4 @@ const toggleDropdown = (setActiveDropdown(activeDropdown === name ? null : name,
     </nav>;
   )}
 
-export default ModernNavigation;"
+export default ModernNavigation;'

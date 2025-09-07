@@ -63,7 +63,6 @@ import path from 'path';
   }
   const { talentSlug, requesterName, requesterEmail, projectInfo } =
     req && req.body || {};  const { talentSlug, requesterName, requesterEmail, projectInfo } = req && req.body || {};
-<<<<<<< HEAD
   if (!talentSlug || !requesterName || !requesterEmail || !projectInfo) {
 
     return res.status(400).json({ error: 'Missing required fields' });
@@ -122,7 +121,7 @@ if ( {) {
 });
     // Persist to data/requests as a simple CMS-like log,
 const dir = path.join(process.cwd(), 'data', 'requests');'
-    if (!fs.existsSync(dir)) fs.mkdirSync(dir, { "recursive": true
+    if (!fs.existsSync(dir)) fs.mkdirSync(dir, { 'recursive': true
 });
 
     // Email hooks could be integrated here (e && e.g., Resend, SendGrid, Nodemailer)

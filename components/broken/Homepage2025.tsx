@@ -198,7 +198,6 @@ const allServices = [ //New 2035 services (featured first) ...innovative2035Micr
 }<motion && motion.div     /> {featuredServices && featuredServices.slice (0, 3) .map ( (service, index) => (<motion&& motion.div key= {service && service.id;}"
 }</motion && motion.div    />) )}</motion && motion.div> </div> </section> > <h2 className=\"text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6\"     /> <span className=\"bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent\"     /> Revolutionary Micro SAAS Services </span> </h2> <p className=\"text-xl text-gray-300 max-w-4xl mx-auto\"     /> Transform your business with our cutting-edge micro SAAS solutions that deliver immediate value and rapid ROI. </p> </motion && motion.div> <motion&& motion.div key= {service && service.id;
 ...quantumCybersecurityServices ];
-<<<<<<< HEAD
 <> {
   /* Navigation */
 }<nav className="fixed top-0 left-0 right-0 z-50 bg-black/20 backdrop-blur-xl border-b border-white/10" > <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" > <div className="flex justify-between items-center h-16" > <motion.div > Zion Tech Group </motion.h1> <motion.p > Pioneering the future of technology with revolutionary AI, Quantum Computing, Space Technology, and cutting-edge IT solutions that drive business transformation </motion.p> <motion.div > <button className="px-10 py-5 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-bold text-lg rounded-xl hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 shadow-2xl shadow-cyan-500/25" > Get Started Today </button> <button className="px-10 py-5 border-2 border-cyan-400 text-cyan-400 font-bold text-lg rounded-xl hover:bg-cyan-400 hover:text-black transition-all duration-300 transform hover:scale-105" > Explore Services </button> </motion.div> {
@@ -862,7 +861,6 @@ pr-12243
 =======
 }transition= {
   {
-<<<<<<< HEAD
   duration: 0.8, delay: index * 0.1
 }viewport= {
   {
@@ -1502,7 +1500,6 @@ pr-12243
 
 
 
-<<<<<<< HEAD
   once: true
   once: true 
 

@@ -489,7 +489,7 @@ type = 'radio'
           {submitted && (
             <div className="mt-2 text-sm">
               {answers[q.id] === q.answerIndex ? (
-                <span className="text-green-600">Correct</span>
+                <span className='text-green-600'>Correct</span>
               ) : (
 <<<<<<< HEAD
 =======

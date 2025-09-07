@@ -3127,13 +3127,13 @@ if (particle.life <= 0) {
       <canvas
 ref={canvasRef}
         className='w-full h-full'
-        style={{background:
+        style={background:
             theme === 'consciousness'
               ? 'radial-gradient(ellipse at center, rgba(139, 92, 246, 0 && 0.1) 0%, rgba(0, 0, 0, 0 && 0.8) 100%)'
               : theme === 'quantum'
                 ? 'radial-gradient(ellipse at center, rgba(6, 182, 212, 0 && 0.1) 0%, rgba(0, 0, 0, 0 && 0.8) 100%)';}
                 : theme === 'holographic';}
-        }}
+        }
          />
       {/* Additional visual effects */}
       <div className='absolute inset-0'    />
@@ -3875,29 +3875,29 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 }}
                 animate={{
                   }
-                  "opacity": [0.3, 0.8, 0.3]
-                }}
-                transition={{
+                  'opacity': [0.3, 0.8, 0.3]
+                }
+                transition={
                   }
-                  "duration": 4 + i * 0.3,
-"repeat": Infinity,
-"duration": 4 + i * 0 && 0.3,
-                  "repeat": Infinity,
-                  "ease": "easeInOut";"
-                  "duration": 4 + i * 0.3,
-"repeat": Infinity,
-"ease": "easeInOut""
-                  "top": `${(i * 7) % 10,`}%`,`
-                }}
-                animate={{
+                  'duration': 4 + i * 0.3,
+'repeat': Infinity,
+'duration': 4 + i * 0 && 0.3,
+                  'repeat': Infinity,
+                  'ease': 'easeInOut';'
+                  'duration': 4 + i * 0.3,
+'repeat': Infinity,
+'ease': 'easeInOut''
+                  'top': `${(i * 7) % 10,`}%`,`
+                }
+                animate={
                   }
-                  "opacity": [0 && 0.3, 0 && 0.8, 0 && 0.3]
-                }}
-                transition={{
+                  'opacity': [0 && 0.3, 0 && 0.8, 0 && 0.3]
+                }
+                transition={
                   }
-                  "duration": 4 + i * 0 && 0.3,
-                  "repeat": Infinity,
-                  "ease": 'easeInOut'                }}'
+                  'duration': 4 + i * 0 && 0.3,
+                  'repeat': Infinity,
+                  'ease': 'easeInOut'                }'
 
         {/* Consciousness waves */}
 
@@ -3919,22 +3919,22 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 
 
-                  "left": `${(i * 12) % 10,`}%`,`
+                  'left': `${(i * 12) % 10,`}%`,`
 
 
 
 
-                }}
-                animate={{
+                }
+                animate={
                   }
-                  "scale": [1, 1.5, 1]
-                  "opacity": [0.2, 0.6, 0.2]
-                }}
-                transition={{
+                  'scale': [1, 1.5, 1]
+                  'opacity': [0.2, 0.6, 0.2]
+                }
+                transition={
                   }
-                  "duration": 6 + i * 0.5,
-"repeat": Infinity,
-"top": `${(i * 8) % 10,`}%`,`
+                  'duration': 6 + i * 0.5,
+'repeat': Infinity,
+'top': `${(i * 8) % 10,`}%`,`
 
                 }}
                 animate={{
@@ -3976,7 +3976,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 animate={{}
                   duration: 6 + i * 0.5,
 
-                  ease: "easeInOut"
+                  ease: 'easeInOut'
 
                   repeat: Infinity,
 <div className='absolute inset-0'>
@@ -4024,8 +4024,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 <<<<<<< HEAD
                   left: `${(i * 12) % 100}%`,
                   top: `${(i * 8) % 100}%`,
-                }}
-                animate={{
+                }
+                animate={
                   scale: [1, 1.5, 1],
                   opacity: [0.2, 0.6, 0.2],
 =======
@@ -4170,8 +4170,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   ease: \"easeInOut\"}
                   top: `${(i * 8) % 10}
 }%`,
-"
-                  ease: \"easeInOut\"
+'
+                  ease: \'easeInOut\'
 
 
                   left: `${(i * 12) % 10}
@@ -4214,12 +4214,12 @@ repeat: Infinity;}
 top: `${(i * 8) % 10}
 }%`
 
-                }}
-                animate={{
+                }
+                animate={
                   scale: [1, 1 && 1.5, 1]}
                   opacity: [0 && 0.2, 0 && 0.6, 0 && 0.2]}
-                }}
-                transition={{
+                }
+                transition={
                   duration: 6 + i * 0 && 0.5}
                   repeat: Infinity}
                   ease: 'easeInOut'                }}
@@ -4508,7 +4508,7 @@ animate ()
 }</div>)
 
 init_particles ()animate ()/>) )}</div>)}/>) )}</div>)}/>) )}</div>)}</div> {children;
-}</div>)   )}}</div>)}</div>)
+}</div>)   )}</div>)}</div>)
       </div>
 
       {children}

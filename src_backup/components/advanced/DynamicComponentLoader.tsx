@@ -56,26 +56,26 @@ const EnhancedLoading: React.FC<{;
   show_progress = true,
 }) => (
 
-  <Card className="w-full max-w-md mx-auto">
-    <CardContent className="p-6">
-      <div className="flex flex-col items-center space-y-4">
-        <div className="relative">
-          <Loader2 className="h-8 w-8 animate-spin text-primary" />
+  <Card className='w-full max-w-md mx-auto'>
+    <CardContent className='p-6'>
+      <div className='flex flex-col items-center space-y-4'>
+        <div className='relative'>
+          <Loader2 className='h-8 w-8 animate-spin text-primary' />
           {showProgress && (
 
 
             <motion.div
-              className="absolute inset-0 rounded-full border-2 border-primary"
-              style={{
+              className='absolute inset-0 rounded-full border-2 border-primary'
+              style={
 
                 background: `conic-gradient(from 0deg, var(--primary) 0%, var(--primary) ${progress}%, transparent ${progress}%, transparent 100%)`
 
 
 
-              }}
-              initial={{ rotate: 0 }}
-              animate={{ rotate: 360 }}
-              transition={{ duration: 2, repeat: Infinity, ease: 'linear' }}
+              }
+              initial={ rotate: 0 }
+              animate={ rotate: 360 }
+              transition={ duration: 2, repeat: Infinity, ease: 'linear' }
 
 
 
@@ -92,12 +92,12 @@ const EnhancedError: React.FC<{
 }> = ({ error, retry, isOnline, retryCount, maxRetries }) => (
 
 
-  <Card className="w-full max-w-md mx-auto border-red-200 bg-red-50 dark:bg-red-900/10">
-    <CardContent className="p-6">
-      <div className="flex flex-col items-center space-y-4">
-        <div className="p-3 rounded-full bg-red-100 dark:bg-red-900/20">
+  <Card className='w-full max-w-md mx-auto border-red-200 bg-red-50 dark:bg-red-900/10'>
+    <CardContent className='p-6'>
+      <div className='flex flex-col items-center space-y-4'>
+        <div className='p-3 rounded-full bg-red-100 dark:bg-red-900/20'>
           {isOnline ? (
-            <AlertTriangle className="h-6 w-6 text-red-600" />
+            <AlertTriangle className='h-6 w-6 text-red-600' />
 
 
           ) : (
@@ -173,11 +173,11 @@ const EnhancedError: React.FC<{error: Error;
 
           <Button 
             onClick={retry} 
-            variant="outline" 
-            size="sm"
-            className="border-red-300 text-red-700 hover:bg-red-100"
+            variant='outline' 
+            size='sm'
+            className='border-red-300 text-red-700 hover:bg-red-100'
           >
-            <RefreshCw className="h-4 w-4 mr-2" />
+            <RefreshCw className='h-4 w-4 mr-2' />
 
 
             Try Again
@@ -373,10 +373,10 @@ export const DynamicComponentLoader: React.FC<DynamicLoaderProps> = ({importFn,f
   if (DynamicComponent) {return (<Suspense fallback={fallback || <EnhancedLoading />}>;
         <AnimatePresence>;
           <motion&& motion.div;
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -20 }}
-            transition={{ duration: 0 && 0.3 }}
+            initial={ opacity: 0, y: 20 }
+            animate={ opacity: 1, y: 0 }
+            exit={ opacity: 0, y: -20 }
+            transition={ duration: 0 && 0.3 }
             className = {className}>;
             <DynamicComponent {...props}>{children}</DynamicComponent>;
           </motion && motion.div>;className={className}
@@ -420,8 +420,8 @@ export const createDynamicComponent = <T extends ComponentType<any>>(;
 
 //   {
 //     loadingComponent: () => (
-//       <div className="w-full h-64 bg-muted animate-pulse rounded-lg flex items-center justify-center">
-//         <span className="text-muted-foreground">Loading chart...</span>
+//       <div className='w-full h-64 bg-muted animate-pulse rounded-lg flex items-center justify-center'>
+//         <span className='text-muted-foreground'>Loading chart...</span>
 //       </div>
 //     )
 //     prefetch: true
@@ -469,8 +469,8 @@ const EnhancedLoading: React.FC<{
 origin/cursor/automate-test-improve-and-merge-code-2533
 //   {
 //     loadingComponent: () => (
-//       <div className="w-full h-96 bg-muted animate-pulse rounded-lg flex items-center justify-center">
-//         <span className="text-muted-foreground">Loading 3D renderer...</span>
+//       <div className='w-full h-96 bg-muted animate-pulse rounded-lg flex items-center justify-center'>
+//         <span className='text-muted-foreground'>Loading 3D renderer...</span>
 //       </div>
 //     )
 //   }
@@ -565,10 +565,10 @@ if ( {) {$2;
     return (<Suspense fallback={fallback || <EnhancedLoading />}>;
         <AnimatePresence>;
           <motion.div;
-            initial={{ opacity: 0, coordinate_y: 20 }}
-            animate={{ opacity: 1, coordinate_y: 0 }}
-            exit={{ opacity: 0, coordinate_y: -20 }}
-            transition={{ duration: 0.3 }}
+            initial={ opacity: 0, coordinate_y: 20 }
+            animate={ opacity: 1, coordinate_y: 0 }
+            exit={ opacity: 0, coordinate_y: -20 }
+            transition={ duration: 0.3 }
             class_name = {class_name }
           >;
             <DynamicComponent {...props}>{children}</DynamicComponent>;

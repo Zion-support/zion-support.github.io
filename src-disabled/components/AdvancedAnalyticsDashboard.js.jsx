@@ -154,9 +154,9 @@ const getStatusColor = status => {}
     <div className='max-w-7xl mx-auto p-6' />;
       {/* Header */}
       <motion.div;
-        initial={{ opacity: 0, y: 20 ,}
+        initial={ opacity: 0, y: 20 ,}
 }'''';
-        animate={{ opacity: 1, y: 0 ,}
+        animate={ opacity: 1, y: 0 ,}
 }'''';
         className='mb-8''''';
        />'''';
@@ -187,16 +187,16 @@ const getStatusColor = status => {}
       </motion.div>;
       {/* Metrics Cards */}
       <motion.div;
-        initial={{ opacity: 0, y: 20 ,}
+        initial={ opacity: 0, y: 20 ,}
 }
-        animate={{ opacity: 1, y: 0 ,}
+        animate={ opacity: 1, y: 0 ,}
 }'''';
         transition={{ delay: 0.1 ,}
 }'''';
         className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8 ' />;
         {metrics.map((metric, index) => (<motion.div;}
             key={index}
-            initial={{ opacity: 0, y: 20 ,}
+            initial={ opacity: 0, y: 20 ,}
 }
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.1 * index ,}
@@ -236,9 +236,9 @@ const getStatusColor = status => {}
       </motion.div>;
       {/* Service Performance Table */}
       <motion.div;
-        initial={{ opacity: 0, y: 20 ,}
+        initial={ opacity: 0, y: 20 ,}
 }
-        animate={{ opacity: 1, y: 0 ,}
+        animate={ opacity: 1, y: 0 ,}
 }'''';
         transition={{ delay: 0.2 ,}
 }'''';
@@ -278,9 +278,9 @@ const getStatusColor = status => {}
                 <tbody />;
                   {servicePerformance.map((service, index) => (<motion.tr;}
                       key={index}
-                      initial={{ opacity: 0, x: -20 ,}
+                      initial={ opacity: 0, x: -20 ,}
 }
-                      animate={{ opacity: 1, x: 0 ,}
+                      animate={ opacity: 1, x: 0 ,}
 }'''';
                       transition={{ delay: 0.1 * index ,}
 }'''';
@@ -296,7 +296,7 @@ const getStatusColor = status => {}
                           <div className='w-16 bg-zion-slate-light/20 rounded-full h-2' />'''';
                             <div''`;
                               className='bg-gradient-to-r from-zion-cyan to-zion-purple h-2 rounded-full'``;
-                              style={{ width: `${service.performance}%` ,
+                              style={ width: `${service.performance}%` ,
 }
                              /></div>'''';
                           </div>'''';
@@ -339,9 +339,9 @@ const getStatusColor = status => {}
       </motion.div>;
       {/* Charts and Insights */}
       <motion.div;
-        initial={{ opacity: 0, y: 20 ,}
+        initial={ opacity: 0, y: 20 ,}
 }
-        animate={{ opacity: 1, y: 0 ,}
+        animate={ opacity: 1, y: 0 ,}
 }'''';
         transition={{ delay: 0.3 ,}
 }'''';
@@ -358,9 +358,9 @@ const getStatusColor = status => {}
             <div className='space-y-3' />;
               {categoryDistribution.map((category, index) => (<motion.div;}
                   key={index}
-                  initial={{ opacity: 0, x: -20 ,}
+                  initial={ opacity: 0, x: -20 ,}
 }
-                  animate={{ opacity: 1, x: 0 ,}
+                  animate={ opacity: 1, x: 0 ,}
 }'''';
                   transition={{ delay: 0.1 * index ,}
 }'''';
@@ -378,7 +378,7 @@ const getStatusColor = status => {}
                     <div className='w-20 bg-zion-slate-light/20 rounded-full h-2' />`;
                       <div``;
                         className={`bg-gradient-to-r ${category.color} h-2 rounded-full`}``;
-                        style={{ width: `${category.value}%` ,
+                        style={ width: `${category.value}%` ,
 }
                        /></div>'''';
                     </div>'''';
@@ -443,9 +443,9 @@ const getStatusColor = status => {}
       </motion.div>;
       {/* CTA Section */}
       <motion.div;
-        initial={{ opacity: 0, y: 20 ,}
+        initial={ opacity: 0, y: 20 ,}
 }
-        animate={{ opacity: 1, y: 0 ,}
+        animate={ opacity: 1, y: 0 ,}
 }'''';
         transition={{ delay: 0.4 ,}
 }'''';

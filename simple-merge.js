@@ -30,7 +30,7 @@ try {
         if (file.trim()) {
           console.log($2);
           try {
-            execSync(`git checkout --ours "${file}"`)
+            execSync(`git checkout --ours '${file}'`)
           } catch (e) {
             execSync(`git checkout --theirs "${file}"`)
 =======
@@ -231,7 +231,7 @@ try {;
         if (file.trim()) {;
           console.log(`Resolving conflicts in:${file}`);
           try {;
-            execSync(`git checkout --ours "${file}"`);
+            execSync(`git checkout --ours '${file}'`);
           } catch (e) {;
             execSync(`git checkout --theirs "${file}"`);          }
           execSync(`git add "${file}"`)
@@ -310,12 +310,12 @@ try {;
 
 >>>>>>> merged-prs-20250907-203621
           }
-          execSync(`git add "${file}"`)
+          execSync(`git add '${file}'`)
         }
       }
       
       // Commit the merge
-      execSync('git commit -m "feat: resolve merge conflicts automatically\n\n- Resolved merge conflicts by accepting appropriate versions\n- Integrated latest changes from main branch\n- All services and improvements preserved"')
+      execSync('git commit -m 'feat: resolve merge conflicts automatically\n\n- Resolved merge conflicts by accepting appropriate versions\n- Integrated latest changes from main branch\n- All services and improvements preserved'')
     }
   }
   

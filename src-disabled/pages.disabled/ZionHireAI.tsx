@@ -118,7 +118,7 @@ export default function ZionHireAI() {
         {/* Hero Section */}
         <section
           className="relative bg-gradient-to-br from-zion-blue to-zion-blue-dark py-16 md:py-24"",
-          style={primaryColor ? { backgroundImage: `linear-gradient(to bottom right, ${primaryColor}, rgba(25, 33, 52, 1))` } : {}}`
+          style={primaryColor ? { backgroundImage: `linear-gradient(to bottom right, ${primaryColor}, rgba(25, 33, 52, 1))` } : {}`
         >
           <div className="container mx-auto px-4 md:px-6">"
             <div className="grid gap-6 md:grid-cols-2 items-center">"

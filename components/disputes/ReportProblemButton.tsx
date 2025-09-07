@@ -365,7 +365,6 @@ const query = new URLSearchParams({;}
 
   );
 }
-<<<<<<< HEAD
 import Link from 'next/link';
 export default function ReportProblemButton({ projectId, entityType, entityId }: { projectId: string, entityType?: 'milestone' | 'contract' | 'thread', entityId?: string }) {
   const query = new URLSearchParams({ projectId, ...(entityType ? { entityType } : {}), ...(entityId ? { entityId } : {}) });

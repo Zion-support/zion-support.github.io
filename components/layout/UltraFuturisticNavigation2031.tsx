@@ -1356,7 +1356,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         </div>
       </div>'
       <div className='bg-gradient-to-r from-cyan-900 via-purple-900 to-pink-900 text-white py-2 px-4 text-sm'>;'
-        <div className='max-w-7xl mx-auto flex flex-col "sm":flex-row justify-between items-center space-y-2 "sm":space-y-0'>;'
+        <div className='max-w-7xl mx-auto flex flex-col 'sm':flex-row justify-between items-center space-y-2 'sm':space-y-0'>;'
           <div className='flex items-center space-x-6'>;'
             <div className='flex items-center space-x-2'>;'
               <Phone className='w-4 h-4 text-cyan-400' />;'
@@ -2054,7 +2054,6 @@ services: [;
 const main_navigation = [;
   { name: 'Home', href: '/', icon: Home },{ name: 'Services', href: '/services', icon: Briefcase },{name: '2030 Services',href: '/services / 2030 - futuristic - services',icon: Rocket,},  { name: 'AI Solutions', href: '/ai - services', icon: Brain },  { name: '2030 Services', href: '/services / 2030 - futuristic - services', icon: Rocket },{ name: 'AI Solutions', href: '/ai - services', icon: Brain },{ name: 'IT Solutions', href: '/it - services', icon: Cpu },{ name: 'Quantum Tech', href: '/quantum - services', icon: Atom },{ name: 'Space Tech', href: '/space - tech', icon: Rocket },{ name: 'Pricing', href: '/pricing', icon: DollarSign },{ name: 'About', href: '/about', icon: Users },{ name: 'Contact', href: '/contact', icon: MessageCircle },{ name: 'Resources', href: '/resources', icon: BookOpen }, ];  { name: 'Resources', href: '/resources', icon: BookOpen }
 ];export default /**;
-=======
       {
         name: 'Neuromorphic Computing Platform',
   href: '/neuromorphic - computing - platform',
@@ -2192,7 +2191,6 @@ function UltraFuturisticNavigation2031() {const [is_open, setIsOpen] = useState 
         </div>;
       </div>;
       {/* Main Navigation */}
-<<<<<<< HEAD
       <nav;`
         className={`fixed top - 0 left - 0 right - 0 z - 50 transition - all duration - 300 ${}
           scrolled;'
@@ -2275,7 +2273,7 @@ function UltraFuturisticNavigation2031() {const [is_open, setIsOpen] = useState 
               <div className='w - 12 h - 12 bg - gradient - to - r from - cyan - 500 via - purple - 500 to - pink - 500 rounded - 2xl flex items - center justify - center'>;
                 <Rocket className='w - 6 h - 6 text - white' />;
               </div>;
-              <div className='hidden "sm":block'>;'
+              <div className='hidden 'sm':block'>;'
                 <h1 className='text - 2xl font - bold bg - gradient - to - r from - cyan - 400 via - purple - 400 to - pink - 400 bg - clip - text text - transparent'>;'
                   Zion Tech Group;
                 </h1>;
@@ -2290,11 +2288,11 @@ function UltraFuturisticNavigation2031() {const [is_open, setIsOpen] = useState 
                 <h1 className="text - 2xl font - bold bg - gradient - to - r from - cyan - 400 via - purple - 400 to - pink - 400 bg - clip - text text - transparent">;
                   Zion Tech Group;
                 </h1>;
-                <p className="text - xs text - gray - 400">2031 Future Technology</p>;"
+                <p className='text - xs text - gray - 400'>2031 Future Technology</p>;'
               </div>;
             </motion.div>;
             {/* Desktop Navigation */}
-            <div className='hidden "lg":flex items - center space - x-8'>            <div className="hidden "lg":flex items - center space - x-8">;"
+            <div className='hidden 'lg':flex items - center space - x-8'>            <div className='hidden 'lg':flex items - center space - x-8'>;'
               {main_navigation.map ((item, index) => (<motion.div;
                   }
                   key={item.name}
@@ -2344,7 +2342,7 @@ function UltraFuturisticNavigation2031() {const [is_open, setIsOpen] = useState 
                   {/* Hover effect */}
                   <div className="absolute -bottom - 1 left - 0 w - 0 h - 0.5 bg - gradient - to - r from - cyan - 500 to - purple - 500 transition - all duration - 300 group - hover:w - full"></div>;
                   {/* Hover effect */}
-                  <div className="absolute -bottom - 1 left - 0 w - 0 h - 0.5 bg - gradient - to - r from - cyan - 500 to - purple - 500 transition - all duration - 300 group - "hover":w - full"></div>;"
+                  <div className='absolute -bottom - 1 left - 0 w - 0 h - 0.5 bg - gradient - to - r from - cyan - 500 to - purple - 500 transition - all duration - 300 group - 'hover':w - full'></div>;'
                 </motion.div>))}
             </div>;
             {/* CTA Buttons */}
@@ -2382,7 +2380,7 @@ function UltraFuturisticNavigation2031() {const [is_open, setIsOpen] = useState 
 <<<<<<< HEAD
               </motion && motion.button>;
               <motion&& motion.button;
-                initial={{ opacity: 0, scale: 0 && 0.8 }}
+                initial={ opacity: 0, scale: 0 && 0.8 }
             {/* Mobile menu button */}
                 initial={{ opacity: 0, scale: 0.8 }}
                 animate={{ opacity: 1, scale: 1 }}'
@@ -2734,7 +2732,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                             </h3>;
                             <p className=text - sm text - gray - 400'>;
                               {category.description}
-                                transition={{}
+                                transition={}
                                   duration: 0.2,
                                   delay: service_index * 0.05,
 <div className='hidden lg:block border-t border-gray-800/50 bg-black/40 backdrop-blur-sm' />
@@ -2791,7 +2789,6 @@ className='relative group'
                     <ChevronDown className='w-3 h-3 transition-transform duration-200 group-hover:rotate-180'    />;
                   </button>;
                   {/* Dropdown Menu */}
-<<<<<<< HEAD
                   <AnimatePresence>;
                     {activeCategory === category.title && (<motion.div;
                   <AnimatePresence>

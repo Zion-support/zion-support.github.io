@@ -122,6 +122,9 @@ style={{background: customColor;}
   )}}
 }
 }
+  )}
+}
+}
   )}ursor/integrate-build-improve-and-re-verify-8f7d;
 }}
 ;
@@ -234,9 +237,9 @@ export function Logo() {
   }
   const logoColor = customColor || '#22D3EE';'
 return (;
-    <Link to="/" className="flex items-center space-x-3 group">"
+    <Link to='/' className='flex items-center space-x-3 group'>'
       <div,
-className="w-10 h-10 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-xl flex items-center justify-center shadow-lg group-"hover":shadow-xl transition-all duration-300""
+className='w-10 h-10 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-xl flex items-center justify-center shadow-lg group-'hover':shadow-xl transition-all duration-300''
     </Link>;
 =======
 
@@ -350,12 +353,12 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5,
 ursor/integrate-build-improve-and-re-verify-8f7d,
 origin/automation-improvements-final,
 return (;
-    <Link to="/" className="flex items-center space-x-3 group">"
+    <Link to='/' className='flex items-center space-x-3 group'>'
       <div,
-className="w-10 h-10 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-xl flex items-center justify-center shadow-lg group-"hover":shadow-xl transition-all duration-300""
-        style={{
+className='w-10 h-10 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-xl flex items-center justify-center shadow-lg group-'hover':shadow-xl transition-all duration-300''
+        style={
           }
-          "background": customColor
+          'background': customColor
             ? `linear-gradient(135deg,${customColor},${customColor}dd)``            : 'linear-gradient(135deg,#22D3EE,#A855F7)''
 =======
 

@@ -696,7 +696,7 @@ axios.create = jest.fn(() => axios);
 // Some test files were originally written for Vitest and import utilities from 'vitest'.
 // To keep migrating gradually while still running the Jest suite successfully, we create
 // a lightweight shim that re-maps the most common Vitest helpers to their Jest equivalents.
-// This avoids individual test failures like "Vitest cannot be imported in a CommonJS module".
+// This avoids individual test failures like 'Vitest cannot be imported in a CommonJS module'.
 //
 // NOTE: When the test suite is fully migrated to Vitest this shim can be removed together
 // with the associated `moduleNameMapper` entry in `jest.config.cjs`.

@@ -11,5 +11,4 @@ window.scrollTo (opts);
 document.documentElement.scrollTo (opts);"
 document.body.scrollTo (opts);""
 };";""
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7 return (<button > <ArrowUp className="h-5 w-5" /> </button>) ;""
 }"""

@@ -260,17 +260,17 @@ export function AIEnhancementPanel(): any ({;
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:src/components/ai-enhancement/AIEnhancementPanel.tsx
   return (
-    <Card className="w-full max-w-2xl mx-auto">"
+    <Card className='w-full max-w-2xl mx-auto'>'
       <CardHeader>
-        <CardTitle className="flex items-center gap-2">"
-          <Sparkles className="h-5 w-5 text-primary" />"
+        <CardTitle className='flex items-center gap-2'>'
+          <Sparkles className='h-5 w-5 text-primary' />'
           {title}
         </CardTitle>
       </CardHeader>
-      <CardContent className="space-y-4">"
+      <CardContent className='space-y-4'>'
         {/* Input area */}
-        <div className="space-y-2">"
-          <label className="text-sm font-medium">Content to enhance</label>"
+        <div className='space-y-2'>'
+          <label className='text-sm font-medium'>Content to enhance</label>'
           <Textarea
 <<<<<<< HEAD:src-disabled/components/ai-enhancement/AIEnhancementPanel.tsx
             placeholder="Enter your content to enhance...""
@@ -303,11 +303,11 @@ export function AIEnhancementPanel(): any ({;
           />;
         </div>;
         {/* Context input */}
-        <div className="space-y-2">"
-          <label className="text-sm font-medium">Context (optional)</label>"
+        <div className='space-y-2'>'
+          <label className='text-sm font-medium'>Context (optional)</label>'
           <Textarea
-            placeholder="Add any relevant context to guide the AI...""
-            className="min-h-[60px]"",
+            placeholder='Add any relevant context to guide the AI...''
+            className='min-h-[60px]'',
             value={options.context}
             onChange={(e) => handleInputChange(e, 'context')}'
           />;
@@ -334,7 +334,7 @@ export function AIEnhancementPanel(): any ({;
             <label className='text-sm font-medium'>;
               Special instructions (optional);
             </label>;
-            <Input placeholder="E.g., 'Make it more conversational' or 'Focus on leadership skills'""
+            <Input placeholder='E.g., 'Make it more conversational' or 'Focus on leadership skills'''
               value={options.instructions}
           disabled={isEnhancing || (!options.content && !options.context)} />
               onChange={(e) => handleInputChange(e, 'instructions')}'
@@ -344,7 +344,7 @@ export function AIEnhancementPanel(): any ({;
         {/* Generate button */}
         <Button
           onClick={handleGenerate}
-          className="w-full" "
+          className='w-full' '
   initialContent = '';
 }: AIEnhancementPanelProps) {;
     ...defaultOptions,;
@@ -396,31 +396,31 @@ export function AIEnhancementPanel({
   showInstructions;
 
   return (
-    <Card className="w-full max-w-2xl mx-auto">
-      <CardHeader>"
-        <CardTitle className="flex items-center gap-2">"
-          <Sparkles className="h-5 w-5 text-primary" />
+    <Card className='w-full max-w-2xl mx-auto'>
+      <CardHeader>'
+        <CardTitle className='flex items-center gap-2'>'
+          <Sparkles className='h-5 w-5 text-primary' />
           {title}
         </CardTitle>
-      </CardHeader>"
-      <CardContent className="space-y-4">
-        {/* Input area */}"
-        <div className="space-y-2">"
-          <label className="text-sm font-medium">Content to enhance</label>
+      </CardHeader>'
+      <CardContent className='space-y-4'>
+        {/* Input area */}'
+        <div className='space-y-2'>'
+          <label className='text-sm font-medium'>Content to enhance</label>
 
-            placeholder="Enter your content to enhance..."
+            placeholder='Enter your content to enhance...'
 
-            className="min-h-[100px]"
+            className='min-h-[100px]'
             value={options.content}'
             onChange={(e) => handleInputChange(e, 'content')}
           />;
         </div>;
-        {/* Context input */}"
-        <div className="space-y-2">"
-          <label className="text-sm font-medium">Context (optional)</label>
-          <Textarea"
-            placeholder="Add any relevant context to guide the AI...""
-            className="min-h-[60px]"
+        {/* Context input */}'
+        <div className='space-y-2'>'
+          <label className='text-sm font-medium'>Context (optional)</label>
+          <Textarea'
+            placeholder='Add any relevant context to guide the AI...''
+            className='min-h-[60px]'
             value={options.context}'
             onChange={(e) => handleInputChange(e, 'context')}
           />;
@@ -429,11 +429,11 @@ export function AIEnhancementPanel({
         {/* Instructions input (optional) */}
 
         {showInstructions && (
-          <div className="space-y-2">
-            <label className="text-sm font-medium">Special instructions (optional)</label>
+          <div className='space-y-2'>
+            <label className='text-sm font-medium'>Special instructions (optional)</label>
             <Input
 
-              placeholder="E.g., 'Make it more conversational' or 'Focus on leadership skills'"
+              placeholder='E.g., 'Make it more conversational' or 'Focus on leadership skills''
   initialContent = ,;')
 }: AIEnhancementPanelProps) {;
 )
@@ -452,34 +452,34 @@ export function AIEnhancementPanel({
 <<<<<<< HEAD:src-disabled/components/ai-enhancement/AIEnhancementPanel.tsx
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
 
-    <Card className="w-full max-w-2xl mx-auto">"
+    <Card className='w-full max-w-2xl mx-auto'>'
 
       <CardHeader>
-"
-        <CardTitle className="flex items-center gap-2">"
-          <Sparkles className="h-5 w-5 text-primary" />"
+'
+        <CardTitle className='flex items-center gap-2'>'
+          <Sparkles className='h-5 w-5 text-primary' />'
 
-      <CardContent className="space-y-4">"
-        <div className="space-y-2">"
-</div>"
-          <label className="text-sm font-medium">Content to enhance</label>"
-          <Textarea;"
-            placeholder="Enter your content to enhance..."""
-            className="min-h-[100px]""
-            value={options.content}"
+      <CardContent className='space-y-4'>'
+        <div className='space-y-2'>'
+</div>'
+          <label className='text-sm font-medium'>Content to enhance</label>'
+          <Textarea;'
+            placeholder='Enter your content to enhance...'''
+            className='min-h-[100px]''
+            value={options.content}'
             onChange={(e) => handleInputChange(e, 'content')}
 
-          <label className="text-sm font-medium">Context (optional)</label>"
-            placeholder="Add any relevant context to guide the AI..."""
-            className="min-h-[60px]""
-            value={options.context}"
+          <label className='text-sm font-medium'>Context (optional)</label>'
+            placeholder='Add any relevant context to guide the AI...'''
+            className='min-h-[60px]''
+            value={options.context}'
             onChange={(e) => handleInputChange(e, 'context')}
 
             <label className='text-sm font-medium'>;
 </label>
             </label>;
             <Input;
-              placeholder="E.g., 'Make it more conversational' or 'Focus on leadership skills'""
+              placeholder='E.g., 'Make it more conversational' or 'Focus on leadership skills'''
 pr-12325
               value={options.instructions}
 =======
@@ -497,7 +497,7 @@ pr-12325
         <Button 
           onClick={handleGenerate} 
 
-          className="w-full" 
+          className='w-full' 
           disabled={isEnhancing || !options.content && !options.context}
         >
 <<<<<<< HEAD
@@ -525,12 +525,12 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:src/components/ai-enhancement/AIEnhancementPanel.tsx
               Enhancing...
         <Button;
-          onClick={handleGenerate} "
-          className="w-full""
+          onClick={handleGenerate} '
+          className='w-full''
           disabled={isEnhancing || !options.content && !options.context}
         >
 
-            <>"
+            <>'
               <Loader2 className='mr-2 h-4 w-4 animate-spin' />
 </Loader2>
 pr-12325
@@ -598,12 +598,12 @@ ursor/fix-website-loading-errors-and-merge-6662
           <div className="space-y-2 mt-4">
             <div className="flex justify-between items-center">
 
-              <label className="text-sm font-medium">Generated content</label>
-              <Button "
-                variant="ghost" "
-                size="sm" 
-                onClick={handleCopy}"
-                className="h-8"
+              <label className='text-sm font-medium'>Generated content</label>
+              <Button '
+                variant='ghost' '
+                size='sm' 
+                onClick={handleCopy}'
+                className='h-8'
               >
 <<<<<<< HEAD
 =======
@@ -615,9 +615,9 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:src/components/ai-enhancement/AIEnhancementPanel.tsx
                 {copied ? (
 
-                  <><Check className="h-4 w-4 mr-1" /> Copied</>
-                ) : ("
-                  <><Copy className="h-4 w-4 mr-1" /> Copy</>
+                  <><Check className='h-4 w-4 mr-1' /> Copied</>
+                ) : ('
+                  <><Copy className='h-4 w-4 mr-1' /> Copy</>
                 )}
 <<<<<<< HEAD:src-disabled/components/ai-enhancement/AIEnhancementPanel.tsx
 
@@ -651,7 +651,7 @@ ursor/fix-website-loading-errors-and-merge-6662
 
                 onChange={(e) => setGeneratedContent(e.target.value)}
 
-                className="min-h-[200px]"
+                className='min-h-[200px]'
               />
 
             </div>

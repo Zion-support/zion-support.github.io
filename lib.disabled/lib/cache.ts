@@ -1,22 +1,22 @@
 interface CacheItem<T> {
-  "value": T;
+  'value': T;
   expiresAt: number;
   createdAt: number;'
 
 interface CacheConfig {
-  "defaultTTL": number; // Time to live in milliseconds
+  'defaultTTL': number; // Time to live in milliseconds
   maxSize: number;
   cleanupInterval: number;'
 
 class CacheManager<T = any> {
-  private "cache": 'Map<string', CacheItem<T>> = new Map();
-  private "config": CacheConfig;
+  private 'cache': 'Map<string', CacheItem<T>> = new Map();
+  private 'config': CacheConfig;
   private cleanupTimer: NodeJS.Timeout | null = null;
   constructor(config: Partial<CacheConfig> = {}) {
     this.config = {
-      "defaultTTL": config.defaultTTL || 5 * 60 * 1000, // 5 minutes
-      "maxSize": config.maxSize || 1000,
-      "cleanupInterval": config.cleanupInterval || 60 * 1000 // 1 minute
+      'defaultTTL': config.defaultTTL || 5 * 60 * 1000, // 5 minutes
+      'maxSize': config.maxSize || 1000,
+      'cleanupInterval': config.cleanupInterval || 60 * 1000 // 1 minute
     }
     this.startCleanup()}
   private startCleanup() {
@@ -24,13 +24,13 @@ class CacheManager<T = any> {
       this.cleanup()}, this.config.cleanupInterval)}
   private cleanup() {
     const now = Date.now();
-    const "keysToDelete": string[] = [];
+    const 'keysToDelete': string[] = [];
     this.cache.forEach((item, key) => {
       if (item.expiresAt < now) {
         keysToDelete.push(key)}
     });
     keysToDelete.forEach(key => this.cache.delete(key))}
-  set("key": string, "value": T, ttl?: number): void {
+  set('key': string, 'value': T, ttl?: number): void {
     // Remove oldest items if cache is full
     if (this.cache.size >= this.config.maxSize) {
       const firstKey = this.cache.keys().next().value;
@@ -42,9 +42,9 @@ const now = Date.now();
     this.cache.set(key, {
       value,
       expiresAt,
-      "createdAt": now
+      'createdAt': now
 })}
-  get("key": string): T | null {
+  get('key': string): T | null {
     const item = this.cache.get(key);
     if (!item) {
       return null}
@@ -52,10 +52,10 @@ const now = Date.now();
       this.cache.delete(key);
       return null}
     return item.value}
-  has("key": string): boolean {
+  has('key': string): boolean {
     const item = this.cache.get(key);
     return item ? item.expiresAt > Date.now() : false}
-  delete("key": string): boolean {
+  delete('key': string): boolean {
     return this.cache.delete(key)}
   clear(): void {
     this.cache.clear()}
@@ -73,10 +73,10 @@ const now = Date.now();
         active++}
     });
     return {
-      "total": 'this.cache.size',
+      'total': 'this.cache.size',
       active,
       expired,
-      "hitRate": 0 // This would need to be tracked separately
+      'hitRate': 0 // This would need to be tracked separately
     }
   destroy() {
     if (this.cleanupTimer) {
@@ -88,22 +88,22 @@ const now = Date.now();
 }
 
 export const apiCache = new CacheManager({
-  "defaultTTL": '5 * 60 * 1000', // 5 minutes
-  "maxSize": 500
+  'defaultTTL': '5 * 60 * 1000', // 5 minutes
+  'maxSize': 500
 });
 }
 }
 
 export const userCache = new CacheManager({
-  "defaultTTL": '15 * 60 * 1000', // 15 minutes
-  "maxSize": 100
+  'defaultTTL': '15 * 60 * 1000', // 15 minutes
+  'maxSize': 100
 });
 }
 }
 
 export const staticCache = new CacheManager({
-  "defaultTTL": '60 * 60 * 1000', // 1 hour
-  "maxSize": 200
+  'defaultTTL': '60 * 60 * 1000', // 1 hour
+  'maxSize': 200
 });
 }
 }

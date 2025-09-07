@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
@@ -51,7 +51,7 @@ import {},
   HardDrive;
   } from 'lucide-react';
 
-const microSaaSProducts = ["{}"]
+const microSaaSProducts = ['{}']
     title: 'Cloud Cost Guard (FinOps Assistant)',
     description: 'Anomaly detection, rightsizing, forecasting and budget guardrails across AWS/Azure/GCP.',
     icon: DollarSign,
@@ -1779,12 +1779,12 @@ const benefits = [
   {
 ];
 
-const pricingTiers = ["{}"]
+const pricingTiers = ['{}']
     name: 'Starter',
     description: 'Perfect for small teams and MVPs',
     price: '$299',
     period: '/month',
-    features: [""]
+    features: ['']
       'Up to 1,000 users',
       'Basic analytics',
       'Email support',
@@ -1798,7 +1798,7 @@ const pricingTiers = ["{}"]
     description: 'Ideal for growing businesses',
     price: '$799',
     period: '/month',
-features: ['Up to 10, "000 users'", ""]
+features: ['Up to 10, '000 users'', '']
       'Advanced analytics',
       'Priority support',
       'Enhanced security',
@@ -1812,7 +1812,7 @@ features: ['Up to 10, "000 users'", ""]
     description: 'For large organizations',
     price: 'Custom',
     period: '',
-features: ['Unlimited users', ""]
+features: ['Unlimited users', '']
       'Custom analytics',
       'Dedicated support',
       'Enterprise security',
@@ -1828,46 +1828,46 @@ features: ['Unlimited users', ""]
 export default function MicroSaaSPage() {},
   {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+    <div className='min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900'>
                   <Head>
                   <title>Micro SaaS Solutions - Zion Tech Group</title>
-                  <meta name="description" content="Scalable Micro SaaS solutions designed for specific business needs. Rapid deployment, enterprise security, and built-in analytics." />
-                  <meta name="keywords" content="Micro SaaS, SaaS solutions, cloud applications, scalable software, business automation" />
+                  <meta name='description' content='Scalable Micro SaaS solutions designed for specific business needs. Rapid deployment, enterprise security, and built-in analytics.' />
+                  <meta name='keywords' content='Micro SaaS, SaaS solutions, cloud applications, scalable software, business automation' />
                   </Head>
 
       {/* Hero Section */},
   {
-      <section className="relative bg-gradient-to-br from-purple-900 via-indigo-900 to-blue-900 text-white py-20 overflow-hidden">
-<div className="absolute inset-0">
-                  <div className="absolute top-20 left-10 w-72 h-72 bg-purple-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse">
+      <section className='relative bg-gradient-to-br from-purple-900 via-indigo-900 to-blue-900 text-white py-20 overflow-hidden'>
+<div className='absolute inset-0'>
+                  <div className='absolute top-20 left-10 w-72 h-72 bg-purple-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse'>
                   </div>
-                  <div className="absolute top-40 right-10 w-72 h-72 bg-indigo-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse animation-delay-2000">
+                  <div className='absolute top-40 right-10 w-72 h-72 bg-indigo-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse animation-delay-2000'>
                   </div>
                   </div>
-                  <div className="container mx-auto px-4 relative z-10">
+                  <div className='container mx-auto px-4 relative z-10'>
                   <motion.div
-            initial={{ opacity: 0, y: 30 }},
+            initial={ opacity: 0, y: 30 },
   {
-            animate={{ opacity: 1, y: 0 }},
+            animate={ opacity: 1, y: 0 },
   {
-            transition={{ duration: 0.8 }},
+            transition={ duration: 0.8 },
   {
-            className="text-center"
+            className='text-center'
           >
-<div className="flex items-center justify-center mb-6">
-                  <Cloud className="h-16 w-16 text-purple-400 mr-4" />
-                  <h1 className="text-4xl md:text-6xl font-bold">
-                Micro{' '} <span className="bg-gradient-to-r from-purple-400 to-indigo-400 bg-clip-text text-transparent">
+<div className='flex items-center justify-center mb-6'>
+                  <Cloud className='h-16 w-16 text-purple-400 mr-4' />
+                  <h1 className='text-4xl md:text-6xl font-bold'>
+                Micro{' '} <span className='bg-gradient-to-r from-purple-400 to-indigo-400 bg-clip-text text-transparent'>
                   SaaS;
                 </span>
                   </h1>
                   </div>
-                  <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">Scalable software solutions designed for specific business needs. Rapid deployment, enterprise security, and built-in analytics.</p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                  <Link href="/contact" className="px-8 py-4 bg-gradient-to-r from-purple-500 to-indigo-600 text-white rounded-lg hover:shadow-lg transition-all duration-300 font-semibold">
+                  <p className='text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto'>Scalable software solutions designed for specific business needs. Rapid deployment, enterprise security, and built-in analytics.</p>
+            <div className='flex flex-col sm:flex-row gap-4 justify-center'>
+                  <Link href='/contact' className='px-8 py-4 bg-gradient-to-r from-purple-500 to-indigo-600 text-white rounded-lg hover:shadow-lg transition-all duration-300 font-semibold'>
                 Start Your SaaS;
               </Link>
-                  <Link href="/services" className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-gray-900 transition-all duration-300 font-semibold">
+                  <Link href='/services' className='px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-gray-900 transition-all duration-300 font-semibold'>
                 View All Services;
               </Link>
                   </div>
@@ -1877,76 +1877,76 @@ export default function MicroSaaSPage() {},
 
       {/* Products Grid */},
   {
-      <section className="py-20 bg-gray-50">
-                  <div className="container mx-auto px-4">
+      <section className='py-20 bg-gray-50'>
+                  <div className='container mx-auto px-4'>
                   <motion.div
-            className="text-center mb-16"
-            initial={{ opacity: 0, y: 30 }},
+            className='text-center mb-16'
+            initial={ opacity: 0, y: 30 },
   {
-            whileInView={{ opacity: 1, y: 0 }},
+            whileInView={ opacity: 1, y: 0 },
   {
-            transition={{ duration: 0.8 }},
+            transition={ duration: 0.8 },
   {
-            viewport={{ once: true }},
+            viewport={ once: true },
   {
           >
-<h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-4">Our Micro SaaS Products</h2>
-            <p className="text-lg sm:text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
+<h2 className='text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-4'>Our Micro SaaS Products</h2>
+            <p className='text-lg sm:text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed'>
               Ready-to-deploy SaaS solutions that solve specific business problems with minimal setup time.
             </p>
                   </motion.div>
-                  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                  <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
   {microSaaSProducts.map((product, index) => {},
   {
               const IconComponent = product.icon;
               
                 >
                   {product.popular && (})
-                    <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
-                  <span className="bg-purple-600 text-white px-3 py-1 rounded-full text-xs font-semibold">
+                    <div className='absolute -top-3 left-1/2 transform -translate-x-1/2'>
+                  <span className='bg-purple-600 text-white px-3 py-1 rounded-full text-xs font-semibold'>
                         Popular;
                       </span>
                   </div>
                   )},
   {
-                  <div className="flex items-center justify-between mb-4">
-<div className="text-purple-600 group-hover:text-indigo-600 transition-colors">
-                  <IconComponent className="w-10 h-10" />
+                  <div className='flex items-center justify-between mb-4'>
+<div className='text-purple-600 group-hover:text-indigo-600 transition-colors'>
+                  <IconComponent className='w-10 h-10' />
                   </div>
-                  <span className="text-xs font-semibold text-purple-600 bg-purple-100 px-2 py-1 rounded-full">
+                  <span className='text-xs font-semibold text-purple-600 bg-purple-100 px-2 py-1 rounded-full'>
                       {product.category},
   {
                     </span>
                   </div>
-                  <h3 className="text-xl font-bold text-gray-900 mb-3">
+                  <h3 className='text-xl font-bold text-gray-900 mb-3'>
                     {product.title},
   {
                   </h3>
-                  <p className="text-gray-600 mb-4 leading-relaxed">
+                  <p className='text-gray-600 mb-4 leading-relaxed'>
                     {product.description},
   {
                   </p>
-                  <div className="mb-4">
-<h4 className="font-semibold text-gray-900 mb-2 text-sm">Key "Features": </h4>
-                  <ul className="space-y-1">
+                  <div className='mb-4'>
+<h4 className='font-semibold text-gray-900 mb-2 text-sm'>Key 'Features': </h4>
+                  <ul className='space-y-1'>
                       {product.features.map((feature, featureIndex) => (})
-                        <li key={featureIndex} className="flex items-center text-xs text-gray-600">
-                  <CheckCircle className="w-3 h-3 text-purple-500 mr-2 flex-shrink-0" />
+                        <li key={featureIndex} className='flex items-center text-xs text-gray-600'>
+                  <CheckCircle className='w-3 h-3 text-purple-500 mr-2 flex-shrink-0' />
                           {feature},
   {
                         </li>
                       );
                     </ul>
                   </div>
-                  <div className="mb-4">
-                  <span className="text-sm font-semibold text-purple-600">{product.pricing}</span>
+                  <div className='mb-4'>
+                  <span className='text-sm font-semibold text-purple-600'>{product.pricing}</span>
                   </div>
                   <Link
-                    href="/contact"
-                    className="w-full bg-purple-600 hover:bg-purple-700 text-white py-2 px-4 rounded-lg font-semibold transition-colors inline-flex items-center justify-center text-sm"
+                    href='/contact'
+                    className='w-full bg-purple-600 hover:bg-purple-700 text-white py-2 px-4 rounded-lg font-semibold transition-colors inline-flex items-center justify-center text-sm'
                   >
                     <span>Get Started</span>
-                  <ArrowRight className="w-3 h-3 ml-1" />
+                  <ArrowRight className='w-3 h-3 ml-1' />
                   </Link>
                   </motion.div>
               )
@@ -1958,38 +1958,38 @@ export default function MicroSaaSPage() {},
 
       {/* Features Section */},
   {
-      <section className="py-20 bg-white">
-                  <div className="container mx-auto px-4">
+      <section className='py-20 bg-white'>
+                  <div className='container mx-auto px-4'>
                   <motion.div
-            className="text-center mb-16"
-            initial={{ opacity: 0, y: 30 }},
+            className='text-center mb-16'
+            initial={ opacity: 0, y: 30 },
   {
-            whileInView={{ opacity: 1, y: 0 }},
+            whileInView={ opacity: 1, y: 0 },
   {
-            transition={{ duration: 0.8 }},
+            transition={ duration: 0.8 },
   {
-            viewport={{ once: true }},
+            viewport={ once: true },
   {
           >
-<h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">Why Choose Micro SaaS?</h2>
-            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+<h2 className='text-3xl sm:text-4xl font-bold text-gray-900 mb-4'>Why Choose Micro SaaS?</h2>
+            <p className='text-lg text-gray-600 max-w-2xl mx-auto'>
               Built for modern businesses that need fast, reliable, and scalable solutions.
             </p>
                   </motion.div>
-                  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                  <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
   {features.map((feature, index) => {},
   {
               const IconComponent = feature.icon;
               
                 >
-                  <div className="bg-purple-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <IconComponent className="w-8 h-8 text-purple-600" />
+                  <div className='bg-purple-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4'>
+                  <IconComponent className='w-8 h-8 text-purple-600' />
                   </div>
-                  <h3 className="text-xl font-bold text-gray-900 mb-2">
+                  <h3 className='text-xl font-bold text-gray-900 mb-2'>
                     {feature.title},
   {
                   </h3>
-                  <p className="text-gray-600">
+                  <p className='text-gray-600'>
                     {feature.description},
   {
                   </p>
@@ -2003,42 +2003,42 @@ export default function MicroSaaSPage() {},
 
       {/* Benefits Section */},
   {
-      <section className="py-20 bg-gray-50">
-                  <div className="container mx-auto px-4">
+      <section className='py-20 bg-gray-50'>
+                  <div className='container mx-auto px-4'>
                   <motion.div
-            className="text-center mb-16"
-            initial={{ opacity: 0, y: 30 }},
+            className='text-center mb-16'
+            initial={ opacity: 0, y: 30 },
   {
-            whileInView={{ opacity: 1, y: 0 }},
+            whileInView={ opacity: 1, y: 0 },
   {
-            transition={{ duration: 0.8 }},
+            transition={ duration: 0.8 },
   {
-            viewport={{ once: true }},
+            viewport={ once: true },
   {
           >
-<h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">Proven Results</h2>
-            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+<h2 className='text-3xl sm:text-4xl font-bold text-gray-900 mb-4'>Proven Results</h2>
+            <p className='text-lg text-gray-600 max-w-2xl mx-auto'>
               Our Micro SaaS solutions deliver measurable business impact.
             </p>
                   </motion.div>
-                  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                  <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8'>
   {benefits.map((benefit, index) => {},
   {
               const IconComponent = benefit.icon;
               
                 >
-                  <div className="bg-purple-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <IconComponent className="w-8 h-8 text-purple-600" />
+                  <div className='bg-purple-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4'>
+                  <IconComponent className='w-8 h-8 text-purple-600' />
                   </div>
-                  <div className="text-3xl font-bold text-purple-600 mb-2">
+                  <div className='text-3xl font-bold text-purple-600 mb-2'>
                     {benefit.stat},
   {
                   </div>
-                  <h3 className="text-xl font-bold text-gray-900 mb-2">
+                  <h3 className='text-xl font-bold text-gray-900 mb-2'>
                     {benefit.title},
   {
                   </h3>
-                  <p className="text-gray-600">
+                  <p className='text-gray-600'>
                     {benefit.description},
   {
                   </p>
@@ -2052,25 +2052,25 @@ export default function MicroSaaSPage() {},
 
       {/* Pricing Section */},
   {
-      <section className="py-20 bg-white">
-                  <div className="container mx-auto px-4">
+      <section className='py-20 bg-white'>
+                  <div className='container mx-auto px-4'>
                   <motion.div
-            className="text-center mb-16"
-            initial={{ opacity: 0, y: 30 }},
+            className='text-center mb-16'
+            initial={ opacity: 0, y: 30 },
   {
-            whileInView={{ opacity: 1, y: 0 }},
+            whileInView={ opacity: 1, y: 0 },
   {
-            transition={{ duration: 0.8 }},
+            transition={ duration: 0.8 },
   {
-            viewport={{ once: true }},
+            viewport={ once: true },
   {
           >
-<h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">Simple, Transparent Pricing</h2>
-            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+<h2 className='text-3xl sm:text-4xl font-bold text-gray-900 mb-4'>Simple, Transparent Pricing</h2>
+            <p className='text-lg text-gray-600 max-w-2xl mx-auto'>
               Choose the plan that fits your business needs. No hidden fees, no surprises.
             </p>
                   </motion.div>
-                  <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                  <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>
                     {pricingTiers.map((tier, index) => (})
               <motion.div
                 key={index},
@@ -2079,46 +2079,46 @@ export default function MicroSaaSPage() {},
   {
                   tier.popular ? 'bg-purple-50 border-2 border-purple-200' : 'bg-white'
                 }`}`
-                initial={{ opacity: 0, y: 30 }},
+                initial={ opacity: 0, y: 30 },
   {
-                whileInView={{ opacity: 1, y: 0 }},
+                whileInView={ opacity: 1, y: 0 },
   {
-                transition={{ duration: 0.8, delay: index * 0.1 }},
+                transition={ duration: 0.8, delay: index * 0.1 },
   {
-                viewport={{ once: true }},
+                viewport={ once: true },
   {
               >
                 {tier.popular && (})
-                  <div className="text-center mb-4">
-                  <span className="bg-purple-600 text-white px-3 py-1 rounded-full text-sm font-semibold">
+                  <div className='text-center mb-4'>
+                  <span className='bg-purple-600 text-white px-3 py-1 rounded-full text-sm font-semibold'>
                       Most Popular;
                     </span>
                   </div>
                 )},
   {
-                <h3 className="text-2xl font-bold text-gray-900 mb-2">
+                <h3 className='text-2xl font-bold text-gray-900 mb-2'>
                   {tier.name},
   {
                 </h3>
-                  <p className="text-gray-600 mb-6">
+                  <p className='text-gray-600 mb-6'>
                   {tier.description},
   {
                 </p>
-                  <div className="mb-6">
-                  <span className="text-4xl font-bold text-purple-600">{tier.price}</span>
-                  <span className="text-gray-600">{tier.period}</span>
+                  <div className='mb-6'>
+                  <span className='text-4xl font-bold text-purple-600'>{tier.price}</span>
+                  <span className='text-gray-600'>{tier.period}</span>
                   </div>
-                  <ul className="space-y-3 mb-8">
+                  <ul className='space-y-3 mb-8'>
                   {tier.features.map((feature, featureIndex) => (})
-                    <li key={featureIndex} className="flex items-center text-gray-600">
-                  <CheckCircle className="w-5 h-5 text-purple-500 mr-3 flex-shrink-0" />
+                    <li key={featureIndex} className='flex items-center text-gray-600'>
+                  <CheckCircle className='w-5 h-5 text-purple-500 mr-3 flex-shrink-0' />
                       {feature},
   {
                     </li>
                   );
                 </ul>
                   <Link
-                  href="/contact"
+                  href='/contact'
                   className={`w-full py-3 px-6 rounded-lg font-semibold transition-colors inline-flex items-center justify-center ${`},
   {
                     tier.popular;
@@ -2127,7 +2127,7 @@ export default function MicroSaaSPage() {},
                   }`}`
                 >
                   <span>Choose Plan</span>
-                  <ArrowRight className="w-4 h-4 ml-2" />
+                  <ArrowRight className='w-4 h-4 ml-2' />
                   </Link>
                   </motion.div>
             );
@@ -2137,87 +2137,87 @@ export default function MicroSaaSPage() {},
 
       {/* Contact Information Section */},
   {
-      <section className="py-20 bg-gray-50">
-        <div className="container mx-auto px-4">
+      <section className='py-20 bg-gray-50'>
+        <div className='container mx-auto px-4'>
           <motion.div
-            className="text-center mb-16"
-            initial={{ opacity: 0, y: 30 }},
+            className='text-center mb-16'
+            initial={ opacity: 0, y: 30 },
   {
-            whileInView={{ opacity: 1, y: 0 }},
+            whileInView={ opacity: 1, y: 0 },
   {
-            transition={{ duration: 0.8 }},
+            transition={ duration: 0.8 },
   {
-            viewport={{ once: true }},
+            viewport={ once: true },
   {
           >
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+            <h2 className='text-3xl md:text-4xl font-bold text-gray-900 mb-4'>
               Get Started Today;
             </h2>
-            <p className="text-lg text-gray-600 max-w-3xl mx-auto mb-8">
+            <p className='text-lg text-gray-600 max-w-3xl mx-auto mb-8'>
               Ready to transform your business with cutting-edge micro SaaS solutions? Our expert team is here to help you build, deploy, and scale your next-generation software products. Contact us for a free consultation and discover how we can accelerate your digital transformation.
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+          <div className='grid grid-cols-1 md:grid-cols-3 gap-8 mb-12'>
             <motion.div
-              className="text-center p-6 bg-white rounded-lg shadow-lg"
-              initial={{ opacity: 0, y: 30 }},
+              className='text-center p-6 bg-white rounded-lg shadow-lg'
+              initial={ opacity: 0, y: 30 },
   {
-              whileInView={{ opacity: 1, y: 0 }},
+              whileInView={ opacity: 1, y: 0 },
   {
-              transition={{ duration: 0.8, delay: 0.1 }},
+              transition={ duration: 0.8, delay: 0.1 },
   {
-              viewport={{ once: true }},
+              viewport={ once: true },
   {
             >
-              <div className="bg-purple-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                <MessageSquare className="w-8 h-8 text-purple-600" />
+              <div className='bg-purple-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4'>
+                <MessageSquare className='w-8 h-8 text-purple-600' />
               </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-2">Free Consultation</h3>
-              <p className="text-gray-600 mb-4">Get expert advice on your micro SaaS project with our complimentary 30-minute consultation.</p>
-              <a href="tel:+13024640950" className="text-purple-600 font-semibold hover:text-purple-700">
+              <h3 className='text-xl font-bold text-gray-900 mb-2'>Free Consultation</h3>
+              <p className='text-gray-600 mb-4'>Get expert advice on your micro SaaS project with our complimentary 30-minute consultation.</p>
+              <a href='tel:+13024640950' className='text-purple-600 font-semibold hover:text-purple-700'>
                 Call Now: +1 302 464 0950;
               </a>
             </motion.div>
 
             <motion.div
-              className="text-center p-6 bg-white rounded-lg shadow-lg"
-              initial={{ opacity: 0, y: 30 }},
+              className='text-center p-6 bg-white rounded-lg shadow-lg'
+              initial={ opacity: 0, y: 30 },
   {
-              whileInView={{ opacity: 1, y: 0 }},
+              whileInView={ opacity: 1, y: 0 },
   {
-              transition={{ duration: 0.8, delay: 0.2 }},
+              transition={ duration: 0.8, delay: 0.2 },
   {
-              viewport={{ once: true }},
+              viewport={ once: true },
   {
             >
-              <div className="bg-purple-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Mail className="w-8 h-8 text-purple-600" />
+              <div className='bg-purple-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4'>
+                <Mail className='w-8 h-8 text-purple-600' />
               </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-2">Email Us</h3>
-              <p className="text-gray-600 mb-4">Send us your project details and we'll respond within 24 hours with a detailed proposal.</p>
-              <a href="mailto:kleber@ziontechgroup.com" className="text-purple-600 font-semibold hover:text-purple-700">
+              <h3 className='text-xl font-bold text-gray-900 mb-2'>Email Us</h3>
+              <p className='text-gray-600 mb-4'>Send us your project details and we'll respond within 24 hours with a detailed proposal.</p>
+              <a href='mailto:kleber@ziontechgroup.com' className='text-purple-600 font-semibold hover:text-purple-700'>
                 kleber@ziontechgroup.com;
               </a>
             </motion.div>
 
             <motion.div
-              className="text-center p-6 bg-white rounded-lg shadow-lg"
-              initial={{ opacity: 0, y: 30 }},
+              className='text-center p-6 bg-white rounded-lg shadow-lg'
+              initial={ opacity: 0, y: 30 },
   {
-              whileInView={{ opacity: 1, y: 0 }},
+              whileInView={ opacity: 1, y: 0 },
   {
-              transition={{ duration: 0.8, delay: 0.3 }},
+              transition={ duration: 0.8, delay: 0.3 },
   {
-              viewport={{ once: true }},
+              viewport={ once: true },
   {
             >
-              <div className="bg-purple-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Building className="w-8 h-8 text-purple-600" />
+              <div className='bg-purple-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4'>
+                <Building className='w-8 h-8 text-purple-600' />
               </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-2">Visit Our Office</h3>
-              <p className="text-gray-600 mb-4">Schedule an in-person meeting at our headquarters in Middletown, Delaware.</p>
-              <address className="text-purple-600 font-semibold not-italic">
+              <h3 className='text-xl font-bold text-gray-900 mb-2'>Visit Our Office</h3>
+              <p className='text-gray-600 mb-4'>Schedule an in-person meeting at our headquarters in Middletown, Delaware.</p>
+              <address className='text-purple-600 font-semibold not-italic'>
                 364 E Main St STE 1008<br />
                 Middletown, DE 19709;
               </address>
@@ -2225,35 +2225,35 @@ export default function MicroSaaSPage() {},
           </div>
 
           <motion.div
-            className="bg-gradient-to-r from-purple-600 to-indigo-600 rounded-2xl p-8 text-white text-center"
-            initial={{ opacity: 0, y: 30 }},
+            className='bg-gradient-to-r from-purple-600 to-indigo-600 rounded-2xl p-8 text-white text-center'
+            initial={ opacity: 0, y: 30 },
   {
-            whileInView={{ opacity: 1, y: 0 }},
+            whileInView={ opacity: 1, y: 0 },
   {
-            transition={{ duration: 0.8 }},
+            transition={ duration: 0.8 },
   {
-            viewport={{ once: true }},
+            viewport={ once: true },
   {
           >
-            <h3 className="text-2xl md:text-3xl font-bold mb-4">
+            <h3 className='text-2xl md:text-3xl font-bold mb-4'>
               Why Choose Zion Tech Group?
             </h3>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mt-8">
-              <div className="text-center">
-                <div className="text-3xl font-bold text-yellow-300 mb-2">500+</div>
-                <div className="text-sm">Projects Delivered</div>
+            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mt-8'>
+              <div className='text-center'>
+                <div className='text-3xl font-bold text-yellow-300 mb-2'>500+</div>
+                <div className='text-sm'>Projects Delivered</div>
               </div>
-              <div className="text-center">
-                <div className="text-3xl font-bold text-yellow-300 mb-2">99.9%</div>
-                <div className="text-sm">Uptime Guarantee</div>
+              <div className='text-center'>
+                <div className='text-3xl font-bold text-yellow-300 mb-2'>99.9%</div>
+                <div className='text-sm'>Uptime Guarantee</div>
               </div>
-              <div className="text-center">
-                <div className="text-3xl font-bold text-yellow-300 mb-2">24/7</div>
-                <div className="text-sm">Support Available</div>
+              <div className='text-center'>
+                <div className='text-3xl font-bold text-yellow-300 mb-2'>24/7</div>
+                <div className='text-sm'>Support Available</div>
               </div>
-              <div className="text-center">
-                <div className="text-3xl font-bold text-yellow-300 mb-2">5★</div>
-                <div className="text-sm">Client Rating</div>
+              <div className='text-center'>
+                <div className='text-3xl font-bold text-yellow-300 mb-2'>5★</div>
+                <div className='text-sm'>Client Rating</div>
               </div>
             </div>
           </motion.div>
@@ -2262,49 +2262,49 @@ export default function MicroSaaSPage() {},
 
       {/* Benefits & Capabilities Section */},
   {
-      <section className="py-20 bg-gradient-to-br from-purple-50 to-indigo-50">
-        <div className="container mx-auto px-4">
+      <section className='py-20 bg-gradient-to-br from-purple-50 to-indigo-50'>
+        <div className='container mx-auto px-4'>
           <motion.div
-            className="text-center mb-16"
-            initial={{ opacity: 0, y: 30 }},
+            className='text-center mb-16'
+            initial={ opacity: 0, y: 30 },
   {
-            whileInView={{ opacity: 1, y: 0 }},
+            whileInView={ opacity: 1, y: 0 },
   {
-            transition={{ duration: 0.8 }},
+            transition={ duration: 0.8 },
   {
-            viewport={{ once: true }},
+            viewport={ once: true },
   {
           >
-            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
+            <h2 className='text-3xl sm:text-4xl font-bold text-gray-900 mb-4'>
               Why Choose Our Micro SaaS Solutions?
             </h2>
-            <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+            <p className='text-lg text-gray-600 max-w-3xl mx-auto'>
               Our micro SaaS products are designed to deliver maximum value with minimal complexity, 
               helping you focus on what matters most - growing your business.
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16'>
             <motion.div
-              className="bg-white p-8 rounded-xl shadow-lg"
-              initial={{ opacity: 0, y: 30 }},
+              className='bg-white p-8 rounded-xl shadow-lg'
+              initial={ opacity: 0, y: 30 },
   {
-              whileInView={{ opacity: 1, y: 0 }},
+              whileInView={ opacity: 1, y: 0 },
   {
-              transition={{ duration: 0.8, delay: 0.1 }},
+              transition={ duration: 0.8, delay: 0.1 },
   {
-              viewport={{ once: true }},
+              viewport={ once: true },
   {
             >
-              <div className="bg-purple-100 w-16 h-16 rounded-full flex items-center justify-center mb-6">
-                <Zap className="w-8 h-8 text-purple-600" />
+              <div className='bg-purple-100 w-16 h-16 rounded-full flex items-center justify-center mb-6'>
+                <Zap className='w-8 h-8 text-purple-600' />
               </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-4">Rapid Deployment</h3>
-              <p className="text-gray-600 mb-4">
+              <h3 className='text-xl font-bold text-gray-900 mb-4'>Rapid Deployment</h3>
+              <p className='text-gray-600 mb-4'>
                 Get up and running in days, not months. Our pre-built solutions are ready to deploy;
                 with minimal configuration required.
               </p>
-              <ul className="text-sm text-gray-500 space-y-2">
+              <ul className='text-sm text-gray-500 space-y-2'>
                 <li>• Pre-configured environments</li>
                 <li>• One-click deployment</li>
                 <li>• Automated setup processes</li>
@@ -2313,25 +2313,25 @@ export default function MicroSaaSPage() {},
             </motion.div>
 
             <motion.div
-              className="bg-white p-8 rounded-xl shadow-lg"
-              initial={{ opacity: 0, y: 30 }},
+              className='bg-white p-8 rounded-xl shadow-lg'
+              initial={ opacity: 0, y: 30 },
   {
-              whileInView={{ opacity: 1, y: 0 }},
+              whileInView={ opacity: 1, y: 0 },
   {
-              transition={{ duration: 0.8, delay: 0.2 }},
+              transition={ duration: 0.8, delay: 0.2 },
   {
-              viewport={{ once: true }},
+              viewport={ once: true },
   {
             >
-              <div className="bg-green-100 w-16 h-16 rounded-full flex items-center justify-center mb-6">
-                <Shield className="w-8 h-8 text-green-600" />
+              <div className='bg-green-100 w-16 h-16 rounded-full flex items-center justify-center mb-6'>
+                <Shield className='w-8 h-8 text-green-600' />
               </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-4">Enterprise Security</h3>
-              <p className="text-gray-600 mb-4">
+              <h3 className='text-xl font-bold text-gray-900 mb-4'>Enterprise Security</h3>
+              <p className='text-gray-600 mb-4'>
                 Built with enterprise-grade security from day one. Your data and applications are;
                 protected with industry-leading security measures.
               </p>
-              <ul className="text-sm text-gray-500 space-y-2">
+              <ul className='text-sm text-gray-500 space-y-2'>
                 <li>• End-to-end encryption</li>
                 <li>• SOC 2 compliance</li>
                 <li>• GDPR ready</li>
@@ -2340,25 +2340,25 @@ export default function MicroSaaSPage() {},
             </motion.div>
 
             <motion.div
-              className="bg-white p-8 rounded-xl shadow-lg"
-              initial={{ opacity: 0, y: 30 }},
+              className='bg-white p-8 rounded-xl shadow-lg'
+              initial={ opacity: 0, y: 30 },
   {
-              whileInView={{ opacity: 1, y: 0 }},
+              whileInView={ opacity: 1, y: 0 },
   {
-              transition={{ duration: 0.8, delay: 0.3 }},
+              transition={ duration: 0.8, delay: 0.3 },
   {
-              viewport={{ once: true }},
+              viewport={ once: true },
   {
             >
-              <div className="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mb-6">
-                <BarChart3 className="w-8 h-8 text-blue-600" />
+              <div className='bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mb-6'>
+                <BarChart3 className='w-8 h-8 text-blue-600' />
               </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-4">Built-in Analytics</h3>
-              <p className="text-gray-600 mb-4">
+              <h3 className='text-xl font-bold text-gray-900 mb-4'>Built-in Analytics</h3>
+              <p className='text-gray-600 mb-4'>
                 Make data-driven decisions with comprehensive analytics and reporting built into;
                 every solution.
               </p>
-              <ul className="text-sm text-gray-500 space-y-2">
+              <ul className='text-sm text-gray-500 space-y-2'>
                 <li>• Real-time dashboards</li>
                 <li>• Custom reports</li>
                 <li>• Performance metrics</li>
@@ -2367,25 +2367,25 @@ export default function MicroSaaSPage() {},
             </motion.div>
 
             <motion.div
-              className="bg-white p-8 rounded-xl shadow-lg"
-              initial={{ opacity: 0, y: 30 }},
+              className='bg-white p-8 rounded-xl shadow-lg'
+              initial={ opacity: 0, y: 30 },
   {
-              whileInView={{ opacity: 1, y: 0 }},
+              whileInView={ opacity: 1, y: 0 },
   {
-              transition={{ duration: 0.8, delay: 0.4 }},
+              transition={ duration: 0.8, delay: 0.4 },
   {
-              viewport={{ once: true }},
+              viewport={ once: true },
   {
             >
-              <div className="bg-orange-100 w-16 h-16 rounded-full flex items-center justify-center mb-6">
-                <Settings className="w-8 h-8 text-orange-600" />
+              <div className='bg-orange-100 w-16 h-16 rounded-full flex items-center justify-center mb-6'>
+                <Settings className='w-8 h-8 text-orange-600' />
               </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-4">Easy Integration</h3>
-              <p className="text-gray-600 mb-4">
+              <h3 className='text-xl font-bold text-gray-900 mb-4'>Easy Integration</h3>
+              <p className='text-gray-600 mb-4'>
                 Seamlessly integrate with your existing tools and workflows. Our solutions work;
                 with the tools you already use.
               </p>
-              <ul className="text-sm text-gray-500 space-y-2">
+              <ul className='text-sm text-gray-500 space-y-2'>
                 <li>• 100+ pre-built integrations</li>
                 <li>• RESTful APIs</li>
                 <li>• Webhook support</li>
@@ -2394,25 +2394,25 @@ export default function MicroSaaSPage() {},
             </motion.div>
 
             <motion.div
-              className="bg-white p-8 rounded-xl shadow-lg"
-              initial={{ opacity: 0, y: 30 }},
+              className='bg-white p-8 rounded-xl shadow-lg'
+              initial={ opacity: 0, y: 30 },
   {
-              whileInView={{ opacity: 1, y: 0 }},
+              whileInView={ opacity: 1, y: 0 },
   {
-              transition={{ duration: 0.8, delay: 0.5 }},
+              transition={ duration: 0.8, delay: 0.5 },
   {
-              viewport={{ once: true }},
+              viewport={ once: true },
   {
             >
-              <div className="bg-pink-100 w-16 h-16 rounded-full flex items-center justify-center mb-6">
-                <Users className="w-8 h-8 text-pink-600" />
+              <div className='bg-pink-100 w-16 h-16 rounded-full flex items-center justify-center mb-6'>
+                <Users className='w-8 h-8 text-pink-600' />
               </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-4">24/7 Support</h3>
-              <p className="text-gray-600 mb-4">
+              <h3 className='text-xl font-bold text-gray-900 mb-4'>24/7 Support</h3>
+              <p className='text-gray-600 mb-4'>
                 Get help when you need it with our comprehensive support team available around;
                 the clock.
               </p>
-              <ul className="text-sm text-gray-500 space-y-2">
+              <ul className='text-sm text-gray-500 space-y-2'>
                 <li>• Live chat support</li>
                 <li>• Phone support</li>
                 <li>• Email support</li>
@@ -2421,25 +2421,25 @@ export default function MicroSaaSPage() {},
             </motion.div>
 
             <motion.div
-              className="bg-white p-8 rounded-xl shadow-lg"
-              initial={{ opacity: 0, y: 30 }},
+              className='bg-white p-8 rounded-xl shadow-lg'
+              initial={ opacity: 0, y: 30 },
   {
-              whileInView={{ opacity: 1, y: 0 }},
+              whileInView={ opacity: 1, y: 0 },
   {
-              transition={{ duration: 0.8, delay: 0.6 }},
+              transition={ duration: 0.8, delay: 0.6 },
   {
-              viewport={{ once: true }},
+              viewport={ once: true },
   {
             >
-              <div className="bg-indigo-100 w-16 h-16 rounded-full flex items-center justify-center mb-6">
-                <TrendingUp className="w-8 h-8 text-indigo-600" />
+              <div className='bg-indigo-100 w-16 h-16 rounded-full flex items-center justify-center mb-6'>
+                <TrendingUp className='w-8 h-8 text-indigo-600' />
               </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-4">Scalable Growth</h3>
-              <p className="text-gray-600 mb-4">
+              <h3 className='text-xl font-bold text-gray-900 mb-4'>Scalable Growth</h3>
+              <p className='text-gray-600 mb-4'>
                 Start small and scale as you grow. Our solutions automatically adapt to your;
                 changing business needs.
               </p>
-              <ul className="text-sm text-gray-500 space-y-2">
+              <ul className='text-sm text-gray-500 space-y-2'>
                 <li>• Auto-scaling infrastructure</li>
                 <li>• Flexible pricing tiers</li>
                 <li>• Performance optimization</li>
@@ -2451,35 +2451,35 @@ export default function MicroSaaSPage() {},
           {/* Market Statistics */},
   {
           <motion.div
-            className="bg-white rounded-2xl p-8 shadow-lg"
-            initial={{ opacity: 0, y: 30 }},
+            className='bg-white rounded-2xl p-8 shadow-lg'
+            initial={ opacity: 0, y: 30 },
   {
-            whileInView={{ opacity: 1, y: 0 }},
+            whileInView={ opacity: 1, y: 0 },
   {
-            transition={{ duration: 0.8 }},
+            transition={ duration: 0.8 },
   {
-            viewport={{ once: true }},
+            viewport={ once: true },
   {
           >
-            <h3 className="text-2xl font-bold text-center text-gray-900 mb-8">
+            <h3 className='text-2xl font-bold text-center text-gray-900 mb-8'>
               Proven Market Performance;
             </h3>
-            <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-              <div className="text-center">
-                <div className="text-3xl font-bold text-purple-600 mb-2">99.9%</div>
-                <div className="text-gray-600">Uptime Guarantee</div>
+            <div className='grid grid-cols-1 md:grid-cols-4 gap-8'>
+              <div className='text-center'>
+                <div className='text-3xl font-bold text-purple-600 mb-2'>99.9%</div>
+                <div className='text-gray-600'>Uptime Guarantee</div>
               </div>
-              <div className="text-center">
-                <div className="text-3xl font-bold text-green-600 mb-2">500+</div>
-                <div className="text-gray-600">Active Customers</div>
+              <div className='text-center'>
+                <div className='text-3xl font-bold text-green-600 mb-2'>500+</div>
+                <div className='text-gray-600'>Active Customers</div>
               </div>
-              <div className="text-center">
-                <div className="text-3xl font-bold text-blue-600 mb-2">50+</div>
-                <div className="text-gray-600">Micro SaaS Products</div>
+              <div className='text-center'>
+                <div className='text-3xl font-bold text-blue-600 mb-2'>50+</div>
+                <div className='text-gray-600'>Micro SaaS Products</div>
               </div>
-              <div className="text-center">
-                <div className="text-3xl font-bold text-orange-600 mb-2">24/7</div>
-                <div className="text-gray-600">Support Available</div>
+              <div className='text-center'>
+                <div className='text-3xl font-bold text-orange-600 mb-2'>24/7</div>
+                <div className='text-gray-600'>Support Available</div>
               </div>
             </div>
           </motion.div>
@@ -2488,27 +2488,27 @@ export default function MicroSaaSPage() {},
 
       {/* CTA Section */},
   {
-      <section className="py-20 bg-gradient-to-r from-purple-600 to-indigo-600 text-white">
-<div className="container mx-auto px-4 text-center">
+      <section className='py-20 bg-gradient-to-r from-purple-600 to-indigo-600 text-white'>
+<div className='container mx-auto px-4 text-center'>
                   <motion.div
-            initial={{ opacity: 0, y: 30 }},
+            initial={ opacity: 0, y: 30 },
   {
-            whileInView={{ opacity: 1, y: 0 }},
+            whileInView={ opacity: 1, y: 0 },
   {
-            transition={{ duration: 0.8 }},
+            transition={ duration: 0.8 },
   {
-            viewport={{ once: true }},
+            viewport={ once: true },
   {
           >
-<h2 className="text-3xl md:text-4xl font-bold mb-6">Ready to Launch Your Micro SaaS?</h2>
-            <p className="text-xl mb-8 max-w-2xl mx-auto">
+<h2 className='text-3xl md:text-4xl font-bold mb-6'>Ready to Launch Your Micro SaaS?</h2>
+            <p className='text-xl mb-8 max-w-2xl mx-auto'>
               Join 500+ successful businesses that trust Zion Tech Group for their micro SaaS development needs. Let&apos;s build the perfect solution for your business.
             </p>
-<div className="flex flex-col sm:flex-row gap-4 justify-center">
-                  <Link href="/contact" className="px-8 py-4 bg-white text-purple-600 rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold">
+<div className='flex flex-col sm:flex-row gap-4 justify-center'>
+                  <Link href='/contact' className='px-8 py-4 bg-white text-purple-600 rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold'>
                 Start Building;
               </Link>
-                  <Link href="/services" className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-purple-600 transition-all duration-300 font-semibold">
+                  <Link href='/services' className='px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-purple-600 transition-all duration-300 font-semibold'>
                 View All Services;
               </Link>
 </div>

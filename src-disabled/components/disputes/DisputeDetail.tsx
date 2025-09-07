@@ -237,7 +237,7 @@ import { Alert, AlertDescription, AlertTitle } from '@/components/ui/alert';
 import { useAuth } from '@/hooks/useAuth';
 import { toast } from 'sonner';
 
-                          }}
+                          }
                         >
                           Add Admin Note
                         </Button>

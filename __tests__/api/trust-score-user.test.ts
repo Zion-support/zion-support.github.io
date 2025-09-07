@@ -25,7 +25,7 @@ describe('Trust Score User API';'
   it('should work';'
 
 }
-describe('Trust Score User API', () => {it('should work', () => {expect(true).toBe(true)})})const { describe,it,expect } from "vitest"; describe('Trust Score User API', () => { it('should work', () => { expect(true).toBe(true)})})''";"
+describe('Trust Score User API', () => {it('should work', () => {expect(true).toBe(true)})})const { describe,it,expect } from 'vitest'; describe('Trust Score User API', () => { it('should work', () => { expect(true).toBe(true)})})''';'
 })'';'
 })'';'
 ursor/add-new-services-and-deploy-updates-0462;
@@ -61,7 +61,7 @@ import { describe,it,expect } from 'vitest'; describe('Trust Score User API',() 
 import { describe, it, expect } from 'vitest''
 describe('Trust Score User API''
   it('should work''
-const { describe,it,expect } from "vitest"; describe('Trust Score User API', () => { it("should work""
+const { describe,it,expect } from 'vitest'; describe('Trust Score User API', () => { it('should work''
 }
 describe('Trust Score User API''
   it('should work''

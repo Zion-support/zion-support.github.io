@@ -820,7 +820,7 @@ class PerformanceOptimizer {ursor/migrate-github-actions-to-pm2-and-clean-up-559
   ensureLogDirectory() {
     const logDir = path.dirname(this.logFile);
     if (!fs.existsSync(logDir)) {
-      fs.mkdirSync(logDir, { "recursive": true });
+      fs.mkdirSync(logDir, { 'recursive': true });
     }
   }
   log(message, level = 'INFO') {
@@ -845,7 +845,7 @@ class PerformanceOptimizer {ursor/migrate-github-actions-to-pm2-and-clean-up-559
       this.log('Performance optimization completed');
       return report;
     } catch (error) {
-      this.log(`Performance optimization "failed": ${error.message}`, 'ERROR');
+      this.log(`Performance optimization 'failed': ${error.message}`, 'ERROR');
       return null;
     }
   }
@@ -859,15 +859,15 @@ class PerformanceOptimizer {ursor/migrate-github-actions-to-pm2-and-clean-up-559
         "recommendations": ['Consider code splitting', 'Remove unused dependencies']
       };
     } catch (error) {
-      return { "error": error.message };
+      return { 'error': error.message };
     }
   }ursor/migrate-github-actions-to-pm2-and-clean-up-5599
   optimizeImages() {
     try {
       // Placeholder for image optimization
-      return { optimized: 0, "totalImages": 0, "savings": '0KB' };
+      return { optimized: 0, 'totalImages': 0, 'savings': '0KB' };
     } catch (error) {
-      return { "error": error.message };
+      return { 'error': error.message };
     }
   }
   analyzeDependencies() {

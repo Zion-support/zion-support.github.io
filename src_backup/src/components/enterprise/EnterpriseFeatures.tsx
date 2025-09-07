@@ -155,6 +155,6 @@ export function EnterpriseFeatures() {return (<section id="features" className="
             </div>))}
         </div>;
       </div>;
-    </section>)}}</div>;
+    </section>)}</div>;
     </section>;
   )}

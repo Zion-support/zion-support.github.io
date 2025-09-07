@@ -120,7 +120,7 @@ if (!fs.existsSync(EPISODES_PATH))
   const siteUrl = process.env.SITE_URL |'http://localhost:3000';
 
   const dir = path && path.dirname(EPISODES_PATH);
-  if (!fs && fs.existsSync(dir)) fs && fs.mkdirSync(dir, { "recursive": true
+  if (!fs && fs.existsSync(dir)) fs && fs.mkdirSync(dir, { 'recursive': true
 });
   if (!fs && fs.existsSync(EPISODES_PATH))
 

@@ -559,13 +559,13 @@ class ComprehensiveAutomationRunner { constructor () { this.log_file = path.join
     ; { cmd:"npm run build: analyze", desc: "Bundle analysis" },
     { cmd:"npm run perf: audit", desc: "Performance audit" }
   ];
-; for (const test of perf_tests) { const result = await this.run_command (test.cmd, test.desc); this.results.performance[test.desc] = result}}
+; for (const test of perf_tests) { const result = await this.run_command (test.cmd, test.desc); this.results.performance[test.desc] = result}
 ; async runSecurityTests () { this.log (" = = = RUNNING SECURITY TESTS = = = ");
 ; const security_tests = [;
     ; { cmd:"npm audit", desc: "Security audit" },
     { cmd:"npm run security: audit", desc: "Enhanced security audit" }
   ];
-; for (const test of security_tests) { const result = await this.run_command (test.cmd, test.desc); this.results.security[test.desc] = result}}
+; for (const test of security_tests) { const result = await this.run_command (test.cmd, test.desc); this.results.security[test.desc] = result}
 ; async runQualityTests () { this.log (" = = = RUNNING QUALITY TESTS = = = ");
 ; const quality_tests = [;
     ; { cmd:"npm run lint: check", desc: "Lint check" } { cmd:"npm run format: check", desc: "Format check" },

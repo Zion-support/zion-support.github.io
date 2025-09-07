@@ -181,7 +181,6 @@ default define_config ({test_dir: tests / e2e',  use: {baseURL: process.env.PLAY
     {name: Mobile Safari',      use: {browserName: webkit',        ...devices['iPhone 12']}
     }
   ];
-<<<<<<< HEAD
 
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
@@ -518,7 +517,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 });
 =======
 
-<<<<<<< HEAD
 });
 });
 =======

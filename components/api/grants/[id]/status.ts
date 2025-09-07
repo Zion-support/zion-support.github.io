@@ -38,9 +38,9 @@ function isAuthorized(req: NextApiRequest) {}
   return (
   return path.join(GRANTS_DIR, `${id}.json`);
 
-function readGrant("id": string): GrantApplication | null {
+function readGrant('id': string): GrantApplication | null {
   }
-  if (!fs.existsSync(GRANTS_DIR)) fs.mkdirSync(GRANTS_DIR, { "recursive": true
+  if (!fs.existsSync(GRANTS_DIR)) fs.mkdirSync(GRANTS_DIR, { 'recursive': true
 });
 return JSON.parse(fs.readFileSync(p, 'utf8')) as GrantApplication;'
 
@@ -171,7 +171,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     return
 =======
     }
-    res.status(401).json({ "error": 'Unauthorized','
+    res.status(401).json({ 'error': 'Unauthorized','
 });
 return;
 =======

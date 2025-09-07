@@ -641,7 +641,6 @@ export default UltraFuturisticBackground2036;
                  />))}
           </div>,
 }
-<<<<<<< HEAD
       </div>;
 export default UltraFuturisticBackground2036;
 =======

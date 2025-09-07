@@ -912,7 +912,7 @@ import { InfoIcon } from 'lucide-react';
   TooltipProvider,;"
   TooltipTrigger} from "@/components/ui/tooltip",;
 
-        manageBilling: true}},;
+        manageBilling: true},;
     {;
       id: 2,;"
       name: "Jamie Smith",;"
@@ -925,7 +925,7 @@ import { InfoIcon } from 'lucide-react';
         createJobs: true,;
         manageTeam: false,;
         viewBilling: false,;
-        manageBilling: false}},;
+        manageBilling: false},;
     {;
       id: 3,;"
       name: "Sam Williams",;"
@@ -938,7 +938,7 @@ import { InfoIcon } from 'lucide-react';
         createJobs: true,;
         manageTeam: false,;
         viewBilling: true,;
-        manageBilling: false}},;
+        manageBilling: false},;
     {;
       id: 4,;"
       name: "Taylor Brown",;"
@@ -951,7 +951,7 @@ import { InfoIcon } from 'lucide-react';
         createJobs: false,;
         manageTeam: false,;
         viewBilling: false,;
-        manageBilling: false}}],;
+        manageBilling: false}],;
   const handlePermissionChange = (_memberId: number, permission: string, value:,  boolean) => {;
     // In a real app, this would make an API call to update permissions;
     toast({;

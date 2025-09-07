@@ -1,5 +1,5 @@
 
-import { useWishlist } from "@/hooks/useWishlist";
+import { useWishlist } from '@/hooks/useWishlist';
 import { useCart  } from '@/context/CartContext';
 import { logWarn } from '@/utils/productionLogger';
 import { Home, Search, MessageCircle, Heart, MessageSquare, ShoppingCart, User } from 'lucide-react'
@@ -53,7 +53,7 @@ export function MobileBottomNav({ unreadCount = 0 }: MobileBottomNavProps) {
   let cartCount = 0
   if (cartContextValue && cartContextValue.items) {
     cartCount = cartContextValue.items.reduce((sum, i) => sum + i.quantity, 0) } else {
-    // logWarn("MobileBottomNav: Cart data or items not available, defaulting cartCount to 0.")
+    // logWarn('MobileBottomNav: Cart data or items not available, defaulting cartCount to 0.')
   }
   const navItems = [
 origin/cursor/automate-test-improve-and-merge-code-2533
@@ -77,7 +77,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     </nav>);
 }
 ;
-}}}}}}}}}}))))]
+}}}}}))))]
 ;
       </div>
     </nav>

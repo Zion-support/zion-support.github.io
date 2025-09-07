@@ -926,8 +926,8 @@ className='w-full h-32 px-2 py-1 rounded bg-high-contrast-tertiary border border
           <input className="w - full px - 2 py - 1 rounded bg - high - contrast - tertiary border border - high-contrast-secondary" value={base_url} on_change={(e) => setBaseUrl (e.target.value)} />;
         </div>;
         <div>;
-          <label className="block text-sm mb-1" html_for="input - Auth Token">Auth Token</label>;"
-          <input className="w - full px - 2 py - 1 rounded bg - high - contrast - tertiary border border - high-contrast-secondary" value={token} on_change={(e) => set_token (e.target.value)} placeholder="Optional" />;"
+          <label className='block text-sm mb-1' html_for='input - Auth Token'>Auth Token</label>;'
+          <input className='w - full px - 2 py - 1 rounded bg - high - contrast - tertiary border border - high-contrast-secondary' value={token} on_change={(e) => set_token (e.target.value)} placeholder='Optional' />;'
         </div>;
         <div>;
           <label className="block text-sm mb-1" html_for="input - Method">Method</label>;

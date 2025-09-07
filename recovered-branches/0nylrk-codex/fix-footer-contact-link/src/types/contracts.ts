@@ -93,7 +93,7 @@ export interface ContractTemplate {;
 
 }
 ;
-}}
+}
 ;
 }
 ;

@@ -217,8 +217,8 @@ function fulfilled() {try {step (generator.next (value))} catch (e) {reject(e)}
  */;
 function step() {result.done;
           ? resolve (result.value): adopt (result.value).then (fulfilled, rejected)}
-      step ((generator = generator.apply (this_arg, _arguments || [])).next ())})}}}return t;
-}}"awaiter": function ("thisArg": any, "arguments": any, "P": any, "generator": any) {function adopt() {return value instanceof P ? value : new P (function ("resolve": any) {resolve (value)})}return new (P || (P = Promise) ) (function ("resolve": any, "reject": any) {step ( (generator = generator && generator.apply (thisArg, arguments || []) ) .next () )})step((generator = generator.apply(thisArg, _arguments |[])).next())})}
+      step ((generator = generator.apply (this_arg, _arguments || [])).next ())})}}return t;
+}"awaiter": function ("thisArg": any, "arguments": any, "P": any, "generator": any) {function adopt() {return value instanceof P ? value : new P (function ("resolve": any) {resolve (value)})}return new (P || (P = Promise) ) (function ("resolve": any, "reject": any) {step ( (generator = generator && generator.apply (thisArg, arguments || []) ) .next () )})step((generator = generator.apply(thisArg, _arguments |[])).next())})}
 }
 //"CRITICAL": Webpack chunk array polyfill if (typeof b !== "function" && b !== null) throw new TypeError ("Class extends value " + String (b) + "is not a constructor or null")}return t;"
 }
@@ -310,8 +310,8 @@ if (") {$2;"
     // Check condition;
 if ( {) {$2;
 }
-      return originalOnUnhandledRejection.call (this, event)}}if (typeof (global as any)[helper] === 'undefined') {(global as any)[helper] = (tsHelpers as any)[helper];'
-    }})// Export a verification function for testing;
+      return originalOnUnhandledRejection.call (this, event)}if (typeof (global as any)[helper] === 'undefined') {(global as any)[helper] = (tsHelpers as any)[helper];'
+    })// Export a verification function for testing;
 export const verifyPolyfills = () => {const checks = {"selfDefined": typeof self !== 'undefined';'
     }
     "webpackChunkDefined":;

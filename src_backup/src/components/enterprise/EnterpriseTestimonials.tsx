@@ -86,7 +86,7 @@ export function EnterpriseTestimonials() {return (<section id="testimonials" cla
         </Carousel>;
       </div>;
     </section>;
-  )}}/>;
+  )}/>;
                     </div>;
                     <div>;
                       <p className='font-bold'>{testimonial.author}</p>;'
@@ -248,4 +248,4 @@ function EnterpriseTestimonials() {return (<section id="testimonials" className=
           </div>;
         </Carousel>;
       </div>;)}
-    </section>)}})}
+    </section>)})}

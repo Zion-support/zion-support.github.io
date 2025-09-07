@@ -160,7 +160,6 @@ async function analyzeWithGPT(userId: string, inputs: TrustMetricInputs): Promis
     const { OpenAI } = await import('openai');
 >>>>>>> origin/chore/fix-lint-and-merge
 
-<<<<<<< HEAD
   try {
     const { OpenAI } = await import('openai');
     const client = new OpenAI({ apiKey });
@@ -1181,9 +1180,8 @@ await supabase;
       return res.status (200).json (result);
     } catch (e: any) {
       return res;
-<<<<<<< HEAD
         .status (500);
-        .json ({ "error": e?.message || 'Failed to compute trust score','
+        .json ({ 'error': e?.message || 'Failed to compute trust score','
 });
     }  }
       // Persist latest score when possible;

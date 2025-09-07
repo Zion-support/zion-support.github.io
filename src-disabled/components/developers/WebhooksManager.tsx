@@ -431,7 +431,7 @@ pr-12325
   }, []),
 
                   clearTestResult()
-                }}>
+                }>
 origin/cursor/automate-test-improve-and-merge-code-2533
                 </Button>
               </DialogFooter>
@@ -457,13 +457,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   setShowTestDialog(null),;
                   setShowTestResult(false);
                   clearTestResult();
-                }}>;
+                }>;
                   Close;
                 </Button>;
                 <Button variant="outline" onClick={() => {;
                   setShowTestResult(false);
                   clearTestResult();
-                }}>;
+                }>;
                   Test Another Event;
                 </Button>;
               </DialogFooter>;
@@ -477,11 +477,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   onClick={() => {;
                     setShowTestResult(false);
                     clearTestResult();
-                  }}
+                  }
                 >                  Test Another Event                <Button variant="outline" onClick={() => {;
                   setShowTestResult(false);
                   clearTestResult();
-                }}>;
+                }>;
                 </Button>;
               </DialogFooter>;
             </>;
@@ -952,7 +952,7 @@ clearTestResult ()
   value: 'new application',  label: 'New Application', description: 'When a talent applies to a job';
 }
 ;
-}}}}))))]
+}}))))]
 }
 ;
 

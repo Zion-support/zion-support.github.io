@@ -118,9 +118,9 @@ const vendor = null;
 
 <<<<<<< HEAD
 res.status(201).json({ item });
-  } catch ("e": any) {
+  } catch ('e': any) {
     }
-    res.status(500).json({ "error": e.message
+    res.status(500).json({ 'error': e.message
 });
 =======
     res && res.status(201).json({ item });

@@ -1388,7 +1388,7 @@ ursor/fix-website-loading-errors-and-merge-6662
     </>
 <<<<<<< HEAD:src-disabled/components/support/HelpCenter.tsx
   )
-}}}}}}})))
+}}}})))
     </>;
   );
 }

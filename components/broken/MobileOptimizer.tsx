@@ -479,8 +479,8 @@ const getStatusIcon = (status: string) => {
 children
 }{
   /* Mobile Optimization Panel */
-}<AnimatePresence> {;"
-  showMobilePanel && (<motion && motion.div > <div className="p-6" > <div className="flex items-center justify-between mb-6" > <h2 className="text-xl font-bold text-white" >Mobile Optimizer</h2> <button > × </button> </div> </div>) )
+}<AnimatePresence> {;'
+  showMobilePanel && (<motion && motion.div > <div className='p-6' > <div className='flex items-center justify-between mb-6' > <h2 className='text-xl font-bold text-white' >Mobile Optimizer</h2> <button > × </button> </div> </div>) )
 }</div> </div> > Scroll to Top </button> <button > Scroll to Bottom </button> </div> </div> </div> </motion && motion.div>)
 }</AnimatePresence> {
   /* Mobile Toggle Button */

@@ -632,9 +632,9 @@ export function ContactPublisherModal({;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:src/components/profile/ContactPublisherModal.tsx
           aria-labelledby="contact-publisher-title"
         >
-          <DialogHeader>"
-            <DialogTitle id="contact-publisher-title" className="text-xl font-bold text-white flex items-center gap-2">"
-              <Mail className="h-5 w-5 text-zion-cyan" />
+          <DialogHeader>'
+            <DialogTitle id='contact-publisher-title' className='text-xl font-bold text-white flex items-center gap-2'>'
+              <Mail className='h-5 w-5 text-zion-cyan' />
               Contact Publisher;
             </DialogTitle>
           </DialogHeader>"
@@ -670,11 +670,11 @@ export function ContactPublisherModal({;
             </Link>
           </div>
         )}
-        <Form {...form}>"
-          <form onSubmit={(e) => e.preventDefault()} className="space-y-4">
+        <Form {...form}>'
+          <form onSubmit={(e) => e.preventDefault()} className='space-y-4'>
             <FormField;
-              control={form.control}"
-              name="subject"
+              control={form.control}'
+              name='subject'
               render={({ field }: { field: any }) => (
                 <FormItem>
 <<<<<<< HEAD
@@ -687,9 +687,9 @@ export function ContactPublisherModal({;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:src/components/profile/ContactPublisherModal.tsx
                   <FormLabel>Subject</FormLabel>
                   <FormControl>
-                    <Input"
-                      placeholder="Subject""
-                      className="bg-zion-blue border-zion-blue-light text-white"
+                    <Input'
+                      placeholder='Subject''
+                      className='bg-zion-blue border-zion-blue-light text-white'
                       {...field}
                     />
 <<<<<<< HEAD:src-disabled/components/profile/ContactPublisherModal.tsx
@@ -723,7 +723,7 @@ export function ContactPublisherModal({;
               name="message"
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:src/components/profile/ContactPublisherModal.tsx
 
-              name="message"
+              name='message'
               render={({ field }: { field: any }) => (
                 <FormItem>
 
@@ -735,8 +735,8 @@ export function ContactPublisherModal({;
                   <FormLabel>Message</FormLabel>
                   <FormControl>
                     <Textarea;`
-                      placeholder={`Message to ${publisherName}...`}"
-                      className="bg-zion-blue border-zion-blue-light text-white min-h-[120px]"
+                      placeholder={`Message to ${publisherName}...`}'
+                      className='bg-zion-blue border-zion-blue-light text-white min-h-[120px]'
                       {...field}
                     />
 <<<<<<< HEAD:src-disabled/components/profile/ContactPublisherModal.tsx
@@ -796,8 +796,8 @@ export function ContactPublisherModal({;
       <LoginModal is_open={login_open} onOpenChange={setLoginOpen} />    <Dialog open={is_open} onOpenChange={on_close}>;
 
             <FormField;
-              control = {form.control, }"
-              name="subject";
+              control = {form.control, }'
+              name='subject';
               render={({ field }: { field: any }, ) => (                <FormItem>;
                   <FormLabel > Subject</FormLabel>;
                   <FormControl>;
@@ -805,8 +805,8 @@ export function ContactPublisherModal({;
                 </FormItem>)}
             />;
             <FormField;
-              control = {form.control, }"
-              name="message";
+              control = {form.control, }'
+              name='message';
               render={({ field }: { field: any }, ) => (                <FormItem>;
                   <FormLabel > Message</FormLabel>;
                   <FormControl>;
@@ -825,38 +825,38 @@ export function ContactPublisherModal({;
       </FocusLock>;
     </Dialog>;
 
-        <DialogContent;"
-          className="bg - zion - blue - dark border border - zion - blue - light text - white sm:max - w-md";""
-          onKeyDown = {handleKeyDown, }          aria - modal="true";""
-          aria - labelledby="contact - publisher - title";"
+        <DialogContent;'
+          className='bg - zion - blue - dark border border - zion - blue - light text - white sm:max - w-md';''
+          onKeyDown = {handleKeyDown, }          aria - modal='true';''
+          aria - labelledby='contact - publisher - title';'
 
-            <DialogTitle id="contact - publisher - title" className="text - xl font - bold text - white flex items - center gap - 2">;"
-              <Mail className="h - 5 w - 5 text - zion - cyan" />;"
+            <DialogTitle id='contact - publisher - title' className='text - xl font - bold text - white flex items - center gap - 2'>;'
+              <Mail className='h - 5 w - 5 text - zion - cyan' />;'
 
-          ;"
-          {error && <p className="text - red - 500 mb - 2">{error}</p>}""
-            <div className="mb - 4 text - zion - slate - light">;"
-            <span className="block">Email:</span>;""`;
-            <a href={`mailto:${publisher_email}`} className="text - zion - cyan hover:underline truncate block">;"
+          ;'
+          {error && <p className='text - red - 500 mb - 2'>{error}</p>}''
+            <div className='mb - 4 text - zion - slate - light'>;'
+            <span className='block'>Email:</span>;''`;
+            <a href={`mailto:${publisher_email}`} className='text - zion - cyan hover:underline truncate block'>;'
             </a>;
-          <form on_submit={(e, ) => e.prevent_default ()} className="space - y-4">;"
-              control = {form.control, }"
-              name="subject";"
+          <form on_submit={(e, ) => e.prevent_default ()} className='space - y-4'>;'
+              control = {form.control, }'
+              name='subject';'
               render={({ field }: { field: any }, ) => (                <FormItem>;
 
-                      placeholder="Subject";""
-                      className="bg - zion - blue border - zion - blue - light text - white";"
+                      placeholder='Subject';''
+                      className='bg - zion - blue border - zion - blue - light text - white';'
 
-                  <FormMessage className="text - red - 500" />;"
-              name="message";"
+                  <FormMessage className='text - red - 500' />;'
+              name='message';'
 
-                      placeholder={`Message to ${publisher_name}...`}"
-                      className="bg - zion - blue border - zion - blue - light text - white min - h-[120px]";"
+                      placeholder={`Message to ${publisher_name}...`}'
+                      className='bg - zion - blue border - zion - blue - light text - white min - h-[120px]';'
 
-              on_click = {handle_send, }"
-              className="w - full";"
+              on_click = {handle_send, }'
+              className='w - full';'
               disabled = {!form.form_state.is_valid || is_submitting, }            >;
-              <SendIcon className="mr - 2" />;"
+              <SendIcon className='mr - 2' />;'
 
     <LoginModal is_open={login_open} onOpenChange={setLoginOpen} />;
 <<<<<<< HEAD:src-disabled/components/profile/ContactPublisherModal.tsx

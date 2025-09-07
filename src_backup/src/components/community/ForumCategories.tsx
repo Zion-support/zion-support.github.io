@@ -13,7 +13,7 @@ import { ForumCategoryInfo } from "@/types/community",{"id": "project-help";"
     "description": "Get help with your ongoing projects and collaboration.";"
     "adminOnly": false;
     "icon": "MessageSquare";"
-  {{"id": "feedback";"
+  {"id": "feedback";"
     }
     "name": "Feedback & Feature Requests";"
     "description": "Share your feedback and suggest new features.";"

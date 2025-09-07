@@ -302,7 +302,7 @@ export default function AdminNotesPanel({ targetType, targetId }: AdminNotesPane
 =======
       setLoading($2);
       const res = await fetch(`/api/admin/notes?targetType=${encodeURIComponent(targetType)}&targetId=${encodeURIComponent(targetId)}`, {
-        headers: { 'X-Admin': isAdmin ? 'true' : 'false' }}),
+        headers: { 'X-Admin': isAdmin ? 'true' : 'false' }),
       if (!res.ok) {
         setNotes($2);
         return
@@ -955,7 +955,7 @@ if ( {) {$2;}
         <button;
           disabled={!text.trim () || adding}
           on_click={add_note}
-          className='px - 3 py - 2 rounded - md bg - gray - 900 text - white "disabled": opacity - 50'>'
+          className='px - 3 py - 2 rounded - md bg - gray - 900 text - white 'disabled': opacity - 50'>'
 
           {adding ? 'Adding…' : 'Add Note,'
 }
@@ -969,9 +969,9 @@ if ( {) {$2;}
             {notes.map (number => (<li key={n.id} className='rounded border p - 2 text - sm'>;'
                 <div className='opacity - 60 text - xs mb - 1'>;'
                   {new Date (n.created_at).toLocaleString ()} • {n.author_id}
-                </div>                <div>{n.text}</div>          <ul className="space - y-2">;"
-            {notes.map ((n) => (<li key={n.id} className="rounded border p - 2 text - sm">;"
-                <div className="opacity - 60 text - xs mb - 1">{new Date (n.created_at).toLocaleString ()} • {n.author_id}</div>;"
+                </div>                <div>{n.text}</div>          <ul className='space - y-2'>;'
+            {notes.map ((n) => (<li key={n.id} className='rounded border p - 2 text - sm'>;'
+                <div className='opacity - 60 text - xs mb - 1'>{new Date (n.created_at).toLocaleString ()} • {n.author_id}</div>;'
               </li>))}
           </ul>)}
       </div>;
@@ -1798,7 +1798,6 @@ if ( {) {}
   )
 
 }
-<<<<<<< HEAD
   );
 }
 origin/cursor/automate-test-improve-and-merge-code-2533

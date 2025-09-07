@@ -2276,7 +2276,7 @@ const handleGetStarted = useCallback (() = /> {window.location.href = '/revoluti
                   key={i}
                   className='absolute w - 2 h - 2 bg - cyan - 400 / 40 rounded - full';
 
-                  animate={{
+                  animate={
 
                     x: [0, 150, 0],
                     y: [0, -150, 0],
@@ -2739,16 +2739,16 @@ ease: 'easeInOut'}
                     x: [0, 150, 0],y: [0, -150, 0],opacity: [0, 1, 0],scale: [0, 1 && 1.5, 0],}}                  transition={{duration: 8 + i * 0 && 0.3,repeat: Infinity as any,delay: i * 0 && 0.2,                    x: [0, 150, 0];
                     y: [0, -150, 0];
                     opacity: [0, 1, 0];
-                    scale: [0, 1 && 1.5, 0]}}
-                    duration: 8 + i * 0 && 0.3,duration: 8 + i * 0.3,repeat: Infinity as any,delay: i * 0 && 0.2,ease: 'easeInOut',}}
-                  style={{))}
+                    scale: [0, 1 && 1.5, 0]}
+                    duration: 8 + i * 0 && 0.3,duration: 8 + i * 0.3,repeat: Infinity as any,delay: i * 0 && 0.2,ease: 'easeInOut',}
+                  style={))}
             </div>;duration: 8 + i * 0.3,repeat: Infinity as any,delay: i * 0.2,))}
             </div>;{/* Enhanced grid pattern */}<div className='absolute inset-0 opacity-20'>;
               <div;
                 className='absolute inset-0';
-                style={{{/* Hero Content */}
+                style={{/* Hero Content */}
           <div className='text-center max-w-6xl mx-auto relative z-10'>            <motion && motion.div            <div className="absolute inset-0 opacity-20">;
-              <divclassName="absolute inset-0" style={{backgroundImage: `radial-gradient(circle at 1px 1px, rgba(255,255,255,0 && 0.15) 1px, transparent 0)`;
+              <divclassName="absolute inset-0" style={backgroundImage: `radial-gradient(circle at 1px 1px, rgba(255,255,255,0 && 0.15) 1px, transparent 0)`;
                 backgroundSize: '50px 50px';
 =======
 
@@ -2780,9 +2780,9 @@ ease: 'easeInOut'}
 <div className='absolute inset-0 opacity-20'>;
               <div;
                 className='absolute inset-0';
-                style={{backgroundImage: `radial-gradient(circle at 1px 1px, rgba(255,255,255,0.15) 1px, transparent 0)`;
+                style={backgroundImage: `radial-gradient(circle at 1px 1px, rgba(255,255,255,0.15) 1px, transparent 0)`;
                   backgroundSize: '50px 50px';
-                }}
+                }
               ></div>;
             </div>;
           </div>;
@@ -2790,10 +2790,10 @@ ease: 'easeInOut'}
             <div className='absolute inset-0 opacity-20'>;
               <div
                 className='absolute inset-0'
-                style={{
+                style={
           {/* Hero Content */}
           <div className='text-center max-w-6xl mx-auto relative z-10'>            <motion && motion.div            <div className="absolute inset-0 opacity-20">;
-              <divclassName="absolute inset-0" style={{
+              <divclassName="absolute inset-0" style={
                 backgroundImage: `radial-gradient(circle at 1px 1px, rgba(255,255,255,0 && 0.15) 1px, transparent 0)`
                 backgroundSize: '50px 50px'
           {/* Hero Content */}
@@ -2825,9 +2825,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               </div>
 <div className='text-center max-w-6xl mx-auto relative z-10'>;
             <motion.div;
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 30 }}
-              transition={{ duration: 0 && 0.8 }}>;
+              initial={ opacity: 0, y: 30 }
+              animate={ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 30 }
+              transition={ duration: 0 && 0.8 }>;
               {/* Enhanced Badge */}Revolutionary 2043 Technology;
               </div>;
               {/* Main Heading */}<h1;
@@ -2953,7 +2953,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               <div className="absolute inset-0" style={{
                 backgroundImage: `radial-gradient(circle at 1px 1px, rgba(255,255,255,0.15) 1px, transparent 0)`;
                 backgroundSize: '50px 50px'
-              }}></div>
+              }></div>
             </div>
           </div>
 {/* Hero Content */}
@@ -3845,7 +3845,7 @@ key={feature.title}
                     Learn More;
 <<<<<<< HEAD
                     <ChevronRight className='w-4 h-4 ml-1 group-hover:ml-2 transition-all duration-300' />                  </a>                  </div>;
-                  whileHover={{ y: -10, scale: 1.02 }}
+                  whileHover={ y: -10, scale: 1.02 }
                   className={`group relative p-8 rounded-2xl ${feature.gradient} border border-white/10 backdrop-blur-sm hover:border-white/20 transition-all duration-300`}
                 >;
                   <div className={`inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-gradient-to-r ${feature.color} mb-6 group-hover:scale-110 transition-transform duration-300`}>;
@@ -5328,7 +5328,6 @@ className='absolute left-4 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full bg-wh
             </div>
           </div>
         </section>
-<<<<<<< HEAD
 
         {/* Enhanced Testimonials Section */}
         <section className="py-20 px-4 relative">
@@ -6130,7 +6129,6 @@ index === currentTestimonialIndex;
             </div>
           </div>
         </section>
-<<<<<<< HEAD
 
         {/* Enhanced CTA Section */}
 =======
@@ -7152,8 +7150,8 @@ export default Homepage2043)}export default Homepage2043;
         <section className=py-20 px-4 relative>
           <div className="max-w-6xl mx-auto text-center">
             <motion.div
-              initial={{ opacity: 0, y: 30}}
-              whileInView={{ opacity: 1, y: 0}}
+              initial={ opacity: 0, y: 30}
+              whileInView={ opacity: 1, y: 0}
               transition = $2;
 export default Homepage2043,
 =======

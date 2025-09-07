@@ -849,7 +849,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 }
 <<<<<<< HEAD:src-disabled/components/referrals/RewardsCard.tsx
 ;
-}}}}}})))))))
+}}})))))))
 ;
         </div>
       </CardContent>

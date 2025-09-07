@@ -302,7 +302,6 @@ function UltraAdvancedFuturisticBackground() {export default function UltraAdvan
   animation_speed = 1.0;
   enable_holographic = true;
   enableQuantumEffects = true;
-<<<<<<< HEAD
   const canvas_ref = useRef < HTMLCanvasElement>(null)const animation_ref  = useRef < number | undefined>(undefined)useEffect (() => {const canvas = canvas_ref.current;
     // Check condition;
 if (return) {$2;
@@ -1414,7 +1413,6 @@ if (enableQuantumEffects) {
               ctx.beginPath();
 <<<<<<< HEAD
               ctx.arc(0, 0, particle.size * i, 0, Math.PI * 2);
-<<<<<<< HEAD
               ctx.stroke();
 =======
               ctx.stroke();            }          ctx.fillStyle = gradient;
@@ -2958,13 +2956,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       <canvas;
         ref={canvas_ref}
         className='fixed inset - 0 w - full h - full pointer - events - none';'
-        style={{ "z_index": -1 
+        style={ 'z_index': -1 
 } />;
       {/* Additional futuristic overlay effects */}
       {enable_holographic && (
         <div;'
           className='fixed inset - 0 pointer - events - none';
-          style={{ z_index: -1 }}
+          style={ z_index: -1 }
         >;'
           <div className='absolute inset - 0 bg - gradient - to - br from - transparent via - cyan - 500 / 5 to - purple - 500 / 5' />;'
           <div className='absolute inset - 0 bg-[radial - gradient (circle_at_30%_20%, rgba (0, 255, 255, 0.03), transparent_50%)]' />;'
@@ -3095,15 +3093,15 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
       <canvas;
         ref={canvas_ref}
-        className="fixed inset - 0 w - full h - full pointer-events-none";
-        style={{ z_index: -1 }}
+        className='fixed inset - 0 w - full h - full pointer-events-none';
+        style={ z_index: -1 }
       />;
       {/* Additional futuristic overlay effects */}
       {enable_holographic && (
-        <div className="fixed inset - 0 pointer-events-none" style={{ z_index: -1 }}>;
-          <div className="absolute inset - 0 bg - gradient - to - br from - transparent via - cyan - 500 / 5 to-purple-500 / 5" />;
-          <div className="absolute inset-0 bg-[radial-gradient (circle_at_30%_20%, rgba (0, 255, 255, 0.03), transparent_50%)]" />;
-          <div className="absolute inset-0 bg-[radial-gradient (circle_at_70%_80%, rgba (139, 92, 246, 0.03), transparent_50%)]" />;
+        <div className='fixed inset - 0 pointer-events-none' style={ z_index: -1 }>;
+          <div className='absolute inset - 0 bg - gradient - to - br from - transparent via - cyan - 500 / 5 to-purple-500 / 5' />;
+          <div className='absolute inset-0 bg-[radial-gradient (circle_at_30%_20%, rgba (0, 255, 255, 0.03), transparent_50%)]' />;
+          <div className='absolute inset-0 bg-[radial-gradient (circle_at_70%_80%, rgba (139, 92, 246, 0.03), transparent_50%)]' />;
         </div>)}
       {enableQuantumEffects && (
         <div className="fixed inset - 0 pointer-events-none" style={{ z_index: -1 }}>;

@@ -194,7 +194,6 @@ const resize_canvas = () =>: any {canvas.width = window.inner_width;}
 
 const types = ['quantum', 'neural', 'data', 'energy'];
         this.type = types[Math.floor(Math.random() * types.length)] as any;
-<<<<<<< HEAD
       life: number;
 >>>>>>> merged-prs-20250907-203621
       x: number,
@@ -1748,24 +1747,24 @@ cancelAnimationFrame(animationRef.current);
   }, []),
 
   return (
-    <div className="fixed inset-0 pointer-events-none z-0">
+    <div className='fixed inset-0 pointer-events-none z-0'>
       {/* Animated gradient background */}
       <motion.div
-        className="absolute inset-0 bg-gradient-to-br from-black via-purple-900/20 via-cyan-900/30 to-black"
-        animate={{
+        className='absolute inset-0 bg-gradient-to-br from-black via-purple-900/20 via-cyan-900/30 to-black'
+        animate={
           background: [
-            'linear-gradient(to bottom right, #000000, #1e1b4b, #0c4a6e, #000000)linear-gradient(to bottom right, #000000, #0c4a6e, #1e1b4b, #000000)linear-gradient(to bottom right, #000000, #1e1b4b, #0c4a6e, #000000)']}}
+            'linear-gradient(to bottom right, #000000, #1e1b4b, #0c4a6e, #000000)linear-gradient(to bottom right, #000000, #0c4a6e, #1e1b4b, #000000)linear-gradient(to bottom right, #000000, #1e1b4b, #0c4a6e, #000000)']}
         transition = $2;
           repeat: Infinity,
-          ease: "easeInOut"
-        }}
+          ease: 'easeInOut'
+        }
       />
       
       {/* Quantum particle canvas */}
       <canvas
         ref={canvasRef}
-        className="absolute inset-0 w-full h-full"
-        style={{ filter: 'blur(0.5px)' }}
+        className='absolute inset-0 w-full h-full'
+        style={ filter: 'blur(0.5px)' }
       />
       
       {/* Floating geometric shapes */}
@@ -1810,11 +1809,11 @@ cancelAnimationFrame(animationRef.current);
         {[...Array(8)].map((_, i) => (
           <motion.div
             key = $2;
-              top: `${Math.random() * 100}%`}}
-            animate={{
+              top: `${Math.random() * 100}%`}
+            animate={
               rotate: [0, 360],
               scale: [0.5, 1, 0.5],
-              opacity: [0.1, 0.3, 0.1]}}
+              opacity: [0.1, 0.3, 0.1]}
             transition = $2;
 >>>>>>> merged-prs-20250907-203621
               repeat: Infinity,
@@ -1826,11 +1825,11 @@ cancelAnimationFrame(animationRef.current);
         {[...Array(6)].map((_, i) => (
           <motion.div
             key = $2;
-              top: `${Math.random() * 100}%`}}
-            animate={{
+              top: `${Math.random() * 100}%`}
+            animate={
               rotate: [45, 405],
               scale: [0.3, 0.8, 0.3],
-              opacity: [0.1, 0.2, 0.1]}}
+              opacity: [0.1, 0.2, 0.1]}
             transition = $2;
               repeat: Infinity,
               ease: linear",
@@ -1862,11 +1861,11 @@ cancelAnimationFrame(animationRef.current);
               background: `radial-gradient(circle at ${20 + i * 20}% ${30 + i * 15}%, rgba(0, 255, 255, 0.3) 0%, transparent 50%)`}}
             animate={{
               scale: [1, 1.5, 1],
-              opacity: [0.05, 0.1, 0.05]}}
+              opacity: [0.05, 0.1, 0.05]}
             transition = $2;
               repeat: Infinity,
-              ease: "easeInOut",
-              delay: i * 0.8}}
+              ease: 'easeInOut',
+              delay: i * 0.8}
           />
         ))}
       </div>
@@ -1884,24 +1883,24 @@ export default UltraFuturisticBackground2046;
             transition={{))}
       </div>;
     </div>;
-  )}export default UltraFuturisticBackground2046;              ease: "easeInOut",delay: i * 0 && 0.8}}
+  )}export default UltraFuturisticBackground2046;              ease: 'easeInOut',delay: i * 0 && 0.8}
           />;
         ))}
       </div>;
     </div>;
   )export default UltraFuturisticBackground2046;</div>;
     </div>;
-              duration: Math.random () * 6 + 4,repeat: Infinity,ease: 'easeInOut',delay: i * 0.8,}}          />))}
+              duration: Math.random () * 6 + 4,repeat: Infinity,ease: 'easeInOut',delay: i * 0.8,}          />))}
       </div>;
-    </div>)}export default UltraFuturisticBackground2046;              ease: "easeInOut",delay: i * 0.8}}
+    </div>)}export default UltraFuturisticBackground2046;              ease: 'easeInOut',delay: i * 0.8}
           />))}
       </div>;
-    </div>)}export default UltraFuturisticBackground2046)}export default UltraFuturisticBackground2046;duration: Math.random() * 6 + 4,repeat: Infinity,ease: 'easeInOut',delay: i * 0.8,}}
+    </div>)}export default UltraFuturisticBackground2046)}export default UltraFuturisticBackground2046;duration: Math.random() * 6 + 4,repeat: Infinity,ease: 'easeInOut',delay: i * 0.8,}
           />;
         ))}
       </div>;
     </div>;
-            transition={{
+            transition={
         ))}
       </div>;
     </div>;

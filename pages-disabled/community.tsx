@@ -213,10 +213,10 @@ export default function CommunityPage() {
           <div className="container mx-auto px-4">
             <motion.div
               className="text-center mb-16"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
+              initial={ opacity: 0, y: 30 }
+              whileInView={ opacity: 1, y: 0 }
+              transition={ duration: 0.8 }
+              viewport={ once: true }
             >
               <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-4">
                 Upcoming Events;
@@ -231,10 +231,10 @@ export default function CommunityPage() {
                 <motion.div
                   key={event.id}
                   className="bg-gray-50 p-6 rounded-lg hover:shadow-lg transition-all duration-300"
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8, delay: index * 0.1 }}
-                  viewport={{ once: true }}
+                  initial={ opacity: 0, y: 30 }
+                  whileInView={ opacity: 1, y: 0 }
+                  transition={ duration: 0.8, delay: index * 0.1 }
+                  viewport={ once: true }
                 >
                   <div className="flex items-center justify-between mb-4">
                     <span className="px-3 py-1 bg-blue-100 text-blue-800 text-sm font-medium rounded-full">
@@ -283,10 +283,10 @@ export default function CommunityPage() {
           <div className="container mx-auto px-4">
             <motion.div
               className="text-center mb-16"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
+              initial={ opacity: 0, y: 30 }
+              whileInView={ opacity: 1, y: 0 }
+              transition={ duration: 0.8 }
+              viewport={ once: true }
             >
               <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-4">
                 Community Discussions;
@@ -326,10 +326,10 @@ export default function CommunityPage() {
                 <motion.div
                   key={topic.id}
                   className="bg-white p-6 rounded-lg hover:shadow-lg transition-all duration-300"
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
-                  viewport={{ once: true }}
+                  initial={ opacity: 0, y: 20 }
+                  whileInView={ opacity: 1, y: 0 }
+                  transition={ duration: 0.6, delay: index * 0.1 }
+                  viewport={ once: true }
                 >
                   <div className="flex items-start justify-between">
                     <div className="flex-1">
@@ -371,10 +371,10 @@ export default function CommunityPage() {
           <div className="container mx-auto px-4">
             <motion.div
               className="text-center mb-16"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
+              initial={ opacity: 0, y: 30 }
+              whileInView={ opacity: 1, y: 0 }
+              transition={ duration: 0.8 }
+              viewport={ once: true }
             >
               <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-4">
                 Community Resources;

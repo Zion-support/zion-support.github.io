@@ -28,4 +28,4 @@ const Login = lazy(() => import('../pages/Login'))const Signup = lazy(() => impo
           </ProtectedRoute> } />;
       </Routes>;
     </Suspense>;
-  )}"
+  )}'

@@ -86,7 +86,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       res.status(404).json($2);
       return
     }
-    fs.mkdirSync(GRANTS_DIR, { "recursive": true
+    fs.mkdirSync(GRANTS_DIR, { 'recursive': true
 });
 >>>>>>> merged-prs-20250907-203621
   }

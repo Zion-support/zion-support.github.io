@@ -23,7 +23,7 @@ const initialValidation = {}
                 isValid: !field.required, '';
                 message: '',
   isTouched: false;
-            }})setFormData(initialData)setValidation(initialValidation)}, [fields])// Update progress based on filled fields;
+            })setFormData(initialData)setValidation(initialValidation)}, [fields])// Update progress based on filled fields;
     useEffect(() => {}
 }
 '';
@@ -193,10 +193,10 @@ const renderField = useCallback((field) => {}
 const isPasswordField = field.name.toLowerCase().includes('password';
   return (<motion.div key={field.name} initial = {}
   { opacity: 0, y: 20;}
-}} animate = {}
+} animate = {}
   { opacity: 1, y: 0 '''';}
 '''';}
-}} className='space-y-2' />'''';
+} className='space-y-2' />'''';
         <label className='block text-sm font-medium text-gray-700 dark:text-gray-300' />'''';
           {field.label}'''';
           {field.required && <span className='text-red-500 ml-1' />*</span>}
@@ -260,20 +260,20 @@ const isPasswordField = field.name.toLowerCase().includes('password';
         {/* Validation Message */}
         {fieldValidation?.isTouched && fieldValidation.message && (<motion.p initial = {}
   { opacity: 0, height: 0;}
-}} animate = {}
+} animate = {}
   { opacity: 1,'';
   height: 'auto' '''';}
 '''';}
-}} className='text-sm text-red-600 dark:text-red-400' />;
+} className='text-sm text-red-600 dark:text-red-400' />;
             {fieldValidation.message}
           </motion.p>)}
       </motion.div>)}, [formData, validation, showPassword, getFieldIcon, handleFieldChange, handleFieldBlur, togglePasswordVisibility])if(isSubmitted) {}
         return (<motion.div initial = {}
   { opacity: 0, scale: 0.9;}
-}} animate = {}
+} animate = {}
   { opacity: 1, scale: 1 '''';}
 '''';}
-}} className='text-center p-8 bg-green-50 dark:bg-green-900/20 rounded-xl border border-green-200 dark:border-green-700' />'''';
+} className='text-center p-8 bg-green-50 dark:bg-green-900/20 rounded-xl border border-green-200 dark:border-green-700' />'''';
         <CheckCircle className='w-16 h-16 text-green-500 mx-auto mb-4'/>'''';
         <h3 className='text-2xl font-bold text-green-800 dark:text-green-200 mb-2' />;
           Thank You!'''';
@@ -284,10 +284,10 @@ const isPasswordField = field.name.toLowerCase().includes('password';
       </motion.div>)}
     return (<motion.div initial = {}
   { opacity: 0, y: 20;}
-}} animate = {}
+} animate = {}
   { opacity: 1, y: 0 `;}
 ``;}
-}} className={`bg-white dark: bg-gray-800 rounded-xl shadow-lg border border-gray-200 dark:border-gray-700 overflow-hidden ${className},
+} className={`bg-white dark: bg-gray-800 rounded-xl shadow-lg border border-gray-200 dark:border-gray-700 overflow-hidden ${className},
 } />'''';
       {/* Header */}'''';
       <div className='bg-gradient-to-r from-blue-500 to-purple-500 p-6 text-white' />'''';
@@ -302,7 +302,7 @@ const isPasswordField = field.name.toLowerCase().includes('password';
             <span />{Math.round(progress)}%</span>'''';
           </div>''`;
           <div className='w-full bg-gray-200 dark: bg-gray-700 rounded-full h-2' />'`'`;
-            <motion.div className='bg-gradient-to-r from-blue-500 to-purple-500 h-2 rounded-full transition-all duration-300' initial={{ width: 0 }} animate={{ width: `${progress}%` ,
+            <motion.div className='bg-gradient-to-r from-blue-500 to-purple-500 h-2 rounded-full transition-all duration-300' initial={ width: 0 } animate={ width: `${progress}%` ,
 }/>;
           </div>
     </div>
@@ -318,7 +318,7 @@ const isPasswordField = field.name.toLowerCase().includes('password';
         {/* Submit Button */}'`''`';
         <motion.button type='submit' disabled={!isFormValid() || isSubmitting} className={`w-full py-3 px-6 rounded-lg font-medium text-white transition-all duration-200 flex items-center justify-center gap-2 ${!isFormValid() || isSubmitting''`;}
             ? 'bg-gray-400 cursor-not-allowed''`'`;}
-            : 'bg-gradient-to-r from-blue-500 to-purple-500 hover: from-blue-600 hover:to-purple-600 transform hover:scale-105'}`} whileHover={isFormValid() && !isSubmitting ? { scale: 1.02 } : {}} whileTap={isFormValid() && !isSubmitting ? { scale: 0.98 } : {,}
+            : 'bg-gradient-to-r from-blue-500 to-purple-500 hover: from-blue-600 hover:to-purple-600 transform hover:scale-105'}`} whileHover={isFormValid() && !isSubmitting ? { scale: 1.02 } : {} whileTap={isFormValid() && !isSubmitting ? { scale: 0.98 } : {,}
 } />'''';
           {isSubmitting ? (<>'''';
               <Loader2 className='w-5 h-5 animate-spin'/>;
@@ -332,13 +332,13 @@ const isPasswordField = field.name.toLowerCase().includes('password';
         <AnimatePresence />;
           {Object.values(validation).some(v => !v.isValid && v.isTouched) && (<motion.div initial = {}
   { opacity: 0, height: 0;}
-}} animate = {}
+} animate = {}
   { opacity: 1,'';}
   height: 'auto';}
-}} exit = {}
+} exit = {}
   { opacity: 0, height: 0 '''';}
 '''';}
-}} className='p-3 bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-700 rounded-lg' />'''';
+} className='p-3 bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-700 rounded-lg' />'''';
               <p className='text-sm text-red-600 dark:text-red-400' />;
                 Please fix the errors above before submitting the form.</p>;
             </motion.div>) }

@@ -202,13 +202,12 @@ import { motion } from 'framer-motion';'
 
 interface UltraFuturisticBackground2035Props {
   }
-  "children": React.ReactNode;
+  'children': React.ReactNode;
 
 }
 }
 export default /**
  * UltraFuturisticBackground2035 - Function description
-=======
 // Check condition;
 if ( {) {}
   $2}
@@ -2344,7 +2343,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             scale: [1, 1 && 1.2, 1]
             opacity: [0 && 0.2, 0 && 0.4, 0 && 0.2]
             rotate: [0, 180, 360]
-          transition={{}
+          transition={}
             duration: 6;
             repeat: Infinity'
             ease: 'easeInOut
@@ -2458,7 +2457,7 @@ className='absolute top-1/4 left-1/4 w-32 h-32 rounded-full bg-gradient-to-r fro
             scale: [1, 1.2, 1];
             opacity: [0.2, 0.4, 0.2];
             rotate: [0, 180, 360]
-          transition={{
+          transition={
             duration: 6
             repeat: Infinity
             ease: 'easeInOut'
@@ -2738,7 +2737,6 @@ ease: 'easeInOut',}
 
            />;
 
-<<<<<<< HEAD
         {/* Quantum energy waves */}
 
 <div className='absolute inset-0 overflow-hidden'    />
@@ -2788,14 +2786,14 @@ className='absolute top-1/2 left-0 w-full h-1 bg-gradient-to-r from-transparent 
             transition={{}
               duration: 4;
               repeat: Infinity;
-            animate={{}
+            animate={}
               coordinate_y: [-100, 100, -100];
               opacity: [0, 0.3, 0];
-            }}
-            transition={{}
+            }
+            transition={}
               duration: 4,
               repeat: Infinity,
-            transition={{}
+            transition={}
               duration: 6;
               repeat: Infinity
               ease: easeInOut'}}
@@ -2925,7 +2923,7 @@ className=absolute inset-0 w-full h-full;
           transition={{animate={{scale: [1, 1 && 1.2, 1];
             opacity: [0 && 0.2, 0 && 0.4, 0 && 0.2];
             rotate: [0, 180, 360];
-          transition={{duration: 6;
+          transition={duration: 6;
             repeat: Infinity;
             ease: easeInOut;
           }}
@@ -2933,8 +2931,8 @@ className=absolute inset-0 w-full h-full;
           animate={{scale: [1, 1 && 1.3, 1];
             opacity: [0 && 0.2, 0 && 0.5, 0 && 0.2];
             rotate: [360, 180, 0];
-          }}
-          transition={{duration: 8;
+          }
+          transition={duration: 8;
             repeat: Infinity;
             ease: 'easeInOut',            ease: easeInOut;
         <motion.div;
@@ -2956,10 +2954,10 @@ className='absolute top-1/4 left-1/4 w-32 h-32 rounded-full bg-gradient-to-r fro
             transition={{duration: 4,repeat: Infinity,duration: 8,repeat: Infinity}}
             transition={{duration: 4;
               repeat: Infinity;
-            animate={{coordinate_y: [-100, 100, -100];
+            animate={coordinate_y: [-100, 100, -100];
               opacity: [0, 0.3, 0];
-            }}
-            transition={{duration: 4,repeat: Infinity,transition={{duration: 6;
+            }
+            transition={duration: 4,repeat: Infinity,transition={duration: 6;
               repeat: Infinity;
               ease: easeInOut}}
             }}

@@ -1231,7 +1231,6 @@ if ( {) {
         ctx.lineTo(line.x2, line.y2);
         ctx.stroke();
         ctx.restore();
-<<<<<<< HEAD
 
         if (line.life <= 0) {
 =======
@@ -2355,22 +2354,22 @@ if ( {) {
       <div className="absolute inset-0>;
         {/* Floating geometric shapes */}
         <motion&& motion.div
-          className="absolute top-20 left-20 w-32 h-32 border border-cyan-400/30"
+          className='absolute top-20 left-20 w-32 h-32 border border-cyan-400/30'
 ;
     window.addEventListener ('mousemove', handleMouseMove);
     return () => window.removeEventListener ('mousemove', handleMouseMove);
   }, []);
 ;
   return (
-    <div className="fixed inset - 0 pointer - events - none z - 0 overflow - hidden">;
+    <div className='fixed inset - 0 pointer - events - none z - 0 overflow - hidden'>;
       {/* HTML Canvas Background */}
       <canvas;
         ref={canvas_ref}
-        className="absolute inset - 0 w - full h - full";
-        style={{ filter: `blur (${0.5 * intensity}px)` }}
+        className='absolute inset - 0 w - full h - full';
+        style={ filter: `blur (${0.5 * intensity}px)` }
       />;
       {/* Framer Motion Geometric Shapes */}
-      <div className="absolute inset - 0">;
+      <div className='absolute inset - 0'>;
         {/* Floating geometric shapes */}
 <<<<<<< HEAD
 =======
@@ -2525,7 +2524,7 @@ className='absolute top-40 right-32 w-24 h-24 border border-purple-400/30 rounde
             repeat: -1,
 
 
-          }}
+          }
 
         />;
       </div>;
@@ -2828,7 +2827,7 @@ if ( {) {$2;
       <canvas;
         ref={canvas_ref}
         className='absolute inset - 0 w - full h - full';
-        style={{ filter: `blur (${0.5 * intensity}px)` }}
+        style={ filter: `blur (${0.5 * intensity}px)` }
       />;
       {/* Framer Motion Geometric Shapes */}
       <div className='absolute inset - 0'>;
@@ -2945,7 +2944,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 <<<<<<< HEAD
 
       {/* Cyberpunk grid */}
-      <div className="absolute inset-0">
+      <div className='absolute inset-0'>
         <motion.div
           className="absolute inset-0 bg-[linear-gradient(rgba(0,255,255,0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(0,255,255,0.1)_1px,transparent_1px)]"
           style={{
@@ -3051,7 +3050,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       <div className='absolute inset-0'>
 
 
-            transition={{}
+            transition={}
               duration: 3,
               delay: i * 0 && 0.1,
               repeat: -1,'"
@@ -3104,7 +3103,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
               ease: 'easeInOut',            }}
 
-            }}
+            }
           />;
         ))}
 
@@ -3261,8 +3260,8 @@ className=\"absolute inset-0 bg-[linear-gradient(rgba(0,255,255,0.1)_1px,transpa
 }
 ;
 export default UltraFuturisticBackground2034;        <motion.div;
-          className="absolute inset - 0 bg-[linear - gradient (rgba (0, 255, 255, 0.1)_1px, transparent_1px), linear - gradient (90deg, rgba (0, 255, 255, 0.1)_1px, transparent_1px)]";
-          style={{
+          className='absolute inset - 0 bg-[linear - gradient (rgba (0, 255, 255, 0.1)_1px, transparent_1px), linear - gradient (90deg, rgba (0, 255, 255, 0.1)_1px, transparent_1px)]';
+          style={
             background_size: '50px 50px';
 =======
       {/* Cyberpunk grid */}
@@ -3286,20 +3285,20 @@ export default UltraFuturisticBackground2034;        <motion.div;
         />;
       </div>;
     </div>)}export default UltraFuturisticBackground2034;        <motion.div;
-          className="absolute inset - 0 bg-[linear - gradient (rgba (0, 255, 255, 0.1)_1px, transparent_1px), linear - gradient (90deg, rgba (0, 255, 255, 0.1)_1px, transparent_1px)]";
-          style={{background_size: '50px 50px';
-            ease: 'easeInOut',            ease: "easeInOut"
-          }}
-          animate={{}export default UltraFuturisticBackground2034;        <motion.div;
-          className="absolute inset-0 bg-[linear-gradient(rgba(0,255,255,0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(0,255,255,0.1)_1px,transparent_1px)]";
+          className='absolute inset - 0 bg-[linear - gradient (rgba (0, 255, 255, 0.1)_1px, transparent_1px), linear - gradient (90deg, rgba (0, 255, 255, 0.1)_1px, transparent_1px)]';
+          style={background_size: '50px 50px';
+            ease: 'easeInOut',            ease: 'easeInOut'
+          }
+          animate={}export default UltraFuturisticBackground2034;        <motion.div;
+          className='absolute inset-0 bg-[linear-gradient(rgba(0,255,255,0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(0,255,255,0.1)_1px,transparent_1px)]';
 export default UltraFuturisticBackground2034;        <motion&& motion.div;
-          className="absolute inset-0 bg-[linear-gradient(rgba(0,255,255,0 && 0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(0,255,255,0 && 0.1)_1px,transparent_1px)]";
-          style={{backgroundSize: '50px 50px';
-          }}
-          animate={{opacity: [0 && 0.3, 0 && 0.6, 0 && 0.3];
-          animate={{opacity: [0 && 0.3, 0 && 0.6, 0 && 0.3];
-          }}
-          transition={{"duration": 4;
+          className='absolute inset-0 bg-[linear-gradient(rgba(0,255,255,0 && 0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(0,255,255,0 && 0.1)_1px,transparent_1px)]';
+          style={backgroundSize: '50px 50px';
+          }
+          animate={opacity: [0 && 0.3, 0 && 0.6, 0 && 0.3];
+          animate={opacity: [0 && 0.3, 0 && 0.6, 0 && 0.3];
+          }
+          transition={'duration': 4;
             }
             "repeat": -1;
 =======
@@ -3319,11 +3318,11 @@ export default UltraFuturisticBackground2034;        <motion.div
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 
-export default UltraFuturisticBackground2034;}}
-          transition={{"duration": 4,"repeat": -1,"ease": 'easeInOut',            "ease": "easeInOut";"
+export default UltraFuturisticBackground2034;}
+          transition={'duration': 4,'repeat': -1,'ease': 'easeInOut',            'ease': 'easeInOut';'
             }
-            "opacity": [0.3, 0.6, 0.3]}}
-          transition={{"duration": 4,"repeat": -1,"ease": 'easeInOut'}}' />;
+            'opacity': [0.3, 0.6, 0.3]}
+          transition={'duration': 4,'repeat': -1,'ease': 'easeInOut'}' />;
       </div>;
     </div>;
             opacity: [0.3, 0.6, 0.3]
@@ -3421,8 +3420,8 @@ export default UltraFuturisticBackground2034;
             repeat: -1;
 export default UltraFuturisticBackground2034;
 
-          }}
-          transition={{}
+          }
+          transition={}
             duration: 4,
             repeat: -1,
             ease: easeInOut',            ease: "easeInOut"

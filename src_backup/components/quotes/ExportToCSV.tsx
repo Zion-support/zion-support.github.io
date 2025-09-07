@@ -1,9 +1,9 @@
 import { Button } from "@/components/ui/button";
 import { Download } from 'lucide-react';
-import type { QuoteRequest } from "@/types/quotes";
+import type { QuoteRequest } from '@/types/quotes';
 
 
-import { Button } from "@/components/ui/button";
+import { Button } from '@/components/ui/button';
 import { Download } from 'lucide-react'
 import type { QuoteRequest } from "@/types/quotes";
 
@@ -44,8 +44,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 
           // Escape commas and quotes in cell values
-          typeof cell === 'string' && (cell.includes() |cell.includes('"'))
-            ? `"${cell.replace(/"/g, '""')}"`
+          typeof cell === 'string' && (cell.includes() |cell.includes('''))
+            ? `'${cell.replace(/'/g, '''')}'`
             : cell
         ).join()
       )
@@ -157,7 +157,7 @@ export const ExportToCSV = ({ quotes, filename = "quote - requests }: ExportToCS
       headers.join ()...rows.map (row =>;
         row.map (cell =>;
           // Escape commas and quotes in cell values;
-          typeof cell === 'string' && (cell.includes () || cell.includes ('"'))? `"${cell.replace (/"/g, '""')}"`;
+          typeof cell === 'string' && (cell.includes () || cell.includes ('''))? `'${cell.replace (/'/g, '''')}'`;
             : cell).join ())].join ('\n')// Create download link;
     const blob = new Blob ([csv_content], { type: 'text / csv, charset = utf - 8, ' })const url = URL.createObjectURL (blob)const link = document.create_element ('a')link.set_attribute ('href', url)link.set_attribute ('download', `${filename}-${new Date ().toISOString ().split ('T')[0]}.csv`)document.body.append_child (link)// Download file and clean up;
     link.click ()set_timeout (() => {document.body.remove_child (link)URL.revokeObjectURL (url)}, 100)}
@@ -165,20 +165,20 @@ export const ExportToCSV = ({ quotes, filename = "quote - requests }: ExportToCS
       <Download size={16} />;
       Export CSV;
     </Button>)}
-'";
+'';
   } }
   return (
 
 
-import { Button } from "@/components/ui/button",
+import { Button } from '@/components/ui/button',
 import { Download } from 'lucide-react'
-import type { QuoteRequest } from "@/types/quotes",
+import type { QuoteRequest } from '@/types/quotes',
 interface ExportToCSVProps {
   quotes: QuoteRequest[],
   filename?: string
 }
 
-export const ExportToCSV = ({ quotes, filename = "quote-requests" }: ExportToCSVProps) => {
+export const ExportToCSV = ({ quotes, filename = 'quote-requests' }: ExportToCSVProps) => {
   const handleExport = () => {
     // Define CSV Headers
     const headers = [
@@ -306,7 +306,7 @@ export const ExportToCSV = ({ quotes, filename = quote-requests" }: ExportToCSVP
       Export CSV;
     </Button>;
   )}return (<Button;
-      variant="outline";
+      variant='outline';
       onClick = {handleExport}
       className=flex items-center gap-2;
       disabled={quotes && quotes.length === 0}>;

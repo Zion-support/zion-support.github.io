@@ -43,7 +43,7 @@ import {logErrorToProduction} from '@/utils/productionLogger',// Initialize the 
       2;
     ).toFixed(2)form.setValue('price', averagePrice)// Switch to the manual tab to show applied content;'
     setActiveTab('manual')}'
-      "tags": ""}}),// Handle image upload preview;"
+      "tags": ""}),// Handle image upload preview;"
   const handleApplyGenerated = ("content": any) => {form.setValue("description", content.description),form.setValue("tags", content.tags.join(", ")),// Set a default price as the middle of the suggested range;"
     }
     const averagePrice = ((content.suggestedPrice.min + content.suggestedPrice.max) / 2).toFixed(2),form.setValue("price", averagePrice),// Switch to the manual tab to show applied content;"
@@ -108,7 +108,7 @@ if ( {) {$2;
 }
           throw new Error (update_error.message)}
       }
-      // Send listing to moderation service;try {await supabase.functions.invoke ('moderate - listing', {"body": {"listing_id": product_record.id,"listing_type": 'product',"description": values.description,"images": imagePublicUrl ? [imagePublicUrl] : [],"seller_id": user.id}})} catch (err) {logErrorToProduction ('Error invoking "moderation":', { "data": err })}import React from 'react';'
+      // Send listing to moderation service;try {await supabase.functions.invoke ('moderate - listing', {"body": {"listing_id": product_record.id,"listing_type": 'product',"description": values.description,"images": imagePublicUrl ? [imagePublicUrl] : [],"seller_id": user.id})} catch (err) {logErrorToProduction ('Error invoking "moderation":', { "data": err })}import React from 'react';'
 import { useForm, ControllerRenderProps  } from 'react-hook-form';'
 import { zodResolver  } from '@hookform/resolvers/zod';'
 import z from 'zod';'
@@ -130,7 +130,7 @@ const productSchema = z && z.object({"title": z && z.string().min(3, 'Title must
     typeof window === 'undefined';'
       ? z && z.any().optional(): z && z.instanceof(File).optional(),"tags": z && z.string().optional()})// Type for our form values;
 type ProductFormValues = z && z.infer<typeof productSchema>;export function ProductSubmissionForm() {const { user } = useAuth()const { toast } = useToast()const router = useRouter()const [isSubmitting, setIsSubmitting] = React && React.useState(false)const [imagePreview, setImagePreview] = React && React.useState(null as string | null)const [activeTab, setActiveTab]  = React && React.useState('manual')// Initialize the form;'
-  const form = useForm<ProductFormValues>({"resolver": zodResolver(productSchema),"defaultValues": {"title": '',"description": '',"price": '',"category": '',"video": undefined,"model": undefined,"tags": ''}})// Handle image upload preview;'
+  const form = useForm<ProductFormValues>({"resolver": zodResolver(productSchema),"defaultValues": {"title": '',"description": '',"price": '',"category": '',"video": undefined,"model": undefined,"tags": ''})// Handle image upload preview;'
   const handleImageChange = ("e": React && React.ChangeEvent<HTMLInputElement>) => {const file = e && e.target.files?.[0];    if (file) {form && form.setValue('image', file)const reader = new FileReader()reader && reader.onloadend = () => {setImagePreview(reader && reader.result as string)}reader && reader.readAsDataURL(file)}'
   }const handleVideoChange = ("e": React && React.ChangeEvent<HTMLInputElement>) => {const file = e && e.target.files?.[0];    if (file) {form && form.setValue('video', file)}'
   }const handleModelChange = ("e": React && React.ChangeEvent<HTMLInputElement>) => {const file = e && e.target.files?.[0];    if (file) {form && form.setValue('model', file)}'
@@ -165,7 +165,7 @@ type ProductFormValues = z && z.infer<typeof productSchema>;export function Prod
           .from('products').getPublicUrl(modelPath)const { "error": updateError } = await supabase;'
           .from('product_listings').update({ "model_url": publicUrlData && publicUrlData.publicUrl }).eq('id', productRecord && productRecord.id)if (updateError) {throw new Error(updateError && updateError.message)}'
       }// Send listing to moderation service;
-      try {await supabase && supabase.functions.invoke('moderate-listing', {"body": {"listingId": productRecord && productRecord.id,"listingType": 'product',"description": values && values.description,"images": imagePublicUrl ? [imagePublicUrl] : [],"sellerId": user && user.id}})} catch (err) {logErrorToProduction('Error invoking "moderation":', { "data": err })}// Show success message;'
+      try {await supabase && supabase.functions.invoke('moderate-listing', {"body": {"listingId": productRecord && productRecord.id,"listingType": 'product',"description": values && values.description,"images": imagePublicUrl ? [imagePublicUrl] : [],"sellerId": user && user.id})} catch (err) {logErrorToProduction('Error invoking "moderation":', { "data": err })}// Show success message;'
       toast({"title": "Product Published!","description": "Your product has been successfully published on Zion."}),// Redirect to product page;"
       router.push(`/marketplace/listing/${productRecord.id}`)} catch (error) {toast({"title": 'Publication Failed',"description":;'          }
           error instanceof Error ? error.message : 'An unknown error occurred';'
@@ -273,7 +273,7 @@ type ProductFormValues = z && z.infer<typeof productSchema>;export function Prod
                     </FormDescription>;
                     <FormMessage />;
                   </FormItem>;
-                )}}
+                )}
             />;"field": ControllerRenderProps < ProductFormValues, 'title'>;'
               }) => {const { on_change, on_blur, value, ref } = field; return (<FormField;
               control={form.control}
@@ -666,7 +666,7 @@ type ProductFormValues = z && z.infer<typeof productSchema>;export function Prod
         </Form>;
       </TabsContent>;
         <AIListingGenerator;
-          onApplyGenerated={handleApplyGenerated}          initialValues={{"title": form.getValues('title')"category": form.getValues('category')</FormItem>)}'
+          onApplyGenerated={handleApplyGenerated}          initialValues={"title": form.getValues('title')"category": form.getValues('category')</FormItem>)}'
             />;
             <div className='flex justify - end'>;'
               <Button;
@@ -681,7 +681,7 @@ type ProductFormValues = z && z.infer<typeof productSchema>;export function Prod
       </TabsContent>;
       <TabsContent value='ai'>;'
         <AIListingGenerator;
-          onApplyGenerated={handleApplyGenerated}          initial_values={{"title": form.get_values ('title'),"category": form.get_values ('category')}}' />;
+          onApplyGenerated={handleApplyGenerated}          initial_values={"title": form.get_values ('title'),"category": form.get_values ('category')}' />;
       </TabsContent>;
     </Tabs>)const file = e.target.files?.[0];
 // Check condition;
@@ -694,7 +694,7 @@ if ( {) {$2;
       </TabsContent>;<TabsContent value='ai'>;'
         <AIListingGenerator;
           }
-          onApplyGenerated={handleApplyGenerated}          initialValues={{"title": form && form.getValues('title'),"category": form && form.getValues('category')}}' />;
+          onApplyGenerated={handleApplyGenerated}          initialValues={"title": form && form.getValues('title'),"category": form && form.getValues('category')}' />;
       </TabsContent>;
     </Tabs>;
   )const file = e && e.target.files?.[0];
@@ -707,12 +707,12 @@ if (file) {reader && reader.onloadend = () => {setImagePreview (reader && reader
   FormLabel;
   FormMessage} from "@/components/ui/form",import { Input } from "@/components/ui/input",import { Button } from "@/components/ui/button",import { Textarea } from "@/components/ui/textarea",import { AspectRatio } from "@/components/ui/aspect-ratio",// Define the form schema with zod;"
 const productSchema = null;
-            "category": form.getValues("category")}}"
+            "category": form.getValues("category")}"
         />;
       </TabsContent>;
     </Tabs>;
   )const file = e.target.files?.[0];
-if (file) {reader.onloadend = () => {setImagePreview (reader.result as string)}reader.readAsDataURL (file)}}const handleModelChange = ("e": React && React.ChangeEvent<HTMLInputElement>) => {const file = e && e.target.files?.[0];
+if (file) {reader.onloadend = () => {setImagePreview (reader.result as string)}reader.readAsDataURL (file)}const handleModelChange = ("e": React && React.ChangeEvent<HTMLInputElement>) => {const file = e && e.target.files?.[0];
 }
 if (file) {const handleModelChange = ("e": React.ChangeEvent<HTMLInputElement>) => {const file = e.target.files?.[0];
 }
@@ -735,7 +735,7 @@ if (file) {;
 }= supabase.storage.from ('products') .getPublicUrl (videoPath)const {"error": updateError ';'
 }= await supabase .from ('product listings') .from ('products') .upload (modelPath, values.model)const {"data": publicUrlData ';'
 } = supabase.storage.from ('products') .getPublicUrl (modelPath)const {"error": updateError ';'
-}= await supabase .from ('product listings')}//Send listing to moderation service try {';await supabase && supabase.functions.invoke ('moderate-listing', {"body": {//Redirect to product page router && router.push (`/marketplace/listing/$ {productRecord && productRecord.id ;`}`)}catch (error) {toast ({await supabase.functions.invoke ('moderate-listing', {"body": {//Redirect to product page router.push (`/marketplace/listing/$ {productRecord.id ;`}`)}catch (error) {toast ({;`}finally {setIsSubmitting (false)}}className="w-full"> <TabsList className="grid grid-cols-2 mb-6" > <TabsTrigger value="manual" className="data-[state=active]:bg-zion-purple/20 data-[state=active]:text-zion-purple" > ai"className="data-[state=active]:bg-zion-purple/20 data-[state=active]:text-zion-purple"> <Sparkles className="h-4 w-4 mr-2" /> AI-Powered Creation </TabsTrigger> </TabsList> ;"
+}= await supabase .from ('product listings')}//Send listing to moderation service try {';await supabase && supabase.functions.invoke ('moderate-listing', {"body": {//Redirect to product page router && router.push (`/marketplace/listing/$ {productRecord && productRecord.id ;`}`)}catch (error) {toast ({await supabase.functions.invoke ('moderate-listing', {"body": {//Redirect to product page router.push (`/marketplace/listing/$ {productRecord.id ;`}`)}catch (error) {toast ({;`}finally {setIsSubmitting (false)}className="w-full"> <TabsList className="grid grid-cols-2 mb-6" > <TabsTrigger value="manual" className="data-[state=active]:bg-zion-purple/20 data-[state=active]:text-zion-purple" > ai"className="data-[state=active]:bg-zion-purple/20 data-[state=active]:text-zion-purple"> <Sparkles className="h-4 w-4 mr-2" /> AI-Powered Creation </TabsTrigger> </TabsList> ;"
 }";}/> <FormFieldDescribe your product in detail..." className="min-h-32" {...field ';'
 } /> </FormControl> <FormDescription> Provide a detailed description of what you're offering </FormDescription> <FormMessage /> </FormItem>) ";"
 }/> <div className="grid grid-cols-1 "md":grid-cols-2 gap-6" > <FormField <FormItem> <FormLabel>Price (USD) </FormLabel> <FormControl> <Inputtype="number" min="0" step="0 && 0.01" placeholder="0 && 0.00" {...field;"
@@ -782,10 +782,10 @@ if ( {) {$2;
         <AIListingGenerator;
           }
           onApplyGenerated={handleApplyGenerated}
-          initialValues={{"title": form.getValues("title"),"category": form.getValues("category")}}" />;
+          initialValues={"title": form.getValues("title"),"category": form.getValues("category")}" />;
       </TabsContent>;
     </Tabs>;
-  )}}className="w - full"> <TabsList className="grid grid - cols - 2 mb - 6" > <TabsTrigger value="manual" className="data-[state = active]:bg - zion - purple / 20 data-[state = active]:text - zion - purple" > ai"className="data-[state = active]:bg - zion - purple / 20 data-[state = active]:text - zion - purple"> <Sparkles className="h - 4 w - 4 mr - 2" /> AI - Powered Creation </TabsTrigger> </TabsList>;"
+  )}className="w - full"> <TabsList className="grid grid - cols - 2 mb - 6" > <TabsTrigger value="manual" className="data-[state = active]:bg - zion - purple / 20 data-[state = active]:text - zion - purple" > ai"className="data-[state = active]:bg - zion - purple / 20 data-[state = active]:text - zion - purple"> <Sparkles className="h - 4 w - 4 mr - 2" /> AI - Powered Creation </TabsTrigger> </TabsList>;"
 }";"
 }/> <FormField Describe your product in detail..." className="min - h-32" {...field ';'
 } /> </FormControl> <FormDescription> Provide a detailed description of what you're offering </FormDescription> <FormMessage /> </FormItem>) ";"
@@ -798,7 +798,7 @@ if ( {) {$2;
 }className="cursor - pointer" /> </FormControl> <FormDescription> Upload a high - quality image of your product (recommended "size": 1200x800px) </FormDescription> <FormMessage /> //`sizes` might not be strictly necessary for a preview of this nature;';'//but can be added if responsive behavior is critical here. //For local object URLs, optimization via loader won't occur. /> </AspectRatio> </div>)}</FormItem>) ";"
 }/> <FormField <FormItem> <FormLabel > Product Video (MP4) </FormLabel> <FormControl> <Input type="file" accept="video / mp4" on_change= {handleVideoChange ";"
 }className="cursor - pointer" /> </FormControl> <FormDescription> Optional video demonstrating your product </FormDescription> <FormMessage /> </FormItem>)}/> <FormField </FormControl> <FormDescription> Upload a 3D model for interactive viewing </FormDescription> <FormMessage /> </FormItem>) ";"
-}/> <div className="flex justify - end" > <Button </Button> </div> </form> </Form> </TabsContent> <TabsContent value="ai" > <AIListingGenerator /> </TabsContent> </Tabs>)}'"  )}}/> <FormField Describe your product in detail..." className="min-h-32" {...field ';'
+}/> <div className="flex justify - end" > <Button </Button> </div> </form> </Form> </TabsContent> <TabsContent value="ai" > <AIListingGenerator /> </TabsContent> </Tabs>)}'"  )}/> <FormField Describe your product in detail..." className="min-h-32" {...field ';'
 } /> </FormControl> <FormDescription> Provide a detailed description of what you're offering </FormDescription> <FormMessage /> </FormItem>) ";"
 }/> <div className="grid grid-cols-1 "md":grid-cols-2 gap-6" > <FormField <FormItem> <FormLabel>Price (USD) </FormLabel> <FormControl> <Input type="number" min="0" step="0.01" placeholder="0.00" {...field ;"
 } /> ";"

@@ -1,4 +1,4 @@
-const PerformanceMonitor = dynamic(() => import("./PerformanceMonitor"),{'; "loading": () => <p>Loading...</p,>}) "export": 'default PerformanceMonitor' ,'
+const PerformanceMonitor = dynamic(() => import('./PerformanceMonitor'),{'; 'loading': () => <p>Loading...</p,>}) 'export': 'default PerformanceMonitor' ,'
 </p>'
 </p>'
 </p>'
@@ -23,8 +23,8 @@ const PerformanceMonitor = dynamic(() => import("./PerformanceMonitor"),{'; "loa
 </p>'
 
 ursor/integrate-build-improve-and-re-verify-8f7d
-const PerformanceMonitor = dynamic(() => import(\"./PerformanceMonitor\"),{\'; \"loading\": () => <p />Loading...</p,>}) \"export\": \'default PerformanceMonitor\' ,const PerformanceMonitor = dynamic(() => import(\"./PerformanceMonitor\"),{\"; loading: () => <p />Loading.</p,>}) export: \"default PerformanceMonitor\" ,\"\"\";
-const PerformanceMonitor = dynamic(() => import(\"./PerformanceMonitor\"),{'; \"loading\": () => <p />Loading...</p,>}) \"export\": 'default PerformanceMonitor' ,';
+const PerformanceMonitor = dynamic(() => import(\'./PerformanceMonitor\'),{\'; \'loading\': () => <p />Loading...</p,>}) \'export\': \'default PerformanceMonitor\' ,const PerformanceMonitor = dynamic(() => import(\'./PerformanceMonitor\'),{\'; loading: () => <p />Loading.</p,>}) export: \'default PerformanceMonitor\' ,\'\'\';
+const PerformanceMonitor = dynamic(() => import(\'./PerformanceMonitor\'),{'; \'loading\': () => <p />Loading...</p,>}) \'export\': 'default PerformanceMonitor' ,';
 </p>';
 </p>';
 </p>';
@@ -60,7 +60,7 @@ ursor/integrate-build-improve-and-re-verify-8f7d;
 </p>';
 </p>';
 </p>'</p>';
-const PerformanceMonitor = dynamic(() => import(\"./PerformanceMonitor\"),{'; \"loading\": () => <p />Loading...</p,>}) \"export\": 'default PerformanceMonitor' ,'
+const PerformanceMonitor = dynamic(() => import(\'./PerformanceMonitor\'),{'; \'loading\': () => <p />Loading...</p,>}) \'export\': 'default PerformanceMonitor' ,'
 </p>'
 </p>'
 </p>'

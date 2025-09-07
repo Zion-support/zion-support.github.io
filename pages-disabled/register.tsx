@@ -70,9 +70,9 @@ export default function RegisterPage() {}
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
         <div className="max-w-md w-full space-y-8">
           <motion.div;
-            initial={{ opacity: 0, y: 20 }};
-            animate={{ opacity: 1, y: 0 }};
-            transition={{ duration: 0.6 }};
+            initial={ opacity: 0, y: 20 };
+            animate={ opacity: 1, y: 0 };
+            transition={ duration: 0.6 };
             className="text-center"
           >
             <div className="mx-auto h-12 w-12 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">
@@ -87,9 +87,9 @@ export default function RegisterPage() {}
           </motion.div>
 
           <motion.div;
-            initial={{ opacity: 0, y: 20 }};
-            animate={{ opacity: 1, y: 0 }};
-            transition={{ duration: 0.6, delay: 0.2 }};
+            initial={ opacity: 0, y: 20 };
+            animate={ opacity: 1, y: 0 };
+            transition={ duration: 0.6, delay: 0.2 };
             className="bg-white/10 backdrop-blur-md rounded-lg shadow-xl p-8"
           >
             <form className="space-y-6" onSubmit={handleSubmit}>

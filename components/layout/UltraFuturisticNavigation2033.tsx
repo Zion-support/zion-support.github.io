@@ -54,7 +54,6 @@ import {
   Phone, Mail, MapPin, Globe, Rocket, Brain, Atom, ;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
   Cpu, Target, Microscope, Shield, Zap, Sparkles;
-<<<<<<< HEAD
   Menu, X, Search, ChevronDown, Home, Briefcase;
   DollarSign, BookOpen, Users, MessageCircle
 
@@ -234,56 +233,56 @@ const serviceCategories = [;
         description: 'Emotional AI platform';
         price: '$1,999/month';
       }
-      {"name": 'AI Creativity Orchestrator';'
+      {'name': 'AI Creativity Orchestrator';'
         }
-        "href": '/ai-creativity-orchestrator';'
-        "description": 'Creative AI solutions';'
-        "price": '$1,499/month';'
+        'href': '/ai-creativity-orchestrator';'
+        'description': 'Creative AI solutions';'
+        'price': '$1,499/month';'
       }
-      {"name": 'AI Autonomous Business Manager',"href": '/ai-autonomous-business-manager',"description": 'Autonomous business AI',"price": '$3,999/month'}]},{"title": '⚛️ Quantum & Emerging Tech',"icon": Atom,"color": 'from-indigo-500 to-blue-600',"services": [;'
-{"name": 'Quantum Internet Security',"href": '/quantum-internet-security-gateway',"description": 'Quantum security',"price": '$4,999/month'},{"name": 'Biotech DNA Computing';'
+      {'name': 'AI Autonomous Business Manager','href': '/ai-autonomous-business-manager','description': 'Autonomous business AI','price': '$3,999/month'}]},{'title': '⚛️ Quantum & Emerging Tech','icon': Atom,'color': 'from-indigo-500 to-blue-600','services': [;'
+{'name': 'Quantum Internet Security','href': '/quantum-internet-security-gateway','description': 'Quantum security','price': '$4,999/month'},{'name': 'Biotech DNA Computing';'
         }
-        "href": '/biotech-dna-computing-platform';'
-        "description": 'DNA computing platform';'
-        "price": '$3,999/month';'
+        'href': '/biotech-dna-computing-platform';'
+        'description': 'DNA computing platform';'
+        'price': '$3,999/month';'
       }
-      {"name": 'Quantum Financial Trading';'
+      {'name': 'Quantum Financial Trading';'
         }
-        "href": '/quantum-financial-trading-platform';'
-        "description": 'Quantum trading';'
-        "price": '$5,999/month';'
+        'href': '/quantum-financial-trading-platform';'
+        'description': 'Quantum trading';'
+        'price': '$5,999/month';'
       }
-      {"name": 'DNA Computing Platform';'
+      {'name': 'DNA Computing Platform';'
         }
-        "href": '/dna-computing-platform';'
-        "description": 'Molecular computing';'
-        "price": '$1,299/month';'
+        'href': '/dna-computing-platform';'
+        'description': 'Molecular computing';'
+        'price': '$1,299/month';'
       }
-      {"name": 'Photonic Computing Infrastructure';'
+      {'name': 'Photonic Computing Infrastructure';'
         }
-        "href": '/photonic-computing-infrastructure';'
-        "description": 'Light-speed computing';'
-        "price": '$699/month';'
+        'href': '/photonic-computing-infrastructure';'
+        'description': 'Light-speed computing';'
+        'price': '$699/month';'
       }
-      {"name": 'Swarm Robotics Platform',"href": '/swarm-robotics-platform',"description": 'Collective robot intelligence',"price": '$1,199/month'}]},{"title": '🏙️ Enterprise IT Solutions',"icon": Cpu,"color": 'from-blue-500 to-cyan-600',"services": [;'
-{"name": 'Autonomous DevOps Platform',"href": '/autonomous-devops-platform',"description": 'Self-managing DevOps',"price": '$2,499/month'},{"name": 'Zero Trust Network Architecture';'
+      {'name': 'Swarm Robotics Platform','href': '/swarm-robotics-platform','description': 'Collective robot intelligence','price': '$1,199/month'}]},{'title': '🏙️ Enterprise IT Solutions','icon': Cpu,'color': 'from-blue-500 to-cyan-600','services': [;'
+{'name': 'Autonomous DevOps Platform','href': '/autonomous-devops-platform','description': 'Self-managing DevOps','price': '$2,499/month'},{'name': 'Zero Trust Network Architecture';'
         }
-        "href": '/zero-trust-network-architecture';'
-        "description": 'Zero trust security';'
-        "price": '$1,999/month';'
+        'href': '/zero-trust-network-architecture';'
+        'description': 'Zero trust security';'
+        'price': '$1,999/month';'
       }
-      {"name": 'Edge Computing Orchestration';'
+      {'name': 'Edge Computing Orchestration';'
         }
-        "href": '/edge-computing-orchestration';'
-        "description": 'Edge computing platform';'
-        "price": '$1,799/month';'
+        'href': '/edge-computing-orchestration';'
+        'description': 'Edge computing platform';'
+        'price': '$1,799/month';'
       }
-      {"name": 'AI IT Operations Center',"href": '/ai-it-operations-center',"description": 'AI-powered IT ops',"price": '$2,999/month'}]},{"title": '🌌 Space & Metaverse Tech',"icon": Rocket,"color": 'from-teal-500 to-emerald-600',"services": [;'
-{"name": 'Space Mining Automation',"href": '/space-mining-automation-platform',"description": 'Space mining platform',"price": '$9,999/month'},{"name": 'Metaverse Development';'
+      {'name': 'AI IT Operations Center','href': '/ai-it-operations-center','description': 'AI-powered IT ops','price': '$2,999/month'}]},{'title': '🌌 Space & Metaverse Tech','icon': Rocket,'color': 'from-teal-500 to-emerald-600','services': [;'
+{'name': 'Space Mining Automation','href': '/space-mining-automation-platform','description': 'Space mining platform','price': '$9,999/month'},{'name': 'Metaverse Development';'
         }
-        "href": '/metaverse-development-platform';'
-        "description": 'Metaverse platform';'
-        "price": '$3,999/month';'
+        'href': '/metaverse-development-platform';'
+        'description': 'Metaverse platform';'
+        'price': '$3,999/month';'
       }
   /* Contact Button */
 }<motion.div whileHover= {  {  website: 'https://ziontechgroup.com'
@@ -1811,10 +1810,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 <<<<<<< HEAD
                       className="absolute top-full left-0 w-screen max-w-6xl bg-gray-900/95 backdrop-blur-xl border border-purple-500/20 rounded-2xl shadow-2xl p-8 -ml-4"
                     >
-                      <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
+                      <div className='grid grid-cols-2 lg:grid-cols-4 gap-8'>
                         {serviceCategories.map((category) => (
-                          <div key={category.title} className="space-y-4">
-                            <div className="flex items-center space-x-3">
+                          <div key={category.title} className='space-y-4'>
+                            <div className='flex items-center space-x-3'>
                               <div className={`w-10 h-10 rounded-lg bg-gradient-to-r ${category.color} flex items-center justify-center`}>
                                 <category.icon className="w-5 h-5 text-white" />
 =======
@@ -2242,13 +2241,12 @@ key={service.name}
 <<<<<<< HEAD
                   )}key={link && link.name}
                   href={link && link.href}
-                  className="text-gray-300 hover:text-white transition-colors duration-200 py-2 px-3 rounded-lg hover:bg-gray-800/50";
+                  className='text-gray-300 hover:text-white transition-colors duration-200 py-2 px-3 rounded-lg hover:bg-gray-800/50';
               ))}
                   className='text-gray-300 hover:text-white transition-colors duration-200 py-2 px-3 rounded-lg hover:bg-gray-800/50'                >;
                 >;
                 </AnimatePresence>;
               </div>;
-=======
                       </div>;
                     </motion && motion.div>;
 
@@ -2263,17 +2261,16 @@ key={service.name}
 {quickLinks.map(link => (<Link;}
                   key={link.name}
                   href={link.href}
-<<<<<<< HEAD
                   className='text-gray-300 hover:text-white transition-colors duration-200 py-2 px-3 rounded-lg hover:bg-gray-800/50';
                 >;
                   )}
                   key={link && link.name}
                   href={link && link.href}
-                  className="text-gray-300 hover:text-white transition-colors duration-200 py-2 px-3 rounded-lg hover:bg-gray-800/50"
+                  className='text-gray-300 hover:text-white transition-colors duration-200 py-2 px-3 rounded-lg hover:bg-gray-800/50'
               ))}
                   className='text-gray-300 hover:text-white transition-colors duration-200 py-2 px-3 rounded-lg hover:bg-gray-800/50'                >
 
-                  className='text-gray-300 "hover": text-white transition-colors duration-200 py-2 px-3 rounded-lg "hover":bg-gray-800/50''
+                  className='text-gray-300 'hover': text-white transition-colors duration-200 py-2 px-3 rounded-lg 'hover':bg-gray-800/50''
                 >
 =======
 
@@ -2353,7 +2350,7 @@ key={service.name}
                 <Link
                   key={link.name}
                   href={link.href}
-                  className="text-gray-300 hover:text-white transition-colors duration-200 py-2 px-3 rounded-lg hover:bg-gray-800/50"
+                  className='text-gray-300 hover:text-white transition-colors duration-200 py-2 px-3 rounded-lg hover:bg-gray-800/50'
                 >
 =======
                   className='text-gray-300 hover:text-white transition-colors duration-200 py-2 px-3 rounded-lg hover:bg-gray-800/50'                >
@@ -2410,7 +2407,7 @@ href='/contact'
 <div className='"lg":hidden'>'
               <button,
 onClick={toggleMenu}
-                className='text-gray-300 "hover":text-white transition-colors duration-200 p-2''
+                className='text-gray-300 'hover':text-white transition-colors duration-200 p-2''
               >
                 {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
                   {link.name}
@@ -2577,11 +2574,11 @@ href='/contact';
                 ) : (<Menu className='w-6 h-6' />;
                 )}              </button>              <button;
                 onClick={toggleMenu}
-                className="text-gray-300 hover:text-white transition-colors duration-200 p-2";
+                className='text-gray-300 hover:text-white transition-colors duration-200 p-2';
               >;
                 )}              </button>              <button
                 onClick={toggleMenu}
-                className="text-gray-300 hover:text-white transition-colors duration-200 p-2"
+                className='text-gray-300 hover:text-white transition-colors duration-200 p-2'
               >
                 {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
 <<<<<<< HEAD
@@ -3086,7 +3083,7 @@ className='block text-sm text-gray-400 hover: text-cyan-400 transition-colors'
                         key={link.name}
                         href={link.href}
                         on_click={close_menu}
-                        className='text - sm text - gray - 400 hover:text - cyan - 400 transition - colors'                        className="text - sm text - gray - 400 hover:text - cyan - 400 transition - colors";
+                        className='text - sm text - gray - 400 hover:text - cyan - 400 transition - colors'                        className='text - sm text - gray - 400 hover:text - cyan - 400 transition - colors';
                       >;
                 {/* Mobile Quick Links */}'
                 <div className='space - y-4'>;'
@@ -3097,15 +3094,15 @@ className='block text-sm text-gray-400 hover: text-cyan-400 transition-colors'
                     {quick_links.map (link => (                      <Link;
                         key={link.name}
                         href={link.href}
-                        on_click={close_menu}'"
-                        className='text - sm text - gray - 400 hover:text - cyan - 400 transition - colors'                      >                <div className="space - y-4">;"
-                  <h3 className="text - lg font - semibold text - white">Quick Links</h3>;"
-                  <div className="grid grid - cols - 2 gap - 2">;
+                        on_click={close_menu}''
+                        className='text - sm text - gray - 400 hover:text - cyan - 400 transition - colors'                      >                <div className='space - y-4'>;'
+                  <h3 className='text - lg font - semibold text - white'>Quick Links</h3>;'
+                  <div className='grid grid - cols - 2 gap - 2'>;
                     {quick_links.map ((link) => (
                         key={link.name}
                         href={link.href}
-                        on_click={close_menu}'"
-                        className='text - sm text - gray - 400 hover:text - cyan - 400 transition - colors'                        className="text - sm text - gray - 400 hover:text - cyan - 400 transition - colors";
+                        on_click={close_menu}''
+                        className='text - sm text - gray - 400 hover:text - cyan - 400 transition - colors'                        className='text - sm text - gray - 400 hover:text - cyan - 400 transition - colors';
                       >;
 <div className='space-y-4'>
                   <h3 className=text-lg font-semibold text-white>
@@ -3139,7 +3136,6 @@ className='text-sm text-gray-400 hover: text-cyan-400 transition-colors'
 }
                   </div>;
                 </div>;
-<<<<<<< HEAD
                 {/* Mobile Contact Button */}<div className='pt - 4'>;
                 {/* Mobile Contact Button */}
                 <div className='pt - 4'>;
@@ -3149,10 +3145,10 @@ className='text-sm text-gray-400 hover: text-cyan-400 transition-colors'
                   <Link;'
                     href='/contact';
                     on_click={close_menu}'
-                    className='block w - full px - 6 py - 3 bg - gradient - to - r from - purple - 600 to - cyan - 600 text - white font - medium rounded - lg text - center hover:from - purple - 700 hover:to - cyan - 700 transition - all duration - 200'                  >                  <Link;"
-                    href="/contact";
-                    on_click={close_menu}"
-                    className="block w - full px - 6 py - 3 bg - gradient - to - r from - purple - 600 to - cyan - 600 text - white font - medium rounded - lg text - center hover:from - purple - 700 hover:to - cyan - 700 transition - all duration - 200";
+                    className='block w - full px - 6 py - 3 bg - gradient - to - r from - purple - 600 to - cyan - 600 text - white font - medium rounded - lg text - center hover:from - purple - 700 hover:to - cyan - 700 transition - all duration - 200'                  >                  <Link;'
+                    href='/contact';
+                    on_click={close_menu}'
+                    className='block w - full px - 6 py - 3 bg - gradient - to - r from - purple - 600 to - cyan - 600 text - white font - medium rounded - lg text - center hover:from - purple - 700 hover:to - cyan - 700 transition - all duration - 200';
                   >;
                   <Link;
                     href='/contact';
@@ -3269,9 +3265,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 <div className='pt-4'>
 
                   <Link
-                    href="/contact"
+                    href='/contact'
                     onClick={closeMenu}
-                    className="block w-full px-6 py-3 bg-gradient-to-r from-purple-600 to-cyan-600 text-white font-medium rounded-lg text-center hover:from-purple-700 hover:to-cyan-700 transition-all duration-200"
+                    className='block w-full px-6 py-3 bg-gradient-to-r from-purple-600 to-cyan-600 text-white font-medium rounded-lg text-center hover:from-purple-700 hover:to-cyan-700 transition-all duration-200'
                   >
                     Get Started
                   </Link>

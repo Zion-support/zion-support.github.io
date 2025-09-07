@@ -757,10 +757,10 @@ const serviceCategories = [
       }
       {
         }
-        "name": 'AI Research Assistant','
-        "href": '/ai-research-assistant','
-        "description": 'Intelligent research support','
-        "price": '$899/month','
+        'name': 'AI Research Assistant','
+        'href': '/ai-research-assistant','
+        'description': 'Intelligent research support','
+        'price': '$899/month','
       }
     ]
   },
@@ -793,18 +793,18 @@ export default function UltraFuturisticNavigation2030() {
       {
 <<<<<<< HEAD
         }
-        "name": 'AI Customer Experience Platform 2030''
-        "href": '/ai-customer-experience-platform-2030''
-        "description": 'AI-powered customer experience management''
-        "price": '$199/month''
+        'name': 'AI Customer Experience Platform 2030''
+        'href': '/ai-customer-experience-platform-2030''
+        'description': 'AI-powered customer experience management''
+        'price': '$199/month''
 
      
 }
-      {"name": 'AI Marketing Automation Suite 2030';'
+      {'name': 'AI Marketing Automation Suite 2030';'
         }
-        "href": '/ai-marketing-automation-2030';'
-        "description": 'Intelligent marketing automation powered by AI';'
-        "price": '$179/month';'
+        'href': '/ai-marketing-automation-2030';'
+        'description': 'Intelligent marketing automation powered by AI';'
+        'price': '$179/month';'
       }
       {
         name: 'AI Marketing Automation Suite 2030'
@@ -1857,7 +1857,7 @@ className="flex items-center space-x-2 text-gray-300 hover:text-white transition
                   href={item.href}
                   className="flex items-center space-x-2 text-gray-300 hover:text-white transition-colors duration-200 group"
                 >
-                  <item.icon className="w-4 h-4 group-hover:text-purple-400 transition-colors" />
+                  <item.icon className='w-4 h-4 group-hover:text-purple-400 transition-colors' />
                   <span>{item.name}</span>
                 </Link>
               ))}
@@ -2216,9 +2216,9 @@ className='block p-3 rounded-lg hover:bg-purple-500/10 transition-colors duratio
 =======
 >>>>>>> merged-prs-20250907-203621
                                     </h4>
-                                    <p className="text-xs text-gray-400">{service.description}</p>
+                                    <p className='text-xs text-gray-400'>{service.description}</p>
                                   </div>
-                                  <span className="text-xs font-mono text-purple-400">{service.price}</span>
+                                  <span className='text-xs font-mono text-purple-400'>{service.price}</span>
                                 </div>
 <<<<<<< HEAD
 =======
@@ -2266,7 +2266,7 @@ className='block p-3 rounded-lg hover:bg-purple-500/10 transition-colors duratio
             <div className='flex items - center space - x-4'>;'
               <Link href='/' className='flex items - center space - x-3 group'>;'
                 <div className='relative'>;'
-                  <div className='w - 12 h - 12 bg - gradient - to - r from - purple - 500 to - cyan - 500 rounded - xl flex items - center justify - center transform group - "hover":shadow - lg "hover":shadow - cyan - 400 / 40 transition - transform duration - 300'>;'
+                  <div className='w - 12 h - 12 bg - gradient - to - r from - purple - 500 to - cyan - 500 rounded - xl flex items - center justify - center transform group - 'hover':shadow - lg 'hover':shadow - cyan - 400 / 40 transition - transform duration - 300'>;'
                     <Zap className='w - 6 h - 6 text - white' />;'
 =======
 
@@ -2331,7 +2331,7 @@ className='block p-3 rounded-lg hover:bg-purple-500/10 transition-colors duratio
                 </Link>))}
               {/* Services Dropdown */}'
               <div className='relative group'>;'
-                <button className='flex items - center space - x-2 text - gray - 300 "hover":text - white transition - colors duration - 200'>;'
+                <button className='flex items - center space - x-2 text - gray - 300 'hover':text - white transition - colors duration - 200'>;'
                   <Briefcase className='w - 4 h - 4' />;'
                   <span > Services</span>;
                   <ChevronDown className='w - 4 h - 4 group - "hover":rotate - 180 transition - transform duration - 200' />;'
@@ -2742,7 +2742,7 @@ href='/pricing'
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 
-className='"lg":hidden bg-black/95 backdrop-blur-xl border-t border-purple-500/20''
+className=''lg':hidden bg-black/95 backdrop-blur-xl border-t border-purple-500/20''
             >
 <<<<<<< HEAD
               <div className='px-4 py-6 space-y-6'>'
@@ -2789,9 +2789,9 @@ className='"lg":hidden bg-black/95 backdrop-blur-xl border-t border-purple-500/2
                       onClick={closeMenu}
                       className='flex items-center space-x-3 p-3 rounded-lg text-gray-300 hover:text-white hover:bg-purple-500/10 transition-colors duration-200'>;
                       <item && item.icon className='w-5 h-5' />                      <span>{item && item.name}</span>            >;
-              <div className="px-4 py-6 space-y-6">;
+              <div className='px-4 py-6 space-y-6'>;
                 {/* Mobile Navigation Links */}
-                <div className="space-y-4">;
+                <div className='space-y-4'>;
                   {mainNavigation && mainNavigation.map((item) => (className='lg:hidden bg-black/95 backdrop-blur-xl border-t border-purple-500/20';
             >;
               <div className='px-4 py-6 space-y-6'>;
@@ -2807,9 +2807,9 @@ className='"lg":hidden bg-black/95 backdrop-blur-xl border-t border-purple-500/2
                       href={item && item.href}
                       onClick={closeMenu}
                       className='flex items-center space-x-3 p-3 rounded-lg text-gray-300 hover:text-white hover:bg-purple-500/10 transition-colors duration-200'>;
-                      <item && item.icon className='w-5 h-5' />                      className="flex items-center space-x-3 p-3 rounded-lg text-gray-300 hover:text-white hover:bg-purple-500/10 transition-colors duration-200";
+                      <item && item.icon className='w-5 h-5' />                      className='flex items-center space-x-3 p-3 rounded-lg text-gray-300 hover:text-white hover:bg-purple-500/10 transition-colors duration-200';
                     >;
-                      <item && item.icon className="w-5 h-5" />;
+                      <item && item.icon className='w-5 h-5' />;
                       <span>{item && item.name}</span>;
                     </Link>;className='flex items-center space-x-3 p-3 rounded-lg text-gray-300 hover:text-white hover:bg-purple-500/10 transition-colors duration-200';
                     >;
@@ -2961,7 +2961,6 @@ className='flex items-center space-x-3 p-3 rounded-lg text-gray-300 hover:text-w
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
                 {/* Mobile Services */}
-<<<<<<< HEAD
 <div className='space-y-4'>
                   <h3 className='text-lg font-semibold text-white px-3'>
                     Our Services;

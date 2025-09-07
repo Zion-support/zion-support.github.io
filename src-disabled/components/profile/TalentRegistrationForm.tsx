@@ -824,7 +824,7 @@ if ( {) {}
       hourlyRate: "",
 
       availability: "available",
-      enhancedProfile: true}}),
+      enhancedProfile: true}),
 
   // Handle adding skill tags;
   const handleAddSkill = () => {"
@@ -863,7 +863,7 @@ export function TalentRegistrationForm() { return null; }
       skills: "",;"
       hourlyRate: "",;"
       availability: "available",;
-      enhancedProfile: true}}),;
+      enhancedProfile: true}),;
   // Handle adding skill tags;
   const handleAddSkill = () => {;"
     const skillInput = form.getValues("skills"),;

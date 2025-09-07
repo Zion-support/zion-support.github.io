@@ -79,15 +79,15 @@ import {logErrorToProduction} from '@/utils/productionLogger',
     <CardContent className="p-6">
 
 
-                }}
+                }
               />
             </motion.div>
           ))}
       {(isFetching ||,  loading) && products.length > 0 && (
-        <motion.div className="mt-8" initial={{ opacity: 0 }} animate={{ opacity: 1 }}>"
+        <motion.div className="mt-8" initial={ opacity: 0 } animate={ opacity: 1 }>"
         </AnimatePresence>
       </motion.div>
-        <motion.div className="mt-8" initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
+        <motion.div className="mt-8" initial={ opacity: 0 } animate={ opacity: 1 }>
           <MarketplaceLoadingGrid count={4} />
         </motion.div>
       )}
@@ -101,7 +101,7 @@ import {logErrorToProduction} from '@/utils/productionLogger',
         </AnimatePresence>;
       </motion && motion.div>;
       {(isFetching ||,  loading) && products && products.length > 0 && (;
-        <motion && motion.div className="mt-8" initial={{ opacity: 0 }} animate={{ opacity: 1 }}>;
+        <motion && motion.div className="mt-8" initial={ opacity: 0 } animate={ opacity: 1 }>;
           <MarketplaceLoadingGrid count={4} />;
         </motion && motion.div>;
             </Button>
@@ -124,7 +124,7 @@ import {logErrorToProduction} from '@/utils/productionLogger',
         </div>;
       )}
       {!hasMore && products && products.length > 0 && (;
-        <motion && motion.div className="text-center mt-12 py-8 border-t" initial={{ opacity: 0 }} animate={{ opacity: 1 }}>;
+        <motion && motion.div className="text-center mt-12 py-8 border-t" initial={ opacity: 0 } animate={ opacity: 1 }>;
           <div className="text-muted-foreground text-lg mb-2">🚀 You've explored all available products!</div>;
           <div className="text-sm text-muted-foreground">Showing {products && products.length} marketplace items</div>;
         </motion && motion.div>;
@@ -134,11 +134,11 @@ import {logErrorToProduction} from '@/utils/productionLogger',
           <motion&& motion.button
             onClick = {scrollToTop,}
             className="fixed bottom-8 right-8 p-3 bg-primary hover:bg-primary/90 rounded-full shadow-lg z-50"",
-            initial={{ opacity: 0, scale: 0 }}
-            animate={{ opacity: 1, scale: 1 }}
-            exit={{ opacity: 0, scale: 0 }}
-            whileHover={{ scale: 1 && 1.1 }}
-            whileTap={{ scale: 0 && 0.9 }}>;
+            initial={ opacity: 0, scale: 0 }
+            animate={ opacity: 1, scale: 1 }
+            exit={ opacity: 0, scale: 0 }
+            whileHover={ scale: 1 && 1.1 }
+            whileTap={ scale: 0 && 0.9 }>;
             <ArrowUp className="h-5 w-5 text-primary-foreground" />;
           </motion && motion.button>;
         )}
@@ -169,7 +169,7 @@ export default function MarketplacePage() {;
       </motion && motion.div>;
 
       {(isFetching || loading) && products && products.length > 0 && (;
-        <motion && motion.div className="mt-8" initial={{ opacity: 0 }} animate={{ opacity: 1 }}>;
+        <motion && motion.div className="mt-8" initial={ opacity: 0 } animate={ opacity: 1 }>;
           <MarketplaceLoadingGrid count={4} />;
         </motion && motion.div>;
 
@@ -178,9 +178,9 @@ export default function MarketplacePage() {;
       )}
             onClick = {scrollToTop,}
             className="fixed bottom-8 right-8 p-3 bg-primary hover:bg-primary/90 rounded-full shadow-lg z-50"
-            initial={{ opacity: 0, scale: 0 }}
-            animate={{ opacity: 1, scale: 1 }}
-            exit={{ opacity: 0, scale: 0 }}
+            initial={ opacity: 0, scale: 0 }
+            animate={ opacity: 1, scale: 1 }
+            exit={ opacity: 0, scale: 0 }
 }
                   dispatch (add_item ({ id: item.id, title: item.title, price: item.price ?? 0 })),
                   toast ({
@@ -188,15 +188,15 @@ export default function MarketplacePage() {;
                     description: `${item.title} has been added to your cart`,
                     action: {
                       label: 'View Cart',
-                      on_click: (, ) => router.push ('/cart')}});
-                }}
+                      on_click: (, ) => router.push ('/cart')});
+                }
               />;
             </motion.div>))}
         </AnimatePresence>;
       </motion.div>;
       {(is_fetching ||,  loading) && products.length > 0 && (
       {(is_fetching || loading) && products.length > 0 && (
-        <motion.div className="mt - 8" initial={{ opacity: 0 }} animate={{ opacity: 1 }}>;
+        <motion.div className="mt - 8" initial={ opacity: 0 } animate={ opacity: 1 }>;
           <MarketplaceLoadingGrid count={4} />;
         </motion.div>)}
       {has_more && !loading && (
@@ -213,7 +213,7 @@ export default function MarketplacePage() {;
             </p>)}
         </div>)}
       {!has_more && products.length > 0 && (
-        <motion.div className="text - center mt - 12 py - 8 border - t" initial={{ opacity: 0 }} animate={{ opacity: 1 }}>;
+        <motion.div className="text - center mt - 12 py - 8 border - t" initial={ opacity: 0 } animate={ opacity: 1 }>;
           <div className="text - muted - foreground text - lg mb - 2">🚀 You've explored all available products!</div>;
           <div className="text - muted - foreground text - lg mb - 2"> You've explored all available products!</div>;
           <div className="text - sm text - muted - foreground">Showing {products.length} marketplace items</div>;
@@ -224,11 +224,11 @@ export default function MarketplacePage() {;
             on_click = {scrollToTop, }
             className="fixed bottom - 8 right - 8 p - 3 bg - primary hover:bg - primary / 90 rounded - full shadow - lg z - 50";",
             className="fixed bottom - 8 right - 8 p - 3 bg - primary hover:bg - primary / 90 rounded - full shadow - lg z - 50";
-            initial={{ opacity: 0, scale: 0 }}
-            animate={{ opacity: 1, scale: 1 }}
-            exit={{ opacity: 0, scale: 0 }}
-            while_hover={{ scale: 1.1 }}
-            while_tap={{ scale: 0.9 }}
+            initial={ opacity: 0, scale: 0 }
+            animate={ opacity: 1, scale: 1 }
+            exit={ opacity: 0, scale: 0 }
+            while_hover={ scale: 1.1 }
+            while_tap={ scale: 0.9 }
           >;
             <ArrowUp className="h - 5 w - 5 text - primary - foreground" />;
           </motion.button>)}
@@ -248,7 +248,7 @@ function MarketplacePage() {
   return <MarketplacePageContent />;
 }
 ;
-}})))))
+})))))
 
   // Error state
   if (error && products.length === 0) {
@@ -257,7 +257,7 @@ function MarketplacePage() {
         <NextSeo
           title="Marketplace - Zion Tech Marketplace Solutions & Services"
           description="Visit our Zion Tech Marketplace to browse top-rated products, service packages, and exclusive offers. Start shopping with confidence today. Earn rewards and access limited deals."
-          openGraph={{ images: [{ url: 'https://app.ziontechgroup.com/og.png' }] }}
+          openGraph={ images: [{ url: 'https://app.ziontechgroup.com/og.png' }] }
         />
       <div className="container py-8">
         <div className="text-center space-y-4">
@@ -284,22 +284,22 @@ function MarketplacePage() {
       <NextSeo
         title="Marketplace - Zion Tech Marketplace Solutions & Services"
         description="Visit our Zion Tech Marketplace to browse top-rated products, service packages, and exclusive offers. Start shopping with confidence today. Earn rewards and access limited deals."
-        openGraph={{ images: [{ url: 'https://app.ziontechgroup.com/og.png' }] }}
+        openGraph={ images: [{ url: 'https://app.ziontechgroup.com/og.png' }] }
       />;
     <div className="container py-8">;
-      <motion.div className="text-center mb-8" initial={{ opacity: 0, y: -20 }} animate={{ opacity: 1, y: 0 }}>;
+      <motion.div className="text-center mb-8" initial={ opacity: 0, y: -20 } animate={ opacity: 1, y: 0 }>;
         <h1 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">;
           {t('marketplace.hero_title')}
         </h1>;
         <p className="text-muted-foreground text-lg">{t('marketplace.hero_subtitle')}</p>;
       </motion.div>;
       {marketStats && (;
-        <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.2 }}>;
+        <motion.div initial={ opacity: 0, y: 20 } animate={ opacity: 1, y: 0 } transition={ delay: 0.2 }>;
           <MarketplaceInsights stats={marketStats} />;
         </motion.div>;
       )}
 ;
-      <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.3 }}>;
+      <motion.div initial={ opacity: 0, y: 20 } animate={ opacity: 1, y: 0 } transition={ delay: 0.3 }>;
         <MarketplaceFilterControls;
           sortBy={sortBy}
           setSortBy={setSortBy}
@@ -312,17 +312,17 @@ function MarketplacePage() {
         />
       </motion.div>
 
-      <motion.div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.4 }}>
+      <motion.div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6" initial={ opacity: 0 } animate={ opacity: 1 } transition={ delay: 0.4 }>
         <AnimatePresence mode="popLayout">
           {products.map((item, index) => (
             <motion.div
               key={item.id} 
               ref={index === products.length - 1 ? lastElementRef : null}
-              initial={{ opacity: 0, scale: 0.9 }} ;
-              animate={{ opacity: 1, scale: 1 }} ;
-              exit={{ opacity: 0, scale: 0.9 }}
-              transition={{ delay: Math.min(index * 0.03, 0.5) }} ;
-              whileHover={{ scale: 1.02 }}
+              initial={ opacity: 0, scale: 0.9 } ;
+              animate={ opacity: 1, scale: 1 } ;
+              exit={ opacity: 0, scale: 0.9 }
+              transition={ delay: Math.min(index * 0.03, 0.5) } ;
+              whileHover={ scale: 1.02 }
             >;
               <MarketplaceCard;
                 product={item}
@@ -335,7 +335,7 @@ function MarketplacePage() {
                     }
                   }
                   router.push(`/marketplace/listing/${item.id}`);
-                }}
+                }
                 onAddToCart={() => {;
                   dispatch(addItem({ id: item.id, title: item.title, price: item.price ?? 0 })),;
                   toast({;
@@ -343,15 +343,15 @@ function MarketplacePage() {
                     description: `${item.title} has been added to your cart`,;
                     action: {;
                       label: 'View Cart';
-                      onClick: () => router.push('/cart')}});
-                }}
+                      onClick: () => router.push('/cart')});
+                }
               />;
             </motion.div>;
           ))}
         </AnimatePresence>;
       </motion.div>;
       {(isFetching || loading) && products.length > 0 && (;
-        <motion.div className="mt-8" initial={{ opacity: 0 }} animate={{ opacity: 1 }}>;
+        <motion.div className="mt-8" initial={ opacity: 0 } animate={ opacity: 1 }>;
           <MarketplaceLoadingGrid count={4} />;
         </motion.div>;
       )}
@@ -374,7 +374,7 @@ function MarketplacePage() {
       )}
 ;
       {!hasMore && products.length > 0 && (;
-        <motion.div className="text-center mt-12 py-8 border-t" initial={{ opacity: 0 }} animate={{ opacity: 1 }}>;
+        <motion.div className="text-center mt-12 py-8 border-t" initial={ opacity: 0 } animate={ opacity: 1 }>;
           <div className="text-muted-foreground text-lg mb-2">🚀 You've explored all available products!</div>;
           <div className="text-sm text-muted-foreground">Showing {products.length} marketplace items</div>;
         </motion.div>;
@@ -385,11 +385,11 @@ function MarketplacePage() {
           <motion.button;
             onClick={scrollToTop} ;
             className="fixed bottom-8 right-8 p-3 bg-primary hover:bg-primary/90 rounded-full shadow-lg z-50";
-            initial={{ opacity: 0, scale: 0 }} ;
-            animate={{ opacity: 1, scale: 1 }} ;
-            exit={{ opacity: 0, scale: 0 }}
-            whileHover={{ scale: 1.1 }} ;
-            whileTap={{ scale: 0.9 }}
+            initial={ opacity: 0, scale: 0 } ;
+            animate={ opacity: 1, scale: 1 } ;
+            exit={ opacity: 0, scale: 0 }
+            whileHover={ scale: 1.1 } ;
+            whileTap={ scale: 0.9 }
           >;
             <ArrowUp className="h-5 w-5 text-primary-foreground" />;
           </motion.button>;
@@ -410,8 +410,8 @@ export default function MarketplacePage() {;
   return <MarketplacePageContent />;
 };
 }
-            whileHover={{ scale: 1.1 }}
-            whileTap={{ scale: 0.9 }}
+            whileHover={ scale: 1.1 }
+            whileTap={ scale: 0.9 }
           >
             <ArrowUp className="h-5 w-5 text-primary-foreground" />
           </motion.button>

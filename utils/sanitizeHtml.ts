@@ -72,7 +72,7 @@ export function sanitizeHtml(html: string): string {
   let sanitized = html.replace(/<script\b[^<]*(?:(?!<\/script>)<[^<]*)*<\/script>/gi, '');
 origin/main
 origin/automation-improvements-final
-  sanitized = sanitized.replace(/\s*on\w+\s*=\s*['"][^'"]*['"]/g, '');
+  sanitized = sanitized.replace(/\s*on\w+\s*=\s*[''][^'']*['']/g, '');
   sanitized = sanitized.replace(/javascript:/gi, '');
   sanitized = sanitized.replace(/data:text\/html/gi, '');
   return sanitized;

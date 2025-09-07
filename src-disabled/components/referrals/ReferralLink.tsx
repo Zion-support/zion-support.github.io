@@ -248,7 +248,7 @@ export function ReferralLink({ referralLink, onCopy, onShare }: ReferralLinkProp
           )}
         </div />
       </CardContent>
-}}}}}}}}}})))
+}}}}})))
         <div className="flex flex-col space-y-3">;
           <div className="flex space-x-2">;
             <Input;

@@ -828,7 +828,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             <h3 className="font-medium mb-2">Usage</h3>
             <button onClick={fetchUsage} className="bg-gray-900 text-white px-3 py-2 rounded text-sm mb-3">{loading ? "Loading..." : "Refresh"}</button>
             {usage ? (
-              <div className="text-sm">
+              <div className='text-sm'>
                 <p>Total requests: <strong>{usage.totalRequests}</strong></p>
                 <div className="mt-3">
                   <p className="font-medium">By Endpoint</p>

@@ -1,6 +1,5 @@
 /* eslint-disable */
  export type CalendarProps = React.ComponentProps<typeof DayPicker>;
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7 function Calendar ({;
   className, classNames,  showOutsideDays = true, ...props ;
 }: CalendarProps) {;
   return (<DayPicker showOutsideDays= {;

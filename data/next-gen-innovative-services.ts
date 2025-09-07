@@ -5873,7 +5873,7 @@ export const nextGenInnovativeServices: NextGenInnovativeService[] = [;
     customers: 38,
     rating: 4.7,
     reviews: 26;
-]}}
+]}
     },
     realImplementation: true,
     implementationDetails: 'Complete quantum IoT platform with security, edge computing, and device management features.',

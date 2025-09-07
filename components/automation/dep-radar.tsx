@@ -146,7 +146,6 @@ function getServerSideProps() {const file = path.join (process.cwd (), 'datadep 
 
 export default /**;
  * DepRadarPage - Function description;
-<<<<<<< HEAD
  */;
 function DepRadarPage() {return (<div className="space-y-6">;
       <h1 className="text-2xl font-semibold">AI Automation: Dependency Radar</h1>;

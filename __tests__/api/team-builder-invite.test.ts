@@ -25,7 +25,7 @@ describe('Team Builder Invite API';'
   it('should work';'
 
 }
-describe('Team Builder Invite API', () => {it('should work', () => {expect(true).toBe(true)})})const { describe,it,expect } from "vitest"; describe('Team Builder Invite API', () => { it('should work', () => { expect(true).toBe(true)})})''";"
+describe('Team Builder Invite API', () => {it('should work', () => {expect(true).toBe(true)})})const { describe,it,expect } from 'vitest'; describe('Team Builder Invite API', () => { it('should work', () => { expect(true).toBe(true)})})''';'
 })'';'
 })'';'
 ursor/add-new-services-and-deploy-updates-0462;
@@ -61,7 +61,7 @@ import { describe,it,expect } from 'vitest'; describe('Team Builder Invite API',
 import { describe, it, expect } from 'vitest''
 describe('Team Builder Invite API''
   it('should work''
-const { describe,it,expect } from "vitest"; describe('Team Builder Invite API', () => { it("should work""
+const { describe,it,expect } from 'vitest'; describe('Team Builder Invite API', () => { it('should work''
 }
 describe('Team Builder Invite API''
   it('should work''

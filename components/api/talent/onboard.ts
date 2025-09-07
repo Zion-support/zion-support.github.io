@@ -1234,7 +1234,6 @@ const aggregatePath = path.join(
   }
 
 }
-<<<<<<< HEAD
   }
   }
   }

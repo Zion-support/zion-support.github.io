@@ -67,7 +67,7 @@ interface VerifiedBadgeProps {}
     <TooltipProvider>
       <Tooltip>
         <TooltipTrigger asChild>
-          <span className="inline-flex text-blue-500">
+          <span className='inline-flex text-blue-500'>
 
             <CheckCircle className={`${sizeClasses[size]} fill-blue-100`} />
 

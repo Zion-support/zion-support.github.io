@@ -81,7 +81,6 @@ import { motion  } from 'framer-motion';
 import { Mail, Phone, MapPin, Globe;
   Twitter, Linkedin, Github;
   ArrowUp, Crown, Zap, Brain, Rocket;
-<<<<<<< HEAD
 
 <<<<<<< HEAD
   Shield, Users, BookOpen, Briefcase, Atom
@@ -753,7 +752,6 @@ const socialLinks = [
 ];
 
 const quickLinks = [
-<<<<<<< HEAD
   { name: 'About Us', href: '/about', icon: <Users className = $2;
   { name: 'Contact', href: '/contact', icon: <Phone className = $2;
   { name: 'Support', href: '/support', icon: <HelpCircle className = $2;
@@ -987,31 +985,31 @@ const UltraAdvancedFuturisticFooter2025: React.FC = () => {
 const socialLinks = [;
   {
     }
-    "icon": <Linkedin className='w-5 h-5' />,'
-    "href": '"https"://linkedin.com/company/ziontechgroup','
-    "label": 'LinkedIn','
-    "external": true
+    'icon': <Linkedin className='w-5 h-5' />,'
+    'href': ''https'://linkedin.com/company/ziontechgroup','
+    'label': 'LinkedIn','
+    'external': true
   },
   {
     }
-    "icon": <Twitter className='w-5 h-5' />,'
-    "href": '"https"://twitter.com/ziontechgroup','
-    "label": 'Twitter','
-    "external": true
+    'icon': <Twitter className='w-5 h-5' />,'
+    'href': ''https'://twitter.com/ziontechgroup','
+    'label': 'Twitter','
+    'external': true
   },
   {
     }
-    "icon": <Github className='w-5 h-5' />,'
-    "href": '"https"://github.com/ziontechgroup','
-    "label": 'GitHub','
-    "external": true
+    'icon': <Github className='w-5 h-5' />,'
+    'href': ''https'://github.com/ziontechgroup','
+    'label': 'GitHub','
+    'external': true
   }
 ];
 
 const quickLinks = [;
-  { "name": 'About Us', "href": '/about', "icon": <Users className='w-4 h-4' />,'
+  { 'name': 'About Us', 'href': '/about', 'icon': <Users className='w-4 h-4' />,'
 },
-  { "name": 'Contact', "href": '/contact', "icon": <Phone className='w-4 h-4' />,'
+  { 'name': 'Contact', 'href': '/contact', 'icon': <Phone className='w-4 h-4' />,'
 },
   {
     name: 'Support',
@@ -2419,14 +2417,14 @@ const UltraAdvancedFuturisticFooter2025: React.FC = () => {_const _scrollToTop =
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
         {/* Main Footer Content */}
 
-        <div className='max-w-7xl mx-auto px-4 "sm": px-6 "lg":px-8 py-20'>'
+        <div className='max-w-7xl mx-auto px-4 'sm': px-6 'lg':px-8 py-20'>'
           <motion.div,
 variants={containerVariant,;
 }
             initial='hidden';'
             whileInView='visible';'
-            viewport={{ "once": true }}
-            className='grid grid-cols-1 "md":grid-cols-2 "lg":grid-cols-6 gap-12'>'
+            viewport={ 'once': true }
+            className='grid grid-cols-1 'md':grid-cols-2 'lg':grid-cols-6 gap-12'>'
 
             {/* Company Info */}
 >>>>>>> merged-prs-20250907-203621
@@ -3049,13 +3047,13 @@ help businesses transform and thrive in the digital age.
             style={{}
               left: `${Math.random () * 100}%`,`
               top: `${Math.random () * 100}%`;
-            }}
+            }
           />))}
         {/* Gradient Overlays */}
-        <div className="absolute inset - 0 bg - gradient - to - t from - gray - 900 via - purple-900 / 20 to-transparent"></div>;
-        <div className="absolute inset - 0 bg - gradient - to - b from - transparent via - gray - 900 / 20 to-gray-900"></div>;
+        <div className='absolute inset - 0 bg - gradient - to - t from - gray - 900 via - purple-900 / 20 to-transparent'></div>;
+        <div className='absolute inset - 0 bg - gradient - to - b from - transparent via - gray - 900 / 20 to-gray-900'></div>;
       </div>;
-      <div className="relative z-10">;
+      <div className='relative z-10'>;
         {/* Main Footer Content */}
         <div className="max - w-7xl mx - auto px - 4 sm:px - 6 lg:px-8 py-20">;
           <motion.div;
@@ -3066,40 +3064,40 @@ help businesses transform and thrive in the digital age.
             className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols-6 gap-12";
           >;
             {/* Company Info */}
-            <motion.div variants={item_variants} className="lg:col-span-2">;
-              <div className="flex items - center space-x-3 mb-6">;
-                <div className="relative">;
-                  <div className="w - 12 h - 12 bg - gradient - to - r from - cyan - 400 via - purple - 400 to - pink - 400 rounded - xl flex items-center justify-center">;
-                    <Crown className="w - 7 h-7 text-white" />;
+            <motion.div variants={item_variants} className='lg:col-span-2'>;
+              <div className='flex items - center space-x-3 mb-6'>;
+                <div className='relative'>;
+                  <div className='w - 12 h - 12 bg - gradient - to - r from - cyan - 400 via - purple - 400 to - pink - 400 rounded - xl flex items-center justify-center'>;
+                    <Crown className='w - 7 h-7 text-white' />;
                   </div>;
-                  <div className="absolute inset - 0 bg - gradient - to - r from - cyan - 400 via - purple - 400 to - pink - 400 rounded - xl blur-lg opacity-50"></div>;
+                  <div className='absolute inset - 0 bg - gradient - to - r from - cyan - 400 via - purple - 400 to - pink - 400 rounded - xl blur-lg opacity-50'></div>;
                 </div>;
                 <div>;
-                  <h3 className="text - 2xl font - bold bg - gradient - to - r from - cyan - 400 via - purple - 400 to - pink - 400 bg - clip-text text-transparent">;
+                  <h3 className='text - 2xl font - bold bg - gradient - to - r from - cyan - 400 via - purple - 400 to - pink - 400 bg - clip-text text-transparent'>;
                     Zion Tech Group;
                   </h3>;
-                  <p className="text - sm text-gray-400">Future Technology Solutions</p>;
+                  <p className='text - sm text-gray-400'>Future Technology Solutions</p>;
                 </div>;
               </div>;
-              <p className="text - gray - 300 mb-6 leading-relaxed">;
+              <p className='text - gray - 300 mb-6 leading-relaxed'>;
                 Pioneering the future with revolutionary AI consciousness, quantum computing, and autonomous systems. Transforming businesses through next - generation technology.;
               </p>;
-              <p className="text - gray - 300 leading - relaxed mb-6 max-w-md">;
+              <p className='text - gray - 300 leading - relaxed mb-6 max-w-md'>;
                 Leading provider of innovative technology solutions, specializing in AI, automation, and future - ready services.;
                 We help businesses transform and thrive in the digital age.;
               </p>;
               {/* Contact Info */}
-              <div className="space-y-3">;
-                <div className="flex items - center space - x-3 text-gray-300">;
-                  <Phone className="w - 4 h - 4 text-cyan-400" />;
+              <div className='space-y-3'>;
+                <div className='flex items - center space - x-3 text-gray-300'>;
+                  <Phone className='w - 4 h - 4 text-cyan-400' />;
                   <span>+1 302 464 0950</span>;
                 </div>;
-                <div className="flex items - center space - x-3 text-gray-300">;
-                  <Mail className="w - 4 h - 4 text-purple-400" />;
+                <div className='flex items - center space - x-3 text-gray-300'>;
+                  <Mail className='w - 4 h - 4 text-purple-400' />;
                   <span > kleber@ziontechgroup.com</span>;
                 </div>;
-                <div className="flex items - center space - x-3 text-gray-300">;
-                  <MapPin className="w - 4 h - 4 text-pink-400" />;
+                <div className='flex items - center space - x-3 text-gray-300'>;
+                  <MapPin className='w - 4 h - 4 text-pink-400' />;
                   <span > 364 E Main St STE 1008, Middletown DE 19709</span>;
                 </div>;
                 <div className="flex items - center space - x-3 text-gray-300">;
@@ -3140,64 +3138,64 @@ help businesses transform and thrive in the digital age.
                   <a;
                     href='https://ziontechgroup.com';
                     className='hover:text - white transition - colors duration - 200';
-                  >                    ziontechgroup.com            }}
-            style={{left: `${Math.random () * 100}%`,top: `${Math.random () * 100}%`;
-            }}
+                  >                    ziontechgroup.com            }
+            style={left: `${Math.random () * 100}%`,top: `${Math.random () * 100}%`;
+            }
           />))}
         {/* Gradient Overlays */}
-        <div className="absolute inset - 0 bg - gradient - to - t from - gray - 900 via - purple-900 / 20 to-transparent"></div>;
-        <div className="absolute inset - 0 bg - gradient - to - b from - transparent via - gray - 900 / 20 to-gray-900"></div>;
+        <div className='absolute inset - 0 bg - gradient - to - t from - gray - 900 via - purple-900 / 20 to-transparent'></div>;
+        <div className='absolute inset - 0 bg - gradient - to - b from - transparent via - gray - 900 / 20 to-gray-900'></div>;
       </div>;
-      <div className="relative z-10">;
+      <div className='relative z-10'>;
         {/* Main Footer Content */}
-        <div className="max - w-7xl mx - auto px - 4 sm:px - 6 lg:px-8 py-20">;
+        <div className='max - w-7xl mx - auto px - 4 sm:px - 6 lg:px-8 py-20'>;
           <motion.div;
             variants={container_variants}
-            initial="hidden";
-            whileInView="visible";
-            viewport={{ once: true }}
-            className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols-6 gap-12";
+            initial='hidden';
+            whileInView='visible';
+            viewport={ once: true }
+            className='grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols-6 gap-12';
           >;
             {/* Company Info */}
-            <motion.div variants={item_variants} className="lg:col-span-2">;
-              <div className="flex items - center space-x-3 mb-6">;
-                <div className="relative">;
-                  <div className="w - 12 h - 12 bg - gradient - to - r from - cyan - 400 via - purple - 400 to - pink - 400 rounded - xl flex items-center justify-center">;
-                    <Crown className="w - 7 h-7 text-white" />;
+            <motion.div variants={item_variants} className='lg:col-span-2'>;
+              <div className='flex items - center space-x-3 mb-6'>;
+                <div className='relative'>;
+                  <div className='w - 12 h - 12 bg - gradient - to - r from - cyan - 400 via - purple - 400 to - pink - 400 rounded - xl flex items-center justify-center'>;
+                    <Crown className='w - 7 h-7 text-white' />;
                   </div>;
-                  <div className="absolute inset - 0 bg - gradient - to - r from - cyan - 400 via - purple - 400 to - pink - 400 rounded - xl blur-lg opacity-50"></div>;
+                  <div className='absolute inset - 0 bg - gradient - to - r from - cyan - 400 via - purple - 400 to - pink - 400 rounded - xl blur-lg opacity-50'></div>;
                 </div>;
                 <div>;
-                  <h3 className="text - 2xl font - bold bg - gradient - to - r from - cyan - 400 via - purple - 400 to - pink - 400 bg - clip-text text-transparent">;
+                  <h3 className='text - 2xl font - bold bg - gradient - to - r from - cyan - 400 via - purple - 400 to - pink - 400 bg - clip-text text-transparent'>;
                     Zion Tech Group;
                   </h3>;
-                  <p className="text - sm text-gray-400">Future Technology Solutions</p>;
+                  <p className='text - sm text-gray-400'>Future Technology Solutions</p>;
                 </div>;
               </div>;
-              <p className="text - gray - 300 mb-6 leading-relaxed">;
+              <p className='text - gray - 300 mb-6 leading-relaxed'>;
                 Pioneering the future with revolutionary AI consciousness, quantum computing, and autonomous systems. Transforming businesses through next - generation technology.;
               </p>;
-              <p className="text - gray - 300 leading - relaxed mb-6 max-w-md">;
+              <p className='text - gray - 300 leading - relaxed mb-6 max-w-md'>;
                 Leading provider of innovative technology solutions, specializing in AI, automation, and future - ready services.;
                 We help businesses transform and thrive in the digital age.;
               </p>;
               {/* Contact Info */}
-              <div className="space-y-3">;
-                <div className="flex items - center space - x-3 text-gray-300">;
-                  <Phone className="w - 4 h - 4 text-cyan-400" />;
+              <div className='space-y-3'>;
+                <div className='flex items - center space - x-3 text-gray-300'>;
+                  <Phone className='w - 4 h - 4 text-cyan-400' />;
                   <span>+1 302 464 0950</span>;
                 </div>;
-                <div className="flex items - center space - x-3 text-gray-300">;
-                  <Mail className="w - 4 h - 4 text-purple-400" />;
+                <div className='flex items - center space - x-3 text-gray-300'>;
+                  <Mail className='w - 4 h - 4 text-purple-400' />;
                   <span > kleber@ziontechgroup.com</span>;
                 </div>;
-                <div className="flex items - center space - x-3 text-gray-300">;
-                  <MapPin className="w - 4 h - 4 text-pink-400" />;
+                <div className='flex items - center space - x-3 text-gray-300'>;
+                  <MapPin className='w - 4 h - 4 text-pink-400' />;
                   <span > 364 E Main St STE 1008, Middletown DE 19709</span>;
                 </div>;
-                <div className="flex items - center space - x-3 text-gray-300">;
-                  <Globe className="w - 4 h - 4 text-blue-400" />;
-                  <a href="https://ziontechgroup.com" className="hover:text - white transition-colors duration-200">;
+                <div className='flex items - center space - x-3 text-gray-300'>;
+                  <Globe className='w - 4 h - 4 text-blue-400' />;
+                  <a href='https://ziontechgroup.com' className='hover:text - white transition-colors duration-200'>;
                     ziontechgroup.com;
                   </a>;
                 </div>;
@@ -3249,10 +3247,10 @@ href='https: //ziontechgroup.com'
 <<<<<<< HEAD
                         className='text - gray - 300 hover:text - white transition - colors duration - 200 hover:translate - x-1 inline - block'                      >                  <span>{section.title}</span>;
                 </h4>;
-                <ul className="space-y-3">;
+                <ul className='space-y-3'>;
                   {section.items.map ((item) => (<li key={item.label}>;
                       <Link;href={item.href}
-                        className="text - gray - 300 hover:text - white transition - colors duration - 200 hover:translate-x-1 inline-block";
+                        className='text - gray - 300 hover:text - white transition - colors duration - 200 hover:translate-x-1 inline-block';
                       >;{/* Footer Sections */}
             {footerSections.map((section, index) => (<motion.div key={section.title} variants={itemVariants}>;
 <h4 className='text-lg font-semibold text-white mb-6 flex items-center space-x-2'>;
@@ -3594,7 +3592,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 <<<<<<< HEAD
               {/* Social Links */}'
               <div className='flex items-center space-x-6'>;'
-                <span className='text-gray-400 font-medium'>Follow "Us":</span>;'
+                <span className='text-gray-400 font-medium'>Follow 'Us':</span>;'
                 {socialLinks && socialLinks.map(social => { return (<motion&& motion.a; }
                     }
 =======
@@ -4367,8 +4365,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 </div>;
                 <span>•</span>;
                 <div className='flex items-center space-x-2'>;
-                  <Rocket className='w-4 h-4 text-pink-400' />                  <span>Space Technology</span>                <div className="flex items-center space-x-2">;
-                  <Rocket className="w-4 h-4 text-pink-400" />;
+                  <Rocket className='w-4 h-4 text-pink-400' />                  <span>Space Technology</span>                <div className='flex items-center space-x-2'>;
+                  <Rocket className='w-4 h-4 text-pink-400' />;
                   <span>Space Technology</span>;
           className='border - t border - gray - 800 / 50 bg - gray - 900 / 50 backdrop - blur - xl';
         >;
@@ -4548,14 +4546,14 @@ export default UltraAdvancedFuturisticFooter2025;
   )}export default UltraAdvancedFuturisticFooter2025;
 
 
-        whileHover={{ "scale": 1.1, "y": -2 }}
-        whileTap={{ "scale": 0.9 
+        whileHover={ 'scale': 1.1, 'y': -2 }
+        whileTap={ 'scale': 0.9 
 }
-        initial={{ "opacity": 0, "scale": 0 
+        initial={ 'opacity': 0, 'scale': 0 
 }
-        animate={{ "opacity": 1, "scale": 1 
+        animate={ 'opacity': 1, 'scale': 1 
 }
-        transition={{ "duration": 0.3, "delay": 1 }}
+        transition={ 'duration': 0.3, 'delay': 1 }
 
       >
         <ArrowUp className = $2;

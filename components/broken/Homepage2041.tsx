@@ -1799,17 +1799,16 @@ className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'
 }    />;
                   <UltraFuturisticServiceCard2026 service={service}    />;
                 </motion && motion.div>;
-<<<<<<< HEAD
               ))}</motion && motion.div>;
             <motion&& motion.div;
-              className='text-center mt-12'              initial={{ opacity: 0, y: 20 }}            <motion && motion.div;
+              className='text-center mt-12'              initial={ opacity: 0, y: 20 }            <motion && motion.div;
               className="text-center mt-12";
             <motion.div;
-              className='text-center mt-12'              initial={{ opacity: 0, y: 20 }}<motion.div;
-              className='text-center mt-12'              initial={{ opacity: 0, y: 20 }}            <motion.div;
+              className='text-center mt-12'              initial={ opacity: 0, y: 20 }<motion.div;
+              className='text-center mt-12'              initial={ opacity: 0, y: 20 }            <motion.div;
               className="text-center mt-12";
             <motion.div;
-              className='text-center mt-12'              initial={{ opacity: 0, y: 20 }}className="text-center mt-12";
+              className='text-center mt-12'              initial={ opacity: 0, y: 20 }className="text-center mt-12";
             </motion.div>;
 =======
 
@@ -1852,7 +1851,7 @@ href='/2041-futuristic-services-showcase'
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
             <motion.div
-              className='text-center mt-12'              initial={{ opacity: 0, y: 20 }}
+              className='text-center mt-12'              initial={ opacity: 0, y: 20 }
 
 
 <<<<<<< HEAD
@@ -1860,11 +1859,11 @@ href='/2041-futuristic-services-showcase'
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             <motion.div
-              className='text-center mt-12'              initial={{ opacity: 0, y: 20 }}            <motion.div 
+              className='text-center mt-12'              initial={ opacity: 0, y: 20 }            <motion.div 
               className="text-center mt-12"
 
             <motion.div
-              className='text-center mt-12'              initial={{ opacity: 0, y: 20 }}
+              className='text-center mt-12'              initial={ opacity: 0, y: 20 }
 
 <<<<<<< HEAD
 =======
@@ -1946,18 +1945,18 @@ href='/2041-futuristic-services-showcase'
 
             <motion.div 
               className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
-              initial={{ opacity: 0, y: 30}}
-              whileInView={{ opacity: 1, y: 0}}
-              transition={{ duration: 0.8, delay: 0.2 }}
-              viewport={{ once: true}}
+              initial={ opacity: 0, y: 30}
+              whileInView={ opacity: 1, y: 0}
+              transition={ duration: 0.8, delay: 0.2 }
+              viewport={ once: true}
             >
               {featuredServices.map((service, index) => (
                 <motion.div
                   key={service.id}
-                  initial={{ opacity: 0, y: 30}}
-                  whileInView={{ opacity: 1, y: 0}}
-                  transition={{ duration: 0.5, delay: 0.4 + index * 0.1 }}
-                  viewport={{ once: true}}
+                  initial={ opacity: 0, y: 30}
+                  whileInView={ opacity: 1, y: 0}
+                  transition={ duration: 0.5, delay: 0.4 + index * 0.1 }
+                  viewport={ once: true}
                 >
                   <UltraFuturisticServiceCard2026 service={service} />
                 </motion.div>
@@ -1966,10 +1965,10 @@ href='/2041-futuristic-services-showcase'
 
             <motion.div 
               className="text-center mt-12"
-              initial={{ opacity: 0, y: 20}}
-              whileInView={{ opacity: 1, y: 0}}
-              transition={{ duration: 0.8, delay: 0.6 }}
-              viewport={{ once: true}}
+              initial={ opacity: 0, y: 20}
+              whileInView={ opacity: 1, y: 0}
+              transition={ duration: 0.8, delay: 0.6 }
+              viewport={ once: true}
             >
               <Link
                 href="/2041-futuristic-services-showcase"
@@ -2229,10 +2228,10 @@ href='/2041-futuristic-services-showcase';
 
             <motion.div 
               className="grid grid-cols-1 md:grid-cols-3 gap-8"
-              initial={{ opacity: 0, y: 30}}
-              whileInView={{ opacity: 1, y: 0}}
-              transition={{ duration: 0.8, delay: 0.2 }}
-              viewport={{ once: true}}
+              initial={ opacity: 0, y: 30}
+              whileInView={ opacity: 1, y: 0}
+              transition={ duration: 0.8, delay: 0.2 }
+              viewport={ once: true}
             >
               {testimonials.map((testimonial, index) => (
                 <motion.div
@@ -2382,10 +2381,10 @@ key={i}
 <<<<<<< HEAD
 >>>>>>> merged-prs-20250907-203621
                   className="bg-gradient-to-br from-gray-900/50 to-black/50 border border-cyan-500/30 rounded-3xl p-8 backdrop-blur-sm"
-                  initial={{ opacity: 0, y: 30}}
-                  whileInView={{ opacity: 1, y: 0}}
-                  transition={{ duration: 0.5, delay: 0.4 + index * 0.1 }}
-                  viewport={{ once: true}}
+                  initial={ opacity: 0, y: 30}
+                  whileInView={ opacity: 1, y: 0}
+                  transition={ duration: 0.5, delay: 0.4 + index * 0.1 }
+                  viewport={ once: true}
                 >
 <<<<<<< HEAD
                   <div className='text-4xl mb-4'>{testimonial.avatar}</div>
@@ -3198,10 +3197,10 @@ export default Homepage2041;
                 <motion.div;
                   key={testimonial.name}
 
-}%`;`"top": `$ {Math.random () * 100;`}%`;`}/>) )}</div> </div> <motion.div initial= {{"opacity": 0, "y": 50;
-}animate= {{"opacity": 1, "y": 0;
-}transition= {{}initial= {{"opacity": 0, "y": 30;
-}whileInView= {{"opacity": 1, "y": 0;
+}%`;`"top": `$ {Math.random () * 100;`}%`;`}/>) )}</div> </div> <motion.div initial= {"opacity": 0, "y": 50;
+}animate= {"opacity": 1, "y": 0;
+}transition= {}initial= {"opacity": 0, "y": 30;
+}whileInView= {"opacity": 1, "y": 0;
 }transition = {;
 }
 export default Homepage2041;

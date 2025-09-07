@@ -432,7 +432,7 @@ interface AnalyticsChartProps {;
                     backgroundColor: '#1a2332'
                     borderColor: '#293445'
                     color: '#fff'
-                  }}
+                  }
                 />
                 <Legend />
                 {dataKeys.map((key, index) => (
@@ -608,7 +608,7 @@ interface AnalyticsChartProps {;
                     borderColor: '#293445'
 
                     color: '#fff'
-                  }}
+                  }
                 />
                 <Legend />
                 {dataKeys.map((key, index) => (

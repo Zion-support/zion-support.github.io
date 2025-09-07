@@ -176,76 +176,76 @@ const contactInfo = {
   website: 'https://ziontechgroup.com',};  website: 'https://ziontechgroup.com'
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 }
-      {"name": 'AI Healthcare Companion';'
+      {'name': 'AI Healthcare Companion';'
         }
-        "href": '/ai-healthcare-companion-2026';'
-        "description": 'Revolutionary healthcare AI';'
-        "price": '$399/month';'
+        'href': '/ai-healthcare-companion-2026';'
+        'description': 'Revolutionary healthcare AI';'
+        'price': '$399/month';'
       }
-      {"name": 'AI Content Creation Revolution',"href": '/ai-content-creation-revolution',"description": 'Unlimited AI content generation',"price": '$599/month'}]},{"title": 'Quantum Computing & Security',"icon": Atom,"color": 'from-blue-600 to-cyan-600',"description": 'Quantum-powered solutions',"services": [;'
-{"name": 'Quantum Neural Interface',"href": '/quantum-neural-interface-platform',"description": 'Brain-computer interface',"price": '$8,999/month'},{"name": 'Quantum Internet Security';'
+      {'name': 'AI Content Creation Revolution','href': '/ai-content-creation-revolution','description': 'Unlimited AI content generation','price': '$599/month'}]},{'title': 'Quantum Computing & Security','icon': Atom,'color': 'from-blue-600 to-cyan-600','description': 'Quantum-powered solutions','services': [;'
+{'name': 'Quantum Neural Interface','href': '/quantum-neural-interface-platform','description': 'Brain-computer interface','price': '$8,999/month'},{'name': 'Quantum Internet Security';'
         }
-        "href": '/quantum-internet-security-gateway';'
-        "description": 'Unbreakable encryption';'
-        "price": '$3,999/month';'
+        'href': '/quantum-internet-security-gateway';'
+        'description': 'Unbreakable encryption';'
+        'price': '$3,999/month';'
       }
-      {"name": 'Quantum Financial Trading';'
+      {'name': 'Quantum Financial Trading';'
         }
-        "href": '/quantum-financial-trading-algorithm-platform';'
-        "description": 'Quantum trading algorithms';'
-        "price": '$12,999/month';'
+        'href': '/quantum-financial-trading-algorithm-platform';'
+        'description': 'Quantum trading algorithms';'
+        'price': '$12,999/month';'
       }
-      {"name": 'Quantum Internet Infrastructure',"href": '/quantum-internet-infrastructure-platform',"description": 'Build the quantum internet',"price": '$15,999/month'}]},{"title": 'Emerging Technologies 2026',"icon": Sparkles,"color": 'from-green-600 to-emerald-600',"description": 'Cutting-edge innovations',"services": [;'
-{"name": 'Holographic Metaverse',"href": '/holographic-metaverse-development-platform',"description": '3D holographic experiences',"price": '$2,999/month'},{"name": 'Space Debris Management';'
+      {'name': 'Quantum Internet Infrastructure','href': '/quantum-internet-infrastructure-platform','description': 'Build the quantum internet','price': '$15,999/month'}]},{'title': 'Emerging Technologies 2026','icon': Sparkles,'color': 'from-green-600 to-emerald-600','description': 'Cutting-edge innovations','services': [;'
+{'name': 'Holographic Metaverse','href': '/holographic-metaverse-development-platform','description': '3D holographic experiences','price': '$2,999/month'},{'name': 'Space Debris Management';'
         }
-        "href": '/space-debris-management-ai-platform';'
-        "description": 'AI space safety';'
-        "price": '$5,999/month';'
+        'href': '/space-debris-management-ai-platform';'
+        'description': 'AI space safety';'
+        'price': '$5,999/month';'
       }
-      {"name": 'AI Climate Prediction';'
+      {'name': 'AI Climate Prediction';'
         }
-        "href": '/ai-climate-prediction-platform';'
-        "description": 'Climate change prediction';'
-        "price": '$1,999/month';'
+        'href': '/ai-climate-prediction-platform';'
+        'description': 'Climate change prediction';'
+        'price': '$1,999/month';'
       }
-      {"name": 'Autonomous Manufacturing',"href": '/autonomous-manufacturing-ai-platform',"description": 'Self-optimizing manufacturing',"price": '$3,499/month'}]},{"title": 'Enterprise IT Solutions 2026',"icon": Shield,"color": 'from-red-600 to-orange-600',"description": 'Enterprise-grade solutions',"services": [;'
-{"name": 'Zero Trust Architecture',"href": '/zero-trust-network-architecture-2026',"description": 'Next-gen security',"price": 'Custom pricing'},{"name": 'Edge Computing Orchestration';'
+      {'name': 'Autonomous Manufacturing','href': '/autonomous-manufacturing-ai-platform','description': 'Self-optimizing manufacturing','price': '$3,499/month'}]},{'title': 'Enterprise IT Solutions 2026','icon': Shield,'color': 'from-red-600 to-orange-600','description': 'Enterprise-grade solutions','services': [;'
+{'name': 'Zero Trust Architecture','href': '/zero-trust-network-architecture-2026','description': 'Next-gen security','price': 'Custom pricing'},{'name': 'Edge Computing Orchestration';'
         }
-        "href": '/edge-computing-orchestration-2026';'
-        "description": 'Intelligent edge computing';'
-        "price": 'Custom pricing';'
+        'href': '/edge-computing-orchestration-2026';'
+        'description': 'Intelligent edge computing';'
+        'price': 'Custom pricing';'
       }
-      {"name": '5G Private Networks';'
+      {'name': '5G Private Networks';'
         }
-        "href": '/5g-private-network-solutions-2026';'
-        "description": 'Enterprise 5G';'
-        "price": 'Custom pricing';'
+        'href': '/5g-private-network-solutions-2026';'
+        'description': 'Enterprise 5G';'
+        'price': 'Custom pricing';'
       }
-      {"name": 'Blockchain Infrastructure',"href": '/blockchain-infrastructure-platform-2026',"description": 'Enterprise blockchain',"price": 'Custom pricing'}]},{"title": 'Healthcare & Life Sciences',"icon": Microscope,"color": 'from-teal-600 to-cyan-600',"description": 'Healthcare innovation',"services": [;'
-{"name": 'AI Drug Discovery',"href": '/ai-drug-discovery-platform',"description": 'Accelerate drug development',"price": '$4,999/month'},{"name": 'Autonomous Healthcare AI';'
+      {'name': 'Blockchain Infrastructure','href': '/blockchain-infrastructure-platform-2026','description': 'Enterprise blockchain','price': 'Custom pricing'}]},{'title': 'Healthcare & Life Sciences','icon': Microscope,'color': 'from-teal-600 to-cyan-600','description': 'Healthcare innovation','services': [;'
+{'name': 'AI Drug Discovery','href': '/ai-drug-discovery-platform','description': 'Accelerate drug development','price': '$4,999/month'},{'name': 'Autonomous Healthcare AI';'
         }
-        "href": '/autonomous-healthcare-ai-platform';'
-        "description": 'Self-learning healthcare';'
-        "price": '$2,499/month';'
+        'href': '/autonomous-healthcare-ai-platform';'
+        'description': 'Self-learning healthcare';'
+        'price': '$2,499/month';'
       }
-      {"name": 'Quantum Machine Learning';'
+      {'name': 'Quantum Machine Learning';'
         }
-        "href": '/quantum-machine-learning-platform';'
-        "description": 'Quantum AI research';'
-        "price": '$6,999/month';'
+        'href': '/quantum-machine-learning-platform';'
+        'description': 'Quantum AI research';'
+        'price': '$6,999/month';'
       }
-      {"name": 'AI Legal Research',"href": '/ai-legal-research-platform',"description": 'Revolutionary legal tech',"price": '$899/month'}]},{"title": 'Financial Technology',"icon": DollarSign,"color": 'from-emerald-600 to-green-600',"description": 'Fintech solutions',"services": [;'
-{"name": 'Autonomous Supply Chain',"href": '/autonomous-supply-chain-optimization-ai',"description": 'AI supply chain optimization',"price": '$899/month'},{"name": 'Autonomous Marketing AI';'
+      {'name': 'AI Legal Research','href': '/ai-legal-research-platform','description': 'Revolutionary legal tech','price': '$899/month'}]},{'title': 'Financial Technology','icon': DollarSign,'color': 'from-emerald-600 to-green-600','description': 'Fintech solutions','services': [;'
+{'name': 'Autonomous Supply Chain','href': '/autonomous-supply-chain-optimization-ai','description': 'AI supply chain optimization','price': '$899/month'},{'name': 'Autonomous Marketing AI';'
         }
-        "href": '/autonomous-marketing-ai-platform';'
-        "description": 'Self-optimizing marketing';'
-        "price": '$1,499/month';'
+        'href': '/autonomous-marketing-ai-platform';'
+        'description': 'Self-optimizing marketing';'
+        'price': '$1,499/month';'
       }
-      {"name": 'AI Cybersecurity';'
+      {'name': 'AI Cybersecurity';'
         }
-        "href": '/ai-cybersecurity-platform';'
-        "description": 'Next-gen security';'
-        "price": '$2,999/month';'
+        'href': '/ai-cybersecurity-platform';'
+        'description': 'Next-gen security';'
+        'price': '$2,999/month';'
       }
 >>>>>>> merged-prs-20250907-203621
   address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -2367,7 +2367,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   {/* Dropdown Menu */}
             <div className="hidden lg:flex items-center space-x-8">
               {navigationItems.map((item) => (
-                <div key={item.name} className="relative group">
+                <div key={item.name} className='relative group'>
                   <button
                     onClick={() => setActiveDropdown(activeDropdown === item.name ? null : item.name)}
                     className="flex items-center space-x-2 text-gray-300 hover:text-white transition-colors duration-200 py-2"
@@ -2381,8 +2381,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     }
                     className='flex items-center space-x-2 text-gray-300 hover:text-white transition-colors duration-200 py-2'
                   >
-                    <item.icon className="w-5 h-5" />
-                    <span className="font-medium">{item.name}</span>
+                    <item.icon className='w-5 h-5' />
+                    <span className='font-medium'>{item.name}</span>
                     <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${
                       activeDropdown === item.name ? 'rotate-180' : ''
                     }`} />
@@ -2479,14 +2479,14 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                         transition={{ duration: 0.2 }}
                         className="absolute top-full left-0 mt-2 w-80 bg-black/95 backdrop-blur-xl border border-purple-500/20 rounded-2xl shadow-2xl overflow-hidden"
                       >
-                        <div className="p-4">
-                          <div className="flex items-center space-x-3 mb-4">
+                        <div className='p-4'>
+                          <div className='flex items-center space-x-3 mb-4'>
                             <div className={`w-10 h-10 bg-gradient-to-br ${item.color} rounded-xl flex items-center justify-center`}>
-                              <item.icon className="w-5 h-5 text-white" />
+                              <item.icon className='w-5 h-5 text-white' />
                             </div>
                             <div>
-                              <h3 className="text-white font-semibold">{item.name}</h3>
-                              <p className="text-gray-400 text-sm">{item.description}</p>
+                              <h3 className='text-white font-semibold'>{item.name}</h3>
+                              <p className='text-gray-400 text-sm'>{item.description}</p>
                             </div>
                           </div>
                           <div className="space-y-2">
@@ -2511,10 +2511,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                               <Link
                                 key={subItem.name}
                                 href={subItem.href}
-                                className="block p-3 rounded-xl hover:bg-purple-500/10 transition-colors duration-200 group"
+                                className='block p-3 rounded-xl hover:bg-purple-500/10 transition-colors duration-200 group'
                                 onClick={() => setActiveDropdown(null)}
                               >
-                                <div className="text-white font-medium group-hover:text-purple-300 transition-colors duration-200">
+                                <div className='text-white font-medium group-hover:text-purple-300 transition-colors duration-200'>
                                   {subItem.name}
                                 </div>
                                 <div className="text-gray-400 text-sm group-hover:text-gray-300 transition-colors duration-200">
@@ -2623,7 +2623,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
                           <Link
                             href={item.href}
-                            className="block w-full mt-4 p-3 bg-gradient-to-r from-purple-600 to-pink-600 text-white text-center font-medium rounded-xl hover:from-purple-700 hover:to-pink-700 transition-all duration-200"
+                            className='block w-full mt-4 p-3 bg-gradient-to-r from-purple-600 to-pink-600 text-white text-center font-medium rounded-xl hover:from-purple-700 hover:to-pink-700 transition-all duration-200'
                             onClick={() => setActiveDropdown(null)}
                           >
                             View All {item.name}
@@ -2653,7 +2653,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
                 <Link,
 href='/pricing''
-                  className='text-gray-300 "hover":text-white transition-colors duration-200 font-medium'>;'
+                  className='text-gray-300 'hover':text-white transition-colors duration-200 font-medium'>;'
                   Pricing;
                 </Link>;
                 <Link,
@@ -2690,7 +2690,7 @@ href='/contact''
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 
-                  className='text-gray-300 "hover": text-white transition-colors duration-200 font-medium''
+                  className='text-gray-300 'hover': text-white transition-colors duration-200 font-medium''
                 >
                   Contact
               {/* Quick Links */}
@@ -3080,7 +3080,7 @@ className='lg:hidden p-2 text-gray-300 hover:text-white transition-colors durati
             >;
               {isOpen ? (<X className='w-6 h-6' />;
               ) : (<Menu className='w-6 h-6' />;
-              )}            </button>              className="lg:hidden p-2 text-gray-300 hover:text-white transition-colors duration-200";
+              )}            </button>              className='lg:hidden p-2 text-gray-300 hover:text-white transition-colors duration-200';
             >;
             {/* Mobile Menu Button */}
             <button;
@@ -3089,7 +3089,7 @@ className='lg:hidden p-2 text-gray-300 hover:text-white transition-colors durati
             >;
               {isOpen ? (<X className='w-6 h-6' />;
               ) : (<Menu className='w-6 h-6' />;
-              )}            </button>              className="lg:hidden p-2 text-gray-300 hover:text-white transition-colors duration-200";
+              )}            </button>              className='lg:hidden p-2 text-gray-300 hover:text-white transition-colors duration-200';
             >;
               {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />})}</button>;
 =======
@@ -3487,7 +3487,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                         >;
                           {subItem && subItem.name}
                         </Link>;
-<<<<<<< HEAD
                       ))}<Link;
                     href='/services';
                       ))}
@@ -3525,10 +3524,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     href='/services'
                       ))}<Link;
                     href='/services';
-                    className='block text-gray-300 hover:text-white transition-colors duration-200 font-medium'                    onClick={() => setIsOpen(false)}                <div className="space-y-3 pt-4">;
+                    className='block text-gray-300 hover:text-white transition-colors duration-200 font-medium'                    onClick={() => setIsOpen(false)}                <div className='space-y-3 pt-4'>;
                   <Link;
-                    href="/services";
-                    className="block text-gray-300 hover:text-white transition-colors duration-200 font-medium">;
+                    href='/services';
+                    className='block text-gray-300 hover:text-white transition-colors duration-200 font-medium'>;
                     All Services;
                   </Link>;
                   <Link;
@@ -3542,7 +3541,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 <div className='space-y-3 pt-4'>;'
                   <Link;
                     href='/services';'
-                    className='block text-gray-300 "hover":text-white transition-colors duration-200 font-medium';'
+                    className='block text-gray-300 'hover':text-white transition-colors duration-200 font-medium';'
                     onClick={() => setIsOpen(false)}
                   >;
                     All Services;
@@ -4071,7 +4070,6 @@ export default UltraAdvancedNavigation2026;
 };
 
 
-<<<<<<< HEAD
 };
 
 export default UltraAdvancedNavigation2026;

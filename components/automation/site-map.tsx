@@ -131,7 +131,7 @@ function getServerSideProps() {const file = path.join (process.cwd (), 'datasite
 )})}export default /**;
  * SiteMapIntelPage - Function description;
  */;
-function SiteMapIntelPage() {return (<div className="space - y-6">;
+function SiteMapIntelPage() {return (<div className='space - y-6'>;
   );
 }
 import fs from 'fs;

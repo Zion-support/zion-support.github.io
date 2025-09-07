@@ -1038,7 +1038,7 @@ className='flex items-center space-x-3 p-3 rounded-xl hover:bg-gray-800/50 trans
                                       </div>;
                                     )}
                                     {dropdownItem && dropdownItem.name === 'View All Services' && (;
-                                      <div className="text-xs text-gray-400">Explore our complete portfolio</div>;
+                                      <div className='text-xs text-gray-400'>Explore our complete portfolio</div>;
                                 </Link>
                                   </div>;
                                 </Link>;
@@ -1046,7 +1046,7 @@ className='flex items-center space-x-3 p-3 rounded-xl hover:bg-gray-800/50 trans
                     <button className=flex items-center space-x-1 text-gray-300 hover:text-white transition-colors duration-300 py-2 px-3 rounded-lg hover:bg-gray-800/50>
 >>>>>>> merged-prs-20250907-203621
                       <span>{item.name}</span>
-                      <ChevronDown className="w-4 h-4 transition-transform duration-300 group-hover:rotate-180" />
+                      <ChevronDown className='w-4 h-4 transition-transform duration-300 group-hover:rotate-180' />
                     </button>
                     
                     {/* Dropdown Menu */}
@@ -1065,13 +1065,13 @@ className='flex items-center space-x-3 p-3 rounded-xl hover:bg-gray-800/50 trans
                                 <Link
                                   key={dropdownItem.name}
                                   href={dropdownItem.href}
-                                  className="flex items-center space-x-3 p-3 rounded-xl hover:bg-gray-800/50 transition-all duration-300 group/item"
+                                  className='flex items-center space-x-3 p-3 rounded-xl hover:bg-gray-800/50 transition-all duration-300 group/item'
                                 >
                                   <div className={`w-10 h-10 bg-gradient-to-r ${dropdownItem.color} rounded-lg flex items-center justify-center group-hover/item:scale-110 transition-transform duration-300`}>
                                     <dropdownItem.icon className=w-5 h-5 text-white />
                                   </div>
                                   <div>
-                                    <div className="text-white font-medium group-hover/item:text-cyan-300 transition-colors">
+                                    <div className='text-white font-medium group-hover/item:text-cyan-300 transition-colors'>
                                       {dropdownItem.name}
                                     </div>
                                     {dropdownItem.name === View All Services && (
@@ -1308,10 +1308,10 @@ className='text-gray-300 hover: text-white transition-colors duration-300 py-2 p
 <<<<<<< HEAD
                                   <div className={`w - 10 h - 10 bg - gradient - to - r ${dropdown_item.color} rounded - lg flex items - center justify - center group - hover / "item": scale - 110 transition - transform duration - 300,`}>
 
-                                    <dropdown_item.icon className="w - 5 h - 5 text - white" />;"
+                                    <dropdown_item.icon className='w - 5 h - 5 text - white' />;'
                                   </div>;
                                   <div>;
-                                    <div className="text - white font - medium group - hover / "item":text - cyan - 300 transition - colors">;"
+                                    <div className='text - white font - medium group - hover / 'item':text - cyan - 300 transition - colors'>;'
                                       {dropdown_item.name}
                                     </div>;'
                                     {dropdown_item.name === 'View All Services' && ("
@@ -1334,11 +1334,10 @@ className='text-gray-300 hover: text-white transition-colors duration-300 py-2 p
                           </div>;
                         </motion.div>)}
                     </AnimatePresence>;
-<<<<<<< HEAD
                   </div>) : (
                   <Link;
-                    href={item.href}'"
-                    className='text - gray - 300 hover:text - white transition - colors duration - 300 py - 2 px - 3 rounded - lg hover:bg - gray - 800 / 50'                  >                    className="text - gray - 300 hover:text - white transition - colors duration - 300 py - 2 px - 3 rounded - lg hover:bg - gray - 800 / 50";
+                    href={item.href}''
+                    className='text - gray - 300 hover:text - white transition - colors duration - 300 py - 2 px - 3 rounded - lg hover:bg - gray - 800 / 50'                  >                    className='text - gray - 300 hover:text - white transition - colors duration - 300 py - 2 px - 3 rounded - lg hover:bg - gray - 800 / 50';
                   >;
 <<<<<<< HEAD
 =======
@@ -2142,7 +2141,6 @@ className={`w-8 h-8 bg-gradient-to-r ${dropdownItem.color} rounded-lg flex items
                       )}
                     </div>;
 
-<<<<<<< HEAD
                       onClick={() => setIsOpen(false)}
                     <Link'
                       className='block text-gray-300 hover:text-white transition-colors duration-300 py-3 px-4 rounded-lg hover:bg-gray-800/50'                      onClick={() => setIsOpen(false)}
@@ -2259,7 +2257,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     <Link
 <<<<<<< HEAD
                       href={item.href}
-                      className="block text-gray-300 hover:text-white transition-colors duration-300 py-3 px-4 rounded-lg hover:bg-gray-800/50"
+                      className='block text-gray-300 hover:text-white transition-colors duration-300 py-3 px-4 rounded-lg hover:bg-gray-800/50'
                       onClick={() => setIsOpen(false)}
                     >
                       {item.name}
@@ -2559,8 +2557,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                           {item.dropdown_items?.map ((dropdown_item) => (
                             <Link;
                               key={dropdown_item.name}
-                              href={dropdown_item.href}"
-                              className="flex items - center space - x-3 p - 3 rounded - lg hover:bg - gray - 800 / 50 transition - all duration - 300";
+                              href={dropdown_item.href}'
+                              className='flex items - center space - x-3 p - 3 rounded - lg hover:bg - gray - 800 / 50 transition - all duration - 300';
                               on_click={() => setIsOpen (false)}
                             >;`
                               <div className={`w - 8 h - 8 bg - gradient - to - r ${dropdown_item.color} rounded - lg flex items - center justify - center`}>;"
@@ -2571,7 +2569,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                           {item.dropdown_items?.map ((dropdown_item) => (<Link;
                               key={dropdown_item.name}
                               href={dropdown_item.href}
-                              className="flex items - center space - x-3 p - 3 rounded - lg "hover":bg - gray - 800 / 50 transition - all duration - 300";"
+                              className='flex items - center space - x-3 p - 3 rounded - lg 'hover':bg - gray - 800 / 50 transition - all duration - 300';'
                               on_click={() => setIsOpen (false)}
                             >;
                               <div className={`w - 8 h - 8 bg - gradient - to - r ${dropdown_item.color} rounded - lg flex items - center justify - center`}>;
@@ -2648,7 +2646,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                       {item.name}
                     </Link>)}
                 </div>))}
-<<<<<<< HEAD
               {/* Mobile Contact Info */}'
               <div className='pt - 6 border - t border - gray - 700 / 50 space - y-3'>;'
                 <div className='flex items - center space - x-3 text - gray - 300'>;'
@@ -2667,26 +2664,26 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               <div className='pt - 4'>                  <span>{contact_info.mobile}</span>;
               {/* Mobile CTA */}<div className='pt - 4'>                  <span>{contact_info.mobile}</span>;
                 </div>;
-                <div className="flex items - center space - x-3 text - gray - 300">;
-                  <Mail className="w - 4 h - 4 text - purple - 400" />;
+                <div className='flex items - center space - x-3 text - gray - 300'>;
+                  <Mail className='w - 4 h - 4 text - purple - 400' />;
                   <span>{contact_info.email}</span>;
                 </div>;
-                <div className="flex items - center space - x-3 text - gray - 300">;
-                  <MapPin className="w - 4 h - 4 text - green - 400" />;
-                  <span className="text - sm">{contact_info.address}</span>;
+                <div className='flex items - center space - x-3 text - gray - 300'>;
+                  <MapPin className='w - 4 h - 4 text - green - 400' />;
+                  <span className='text - sm'>{contact_info.address}</span>;
                 </div>;
               </div>;
               {/* Mobile CTA */}
               <div className='pt - 4'>;
               <div className='pt - 4'>                  <span>{contact_info.mobile}</span>;
-                </div>;"
-                <div className="flex items - center space - x-3 text - gray - 300">;"
-                  <Mail className="w - 4 h - 4 text - purple - 400" />;
+                </div>;'
+                <div className='flex items - center space - x-3 text - gray - 300'>;'
+                  <Mail className='w - 4 h - 4 text - purple - 400' />;
                   <span>{contact_info.email}</span>;
-                </div>;"
-                <div className="flex items - center space - x-3 text - gray - 300">;"
-                  <MapPin className="w - 4 h - 4 text - green - 400" />;"
-                  <span className="text - sm">{contact_info.address}</span>;
+                </div>;'
+                <div className='flex items - center space - x-3 text - gray - 300'>;'
+                  <MapPin className='w - 4 h - 4 text - green - 400' />;'
+                  <span className='text - sm'>{contact_info.address}</span>;
                 </div>;
               </div>;
               {/* Mobile CTA */}'
@@ -2696,9 +2693,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   className='block w - full text - center px - 6 py - 3 bg - gradient - to - r from - cyan - 500 to - purple - 600 text - white rounded - xl font - medium hover:from - cyan - 600 hover:to - purple - 700 transition - all duration - 300';
                   on_click={() => setIsOpen (false)}
                 >;'
-                  <Rocket className='w - 5 h - 5 inline mr - 2' />                  Get Started                <Link;"
-                  href="/contact";"
-                  className="block w - full text - center px - 6 py - 3 bg - gradient - to - r from - cyan - 500 to - purple - 600 text - white rounded - xl font - medium hover:from - cyan - 600 hover:to - purple - 700 transition - all duration - 300";
+                  <Rocket className='w - 5 h - 5 inline mr - 2' />                  Get Started                <Link;'
+                  href='/contact';'
+                  className='block w - full text - center px - 6 py - 3 bg - gradient - to - r from - cyan - 500 to - purple - 600 text - white rounded - xl font - medium hover:from - cyan - 600 hover:to - purple - 700 transition - all duration - 300';
                   on_click={() => setIsOpen (false)}
                 >;"
                   <Rocket className="w - 5 h - 5 inline mr - 2" />;
@@ -2786,8 +2783,8 @@ href='/contact'
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
               <div className="pt-4">
                 <Link
-                  href="/contact"
-                  className="block w-full text-center px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white rounded-xl font-medium hover:from-cyan-600 hover:to-purple-700 transition-all duration-300"
+                  href='/contact'
+                  className='block w-full text-center px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white rounded-xl font-medium hover:from-cyan-600 hover:to-purple-700 transition-all duration-300'
                   onClick={() => setIsOpen(false)}
                 >
                   <Rocket className="w-5 h-5 inline mr-2" />

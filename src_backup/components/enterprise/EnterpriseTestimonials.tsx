@@ -2,13 +2,13 @@
   CarouselContent;
   CarouselItem;
   CarouselNext;
-  CarouselPrevious} from "@/components/ui/carousel";
+  CarouselPrevious} from '@/components/ui/carousel';
 
-        <Carousel className='w-full'>    quote: "The dedicated talent pool makes finding specialized AI engineers much faster than our previous solutions. The ROI has been tremendous.",
-    author: "Elena Rodriguez",
-    title: "CTO",
-    company: "FutureTech Systems",
-    image: "/placeholder.svg"}],
+        <Carousel className='w-full'>    quote: 'The dedicated talent pool makes finding specialized AI engineers much faster than our previous solutions. The ROI has been tremendous.',
+    author: 'Elena Rodriguez',
+    title: 'CTO',
+    company: 'FutureTech Systems',
+    image: '/placeholder.svg'}],
 
 
 import React from 'react';
@@ -112,7 +112,7 @@ export function EnterpriseTestimonials() {
         </div>
 
 
-        <Carousel className="w-full">
+        <Carousel className='w-full'>
           <CarouselContent>
             {testimonials.map((testimonial, index) => (
 
@@ -173,11 +173,11 @@ export function EnterpriseTestimonials() {return (<section id=testimonials' clas
           </p>;
         </div>;
 
-        <Carousel className='w-full'>    quote: "The dedicated talent pool makes finding specialized AI engineers much faster than our previous solutions. The ROI has been tremendous.",;
-    author: "Elena Rodriguez",;
-    title: "CTO",;
-    company: "FutureTech Systems",;
-    image: "/placeholder && placeholder.svg"}],;
+        <Carousel className='w-full'>    quote: 'The dedicated talent pool makes finding specialized AI engineers much faster than our previous solutions. The ROI has been tremendous.',;
+    author: 'Elena Rodriguez',;
+    title: 'CTO',;
+    company: 'FutureTech Systems',;
+    image: '/placeholder && placeholder.svg'}],;
 export function EnterpriseTestimonials() {;
   return (
 
@@ -242,7 +242,7 @@ export function EnterpriseTestimonials() {return (<section id="testimonials" cla
         </Carousel>;
       </div>;
     </section>;
-  )}}/>;
+  )}/>;
                     </div>;
                     <div>;
                       <p className='font-bold>{testimonial.author}</p>;
@@ -339,7 +339,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     </section>
 
           </CarouselContent>;
-          <div className='flex justify-center gap-2 mt-8'>            <CarouselPrevious />          <div className="flex justify-center gap-2 mt-8">;
+          <div className='flex justify-center gap-2 mt-8'>            <CarouselPrevious />          <div className='flex justify-center gap-2 mt-8'>;
   CarouselContent,CarouselItem,CarouselNext,CarouselPrevious} from '@/components / ui / carousel';
 const testimonials = [;
   {quote:;

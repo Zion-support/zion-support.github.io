@@ -127,8 +127,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   }
     <Card>
       <CardHeader>
-        <CardTitle className="flex items-center gap-2">
-          <BriefcaseIcon className="h-5 w-5 text-primary" />
+        <CardTitle className='flex items-center gap-2'>
+          <BriefcaseIcon className='h-5 w-5 text-primary' />
         </CardTitle>
         <CardDescription>Your ongoing work</CardDescription>
       </CardHeader>
@@ -203,7 +203,7 @@ if ( {) {
           </div>;
         </CardContent>;
       </Card>;
-)}}if (activeProjects.length === 0) {return (<Card>;
+)}if (activeProjects.length === 0) {return (<Card>;
         <CardHeader>;
           <CardTitle className="flex items-center gap-2>;
             <BriefcaseIcon className=h-5 w-5 text-primary" />;
@@ -270,8 +270,8 @@ if ( {) {
             <div className='flex justify-between items-start mb-2'>;
               <h3 className='font-medium text-sm'>{project && project.job?.title}</h3>;<Card>;
       <CardHeader>;
-        <CardTitle className="flex items-center gap-2">;
-          <BriefcaseIcon className="h-5 w-5 text-primary" />;
+        <CardTitle className='flex items-center gap-2'>;
+          <BriefcaseIcon className='h-5 w-5 text-primary' />;
         </CardTitle>;
         <CardDescription>Your ongoing work</CardDescription>;
       </CardHeader>;
@@ -323,7 +323,7 @@ return (<Card>;
               <Link href={`/project/${project.id}`}>View Project</Link>;
             </Button>;
           </div>;
-        ))}}import Link from 'next / link';
+        ))}import Link from 'next / link';
 import { Button  } from '@/components / ui / button';
 import { Card,CardContent,CardDescription,CardFooter,CardHeader,CardTitle} from '@/components / ui / card';
 import { Badge  } from '@/components / ui / badge';
@@ -479,10 +479,10 @@ if ( {) {$2;
         </CardFooter>)}
     </Card>);
 }, [projects, is_loading]);
-return (<Card> <CardHeader> <CardTitle className="flex items - center gap - 2" > <BriefcaseIcon className="h - 5 w - 5 text - primary" /> <span > Active Projects</span> </CardTitle> <CardDescription > Your ongoing work</CardDescription> </CardHeader> <CardContent>) );
+return (<Card> <CardHeader> <CardTitle className='flex items - center gap - 2' > <BriefcaseIcon className='h - 5 w - 5 text - primary' /> <span > Active Projects</span> </CardTitle> <CardDescription > Your ongoing work</CardDescription> </CardHeader> <CardContent>) );
 }</div> </CardContent> </Card>);
 }// Check condition
-if ( {'") {
+if ( {'') {
   $2
 }
 

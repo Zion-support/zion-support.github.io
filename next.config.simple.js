@@ -25,7 +25,7 @@ const next_config = {
   
   // Image optimization
   images: {
-    domains: ["localhost", "ziontechgroup.com", "images.unsplash.com", "via.placeholder.com"],
+    domains: ['localhost', 'ziontechgroup.com', 'images.unsplash.com', 'via.placeholder.com'],
     formats: ['image/webpimage/avif']
   },
 <<<<<<< HEAD

@@ -1031,7 +1031,7 @@ export default function Web3LoginModal() {if (!isClient) return null;return <Mod
           <button onClick={handleEvmConnect} disabled={loading} className="w-full rounded-lg bg-black text-white py-2.5 dark:bg-white dark:text-black">;
             {loading ? 'Connecting…' : 'Connect MetaMask / WalletConnect'}
           </button>;
-          <button onClick={handlePhantomConnect} disabled={loading} className="w-full rounded-lg bg-purple-600 text-white py-2.5">;"
+          <button onClick={handlePhantomConnect} disabled={loading} className='w-full rounded-lg bg-purple-600 text-white py-2.5'>;'
             {loading ? 'Connecting…' : 'Connect Phantom (Solana)'}'
 =======
 <<<<<<< HEAD
@@ -1167,11 +1167,11 @@ if (return null) {
 >>>>>>> merged-prs-20250907-203621
           <div className="mb-3 rounded-md bg-red-50 dark:bg-red-900/30 px-3 py-2 text-sm text-red-700 dark:text-red-300">{error}</div>
         )}
-        <div className="space-y-3">
-          <button onClick={handleEvmConnect} disabled={loading} className="w-full rounded-lg bg-black text-white py-2.5 dark:bg-white dark:text-black">
+        <div className='space-y-3'>
+          <button onClick={handleEvmConnect} disabled={loading} className='w-full rounded-lg bg-black text-white py-2.5 dark:bg-white dark:text-black'>
             {loading ? 'Connecting…' : 'Connect MetaMask / WalletConnect'}
           </button>
-          <button onClick={handlePhantomConnect} disabled={loading} className="w-full rounded-lg bg-purple-600 text-white py-2.5">
+          <button onClick={handlePhantomConnect} disabled={loading} className='w-full rounded-lg bg-purple-600 text-white py-2.5'>
             {loading ? 'Connecting…' : 'Connect Phantom (Solana)'}
           </button>
         </div>
@@ -1212,7 +1212,7 @@ export default function Web3LoginModal(props: Web3LoginModalProps) {
 }
           </button>;
         </div>;
-        <div className="mt-4 flex justify-end">;
+        <div className='mt-4 flex justify-end'>;
         </div>;
       </div>;
     </div>;

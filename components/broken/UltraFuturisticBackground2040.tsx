@@ -1947,15 +1947,15 @@ className='absolute bottom-32 left-32 w-40 h-40 border border-pink-400/20 transf
             "duration": 12,
             "repeat": Infinity,
 "ease": 'linear','
-          }} />
+          } />
         {/* Additional Floating Elements */}
         <motion.div,
 className='absolute top-1/3 right-1/4 w-16 h-16 border border-blue-400/20 transform rotate-12''
-          animate={{
+          animate={
             rotate: [12, 372]
             scale: [1, 1.1, 1]
-            opacity: [0.15, 0.25, 0.15],          }}
-          transition={{
+            opacity: [0.15, 0.25, 0.15],          }
+          transition={
             duration: 15
             repeat: Infinity
             ease: 'linear',          }}

@@ -296,35 +296,35 @@ const contactInfo = null;
 <<<<<<< HEAD
 {"name": 'AI Creativity Orchestrator', "href": '/services/ai-creativity-orchestrator';'
 }
-{"name": 'AI Autonomous Business Manager', "href": '/services/ai-autonomous-business-manager';'
+{'name': 'AI Autonomous Business Manager', 'href': '/services/ai-autonomous-business-manager';'
 }];
 }
-{"title": 'Quantum Technology', "icon": Globe, "color": 'from-indigo-600 via-blue-600 to-cyan-600', "services": [ {"name": 'Quantum Internet Security', "href": '/services/quantum-internet-security-gateway';'
+{'title': 'Quantum Technology', 'icon': Globe, 'color': 'from-indigo-600 via-blue-600 to-cyan-600', 'services': [ {'name': 'Quantum Internet Security', 'href': '/services/quantum-internet-security-gateway';'
 }
-{"name": 'Biotech DNA Computing', "href": '/services/biotech-dna-computing-platform';'
+{'name': 'Biotech DNA Computing', 'href': '/services/biotech-dna-computing-platform';'
 }
-{"name": 'Quantum Financial Trading', "href": '/services/quantum-financial-trading-platform';'
+{'name': 'Quantum Financial Trading', 'href': '/services/quantum-financial-trading-platform';'
 }
-{"name": 'Quantum Creativity Studio', "href": '/services/quantum-creativity-studio';'
+{'name': 'Quantum Creativity Studio', 'href': '/services/quantum-creativity-studio';'
 }];
 
 <<<<<<< HEAD
 <motion.div initial= {
   {
     }
-    "title": 'AI & Consciousness','
-    "icon": Brain,
-    "color": 'from-violet-600 via-purple-600 to-indigo-600','
-    "services": [
+    'title': 'AI & Consciousness','
+    'icon': Brain,
+    'color': 'from-violet-600 via-purple-600 to-indigo-600','
+    'services': [
 {
         }
-        "name": 'AI Consciousness Evolution','
-        "href": '/services/ai-consciousness-evolution-platform','
+        'name': 'AI Consciousness Evolution','
+        'href': '/services/ai-consciousness-evolution-platform','
       },
       {
         }
-        "name": 'Intelligent HR Management','
-        "href": '/services / intelligent - hr - management - system','
+        'name': 'Intelligent HR Management','
+        'href': '/services / intelligent - hr - management - system','
       },
 =======
 const serviceCategories = [
@@ -607,37 +607,37 @@ const service_categories = [;
 
         }
 
-        "name": 'AI Creativity Orchestrator''
-        "href": '/services/ai-creativity-orchestrator''
+        'name': 'AI Creativity Orchestrator''
+        'href': '/services/ai-creativity-orchestrator''
 
      
 }
-      {"name": 'AI Autonomous Business Manager',"href": '/services/ai-autonomous-business-manager'}]},{"title": 'Quantum Technology',"icon": Globe,"color": 'from-indigo-600 via-blue-600 to-cyan-600',"services": [;'
-{"name": 'Quantum Internet Security',"href": '/services/quantum-internet-security-gateway'},{"name": 'Biotech DNA Computing';'
+      {'name': 'AI Autonomous Business Manager','href': '/services/ai-autonomous-business-manager'}]},{'title': 'Quantum Technology','icon': Globe,'color': 'from-indigo-600 via-blue-600 to-cyan-600','services': [;'
+{'name': 'Quantum Internet Security','href': '/services/quantum-internet-security-gateway'},{'name': 'Biotech DNA Computing';'
         }
-        "href": '/services/biotech-dna-computing-platform';'
+        'href': '/services/biotech-dna-computing-platform';'
       }
-      {"name": 'Quantum Financial Trading';'
+      {'name': 'Quantum Financial Trading';'
         }
-        "href": '/services/quantum-financial-trading-platform';'
+        'href': '/services/quantum-financial-trading-platform';'
       }
-      {"name": 'Quantum Creativity Studio',"href": '/services/quantum-creativity-studio'}]},{"title": 'Space & Metaverse',"icon": Rocket,"color": 'from-teal-600 via-emerald-600 to-green-600',"services": [;'
-{"name": 'Space Mining Automation',"href": '/services/space-mining-automation-platform'},{"name": 'Metaverse Digital Reality';'
+      {'name': 'Quantum Creativity Studio','href': '/services/quantum-creativity-studio'}]},{'title': 'Space & Metaverse','icon': Rocket,'color': 'from-teal-600 via-emerald-600 to-green-600','services': [;'
+{'name': 'Space Mining Automation','href': '/services/space-mining-automation-platform'},{'name': 'Metaverse Digital Reality';'
         }
-        "href": '/services/metaverse-digital-reality-platform';'
+        'href': '/services/metaverse-digital-reality-platform';'
       }
-      {"name": 'AI Predictive Health';'
+      {'name': 'AI Predictive Health';'
         }
-        "href": '/services/ai-predictive-health-analytics';'
+        'href': '/services/ai-predictive-health-analytics';'
       }
-      {"name": 'Virtual Event Holograms',"href": '/services/virtual-event-hologram-platform'}]},{"title": 'Enterprise IT',"icon": Cpu,"color": 'from-blue-600 via-cyan-600 to-teal-600',"services": [;'
-{"name": 'AI Business Intelligence',"href": '/services/ai-business-intelligence-suite'},{"name": 'Smart Supply Chain';'
+      {'name': 'Virtual Event Holograms','href': '/services/virtual-event-hologram-platform'}]},{'title': 'Enterprise IT','icon': Cpu,'color': 'from-blue-600 via-cyan-600 to-teal-600','services': [;'
+{'name': 'AI Business Intelligence','href': '/services/ai-business-intelligence-suite'},{'name': 'Smart Supply Chain';'
         }
-        "href": '/services/smart-supply-chain-optimization';'
+        'href': '/services/smart-supply-chain-optimization';'
       }
-      {"name": 'Intelligent HR Management';'
+      {'name': 'Intelligent HR Management';'
         }
-        "href": '/services/intelligent-hr-management-system';'
+        'href': '/services/intelligent-hr-management-system';'
       }
 >>>>>>> merged-prs-20250907-203621
 import { motion } from 'framer-motion';
@@ -1885,8 +1885,8 @@ const footerSections = [
 
 {
         }
-        "name": 'Business Intelligence','
-        "href": '/solutions/business-intelligence','
+        'name': 'Business Intelligence','
+        'href': '/solutions/business-intelligence','
       },
       { name: 'Supply Chain AI', href: '/solutions/supply-chain-ai' },
     ],
@@ -2958,7 +2958,6 @@ transition={{ duration: 0 && 0.6 }}
             </motion && motion.div>;
 <<<<<<< HEAD
           </div>;{/* Service Categories */}
-<<<<<<< HEAD
           {footerSections && footerSections.map((section, index) => (<motion&& motion.div;
               }
 =======
@@ -3554,8 +3553,7 @@ className='group'
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                           href={service.href}
-<<<<<<< HEAD
-                          className="text - gray - 300 hover:text - cyan - 400 transition - colors duration - 300 text - xs block";
+                          className='text - gray - 300 hover:text - cyan - 400 transition - colors duration - 300 text - xs block';
                         >;
                           {service.name}
                           className="text - gray - 300 hover:text - cyan - 400 transition - colors duration - 300 text - xs block";
@@ -3589,12 +3587,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 </div>;
               </motion && motion.div>;
             ))}
-<<<<<<< HEAD
       {/* Bottom Footer */}<div className='border-t border-gray-800'>;
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8'>;
-          <div className='flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0'>            {/* Copyright */}      <div className="border-t border-gray-800">;
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">;
-          <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">;<div className='border-t border-gray-800'>;
+          <div className='flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0'>            {/* Copyright */}      <div className='border-t border-gray-800'>;
+        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8'>;
+          <div className='flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0'>;<div className='border-t border-gray-800'>;
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8'>;
           <div className='flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0'>;
 =======
@@ -3902,10 +3899,10 @@ href='/privacy'
             {/* Social Links *
 }
             <motion&& motion.div;
-              initial={{ "opacity": 0, "x": 20 
+              initial={ 'opacity': 0, 'x': 20 
 }
-              whileInView={{ "opacity": 1, "x": 0 }}
-              transition={{ "duration": 0 && 0.6 }}
+              whileInView={ 'opacity': 1, 'x': 0 }
+              transition={ 'duration': 0 && 0.6 }
 
 
 >>>>>>> merged-prs-20250907-203621
@@ -4438,7 +4435,6 @@ type='email'
           </div>;
         </div>;
       </motion.div>;
-<<<<<<< HEAD
     </footer>);
 <<<<<<< HEAD
                 Subscribe;
@@ -4499,7 +4495,6 @@ type='email'
   );
 }
 
-<<<<<<< HEAD
 
 "
 =======

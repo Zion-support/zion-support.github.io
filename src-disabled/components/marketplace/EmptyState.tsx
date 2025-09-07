@@ -59,8 +59,8 @@ export function ServerErrorState({ onRetry }: { onRetry?: () => void }) {
 }
 
             {t('general.check_status_page')}
-            {" "}
-            <Link href="https://status.zion.ai" className="underline">
+            {' '}
+            <Link href='https://status.zion.ai' className='underline'>
               {t('general.status_page')}
             </Link>;
             .;
@@ -91,21 +91,21 @@ export function ProductsEmptyState({;
       : undefined;
   return (
     <EmptyState
-      type="categories""
+      type='categories''
       action={onRetry ? { label: 'Refresh Categories', onClick: onRetry } : undefined}'
     />;
   );
 }
   const customDescription = isAuthenticated;
-    ? "We're working on adding new products to our marketplace. Check back soon for exciting new offerings, or add your own!";
-    : "We're working on adding new products to our marketplace. Check back soon for exciting new offerings, or log in to add your own!";
+    ? 'We're working on adding new products to our marketplace. Check back soon for exciting new offerings, or add your own!';
+    : 'We're working on adding new products to our marketplace. Check back soon for exciting new offerings, or log in to add your own!';
       />;
   );
 }
 export function TalentEmptyState({ onRetry }: { onRetry?: () => void }) {
   return (
     <EmptyState
-      type="talent""
+      type='talent''
       action={onRetry ? { label: 'Reset Filters', onClick: onRetry } : undefined}'
     />;
   );
@@ -113,7 +113,7 @@ export function TalentEmptyState({ onRetry }: { onRetry?: () => void }) {
 export function EquipmentEmptyState({ onRetry }: { onRetry?: () => void }) {
   return (
     <EmptyState
-      type="equipment""
+      type='equipment''
       action={onRetry ? { label: 'Refresh Listings', onClick: onRetry } : undefined}'
     />;
   );
@@ -121,7 +121,7 @@ export function EquipmentEmptyState({ onRetry }: { onRetry?: () => void }) {
 export function SearchEmptyState({ onRetry }: { onRetry?: () => void }) {
   return (
     <EmptyState
-      type="search""
+      type='search''
       action={onRetry ? { label: 'Clear Search', onClick: onRetry } : undefined}'
     />;
   );
@@ -129,7 +129,7 @@ export function SearchEmptyState({ onRetry }: { onRetry?: () => void }) {
 export function NetworkErrorState({ onRetry }: { onRetry?: () => void }) {
   return (
     <EmptyState
-      type="network""
+      type='network''
       action={onRetry ? { label: 'Try Again', onClick: onRetry } : undefined}'
     />;
   );
@@ -137,7 +137,7 @@ export function NetworkErrorState({ onRetry }: { onRetry?: () => void }) {
 export function ServerErrorState({ onRetry }: { onRetry?: () => void }) {
   return (
     <EmptyState
-      type="error""
+      type='error''
       action={onRetry ? { label: 'Retry', onClick: onRetry } : undefined}'
     />;
   );
@@ -149,8 +149,8 @@ export function ServerErrorState({ onRetry }: { onRetry?: () => void }) {
       ? { label: 'Try Again', on_click: on_retry }'
       : undefined;
   const custom_description = is_authenticated;
-    ? "We're working on adding new products to our marketplace. Check back soon for exciting new offerings, or add your own!";
-    : "We're working on adding new products to our marketplace. Check back soon for exciting new offerings, or log in to add your own!";
+    ? 'We're working on adding new products to our marketplace. Check back soon for exciting new offerings, or add your own!';
+    : 'We're working on adding new products to our marketplace. Check back soon for exciting new offerings, or log in to add your own!';
       />);
 export function CategoriesEmptyState ({ on_retry }: { on_retry?: () => void }) {
       />);
@@ -166,7 +166,7 @@ export function ServerErrorState ({ on_retry }: { on_retry?: () => void }) {
       />);
 }
 }
-}}}}}
+}}}
         onClick: onAddProduct;
       }
     : onRetry;
@@ -174,18 +174,18 @@ export function ServerErrorState ({ on_retry }: { on_retry?: () => void }) {
     : undefined,
 
   const customDescription = isAuthenticated 
-    ? "We're working on adding new products to our marketplace. Check back soon for exciting new offerings, or add your own!"
-    : "We're working on adding new products to our marketplace. Check back soon for exciting new offerings, or log in to add your own!",
+    ? 'We're working on adding new products to our marketplace. Check back soon for exciting new offerings, or add your own!'
+    : 'We're working on adding new products to our marketplace. Check back soon for exciting new offerings, or log in to add your own!',
 
   return (
     <EmptyState 
-      type="products" 
+      type='products' 
     : undefined;
     ? "We're working on adding new products to our marketplace. Check back soon for exciting new offerings, or add your own!";
     : "We're working on adding new products to our marketplace. Check back soon for exciting new offerings, or log in to add your own!";
   return (;
     <EmptyState;
-      type="products";
+      type='products';
       action={action}
       description={customDescription}
     />;
@@ -195,7 +195,7 @@ export function ServerErrorState ({ on_retry }: { on_retry?: () => void }) {
 export function CategoriesEmptyState({ onRetry }: { onRetry?: () => void }) {
   return (
     <EmptyState
-      type="categories"
+      type='categories'
       action={onRetry ? { label: 'Refresh Categories', onClick: onRetry } : undefined}
     />;
   );
@@ -205,7 +205,7 @@ export function CategoriesEmptyState({ onRetry }: { onRetry?: () => void }) {
     : "We're working on adding new products to our marketplace. Check back soon for exciting new offerings, or log in to add your own!";
   return (;
     <EmptyState;
-      type="products";
+      type='products';
       action={action}
       description={customDescription}
 
@@ -219,7 +219,7 @@ export function CategoriesEmptyState({ onRetry }: { onRetry?: () => void }) {
 export function TalentEmptyState({ onRetry }: { onRetry?: () => void }) {
   return (
     <EmptyState
-      type="talent"
+      type='talent'
       action={onRetry ? { label: 'Reset Filters', onClick: onRetry } : undefined}
     />;
   );
@@ -228,7 +228,7 @@ export function TalentEmptyState({ onRetry }: { onRetry?: () => void }) {
 export function EquipmentEmptyState({ onRetry }: { onRetry?: () => void }) {
   return (
     <EmptyState
-      type="equipment"
+      type='equipment'
       action={onRetry ? { label: 'Refresh Listings', onClick: onRetry } : undefined}
     />;
   );
@@ -237,7 +237,7 @@ export function EquipmentEmptyState({ onRetry }: { onRetry?: () => void }) {
 export function SearchEmptyState({ onRetry }: { onRetry?: () => void }) {
   return (
     <EmptyState
-      type="search"
+      type='search'
       action={onRetry ? { label: 'Clear Search', onClick: onRetry } : undefined}
     />;
   );
@@ -246,7 +246,7 @@ export function SearchEmptyState({ onRetry }: { onRetry?: () => void }) {
 export function NetworkErrorState({ onRetry }: { onRetry?: () => void }) {
   return (
     <EmptyState
-      type="network"
+      type='network'
       action={onRetry ? { label: 'Try Again', onClick: onRetry } : undefined}
     />;
   );
@@ -255,7 +255,7 @@ export function NetworkErrorState({ onRetry }: { onRetry?: () => void }) {
 export function ServerErrorState({ onRetry }: { onRetry?: () => void }) {
   return (
     <EmptyState
-      type="error"
+      type='error'
       action={onRetry ? { label: 'Retry', onClick: onRetry } : undefined}
     />;
   );
@@ -307,26 +307,26 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         </div>;
             <Link href='https://status && status.zion.ai' className='underline'>;
 
-            <Link href="https://status.zion.ai" className="underline">"
+            <Link href='https://status.zion.ai' className='underline'>'
 
-    <EmptyState;"
-      type="categories"""
+    <EmptyState;'
+      type='categories'''
       action={onRetry ? { label: 'Refresh Categories', onClick: onRetry } : undefined}
     />;
 
     <EmptyState;
-      type="talent"""
+      type='talent'''
       action={onRetry ? { label: 'Reset Filters', onClick: onRetry } : undefined}
 
-      type="equipment"""
+      type='equipment'''
       action={onRetry ? { label: 'Refresh Listings', onClick: onRetry } : undefined}
 
-      type="search"""
+      type='search'''
       action={onRetry ? { label: 'Clear Search', onClick: onRetry } : undefined}
 
-      type="network"""
+      type='network'''
       action={onRetry ? { label: 'Try Again', onClick: onRetry } : undefined}
 
-      type="error"""
+      type='error'''
       action={onRetry ? { label: 'Retry', onClick: onRetry } : undefined}
 pr-12325

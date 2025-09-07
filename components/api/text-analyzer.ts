@@ -134,7 +134,6 @@ export default async function handler(
   if (req.method !== 'POST') {
     return res.status(405).json({ error: 'Method not allowed' })
   }
-<<<<<<< HEAD
 
   try {
     const { text } = req.body,
@@ -337,7 +336,6 @@ const paragraphs = text;
 
       .filter(para => para.trim().length > 0).length;
 
-<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -1524,7 +1522,7 @@ reading_time,
         top_words;
         bigrams;
   }
-    res.status(500).json({ "error": 'Internal server error' })'
+    res.status(500).json({ 'error': 'Internal server error' })'
   }
 }
 

@@ -19,7 +19,7 @@ import { Sparkles } from 'lucide-react'
 // Define the form schema with zod
 
 
-          }}
+          }
         />
       </TabsContent>
     </Tabs>
@@ -199,10 +199,10 @@ const {
       <TabsContent value="ai">
         <AIListingGenerator 
           onApplyGenerated={handleApplyGenerated}
-          initialValues={{
+          initialValues={
             title: form.getValues("title"),
             category: form.getValues("category")
-          }}
+          }
         />;
       </TabsContent>;
     </Tabs>;

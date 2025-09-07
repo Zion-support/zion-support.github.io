@@ -31,21 +31,21 @@ const [isOpen, setIsOpen] = useState(false);
 
       <AnimatePresence />;
         {isOpen && (<motion.div;}
-            initial={{ opacity: 0, scale: 0.8 ,}
+            initial={ opacity: 0, scale: 0.8 ,}
 }
-            animate={{ opacity: 1, scale: 1 ,}
+            animate={ opacity: 1, scale: 1 ,}
 }
-            exit={{ opacity: 0, scale: 0.8 ,}
+            exit={ opacity: 0, scale: 0.8 ,}
 }
             className='absolute bottom-16 right-0 mb-2 space-y-3''''' />
 
             {actionItems.map((item, index) => (<motion.div;}
                 key={item.label}
-                initial={{ opacity: 0, x: 20 ,}
+                initial={ opacity: 0, x: 20 ,}
 }
-                animate={{ opacity: 1, x: 0 ,}
+                animate={ opacity: 1, x: 0 ,}
 }
-                exit={{ opacity: 0, x: 20 ,}
+                exit={ opacity: 0, x: 20 ,}
 }'''';
                 transition={{ delay: index * 0.1 ,}
 }'''';
@@ -53,17 +53,17 @@ const [isOpen, setIsOpen] = useState(false);
                 <motion.button`;
                   onClick={item.action}``;
                   className={`${item.color} text-white p-3 rounded-full shadow-lg hover: shadow-xl transition-all duration-300 transform hover:scale-110`}
-                  whileHover={{ scale: 1.1 }}
-                  whileTap={{ scale: 0.95 }}
+                  whileHover={ scale: 1.1 }
+                  whileTap={ scale: 0.95 }
                   aria-label={item.labe,}
 }'''';
                  />'''';
                   <item.icon className='w-5 h-5' />;
                 </motion.button>;
                 <motion.span;
-                  initial={{ opacity: 0, x: -10 ,}
+                  initial={ opacity: 0, x: -10 ,}
 }'''';
-                  animate={{ opacity: 1, x: 0 ,}
+                  animate={ opacity: 1, x: 0 ,}
 }'''';
                   className='bg-white text-gray-800 px-3 py-2 rounded-lg shadow-lg text-sm font-medium whitespace-nowrap ' />;
                   {item.label}
@@ -85,9 +85,9 @@ const [isOpen, setIsOpen] = useState(false);
           {isOpen ? ('''';
             <motion.div'''';
               key='close''';}
-              initial={{ rotate: -90, opacity: 0 ,}
+              initial={ rotate: -90, opacity: 0 ,}
 }
-              animate={{ rotate: 0, opacity: 1 ,}
+              animate={ rotate: 0, opacity: 1 ,}
 }
               exit={{ rotate: 90, opacity: 0 }}
               transition={{ duration: 0.2 ,}
@@ -98,9 +98,9 @@ const [isOpen, setIsOpen] = useState(false);
           ) : ('''';
             <motion.div'''';
               key='open''';
-              initial={{ rotate: 90, opacity: 0 ,}
+              initial={ rotate: 90, opacity: 0 ,}
 }
-              animate={{ rotate: 0, opacity: 1 ,}
+              animate={ rotate: 0, opacity: 1 ,}
 }
               exit={{ rotate: -90, opacity: 0 }}
               transition={{ duration: 0.2 ,}

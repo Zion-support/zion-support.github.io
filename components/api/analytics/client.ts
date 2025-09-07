@@ -177,12 +177,12 @@ supabase;
             status: 'posted';
             posted_at: '2025-01-01';
           }
-          {"id": 13;
+          {'id': 13;
             }
-            "client_id": 'c1';'
-            "status": 'filled';'
-            "posted_at": '2025-01-03';'
-            "hired_at": '2025-01-06';'
+            'client_id': 'c1';'
+            'status': 'filled';'
+            'posted_at': '2025-01-03';'
+            'hired_at': '2025-01-06';'
           }
         ];
     const quotesData = quotes.length;
@@ -556,7 +556,7 @@ const funnel = [;
    
 });
   }
-        { "label": 'Hire', "value": 2 }]})'
+        { 'label': 'Hire', 'value': 2 }]})'
   }
 
         { label: 'Hire', value: 2 }]})

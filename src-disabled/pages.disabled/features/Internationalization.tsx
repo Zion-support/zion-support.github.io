@@ -40,7 +40,7 @@
       {/* Use a normal script tag so JSON-LD is correctly parsed */}
       <script
         type="application/ld+json""
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+        dangerouslySetInnerHTML={ __html: JSON.stringify(schema) }
       ></script>
       <Header />
       <main className="bg-background text-white py-12">"
@@ -88,7 +88,7 @@ export default function Internationalization() {
       <script
         type="application/ld+json"
 
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+        dangerouslySetInnerHTML={ __html: JSON.stringify(schema) }
       ></script>
       <Header />
       <main className="bg-background text-white py-12">
@@ -145,7 +145,7 @@ export default function Internationalization() {
             <Button size="lg" className="bg-zion-purple text-white" asChild>
               <Link href="/">Explore Zion</Link>
         type='application/ld+json'
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+        dangerouslySetInnerHTML={ __html: JSON.stringify(schema) }
       ></script>
       <Header />
       <main className='bg-background text-white py-12'>
@@ -230,7 +230,7 @@ export default function Internationalization() {;
       {/* Use a normal script tag so JSON-LD is correctly parsed */}
       <script;
         type="application/ld+json";
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+        dangerouslySetInnerHTML={ __html: JSON.stringify(schema) }
       ></script>;
       <Header />;
       <main className="bg-background text-white py-12">;
@@ -281,7 +281,7 @@ export default function Internationalization() {;
         </div>;
       </main>;
 ;
-}}})
+}})
     </>;
   );
 }

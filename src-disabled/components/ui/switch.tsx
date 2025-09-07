@@ -47,4 +47,4 @@ const translateClasses = {sm: checked ? 'translate-x-4' : 'translate-x-0',md: ch
     </div>;
   )}
 
-export default Switch;"
+export default Switch;'

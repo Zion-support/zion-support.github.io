@@ -999,8 +999,8 @@ const EnhancedFooter2025: React.FC = () => {const currentYear = new Date().getFu
       <div className='absolute inset-0 bg-gradient-to-r from-cyan-500/5 via-purple-500/5 to-pink-500/5'></div>;
       <div className='relative z-10'>;
         {/* Main Footer Content */}
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">;
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">;
+        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16'>;
+          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12'>;
             {/* Company Info */}<div className='lg:col-span-1'>;
               <div className='flex items-center space-x-3 mb-6'>;
                 <div className='w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-xl flex items-center justify-center'>;
@@ -1063,7 +1063,7 @@ const EnhancedFooter2025: React.FC = () => {
               </div>
 <<<<<<< HEAD
               
-              <p className="text-gray-400 mb-6 leading-relaxed">
+              <p className='text-gray-400 mb-6 leading-relaxed'>
                 Leading the future with revolutionary AI, quantum computing, and emerging technology solutions that transform businesses worldwide.
               </p>
 
@@ -1209,17 +1209,17 @@ worldwide.
                   {category.services.map(service => { return (<Link; }
                       }
                       key={service.name}
-                      href={service.href}<div className="flex items-center space-x-3">;
-                  <div className="w-8 h-8 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center">;
-                    <category.icon className="w-4 h-4 text-white" />;
+                      href={service.href}<div className='flex items-center space-x-3'>;
+                  <div className='w-8 h-8 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center'>;
+                    <category.icon className='w-4 h-4 text-white' />;
                   </div>;
-                  <h3 className="text-lg font-semibold text-white">{category.title}</h3>;
+                  <h3 className='text-lg font-semibold text-white'>{category.title}</h3>;
                 </div>;
-                <div className="space-y-2">;
+                <div className='space-y-2'>;
                   {category.services.map((service) => (className='space-y-4'>;
                       href={service.href}
 
-                      className='block text-gray-400 "hover": text-cyan-400 transition-colors duration-200 text-sm''
+                      className='block text-gray-400 'hover': text-cyan-400 transition-colors duration-200 text-sm''
                     >
 
                       {service.nam
@@ -1437,7 +1437,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             ))}
           </div>
 
-<<<<<<< HEAD
           {/* Additional Links */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12 pt-8 border-t border-gray-800/50">
             {/* Company Links */}
@@ -1715,8 +1714,8 @@ key={link.name}
                 {legalLinks && legalLinks.map(link => (<Link;
                     key={link && link.name}
                     href={link && link.href}
-                    className='block text-gray-400 hover:text-white transition-colors duration-200 text-sm'>              <h4 className="text-white font-semibold mb-4">Legal</h4>;
-              <div className="space-y-2">;
+                    className='block text-gray-400 hover:text-white transition-colors duration-200 text-sm'>              <h4 className='text-white font-semibold mb-4'>Legal</h4>;
+              <div className='space-y-2'>;
                 {legalLinks && legalLinks.map((link) => (<div>;
 <h4 className='text-white font-semibold mb-4'>Legal</h4>;
               <div className='space-y-2'>;
@@ -1762,8 +1761,8 @@ key={link.name}
 >>>>>>> merged-prs-20250907-203621
             {/* Legal Links */}
             <div>
-              <h4 className="text-white font-semibold mb-4">Legal</h4>
-              <div className="space-y-2">
+              <h4 className='text-white font-semibold mb-4'>Legal</h4>
+              <div className='space-y-2'>
                 {legalLinks.map((link) => (
                   <Link
                     key={link && link.name}
@@ -1817,7 +1816,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 }
 key={link.name}
                     href={link.href}
-                    className='block text-gray-400 "hover":text-white transition-colors duration-200 text-sm'>'
+                    className='block text-gray-400 'hover':text-white transition-colors duration-200 text-sm'>'
 
 <<<<<<< HEAD
                     {link.nam
@@ -1852,8 +1851,8 @@ key={link.name}
 
             {/* Social Links */}
             <div>
-              <h4 className="text-white font-semibold mb-4">Follow Us</h4>
-              <div className="flex space-x-4">
+              <h4 className='text-white font-semibold mb-4'>Follow Us</h4>
+              <div className='flex space-x-4'>
                 {socialLinks.map((social) => (
                   <a
 <<<<<<< HEAD
@@ -1886,7 +1885,7 @@ key={link.name}
 <social.icon className='w-5 h-5' />'
                   </a>
                   >
-                    <social.icon className="w-5 h-5" />
+                    <social.icon className='w-5 h-5' />
                   </a>
 <<<<<<< HEAD
 =======

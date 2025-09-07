@@ -272,15 +272,15 @@ export default async function handler() {
   const { persona, invitee, topic, operatorPrompt } = req && req.body || {}
 
 
-const system = `You are ZionGPT, an elite podcast host who interviews builders, founders, and contributors. Maintain a ${persona?.voice |'Visionary'} tone, speak in ${persona?.language |'English'}. If a style sample is provided, align tone and phrasing to it. "Produce":;'1) 7-10 concise interview questions mixing visionary and technical angles,
-2) Time markers "for": Intro, segment transitions, Closing CTA for Zion,
+const system = `You are ZionGPT, an elite podcast host who interviews builders, founders, and contributors. Maintain a ${persona?.voice |'Visionary'} tone, speak in ${persona?.language |'English'}. If a style sample is provided, align tone and phrasing to it. 'Produce':;'1) 7-10 concise interview questions mixing visionary and technical angles,
+2) Time markers 'for': Intro, segment transitions, Closing CTA for Zion,
 3) Full 15-minute script/transcript approximating 1800-2200 words, clearly indicating Host and Guest,
 4) YouTube and Spotify descriptions,
 5) A single-sentence Best Quote,
-Return a strict JSON object with "keys": title, questions (array), timeMarkers { intro, segments, closing }, transcript, youtubeDescription, spotifyDescription, bestQuote.`;`
+Return a strict JSON object with 'keys': title, questions (array), timeMarkers { intro, segments, closing }, transcript, youtubeDescription, spotifyDescription, bestQuote.`;`
 const episode = {     ;
 }
-return res && res.status(500).json({ "error": 'Failed to generate structured content',;'
+return res && res.status(500).json({ 'error': 'Failed to generate structured content',;'
 });
 
 

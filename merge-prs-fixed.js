@@ -277,8 +277,8 @@ try {;
                 if (file.trim()) {;
 
                     console.log(`Resolving conflicts in: ${file}`);
-                    try {execSync(`git checkout --ours "${file}"`);
-                    } catch (e) {execSync(`git checkout --theirs "${file}"`);
+                    try {execSync(`git checkout --ours '${file}'`);
+                    } catch (e) {execSync(`git checkout --theirs '${file}'`);
 
                     console.log(`Resolving conflicts in: ${file}`);
                     try {execSync(`git checkout --ours "${file}"`);
@@ -320,7 +320,7 @@ try {;
                 if (file.trim()) {;
                     console.log(`Resolving conflicts in:${file}`);
                     try {;
-                        execSync(`git checkout --ours "${file}"`);
+                        execSync(`git checkout --ours '${file}'`);
                     } catch (e) {;
                         execSync(`git checkout --theirs "${file}"`);                    }
                     execSync(`git add "${file}"`)
@@ -368,7 +368,7 @@ try {;
 ;
     // Push all changes;
                     }
-                    execSync(`git add "${file}"`);
+                    execSync(`git add '${file}'`);
                 }
             }
 ;
@@ -392,7 +392,7 @@ try {;
             execSync(`git checkout ${branchName}`);
             // Merge into main;
             execSync('git checkout main');
-            execSync(`git merge ${branchName} --no-ff -m "feat: merge ${branchName} into main\n\n- Integrated changes from ${branchName}\n- Resolved any conflicts automatically\n- All features and improvements preserved"`);
+            execSync(`git merge ${branchName} --no-ff -m 'feat: merge ${branchName} into main\n\n- Integrated changes from ${branchName}\n- Resolved any conflicts automatically\n- All features and improvements preserved'`);
             console.log(`✅ Successfully merged ${branchName}`);
         } catch (error) {console.log(`⚠️  Error merging ${branch}: ${error.message}`);
 =======
@@ -421,17 +421,17 @@ try {;
                 if (file.trim()) {
                     console.log($2);
                     try {
-                        execSync(`git checkout --ours "${file}"`)
+                        execSync(`git checkout --ours '${file}'`)
                     } catch (e) {
-                        execSync(`git checkout --theirs "${file}"`)
+                        execSync(`git checkout --theirs '${file}'`)
                     }
-                    execSync(`git add "${file}"`)
+                    execSync(`git add '${file}'`)
                 }
             }
 <<<<<<< HEAD
             
             // Commit the merge
-            execSync('git commit -m "feat: resolve merge conflicts automatically\n\n- Resolved merge conflicts by accepting appropriate versions\n- Integrated latest changes from main branch\n- All services and improvements preserved"')
+            execSync('git commit -m 'feat: resolve merge conflicts automatically\n\n- Resolved merge conflicts by accepting appropriate versions\n- Integrated latest changes from main branch\n- All services and improvements preserved'')
         }
     }
 

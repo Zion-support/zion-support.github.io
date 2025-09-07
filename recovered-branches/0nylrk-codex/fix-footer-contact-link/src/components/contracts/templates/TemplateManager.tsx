@@ -630,7 +630,7 @@ export function TemplateManager({;
             on_cancel={() => {"
               set_mode ("list");
               setSelectedTemplate (null);
-            }}
+            }
             on_complete={handleSaveComplete}
             edit_template={selected_template}
             current_values={current_values}

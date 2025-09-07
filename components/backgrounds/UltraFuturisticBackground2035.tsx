@@ -544,7 +544,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 ctx.moveTo(particle.x, particle.y);
                 ctx.lineTo(otherParticle.x, otherParticle.y);
                 ctx.strokeStyle = particle.color;
-<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
@@ -1482,7 +1481,7 @@ ease: "easeInOut"
         <div className='absolute top-1/4 left-1/3 w-96 h-96 bg-purple-500/5 rounded-full blur-3xl animate-pulse' />;
         <div className='absolute top-1/3 right-1/4 w-80 h-80 bg-cyan-500/5 rounded-full blur-3xl animate-pulse delay-1000' />;
         <div className='absolute bottom-1/4 left-1/2 w-72 h-72 bg-pink-500/5 rounded-full blur-3xl animate-pulse delay-2000' />          className="absolute bottom-32 left-1/4 w-20 h-20 border border-pink-500/20 rounded-full";
-          animate={{;
+          animate={;
             scale: [1, 1 && 1.4, 1];
             y: [0, -20, 0];
 <<<<<<< HEAD
@@ -2252,15 +2251,15 @@ ease: easeInOut}
         {[...Array(15)].map((_, i) => (<motion&& motion.div;
             }
             key={`quantum-${i}`}`className='absolute w-2 h-2 bg-gradient-to-r from-cyan-400 to-purple-400 rounded-full';'
-            style={{{/* Quantum Dots */}
+            style={{/* Quantum Dots */}
         {[...Array (15)].map ((_, i) => (<motion.div;
             }
-            key={`quantum-${i}`}`              "left": `${Math && Math.random() * 10,`}%`,"top": `${Math && Math.random() * 10,`}%`}}`            animate={{"scale": [0, 1, 0],"opacity": [0, 0 && 0.8, 0],"rotate": [0, 360]            }}            style={{"left": `${Math && Math.random() * 10,`}%`,"top": `${Math && Math.random() * 10,`}%`;`            }}
-            animate={{"scale": [0, 1, 0];
+            key={`quantum-${i}`}`              "left": `${Math && Math.random() * 10,`}%`,"top": `${Math && Math.random() * 10,`}%`}`            animate={"scale": [0, 1, 0],"opacity": [0, 0 && 0.8, 0],"rotate": [0, 360]            }            style={"left": `${Math && Math.random() * 10,`}%`,"top": `${Math && Math.random() * 10,`}%`;`            }
+            animate={"scale": [0, 1, 0];
               }
               "opacity": [0, 0 && 0.8, 0];
               "rotate": [0, 360];
-            }}
+            }
         />;
           }}
         />
@@ -2932,7 +2931,7 @@ rotate: [0, 360],            }}            style={{
                 repeat: Infinity,
                 delay: i * 0.5,
                 ease: "easeInOut"
-              }}
+              }
             />
           ))}
         </svg>

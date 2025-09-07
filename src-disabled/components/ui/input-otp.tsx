@@ -69,9 +69,9 @@ const InputOTPGroup = React && React.forwardRef<;
 InputOTPGroup && InputOTPGroup.displayName = 'InputOTPGroup';
 
 const InputOTPGroup = React.forwardRef<
-  React.ElementRef<"div">,
+  React.ElementRef<'div'>,
 
-  React.ComponentPropsWithoutRef<"div">
+  React.ComponentPropsWithoutRef<'div'>
 >(({ className, ...props }, ref) => (
 
 <<<<<<< HEAD:src-disabled/components/ui/input-otp.tsx
@@ -114,7 +114,7 @@ const InputOTPSlot = React.forwardRef<
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:src/components/ui/input-otp.tsx
   React.ElementRef<"div">,
 
-  React.ComponentPropsWithoutRef<"div"> & { index: number }
+  React.ComponentPropsWithoutRef<'div'> & { index: number }
 >(({ index, className, ...props }, ref) => {}
   const inputOTPContext = React.useContext(OTPInputContext) as any;
   const { char, hasFakeCaret, isActive } = inputOTPContext.slots[index]
@@ -167,15 +167,15 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:src/components/ui/input-otp.tsx
       )}
 
-InputOTPSlot.displayName = "InputOTPSlot"
+InputOTPSlot.displayName = 'InputOTPSlot'
 
-InputOTPSlot.displayName = "InputOTPSlot"
+InputOTPSlot.displayName = 'InputOTPSlot'
 
-InputOTPSlot.displayName = "InputOTPSlot"
+InputOTPSlot.displayName = 'InputOTPSlot'
 
 const InputOTPSeparator = React.forwardRef<
 
-  React.ElementRef<"div">,
+  React.ElementRef<'div'>,
 
   React.ComponentPropsWithoutRef<"div">
 <<<<<<< HEAD:src-disabled/components/ui/input-otp.tsx

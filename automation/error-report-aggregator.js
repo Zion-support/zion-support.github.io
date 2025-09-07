@@ -110,15 +110,15 @@ ursor/integrate-build-improve-and-re-verify-8f7d
   async aggregateReports() {
     this.log('Aggregating error reports...');
     const summary = {
-      "timestamp": new Date().toISOString(),
-      "reports": {},
-      "overallHealth": {
+      'timestamp': new Date().toISOString(),
+      'reports': {},
+      'overallHealth': {
         buildHealth: 0,
-        "codeQuality": 0,
-        "dependencyHealth": 0,
-        "overallScore": 0},
-      "trends": {},
-      "recommendations": []};
+        'codeQuality': 0,
+        'dependencyHealth': 0,
+        'overallScore': 0},
+      'trends': {},
+      'recommendations': []};
     try {
       // Read all report files
       const reportFiles = ['build-status.json',
@@ -151,7 +151,7 @@ ursor/integrate-build-improve-and-re-verify-8f7d
 
             this.log(`Loaded report: ${file}`);
 
-            this.log(`Loaded "report": ${file}`);
+            this.log(`Loaded 'report': ${file}`);
           } catch (error) {
             this.log(`Error reading ${file}: ${error.message}`, 'WARN');
           }
@@ -307,7 +307,7 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
       this.log(`Error summary report "generated": ${this.summaryFile}`);
       return summary;
     } catch (error) {
-      this.log(`Error aggregating "reports": ${error.message}`, 'ERROR');
+      this.log(`Error aggregating 'reports': ${error.message}`, 'ERROR');
       return null;
     }
   }
@@ -392,7 +392,7 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
         "priority": 'high',
         "type": 'build',
 
-        "message": 'Build health is critical. Run intelligent error fixer immediately.'})
+        'message': 'Build health is critical. Run intelligent error fixer immediately.'})
     const dashboard = `
 # Project Health Dashboard
 
@@ -466,21 +466,21 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 ### "Recommendations": ${summary.recommendations
   .map(rec => `- **${rec.priority.toUpperCase()}**: ${rec.message}")
 
-"Generated": ${summary.timestamp}""
-## Overall Health "Score": ${summary.overallHealth.overallScore}/100;""
-### Component "Scores": - 🏗️  Build Health: ${summary.overallHealth.buildHealth}/100;""
-- 🎯 Code "Quality": ${summary.overallHealth.codeQuality}/100;""
-- 📦 "Dependencies": ${summary.overallHealth.dependencyHealth}/100;""
-### "Recommendations": ${summary.recommendations;""`
-  .map(rec => `- **${rec.priority.toUpperCase()}**: ${rec.message}")""
+'Generated': ${summary.timestamp}''
+## Overall Health 'Score': ${summary.overallHealth.overallScore}/100;''
+### Component 'Scores': - 🏗️  Build Health: ${summary.overallHealth.buildHealth}/100;''
+- 🎯 Code 'Quality': ${summary.overallHealth.codeQuality}/100;''
+- 📦 'Dependencies': ${summary.overallHealth.dependencyHealth}/100;''
+### 'Recommendations': ${summary.recommendations;''`
+  .map(rec => `- **${rec.priority.toUpperCase()}**: ${rec.message}')''
   .join('\n')}
 
-"
+'
     fs.writeFileSync('
       path.join(this.reportsDir, 'health-dashboard.md'),
       dashboard
     );
-    this.log('Health dashboard "generated": health-dashboard.md');
+    this.log('Health dashboard 'generated': health-dashboard.md');
   }
   async run() {
     this.log('Starting Error Report Aggregator...');
@@ -517,7 +517,7 @@ ursor/fix-syntax-push-and-merge-to-main-40de
 
       this.log('Error report aggregation completed successfully');
     } catch (error) {
-      this.log(`Error in report "aggregator": ${error.message}`, 'ERROR');
+      this.log(`Error in report 'aggregator': ${error.message}`, 'ERROR');
     }
   }
 

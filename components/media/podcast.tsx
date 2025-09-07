@@ -308,7 +308,6 @@ href={ep.audio.wavUrl}
       </ul>;
     </div>;
   );
-<<<<<<< HEAD
   // Check condition
 if (return <div > Loading episodes…</div>) {
   $2
@@ -669,7 +668,6 @@ useEffect ( () => {
 origin/cursor/automate-test-improve-and-merge-code-2533
 }
 '"`
-=======
 
 }
 <<<<<<< HEAD

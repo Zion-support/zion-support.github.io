@@ -67,7 +67,7 @@ const handleScroll = (setIsScrolled(window.scrollY > 20)) => {
             <EnhancedSearchInput;
               value={query}
               onChange={setQuery}
-              onSelectSuggestion={text = /> {setQuery(text)navigate(`/search?q=${encodeURIComponent(text)}`)}}
+              onSelectSuggestion={text = /> {setQuery(text)navigate(`/search?q=${encodeURIComponent(text)}`)}
               suggestions={searchSuggestions}
               placeholder=\"Search services, solutions...\";
               className=\"w-full bg-zion-blue-dark/50 border border-zion-purple/30 rounded-lg px-4 py-2 text-white placeholder-zion-purple/50 focus: outline-none focus:ring-2 focus:ring-zion-purple/50 focus:border-transparent\";
@@ -111,7 +111,7 @@ const handleScroll = (setIsScrolled(window.scrollY > 20)) => {
         isOpen={isMobileMenuOpen}
         onClose={() = /> setIsMobileMenuOpen(false)}
         user={user}
-        onNavigate={path => {navigate(path)setIsMobileMenuOpen(false)}}
+        onNavigate={path => {navigate(path)setIsMobileMenuOpen(false)}
       />;
     </header>;
   )}

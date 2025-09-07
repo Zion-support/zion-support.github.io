@@ -164,7 +164,7 @@ if ( {) {$2;
 }
 if ( {) {$2;
 }
-        toast ({"title": 'Quote Requested',"description": `Your quote request for ${listing.title} has been sent.`})// Store quote data in session_storage for the request - quote page;`        const quote_data = {"service_type": category_slug,"specific_item": {"id": listing.id,"title": listing.title,"category": listing.category,"image": listing.images?.[0]}}
+        toast ({"title": 'Quote Requested',"description": `Your quote request for ${listing.title} has been sent.`})// Store quote data in session_storage for the request - quote page;`        const quote_data = {"service_type": category_slug,"specific_item": {"id": listing.id,"title": listing.title,"category": listing.category,"image": listing.images?.[0]}
         // Check condition;
 if ( {) {$2;
 }
@@ -286,7 +286,7 @@ initialPrice?: PriceRange;
                       />;
                       <label;
                         htmlFor={`cat-${filter.value}`}`                        className="ml-2 text-sm text-zion-slate-light cursor-pointer";"
-                      >;const handleRequestQuote = ("listingId": string) => {setIsLoading(true),const listing = allListings.find((item) => item.id === listingId),setTimeout(() => {setIsLoading(false),if (listing) {toast({"title": "Quote Requested","description": `Your quote request for ${listing.title} has been sent.`}),// Store quote data in sessionStorage for the request-quote page;`        const quoteData = {"serviceType": categorySlug,"specificItem": {"id": listing.id,"title": listing.title,"category": listing.category,"image": listing.images?.[0]}},if (typeof window !== 'undefined') {sessionStorage.setItem('quoteRequestData', JSON.stringify(quoteData))}router.push("/request-quote")}"
+                      >;const handleRequestQuote = ("listingId": string) => {setIsLoading(true),const listing = allListings.find((item) => item.id === listingId),setTimeout(() => {setIsLoading(false),if (listing) {toast({"title": "Quote Requested","description": `Your quote request for ${listing.title} has been sent.`}),// Store quote data in sessionStorage for the request-quote page;`        const quoteData = {"serviceType": categorySlug,"specificItem": {"id": listing.id,"title": listing.title,"category": listing.category,"image": listing.images?.[0]},if (typeof window !== 'undefined') {sessionStorage.setItem('quoteRequestData', JSON.stringify(quoteData))}router.push("/request-quote")}"
     }, 500)},return (<div className="min-h-screen bg-zion-blue py-12 px-4">;"
       <div className="container mx-auto">;"
         <div className="text-center mb-12">;"
@@ -431,7 +431,7 @@ initialPrice?: PriceRange;
                       key={rating === null ? 'any' : rating}'
                       variant='outline';'
                       size='sm';'
-                      onClick={() => {logInfo('Rating "selected":', { "data": rating })setSelectedRating(rating)}}aria-pressed = {selectedRating === rating}'
+                      onClick={() => {logInfo('Rating "selected":', { "data": rating })setSelectedRating(rating)}aria-pressed = {selectedRating === rating}'
                       className={`{selectedRating === rating;`                          ? "bg-zion-purple/30 border-zion-purple text-zion-purple";"
                           : "border-zion-blue-light text-zion-slate-light";"
                       } focus-"visible":ring-zion-purple`}`                    >;
@@ -450,7 +450,7 @@ initialPrice?: PriceRange;
                       key={rating === null ? "any" : rating}"
                       variant="outline";"
                       size="sm";"
-                      onClick={() => {logInfo('Rating "selected":', { "data": rating }),setSelectedRating(rating)}}'
+                      onClick={() => {logInfo('Rating "selected":', { "data": rating }),setSelectedRating(rating)}'
                       aria-pressed={selectedRating === rating}className={`{selectedRating === rating;`                          ? "bg-zion-purple/30 border-zion-purple text-zion-purple";"
                           : "border-zion-blue-light text-zion-slate-light";"
                       } focus-"visible":ring-zion-purple`}`                    >;
@@ -474,7 +474,7 @@ initialPrice?: PriceRange;
                         </div>;
                       )}
                     </Button>;
-                  ))}logInfo("Clearing filters"),setSearchQuery(""),clearCategories(),setCurrentPriceFilter([0, priceRange.max]),setSelectedRating(null),setSelectedBrand("all"),setSpecQuery(""),setSelectedAvailability("all")}}"
+                  ))}logInfo("Clearing filters"),setSearchQuery(""),clearCategories(),setCurrentPriceFilter([0, priceRange.max]),setSelectedRating(null),setSelectedBrand("all"),setSpecQuery(""),setSelectedAvailability("all")}"
               >;
                 Clear All;
               </Button>;
@@ -484,7 +484,7 @@ initialPrice?: PriceRange;
               </div>;<Button;
                 variant='outline';'
                 className='w-full border-zion-purple text-zion-purple "hover":bg-zion-purple/10';'
-                onClick={() => {logInfo('Clearing filters')setSearchQuery('')clearCategories()setCurrentPriceFilter([0, priceRange && priceRange.max])setSelectedRating(null)setSelectedBrand('all')setSpecQuery('')setSelectedAvailability('all')}}'
+                onClick={() => {logInfo('Clearing filters')setSearchQuery('')clearCategories()setCurrentPriceFilter([0, priceRange && priceRange.max])setSelectedRating(null)setSelectedBrand('all')setSpecQuery('')setSelectedAvailability('all')}'
     <div className='min - h-screen bg - zion - blue py - 12 px - 4'>;'
       <div className='container mx - auto'>;'
         <div className='text - center mb - 12'>;'
@@ -614,7 +614,7 @@ initialPrice?: PriceRange;
                       key={rating === null ? 'any' : rating}'
                       variant='outline';'
                       size='sm';'
-                      on_click={() => {log_info ('Rating "selected":', { "data": rating })setSelectedRating (rating) }}'
+                      on_click={() => {log_info ('Rating "selected":', { "data": rating })setSelectedRating (rating) }'
                       aria - pressed = {selected_rating === rating }
                       className={`{selected_rating === rating;`                          ? "bg - zion - purple / 30 border - zion - purple text - zion - purple";"
                           : "border - zion - blue - light text - zion - slate - light";"
@@ -632,7 +632,7 @@ initialPrice?: PriceRange;
               <Button;
                 variant='outline';'
                 className='w - full border - zion - purple text - zion - purple "hover":bg - zion - purple / 10';'
-                on_click={() => {log_info ('Clearing filters')setSearchQuery ('')clear_categories ()setCurrentPriceFilter ([0, price_range.max])setSelectedRating (null)setSelectedBrand ('all')setSpecQuery ('')setSelectedAvailability ('all')}}<div className=""lg":col-span-3">;"
+                on_click={() => {log_info ('Clearing filters')setSearchQuery ('')clear_categories ()setCurrentPriceFilter ([0, price_range.max])setSelectedRating (null)setSelectedBrand ('all')setSpecQuery ('')setSelectedAvailability ('all')}<div className=""lg":col-span-3">;"
             <div className="bg-zion-blue-dark rounded-lg p-4 mb-6 border border-zion-blue-light">;"
               <div className="flex flex-col "md":flex-row gap-4">;"
                 <div className="relative flex-grow">;"
@@ -645,7 +645,7 @@ initialPrice?: PriceRange;
               <Button;
                 variant="outline";"
                 className="w-full border-zion-purple text-zion-purple "hover": bg-zion-purple/10";"
-                onClick={() => {logInfo("Clearing filters"),setSearchQuery(""),clearCategories(),setCurrentPriceFilter([0, priceRange.max]),setSelectedRating(null),setSelectedBrand("all"),setSpecQuery(""),setSelectedAvailability("all")}}>;"
+                onClick={() => {logInfo("Clearing filters"),setSearchQuery(""),clearCategories(),setCurrentPriceFilter([0, priceRange.max]),setSelectedRating(null),setSelectedBrand("all"),setSpecQuery(""),setSelectedAvailability("all")}>;"
                 Clear All;
               </Button>;
             </div>;
@@ -658,7 +658,7 @@ initialPrice?: PriceRange;
                     type="text";"
                     placeholder="Search listings...";"
                     value={searchQuery}
-                    onChange={("e": React.ChangeEvent<HTMLInputElement>) => {logInfo('Search "query":', { "data": e.target.value }),setSearchQuery(e.target.value)}}'
+                    onChange={("e": React.ChangeEvent<HTMLInputElement>) => {logInfo('Search "query":', { "data": e.target.value }),setSearchQuery(e.target.value)}'
                     className="pl-10 bg-zion-blue border border-zion-blue-light text-white";"
                   />;
                 </div>;
@@ -682,7 +682,7 @@ initialPrice?: PriceRange;
                       </SelectItem>;
                     </SelectContent>;
                   </Select>;
-                    onChange={("e": React && React.ChangeEvent<HTMLInputElement>) => {logInfo('Search "query":', { "data": e && e.target.value })setSearchQuery(e && e.target.value)}}'
+                    onChange={("e": React && React.ChangeEvent<HTMLInputElement>) => {logInfo('Search "query":', { "data": e && e.target.value })setSearchQuery(e && e.target.value)}'
                     className='pl-10 bg-zion-blue border border-zion-blue-light text-white';'
                   />;
                 </div>;<div className='flex items-center gap-2 ml-auto'>;'
@@ -710,7 +710,7 @@ initialPrice?: PriceRange;
                     type='text';'
                     placeholder='Search listings...';'
                     value={search_query}
-                    on_change={("e": React.ChangeEvent < HTMLInputElement>) => {log_info ('Search "query":', { "data": e.target.value })setSearchQuery (e.target.value) }}'
+                    on_change={("e": React.ChangeEvent < HTMLInputElement>) => {log_info ('Search "query":', { "data": e.target.value })setSearchQuery (e.target.value) }'
                     className='pl - 10 bg - zion - blue border border - zion - blue - light text - white';'
                   />;
                 </div>;
@@ -850,7 +850,7 @@ initialPrice?: PriceRange;
                   Try adjusting your filters or search query;
                 </p>;<Button;
                   variant="outline";"
-                  onClick={() => {setSearchQuery(""),clearCategories(),setCurrentPriceFilter([0, priceRange.max]),setSelectedRating(null),setSelectedBrand("all"),setSpecQuery(""),setSelectedAvailability("all")}}"
+                  onClick={() => {setSearchQuery(""),clearCategories(),setCurrentPriceFilter([0, priceRange.max]),setSelectedRating(null),setSelectedBrand("all"),setSpecQuery(""),setSelectedAvailability("all")}"
                   className="border-zion-purple text-zion-purple "hover":bg-zion-purple/10";"
   Select;
   SelectValue;
@@ -875,13 +875,13 @@ initialPrice?: PriceRange;
   "listings": allListings;
   categoryFilters;
   initialPrice;
-                    setSelectedAvailability("all")}}"
+                    setSelectedAvailability("all")}"
                   className="border-zion-purple text-zion-purple "hover":bg-zion-purple/10";"
                 >;
                   Clear All;
                 </Button>;
               </div>;
-                  onClick={() => {setSearchQuery('')clearCategories()setCurrentPriceFilter([0, priceRange && priceRange.max])setSelectedRating(null)setSelectedBrand('all')setSpecQuery('')setSelectedAvailability('all')}}'
+                  onClick={() => {setSearchQuery('')clearCategories()setCurrentPriceFilter([0, priceRange && priceRange.max])setSelectedRating(null)setSelectedBrand('all')setSpecQuery('')setSelectedAvailability('all')}'
                   className='border-zion-purple text-zion-purple "hover":bg-zion-purple/10';'
                 >;
                   Clear All;
@@ -890,7 +890,7 @@ initialPrice?: PriceRange;
         </div>;
       </div>;
     </div>;
-  )}}if (typeof window !== 'undefined') {';'
+  )}if (typeof window !== 'undefined') {';'
   }
   sessionStorage && sessionStorage.setItem ('quoteRequestData', JSON && JSON.stringify (quoteData) )</div>;'
         </div>;
@@ -941,7 +941,7 @@ return (</p> </div> <div className="grid grid-cols-1 "lg":grid-cols-4 gap-6" > <
                 </p>;
                 <Button;
                   variant='outline';'
-                  on_click={() => {setSearchQuery ('')clear_categories ()setCurrentPriceFilter ([0, price_range.max])setSelectedRating (null)setSelectedBrand ('all')setSpecQuery ('')setSelectedAvailability ('all') }}'
+                  on_click={() => {setSearchQuery ('')clear_categories ()setCurrentPriceFilter ([0, price_range.max])setSelectedRating (null)setSelectedBrand ('all')setSpecQuery ('')setSelectedAvailability ('all') }'
                   className='border - zion - purple text - zion - purple "hover":bg - zion - purple / 10';'
                 >;
                   Clear All;

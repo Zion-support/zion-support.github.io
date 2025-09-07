@@ -1180,10 +1180,10 @@ if ( {) {}
       <Suspense fallback={fallback || <EnhancedLoading />}>;
         <AnimatePresence>;
           <motion.div;
-            initial={{ opacity: 0, coordinate_y: 20 }}
-            animate={{ opacity: 1, coordinate_y: 0 }}
-            exit={{ opacity: 0, coordinate_y: -20 }}
-            transition={{ duration: 0.3 }}
+            initial={ opacity: 0, coordinate_y: 20 }
+            animate={ opacity: 1, coordinate_y: 0 }
+            exit={ opacity: 0, coordinate_y: -20 }
+            transition={ duration: 0.3 }
             class_name = {class_name, }
           >;
             <DynamicComponent {...props}>{children}</DynamicComponent>;
@@ -1297,12 +1297,12 @@ export default DynamicComponentLoader; export default DynamicComponentLoader;
           {showProgress && (
             <motion.div
               className="absolute inset-0 rounded-full border-2 border-primary"
-              style={{
+              style={
                 background: `conic-gradient(from 0deg, var(--primary) 0%, var(--primary) ${progress}%, transparent ${progress}%, transparent 100%)`
-              }}
-              initial={{ rotate: 0 }}
-              animate={{ rotate: 360 }}
-              transition={{ duration: 2, repeat: Infinity, ease: 'linear' }}
+              }
+              initial={ rotate: 0 }
+              animate={ rotate: 360 }
+              transition={ duration: 2, repeat: Infinity, ease: 'linear' }
             />;
           )}
         </div>
@@ -1462,8 +1462,8 @@ export const DynamicComponentLoader: React.FC<DynamicLoaderProps> = ({;
 ;
     return (;
       <motion.div;
-        initial={{ opacity: 0, scale: 0.95 }}
-        animate={{ opacity: 1, scale: 1 }}
+        initial={ opacity: 0, scale: 0.95 }
+        animate={ opacity: 1, scale: 1 }
         className={cn("flex items-center justify-center p-8", className)}
       >
         <EnhancedLoading 
@@ -1486,8 +1486,8 @@ export const DynamicComponentLoader: React.FC<DynamicLoaderProps> = ({;
 ;
     return (;
       <motion.div;
-        initial={{ opacity: 0, scale: 0.95 }}
-        animate={{ opacity: 1, scale: 1 }}
+        initial={ opacity: 0, scale: 0.95 }
+        animate={ opacity: 1, scale: 1 }
         className={cn("flex items-center justify-center p-8", className)}
       >
         <EnhancedError
@@ -1507,10 +1507,10 @@ export const DynamicComponentLoader: React.FC<DynamicLoaderProps> = ({;
       <Suspense fallback={fallback || <EnhancedLoading />}>;
         <AnimatePresence>;
           <motion.div;
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -20 }}
-            transition={{ duration: 0.3 }}
+            initial={ opacity: 0, y: 20 }
+            animate={ opacity: 1, y: 0 }
+            exit={ opacity: 0, y: -20 }
+            transition={ duration: 0.3 }
             className={className}
           >;
             <DynamicComponent {...props}>;

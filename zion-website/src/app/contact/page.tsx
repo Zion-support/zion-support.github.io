@@ -148,17 +148,17 @@ export default function ContactPage() {
 =======
 import React from 'react';'
 
-export default function ContactPage() {{"name": 'Email';'
+export default function ContactPage() {"name": 'Email';'
     }
     "description": 'Get in touch with our team';'
     "value": 'contact@ziontechgroup.com';'
     "href": '"mailto":contact@ziontechgroup.com';'
     "icon": EnvelopeIco
 }
-  {{"question": 'What industries do you serve?';'
+  {"question": 'What industries do you serve?';'
     }
     "answer": 'We serve a wide range of industries including healthcare, finance, manufacturing, retail, and technology. Our AI solutions are designed to be adaptable across different sectors.'}'
-  {{"question": 'Do you provide ongoing support?';'
+  {"question": 'Do you provide ongoing support?';'
     }
     "answer": 'Yes, we provide comprehensive ongoing support including technical assistance, updates, training, and optimization services to ensure your AI solutions continue to deliver value.'}'
   {return (<div className="bg-black">;"

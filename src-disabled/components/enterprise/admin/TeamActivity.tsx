@@ -1,7 +1,7 @@
 jobs: { variant: "default" },"
       candidates: { variant: "outline" },"
       team: { variant: "secondary" },"
-      billing: { variant: "destructive" }},"
+      billing: { variant: "destructive" },"
 import {
 
 

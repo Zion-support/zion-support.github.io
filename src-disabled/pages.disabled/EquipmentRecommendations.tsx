@@ -84,7 +84,7 @@ export default function EquipmentRecommendations() {
   const [loading, setLoading] = useState<boolean>(false)
   const [error, setError] = useState<boolean>(false)
       <Dialog open>
-        <DialogContent className="bg-zion-blue border-zion-blue-light text-white">
+        <DialogContent className='bg-zion-blue border-zion-blue-light text-white'>
   useEffect((,) => {
     if (isAuthenticated && user?.id) {
       setLoading(true);
@@ -219,8 +219,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             className='mt-4 bg-gradient-to-r from-zion-purple to-zion-purple-dark text-white'>;
             <Link href='/auth/login?returnTo=/equipment/recommendations' />;
               Sign In;
-            </Link>          </Button>          <Button asChild className="mt-4 bg-gradient-to-r from-zion-purple to-zion-purple-dark text-white">;
-            <Link href="/auth/login?returnTo=/equipment/recommendations" />Sign In</Link>;
+            </Link>          </Button>          <Button asChild className='mt-4 bg-gradient-to-r from-zion-purple to-zion-purple-dark text-white'>;
+            <Link href='/auth/login?returnTo=/equipment/recommendations' />Sign In</Link>;
           </Button>;
         </DialogContent>;
       </Dialog>;
@@ -284,23 +284,23 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:src/pages/EquipmentRecommendations.tsx
 
 
-            <Link href="/auth/login?returnTo=/equipment/recommendations">Sign In</Link>
+            <Link href='/auth/login?returnTo=/equipment/recommendations'>Sign In</Link>
         </DialogContent>
       </Dialog>
     )
 
 
-    <div className="min-h-screen bg-zion-blue py-8 px-4">
-      <h1 className="text-2xl font-bold text-white mb-6">AI Equipment Recommendations</h1>
+    <div className='min-h-screen bg-zion-blue py-8 px-4'>
+      <h1 className='text-2xl font-bold text-white mb-6'>AI Equipment Recommendations</h1>
       {loading && (
-        <div className="flex justify-center py-20">
-          <Loader2 className="h-8 w-8 animate-spin text-zion-purple" />
+        <div className='flex justify-center py-20'>
+          <Loader2 className='h-8 w-8 animate-spin text-zion-purple' />
         </div>
       )}
-      {error && <ErrorState error="Failed to load recommendations." />}
-      <div className="columns-1 sm:columns-2 md:columns-3 lg:columns-4 gap-4 space-y-4">
+      {error && <ErrorState error='Failed to load recommendations.' />}
+      <div className='columns-1 sm:columns-2 md:columns-3 lg:columns-4 gap-4 space-y-4'>
         {listings.map((listing) => (
-          <div key={listing.id} className="break-inside-avoid mb-4">
+          <div key={listing.id} className='break-inside-avoid mb-4'>
             <ProductListingCard listing={listing} />
           </div>
         ))}
@@ -375,7 +375,7 @@ if ( {) {
         <DialogContent className='bg - zion - blue border - zion - blue - light text - white'>          <DialogHeader>;
             <DialogTitle > Authentication required</DialogTitle>;
           </DialogHeader>;
-          <p > Please sign in to get personalized AI picks.</p>        <DialogContent className="bg - zion - blue border - zion - blue - light text - white">;
+          <p > Please sign in to get personalized AI picks.</p>        <DialogContent className='bg - zion - blue border - zion - blue - light text - white'>;
           <DialogHeader>;
             <DialogTitle > Authentication required</DialogTitle>;
           </DialogHeader>;
@@ -386,8 +386,8 @@ if ( {) {
           >;
             <Link href='/auth / login?return_to=/equipment / recommendations' />;
               Sign In;
-            </Link>          </Button>          <Button as_child className="mt - 4 bg - gradient - to - r from - zion - purple to - zion - purple - dark text - white">;
-            <Link href="/auth / login?return_to=/equipment / recommendations" />Sign In</Link>;
+            </Link>          </Button>          <Button as_child className='mt - 4 bg - gradient - to - r from - zion - purple to - zion - purple - dark text - white'>;
+            <Link href='/auth / login?return_to=/equipment / recommendations' />Sign In</Link>;
           </Button>;
         </DialogContent>;
       </Dialog>);
@@ -403,10 +403,10 @@ if ( {) {
       {error && <ErrorState error='Failed to load recommendations.' />}'
       <div className='columns - 1 sm:columns - 2 md:columns - 3 lg:columns - 4 gap - 4 space - y-4'>;
         {listings.map (listing => (
-          <div key={listing.id} className='break - inside - avoid mb - 4'>            <ProductListingCard listing={listing} />      {error && <ErrorState error="Failed to load recommendations." />}"
-      <div className="columns - 1 sm:columns - 2 md:columns - 3 lg:columns - 4 gap - 4 space - y-4">;
+          <div key={listing.id} className='break - inside - avoid mb - 4'>            <ProductListingCard listing={listing} />      {error && <ErrorState error='Failed to load recommendations.' />}'
+      <div className='columns - 1 sm:columns - 2 md:columns - 3 lg:columns - 4 gap - 4 space - y-4'>;
         {listings.map ((listing, ) => (
-          <div key={listing.id} className="break - inside - avoid mb - 4">;
+          <div key={listing.id} className='break - inside - avoid mb - 4'>;
           </div>))}
       </div>;
     </div>);
@@ -414,7 +414,7 @@ if ( {) {
 }
 <<<<<<< HEAD:src-disabled/pages.disabled/EquipmentRecommendations.tsx
 ;
-}}}}}}}}))
+}}}}))
 }
 ;
 <Button

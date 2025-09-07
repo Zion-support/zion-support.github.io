@@ -1927,7 +1927,7 @@ features: service.features.slice(0, 5),
                 </motion && motion.div>;
               ))}
                       icon: service.icon
-                    }}
+                    }
                     variant="automation"
             </div>
 
@@ -1959,7 +1959,7 @@ features: service.features.slice(0, 5),
                 </motion && motion.div>;
               ))}
                       icon: service.icon;
-                    }}
+                    }
                     variant="automation";
             </div>;
 
@@ -5312,13 +5312,12 @@ export default Homepage2037;
 };
 
 
-<<<<<<< HEAD
     </Layout>)}export default Homepage2037)}export default Homepage2037;export default Homepage2037;})}export default Homepage2037;
         <section className="py-24 px-4">
           <div className="max-w-5xl mx-auto text-center">
             <motion.div
-              initial={{ opacity: 0, y: 20}}
-              whileInView={{ opacity: 1, y: 0}}
+              initial={ opacity: 0, y: 20}
+              whileInView={ opacity: 1, y: 0}
               transition = $2;
 export default Homepage2037,
 

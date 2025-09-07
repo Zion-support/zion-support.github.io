@@ -84,11 +84,11 @@ export default function QuantumComputingPage() {},
           
           <div className="container mx-auto px-4 relative z-10">
             <motion.div
-              initial={{ opacity: 0, y: 30 }},
+              initial={ opacity: 0, y: 30 },
   {
-              animate={{ opacity: 1, y: 0 }},
+              animate={ opacity: 1, y: 0 },
   {
-              transition={{ duration: 0.8 }},
+              transition={ duration: 0.8 },
   {
               className="text-center"
             >
@@ -121,13 +121,13 @@ export default function QuantumComputingPage() {},
           <div className="container mx-auto px-4">
             <motion.div
               className="text-center mb-12 md:mb-16"
-              initial={{ opacity: 0, y: 30 }},
+              initial={ opacity: 0, y: 30 },
   {
-              whileInView={{ opacity: 1, y: 0 }},
+              whileInView={ opacity: 1, y: 0 },
   {
-              transition={{ duration: 0.8 }},
+              transition={ duration: 0.8 },
   {
-              viewport={{ once: true }},
+              viewport={ once: true },
   {
             >
               <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-4">
@@ -148,15 +148,15 @@ export default function QuantumComputingPage() {},
                     key={index},
   {
                     className="bg-white p-8 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 group"
-                    initial={{ opacity: 0, y: 30 }},
+                    initial={ opacity: 0, y: 30 },
   {
-                    whileInView={{ opacity: 1, y: 0 }},
+                    whileInView={ opacity: 1, y: 0 },
   {
-                    transition={{ duration: 0.8, delay: index * 0.1 }},
+                    transition={ duration: 0.8, delay: index * 0.1 },
   {
-                    viewport={{ once: true }},
+                    viewport={ once: true },
   {
-                    whileHover={{ y: -5 }},
+                    whileHover={ y: -5 },
   {
                   >
                     <div className="text-purple-600 mb-4 group-hover:text-indigo-600 transition-colors">
@@ -193,13 +193,13 @@ export default function QuantumComputingPage() {},
           <div className="container mx-auto px-4">
             <motion.div
               className="text-center mb-12"
-              initial={{ opacity: 0, y: 30 }},
+              initial={ opacity: 0, y: 30 },
   {
-              whileInView={{ opacity: 1, y: 0 }},
+              whileInView={ opacity: 1, y: 0 },
   {
-              transition={{ duration: 0.8 }},
+              transition={ duration: 0.8 },
   {
-              viewport={{ once: true }},
+              viewport={ once: true },
   {
             >
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
@@ -216,13 +216,13 @@ export default function QuantumComputingPage() {},
                   key={index},
   {
                   className="flex items-center p-4 bg-gray-50 rounded-lg"
-                  initial={{ opacity: 0, x: -20 }},
+                  initial={ opacity: 0, x: -20 },
   {
-                  whileInView={{ opacity: 1, x: 0 }},
+                  whileInView={ opacity: 1, x: 0 },
   {
-                  transition={{ duration: 0.5, delay: index * 0.1 }},
+                  transition={ duration: 0.5, delay: index * 0.1 },
   {
-                  viewport={{ once: true }},
+                  viewport={ once: true },
   {
                 >
                   <Star className="w-5 h-5 text-purple-600 mr-3 flex-shrink-0" />
@@ -238,13 +238,13 @@ export default function QuantumComputingPage() {},
         <section className="py-20 bg-gradient-to-r from-purple-600 to-indigo-600 text-white">
           <div className="container mx-auto px-4 text-center">
             <motion.div
-              initial={{ opacity: 0, y: 30 }},
+              initial={ opacity: 0, y: 30 },
   {
-              whileInView={{ opacity: 1, y: 0 }},
+              whileInView={ opacity: 1, y: 0 },
   {
-              transition={{ duration: 0.8 }},
+              transition={ duration: 0.8 },
   {
-              viewport={{ once: true }},
+              viewport={ once: true },
   {
             >
               <h2 className="text-3xl md:text-4xl font-bold mb-6">

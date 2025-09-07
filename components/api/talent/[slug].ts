@@ -323,7 +323,6 @@ const base = LOCAL.find ((t) => t.slug === slug) || null;
 })) {$2;}
 }
 
-<<<<<<< HEAD
 
 const { item, translated } = apply_translations (base, lang);
     return res.status (200).json ({ item, translated });

@@ -78,7 +78,6 @@ export const TALENT_PROFILES = [
     translations: {}
   }
 ],
-=======
     createdAt: new Date().toISOString(),
     originalLanguage: 'en',
 translations: {},

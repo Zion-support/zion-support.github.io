@@ -112,7 +112,7 @@ export function AnalyticsContainer({ children }: AnalyticsContainerProps) {
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   // If not authenticated, redirect
   if (!isAuthenticated) {
-    return <Navigate to="/login" state={{ from: '/analytics' }} replace />
+    return <Navigate to="/login" state={ from: '/analytics' } replace />
   }
 <<<<<<< HEAD
   

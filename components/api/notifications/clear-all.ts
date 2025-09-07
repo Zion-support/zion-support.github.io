@@ -103,7 +103,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
 <<<<<<< HEAD
 import { supabase } from '../../../utils/supabase/client';'
-function getUserId("req": NextApiRequest): string {
+function getUserId('req': NextApiRequest): string {
 }
 import { supabase } from ../../../utils/supabase/client';
   const cookie = $2;
@@ -306,7 +306,6 @@ return res.status(200).json({ ok: true;,}
 <<<<<<< HEAD
 }
 }
-<<<<<<< HEAD
   const match = cookie;
     .split(;).map(c => c && c.trim()).find(c => c && c.startsWith('user_id='))if (match) return decodeURIComponent(match && match.split(=)[1])return 'demo-user-1';
 export default async function handler() {const match = cookie.split().map((c) => c.trim()).find((c) => c.startsWith(user_id=))if (match) return decodeURIComponent(match.split('=')[1])if (req && req.method !== DELETE)return res && res.status(405).json({ error: 'Method not allowed' })try {function getUserId(req: NextApiRequest): string {const cookie = req && req.headers.cookie || ;

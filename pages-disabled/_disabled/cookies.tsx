@@ -84,9 +84,9 @@ export default function CookiesPage() {
         <section className="bg-gradient-to-br from-orange-900 via-red-900 to-pink-900 text-white py-20">
           <div className="container mx-auto px-4">
             <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
+              initial={ opacity: 0, y: 30 }
+              animate={ opacity: 1, y: 0 }
+              transition={ duration: 0.8 }
               className="text-center max-w-4xl mx-auto"
             >
               <h1 className="text-4xl md:text-6xl font-bold mb-6">
@@ -105,9 +105,9 @@ export default function CookiesPage() {
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto">
               <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.2 }}
+                initial={ opacity: 0, y: 20 }
+                animate={ opacity: 1, y: 0 }
+                transition={ duration: 0.6, delay: 0.2 }
                 className="bg-white rounded-2xl shadow-xl p-8 mb-12"
               >
                 <h2 className="text-3xl font-bold text-gray-900 mb-6 flex items-center">
@@ -129,9 +129,9 @@ export default function CookiesPage() {
                 {cookieTypes.map((type, index) => (
                   <motion.div
                     key={type.title}
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.6, delay: 0.1 * index }}
+                    initial={ opacity: 0, y: 20 }
+                    animate={ opacity: 1, y: 0 }
+                    transition={ duration: 0.6, delay: 0.1 * index }
                     className="bg-white rounded-xl shadow-lg p-6"
                   >
                     <div className="flex items-center mb-4">
@@ -160,9 +160,9 @@ export default function CookiesPage() {
               </div>
 
               <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.4 }}
+                initial={ opacity: 0, y: 20 }
+                animate={ opacity: 1, y: 0 }
+                transition={ duration: 0.6, delay: 0.4 }
                 className="bg-white rounded-2xl shadow-xl p-8 mb-12"
               >
                 <h2 className="text-3xl font-bold text-gray-900 mb-6 flex items-center">
@@ -203,9 +203,9 @@ export default function CookiesPage() {
               </motion.div>
 
               <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.6 }}
+                initial={ opacity: 0, y: 20 }
+                animate={ opacity: 1, y: 0 }
+                transition={ duration: 0.6, delay: 0.6 }
                 className="bg-gradient-to-r from-orange-50 to-pink-50 rounded-2xl p-8"
               >
                 <h2 className="text-3xl font-bold text-gray-900 mb-6 flex items-center">

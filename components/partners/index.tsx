@@ -674,7 +674,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 href='/api/partners/sdk?type=rest'>;
                 Download REST SDK;
               </a>;
-<<<<<<< HEAD
               <a'
                 className='text-blue-600 underline'"
             <div className="mt-6 text-sm text-gray-600">

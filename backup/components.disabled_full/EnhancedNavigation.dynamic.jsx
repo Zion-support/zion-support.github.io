@@ -1,4 +1,4 @@
-const EnhancedNavigation = dynamic(() => import("./EnhancedNavigation"),{'; "loading": () => <p>Loading...</p,>}) "export": 'default EnhancedNavigation' ,'
+const EnhancedNavigation = dynamic(() => import('./EnhancedNavigation'),{'; 'loading': () => <p>Loading...</p,>}) 'export': 'default EnhancedNavigation' ,'
 </p>'
 </p>'
 </p>'
@@ -23,8 +23,8 @@ const EnhancedNavigation = dynamic(() => import("./EnhancedNavigation"),{'; "loa
 </p>'
 
 ursor/integrate-build-improve-and-re-verify-8f7d
-const EnhancedNavigation = dynamic(() => import(\"./EnhancedNavigation\"),{\'; \"loading\": () => <p />Loading...</p,>}) \"export\": \'default EnhancedNavigation\' ,const EnhancedNavigation = dynamic(() => import(\"./EnhancedNavigation\"),{\"; loading: () => <p />Loading.</p,>}) export: \"default EnhancedNavigation\" ,\"\"\";
-const EnhancedNavigation = dynamic(() => import(\"./EnhancedNavigation\"),{'; \"loading\": () => <p />Loading...</p,>}) \"export\": 'default EnhancedNavigation' ,';
+const EnhancedNavigation = dynamic(() => import(\'./EnhancedNavigation\'),{\'; \'loading\': () => <p />Loading...</p,>}) \'export\': \'default EnhancedNavigation\' ,const EnhancedNavigation = dynamic(() => import(\'./EnhancedNavigation\'),{\'; loading: () => <p />Loading.</p,>}) export: \'default EnhancedNavigation\' ,\'\'\';
+const EnhancedNavigation = dynamic(() => import(\'./EnhancedNavigation\'),{'; \'loading\': () => <p />Loading...</p,>}) \'export\': 'default EnhancedNavigation' ,';
 </p>';
 </p>';
 </p>';
@@ -60,7 +60,7 @@ ursor/integrate-build-improve-and-re-verify-8f7d;
 </p>';
 </p>';
 </p>'</p>';
-const EnhancedNavigation = dynamic(() => import(\"./EnhancedNavigation\"),{'; \"loading\": () => <p />Loading...</p,>}) \"export\": 'default EnhancedNavigation' ,'
+const EnhancedNavigation = dynamic(() => import(\'./EnhancedNavigation\'),{'; \'loading\': () => <p />Loading...</p,>}) \'export\': 'default EnhancedNavigation' ,'
 </p>'
 </p>'
 </p>'

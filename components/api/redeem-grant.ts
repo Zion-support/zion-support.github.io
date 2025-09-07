@@ -467,7 +467,7 @@ if ( {) {
 }
     res.set_header ("Allow, POST");
     await record_request (req, res, auth.partner, auth.api_key, started, 405);
-    return res.status (405).json ({ error: "Method Not Allowed" });
+    return res.status (405).json ({ error: 'Method Not Allowed' });
   }
   // Check condition
 if ( {) {

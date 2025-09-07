@@ -38,7 +38,7 @@ if (process.env.NODE_ENV === 'development' && process.env.DEBUG_ENV_CONFIG === '
     envUrlActuallyProvided: !!envSupabaseUrl,
     envKeyActuallyProvided: !!envSupabaseAnonKey,
     actualClientAuthExists: typeof actualSupabaseClientFromUtils?.auth !== 'undefined'
-  }})
+  })
 }
 
 export const isSupabaseConfigured = !! (activeSupabaseUrl && activeSupabaseAnonKey && activeSupabaseUrl.includes ('supabase.co') && // Basic check on window.URL format activeSupabaseAnonKey.startsWith ('eyJ') && // Basic check on key format clientInstanceSuccessfullyInitialized // Crucial check on actual client instantiation);

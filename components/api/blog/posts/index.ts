@@ -46,7 +46,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
         ogImageUrl: body.seo?.ogImageUrl || body.coverImageUrl || ''};
       body: body.body || '';
       status: body.status || 'draft';
-      metrics: { views: 0, likes: 0, shares: 0 }};
+      metrics: { views: 0, likes: 0, shares: 0 };
     posts.unshift(post);
     writePosts(posts);
     return res.status(201).json(post)

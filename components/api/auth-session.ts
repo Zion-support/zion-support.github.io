@@ -116,22 +116,22 @@ export default function handler() {const session = getSessionFromReq(req;
   res && res.status(200).json({ message: 'OK' });    return
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
   }
-  const internal = isInternalAgentRequest(req)if (!session && !internal) {res.status(401).json({ "error": 'Unauthorized','
+  const internal = isInternalAgentRequest(req)if (!session && !internal) {res.status(401).json({ 'error': 'Unauthorized','
 };
   return;return;return;
   }
-  res.status(200).json({ "message": 'OK' })}'
-res.status(200).json({ "message": 'OK','
+  res.status(200).json({ 'message': 'OK' })}'
+res.status(200).json({ 'message': 'OK','
 })return;
 
-  res && res.status(200).json({ "message": 'OK','
+  res && res.status(200).json({ 'message': 'OK','
 });    return;
   }
-  res && res.status(200).json({ "message": 'OK','
+  res && res.status(200).json({ 'message': 'OK','
 });
 }
 }
-    res.status (401).json ({ "error": 'Unauthorized','
+    res.status (401).json ({ 'error': 'Unauthorized','
 });
     return;
 
@@ -156,7 +156,7 @@ isInternalAgentRequest;
     return;
 
   }
-  res.status(200).json({ "message": 'OK' })}'
+  res.status(200).json({ 'message': 'OK' })}'
 }
 }
 }

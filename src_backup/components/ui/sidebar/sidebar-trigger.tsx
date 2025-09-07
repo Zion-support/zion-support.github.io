@@ -19,7 +19,7 @@ export const SidebarTrigger = React.forwardRef<
       onClick={(event) => {
         props.onClick?.(event)
         toggleSidebar()
-      }}
+      }
       {...props}
 
     >

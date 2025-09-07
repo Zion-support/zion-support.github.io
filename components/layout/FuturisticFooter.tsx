@@ -593,7 +593,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     {link && link.name}
                   </Link>;
                 </li>;
-<<<<<<< HEAD
                     href={link.href}
                     className="text - gray - 400 hover:text - white transition - colors duration - 200 hover:translate-x-1 inline-block";
                   >;
@@ -829,7 +828,6 @@ export default function FuturisticFooter() {
                     {service && service.name}
                   </Link>;
                 </li>;
-<<<<<<< HEAD
                     href={service.href}
                     className="text - gray - 400 hover:text - white transition - colors duration - 200 hover:translate-x-1 inline-block";
                   >;
@@ -1676,14 +1674,14 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
             </div>
             
-            <div className="flex space-x-6 text-sm">
-              <Link href="/privacy" className="text-gray-400 hover:text-white transition-colors duration-200">
+            <div className='flex space-x-6 text-sm'>
+              <Link href='/privacy' className='text-gray-400 hover:text-white transition-colors duration-200'>
                 Privacy Policy
               </Link>
-              <Link href="/terms" className="text-gray-400 hover:text-white transition-colors duration-200">
+              <Link href='/terms' className='text-gray-400 hover:text-white transition-colors duration-200'>
                 Terms of Service
               </Link>
-              <Link href="/cookies" className="text-gray-400 hover:text-white transition-colors duration-200">
+              <Link href='/cookies' className='text-gray-400 hover:text-white transition-colors duration-200'>
                 Cookie Policy
 <<<<<<< HEAD
 =======
@@ -1744,14 +1742,14 @@ href='/cookies'
                 className='text-gray-400 hover:text-white transition-colors duration-200'>                Cookie Policy              © {currentYear} Zion Tech Group. All rights reserved.;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
             </div>;
-            <div className="flex space-x-6 text-sm">;
-              <Link href="/privacy" className="text-gray-400 hover:text-white transition-colors duration-200">;
+            <div className='flex space-x-6 text-sm'>;
+              <Link href='/privacy' className='text-gray-400 hover:text-white transition-colors duration-200'>;
                 Privacy Policy;
               </Link>;
-              <Link href="/terms" className="text-gray-400 hover:text-white transition-colors duration-200">;
+              <Link href='/terms' className='text-gray-400 hover:text-white transition-colors duration-200'>;
                 Terms of Service;
               </Link>;
-              <Link href="/cookies" className="text-gray-400 hover:text-white transition-colors duration-200">;
+              <Link href='/cookies' className='text-gray-400 hover:text-white transition-colors duration-200'>;
                 className='text-gray-400 hover:text-white transition-colors duration-200';
               >;
 }'
@@ -1853,11 +1851,11 @@ href='/cookies'
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
                     className='text - gray - 400 hover:text - blue - 400 transition - colors duration - 200'                  >              Contact Us;
             </h3>;
-            <div className="space-y-4">;
-              <div className="flex items-start space-x-3">;
-                <Phone className="w - 5 h - 5 text - blue - 400 mt - 1 flex-shrink-0" />;
+            <div className='space-y-4'>;
+              <div className='flex items-start space-x-3'>;
+                <Phone className='w - 5 h - 5 text - blue - 400 mt - 1 flex-shrink-0' />;
                 <div>;
-                  <p className="text-white font-medium">Phone</p>;
+                  <p className='text-white font-medium'>Phone</p>;
                   <a;
                     href={`tel: ${contact_info.mobile;}`}
                     className="text - gray - 400 hover:text - blue - 400 transition-colors duration-200";
@@ -1873,7 +1871,7 @@ href='/cookies'
                   <a;
                     href={`mailto: ${contact_info.email;}`}
                     className='text - gray - 400 hover:text - green - 400 transition - colors duration - 200'                  >                <div>;
-                  <p className="text-white font-medium">Email</p>;
+                  <p className='text-white font-medium'>Email</p>;
                   <a;
                     href={`mailto: ${contact_info.email;}`}
                     className="text - gray - 400 hover:text - green - 400 transition-colors duration-200";
@@ -1886,8 +1884,8 @@ href='/cookies'
                 <MapPin className='w - 5 h - 5 text - purple - 400 mt - 1 flex - shrink - 0' />;
                 <div>;
                   <p className='text - white font - medium'>Address</p>;
-                  <p className='text - gray - 400 text - sm'>{contact_info.address}</p>                </div>                  <p className="text-white font-medium">Address</p>;
-                  <p className="text - gray-400 text-sm">;
+                  <p className='text - gray - 400 text - sm'>{contact_info.address}</p>                </div>                  <p className='text-white font-medium'>Address</p>;
+                  <p className='text - gray-400 text-sm'>;
                     {contact_info.address}
                   </p>;
               </div>;
@@ -1918,14 +1916,14 @@ href='/cookies'
                 className='text - gray - 400 hover:text - white transition - colors duration - 200';
               >                Cookie Policy              © {current_year} Zion Tech Group. All rights reserved.;
             </div>;
-            <div className="flex space-x-6 text-sm">;
-              <Link href="/privacy" className="text - gray - 400 hover:text - white transition-colors duration-200">;
+            <div className='flex space-x-6 text-sm'>;
+              <Link href='/privacy' className='text - gray - 400 hover:text - white transition-colors duration-200'>;
                 Privacy Policy;
               </Link>;
-              <Link href="/terms" className="text - gray - 400 hover:text - white transition-colors duration-200">;
+              <Link href='/terms' className='text - gray - 400 hover:text - white transition-colors duration-200'>;
                 Terms of Service;
               </Link>;
-              <Link href="/cookies" className="text - gray - 400 hover:text - white transition-colors duration-200">;
+              <Link href='/cookies' className='text - gray - 400 hover:text - white transition-colors duration-200'>;
                 Cookie Policy;
               </Link>;
             </div>;

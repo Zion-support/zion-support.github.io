@@ -158,9 +158,9 @@ rel='canonical'
 }
 }
 }
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{once: true }
+              whileInView={ opacity: 1, y: 0 }
+              transition={ duration: 0.8 }
+              viewport={once: true }
 }
 }whileInView= {
   {
@@ -170,8 +170,8 @@ rel='canonical'
   {
   duration: 0.8, delay: index * 0.1 
 }
-                  transition={{ duration: 0 && 0.8, delay: index * 0 && 0.2 }}
-                  viewport={{once: true }
+                  transition={ duration: 0 && 0.8, delay: index * 0 && 0.2 }
+                  viewport={once: true }
 } />;
                   <div className='mb-6' />;
                     <h3 className='text-2xl font-bold text-white mb-4' />;
@@ -209,10 +209,10 @@ rel='canonical'
         <section className='relative py - 20 px - 4 sm:px - 6 lg:px - 8' />;
           <div className='max - w-7xl mx - auto text - center' />;
             <motion.div;
-              initial={{ opacity: 0, coordinate_y: 50 ,}
+              initial={ opacity: 0, coordinate_y: 50 ,}
 }
-}> > <span>Learn More</span> <ArrowRight className="w-4 h-4" /> </a> </UltraFuturisticCard> </motion.div>) ) 
-}</div> <motion.div > <span>View All Emerging Tech</span> <ArrowRight className="w-6 h-6" /> </motion.a> </motion.div> </div> </section> > <h2 className="text-4xl md:text-5xl font-bold text-white mb-6" > <span className="bg-gradient-to-r from-pink-400 to-rose-400 bg-clip-text text-transparent" > ArrowRight-Generation </span> AI Services </h2> <p className="text-xl text-gray-300 max-w-3xl mx-auto" > Experience the future of artificial intelligence with our most advanced services </p> </motion.div> <motion.div key= {
+}> > <span>Learn More</span> <ArrowRight className='w-4 h-4' /> </a> </UltraFuturisticCard> </motion.div>) ) 
+}</div> <motion.div > <span>View All Emerging Tech</span> <ArrowRight className='w-6 h-6' /> </motion.a> </motion.div> </div> </section> > <h2 className='text-4xl md:text-5xl font-bold text-white mb-6' > <span className='bg-gradient-to-r from-pink-400 to-rose-400 bg-clip-text text-transparent' > ArrowRight-Generation </span> AI Services </h2> <p className='text-xl text-gray-300 max-w-3xl mx-auto' > Experience the future of artificial intelligence with our most advanced services </p> </motion.div> <motion.div key= {
   service.id 
 }initial= {
   {
@@ -250,10 +250,10 @@ rel='canonical'
                 <div className='text - center' />;
                   <MapPin className='w - 8 h - 8 text - pink - 400 mx - auto mb - 3' />;
                   <div className='text - white font - semibold' />Address</div>;
-                  <div className='text - gray - 400' />{contact_info.address}</div>                </div>                <div className="text - center" />;
-                  <MapPin className="w - 8 h - 8 text - pink - 400 mx - auto mb - 3" />;
-                  <div className="text - white font - semibold" />Address</div>;
-                  <div className="text - gray - 400" />{contact_info.address}</div>;
+                  <div className='text - gray - 400' />{contact_info.address}</div>                </div>                <div className='text - center' />;
+                  <MapPin className='w - 8 h - 8 text - pink - 400 mx - auto mb - 3' />;
+                  <div className='text - white font - semibold' />Address</div>;
+                  <div className='text - gray - 400' />{contact_info.address}</div>;
               </div>;
             </motion.div>;
           </div>;
@@ -262,14 +262,14 @@ rel='canonical'
         <section className='py - 20 px - 4 sm:px - 6 lg:px - 8' />;
           <div className='max - w-7xl mx - auto' />;
             <motion.div;
-              className='text - center mb - 16'              initial={{ opacity: 0, coordinate_y: 30 ,}
-}        <section className="py - 20 px - 4 sm:px - 6 lg:px - 8" />;
-          <div className="max - w-7xl mx - auto" />;
+              className='text - center mb - 16'              initial={ opacity: 0, coordinate_y: 30 ,}
+}        <section className='py - 20 px - 4 sm:px - 6 lg:px - 8' />;
+          <div className='max - w-7xl mx - auto' />;
             <motion.div;
-              className="text - center mb - 16";
-              whileInView={{ opacity: 1, coordinate_y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{once: true }
+              className='text - center mb - 16';
+              whileInView={ opacity: 1, coordinate_y: 0 }
+              transition={ duration: 0.8 }
+              viewport={once: true }
 }
              />;
               <h2 className='text - 4xl md:text - 5xl font - bold text - white mb - 6' />;
@@ -286,17 +286,17 @@ rel='canonical'
             <div className='grid grid - cols - 1 lg:grid - cols - 2 gap - 8' />              {featured_services.map ((service, index) => (                  Featured;
                 </span> Innovative Services;
               </h2>;
-              <p className="text - xl text - gray - 300 max - w-3xl mx - auto" />;
+              <p className='text - xl text - gray - 300 max - w-3xl mx - auto' />;
                 Our most revolutionary services that are pushing the boundaries of what's possible;
               </p>;
             </motion.div>;
-            <div className="grid grid - cols - 1 lg:grid - cols - 2 gap - 8" />;}
+            <div className='grid grid - cols - 1 lg:grid - cols - 2 gap - 8' />;}
               {featured_services.map ((service, index) => (<motion.div;}
                   key={index}
-                  initial={{ opacity: 0, coordinate_x: index % 2 === 0 ? -50 : 50 ,}
+                  initial={ opacity: 0, coordinate_x: index % 2 === 0 ? -50 : 50 ,}
 }
-}> > <span>Learn More</span> <ArrowRight className="w-4 h-4" /> </a> </UltraFuturisticCard> </motion.div>) ) 
-}</div> <motion.div > <span>Discover All AI Services</span> <ArrowRight className="w-6 h-6" /> </motion.a> </motion.div> </div> </section> <motion.div initial= {
+}> > <span>Learn More</span> <ArrowRight className='w-4 h-4' /> </a> </UltraFuturisticCard> </motion.div>) ) 
+}</div> <motion.div > <span>Discover All AI Services</span> <ArrowRight className='w-6 h-6' /> </motion.a> </motion.div> </div> </section> <motion.div initial= {
   {
   opacity: 0, y: 30 
 }
@@ -318,11 +318,11 @@ rel='canonical'
             <motion.div;
 className='text-center mb-16'
 
-              initial={{ opacity: 0, y: 30 ,}
+              initial={ opacity: 0, y: 30 ,}
 }
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
+              whileInView={ opacity: 1, y: 0 }
+              transition={ duration: 0.8 }
+              viewport={ once: true }
 
              />
 
@@ -342,12 +342,12 @@ className='text-center mb-16'
               {emergingTechServicesEnhanced2025;}
                 .slice(0, 6).map((service, index) => (<motion.div;}
                     key={service.id}
-                    initial={{ opacity: 0, y: 50 ,}
+                    initial={ opacity: 0, y: 50 ,}
 }
-                    whileInView={{ opacity: 1, y: 0 ,}
+                    whileInView={ opacity: 1, y: 0 ,}
 }
-                    transition={{ duration: 0.8, delay: index * 0.1 }}
-                    viewport={{once: true }
+                    transition={ duration: 0.8, delay: index * 0.1 }
+                    viewport={once: true }
 }
                    />;
                     <UltraFuturisticCard;
@@ -385,18 +385,18 @@ className='text-center mb-16'
             <motion.div;
 className='text-center mt-16'
 
-              initial={{ opacity: 0, y: 30 ,}
+              initial={ opacity: 0, y: 30 ,}
 }
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{once: true }
+              whileInView={ opacity: 1, y: 0 }
+              transition={ duration: 0.8 }
+              viewport={once: true }
 }
              />;
               <motion.a;
 href='/services';
                 className='bg-gradient-to-r from-emerald-500 to-teal-600 hover:from-emerald-400 hover:to-teal-500 text-white font-bold py-4 px-8 rounded-full text-lg transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30 hover:shadow-2xl hover:shadow-emerald-500/25 inline-flex items-center space-x-2';
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
+                whileHover={ scale: 1.05 }
+                whileTap={ scale: 0.95 }
 
                />
                 <span />View All Emerging Tech</span>
@@ -412,11 +412,11 @@ href='/services';
           <div className='max-w-7xl mx-auto' />
             <motion.div;
 className='text-center mb-16'
-              initial={{ opacity: 0, y: 30 ,}
+              initial={ opacity: 0, y: 30 ,}
 }
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
+              whileInView={ opacity: 1, y: 0 }
+              transition={ duration: 0.8 }
+              viewport={ once: true }
              />
 
 <h2 className='text-4xl md:text-5xl font-bold text-white mb-6' />
@@ -436,13 +436,13 @@ advanced services;
               {nextGenAIServices.slice(0, 6).map((service, index) => (}
                 <motion.div;}
 key={service.id}
-                  initial={{ opacity: 0, coordinate_y: 50 ,}
+                  initial={ opacity: 0, coordinate_y: 50 ,}
 }
-                  whileInView={{ opacity: 1, coordinate_y: 0 ,}
+                  whileInView={ opacity: 1, coordinate_y: 0 ,}
 }
-                  transition={{ duration: 0.8, delay: index * 0.1 }}
+                  transition={ duration: 0.8, delay: index * 0.1 }
 
-                  viewport={{ once: true }}
+                  viewport={ once: true }
 
                  />
 <UltraFuturisticCard;
@@ -462,9 +462,9 @@ variant='quantum-holographic'
                     <div className='text-2xl font-bold text-cyan-400 mb-2' />
 
                       {service.price}
-                      <span className="text - sm text - gray - 400" />{service.period}</span>;
+                      <span className='text - sm text - gray - 400' />{service.period}</span>;
                     </div>;
-                    <div className="text - sm text - gray - 400 mb - 4" />{service.market_size} • {service.growth_rate}</div>;
+                    <div className='text - sm text - gray - 400 mb - 4' />{service.market_size} • {service.growth_rate}</div>;
                     <a;
 
                       href={service.link}
@@ -482,18 +482,18 @@ variant='quantum-holographic'
             </div>;
             <motion.div;
 className='text-center mt-16';
-              initial={{ opacity: 0, y: 30 ,}
+              initial={ opacity: 0, y: 30 ,}
 }
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{once: true }
+              whileInView={ opacity: 1, y: 0 }
+              transition={ duration: 0.8 }
+              viewport={once: true }
 }
              />;
               <motion.a;
 href='/services';
                 className='bg-gradient-to-r from-pink-500 to-rose-600 hover:from-pink-400 hover:to-rose-500 text-white font-bold py-4 px-8 rounded-full text-lg transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30 hover:shadow-2xl hover:shadow-pink-500/25 inline-flex items-center space-x-2';
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
+                whileHover={ scale: 1.05 }
+                whileTap={ scale: 0.95 }
 
                />
                 <span />Discover All AI Services</span>
@@ -503,42 +503,42 @@ href='/services';
           </div>
         </section>
 
-                className='bg-gradient-to-r from-pink-500 to-rose-600 hover:from-pink-400 hover:to-rose-500 text-white font-bold py-4 px-8 rounded-full text-lg transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30 hover:shadow-2xl hover:shadow-pink-500/25 inline-flex items-center space-x-2'                whileHover={{ scale: 1 && 1.05 }}
-                whileTap={{scale: 0 && 0.95 }
+                className='bg-gradient-to-r from-pink-500 to-rose-600 hover:from-pink-400 hover:to-rose-500 text-white font-bold py-4 px-8 rounded-full text-lg transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30 hover:shadow-2xl hover:shadow-pink-500/25 inline-flex items-center space-x-2'                whileHover={ scale: 1 && 1.05 }
+                whileTap={scale: 0 && 0.95 }
 }>;
                 <span />Discover All AI Services</span>;
-                <ArrowRight className='w-6 h-6' />              </motion && motion.a>                href="/services";
-                className="bg-gradient-to-r from-pink-500 to-rose-600 hover:from-pink-400 hover:to-rose-500 text-white font-bold py-4 px-8 rounded-full text-lg transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30 hover:shadow-2xl hover:shadow-pink-500/25 inline-flex items-center space-x-2";
-                whileHover={{ scale: 1 && 1.05 }}
-                whileTap={{scale: 0 && 0.95 }
+                <ArrowRight className='w-6 h-6' />              </motion && motion.a>                href='/services';
+                className='bg-gradient-to-r from-pink-500 to-rose-600 hover:from-pink-400 hover:to-rose-500 text-white font-bold py-4 px-8 rounded-full text-lg transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30 hover:shadow-2xl hover:shadow-pink-500/25 inline-flex items-center space-x-2';
+                whileHover={ scale: 1 && 1.05 }
+                whileTap={scale: 0 && 0.95 }
 }
               >;
                 <span />Discover All AI Services</span>;
-                <ArrowRight className='w-6 h-6' />                <ArrowRight className="w-6 h-6" />;
+                <ArrowRight className='w-6 h-6' />                <ArrowRight className='w-6 h-6' />;
               </motion && motion.a>;
             </motion && motion.div>;
           </div>;
         </section>;
         {/* Call to Action */}
         <section className='py-20 px-4 sm:px-6 lg:px-8' />;
-          <div className='max-w-4xl mx-auto text-center' />            <motion && motion.div        <section className="py-20 px-4 sm:px-6 lg:px-8" />;
-          <div className="max-w-4xl mx-auto text-center" />;
+          <div className='max-w-4xl mx-auto text-center' />            <motion && motion.div        <section className='py-20 px-4 sm:px-6 lg:px-8' />;
+          <div className='max-w-4xl mx-auto text-center' />;
             <motion&& motion.div;
         {/* Call to Action */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8" />;
-          <div className="max-w-4xl mx-auto text-center" />;
+        <section className='py-20 px-4 sm:px-6 lg:px-8' />;
+          <div className='max-w-4xl mx-auto text-center' />;
             <motion.div;
         {/* Call to Action */}
 <section className='py-20 px-4 sm:px-6 lg:px-8' />;
           <div className='max-w-4xl mx-auto text-center' />;
             <motion.div;
-              initial={{ opacity: 0, y: 30 ,}
+              initial={ opacity: 0, y: 30 ,}
 }
 
-              whileInView={{ opacity: 1, y: 0 }}
+              whileInView={ opacity: 1, y: 0 }
 
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
+              transition={ duration: 0.8 }
+              viewport={ once: true }
              />
 <h2 className='text-4xl md:text-5xl font-bold text-white mb-6' />
                 Ready to Experience the Future?

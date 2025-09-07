@@ -38,7 +38,7 @@ const selectedText = newContent.slice(selectionStart, selectionEnd)setEditorStat
             return {}
                 ...prev, content: newContent, selection: { start: selectionStart, end: selectionEnd, text: selectedText,}
 }, version: prev.version + 1, changes[...prev.changes, change];
-            }})// Sync with other collaborators;
+            })// Sync with other collaborators;
         if(enableCollaboration && collaboration.isConnected) {}
             collaboration.syncTextChange({}
 '';
@@ -220,7 +220,7 @@ const handleCollaborationTextChange = () => {
                 setEditorState(prev => {}
                     // Simple merge strategy - in production, this would use operational transformation;
                     return {}
-                        ...prev, content: message.payload.content, version: Math.max(prev.version, message.payload.version)}})'';
+                        ...prev, content: message.payload.content, version: Math.max(prev.version, message.payload.version)})'';
                 trackEvent('editor', collaboration_sync',text_synced', null, {}
                     userId: message.userId, version: message.payload.version;
                 })}
@@ -229,7 +229,7 @@ const handleCollaborationTextChange = () => {
 '';
 '';
 '''';
-            window.removeEventListener('collaborationTextChange', handleCollaborationTextChange)}}, [userId, trackEvent])// Auto-save functionality;
+            window.removeEventListener('collaborationTextChange', handleCollaborationTextChange)}, [userId, trackEvent])// Auto-save functionality;
     useEffect(() => {}
 }
         if(!enableVersioning)return;
@@ -315,10 +315,10 @@ const debounceTimer = setTimeout(() => {}
               <div className='space-y-3' />;}
                 {editorState.suggestions.map(suggestion => (<motion.div key={suggestion.id} initial = {}
   { opacity: 0, x: 20;}
-}} animate = {}
+} animate = {}
   { opacity: 1, x: 0 '''';}
 '''';}
-}} className='p-3 bg-white dark:bg-gray-600 rounded-lg border border-gray-200 dark:border-gray-500' />'''`';
+} className='p-3 bg-white dark:bg-gray-600 rounded-lg border border-gray-200 dark:border-gray-500' />'''`';
                     <div className='flex items-start justify-between mb-2' />'`'`;
                       <span className={`text-xs px-2 py-1 rounded-full ${suggestion.type === 'grammar' ? 'bg-red-100 text-red-700 dark:bg-red-900/30 dark:text-red-300' :''`;}
                     suggestion.type === 'style' ? 'bg-yellow-100 text-yellow-700 dark:bg-yellow-900/30 dark:text-yellow-300' :'`'`;}
@@ -411,12 +411,12 @@ const debounceTimer = setTimeout(() => {}
 } />;
           {collaboration.activeCursors.map(({ x, y, user }) => (<motion.div key={user.id} initial = {}
   { opacity: 0, scale: 0;}
-}} animate = {}
+} animate = {}
   { opacity: 1, scale: 1;}
-}} exit = {}
+} exit = {}
   { opacity: 0, scale: 0 '''';}
 '''';}
-}} className='absolute w-4 h-4' style = {}
+} className='absolute w-4 h-4' style = {}
   {}
                     left: x, top: y, '';
                     transform: 'translate(-50%, -50%)';'';

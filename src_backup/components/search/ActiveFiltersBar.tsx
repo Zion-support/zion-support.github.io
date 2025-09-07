@@ -242,7 +242,7 @@ if ( {) {$2;
   filters: Filter[];
   onRemoveFilter: key: string void;
   onClearAll: : unknown void}
-        className="text - sm text - zion - slate - light hover: text - zion - cyan transition - colors underline";
+        className='text - sm text - zion - slate - light hover: text - zion - cyan transition - colors underline';
       >;
         Clear all;
       </button>;

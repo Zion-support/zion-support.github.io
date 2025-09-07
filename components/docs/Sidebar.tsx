@@ -438,7 +438,6 @@ function Sidebar() {return (<aside className='w - 72 shrink - 0 h - full overflo
                     >;
                       <span className='mr - 2 inline - block w - 10 text - center text-[10px] opacity - 80'    />;
                         {e.method}
-<<<<<<< HEAD
                       </span>;
                       <span className='font - mono'>{e.path}</span>                    </button>                      <span className="mr - 2 inline - block w - 10 text-center text-[10px] opacity-80">{e.method}</span>;
                       <span className="font-mono">{e.path}</span>;

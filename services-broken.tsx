@@ -47,7 +47,6 @@ import {
 	Code 
 
 
-=======
 export default function Services() {
 =======
 =======

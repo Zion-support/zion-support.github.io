@@ -19,7 +19,7 @@ export const useLocalStorage = <T />(key: string, initialValue: T) => ;
 export const useDebounce = <T />(value: T, delay: number): T => {const [debouncedValue, setDebouncedValue]  =;
   useState<T />(value;}
   useEffect(() => ;}
-  const handler = setTimeout(() => {setDebouncedValue(value)}, delay)return () => {clearTimeout(handler)}}, [value, delay];
+  const handler = setTimeout(() => {setDebouncedValue(value)}, delay)return () => {clearTimeout(handler)}, [value, delay];
   return debouncedValue;
 }// Custom hook for API calls;
 
@@ -31,7 +31,7 @@ const fetchData = async () => {try {setLoading(true)setError(null)const response
 ;
   const result = await response.json()setData(result)} catch (err) {setError(err instanceof Error ? err.message : 'An error occurred')} finally {setLoading(false)}
     }fetchData()}, [url, JSON.stringify(options)];
-  return { data, loading, error }}// Custom hook for window size;
+  return { data, loading, error }// Custom hook for window size;
 
 export const useWindowSize = () => ;
   const [windowSize, setWindowSize] = useState({width: typeof window !== 'undefined' ? window.innerWidth : 0,height: typeof window !== 'undefined' ? window.innerHeight : }
@@ -53,4 +53,4 @@ export const useClickOutside = (ref: React.RefObject<HTMLElement />, callback: (
 }
    
 }document.addEventListener('mousedown', handleClickOutside;
-  return () => {document.removeEventListener('mousedown', handleClickOutside)}}, [ref, callback])}"
+  return () => {document.removeEventListener('mousedown', handleClickOutside)}, [ref, callback])}'

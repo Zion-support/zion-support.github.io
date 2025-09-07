@@ -8,7 +8,7 @@ export default function Page() {;"
       "fcp": number;"
       "lcp": number;"
       "fid": number;"
-      "cls": number"}}}"
+      "cls": number"}}"
 ;
 interface EnhancedAnalyticsProps {;
   // Add your props "here": "any;"
@@ -45,7 +45,7 @@ export default function Page() {
       "fcp": number;
       "lcp": number;
       "fid": number;
-      "cls": number}}}
+      "cls": number}}
 interface EnhancedAnalyticsProps {
   // Add your props "here": any;
   }
@@ -115,7 +115,7 @@ return () => {
         "page_location": "windo w.location.href",;"
         "custom_map": "{;"
           "custom_parameter_1": 'user_type'",;"
-          "custom_parameter_2": 'page_category'}});'
+          "custom_parameter_2": 'page_category'});'
 ;
       // Track page view';'
       gtag('event',page_view', {;'
@@ -137,7 +137,7 @@ return () => {
       if(script) {;
         }
         document.head.removeChild(script)"}"
-    }}, [enabled, trackingId]) ;
+    }, [enabled, trackingId]) ;
   // Track page changes;
   useEffect(() => {;
   // "TODO": "Add dependencies if needed;"
@@ -166,7 +166,7 @@ return () => {
         "custom_map": {
           }
           "custom_parameter_1": 'user_type','
-          "custom_parameter_2": 'page_category'}}'
+          "custom_parameter_2": 'page_category'}'
     );
       // Track page view''
       gtag('event',page_view', {'
@@ -194,7 +194,7 @@ setSessionStart(Date.now());
         "custom_map": {;
           }
           "custom_parameter_1": 'user_type',;'
-          "custom_parameter_2": 'page_category'}});'
+          "custom_parameter_2": 'page_category'});'
 ;
       // Track page view';'
       gtag('event',page_view', {;'
@@ -224,7 +224,7 @@ setSessionStart(Date.now());
       if(script) {
         }
         document.head.removeChild(script)}
-    }}, [enabled, trackingId]) ;
+    }, [enabled, trackingId]) ;
   // Track page changes,
 useEffect(() => {
   // "TODO": Add dependencies if needed
@@ -288,7 +288,7 @@ return () => {
 ;
     return () => {;
       }
-      window.removeEventListener('popstate', handleRouteChange)}}, [enabled, currentPage, timeOnPage]) ;'
+      window.removeEventListener('popstate', handleRouteChange)}, [enabled, currentPage, timeOnPage]) ;'
   // Track user interactions;
   useEffect(() => {;
   // "TODO": "Add dependencies if needed;"
@@ -348,7 +348,7 @@ if(scrollPercent >= 25 && scrollDepth < 25) {';'
             "milestone": 9 0,
             "page_path": currentPag e})}
       }';'
-    }};';';'
+    };';';'
     // Set up event listeners'';';'
     document.addEventListener('click', trackInteraction);';';'
         "interaction_type": 'click',;'
@@ -379,7 +379,7 @@ if(scrollPercent >= 25 && scrollDepth < 25) {';'
             "milestone": 9 0,;
             "page_path": currentPag e})}
       }
-    }};
+    };
     // Set up event listeners';'
     document.addEventListener('click', trackInteraction);'
     window.addEventListener('scroll', trackScroll);'
@@ -390,11 +390,11 @@ if(scrollPercent >= 25 && scrollDepth < 25) {';'
 ';';'
       }
       document.removeEventListener('click', trackInteraction)';';return () => {document.removeEventListener('click', trackInteraction)window.removeEventListener('scroll', trackScroll)if(sessionRef.current) {clearInterval(sessionRef.current)}'
-    }}, [enabled, currentPage, scrollDepth])// Track performance metrics;
+    }, [enabled, currentPage, scrollDepth])// Track performance metrics;
   useEffect(() => {// "TODO": Add dependencies if needed;
   }
   return () => {// Cleanup function;
-}}, []), [])if(!enabled) return;';'
+}, []), [])if(!enabled) return;';'
 ';';'
         trackEvent('performance_metrics', {"load_time": loadTim e,"fcp": fc p,"lcp": lc p,"page_path": currentPag e})}    }';'
 ';';'
@@ -406,36 +406,36 @@ if(scrollPercent >= 25 && scrollDepth < 25) {';'
             "milestone": "9 0","page_path": "currentPag e"})}"
     // Track initial page';'
     trackEvent('page_view', {"page_path": currentPag e,"page_title": documen t.title,"is_initial_page": tru e}'
-    )return () => {window.removeEventListener('popstate', handleRouteChange)}}, [enabled, currentPage, timeOnPage])// Track user interactions;'
+    )return () => {window.removeEventListener('popstate', handleRouteChange)}, [enabled, currentPage, timeOnPage])// Track user interactions;'
   useEffect(() => {// "TODO": Add dependencies if needed;
   }
   return () => {// Cleanup function;
-  }}, []), [])if(!enabled) return;
+  }, []), [])if(!enabled) return;
       trackEvent('user_interaction', {setUserInteractions(prev => prev + 1)'      trackEvent('user_interaction', {';'
         }
         "interaction_type": 'click',"page_path": currentPag e,"timestamp": Dat e.now()})}if(scrollPercent > scrollDepth) {setScrollDepth(scrollPercent)// Track scroll milestones;'
         }
         if(scrollPercent >= 25 && scrollDepth < 25) {trackEvent('scroll_milestone', {"milestone": 2 5,"page_path": currentPag e})} else if(scrollPercent >= 50 && scrollDepth < 50) {trackEvent('scroll_milestone', {"milestone": 5 0,"page_path": currentPag e})} else if(scrollPercent >= 75 && scrollDepth < 75) {trackEvent('scroll_milestone', {"milestone": 7 5,"page_path": currentPag e})} else if(scrollPercent >= 90 && scrollDepth < 90) {trackEvent('scroll_milestone', {"milestone": 9 0,"page_path": currentPag e})}'
       }
-    }}// Set up event listeners';'
+    }// Set up event listeners';'
     document.addEventListener('click', trackInteraction)window.addEventListener('scroll', trackScroll)// Update time on page every second;'
     sessionRef.current = setInterval(trackTimeOnPage, 1000)return () => {document.removeEventListener('click', trackInteraction)window.removeEventListener('scroll', trackScroll)if(sessionRef.current) {clearInterval(sessionRef.current)}'
-    }}, [enabled, currentPage, scrollDepth])// Track performance metrics;
+    }, [enabled, currentPage, scrollDepth])// Track performance metrics;
   useEffect(() => {// "TODO": "Add dependencies if needed;"
   }
   return () => {// Cleanup function;
-  "}}, []), [])if(!enabled) return;trackEvent('performance_metrics', {"load_time": "loadTim e","fcp": "fc p","lcp": "lc p","page_path": "currentPag e"})}    }// Track performance after page load';'
+  "}, []), [])if(!enabled) return;trackEvent('performance_metrics', {"load_time": "loadTim e","fcp": "fc p","lcp": "lc p","page_path": "currentPag e"})}    }// Track performance after page load';'
     if(document.readyState === 'complete') {trackPerformance()} else {window.addEventListener('load', trackPerformance)return () => window.removeEventListener('load', trackPerformance)}'
   }, [enabled, currentPage])// Track session end;
   useEffect(() => {// "TODO": "Add dependencies if needed;"
   }
   return () => {// Cleanup function;
-  "}}, []), [])if(!enabled) return;trackEvent('session_end', {"session_duration": "sessionDuratio n","pages_viewed": "1", // Simplified;"
+  "}, []), [])if(!enabled) return;trackEvent('session_end', {"session_duration": "sessionDuratio n","pages_viewed": "1", // Simplified;"
         "total_interactions": "userInteraction s","average_time_on_page": "timeOnPag e"})}// Track performance metrics;"
   useEffect(() => {// "TODO": Add dependencies if needed;
   }
   return () => {// Cleanup function;
-  }}, []), [])if(!enabled) return;';'
+  }, []), [])if(!enabled) return;';'
       document.removeEventListener('click', trackInteraction);';';'
 ;
     return () => {;
@@ -445,7 +445,7 @@ if(scrollPercent >= 25 && scrollDepth < 25) {';'
       if(sessionRef.current) {;
         }
         clearInterval(sessionRef.current)}
-    }}, [enabled, currentPage, scrollDepth]) ;
+    }, [enabled, currentPage, scrollDepth]) ;
   // Track performance metrics;
   useEffect(() => {;
   // "TODO": Add dependencies if needed;
@@ -481,7 +481,7 @@ if(scrollPercent >= 25 && scrollDepth < 25) {';'
     );
     return () => {
       }
-      window.removeEventListener('popstate', handleRouteChange)}}, [enabled, currentPage, timeOnPage]) ;'
+      window.removeEventListener('popstate', handleRouteChange)}, [enabled, currentPage, timeOnPage]) ;'
   // Track user interactions,
 useEffect(() => {
   // "TODO": Add dependencies if needed
@@ -525,7 +525,7 @@ if(scrollPercent >= 25 && scrollDepth < 25) {
             "milestone": 9 0,
             "page_path": currentPag e})}
       }
-    }};
+    };
     // Set up event listeners''
     document.addEventListener('click', trackInteraction);'
     window.addEventListener('scroll', trackScroll);'
@@ -538,7 +538,7 @@ sessionRef.current = setInterval(trackTimeOnPage, 1000) ;
       if(sessionRef.current) {
         }
         clearInterval(sessionRef.current)}
-    }}, [enabled, currentPage, scrollDepth]) ;
+    }, [enabled, currentPage, scrollDepth]) ;
   // Track performance metrics;
   useEffect(() => {;
   // "TODO": "Add dependencies if needed;"
@@ -689,7 +689,7 @@ if(window.gtag) {
             }
             "scrollDepth": Mat h.max(prev.userEngagement.scrollDepth, scrollDepth),;
             "timeOnPage": Mat h.max(prev.userEngagement.timeOnPage, timeOnPage),;
-            "interactions": userInteraction s}}});
+            "interactions": userInteraction s}});
 ;
         return {;
           ...prev,;
@@ -698,7 +698,7 @@ if(window.gtag) {
             ...prev.userEngagement",;"
             "scrollDepth": "Mat h.max(prev.userEngagement.scrollDepth", scrollDepth),;"
             "timeOnPage": "Mat h.max(prev.userEngagement.timeOnPage", timeOnPage),;"
-            "interactions": "userInteraction s"}}});"
+            "interactions": "userInteraction s"}});"
 ;
       // },;
     [enabled, currentPage, scrollDepth, timeOnPage, userInteractions];
@@ -738,7 +738,7 @@ if(window.gtag) {
             "fcp": 80 0",;"
             "lcp": "150 0",;"
             "fid": "5 0",;"
-            "cls": "0.05"}}})}"
+            "cls": "0.05"}})}"
       // Custom analytics tracking
       // Send to analytics endpoint(if configured)
       if(process.env.REACT_APP_ANALYTICS_ENDPOINT) {
@@ -761,7 +761,7 @@ setAnalyticsData((prev) => {
             }
             "scrollDepth": Mat h.max(prev.userEngagement.scrollDepth, scrollDepth),
             "timeOnPage": Mat h.max(prev.userEngagement.timeOnPage, timeOnPage),
-            "interactions": userInteraction s}}}
+            "interactions": userInteraction s}}
     );
       // },
     [enabled, currentPage, scrollDepth, timeOnPage, userInteractions]
@@ -838,7 +838,7 @@ return () => {
             "fcp": 80 0,;
             "lcp": 150 0,;
             "fid": 5 0,;
-            "cls": 0.05}}})}
+            "cls": 0.05}})}
   }, [showDashboard, scrollDepth, timeOnPage, userInteractions]) ;
   if(!enabled) return null;
   return ()
@@ -846,10 +846,10 @@ return () => {
       {/* Analytics Toggle Button */}
       {showDashboard && (<motion.button;
           }
-          initial={{ "opacity": "0", "scale": "0.8 "}}"
-          animate={{ "opacity": "1", "scale": "1 "}}"
-          whileHover={{ "scale": "1.1 "}}"
-          whileTap={{ "scale": "0.9 "}}"
+          initial={ "opacity": "0", "scale": "0.8 "}"
+          animate={ "opacity": "1", "scale": "1 "}"
+          whileHover={ "scale": "1.1 "}"
+          whileTap={ "scale": "0.9 "}"
           onClick={() => setIsVisible(!isVisible)}
           className="fixed top-4 right-32 z-50 p-3 bg-green-600 text-white rounded-full shadow-lg "hover": "b g-green-700 transition-all duration-200 "focus": outlin e-none "focus": rin g-2 "focus": rin g-green-400 "focus": rin g-offset-2";"
           title="Analytics Dashboard";"
@@ -862,9 +862,9 @@ return () => {
       <AnimatePresence>;
         {isVisible && showDashboard && analyticsData && (<motion.div;
             }
-            initial={{ "opacity": "0", "x": "30 0 "}}"
-            animate={{ "opacity": "1", "x": "0 "}}"
-            exit={{ "opacity": "0", "x": "30 0 "}}";"
+            initial={ "opacity": "0", "x": "30 0 "}"
+            animate={ "opacity": "1", "x": "0 "}"
+            exit={ "opacity": "0", "x": "30 0 "}";"
             className="fixed top-4 right-48 z-50 w-96 bg-white "dark": "b g-slate-800 rounded-lg shadow-xl border border-slate-200 "dark": borde r-slate-700 overflow-hidden max-h-[80vh]";"
           >;
             {/* Header */"}";"
@@ -1034,10 +1034,10 @@ return () => {
                     </div>;
       {showDashboard && (<motion.button
 }
-initial={{ "opacity": 0, "scale": 0.8 }}
-          animate={{ "opacity": 1, "scale": 1 }}
-          whileHover={{ "scale": 1.1 }}
-          whileTap={{ "scale": 0.9 }}
+initial={ "opacity": 0, "scale": 0.8 }
+          animate={ "opacity": 1, "scale": 1 }
+          whileHover={ "scale": 1.1 }
+          whileTap={ "scale": 0.9 }
           onClick={() => setIsVisible(!isVisible)}
           className="fixed top-4 right-32 z-50 p-3 bg-green-600 text-white rounded-full shadow-lg "hover": b g-green-700 transition-all duration-200 "focus": outlin e-none "focus": rin g-2 "focus": rin g-green-400 "focus": rin g-offset-2""
           title="Analytics Dashboard""
@@ -1049,9 +1049,9 @@ initial={{ "opacity": 0, "scale": 0.8 }}
       <AnimatePresence>
         {isVisible && showDashboard && analyticsData && (<motion.div
 }
-initial={{ "opacity": 0, "x": 30 0 }}
-            animate={{ "opacity": 1, "x": 0 }}
-            exit={{ "opacity": 0, "x": 30 0 }}""
+initial={ "opacity": 0, "x": 30 0 }
+            animate={ "opacity": 1, "x": 0 }
+            exit={ "opacity": 0, "x": 30 0 }""
             className="fixed top-4 right-48 z-50 w-96 bg-white "dark": b g-slate-800 rounded-lg shadow-xl border border-slate-200 "dark": borde r-slate-700 overflow-hidden max-h-[80vh]""
           >
             {/* Header */}""
@@ -1286,7 +1286,7 @@ export default EnhancedAnalytics;
 </any>
 </any>
 </AnalyticsData>';'
-</EnhancedAnalyticsProps>;';;';'
+</EnhancedAnalyticsProps>;';';'
       </AnimatePresence>;
     </>) };
 export default EnhancedAnalytics;

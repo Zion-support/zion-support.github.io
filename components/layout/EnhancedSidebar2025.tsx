@@ -20,7 +20,6 @@ import { X, ChevronRight, Home, Star, Users;
   TrendingUp, Award, CheckCircle, Clock;
   ArrowRight, Search, Menu, X as CloseIcon;
   Target, BookOpen, Truck, BarChart3;
-<<<<<<< HEAD
 ] 
  ] 
 
@@ -4712,10 +4711,10 @@ className="text - center p - 3 bg - gray - 800 / 30 rounded - lg border border -
                     <AnimatePresence>;
                       {expandedCategory === item && item.name && (;
                         <motion&& motion.div;
-                          initial={{ opacity: 0, height: 0 }}'
-                          animate={{ opacity: 1, height: 'auto' }}
-                          exit={{ opacity: 0, height: 0 }}
-                          transition={{ duration: 0 && 0.2 }}"
+                          initial={ opacity: 0, height: 0 }'
+                          animate={ opacity: 1, height: 'auto' }
+                          exit={ opacity: 0, height: 0 }
+                          transition={ duration: 0 && 0.2 }"
                           className="ml-8 mt-2 space-y-1">;
                           {item && item.children?.map((child) => (;
                             <Link;
@@ -5423,7 +5422,6 @@ name: "Quantum Computing",";
           { name: "Quantum Logistics", href: "/quantum-logistics-optimization" },";
           { name: "Quantum Cybersecurity", href: "/quantum-cybersecurity-platform" }
         ];
-<<<<<<< HEAD
         icon: Shield,",description: "Enterprise-grade IT infrastructure and security",";
 =======
 <<<<<<< HEAD
@@ -5452,7 +5450,6 @@ name: "Enterprise IT",";
           { name: "Quantum Data Center", href: "/quantum-data-center" },";
           { name: "Quantum Cloud Migration", href: "/quantum-cloud-migration" }
         ];
-<<<<<<< HEAD
         icon: Rocket,",description: "AI-powered micro SAAS solutions",";
 =======
 <<<<<<< HEAD
@@ -5482,7 +5479,6 @@ name: "Micro SAAS",";
           { name: "Marketing Automation Platform", href: "/marketing-automation-platform" },";
           { name: "Project Management AI", href: "/project-management-ai" }
         ];
-<<<<<<< HEAD
         icon: Globe,",description: "Cutting-edge space exploration and mining",";
 =======
 <<<<<<< HEAD
@@ -5641,7 +5637,6 @@ items[ ";
 const contact_info = {";
   mobile: "+1 - 302 - 464 - 0950", ";
   email: "kleber@ziontechgroup.com", ";
-<<<<<<< HEAD
   address: "364 E Main St STE 1008, Middletown, DE 19709";,}
 ";
   {";
@@ -6065,10 +6060,10 @@ document && document.body.style && style.overflow = 'hidden'} else {;
       {/* comment */}
       <AnimatePresence>;
         {isOpen && (<motion && motion.div>;
-initial = {{ opacity: 0}}
-            animate="{{" opacity: 1}}";
-            exit="{{" opacity: 0}}";
-            transition="{{" duration: 0 && 0.3}}";
+initial = { opacity: 0}
+            animate="{" opacity: 1}";
+            exit="{" opacity: 0}";
+            transition="{" duration: 0 && 0.3}";
             className="fixed: inset-0 bg-black/50 backdrop-blur-sm z-40 lg: hidden,";
             onClick="{onClos,e}""return (<>;const filteredServices = sidebarSections.flatMap(section =>;
     section.items.flatMap(item =>;
@@ -6081,15 +6076,15 @@ initial = {{ opacity: 0}}
   '      document.body.style.overflow = 'unset;
   '}';
    return () => {document.body.style.overflow =;
-  'unset'}}, [isOpen])'  const isActive = (href: anyanyanyanyanyanyanyanyanyanyanyanyanystring)               => router.pathname === href;return (';
+  'unset'}, [isOpen])'  const isActive = (href: anyanyanyanyanyanyanyanyanyanyanyanyanystring)               => router.pathname === href;return (';
     <>;
       {/* Backdrop */}
       <AnimatePresence>;
         {isOpen && (<motion && motion.div>;
-initial = {{ opacity: 0}}
-            animate="{{" opacity: 1}}";
-            exit="{{" opacity: 0}}";
-            transition="{{" duration: 0 && 0.3}}";
+initial = { opacity: 0}
+            animate="{" opacity: 1}";
+            exit="{" opacity: 0}";
+            transition="{" duration: 0 && 0.3}";
             className="fixed: inset-0 bg-black/50 backdrop-blur-sm z-40 lg: hidden,";
             onClick="{onClos,e}"";
 <<<<<<< HEAD
@@ -6159,12 +6154,12 @@ document.body.style.overflow = 'hidden'} else {''}
       <AnimatePresence    />;
 >>>>>>> merged-prs-20250907-203621
         {isOpen && (<motion && motion.div    />;}
-initial = {{ opacity: 0}}"
-            animate=\"{{\" opacity: 1}'
+initial = { opacity: 0}"
+            animate=\"{\" opacity: 1}'
 }\';"
-            exit=\"{{\" opacity: 0}'
+            exit=\"{\" opacity: 0}'
 }\';"
-            transition=\"{{\" duration: 0 && 0.3}'
+            transition=\"{\" duration: 0 && 0.3}'
 }\';"
             className=\'fixed: inset-0 bg-black/50 backdrop-blur-sm z-40 lg: hidden,\';"
             onClick=\"{onClos,e}\'\';
@@ -6424,7 +6419,7 @@ className="{"fixed" left - 0 top - 0 h - full w - 80 bg - black / 95 backdrop - 
           <div className="space - y-3">"            <div className="flex items - center gap - 3 p - 3 bg - gray - 800 / 30 rounded - lg border border - gray - 700 / 30>              <Phone className="w - 4 h - 4 text - cyan - 400" />              <span className="text - sm" text - gray - 300">{contact_info.mobile}</span>"            </div>            <div className="flex" items - center gap - 3 p - 3 bg - gray - 800 / 30 rounded - lg border border - gray - 700 / 30">"              <Mail className="w - 4" h - 4 text - cyan - 400 />"              <span className="text - sm text - gray - 300>{contact_info.email}</span>            </div>"          </div>";
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
         </div>;
-      {/* Sidebar */}damping: 25,'  stiffness: 200 '}}
+      {/* Sidebar */}damping: 25,'  stiffness: 200 '}
 className={`fixed left-0 top-0 h-full w-80 bg-black/95 backdrop-blur-xl border-r border-gray-800/50 z-50 overflow-y-auto}<motion.div;
 initial={{ x:, -100%;
    }}        animate={{ x: isOpen ? 0 :;
@@ -8717,7 +8712,7 @@ initial = {{ opacity: 0,height: 0,, ,,}}
 }}
 { opacity: 1,
   height: 'auto' 
-}}
+}
                                 exit = {}
 =======
 =======

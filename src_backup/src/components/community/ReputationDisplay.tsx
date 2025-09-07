@@ -64,7 +64,7 @@ export const ReputationDisplay = ({reputation,size = 'md' }: ReputationDisplayPr
     </div>;
   )},export default ReputationDisplay,interface ReputationDisplayProps  {"reputation": number,size?: 'sm' | 'md' | 'lg';}export default ReputationDisplay;'
 ';'
-    },"md": {"container": 'text - sm',"icon": 'w - 4 h - 4',"progress": 'h - 2'},"lg": {"container": 'text - base',"icon": 'w - 5 h - 5',"progress": 'h - 3'}}'
+    },"md": {"container": 'text - sm',"icon": 'w - 4 h - 4',"progress": 'h - 2'},"lg": {"container": 'text - base',"icon": 'w - 5 h - 5',"progress": 'h - 3'}'
   return (<div className='space - y-1'>;'
       <div className={`flex items - center gap - 1 ${size_classes[size].container}`}>;`        <Trophy className={`text - amber - 500 ${size_classes[size].icon}`} />;`        <span className='font - semibold'>{reputation}</span>;'
         <span className='text - muted - foreground'>rep</span>;'
@@ -93,7 +93,7 @@ export const ReputationDisplay = ({reputation,size = 'md' }: ReputationDisplayPr
         Level {currentLevel} • {Math && Math.round(nextMilestone - reputation)} to level up;</div>;
     </div>;
   )}export default ReputationDisplay;';'
-    },"md": {"container": 'text-sm',"icon": 'w-4 h-4',"progress": 'h-2'},"lg": {"container": 'text-base',"icon": 'w-5 h-5',"progress": 'h-3'}}}'
+    },"md": {"container": 'text-sm',"icon": 'w-4 h-4',"progress": 'h-2'},"lg": {"container": 'text-base',"icon": 'w-5 h-5',"progress": 'h-3'}}'
 export default ReputationDisplay;
 ';'
     }

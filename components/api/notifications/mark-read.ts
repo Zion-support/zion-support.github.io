@@ -287,7 +287,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     if (!id) return res.status(400).json({ error: 'Missing id' });
     const { error } = await supabase
       .from('notifications')
-<<<<<<< HEAD
       .update({ read_status: true})
 =======
       .update({ read_status: true })

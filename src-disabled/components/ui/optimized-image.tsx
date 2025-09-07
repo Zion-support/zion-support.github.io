@@ -603,7 +603,7 @@ export const OptimizedImage: React.FC<OptimizedImageProps> = ({;,
       return (;
         <div;
           className={placeholderClassName}
-          style={{ backgroundColor: placeholderColor }}
+          style={ backgroundColor: placeholderColor }
         />;
       );
     }
@@ -611,7 +611,7 @@ export const OptimizedImage: React.FC<OptimizedImageProps> = ({;,
       return (;
         <div;
           className={placeholderClassName}
-          style={{ backgroundColor: placeholderColor }}
+          style={ backgroundColor: placeholderColor }
         />;
       );
     }
@@ -692,21 +692,21 @@ if ( {) {
         {/* Placeholder */}
         {(isLoading || !isInView) && !hasError && (;
           <motion&& motion.div
-            initial={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            transition={{ duration: 0.3 }}
-            className="absolute inset-0""
+            initial={ opacity: 1 }
+            exit={ opacity: 0 }
+            transition={ duration: 0.3 }
+            className='absolute inset-0''
           >
             {generatePlaceholder()}
 ;
             {/* Loading progress */}
             {showLoadingProgress && isLoading && loadProgress > 0 && (
-              <div className="absolute bottom-0 left-0 right-0 h-1 bg-gray-200">"
+              <div className='absolute bottom-0 left-0 right-0 h-1 bg-gray-200'>'
                 <motion.div
-                  className="h-full bg-blue-500""
-                  initial={{ width: 0 }}
-                  animate={{ width: `${loadProgress}%` }}`
-                  transition={{ duration: 0.3 }}
+                  className='h-full bg-blue-500''
+                  initial={ width: 0 }
+                  animate={ width: `${loadProgress}%` }`
+                  transition={ duration: 0.3 }
                 />
               </div>
             )}
@@ -715,14 +715,14 @@ if ( {) {
         {/* Error state */}
         {hasError && (
           <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            className="absolute inset-0 flex flex-col items-center justify-center bg-gray-100 text-gray-400""
+            initial={ opacity: 0 }
+            animate={ opacity: 1 }
+            className='absolute inset-0 flex flex-col items-center justify-center bg-gray-100 text-gray-400''
           >
-            <AlertTriangle className="h-8 w-8 mb-2" />"
-            <span className="text-sm">Failed to load image</span>"
+            <AlertTriangle className='h-8 w-8 mb-2' />'
+            <span className='text-sm'>Failed to load image</span>'
             {retries > 0 && (
-              <span className="text-xs mt-1">Retried {retries} times</span>"
+              <span className='text-xs mt-1'>Retried {retries} times</span>'
             )}
           </motion.div>
         )}
@@ -740,9 +740,9 @@ if ( {) {
               `object-${objectFit}`,;`
               isLoading ? 'opacity-0' : 'opacity-100';
             )}
-            initial={{ opacity: 0 }}
-            animate={{ opacity: isLoading ? 0 : 1 }}
-            transition={{ duration: 0.3 }}
+            initial={ opacity: 0 }
+            animate={ opacity: isLoading ? 0 : 1 }
+            transition={ duration: 0.3 }
           />
         )}
   opacity: 0
@@ -769,15 +769,15 @@ export const ImageGallery: React.FC<ImageGalleryProps> = ({,
   className,
   return (
     <div className={cn('space-y-4', className)}>'
-      <div className="flex justify-between items-center">"
-        <h3 className="text-lg font-semibold">Gallery</h3>"
-        <span className="text-sm text-muted-foreground">"
+      <div className='flex justify-between items-center'>'
+        <h3 className='text-lg font-semibold'>Gallery</h3>'
+        <span className='text-sm text-muted-foreground'>'
           {loadedCount}/{images.length} loaded
         </span>
       </div>
       <div
         className={`grid gap-4`}`
-        style={{;
+        style={;
           gridTemplateColumns: `repeat(${columns}, 1fr)`;`
 interface OptimizedImageProps {;
   src: string,;
@@ -978,7 +978,7 @@ pr-12325
       return (;
         <div;
           className={placeholderClassName}
-          style={{ backgroundColor: placeholderColor }}
+          style={ backgroundColor: placeholderColor }
         />;
       );
     }
@@ -987,14 +987,14 @@ pr-12325
       return (;
         <div;
           className={placeholderClassName}
-          style={{ backgroundColor: placeholderColor }}
+          style={ backgroundColor: placeholderColor }
         />;
       );
     }
 
     return (
       <div className={placeholderClassName}>
-        <ImageIcon className="h-8 w-8 text-gray-400" />
+        <ImageIcon className='h-8 w-8 text-gray-400' />
       </div>
     )
   },
@@ -1015,12 +1015,12 @@ pr-12325
         {/* Placeholder */}
         {(isLoading |!isInView) && !hasError && (
           <motion.div
-            initial={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
+            initial={ opacity: 1 }
+            exit={ opacity: 0 }
 
 
 
-            transition={{ duration: 0.3 }}
+            transition={ duration: 0.3 }
         {(isLoading || !isInView) && !hasError && (;
           <motion.div;
           <motion&& motion.div
@@ -1037,33 +1037,33 @@ pr-12325
 
           <motion&& motion.div;
 pr-12325
-            initial={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            transition={{ duration: 0.3 }}
-            className="absolute inset-0"
+            initial={ opacity: 1 }
+            exit={ opacity: 0 }
+            transition={ duration: 0.3 }
+            className='absolute inset-0'
           >
             {generatePlaceholder()}
 ;
             {/* Loading progress */}
             {showLoadingProgress && isLoading && loadProgress > 0 && (
-              <div className="absolute bottom-0 left-0 right-0 h-1 bg-gray-200">
+              <div className='absolute bottom-0 left-0 right-0 h-1 bg-gray-200'>
                 <motion.div
-                  className="h-full bg-blue-500"
-                  initial={{ width: 0 }}
-                  animate={{ width: `${loadProgress}%` }}
-                  transition={{ duration: 0.3 }}
+                  className='h-full bg-blue-500'
+                  initial={ width: 0 }
+                  animate={ width: `${loadProgress}%` }
+                  transition={ duration: 0.3 }
                 />;
               </div>;
             )}
           </motion.div>;
-            className="absolute inset-0""
+            className='absolute inset-0''
           >
-</motion>"
-              <div className="absolute bottom-0 left-0 right-0 h-1 bg-gray-200">"
-                <motion.div;"
-                  className="h-full bg-blue-500""
-                  initial={{ width: 0 }}`;
-                  animate={{ width: `${loadProgress}%` }}
+</motion>'
+              <div className='absolute bottom-0 left-0 right-0 h-1 bg-gray-200'>'
+                <motion.div;'
+                  className='h-full bg-blue-500''
+                  initial={ width: 0 }`;
+                  animate={ width: `${loadProgress}%` }
 </motion>
 pr-12325
           </motion.div>
@@ -1072,14 +1072,14 @@ pr-12325
         {/* Error state */}
         {hasError && (;
           <motion.div;
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            className="absolute inset-0 flex flex-col items-center justify-center bg-gray-100 text-gray-400"
+            initial={ opacity: 0 }
+            animate={ opacity: 1 }
+            className='absolute inset-0 flex flex-col items-center justify-center bg-gray-100 text-gray-400'
           >
-            <AlertTriangle className="h-8 w-8 mb-2" />
-            <span className="text-sm">Failed to load image</span>
+            <AlertTriangle className='h-8 w-8 mb-2' />
+            <span className='text-sm'>Failed to load image</span>
             {retries > 0 && (
-              <span className="text-xs mt-1">Retried {retries} times</span>
+              <span className='text-xs mt-1'>Retried {retries} times</span>
             )}
           </motion.div>;
         )}
@@ -1103,14 +1103,14 @@ pr-12325
 
 
           <motion.div;
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
+            initial={ opacity: 0 }
+            animate={ opacity: 1 }
 
-"
-            className="absolute inset-0 flex flex-col items-center justify-center bg-gray-100 text-gray-400""
-            <AlertTriangle className="h-8 w-8 mb-2" />"
-            <span className="text-sm">Failed to load image</span>""
-              <span className="text-xs mt-1">Retried {retries} times</span>"
+'
+            className='absolute inset-0 flex flex-col items-center justify-center bg-gray-100 text-gray-400''
+            <AlertTriangle className='h-8 w-8 mb-2' />'
+            <span className='text-sm'>Failed to load image</span>''
+              <span className='text-xs mt-1'>Retried {retries} times</span>'
           </motion.div>)
         {/* Actual image */}
 
@@ -1121,7 +1121,7 @@ pr-12325
             src={optimizedSrc}
             srcSet={srcSet}
             alt={alt}
-            alt={alt}"
+            alt={alt}'
 pr-12325
             loading={priority ? 'eager' : 'lazy'}
             onLoad={handleLoad}
@@ -1131,9 +1131,9 @@ pr-12325
               `object-${objectFit}`,;
               isLoading ? 'opacity-0' : 'opacity-100';
             )}
-            initial={{ opacity: 0 }}
-            animate={{ opacity: isLoading ? 0 : 1 }}
-            transition={{ duration: 0.3 }}
+            initial={ opacity: 0 }
+            animate={ opacity: isLoading ? 0 : 1 }
+            transition={ duration: 0.3 }
           />;
         )}
       </AnimatePresence>;
@@ -1155,7 +1155,7 @@ interface ImageGalleryProps {;
               'w-full h-full transition-opacity duration-300',;`;
               `object-${objectFit}`,;
               isLoading ? 'opacity-0' : 'opacity-100';')
-            animate={{ opacity: isLoading ? 0 : 1 }}
+            animate={ opacity: isLoading ? 0 : 1 }
   images: Array<{;,
     caption?: string;
   }>,;
@@ -1182,76 +1182,76 @@ export const ImageGallery: React.FC<ImageGalleryProps> = ({
 
   return (
     <div className={cn('space-y-4', className)}>
-      <div className="flex justify-between items-center">
-        <h3 className="text-lg font-semibold">Gallery</h3>
-        <span className="text-sm text-muted-foreground">
+      <div className='flex justify-between items-center'>
+        <h3 className='text-lg font-semibold'>Gallery</h3>
+        <span className='text-sm text-muted-foreground'>
           {loadedCount}/{images.length} loaded
         </span>
       </div>
         className={`grid gap-4`}
-        style={{
-          gridTemplateColumns: `repeat(${columns}, 1fr)`,        }}>;
+        style={
+          gridTemplateColumns: `repeat(${columns}, 1fr)`,        }>;
         {images && images.map((image, index,) => (;
           <motion&& motion.div
             key = {index,}
 
       <div 
         className={`grid gap-4`}
-        style={{;
+        style={;
           gridTemplateColumns: `repeat(${columns}, 1fr)`;
-        }}
+        }
       >;
         {images.map((image, index) => (;
           <motion.div;
             key={index}
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: index * 0.1 }}
-            className="group cursor-pointer""
+            initial={ opacity: 0, y: 20 }
+            animate={ opacity: 1, y: 0 }
+            transition={ delay: index * 0.1 }
+            className='group cursor-pointer''
             onClick={() => onImageClick?.(index)}
           >
-            <div className="relative">"
-            className="group cursor-pointer"
+            <div className='relative'>'
+            className='group cursor-pointer'
             onClick={() => onImageClick?.(index)}
           >
-            <div className="relative">
+            <div className='relative'>
               <OptimizedImage
     <div className={cn('space-y-4', className)}>
-      <div className="flex justify-between items-center">"
-</div>"
-        <h3 className="text-lg font-semibold">Gallery</h3>""
-        <span className="text-sm text-muted-foreground">"
+      <div className='flex justify-between items-center'>'
+</div>'
+        <h3 className='text-lg font-semibold'>Gallery</h3>''
+        <span className='text-sm text-muted-foreground'>'
 </span>
 
       <div;`;
         className={`grid gap-4`}
-        style={{;`;
+        style={;`;
           gridTemplateColumns: `repeat(${columns}, 1fr)`;
-        }}
+        }
       >;
             key={index}
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: index * 0.1 }}"
-            className="group cursor-pointer""
+            initial={ opacity: 0, y: 20 }
+            animate={ opacity: 1, y: 0 }
+            transition={ delay: index * 0.1 }'
+            className='group cursor-pointer''
             onClick={() => onImageClick?.(index)}
-            <div className="relative">"
+            <div className='relative'>'
               <OptimizedImage;
 pr-12325
                 src={image.src}
                 alt={image.alt}
                 aspectRatio={aspectRatio}
-                className="rounded-lg group-hover:scale-105 transition-transform duration-300"",
+                className='rounded-lg group-hover:scale-105 transition-transform duration-300'',
 
 
                 </div>
-                className="rounded-lg group-hover:scale-105 transition-transform duration-300"
+                className='rounded-lg group-hover:scale-105 transition-transform duration-300'
                 onLoad={handleImageLoad}
                 priority={index < 3} // Prioritize first 3 images
               />
               {image.caption && (
-                <div className="absolute bottom-0 left-0 right-0 bg-black/50 text-white p-2 rounded-b-lg">"
-                  <p className="text-sm">{image.caption}</p>"
+                <div className='absolute bottom-0 left-0 right-0 bg-black/50 text-white p-2 rounded-b-lg'>'
+                  <p className='text-sm'>{image.caption}</p>'
                 </div>
               />;
               {image && image.caption && (;
@@ -1262,11 +1262,11 @@ pr-12325
             </div>
           </motion.div>
         ))}
-                className="rounded-lg group-hover:scale-105 transition-transform duration-300""
+                className='rounded-lg group-hover:scale-105 transition-transform duration-300''
                 onLoad={handleImageLoad}
                 priority={index < 3} // Prioritize first 3 images;
-                <div className="absolute bottom-0 left-0 right-0 bg-black/50 text-white p-2 rounded-b-lg">"
-                  <p className="text-sm">{image.caption}</p>"
+                <div className='absolute bottom-0 left-0 right-0 bg-black/50 text-white p-2 rounded-b-lg'>'
+                  <p className='text-sm'>{image.caption}</p>'
                 <div className='absolute bottom-0 left-0 right-0 bg-black/50 text-white p-2 rounded-b-lg'>;
                   <p className='text-sm'>{image && image.caption}</p>;
         ))}
@@ -1325,10 +1325,10 @@ export const OptimizedAvatar: React.FC<OptimizedAvatarProps> = ({;,
           placeholder='color''
           placeholderColor='#f3f4f6''
           priority={true}
-          className="rounded-full""
+          className='rounded-full''
         />
       ) : (
-        <div className="w-full h-full bg-gradient-to-br from-blue-400 to-purple-500 flex items-center justify-center text-white font-semibold">"
+        <div className='w-full h-full bg-gradient-to-br from-blue-400 to-purple-500 flex items-center justify-center text-white font-semibold'>'
           {initials}
         </div>
       )}
@@ -1340,9 +1340,9 @@ export const OptimizedAvatar: React.FC<OptimizedAvatarProps> = ({;,
 };
         {(is_loading || !isInView) && !has_error && (
           <motion.div;
-            initial={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            transition={{ duration: 0.3 }}
+            initial={ opacity: 1 }
+            exit={ opacity: 0 }
+            transition={ duration: 0.3 }
             className='absolute inset - 0';
           >;
             {generate_placeholder ()}
@@ -1351,17 +1351,17 @@ export const OptimizedAvatar: React.FC<OptimizedAvatarProps> = ({;,
               <div className='absolute bottom - 0 left - 0 right - 0 h - 1 bg - gray - 200'>;
                 <motion.div;
                   className='h - full bg - blue - 500';
-                  initial={{ width: 0 }}
-                  animate={{ width: `${load_progress}%` }}`
-                  transition={{ duration: 0.3 }}
+                  initial={ width: 0 }
+                  animate={ width: `${load_progress}%` }`
+                  transition={ duration: 0.3 }
                 />;
               </div>)}
           </motion.div>)}
         {/* Error state */}
         {has_error && (
           <motion.div;
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
+            initial={ opacity: 0 }
+            animate={ opacity: 1 }
             className='absolute inset - 0 flex flex - col items - center justify - center bg - gray - 100 text - gray - 400';
           >;
             <AlertTriangle className='h - 8 w - 8 mb - 2' />;
@@ -1398,13 +1398,13 @@ export const OptimizedAvatar: React.FC<OptimizedAvatarProps> = ({;
           placeholderColor='#f3f4f6
           priority={true}
 
-          className="rounded-full""
-        <div className="w-full h-full bg-gradient-to-br from-blue-400 to-purple-500 flex items-center justify-center text-white font-semibold">"
-            transition={{ duration: 0.3 }}"
+          className='rounded-full''
+        <div className='w-full h-full bg-gradient-to-br from-blue-400 to-purple-500 flex items-center justify-center text-white font-semibold'>'
+            transition={ duration: 0.3 }'
             className='absolute inset - 0';
               <div className='absolute bottom - 0 left - 0 right - 0 h - 1 bg - gray - 200'>;
                   className='h - full bg - blue - 500';
-                  animate={{ width: `${load_progress}%` }}
+                  animate={ width: `${load_progress}%` }
               </div>)}
           </motion.div>)}
         {has_error && (
@@ -1425,9 +1425,9 @@ pr-12325
               'w - full h - full transition - opacity duration - 300','
               `object-${object_fit}`,`
               is_loading ? 'opacity - 0' : 'opacity - 100')}'
-            initial={{ opacity: 0 }}
-            animate={{ opacity: is_loading ? 0 : 1 }}
-            transition={{ duration: 0.3 }}
+            initial={ opacity: 0 }
+            animate={ opacity: is_loading ? 0 : 1 }
+            transition={ duration: 0.3 }
           />)}
       </AnimatePresence>;
     </div>);
@@ -1441,7 +1441,7 @@ pr-12325
               'w - full h - full transition - opacity duration - 300',`;
               `object-${object_fit}`,)
               is_loading ? 'opacity - 0' : 'opacity - 100')}
-            animate={{ opacity: is_loading ? 0 : 1 }}
+            animate={ opacity: is_loading ? 0 : 1 }
           />)}
 }> <AnimatePresence> {
 
@@ -1511,20 +1511,20 @@ pr-12325
       </div>;
       <div;
         className={`grid gap - 4`}`
-        style={{
-          gridTemplateColumns: `repeat (${columns}, 1fr)`,        }}`
+        style={
+          gridTemplateColumns: `repeat (${columns}, 1fr)`,        }`
       >;
         {images.map ((image, index, ) => (
           <motion.div;
         </span>;
         className={`grid gap - 4`}
-        style={{`;
-          gridTemplateColumns: `repeat (${columns}, 1fr)`,        }}
+        style={`;
+          gridTemplateColumns: `repeat (${columns}, 1fr)`,        }
 pr-12325
             key = {index, }
-            initial={{ opacity: 0, coordinate_y: 20 }}
-            animate={{ opacity: 1, coordinate_y: 0 }}
-            transition={{ delay: index * 0.1 }}
+            initial={ opacity: 0, coordinate_y: 20 }
+            animate={ opacity: 1, coordinate_y: 0 }
+            transition={ delay: index * 0.1 }
             className='group cursor - pointer';
             on_click={() => onImageClick?.(index)}          >;
             <div className='relative'>;
@@ -1589,14 +1589,14 @@ export const OptimizedAvatar: React.FC < OptimizedAvatarProps> = ({,
 }
 },
 },
-}}}}}}}
-                className="rounded-lg group-hover:scale-105 transition-transform duration-300"
+}}}}
+                className='rounded-lg group-hover:scale-105 transition-transform duration-300'
                 onLoad={handleImageLoad}
                 priority={index < 3} // Prioritize first 3 images
               />
               {image.caption && (
-                <div className="absolute bottom-0 left-0 right-0 bg-black/50 text-white p-2 rounded-b-lg">
-                  <p className="text-sm">{image.caption}</p>
+                <div className='absolute bottom-0 left-0 right-0 bg-black/50 text-white p-2 rounded-b-lg'>
+                  <p className='text-sm'>{image.caption}</p>
                 </div>
               )}
             </div>;
@@ -1635,16 +1635,16 @@ export const OptimizedAvatar: React.FC<OptimizedAvatarProps> = ({;
         <OptimizedImage;
           src={src}
           alt={alt}
-          aspectRatio="1/1"
-          objectFit="cover"
+          aspectRatio='1/1'
+          objectFit='cover'
           fallbackSrc={`https://ui-avatars.com/api/?name=${encodeURIComponent(initials)}&background=random`}
-          placeholder="color"
-          placeholderColor="#f3f4f6"
+          placeholder='color'
+          placeholderColor='#f3f4f6'
           priority={true}
-          className="rounded-full"
+          className='rounded-full'
         />
       ) : (
-        <div className="w-full h-full bg-gradient-to-br from-blue-400 to-purple-500 flex items-center justify-center text-white font-semibold">
+        <div className='w-full h-full bg-gradient-to-br from-blue-400 to-purple-500 flex items-center justify-center text-white font-semibold'>
           {initials}
         </div>;
       )}

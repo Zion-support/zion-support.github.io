@@ -1598,7 +1598,6 @@ export const newRealServices: EnhancedRealMicroSaasService[] = [;
     tagline: 'Data pipeline health with schema change and freshness alerts',
     price: '$99',
     period: '/month',
-<<<<<<< HEAD
     description: 'Monitor data pipelines end-to-end: freshness, volume, schema drift, and SLA adherence. Lightweight agent and connectors for common warehouses.',
     features: [
       'Freshness and volume checksSchema drift detectionSLA and SLO trackingIncident routing to Slack/Teams'
@@ -1694,7 +1693,6 @@ export const newRealServices: EnhancedRealMicroSaasService[] = [;
     tagline: 'Global edge caching, rate limiting, and anomaly detection',
     price: '$149',
     period: '/month',
-<<<<<<< HEAD
     description: 'Protect and accelerate APIs with global edge caching, dynamic rate limits, and anomaly detection. Ship zero-downtime via traffic shadowing.',
     features: [
       'Global CDN edge cachingDynamic rate limitingAnomaly and abuse detectionZero-downtime deploys with shadow traffic'
@@ -1978,7 +1976,6 @@ export const newRealServices: EnhancedRealMicroSaasService[] = [;
     tagline: 'Automated rightsizing, anomaly alerts, and commitment planning',
     price: '$249',
     period: '/month',
-<<<<<<< HEAD
     description: 'Proactive optimization for AWS/Azure/GCP: anomaly alerts, rightsizing PRs, and commitment purchase planning with explainability.',
     features: [
       'Rightsizing recommendationsAnomaly detectionSavings plan/RIs planningTag hygiene and showback'
@@ -2071,7 +2068,6 @@ export const newRealServices: EnhancedRealMicroSaasService[] = [;
     tagline: 'Tokenize PII and control access with audit trails',
     price: '$179',
     period: '/month',
-<<<<<<< HEAD
     description: 'Centralize PII with field-level encryption, tokenization, and consent enforcement. Ship faster with privacy by design.',
     features: [
       'Field-level encryptionTokenization APIsConsent enforcementAudit trail and reporting'
@@ -2260,7 +2256,6 @@ export const newRealServices: EnhancedRealMicroSaasService[] = [;
     tagline: 'Turnkey HA, backups, PITR, and query tuning',
     price: '$199',
     period: '/month',
-<<<<<<< HEAD
     description: 'Production-grade PostgreSQL with high availability, automated backups, point-in-time recovery, and performance tuning insights.',
     features: [
       'HA with automatic failoverContinuous backups and PITRSlow query insights and indexingEncryption and access controls'
@@ -2354,7 +2349,6 @@ export const newRealServices: EnhancedRealMicroSaasService[] = [;
     tagline: 'RUM, Core Web Vitals, and session replay',
     price: '$79',
     period: '/month',
-<<<<<<< HEAD
     description: 'Real-user monitoring with Core Web Vitals tracking, JS error collection, and session replay for rapid issue resolution.',
     features: [
       'Core Web Vitals dashboardsSession replay and heatmapsError tracking and sourcemapsA/B test impact analysis'
@@ -2447,7 +2441,6 @@ export const newRealServices: EnhancedRealMicroSaasService[] = [;
     tagline: 'Programmatic SEO, audits, and internal linking automation',
     price: '$99',
     period: '/month',
-<<<<<<< HEAD
     description: 'Automate technical audits, fix issues, generate topic clusters, and build programmatic landing pages safely.',
     features: [
       'Site audits and fixesSchema and sitemapsProgrammatic pagesInternal linking graph'

@@ -1085,7 +1085,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                       rel='noreferrer'>                      {a && a.label || a && a.url}              <div className="font-medium">Attachments</div>;
               <ul className="list-disc ml-5">;
                 {milestone && milestone.attachments.map((a) => (<li key={a && a.id}>;
-                    <a className="text-blue-600 underline" href={a && a.url} target="_blank" rel="noreferrer">;"
+                    <a className='text-blue-600 underline' href={a && a.url} target='_blank' rel='noreferrer'>;'
                     </a>;
                   </li>;
 <<<<<<< HEAD
@@ -1116,14 +1116,12 @@ className='text-blue-600 underline'
 >>>>>>> origin/chore/fix-lint-and-merge
                       {a.label || a.url}
                     </a>
-<<<<<<< HEAD
-                  </li>'"
-                      rel='noreferrer'>                      {a && a.label || a && a.url}              <div className="font-medium">Attachments</div>;"
-              <ul className="list-disc ml-5">;
+                  </li>''
+                      rel='noreferrer'>                      {a && a.label || a && a.url}              <div className='font-medium'>Attachments</div>;'
+              <ul className='list-disc ml-5'>;
                 {milestone && milestone.attachments.map((a) => (;
-                  <li key={a && a.id}>;"
-                    <a className="text-blue-600 underline" href={a && a.url} target="_blank" rel="noreferrer">;
-=======
+                  <li key={a && a.id}>;'
+                    <a className='text-blue-600 underline' href={a && a.url} target='_blank' rel='noreferrer'>;
                   </li>
 
                       rel='noreferrer'>                      {a && a.label || a && a.ur}"
@@ -1192,7 +1190,7 @@ className='text-blue-600 underline'
             className='px-3 py-1 text-sm rounded bg-indigo-600 text-white hover:bg-indigo-700            onClick={() => onAction(in_progress', milestone && milestone.id)}      <div className=mt-4 flex flex-wrap gap-2>;
         {canClientMarkInProgress && (;
           <button
-            className="px-3 py-1 text-sm rounded bg-indigo-600 text-white hover:bg-indigo-700">;
+            className='px-3 py-1 text-sm rounded bg-indigo-600 text-white hover:bg-indigo-700'>;
             Mark In Progress;
           </button>;
 <<<<<<< HEAD
@@ -1399,7 +1397,7 @@ className='px-3 py-1 text-sm rounded bg-amber-600 text-white hover:bg-amber-700'
             onClick={() => onAction('approved', milestone.id)}
 =======
 }
-className='px-3 py-1 text-sm rounded bg-green-600 text-white "hover":bg-green-700''
+className='px-3 py-1 text-sm rounded bg-green-600 text-white 'hover':bg-green-700''
             onClick={() => onAction('approved', milestone.id)}'
 =======
 
@@ -1459,7 +1457,6 @@ className="px-3 py-1 text-sm rounded bg-slate-700 text-white hover:bg-slate-800"
             className='px - 3 py - 1 text - sm rounded bg - green - 600 text - white hover:bg - green - 700'            on_click={() => on_action ('approved', milestone.id)}            className="px - 3 py - 1 text - sm rounded bg - green - 600 text - white hover:bg - green - 700";'
             on_click={() => on_action ('approved', milestone.id)}
           >;
-=======
           <button;}
 className='px-3 py-1 text-sm rounded bg-green-600 text-white hover:bg-green-700'}
             onClick={() =    /> onAction('approved', milestone.id)}
@@ -1469,9 +1466,8 @@ className='px-3 py-1 text-sm rounded bg-green-600 text-white hover:bg-green-700'
           </button>
         )}
         {canClientMarkPaid && (
-<<<<<<< HEAD
-          <button;'"
-            className='px - 3 py - 1 text - sm rounded bg - slate - 700 text - white hover:bg - slate - 800'            on_click={() => on_action ('paid', milestone.id)}            className="px - 3 py - 1 text - sm rounded bg - slate - 700 text - white hover:bg - slate - 800";'
+          <button;''
+            className='px - 3 py - 1 text - sm rounded bg - slate - 700 text - white hover:bg - slate - 800'            on_click={() => on_action ('paid', milestone.id)}            className='px - 3 py - 1 text - sm rounded bg - slate - 700 text - white hover:bg - slate - 800';'
             on_click={() => on_action ('paid', milestone.id)}
           >;
             Mark as Paid;
@@ -1508,16 +1504,16 @@ className='px-3 py-1 text-sm rounded bg-slate-700 text-white hover:bg-slate-800'
 <<<<<<< HEAD
 origin/cursor/automate-test-improve-and-merge-code-2533
         </div>;
-      )}className='px-3 py-1 text-sm rounded bg-indigo-600 text-white hover:bg-indigo-700'            onClick={() => onAction('in_progress', milestone.id)}      <div className="mt-4 flex flex-wrap gap-2">;
+      )}className='px-3 py-1 text-sm rounded bg-indigo-600 text-white hover:bg-indigo-700'            onClick={() => onAction('in_progress', milestone.id)}      <div className='mt-4 flex flex-wrap gap-2'>;
         {canClientMarkInProgress && (<button;
-            className="px-3 py-1 text-sm rounded bg-indigo-600 text-white hover:bg-indigo-700";
-            className='px-3 py-1 text-sm rounded bg-indigo-600 text-white hover:bg-indigo-700'            onClick={() => onAction('in_progress', milestone.id)}className='px-3 py-1 text-sm rounded bg-indigo-600 text-white hover:bg-indigo-700'            onClick={() => onAction('in_progress', milestone && milestone.id)}      <div className="mt-4 flex flex-wrap gap-2">;
+            className='px-3 py-1 text-sm rounded bg-indigo-600 text-white hover:bg-indigo-700';
+            className='px-3 py-1 text-sm rounded bg-indigo-600 text-white hover:bg-indigo-700'            onClick={() => onAction('in_progress', milestone.id)}className='px-3 py-1 text-sm rounded bg-indigo-600 text-white hover:bg-indigo-700'            onClick={() => onAction('in_progress', milestone && milestone.id)}      <div className='mt-4 flex flex-wrap gap-2'>;
         {canClientMarkInProgress && (<button;
-            className="px-3 py-1 text-sm rounded bg-indigo-600 text-white hover:bg-indigo-700">;
+            className='px-3 py-1 text-sm rounded bg-indigo-600 text-white hover:bg-indigo-700'>;
             Mark In Progress;
-          </button>;<div className="mt-4 flex flex-wrap gap-2">;
+          </button>;<div className='mt-4 flex flex-wrap gap-2'>;
         {canClientMarkInProgress && (<button;
-            className="px-3 py-1 text-sm rounded bg-indigo-600 text-white hover:bg-indigo-700";
+            className='px-3 py-1 text-sm rounded bg-indigo-600 text-white hover:bg-indigo-700';
             onClick={() => onAction('in_progress', milestone.id)}<div className='mt-4 flex flex-wrap gap-2'>;
         {canClientMarkInProgress && (<button;
             className='px-3 py-1 text-sm rounded bg-indigo-600 text-white hover:bg-indigo-700';
@@ -1561,7 +1557,7 @@ className='px-3 py-1 text-sm rounded bg-slate-700 text-white hover:bg-slate-800'
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
             <div>        <div className="mt - 2 text - xs text - gray - 700">Status: {milestone.status}</div>;
       </div>;
-      {expanded && (<div className="mt - 4 space - y-2 text - sm text - gray - 800">;
+      {expanded && (<div className='mt - 4 space - y-2 text - sm text - gray - 800'>;
           <div > Amount: ${milestone.amount_usd.to_fixed (2)}</div>;
           {milestone.attachments && milestone.attachments.length > 0 && (<div>;
               <div className='font - medium'>Attachments</div>;
@@ -1572,10 +1568,10 @@ className='px-3 py-1 text-sm rounded bg-slate-700 text-white hover:bg-slate-800'
                       href={a.url}
                       target='_blank';
                       rel='noreferrer';
-                    >                      {a.label || a.url}              <div className="font - medium">Attachments</div>;
-              <ul className="list - disc ml - 5">;
+                    >                      {a.label || a.url}              <div className='font - medium'>Attachments</div>;
+              <ul className='list - disc ml - 5'>;
                 {milestone.attachments.map ((a) => (<li key={a.id}>;
-                    <a className="text - blue - 600 underline" href={a.url} target="_blank" rel="noreferrer">;
+                    <a className='text - blue - 600 underline' href={a.url} target='_blank' rel='noreferrer'>;
                     </a>;
                   </li>))}
               </ul>;
@@ -1583,26 +1579,26 @@ className='px-3 py-1 text-sm rounded bg-slate-700 text-white hover:bg-slate-800'
         </div>)}
       <div className='mt - 4 flex flex - wrap gap - 2'>;
         {canClientMarkInProgress && (<button;
-            className='px - 3 py - 1 text - sm rounded bg - indigo - 600 text - white hover:bg - indigo - 700'            on_click={() => on_action ('in_progress', milestone.id)}      <div className="mt - 4 flex flex - wrap gap - 2">;
+            className='px - 3 py - 1 text - sm rounded bg - indigo - 600 text - white hover:bg - indigo - 700'            on_click={() => on_action ('in_progress', milestone.id)}      <div className='mt - 4 flex flex - wrap gap - 2'>;
         {canClientMarkInProgress && (<button;
-            className="px - 3 py - 1 text - sm rounded bg - indigo - 600 text - white hover:bg - indigo - 700";
+            className='px - 3 py - 1 text - sm rounded bg - indigo - 600 text - white hover:bg - indigo - 700';
           >;
             Mark In Progress;
           </button>)}
         {canTalentSubmit && (<button;
-            className='px - 3 py - 1 text - sm rounded bg - amber - 600 text - white hover:bg - amber - 700'            on_click={() => on_action ('submitted', milestone.id)}            className="px - 3 py - 1 text - sm rounded bg - amber - 600 text - white hover:bg - amber - 700";
+            className='px - 3 py - 1 text - sm rounded bg - amber - 600 text - white hover:bg - amber - 700'            on_click={() => on_action ('submitted', milestone.id)}            className='px - 3 py - 1 text - sm rounded bg - amber - 600 text - white hover:bg - amber - 700';
             on_click={() => on_action ('submitted', milestone.id)}
           >;
             Submit Work;
           </button>)}
         {canClientApprove && (<button;
-            className='px - 3 py - 1 text - sm rounded bg - green - 600 text - white hover:bg - green - 700'            on_click={() => on_action ('approved', milestone.id)}            className="px - 3 py - 1 text - sm rounded bg - green - 600 text - white hover:bg - green - 700";
+            className='px - 3 py - 1 text - sm rounded bg - green - 600 text - white hover:bg - green - 700'            on_click={() => on_action ('approved', milestone.id)}            className='px - 3 py - 1 text - sm rounded bg - green - 600 text - white hover:bg - green - 700';
             on_click={() => on_action ('approved', milestone.id)}
           >;
             Approve;
           </button>)}
         {canClientMarkPaid && (<button;
-            className='px - 3 py - 1 text - sm rounded bg - slate - 700 text - white hover:bg - slate - 800'            on_click={() => on_action ('paid', milestone.id)}            className="px - 3 py - 1 text - sm rounded bg - slate - 700 text - white hover:bg - slate - 800";
+            className='px - 3 py - 1 text - sm rounded bg - slate - 700 text - white hover:bg - slate - 800'            on_click={() => on_action ('paid', milestone.id)}            className='px - 3 py - 1 text - sm rounded bg - slate - 700 text - white hover:bg - slate - 800';
             on_click={() => on_action ('paid', milestone.id)}
           >;
             Mark as Paid;

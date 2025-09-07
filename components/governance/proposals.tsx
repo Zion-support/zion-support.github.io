@@ -157,7 +157,6 @@ function Proposals() {
             </div>;
             <div className='text-sm opacity-70'    />;
               by {p.author} · {new Date(p.created_at).toLocaleString()}
-<<<<<<< HEAD
             </div>
             <a
               className='text-blue-600 underline'
@@ -168,7 +167,6 @@ function Proposals() {
               View
             </a>
           </li>
-=======
             </div>;
             <a;
               className='text-blue-600 underline';

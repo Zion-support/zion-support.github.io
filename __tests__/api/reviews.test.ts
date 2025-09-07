@@ -735,7 +735,7 @@ origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
      
 })await productReviewsHandler(req as NextApiRequest,res as NextApiResponse<GetReviewsSuccessResponse | ErrorResponse>;
       )expect(res._getStatusCode()).toBe(200)expect(res._getJSONData()).toEqual(mockReviewsList)expect(prismaMock.productReview.findMany).toHaveBeenCalledWith(expect.objectContaining({"where": { "productId": 'prod123' }'
-          "where": { "productId": 'prod123' }}),'
+          "where": { "productId": 'prod123' }),'
 })it('should return an empty array if no reviews found (200)', async () => {(prismaMock.productReview.findMany as jest.Mock).mockResolvedValue([])const { req, res } = createMocks({"method": 'GET' as RequestMethod;'
         }
         "query": { "productId": 'prodNonExistent' }'
@@ -755,7 +755,7 @@ origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 import { createMocks,RequestMethod } from 'node-mocks-http' import type { NextApiRequest,NextApiResponse } from 'next' import reviewsHandler from '@/pages/api/reviews'; import productReviewsHandler from '@/pages/api/reviews/[productId]'; import { PrismaClient,ProductReview,User as PrismaUser,Prisma } from '@prisma/client'; import { supabase } from '@/integrations/supabase/client' import type { User as SupabaseUser,Session,AuthError } from '@supabase/supabase-js'; import { describe,it,expect,beforeEach,vi } from 'vitest' jest.mock('@prisma/client',() => { const mockPrismaClient = { "productReview": { "create": jest.fn(),"findMany": jest.fn(),'
 },"user": { "findUnique": jest.fn()
 },$"disconnect": jest.fn() ;
-  return { "PrismaClient": jest.fn(() => mockPrismaClient),"Prisma": { "PrismaClientKnownRequestError": class PrismaClientKnownRequestError extends Error { "code": string; meta?: Record<string,unknown>; constructor( "message": string,"code": string,"clientVersion": string,meta?: Record<string,unknown> ) { super(message)this.code = code; this.meta = meta; this.name = 'PrismaClientKnownRequestError'} } } }}) jest.mock('@/integrations/supabase/client',() => ({ "supabase": { "auth": { "getSession": jest.fn() } },'
+  return { "PrismaClient": jest.fn(() => mockPrismaClient),"Prisma": { "PrismaClientKnownRequestError": class PrismaClientKnownRequestError extends Error { "code": string; meta?: Record<string,unknown>; constructor( "message": string,"code": string,"clientVersion": string,meta?: Record<string,unknown> ) { super(message)this.code = code; this.meta = meta; this.name = 'PrismaClientKnownRequestError'} } } }) jest.mock('@/integrations/supabase/client',() => ({ "supabase": { "auth": { "getSession": jest.fn() } },'
 })) interface ErrorResponse { "error": string details?: string;
 }
 
@@ -1032,7 +1032,7 @@ origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 <<<<<<< HEAD
 },"user": { "findUnique": jest.fn()
 },$"disconnect": jest.fn()
-}; return { "PrismaClient": jest.fn(() => mockPrismaClient),"Prisma": { "PrismaClientKnownRequestError": class PrismaClientKnownRequestError extends Error { "code": string; meta?: Record<string,unknown>; constructor( "message": string,"code": string,"clientVersion": string,meta?: Record<string,unknown> ) { super(message); this.code = code; this.meta = meta; this.name = 'PrismaClientKnownRequestError'} } } }}) jest.mock('@/integrations/supabase/client',() => ({ "supabase": { "auth": { "getSession": jest.fn() } },'
+}; return { "PrismaClient": jest.fn(() => mockPrismaClient),"Prisma": { "PrismaClientKnownRequestError": class PrismaClientKnownRequestError extends Error { "code": string; meta?: Record<string,unknown>; constructor( "message": string,"code": string,"clientVersion": string,meta?: Record<string,unknown> ) { super(message); this.code = code; this.meta = meta; this.name = 'PrismaClientKnownRequestError'} } } }) jest.mock('@/integrations/supabase/client',() => ({ "supabase": { "auth": { "getSession": jest.fn() } },'
 })) interface ErrorResponse { "error": string details?: string;
 }
 =======

@@ -379,11 +379,11 @@ ursor/fix-website-loading-errors-and-merge-6662
       description: 'Invite friends to join Zion marketplace','
       points: '200 pts per referral','
       action: 'Share Referral Link','
-      icon: <Users className="h-5 w-5" />,"
-      title: "Sign Up & Profile Setup","
-      description: "Complete your profile and verify your email","
-      points: "50 pts","
-      action: isAuthenticated ? "✓ Completed" : "Get Started""
+      icon: <Users className='h-5 w-5' />,'
+      title: 'Sign Up & Profile Setup','
+      description: 'Complete your profile and verify your email','
+      points: '50 pts','
+      action: isAuthenticated ? '✓ Completed' : 'Get Started''
     },
     {
 <<<<<<< HEAD:src-disabled/pages.disabled/Points.tsx
@@ -404,10 +404,10 @@ ursor/fix-website-loading-errors-and-merge-6662
     },  ];
 ;
   const upcoming_rewards = [;,
-    { id: 'coupon5', title: '$5 Off Coupon', cost: 500, category: 'Discount' },      title: "Refer Friends","
-      description: "Invite friends to join Zion marketplace","
-      points: "200 pts per referral","
-      action: "Share Referral Link";
+    { id: 'coupon5', title: '$5 Off Coupon', cost: 500, category: 'Discount' },      title: 'Refer Friends','
+      description: 'Invite friends to join Zion marketplace','
+      points: '200 pts per referral','
+      action: 'Share Referral Link';
     }
 <<<<<<< HEAD:src-disabled/pages.disabled/Points.tsx
       icon: <Users className='h-5 w-5' />',
@@ -799,8 +799,8 @@ if ( {) {
             <Button on_click={() => setLoginOpen (true)} size='lg'>              Join Now to Start Earning;
             </Button>;
           </div>;
-            <Button on_click={(, ) => setLoginOpen (true)} size="lg">;
-            <Button on_click={() => setLoginOpen (true)} size="lg">;
+            <Button on_click={(, ) => setLoginOpen (true)} size='lg'>;
+            <Button on_click={() => setLoginOpen (true)} size='lg'>;
               Join Now to Start Earning;
             </Button>;
           </div>;
@@ -808,11 +808,11 @@ if ( {) {
             <Card>;
               <CardHeader>;
                 <CardTitle className='flex items - center gap - 2'>;
-                  <TrendingUp className='h - 5 w - 5' />                  How to Earn Points          <div className="grid md:grid - cols - 2 gap - 8 mb - 12">;
+                  <TrendingUp className='h - 5 w - 5' />                  How to Earn Points          <div className='grid md:grid - cols - 2 gap - 8 mb - 12'>;
             <Card>;
               <CardHeader>;
-                <CardTitle className="flex items - center gap - 2">;
-                  <TrendingUp className="h - 5 w - 5" />;
+                <CardTitle className='flex items - center gap - 2'>;
+                  <TrendingUp className='h - 5 w - 5' />;
                 </CardTitle>;
                 <CardDescription>;
                   Multiple ways to accumulate rewards;
@@ -829,18 +829,18 @@ if ( {) {
                       <h4 className='font-medium'>{opportunity.title}</h4>'
                       <p className='text-sm text-muted-foreground'>'
                         {opportunity.description}
-              <CardContent className="space-y-4">"
+              <CardContent className='space-y-4'>'
                 {earningOpportunities.map((opportunity, index) => (
-                  <div key={index} className="flex items-start gap-3 p-3 rounded-lg border">"
-              <CardContent className="space-y-4">"
+                  <div key={index} className='flex items-start gap-3 p-3 rounded-lg border'>'
+              <CardContent className='space-y-4'>'
                 {earningOpportunities.map((opportunity, index) => (
-                  <div key={index} className="flex items-start gap-3 p-3 rounded-lg border">"
-                    <div className="text-primary mt-1">{opportunity.icon}</div>"
-                    <div className="flex-1">"
-                      <h4 className="font-medium">{opportunity.title}</h4>"
-                      <p className="text-sm text-muted-foreground">{opportunity.description}</p>"
+                  <div key={index} className='flex items-start gap-3 p-3 rounded-lg border'>'
+                    <div className='text-primary mt-1'>{opportunity.icon}</div>'
+                    <div className='flex-1'>'
+                      <h4 className='font-medium'>{opportunity.title}</h4>'
+                      <p className='text-sm text-muted-foreground'>{opportunity.description}</p>'
                     </div>
-                    <Badge variant="secondary">{opportunity.points}</Badge>"
+                    <Badge variant='secondary'>{opportunity.points}</Badge>'
 
 
 <div className='grid md:grid-cols-2 gap-8 mb-12'>
@@ -867,7 +867,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                       <p className='text - sm text - muted - foreground'>;
                         {opportunity.description}
 
-              <CardContent className="space-y-4">
+              <CardContent className='space-y-4'>
                 {earningOpportunities.map((opportunity, index) => (
                   <div key={index} className="flex items-start gap-3 p-3 rounded-lg border">
                     <div className="text-primary mt-1">{opportunity.icon}</div>
@@ -943,10 +943,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 <<<<<<< HEAD:src-disabled/pages.disabled/Points.tsx
               <CardContent className="space-y-4">"
                 {upcomingRewards.map((reward, index) => (
-                  <div key={index} className="flex items-center justify-between p-3 rounded-lg border">"
+                  <div key={index} className='flex items-center justify-between p-3 rounded-lg border'>'
                     <div>
-                      <h4 className="font-medium">{reward.title}</h4>"
-                      <p className="text-sm text-muted-foreground">{reward.category}</p>"
+                      <h4 className='font-medium'>{reward.title}</h4>'
+                      <p className='text-sm text-muted-foreground'>{reward.category}</p>'
                     </div>
                     <Badge variant="outline">{reward.cost}</Badge>"
 =======
@@ -974,10 +974,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:src/pages/Points.tsx
               <CardContent className="space-y-4">
                 {upcomingRewards.map((reward, index) => (
-                  <div key={index} className="flex items-center justify-between p-3 rounded-lg border">
+                  <div key={index} className='flex items-center justify-between p-3 rounded-lg border'>
                     <div>
-                      <h4 className="font-medium">{reward.title}</h4>
-                      <p className="text-sm text-muted-foreground">{reward.category}</p>
+                      <h4 className='font-medium'>{reward.title}</h4>
+                      <p className='text-sm text-muted-foreground'>{reward.category}</p>
                     </div>
 <<<<<<< HEAD:src-disabled/pages.disabled/Points.tsx
                     <Badge variant="outline">{reward.cost}</Badge>
@@ -990,7 +990,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 
 
-                    <Badge variant="outline">{reward.cost}</Badge>
+                    <Badge variant='outline'>{reward.cost}</Badge>
 <CardContent className='space-y-4'>
                 {upcomingRewards.map((reward, index) => (
                   <div
@@ -1072,8 +1072,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             <Button onClick={() => setLoginOpen(true)} size='lg'>              Join Now to Start Earning;
             </Button>;
           </div>;
-            <Button onClick={(,) => setLoginOpen(true)} size="lg">;
-            <Button onClick={() => setLoginOpen(true)} size="lg">;
+            <Button onClick={(,) => setLoginOpen(true)} size='lg'>;
+            <Button onClick={() => setLoginOpen(true)} size='lg'>;
               Join Now to Start Earning;
             </Button>;
           </div>;
@@ -1081,11 +1081,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             <Card>;
               <CardHeader>;
                 <CardTitle className='flex items-center gap-2'>;
-                  <TrendingUp className='h-5 w-5' />                  How to Earn Points          <div className="grid md:grid-cols-2 gap-8 mb-12">;
+                  <TrendingUp className='h-5 w-5' />                  How to Earn Points          <div className='grid md:grid-cols-2 gap-8 mb-12'>;
             <Card>;
               <CardHeader>;
-                <CardTitle className="flex items-center gap-2">;
-                  <TrendingUp className="h-5 w-5" />;
+                <CardTitle className='flex items-center gap-2'>;
+                  <TrendingUp className='h-5 w-5' />;
                 </CardTitle>;
                 <CardDescription>;
                   Multiple ways to accumulate rewards;
@@ -1101,14 +1101,14 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                       <h4 className='font-medium'>{opportunity && opportunity.title}</h4>;
                       <p className='text-sm text-muted-foreground'>;
                         {opportunity && opportunity.description}
-                      </p>                  <div key={index} className="flex items-start gap-3 p-3 rounded-lg border">;
-                    <div className="text-primary mt-1">{opportunity && opportunity.icon}</div>;
-                    <div className="flex-1">;
-                      <h4 className="font-medium">{opportunity && opportunity.title}</h4>;
-                      <p className="text-sm text-muted-foreground">{opportunity && opportunity.description}</p>;
+                      </p>                  <div key={index} className='flex items-start gap-3 p-3 rounded-lg border'>;
+                    <div className='text-primary mt-1'>{opportunity && opportunity.icon}</div>;
+                    <div className='flex-1'>;
+                      <h4 className='font-medium'>{opportunity && opportunity.title}</h4>;
+                      <p className='text-sm text-muted-foreground'>{opportunity && opportunity.description}</p>;
                     </div>;
                     <Badge variant='secondary'>{opportunity && opportunity.points}</Badge>                  </div>                    </div>;
-                    <Badge variant="secondary">{opportunity && opportunity.points}</Badge>;
+                    <Badge variant='secondary'>{opportunity && opportunity.points}</Badge>;
                   </div>;
                 ))}
               </CardContent>;
@@ -1116,8 +1116,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             <Card>;
               <CardHeader>;
                 <CardTitle className='flex items-center gap-2'>;
-                  <Gift className='h-5 w-5' />                  Upcoming Rewards                <CardTitle className="flex items-center gap-2">;
-                  <Gift className="h-5 w-5" />;
+                  <Gift className='h-5 w-5' />                  Upcoming Rewards                <CardTitle className='flex items-center gap-2'>;
+                  <Gift className='h-5 w-5' />;
                   Upcoming Rewards;
                 </CardTitle>;
                 <CardDescription>;
@@ -1135,14 +1135,14 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                       </p>;
                     </div>;
                     <Badge variant='outline'>{reward && reward.cost}</Badge>                  </div>;
-                    <Badge variant="outline">{reward && reward.cost}</Badge>;
+                    <Badge variant='outline'>{reward && reward.cost}</Badge>;
                 {upcomingRewards && upcomingRewards.map((reward, index) => (;
-                  <div key={index} className="flex items-center justify-between p-3 rounded-lg border">;
+                  <div key={index} className='flex items-center justify-between p-3 rounded-lg border'>;
                     <div>;
-                      <h4 className="font-medium">{reward && reward.title}</h4>;
-                      <p className="text-sm text-muted-foreground">{reward && reward.category}</p>;
+                      <h4 className='font-medium'>{reward && reward.title}</h4>;
+                      <p className='text-sm text-muted-foreground'>{reward && reward.category}</p>;
                     </div>;
-                    <Badge variant="outline">{reward && reward.cost}</Badge>;
+                    <Badge variant='outline'>{reward && reward.cost}</Badge>;
                   </div>;
                 ))}
               </CardContent>;
@@ -1156,30 +1156,30 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 Our full rewards system is launching soon! Sign up now to start;
                 earning points immediately.;
               </p>;
-              <Button onClick={() => setLoginOpen(true)}>Create Account</Button>            </CardContent>          <Card className="text-center">;
-            <CardContent className="pt-6">;
-              <Star className="h-12 w-12 text-primary mx-auto mb-4" />;
-              <h3 className="text-2xl font-bold mb-2">Coming Soon</h3>;
-              <p className="text-muted-foreground mb-4">;
+              <Button onClick={() => setLoginOpen(true)}>Create Account</Button>            </CardContent>          <Card className='text-center'>;
+            <CardContent className='pt-6'>;
+              <Star className='h-12 w-12 text-primary mx-auto mb-4' />;
+              <h3 className='text-2xl font-bold mb-2'>Coming Soon</h3>;
+              <p className='text-muted-foreground mb-4'>;
                 Our full rewards system is launching soon! Sign up now to start earning points immediately.;
               </p>;
               <Button onClick={() => setLoginOpen(true)}>;
-                      </p>                  <div key={index} className="flex items - start gap - 3 p - 3 rounded - lg border">;
-                    <div className="text - primary mt - 1">{opportunity.icon}</div>;
-                    <div className="flex - 1">;
-                      <h4 className="font - medium">{opportunity.title}</h4>;
-                      <p className="text - sm text - muted - foreground">{opportunity.description}</p>;
+                      </p>                  <div key={index} className='flex items - start gap - 3 p - 3 rounded - lg border'>;
+                    <div className='text - primary mt - 1'>{opportunity.icon}</div>;
+                    <div className='flex - 1'>;
+                      <h4 className='font - medium'>{opportunity.title}</h4>;
+                      <p className='text - sm text - muted - foreground'>{opportunity.description}</p>;
                     </div>;
                     <Badge variant='secondary'>{opportunity.points}</Badge>                  </div>                    </div>;
-                    <Badge variant="secondary">{opportunity.points}</Badge>;
+                    <Badge variant='secondary'>{opportunity.points}</Badge>;
                   </div>))}
               </CardContent>;
             </Card>;
             <Card>;
               <CardHeader>;
                 <CardTitle className='flex items - center gap - 2'>;
-                  <Gift className='h - 5 w - 5' />                  Upcoming Rewards                <CardTitle className="flex items - center gap - 2">;
-                  <Gift className="h - 5 w - 5" />;
+                  <Gift className='h - 5 w - 5' />                  Upcoming Rewards                <CardTitle className='flex items - center gap - 2'>;
+                  <Gift className='h - 5 w - 5' />;
                   Upcoming Rewards;
                 </CardTitle>;
                 <CardDescription>;
@@ -1198,14 +1198,14 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                       </p>;
                     </div>;
                     <Badge variant='outline'>{reward.cost}</Badge>                  </div>;
-                    <Badge variant="outline">{reward.cost}</Badge>;
+                    <Badge variant='outline'>{reward.cost}</Badge>;
                 {upcoming_rewards.map ((reward, index) => (
-                  <div key={index} className="flex items - center justify - between p - 3 rounded - lg border">;
+                  <div key={index} className='flex items - center justify - between p - 3 rounded - lg border'>;
                     <div>;
-                      <h4 className="font - medium">{reward.title}</h4>;
-                      <p className="text - sm text - muted - foreground">{reward.category}</p>;
+                      <h4 className='font - medium'>{reward.title}</h4>;
+                      <p className='text - sm text - muted - foreground'>{reward.category}</p>;
                     </div>;
-                    <Badge variant="outline">{reward.cost}</Badge>;
+                    <Badge variant='outline'>{reward.cost}</Badge>;
                   </div>))}
               </CardContent>;
             </Card>;
@@ -1218,11 +1218,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 Our full rewards system is launching soon! Sign up now to start;
                 earning points immediately.;
               </p>;
-              <Button on_click={() => setLoginOpen (true)}>Create Account</Button>            </CardContent>          <Card className="text - center">;
-            <CardContent className="pt - 6">;
-              <Star className="h - 12 w - 12 text - primary mx - auto mb - 4" />;
-              <h3 className="text - 2xl font - bold mb - 2">Coming Soon</h3>;
-              <p className="text - muted - foreground mb - 4">;
+              <Button on_click={() => setLoginOpen (true)}>Create Account</Button>            </CardContent>          <Card className='text - center'>;
+            <CardContent className='pt - 6'>;
+              <Star className='h - 12 w - 12 text - primary mx - auto mb - 4' />;
+              <h3 className='text - 2xl font - bold mb - 2'>Coming Soon</h3>;
+              <p className='text - muted - foreground mb - 4'>;
                 Our full rewards system is launching soon! Sign up now to start earning points immediately.;
               </p>;
               <Button on_click={() => setLoginOpen (true)}>;
@@ -1292,7 +1292,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 
         </div>
-        <p className="text-xl text-muted-foreground">Points Available</p>
+        <p className='text-xl text-muted-foreground'>Points Available</p>
         {!loading && balance === 0 && (
 =======
         </div>
@@ -1353,8 +1353,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       <div className="grid md:grid-cols-2 gap-8 mb-12">
         <Card>
           <CardHeader>
-            <CardTitle className="flex items-center gap-2">
-              <TrendingUp className="h-5 w-5" />
+            <CardTitle className='flex items-center gap-2'>
+              <TrendingUp className='h-5 w-5' />
               Keep Earning
 <<<<<<< HEAD:src-disabled/pages.disabled/Points.tsx
 =======
@@ -1409,9 +1409,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         <p className='text - xl text - muted - foreground'>Points Available</p>;
         {!loading && balance === 0 && (
           <p className='text - sm text - muted - foreground mt - 2'>            You haven't earned any points yet. Complete the tasks below to start        </div>;
-        <p className="text - xl text - muted - foreground">Points Available</p>;
+        <p className='text - xl text - muted - foreground'>Points Available</p>;
         {!loading && balance === 0 && (
-          <p className="text - sm text - muted - foreground mt - 2">;
+          <p className='text - sm text - muted - foreground mt - 2'>;
             You haven't earned any points yet. Complete the tasks below to start;
             earning and redeem rewards.;
           </p>)}
@@ -1420,11 +1420,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         <Card>;
           <CardHeader>;
             <CardTitle className='flex items - center gap - 2'>;
-              <TrendingUp className='h - 5 w - 5' />              Keep Earning      <div className="grid md:grid - cols - 2 gap - 8 mb - 12">;
+              <TrendingUp className='h - 5 w - 5' />              Keep Earning      <div className='grid md:grid - cols - 2 gap - 8 mb - 12'>;
         <Card>;
           <CardHeader>;
-            <CardTitle className="flex items - center gap - 2">;
-              <TrendingUp className="h - 5 w - 5" />;
+            <CardTitle className='flex items - center gap - 2'>;
+              <TrendingUp className='h - 5 w - 5' />;
             </CardTitle>;
             <CardDescription>;
               More ways to boost your point balance;
@@ -1441,11 +1441,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   <h4 className='font-medium'>{opportunity.title}</h4>'
                   <p className='text-sm text-muted-foreground'>'
                     {opportunity.description}
-                  </p>              <div key={index} className="flex items - start gap - 3 p - 3 rounded - lg border">;
-                <div className="text - primary mt - 1">{opportunity.icon}</div>;
-                <div className="flex - 1">;
-                  <h4 className="font - medium">{opportunity.title}</h4>;
-                  <p className="text - sm text - muted - foreground">{opportunity.description}</p>;
+                  </p>              <div key={index} className='flex items - start gap - 3 p - 3 rounded - lg border'>;
+                <div className='text - primary mt - 1'>{opportunity.icon}</div>;
+                <div className='flex - 1'>;
+                  <h4 className='font - medium'>{opportunity.title}</h4>;
+                  <p className='text - sm text - muted - foreground'>{opportunity.description}</p>;
                 </div>;
                 <div className='text - right'>;
                   <Badge variant='secondary' className='mb - 1'>;
@@ -1453,20 +1453,20 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   </Badge>;
                   <p className='text - xs text - muted - foreground'>;
                     {opportunity.action}
-          <CardContent className="space-y-4">"
+          <CardContent className='space-y-4'>'
             {earningOpportunities.map((opportunity, index) => (
-              <div key={index} className="flex items-start gap-3 p-3 rounded-lg border">"
-          <CardContent className="space-y-4">"
+              <div key={index} className='flex items-start gap-3 p-3 rounded-lg border'>'
+          <CardContent className='space-y-4'>'
             {earningOpportunities.map((opportunity, index) => (
-              <div key={index} className="flex items-start gap-3 p-3 rounded-lg border">"
-                <div className="text-primary mt-1">{opportunity.icon}</div>"
-                <div className="flex-1">"
-                  <h4 className="font-medium">{opportunity.title}</h4>"
-                  <p className="text-sm text-muted-foreground">{opportunity.description}</p>"
+              <div key={index} className='flex items-start gap-3 p-3 rounded-lg border'>'
+                <div className='text-primary mt-1'>{opportunity.icon}</div>'
+                <div className='flex-1'>'
+                  <h4 className='font-medium'>{opportunity.title}</h4>'
+                  <p className='text-sm text-muted-foreground'>{opportunity.description}</p>'
                 </div>
-                <div className="text-right">"
-                  <Badge variant="secondary" className="mb-1">{opportunity.points}</Badge>"
-                  <p className="text-xs text-muted-foreground">{opportunity.action}</p>"
+                <div className='text-right'>'
+                  <Badge variant='secondary' className='mb-1'>{opportunity.points}</Badge>'
+                  <p className='text-xs text-muted-foreground'>{opportunity.action}</p>'
 
 
 
@@ -1494,7 +1494,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   <p className='text - sm text - muted - foreground'>;
                     {opportunity.description}
 
-          <CardContent className="space-y-4">
+          <CardContent className='space-y-4'>
             {earningOpportunities.map((opportunity, index) => (
               <div key={index} className="flex items-start gap-3 p-3 rounded-lg border">
                 <div className="text-primary mt-1">{opportunity.icon}</div>
@@ -1594,9 +1594,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:src/pages/Points.tsx
                   </p>                </div>                </div>;
-                <div className="text - right">;
-                  <Badge variant="secondary" className="mb - 1">{opportunity.points}</Badge>;
-                  <p className="text - xs text - muted - foreground">{opportunity.action}</p>;
+                <div className='text - right'>;
+                  <Badge variant='secondary' className='mb - 1'>{opportunity.points}</Badge>;
+                  <p className='text - xs text - muted - foreground'>{opportunity.action}</p>;
                 </div>;
               </div>))}
           </CardContent>;
@@ -1604,8 +1604,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         <Card>;
           <CardHeader>;
             <CardTitle className='flex items - center gap - 2'>;
-              <Gift className='h - 5 w - 5' />              Available Rewards            <CardTitle className="flex items - center gap - 2">;
-              <Gift className="h - 5 w - 5" />;
+              <Gift className='h - 5 w - 5' />              Available Rewards            <CardTitle className='flex items - center gap - 2'>;
+              <Gift className='h - 5 w - 5' />;
               Available Rewards;
             </CardTitle>;
             <CardDescription>;
@@ -1638,9 +1638,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         <p className='text-xl text-muted-foreground'>Points Available</p>;
         {!loading && balance === 0 && (;
           <p className='text-sm text-muted-foreground mt-2'>            You haven't earned any points yet. Complete the tasks below to start        </div>;
-        <p className="text-xl text-muted-foreground">Points Available</p>;
+        <p className='text-xl text-muted-foreground'>Points Available</p>;
         {!loading && balance === 0 && (;
-          <p className="text-sm text-muted-foreground mt-2">;
+          <p className='text-sm text-muted-foreground mt-2'>;
             You haven't earned any points yet. Complete the tasks below to start;
             earning and redeem rewards.;
           </p>;
@@ -1651,11 +1651,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         <Card>;
           <CardHeader>;
             <CardTitle className='flex items-center gap-2'>;
-              <TrendingUp className='h-5 w-5' />              Keep Earning      <div className="grid md:grid-cols-2 gap-8 mb-12">;
+              <TrendingUp className='h-5 w-5' />              Keep Earning      <div className='grid md:grid-cols-2 gap-8 mb-12'>;
         <Card>;
           <CardHeader>;
-            <CardTitle className="flex items-center gap-2">;
-              <TrendingUp className="h-5 w-5" />;
+            <CardTitle className='flex items-center gap-2'>;
+              <TrendingUp className='h-5 w-5' />;
             </CardTitle>;
             <CardDescription>;
               More ways to boost your point balance;
@@ -1674,11 +1674,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   <h4 className='font-medium'>{opportunity && opportunity.title}</h4>;
                   <p className='text-sm text-muted-foreground'>;
                     {opportunity && opportunity.description}
-                  </p>              <div key={index} className="flex items-start gap-3 p-3 rounded-lg border">;
-                <div className="text-primary mt-1">{opportunity && opportunity.icon}</div>;
-                <div className="flex-1">;
-                  <h4 className="font-medium">{opportunity && opportunity.title}</h4>;
-                  <p className="text-sm text-muted-foreground">{opportunity && opportunity.description}</p>;
+                  </p>              <div key={index} className='flex items-start gap-3 p-3 rounded-lg border'>;
+                <div className='text-primary mt-1'>{opportunity && opportunity.icon}</div>;
+                <div className='flex-1'>;
+                  <h4 className='font-medium'>{opportunity && opportunity.title}</h4>;
+                  <p className='text-sm text-muted-foreground'>{opportunity && opportunity.description}</p>;
                 </div>;
                 <div className='text-right'>;
                   <Badge variant='secondary' className='mb-1'>;
@@ -1687,9 +1687,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   <p className='text-xs text-muted-foreground'>;
                     {opportunity && opportunity.action}
                   </p>                </div>                </div>;
-                <div className="text-right">;
-                  <Badge variant="secondary" className="mb-1">{opportunity && opportunity.points}</Badge>;
-                  <p className="text-xs text-muted-foreground">{opportunity && opportunity.action}</p>;
+                <div className='text-right'>;
+                  <Badge variant='secondary' className='mb-1'>{opportunity && opportunity.points}</Badge>;
+                  <p className='text-xs text-muted-foreground'>{opportunity && opportunity.action}</p>;
                 </div>;
               </div>;
             ))}
@@ -1699,8 +1699,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         <Card>;
           <CardHeader>;
             <CardTitle className='flex items-center gap-2'>;
-              <Gift className='h-5 w-5' />              Available Rewards            <CardTitle className="flex items-center gap-2">;
-              <Gift className="h-5 w-5" />;
+              <Gift className='h-5 w-5' />              Available Rewards            <CardTitle className='flex items-center gap-2'>;
+              <Gift className='h-5 w-5' />;
               Available Rewards;
             </CardTitle>;
             <CardDescription>;
@@ -1732,22 +1732,22 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     <p className='text-xs text-muted-foreground'>;
                       Need more points;
                     </p>                  )}
-                    <p className="text-xs text-muted-foreground">Need more points</p>;
+                    <p className='text-xs text-muted-foreground'>Need more points</p>;
                 <div>;
-                  <h4 className="font-medium">{reward && reward.title}</h4>;
-                  <p className="text-sm text-muted-foreground">{reward && reward.category}</p>;
+                  <h4 className='font-medium'>{reward && reward.title}</h4>;
+                  <p className='text-sm text-muted-foreground'>{reward && reward.category}</p>;
                 </div>;
-                <div className="text-right space-y-1">;
-                  <Badge variant="outline" className="mb-1">{reward && reward.cost} pts</Badge>;
+                <div className='text-right space-y-1'>;
+                  <Badge variant='outline' className='mb-1'>{reward && reward.cost} pts</Badge>;
                   {balance >= reward && reward.cost ? (;
-                    <Button size="sm" onClick={() => handleRedeem(reward)} disabled={redeeming}>;
+                    <Button size='sm' onClick={() => handleRedeem(reward)} disabled={redeeming}>;
                       {redeeming ? 'Processing...' : 'Redeem'}'
                     </Button>;
                   ) : (;
-                    <p className="text-xs text-muted-foreground">Need more points</p>;
-          <CardContent className="space-y-4">"
+                    <p className='text-xs text-muted-foreground'>Need more points</p>;
+          <CardContent className='space-y-4'>'
             {upcomingRewards.map((reward) => (
-              <div key={reward.id} className="flex items-center justify-between p-3 rounded-lg border">"
+              <div key={reward.id} className='flex items-center justify-between p-3 rounded-lg border'>'
                 <div>
 <<<<<<< HEAD:src-disabled/pages.disabled/Points.tsx
                   <h4 className="font-medium">{reward.title}</h4>"
@@ -1837,32 +1837,32 @@ ursor/fix-website-loading-errors-and-merge-6662
 =======
                     <p className="text - xs text - muted - foreground">Need more points</p>;
                 <div>;
-                  <h4 className="font - medium">{reward.title}</h4>;
-                  <p className="text - sm text - muted - foreground">{reward.category}</p>;
+                  <h4 className='font - medium'>{reward.title}</h4>;
+                  <p className='text - sm text - muted - foreground'>{reward.category}</p>;
                 </div>;
-                <div className="text - right space - y-1">;
-                  <Badge variant="outline" className="mb - 1">{reward.cost} pts</Badge>;
+                <div className='text - right space - y-1'>;
+                  <Badge variant='outline' className='mb - 1'>{reward.cost} pts</Badge>;
                   {balance >= reward.cost ? (
-                    <Button size="sm" on_click={() => handle_redeem (reward)} disabled={redeeming}>;
+                    <Button size='sm' on_click={() => handle_redeem (reward)} disabled={redeeming}>;
                 </div>
-                <div className="text-right space-y-1">"
-                  <Badge variant="outline" className="mb-1">{reward.cost} pts</Badge>"
+                <div className='text-right space-y-1'>'
+                  <Badge variant='outline' className='mb-1'>{reward.cost} pts</Badge>'
                   {balance >= reward.cost ? (
-                    <Button size="sm" onClick={() => handleRedeem(reward)} disabled={redeeming}>"
+                    <Button size='sm' onClick={() => handleRedeem(reward)} disabled={redeeming}>'
                       {redeeming ? 'Processing...' : 'Redeem'}'
             ))}
-          <CardTitle className="flex items-center gap-2">"
-          <CardTitle className="flex items-center gap-2">"
-            <History className="h-5 w-5" />"
+          <CardTitle className='flex items-center gap-2'>'
+          <CardTitle className='flex items-center gap-2'>'
+            <History className='h-5 w-5' />'
                       size='sm'
                       onClick={() => handleRedeem(reward)}
                       disabled={redeeming}
-          <CardContent className="space-y-4">
+          <CardContent className='space-y-4'>
             {upcomingRewards.map((reward) => (
-              <div key={reward.id} className="flex items-center justify-between p-3 rounded-lg border">
+              <div key={reward.id} className='flex items-center justify-between p-3 rounded-lg border'>
                 <div>
-                  <h4 className="font-medium">{reward.title}</h4>
-                  <p className="text-sm text-muted-foreground">{reward.category}</p>
+                  <h4 className='font-medium'>{reward.title}</h4>
+                  <p className='text-sm text-muted-foreground'>{reward.category}</p>
                       disabled={redeeming}
                     >                      {redeeming ? 'Processing...' : 'Redeem'}
                     </Button>) : (
@@ -1870,14 +1870,14 @@ ursor/fix-website-loading-errors-and-merge-6662
                       Need more points;
                     </p>                  )}
                 </div>
-                <div className="text-right space-y-1">
-                  <Badge variant="outline" className="mb-1">{reward.cost} pts</Badge>
+                <div className='text-right space-y-1'>
+                  <Badge variant='outline' className='mb-1'>{reward.cost} pts</Badge>
                   {balance >= reward.cost ? (
-                    <Button size="sm" onClick={() => handleRedeem(reward)} disabled={redeeming}>
+                    <Button size='sm' onClick={() => handleRedeem(reward)} disabled={redeeming}>
                       {redeeming ? 'Processing...' : 'Redeem'}
                     </Button>
                   ) : (
-                    <p className="text-xs text-muted-foreground">Need more points</p>
+                    <p className='text-xs text-muted-foreground'>Need more points</p>
                   )}
                 </div>;
               </div>;
@@ -1902,11 +1902,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
       <Card>
         <CardHeader>
-          <CardTitle className="flex items-center gap-2">
-            <History className="h-5 w-5" />
+          <CardTitle className='flex items-center gap-2'>
+            <History className='h-5 w-5' />
       <Card>
         <CardHeader>
-            <History className="h-5 w-5" />
+            <History className='h-5 w-5' />
 <CardTitle className='flex items-center gap-2'>
             <History className='h-5 w-5' />
 origin/cursor/automate-test-improve-and-merge-code-2533
@@ -1941,8 +1941,8 @@ ursor/fix-website-loading-errors-and-merge-6662
             <p className="text-center py-8 text-muted-foreground">No points activity yet.</p>
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:src/pages/Points.tsx
           ) : (
-            <ScrollArea className="h-64">"
-              <div className="space-y-2 mt-2">"
+            <ScrollArea className='h-64'>'
+              <div className='space-y-2 mt-2'>'
                 {ledger.map(entry => (
 <<<<<<< HEAD:src-disabled/pages.disabled/Points.tsx
                   <div key={entry.id} className="flex items-center justify-between py-2 border-b">"
@@ -1969,8 +1969,8 @@ ursor/fix-website-loading-errors-and-merge-6662
       <Card>;
         <CardHeader>;
           <CardTitle className='flex items-center gap-2'>;
-            <History className='h-5 w-5' />            Points History          <CardTitle className="flex items-center gap-2">;
-            <History className="h-5 w-5" />;
+            <History className='h-5 w-5' />            Points History          <CardTitle className='flex items-center gap-2'>;
+            <History className='h-5 w-5' />;
             Points History;
           </CardTitle>;
           <CardDescription>Your recent points activity</CardDescription>;
@@ -2035,20 +2035,20 @@ ursor/fix-website-loading-errors-and-merge-6662
                       className = {entry && entry.delta >= 0 ? 'bg-green-100 text-green-800' : 'bg-red-100 text-red-800',}'
                     >;
                       {entry.delta >= 0 ? '+' : ''}'
-            <p className="text-center py-8 text-muted-foreground">No points activity yet.</p>
+            <p className='text-center py-8 text-muted-foreground'>No points activity yet.</p>
           ) : (
-            <ScrollArea className="h-64">
-              <div className="space-y-2 mt-2">
+            <ScrollArea className='h-64'>
+              <div className='space-y-2 mt-2'>
                 {ledger.map(entry => (
-                  <div key={entry.id} className="flex items-center justify-between py-2 border-b">
+                  <div key={entry.id} className='flex items-center justify-between py-2 border-b'>
                     <div>
-                      <p className="font-medium capitalize">{entry.reason || 'adjustment'}</p>
-                      <p className="text-xs text-muted-foreground">
+                      <p className='font-medium capitalize'>{entry.reason || 'adjustment'}</p>
+                      <p className='text-xs text-muted-foreground'>
                         {formatDistanceToNow(new Date(entry.created_at), { addSuffix: true })}
                       </p>
                     </div>
                     <Badge
-                      variant="outline"
+                      variant='outline'
                       className={entry.delta >= 0 ? 'bg-green-100 text-green-800' : 'bg-red-100 text-red-800'}
                     >;
                       {entry.delta >= 0 ? '+' : ''}
@@ -2059,19 +2059,19 @@ ursor/fix-website-loading-errors-and-merge-6662
               </div>;
             </ScrollArea>;
           )}
-      <Card className="text-center">"
-        <CardContent className="pt-6">"
-          <Star className="h-12 w-12 text-primary mx-auto mb-4" />"
-          <h3 className="text-2xl font-bold mb-2">Full Rewards System Coming Soon</h3>"
-          <p className="text-muted-foreground mb-4">"
+      <Card className='text-center'>'
+        <CardContent className='pt-6'>'
+          <Star className='h-12 w-12 text-primary mx-auto mb-4' />'
+          <h3 className='text-2xl font-bold mb-2'>Full Rewards System Coming Soon</h3>'
+          <p className='text-muted-foreground mb-4'>'
             We're finalizing the redemption system. Keep earning points - they'll be ready to spend soon!'
           </p>
-          <div className="flex gap-4 justify-center">"
-            <Button variant="outline" asChild>"
-              <Link href="/marketplace" />Browse Marketplace</Link>"
+          <div className='flex gap-4 justify-center'>'
+            <Button variant='outline' asChild>'
+              <Link href='/marketplace' />Browse Marketplace</Link>'
             </Button>
-            <Button variant="outline" asChild>"
-              <Link href="/community" />Join Community</Link>"
+            <Button variant='outline' asChild>'
+              <Link href='/community' />Join Community</Link>'
         </CardContent>
       </Card>
 
@@ -2082,21 +2082,21 @@ ursor/fix-website-loading-errors-and-merge-6662
               <div className='space-y-2 mt-2'>
 origin/cursor/automate-test-improve-and-merge-code-2533
                 {ledger.map(entry => (
-                  <div key={entry.id} className="flex items-center justify-between py-2 border-b">
+                  <div key={entry.id} className='flex items-center justify-between py-2 border-b'>
                     <div>
                       variant='outline'
                       className={
                         entry.delta >= 0
                           ? 'bg-green-100 text-green-800'
                           : 'bg-red-100 text-red-800'
-                      }                      variant="outline"
+                      }                      variant='outline'
                       className = {entry.delta >= 0 ? 'bg-green-100 text-green-800' : 'bg-red-100 text-red-800',}
                     >
                       {entry.delta >= 0 ? '+' : ''}
                       {entry.delta} pts
                     </Badge>
                   </div>
-                      variant="outline"
+                      variant='outline'
                       className={entry.delta >= 0 ? 'bg-green-100 text-green-800' : 'bg-red-100 text-red-800'}
 =======
                       className = {entry && entry.delta >= 0 ? 'bg-green-100 text-green-800' : 'bg-red-100 text-red-800',}
@@ -2135,11 +2135,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               </div>
             </ScrollArea>
           )}
-      <Card className="text-center">
-        <CardContent className="pt-6">
-          <Star className="h-12 w-12 text-primary mx-auto mb-4" />
-          <h3 className="text-2xl font-bold mb-2">Full Rewards System Coming Soon</h3>
-          <p className="text-muted-foreground mb-4">
+      <Card className='text-center'>
+        <CardContent className='pt-6'>
+          <Star className='h-12 w-12 text-primary mx-auto mb-4' />
+          <h3 className='text-2xl font-bold mb-2'>Full Rewards System Coming Soon</h3>
+          <p className='text-muted-foreground mb-4'>
             We're finalizing the redemption system. Keep earning points - they'll be ready to spend soon!
 <<<<<<< HEAD
 =======
@@ -2176,7 +2176,7 @@ ursor/fix-website-loading-errors-and-merge-6662
               <Link href="/community">Join Community</Link>
 
 
-              <Link href="/community">Join Community</Link>
+              <Link href='/community'>Join Community</Link>
 
 <Card className='text-center'>
         <CardContent className='pt-6'>
@@ -2222,17 +2222,17 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           <div className='flex gap-4 justify-center'>;
             <Button variant='outline' asChild>;
               <Link href='/marketplace' />Browse Marketplace</Link>          </p>;
-          <div className="flex gap-4 justify-center">;
-            <Button variant="outline" asChild>;
-              <Link href="/marketplace" />Browse Marketplace</Link>;
+          <div className='flex gap-4 justify-center'>;
+            <Button variant='outline' asChild>;
+              <Link href='/marketplace' />Browse Marketplace</Link>;
             </Button>;
             <Button variant='outline' asChild>;
-              <Link href='/community' />Join Community</Link>            <Button variant="outline" asChild>;
-              <Link href="/community" />Join Community</Link>;
+              <Link href='/community' />Join Community</Link>            <Button variant='outline' asChild>;
+              <Link href='/community' />Join Community</Link>;
             </Button>;
             <Button variant='outline' asChild>;
                     </Button>) : (
-                    <p className="text - xs text - muted - foreground">Need more points</p>)}"
+                    <p className='text - xs text - muted - foreground'>Need more points</p>)}'
                 </div>;
               </div>))}
           </CardContent>;
@@ -2241,8 +2241,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       <Card>;
         <CardHeader>;
           <CardTitle className='flex items - center gap - 2'>;
-            <History className='h - 5 w - 5' />            Points History          <CardTitle className="flex items - center gap - 2">;
-            <History className="h - 5 w - 5" />;
+            <History className='h - 5 w - 5' />            Points History          <CardTitle className='flex items - center gap - 2'>;
+            <History className='h - 5 w - 5' />;
             Points History;
           </CardTitle>;
           <CardDescription > Your recent points activity</CardDescription>;
@@ -2275,7 +2275,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                         entry.delta >= 0;
                           ? 'bg - green - 100 text - green - 800';
                           : 'bg - red - 100 text - red - 800';
-                      }                      variant="outline";
+                      }                      variant='outline';
                       class_name = {entry.delta >= 0 ? 'bg - green - 100 text - green - 800' : 'bg - red - 100 text - red - 800', }'
                     >;
                       {entry.delta >= 0 ? '+' : ''}                      {entry.delta} pts                    </Badge>;
@@ -2297,13 +2297,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           <div className='flex gap - 4 justify - center'>;
             <Button variant='outline' as_child>;
               <Link href='/marketplace' />Browse Marketplace</Link>          </p>;
-          <div className="flex gap - 4 justify - center">;
-            <Button variant="outline" as_child>;
-              <Link href="/marketplace" />Browse Marketplace</Link>;
+          <div className='flex gap - 4 justify - center'>;
+            <Button variant='outline' as_child>;
+              <Link href='/marketplace' />Browse Marketplace</Link>;
             </Button>;
             <Button variant='outline' as_child>;
-              <Link href='/community' />Join Community</Link>            <Button variant="outline" as_child>;
-              <Link href="/community" />Join Community</Link>;
+              <Link href='/community' />Join Community</Link>            <Button variant='outline' as_child>;
+              <Link href='/community' />Join Community</Link>;
             </Button>;
             <Button variant='outline' as_child>;
               <Link href='/community' />Join Community</Link>            </Button>;

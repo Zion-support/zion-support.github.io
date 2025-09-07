@@ -313,7 +313,7 @@ if ( {) {}
 
 =======
         headers: {
-          Location: destination}});
+          Location: destination});
     }
 
     console.error("Error tracking email event:", error),
@@ -341,7 +341,7 @@ if ( {) {}
 <<<<<<< HEAD
 >>>>>>> merged-prs-20250907-203621
         headers: {
-          Location: redirectUrl}})
+          Location: redirectUrl})
     }
     return new Response("Error processing event", { status: 500 })
 =======

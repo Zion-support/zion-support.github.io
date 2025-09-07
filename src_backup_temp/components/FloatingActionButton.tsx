@@ -150,7 +150,7 @@ return () => {
   useEffect(() => {// "TODO": Add dependencies if needed;
   }
   return () => {// Cleanup function;
-  }}, []), [])}window.addEventListener('scroll', handleScroll)return () => window.removeEventListener('scroll', handleScroll)}, [])// Default actions;'
+  }, []), [])}window.addEventListener('scroll', handleScroll)return () => window.removeEventListener('scroll', handleScroll)}, [])// Default actions;'
       mediaQuery.addEventListener('change', handleChange);';';'
       return () => mediaQuery.removeEventListener('change', handleChange)} else {'
 }, []);, []);
@@ -676,10 +676,10 @@ case 'top-right':''
 key={action.id}``                  className={``                    }
                     flex items-center space-x-3 p-3 rounded-lg shadow-lg transition-all duration-300
                     ${action.color} text-white transform opacity-0 scale-75;
-    "hover": scal e-105 "focus": outlin e-none "focus": rin g-2 "focus": rin g-white/50``                  `}`                  style="{{{"
+    "hover": scal e-105 "focus": outlin e-none "focus": rin g-2 "focus": rin g-white/50``                  `}`                  style="{{"
 `';'
                     }
-                    "animationDelay": `${index * 100}}"ms`,';';'                    "animation": 'slideInUp 0.3s ease-out forwards''
+                    "animationDelay": `${index * 100}"ms`,';';'                    "animation": 'slideInUp 0.3s ease-out forwards''
       "default":';'
       "default":''
         return 'bottom-6 right-6'}'
@@ -698,10 +698,10 @@ key={action.id}``                  className={``                    }
                     flex items-center space-x-3 p-3 rounded-lg shadow-lg transition-all duration-300;
                     ${action.color} text-white transform opacity-0 scale-75;
                     "hover": "scal e-105 "focus": outlin e-none "focus": rin g-2 "focus": rin g-white/50`;`                  `"}"
-                  style="{{{;"
+                  style="{{;"
 `;`                    }
-                    "animationDelay": `${index * 100}}"ms`,;`                    "animation": 'slideInUp 0.3s ease-out forwards';'
-                    "animationDelay": "`${index * 100"}}"ms`,;`                    "animation": 'slideInUp 0.3s ease-out forwards';'
+                    "animationDelay": `${index * 100}"ms`,;`                    "animation": 'slideInUp 0.3s ease-out forwards';'
+                    "animationDelay": "`${index * 100"}"ms`,;`                    "animation": 'slideInUp 0.3s ease-out forwards';'
   return ()
     <>
       {/* Main Floating Action Button */}``      <div className={`fixed ${getPositionClasses()} z-50`}>`        {/* Action Buttons */}'``        <div className={`relative ${isExpanded ? 'mb-4' : ''}`}>`          {isExpanded && (
@@ -712,10 +712,10 @@ key={action.id}``                  className={``                    }
 key={action.id}``                  className={``                    }
                     flex items-center space-x-3 p-3 rounded-lg shadow-lg transition-all duration-300
                     ${action.color} text-white transform opacity-0 scale-75,
-"hover": scal e-105 "focus": outlin e-none "focus": rin g-2 "focus": rin g-white/50``                  `}`                  style="{{{"
+"hover": scal e-105 "focus": outlin e-none "focus": rin g-2 "focus": rin g-white/50``                  `}`                  style="{{"
 ``                    }
-                    "animationDelay": `${index * 100}}"ms`,`                    "animation": 'slideInUp 0.3s ease-out forwards''
-                  }}
+                    "animationDelay": `${index * 100}"ms`,`                    "animation": 'slideInUp 0.3s ease-out forwards''
+                  }
                 >
                   <action.icon size={20} />""
                   <span className="whitespace-nowrap text-sm font-medium">"
@@ -864,7 +864,7 @@ export default FloatingActionButton;
 </any>
 </FloatingActionButtonProps>
 </any>';'
-</FloatingActionButtonProps>;';;';'
+</FloatingActionButtonProps>;';';'
 ;
 </any>;
 </FloatingActionButtonProps>;

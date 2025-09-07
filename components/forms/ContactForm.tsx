@@ -2255,7 +2255,7 @@ id='service''
                     value={formData.service}
                     onChange={handleChang
 }
-                    className='w-full px-4 py-3 bg-white/10 border border-gray-700 rounded-lg text-white "focus":outline-none "focus":border-blue-500 transition-colors'>'
+                    className='w-full px-4 py-3 bg-white/10 border border-gray-700 rounded-lg text-white 'focus':outline-none 'focus':border-blue-500 transition-colors'>'
 
                     <option value=''>Select a service</option>;'
                     {services.map(service => { return (<option; }
@@ -2490,11 +2490,11 @@ id='service'
                       >                        {service}                    Service of Interest;
                   </label>;
                   <select;
-                    id="service";
-                    name="service";
+                    id='service';
+                    name='service';
                     value={form_data.service}
                     on_change={handle_change}
-                    className="w - full px - 4 py - 3 bg - white / 10 border border - gray - 700 rounded - lg text - white focus:outline - none focus:border - blue-500 transition-colors";
+                    className='w - full px - 4 py - 3 bg - white / 10 border border - gray - 700 rounded - lg text - white focus:outline - none focus:border - blue-500 transition-colors';
                   >;
                     <option value="">Select a service</option>;
                     {services.map ((service) => (<option key={service} value={service} className="bg - gray-800 text-white">;
@@ -2531,15 +2531,15 @@ id='service'
                   />;
                 </div>;
                 {submit_status === 'error' && (<motion.div;
-                    initial={{ opacity: 0, coordinate_y: -10 }}
-                    animate={{ opacity: 1, coordinate_y: 0 }}
+                    initial={ opacity: 0, coordinate_y: -10 }
+                    animate={ opacity: 1, coordinate_y: 0 }
                     className='flex items - center space - x-2 text - red - 400 bg - red - 400 / 10 border border - red - 400 / 20 rounded - lg p - 4';
                   ">;
                     Message *;
                   </label>;
-                  <textarea;"
-                    id="message";"
-                    name="message";
+                  <textarea;'
+                    id='message';'
+                    name='message';
                     on_change={handle_change}
                     required;
                     rows={5}
@@ -2550,11 +2550,11 @@ id='service'
                 </div>;'
                 {submit_status === 'error' && (
                   <motion.div;
-                    initial={{ opacity: 0, coordinate_y: -10 }}
-                    animate={{ opacity: 1, coordinate_y: 0 }}'
+                    initial={ opacity: 0, coordinate_y: -10 }
+                    animate={ opacity: 1, coordinate_y: 0 }'
                     className='flex items - center space - x-2 text - red - 400 bg - red - 400 / 10 border border - red - 400 / 20 rounded - lg p - 4';
                   >;
-                    <AlertCircle className='w - 5 h - 5' />                    <span > Something went wrong. Please try again.</span>                    className="flex items - center space - x-2 text - red - 400 bg - red - 400 / 10 border border - red - 400 / 20 rounded-lg p-4";
+                    <AlertCircle className='w - 5 h - 5' />                    <span > Something went wrong. Please try again.</span>                    className='flex items - center space - x-2 text - red - 400 bg - red - 400 / 10 border border - red - 400 / 20 rounded-lg p-4';
                   >;
                     <AlertCircle className="w-5 h-5" />;
                     <span > Something went wrong. Please try again.</span>;
@@ -2568,10 +2568,10 @@ id='service'
                       <div className='w - 5 h - 5 border - 2 border - white / 30 border - t-white rounded - full animate - spin' />                      <span > Sending...</span>;
                     </>) : (<>;
                       <Send className='w - 5 h - 5' />                      <span > Send Message</span>                  disabled={is_submitting}
-                  className="w - full bg - gradient - to - r from - blue - 600 to - purple - 600 text - white py - 4 rounded - xl font - semibold text - lg hover:from - blue - 700 hover:to - purple - 700 transition - all duration - 300 shadow - lg hover:shadow - xl transform hover:-translate - y-1 disabled:opacity - 50 disabled:cursor - not - allowed disabled:transform - none flex items - center justify-center space-x-2";
+                  className='w - full bg - gradient - to - r from - blue - 600 to - purple - 600 text - white py - 4 rounded - xl font - semibold text - lg hover:from - blue - 700 hover:to - purple - 700 transition - all duration - 300 shadow - lg hover:shadow - xl transform hover:-translate - y-1 disabled:opacity - 50 disabled:cursor - not - allowed disabled:transform - none flex items - center justify-center space-x-2';
                 >;
                   {is_submitting ? (<>;
-                      <div className="w - 5 h - 5 border - 2 border - white / 30 border - t-white rounded-full animate-spin" />;
+                      <div className='w - 5 h - 5 border - 2 border - white / 30 border - t-white rounded-full animate-spin' />;
                       <span > Sending...</span>;
                     </>) : (<>;
                       <Send className='w - 5 h - 5' />                      <Send className="w-5 h-5" />;
@@ -2588,11 +2588,11 @@ id='service'
                     </>) : (
                     <>;
                       <Send className='w - 5 h - 5' />                      <span > Send Message</span>                  disabled={is_submitting}
-                  className="w - full bg - gradient - to - r from - blue - 600 to - purple - 600 text - white py - 4 rounded - xl font - semibold text - lg hover:from - blue - 700 hover:to - purple - 700 transition - all duration - 300 shadow - lg hover:shadow - xl transform hover:-translate - y-1 disabled:opacity - 50 disabled:cursor - not - allowed disabled:transform - none flex items - center justify-center space-x-2";
+                  className='w - full bg - gradient - to - r from - blue - 600 to - purple - 600 text - white py - 4 rounded - xl font - semibold text - lg hover:from - blue - 700 hover:to - purple - 700 transition - all duration - 300 shadow - lg hover:shadow - xl transform hover:-translate - y-1 disabled:opacity - 50 disabled:cursor - not - allowed disabled:transform - none flex items - center justify-center space-x-2';
                 >;
                   {is_submitting ? (
                     <>;
-                      <div className="w - 5 h - 5 border - 2 border - white / 30 border - t-white rounded-full animate-spin" />;
+                      <div className='w - 5 h - 5 border - 2 border - white / 30 border - t-white rounded-full animate-spin' />;
                       <span > Sending...</span>;
                     </>) : (
                     <>;
@@ -2645,9 +2645,9 @@ export default ContactForm;
                     name="service"
                     value={formData.service}
                     onChange={handleChange}
-                    className="w-full px-4 py-3 bg-white/10 border border-gray-700 rounded-lg text-white focus:outline-none focus:border-blue-500 transition-colors"
+                    className='w-full px-4 py-3 bg-white/10 border border-gray-700 rounded-lg text-white focus:outline-none focus:border-blue-500 transition-colors'
                   >
-                    <option value="">Select a service</option>
+                    <option value=''>Select a service</option>
                     {services.map((service) => (
                       <option key={service} value={service} className="bg-gray-800 text-white">
 =======
@@ -2701,7 +2701,7 @@ className='w-full px-4 py-3 bg-white/10 border border-gray-700 rounded-lg text-w
                     initial={{ opacity: 0, y: -10 }
 }
 
-                    animate={{ opacity: 1, y: 0 }}
+                    animate={ opacity: 1, y: 0 }
 
 className='flex items-center space-x-2 text-red-400 bg-red-400/10 border border-red-400/20 rounded-lg p-4'
                       />
@@ -2757,9 +2757,9 @@ export default ContactForm
                         className='bg - gray - 800 text - white'
                       >                        {service}                    Service of Interest
                   </label>
-                  <select;"
-                    id="service";"
-                    name="service"
+                  <select;'
+                    id='service';'
+                    name='service'
                     value={form_data.service}
 
                         {service}
@@ -2778,21 +2778,21 @@ export default ContactForm
                     name='message'                    value={form_data.message}
                     on_change={handle_change}
                     required
-                  ">
+                  '>
                     Message *
                   </label>
-                  <textarea;"
-                    id="message";"
-                    name="message"
+                  <textarea;'
+                    id='message';'
+                    name='message'
                     on_change={handle_change}
                     required
-                    placeholder="Tell us about your project or inquiry..."
+                    placeholder='Tell us about your project or inquiry...'
                   />
                 </div>;'
                 {submit_status === 'error' && (
                   <motion.div
-                    initial={{ opacity: 0, coordinate_y: -10 }}
-                    animate={{ opacity: 1, coordinate_y: 0 }}'
+                    initial={ opacity: 0, coordinate_y: -10 }
+                    animate={ opacity: 1, coordinate_y: 0 }'
                     className='flex items - center space - x-2 text - red - 400 bg - red - 400 / 10 border border - red - 400 / 20 rounded - lg p - 4'
                     <span > Something went wrong. Please try again.</span>
                   </motion.div>)}

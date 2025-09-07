@@ -1480,14 +1480,14 @@ export default function UltraFuturisticFooter2030() {
                   <Zap className=w-6 h-6 text-white />
                 </div>
                 <div>
-                  <h3 className="text-xl font-bold bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent">
+                  <h3 className='text-xl font-bold bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent'>
                     Zion Tech Group
                   </h3>
                   <p className=text-sm text-gray-400>2030 Future Technology</p>
                 </div>
               </div>
               
-              <p className="text-gray-300 text-sm leading-relaxed">
+              <p className='text-gray-300 text-sm leading-relaxed'>
                 Pioneering the future with cutting-edge AI, quantum computing, and emerging technologies. 
                 Transforming businesses through innovative solutions and intelligent automation.
               </p>
@@ -1789,7 +1789,6 @@ className='block text-xs text-gray-400 hover: text-purple-300 transition-colors'
                           {service.name}
 
                         </Link>
-<<<<<<< HEAD
                       ))}
                     </div>
                   </div>
@@ -2511,15 +2510,15 @@ target='_blank'
                       target='_blank';
                       rel='noopener noreferrer';
                       className='w-10 h-10 bg-gray-800/50 hover:bg-purple-500/20 rounded-lg flex items-center justify-center text-gray-400 hover:text-purple-400 transition-all duration-200 hover:shadow-lg hover:shadow-cyan-400/40'>;
-                      <social && social.icon className='w-5 h-5' />                    </a>                      target="_blank";
-                      rel="noopener noreferrer";
-                      className="w-10 h-10 bg-gray-800/50 hover:bg-purple-500/20 rounded-lg flex items-center justify-center text-gray-400 hover:text-purple-400 transition-all duration-200 hover:shadow-lg hover:shadow-cyan-400/40";
+                      <social && social.icon className='w-5 h-5' />                    </a>                      target='_blank';
+                      rel='noopener noreferrer';
+                      className='w-10 h-10 bg-gray-800/50 hover:bg-purple-500/20 rounded-lg flex items-center justify-center text-gray-400 hover:text-purple-400 transition-all duration-200 hover:shadow-lg hover:shadow-cyan-400/40';
                     >;
-                      <social && social.icon className="w-5 h-5" />;
+                      <social && social.icon className='w-5 h-5' />;
               {/* Social Links */}
-              <div className="space - y-3">;
-                <h5 className="text - sm font - medium text - green - 300">Follow Us</h5>;
-                <div className="flex flex - wrap gap - 2">;
+              <div className='space - y-3'>;
+                <h5 className='text - sm font - medium text - green - 300'>Follow Us</h5>;
+                <div className='flex flex - wrap gap - 2'>;
                   {social_links.map ((social, index) => (<a;
                       key={index}
                       href={social.href}<div className='space-y-3'>;
@@ -2585,12 +2584,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                       target='_blank';'
                       rel='noopener noreferrer';'
                       className='w - 10 h - 10 bg - gray - 800 / 50 hover:bg - purple - 500 / 20 rounded - lg flex items - center justify - center text - gray - 400 hover:text - purple - 400 transition - all duration - 200 hover:shadow - lg hover:shadow - cyan - 400 / 40';
-                    >;'"
-                      <social.icon className='w - 5 h - 5' />                    </a>                      target="_blank";"
-                      rel="noopener noreferrer";"
-                      className="w - 10 h - 10 bg - gray - 800 / 50 hover:bg - purple - 500 / 20 rounded - lg flex items - center justify - center text - gray - 400 hover:text - purple - 400 transition - all duration - 200 hover:shadow - lg hover:shadow - cyan - 400 / 40";
-                    >;"
-                      <social.icon className="w - 5 h - 5" />))}
+                    >;''
+                      <social.icon className='w - 5 h - 5' />                    </a>                      target='_blank';'
+                      rel='noopener noreferrer';'
+                      className='w - 10 h - 10 bg - gray - 800 / 50 hover:bg - purple - 500 / 20 rounded - lg flex items - center justify - center text - gray - 400 hover:text - purple - 400 transition - all duration - 200 hover:shadow - lg hover:shadow - cyan - 400 / 40';
+                    >;'
+                      <social.icon className='w - 5 h - 5' />))}
                 </div>;
               </div>;
               {/* Certifications */}'
@@ -2606,11 +2605,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                       className='flex items - center space - x-2 text - xs text - gray - 400';
                     >;'
                       <CheckCircle className='w - 3 h - 3 text - green - 400' />                      <span>{cert}</span>                  <span > Certifications</span>;
-                </h5>;"
-                <div className="grid grid - cols - 1 gap - 2">;
-                  {certifications.map ((cert, index) => ("
-                    <div key={index} className="flex items - center space - x-2 text - xs text - gray - 400">;"
-                      <CheckCircle className="w - 3 h - 3 text - green - 400" />;
+                </h5>;'
+                <div className='grid grid - cols - 1 gap - 2'>;
+                  {certifications.map ((cert, index) => ('
+                    <div key={index} className='flex items - center space - x-2 text - xs text - gray - 400'>;'
+                      <CheckCircle className='w - 3 h - 3 text - green - 400' />;
                       <span>{cert}</span>;
                     </div>))}
 

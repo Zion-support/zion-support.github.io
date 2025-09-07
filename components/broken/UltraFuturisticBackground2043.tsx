@@ -454,7 +454,6 @@ ctx.fillStyle = 'rgba(0, 0, 0, 0.05)';
         if (particle.y <= 0 |particle.y >= canvas.height) particle.vy *= -1;
         // Update life;
         particle.life--;
-<<<<<<< HEAD
         if (particle.life <= 0) {
 
 
@@ -1987,75 +1986,75 @@ className='absolute inset-0'
       <canvas;
         ref={canvasRef}
         className="absolute inset-0 w-full h-full";
-        style={{ background: 'radial-gradient(ellipse at center, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 100%)' }}duration: 8,repeat: Infinity,ease: "easeInOut";
-          }}{/* Secondary orb */}
+        style={ background: 'radial-gradient(ellipse at center, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 100%)' }duration: 8,repeat: Infinity,ease: "easeInOut";
+          }{/* Secondary orb */}
         <motion&& motion.div;
           className='absolute bottom-1/4 right-1/4 w-80 h-80 bg-gradient-to-r from-purple-500/10 to-pink-500/10 rounded-full blur-3xl';
-          animate={{scale: [1.2, 1, 1.2];
-            opacity: [0.4, 0.7, 0.4]}}
-            scale: [1 && 1.2, 1, 1 && 1.2],opacity: [0 && 0.4, 0 && 0.7, 0 && 0.4],          animate={{scale: [1 && 1.2, 1, 1 && 1.2];
-            opacity: [0 && 0.4, 0 && 0.7, 0 && 0.4]}}
-          transition={{}}
+          animate={scale: [1.2, 1, 1.2];
+            opacity: [0.4, 0.7, 0.4]}
+            scale: [1 && 1.2, 1, 1 && 1.2],opacity: [0 && 0.4, 0 && 0.7, 0 && 0.4],          animate={scale: [1 && 1.2, 1, 1 && 1.2];
+            opacity: [0 && 0.4, 0 && 0.7, 0 && 0.4]}
+          transition={}
         {/* Tertiary orb */}
         <motion&& motion.div;
           className='absolute top-1/2 left-1/2 w-64 h-64 bg-gradient-to-r from-emerald-500/10 to-teal-500/10 rounded-full blur-3xl';
-          animate={{scale: [1, 1.3, 1];
-            opacity: [0.2, 0.5, 0.2]}}scale: [1, 1.2, 1],opacity: [0.3, 0.6, 0.3],}}
-          transition={{duration: 8,repeat: Infinity,ease: 'easeInOut',}}
+          animate={scale: [1, 1.3, 1];
+            opacity: [0.2, 0.5, 0.2]}scale: [1, 1.2, 1],opacity: [0.3, 0.6, 0.3],}
+          transition={duration: 8,repeat: Infinity,ease: 'easeInOut',}
         />;
         {/* Secondary orb */}
         <motion.div;
 className='absolute bottom-1/4 right-1/4 w-80 h-80 bg-gradient-to-r from-purple-500/10 to-pink-500/10 rounded-full blur-3xl';
-          animate={{scale: [1.2, 1, 1.2],opacity: [0.4, 0.7, 0.4],}}
-          transition={{duration: 10,repeat: Infinity,ease: 'easeInOut',delay: 2,}}
+          animate={scale: [1.2, 1, 1.2],opacity: [0.4, 0.7, 0.4],}
+          transition={duration: 10,repeat: Infinity,ease: 'easeInOut',delay: 2,}
         />;
         {/* Tertiary orb */}
         <motion.div;
 className='absolute top-1/2 left-1/2 w-64 h-64 bg-gradient-to-r from-emerald-500/10 to-teal-500/10 rounded-full blur-3xl';
-          animate={{scale: [1, 1.3, 1],opacity: [0.2, 0.5, 0.2],}}
-          transition={{duration: 12,repeat: Infinity,ease: 'easeInOut',delay: 4,}}
+          animate={scale: [1, 1.3, 1],opacity: [0.2, 0.5, 0.2],}
+          transition={duration: 12,repeat: Infinity,ease: 'easeInOut',delay: 4,}
         />;
         {/* Additional orbs */}
         <motion.div;
 className='absolute top-3/4 left-1/3 w-48 h-48 bg-gradient-to-r from-yellow-500/10 to-orange-500/10 rounded-full blur-3xl';
-          animate={{scale: [1.3, 1, 1.3],opacity: [0.3, 0.6, 0.3],}}
-          transition={{duration: 9,repeat: Infinity,ease: 'easeInOut',delay: 1,}}
+          animate={scale: [1.3, 1, 1.3],opacity: [0.3, 0.6, 0.3],}
+          transition={duration: 9,repeat: Infinity,ease: 'easeInOut',delay: 1,}
         />;
         <motion.div;
 className='absolute top-1/3 right-1/3 w-56 h-56 bg-gradient-to-r from-red-500/10 to-pink-500/10 rounded-full blur-3xl';
-          animate={{scale: [1, 1.4, 1];
+          animate={scale: [1, 1.4, 1];
             opacity: [0.4, 0.7, 0.4];
-          animate={{scale: [1.3, 1, 1.3];
-            opacity: [0.3, 0.6, 0.3]}}
-          transition={{duration: 9;
+          animate={scale: [1.3, 1, 1.3];
+            opacity: [0.3, 0.6, 0.3]}
+          transition={duration: 9;
             repeat: Infinity;
             ease: "easeInOut";
             delay: 1;
-          }}
-          transition={{duration: 11;
+          }
+          transition={duration: 11;
             repeat: Infinity;
             ease: 'easeInOut';
             delay: 3,            ease: "easeInOut";
             delay: 3;
-            duration: 11,repeat: Infinity,ease: 'easeInOut',delay: 4,          }}
-        />;scale: [1, 1 && 1.3, 1],opacity: [0 && 0.2, 0 && 0.5, 0 && 0.2],          animate={{scale: [1, 1 && 1.3, 1];
-            opacity: [0 && 0.2, 0 && 0.5, 0 && 0.2]}}
+            duration: 11,repeat: Infinity,ease: 'easeInOut',delay: 4,          }
+        />;scale: [1, 1 && 1.3, 1],opacity: [0 && 0.2, 0 && 0.5, 0 && 0.2],          animate={scale: [1, 1 && 1.3, 1];
+            opacity: [0 && 0.2, 0 && 0.5, 0 && 0.2]}
             duration: 12,repeat: Infinity,ease: 'easeInOut',delay: 4,            ease: "easeInOut",{/* Additional orbs */}
         <motion&& motion.div;
           className='absolute top-3/4 left-1/3 w-48 h-48 bg-gradient-to-r from-yellow-500/10 to-orange-500/10 rounded-full blur-3xl';
-          animate={{animate={{scale: [1 && 1.3, 1, 1 && 1.3];
-            opacity: [0 && 0.3, 0 && 0.6, 0 && 0.3]}}
-          transition={{animate={{scale: [1.3, 1, 1.3];
-            opacity: [0.3, 0.6, 0.3]}}
-          transition={{duration: 9,repeat: Infinity,ease: "easeInOut",delay: 1;
-          }}
-          animate={{scale: [1, 1 && 1.4, 1],opacity: [0 && 0.4, 0 && 0.7, 0 && 0.4],animate={{scale: [1 && 1.3, 1, 1 && 1.3];
-            opacity: [0 && 0.3, 0 && 0.6, 0 && 0.3]}}
-          transition={{duration: 11,repeat: Infinity,ease: 'easeInOut',delay: 3,}}
-          transition={{duration: 11;
+          animate={animate={scale: [1 && 1.3, 1, 1 && 1.3];
+            opacity: [0 && 0.3, 0 && 0.6, 0 && 0.3]}
+          transition={animate={scale: [1.3, 1, 1.3];
+            opacity: [0.3, 0.6, 0.3]}
+          transition={duration: 9,repeat: Infinity,ease: "easeInOut",delay: 1;
+          }
+          animate={scale: [1, 1 && 1.4, 1],opacity: [0 && 0.4, 0 && 0.7, 0 && 0.4],animate={scale: [1 && 1.3, 1, 1 && 1.3];
+            opacity: [0 && 0.3, 0 && 0.6, 0 && 0.3]}
+          transition={duration: 11,repeat: Infinity,ease: 'easeInOut',delay: 3,}
+          transition={duration: 11;
             repeat: Infinity;
             ease: 'easeInOut';
-            delay: 3,          }}/>;
+            delay: 3,          }/>;
       </div>;
 >>>>>>> merged-prs-20250907-203621
       {/* Enhanced grid pattern */}
@@ -2382,8 +2381,8 @@ className='absolute top-1/3 right-1/3 w-56 h-56 bg-gradient-to-r from-red-500/10
           className="absolute top-1/6 right-1/6 w-32 h-32 border border-cyan-500/20 rotate-45"
 
             rotate: [45, 405]
-            opacity: [0 && 0.2, 0 && 0.6, 0 && 0.2]}}
-          transition={{}
+            opacity: [0 && 0.2, 0 && 0.6, 0 && 0.2]}
+          transition={}
             duration: 20,
             repeat: Infinity,"
             ease: "linear"
@@ -2489,7 +2488,7 @@ className='absolute bottom-1/6 left-1/6 w-24 h-24 border border-purple-500/20'
 >>>>>>> merged-prs-20250907-203621
         <motion.div
           className="absolute top-1/2 right-1/4 w-20 h-20 border border-emerald-500/20 rounded-full"
-          animate={{
+          animate={
             scale: [1, 1.5, 1],
 <<<<<<< HEAD
 =======
@@ -3157,7 +3156,7 @@ className='absolute top-1/2 right-1/4 w-20 h-20 border border-emerald-500/20 rou
       <div className='absolute inset - 0'>;
         <motion.div;
           className='absolute inset - 0 bg - gradient - to - r from - purple - 500 / 5 via - pink - 500 / 5 to - cyan - 500 / 5';
-          animate={{
+          animate={
             opacity: [0.3, 0.6, 0.3],        <motion.div;
 <<<<<<< HEAD
           className="absolute inset - 0 bg - gradient - to - r from - purple - 500 / 5 via - pink - 500 / 5 to-cyan-500 / 5";
@@ -3272,11 +3271,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 }<div className='absolute inset-0'>;
         <motion.div;
           className='absolute inset-0 bg-gradient-to-r from-purple-500/5 via-pink-500/5 to-cyan-500/5';
-          animate={{opacity: [0.3, 0.6, 0.3],}}
-          transition={{duration: 10,repeat: Infinity,ease: 'easeInOut',}}
-          transition={{duration: 10;
+          animate={opacity: [0.3, 0.6, 0.3],}
+          transition={duration: 10,repeat: Infinity,ease: 'easeInOut',}
+          transition={duration: 10;
             repeat: Infinity;
-            ease: 'easeInOut',          }}
+            ease: 'easeInOut',          }
         />;
       </div>;
     </div>;

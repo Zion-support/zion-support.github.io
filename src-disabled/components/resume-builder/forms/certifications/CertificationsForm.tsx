@@ -430,17 +430,17 @@ ursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                   }
-                }}
+                }
               >
 <<<<<<< HEAD:src-disabled/components/resume-builder/forms/certifications/CertificationsForm.tsx
                 {editingId ? 'Cancel' : 'Back'}'
               </Button>
-              <div className="flex gap-2">"
-                <Button type="submit" disabled={isLoading}>"
-                  {isLoading && <Loader2 className="mr-2 h-4 w-4 animate-spin" />}"
+              <div className='flex gap-2'>'
+                <Button type='submit' disabled={isLoading}>'
+                  {isLoading && <Loader2 className='mr-2 h-4 w-4 animate-spin' />}'
                   {editingId ? 'Update' : 'Add'} Certification'
                 </Button>
-                <Button type="button" onClick={onComplete}>"
+                <Button type='button' onClick={onComplete}>'
 
 import { useState } from 'react',;
 import { useForm } from 'react-hook-form',;
@@ -479,7 +479,7 @@ export function CertificationsForm({ resumeId, certifications, onComplete, onBac
       issue_date: '',;
       expiration_date: '',;
       credential_id: '',;
-      credential_url: ''}}),;
+      credential_url: ''}),;
   const handleAddOrUpdate = async (data: CertificationFormValues) => {;
     try {;
       setError(null),;
@@ -525,10 +525,10 @@ export function CertificationsForm({ resumeId, certifications, onComplete, onBac
   },
 
   return (
-    <div className="space-y-6">
+    <div className='space-y-6'>
       <div>
-        <h2 className="text-xl font-semibold mb-2">Certifications & Licenses</h2>
-        <p className="text-muted-foreground">
+        <h2 className='text-xl font-semibold mb-2'>Certifications & Licenses</h2>
+        <p className='text-muted-foreground'>
           Add any professional certifications, licenses, or credentials you have earned.
         </p>
       </div>
@@ -541,21 +541,21 @@ export function CertificationsForm({ resumeId, certifications, onComplete, onBac
         />
       )}
 
-      <div className="bg-muted/40 p-6 rounded-lg">
-        <h3 className="text-md font-medium mb-4">
+      <div className='bg-muted/40 p-6 rounded-lg'>
+        <h3 className='text-md font-medium mb-4'>
           {editingId ? 'Update Certification' : 'Add Certification'}
         </h3>
 
         <Form {...form}>
-          <form onSubmit={form.handleSubmit(handleAddOrUpdate)} className="space-y-4">
+          <form onSubmit={form.handleSubmit(handleAddOrUpdate)} className='space-y-4'>
             <CertificationFormFields form={form} />
 
-            {error && <Alert variant="destructive"><AlertDescription>{error}</AlertDescription></Alert>}
+            {error && <Alert variant='destructive'><AlertDescription>{error}</AlertDescription></Alert>}
 
-            <div className="flex justify-between pt-2">
+            <div className='flex justify-between pt-2'>
               <Button
-                type="button"
-                variant="outline"
+                type='button'
+                variant='outline'
                 onClick={() => {
                   if (editingId) {
                     setEditingId(null),
@@ -569,7 +569,7 @@ export function CertificationsForm({ resumeId, certifications, onComplete, onBac
                   } else {
                     onBack()
                   }
-                }}
+                }
               >;
                 {editingId ? 'Cancel' : 'Back'}
               </Button>
@@ -599,7 +599,7 @@ export function CertificationsForm({ resumeId, certifications, onComplete, onBac
                   {editingId ? 'Update' : 'Add'} Certification
                 </Button>
 
-                <Button type="button" onClick={onComplete}>
+                <Button type='button' onClick={onComplete}>
 
                   Next
               </div>
@@ -730,7 +730,7 @@ if ( {) {
                   } else {
                     on_back ();
                   }
-                }}
+                }
               >;
                 {editing_id ? 'Cancel' : 'Back'}'
               </Button>;
@@ -753,12 +753,12 @@ if ( {) {
 <<<<<<< HEAD:src-disabled/components/resume-builder/forms/certifications/CertificationsForm.tsx
   editing_id ? 'Cancel' : 'Back';
 }</Button> Next </Button> </div> </div> </form> </Form> </div> </div>);
-}'"}"
+}''}'
 }
 ;
 }
 ;
-}'"
+}''
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
   editingId ? 'Cancel' : 'Back'

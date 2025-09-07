@@ -30,7 +30,6 @@ export function BillingHeader() {
             <Link href='/dashboard/client/analytics'>
               <BarChart3 className='h-4 w-4' />
 origin/cursor/automate-test-improve-and-merge-code-2533
-=======
 
 
 import React from "react",

@@ -69,7 +69,7 @@ pr-12243
 }
 }
 ;
-}}}]
+}}]
       heroImage="https://placehold.co/600x300/192134/9b87f5?text=AI+Talent+Matching";
       description="Our AI-powered system analyzes your requirements and quickly surfaces the best talent for the job. Reduce hiring time and make smarter selections with data-driven insights.";
       benefits={benefits}

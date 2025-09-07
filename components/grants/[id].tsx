@@ -254,10 +254,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           <h1 className="text-2xl font-semibold">{item.projectName}</h1>
           <div className="text-sm text-gray-600 dark:text-gray-400">{item.sector || 'General'} • {item.region || 'Global'} • {item.program === 'incubator' ? 'Incubator' : 'Grant'}</div>
         </div>
-        <div className="flex gap-2 items-center">
-          {item.program === 'incubator' && <span className="px-2 py-1 text-xs rounded bg-purple-100 text-purple-700">Incubated by Zion</span>}
-          {item.status === 'Approved' && <span className="px-2 py-1 text-xs rounded bg-emerald-100 text-emerald-700">Grant Winner</span>}
-          <span className="px-2 py-1 text-xs rounded bg-gray-100 dark:bg-gray-800">{item.status}</span>
+        <div className='flex gap-2 items-center'>
+          {item.program === 'incubator' && <span className='px-2 py-1 text-xs rounded bg-purple-100 text-purple-700'>Incubated by Zion</span>}
+          {item.status === 'Approved' && <span className='px-2 py-1 text-xs rounded bg-emerald-100 text-emerald-700'>Grant Winner</span>}
+          <span className='px-2 py-1 text-xs rounded bg-gray-100 dark:bg-gray-800'>{item.status}</span>
         </div>
       </div>
 
@@ -892,7 +892,7 @@ className={`mt-1 inline-block h-3 w-3 rounded-full ${m && m.completed ? 'bg-emer
             <h3 className="font-medium mb-2">Milestones</h3>
             <ul className="space-y-2">
               {(item.milestones || []).map((m) => (
-                <li key={m.id} className="text-sm flex items-start gap-2">
+                <li key={m.id} className='text-sm flex items-start gap-2'>
                   <span className={`mt-1 inline-block h-3 w-3 rounded-full ${m.completed ? 'bg-emerald-500' : 'bg-gray-400'}`} />
                   <div>
 <<<<<<< HEAD
@@ -914,7 +914,7 @@ className={`mt-1 inline-block h-3 w-3 rounded-full ${m && m.completed ? 'bg-emer
 =======
               {(!item.milestones |item.milestones.length === 0) && <div className="text-sm text-gray-600">Milestones will appear here.</div>}
             </ul>
-            <div className="mt-3 text-sm">Funds Released: {item.fundsReleased |0}</div>
+            <div className='mt-3 text-sm'>Funds Released: {item.fundsReleased |0}</div>
           </section>
           <section className="border rounded p-4 bg-white/70 dark:bg-black/40">
             <h3 className="font-medium mb-2">Team</h3>
@@ -922,7 +922,7 @@ className={`mt-1 inline-block h-3 w-3 rounded-full ${m && m.completed ? 'bg-emer
 >>>>>>> merged-prs-20250907-203621
               {(!item.milestones || item.milestones.length === 0) && <div className="text-sm text-gray-600">Milestones will appear here.</div>}
             </ul>
-            <div className="mt-3 text-sm">Funds Released: {item.fundsReleased || 0}</div>
+            <div className='mt-3 text-sm'>Funds Released: {item.fundsReleased || 0}</div>
           </section>
 
           <section className="border rounded p-4 bg-white/70 dark:bg-black/40">

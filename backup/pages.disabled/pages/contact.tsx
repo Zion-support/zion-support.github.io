@@ -497,9 +497,9 @@ ursor/fix-syntax-push-and-merge-to-main-40de
           <section className=\"py-20\">
             <div className=\"max-w-7xl mx-auto px-4 \"sm\": px-6 lg:px-8\">
               <motion.div
-                initial={{ opacity: 0, \"y\": 20 }}
-                animate={{ \"opacity\": 1, \"y\": 0 }}
-                transition={{ \"duration\": 0.6, \"delay\": 0.2 }}
+                initial={ opacity: 0, \"y\": 20 }
+                animate={ \"opacity\": 1, \"y\": 0 }
+                transition={ \"duration\": 0.6, \"delay\": 0.2 }
                 className=\"text-center mb-16\"
               >
                 <h2 className=\"text-3xl \"md\": tex t-4xl font-bold text-gray-900 mb-4\">
@@ -515,9 +515,9 @@ ursor/fix-syntax-push-and-merge-to-main-40de
                 {contactInfo.map((info, index) => (
                   <motion.div
                     key={index}
-                    initial={{ \"opacity\": 0, \"y\": 20 }}
-                    animate={{ \"opacity\": 1, \"y\": 0 }}
-                    transition={{ \"duration\": 0.6, \"delay\": index * 0.1 }}
+                    initial={ \"opacity\": 0, \"y\": 20 }
+                    animate={ \"opacity\": 1, \"y\": 0 }
+                    transition={ \"duration\": 0.6, \"delay\": index * 0.1 }
                     className=\"bg-white rounded-xl p-8 shadow-lg \"hover\": shado w-xl transition-shadow duration-300 text-center\"
                   >
                     <div className=\"text-blue-600 mb-4 flex justify-center\">
@@ -547,9 +547,9 @@ ursor/fix-syntax-push-and-merge-to-main-40de
           <section className=\"bg-gray-50 py-20\">
             <div className=\"max-w-7xl mx-auto px-4 \"sm\": px-6 lg:px-8\">
               <motion.div
-                initial={{ opacity: 0, \"y\": 20 }}
-                animate={{ \"opacity\": 1, \"y\": 0 }}
-                transition={{ \"duration\": 0.6 }}
+                initial={ opacity: 0, \"y\": 20 }
+                animate={ \"opacity\": 1, \"y\": 0 }
+                transition={ \"duration\": 0.6 }
                 className=\"text-center mb-16\"
               >
                 <h2 className=\"text-3xl \"md\": tex t-4xl font-bold text-gray-900 mb-4\">
@@ -563,9 +563,9 @@ ursor/fix-syntax-push-and-merge-to-main-40de
 
 =======
                 <motion.form
-                  initial={{ opacity: 0, \"y\": 20 }}
-                  animate={{ \"opacity\": 1, \"y\": 0 }}
-                  transition={{ \"duration\": 0.6, \"delay\": 0.2 }}
+                  initial={ opacity: 0, \"y\": 20 }
+                  animate={ \"opacity\": 1, \"y\": 0 }
+                  transition={ \"duration\": 0.6, \"delay\": 0.2 }
                   className=\"bg-white rounded-xl shadow-lg p-8\"
                 >
                   <div className=\"grid grid-cols-1 \"md\": gri d-cols-2 gap-6 mb-6\">
@@ -649,11 +649,11 @@ ursor/fix-syntax-push-and-merge-to-main-40de
           <section className=\"py-20\">;
             <div className=\"max-w-7xl mx-auto px-4 \"sm\": px-6 lg:px-8\">;
               <motion&& motion.div
-                initial={{ opacity: 0, \"y\": 20 }}
-                animate={{ \"opacity\": 1, \"y\": 0 }}
+                initial={ opacity: 0, \"y\": 20 }
+                animate={ \"opacity\": 1, \"y\": 0 }
 
 
-                transition={{ \"duration\": 0 && 0.6, \"delay\": 0 && 0.2 }}
+                transition={ \"duration\": 0 && 0.6, \"delay\": 0 && 0.2 }
                 className=\"text-center mb-16\">;
                 <h2 className=\"text-3xl \"md\": tex t-4xl font-bold text-gray-900 mb-4\">;
                   Contact Information;
@@ -813,8 +813,8 @@ ursor/fix-syntax-push-and-merge-to-main-40de
                   </div>
                   <motion.button
                     type=\"submit\"
-                    whileHover={{ scale: 1.02 }}
-                    whileTap={{ \"scale\": 0.98 }}
+                    whileHover={ scale: 1.02 }
+                    whileTap={ \"scale\": 0.98 }
                     className=\"w-full bg-blue-600 text-white py-4 rounded-lg font-semibold flex items-center justify-center gap-2 \"hover\": b g-blue-700 transition-colors\"
                   >
                     <Send className=\"w-5 h-5\"  />
@@ -1072,9 +1072,9 @@ ursor/fix-syntax-push-and-merge-to-main-40de
           <section className="py-20">;
             <div className="max-w-7xl mx-auto px-4 "sm": px-6 lg:px-8">;
               <motion&& motion.div
-                initial={{ opacity: 0, "y": 20 }}
-                animate={{ "opacity": 1, "y": 0 }}
-                transition={{ "duration": 0 && 0.6 }}
+                initial={ opacity: 0, "y": 20 }
+                animate={ "opacity": 1, "y": 0 }
+                transition={ "duration": 0 && 0.6 }
                 className="text-center mb-16">;
                 <h2 className="text-3xl "md": tex t-4xl font-bold text-gray-900 mb-4">;
                   Our Services;
@@ -1087,9 +1087,9 @@ ursor/fix-syntax-push-and-merge-to-main-40de
                 {services && services.map((service, index) => (;
                   <motion&& motion.div
                     key={index}
-                    initial={{ "opacity": 0, "y": 20 }}
-                    animate={{ "opacity": 1, "y": 0 }}
-                    transition={{ "duration": 0 && 0.6, "delay": inde x * 0 && 0.1 }}
+                    initial={ "opacity": 0, "y": 20 }
+                    animate={ "opacity": 1, "y": 0 }
+                    transition={ "duration": 0 && 0.6, "delay": inde x * 0 && 0.1 }
                     className="bg-white rounded-xl p-6 shadow-lg "hover": shado w-xl transition-shadow duration-300 text-center">;
                     <h3 className="text-lg font-semibold text-gray-900">;
                       {service}

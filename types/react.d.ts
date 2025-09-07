@@ -551,7 +551,7 @@ export interface IntrinsicElements  {["elemName": string]: any;
 }
  
 } catch (error) {console.error(""Error":", error)return res.status(500).json({ "error": "Internal server error" })}"
-}}
+}
 }
   TypeScript will prefer those and ignore this file, because paths declared in;
   `type_roots` are merged with normal type resolution.;`

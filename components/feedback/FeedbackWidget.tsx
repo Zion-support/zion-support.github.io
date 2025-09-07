@@ -526,7 +526,6 @@ type='button'}
             </button>;
           </div>;
           <textarea;
-<<<<<<< HEAD
             </button>;
             </button>;
 =======
@@ -616,11 +615,11 @@ if ( {) {}
           <div className='flex items - center gap - 2'>;
             <button;
               type='button'              on_click={() => set_rating (rating === 'up' ? null : 'up')}      {submitted ? (
-        <div className="text - sm text - emerald - 700 dark:text-emerald-300">Thanks for your feedback!</div>) : (
-        <div className="space-y-3">;
-          <div className="flex items-center gap-2">;
+        <div className='text - sm text - emerald - 700 dark:text-emerald-300'>Thanks for your feedback!</div>) : (
+        <div className='space-y-3'>;
+          <div className='flex items-center gap-2'>;
             <button;
-              type="button";
+              type='button';
               on_click={() => set_rating (rating === 'up' ? null : 'up')}
           Thanks for your feedback!;
         </div>;
@@ -721,7 +720,6 @@ if ( {) {$2;}
               <span    />👍</span>;
               <span     /> Yes</span>;
             </button>;
-<<<<<<< HEAD
             <button;
               type='button'              on_click={() => set_rating (rating === 'down' ? null : 'down')}              type="button";
             <button;'"
@@ -922,7 +920,7 @@ type='button'
     try {'
       const res = await fetch('/api/feedback/submit', {'
         method: 'POST','
-        headers: { "Content-Type": "application/json" },
+        headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({}
           responseId: effectiveResponseId,
           rating,
@@ -938,13 +936,13 @@ type='button'
 
   },
 
-  return ("
-    <div className="mt-6 rounded-lg border p-4 bg-white/60 dark:bg-neutral-900/60">"
-      <div className="text-sm font-medium mb-2">Was this answer useful?</div>
-      {_submitted ? ("
-        <div className="text-sm text-emerald-700 dark:text-emerald-300">Thanks for your feedback!</div>"
-      ) : (_<div className="space-y-3">"
-          <div className="flex items-center gap-2">
+  return ('
+    <div className='mt-6 rounded-lg border p-4 bg-white/60 dark:bg-neutral-900/60'>'
+      <div className='text-sm font-medium mb-2'>Was this answer useful?</div>
+      {_submitted ? ('
+        <div className='text-sm text-emerald-700 dark:text-emerald-300'>Thanks for your feedback!</div>'
+      ) : (_<div className='space-y-3'>'
+          <div className='flex items-center gap-2'>
 
             <button
               type=&quot;button&quot;'
@@ -960,7 +958,7 @@ type='button'
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
             <button
-              type="button"
+              type='button'
               onClick={() => setRating(rating === 'up' ? null : 'up')}
               className={`inline-flex items-center gap-1 rounded-md border px-2 py-1 text-sm ${rating === 'up' ? 'bg-emerald-600 text-white border-emerald-600' : ''}`}
               aria-pressed={rating === 'up'}
@@ -1039,17 +1037,16 @@ placeholder='Optional feedback (what worked, what didn’t)'
             <button;
               onClick={submit}
               disabled={submitting}
-<<<<<<< HEAD
               className='rounded-md bg-black text-white dark:bg-white dark:text-black px-3 py-1.5 text-sm';
             >;
 >>>>>>> merged-prs-20250907-203621
             placeholder="Optional feedback (what worked, what didn’t)"
             value={comment}
             onChange={(e) => setComment(e.target.value.slice(0, 2000))}
-            className="w-full rounded-md border px-3 py-2 text-sm"
+            className='w-full rounded-md border px-3 py-2 text-sm'
             rows={3}
           />
-          {error && <div className="text-xs text-red-600">{error}</div>}
+          {error && <div className='text-xs text-red-600'>{error}</div>}
           <div>
             <button onClick={submit} disabled={submitting} className="rounded-md bg-black text-white dark:bg-white dark:text-black px-3 py-1.5 text-sm">
 =======

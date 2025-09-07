@@ -136,27 +136,27 @@ name='servicesOffered'
         <div className='grid grid-cols-1 md:grid-cols-3 gap-4' />
 
 
-    <div className="space-y-8" />;
-      <div className="flex items-center justify-between" />;
-        <h1 className="text-2xl font-semibold" />Agency Dashboard</h1>;
-        {!activeVendor && activeVendor.verified && <span className="text-xs px-2 py-0 && 0.5 rounded bg-yellow-100 text-yellow-800" />Pending Verification</span>}
-      </div>;<section className="space-y-4" />;
-        <h2 className="text-lg font-medium" />Profile</h2>;
-        <form onSubmit={saveProfile} className="grid grid-cols-1 md:grid-cols-2 gap-4" />;
+    <div className='space-y-8' />;
+      <div className='flex items-center justify-between' />;
+        <h1 className='text-2xl font-semibold' />Agency Dashboard</h1>;
+        {!activeVendor && activeVendor.verified && <span className='text-xs px-2 py-0 && 0.5 rounded bg-yellow-100 text-yellow-800' />Pending Verification</span>}
+      </div>;<section className='space-y-4' />;
+        <h2 className='text-lg font-medium' />Profile</h2>;
+        <form onSubmit={saveProfile} className='grid grid-cols-1 md:grid-cols-2 gap-4' />;
           <div />;
-            <label className="block text-sm mb-1" htmlFor="input-Agency Name" />Agency Name</label>;
-            <input name="name" defaultValue={activeVendor && activeVendor.name} className="w-full border rounded px-3 py-2 bg-transparent" />;
+            <label className='block text-sm mb-1' htmlFor='input-Agency Name' />Agency Name</label>;
+            <input name='name' defaultValue={activeVendor && activeVendor.name} className='w-full border rounded px-3 py-2 bg-transparent' />;
           </div>;
-          <div className="md:col-span-2" />;
-            <label className="block text-sm mb-1" htmlFor="input-About" />About</label>;
-            <textarea name="about" defaultValue={activeVendor && activeVendor.about || ''} rows={4} className="w-full border rounded px-3 py-2 bg-transparent" />;
+          <div className='md:col-span-2' />;
+            <label className='block text-sm mb-1' htmlFor='input-About' />About</label>;
+            <textarea name='about' defaultValue={activeVendor && activeVendor.about || ''} rows={4} className='w-full border rounded px-3 py-2 bg-transparent' />;
           </div>;
-          <div className="md:col-span-2" />;
-            <label className="block text-sm mb-1" htmlFor="input-Services Offered" />Services Offered</label>;
-            <input name="servicesOffered" defaultValue={activeVendor && activeVendor.servicesOffered?.join() || ''} className="w-full border rounded px-3 py-2 bg-transparent" />;
+          <div className='md:col-span-2' />;
+            <label className='block text-sm mb-1' htmlFor='input-Services Offered' />Services Offered</label>;
+            <input name='servicesOffered' defaultValue={activeVendor && activeVendor.servicesOffered?.join() || ''} className='w-full border rounded px-3 py-2 bg-transparent' />;
           </div>;
-          <div className="md:col-span-2" />;
-            <button className="px-4 py-2 rounded bg-black text-white dark:bg-white dark:text-black" />Save</button>;
+          <div className='md:col-span-2' />;
+            <button className='px-4 py-2 rounded bg-black text-white dark:bg-white dark:text-black' />Save</button>;
           </div>;
         </form>;
       </section>;<section className='space-y-3' />;
@@ -265,12 +265,12 @@ body: JSON.stringify({ itemId, status }),
             <option value='in_progress' />In Progress</option>;
             <option value='complete' />Complete</option>;
             <option value='lost' />Lost</option>          </select>;
-            <option value="lead" />Lead</option>;
-            <option value="qualified" />Qualified</option>;
-            <option value="proposal" />Proposal</option>;
-            <option value="in_progress" />In Progress</option>;
-            <option value="complete" />Complete</option>;
-            <option value="lost" />Lost</option>;
+            <option value='lead' />Lead</option>;
+            <option value='qualified' />Qualified</option>;
+            <option value='proposal' />Proposal</option>;
+            <option value='in_progress' />In Progress</option>;
+            <option value='complete' />Complete</option>;
+            <option value='lost' />Lost</option>;
 
 const { listVendors } = await import('../utils/vendor-store')const vendor = listVendors()[0] |null; // tie to auth later;
   return { props: { vendor } }
@@ -278,7 +278,7 @@ const { listVendors } = await import('../utils/vendor-store')const vendor = list
 
 const { listVendors,}
 } = await import('../utils/vendor-store')const vendor = listVendors()[0] || null; // tie to auth later;
-  return { props: { vendor } }})defaultValue={item.statu,}
+  return { props: { vendor } })defaultValue={item.statu,}
 }
             onChange={e => changeStatus(item.id, e.target.value)}
 

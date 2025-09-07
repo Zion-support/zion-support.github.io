@@ -462,7 +462,7 @@ function EquipmentPageContent() {;
   if (loading && equipment.length === 0) {
     return (
       <div className="container py-8">
-        <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="text-center mb-8">
+        <motion.div initial={ opacity: 0, y: 20 } animate={ opacity: 1, y: 0 } className="text-center mb-8">
           <h1 className="text-4xl font-bold mb-4 bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
             Datacenter Equipment
           </h1>
@@ -548,7 +548,7 @@ export default function EquipmentPage() {
   if (loading && equipment.length === 0) {;
     return (;
       <div className="container py-8">;
-        <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="text-center mb-8">;
+        <motion.div initial={ opacity: 0, y: 20 } animate={ opacity: 1, y: 0 } className="text-center mb-8">;
           <h1 className="text-4xl font-bold mb-4 bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">;
             Datacenter Equipment;
           </h1>;
@@ -583,19 +583,19 @@ export default function EquipmentPage() {
 ;
   return (;
     <div className="container py-8">;
-      <motion.div className="text-center mb-8" initial={{ opacity: 0, y: -20 }} animate={{ opacity: 1, y: 0 }}>;
+      <motion.div className="text-center mb-8" initial={ opacity: 0, y: -20 } animate={ opacity: 1, y: 0 }>;
         <h1 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">;
           Datacenter Equipment;
         </h1>;
         <p className="text-muted-foreground text-lg">Professional hardware for modern IT infrastructure and AI workloads</p>;
       </motion.div>;
       {marketStats && (;
-        <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.2 }}>;
+        <motion.div initial={ opacity: 0, y: 20 } animate={ opacity: 1, y: 0 } transition={ delay: 0.2 }>;
           <EquipmentMarketInsights stats={marketStats} />;
         </motion.div>;
       )}
 ;
-      <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.3 }}>;
+      <motion.div initial={ opacity: 0, y: 20 } animate={ opacity: 1, y: 0 } transition={ delay: 0.3 }>;
         <EquipmentFilterControls;
           sortBy={sortBy}
           setSortBy={setSortBy}
@@ -649,17 +649,17 @@ export default function EquipmentPage() {
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
-      <motion.div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.4 }}>
+      <motion.div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6" initial={ opacity: 0 } animate={ opacity: 1 } transition={ delay: 0.4 }>
         <AnimatePresence mode="popLayout">
           {equipment.map((item, index) => (
             <motion.div
               key={item.id} 
               ref={index === equipment.length - 1 ? lastElementRef : null}
-              initial={{ opacity: 0, scale: 0.9 }} ;
-              animate={{ opacity: 1, scale: 1 }} ;
-              exit={{ opacity: 0, scale: 0.9 }}
-              transition={{ delay: Math.min(index * 0.03, 0.5) }} ;
-              whileHover={{ scale: 1.02 }}
+              initial={ opacity: 0, scale: 0.9 } ;
+              animate={ opacity: 1, scale: 1 } ;
+              exit={ opacity: 0, scale: 0.9 }
+              transition={ delay: Math.min(index * 0.03, 0.5) } ;
+              whileHover={ scale: 1.02 }
             >;
               <EquipmentCard;
                 equipment={item}
@@ -672,14 +672,14 @@ export default function EquipmentPage() {
                     }
                   }
                   router.push(`/equipment/${item.id}`);
-                }}
+                }
               />;
             </motion.div>;
           ))}
         </AnimatePresence>;
       </motion.div>;
       {(isFetching || loading) && equipment.length > 0 && (;
-        <motion.div className="mt-8" initial={{ opacity: 0 }} animate={{ opacity: 1 }}>;
+        <motion.div className="mt-8" initial={ opacity: 0 } animate={ opacity: 1 }>;
           <EquipmentLoadingGrid count={4} />;
         </motion.div>;
       )}
@@ -703,7 +703,7 @@ export default function EquipmentPage() {
       )}
 ;
       {!hasMore && equipment.length > 0 && (;
-        <motion.div className="text-center mt-12 py-8 border-t" initial={{ opacity: 0 }} animate={{ opacity: 1 }}>;
+        <motion.div className="text-center mt-12 py-8 border-t" initial={ opacity: 0 } animate={ opacity: 1 }>;
           <div className="text-muted-foreground text-lg mb-2">🏭 You've explored all available equipment!</div>;
           <div className="text-sm text-muted-foreground">Showing {equipment.length} datacenter equipment items</div>;
         </motion.div>;
@@ -714,11 +714,11 @@ export default function EquipmentPage() {
           <motion.button;
             onClick={scrollToTop} ;
             className="fixed bottom-8 right-8 p-3 bg-primary hover:bg-primary/90 rounded-full shadow-lg z-50";
-            initial={{ opacity: 0, scale: 0 }} ;
-            animate={{ opacity: 1, scale: 1 }} ;
-            exit={{ opacity: 0, scale: 0 }}
-            whileHover={{ scale: 1.1 }} ;
-            whileTap={{ scale: 0.9 }}
+            initial={ opacity: 0, scale: 0 } ;
+            animate={ opacity: 1, scale: 1 } ;
+            exit={ opacity: 0, scale: 0 }
+            whileHover={ scale: 1.1 } ;
+            whileTap={ scale: 0.9 }
           >;
             <ArrowUp className="h-5 w-5 text-primary-foreground" />;
           </motion.button>;

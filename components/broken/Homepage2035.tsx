@@ -4848,8 +4848,8 @@ export default Homepage2035;className='text - center' />
 const filteredServices = activeCategory === 'all' ? allServices return (<Layout> <UltraFuturisticBackground2035> > <h1 className="text-4xl sm:text-5xl lg:text-7xl font-bold text-white mb-6 leading-tight" > <span className="bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent" > Zion Tech Group </span> </h1> </p> <div className="flex flex-col sm:flex-row gap-4 justify-center items-center" > <motion.button > <span>Explore Services</span> <ArrowRight className="w-5 h-5" /> </motion.button> <motion.button > <Play className="w-5 h-5" /> <span>Watch Demo</span> </motion.button> </div> </motion.div> {/* Stats */;
 }<motion.div </motion.div>) )}</motion.div> </div> </section> > <h2 className="text-4xl sm:text-5xl font-bold text-white mb-6" > Revolutionary Technology Solutions </h2> <p className="text-xl text-gray-300 max-w-3xl mx-auto" > Discover our comprehensive portfolio of cutting-edge services designed to transform your business </p> </motion.div> {/* Category Filter */;
 }<motion.div > {categories.map ( (category) => (<motion.button key= {category.id;
-}whileHover= {{"scale": 1.05;
-}whileTap= {{"scale": 0.95;
+}whileHover= {"scale": 1.05;
+}whileTap= {"scale": 0.95;
 }onClick= {() => setActiveCategory (category.id)}className= {`flex items-center space-x-2 px-6 py-3 rounded-full border transition-all duration-300 $ {activeCategory === category.id ? 'border-cyan-400 bg-cyan-400/10 text-cyan-400' : 'border-gray-600 text-gray-300 "hover":border-cyan-400 "hover":text-cyan-400';'
 }`;`}> {category.icon;
 }<span> {category.name;

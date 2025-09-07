@@ -29,7 +29,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   if (req && req.method !== 'GET') {'
     res && res.setHeader('Allow', 'GET');'
     return res && res.status(405).json({ error: 'Method Not Allowed' });
-=======
 
 
 import type { NextApiRequest, NextApiResponse } from 'next';

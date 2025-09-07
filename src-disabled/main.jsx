@@ -31,8 +31,8 @@ const queryClient = new QueryClient({defaultOptions: {queries: {retry: 1, refetc
                             <AuthProvider />;
                                 <NotificationProvider />;
                                     <AnalyticsProvider />;
-                                        <LanguageProvider authState={{isAuthenticated: false, user: null;}
-                                        }} />;
+                                        <LanguageProvider authState={isAuthenticated: false, user: null;}
+                                        } />;
                                             <ViewModeProvider />;
                                                 <AppLayout />;
                                                     <App />;

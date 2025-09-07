@@ -338,22 +338,22 @@ const EnhancedNavigation = () => {
             <Link href="/" className="text-gray-600 hover:text-blue-600 font-medium transition-colors">
               Home
             </Link>
-            <Link href="/services" className="text-gray-600 hover:text-blue-600 font-medium transition-colors">
+            <Link href='/services' className='text-gray-600 hover:text-blue-600 font-medium transition-colors'>
               Services
             </Link>
-            <Link href="/products" className="text-gray-600 hover:text-blue-600 font-medium transition-colors">
+            <Link href='/products' className='text-gray-600 hover:text-blue-600 font-medium transition-colors'>
               Products
             </Link>
-            <Link href="/about" className="text-gray-600 hover:text-blue-600 font-medium transition-colors">
+            <Link href='/about' className='text-gray-600 hover:text-blue-600 font-medium transition-colors'>
               About
             </Link>
-            <Link href="/blog" className="text-gray-600 hover:text-blue-600 font-medium transition-colors">
+            <Link href='/blog' className='text-gray-600 hover:text-blue-600 font-medium transition-colors'>
               Blog
             </Link>
-            <Link href="/talent" className="text-gray-600 hover:text-blue-600 font-medium transition-colors">
+            <Link href='/talent' className='text-gray-600 hover:text-blue-600 font-medium transition-colors'>
               Careers
             </Link>
-            <Link href="/contact" className="bg-blue-600 text-white px-6 py-2 rounded-lg font-medium hover:bg-blue-700 transition-colors">
+            <Link href='/contact' className='bg-blue-600 text-white px-6 py-2 rounded-lg font-medium hover:bg-blue-700 transition-colors'>
               Get Started
             </Link>
           </div>

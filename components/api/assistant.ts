@@ -194,7 +194,7 @@ export default async function handler(
       messages: preparedMessages});
 
 const preparedMessages = [;
-  { "role": 'system' as const, "content": SYSTEM_PROMPT,'
+  { 'role': 'system' as const, 'content': SYSTEM_PROMPT,'
 }
 
       ...(messages |[]).slice(-20)

@@ -45,7 +45,7 @@ import { Menu, X, ChevronDown, Search, Phone, Mail, MapPin;
   } from 'lucide-react';'
 import Link from 'next/link';'
 
-const "UltraAdvancedNavigation": React.FC;
+const 'UltraAdvancedNavigation': React.FC;
 
 
 =======
@@ -1677,10 +1677,10 @@ className='flex items-center''
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
           >
             <Link href='/' className='flex items-center space-x-3 group'>'
-              <div className='w-10 h-10 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-xl flex items-center justify-center group-"hover":scale-110 transition-transform duration-300'>'
+              <div className='w-10 h-10 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-xl flex items-center justify-center group-'hover':scale-110 transition-transform duration-300'>'
                 <Zap className='w-6 h-6 text-white' />'
               </div>
-              <div className='hidden "sm":block'>'
+              <div className='hidden 'sm':block'>'
                 <div className='text-xl font-bold bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent'>'
                   Zion Tech Group
                 </div>
@@ -1701,17 +1701,17 @@ className='flex items-center';
                   Revolutionary Technology;
                 </div>              </div>          >;
     }`}>;
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;
-        <div className="flex justify-between items-center h-20">;
+      <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>;
+        <div className='flex justify-between items-center h-20'>;
           <motion&& motion.div;
-            initial={{ opacity: 0, x: -20 }}
-            animate={{ opacity: 1, x: 0 }}
-            <Link href="/" className="flex items-center space-x-3 group">;
-              <div className="w-10 h-10 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">;
-                <Zap className="w-6 h-6 text-white" />;
+            initial={ opacity: 0, x: -20 }
+            animate={ opacity: 1, x: 0 }
+            <Link href='/' className='flex items-center space-x-3 group'>;
+              <div className='w-10 h-10 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300'>;
+                <Zap className='w-6 h-6 text-white' />;
               </div>;
-              <div className="hidden sm:block">;
-                <div className="text-xl font-bold bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent">;
+              <div className='hidden sm:block'>;
+                <div className='text-xl font-bold bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent'>;
                   Zion Tech Group;
                 </div>;
               </div>;
@@ -1745,15 +1745,15 @@ className='flex items-center';
                 <div className='text-xs text-gray-400'>;
                   Revolutionary Technology;
                 </div>              </div>          >;
-            <Link href="/" className="flex items-center space-x-3 group">;
-              <div className="w-10 h-10 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">;
-                <Zap className="w-6 h-6 text-white" />;
+            <Link href='/' className='flex items-center space-x-3 group'>;
+              <div className='w-10 h-10 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300'>;
+                <Zap className='w-6 h-6 text-white' />;
               </div>;
-              <div className="hidden sm:block">;
-                <div className="text-xl font-bold bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent">;
+              <div className='hidden sm:block'>;
+                <div className='text-xl font-bold bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent'>;
                   Zion Tech Group;
                 </div>;
-                <div className="text-xs text-gray-400">Revolutionary Technology</div>;
+                <div className='text-xs text-gray-400'>Revolutionary Technology</div>;
               </div>;
             </Link>;
           </motion && motion.div>;{/* Desktop Navigation */}
@@ -1936,31 +1936,31 @@ className='flex items-center space-x-2 text-gray-300 hover:text-white transition
                     {item.icon && <item.icon className='w-4 h-4' />}
                 </div>              </div>          >
     }`}>;
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;
-        <div className="flex justify-between items-center h-20">;
+      <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>;
+        <div className='flex justify-between items-center h-20'>;
           <motion&& motion.div
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
 >>>>>>> merged-prs-20250907-203621
             className="flex items-center"
           >
-            <Link href="/" className="flex items-center space-x-3 group">
-              <div className="w-10 h-10 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                <Zap className="w-6 h-6 text-white" />
+            <Link href='/' className='flex items-center space-x-3 group'>
+              <div className='w-10 h-10 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300'>
+                <Zap className='w-6 h-6 text-white' />
               </div>
-              <div className="hidden sm:block">
-                <div className="text-xl font-bold bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent">
+              <div className='hidden sm:block'>
+                <div className='text-xl font-bold bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent'>
                   Zion Tech Group
                 </div>
-                <div className="text-xs text-gray-400">Revolutionary Technology</div>
+                <div className='text-xs text-gray-400'>Revolutionary Technology</div>
               </div>
             </Link>
           </motion.div>
 
           {/* Desktop Navigation */}
-          <div className="hidden lg:flex items-center space-x-8">
+          <div className='hidden lg:flex items-center space-x-8'>
             {navigationItems.map((item, index) => (
-              <div key={item.name} className="relative group">
+              <div key={item.name} className='relative group'>
                 {item.dropdown ? (
 =======
           {/* Desktop Navigation */}
@@ -2106,9 +2106,9 @@ className="flex items-center space-x-3 p-3 rounded-xl hover:bg-gray-800/50 trans
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
                   <button
                     onClick={() => setActiveDropdown(activeDropdown === item.name ? null : item.name)}
-                    className="flex items-center space-x-2 text-gray-300 hover:text-white transition-colors duration-300 py-2"
+                    className='flex items-center space-x-2 text-gray-300 hover:text-white transition-colors duration-300 py-2'
                   >
-                    {item.icon && <item.icon className="w-4 h-4" />}
+                    {item.icon && <item.icon className='w-4 h-4' />}
                     <span>{item.name}</span>
                     <ChevronDown className={`w-4 h-4 transition-transform duration-300 ${
                       activeDropdown === item.name ? 'rotate-180' : ''
@@ -2119,7 +2119,7 @@ className="flex items-center space-x-3 p-3 rounded-xl hover:bg-gray-800/50 trans
                     href={item.href}
                     className="flex items-center space-x-2 text-gray-300 hover:text-white transition-colors duration-300 py-2"
                   >
-                    {item.icon && <item.icon className="w-4 h-4" />}
+                    {item.icon && <item.icon className='w-4 h-4' />}
                     <span>{item.name}</span>
 <<<<<<< HEAD
 =======
@@ -2147,23 +2147,23 @@ className="flex items-center space-x-3 p-3 rounded-xl hover:bg-gray-800/50 trans
                         transition={{ duration: 0.2 }}
                         className="absolute top-full left-0 mt-2 w-80 bg-gray-900/95 backdrop-blur-xl border border-gray-700/50 rounded-2xl shadow-2xl shadow-black/50 overflow-hidden"
                       >
-                        <div className="p-4">
-                          <div className="text-sm text-gray-400 mb-3">{item.description}</div>
-                          <div className="space-y-2">
+                        <div className='p-4'>
+                          <div className='text-sm text-gray-400 mb-3'>{item.description}</div>
+                          <div className='space-y-2'>
                             {item.dropdown.map((dropdownItem) => (
                               <Link
                                 key={dropdownItem.name}
                                 href={dropdownItem.href}
-                                className="flex items-center space-x-3 p-3 rounded-xl hover:bg-gray-800/50 transition-colors duration-200 group"
+                                className='flex items-center space-x-3 p-3 rounded-xl hover:bg-gray-800/50 transition-colors duration-200 group'
                               >
-                                <div className="w-10 h-10 bg-gradient-to-r from-cyan-500/20 to-purple-600/20 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-200">
-                                  <dropdownItem.icon className="w-5 h-5 text-cyan-400" />
+                                <div className='w-10 h-10 bg-gradient-to-r from-cyan-500/20 to-purple-600/20 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-200'>
+                                  <dropdownItem.icon className='w-5 h-5 text-cyan-400' />
                                 </div>
-                                <div className="flex-1">
-                                  <div className="text-white font-medium group-hover:text-cyan-400 transition-colors duration-200">
+                                <div className='flex-1'>
+                                  <div className='text-white font-medium group-hover:text-cyan-400 transition-colors duration-200'>
                                     {dropdownItem.name}
                                   </div>
-                                  <div className="text-sm text-gray-400">{dropdownItem.description}</div>
+                                  <div className='text-sm text-gray-400'>{dropdownItem.description}</div>
                                 </div>
                                 <div className="text-sm font-semibold text-cyan-400">
 =======
@@ -2377,7 +2377,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
           {/* Contact Info & CTA */}
 
-<div className='hidden "lg": flex items-center space-x-6'>'
+<div className='hidden 'lg': flex items-center space-x-6'>'
             <div className='flex items-center space-x-4 text-sm text-gray-300'>'
               <a
 <<<<<<< HEAD
@@ -2522,7 +2522,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               Get Started;
             </motion.a>;
           </div>;
-          {/* Mobile Menu Button */}<div className="lg:hidden">;
+          {/* Mobile Menu Button */}<div className='lg:hidden'>;
             <button;
               onClick={() => setIsOpen(!isOpen)}
               className=text-gray-300 hover:text-white transition-colors duration-200';
@@ -2606,7 +2606,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               {isOpen ? (<X className='w-6 h-6' />;
               ) : (<Menu className='w-6 h-6' />;
               )}
-          <div className="lg:hidden">
+          <div className='lg:hidden'>
             <button
 =======
                 href={`mailto:${contactInfo && contactInfo.email}`}
@@ -3302,7 +3302,7 @@ export default UltraAdvancedNavigation;
                       on_click={() => setIsOpen (false)}
                       className='flex items - center space - x-3 text - gray - 300 hover:text - white transition - colors duration - 200 py - 3';
                     >;
-                      {item.icon && <item.icon className='w - 5 h - 5' />}                      <span>{item.name}</span>                      className="flex items - center space - x-3 text - gray - 300 hover:text - white transition - colors duration - 200 py - 3";
+                      {item.icon && <item.icon className='w - 5 h - 5' />}                      <span>{item.name}</span>                      className='flex items - center space - x-3 text - gray - 300 hover:text - white transition - colors duration - 200 py - 3';
                     >;
                       {item.icon && <item.icon className="w - 5 h - 5" />}
                       <span>{item.name}</span>;
@@ -3332,17 +3332,17 @@ export default UltraAdvancedNavigation;
                 </div>;
                 <motion.a;
                   href='/contact';
-                  while_hover={{ scale: 1.05 }}
-                  while_tap={{ scale: 0.95 }}
+                  while_hover={ scale: 1.05 }
+                  while_tap={ scale: 0.95 }
                   className='block w - full mt - 6 bg - gradient - to - r from - cyan - 500 to - purple - 600 text - white text - center py - 3 rounded - 2xl font - semibold hover:shadow - lg hover:shadow - cyan - 500 / 25 transition - all duration - 300'                >              {/* Mobile Contact Info */}
-              <div className="pt - 6 border - t border - gray - 800 / 50">;
-                <div className="space - y-3 text - sm text - gray - 400">;
-                  <a href={`tel:${contact_info.mobile}`} className="flex items - center space - x-3 hover:text - cyan - 400 transition - colors duration - 200">;
-                    <Phone className="w - 4 h - 4" />;
+              <div className='pt - 6 border - t border - gray - 800 / 50'>;
+                <div className='space - y-3 text - sm text - gray - 400'>;
+                  <a href={`tel:${contact_info.mobile}`} className='flex items - center space - x-3 hover:text - cyan - 400 transition - colors duration - 200'>;
+                    <Phone className='w - 4 h - 4' />;
                     <span>{contact_info.mobile}</span>;
                   </a>;
-                  <a href={`mailto:${contact_info.email}`} className="flex items - center space - x-3 hover:text - cyan - 400 transition - colors duration - 200">;
-                    <Mail className="w - 4 h - 4" />;
+                  <a href={`mailto:${contact_info.email}`} className='flex items - center space - x-3 hover:text - cyan - 400 transition - colors duration - 200'>;
+                    <Mail className='w - 4 h - 4' />;
                     <span>{contact_info.email}</span>;
                   </a>;
                   <div className="flex items - start space - x-3">;
@@ -3351,10 +3351,10 @@ export default UltraAdvancedNavigation;
                   </div>;
                 </div>;
                 <motion.a;
-                  href="/contact";
-                  while_hover={{ scale: 1.05 }}
-                  while_tap={{ scale: 0.95 }}
-                  className="block w - full mt - 6 bg - gradient - to - r from - cyan - 500 to - purple - 600 text - white text - center py - 3 rounded - 2xl font - semibold hover:shadow - lg hover:shadow - cyan - 500 / 25 transition - all duration - 300";
+                  href='/contact';
+                  while_hover={ scale: 1.05 }
+                  while_tap={ scale: 0.95 }
+                  className='block w - full mt - 6 bg - gradient - to - r from - cyan - 500 to - purple - 600 text - white text - center py - 3 rounded - 2xl font - semibold hover:shadow - lg hover:shadow - cyan - 500 / 25 transition - all duration - 300';
                 >;
                   Get Started;
                 </motion.a>;
@@ -3364,8 +3364,8 @@ export default UltraAdvancedNavigation;
       </AnimatePresence>;
     </nav>)}export default UltraAdvancedNavigation)}export default UltraAdvancedNavigation;export default UltraAdvancedNavigation;
   )}href='/contact';
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
+                  whileHover={ scale: 1.05 }
+                  whileTap={ scale: 0.95 }
                   className='block w-full mt-6 bg-gradient-to-r from-cyan-500 to-purple-600 text-white text-center py-3 rounded-2xl font-semibold hover:shadow-lg hover:shadow-cyan-500/25 transition-all duration-300';
                 >;
 =======
@@ -3418,10 +3418,9 @@ export default UltraAdvancedNavigation;
 }
 
 
-<<<<<<< HEAD
                   href='/contact'
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
+                  whileHover={ scale: 1.05 }
+                  whileTap={ scale: 0.95 }
                   className='block w-full mt-6 bg-gradient-to-r from-cyan-500 to-purple-600 text-white text-center py-3 rounded-2xl font-semibold hover:shadow-lg hover:shadow-cyan-500/25 transition-all duration-300'
                 >
 >>>>>>> merged-prs-20250907-203621

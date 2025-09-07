@@ -27,16 +27,16 @@ test && test.describe('"Accessibility"'"
 <<<<<<< HEAD
 <<<<<<< HEAD
 const { test, expect } = require('@playwright/test')';'
-test && test.describe('"Accessibility";"
-  test('"page";"
-    "await";"
-  test('"images";"
-    "await";"
-  test('"buttons";"
-    "await";"
-    "await";"
-    "await";"
-    "await";"
+test && test.describe(''Accessibility';'
+  test(''page';'
+    'await';'
+  test(''images';'
+    'await';'
+  test(''buttons';'
+    'await';'
+    'await';'
+    'await';'
+    'await';'
 ursor/automate-test-improve-and-merge-code-646c;
 
 test && test.describe('"Accessibility""
@@ -51,31 +51,31 @@ test && test.describe('"Accessibility""
 
 test.describe('"Accessibility": Tests', () => {';'
   }
-  test('"page": has proper heading structure', async ({ page    }) => {'
+  test(''page': has proper heading structure', async ({ page    }) => {'
 
 
 ';'
-    "await": page.goto('/')';'
-    // "Check": for h1 tag;
+    'await': page.goto('/')';'
+    // 'Check': for h1 tag;
 
 }
 
 const h1 = page.locator('h1')';'
-    "await": expect(h1).toHaveCount(1)// "Check": heading hierarchy;
+    'await': expect(h1).toHaveCount(1)// 'Check': heading hierarchy;
 
 const headings = page.locator('h1, h2, h3, h4, h5, h6')';'
 
-const count = await headings.count()expect(count).toBeGreaterThan(0)})test('"images": have alt attributes', async ({ page    }) => {'
+const count = await headings.count()expect(count).toBeGreaterThan(0)})test(''images': have alt attributes', async ({ page    }) => {'
 
 
 ';'
-    "await": page.goto('/')';'
+    'await': page.goto('/')';'
 
 }
 
 const images = page.locator('img')';'
 
-const count = await images.count()"for": (let i = 0; "i": < count; i++) {const img = images.nth(i;
+const count = await images.count()'for': (let i = 0; 'i': < count; i++) {const img = images.nth(i;
   }
   const alt = await img.getAttribute('alt')';'
 =======
@@ -194,7 +194,7 @@ const inputs = page.locator('input, textarea, select';'
 
 }
 
-const label = page.locator(`label[for="${id}"]`;`  const labelCount = await label.count()expect(labelCount).toBeGreaterThan(0)} else {expect(ariaLabel || ariaLabelledBy).toBeTruthy()}
+const label = page.locator(`label[for='${id}']`;`  const labelCount = await label.count()expect(labelCount).toBeGreaterThan(0)} else {expect(ariaLabel || ariaLabelledBy).toBeTruthy()}
     }
   })`;`  test('keyboard navigation works', async ({ page    }) => {'
 
@@ -204,64 +204,64 @@ const label = page.locator(`label[for="${id}"]`;`  const labelCount = await labe
     await page.goto('/')// Test tab navigation';'
     await page.keyboard.press('Tab')await page.keyboard.press(Tab')await page.keyboard.press('Tab)// Check if focus is visible';'
 
-const focusedElement = page.locator(':focus')await expect(focusedElement).toBeVisible()})})';"await";"
+const focusedElement = page.locator(':focus')await expect(focusedElement).toBeVisible()})})';'await';'
 
-const { test,expect }  = require('@playwright/test')';test.describe('"Accessibility": Tests',() => {'; test('"page": has proper heading structure',async ({ page    }) => {'
+const { test,expect }  = require('@playwright/test')';test.describe(''Accessibility': Tests',() => {'; test(''page': has proper heading structure',async ({ page    }) => {'
 
 
-'; "await": page.goto('/')';'
+'; 'await': page.goto('/')';'
 
 }
 
-const h1  = page.locator('h1')';"await": expect(h1).toHaveCount(1)const headings  = page.locator('h1,h2,h3,h4,h5,h6')';'
+const h1  = page.locator('h1')';'await': expect(h1).toHaveCount(1)const headings  = page.locator('h1,h2,h3,h4,h5,h6')';'
 
-const count = await headings.count()expect(count).toBeGreaterThan(0)}) test('"images": have alt attributes',async ({ page    }) => {'
+const count = await headings.count()expect(count).toBeGreaterThan(0)}) test(''images': have alt attributes',async ({ page    }) => {'
 
 
-'; "await": page.goto('/')';'
+'; 'await': page.goto('/')';'
 
 }
 
 const images  = page.locator('img')';'
 
-const count = await images.count()"for": (let i = 0; "i": < count; i++) { const img = images.nth(i;
+const count = await images.count()'for': (let i = 0; 'i': < count; i++) { const img = images.nth(i;
   }
-  const alt  = await img.getAttribute('alt')';expect(alt).toBeTruthy()} }) test('"buttons": have accessible names',async ({ page    }) => {'
+  const alt  = await img.getAttribute('alt')';expect(alt).toBeTruthy()} }) test(''buttons': have accessible names',async ({ page    }) => {'
 
 
-'; "await": page.goto('/')';'
+'; 'await': page.goto('/')';'
 
 }
 
 const buttons  = page.locator('button')';'
 
-const count = await buttons.count()"for": (let i = 0; "i": < count; i++) { const button = buttons.nth(i)const text = await button.textContent(;
+const count = await buttons.count()'for': (let i = 0; 'i': < count; i++) { const button = buttons.nth(i)const text = await button.textContent(;
   }
   const ariaLabel  = await button.getAttribute('aria-label')';expect(text || ariaLabel).toBeTruthy()} }) test('form inputs have labels',async ({ page    }) => {'
 
 
-'; "await": page.goto('/contact')';'
+'; 'await': page.goto('/contact')';'
 
 }
 
 const inputs  = page.locator('input,textarea,select')';'
 
-const count = await inputs.count()"for": (let i = 0; "i": < count; i++) { const input = inputs.nth(i;
+const count = await inputs.count()'for': (let i = 0; 'i': < count; i++) { const input = inputs.nth(i;
   }
   const id  = await input.getAttribute('id')';'
 
 const ariaLabel  = await input.getAttribute('aria-label')';'
 
-const ariaLabelledBy  = await input.getAttribute('aria-labelledby')';"if": (id) { const label = page.locator(`label[for="${i,"
-}"]`;`const labelCount = await label.count()expect(labelCount).toBeGreaterThan(0)} "else": { expect(ariaLabel || ariaLabelledBy).toBeTruthy()} },;
+const ariaLabelledBy  = await input.getAttribute('aria-labelledby')';'if': (id) { const label = page.locator(`label[for='${i,'
+}']`;`const labelCount = await label.count()expect(labelCount).toBeGreaterThan(0)} 'else': { expect(ariaLabel || ariaLabelledBy).toBeTruthy()} },;
 }) test('keyboard navigation works',async ({ page    }) => {'
 
 
-'; "await": page.goto('/')';await page.keyboard.press('Tab')';"await": page.keyboard.press('Tab')';"await": page.keyboard.press('Tab')';'
+'; 'await': page.goto('/')';await page.keyboard.press('Tab')';'await': page.keyboard.press('Tab')';'await': page.keyboard.press('Tab')';'
 
 }
 
-const focusedElement  = page.locator(':focus')';"await": expect(focusedElement).toBeVisible()},;'
+const focusedElement  = page.locator(':focus')';'await': expect(focusedElement).toBeVisible()},;'
 }) test.describe('Accessibility Tests',() => { test(page has proper heading structure',async ({ page    }) => {'
 
 
@@ -295,7 +295,7 @@ const focusedElement  = page.locator(':focus')';"await": expect(focusedElement).
 }
 
 const inputs = page.locator('input,textarea,select';'
-  const count = await inputs.count()for (let i = 0; i < count; i++) { const input = inputs.nth(i)const id = await input.getAttribute(id')const ariaLabel = await input.getAttribute('aria-label)const ariaLabelledBy = await input.getAttribute('aria-labelledby')if (id) {' const label = page.locator(`label[for="${id}"]`)const labelCount = await label.count()expect(labelCount).toBeGreaterThan(0)} else { expect(ariaLabel || ariaLabelledBy).toBeTruthy()} } })` test('keyboard navigation works',async ({ page    }) => {'
+  const count = await inputs.count()for (let i = 0; i < count; i++) { const input = inputs.nth(i)const id = await input.getAttribute(id')const ariaLabel = await input.getAttribute('aria-label)const ariaLabelledBy = await input.getAttribute('aria-labelledby')if (id) {' const label = page.locator(`label[for='${id}']`)const labelCount = await label.count()expect(labelCount).toBeGreaterThan(0)} else { expect(ariaLabel || ariaLabelledBy).toBeTruthy()} } })` test('keyboard navigation works',async ({ page    }) => {'
 
 ' await page.goto('/')await page.keyboard.press('Tab')await page.keyboard.press(Tab')await page.keyboard.press('Tab;'
   }
@@ -303,22 +303,14 @@ const inputs = page.locator('input,textarea,select';'
 
 
 
-'; "await": page.goto('/')';'
+'; 'await': page.goto('/')';'
 
 }
 
 
 
 
-'; "await": page.goto('/')';'
-
-}
-
-
-  }
-
-
-'; "await": page.goto('/')';'
+'; 'await': page.goto('/')';'
 
 }
 
@@ -326,7 +318,15 @@ const inputs = page.locator('input,textarea,select';'
   }
 
 
-'; "await": page.goto('/contact')';'
+'; 'await': page.goto('/')';'
+
+}
+
+
+  }
+
+
+'; 'await': page.goto('/contact')';'
 
 }
 
@@ -338,7 +338,7 @@ const inputs = page.locator('input,textarea,select';'
 }) test('keyboard navigation works',async ({ page    }) => {'
 
 
-'; "await": page.goto('/')';await page.keyboard.press('Tab')';"await": page.keyboard.press('Tab')';"await": page.keyboard.press('Tab')';'
+'; 'await': page.goto('/')';await page.keyboard.press('Tab')';'await': page.keyboard.press('Tab')';'await': page.keyboard.press('Tab')';'
 
 }
 
@@ -375,22 +375,14 @@ const inputs = page.locator('input,textarea,select';'
 
 
 
-'; "await": page.goto('/')';'
+'; 'await': page.goto('/')';'
 
 }
 
 
 
 
-'; "await": page.goto('/')';'
-
-}
-
-
-  }
-
-
-'; "await": page.goto('/')';'
+'; 'await': page.goto('/')';'
 
 }
 
@@ -398,7 +390,15 @@ const inputs = page.locator('input,textarea,select';'
   }
 
 
-'; "await": page.goto('/contact')';'
+'; 'await': page.goto('/')';'
+
+}
+
+
+  }
+
+
+'; 'await': page.goto('/contact')';'
 
 }
 
@@ -410,7 +410,7 @@ const inputs = page.locator('input,textarea,select';'
 }) test('keyboard navigation works',async ({ page    }) => {'
 
 
-'; "await": page.goto('/')';await page.keyboard.press('Tab')';"await": page.keyboard.press('Tab')';"await": page.keyboard.press('Tab')';'
+'; 'await': page.goto('/')';await page.keyboard.press('Tab')';'await': page.keyboard.press('Tab')';'await': page.keyboard.press('Tab')';'
 
 }
 
@@ -445,27 +445,308 @@ const inputs = page.locator('input,textarea,select';'
 ' await page.goto('/')await page.keyboard.press('Tab')await page.keyboard.press(Tab')await page.keyboard.press('Tab;'
   }
   const focusedElement = page.locator(':focus')await expect(focusedElement).toBeVisible()})})';ursor/integrate-build-improve-and-re-verify-8f7d;'
+    'await';'
+    'await';'
+
+
+
+'; 'await': page.goto('/')';'
+
+}
+
+
+
+
+'; 'await': page.goto('/')';'
+
+}
+
+
+  }
+
+
+'; 'await': page.goto('/')';'
+
+}
+
+
+  }
+
+
+'; 'await': page.goto('/contact')';'
+
+}
+
+
+  }
+
+
+}"]`;`const labelCount = await label.count()expect(labelCount).toBeGreaterThan(0)} "else": { expect(ariaLabel || ariaLabelledBy).toBeTruthy()} },;
+}) test('keyboard navigation works',async ({ page    }) => {'
+
+
+'; 'await': page.goto('/')';await page.keyboard.press('Tab')';'await': page.keyboard.press('Tab')';'await': page.keyboard.press('Tab')';'
+
+}
+
+}) test.describe('Accessibility Tests',() => { test(page has proper heading structure',async ({ page    }) => {'
+
+
+ }
+
+
+ await page.goto('/)const h1 = page.locator('h1')await expect(h1).toHaveCount(1)const headings = page.locator('h1,h2,h3,h4,h5,h6';'
+
+
+' await page.goto('/')';'
+
+}
+
+  }
+
+
+' await page.goto('/')';'
+
+}
+
+  }
+
+
+' await page.goto('/contact')';'
+
+}
+
+
+' await page.goto('/')await page.keyboard.press('Tab')await page.keyboard.press(Tab')await page.keyboard.press('Tab;'
+  }
+
+
+
+'; 'await': page.goto('/')';'
+
+}
+
+
+
+
+'; 'await': page.goto('/')';'
+
+}
+
+
+  }
+
+
+'; 'await': page.goto('/')';'
+
+}
+
+
+  }
+
+
+'; 'await': page.goto('/contact')';'
+
+}
+
+
+  }
+
+
+}"]`;`const labelCount = await label.count()expect(labelCount).toBeGreaterThan(0)} "else": { expect(ariaLabel || ariaLabelledBy).toBeTruthy()} },;
+}) test('keyboard navigation works',async ({ page    }) => {'
+
+
+'; 'await': page.goto('/')';await page.keyboard.press('Tab')';'await': page.keyboard.press('Tab')';'await': page.keyboard.press('Tab')';'
+
+}
+
+}) test.describe('Accessibility Tests',() => { test(page has proper heading structure',async ({ page    }) => {'
+
+
+ }
+
+
+ await page.goto('/)const h1 = page.locator('h1')await expect(h1).toHaveCount(1)const headings = page.locator('h1,h2,h3,h4,h5,h6';'
+
+
+' await page.goto('/')';'
+
+}
+
+  }
+
+
+' await page.goto('/')';'
+
+}
+
+  }
+
+
+' await page.goto('/contact')';'
+
+}
+
+
+' await page.goto('/')await page.keyboard.press('Tab')await page.keyboard.press(Tab')await page.keyboard.press('Tab;'
+  }
+
+
+
+'; 'await': page.goto('/')';'
+
+}
+
+
+
+
+'; 'await': page.goto('/')';'
+
+}
+
+
+  }
+
+
+'; 'await': page.goto('/')';'
+
+}
+
+
+  }
+
+
+'; 'await': page.goto('/contact')';'
+
+}
+
+
+  }
+
+
+}"]`;`const labelCount = await label.count()expect(labelCount).toBeGreaterThan(0)} "else": { expect(ariaLabel || ariaLabelledBy).toBeTruthy()} },;
+}) test('keyboard navigation works',async ({ page    }) => {'
+
+
+'; 'await': page.goto('/')';await page.keyboard.press('Tab')';'await': page.keyboard.press('Tab')';'await': page.keyboard.press('Tab')';'
+
+}
+
+}) test.describe('Accessibility Tests',() => { test(page has proper heading structure',async ({ page    }) => {'
+
+
+ }
+
+
+ await page.goto('/)const h1 = page.locator('h1')await expect(h1).toHaveCount(1)const headings = page.locator('h1,h2,h3,h4,h5,h6';'
+
+
+' await page.goto('/')';'
+
+}
+
+  }
+
+
+' await page.goto('/')';'
+
+}
+
+  }
+
+
+' await page.goto('/contact')';'
+
+}
+
+
+' await page.goto('/')await page.keyboard.press('Tab')await page.keyboard.press(Tab')await page.keyboard.press('Tab;'
+  }
+
+
+
+'; 'await': page.goto('/')';'
+
+}
+
+
+
+
+'; 'await': page.goto('/')';'
+
+}
+
+
+  }
+
+
+'; 'await': page.goto('/')';'
+
+}
+
+
+  }
+
+
+'; 'await': page.goto('/contact')';'
+
+}
+
+
+  }
+
+
+}"]`;`const labelCount = await label.count()expect(labelCount).toBeGreaterThan(0)} "else": { expect(ariaLabel || ariaLabelledBy).toBeTruthy()} },;
+}) test('keyboard navigation works',async ({ page    }) => {'
+
+
+'; 'await': page.goto('/')';await page.keyboard.press('Tab')';'await': page.keyboard.press('Tab')';'await': page.keyboard.press('Tab')';'
+
+}
+
+}) test.describe('Accessibility Tests',() => { test(page has proper heading structure',async ({ page    }) => {'
+
+
+ }
+
+
+ await page.goto('/)const h1 = page.locator('h1')await expect(h1).toHaveCount(1)const headings = page.locator('h1,h2,h3,h4,h5,h6';'
+
+
+' await page.goto('/')';'
+
+}
+
+  }
+
+
+' await page.goto('/')';'
+
+}
+
+  }
+
+
+' await page.goto('/contact')';'
+
+}
+
+
+' await page.goto('/')await page.keyboard.press('Tab')await page.keyboard.press(Tab')await page.keyboard.press('Tab;'
+  }
     "await";"
-    "await";"
 
 
 
-'; "await": page.goto('/')';'
-
-}
-
-
-
-
-'; "await": page.goto('/')';'
+'; 'await': page.goto('/')';'
 
 }
 
 
-  }
 
 
-'; "await": page.goto('/')';'
+'; 'await': page.goto('/')';'
 
 }
 
@@ -473,7 +754,15 @@ const inputs = page.locator('input,textarea,select';'
   }
 
 
-'; "await": page.goto('/contact')';'
+'; 'await': page.goto('/')';'
+
+}
+
+
+  }
+
+
+'; 'await': page.goto('/contact')';'
 
 }
 
@@ -485,7 +774,7 @@ const inputs = page.locator('input,textarea,select';'
 }) test('keyboard navigation works',async ({ page    }) => {'
 
 
-'; "await": page.goto('/')';await page.keyboard.press('Tab')';"await": page.keyboard.press('Tab')';"await": page.keyboard.press('Tab')';'
+'; 'await': page.goto('/')';await page.keyboard.press('Tab')';'await': page.keyboard.press('Tab')';'await': page.keyboard.press('Tab')';'
 
 }
 
@@ -522,22 +811,14 @@ const inputs = page.locator('input,textarea,select';'
 
 
 
-'; "await": page.goto('/')';'
+'; 'await': page.goto('/')';'
 
 }
 
 
 
 
-'; "await": page.goto('/')';'
-
-}
-
-
-  }
-
-
-'; "await": page.goto('/')';'
+'; 'await': page.goto('/')';'
 
 }
 
@@ -545,7 +826,15 @@ const inputs = page.locator('input,textarea,select';'
   }
 
 
-'; "await": page.goto('/contact')';'
+'; 'await': page.goto('/')';'
+
+}
+
+
+  }
+
+
+'; 'await': page.goto('/contact')';'
 
 }
 
@@ -557,7 +846,7 @@ const inputs = page.locator('input,textarea,select';'
 }) test('keyboard navigation works',async ({ page    }) => {'
 
 
-'; "await": page.goto('/')';await page.keyboard.press('Tab')';"await": page.keyboard.press('Tab')';"await": page.keyboard.press('Tab')';'
+'; 'await': page.goto('/')';await page.keyboard.press('Tab')';'await': page.keyboard.press('Tab')';'await': page.keyboard.press('Tab')';'
 
 }
 
@@ -594,22 +883,14 @@ const inputs = page.locator('input,textarea,select';'
 
 
 
-'; "await": page.goto('/')';'
+'; 'await': page.goto('/')';'
 
 }
 
 
 
 
-'; "await": page.goto('/')';'
-
-}
-
-
-  }
-
-
-'; "await": page.goto('/')';'
+'; 'await': page.goto('/')';'
 
 }
 
@@ -617,7 +898,7 @@ const inputs = page.locator('input,textarea,select';'
   }
 
 
-'; "await": page.goto('/contact')';'
+'; 'await': page.goto('/')';'
 
 }
 
@@ -625,71 +906,7 @@ const inputs = page.locator('input,textarea,select';'
   }
 
 
-}"]`;`const labelCount = await label.count()expect(labelCount).toBeGreaterThan(0)} "else": { expect(ariaLabel || ariaLabelledBy).toBeTruthy()} },;
-}) test('keyboard navigation works',async ({ page    }) => {'
-
-
-'; "await": page.goto('/')';await page.keyboard.press('Tab')';"await": page.keyboard.press('Tab')';"await": page.keyboard.press('Tab')';'
-
-}
-
-}) test.describe('Accessibility Tests',() => { test(page has proper heading structure',async ({ page    }) => {'
-
-
- }
-
-
- await page.goto('/)const h1 = page.locator('h1')await expect(h1).toHaveCount(1)const headings = page.locator('h1,h2,h3,h4,h5,h6';'
-
-
-' await page.goto('/')';'
-
-}
-
-  }
-
-
-' await page.goto('/')';'
-
-}
-
-  }
-
-
-' await page.goto('/contact')';'
-
-}
-
-
-' await page.goto('/')await page.keyboard.press('Tab')await page.keyboard.press(Tab')await page.keyboard.press('Tab;'
-  }
-
-
-
-'; "await": page.goto('/')';'
-
-}
-
-
-
-
-'; "await": page.goto('/')';'
-
-}
-
-
-  }
-
-
-'; "await": page.goto('/')';'
-
-}
-
-
-  }
-
-
-'; "await": page.goto('/contact')';'
+'; 'await': page.goto('/contact')';'
 
 }
 
@@ -701,224 +918,7 @@ const inputs = page.locator('input,textarea,select';'
 }) test('keyboard navigation works',async ({ page    }) => {'
 
 
-'; "await": page.goto('/')';await page.keyboard.press('Tab')';"await": page.keyboard.press('Tab')';"await": page.keyboard.press('Tab')';'
-
-}
-
-}) test.describe('Accessibility Tests',() => { test(page has proper heading structure',async ({ page    }) => {'
-
-
- }
-
-
- await page.goto('/)const h1 = page.locator('h1')await expect(h1).toHaveCount(1)const headings = page.locator('h1,h2,h3,h4,h5,h6';'
-
-
-' await page.goto('/')';'
-
-}
-
-  }
-
-
-' await page.goto('/')';'
-
-}
-
-  }
-
-
-' await page.goto('/contact')';'
-
-}
-
-
-' await page.goto('/')await page.keyboard.press('Tab')await page.keyboard.press(Tab')await page.keyboard.press('Tab;'
-  }
-    "await";"
-
-
-
-'; "await": page.goto('/')';'
-
-}
-
-
-
-
-'; "await": page.goto('/')';'
-
-}
-
-
-  }
-
-
-'; "await": page.goto('/')';'
-
-}
-
-
-  }
-
-
-'; "await": page.goto('/contact')';'
-
-}
-
-
-  }
-
-
-}"]`;`const labelCount = await label.count()expect(labelCount).toBeGreaterThan(0)} "else": { expect(ariaLabel || ariaLabelledBy).toBeTruthy()} },;
-}) test('keyboard navigation works',async ({ page    }) => {'
-
-
-'; "await": page.goto('/')';await page.keyboard.press('Tab')';"await": page.keyboard.press('Tab')';"await": page.keyboard.press('Tab')';'
-
-}
-
-}) test.describe('Accessibility Tests',() => { test(page has proper heading structure',async ({ page    }) => {'
-
-
- }
-
-
- await page.goto('/)const h1 = page.locator('h1')await expect(h1).toHaveCount(1)const headings = page.locator('h1,h2,h3,h4,h5,h6';'
-
-
-' await page.goto('/')';'
-
-}
-
-  }
-
-
-' await page.goto('/')';'
-
-}
-
-  }
-
-
-' await page.goto('/contact')';'
-
-}
-
-
-' await page.goto('/')await page.keyboard.press('Tab')await page.keyboard.press(Tab')await page.keyboard.press('Tab;'
-  }
-
-
-
-'; "await": page.goto('/')';'
-
-}
-
-
-
-
-'; "await": page.goto('/')';'
-
-}
-
-
-  }
-
-
-'; "await": page.goto('/')';'
-
-}
-
-
-  }
-
-
-'; "await": page.goto('/contact')';'
-
-}
-
-
-  }
-
-
-}"]`;`const labelCount = await label.count()expect(labelCount).toBeGreaterThan(0)} "else": { expect(ariaLabel || ariaLabelledBy).toBeTruthy()} },;
-}) test('keyboard navigation works',async ({ page    }) => {'
-
-
-'; "await": page.goto('/')';await page.keyboard.press('Tab')';"await": page.keyboard.press('Tab')';"await": page.keyboard.press('Tab')';'
-
-}
-
-}) test.describe('Accessibility Tests',() => { test(page has proper heading structure',async ({ page    }) => {'
-
-
- }
-
-
- await page.goto('/)const h1 = page.locator('h1')await expect(h1).toHaveCount(1)const headings = page.locator('h1,h2,h3,h4,h5,h6';'
-
-
-' await page.goto('/')';'
-
-}
-
-  }
-
-
-' await page.goto('/')';'
-
-}
-
-  }
-
-
-' await page.goto('/contact')';'
-
-}
-
-
-' await page.goto('/')await page.keyboard.press('Tab')await page.keyboard.press(Tab')await page.keyboard.press('Tab;'
-  }
-
-
-
-'; "await": page.goto('/')';'
-
-}
-
-
-
-
-'; "await": page.goto('/')';'
-
-}
-
-
-  }
-
-
-'; "await": page.goto('/')';'
-
-}
-
-
-  }
-
-
-'; "await": page.goto('/contact')';'
-
-}
-
-
-  }
-
-
-}"]`;`const labelCount = await label.count()expect(labelCount).toBeGreaterThan(0)} "else": { expect(ariaLabel || ariaLabelledBy).toBeTruthy()} },;
-}) test('keyboard navigation works',async ({ page    }) => {'
-
-
-'; "await": page.goto('/')';await page.keyboard.press('Tab')';"await": page.keyboard.press('Tab')';"await": page.keyboard.press('Tab')';'
+'; 'await': page.goto('/')';await page.keyboard.press('Tab')';'await': page.keyboard.press('Tab')';'await': page.keyboard.press('Tab')';'
 
 }
 
@@ -956,29 +956,21 @@ const inputs = page.locator('input,textarea,select';'
 ursor/add-new-services-and-deploy-updates-0462;
 ursor/fix-syntax-push-and-merge-to-main-40de;
 ursor/integrate-build-improve-and-re-verify-8f7d;
-    "await";"
-    "await";"
+    'await';'
+    'await';'
 ursor/integrate-build-improve-and-re-verify-8f7d;
-    "await";"
+    'await';'
 
 
 
-'; "await": page.goto('/')';'
-
-}
-
-
-
-
-'; "await": page.goto('/')';'
+'; 'await': page.goto('/')';'
 
 }
 
 
-  }
 
 
-'; "await": page.goto('/')';'
+'; 'await': page.goto('/')';'
 
 }
 
@@ -986,7 +978,15 @@ ursor/integrate-build-improve-and-re-verify-8f7d;
   }
 
 
-'; "await": page.goto('/contact')';'
+'; 'await': page.goto('/')';'
+
+}
+
+
+  }
+
+
+'; 'await': page.goto('/contact')';'
 
 }
 
@@ -998,7 +998,7 @@ ursor/integrate-build-improve-and-re-verify-8f7d;
 }) test('keyboard navigation works',async ({ page    }) => {'
 
 
-'; "await": page.goto('/')';await page.keyboard.press('Tab')';"await": page.keyboard.press('Tab')';"await": page.keyboard.press('Tab')';'
+'; 'await': page.goto('/')';await page.keyboard.press('Tab')';'await': page.keyboard.press('Tab')';'await': page.keyboard.press('Tab')';'
 
 }
 
@@ -1035,22 +1035,14 @@ ursor/integrate-build-improve-and-re-verify-8f7d;
 
 
 
-'; "await": page.goto('/')';'
+'; 'await': page.goto('/')';'
 
 }
 
 
 
 
-'; "await": page.goto('/')';'
-
-}
-
-
-  }
-
-
-'; "await": page.goto('/')';'
+'; 'await': page.goto('/')';'
 
 }
 
@@ -1058,7 +1050,15 @@ ursor/integrate-build-improve-and-re-verify-8f7d;
   }
 
 
-'; "await": page.goto('/contact')';'
+'; 'await': page.goto('/')';'
+
+}
+
+
+  }
+
+
+'; 'await': page.goto('/contact')';'
 
 }
 
@@ -1070,7 +1070,7 @@ ursor/integrate-build-improve-and-re-verify-8f7d;
 }) test('keyboard navigation works',async ({ page    }) => {'
 
 
-'; "await": page.goto('/')';await page.keyboard.press('Tab')';"await": page.keyboard.press('Tab')';"await": page.keyboard.press('Tab')';'
+'; 'await': page.goto('/')';await page.keyboard.press('Tab')';'await': page.keyboard.press('Tab')';'await': page.keyboard.press('Tab')';'
 
 }
 
@@ -1105,26 +1105,18 @@ ursor/integrate-build-improve-and-re-verify-8f7d;
 ' await page.goto('/')await page.keyboard.press('Tab')await page.keyboard.press(Tab')await page.keyboard.press('Tab;'
   }
   const focusedElement = page.locator(':focus')await expect(focusedElement).toBeVisible()})})';ursor/automate-test-improve-and-merge-code-646c;'
-    "await";"
+    'await';'
 
 
 
-'; "await": page.goto('/')';'
-
-}
-
-
-
-
-'; "await": page.goto('/')';'
+'; 'await': page.goto('/')';'
 
 }
 
 
-  }
 
 
-'; "await": page.goto('/')';'
+'; 'await': page.goto('/')';'
 
 }
 
@@ -1132,7 +1124,15 @@ ursor/integrate-build-improve-and-re-verify-8f7d;
   }
 
 
-'; "await": page.goto('/contact')';'
+'; 'await': page.goto('/')';'
+
+}
+
+
+  }
+
+
+'; 'await': page.goto('/contact')';'
 
 }
 
@@ -1144,7 +1144,7 @@ ursor/integrate-build-improve-and-re-verify-8f7d;
 }) test('keyboard navigation works',async ({ page    }) => {'
 
 
-'; "await": page.goto('/')';await page.keyboard.press('Tab')';"await": page.keyboard.press('Tab')';"await": page.keyboard.press('Tab')';'
+'; 'await': page.goto('/')';await page.keyboard.press('Tab')';'await': page.keyboard.press('Tab')';'await': page.keyboard.press('Tab')';'
 
 }
 
@@ -1181,22 +1181,14 @@ ursor/integrate-build-improve-and-re-verify-8f7d;
 
 
 
-'; "await": page.goto('/')';'
+'; 'await': page.goto('/')';'
 
 }
 
 
 
 
-'; "await": page.goto('/')';'
-
-}
-
-
-  }
-
-
-'; "await": page.goto('/')';'
+'; 'await': page.goto('/')';'
 
 }
 
@@ -1204,7 +1196,15 @@ ursor/integrate-build-improve-and-re-verify-8f7d;
   }
 
 
-'; "await": page.goto('/contact')';'
+'; 'await': page.goto('/')';'
+
+}
+
+
+  }
+
+
+'; 'await': page.goto('/contact')';'
 
 }
 
@@ -1216,7 +1216,7 @@ ursor/integrate-build-improve-and-re-verify-8f7d;
 }) test('keyboard navigation works',async ({ page    }) => {'
 
 
-'; "await": page.goto('/')';await page.keyboard.press('Tab')';"await": page.keyboard.press('Tab')';"await": page.keyboard.press('Tab')';'
+'; 'await': page.goto('/')';await page.keyboard.press('Tab')';'await': page.keyboard.press('Tab')';'await': page.keyboard.press('Tab')';'
 
 }
 
@@ -1265,73 +1265,73 @@ ursor/integrate-build-improve-and-re-verify-8f7d;
     const focusedElement = page.locator(':focus');'
     await expect(focusedElement).toBeVisible()})})';'
 
-const { test,expect } = require('@playwright/test')';; test.describe('"Accessibility": Tests',() => {'; test('"page": has proper heading structure',async ({ page    }) => {'
+const { test,expect } = require('@playwright/test')'; test.describe(''Accessibility': Tests',() => {'; test(''page': has proper heading structure',async ({ page    }) => {'
 
 
-'; "await": page.goto('/')';;'
-
-}
-
-const h1 = page.locator('h1')';; "await": expect(h1).toHaveCount(1);'
-
-const headings = page.locator('h1,h2,h3,h4,h5,h6')';;'
-
-const count = await headings.count(); expect(count).toBeGreaterThan(0)}) test('"images": have alt attributes',async ({ page    }) => {'
-
-
-'; "await": page.goto('/')';;'
+'; 'await': page.goto('/')';'
 
 }
 
-const images = page.locator('img')';;'
+const h1 = page.locator('h1')'; 'await': expect(h1).toHaveCount(1);'
 
-const count = await images.count(); "for": (let i = 0; "i": < count; i++) { const img = images.nth(i);
+const headings = page.locator('h1,h2,h3,h4,h5,h6')';'
 
-}
-
-const alt = await img.getAttribute('alt')';; expect(alt).toBeTruthy()} }) test('"buttons": have accessible names',async ({ page    }) => {'
+const count = await headings.count(); expect(count).toBeGreaterThan(0)}) test(''images': have alt attributes',async ({ page    }) => {'
 
 
-'; "await": page.goto('/')';;'
+'; 'await': page.goto('/')';'
 
 }
 
-const buttons = page.locator('button')';;'
+const images = page.locator('img')';'
 
-const count = await buttons.count(); "for": (let i = 0; "i": < count; i++) { const button = buttons.nth(i);
+const count = await images.count(); 'for': (let i = 0; 'i': < count; i++) { const img = images.nth(i);
+
+}
+
+const alt = await img.getAttribute('alt')'; expect(alt).toBeTruthy()} }) test(''buttons': have accessible names',async ({ page    }) => {'
+
+
+'; 'await': page.goto('/')';'
+
+}
+
+const buttons = page.locator('button')';'
+
+const count = await buttons.count(); 'for': (let i = 0; 'i': < count; i++) { const button = buttons.nth(i);
 
 }
 
 const text = await button.textContent();
 
-const ariaLabel = await button.getAttribute('aria-label')';; expect(text || ariaLabel).toBeTruthy()} }) test('form inputs have labels',async ({ page    }) => {'
+const ariaLabel = await button.getAttribute('aria-label')'; expect(text || ariaLabel).toBeTruthy()} }) test('form inputs have labels',async ({ page    }) => {'
 
 
-'; "await": page.goto('/contact')';;'
-
-}
-
-const inputs = page.locator('input,textarea,select')';;'
-
-const count = await inputs.count(); "for": (let i = 0; "i": < count; i++) { const input = inputs.nth(i);
+'; 'await': page.goto('/contact')';'
 
 }
 
-const id = await input.getAttribute('id')';;'
+const inputs = page.locator('input,textarea,select')';'
 
-const ariaLabel = await input.getAttribute('aria-label')';;'
+const count = await inputs.count(); 'for': (let i = 0; 'i': < count; i++) { const input = inputs.nth(i);
 
-const ariaLabelledBy = await input.getAttribute('aria-labelledby')';; "if": (id) { const label = page.locator(`label[for="${i,"
-}"]`);`
-const labelCount = await label.count(); expect(labelCount).toBeGreaterThan(0)} "else": { expect(ariaLabel || ariaLabelledBy).toBeTruthy()} },;
+}
+
+const id = await input.getAttribute('id')';'
+
+const ariaLabel = await input.getAttribute('aria-label')';'
+
+const ariaLabelledBy = await input.getAttribute('aria-labelledby')'; 'if': (id) { const label = page.locator(`label[for='${i,'
+}']`);`
+const labelCount = await label.count(); expect(labelCount).toBeGreaterThan(0)} 'else': { expect(ariaLabel || ariaLabelledBy).toBeTruthy()} },;
 }) test('keyboard navigation works',async ({ page    }) => {'
 
 
-'; "await": page.goto('/')';; await page.keyboard.press('Tab')';; "await": page.keyboard.press('Tab')';; "await": page.keyboard.press('Tab')';;'
+'; 'await': page.goto('/')'; await page.keyboard.press('Tab')'; 'await': page.keyboard.press('Tab')'; 'await': page.keyboard.press('Tab')';'
 
 }
 
-const focusedElement = page.locator(':focus')';; "await": expect(focusedElement).toBeVisible()},;'
+const focusedElement = page.locator(':focus')'; 'await': expect(focusedElement).toBeVisible()},;'
 }) test.describe('Accessibility Tests',() => { test(page has proper heading structure',async ({ page    }) => {'
 
 
@@ -1388,7 +1388,7 @@ const id = await input.getAttribute(id');'
 
 const ariaLabel = await input.getAttribute('aria-label);'
 
-const ariaLabelledBy = await input.getAttribute('aria-labelledby'); if (id) {' const label = page.locator(`label[for="${id}"]`);`
+const ariaLabelledBy = await input.getAttribute('aria-labelledby'); if (id) {' const label = page.locator(`label[for='${id}']`);`
 const labelCount = await label.count(); expect(labelCount).toBeGreaterThan(0)} else { expect(ariaLabel || ariaLabelledBy).toBeTruthy()} } }); ` test('keyboard navigation works',async ({ page    }) => {'
 
 
@@ -1400,7 +1400,7 @@ const focusedElement = page.locator(':focus'); await expect(focusedElement).toBe
 
 
 
-'; "await": page.goto('/')';;'
+'; 'await': page.goto('/')';'
 
 }
 
@@ -1408,17 +1408,7 @@ const focusedElement = page.locator(':focus'); await expect(focusedElement).toBe
 
 
 
-'; "await": page.goto('/')';;'
-
-}
-
-
-
-}
-
-
-
-'; "await": page.goto('/')';;'
+'; 'await': page.goto('/')';'
 
 }
 
@@ -1428,8 +1418,18 @@ const focusedElement = page.locator(':focus'); await expect(focusedElement).toBe
 
 
 
+'; 'await': page.goto('/')';'
 
-'; "await": page.goto('/contact')';;'
+}
+
+
+
+}
+
+
+
+
+'; 'await': page.goto('/contact')';'
 
 }
 
@@ -1443,7 +1443,7 @@ const ariaLabelledBy = await input.getAttribute('aria-labelledby')';; "if": (id)
 }) test('keyboard navigation works',async ({ page    }) => {'
 
 
-'; "await": page.goto('/')';; await page.keyboard.press('Tab')';; "await": page.keyboard.press('Tab')';; "await": page.keyboard.press('Tab')';;'
+'; 'await': page.goto('/')'; await page.keyboard.press('Tab')'; 'await': page.keyboard.press('Tab')'; 'await': page.keyboard.press('Tab')';'
 
 }
 
@@ -1500,7 +1500,7 @@ const ariaLabelledBy = await input.getAttribute('aria-labelledby')';; "if": (id)
     "await""
 
 
-'; "await": page.goto('/')';;'
+'; 'await': page.goto('/')';'
 
 }
 
@@ -1508,17 +1508,7 @@ const ariaLabelledBy = await input.getAttribute('aria-labelledby')';; "if": (id)
 
 
 
-'; "await": page.goto('/')';;'
-
-}
-
-
-
-}
-
-
-
-'; "await": page.goto('/')';;'
+'; 'await': page.goto('/')';'
 
 }
 
@@ -1528,8 +1518,18 @@ const ariaLabelledBy = await input.getAttribute('aria-labelledby')';; "if": (id)
 
 
 
+'; 'await': page.goto('/')';'
 
-'; "await": page.goto('/contact')';;'
+}
+
+
+
+}
+
+
+
+
+'; 'await': page.goto('/contact')';'
 
 }
 
@@ -1542,7 +1542,7 @@ const ariaLabelledBy = await input.getAttribute('aria-labelledby')';; "if": (id)
 }) test('keyboard navigation works',async ({ page    }) => {'
 
 
-'; "await": page.goto('/')';; await page.keyboard.press('Tab')';; "await": page.keyboard.press('Tab')';; "await": page.keyboard.press('Tab')';;'
+'; 'await': page.goto('/')'; await page.keyboard.press('Tab')'; 'await': page.keyboard.press('Tab')'; 'await': page.keyboard.press('Tab')';'
 
 }
 
@@ -1598,7 +1598,7 @@ const ariaLabelledBy = await input.getAttribute('aria-labelledby')';; "if": (id)
 
 
 
-'; "await": page.goto('/')';;'
+'; 'await': page.goto('/')';'
 
 }
 
@@ -1606,17 +1606,7 @@ const ariaLabelledBy = await input.getAttribute('aria-labelledby')';; "if": (id)
 
 
 
-'; "await": page.goto('/')';;'
-
-}
-
-
-
-}
-
-
-
-'; "await": page.goto('/')';;'
+'; 'await': page.goto('/')';'
 
 }
 
@@ -1626,8 +1616,18 @@ const ariaLabelledBy = await input.getAttribute('aria-labelledby')';; "if": (id)
 
 
 
+'; 'await': page.goto('/')';'
 
-'; "await": page.goto('/contact')';;'
+}
+
+
+
+}
+
+
+
+
+'; 'await': page.goto('/contact')';'
 
 }
 
@@ -1640,7 +1640,7 @@ const ariaLabelledBy = await input.getAttribute('aria-labelledby')';; "if": (id)
 }) test('keyboard navigation works',async ({ page    }) => {'
 
 
-'; "await": page.goto('/')';; await page.keyboard.press('Tab')';; "await": page.keyboard.press('Tab')';; "await": page.keyboard.press('Tab')';;'
+'; 'await': page.goto('/')'; await page.keyboard.press('Tab')'; 'await': page.keyboard.press('Tab')'; 'await': page.keyboard.press('Tab')';'
 
 }
 
@@ -1696,7 +1696,7 @@ const ariaLabelledBy = await input.getAttribute('aria-labelledby')';; "if": (id)
 
 
 
-'; "await": page.goto('/')';;'
+'; 'await': page.goto('/')';'
 
 }
 
@@ -1704,17 +1704,7 @@ const ariaLabelledBy = await input.getAttribute('aria-labelledby')';; "if": (id)
 
 
 
-'; "await": page.goto('/')';;'
-
-}
-
-
-
-}
-
-
-
-'; "await": page.goto('/')';;'
+'; 'await': page.goto('/')';'
 
 }
 
@@ -1724,8 +1714,18 @@ const ariaLabelledBy = await input.getAttribute('aria-labelledby')';; "if": (id)
 
 
 
+'; 'await': page.goto('/')';'
 
-'; "await": page.goto('/contact')';;'
+}
+
+
+
+}
+
+
+
+
+'; 'await': page.goto('/contact')';'
 
 }
 
@@ -1738,7 +1738,7 @@ const ariaLabelledBy = await input.getAttribute('aria-labelledby')';; "if": (id)
 }) test('keyboard navigation works',async ({ page    }) => {'
 
 
-'; "await": page.goto('/')';; await page.keyboard.press('Tab')';; "await": page.keyboard.press('Tab')';; "await": page.keyboard.press('Tab')';;'
+'; 'await': page.goto('/')'; await page.keyboard.press('Tab')'; 'await': page.keyboard.press('Tab')'; 'await': page.keyboard.press('Tab')';'
 
 }
 
@@ -1850,7 +1850,7 @@ const { test,expect } = require('@playwright/test')'; test.describe('Accessibili
 
 
 
-'; "await": page.goto('/')';;'
+'; 'await': page.goto('/')';'
 
 }
 
@@ -1860,7 +1860,7 @@ const { test,expect } = require('@playwright/test')'; test.describe('Accessibili
 
 
 
-'; "await": page.goto('/')';;'
+'; 'await': page.goto('/')';'
 
 }
 
@@ -1871,7 +1871,7 @@ const { test,expect } = require('@playwright/test')'; test.describe('Accessibili
 
 
 
-'; "await": page.goto('/contact')';;'
+'; 'await': page.goto('/contact')';'
 
 }
 
@@ -1884,7 +1884,7 @@ const { test,expect } = require('@playwright/test')'; test.describe('Accessibili
 }) test('keyboard navigation works',async ({ page    }) => {'
 
 
-'; "await": page.goto('/')';; await page.keyboard.press('Tab')';; "await": page.keyboard.press('Tab')';; "await": page.keyboard.press('Tab')';;'
+'; 'await': page.goto('/')'; await page.keyboard.press('Tab')'; 'await': page.keyboard.press('Tab')'; 'await': page.keyboard.press('Tab')';'
 
 }
 
@@ -1940,7 +1940,7 @@ const { test,expect } = require('@playwright/test')'; test.describe('Accessibili
 
 
 
-'; "await": page.goto('/')';;'
+'; 'await': page.goto('/')';'
 
 }
 
@@ -1948,17 +1948,7 @@ const { test,expect } = require('@playwright/test')'; test.describe('Accessibili
 
 
 
-'; "await": page.goto('/')';;'
-
-}
-
-
-
-}
-
-
-
-'; "await": page.goto('/')';;'
+'; 'await': page.goto('/')';'
 
 }
 
@@ -1968,8 +1958,18 @@ const { test,expect } = require('@playwright/test')'; test.describe('Accessibili
 
 
 
+'; 'await': page.goto('/')';'
 
-'; "await": page.goto('/contact')';;'
+}
+
+
+
+}
+
+
+
+
+'; 'await': page.goto('/contact')';'
 
 }
 
@@ -1982,7 +1982,7 @@ const { test,expect } = require('@playwright/test')'; test.describe('Accessibili
 }) test('keyboard navigation works',async ({ page    }) => {'
 
 
-'; "await": page.goto('/')';; await page.keyboard.press('Tab')';; "await": page.keyboard.press('Tab')';; "await": page.keyboard.press('Tab')';;'
+'; 'await': page.goto('/')'; await page.keyboard.press('Tab')'; 'await': page.keyboard.press('Tab')'; 'await': page.keyboard.press('Tab')';'
 
 }
 

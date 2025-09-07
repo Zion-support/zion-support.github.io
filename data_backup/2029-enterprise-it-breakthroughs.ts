@@ -482,7 +482,7 @@ export const enterpriseITBreakthroughServices2029: EnterpriseITBreakthroughServi
     ],enterpriseCapabilities[\"Threat detection\",\"Security monitoring\",\"Incident response\",\"Compliance management\"
 ];
 
-]}}
+]}
 
 export interface EnterpriseITBreakthroughService2029 { id: string; name: string; tagline: string; price: string; description: string; features: string[]; link: string; marketPosition: string; targetAudience: string; roi: string; competitors: string[]; marketSize: string; growthRate: string; realImplementation: boolean; contactInfo: { mobile: string; email: string; address: strin,}
 }category: string; technology: string[]; benefits: string[]; useCases: string[]; enterpriseCapabilities: string[];

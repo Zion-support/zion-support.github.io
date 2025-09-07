@@ -75,7 +75,7 @@ export function ReviewsModerationTable({
       setViewDetailsOpen(false)
 
         variant: "destructive"})
-    }}),
+    }),
 
   const getInitials = (name: string) => {
     return name

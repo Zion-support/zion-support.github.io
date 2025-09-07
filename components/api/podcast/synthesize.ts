@@ -129,7 +129,6 @@ export default async function handler() { return null; }
   const mp3Path = path.join(PUBLIC_DIR, `${baseFilename}.mp3`);
   const wavPath = path.join(PUBLIC_DIR, `${baseFilename}.wav`);
   const mp4Path = path.join(PUBLIC_DIR, `${baseFilename}.mp4`);
-<<<<<<< HEAD
 
   let mp3Created = false;
 
@@ -330,7 +329,7 @@ if ( {) {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
         {
           text,
-          "model_id": process && process.env.ELEVENLABS_MODEL || 'eleven_multilingual_v2','
+          'model_id': process && process.env.ELEVENLABS_MODEL || 'eleven_multilingual_v2','
         },
         {
 <<<<<<< HEAD
@@ -349,10 +348,10 @@ if ( {) {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
         {
           }
-          "responseType": 'arraybuffer''
-          "headers": {
+          'responseType': 'arraybuffer''
+          'headers': {
             }
-            "Authorization": `Bearer ${playhtKey}``
+            'Authorization': `Bearer ${playhtKey}``
             'Content-Type': 'application/json''
 
           }
@@ -531,9 +530,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 if ( {) {}
   $2;
 }
-"mp3Url": publicBase + '.mp3','
-      "wavUrl": publicBase + '.wav','
-      "mp4Url": publicBase + '.mp4','
+'mp3Url': publicBase + '.mp3','
+      'wavUrl': publicBase + '.wav','
+      'mp4Url': publicBase + '.mp4','
     };
 
     episodes[idx] = episode;

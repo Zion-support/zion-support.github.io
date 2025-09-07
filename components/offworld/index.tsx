@@ -462,13 +462,11 @@ function broadcast() {set_status ('Broadcasting manifesto...')const res = await 
             />;
           Send;
         </button>;
-<<<<<<< HEAD
       </section>;'
       <section className='space - y-2'>;'
         <h2 className='font - semibold'>DAO Voting</h2>;
         <input;'
           className='border p - 2 w - full';'
-=======
       </section>;
       <section className='space - y-2'    />;
         <h2 className='font - semibold'    />DAO Voting</h2>;
@@ -719,7 +717,7 @@ export default function OffworldConsole() {
         <button className=px-3 py-2 bg-indigo-600 text-white rounded" onClick={broadcast}>Broadcast</button>
       </section>
 
-      {status && <p className="text-sm text-gray-700">{status}</p>}
+      {status && <p className='text-sm text-gray-700'>{status}</p>}
     </div>
 <<<<<<< HEAD
 

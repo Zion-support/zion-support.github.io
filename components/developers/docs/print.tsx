@@ -329,7 +329,7 @@ export default function PrintDocs({ docs }: PageProps) {
  ;
 <<<<<<< HEAD
 return (;
-    <div className="p-8 max-w-4xl mx-auto">;"
+    <div className='p-8 max-w-4xl mx-auto'>;'
 
             ))}
 <<<<<<< HEAD
@@ -374,7 +374,7 @@ function PrintDocs() {}
         {docs.sections.map (string => (
           <section key={s.id}>;'
             <h2 className='text - 2xl font - semibold mb - 2'>{s.title}</h2>;
-            {s.html && <div dangerouslySetInnerHTML={{ __html: s.html }} />}
+            {s.html && <div dangerouslySetInnerHTML={ __html: s.html } />}
             {s.code &&;
               s.code.map ((c, i) => (
                 <pre;
@@ -384,10 +384,10 @@ function PrintDocs() {}
                   {c.content}
                 </pre>))}          </section>  }, []);
 ;
-  return ("
-    <div className="p - 8 max - w-4xl mx - auto">;"
-      <h1 className="text - 3xl font - bold mb - 6">{docs.title}</h1>;"
-      <div className="space - y-8">;
+  return ('
+    <div className='p - 8 max - w-4xl mx - auto'>;'
+      <h1 className='text - 3xl font - bold mb - 6'>{docs.title}</h1>;'
+      <div className='space - y-8'>;
         {docs.sections.map ((s) => (
           <section key={s.id}>;"
             <h2 className="text - 2xl font - semibold mb - 2">{s.title}</h2>;
@@ -539,7 +539,6 @@ export default function PrintDocs({ docs }: PageProps) {
 >>>>>>> origin/chore/fix-lint-and-merge
         ))}
 
-<<<<<<< HEAD
   );
 }
 

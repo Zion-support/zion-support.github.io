@@ -692,7 +692,6 @@ export default async function handler() {filter = 'all',countOnly,limit = '50',o
 return res.status (500).json ({ error: 'Unexpected error' });'
   }    return res.status (500).json ({ error: 'Unexpected error' });'
 return res.status(500).json({ error: 'Unexpected error' });'
-=======
     return res.status (200).json ({ notifications: data as NotificationItem[],}
 });
   } catch (e) {

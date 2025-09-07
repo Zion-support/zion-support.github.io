@@ -135,7 +135,7 @@ const { stores } = await connectOrbit();
       await appendChatMessage(stores, body);
 <<<<<<< HEAD
 
-return res.status(200).json({ "ok": true,;
+return res.status(200).json({ 'ok': true,;
 });
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36

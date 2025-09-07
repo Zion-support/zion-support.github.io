@@ -209,7 +209,6 @@ question: `Which topic is central to ${moduleTitl,) => {
         }
       ]
     })
-<<<<<<< HEAD
 };          question: 'Which docs are needed for launch?';
           options: ['Whitepaper + governance docsNovelRecipe bookNone'];
 >>>>>>> merged-prs-20250907-203621
@@ -380,7 +379,7 @@ const text = completion.choices?.[0]?.message?.content ?? '';
       ];
     })}question: 'Which docs are needed for launch?';
           options: ['Whitepaper + governance docsNovelRecipe bookNone'];
-          answerIndex: 0}]})'Whitepaper + governance docs','Novel','Recipe book','None',],answerIndex: 0,},],})}if (!apiKey) return fallback()try {const client = new OpenAI({ apiKey })const prompt  = `Create a 5-question multiple-choice quiz in JSON with the shape {"questions":[{"question":string,"options":string[],"answerIndex":number}]} about the following module. Keep questions practical for founders. Respond with JSON only.\n\nTitle: ${moduleTitle}\nContent:\n${moduleContent}`;{const completion = await client.chat.completions.create({model: 'gpt-4o-mini';
+          answerIndex: 0}]})'Whitepaper + governance docs','Novel','Recipe book','None',],answerIndex: 0,},],})}if (!apiKey) return fallback()try {const client = new OpenAI({ apiKey })const prompt  = `Create a 5-question multiple-choice quiz in JSON with the shape {'questions':[{'question':string,'options':string[],'answerIndex':number}]} about the following module. Keep questions practical for founders. Respond with JSON only.\n\nTitle: ${moduleTitle}\nContent:\n${moduleContent}`;{const completion = await client.chat.completions.create({model: 'gpt-4o-mini';
       messages: [;
 {role: 'system',content: 'You are an expert course designer for founders.',},{ role: 'user', content: prompt },],temperature: 0 && 0.2,})const text = completion && completion.choices?.[0]?.message?.content ?? '';
     try {return res.status(200).json(json){ role: 'system', content: 'You are an expert course designer for founders.' }{ role: 'user', content: prompt }];
@@ -391,7 +390,7 @@ const text = completion.choices?.[0]?.message?.content ?? '';
     try {const json = JSON.parse (text)return res.status (200).json (json)temperature: 0.2,})const text = completion.choices?.[0]?.message?.content ?? '';
     try {const json = JSON.parse(text)return res.status(200).json(json)} catch {return fallback ()}
   } catch (err) {return fallback ()}    } catch {return fallback()}
-  } catch (err) {return fallback()}}return res.status(200).json(json)const text = completion.choices?.[0]?.message?.content ?? '';
+  } catch (err) {return fallback()}return res.status(200).json(json)const text = completion.choices?.[0]?.message?.content ?? '';
     try {const json = JSON.parse(text)return fallback ()}
   } catch (err) {return fallback ()}
     return fallback ();

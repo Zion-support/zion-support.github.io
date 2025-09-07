@@ -802,57 +802,57 @@ const quickLinks = [
         description: 'Decentralized AI for the future';
         price: '$899/month';
       }
-      {"name": 'AI Climate Modeling',"href": '/ai-climate-modeling-platform',"description": 'Predict climate change with AI',"price": '$1,299/month'}]},{"title": '🏙️ Enterprise IT Solutions',"icon": CpuIcon,"color": 'from-blue-600 via-cyan-600 to-teal-600',"description": 'Autonomous enterprise infrastructure',"services": [;'
-{"name": 'API Security & Monitoring',"href": '/api-security-monitoring-suite',"description": 'Protect and monitor your APIs',"price": '$399/month'},{"name": 'Customer Success Automation';'
+      {'name': 'AI Climate Modeling','href': '/ai-climate-modeling-platform','description': 'Predict climate change with AI','price': '$1,299/month'}]},{'title': '🏙️ Enterprise IT Solutions','icon': CpuIcon,'color': 'from-blue-600 via-cyan-600 to-teal-600','description': 'Autonomous enterprise infrastructure','services': [;'
+{'name': 'API Security & Monitoring','href': '/api-security-monitoring-suite','description': 'Protect and monitor your APIs','price': '$399/month'},{'name': 'Customer Success Automation';'
         }
-        "href": '/customer-success-automation';'
-        "description": 'Automate customer success workflows';'
-        "price": '$199/month';'
+        'href': '/customer-success-automation';'
+        'description': 'Automate customer success workflows';'
+        'price': '$199/month';'
       }
-      {"name": 'HR Automation Suite';'
+      {'name': 'HR Automation Suite';'
         }
-        "href": '/hr-automation-suite';'
-        "description": 'Streamline HR processes with AI';'
-        "price": '$179/month';'
+        'href': '/hr-automation-suite';'
+        'description': 'Streamline HR processes with AI';'
+        'price': '$179/month';'
       }
-      {"name": 'Project Management AI',"href": '/project-management-ai-platform',"description": 'AI-powered project management',"price": '$199/month'}]},{"title": '🛒 Business Automation',"icon": ShoppingCart,"color": 'from-teal-600 via-emerald-600 to-green-600',"description": 'Streamline business operations',"services": [;'
-{"name": 'E-commerce Automation',"href": '/ecommerce-automation-platform',"description": 'Automate your entire e-commerce operation',"price": '$249/month'},{"name": 'Marketing Automation Suite';'
+      {'name': 'Project Management AI','href': '/project-management-ai-platform','description': 'AI-powered project management','price': '$199/month'}]},{'title': '🛒 Business Automation','icon': ShoppingCart,'color': 'from-teal-600 via-emerald-600 to-green-600','description': 'Streamline business operations','services': [;'
+{'name': 'E-commerce Automation','href': '/ecommerce-automation-platform','description': 'Automate your entire e-commerce operation','price': '$249/month'},{'name': 'Marketing Automation Suite';'
         }
-        "href": '/marketing-automation-suite';'
-        "description": 'Automate your entire marketing operation';'
-        "price": '$279/month';'
+        'href': '/marketing-automation-suite';'
+        'description': 'Automate your entire marketing operation';'
+        'price': '$279/month';'
       }
-      {"name": 'Financial Analytics Platform';'
+      {'name': 'Financial Analytics Platform';'
         }
-        "href": '/financial-analytics-platform';'
-        "description": 'Real-time financial insights';'
-        "price": '$349/month';'
+        'href': '/financial-analytics-platform';'
+        'description': 'Real-time financial insights';'
+        'price': '$349/month';'
       }
-      {"name": 'Legal Document Automation',"href": '/legal-document-automation',"description": 'Automate legal document creation',"price": '$399/month'}]},{"title": '🤖 Robotics & Automation',"icon": RocketIcon,"color": 'from-green-600 via-yellow-600 to-orange-600',"description": 'Intelligent automation solutions',"services": [;'
-{"name": 'Autonomous Robotics Platform',"href": '/autonomous-robotics-platform',"description": 'Build and deploy intelligent robots',"price": '$2,499/month'},{"name": 'AI Content Generator Elite';'
+      {'name': 'Legal Document Automation','href': '/legal-document-automation','description': 'Automate legal document creation','price': '$399/month'}]},{'title': '🤖 Robotics & Automation','icon': RocketIcon,'color': 'from-green-600 via-yellow-600 to-orange-600','description': 'Intelligent automation solutions','services': [;'
+{'name': 'Autonomous Robotics Platform','href': '/autonomous-robotics-platform','description': 'Build and deploy intelligent robots','price': '$2,499/month'},{'name': 'AI Content Generator Elite';'
         }
-        "href": '/ai-content-generator-elite';'
-        "description": 'Professional AI content creation';'
-        "price": '$49/month';'
+        'href': '/ai-content-generator-elite';'
+        'description': 'Professional AI content creation';'
+        'price': '$49/month';'
       }
-      {"name": 'AI Guardrails Suite';'
+      {'name': 'AI Guardrails Suite';'
         }
-        "href": '/ai-guardrails-suite';'
-        "description": 'Policy and safety for LLM apps';'
-        "price": '$199/month';'
+        'href': '/ai-guardrails-suite';'
+        'description': 'Policy and safety for LLM apps';'
+        'price': '$199/month';'
       }
-      {"name": 'AI Business Intelligence',"href": '/ai-business-intelligence-suite',"description": 'Intelligent business insights',"price": '$299/month'}]},{"title": '🔬 Research & Development',"icon": MicroscopeIcon,"color": 'from-orange-600 via-red-600 to-pink-600',"description": 'Breakthrough research solutions',"services": [;'
-{"name": 'Quantum DNA Computing',"href": '/quantum-dna-computing-platform',"description": 'DNA-based quantum computation',"price": '$35,999/month'},{"name": 'Space Mining Automation';'
+      {'name': 'AI Business Intelligence','href': '/ai-business-intelligence-suite','description': 'Intelligent business insights','price': '$299/month'}]},{'title': '🔬 Research & Development','icon': MicroscopeIcon,'color': 'from-orange-600 via-red-600 to-pink-600','description': 'Breakthrough research solutions','services': [;'
+{'name': 'Quantum DNA Computing','href': '/quantum-dna-computing-platform','description': 'DNA-based quantum computation','price': '$35,999/month'},{'name': 'Space Mining Automation';'
         }
-        "href": '/space-mining-automation-platform';'
-        "description": 'Automated asteroid mining';'
-        "price": '$45,999/month';'
+        'href': '/space-mining-automation-platform';'
+        'description': 'Automated asteroid mining';'
+        'price': '$45,999/month';'
       }
-      {"name": 'Metaverse AI Development';'
+      {'name': 'Metaverse AI Development';'
         }
-        "href": '/metaverse-ai-development-platform';'
-        "description": 'Build immersive virtual worlds';'
-        "price": '$2,999/month';'
+        'href': '/metaverse-ai-development-platform';'
+        'description': 'Build immersive virtual worlds';'
+        'price': '$2,999/month';'
       }
 =======
 =======
@@ -1775,7 +1775,7 @@ const closeDropdown = (
             </div>'
             <div className='flex items-center space-x-2'>'
               <Mail className='w-4 h-4 text-blue-400' />'
-              <span className='"hover": text-blue-400 transition-colors'>'
+              <span className=''hover': text-blue-400 transition-colors'>'
                 {contactInfo.email}
               </span>
             </div>'
@@ -2130,7 +2130,7 @@ className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${`     
         }
 }>
 
-        <div className='max-w-7xl mx-auto px-4 "sm":px-6 "lg":px-8'>;'
+        <div className='max-w-7xl mx-auto px-4 'sm':px-6 'lg':px-8'>;'
           <div className='flex items-center justify-between h-20'>;'
             {/* Logo */}
             <motion.div;
@@ -2222,8 +2222,7 @@ className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
                 <p className="text-xs text-gray-400">Future Technology Solutions</p>
               </div>
             </motion.div>
-<<<<<<< HEAD
-              transition={{ duration: 0 && 0.5 }}'
+              transition={ duration: 0 && 0.5 }'
               className='flex items-center space-x-3'>;'
               <div className='relative'>;'
                 <div className='w-12 h-12 bg-gradient-to-r from-cyan-500 via-blue-500 to-purple-500 rounded-xl flex items-center justify-center'>;'
@@ -2667,21 +2666,21 @@ className='flex items-center space-x-3';
               ))}
 
               {/* Services Dropdown */}
-              <div className="relative group">
-                <button className="flex items-center space-x-1 text-gray-300 hover:text-cyan-400 transition-colors duration-200 font-medium">
+              <div className='relative group'>
+                <button className='flex items-center space-x-1 text-gray-300 hover:text-cyan-400 transition-colors duration-200 font-medium'>
                   <span>Services</span>
-                  <ChevronDown className="w-4 h-4" />
+                  <ChevronDown className='w-4 h-4' />
                 </button>
-                <div className="absolute top-full left-0 w-96 bg-black/95 backdrop-blur-xl border border-cyan-500/20 rounded-xl p-4 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform translate-y-2 group-hover:translate-y-0">
-                  <div className="grid grid-cols-2 gap-4">
+                <div className='absolute top-full left-0 w-96 bg-black/95 backdrop-blur-xl border border-cyan-500/20 rounded-xl p-4 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform translate-y-2 group-hover:translate-y-0'>
+                  <div className='grid grid-cols-2 gap-4'>
                     {serviceCategories.slice(0, 4).map((category) => (
-                      <div key={category.title} className="p-3 rounded-lg hover:bg-cyan-500/10 transition-colors">
-                        <div className="flex items-center space-x-2 mb-2">
-                          <category.icon className="w-5 h-5 text-cyan-400" />
-                          <h3 className="text-sm font-semibold text-white">{category.title.split(' ')[0]}</h3>
+                      <div key={category.title} className='p-3 rounded-lg hover:bg-cyan-500/10 transition-colors'>
+                        <div className='flex items-center space-x-2 mb-2'>
+                          <category.icon className='w-5 h-5 text-cyan-400' />
+                          <h3 className='text-sm font-semibold text-white'>{category.title.split(' ')[0]}</h3>
                         </div>
-                        <p className="text-xs text-gray-400 mb-2">{category.description}</p>
-                        <div className="space-y-1">
+                        <p className='text-xs text-gray-400 mb-2'>{category.description}</p>
+                        <div className='space-y-1'>
                           {category.services.slice(0, 2).map((service) => (
                             <Link
 ;
@@ -3054,7 +3053,7 @@ function UltraFuturisticNavigation2034() {const [is_open, setIsOpen] = useState 
                             <Link
                               key={service.name}
                               href={service.href}
-                              className="block text-xs text-gray-300 hover:text-cyan-400 transition-colors"
+                              className='block text-xs text-gray-300 hover:text-cyan-400 transition-colors'
                             >
                               {service.name}
                             </Link>
@@ -3218,7 +3217,6 @@ href='/services'
                 className="px-6 py-2 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-200 font-medium"
               >
                 Get Started
-=======
               <Link;
 href='/contact'
                 className='px-6 py-2 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-200 font-medium'
@@ -3548,7 +3546,7 @@ className='block text-gray-300 hover:text-cyan-400 transition-colors duration-20
 key={service.name}
                               href={service.href}
                               onClick={() => setIsOpen(false)}
-className='block text-sm text-gray-400 "hover":text-cyan-400 transition-colors'>'
+className='block text-sm text-gray-400 'hover':text-cyan-400 transition-colors'>'
 
                               {service.name}
                             </Link>;
@@ -3929,7 +3927,7 @@ href='/contact'
       {/* Spacer for fixed navigation */}
       <div className='h-20'></div>
     </>
-);      <div className="h-20"></div>
+);      <div className='h-20'></div>
     </>
   );
 <<<<<<< HEAD

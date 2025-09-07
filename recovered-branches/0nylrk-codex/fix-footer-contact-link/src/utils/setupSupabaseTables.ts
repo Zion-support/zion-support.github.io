@@ -130,7 +130,7 @@ if ( {) {}
     
     // If there's an error, log it and proceed with table creation
     if (error) {
-      console.warn("Error checking if profiles table exists, attempting to create it:", error)
+      console.warn('Error checking if profiles table exists, attempting to create it:', error)
     }
     // Attempt to create the table and related objects
     const createTableQuery = `

@@ -345,7 +345,7 @@ const isFormValid =;
       <section className='pt-32 pb-20 px-6' />'''';
         <div className='max-w-7xl mx-auto text-center' />;
           <motion.div;
-            initial={{ opacity: 0, y: 30 ,}
+            initial={ opacity: 0, y: 30 ,}
 }
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 ,}
@@ -365,11 +365,11 @@ const isFormValid =;
             {/* Benefits */}'''';
             <div className='grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto' />;
               <motion.div;
-                initial={{ opacity: 0, y: 20 ,}
+                initial={ opacity: 0, y: 20 ,}
 }
-                animate={{ opacity: 1, y: 0 ,}
+                animate={ opacity: 1, y: 0 ,}
 }'''';
-                transition={{ duration: 0.6, delay: 0.1 ,}
+                transition={ duration: 0.6, delay: 0.1 ,}
 }'''';
                 className='flex items-center justify-center space-x-3 text-white/80''''';
                />'''';
@@ -377,11 +377,11 @@ const isFormValid =;
                 <span />24-Hour Response</span>;
               </motion.div>;
               <motion.div;
-                initial={{ opacity: 0, y: 20 ,}
+                initial={ opacity: 0, y: 20 ,}
 }
-                animate={{ opacity: 1, y: 0 ,}
+                animate={ opacity: 1, y: 0 ,}
 }'''';
-                transition={{ duration: 0.6, delay: 0.2 ,}
+                transition={ duration: 0.6, delay: 0.2 ,}
 }'''';
                 className='flex items-center justify-center space-x-3 text-white/80''''';
                />'''';
@@ -389,11 +389,11 @@ const isFormValid =;
                 <span />Free Consultation</span>;
               </motion.div>;
               <motion.div;
-                initial={{ opacity: 0, y: 20 ,}
+                initial={ opacity: 0, y: 20 ,}
 }
-                animate={{ opacity: 1, y: 0 ,}
+                animate={ opacity: 1, y: 0 ,}
 }'''';
-                transition={{ duration: 0.6, delay: 0.3 ,}
+                transition={ duration: 0.6, delay: 0.3 ,}
 }'''';
                 className='flex items-center justify-center space-x-3 text-white/80''''';
                />'''';
@@ -412,7 +412,7 @@ const isFormValid =;
             {/* Form */}'''';
             <div className='lg:col-span-2' />;
               <motion.div;
-                initial={{ opacity: 0, x: -30 ,}
+                initial={ opacity: 0, x: -30 ,}
 }
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true ,}
@@ -660,9 +660,9 @@ const isFormValid =;
                   </button>;
                   {/* Status Messages */}'';
                   {submissionStatus === 'success' && (<motion.div;}
-                      initial={{ opacity: 0, y: 10 ,}
+                      initial={ opacity: 0, y: 10 ,}
 }'''';
-                      animate={{ opacity: 1, y: 0 ,}
+                      animate={ opacity: 1, y: 0 ,}
 }'''';
                       className='flex items-center p-4 bg-green-500/20 border border-green-500/50 rounded-lg''''';
                      />'''';
@@ -674,9 +674,9 @@ const isFormValid =;
                   )}
 '';
                   {submissionStatus === 'error' && (<motion.div;}
-                      initial={{ opacity: 0, y: 10 ,}
+                      initial={ opacity: 0, y: 10 ,}
 }'''';
-                      animate={{ opacity: 1, y: 0 ,}
+                      animate={ opacity: 1, y: 0 ,}
 }'''';
                       className='flex items-center p-4 bg-red-500/20 border border-red-500/50 rounded-lg''''';
                      />'''';
@@ -694,7 +694,7 @@ const isFormValid =;
             <div className='space-y-8' />;
               {/* Contact Information */}
               <motion.div;
-                initial={{ opacity: 0, x: 30 ,}
+                initial={ opacity: 0, x: 30 ,}
 }
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true ,}
@@ -729,12 +729,12 @@ const isFormValid =;
               </motion.div>;
               {/* Why Choose Us */}
               <motion.div;
-                initial={{ opacity: 0, x: 30 ,}
+                initial={ opacity: 0, x: 30 ,}
 }
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true ,}
 }'''';
-                transition={{ duration: 0.8, delay: 0.2 ,}
+                transition={ duration: 0.8, delay: 0.2 ,}
 }'''';
                 className='bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20''''';
                />'''';
@@ -788,12 +788,12 @@ const isFormValid =;
               </motion.div>;
               {/* Process */}
               <motion.div;
-                initial={{ opacity: 0, x: 30 ,}
+                initial={ opacity: 0, x: 30 ,}
 }
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true ,}
 }'''';
-                transition={{ duration: 0.8, delay: 0.4 ,}
+                transition={ duration: 0.8, delay: 0.4 ,}
 }'''';
                 className='bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20''''';
                />'''';

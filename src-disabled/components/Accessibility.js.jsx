@@ -132,8 +132,8 @@ const handleKeyDown = event => {}
     return () => window.removeEventListener('keydown', handleKeyDown)}, [isOpen, toggleHighContrast, toggleReducedMotion])return ()<>;
       {/* Floating Accessibility Button */}
       <motion.button;
-        whileHover={{ scale: 1.1 }}
-        whileTap={{ scale: 0.9 }}
+        whileHover={ scale: 1.1 }
+        whileTap={ scale: 0.9 }
         onClick={() = /> setIsOpen(true,}
 }
         className='fixed bottom-6 right-6 w-14 h-14 bg-gradient-to-br from-zion-cyan to-zion-purple text-white rounded-full shadow-2xl shadow-zion-cyan/25 z-50 flex items-center justify-center hover: shadow-2xl hover:shadow-zion-cyan/40 transition-all duration-300''''';
@@ -153,11 +153,11 @@ const handleKeyDown = event => {}
             onClick={() = /> setIsOpen(false)}
           >;
             <motion.div;
-              initial={{ scale: 0.9, opacity: 0 ,}
+              initial={ scale: 0.9, opacity: 0 ,}
 }
-              animate={{ scale: 1, opacity: 1 ,}
+              animate={ scale: 1, opacity: 1 ,}
 }'''';
-              exit={{ scale: 0.9, opacity: 0 ,}
+              exit={ scale: 0.9, opacity: 0 ,}
 }'''';
               className='bg-zion-blue-dark border border-zion-cyan/20 rounded-2xl p-6 max-w-md w-full max-h-[90vh] overflow-y-auto''';
               onClick={e = /> e.stopPropagation()}

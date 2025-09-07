@@ -307,7 +307,6 @@ export const innovativeAIAutomationServices: InnovativeAIAutomationService[] = [
     rating: 4.8,
     reviews: 167}
 ],
-=======
 
 <<<<<<< HEAD
 implementationDetails: 'Complete security monitoring platform with AI capabilities, threat detection, and automated response.';

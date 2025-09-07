@@ -192,7 +192,7 @@ export default function AdminDashboard() {
       {/* Use a normal script tag so JSON-LD is correctly parsed */}
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+        dangerouslySetInnerHTML={ __html: JSON.stringify(schema) }
       ></script>
       <Header />
       <main className="bg-background text-white py-12">
@@ -239,7 +239,7 @@ export default function AdminDashboard() {
           </div>
           <ul className="list-disc list-inside space-y-2 mb-8 text-zion-slate-light">
         type='application/ld+json'
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+        dangerouslySetInnerHTML={ __html: JSON.stringify(schema) }
       ></script>
       <Header />
       <main className='bg-background text-white py-12'>
@@ -388,7 +388,7 @@ export default function AdminDashboard() {;
       {/* Use a normal script tag so JSON-LD is correctly parsed */}
       <script;
         type="application/ld+json";
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+        dangerouslySetInnerHTML={ __html: JSON.stringify(schema) }
       ></script>;
       <Header />;
       <main className="bg-background text-white py-12">;
@@ -444,7 +444,7 @@ export default function AdminDashboard() {;
       {/* Use a normal script tag so JSON - LD is correctly parsed */}
       <script;
         type='application / ld + json';
-        dangerouslySetInnerHTML={{ __html: JSON.stringify (schema) }}
+        dangerouslySetInnerHTML={ __html: JSON.stringify (schema) }
       ></script>;
       <Header />;
       <main className='bg - background text - white py - 12'>;
@@ -472,7 +472,7 @@ export default function AdminDashboard() {;
       {/* Use a normal script tag so JSON - LD is correctly parsed */}
       <script;
         type="application / ld + json";
-        dangerouslySetInnerHTML={{ __html: JSON.stringify (schema) }}
+        dangerouslySetInnerHTML={ __html: JSON.stringify (schema) }
       ></script>;
       <Header />;
       <main className="bg - background text - white py - 12">;

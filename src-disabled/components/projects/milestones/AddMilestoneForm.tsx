@@ -173,7 +173,7 @@ function AddMilestoneForm() {}
     default_values: {'
       title: '','
       description: '',
-      amount: 0}}),
+      amount: 0}),
   const handle_submit = (values: MilestoneFormValues) =>: any {}
     on_submit (values);    form.reset ();
   }

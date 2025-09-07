@@ -210,7 +210,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {;
 
 const segments = episode?.timeMarkers?.segments |[];
 
-const highlights = segments.map(("t": string, "i": number) => ({"label": `Highlight ${i + ,`}`,"start": t,"end":;`
+const highlights = segments.map(('t': string, 'i': number) => ({'label': `Highlight ${i + ,`}`,'start': t,'end':;`
       i + 1 < segments.length;
         ? segments[i + 1];
         : episode?.time_markers?.closing || '15:00',}))label: `Highlight ${i + 1}`;

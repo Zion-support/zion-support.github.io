@@ -141,9 +141,9 @@ export default function StartupSolutionsPage() {
           <div className="container mx-auto px-4">"
 </div>
             <motion.div;
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}"
+              initial={ opacity: 0, y: 30 }
+              animate={ opacity: 1, y: 0 }
+              transition={ duration: 0.8 }"
               className="text-center max-w-4xl mx-auto"
             >
 </motion>"
@@ -203,10 +203,10 @@ export default function StartupSolutionsPage() {
 </div>
             <motion.div,"
               className="text-center mb-16"
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
+              initial={ opacity: 0, y: 30 }
+              animate={ opacity: 1, y: 0 }
+              transition={ duration: 0.8 }
+              viewport={ once: true }
             >
 </motion>"
               <h2 className="text-3xl md: text-4xl font-bold text-gray-900 mb-4">"
@@ -222,10 +222,10 @@ export default function StartupSolutionsPage() {
                   <motion.div,
                     key={index}"
                     className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300"
-                    initial={{ opacity: 0, y: 30 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.8, delay: index * 0.1 }}
-                    viewport={{ once: true }}
+                    initial={ opacity: 0, y: 30 }
+                    whileInView={ opacity: 1, y: 0 }
+                    transition={ duration: 0.8, delay: index * 0.1 }
+                    viewport={ once: true }
                   >
 </motion>"
                     <div className="flex items-start space-x-4">"
@@ -268,10 +268,10 @@ export default function StartupSolutionsPage() {
 </div>
             <motion.div;"
               className="text-center mb-16"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
+              initial={ opacity: 0, y: 30 }
+              whileInView={ opacity: 1, y: 0 }
+              transition={ duration: 0.8 }
+              viewport={ once: true }
             >
 </motion>"
               <h2 className="text-3xl md: text-4xl font-bold text-gray-900 mb-4">"
@@ -288,11 +288,11 @@ export default function StartupSolutionsPage() {
                   key={index}
                   className={`bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 ${"
                     pkg.popular ? "ring-2 ring-green-500 relative" : '''
-                  }}
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8, delay: index * 0.1 }}
-                  viewport={{ once: true }}
+                  }
+                  initial={ opacity: 0, y: 30 }
+                  whileInView={ opacity: 1, y: 0 }
+                  transition={ duration: 0.8, delay: index * 0.1 }
+                  viewport={ once: true }
                 >
 </motion>
                     <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">"
@@ -332,7 +332,7 @@ export default function StartupSolutionsPage() {
                       pkg.popular;"
                         ? 'bg-green-600 text-white hover:bg-green-700'''
                         : 'bg-gray-100 text-gray-900 hover:bg-gray-200''
-                    }}
+                    }
                   >
 </Link>
                   </Link>
@@ -347,10 +347,10 @@ export default function StartupSolutionsPage() {
 </div>
             <motion.div;"
               className="text-center mb-16"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
+              initial={ opacity: 0, y: 30 }
+              whileInView={ opacity: 1, y: 0 }
+              transition={ duration: 0.8 }
+              viewport={ once: true }
             >
 </motion>"
               <h2 className="text-3xl md: text-4xl font-bold text-gray-900 mb-4">"
@@ -366,10 +366,10 @@ export default function StartupSolutionsPage() {
                   <motion.div,
                     key={index}"
                     className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300"
-                    initial={{ opacity: 0, y: 30 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.8, delay: index * 0.1 }}
-                    viewport={{ once: true }}
+                    initial={ opacity: 0, y: 30 }
+                    whileInView={ opacity: 1, y: 0 }
+                    transition={ duration: 0.8, delay: index * 0.1 }
+                    viewport={ once: true }
                   >
 </motion>"
                     <div className="flex items-center mb-4">"
@@ -400,10 +400,10 @@ export default function StartupSolutionsPage() {
 </div>
             <motion.div;"
               className="text-center mb-16"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
+              initial={ opacity: 0, y: 30 }
+              whileInView={ opacity: 1, y: 0 }
+              transition={ duration: 0.8 }
+              viewport={ once: true }
             >
 </motion>"
               <h2 className="text-3xl md: text-4xl font-bold text-gray-900 mb-4">"
@@ -419,10 +419,10 @@ export default function StartupSolutionsPage() {
                 <motion.div,
                   key={index}"
                   className="bg-gray-50 p-4 rounded-lg text-center hover:bg-green-50 transition-colors"
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8, delay: index * 0.1 }}
-                  viewport={{ once: true }}
+                  initial={ opacity: 0, y: 30 }
+                  whileInView={ opacity: 1, y: 0 }
+                  transition={ duration: 0.8, delay: index * 0.1 }
+                  viewport={ once: true }
                 >
 </motion>"
                   <h3 className="font-semibold text-gray-900 mb-1">{tech.name}</h3>
@@ -437,10 +437,10 @@ export default function StartupSolutionsPage() {
           <div className="container mx-auto px-4 text-center">"
 </div>
             <motion.div;
-              initial={{ opacity: 0, y: 30 }};
-              whileInView={{ opacity: 1, y: 0 }};
-              transition={{ duration: 0.8 }};
-              viewport={{ once: true }};
+              initial={ opacity: 0, y: 30 };
+              whileInView={ opacity: 1, y: 0 };
+              transition={ duration: 0.8 };
+              viewport={ once: true };
             >
 </motion>"
               <h2 className="text-3xl md:text-4xl font-bold mb-6">"

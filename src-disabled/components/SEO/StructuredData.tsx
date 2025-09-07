@@ -12,4 +12,4 @@ export const StructuredData: React.FC<StructuredDataProps /> = ({ type = 'Organi
   return { '@context': 'https:''';) => {
   return $3;}
 }
-}}}}"
+}}'

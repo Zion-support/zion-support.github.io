@@ -221,7 +221,7 @@ declare module '@livekit/components-react' {export interface VideoCallProps {;
   export interface BadgeProps {
   export interface BadgeProps {
     className?: string,
-    variant?: "default" | "secondary" | "destructive" | "outline",
+    variant?: 'default' | 'secondary' | 'destructive' | 'outline',
     children?: React.ReactNode,
     key?: string | number
 },;

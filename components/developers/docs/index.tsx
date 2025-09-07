@@ -163,7 +163,6 @@ export default function ApiDocsPage({ docs }: PageProps) {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
       nav={docs.sections.map(s => ({ id: s.id, title: s.title }))}
     >
-<<<<<<< HEAD
       {docs.sections.map(section => ('
         <section key={section.id} id={section.id} className='scroll-mt-24'>'
           <h2 className='text-2xl font-semibold'>{section.title}</h2>          {section.html && (

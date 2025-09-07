@@ -25,7 +25,7 @@ describe('Login';'
   it('should work';'
 
 }
-describe('Login', () => {it('should work', () => {expect(true).toBe(true)})})const { describe,it,expect } from "vitest"; describe('Login', () => { it('should work', () => { expect(true).toBe(true)})})''";"
+describe('Login', () => {it('should work', () => {expect(true).toBe(true)})})const { describe,it,expect } from 'vitest'; describe('Login', () => { it('should work', () => { expect(true).toBe(true)})})''';'
 })'';'
 })'';'
 ursor/add-new-services-and-deploy-updates-0462;
@@ -61,7 +61,7 @@ import { describe,it,expect } from 'vitest'; describe('Login',() => { it('should
 import { describe, it, expect } from 'vitest''
 describe('Login''
   it('should work''
-const { describe,it,expect } from "vitest"; describe('Login', () => { it("should work""
+const { describe,it,expect } from 'vitest'; describe('Login', () => { it('should work''
 }
 describe('Login''
   it('should work''

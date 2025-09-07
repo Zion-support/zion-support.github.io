@@ -31,7 +31,7 @@ export default function ServicesAdvertisingPage() {
 					<ul className="list-disc list-inside text-slate-300 space-y-1">
 						<li>Typical SMB budget: $20–$80/mo</li>
 						<li>References: {ext('https://buffer.com/pricing')}, {ext('https://www.hootsuite.com/plans')}</li>
-						<li>Try: <a href="/services/ai-social-media-manager" className="text-cyan-400 underline">ziontechgroup.com/services/ai-social-media-manager</a></li>
+						<li>Try: <a href='/services/ai-social-media-manager' className='text-cyan-400 underline'>ziontechgroup.com/services/ai-social-media-manager</a></li>
 					</ul>
 				</section>
 
@@ -130,7 +130,7 @@ export default function ServicesAdvertisingPage() {
 					<ul className="list-disc list-inside text-slate-300 space-y-1">
 						<li>Typical budget: $10–$30/mo + usage</li>
 						<li>References: {ext('https://openai.com/api/pricing')}, {ext('https://www.pinecone.io/pricing/')}</li>
-						<li>Try: <a href="/services/ai-document-summarizer" className="text-cyan-400 underline">ziontechgroup.com/services/ai-document-summarizer</a></li>
+						<li>Try: <a href='/services/ai-document-summarizer' className='text-cyan-400 underline'>ziontechgroup.com/services/ai-document-summarizer</a></li>
 					</ul>
 				</section>
 
@@ -140,13 +140,13 @@ export default function ServicesAdvertisingPage() {
             <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent mb-4">
               Services That Ship Outcomes
             </h1>
-            <p className="text-gray-300 text-lg">AI platforms, enterprise IT solutions, and real micro SaaS accelerators.</p>
-            <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4">
-              <Button href="/contact" className="px-8 py-4 bg-gradient-to-r from-cyan-600 to-blue-700 text-white">
-                Talk to Sales <ArrowRight className="w-5 h-5 ml-2" />
+            <p className='text-gray-300 text-lg'>AI platforms, enterprise IT solutions, and real micro SaaS accelerators.</p>
+            <div className='mt-8 flex flex-col sm:flex-row items-center justify-center gap-4'>
+              <Button href='/contact' className='px-8 py-4 bg-gradient-to-r from-cyan-600 to-blue-700 text-white'>
+                Talk to Sales <ArrowRight className='w-5 h-5 ml-2' />
               </Button>
-              <Button href="/market-pricing" variant="outline" className="px-8 py-4 border border-gray-600 text-gray-200">
-                View Market Pricing <ExternalLink className="w-5 h-5 ml-2" />
+              <Button href='/market-pricing' variant='outline' className='px-8 py-4 border border-gray-600 text-gray-200'>
+                View Market Pricing <ExternalLink className='w-5 h-5 ml-2' />
               </Button>
             </div>
           </header>
@@ -161,11 +161,11 @@ export default function ServicesAdvertisingPage() {
                 { name: 'Cloud Cost Optimizer', price: '$399/mo', href: '/services/cloud-cost-optimizer', points: ['Anomalies', 'Rightsizing', 'Budgets'] },
                 { name: 'API Observability Starter', price: '$149/mo', href: '/services/api-observability-starter', points: ['Traces', 'SLOs', 'Deps map'] }
               ].map((o) => (
-                <a key={o.name} href={o.href} className="block p-6 rounded-2xl bg-black/40 border border-gray-700/60 hover:border-cyan-500/40">
-                  <div className="text-sm text-gray-400 mb-1">From</div>
-                  <div className="text-2xl font-bold text-white">{o.price}</div>
-                  <div className="text-gray-200 mt-2 mb-3">{o.name}</div>
-                  <ul className="text-sm text-gray-300 space-y-1 list-disc list-inside">
+                <a key={o.name} href={o.href} className='block p-6 rounded-2xl bg-black/40 border border-gray-700/60 hover:border-cyan-500/40'>
+                  <div className='text-sm text-gray-400 mb-1'>From</div>
+                  <div className='text-2xl font-bold text-white'>{o.price}</div>
+                  <div className='text-gray-200 mt-2 mb-3'>{o.name}</div>
+                  <ul className='text-sm text-gray-300 space-y-1 list-disc list-inside'>
                     {o.points.map((p) => (<li key={p}>{p}</li>))}
                   </ul>
                 </a>
@@ -174,13 +174,13 @@ export default function ServicesAdvertisingPage() {
           </section>
 
           <section>
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 text-center">Why Zion Tech Group</h2>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <h2 className='text-3xl md:text-4xl font-bold text-white mb-6 text-center'>Why Zion Tech Group</h2>
+            <div className='grid grid-cols-1 md:grid-cols-3 gap-6'>
               {benefits.map((b) => (
-                <div key={b} className="p-6 rounded-2xl bg-black/40 border border-gray-700/60">
-                  <div className="flex items-start gap-3">
-                    <CheckCircle className="w-5 h-5 text-emerald-400 mt-1" />
-                    <p className="text-gray-200">{b}</p>
+                <div key={b} className='p-6 rounded-2xl bg-black/40 border border-gray-700/60'>
+                  <div className='flex items-start gap-3'>
+                    <CheckCircle className='w-5 h-5 text-emerald-400 mt-1' />
+                    <p className='text-gray-200'>{b}</p>
                   </div>
                 </div>
               ))}
@@ -193,7 +193,7 @@ export default function ServicesAdvertisingPage() {
 					<ul className="list-disc list-inside text-slate-300 space-y-1">
 						<li>Typical budget: $40–$200/mo</li>
 						<li>References: {ext('https://apify.com/pricing')}, {ext('https://www.browserless.io/pricing')}</li>
-						<li>Try: <a href="/services/browser-automation-cloud" className="text-cyan-400 underline">ziontechgroup.com/services/browser-automation-cloud</a></li>
+						<li>Try: <a href='/services/browser-automation-cloud' className='text-cyan-400 underline'>ziontechgroup.com/services/browser-automation-cloud</a></li>
 					</ul>
 				</section>
 
@@ -203,7 +203,7 @@ export default function ServicesAdvertisingPage() {
 					<ul className="list-disc list-inside text-slate-300 space-y-1">
 						<li>Typical budget: $30–$150/mo</li>
 						<li>References: {ext('https://k6.io/pricing')}, {ext('https://jmeter.apache.org/')}</li>
-						<li>Try: <a href="/services/api-performance-testing" className="text-cyan-400 underline">ziontechgroup.com/services/api-performance-testing</a></li>
+						<li>Try: <a href='/services/api-performance-testing' className='text-cyan-400 underline'>ziontechgroup.com/services/api-performance-testing</a></li>
 					</ul>
 				</section>
 
@@ -213,7 +213,7 @@ export default function ServicesAdvertisingPage() {
 					<ul className="list-disc list-inside text-slate-300 space-y-1">
 						<li>Typical budget: $15–$60/mo</li>
 						<li>References: {ext('https://dmarc.org/overview/')}, {ext('https://postmarkapp.com/support/category/dmarc')}</li>
-						<li>Try: <a href="/services/email-deliverability-monitor" className="text-cyan-400 underline">ziontechgroup.com/services/email-deliverability-monitor</a></li>
+						<li>Try: <a href='/services/email-deliverability-monitor' className='text-cyan-400 underline'>ziontechgroup.com/services/email-deliverability-monitor</a></li>
 					</ul>
 				</section>
 
@@ -223,7 +223,7 @@ export default function ServicesAdvertisingPage() {
 					<ul className="list-disc list-inside text-slate-300 space-y-1">
 						<li>Typical budget: $10–$60/mo + usage</li>
 						<li>References: {ext('https://openai.com/api/pricing')}, {ext('https://www.descript.com/pricing')}</li>
-						<li>Try: <a href="/services/podcast-transcription-insights" className="text-cyan-400 underline">ziontechgroup.com/services/podcast-transcription-insights</a></li>
+						<li>Try: <a href='/services/podcast-transcription-insights' className='text-cyan-400 underline'>ziontechgroup.com/services/podcast-transcription-insights</a></li>
 					</ul>
 				</section>
 
@@ -282,8 +282,8 @@ export default function ServicesAdvertisingPage() {
 				</section>
 
           <section>
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 text-center">New Micro SaaS & IT Solutions</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <h2 className='text-3xl md:text-4xl font-bold text-white mb-6 text-center'>New Micro SaaS & IT Solutions</h2>
+            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>
               {[
                 { name: 'Affiliate Marketing Tracker Pro', price: '$99/mo', href: '/affiliate-marketing-tracker-pro', refs: [{ n: 'Refersion', u: 'https://www.refersion.com/pricing' }] },
                 { name: 'SMB Privacy Web Analytics', price: '$12/mo', href: '/smb-privacy-web-analytics', refs: [{ n: 'Plausible', u: 'https://plausible.io/#pricing' }] },
@@ -296,18 +296,18 @@ export default function ServicesAdvertisingPage() {
                 { name: 'Micro CRM for Local Business', price: '$19/mo', href: '/micro-crm-local-business', refs: [{ n: 'Zoho Bigin', u: 'https://www.zoho.com/bigin/pricing/' }] },
                 { name: 'AI SEO Content Optimizer', price: '$59/mo', href: '/ai-seo-content-optimizer', refs: [{ n: 'Surfer SEO', u: 'https://surferseo.com/pricing/' }] }
               ].map((o) => (
-                <div key={o.name} className="p-6 rounded-2xl bg-black/40 border border-gray-700/60">
-                  <a href={o.href} className="block group">
-                    <div className="text-sm text-gray-400 mb-1">From</div>
-                    <div className="flex items-center justify-between">
-                      <div className="text-white font-semibold text-lg group-hover:text-cyan-300">{o.name}</div>
-                      <div className="text-cyan-300 font-medium">{o.price}</div>
+                <div key={o.name} className='p-6 rounded-2xl bg-black/40 border border-gray-700/60'>
+                  <a href={o.href} className='block group'>
+                    <div className='text-sm text-gray-400 mb-1'>From</div>
+                    <div className='flex items-center justify-between'>
+                      <div className='text-white font-semibold text-lg group-hover:text-cyan-300'>{o.name}</div>
+                      <div className='text-cyan-300 font-medium'>{o.price}</div>
                     </div>
                   </a>
-                  <div className="mt-3 text-sm text-gray-400 flex flex-wrap gap-3">
+                  <div className='mt-3 text-sm text-gray-400 flex flex-wrap gap-3'>
                     {o.refs.map((r) => (
-                      <a key={r.n} href={r.u} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1 text-gray-300 hover:text-white">
-                        <ExternalLink className="w-4 h-4" /> {r.n}
+                      <a key={r.n} href={r.u} target='_blank' rel='noopener noreferrer' className='inline-flex items-center gap-1 text-gray-300 hover:text-white'>
+                        <ExternalLink className='w-4 h-4' /> {r.n}
                       </a>
                     ))}
                   </div>
@@ -327,26 +327,26 @@ export default function ServicesAdvertisingPage() {
           </section>
 
           <section>
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 text-center">Contact Us</h2>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-              <a href={`tel:${contact.mobile.replace(/[^+\d]/g, '')}`} className="p-6 rounded-2xl bg-black/40 border border-gray-700/60 hover:border-cyan-500/40 flex items-center gap-3">
-                <Phone className="w-5 h-5 text-cyan-400" />
-                <span className="text-gray-200">{contact.mobile}</span>
+            <h2 className='text-3xl md:text-4xl font-bold text-white mb-6 text-center'>Contact Us</h2>
+            <div className='grid grid-cols-1 md:grid-cols-3 gap-6'>
+              <a href={`tel:${contact.mobile.replace(/[^+\d]/g, '')}`} className='p-6 rounded-2xl bg-black/40 border border-gray-700/60 hover:border-cyan-500/40 flex items-center gap-3'>
+                <Phone className='w-5 h-5 text-cyan-400' />
+                <span className='text-gray-200'>{contact.mobile}</span>
               </a>
-              <a href={`mailto:${contact.email}`} className="p-6 rounded-2xl bg-black/40 border border-gray-700/60 hover:border-purple-500/40 flex items-center gap-3">
-                <Mail className="w-5 h-5 text-purple-400" />
-                <span className="text-gray-200">{contact.email}</span>
+              <a href={`mailto:${contact.email}`} className='p-6 rounded-2xl bg-black/40 border border-gray-700/60 hover:border-purple-500/40 flex items-center gap-3'>
+                <Mail className='w-5 h-5 text-purple-400' />
+                <span className='text-gray-200'>{contact.email}</span>
               </a>
-              <a href={`https://maps.google.com/?q=${encodeURIComponent(contact.address)}`} target="_blank" rel="noopener noreferrer" className="p-6 rounded-2xl bg-black/40 border border-gray-700/60 hover:border-emerald-500/40 flex items-center gap-3">
-                <MapPin className="w-5 h-5 text-emerald-400" />
-                <span className="text-gray-200 text-sm">{contact.address}</span>
+              <a href={`https://maps.google.com/?q=${encodeURIComponent(contact.address)}`} target='_blank' rel='noopener noreferrer' className='p-6 rounded-2xl bg-black/40 border border-gray-700/60 hover:border-emerald-500/40 flex items-center gap-3'>
+                <MapPin className='w-5 h-5 text-emerald-400' />
+                <span className='text-gray-200 text-sm'>{contact.address}</span>
               </a>
             </div>
           </section>
 
           <section>
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 text-center">More Featured Solutions</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <h2 className='text-3xl md:text-4xl font-bold text-white mb-6 text-center'>More Featured Solutions</h2>
+            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>
               {[
                 { name: 'Email Deliverability Monitor', price: '$149/mo', href: '/email-deliverability-monitor' },
                 { name: 'API Security Scanner', price: '$799/mo', href: '/api-security-scanner' },
@@ -355,10 +355,10 @@ export default function ServicesAdvertisingPage() {
                 { name: 'PDF Render API', price: '$49/mo', href: '/pdf-render-api' },
                 { name: 'Database Performance Monitor', price: '$299/mo', href: '/database-performance-monitor' }
               ].map((o) => (
-                <a key={o.name} href={o.href} className="block p-6 rounded-2xl bg-black/40 border border-gray-700/60 hover:border-cyan-500/40">
-                  <div className="text-sm text-gray-400 mb-1">From</div>
-                  <div className="text-2xl font-bold text-white">{o.price}</div>
-                  <div className="text-gray-200 mt-2">{o.name}</div>
+                <a key={o.name} href={o.href} className='block p-6 rounded-2xl bg-black/40 border border-gray-700/60 hover:border-cyan-500/40'>
+                  <div className='text-sm text-gray-400 mb-1'>From</div>
+                  <div className='text-2xl font-bold text-white'>{o.price}</div>
+                  <div className='text-gray-200 mt-2'>{o.name}</div>
                 </a>
               ))}
             </div>

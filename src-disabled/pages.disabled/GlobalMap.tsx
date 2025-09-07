@@ -268,23 +268,23 @@ export default function GlobalMapPage() {;
   }
   const topRegions = INSTANCES.sort((a, b) => b.talent - a.talent).slice(0, 5),
   return (
-    <div className="min-h-screen bg-background">"
-      <NextSeo title="Global Zion Map" description="Overview of Zion deployments" />"
+    <div className='min-h-screen bg-background'>'
+      <NextSeo title='Global Zion Map' description='Overview of Zion deployments' />'
       <Header />
-      <main className="py-10 container mx-auto space-y-8">"
-        <h1 className="text-3xl font-bold">Global Instances</h1>"
-        <div className="flex flex-col lg:flex-row gap-8">"
-          <div className="relative" style={{ width, height }}>"
-            <Globe className="w-full h-full text-secondary" />"
+      <main className='py-10 container mx-auto space-y-8'>'
+        <h1 className='text-3xl font-bold'>Global Instances</h1>'
+        <div className='flex flex-col lg:flex-row gap-8'>'
+          <div className='relative' style={ width, height }>'
+            <Globe className='w-full h-full text-secondary' />'
             {INSTANCES.map((i) => {
               const { x, y } = project(i.lat, i.lng),
               const color = i.governance === 'admin' ? 'bg-red-500' : i.governance === 'hybrid' ? 'bg-yellow-500' : 'bg-green-500','
               return (
-      <main className="py-10 container mx-auto space-y-8">"
-        <h1 className="text-3xl font-bold">Global Instances</h1>"
-        <div className="flex flex-col lg:flex-row gap-8">"
-          <div className="relative" style={{ width, height }}>"
-            <Globe className="w-full h-full text-secondary" />"
+      <main className='py-10 container mx-auto space-y-8'>'
+        <h1 className='text-3xl font-bold'>Global Instances</h1>'
+        <div className='flex flex-col lg:flex-row gap-8'>'
+          <div className='relative' style={ width, height }>'
+            <Globe className='w-full h-full text-secondary' />'
             {INSTANCES.map((i) => {
   function project(lat: number, lng: number) {;
     const y = ((90 - lat) / 180) * height,;
@@ -293,8 +293,8 @@ export default function GlobalMapPage() {;
 
 
   return (
-    <div className="min-h-screen bg-background">
-      <NextSeo title="Global Zion Map" description="Overview of Zion deployments" />
+    <div className='min-h-screen bg-background'>
+      <NextSeo title='Global Zion Map' description='Overview of Zion deployments' />
       <Header />
 =======
 <<<<<<< HEAD
@@ -346,7 +346,7 @@ export default function GlobalMapPage() {;
 
   const topRegions = INSTANCES.sort((a, b) => b.talent - a.talent).slice(0, 5),
   return (
-      <NextSeo title="Global Zion Map" description="Overview of Zion deployments" />
+      <NextSeo title='Global Zion Map' description='Overview of Zion deployments' />
       <Header />
 
   const topRegions = INSTANCES.sort((a, b) => b.talent - a.talent).slice(0, 5),
@@ -394,11 +394,11 @@ export default function GlobalMapPage() {;
 <<<<<<< HEAD
 =======
 
-      <main className="py-10 container mx-auto space-y-8">
-        <h1 className="text-3xl font-bold">Global Instances</h1>
-        <div className="flex flex-col lg:flex-row gap-8">
-          <div className="relative" style={{ width, height }}>
-            <Globe className="w-full h-full text-secondary" />
+      <main className='py-10 container mx-auto space-y-8'>
+        <h1 className='text-3xl font-bold'>Global Instances</h1>
+        <div className='flex flex-col lg:flex-row gap-8'>
+          <div className='relative' style={ width, height }>
+            <Globe className='w-full h-full text-secondary' />
             {INSTANCES.map((i) => {
               const { x, y } = project(i.lat, i.lng),
               const color = i.governance === 'admin' ? 'bg-red-500' : i.governance === 'hybrid' ? 'bg-yellow-500' : 'bg-green-500',
@@ -409,28 +409,28 @@ export default function GlobalMapPage() {;
                     <TooltipTrigger asChild>
                       <div
                         className={`absolute ${color} rounded-full p-1`}`
-                        style={{ left: x, top: y }}
+                        style={ left: x, top: y }
                       >
-                        <MapPin className="w-4 h-4 text-white" />"
+                        <MapPin className='w-4 h-4 text-white' />'
                       </div>
                     </TooltipTrigger>
                     <TooltipContent>
-                      <div className="text-sm space-y-1">"
-                        <div className="font-semibold">{i.name}</div>"
+                      <div className='text-sm space-y-1'>'
+                        <div className='font-semibold'>{i.name}</div>'
                         className={`absolute ${color} rounded-full p-1`}
-                        style={{ left: x, top: y }}
+                        style={ left: x, top: y }
                       >
-                        <MapPin className="w-4 h-4 text-white" />
+                        <MapPin className='w-4 h-4 text-white' />
                       </div>
                     </TooltipTrigger>
                     <TooltipContent>
-                      <div className="text-sm space-y-1">
-                        <div className="font-semibold">{i.name}</div>
-      <main className="py-10 container mx-auto space-y-8">
-        <h1 className="text-3xl font-bold">Global Instances</h1>
-        <div className="flex flex-col lg:flex-row gap-8">
-          <div className="relative" style={{ width, height }}>
-            <Globe className="w-full h-full text-secondary" />
+                      <div className='text-sm space-y-1'>
+                        <div className='font-semibold'>{i.name}</div>
+      <main className='py-10 container mx-auto space-y-8'>
+        <h1 className='text-3xl font-bold'>Global Instances</h1>
+        <div className='flex flex-col lg:flex-row gap-8'>
+          <div className='relative' style={ width, height }>
+            <Globe className='w-full h-full text-secondary' />
             {INSTANCES.map((i) => {
   votesPassed: number;
   votesPending: number;
@@ -485,7 +485,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     <TooltipTrigger asChild>
                       <div
                         className={`absolute ${color} rounded-full p-1`}
-                        style={{ left: x, top: y }}
+                        style={ left: x, top: y }
                       >
                         <MapPin className="w-4 h-4 text-white" />
                       </div>
@@ -507,7 +507,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       <main className='py-10 container mx-auto space-y-8'>;
         <h1 className='text-3xl font-bold'>Global Instances</h1>;
         <div className='flex flex-col lg:flex-row gap-8'>;
-          <div className='relative' style={{ width, height }}>;
+          <div className='relative' style={ width, height }>;
             <Globe className='w-full h-full text-secondary' />;
             {INSTANCES && INSTANCES.map(i => {;
               const { x, y } = project(i && i.lat, i && i.lng);
@@ -522,7 +522,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     <TooltipTrigger asChild>;
                       <div
                         className={`absolute ${color} rounded-full p-1`}`
-                        style={{ left: x, top: y }}>;
+                        style={ left: x, top: y }>;
                         <MapPin className='w-4 h-4 text-white' />;
                       </div>;
                     </TooltipTrigger>;
@@ -541,10 +541,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             })}
 <<<<<<< HEAD:src-disabled/pages.disabled/GlobalMap.tsx
           </div>
-          <div className="flex-1 space-y-6">"
+          <div className='flex-1 space-y-6'>'
             <section>
-              <h2 className="text-xl font-semibold mb-2">Top Regions by Talent</h2>"
-              <ul className="space-y-1">"
+              <h2 className='text-xl font-semibold mb-2'>Top Regions by Talent</h2>'
+              <ul className='space-y-1'>'
                 {topRegions.map((r) => (
                   <li key={r.id} className="flex justify-between border-b pb-1">"
 =======
@@ -552,7 +552,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:src/pages/GlobalMap.tsx
             })}
           </div>
-          <div className="flex-1 space-y-6">
+          <div className='flex-1 space-y-6'>
             <section>
 <<<<<<< HEAD:src-disabled/pages.disabled/GlobalMap.tsx
 =======
@@ -570,7 +570,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               <h2 className="text-xl font-semibold mb-2">Top Regions by Talent</h2>
               <ul className="space-y-1">
                 {topRegions.map((r) => (
-                  <li key={r.id} className="flex justify-between border-b pb-1">
+                  <li key={r.id} className='flex justify-between border-b pb-1'>
                     <span>{r.region}</span>
 <<<<<<< HEAD:src-disabled/pages.disabled/GlobalMap.tsx
 =======
@@ -585,8 +585,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 <<<<<<< HEAD:src-disabled/pages.disabled/GlobalMap.tsx
 ;
 }
-              <h2 className="text-xl font-semibold mb-2">Live Feed</h2>"
-              <ul className="space-y-1">"
+              <h2 className='text-xl font-semibold mb-2'>Live Feed</h2>'
+              <ul className='space-y-1'>'
                 {feed.map((f) => (
                   <li key={f.id} className="text-sm">{f.text}</li>"
 =======
@@ -617,10 +617,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 ;
 }
 
-              <h2 className="text-xl font-semibold mb-2">Live Feed</h2>
-              <ul className="space-y-1">
+              <h2 className='text-xl font-semibold mb-2'>Live Feed</h2>
+              <ul className='space-y-1'>
                 {feed.map((f) => (
-                  <li key={f.id} className="text-sm">{f.text}</li>
+                  <li key={f.id} className='text-sm'>{f.text}</li>
                 ))}
               </ul>;
             </section>;
@@ -723,7 +723,7 @@ function project() {
       <main className='py - 10 container mx - auto space - y-8'>;
         <h1 className='text - 3xl font - bold'>Global Instances</h1>;
         <div className='flex flex - col lg:flex - row gap - 8'>;
-          <div className='relative' style={{ width, height }}>;
+          <div className='relative' style={ width, height }>;
             <Globe className='w - full h - full text - secondary' />;
             {INSTANCES.map (index => {
               const { x, y } = project (i.lat, i.lng);
@@ -737,7 +737,7 @@ function project() {
                     <TooltipTrigger as_child>;
                       <div;
                         className={`absolute ${color} rounded - full p - 1`}`
-                        style={{ left: x, top: y }}
+                        style={ left: x, top: y }
                       >;
                         <MapPin className='w - 4 h - 4 text - white' />;
                       </div>;
@@ -785,7 +785,7 @@ function project() {
 ;
 <<<<<<< HEAD:src-disabled/pages.disabled/GlobalMap.tsx
 ;
-}}})
+}})
 ;
 ;
               <h2 className='text-xl font-semibold mb-2'>Live Feed</h2>

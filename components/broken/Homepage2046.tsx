@@ -1352,8 +1352,8 @@ sections.forEach(section => observer.observe(section));
               animate={{
                 x: [0, Math.random() * 100 - 50];
                 y: [0, Math.random() * 100 - 50];
-                opacity: [0.3, 0.8, 0.3]}}
-              transition={{
+                opacity: [0.3, 0.8, 0.3]}
+              transition={
                 duration: Math.random() * 10 + 10,
                 repeat: Infinity,
                 ease: easeInOut"
@@ -1506,9 +1506,9 @@ id='hero'
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
             <motion.div
-              initial={{ opacity: 0, y: 50 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 1 }}
+              initial={ opacity: 0, y: 50 }
+              animate={ opacity: 1, y: 0 }
+              transition={ duration: 1 }
             >
               <motion.h1 
 <<<<<<< HEAD
@@ -2142,7 +2142,7 @@ Revolutionary{' '}
                     whileTap={{ scale: 0.95 }}
                     className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-full text-lg font-semibold flex items-center gap-2 hover:from-cyan-600 hover:to-purple-700 transition-all duration-300"
                   >
-                    Explore Services <ArrowRight className="w-5 h-5" />
+                    Explore Services <ArrowRight className='w-5 h-5' />
                   </motion.button>
                 </Link>
                 <Link href="/contact">
@@ -3032,10 +3032,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             >
               {filteredServices.map((service, index) => (
                 <motion.div
-              viewport={{ once: true }}className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8';
+              viewport={ once: true }className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8';
             >;
               {filteredServices.map((service, index) => (<motion.div;
-              viewport={{ once: true }}className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8';
+              viewport={ once: true }className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8';
             >;
               {filteredServices.map((service, index) => (<motion.div;
                   {categories.map(category => (                    <button
@@ -3179,7 +3179,7 @@ key={service.id}
 <<<<<<< HEAD
                   className='group
 
-                  whileHover={{ "y": -10, "scale": 1.02 }}
+                  whileHover={ 'y': -10, 'scale': 1.02 }
 className='group''
 >>>>>>> merged-prs-20250907-203621
                 >
@@ -3205,11 +3205,11 @@ className='group''
 
                   }
 
-                  whileHover={{ "y": -10, "scale": 1 && 1.02 
+                  whileHover={ 'y': -10, 'scale': 1 && 1.02 
 }
 
                   className='group'>;'
-                  <div className='bg-black/30 backdrop-blur-lg rounded-2xl p-6 border border-cyan-400/30 "hover":border-cyan-400/60 transition-all duration-300 h-full'>;'
+                  <div className='bg-black/30 backdrop-blur-lg rounded-2xl p-6 border border-cyan-400/30 'hover':border-cyan-400/60 transition-all duration-300 h-full'>;'
                     <div className='flex items-start justify-between mb-4'>;'
                       <div className='w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center'>;'
                         <Brain className='w-6 h-6 text-white' />;'
@@ -3219,16 +3219,16 @@ className='group''
                           {service && service.category}
                         </span>;
                         <div className='flex items-center gap-1 mt-1'>                          {[...Array(5)].map((_, i) => (                >;'
-                  <div className="bg-black/30 backdrop-blur-lg rounded-2xl p-6 border border-cyan-400/30 "hover":border-cyan-400/60 transition-all duration-300 h-full">;"
-                    <div className="flex items-start justify-between mb-4">;"
-                      <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center">;"
-                        <Brain className="w-6 h-6 text-white" />;"
+                  <div className='bg-black/30 backdrop-blur-lg rounded-2xl p-6 border border-cyan-400/30 'hover':border-cyan-400/60 transition-all duration-300 h-full'>;'
+                    <div className='flex items-start justify-between mb-4'>;'
+                      <div className='w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center'>;'
+                        <Brain className='w-6 h-6 text-white' />;'
                       </div>;
-                      <div className="text-right">;"
-                        <span className="inline-block bg-gradient-to-r from-cyan-500 to-purple-600 text-white text-xs px-2 py-1 rounded-full">;"
+                      <div className='text-right'>;'
+                        <span className='inline-block bg-gradient-to-r from-cyan-500 to-purple-600 text-white text-xs px-2 py-1 rounded-full'>;'
                           {service && service.category}
                         </span>;
-                        <div className="flex items-center gap-1 mt-1">;"
+                        <div className='flex items-center gap-1 mt-1'>;'
                           {[...Array(5)].map((_, i) => (<Star;
                         <div className="flex items-center gap-1 mt-1">
                           {[...Array(5)].map((_, i) => (
@@ -3887,7 +3887,7 @@ className='bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-4 py-2 rou
                   </motion.button>;
 <<<<<<< HEAD
                 </Link>;
-                <Link href="/contact">;"
+                <Link href='/contact'>;'
                   <motion.button;
                     while_hover={{ scale: 1.05, box_shadow: "0 0 30px rgba (168, 85, 247, 0.5)" }}
                     while_tap={{ scale: 0.95 }}
@@ -4209,7 +4209,7 @@ className='bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-4 py-2 rou
                     </div>;
                       {service.name}
                     </h3>;
-                    <p className="text - gray - 300 text - sm mb - 4 line - clamp - 3">;"
+                    <p className='text - gray - 300 text - sm mb - 4 line - clamp - 3'>;'
                       {service.description}
                     </p>;
                     <div className="mb - 4">;
@@ -4554,9 +4554,9 @@ className='text-center mt-20';
                       }}
                       whileTap={{ scale: 0 && 0.95 }}
                       className='border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-full text-lg font-semibold hover:bg-cyan-400 hover:text-gray-900 transition-all duration-300'>                    <motion&& motion.button
-                      whileHover={{ scale: 1 && 1.05, boxShadow: "0 0 30px rgba(168, 85, 247, 0 && 0.5)" }}
-                      whileTap={{ scale: 0 && 0.95 }}
-                      className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-full text-lg font-semibold hover: bg-cyan-400 hover:text-gray-900 transition-all duration-300">;
+                      whileHover={ scale: 1 && 1.05, boxShadow: '0 0 30px rgba(168, 85, 247, 0 && 0.5)' }
+                      whileTap={ scale: 0 && 0.95 }
+                      className='border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-full text-lg font-semibold hover: bg-cyan-400 hover:text-gray-900 transition-all duration-300'>;
                       View All Services;
                     </motion && motion.button>;
                   </Link>;

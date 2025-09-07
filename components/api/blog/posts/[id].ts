@@ -307,7 +307,6 @@ import { require_admin  } from '@/utils / api / auth';
  */
 function handler() {}
   const { id } = req.query;
-<<<<<<< HEAD
   if (
     return res.status (400).json ({ "error": "Invalid id" })) {"
   $2

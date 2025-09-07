@@ -45,7 +45,7 @@ const handleResize = (checkDevice()) => {
   return $3;}
 } else {setDeviceOrientation('landscape')}
       }, 100)}checkDevice()window.addEventListener('resize', handleResize)window.addEventListener('orientationchange', handleOrientationChange;
-  return () => {window.removeEventListener('resize', handleResize)window.removeEventListener('orientationchange', handleOrientationChange)}}, [])// Touch gesture handling;
+  return () => {window.removeEventListener('resize', handleResize)window.removeEventListener('orientationchange', handleOrientationChange)}, [])// Touch gesture handling;
   useEffect(() => {
 if (!enabled || !enableSwipeNavigation) return;
 
@@ -97,7 +97,7 @@ const distance = Math.sqrt(deltaX * deltaX + deltaY * deltaY)// Minimum distance
       }setTouchStart(null)setTouchEnd(null)}document.addEventListener('touchstart', handleTouchStart, { passive: false}
 })document.addEventListener('touchmove', handleTouchMove, { passive: false}
 })document.addEventListener('touchend', handleTouchEnd, { passive: false}
-})return () => {document.removeEventListener('touchstart', handleTouchStart)document.removeEventListener('touchmove', handleTouchMove)document.removeEventListener('touchend', handleTouchEnd)}}, [enabled, enableSwipeNavigation, touchStart])// Enhanced mobile navigation;
+})return () => {document.removeEventListener('touchstart', handleTouchStart)document.removeEventListener('touchmove', handleTouchMove)document.removeEventListener('touchend', handleTouchEnd)}, [enabled, enableSwipeNavigation, touchStart])// Enhanced mobile navigation;
 
 const handleMobileNavigation = useCallback((action: string) => {switch (action) {case 'home': window.location.href = '/';
         break;
@@ -230,11 +230,11 @@ const style = document.createElement('style')style.textContent = `;
       </AnimatePresence>;
       {/* Floating Action Button for Mobile */}
       {isMobile && (<motion .button;}
-          initial={{ opacity: 0, scale: 0.8 }
+          initial={ opacity: 0, scale: 0.8 }
 }
-          animate={{ opacity: 1, scale: 1 }}
-          whileHover={{ scale: 1.1 }}
-          whileTap={{ scale: 0.9 }}
+          animate={ opacity: 1, scale: 1 }
+          whileHover={ scale: 1.1 }
+          whileTap={ scale: 0.9 }
           onClick={() = /> setShowGestureGuide(!showGestureGuide}
 }"
           className=\"fixed bottom-6 right-6 z-50 p-4 bg-blue-600 text-white rounded-full shadow-lg hover: bg-blue-700 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-offset-2\";"
@@ -246,9 +246,9 @@ const style = document.createElement('style')style.textContent = `;
       )}{/* Gesture Guide */}
       <AnimatePresence />;
         {showGestureGuide && isMobile && (<motion .div;}
-            initial={{ opacity: 0, scale: 0.9 }
+            initial={ opacity: 0, scale: 0.9 }
 }
-            animate={{ opacity: 1, scale: 1 }
+            animate={ opacity: 1, scale: 1 }
 }
             exit={{ opacity: 0, scale: 0.9 }"
 }\"\";"
@@ -321,7 +321,7 @@ const style = document.createElement('style')style.textContent = `;
       </AnimatePresence>;"
       {/* Device Info Indicator (Development Only) */}\"\";
       {process.env.NODE_ENV === 'development' && (isMobile || isTablet) && (<motion .div;}
-          initial={{ opacity: 0, x: -100 }
+          initial={ opacity: 0, x: -100 }
 }
           animate={{ opacity: 1, x: 0 }"
 }\"\";"
@@ -334,7 +334,7 @@ const style = document.createElement('style')style.textContent = `;
         </motion.div>;"
       )}{/* Gesture History (Development Only) */}\"\";
       {process.env.NODE_ENV === 'development' && showGestures && gestureHistory.length > 0 && (<motion .div;}
-          initial={{ opacity: 0, y: 100 }
+          initial={ opacity: 0, y: 100 }
 }
           animate={{ opacity: 1, y: 0 }"
 }\"\";"

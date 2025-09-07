@@ -392,7 +392,6 @@ const animate = (ctx.fillStyle = 'rgba(0, 0, 0, 0.05)';
                 Math.pow(particle.y - otherParticle.y, 2))if (distance < 100) {ctx.beginPath()ctx.moveTo(particle.x, particle.y)ctx.lineTo(otherParticle.x, otherParticle.y)ctx.strokeStyle = particle.color;
 ctx.globalAlpha = ((100 - distance) / 100) * 0.3;
               ctx.lineWidth = 0.5;
-<<<<<<< HEAD
       color: string;
 >>>>>>> merged-prs-20250907-203621
       vx: number,
@@ -1071,7 +1070,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               'polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%)'' />;
         <motion.div;
           className='absolute top - 40 right - 32 w - 24 h - 24 border border - purple - 400 / 30';'
-          style={{
+          style={
             }
             "clip_path":;
               'polygon (50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%)','
@@ -1398,7 +1397,7 @@ ease: 'linear',
           }}
         />
 
-          }}
+          }
 
         />
 
@@ -1891,9 +1890,8 @@ ease: "easeInOut"
             ease: "easeInOut"
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 
-          }}
+          }
 
-<<<<<<< HEAD
         />
 
             duration: 10;
@@ -1906,7 +1904,7 @@ ease: 'easeInOut',
 <<<<<<< HEAD
         <motion.div,
 className='absolute top-32 left-1/2 w-1 h-32 bg-gradient-to-b from-cyan-400 to-transparent''
-          animate={{
+          animate={
             }
             "height": [32, 64, 32],
             "opacity": [0.3, 0.8, 0.3]
@@ -1964,7 +1962,7 @@ className='absolute top-32 left-1/2 w-1 h-32 bg-gradient-to-b from-cyan-400 to-t
             rotate: 360
             scale: [1, 1.1, 1];
             opacity: [0.3, 0.6, 0.3]
-          }}
+          }
           transition = $2;
             repeat: Infinity,
             ease: "linear"
@@ -2092,7 +2090,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           animate = $2;
             scale: [1, 0.9, 1],
             opacity: [0.3, 0.6, 0.3]
-          }}
+          }
           transition = $2;
             repeat: Infinity,
             ease: linear
@@ -2102,10 +2100,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         {/* Floating Circles */}
         <motion.div
           className="absolute top-60 left-1/4 w-16 h-16 rounded-full border border-pink-400/40"
-          animate={{
+          animate={
             y: [0, -20, 0],
             opacity: [0.4, 0.8, 0.4]
-          }}
+          }
           transition = $2;
             repeat: Infinity,
             ease: easeInOut
@@ -2123,10 +2121,10 @@ ease: 'easeInOut',
 =======
         <motion.div
           className="absolute top-80 right-1/3 w-20 h-20 rounded-full border border-blue-400/40"
-          animate={{
+          animate={
             y: [0, 20, 0],
             opacity: [0.4, 0.8, 0.4]
-          }}
+          }
           transition = $2;
             repeat: Infinity,
             ease: easeInOut
@@ -2143,15 +2141,15 @@ className='absolute top-32 left-1/2 w-1 h-32 bg-gradient-to-b from-cyan-400 to-t
           transition = $2;
             repeat: Infinity,
             ease: "easeInOut"
-          }}
+          }
         />
 
         <motion.div
           className="absolute top-64 right-1/4 w-1 h-24 bg-gradient-to-b from-purple-400 to-transparent"
-          animate={{
+          animate={
             height: [24, 48, 24],
             opacity: [0.3, 0.8, 0.3]
-          }}
+          }
           transition = $2;
             repeat: Infinity,
             ease: "easeInOut"

@@ -93,8 +93,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             Cancel
           </Button>
           <Button 
-            type="submit"
-            className="bg-zion-purple hover:bg-zion-purple-dark text-white"
+            type='submit'
+            className='bg-zion-purple hover:bg-zion-purple-dark text-white'
             disabled={isSubmitting}
           >
             {isSubmitting ? (

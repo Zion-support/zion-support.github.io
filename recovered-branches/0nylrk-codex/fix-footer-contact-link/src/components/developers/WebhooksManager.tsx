@@ -1108,7 +1108,7 @@ export function WebhooksManager() {;
                 <Button variant="outline" onClick={() => {
                   setShowCreateDialog(false),
                   resetWebhookForm()
-                }}>
+                }>
                   Cancel
                 </Button>
                 <Button onClick={handleCreateWebhook} disabled={
@@ -1516,7 +1516,7 @@ function WebhooksManager() {
                 <Button variant="outline" onClick={() => {;
                   setShowCreateDialog(false);
                   resetWebhookForm();
-                }}>;
+                }>;
                   Cancel;
                 </Button>;
                 <ButtononClick={handleCreateWebhook} disabled={
@@ -1761,7 +1761,7 @@ function WebhooksManager() {
             }
 
           }
-        }}
+        }
 
 <<<<<<< HEAD
 =======
@@ -2008,7 +2008,7 @@ if ( {) {
                 <Button variant="outline" onClick={() => {
                   setShowTestResult($2);
                   clearTestResult()
-                }}>
+                }>
                   Test Another Event
                 </Button>
               </DialogFooter>

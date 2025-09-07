@@ -262,7 +262,6 @@ const router = null;
           <source src={episode.audio.mp3Url} type='audio/mpeg'    />;
         </audio>;
       )}
-<<<<<<< HEAD
       <div>;
         <h2 className='text-xl font-semibold'>Transcript</h2>;
         <pre className='whitespace-pre-wrap bg-gray-50 p-3 rounded'>;
@@ -273,7 +272,6 @@ const router = null;
 >>>>>>> origin/chore/fix-lint-and-merge
           {episode.transcript}
 
-<<<<<<< HEAD
   );
         </pre>;
       </div>;
@@ -334,8 +332,8 @@ export default function EpisodePage() {
         </audio>
       )}
       <div>
-        <h2 className="text-xl font-semibold">Transcript</h2>
-        <pre className="whitespace-pre-wrap bg-gray-50 p-3 rounded">{episode.transcript}</pre>
+        <h2 className='text-xl font-semibold'>Transcript</h2>
+        <pre className='whitespace-pre-wrap bg-gray-50 p-3 rounded'>{episode.transcript}</pre>
       </div>
     </div>
 <<<<<<< HEAD

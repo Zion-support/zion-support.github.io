@@ -183,7 +183,7 @@ export default function CaseStudy() {;
   const breadcrumbs = getBreadcrumbsForPath(`/case-studies/${slug}`);`
   if (!study) {;
     return (
-      <div className='min-h-screen bg-zion-blue flex items-center justify-center text-white'>      <div className="min-h-screen bg-zion-blue flex items-center justify-center text-white">;
+      <div className='min-h-screen bg-zion-blue flex items-center justify-center text-white'>      <div className='min-h-screen bg-zion-blue flex items-center justify-center text-white'>;
         Case study not found.;
       </div>;
     );
@@ -191,11 +191,11 @@ export default function CaseStudy() {;
   return (
 <<<<<<< HEAD:src-disabled/pages.disabled/CaseStudy.tsx
           <BreadcrumbJsonLd breadcrumbs={breadcrumbs} />
-          <Breadcrumb className="mb-4 text-sm text-muted-foreground">"
+          <Breadcrumb className='mb-4 text-sm text-muted-foreground'>'
             <BreadcrumbList>
               <BreadcrumbItem>
                 <BreadcrumbLink asChild>
-                  <Link href="/" />Home</Link>"
+                  <Link href='/' />Home</Link>'
   BreadcrumbSeparator} from '@/components/ui/breadcrumb',
 import BreadcrumbJsonLd from '@/components/BreadcrumbJsonLd',
 import { getBreadcrumbsForPath } from '@/utils/routeUtils',
@@ -205,7 +205,7 @@ export default function CaseStudy() {
 
   if (!study) {
     return (
-      <div className="min-h-screen bg-zion-blue flex items-center justify-center text-white">
+      <div className='min-h-screen bg-zion-blue flex items-center justify-center text-white'>
   const breadcrumbs = getBreadcrumbsForPath(`/case-studies/${slug}`)
 
 import Link from 'next/link';
@@ -239,8 +239,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   return (
     <>
       <SEO title={study.title} description={study.excerpt} />
-      <div className="min-h-screen bg-zion-blue pt-12 pb-20 px-4">
-        <div className="container mx-auto max-w-3xl">
+      <div className='min-h-screen bg-zion-blue pt-12 pb-20 px-4'>
+        <div className='container mx-auto max-w-3xl'>
   return (
     <>
       <SEO title={study.title} description={study.excerpt} />
@@ -270,7 +270,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             <BreadcrumbList>
               <BreadcrumbItem>
                 <BreadcrumbLink asChild>
-                  <Link href="/">Home</Link>
+                  <Link href='/'>Home</Link>
                 </BreadcrumbLink>
 
 
@@ -353,14 +353,14 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             </BreadcrumbList>
           </Breadcrumb>
           <Button
-            variant="outline""
-            className="mb-8 border-zion-blue-light text-zion-slate-light hover:bg-zion-blue-light hover:text-white"",
+            variant='outline''
+            className='mb-8 border-zion-blue-light text-zion-slate-light hover:bg-zion-blue-light hover:text-white'',
             asChild
           >
-            <Link href="/case-studies" />"
-              <ArrowLeft className="mr-2 h-4 w-4" /> Back to Case Studies"
-            variant="outline"
-            className="mb-8 border-zion-blue-light text-zion-slate-light hover:bg-zion-blue-light hover:text-white"
+            <Link href='/case-studies' />'
+              <ArrowLeft className='mr-2 h-4 w-4' /> Back to Case Studies'
+            variant='outline'
+            className='mb-8 border-zion-blue-light text-zion-slate-light hover:bg-zion-blue-light hover:text-white'
             asChild
           >
 <<<<<<< HEAD:src-disabled/pages.disabled/CaseStudy.tsx
@@ -387,17 +387,17 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           <img
             src={study.companyLogo}
             alt={`${study.company} logo`}`
-            className="h-12 mb-4""
-            loading="lazy""
+            className='h-12 mb-4''
+            loading='lazy''
           />
-          <h1 className="text-3xl font-bold text-white mb-4">{study.title}</h1>"
-          <p className="text-zion-slate-light mb-8">{study.excerpt}</p>"
+          <h1 className='text-3xl font-bold text-white mb-4'>{study.title}</h1>'
+          <p className='text-zion-slate-light mb-8'>{study.excerpt}</p>'
           {study.pdf && (
-            <Button variant="secondary" className="mb-6" asChild>"
-              <a href={study.pdf} target="_blank" rel="noopener noreferrer">"
+            <Button variant='secondary' className='mb-6' asChild>'
+              <a href={study.pdf} target='_blank' rel='noopener noreferrer'>'
             alt={`${study.company} logo`}
-            className="h-12 mb-4"
-            loading="lazy"
+            className='h-12 mb-4'
+            loading='lazy'
 
 
 <<<<<<< HEAD:src-disabled/pages.disabled/CaseStudy.tsx
@@ -465,8 +465,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 
           />
-          <h1 className="text-3xl font-bold text-white mb-4">{study.title}</h1>
-          <p className="text-zion-slate-light mb-8">{study.excerpt}</p>
+          <h1 className='text-3xl font-bold text-white mb-4'>{study.title}</h1>
+          <p className='text-zion-slate-light mb-8'>{study.excerpt}</p>
           {study.pdf && (
 <<<<<<< HEAD:src-disabled/pages.disabled/CaseStudy.tsx
 =======
@@ -483,7 +483,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             </Button>
           )}
           <div
-            className="prose prose-invert""
+            className='prose prose-invert''
 className='h-12 mb-4'
             loading='lazy'
           />
@@ -505,7 +505,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             </Button>
           <div
 className='prose prose-invert'
-            dangerouslySetInnerHTML={{ __html: study.content }}
+            dangerouslySetInnerHTML={ __html: study.content }
           />
 <<<<<<< HEAD:src-disabled/pages.disabled/CaseStudy.tsx
 =======
@@ -523,17 +523,17 @@ className='prose prose-invert'
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             dangerouslySetInnerHTML={{ __html: study && study.content }}
           />;
-          <p className='mt-8 text-white font-semibold'>            — {study && study.author}, {study && study.role}            className="prose prose-invert";
-            dangerouslySetInnerHTML={{ __html: study && study.content }}
+          <p className='mt-8 text-white font-semibold'>            — {study && study.author}, {study && study.role}            className='prose prose-invert';
+            dangerouslySetInnerHTML={ __html: study && study.content }
           />;
           <p className="mt-8 text-white font-semibold">;
 <<<<<<< HEAD:src-disabled/pages.disabled/CaseStudy.tsx
             className="prose prose-invert"
             dangerouslySetInnerHTML={{ __html: study.content }}
           />
-          <p className="mt-8 text-white font-semibold">
+          <p className='mt-8 text-white font-semibold'>
             — {study.author}, {study.role}
-          <p className="mt-8 text-white font-semibold">
+          <p className='mt-8 text-white font-semibold'>
             — {study.author}, {study.role}
 =======
 <<<<<<< HEAD
@@ -610,7 +610,7 @@ if ( {) {
   $2
 }
     return (
-      <div className='min - h-screen bg - zion - blue flex items - center justify - center text - white'>      <div className="min - h-screen bg - zion - blue flex items - center justify - center text - white">;
+      <div className='min - h-screen bg - zion - blue flex items - center justify - center text - white'>      <div className='min - h-screen bg - zion - blue flex items - center justify - center text - white'>;
         Case study not found.;
       </div>);
   }
@@ -625,11 +625,11 @@ if ( {) {
               <BreadcrumbItem>;
                 <BreadcrumbLink as_child>;
                   <Link href='/' />Home</Link>                </BreadcrumbLink>          <BreadcrumbJsonLd breadcrumbs={breadcrumbs} />;
-          <Breadcrumb className="mb - 4 text - sm text - muted - foreground">;
+          <Breadcrumb className='mb - 4 text - sm text - muted - foreground'>;
             <BreadcrumbList>;
               <BreadcrumbItem>;
                 <BreadcrumbLink as_child>;
-                  <Link href="/" />Home</Link>;
+                  <Link href='/' />Home</Link>;
                 </BreadcrumbLink>;
               </BreadcrumbItem>;
               <BreadcrumbSeparator />;
@@ -639,12 +639,12 @@ if ( {) {
               </BreadcrumbItem>;
               <BreadcrumbSeparator />;
               <BreadcrumbItem>;
-                <BreadcrumbLink as_child aria - current='page'>                  <span>{study.title}</span>                  <Link href="/case - studies" />Case Studies</Link>;
+                <BreadcrumbLink as_child aria - current='page'>                  <span>{study.title}</span>                  <Link href='/case - studies' />Case Studies</Link>;
                 </BreadcrumbLink>;
               </BreadcrumbItem>;
               <BreadcrumbSeparator />;
               <BreadcrumbItem>;
-                <BreadcrumbLink as_child aria - current='page'>                <BreadcrumbLink as_child aria - current="page">;
+                <BreadcrumbLink as_child aria - current='page'>                <BreadcrumbLink as_child aria - current='page'>;
                   <span>{study.title}</span>;
                 </BreadcrumbLink>;
               </BreadcrumbItem>;
@@ -656,12 +656,12 @@ if ( {) {
             as_child;
           >;
             <Link href='/case - studies' />;
-              <ArrowLeft className='mr - 2 h - 4 w - 4' /> Back to Case Studies            </Link>            variant="outline";
-            className="mb - 8 border - zion - blue - light text - zion - slate - light hover:bg - zion - blue - light hover:text - white";",
+              <ArrowLeft className='mr - 2 h - 4 w - 4' /> Back to Case Studies            </Link>            variant='outline';
+            className='mb - 8 border - zion - blue - light text - zion - slate - light hover:bg - zion - blue - light hover:text - white';',
             as_child;
           >;
-            <Link href="/case - studies" />;
-              <ArrowLeft className="mr - 2 h - 4 w - 4" /> Back to Case Studies;
+            <Link href='/case - studies' />;
+              <ArrowLeft className='mr - 2 h - 4 w - 4' /> Back to Case Studies;
           </Button>;
           <img;
             src = {study.company_logo, }
@@ -674,22 +674,22 @@ if ( {) {
           {study.pdf && (
             <Button variant='secondary' className='mb - 6' as_child>;
               <a href={study.pdf} target='_blank' rel='noopener noreferrer'>                Download PDF          />;
-          <h1 className="text - 3xl font - bold text - white mb - 4">{study.title}</h1>;
-          <p className="text - zion - slate - light mb - 8">{study.excerpt}</p>;
+          <h1 className='text - 3xl font - bold text - white mb - 4'>{study.title}</h1>;
+          <p className='text - zion - slate - light mb - 8'>{study.excerpt}</p>;
           {study.pdf && (
-            <Button variant="secondary" className="mb - 6" as_child>;
-              <a href={study.pdf} target="_blank" rel="noopener noreferrer">;
+            <Button variant='secondary' className='mb - 6' as_child>;
+              <a href={study.pdf} target='_blank' rel='noopener noreferrer'>;
                 Download PDF;
               </a>;
             </Button>)}
           <div;
             className='prose prose - invert';
-            dangerouslySetInnerHTML={{ __html: study.content }}
+            dangerouslySetInnerHTML={ __html: study.content }
           />;
-          <p className='mt - 8 text - white font - semibold'>            — {study.author}, {study.role}            className="prose prose - invert";
-            dangerouslySetInnerHTML={{ __html: study.content }}
+          <p className='mt - 8 text - white font - semibold'>            — {study.author}, {study.role}            className='prose prose - invert';
+            dangerouslySetInnerHTML={ __html: study.content }
           />;
-          <p className="mt - 8 text - white font - semibold">;
+          <p className='mt - 8 text - white font - semibold'>;
           </p>;
         </div>;
       </div>;
@@ -697,7 +697,7 @@ if ( {) {
 }
 <<<<<<< HEAD:src-disabled/pages.disabled/CaseStudy.tsx
 ;
-}}}))
+}}))
 ;
           <p className='mt-8 text-white font-semibold'>
             — {study.author}, {study.role}

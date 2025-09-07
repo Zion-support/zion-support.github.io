@@ -84,9 +84,9 @@ const ContactFormEnhanced: React.FC = () => {
   return (
     <div className="max-w-2xl mx-auto p-6">
       <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6 }}
+        initial={ opacity: 0, y: 20 }
+        animate={ opacity: 1, y: 0 }
+        transition={ duration: 0.6 }
         className="bg-white rounded-xl shadow-lg p-8"
       >
         <div className="text-center mb-8">
@@ -190,8 +190,8 @@ const ContactFormEnhanced: React.FC = () => {
           <motion.button
             type="submit"
             disabled={isSubmitting}
-            whileHover={{ scale: 1.02 }}
-            whileTap={{ scale: 0.98 }}
+            whileHover={ scale: 1.02 }
+            whileTap={ scale: 0.98 }
             className="w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white py-3 px-6 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
           >
             {isSubmitting ? (
@@ -209,8 +209,8 @@ const ContactFormEnhanced: React.FC = () => {
 
           {submitStatus === 'success' && (
             <motion.div
-              initial={{ opacity: 0, y: 10 }}
-              animate={{ opacity: 1, y: 0 }}
+              initial={ opacity: 0, y: 10 }
+              animate={ opacity: 1, y: 0 }
               className="flex items-center gap-2 text-green-600 bg-green-50 p-3 rounded-lg"
             >
               <CheckCircle className="w-5 h-5" />
@@ -222,8 +222,8 @@ const ContactFormEnhanced: React.FC = () => {
 
           {submitStatus === 'error' && (
             <motion.div
-              initial={{ opacity: 0, y: 10 }}
-              animate={{ opacity: 1, y: 0 }}
+              initial={ opacity: 0, y: 10 }
+              animate={ opacity: 1, y: 0 }
               className="flex items-center gap-2 text-red-600 bg-red-50 p-3 rounded-lg"
             >
               <AlertCircle className="w-5 h-5" />

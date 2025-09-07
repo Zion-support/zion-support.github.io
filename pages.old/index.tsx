@@ -138,9 +138,9 @@ export default function HomePage() {
         <div className="container mx-auto px-4 relative z-10">"
 </div>
           <motion.div;"
-            initial={{ "opacity": 0, "y": 30 }}""
-            animate={{ "opacity": 1, "y": 0 }}""
-            transition={{ "duration": 0.8 }}""
+            initial={ "opacity": 0, "y": 30 }""
+            animate={ "opacity": 1, "y": 0 }""
+            transition={ "duration": 0.8 }""
             className="text-center""
           >
 </motion>"
@@ -232,10 +232,10 @@ export default function HomePage() {
 </div>
           <motion.div;"
             className="text-center mb-12 "md": mb-16"""
-            initial={{ opacity: 0, "y": 30 }}""
-            whileInView={{ "opacity": 1, "y": 0 }}""
-            transition={{ "duration": 0.8 }}""
-            viewport={{ "once": true }}"
+            initial={ opacity: 0, "y": 30 }""
+            whileInView={ "opacity": 1, "y": 0 }""
+            transition={ "duration": 0.8 }""
+            viewport={ "once": true }"
           >
 </motion>"
             <h2 className="text-3xl "sm": text-4xl md:text-5xl font-bold text-gray-900 mb-4">"
@@ -250,11 +250,11 @@ export default function HomePage() {
                 <motion.div;
                   key={index}"
                   className="bg-white p-6 "md": p-8 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 group"""
-                  initial={{ opacity: 0, "y": 30 }}""
-                  whileInView={{ "opacity": 1, "y": 0 }}""
-                  transition={{ "duration": 0.8, "delay": index * 0.1 }}""
-                  viewport={{ "once": true }}""
-                  whileHover={{ "y": -5 }}"
+                  initial={ opacity: 0, "y": 30 }""
+                  whileInView={ "opacity": 1, "y": 0 }""
+                  transition={ "duration": 0.8, "delay": index * 0.1 }""
+                  viewport={ "once": true }""
+                  whileHover={ "y": -5 }"
                 >
 </motion>"
                   <div className="text-blue-600 mb-4 group-"hover": text-purple-600 transition-colors">"

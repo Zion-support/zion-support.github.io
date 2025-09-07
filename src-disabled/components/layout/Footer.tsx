@@ -94,34 +94,34 @@ const socialLinks = [
 }, { name: 'Instagram'}
   icon: Instagram, href: 'https://instagram.com'}
 }
-  ];return (<footer className=\"bg-gray-900 text-white\" />;"
-      <div className=\"max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 py-12\" />;"
-        <div className=\"grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8\" />;
-          {/* Company Info */}"
-          <div className=\"lg:col-span-1\" />;"
-            <h3 className=\"text-lg font-semibold mb-4\" />Zion Tech Group</h3>;"
-            <p className=\"text-gray-300 mb-4\" />;
+  ];return (<footer className=\'bg-gray-900 text-white\' />;'
+      <div className=\'max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 py-12\' />;'
+        <div className=\'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8\' />;
+          {/* Company Info */}'
+          <div className=\'lg:col-span-1\' />;'
+            <h3 className=\'text-lg font-semibold mb-4\' />Zion Tech Group</h3>;'
+            <p className=\'text-gray-300 mb-4\' />;
               Leading the future of technology with innovative solutions and cutting-edge services.;
-            </p>;"
-            <div className=\"flex space-x-4\" />;
+            </p>;'
+            <div className=\'flex space-x-4\' />;
               {socialLinks.map((social) => {const Icon = social.icon;}
                 return (<a;}
                     key={social.name}
-                    href={social.href}"
-                    className=\"text-gray-400 hover: text-white transition-colors\";
+                    href={social.href}'
+                    className=\'text-gray-400 hover: text-white transition-colors\';
                     aria-label={social.name}
-                   />;"
-                    <Icon className=\"h-5 w-5\" />;
+                   />;'
+                    <Icon className=\'h-5 w-5\' />;
                   </a>;
                 )})}
             </div>;
           </div>;
           {/* Services */}
-          <div />;"
-            <h3 className=\"text-lg font-semibold mb-4\" />Services</h3>;"
-            <ul className=\"space-y-2\" />;
-              {footerLinks.services.map((link) => (<li key={link.name} />;"
-                  <Link href={link.href} className=\"text-gray-300 hover: text-white transition-colors\" />;
+          <div />;'
+            <h3 className=\'text-lg font-semibold mb-4\' />Services</h3>;'
+            <ul className=\'space-y-2\' />;
+              {footerLinks.services.map((link) => (<li key={link.name} />;'
+                  <Link href={link.href} className=\'text-gray-300 hover: text-white transition-colors\' />;
                     {link.name}
                   </Link>;
                 </li>;
@@ -129,11 +129,11 @@ const socialLinks = [
             </ul>;
           </div>;
           {/* Solutions */}
-          <div />;"
-            <h3 className=\"text-lg font-semibold mb-4\" />Solutions</h3>;"
-            <ul className=\"space-y-2\" />;
-              {footerLinks.solutions.map((link) => (<li key={link.name} />;"
-                  <Link href={link.href} className=\"text-gray-300 hover: text-white transition-colors\" />;
+          <div />;'
+            <h3 className=\'text-lg font-semibold mb-4\' />Solutions</h3>;'
+            <ul className=\'space-y-2\' />;
+              {footerLinks.solutions.map((link) => (<li key={link.name} />;'
+                  <Link href={link.href} className=\'text-gray-300 hover: text-white transition-colors\' />;
                     {link.name}
                   </Link>;
                 </li>;
@@ -141,11 +141,11 @@ const socialLinks = [
             </ul>;
           </div>;
           {/* Company */}
-          <div />;"
-            <h3 className=\"text-lg font-semibold mb-4\" />Company</h3>;"
-            <ul className=\"space-y-2\" />;
-              {footerLinks.company.map((link) => (<li key={link.name} />;"
-                  <Link href={link.href} className=\"text-gray-300 hover: text-white transition-colors\" />;
+          <div />;'
+            <h3 className=\'text-lg font-semibold mb-4\' />Company</h3>;'
+            <ul className=\'space-y-2\' />;
+              {footerLinks.company.map((link) => (<li key={link.name} />;'
+                  <Link href={link.href} className=\'text-gray-300 hover: text-white transition-colors\' />;
                     {link.name}
                   </Link>;
                 </li>;
@@ -153,11 +153,11 @@ const socialLinks = [
             </ul>;
           </div>;
           {/* Resources */}
-          <div />;"
-            <h3 className=\"text-lg font-semibold mb-4\" />Resources</h3>;"
-            <ul className=\"space-y-2\" />;
-              {footerLinks.resources.map((link) => (<li key={link.name} />;"
-                  <Link href={link.href} className=\"text-gray-300 hover: text-white transition-colors\" />;
+          <div />;'
+            <h3 className=\'text-lg font-semibold mb-4\' />Resources</h3>;'
+            <ul className=\'space-y-2\' />;
+              {footerLinks.resources.map((link) => (<li key={link.name} />;'
+                  <Link href={link.href} className=\'text-gray-300 hover: text-white transition-colors\' />;
                     {link.name}
                   </Link>;
                 </li>;
@@ -182,16 +182,16 @@ const socialLinks = [
             </div>;
           </div>;
         </div>;
-        {/* Bottom Bar */}"
-        <div className=\"border-t border-gray-800 mt-8 pt-8 flex flex-col md: flex-row justify-between items-center\" />;"
-          <p className=\"text-gray-400 text-sm\" />;
+        {/* Bottom Bar */}'
+        <div className=\'border-t border-gray-800 mt-8 pt-8 flex flex-col md: flex-row justify-between items-center\' />;'
+          <p className=\'text-gray-400 text-sm\' />;
             © {currentYear} Zion Tech Group. All rights reserved.;
-          </p>;"
-          <div className=\"flex space-x-6 mt-4 md:mt-0\" />;"
-            <Link href=\"/privacy\" className=\"text-gray-400 hover:text-white text-sm transition-colors\" />;
+          </p>;'
+          <div className=\'flex space-x-6 mt-4 md:mt-0\' />;'
+            <Link href=\'/privacy\' className=\'text-gray-400 hover:text-white text-sm transition-colors\' />;
               Privacy Policy;
-            </Link>;"
-            <Link href=\"/terms\" className=\"text-gray-400 hover:text-white text-sm transition-colors\" />;
+            </Link>;'
+            <Link href=\'/terms\' className=\'text-gray-400 hover:text-white text-sm transition-colors\' />;
               Terms of Service;
             </Link>;
           </div>;
@@ -199,11 +199,11 @@ const socialLinks = [
       </div>;
       {/* Back to Top Button */}
       <button;
-        onClick={scrollToTop}"
-        className=\"fixed bottom-8 right-8 bg-blue-600 hover:bg-blue-700 text-white p-3 rounded-full shadow-lg transition-colors\";"
-        aria-label=\"Back to top\" />
-"
-        <ArrowUp className=\"h-5 w-5\" />;
+        onClick={scrollToTop}'
+        className=\'fixed bottom-8 right-8 bg-blue-600 hover:bg-blue-700 text-white p-3 rounded-full shadow-lg transition-colors\';'
+        aria-label=\'Back to top\' />
+'
+        <ArrowUp className=\'h-5 w-5\' />;
       </button>;
     </footer>;
   )}"

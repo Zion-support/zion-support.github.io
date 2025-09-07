@@ -75,7 +75,7 @@ const Button: React.FC<ButtonProps> = ({
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:src/components/Button.tsx
     >
-      {loading && <LoadingSpinner size="sm" />}
+      {loading && <LoadingSpinner size='sm' />}
       {children}
     </motion.button>
   )

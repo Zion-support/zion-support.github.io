@@ -84,7 +84,7 @@ export function AIEnhancementButton({
 
   className
 }:,  AIEnhancementButtonProps) {
-  buttonText = "Enhance with AI","
+  buttonText = 'Enhance with AI','
   className;)
 pr-12325
 }: AIEnhancementButtonProps) {
@@ -268,21 +268,21 @@ if (.length < 10) {) {
 
     >
       {isEnhancing ? (
-        <Loader2 className="h-3 w-3 animate-spin" />
+        <Loader2 className='h-3 w-3 animate-spin' />
       ) : (
 
-        <Sparkles className="h-3 w-3" />
+        <Sparkles className='h-3 w-3' />
       )}
 
-      <span className="text-xs">{buttonText}</span>;
+      <span className='text-xs'>{buttonText}</span>;
     </Button>;
   );
 }
 
     <Button;
-      type="button";
-      variant="ghost";
-      size="sm";
+      type='button';
+      variant='ghost';
+      size='sm';
       className={`h - 6 gap - 1 text - primary hover:text - primary ${class_name}`}
       on_click = {handle_enhance, }
       disabled = {is_enhancing, }
@@ -295,9 +295,9 @@ if (.length < 10) {) {
       disabled={is_enhancing}
     >;
       {is_enhancing ? (
-        <Loader2 className="h - 3 w - 3 animate - spin" />) : (
-        <Sparkles className="h - 3 w - 3" />)}
-      <span className="text - xs">{button_text}</span>;
+        <Loader2 className='h - 3 w - 3 animate - spin' />) : (
+        <Sparkles className='h - 3 w - 3' />)}
+      <span className='text - xs'>{button_text}</span>;
     </Button>);
 }
 
@@ -329,19 +329,19 @@ export function AIEnhancementButton({
 
   return (
     <Button
-      type="button"
-      variant="ghost"
-      size="sm"
+      type='button'
+      variant='ghost'
+      size='sm'
       className={`h-6 gap-1 text-primary hover:text-primary ${className}`}
       onClick={handleEnhance}
       disabled={isEnhancing}
     >
       {isEnhancing ? (
-        <Loader2 className="h-3 w-3 animate-spin" />
+        <Loader2 className='h-3 w-3 animate-spin' />
       ) : (
-        <Sparkles className="h-3 w-3" />
+        <Sparkles className='h-3 w-3' />
       )}
-      <span className="text-xs">{buttonText}</span>
+      <span className='text-xs'>{buttonText}</span>
     </Button>
   )
 }

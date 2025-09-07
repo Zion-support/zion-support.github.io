@@ -196,7 +196,6 @@ import { Phone, Mail, MapPin, Globe, Zap, Brain, Atom;
   Github, ArrowRight, Heart, Star, Award, CheckCircle;
   Home, Briefcase, BookOpen, MessageCircle, DollarSign;
   TrendingUp, Target as TargetIcon, Users as UsersIcon;
-<<<<<<< HEAD
   Briefcase as BriefcaseIcon, BookOpen as BookOpenIcon;{name: 'Home';
     href: '/';
     icon: Home;
@@ -222,7 +221,7 @@ import { Phone, Mail, MapPin, Globe, Zap, Brain, Atom;
     icon: BookOpen;
     description: 'Knowledge base and documentation';
   }
-  {{name: 'Blog';
+  {name: 'Blog';
     href: '/blog';
     icon: MessageCircle;
     description: 'Latest insights and updates';
@@ -1596,25 +1595,25 @@ const footerVariants = {
       duration: 0.8,
       staggerChildren: 0.1
     }
-    "title": '🌌 2032 Space & Metaverse Tech','
-    "services": [
+    'title': '🌌 2032 Space & Metaverse Tech','
+    'services': [
       {
         }
-        "name": 'Space Mining Automation','
-        "href": '/space-mining-automation-platform','
+        'name': 'Space Mining Automation','
+        'href': '/space-mining-automation-platform','
       },
       {
         }
-        "name": 'Metaverse Development','
-        "href": '/metaverse-development-platform','
+        'name': 'Metaverse Development','
+        'href': '/metaverse-development-platform','
       },
-        { "name": 'AI Predictive Health', "href": '/ai-predictive-health-analytics','
+        { 'name': 'AI Predictive Health', 'href': '/ai-predictive-health-analytics','
 },
 
       {
         }
-        "name": 'AI Autonomous Business','
-        "href": '/ai-autonomous-business-manager','
+        'name': 'AI Autonomous Business','
+        'href': '/ai-autonomous-business-manager','
       }
 =======
         name: 'Edge Computing Orchestration'}
@@ -3288,11 +3287,11 @@ export default function UltraFuturisticFooter2032() {
                             href={service && service.href}
                             className='text-slate-300 hover:text-cyan-300 transition-colors duration-200 text-sm hover:translate-x-1 inline-block transform transition-transform'>                Our Revolutionary Services;
               </h3>;
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">;
+              <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>;
                 {serviceCategories && serviceCategories.map((category, index) => (;
-                  <div key={index} className="space-y-4">;
-                    <h4 className="text-lg font-medium text-white">{category && category.title}</h4>;
-                    <ul className="space-y-2">;
+                  <div key={index} className='space-y-4'>;
+                    <h4 className='text-lg font-medium text-white'>{category && category.title}</h4>;
+                    <ul className='space-y-2'>;
                       {category && category.services.map((service, serviceIndex) => (;
                         <li key={serviceIndex}>;
                           <Link
@@ -3345,14 +3344,14 @@ className='text-slate-300 hover: text-cyan-300 transition-colors duration-200 te
               <h3 className="text-xl font-semibold text-white mb-8 bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">;
                 Our Revolutionary Services;
               </h3>;
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">;
-                {serviceCategories.map((category, index) => (<div key={index} className="space-y-4">;
-                    <h4 className="text-lg font-medium text-white">{category.title}</h4>;
-                    <ul className="space-y-2">;
+              <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>;
+                {serviceCategories.map((category, index) => (<div key={index} className='space-y-4'>;
+                    <h4 className='text-lg font-medium text-white'>{category.title}</h4>;
+                    <ul className='space-y-2'>;
                     <ul className='space-y-2'>;
                       {category.services.map((service, serviceIndex) => (<li key={serviceIndex}>;
                           <Link;
-                            href={service.href}className="text-slate-300 hover:text-cyan-300 transition-colors duration-200 text-sm hover:translate-x-1 inline-block transform transition-transform";
+                            href={service.href}className='text-slate-300 hover:text-cyan-300 transition-colors duration-200 text-sm hover:translate-x-1 inline-block transform transition-transform';
 className='text-slate-300 hover:text-cyan-300 transition-colors duration-200 text-sm hover:translate-x-1 inline-block transform transition-transform';
                           >;
 =======
@@ -3385,7 +3384,6 @@ className='text-slate-300 hover:text-cyan-300 transition-colors duration-200 tex
                             {service.name}
                           </Link>
                         </li>
-<<<<<<< HEAD
                       ))}
                     </ul>
                   </div>
@@ -3858,23 +3856,23 @@ className='text-slate-300 "hover": text-purple-300 transition-colors duration-20
                 <ul className='space-y-2'>                  {companyInfo.map((item, index) => (<li key={index}>;
                       <Link;
                         href={item.href}
-                        className='text-slate-300 hover:text-purple-300 transition-colors duration-200 text-sm'                      >              <div className="mb-8">;
-                <h4 className="text-lg font-medium text-white mb-4">Company</h4>;
-                <ul className="space-y-2">;
+                        className='text-slate-300 hover:text-purple-300 transition-colors duration-200 text-sm'                      >              <div className='mb-8'>;
+                <h4 className='text-lg font-medium text-white mb-4'>Company</h4>;
+                <ul className='space-y-2'>;
                         className='text-slate-300 hover:text-purple-300 transition-colors duration-200 text-sm'                      >;
                 <ul className='space-y-2'>;
                   {companyInfo.map((item, index) => (<li key={index}>;
                       <Link;
-                        href={item.href}className="text-slate-300 hover:text-purple-300 transition-colors duration-200 text-sm";
+                        href={item.href}className='text-slate-300 hover:text-purple-300 transition-colors duration-200 text-sm';
                       >;
                 <ul className='space-y-2'>                  {companyInfo.map((item, index) => (
                     <li key={index}>
 <<<<<<< HEAD
                       <Link;
-                        href={item.href}'"
-                        className='text-slate-300 hover:text-purple-300 transition-colors duration-200 text-sm'                      >              <div className="mb-8">"
-                <h4 className="text-lg font-medium text-white mb-4">Company</h4>"
-                <ul className="space-y-2">'
+                        href={item.href}''
+                        className='text-slate-300 hover:text-purple-300 transition-colors duration-200 text-sm'                      >              <div className='mb-8'>'
+                <h4 className='text-lg font-medium text-white mb-4'>Company</h4>'
+                <ul className='space-y-2'>'
                         className='text-slate-300 hover:text-purple-300 transition-colors duration-200 text-sm'                      >
 
                 <ul className='space-y-2'>
@@ -3968,17 +3966,17 @@ className='text-slate-300 hover: text-purple-300 transition-colors duration-200 
 
               {/* Social Links */}
               <div>
-                <h4 className="text-lg font-medium text-white mb-4">Follow Us</h4>
-                <div className="flex space-x-4">
+                <h4 className='text-lg font-medium text-white mb-4'>Follow Us</h4>
+                <div className='flex space-x-4'>
                   {socialLinks.map((social, index) => (
                     <a
                       key={index}
                       href={social.href}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="w-10 h-10 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30 rounded-lg flex items-center justify-center text-cyan-400 hover:text-cyan-300 hover:border-cyan-400/50 transition-all duration-300 hover:scale-110 hover:shadow-lg hover:shadow-cyan-500/20"
+                      target='_blank'
+                      rel='noopener noreferrer'
+                      className='w-10 h-10 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30 rounded-lg flex items-center justify-center text-cyan-400 hover:text-cyan-300 hover:border-cyan-400/50 transition-all duration-300 hover:scale-110 hover:shadow-lg hover:shadow-cyan-500/20'
                     >
-                      <social.icon className="w-5 h-5" />
+                      <social.icon className='w-5 h-5' />
                     </a>
 <<<<<<< HEAD
                   ))}
@@ -3991,8 +3989,8 @@ className='text-slate-300 hover: text-purple-300 transition-colors duration-200 
                 </h4>;
                 <div className='flex space-x-4'>                  {socialLinks && socialLinks.map((social, index) => (<a;
                       key={index}
-                      href={social && social.href}                <h4 className="text-lg font-medium text-white mb-4">Follow Us</h4>;
-                <div className="flex space-x-4">;
+                      href={social && social.href}                <h4 className='text-lg font-medium text-white mb-4'>Follow Us</h4>;
+                <div className='flex space-x-4'>;
                   {socialLinks && socialLinks.map((social, index) => (<a;
                       key={index}
                       href={social && social.href}
@@ -4068,8 +4066,8 @@ className='text-slate-300 hover: text-purple-300 transition-colors duration-200 
                 <div className='flex space-x-4'>                  {socialLinks && socialLinks.map((social, index) => (;
                     <a
                       key={index}
-                      href={social && social.href}                <h4 className="text-lg font-medium text-white mb-4">Follow Us</h4>;
-                <div className="flex space-x-4">;
+                      href={social && social.href}                <h4 className='text-lg font-medium text-white mb-4'>Follow Us</h4>;
+                <div className='flex space-x-4'>;
                   {socialLinks && socialLinks.map((social, index) => (;
                     <a
                       key={index}
@@ -4077,9 +4075,9 @@ className='text-slate-300 hover: text-purple-300 transition-colors duration-200 
                       target='_blank'
                       rel='noopener noreferrer'
                       className='w-10 h-10 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30 rounded-lg flex items-center justify-center text-cyan-400 hover:text-cyan-300 hover:border-cyan-400/50 transition-all duration-300 hover:scale-110 hover:shadow-lg hover:shadow-cyan-500/20'>;
-                      <social && social.icon className='w-5 h-5' />                    </a>                      target="_blank";
-                      rel="noopener noreferrer";
-                      className="w-10 h-10 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30 rounded-lg flex items-center justify-center text-cyan-400 hover:text-cyan-300 hover:border-cyan-400/50 transition-all duration-300 hover:scale-110 hover:shadow-lg hover:shadow-cyan-500/20";
+                      <social && social.icon className='w-5 h-5' />                    </a>                      target='_blank';
+                      rel='noopener noreferrer';
+                      className='w-10 h-10 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30 rounded-lg flex items-center justify-center text-cyan-400 hover:text-cyan-300 hover:border-cyan-400/50 transition-all duration-300 hover:scale-110 hover:shadow-lg hover:shadow-cyan-500/20';
                     >;
                       <social && social.icon className="w-5 h-5" />;
 <<<<<<< HEAD
@@ -4113,9 +4111,9 @@ className='text-slate-300 hover: text-purple-300 transition-colors duration-200 
                   type='email';
                   placeholder='Enter your email address';
                   className='flex-1 px-4 py-3 bg-black/50 border border-cyan-500/30 rounded-lg text-white placeholder-slate-400 focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20 transition-all duration-300';
-          <motion.div variants={itemVariants} className="border-t border-cyan-500/30 pt-12">;
-            <div className="text-center">;
-              <h3 className="text-2xl font-bold text-white mb-4">;
+          <motion.div variants={itemVariants} className='border-t border-cyan-500/30 pt-12'>;
+            <div className='text-center'>;
+              <h3 className='text-2xl font-bold text-white mb-4'>;
                     </a>;
               <div>;
 <h4 className='text-lg font-medium text-white mb-4'>;
@@ -4412,8 +4410,8 @@ type='email'
                 advances, space technology innovations, and autonomous systems
                 development. Join our community of future technology pioneers.
               </p>
-              </h3>"
-              <p className="text-slate-300 mb-8 max-w-2xl mx-auto">
+              </h3>'
+              <p className='text-slate-300 mb-8 max-w-2xl mx-auto'>
                 Get the latest insights on AI breakthroughs, quantum computing advances, space technology innovations, and autonomous systems development. Join our community of future technology pioneers.
 
               <div className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
@@ -4433,7 +4431,7 @@ type='email'
                 />;
 
               </h3>;
-              <p className="text-slate-300 mb-8 max-w-2xl mx-auto">;"
+              <p className='text-slate-300 mb-8 max-w-2xl mx-auto'>;'
                 Get the latest insights on AI breakthroughs, quantum computing advances, space technology innovations, and autonomous systems development. Join our community of future technology pioneers.;
               </p>;
 
@@ -4666,7 +4664,7 @@ type=\"email\"
 
       {/* Floating Action Button */}
       {/* Floating Action Button */}
-      <div className="fixed bottom-8 right-8 z-50">
+      <div className='fixed bottom-8 right-8 z-50'>
         <motion.button
           whileHover={{ scale: 1.1 }}
           whileTap={{ scale: 0.9 }}

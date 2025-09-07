@@ -370,7 +370,7 @@ export default function CallRoom({ projectId, userId, displayName, roomName, ser
       });
     } else {;
       }
-      localTracks = await createLocalTracks({ "audio": true, "video": false
+      localTracks = await createLocalTracks({ 'audio': true, 'video': false
 });
 >>>>>>> merged-prs-20250907-203621
     }
@@ -629,7 +629,6 @@ const handleLeave = (;
 const durationSec = connectedAt;
       ? Math && Math.round((Date && Date.now() - connectedAt) / 1000);
       : 0;
-<<<<<<< HEAD
   onLeave?: (durationSec: number) => void;}export default function CallRoom(): any ({projectId,userId,displayName,roomName,serverUrl,token,startMode,onLeave,}: Props) {projectId;
   userId;
   displayName;
@@ -660,7 +659,7 @@ export type StartMode = 'video' | 'audio';}export default function CallRoom() {c
 const list: Array<RemoteParticipant | LocalParticipant> = [;
       r.localParticipant,...Array.from(r.participants.values()),];
     setParticipants(list)}useEffect(() => {connect()return () => {if (room) {room.disconnect()}
-    }}, [connect])const handleLeave = () => {if (room) {room.disconnect()}
+    }, [connect])const handleLeave = () => {if (room) {room.disconnect()}
   }, [connect])const handleLeave = () => {if (room) {room && room.disconnect()}
     const durationSec = connectedAt;
       ? Math && Math.round((Date && Date.now() - connectedAt) / 1000): 0;onLeave?.(durationSec)}room && room.disconnect()}onLeave?.(durationSec)}const gridCols = useMemo(() => {const count = participants.length |1;

@@ -756,7 +756,7 @@ const [filters, set_filters] = useState<{ sector?: string, status?: string, regi
           value={filters.sector |''}'
           onChange={e =>;
             }
-            setFilters(f => ({ ...f, "sector": e.target.value |undefined })
+            setFilters(f => ({ ...f, 'sector': e.target.value |undefined })
 }
         >;
           <option value=''>All Sectors</option>;'
@@ -843,7 +843,6 @@ pr-12243
             </option>;
           ))}
         </select>;
-<<<<<<< HEAD
         <select'
           className='border rounded p-2'
           }
@@ -892,12 +891,11 @@ function GrantsPage() {const [items, set_items] = useState < GrantApplication[]>
 <<<<<<< HEAD
           onChange={e =>;
             }
-            setFilters(f => ({ ...f, "status": e && e.target.value || undefined })
+            setFilters(f => ({ ...f, 'status': e && e.target.value || undefined })
 }
         >;
           <option value=''>All Stages</option>;'
           {statuses.map(s => (<option key={s} value={s}>;
-=======
           onChange={e =>;}
             setFilters(f => ({ ...f, status: e && e.target.value || undefined })
 }
@@ -916,7 +914,6 @@ function GrantsPage() {const [items, set_items] = useState < GrantApplication[]>
           ))}
 <<<<<<< HEAD
         </select>;
-<<<<<<< HEAD
         <input'
           className='border rounded p-2''
           placeholder='Region'
@@ -924,7 +921,7 @@ function GrantsPage() {const [items, set_items] = useState < GrantApplication[]>
         />;
           onChange={e =>;
             }
-            setFilters(f => ({ ...f, "region": e && e.target.value || undefined }))value={filters.region |','
+            setFilters(f => ({ ...f, 'region': e && e.target.value || undefined }))value={filters.region |','
 }
           onChange={e =>;
             setFilters(f => ({ ...f, region: e.target.value |undefined }))}
@@ -1418,7 +1415,6 @@ pr-12243
                   <span className='px-2 py-1 text-xs rounded bg-purple-100 text-purple-700'>;
                     Incubated by Zion;
                   </span>;
-<<<<<<< HEAD
                   <span className='px-2 py-1 text-xs rounded bg-purple-100 text-purple-700'>
                     Incubated by Zion
                   </span>

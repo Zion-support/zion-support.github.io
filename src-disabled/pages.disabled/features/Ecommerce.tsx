@@ -29,7 +29,7 @@
       {/* Use a normal script tag so JSON-LD is correctly parsed */}
       <script
         type="application/ld+json""
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+        dangerouslySetInnerHTML={ __html: JSON.stringify(schema) }
       ></script>
       <Header />
       <main className="bg-background text-white py-12">"
@@ -77,7 +77,7 @@ export default function Ecommerce() {
       <script
         type="application/ld+json"
 
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+        dangerouslySetInnerHTML={ __html: JSON.stringify(schema) }
       ></script>
       <Header />
       <main className="bg-background text-white py-12">
@@ -134,7 +134,7 @@ export default function Ecommerce() {
             <Button size="lg" className="bg-zion-purple text-white" asChild>
               <Link href="/marketplace">Start Shopping</Link>
         type='application/ld+json'
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+        dangerouslySetInnerHTML={ __html: JSON.stringify(schema) }
       ></script>
       <Header />
       <main className='bg-background text-white py-12'>
@@ -223,7 +223,7 @@ export default function Ecommerce() {;
       {/* Use a normal script tag so JSON-LD is correctly parsed */}
       <script;
         type="application/ld+json";
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+        dangerouslySetInnerHTML={ __html: JSON.stringify(schema) }
       ></script>;
       <Header />;
       <main className="bg-background text-white py-12">;
@@ -274,7 +274,7 @@ export default function Ecommerce() {;
         </div>;
       </main>;
 ;
-}}})
+}})
     </>;
   );
 }

@@ -303,9 +303,8 @@ function handler() {}
 origin/cursor/automate-test-improve-and-merge-code-2533
 
 }
-<<<<<<< HEAD
           : "laggy";append_log ({module: "optimizer",type: "optimize",status: status as any,latency_ms,payload: {user_intent,original_length: String (prompt || "").length,optimized_length: result.optimized.length,},})return res.status (200).json (result)} catch (e: any) {append_log ({module: "optimizer",type: "optimize",status: "error",payload: { error: e?.message || "unknown" },})return res.status (500).json ({ error: "Optimization failure" })}
-    append_log ({module: "optimizer",type: "optimize",status: "error",payload: { error: e?.message || "unknown" },})}}
+    append_log ({module: "optimizer",type: "optimize",status: "error",payload: { error: e?.message || "unknown" },})}
   }
 }
 "

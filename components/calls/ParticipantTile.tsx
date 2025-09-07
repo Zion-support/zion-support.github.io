@@ -238,7 +238,7 @@ type Props = {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
   isLocal?: boolean;
 }
-export default function ParticipantTile() {}}
+export default function ParticipantTile() {}
 export default function ParticipantTile() {const videoRef = useRef<HTMLVideoElement | null>(null)const audioRef = useRef<HTMLAudioElement | null>(null)useEffect(() => {const handleTrackSubscribed = (pub: TrackPublication, track: Track) => {if (track.kind === 'video' && videoRef.current) {track.attach(videoRef.current)}export default function ParticipantTile(): any ({participant,isLocal,displayName,}: Props) {  const videoRef = useRef<HTMLVideoElement | null>(null)type Props = {participant: RemoteParticipant | LocalParticipant,isLocal?: boolean;
   displayName?: string;
 };
@@ -336,7 +336,7 @@ track.attach(videoRef.current);
       }
     };
 
-const handleTrackUnsubscribed = ("pub": TrackPublication, "track": Track) => {
+const handleTrackUnsubscribed = ('pub': TrackPublication, 'track': Track) => {
       }
       if (track.kind === 'video' && videoRef.current) {'
 }
@@ -620,7 +620,7 @@ if ( {) {$2;
         track.attach (audio_ref.current)}
     }
 
-const handleTrackUnsubscribed = ("pub": TrackPublication, "track": Track) =>: any {// Check condition;
+const handleTrackUnsubscribed = ('pub': TrackPublication, 'track': Track) =>: any {// Check condition;
 }
 if ( {) {$2;
 }
@@ -666,13 +666,12 @@ if ( {) {$2;}
 }
         track.detach (audio_ref.current)}        track.attach (video_ref.current)}
       // Check condition;
-<<<<<<< HEAD
 if ( {) {$2;
 }
         track.attach (audio_ref.current)}
     }
 
-const handleTrackUnsubscribed = ("pub": TrackPublication, "track": Track) =>: any {// Check condition;
+const handleTrackUnsubscribed = ('pub': TrackPublication, 'track': Track) =>: any {// Check condition;
 }
 if ( {) {$2;
 }

@@ -1434,11 +1434,11 @@ ease: 'linear'}
 >>>>>>> merged-prs-20250907-203621
         />
         <motion.div
-          className="absolute bottom-20 right-20 w-28 h-28 border border-green-400/20 transform rotate-12"
-          animate={{
+          className='absolute bottom-20 right-20 w-28 h-28 border border-green-400/20 transform rotate-12'
+          animate={
             rotate: [0, -180, -360],
             opacity: [0.4, 0.7, 0.4]
-          }}
+          }
           transition = $2;
             repeat: Infinity,
 <<<<<<< HEAD
@@ -1880,7 +1880,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       <div className='fixed inset - 0 pointer - events - none z - 20'>;'
         <motion.div;
           className='absolute inset - 0 bg - gradient - to - r from - transparent via - cyan - 500 / 5 to - transparent';'
-            "duration": 10,"repeat": Infinity, />;
+            'duration': 10,'repeat': Infinity, />;
       </div>;
       {/* Energy Field Effects */}
 
@@ -1891,10 +1891,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
           }}
 
-          }}
+          }
 
-            "duration": 20,
-            "repeat": Infinity
+            'duration': 20,
+            'repeat': Infinity
 
 
           }} />
@@ -2348,7 +2348,7 @@ export default UltraFuturisticBackground2026;
             duration: 20,
             repeat: Infinity,
 
-          }}
+          }
 
             duration: 20,
             repeat: Infinity,
@@ -2363,7 +2363,7 @@ export default UltraFuturisticBackground2026;
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
-          }}
+          }
 
 >>>>>>> merged-prs-20250907-203621
         />

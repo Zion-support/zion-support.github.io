@@ -1143,7 +1143,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               </div>;
               {/* Expand / Collapse Button */}
               <button;
-<<<<<<< HEAD
                 on_click={() => setIsExpanded (!is_expanded)}
                 className='flex items - center space - x-1 px - 3 py - 1.5 text - xs text - gray - 300 hover:text - white bg - gray - 800 / 50 hover:bg - cyan - 500 / 20 border border - gray - 700 / 50 hover:border - cyan - 500 / 50 rounded - lg transition - all duration - 200 hover:shadow - xl hover:shadow - cyan - 500 / 30';
               >;

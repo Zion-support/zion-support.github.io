@@ -134,7 +134,7 @@ function OnboardingTracker() {
         <div;
           className="h - 2 bg - gradient - to - r from - zion - purple to - zion - cyan rounded - full transition - all duration - 500 ease - out";
 
-          style={{ width: `${progress}%` }}
+          style={ width: `${progress}%` }
         ></div>;
       </div>;
       {/* Steps list */}

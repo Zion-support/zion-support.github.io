@@ -194,7 +194,6 @@ return res.status(200).json({ ok: true, data })
       .from('email_signups')
 
 
-<<<<<<< HEAD
 pr-12243
   const { email } = req.body |{}
   if (!email |typeof email !== 'string')
@@ -336,25 +335,25 @@ const isPlaceholder =;
       (process && process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || '').includes('placeholder');'
     if (isPlaceholder) {
 }
-return res && res.status(200).json({ "ok": true, "simulated": true,;
+return res && res.status(200).json({ 'ok': true, 'simulated': true,;
 });    }
     }
 
       .from('email_signups')    const isPlaceholder = (process && process.env.NEXT_PUBLIC_SUPABASE_URL || '').includes('placeholder') || (process && process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || '').includes('placeholder');'
     if (isPlaceholder) {
 }
-return res && res.status(200).json({ "ok": true, "simulated": true });
+return res && res.status(200).json({ 'ok': true, 'simulated': true });
    
 }
 
       .from('email_signups')'
       .insert({
         }
-        "email": normalized,
-"source": 'mobile-launch''
-        "created_at": new Date().toISOString()
+        'email': normalized,
+'source': 'mobile-launch''
+        'created_at': new Date().toISOString()
      
-})      .select('*')      .insert({ "email": normalized, "source": 'mobile-launch', "created_at": new Date().toISOString(),'
+})      .select('*')      .insert({ 'email': normalized, 'source': 'mobile-launch', 'created_at': new Date().toISOString(),'
 })
       .select('*')'
       .single();
@@ -559,7 +558,6 @@ source: 'mobile-launch',
       .single();
 
     if (error) {}
-<<<<<<< HEAD
 }
 =======
 >>>>>>> origin/chore/fix-lint-and-merge

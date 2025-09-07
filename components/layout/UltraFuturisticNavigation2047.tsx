@@ -144,7 +144,7 @@ import {
 
 interface NavigationItem {
   }
-  "name": string;
+  'name': string;
 
 import { Menu,ChevronDown,X,Phone,Mail,ArrowRight,Brain,Rocket,Target,Atom,Shield,DollarSign,BarChart3,Globe,Grid,Heart,Database,Cpu,Palette,Cloud,Network,TrendingUp,ShoppingCart,Settings,Building,Monitor,Zap,Eye,Infinity,Sparkles,Users,Lock,Code,Server,Layers,Globe2,Star,Award,Clock,CheckCircle,Zap as ZapIcon,Phone as PhoneIcon,Search,User,Bell,Cog,LogOut,Home,Info,FileText,Users as UsersIcon,Bot,MessageCircle,Linkedin,Twitter,Github,import {Menu,ChevronDown,X,Phone,Mail,ArrowRight,Brain,Rocket,Target,Atom,Shield,DollarSign,BarChart3,Globe,Grid,Heart,Database,Cpu,Palette,Cloud,Network,TrendingUp,ShoppingCart,Settings,Building,Monitor,Zap,Eye,Infinity,Sparkles,Users,Lock,Code,Server,Layers,Globe2,Star,Award,Clock,CheckCircle,Zap as ZapIcon,Phone as PhoneIcon,Search,User,Bell,Cog,LogOut,Home,Info,FileText,Users as UsersIcon,Bot,MessageCircle,Linkedin,Twitter,Github,Youtube,MapPin,} from 'lucide-react';
 import React, { useState, useEffect } from 'react',import Link from 'next/link';
@@ -208,7 +208,7 @@ import { Menu, ChevronDown, X, Phone, Mail, ArrowRight;Menu;
   Youtube;
   MapPin;
  } from 'lucide-react';
-interface NavigationItem  {name: string;class ErrorBoundary extends React.Component {constructor(props) {super(props)this.state = { hasError: false }}static getDerivedStateFromError(error) {return { hasError: true }}componentDidCatch(error, errorInfo) {console.error('Error caught by boundary:', error, errorInfo)}render() {if (this.state.hasError) {return <div>Something went wrong.</div>;
+interface NavigationItem  {name: string;class ErrorBoundary extends React.Component {constructor(props) {super(props)this.state = { hasError: false }static getDerivedStateFromError(error) {return { hasError: true }componentDidCatch(error, errorInfo) {console.error('Error caught by boundary:', error, errorInfo)}render() {if (this.state.hasError) {return <div>Something went wrong.</div>;
     }return this.props.children;
   }
 }
@@ -2259,15 +2259,15 @@ className={`p-2 rounded-lg bg-gradient-to-r ${child.color |'from-gray-500 to-sla
 >>>>>>> merged-prs-20250907-203621
                             key={child.name}
                             href={child.href}
-                            className="flex items-start space-x-3 p-3 rounded-lg hover:bg-slate-700/50 transition-colors duration-200"
+                            className='flex items-start space-x-3 p-3 rounded-lg hover:bg-slate-700/50 transition-colors duration-200'
                             onClick={closeMenu}
                           >
                             <div className={`p-2 rounded-lg bg-gradient-to-r ${child.color || 'from-gray-500 to-slate-500'}`}>
                               {child.icon}
                             </div>
-                            <div className="flex-1">
-                              <div className="flex items-center space-x-2">
-                                <span className="font-medium text-white">{child.name}</span>
+                            <div className='flex-1'>
+                              <div className='flex items-center space-x-2'>
+                                <span className='font-medium text-white'>{child.name}</span>
                                 {child.featured && (
                                   <span className="px-2 py-1 text-xs font-medium bg-gradient-to-r from-purple-500 to-pink-500 text-white rounded-full">
 <<<<<<< HEAD
@@ -2473,7 +2473,7 @@ className={`p-2 rounded-lg bg-gradient-to-r ${child.color |'from-gray-500 to-sla
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
                               </div>
-                              <p className="text-sm text-gray-400 mt-1">{child.description}</p>
+                              <p className='text-sm text-gray-400 mt-1'>{child.description}</p>
                             </div>
                             </div>
 
@@ -2595,10 +2595,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 <Phone className='w-4 h-4' />                <span>{contactInfo.mobile}</span>
               </a>
             </div>
-            <Link          <div className="hidden lg:flex lg:items-center lg:space-x-4">
-            <div className="flex items-center space-x-4 text-sm text-gray-400">
-              <a href={`tel:${contactInfo.mobile}`} className="flex items-center space-x-1 hover:text-white transition-colors">
-                <Phone className="w-4 h-4" />
+            <Link          <div className='hidden lg:flex lg:items-center lg:space-x-4'>
+            <div className='flex items-center space-x-4 text-sm text-gray-400'>
+              <a href={`tel:${contactInfo.mobile}`} className='flex items-center space-x-1 hover:text-white transition-colors'>
+                <Phone className='w-4 h-4' />
 
 >>>>>>> merged-prs-20250907-203621
                 <span>{contactInfo.mobile}</span>
@@ -3014,9 +3014,9 @@ onClick={() =    /> handleDropdownToggle(item && item.name}
                       <motion.div
 }
 onClick={() => handleDropdownToggle(item && item.name)}
-                    className="w-full text-left flex items-center justify-between px-3 py-2 text-base font-medium text-gray-300 "hover":text-white "hover":bg-slate-700/50 rounded-md transition-colors duration-200">"
+                    className='w-full text-left flex items-center justify-between px-3 py-2 text-base font-medium text-gray-300 'hover':text-white 'hover':bg-slate-700/50 rounded-md transition-colors duration-200'>'
 
-                    <div className="flex items-center space-x-2">;"
+                    <div className='flex items-center space-x-2'>;'
                       {item && item.icon}
                       <span>{item && item.name}</span>;
                     </div>;'`

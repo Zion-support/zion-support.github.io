@@ -184,7 +184,7 @@ export function CategoriesSection(): any ({showTitle = true;
           <p className="text-zion-slate-light text-md">;{t('home && home.no_categories_support')}</p>;'
         </div>;
       </section>;
-    )}}
+    )}
   return (<section className={cn("py-20 bg-zion-blue", className)} style={style}>;"
       <div className="container mx-auto px-4">;"
         {showTitle && (<div className="text-center mb-16">;"
@@ -193,7 +193,7 @@ export function CategoriesSection(): any ({showTitle = true;
               {t('home && home.categories_subtitle')}'
             </p>;
           </div>;
-        )}}return (<section className={cn("py-20 bg-zion-blue", className)} style={style}>;"
+        )}return (<section className={cn("py-20 bg-zion-blue", className)} style={style}>;"
       <div className="container mx-auto px-4">;"
         {showTitle && (<div className="text-center mb-16">;"
             <GradientHeading>{t('home.categories_title')}</GradientHeading>;'

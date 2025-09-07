@@ -95,9 +95,9 @@ const Services2024Page: React.FC = () => {
         <section className="pt-32 pb-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto text-center">
             <motion.div
-              initial={{ opacity: 0, y: 20}}
-              animate={{ opacity: 1, y: 0}}
-              transition={{ duration: 0.8 }}
+              initial={ opacity: 0, y: 20}
+              animate={ opacity: 1, y: 0}
+              transition={ duration: 0.8 }
             >
               <div className="inline-flex items-center space-x-2 bg-gradient-to-r from-cyan-500/20 to-purple-600/20 border border-cyan-500/30 rounded-full px-6 py-2 mb-8">
                 <Sparkles className="w-5 h-5 text-cyan-400" />
@@ -212,9 +212,9 @@ const Services2024Page: React.FC = () => {
                 {filteredServices.map((service, index) => (
                   <motion.div
                     key={service.id}
-                    initial={{ opacity: 0, y: 20}}
-                    animate={{ opacity: 1, y: 0}}
-                    transition={{ duration: 0.6, delay: index * 0.1 }} className="group">
+                    initial={ opacity: 0, y: 20}
+                    animate={ opacity: 1, y: 0}
+                    transition={ duration: 0.6, delay: index * 0.1 } className="group">
                     <div className="bg-black/50 border border-cyan-500/30 rounded-2xl p-6 h-full hover:border-cyan-400/50 transition-all duration-300 hover:transform hover:scale-105 backdrop-blur-sm">
                       {/* Service Header */}
                       <div className="flex items-start justify-between mb-4">
@@ -299,7 +299,7 @@ const Services2024Page: React.FC = () => {
         <section className="px-4 sm:px-6 lg:px-8 mb-20">
           <div className="max-w-4xl mx-auto text-center">
             <motion.div
-              initial={{ opacity: 0, y: 20}}
-              whileInView={{ opacity: 1, y: 0}}
+              initial={ opacity: 0, y: 20}
+              whileInView={ opacity: 1, y: 0}
               transition = $2;
 export default Services2024Page,

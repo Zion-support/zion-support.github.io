@@ -1,4 +1,4 @@
-const Footer = dynamic(() => import("./Footer"),{'; "loading": () => <p>Loading...</p,>}) "export": 'default Footer' ,'
+const Footer = dynamic(() => import('./Footer'),{'; 'loading': () => <p>Loading...</p,>}) 'export': 'default Footer' ,'
 
 <<<<<<< HEAD:backup/components.disabled/Footer.dynamic.jsx
 </p>'

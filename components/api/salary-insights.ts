@@ -178,7 +178,6 @@ function median(values: number[]): number {
   const arr = [...values].sort((a, b) => a - b);
   const mid = Math.floor(arr.length / 2);
   if (arr.length === 0) return 0;
-<<<<<<< HEAD
   return arr.length % 2 === 0 ? (arr[mid - 1] + arr[mid]) / 2 : arr[mid]
 }
 
@@ -335,10 +334,10 @@ async function maybeGetGptRecommendation() {const apiKey = process.env.OPENAI_AP
   if (!apiKey) return undefined;
   try {const client = new OpenAI({ apiKey })const skillsStr = input.skills.join(', ';'
   const prompt = `Based on current market trends, provide a competitive hourly and monthly rate for a ${input.roleTitle} with ${skillsStr} in ${input.region}. Include a global comparison. Return a concise paragraph with a recommended hourly and monthly rate (USD), and a brief rationale.`;`
-const completion = await client.chat.completions.create({"model": 'gpt-4o-mini';'
+const completion = await client.chat.completions.create({'model': 'gpt-4o-mini';'
       }
-      "messages": [;
-{"role": 'system',"content":;'
+      'messages': [;
+{'role': 'system','content':;'
             'You are a compensation analyst. Be specific and concise. Use USD.';'
         }
         { role: 'user', content: prompt }
@@ -482,7 +481,6 @@ async function maybeGetGptRecommendation(input: RequestBody, stats: { median: nu
   if (!apiKey) return undefined;
   try {
     const client = new OpenAI({ apiKey });
-<<<<<<< HEAD
     const skillsStr = input.skills.join();
     const prompt = `Based on current market trends, provide a competitive hourly and monthly rate for a ${input.roleTitle} with ${skillsStr} in ${input.region}. Include a global comparison. Return a concise paragraph with a recommended hourly and monthly rate (USD), and a brief rationale.`;
 =======

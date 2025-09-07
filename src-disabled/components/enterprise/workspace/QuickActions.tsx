@@ -83,7 +83,7 @@ import React from "react";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 <<<<<<< HEAD:src-disabled/components/enterprise/workspace/QuickActions.tsx
 
-import { Button } from "@/components/ui/button";
+import { Button } from '@/components/ui/button';
 import { FileText, Plus, Search, Calendar } from 'lucide-react';'
 import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components/ui/card';'
 import { Calendar } from 'lucide-react';
@@ -232,7 +232,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             <Button 
               key={action.id}
-              variant="outline" 
+              variant='outline' 
               className={`h-auto justify-start p-4 ${action.color}`}
 <<<<<<< HEAD
 =======
@@ -243,9 +243,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:src/components/enterprise/workspace/QuickActions.tsx
             >
-              <div className="flex flex-col items-start text-left">
+              <div className='flex flex-col items-start text-left'>
 
-                <div className="flex items-center">
+                <div className='flex items-center'>
                   {action.icon}
                   <span>{action.label}</span>
                 </div>
@@ -268,13 +268,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:src/components/enterprise/workspace/QuickActions.tsx
                 <span className="mt-1 text-xs text-muted-foreground">{action.description}</span>
               </div>
-            </Button>"
-import React from "react",;"
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;"
-import { Button } from "@/components/ui/button",;'
+            </Button>'
+import React from 'react',;'
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card',;'
+import { Button } from '@/components/ui/button',;'
 import { FileText, Plus, Search, Calendar } from 'lucide-react';
 
-      color: "bg-amber-100 dark:bg-amber-900/20";
+      color: 'bg-amber-100 dark:bg-amber-900/20';
     }
   ];
   return (;
@@ -283,8 +283,8 @@ import { FileText, Plus, Search, Calendar } from 'lucide-react';
         <CardTitle>Quick Actions</CardTitle>;
         <CardDescription>Fast access to common tasks</CardDescription>;
       </CardHeader>;
-      <CardContent>;"
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">;
+      <CardContent>;'
+        <div className='grid grid-cols-1 sm:grid-cols-2 gap-4'>;
           {actions.map(action => (;
             <Button;
 <<<<<<< HEAD
@@ -307,11 +307,11 @@ import { FileText, Plus, Search, Calendar } from 'lucide-react';
 
                 <span className='mt-1 text-xs text-muted-foreground'>;
                   {action && action.description}
-                </span>              </div>;"
-                <span className="mt-1 text-xs text-muted-foreground">{action && action.description}</span>;
+                </span>              </div>;'
+                <span className='mt-1 text-xs text-muted-foreground'>{action && action.description}</span>;
           {actions && actions.map(action => (;
 
-                <div className="flex items-center">;
+                <div className='flex items-center'>;
                   {action && action.icon}
                   <span>{action && action.label}</span>;
                 </div>;"
@@ -448,8 +448,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:src/components/enterprise/workspace/QuickActions.tsx
           {actions.map (action => (
             <Button;
-              key={action.id}"
-              variant="outline";`
+              key={action.id}'
+              variant='outline';`
               className={`h - auto justify - start p - 4 ${action.color}`}
 
               </div>;

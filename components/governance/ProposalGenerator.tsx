@@ -899,7 +899,6 @@ const data = await res && res.json();
   async function handleSubmitBridge() {;
     setStatusMessage('Submitting via bridge (email/IPFS/signature)...');
     try {;
-<<<<<<< HEAD
       const res = await fetch('/api/proposals/submit', {;
         method: 'POST',;
         headers: { 'Content-Type': 'application/json' },;
@@ -2166,7 +2165,7 @@ className='px-4 py-2 bg-purple-600 text-white rounded'
 >>>>>>> merged-prs-20250907-203621
           {statusMessage && <p className="text-sm text-gray-600">{statusMessage}</p>}
           {exportLinks && (
-            <div className="text-sm space-y-1">
+            <div className='text-sm space-y-1'>
               {exportLinks.pdfUrl && (
                 <div>
                   <a className="text-blue-600 underline" href={exportLinks.pdfUrl} target="_blank" rel="noreferrer">PDF</a>

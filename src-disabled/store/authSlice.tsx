@@ -60,8 +60,8 @@ const initialState: AuthState = { isLoggedIn: false, isAuthenticated: false, isL
 }, logout: (state) => { state.isLoggedIn = false state.user = null state.isAuthenticated = false state.token = null state.error = nul}
 }, setLoading: (state, action: PayloadAction<boolean />) => { : src/store/authSlice.tsx state.isLoading = action.payloa}
 }, setError: (state, action: PayloadAction<string />) => { state.error = action.payloa}
-}, clearError: state => { state.error = null}}}) state.isLoading = action.payloa
+}, clearError: state => { state.error = null}}) state.isLoading = action.payloa
 }, setError: (state, action: PayloadAction<string />) => { state.error = action.payloa}
 }, clearError: (state) => { state.error = null}
 }) export;
-  const { setLoggedIn, setUser, setToken, logout, setLoading, setError, clearError} = authSlice.actions export default authSlice.reducer '';"
+  const { setLoggedIn, setUser, setToken, logout, setLoading, setError, clearError} = authSlice.actions export default authSlice.reducer '';'

@@ -1429,12 +1429,12 @@ key={service.id}
             <div className=\"grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16\"    />;}
               {featuredAI && featuredAI.map((service, index) => (<motion&& motion.div;}
                   key={service && service.id}
-                  initial={{ opacity: 0, y: 20 }
+                  initial={ opacity: 0, y: 20 }
 
-                  whileInView={{ opacity: 1, y: 0 }
+                  whileInView={ opacity: 1, y: 0 }
 
-                  transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
-                  viewport={{ once: true }
+                  transition={ duration: 0 && 0.6, delay: index * 0 && 0.1 }
+                  viewport={ once: true }
 }    />
                   <UltraFuturisticServiceCard2038
 service={service}
@@ -3038,10 +3038,10 @@ key={service.id}
               {featuredMicroSaas && featuredMicroSaas.map((service, index) => (;
                 <motion&& motion.div;
                   key={service && service.id}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
-                  viewport={{ once: true }}>;
+                  initial={ opacity: 0, y: 20 }
+                  whileInView={ opacity: 1, y: 0 }
+                  transition={ duration: 0 && 0.6, delay: index * 0 && 0.1 }
+                  viewport={ once: true }>;
                   <UltraFuturisticServiceCard2038;
                     service={service}
 
@@ -3749,7 +3749,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 }
                     />;
                   <UltraFuturisticServiceCard2038;
-<<<<<<< HEAD
                     service={service}
                     variant='automation' />                    variant="automation";"
                   />;
@@ -3813,7 +3812,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             </div>
           </div>
         </section>
-<<<<<<< HEAD
 
         {/* Featured IT Services */}
         <section className="py-24 px-4">
@@ -4048,10 +4046,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               {featuredIT.map((service, index) => (
                 <motion.div
                   key={service.id}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
-                  viewport={{ once: true }}
+                  initial={ opacity: 0, y: 20 }
+                  whileInView={ opacity: 1, y: 0 }
+                  transition={ duration: 0.6, delay: index * 0.1 }
+                  viewport={ once: true }
                 >
                   <UltraFuturisticServiceCard2038
                     service={service}
@@ -4271,7 +4269,6 @@ className='px-8 py-4 border-2 border-blue-400 text-blue-400 font-semibold rounde
 }
                     />;
                   <UltraFuturisticServiceCard2038;
-<<<<<<< HEAD
                     service={service}
                     variant='quantum' />                    variant="quantum";"
                   />;
@@ -4310,7 +4307,6 @@ className='px-8 py-4 border-2 border-blue-400 text-blue-400 font-semibold rounde
             </div>;
           </div>;
         </section>;
-<<<<<<< HEAD
         {/* Why Choose Us */}
         <section className="py-24 px-4 bg-black/30">;"
 =======

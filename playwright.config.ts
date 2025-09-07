@@ -37,12 +37,13 @@ export default function Playwright.config({ }: Playwright.configProps) {
 origin/automation-improvements-final
 }}},
 }
+}};
 }}};
 }}},}}};
 ursor/fix-lint-push-and-merge-to-main-ae4e
 }
 ursor/add-new-services-and-deploy-updates-0462
-}}};
+}};
 origin/cursor/fix-syntax-push-and-merge-to-main-ba45
 =======
 
@@ -92,13 +93,13 @@ export default function Playwright.config({ }: Playwright.configProps) {;
 <<<<<<< HEAD
 }}}
 }
-}}}
+}}
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 ursor/integrate-build-improve-and-re-verify-8f7d
 origin/automation-improvements-final
-}}}
+}}
 }
-}}}
+}}
 origin/main
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

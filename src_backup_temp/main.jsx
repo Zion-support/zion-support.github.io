@@ -14,21 +14,21 @@ import './utils/consoleErrorToast';'
 // Import i18n configuration;
 import './i18n';'
 import { LanguageProvider } from '@/context/LanguageContext';'
-import { LanguageDetectionPopup } from "./components/LanguageDetectionPopup";"
+import { LanguageDetectionPopup } from './components/LanguageDetectionPopup';'
 import { WhitelabelProvider } from '@/context/WhitelabelContext';'
 import { AppLayout } from '@/layout/AppLayout';'
 // Import auth and notification providers;
-import { AuthProvider } from "./context/auth/AuthProvider";"
-import { NotificationProvider } from "./context/notifications/NotificationContext";"
+import { AuthProvider } from './context/auth/AuthProvider';'
+import { NotificationProvider } from './context/notifications/NotificationContext';'
 // Import analytics provider;
 import { AnalyticsProvider } from './context/AnalyticsContext';'
 ;
 // Create a client;
 const queryClient = new QueryClient({;
-  "defaultOptions": "{;"
-    "queries": {;"
-      "staleTime": 1000 * 60 * 5", // 5 minutes;"
-      "retry": "1",;"
+  'defaultOptions': '{;'
+    'queries': {;'
+      'staleTime': 1000 * 60 * 5', // 5 minutes;'
+      'retry': '1',;'
     },;
   },;
 });
@@ -78,20 +78,20 @@ import { NotificationProvider } from './context/notifications/NotificationContex
 import { ViewModeProvider } from './context/ViewModeContext';'
 const queryClient = new QueryClient({
     }
-    "defaultOptions": {';'
+    'defaultOptions': {';'
         }
-        "queries": {';';'
+        'queries': {';';'
             }
-            "retry": 1, "refetchOnWindowFocus": false}}}
+            'retry': 1, 'refetchOnWindowFocus': false}}
     );';';';'
-""',';';'
+''',';';'
     ';';';'
-  "defaultOptions": {
+  'defaultOptions': {
     }
-    "queries": {
+    'queries': {
       }
-      "retry": 1,
-      "refetchOnWindowFocus": false
+      'retry': 1,
+      'refetchOnWindowFocus': false
     }
   }
 });
@@ -107,7 +107,7 @@ const renderApp = (props) => {
               <AuthProvider>
                 <NotificationProvider>
                   <AnalyticsProvider>
-                    <LanguageProvider authState={{ "isAuthenticated": false, "user": null }}>
+                    <LanguageProvider authState={ 'isAuthenticated': false, 'user': null }>
                       <ViewModeProvider>
                         <AppLayout>
                           <App />
@@ -136,22 +136,22 @@ function displayFatalError() {
     }
     if (rootElement) {
         }
-        rootElement.innerHTML = `"""            <div style="{{`"padding": 20px;text-align}}"</p>``            </div>`;}';'
+        rootElement.innerHTML = `'''            <div style='{`'padding': 20px;text-align}'</p>``            </div>`;}';'
 }';';'
 try {';';';'
     }
     renderApp();} catch (error) {``}',';';'    ';';';'
-    console.error('Global error caught in main."jsx": ', error);';';'
+    console.error('Global error caught in main.'jsx': ', error);';';'
     displayFatalError(error.message);}';';';'
-""',';';'
+''',';';'
     ';';';'
-window.addEventListener('error', (e) => {""',';';'
+window.addEventListener('error', (e) => {''',';';'
     ';';';'
     }
-    console.error('Unhandled "error": ', e.error || e.message);';';'
+    console.error('Unhandled 'error': ', e.error || e.message);';';'
     displayFatalError(e.message);}
     );';';';'
-"`""';';';';'
+'`''';';';';'
 </LanguageDetectionPopup>
 </App>
 </React>
@@ -159,7 +159,7 @@ function displayFatalError() {
   }
   if (rootElement) {
     }
-    rootElement.innerHTML = ``      <div style=""padding": 20px; text-"align": center; "color": red;">"
+    rootElement.innerHTML = ``      <div style=''padding': 20px; text-'align': center; 'color': red;'>'
         <h2>Application Error</h2>
         <p>${errorMessage}</p>
       </div>
@@ -171,11 +171,11 @@ try {
   renderApp();
 } catch (error) {
   }
-  console.error('Global error caught in main."jsx": ', error);'
+  console.error('Global error caught in main.'jsx': ', error);'
   displayFatalError(error.message);
 }
 window.addEventListener('error', (e) => {'
   }
-  console.error('Unhandled "error": ', e.error || e.message);'
+  console.error('Unhandled 'error': ', e.error || e.message);'
   displayFatalError(e.message);
 });

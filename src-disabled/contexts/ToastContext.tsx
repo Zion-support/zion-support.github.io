@@ -38,7 +38,7 @@ const duration = toast.duration || 5000;
   }, [])const removeToast = useCallback((id: string) => {setToasts(prev => prev.filter(toast => toast.id !== id)}
 }, [];
   const clearToasts = useCallback(() => {setToasts([])}, [];
-  return (<ToastContext.Provider value={{ toasts, addToast, removeToast, clearToasts }} />;
+  return (<ToastContext.Provider value={ toasts, addToast, removeToast, clearToasts } />;
       {children}
       <ToastContainer toasts={toasts} onRemove={removeToast} />;
     </ToastContext.Provider>;

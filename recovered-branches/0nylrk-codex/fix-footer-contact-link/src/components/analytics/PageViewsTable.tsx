@@ -556,7 +556,7 @@ pr-12325
 
 }
       return data || [];
-    }});
+    });
 ;
   // Format path names for better display;
   const formatPathName = (path: string) =>: any {}

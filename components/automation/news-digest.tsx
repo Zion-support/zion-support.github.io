@@ -112,7 +112,7 @@ type NewsItem = { source: string, title: string, url: string, summary: string, t
         ))}</div>;)})}export default /**;
  * NewsDigestPage - Function description;
  */;
-function NewsDigestPage() {return (<div className="space-y-6">;
+function NewsDigestPage() {return (<div className='space-y-6'>;
   );
 >>>>>>> merged-prs-20250907-203621
 type NewsItem = { source: string, title: string, url: string, summary: string, tags: string[] },

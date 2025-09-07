@@ -190,10 +190,10 @@ const categories = ['''''';
       {/* Header */}
       <motion.div initial = {}
   { opacity: 0, y: 20;}
-}} animate = {}
+} animate = {}
   { opacity: 1, y: 0 '''';}
 '''';}
-}} className='mb-8' />'''';
+} className='mb-8' />'''';
         <div className='flex flex-col lg:flex-row lg:items-center lg:justify-between gap-4' />'''';
           <div />'''';
             <h1 className='text-3xl font-bold text-zion-blue-dark mb-2' />;
@@ -220,7 +220,7 @@ const categories = ['''''';
           {/* Filters */}
           <motion.div initial = {}
   { opacity: 0, y: 20;}
-}} animate = {}
+} animate = {}
   { opacity: 1, y: 0 '''';}
 '''';}
 }} transition={{ delay: 0.1 ,}
@@ -265,14 +265,14 @@ const categories = ['''''';
           {/* Trends Grid */}
           <motion.div initial = {}
   { opacity: 0, y: 20;}
-}} animate = {}
+} animate = {}
   { opacity: 1, y: 0 '''';}
 '''';}
 }} transition={{ delay: 0.2 ,}
 } className='grid grid-cols-1 lg:grid-cols-2 gap-6 mb-8' />;
             {filteredTrends.map((trend, index) => (<motion.div key={trend.id} initial = {}
   { opacity: 0, x: index % 2 === 0 ? -20 : 20;}
-}} animate = {}
+} animate = {}
   { opacity: 1, x: 0';';}
 }} transition={{ delay: 0.1 * index ,}
 } />'''';
@@ -315,7 +315,7 @@ const categories = ['''''';
                         <span className='text-sm text-zion-slate-light' />Adoption Rate:</span>'''';
                         <div className='flex items-center gap-2' />'''';
                           <div className='w-20 bg-zion-slate-light/20 rounded-full h-2' />'''';
-                            <div className='bg-gradient-to-r from-zion-cyan to-zion-purple h-2 rounded-full' style={{ width: `${trend.adoption}%` ,
+                            <div className='bg-gradient-to-r from-zion-cyan to-zion-purple h-2 rounded-full' style={ width: `${trend.adoption}%` ,
 } /></div>'''';
                           </div>'''';
                           <span className='text-sm font-medium' />{trend.adoption}%</span>;
@@ -352,14 +352,14 @@ const categories = ['''''';
 </>) }{/* Future Roadmap View */}'';
       {viewMode === 'roadmap' && (<motion.div initial = {}
   { opacity: 0, y: 20;}
-}} animate = {}
+} animate = {}
   { opacity: 1, y: 0 '''';}
 '''';}
 }} transition={{ delay: 0.1 ,}
 } className='space-y-6' />;
           {futureRoadmap.map((roadmap, index) => (<motion.div key={roadmap.id} initial = {}
   { opacity: 0, x: -20;}
-}} animate = {}
+} animate = {}
   { opacity: 1, x: 0';';}
 }} transition={{ delay: 0.1 * index ,}
 } />'''';
@@ -443,7 +443,7 @@ const categories = ['''''';
         </motion.div>) }{/* Strategic Insights View */}'';
       {viewMode === 'insights' && (<motion.div initial = {}
   { opacity: 0, y: 20;}
-}} animate = {}
+} animate = {}
   { opacity: 1, y: 0 '''';}
 '''';}
 }} transition={{ delay: 0.1 ,}
@@ -594,7 +594,7 @@ const categories = ['''''';
         </motion.div>) }{/* CTA Section */}
       <motion.div initial = {}
   { opacity: 0, y: 20;}
-}} animate = {}
+} animate = {}
   { opacity: 1, y: 0 '''';}
 '''';}
 }} transition={{ delay: 0.4 ,}

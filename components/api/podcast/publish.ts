@@ -37,14 +37,14 @@ const rssUrl = (process && process.env.SITE_URL || http: //localhost:3000) + '/p
 }
 
 export default async function handler() {
-    (process.env.SITE_URL |'"http"://"localhost":3000') + '/podcast.xml';'
+    (process.env.SITE_URL |''http'://'localhost':3000') + '/podcast.xml';'
   }
-  return res.status(200).json({ "ok": true, rssUrl });
+  return res.status(200).json({ 'ok': true, rssUrl });
 
 export default async function handler() {
-    (process.env.SITE_URL || '"http"://"localhost":3000') + '/podcast.xml';'
+    (process.env.SITE_URL || ''http'://'localhost':3000') + '/podcast.xml';'
   }
-  return res.status(200).json({ "ok": true, rssUrl });
+  return res.status(200).json({ 'ok': true, rssUrl });
 
 export default async function handler() {;
 

@@ -481,13 +481,13 @@ if ( {) {
   return (
     <Card className="bg-zion-blue-dark/40 border-zion-blue-light">
       <CardHeader>
-        <CardTitle className="text-lg flex items-center">
-          <Video className="h-5 w-5 mr-2 text-zion-purple" />
+        <CardTitle className='text-lg flex items-center'>
+          <Video className='h-5 w-5 mr-2 text-zion-purple' />
           Upcoming Interviews
         </CardTitle>
       </CardHeader>
       <CardContent>
-        <div className="space-y-4">
+        <div className='space-y-4'>
           {upcomingInterviews.map(interview => {
             const interviewDate = parseISO(interview.scheduled_date)
             const formattedDate = format(interviewDate, 'EEE, MMM d')

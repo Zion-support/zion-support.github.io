@@ -105,7 +105,7 @@ import {const Homepage2026: React.FC = () => {return (<Layout>;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
               {/* Company Badge */}
               <motion&& motion.div
-                initial={{ opacity: 0, scale: 0 && 0.8 }}
+                initial={ opacity: 0, scale: 0 && 0.8 }
 import {
 <<<<<<< HEAD
 =======
@@ -332,10 +332,10 @@ const Homepage2026: React.FC = () => {
               className='space-y-6'            >        {/* Hero Section */}
         <section className="min-h-screen flex items-center justify-center px-4 relative overflow-hidden">
           {/* Background Elements */}
-          <div className="absolute inset-0 pointer-events-none">
-            <div className="absolute top-20 left-20 w-32 h-32 border border-cyan-400/20 rounded-lg animate-pulse"></div>
-            <div className="absolute top-40 right-32 w-24 h-24 border border-purple-400/20 rounded-full animate-pulse delay-1000"></div>
-            <div className="absolute bottom-32 left-32 w-40 h-40 border border-pink-400/20 transform rotate-45 animate-pulse delay-2000"></div>
+          <div className='absolute inset-0 pointer-events-none'>
+            <div className='absolute top-20 left-20 w-32 h-32 border border-cyan-400/20 rounded-lg animate-pulse'></div>
+            <div className='absolute top-40 right-32 w-24 h-24 border border-purple-400/20 rounded-full animate-pulse delay-1000'></div>
+            <div className='absolute bottom-32 left-32 w-40 h-40 border border-pink-400/20 transform rotate-45 animate-pulse delay-2000'></div>
           </div>
           <div className="text-center max-w-4xl mx-auto relative z-10">
             <motion.div
@@ -3151,8 +3151,8 @@ drive growth.
                     <CheckCircle className="w - 4 h - 4 text - green - 400" />;"
                     <span > Zero Trust Security Platform - $799 / month</span>;
                   </div>;
-                  <div className="flex items - center space - x-2 text - sm text - gray - 300">;"
-                    <CheckCircle className="w - 4 h - 4 text - green - 400" />;"
+                  <div className='flex items - center space - x-2 text - sm text - gray - 300'>;'
+                    <CheckCircle className='w - 4 h - 4 text - green - 400' />;'
                     <span > Hybrid Cloud Management - $499 / month</span>;
                   </div>;
                 </div>;
@@ -3350,7 +3350,6 @@ advanced AI.
             </div>
           </div>
         </section>
-<<<<<<< HEAD
 
         {/* Contact Section */}
         <section className="py-20 px-4 bg-gradient-to-r from-cyan-500/10 via-blue-500/10 to-purple-500/10">
@@ -3801,12 +3800,12 @@ export default Homepage2026;'
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
                     <Mail className="w-5 h-5 text-yellow-400" />;
                     <div>;
-                      <div className="text-sm text-gray-400">Email</div>;
-                      <a href="mailto:kleber@ziontechgroup.com" className="text-cyan-400 hover:underline font-medium">;
-                    <MapPin className="w-5 h-5 text-purple-400" />;
+                      <div className='text-sm text-gray-400'>Email</div>;
+                      <a href='mailto:kleber@ziontechgroup.com' className='text-cyan-400 hover:underline font-medium'>;
+                    <MapPin className='w-5 h-5 text-purple-400' />;
                     <div>;
-                      <div className="text-sm text-gray-400">Address</div>;
-                      <div className="text-white font-medium">;
+                      <div className='text-sm text-gray-400'>Address</div>;
+                      <div className='text-white font-medium'>;
                         364 E Main St STE 1008<br />;
 <<<<<<< HEAD
 =======
@@ -4001,7 +4000,6 @@ export default Homepage2026;'
                   </div>;
                 </div>;
               </div>;
-<<<<<<< HEAD
                       </div>;
                     </div>;
                   </div>;
@@ -4062,11 +4060,11 @@ export default Homepage2026;
                 <a;
                   href='tel:+13024640950';
                   className='px - 8 py - 4 border - 2 border - cyan - 400 text - cyan - 400 font - semibold rounded - lg hover:bg - cyan - 400 hover:text - black transition - all duration - 300'                >                <a;
-                  href="mailto:kleber@ziontechgroup.com";
-                  className="inline - flex items - center space - x-2 px - 8 py - 4 bg - gradient - to - r from - cyan - 500 to - blue - 600 text - white font - semibold rounded - lg hover:from - cyan - 600 hover:to - blue - 700 transition - all duration - 300 transform hover:scale - 105";
+                  href='mailto:kleber@ziontechgroup.com';
+                  className='inline - flex items - center space - x-2 px - 8 py - 4 bg - gradient - to - r from - cyan - 500 to - blue - 600 text - white font - semibold rounded - lg hover:from - cyan - 600 hover:to - blue - 700 transition - all duration - 300 transform hover:scale - 105';
                 >;
                   <span > Get Started Today</span>;
-                  <ArrowRight className="w - 5 h - 5" />;
+                  <ArrowRight className='w - 5 h - 5' />;
                 </a>;
                 <a;
                   href="tel:+13024640950";

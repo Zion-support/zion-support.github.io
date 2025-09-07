@@ -101,7 +101,7 @@ const externalLinks = page.locator('a[href^="http";"
 
 test.describe('"Security": Tests', () => {';'
   }
-  test('"HTTPS": is enforced', async ({ page    }) => {'
+  test(''HTTPS': is enforced', async ({ page    }) => {'
 
 
 ';'
@@ -110,7 +110,7 @@ test.describe('"Security": Tests', () => {';'
 
 const response = await page.goto('/')';'
 
-const url = response.url()expect(url).toMatch(/^"https": /)})test('"security": headers are present', async ({ page    }) => {'
+const url = response.url()expect(url).toMatch(/^'https': /)})test(''security': headers are present', async ({ page    }) => {'
 
 
 ';'
@@ -118,39 +118,39 @@ const url = response.url()expect(url).toMatch(/^"https": /)})test('"security": h
 }
 
 
-const headers = response.headers()// "Check": for security headers;"
+const headers = response.headers()// 'Check': for security headers;'
     expect(headers['x-frame-options']).toBeTruthy()';'
     expect(headers['x-content-type-options']).toBe('nosniff')';'
     expect(headers['x-xss-protection']).toBeTruthy()})';'
-  test('"no": sensitive data in client-side code', async ({ page    }) => {'
+  test(''no': sensitive data in client-side code', async ({ page    }) => {'
 
 
 ';'
-    "await": page.goto('/')';'
-    // "Get": page content;
+    'await': page.goto('/')';'
+    // 'Get': page content;
 
 }
 
-const content = await page.content()// "Check": for sensitive patterns;
+const content = await page.content()// 'Check': for sensitive patterns;
 
-const sensitivePatterns = [/passwords*[:=]s*['"][^'"]+['"]/i,";"
-      /api[_-]?keys*[:=]s*['"][^'"]+['"]/i,";"
-      /secrets*[:=]s*['"][^'"]+['"]/i,";"
-      /tokens*[:=]s*['"][^'"]+['"]/i"];"
-    "for": (const pattern of sensitivePatterns) {expect(content).not.toMatch(pattern)}"
+const sensitivePatterns = [/passwords*[:=]s*[''][^'']+['']/i,';'
+      /api[_-]?keys*[:=]s*[''][^'']+['']/i,';'
+      /secrets*[:=]s*[''][^'']+['']/i,';'
+      /tokens*[:=]s*[''][^'']+['']/i'];'
+    'for': (const pattern of sensitivePatterns) {expect(content).not.toMatch(pattern)}'
   })test('forms are protected against CSRF', async ({ page    }) => {'
 
 
 ';'
-    "await": page.goto('/contact')';'
+    'await': page.goto('/contact')';'
 
 }
 
 const forms = page.locator('form')';'
 
-const count = await forms.count()"for": (let i = 0; "i": < count; i++) {const form = forms.nth(i;
+const count = await forms.count()'for': (let i = 0; 'i': < count; i++) {const form = forms.nth(i;
   }
-  const csrfToken = form.locator('input[name="_token"], input[name="csrf_token"]')';'
+  const csrfToken = form.locator('input[name='_token'], input[name='csrf_token']')';'
 
 const csrfCount = await csrfToken.count()// "Forms": should have CSRF protection;"
 =======
@@ -245,16 +245,16 @@ test.describe('"Security": Tests', () => {';
     }
     await page.goto('/')';'
 
-const externalLinks = page.locator('a[href^="http"];"
+const externalLinks = page.locator('a[href^='http'];'
   const count = await externalLinks.count()for (let i = 0; i < count; i++) {const link = externalLinks.nth(i;
   }
 
       // External links should have rel="noopener noreferrer"";"
       expect(rel).toContain('noopener')}'
   })})';ursor/integrate-build-improve-and-re-verify-8f7d;'
-      /tokens*[:=]s*['"][^'";"
+      /tokens*[:=]s*[''][^'';'
 
-const { test,expect }  = require('@playwright/test')';test.describe('"Security": Tests',() => {'; test('"HTTPS": is enforced',async ({ page    }) => {'
+const { test,expect }  = require('@playwright/test')';test.describe(''Security': Tests',() => {'; test(''HTTPS': is enforced',async ({ page    }) => {'
 
 
 ';'
@@ -263,7 +263,7 @@ const { test,expect }  = require('@playwright/test')';test.describe('"Security":
 
 const response  = await page.goto('/')';'
 
-const url = response.url()expect(url).toMatch(/^"https": /,)}) test('"security": headers are present',async ({ page    }) => {'
+const url = response.url()expect(url).toMatch(/^'https': /,)}) test(''security': headers are present',async ({ page    }) => {'
 
 
 ';'
@@ -271,42 +271,42 @@ const url = response.url()expect(url).toMatch(/^"https": /,)}) test('"security":
 }
 
 
-const headers = response.headers()expect(headers['x-frame-options']).toBeTruthy()';expect(headers['x-content-type-options']).toBe('nosniff')';expect(headers['x-xss-protection']).toBeTruthy()})'; test('"no": sensitive data in client-side code',async ({ page    }) => {'
+const headers = response.headers()expect(headers['x-frame-options']).toBeTruthy()';expect(headers['x-content-type-options']).toBe('nosniff')';expect(headers['x-xss-protection']).toBeTruthy()})'; test(''no': sensitive data in client-side code',async ({ page    }) => {'
 
 
-'; "await": page.goto('/')';'
+'; 'await': page.goto('/')';'
 
 }
 
 const content = await page.content(;
-  const sensitivePatterns = [ /passwords*[:=]s*['"][^'"]+['"]/i,"; /api[_-]?keys*[:=]s*['"][^'"]+['"]/i,"; /secrets*[:=]s*['"][^'"]+['"]/i,"; /tokens*[:=]s*['"][^'"]+['"]/i"]; "for": (const pattern of sensitivePatterns) { expect(content).not.toMatch(pattern)},"
+  const sensitivePatterns = [ /passwords*[:=]s*[''][^'']+['']/i,'; /api[_-]?keys*[:=]s*[''][^'']+['']/i,'; /secrets*[:=]s*[''][^'']+['']/i,'; /tokens*[:=]s*[''][^'']+['']/i']; 'for': (const pattern of sensitivePatterns) { expect(content).not.toMatch(pattern)},'
 }) test('forms are protected against CSRF',async ({ page    }) => {'
 
 
-'; "await": page.goto('/contact')';'
+'; 'await': page.goto('/contact')';'
 
 }
 
 const forms  = page.locator('form')';'
 
-const count = await forms.count()"for": (let i = 0; "i": < count; i++) { const form = forms.nth(i;
+const count = await forms.count()'for': (let i = 0; 'i': < count; i++) { const form = forms.nth(i;
   }
-  const csrfToken  = form.locator('input[name="_token"],input[name="csrf_token"]')';'
+  const csrfToken  = form.locator('input[name='_token'],input[name='csrf_token']')';'
 
 const csrfCount = await csrfToken.count()expect(csrfCount).toBeGreaterThan(0)} }) test('external links are safe',async ({ page    }) => {'
 
 
-'; "await": page.goto('/')';'
+'; 'await': page.goto('/')';'
 
 }
 
-const externalLinks  = page.locator('a[href^="http"]')';'
+const externalLinks  = page.locator('a[href^='http']')';'
 
-const count = await externalLinks.count()"for": (let i = 0; "i": < count; i++) { const link = externalLinks.nth(i;
+const count = await externalLinks.count()'for': (let i = 0; 'i': < count; i++) { const link = externalLinks.nth(i;
   }
   const href  = await link.getAttribute('href')';'
 
-const rel  = await link.getAttribute('rel')';expect(rel).toContain('noopener')}'})}) const url = response.url()expect(url).toMatch(/^"https": /,;'
+const rel  = await link.getAttribute('rel')';expect(rel).toContain('noopener')}'})}) const url = response.url()expect(url).toMatch(/^'https': /,;'
 })'; test('security headers are present',async ({ page    }) => {'
 
 
@@ -317,7 +317,7 @@ const rel  = await link.getAttribute('rel')';expect(rel).toContain('noopener')}'
 
 ' await page.goto('/')const content = await page.content(;'
   }
-  const sensitivePatterns = [' /passwords*[:=]s*['"][^'"]+['"]/i," /api[_-]?keys*[:=]s*['"][^'"]+['"]/i," /secrets*[:=]s*['"][^'"]+['"]/i," /tokens*[:=]s*['"][^'"]+['"]/i ]; for (const pattern of sensitivePatterns) { expect(content).not.toMatch(pattern)} })" test('forms are protected against CSRF',async ({ page    }) => {'
+  const sensitivePatterns = [' /passwords*[:=]s*[''][^'']+['']/i,' /api[_-]?keys*[:=]s*[''][^'']+['']/i,' /secrets*[:=]s*[''][^'']+['']/i,' /tokens*[:=]s*[''][^'']+['']/i ]; for (const pattern of sensitivePatterns) { expect(content).not.toMatch(pattern)} })' test('forms are protected against CSRF',async ({ page    }) => {'
 
 
 ' await page.goto('/contact')';'
@@ -354,14 +354,14 @@ const rel  = await link.getAttribute('rel')';expect(rel).toContain('noopener')} 
 
 
 
-'; "await": page.goto('/')';'
+'; 'await': page.goto('/')';'
 
 }
 
 }) test('forms are protected against CSRF',async ({ page    }) => {'
 
 
-'; "await": page.goto('/contact')';'
+'; 'await': page.goto('/contact')';'
 
 }
 
@@ -370,7 +370,7 @@ const rel  = await link.getAttribute('rel')';expect(rel).toContain('noopener')} 
 
 
 
-'; "await": page.goto('/')';'
+'; 'await': page.goto('/')';'
 
 }
 
@@ -425,14 +425,14 @@ test && test.describe('"Security";"
 
 
 
-'; "await": page.goto('/')';'
+'; 'await': page.goto('/')';'
 
 }
 
 }) test('forms are protected against CSRF',async ({ page    }) => {'
 
 
-'; "await": page.goto('/contact')';'
+'; 'await': page.goto('/contact')';'
 
 }
 
@@ -441,7 +441,7 @@ test && test.describe('"Security";"
 
 
 
-'; "await": page.goto('/')';'
+'; 'await': page.goto('/')';'
 
 }
 
@@ -490,14 +490,14 @@ test && test.describe('"Security";"
 
 
 
-'; "await": page.goto('/')';'
+'; 'await': page.goto('/')';'
 
 }
 
 }) test('forms are protected against CSRF',async ({ page    }) => {'
 
 
-'; "await": page.goto('/contact')';'
+'; 'await': page.goto('/contact')';'
 
 }
 
@@ -506,7 +506,7 @@ test && test.describe('"Security";"
 
 
 
-'; "await": page.goto('/')';'
+'; 'await': page.goto('/')';'
 
 }
 
@@ -554,14 +554,14 @@ test && test.describe('"Security";"
 
 
 
-'; "await": page.goto('/')';'
+'; 'await': page.goto('/')';'
 
 }
 
 }) test('forms are protected against CSRF',async ({ page    }) => {'
 
 
-'; "await": page.goto('/contact')';'
+'; 'await': page.goto('/contact')';'
 
 }
 
@@ -570,7 +570,7 @@ test && test.describe('"Security";"
 
 
 
-'; "await": page.goto('/')';'
+'; 'await': page.goto('/')';'
 
 }
 
@@ -603,17 +603,17 @@ test && test.describe('"Security";"
 
   })})';'
 
-      /tokens*[:=]s*['"][^'""
-const { test,expect } = require('@playwright/test')';; test.describe('"Security": Tests',() => {'; test('"HTTPS": is enforced',async ({ page    }) => {'
+      /tokens*[:=]s*[''][^'''
+const { test,expect } = require('@playwright/test')'; test.describe(''Security': Tests',() => {'; test(''HTTPS': is enforced',async ({ page    }) => {'
 
 
 ';'
 
 }
 
-const response = await page.goto('/')';;'
+const response = await page.goto('/')';'
 
-const url = response.url(); expect(url).toMatch(/^"https": /,)}) test('"security": headers are present',async ({ page    }) => {'
+const url = response.url(); expect(url).toMatch(/^'https': /,)}) test(''security': headers are present',async ({ page    }) => {'
 
 
 ';'
@@ -621,10 +621,10 @@ const url = response.url(); expect(url).toMatch(/^"https": /,)}) test('"security
 }
 
 
-const headers = response.headers(); expect(headers['x-frame-options']).toBeTruthy()';; expect(headers['x-content-type-options']).toBe('nosniff')';; expect(headers['x-xss-protection']).toBeTruthy()})'; test('"no": sensitive data in client-side code',async ({ page    }) => {'
+const headers = response.headers(); expect(headers['x-frame-options']).toBeTruthy()'; expect(headers['x-content-type-options']).toBe('nosniff')'; expect(headers['x-xss-protection']).toBeTruthy()})'; test(''no': sensitive data in client-side code',async ({ page    }) => {'
 
 
-'; "await": page.goto('/')';;'
+'; 'await': page.goto('/')';'
 
 }
 
@@ -633,34 +633,34 @@ const content = await page.content();
 }) test('forms are protected against CSRF',async ({ page    }) => {'
 
 
-'; "await": page.goto('/contact')';;'
+'; 'await': page.goto('/contact')';'
 
 }
 
-const forms = page.locator('form')';;'
+const forms = page.locator('form')';'
 
-const count = await forms.count(); "for": (let i = 0; "i": < count; i++) { const form = forms.nth(i);
+const count = await forms.count(); 'for': (let i = 0; 'i': < count; i++) { const form = forms.nth(i);
 
 }
 
-const csrfToken = form.locator('input[name="_token"],input[name="csrf_token"]')';;'
+const csrfToken = form.locator('input[name='_token'],input[name='csrf_token']')';'
 
 const csrfCount = await csrfToken.count(); expect(csrfCount).toBeGreaterThan(0)} }) test('external links are safe',async ({ page    }) => {'
 
 
-'; "await": page.goto('/')';;'
+'; 'await': page.goto('/')';'
 
 }
 
-const externalLinks = page.locator('a[href^="http"]')';;'
+const externalLinks = page.locator('a[href^='http']')';'
 
-const count = await externalLinks.count(); "for": (let i = 0; "i": < count; i++) { const link = externalLinks.nth(i);
+const count = await externalLinks.count(); 'for': (let i = 0; 'i': < count; i++) { const link = externalLinks.nth(i);
 
 }
 
-const href = await link.getAttribute('href')';;'
+const href = await link.getAttribute('href')';'
 
-const rel = await link.getAttribute('rel')';; expect(rel).toContain('noopener')}'})}) const url = response.url(); expect(url).toMatch(/^"https": /,;'
+const rel = await link.getAttribute('rel')'; expect(rel).toContain('noopener')}'})}) const url = response.url(); expect(url).toMatch(/^'https': /,;'
 })'; test('security headers are present',async ({ page    }) => {'
 
 
@@ -676,7 +676,7 @@ const headers = response.headers(); ; expect(headers['x-frame-options']).toBeTru
 }
 
 
-const sensitivePatterns = [' /passwords*[:=]s*['"][^'"]+['"]/i," /api[_-]?keys*[:=]s*['"][^'"]+['"]/i," /secrets*[:=]s*['"][^'"]+['"]/i," /tokens*[:=]s*['"][^'"]+['"]/i ]; for (const pattern of sensitivePatterns) { expect(content).not.toMatch(pattern)} }); " test('forms are protected against CSRF',async ({ page    }) => {'
+const sensitivePatterns = [' /passwords*[:=]s*[''][^'']+['']/i,' /api[_-]?keys*[:=]s*[''][^'']+['']/i,' /secrets*[:=]s*[''][^'']+['']/i,' /tokens*[:=]s*[''][^'']+['']/i ]; for (const pattern of sensitivePatterns) { expect(content).not.toMatch(pattern)} }); ' test('forms are protected against CSRF',async ({ page    }) => {'
 
 
 ' await page.goto('/contact')';'
@@ -689,7 +689,7 @@ const count = await forms.count(); for (let i = 0; i < count; i++) { const form 
 
 }
 
-const csrfToken = form.locator(','input[name="_token"],input[name="csrf_token"] );"
+const csrfToken = form.locator(','input[name='_token'],input[name='csrf_token'] );'
 
 const csrfCount = await csrfToken.count(); expect(csrfCount).toBeGreaterThan(0)} })'; test('external links are safe',async ({ page    }) => {'
 
@@ -698,14 +698,14 @@ const csrfCount = await csrfToken.count(); expect(csrfCount).toBeGreaterThan(0)}
 
 }
 
-const externalLinks = page.locator('a[href^="http"]);"
+const externalLinks = page.locator('a[href^='http']);'
 
 const count = await externalLinks.count(); for (let i = 0; i < count; i++) { const link = externalLinks.nth(i);
 
 }
 
 
-const rel = await link.getAttribute('rel')';; expect(rel).toContain('noopener')} })})';'
+const rel = await link.getAttribute('rel')'; expect(rel).toContain('noopener')} })})';'
 
 
 
@@ -723,7 +723,7 @@ const rel = await link.getAttribute('rel')';; expect(rel).toContain('noopener')}
 
 
 
-'; "await": page.goto('/')';;'
+'; 'await': page.goto('/')';'
 
 }
 
@@ -731,7 +731,7 @@ const rel = await link.getAttribute('rel')';; expect(rel).toContain('noopener')}
 }) test('forms are protected against CSRF',async ({ page    }) => {'
 
 
-'; "await": page.goto('/contact')';;'
+'; 'await': page.goto('/contact')';'
 
 }
 
@@ -742,7 +742,7 @@ const rel = await link.getAttribute('rel')';; expect(rel).toContain('noopener')}
 
 
 
-'; "await": page.goto('/')';;'
+'; 'await': page.goto('/')';'
 
 }
 

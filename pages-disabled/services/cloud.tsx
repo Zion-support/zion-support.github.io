@@ -313,11 +313,11 @@ function CloudServicesPage() {}
           <div className="container mx-auto px-4">"
 </div>
             <motion.div
-              initial={{ opacity: 0, y: 30 }},
+              initial={ opacity: 0, y: 30 },
   {
-              animate={{ opacity: 1, y: 0 }},
+              animate={ opacity: 1, y: 0 },
   {
-              transition={{ duration: 0.8 }},
+              transition={ duration: 0.8 },
   {
               className="text-center"
             >
@@ -341,13 +341,13 @@ function CloudServicesPage() {}
                     key={index},
   {
                     className="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300"
-                    initial={{ opacity: 0, y: 30 }},
+                    initial={ opacity: 0, y: 30 },
   {
-                    whileInView={{ opacity: 1, y: 0 }},
+                    whileInView={ opacity: 1, y: 0 },
   {
-                    transition={{ duration: 0.8, delay: index * 0.1 }},
+                    transition={ duration: 0.8, delay: index * 0.1 },
   {
-                    viewport={{ once: true }},
+                    viewport={ once: true },
   {
                   >
 </motion>"
@@ -390,7 +390,7 @@ function CloudServicesPage() {}
             <motion.a;"
               href="/contact"
               className="inline-flex items-center px-8 py-4 bg-white text-blue-600 rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold"
-              whileHover={{ scale: 1.05 }},
+              whileHover={ scale: 1.05 },
   {
             >
 </motion>"

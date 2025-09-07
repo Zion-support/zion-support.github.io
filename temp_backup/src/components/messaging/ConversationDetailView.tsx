@@ -8,9 +8,9 @@
   activeConversation.other user.name ;
 }/> activeConversation.other user.user type === 'employer' ? 'Employer' : activeConversation.other user.user type === 'admin' ? 'Admin' : 'User' ;
 }</div> </div> </div> </div> {;
-  activeConversation.context data && activeConversation.context data.image url && (<div className="w-16 h-16 flex-shrink-0" > <AspectRatio ratio= {;""
-  1/1 ";""
-}className="rounded bg-zion-blue-dark/30 overflow-hidden" > <img /> </AspectRatio> </div>) ;
+  activeConversation.context data && activeConversation.context data.image url && (<div className='w-16 h-16 flex-shrink-0' > <AspectRatio ratio= {;''
+  1/1 ';''
+}className='rounded bg-zion-blue-dark/30 overflow-hidden' > <img /> </AspectRatio> </div>) ;
 }<div> {;
   activeConversation.context data.description ;
 }</div>) ;
@@ -26,6 +26,6 @@
 }/>) ) ;
 }</div> </div>) ) ) ;
 }<div ref= {;
-  messagesEndRef ;'"
-}/> </div> /> <Button > Send </Button> </form> </div> </div>) ;'"'"
-}'"'"'"
+  messagesEndRef ;''
+}/> </div> /> <Button > Send </Button> </form> </div> </div>) ;''''
+}''''''

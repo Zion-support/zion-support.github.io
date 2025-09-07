@@ -296,13 +296,13 @@ await app.register (cors, {
   methods: ['GETPOSTOPTIONS']
 });
   },
-  "methods": ['GET', 'POST', 'OPTIONS'],'
+  'methods': ['GET', 'POST', 'OPTIONS'],'
 });
-await app.register(rateLimit, { "global": true, "max": 100, "timeWindow": '1m','
+await app.register(rateLimit, { 'global': true, 'max': 100, 'timeWindow': '1m','
 });
 
 const openai = createOpenAIClient(process.env.OPENAI_API_KEY |'');'
-function getUserId("req": any): string | null {
+function getUserId('req': any): string | null {
 }
 return (;
     (req.headers['x-user-id'] as string) ||'

@@ -119,7 +119,7 @@ return () => {
 }, []);, []); (window as) .addNotification = addNotification;
     return () => {
       }
-      delete(window as) .addNotification}}, [addNotification]) ;
+      delete(window as) .addNotification}, [addNotification]) ;
   return ()
     <>
       {/* Notification Bell */}``      <div className = {`fixed ${getPositionClasses()} z-50`}>;`        <button;
@@ -131,14 +131,14 @@ return () => {
           {/* Unread count badge */"}"
           {unreadCount > 0 && (<motion.div;
               }
-              initial={{ "scale": 0 }}
-              animate={{ "scale": 1 }}""
+              initial={ "scale": 0 }
+              animate={ "scale": 1 }""
               className="absolute -top-1 -right-1 w-6 h-6 bg-gradient-to-r from-zion-cyan to-zion-blue text-white text-xs font-bold rounded-full flex items-center justify-center"';'
 ';';'
-              animate={{ "scale": 1 }}";"
+              animate={ "scale": 1 }";"
               className="absolute -top-1 -right-1 w-6 h-6 bg-gradient-to-r from-zion-cyan to-zion-blue text-white text-xs font-bold rounded-full flex items-center justify-center";"
-              initial={{ "scale": "0 "}}"
-              animate={{ "scale": "1 "}}";"
+              initial={ "scale": "0 "}"
+              animate={ "scale": "1 "}";"
               className="absolute -top-1 -right-1 w-6 h-6 bg-gradient-to-r from-zion-cyan to-zion-blue text-white text-xs font-bold rounded-full flex items-center justify-center";"
               {unreadCount > 99 ? '99+' : "unreadCount"}"
         <button,
@@ -150,8 +150,8 @@ onClick={() => setIsOpen(!isOpen)}""
           {/* Unread count badge */}
           {unreadCount > 0 && (<motion.div
 }
-initial={{ "scale": 0 }}
-              animate={{ "scale": 1 }}""
+initial={ "scale": 0 }
+              animate={ "scale": 1 }""
               className="absolute -top-1 -right-1 w-6 h-6 bg-gradient-to-r from-zion-cyan to-zion-blue text-white text-xs font-bold rounded-full flex items-center justify-center""
               {unreadCount > 99 ? '99+' : unreadCount}'
             </motion.div>) }
@@ -171,15 +171,15 @@ initial={{ "scale": 0 }}
             initial = {;
   { "opacity": "0", "scale": "0.9",;"
   "y": "-10;"
-"}}"
+"}"
             animate = {;
   { "opacity": "1", "scale": "1",;"
   "y": "0;"
-"}}"
+"}"
             exit = {;
   { "opacity": "0", "scale": "0.9",;"
   "y": "-10;"
-"}}`;`            className={`fixed ${getPositionClasses()} z-40 mt-20 bg-white/95 backdrop-blur-xl rounded-2xl shadow-2xl border border-zion-cyan/20 p-6 w-80`}`""
+"}`;`            className={`fixed ${getPositionClasses()} z-40 mt-20 bg-white/95 backdrop-blur-xl rounded-2xl shadow-2xl border border-zion-cyan/20 p-6 w-80`}`""
             <h3 className="text-lg font-semibold text-zion-slate-dark mb-4">Notification Settings</h3>"
 ""
             <div className="space-y-4">""
@@ -254,15 +254,15 @@ initial={{ "scale": 0 }}
             initial = {;
   { "opacity": "0", "scale": "0.9",;"
   "y": "-10;"
-"}}"
+"}"
             animate = {;
   { "opacity": "1", "scale": "1",;"
   "y": "0;"
-"}}"
+"}"
             exit = {;
   { "opacity": "0", "scale": "0.9",;"
   "y": "-10;"
-"}}`;`            className={`fixed ${getPositionClasses()} z-40 mt-20 bg-white/95 backdrop-blur-xl rounded-2xl shadow-2xl border border-zion-cyan/20 p-4 w-96 max-h-96 overflow-hidden`}`;
+"}`;`            className={`fixed ${getPositionClasses()} z-40 mt-20 bg-white/95 backdrop-blur-xl rounded-2xl shadow-2xl border border-zion-cyan/20 p-4 w-96 max-h-96 overflow-hidden`}`;
             {/* Header */}";"
             <div className="flex items-center justify-between mb-4">";"
               <h3 className="text-lg font-semibold text-zion-slate-dark">Notifications;"
@@ -277,8 +277,8 @@ initial={{ "scale": 0 }}
               <AnimatePresence>;
                 {notifications.length === 0 ? (<motion.div;
                     }
-                    initial={{ "opacity": 0 }}
-                    animate={{ "opacity": 1 }}""
+                    initial={ "opacity": 0 }
+                    animate={ "opacity": 1 }""
                     className="text-center py-8 text-zion-slate/60""
 "';'
                     <Bell className="w-12 h-12 mx-auto mb-2 opacity-50" />';';'
@@ -287,9 +287,9 @@ initial={{ "scale": 0 }}
                 ) : (
                   notifications.map((notification) => (
                     <motion.div,
-animate={{ "opacity": 1 }}";"
-                    initial={{ "opacity": "0 "}}"
-                    animate={{ "opacity": "1 "}}";"
+animate={ "opacity": 1 }";"
+                    initial={ "opacity": "0 "}"
+                    animate={ "opacity": "1 "}";"
                     className="text-center py-8 text-zion-slate/60";"
 ";"
                     <Bell className="w-12 h-12 mx-auto mb-2 opacity-50" />;"
@@ -303,15 +303,15 @@ animate={{ "opacity": 1 }}";"
                       initial = {;
   { "opacity": "0",;"
   "x": "5 0;"
-"}}"
+"}"
                       animate = {;
   { "opacity": "1",;"
   "x": "0;"
-"}}"
+"}"
                       exit = {;
   { "opacity": "0", "x": "-50",;"
   "height": "0;"
-"}}"
+"}"
                       layout;
                       className = {;
 `;`        <button
@@ -330,17 +330,17 @@ initial = {
   { "opacity": 0, "scale": 0.9
   }
   "y": -10
-}}
+}
             animate = {
   { "opacity": 1, "scale": 1
   }
   "y": 0
-}}
+}
             exit = {
   { "opacity": 0, "scale": 0.9
   }
   "y": -10
-}}``            className={`fixed ${getPositionClasses()} z-40 mt-20 bg-white/95 backdrop-blur-xl rounded-2xl shadow-2xl border border-zion-cyan/20 p-6 w-80`}`""
+}``            className={`fixed ${getPositionClasses()} z-40 mt-20 bg-white/95 backdrop-blur-xl rounded-2xl shadow-2xl border border-zion-cyan/20 p-6 w-80`}`""
             <h3 className="text-lg font-semibold text-zion-slate-dark mb-4">Notification Settings"
 ""
             <div className="space-y-4">""
@@ -391,17 +391,17 @@ initial = {
   { "opacity": 0, "scale": 0.9
   }
   "y": -10
-}}
+}
             animate = {
   { "opacity": 1, "scale": 1
   }
   "y": 0
-}}
+}
             exit = {
   { "opacity": 0, "scale": 0.9
   }
   "y": -10
-}}``            className={`fixed ${getPositionClasses()} z-40 mt-20 bg-white/95 backdrop-blur-xl rounded-2xl shadow-2xl border border-zion-cyan/20 p-4 w-96 max-h-96 overflow-hidden`}`            {/* Header */}""
+}``            className={`fixed ${getPositionClasses()} z-40 mt-20 bg-white/95 backdrop-blur-xl rounded-2xl shadow-2xl border border-zion-cyan/20 p-4 w-96 max-h-96 overflow-hidden`}`            {/* Header */}""
             <div className="flex items-center justify-between mb-4">""
               <h3 className="text-lg font-semibold text-zion-slate-dark">Notifications"
               <button,
@@ -415,8 +415,8 @@ onClick={() => setIsOpen(false)}""
               <AnimatePresence>
                 {notifications.length === 0 ? (<motion.div
 }
-initial={{ "opacity": 0 }}
-                    animate={{ "opacity": 1 }}""
+initial={ "opacity": 0 }
+                    animate={ "opacity": 1 }""
                     className="text-center py-8 text-zion-slate/60""
 ""
                     <Bell className="w-12 h-12 mx-auto mb-2 opacity-50" />"
@@ -430,17 +430,17 @@ key={notification.id}
   { "opacity": 0
   }
   "x": 5 0
-}}
+}
                       animate = {
   { "opacity": 1
   }
   "x": 0
-}}
+}
                       exit = {
   { "opacity": 0, "x": -50
   }
   "height": 0
-}}
+}
                       layout,
 className = {
 ``  `p-4 rounded-xl ${getNotificationStyles(notification.type,;`  }
@@ -498,7 +498,7 @@ onClick={() => dismissNotification(notification.id)}""
 onClick={() => {
                                     }
                                     notification.action!.onClick();
-                                    markAsRead(notification.id)}}"                                  className="text-xs px-2 py-1 bg-zion-cyan/10 "hover": "b g-zion-cyan/20 text-zion-cyan rounded transition-colors";"
+                                    markAsRead(notification.id)}"                                  className="text-xs px-2 py-1 bg-zion-cyan/10 "hover": "b g-zion-cyan/20 text-zion-cyan rounded transition-colors";"
                                 >;
                                   {notification.action.label"}"
                                 </button>) }
@@ -514,7 +514,7 @@ onClick={() => {
                           </div>;
                         </div>;
                       </div>;
-                                    markAsRead(notification.id)}}"                                  className="text-xs px-2 py-1 bg-zion-cyan/10 "hover": b g-zion-cyan/20 text-zion-cyan rounded transition-colors""
+                                    markAsRead(notification.id)}"                                  className="text-xs px-2 py-1 bg-zion-cyan/10 "hover": b g-zion-cyan/20 text-zion-cyan rounded transition-colors""
                                 >
                                   {notification.action.label}
                                 </button>) }
@@ -541,7 +541,7 @@ export ;
     if((window as any).addNotification) {;
       (window as any).addNotification(notification)}
   }, []) ;
-  return { addNotification }};
+  return { addNotification };
 // Utility functions for common notification types';'
 export ';';'
         "priority": 'medium',';';'
@@ -616,7 +616,7 @@ export ';';'
 </any>
 </NotificationSettings>
 </Notification>';'
-</NotificationSystemProps>;';;';'
+</NotificationSystemProps>;';';'
 ;
 // Utility functions for common notification types;
 export;

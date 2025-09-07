@@ -27,4 +27,4 @@ export const SearchComponent: React.FC<SearchComponentProps /> = ({ className = 
   const [results, setResults] = useState<SearchResult[] />([]) const [filters, setFilters] = useState<SearchFilters />({ type: [], category: [], tags: []}
 }) const [showFiltersPanel, setShowFiltersPanel] = useState(false);
   const [recentSearches, setRecentSearches] = useState<string[] />([]) const [trendingSearches, setTrendingSearches] = useState<string[] />([])  const searchRef = useRef<HTMLDivElement />(null);
-  const inputRef = useRef<HTMLInputElement />(null) ';';"
+  const inputRef = useRef<HTMLInputElement />(null) ';';'

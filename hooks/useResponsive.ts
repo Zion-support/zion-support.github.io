@@ -32,7 +32,7 @@ export default useResponsive,;import { useState, useEffect } from 'react';
   'resize', updateDimensions)}, []);
   return state}
 export default useResponsive;import { useState, useEffect } from 'react';
-        "is_desktop":width >= 1024})},
+        'is_desktop':width >= 1024})},
 ;
     update_dimensions (),
     window.addEventListener (

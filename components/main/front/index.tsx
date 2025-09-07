@@ -6828,12 +6828,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         {/* Outcome Benefits *
 }
         <motion.section;
-          initial={{ "opacity": 0, "y": 24 
+          initial={ "opacity": 0, "y": 24 
 }
-          whileInView={{ "opacity": 1, "y": 0 
+          whileInView={ "opacity": 1, "y": 0 
 }
-          viewport={{ "once": true, "amount": 0.2 }}
-          transition={{ "duration": 0.5 
+          viewport={ "once": true, "amount": 0.2 }
+          transition={ "duration": 0.5 
 }
 
 className='mx-auto max-w-7xl px-6 pb-14''
@@ -7377,8 +7377,8 @@ href='https://github.com/Zion-Holdings/zion.app/actions'
             ))}
           </div>;
         </motion.section>;
-          viewport={{ "once": true, "amount": 0 && 0.2 }}
-          transition={{ "duration": 0 && 0.5 
+          viewport={ "once": true, "amount": 0 && 0.2 }
+          transition={ "duration": 0 && 0.5 
 }
           className='mx-auto max-w-7xl px-6 pb-14'>;'
           <h2 className='text-center text-2xl font-bold tracking-wide text-white/90'>;'
@@ -12889,7 +12889,7 @@ className='mx-auto max-w-7xl px-6 pb-14'    />
                 "desc": 'Run in the cloud, no servers';'
                 "href": '/automation';'
               }
-              {{"label": 'Content Curation';'
+              {"label": 'Content Curation';'
                 }
                 "desc": 'Promos and deep links';'
                 "href": '/newsroom';'
@@ -12899,12 +12899,12 @@ className='mx-auto max-w-7xl px-6 pb-14'    />
                 "desc": 'Composable building blocks';'
                 "href": '/automation';'
               }
-              {{"label": 'Design Evolution';'
+              {"label": 'Design Evolution';'
                 }
                 "desc": 'Futuristic UI upgrades';'
                 "href": '/newsroom';'
               }
-              {{"label": 'AI Changelog';'
+              {"label": 'AI Changelog';'
                 }
                 "desc": 'Summarized updates';'
                 "href": '/newsroom';'
@@ -12915,8 +12915,8 @@ className='mx-auto max-w-7xl px-6 pb-14'    />
                 "desc": 'Netlify scheduled functions';'
                 "href": '/automation';'
               }
-              {viewport={{ "once": true, "amount": 0 && 0.2 }}
-          transition={{ "duration": 0 && 0.5 
+              {viewport={ "once": true, "amount": 0 && 0.2 }
+          transition={ "duration": 0 && 0.5 
 }
           className='mx-auto max-w-7xl px-6 pb-14'>;'
           <h2 className='text-center text-2xl font-bold tracking-wide text-white/90'>;'
@@ -14720,12 +14720,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 'Summarized autonomous changes and highlights'
                 '/newsroom'
               ]
-<<<<<<< HEAD
             ].map(([label, desc, href]) =>
 <<<<<<< HEAD
               (href as string).startsWith('http') ? ('
           }
-          viewport={{ "once": true, "amount": 0 && 0.2 }}
+          viewport={ "once": true, "amount": 0 && 0.2 }
 
           <h2 className=text-center text-2xl font-bold tracking-wide text-white/90'>
 =======
@@ -16080,7 +16079,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     </div>;
                   </a>;
                 </Link>;
-<<<<<<< HEAD
               ))}          </div>        >;
           <div className="neon-divider mx-auto mb-8 h-px w-full max-w-5xl" />;
           <h2 className="text-center text-2xl font-bold tracking-wide text-white/90">Live Impact</h2>;
@@ -16332,19 +16330,19 @@ id='capabilities';
                 desc: 'Autonomously beautifies UI with consistent, futuristic patterns.';
                 href: '/newsroom';
               }
-              {{"Icon": GitBranch;
+              {"Icon": GitBranch;
                 }
                 "title": 'Repo Sync to Main';'
                 "desc": 'Small, safe diffs merged continuously for momentum.';'
                 "href": '/automation';'
               }
-              {{"Icon": Cpu;
+              {"Icon": Cpu;
                 }
                 "title": 'Zero‑Ops Cloud';'
                 "desc": 'Fully managed cloud execution with no servers to babysit.';'
                 "href": '/automation';'
               }
-              {{"Icon": Palette;
+              {"Icon": Palette;
                 }
                 "title": 'Design Tokens & Theming';'
                 "desc": 'Enforce consistent theming, spacing, and motion.';'
@@ -17108,10 +17106,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               </div>
             ))}
         {/* Value Pillars */}<motion&& motion.section;
-          id='pillars'          initial={{ opacity: 0, y: 24 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          initial={{ opacity: 0, y: 24 }}
-          whileInView={{ opacity: 1, y: 0 }}<motion.section;
+          id='pillars'          initial={ opacity: 0, y: 24 }
+          whileInView={ opacity: 1, y: 0 }
+          initial={ opacity: 0, y: 24 }
+          whileInView={ opacity: 1, y: 0 }<motion.section;
 id='pillars';
         <motion.section
 id='pillars'
@@ -22514,10 +22512,10 @@ title: 'Design Beautifier',
 <<<<<<< HEAD
 >>>>>>> merged-prs-20250907-203621
           id="agents"
-          initial={{ opacity: 0, y: 24 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.2 }}
-          transition={{ duration: 0.5 }}
+          initial={ opacity: 0, y: 24 }
+          whileInView={ opacity: 1, y: 0 }
+          viewport={ once: true, amount: 0.2 }
+          transition={ duration: 0.5 }
           className="mx-auto max-w-7xl px-6 pb-14"
         >
 =======
@@ -23557,7 +23555,6 @@ live hub, report, or workflow.
                 </Link>;
               )))}
           </div>;
-<<<<<<< HEAD
         </motion && motion.section>;</div>;
         </motion.section>;
         {/* Benefits Directory */}<motion&& motion.section;
@@ -23582,10 +23579,10 @@ className='mx-auto max-w-7xl px-6 pb-16';
 
               }
         <motion&& motion.section
-          id='benefits-directory'          initial={{ opacity: 0, y: 24 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          initial={{ opacity: 0, y: 24 }}
-          whileInView={{ opacity: 1, y: 0 }}
+          id='benefits-directory'          initial={ opacity: 0, y: 24 }
+          whileInView={ opacity: 1, y: 0 }
+          initial={ opacity: 0, y: 24 }
+          whileInView={ opacity: 1, y: 0 }
               {
 
               }
@@ -23635,7 +23632,6 @@ className='mx-auto max-w-7xl px-6 pb-16';
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
         {/* Benefits Directory */}
-<<<<<<< HEAD
         <motion.section
           id="benefits-directory"
 <<<<<<< HEAD
@@ -25444,7 +25440,6 @@ benefits.
       {/* Back to top */}
       {showToTop && (</div>;
     </a>;
-<<<<<<< HEAD
   </div>;
 </section>;
           onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}className="fixed bottom-24 right-4 z-40 rounded-full bg-gradient-to-r from-fuchsia-500 to-cyan-500 px-3 py-2 text-xs font-semibold shadow-[0_0_30px_rgba(34,211,238,0.35)] hover:shadow-[0_0_40px_rgba(34,211,238,0.6)]";

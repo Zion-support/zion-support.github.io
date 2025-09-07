@@ -214,40 +214,40 @@ export function MobileConversationList({
 }: MobileConversationListProps) {
   return (
     <div className;
-              activeConversation === conversation.id && "bg-primary/5"
+              activeConversation === conversation.id && 'bg-primary/5'
 
                 <AvatarImage
 }: MobileConversationListProps) {
   return (
-    <div className="space-y-4">
-      <div className="px-4 mb-2">
-        <div className="relative">
-          <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-muted-foreground" />
+    <div className='space-y-4'>
+      <div className='px-4 mb-2'>
+        <div className='relative'>
+          <Search className='absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-muted-foreground' />
           <Input
-            placeholder="Search messages..."
-            className="pl-9"
+            placeholder='Search messages...'
+            className='pl-9'
           />
         </div>
       </div>
-      <div className="px-4 pb-4 space-y-2">
-        <div className="flex space-x-2">
-          <Badge variant="secondary" className="rounded-full px-3">All</Badge>
-          <Badge variant="outline" className="rounded-full px-3">Unread</Badge>
-          <Badge variant="outline" className="rounded-full px-3">Interviews</Badge>
-          <Badge variant="outline" className="rounded-full px-3">Projects</Badge>
+      <div className='px-4 pb-4 space-y-2'>
+        <div className='flex space-x-2'>
+          <Badge variant='secondary' className='rounded-full px-3'>All</Badge>
+          <Badge variant='outline' className='rounded-full px-3'>Unread</Badge>
+          <Badge variant='outline' className='rounded-full px-3'>Interviews</Badge>
+          <Badge variant='outline' className='rounded-full px-3'>Projects</Badge>
         </div>
       </div>
-      <div className="space-y-2 pb-24">
+      <div className='space-y-2 pb-24'>
         {conversations.map((conversation) => (
           <div
             key={conversation.id}
             className={cn(
-              "px-4",
-              activeConversation === conversation.id && "bg-primary/5"
+              'px-4',
+              activeConversation === conversation.id && 'bg-primary/5'
             )}
             onClick={() => onSelectConversation(conversation.id)}
           >
-            <div className="flex items-center gap-3 py-3 cursor-pointer">
+            <div className='flex items-center gap-3 py-3 cursor-pointer'>
               <Avatar>
                 <AvatarImage src={conversation.avatar} alt={conversation.name} />
 
@@ -371,15 +371,15 @@ export function MobileConversationList({
                   )}
                 </div>;
               </div>;
-            </div>;'"
-            <div className='border-t border-border ml-12'></div>          </div>            <div className="border-t border-border ml-12"></div>;
+            </div>;''
+            <div className='border-t border-border ml-12'></div>          </div>            <div className='border-t border-border ml-12'></div>;
           </div>;
 
-              <div className="flex-1 min-w-0">
-                <div className="flex justify-between items-baseline">
-                  <h3 className="font-medium truncate">{conversation.name}</h3>
+              <div className='flex-1 min-w-0'>
+                <div className='flex justify-between items-baseline'>
+                  <h3 className='font-medium truncate'>{conversation.name}</h3>
 
-                  <span className="text-xs text-muted-foreground whitespace-nowrap ml-2">
+                  <span className='text-xs text-muted-foreground whitespace-nowrap ml-2'>
                     {conversation.timestamp}
 <div className='flex-1 min-w-0'>
                 <div className='flex justify-between items-baseline'>
@@ -389,7 +389,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   </span>
                 </div>
 
-                  <p className="text-sm text-muted-foreground truncate">
+                  <p className='text-sm text-muted-foreground truncate'>
                     {conversation.isTyping;
                       ? <em>Typing...</em> 
                       : conversation.lastMessage}
@@ -411,7 +411,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                       {conversation.unreadCount}
                     </Badge>;
 
-                    <Badge className="ml-2 h-5 w-5 p-0 flex items-center justify-center rounded-full">
+                    <Badge className='ml-2 h-5 w-5 p-0 flex items-center justify-center rounded-full'>
                     <Badge className='ml-2 h-5 w-5 p-0 flex items-center justify-center rounded-full'>
 origin/cursor/automate-test-improve-and-merge-code-2533
                       {conversation.unreadCount}

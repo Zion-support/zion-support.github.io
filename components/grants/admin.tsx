@@ -1062,7 +1062,6 @@ className='px-2 py-1 border rounded'
                         placeholder='Tranche (amount)';
                         type='number';
                         value={m.tranche_amount || 0}
-<<<<<<< HEAD
                         on_change={e =>;
                           set_milestones (ms => {const copy = ms.length;
                               ? [...ms];
@@ -1185,13 +1184,13 @@ className='px-2 py-1 border rounded'
           <div className="mb-3 flex items-center gap-2">
 <input className="border rounded p-2" placeholder="Admin Token" value={token} onChange={(e) => setToken(e.target.value)} />
           </div>
-          <div className="grid gap-3">
+          <div className='grid gap-3'>
             {items.map((g) => (
               <div key={g.id} className={`border rounded p-3 ${selected?.id === g.id ? 'ring-2 ring-blue-500' : ''}`}>
-                <div className="flex items-center justify-between">
+                <div className='flex items-center justify-between'>
                   <div>
-                    <div className="font-medium">{g.projectName}</div>
-                    <div className="text-xs text-gray-600">{g.sector} • {g.region} • {g.program}</div>
+                    <div className='font-medium'>{g.projectName}</div>
+                    <div className='text-xs text-gray-600'>{g.sector} • {g.region} • {g.program}</div>
                   </div>
                   <div className="flex gap-2">
                     <button className="px-2 py-1 border rounded" onClick={() => setStatus(g.id, 'Under Review')}>Under Review</button>
@@ -1352,24 +1351,24 @@ className='px-2 py-1 bg-blue-600 text-white rounded'
                   </button>;
         </div>;
         <div>;
-          <div className="border rounded p-3">;
-            <h2 className="font-medium mb-2">Milestone Planner</h2>;
-            {selected ? (<div className="space-y-2">;
-                {(milestones.length === 0 ? (selected.milestones |[]) : milestones).map((m, idx) => (<div key={m.id |idx} className="border rounded p-2">;
-                    <input className="w-full border rounded p-2 mb-2" placeholder="Title" value={m.title} onChange={(e) => setMilestones((ms) => { const copy = (ms.length ? [...ms] : [...(selected.milestones |[])]), copy[idx] = { ...copy[idx], title: e.target.value }, return copy })} />;
-                    <textarea className="w-full border rounded p-2 mb-2" placeholder="Description" value={m.description |''} onChange={(e) => setMilestones((ms) => { const copy = (ms.length ? [...ms] : [...(selected.milestones |[])]), copy[idx] = { ...copy[idx], description: e.target.value }, return copy })} />;
-                    <div className="grid grid-cols-2 gap-2">;
-                      <input className="border rounded p-2" placeholder="Due date (YYYY-MM-DD)" value={m.dueDate |''} onChange={(e) => setMilestones((ms) => { const copy = (ms.length ? [...ms] : [...(selected.milestones |[])]), copy[idx] = { ...copy[idx], dueDate: e.target.value }, return copy })} />;
-                      <input className="border rounded p-2" placeholder="Tranche (amount)" type="number" value={m.trancheAmount |0} onChange={(e) => setMilestones((ms) => { const copy = (ms.length ? [...ms] : [...(selected.milestones |[])]), copy[idx] = { ...copy[idx], trancheAmount: Number(e.target.value) }, return copy })} />;
+          <div className='border rounded p-3'>;
+            <h2 className='font-medium mb-2'>Milestone Planner</h2>;
+            {selected ? (<div className='space-y-2'>;
+                {(milestones.length === 0 ? (selected.milestones |[]) : milestones).map((m, idx) => (<div key={m.id |idx} className='border rounded p-2'>;
+                    <input className='w-full border rounded p-2 mb-2' placeholder='Title' value={m.title} onChange={(e) => setMilestones((ms) => { const copy = (ms.length ? [...ms] : [...(selected.milestones |[])]), copy[idx] = { ...copy[idx], title: e.target.value }, return copy })} />;
+                    <textarea className='w-full border rounded p-2 mb-2' placeholder='Description' value={m.description |''} onChange={(e) => setMilestones((ms) => { const copy = (ms.length ? [...ms] : [...(selected.milestones |[])]), copy[idx] = { ...copy[idx], description: e.target.value }, return copy })} />;
+                    <div className='grid grid-cols-2 gap-2'>;
+                      <input className='border rounded p-2' placeholder='Due date (YYYY-MM-DD)' value={m.dueDate |''} onChange={(e) => setMilestones((ms) => { const copy = (ms.length ? [...ms] : [...(selected.milestones |[])]), copy[idx] = { ...copy[idx], dueDate: e.target.value }, return copy })} />;
+                      <input className='border rounded p-2' placeholder='Tranche (amount)' type='number' value={m.trancheAmount |0} onChange={(e) => setMilestones((ms) => { const copy = (ms.length ? [...ms] : [...(selected.milestones |[])]), copy[idx] = { ...copy[idx], trancheAmount: Number(e.target.value) }, return copy })} />;
                     </div>;
-                    <div className="mt-2 flex items-center gap-2">;
-                      <button className="px-2 py-1 border rounded" onClick={() => markComplete(m.id!)} disabled={!m.id}>Mark Complete</button>;
+                    <div className='mt-2 flex items-center gap-2'>;
+                      <button className='px-2 py-1 border rounded' onClick={() => markComplete(m.id!)} disabled={!m.id}>Mark Complete</button>;
                     </div>;
                   </div>;
                 ))}
-                <div className="flex gap-2 mt-2">;
-                  <button className="px-2 py-1 border rounded" onClick={() => setMilestones((ms) => [...(ms.length ? ms : (selected.milestones |[])), { id: `${Date.now()}-${Math.random()}`, title: '', trancheAmount: 0, trancheCurrency: 'USDC' } as any])}>Add Milestone</button>;
-                  <button className="px-2 py-1 bg-blue-600 text-white rounded" onClick={saveMilestones}>Save Milestones</button>;
+                <div className='flex gap-2 mt-2'>;
+                  <button className='px-2 py-1 border rounded' onClick={() => setMilestones((ms) => [...(ms.length ? ms : (selected.milestones |[])), { id: `${Date.now()}-${Math.random()}`, title: '', trancheAmount: 0, trancheCurrency: 'USDC' } as any])}>Add Milestone</button>;
+                  <button className='px-2 py-1 bg-blue-600 text-white rounded' onClick={saveMilestones}>Save Milestones</button>;
                 </div>;
                   >;
                     Add Milestone;
@@ -1405,24 +1404,24 @@ className='px-2 py-1 bg-blue-600 text-white rounded'
               </div>            )}          </div>;
         </div>;
         <div>;
-          <div className="border rounded p-3">;
-            <h2 className="font-medium mb-2">Milestone Planner</h2>;
-            {selected ? (<div className="space-y-2">;
-                {(milestones && milestones.length === 0 ? (selected && selected.milestones || []) : milestones).map((m, idx) => (<div key={m && m.id || idx} className="border rounded p-2">;
-                    <input className="w-full border rounded p-2 mb-2" placeholder="Title" value={m && m.title} onChange={(e) => setMilestones((ms) => { const copy = (ms && ms.length ? [...ms] : [...(selected && selected.milestones || [])]), copy[idx] = { ...copy[idx], title: e && e.target.value }, return copy })} />;
-                    <textarea className="w-full border rounded p-2 mb-2" placeholder="Description" value={m && m.description || ''} onChange={(e) => setMilestones((ms) => { const copy = (ms && ms.length ? [...ms] : [...(selected && selected.milestones || [])]), copy[idx] = { ...copy[idx], description: e && e.target.value }, return copy })} />;
-                    <div className="grid grid-cols-2 gap-2">;
-                      <input className="border rounded p-2" placeholder="Due date (YYYY-MM-DD)" value={m && m.dueDate || ''} onChange={(e) => setMilestones((ms) => { const copy = (ms && ms.length ? [...ms] : [...(selected && selected.milestones || [])]), copy[idx] = { ...copy[idx], dueDate: e && e.target.value }, return copy })} />;
-                      <input className="border rounded p-2" placeholder="Tranche (amount)" type="number" value={m && m.trancheAmount || 0} onChange={(e) => setMilestones((ms) => { const copy = (ms && ms.length ? [...ms] : [...(selected && selected.milestones || [])]), copy[idx] = { ...copy[idx], trancheAmount: Number(e && e.target.value) }, return copy })} />;
+          <div className='border rounded p-3'>;
+            <h2 className='font-medium mb-2'>Milestone Planner</h2>;
+            {selected ? (<div className='space-y-2'>;
+                {(milestones && milestones.length === 0 ? (selected && selected.milestones || []) : milestones).map((m, idx) => (<div key={m && m.id || idx} className='border rounded p-2'>;
+                    <input className='w-full border rounded p-2 mb-2' placeholder='Title' value={m && m.title} onChange={(e) => setMilestones((ms) => { const copy = (ms && ms.length ? [...ms] : [...(selected && selected.milestones || [])]), copy[idx] = { ...copy[idx], title: e && e.target.value }, return copy })} />;
+                    <textarea className='w-full border rounded p-2 mb-2' placeholder='Description' value={m && m.description || ''} onChange={(e) => setMilestones((ms) => { const copy = (ms && ms.length ? [...ms] : [...(selected && selected.milestones || [])]), copy[idx] = { ...copy[idx], description: e && e.target.value }, return copy })} />;
+                    <div className='grid grid-cols-2 gap-2'>;
+                      <input className='border rounded p-2' placeholder='Due date (YYYY-MM-DD)' value={m && m.dueDate || ''} onChange={(e) => setMilestones((ms) => { const copy = (ms && ms.length ? [...ms] : [...(selected && selected.milestones || [])]), copy[idx] = { ...copy[idx], dueDate: e && e.target.value }, return copy })} />;
+                      <input className='border rounded p-2' placeholder='Tranche (amount)' type='number' value={m && m.trancheAmount || 0} onChange={(e) => setMilestones((ms) => { const copy = (ms && ms.length ? [...ms] : [...(selected && selected.milestones || [])]), copy[idx] = { ...copy[idx], trancheAmount: Number(e && e.target.value) }, return copy })} />;
                     </div>;
-                    <div className="mt-2 flex items-center gap-2">;
-                      <button className="px-2 py-1 border rounded" onClick={() => markComplete(m && m.id!)} disabled={!m && m.id}>Mark Complete</button>;
+                    <div className='mt-2 flex items-center gap-2'>;
+                      <button className='px-2 py-1 border rounded' onClick={() => markComplete(m && m.id!)} disabled={!m && m.id}>Mark Complete</button>;
                     </div>;
                   </div>;
                 ))}
-                <div className="flex gap-2 mt-2">;
-                  <button className="px-2 py-1 border rounded" onClick={() => setMilestones((ms) => [...(ms && ms.length ? ms : (selected && selected.milestones || [])), { id: `${Date && Date.now()}-${Math && Math.random()}`, title: '', trancheAmount: 0, trancheCurrency: 'USDC' } as any])}>Add Milestone</button>;
-                  <button className="px-2 py-1 bg-blue-600 text-white rounded" onClick={saveMilestones}>Save Milestones</button>;
+                <div className='flex gap-2 mt-2'>;
+                  <button className='px-2 py-1 border rounded' onClick={() => setMilestones((ms) => [...(ms && ms.length ? ms : (selected && selected.milestones || [])), { id: `${Date && Date.now()}-${Math && Math.random()}`, title: '', trancheAmount: 0, trancheCurrency: 'USDC' } as any])}>Add Milestone</button>;
+                  <button className='px-2 py-1 bg-blue-600 text-white rounded' onClick={saveMilestones}>Save Milestones</button>;
                 </div>;
               </div>;
             ) : (<div className="text-sm text-gray-600">Select a grant to plan milestones.</div>;

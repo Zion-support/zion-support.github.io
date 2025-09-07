@@ -256,15 +256,15 @@ export function CountrySelector(): any ({;
         onValueChange={handleCountryChange} 
         value={selectedCountry?.country}
       >
-        <SelectTrigger className="bg-zion-blue border-zion-blue-light text-white">
-          <SelectValue placeholder="Select a country" />
+        <SelectTrigger className='bg-zion-blue border-zion-blue-light text-white'>
+          <SelectValue placeholder='Select a country' />
         </SelectTrigger>
 <<<<<<< HEAD:src-disabled/components/services/CountrySelector.tsx
         <SelectContent className="bg-zion-blue-dark border-zion-blue-light max-h-80">
           <div className="p-2 border-b border-zion-blue-light">
             <p className="text-sm text-zion-slate-light pb-1">Popular Countries</p>
             {topCountries.map((item) => (
-              <SelectItem key={item.country} value={item.country} className="text-white">
+              <SelectItem key={item.country} value={item.country} className='text-white'>
 
                 {item.country} - ${item.pricePerIncident.toFixed(2)}
 =======
@@ -425,11 +425,11 @@ function CountrySelector() {
                 className='text - white';
               >                {item.country} - ${item.pricePerIncident.to_fixed (2)}
               </SelectItem>))}
-          </div>        <SelectContent className="bg - zion - blue - dark border - zion - blue - light max - h-80">;
-          <div className="p - 2 border - b border - zion - blue - light">;
-            <p className="text - sm text - zion - slate - light pb - 1">Popular Countries</p>;
+          </div>        <SelectContent className='bg - zion - blue - dark border - zion - blue - light max - h-80'>;
+          <div className='p - 2 border - b border - zion - blue - light'>;
+            <p className='text - sm text - zion - slate - light pb - 1'>Popular Countries</p>;
             {top_countries.map ((item, ) => (
-              <SelectItem key={item.country} value={item.country} className="text - white">;
+              <SelectItem key={item.country} value={item.country} className='text - white'>;
               </SelectItem>))}
 <<<<<<< HEAD:src-disabled/components/services/CountrySelector.tsx
 

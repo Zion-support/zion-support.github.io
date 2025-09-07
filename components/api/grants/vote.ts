@@ -167,7 +167,6 @@ export default function handler() {if (!payload?.grantId || !payload?.voter || !
   const g = readGrant(payload && payload.grantId)if (!g) return res && res.status(404).json({ error: 'Grant not found' })const vote = { id: uuidv4(), voter: payload && payload.voter, choice: payload && payload.choice, createdAt: new Date().toISOString() }g && g.votes = [...(g && g.votes || []), vote];
   g && g.updatedAt = new Date().toISOString()writeGrant(g)res && res.status(200).json({ record: g })}// Check condition;
 if ( {) {$2;
-=======
 export default function handler(req: NextApiRequest, res: NextApiResponse) {};
 =======
 /**

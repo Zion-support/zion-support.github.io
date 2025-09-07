@@ -557,11 +557,11 @@ className='text-sm font-medium leading-none peer-"disabled":cursor-not-allowed p
               </div>;
                 <Button;
                   variant='outline';'
-                  on_click={() => {setShowCreateDialog (false)resetWebhookForm ()}}
+                  on_click={() => {setShowCreateDialog (false)resetWebhookForm ()}
                 >;
                   Cancel;
                 </Button>;<DialogFooter>;
-                <Button variant="outline" onClick={() => {setShowCreateDialog(false)resetWebhookForm()}}>;"
+                <Button variant="outline" onClick={() => {setShowCreateDialog(false)resetWebhookForm()}>;"
                   Cancel;
                 </Button>;
                 <Button onClick={handleCreateWebhook} disabled={webhookName.trim() === "" ||;"
@@ -720,7 +720,7 @@ className='text-sm font-medium leading-none peer-"disabled":cursor-not-allowed p
                 </div>;
               </div>;
               <DialogFooter>;
-                <Button variant="outline" onClick={() => {setShowCreateDialog(false),resetWebhookForm()}}>;"
+                <Button variant="outline" onClick={() => {setShowCreateDialog(false),resetWebhookForm()}>;"
                   Cancel;
                 </Button>;
                 <Button onClick={handleCreateWebhook} disabled={webhookName.trim() === "" ||;"
@@ -973,7 +973,7 @@ if ( {) {$2;
       {/* Test Webhook Dialog */}
       <Dialog;
         open={showTestDialog !== null}onOpenChange={(open) => {if (!open) {setShowTestDialog(null)setTestEventType('new_application')if (showTestResult) {setShowTestResult(false)}'
-        }}onOpenChange={(open) => {// Check condition;
+        }onOpenChange={(open) => {// Check condition;
 }
 if ( {) {$2;
 }
@@ -982,11 +982,11 @@ if ( {) {$2;
 }
               setShowTestResult (false)clearTestResult () }
           }
-        }}
+        }
       >;
         <DialogContent className='bg - zinc - 900 border - zinc - 800 text - white'>              clearTestResult ()}'
-             }setShowTestResult(false)clearTestResult()}}
-        }}>;
+             }setShowTestResult(false)clearTestResult()}
+        }>;
         <DialogContent className="bg-zinc-900 border-zinc-800 text-white">;"
 <DialogContent className='bg-zinc-900 border-zinc-800 text-white'>;'
           <DialogHeader>;
@@ -1030,7 +1030,7 @@ if ( {) {$2;
                     value = {testEventType}
                     onValueChange = {(value,) => setTestEventType(value as WebhookEventType)}clearTestResult()}
           }
-        }}
+        }
       >;
         <DialogContent className="bg-zinc-900 border-zinc-800 text-white">;"
           <DialogHeader>;
@@ -1164,7 +1164,7 @@ if ( {) {$2;
                   <div className="flex items-center justify-between">;"
                     <Label>Response Status</Label>;
                     <Badge;
-                      className={{testResult?.status} {testResult?.statusText}<div className="space-y-2 mt-4">;"
+                      className={testResult?.status} {testResult?.statusText}<div className="space-y-2 mt-4">;"
                     <Label>Response Body</Label>;
                     <ScrollArea className="h-[200px] rounded border border-zinc-800 bg-black p-4">;"
                       <pre className="text-xs font-mono text-zinc-300 whitespace-pre-wrap break-all">;"
@@ -1265,15 +1265,15 @@ if ( {) {$2;
               </div>;<DialogFooter>;
                 <Button;
                   variant='default';'
-                  onClick={() => {setShowTestDialog(null)setShowTestResult(false)clearTestResult()}}
+                  onClick={() => {setShowTestDialog(null)setShowTestResult(false)clearTestResult()}
                 >                  Close;
                 </Button>;
                 <Button;
                   variant='outline';'
-                  onClick={() => {setShowTestResult(false)clearTestResult()}}
+                  onClick={() => {setShowTestResult(false)clearTestResult()}
                 >;
                   Test Another Event;
-                  clearTestResult()}}>;
+                  clearTestResult()}>;
                 </Button>;
               </DialogFooter>;
             </>;
@@ -1290,10 +1290,10 @@ if ( {) {$2;
                 </div>;
               </div>;
               <DialogFooter>;
-                <Button variant="default" onClick={() => {setShowTestDialog(null),setShowTestResult(false)clearTestResult()}}>;"
+                <Button variant="default" onClick={() => {setShowTestDialog(null),setShowTestResult(false)clearTestResult()}>;"
                   Close;
                 </Button>;
-                <Button variant="outline" onClick={() => {setShowTestResult(false)clearTestResult()}}>;"
+                <Button variant="outline" onClick={() => {setShowTestResult(false)clearTestResult()}>;"
                   Test Another Event;
                 </Button>;
               </DialogFooter>;
@@ -1302,8 +1302,8 @@ if ( {) {$2;
       </Dialog>;
       {/* Delete Webhook Confirmation Dialog */}onClick = {() => showDeleteConfirm && handleDeleteWebhook(showDeleteConfirm)}
               className="bg-red-600 "hover": bg-red-700";"
-                  onClick={() => {setShowTestResult(false)clearTestResult()}}
-                >                  Test Another Event                <Button variant="outline" onClick={() => {setShowTestResult(false)clearTestResult()}}>;"
+                  onClick={() => {setShowTestResult(false)clearTestResult()}
+                >                  Test Another Event                <Button variant="outline" onClick={() => {setShowTestResult(false)clearTestResult()}>;"
                 </Button>;
               </DialogFooter>;
             </>;
@@ -1549,10 +1549,10 @@ setTestEventType ('new application')if (showTestResult) {}";"
 }</SelectContent> </Select> <p className="text-xs text-zinc-500"> The event type will determine the structure of the test payload. </p> </div> </div> <DialogFooter> Cancel </Button> <Button onClick={() => showTestDialog && handleTestWebhook (showTestDialog) ";"
 }> Send Test </Button> </DialogFooter> </>) : (<> <div className="space-y-4 py-4"> <div className="space-y-2"> <div className="flex items-center justify-between"> <Label>Response Status</Label> <Badge > {testResult?.status;"
 }{testResult?.statusText ";"
-}</Badge> </div> <div className="space-y-2 mt-4"> <Label>Response Body</Label> <ScrollArea className="h-[200px] rounded border border-zinc-800 bg-black p-4"> </pre> </ScrollArea> </div> </div> </div> <DialogFooter> setShowTestDialog (null)setShowTestResult (false)clearTestResult ()}}> Close </Button> Test Another Event </Button> </DialogFooter> </>)}</DialogContent> </Dialog> {/* Delete Webhook Confirmation Dialog */;"
+}</Badge> </div> <div className="space-y-2 mt-4"> <Label>Response Body</Label> <ScrollArea className="h-[200px] rounded border border-zinc-800 bg-black p-4"> </pre> </ScrollArea> </div> </div> </div> <DialogFooter> setShowTestDialog (null)setShowTestResult (false)clearTestResult ()}> Close </Button> Test Another Event </Button> </DialogFooter> </>)}</DialogContent> </Dialog> {/* Delete Webhook Confirmation Dialog */;"
 }<AlertDialog open= {showDeleteConfirm !== null;
 }onOpenChange= {(open) => !open && setShowDeleteConfirm (null) ";"
-}> <AlertDialogContent className="bg-zinc-900 border-zinc-800 text-white"> <AlertDialogHeader> <AlertDialogTitle>Delete Webhook?</AlertDialogTitle> <AlertDialogDescription className="text-zinc-400"> This action will permanently remove this webhook. You will no longer receive events at this endpoint. </AlertDialogDescription> </AlertDialogHeader> <AlertDialogFooter> <AlertDialogCancel className="bg-transparent text-white "hover":bg-zinc-800 border-zinc-700"> Cancel </AlertDialogCancel> <AlertDialogAction > Delete </AlertDialogAction> </AlertDialogFooter> </AlertDialogContent> </AlertDialog> </Card>)}'"  )}}<AlertDialogCancel className='bg - transparent text - white "hover":bg - zinc - 800 border - zinc - 700'>;'
+}> <AlertDialogContent className="bg-zinc-900 border-zinc-800 text-white"> <AlertDialogHeader> <AlertDialogTitle>Delete Webhook?</AlertDialogTitle> <AlertDialogDescription className="text-zinc-400"> This action will permanently remove this webhook. You will no longer receive events at this endpoint. </AlertDialogDescription> </AlertDialogHeader> <AlertDialogFooter> <AlertDialogCancel className="bg-transparent text-white "hover":bg-zinc-800 border-zinc-700"> Cancel </AlertDialogCancel> <AlertDialogAction > Delete </AlertDialogAction> </AlertDialogFooter> </AlertDialogContent> </AlertDialog> </Card>)}'"  )}<AlertDialogCancel className='bg - transparent text - white "hover":bg - zinc - 800 border - zinc - 700'>;'
               Cancel;
             </AlertDialogCancel>;
             <AlertDialogAction;
@@ -1586,6 +1586,6 @@ setTestEventType ('new application')if (showTestResult) {}";"
         </AlertDialogContent>;
       </AlertDialog>;</Card>)"value": WebhookEventType,  "label": string, "description": string;
 }[] = [ {"value": 'new application',  "label": 'New Application', "description": 'When a talent applies to a job';'
-}}<AlertDialog open= {showDeleteConfirm !== null ;
+}<AlertDialog open= {showDeleteConfirm !== null ;
 }onOpenChange= {(open) => !open && setShowDeleteConfirm (null) ";"
 }> <AlertDialogContent className="bg-zinc-900 border-zinc-800 text-white"> <AlertDialogHeader> <AlertDialogTitle>Delete Webhook?</AlertDialogTitle> <AlertDialogDescription className="text-zinc-400"> This action will permanently remove this webhook. You will no longer receive events at this endpoint. </AlertDialogDescription> </AlertDialogHeader> <AlertDialogFooter> <AlertDialogCancel className="bg-transparent text-white "hover":bg-zinc-800 border-zinc-700"> Cancel </AlertDialogCancel> <AlertDialogAction > Delete </AlertDialogAction> </AlertDialogFooter> </AlertDialogContent> </AlertDialog> </Card>)}'";

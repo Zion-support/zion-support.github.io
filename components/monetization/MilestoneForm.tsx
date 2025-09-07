@@ -428,7 +428,7 @@ function MilestoneForm() {
       <div>
         <label className="block text-sm font-medium" htmlFor="input-Title">Title</label>
         <input
-          className="mt-1 w-full rounded border px-3 py-2"
+          className='mt-1 w-full rounded border px-3 py-2'
           value={title}
           onChange={(e) => setTitle(e.target.value)}
           placeholder="Phase 1 – Backend Setup"
@@ -628,12 +628,12 @@ export default function MilestoneForm({ onSubmit }: Props) {;
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         />
       </div>
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+      <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>
         <div>
           <label className="block text-sm font-medium" htmlFor="input-Due Date">Due Date</label>
           <input
-            type="date"
-            className="mt-1 w-full rounded border px-3 py-2"
+            type='date'
+            className='mt-1 w-full rounded border px-3 py-2'
             value={dueDate}
             onChange={(e) => setDueDate(e.target.value)}
             required
@@ -919,7 +919,7 @@ type='submit';
             className=mt-1 w-full rounded border px-3 py-2
             value={amountUsd}
             onChange={(e) => setAmountUsd(e.target.value)}
-            placeholder="3000"
+            placeholder='3000'
             required
           />
         </div>

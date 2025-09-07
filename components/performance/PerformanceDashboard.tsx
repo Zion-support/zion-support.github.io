@@ -89,7 +89,6 @@ const PerformanceDashboard: React.FC = () => {;
     return "text-red-600";
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
   }
-<<<<<<< HEAD
   if (!metrics) return null;
 <<<<<<< HEAD
   return (<div className="fixed bottom-4 right-4 z-50">;"
@@ -280,7 +279,6 @@ if ( {) {}
             // Check condition;
 if ( {) {}
   $2;
-=======
 
 const PerformanceDashboard: React.FC = () => {const [metrics, set_metrics] =;
   useState < PerformanceMetrics | null>(null;
@@ -300,7 +298,6 @@ if ( {) {$2;}
               new_metrics.firstContentfulPaint = entry.start_time;
             }
           } else // Check condition;
-<<<<<<< HEAD
 if ( {) {}
   $2;
 }
@@ -308,7 +305,6 @@ if ( {) {}
           } else // Check condition;
 if ( {) {}
   $2;
-=======
 if ( {) {$2;}
 }
             new_metrics.largestContentfulPaint = entry.start_time;
@@ -319,7 +315,6 @@ if ( {) {$2;}
             new_metrics.cumulativeLayoutShift =;
               (new_metrics.cumulativeLayoutShift || 0) + (entry as any).value;
           }
-<<<<<<< HEAD
         });
 ;
         // Check condition;
@@ -386,7 +381,6 @@ if (return null) {$2;}
         className=\"bg - blue - 600 text - white px - 4 py - 2 rounded - lg shadow - lg hover:bg - blue-700 transition-colors\">
 
         📊 Performance;
-<<<<<<< HEAD
       </button>;
       {is_visible && (<div className="absolute bottom - 16 right - 0 bg - white rounded - lg shadow - xl p-6 w-80 border">;"
           <h3 className="text - lg font-semibold mb-4">Performance Metrics</h3>;"
@@ -524,12 +518,10 @@ if (return null) {$2;}
     </div>
   );
 }
-<<<<<<< HEAD
 ;
 export default PerformanceDashboard;
 <<<<<<< HEAD
 '"`
-=======
     </div>)}
 
 export default PerformanceDashboard;"

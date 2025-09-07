@@ -2446,14 +2446,14 @@ export default UltraFuturisticFooter2029;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
             </div>
             
-            <div className="flex items-center space-x-6 text-sm text-gray-400">
-              <Link href="/privacy" className="hover:text-white transition-colors">
+            <div className='flex items-center space-x-6 text-sm text-gray-400'>
+              <Link href='/privacy' className='hover:text-white transition-colors'>
                 Privacy Policy
               </Link>
-              <Link href="/terms" className="hover:text-white transition-colors">
+              <Link href='/terms' className='hover:text-white transition-colors'>
                 Terms of Service
               </Link>
-              <Link href="/cookies" className="hover:text-white transition-colors">
+              <Link href='/cookies' className='hover:text-white transition-colors'>
                 Cookie Policy
                 className='hover:text-white transition-colors'
               >

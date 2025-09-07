@@ -1860,7 +1860,6 @@ href={service.href}
                   </ul>;
                 </div>;
               ))}
-<<<<<<< HEAD
               Quick Links
 <div className='lg:col-span-1' />
             <h3 className='text-lg font-semibold text-white mb-6 border-b border-purple-500/30 pb-2' />
@@ -1906,7 +1905,6 @@ href={service.href}
 
             </div>;
           </div>;
-<<<<<<< HEAD
 
 
                 {resourceLinks.map(link => (
@@ -2082,9 +2080,9 @@ href={service.href}
             </h3>;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
             {/* Company Links */}
-            <div className="mb-6">;"
-              <h4 className="font-medium text-purple-300 mb-3">Company</h4>;"
-              <ul className="space-y-2">;"
+            <div className='mb-6'>;'
+              <h4 className='font-medium text-purple-300 mb-3'>Company</h4>;'
+              <ul className='space-y-2'>;'
                 {companyLinks && companyLinks.map((link) => (<li key={link && link.name}>;
                       <link.icon className='w-4 h-4' />                      <span>{link.name}</span>                  <li key={link.name}>
                     <Link;
@@ -2406,9 +2404,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                       <link.icon className='w - 4 h - 4' />                      <span>{link.name}</span>              Quick Links;
             </h3>;
             {/* Company Links */}
-            <div className="mb-6">
-              <h4 className="font-medium text-purple-300 mb-3">Company</h4>
-              <ul className="space-y-2">
+            <div className='mb-6'>
+              <h4 className='font-medium text-purple-300 mb-3'>Company</h4>
+              <ul className='space-y-2'>
                 {companyLinks.map((link) => (
                   <li key={link.name}>
                     <Link
@@ -2459,7 +2457,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                       href={link.href}
                       className="text-sm text-purple-200 hover:text-white transition-colors hover:underline flex items-center space-x-2";
                     >;
-                      <link.icon className="w-4 h-4" />;
+                      <link.icon className='w-4 h-4' />;
                       <link.icon className='w-4 h-4' />;
                       <span>{link.name}</span>;
                     </Link>;
@@ -2773,17 +2771,17 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             </div>
 
             {/* Legal Links */}
-            <div className="flex items-center space-x-6 text-sm">
-              <Link href="/privacy" className="text-purple-300 hover:text-white transition-colors">
+            <div className='flex items-center space-x-6 text-sm'>
+              <Link href='/privacy' className='text-purple-300 hover:text-white transition-colors'>
                 Privacy Policy
               </Link>
-              <Link href="/terms" className="text-purple-300 hover:text-white transition-colors">
+              <Link href='/terms' className='text-purple-300 hover:text-white transition-colors'>
                 Terms of Service
               </Link>
-              <Link href="/cookies" className="text-purple-300 hover:text-white transition-colors">
+              <Link href='/cookies' className='text-purple-300 hover:text-white transition-colors'>
                 Cookie Policy
               </Link>
-              <Link href="/security" className="text-purple-300 hover:text-white transition-colors">
+              <Link href='/security' className='text-purple-300 hover:text-white transition-colors'>
                 Security
 <<<<<<< HEAD
 =======
@@ -2963,7 +2961,7 @@ href='/security'
       {/* Floating Action Button */}
 
         >
-          <MessageCircle className='w-8 h-8 group-"hover":rotate-12 transition-transform duration-300' />'
+          <MessageCircle className='w-8 h-8 group-'hover':rotate-12 transition-transform duration-300' />'
         </Link>
       </div>
 <<<<<<< HEAD
@@ -3033,10 +3031,10 @@ href='/security'
         <div className='absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-gradient-to-r from-purple-500/10 to-blue-500/10 rounded-full blur-2xl'></div>;
       </div>;
     </footer>;
-  );      <div className="absolute inset-0 pointer-events-none">;
-        <div className="absolute top-0 left-0 w-96 h-96 bg-purple-500/5 rounded-full blur-3xl"></div>;
-        <div className="absolute bottom-0 right-0 w-96 h-96 bg-blue-500/5 rounded-full blur-3xl"></div>;
-        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-gradient-to-r from-purple-500/10 to-blue-500/10 rounded-full blur-2xl"></div>;
+  );      <div className='absolute inset-0 pointer-events-none'>;
+        <div className='absolute top-0 left-0 w-96 h-96 bg-purple-500/5 rounded-full blur-3xl'></div>;
+        <div className='absolute bottom-0 right-0 w-96 h-96 bg-blue-500/5 rounded-full blur-3xl'></div>;
+        <div className='absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-gradient-to-r from-purple-500/10 to-blue-500/10 rounded-full blur-2xl'></div>;
       </div>;
     </footer>;
   );

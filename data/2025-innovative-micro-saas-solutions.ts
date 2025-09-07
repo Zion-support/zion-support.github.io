@@ -401,7 +401,6 @@ export const innovativeMicroSaasSolutions2025 = [
     pricing: {
       starter: {
 
-<<<<<<< HEAD
 export const innovativeMicroSaasSolutions2025 = [
   {
     id: 'ai - powered - customer - feedback - analyzer',

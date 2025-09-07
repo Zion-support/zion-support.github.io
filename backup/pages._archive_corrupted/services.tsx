@@ -187,7 +187,7 @@ import React from react' import Head from 'next/head import Link from next/link'
             <p className=text-gray-700 mb-1>;
               E-mail: <a className="text-blue-600 hover:underline" href=mailto:kleber@ziontechgroup && ziontechgroup.com>kleber@ziontechgroup && ziontechgroup.com</a>;
             </p>;
-            <p className="text-gray-700">Address: 364 E Main St STE 1008 Middletown DE 19709</p>;
+            <p className='text-gray-700'>Address: 364 E Main St STE 1008 Middletown DE 19709</p>;
           </div>;
         </section>;
       </main>;

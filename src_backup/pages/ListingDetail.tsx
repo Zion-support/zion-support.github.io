@@ -9,22 +9,22 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   const { formatPrice } = useCurrency();
   // Find the listing from our shared data source - now also checking equipment listings
   const listing = MARKETPLACE_LISTINGS.find(item => item.id === id);
-import { useState } from "react",
-import { useAuth } from "@/hooks/useAuth",
-import { ChatWidget } from "@/components/ChatWidget",
-import { useRouter } from "next/router",
-import { Badge } from "@/components/ui/badge",
-import { Button } from "@/components/ui/button",
-import Skeleton from "@/components/ui/skeleton",
+import { useState } from 'react',
+import { useAuth } from '@/hooks/useAuth',
+import { ChatWidget } from '@/components/ChatWidget',
+import { useRouter } from 'next/router',
+import { Badge } from '@/components/ui/badge',
+import { Button } from '@/components/ui/button',
+import Skeleton from '@/components/ui/skeleton',
 import ImageWithRetry from '@/components/ui/ImageWithRetry',
 import { Star, MessageSquare, Brain, Shield } from 'lucide-react'
-import { cn } from "@/lib/utils",
+import { cn } from '@/lib/utils',
 import Link from 'next/link',
-import { MARKETPLACE_LISTINGS } from "@/data/marketplaceData",
-import { toast } from "@/hooks/use-toast",
-import { PaymentButton } from "@/components/transactions/PaymentButton",
-import { ProfileContact } from "@/components/profile/ProfileContact",
-import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
+import { MARKETPLACE_LISTINGS } from '@/data/marketplaceData',
+import { toast } from '@/hooks/use-toast',
+import { PaymentButton } from '@/components/transactions/PaymentButton',
+import { ProfileContact } from '@/components/profile/ProfileContact',
+import { Dialog, DialogContent, DialogHeader, DialogTitle } from '@/components/ui/dialog';
 import { useState } from 'react';
 import { useAuth } from '@/hooks/useAuth';
 import { ChatWidget } from '@/components/ChatWidget';
@@ -108,8 +108,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                       fallbackSrc='/placeholder.svg'                    />
 origin/cursor/automate-test-improve-and-merge-code-2533
                   ) : (
-                    <div className="w-full h-full flex items-center justify-center bg-zion-blue-light/20">
-                      <span className="text-zion-slate-light">No image available</span>
+                    <div className='w-full h-full flex items-center justify-center bg-zion-blue-light/20'>
+                      <span className='text-zion-slate-light'>No image available</span>
                     </div>
                   )}
                 </div>
@@ -124,14 +124,14 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                             ? 'border-zion-purple'
                             : 'border-transparent'
                         )}
-                  <div className="flex p-4 gap-2 overflow-x-auto">
+                  <div className='flex p-4 gap-2 overflow-x-auto'>
                     {listing.images.map((image, index,) => (
                       <div
                         key = {index,}
                         onClick = {(,) => setSelectedImageIndex(index),}
                         className = {cn(
-                          "w-20 h-20 flex-shrink-0 cursor-pointer rounded overflow-hidden border-2"
-                          index === selectedImageIndex ? "border-zion-purple" : "border-transparent"
+                          'w-20 h-20 flex-shrink-0 cursor-pointer rounded overflow-hidden border-2'
+                          index === selectedImageIndex ? 'border-zion-purple' : 'border-transparent'
                         ),}
                       >
                         <ImageWithRetry
@@ -238,8 +238,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 origin/cursor/automate-test-improve-and-merge-code-2533
                         />
                       ))}
-                            "h-5 w-5",
-                            i < Math.floor(listing.rating!) ? "text-zion-cyan fill-zion-cyan" : "text-zion-slate-light"
+                            'h-5 w-5',
+                            i < Math.floor(listing.rating!) ? 'text-zion-cyan fill-zion-cyan' : 'text-zion-slate-light'
                           )}
                         />
                       ))}
@@ -268,14 +268,14 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 origin/cursor/automate-test-improve-and-merge-code-2533
                   {listing.price !== null ? (
                     <PaymentButton
-                      buttonText="Buy Now"
-                      className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white py-6"
+                      buttonText='Buy Now'
+                      className='w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white py-6'
                       onPaymentInitiated={() => {
                         toast({
-                          title: "Payment Processing",
-                          description: "Redirecting to secure checkout..."
+                          title: 'Payment Processing',
+                          description: 'Redirecting to secure checkout...'
                         })
-                <div className="space-y-3 mb-8">;
+                <div className='space-y-3 mb-8'>;
                   {listing && listing.price !== null ? (;
                     <PaymentButton
                       amount={listing.price}
@@ -286,8 +286,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                       amount = {listing.price,}
                       serviceId = {listing.id,}
                       providerId = {listing.author.id,}
-                      buttonText="Buy Now"
-                      className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white py-6"
+                      buttonText='Buy Now'
+                      className='w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white py-6'
                       onPaymentInitiated={(,) => {
                         toast({
                     <Button
@@ -296,17 +296,17 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                       className='w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white py-6'>;
                       {isLoading ? 'Processing...' : 'Request Quote'}
                 {/* Action Buttons */}
-                <div className="space-y-3 mb-8">
+                <div className='space-y-3 mb-8'>
                   {listing.price !== null ? (
                     <PaymentButton
-                      buttonText="Buy Now"
-                      className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white py-6"
+                      buttonText='Buy Now'
+                      className='w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white py-6'
                       onPaymentInitiated={() => {
                         toast({
-                          title: "Payment Processing",
-                          description: "Redirecting to secure checkout..."
+                          title: 'Payment Processing',
+                          description: 'Redirecting to secure checkout...'
                         })
-                <div className="space-y-3 mb-8">;
+                <div className='space-y-3 mb-8'>;
                   {listing.price !== null ? (;
                     <PaymentButton;
                       amount={listing.price}
@@ -317,14 +317,14 @@ buttonText='Buy Now'
                       amount = {listing.price,}
                       serviceId = {listing.id,}
                       providerId = {listing.author.id,}
-                      buttonText="Buy Now"
-                      className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white py-6"
+                      buttonText='Buy Now'
+                      className='w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white py-6'
                       onPaymentInitiated={(,) => {
                         toast({
                           title: 'Payment Processing'
                           description: 'Redirecting to secure checkout...'
                         });
-                      }}
+                      }
                     </Button>;
                   )}
                   <Button
@@ -332,19 +332,19 @@ buttonText='Buy Now'
                     onClick={handleContact}
                     disabled={isLoading}
                       disabled={isLoading}
-                      className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white py-6"
+                      className='w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white py-6'
                     >
-                      {isLoading ? "Processing..." : "Request Quote"}
+                      {isLoading ? 'Processing...' : 'Request Quote'}
                     </Button>
                   )}
                   
                   <Button 
-                    variant="outline" 
+                    variant='outline' 
                     onClick={handleContact}
                     disabled={isLoading}
-                    className="w-full border-zion-purple text-zion-cyan hover:bg-zion-purple/10"
+                    className='w-full border-zion-purple text-zion-cyan hover:bg-zion-purple/10'
                   >
-                    <MessageSquare className="h-4 w-4 mr-2" />
+                    <MessageSquare className='h-4 w-4 mr-2' />
                     Contact Publisher
                   </Button>
                 </div>
@@ -353,11 +353,11 @@ buttonText='Buy Now'
 
 
                 {/* Publisher Info */}
-                <div className="border-t border-zion-blue-light pt-6">
-                  <h3 className="text-lg font-bold text-white mb-3">Publisher</h3>
-                  <div className="flex items-center gap-3">
+                <div className='border-t border-zion-blue-light pt-6'>
+                  <h3 className='text-lg font-bold text-white mb-3'>Publisher</h3>
+                  <div className='flex items-center gap-3'>
                     {listing.author.avatarUrl ? (
-                      <div className="relative h-12 w-12 rounded-full overflow-hidden">
+                      <div className='relative h-12 w-12 rounded-full overflow-hidden'>
                         <ImageWithRetry
                           src={listing.author.avatarUrl}
                           alt={listing.author.name}
@@ -368,8 +368,8 @@ buttonText='Buy Now'
                               'https://ui-avatars.com/api/?name=' +
                               encodeURIComponent(listing.author.name);
 origin/cursor/automate-test-improve-and-merge-code-2533
-                            target.src = "https: //ui-avatars.com/api/?name=" + encodeURIComponent(listing.author.name)
-                          }}
+                            target.src = 'https: //ui-avatars.com/api/?name=' + encodeURIComponent(listing.author.name)
+                          }
                         />
                       </div>
                     ) : (
@@ -412,14 +412,14 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       </div>
       <ChatWidget
                 {/* Additional Info */}
-                <div className="border-t border-zion-blue-light mt-6 pt-6">;
-                  <div className="flex justify-between mb-2">;
-                    <span className="text-zion-slate-light">Listed on</span>;
-                    <span className="text-white">{new Date(listing && listing.createdAt).toLocaleDateString()}</span>;
+                <div className='border-t border-zion-blue-light mt-6 pt-6'>;
+                  <div className='flex justify-between mb-2'>;
+                    <span className='text-zion-slate-light'>Listed on</span>;
+                    <span className='text-white'>{new Date(listing && listing.createdAt).toLocaleDateString()}</span>;
                   </div>;
-                  <div className="flex justify-between mb-2">;
-                    <span className="text-zion-slate-light">ID</span>;
-                    <span className="text-white">{listing && listing.id}</span>;
+                  <div className='flex justify-between mb-2'>;
+                    <span className='text-zion-slate-light'>ID</span>;
+                    <span className='text-white'>{listing && listing.id}</span>;
                       service_id={listing.id}
                       provider_id={listing.author.id}
                       button_text='Buy Now';
@@ -427,14 +427,14 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                       amount = {listing.price, }
                       service_id = {listing.id, }
                       provider_id = {listing.author.id, }
-                      button_text="Buy Now";
-                      className="w - full bg - gradient - to - r from - zion - purple to - zion - purple - dark hover:from - zion - purple - light hover:to - zion - purple text - white py - 6";
+                      button_text='Buy Now';
+                      className='w - full bg - gradient - to - r from - zion - purple to - zion - purple - dark hover:from - zion - purple - light hover:to - zion - purple text - white py - 6';
                       onPaymentInitiated={(, ) => {
                         toast ({
                           title: 'Payment Processing',
                           description: 'Redirecting to secure checkout...',
                         });
-                      }}
+                      }
                     />) : (
                     <Button;
                       on_click={handle_contact}
@@ -466,11 +466,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                           on_error={e => {
                             target.src =;
                               'https://ui - avatars.com / api/?name=' +;
-                              encodeURIComponent (listing.author.name);                          }}
+                              encodeURIComponent (listing.author.name);                          }
                         />;
-                      </div>) : (                            target.src = "https: //ui - avatars.com / api/?name=" + encodeURIComponent (listing.author.name);
-                            target.src = "https: //ui - avatars.com / api/?name=" + encodeURIComponent (listing.author.name);
-                          }}
+                      </div>) : (                            target.src = 'https: //ui - avatars.com / api/?name=' + encodeURIComponent (listing.author.name);
+                            target.src = 'https: //ui - avatars.com / api/?name=' + encodeURIComponent (listing.author.name);
+                          }
                         />;
                       </div>) : (
                       <div className='h - 12 w - 12 rounded - full bg - zion - purple / 20 flex items - center justify - center'>;
@@ -500,20 +500,20 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     <span className='text - zion - slate - light'>ID</span>;
                     <span className='text - white'>{listing.id}</span>                  </div>                      </div>)}
                     <div>;
-                      <p className="font - medium text - white">{listing.author.name}</p>;
-                      <p className="text - xs text - zion - slate - light">Member since 2022</p>;
+                      <p className='font - medium text - white'>{listing.author.name}</p>;
+                      <p className='text - xs text - zion - slate - light'>Member since 2022</p>;
                     </div>;
                   </div>;
                 </div>;
                 {/* Additional Info */}
-                <div className="border - t border - zion - blue - light mt - 6 pt - 6">;
-                  <div className="flex justify - between mb - 2">;
-                    <span className="text - zion - slate - light">Listed on</span>;
-                    <span className="text - white">{new Date (listing.created_at).toLocaleDateString ()}</span>;
+                <div className='border - t border - zion - blue - light mt - 6 pt - 6'>;
+                  <div className='flex justify - between mb - 2'>;
+                    <span className='text - zion - slate - light'>Listed on</span>;
+                    <span className='text - white'>{new Date (listing.created_at).toLocaleDateString ()}</span>;
                   </div>;
-                  <div className="flex justify - between mb - 2">;
-                    <span className="text - zion - slate - light">ID</span>;
-                    <span className="text - white">{listing.id}</span>;
+                  <div className='flex justify - between mb - 2'>;
+                    <span className='text - zion - slate - light'>ID</span>;
+                    <span className='text - white'>{listing.id}</span>;
                   </div>;
                 </div>;
               </div>;
@@ -545,16 +545,16 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       </Dialog>
     </>
   );
-}/>) : (<Button </Button>) ";
-}<Button > <MessageSquare className=" h-4 w-4 mr-2"/> Contact Publisher </Button> </div> ;
-}";
-}/> </div>) : (<div className=" h-12 w-12 rounded-full bg-zion-purple/20 flex items-center justify-center"> <span className=" text-lg font-medium text-zion-purple"> {listing.author.name.charAt (0) ;
-}</span> </div>) ";
-}<div> <p className=" font-medium text-white"> {listing.author.name ";
-}</p> <p className=" text-xs text-zion-slate-light">Member since 2022</p> listing.id ;
+}/>) : (<Button </Button>) ';
+}<Button > <MessageSquare className=' h-4 w-4 mr-2'/> Contact Publisher </Button> </div> ;
+}';
+}/> </div>) : (<div className=' h-12 w-12 rounded-full bg-zion-purple/20 flex items-center justify-center'> <span className=' text-lg font-medium text-zion-purple'> {listing.author.name.charAt (0) ;
+}</span> </div>) ';
+}<div> <p className=' font-medium text-white'> {listing.author.name ';
+}</p> <p className=' text-xs text-zion-slate-light'>Member since 2022</p> listing.id ;
 }recipientId= {listing.author.id ;
 }isOpen= {isChatOpen ;
-}onClose= {() => setIsChatOpen (false) ";
-}/> <DialogHeader> <DialogTitle className=" text-xl font-bold text-white" >Contact Publisher</DialogTitle> </DialogHeader> <ProfileContact /> </DialogContent> </Dialog> </>) ;
-}'"
+}onClose= {() => setIsChatOpen (false) ';
+}/> <DialogHeader> <DialogTitle className=' text-xl font-bold text-white' >Contact Publisher</DialogTitle> </DialogHeader> <ProfileContact /> </DialogContent> </Dialog> </>) ;
+}''
 origin/cursor/automate-test-improve-and-merge-code-2533

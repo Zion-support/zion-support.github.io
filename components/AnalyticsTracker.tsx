@@ -17,7 +17,7 @@ const AnalyticsTracker: React.FC<AnalyticsTrackerProps> = ({
   return (
     <div 
       className={`analyticstracker ${className}`}
-      data-testid="analyticstracker"
+      data-testid='analyticstracker'
     >
       {children || `AnalyticsTracker Component`}
     </div>

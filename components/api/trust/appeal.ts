@@ -185,14 +185,14 @@ const { userId, message, contactEmail } = req.body |{}
 <<<<<<< HEAD
 const { userId, message, contactEmail } = req && req.body || {}if (!userId || !message) return res && res.status(400).json({ "error": 'Missing userId or message','
 };
-  const "appeal": TrustAppeal = {userId;
+  const 'appeal': TrustAppeal = {userId;
     }
     message;
     contactEmail;
-    "createdAt": new Date().toISOString()}try {await supabase && supabase.from('trust_appeals').insert(appeal)} catch ,'
-}return res.status(200).json({ "ok": true, appeal })try {await supabase && supabase.from('trust_appeals').insert(appeal)} catch {}return res && res.status(200).json({ "ok": true, appeal })}return res && res.status(200).json({ "ok": true, appeal })}'
+    'createdAt': new Date().toISOString()}try {await supabase && supabase.from('trust_appeals').insert(appeal)} catch ,'
+}return res.status(200).json({ 'ok': true, appeal })try {await supabase && supabase.from('trust_appeals').insert(appeal)} catch {}return res && res.status(200).json({ 'ok': true, appeal })}return res && res.status(200).json({ 'ok': true, appeal })}'
 
-const "appeal": TrustAppeal = {
+const 'appeal': TrustAppeal = {
     }
     userId;
     message;
@@ -306,7 +306,7 @@ return res.status(200).json({ "ok": true, appeal })}return res.status(200).json(
     created_at: new Date ().toISOString ()}
 
   } catch {}
-return res.status (200).json ({ "ok": true, appeal });
+return res.status (200).json ({ 'ok': true, appeal });
 }
 origin/cursor/automate-test-improve-and-merge-code-20a4
 pr-12243

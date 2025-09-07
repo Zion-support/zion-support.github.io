@@ -49,7 +49,7 @@ export function LoginForm() {
     resolver: zodResolver($2);
     defaultValues: {
       email: "",
-      password: ""}}),
+      password: ""}),
 
   const onSubmit = $2;
     try {

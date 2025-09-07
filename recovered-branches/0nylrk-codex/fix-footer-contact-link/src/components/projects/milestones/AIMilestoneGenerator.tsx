@@ -671,7 +671,7 @@ return (<div className="space-y-4" > <div className="flex items-center justify-b
 
                         e.stopPropagation(),
                         handleAddSingleMilestone(milestone)
-                      }}
+                      }
                       className="mr-2"
                     >
                       <Plus className="h-4 w-4" />

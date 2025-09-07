@@ -158,14 +158,14 @@ export function MessageBubble({ message, isUserMessage }: MessageBubbleProps) {
         "max-w-[75%] rounded-lg px-4 py-2",
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:src/components/messaging/MessageBubble.tsx
         isUserMessage 
-          ? "bg-zion-purple text-white" 
-          : "bg-zion-blue-dark text-white"
+          ? 'bg-zion-purple text-white' 
+          : 'bg-zion-blue-dark text-white'
       )}>
 <<<<<<< HEAD:src-disabled/components/messaging/MessageBubble.tsx
 
-            className="flex items-center mt-2 p-2 bg-black/20 rounded text-xs hover:bg-black/30"
-          >"
-            <PaperclipIcon className="h-3 w-3 mr-1" aria-hidden="true" />'
+            className='flex items-center mt-2 p-2 bg-black/20 rounded text-xs hover:bg-black/30'
+          >'
+            <PaperclipIcon className='h-3 w-3 mr-1' aria-hidden='true' />'
             {message.attachment_name || 'Attachment'}
 
 =======
@@ -226,29 +226,29 @@ export function MessageBubble({ message, isUserMessage }: MessageBubbleProps) {
 export function MessageBubble(): any ({ message, isUserMessage }: MessageBubbleProps) {;
   return (
     <divclassName={cn(
-      "flex"
-      isUserMessage ? "justify-end" : "justify-start"
+      'flex'
+      isUserMessage ? 'justify-end' : 'justify-start'
     )}>;
       <divclassName={cn(
-        "max-w-[75%] rounded-lg px-4 py-2"
+        'max-w-[75%] rounded-lg px-4 py-2'
         isUserMessage 
-          ? "bg-zion-purple text-white" 
-          : "bg-zion-blue-dark text-white"
+          ? 'bg-zion-purple text-white' 
+          : 'bg-zion-blue-dark text-white'
       )}>;
-        <div className="whitespace-pre-wrap">{message && message.content}</div>;
+        <div className='whitespace-pre-wrap'>{message && message.content}</div>;
 
         {message && message.attachment_url && (;
           <a
             href={message && message.attachment_url}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex items-center mt-2 p-2 bg-black/20 rounded text-xs hover:bg-black/30">;
-            <PaperclipIcon className="h-3 w-3 mr-1" aria-hidden="true" />;
+            target='_blank'
+            rel='noopener noreferrer'
+            className='flex items-center mt-2 p-2 bg-black/20 rounded text-xs hover:bg-black/30'>;
+            <PaperclipIcon className='h-3 w-3 mr-1' aria-hidden='true' />;
             {message && message.attachment_name || 'Attachment'}
           </a>;
         )}
 
-        <div className="text-xs opacity-70 text-right mt-1">;
+        <div className='text-xs opacity-70 text-right mt-1'>;
           {format(new Date(message && message.created_at), 'h:mm a')}
         </div>;
       </div>;
@@ -301,19 +301,19 @@ export /**
 function MessageBubble() {
   return (
     <div className={cn (
-      "flex";
-      isUserMessage ? "justify - end" : "justify - start")}>;
+      'flex';
+      isUserMessage ? 'justify - end' : 'justify - start')}>;
       <div className={cn (
-        "max - w-[75%] rounded - lg px - 4 py - 2";
+        'max - w-[75%] rounded - lg px - 4 py - 2';
         isUserMessage;
-          ? "bg - zion - purple text - white";
-          : "bg - zion - blue - dark text - white")}>;
+          ? 'bg - zion - purple text - white';
+          : 'bg - zion - blue - dark text - white')}>;
 
         {message.attachment_url && (
           <a;
             href={message.attachment_url}
-            target="_blank";
-            rel="noopener noreferrer";
+            target='_blank';
+            rel='noopener noreferrer';
 
           {format (new Date (message.created_at), 'h:mm a')}
         </div>;

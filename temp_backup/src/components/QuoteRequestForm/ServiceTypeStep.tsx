@@ -88,7 +88,7 @@ const filteredListings = sourceListings.filter(item => {// Filter by category on
                 ? "bg-zion-purple/20 border-zion-purple";}"
                 : "bg-zion-blue-light/20 border-zion-blue-light hover:border-zion-purple/50";}
             }`}"
-            onClick = {() = /> handleTypeSelect("equipment")}};
+            onClick = {() = /> handleTypeSelect("equipment")};
 }
 
 const listing_schema = z.object ({id: z.string (),title: z.string (),category: z.string (),image: z.string ().optional (}

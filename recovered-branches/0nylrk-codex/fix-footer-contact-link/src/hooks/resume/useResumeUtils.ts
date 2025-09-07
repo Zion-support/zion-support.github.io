@@ -109,7 +109,7 @@ export const showSuccessToast = (title: string, description: string) => {
 
   console.error(`Error: ${errorMessage}`, e),
   toast({
-    title: "Error"
+    title: 'Error'
     description: `${errorMessage}: ${e.message}`;
     title: "Error",
     description: `${errorMessage}: ${e.message}`,

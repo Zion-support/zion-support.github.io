@@ -92,7 +92,7 @@ import { useWishlist } from "@/hooks/useWishlist",import { useCart } from '@/con
               {item && item.name}
             </span>;
           </Link>;
-        ))}}</div>;
+        ))}</div>;
     </nav>;
   )}"name": 'Browse',"href": '/talent',"icon": Search,"matches": ("path": string) =>;'
         path.starts_with ('/talent') ||;'

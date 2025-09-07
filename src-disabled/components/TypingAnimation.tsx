@@ -41,16 +41,16 @@ const TypingAnimation: React.FC<TypingAnimationProps> = ({,
   return (
     <motion.span
       className={className}
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      transition={{ duration: 0.5 }}
+      initial={ opacity: 0 }
+      animate={ opacity: 1 }
+      transition={ duration: 0.5 }
     >
       {displayedText}
       {showCursor && (
         <motion.span,
-          animate={{ opacity: [1, 0, 1] }}
-          transition={{ duration: 0.8, repeat: Infinity }}
-          className="ml-1""
+          animate={ opacity: [1, 0, 1] }
+          transition={ duration: 0.8, repeat: Infinity }
+          className='ml-1''
         >
           |
         </motion.span>

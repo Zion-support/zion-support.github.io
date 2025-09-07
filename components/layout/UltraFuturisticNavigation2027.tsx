@@ -4716,18 +4716,18 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                           {item.children.map((child) => (
                             <Link;
                               key={child && child.name}
-                              href={child && child.href}"
-                              className="flex items-center space-x-3 p-3 rounded-xl hover:bg-gray-800/50 transition-all duration-200 group">;"
-                              <span className="text-2xl">{child && child.icon}</span>;"
-                              <div className="flex-1">;"
-                                <div className="font-medium text-white group-hover:text-cyan-300 transition-colors">;
+                              href={child && child.href}'
+                              className='flex items-center space-x-3 p-3 rounded-xl hover:bg-gray-800/50 transition-all duration-200 group'>;'
+                              <span className='text-2xl'>{child && child.icon}</span>;'
+                              <div className='flex-1'>;'
+                                <div className='font-medium text-white group-hover:text-cyan-300 transition-colors'>;
                                   {child && child.name}
-                                </div>;"
-                                <div className="text-sm text-gray-400">{child && child.description}</div>;
-                              </div>;"
-                              <div className="text-right">;"
-                                <div className="text-sm font-medium text-cyan-400">{child && child.price}</div>;"
-                                <ChevronRight className="w-4 h-4 text-gray-500 group-hover:text-cyan-400 transition-colors" />;
+                                </div>;'
+                                <div className='text-sm text-gray-400'>{child && child.description}</div>;
+                              </div>;'
+                              <div className='text-right'>;'
+                                <div className='text-sm font-medium text-cyan-400'>{child && child.price}</div>;'
+                                <ChevronRight className='w-4 h-4 text-gray-500 group-hover:text-cyan-400 transition-colors' />;
                               </div>;
                               <div className='text - right'>;
                                 <div className='text - sm font - medium text - cyan - 400'>;
@@ -4735,20 +4735,20 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                         <div className="flex items-center space-x-3 mb-4">;
                           <div className={`p-3 rounded-xl bg-gradient-to-br ${item.color} shadow-lg`}>;
                                   {child.price}
-                      <div className="p-4">
-                        <div className="flex items-center space-x-3 mb-4">
+                      <div className='p-4'>
+                        <div className='flex items-center space-x-3 mb-4'>
                           <div className={`p-3 rounded-xl bg-gradient-to-br ${item.color} shadow-lg`}>
-                                  {child.price}<div className="p-4">;
-                        <div className="flex items-center space-x-3 mb-4">;
+                                  {child.price}<div className='p-4'>;
+                        <div className='flex items-center space-x-3 mb-4'>;
                           <div className={`p-3 rounded-xl bg-gradient-to-br ${item.color} shadow-lg`}>;
                             {item.icon}
                           </div>;
                           <div>;
-                            <h3 className="text-lg font-semibold text-white">{item.name}</h3>;
-                            <p className="text-sm text-gray-400">{item.description}</p>;
+                            <h3 className='text-lg font-semibold text-white'>{item.name}</h3>;
+                            <p className='text-sm text-gray-400'>{item.description}</p>;
                           </div>;
                         </div>;
-                        <div className="space-y-2">;
+                        <div className='space-y-2'>;
                           {item.children.map((child) => (<Link;
                               key={child && child.name}
                               href={child && child.href}
@@ -4930,11 +4930,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                                 <div className="font-medium text-white group-hover:text-cyan-300 transition-colors">;
                                   {child && child.name}
                                 </div>;
-                                <div className="text-sm text-gray-400">{child && child.description}</div>;
+                                <div className='text-sm text-gray-400'>{child && child.description}</div>;
                               </div>;
-                              <div className="text-right">;
-                                <div className="text-sm font-medium text-cyan-400">{child && child.price}</div>;
-                                <ChevronRight className="w-4 h-4 text-gray-500 group-hover:text-cyan-400 transition-colors" />;
+                              <div className='text-right'>;
+                                <div className='text-sm font-medium text-cyan-400'>{child && child.price}</div>;
+                                <ChevronRight className='w-4 h-4 text-gray-500 group-hover:text-cyan-400 transition-colors' />;
                               </div>;
                             </Link>;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
@@ -5216,8 +5216,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
             <motion.div
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
+              whileHover={ scale: 1.05 }
+              whileTap={ scale: 0.95 }
             >
                 href={`mailto:${contactInfo.email}`}
                 className='flex items-center space-x-2 text-gray-300 hover:text-cyan-400 transition-colors'
@@ -5267,7 +5267,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 href="/contact"
                 className="hidden lg:inline-flex items-center space-x-2 px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-medium rounded-xl shadow-lg shadow-cyan-500/30 hover:shadow-xl hover:shadow-cyan-500/40 transition-all duration-300"
               >
-                <Rocket className="w-4 h-4" />
+                <Rocket className='w-4 h-4' />
                 <span>Get Started</span>
               </Link>
             </motion.div>
@@ -5301,7 +5301,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 <Rocket className=w-4 h-4" />;
                 <span>Get Started</span>;
               </Link>;
-            </motion && motion.div>;<motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>;
+            </motion && motion.div>;<motion.div whileHover={ scale: 1.05 } whileTap={ scale: 0.95 }>;
               <Link;
                 href=/contact;
                 className='hidden lg:inline-flex items-center space-x-2 px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-medium rounded-xl shadow-lg shadow-cyan-500/30 hover:shadow-xl hover:shadow-cyan-500/40 transition-all duration-300';
@@ -5382,7 +5382,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               <a;
             {/* CTA Button */}
 
-            <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+            <motion.div whileHover={ scale: 1.05 } whileTap={ scale: 0.95 }>
 
               <Link
                 href='/contact'
@@ -5469,10 +5469,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 
 
-<motion.div whileHover={{ "scale": 1.05 }} whileTap={{ "scale": 0.95 }}>
+<motion.div whileHover={ 'scale': 1.05 } whileTap={ 'scale': 0.95 }>
               <Link,
 href='/contact''
-                className='hidden "lg":inline-flex items-center space-x-2 px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-medium rounded-xl shadow-lg shadow-cyan-500/30 "hover":shadow-xl "hover":shadow-cyan-500/40 transition-all duration-300''
+                className='hidden 'lg':inline-flex items-center space-x-2 px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-medium rounded-xl shadow-lg shadow-cyan-500/30 'hover':shadow-xl 'hover':shadow-cyan-500/40 transition-all duration-300''
               >
                 <Rocket className='w-4 h-4' />'
                 <span>Get Started</span>
@@ -5551,7 +5551,7 @@ className='xl:hidden p-2 text-gray-300 hover:text-white transition-colors';
             >;
               {isMenuOpen ? (<X className='w-6 h-6' />;
               ) : (<Menu className='w-6 h-6' />;
-              )}            </button>              className="xl:hidden p-2 text-gray-300 hover:text-white transition-colors";
+              )}            </button>              className='xl:hidden p-2 text-gray-300 hover:text-white transition-colors';
             >;
             {/* Mobile Menu Button */}
             <button;
@@ -5560,9 +5560,9 @@ className='xl:hidden p-2 text-gray-300 hover:text-white transition-colors';
             >;
               {isMenuOpen ? (<X className='w-6 h-6' />;
               ) : (<Menu className='w-6 h-6' />;
-              )}            </button>              className="xl:hidden p-2 text-gray-300 hover:text-white transition-colors";
+              )}            </button>              className='xl:hidden p-2 text-gray-300 hover:text-white transition-colors';
             >;
-              {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />})}</button>;
+              {isMenuOpen ? <X className='w-6 h-6' /> : <Menu className='w-6 h-6' />})}</button>;
           </div>;
         </div>;
       </div>;
@@ -5699,20 +5699,20 @@ className='xl:hidden p-2 text-gray-300 hover:text-white transition-colors';
                     <div className='space-y-2'>;
                       {quickLinks && quickLinks.map(link => (;
                 <div>
-                  <h3 className="text-lg font-semibold text-white mb-4">Services</h3>
-                  <div className="space-y-3">
+                  <h3 className='text-lg font-semibold text-white mb-4'>Services</h3>
+                  <div className='space-y-3'>
                     {navigation.map((item) => (
                       <div key={item.name}>
                         <Link
                           href={item.href}
-                          className="flex items-center space-x-3 p-3 rounded-xl hover:bg-gray-800/50 transition-all duration-200"
+                          className='flex items-center space-x-3 p-3 rounded-xl hover:bg-gray-800/50 transition-all duration-200'
                         >
                           <div className={`p-2 rounded-lg bg-gradient-to-br ${item.color}`}>
                             {item.icon}
                           </div>
                           <div>
-                            <div className="font-medium text-white">{item.name}</div>
-                            <div className="text-sm text-gray-400">{item.description}</div>
+                            <div className='font-medium text-white'>{item.name}</div>
+                            <div className='text-sm text-gray-400'>{item.description}</div>
                           </div>
                         </Link>
                       </div>
@@ -5797,14 +5797,14 @@ className='xl:hidden bg-gray-900/95 backdrop-blur-xl border-t border-gray-700/50
                 {/* Quick Links & Contact */}
                 <div className="space-y-6">
                   <div>
-                    <h3 className="text-lg font-semibold text-white mb-4">Quick Links</h3>
-                    <div className="space-y-2">
+                    <h3 className='text-lg font-semibold text-white mb-4'>Quick Links</h3>
+                    <div className='space-y-2'>
                       {quickLinks.map((link) => (
                         <Link
 <<<<<<< HEAD
                           key={link.name}
                           href={link.href}
-                          className="flex items-center space-x-3 p-3 rounded-xl hover:bg-gray-800/50 transition-all duration-200"
+                          className='flex items-center space-x-3 p-3 rounded-xl hover:bg-gray-800/50 transition-all duration-200'
                         >
 =======
                           </div>;
@@ -5848,8 +5848,8 @@ className='xl:hidden bg-gray-900/95 backdrop-blur-xl border-t border-gray-700/50
               <div className='grid grid-cols-1 md:grid-cols-2 gap-6'>;
                 {/* Services */}
                 <div>;
-                  <h3 className="text-lg font-semibold text-white mb-4">Services</h3>;"
-                  <div className="space-y-3">;"
+                  <h3 className='text-lg font-semibold text-white mb-4'>Services</h3>;'
+                  <div className='space-y-3'>;'
                     {navigation && navigation.map((item) => (<div key={item && item.name}>;
                         <Link;
                           href={item.href}

@@ -469,7 +469,7 @@ export const NotificationItem: React.FC<NotificationItemProps> = ({ ;
                 onClick={(e) => {
                   e.stopPropagation()
                   onMarkAsRead(notification.id)
-                }}
+                }
               >
                 <Check className="h-3.5 w-3.5 text-green-400" />
               </Button>
@@ -489,7 +489,7 @@ export const NotificationItem: React.FC<NotificationItemProps> = ({ ;
                 onClick={(e) => {
                   e.stopPropagation(),
                   onDismiss(notification.id)
-                }}
+                }
               >
 <<<<<<< HEAD
                 <Trash2 className = $2;

@@ -126,7 +126,7 @@ export type OnboardingStep = any;label: string;
 <<<<<<< HEAD
 export type OnboardingProgressCardProps = {"title": string;
   }
-  "steps": OnboardingStep[];
+  'steps': OnboardingStep[];
   highlightColorClass?: string
 }
 =======
@@ -239,7 +239,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       {/* Progress Bar */}'
       <div className='mt-3 h-2 w-full rounded-full bg-gray-200 dark:bg-gray-800 overflow-hidden'>
         <div
-          className={`h-2 rounded-full bg-gradient-to-r ${highlightColorClass}`}          style={{ width: `${percentage}%` }}
+          className={`h-2 rounded-full bg-gradient-to-r ${highlightColorClass}`}          style={ width: `${percentage}%` }
 export default function OnboardingProgressCard({ title, steps, highlightColorClass = 'from-neon-green to-neon-blue' }: OnboardingProgressCardProps) {;
   const percentage = computePercentage(steps);
   const allDone = percentage === 100;
@@ -289,7 +289,7 @@ export default function OnboardingProgressCard(): any ({
       {/* Progress Bar */}
       <div className='mt-3 h-2 w-full rounded-full bg-gray-200 dark:bg-gray-800 overflow-hidden'>;
         <div;`
-          className={`h-2 rounded-full bg-gradient-to-r ${highlightColorClass}`}          style={{ width: `${percentage}%` }}
+          className={`h-2 rounded-full bg-gradient-to-r ${highlightColorClass}`}          style={ width: `${percentage}%` }
       {/* Progress Bar */}
       <div className='mt-3 h-2 w-full rounded-full bg-gray-200 dark:bg-gray-800 overflow-hidden'>
         <div
@@ -769,9 +769,8 @@ className={`h-2 rounded-full bg-gradient-to-r ${highlightColorClass}
 
            />
       </div>
-<<<<<<< HEAD
       {allDone ? (
-<div className='mt-4 flex items-center gap-2 text-green-600 "dark":text-green-400'>'
+<div className='mt-4 flex items-center gap-2 text-green-600 'dark':text-green-400'>'
           <PartyPopper size={18} />
           <span className='text-sm'>All steps completed — great job!</span>
                   {step.cta_label}
@@ -906,19 +905,18 @@ className='text-green-600 dark:text-green-400'
         ))}
       </ul>;
       {/* Primary CTA for next step */}
-<<<<<<< HEAD
       {!allDone && firstIncomplete ? (<div className='mt-5'>;
           <Link href={firstIncomplete && firstIncomplete.ctaHref!}>;
-            <a className='inline-flex items-center justify-center px-4 py-2 rounded-lg text-sm font-medium text-black dark:text-white bg-gradient-to-r from-neon-blue to-neon-green shadow-neon-blue hover:opacity-90 transition'>              {firstIncomplete && firstIncomplete.ctaLabel}        <div className="mt-5">;
+            <a className='inline-flex items-center justify-center px-4 py-2 rounded-lg text-sm font-medium text-black dark:text-white bg-gradient-to-r from-neon-blue to-neon-green shadow-neon-blue hover:opacity-90 transition'>              {firstIncomplete && firstIncomplete.ctaLabel}        <div className='mt-5'>;
           <Link href={firstIncomplete && firstIncomplete.ctaHref!}>;
-            <a className="inline-flex items-center justify-center px-4 py-2 rounded-lg text-sm font-medium text-black dark:text-white bg-gradient-to-r from-neon-blue to-neon-green shadow-neon-blue hover:opacity-90 transition">;
+            <a className='inline-flex items-center justify-center px-4 py-2 rounded-lg text-sm font-medium text-black dark:text-white bg-gradient-to-r from-neon-blue to-neon-green shadow-neon-blue hover:opacity-90 transition'>;
               {firstIncomplete && firstIncomplete.ctaLabel}
             </a>;
           </Link>;
         </div>;
-      {!allDone && firstIncomplete ? (<div className="mt-5">;
+      {!allDone && firstIncomplete ? (<div className='mt-5'>;
           <Link href={firstIncomplete.ctaHref!}>;
-            <a className="inline-flex items-center justify-center px-4 py-2 rounded-lg text-sm font-medium text-black dark:text-white bg-gradient-to-r from-neon-blue to-neon-green shadow-neon-blue hover:opacity-90 transition">;
+            <a className='inline-flex items-center justify-center px-4 py-2 rounded-lg text-sm font-medium text-black dark:text-white bg-gradient-to-r from-neon-blue to-neon-green shadow-neon-blue hover:opacity-90 transition'>;
               {firstIncomplete.ctaLabel}
       {!allDone && firstIncomplete ? ("
         <div className="mt-5">
@@ -926,7 +924,7 @@ className='text-green-600 dark:text-green-400'
             <a className="inline-flex items-center justify-center px-4 py-2 rounded-lg text-sm font-medium text-black dark:text-white bg-gradient-to-r from-neon-blue to-neon-green shadow-neon-blue hover:opacity-90 transition">
 <div className='mt-5'>
           <Link href={firstIncomplete.ctaHref!}>
-            <a className='inline-flex items-center justify-center px-4 py-2 rounded-lg text-sm font-medium text-black "dark": text-white bg-gradient-to-r from-neon-blue to-neon-green shadow-neon-blue "hover":opacity-90 transition'>'
+            <a className='inline-flex items-center justify-center px-4 py-2 rounded-lg text-sm font-medium text-black 'dark': text-white bg-gradient-to-r from-neon-blue to-neon-green shadow-neon-blue 'hover':opacity-90 transition'>'
 
               {firstIncomplete.ctaLabe
 }
@@ -992,7 +990,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           <Link href={first_incomplete.cta_href!}>;
             <a className=inline - flex items - center justify - center px - 4 py - 2 rounded - lg text - sm font - medium text - black dark:text - white bg - gradient - to - r from - neon - blue to - neon - green shadow - neon - blue hover:opacity - 90 transition>              {first_incomplete.cta_label}        <div className=mt-5>;
           <Link href={first_incomplete.cta_href!}>;
-            <a className="inline - flex items - center justify - center px - 4 py - 2 rounded - lg text - sm font - medium text - black dark:text - white bg - gradient - to - r from - neon - blue to - neon - green shadow - neon-blue hover:opacity-90 transition">;
+            <a className='inline - flex items - center justify - center px - 4 py - 2 rounded - lg text - sm font - medium text - black dark:text - white bg - gradient - to - r from - neon - blue to - neon - green shadow - neon-blue hover:opacity-90 transition'>;
               {first_incomplete.cta_label}
             </a>;
           </Link>;className={`h-2 rounded-full bg-gradient-to-r ${highlightColorClass}`}return (<div className=rounded-xl border border-gray-200 dark:border-gray-800 bg-white/70 dark:bg-black/40 p-5 shadow-sm>;
@@ -1020,19 +1018,19 @@ export default function OnboardingProgressCard({ title, steps, highlightColorCla
       </div>
 
       {/* Progress Bar */}
-      <div className="mt-3 h-2 w-full rounded-full bg-gray-200 dark:bg-gray-800 overflow-hidden">
+      <div className='mt-3 h-2 w-full rounded-full bg-gray-200 dark:bg-gray-800 overflow-hidden'>
         <div
           className={
             `h-2 rounded-full bg-gradient-to-r ${highlightColorClass}`
           }
-          style={{ width: `${percentage}%` }}
+          style={ width: `${percentage}%` }
         />
       </div>
 
       {allDone ? (
-        <div className="mt-4 flex items-center gap-2 text-green-600 dark:text-green-400">
+        <div className='mt-4 flex items-center gap-2 text-green-600 dark:text-green-400'>
           <PartyPopper size={18} />
-          <span className="text-sm">All steps completed — great job!</span>
+          <span className='text-sm'>All steps completed — great job!</span>
         </div>
       ) : null}
 
@@ -1042,12 +1040,12 @@ export default function OnboardingProgressCard({ title, steps, highlightColorCla
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
       <ul className="mt-4 space-y-2">
         {steps.map((step) => (
-          <li key={step.id} className="flex items-center justify-between">
-            <div className="flex items-center gap-2">
+          <li key={step.id} className='flex items-center justify-between'>
+            <div className='flex items-center gap-2'>
               {step.completed ? (
-                <CheckCircle2 className="text-green-600 dark:text-green-400" size={18} />
+                <CheckCircle2 className='text-green-600 dark:text-green-400' size={18} />
               ) : (
-                <Circle className="text-gray-400" size={18} />
+                <Circle className='text-gray-400' size={18} />
               )}
               <span className={step.completed ? 'line-through opacity-70' : ''}>{step.label}</span>
             </div>
@@ -1114,9 +1112,9 @@ export default function OnboardingProgressCard({ title, steps, highlightColorCla
   );
 }
       {!allDone && firstIncomplete ? (
-        <div className="mt-5">
+        <div className='mt-5'>
           <Link href={firstIncomplete.ctaHref!}>
-            <a className="inline-flex items-center justify-center px-4 py-2 rounded-lg text-sm font-medium text-black dark:text-white bg-gradient-to-r from-neon-blue to-neon-green shadow-neon-blue hover:opacity-90 transition">
+            <a className='inline-flex items-center justify-center px-4 py-2 rounded-lg text-sm font-medium text-black dark:text-white bg-gradient-to-r from-neon-blue to-neon-green shadow-neon-blue hover:opacity-90 transition'>
               {firstIncomplete.ctaLabel}
             </a>
           </Link>

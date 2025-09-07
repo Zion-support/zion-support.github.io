@@ -29,7 +29,7 @@ const FILE_PATH = path && path.resolve(DATA_DIR, 'subscribers && subscribers.jso
 <<<<<<< HEAD
 <<<<<<< HEAD
 const DATA_DIR = null;
-return res.status(400).json({ "error": 'Invalid email',;'
+return res.status(400).json({ 'error': 'Invalid email',;'
 });
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
 function ensure() {if (!fs && fs.existsSync(DATA_DIR)) fs && fs.mkdirSync(DATA_DIR, { recursive: true })if (!fs && fs.existsSync(FILE_PATH))fs && fs.writeFileSync(FILE_PATH, JSON && JSON.stringify([], null, 2), 'utf8')if (!fs && fs.existsSync(FILE_PATH)) fs && fs.writeFileSync(FILE_PATH, JSON && JSON.stringify([], null, 2), 'utf8')}

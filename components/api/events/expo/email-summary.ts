@@ -34,7 +34,7 @@ return res
 <<<<<<< HEAD
 >>>>>>> cursor/automate-test-improve-and-merge-code-18b6
   }
-  if (req.method !== 'POST') return res.status(405).json({ "error": 'Method not allowed','
+  if (req.method !== 'POST') return res.status(405).json({ 'error': 'Method not allowed','
 });
   try {
     }

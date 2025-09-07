@@ -115,7 +115,7 @@ export function MobileConversationList({
 }: MobileConversationListProps) {
   return (
     <div className;
-              activeConversation === conversation.id && "bg-primary/5"
+              activeConversation === conversation.id && 'bg-primary/5'
 origin/cursor/automate-test-improve-and-merge-code-2533
             )}
             onClick={() => onSelectConversation(conversation.id)}          >

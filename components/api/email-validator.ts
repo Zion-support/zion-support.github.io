@@ -626,7 +626,7 @@ suggestions.push('Check email format (should be user@domain.com)');
       suggestions.push('This email may not be suitable for business use');'
     }
 
-const "result": EmailValidationResult = {
+const 'result': EmailValidationResult = {
       }
       email,
 "isValid": score >= 70,

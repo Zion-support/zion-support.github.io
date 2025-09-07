@@ -1,6 +1,6 @@
-import { Button } from "@/components/ui/button";
-import { Download } from 'lucide-react';"
-import type { QuoteRequest } from "@/types/quotes";
+import { Button } from '@/components/ui/button';
+import { Download } from 'lucide-react';'
+import type { QuoteRequest } from '@/types/quotes';
 
 
 <<<<<<< HEAD:src-disabled/components/quotes/ExportToCSV.tsx
@@ -125,8 +125,8 @@ interface ExportToCSVProps {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:src/components/quotes/ExportToCSV.tsx
   quotes: QuoteRequest[]
   filename?: string;
-}"
-export const ExportToCSV = ({ quotes, filename = "quote-requests" }: ExportToCSVProps) => {}
+}'
+export const ExportToCSV = ({ quotes, filename = 'quote-requests' }: ExportToCSVProps) => {}
   const handleExport = () => {};
     // Define CSV Headers;
     const headers = ['
@@ -258,8 +258,8 @@ export const ExportToCSV = ({
           .map (cell =>;
             // Escape commas and quotes in cell values;
             typeof cell === 'string' &&;
-            (cell.includes (', ') || cell.includes ('"'));
-              ? `"${cell.replace (/"/g, '""')}"`;
+            (cell.includes (', ') || cell.includes ('''));
+              ? `'${cell.replace (/'/g, '''')}'`;
               : cell);
           .join (', ')),
     ].join ('\n');
@@ -273,12 +273,12 @@ export const ExportToCSV = ({
       `${filename}-${new Date ().toISOString ().split ('T')[0]}.csv`);
     document.body.append_child (link);
 import { Button  } from '@/components / ui / button';
-import type { QuoteRequest } from "@/types / quotes";
+import type { QuoteRequest } from '@/types / quotes';
 interface ExportToCSVProps {
   quotes: QuoteRequest[],
   filename?: string;
 }
-export const ExportToCSV = ({ quotes, filename = "quote - requests" }: ExportToCSVProps) =>: any {
+export const ExportToCSV = ({ quotes, filename = 'quote - requests' }: ExportToCSVProps) =>: any {
   const handle_export = () =>: any {
     // Define CSV Headers;
       'IDTalent NameRequester NameRequester EmailProject NameProject SummaryBudgetTimeline';
@@ -306,8 +306,8 @@ export const ExportToCSV = ({ quotes, filename = "quote - requests" }: ExportToC
       ...rows.map (row =>;
         row.map (cell =>;
           // Escape commas and quotes in cell values;
-          typeof cell === 'string' && (cell.includes () || cell.includes ('"'));
-            ? `"${cell.replace (/"/g, '""')}"`;
+          typeof cell === 'string' && (cell.includes () || cell.includes ('''));
+            ? `'${cell.replace (/'/g, '''')}'`;
             : cell).join ());
     ].join ('\n');
     // Create download link;
@@ -342,15 +342,15 @@ export const ExportToCSV = ({ quotes, filename = "quote - requests" }: ExportToC
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:src/components/quotes/ExportToCSV.tsx
 
-import { Button } from "@/components/ui/button",
+import { Button } from '@/components/ui/button',
 import { Download } from 'lucide-react'
-import type { QuoteRequest } from "@/types/quotes",
+import type { QuoteRequest } from '@/types/quotes',
 interface ExportToCSVProps {
   quotes: QuoteRequest[],
   filename?: string
 }
 
-export const ExportToCSV = ({ quotes, filename = "quote-requests" }: ExportToCSVProps) => {
+export const ExportToCSV = ({ quotes, filename = 'quote-requests' }: ExportToCSVProps) => {
   const handleExport = () => {
     // Define CSV Headers
     const headers = [
@@ -383,13 +383,13 @@ export const ExportToCSV = ({ quotes, filename = "quote-requests" }: ExportToCSV
       ...rows.map(row => 
         row.map(cell => 
           // Escape commas and quotes in cell values
-          typeof cell === 'string' && (cell.includes() || cell.includes('"')) 
-            ? `"${cell.replace(/"/g, '""')}"` 
+          typeof cell === 'string' && (cell.includes() || cell.includes(''')) 
+            ? `'${cell.replace(/'/g, '''')}'` 
             : cell
         ).join()
       )
 
-'"},;
+''},;
 ;
   );
 };

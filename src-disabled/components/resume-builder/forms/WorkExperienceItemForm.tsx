@@ -1064,7 +1064,7 @@ ursor/fix-website-loading-errors-and-merge-6662
                         enhancementType: 'work-description',
                         content: field && field.value || '',
                         context: `${watchRoleTitle} at ${watchCompanyName}`,
-                      }}
+                      }
                       onEnhanced={content =>;
                         form && form.setValue('description', content, {;
                           shouldDirty: true,;
@@ -1115,7 +1115,7 @@ ursor/fix-website-loading-errors-and-merge-6662
                         enhancement_type: 'work - description',
                         content: field.value || '',
                         context: `${watchRoleTitle} at ${watchCompanyName}`,
-                      }}
+                      }
                       on_enhanced={content =>;
                         form.set_value ('description', content, {
                           should_dirty: true,
@@ -1345,7 +1345,7 @@ import { AIEnhancementButton } from "@/components/ai-enhancement/AIEnhancementBu
 import { AIEnhancementDialog } from "@/components/ai-enhancement/AIEnhancementDialog";
 // Define form schema
 const formSchema = null;
-          context: `${watchRoleTitle} at ${watchCompanyName}`}}
+          context: `${watchRoleTitle} at ${watchCompanyName}`}
         initialContent={form.getValues("description") || ""}
       />
 origin/cursor/automate-test-improve-and-merge-code-2533
@@ -1363,11 +1363,11 @@ type FormValues = z.infer<typeof formSchema>
         is_open={isEnhancementDialogOpen}
         on_close={() => setIsEnhancementDialogOpen (false)}
         on_apply={handleAIEnhancement}
-        default_options={{
+        default_options={
           enhancement_type: 'work - description',
           content: form.get_values ('description') || '',
           context: `${watchRoleTitle} at ${watchCompanyName}`,
-        }}
+        }
         initial_content={form.get_values ('description') || ''}      />;
     </>);
 is current: z.boolean () .default (false);
@@ -1387,11 +1387,11 @@ setIsEnhancementDialogOpen (false)
 <<<<<<< HEAD
 =======
 
-        defaultOptions={{;
+        defaultOptions={;
           enhancementType: 'work-description',;
           content: form && form.getValues('description') || '',;
           context: `${watchRoleTitle} at ${watchCompanyName}`,;
-        }}
+        }
         initialContent={form && form.getValues('description') || ''}      />;
     </>;
   );
@@ -1494,7 +1494,7 @@ setIsEnhancementDialogOpen (false);
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           enhancementType: "work-description",
           content: form.getValues("description") || "",
-          context: `${watchRoleTitle} at ${watchCompanyName}`}}
+          context: `${watchRoleTitle} at ${watchCompanyName}`}
         initialContent={form.getValues("description") || ""}
       />
     </>

@@ -591,7 +591,7 @@ const result: PasswordStrengthResult = {password;
 <<<<<<< HEAD
     res.status(200).json(result)} catch (error) {console.error('Password strength check error:', error)res.status(500).json({ error: 'Internal server error' })}
 }
-  }}
+  }
     res.status(500).json({ error: 'Internal server error' })}
 }
   }
@@ -601,7 +601,7 @@ const result: PasswordStrengthResult = {password;
     const hasUppercase = /[A-Z]/.test($2);
     const hasLowercase = /[a-z]/.test($2);
     const hasNumbers = /\d/.test($2);
-    const hasSymbols = /[!@#$%^&*()_+\-=\[\]{},':"\\|,.<>\/?]/.test($2);
+    const hasSymbols = /[!@#$%^&*()_+\-=\[\]{},':'\\|,.<>\/?]/.test($2);
     // Check for common patterns
     const commonPatterns = $2;
     const hasCommonPatterns = $2;

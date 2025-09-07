@@ -261,7 +261,7 @@ if(storedUser && token) {
     )// Store user data in localStorage;
     localStorage.setItem('zion_user', JSON.stringify(mockUser))localStorage.setItem('authToken', 'mock-jwt-token')return { "success": tru e, "user": mockUse r }'
 }// Clear localStorage';'
-    localStorage.removeItem('zion_user')localStorage.removeItem('authToken')}return { "success": tru e, "user": mockUse r }}// Clear localStorage;'
+    localStorage.removeItem('zion_user')localStorage.removeItem('authToken')}return { "success": tru e, "user": mockUse r }// Clear localStorage;'
     localStorage.removeItem('zion_user')localStorage.removeItem('authToken')}const register = async ("email": string, "password": string, "name": string) => {// Mock registration - in real app this would call an API;'
     }
     const "mockUser": Use r = {"id": '1',email,name,"role": 'user',"userType": 'individual',"displayName": nam e,"avatarUrl": '/default-avatar.png';'
@@ -280,7 +280,7 @@ localStorage.setItem('zion_user', JSON.stringify(mockUser));'
     // Clear localStorage''
     localStorage.removeItem('zion_user');'
     localStorage.removeItem('authToken')};'
-    return { "success": tru e, "user": mockUse r }};
+    return { "success": tru e, "user": mockUse r };
     // Clear localStorage,
 localStorage.removeItem('zion_user');'
     localStorage.removeItem('authToken')'
@@ -356,10 +356,10 @@ localStorage.setItem('zion_user', JSON.stringify(updatedUser));'
     logout,
     register,
 :src/hooks/useAuth.tsx,
-updateProfile}}
+updateProfile}
 ''
     updateProfile
-  }}
+  }
 ';'
 </AuthState>';';'
     logout

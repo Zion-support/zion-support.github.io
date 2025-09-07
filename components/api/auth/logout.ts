@@ -136,7 +136,7 @@ export default function handler() {;
 }
 
   res.setHeader('Set-Cookie', cookie);'
-  res.status(200).json({ "ok": true })
+  res.status(200).json({ 'ok': true })
 }
 }
 

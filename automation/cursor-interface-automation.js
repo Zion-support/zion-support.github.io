@@ -61,8 +61,8 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 /**
  * Cursor Interface Automation System'
  * Actually interacts with Cursor's interface to send commands
- *"
- * "Features": * - Real interface interaction using keyboard automation
+ *'
+ * 'Features': * - Real interface interaction using keyboard automation
  * - Clipboard-based command injection
  * - Multiple command patterns
  * - Session management with real Cursor windows
@@ -80,13 +80,13 @@ class CursorInterfaceAutomation {
     this.sessions = new Map();
     this.isRunning = false;
     this.stats = {
-      "totalCommands": 0,
-      "successfulCommands": 0,
-      "failedCommands": 0,
-      "sessionsCreated": 0,
-      "sessionsTerminated": 0,
-      "startTime": null,
-      "lastError": null};
+      'totalCommands': 0,
+      'successfulCommands': 0,
+      'failedCommands': 0,
+      'sessionsCreated': 0,
+      'sessionsTerminated': 0,
+      'startTime': null,
+      'lastError': null};
     this.platform = process.platform;
     this.setupPlatformSpecific();
     this.log('Cursor Interface Automation initialized');
@@ -195,8 +195,8 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
         'ERROR'
       )
       // Return default config
-      return {"
-        "automation": {}
+      return {'
+        'automation': {}
 
           enabled: true,
 
@@ -272,13 +272,13 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
           "enableLogging": true,
           "autoRestart": true},
 
-        "sessions": []}
-"
-          "interval": 30000,""
-          "maxSessions": 5,""
-          "enableLogging": true,""
-          "autoRestart": true},""
-        "sessions": []};"
+        'sessions': []}
+'
+          'interval': 30000,''
+          'maxSessions': 5,''
+          'enableLogging': true,''
+          'autoRestart': true},''
+        'sessions': []};'
   /**
    * Setup platform-specific automation tools
    */
@@ -287,27 +287,27 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
       case 'darwin': // macOS
         this.automationTool = 'osascript';
         this.automationScripts = {
-          "focusCursor": 'tell application "Cursor" to activate',
-          "sendText": 'tell application "System Events" to keystroke "{text}"',
-          "sendCommand": 'tell application "System Events" to keystroke "c" using command down',
-          "sendEnter": 'tell application "System Events" to keystroke return',
-          "getCursorWindows": 'tell application "Cursor" to get name of every window'};
+          'focusCursor': 'tell application 'Cursor' to activate',
+          'sendText': 'tell application 'System Events' to keystroke '{text}'',
+          'sendCommand': 'tell application 'System Events' to keystroke 'c' using command down',
+          'sendEnter': 'tell application 'System Events' to keystroke return',
+          'getCursorWindows': 'tell application 'Cursor' to get name of every window'};
         break;
       case 'win32': // Windows
         this.automationTool = 'powershell';
         this.automationScripts = {
-          "focusCursor": 'Add-Type -AssemblyName System.Windows.Forms; [System.Windows.Forms.SendKeys]::SendWait("^%{F4}")',
-          "sendText": 'Add-Type -AssemblyName System.Windows.Forms; [System.Windows.Forms.SendKeys]::SendWait("{text}")',
-          "sendCommand": 'Add-Type -AssemblyName System.Windows.Forms; [System.Windows.Forms.SendKeys]::SendWait("^c")',
-          "sendEnter": 'Add-Type -AssemblyName System.Windows.Forms; [System.Windows.Forms.SendKeys]::SendWait("{ENTER}")'};
+          'focusCursor': 'Add-Type -AssemblyName System.Windows.Forms; [System.Windows.Forms.SendKeys]::SendWait('^%{F4}')',
+          'sendText': 'Add-Type -AssemblyName System.Windows.Forms; [System.Windows.Forms.SendKeys]::SendWait('{text}')',
+          'sendCommand': 'Add-Type -AssemblyName System.Windows.Forms; [System.Windows.Forms.SendKeys]::SendWait('^c')',
+          'sendEnter': 'Add-Type -AssemblyName System.Windows.Forms; [System.Windows.Forms.SendKeys]::SendWait('{ENTER}')'};
         break;
       case 'linux': // Linux
         this.automationTool = 'xdotool';
         this.automationScripts = {
-          "focusCursor": 'xdotool search --name "Cursor" windowactivate',
-          "sendText": 'xdotool type "{text}"',
-          "sendCommand": 'xdotool key ctrl+c',
-          "sendEnter": 'xdotool key Return'};
+          'focusCursor': 'xdotool search --name 'Cursor' windowactivate',
+          'sendText': 'xdotool type '{text}'',
+          'sendCommand': 'xdotool key ctrl+c',
+          'sendEnter': 'xdotool key Return'};
         break;
 
 <<<<<<< HEAD
@@ -502,7 +502,7 @@ ursor/integrate-build-improve-and-re-verify-8f7d
       }
       // Replace placeholders with actual values
       Object.entries(params).forEach(([key, value]) => {
-        script = script.replace(`{${key}}`, value);
+        script = script.replace(`{${key}`, value);
       });
       let command;
       let args;
@@ -596,7 +596,7 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
       }
       return stdout.trim();
     } catch (error) {
-      this.log(`Automation execution "failed": ${error.message}`, 'ERROR');
+      this.log(`Automation execution 'failed': ${error.message}`, 'ERROR');
       throw error;
     }
   }
@@ -627,7 +627,7 @@ ursor/fix-syntax-push-and-merge-to-main-40de
       this.log(`Failed to focus Cursor: ${error.message}`, 'ERROR');
 
     } catch (error) {
-      this.log(`Failed to focus "Cursor": ${error.message}`, 'ERROR');
+      this.log(`Failed to focus 'Cursor': ${error.message}`, 'ERROR');
       throw error;
     }
   }
@@ -643,7 +643,7 @@ ursor/fix-syntax-push-and-merge-to-main-40de
   async sendText(text) {
     try {
       await this.executeAutomation('sendText', { text });
-      this.log(`Text "sent": "${text}"`);
+      this.log(`Text 'sent': '${text}'`);
       // Wait for text to be processed
       await new Promise(resolve => setTimeout(resolve, 500));
 
@@ -664,7 +664,7 @@ ursor/fix-syntax-push-and-merge-to-main-40de
       this.log(`Failed to send text: ${error.message}`, 'ERROR');
 
     } catch (error) {
-      this.log(`Failed to send "text": ${error.message}`, 'ERROR');
+      this.log(`Failed to send 'text': ${error.message}`, 'ERROR');
       throw error;
     }
   }
@@ -692,7 +692,7 @@ ursor/fix-syntax-push-and-merge-to-main-40de
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     } catch (error) {
-      this.log(`Failed to send "Enter": ${error.message}`, 'ERROR');
+      this.log(`Failed to send 'Enter': ${error.message}`, 'ERROR');
       throw error;
     }
   }
@@ -702,24 +702,24 @@ ursor/fix-syntax-push-and-merge-to-main-40de
   async createSession(sessionId, options = {}) {
     try {
       const sessionConfig = {
-        "name": options.name || `Session-${sessionId}`,
-        "interval": options.interval || this.config.automation.interval,
-        "autoProceed": options.autoProceed !== false,
-        "commands": options.commands || ['proceed'],
-        "priority": options.priority || 'medium',
+        'name': options.name || `Session-${sessionId}`,
+        'interval': options.interval || this.config.automation.interval,
+        'autoProceed': options.autoProceed !== false,
+        'commands': options.commands || ['proceed'],
+        'priority': options.priority || 'medium',
         ...options};
       const session = {
-        "id": sessionId,
-        "config": sessionConfig,
-        "status": 'active',
-        "lastCommand": null,
-        "commandCount": 0,
-        "errors": 0,
-        "createdAt": new Date(),
-        "currentCommandIndex": 0};
+        'id': sessionId,
+        'config': sessionConfig,
+        'status': 'active',
+        'lastCommand': null,
+        'commandCount': 0,
+        'errors': 0,
+        'createdAt': new Date(),
+        'currentCommandIndex': 0};
       this.sessions.set(sessionId, session);
       this.stats.sessionsCreated++;
-      this.log(`Session ${sessionId} "created": ${sessionConfig.name}`);
+      this.log(`Session ${sessionId} 'created': ${sessionConfig.name}`);
       if (sessionConfig.autoProceed) {
         this.startSessionAutomation(sessionId);
       }
@@ -886,13 +886,13 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
         this.log(
-          `Session ${sessionId} automation "error": ${error.message}`,
+          `Session ${sessionId} automation 'error': ${error.message}`,
 
           'ERROR'
         )
         this.log(`Session ${sessionId} automation error: ${error.message}`, 'ERROR');`
         this.log(`Session ${sessionId} automation error: ${error.message}`, 'ERROR')
-          `Session ${sessionId} automation "error": ${error.message}`,""
+          `Session ${sessionId} automation 'error': ${error.message}`,''
         session.errors++
         // Continue despite errors
     this.log(`Automation started for session ${sessionId}`)
@@ -1004,7 +1004,7 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
       this.log(`Failed to execute command for session ${sessionId}: ${error.message}`, 'ERROR');
 
       this.log(
-"`
+'`
       this.log(`Failed to execute command for session ${sessionId}: ${error.message}`, 'ERROR');`
       this.log(`Failed to execute command for session ${sessionId}: ${error.message}`, 'ERROR')
         `Failed to execute command for session ${sessionId}: ${error.message}`,
@@ -1382,14 +1382,14 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
       "createdAt": session.createdAt,
       "lastCommand": session.lastCommand,
 
-      "priority": session.config.priority}))
-      "name": session.config.name,""
-      "status": session.status,""
-      "commandCount": session.commandCount,""
-      "errors": session.errors,""
-      "createdAt": session.createdAt,""
-      "lastCommand": session.lastCommand,""
-      "priority": session.config.priority}));"
+      'priority': session.config.priority}))
+      'name': session.config.name,''
+      'status': session.status,''
+      'commandCount': session.commandCount,''
+      'errors': session.errors,''
+      'createdAt': session.createdAt,''
+      'lastCommand': session.lastCommand,''
+      'priority': session.config.priority}));'
   /**
 <<<<<<< HEAD
 =======
@@ -1403,7 +1403,7 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
     this.log('Testing automation system...');
     try {
       await this.focusCursor();
-      this.log('Focus "test": PASSED');
+      this.log('Focus 'test': PASSED');
       await this.sendText('test');
       this.log('Text input test: PASSED');
       await this.sendEnter();
@@ -1428,7 +1428,7 @@ ursor/fix-syntax-push-and-merge-to-main-40de
       this.log(`Automation test failed: ${error.message}`, 'ERROR');
 
     } catch (error) {
-      this.log(`Automation test "failed": ${error.message}`, 'ERROR');
+      this.log(`Automation test 'failed': ${error.message}`, 'ERROR');
       return false;
     }
   }
@@ -1446,7 +1446,7 @@ if (require.main === module) {
         console.log('\nShutting down Cursor Interface Automation...');
         automation.stop();
         const stats = automation.getStats();
-        console.log('\nFinal "Statistics": ');
+        console.log('\nFinal 'Statistics': ');
         console.log(JSON.stringify(stats, null, 2));
 <<<<<<< HEAD
 ursor/fix-syntax-push-and-merge-to-main-40de
@@ -1480,8 +1480,8 @@ ursor/fix-syntax-push-and-merge-to-main-40de
       // Keep the process alive and show status
       setInterval(() => {}
         const stats = automation.getStats()
-        console.log("`
-          `\n[${new Date().toISOString()}] "Status": ${stats.activeSessions} active sessions, ${stats.totalCommands} commands sent`
+        console.log('`
+          `\n[${new Date().toISOString()}] 'Status': ${stats.activeSessions} active sessions, ${stats.totalCommands} commands sent`
         )
       }, 60000); // Status update every minute
     } else {}

@@ -707,7 +707,6 @@ if (index % 10 = == 0) {
 <<<<<<< HEAD
 ctx.stroke();
                 }
-<<<<<<< HEAD
             ctx.beginPath()ctx.arc(particle.x, particle.y, particle.size, 0, Math.PI * 2)ctx.fillStyle = particle.color;
             ctx.fill()];
               if (partner && partner.type === 'quantum') {const distance = Math && Math.sqrt(Math && Math.pow(particle && particle.x - partner && partner.x, 2) +;
@@ -2433,38 +2432,38 @@ ease: 'easeInOut'}
 <<<<<<< HEAD
 >>>>>>> merged-prs-20250907-203621
             ease: 'easeInOut'
-          }}
+          }
         />
         
         {/* Holographic matrix */}
         <motion.div
-          className="absolute top-3/4 right-1/4 w-80 h-80 rounded-full border border-purple-500/20"
-          animate={{
+          className='absolute top-3/4 right-1/4 w-80 h-80 rounded-full border border-purple-500/20'
+          animate={
             scale: [1.2, 1, 1.2],
             opacity: [0.3, 0.1, 0.3]
-          }}
+          }
           transition = $2;
             repeat: Infinity,
             ease: 'easeInOut'
-          }}
+          }
         />
         
         {/* Neural network nodes */}
         <motion.div
-          className="absolute top-1/2 left-1/2 w-64 h-64 rounded-full border border-green-500/20"
-          animate={{
+          className='absolute top-1/2 left-1/2 w-64 h-64 rounded-full border border-green-500/20'
+          animate={
             scale: [1, 1.1, 1],
             opacity: [0.2, 0.4, 0.2]
-          }}
+          }
           transition = $2;
             repeat: Infinity,
             ease: 'easeInOut'
-          }}
+          }
         />
       </div>
       
       {/* Floating orbs with glow effects */}
-      <div className="absolute inset-0 pointer-events-none">
+      <div className='absolute inset-0 pointer-events-none'>
         {[...Array(8)].map((_, i) => (
           <motion.div
             key = $2;
@@ -2497,14 +2496,14 @@ ease: 'easeInOut'}
 
             scale: [1, 1 && 1.2, 1]
             opacity: [0 && 0.1, 0 && 0.3, 0 && 0.1]
-          }}
-          transition={{}
-          }}
+          }
+          transition={}
+          }
         {/* Holographic matrix */}
 
           className='absolute top-3/4 right-1/4 w-80 h-80 rounded-full border border-purple-500/20'
-          animate={{}
-          transition={{}
+          animate={}
+          transition={}
             duration: 5;
             repeat: Infinity
             ease: easeInOut'}}
@@ -2967,7 +2966,7 @@ ease: 'easeInOut',
             }}
             animate={{"y": [0, -20, 0],"opacity": [0.3, 0.8, 0.3],"scale": [1, 1.2, 1]}}"duration": 4,"repeat": Infinity,transition={{"delay": i * 0.3;
               }
-              "duration": 3 + i * 0.5,"repeat": Infinity,"ease": 'easeInOut',"delay": i * 0.3}}' />;
+              'duration': 3 + i * 0.5,'repeat': Infinity,'ease': 'easeInOut','delay': i * 0.3}' />;
 
         ))}
 }
@@ -2991,12 +2990,12 @@ ease: 'easeInOut',
 )
 >>>>>>> merged-prs-20250907-203621
               scale: [1, 1.2, 1]
-            }}
+            }
             transition = $2;
               repeat: Infinity,
               ease: 'easeInOut',
               delay: i * 0.3
-            }}
+            }
           />
 <<<<<<< HEAD
 =======

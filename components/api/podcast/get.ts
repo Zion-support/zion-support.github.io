@@ -62,7 +62,7 @@ const EPISODES_PATH = path.join(
 function ensureStorage() {
   }
   const dir = path.dirname(EPISODES_PATH);
-  if (!fs.existsSync(dir)) fs.mkdirSync(dir, { "recursive": true
+  if (!fs.existsSync(dir)) fs.mkdirSync(dir, { 'recursive': true
 });
 if (!fs.existsSync(EPISODES_PATH))
     fs.writeFileSync(EPISODES_PATH, '[]', 'utf8');'
@@ -92,7 +92,7 @@ const episode = episodes.find(e => e.id === id);
 const episodes = JSON.parse(fs.readFileSync(EPISODES_PATH, 'utf8')) as any[];'
 
 const episode = episodes.find(e => { return e.id === id); }
-  if (!episode) return res.status(404).json({ "error": 'Not found','
+  if (!episode) return res.status(404).json({ 'error': 'Not found','
 });
 
   return res.status(200).json({ episode });
@@ -214,7 +214,6 @@ function handler() {}
 }
 <<<<<<< HEAD
   return res.status (200).json ({ episode });
-<<<<<<< HEAD
   return res.status(200).json({ episode });
   return res.status(200).json({ ok: true });
 }

@@ -4787,7 +4787,7 @@ export default Homepage2047;
                 href="/contact";
                 className="bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-8 py-4 rounded-xl font-semibold text-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-200 hover:scale-105 shadow-lg hover:shadow-cyan-500/25">;
                 Get Started Today;
-              </Link>;transition={{ duration: 0.8 }}
+              </Link>;transition={ duration: 0.8 }
           >;
 <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>;
               Ready to Transform Your Business?;
@@ -5096,7 +5096,7 @@ export default Homepage2047;
 origin/cursor/automate-test-improve-and-merge-code-2533
 '"`
 // Import enhanced components;
-import UltraFuturisticBackground2047 from './backgrounds/UltraFuturisticBackground2047';;
+import UltraFuturisticBackground2047 from './backgrounds/UltraFuturisticBackground2047';
 import UltraFuturisticNavigation2047 from './layout/UltraFuturisticNavigation2047';
 import UltraFuturisticFooter2047 from './layout/UltraFuturisticFooter2047';
 =======

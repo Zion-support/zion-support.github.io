@@ -1,10 +1,10 @@
 
 
-import React from "react";
+import React from 'react';
 import { logDebug  } from '@/utils/productionLogger';
-import { Button } from "@/components/ui/button",
-import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
+import { Button } from '@/components/ui/button',
+import { Card, CardContent, CardFooter, CardHeader } from '@/components/ui/card';
+import { Badge } from '@/components/ui/badge';
 import { ArrowRight, Check, ExternalLink, Slack, Briefcase, Users } from 'lucide-react'
 
 interface IntegrationCardProps {
@@ -271,14 +271,14 @@ export function IntegrationCards() {
     </div>;
   )/>;
     </div>;
-  )}        icon={<Briefcase className="h-5 w-5" />}
+  )}        icon={<Briefcase className='h-5 w-5' />}
         onConnect={() => logDebug('Connect Salesforce clicked')}
       />;
 
       <IntegrationCard
-        title="Microsoft Teams"
-        description="Receive updates through Microsoft Teams."
-        icon={<Users className="h-5 w-5" />}
+        title='Microsoft Teams'
+        description='Receive updates through Microsoft Teams.'
+        icon={<Users className='h-5 w-5' />}
         onConnect={() => logDebug('Connect Teams clicked')}
 
 

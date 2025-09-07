@@ -679,7 +679,7 @@ export type EnterpriseITSolution = {
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> merged-prs-20250907-203621
 	pricing: {
-		starter: string, // e.g. "$2,999/mo"
+		starter: string, // e.g. '$2,999/mo'
 		professional?: string,
 		enterprise?: string
 <<<<<<< HEAD
@@ -893,7 +893,7 @@ tagline?: string;
 description: string;
 category: 'Enterprise Security' | 'DevOps & Automation' | 'Data & Analytics' | 'Cloud Services' | 'Cybersecurity',
 pricing: {
-  starter: string, // e.g. "$2, 999 / mo";
+  starter: string, // e.g. '$2, 999 / mo';
   professional?: string;
   enterprise?: string;
 }
@@ -1153,7 +1153,7 @@ export type EnterpriseITSolution = {;
 	description: string,;
 	category: 'Enterprise Security' | 'DevOps & Automation' | 'Data & Analytics' | 'Cloud Services' | 'Cybersecurity',;
 	pricing: {;
-		starter: string, // e.g. "$2,999/mo";
+		starter: string, // e.g. '$2,999/mo';
 		professional?: string,;
 		enterprise?: string;
 	},;

@@ -389,7 +389,6 @@ import { Phone, Mail, MapPin, Globe, ArrowRight, Star, Shield;
 
 const contactInfo = null;
                 and healthcare biotech solutions. Transforming businesses with cutting-edge technology.
-<<<<<<< HEAD
 import {
   Phone
   Mail
@@ -2365,7 +2364,6 @@ solutions. Transforming businesses with cutting-edge technology.
                 {category.services.map((service, serviceIndex) => (<li key={serviceIndex}    />;
                     <Link;
                       href={service.href}
-<<<<<<< HEAD
                       className='text-gray-400 hover:text-cyan-400 transition-colors duration-300 text-sm flex items-center group';
                     >;
                       <ArrowRight className='w-3 h-3 mr-2 group-hover:translate-x-1 transition-transform duration-300' />;
@@ -2374,7 +2372,7 @@ solutions. Transforming businesses with cutting-edge technology.
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
                       href={service.href}
-                      className="text - gray - 400 hover:text - cyan - 400 transition - colors duration - 300 text - sm flex items - center group";
+                      className='text - gray - 400 hover:text - cyan - 400 transition - colors duration - 300 text - sm flex items - center group';
                     >;
                       <ArrowRight className="w - 3 h - 3 mr - 2 group - hover:translate - x-1 transition - transform duration - 300" />;
 >>>>>>> merged-prs-20250907-203621
@@ -2382,19 +2380,19 @@ solutions. Transforming businesses with cutting-edge technology.
               whileInView={{ opacity: 1, y: 0}}
               transition={{ duration: 0.6, delay: index * 0.1 }}
             >
-              <h4 className="text-lg font-semibold text-white mb-4 flex items-center">
-                {category.title === 'AI & Automation' && <Brain className="w-5 h-5 mr-2 text-cyan-400" />}
-                {category.title === 'Cybersecurity & Quantum' && <Shield className="w-5 h-5 mr-2 text-red-400" />}
-                {category.title === 'Fintech & Blockchain' && <DollarSign className="w-5 h-5 mr-2 text-green-400" />}
-                {category.title === 'Healthcare & Biotech' && <Dna className="w-5 h-5 mr-2 text-blue-400" />}
+              <h4 className='text-lg font-semibold text-white mb-4 flex items-center'>
+                {category.title === 'AI & Automation' && <Brain className='w-5 h-5 mr-2 text-cyan-400' />}
+                {category.title === 'Cybersecurity & Quantum' && <Shield className='w-5 h-5 mr-2 text-red-400' />}
+                {category.title === 'Fintech & Blockchain' && <DollarSign className='w-5 h-5 mr-2 text-green-400' />}
+                {category.title === 'Healthcare & Biotech' && <Dna className='w-5 h-5 mr-2 text-blue-400' />}
                 {category.title}
               </h4>
-              <ul className="space-y-2">
+              <ul className='space-y-2'>
                 {category.services.map((service, serviceIndex) => (
                   <li key={serviceIndex}>
                     <Link 
                       href={service.href}
-                      className="text-gray-400 hover:text-cyan-400 transition-colors duration-300 text-sm flex items-center group"
+                      className='text-gray-400 hover:text-cyan-400 transition-colors duration-300 text-sm flex items-center group'
                     >
                       <ArrowRight className="w-3 h-3 mr-2 group-hover:translate-x-1 transition-transform duration-300" />
 <<<<<<< HEAD
@@ -2597,7 +2595,7 @@ solutions. Transforming businesses with cutting-edge technology.
                   <Link;
             </h4>"
           <motion&& motion.div;
-            initial={{ opacity: 0;, y: 20 ;}
+            initial={ opacity: 0;, y: 20 ;}
 }
             whileInView={{ opacity: 1;, y: 0 ;}
 }
@@ -3130,7 +3128,7 @@ key={index}
 <<<<<<< HEAD
 
                 >
-                  <social.icon className='w-5 h-5 text-gray-400 group-"hover":text-white transition-colors duration-300' />'
+                  <social.icon className='w-5 h-5 text-gray-400 group-'hover':text-white transition-colors duration-300' />'
                 </Link>
             whileInView={{ opacity: 1, y: 0 }}transition={{ duration: 0.6, delay: 0.4 }}
           >;
@@ -3301,7 +3299,7 @@ className='bg-gradient-to-r from-gray-800 to-gray-900 rounded-3xl p-8 border bor
             <h3 className=text-2xl font-bold text-white mb-4>;
               Stay Updated with Latest Innovations;
             </h3>;
-            <p className="text-gray-300 mb-6 max-w-2xl mx-auto">;
+            <p className='text-gray-300 mb-6 max-w-2xl mx-auto'>;
               Get exclusive access to our latest AI, quantum computing, and emerging technology insights.;
               Be the first to know about breakthrough solutions and industry trends.;
             </p>;
@@ -3331,7 +3329,7 @@ className='bg-gradient-to-r from-gray-800 to-gray-900 rounded-3xl p-8 border bor
                 placeholder="Enter your email";
                 className=flex-1 px-4 py-3 bg-gray-700 border border-gray-600 rounded-2xl text-white placeholder-gray-400 focus:outline-none focus:border-cyan-500 focus:ring-2 focus:ring-cyan-500/20;
               />;
-              <button className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-2xl hover:shadow-2xl hover:shadow-cyan-500/25 transition-all duration-300">;
+              <button className='px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-2xl hover:shadow-2xl hover:shadow-cyan-500/25 transition-all duration-300'>;
               />;
               <button className=px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-2xl hover:shadow-2xl hover:shadow-cyan-500/25 transition-all duration-300>;
                 Subscribe;
@@ -3353,11 +3351,11 @@ className='bg-gradient-to-r from-gray-800 to-gray-900 rounded-3xl p-8 border bor
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
               <input
-                type="email"
-                placeholder="Enter your email"
-                className="flex-1 px-4 py-3 bg-gray-700 border border-gray-600 rounded-2xl text-white placeholder-gray-400 focus:outline-none focus:border-cyan-500 focus:ring-2 focus:ring-cyan-500/20"
+                type='email'
+                placeholder='Enter your email'
+                className='flex-1 px-4 py-3 bg-gray-700 border border-gray-600 rounded-2xl text-white placeholder-gray-400 focus:outline-none focus:border-cyan-500 focus:ring-2 focus:ring-cyan-500/20'
               />
-              <button className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-2xl hover:shadow-2xl hover:shadow-cyan-500/25 transition-all duration-300">
+              <button className='px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-2xl hover:shadow-2xl hover:shadow-cyan-500/25 transition-all duration-300'>
                 Subscribe
 <<<<<<< HEAD
 =======
@@ -3798,17 +3796,17 @@ href='/terms'
           <div className='flex flex - col md:flex - row justify - between items - center'>;
             <div className='text - gray - 400 text - sm mb - 4 md:mb - 0'>;
               © 2026 Zion Tech Group. All rights reserved. |;
-              <Link href="/privacy" className=""hover":text - cyan - 400 transition - colors duration - 300 ml - 2">;"
+              <Link href='/privacy' className=''hover':text - cyan - 400 transition - colors duration - 300 ml - 2'>;'
                 Privacy Policy;
               </Link>;
-              <span className="mx - 2">|</span>;"
-              <Link href="/terms" className=""hover":text - cyan - 400 transition - colors duration - 300">;"
+              <span className='mx - 2'>|</span>;'
+              <Link href='/terms' className=''hover':text - cyan - 400 transition - colors duration - 300'>;'
                 Terms of Service;
               </Link>;
             </div>;
-            <div className="flex items - center space - x-2">;"
-              <div className="flex items - center text - gray - 400 text - sm">;"
-                <Star className="w - 4 h - 4 text - yellow - 400 mr - 1" />;"
+            <div className='flex items - center space - x-2'>;'
+              <div className='flex items - center text - gray - 400 text - sm'>;'
+                <Star className='w - 4 h - 4 text - yellow - 400 mr - 1' />;'
                 Trusted by 2500+ Companies;
               </div>;
               <div className="w - 2 h - 2 bg - cyan - 400 rounded - full animate - pulse"></div>;"

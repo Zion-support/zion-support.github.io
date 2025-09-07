@@ -183,7 +183,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   await recordRequest(req, res, auth && auth.partner, auth && auth.apiKey, started, 200);
   return res && res.status(200).json({ verified });  return res && res.status(200).json({ verified })
 }
-<<<<<<< HEAD
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
 =======
 import type { NextApiRequest, NextApiResponse } from "next";

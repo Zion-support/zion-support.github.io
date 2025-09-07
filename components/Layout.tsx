@@ -278,7 +278,7 @@ interface LayoutProps {
         {/* JSON - LD */}
         <script;
           type="application / ld + json";"
-          dangerouslySetInnerHTML={{ "__html": JSON.stringify (json_ld) 
+          dangerouslySetInnerHTML={ "__html": JSON.stringify (json_ld) 
 } />;
       </Head>;
       <Header />;

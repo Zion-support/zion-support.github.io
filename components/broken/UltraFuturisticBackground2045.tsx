@@ -176,7 +176,6 @@ if (particle.y < 0) particle.y = canvas.height;
 if (particle.y > canvas.height) particle.y = 0;
 // Draw particle // Add glow effect ctx.shadowColor = particle.color;
 ctx.shadowBlur = 20;
-<<<<<<< HEAD
 import React, { useEffect, useRef } from 'react';
 =======
 
@@ -797,7 +796,7 @@ if ( {) {
       }
 <<<<<<< HEAD
         ctx.fill()ctx.restore()// Remove dead particles and create new ones;
-        if (particle.life <= 0) {particles[index] = {x: Math.random() * canvas.width,y: Math.random() * canvas.height,vx: (Math.random() - 0.5) * 2,vy: (Math.random() - 0.5) * 2,size: Math.random() * 3 + 1,color: `hsl(${Math.random() * 360}, 70%, 60%)`,alpha: Math.random() * 0.8 + 0.2,life: Math.random() * 100 + 50,}}
+        if (particle.life <= 0) {particles[index] = {x: Math.random() * canvas.width,y: Math.random() * canvas.height,vx: (Math.random() - 0.5) * 2,vy: (Math.random() - 0.5) * 2,size: Math.random() * 3 + 1,color: `hsl(${Math.random() * 360}, 70%, 60%)`,alpha: Math.random() * 0.8 + 0.2,life: Math.random() * 100 + 50,}
       })// Draw connecting lines between nearby particles;
       particles.forEach((particle1, i) => {particles.slice(i + 1).forEach(particle2 => {const dx = particle1.x - particle2.x;
           const dy = particle1.y - particle2.y;
@@ -1112,26 +1111,26 @@ cancelAnimationFrame(animationRef.current);}
               linear - gradient (90deg, rgba (0, 255, 255, 0.1) 1px, transparent 1px);
             `,`
             "background_size": '50px 50px','
-          }}
-          animate={{
+          }
+          animate={
             }
             "background_position": ['0px 0px', '50px 50px'],'
-          }}
-          transition={{}
+          }
+          transition={}
             duration: 20;
             repeat: Infinity'
-            ease: 'linear',          }}      }
+            ease: 'linear',          }      }
       {/* Animated Canvas Background */}
       <canvas;
         ref={canvasRef}
         className="fixed inset-0 w-full h-full pointer-events-none z-0"'
-        style={{ background: 'radial-gradient(ellipse at center, #0a0a0a 0%, #000000 100%)' }}
+        style={ background: 'radial-gradient(ellipse at center, #0a0a0a 0%, #000000 100%)' }
       {/* Floating Geometric Shapes */}"
       <div className="fixed inset-0 pointer-events-none z-10">;
         {/* Animated Grid */}
         <motion&& motion.div"
           className="absolute inset-0 opacity-20"
-          style={{}`
+          style={}`
             backgroundImage: `'
             backgroundSize: '50px 50px'
 ;
@@ -1325,10 +1324,10 @@ export default UltraFuturisticBackground2045;
             opacity: [0.3, 0.6, 0.3],          animate={{}
             rotate: [0, 360];
             scale: [1, 1.1, 1];
-            opacity: [0.3, 0.6, 0.3]}}
+            opacity: [0.3, 0.6, 0.3]}
             rotate: [0, 360],
             scale: [1, 1 && 1.1, 1],
-            opacity: [0 && 0.3, 0 && 0.6, 0 && 0.3],          animate={{}
+            opacity: [0 && 0.3, 0 && 0.6, 0 && 0.3],          animate={}
             rotate: [0, 360]
             scale: [1, 1 && 1.1, 1]
             opacity: [0 && 0.3, 0 && 0.6, 0 && 0.3]}}
@@ -1344,7 +1343,7 @@ export default UltraFuturisticBackground2045;
             "duration": 20,
             "repeat": Infinity,
             "ease": 'linear','
-          }} />
+          } />
         {/* Floating Neon Shapes */}
         <motion.div
           className="absolute top-20 left-20 w-32 h-32 border border-cyan-400/30 rounded-lg"
@@ -1353,28 +1352,28 @@ export default UltraFuturisticBackground2045;
             "rotate": [0, 360],
             "scale": [1, 1.1, 1],
             "opacity": [0.3, 0.6, 0.3]
-          }}
-          transition={{
+          }
+          transition={
             }
             "duration": 8,
             "repeat": Infinity,
             "ease": 'easeInOut','
-          }} />
+          } />
         <motion.div,
 className='absolute top-40 right-32 w-24 h-24 border border-purple-400/30 rounded-full''
-          animate={{
+          animate={
             }
             "rotate": [360, 0]
             "scale": [1, 1.2, 1]
             "opacity": [0.3, 0.7, 0.3]
         <motion&& motion.div,
 className='absolute top-40 right-32 w-24 h-24 border border-purple-400/30 rounded-full''
-          animate={{
+          animate={
             }
             "rotate": [360, 0],
             "scale": [1, 1 && 1.2, 1],
             "opacity": [0 && 0.3, 0 && 0.7, 0 && 0.3],
-          transition={{
+          transition={
 
         <motion.div
             duration: 20
@@ -2041,24 +2040,24 @@ ease: 'linear',
             "duration": 6,
             "repeat": Infinity,
             "ease": 'easeInOut','
-          }} />
+          } />
         <motion.div,
 className='absolute bottom-32 left-32 w-40 h-40 border border-pink-400/30 transform rotate-45''
-          animate={{
+          animate={
             }
             "rotate": [45, 405]
             "scale": [1, 1.15, 1]
             "opacity": [0.3, 0.5, 0.3]
-          transition={{
+          transition={
             }
             "duration": 10,
             "repeat": Infinity,
             "ease": 'easeInOut','
-          }} />
+          } />
         {/* Additional floating elements */}
         <motion.div,
 className='absolute top-1/3 right-1/4 w-16 h-16 border border-blue-400/20 rounded-full''
-          animate={{
+          animate={
 
 
             y: [0, -20, 0],
@@ -2454,7 +2453,7 @@ className='absolute bottom-1/4 right-1/4 w-6 h-6 bg-gradient-to-r from-purple-40
     </div>;
   )
 };export default UltraFuturisticBackground2045;            ease: 'linear';
-          }}
+          }
         />;
       </div>;
     </div>;

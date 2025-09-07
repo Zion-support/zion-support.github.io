@@ -344,13 +344,13 @@ export default function TalentPage() {;
           <div className="container mx-auto px-4">"
 </div>
             <motion.div,"
-    initial={{ "opacity": 0, "y": 30 }}""
-              animate={{ "opacity": 1, "y": 0 }}""
-              transition={{ "duration": 0.8 }}"
+    initial={ "opacity": 0, "y": 30 }""
+              animate={ "opacity": 1, "y": 0 }""
+              transition={ "duration": 0.8 }"
             <motion.div;
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}"
+              initial={ opacity: 0, y: 30 }
+              animate={ opacity: 1, y: 0 }
+              transition={ duration: 0.8 }"
     <div className="min-h-screen bg-gray-50">;"
 </motion>
       <Head>;
@@ -397,13 +397,13 @@ export default function TalentPage() {;
       <div className="min-h-screen bg-gray-50">;"
 </div>
             <motion.div,"
-    initial={{ "opacity": 0, "y": 30 }}""
-              animate={{ "opacity": 1, "y": 0 }}""
-              transition={{ "duration": 0 && 0.8 }}"
+    initial={ "opacity": 0, "y": 30 }""
+              animate={ "opacity": 1, "y": 0 }""
+              transition={ "duration": 0 && 0.8 }"
             <motion && motion.div;
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}"
+              initial={ opacity: 0, y: 30 }
+              animate={ opacity: 1, y: 0 }
+              transition={ duration: 0.8 }"
               className="text-center max-w-4xl mx-auto""
             >
 </motion>"
@@ -433,17 +433,17 @@ export default function TalentPage() {;
 </div>
             <motion.div,"
     className="text-center mb-16"""
-              initial={{ "opacity": 0, "y": 30 }}""
-              whileInView={{ "opacity": 1, "y": 0 }}""
-              transition={{ "duration": 0.8 }}""
-              viewport={{ "once": true }}"
+              initial={ "opacity": 0, "y": 30 }""
+              whileInView={ "opacity": 1, "y": 0 }""
+              transition={ "duration": 0.8 }""
+              viewport={ "once": true }"
             <motion.div;"
               className="text-center mb-16""
 
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
+              initial={ opacity: 0, y: 30 }
+              whileInView={ opacity: 1, y: 0 }
+              transition={ duration: 0.8 }
+              viewport={ once: true }
 
         {/* Benefits Section */}"
         <section className="py-20 bg-white">"
@@ -451,7 +451,7 @@ export default function TalentPage() {;
           <div className="container mx-auto px-4">"
 </div>
             <motion.div,
-              transition={{ duration: 0 && 0.8 }}"
+              transition={ duration: 0 && 0.8 }"
               className="text-center max-w-4xl mx-auto">;"
 </motion>"
               <h1 className="text-4xl md:text-6xl font-bold mb-6">;"
@@ -480,14 +480,14 @@ export default function TalentPage() {;
 </div>
             <motion&& motion.div,"
     className="text-center mb-16"""
-              initial={{ "opacity": 0, "y": 30 }}""
-              whileInView={{ "opacity": 1, "y": 0 }}""
-              transition={{ "duration": 0 && 0.8 }}""
-              viewport={{ "once": true }}"
+              initial={ "opacity": 0, "y": 30 }""
+              whileInView={ "opacity": 1, "y": 0 }""
+              transition={ "duration": 0 && 0.8 }""
+              viewport={ "once": true }"
             <motion && motion.div;"
               className="text-center mb-16""
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial={ opacity: 0, y: 30 }
+              whileInView={ opacity: 1, y: 0 }
             >
 </motion>"
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">"
@@ -503,16 +503,16 @@ export default function TalentPage() {;
     key={index}"
                     className="text-center p-6""
 
-                    initial={{ opacity: 0, y: 30 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.8, delay: index * 0.1 }}
-                    viewport={{ once: true }} />;
-                    viewport={{ once: true }}                  >;
+                    initial={ opacity: 0, y: 30 }
+                    whileInView={ opacity: 1, y: 0 }
+                    transition={ duration: 0.8, delay: index * 0.1 }
+                    viewport={ once: true } />;
+                    viewport={ once: true }                  >;
                     <div className=\"text-blue-600 mb-4 mx-auto w-16 h-16 bg-blue-50 rounded-full flex items-center justify-center\" />;
                       <IconComponent className=\"w-8 h-8\" />;
                     </div>;
                     <h3 className=\"text-xl font-bold text-gray-900 mb-3\" />;
-                    viewport={{ once: true }}
+                    viewport={ once: true }
                   >
 
 </motion>"
@@ -539,17 +539,17 @@ export default function TalentPage() {;
 </div>
             <motion.div,"
     className="text-center mb-16"""
-              initial={{ "opacity": 0, "y": 30 }}""
-              whileInView={{ "opacity": 1, "y": 0 }}""
-              transition={{ "duration": 0.8 }}""
-              viewport={{ "once": true }}"
+              initial={ "opacity": 0, "y": 30 }""
+              whileInView={ "opacity": 1, "y": 0 }""
+              transition={ "duration": 0.8 }""
+              viewport={ "once": true }"
             <motion.div;"
               className="text-center mb-16""
 
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
+              initial={ opacity: 0, y: 30 }
+              whileInView={ opacity: 1, y: 0 }
+              transition={ duration: 0.8 }
+              viewport={ once: true }
 
             >
 </motion>"
@@ -574,8 +574,8 @@ export default function TalentPage() {;
 </p>
                     </p>
                   </motion.div>
-              transition={{ duration: 0 && 0.8 }}
-              viewport={{ once: true }}>;"
+              transition={ duration: 0 && 0.8 }
+              viewport={ once: true }>;"
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">;"
 </h2>
               </h2>;"
@@ -613,15 +613,15 @@ export default function TalentPage() {;
 
             <motion.div,"
     className="text-center mb-16"""
-              initial={{ "opacity": 0, "y": 30 }}""
-              whileInView={{ "opacity": 1, "y": 0 }}""
-              transition={{ "duration": 0 && 0.8 }}""
-              viewport={{ "once": true }}"
+              initial={ "opacity": 0, "y": 30 }""
+              whileInView={ "opacity": 1, "y": 0 }""
+              transition={ "duration": 0 && 0.8 }""
+              viewport={ "once": true }"
             <motion && motion.div;"
               className="text-center mb-16""
 
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }} />;
+              initial={ opacity: 0, y: 30 }
+              whileInView={ opacity: 1, y: 0 } />;
               <h2 className=\"text-3xl md:text-4xl font-bold text-gray-900 mb-4\" />;
                 Our Values;
               </h2>;
@@ -630,8 +630,8 @@ export default function TalentPage() {;
               </p>;
             </motion.div>;
             <div className=\"grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6\" />;
-              {values.map((value, index) => (<motion.div,transition={{ duration: 0 && 0.8 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              {values.map((value, index) => (<motion.div,transition={ duration: 0 && 0.8 }
+              whileInView={ opacity: 1, y: 0 }
 
             >
 </motion>"
@@ -647,10 +647,10 @@ export default function TalentPage() {;
                 <motion.div,
     key={index}"
                   className="bg-white p-6 rounded-lg shadow-lg""
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8, delay: index * 0.1 }}
-                  viewport={{ once: true }}"
+                  initial={ opacity: 0, y: 30 }
+                  whileInView={ opacity: 1, y: 0 }
+                  transition={ duration: 0.8, delay: index * 0.1 }
+                  viewport={ once: true }"
                   className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow""
                 >
 </motion>"
@@ -717,10 +717,10 @@ export default function TalentPage() {;
 </div>
             <motion.div,"
     className="text-center mb-16"""
-              initial={{ "opacity": 0, "y": 30 }}""
-              whileInView={{ "opacity": 1, "y": 0 }}""
-              transition={{ "duration": 0.8 }}""
-              viewport={{ "once": true }}"
+              initial={ "opacity": 0, "y": 30 }""
+              whileInView={ "opacity": 1, "y": 0 }""
+              transition={ "duration": 0.8 }""
+              viewport={ "once": true }"
             <motion.div;"
               className="text-center mb-16""
 
@@ -760,14 +760,14 @@ export default function TalentPage() {;
 </motion>
             <motion.div,"
     className="text-center mb-16"""
-              initial={{ "opacity": 0, "y": 30 }}""
-              whileInView={{ "opacity": 1, "y": 0 }}""
-              transition={{ "duration": 0 && 0.8 }}""
-              viewport={{ "once": true }}"
+              initial={ "opacity": 0, "y": 30 }""
+              whileInView={ "opacity": 1, "y": 0 }""
+              transition={ "duration": 0 && 0.8 }""
+              viewport={ "once": true }"
             <motion && motion.div;"
               className="text-center mb-16""
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial={ opacity: 0, y: 30 }
+              whileInView={ opacity: 1, y: 0 }
             >
 </motion>"
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">"
@@ -782,10 +782,10 @@ export default function TalentPage() {;
                 <motion.div,
     key={job.id}"
                   className="bg-white border border-gray-200 rounded-lg p-8 hover:shadow-lg transition-shadow duration-300""
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8, delay: index * 0.1 }}
-                  viewport={{ once: true }}"
+                  initial={ opacity: 0, y: 30 }
+                  whileInView={ opacity: 1, y: 0 }
+                  transition={ duration: 0.8, delay: index * 0.1 }
+                  viewport={ once: true }"
                   className="bg-white rounded-lg shadow-lg p-6 text-center""
                 >
 </motion>"
@@ -837,10 +837,10 @@ export default function TalentPage() {;
               {values.map((value, index) => (
                 <motion.div,
                   className="bg-white p-6 rounded-lg shadow-lg"
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8, delay: index * 0.1 }}
-                  viewport={{ once: true }}
+                  initial={ opacity: 0, y: 30 }
+                  whileInView={ opacity: 1, y: 0 }
+                  transition={ duration: 0.8, delay: index * 0.1 }
+                  viewport={ once: true }
                   className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow"
                 >
                   <h3 className="text-xl font-semibold text-gray-900 mb-2">
@@ -914,10 +914,10 @@ export default function TalentPage() {;
     key={job.id}
 
                   className="bg-white border border-gray-200 rounded-lg p-8 hover:shadow-lg transition-shadow duration-300"
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8, delay: index * 0.1 }}
-                  viewport={{ once: true }}
+                  initial={ opacity: 0, y: 30 }
+                  whileInView={ opacity: 1, y: 0 }
+                  transition={ duration: 0.8, delay: index * 0.1 }
+                  viewport={ once: true }
                   className="bg-white rounded-lg shadow-lg p-6 text-center"
                 >
                   <benefit.icon className="w-12 h-12 text-blue-600 mx-auto mb-4" />
@@ -1022,15 +1022,15 @@ export default function TalentPage() {;
           <div className="container mx-auto px-4 text-center">"
 </div>
             <motion.div,"
-    initial={{ "opacity": 0, "y": 30 }}""
-              whileInView={{ "opacity": 1, "y": 0 }}""
-              transition={{ "duration": 0.8 }}""
-              viewport={{ "once": true }}"
+    initial={ "opacity": 0, "y": 30 }""
+              whileInView={ "opacity": 1, "y": 0 }""
+              transition={ "duration": 0.8 }""
+              viewport={ "once": true }"
             <motion.div;
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
+              initial={ opacity: 0, y: 30 }
+              whileInView={ opacity: 1, y: 0 }
+              transition={ duration: 0.8 }
+              viewport={ once: true }
             >
 </motion>"
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">"
@@ -1044,8 +1044,8 @@ export default function TalentPage() {;
 </div>
                 <motion.div,
     key={job.id}
-              transition={{ duration: 0 && 0.8 }}
-              viewport={{ once: true }}>;
+              transition={ duration: 0 && 0.8 }
+              viewport={ once: true }>;
 </motion>"
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">;"
 </h2>
@@ -1059,10 +1059,10 @@ export default function TalentPage() {;
                 <motion&& motion.div,
     key={job && job.id}"
                   className="bg-white border border-gray-200 rounded-lg p-8 hover:shadow-lg transition-shadow duration-300""
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0 && 0.8, delay: index * 0 && 0.1 }}
-                  viewport={{ once: true }}"
+                  initial={ opacity: 0, y: 30 }
+                  whileInView={ opacity: 1, y: 0 }
+                  transition={ duration: 0 && 0.8, delay: index * 0 && 0.1 }
+                  viewport={ once: true }"
                   className="bg-white rounded-lg shadow-lg p-6 text-center">;"
 </motion>"
                   <benefit && benefit.icon className="w-12 h-12 text-blue-600 mx-auto mb-4" />;"
@@ -1173,16 +1173,16 @@ export default function TalentPage() {;
         </section>;
 
             <motion.div,"
-    initial={{ "opacity": 0, "y": 30 }}""
-              whileInView={{ "opacity": 1, "y": 0 }}""
-              transition={{ "duration": 0 && 0.8 }}""
-              viewport={{ "once": true }}"
+    initial={ "opacity": 0, "y": 30 }""
+              whileInView={ "opacity": 1, "y": 0 }""
+              transition={ "duration": 0 && 0.8 }""
+              viewport={ "once": true }"
             <motion && motion.div;
 
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}transition={{ duration: 0.8 }}
-              viewport={{ once: true }}transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
+              initial={ opacity: 0, y: 30 }
+              whileInView={ opacity: 1, y: 0 }transition={ duration: 0.8 }
+              viewport={ once: true }transition={ duration: 0.8 }
+              viewport={ once: true }
              />;
               <h2 className=\"text-3xl md:text-4xl font-bold text-gray-900 mb-4\" />;
                 Open Positions;
@@ -1194,21 +1194,21 @@ export default function TalentPage() {;
             <div className=\"space-y-8\" />;
               {jobOpenings.map((job, index) => (<motion.div,key={job.id}
 ursor/automate-test-improve-and-merge-code-646c;
-              transition={{ duration: 0 && 0.8 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}              transition={{ duration: 0 && 0.8 }}
+              transition={ duration: 0 && 0.8 }
+              transition={ duration: 0.8 }
+              viewport={ once: true }              transition={ duration: 0 && 0.8 }
         <section className=\"py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white\" />
           <div className=\"container mx-auto px-4 text-center\" />
             <motion.div,
-    initial={{ \"opacity\": 0, \"y\": 30 }}
-              whileInView={{ \"opacity\": 1, \"y\": 0 }}
-              transition={{ \"duration\": 0.8 }}
-              viewport={{ \"once\": true }}
+    initial={ \"opacity\": 0, \"y\": 30 }
+              whileInView={ \"opacity\": 1, \"y\": 0 }
+              transition={ \"duration\": 0.8 }
+              viewport={ \"once\": true }
             <motion.div;
-initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
+initial={ opacity: 0, y: 30 }
+              whileInView={ opacity: 1, y: 0 }
+              transition={ duration: 0.8 }
+              viewport={ once: true }
              />
               <h2 className=\"text-3xl md:text-4xl font-bold text-gray-900 mb-4\" />
                 Open Positions;
@@ -1221,8 +1221,8 @@ initial={{ opacity: 0, y: 30 }}
               {jobOpenings.map((job, index) => (}
                 <motion.div,}
     key={job.id}
-              transition={{ duration: 0 && 0.8 }}
-              viewport={{ once: true }} />;
+              transition={ duration: 0 && 0.8 }
+              viewport={ once: true } />;
               <h2 className=\"text-3xl md:text-4xl font-bold text-gray-900 mb-4\" />;
                 Open Positions;
               </h2>;
@@ -1233,10 +1233,10 @@ initial={{ opacity: 0, y: 30 }}
             <div className=\"space-y-8\" />;
               {jobOpenings && jobOpenings.map((job, index) => (<motion&& motion.div,key={job && job.id}
                   className=\"bg-white border border-gray-200 rounded-lg p-8 hover:shadow-lg transition-shadow duration-300\";
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0 && 0.8, delay: index * 0 && 0.1 }}
-                  viewport={{ once: true }}
+                  initial={ opacity: 0, y: 30 }
+                  whileInView={ opacity: 1, y: 0 }
+                  transition={ duration: 0 && 0.8, delay: index * 0 && 0.1 }
+                  viewport={ once: true }
                   className=\"bg-white rounded-lg shadow-lg p-6 text-center\" />;
                   <benefit && benefit.icon className=\"w-12 h-12 text-blue-600 mx-auto mb-4\" />;
                   <h3 className=\"text-xl font-semibold text-gray-900 mb-2\" />;
@@ -1328,22 +1328,22 @@ initial={{ opacity: 0, y: 30 }}
         <section className=\"py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white\" />;
           <div className=\"container mx-auto px-4 text-center\" />;
             <motion&& motion.div,<motion.div,ursor/automate-test-improve-and-merge-code-646c;
-            <motion.div,initial={{ \"opacity\": 0, \"y\": 30 }}
-        {/* CTA Section */}    initial={{ \"opacity\": 0, \"y\": 30 }}
+            <motion.div,initial={ \"opacity\": 0, \"y\": 30 }
+        {/* CTA Section */}    initial={ \"opacity\": 0, \"y\": 30 }
         {/* CTA Section */}
             <motion.div,
-    initial={{ \"opacity\": 0, \"y\": 30 }}
-              whileInView={{ \"opacity\": 1, \"y\": 0 }}
-              transition={{ \"duration\": 0 && 0.8 }}
-              viewport={{ \"once\": true }}
+    initial={ \"opacity\": 0, \"y\": 30 }
+              whileInView={ \"opacity\": 1, \"y\": 0 }
+              transition={ \"duration\": 0 && 0.8 }
+              viewport={ \"once\": true }
             <motion && motion.div;
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}transition={{ duration: 0.8 }}
-              viewport={{ once: true }}ursor/automate-test-improve-and-merge-code-646c;
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
+              initial={ opacity: 0, y: 30 }
+              whileInView={ opacity: 1, y: 0 }transition={ duration: 0.8 }
+              viewport={ once: true }ursor/automate-test-improve-and-merge-code-646c;
+              transition={ duration: 0.8 }
+              viewport={ once: true }
              />;
-              viewport={{ once: true }}            >;
+              viewport={ once: true }            >;
               <h2 className=\"text-3xl md:text-4xl font-bold mb-6\" />;
                 Don't See the Right Role?;
               </h2>;
@@ -1360,8 +1360,8 @@ initial={{ opacity: 0, y: 30 }}
     </MainLayout>;
   )}
 ursor/automate-test-improve-and-merge-code-646c;
-              transition={{ duration: 0 && 0.8 }}
-              viewport={{ once: true }}>;
+              transition={ duration: 0 && 0.8 }
+              viewport={ once: true }>;
               <h2 className=\"text-3xl md: text-4xl font-bold mb-6\" />;
                 Don't See the Right Role?;
               </h2>;
@@ -1378,9 +1378,9 @@ ursor/automate-test-improve-and-merge-code-646c;
     </MainLayout>;
   ),ursor/automate-test-improve-and-merge-code-646c;
 }
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
+              whileInView={ opacity: 1, y: 0 }
+              transition={ duration: 0.8 }
+              viewport={ once: true }
             >
 
 </motion>"

@@ -48,4 +48,4 @@ const containerVariants = {hidden: { opacity: 0}
 const categories = ['All', 'AI & Analytics', 'Quantum Computing', 'Cybersecurity', 'Cloud & DevOps', 'Data & Analytics', 'Blockchain & Web3'];
 
 export default function EnhancedServicesShowcase(...args: unknown[]): unknown {  const [selectedCategory, setSelectedCategory] = useState('All');}
-  const [hoveredService, setHoveredService] = useState<string | null />(null)}"
+  const [hoveredService, setHoveredService] = useState<string | null />(null)}'

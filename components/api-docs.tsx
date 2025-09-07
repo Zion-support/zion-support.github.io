@@ -48,7 +48,7 @@ export default function ApiDocsRedirect() {
       destination: '/developers / docs',
       permanent: true,
     },
-  }      permanent: true}}
+  }      permanent: true}
 }
 ;
 export default /**

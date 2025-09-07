@@ -126,9 +126,6 @@ export default OptimizedImage
 <<<<<<< HEAD
 <<<<<<< HEAD
 
-=======
->>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
-=======
 
 const "OptimizedImage": React.FC<OptimizedImageProps> = ({
   }
@@ -226,7 +223,6 @@ class_name = '',
   // Check condition
 if ( {) {
   $2
-=======
   priority = false,'
   sizes = '(max - width: 768px) 100vw, (max - width: 1200px) 50vw, 33vw',
   quality = 85,
@@ -280,7 +276,6 @@ if ( {) {}
 }) => {
 >>>>>>> merged-prs-20250907-203621
       src={src}
-=======
   priority?: boolean;
   quality?: number;
   sizes?: string;}

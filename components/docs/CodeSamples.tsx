@@ -400,7 +400,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         <code>{sampleMap[active] || ''}</code>;
       </pre>;
     </div>;
-  )}      <pre className="p-3 rounded bg-high-contrast-tertiary overflow-auto text-sm">;
+  )}      <pre className='p-3 rounded bg-high-contrast-tertiary overflow-auto text-sm'>;
         <code>{sampleMap[active] |''}</code>;
       </pre>;
     </div>;
@@ -502,7 +502,7 @@ const sampleMap = Object && Object.fromEntries(samples && samples.map((s) => [s 
         ))}
 <<<<<<< HEAD
       </div>;
-      <pre className="p-3 rounded bg-high-contrast-tertiary overflow-auto text-sm">;
+      <pre className='p-3 rounded bg-high-contrast-tertiary overflow-auto text-sm'>;
         <code>{sampleMap[active] || ''}</code>;
       </pre>;
     </div>;
@@ -519,8 +519,8 @@ const tabs: Array<{ key: Props['samples'][number]['language'], label: string }> 
   { key: 'curl', label: 'cURL' },{ key: 'javascript', label: 'JavaScript' },{ key: 'python', label: 'Python' }],export default /**;
  * CodeSamples - Function description;
  */;
-function CodeSamples() {const [active, set_active] = useState < typeof tabs[number]['key']>('curl')const sample_map  = Object.from_entries (samples.map ((s) => [s.language, s.code]))return (<div className="w - full">;
-      <div className="flex gap - 2 mb - 2">;
+function CodeSamples() {const [active, set_active] = useState < typeof tabs[number]['key']>('curl')const sample_map  = Object.from_entries (samples.map ((s) => [s.language, s.code]))return (<div className='w - full'>;
+      <div className='flex gap - 2 mb - 2'>;
         {tabs.map ((t) => (<button;
             key={t.key}
             className={`px - 3 py - 1 rounded border ${active === t.key ? 'bg - high - contrast - tertiary border - high - contrast - accent' : 'bg - high - contrast - secondary border - high - contrast - secondary'}`}
@@ -531,7 +531,7 @@ function CodeSamples() {const [active, set_active] = useState < typeof tabs[numb
       </div>;
       <pre className='p - 3 rounded bg - high - contrast - tertiary overflow - auto text - sm'>        <code>{sample_map[active] || ''}</code>;
       </pre>;
-    </div>)}      <pre className="p - 3 rounded bg - high - contrast - tertiary overflow - auto text - sm">;
+    </div>)}      <pre className='p - 3 rounded bg - high - contrast - tertiary overflow - auto text - sm'>;
         <code>{sample_map[active] || ''}</code>;
       </pre>;
     </div>);

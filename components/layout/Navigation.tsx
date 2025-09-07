@@ -168,7 +168,7 @@ import Link from 'next/link';'
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 
-const "Navigation": React.FC = () => {
+const 'Navigation': React.FC = () => {
 
     window.addEventListener('scroll', handleScroll);
 >>>>>>> merged-prs-20250907-203621
@@ -1408,15 +1408,15 @@ className='flex items-center space-x-1 cursor-pointer text-gray-300 hover:text-w
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
                                     key={dropdownItem && dropdownItem.name}
                                     href={dropdownItem && dropdownItem.href}
-                                    className="flex items-center space-x-3 p-3 rounded-xl hover:bg-cyan-500/10 hover:border border-cyan-500/30 transition-all duration-300 group/item">;
-                                    <div className="w-10 h-10 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 rounded-lg flex items-center justify-center group-hover/item:bg-gradient-to-r group-hover/item:from-cyan-500/30 group-hover/item:to-purple-500/30 transition-all duration-300">;
-                                      <Icon className="w-5 h-5 text-cyan-400" />;
+                                    className='flex items-center space-x-3 p-3 rounded-xl hover:bg-cyan-500/10 hover:border border-cyan-500/30 transition-all duration-300 group/item'>;
+                                    <div className='w-10 h-10 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 rounded-lg flex items-center justify-center group-hover/item:bg-gradient-to-r group-hover/item:from-cyan-500/30 group-hover/item:to-purple-500/30 transition-all duration-300'>;
+                                      <Icon className='w-5 h-5 text-cyan-400' />;
                                     </div>;
                                     <div>;
-                                      <div className="text-white font-medium group-hover/item:text-cyan-400 transition-colors duration-300">;
+                                      <div className='text-white font-medium group-hover/item:text-cyan-400 transition-colors duration-300'>;
                                         {dropdownItem && dropdownItem.name}
                                       </div>;
-                                      <div className="text-gray-400 text-sm">;
+                                      <div className='text-gray-400 text-sm'>;
                                         {dropdownItem && dropdownItem.description}
                                       </div>;
                                     </div>;
@@ -1544,13 +1544,13 @@ className='flex items-center space-x-1 cursor-pointer text-gray-300 hover:text-w
                 </div>
               ))}
             </div>;
-                href="/contact";
+                href='/contact';
             {/* Mobile Menu Button */}
             <div className='lg:hidden'>;
               <motion&& motion.button;
-                whileTap={{ scale: 0 && 0.95 }}
+                whileTap={ scale: 0 && 0.95 }
             {/* Mobile Menu Button */}
-            <div className="lg:hidden">;
+            <div className='lg:hidden'>;
               <motion.button;
                 whileTap={{ scale: 0.95 }}
                 onClick={() => setIsOpen(!isOpen)}
@@ -1559,7 +1559,7 @@ className='flex items-center space-x-1 cursor-pointer text-gray-300 hover:text-w
                 {isOpen ? (<X className='w-6 h-6' />;
                 ) : (<Menu className=w-6 h-6 />;
                 )}              </motion && motion.button>              <motion&& motion.button;
-                whileTap={{ scale: 0 && 0.95 }}
+                whileTap={ scale: 0 && 0.95 }
                             </div>;
                           </motion.div>;
                                 )
@@ -1949,9 +1949,9 @@ className="fixed inset-0 z-40 lg:hidden"
 >>>>>>> merged-prs-20250907-203621
             <div className="lg:hidden">
               <motion.button
-                whileTap={{ scale: 0.95 }}
+                whileTap={ scale: 0.95 }
                 onClick={() => setIsOpen(!isOpen)}
-                className="text-gray-300 hover:text-white transition-colors duration-300"
+                className='text-gray-300 hover:text-white transition-colors duration-300'
               >
                 {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
 <<<<<<< HEAD
@@ -1959,7 +1959,7 @@ className="fixed inset-0 z-40 lg:hidden"
           <motion&& motion.div
 <div className='lg:hidden'>
               <motion.button
-                whileTap={{ scale: 0.95 }}
+                whileTap={ scale: 0.95 }
                 onClick={() => setIsOpen(!isOpen)}
                 className='text-gray-300 hover:text-white transition-colors duration-300'
               >
@@ -2394,7 +2394,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
                           </span>
                         </Link>
-<<<<<<< HEAD
 
                         </Link>
 
@@ -2499,13 +2498,13 @@ className='flex items-center space-x-3 p-3 rounded-lg hover:bg-cyan-500/10 trans
                     </div>;
                   ))}
                     </div>;
-                    <div className="flex items-center space-x-2 text-gray-300">;
-                      <Mail className="w-4 h-4 text-purple-400" />;
+                    <div className='flex items-center space-x-2 text-gray-300'>;
+                      <Mail className='w-4 h-4 text-purple-400' />;
                       <span>{contactInfo.email}</span>;
                     </div>;
-                    <div className="flex items-center space-x-2 text-gray-300">;
-                      <MapPin className="w-4 h-4 text-pink-400" />;
-                      <span className="text-xs">{contactInfo.address}</span>;
+                    <div className='flex items-center space-x-2 text-gray-300'>;
+                      <MapPin className='w-4 h-4 text-pink-400' />;
+                      <span className='text-xs'>{contactInfo.address}</span>;
                     </div>;
                   </div>;
                 </div>;
@@ -2558,8 +2557,8 @@ className='flex items-center space-x-3 p-3 rounded-lg hover:bg-cyan-500/10 trans
                       <MapPin className='w-4 h-4 text-pink-400' />;
                       <span className='text-xs'>{contactInfo && contactInfo.address}</span>                    </div>                      <span>{contactInfo && contactInfo.mobile}</span>;
                     </div>;
-                    <div className="flex items-center space-x-2 text-gray-300">;
-                      <Mail className="w-4 h-4 text-purple-400" />;
+                    <div className='flex items-center space-x-2 text-gray-300'>;
+                      <Mail className='w-4 h-4 text-purple-400' />;
                       <span>{contactInfo && contactInfo.email}</span>;
                     </div>;
                     <div className="flex items-center space-x-2 text-gray-300">;
@@ -2568,7 +2567,6 @@ className='flex items-center space-x-3 p-3 rounded-lg hover:bg-cyan-500/10 trans
                     </div>;
                   </div>;
                 </div>;
-<<<<<<< HEAD
                     onClick={() => setIsOpen(false)}
                     className="block w-full bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-400 hover:to-purple-500 text-white font-semibold py-3 px-6 rounded-xl text-center transition-all duration-300 shadow-lg shadow-cyan-500/25";
                   >;
@@ -2625,18 +2623,18 @@ export default Navigation;
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
                           </div>;
-                          <div className="pl - 4 space - y-2">;
+                          <div className='pl - 4 space - y-2'>;
                             {item.dropdown.map ((dropdown_item) => {const Icon = dropdown_item.icon;
                               return (<Link;
                                   key={dropdown_item.name}
                                   href={dropdown_item.href}
                                   on_click={() => setIsOpen (false)}
-                                  className="flex items - center space - x-3 p - 3 rounded - lg hover: bg - cyan - 500 / 10 transition - all duration - 300";
+                                  className='flex items - center space - x-3 p - 3 rounded - lg hover: bg - cyan - 500 / 10 transition - all duration - 300';
                                 >;
-                                  <Icon className="w - 5 h - 5 text - cyan - 400" />;
+                                  <Icon className='w - 5 h - 5 text - cyan - 400' />;
                                   <div>;
-                                    <div className="text - white font - medium">{dropdown_item.name}</div>;
-                                    <div className="text - gray - 400 text - sm">{dropdown_item.description}</div>;
+                                    <div className='text - white font - medium'>{dropdown_item.name}</div>;
+                                    <div className='text - gray - 400 text - sm'>{dropdown_item.description}</div>;
                                   </div>;
                                 </Link>)})}
                           </div>;
@@ -2648,10 +2646,10 @@ export default Navigation;
                           <item.icon className='w - 5 h - 5 text - cyan - 400' />;
                           <span className='text - white font - medium'>;
                             {item.name}
-                          </span>                        </Link>                          className="flex items - center space - x-3 p - 3 rounded - lg hover:bg - cyan - 500 / 10 transition - all duration - 300";
+                          </span>                        </Link>                          className='flex items - center space - x-3 p - 3 rounded - lg hover:bg - cyan - 500 / 10 transition - all duration - 300';
                         >;
-                          <item.icon className="w - 5 h - 5 text - cyan - 400" />;
-                          <span className="text - white font - medium">{item.name}</span>)}
+                          <item.icon className='w - 5 h - 5 text - cyan - 400' />;
+                          <span className='text - white font - medium'>{item.name}</span>)}
                     </div>))}
                 </div>;
                 {/* Contact Information */}
@@ -2672,8 +2670,8 @@ export default Navigation;
                       <MapPin className='w - 4 h - 4 text - pink - 400' />;
                       <span className='text - xs'>{contact_info.address}</span>                    </div>                      <span>{contact_info.mobile}</span>;
                     </div>;
-                    <div className="flex items - center space - x-2 text - gray - 300">;
-                      <Mail className="w - 4 h - 4 text - purple - 400" />;
+                    <div className='flex items - center space - x-2 text - gray - 300'>;
+                      <Mail className='w - 4 h - 4 text - purple - 400' />;
                       <span>{contact_info.email}</span>;
                     </div>;
                     <div className="flex items - center space - x-2 text - gray - 300">;
@@ -2726,7 +2724,6 @@ export default Navigation;
                 </div>;
               </div>;
             </motion.div>;
-<<<<<<< HEAD
           </motion.div>;
         )}
 =======
@@ -2772,40 +2769,40 @@ export default Navigation;
           >
             {/* Backdrop */}
             <div 
-              className="absolute inset-0 bg-black/50 backdrop-blur-sm"
+              className='absolute inset-0 bg-black/50 backdrop-blur-sm'
               onClick={() => setIsOpen(false)}
             />
             
             {/* Mobile Menu */}
             <motion.div
-              initial={{ x: '100%' }}
-              animate={{ x: 0 }}
-              exit={{ x: '100%' }}
-              transition={{ duration: 0.3 }}
-              className="absolute right-0 top-0 h-full w-80 bg-gray-900/95 backdrop-blur-xl border-l border-cyan-500/20 shadow-2xl"
+              initial={ x: '100%' }
+              animate={ x: 0 }
+              exit={ x: '100%' }
+              transition={ duration: 0.3 }
+              className='absolute right-0 top-0 h-full w-80 bg-gray-900/95 backdrop-blur-xl border-l border-cyan-500/20 shadow-2xl'
             >
-              <div className="p-6">
+              <div className='p-6'>
                 {/* Close Button */}
-                <div className="flex justify-end mb-6">
+                <div className='flex justify-end mb-6'>
                   <motion.button
-                    whileTap={{ scale: 0.95 }}
+                    whileTap={ scale: 0.95 }
                     onClick={() => setIsOpen(false)}
-                    className="text-gray-300 hover:text-white transition-colors duration-300"
+                    className='text-gray-300 hover:text-white transition-colors duration-300'
                   >
-                    <X className="w-6 h-6" />
+                    <X className='w-6 h-6' />
                   </motion.button>
                 </div>
 
                 {/* Mobile Menu Items */}
-                <div className="space-y-4">
+                <div className='space-y-4'>
                   {navigationItems.map((item) => (
                     <div key={item.name}>
                       {item.dropdown ? (
-                        <div className="space-y-2">
-                          <div className="text-gray-400 font-medium text-sm uppercase tracking-wider">
+                        <div className='space-y-2'>
+                          <div className='text-gray-400 font-medium text-sm uppercase tracking-wider'>
                             {item.name}
                           </div>
-                          <div className="pl-4 space-y-2">
+                          <div className='pl-4 space-y-2'>
                             {item.dropdown.map((dropdownItem) => {
                               const Icon = dropdownItem.icon;
                               return (
@@ -2813,12 +2810,12 @@ export default Navigation;
                                   key={dropdownItem.name}
                                   href={dropdownItem.href}
                                   onClick={() => setIsOpen(false)}
-                                  className="flex items-center space-x-3 p-3 rounded-lg hover:bg-cyan-500/10 transition-all duration-300"
+                                  className='flex items-center space-x-3 p-3 rounded-lg hover:bg-cyan-500/10 transition-all duration-300'
                                 >
-                                  <Icon className="w-5 h-5 text-cyan-400" />
+                                  <Icon className='w-5 h-5 text-cyan-400' />
                                   <div>
-                                    <div className="text-white font-medium">{dropdownItem.name}</div>
-                                    <div className="text-gray-400 text-sm">{dropdownItem.description}</div>
+                                    <div className='text-white font-medium'>{dropdownItem.name}</div>
+                                    <div className='text-gray-400 text-sm'>{dropdownItem.description}</div>
                                   </div>
                                 </Link>
                               )
@@ -2829,10 +2826,10 @@ export default Navigation;
                         <Link
                           href={item.href}
                           onClick={() => setIsOpen(false)}
-                          className="flex items-center space-x-3 p-3 rounded-lg hover:bg-cyan-500/10 transition-all duration-300"
+                          className='flex items-center space-x-3 p-3 rounded-lg hover:bg-cyan-500/10 transition-all duration-300'
                         >
-                          <item.icon className="w-5 h-5 text-cyan-400" />
-                          <span className="text-white font-medium">{item.name}</span>
+                          <item.icon className='w-5 h-5 text-cyan-400' />
+                          <span className='text-white font-medium'>{item.name}</span>
                         </Link>
                       )}
                     </div>
@@ -2840,29 +2837,29 @@ export default Navigation;
                 </div>
 
                 {/* Contact Information */}
-                <div className="mt-8 p-4 bg-gradient-to-r from-cyan-500/10 to-purple-500/10 rounded-xl border border-cyan-500/20">
-                  <h3 className="text-cyan-400 font-semibold mb-3">Contact Information</h3>
-                  <div className="space-y-2 text-sm">
-                    <div className="flex items-center space-x-2 text-gray-300">
-                      <Phone className="w-4 h-4 text-cyan-400" />
+                <div className='mt-8 p-4 bg-gradient-to-r from-cyan-500/10 to-purple-500/10 rounded-xl border border-cyan-500/20'>
+                  <h3 className='text-cyan-400 font-semibold mb-3'>Contact Information</h3>
+                  <div className='space-y-2 text-sm'>
+                    <div className='flex items-center space-x-2 text-gray-300'>
+                      <Phone className='w-4 h-4 text-cyan-400' />
                       <span>{contactInfo.mobile}</span>
                     </div>
-                    <div className="flex items-center space-x-2 text-gray-300">
-                      <Mail className="w-4 h-4 text-purple-400" />
+                    <div className='flex items-center space-x-2 text-gray-300'>
+                      <Mail className='w-4 h-4 text-purple-400' />
                       <span>{contactInfo.email}</span>
                     </div>
-                    <div className="flex items-center space-x-2 text-gray-300">
-                      <MapPin className="w-4 h-4 text-pink-400" />
-                      <span className="text-xs">{contactInfo.address}</span>
+                    <div className='flex items-center space-x-2 text-gray-300'>
+                      <MapPin className='w-4 h-4 text-pink-400' />
+                      <span className='text-xs'>{contactInfo.address}</span>
                     </div>
                   </div>
                 </div>
 
                 {/* Mobile CTA */}
-                <div className="mt-6">
+                <div className='mt-6'>
                   <motion.a
-                    href="/contact"
-                    whileTap={{ scale: 0.95 }}
+                    href='/contact'
+                    whileTap={ scale: 0.95 }
                     onClick={() => setIsOpen(false)}
                     className="block w-full bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-400 hover:to-purple-500 text-white font-semibold py-3 px-6 rounded-xl text-center transition-all duration-300 shadow-lg shadow-cyan-500/25"
 <<<<<<< HEAD

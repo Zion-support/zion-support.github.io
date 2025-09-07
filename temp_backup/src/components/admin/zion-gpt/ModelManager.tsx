@@ -3,7 +3,7 @@
   {;
   {;
   Loader2, RefreshCw, Play,  CheckCircle, AlertCircle ;
-  } from "lucide-react";
+  } from 'lucide-react';
 import {;
   {;
   {;
@@ -58,21 +58,21 @@ const toggleModelActive = async (modelId: string, currentActive: boolean, purpos
   //If activating, deactivate all other models with the same purpose if (!currentActive) {';''
   await supabase .from ('model versions') ';''
 }//Update this model await supabase .from ('model versions') ;
-}"
-};""
-return (<Card className="w-full" > <CardHeader className="flex flex-row items-center justify-between" > <div> <CardTitle>ZionGPT Models</CardTitle> <CardDescription> Manage fine-tuned AI models for different platform features </CardDescription> </div> </div>) : (<Table> <TableHeader> <TableRow> <TableHead>Model ID</TableHead> <TableHead>Version</TableHead> <TableHead>Purpose</TableHead> <TableHead>Base Model</TableHead> <TableHead>Status</TableHead> <TableHead>Created</TableHead> <TableHead className="text-right" >Actions</TableHead> </TableRow> </TableHeader> <TableBody> {;'"
-  models.map ( (model) => (<TableRow key= {;'"'"
-  model.id '";'"'"
-}>) : model.trainingStatus === 'failed' ? (<Badge className="bg-red-500" >Failed</Badge>) : model.trainingStatus === 'running' ? (<Badge className="bg-blue-500" >Training</Badge>) : (<Badge className="bg-yellow-500" >Queued</Badge>) ;
+}'
+};''
+return (<Card className='w-full' > <CardHeader className='flex flex-row items-center justify-between' > <div> <CardTitle>ZionGPT Models</CardTitle> <CardDescription> Manage fine-tuned AI models for different platform features </CardDescription> </div> </div>) : (<Table> <TableHeader> <TableRow> <TableHead>Model ID</TableHead> <TableHead>Version</TableHead> <TableHead>Purpose</TableHead> <TableHead>Base Model</TableHead> <TableHead>Status</TableHead> <TableHead>Created</TableHead> <TableHead className='text-right' >Actions</TableHead> </TableRow> </TableHeader> <TableBody> {;''
+  models.map ( (model) => (<TableRow key= {;''''
+  model.id '';''''
+}>) : model.trainingStatus === 'failed' ? (<Badge className='bg-red-500' >Failed</Badge>) : model.trainingStatus === 'running' ? (<Badge className='bg-blue-500' >Training</Badge>) : (<Badge className='bg-yellow-500' >Queued</Badge>) ;
 }onClick={;
-  () => checkTrainingStatus (model.id) ;"
-}disabled= {;""
-  activeJobs[model.id] ";""
-}>) : (<RefreshCw className="h-4 w-4" />) ";""
-}<span className="ml-1" >Check</span> </Button> > {";""
-  model.active ? (<> <CheckCircle className="h-4 w-4 mr-1" /> Active </>) : (<> <Play className="h-4 w-4 mr-1" /> Activate </>) ";""
-}</Button>) : (<Button > <AlertCircle className="h-4 w-4 mr-1" /> Error </Button>) ;
+  () => checkTrainingStatus (model.id) ;'
+}disabled= {;''
+  activeJobs[model.id] ';''
+}>) : (<RefreshCw className='h-4 w-4' />) ';''
+}<span className='ml-1' >Check</span> </Button> > {';''
+  model.active ? (<> <CheckCircle className='h-4 w-4 mr-1' /> Active </>) : (<> <Play className='h-4 w-4 mr-1' /> Activate </>) ';''
+}</Button>) : (<Button > <AlertCircle className='h-4 w-4 mr-1' /> Error </Button>) ;
 }</TableCell> </TableRow>) ) ;
-}</TableBody> </Table>) ;'"
-}</CardContent> </Card>) ;'"'"
-}'"'"'"
+}</TableBody> </Table>) ;''
+}</CardContent> </Card>) ;''''
+}''''''

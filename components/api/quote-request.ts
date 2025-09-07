@@ -389,7 +389,6 @@ if (throw error) {}
               .filter(Boolean)
           : [];
       }
-<<<<<<< HEAD
 const supabaseUrl = $2;
 const supabaseKey = $2;
 const supabase = supabaseUrl && supabaseKey ? createClient(supabaseUrl, supabaseKey) : null,

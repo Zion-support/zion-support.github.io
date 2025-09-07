@@ -1795,7 +1795,7 @@ const navigationItems  = null;
     </>);
 }
 const navigationItems  = null;
-                            exit={{ opacity: 0, height: 0}}
+                            exit={ opacity: 0, height: 0}
                             transition = $2;
 export default EnhancedNavigation2025,
   Palette, Code, Database, Shield as ShieldIcon, Globe as GlobeIcon, Zap as ZapIcon, Target as TargetIcon}
@@ -1876,7 +1876,6 @@ const navigationItems = null;
       <div className="h - 20" />;
     </>);
 }
-<<<<<<< HEAD
   Palette, Code, Database, Shield as ShieldIcon, Globe as GlobeIcon, Zap as ZapIcon, Target as TargetIcon}
  } from 'lucide-react';
 

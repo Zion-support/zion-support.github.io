@@ -151,9 +151,9 @@ export default function FAQPage() {
         <section className="bg-gradient-to-br from-blue-900 via-purple-900 to-pink-900 text-white py-20">
           <div className="container mx-auto px-4">
             <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
+              initial={ opacity: 0, y: 30 }
+              animate={ opacity: 1, y: 0 }
+              transition={ duration: 0.8 }
               className="text-center max-w-4xl mx-auto"
             >
               <h1 className="text-4xl md:text-6xl font-bold mb-6">
@@ -170,9 +170,9 @@ export default function FAQPage() {
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto">
               <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.2 }}
+                initial={ opacity: 0, y: 20 }
+                animate={ opacity: 1, y: 0 }
+                transition={ duration: 0.6, delay: 0.2 }
                 className="mb-12"
               >
                 <div className="flex flex-col md:flex-row gap-4 mb-8">
@@ -211,9 +211,9 @@ export default function FAQPage() {
                 {filteredFaqs.map((faq, index) => (
                   <motion.div
                     key={index}
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.6, delay: 0.1 * index }}
+                    initial={ opacity: 0, y: 20 }
+                    animate={ opacity: 1, y: 0 }
+                    transition={ duration: 0.6, delay: 0.1 * index }
                     className="bg-white rounded-lg shadow-md overflow-hidden"
                   >
                     <button
@@ -232,10 +232,10 @@ export default function FAQPage() {
                     <AnimatePresence>
                       {openItems.includes(index) && (
                         <motion.div
-                          initial={{ height: 0, opacity: 0 }}
-                          animate={{ height: 'auto', opacity: 1 }}
-                          exit={{ height: 0, opacity: 0 }}
-                          transition={{ duration: 0.3 }}
+                          initial={ height: 0, opacity: 0 }
+                          animate={ height: 'auto', opacity: 1 }
+                          exit={ height: 0, opacity: 0 }
+                          transition={ duration: 0.3 }
                           className="overflow-hidden"
                         >
                           <div className="px-6 pb-4 text-gray-600 leading-relaxed">
@@ -250,8 +250,8 @@ export default function FAQPage() {
 
               {filteredFaqs.length === 0 && (
                 <motion.div
-                  initial={{ opacity: 0 }}
-                  animate={{ opacity: 1 }}
+                  initial={ opacity: 0 }
+                  animate={ opacity: 1 }
                   className="text-center py-12"
                 >
                   <Search className="w-16 h-16 text-gray-400 mx-auto mb-4" />
@@ -265,9 +265,9 @@ export default function FAQPage() {
               )}
 
               <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.4 }}
+                initial={ opacity: 0, y: 20 }
+                animate={ opacity: 1, y: 0 }
+                transition={ duration: 0.6, delay: 0.4 }
                 className="mt-16 bg-gradient-to-r from-blue-50 to-purple-50 rounded-2xl p-8"
               >
                 <h3 className="text-2xl font-bold text-gray-900 mb-4 text-center">

@@ -32,7 +32,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   
   if (!isInternalAgentRequest(req)) {
     }
-    res && res.status(401).json({ "error": 'Unauthorized','
+    res && res.status(401).json({ 'error': 'Unauthorized','
 });
 return;
   }

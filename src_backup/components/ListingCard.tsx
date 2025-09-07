@@ -71,14 +71,14 @@ export function ListingCard(): any ({;
 
 
       {images && images.length > 0 && images[0] && (
-        <div className="h-48 w-full overflow-hidden relative">
+        <div className='h-48 w-full overflow-hidden relative'>
           <Image
             src={images[0]}
             alt={title}
 
 
-            className="object-cover transition-transform duration-300 group-hover:scale-105"
-            loading="lazy"
+            className='object-cover transition-transform duration-300 group-hover:scale-105'
+            loading='lazy'
           />
 
 
@@ -94,17 +94,17 @@ export function ListingCard(): any ({;
 
 
 
-        <h3 className="text-xl font-bold mb-2 text-white group-hover:text-zion-purple transition-colors">{title}</h3>
-        <p className="text-zion-slate mb-4 flex-grow">{description}</p>
+        <h3 className='text-xl font-bold mb-2 text-white group-hover:text-zion-purple transition-colors'>{title}</h3>
+        <p className='text-zion-slate mb-4 flex-grow'>{description}</p>
         
         {tags && tags.length > 0 && (
 
 
 
 
-          <div className="flex flex-wrap gap-2 mb-4">
+          <div className='flex flex-wrap gap-2 mb-4'>
             {tags.map((tag, i) => (
-              <Badge key={i} variant="outline" className="border-zion-slate-dark text-zion-slate-light">
+              <Badge key={i} variant='outline' className='border-zion-slate-dark text-zion-slate-light'>
                 {tag}
 
 
@@ -144,16 +144,16 @@ export function ListingCard(): any ({;
 
         
         {author && (
-          <div className="flex items-center mt-auto pt-4 border-t border-zion-blue-light">
+          <div className='flex items-center mt-auto pt-4 border-t border-zion-blue-light'>
             {author.avatarUrl ? (
-              <Image src={author.avatarUrl} alt={author.name} width={32} height={32} className="rounded-full mr-2" loading="lazy" />
+              <Image src={author.avatarUrl} alt={author.name} width={32} height={32} className='rounded-full mr-2' loading='lazy' />
             ) : (
-              <div className="h-8 w-8 rounded-full bg-zion-purple/20 mr-2" />
+              <div className='h-8 w-8 rounded-full bg-zion-purple/20 mr-2' />
             )}
 
 
 
-            <span className="text-sm text-zion-slate-light">{author.name}</span>
+            <span className='text-sm text-zion-slate-light'>{author.name}</span>
           </div>
         )}
 
@@ -163,7 +163,7 @@ export function ListingCard(): any ({;
   );
 }
 
-;"}) })"
+;'}) })'
   );
 }
 
@@ -182,11 +182,11 @@ import Image from 'next / image';interface ListingCardProps {
   class_name?: string,
   profile_type?: 'service' | 'talent';
 }
-import React from "react",
-import { cn } from "@/lib/utils",
-import { Badge } from "@/components/ui/badge",
-import Link from "next/link";
-import Image from "next/image";
+import React from 'react',
+import { cn } from '@/lib/utils',
+import { Badge } from '@/components/ui/badge',
+import Link from 'next/link';
+import Image from 'next/image';
 origin/cursor/automate-test-improve-and-merge-code-2533
 interface ListingCardProps {
   id?: string;

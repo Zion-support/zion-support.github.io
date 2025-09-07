@@ -1,11 +1,11 @@
 
 
 import WhitepaperPreviewPanel from '@/components/WhitepaperPreviewPanel', // Import the new preview panel
-import { Button } from "@/components/ui/button",;
-import { Input } from "@/components/ui/input",;
+import { Button } from '@/components/ui/button',;
+import { Input } from '@/components/ui/input',;
 import { Trash2, Download, Share2 } from 'lucide-react'
 import { Send } from 'lucide-react', // Added Send icon
-import { toast } from "sonner",;
+import { toast } from 'sonner',;
 import { logErrorToProduction } from '@/utils/productionLogger',;
 interface WhitepaperSection {
   id: string,
@@ -115,14 +115,14 @@ const WhitepaperGeneratorPage: React.FC = () => {;,
     const processedDistData = distributionChartData.map(d => ({name: d.name, percentage: d.value})),
     const totalPercentage = processedDistData.reduce((sum, item) => sum + item.percentage, 0),
     if (totalPercentage > 100) {
-        setError("Total distribution percentage cannot exceed 100%."),"
+        setError('Total distribution percentage cannot exceed 100%.'),'
         setIsLoading(false),
         return
     }
      if (totalPercentage < 100 && totalPercentage > 0 && processedDistData.length > 0) {
         setError(`Warning: Total distribution is ${totalPercentage}%. Consider adjusting to sum to 100%.`)`
     } else if (totalPercentage === 0 && processedDistData.length > 0 && distributionData.some(d => d.name && d.percentage)) {
-        setError("Distribution percentages are all zero or invalid."),"
+        setError('Distribution percentages are all zero or invalid.'),'
         setIsLoading(false),
         return
     return parsed;
@@ -150,14 +150,14 @@ const WhitepaperGeneratorPage: React.FC = () => {;,
     const processedDistData = distributionChartData.map(d => ({name: d.name, percentage: d.value})),;
     const totalPercentage = processedDistData.reduce((sum, item) => sum + item.percentage, 0),;
     if (totalPercentage > 100) {;
-        setError("Total distribution percentage cannot exceed 100%."),;
+        setError('Total distribution percentage cannot exceed 100%.'),;
         setIsLoading(false),;
         return;
     }
      if (totalPercentage < 100 && totalPercentage > 0 && processedDistData.length > 0) {;
         setError(`Warning: Total distribution is ${totalPercentage}%. Consider adjusting to sum to 100%.`);`
     } else if (totalPercentage === 0 && processedDistData.length > 0 && distributionData.some(d => d.name && d.percentage)) {;
-        setError("Distribution percentages are all zero or invalid."),;
+        setError('Distribution percentages are all zero or invalid.'),;
         setIsLoading(false),;
         return;
     }
@@ -238,7 +238,7 @@ const WhitepaperGeneratorPage: React.FC = () => {;,
       setError(null)
     } catch (e:,  any) {,
         logErrorToProduction(e instanceof Error ? e.message : String(e), e instanceof Error ? e : undefined, { message: 'Error downloading Markdown' }),'
-        setError("Failed to download Markdown file. " + e.message)"
+        setError('Failed to download Markdown file. ' + e.message)'
     } finally {
         setIsDownloading(false)
     }
@@ -247,7 +247,7 @@ const WhitepaperGeneratorPage: React.FC = () => {;,
     setIsDownloading(true),
     setError(null),
     if (!previewPanelRef.current) {
-      setError("Preview panel is not available. Cannot generate PDF."),"
+      setError('Preview panel is not available. Cannot generate PDF.'),'
       setIsDownloading(false),
       return
     }),;
@@ -269,7 +269,7 @@ const WhitepaperGeneratorPage: React.FC = () => {;,
       setError(null);
     } catch (e:,  any) {;,
         logErrorToProduction(e instanceof Error ? e.message : String(e), e instanceof Error ? e : undefined, { message: 'Error downloading Markdown' }),;
-        setError("Failed to download Markdown file. " + e.message);
+        setError('Failed to download Markdown file. ' + e.message);
     } finally {;
         setIsDownloading(false);
     }
@@ -278,7 +278,7 @@ const WhitepaperGeneratorPage: React.FC = () => {;,
     setIsDownloading(true),;
     setError(null),;
     if (!previewPanelRef.current) {;
-      setError("Preview panel is not available. Cannot generate PDF."),;
+      setError('Preview panel is not available. Cannot generate PDF.'),;
       setIsDownloading(false),;
       return;
     }
@@ -320,14 +320,14 @@ const WhitepaperGeneratorPage: React.FC = () => {;,
       pdf.save(`${slugify(tokenName || 'whitepaper')}_whitepaper.pdf`)`
     } catch (e:,  any) {,
       logErrorToProduction(e instanceof Error ? e.message : String(e), e instanceof Error ? e : undefined, { message: 'Error downloading PDF' }),'
-      setError("Failed to download PDF file. " + e.message)"
+      setError('Failed to download PDF file. ' + e.message)'
     } finally {
       setIsDownloading(false)
     }
   },
   const handleGenerateShareableLink = async () => {
     if (sections.length === 0) {
-      toast.error("Please generate the whitepaper content first before creating a shareable link."),"
+      toast.error('Please generate the whitepaper content first before creating a shareable link.'),'
       return
     }
     setIsSharing(true),
@@ -342,7 +342,7 @@ const WhitepaperGeneratorPage: React.FC = () => {;,
         sections,
         distributionChartData,
   return (
-    <div className="flex flex-col md:flex-row h-screen max-h-screen p-4 gap-4 bg-gray-100">"
+    <div className='flex flex-col md:flex-row h-screen max-h-screen p-4 gap-4 bg-gray-100'>'
       {/* Left Column: Inputs and Editors */}
                 isDownloading ||
                 sections && sections.length === 0 ||
@@ -537,40 +537,40 @@ const WhitepaperGeneratorPage: React.FC = () => {;,
                 >
                   <Trash2 className='h-4 w-4' />'
                 </Button>              </div>
-        <form onSubmit={(e) => e.preventDefault()} className="space-y-6">"
+        <form onSubmit={(e) => e.preventDefault()} className='space-y-6'>'
           {/* ... (Input fields remain the,  same) ... */}
            <div>
-            <label htmlFor="tokenName" className="block text-sm font-medium">Token Name:</label>"
-            <Input id="tokenName" value={tokenName} onChange={(e) = /> setTokenName(e.target.value)} required />"
+            <label htmlFor='tokenName' className='block text-sm font-medium'>Token Name:</label>'
+            <Input id='tokenName' value={tokenName} onChange={(e) = /> setTokenName(e.target.value)} required />'
           </div>
           <div>
-            <label htmlFor="tokenSupply" className="block text-sm font-medium">Token Supply:</label>"
-            <Input id="tokenSupply" value={tokenSupply} onChange={(e) = /> setTokenSupply(e.target.value)} required />"
+            <label htmlFor='tokenSupply' className='block text-sm font-medium'>Token Supply:</label>'
+            <Input id='tokenSupply' value={tokenSupply} onChange={(e) = /> setTokenSupply(e.target.value)} required />'
           </div>
           <div>
-            <label htmlFor="useCases" className="block text-sm font-medium">Use Cases:</label>"
-            <textarea id="useCases" value={useCases} onChange={(e) => setUseCases(e.target.value)} required className="mt-1 block w-full border-gray-300 rounded-md shadow-sm" rows={3}/>"
+            <label htmlFor='useCases' className='block text-sm font-medium'>Use Cases:</label>'
+            <textarea id='useCases' value={useCases} onChange={(e) => setUseCases(e.target.value)} required className='mt-1 block w-full border-gray-300 rounded-md shadow-sm' rows={3}/>'
           </div>
           <div>
-            <label htmlFor="rewardsLogic" className="block text-sm font-medium">Rewards Logic:</label>"
-            <textarea id="rewardsLogic" value={rewardsLogic} onChange={(e) => setRewardsLogic(e.target.value)} required className="mt-1 block w-full border-gray-300 rounded-md shadow-sm" rows={3}/>"
+            <label htmlFor='rewardsLogic' className='block text-sm font-medium'>Rewards Logic:</label>'
+            <textarea id='rewardsLogic' value={rewardsLogic} onChange={(e) => setRewardsLogic(e.target.value)} required className='mt-1 block w-full border-gray-300 rounded-md shadow-sm' rows={3}/>'
           </div>
           {/* Token Distribution Inputs */}
-          <div className="space-y-3 p-3 border rounded-md">"
-            <h2 className="text-lg font-semibold">Token Distribution</h2>"
+          <div className='space-y-3 p-3 border rounded-md'>'
+            <h2 className='text-lg font-semibold'>Token Distribution</h2>'
             {distributionData.map((item) => (
-              <div key={item.id} className="flex items-center space-x-2">"
-                <Input type="text" placeholder="Category" value={item.name} onChange={(e) = /> handleDistributionChange(item.id, 'name', e.target.value)} className="flex-grow"/>"
-                <Input type="number" placeholder="%" value={item.percentage} onChange={(e) = /> handleDistributionChange(item.id, 'percentage', e.target.value)} className="w-24" min="0" max="100"/>"
-                <Button variant="ghost" size="icon" onClick={() => removeDistributionItem(item.id)} aria-label="Remove"><Trash2 className="h-4 w-4"/></Button>"
+              <div key={item.id} className='flex items-center space-x-2'>'
+                <Input type='text' placeholder='Category' value={item.name} onChange={(e) = /> handleDistributionChange(item.id, 'name', e.target.value)} className='flex-grow'/>'
+                <Input type='number' placeholder='%' value={item.percentage} onChange={(e) = /> handleDistributionChange(item.id, 'percentage', e.target.value)} className='w-24' min='0' max='100'/>'
+                <Button variant='ghost' size='icon' onClick={() => removeDistributionItem(item.id)} aria-label='Remove'><Trash2 className='h-4 w-4'/></Button>'
               </div>
             ))}
-            <Button type="button" onClick={addDistributionItem} variant="outline" className="w-full">Add Distribution Item</Button>"
+            <Button type='button' onClick={addDistributionItem} variant='outline' className='w-full'>Add Distribution Item</Button>'
             <div>
               )}
             </div>
           )}
-           {isSharing && <p className="text-center text-sm text-blue-600">Generating shareable link...</p>}"
+           {isSharing && <p className='text-center text-sm text-blue-600'>Generating shareable link...</p>}'
           {/* Submit to Counsel Button */}
           {sections.length > 0 && (
             <Button
@@ -619,24 +619,24 @@ const WhitepaperGeneratorPage: React.FC = () => {;,
           {/* Submit to Counsel Button */}
           {sections.length > 0 && (
             <Button
-                type="button""
+                type='button''
                 onClick={handleSubmitToCounsel}
                 disabled={isSubmittingToCounsel || isLoading || isSharing || isDownloading}
-                variant="default""
-                size="lg""
-                className="w-full mt-4 bg-indigo-600 hover:bg-indigo-700 text-white""
+                variant='default''
+                size='lg''
+                className='w-full mt-4 bg-indigo-600 hover:bg-indigo-700 text-white''
             >
-                <Send className="mr-2 h-4 w-4" />"
+                <Send className='mr-2 h-4 w-4' />'
                 {isSubmittingToCounsel ? 'Submitting...' : 'Submit to Counsel'}'
             </Button>;
           )}
-           {isSubmittingToCounsel && <p className="text-center text-sm text-blue-600">Submitting to counsel...</p>}"
+           {isSubmittingToCounsel && <p className='text-center text-sm text-blue-600'>Submitting to counsel...</p>}'
         </form>
         {/* Section Editors */}
         {sections.length > 0 && (
           tokenSupply={tokenSupply}        />;
-          <div className="mt-8 pt-6 border-t">"
-            <h2 className="text-xl font-bold mb-4 text-center">Edit Generated Sections</h2>"
+          <div className='mt-8 pt-6 border-t'>'
+            <h2 className='text-xl font-bold mb-4 text-center'>Edit Generated Sections</h2>'
             {sections.map((section) => (
               <WhitepaperSectionEditor
                 key={section.id}
@@ -648,12 +648,12 @@ const WhitepaperGeneratorPage: React.FC = () => {;,
           </div>
         )}
         {rawDraft && (
-            <div className="mt-6 p-3 border rounded-md">"
-            <Button onClick={() => setShowRawDraft(!showRawDraft)} variant="outline" size="sm" className="w-full">"
+            <div className='mt-6 p-3 border rounded-md'>'
+            <Button onClick={() => setShowRawDraft(!showRawDraft)} variant='outline' size='sm' className='w-full'>'
                 {showRawDraft ? 'Hide' : 'Show'} Raw Generated Text'
             </Button>
             {showRawDraft && (
-                <pre className="mt-2 p-2 bg-gray-50 text-xs whitespace-pre-wrap break-all max-h-60 overflow-y-auto rounded">"
+                <pre className='mt-2 p-2 bg-gray-50 text-xs whitespace-pre-wrap break-all max-h-60 overflow-y-auto rounded'>'
                 {rawDraft}
                 </pre>;
             )}
@@ -661,7 +661,7 @@ const WhitepaperGeneratorPage: React.FC = () => {;,
         )}
       </div>
       {/* Right Column: Preview Panel - Pass ref here */}
-'";
+'';
 ;
 }
 ;
@@ -669,7 +669,7 @@ interface DistributionChartItem {;
     name: string,;
     value: number;
 }
-      <div id="preview-panel-content" ref={previewPanelRef} className="md:w-1/2 lg:w-3/5 xl:w-2/3 p-1">"
+      <div id='preview-panel-content' ref={previewPanelRef} className='md:w-1/2 lg:w-3/5 xl:w-2/3 p-1'>'
 ;
 // Helper for slugifying filenames;
 const slugify = (text: string): string => {;
@@ -745,14 +745,14 @@ const WhitepaperGeneratorPage: React.FC = () => {;
     setRawDraft(null),
 
     if (totalPercentage > 100) {
-        setError("Total distribution percentage cannot exceed 100%."),
+        setError('Total distribution percentage cannot exceed 100%.'),
         setIsLoading(false),
         return
     }
      if (totalPercentage < 100 && totalPercentage > 0 && processedDistData.length > 0) {
         setError(`Warning: Total distribution is ${totalPercentage}%. Consider adjusting to sum to 100%.`)
     } else if (totalPercentage === 0 && processedDistData.length > 0 && distributionData.some(d => d.name && d.percentage)) {
-        setError("Distribution percentages are all zero or invalid."),
+        setError('Distribution percentages are all zero or invalid.'),
         setIsLoading(false),
         return
     return parsed;
@@ -776,14 +776,14 @@ const WhitepaperGeneratorPage: React.FC = () => {;
     setError(null),;
     setRawDraft(null),;
     if (totalPercentage > 100) {;
-        setError("Total distribution percentage cannot exceed 100%."),;
+        setError('Total distribution percentage cannot exceed 100%.'),;
         setIsLoading(false),;
         return;
     }
      if (totalPercentage < 100 && totalPercentage > 0 && processedDistData.length > 0) {;
         setError(`Warning: Total distribution is ${totalPercentage}%. Consider adjusting to sum to 100%.`);
     } else if (totalPercentage === 0 && processedDistData.length > 0 && distributionData.some(d => d.name && d.percentage)) {;
-        setError("Distribution percentages are all zero or invalid."),;
+        setError('Distribution percentages are all zero or invalid.'),;
         setIsLoading(false),;
         return;
     }
@@ -860,7 +860,7 @@ const WhitepaperGeneratorPage: React.FC = () => {;
       setError(null)
     } catch (e: any) {
         logErrorToProduction(e instanceof Error ? e.message : String(e), e instanceof Error ? e : undefined, { message: 'Error downloading Markdown' }),
-        setError("Failed to download Markdown file. " + e.message)
+        setError('Failed to download Markdown file. ' + e.message)
     } finally {
         setIsDownloading(false)
     }
@@ -869,7 +869,7 @@ const WhitepaperGeneratorPage: React.FC = () => {;
     setIsDownloading(true),
     setError(null),
     if (!previewPanelRef.current) {
-      setError("Preview panel is not available. Cannot generate PDF."),
+      setError('Preview panel is not available. Cannot generate PDF.'),
       setIsDownloading(false),
       return
     }),;
@@ -887,7 +887,7 @@ const WhitepaperGeneratorPage: React.FC = () => {;
       setError(null);
     } catch (e: any) {;
         logErrorToProduction(e instanceof Error ? e.message : String(e), e instanceof Error ? e : undefined, { message: 'Error downloading Markdown' }),;
-        setError("Failed to download Markdown file. " + e.message);
+        setError('Failed to download Markdown file. ' + e.message);
     } finally {;
         setIsDownloading(false);
     }
@@ -895,7 +895,7 @@ const WhitepaperGeneratorPage: React.FC = () => {;
     setIsDownloading(true),;
     setError(null),;
     if (!previewPanelRef.current) {;
-      setError("Preview panel is not available. Cannot generate PDF."),;
+      setError('Preview panel is not available. Cannot generate PDF.'),;
       setIsDownloading(false),;
       return;
     }
@@ -928,7 +928,7 @@ const WhitepaperGeneratorPage: React.FC = () => {;
 
     } catch (e: any) {
       logErrorToProduction(e instanceof Error ? e.message : String(e), e instanceof Error ? e : undefined, { message: 'Error downloading PDF' }),
-      setError("Failed to download PDF file. " + e.message)
+      setError('Failed to download PDF file. ' + e.message)
 interface DistributionItem {
   id: string;
   name: string;

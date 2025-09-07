@@ -186,7 +186,7 @@ const timeToValue = complexity === 'Simple' ? '2-4 months' :'';
                     complexity === 'Moderate' ? '4-8 months' : '8-12 months';
                 return {}
                     service, matchScore, reasoning, priority, implementationComplexity: complexity, expectedROI, timeToValue;
-                }}) .sort((a, b) => b.matchScore - a.matchScore)setRecommendations(recs)setIsAnalyzing(false)setShowResults(true) }, 2000) }
+                }) .sort((a, b) => b.matchScore - a.matchScore)setRecommendations(recs)setIsAnalyzing(false)setShowResults(true) }, 2000) }
 
 const getPriorityColor = () => {
   return $3;}
@@ -225,10 +225,10 @@ const isFormComplete = () => ,
       {/* Header */}
       <motion.div initial = {}
   { opacity: 0, y: 20;}
-}} animate = {}
+} animate = {}
   { opacity: 1, y: 0 '''';}
 '''';}
-}} className='text-center mb-8' />'''';
+} className='text-center mb-8' />'''';
         <h1 className='text-4xl font-bold text-zion-blue-dark mb-4' />;
           AI-Powered Service Recommendation Engine'''';
         </h1>'''';
@@ -238,7 +238,7 @@ const isFormComplete = () => ,
       {/* Client Profile Form */}
       <motion.div initial = {}
   { opacity: 0, y: 20;}
-}} animate = {}
+} animate = {}
   { opacity: 1, y: 0 '''';}
 '''';}
 }} transition={{ delay: 0.1 ,}
@@ -318,7 +318,7 @@ const isFormComplete = () => ,
 '''';
                     setClientProfile(prev => ({ ...prev, primaryGoals: prev.primaryGoals.filter(g => g !== goal) }),
 }'''';
-            }} className='rounded text-zion-cyan'/>'''';
+            } className='rounded text-zion-cyan'/>'''';
                 <span className='text-sm text-zion-slate-light' />{goal}</span>;
               </label>))}
           </div>;
@@ -337,7 +337,7 @@ const isFormComplete = () => ,
 '''';
                     setClientProfile(prev => ({ ...prev, challenges: prev.challenges.filter(c => c !== challenge) }),
 }'''';
-            }} className='rounded text-zion-cyan'/>'''';
+            } className='rounded text-zion-cyan'/>'''';
                 <span className='text-sm text-zion-slate-light' />{challenge}</span>;
               </label>))}
           </div>;
@@ -359,7 +359,7 @@ const isFormComplete = () => ,
       {/* Recommendations Results */}
       {showResults && (<motion.div initial = {}
   { opacity: 0, y: 20;}
-}} animate = {}
+} animate = {}
   { opacity: 1, y: 0';';}
 }} transition={{ delay: 0.2 ,}
 } />'''';
@@ -370,7 +370,7 @@ const isFormComplete = () => ,
           <div className='space-y-6' />;
             {recommendations.map((rec, index) => (<motion.div key={rec.service.id} initial = {}
   { opacity: 0, x: -20;}
-}} animate = {}
+} animate = {}
   { opacity: 1, x: 0';';}
 }} transition={{ delay: 0.1 * index ,}
 } />'''';
@@ -468,7 +468,7 @@ const isFormComplete = () => ,
           {/* CTA Section */}
           <motion.div initial = {}
   { opacity: 0, y: 20;}
-}} animate = {}
+} animate = {}
   { opacity: 1, y: 0 '''';}
 '''';}
 }} transition={{ delay: 0.4 ,}

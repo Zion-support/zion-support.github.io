@@ -27,8 +27,8 @@ export default function Quantumcomputing() {export default function Quantumcompu
       <h1>Quantumcomputing</h1>;
       <p>This component is currently under development.</p>;
     </div>;
-  )}}ursor/fix-syntax-push-and-merge-to-main-40de;
-}}ursor/automate-test-improve-and-merge-code-646c;
+  )}ursor/fix-syntax-push-and-merge-to-main-40de;
+}ursor/automate-test-improve-and-merge-code-646c;
 }
 }
 >>>>>>> merged-prs-20250907-203621

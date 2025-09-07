@@ -21,13 +21,13 @@ module && module.exports = (nextConfig = {}) => {
      {
         config && config.plugins.push(
           new BundleAnalyzerPlugin({
-            "analyzerMode": 'server',
-            "analyzerPort": isServer ? 8888 : 8889,
-            "openAnalyzer": true})
+            'analyzerMode': 'server',
+            'analyzerPort': isServer ? 8888 : 8889,
+            'openAnalyzer': true})
         )}
 
       return config;
-  }},
+  },
   })}
       return config}}})}
 <<<<<<< HEAD

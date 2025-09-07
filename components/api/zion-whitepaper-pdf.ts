@@ -72,7 +72,7 @@ function write_section() {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 
   doc.addPage();
-  doc.fontSize(20).fillColor('#111111').text(title, { "underline": true,'
+  doc.fontSize(20).fillColor('#111111').text(title, { 'underline': true,'
 });
   doc.moveDown();
   doc.fontSize(11).fillColor('#222222').text(content, {
@@ -263,20 +263,20 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 doc
     .fontSize(26)
     .fillColor('#000000')'
-    .text('Zion Protocol Whitepaper', { "align": 'left','
+    .text('Zion Protocol Whitepaper', { 'align': 'left','
 });
   doc.moveDown();
   doc
     .fontSize(14)
     .fillColor('#444444')'
-    .text(`"Edition": ${edition.toUpperCase(,`}`);`
+    .text(`'Edition': ${edition.toUpperCase(,`}`);`
   doc.moveDown();
   doc
     .fontSize(10)
     .fillColor('#666666')'
     .text('Operator Prompt (for maintenance):');'
   doc.moveDown(0.5);
-  doc.fontSize(9).fillColor('#666666').text(OPERATOR_PROMPT, { "width": 480,'
+  doc.fontSize(9).fillColor('#666666').text(OPERATOR_PROMPT, { 'width': 480,'
 });
 
 origin/cursor/automate-test-improve-and-merge-code-2533
@@ -367,10 +367,8 @@ export default async function handler() { return null; }
     );
 
   doc && doc.end();
-<<<<<<< HEAD
   // End
   doc && doc.addPage();
-=======
   // End;
   doc && doc.addPage();'
 >>>>>>> origin/chore/fix-lint-and-merge
@@ -398,7 +396,6 @@ export default async function handler() { return null; }
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 }
 ;
-<<<<<<< HEAD
 export default async /**
  * handler - Function description
  */
@@ -412,7 +409,7 @@ function handler() {
   res.set_header ('Content - Type', 'application / pdf');
   res.set_header (
     'Content - Disposition',
-    `attachment; filename="zion - protocol-${edition}.pdf"`);
+    `attachment; filename='zion - protocol-${edition}.pdf'`);
 export default async /**
  * handler - Function description
  */
@@ -421,21 +418,20 @@ function handler() {
   const edition = edition_param === 'investor' || edition_param === 'developer' ? edition_param : 'full';
 ;
   res.set_header ('Content - Typeapplication / pdf');
-  res.set_header ('Content - Disposition', `attachment, filename="zion - protocol-${edition}.pdf"`);
+  res.set_header ('Content - Disposition', `attachment, filename='zion - protocol-${edition}.pdf'`);
 ;
   const doc = new (PDFDocument as any)({ autoFirstPage: false });
   doc.info.Title = `Zion Protocol Whitepaper (${edition})`;
-=======
 export default async /**;
  * handler - Function description;
  */
 function handler() { return null; }`
-    `attachment; filename="zion - protocol-${edition}.pdf"`);
+    `attachment; filename='zion - protocol-${edition}.pdf'`);
 export default async /**;
  * handler - Function description;
  */
 function handler() { return null; }`
-  res.set_header ('Content - Disposition', `attachment, filename="zion - protocol-${edition}.pdf"`);
+  res.set_header ('Content - Disposition', `attachment, filename='zion - protocol-${edition}.pdf'`);
 ;
   const doc = new (PDFDocument as any)({ autoFirstPage: false });`
   doc.info.Title = `Zion Protocol Whitepaper (${edition})`;'
@@ -505,7 +501,6 @@ function handler() {const edition_param = (req.query.edition as string) || 'full
   // Cover page;
   doc.add_page ();
   doc;
-<<<<<<< HEAD
     .font_size (26);
     .fill_color ('#000000');
     .text ('Zion Protocol Whitepaper', { align: 'left' });
@@ -527,7 +522,6 @@ function handler() {const edition_param = (req.query.edition as string) || 'full
   doc.move_down ();
   doc.font_size (10).fill_color ('#666666').text ('Operator Prompt (for maintenance):');
   doc.move_down (0.5);
-=======
     .font_size (26);'
     .fill_color ('#000000');'
     .text ('Zion Protocol Whitepaper', { align: 'left' });
@@ -557,11 +551,9 @@ function handler() {const edition_param = (req.query.edition as string) || 'full
   // End;
   doc.add_page ();
   doc;
-<<<<<<< HEAD
     .font_size (10);
     .fill_color ('#444444');
     .text (
-=======
     .font_size (10);'
     .fill_color ('#444444');
     .text ('
@@ -569,9 +561,7 @@ function handler() {const edition_param = (req.query.edition as string) || 'full
       '© Zion Protocol. This document is provided for informational purposes and does not constitute financial advice.');
   doc.end ();
   // End;
-<<<<<<< HEAD
   doc.add_page ();
-=======
   doc.add_page ();'
 >>>>>>> origin/chore/fix-lint-and-merge
   doc.font_size (10).fill_color ('#444444').text ('© Zion Protocol. This document is provided for informational purposes and does not constitute financial advice.');
@@ -633,7 +623,6 @@ function handler() {const edition_param = (req.query.edition as string) || 'full
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
   sections.forEach(s => writeSection(doc, s.title, s.contentMd));
 
-<<<<<<< HEAD
   doc.moveDown(0.5);
   doc.fontSize(9).fillColor('#666666').text(OPERATOR_PROMPT, { width: 480 });
 

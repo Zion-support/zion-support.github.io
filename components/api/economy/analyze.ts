@@ -386,7 +386,6 @@ const completion = await client.chat.completions.create({
       temperature: 0.3,
       max_tokens: 300,
     });
-<<<<<<< HEAD
     return res.status(200).json({ analysis })
   } catch (error: any) {
     console.error('Analyze API error', error?.message |error);

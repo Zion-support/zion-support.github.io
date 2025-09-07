@@ -14,7 +14,7 @@ export interface LeaderboardEntry  {name: string,points: number;import { Card, C
 export interface LeaderboardEntry  {name: string;
   points: number;
 
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Trophy } from 'lucide-react'
 export interface LeaderboardEntry {
   name: string
@@ -46,7 +46,7 @@ export function UserLeaderboard(): any ({ entries }: UserLeaderboardProps) {;
 
 
 
-          <Trophy className="h-5 w-5" /> Leaderboard
+          <Trophy className='h-5 w-5' /> Leaderboard
 <CardTitle className='flex items-center gap-2'>
           <Trophy className='h-5 w-5' /> Leaderboard
 origin/cursor/automate-test-improve-and-merge-code-2533
@@ -62,15 +62,15 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 
 
-              className="flex justify-between items-center p-2 rounded-md hover:bg-muted/50"
+              className='flex justify-between items-center p-2 rounded-md hover:bg-muted/50'
             >
-              <span className="font-medium">
+              <span className='font-medium'>
                 {idx + 1}. {e.name}
               </span>
 
 
 
-              <span className="text-sm">{e.points} pts</span>
+              <span className='text-sm'>{e.points} pts</span>
             </div>
           ))}
 

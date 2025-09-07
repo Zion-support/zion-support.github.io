@@ -136,7 +136,7 @@ const gridSize = 50;
   {}
             opacity: intensity, '';
   filter: theme === 'quantum' ? 'blur(0.5px)' : 'none';
-}}/>)}
+}/>)}
 
 export default UltraFuturisticBackground2034;
 

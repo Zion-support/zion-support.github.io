@@ -489,7 +489,7 @@ if ( {) {$2;
       write_state (state)const latency_ms  = Date.now () - started;append_log ({module: 'reflex,type: metrics',status: 'ok,latency_ms,payload: { metrics, triggers }})return res.status (200).json ({ triggers })} catch (e: any) {append_log ({module: reflex',type: 'metrics,status: error',payload: { error: e?.message || 'unknown }})return res.status (500).json ({ error: Reflex failure' })}
   }
 return res.status (405).json ({ error: 'Method not allowed' })}      append_log ({ module: 'reflex', type: 'metrics', status: 'ok', latency_ms, payload: { metrics, triggers } })return res.status (200).json ({ triggers })} catch (e: any) {append_log ({ module: 'reflex', type: 'metrics', status: 'error', payload: { error: e?.message || 'unknown' } })return res.status (500).json ({ error: 'Reflex failure' })}
-  return res.status (405).json ({ error: 'Method not allowed' })return res.status(405).json({ error: 'Method not allowed' })return res.status(405).json({ error: 'Method not allowed' })}}
+  return res.status (405).json ({ error: 'Method not allowed' })return res.status(405).json({ error: 'Method not allowed' })return res.status(405).json({ error: 'Method not allowed' })}
 
   return res.status(405).json({ error: 'Method not allowed' });
 }
