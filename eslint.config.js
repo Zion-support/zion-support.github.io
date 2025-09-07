@@ -1,25 +1,12 @@
-<<<<<<< HEAD
 const { FlatCompat } = require('@eslint/eslintrc');
 const js = require('@eslint/js');
-
-const compat = new FlatCompat({
-  baseDirectory: __dirname,
-  recommendedConfig: js.configs.recommended,
-});
+const react = require('eslint-plugin-react');
+const reactHooks = require('eslint-plugin-react-hooks');
+const typescript = require('@typescript-eslint/eslint-plugin');
+const tsparser = require('@typescript-eslint/parser');
+const globals = require('globals');
 
 module.exports = [
-  ...compat.extends('next/core-web-vitals'),
-  {
-=======
-import { FlatCompat } from '@eslint/eslintrc';
-import js from '@eslint/js';
-import react from 'eslint-plugin-react';
-import reactHooks from 'eslint-plugin-react-hooks';
-import typescript from '@typescript-eslint/eslint-plugin';
-import tsparser from '@typescript-eslint/parser';
-import globals from 'globals';
-
-export default [
   js.configs.recommended,
   {
     ignores: [
@@ -122,38 +109,10 @@ export default [
       'react': react,
       'react-hooks': reactHooks,
     },
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
     rules: {
       'no-unused-vars': 'warn',
       'no-console': 'warn',
       'prefer-const': 'warn'
     },
-    languageOptions: {
-      ecmaVersion: 'latest',
-      sourceType: 'module',
-      globals: {
-        window: 'readonly',
-        document: 'readonly',
-        console: 'readonly',
-        process: 'readonly',
-        Buffer: 'readonly',
-        global: 'readonly',
-        __dirname: 'readonly',
-        __filename: 'readonly',
-        module: 'readonly',
-        require: 'readonly',
-<<<<<<< HEAD
-        exports: 'readonly'
-      }
-    }
-  }
-=======
-        exports: 'readonly',
-      },
-    },
-    rules: {
-      'no-console': 'off',
-    },
   },
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 ];
