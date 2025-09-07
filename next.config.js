@@ -1,11 +1,52 @@
+import bundleAnalyzer from '@next/bundle-analyzer';
 
-/** @type {import('next').NextConfig} */
+const withBundleAnalyzer = bundleAnalyzer({
+  enabled: process.env.ANALYZE === 'true',
+});
+
 const nextConfig = {
-  // Security configurations
-  poweredByHeader: false,
   compress: true,
+  poweredByHeader: false,
+  generateEtags: true,
   
-  // Headers for security
+  // Disable linting during build
+  eslint: {
+    ignoreDuringBuilds: true,
+  },
+  
+  // Disable type checking during build
+  typescript: {
+    ignoreBuildErrors: true,
+  },
+  
+  // Webpack configuration to handle TypeScript and JSX
+  webpack: (config, { buildId, dev, isServer, defaultLoaders, webpack }) => {
+    // Handle TypeScript files
+    config.module.rules.push({
+      test: /\.tsx?$/,
+      use: [
+        {
+          loader: 'ts-loader',
+          options: {
+            transpileOnly: true,
+            compilerOptions: {
+              jsx: 'preserve',
+            },
+          },
+        },
+      ],
+    });
+    
+    return config;
+  },
+  
+  // Image optimization
+  images: {
+    domains: ['localhost'],
+    formats: ['image/webp', 'image/avif'],
+  },
+  
+  // Security headers
   async headers() {
     return [
       {
@@ -13,187 +54,60 @@ const nextConfig = {
         headers: [
           {
             key: 'X-Frame-Options',
-            value: 'DENY'
+            value: 'DENY',
           },
           {
             key: 'X-Content-Type-Options',
-            value: 'nosniff'
+            value: 'nosniff',
           },
           {
             key: 'X-XSS-Protection',
-            value: '1; mode=block'
+            value: '1; mode=block',
           },
           {
             key: 'Referrer-Policy',
-            value: 'strict-origin-when-cross-origin'
+            value: 'strict-origin-when-cross-origin',
           },
           {
             key: 'Permissions-Policy',
-            value: 'camera=(), microphone=(), geolocation=()'
+            value: 'camera=(), microphone=(), geolocation=()',
           },
           {
             key: 'Strict-Transport-Security',
-            value: 'max-age=31536000; includeSubDomains; preload'
-          }
-        ]
-      }
-    ];
-  },
-  
-  reactStrictMode: true,
-  compress: true,
-  poweredByHeader: false,
-  output: 'export',
-  eslint: { ignoreDuringBuilds: true },
-  typescript: { ignoreBuildErrors: true },
-  pageExtensions: ['tsx', 'ts', 'jsx', 'js'],
-  trailingSlash: true,
-  
-  // Performance optimizations
-  experimental: {
-    scrollRestoration: true,
-    optimizeCss: true,
-    optimizePackageImports: ['lucide-react', '@radix-ui/react-icons', 'framer-motion']
-  },
-  
-  // Image optimization
-  images: {
-    unoptimized: true,
-    domains: ["localhost", "ziontechgroup.com", "images.unsplash.com", "via.placeholder.com"],
-      'localhost',
-      'ziontechgroup.com',
-      'images.unsplash.com',
-      'via.placeholder.com'
-    ],
-    formats: ['image/webp', 'image/avif'],
-    deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
-    imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
-    minimumCacheTTL: 31536000, // 1 year
-    dangerouslyAllowSVG: true,
-    contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox;",
-  },
-  env: {
-    CUSTOM_KEY: process.env.CUSTOM_KEY,
-  images: {
-    domains: [
-      "localhost",
-      "ziontechgroup.com",
-      "images.unsplash.com",
-      "via.placeholder.com",
-    ],
-    formats: ["image/webp", "image/avif"],
-    deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
-    imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
-    minimumCacheTTL: 31536000,
-  },
-  
-  // Webpack configuration to exclude problematic directories
-  },
-
-    ignoreBuildErrors: true
-  }
-  pageExtensions: ["tsx", "ts", "jsx", "js"]
-  trailingSlash: true
-  images: {
-    domains: [
-      "localhost"
-      "ziontechgroup.com"
-      "images.unsplash.com"
-      "via.placeholder.com"
-    ]
-    formats: ["image/webp", "image/avif"]
-    deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840]
-    imageSizes: [16, 32, 48, 64, 96, 128, 256, 384]
-    minimumCacheTTL: 31536000
-  }
-
-  webpack: (config, { dev, isServer }) => {
-    if (dev) {
-      config.watchOptions = {
-        ignored: [
-
-          "**/node_modules/**"
-          "**/.git/**"
-          "**/pages_backup*/**"
-          "**/pages.*/**"
-          "**/pages-*/**"
-          "**/pages_disabled*/**"
-          "**/pages.disabled*/**"
-          "**/pages.broken*/**"
-          "**/pages.corrupted*/**"
-          "**/pages.old*/**"
-          "**/pages._*/**"
-          "**/pages.__*/**"
-          "**/backup-pages/**"
-          "**/src.pages.disabled/**"
-          "**/lib_backup*/**"
-          "**/src_backup*/**"
-          "**/corrupted-files-backup*/**"
-          "**/performance-reports*/**"
-          "**/log-analysis-reports*/**"
-          "**/link-reports*/**"
-          "**/lint-target*/**"
-          "**/monitoring*/**"
-          "**/pm2-automation*/**"
-          "**/automation/logs*/**"
-          "**/automation/backup*/**"
-          "**/performance-*.json"
-          "**/performance-*.js"
-          "**/performance-*.cjs"
-          "**/performance-*.sh"
-          "**/performance-*.html"
-          "**/performance-*.md"
-          "**/performance-*.txt"
-          "**/apps/**"
-        ]
-        poll: 1000
-        aggregateTimeout: 300
-      }
-
-export default nextConfig;
-/** @type {import('next').NextConfig} */
-const nextConfig = {
-  compress: true,
-  poweredByHeader: false,
-  generateEtags: true,
-  images: {
-    formats: ['image/webp', 'image/avif'],
-    minimumCacheTTL: 60,
-    deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
-    imageSizes: [16, 32, 48, 64, 96, 128, 256, 384]
-  },
-  experimental: {
-    optimizeCss: true,
-    optimizePackageImports: ['lucide-react', '@radix-ui/react-icons']
-  },
-  webpack: (config, { dev, isServer }) => {
-    if (!dev && !isServer) {
-      config.optimization.splitChunks = {
-        chunks: 'all',
-        cacheGroups: {
-          vendor: {
-            test: /[\\/]node_modules[\\/]/,
-            name: 'vendors',
-            chunks: 'all',
+            value: 'max-age=31536000; includeSubDomains; preload',
           },
-        },
-      };
-    }
-    // Exclude apps directory from compilation
-    config.module.rules.push({
-      test: /\.(ts|tsx|js|jsx)$/
-      include: /apps\//
-      use: "ignore-loader"
-    });
-    return config;
-  }
-  async headers() {
-    return [
-      {
-        source: '/api/:path*',
-        destination: '/api/:path*',
+        ],
       },
     ];
-  }
-}
-export default nextConfig;
+  },
+  
+  // Redirects
+  async redirects() {
+    return [
+      {
+        source: '/home',
+        destination: '/',
+        permanent: true,
+      },
+    ];
+  },
+  
+  // Experimental features
+  experimental: {
+    optimizeCss: true,
+  },
+  
+  // Output configuration
+  output: 'standalone',
+  
+  // Trailing slash
+  trailingSlash: false,
+  
+  // Environment variables
+  env: {
+    CUSTOM_KEY: process.env.CUSTOM_KEY,
+    NEXT_TELEMETRY_DISABLED: '1',
+  },
+};
+
+export default withBundleAnalyzer(nextConfig);

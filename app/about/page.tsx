@@ -1,27 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
-import { Metadata } from 'next';
-
-export const metadata: Metadata = {
-  title: 'About | Zion Tech Group',
-  description: 'Learn about Zion Tech Group\'s mission to deliver enterprise-grade AI, micro SaaS, and IT solutions that drive real business results.',
-  keywords: 'about, company, mission, AI solutions, micro SaaS, IT services, enterprise software',
-  authors: [{ name: 'Zion Tech Group' }],
-  openGraph: {
-    title: 'About | Zion Tech Group',
-    description: 'Learn about Zion Tech Group\'s mission to deliver enterprise-grade AI, micro SaaS, and IT solutions that drive real business results.',
-    type: 'website',
-    url: 'https://ziontechgroup.com/about',
-    images: [
-      {
-        url: '/og-about.jpg',
-        width: 1200,
-        height: 630,
-        alt: 'About Zion Tech Group'
-      }
-    ]
-  }
-};
+import { Award, Users, Target, Globe, CheckCircle, Star } from 'lucide-react';
 
 export default function AboutPage() {
   return (
@@ -69,9 +47,15 @@ export default function AboutPage() {
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <a 
               href="/contact" 
-              className="px-8 py-4 bg-white text-blue-600 hover:bg-blue-50 rounded-lg font-semibold transition-all duration-300 hover:scale-105"
+              className="bg-white text-blue-900 hover:bg-blue-50 px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300"
             >
-              Contact Us
+              Get In Touch
+            </a>
+            <a 
+              href="/services" 
+              className="border-2 border-white text-white hover:bg-white hover:text-blue-900 px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300"
+            >
+              View Services
             </a>
           </div>
         </div>
