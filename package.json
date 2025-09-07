@@ -2,24 +2,18 @@
   "name": "ziontechgroup-site",
   "version": "1.0.0",
   "private": true,
-<<<<<<< HEAD
   "type": "module",
-=======
->>>>>>> origin/resolved-merge-conflicts
   "scripts": {
     "ci:preflight": "node -e \"try{require('fs').accessSync('dist');console.log('dist exists')}catch(e){process.exit(0)}\" && echo prebuilt || echo building",
     "ci:build-test": "npm run build && npm run test:smoke",
     "dev": "next dev",
     "build": "node --max-old-space-size=8192 ./node_modules/.bin/next build",
     "start": "next start",
-<<<<<<< HEAD
     "lint": "next lint",
     "type-check": "node --max-old-space-size=8192 ./node_modules/.bin/tsc --noEmit",
-=======
     "build:netlify": "node scripts/build-with-error-handling.js",
     "prebuild": "echo \"Starting build...\"",
     "postbuild": "echo \"Build completed\"",
->>>>>>> origin/resolved-merge-conflicts
     "test": "jest --config jest.config.cjs",
     "test:smoke": "jest --config jest.config.smoke.cjs --passWithNoTests",
     "test:watch": "jest --watch --config jest.config.ts",
@@ -29,12 +23,7 @@
     "clean": "rm -rf .next out dist",
     "precommit": "npm run check",
     "prepare": "echo 'Husky prepare script disabled'",
-<<<<<<< HEAD
-    "sitemap": "node scripts/generate-sitemap.js"
-  },
-  "dependencies": {
-    "@babel/core": "^7.28.4",
-=======
+    "sitemap": "node scripts/generate-sitemap.js",
     "automation:master": "node automation/master-orchestrator.cjs",
     "automation:performance": "node automation/performance-optimizer.cjs",
     "automation:seo": "node automation/seo-optimizer.cjs",
@@ -83,7 +72,6 @@
     "ecosystem": "ecosystem.maintenance.cjs"
   },
   "dependencies": {
->>>>>>> origin/resolved-merge-conflicts
     "@fastify/cors": "^11.1.0",
     "@fastify/rate-limit": "^10.3.0",
     "@google-analytics/data": "^5.2.0",
@@ -130,8 +118,6 @@
     "@tailwindcss/forms": "^0.5.10",
     "@tailwindcss/postcss": "^4.1.12",
     "@tailwindcss/typography": "^0.5.16",
-<<<<<<< HEAD
-=======
     "framer-motion": "^12.23.12",
     "lucide-react": "^0.536.0",
     "next": "^15.5.2",
@@ -149,7 +135,6 @@
     "@types/react-dom": "^18.3.7",
     "@types/react-router-dom": "^5.3.3",
     "@tailwindcss/typography": "^0.5.16",
->>>>>>> origin/resolved-merge-conflicts
     "@tanstack/react-query": "^5.85.5",
     "@types/react-datepicker": "^6.2.0",
     "autoprefixer": "^10.4.21",
@@ -238,13 +223,9 @@
     "jest-environment-jsdom": "^29.7.0",
     "jsdom": "^24.0.0",
     "lighthouse": "^12.8.2",
-<<<<<<< HEAD
     "pm2": "^6.0.8",
     "postcss": "^8.5.6",
     "prettier": "^3.6.2",
-=======
-    "postcss": "^8.5.0",
->>>>>>> origin/resolved-merge-conflicts
     "rollup": "^4.50.0",
     "tailwindcss": "^3.4.17",
     "terser": "^5.43.1",
@@ -278,14 +259,10 @@
   ],
   "author": "Zion Tech Group",
   "license": "MIT",
-<<<<<<< HEAD
   "nextConfig": {
     "compress": true,
     "poweredByHeader": false,
     "generateEtags": false
-  }
-}
-=======
+  },
   "packageManager": "yarn@1.22.22+sha512.a6b2f7906b721bba3d67d4aff083df04dad64c399707841b7acf00f6b133b7ac24255f2652fa22ae3534329dc6180534e98d17432037ff6fd140556e2bb3137e"
 }
->>>>>>> origin/resolved-merge-conflicts
