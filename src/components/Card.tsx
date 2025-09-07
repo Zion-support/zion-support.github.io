@@ -13,11 +13,13 @@ const Card: React.FC<CardProps> = ({
   className = '', 
   onClick,
   title,
-  description 
-}) => {
-  return (
-    <div 
-      className={`bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow duration-300 ${className}`}
+  description,
+  className = '',}
+  onClick}
+   }) => {
+
+
+
       onClick={onClick}
     >
       {title && <h3 className="text-xl font-semibold mb-3 text-gray-900">{title}</h3>}

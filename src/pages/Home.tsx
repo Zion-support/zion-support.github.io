@@ -17,15 +17,17 @@ import {
   Phone,
   Mail,
   MapPin
-} from "lucide-react";
-import { Metadata } from "next";
-import Card from "../components/Card";
-import ParticleBackground from "../components/ParticleBackground";
-import TypingAnimation from "../components/TypingAnimation";
-import ScrollAnimation from "../components/ScrollAnimation";
-import ParallaxSection from "../components/ParallaxSection";
-import Testimonials from "../components/Testimonials";
-import BlogSection from "../components/BlogSection";
+} from \"lucide-react\";
+import Card from \"../components/Card\";
+import Header from \"../components/Header\";
+import Footer from \"../components/Footer\";
+import SEO from \"../components/SEO\";
+import ParticleBackground from \"../components/ParticleBackground\";
+import TypingAnimation from \"../components/TypingAnimation\";
+import ScrollAnimation from \"../components/ScrollAnimation\";
+import ParallaxSection from \"../components/ParallaxSection\";
+import Testimonials from \"../components/Testimonials\";
+import BlogSection from \"../components/BlogSection\";
 
 export const metadata: Metadata = {
   title: 'Zion Tech Group - AI-Powered Technology Solutions',
