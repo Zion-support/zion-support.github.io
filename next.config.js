@@ -17,10 +17,8 @@ const nextConfig = {
   images: {
     domains: ['ziontechgroup.com', 'images.unsplash.com', 'via.placeholder.com'],
     formats: ['image/webp', 'image/avif'],
-<<<<<<< HEAD
     deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
     imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
-    domains: ['ziontechgroup.com', 'images.unsplash.com', 'via.placeholder.com'],
   },
 
   // Security headers
