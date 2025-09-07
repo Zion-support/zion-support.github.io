@@ -1,19 +1,20 @@
-#!/usr/bin/env node
-const fs = require('fs');
-const path = require('path');
 
-class HealthMonitor {
-  constructor() {
-    this.projectRoot = process.cwd();
-  }
 
-  async run() {
-    console.log('🏥 Running health monitoring...');
-    console.log('✅ Health monitoring completed');
-  }
-}
-
-const monitor = new HealthMonitor();
-monitor.run().catch(console.error);
-
-module.exports = HealthMonitor;
+const fs = require('fs')
+const path = require('path')
+<<<<<<< HEAD
+        console.log(' Checking system health...')
+            "status"""
+            "message"""
+=======
+        console.log(' Checking system health...)
+            "status"
+            "status"
+            "message"
+            "status"
+            "message"
+            "status"
+            "message"
+            "status"
+            "message"
+>>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a

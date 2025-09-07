@@ -1,14 +1,198 @@
 
+<<<<<<< HEAD
 import React from "react";
 
 import { Badge } from "@/components/ui/badge";
+=======
+
+import React from "react",;
+import { Badge } from "@/components/ui/badge",;
+>>>>>>> origin/main
 import { 
-  Select;
-  SelectContent;
-  SelectItem;
-  SelectTrigger;
+
+
+import React from "react",""
+import { Badge } from "@/components/ui/badge","
+import {
+  // TODO: Implement
+}
+pr-12325
+  Select,
+  SelectContent, 
+  SelectItem, 
+  SelectTrigger, 
   SelectValue 
 } from "@/components/ui/select",
+<<<<<<< HEAD
 import type { QuoteStatus } from "@/types/quotes";
 type RequestsHeaderProps = any;
+=======
+import type { QuoteStatus } from "@/types/quotes",;
+type RequestsHeaderProps = {
+  unreadCount: number,
+  statusFilter: QuoteStatus | 'all',
+  setStatusFilter: (value: QuoteStatus | 'all') => void,
+  archiveFilter: 'active' | 'archived' | 'all',
+  setArchiveFilter: (value: 'active' | 'archived' | 'all') => void
+},
+  setArchiveFilter;
+}) => {;
+  return (},
+import React from "react",;
+import { Badge } from "@/components/ui/badge",;
+import {;
+  Select,;
+  SelectContent,;
+  SelectItem,;
+  SelectTrigger,;
+  SelectValue;
+} from "@/components/ui/select",;
+import type { QuoteStatus } from "@/types/quotes",;
+type RequestsHeaderProps = {;
+  unreadCount: number,;
+  statusFilter: QuoteStatus | 'all',;
+  setStatusFilter: (value: QuoteStatus | 'all') => void,;
+  archiveFilter: 'active' | 'archived' | 'all',;
+  setArchiveFilter: (value: 'active' | 'archived' | 'all') => void;
+},;
+export const RequestsHeader: React.FC<RequestsHeaderProps> = ({;
+  unreadCount,;
+  statusFilter,;
+  setStatusFilter,;
+  archiveFilter;
+  setArchiveFilter;
+}) => {;
+  return (;
+    <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-8">;
+      <div>;
+        <div className="flex items-center gap-3">;
+          <h1 className="text-3xl font-bold text-white">Hire Requests</h1>;
+          {unreadCount > 0 && (;
+            <Badge className="bg-blue-500">;
+              {unreadCount} New;
+            </Badge>;
+          )}
+        </div>;
+        <p className="text-zion-slate-light mt-2">;
+          Manage client requests to hire your services;
+        </p>;
+      </div>;            <SelectValue placeholder="Active Only" />;
+          </SelectTrigger>;
+          <SelectContent>;
+            <SelectItem value="active">Active Only</SelectItem>;
+            <SelectItem value="archived">Archived Only</SelectItem>;
+            <SelectItem value="all">All Requests</SelectItem>;
+          </SelectContent>;
+        </Select>;
+      </div>;
+  SelectValue;"
+} from "@/components/ui/select",""
+import type { QuoteStatus } from "@/types/quotes","
+type RequestsHeaderProps = {
+  unreadCount: number,"
+  statusFilter: QuoteStatus | 'all',
+  setStatusFilter: (value: QuoteStatus | 'all') => void,
+  archiveFilter: 'active' | 'archived' | 'all',
+  setArchiveFilter: (value: 'active' | 'archived' | 'all') => void;
+},
+
+
+
+
+  unreadCount: number;,
+  statusFilter: QuoteStatus | 'all
+  setStatusFilter: (value: QuoteStatus | 'all') => void;',
+  archiveFilter: 'active' | 'archived' | 'all
+  setArchiveFilter;
+import React from './react';
+import { Badge } from '@/components / ui / badge';
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components / ui / select';
+import type { QuoteStatus } from "@/types / quotes";"
+  unread_count: number,"
+  status_filter: QuoteStatus | 'all',
+  archive_filter: 'active' | 'archived' | 'all',
+export const RequestsHeader: React.FC<RequestsHeaderProps> = ({;
+
+
+        <Select;
+          value={archiveFilter} 
+
+)
+          onValueChange={(value) => setArchiveFilter(value as 'active' | 'archived' | 'all')}
+
+          <SelectTrigger className="bg-zion-blue-dark border-zion-blue-light text-white w-[140px]">"
+"
+            <SelectValue placeholder="Active Only" />"
+
+          
+          <SelectContent>
+            <SelectItem value="active">Active Only""
+            <SelectItem value="archived">Archived Only""
+            <SelectItem value="all">All Requests"
+          
+        
+      </div>
+    <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-8">;"
+      <div>;
+</div>"
+        <div className="flex items-center gap-3">;"
+          <h1 className="text-3xl font-bold text-white">Hire Requests</h1>;""
+            <Badge className="bg-blue-500">;"
+
+            ;
+        </div>;"
+        <p className="text-zion-slate-light mt-2">;"
+</p>
+        </p>;
+      <div className="flex gap-3 mt-4 md:mt-0">;"
+          value={statusFilter} )"
+          onValueChange={(value) => setStatusFilter(value as QuoteStatus | 'all')}
+
+          <SelectTrigger className="bg-zion-blue-dark border-zion-blue-light text-white w-[140px]">;"
+            <SelectValue placeholder="All Statuses" />;"
+
+          <SelectContent>;
+            <SelectItem value="all">All Statuses;""
+            <SelectItem value="new">New;""
+            <SelectItem value="in_review">In Review;""
+            <SelectItem value="responded">Responded;""
+            <SelectItem value="accepted">Accepted;""
+            <SelectItem value="closed">Closed;"
+          value={archive_filter}"
+          onValueChange={(value) => setArchiveFilter (value as 'active' | 'archived' | 'all')}
+
+          <SelectTrigger className="bg - zion - blue - dark border - zion - blue - light text - white w-[140px]">;"
+            <SelectValue placeholder="Active Only" />;"
+
+            <SelectItem value="active">Active Only;""
+            <SelectItem value="archived">Archived Only;""
+            <SelectItem value="all">All Requests;"
+      </div>;
+    </div>);
+export const RequestsHeader:React.FC<RequestsHeaderProps> = ({;
+
+        <Select ;
+          value={statusFilter} ;)"
+
+
+          value={archiveFilter} ;"
+
+pr-12325
+          onValueChange={(value) => setArchiveFilter(value as 'active' | 'archived' | 'all')}'
+</Select>'
+          <SelectTrigger className="bg-zion-blue-dark border-zion-blue-light text-white w-[140px]">;"
+</SelectTrigger>"
+            <SelectValue placeholder="Active Only" />;"
+</SelectValue>
+          </SelectTrigger>;
+          <SelectContent>;
+</SelectContent>"
+            <SelectItem value="active">Active Only</SelectItem>;""
+            <SelectItem value="archived">Archived Only</SelectItem>;""
+            <SelectItem value="all">All Requests</SelectItem>;"
+          </SelectContent>;
+        </Select>;
+      </div>;
+    </div>;"
+>>>>>>> origin/main
 

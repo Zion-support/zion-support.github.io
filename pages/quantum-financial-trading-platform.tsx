@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 import React from 'react',
 import Head from 'next/head';
@@ -28,6 +29,13 @@ export default function QuantumFinancialTradingPlatformPage() {
               <div className="mt-6 flex gap-3">
                 <a href="/contact" className="flex-1 bg-gradient-to-r from-cyan-500 to-blue-600 text-white">Contact Sales</a>
                 <a href="/services" className="flex-1 border border-gray-600 text-gray-200">Explore Services</a>
+=======
+import React from 'react',;
+import Head from 'next/head';
+import Layout from '../components/layout/Layout';
+
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/main
               </div>
             </div>
           </div>
@@ -35,5 +43,14 @@ export default function QuantumFinancialTradingPlatformPage() {
       </div>
     </Layout>
   )
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
 }
 
+;
+;
+
+);
+origin/cursor/automate-test-improve-and-merge-code-2533

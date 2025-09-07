@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 import React, { useEffect, useState } from "react",
@@ -11,14 +12,60 @@ import { Button } from "@/components/ui/button";
 import { Calendar, Clock, Video } from 'lucide-react'
 import { format, isAfter, parseISO, startOfDay } from "date-fns";
 function InterviewsContent() {
+=======
+import { Calendar, Clock, Video } from 'lucide-react'
+import { format, isAfter, parseISO, startOfDay } from "date-fns";
+function InterviewsContent() {
+      if (!grouped[dateKey]) {
+        grouped[dateKey] = []
+      }
+      grouped[dateKey].push(interview)
+    return Object.entries(groupedInterviews)
+      .sort(
+        ([dateA], [dateB]) =>
+          parseISO(dateA).getTime() - parseISO(dateB).getTime()
+      )
+      .map(([date, interviews]) => (
+            ))}
+          </div>
+        </div>
+      ))
+
+import React, { useEffect, useState } from 'react';
+import { useInterviews } from '@/hooks/useInterviews';
+import { Interview } from '@/types/interview';
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
+import { SEO } from '@/components/SEO';
+import { ProtectedRoute } from '@/components/ProtectedRoute';
+import { InterviewCard } from '@/components/interviews/InterviewCard';
+import { Button } from '@/components/ui/button';
+import { Calendar, Clock, Video } from 'lucide-react';
+import { format, isAfter, parseISO, startOfDay } from 'date-fns';
+
+import React, { useEffect, useState } from "react",;
+import { useInterviews } from "@/hooks/useInterviews",;
+import { Interview } from "@/types/interview",;
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",;
+import { SEO } from "@/components/SEO",;
+import { ProtectedRoute } from "@/components/ProtectedRoute",;
+import { InterviewCard } from "@/components/interviews/InterviewCard",;
+import { Button } from "@/components/ui/button";
+import { Calendar, Clock, Video } from 'lucide-react'
+import { format, isAfter, parseISO, startOfDay } from "date-fns";
+function InterviewsContent() {
+>>>>>>> origin/main
   const { interviews, isLoading, fetchInterviews } = useInterviews();
   const [activeTab, setActiveTab] = useState("upcoming");
   useEffect(() => {
     // Modified to handle Promise<Interview[]> return type
     const loadInterviews = null;
+<<<<<<< HEAD
 
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/main
   return (
-    <>
+    <>;
       <SEO
         title='Interviews | Zion AI Marketplace'
         description='Manage your scheduled interviews with clients and talent'
@@ -32,34 +79,40 @@ function InterviewsContent() {
             </p>
           </div>
         </div>
+              Schedule and manage your video interviews;
+            </p>;
+          </div>;
+        </div>;
 
-        <Tabs
-          defaultValue={activeTab}
-          onValueChange={setActiveTab}
-          className='space-y-8'
-        >
-          <TabsList className='mb-6'>
-            <TabsTrigger value='upcoming' className='flex items-center'>
-              <Clock className='h-4 w-4 mr-2' />
-              Upcoming
-              {upcomingInterviews.length > 0 && (
-                <span className='ml-2 bg-primary rounded-full px-2 py-0.5 text-xs'>
+  return (
+    <>
+      <SEO 
+        title="Interviews | Zion AI Marketplace" 
+        description="Manage your scheduled interviews with clients and talent" 
+      />
+      <main className="container mx-auto px-4 py-8">
+        <div className="flex justify-between items-center mb-8">
+          <div>
+            <h1 className="text-3xl font-bold">Interviews</h1>
+            <p className="text-muted-foreground mt-1">Schedule and manage your video interviews</p>
+          </div>
+        </div>
                   {upcomingInterviews.length}
                 </span>
               )}
             </TabsTrigger>
-            <TabsTrigger value='pending'>
+            <TabsTrigger value="pending">
               Pending
               {pendingInterviews.length > 0 && (
-                <span className='ml-2 bg-amber-500 rounded-full px-2 py-0.5 text-xs'>
+
                   {pendingInterviews.length}
                 </span>
               )}
             </TabsTrigger>
-            <TabsTrigger value='past'>Past</TabsTrigger>
+            <TabsTrigger value="past">Past</TabsTrigger>
           </TabsList>
 
-          <TabsContent value='upcoming' className='space-y-6'>
+
             {isLoading ? (
               <div className='flex justify-center py-12'>
                 <div className='animate-spin h-8 w-8 border-4 border-primary border-t-transparent rounded-full'></div>
@@ -79,7 +132,7 @@ function InterviewsContent() {
             )}
           </TabsContent>
 
-          <TabsContent value='pending' className='space-y-6'>
+
             {isLoading ? (
               <div className='flex justify-center py-12'>
                 <div className='animate-spin h-8 w-8 border-4 border-primary border-t-transparent rounded-full'></div>
@@ -100,7 +153,7 @@ function InterviewsContent() {
             )}
           </TabsContent>
 
-          <TabsContent value='past' className='space-y-6'>
+
             {isLoading ? (
               <div className='flex justify-center py-12'>
                 <div className='animate-spin h-8 w-8 border-4 border-primary border-t-transparent rounded-full'></div>
@@ -116,18 +169,25 @@ function InterviewsContent() {
                 </p>
               </div>
             )}
+          </TabsContent>;
+        </Tabs>;
+      </main>;
+    </>;
+  );
+    <ProtectedRoute>;
+      <InterviewsContent />;
+    </ProtectedRoute>;
+  );
+}
           </TabsContent>
         </Tabs>
       </main>
     </>
-  );
-
+  )
 export default function Interviews() {
   return (
     <ProtectedRoute>
       <InterviewsContent />
     </ProtectedRoute>
   );
-}
-}
-;
+origin/cursor/automate-test-improve-and-merge-code-2533

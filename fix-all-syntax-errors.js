@@ -1,97 +1,38 @@
-#!/usr/bin/env node
-
-import fs from 'fs';
-import _path from 'path';
-
-console.log('🔧 Fixing all syntax errors...');
-
-// Fix accessibility.tsx
-const fixAccessibility = () => {
-  try {;
-    let content = fs.readFileSync('pages/accessibility.tsx', 'utf8');
-    
-    // Fix the malformed JSX structure
-    content = content.replace(
-      /<h2 className="text-3xl font-bold text-gray-900 mb-6">\s*<\/div>\s*<\/div>\s*<\/section>\s*<section className="py-20 bg-white">/g,
-      '<h2 className="text-3xl font-bold text-gray-900 mb-6">\n                  Accessibility Standards\n                </h2>\n                <p className="text-lg text-gray-600 max-w-3xl mx-auto">\n                  We follow international accessibility standards to ensure our platform is usable by everyone.\n                </p>\n              </div>\n            </div>\n          </div>\n        </section>\n        <section className="py-20 bg-white">'
-    );
-    
-    fs.writeFileSync('pages/accessibility.tsx', content);
-    console.log('✅ Fixed accessibility.tsx');
     return true;
   } catch (error) {
-    console.error('❌ Error fixing accessibility.tsx:', error.message);
+    console && console.error('❌ Error fixing accessibility && accessibility.tsx:', error && error.message);
     return false;
   }
-};
 
-// Fix api.tsx
-const fixApi = () => {
-  try {;
-    let content = fs.readFileSync('pages/api.tsx', 'utf8');
-    
-    // Ensure proper closing structure
-    if (!content.includes('export default')) {
+
+    if (!content && content.includes('export default')) {
       content += '\n\nexport default function API() {\n  return (\n    <div>\n      <h1>API Documentation</h1>\n    </div>\n  );\n}';
-    }
-    
-    fs.writeFileSync('pages/api.tsx', content);
-    console.log('✅ Fixed api.tsx');
-    return true;
-  } catch (error) {
-    console.error('❌ Error fixing api.tsx:', error.message);
-    return false;
-  }
-};
-
-// Fix careers.tsx
-const fixCareers = () => {
-  try {;
-    let content = fs.readFileSync('pages/careers.tsx', 'utf8');
-    
-    // Fix malformed JSX structure
-    content = content.replace(
+      /<h2 className="text - 3xl font - bold text - gray - 900 mb - 6">\s*<\/div>\s*<\/div>\s*<\/section>\s*<section className="py - 20 bg - white">/g,"
+</h2>"
+      '<h2 className="text - 3xl font - bold text - gray - 900 mb - 6">\n                  Accessibility Standards\n                </h2>\n                <p className="text - lg text - gray - 600 max - w-3xl mx - auto">\n                  We follow international accessibility standards to ensure our platform is usable by everyone.\n                </p>\n              </div>\n            </div>\n          </div>\n        </section>\n        <section className="py - 20 bg - white">');
+;
+    fs.writeFileSync ('pages / accessibility.tsx', content);
+    console.log ('✅ Fixed accessibility.tsx');
+    console.error ('❌ Error fixing accessibility.tsx:', error.message);
+// Fix api.tsx;
+const fix_api = () =>: any {
+  // TODO: Implement
+  try {
+  // TODO: Implement
+    let content = fs.readFileSync ('pages / api.tsx', 'utf8');
+    // Ensure proper closing structure;
+    if () {) {
+  $2;
+      content += '\n\nexport default /**
+ * API - Function description;
+ */
+function API() {\n  return (\n    <div>\n      <h1 > API Documentation</h1>\n    </div>\n  );\n}';
       /<\/motion\.div>\s*\)\)\}\s*<\/div>\s*<\/div>\s*<\/div>\s*<\/div>\s*<\/section>/g,
-      '</motion.div>\n                ))}\n              </div>\n            </div>\n          </div>\n        </div>\n      </section>'
-    );
-    
-    fs.writeFileSync('pages/careers.tsx', content);
-    console.log('✅ Fixed careers.tsx');
-    return true;
-  } catch (error) {
-    console.error('❌ Error fixing careers.tsx:', error.message);
-    return false;
-  }
-};
-
-// Fix support.tsx
-const fixSupport = () => {
-  try {;
-    let content = fs.readFileSync('pages/support.tsx', 'utf8');
-    
-    // Fix malformed JSX structure
-    content = content.replace(
+      '</motion.div>\n                ))}\n              </div>\n            </div>\n          </div>\n        </div>\n      </section>');
       /<\/motion\.div>\s*<\/div>\s*<\/div>\s*<\/section>\s*<\/div>\s*\);\s*}/g,
-      '</motion.div>\n          </div>\n        </div>\n      </section>\n    </div>\n  );\n}'
-    );
-    
-    fs.writeFileSync('pages/support.tsx', content);
-    console.log('✅ Fixed support.tsx');
-    return true;
-  } catch (error) {
-    console.error('❌ Error fixing support.tsx:', error.message);
-    return false;
-  }
-};
-
-// Fix webinars.tsx
-const fixWebinars = () => {
-  try {;
-    let content = fs.readFileSync('pages/webinars.tsx', 'utf8');
-    
-    // Fix malformed JSX structure
-    content = content.replace(
+      '</motion.div>\n          </div>\n        </div>\n      </section>\n    </div>\n  );\n}');
       /<\/Link>\s*<\/div>\s*\);\s*}/g,
+<<<<<<< HEAD
       '</Link>\n                </div>\n              </div>\n            </div>\n          </div>\n        </section>\n      </div>\n    );\n  }\n}'
     );
     
@@ -141,3 +82,6 @@ const main = () => {;
 };
 
 main();
+=======
+      '\n                </div>\n              </div>\n            </div>\n          </div>\n        </section>\n      </div>\n    );\n  }\n}');
+>>>>>>> origin/main

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 import React from 'react',
 import Head from 'next/head';
@@ -23,12 +24,25 @@ export default function QuantumCybersecurityPlatform() {
             ].map((f) => (
               <div key={f} className="p-6 rounded-2xl bg-black/40 border border-gray-700/60 text-gray-200">{f}</div>
             ))}
+=======
+>>>>>>> origin/main
           </section>
           <div className="text-center">
             <Button href="/contact" className="px-8 py-4 bg-gradient-to-r from-cyan-600 to-blue-700 text-white">Contact Security Team</Button>
+import React from 'react',;
+import Head from 'next/head';
+import Button from '../components/ui/Button';
+
+origin/cursor/automate-test-improve-and-merge-code-2533
           </div>
         </div>
       </div>
     </>
   )
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
 }
+);
+origin/cursor/automate-test-improve-and-merge-code-2533

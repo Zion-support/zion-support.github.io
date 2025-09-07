@@ -1,4 +1,20 @@
 module.exports = {}
+<<<<<<< HEAD
+  "apps"""
+      "script"""
+      "max_memory_restart"""
+        "PM2_HOME"""
+      "cron_restart"""
+      "log_file"""
+      "error_file"""
+      "out_file"""
+      "log_date_format"""
+      "name"""
+      "host"""
+      "ref"""
+      "repo"""
+      "path"""
+=======
   "apps"
       "script"
       "max_memory_restart"
@@ -111,3 +127,4 @@ module.exports = {}
       "ref"
       "repo"
       "path"
+>>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a

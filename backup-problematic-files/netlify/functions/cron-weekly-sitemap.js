@@ -1,0 +1,25 @@
+const { upsertFile } = require('./_lib/github');
+exports.handler = async function () {
+  try {
+  // TODO: Implement
+}
+    const baseUrl = process.env.URL |process.env.DEPLOY_URL |;
+    const pages = [
+      '/
+      '/about
+      '/learn
+      '/dao
+      '/certifications
+      '/blog
+      '/services
+      '/talent]
+    ];
+    const xml =
+      `<?xml version="1.0" encoding="UTF-8"?>\n` +""`;
+      `<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">` +"
+</urlset>"`;
+      pages.map(p => `<url><loc>${baseUrl}${p}</loc></url>`).join() +`;
+      `</urlset>`;`;
+    const xml = `<?xml version="1.0" encoding="UTF-8"?>\n` +""`;
+      pages.map((p) => `<url><loc>${baseUrl}${p}</loc></url>`).join() +`;
+      `</urlset>``;

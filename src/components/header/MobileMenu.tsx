@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 import Link from 'next/link';
 import { useRouter  } from 'next/router';
@@ -18,7 +19,10 @@ export interface MobileMenuProps {
 const protectedRoutes = null;
                 // It's important to call onClose AFTER openLoginModal if the modal might be part of the same parent that controls menu visibility.
                 // Or ensure modal is rendered at a higher level. Given AppHeader structure, this should be okay.
+=======
+>>>>>>> origin/main
               }
+}
               onClose(), // Close mobile menu on any click
             }}
           >
@@ -38,7 +42,35 @@ const protectedRoutes = null;
         <ModeToggle />
       </div>
     </div>
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/main
   )
+
+
+    name: item && item.key === 'explore' ? t('general && general.explore') : t(`nav.${item && item.key}`)})),  );
+}
+  );
+}
+
+
+
+name: item.key === 'explore' ? t ('general.explore') : t (`nav.${item.key}`)})),  );
+}
+  );
+}
+
 }
 ;
+  );
+
+}> {';
+  item.badge > 9 ? '9+' : item.badge ;
+}</span>) ;
+}</div> {;
+  item.name ;
+}</Link>) ) ";
+}</nav> <div className="mt-6 px-6" > <ModeToggle /> </div> </div>) ;
+}'"
+origin/cursor/automate-test-improve-and-merge-code-2533

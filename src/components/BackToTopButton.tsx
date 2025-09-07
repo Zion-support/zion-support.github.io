@@ -1,10 +1,64 @@
+<<<<<<< HEAD
 
 import { ArrowUp } from 'lucide-react'
 import { useEffect, useState } from "react";
+=======
+import { ArrowUp } from 'lucide-react';
+import { useEffect, useState } from 'react';
+import { useEffect, useState  } from './react';
+export /**
+ * BackToTopButton - Function description
+ */
+function BackToTopButton() {
+  const [visible, set_visible] = useState (false);
+  useEffect ((, ) => {
+    const update_visibility = () =>: any {
+      set_visible (window.scroll_y > 400);
+    }
+    update_visibility ();
+    window.addEventListener ('scroll', update_visibility);
+    return () => window.removeEventListener ('scroll', update_visibility);
+  }, []);
+  const scrollToTop = () =>: any {
+    const opts: ScrollToOptions = { top: 0, behavior: 'smooth' }
+    window.scroll_to (opts);
+    document.document_element.scroll_to (opts);
+    document.body.scroll_to (opts);
+  }
+      >;
+      <ArrowUp className='h - 5 w - 5' />;
+    </button>);
+}"}
+import { ArrowUp } from 'lucide-react';
+import { useEffect, useState } from "react",;
+export function BackToTopButton() {;
+  const [visible, setVisible] = useState(false),;
+  useEffect(() => {;
+    const updateVisibility = () => {;
+
+>>>>>>> origin/main
 export function BackToTopButton() {
   const [visible, setVisible] = useState(false);
+
   useEffect(() => {
-    const updateVisibility = null;
+    const updateVisibility = () => {
+origin/cursor/automate-test-improve-and-merge-code-2533
+      setVisible(window.scrollY > 400);
+    };
+    updateVisibility();
+    window.addEventListener('scroll', updateVisibility);
+    return () => window.removeEventListener('scroll', updateVisibility);
+  }, []);
+  
+
+origin/cursor/automate-test-improve-and-merge-code-2533
+  const scrollToTop = () => {
+    const opts: ScrollToOptions = { top: 0, behavior: 'smooth' };
+    window.scrollTo(opts);
+    document.documentElement.scrollTo(opts);
+    document.body.scrollTo(opts);
+  };
+  
   return (
     <button
       aria-label="Back to top"
@@ -13,9 +67,23 @@ export function BackToTopButton() {
         visible ? "opacity-100" : "opacity-0 pointer-events-none"
       }`}
     >
+<<<<<<< HEAD
       <ArrowUp className="h-5 w-5" />
 
+=======
+      <ArrowUp className="h-4 w-4" />
+>>>>>>> origin/main
     </button>
-);
+  );
+}
+;
 
-}"}
+  
+    >
+      <ArrowUp className='h-5 w-5' />
+    </button>
+  );
+
+}"
+origin/cursor/automate-test-improve-and-merge-code-2533
+}

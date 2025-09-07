@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 import Link from "next/link",
 import { useRouter } from "next/router",
@@ -10,10 +11,23 @@ import type { Tutorial as TutorialType } from "@/types/tutorial";
 
 interface TutorialPageProps {
   tutorial?: TutorialType;
+=======
+import Link from 'next/link';
+import { useRouter } from 'next/router';
+import { TUTORIALS } from '@/data/tutorials';
+import { SEO } from '@/components/SEO';
+import { Button } from '@/components/ui/button';
+import { ArrowLeft } from 'lucide-react';
+import ReactMarkdown from 'react-markdown';
+import type { Tutorial as TutorialType } from '@/types/tutorial';
+>>>>>>> origin/main
 
+origin/cursor/automate-test-improve-and-merge-code-2533
+interface TutorialPageProps {
+  tutorial?: TutorialType
 export default function Tutorial({
-  tutorial: initialTutorial,
-}: TutorialPageProps) {
+  tutorial: initialTutorial,;
+}: TutorialPageProps) {;
   const router = useRouter();
   const slug = router.query.slug as string | undefined;
   const tutorial = initialTutorial || TUTORIALS.find(t => t.slug === slug);interface TutorialPageProps {
@@ -21,16 +35,44 @@ export default function Tutorial({
 }
 export default function Tutorial({ tutorial: initialTutorial }: TutorialPageProps) {
 
+<<<<<<< HEAD
   const router = null;
 
+=======
+  const router = useRouter()
+  const slug = router.query.slug as string | undefined
+  const tutorial = initialTutorial |TUTORIALS.find((t,) => t.slug === slug)
+
+
+            <p className="mt-8 text-white font-semibold">
+import Link from "next/link",;
+import { useRouter } from "next/router",;
+import { TUTORIALS } from "@/data/tutorials",;
+import { SEO } from "@/components/SEO",;
+import { Button } from "@/components/ui/button",;
+import { ArrowLeft } from 'lucide-react';
+import ReactMarkdown from "react-markdown",;
+import type { Tutorial as TutorialType } from "@/types/tutorial",;
+interface TutorialPageProps {;
+  tutorial?: TutorialType;
+}
+export default function Tutorial({ tutorial: initialTutorial }: TutorialPageProps) {;
+  const router = useRouter(),;
+  const slug = router.query.slug as string | undefined;
+  const tutorial = initialTutorial || TUTORIALS.find((t) => t.slug === slug);
+  if (!tutorial) {;
+    return (;
+      <div className="min-h-screen bg-zion-blue flex items-center justify-center text-white">;
+  const router = null;
+>>>>>>> origin/main
   if (!tutorial) {
+origin/cursor/automate-test-improve-and-merge-code-2533
     return (
-      <div className='min-h-screen bg-zion-blue flex items-center justify-center text-white'>
+      <div className="min-h-screen bg-zion-blue flex items-center justify-center text-white">
         Tutorial not found.
       </div>
-    );
+    )
   }
-
   return (
     <>
       <SEO title={tutorial.title} description={tutorial.excerpt} />
@@ -64,6 +106,4 @@ export default function Tutorial({ tutorial: initialTutorial }: TutorialPageProp
       </div>
     </>
   );
-;
-}
-;
+origin/cursor/automate-test-improve-and-merge-code-2533

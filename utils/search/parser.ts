@@ -1,20 +1,9 @@
-export interface SearchFilters {
-  keywords?: string[];
-  skills?: string[];
-  location?: string;
-  type?: string;
-  status?: string;
-  minRating?: number;
-  maxRating?: number;
-  priceRange?: {
-    min?: number;
-    max?: number;
-  };
+
 }
 
-export async function parseQueryToFilters(query: string): Promise<SearchFilters> {
+  query: string,
+): Promise<SearchFilters> {
   const filters: SearchFilters = {};
-  
   if (!query || query.trim().length === 0) {
     return filters;
   }
@@ -22,30 +11,88 @@ export async function parseQueryToFilters(query: string): Promise<SearchFilters>
   const words = query.toLowerCase().split(/\s+/);
   const keywords: string[] = [];
   const skills: string[] = [];
-  
+
   // Simple keyword extraction
   for (const word of words) {
-    if (word.length > 2) {
+    if (word && word.length > 2) {
       keywords.push(word);
     }
   }
-  
+
   if (keywords.length > 0) {
     filters.keywords = keywords;
   }
-  
+
   // Extract skills (simple heuristic)
-  const skillKeywords = ['javascript', 'react', 'node', 'python', 'java', 'typescript', 'vue', 'angular', 'php', 'ruby', 'go', 'rust', 'swift', 'kotlin', 'c++', 'c#', 'html', 'css', 'sql', 'mongodb', 'postgresql', 'mysql', 'redis', 'docker', 'kubernetes', 'aws', 'azure', 'gcp', 'git', 'github', 'gitlab', 'jenkins', 'ci/cd', 'devops', 'frontend', 'backend', 'fullstack', 'mobile', 'ios', 'android', 'web', 'api', 'rest', 'graphql', 'microservices', 'blockchain', 'ai', 'ml', 'data', 'analytics', 'design', 'ui', 'ux', 'figma', 'sketch', 'adobe', 'photoshop', 'illustrator'];
-  
+  const skillKeywords = [
+    "javascript",
+    "react",
+    "node",
+    "python",
+    "java",
+    "typescript",
+    "vue",
+    "angular",
+    "php",
+    "ruby",
+    "go",
+    "rust",
+    "swift",
+    "kotlin",
+    "c++",
+    "c#",
+    "html",
+    "css",
+    "sql",
+    "mongodb",
+    "postgresql",
+    "mysql",
+    "redis",
+    "docker",
+    "kubernetes",
+    "aws",
+    "azure",
+    "gcp",
+    "git",
+    "github",
+    "gitlab",
+    "jenkins",
+    "ci/cd",
+    "devops",
+    "frontend",
+    "backend",
+    "fullstack",
+    "mobile",
+    "ios",
+    "android",
+    "web",
+    "api",
+    "rest",
+    "graphql",
+    "microservices",
+    "blockchain",
+    "ai",
+    "ml",
+    "data",
+    "analytics",
+    "design",
+    "ui",
+    "ux",
+    "figma",
+    "sketch",
+    "adobe",
+    "photoshop",
+    "illustrator",
+  ];
+
   for (const word of words) {
     if (skillKeywords.includes(word)) {
       skills.push(word);
     }
   }
-  
+
   if (skills.length > 0) {
     filters.skills = skills;
   }
-  
-  return filters;
-}
+
+

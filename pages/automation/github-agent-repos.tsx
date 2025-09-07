@@ -1,10 +1,26 @@
+<<<<<<< HEAD
 
 import EnhancedLayout from '../../components/layout/EnhancedLayout';
 // @ts-ignore
 import data from '../../data/github-agent-repos.json';
 
+=======
+import EnhancedLayout from '../../components/layout/EnhancedLayout';
+// @ts-ignore
+import data from '../../data/github-agent-repos.json';
+import EnhancedLayout from '../../components/layout/EnhancedLayout',;
+// @ts-ignore
+import data from '../../data/github-agent-repos.json',;
+import EnhancedLayout from '../../components/layout/EnhancedLayout',;
+// @ts-ignore;
+import data from '../../data/github-agent-repos.json',;
+>>>>>>> origin/main
 export default function GithubAgentReposPage() {
+
+  const items: any[] = (data?.items |[]).slice(0, 50)
+
   const items: any[] = (data?.items || []).slice(0, 50);
+origin/cursor/automate-test-improve-and-merge-code-2533
   return (
     <EnhancedLayout>
       <div className="max-w-5xl mx-auto py-10">
@@ -13,13 +29,26 @@ export default function GithubAgentReposPage() {
         <ul className="mt-6 space-y-4">
           {items.map((it, idx) => (
             <li key={idx} className="p-4 border border-gray-200 dark:border-gray-800 rounded-lg">
-              <a className="font-medium underline" href={it.html_url} target="_blank" rel="noreferrer">{it.full_name}</a>
-              <div className="mt-1 text-xs text-gray-500 dark:text-gray-400">★ {it.stargazers_count} · Forks {it.forks_count} · {it.language || '—'}</div>
-              <p className="mt-2 text-sm text-gray-700 dark:text-gray-200">{it.description}</p>
             </li>
           ))}
         </ul>
       </div>
+              <p className="mt-2 text-sm text-gray-700 dark:text-gray-200">{it.description}</p>
+            </li>
+          ))  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+        </ul>;
+      </div>;
+    </EnhancedLayout>;
+  );
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
     </EnhancedLayout>
   )
-};
+}
+origin/cursor/automate-test-improve-and-merge-code-2533

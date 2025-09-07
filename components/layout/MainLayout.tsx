@@ -1,88 +1,93 @@
+<<<<<<< HEAD
+
+
+
+
+;
+interface MainLayoutProps {
+
+  children: ReactNode;
+=======
 import React from 'react';
-import Layout from './Layout';
+import Head from 'next/head';
 
 interface MainLayoutProps {
-  children: ReactNode, title?: string,  description?: string;
+  children: React.ReactNode;
+>>>>>>> cursor/automate-test-improve-and-merge-code-5b47
+  title?: string;
+  description?: string;
   keywords?: string;
-  canonical?: string;
-  noindex?: boolean;
-  nofollow?: boolean;
-  type?: string;
   image?: string;
-  url?: string;}
+  url?: string;
+}
 
+<<<<<<< HEAD
+
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-5b47
 const MainLayout: React.FC<MainLayoutProps> = ({
+<<<<<<< HEAD
 
   children;
   title;
 }) => {
 
+=======
+  children,
+  title = 'Zion Tech Group - Leading Technology Solutions',
+  description = 'Zion Tech Group provides cutting-edge AI, blockchain, and cloud solutions for modern businesses.',
+  keywords = 'AI, blockchain, cloud, technology, solutions, Zion Tech Group',
+  image = '/images/og-image.jpg',
+  url = 'https://ziontechgroup.com'
+}) => {
+>>>>>>> origin/main
   return (
     <>
       <Head>
-
         <title>{title}</title>
         <meta name="description" content={description} />
+<<<<<<< HEAD
 
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-5b47
+        <meta name="keywords" content={keywords} />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
-        {canonical && <link rel="canonical" href={canonical} />}
-        {noindex && <meta name="robots" content="noindex" />}
-        {nofollow && <meta name="robots" content="nofollow" />}
-
         
-        <meta property="og:type" content={type} />
+        {/* Open Graph */}
         <meta property="og:title" content={title} />
         <meta property="og:description" content={description} />
-        {image && <meta property="og:image" content={image} />}
-        {url && <meta property="og:url" content={url} />}
+        <meta property="og:image" content={image} />
+        <meta property="og:url" content={url} />
+        <meta property="og:type" content="website" />
         
         {/* Twitter */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content={title} />
         <meta name="twitter:description" content={description} />
-        {image && <meta name="twitter:image" content={image} />}
+        <meta name="twitter:image" content={image} />
       </Head>
-      
+<<<<<<< HEAD
 
+      <div className="min-h-screen flex flex-col">
         <Header />
         <main className="flex-1">
           {children}
         </main>
         <Footer />
       </div>
-</>
-
-  );
-
-
-export default MainLayout;
-  title = 'Zion Tech Group - Leading Technology Solutions Provider',
-  description = 'Zion Tech Group provides cutting-edge technology solutions for modern businesses. From AI development to cloud architecture, we help companies transform their digital presence.',
-  keywords = 'technology solutions, AI development, cloud architecture, digital transformation, micro SaaS, IT services',
-  ogImage = '/og-image.jpg';
-}) => {;
-  return (;
-    <>;
-      <Head>;
-        <title>{title}</title>;
-        <meta name="description" content={description} />;
-        <meta name="keywords" content={keywords} />;
-        <meta property="og:title" content={title} />;
-        <meta property="og:description" content={description} />;
-        <meta property="og:image" content={ogImage} />;
-        <meta property="og:type" content="website" />;
-        <meta name="twitter:card" content="summary_large_image" />;
-        <meta name="twitter:title" content={title} />;
-        <meta name="twitter:description" content={description} />;
-        <meta name="twitter:image" content={ogImage} />;
-        <link rel="canonical" href="https://ziontechgroup.com" />;
-      </Head>;
-      <div className="min-h-screen bg-white">;
+=======
+      
+      <main className="min-h-screen bg-gray-50">
         {children}
-      </div>;
-    </>;
+      </main>
+>>>>>>> cursor/automate-test-improve-and-merge-code-5b47
+    </>
   );
 };
+
+<<<<<<< HEAD
+
+=======
 export default MainLayout;
-import React from 'react'; import Head from 'next/head'; import Header from './Header'; import Footer from './Footer'; import PerformanceOptimizer from '../PerformanceOptimizer'; import AccessibilityEnhancer from '../AccessibilityEnhancer'; import SEOEnhancer from '../SEOEnhancer'; interface MainLayoutProps { children: React.ReactNode; title?: string; description?: string; keywords?: string; ogImage?: string} const MainLayout: React.FC<MainLayoutProps> = ({ children,title = 'Zion Tech Group - Leading Technology Solutions Provider',description = 'Zion Tech Group provides cutting-edge technology solutions for modern businesses. From AI development to cloud architecture,we help companies transform their digital presence.',keywords = 'technology solutions,AI development,cloud architecture,digital transformation,micro SaaS,IT services',ogImage = '/og-image.jpg',}) => { return ( <> <Head> <title>{title}</title> <meta name="description" content={description} /> <meta name="keywords" content={keywords} /> <meta property="og:title" content={title} /> <meta property="og:description" content={description} /> <meta property="og:image" content={ogImage} /> <meta name="viewport" content="width=device-width,initial-scale=1" /> </Head> <SEOEnhancer title={title} description={description} keywords={keywords} ogImage={ogImage} /> <PerformanceOptimizer preloadImages={[ '/hero-bg.jpg','/services-bg.jpg','/team-bg.jpg',]} preloadFonts={[ 'https: ]} /> <AccessibilityEnhancer> <div className='min-h-screen flex flex-col'> <Header /> <main id='main-content' className='flex-grow' role='main'> {children} </main> <Footer /> </div> </AccessibilityEnhancer> </> )}; export default MainLayout;
+>>>>>>> cursor/automate-test-improve-and-merge-code-5b47

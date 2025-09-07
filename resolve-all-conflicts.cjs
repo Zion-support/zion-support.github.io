@@ -1,73 +1,25 @@
-#!/usr/bin/env node
-
+<<<<<<< HEAD
+#!/usr/bin/env node;
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
-
-console.log('🔧 Resolving all merge conflicts...');
-console.log('🔧 Resolving all merge conflicts...');
-
-// Function to resolve merge conflicts in a file
+// Function to resolve merge conflicts in a file;
 function resolveMergeConflicts(filePath) {
   try {
+  // TODO: Implement
+}
     if (!fs.existsSync(filePath)) {
+
       return false;
-    }
 
     const content = fs.readFileSync(filePath, 'utf8');
+    // Check if file has merge conflicts;
+    if (!content.includes(
+        const parts = match.split(
 
-    // Check if file has merge conflicts
-      return false;
-    }
-
-    console.log(`Resolving conflicts in: ${filePath}`);
-
-    // Split by merge conflict markers
-    const lines = content.split('\n');
-    const resolvedLines = [];
-    let inConflict = false;
-    let conflictType = '';
-
-    for (let i = 0; i < lines.length; i++) {
-      const line = lines[i];
-
-      if (line.includes('')) {
-        inConflict = true;
-        conflictType = 'head';
-        continue;
-      }
-
-      if (line.includes('')) {
-        conflictType = 'separator';
-        continue;
-      }
-
-        inConflict = false;
-        conflictType = '';
-        continue;
-      }
-
-      if (!inConflict) {
-        resolvedLines.push(line);
-      } else if (conflictType === 'head') {
-        // Keep the HEAD version (our changes)
-        resolvedLines.push(line);
-      }
-      // Skip the other branch content
-    }
-
-    // Write the resolved content
-    fs.writeFileSync(filePath, resolvedLines.join('\n'));
-    return true;
-  } catch (error) {
-    console.error(`Error resolving ${filePath}:`, error.message);
-    return false;
-  }
-}
-
-// Function to find all files with merge conflicts
+// Function to find all files with merge conflicts;)
 function findFilesWithConflicts() {
-  try {
+  // TODO: Implement
     const result = execSync('git status --porcelain', { encoding: 'utf8' });
     const files = result.split('\n')
       .filter(line => line.includes('UU') || line.includes('AA') || line.includes('DD'))
@@ -75,332 +27,124 @@ function findFilesWithConflicts() {
       .filter(file => file.length > 0);
     
     return files;
+
   } catch (error) {
     console.error('Error finding conflicted files:', error.message);
     return [];
-  }
-}
 
-// Main execution
-try {
-  const conflictedFiles = findFilesWithConflicts();
-  console.log(`Found ${conflictedFiles.length} files with merge conflicts`);
+// Main resolution process;
+function main() {
+  console.log('🔍 Finding files with merge conflicts...');
+  const conflictedFiles = findConflictedFiles();
+  
+  if (conflictedFiles.length === 0) {
+    console.log('✅ No merge conflicts found!');
+    return;
 
+  console.log(`📋 Found ${conflictedFiles.length} files with conflicts:`);`;
+  conflictedFiles.forEach(file => console.log(`   - ${file}`));
+
+  console.log('\n🔧 Resolving conflicts...');
   let resolvedCount = 0;
-  for (const file of conflictedFiles) {
+  let failedCount = 0;
+
+  conflictedFiles.forEach(file => {)
     if (resolveMergeConflicts(file)) {
       resolvedCount++;
+    } else {
+  // TODO: Implement
+      failedCount++;
+  });
+`;
+  console.log(`\n📊 Resolution Summary:`);`;
+  console.log(`   ✅ Successfully resolved: ${resolvedCount}`);`;
+  console.log(`   ❌ Failed to resolve: ${failedCount}`);
+
+  if (failedCount === 0) {
+    console.log('\n🎉 All merge conflicts resolved!');
+    console.log('📝 Next steps:');
+    console.log('   1. Review the resolved files');
+    console.log('   2. Run: git add .');
+    console.log('   3. Run: git commit -m "Resolve merge conflicts"');
+    console.log('   4. Run: git push origin main');
+  // TODO: Implement
+    console.log('\n⚠️  Some conflicts could not be automatically resolved.');
+    console.log('Please manually review and resolve the remaining conflicts.');
+
+// Run the resolution;
+main();
+=======
+#!/usr/bin/env node
+
+const { execSync } = require('child_process');
+const fs = require('fs');
+const path = require('path');
+
+console.log('🔧 Resolving all merge conflicts by accepting our cleaned-up version...');
+
+try {
+  // Get list of all conflicted files
+  const conflictedFiles = execSync('git diff --name-only --diff-filter=U', { encoding: 'utf8' })
+    .trim()
+    .split('\n')
+    .filter(file => file.length > 0);
+
+  console.log(`Found ${conflictedFiles.length} conflicted files`);
+
+  // Strategy: Accept our version (HEAD) for most files since we cleaned up the codebase
+  for (const file of conflictedFiles) {
+    try {
+      console.log(`Resolving conflict for: ${file}`);
+      
+      // Check if file exists in our version
+      if (fs.existsSync(file)) {
+        // Use our version (HEAD)
+        execSync(`git checkout --ours "${file}"`, { stdio: 'pipe' });
+        console.log(`✅ Accepted our version for: ${file}`);
+      } else {
+        // File was deleted in our version, remove it
+        execSync(`git rm "${file}"`, { stdio: 'pipe' });
+        console.log(`🗑️ Removed deleted file: ${file}`);
+      }
+      
+      // Add the resolved file
+      execSync(`git add "${file}"`, { stdio: 'pipe' });
+      
+    } catch (error) {
+      console.log(`⚠️ Could not resolve ${file}: ${error.message}`);
     }
   }
 
-  console.log(`✅ Resolved conflicts in ${resolvedCount} files`);
+  // Handle special cases for key files
+  const keyFiles = [
+    'package.json',
+    'next.config.js',
+    'tsconfig.json',
+    'pages/_app.js',
+    'pages/index.js',
+    'styles/globals.css'
+  ];
 
-  // Add all resolved files
-  if (resolvedCount > 0) {
-    console.log('Adding resolved files to git...');
-    execSync('git add .', { stdio: 'inherit' });
-    
-    console.log('Committing merge resolution...');
-    execSync('git commit -m "Resolve merge conflicts automatically"', { stdio: 'inherit' });
+  for (const file of keyFiles) {
+    if (fs.existsSync(file)) {
+      try {
+        execSync(`git checkout --ours "${file}"`, { stdio: 'pipe' });
+        execSync(`git add "${file}"`, { stdio: 'pipe' });
+        console.log(`✅ Resolved key file: ${file}`);
+      } catch (error) {
+        console.log(`⚠️ Could not resolve key file ${file}: ${error.message}`);
+      }
+    }
   }
 
-  console.log('✅ All merge conflicts resolved and committed');
-
+  // Commit the merge
+  console.log('📝 Committing merge resolution...');
+  execSync('git commit -m "Resolve merge conflicts: accept cleaned-up version with syntax fixes"', { stdio: 'inherit' });
+  
+  console.log('✅ All merge conflicts resolved and committed!');
+  
 } catch (error) {
-  console.error('❌ Error during conflict resolution:', error.message);
+  console.error('❌ Error resolving conflicts:', error.message);
   process.exit(1);
 }
-        return false; // No conflicts in this file
-      }
-
-      this.log(`Resolving conflicts in: ${filePath}`);
-
-      let resolvedContent = content;
-
-      // Strategy 1: Keep the content after  (usually the incoming changes)
-      resolvedContent = resolvedContent.replace(
-        /([\s\S]*?)
-        '$1'
-#!/usr/bin/env node;
-const fs = require("fs");
-const path = require("path");
-const { execSync } = require("child_process");
-class $1 {;
-  constructor() {;
-  this.projectRoot = process.cwd();
-    this.conflictsResolved = 0;
-    this.errors = [];,
-}
-
-  log(message) {;
-  const timestamp = new Date().toISOString();
-    console.log(`[${timestamp}] ${message}`);,
-}
-
-  async findFilesWithConflicts() {;
-  this.log("🔍 Searching for files with merge conflicts...");
-    try {;
-  const result = execSync("git grep -l ", {;
-  cwd: this.projectRoot,
-        encoding: "utf8" ;,
-});
-      return result.trim().split("\n").filter(file => file.length > 0);,
-} catch (error) {;
-  this.log("No merge conflicts found or git not available");
-      return [];,
-}
-  }
-
-  async resolveFileConflicts(filePath) {;
-  this.log(`🔧 Resolving conflicts in: ${filePath}`);
-    try {;
-  const content = fs.readFileSync(filePath, "utf8");
-      // Check if file has merge conflicts;
-      if (!content.includes("")) {;
-  return { resolved: false, reason: "No conflicts found" }
-      }
-
-      // Create backup;
-      const backupPath = `${filePath}.backup.${Date.now()}`;
-      fs.writeFileSync(backupPath, content);
-      // Resolve conflicts by taking HEAD version (current branch);
-      let resolvedContent = content;
-      // Remove merge conflict markers and keep HEAD version;
-      resolvedContent = resolvedContent.replace(;
-        /\n([\s\S]*?)\n\n([\s\S]*?)\n/g,
-        "$1";
-      );
-
-      // Strategy 2: Remove any remaining conflict markers
-      resolvedContent = resolvedContent.replace(/[\s\S]*?
-      resolvedContent = resolvedContent.replace(//g, '');
-
-      // Strategy 3: Clean up any remaining markers
-      resolvedContent = resolvedContent.replace(//g, '');
-      resolvedContent = resolvedContent.replace(/
-
-      // Strategy 4: Remove empty lines that might have been left behind
-      resolvedContent = resolvedContent.replace(/\n\s*\n\s*\n/g, '\n\n');
-
-      // Write the resolved content back
-      fs.writeFileSync(filePath, resolvedContent, 'utf8');
-      
-      this.resolvedFiles.push(filePath);
-      return true;
-    } catch (error) {
-      this.log(`Error resolving conflicts in ${filePath}: ${error.message}`);
-      this.failedFiles.push({ file: filePath, error: error.message });
-      return false;
-    }
-  }
-
-  async findConflictedFiles() {
-    try {
-        encoding: 'utf8',
-        cwd: this.projectRoot 
-      });
-      
-      return result.trim().split('\n').filter(file => file.length > 0);
-    } catch (error) {
-      // If grep returns no results, it exits with code 1
-      return [];
-    }
-  }
-
-  async resolveAllConflicts() {
-    this.log('🔍 Finding files with merge conflicts...');
-    
-    const conflictedFiles = await this.findConflictedFiles();
-    
-    if (conflictedFiles.length === 0) {
-    this.log('✅ No merge conflicts found!'),
-    return true
-  }
-
-    this.log(`Found ${conflictedFiles.length} files with conflicts`);
-
-    for (const file of conflictedFiles) {
-      await this.resolveConflictsInFile(file);
-    }
-
-    this.log(`\n📊 Resolution Summary: `),
-    this.log(`✅ Successfully resolved: ${this.resolvedFiles.length} files`);
-    this.log(`❌ Failed to resolve: ${this.failedFiles.length} files`);
-
-    if (this.failedFiles.length > 0) {
-      this.log('\n❌ Failed files: '),
-      this.failedFiles.forEach(({ file, error }) => {
-        this.log(`  - ${file}: ${error}`);
-      });
-    }
-
-    return this.failedFiles.length === 0;
-  }
-
-  async cleanUpCorruptedFiles() {
-    this.log('🧹 Cleaning up corrupted files...');
-    
-    const filesToClean = [
-      'advanced-automation-improvements.cjs',
-      'deployment-and-merge.cjs',
-      'comprehensive-automation-suite.cjs',
-      'comprehensive-syntax-fixer-enhanced.cjs',
-      'fix-warnings.cjs',
-      'fix-all-remaining.cjs',
-      'clean-merge-conflicts.cjs',
-      'fix-parsing-errors.cjs',
-      'find-bad-shebang.cjs'
-    ];
-
-    for (const file of filesToClean) {
-      const filePath = path.join(this.projectRoot, file);
-      if (fs.existsSync(filePath)) {
-        try {
-          const content = fs.readFileSync(filePath, 'utf8');
-            this.log(`Removing corrupted file: ${file}`);
-            fs.unlinkSync(filePath);
-          }
-        } catch (error) {
-          this.log(`Error cleaning ${file}: ${error.message}`);
-        }
-      }
-    }
-  }
-}
-
-// Run the conflict resolver
-async function main() {
-  const resolver = new ConflictResolver();
-  
-  try {
-    await resolver.cleanUpCorruptedFiles();
-    const success = await resolver.resolveAllConflicts();
-    
-    if (success) {
-    resolver.log('🎉 All merge conflicts resolved successfully!'),
-    process.exit(0)
-  } else {
-    resolver.log('⚠️ Some conflicts could not be resolved automatically'),
-    process.exit(1)
-  }
-  } catch (error) {
-    resolver.log(`❌ Error during conflict resolution: ${error.message}`);
-    process.exit(1);
-  }
-}
-
-if (require.main === module) {
-  main();
-}
-
-module.exports = ConflictResolver;
-module.exports = ConflictResolver;
-  cleanMalformedSyntax(content) {;
-  // Fix common malformed syntax patterns;
-    let cleaned = content;
-    // Fix malformed imports;
-    cleaned = cleaned.replace(/import \s*([^]+);/g, "import $1;");
-    cleaned = cleaned.replace(/import\s+([^]+);/g, "import $1;");
-    // Fix malformed function declarations;
-    cleaned = cleaned.replace(/const: \s*([^:]+):\s*([^=]+)\s*=\s*\(\)\s*=>\s*,{/g, "const $1: $2 = () => {");
-    // Fix malformed object properties;
-    cleaned = cleaned.replace(/(\w+):\s*([^,}]+),/g, "$1: $2,");
-    // Fix malformed strings;
-    cleaned = cleaned.replace(/([^"]*),([^"]*),/g, "$1$2",");
-    // Remove extra semicolons and commas;
-    cleaned = cleaned.replace(/;+/g, ";");
-    cleaned = cleaned.replace(/,+/g, ",");
-    // Fix malformed quotes in strings;
-    cleaned = cleaned.replace(/"([^]*)([^"]*)"([^]*)/g, ""$1$2$3"");
-    return cleaned;,
-}
-
-  async resolveAllConflicts() {;
-  this.log("🚀 Starting comprehensive conflict resolution...");
-    const conflictedFiles = await this.findFilesWithConflicts();
-    if (conflictedFiles.length === 0) {;
-  this.log("✅ No merge conflicts found");
-      return { resolved: 0, errors: [] }
-    }
-
-    this.log(`📋 Found ${conflictedFiles.length} files with conflicts`);
-    for (const file of conflictedFiles) {;
-  const result = await this.resolveFileConflicts(file);
-      if (result.resolved) {;
-  this.conflictsResolved++;,
-}
-    }
-
-    this.log(`🎉 Resolved ${this.conflictsResolved} files with conflicts`);
-    if (this.errors.length > 0) {;
-  this.log(`⚠️  ${this.errors.length} errors occurred:`);
-      this.errors.forEach(error => {;
-  this.log(`   - ${error.file}: ${error.error}`);,
-});,
-}
-
-    return {;
-  resolved: this.conflictsResolved,
-      errors: this.errors,
-      totalFiles: conflictedFiles.length;,
-}
-  }
-
-  async createCleanESLintConfig() {;
-  this.log("🔧 Creating clean ESLint configuration...");
-    const eslintConfig = `module.exports = {;
-  extends: [ "next/core-web-vitals",
-    "eslint: recommended",
-    "@typescript-eslint/recommended" ],
-  parser: "@typescript-eslint/parser",
-  plugins: ["@typescript-eslint"],
-  rules: {;
-  "@typescript-eslint/no-unused-vars": "warn",
-    "@typescript-eslint/no-explicit-any": "warn",
-    "react-hooks/exhaustive-deps": "warn";,
-},
-  ignorePatterns: ["node_modules/", ".next/", "out/"];,
-};`;
-    try {;
-  fs.writeFileSync(".eslintrc.js", eslintConfig);
-      this.log("✅ Created clean ESLint configuration");,
-} catch (error) {;
-  this.log(`❌ Error creating ESLint config: ${error.message}`);,
-}
-  }
-
-  async run() {;
-  try {;
-  // Resolve merge conflicts;
-      const conflictResult = await this.resolveAllConflicts();
-      // Create clean ESLint config;
-      await this.createCleanESLintConfig();
-      this.log("🎉 Conflict resolution completed successfully");
-      return conflictResult;,
-} catch (error) {;
-  this.log(`💥 Conflict resolution failed: ${error.message}`);
-      throw error;,
-}
-  }
-}
-
-// Run the conflict resolver if this file is executed directly;
-if (require.main === module) {;
-  const resolver = new ConflictResolver();
-  resolver.run();
-    .then((result) => {;
-  console.log("✅ Conflict resolution completed");
-      console.log(`📊 Resolved ${result.resolved} files`);
-      if (result.errors.length > 0) {;
-  console.log(`⚠️  ${result.errors.length} errors occurred`);,
-}
-      process.exit(0);,
-});
-    .catch((error) => {;
-  console.error("❌ Conflict resolution failed: ", error.message);
-      process.exit(1);,
-});,
-}
-
-module.exports = ConflictResolver}
-module.exports = ConflictResolver;
+>>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a

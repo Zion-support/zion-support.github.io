@@ -1,381 +1,517 @@
-#!/usr/bin/env node;
-/**
- * AI-Powered Performance Predictor;
- * Advanced performance analysis with machine learning predictions;
- */
-
-const fs = require('fs')
-const path = require('path')
-const { execSync } = require('child_process')
-    this.logFile = path.join(this.projectRoot, 'logs', 'ai-performance.log')
-    this.reportFile = path.join(this.projectRoot, 'logs', 'performance-report.json')
-    this.scoreFile = path.join(this.projectRoot, 'logs', 'performance-score.txt')
-      await fs.mkdir(path.join(this.projectRoot, 'logs')
-      console.log('Logs directory already exists')
-  log(message, level = 'INFO')
-    fs.appendFile(this.logFile, logMessage + '\n')
-    this.log('� Analyzing bundle size and optimization...')
-        this.log('⚠ No build found, running build analysis on source files...')
-        const nextBuildSize = execSync('du -sh .next/static 2>/dev/null | cut -f1 || echo "0")
-        const packageSize = execSync('du -sh node_modules 2>/dev/null | cut -f1 || echo "0")
-      const sourceFiles = execSync('find src -name "*.js" -o -name "*.ts" -o -name "*.jsx" -o -name "*.tsx")
-      const largeFiles = execSync('find src -name "*.js" -o -name "*.ts" -o -name "*.jsx" -o -name "*.tsx")
-          const result = execSync(`grep -r "${pattern}"`)
-        const largeImports = execSync(`grep -r "import.*from" src/ | grep -v "//"`)
-          const result = execSync(`grep -r "${pattern}"`)
-        const memoryOps = execSync(`grep -r "JSON\\.parse\\|JSON\\.stringify"`)
-          const result = execSync(`grep -r "${pattern}"`)
-          const result = execSync(`grep -r "${pattern}"`)
 #!/usr/bin/env node
 
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
 
-console.log('⚡ Starting AI Performance Predictor...');
-
 class AIPerformancePredictor {
   constructor() {
-    this.projectRoot = process.cwd();
-    this.logFile = path.join(this.projectRoot, 'automation-reports', 'ai-performance.log');
-    this.reportFile = path.join(this.projectRoot, 'automation-reports', 'ai-performance-report.json');
-    this.ensureLogDir();
+    this.workspaceRoot = '/workspace';
+    this.reportFile = path.join(this.workspaceRoot,automation_logs,ai-performance-report.json');
+    this.ensureLogDirectory();
   }
 
-  ensureLogDir() {
-    const logDir = path.dirname(this.logFile);
+  ensureLogDirectory() {
+    const logDir = path.dirname(this.reportFile);
     if (!fs.existsSync(logDir)) {
-      fs.mkdirSync(logDir, { recursiv: true });
-    }
-  }
+      fs.mkdirSync(logDir, { recursive: true });
 
-  log(message, level = 'INFO') {
-    const timestamp = new Date().toISOString();
-    const logMessage = `[${timestamp}] [${level}] ${message}`;
-    console.log(logMessage);
-    fs.appendFileSync(this.logFile, logMessage + '\n');
+  log(message) {
+<<<<<<< HEAD
+    console.log(`[AI Performance Predictor] ${message}`);
+=======
+    console.log(`[AI Performance Predictor] ${message});
   }
+>>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
 
   async analyzePerformance() {
-    this.log('⚡ Analyzing performance...');
-
-    const performanceAnalysis = {
-      timestam: new Date().toISOString(),
-      bundleSiz: await this.analyzeBundleSize(),
-      loadTim: await this.analyzeLoadTime(),
-      runtim: await this.analyzeRuntimePerformance(),
-      memor: await this.analyzeMemoryUsage(),
-      prediction: this.generatePredictions(),
-      recommendation: this.generatePerformanceRecommendations(),
+    this.log('Starting AI-powered performance analysis...);
+    
+    const analysis = {
+      timestamp: new Date().toISOString(),
+      metrics: {},
+      issues: [],
+      predictions: [],
+      recommendations: [],
+      performanceScore: 0
     };
-
-    return performanceAnalysis;
-  }
-
-  async analyzeBundleSize() {
-    this.log('📦 Analyzing bundle size and optimization...');
 
     try {
-      // Try to get bundle size information
-      const bundleAnalysis = {
-        scor: 75,
-        totalSiz: '2.1MB',
-        gzippedSiz: '650KB',
-        chunk: 12,
-        largestChunk: [
-          { nam: 'main', siz: '800KB' },
-          { nam: 'vendor', siz: '600KB' },
-          { nam: 'ui', siz: '400KB' },
-        ],
-        suggestion: [
-          'Implement code splitting',
-          'Use dynamic imports for large components',
-          'Optimize images and assets',
-          'Remove unused dependencies',
-        ],
-      };
+      // Analyze bundle size
+      await this.analyzeBundleSize(analysis);
+      
+      // Analyze code patterns
+      await this.analyzeCodePatterns(analysis);
+      
+      // Analyze images and assets
+      await this.analyzeAssets(analysis);
+      
+      // Analyze dependencies
+      await this.analyzeDependencies(analysis);
+      
+      // Analyze build configuration
+      await this.analyzeBuildConfig(analysis);
+      
+      // Generate predictions
+      this.generatePerformancePredictions(analysis);
+      
+      // Calculate performance score
+      analysis.performanceScore = this.calculatePerformanceScore(analysis);
+      
+      // Generate recommendations
+      this.generatePerformanceRecommendations(analysis);
+      
+      // Save report
+      fs.writeFileSync(this.reportFile, JSON.stringify(analysis, null, 2));
+<<<<<<< HEAD
+      `;
+      this.log(`Performance analysis complete. Score: ${analysis.performanceScore}/100`);`;
+      this.log(`Report saved to: ${this.reportFile}`);
+      
+      return analysis;
+    } catch (error) {`;
+      this.log(`Error during performance analysis: ${error.message}`);
+=======
+      
+      this.log(`Performance analysis complete. Score: ${analysis.performanceScore}/100`);
+      this.log(`Report saved to: ${this.reportFile});
+      
+      return analysis;
     } catch (error) {
-      this.log(`⚠️ Bundle analysis failed: ${error.message}`);
-      return {
-        scor: 70,
-        totalSiz: 'Unknown',
-        gzippedSiz: 'Unknown',
-        chunk: 0,
-        largestChunk: [],
-        suggestion: ['Run build analysis to get accurate metrics'],
-      };
-    }
-  }
+      this.log(`Error during performance analysis: ${error.message});
+>>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
+      analysis.error = error.message;
 
-  async analyzeLoadTime() {
-    this.log('⏱️ Analyzing load time...');
-
-    const loadTimeAnalysis = {
-      scor: 80,
-      firstContentfulPain: '1.2s',
-      largestContentfulPain: '2.1s',
-      firstInputDela: '45ms',
-      cumulativeLayoutShif: '0.05',
-      suggestion: [
-        'Optimize critical rendering path',
-        'Implement lazy loading',
-        'Use CDN for static assets',
-        'Minimize render-blocking resources',
-      ],
-    };
-  }
-
-  async analyzeRuntimePerformance() {
-    this.log('🔄 Analyzing runtime performance...');
-
-    const runtimeAnalysis = {
-      scor: 85,
-      metric: {
-        averageResponseTim: '120ms',
-        throughpu: '850 req/s',
-        errorRat: '0.1%',
-        cpuUsag: '45%',
-      },
-      suggestion: [
-        'Implement caching strategies',
-        'Optimize database queries',
-        'Use connection pooling',
-        'Implement request batching',
-      ],
-    };
-
-      let issues = [];
-      let score = 100;
-
-      for (const pattern of patterns) {
-        try {
-          const result = execSync(`grep -r "${pattern}" src/ --exclude-dir=node_modules 2>/dev/null || true`, { encoding: 'utf8' });
-          if (result.trim()) {
-            const count = result.split('\n').filter(line => line.trim()).length;
-            issues.push(`${count} ${pattern} statements found`);
-            score -= count * 2;
-          }
-        } catch (error) {
-          // Pattern not found, which is good
+  async analyzeBundleSize(analysis) {
+    this.log('Analyzing bundle size...);
+    
+      // Run build to generate bundle
+      execSync('npm run build, { 
+        encoding: utf8, 
+        cwd: this.workspaceRoot,
+<<<<<<< HEAD
+        stdio: 'pipe
+      });
+=======
+        stdio: pipe});
+>>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
+      
+      // Check if dist directory exists
+      const distDir = path.join(this.workspaceRoot,dist');
+      if (fs.existsSync(distDir)) {
+        const bundleSize = this.getDirectorySize(distDir);
+        analysis.metrics.bundleSize = bundleSize;
+        analysis.metrics.bundleSizeMB = (bundleSize / (1024 * 1024)).toFixed(2);
+        
+        // Check for large files
+        const largeFiles = this.findLargeFiles(distDir, 100 * 1024); // 100KB threshold
+        analysis.metrics.largeFiles = largeFiles.length;
+        
+        if (bundleSize > 2 * 1024 * 1024) { // 2MB threshold
+          analysis.issues.push({
+<<<<<<< HEAD
+            type: 'bundle',
+            severity: 'warning',
+            message: 'Bundle size exceeds 2MB',
+            impact: 'Slow initial load
+=======
+            type: bundle,
+            severity: warning,
+            message: Bundle size exceeds 2MB,
+            impact: Slow initial load});
         }
       }
-
-      return {
-        score: Math.max(0, score),
-        metrics: {
-          averageResponseTime: '120ms',
-          throughput: '850 req/s',
-          errorRate: '0.1%',
-          cpuUsage: '45%',
-        },
-        issues: issues.length > 0 ? issues : ['No obvious performance issues found'],
-        suggestions: [
-          'Remove console statements from production code',
-          'Implement caching strategies',
-          'Optimize database queries',
-          'Use connection pooling',
-        ],
-      };
+>>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
     } catch (error) {
-      this.log(`Warning: Could not analyze runtime performance: ${error.message}`);
-      return {
-        score: 85,
-        metrics: {
-          averageResponseTime: '120ms',
-          throughput: '850 req/s',
-          errorRate: '0.1%',
-          cpuUsage: '45%',
-        },
-        issues: ['Runtime analysis unavailable'],
-        suggestions: ['Set up performance monitoring'],
-      };
-    }
-  }
+      this.log('Build failed, skipping bundle analysis');
+      analysis.metrics.bundleSize = 0;
 
-  async analyzeMemoryUsage() {
-    this.log('💾 Analyzing memory usage...');
-
-    const memoryAnalysis = {
-      scor: 78,
-      heapSiz: '45MB',
-      memoryLeak: 2,
-      garbageCollectio: 'Normal',
-      suggestion: [
-        'Fix memory leaks in event listeners',
-        'Implement proper cleanup in useEffect',
-        'Use WeakMap for caching',
-        'Monitor memory usage in production',
-      ],
-    };
-
-      let issues = [];
-      let score = 100;
-
-      for (const pattern of patterns) {
-        try {
-          const result = execSync(`grep -r "${pattern}" src/ --exclude-dir=node_modules 2>/dev/null || true`, { encoding: 'utf8' });
-          if (result.trim()) {
-            const count = result.split('\n').filter(line => line.trim()).length;
-            if (pattern.includes('addEventListener') || pattern.includes('setInterval')) {
-              issues.push(`${count} potential memory leak sources found`);
-              score -= count * 3;
-            }
-          }
-        } catch (error) {
-          // Pattern not found
-        }
+  async analyzeCodePatterns(analysis) {
+    this.log('Analyzing code patterns...);
+    
+    const srcDir = path.join(this.workspaceRoot,src');
+    if (!fs.existsSync(srcDir)) {
+      return;
+    
+    const codeFiles = this.findFiles(srcDir, [.ts,.tsx,.js,.jsx]);
+    let performanceIssues = 0;
+    let totalLines = 0;
+    
+    codeFiles.forEach(file => {
+      const content = fs.readFileSync(file,utf8);
+      const lines = content.split('\n');
+      totalLines += lines.length;
+      
+      // Check for performance anti-patterns
+      if (content.includes('useEffect') && content.includes('[])) {
+        performanceIssues++;
+<<<<<<< HEAD
+          type: 'react',
+          severity: 'info',
+          file: path.relative(this.workspaceRoot, file),
+          message: 'Empty dependency array in useEffect',
+          impact: 'Potential stale closure
+      
+      if (content.includes('map(') && !content.includes('key=')) {
+          message: 'Missing key prop in map function',
+          impact: 'Inefficient re-renders
+      
+      if (content.includes('onClick') && content.includes('() =>')) {
+          message: 'Inline function in JSX',
+          impact: 'Unnecessary re-renders
+      
+      if (content.includes('import * as')) {
+          type: 'import',
+          message: 'Wildcard import detected',
+          impact: 'Larger bundle size
+=======
+        analysis.issues.push({
+          type: react,
+          severity: info,
+          file: path.relative(this.workspaceRoot, file),
+          message: Empty dependency array in useEffect,
+          impact: Potential stale closure});
       }
+      
+      if (content.includes('map(') && !content.includes('key=')) {
+        performanceIssues++;
+        analysis.issues.push({
+          type: react,
+          severity: warning,
+          file: path.relative(this.workspaceRoot, file),
+          message: Missing key prop in map function,
+          impact: Inefficient re-renders});
+      }
+      
+      if (content.includes('onClick') && content.includes('() =>')) {
+        performanceIssues++;
+        analysis.issues.push({
+          type: react,
+          severity: info,
+          file: path.relative(this.workspaceRoot, file),
+          message: Inline function in JSX,
+          impact: Unnecessary re-renders});
+      }
+      
+      if (content.includes('import * as')) {
+        performanceIssues++;
+        analysis.issues.push({
+          type: import,
+          severity: warning,
+          file: path.relative(this.workspaceRoot, file),
+          message: Wildcard import detected,
+          impact: Larger bundle size});
+      }
+    });
+>>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
+    
+    analysis.metrics.totalFiles = codeFiles.length;
+    analysis.metrics.totalLines = totalLines;
+    analysis.metrics.performanceIssues = performanceIssues;
 
-      return {
-        score: Math.max(0, score),
-        heapSize: '45MB',
-        memoryLeaks: Math.max(0, Math.floor((100 - score) / 10)),
-        garbageCollection: 'Normal',
-        issues: issues.length > 0 ? issues : ['No obvious memory issues found'],
-        suggestions: [
-          'Fix memory leaks in event listeners',
-          'Implement proper cleanup in useEffect',
-          'Use WeakMap for caching',
-          'Monitor memory usage in production',
-        ],
-      };
-    } catch (error) {
-      this.log(`Warning: Could not analyze memory usage: ${error.message}`);
-      return {
-        score: 78,
-        heapSize: '45MB',
-        memoryLeaks: 2,
-        garbageCollection: 'Normal',
-        issues: ['Memory analysis unavailable'],
-        suggestions: ['Set up memory monitoring'],
-      };
+  async analyzeAssets(analysis) {
+    this.log('Analyzing assets...);
+    
+<<<<<<< HEAD
+    const publicDir = path.join(this.workspaceRoot, 'public');
+=======
+    const publicDir = path.join(this.workspaceRoot,public');
+    const srcDir = path.join(this.workspaceRoot,src');
+>>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
+    
+    let totalAssetSize = 0;
+    let imageCount = 0;
+    let largeImages = 0;
+    
+    // Analyze public assets
+    if (fs.existsSync(publicDir)) {
+      const publicAssets = this.findFiles(publicDir, [.jpg,.jpeg,.png,.gif,.svg,.webp]);
+      publicAssets.forEach(asset => {
+        const size = fs.statSync(asset).size;
+        totalAssetSize += size;
+        
+        if (asset.match(/\.(jpg|jpeg|png|gif)$/i)) {
+          imageCount++;
+          if (size > 500 * 1024) { // 500KB threshold
+            largeImages++;
+<<<<<<< HEAD
+              type: 'asset',
+              file: path.relative(this.workspaceRoot, asset),
+              message: 'Large image file',
+              impact: 'Slow loading
+=======
+            analysis.issues.push({
+              type: asset,
+              severity: warning,
+              file: path.relative(this.workspaceRoot, asset),
+              message: Large image file,
+              impact: Slow loading});
+          }
+        }
+      });
     }
-  }
+>>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
+    
+    // Analyze src assets
+    if (fs.existsSync(srcDir)) {
+      const srcAssets = this.findFiles(srcDir, [.jpg,.jpeg,.png,.gif,.svg,.webp]);
+      srcAssets.forEach(asset => {
+        
+          if (size > 500 * 1024) {
+    
+    analysis.metrics.totalAssetSize = totalAssetSize;
+    analysis.metrics.totalAssetSizeMB = (totalAssetSize / (1024 * 1024)).toFixed(2);
+    analysis.metrics.imageCount = imageCount;
+    analysis.metrics.largeImages = largeImages;
 
-  generatePredictions() {
-    this.log('🔮 Generating performance predictions...');
-
-    return {
-      scalabilit: {
-        currentUser: 1000,
-        predictedUser: 5000,
-        bottlenec: k: 'Database queries',
-        recommendation: [
-          'Implement database indexing',
-          'Add read replicas',
-          'Use Redis for caching',
-        ],
-      },
-      growt: {
-        currentLoa: 'Medium',
-        predictedLoa: 'High',
-        timefram: '6 months',
-        recommendation: [
-          'Plan for horizontal scaling',
-          'Implement load balancing',
-          'Optimize critical paths',
-        ],
-      },
-      cost: {
-        currentCos: '$200/month',
-        predictedCos: '$800/month',
-        factor: ['Increased traffic', 'Additional infrastructure'],
-        recommendation: [
-          'Implement auto-scaling',
-          'Optimize resource usage',
-          'Use spot instances where possible',
-        ],
-      },
-    };
-  }
-
-  generatePerformanceRecommendations() {
-    this.log('💡 Generating performance recommendations...');
-
-    return [
-      'Implement comprehensive monitoring',
-      'Set up performance budgets',
-      'Use performance profiling tools',
-      'Implement automated performance testing',
-      'Optimize images and assets',
-      'Use CDN for static content',
-      'Implement caching strategies',
-      'Monitor Core Web Vitals',
-      'Use performance optimization techniques',
-      'Regular performance audits',
+  async analyzeDependencies(analysis) {
+    this.log('Analyzing dependencies...);
+    
+    const packageJsonPath = path.join(this.workspaceRoot,package.json');
+    if (!fs.existsSync(packageJsonPath)) {
+    
+    const packageJson = JSON.parse(fs.readFileSync(packageJsonPath,utf8));
+    const dependencies = { ...packageJson.dependencies, ...packageJson.devDependencies };
+    
+<<<<<<< HEAD
+    const heavyDependencies = [
+      'lodash', 'moment', 'jquery', 'bootstrap', 'antd', 'material-ui
     ];
-  }
+=======
+    const heavyDependencies = [lodash,moment,jquery,bootstrap,antd,material-ui];
+>>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
+    
+    let heavyDepCount = 0;
+    let totalDeps = Object.keys(dependencies).length;
+    
+    Object.keys(dependencies).forEach(dep => {
+      if (heavyDependencies.includes(dep)) {
+        heavyDepCount++;
+<<<<<<< HEAD
+          type: 'dependency',
+          package: dep,
+          message: 'Heavy dependency detected',
+=======
+        analysis.issues.push({
+          type: dependency,
+          severity: info,
+          package: dep,
+          message: Heavy dependency detected,
+          impact: Larger bundle size});
+      }
+    });
+>>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
+    
+    analysis.metrics.totalDependencies = totalDeps;
+    analysis.metrics.heavyDependencies = heavyDepCount;
 
-  generateReport(analysis) {
-    this.log('📊 Generating performance prediction report...');
+  async analyzeBuildConfig(analysis) {
+    this.log('Analyzing build configuration...);
+    
+    const configFiles = [vite.config.ts,next.config.js,webpack.config.js];
+    let optimizationIssues = 0;
+    
+    configFiles.forEach(configFile => {
+      const configPath = path.join(this.workspaceRoot, configFile);
+      if (fs.existsSync(configPath)) {
+        const content = fs.readFileSync(configPath,utf8);
+        
+        if (!content.includes('minify') && !content.includes('terser')) {
+          optimizationIssues++;
+<<<<<<< HEAD
+            type: 'build',
+            file: configFile,
+            message: 'Minification not configured',
+        
+        if (!content.includes('splitChunks') && !content.includes('chunk')) {
+            message: 'Code splitting not configured',
+            impact: 'Slower initial load
+=======
+          analysis.issues.push({
+            type: build,
+            severity: warning,
+            file: configFile,
+            message: Minification not configured,
+            impact: Larger bundle size});
+        }
+        
+        if (!content.includes('splitChunks') && !content.includes('chunk')) {
+          optimizationIssues++;
+          analysis.issues.push({
+            type: build,
+            severity: info,
+            file: configFile,
+            message: Code splitting not configured,
+            impact: Slower initial load});
+        }
+      }
+    });
+>>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
+    
+    analysis.metrics.optimizationIssues = optimizationIssues;
 
-    const report = {
-      ...analysis,
-      summar: {
-        overallScor: this.calculateOverallScore(analysis),
-        performanceLeve: this.getPerformanceLevel(analysis),
-        priorit: this.getPriority(analysis),
-      },
-    };
-
-    fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2));
-    this.log(`📊 Report saved to: ${this.reportFile}`);
-
-    return report;
-  }
-
-  calculateOverallScore(analysis) {
-    const weights = {
-      bundleSiz: 0.25,
-      loadTim: 0.3,
-      runtim: 0.25,
-      memor: 0.2,
-    };
-
-    return Math.round(
-      analysis.bundleSize.score * weights.bundleSize +
-      analysis.loadTime.score * weights.loadTime +
-      analysis.runtime.score * weights.runtime +
-      analysis.memory.score * weights.memory
-    );
-  }
-
-  getPerformanceLevel(analysis) {
-    const overallScore = this.calculateOverallScore(analysis);
-    if (overallScore >= 90) return 'excellent';
-    if (overallScore >= 80) return 'good';
-    if (overallScore >= 70) return 'fair';
-    return 'needs-improvement';
-  }
-
-  getPriority(analysis) {
-    if (analysis.bundleSize.score < 60) return 'high';
-    if (analysis.loadTime.score < 70) return 'high';
-    if (analysis.memory.memoryLeaks > 5) return 'critical';
-    return 'medium';
-  }
-
-  async run() {
-    try {
-      this.log('🎯 Starting AI performance prediction analysis...');
-
-      const analysis = await this.analyzePerformance();
-      const report = this.generateReport(analysis);
-
-      this.log(
-        `🎉 AI performance prediction completed! Overall: Score: ${report.summary.overallScore}/100`
-      );
-      this.log(
-        `📊 Performance: Level: ${report.summary.performanceLevel} | Priorit: ${report.summary.priority}`
-      );
-    } catch (error) {
-      this.log(`❌ AI performance prediction failed: ${error.message}`);
-      process.exit(1);
+  generatePerformancePredictions(analysis) {
+    // Predict loading time based on bundle size
+    if (analysis.metrics.bundleSize) {
+      const predictedLoadTime = Math.max(1, analysis.metrics.bundleSize / (1024 * 1024) * 2);
+      analysis.predictions.push({
+<<<<<<< HEAD
+        metric: 'Initial Load Time',`;
+        predicted: `${predictedLoadTime.toFixed(1)}s`,
+        confidence: 'medium',
+        basedOn: 'Bundle size
+    
+    // Predict Core Web Vitals
+    if (analysis.metrics.largeImages > 0) {
+        metric: 'Largest Contentful Paint',
+        predicted: 'Poor',
+        confidence: 'high',
+        basedOn: 'Large images detected
+    
+    if (analysis.metrics.performanceIssues > 10) {
+        metric: 'Cumulative Layout Shift',
+        basedOn: 'Code patterns
+=======
+        metric: Initial Load Time,
+        predicted: `${predictedLoadTime.toFixed(1)}s`,
+        confidence: medium,
+        basedOn: Bundle size});
+    }
+    
+    // Predict Core Web Vitals
+    if (analysis.metrics.largeImages > 0) {
+      analysis.predictions.push({
+        metric: Largest Contentful Paint,
+        predicted: Poor,
+        confidence: high,
+        basedOn: Large images detected});
+    }
+    
+    if (analysis.metrics.performanceIssues > 10) {
+      analysis.predictions.push({
+        metric: Cumulative Layout Shift,
+        predicted: Poor,
+        confidence: medium,
+        basedOn: Code patterns});
     }
   }
-}
+>>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
 
-// Run the performance predictor
-const predictor = new AIPerformancePredictor();
-predictor.run().catch(console.error);
-predictor.run().catch(console.error);
+  calculatePerformanceScore(analysis) {
+    let score = 100;
+    
+    // Deduct points for issues
+    analysis.issues.forEach(issue => {
+      switch (issue.severity) {
+        case 'warning:
+          score -= 5;
+          break;
+        case 'info:
+          score -= 2;
+    
+    // Deduct points for bundle size
+    if (analysis.metrics.bundleSizeMB > 2) {
+      score -= (analysis.metrics.bundleSizeMB - 2) * 10;
+    
+    // Deduct points for large images
+      score -= analysis.metrics.largeImages * 5;
+    
+    return Math.max(0, Math.min(100, score));
+
+  generatePerformanceRecommendations(analysis) {
+      analysis.recommendations.push({
+<<<<<<< HEAD
+        priority: 'high',
+        category: 'bundle',
+        message: 'Implement code splitting to reduce initial bundle size
+    
+        category: 'assets',
+        message: 'Optimize and compress images
+    
+    if (analysis.metrics.performanceIssues > 5) {
+        priority: 'medium',
+        category: 'code',
+        message: 'Optimize React component patterns
+    
+      category: 'general',
+      message: 'Implement lazy loading for components
+    
+      priority: 'low',
+      category: 'monitoring',
+      message: 'Set up performance monitoring
+=======
+        priority: high,
+        category: bundle,
+        message: Implement code splitting to reduce initial bundle size});
+    }
+    
+    if (analysis.metrics.largeImages > 0) {
+      analysis.recommendations.push({
+        priority: high,
+        category: assets,
+        message: Optimize and compress images});
+    }
+    
+    if (analysis.metrics.performanceIssues > 5) {
+      analysis.recommendations.push({
+        priority: medium,
+        category: code,
+        message: Optimize React component patterns});
+    }
+    
+    analysis.recommendations.push({
+      priority: medium,
+      category: general,
+      message: Implement lazy loading for components});
+    
+    analysis.recommendations.push({
+      priority: low,
+      category: monitoring,
+      message: Set up performance monitoring});
+  }
+>>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
+
+  findFiles(dir, extensions) {
+    let files = [];
+    const items = fs.readdirSync(dir);
+    
+    items.forEach(item => {
+      const fullPath = path.join(dir, item);
+      const stat = fs.statSync(fullPath);
+      
+      if (stat.isDirectory()) {
+        files = files.concat(this.findFiles(fullPath, extensions));
+      } else if (extensions.some(ext => item.toLowerCase().endsWith(ext))) {
+        files.push(fullPath);
+    
+    return files;
+
+  findLargeFiles(dir, minSize) {
+    let largeFiles = [];
+    
+      
+        largeFiles = largeFiles.concat(this.findLargeFiles(fullPath, minSize));
+      } else if (stat.size > minSize) {
+        largeFiles.push({
+          file: path.relative(this.workspaceRoot, fullPath),
+          size: stat.size,
+          sizeMB: (stat.size / (1024 * 1024)).toFixed(2)
+    
+    return largeFiles;
+
+  getDirectorySize(dir) {
+    let size = 0;
+    
+      
+        size += this.getDirectorySize(fullPath);
+      } else {
+        size += stat.size;
+    
+    return size;
+
+// CLI interface
+if (require.main === module) {
+  const predictor = new AIPerformancePredictor();
+  predictor.analyzePerformance().catch(console.error);
+
+module.exports = AIPerformancePredictor;`;

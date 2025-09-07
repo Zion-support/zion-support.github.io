@@ -1,29 +1,110 @@
+<<<<<<< HEAD
 
 
 import React from "react",
 import { MobileHeader } from "../components/common/MobileHeader",
 import { BottomNavigation } from "../components/common/BottomNavigation",
 import { ClientDashboard } from "../components/dashboard/ClientDashboard",
+=======
+import React from "react";
+import { MobileHeader } from "../components/common/MobileHeader";
+import { BottomNavigation } from "../components/common/BottomNavigation";
+import { ClientDashboard } from "../components/dashboard/ClientDashboard";
+>>>>>>> origin/main
 import { TalentDashboard } from "../components/dashboard/TalentDashboard";
 import { useAuth } from "@/hooks/useAuth";
 export function MobileHome() {
   const { user } = useAuth();
+<<<<<<< HEAD
   const isClient = null;
+=======
+  const isClient = user?.userType === 'employer' || user?.userType === 'buyer';import React from "react",;
+import { MobileHeader } from "../components/common/MobileHeader",;
+import { BottomNavigation } from "../components/common/BottomNavigation",;
+import { ClientDashboard } from "../components/dashboard/ClientDashboard",;
+import { TalentDashboard } from "../components/dashboard/TalentDashboard";
+import { useAuth } from "@/hooks/useAuth";
+export function MobileHome() {
+  const { user } = useAuth();
+
+  const isClient = user?.userType === 'employer' |user?.userType === 'buyer';
+>>>>>>> origin/main
 
   return (
+
+import { TalentDashboard } from "../components/dashboard/TalentDashboard",;
+import { useAuth } from "@/hooks/useAuth",;
+export function MobileHome() {
+  const { user } = useAuth(),
+  const isClient = user?.userType === 'employer' || user?.userType === 'buyer',
+  
     <div className="min-h-screen">
-      <MobileHeader 
-        title={isClient ? "Client Dashboard" : "Talent Dashboard"} 
-        showNotifications 
+      <MobileHeader
+        title={isClient ? "Client Dashboard" : "Talent Dashboard"}
+        showNotifications
         showSettings
       />
-      
-      <main className="py-4">
+import React from "react";""
+import { MobileHeader } from "../components/common/MobileHeader";""
+import { BottomNavigation } from "../components/common/BottomNavigation";""
+import { ClientDashboard } from "../components/dashboard/ClientDashboard";""
+import { TalentDashboard } from "../components/dashboard/TalentDashboard";""
+import { useAuth } from "@/hooks/useAuth";"
+export function MobileHome() {
+  const { user } = useAuth();"
+  const isClient = user?.userType === "employer" || user?.userType === "buyer";""
+import React from "react",""
+import { MobileHeader } from "../components/common/MobileHeader",""
+import { BottomNavigation } from "../components/common/BottomNavigation",""
+import { ClientDashboard } from "../components/dashboard/ClientDashboard",""
+  const { user } = useAuth();
+"
+  const isClient = user?.userType === 'employer' |user?.userType === 'buyer';
+  return (
+
+
+import { TalentDashboard } from "../components/dashboard/TalentDashboard",""
+import { useAuth } from "@/hooks/useAuth",")
+  const { user } = useAuth(),"
+  const isClient = user?.userType === 'employer' || user?.userType === 'buyer',
+    <div className="min-h-screen">"
+</div>
+      <MobileHeader;"
+        title={isClient ? "Client Dashboard" : "Talent Dashboard"}"
+        showNotifications;
+        showSettings;
+      />
+
+      <main className="py-4">"
+</main>
         {isClient ? <ClientDashboard /> : <TalentDashboard />}
-      </main>
-      
+
+
       <BottomNavigation />
-    </div>
-  )
-}
-;
+
+    </div>"
+    <div className="min - h-screen">;"
+        title={is_client ? "Client Dashboard" : "Talent Dashboard"}"
+        show_notifications;
+        show_settings;
+      />;
+      <main className="py - 4">;"
+        {is_client ? <ClientDashboard /> : <TalentDashboard />}
+
+      </main>;
+      <BottomNavigation />;
+)
+    </div>);"
+    <div className="min-h-screen">;"
+      <MobileHeader ;"
+        title={isClient ? "Client Dashboard" :"Talent Dashboard"} ;"
+        showNotifications ;
+      <main className="py-4">;"
+        {isClient ? <ClientDashboard /> :<TalentDashboard />}
+
+
+    </div>;"
+min-h-screen" > <MobileHeader showNotifications showSettings /> </main> <BottomNavigation /> </div>)"
+        title={isClient ? "Client Dashboard" : "Talent Dashboard"} ;"
+
+pr-12325

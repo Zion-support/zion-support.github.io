@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 import Head from 'next/head';
 import React from 'react';
@@ -273,3 +274,6 @@ type Speaker = any;
       </section>
     </>
 );
+=======
+
+>>>>>>> origin/main

@@ -1,9 +1,9 @@
-export interface NextGenerationAIService {
+
   id: string;
   name: string;
   tagline: string;
   price: string;
-  period: string;
+
   description: string;
   features: string[];
   popular: boolean;
@@ -24,29 +24,37 @@ export interface NextGenerationAIService {
   competitors: string[];
   marketSize: string;
   growthRate: string;
-  variant: string;
+
   contactInfo: {
     mobile: string;
     email: string;
     address: string;
 
+<<<<<<< HEAD
 
     website: string
   },
+=======
+    website: string;
+  };
+>>>>>>> origin/main
   realImplementation: boolean;
   implementationDetails: string;
   launchDate: string;
   customers: number;
   rating: number;
+<<<<<<< HEAD
   reviews: number
+=======
+  reviews: number;
+>>>>>>> origin/main
 }
-export const nextGenerationAIServices: NextGenerationAIService[] = [
-  // Advanced AI Agents & Autonomous Systems
-  {
-    id: 'ai-autonomous-business-agent';
-    name: 'AI Autonomous Business Agent';
-    tagline: 'Fully autonomous AI agent that runs your business operations';
+
+
+    name: 'AI Autonomous Business Agent',
+    tagline: 'Fully autonomous AI agent that runs your business operations',
     price: '$2,999',
+<<<<<<< HEAD
 
     period: '/month';
     description: 'Revolutionary AI agent that autonomously manages business operations, makes decisions, and executes tasks without human intervention. Achieve 24/7 business operations with intelligent automation.',
@@ -87,9 +95,39 @@ export const nextGenerationAIServices: NextGenerationAIService[] = [
     launchDate: '2024-12-01';
     customers: 150;
     rating: 4.9;
-    reviews: 89
-  },
+=======
+    period: '/month',
 
+      'Natural language business communication',
+      'Multi-platform task execution',
+      'Real-time market analysis',
+      'Automated customer service',
+      'Financial decision automation',
+      'Supply chain optimization',
+      'Predictive analytics',
+
+    ],
+    popular: true,
+    icon: '🤖',
+    color: 'from-blue-600 to-purple-700',
+    textColor: 'text-blue-400',
+    link: 'https://ziontechgroup.com/ai-autonomous-business-agent',
+    marketPosition: 'No direct competitors. Partial solutions: UiPath, Automation Anywhere. Our advantage: Complete autonomy, natural language processing, and business intelligence.',
+    targetAudience: 'Enterprise businesses, Startups, E-commerce companies, Service providers, Manufacturing companies',
+    trialDays: 30,
+    setupTime: '2 weeks',
+    category: 'AI & Autonomous Systems',
+
+    },
+    realImplementation: true,
+    implementationDetails: 'Advanced AI system with autonomous decision-making capabilities, natural language processing, and multi-platform integration. Includes safety protocols and human oversight options.',
+    launchDate: '2024-12-01',
+    customers: 150,
+    rating: 4.9,
+>>>>>>> origin/main
+    reviews: 89
+
+<<<<<<< HEAD
   // Quantum AI Computing Platform
   {
     id: 'quantum-ai-computing-platform';
@@ -529,5 +567,13 @@ export const nextGenerationAIServices: NextGenerationAIService[] = [
     customers: 220;
     rating: 4.7;
     reviews: 125
+=======
+>>>>>>> origin/main
   }
-],
+    implementationDetails: 'Advanced manufacturing platform with AI-powered optimization, predictive analytics, and comprehensive automation tools. Includes IoT integration and compliance management.',;
+    launchDate: '2024-03-15',;
+    customers: 220,;
+pr-12325
+];
+'
+

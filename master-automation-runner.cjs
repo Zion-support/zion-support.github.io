@@ -1,171 +1,226 @@
 #!/usr/bin/env node
 
+const { execSync, spawn } = require('child_process');
 const fs = require('fs');
 const path = require('path');
-const { execSync } = require('child_process');
 
-class MasterAutomationRunner {
-  constructor() {
-    this.results = {
-      timestamp: new Date().toISOString(),
-      totalDuration: 0,
-      scriptsRun: [],
-      reports: [],
-      overallStatus: 'unknown',
-      summary: {}
-    };
-    this.startTime = Date.now();
-  }
+console.log('🚀 Starting Master Automation Runner...\n');
 
-  async runScript(scriptName, description) {
-    console.log(`🔄 Running ${description}...`);
-    const scriptStart = Date.now();
-    
-    try {
-      const result = execSync(`node ${scriptName}`, {
-        encoding: 'utf8',
-        stdio: 'pipe',
-        cwd: process.cwd()
-      });
-      
-      const duration = Date.now() - scriptStart;
-      this.results.scriptsRun.push({
-        name: scriptName,
-        description: description,
-        status: 'success',
-        duration: duration,
-        output: result
-      });
-      
-      console.log(`✅ ${description} completed in ${duration}ms`);
-      return true;
-    } catch (error) {
-      const duration = Date.now() - scriptStart;
-      this.results.scriptsRun.push({
-        name: scriptName,
-        description: description,
-        status: 'failed',
-        duration: duration,
-        error: error.message
-      });
-      
-      console.log(`❌ ${description} failed: ${error.message}`);
-      return false;
-    }
-  }
-
-  async collectReports() {
-    const reportFiles = [
-      'health-monitor-report.json',
-      'performance-analysis-report.json',
-      'security-audit-report.json',
-      'comprehensive-automation-report.json'
-    ];
-    
-    reportFiles.forEach(reportFile => {
-      const filePath = path.join(process.cwd(), reportFile);
-      if (fs.existsSync(filePath)) {
-        try {
-          const report = JSON.parse(fs.readFileSync(filePath, 'utf8'));
-          this.results.reports.push({
-            file: reportFile,
-            data: report
-          });
-        } catch (error) {
-          console.log(`⚠️ Could not read report ${reportFile}: ${error.message}`);
-        }
-      }
+// Utility function to run commands safely
+function runCommand(command, description) {
+  console.log(`\n📋 ${description}...`);
+  try {
+    const output = execSync(command, { 
+      cwd: '/workspace', 
+      encoding: 'utf8',
+      stdio: 'pipe',
+      timeout: 300000 // 5 minutes timeout
     });
+    console.log(`✅ ${description} completed successfully`);
+    return { success: true, output };
+  } catch (error) {
+    console.log(`❌ ${description} failed: ${error.message}`);
+    return { success: false, error: error.message, output: error.stdout || error.stderr };
   }
+}
 
-  generateSummary() {
-    // Health summary
-    const healthReport = this.results.reports.find(r => r.file === 'health-monitor-report.json');
-    if (healthReport) {
-      this.results.summary.health = {
-        status: healthReport.data.status,
-        checks: healthReport.data.checks?.length || 0,
-        recommendations: healthReport.data.recommendations?.length || 0
-      };
-    }
+// Function to fix merge conflicts
+function fixMergeConflicts() {
+  console.log('\n🔧 Fixing merge conflicts...');
+  
+  try {
+    // Find files with merge conflicts
+    const conflictFiles = execSync('find . -name "*.js" -o -name "*.cjs" -o -name "*.ts" -o -name "*.tsx" -o -name "*.json" | grep -v node_modules | grep -v .git | xargs grep -l "<<<<<<< HEAD"', { encoding: 'utf8' }).trim().split('\n').filter(f => f);
     
-    // Performance summary
-    const perfReport = this.results.reports.find(r => r.file === 'performance-analysis-report.json');
-    if (perfReport) {
-      this.results.summary.performance = {
-        score: perfReport.data.score || 0,
-        optimizations: perfReport.data.optimizations?.length || 0
-      };
-    }
-    
-    // Security summary
-    const secReport = this.results.reports.find(r => r.file === 'security-audit-report.json');
-    if (secReport) {
-      this.results.summary.security = {
-        score: secReport.data.securityScore || 0,
-        vulnerabilities: secReport.data.vulnerabilities?.length || 0
-      };
-    }
-    
-    // Overall status
-    const successfulScripts = this.results.scriptsRun.filter(s => s.status === 'success').length;
-    const totalScripts = this.results.scriptsRun.length;
-    
-    if (successfulScripts === totalScripts) {
-      this.results.overallStatus = 'success';
-    } else if (successfulScripts > totalScripts / 2) {
-      this.results.overallStatus = 'partial';
+    conflictFiles.forEach(file => {
+      if (fs.existsSync(file)) {
+        try {
+          let content = fs.readFileSync(file, 'utf8');
+          
+          // Remove merge conflict markers and keep the newer version
+          content = content.replace(/<<<<<<< HEAD[\s\S]*?=======([\s\S]*?)>>>>>>> [^\n]+/g, '$1');
+          
+          // Clean up any remaining conflict markers
+          content = content.replace(/<<<<<<< HEAD[\s\S]*?=======[\s\S]*?>>>>>>> [^\n]+/g, '');
+          
+          fs.writeFileSync(file, content);
+            console.log(`✅ Fixed merge conflicts in ${file}`);
+          } catch (err) {
+            console.log(`❌ Failed to fix ${file}: ${err.message}`);
+          }
+        }
+      });
     } else {
-      this.results.overallStatus = 'failed';
+      console.log('✅ No merge conflicts found');
     }
-  }
-
-  async run() {
-    console.log('🚀 Starting Master Automation Runner...');
-    console.log('=' .repeat(60));
-    
-    // Run all automation scripts
-    await this.runScript('health-monitor.cjs', 'Health Monitor');
-    await this.runScript('performance-analyzer.cjs', 'Performance Analyzer');
-    await this.runScript('security-auditor.cjs', 'Security Auditor');
-    
-    // Collect all reports
-    await this.collectReports();
-    
-    // Generate summary
-    this.generateSummary();
-    
-    // Calculate total duration
-    this.results.totalDuration = Date.now() - this.startTime;
-    
-    // Save master report
-    fs.writeFileSync('master-automation-report.json', JSON.stringify(this.results, null, 2));
-    
-    console.log('\n' + '=' .repeat(60));
-    console.log('🎉 Master Automation Runner completed!');
-    console.log(`⏱️  Total Duration: ${this.results.totalDuration}ms`);
-    console.log(`📊 Overall Status: ${this.results.overallStatus}`);
-    console.log(`🔧 Scripts Run: ${this.results.scriptsRun.length}`);
-    console.log(`📄 Reports Generated: ${this.results.reports.length}`);
-    
-    if (this.results.summary.health) {
-      console.log(`🏥 Health Status: ${this.results.summary.health.status}`);
-    }
-    if (this.results.summary.performance) {
-      console.log(`⚡ Performance Score: ${this.results.summary.performance.score}/100`);
-    }
-    if (this.results.summary.security) {
-      console.log(`🔒 Security Score: ${this.results.summary.security.score}/100`);
-    }
-    
-    return this.results;
+  } catch (error) {
+    console.log(`❌ Error fixing merge conflicts: ${error.message}`);
   }
 }
 
-// Run master automation
-if (require.main === module) {
-  const runner = new MasterAutomationRunner();
-  runner.run().catch(console.error);
+// Function to run linting and fix issues
+function runLinting() {
+  console.log('\n🔍 Running linting...');
+  
+  const lintResult = runCommand('npm run lint:fix', 'Linting and fixing issues');
+  
+  if (!lintResult.success) {
+    console.log('⚠️  Linting had issues, but continuing...');
+  }
+  
+  return lintResult;
 }
 
-module.exports = MasterAutomationRunner;
+// Function to run type checking
+function runTypeCheck() {
+  console.log('\n🔍 Running type checking...');
+  
+  const typeResult = runCommand('npm run type-check', 'Type checking');
+  
+  if (!typeResult.success) {
+    console.log('⚠️  Type checking had issues, but continuing...');
+  }
+  
+  return typeResult;
+}
+
+// Function to run tests
+function runTests() {
+  console.log('\n🧪 Running tests...');
+  
+  const testResult = runCommand('npm run test:smoke', 'Smoke tests');
+  
+  if (!testResult.success) {
+    console.log('⚠️  Tests had issues, but continuing...');
+  }
+  
+  return testResult;
+}
+
+// Function to build the application
+function buildApp() {
+  console.log('\n🏗️  Building application...');
+  
+  const buildResult = runCommand('npm run build', 'Building application');
+  
+  if (!buildResult.success) {
+    console.log('❌ Build failed, attempting to fix issues...');
+    
+    // Try to fix common build issues
+    runCommand('npm install', 'Reinstalling dependencies');
+    
+    // Try building again
+    const rebuildResult = runCommand('npm run build', 'Rebuilding application');
+    return rebuildResult;
+  }
+  
+  return buildResult;
+}
+
+// Function to run security audit
+function runSecurityAudit() {
+  console.log('\n🔒 Running security audit...');
+  
+  const securityResult = runCommand('npm audit --audit-level moderate', 'Security audit');
+  
+  if (!securityResult.success) {
+    console.log('⚠️  Security issues found, but continuing...');
+  }
+  
+  return securityResult;
+}
+
+// Function to optimize performance
+function optimizePerformance() {
+  console.log('\n⚡ Optimizing performance...');
+  
+  try {
+    // Clean up console logs in production
+    const cleanLogsResult = runCommand('node scripts/remove-console-logs.cjs', 'Cleaning console logs');
+    
+    // Optimize images if script exists
+    if (fs.existsSync('/workspace/scripts/optimize-images.js')) {
+      runCommand('node scripts/optimize-images.js', 'Optimizing images');
+    }
+    
+    // Generate sitemap if script exists
+    if (fs.existsSync('/workspace/scripts/generate-sitemap.js')) {
+      runCommand('node scripts/generate-sitemap.js', 'Generating sitemap');
+    }
+    
+    console.log('✅ Performance optimization completed');
+  } catch (error) {
+    console.log(`⚠️  Performance optimization had issues: ${error.message}`);
+  }
+}
+
+// Function to create comprehensive report
+function createReport(results) {
+  const report = {
+    timestamp: new Date().toISOString(),
+    summary: {
+      totalSteps: Object.keys(results).length,
+      successful: Object.values(results).filter(r => r.success).length,
+      failed: Object.values(results).filter(r => !r.success).length
+    },
+    results: results
+  };
+  
+  const reportPath = '/workspace/automation-reports/master-automation-report.json';
+  fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
+  
+  console.log(`\n📊 Report saved to ${reportPath}`);
+  console.log(`✅ Successful: ${report.summary.successful}/${report.summary.totalSteps}`);
+  console.log(`❌ Failed: ${report.summary.failed}/${report.summary.totalSteps}`);
+}
+
+// Main execution
+async function main() {
+  const results = {};
+  
+  try {
+    // Step 1: Fix merge conflicts
+    fixMergeConflicts();
+    results.mergeConflicts = { success: true };
+    
+    // Step 2: Run linting
+    results.linting = runLinting();
+    
+    // Step 3: Run type checking
+    results.typeCheck = runTypeCheck();
+    
+    // Step 4: Run tests
+    results.tests = runTests();
+    
+    // Step 5: Build application
+    results.build = buildApp();
+    
+    // Step 6: Security audit
+    results.security = runSecurityAudit();
+    
+    // Step 7: Performance optimization
+    optimizePerformance();
+    results.performance = { success: true };
+    
+    // Step 8: Create report
+    createReport(results);
+    
+    console.log('\n🎉 Master Automation Runner completed!');
+    
+    // If build was successful, prepare for commit
+    if (results.build.success) {
+      console.log('\n📝 Preparing for commit...');
+      runCommand('git add .', 'Staging changes');
+      runCommand('git commit -m "Automated improvements and fixes"', 'Committing changes');
+    }
+    
+  } catch (error) {
+    console.error('\n💥 Master Automation Runner failed:', error.message);
+    results.error = { success: false, error: error.message };
+    createReport(results);
+    process.exit(1);
+  }
+}
+
+// Run the automation
+main();

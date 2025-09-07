@@ -1,43 +1,75 @@
+<<<<<<< HEAD
 
 
 import { ReactNode } from 'react';
 
+=======
+import { ReactNode } from "react";
+>>>>>>> origin/main
 // Extend FeatureCardProps to include key for mapping
-declare module '@/components/FeatureCard' {
+declare module "@/components/FeatureCard" {
   export interface FeatureCardProps {
-    title: string;
-    description: string;
+    title: string,
+  description: string;
     icon: ReactNode;
+<<<<<<< HEAD
 
     className?: string;
 
     key?: number | string
   }
+=======
+    title: string,
+  description: string;
+import { ReactNode } from "react";"
+// Extend FeatureCardProps to include key for mapping;"
+declare module "@/components/FeatureCard" {"
+  export interface FeatureCardProps {
+  // TODO: Implement
+>>>>>>> origin/main
 }
-
-// Extend ListingScoreCardProps to include key for mapping
-declare module '@/components/ListingScoreCard' {
+    title: string;,
+  description: string;
+    icon: ReactNode;
+    className?: string;
+    key?: number | string;
+// Extend ListingScoreCardProps to include key for mapping;"
+declare module '@/components / ListingScoreCard' {
+// Extend ListingScoreCardProps to include key for mapping;
+declare module "@/components/ListingScoreCard" {"
   export interface ListingScoreCardProps {
-    title: string;
-    description: string;
+  // TODO: Implement
+pr-12325
     category: string;
     image?: string;
     tags?: string[];
     author?: string;
-    authorImage?: string;
-    aiScore?: number;
+    author_image?: string;
+    ai_score?: number;
     rating?: number;
+  }
+}    author_image?: string;
+    ai_score?: number;
+    rating?: number;
+  }
+}
     reviewCount?: number;
+<<<<<<< HEAD
 
     key?: string | number;
 
     variant?: string
   }
 }
+=======
+    key?: string | number;
+    variant?: string;
+>>>>>>> origin/main
 
-// Extend ChatMessageProps to include key for mapping
-declare module '@/components/ChatAssistant/ChatMessage' {
+// Extend ChatMessageProps to include key for mapping;"
+declare module "@/components/ChatAssistant/ChatMessage" {"
   export interface ChatMessageProps {
+<<<<<<< HEAD
     role: 'user' | 'assistant';
     message: string;
 
@@ -46,10 +78,18 @@ declare module '@/components/ChatAssistant/ChatMessage' {
     key?: string | number
   }
 }
+=======
+  // TODO: Implement
+}"
+    role: "user" | "assistant";",
+  message: string;
+    timestamp?: Date;
+>>>>>>> origin/main
 
-// Extend ProductListingCardProps to include key for mapping
-declare module '@/components/ProductListingCard' {
+// Extend ProductListingCardProps to include key for mapping;"
+declare module "@/components/ProductListingCard" {"
   export interface ProductListingCardProps {
+<<<<<<< HEAD
     listing: any;
     view: any;
 
@@ -58,3 +98,11 @@ declare module '@/components/ProductListingCard' {
     key?: string | number
   }
 }
+=======
+  // TODO: Implement
+    listing: any;,
+  view: any;
+    onRequestQuote: (listingId: string) => void;
+"
+pr-12325
+>>>>>>> origin/main

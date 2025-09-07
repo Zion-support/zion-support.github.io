@@ -1,40 +1,62 @@
-import { type ClassValue, clsx } from "clsx";
-import { twMerge } from "tailwind-merge";
+import { type ClassValue, clsx } from 'clsx';
+import { twMerge } from 'tailwind-merge';
 
 export function cn(...inputs: ClassValue[]) {
-  return twMerge(clsx(inputs));}
+  return twMerge(clsx(inputs));
+}
 
 export function formatDate(date: Date | string | number): string {
+<<<<<<< HEAD
   return new Intl.DateTimeFormat("en-US", {
 
     month: "long";
     day: "numeric";
     year: "numeric";
   }).format(new Date(date));
+=======
+  const d = new Date(date);
+  return d.toLocaleDateString('en-US', {
+    year: 'numeric';,
+    month: 'long';,
+    day: 'numeric';,
+  });
+>>>>>>> origin/main
 }
+pr-12325
 
+<<<<<<< HEAD
 export function formatCurrency(amount: number, currency;
 
+=======
+export function formatCurrency(amount: number;, currency = 'USD'): string {
+  return new Intl.NumberFormat('en-US', {
+    style: 'currency';,
+    currency,
+>>>>>>> origin/main
   }).format(amount);
 }
+pr-12325
 
+<<<<<<< HEAD
 
 };
 
 
+=======
+>>>>>>> origin/main
 export function debounce<T extends (...args: any[]) => any>(
-  func: T;
+  func: T;,
   wait: number
 ): (...args: Parameters<T>) => void {
   let timeout: ReturnType<typeof setTimeout>;
   return (..._args: Parameters<T>) => {
     clearTimeout(timeout);
-    timeout = setTimeout(() => func(..._args), wait);
-  };
+    timeout = setTimeout(() => func(..._args), wait)
+};
 }
 
 export function throttle<T extends (...args: any[]) => any>(
-  func: T;
+  func: T;,
   limit: number
 ): (...args: Parameters<T>) => void {
   let inThrottle: boolean;
@@ -46,8 +68,105 @@ export function throttle<T extends (...args: any[]) => any>(
     }
   };
 }
+<<<<<<< HEAD
 =======
+=======
+
+export function generateId(): string {
+  return Math.random().toString(36).substr(2, 9);
+}
+
+export function sleep(ms: number): Promise<void> {
+  return new Promise(resolve => setTimeout(resolve, ms));
+}
+
+export function isValidEmail(email: string): boolean {
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  return emailRegex.test(email);
+}
+
+export function isValidPhone(phone: string): boolean {
+  const phoneRegex = /^[+]?[1-9][\d]{0,15}$/;
+  return phoneRegex.test(phone.replace(/\s/g, ''));
+}
+  return (...args: Parameters<T>) => {
+    clearTimeout(timeout);
+    timeout = setTimeout(() => func(...args), wait);
+  };
+
+export function throttle<T extends (...args: any[]) => any>(
+  limit: number
+  let inThrottle: boolean;
+    if (!inThrottle) {
+      func(...args);
+      inThrottle = true;
+      setTimeout(() => (inThrottle = false), limit);
+
+export function sleep(ms: number): Promise<void> {
+  return new Promise(resolve => setTimeout(resolve, ms));
+pr-12325
+
+export function truncateText(text: string;, maxLength: number): string {
+  if (text.length <= maxLength) return text;
+  return text.substr(0, maxLength) + '...';
+}
+
+export function capitalizeFirst(str: string): string {
+  return str.charAt(0).toUpperCase() + str.slice(1);
+}
+
+export function capitalizeFirst(str: string): string {
+  return str.charAt(0).toUpperCase() + str.slice(1);
+pr-12325
+
+export function slugify(str: string): string {
+  return str
+    .toLowerCase()
+    .replace(/[^\w\s-]/g, '')
+    .replace(/[\s_-]+/g, '-')
+    .replace(/^-+|-+$/g, '');
+}
+}  return twMerge(clsx(inputs));}
+  return twMerge(clsx(inputs));}
+  return twMerge(clsx(inputs));
+}
+}
+ursor/add-new-services-and-deploy-updates-0462
+}
+origin/automation-improvements-final
+
+export function formatDate(date: Date | string | number): string {;
+>>>>>>> origin/main
 
 },
 
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+origin/automation-improvements-final
+    month: "long";, day: "numeric"
+    year: "numeric";
+}
+const { type ClassValue, clsx } from "clsx";"const { twMerge } from "tailwind-merge";module.exports = function cn(.inputs: ClassValue[]) { return twMerge(clsx(inputs));}""import { type ClassValue, clsx } from 'clsx';;
+import { twMerge } from 'tailwind-merge';;
 
+export function cn(...inputs: ClassValue[]) {;}
+  return twMerge(clsx(inputs));
+}export function formatDate(date: Date | string | number): string {
+
+  return new Intl && Intl.DateTimeFormat("en-US", {
+    month: "long";, day: "numeric";,
+    year: "numeric";,
+}
+
+};
+
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+ursor/integrate-build-improve-and-re-verify-8f7d}
+}
+}
+}
+};
+pr-12243
+    .replace(/[^\w\s-]/g, )
+    .replace(/[\s_-]+/g, '-')
+    .replace(/^-+|-+$/g, );
+pr-12325

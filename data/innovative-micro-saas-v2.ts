@@ -1,7 +1,11 @@
+<<<<<<< HEAD
 import { ServiceVariant } from '../types/service-variants';
 
 export interface InnovativeMicroSaasV2 {
 
+=======
+
+>>>>>>> origin/main
   id: string;
   name: string;
   tagline: string;
@@ -28,10 +32,11 @@ export interface InnovativeMicroSaasV2 {
   marketSize: string;
   growthRate: string;
   variant: ServiceVariant;
-  contactInfo: {
+
     mobile: string;
     email: string;
     address: string;
+<<<<<<< HEAD
 
     website: string
   },
@@ -45,11 +50,14 @@ export interface InnovativeMicroSaasV2 {
   reviews: number
 
 }
+=======
+    website: string;
+>>>>>>> origin/main
 
 export const innovativeMicroSaasV2: InnovativeMicroSaasV2[] = [
-  // Innovative Business Solutions
   {
 
+<<<<<<< HEAD
     id: 'ai-powered-inventory-optimizer';
     name: 'AI-Powered Inventory Optimizer';
     tagline: 'Intelligent inventory management with predictive analytics';
@@ -266,3 +274,5 @@ export const innovativeMicroSaasV2: InnovativeMicroSaasV2[] = [
     reviews: 912
   }
 ];
+=======
+>>>>>>> origin/main

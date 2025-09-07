@@ -1,22 +1,62 @@
-
 // Types used across fraud detection modules
+<<<<<<< HEAD
 
 import { FraudSeverity } from '@/types/fraud';
 
+=======
+import { FraudSeverity } from "@/types/fraud";
+>>>>>>> origin/main
 export interface AnalysisResult {
   isSuspicious: boolean;
-  reasons: string[]
+  reasons: string[];
+}
+export interface MessageAnalysisResult extends AnalysisResult {
+  severity: FraudSeverity;
 }
 
 export interface MessageAnalysisResult extends AnalysisResult {
-  severity: FraudSeverity
+  severity: FraudSeverity;
 }
+
+;
+export interface SignupCheckResult extends AnalysisResult {}
+;
+// Types used across fraud detection modules;
+
+import { FraudSeverity } from "@/types/fraud";"
+export interface AnalysisResult {
+  // TODO: Implement
+}
+  isSuspicious: boolean;,
+  reasons: string[];
+export interface MessageAnalysisResult extends AnalysisResult {
+  // TODO: Implement
+  severity: FraudSeverity;
+
+
+
+  // TODO: Implement
+
+
 
 export interface EmailAnalysisResult extends AnalysisResult {}
-
 export interface FlagResult {
-  success: boolean;
-  error?: string
-}
+  // TODO: Implement
 
+
+;
 export interface SignupCheckResult extends AnalysisResult {}
+
+
+  // TODO: Implement
+
+  // TODO: Implement
+  success: boolean;
+  error?: string;
+
+
+
+
+"
+pr-12325
+

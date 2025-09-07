@@ -1,10 +1,26 @@
+<<<<<<< HEAD
 
 import EnhancedLayout from '../../components/layout/EnhancedLayout';
 // @ts-ignore
 import data from '../../data/hf-datasets.json';
 
+=======
+import EnhancedLayout from '../../components/layout/EnhancedLayout';
+// @ts-ignore
+import data from '../../data/hf-datasets.json';
+import EnhancedLayout from '../../components/layout/EnhancedLayout',;
+// @ts-ignore
+import data from '../../data/hf-datasets.json',;
+import EnhancedLayout from '../../components/layout/EnhancedLayout',;
+// @ts-ignore;
+import data from '../../data/hf-datasets.json',;
+>>>>>>> origin/main
 export default function HfDatasetsPage() {
+
+  const items: any[] = (data?.items |[]).slice(0, 60)
+
   const items: any[] = (data?.items || []).slice(0, 60);
+origin/cursor/automate-test-improve-and-merge-code-2533
   return (
     <EnhancedLayout>
       <div className="max-w-5xl mx-auto py-10">
@@ -13,12 +29,26 @@ export default function HfDatasetsPage() {
         <ul className="mt-6 space-y-4">
           {items.map((it, idx) => (
             <li key={idx} className="p-4 border border-gray-200 dark:border-gray-800 rounded-lg">
-              <a className="font-medium underline" href={`https://huggingface.co/datasets/${it.id}`} target="_blank" rel="noreferrer">{it.id}</a>
-              <div className="mt-1 text-xs text-gray-500 dark:text-gray-400">Downloads {it.downloads} · Likes {it.likes}</div>
             </li>
           ))}
         </ul>
       </div>
+              <div className="mt-1 text-xs text-gray-500 dark:text-gray-400">Downloads {it.downloads} · Likes {it.likes}</div>
+            </li>
+          ))  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+        </ul>;
+      </div>;
+    </EnhancedLayout>;
+  );
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
     </EnhancedLayout>
   )
-};
+}
+origin/cursor/automate-test-improve-and-merge-code-2533

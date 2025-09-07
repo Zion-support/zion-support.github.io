@@ -1,62 +1,52 @@
-// Global type declarations for DOM types
+/// <reference types="next" />
+/// <reference types="next/image-types/global" />
+/// <reference types="next/navigation-types/navigation" />
+
+// Global window extensions
 declare global {
   interface Window {
+  // TODO: Implement
     performance: Performance;
-  }
-  
-  // Define Performance interface if not available
   interface Performance {
-    getEntriesByType(type: string): PerformanceEntry[];
-    now(): number;
-  }
-  
-  // Define PerformanceEntry interface if not available
+  // TODO: Implement
+    getEntriesByType (type: string): PerformanceEntry[];
+    now (): number;
   interface PerformanceEntry {
-    name: string;
-    entryType: string;
-    startTime: number;
-    duration: number;
-  }
-  
-  // Define HTML element types if not available
+  // TODO: Implement
+    name: string;,
+  entry_type: string;
+    start_time: number;,
+  duration: number;
   interface Element {
-    tagName: string;
-    attributes: NamedNodeMap;
-    children: HTMLCollection;
-    parentElement: HTMLElement | null;
-  }
-  
+  // TODO: Implement
+    tag_name: string;,
+  attributes: NamedNodeMap;
+    children: HTMLCollection;,
+  parent_element: HTMLElement | null;
   interface CSSStyleDeclaration {
+  // TODO: Implement
     [key: string]: string;
-  }
-  
   interface HTMLElement extends Element {
-    className: string;
-    id: string;
-    innerHTML: string;
-    textContent: string | null;
+  // TODO: Implement
+    class_name: string;,
+  id: string;
+    innerHTML: string;,
+  text_content: string | null;
     style: CSSStyleDeclaration;
-  }
-  
   interface HTMLDivElement extends HTMLElement {}
   interface HTMLParagraphElement extends HTMLElement {}
   interface HTMLHeadingElement extends HTMLElement {}
   interface HTMLAnchorElement extends HTMLElement {
-    href: string;
-    target: string;
-  }
-  
-  // Define MessageEvent if not available
-  interface MessageEvent<T = any> extends Event {
-    data: T;
-    origin: string;
-    lastEventId: string;
-    source: MessageEventSource | null;
-    ports: ReadonlyArray<MessagePort>;
-  }
-  
-  // Define RequestInit if not available
+  // TODO: Implement
+    href: string;,
+  target: string;
+    data: T;,
+  origin: string;
+    lastEventId: string;,
+  source: MessageEventSource | null;
+    ports: ReadonlyArray < MessagePort>;
   interface RequestInit {
+  // TODO: Implement
     body?: BodyInit | null;
     cache?: RequestCache;
     credentials?: RequestCredentials;
@@ -67,24 +57,106 @@ declare global {
     mode?: RequestMode;
     redirect?: RequestRedirect;
     referrer?: string;
-    referrerPolicy?: ReferrerPolicy;
+    referrer_policy?: ReferrerPolicy;
     signal?: AbortSignal | null;
     window?: any;
     timeout?: number;
-  }
-  
-  // Define AbortController if not available
   interface AbortController {
+  // TODO: Implement
     signal: AbortSignal;
-    abort(): void;
-  }
-  
-  // Define AbortSignal if not available
+    abort (): void;
   interface AbortSignal extends EventTarget {
-    aborted: boolean;
-    onabort: ((this: AbortSignal, ev: Event) => any) | null;
+  // TODO: Implement
+    aborted: boolean;,
+  onabort: ((this: AbortSignal, ev: Event) => any) | null;
+    gtag?: (...args: any[]) => void;
+    dataLayer?: any[];
   }
 }
 
-// Re-export DOM types that might not be available
+// Module declarations for static assets
+declare module "*.svg" {
+  const content: string;
+  export default content;
+}
+
+declare module "*.png" {
+  const content: string;
+  export default content;
+}
+
+declare module "*.jpg" {
+  const content: string;
+  export default content;
+}
+
+// Global type declarations;
+declare module "*.svg" {""
+  const "content": string;"
+  export default content}"
+declare module "*.png" {""
+declare module "*.jpg" {""
+declare module "*.jpeg" {""
+declare module "*.gif" {""
+declare module "*.webp" {""
+declare module "*.css" {""
+  const "content": { [className: string]: string };"
+declare module "*.scss" {""
+declare module "*.module.css" {""
+declare module "*.module.scss" {""
+  export default content}
+// Next.js specific types;
+declare namespace NodeJS {
+  // TODO: Implement
+declare module "*.jpeg" {
+  const content: string;
+  export default content;
+}
+
+declare module "*.gif" {
+  const content: string;
+  export default content;
+}
+
+declare module "*.webp" {
+  const content: string;
+  export default content;
+}
+
+declare module "*.css" {
+  const content: { [className: string]: string };
+  export default content;
+}
+
+declare module "*.scss" {
+  const content: { [className: string]: string };
+  export default content;
+}
+
+declare module "*.module.css" {
+  const content: { [className: string]: string };
+  export default content;
+}
+
+declare module "*.module.scss" {
+  const content: { [className: string]: string };
+  export default content;
+}
+
+// Environment variables
+declare namespace NodeJS {
+  interface ProcessEnv {
+    NODE_ENV: "development" | "production" | "test";
+    NEXT_PUBLIC_SUPABASE_URL?: string;
+    NEXT_PUBLIC_SUPABASE_ANON_KEY?: string;
+    SUPABASE_SERVICE_ROLE_KEY?: string;
+    NEXT_PUBLIC_GA_TRACKING_ID?: string}
+/// <reference types="next" />"
+</reference>"
+/// <reference types="next/image-types/global" />"
+/// <reference types="next/navigation-types/navigation" />"
+    NEXT_PUBLIC_GA_TRACKING_ID?: string;
+  }
+}
+
 export {};

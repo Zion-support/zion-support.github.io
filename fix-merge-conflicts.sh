@@ -1,18 +1,30 @@
 #!/bin/bash
 
-echo "Fixing merge conflicts by keeping HEAD version..."
+# Script to fix merge conflicts by keeping HEAD version
+echo "Fixing merge conflicts in all files..."
 
 # Find all files with merge conflicts
-find /workspace -type f \( -name "*.tsx" -o -name "*.ts" -o -name "*.js" -o -name "*.jsx" -o -name "*.cjs" \) -exec grep -l "\|    echo "Processing: $file"
+files_with_conflicts=$(find /workspace/app -name "*.tsx" -o -name "*.ts" | xargs grep -l "<<<<<<< HEAD" 2>/dev/null)
+
+for file in $files_with_conflicts; do
+    echo "Fixing merge conflicts in: $file"
     
-    # Create a backup
-    cp "$file" "$file.backup"
+    # Create a temporary file
+    temp_file=$(mktemp)
     
-    # Use sed to remove merge conflict markers and keep HEAD version
-    sed -i '/^/,/^    
-    # Remove any remaining conflict markers
-    sed -i '/^/d; /^    
+    # Process the file to resolve conflicts
+    awk '
+    /^<<<<<<< HEAD/ { in_head = 1; next }
+    /^=======/ { in_head = 0; in_other = 1; next }
+    /^>>>>>>> / { in_other = 0; next }
+    in_other { next }
+    { print }
+    ' "$file" > "$temp_file"
+    
+    # Replace the original file
+    mv "$temp_file" "$file"
+    
     echo "Fixed: $file"
 done
 
-echo "Merge conflicts fixed!"
+echo "All merge conflicts have been resolved!"
