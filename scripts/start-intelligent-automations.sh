@@ -6,9 +6,7 @@
 set -e
 
 echo "🚀 Starting Intelligent PM2 Automations..."
-echo "=========================================="
-
-# Colors for output
+echo "# Colors for output
 RED='\033[0;31m'
 GREEN='\033[0;32m'
 YELLOW='\033[1;33m'
