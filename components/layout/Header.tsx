@@ -1,5 +1,45 @@
+<<<<<<< HEAD
 { name: 'Contact'}
   href: '/contact', icon: Phone];
+=======
+<<<<<<< HEAD
+import React, { useState } from 'react';
+import Link from 'next/link';
+import { Menu, X, Phone, Mail } from 'lucide-react';
+
+const Header: React.FC = () => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const navigation = [
+    { name: 'Home', href: '/' },
+    { name: 'Services', href: '/services' },
+    { name: 'About', href: '/about' },
+    { name: 'Contact', href: '/contact' }
+  ];
+
+  return (
+    <header className="bg-white shadow-sm sticky top-0 z-50">
+      {/* Top Contact Bar */}
+      <div className="bg-gray-900 text-white py-2">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex justify-between items-center text-sm">
+            <div className="flex items-center space-x-6">
+              <div className="flex items-center">
+                <Phone className="h-4 w-4 mr-2" />
+                <span>+1 302 464 0950</span>
+              </div>
+              <div className="flex items-center">
+                <Mail className="h-4 w-4 mr-2" />
+                <span>kleber@ziontechgroup.com</span>
+              </div>
+            </div>
+            <div className="hidden md:block">
+              <span className="text-gray-300">Leading Technology Solutions Provider</span>
+=======
+    { name: 'Contact'}
+  href: '/contact', icon: Phone}
+}];
+>>>>>>> origin/main
 
 const service_categories = [
   {name: 'Micro SaaS',
@@ -163,54 +203,77 @@ const navigation = [
 const isActive = (href: string) => router.pathname === href;
 
   return (
-    <header className=\"bg-white shadow-lg sticky top-0 z-50\" />
+    <header className=\"bg-white shadow-lg sticky top-0 z-50\"    />
       {/* Top Contact Bar */}"
-      <div className=\"bg-gray-900 text-white py-2\" />"
-        <div className=\"max-w-7xl mx-auto px-4 sm: px-6 lg:px-8\" />"
-          <div className=\"flex justify-between items-center text-sm\" />"
-            <div className=\"flex items-center space-x-6\" />"
-              <div className=\"flex items-center\" />"
-                <Phone className=\"h-4 w-4 mr-2\" />
-                <span />+1 (555) 123-4567</span>
+      <div className=\"bg-gray-900 text-white py-2\"    />"
+        <div className=\"max-w-7xl mx-auto px-4 sm: px-6 lg:px-8\"    />"
+          <div className=\"flex justify-between items-center text-sm\"    />"
+            <div className=\"flex items-center space-x-6\"    />"
+              <div className=\"flex items-center\"    />"
+                <Phone className=\"h-4 w-4 mr-2\"    />
+                <span    />+1 (555) 123-4567</span>
               </div>"
-              <div className=\"flex items-center\" />"
-                <Mail className=\"h-4 w-4 mr-2\" />
-                <span />info@ziontechgroup.com</span>
+              <div className=\"flex items-center\"    />"
+                <Mail className=\"h-4 w-4 mr-2\"    />
+                <span    />info@ziontechgroup.com</span>
               </div>
             </div>"
-            <div className=\"hidden md:flex items-center space-x-4\" />
-              <span />Trusted by 500+ companies</span>"
-              <div className=\"flex items-center\" />"
-                <Star className=\"h-4 w-4 text-yellow-400 mr-1\" />
-                <span />4.9/5 Rating</span>
+            <div className=\"hidden md:flex items-center space-x-4\"    />
+              <span    />Trusted by 500+ companies</span>"
+              <div className=\"flex items-center\"    />"
+                <Star className=\"h-4 w-4 text-yellow-400 mr-1\"    />
+                <span    />4.9/5 Rating</span>
               </div>
+>>>>>>> origin/chore/fix-lint-and-merge
             </div>
           </div>
         </div>
       </div>
 
+<<<<<<< HEAD
+      {/* Main Navigation */}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex justify-between items-center h-16">
+          {/* Logo */}
+          <div className="flex-shrink-0">
+            <Link href="/" className="flex items-center">
+              <span className="text-2xl font-bold text-gray-900">Zion Tech Group</span>
+            </Link>
+          </div>
+
+          {/* Desktop Navigation */}
+          <nav className="hidden md:flex space-x-8">
+            {navigation.map((item) => (
+              <Link
+                key={item.name}
+                href={item.href}
+                className="text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium transition-colors duration-200"
+              >
+                {item.name}
+              </Link>
+=======
       {/* Main Navigation */}"
-      <nav className=\"max-w-7xl mx-auto px-4 sm:px-6 lg:px-8\" />"
-        <div className=\"flex justify-between items-center h-16\" />
+      <nav className=\"max-w-7xl mx-auto px-4 sm:px-6 lg:px-8\"    />"
+        <div className=\"flex justify-between items-center h-16\"    />
           {/* Logo */}"
-          <div className=\"flex items-center\" />"
-            <Link href=\"/\" className=\"flex items-center\" />"
-              <div className=\"w-10 h-10 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center\" />"
-                <span className=\"text-white font-bold text-xl\" />Z</span>
+          <div className=\"flex items-center\"    />"
+            <Link href=\"/\" className=\"flex items-center\"    />"
+              <div className=\"w-10 h-10 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center\"    />"
+                <span className=\"text-white font-bold text-xl\"    />Z</span>
               </div>"
-              <span className=\"ml-3 text-2xl font-bold text-gray-900\" />Zion Tech Group</span>
+              <span className=\"ml-3 text-2xl font-bold text-gray-900\"    />Zion Tech Group</span>
             </Link>
           </div>
 
           {/* Desktop Navigation */}"
-          <div className=\"hidden lg:flex items-center space-x-8\" />
+          <div className=\"hidden lg:flex items-center space-x-8\"    />
             {navigation.map((item) => (}
               <div key={item.nam}"
-} className=\"relative\" />
+} className=\"relative\"    />
                 {item.hasDropdown ? (
                   <div"
 className=\"flex items-center space-x-1 text-gray-700 hover:text-blue-600 cursor-pointer transition-colors duration-200\"
-                    onMouseEnter={() = /> {
+                    onMouseEnter={() =    /> {
                       if (item.name === 'Services') setIsServicesOpen(true);}
                       if (item.name === 'Solutions') setIsSolutionsOpen(true);}
                     }}
@@ -219,15 +282,24 @@ className=\"flex items-center space-x-1 text-gray-700 hover:text-blue-600 cursor
                       if (item.name === 'Solutions') setIsSolutionsOpen(false);}
                     }}
                   >"
-                    <span className=\"font-medium\" />{item.name}</span>"
-                    <ChevronDown className=\"h-4 w-4\" />
+                    <span className=\"font-medium\"    />{item.name}</span>"
+                    <ChevronDown className=\"h-4 w-4\"    />
                   </div>
                 ) : (
+<<<<<<< HEAD
                   <Link href={item.href}
             className={`font-medium transition-colors duration-200 ${
                       isActive(item.href) ? 'text-blue-600' : 'text-gray-700 hover: text-blue-600'
                     `}
                    />
+=======
+                  <Link;
+href={item.href}
+                    className={`font-medium transition-colors duration-200 ${}
+                      isActive(item.href) ? 'text-blue-600' : 'text-gray-700 hover: text-blue-600'}
+                    }`}
+                      />
+>>>>>>> origin/main
                     {item.name}
                   </Link>
                 )}
@@ -235,7 +307,7 @@ className=\"flex items-center space-x-1 text-gray-700 hover:text-blue-600 cursor
                 {/* Services Dropdown *}
 }
                 {item.name === 'Services' && (
-                  <AnimatePresence />
+                  <AnimatePresence    />
                     {isServicesOpen && (
                       <motion.div;}
 initial={{ opacity: 0}
@@ -248,17 +320,23 @@ initial={{ opacity: 0}
             y: 10
              "
                         className=\"absolute top-full left-0 mt-2 w-80 bg-white rounded-lg shadow-xl border border-gray-200 py-4\"
-                        onMouseEnter={() = /> setIsServicesOpen(true)}
+                        onMouseEnter={() =    /> setIsServicesOpen(true)}
                         onMouseLeave={() => setIsServicesOpen(false)}
                       >"
-                        <div className=\"grid grid-cols-2 gap-2\" />
+                        <div className=\"grid grid-cols-2 gap-2\"    />
                           {item.children?.map((child) => (}
                             <Link key={child.name}
             href={child.href"
                               className=\"flex items-center px-4 py-3 text-gray-700 hover:bg-gray-50 hover:text-blue-600 transition-colors duration-200\"
+<<<<<<< HEAD
                              />"
                               <child.icon className=\"h-5 w-5 mr-3 text-blue-500\" />"
                               <span className=\"text-sm font-medium\" />{child.name</span>
+=======
+                                />"
+                              <child.icon className=\"h-5 w-5 mr-3 text-blue-500\"    />"
+                              <span className=\"text-sm font-medium\"    />{child.name}</span>
+>>>>>>> origin/main
                             </Link>
                           ))}
                         </div>
@@ -270,7 +348,7 @@ initial={{ opacity: 0}
                 {/* Solutions Dropdown *}
 }
                 {item.name === 'Solutions' && (
-                  <AnimatePresence />
+                  <AnimatePresence    />
                     {isSolutionsOpen && (
                       <motion.div;}
 initial={{ opacity: 0}
@@ -283,17 +361,23 @@ initial={{ opacity: 0}
             y: 10
              "
                         className=\"absolute top-full left-0 mt-2 w-80 bg-white rounded-lg shadow-xl border border-gray-200 py-4\"
-                        onMouseEnter={() = /> setIsSolutionsOpen(true)}
+                        onMouseEnter={() =    /> setIsSolutionsOpen(true)}
                         onMouseLeave={() => setIsSolutionsOpen(false)}
                       >"
-                        <div className=\"grid grid-cols-2 gap-2\" />
+                        <div className=\"grid grid-cols-2 gap-2\"    />
                           {item.children?.map((child) => (}
                             <Link key={child.name}
             href={child.href"
                               className=\"flex items-center px-4 py-3 text-gray-700 hover:bg-gray-50 hover:text-blue-600 transition-colors duration-200\"
+<<<<<<< HEAD
                              />"
                               <child.icon className=\"h-5 w-5 mr-3 text-blue-500\" />"
                               <span className=\"text-sm font-medium\" />{child.name</span>
+=======
+                                />"
+                              <child.icon className=\"h-5 w-5 mr-3 text-blue-500\"    />"
+                              <span className=\"text-sm font-medium\"    />{child.name}</span>
+>>>>>>> origin/main
                             </Link>
                           ))}
                         </div>
@@ -302,23 +386,54 @@ initial={{ opacity: 0}
                   </AnimatePresence>
                 )}
               </div>
+>>>>>>> origin/chore/fix-lint-and-merge
             ))}
+          </nav>
+
+<<<<<<< HEAD
+          {/* CTA Button */}
+          <div className="hidden md:flex items-center space-x-4">
+            <Link
+              href="/contact"
+              className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors duration-200"
+            >
+              Get Started
+            </Link>
           </div>
 
+          {/* Mobile menu button */}
+          <div className="md:hidden">
+            <button
+              onClick={() => setIsMenuOpen(!isMenuOpen)}
+              className="text-gray-700 hover:text-blue-600 focus:outline-none focus:text-blue-600"
+            >
+              {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+=======
           {/* CTA Button */}"
+<<<<<<< HEAD
           <div className=\"hidden lg:flex items-center space-x-4\" />
             <Link"
+=======
+          <div className=\"hidden lg:flex items-center space-x-4\"    />
+            <Link;"
+>>>>>>> origin/main
 href=\"/contact\"
               className=\"inline-flex items-center px-6 py-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-300 shadow-lg hover:shadow-xl\"
-             />
+                />
               Get Started;"
-              <ArrowRight className=\"ml-2 h-4 w-4\" />
+              <ArrowRight className=\"ml-2 h-4 w-4\"    />
             </Link>
           </div>
 
           {/* Mobile Menu Button */}"
+<<<<<<< HEAD
           <div className=\"lg:hidden\" />
             <button onClick={() = /> setIsMenuOpen(!isMenuOpen}
+=======
+          <div className=\"lg:hidden\"    />
+            <button;
+onClick={() =    /> setIsMenuOpen(!isMenuOpen}
+>>>>>>> origin/main
 }"
               className=\"text-gray-700 hover:text-blue-600 transition-colors duration-200\"
 
@@ -444,11 +559,23 @@ const resourceCategories = [
       { name: 'Team'}
   href: '/team'}
 },
+<<<<<<< HEAD
   ,
   { name: 'Careers'}
   href: '/careers'],
   ,,
   const isActive = (path: string) = /> location && location.pathname === path;
+=======
+;
+      { name: 'Careers'}
+  href: '/careers'}
+}
+
+];
+
+
+const isActive = (path: string) =    /> location && location.pathname === path;
+>>>>>>> origin/main
 
 const resourceCategories = [
     { name: 'Blog'}
@@ -487,7 +614,7 @@ const resourceCategories = [
       popular: ['Quantum ML', 'Autonomous Systems', 'AI Cybersecurity', 'Drug Discovery'];]
 ];
 
-const isActive = (path: string) = /> location && location.pathname === path;
+const isActive = (path: string) =    /> location && location.pathname === path;
 
 const resourceCategories = [
   const service_categories = [
@@ -560,19 +687,20 @@ const resource_categories = [
           <header className={`fixed top - 0 left - 0 right - 0 z - 50 transition - all duration - 300 ${is_scrolled }
             ? 'bg - slate - 900 / 95 backdrop - blur - md border - b border - slate - 700 / 50' ;
         : 'bg - transparent';}
-}`} />
+}`}    />
 "
-      <div className=\"max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8\" />;"
-        <div className=\"flex items - center justify - between h - 16\" />;
+      <div className=\"max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8\"    />;"
+        <div className=\"flex items - center justify - between h - 16\"    />;
           {/* Logo */}
 "
-          <div className=\"flex-shrink-0\" />;"
-            <Link href=\"/\" className=\"text-2xl font-bold text-blue-600\" />;
+          <div className=\"flex-shrink-0\"    />;"
+            <Link href=\"/\" className=\"text-2xl font-bold text-blue-600\"    />;
               Zion Tech Group;
             </Link>;
           </div>;
 
           {/* Desktop Navigation */}"
+<<<<<<< HEAD
           <div className=\"hidden md:block\" />;"
             <div className=\"ml-10 flex items-baseline space-x-4\" />;
               {navigation && navigation.map((item) => (
@@ -582,6 +710,17 @@ const resource_categories = [
             {item && item.name
                 </Link>}
             ))
+=======
+          <div className=\"hidden md:block\"    />;"
+            <div className=\"ml-10 flex items-baseline space-x-4\"    />;
+              {navigation && navigation.map((item) => (<Link;}
+                  key={item && item.name}
+                  href={item && item.href}"
+                  className=\"text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium transition-colors\"    />;
+                  {item && item.name}
+                </Link>;
+              ))}
+>>>>>>> origin/main
             </div>;
           </div>;
 
@@ -591,18 +730,19 @@ const resource_categories = [
             </div>;
           </div>;
           {/* Mobile menu button */}"
-          <div className=\"md:hidden\" />;
-            <button              onClick={() = /> setIsMenuOpen(!isMenuOpen)}"
+          <div className=\"md:hidden\"    />;
+            <button              onClick={() =    /> setIsMenuOpen(!isMenuOpen)}"
               className=\"text-gray-700 hover: text-blue-600 p-2\">
 "
-              {isMenuOpen ? <X className=\"h-6 w-6\" /> : <Menu className=\"h-6 w-6\" /}
+              {isMenuOpen ? <X className=\"h-6 w-6\"    /> : <Menu className=\"h-6 w-6\" /}
 }
 
-            </button />;
+            </button    />;
           </div>;
         </div>;
 
         {/* Mobile Navigation */}
+<<<<<<< HEAD
         <AnimatePresence />;
           {isMenuOpen && (
           <motion&& motion.div;}
@@ -624,6 +764,25 @@ const resource_categories = [
             onClick={() = /> setIsMenuOpen(false)
                   >}
             {item && item.name
+=======
+        <AnimatePresence    />;
+          {isMenuOpen && (<motion&& motion.div;}
+              initial={{ opacity: 0, height: 0 }
+}
+              animate={{ opacity: 1, height: 'auto' }
+}
+              exit={{ opacity: 0, height: 0 }
+}"
+              className=\"md:hidden\"    />;"
+              <div className=\"px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-white border-t\"    />;
+                {navigation && navigation.map((item) => (<Link;}
+                    key={item && item.name}
+                    href={item && item.href}"
+                    className=\'text-gray-700 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium\';
+                    onClick={() =    /> setIsMenuOpen(false)}
+                  >;
+                    {item && item.name}
+>>>>>>> origin/main
                   </Link>;
                 ))}
               </div>;
@@ -632,8 +791,12 @@ const resource_categories = [
         </AnimatePresence>;
       </nav>;
     </header>;"
+<<<<<<< HEAD
   )}
       <div className=\"flex - shrink - 0\" />;
+=======
+  )<div className=\"flex - shrink - 0\"    />;
+>>>>>>> origin/main
   );
 }
 export default Header;
@@ -674,26 +837,40 @@ const navigationItems = [   { name: 'Home'}
 },
 { name: 'Contact'}
   href: '/contact'}"
+<<<<<<< HEAD
 }]; return ( <header className = \"sticky top-0 z-50 bg-slate-900/95 backdrop-blur border-b border-slate-800\" /> <div className=\"max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 h-14 flex items-center justify-between\" /> <Link href=\"/\" className=\"text-white font-bold\" />Zion Tech Group</Link> <nav className=\"hidden md:flex items-center gap-6 text-sm\" /> {navigationItems && navigationItems.map((item) => ( <Link key={item && item.name}
             href={item && item.href className=\"text-gray-300 hover:text-white\" /> {item && item.name </Link> )
  </nav> </div> </header> ;
+=======
+}]; return ( <header className = \"sticky top-0 z-50 bg-slate-900/95 backdrop-blur border-b border-slate-800\"    /> <div className=\"max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 h-14 flex items-center justify-between\"    /> <Link href=\"/\" className=\"text-white font-bold\"    />Zion Tech Group</Link> <nav className=\"hidden md:flex items-center gap-6 text-sm\"    /> {navigationItems && navigationItems.map((item) => ( <Link key={item && item.name} href={item && item.href} className=\"text-gray-300 hover:text-white\"    /> {item && item.name} </Link> )
+} </nav> </div> </header> ;
+>>>>>>> origin/main
 }
 export default Header;
 export default Header;
 
 "
-          <div className=\"flex - shrink - 0\" />;"
-            <Link href=\"/\" className=\"text - 2xl font - bold text - blue - 600\" />;
+          <div className=\"flex - shrink - 0\"    />;"
+            <Link href=\"/\" className=\"text - 2xl font - bold text - blue - 600\"    />;
               Zion Tech Group;
             </Link>;
           </div>;
           {/* Desktop Navigation */}"
+<<<<<<< HEAD
           <div className=\"hidden md:block\" />;"
             <div className=\"ml - 10 flex items - baseline space - x-4\" />;
               {navigation.map ((item) => (
           <Link key={item.name}
             href={item.href"
                   className=\"text - gray - 700 hover: text - blue - 600 px - 3 py - 2 rounded - md text - sm font - medium transition - colors\" />
+=======
+          <div className=\"hidden md:block\"    />;"
+            <div className=\"ml - 10 flex items - baseline space - x-4\"    />;
+              {navigation.map ((item) => (<Link;}
+                  key={item.name}
+                  href={item.href}"
+                  className=\"text - gray - 700 hover: text - blue - 600 px - 3 py - 2 rounded - md text - sm font - medium transition - colors\"    />
+>>>>>>> origin/main
 
                   {item.name
                 </Link>)
@@ -701,16 +878,17 @@ export default Header;
             </div>;
           </div>;
           {/* Mobile menu button */}"
-          <div className=\"md:hidden\" />;
-            <button              on_click={() = /> setIsMenuOpen (!isMenuOpen)}"
+          <div className=\"md:hidden\"    />;
+            <button              on_click={() =    /> setIsMenuOpen (!isMenuOpen)}"
               className=\"text - gray - 700 hover: text - blue - 600 p - 2\">
 "
-              {isMenuOpen ? <X className=\"h - 6 w - 6\" /> : <Menu className=\"h - 6 w - 6\" /}
+              {isMenuOpen ? <X className=\"h - 6 w - 6\"    /> : <Menu className=\"h - 6 w - 6\" /}
 }
-            </button />;
+            </button    />;
           </div>;
         </div>;
         {/* Mobile Navigation */}
+<<<<<<< HEAD
         <AnimatePresence />;
           {isMenuOpen && (
           <motion.div;}
@@ -733,6 +911,26 @@ export default Header;
             on_click={() = /> setIsMenuOpen (false)
                   >}
             {item.name
+=======
+        <AnimatePresence    />;
+          {isMenuOpen && (<motion.div;}
+              initial={{ opacity: 0, height: 0 }
+}
+              animate={{ opacity: 1, height: 'auto' }
+}
+              exit={{ opacity: 0, height: 0 }
+}"
+              className=\"md:hidden\"    />
+"
+              <div className=\"px - 2 pt - 2 pb - 3 space - y-1 sm:px - 3 bg - white border - t\"    />;
+                {navigation.map ((item) => (<Link;}
+                    key={item.name}
+                    href={item.href}"
+                    className=\'text - gray - 700 hover:text - blue - 600 block px - 3 py - 2 rounded - md text - base font - medium\';
+                    on_click={() =    /> setIsMenuOpen (false)}
+                  >;
+                    {item.name}
+>>>>>>> origin/main
                   </Link>))}
               </div>;
             </motion.div>)}
@@ -740,7 +938,7 @@ export default Header;
       </nav>;
     </header>)}
             </div>;
-            <span className=&quot;text-xl font-bold bg-gradient-to-r from-cyan-400 to-fuchsia-400 bg-clip-text text-transparent&quot />
+            <span className=&quot;text-xl font-bold bg-gradient-to-r from-cyan-400 to-fuchsia-400 bg-clip-text text-transparent&quot    />
 
               Zion Tech Group;
             </span>;
@@ -779,26 +977,39 @@ const navigation_items = [   { name: 'Home'}
   href: '/careers'}
 },
  { name: 'Contact'}
+<<<<<<< HEAD
   href: '/contact']; return ( <header className = \"sticky top - 0 z - 50 bg - slate - 900 / 95 backdrop - blur border - b border - slate - 800\" /> <div className=\"max - w-7xl mx - auto px - 4 sm: px - 6 lg:px - 8 h - 14 flex items - center justify - between\" /> <Link href=\"/\" className=\"text - white font - bold\" />Zion Tech Group</Link> <nav className=\"hidden md:flex items - center gap - 6 text - sm\" /> {navigation_items.map ((item) => ( <Link key={item.name}
             href={item.href className=\"text - gray - 300 hover:text - white\" /> {item.name </Link> )
  </nav> </div> </header> ;
+=======
+  href: '/contact'}"
+} ]; return ( <header className = \"sticky top - 0 z - 50 bg - slate - 900 / 95 backdrop - blur border - b border - slate - 800\"    /> <div className=\"max - w-7xl mx - auto px - 4 sm: px - 6 lg:px - 8 h - 14 flex items - center justify - between\"    /> <Link href=\"/\" className=\"text - white font - bold\"    />Zion Tech Group</Link> <nav className=\"hidden md:flex items - center gap - 6 text - sm\"    /> {navigation_items.map ((item) => ( <Link key={item.name} href={item.href} className=\"text - gray - 300 hover:text - white\"    /> {item.name} </Link> )
+} </nav> </div> </header> ;
+>>>>>>> origin/main
 }
 export default Header;
 export default Header;
 ;
             </div>
-            <span className=&quot;text-xl font-bold bg-gradient-to-r from-cyan-400 to-fuchsia-400 bg-clip-text text-transparent&quot; />
+            <span className=&quot;text-xl font-bold bg-gradient-to-r from-cyan-400 to-fuchsia-400 bg-clip-text text-transparent&quot;    />
               Zion Tech Group;
             </span>
           </a>
 
           {/* Desktop Navigation */}
-          <nav className=&quot;hidden md:flex items-center space-x-8&quot />
+          <nav className=&quot;hidden md:flex items-center space-x-8&quot    />
 
+<<<<<<< HEAD
             {navigation.map((item) => (
           <Link key={item.name}
             href={item.href className=&quot
             text-white/80 hover: text-white transition-colors duration-200&quot />
+=======
+            {navigation.map((item) => (<Link;}
+                key={item.name}
+                href={item.href}
+                className=&quot;text-white/80 hover: text-white transition-colors duration-200&quot    />
+>>>>>>> origin/main
 
                 {item.nam
 
@@ -808,30 +1019,41 @@ export default Header;
           </nav>
 
           {/* CTA Button */}
-          <div className=&quot;hidden md:block&quot />
+          <div className=&quot;hidden md:block&quot    />
 
-            <Button href=&quot;/contact&quot; variant=&quot;primary&quot; size=&quot;sm&quot />
+            <Button href=&quot;/contact&quot; variant=&quot;primary&quot; size=&quot;sm&quot    />
 
               Get Started;
             </Button>;
           </div>;
           {/* Mobile Menu Button */}
-          <button className=&quot;md:hidden p-2 text-white/80 hover:text-white transition-colors duration-200&quot />
+          <button className=&quot;md:hidden p-2 text-white/80 hover:text-white transition-colors duration-200&quot    />
 
-            <svg className=&quot;w-6 h-6&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; viewBox=&quot;0 0 24 24&quot />
+            <svg className=&quot;w-6 h-6&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; viewBox=&quot;0 0 24 24&quot    />
 
+<<<<<<< HEAD
               <path strokeLinecap=&quot;round&quot; strokeLinejoin=&quot;round&quot; strokeWidth={2,
   d=&quot;M4 6h16M4 12h16M4 18h16&quot; / />;
+=======
+              <path strokeLinecap=&quot;round&quot; strokeLinejoin=&quot;round&quot; strokeWidth={2} d=&quot;M4 6h16M4 12h16M4 18h16&quot;    />;
+>>>>>>> origin/main
             </svg>;
           </button>;
         </div>;
       </div>;
     </header>;
+<<<<<<< HEAD
   ),export default Header;
           <button className=&quot;md:hidden p-2 text-white/80 hover:text-white transition-colors duration-200&quot; />
             <svg className=&quot;w-6 h-6&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; viewBox=&quot;0 0 24 24&quot; />
               <path strokeLinecap=&quot;round&quot; strokeLinejoin=&quot;round&quot; strokeWidth={2,
   d=&quot;M4 6h16M4 12h16M4 18h16&quot; / />
+=======
+  )},export default Header;
+          <button className=&quot;md:hidden p-2 text-white/80 hover:text-white transition-colors duration-200&quot;    />
+            <svg className=&quot;w-6 h-6&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; viewBox=&quot;0 0 24 24&quot;    />
+              <path strokeLinecap=&quot;round&quot; strokeLinejoin=&quot;round&quot; strokeWidth={2} d=&quot;M4 6h16M4 12h16M4 18h16&quot;    />
+>>>>>>> origin/main
             </svg>
           </button>
         </div>
@@ -873,13 +1095,21 @@ const handleScroll = (setIsScrolled(window.scrollY > 0)) => {
   href: '/about'}
 }
 { name: 'Contact'}
+<<<<<<< HEAD
   href: '/contact'];
   return (
           <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? 'bg-white/95 backdrop-blur-sm shadow-lg' : 'bg-transparent';}
     }`} />
+=======
+  href: '/contact'}
+}
+  ];
+  return (<header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? 'bg-white/95 backdrop-blur-sm shadow-lg' : 'bg-transparent';}
+    }`}    />
+>>>>>>> origin/main
 "
-      <nav className=\"max-w-7xl mx-auto px-4 sm:px-6 lg:px-8\" />;"
-        <div className=\"flex justify-between items-center h-16\" />;
+      <nav className=\"max-w-7xl mx-auto px-4 sm:px-6 lg:px-8\"    />;"
+        <div className=\"flex justify-between items-center h-16\"    />;
 import { Menu;
   X;
   Home;
@@ -911,7 +1141,11 @@ import { Badge,
 const Header: React.FC = () => {const [isMenuOpen, setIsMenuOpen] =;
   useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+<<<<<<< HEAD
   const [activeDropdown, setActiveDropdown] = useState<string | null />(null)const location = useLocation(;},,
+=======
+  const [activeDropdown, setActiveDropdown] = useState<string | null>(null)const location = useLocation(;}
+>>>>>>> origin/main
   useEffect(() => {}
 const handleScroll = (setIsScrolled(window.scrollY > 20)) => {
   return $3;}
@@ -1081,23 +1315,32 @@ const resourceCategories = [
           <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled }
             ? 'bg-slate-900/95 backdrop-blur-md border-b border-slate-700/50' ;
         : 'bg-transparent';}
-}`} />
+}`}    />
 "
-      <div className=\"max-w-7xl mx-auto px-4 sm:px-6 lg:px-8\" />;"
-        <div className=\"flex items-center justify-between h-16\" />;
+      <div className=\"max-w-7xl mx-auto px-4 sm:px-6 lg:px-8\"    />;"
+        <div className=\"flex items-center justify-between h-16\"    />;
           {/* Logo */}"
-          <div className=\"flex-shrink-0\" />;"
-            <Link href=\"/\" className=\"text-2xl font-bold text-blue-600\" />;
+          <div className=\"flex-shrink-0\"    />;"
+            <Link href=\"/\" className=\"text-2xl font-bold text-blue-600\"    />;
               Zion Tech Group;
             </Link>;
           </div>;
           {/* Desktop Navigation */}"
+<<<<<<< HEAD
           <div className=\"hidden md:block\" />;"
             <div className=\"ml-10 flex items-baseline space-x-4\" />;
               {navigation.map((item) => (
           <Link key={item.name}
             href={item.href"
                   className=\"text-gray-700 hover: text-blue-600 px-3 py-2 rounded-md text-sm font-medium transition-colors\" />
+=======
+          <div className=\"hidden md:block\"    />;"
+            <div className=\"ml-10 flex items-baseline space-x-4\"    />;
+              {navigation.map((item) => (<Link;}
+                  key={item.name}
+                  href={item.href}"
+                  className=\"text-gray-700 hover: text-blue-600 px-3 py-2 rounded-md text-sm font-medium transition-colors\"    />
+>>>>>>> origin/main
 
                   {item.nam
 }
@@ -1106,9 +1349,9 @@ const resourceCategories = [
             </div>;
           </div>;
           {/* Mobile menu button */}"
-          <div className=\"md:hidden\" />;
-            <button              onClick={() = /> setIsMenuOpen(!isMenuOpen)}"
-              className=\"text-gray-700 hover:text-blue-600 p-2\";"
+          <div className=\"md:hidden\"    />;
+            <button              onClick={() =    /> setIsMenuOpen(!isMenuOpen)}"
+              className=\'text-gray-700 hover:text-blue-600 p-2\';"
               className=\"text-gray-700 hover: text-blue-600 p-2\"
 import { useRouter }
 } from 'next/router';
@@ -1117,7 +1360,7 @@ import { useRouter }
 import { Menu,X,Search,Phone,FileText,BarChart3,Cpu,Shield,Cloud,Database,Zap,Users,CheckCircle,ArrowRight,Star,TrendingUp,Target,Rocket,Code,Network,Atom,Workflow,MessageCircle,ArrowUp,Sparkles,Home,Truck,BookOpen,Leaf,Satellite,HelpCircle,Building2,Factory,Building,DollarSign,ShoppingCart,Heart,Eye,Server,Lock,ChevronDown;}
  } from 'lucide-react';
 
-const Header = (const [isMenuOpen, setIsMenuOpen] =;
+const Header = ([isMenuOpen, setIsMenuOpen] =;
   useState(false);
   const [isServicesOpen, setIsServicesOpen] = useState(false);
   const [isSolutionsOpen, setIsSolutionsOpen] = useState(false);
@@ -1174,45 +1417,50 @@ const Header = (const [isMenuOpen, setIsMenuOpen] =;
 { name: 'Contact'}
   href: '/contact'];
 "
+<<<<<<< HEAD
 const isActive  = (href: string) => router.pathname === href;return (
           <header className=\"bg-white shadow-lg sticky top-0 z-50\" />;
+=======
+const isActive  = (href: string) => router.pathname === href;return (<header className=\"bg-white shadow-lg sticky top-0 z-50\"    />;
+>>>>>>> origin/main
       {/* Top Contact Bar */}"
-      <div className=\"bg-gray-900 text-white py-2\" />;"
-        <div className=\"max-w-7xl mx-auto px-4 sm:px-6 lg:px-8\" />;"
-          <div className=\"flex justify-between items-center text-sm\" />;"
-            <div className=\"flex items-center space-x-6\" />;"
-              <div className=\"flex items-center\" />;"
-                <Phone className=\"h-4 w-4 mr-2\" />;
-                <span />+1 (555) 123-4567</span>;
+      <div className=\"bg-gray-900 text-white py-2\"    />;"
+        <div className=\"max-w-7xl mx-auto px-4 sm:px-6 lg:px-8\"    />;"
+          <div className=\"flex justify-between items-center text-sm\"    />;"
+            <div className=\"flex items-center space-x-6\"    />;"
+              <div className=\"flex items-center\"    />;"
+                <Phone className=\"h-4 w-4 mr-2\"    />;
+                <span    />+1 (555) 123-4567</span>;
               </div>;"
-              <div className=\"flex items-center\" />;"
-                <Mail className=\"h-4 w-4 mr-2\" />;
-                <span />info@ziontechgroup.com</span>;
+              <div className=\"flex items-center\"    />;"
+                <Mail className=\"h-4 w-4 mr-2\"    />;
+                <span    />info@ziontechgroup.com</span>;
               </div>;
             </div>;"
-            <div className=\"hidden md:flex items-center space-x-4\" />;
-              <span />Trusted by 500+ companies</span>;"
-              <div className=\"flex items-center\" />;"
-                <Star className=\"h-4 w-4 text-yellow-400 mr-1\" />;
-                <span />4.9/5 Rating</span>;
+            <div className=\"hidden md:flex items-center space-x-4\"    />;
+              <span    />Trusted by 500+ companies</span>;"
+              <div className=\"flex items-center\"    />;"
+                <Star className=\"h-4 w-4 text-yellow-400 mr-1\"    />;
+                <span    />4.9/5 Rating</span>;
               </div>;
             </div>;
           </div>;
         </div>;
       </div>;
       {/* Main Navigation */}"
-      <nav className=\"max-w-7xl mx-auto px-4 sm:px-6 lg:px-8\" />;"
-        <div className=\"flex justify-between items-center h-16\" />;
+      <nav className=\"max-w-7xl mx-auto px-4 sm:px-6 lg:px-8\"    />;"
+        <div className=\"flex justify-between items-center h-16\"    />;
           {/* Logo */}"
-          <div className=\"flex items-center\" />;"
-            <Link href=\"/\" className=\"flex items-center\" />;"
-              <div className=\"w-10 h-10 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center\" />;"
-                <span className=\"text-white font-bold text-xl\" />Z</span>;
+          <div className=\"flex items-center\"    />;"
+            <Link href=\"/\" className=\"flex items-center\"    />;"
+              <div className=\"w-10 h-10 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center\"    />;"
+                <span className=\"text-white font-bold text-xl\"    />Z</span>;
               </div>;"
-              <span className=\"ml-3 text-2xl font-bold text-gray-900\" />Zion Tech Group</span>;
+              <span className=\"ml-3 text-2xl font-bold text-gray-900\"    />Zion Tech Group</span>;
             </Link>;
           </div>;
           {/* Desktop Navigation */}"
+<<<<<<< HEAD
           <div className=\"hidden lg:flex items-center space-x-8\" />;"
             {navigation.map((item) => (
           <div key={item.name className=\"relative\" />
@@ -1220,18 +1468,33 @@ const isActive  = (href: string) => router.pathname === href;return (
           <div"
                     className=\"flex items-center space-x-1 text-gray-700 hover:text-blue-600 cursor-pointer transition-colors duration-200\";}
                     onMouseEnter={() = /> {if (item.name === 'Services') setIsServicesOpen(true)if (item.name === 'Solutions') setIsSolutionsOpen(true)}}
+=======
+          <div className=\"hidden lg:flex items-center space-x-8\"    />;"
+            {navigation.map((item) => (<div key={item.name} className=\"relative\"    />;
+                {item.hasDropdown ? (<div;}"
+                    className=\'flex items-center space-x-1 text-gray-700 hover:text-blue-600 cursor-pointer transition-colors duration-200\';}
+                    onMouseEnter={() =    /> {if (item.name === 'Services') setIsServicesOpen(true)if (item.name === 'Solutions') setIsSolutionsOpen(true)}}
+>>>>>>> origin/main
                     onMouseLeave={() => {if (item.name === 'Services') setIsServicesOpen(false)if (item.name === 'Solutions') setIsSolutionsOpen(false)}}
                   >;"
-                    <span className=\"font-medium\" />{item.name}</span>;"
-                    <ChevronDown className=\"h-4 w-4\" />;
+                    <span className=\"font-medium\"    />{item.name}</span>;"
+                    <ChevronDown className=\"h-4 w-4\"    />;
                   </div>;
+<<<<<<< HEAD
                 ) : (
           <Link href={item.href className={`font-medium transition-colors duration-200 ${isActive(item.href) ? 'text-blue-600' : 'text-gray-700 hover:text-blue-600'}
              `} />
+=======
+                ) : (<Link;
+                    href={item.href}
+                    className={`font-medium transition-colors duration-200 ${isActive(item.href) ? 'text-blue-600' : 'text-gray-700 hover:text-blue-600';}
+                    }`}    />
+>>>>>>> origin/main
 
                     {item.name}
                   </Link>;
                 )}{/* Services Dropdown */}
+<<<<<<< HEAD
                 {item.name === 'Services' && (
           <AnimatePresence />;
                     {isServicesOpen && (
@@ -1260,11 +1523,36 @@ const isActive  = (href: string) => router.pathname === href;return (
                               <span className=\"text-sm font-medium\" />{child.name</span>;
                             </Link>}
             ))
+=======
+                {item.name === 'Services' && (<AnimatePresence    />;
+                    {isServicesOpen && (<motion.div;}
+                        initial={{ opacity: 0, y: 10 }
+}
+                        animate={{ opacity: 1, y: 0 }
+}
+                        exit={{ opacity: 0, y: 10 }
+}"
+                        className=\'absolute top-full left-0 mt-2 w-80 bg-white rounded-lg shadow-xl border border-gray-200 py-4\';
+                        onMouseEnter={() =    /> setIsServicesOpen(true)}
+                        onMouseLeave={() => setIsServicesOpen(false)}
+                      >;"
+                        <div className=\"grid grid-cols-2 gap-2\"    />;
+                          {item.children?.map((child) => (<Link;}
+                              key={child.name}
+                              href={child.href}"
+                              className=\"flex items-center px-4 py-3 text-gray-700 hover:bg-gray-50 hover:text-blue-600 transition-colors duration-200\"    />
+"
+                              <child.icon className=\"h-5 w-5 mr-3 text-blue-500\"    />;"
+                              <span className=\"text-sm font-medium\"    />{child.name}</span>;
+                            </Link>;
+                          ))}
+>>>>>>> origin/main
                         </div>;
                       </motion.div>;
                     )}
                   </AnimatePresence>;
                 )}{/* Solutions Dropdown */}
+<<<<<<< HEAD
                 {item.name === 'Solutions' && (
           <AnimatePresence />;
                     {isSolutionsOpen && (
@@ -1293,6 +1581,30 @@ const isActive  = (href: string) => router.pathname === href;return (
                               <span className=\"text-sm font-medium\" />{child.name</span>;
                             </Link>}
             ))
+=======
+                {item.name === 'Solutions' && (<AnimatePresence    />;
+                    {isSolutionsOpen && (<motion.div;}
+                        initial={{ opacity: 0, y: 10 }
+}
+                        animate={{ opacity: 1, y: 0 }
+}
+                        exit={{ opacity: 0, y: 10 }
+}"
+                        className=\'absolute top-full left-0 mt-2 w-80 bg-white rounded-lg shadow-xl border border-gray-200 py-4\';
+                        onMouseEnter={() =    /> setIsSolutionsOpen(true)}
+                        onMouseLeave={() => setIsSolutionsOpen(false)}
+                      >;"
+                        <div className=\"grid grid-cols-2 gap-2\"    />;
+                          {item.children?.map((child) => (<Link;}
+                              key={child.name}
+                              href={child.href}"
+                              className=\"flex items-center px-4 py-3 text-gray-700 hover:bg-gray-50 hover:text-blue-600 transition-colors duration-200\"    />
+"
+                              <child.icon className=\"h-5 w-5 mr-3 text-blue-500\"    />;"
+                              <span className=\"text-sm font-medium\"    />{child.name}</span>;
+                            </Link>;
+                          ))}
+>>>>>>> origin/main
                         </div>;
                       </motion.div>;
                     )}
@@ -1302,19 +1614,33 @@ const isActive  = (href: string) => router.pathname === href;return (
             ))}
           </div>;
           {/* CTA Button */}"
+<<<<<<< HEAD
           <div className=\"hidden lg:flex items-center space-x-4\" />;
             <Link"
               href=\"/contact\";"
               className=\"inline-flex items-center px-6 py-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-300 shadow-lg hover:shadow-xl\" />
+=======
+          <div className=\"hidden lg:flex items-center space-x-4\"    />;
+            <Link;"
+              href=\'/contact\';"
+              className=\"inline-flex items-center px-6 py-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-300 shadow-lg hover:shadow-xl\"    />
+>>>>>>> origin/main
 
               Get Started;"
-              <ArrowRight className=\"ml-2 h-4 w-4\" />;
+              <ArrowRight className=\"ml-2 h-4 w-4\"    />;
             </Link>;
           </div>;
           {/* Mobile Menu Button */}"
+<<<<<<< HEAD
           <div className=\"lg:hidden\" />;
             <button onClick={() = /> setIsMenuOpen(!isMenuOpen)}"
               className=\"text-gray-700 hover:text-blue-600 transition-colors duration-200\";
+=======
+          <div className=\"lg:hidden\"    />;
+            <button;
+              onClick={() =    /> setIsMenuOpen(!isMenuOpen)}"
+              className=\'text-gray-700 hover:text-blue-600 transition-colors duration-200\';
+>>>>>>> origin/main
 ursor/automate-test-improve-and-merge-code-646c;
     { name: 'Contact'}
   href: '/contact', icon: Phone];{ name: 'Contact'}
@@ -1419,7 +1745,12 @@ const resourceCategories = [
       popular: ['Quantum ML', 'Autonomous Systems', 'AI Cybersecurity', 'Drug Discovery'];]
 ];
 
+<<<<<<< HEAD
 const isActive = (path: string) = /> location && location.pathname === path;
+=======
+
+const isActive = (path: string) =    /> location && location.pathname === path;
+>>>>>>> origin/main
 
 const resourceCategories = [
   const service_categories = [
@@ -1506,15 +1837,16 @@ const resource_categories = [
           <header className={`fixed top - 0 left - 0 right - 0 z - 50 transition - all duration - 300 ${is_scrolled }
             ? 'bg - slate - 900 / 95 backdrop - blur - md border - b border - slate - 700 / 50' ;
         : 'bg - transparent';}
-}`} />
+}`}    />
 "
-      <div className=\"max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8\" />;"
-        <div className=\"flex items - center justify - between h - 16\" />;"
-          {/* Logo */}<div className=\"flex-shrink-0\" />;"
-            <Link href=\"/\" className=\"text-2xl font-bold text-blue-600\" />;
+      <div className=\"max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8\"    />;"
+        <div className=\"flex items - center justify - between h - 16\"    />;"
+          {/* Logo */}<div className=\"flex-shrink-0\"    />;"
+            <Link href=\"/\" className=\"text-2xl font-bold text-blue-600\"    />;
               Zion Tech Group;
             </Link>;
           </div>;{/* Desktop Navigation */}"
+<<<<<<< HEAD
           <div className=\"hidden md:block\" />;"
             <div className=\"ml-10 flex items-baseline space-x-4\" />;
               {navigation && navigation.map((item) => (
@@ -1524,21 +1856,33 @@ const resource_categories = [
             {item && item.name
                 </Link>}
             ))</div>;
+=======
+          <div className=\"hidden md:block\"    />;"
+            <div className=\"ml-10 flex items-baseline space-x-4\"    />;
+              {navigation && navigation.map((item) => (<Link;}
+                  key={item && item.name}
+                  href={item && item.href}"
+                  className=\"text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium transition-colors\"    />;
+                  {item && item.name}
+                </Link>;
+              ))}</div>;
+>>>>>>> origin/main
           </div>;ursor/fix-website-loading-errors-and-merge-6662;
             </div>;
           </div>;
           {/* Mobile menu button */}"
-          <div className=\"md:hidden\" />;
-            <button              onClick={() = /> setIsMenuOpen(!isMenuOpen)}"
+          <div className=\"md:hidden\"    />;
+            <button              onClick={() =    /> setIsMenuOpen(!isMenuOpen)}"
               className=\"text-gray-700 hover: text-blue-600 p-2\">
 "
-              {isMenuOpen ? <X className=\"h-6 w-6\" /> : <Menu className=\"h-6 w-6\" /}
-}</button />;
+              {isMenuOpen ? <X className=\"h-6 w-6\"    /> : <Menu className=\"h-6 w-6\" /}
+}</button    />;
           </div>;
         </div>;</button>;
           </div>;
         </div>;
         {/* Mobile Navigation */}
+<<<<<<< HEAD
         <AnimatePresence />;
           {isMenuOpen && (
           <motion&& motion.div;}
@@ -1560,6 +1904,25 @@ const resource_categories = [
             onClick={() = /> setIsMenuOpen(false)
                   >}
             {item && item.name
+=======
+        <AnimatePresence    />;
+          {isMenuOpen && (<motion&& motion.div;}
+              initial={{ opacity: 0, height: 0 }
+}
+              animate={{ opacity: 1, height: 'auto' }
+}
+              exit={{ opacity: 0, height: 0 }
+}"
+              className=\"md:hidden\"    />;"
+              <div className=\"px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-white border-t\"    />;
+                {navigation && navigation.map((item) => (<Link;}
+                    key={item && item.name}
+                    href={item && item.href}"
+                    className=\'text-gray-700 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium\';
+                    onClick={() =    /> setIsMenuOpen(false)}
+                  >;
+                    {item && item.name}
+>>>>>>> origin/main
                   </Link>;
                 ))}
               </div>;
@@ -1608,24 +1971,38 @@ const Header: React.FC = () => { const [isScrolled,setIsScrolled] =;
 },
 { name: 'Contact'}
   href: '/contact'}"
+<<<<<<< HEAD
 }]; return ( <header className = \"sticky top-0 z-50 bg-slate-900/95 backdrop-blur border-b border-slate-800\" /> <div className=\"max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 h-14 flex items-center justify-between\" /> <Link href=\"/\" className=\"text-white font-bold\" />Zion Tech Group</Link> <nav className=\"hidden md:flex items-center gap-6 text-sm\" /> {navigationItems && navigationItems.map((item) => ( <Link key={item && item.name}
             href={item && item.href className=\"text-gray-300 hover:text-white\" /> {item && item.name </Link> )
  </nav> </div> </header> ;
+=======
+}]; return ( <header className = \"sticky top-0 z-50 bg-slate-900/95 backdrop-blur border-b border-slate-800\"    /> <div className=\"max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 h-14 flex items-center justify-between\"    /> <Link href=\"/\" className=\"text-white font-bold\"    />Zion Tech Group</Link> <nav className=\"hidden md:flex items-center gap-6 text-sm\"    /> {navigationItems && navigationItems.map((item) => ( <Link key={item && item.name} href={item && item.href} className=\"text-gray-300 hover:text-white\"    /> {item && item.name} </Link> )
+} </nav> </div> </header> ;
+>>>>>>> origin/main
 }
 export default Header;
 export default Header;ursor/fix-website-loading-errors-and-merge-6662;"
-          <div className=\"flex - shrink - 0\" />;"
-            <Link href=\"/\" className=\"text - 2xl font - bold text - blue - 600\" />;
+          <div className=\"flex - shrink - 0\"    />;"
+            <Link href=\"/\" className=\"text - 2xl font - bold text - blue - 600\"    />;
               Zion Tech Group;
             </Link>;
           </div>;
           {/* Desktop Navigation */}"
+<<<<<<< HEAD
           <div className=\"hidden md:block\" />;"
             <div className=\"ml - 10 flex items - baseline space - x-4\" />;
               {navigation.map ((item) => (
           <Link key={item.name}
             href={item.href"
                   className=\"text - gray - 700 hover: text - blue - 600 px - 3 py - 2 rounded - md text - sm font - medium transition - colors\" />
+=======
+          <div className=\"hidden md:block\"    />;"
+            <div className=\"ml - 10 flex items - baseline space - x-4\"    />;
+              {navigation.map ((item) => (<Link;}
+                  key={item.name}
+                  href={item.href}"
+                  className=\"text - gray - 700 hover: text - blue - 600 px - 3 py - 2 rounded - md text - sm font - medium transition - colors\"    />
+>>>>>>> origin/main
 
                   {item.name
                 </Link>)
@@ -1633,16 +2010,17 @@ export default Header;ursor/fix-website-loading-errors-and-merge-6662;"
             </div>;
           </div>;
           {/* Mobile menu button */}"
-          <div className=\"md:hidden\" />;
-            <button              on_click={() = /> setIsMenuOpen (!isMenuOpen)}"
+          <div className=\"md:hidden\"    />;
+            <button              on_click={() =    /> setIsMenuOpen (!isMenuOpen)}"
               className=\"text - gray - 700 hover: text - blue - 600 p - 2\">
 "
-              {isMenuOpen ? <X className=\"h - 6 w - 6\" /> : <Menu className=\"h - 6 w - 6\" /}
+              {isMenuOpen ? <X className=\"h - 6 w - 6\"    /> : <Menu className=\"h - 6 w - 6\" /}
 }
-            </button />;
+            </button    />;
           </div>;
         </div>;
         {/* Mobile Navigation */}
+<<<<<<< HEAD
         <AnimatePresence />;
           {isMenuOpen && (
           <motion.div;}
@@ -1665,6 +2043,26 @@ export default Header;ursor/fix-website-loading-errors-and-merge-6662;"
             on_click={() = /> setIsMenuOpen (false)
                   >}
             {item.name
+=======
+        <AnimatePresence    />;
+          {isMenuOpen && (<motion.div;}
+              initial={{ opacity: 0, height: 0 }
+}
+              animate={{ opacity: 1, height: 'auto' }
+}
+              exit={{ opacity: 0, height: 0 }
+}"
+              className=\"md:hidden\"    />
+"
+              <div className=\"px - 2 pt - 2 pb - 3 space - y-1 sm:px - 3 bg - white border - t\"    />;
+                {navigation.map ((item) => (<Link;}
+                    key={item.name}
+                    href={item.href}"
+                    className=\'text - gray - 700 hover:text - blue - 600 block px - 3 py - 2 rounded - md text - base font - medium\';
+                    on_click={() =    /> setIsMenuOpen (false)}
+                  >;
+                    {item.name}
+>>>>>>> origin/main
                   </Link>))}
               </div>;
             </motion.div>)}
@@ -1704,24 +2102,37 @@ const Header: React.FC = () => { const [is_scrolled, setIsScrolled] =;}
   href: '/careers'}
 },
  { name: 'Contact'}
+<<<<<<< HEAD
   href: '/contact']; return ( <header className = \"sticky top - 0 z - 50 bg - slate - 900 / 95 backdrop - blur border - b border - slate - 800\" /> <div className=\"max - w-7xl mx - auto px - 4 sm: px - 6 lg:px - 8 h - 14 flex items - center justify - between\" /> <Link href=\"/\" className=\"text - white font - bold\" />Zion Tech Group</Link> <nav className=\"hidden md:flex items - center gap - 6 text - sm\" /> {navigation_items.map ((item) => ( <Link key={item.name}
             href={item.href className=\"text - gray - 300 hover:text - white\" /> {item.name </Link> )
  </nav> </div> </header> ;
+=======
+  href: '/contact'}"
+} ]; return ( <header className = \"sticky top - 0 z - 50 bg - slate - 900 / 95 backdrop - blur border - b border - slate - 800\"    /> <div className=\"max - w-7xl mx - auto px - 4 sm: px - 6 lg:px - 8 h - 14 flex items - center justify - between\"    /> <Link href=\"/\" className=\"text - white font - bold\"    />Zion Tech Group</Link> <nav className=\"hidden md:flex items - center gap - 6 text - sm\"    /> {navigation_items.map ((item) => ( <Link key={item.name} href={item.href} className=\"text - gray - 300 hover:text - white\"    /> {item.name} </Link> )
+} </nav> </div> </header> ;
+>>>>>>> origin/main
 }
 export default Header;
 export default Header;</div>;
-            <span className=&quot;text-xl font-bold bg-gradient-to-r from-cyan-400 to-fuchsia-400 bg-clip-text text-transparent&quot />
+            <span className=&quot;text-xl font-bold bg-gradient-to-r from-cyan-400 to-fuchsia-400 bg-clip-text text-transparent&quot    />
 
               Zion Tech Group;
             </span>;
           </a>;
           {/* Desktop Navigation */}
-          <nav className=&quot;hidden md:flex items-center space-x-8&quot />
+          <nav className=&quot;hidden md:flex items-center space-x-8&quot    />
 
+<<<<<<< HEAD
             {navigation.map((item) => (
           <Link key={item.name}
             href={item.href className=&quot
             text-white/80 hover: text-white transition-colors duration-200&quot />
+=======
+            {navigation.map((item) => (<Link;}
+                key={item.name}
+                href={item.href}
+                className=&quot;text-white/80 hover: text-white transition-colors duration-200&quot    />
+>>>>>>> origin/main
 
                 {item.nam
 
@@ -1730,6 +2141,7 @@ export default Header;</div>;
 import React from 'react';
 
 const Header: React.FC = () => ;"
+<<<<<<< HEAD
   return (
           <header className=\"bg-white shadow-sm\" />;"
       <div className=\"max-w-7xl mx-auto px-4 sm: px-6 lg:px-8\" />;"
@@ -1762,26 +2174,63 @@ const Header: React.FC = () => ;"
               <Link"
                 href=\"/contact\";"
                 className=\"text-gray-900 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium\" />
+=======
+  return (<header className=\"bg-white shadow-sm\"    />;"
+      <div className=\"max-w-7xl mx-auto px-4 sm: px-6 lg:px-8\"    />;"
+        <div className=\"flex justify-between items-center h-16\"    />;"
+          <div className=\"flex-shrink-0\"    />;"
+            <Link href=\"/\" className=\"text-2xl font-bold text-blue-600\"    />;
+              Zion Tech Group;
+            </Link>;
+          </div>;"
+          <nav className=\"hidden md:block\"    />;"
+            <div className=\"ml-10 flex items-baseline space-x-4\"    />;
+              <Link;"
+                href=\'/\';"
+                className=\"text-gray-900 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium\"    />
+
+                Home;
+              </Link>;
+              <Link;"
+                href=\'/services\';"
+                className=\"text-gray-900 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium\"    />
+
+                Services;
+              </Link>;
+              <Link;"
+                href=\'/about\';"
+                className=\"text-gray-900 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium\"    />
+
+                About;
+              </Link>;
+              <Link;"
+                href=\'/contact\';"
+                className=\"text-gray-900 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium\"    />
+>>>>>>> origin/main
 
                 Contact;
               </Link>{' '}
             </div>;
           </nav>;
           {/* CTA Button */}
-          <div className=&quot;hidden md:block&quot />
+          <div className=&quot;hidden md:block&quot    />
 
-            <Button href=&quot;/contact&quot; variant=&quot;primary&quot; size=&quot;sm&quot />
+            <Button href=&quot;/contact&quot; variant=&quot;primary&quot; size=&quot;sm&quot    />
 
               Get Started;
             </Button>;
           </div>;
           {/* Mobile Menu Button */}
-          <button className=&quot;md:hidden p-2 text-white/80 hover:text-white transition-colors duration-200&quot />
+          <button className=&quot;md:hidden p-2 text-white/80 hover:text-white transition-colors duration-200&quot    />
 
-            <svg className=&quot;w-6 h-6&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; viewBox=&quot;0 0 24 24&quot />
+            <svg className=&quot;w-6 h-6&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; viewBox=&quot;0 0 24 24&quot    />
 
+<<<<<<< HEAD
               <path strokeLinecap=&quot;round&quot; strokeLinejoin=&quot;round&quot; strokeWidth={2}
             d=&quot;M4 6h16M4 12h16M4 18h16&quot; / />;
+=======
+              <path strokeLinecap=&quot;round&quot; strokeLinejoin=&quot;round&quot; strokeWidth={2} d=&quot;M4 6h16M4 12h16M4 18h16&quot;    />;
+>>>>>>> origin/main
             </svg>;
           </button>;
         </div>;
@@ -1813,13 +2262,21 @@ const handleScroll = (setIsScrolled(window.scrollY > 0)) => {
   href: '/about'}
 }
 { name: 'Contact'}
+<<<<<<< HEAD
   href: '/contact'];
   return (
           <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? 'bg-white/95 backdrop-blur-sm shadow-lg' : 'bg-transparent';}
     }`} />
+=======
+  href: '/contact'}
+}
+  ];
+  return (<header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? 'bg-white/95 backdrop-blur-sm shadow-lg' : 'bg-transparent';}
+    }`}    />
+>>>>>>> origin/main
 "
-      <nav className=\"max-w-7xl mx-auto px-4 sm:px-6 lg:px-8\" />;"
-        <div className=\"flex justify-between items-center h-16\" />;
+      <nav className=\"max-w-7xl mx-auto px-4 sm:px-6 lg:px-8\"    />;"
+        <div className=\"flex justify-between items-center h-16\"    />;
   X;
   Home;
   Users;
@@ -1847,7 +2304,11 @@ const handleScroll = (setIsScrolled(window.scrollY > 0)) => {
 const Header: React.FC = () => {const [isMenuOpen, setIsMenuOpen] =;
   useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+<<<<<<< HEAD
   const [activeDropdown, setActiveDropdown] = useState<string | null />(null)const location = useLocation(;},,
+=======
+  const [activeDropdown, setActiveDropdown] = useState<string | null>(null)const location = useLocation(;}
+>>>>>>> origin/main
   useEffect(() => {}
 const handleScroll = (setIsScrolled(window.scrollY > 20)) => {
   return $3;}
@@ -2017,23 +2478,32 @@ const resourceCategories = [
           <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled }
             ? 'bg-slate-900/95 backdrop-blur-md border-b border-slate-700/50' ;
         : 'bg-transparent';}
-}`} />
+}`}    />
 "
-      <div className=\"max-w-7xl mx-auto px-4 sm:px-6 lg:px-8\" />;"
-        <div className=\"flex items-center justify-between h-16\" />;
+      <div className=\"max-w-7xl mx-auto px-4 sm:px-6 lg:px-8\"    />;"
+        <div className=\"flex items-center justify-between h-16\"    />;
           {/* Logo */}"
-          <div className=\"flex-shrink-0\" />;"
-            <Link href=\"/\" className=\"text-2xl font-bold text-blue-600\" />;
+          <div className=\"flex-shrink-0\"    />;"
+            <Link href=\"/\" className=\"text-2xl font-bold text-blue-600\"    />;
               Zion Tech Group;
             </Link>;
           </div>;
           {/* Desktop Navigation */}"
+<<<<<<< HEAD
           <div className=\"hidden md:block\" />;"
             <div className=\"ml-10 flex items-baseline space-x-4\" />;
               {navigation.map((item) => (
           <Link key={item.name}
             href={item.href"
                   className=\"text-gray-700 hover: text-blue-600 px-3 py-2 rounded-md text-sm font-medium transition-colors\" />
+=======
+          <div className=\"hidden md:block\"    />;"
+            <div className=\"ml-10 flex items-baseline space-x-4\"    />;
+              {navigation.map((item) => (<Link;}
+                  key={item.name}
+                  href={item.href}"
+                  className=\"text-gray-700 hover: text-blue-600 px-3 py-2 rounded-md text-sm font-medium transition-colors\"    />
+>>>>>>> origin/main
 
                   {item.nam
 }
@@ -2042,13 +2512,13 @@ const resourceCategories = [
             </div>;
           </div>;
           {/* Mobile menu button */}"
-          <div className=\"md:hidden\" />;
-            <button              onClick={() = /> setIsMenuOpen(!isMenuOpen)}"
-              className=\"text-gray-700 hover:text-blue-600 p-2\";
+          <div className=\"md:hidden\"    />;
+            <button              onClick={() =    /> setIsMenuOpen(!isMenuOpen)}"
+              className=\'text-gray-700 hover:text-blue-600 p-2\';
   Menu,X,Search,Phone,FileText,BarChart3,Cpu,Shield,Cloud,Database,Zap,Users,CheckCircle,ArrowRight,Star,TrendingUp,Target,Rocket,Code,Network,Atom,Workflow,MessageCircle,ArrowUp,Sparkles,Home,Truck,BookOpen,Leaf,Satellite,HelpCircle,Building2,Factory,Building,DollarSign,ShoppingCart,Heart,Eye,Server,Lock,ChevronDown;
 } from 'lucide-react';
 
-const Header = (const [isMenuOpen, setIsMenuOpen] =;
+const Header = ([isMenuOpen, setIsMenuOpen] =;
   useState(false);
   const [isServicesOpen, setIsServicesOpen] = useState(false);
   const [isSolutionsOpen, setIsSolutionsOpen] = useState(false);
@@ -2105,45 +2575,50 @@ const Header = (const [isMenuOpen, setIsMenuOpen] =;
 { name: 'Contact'}
   href: '/contact'];
 "
+<<<<<<< HEAD
 const isActive  = (href: string) => router.pathname === href;return (
           <header className=\"bg-white shadow-lg sticky top-0 z-50\" />;
+=======
+const isActive  = (href: string) => router.pathname === href;return (<header className=\"bg-white shadow-lg sticky top-0 z-50\"    />;
+>>>>>>> origin/main
       {/* Top Contact Bar */}"
-      <div className=\"bg-gray-900 text-white py-2\" />;"
-        <div className=\"max-w-7xl mx-auto px-4 sm:px-6 lg:px-8\" />;"
-          <div className=\"flex justify-between items-center text-sm\" />;"
-            <div className=\"flex items-center space-x-6\" />;"
-              <div className=\"flex items-center\" />;"
-                <Phone className=\"h-4 w-4 mr-2\" />;
-                <span />+1 (555) 123-4567</span>;
+      <div className=\"bg-gray-900 text-white py-2\"    />;"
+        <div className=\"max-w-7xl mx-auto px-4 sm:px-6 lg:px-8\"    />;"
+          <div className=\"flex justify-between items-center text-sm\"    />;"
+            <div className=\"flex items-center space-x-6\"    />;"
+              <div className=\"flex items-center\"    />;"
+                <Phone className=\"h-4 w-4 mr-2\"    />;
+                <span    />+1 (555) 123-4567</span>;
               </div>;"
-              <div className=\"flex items-center\" />;"
-                <Mail className=\"h-4 w-4 mr-2\" />;
-                <span />info@ziontechgroup.com</span>;
+              <div className=\"flex items-center\"    />;"
+                <Mail className=\"h-4 w-4 mr-2\"    />;
+                <span    />info@ziontechgroup.com</span>;
               </div>;
             </div>;"
-            <div className=\"hidden md:flex items-center space-x-4\" />;
-              <span />Trusted by 500+ companies</span>;"
-              <div className=\"flex items-center\" />;"
-                <Star className=\"h-4 w-4 text-yellow-400 mr-1\" />;
-                <span />4.9/5 Rating</span>;
+            <div className=\"hidden md:flex items-center space-x-4\"    />;
+              <span    />Trusted by 500+ companies</span>;"
+              <div className=\"flex items-center\"    />;"
+                <Star className=\"h-4 w-4 text-yellow-400 mr-1\"    />;
+                <span    />4.9/5 Rating</span>;
               </div>;
             </div>;
           </div>;
         </div>;
       </div>;
       {/* Main Navigation */}"
-      <nav className=\"max-w-7xl mx-auto px-4 sm:px-6 lg:px-8\" />;"
-        <div className=\"flex justify-between items-center h-16\" />;
+      <nav className=\"max-w-7xl mx-auto px-4 sm:px-6 lg:px-8\"    />;"
+        <div className=\"flex justify-between items-center h-16\"    />;
           {/* Logo */}"
-          <div className=\"flex items-center\" />;"
-            <Link href=\"/\" className=\"flex items-center\" />;"
-              <div className=\"w-10 h-10 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center\" />;"
-                <span className=\"text-white font-bold text-xl\" />Z</span>;
+          <div className=\"flex items-center\"    />;"
+            <Link href=\"/\" className=\"flex items-center\"    />;"
+              <div className=\"w-10 h-10 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center\"    />;"
+                <span className=\"text-white font-bold text-xl\"    />Z</span>;
               </div>;"
-              <span className=\"ml-3 text-2xl font-bold text-gray-900\" />Zion Tech Group</span>;
+              <span className=\"ml-3 text-2xl font-bold text-gray-900\"    />Zion Tech Group</span>;
             </Link>;
           </div>;
           {/* Desktop Navigation */}"
+<<<<<<< HEAD
           <div className=\"hidden lg:flex items-center space-x-8\" />;"
             {navigation.map((item) => (
           <div key={item.name className=\"relative\" />
@@ -2151,18 +2626,33 @@ const isActive  = (href: string) => router.pathname === href;return (
           <div"
                     className=\"flex items-center space-x-1 text-gray-700 hover:text-blue-600 cursor-pointer transition-colors duration-200\";}
                     onMouseEnter={() = /> {if (item.name === 'Services') setIsServicesOpen(true)if (item.name === 'Solutions') setIsSolutionsOpen(true)}}
+=======
+          <div className=\"hidden lg:flex items-center space-x-8\"    />;"
+            {navigation.map((item) => (<div key={item.name} className=\"relative\"    />;
+                {item.hasDropdown ? (<div;}"
+                    className=\'flex items-center space-x-1 text-gray-700 hover:text-blue-600 cursor-pointer transition-colors duration-200\';}
+                    onMouseEnter={() =    /> {if (item.name === 'Services') setIsServicesOpen(true)if (item.name === 'Solutions') setIsSolutionsOpen(true)}}
+>>>>>>> origin/main
                     onMouseLeave={() => {if (item.name === 'Services') setIsServicesOpen(false)if (item.name === 'Solutions') setIsSolutionsOpen(false)}}
                   >;"
-                    <span className=\"font-medium\" />{item.name}</span>;"
-                    <ChevronDown className=\"h-4 w-4\" />;
+                    <span className=\"font-medium\"    />{item.name}</span>;"
+                    <ChevronDown className=\"h-4 w-4\"    />;
                   </div>;
+<<<<<<< HEAD
                 ) : (
           <Link href={item.href className={`font-medium transition-colors duration-200 ${isActive(item.href) ? 'text-blue-600' : 'text-gray-700 hover:text-blue-600'}
              `} />
+=======
+                ) : (<Link;
+                    href={item.href}
+                    className={`font-medium transition-colors duration-200 ${isActive(item.href) ? 'text-blue-600' : 'text-gray-700 hover:text-blue-600';}
+                    }`}    />
+>>>>>>> origin/main
 
                     {item.name}
                   </Link>;
                 )}{/* Services Dropdown */}
+<<<<<<< HEAD
                 {item.name === 'Services' && (
           <AnimatePresence />;
                     {isServicesOpen && (
@@ -2183,19 +2673,65 @@ const isActive  = (href: string) => router.pathname === href;return (
                         <div className=\"grid grid-cols-2 gap-2\" />;
                           {item.children?.map((child) => (
           <Link"
+=======
+                {item.name === 'Services' && (<AnimatePresence    />;
+                    {isServicesOpen && (<motion.div;}
+                        initial={{ opacity: 0, y: 10 }
+}
+                        animate={{ opacity: 1, y: 0 }
+}
+                        exit={{ opacity: 0, y: 10 }
+}"
+                        className=\'absolute top-full left-0 mt-2 w-80 bg-white rounded-lg shadow-xl border border-gray-200 py-4\';
+                        onMouseEnter={() =    /> setIsServicesOpen(true)}
+                        onMouseLeave={() => setIsServicesOpen(false)}
+                      >;"
+                        <div className=\"grid grid-cols-2 gap-2\"    />;
+                          {item.children?.map((child) => (<Link;"
+>>>>>>> origin/main
               className=\"text-gray-700 hover: text-blue-600 transition-colors duration-200\"}
-             />}"
-              {isMenuOpen ? <X className=\"h-6 w-6\" /> : <Menu className=\"h-6 w-6\" />}
+                />}"
+              {isMenuOpen ? <X className=\"h-6 w-6\"    /> : <Menu className=\"h-6 w-6\"    />}
+>>>>>>> origin/chore/fix-lint-and-merge
             </button>
           </div>
         </div>
+      </div>
 
+<<<<<<< HEAD
+      {/* Mobile Navigation */}
+      {isMenuOpen && (
+        <div className="md:hidden">
+          <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-white border-t">
+            {navigation.map((item) => (
+              <Link
+                key={item.name}
+                href={item.href}
+                className="block px-4 py-2 font-medium text-gray-700 hover:text-blue-600 transition-colors duration-200"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                {item.name}
+              </Link>
+            ))}
+            <div className="px-4 py-2">
+              <Link
+                href="/contact"
+                className="block w-full bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors duration-200 text-center"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                Get Started
+              </Link>
+            </div>
+          </div>
+        </div>
+      )}
+=======
         {/* Mobile Menu */}
         {/* Mobile Navigation */}
 
         {/* Mobile Menu *}
 }
-        <AnimatePresence />
+        <AnimatePresence    />
           {isMenuOpen && (
             <motion.div;}
 initial={{ opacity: 0}
@@ -2208,25 +2744,33 @@ initial={{ opacity: 0}
             height: 0
              "
               className=\"lg:hidden border-t border-gray-200\"
-             />"
-              <div className=\"py-4 space-y-4\" />
+                />"
+              <div className=\"py-4 space-y-4\"    />
                 {navigation.map((item) => (}
-                  <div key={item.name} />
+                  <div key={item.name}    />
                     {item.hasDropdown ? (
-                      <div />}"
-                        <div className=\"flex items-center justify-between px-4 py-2 text-gray-700 font-medium\" />}
-                          <span />{item.name}</span>"
-                          <ChevronDown className=\"h-4 w-4\" />
+                      <div    />}"
+                        <div className=\"flex items-center justify-between px-4 py-2 text-gray-700 font-medium\"    />}
+                          <span    />{item.name}</span>"
+                          <ChevronDown className=\"h-4 w-4\"    />
                         </div>"
-                        <div className=\"pl-4 space-y-2\" />
+                        <div className=\"pl-4 space-y-2\"    />
                           {item.children?.map((child) => (}
+<<<<<<< HEAD
                             <Link key={child.name}
             href={child.hre
 "
                               className=\"flex items-center px-4 py-3 text-gray-700 hover:bg-gray-50 hover:text-blue-600 transition-colors duration-200\" />
+=======
+                            <Link;}
+key={child.name}
+                              href={child.hre}
+}"
+                              className=\"flex items-center px-4 py-3 text-gray-700 hover:bg-gray-50 hover:text-blue-600 transition-colors duration-200\"    />
+>>>>>>> origin/main
 "
-                              <child.icon className=\"h-5 w-5 mr-3 text-blue-500\" />;"
-                              <span className=\"text-sm font-medium\" />{child.name}</span>;
+                              <child.icon className=\"h-5 w-5 mr-3 text-blue-500\"    />;"
+                              <span className=\"text-sm font-medium\"    />{child.name}</span>;
                             </Link>;
                           ))}
                         </div>;
@@ -2234,6 +2778,7 @@ initial={{ opacity: 0}
                     )}
                   </AnimatePresence>;
                 )}{/* Solutions Dropdown */}
+<<<<<<< HEAD
                 {item.name === 'Solutions' && (
           <AnimatePresence />;
                     {isSolutionsOpen && (
@@ -2262,6 +2807,30 @@ initial={{ opacity: 0}
                               <span className=\"text-sm font-medium\" />{child.name</span>;
                             </Link>}
             ))
+=======
+                {item.name === 'Solutions' && (<AnimatePresence    />;
+                    {isSolutionsOpen && (<motion.div;}
+                        initial={{ opacity: 0, y: 10 }
+}
+                        animate={{ opacity: 1, y: 0 }
+}
+                        exit={{ opacity: 0, y: 10 }
+}"
+                        className=\'absolute top-full left-0 mt-2 w-80 bg-white rounded-lg shadow-xl border border-gray-200 py-4\';
+                        onMouseEnter={() =    /> setIsSolutionsOpen(true)}
+                        onMouseLeave={() => setIsSolutionsOpen(false)}
+                      >;"
+                        <div className=\"grid grid-cols-2 gap-2\"    />;
+                          {item.children?.map((child) => (<Link;}
+                              key={child.name}
+                              href={child.href}"
+                              className=\"flex items-center px-4 py-3 text-gray-700 hover:bg-gray-50 hover:text-blue-600 transition-colors duration-200\"    />
+"
+                              <child.icon className=\"h-5 w-5 mr-3 text-blue-500\"    />;"
+                              <span className=\"text-sm font-medium\"    />{child.name}</span>;
+                            </Link>;
+                          ))}
+>>>>>>> origin/main
                         </div>;
                       </motion.div>;
                     )}
@@ -2271,29 +2840,43 @@ initial={{ opacity: 0}
             ))}
           </div>;
           {/* CTA Button */}"
+<<<<<<< HEAD
           <div className=\"hidden lg:flex items-center space-x-4\" />;
             <Link"
               href=\"/contact\";"
               className=\"inline-flex items-center px-6 py-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-300 shadow-lg hover:shadow-xl\" />
+=======
+          <div className=\"hidden lg:flex items-center space-x-4\"    />;
+            <Link;"
+              href=\'/contact\';"
+              className=\"inline-flex items-center px-6 py-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-300 shadow-lg hover:shadow-xl\"    />
+>>>>>>> origin/main
 
               Get Started;"
-              <ArrowRight className=\"ml-2 h-4 w-4\" />;
+              <ArrowRight className=\"ml-2 h-4 w-4\"    />;
             </Link>;
           </div>;
           {/* Mobile Menu Button */}"
+<<<<<<< HEAD
           <div className=\"lg:hidden\" />;
             <button onClick={() = /> setIsMenuOpen(!isMenuOpen)}"
+=======
+          <div className=\"lg:hidden\"    />;
+            <button;
+              onClick={() =    /> setIsMenuOpen(!isMenuOpen)}"
+>>>>>>> origin/main
               className=\"text-gray-700 hover: text-blue-600 transition-colors duration-200\">
 "
-              {isMenuOpen ? <X className=\"h-6 w-6\" /> : <Menu className=\"h-6 w-6\" /}
+              {isMenuOpen ? <X className=\"h-6 w-6\"    /> : <Menu className=\"h-6 w-6\" /}
 }
-            </button />;
+            </button    />;
           </div>;
         </div>;
         {/* Mobile Menu */}
         {/* Mobile Navigation */}
         {/* Mobile Navigation */}{/* Mobile Menu */}{/* Mobile Navigation */}{/* Mobile Menu */}{/* Mobile Menu */}
         {/* Mobile Navigation */}
+<<<<<<< HEAD
         {/* Mobile Navigation */}{/* Mobile Menu */}<AnimatePresence />;
           {isMenuOpen && (
           <motion.div;}
@@ -2316,10 +2899,31 @@ initial={{ opacity: 0}
             onClick={() = /> setIsMenuOpen(false)
                   >}
             {item.name
+=======
+        {/* Mobile Navigation */}{/* Mobile Menu */}<AnimatePresence    />;
+          {isMenuOpen && (<motion.div;}
+              initial={{ opacity: 0, height: 0 }
+}
+              animate={{ opacity: 1, height: 'auto' }
+}
+              exit={{ opacity: 0, height: 0 }
+}"
+              className=\"md:hidden\"    />
+"
+              <div className=\"px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-white border-t\"    />;
+                {navigation.map((item) => (<Link;}
+                    key={item.name}
+                    href={item.href}"
+                    className=\'text-gray-700 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium\';
+                    onClick={() =    /> setIsMenuOpen(false)}
+                  >;
+                    {item.name}
+>>>>>>> origin/main
                   </Link>;
                 ))}"
               className=\"lg:hidden border-t border-gray-200\">
 "
+<<<<<<< HEAD
               <div className=\"py-4 space-y-4\" />;
                 {navigation.map((item) => (
           <div key={item.name} />;
@@ -2337,28 +2941,60 @@ initial={{ opacity: 0}
                               <child.icon className=\"h-4 w-4 mr-3 text-blue-500\" />}
             "
                               <span className=\"text-sm\" />{child.name</span>;
+=======
+              <div className=\"py-4 space-y-4\"    />;
+                {navigation.map((item) => (<div key={item.name}    />;
+                    {item.hasDropdown ? (<div    />;}"
+                        <div className=\"flex items-center justify-between px-4 py-2 text-gray-700 font-medium\"    />;}
+                          <span    />{item.name}</span>;"
+                          <ChevronDown className=\"h-4 w-4\"    />;
+                        </div>;"
+                        <div className=\"pl-4 space-y-2\"    />;
+                          {item.children?.map((child) => (<Link;}
+                              key={child.name}
+                              href={child.href}"
+                              className=\"flex items-center px-4 py-2 text-gray-600 hover:text-blue-600 transition-colors duration-200\"    />
+"
+                              <child.icon className=\"h-4 w-4 mr-3 text-blue-500\"    />;"
+                              <span className=\"text-sm\"    />{child.name}</span>;
+>>>>>>> origin/main
                             </Link>;
                           ))}
                         </div>;
                       </div>;
+<<<<<<< HEAD
                     ) : (
           <Link href={item.href className={`block px-4 py-2 font-medium transition-colors duration-200 ${isActive(item.href) ? 'text-blue-600' : 'text-gray-700 hover:text-blue-600'}
              `} />
+=======
+                    ) : (<Link;
+                        href={item.href}
+                        className={`block px-4 py-2 font-medium transition-colors duration-200 ${isActive(item.href) ? 'text-blue-600' : 'text-gray-700 hover:text-blue-600';}
+                        }`}    />
+>>>>>>> origin/main
 
                         {item.name}
                       </Link>;
                     )}
                   </div>;"
+<<<<<<< HEAD
                 ))}<div className=\"pt-4 border-t border-gray-200\" />;
                   <Link"
                     href=\"/contact\";"
                     className=\"block mx-4 px-6 py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-lg text-center hover:from-blue-700 hover:to-purple-700 transition-all duration-300\" />
+=======
+                ))}<div className=\"pt-4 border-t border-gray-200\"    />;
+                  <Link;"
+                    href=\'/contact\';"
+                    className=\"block mx-4 px-6 py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-lg text-center hover:from-blue-700 hover:to-purple-700 transition-all duration-300\"    />
+>>>>>>> origin/main
 
                     Get Started;
                   </Link>;
                 </div>;"
               className=\"md:hidden\">
 "
+<<<<<<< HEAD
               <div className=\"px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-white border-t\" />;
                 {navigation.map((item) => (
           <Link key={item.name}
@@ -2367,6 +3003,16 @@ initial={{ opacity: 0}
             onClick={() = /> setIsMenuOpen(false)
                   >}
             {item.name
+=======
+              <div className=\"px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-white border-t\"    />;
+                {navigation.map((item) => (<Link;}
+                    key={item.name}
+                    href={item.href}"
+                    className=\'text-gray-700 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium\';
+                    onClick={() =    /> setIsMenuOpen(false)}
+                  >;
+                    {item.name}
+>>>>>>> origin/main
                   </Link>;
                 ))}</div>;
             </motion.div>;
@@ -2379,11 +3025,16 @@ export default Header;
                   </div>
                 ))}
                 "
+<<<<<<< HEAD
                 <div className=\"pt-4 border-t border-gray-200\" />
                   <Link"
+=======
+                <div className=\"pt-4 border-t border-gray-200\"    />
+                  <Link;"
+>>>>>>> origin/main
 href=\"/contact\"
                     className=\"block mx-4 px-6 py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-lg text-center hover: from-blue-700 hover:to-purple-700 transition-all duration-300\"
-                   />
+                      />
                     Get Started;
                   </Link>
                 </div>
@@ -2392,9 +3043,18 @@ href=\"/contact\"
           )}
         </AnimatePresence>
       </nav>
+>>>>>>> origin/chore/fix-lint-and-merge
     </header>
-  )
+  );
 };
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+export default Header;
+=======
+
+>>>>>>> origin/main
 export default Header;
 }
 export default Header;
@@ -2436,9 +3096,14 @@ const Header: React.FC = () => { const [isScrolled,setIsScrolled] =;
 },
 { name: 'Contact'}
   href: '/contact'}"
+<<<<<<< HEAD
 }]; return ( <header className = \"sticky top-0 z-50 bg-slate-900/95 backdrop-blur border-b border-slate-800\" /> <div className=\"max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 h-14 flex items-center justify-between\" /> <Link href=\"/\" className=\"text-white font-bold\" />Zion Tech Group</Link> <nav className=\"hidden md:flex items-center gap-6 text-sm\" /> {navigationItems.map((item) => ( <Link key={item.name}
             href={item.href className=\"text-gray-300 hover:text-white\" /> {item.name </Link> )
  </nav> </div> </header> ;
+=======
+}]; return ( <header className = \"sticky top-0 z-50 bg-slate-900/95 backdrop-blur border-b border-slate-800\"    /> <div className=\"max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 h-14 flex items-center justify-between\"    /> <Link href=\"/\" className=\"text-white font-bold\"    />Zion Tech Group</Link> <nav className=\"hidden md:flex items-center gap-6 text-sm\"    /> {navigationItems.map((item) => ( <Link key={item.name} href={item.href} className=\"text-gray-300 hover:text-white\"    /> {item.name} </Link> )
+} </nav> </div> </header> ;
+>>>>>>> origin/main
 }
 export default Header;
 }
@@ -2456,3 +3121,7 @@ export default Header;
 };
 export default Header;
 "
+<<<<<<< HEAD
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> origin/main

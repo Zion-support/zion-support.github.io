@@ -1,43 +1,61 @@
 import {useState} from 'react';
 import {TalentProfile} from '@/types/talent';
+
 export function useUIState() {;
+
+import { useState  } from 'react';
+import { TalentProfile } from '@/types/talent';
+export function useUIState() {
+import {useState} from 'react';
+import {TalentProfile} from '@/types/talent';
+export function useUIState() {;
+
+  const [isMobileFilterOpen, setIsMobileFilterOpen] = useState(false);
+  const [isHireModalOpen, setIsHireModalOpen] = useState(false);
+  const [selectedTalent, setSelectedTalent] = useState<TalentProfile | null>(null),
+
+    skills: true;
+    availability: true;
+    region: true;
+
+    price: true});
+
+;
+  // Toggle expanded sections in the sidebar;
+
+      ...prev,
+      [section_name]: !prev[section_name];
+    }));
+  }
+;
+  // Handler for closing mobile filter sidebar;
+
   return {
+
     isMobileFilterOpen;
     setIsMobileFilterOpen;
     isHireModalOpen;
     setIsHireModalOpen;
+
     selected_talent;
     setSelectedTalent;
-    selected_talent;}
-    setSelectedTalent;}
-import { useState } from 'react';
-import { TalentProfile } from '@/types/talent';
-export function useUIState() {;
-  const [isMobileFilterOpen, setIsMobileFilterOpen] = useState(false),;
-  const [isHireModalOpen, setIsHireModalOpen] = useState(false),;
-  const [selectedTalent, setSelectedTalent] = useState<TalentProfile | null />(null),;
-  const [expandedSections, setExpandedSections] = useState({;
-    skills: true,;
-    availability: true,;
-    region: true,;}
-    experience: true,;}
+import { useState } from 'react',;
+
+import { TalentProfile } from '@/types/talent',;
+export function useUIState() { return null; }
     price: true}),;
   // Toggle expanded sections in the sidebar;
-  const toggleSection = (;
+  const toggleSection = (sectionName: keyof typeof expandedSections) => {;
     setExpandedSections(prev => ({;
       ...prev,;
-      [sectionName]: !prev[sectionName];) => {
-  return $3;}
-}
+      [sectionName]: !prev[sectionName];
     }));
   },;
   // Handler for closing mobile filter sidebar;
-  const closeMobileFilter = (;
-    setIsMobileFilterOpen(false);) => {
-  return $3;}
-}
+  const closeMobileFilter = () => {;
+    setIsMobileFilterOpen(false);
   },;
-  // Effect to listen for the custom event to close mobile filter;
+  // Effect to listen for the custom event to close mobile filter;'
   // This would typically be in a useEffect hook, but we'll handle it via the button's onClick;
   return {;
     isMobileFilterOpen,;
@@ -45,13 +63,19 @@ export function useUIState() {;
     isHireModalOpen,;
     setIsHireModalOpen,;
     selectedTalent,;
-    setSelectedTalent,;    expandedSections;
+
     toggleSection;
-    expanded_sections;}
-    toggle_section;}
+    expanded_sections;
+    toggle_section;
     closeMobileFilter}
 }    expandedSections;
+
+    closeMobileFilter}
+}
+    expandedSections;
+
     toggleSection;
+
     expanded_sections;
     toggle_section;
     closeMobileFilter}

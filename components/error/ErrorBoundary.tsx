@@ -9,7 +9,11 @@ interface Props  {children: ReactNode;
 interface State  {hasError: boolean;
   error?: Error;}
   errorInfo?: ErrorInfo;}
+<<<<<<< HEAD
 }class ErrorBoundary extends Component<Props State /> {constructor(props: Props) {super(props)this.state = { hasError: false }
+=======
+}class ErrorBoundary extends Component<Props, State    /> {constructor(props: Props) {super(props)this.state = { hasError: false }
+>>>>>>> origin/main
 }static getDerivedStateFromError(error: Error): State ;
   return { hasError: true, error }}componentDidCatch(error: Error,,,
   errorInfo: ErrorInfo) {this.setState({error,,,
@@ -26,6 +30,7 @@ interface State  {hasError: boolean;
   }render() {if (this.state.hasError) {// Custom fallback UI;}
       if (this.props.fallback) {return this.props.fallback;}
       }// Default error UI;
+<<<<<<< HEAD
       return (
     <div className=\"min-h-screen flex items-center justify-center bg-gray-50\" />;"
           <div className=\"max-w-md w-full bg-white shadow-lg rounded-lg p-6\" />;"
@@ -43,15 +48,34 @@ interface State  {hasError: boolean;
                   strokeWidth={2}"
                   d=\"M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L3.732 16.5c-.77.833.192 2.5 1.732 2.5z\";
                 / />;
+=======
+      return (<div className=\"min-h-screen flex items-center justify-center bg-gray-50\"    />;"
+          <div className=\"max-w-md w-full bg-white shadow-lg rounded-lg p-6\"    />;"
+            <div className=\"flex items-center justify-center w-12 h-12 mx-auto bg-red-100 rounded-full mb-4\"    />;
+              <svg;"
+                className=\'w-6 h-6 text-red-600\';"
+                fill=\'none\';"
+                stroke=\'currentColor\';"
+                viewBox=\'0 0 24 24\';"
+                aria-hidden=\"true\"    />
+
+                <path;"
+                  strokeLinecap=\'round\';"
+                  strokeLinejoin=\'round\';
+                  strokeWidth={2}"
+                  d=\'M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L3.732 16.5c-.77.833.192 2.5 1.732 2.5z\';
+                   />;
+>>>>>>> origin/main
               </svg>;
             </div>;"
-            <h1 className=\"text-xl font-semibold text-gray-900 text-center mb-2\" />;
+            <h1 className=\"text-xl font-semibold text-gray-900 text-center mb-2\"    />;
               Something went wrong;
             </h1>;"
-            <p className=\"text-gray-600 text-center mb-6\" />;
+            <p className=\"text-gray-600 text-center mb-6\"    />;
               We&apos;re sorry, but something unexpected happened. Please try;
               refreshing the page.'';
             </p>;"
+<<<<<<< HEAD
             <div className=\"flex flex-col sm: flex-row gap-3\" />;
               <button onClick={this.handleRetry}"
                 className=\"flex-1 bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 transition-colors\" />
@@ -59,20 +83,40 @@ interface State  {hasError: boolean;
                 Try Again;
               </button>;
               <button onClick={() = /> window.location.reload()}"
+=======
+            <div className=\"flex flex-col sm: flex-row gap-3\"    />;
+              <button;
+                onClick={this.handleRetry}"
+                className=\"flex-1 bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 transition-colors\"    />
+
+                Try Again;
+              </button>;
+              <button;
+                onClick={() =    /> window.location.reload()}"
+>>>>>>> origin/main
                 className=\"flex-1 bg-gray-200 text-gray-800 px-4 py-2 rounded-md hover: bg-gray-300 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2 transition-colors\">
 
                 Refresh Page;
               </button>;
             </div>;"
+<<<<<<< HEAD
             {process.env.NODE_ENV === 'development' && this.state.error && (
           <details className=\"mt-4 p-4 bg-gray-100 rounded-md\" />;"
                 <summary className=\"cursor-pointer font-medium text-gray-700\" />;
+=======
+            {process.env.NODE_ENV === 'development' && this.state.error && (<details className=\"mt-4 p-4 bg-gray-100 rounded-md\"    />;"
+                <summary className=\"cursor-pointer font-medium text-gray-700\"    />;
+>>>>>>> origin/main
                   Error Details (Development Only)</summary>;}"
-                <pre className=\"mt-2 text-xs text-gray-600 overflow-auto\" />;}
+                <pre className=\"mt-2 text-xs text-gray-600 overflow-auto\"    />;}
                   {this.state.error.stack}
                 </pre>;"
+<<<<<<< HEAD
                 {this.state.errorInfo && (
           <pre className=\"mt-2 text-xs text-gray-600 overflow-auto\" />;}
+=======
+                {this.state.errorInfo && (<pre className=\"mt-2 text-xs text-gray-600 overflow-auto\"    />;}
+>>>>>>> origin/main
                     {this.state.errorInfo.componentStack}
                   </pre>;
                 )}

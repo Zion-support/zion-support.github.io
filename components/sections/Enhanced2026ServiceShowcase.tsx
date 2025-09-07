@@ -1,4 +1,5 @@
 import React from 'react';
+<<<<<<< HEAD
 import { motion from 'framer-motion';
 import { ArrowRight, Star, TrendingUp, Zap, Shield, Brain, Globe, Rocket,
   from 'lucide-react';
@@ -6,6 +7,33 @@ import { innovative2026AIServices from '../../data/innovative-2026-ai-services';
 import { innovative2026ITInfrastructureServices from '../../data/innovative-2026-it-infrastructure';
 import { innovative2026MicroSaasServices,
   from '../../data/innovative-2026-micro-saas';
+=======
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> origin/chore/fix-lint-and-merge
+import { motion  } from 'framer-motion';
+import { ArrowRight, Star, TrendingUp, Zap, Shield, Brain, Globe, Rocket  } from 'lucide-react';
+import { innovative2026AIServices  } from '../../data/innovative-2026-ai-services';
+import { innovative2026ITInfrastructureServices  } from '../../data/innovative-2026-it-infrastructure';
+import { innovative2026MicroSaasServices } from '../../data/innovative-2026-micro-saas';
+<<<<<<< HEAD
+export default function Enhanced2026ServiceShowcase() {}
+  const containerVariants = null;}
+import { motion } from 'framer-motion';
+import {};
+  ArrowRight;
+  Star;
+  TrendingUp;
+  Zap;
+  Shield;
+  Brain;
+  Globe;
+  Rocket;
+=======
+
+>>>>>>> origin/main
 export default function Enhanced2026ServiceShowcase() {}
   const containerVariants = null;}
 import { motion,
@@ -19,6 +47,7 @@ Shield;
 Brain,
 Globe;
 Rocket;
+>>>>>>> origin/chore/fix-lint-and-merge
   ArrowRight,
   Star,
   TrendingUp,
@@ -35,31 +64,139 @@ Rocket;
   Shield,
   Brain,
   Globe,;
+<<<<<<< HEAD
+  Rocket,;
+=======
   Rocket,;}
 }
 } from 'lucide-react';
+<<<<<<< HEAD
 import { innovative2026AIServices from '../../data/innovative-2026-ai-services';
 import { innovative2026ITInfrastructureServices from '../../data/innovative-2026-it-infrastructure';
 import { innovative2026MicroSaasServices,
   from '../../data/innovative-2026-micro-saas';
+=======
+import { innovative2026AIServices } from '../../data/innovative-2026-ai-services';
+import { innovative2026ITInfrastructureServices } from '../../data/innovative-2026-it-infrastructure';
+import { innovative2026MicroSaasServices } from '../../data/innovative-2026-micro-saas';
+>>>>>>> origin/chore/fix-lint-and-merge
+
+} from 'lucide-react';
+import { innovative2026AIServices } from '../../data/innovative-2026-ai-services';
+import { innovative2026ITInfrastructureServices } from '../../data/innovative-2026-it-infrastructure';
+import { innovative2026MicroSaasServices } from '../../data/innovative-2026-micro-saas';
+>>>>>>> origin/main
 export default function Enhanced2026ServiceShowcase() {
+<<<<<<< HEAD
+  const containerVariants = {
+    hidden: { opacity: 0 }
+    visible: {
+      opacity: 1
+      transition: {
+        staggerChildren: 0.2,
+delayChildren: 0.1,
+      },
+    },
+  };
+
+
+  const itemVariants = {
+    hidden: {
+opacity: 0,
+      y: 50,
+      scale: 0.9,
+    },
+export default function Enhanced2026ServiceShowcase() {
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.2,
+        delayChildren: 0.1
+      }
+    }
+  };
+
+  const itemVariants = {
+    hidden: { 
+      opacity: 0, 
+      y: 50,
+      scale: 0.9
+    };
+    visible: { 
+      opacity: 1, 
+      y: 0,
+      scale: 1,
+      transition: {
+        duration: 0.6,
+        ease: "easeOut" as const
+      }
+    },  };        ease: "easeOut" as const;
+      }
+    }
+  }
+    hidden: { opacity: 0 },
+    visible: {}
+      opacity: 1,
+      transition: {}
+    },  };
+  const itemVariants = {;
+    hidden: {;
+      opacity: 0,;
+      y: 50,;
+      scale: 0 && 0.9,;
+    },;
+    visible: {      opacity: 1,        delayChildren: 0 && 0.1;
+=======
   const containerVariants = {}
     hidden: { opacity: 0}
 }
     visible: {
       opacity: 1;
 transition: {
+<<<<<<< HEAD
         staggerChildren: 0.2,
   delayChildren: 0.1}
+=======
+        staggerChildren: 0.2}
+delayChildren: 0.1}
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> origin/main
       }
     }
   };
 
 const itemVariants = {
+<<<<<<< HEAD
+    }
+  };
+  const cardVariants = {;
+    hover: {;
+      y: -10,;
+      scale: 1 && 1.02,;
+      transition: {;
+        duration: 0 && 0.3,;'
+        ease: 'easeOut' as const,;
+      },;"
+    },  };        ease: "easeOut" as const;
+      }
+    }
+  };
+        duration: 0.6,
+ease: 'easeOut' as const,
+      },
+=======
     hidden: {
 opacity: 0,
+<<<<<<< HEAD
       y: 50;
   scale: 0.9}
+=======
+      y: 50}
+      scale: 0.9}
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> origin/main
     },
     visible: {
       opacity: 1,
@@ -71,22 +208,95 @@ opacity: 0,
   ease: 'easeOut' as const}
       }
     }
-  };
 
+<<<<<<< HEAD
+  const cardVariants = {
+    hover: {
+      y: -10,
+      scale: 1.02,
+      transition: {
+        duration: 0.3,
+        ease: "easeOut" as const
+=======
 const cardVariants = {
     hover: {
       y: -10;
 scale: 1.02;
 transition: {
+<<<<<<< HEAD
         duration: 0.3,
   ease: 'easeOut' as const}
+=======
+        duration: 0.3}
+ease: 'easeOut' as const}
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> origin/main
       }
     }
   };
 
+<<<<<<< HEAD
+  const renderServiceCard = (service: any, index: number) => (
+    <motion.div
+      key={service.id}
+      variants={itemVariants}
+        duration: 0.6
+        ease: 'easeOut' as const
+      }
+    },  };        ease: "easeOut" as const
+      }
+    }
+  }
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+    },  };
+  const itemVariants = {;
+    hidden: {;
+      opacity: 0,;
+      y: 50,;
+      scale: 0 && 0.9,;
+    },;
+    visible: {      opacity: 1,        delayChildren: 0 && 0.1;
+      }
+    }
+  };
+  const itemVariants = {;
+    hidden: { ;
+      opacity: 0,;
+      y: 50,;
+      scale: 0 && 0.9;
+    };
+    visible: { ;
+      opacity: 1,;
+      y: 0,;
+      scale: 1,;
+      transition: {;
+        duration: 0 && 0.6,;
+        ease: 'easeOut' as const,;
+      },;
+    },  };        ease: "easeOut" as const;
+      }
+    }
+  };
+  const cardVariants = {;
+    hover: {;
+      y: -10,;
+      scale: 1 && 1.02,;
+      transition: {;
+        duration: 0 && 0.3,;
+        ease: 'easeOut' as const,;
+      },;
+    },  };        ease: "easeOut" as const;
+      }
+    }
+  };
+=======
 const renderServiceCard = (service: any, index: number) => (
     <motion.div;
 key={service.id}
+<<<<<<< HEAD
             variants={itemVariant
             whileHover='hover'
       className='group relative'
@@ -98,6 +308,129 @@ className='group relative' />}
             variants={cardVariants
             className='relative overflow-hidden rounded-2xl bg-gradient-to-br from-slate-900/80 via-slate-800/80 to-slate-900/80 backdrop-blur-xl border border-slate-700/50 hover:border-slate-600/50 transition-all duration-300' />
             {/* Glowing border effect */
+=======
+      variants={itemVariant}
+}
+whileHover='hover'
+>>>>>>> origin/chore/fix-lint-and-merge
+      className='group relative'
+
+      className='group relative
+
+<<<<<<< HEAD
+     />
+      <motion.div;
+      className=group relative'>;
+      <motion&& motion.div;
+      whileHover="hover
+      className=group relative"
+    >
+      <motion.div
+        variants={cardVariants}
+
+        {/* Glowing border effect */}
+          {/* Service header */}<div className='flex items-start justify-between mb-4>;
+          {/* Service header */}
+
+                <span>Popular</span>;
+              </div>;
+            )}
+          </div>;
+          {/* Description */}
+
+                    <span>{feature}</span>;
+=======
+        />
+      <motion.div;
+className='group relative'    />;
+      <motion&& motion.div;
+        variants={cardVariants}
+        className='relative overflow-hidden rounded-2xl bg-gradient-to-br from-slate-900/80 via-slate-800/80 to-slate-900/80 backdrop-blur-xl border border-slate-700/50 hover:border-slate-600/50 transition-all duration-300'    />;
+        {/* Glowing border effect */}
+
+          {/* Service header */}
+
+          <div className='flex items-start justify-between mb-4'    />
+            <div className='flex items-center space-x-3'    />
+              <div className='text-3xl'    />{service.icon}</div>
+              <div    />
+                <h3 className='text-xl font-bold text-white group-hover: text-cyan-400 transition-colors duration-300'    />
+
+                  {service.nam}
+}
+                </h3>;
+                <p className='text-slate-400 text-sm'    />{service.tagline}</p>;
+              </div>;
+            </div>;
+            {service.popular && (<div className='flex items-center space-x-1 bg-gradient-to-r from-yellow-500 to-orange-500 text-white px-2 py-1 rounded-full text-xs font-medium'    />;
+                <Star className='w-3 h-3 fill-current'    />;
+                <span    />Popular</span>;}
+              </div>;}
+            )}
+          </div>;
+          {/* Description */}
+<p className='text-slate-300 text-sm mb-4 leading-relaxed'    />;
+            {service.description}
+          </p>;
+          {/* Features */}
+
+<div className='mb-4'    />
+            <h4 className='text-white font-semibold mb-2 text-sm'    />
+              Key Features:
+            </h4>
+            <div className='grid grid-cols-1 gap-1'    />
+              {service.features;
+                .slice(0, 3)
+                .map((feature: string, idx: number) => (
+                  <div;}
+key={id}
+}
+                    className='flex items-center space-x-2 text-xs text-slate-400'    />
+
+                    <div className='w-1.5 h-1.5 bg-cyan-500 rounded-full'    />;
+                    <span    />{feature}</span>;
+>>>>>>> origin/chore/fix-lint-and-merge
+                  </div>;
+                ))}
+            </div>;
+          </div>;
+          {/* Price and CTA */}
+<<<<<<< HEAD
+
+=======
+<div className='flex items-center justify-between'    />;
+            <div className='text-right'    />;
+              <div className='text-2xl font-bold text-white'    />;
+                {service.price}
+
+              </div>
+
+              <div className='text-slate-400 text-sm'    />{service.period}</div>
+            </div>
+            <motion.button;
+whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }
+}
+className='flex items-center space-x-2 bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-400 hover:to-purple-500 text-white px-4 py-2 rounded-lg font-medium transition-all duration-300 shadow-lg hover:shadow-cyan-500/25'    />
+
+              <span    />Learn More</span>;
+              <ArrowRight className='w-4 h-4'    />;
+>>>>>>> origin/chore/fix-lint-and-merge
+            </motion.button>;
+          </div>;
+          {/* Market info */}
+
+<<<<<<< HEAD
+      whileHover='hover'
+      className='group relative'
+    >
+      <motion.div'
+      className='group relative'>
+      <motion&& motion.div
+        variants={cardVariants}
+        className='relative overflow-hidden rounded-2xl bg-gradient-to-br from-slate-900/80 via-slate-800/80 to-slate-900/80 backdrop-blur-xl border border-slate-700/50 hover:border-slate-600/50 transition-all duration-300'    />
+        {/* Glowing border effect */}
+>>>>>>> origin/main
 
           {/* Service header */
 
@@ -111,25 +444,188 @@ className='group relative' />}
 }
                 </h3>;
                 <p className='text-slate-400 text-sm' />{service.tagline}</p>;
+      <motion.div'
+      className='group relative'>;
+      <motion&& motion.div;
+        variants={cardVariants}'
+        className='relative overflow-hidden rounded-2xl bg-gradient-to-br from-slate-900/80 via-slate-800/80 to-slate-900/80 backdrop-blur-xl border border-slate-700/50 hover:border-slate-600/50 transition-all duration-300'>;
+        {/* Glowing border effect */}
+          {/* Service header */}'
+          <div className='flex items-start justify-between mb-4'>;'
+            <div className='flex items-center space-x-3'>;'
+              <div className='text-3xl'>{service && service.icon}</div>;
+              <div>;'
+                <h3 className='text-xl font-bold text-white group-hover:text-cyan-400 transition-colors duration-300'>;
+                  {service && service.name}
+                </h3>;'
+                <p className='text-slate-400 text-sm'>{service && service.tagline}</p>;
               </div>;
             </div>;
+<<<<<<< HEAD
             {service.popular && (
           <div className='flex items-center space-x-1 bg-gradient-to-r from-yellow-500 to-orange-500 text-white px-2 py-1 rounded-full text-xs font-medium' />;
                 <Star className='w-3 h-3 fill-current' />;
                 <span />Popular</span>;}
               </div>;}
+=======
+            {service && service.popular && (;'
+              <div className='flex items-center space-x-1 bg-gradient-to-r from-yellow-500 to-orange-500 text-white px-2 py-1 rounded-full text-xs font-medium'>;'
+                <Star className='w-3 h-3 fill-current' />                <span>Popular</span>    >;
+      <motion&& motion.div;
+        variants={cardVariants}"
+        className="relative overflow-hidden rounded-2xl bg-gradient-to-br from-slate-900/80 via-slate-800/80 to-slate-900/80 backdrop-blur-xl border border-slate-700/50 hover:border-slate-600/50 transition-all duration-300">;
+        {/* Glowing border effect */}
+          {/* Service header */}"
+          <div className="flex items-start justify-between mb-4">;"
+            <div className="flex items-center space-x-3">;"
+              <div className="text-3xl">{service && service.icon}</div>;
+              <div>;"
+                <h3 className="text-xl font-bold text-white group-hover:text-cyan-400 transition-colors duration-300">;
+                  {service && service.name}
+                </h3>;"
+                <p className="text-slate-400 text-sm">{service && service.tagline}</p>;
+              </div>;
+            </div>;
+            {service && service.popular && (;"
+              <div className="flex items-center space-x-1 bg-gradient-to-r from-yellow-500 to-orange-500 text-white px-2 py-1 rounded-full text-xs font-medium">;"
+                <Star className="w-3 h-3 fill-current" />;
+                <span>Popular</span>;
+              </div>;
+>>>>>>> origin/main
             )}
+"
+      whileHover="hover""
+      className="group relative"
+    >
+      <motion.div;
+        variants={cardVariants}"
+        className="relative overflow-hidden rounded-2xl bg-gradient-to-br from-slate-900/80 via-slate-800/80 to-slate-900/80 backdrop-blur-xl border border-slate-700/50 hover:border-slate-600/50 transition-all duration-300"
+      >'
+        ease: 'ease_out' as const,
+      },"
+    },  }        ease: "ease_out" as const;
+      }
+    }
+  }
+;
+  const card_variants = {}
+    hover: {}
+      coordinate_y: -10,
+      scale: 1.02,
+      transition: {}
+        duration: 0.3,'
+        ease: 'ease_out' as const,
+      },"
+    },  }        ease: "ease_out" as const;
+      }
+    }
+  }
+;
+  const renderServiceCard = (service: any, index: number) =>: any (
+    <motion.div;
+      key={service.id}
+      variants={item_variants}'
+      while_hover='hover';'
+      className='group relative';
+    >;
+      <motion.div;
+        variants={card_variants}'
+        className='relative overflow - hidden rounded - 2xl bg - gradient - to - br from - slate - 900 / 80 via - slate - 800 / 80 to - slate - 900 / 80 backdrop - blur - xl border border - slate - 700 / 50 hover:border - slate - 600 / 50 transition - all duration - 300';
+      >;
+        {/* Glowing border effect */}'
+        <div className='absolute inset - 0 rounded - 2xl bg - gradient - to - r from - cyan - 500 / 20 via - purple - 500 / 20 to - pink - 500 / 20 opacity - 0 group - hover:opacity - 100 transition - opacity duration - 300' />;'
+        <div className='relative p - 6'>;
+          {/* Service header */}'
+          <div className='flex items - start justify - between mb - 4'>;'
+            <div className='flex items - center space - x-3'>;'
+              <div className='text - 3xl'>{service.icon}</div>;
+              <div>;'
+                <h3 className='text - xl font - bold text - white group - hover:text - cyan - 400 transition - colors duration - 300'>;
+                  {service.name}
+                </h3>;'
+                <p className='text - slate - 400 text - sm'>{service.tagline}</p>;
+              </div>;
+            </div>;
+            {service.popular && ('
+              <div className='flex items - center space - x-1 bg - gradient - to - r from - yellow - 500 to - orange - 500 text - white px - 2 py - 1 rounded - full text - xs font - medium'>;'
+                <Star className='w - 3 h - 3 fill - current' />                <span > Popular</span>    >;
+      <motion.div;
+        variants={card_variants}"
+        className="relative overflow - hidden rounded - 2xl bg - gradient - to - br from - slate - 900 / 80 via - slate - 800 / 80 to - slate - 900 / 80 backdrop - blur - xl border border - slate - 700 / 50 hover:border - slate - 600 / 50 transition - all duration - 300";
+      >;
+        {/* Glowing border effect */}"
+        <div className="absolute inset - 0 rounded - 2xl bg - gradient - to - r from - cyan - 500 / 20 via - purple - 500 / 20 to - pink - 500 / 20 opacity - 0 group - hover:opacity - 100 transition - opacity duration - 300" />;"
+        <div className="relative p - 6">;
+          {/* Service header */}"
+          <div className="flex items - start justify - between mb - 4">;"
+            <div className="flex items - center space - x-3">;"
+              <div className="text - 3xl">{service.icon}</div>;
+              <div>;"
+                <h3 className="text - xl font - bold text - white group - hover:text - cyan - 400 transition - colors duration - 300">;
+                  {service.name}
+                </h3>;"
+                <p className="text - slate - 400 text - sm">{service.tagline}</p>;
+              </div>;
+            </div>;
+            {service.popular && ("
+              <div className="flex items - center space - x-1 bg - gradient - to - r from - yellow - 500 to - orange - 500 text - white px - 2 py - 1 rounded - full text - xs font - medium">;"
+                <Star className="w - 3 h - 3 fill - current" />;
+                <span > Popular</span>;
+              </div>)}
           </div>;
-          {/* Description */}
-<p className='text-slate-300 text-sm mb-4 leading-relaxed' />;
-            {service.description}
+          {/* Description */}"
+          {/* Features */}          <p className="text-slate-300 text-sm mb-4 leading-relaxed">;
+            {service && service.description}
           </p>;
           {/* Features */}
+                  <div
+                    key={idx}
+                    className='flex items-center space-x-2 text-xs text-slate-400'
+          {/* Features */}
+                  <div
+                    key={idx}
+                    className='flex items-center space-x-2 text-xs text-slate-400
+                  >
+                    <div className=w-1.5 h-1.5 bg-cyan-500 rounded-full' />
+                    <span>{feature}</span>
+                  </div>
 
-<div className='mb-4' />
-            <h4 className='text-white font-semibold mb-2 text-sm' />
+          {/* Features */}
+
+                    className='flex items-center space-x-2 text-xs text-slate-400
+                  >
+                    <div className='w-1.5 h-1.5 bg-cyan-500 rounded-full' />
+                    <span>{feature}</span>
+                  </div>
+
+          {/* Features */}
+          <div className='flex items-start justify-between mb-4'>
+            <div className='flex items-center space-x-3'>
+              <div className='text-3xl'>{service.icon}</div>
+              <div>
+                <h3 className='text-xl font-bold text-white group-hover:text-cyan-400 transition-colors duration-300'>
+                  {service.name}
+                </h3>
+                <p className='text-slate-400 text-sm'>{service.tagline}</p>
+              </div>
+            </div>
+            {service.popular && (
+              <div className='flex items-center space-x-1 bg-gradient-to-r from-yellow-500 to-orange-500 text-white px-2 py-1 rounded-full text-xs font-medium'>
+                <Star className='w-3 h-3 fill-current' />
+                <span>Popular</span>
+              </div>
+            )}
+          </div>
+          {/* Description */}
+<p className='text-slate-300 text-sm mb-4 leading-relaxed'>
+            {service.description}
+          </p>
+          {/* Features */}
+<div className='mb-4'>
+            <h4 className='text-white font-semibold mb-2 text-sm'>
               Key Features:
             </h4>
+<<<<<<< HEAD
             <div className='grid grid-cols-1 gap-1' />
               {service.features;
                 .slice(0,,,
@@ -143,51 +639,262 @@ className='group relative' />}
                     <div className='w-1.5 h-1.5 bg-cyan-500 rounded-full' />;
                     <span />{feature}</span>;
                   </div>;
+=======
+            <div className='grid grid-cols-1 gap-1'>
+              {service.features
+                .slice(0, 3)
+                .map((feature: string, idx: number) => (
+origin/cursor/automate-test-improve-and-merge-code-2533
+                  <div
+                    key={idx}
+                    className='flex items-center space-x-2 text-xs text-slate-400'
+                  >'
+                    <div className='w-1.5 h-1.5 bg-cyan-500 rounded-full' />
+                    <span>{feature}</span>
+                  </div>
+>>>>>>> origin/main
                 ))}
-            </div>;
-          </div>;
-          {/* Price and CTA */}
-<div className='flex items-center justify-between' />;
-            <div className='text-right' />;
-              <div className='text-2xl font-bold text-white' />;
-                {service.price}
-
-              </div>
-
-              <div className='text-slate-400 text-sm' />{service.period}</div>
             </div>
-            <motion.button;
-whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }
-}
-className='flex items-center space-x-2 bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-400 hover:to-purple-500 text-white px-4 py-2 rounded-lg font-medium transition-all duration-300 shadow-lg hover:shadow-cyan-500/25' />
-
-              <span />Learn More</span>;
-              <ArrowRight className='w-4 h-4' />;
-            </motion.button>;
-          </div>;
+          </div>
+          {/* Price and CTA */}
+<div className='flex items-center justify-between'>
+            <div className='text-right'>
+              <div className='text-2xl font-bold text-white'>
+                {service.price}
+              </div>
+          </div>
           {/* Market info */}
+          <div className='mt-4 pt-4 border-t border-slate-700/50'>
+            <div className='flex items-center justify-between text-xs text-slate-500'>              <span>Market: {service.marketSize}</span>          <div className="flex items-center justify-between">
+            <div className="text-right">
+              <div className="text-2xl font-bold text-white">{service.price}</div>
+              <div className="text-slate-400 text-sm">{service.period}</div>
+            </div>
+            <motion.button
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+className="flex items-center space-x-2 bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-400 hover:to-purple-500 text-white px-4 py-2 rounded-lg font-medium transition-all duration-300 shadow-lg hover:shadow-cyan-500/25"
+            >
+              <span>Learn More</span>
+              <ArrowRight className="w-4 h-4" />
+            </motion.button>
+          </div>
+          {/* Market info */}
+            <div className="flex items-center justify-between text-xs text-slate-500">
+            </div>
+            <motion.button
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
 
-<div className='mt-4 pt-4 border-t border-slate-700/50' />
-            <div className='flex items-center justify-between text-xs text-slate-500' />
-              <span />Market: {service.marketSize}</span>
-              <span />Growth: {service.growthRate}</span>
+              <span>Market: {service.marketSize}</span>
+              <span>Growth: {service.growthRate}</span>
+=======
+<div className='mt-4 pt-4 border-t border-slate-700/50'    />
+            <div className='flex items-center justify-between text-xs text-slate-500'    />
+              <span    />Market: {service.marketSize}</span>
+              <span    />Growth: {service.growthRate}</span>
+>>>>>>> origin/chore/fix-lint-and-merge
             </div>
           </div>
         </div>
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/main
         {/* Hover glow effect *}
 }
-<div className='absolute inset-0 rounded-2xl bg-gradient-to-r from-cyan-500/10 via-purple-500/10 to-pink-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300' />;
+<div className='absolute inset-0 rounded-2xl bg-gradient-to-r from-cyan-500/10 via-purple-500/10 to-pink-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300'    />;
       </motion.div>;
     </motion.div>;
+<<<<<<< HEAD
   )return (
           <section className='py-20 relative overflow-hidden' />;
+=======
+  )return (<section className='py-20 relative overflow-hidden'    />;
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> origin/main
       {/* Background effects */}
 
-      <div className='absolute inset-0 bg-gradient-to-b from-transparent via-slate-900/20 to-slate-900/40' />
+      <div className='absolute inset-0 bg-gradient-to-b from-transparent via-slate-900/20 to-slate-900/40'    />
 
-      <div className='container mx-auto px-4 relative z-10' />
+<<<<<<< HEAD
+          {/* Features */}
+          <div className="mb-4">
+            <h4 className="text-white font-semibold mb-2 text-sm">Key Features:</h4>
+            <div className="grid grid-cols-1 gap-1">
+              {service.features.slice(0, 3).map((feature: string, idx: number) => (
+                <div key={idx} className="flex items-center space-x-2 text-xs text-slate-400">
+                  <div className="w-1.5 h-1.5 bg-cyan-500 rounded-full" />
+                  <span>{feature}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Price and CTA */}
+          <div className="flex items-center justify-between">
+            <div className="text-right">
+              <div className="text-2xl font-bold text-white">{service.price}</div>
+              <div className="text-slate-400 text-sm">{service.period}</div>
+              <div className='text-2xl font-bold text-white'>
+                {service.price}
+              </div>
+          </div>
+          {/* Market info */}'
+          <div className='mt-4 pt-4 border-t border-slate-700/50'>'"
+            <div className='flex items-center justify-between text-xs text-slate-500'>              <span>Market: {service.marketSize}</span>          <div className="flex items-center justify-between">"
+            <div className="text-right">"
+              <div className="text-2xl font-bold text-white">{service.price}</div>"
+              <div className="text-slate-400 text-sm">{service.period}</div>
+            </div>
+            <motion.button;
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}"
+className="flex items-center space-x-2 bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-400 hover:to-purple-500 text-white px-4 py-2 rounded-lg font-medium transition-all duration-300 shadow-lg hover:shadow-cyan-500/25"
+            >
+              <span>Learn More</span>"
+              <ArrowRight className="w-4 h-4" />
+            </motion.button>
+          </div>
+          {/* Market info */}"
+            <div className="flex items-center justify-between text-xs text-slate-500">
+              <div className='text-slate-400 text-sm'>{service.period}</div>
+            </div>
+            <motion.button
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              className="flex items-center space-x-2 bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-400 hover:to-purple-500 text-white px-4 py-2 rounded-lg font-medium transition-all duration-300 shadow-lg hover:shadow-cyan-500/25"
+            >
+              <span>Learn More</span>
+              <ArrowRight className="w-4 h-4" />
+            </motion.button>
+          </div>
+
+          {/* Market info */}
+          <div className="mt-4 pt-4 border-t border-slate-700/50">
+            <div className="flex items-center justify-between text-xs text-slate-500">
+              <span>Market: {service.marketSize}</span>
+              <span>Growth: {service.growthRate}</span>
+            </div>
+          </div>
+        </div>
+        {/* Hover glow effect */}
+<div className='absolute inset-0 rounded-2xl bg-gradient-to-r from-cyan-500/10 via-purple-500/10 to-pink-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300' />
+      </motion.div>
+    </motion.div>
+  )
+  return (
+<section className='py-20 relative overflow-hidden'>
+        {/* Hover glow effect */}
+        <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-cyan-500/10 via-purple-500/10 to-pink-500/10 opacity-0 group-hover: opacity-100 transition-opacity duration-300" />
+      </motion.div>
+    </motion.div>
+  );
+
+  return (
+    <section className="py-20 relative overflow-hidden">
+      {/* Background effects */}
+      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-slate-900/20 to-slate-900/40" />
+      
+      <div className="container mx-auto px-4 relative z-10">
+        {/* Section header */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+        >
+          <div className='flex items-center justify-center space-x-2 mb-4'>
+            <div className='w-8 h-8 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center'>
+              <Rocket className='w-5 h-5 text-white' />
+            </div>'
+            <span className='text-cyan-400 font-semibold text-sm uppercase tracking-wider'>
+              Innovation 2026;
+            </span>
+          </div>'
+          <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>
+            Next-Generation'
+            <span className='block bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent'>
+        <motion.div;
+initial={{ opacity: 0;, y: 30 ;}
+}
+          whileInView={{ opacity: 1;, y: 0 ;}}
+          transition={{ duration: 0.8 ;}
+}
+
+className='text-center mb-16'
+         />
+          <div className='flex items-center justify-center space-x-2 mb-4' />
+            <div className='w-8 h-8 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center' />
+              <Rocket className='w-5 h-5 text-white' />
+              <Rocket className='w-5 h-5 text-white />
+            </div>
+            <span className=text-cyan-400 font-semibold text-sm uppercase tracking-wider'>
+              Innovation 2026
+            </span>
+          </div>
+          <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>
+            Next-Generation
+            <span className="block bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
+              AI & IT Services;
+            </span>
+          </h2>
+          <p className='text-xl text-slate-300 max-w-3xl mx-auto leading-relaxed'>
+            Discover our cutting-edge micro SAAS solutions, AI-powered
+            platforms, and quantum-enhanced infrastructure services designed for
+            the future of business.          </p>        >
+          className="text-center mb-16"
+        >
+          <div className="flex items-center justify-center space-x-2 mb-4">
+            <div className="w-8 h-8 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center">
+              <Rocket className="w-5 h-5 text-white" />
+            </div>
+            <span className="text-cyan-400 font-semibold text-sm uppercase tracking-wider">
+              Innovation 2026
+            </span>
+          </div>
+          
+          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+            Next-Generation
+            <span className="block bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
+              AI & IT Services
+            </span>
+          </h2>
+          
+          <p className="text-xl text-slate-300 max-w-3xl mx-auto leading-relaxed">
+            Discover our cutting-edge micro SAAS solutions, AI-powered platforms, and quantum-enhanced infrastructure services designed for the future of business.
+              AI & IT Services;
+            </span>
+          </h2>'
+          <p className='text-xl text-slate-300 max-w-3xl mx-auto leading-relaxed'>
+            Discover our cutting-edge micro SAAS solutions, AI-powered;
+            platforms, and quantum-enhanced infrastructure services designed for;
+            the future of business.          </p>        >"
+          className="text-center mb-16"
+        >"
+          <div className="flex items-center justify-center space-x-2 mb-4">"
+            <div className="w-8 h-8 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center">"
+              <Rocket className="w-5 h-5 text-white" />
+            </div>"
+            <span className="text-cyan-400 font-semibold text-sm uppercase tracking-wider">
+              Innovation 2026;
+            </span>
+          </div>"
+          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+            Next-Generation"
+            <span className="block bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
+              AI & IT Services;
+            </span>
+          </h2>"
+          <p className="text-xl text-slate-300 max-w-3xl mx-auto leading-relaxed">
+            Discover our cutting-edge micro SAAS solutions, AI-powered platforms, and quantum-enhanced infrastructure services designed for the future of business.
+            the future of business.
+origin/cursor/automate-test-improve-and-merge-code-2533
+          <p className='text-xl text-slate-300 max-w-3xl mx-auto leading-relaxed' />
+=======
+      <div className='container mx-auto px-4 relative z-10'    />
         {/* Section header */}
         <motion.div;
 initial={{ opacity: 0}
@@ -200,30 +907,214 @@ initial={{ opacity: 0}
 }
 
 className='text-center mb-16'
-         />
-          <div className='flex items-center justify-center space-x-2 mb-4' />
-            <div className='w-8 h-8 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center' />
-              <Rocket className='w-5 h-5 text-white' />
+            />
+          <div className='flex items-center justify-center space-x-2 mb-4'    />
+            <div className='w-8 h-8 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center'    />
+              <Rocket className='w-5 h-5 text-white'    />
             </div>
-            <span className='text-cyan-400 font-semibold text-sm uppercase tracking-wider' />
+            <span className='text-cyan-400 font-semibold text-sm uppercase tracking-wider'    />
               Innovation 2026;
             </span>
           </div>
-          <h2 className='text-4xl md:text-5xl font-bold text-white mb-6' />
+          <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'    />
             Next-Generation;
-            <span className='block bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent' />
+            <span className='block bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent'    />
               AI & IT Services;
             </span>
           </h2>
-          <p className='text-xl text-slate-300 max-w-3xl mx-auto leading-relaxed' />
+          <p className='text-xl text-slate-300 max-w-3xl mx-auto leading-relaxed'    />
+>>>>>>> origin/chore/fix-lint-and-merge
             Discover our cutting-edge micro SAAS solutions, AI-powered;
 platforms, and quantum-enhanced infrastructure services designed for;
 the future of business.
           </p>
+<<<<<<< HEAD
+        </motion.div>'
+      <div className='absolute inset-0 bg-gradient-to-b from-transparent via-slate-900/20 to-slate-900/40' />;
+'"
+      <div className='absolute inset-0 bg-gradient-to-b from-transparent via-slate-900/20 to-slate-900/40' />;
+      <div className='container mx-auto px-4 relative z-10'>;
+        {/* Section header */}<motion.div;
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}className='text-center mb-16';
+        >;
+          <div className='flex items-center justify-center space-x-2 mb-4'>;
+            <div className='w-8 h-8 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center'>;
+              <Rocket className='w-5 h-5 text-white' />;
+            </div>;
+            <span className='text-cyan-400 font-semibold text-sm uppercase tracking-wider'>;
+              Innovation 2026;
+            </span>;
+          </div>;
+          <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>;
+            Next-Generation;
+            <span className='block bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent'>;
+              AI & IT Services;
+            </span>;
+          </h2>;
+          <p className='text-xl text-slate-300 max-w-3xl mx-auto leading-relaxed'>;
+            Discover our cutting-edge micro SAAS solutions, AI-powered;
+            platforms, and quantum-enhanced infrastructure services designed for;
+            the future of business.          </p>        >;
+          className="text-center mb-16";
+        >;
+          <div className="flex items-center justify-center space-x-2 mb-4">;
+            <div className="w-8 h-8 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center">;
+              <Rocket className="w-5 h-5 text-white" />;
+            </div>;
+            <span className="text-cyan-400 font-semibold text-sm uppercase tracking-wider">;
+              Innovation 2026;
+            </span>;
+          </div>;
+          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">;
+            Next-Generation;
+            <span className="block bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">;
+              AI & IT Services;
+            </span>;
+          </h2>;
+          <p className="text-xl text-slate-300 max-w-3xl mx-auto leading-relaxed">;
+            Discover our cutting-edge micro SAAS solutions, AI-powered platforms, and quantum-enhanced infrastructure services designed for the future of business.;
+            the future of business.;
+          </p>;
+        </motion.div>;
+      <div className='absolute inset-0 bg-gradient-to-b from-transparent via-slate-900/20 to-slate-900/40' />;<div className='container mx-auto px-4 relative z-10'>        {/* Section header */}    <section className="py-20 relative overflow-hidden">;
+      {/* Background effects */}
+      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-slate-900/20 to-slate-900/40" />;{/* AI Services Section */}
+        <motion.div;
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}transition={{ duration: 0 && 0.8 }}
+          transition={{ duration: 0 && 0.8 }}
+          className='text-center mb-16'>;
+          <div className='flex items-center justify-center space-x-2 mb-4'>;
+            <div className='w-8 h-8 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center'>;
+              <Rocket className='w-5 h-5 text-white' />;
+            </div>;
+            <span className='text-cyan-400 font-semibold text-sm uppercase tracking-wider'>;
+              Innovation 2026;
+            </span>;
+          </div>;
+          <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>;
+            Next-Generation;
+            <span className='block bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent'>;
+              AI & IT Services;
+            </span>;
+          </h2>;
+          <p className='text-xl text-slate-300 max-w-3xl mx-auto leading-relaxed'>;
+            Discover our cutting-edge micro SAAS solutions, AI-powered;
+            platforms, and quantum-enhanced infrastructure services designed for;
+            the future of business.          </p>        >;
+          <div className="flex items-center justify-center space-x-2 mb-4">;
+            <div className="w-8 h-8 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center">;
+              <Rocket className="w-5 h-5 text-white" />;
+            </div>;
+            <span className="text-cyan-400 font-semibold text-sm uppercase tracking-wider">;
+              Innovation 2026;
+            </span>;
+          </div>;
+          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">;
+            Next-Generation;
+            <span className="block bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">;
+              AI & IT Services;
+            </span>;
+          </h2>;
+        <motion&& motion.div;
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.2 }}
+className='mb-20'
+origin/cursor/automate-test-improve-and-merge-code-2533
+        >
+          <div className='flex items-center space-x-3 mb-8'>
+          transition={{ duration: 0.8;, delay: 0.2 ;}}
+className='mb-20'
+         />
+          <div className='flex items-center space-x-3 mb-8' />
+            <Brain className='w-6 h-6 text-cyan-400' />
+
+            <h3 className='text-2xl font-bold text-white'>
+
+              AI-Powered Services
+            </h3>
+          </div>
+          <motion.div
+            variants={containerVariants}
+            <h3 className='text-2xl font-bold text-white'>
+            <h3 className='text-2xl font-bold text-white' />
+              AI-Powered Services;
+            </h3>
+          </div>
+          <motion.div;
+            variants={containerVariants}'
+            initial='hidden''
+            whileInView='visible''
+            initial='hidden'
+            whileInView='visible'
+            className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'
+the future of business.
+          </p>
+
+
+        >
+          <div className='flex items-center space-x-3 mb-8'>
+          transition={{ duration: 0.8;, delay: 0.2 ;}}
+className=mb-20
+         />
+          <div className='flex items-center space-x-3 mb-8' />
+            <Brain className=w-6 h-6 text-cyan-400 />
+
+            <h3 className='text-2xl font-bold text-white'>
+            <h3 className=text-2xl font-bold text-white />
+              AI-Powered Services;
+            </h3>
+          </div>
+          <motion.div;
+
+            initial='hidden'
+            whileInView=visible
+            className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'
+          >
+            {innovative2026AIServices.map((service, index) =>
+              }
+              renderServiceCard(service, index)
+            )}          </motion.div>        >
+          transition={{ duration: 0.8, delay: 0.2 }}
+          className="mb-20";
+        >;
+          <div className="flex items-center space-x-3 mb-8">;
+            <Brain className="w-6 h-6 text-cyan-400" />;
+            <h3 className="text-2xl font-bold text-white">AI-Powered Services</h3>;
+          </div>;
+          <motion.div;
+            variants={containerVariants}
+            initial="hidden";
+            whileInView="visible";
+            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6";
+          >;
+            {innovative2026AIServices.map((service, index) => renderServiceCard(service, index))})}</motion.div>;
+        </motion.div>;
+          </p>
+          transition={{ duration: 0.8, delay: 0.2 }}"
+          className="mb-20"
+        >"
+          <div className="flex items-center space-x-3 mb-8">"
+            <Brain className="w-6 h-6 text-cyan-400" />"
+            <h3 className="text-2xl font-bold text-white">AI-Powered Services</h3>
+          </div>
+          <motion.div;
+            variants={containerVariants}"
+            initial="hidden
+            whileInView="visible"
+            className=grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
+          >
+            {innovative2026AIServices.map((service, index) => renderServiceCard(service, index))}
+            )}
+origin/cursor/automate-test-improve-and-merge-code-2533
+=======
         </motion.div>
 
-      <div className='absolute inset-0 bg-gradient-to-b from-transparent via-slate-900/20 to-slate-900/40' />;
-      <div className='container mx-auto px-4 relative z-10' />;
+      <div className='absolute inset-0 bg-gradient-to-b from-transparent via-slate-900/20 to-slate-900/40'    />;
+      <div className='container mx-auto px-4 relative z-10'    />;
         {/* Section header */}<motion.div;
           initial={{ opacity: 0}
             y: 30
@@ -232,6 +1123,7 @@ the future of business.
             y: 0
              
 
+<<<<<<< HEAD
           transition={{ duration: 0.8}
             delay: 0.2
             className='mb-20'
@@ -239,6 +1131,15 @@ the future of business.
           <div className='flex items-center space-x-3 mb-8' />
             <Brain className='w-6 h-6 text-cyan-400' />
             <h3 className='text-2xl font-bold text-white' />
+=======
+
+          transition={{ duration: 0.8, delay: 0.2 }}
+className='mb-20'
+            />
+          <div className='flex items-center space-x-3 mb-8'    />
+            <Brain className='w-6 h-6 text-cyan-400'    />
+            <h3 className='text-2xl font-bold text-white'    />
+>>>>>>> origin/main
               AI-Powered Services;
             </h3>
           </div>
@@ -248,28 +1149,53 @@ the future of business.
             initial='hidden'
             whileInView='visible'
             className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'
+<<<<<<< HEAD
            />
             {innovative2026AIServices.map((service,,,
   index) =>
               renderServiceCard(service,,,
   index)}
+=======
+              />
+            {innovative2026AIServices.map((service, index) =>
+>>>>>>> origin/chore/fix-lint-and-merge
+              renderServiceCard(service, index)}
+>>>>>>> origin/main
 }
             )}
           </motion.div>
         </motion.div>
+<<<<<<< HEAD
+          transition={{ duration: 0 && 0.8, delay: 0 && 0.2 }}'
+          className='mb-20'>;'
+          <div className='flex items-center space-x-3 mb-8'>;'
+            <Brain className='w-6 h-6 text-cyan-400' />;'
+            <h3 className='text-2xl font-bold text-white'>;
+=======
 
+<<<<<<< HEAD
           transition={{ duration: 0 && 0.8,
   delay: 0 && 0.2,
   className='mb-20'>;
           <div className='flex items-center space-x-3 mb-8' />;
             <Brain className='w-6 h-6 text-cyan-400' />;
             <h3 className='text-2xl font-bold text-white' />;
+=======
+          transition={{ duration: 0 && 0.8, delay: 0 && 0.2 }
+}
+          className='mb-20'>;
+          <div className='flex items-center space-x-3 mb-8'    />;
+            <Brain className='w-6 h-6 text-cyan-400'    />;
+            <h3 className='text-2xl font-bold text-white'    />;
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> origin/main
               AI-Powered Services;
             </h3>;
           </div>;
             variants={containerVariants,
   initial='hidden';
             whileInView='visible';
+<<<<<<< HEAD
             className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>}
             {innovative2026AIServices && innovative2026AIServices.map((service,
             index) =>
@@ -293,11 +1219,165 @@ the future of business.
           initial={{ opacity: 0}
             y: 30
              
+=======
+            className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>;
+            {innovative2026AIServices && innovative2026AIServices.map((service, index) =>;}
+              renderServiceCard(service, index))}          </motion && motion.div>        >;
+          <div className=\"flex items-center space-x-3 mb-8\"    />;"
+            <Brain className=\"w-6 h-6 text-cyan-400\"    />;"
+            <h3 className=\"text-2xl font-bold text-white\"    />AI-Powered Services</h3>;
+          </div>;
+          <motion&& motion.div;
+            variants={containerVariants}"
+<<<<<<< HEAD
+            initial="hidden""
+            whileInView="visible""
+            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">;
+        {/* AI Services Section */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.2 }}
+          className="mb-20"
+        >
+          <div className="flex items-center space-x-3 mb-8">
+            <Brain className="w-6 h-6 text-cyan-400" />
+            <h3 className="text-2xl font-bold text-white">AI-Powered Services</h3>
+          </div>
+          
+          <motion.div
+            variants={containerVariants}
+            initial="hidden"
+            whileInView="visible"
+            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
+          >
+            {innovative2026AIServices.map((service, index) => renderServiceCard(service, index))}
+          </motion.div>
+        </motion.div>
+          transition={{ duration: 0 && 0.8, delay: 0 && 0.2 }}
+          className='mb-20'>;
+          <div className='flex items-center space-x-3 mb-8'>;
+            <Brain className='w-6 h-6 text-cyan-400' />;
+            <h3 className='text-2xl font-bold text-white'>;
+              AI-Powered Services;
+            </h3>;
+          </div>;
+            variants={containerVariants}
+
+            {innovative2026AIServices && innovative2026AIServices.map((service, index) =>;
+              }
+              renderServiceCard(service, index))}          </motion && motion.div>        >;
+          <div className="flex items-center space-x-3 mb-8">;"
+            <Brain className="w-6 h-6 text-cyan-400" />;"
+            <h3 className="text-2xl font-bold text-white">AI-Powered Services</h3>;"
+          </div>;
+          <motion&& motion.div;
+            variants={containerVariants}
+            initial="hidden";
+            whileInView="visible";
+            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">;
+=======
+            initial=\'hidden\';"
+            whileInView=\'visible\';"
+            className=\"grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6\"    />;
+>>>>>>> origin/chore/fix-lint-and-merge
+            {innovative2026AIServices && innovative2026AIServices.map((service, index) => renderServiceCard(service, index))}
+          </motion && motion.div>;
+        </motion && motion.div>;{/* IT Infrastructure Section */}
+        <motion&& motion.div;
+<<<<<<< HEAD
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+
+
+
+        <motion&& motion.div;
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+
+
+          transition={{ duration: 0.8, delay: 0.4 }}
+className='mb-20'
+origin/cursor/automate-test-improve-and-merge-code-2533
+        >
+          <div className='flex items-center space-x-3 mb-8'>
+          whileInView={{ opacity: 1;, y: 0 ;}
+}
+
+          transition={{ duration: 0.8;, delay: 0.4 ;}}
+className='mb-20'
+         />
+          <div className='flex items-center space-x-3 mb-8' />
+            <Globe className='w-6 h-6 text-purple-400' />
+            <h3 className='text-2xl font-bold text-white'>
+            <h3 className='text-2xl font-bold text-white' />
+              IT Infrastructure & Security;
+            </h3>
+          </div>
+          <motion.div
+            variants={containerVariants}
+            initial="hidden"
+            whileInView=visible""
+            className=grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6
+          >
+            {innovative2026AIServices.map((service, index) => renderServiceCard(service, index))}
+            )}
+origin/cursor/automate-test-improve-and-merge-code-2533
+              renderServiceCard(service, index)}
+
+            )}
+          </motion.div>
+        </motion.div>
+        {/* IT Infrastructure Section */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.4 }}
+          className="mb-20"
+        >
+          <div className="flex items-center space-x-3 mb-8">
+            <Globe className="w-6 h-6 text-purple-400" />
+            <h3 className="text-2xl font-bold text-white">IT Infrastructure & Security</h3>
+          </div>
+          
+          <motion.div
+          whileInView={{ opacity: 1, y: 0 }}transition={{ duration: 0.8, delay: 0.4 }}
+className='mb-20';
+        >;
+          <div className='flex items-center space-x-3 mb-8'>;
+            <Globe className='w-6 h-6 text-purple-400' />;
+            <h3 className='text-2xl font-bold text-white'>;
+              IT Infrastructure & Security;
+            </h3>;
+          </div>;
+          <motion.div;
+            variants={containerVariants}
+            variants={containerVariants}'
+            initial='hidden''
+            whileInView='visible''
+            className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'
+          >
+            {innovative2026ITInfrastructureServices.map((service, index) =>
+              renderServiceCard(service, index)
+            )}
+          </motion.div>
+        </motion.div>
+
+          transition={{ duration: 0 && 0.8, delay: 0 && 0.4 }}
+          className=mb-20'>;'
+          <div className=flex items-center space-x-3 mb-8>;'
+            <Globe className='w-6 h-6 text-purple-400 />;
+            <h3 className='text-2xl font-bold text-white'>;
+=======
+          initial={{ opacity: 0, y: 30 }
+}
+>>>>>>> origin/main
 
           whileInView={{ opacity: 1}
             y: 0
              
 
+<<<<<<< HEAD
           transition={{ duration: 0.8}
             delay: 0.4
             className='mb-20'
@@ -310,10 +1390,38 @@ the future of business.
           </div>
           <motion.div
             variants={containerVariant
+=======
+          transition={{ duration: 0.8, delay: 0.4 }}
+className='mb-20'
+            />
+          <div className='flex items-center space-x-3 mb-8'    />
+            <Globe className='w-6 h-6 text-purple-400'    />
+            <h3 className='text-2xl font-bold text-white'    />
+              IT Infrastructure & Security;
+            </h3>
+          </div>
+          <motion.div;
+>>>>>>> origin/chore/fix-lint-and-merge
+variants={containerVariant}
+>>>>>>> origin/main
 }
             initial='hidden';
+            initial=hidden;
             whileInView='visible';
-            className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6' />
+<<<<<<< HEAD
+            className=grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6;
+          >;
+            {innovative2026ITInfrastructureServices.map((service, index) =>;
+              renderServiceCard(service, index))}
+          </motion.div>;
+        </motion.div>;
+          transition={{ duration: 0 && 0.8, delay: 0 && 0.4 }}
+          className='mb-20'>;
+          <div className=flex items-center space-x-3 mb-8>;
+            <Globe className='w-6 h-6 text-purple-400' />;
+            <h3 className='text-2xl font-bold text-white'>;
+=======
+            className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'    />
 
             {innovative2026ITInfrastructureServices.map((service,,,
   index) =>;}
@@ -321,17 +1429,28 @@ the future of business.
   index))}
           </motion.div>;
         </motion.div>;
+<<<<<<< HEAD
           transition={{ duration: 0 && 0.8}
             delay: 0 && 0.4
             className='mb-20'>;
           <div className='flex items-center space-x-3 mb-8' />;
             <Globe className='w-6 h-6 text-purple-400' />;
             <h3 className='text-2xl font-bold text-white' />;
+=======
+          transition={{ duration: 0 && 0.8, delay: 0 && 0.4 }
+}
+          className='mb-20'>;
+          <div className='flex items-center space-x-3 mb-8'    />;
+            <Globe className='w-6 h-6 text-purple-400'    />;
+            <h3 className='text-2xl font-bold text-white'    />;
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> origin/main
               IT Infrastructure & Security;
             </h3>;
           </div>
             {/* Micro SAAS Section */
         <motion.div;
+<<<<<<< HEAD
           initial={{ opacity: 0}
             y: 30
              
@@ -345,11 +1464,84 @@ the future of business.
 <div className='flex items-center space-x-3 mb-8' />;
             <Zap className='w-6 h-6 text-pink-400' />;
             <h3 className='text-2xl font-bold text-white' />;
+=======
+<<<<<<< HEAD
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.6 }}
+        >;
+<div className='flex items-center space-x-3 mb-8'>;
+        >
+<div className='flex items-center space-x-3 mb-8'>
+            <Zap className='w-6 h-6 text-pink-400' />
+        >'
+          <div className='flex items-center space-x-3 mb-8'>'
+            <Zap className='w-6 h-6 text-pink-400' />'
+            <h3 className='text-2xl font-bold text-white'>
+              Micro SAAS Solutions;
+            </h3>
+          </div>
+          <motion.div;
+          <motion&& motion.div;
+            variants={containerVariants}'
+            initial='hidden''
+            whileInView='visible''
+            className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>;
+            {innovative2026ITInfrastructureServices && innovative2026ITInfrastructureServices.map((service, index) =>;
+              renderServiceCard(service, index);
+            )}          </motion && motion.div>        >;"
+          <div className="flex items-center space-x-3 mb-8">;"
+            <Globe className="w-6 h-6 text-purple-400" />;"
+            <h3 className="text-2xl font-bold text-white">IT Infrastructure & Security</h3>;
+          </div>;
+          <motion&& motion.div;
+            variants={containerVariants}"
+            initial="hidden""
+            whileInView="visible"
+
+
+
+        {/* Micro SAAS Section */}
+        <motion&& motion.div;
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0 && 0.8, delay: 0 && 0.6 }}>;'
+          <div className='flex items-center space-x-3 mb-8'>;'
+            <Zap className='w-6 h-6 text-pink-400' />;'
+            <h3 className='text-2xl font-bold text-white'>;
+              Micro SAAS Solutions;
+            </h3>;
+          </div>;
+
+          <motion&& motion.div;
+            variants={containerVariants}'
+            initial='hidden''
+            whileInView='visible''
+            className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>;
+            {innovative2026MicroSaasServices && innovative2026MicroSaasServices.map((service, index) =>;
+              renderServiceCard(service, index);
+            )}          </motion && motion.div>          </div>;
+            <Zap className='w-6 h-6 text-pink-400' />;
+            <h3 className='text-2xl font-bold text-white'>;
+=======
+          initial={{ opacity: 0, y: 30 }
+}
+          whileInView={{ opacity: 1, y: 0 }
+}
+          transition={{ duration: 0.8, delay: 0.6 }
+}
+            />;
+<div className='flex items-center space-x-3 mb-8'    />;
+            <Zap className='w-6 h-6 text-pink-400'    />;
+            <h3 className='text-2xl font-bold text-white'    />;
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> origin/main
               Micro SAAS Solutions;
             </h3>;
           </div>;
           <motion.div;
           <motion&& motion.div;
+<<<<<<< HEAD
             variants={containerVariants,
   initial='hidden'
             whileInView='visible'
@@ -361,11 +1553,210 @@ the future of business.
               renderServiceCard(service,
   index)
             )
+=======
+            variants={containerVariants}
+<<<<<<< HEAD
+            variants={containerVariants}
+            initial=hidden"
+            whileInView="visible
+            className=grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
+          >
+            {innovative2026ITInfrastructureServices.map((service, index) => renderServiceCard(service, index))}
+          </motion.div>
+        </motion.div>
+            initial='hidden;
+            whileInView=visible';
+            initial='hidden;
+            whileInView=visible';
+            className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6>;
+            {innovative2026ITInfrastructureServices && innovative2026ITInfrastructureServices.map((service, index) =>;
+              renderServiceCard(service, index))}          </motion && motion.div>        >;
+          <div className="flex items-center space-x-3 mb-8>;
+            <Globe className=w-6 h-6 text-purple-400" />;
+            <h3 className="text-2xl font-bold text-white>IT Infrastructure & Security</h3>;
+          </div>;
+          <motion&& motion.div;
+            variants={containerVariants}
+            initial=hidden";
+            whileInView="visible;
+        {/* Micro SAAS Section */}
+        <motion&& motion.div;
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0 && 0.8, delay: 0 && 0.6 }}>;
+          <div className=flex items-center space-x-3 mb-8'>;
+            <Zap className='w-6 h-6 text-pink-400 />;
+            <h3 className=text-2xl font-bold text-white'>;
+              Micro SAAS Solutions;
+            </h3>;
+          </div>;<motion&& motion.div;
+            variants={containerVariants}
+            initial='hidden;
+            whileInView=visible';
+            className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6>;
+            {innovative2026MicroSaasServices && innovative2026MicroSaasServices.map((service, index) =>;
+              renderServiceCard(service, index))}          </motion && motion.div>          </div>;<motion&& motion.div;
+            variants={containerVariants}
+            initial=hidden";
+            whileInView="visible;
+            className=grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">;
+            {innovative2026MicroSaasServices && innovative2026MicroSaasServices.map((service, index) => renderServiceCard(service, index))}
+          </motion && motion.div>;
+        </motion && motion.div>;{/* CTA Section */}
+        <motion&& motion.div;
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}className=grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6';
+          >;
+            {innovative2026MicroSaasServices.map((service, index) =>;
+              renderServiceCard(service, index))}
+          </motion.div>;
+        </motion.div>;
+        {/* CTA Section */}
+        <motion.div;
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          whileInView={{ opacity: 1, y: 0 }}
+
+        {/* Micro SAAS Section */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.6 }}
+        >
+          <div className="flex items-center space-x-3 mb-8">
+            <Zap className="w-6 h-6 text-pink-400" />
+            <h3 className="text-2xl font-bold text-white">Micro SAAS Solutions</h3>
+          </div>
+          
+          <motion.div
+            variants={containerVariants}
+            initial="hidden"
+            whileInView="visible"
+            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
+          >
+            {innovative2026MicroSaasServices.map((service, index) => renderServiceCard(service, index))}
+
+          <motion&& motion.div;
+            variants={containerVariants}"
+            initial="hidden""
+            whileInView="visible""
+            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">;
+            {innovative2026MicroSaasServices && innovative2026MicroSaasServices.map((service, index) => renderServiceCard(service, index))}
+          </motion && motion.div>;
+        </motion && motion.div>;
+
+        {/* CTA Section */}
+        <motion&& motion.div;
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+            className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'
+           />
+=======
+
+            initial='hidden'
+            whileInView='visible'
+
+            className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'
+              />
+>>>>>>> origin/chore/fix-lint-and-merge
+            {innovative2026MicroSaasServices.map((service, index) =>}
+              renderServiceCard(service, index)}
+            )}
+>>>>>>> origin/main
           </motion.div>
         </motion.div>
 
         {/* CTA Section */}
+<<<<<<< HEAD
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.8 }}
+          className="text-center mt-16"
+        >
+          <div className="bg-gradient-to-r from-slate-900/80 to-slate-800/80 backdrop-blur-xl border border-slate-700/50 rounded-2xl p-8">
+            <h3 className="text-2xl font-bold text-white mb-4">
+            <h3 className='text-2xl font-bold text-white mb-4'>
+         />
+          <div className='bg-gradient-to-r from-slate-900/80 to-slate-800/80 backdrop-blur-xl border border-slate-700/50 rounded-2xl p-8' />
+            <h3 className='text-2xl font-bold text-white mb-4' />
+              Ready to Transform Your Business?
+            </h3>'
+            <p className='text-slate-300 mb-6 max-w-2xl mx-auto'>
+              Join thousands of businesses already leveraging our innovative AI;
+              and IT services to drive growth, efficiency, and competitive;
+              advantage.
+            </p>'
+            <div className='flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-4'>
+              <motion.button;
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}'
+                className='bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-400 hover:to-purple-500 text-white px-8 py-3 rounded-lg font-medium transition-all duration-300 shadow-lg hover:shadow-cyan-500/25'              >        >
+          transition={{ duration: 0.8, delay: 0.8 }}"
+            <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-4">
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className='bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-400 hover:to-purple-500 text-white px-8 py-3 rounded-lg font-medium transition-all duration-300 shadow-lg hover:shadow-cyan-500/25'              >        >
+          transition={{ duration: 0.8, delay: 0.8 }}
+          className="text-center mt-16"
+        >
+          <div className="bg-gradient-to-r from-slate-900/80 to-slate-800/80 backdrop-blur-xl border border-slate-700/50 rounded-2xl p-8">
+            <h3 className="text-2xl font-bold text-white mb-4">
+              Ready to Transform Your Business?
+            </h3>
+            <p className=text-slate-300 mb-6 max-w-2xl mx-auto">
+              Join thousands of businesses already leveraging our innovative AI and IT services to drive growth, efficiency, and competitive advantage.
+            </p>"
+            <div className=flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-4>
+
+                className="bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-400 hover:to-purple-500 text-white px-8 py-3 rounded-lg font-medium transition-all duration-300 shadow-lg hover:shadow-cyan-500/25"
+                className='bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-400 hover:to-purple-500 text-white px-8 py-3 rounded-lg font-medium transition-all duration-300 shadow-lg hover:shadow-cyan-500/25
+origin/cursor/automate-test-improve-and-merge-code-2533
+              >
+                Start Free Trial;
+              </motion.button>
+              <motion.button
+          className="text-center mt-16"
+        >"
+          <div className="bg-gradient-to-r from-slate-900/80 to-slate-800/80 backdrop-blur-xl border border-slate-700/50 rounded-2xl p-8">"
+            <h3 className="text-2xl font-bold text-white mb-4">
+              Ready to Transform Your Business?
+            </h3>"
+            <p className="text-slate-300 mb-6 max-w-2xl mx-auto">
+              Join thousands of businesses already leveraging our innovative AI and IT services to drive growth, efficiency, and competitive advantage.
+            </p>"
+            <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-4">
+              <motion.button;
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}"
+                className="bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-400 hover:to-purple-500 text-white px-8 py-3 rounded-lg font-medium transition-all duration-300 shadow-lg hover:shadow-cyan-500/25"
+                className='bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-400 hover:to-purple-500 text-white px-8 py-3 rounded-lg font-medium transition-all duration-300 shadow-lg hover:shadow-cyan-500/25'
+origin/cursor/automate-test-improve-and-merge-code-2533
+              >
+                Start Free Trial;
+              </motion.button>
+              <motion.button;
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+className='border border-slate-600 hover:border-slate-500 text-white px-8 py-3 rounded-lg font-medium transition-all duration-300 hover:bg-slate-800/50'
+origin/cursor/automate-test-improve-and-merge-code-2533
+              >
+              <motion.button
+                whileHover={{ scale: 1.05 ;}}
+                whileTap={{ scale: 0.95 ;}}
+className='border border-slate-600 hover:border-slate-500 text-white px-8 py-3 rounded-lg font-medium transition-all duration-300 hover:bg-slate-800/50'
+origin/cursor/automate-test-improve-and-merge-code-2533
+              >
+                Schedule Demo
+
+className='border border-slate-600 hover:border-slate-500 text-white px-8 py-3 rounded-lg font-medium transition-all duration-300 hover:bg-slate-800/50'
+                className="border border-slate-600 hover: border-slate-500 text-white px-8 py-3 rounded-lg font-medium transition-all duration-300 hover:bg-slate-800/50"
+              >
+                Schedule Demo
+=======
         <motion.div;
+<<<<<<< HEAD
           initial={{ opacity: 0}
             y: 30
              
@@ -378,21 +1769,40 @@ the future of business.
          />
           <div className='bg-gradient-to-r from-slate-900/80 to-slate-800/80 backdrop-blur-xl border border-slate-700/50 rounded-2xl p-8' />
             <h3 className='text-2xl font-bold text-white mb-4' />
+=======
+          initial={{ opacity: 0, y: 30 }
+}
+          whileInView={{ opacity: 1, y: 0 }
+}
+          transition={{ duration: 0.8, delay: 0.8 }
+}
+
+className='text-center mt-16'
+            />
+          <div className='bg-gradient-to-r from-slate-900/80 to-slate-800/80 backdrop-blur-xl border border-slate-700/50 rounded-2xl p-8'    />
+            <h3 className='text-2xl font-bold text-white mb-4'    />
+>>>>>>> origin/main
               Ready to Transform Your Business?
             </h3>
-            <p className='text-slate-300 mb-6 max-w-2xl mx-auto' />
+            <p className='text-slate-300 mb-6 max-w-2xl mx-auto'    />
               Join thousands of businesses already leveraging our innovative AI;
 and IT services to drive growth, efficiency
             and competitive;
 advantage.
             </p>
+<<<<<<< HEAD
             <div className='flex flex-col sm: flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-4' />
               <motion.button
             whileHover={{ scale: 1.05 }
+=======
+            <div className='flex flex-col sm: flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-4'    />
+              <motion.button;
+whileHover={{ scale: 1.05 }}
+>>>>>>> origin/main
                 whileTap={{ scale: 0.95 }}
 
                 className='bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-400 hover:to-purple-500 text-white px-8 py-3 rounded-lg font-medium transition-all duration-300 shadow-lg hover:shadow-cyan-500/25'
-               />
+                  />
                 Start Free Trial;
               </motion.button>
               <motion.button;
@@ -401,7 +1811,8 @@ whileHover={{ scale: 1.05 }}
 }
 
 className='border border-slate-600 hover:border-slate-500 text-white px-8 py-3 rounded-lg font-medium transition-all duration-300 hover:bg-slate-800/50'
-               />
+                  />
+>>>>>>> origin/chore/fix-lint-and-merge
                 Schedule Demo;
               </motion.button>
             </div>
@@ -409,8 +1820,526 @@ className='border border-slate-600 hover:border-slate-500 text-white px-8 py-3 r
         </motion.div>
       </div>
     </section>
+<<<<<<< HEAD
+className=text-center mt-16';
+        >;
+          <div className='bg-gradient-to-r from-slate-900/80 to-slate-800/80 backdrop-blur-xl border border-slate-700/50 rounded-2xl p-8>;
+            <h3 className=text-2xl font-bold text-white mb-4'>;
+              Ready to Transform Your Business?;
+            </h3>;
+            <p className='text-slate-300 mb-6 max-w-2xl mx-auto>;
+              Join thousands of businesses already leveraging our innovative AI;
+              and IT services to drive growth, efficiency, and competitive;
+              advantage.;
+            </p>;
+            <div className=flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-4'>;
+              <motion.button;
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}className='bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-400 hover:to-purple-500 text-white px-8 py-3 rounded-lg font-medium transition-all duration-300 shadow-lg hover:shadow-cyan-500/25              >        >;
+          transition={{ duration: 0.8, delay: 0.8 }}
+          className=text-center mt-16;
+        >;
+          <div className="bg-gradient-to-r from-slate-900/80 to-slate-800/80 backdrop-blur-xl border border-slate-700/50 rounded-2xl p-8">;
+            <h3 className=text-2xl font-bold text-white mb-4>;
+              Ready to Transform Your Business?;
+            </h3>;
+            <p className="text-slate-300 mb-6 max-w-2xl mx-auto">;
+              Join thousands of businesses already leveraging our innovative AI and IT services to drive growth, efficiency, and competitive advantage.;
+            </p>;
+            <div className=flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-4>;
+              <motion.button;
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-400 hover:to-purple-500 text-white px-8 py-3 rounded-lg font-medium transition-all duration-300 shadow-lg hover:shadow-cyan-500/25";
+                className=bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-400 hover:to-purple-500 text-white px-8 py-3 rounded-lg font-medium transition-all duration-300 shadow-lg hover:shadow-cyan-500/25';
+              >;
+                Start Free Trial;
+              </motion.button>;
+              <motion.button;
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}className='border border-slate-600 hover:border-slate-500 text-white px-8 py-3 rounded-lg font-medium transition-all duration-300 hover:bg-slate-800/50;
+              >;
+                Schedule Demo;
+              </motion.button>;
+            </div>;
+          </div>;
+        </motion.div>;
+      </div>;
+    </section>;
+
+
+
+            <h3 className=text-2xl font-bold text-white mb-4'>;
+              Ready to Transform Your Business?;
+            </h3>;'
+            <p className=text-slate-300 mb-6 max-w-2xl mx-auto>;'
+          <p className='text - slate - 300 text - sm mb - 4 leading - relaxed>            {service.description}
+          </p>;
+          {/* Features */}          <p className=text - slate - 300 text - sm mb - 4 leading - relaxed">;
+            {service.description}
+          </p>;
+          {/* Features */}
+          <div className='mb - 4'>;
+            <h4 className='text - white font - semibold mb - 2 text - sm'>;
+              Key Features:;
+            </h4>;
+            <div className='grid grid - cols - 1 gap - 1'>;
+              {service.features;
+                .slice (0, 3).map ((feature: string, idx: number) => (<div;
+                    key={idx}
+                    className='flex items - center space - x-2 text - xs text - slate - 400';
+                  >;
+                    <div className='w - 1.5 h - 1.5 bg - cyan - 500 rounded - full' />;
+                    <span>{feature}</span>;
+                  </div>))}            </div>;
+          </div>;
+          {/* Price and CTA */}          <div className="mb - 4">;
+            <h4 className="text - white font - semibold mb - 2 text - sm">Key Features:</h4>;
+            <div className="grid grid - cols - 1 gap - 1">;
+              {service.features.slice (0, 3).map ((feature: string, idx: number) => (<div key={idx} className="flex items - center space - x-2 text - xs text - slate - 400">;
+          transition={{ duration: 0 && 0.8, delay: 0 && 0.8 }}'
+          className='text-center mt-16'>;'
+          <div className='bg-gradient-to-r from-slate-900/80 to-slate-800/80 backdrop-blur-xl border border-slate-700/50 rounded-2xl p-8'>;'
+            <h3 className='text-2xl font-bold text-white mb-4'>;
+              Ready to Transform Your Business?;
+            </h3>;'
+            <p className='text-slate-300 mb-6 max-w-2xl mx-auto'>;'
+          <p className='text - slate - 300 text - sm mb - 4 leading - relaxed'>            {service.description}
+          </p>;"
+          {/* Features */}          <p className="text - slate - 300 text - sm mb - 4 leading - relaxed">;
+            {service.description}
+          </p>;
+          {/* Features */}'
+          <div className='mb - 4'>;'
+            <h4 className='text - white font - semibold mb - 2 text - sm'>;
+              Key Features:;
+            </h4>;'
+            <div className=grid grid - cols - 1 gap - 1>;
+              {service.features;
+                .slice (0, 3);
+                .map ((feature: string;, idx: number) => (
+                  <div;
+                    key={idx}'
+                    className='flex items - center space - x-2 text - xs text - slate - 400;
+                  >;
+                    <div className='w - 1.5 h - 1.5 bg - cyan - 500 rounded - full' />;
+                    <span>{feature}</span>;
+                  </div>))}            </div>;
+          </div>;"
+          {/* Price and CTA */}          <div className=mb - 4>;"
+            <h4 className="text - white font - semibold mb - 2 text - sm>Key Features:</h4>;
+            <div className="grid grid - cols - 1 gap - 1">;
+              {service.features.slice (0, 3).map ((feature: string, idx: number) => ("
+                <div key={idx} className="flex items - center space - x-2 text - xs text - slate - 400">;"
+                  <div className="w - 1.5 h - 1.5 bg - cyan - 500 rounded - full" />;
+                  <span>{feature}</span>;
+                </div>))}
+          </div>;
+          {/* Price and CTA */}
+          <div className='flex items - center justify - between'>;
+            <div className='text - right'>;
+              <div className='text - 2xl font - bold text - white'>;
+                {service.price}
+              </div>;
+              <div className='text - slate - 400 text - sm'>{service.period}</div>            </div>;
+            <motion.button;
+              while_hover={{ scale: 1.05 }}
+              while_tap={{ scale: 0.95 }}
+              className='flex items - center space - x-2 bg - gradient - to - r from - cyan - 500 to - purple - 600 hover:from - cyan - 400 hover:to - purple - 500 text - white px - 4 py - 2 rounded - lg font - medium transition - all duration - 300 shadow - lg hover:shadow - cyan - 500 / 25';
+            >;
+              <span > Learn More</span>;
+              <ArrowRight className='w - 4 h - 4' />            </motion.button>;
+          </div>;
+          {/* Market info */}
+          <div className='mt - 4 pt - 4 border - t border - slate - 700 / 50'>;
+            <div className='flex items - center justify - between text - xs text - slate - 500'>              <span > Market: {service.market_size}</span>          <div className="flex items - center justify - between">;
+              while_hover={{ scale: 1.05 }}
+              while_tap={{ scale: 0.95 }}'
+              className='flex items - center space - x-2 bg - gradient - to - r from - cyan - 500 to - purple - 600 hover:from - cyan - 400 hover:to - purple - 500 text - white px - 4 py - 2 rounded - lg font - medium transition - all duration - 300 shadow - lg hover:shadow - cyan - 500 / 25';
+                  <div className=w - 1.5 h - 1.5 bg - cyan - 500 rounded - full />;
+                  <span>{feature}</span>;
+                </div>))}
+          </div>;
+
+              className=flex items - center space - x-2 bg - gradient - to - r from - cyan - 500 to - purple - 600 hover:from - cyan - 400 hover:to - purple - 500 text - white px - 4 py - 2 rounded - lg font - medium transition - all duration - 300 shadow - lg hover:shadow - cyan - 500 / 25;
+            >;
+              <span > Learn More</span>;'
+              <ArrowRight className='w - 4 h - 4 />            </motion.button>;
+          </div>;
+          {/* Market info */}'
+          <div className='mt - 4 pt - 4 border - t border - slate - 700 / 50'>;'"
+            <div className='flex items - center justify - between text - xs text - slate - 500'>              <span > Market: {service.market_size}</span>          <div className="flex items - center justify - between">;"
+            <div className="text - right">;"
+              <div className="text - 2xl font - bold text - white">{service.price}</div>;"
+              <div className="text - slate - 400 text - sm">{service.period}</div>;
+            <motion.button;
+              while_hover={{ scale: 1.05 }}
+              while_tap={{ scale: 0.95 }}'
+            <div className="text - right">;
+              <div className=text - 2xl font - bold text - white>{service.price}</div>;
+              <div className="text - slate - 400 text - sm">{service.period}</div>;
+            <motion.button;
+              while_hover={{ scale: 1.05 }}
+              while_tap={{ scale: 0.95 }}
+              className='flex items - center space - x-2 bg - gradient - to - r from - cyan - 500 to - purple - 600 hover:from - cyan - 400 hover:to - purple - 500 text - white px - 4 py - 2 rounded - lg font - medium transition - all duration - 300 shadow - lg hover:shadow - cyan - 500 / 25';
+            >;
+              <span > Learn More</span>;
+              <ArrowRight className='w - 4 h - 4' />              className="flex items - center space - x-2 bg - gradient - to - r from - cyan - 500 to - purple - 600 hover:from - cyan - 400 hover:to - purple - 500 text - white px - 4 py - 2 rounded - lg font - medium transition - all duration - 300 shadow - lg hover:shadow - cyan - 500 / 25";
+            >;
+              <span > Learn More</span>;
+              <ArrowRight className="w - 4 h - 4" />;
+          </div>;
+          {/* Market info */}
+          <div className='mt - 4 pt - 4 border - t border - slate - 700 / 50'>;
+            <div className='flex items - center justify - between text - xs text - slate - 500'>          <div className="mt - 4 pt - 4 border - t border - slate - 700 / 50">;
+            <div className="flex items - center justify - between text - xs text - slate - 500">;
+              <span > Market: {service.market_size}</span>;
+              <span > Growth: {service.growth_rate}</span>;
+            </div>;
+          </div>;
+        </div>;
+        {/* Hover glow effect */}
+        <div className='absolute inset - 0 rounded - 2xl bg - gradient - to - r from - cyan - 500 / 10 via - purple - 500 / 10 to - pink - 500 / 10 opacity - 0 group - hover:opacity - 100 transition - opacity duration - 300' />      </motion.div>        <div className="absolute inset - 0 rounded - 2xl bg - gradient - to - r from - cyan - 500 / 10 via - purple - 500 / 10 to - pink - 500 / 10 opacity - 0 group - hover: opacity - 100 transition - opacity duration - 300" />;
+      </motion.div>;
+    </motion.div>),return (<section className='py - 20 relative overflow - hidden'>;
+      {/* Background effects */}
+      <div className='absolute inset - 0 bg - gradient - to - b from - transparent via - slate - 900 / 20 to - slate - 900 / 40' />;
+      <div className='container mx - auto px - 4 relative z - 10'>        {/* Section header */}    <section className="py - 20 relative overflow - hidden">;
+      {/* Background effects */}
+      <div className="absolute inset - 0 bg - gradient - to - b from - transparent via - slate - 900 / 20 to - slate - 900 / 40" />;
+      <div className="container mx - auto px - 4 relative z - 10">;
+        <motion.div;
+          initial={{ opacity: 0, coordinate_y: 30 }}
+          whileInView={{ opacity: 1, coordinate_y: 0 }}
+          transition={{ duration: 0.8 }}
+          className='text - center mb - 16';
+        >;
+          <div className='flex items - center justify - center space - x-2 mb - 4'>;
+            <div className='w - 8 h - 8 bg - gradient - to - r from - cyan - 500 to - purple - 600 rounded - lg flex items - center justify - center'>;
+              <Rocket className='w - 5 h - 5 text - white' />;
+            </div>;
+            <span className='text - cyan - 400 font - semibold text - sm uppercase tracking - wider'>;
+              Innovation 2026;
+            </span>;
+          </div>;
+          <h2 className='text - 4xl md:text - 5xl font - bold text - white mb - 6'>;
+            Next - Generation;
+            <span className='block bg - gradient - to - r from - cyan - 400 via - purple - 400 to - pink - 400 bg - clip - text text - transparent'>;
+              AI & IT Services;
+            </span>;
+          </h2>;
+          <p className='text - xl text - slate - 300 max - w-3xl mx - auto leading - relaxed'>;
+            Discover our cutting - edge micro SAAS solutions, AI - powered;
+            platforms, and quantum - enhanced infrastructure services designed for;
+            the future of business.          </p>        >;
+          <div className="flex items - center justify - center space - x-2 mb - 4">;
+            <div className="w - 8 h - 8 bg - gradient - to - r from - cyan - 500 to - purple - 600 rounded - lg flex items - center justify - center">;
+              <Rocket className="w - 5 h - 5 text - white" />;
+            </div>;
+            <span className="text - cyan - 400 font - semibold text - sm uppercase tracking - wider">;
+              Innovation 2026;
+            </span>;
+          </div>;
+          <h2 className="text - 4xl md:text - 5xl font - bold text - white mb - 6">;
+            Next - Generation;
+            <span className="block bg - gradient - to - r from - cyan - 400 via - purple - 400 to - pink - 400 bg - clip - text text - transparent">;
+              AI & IT Services;
+            </span>;
+          </h2>;
+              className='flex items - center space - x-2 bg - gradient - to - r from - cyan - 500 to - purple - 600 hover:from - cyan - 400 hover:to - purple - 500 text - white px - 4 py - 2 rounded - lg font - medium transition - all duration - 300 shadow - lg hover:shadow - cyan - 500 / 25';
+            >;
+              <span > Learn More</span>;'"
+              <ArrowRight className='w - 4 h - 4' />              className="flex items - center space - x-2 bg - gradient - to - r from - cyan - 500 to - purple - 600 hover:from - cyan - 400 hover:to - purple - 500 text - white px - 4 py - 2 rounded - lg font - medium transition - all duration - 300 shadow - lg hover:shadow - cyan - 500 / 25";
+            >;
+              <span > Learn More</span>;"
+              <ArrowRight className=w - 4 h - 4 />;
+          </div>;
+          {/* Market info */}'
+          <div className='mt - 4 pt - 4 border - t border - slate - 700 / 50>;"
+            <div className='flex items - center justify - between text - xs text - slate - 500'>          <div className="mt - 4 pt - 4 border - t border - slate - 700 / 50>;
+            <div className="flex items - center justify - between text - xs text - slate - 500">;
+              <span > Market: {service.market_size;}</span>;
+              <span > Growth: {service.growth_rate;}</span>;
+            </div>;
+          </div>;
+        </div>;
+        {/* Hover glow effect */}
+        <div className=absolute inset - 0 rounded - 2xl bg - gradient - to - r from - cyan - 500 / 10 via - purple - 500 / 10 to - pink - 500 / 10 opacity - 0 group - hover:opacity - 100 transition - opacity duration - 300' />      </motion.div>        <div className=absolute inset - 0 rounded - 2xl bg - gradient - to - r from - cyan - 500 / 10 via - purple - 500 / 10 to - pink - 500 / 10 opacity - 0 group - hover: opacity - 100 transition - opacity duration - 300" />;
+      </motion.div>;
+    </motion.div>),
+  return ('
+    <section className=py - 20 relative overflow - hidden>;
+      {/* Background effects */}'
+      <div className='absolute inset - 0 bg - gradient - to - b from - transparent via - slate - 900 / 20 to - slate - 900 / 40 />;"
+      <div className='container mx - auto px - 4 relative z - 10'>        {/* Section header */}    <section className=py - 20 relative overflow - hidden>;
+      {/* Background effects */}"
+      <div className="absolute inset - 0 bg - gradient - to - b from - transparent via - slate - 900 / 20 to - slate - 900 / 40 />;
+      <div className="container mx - auto px - 4 relative z - 10">;
+        <motion.div;
+          initial={{ opacity: 0, coordinate_y: 30 }}
+          whileInView={{ opacity: 1, coordinate_y: 0 }}
+          transition={{ duration: 0.8 }}'
+          className='text - center mb - 16';
+        >;'
+          <div className='flex items - center justify - center space - x-2 mb - 4>;
+            <div className='w - 8 h - 8 bg - gradient - to - r from - cyan - 500 to - purple - 600 rounded - lg flex items - center justify - center'>;
+              <Rocket className=w - 5 h - 5 text - white' />;
+            </div>;'
+            <span className=text - cyan - 400 font - semibold text - sm uppercase tracking - wider>;
+              Innovation 2026;
+            </span>;
+          </div>;'
+          <h2 className='text - 4xl md:text - 5xl font - bold text - white mb - 6>;
+            Next - Generation;
+            <span className='block bg - gradient - to - r from - cyan - 400 via - purple - 400 to - pink - 400 bg - clip - text text - transparent'>;
+              AI & IT Services;
+            </span>;
+          </h2>;
+          <p className=text - xl text - slate - 300 max - w-3xl mx - auto leading - relaxed'>;
+            Discover our cutting - edge micro SAAS solutions, AI - powered;
+            platforms, and quantum - enhanced infrastructure services designed for;
+            the future of business.          </p>        >;
+          <div className=flex items - center justify - center space - x-2 mb - 4">;"
+            <div className=w - 8 h - 8 bg - gradient - to - r from - cyan - 500 to - purple - 600 rounded - lg flex items - center justify - center>;"
+              <Rocket className="w - 5 h - 5 text - white />;
+            </div>;
+            <span className="text - cyan - 400 font - semibold text - sm uppercase tracking - wider">;
+              Innovation 2026;
+            </span>;
+          </div>;
+          <h2 className=text - 4xl md:text - 5xl font - bold text - white mb - 6">;
+            Next - Generation;"
+            <span className=block bg - gradient - to - r from - cyan - 400 via - purple - 400 to - pink - 400 bg - clip - text text - transparent>;
+              AI & IT Services;
+            </span>;
+          </h2>;"
+          <p className="text - xl text - slate - 300 max - w-3xl mx - auto leading - relaxed">;
+          <p className="text - xl text - slate - 300 max - w-3xl mx - auto leading - relaxed>;
+            Discover our cutting - edge micro SAAS solutions, AI - powered platforms, and quantum - enhanced infrastructure services designed for the future of business.;
+          </p>;
+        </motion.div>;
+        {/* AI Services Section */}
+        <motion.div;
+          initial={{ opacity: 0, coordinate_y: 30 }}
+          whileInView={{ opacity: 1, coordinate_y: 0 }}
+          transition={{ duration: 0.8, delay: 0.2 }}
+          className='mb - 20';
+        >;
+          <div className='flex items - center space - x-3 mb - 8'>;
+            <Brain className='w - 6 h - 6 text - cyan - 400' />;
+          initial={{ opacity: 0, coordinate_y: 30 }}
+          whileInView={{ opacity: 1, coordinate_y: 0 }}
+          transition={{ duration: 0.8, delay: 0.2 }}'
+          className='mb - 20';
+        >;'
+          <div className='flex items - center space - x-3 mb - 8'>;'
+            <Brain className='w - 6 h - 6 text - cyan - 400' />;'
+            <h3 className='text - 2xl font - bold text - white'>;
+            <h3 className=text - 2xl font - bold text - white>;
+              AI - Powered Services;
+            </h3>;
+          </div>;
+          <motion.div;
+            variants={container_variants}
+            initial='hidden';
+            whileInView='visible';
+            className='grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 6';
+          >;
+            {innovative2026AIServices.map ((service, index) =>;
+              renderServiceCard (service, index))}          </motion.div>        >;
+          <div className="flex items - center space - x-3 mb - 8">;
+            <Brain className="w - 6 h - 6 text - cyan - 400" />;
+            <h3 className="text - 2xl font - bold text - white">AI - Powered Services</h3>;
+          </div>;
+          <motion.div;
+            variants={container_variants}
+            initial="hidden";
+            whileInView="visible";
+            className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 6";
+          >;
+            {innovative2026AIServices.map ((service, index) => renderServiceCard (service, index))}
+          </motion.div>;
+        </motion.div>;
+        {/* IT Infrastructure Section */}
+        <motion.div;
+          initial={{ opacity: 0, coordinate_y: 30 }}
+          whileInView={{ opacity: 1, coordinate_y: 0 }}
+          transition={{ duration: 0.8, delay: 0.4 }}
+          className='mb - 20';
+        >;
+          <div className='flex items - center space - x-3 mb - 8'>;
+            <Globe className='w - 6 h - 6 text - purple - 400' />;
+          initial={{ opacity: 0, coordinate_y: 30 }}
+          whileInView={{ opacity: 1, coordinate_y: 0 }}
+          transition={{ duration: 0.8, delay: 0.4 }}'
+          className='mb - 20';
+        >;'
+          <div className='flex items - center space - x-3 mb - 8'>;'
+            <Globe className='w - 6 h - 6 text - purple - 400' />;'
+            <h3 className='text - 2xl font - bold text - white'>;
+            <h3 className='text - 2xl font - bold text - white>;
+              IT Infrastructure & Security;
+            </h3>;
+          </div>;
+          <motion.div;
+            variants={container_variants}
+            initial='hidden';
+            whileInView='visible';
+            className='grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 6';
+          >;
+            {innovative2026ITInfrastructureServices.map ((service, index) =>;
+              renderServiceCard (service, index))}          </motion.div>        >;
+          <div className="flex items - center space - x-3 mb - 8">;
+            <Globe className="w - 6 h - 6 text - purple - 400" />;
+            <h3 className="text - 2xl font - bold text - white">IT Infrastructure & Security</h3>;
+          </div>;
+          <motion.div;
+            variants={container_variants}
+            initial="hidden";
+            whileInView="visible";
+            className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 6";
+          >;
+            {innovative2026ITInfrastructureServices.map ((service, index) => renderServiceCard (service, index))}
+          </motion.div>;
+        </motion.div>;
+        {/* Micro SAAS Section */}
+        <motion.div;
+          initial={{ opacity: 0, coordinate_y: 30 }}
+          whileInView={{ opacity: 1, coordinate_y: 0 }}
+          transition={{ duration: 0.8, delay: 0.6 }}
+        >;
+          <div className='flex items - center space - x-3 mb - 8'>;
+            <Zap className='w - 6 h - 6 text - pink - 400' />;
+          initial={{ opacity: 0, coordinate_y: 30 }}
+          whileInView={{ opacity: 1, coordinate_y: 0 }}
+          transition={{ duration: 0.8, delay: 0.6 }}
+        >;'
+          <div className='flex items - center space - x-3 mb - 8'>;'
+            <Zap className='w - 6 h - 6 text - pink - 400' />;'
+            <h3 className='text - 2xl font - bold text - white'>;
+            <h3 className=text - 2xl font - bold text - white'>;
+              Micro SAAS Solutions;
+            </h3>;
+          </div>;
+          <motion.div;
+            variants={container_variants}
+            initial='hidden';
+            whileInView='visible';
+            className='grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 6';
+          >;
+            {innovative2026MicroSaasServices.map ((service, index) =>;
+              renderServiceCard (service, index))}          </motion.div>          </div>;
+          <motion.div;
+            variants={container_variants}
+            initial="hidden";
+            whileInView="visible";
+            className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 6";
+          >;
+            {innovative2026MicroSaasServices.map ((service, index) => renderServiceCard (service, index))}
+          </motion.div>;
+        </motion.div>;
+        {/* CTA Section */}
+        <motion.div;
+          initial={{ opacity: 0, coordinate_y: 30 }}
+          whileInView={{ opacity: 1, coordinate_y: 0 }}
+          transition={{ duration: 0.8, delay: 0.8 }}
+          className='text - center mt - 16';
+        >;
+          <div className='bg - gradient - to - r from - slate - 900 / 80 to - slate - 800 / 80 backdrop - blur - xl border border - slate - 700 / 50 rounded - 2xl p - 8'>;
+            <h3 className='text - 2xl font - bold text - white mb - 4'>;
+              Ready to Transform Your Business?;
+            </h3>;
+          initial={{ opacity: 0, coordinate_y: 30 }}
+          whileInView={{ opacity: 1, coordinate_y: 0 }}
+          transition={{ duration: 0.8, delay: 0.8 }}'
+          className='text - center mt - 16';
+        >;'
+          <div className='bg - gradient - to - r from - slate - 900 / 80 to - slate - 800 / 80 backdrop - blur - xl border border - slate - 700 / 50 rounded - 2xl p - 8'>;'
+            <h3 className='text - 2xl font - bold text - white mb - 4'>;
+              Ready to Transform Your Business?;
+            </h3>;'
+            <p className='text - slate - 300 mb - 6 max - w-2xl mx - auto'>;
+              Join thousands of businesses already leveraging our innovative AI;
+              and IT services to drive growth, efficiency, and competitive;
+              advantage.;
+            </p>;)}
+}
+            <div className='flex flex - col sm:flex - row items - center justify - center space - y-4 sm:space - y-0 sm:space - x-4'>;
+              <motion.button;
+                while_hover={{ scale: 1.05 }}
+                while_tap={{ scale: 0.95 }}
+                className='bg - gradient - to - r from - cyan - 500 to - purple - 600 hover:from - cyan - 400 hover:to - purple - 500 text - white px - 8 py - 3 rounded - lg font - medium transition - all duration - 300 shadow - lg hover:shadow - cyan - 500 / 25'              >        >;
+          <div className="bg - gradient - to - r from - slate - 900 / 80 to - slate - 800 / 80 backdrop - blur - xl border border - slate - 700 / 50 rounded - 2xl p - 8">;
+            <h3 className="text - 2xl font - bold text - white mb - 4">;
+              Ready to Transform Your Business?;
+            </h3>;
+            <p className="text - slate - 300 mb - 6 max - w-2xl mx - auto">;
+              Join thousands of businesses already leveraging our innovative AI and IT services to drive growth, efficiency, and competitive advantage.;
+            </p>;
+            <div className=flex flex - col sm:flex - row items - center justify - center space - y-4 sm:space - y-0 sm:space - x-4">;
+              <motion.button;
+
+                className="bg - gradient - to - r from - cyan - 500 to - purple - 600 hover:from - cyan - 400 hover:to - purple - 500 text - white px - 8 py - 3 rounded - lg font - medium transition - all duration - 300 shadow - lg hover:shadow - cyan - 500 / 25;
+              >;
+                Start Free Trial;
+              </motion.button>;
+              <motion.button;
+                while_hover={{ scale: 1.05 }}
+                while_tap={{ scale: 0.95 }}
+                className='border border - slate - 600 hover:border - slate - 500 text - white px - 8 py - 3 rounded - lg font - medium transition - all duration - 300 hover:bg - slate - 800 / 50'              >                className="border border - slate - 600 hover: border - slate - 500 text - white px - 8 py - 3 rounded - lg font - medium transition - all duration - 300 hover:bg - slate - 800 / 50";
+              >;
+                Schedule Demo;
+              </motion.button>;
+            </div>;
+          </div>;
+        </motion.div>;
+      </div>;
+    </section>);
+}
+    </section>))}
+  )
+}
+                while_hover={{ scale: 1.05 }}
+                while_tap={{ scale: 0.95 }}'
+                className='bg - gradient - to - r from - cyan - 500 to - purple - 600 hover:from - cyan - 400 hover:to - purple - 500 text - white px - 8 py - 3 rounded - lg font - medium transition - all duration - 300 shadow - lg hover:shadow - cyan - 500 / 25'              >        >;"
+          <div className="bg - gradient - to - r from - slate - 900 / 80 to - slate - 800 / 80 backdrop - blur - xl border border - slate - 700 / 50 rounded - 2xl p - 8">;"
+            <h3 className="text - 2xl font - bold text - white mb - 4">;
+              Ready to Transform Your Business?;
+            </h3>;"
+            <p className="text - slate - 300 mb - 6 max - w-2xl mx - auto">;
+              Join thousands of businesses already leveraging our innovative AI and IT services to drive growth, efficiency, and competitive advantage.;
+            </p>;"
+            <div className="flex flex - col sm:flex - row items - center justify - center space - y-4 sm:space - y-0 sm:space - x-4">;
+              <motion.button;
+                while_hover={{ scale: 1.05 }}
+                while_tap={{ scale: 0.95 }}"
+                className="bg - gradient - to - r from - cyan - 500 to - purple - 600 hover:from - cyan - 400 hover:to - purple - 500 text - white px - 8 py - 3 rounded - lg font - medium transition - all duration - 300 shadow - lg hover:shadow - cyan - 500 / 25";
+              >;
+                Start Free Trial;
+              </motion.button>;
+              <motion.button;
+                while_hover={{ scale: 1.05 }}
+                while_tap={{ scale: 0.95 }}'"
+                className='border border - slate - 600 hover:border - slate - 500 text - white px - 8 py - 3 rounded - lg font - medium transition - all duration - 300 hover:bg - slate - 800 / 50'              >                className="border border - slate - 600 hover: border - slate - 500 text - white px - 8 py - 3 rounded - lg font - medium transition - all duration - 300 hover:bg - slate - 800 / 50";
+              >;
+                Schedule Demo;
+              </motion.button>;
+            </div>;
+          </div>;
+        </motion.div>;
+      </div>;
+    </section>);
+  );
+origin/cursor/automate-test-improve-and-merge-code-2533
+}
+'"
+=======
 
   );
 }
 
 "
+<<<<<<< HEAD
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> origin/main

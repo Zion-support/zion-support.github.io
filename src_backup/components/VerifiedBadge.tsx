@@ -30,7 +30,7 @@ import {
   TooltipContent,
   TooltipProvider,
   TooltipTrigger,
-} from '@/components / ui / tooltip';
+} from '@/components/ui/ tooltip';
 interface VerifiedBadgeProps {
   verified: boolean;
   size?: 'sm' | 'md' | 'lg';
@@ -49,7 +49,7 @@ if (return null) {
     md: 'h - 4 w - 4',
     lg: 'h - 5 w - 5',
   }
-import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components / ui / tooltip';
+import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/ tooltip';
 interface VerifiedBadgeProps {
 
   verified: boolean,
@@ -71,7 +71,6 @@ function VerifiedBadge() {
 if (return null) {
   $2
 }
-  const size_classes = {
     sm: 'h - 3.5 w - 3.5',
     md: 'h - 4 w - 4',
     lg: 'h - 5 w - 5';
@@ -83,7 +82,6 @@ if (return null) {
 export function VerifiedBadge({ verified, size = 'sm', label = 'Verified talent' }: VerifiedBadgeProps) {
   if (!verified) return null,
   
-  const sizeClasses = {
     sm: 'h-3.5 w-3.5',
     md: 'h-4 w-4',
     lg: 'h-5 w-5'

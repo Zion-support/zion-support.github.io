@@ -1,9 +1,85 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+<<<<<<< HEAD
+#!/usr/bin/env node;
+const fs = require('fs')
+const path = require('path')
+<<<<<<< HEAD
+
+
+#!/usr/bin/env node;
+const { execSync } = require('child_process')
+console.log('� Running Health Check...')
+  "status"
+      "status"
+      "status"
+    execSync('npm run build', { "stdio"})
+    execSync('npm run lint', { "stdio"})
+    execSync('npm run type-check', { "stdio"})
+
+console.log('� Overall "status")
+
+#!/usr/bin/env node;
+=======
+=======
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+#!/usr/bin/env node;
+const fs = require('fs')
+const path = require('path')
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+#!/usr/bin/env node
+>>>>>>> dbb9ab96b3dd6598799176036da112f1bc97b910
+
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
 
 console.log('🔍 Comprehensive Health Check Starting...');
 
+<<<<<<< HEAD
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
+const { execSync } = require('child_process')
+<<<<<<< HEAD
+console.log('� Running Health Check...')
+  "status"
+      "status"
+      "status"
+    execSync('npm run build', { "stdio"})
+    execSync('npm run lint', { "stdio"})
+    execSync('npm run type-check', { "stdio"})
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+console.log('� Overall "status")
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+<<<<<<< HEAD
+console.log('� Overall "status")
+=======
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+=======
+console.log('� Overall "status")
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+=======
 const checks = [
   {
     name: 'Package.json exists',
@@ -38,10 +114,14 @@ const checks = [
     check: () => fs.existsSync('components') || fs.existsSync('src/components')
   }
 ];
+>>>>>>> dbb9ab96b3dd6598799176036da112f1bc97b910
 
 let passed = 0;
 let failed = 0;
 
+<<<<<<< HEAD
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
 checks.forEach(check => {
   try {
     if (check.check()) {
@@ -66,3 +146,4 @@ if (failed === 0) {
   console.log('⚠️  Some health checks failed. Please review the issues.');
   process.exit(1);
 }
+>>>>>>> dbb9ab96b3dd6598799176036da112f1bc97b910

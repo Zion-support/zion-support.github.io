@@ -1,31 +1,46 @@
-import _React from';react' \"export\": const FuturisticAnimatedBackground = ( const canvasRef = useRef(null) const animationRef = useRef() useEffect(() => { const canvas = canvasRef.current if (!canvas) return const ctx = canvas.getContext('2d') if (!ctx) return'';';) => {
-  return $3;}
+<<<<<<< HEAD
+import _React from';react' "export": const FuturisticAnimatedBackground = ({ className = ',intensity = 'medium',colorScheme = 'multi'}) => { const canvasRef = useRef(null) const animationRef = useRef() useEffect(() => { const canvas = canvasRef.current if (!canvas) return const ctx = canvas.getContext('2d') if (!ctx) return'';';'
 }
-import React from\';react\' \"export\": const FuturisticAnimatedBackground = ( const canvasRef = useRef(null) const animationRef = useRef() useEffect(() => { const canvas = canvasRef.current if (!canvas) return const ctx = canvas.getContext(\'2d\') if (!ctx) return\'';\';) => {
-  return $3;}
+import React from\';react\' \"export\": const FuturisticAnimatedBackground = ({ className = \',intensity = \'medium\',colorScheme = \'multi\'}) => { const canvasRef = useRef(null) const animationRef = useRef() useEffect(() => { const canvas = canvasRef.current if (!canvas) return const ctx = canvas.getContext(\'2d\') if (!ctx) return\'';\';'
 }
-const React from\";react\" export: const FuturisticAnimatedBackground = ( const canvasRef = useRef(null) const animationRef = useRef() useEffect(() => { const canvas = canvasRef.current if (!canvas) return const ctx = canvas.getContext(\"2d\") if (!ctx) return\"\";\";'\"'\";
-ursor/automate-test-improve-and-merge-code-646c;) => {
-  return $3;}
+const React from";react" "export": const FuturisticAnimatedBackground = ({ className = ",intensity = "medium",colorScheme = "multi"}) => { const canvasRef = useRef(null) const animationRef = useRef() useEffect(() => { const canvas = canvasRef.current if (!canvas) return const ctx = canvas.getContext("2d") if (!ctx) return"";";'"'";"
 }
-import React from\';react\' \"export\": const FuturisticAnimatedBackground = ( const canvasRef = useRef(null) const animationRef = useRef() useEffect(() => { const canvas = canvasRef && canvasRef.current if (!canvas) return const ctx = canvas && canvas.getContext(\'2d\') if (!ctx) return\'';\';) => {
-  return $3;}
+ursor/automate-test-improve-and-merge-code-646c;
+import React from\';react\' \"export\": const FuturisticAnimatedBackground = ({ className = \',intensity = \'medium\',colorScheme = \'multi\'}) => { const canvasRef = useRef(null) const animationRef = useRef() useEffect(() => { const canvas = canvasRef && canvasRef.current if (!canvas) return const ctx = canvas && canvas.getContext(\'2d\') if (!ctx) return\'';\';'
 }
-const React from\";react\" export: const FuturisticAnimatedBackground = ( const canvasRef = useRef(null) const animationRef = useRef() useEffect(() => { const canvas = canvasRef && canvasRef.current if (!canvas) return const ctx = canvas && canvas.getContext(\"2d\") if (!ctx) return\"\";\";'\"'\";) => {
-  return $3;}
+const React from";react" "export": const FuturisticAnimatedBackground = ({ className = ",intensity = "medium",colorScheme = "multi"}) => { const canvasRef = useRef(null) const animationRef = useRef() useEffect(() => { const canvas = canvasRef && canvasRef.current if (!canvas) return const ctx = canvas && canvas.getContext("2d") if (!ctx) return"";";'"'";"
 }
-import _React from';react' \"export\": const FuturisticAnimatedBackground = ( const canvasRef = useRef(null) const animationRef = useRef() useEffect(() => { const canvas = canvasRef && canvasRef.current if (!canvas) return const ctx = canvas && canvas.getContext('2d') if (!ctx) return'';';const React from\";react\" export: const FuturisticAnimatedBackground = ({ className = \",intensity = \"medium\",colorScheme = \"multi\") => {
-  return $3;}
-}) => { const canvasRef = useRef(null) const animationRef = useRef() useEffect(() => { const canvas = canvasRef.current if (!canvas) return const ctx = canvas.getContext(\"2d\") if (!ctx) return\"\";\";'\"'\";}
-ursor/automate-test-improve-and-merge-code-646c;}
-const React from\";react\" export: const FuturisticAnimatedBackground = ( const canvasRef = useRef(null) const animationRef = useRef() useEffect(() => { const canvas = canvasRef && canvasRef.current if (!canvas) return const ctx = canvas && canvas.getContext(\"2d\") if (!ctx) return\"\";\";'\"'\";) => {
-  return $3;}
+import _React from';react' "export": const FuturisticAnimatedBackground = ({ className = ',intensity = 'medium',colorScheme = 'multi'}) => { const canvasRef = useRef(null) const animationRef = useRef() useEffect(() => { const canvas = canvasRef && canvasRef.current if (!canvas) return const ctx = canvas && canvas.getContext('2d') if (!ctx) return'';';const React from";react" "export": const FuturisticAnimatedBackground = ({ className = ",intensity = "medium",colorScheme = "multi"}) => { const canvasRef = useRef(null) const animationRef = useRef() useEffect(() => { const canvas = canvasRef.current if (!canvas) return const ctx = canvas.getContext("2d") if (!ctx) return"";";'"'";"
 }
-const React from\";react\" export: const FuturisticAnimatedBackground = ( const canvasRef = useRef(null) const animationRef = useRef() useEffect(() => { const canvas = canvasRef && canvasRef.current if (!canvas) return const ctx = canvas && canvas.getContext(\"2d\") if (!ctx) return\"\";\";'\"'\") => {
-  return $3;}
+ursor/automate-test-improve-and-merge-code-646c;
 }
-import _React from';react' \"export\": const FuturisticAnimatedBackground = ( const canvasRef = useRef(null) const animationRef = useRef() useEffect(() => { const canvas = canvasRef && canvasRef.current if (!canvas) return const ctx = canvas && canvas.getContext('2d') if (!ctx) return'';';
+const React from";react" "export": const FuturisticAnimatedBackground = ({ className = ",intensity = "medium",colorScheme = "multi"}) => { const canvasRef = useRef(null) const animationRef = useRef() useEffect(() => { const canvas = canvasRef && canvasRef.current if (!canvas) return const ctx = canvas && canvas.getContext("2d") if (!ctx) return"";";'"'""
+}
+import _React from';react' "export": const FuturisticAnimatedBackground = ({ className = ',intensity = 'medium',colorScheme = 'multi'}) => { const canvasRef = useRef(null) const animationRef = useRef() useEffect(() => { const canvas = canvasRef && canvasRef.current if (!canvas) return const ctx = canvas && canvas.getContext('2d') if (!ctx) return'';';'
+=======
+import _React from';react' "export": const FuturisticAnimatedBackground = ({ className = ',intensity = 'medium',colorScheme = 'multi'}) => { const canvasRef = useRef(null) const animationRef = useRef() useEffect(() => { const canvas = canvasRef.current if (!canvas) return const ctx = canvas.getContext('2d') if (!ctx) return'';';
 
-) => {
-  return $3;}
-}
+:src.disabled/components/FuturisticAnimatedBackground.js.jsx
+import React from\';react\' \"export\": const FuturisticAnimatedBackground = ({ className = \',intensity = \'medium\',colorScheme = \'multi\'}) => { const canvasRef = useRef(null) const animationRef = useRef() useEffect(() => { const canvas = canvasRef.current if (!canvas) return const ctx = canvas.getContext(\'2d\') if (!ctx) return\'';\';
+const React from";react" export: const FuturisticAnimatedBackground = ({ className = ",intensity = "medium",colorScheme = "multi"}) => { const canvasRef = useRef(null) const animationRef = useRef() useEffect(() => { const canvas = canvasRef.current if (!canvas) return const ctx = canvas.getContext("2d") if (!ctx) return"";";'"'"
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+import React from\';react\' \"export\": const FuturisticAnimatedBackground = ({ className = \',intensity = \'medium\',colorScheme = \'multi\'}) => { const canvasRef = useRef(null) const animationRef = useRef() useEffect(() => { const canvas = canvasRef.current if (!canvas) return const ctx = canvas.getContext(\'2d\') if (!ctx) return\'';\';
+const React from";react" export: const FuturisticAnimatedBackground = ({ className = ",intensity = "medium",colorScheme = "multi"}) => { const canvasRef = useRef(null) const animationRef = useRef() useEffect(() => { const canvas = canvasRef.current if (!canvas) return const ctx = canvas.getContext("2d") if (!ctx) return"";";'"'"
+:temp_exclude/src.disabled/components/FuturisticAnimatedBackground.js.jsx
+
+import _React from';react' "export": const FuturisticAnimatedBackground = ({ className = ',intensity = 'medium',colorScheme = 'multi'}) => { const canvasRef = useRef(null) const animationRef = useRef() useEffect(() => { const canvas = canvasRef.current if (!canvas) return const ctx = canvas.getContext('2d') if (!ctx) return'';';
+
+import React from\';react\' \"export\": const FuturisticAnimatedBackground = ({ className = \',intensity = \'medium\',colorScheme = \'multi\'}) => { const canvasRef = useRef(null) const animationRef = useRef() useEffect(() => { const canvas = canvasRef && canvasRef.current if (!canvas) return const ctx = canvas && canvas.getContext(\'2d\') if (!ctx) return\'';\';
+const React from";react" export: const FuturisticAnimatedBackground = ({ className = ",intensity = "medium",colorScheme = "multi"}) => { const canvasRef = useRef(null) const animationRef = useRef() useEffect(() => { const canvas = canvasRef && canvasRef.current if (!canvas) return const ctx = canvas && canvas.getContext("2d") if (!ctx) return"";";'"'"
+>>>>>>> origin/chore/fix-lint-and-merge
+
+import _React from';react' "export": const FuturisticAnimatedBackground = ({ className = ',intensity = 'medium',colorScheme = 'multi'}) => { const canvasRef = useRef(null) const animationRef = useRef() useEffect(() => { const canvas = canvasRef && canvasRef.current if (!canvas) return const ctx = canvas && canvas.getContext('2d') if (!ctx) return'';';
+
+import React from\';react\' \"export\": const FuturisticAnimatedBackground = ({ className = \',intensity = \'medium\',colorScheme = \'multi\'}) => { const canvasRef = useRef(null) const animationRef = useRef() useEffect(() => { const canvas = canvasRef && canvasRef.current if (!canvas) return const ctx = canvas && canvas.getContext(\'2d\') if (!ctx) return\'';\';
+const React from";react" export: const FuturisticAnimatedBackground = ({ className = ",intensity = "medium",colorScheme = "multi"}) => { const canvasRef = useRef(null) const animationRef = useRef() useEffect(() => { const canvas = canvasRef && canvasRef.current if (!canvas) return const ctx = canvas && canvas.getContext("2d") if (!ctx) return"";";'"'"
+import _React from';react' "export": const FuturisticAnimatedBackground = ({ className = ',intensity = 'medium',colorScheme = 'multi'}) => { const canvasRef = useRef(null) const animationRef = useRef() useEffect(() => { const canvas = canvasRef && canvasRef.current if (!canvas) return const ctx = canvas && canvas.getContext('2d') if (!ctx) return'';';
+
+import _React from';react' "export": const FuturisticAnimatedBackground = ({ className = ',intensity = 'medium',colorScheme = 'multi'}) => { const canvasRef = useRef(null) const animationRef = useRef() useEffect(() => { const canvas = canvasRef.current if (!canvas) return const ctx = canvas.getContext('2d') if (!ctx) return'';';
+import _React from';react' "export": const FuturisticAnimatedBackground = ({ className = ',intensity = 'medium',colorScheme = 'multi'}) => { const canvasRef = useRef(null) const animationRef = useRef() useEffect(() => { const canvas = canvasRef && canvasRef.current if (!canvas) return const ctx = canvas && canvas.getContext('2d') if (!ctx) return'';';
+
+import _React from';react' "export": const FuturisticAnimatedBackground = ({ className = ',intensity = 'medium',colorScheme = 'multi'}) => { const canvasRef = useRef(null) const animationRef = useRef() useEffect(() => { const canvas = canvasRef.current if (!canvas) return const ctx = canvas.getContext('2d') if (!ctx) return'';';

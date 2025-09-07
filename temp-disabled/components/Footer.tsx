@@ -133,7 +133,6 @@ export default function Footer() {export default function Footer() {const curren
 },{ name: \"IT Services\", href: \"/it-services\",}
 },{ name: \"Micro SaaS\", href: \"/micro-saas\",}
 },export default function Footer() {const currentYear = new Date().getFullYear(;
-  const footerLinks = {services: [;}
       { name: \"Blockchain\", href: \"/blockchain\",}
 },{ name: \"IoT Solutions\", href: \"/iot\",}
 },{ name: \"Cybersecurity\", href: \"/cybersecurity\",}
@@ -179,7 +178,6 @@ export default function Footer() {export default function Footer() {const curren
       { name: \"Support\", href: \"/support\",}
 }
     ],const currentYear = new Date().getFullYear(;
-  const footerLinks = {services: [;}
       { name: \"AI Services\", href: \"/ai-services\",}
 },{ name: \"IT Services\", href: \"/it-services\",}
 },{ name: \"Micro SaaS\", href: \"/micro-saas\",}
@@ -336,7 +334,6 @@ const resources = [
 }
   ];
 
-const socialLinks = [
   { name: 'LinkedIn, href: ',}
   https://linkedin.com/company/ziontechgroup', icon: Linkedin,}
 },{ name: Twitter', href: 'https://twitter.com/ziontechgroup, icon: Twitter,}
@@ -398,7 +395,6 @@ import {
   Github }
 } from 'lucide-react';
 
-const socialLinks = [
   { name: 'Facebook',}
   href: '#', icon: Facebook,}
 },
@@ -473,7 +469,6 @@ import React from 'react';
 const Footer: React.FC = () => {return (<footer className=\"bg-gray-800 text-white\" />;}
 } from 'lucide-react';
 
-const socialLinks = [
   { name: 'Facebook',}
   href: '#', icon: Facebook,}
 },{ name: 'Twitter',}

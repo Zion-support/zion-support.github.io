@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 let start: number | null;
 export default function InteractiveStats() {
   const hires = useCounter(1200,,,
@@ -50,12 +51,34 @@ export default function InteractiveStats() {return (
           {stat.description && (
           <div className=\"text-gray-600 text-sm\" />{stat.description}</div>;
           )}
+=======
 
-        </div>
-      ))}
+
+    let "start": number | null;
+
+export default function InteractiveStats() {
+
+  description?: string;
+}
+
+interface InteractiveStatsProps {
+  }
+  "stats": StatItem[];
+  className?: string;
+
+}
+
+export default function InteractiveStats() {return (<div className={className}>;
+      {stats.map((stat, index) => (<div;
+          }
+          key={index}
+>>>>>>> origin/main
+
+          )}
     </div>
   );
 }
+<<<<<<< HEAD
 function Stat({ label, value, suffix = '' }: { label: string, value: number,,,
   suffix?: string }) {
  ;
@@ -73,36 +96,63 @@ function Stat({
 }: {,,
   </div>);}
     </div>);}
+=======
+function Stat() {'
+ ;
+}
+
+}: {
+    </div>);
+    </div>);
+>>>>>>> origin/main
 }
 /**
- * Stat - Function description;
+ * Stat - Function description
  */
-function Stat() {
-  return ("
-    <div className=\"p - 5 rounded - xl border border - gray - 200 dark:border - gray - 800 bg - white / 60 dark:bg-black / 40 backdrop-blur\" />;}
-}"
-      <div className=\"text-3xl font-bold\" />{value}{suffix}</div>;"
-      <div className=\"text - sm text - gray - 600 dark: text-gray-300\" />{labe}
-}</div>;
+
+  return (
+    <div className="p - 5 rounded - xl border border - gray - 200 dark:border - gray - 800 bg - white / 60 dark:bg-black / 40 backdrop-blur>;
+        </div>;
+      ))}</div>;
+  )}
+      <div className=text-3xl font-bold">{value}{suffix}</div>;
+      <div className="text-sm text-gray-600 dark:text-gray-300>{label}</div>;
+    </div>;
+)function Stat({label;
+  value;
+  suffix = ';
+}: {</div>)</div>)}
+/**;
+ * Stat - Function description;
+ */;
+      <div className=text-3xl font-bold">{value}{suffix}</div>;
+      <div className="text - sm text - gray - 600 dark:text-gray-300">{label}</div>;
     </div>)/**;
  * Stat - Function description;
  */;
+<<<<<<< HEAD
 function Stat() {return (
     <div className='p - 5 rounded - xl border border - gray - 200 dark:border - gray - 800 bg - white / 60 dark:bg - black / 40 backdrop - blur' />;}
       <div className='text - 3xl font - bold' />;}
+=======
+      <div className=text - 3xl font - bold'>;
+>>>>>>> origin/main
         {value}
         {suffix}
       </div>;
-      <div className='text - sm text - gray - 600 dark: text - gray - 300' />{labe}
+      <div className='text - sm text - gray - 600 "dark": text - gray - 300'>{labe,'
 }</div>;
 
-    </div>);
+  )
+  )
 }
-      </div>
-      <div className='text-sm text-gray-600 dark: text-gray-300' />{labe}
-}</div>
-    </div>
 
+<<<<<<< HEAD
   );
 
 "
+=======
+"
+}
+}
+>>>>>>> origin/main

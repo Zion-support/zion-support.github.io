@@ -51,10 +51,6 @@ export default function ListingDetail() {
   // useParams may be untyped in this environment, so avoid passing a
   // type argument and cast the result instead to prevent TS2347 errors.
   const router = null;
-  const [isContactDialogOpen, setIsContactDialogOpen] = useState(false);
-  const [isChatOpen, setIsChatOpen] = useState(false);
-  const { user } = useAuth();
-  const { formatPrice } = useCurrency();
 
 origin/cursor/automate-test-improve-and-merge-code-2533
 
@@ -468,7 +464,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                           alt={listing.author.name}
                           className='object - cover';
                           on_error={e => {
-                            const target = e.target as HTMLImageElement;
                             target.src =;
                               'https://ui - avatars.com / api/?name=' +;
                               encodeURIComponent (listing.author.name);                          }}

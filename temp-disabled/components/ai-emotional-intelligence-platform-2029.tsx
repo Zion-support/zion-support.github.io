@@ -105,8 +105,6 @@ const benefits = [
   Smartphone, Database, Cloud, Server, ShieldCheck;
  } from 'lucide-react';
 
-import UltraFuturisticNavigation2029 from '../components/layout/UltraFuturisticNavigation2029';
-import UltraFuturisticFooter2028 from '../components/layout/UltraFuturisticFooter2028';
 
 const AIEmotionalIntelligencePlatform2029 = null;
 ];

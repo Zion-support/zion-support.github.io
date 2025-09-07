@@ -216,6 +216,11 @@ class ComprehensiveTestSuite {
     const scanDirs = ['public', 'dist', 'out', 'build', 'pages'];
     for (const dir of scanDirs) {
       if (fs.existsSync(dir)) {
+<<<<<<< HEAD
+        scanDir(dir)
+    return htmlFiles
+  checkAccessibility($2) {
+=======
         scanDir(dir);
       }
     }
@@ -226,6 +231,7 @@ class ComprehensiveTestSuite {
   checkAccessibility(content, filePath) {
     const issues = [];
     
+>>>>>>> origin/chore/fix-lint-and-merge
     // Check for basic accessibility elements
     if (!content.includes('<title>')) {
       issues.push({

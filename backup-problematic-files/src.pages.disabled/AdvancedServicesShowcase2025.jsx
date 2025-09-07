@@ -1,15 +1,11 @@
-const AdvancedServicesShowcase2025 = ( const [selectedCategory,setSelectedCategory] = useState (\'all\') const [searchTerm,setSearchTerm] = useState (\') const [sortBy,setSortBy] = useState (\'name\') \'';\"\";) => {
-  return $3;}
+<<<<<<< HEAD
+const AdvancedServicesShowcase2025 = () => { const [selectedCategory,setSelectedCategory] = useState (\'all\') const [searchTerm,setSearchTerm] = useState (\') const [sortBy,setSortBy] = useState (\'name\') \'';\"";"
 }
-const AdvancedServicesShowcase2025 = ( const [selectedCategory,setSelectedCategory] = useState ('all') const [searchTerm,setSearchTerm] = useState (') const [sortBy,setSortBy] = useState ('name') '';\"\";\"\") => {
-  return $3;}
-}
-const AdvancedServicesShowcase2025 = ( const [selectedCategory,setSelectedCategory] = useState ('all') const [searchTerm,setSearchTerm] = useState (') const [sortBy,setSortBy] = useState ('name') '';\"\";\"\") => {
-  return $3;}
-}
-const AdvancedServicesShowcase2025 = ( const [selectedCategory,setSelectedCategory] = useState ('all') const [searchTerm,setSearchTerm] = useState (') const [sortBy,setSortBy] = useState ('name') '';\"\";\"\") => {
-  return $3;}
-}
-const AdvancedServicesShowcase2025 = ( const [selectedCategory,setSelectedCategory] = useState ('all') const [searchTerm,setSearchTerm] = useState (') const [sortBy,setSortBy] = useState ('name') '';\"\";\"\") => {
-  return $3;}
-}
+const AdvancedServicesShowcase2025 = () => { const [selectedCategory,setSelectedCategory] = useState ('all') const [searchTerm,setSearchTerm] = useState (') const [sortBy,setSortBy] = useState ('name') '';"";""}"
+=======
+const AdvancedServicesShowcase2025 = () => { const [selectedCategory,setSelectedCategory] = useState (\'all\') const [searchTerm,setSearchTerm] = useState (\') const [sortBy,setSortBy] = useState (\'name\') \'';\"";
+const AdvancedServicesShowcase2025 = () => { const [selectedCategory,setSelectedCategory] = useState ('all') const [searchTerm,setSearchTerm] = useState (') const [sortBy,setSortBy] = useState ('name') '';"";""}
+const AdvancedServicesShowcase2025 = () => { const [selectedCategory,setSelectedCategory] = useState ('all') const [searchTerm,setSearchTerm] = useState (') const [sortBy,setSortBy] = useState ('name') '';"";""}
+const AdvancedServicesShowcase2025 = () => { const [selectedCategory,setSelectedCategory] = useState ('all') const [searchTerm,setSearchTerm] = useState (') const [sortBy,setSortBy] = useState ('name') '';"";""}
+>>>>>>> origin/chore/fix-lint-and-merge
+const AdvancedServicesShowcase2025 = () => { const [selectedCategory,setSelectedCategory] = useState ('all') const [searchTerm,setSearchTerm] = useState (') const [sortBy,setSortBy] = useState ('name') '';"";""}

@@ -1,42 +1,81 @@
-export type ServiceType = \"service\" | \"talent\" | \"equipment\" | \"\";
-export type ServiceCategory = string;
-export type TimelineType = \"fixed\" | \"flexible\";
-export type BudgetType = \"fixed\" | \"hourly\" | \"range\";
+export type ServiceType = "service" | "talent" | "equipment" | "";
+export type ServiceCategory = string;"
+export type TimelineType = "fixed" | "flexible";"
+export type BudgetType = "fixed" | "hourly" | "range";
+
 export interface ListingItem {
   id: string;
   title: string;
-  category: string;}
-image?: string}
+  category: string
+  image?: string
 }
 export interface ContactInfo {
+
 export interface ListingItem {;
+
   id: string;
   title: string;
-  category: string,}
-  image?: string}
+  category: string;
+  image?: string;
+
 }
+
 export interface ContactInfo {;
+
   name: string;
   email: string;
-  phone: string;}
-    company: string}
+  phone: string;
+  company: string;
 }
-;
-export interface ListingItem {
+
+  phone: string,
+  company: string;
+}
+
+export interface Budget {;
+
+  name: string;
+  email: string;
+  phone: string
+  company: string
+}
+
+export interface Budget {
+
+export interface Budget {;
+
   amount: number;
-  maxAmount?: number;}
-  type: BudgetType;}
+  maxAmount?: number;
+  type: BudgetType;
 }
-export interface QuoteFormData {;
+
   serviceType: ServiceType;
   serviceCategory: ServiceCategory;
   specificItem: ListingItem | null;
   projectName: string;
   projectDescription: string;
   startDate?: Date;
-  endDate?: Date;  timeline: TimelineType;
+
+  timeline: TimelineType;
+  budget: Budget;
+  contactInfo: ContactInfo;
+}
+
+export type QuoteStatus =
+  | "new"
+  | "in_review"
+  | "accepted"
+  | "responded"
+  | "closed"
+
+  | "archived";
+
 export interface QuoteRequest {
+
 export interface QuoteRequest {;
+
+  id: string;
+
   talent_id: string;
   talent_name?: string;
   requester_id?: string;
@@ -52,5 +91,8 @@ export interface QuoteRequest {;
   start_date?: string;
   status: QuoteStatus;
   is_archived: boolean;
-  viewed_at?: string;}
-  replied_at?: string;}
+  viewed_at?: string;
+  replied_at?: string;
+
+  updated_at: string
+}

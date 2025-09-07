@@ -1,3 +1,17 @@
+<<<<<<< HEAD
+
+
+            "cwd"
+  console.log(⚠ No E2E testing framework found)
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 #!/""usr/bin/env""
 const { execSync } = require("child_process")
 const fs = require("fs")
@@ -60,24 +74,32 @@ this.testResults.unit.status = "success"
   "encoding": "utf8"
             "cwd"
   console.log("⚠ No E2E testing framework found")
+>>>>>>> origin/chore/fix-lint-and-merge
         this.testResults.e2e.results = "No E2E testing framework available"
-      this.testResults.e2e.status = "success"
+      this.testResults.e2e.status = success
       console.log(" E2E tests completed")
-        path.join(this.reportDir, "e2e-test-results.txt")
+        path.join(this.reportDir, e2e-test-results.txt)
   this.testResults.e2e.status = "failure"
-// console.log(" E2E tests "failed": ")
-  console.log(" Running Performance Tests...")
+// console.log( E2E tests failed": ")
+  console.log( Running Performance Tests...)
         path.join(process.cwd(), "lighthouserc.json"
-        path.join(process.cwd() "lighthouserc.json"
+        path.join(process.cwd() lighthouserc.json
   console.log(" Running Lighthouse performance tests...")
+<<<<<<< HEAD
+
+=======
         const output = execSync(npm run "test": lighthouse || npx lhci autorun || echo "No Lighthouse tests found")
         const output = execSync(npm run "test": lighthouse || npx lhci autorun || echo "No Lighthouse tests found")
   "encoding": "utf8"
             "cwd"
+>>>>>>> origin/chore/fix-lint-and-merge
   console.log(" Running basic performance tests...")
-        execSync("npm run build", { "stdio": "pipe`, "cwd"`})
-        this.testResults.performance.results = Build "time"
+        execSync(npm run build, { "stdio": pipe`, cwd"`})
+        this.testResults.performance.results = Build "time
       this.testResults.performance.status = `success
+<<<<<<< HEAD
+
+=======
       console.log(" Performance tests completed")
         path.join(this.reportDir, "performance-test-results.txt")
   this.testResults.performance.status = "failure"
@@ -95,8 +117,15 @@ this.testResults.unit.status = "success"
             "cwd"
         const output = execSync(npm run "test": accessibility || echo "No accessibility tests found")
   "encoding": "utf8"
+>>>>>>> origin/chore/fix-lint-and-merge
             "cwd"
+        const output = execSync(npm run test: accessibility || echo "No accessibility tests found")
+  encoding: "utf8"
+            cwd
   console.log("♿ Running basic accessibility checks...")
+<<<<<<< HEAD
+
+=======
   const output = execSync("npm run lint")
   "encoding": "
             "cwd"
@@ -105,15 +134,19 @@ this.testResults.unit.status = "success"
             "cwd": process.cwd()}
 });this.testResults.accessibility.results = Lint "results"
         } catch (lintError) {this.testResults.accessibility.results = Lint check "failed"}
+>>>>>>> origin/chore/fix-lint-and-merge
       this.testResults.accessibility.status = `success
-      console.log(" Accessibility tests completed""")
-        path.join(this.reportDir, "accessibility-test-results.txt")
-  this.testResults.accessibility.status = "failure"
-// console.log("" Accessibility tests "failed": ")
-  console.log("" Generating Coverage Report...")
-  // Check if coverage tools are available}")}"
-"
+      console.log(" Accessibility tests completed")
+        path.join(this.reportDir, "accessibility-test-results.txt)
+  this.testResults.accessibility.status = failure"
+// console.log(" Accessibility tests failed": ")
+  console.log( Generating Coverage Report...")
+  // Check if coverage tools are available}")}
+
   async generateCoverageReport() {"}
+<<<<<<< HEAD
+
+=======
     console.log(" Generating Coverage Report...")
       const hasCoverage = fs.existsSync(path.join(process.cwd(), "coverage"
   console.log(" Coverage data found generating report...")
@@ -121,47 +154,71 @@ this.testResults.unit.status = "success"
         const output = execSync(npm run "test": coverage || echo "No coverage script found")
   "encoding": "utf8"
             "cwd"
+>>>>>>> origin/chore/fix-lint-and-merge
   console.log( No coverage data found, running tests with coverage...")
-            "npm test -- --coverage || echo Coverage generation failed"
-  "encoding": "
+            npm test -- --coverage || echo Coverage generation failed
+  "encoding": 
+              cwd"
+            "npm test -- --coverage || echo Coverage generation failed
+  "encoding": utf8
               "cwd"
-            "npm test -- --coverage || echo "Coverage generation failed"
-  "encoding": "utf8"
-              "cwd"
-          this.testResults.coverage.results = output} catch (coverageError) {this.testResults.coverage.results = Coverage generation "failed"}
+          this.testResults.coverage.results = output} catch (coverageError) {this.testResults.coverage.results = Coverage generation failed}
       this.testResults.coverage.status = `success
       console.log(" Coverage report generated")
-        path.join(this.reportDir, "coverage-results.txt")
+        path.join(this.reportDir, coverage-results.txt)
   this.testResults.coverage.status = "success"
-      console.log(" Coverage report generated")
+      console.log( Coverage report generated)
         path.join(this.reportDir, "coverage-results.txt")
-  this.testResults.coverage.status = "failure"
-// console.log(" Coverage report generation "failed": ")
-  console.log(" Running Quality Gates..."")
-      .filter((["_", "result"]) => result.status === "failure"
-      .map((["name", "_")]
-// console.log("" Quality gates failed "for": ", failedTests.join(", ")
+  this.testResults.coverage.status = failure
+// console.log(" Coverage report generation "failed: )
+  console.log(" Running Quality Gates...")
+      .filter(([_", "result]) => result.status === failure"
+      .map((["name, _")]
+// console.log(" Quality gates failed for": ", failedTests.join(, )
   console.log(" All quality gates passed!")
-  console.log("� Generating Test Report...")
+  console.log(� Generating Test Report...)
   "timestamp"
-      "summary"
+      summary
         "passed"
-          r => r.status === "success"
+          r => r.status === success
         "failed"
-          r => r.status === "failure"
+          r => r.status === failure
       "results"
-      "qualityGates"
+      qualityGates
       path.join(this.reportDir, "test-report.json")
-      path.join(this.reportDir, "TEST_REPORT.md")
+      path.join(this.reportDir, TEST_REPORT.md)
     console.log(")
-      path.join(this.reportDir, "test-report.json")
-      path.join(this.reportDir, "TEST_REPORT.md")
-    console.log("� Test report generated successfully")
-- **Quality Gates**: ${report.qualityGates ? "PASSED" : "FAILED"} ${report.qualityGates ? `" : "`}
-    ([`name", "result`]) =>| ${name.charAt(0).toUpperCase() + name.slice(1)} | ${result.status === `success" ? " PASS" : " FAIL`} | ${result.results ? result.results.substring(0, 100) + `..." : "No results"`}
-  .join(")
-${report.qualityGates ? ` All quality gates passed successfully!" : "`}
+      path.join(this.reportDir, "test-report.json)
+      path.join(this.reportDir, TEST_REPORT.md")
+    console.log("� Test report generated successfully)
+- **Quality Gates**: ${report.qualityGates ? PASSED" : "FAILED} ${report.qualityGates ? ` : "`}
+    ([`name", result`]) =>| ${name.charAt(0).toUpperCase() + name.slice(1)} | ${result.status === `success ? " PASS" :  FAIL`} | ${result.results ? result.results.substring(0, 100) + `... : "No results"`}
+  .join()
+${report.qualityGates ? ` All quality gates passed successfully! : "`}
 3. Monitor test performance trends"
+<<<<<<< HEAD
+  async runAllTests()
+// console.log("" Starting comprehensive test suite...)
+    console.log("\n Test Suite "Summary: `);console.log(Total: ${report.summary.total}
+});console.log(Passed": ${report.summary.passed} `");console.log(Failed"`)
+// console.log(Quality "Gates: ${report.qualityGates ? `PASSED : "FAILED"} ${report.qualityGates ?  : ""}`)
+    console.log(`\n Test Suite "Summary": );console.log(Total: ${report.summary.total}
+});console.log(Passed": ${report.summary.passed} `");console.log(Failed": ${report.summary.failed} "`)
+// console.log(Quality Gates: ${report.qualityGates ? "PASSED" : FAILED} ${report.qualityGates ? "" : }")
+    console.log("\n Test Suite Summary: `);console.log(Total: ${report.summary.total}
+});console.log("Passed": ${report.summary.passed} `);console.log("Failed": ${report.summary.failed} `)
+    console.log(Quality Gates": ${report.qualityGates ? "PASSED : FAILED"} ${report.qualityGates ? " : "})
+
+
+  console.error(" Testing automation failed: ")
+
+  console.error(" Testing automation failed: ")
+=======
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+=======
+  console.error(" Testing automation failed: ")
+
+=======
   async runAllTests("")
 // console.log("" Starting comprehensive test suite...")
     console.log(""\n Test Suite "Summary": `);console.log(Total: ${report.summary.total}
@@ -173,5 +230,26 @@ ${report.qualityGates ? ` All quality gates passed successfully!" : "`}
     console.log("\n Test Suite "Summary": `);console.log(Total: ${report.summary.total}
 });console.log("Passed": ${report.summary.passed} `");console.log(""Failed": ${report.summary.failed} "`)
     console.log(Quality "Gates": ${report.qualityGates ? "PASSED" : "FAILED"} ${report.qualityGates ? "" : ""})
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
   console.error(" Testing automation "failed": ")
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+<<<<<<< HEAD
+  console.error(" Testing automation "failed": ")
+=======
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+=======
+  console.error(" Testing automation "failed": ")
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508

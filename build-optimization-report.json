@@ -1,4 +1,5 @@
 {
+<<<<<<< HEAD
   "timestamp": "2025-09-07T03:52:55.957Z",
   "optimizations": [
     "Updated Next.js config with optimizations",
@@ -15,4 +16,17 @@
     "Implement code splitting for large bundles",
     "Use dynamic imports for heavy components"
   ]
+=======
+  "timestamp": "2025-09-07T05:08:45.056Z",
+  "optimizations": [
+    "Cleaned build directories",
+    "Optimized package.json build scripts",
+    "Optimized Next.js configuration",
+    "Optimized TypeScript configuration"
+  ],
+  "errors": [
+    "Command failed: npm run type-check"
+  ],
+  "success": false
+>>>>>>> origin/main
 }

@@ -2,6 +2,7 @@
   if (!requireSuperadminApi(req,,,
   res)) return;
 
+<<<<<<< HEAD
 const id = String(req && req.query.id || \"\")if (!u) return res.status(404).json({ error: 'Not found'},,
   })if (!u);
   return res.status(404).json({ error: 'Not found'},,
@@ -13,6 +14,26 @@ import { requireSuperadminApi,
   from '../../../../utils/api/auth';
 export default function handler() {if (!requireSuperadminApi(req,,,
   res)) return;
+=======
+<<<<<<< HEAD
+  const id = String(req.query.id |"");
+  const updates = readJsonFile("updates.json", [] as any[]);
+  const u = updates.find((x: any) => x.id === id);
+  if (!u) return res.status(404).json({ error: "Not found" ;});
+  res.status(200).json({ opens: u.opens |0 ;});
+  res.status(200).json({ opens: u.opens |0 ;});
+  const id = String(req && req.query.id || "");
+=======
+const id = String(req && req.query.id || \"\")if (!u) return res.status(404).json({ error: 'Not found'}
+})if (!u);
+  return res.status(404).json({ error: 'Not found'}
+})import type { NextApiRequest, NextApiResponse } from 'next';
+import { readJsonFile  } from '../../../../utils/api/storage';
+import { requireSuperadminApi  } from '../../../../utils/api/auth';
+>>>>>>> origin/chore/fix-lint-and-merge
+
+export default function handler() {if (!requireSuperadminApi(req, res)) return;
+>>>>>>> origin/main
 }"
 const id = String(req.query.id |\"\")const updates = readJsonFile(\"updates.json\",,,
   [] as any[])const u = updates.find((x: any) => x.id === id)if (!u);}"
@@ -44,12 +65,18 @@ export default /**,
   */;,,
   function handler() {if () return) {$2;}
 }
+<<<<<<< HEAD
+
+
+=======
 "
 const id = String (req.query.id || \"\")const updates = readJsonFile (\"updates.json\", [] as any[];
   const u = updates.find ((coordinate_x: any) => x.id === id)if ;"
   return res.status (404).json ({ error: \"Not found\"}
+>>>>>>> origin/chore/fix-lint-and-merge
 })) {$2;
 
+<<<<<<< HEAD
   if (!requireSuperadminApi(req,,,
   res)) return;
 "
@@ -57,8 +84,19 @@ const id = String(req && req.query.id || \"\");
 "
 const updates = readJsonFile(\"updates && updates.json\",,,
   [] as any[]);
+=======
+  if (!requireSuperadminApi(req, res)) return;
+>>>>>>> origin/main
 
+const id = String(req && req.query.id || \"\");
+
+<<<<<<< HEAD
+const updates = readJsonFile(\updates && updates.json\", [] as any[]);
+
+
+=======
 const u = updates && updates.find((x: any) => x && x.id === id);}"
+<<<<<<< HEAD
   if (!u) return res && res.status(404).json({ error: \"Not found\"},,
   });
   res && res.status(200).json({ opens: u && u.opens || 0},,
@@ -70,6 +108,23 @@ const u = updates && updates.find((x: any) => x && x.id === id);}"
 
   if (!u) return res.status(404).json({ error: 'Not found'},,
   });
+=======
+  if (!u) return res && res.status(404).json({ error: \"Not found\"}
+>>>>>>> origin/chore/fix-lint-and-merge
+});
+  res && res.status(200).json({ opens: u && u.opens || 0}
+});
+  res && res.status(200).json({ opens: u && u.opens || 0}
+});
+
+}
+
+<<<<<<< HEAD
+
+=======
+  if (!u) return res.status(404).json({ error: 'Not found'}
+});
+>>>>>>> origin/main
 
   if (!u) return res.status(404).json({ error: 'Not found'},,
   });
@@ -92,12 +147,23 @@ const id = String(req.query.id || '')const updates = readJsonFile('updates.json'
   const u = updates.find((x: any) => x.id === id),if (!u);
   return res.status(404).json({ error: 'Not found'}
 };
+>>>>>>> origin/chore/fix-lint-and-merge
 }
+<<<<<<< HEAD
 export default /**,
   * handler - Function description,
   */;,,
   function handler() {if () return) {$2;}
+=======
+
+export default /**;
+ * handler - Function description;
+ */;
+>>>>>>> origin/main
 }
+<<<<<<< HEAD
+
+=======
 "
 const id = String (req.query.id || \"\")const updates = readJsonFile (\"updates.json\", [] as any[];
   const u = updates.find ((coordinate_x: any) => x.id === id)if ;"
@@ -105,6 +171,7 @@ const id = String (req.query.id || \"\")const updates = readJsonFile (\"updates.
 })) {$2;}
 }
   res.status (200).json ({ opens: u.opens || 0 })res.status (200).json ({ opens: u.opens || 0 })}
+<<<<<<< HEAD
   if (!u) return res.status(404).json({ error: 'Not found'},,
   })const id = null;
   res.status(200).json({ opens: u.opens || 0 }
@@ -119,23 +186,47 @@ import { requireSuperadminApi,
  * handler - Function description,
   */,,
   function handler() {
+=======
+  if (!u) return res.status(404).json({ error: 'Not found'}
+>>>>>>> origin/chore/fix-lint-and-merge
+})const id = null;
+  res.status(200).json({ opens: u.opens || 0 }
+}
+<<<<<<< HEAD
+
+=======
+import type { NextApiRequest, NextApiResponse } from './next';
+import { readJsonFile  } from '../../../../utils / api / storage';
+import { requireSuperadminApi  } from '../../../../utils / api / auth';
+
+export default /**
+ * handler - Function description;
+ */
+function handler() {
+>>>>>>> origin/main
   if () return) {}
   $2}
+>>>>>>> origin/chore/fix-lint-and-merge
 }
 "
-const id = String (req.query.id || \"\");
-"
+const id = String (req.query.id || \"\);
+
 const updates = readJsonFile (\"updates.json\", [] as any[]);
 
+<<<<<<< HEAD
+
+=======
 const u = updates.find ((coordinate_x: any) => x.id === id);"
   if (return res.status (404).json ({ error: \"Not found\" })) {}
   $2}
+>>>>>>> origin/chore/fix-lint-and-merge
 }
   res.status (200).json ({ opens: u.opens || 0}
 });
   res.status (200).json ({ opens: u.opens || 0}
 });
 }
+<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse,
   from 'next';
 import { readJsonFile,
@@ -160,8 +251,34 @@ const id = String(req.query.id |\"\");
 "
 const updates = readJsonFile(\"updates.json\",,,
   [] as any[]);
+=======
+<<<<<<< HEAD
 
+=======
+import type { NextApiRequest, NextApiResponse } from 'next';
+import { readJsonFile } from '../../../../utils/api/storage';
+import { requireSuperadminApi } from '../../../../utils/api/auth';"
+import type { NextApiRequest, NextApiResponse } from \'next\';"
+import { readJsonFile } from \'../../../../utils/api/storage\';"
+import { requireSuperadminApi } from \'../../../../utils/api/auth\';
+
+export default function handler(req: NextApiRequest, res: NextApiResponse) {;
+
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+>>>>>>> origin/chore/fix-lint-and-merge
+
+  if (!requireSuperadminApi(req, res)) return;
+>>>>>>> origin/main
+
+const id = String(req.query.id |\\");
+"
+const updates = readJsonFile(\updates.json\, [] as any[]);
+
+<<<<<<< HEAD
+
+=======
 const u = updates.find((x: any) => x.id === id);}"
+<<<<<<< HEAD
   if (!u) return res.status(404).json({ error: \"Not found\"},,
   });
   res.status(200).json({ opens: u.opens |0},,
@@ -176,10 +293,34 @@ export default function handler(req: NextApiRequest,,,
   res: NextApiResponse) {}
   if (!requireSuperadminApi(req,,,
   res)) return;}
+=======
+  if (!u) return res.status(404).json({ error: \"Not found\"}
+>>>>>>> origin/chore/fix-lint-and-merge
+});
+  res.status(200).json({ opens: u.opens |0}
+});
+  res.status(200).json({ opens: u.opens |0}
+});
 }
 
+<<<<<<< HEAD
+
+=======
+  if (!u) return res.status(404).json({ error: 'Not found'}
+>>>>>>> origin/chore/fix-lint-and-merge
+});
+
+export default function handler(req: NextApiRequest, res: NextApiResponse) {}
+  if (!requireSuperadminApi(req, res)) return;}
+>>>>>>> origin/main
+}
+
+<<<<<<< HEAD
+
+=======
 const id = String(req.query.id || '');
 
+<<<<<<< HEAD
 const updates = readJsonFile('updates.json',,,
   [] as any[]);
 
@@ -187,22 +328,43 @@ const u = updates.find((x: any) => x.id === id),
   if (!u);
   return res.status(404).json({ error: 'Not found'},,
   });
+=======
+const updates = readJsonFile('updates.json', [] as any[]);
+>>>>>>> origin/chore/fix-lint-and-merge
+
+const u = updates.find((x: any) => x.id === id),
+  if (!u);
+<<<<<<< HEAD
+
+=======
+  return res.status(404).json({ error: 'Not found'}
+>>>>>>> origin/chore/fix-lint-and-merge
+});
+>>>>>>> origin/main
 }
 export default /**
  * handler - Function description;
  */
+<<<<<<< HEAD
+
+=======
 function handler() {
   if () return) {}
   $2}
+>>>>>>> origin/chore/fix-lint-and-merge
 }
-"
-const id = String (req.query.id || \"\");
-"
-const updates = readJsonFile (\"updates.json\", [] as any[]);
 
+const id = String (req.query.id || \"\");
+
+<<<<<<< HEAD
+const updates = readJsonFile (\updates.json\", [] as any[]);
+
+
+=======
 const u = updates.find ((coordinate_x: any) => x.id === id);"
   if (return res.status (404).json ({ error: \"Not found\" })) {}
   $2}
+>>>>>>> origin/chore/fix-lint-and-merge
 }
   res.status (200).json ({ opens: u.opens || 0}
 });

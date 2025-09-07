@@ -1,9 +1,169 @@
-
-
 export type ModerationModalProps = {
   flag: any | null;
   onAction: (;
     action: 'approve' | 'remove' | 'warn' | 'ban',;
+    adminNotes?: string;)
+  ) => Promise<void>;
+
+  flag,
+  onClose,
+  onAction,
+}: ModerationModalProps) {;
+
+  flag,
+  onClose,
+  onAction,
+}: ModerationModalProps) {;
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+
+  flag: any | null;
+  const [adminNotes, setAdminNotes] = useState('');
+  if (!flag) return null;
+  return (
+
+    <div className='fixed inset-0 z-50 flex items-center justify-center bg-black/50'>;
+</div>
+      <div className='bg-white dark:bg-black w-full max-w-2xl rounded shadow-lg'>;
+        <div className='p-4 border-b flex items-center justify-between'>;
+          <div className='font-semibold'>Review Flag — {flag && flag.id}</div>;
+          <button;
+            onClick={onClose}
+
+            className='text-gray-500 hover:text-gray-700'>;
+</button>
+          </button>;
+        </div>;
+        <div className='p-4 space-y-4 text-sm'>;
+          <div className='grid grid-cols-2 gap-4'>;
+            <div>;
+              <div className='text-gray-500'>Content Type</div>;
+              <div className='font-medium'>{flag && flag.contentType}</div>;
+              <div className='text-gray-500'>User</div>;
+              <div className='font-medium'>{flag && flag.userEmail}</div>;
+              <div className='text-gray-500'>Reason</div>;
+              <div className='font-medium'>{flag && flag.reason}</div>;
+              <div className='text-gray-500'>Status</div>;
+              <div className='font-medium'>{flag && flag.status}</div>;
+            <div className='text-gray-500 mb-1'>Preview</div>;
+            <div className='border rounded p-3 bg-gray-50 dark:bg-gray-900 whitespace-pre-wrap max-h-48 overflow-auto'>;
+          <div className='grid grid-cols-3 gap-4'>;
+            <div className='p-3 border rounded'>;
+              <div className='text-gray-500'>Toxicity</div>;
+              <div className='font-semibold'>;
+              <div className='text-gray-500'>NSFW</div>;
+              <div className='text-gray-500'>Scam</div>;
+            <label className='block text-sm font-medium mb-1'>;
+</label>
+            </label>;
+            <textarea;
+              value={adminNotes}
+              onChange={e => setAdminNotes(e && e.target.value)}
+</textarea>
+        <div className='p-4 border-t flex items-center justify-end gap-2'>;
+            onClick={() => onAction('approve', adminNotes)}
+            onClick={() => onAction('remove', adminNotes)}
+            onClick={() => onAction('warn', adminNotes)}
+            onClick={() => onAction('ban', adminNotes)}
+          </button>        </div>;
+
+          <button onClick={() => onAction('approve', adminNotes)} className="px-3 py-2 rounded bg-green-600 text-white">Approve</button>
+          <button onClick={() => onAction('remove', adminNotes)} className="px-3 py-2 rounded bg-red-600 text-white">Remove</button>
+          <button onClick={() => onAction('warn', adminNotes)} className="px-3 py-2 rounded bg-yellow-600 text-white">Warn</button>
+          <button onClick={() => onAction('ban', adminNotes)} className="px-3 py-2 rounded bg-gray-800 text-white">Ban User</button>
+      </div>
+    </div>
+
+}
+
+  on_close: () => void;
+  on_action: (
+    action: 'approve' | 'remove' | 'warn' | 'ban',
+
+    admin_notes?: string) => Promise < void>;
+;
+export default /**
+ * ModerationModal - Function description;
+ */
+function ModerationModal() {"
+  const [admin_notes, setAdminNotes] = useState ();
+  // Check condition;
+if (return null) {
+  $2;
+  return (
+    <div className='fixed inset - 0 z - 50 flex items - center justify - center bg - black / 50'>;
+      <div className='bg - white dark:bg - black w - full max - w-2xl rounded shadow - lg'>;
+        <div className='p - 4 border - b flex items - center justify - between'>;
+          <div className='font - semibold'>Review Flag — {flag.id}</div>;
+            on_click={on_close}
+            className='text - gray - 500 hover:text - gray - 700';
+          >;
+        <div className='p - 4 space - y-4 text - sm'>;
+          <div className='grid grid - cols - 2 gap - 4'>;
+              <div className='text - gray - 500'>Content Type</div>;
+              <div className='font - medium'>{flag.content_type}</div>;
+              <div className='text - gray - 500'>User</div>;
+              <div className='font - medium'>{flag.user_email}</div>;
+              <div className='text - gray - 500'>Reason</div>;
+              <div className='font - medium'>{flag.reason}</div>;
+              <div className='text - gray - 500'>Status</div>;
+              <div className='font - medium'>{flag.status}</div>;
+            <div className='text - gray - 500 mb - 1'>Preview</div>;
+            <div className='border rounded p - 3 bg - gray - 50 dark:bg - gray - 900 whitespace - pre - wrap max - h-48 overflow - auto'>;
+          <div className='grid grid - cols - 3 gap - 4'>;
+            <div className='p - 3 border rounded'>;
+              <div className='text - gray - 500'>Toxicity</div>;
+              <div className='font - semibold'>;
+              <div className='text - gray - 500'>NSFW</div>;
+              <div className='text - gray - 500'>Scam</div>;
+            <label className='block text - sm font - medium mb - 1'>;
+              value={admin_notes})
+              on_change={e => setAdminNotes (e.target.value)}
+        <div className='p - 4 border - t flex items - center justify - end gap - 2'>;
+            on_click={() => on_action ('approve', admin_notes)}
+            on_click={() => on_action ('remove', admin_notes)}
+            on_click={() => on_action ('warn', admin_notes)}
+            on_click={() => on_action ('ban', admin_notes)}
+    </div>);
+}        <div className="p - 4 border - t flex items - center justify - end gap - 2">;"
+</div>"
+          <button on_click={() => on_action ('approve', admin_notes)} className="px - 3 py - 2 rounded bg - green - 600 text - white">Approve</button>;""
+          <button on_click={() => on_action ('remove', admin_notes)} className="px - 3 py - 2 rounded bg - red - 600 text - white">Remove</button>;""
+          <button on_click={() => on_action ('warn', admin_notes)} className="px - 3 py - 2 rounded bg - yellow - 600 text - white">Warn</button>;""
+          <button on_click={() => on_action ('ban', admin_notes)} className="px - 3 py - 2 rounded bg - gray - 800 text - white">Ban User</button>;"
+</void>"
+    <div className='fixed inset-0 z-50 flex items-center justify-center bg-black/50'>
+      <div className='bg-white dark:bg-black w-full max-w-2xl rounded shadow-lg'>
+        <div className='p-4 border-b flex items-center justify-between'>
+          <div className='font-semibold'>Review Flag — {flag.id}</div>
+            className='text-gray-500 hover:text-gray-700
+          >
+        <div className='p-4 space-y-4 text-sm'>
+          <div className='grid grid-cols-2 gap-4'>
+            <div>
+              <div className='text-gray-500'>Content Type</div>
+              <div className='font-medium'>{flag.contentType}</div>
+              <div className='text-gray-500'>User</div>
+              <div className='font-medium'>{flag.userEmail}</div>
+              <div className='text-gray-500'>Reason</div>
+              <div className='font-medium'>{flag.reason}</div>
+              <div className='text-gray-500'>Status</div>
+              <div className='font-medium'>{flag.status}</div>
+            <div className='text-gray-500 mb-1'>Preview</div>
+            <div className='border rounded p-3 bg-gray-50 dark:bg-gray-900 whitespace-pre-wrap max-h-48 overflow-auto'>
+          <div className='grid grid-cols-3 gap-4'>
+            <div className='p-3 border rounded'>
+              <div className='text-gray-500'>Toxicity</div>
+              <div className='font-semibold'>
+              <div className='text-gray-500'>NSFW</div>
+              <div className='text-gray-500'>Scam</div>
+            <label className='block text-sm font-medium mb-1'>
+              onChange={e => setAdminNotes(e.target.value)}
+        <div className='p-4 border-t flex items-center justify-end gap-2'>
+          </button>        </div>
+}        <div className="p-4 border-t flex items-center justify-end gap-2">"
     adminNotes?: string;
   ) => Promise<void />;
 
@@ -12,8 +172,6 @@ export default function ModerationModal(): any ({;
   onClose,;}
   onAction,;}
 }: ModerationModalProps) {;
-
-
 
   flag,
   onClose,}
@@ -215,9 +373,7 @@ export default function ModerationModal() {const [adminNotes, setAdminNotes] = u
           <button onClick={() = /> onAction('ban', adminNotes)} className=\"px-3 py-2 rounded bg-gray-800 text-white\">Ban User</button>;
       </div>;
     </div>;
-  ))))}
-  );
-
+  ))))});
 
   );
 }        <div className=\"p-4 border-t flex items-center justify-end gap-2\" />
@@ -332,8 +488,7 @@ if (return null) {$2;}
 
             Ban User;
           </button>        </div>;
-      </div>
-    </div>
+
   );
 }        <div className=\"p - 4 border - t flex items - center justify - end gap - 2\" />;
           <button on_click={() = /> on_action ('approve', admin_notes)} className=\"px - 3 py - 2 rounded bg - green - 600 text - white\">Approve</button>;
@@ -359,11 +514,7 @@ export default function ModerationModal() {flag,onClose,onAction;}
           <div className='font-semibold' />Review Flag — {flag.id}</div>;
           <button;
     </div />);
-}
-
-
-
-  );
+});
 
 export type ModerationModalProps = {;
 
@@ -385,7 +536,12 @@ onAction}
   onAction}
 }: ModerationModalProps) {;
 
+<<<<<<< HEAD
+}
+
+=======
 const [adminNotes, setAdminNotes] = useState('');
+>>>>>>> origin/chore/fix-lint-and-merge
   if (!flag) return null;
 
   return (
@@ -513,7 +669,5 @@ onClick={onClos,}
       </div>
     </div>
 );
+});
 }
-  );
-}
-

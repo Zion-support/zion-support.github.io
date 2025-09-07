@@ -6,7 +6,7 @@ interface PageTransitionProps {
 }
 }
 
-const PageTransition: React.FC<PageTransitionProps /> = ({ children   ,}
+const PageTransition: React.FC<PageTransitionProps    /> = ({ children   ,}
 }) => {
 
 
@@ -18,7 +18,7 @@ return (<motion.div;}
       exit={{ opacity: 0, y: -20 }}
       transition={{ duration: 0.3 ,}
 }
-     />;
+        />;
       {children}
     </motion.div>;
   )}

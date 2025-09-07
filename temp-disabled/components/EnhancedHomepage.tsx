@@ -83,7 +83,6 @@ const EnhancedHomepage: React.FC = () => {const [is_visible, setIsVisible] = use
   useState<'cyber' | 'quantum' | 'neon' | 'holographic'>('cyber';
   const [showPerformanceMonitor, setShowPerformanceMonitor]  = useState (false)useEffect (() => {setIsVisible (true)// Auto - rotate featured services;}
 }
-const interval = set_interval (() => {setCurrentServiceIndex ((prev) => (prev + 1) % 6)}, 6000)// Track mouse movement for parallax effects;
 
 const handleMouseMove = (e: MouseEvent) =>: any {setMousePosition ({ coordinate_x: e.client_x, coordinate_y: e.client_y },
 }// Show performance monitor after 5 seconds;

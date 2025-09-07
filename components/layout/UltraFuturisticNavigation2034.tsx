@@ -1,9 +1,26 @@
+<<<<<<< HEAD
+import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
+import { motion, AnimatePresence } from 'framer-motion';
+=======
+import Link from 'next/link';
+<<<<<<< HEAD
 import { motion, AnimatePresence,
   from 'framer-motion';
+=======
+
+import { motion, AnimatePresence } from 'framer-motion';
+
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> origin/main
 import { Menu, X, ChevronDown, Search, Phone, Mail, MapPin;
   Rocket, Brain, Atom, Globe, Zap, Sparkles, Shield;
   Microscope, DollarSign, Home, Users, Briefcase;
+<<<<<<< HEAD
+origin/cursor/automate-test-improve-and-merge-code-2533
+
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
   BookOpen, MessageCircle, Star, TrendingUp, Target;
 
   Layers, Cpu, Database, Cloud, Lock, ShieldCheck;
@@ -16,7 +33,10 @@ import { Menu, X, ChevronDown, Search, Phone, Mail, MapPin;
 
   Laptop, Watch, Headphones, Speaker, Mic;
   Keyboard, Mouse, CpuIcon, DatabaseIcon;
+<<<<<<< HEAD
+=======
   CloudIcon, LockIcon, ShieldIcon, GlobeIcon;
+>>>>>>> origin/chore/fix-lint-and-merge
 
   ZapIcon, SparklesIcon, BrainIcon, AtomIcon;
   HeartIcon, RocketIcon, ShieldIcon as ShieldIcon2;
@@ -25,11 +45,16 @@ import { Menu, X, ChevronDown, Search, Phone, Mail, MapPin;
   ShoppingCart, UserCheck, FileText, BarChart;
   PaletteIcon, VideoIcon, LockIcon as LockIcon2;
   GlobeIcon as GlobeIcon2, CpuIcon as CpuIcon2;
+<<<<<<< HEAD
+  Handshake, LifeBuoy, Activity;
+
+=======
 
   Handshake, LifeBuoy, Activity;
 }
   Linkedin, Twitter, Facebook, Instagram, Youtube, Github}
  } from 'lucide-react';
+>>>>>>> origin/chore/fix-lint-and-merge
 
 const contactInfo = null;
 
@@ -60,13 +85,300 @@ color: 'from-violet-600 via-purple-600 to-indigo-600',
       },
       {
 
+<<<<<<< HEAD
+        }
+
+        "name": 'AI Drug Discovery Platform','
+        "href": '/ai-drug-discovery-platform','
+        "description": 'Accelerate drug discovery with AI','
+        "price": '$3,999/month','
+      }
+    ]
+  Handshake, LifeBuoy, Activity;
+    services: [;
+      {'
+        name: 'Quantum Machine Learning','
+        href: '/quantum - machine - learning - platform','
+        description: 'Harness quantum computing for ML','
+        price: '$1, 999 / month',
+  Linkedin, Twitter, Facebook, Instagram, Youtube, Github
+ } from 'lucide-react';
+const contactInfo = null;
+const serviceCategories = [
+  {
+    title: '🧠 Revolutionary AI Services'
+    icon: BrainIcon
+    color: 'from-violet-600 via-purple-600 to-indigo-600'
+    description: 'Next-generation AI consciousness and creativity'
+    services: [
+{
+        name: 'AI Business Intelligence Pro',
+        href: '/ai-business-intelligence-pro',
+        description: 'Transform data into actionable insights',
+        price: '$299/month',
+origin/cursor/automate-test-improve-and-merge-code-2533
+      },
+      {'
+        name: 'Blockchain AI Platform','
+        href: '/blockchain - ai - platform','
+        description: 'Decentralized AI for the future','
+        price: '$899 / month',
+      },
+      {'
+        name: 'Edge AI Computing','
+        href: '/edge - ai - computing - platform','
+        description: 'AI at the edge for real - time processing','
+        price: '$599 / month',
+      },
+      {}
+      },
+    ],'
+  },  {      { name: 'Quantum Machine Learning', href: '/quantum - machine - learning - platform', description: 'Harness quantum computing for ML', price: '$1, 999 / month' }'
+      { name: 'Blockchain AI Platform', href: '/blockchain - ai - platform', description: 'Decentralized AI for the future', price: '$899 / month' },'
+      { name: 'Edge AI Computing', href: '/edge - ai - computing - platform', description: 'AI at the edge for real - time processing', price: '$599 / month' },'
+      { name: 'AI Climate Modeling', href: '/ai - climate - modeling - platform', description: 'Predict climate change with AI', price: '$1, 299 / month' }
+    ];
+  }
+'
+    title: '🏙️ Enterprise IT Solutions',
+    icon: CpuIcon,'
+    color: 'from - blue - 600 via - cyan - 600 to - teal - 600','
+    description: 'Autonomous enterprise infrastructure','
+    title: '🛒 Business Automation',
+    icon: ShoppingCart,'
+    color: 'from - teal - 600 via - emerald - 600 to - green - 600','
+    description: 'Streamline business operations','
+    title: '🤖 Robotics & Automation',
+    icon: RocketIcon,'
+    color: 'from - green - 600 via - yellow - 600 to - orange - 600','
+    description: 'Intelligent automation solutions','
+    title: '🔬 Research & Development',
+    icon: MicroscopeIcon,'
+    color: 'from - orange - 600 via - red - 600 to - pink - 600','
+    description: 'Breakthrough research solutions',
+
+const quickLinks = ['
+  { name: 'Home', href: '/', icon: Home }'
+  { name: 'Services', href: '/services', icon: Briefcase }'
+  { name: 'Solutions', href: '/solutions', icon: Target }'
+  { name: 'Pricing', href: '/pricing-2034', icon: DollarSign }'
+  { name: 'Resources', href: '/resources', icon: BookOpen }'
+  { name: 'Case Studies', href: '/case-studies', icon: FileText }'
+  { name: 'Blog', href: '/blog', icon: MessageCircle }'
+  { name: 'Contact', href: '/contact', icon: MessageCircle },];  { name: 'Contact', href: '/contact', icon: MessageCircle }
+    ];
+  }
+  { name: 'Home', href: '/', icon: Home },
+  { name: 'Services', href: '/services', icon: Briefcase },
+  { name: 'Solutions', href: '/solutions', icon: Target },
+  { name: 'Pricing', href: '/pricing - 2034', icon: DollarSign },
+  { name: 'Resources', href: '/resources', icon: BookOpen },
+  { name: 'Case Studies', href: '/case - studies', icon: FileText },
+  { name: 'Blog', href: '/blog', icon: MessageCircle },
+        name: 'AI Drug Discovery Platform',
+        href: '/ai-drug-discovery-platform',
+        description: 'Accelerate drug discovery with AI',
+        price: '$3,999/month',
+=======
         name: 'AI Drug Discovery Platform',
   href: '/ai-drug-discovery-platform',
         description: 'Accelerate drug discovery with AI',}
+<<<<<<< HEAD
   price: '$3,999/month',],
+=======
+  price: '$3,999/month',}
+>>>>>>> origin/chore/fix-lint-and-merge
+      },
+    ],
+>>>>>>> origin/main
   },
   {
     title: '⚛️ Quantum & Emerging Tech',
+<<<<<<< HEAD
+    icon: AtomIcon,
+    color: 'from-indigo-600 via-blue-600 to-cyan-600',
+    description: 'Quantum computing and beyond',
+    services: [
+  Handshake, LifeBuoy, Activity;services: [;
+      {name: 'Quantum Machine Learning',href: '/quantum - machine - learning - platform',description: 'Harness quantum computing for ML',price: '$1, 999 / month',Linkedin, Twitter, Facebook, Instagram, Youtube, Github;
+  } from 'lucide-react';
+const contactInfo = null;
+const serviceCategories = [;
+  {title: '🧠 Revolutionary AI Services';
+    icon: BrainIcon;
+    color: 'from-violet-600 via-purple-600 to-indigo-600';
+    description: 'Next-generation AI consciousness and creativity';
+    services: [;
+{name: 'AI Business Intelligence Pro',href: '/ai-business-intelligence-pro',description: 'Transform data into actionable insights',price: '$299/month',},{name: 'Blockchain AI Platform',href: '/blockchain - ai - platform',description: 'Decentralized AI for the future',price: '$899 / month',},{name: 'Edge AI Computing',href: '/edge - ai - computing - platform',description: 'AI at the edge for real - time processing',price: '$599 / month',},{},],},  {      { name: 'Quantum Machine Learning', href: '/quantum - machine - learning - platform', description: 'Harness quantum computing for ML', price: '$1, 999 / month' }
+      { name: 'Blockchain AI Platform', href: '/blockchain - ai - platform', description: 'Decentralized AI for the future', price: '$899 / month' },{ name: 'Edge AI Computing', href: '/edge - ai - computing - platform', description: 'AI at the edge for real - time processing', price: '$599 / month' },{ name: 'AI Climate Modeling', href: '/ai - climate - modeling - platform', description: 'Predict climate change with AI', price: '$1, 299 / month' }
+    ];
+  }title: '🏙️ Enterprise IT Solutions',icon: CpuIcon,color: 'from - blue - 600 via - cyan - 600 to - teal - 600',description: 'Autonomous enterprise infrastructure',title: '🛒 Business Automation',icon: ShoppingCart,color: 'from - teal - 600 via - emerald - 600 to - green - 600',description: 'Streamline business operations',title: '🤖 Robotics & Automation',icon: RocketIcon,color: 'from - green - 600 via - yellow - 600 to - orange - 600',description: 'Intelligent automation solutions',title: '🔬 Research & Development',icon: MicroscopeIcon,color: 'from - orange - 600 via - red - 600 to - pink - 600',description: 'Breakthrough research solutions',const quickLinks = [;
+      },
+      {
+        }
+        "name": 'Blockchain AI Platform''
+        "href": '/blockchain-ai-platform''
+        "description": 'Decentralized AI for the future''
+        "price": '$899/month''
+
+    title: '🏙️ Enterprise IT Solutions',
+    icon: CpuIcon,
+    color: 'from - blue - 600 via - cyan - 600 to - teal - 600',
+    description: 'Autonomous enterprise infrastructure',
+    title: '🛒 Business Automation',
+    icon: ShoppingCart,
+    color: 'from - teal - 600 via - emerald - 600 to - green - 600',
+    description: 'Streamline business operations',
+    title: '🤖 Robotics & Automation',
+    icon: RocketIcon,
+    color: 'from - green - 600 via - yellow - 600 to - orange - 600',
+    description: 'Intelligent automation solutions',
+    title: '🔬 Research & Development',
+    icon: MicroscopeIcon,
+    color: 'from - orange - 600 via - red - 600 to - pink - 600',
+    description: 'Breakthrough research solutions',
+
+const quickLinks = [
+  { name: 'Home', href: '/', icon: Home }
+  { name: 'Services', href: '/services', icon: Briefcase }
+  { name: 'Solutions', href: '/solutions', icon: Target }
+  { name: 'Pricing', href: '/pricing-2034', icon: DollarSign }
+  { name: 'Resources', href: '/resources', icon: BookOpen }
+  { name: 'Case Studies', href: '/case-studies', icon: FileText }
+  { name: 'Blog', href: '/blog', icon: MessageCircle }
+  { name: 'Contact', href: '/contact', icon: MessageCircle },];  { name: 'Contact', href: '/contact', icon: MessageCircle }
+    ];
+  }
+  { name: 'Home', href: '/', icon: Home },{ name: 'Services', href: '/services', icon: Briefcase },{ name: 'Solutions', href: '/solutions', icon: Target },{ name: 'Pricing', href: '/pricing - 2034', icon: DollarSign },{ name: 'Resources', href: '/resources', icon: BookOpen },{ name: 'Case Studies', href: '/case - studies', icon: FileText },{ name: 'Blog', href: '/blog', icon: MessageCircle },name: 'AI Drug Discovery Platform',href: '/ai-drug-discovery-platform',description: 'Accelerate drug discovery with AI',price: '$3,999/month',},],},{title: '⚛️ Quantum & Emerging Tech',icon: AtomIcon,color: 'from-indigo-600 via-blue-600 to-cyan-600',description: 'Quantum computing and beyond',services: [;
+{name: 'Quantum Machine Learning',href: '/quantum-machine-learning-platform',description: 'Harness quantum computing for ML',price: '$1,999/month',},{name: 'Blockchain AI Platform';
+        href: '/blockchain-ai-platform';
+        description: 'Decentralized AI for the future';
+        price: '$899/month';
+      }
+      {"name": 'AI Climate Modeling',"href": '/ai-climate-modeling-platform',"description": 'Predict climate change with AI',"price": '$1,299/month'}]},{"title": '🏙️ Enterprise IT Solutions',"icon": CpuIcon,"color": 'from-blue-600 via-cyan-600 to-teal-600',"description": 'Autonomous enterprise infrastructure',"services": [;'
+{"name": 'API Security & Monitoring',"href": '/api-security-monitoring-suite',"description": 'Protect and monitor your APIs',"price": '$399/month'},{"name": 'Customer Success Automation';'
+        }
+        "href": '/customer-success-automation';'
+        "description": 'Automate customer success workflows';'
+        "price": '$199/month';'
+      }
+      {"name": 'HR Automation Suite';'
+        }
+        "href": '/hr-automation-suite';'
+        "description": 'Streamline HR processes with AI';'
+        "price": '$179/month';'
+      }
+      {"name": 'Project Management AI',"href": '/project-management-ai-platform',"description": 'AI-powered project management',"price": '$199/month'}]},{"title": '🛒 Business Automation',"icon": ShoppingCart,"color": 'from-teal-600 via-emerald-600 to-green-600',"description": 'Streamline business operations',"services": [;'
+{"name": 'E-commerce Automation',"href": '/ecommerce-automation-platform',"description": 'Automate your entire e-commerce operation',"price": '$249/month'},{"name": 'Marketing Automation Suite';'
+        }
+        "href": '/marketing-automation-suite';'
+        "description": 'Automate your entire marketing operation';'
+        "price": '$279/month';'
+      }
+      {"name": 'Financial Analytics Platform';'
+        }
+        "href": '/financial-analytics-platform';'
+        "description": 'Real-time financial insights';'
+        "price": '$349/month';'
+      }
+      {"name": 'Legal Document Automation',"href": '/legal-document-automation',"description": 'Automate legal document creation',"price": '$399/month'}]},{"title": '🤖 Robotics & Automation',"icon": RocketIcon,"color": 'from-green-600 via-yellow-600 to-orange-600',"description": 'Intelligent automation solutions',"services": [;'
+{"name": 'Autonomous Robotics Platform',"href": '/autonomous-robotics-platform',"description": 'Build and deploy intelligent robots',"price": '$2,499/month'},{"name": 'AI Content Generator Elite';'
+        }
+        "href": '/ai-content-generator-elite';'
+        "description": 'Professional AI content creation';'
+        "price": '$49/month';'
+      }
+      {"name": 'AI Guardrails Suite';'
+        }
+        "href": '/ai-guardrails-suite';'
+        "description": 'Policy and safety for LLM apps';'
+        "price": '$199/month';'
+      }
+      {"name": 'AI Business Intelligence',"href": '/ai-business-intelligence-suite',"description": 'Intelligent business insights',"price": '$299/month'}]},{"title": '🔬 Research & Development',"icon": MicroscopeIcon,"color": 'from-orange-600 via-red-600 to-pink-600',"description": 'Breakthrough research solutions',"services": [;'
+{"name": 'Quantum DNA Computing',"href": '/quantum-dna-computing-platform',"description": 'DNA-based quantum computation',"price": '$35,999/month'},{"name": 'Space Mining Automation';'
+        }
+        "href": '/space-mining-automation-platform';'
+        "description": 'Automated asteroid mining';'
+        "price": '$45,999/month';'
+      }
+      {"name": 'Metaverse AI Development';'
+        }
+        "href": '/metaverse-ai-development-platform';'
+        "description": 'Build immersive virtual worlds';'
+        "price": '$2,999/month';'
+      }
+  { name: 'Home', href: '/', icon: Home },
+  { name: 'Services', href: '/services', icon: Briefcase },
+  { name: 'Solutions', href: '/solutions', icon: Target },
+  { name: 'Pricing', href: '/pricing - 2034', icon: DollarSign },
+  { name: 'Resources', href: '/resources', icon: BookOpen },
+  { name: 'Case Studies', href: '/case - studies', icon: FileText },
+  { name: 'Blog', href: '/blog', icon: MessageCircle },
+  { name: 'About Us', href: '/about', icon: Users },
+  { name: 'Careers', href: '/careers', icon: Briefcase },
+  { name: 'News', href: '/news', icon: FileText },
+  { name: 'Partners', href: '/partners', icon: Handshake },
+  { name: 'Support', href: '/support', icon: LifeBuoy },
+  { name: 'Status', href: '/status', icon: Activity }
+];
+
+
+
+
+
+  { name: 'Status', href: '/status', icon: Activity }
+];
+
+
+
+export default function UltraFuturisticNavigation2034() {;
+
+
+{ name: 'Status', href: '/status', icon: Activity },
+];
+const socialLinks = [
+  {
+    name: 'LinkedIn'
+    href: 'https://linkedin.com/company/ziontechgroup'
+    icon: Linkedin
+  }
+];
+const certifications = [
+  'ISO 27001 Certified'
+  'SOC 2 Type II Compliant'
+  'GDPR Compliant'
+  'HIPAA Compliant'
+  'PCI DSS Level 1'
+  'FedRAMP Authorized'
+  'Quantum Security Certified'
+  'AI Ethics Compliant',];];
+const socialLinks = [
+  { name: 'LinkedIn', href: 'https://linkedin.com/company/ziontechgroup', icon: Linkedin }
+  { name: 'GitHub', href: 'https://github.com/Zion-Holdings', icon: Github }
+  { name: 'Instagram', href: 'https://instagram.com/ziontechgroup', icon: Instagram }
+  { name: 'YouTube', href: 'https://youtube.com/@ziontechgroup', icon: Youtube }
+  { name: 'Twitter', href: 'https://twitter.com/ziontechgroup', icon: Twitter }
+];
+const certifications = [
+  'ISO 27001 CertifiedSOC 2 Type II CompliantGDPR CompliantHIPAA CompliantPCI DSS Level 1FedRAMP AuthorizedQuantum Security CertifiedAI Ethics Compliant'
+];
+export default function UltraFuturisticNavigation2034() {
+  const [isOpen, setIsOpen] = useState(false);
+  const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
+  const [isScrolled, setIsScrolled] = useState(false);
+  useEffect(() => {
+    const handleScroll = () => {
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll)
+  }, []);
+  const toggleDropdown = (category: string) => {
+    setActiveDropdown(activeDropdown === category ? null : category)
+  }
+  const closeDropdown = () => {
+    setActiveDropdown(null)
+const quickLinks = [;
+  { "name": 'Home', "href": '/', "icon": Home,'
+=======
   icon: AtomIcon,
     color: 'from-indigo-600 via-blue-600 to-cyan-600',
   description: 'Quantum computing and beyond',
@@ -169,6 +481,7 @@ color: 'from-violet-600 via-purple-600 to-indigo-600',
 const quickLinks = [
   { name: 'Home',}
   href: '/', icon: Home,}
+>>>>>>> origin/chore/fix-lint-and-merge
 },
   { name: 'Services',}
   href: '/services', icon: Briefcase,}
@@ -191,6 +504,23 @@ const quickLinks = [
 { name: 'Contact',}
   href: '/contact', icon: MessageCircle,];
 
+<<<<<<< HEAD
+const quickLinks = [
+  { name: 'Home', href: '/', icon: Home},
+  { name: 'Services', href: '/services', icon: Briefcase},
+  { name: 'Solutions', href: '/solutions', icon: Target},
+  { name: 'Pricing', href: '/pricing-2034', icon: DollarSign},
+  { name: 'Resources', href: '/resources', icon: BookOpen},
+  { name: 'Case Studies', href: '/case-studies', icon: FileText},
+  { name: 'Blog', href: '/blog', icon: MessageCircle},
+  { name: 'Contact', href: '/contact', icon: MessageCircle}
+],
+    name: 'LinkedIn',
+    href: 'https://linkedin.com/company/ziontechgroup',
+    icon: Linkedin,
+  },
+  { name: 'GitHub', href: 'https://github.com/Zion-Holdings', icon: Github },
+=======
 const companyLinks = [
   { name: 'About Us',}
   href: '/about', icon: Users,}
@@ -212,6 +542,7 @@ const companyLinks = [
   href: '/status', icon: Activity,];
 
 const socialLinks = [
+>>>>>>> origin/chore/fix-lint-and-merge
   {
     name: 'LinkedIn',
   href: 'https://linkedin.com/company/ziontechgroup',}
@@ -246,11 +577,91 @@ const certifications = [
 export default function UltraFuturisticNavigation2034() {
   const [isOpen, setIsOpen] = useState(false);
 
-const [activeDropdown, setActiveDropdown] = useState<string | null />(null);
+const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
 
 const [isScrolled, setIsScrolled] = useState(false);
   useEffect(() => {
 
+<<<<<<< HEAD
+    }
+
+    const handleScroll = () => {
+    window.addEventListener('scroll', handleScroll);
+export default function UltraFuturisticNavigation2034() { return null; }
+  useEffect(() => {}
+    const handleScroll = () => {'
+    window.addEventListener('scroll', handleScroll);'
+    return () => window.removeEventListener('scroll', handleScroll)
+    return () => window.removeEventListener(scroll', handleScroll)
+  }, []);
+  const toggleDropdown = (category: string) => {}
+    setActiveDropdown(activeDropdown === category ? null : category)
+  }
+  const closeDropdown = () => {}
+    setActiveDropdown(null)
+const quickLinks = [;'
+  { name: Home, href: '/', icon: Home },
+  { name: Services', href: '/services, icon: Briefcase },
+  { name: 'Solutions', href: /solutions, icon: Target },'
+  { name: 'Pricing, href: /pricing-2034', icon: DollarSign },'
+  { name: Resources, href: '/resources', icon: BookOpen },
+  { name: Case Studies', href: '/case-studies, icon: FileText },
+  { name: 'Blog', href: /blog, icon: MessageCircle },'
+  { name: 'Contact, href: /contact', icon: MessageCircle }];  { name: 'Contact, href: /contact', icon: MessageCircle }
+];
+const companyLinks = [;'
+  { name: About Us, href: '/about', icon: Users },
+  { name: Careers', href: '/careers, icon: Briefcase },
+  { name: 'News', href: /news, icon: FileText },'
+  { name: 'Partners, href: /partners', icon: Handshake },'
+  { name: Support, href: '/support', icon: LifeBuoy },
+  { name: Status', href: '/status, icon: Activity }];
+const socialLinks = [;
+  {
+    name: 'LinkedIn',
+    href: https://linkedin && linkedin.com/company/ziontechgroup',
+    icon: Linkedin},'
+  { name: GitHub, href: 'https://github && github.com/Zion-Holdings', icon: Github },
+  {
+    name: Instagram','
+    href: https://instagram && instagram.com/ziontechgroup,
+    icon: Instagram},
+  {'
+    name: 'YouTube,
+    href: 'https://youtube && youtube.com/@ziontechgroup',
+    icon: Youtube},
+  { name: Twitter', href: 'https://twitter && twitter.com/ziontechgroup, icon: Twitter }];
+const certifications = [;
+  'ISO 27001 Certified',
+  SOC 2 Type II Compliant','
+  GDPR Compliant,'
+  'HIPAA Compliant,
+  'PCI DSS Level 1',
+  FedRAMP Authorized','
+  Quantum Security Certified,'
+  'AI Ethics Compliant];];
+  { name: 'LinkedIn', href: https://linkedin && linkedin.com/company/ziontechgroup, icon: Linkedin },'
+  { name: 'GitHub, href: https://github && github.com/Zion-Holdings', icon: Github },'
+  { name: Instagram, href: 'https://instagram && instagram.com/ziontechgroup', icon: Instagram },
+  { name: YouTube', href: 'https://youtube && youtube.com/@ziontechgroup, icon: Youtube },
+  { name: 'Twitter', href: https://twitter && twitter.com/ziontechgroup, icon: Twitter }
+];
+export default function UltraFuturisticNavigation2034() { return null; }
+    }'
+    window && window.addEventListener('scroll, handleScroll);
+    return () => window && window.removeEventListener('scroll', handleScroll);
+  }, []);
+  }
+
+
+    setActiveDropdown(activeDropdown === category ? null : category);
+  }
+  const closeDropdown = () => {
+    setActiveDropdown(null);
+  };
+
+
+=======
     const handleScroll = (
 
 setIsScrolled(window.scrollY > 50)) => {
@@ -275,11 +686,45 @@ const closeDropdown = (
   return $3;}
 }
 };
+>>>>>>> origin/chore/fix-lint-and-merge
 
   return (
     <>
       {/* Top Contact Bar */}
-<div className = 'bg-gradient-to-r from-cyan-900 via-blue-900 to-purple-900 text-white py-2 px-4 text-sm' />
+<<<<<<< HEAD
+      <div className="bg-gradient-to-r from-cyan-900 via-blue-900 to-purple-900 text-white py-2 px-4 text-sm">
+        <div className="max-w-7xl mx-auto flex flex-wrap items-center justify-between">
+          <div className="flex items-center space-x-6">
+            <div className="flex items-center space-x-2">
+              <Phone className="w-4 h-4 text-cyan-400" />
+              <span className="hover:text-cyan-400 transition-colors">
+            </div>'
+            <div className='flex items-center space-x-2'>'
+              <Mail className='w-4 h-4 text-blue-400' />'
+              <span className='"hover": text-blue-400 transition-colors'>'
+                {contactInfo.email}
+              </span>
+            </div>'
+            <div className='flex items-center space-x-2'>'
+              <MapPin className='w-4 h-4 text-purple-400' />'
+              <span className='hover:text-purple-400 transition-colors'>                {contactInfo.address}
+            <div className='flex items-center space-x-2'>
+              </span>
+            </div>
+          </div>                {contactInfo.mobile}
+      <div className="bg-gradient-to-r from-cyan-900 via-blue-900 to-purple-900 text-white py-2 px-4 text-sm">"
+        <div className="max-w-7xl mx-auto flex flex-wrap items-center justify-between">"
+          <div className="flex items-center space-x-6">"
+            <div className="flex items-center space-x-2">"
+              <Phone className="w-4 h-4 text-cyan-400" />"
+              <span className="hover:text-cyan-400 transition-colors">'
+      <div className='bg-gradient-to-r from-cyan-900 via-blue-900 to-purple-900 text-white py-2 px-4 text-sm'>'
+        <div className='max-w-7xl mx-auto flex flex-wrap items-center justify-between'>'
+          <div className='flex items-center space-x-6'>'
+            <div className='flex items-center space-x-2'>'
+              <MapPin className='w-4 h-4 text-purple-400' />'
+=======
+<div className = 'bg-gradient-to-r from-cyan-900 via-blue-900 to-purple-900 text-white py-2 px-4 text-sm'    />
  ;
   return (
     <>;
@@ -288,20 +733,92 @@ const closeDropdown = (
                 {contactInfo.mobile}
               </span>
             </div>
-            <div className='flex items-center space-x-2' />
-              <Mail className='w-4 h-4 text-blue-400' />
-              <span className='hover: text-blue-400 transition-colors' />
+            <div className='flex items-center space-x-2'    />
+              <Mail className='w-4 h-4 text-blue-400'    />
+              <span className='hover: text-blue-400 transition-colors'    />
                 {contactInfo.email}
               </span>
             </div>
-            <div className='flex items-center space-x-2' />
-              <MapPin className='w-4 h-4 text-purple-400' />
+            <div className='flex items-center space-x-2'    />
+              <MapPin className='w-4 h-4 text-purple-400'    />
+>>>>>>> origin/chore/fix-lint-and-merge
 
-              <span className='hover:text-purple-400 transition-colors' />
+              <span className='hover:text-purple-400 transition-colors'    />
                 {contactInfo.address}
               </span>
             </div>
-          </div>
+<<<<<<< HEAD
+          </div>"
+            <div className="flex items-center space-x-2">"
+              <Star className="w-4 h-4 text-yellow-400" />"
+              <span className="text-yellow-400 font-semibold">5.0 Rating</span>
+            </div>
+            <div className=flex items-center space-x-2">"
+              <Users className=w-4 h-4 text-green-400 />"
+              <span className="text-green-400 font-semibold>50K+ Customers</span>
+      <div className=bg-gradient-to-r from-cyan-900 via-blue-900 to-purple-900 text-white py-2 px-4 text-sm'>;'
+        <div className=max-w-7xl mx-auto flex flex-wrap items-center justify-between>;'
+          <div className='flex items-center space-x-6>;
+            <div className='flex items-center space-x-2'>;
+              <Phone className=w-4 h-4 text-cyan-400' />;'
+              <span className=hover:text-cyan-400 transition-colors>;
+                {contactInfo && contactInfo.mobile}
+              </span>;
+            </div>;'
+            <div className='flex items-center space-x-2>;
+              <Mail className='w-4 h-4 text-blue-400' />;
+              <span className=hover:text-blue-400 transition-colors'>;
+                {contactInfo && contactInfo.email}
+              </span>;
+            </div>;'
+            <div className='flex items-center space-x-2'>;'
+              <MapPin className='w-4 h-4 text-purple-400' />;'
+              <span className='hover:text-purple-400 transition-colors'>                {contactInfo && contactInfo.address}
+              </span>;
+            </div>;
+          </div>                {contactInfo && contactInfo.mobile}
+              </span>;
+            </div>;
+            <div className="flex items-center space-x-2">;
+              <Mail className=w-4 h-4 text-blue-400" />;"
+              <span className=hover:text-blue-400 transition-colors>;
+                {contactInfo && contactInfo.email}
+              </span>;
+            </div>;"
+            <div className="flex items-center space-x-2>;
+              <MapPin className="w-4 h-4 text-purple-400" />;
+              <span className=hover:text-purple-400 transition-colors">;
+                {contactInfo && contactInfo.address}
+              </span>;
+            </div>;
+          </div>;'
+          <div className=flex items-center space-x-4>;'
+            <div className='flex items-center space-x-2>;
+              <Star className='w-4 h-4 text-yellow-400' />;
+              <span className=text-yellow-400 font-semibold'>5 && 5.0 Rating</span>;
+            </div>;'
+            <div className=flex items-center space-x-2>;'
+              <Users className='w-4 h-4 text-green-400 />;
+              <span className='text-green-400 font-semibold'>;
+                50K+ Customers;"
+              </span>            </div>          <div className=flex items-center space-x-4>;"
+            <div className="flex items-center space-x-2>;
+              <Star className="w-4 h-4 text-yellow-400" />;
+              <span className=text-yellow-400 font-semibold">5 && 5.0 Rating</span>;
+            </div>;"
+            <div className=flex items-center space-x-2>;"
+              <Users className="w-4 h-4 text-green-400 />;
+              <span className="text-green-400 font-semibold">50K+ Customers</span>;
+          </div>;
+        </div>;
+      </div>;
+
+      {/* Main Navigation */}
+        isScrolled '
+          ? 'bg-black/90 backdrop-blur-xl border-b border-cyan-500/20' '
+          : 'bg-transparent'
+<div className='flex items-center space-x-4'>
+            <div className='flex items-center space-x-2'>
 
 <div className='flex items-center space-x-4' />
             <div className='flex items-center space-x-2' />
@@ -310,26 +827,99 @@ const closeDropdown = (
             </div>
             <div className='flex items-center space-x-2' />
               <Users className='w-4 h-4 text-green-400' />
-              <span className='text-green-400 font-semibold' />
+              <span className='text-green-400 font-semibold'>
+                50K+ Customers
+=======
+          </div>
+
+<div className='flex items-center space-x-4'    />
+            <div className='flex items-center space-x-2'    />
+              <Star className='w-4 h-4 text-yellow-400'    />
+              <span className='text-yellow-400 font-semibold'    />5.0 Rating</span>
+            </div>
+            <div className='flex items-center space-x-2'    />
+              <Users className='w-4 h-4 text-green-400'    />
+              <span className='text-green-400 font-semibold'    />
                 50K+ Customers;
+>>>>>>> origin/chore/fix-lint-and-merge
               </span>
             </div>
           </div>
         </div>
       </div>
       {/* Main Navigation */}
+<<<<<<< HEAD
 <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
           isScrolled}
+=======
+<<<<<<< HEAD
+<nav,
+className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${`          }
+          isScrolled
+
+        }
+}>
+
+        <div className='max-w-7xl mx-auto px-4 "sm":px-6 "lg":px-8'>;'
+          <div className='flex items-center justify-between h-20'>;'
+            {/* Logo */}
+            <motion.div;
+              initial={{ opacity: 0, x: -20 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.5 }}
+        isScrolled 
+          ? 'bg-black/90 backdrop-blur-xl border-b border-cyan-500/20' 
+          : 'bg-transparent'
+            >
+              <div className='relative'>
+                <div className='w-12 h-12 bg-gradient-to-r from-cyan-500 via-blue-500 to-purple-500 rounded-xl flex items-center justify-center'>
+                  <Rocket className='w-7 h-7 text-white' />
+                </div>'
+                <div className='absolute -inset-1 bg-gradient-to-r from-cyan-500 via-blue-500 to-purple-500 rounded-xl blur opacity-30 animate-pulse'></div>
+              </div>
+              <div>'
+                <h1 className='text-2xl font-bold bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400 bg-clip-text text-transparent'>
+                  Zion Tech Group;
+                </h1>'
+                <p className='text-xs text-gray-400'>
+                  Future Technology Solutions;
+             />
+              <div className='relative' />
+                <div className='w-12 h-12 bg-gradient-to-r from-cyan-500 via-blue-500 to-purple-500 rounded-xl flex items-center justify-center' />
+                  <Rocket className='w-7 h-7 text-white' />
+                </div>
+                <div className=absolute -inset-1 bg-gradient-to-r from-cyan-500 via-blue-500 to-purple-500 rounded-xl blur opacity-30 animate-pulse'></div>
+              </div>
+              <div>
+                <h1 className='text-2xl font-bold bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400 bg-clip-text text-transparent>
+                  Zion Tech Group
+                </h1>
+                <p className=text-xs text-gray-400'>
+                  Future Technology Solutions
+                </p>              </div>
+                </p>              </div>
+            </motion.div>
+            {/* Desktop Navigation */}            >
+      }`}>"
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8>
+          <div className="flex items-center justify-between h-20">
+=======
+<nav;
+className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+          isScrolled;
+>>>>>>> origin/main
             ? 'bg-black/90 backdrop-blur-xl border-b border-cyan-500/20'
             : 'bg-transparent'
 }
         },
-} />
+}    />
 
-        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8' />;
-          <div className='flex items-center justify-between h-20' />;
+        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'    />;
+          <div className='flex items-center justify-between h-20'    />;
+>>>>>>> origin/chore/fix-lint-and-merge
             {/* Logo */}
             <motion.div;
+<<<<<<< HEAD
               initial={{ opacity: 0}
             x: -20 
             
@@ -337,21 +927,754 @@ const closeDropdown = (
               animate={{ opacity: 1}
             x: 0
              
+=======
+              initial={{ opacity: 0, x: -20 ,}
+}
+              animate={{ opacity: 1, x: 0 }}
+<<<<<<< HEAD
+              transition={{ duration: 0.5 }}"
+              className="flex items-center space-x-3"
+            >"
+              <div className="relative>
+                <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 via-blue-500 to-purple-500 rounded-xl flex items-center justify-center">
+                  <Rocket className=w-7 h-7 text-white" />
+                </div>"
+                <div className=absolute -inset-1 bg-gradient-to-r from-cyan-500 via-blue-500 to-purple-500 rounded-xl blur opacity-30 animate-pulse></div>
+              </div>
+              <div>"
+                <h1 className="text-2xl font-bold bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400 bg-clip-text text-transparent>
+                  Zion Tech Group;
+                </h1>
+                <p className="text-xs text-gray-400">Future Technology Solutions</p>
+              </div>
+            </motion.div>
+              transition={{ duration: 0 && 0.5 }}'
+              className='flex items-center space-x-3'>;'
+              <div className='relative'>;'
+                <div className='w-12 h-12 bg-gradient-to-r from-cyan-500 via-blue-500 to-purple-500 rounded-xl flex items-center justify-center'>;'
+                  <Rocket className='w-7 h-7 text-white' />;
+                </div>;'
+                <div className='absolute -inset-1 bg-gradient-to-r from-cyan-500 via-blue-500 to-purple-500 rounded-xl blur opacity-30 animate-pulse'></div>;
+              </div>;
+              <div>;
+                <h1 className=text-2xl font-bold bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400 bg-clip-text text-transparent'>;
+                  Zion Tech Group;
+                </h1>;'
+                <p className=text-xs text-gray-400>;
+                  Future Technology Solutions;
+                </p>              </div>;
+            </motion && motion.div>;
+            {/* Desktop Navigation */}            >;
+              <div className=relative">;"
+                <div className=w-12 h-12 bg-gradient-to-r from-cyan-500 via-blue-500 to-purple-500 rounded-xl flex items-center justify-center>;"
+                  <Rocket className="w-7 h-7 text-white />;
+                </div>;
+                <div className="absolute -inset-1 bg-gradient-to-r from-cyan-500 via-blue-500 to-purple-500 rounded-xl blur opacity-30 animate-pulse"></div>;
+              </div>;
+              <div>;
+                <h1 className=text-2xl font-bold bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400 bg-clip-text text-transparent">;
+                  Zion Tech Group;
+                </h1>;"
+                <p className=text-xs text-gray-400>Future Technology Solutions</p>;
+              </div>;
+            </motion && motion.div>;
+                  {link.name}
+                </Link>
+              ))}
+
+                >
+                  {link.name}
+                </Link>
+              ))}
+              
+              {/* Services Dropdown */}"
+              <div className="relative group">"
+                <button className="flex items-center space-x-1 text-gray-300 hover:text-cyan-400 transition-colors duration-200 font-medium">
+                  <span>Services</span>"
+                  <ChevronDown className="w-4 h-4" />
+                </button>"
+                <div className="absolute top-full left-0 w-96 bg-black/95 backdrop-blur-xl border border-cyan-500/20 rounded-xl p-4 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform translate-y-2 group-hover:translate-y-0">"
+                  <div className="grid grid-cols-2 gap-4">
+                    {serviceCategories.slice(0, 4).map((category) => ("
+                      <div key={category.title} className="p-3 rounded-lg hover:bg-cyan-500/10 transition-colors">"
+                        <div className="flex items-center space-x-2 mb-2">"
+                          <category.icon className="w-5 h-5 text-cyan-400" />'"
+                          <h3 className="text-sm font-semibold text-white">{category.title.split(' ')[0]}</h3>
+                        </div>"
+                        <p className="text-xs text-gray-400 mb-2">{category.description}</p>"
+                        <div className="space-y-1">
+                          {category.services.slice(0, 2).map((service) => (
+                            <Link;
+;
+const social_links = [;
+  {'
+    name: 'LinkedIn','
+    href: 'https://linkedin.com / company / ziontechgroup',
+    icon: Linkedin,
+  },'
+  { name: 'GitHub', href: 'https://github.com / Zion - Holdings', icon: Github },
+  {'
+    name: 'Instagram','
+    href: 'https://instagram.com / ziontechgroup',
+    icon: Instagram,
+  },
+  {'
+    name: 'YouTube','
+    href: 'https://youtube.com/@ziontechgroup',
+    icon: Youtube,
+  },'
+  { name: 'Twitter', href: 'https://twitter.com / ziontechgroup', icon: Twitter },
+];
+;
+const certifications = [;'
+  'ISO 27001 Certified','
+  'SOC 2 Type II Compliant','
+  'GDPR Compliant','
+  'HIPAA Compliant','
+  'PCI DSS Level 1','
+  'FedRAMP Authorized','
+  'Quantum Security Certified','
+  'AI Ethics Compliant', ];];
+;
+const social_links = [;'
+  { name: 'LinkedIn', href: 'https://linkedin.com / company / ziontechgroup', icon: Linkedin },'
+  { name: 'GitHub', href: 'https://github.com / Zion - Holdings', icon: Github },'
+  { name: 'Instagram', href: 'https://instagram.com / ziontechgroup', icon: Instagram },'
+  { name: 'YouTube', href: 'https://youtube.com/@ziontechgroup', icon: Youtube },'
+  { name: 'Twitter', href: 'https://twitter.com / ziontechgroup', icon: Twitter }
+];
+;
+const certifications = [;'
+  'ISO 27001 CertifiedSOC 2 Type II CompliantGDPR CompliantHIPAA CompliantPCI DSS Level 1FedRAMP AuthorizedQuantum Security CertifiedAI Ethics Compliant';
+];
+;
+export default /**;
+ * UltraFuturisticNavigation2034 - Function description;
+ */
+function UltraFuturisticNavigation2034() {}
+  const [is_open, setIsOpen] = useState (false);
+  const [active_dropdown, setActiveDropdown] = useState < string | null>(null);
+  const [is_scrolled, setIsScrolled] = useState (false);
+;
+  useEffect (() => {}
+    const handle_scroll = () =>: any {}
+      setIsScrolled (window.scroll_y > 50);
+    }'
+    window.addEventListener ('scroll', handle_scroll);'
+    return () => window.removeEventListener ('scroll', handle_scroll);
+  }, []);
+;
+  const toggle_dropdown = (category: string) =>: any {}
+    setActiveDropdown (active_dropdown === category ? null : category);
+  }
+;
+  const close_dropdown = () =>: any {}
+    setActiveDropdown (null);  }    }'
+    window.addEventListener ('scroll', handle_scroll);'
+    return () => window.removeEventListener ('scroll', handle_scroll);
+  }, []);
+;
+  const toggle_dropdown = (category: string) =>: any {}
+    setActiveDropdown (active_dropdown === category ? null : category);
+  }
+;
+  const close_dropdown = () =>: any {}
+    setActiveDropdown (null);
+  }
+;
+  return (
+    <>;
+      {/* Top Contact Bar */}'
+      <div className='bg - gradient - to - r from - cyan - 900 via - blue - 900 to - purple - 900 text - white py - 2 px - 4 text - sm'>;'
+        <div className='max - w-7xl mx - auto flex flex - wrap items - center justify - between'>;'
+          <div className='flex items - center space - x-6'>;'
+            <div className='flex items - center space - x-2'>;'
+              <Phone className='w - 4 h - 4 text - cyan - 400' />;'
+              <span className='hover:text - cyan - 400 transition - colors'>;
+                {contact_info.mobile}
+              </span>;
+            </div>;'
+            <div className='flex items - center space - x-2'>;'
+              <Mail className='w - 4 h - 4 text - blue - 400' />;'
+              <span className='hover:text - blue - 400 transition - colors'>;
+                {contact_info.email}
+              </span>;
+            </div>;'
+            <div className='flex items - center space - x-2'>;'
+              <MapPin className='w - 4 h - 4 text - purple - 400' />;'
+              <span className='hover:text - purple - 400 transition - colors'>                {contact_info.address}
+              </span>;
+            </div>;
+          </div>                {contact_info.mobile}
+              </span>;
+            </div>;"
+            <div className="flex items - center space - x-2">;"
+              <Mail className="w - 4 h - 4 text - blue - 400" />;"
+              <span className="hover:text - blue - 400 transition - colors">;
+                {contact_info.email}
+              </span>;
+            </div>;"
+            <div className="flex items - center space - x-2">;"
+              <MapPin className="w - 4 h - 4 text - purple - 400" />;"
+              <span className="hover:text - purple - 400 transition - colors">;
+                {contact_info.address}
+              </span>;
+            </div>;
+          </div>;'
+          <div className='flex items - center space - x-4'>;'
+            <div className='flex items - center space - x-2'>;'
+              <Star className='w - 4 h - 4 text - yellow - 400' />;'
+              <span className='text - yellow - 400 font - semibold'>5.0 Rating</span>;
+            </div>;'
+            <div className='flex items - center space - x-2'>;'
+              <Users className='w - 4 h - 4 text - green - 400' />;'
+              <span className='text - green - 400 font - semibold'>;
+                50K+ Customers;"
+              </span>            </div>          <div className="flex items - center space - x-4">;"
+            <div className="flex items - center space - x-2">;"
+              <Star className="w - 4 h - 4 text - yellow - 400" />;"
+              <span className="text - yellow - 400 font - semibold">5.0 Rating</span>;
+            </div>;"
+            <div className="flex items - center space - x-2">;"
+              <Users className="w - 4 h - 4 text - green - 400" />;"
+              <span className="text - green - 400 font - semibold">50K+ Customers</span>;
+          </div>;
+        </div>;
+      </div>;
+      {/* Main Navigation */}
+      <nav;`
+        className={`fixed top - 0 left - 0 right - 0 z - 50 transition - all duration - 300 ${}
+          is_scrolled;'
+            ? 'bg - black / 90 backdrop - blur - xl border - b border - cyan - 500 / 20';'
+            : 'bg - transparent';`
+        }`}
+      >;'
+        <div className='max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8'>;'`
+          <div className='flex items - center justify - between h - 20'>            {/* Logo */}      <nav className={`fixed top - 0 left - 0 right - 0 z - 50 transition - all duration - 300 ${}
+        is_scrolled;'
+          ? 'bg - black / 90 backdrop - blur - xl border - b border - cyan - 500 / 20';'
+          : 'bg - transparent';`
+      }`}>;"
+        <div className="max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8">;"
+          <div className="flex items - center justify - between h - 20">;
+            <motion.div;
+              initial={{ opacity: 0, coordinate_x: -20 }}
+              animate={{ opacity: 1, coordinate_x: 0 }}
+              transition={{ duration: 0.5 }}'
+              className='flex items - center space - x-3';
+            >;'
+              <div className='relative'>;'
+                <div className='w - 12 h - 12 bg - gradient - to - r from - cyan - 500 via - blue - 500 to - purple - 500 rounded - xl flex items - center justify - center'>;'
+                  <Rocket className='w - 7 h - 7 text - white' />;
+                </div>;'
+                <div className='absolute -inset - 1 bg - gradient - to - r from - cyan - 500 via - blue - 500 to - purple - 500 rounded - xl blur opacity - 30 animate - pulse'></div>;
+              </div>;
+              <div>;'
+                <h1 className='text - 2xl font - bold bg - gradient - to - r from - cyan - 400 via - blue - 400 to - purple - 400 bg - clip - text text - transparent'>;
+                  Zion Tech Group;
+                </h1>;'
+                <p className='text - xs text - gray - 400'>;
+                  Future Technology Solutions;
+                </p>              </div>;
+            </motion.div>;
+            {/* Desktop Navigation */}            >;"
+              <div className="relative">;"
+                <div className="w - 12 h - 12 bg - gradient - to - r from - cyan - 500 via - blue - 500 to - purple - 500 rounded - xl flex items - center justify - center">;"
+                  <Rocket className="w - 7 h - 7 text - white" />;
+                </div>;"
+                <div className="absolute -inset - 1 bg - gradient - to - r from - cyan - 500 via - blue - 500 to - purple - 500 rounded - xl blur opacity - 30 animate - pulse"></div>;
+              </div>;
+              <div>;"
+                <h1 className="text - 2xl font - bold bg - gradient - to - r from - cyan - 400 via - blue - 400 to - purple - 400 bg - clip - text text - transparent">;
+                  Zion Tech Group;
+                </h1>;"
+                <p className="text - xs text - gray - 400">Future Technology Solutions</p>;
+              </div>;
+            </motion.div>;
+            {/* Desktop Navigation */}'
+            <div className='hidden lg:flex items - center space - x-8'>;
+              {quick_links.map (link => (
+                <Link;
+                  key={link.name}
+                  href={link.href}'
+                  className='text - gray - 300 hover:text - cyan - 400 transition - colors duration - 200 font - medium'                >;
+                  {link.name}
+                </Link>))}"
+            <div className="hidden lg:flex items - center space - x-8">;
+              {quick_links.map ((link) => (
+                <Link;
+                  key={link.name}
+                  href={link.href}"
+                  className="text - gray - 300 hover:text - cyan - 400 transition - colors duration - 200 font - medium";
+                  {link.name}
+                </Link>))}
+              {/* Services Dropdown */}'
+              <div className='relative group'>;'
+                <button className='flex items - center space - x-1 text - gray - 300 hover:text - cyan - 400 transition - colors duration - 200 font - medium'>;
+                  <span > Services</span>;'
+                  <ChevronDown className='w - 4 h - 4' />;
+                </button>;'
+                <div className='absolute top - full left - 0 w - 96 bg - black / 95 backdrop - blur - xl border border - cyan - 500 / 20 rounded - xl p - 4 opacity - 0 invisible group - hover:opacity - 100 group - hover:visible transition - all duration - 300 transform translate - y-2 group - hover:translate - y-0'>;'
+                  <div className='grid grid - cols - 2 gap - 4'>;
+                    {service_categories.slice (0, 4).map (category => (
+                      <div;
+                        key={category.title}'
+                        className='p - 3 rounded - lg hover:bg - cyan - 500 / 10 transition - colors';
+                      >;'
+                        <div className='flex items - center space - x-2 mb - 2'>;'
+                          <category.icon className='w - 5 h - 5 text - cyan - 400' />;'
+                          <h3 className='text - sm font - semibold text - white'>;'
+                            {category.title.split (' ')[0]}
+                          </h3>;
+                        </div>;'
+                        <p className='text - xs text - gray - 400 mb - 2'>;
+                          {category.description}
+                        </p>;'
+                        <div className='space - y-1'>;
+                          {category.services.slice (0, 2).map (service => (
+                            <Link;
+                              key={service.name}
+                              href={service.href}'
+                              className='block text - xs text - gray - 300 hover:text - cyan - 400 transition - colors'                            >              {/* Services Dropdown */}"
+              <div className="relative group">;"
+                <button className="flex items - center space - x-1 text - gray - 300 hover:text - cyan - 400 transition - colors duration - 200 font - medium">;
+                  <span > Services</span>;"
+                  <ChevronDown className="w - 4 h - 4" />;
+                </button>;"
+                <div className="absolute top - full left - 0 w - 96 bg - black / 95 backdrop - blur - xl border border - cyan - 500 / 20 rounded - xl p - 4 opacity - 0 invisible group - hover:opacity - 100 group - hover:visible transition - all duration - 300 transform translate - y-2 group - hover:translate - y-0">;"
+                  <div className="grid grid - cols - 2 gap - 4">;
+                    {service_categories.slice (0, 4).map ((category) => ("
+                      <div key={category.title} className="p - 3 rounded - lg hover:bg - cyan - 500 / 10 transition - colors">;"
+                        <div className="flex items - center space - x-2 mb - 2">;"
+                          <category.icon className="w - 5 h - 5 text - cyan - 400" />;'"
+                          <h3 className="text - sm font - semibold text - white">{category.title.split (' ')[0]}</h3>;
+                        </div>;"
+                        <p className="text - xs text - gray - 400 mb - 2">{category.description}</p>;"
+                        <div className="space - y-1">;
+                          {category.services.slice (0, 2).map ((service) => (
+                            <Link;
+
+                              key={service.name}
+                              href={service.href}"
+                              className="block text - xs text - gray - 300 hover:text - cyan - 400 transition - colors";
+                            >;
+                </p>
+              </div>
+            </motion.div>
+className='flex items-center space-x-3';
+            >;
+              <div className='relative'>;
+                <div className='w-12 h-12 bg-gradient-to-r from-cyan-500 via-blue-500 to-purple-500 rounded-xl flex items-center justify-center'>;
+                  <Rocket className='w-7 h-7 text-white' />;
+                </div>;
+                <div className='absolute -inset-1 bg-gradient-to-r from-cyan-500 via-blue-500 to-purple-500 rounded-xl blur opacity-30 animate-pulse'></div>;
+              </div>;
+              <div>;
+                <h1 className='text-2xl font-bold bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400 bg-clip-text text-transparent'>;
+                  Zion Tech Group;
+                </h1>;
+                <p className='text-xs text-gray-400'>;
+                  Future Technology Solutions;
+                </p>              </div>;
+            </motion.div>;
+            {/* Desktop Navigation */}            >;
+      }`}>;
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;
+          <div className="flex items-center justify-between h-20">;
+            {/* Logo */}
+            <motion.div;
+              initial={{ opacity: 0, x: -20 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.5 }}
+              className="flex items-center space-x-3";
+            >;
+              <div className="relative">;
+                <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 via-blue-500 to-purple-500 rounded-xl flex items-center justify-center">;
+                  <Rocket className="w-7 h-7 text-white" />;
+                </div>;
+                <div className="absolute -inset-1 bg-gradient-to-r from-cyan-500 via-blue-500 to-purple-500 rounded-xl blur opacity-30 animate-pulse"></div>;
+              </div>;
+              <div>;
+                <h1 className="text-2xl font-bold bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400 bg-clip-text text-transparent">;
+                  Zion Tech Group;
+                </h1>;
+                <p className="text-xs text-gray-400">Future Technology Solutions</p>;
+              </div>;
+            </motion.div>;
+              transition={{ duration: 0 && 0.5 }}
+              className='flex items-center space-x-3'>;
+              <div className='relative'>;
+                <div className='w-12 h-12 bg-gradient-to-r from-cyan-500 via-blue-500 to-purple-500 rounded-xl flex items-center justify-center'>;
+                  <Rocket className='w-7 h-7 text-white' />;
+                </div>;
+                <div className='absolute -inset-1 bg-gradient-to-r from-cyan-500 via-blue-500 to-purple-500 rounded-xl blur opacity-30 animate-pulse'></div>;
+              </div>;
+              <div>;
+                <h1 className='text-2xl font-bold bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400 bg-clip-text text-transparent'>;
+                  Zion Tech Group;
+                </h1>;
+                <p className='text-xs text-gray-400'>;
+                  Future Technology Solutions;
+                </p>              </div>;
+            </motion && motion.div>;
+            {/* Desktop Navigation */}            >;
+              <div className="relative">;
+                <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 via-blue-500 to-purple-500 rounded-xl flex items-center justify-center">;
+                  <Rocket className="w-7 h-7 text-white" />;
+                </div>;
+                <div className="absolute -inset-1 bg-gradient-to-r from-cyan-500 via-blue-500 to-purple-500 rounded-xl blur opacity-30 animate-pulse"></div>;
+              </div>;
+              <div>;
+                <h1 className="text-2xl font-bold bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400 bg-clip-text text-transparent">;
+                  Zion Tech Group;
+                </h1>;
+                <p className="text-xs text-gray-400">Future Technology Solutions</p>;
+              </div>;
+            </motion && motion.div>;
+                  {link.name}
+                </Link>;
+              ))}>;
+                  {link.name}
+                </Link>;
+              ))}{/* Services Dropdown */}
+              <div className="relative group">;
+                <button className="flex items-center space-x-1 text-gray-300 hover:text-cyan-400 transition-colors duration-200 font-medium">;
+                  <span>Services</span>;
+                  <ChevronDown className="w-4 h-4" />;
+                </button>;
+                <div className="absolute top-full left-0 w-96 bg-black/95 backdrop-blur-xl border border-cyan-500/20 rounded-xl p-4 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform translate-y-2 group-hover:translate-y-0">;
+                  <div className="grid grid-cols-2 gap-4">;
+                    {serviceCategories.slice(0, 4).map((category) => (<div key={category.title} className="p-3 rounded-lg hover:bg-cyan-500/10 transition-colors">;
+                        <div className="flex items-center space-x-2 mb-2">;
+                          <category.icon className="w-5 h-5 text-cyan-400" />;
+                          <h3 className="text-sm font-semibold text-white">{category.title.split(' ')[0]}</h3>;
+                        </div>;
+                        <p className="text-xs text-gray-400 mb-2">{category.description}</p>;
+                        <div className="space-y-1">;
+                          {category.services.slice(0, 2).map((service) => (<Link;const social_links = [;
+  {name: 'LinkedIn',href: 'https://linkedin.com / company / ziontechgroup',icon: Linkedin,},{ name: 'GitHub', href: 'https://github.com / Zion - Holdings', icon: Github },{name: 'Instagram',href: 'https://instagram.com / ziontechgroup',icon: Instagram,},{name: 'YouTube',href: 'https://youtube.com/@ziontechgroup',icon: Youtube,},{ name: 'Twitter', href: 'https://twitter.com / ziontechgroup', icon: Twitter },];const certifications = [;
+  'ISO 27001 Certified','SOC 2 Type II Compliant','GDPR Compliant','HIPAA Compliant','PCI DSS Level 1','FedRAMP Authorized','Quantum Security Certified','AI Ethics Compliant', ];];const social_links = [;
+  { name: 'LinkedIn', href: 'https://linkedin.com / company / ziontechgroup', icon: Linkedin },{ name: 'GitHub', href: 'https://github.com / Zion - Holdings', icon: Github },{ name: 'Instagram', href: 'https://instagram.com / ziontechgroup', icon: Instagram },{ name: 'YouTube', href: 'https://youtube.com/@ziontechgroup', icon: Youtube },{ name: 'Twitter', href: 'https://twitter.com / ziontechgroup', icon: Twitter }
+];const certifications = [;
+  'ISO 27001 CertifiedSOC 2 Type II CompliantGDPR CompliantHIPAA CompliantPCI DSS Level 1FedRAMP AuthorizedQuantum Security CertifiedAI Ethics Compliant';
+];export default /**;
+ * UltraFuturisticNavigation2034 - Function description;
+ */;
+function UltraFuturisticNavigation2034() {const [is_open, setIsOpen] = useState (false)const [active_dropdown, setActiveDropdown] = useState < string | null>(null)const [is_scrolled, setIsScrolled]  = useState (false)useEffect (() => {const handle_scroll = () =>: any {setIsScrolled (window.scroll_y > 50)}
+    window.addEventListener ('scroll', handle_scroll)return () => window.removeEventListener ('scroll', handle_scroll)}, [])const toggle_dropdown = (category: string) =>: any {setActiveDropdown (active_dropdown === category ? null : category)}const close_dropdown = () =>: any {setActiveDropdown (null)}    }
+    window.addEventListener ('scroll', handle_scroll)return () => window.removeEventListener ('scroll', handle_scroll)}, [])const toggle_dropdown = (category: string) =>: any {setActiveDropdown (active_dropdown === category ? null : category)}const close_dropdown = () =>: any {setActiveDropdown (null)}return (<>;
+      {/* Top Contact Bar */}
+      <div className='bg - gradient - to - r from - cyan - 900 via - blue - 900 to - purple - 900 text - white py - 2 px - 4 text - sm'>;
+        <div className='max - w-7xl mx - auto flex flex - wrap items - center justify - between'>;
+          <div className='flex items - center space - x-6'>;
+            <div className='flex items - center space - x-2'>;
+              <Phone className='w - 4 h - 4 text - cyan - 400' />;
+              <span className='hover:text - cyan - 400 transition - colors'>;
+                {contact_info.mobile}
+              </span>;
+            </div>;
+            <div className='flex items - center space - x-2'>;
+              <Mail className='w - 4 h - 4 text - blue - 400' />;
+              <span className='hover:text - blue - 400 transition - colors'>;
+                {contact_info.email}
+              </span>;
+            </div>;
+            <div className='flex items - center space - x-2'>;
+              <MapPin className='w - 4 h - 4 text - purple - 400' />;
+              <span className='hover:text - purple - 400 transition - colors'>                {contact_info.address}
+              </span>;
+            </div>;
+          </div>                {contact_info.mobile}
+              </span>;
+            </div>;
+            <div className="flex items - center space - x-2">;
+              <Mail className="w - 4 h - 4 text - blue - 400" />;
+              <span className="hover:text - blue - 400 transition - colors">;
+                {contact_info.email}
+              </span>;
+            </div>;
+            <div className="flex items - center space - x-2">;
+              <MapPin className="w - 4 h - 4 text - purple - 400" />;
+              <span className="hover:text - purple - 400 transition - colors">;
+                {contact_info.address}
+              </span>;
+            </div>;
+          </div>;
+          <div className='flex items - center space - x-4'>;
+            <div className='flex items - center space - x-2'>;
+              <Star className='w - 4 h - 4 text - yellow - 400' />;
+              <span className='text - yellow - 400 font - semibold'>5.0 Rating</span>;
+            </div>;
+            <div className='flex items - center space - x-2'>;
+              <Users className='w - 4 h - 4 text - green - 400' />;
+              <span className='text - green - 400 font - semibold'>;
+                50K+ Customers;
+              </span>            </div>          <div className="flex items - center space - x-4">;
+            <div className="flex items - center space - x-2">;
+              <Star className="w - 4 h - 4 text - yellow - 400" />;
+              <span className="text - yellow - 400 font - semibold">5.0 Rating</span>;
+            </div>;
+            <div className="flex items - center space - x-2">;
+              <Users className="w - 4 h - 4 text - green - 400" />;
+              <span className="text - green - 400 font - semibold">50K+ Customers</span>;
+          </div>;
+        </div>;
+      </div>;
+      {/* Main Navigation */}
+      <nav;
+        className={`fixed top - 0 left - 0 right - 0 z - 50 transition - all duration - 300 ${is_scrolled;
+            ? 'bg - black / 90 backdrop - blur - xl border - b border - cyan - 500 / 20';
+            : 'bg - transparent';
+        }`}
+      >;
+        <div className='max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8'>;
+          <div className='flex items - center justify - between h - 20'>            {/* Logo */}      <nav className={`fixed top - 0 left - 0 right - 0 z - 50 transition - all duration - 300 ${is_scrolled;
+          ? 'bg - black / 90 backdrop - blur - xl border - b border - cyan - 500 / 20';
+          : 'bg - transparent';
+      }`}>;
+        <div className="max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8">;
+          <div className="flex items - center justify - between h - 20">;
+            <motion.div;
+              initial={{ opacity: 0, coordinate_x: -20 }}
+              animate={{ opacity: 1, coordinate_x: 0 }}
+              transition={{ duration: 0.5 }}
+              className='flex items - center space - x-3';
+            >;
+              <div className='relative'>;
+                <div className='w - 12 h - 12 bg - gradient - to - r from - cyan - 500 via - blue - 500 to - purple - 500 rounded - xl flex items - center justify - center'>;
+                  <Rocket className='w - 7 h - 7 text - white' />;
+                </div>;
+                <div className='absolute -inset - 1 bg - gradient - to - r from - cyan - 500 via - blue - 500 to - purple - 500 rounded - xl blur opacity - 30 animate - pulse'></div>;
+              </div>;
+              <div>;
+                <h1 className='text - 2xl font - bold bg - gradient - to - r from - cyan - 400 via - blue - 400 to - purple - 400 bg - clip - text text - transparent'>;
+                  Zion Tech Group;
+                </h1>;
+                <p className='text - xs text - gray - 400'>;
+                  Future Technology Solutions;
+                </p>              </div>;
+            </motion.div>;
+            {/* Desktop Navigation */}            >;
+              <div className="relative">;
+                <div className="w - 12 h - 12 bg - gradient - to - r from - cyan - 500 via - blue - 500 to - purple - 500 rounded - xl flex items - center justify - center">;
+                  <Rocket className="w - 7 h - 7 text - white" />;
+                </div>;
+                <div className="absolute -inset - 1 bg - gradient - to - r from - cyan - 500 via - blue - 500 to - purple - 500 rounded - xl blur opacity - 30 animate - pulse"></div>;
+              </div>;
+              <div>;
+                <h1 className="text - 2xl font - bold bg - gradient - to - r from - cyan - 400 via - blue - 400 to - purple - 400 bg - clip - text text - transparent">;
+                  Zion Tech Group;
+                </h1>;
+                <p className="text - xs text - gray - 400">Future Technology Solutions</p>;
+              </div>;
+            </motion.div>;
+            {/* Desktop Navigation */}
+            <div className='hidden lg:flex items - center space - x-8'>;
+              {quick_links.map (link => (<Link;
+                  key={link.name}
+                  href={link.href}
+                  className='text - gray - 300 hover:text - cyan - 400 transition - colors duration - 200 font - medium'                >;
+                  {link.name}
+                </Link>))}
+            <div className="hidden lg:flex items - center space - x-8">;
+              {quick_links.map ((link) => (<Link;
+                  key={link.name}
+                  href={link.href}
+                  className="text - gray - 300 hover:text - cyan - 400 transition - colors duration - 200 font - medium";
+                  {link.name}
+                </Link>))}
+              {/* Services Dropdown */}
+              <div className='relative group'>;
+                <button className='flex items - center space - x-1 text - gray - 300 hover:text - cyan - 400 transition - colors duration - 200 font - medium'>;
+                  <span > Services</span>;
+                  <ChevronDown className='w - 4 h - 4' />;
+                </button>;
+                <div className='absolute top - full left - 0 w - 96 bg - black / 95 backdrop - blur - xl border border - cyan - 500 / 20 rounded - xl p - 4 opacity - 0 invisible group - hover:opacity - 100 group - hover:visible transition - all duration - 300 transform translate - y-2 group - hover:translate - y-0'>;
+                  <div className='grid grid - cols - 2 gap - 4'>;
+                    {service_categories.slice (0, 4).map (category => (<div;
+                        key={category.title}
+                        className='p - 3 rounded - lg hover:bg - cyan - 500 / 10 transition - colors';
+                      >;
+                        <div className='flex items - center space - x-2 mb - 2'>;
+                          <category.icon className='w - 5 h - 5 text - cyan - 400' />;
+                          <h3 className='text - sm font - semibold text - white'>;
+                            {category.title.split (' ')[0]}
+                          </h3>;
+                        </div>;
+                        <p className='text - xs text - gray - 400 mb - 2'>;
+                          {category.description}
+                        </p>;
+                        <div className='space - y-1'>;
+                          {category.services.slice (0, 2).map (service => (<Link;
+                              key={service.name}
+                              href={service.href}
+                              className='block text - xs text - gray - 300 hover:text - cyan - 400 transition - colors'                            >              {/* Services Dropdown */}
+              <div className="relative group">;
+                <button className="flex items - center space - x-1 text - gray - 300 hover:text - cyan - 400 transition - colors duration - 200 font - medium">;
+                  <span > Services</span>;
+                  <ChevronDown className="w - 4 h - 4" />;
+                </button>;
+                <div className="absolute top - full left - 0 w - 96 bg - black / 95 backdrop - blur - xl border border - cyan - 500 / 20 rounded - xl p - 4 opacity - 0 invisible group - hover:opacity - 100 group - hover:visible transition - all duration - 300 transform translate - y-2 group - hover:translate - y-0">;
+                  <div className="grid grid - cols - 2 gap - 4">;
+                    {service_categories.slice (0, 4).map ((category) => (<div key={category.title} className="p - 3 rounded - lg hover:bg - cyan - 500 / 10 transition - colors">;
+                        <div className="flex items - center space - x-2 mb - 2">;
+                          <category.icon className="w - 5 h - 5 text - cyan - 400" />;
+                          <h3 className="text - sm font - semibold text - white">{category.title.split (' ')[0]}</h3>;
+                        </div>;
+                        <p className="text - xs text - gray - 400 mb - 2">{category.description}</p>;
+                        <div className="space - y-1">;
+                          {category.services.slice (0, 2).map ((service) => (<Link;key={service.name}
+                              href={service.href}
+                              className="block text - xs text - gray - 300 hover:text - cyan - 400 transition - colors";
+                            >;</p>;
+              </div>;
+            </motion.div>;
+            {/* Desktop Navigation */}
+<div className='hidden lg:flex items-center space-x-8'>;
+              {quickLinks.map(link => (<Link;
+                  key={link.name}
+                  href={link.href}
+                  className='text-gray-300 hover:text-cyan-400 transition-colors duration-200 font-medium';
+                >;
+                  {link.name}
+                </Link>;
+              ))}
+{/* Services Dropdown */}
+              <div className='relative group>;
+                <button className=flex items-center space-x-1 text-gray-300 hover:text-cyan-400 transition-colors duration-200 font-medium'>;
+                  <span>Services</span>;
+                  <ChevronDown className='w-4 h-4 />;
+                </button>;
+                <div className=absolute top-full left-0 w-96 bg-black/95 backdrop-blur-xl border border-cyan-500/20 rounded-xl p-4 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform translate-y-2 group-hover:translate-y-0'>;
+                  <div className='grid grid-cols-2 gap-4>;
+                    {serviceCategories.slice(0, 4).map(category => (<div;
+                        key={category.title}
+                        className=p-3 rounded-lg hover:bg-cyan-500/10 transition-colors';
+                      >;
+                        <div className='flex items-center space-x-2 mb-2>;
+                          <category.icon className=w-5 h-5 text-cyan-400' />;
+                          <h3 className='text-sm font-semibold text-white>;
+                            {category.title.split( ')[0]}
+                          </h3>;
+                        </div>;
+                        <p className='text-xs text-gray-400 mb-2>;
+                          {category.description}
+                        </p>;
+                        <div className=space-y-1'>;
+                          {category.services.slice(0, 2).map(service => (<Link;
+                              key={service.name}
+                              href={service.href}
+                              className='block text-xs text-gray-300 hover:text-cyan-400 transition-colors';
+                            >;
+                            >;
+                {contactInfo.email}
+              </span>
+            </div>
+            <div className="flex items-center space-x-2">
+              <MapPin className="w-4 h-4 text-purple-400" />
+              <span className="hover:text-purple-400 transition-colors">
+                {contactInfo.address}
+              </span>
+            </div>
+          </div>
+          <div className="flex items-center space-x-4">
+            <div className="flex items-center space-x-2">
+              <Star className="w-4 h-4 text-yellow-400" />
+              <span className="text-yellow-400 font-semibold">5.0 Rating</span>
+            </div>
+            <div className="flex items-center space-x-2">
+              <Users className="w-4 h-4 text-green-400" />
+              <span className="text-green-400 font-semibold">50K+ Customers</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Main Navigation */}
+      <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+        isScrolled 
+          ? 'bg-black/90 backdrop-blur-xl border-b border-cyan-500/20 
+          : bg-transparent'
+      }`}>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className=flex items-center justify-between h-20>
+            {/* Logo */}
+            <motion.div
+              initial={{ opacity: 0, x: -20 }}
+              animate={{ opacity: 1, x: 0}}
+              transition={{ duration: 0.5 }}
+              className="flex items-center space-x-3"
+            >
+              <div className=relative>
+                <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 via-blue-500 to-purple-500 rounded-xl flex items-center justify-center">
+                  <Rocket className=w-7 h-7 text-white />
+                </div>
+                <div className="absolute -inset-1 bg-gradient-to-r from-cyan-500 via-blue-500 to-purple-500 rounded-xl blur opacity-30 animate-pulse"></div>
+              </div>
+              <div>
+                <h1 className=text-2xl font-bold bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400 bg-clip-text text-transparent>
+                  Zion Tech Group
+                </h1>
+                <p className="text-xs text-gray-400">Future Technology Solutions</p>
+              </div>
+            </motion.div>
+
+            {/* Desktop Navigation */}
+            <div className=hidden lg:flex items-center space-x-8>
+              {quickLinks.map((link) => (
+                <Link
+                  key={link.name}
+                  href={link.href}
+                  className="text-gray-300 hover:text-cyan-400 transition-colors duration-200 font-medium"
+                >
+                  {link.name}
+                </Link>
+              ))}
+              
+              {/* Services Dropdown */}
+              <div className=relative group>
+                <button className="flex items-center space-x-1 text-gray-300 hover:text-cyan-400 transition-colors duration-200 font-medium">
+                  <span>Services</span>
+                  <ChevronDown className=w-4 h-4 />
+                </button>
+                <div className="absolute top-full left-0 w-96 bg-black/95 backdrop-blur-xl border border-cyan-500/20 rounded-xl p-4 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform translate-y-2 group-hover:translate-y-0">
+                  <div className=grid grid-cols-2 gap-4>
+                    {serviceCategories.slice(0, 4).map((category) => (
+                      <div key={category.title} className="p-3 rounded-lg hover:bg-cyan-500/10 transition-colors">
+                        <div className=flex items-center space-x-2 mb-2>
+                          <category.icon className="w-5 h-5 text-cyan-400" />
+                          <h3 className=text-sm font-semibold text-white>{category.title.split(' )[0]}</h3>
+                        </div>
+                        <p className="text-xs text-gray-400 mb-2">{category.description}</p>
+                        <div className=space-y-1>
+                          {category.services.slice(0, 2).map((service) => (
+                            <Link
+                              key={service.name}
+                              href={service.href}
+                              className="block text-xs text-gray-300 hover:text-cyan-400 transition-colors"
+                            >
+                              {service.name}
+                            </Link>
+                          ))}
+                        </div>
+                      </div>
+=======
+>>>>>>> origin/main
               transition={{ duration: 0.5 }}
 
 className='flex items-center space-x-3'
-             />
-              <div className='relative' />
-                <div className='w-12 h-12 bg-gradient-to-r from-cyan-500 via-blue-500 to-purple-500 rounded-xl flex items-center justify-center' />
-                  <Rocket className='w-7 h-7 text-white' />
+                />
+              <div className='relative'    />
+                <div className='w-12 h-12 bg-gradient-to-r from-cyan-500 via-blue-500 to-purple-500 rounded-xl flex items-center justify-center'    />
+                  <Rocket className='w-7 h-7 text-white'    />
                 </div>
-                <div className='absolute -inset-1 bg-gradient-to-r from-cyan-500 via-blue-500 to-purple-500 rounded-xl blur opacity-30 animate-pulse' /></div>
+                <div className='absolute -inset-1 bg-gradient-to-r from-cyan-500 via-blue-500 to-purple-500 rounded-xl blur opacity-30 animate-pulse'    /></div>
               </div>
-              <div />
-                <h1 className='text-2xl font-bold bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400 bg-clip-text text-transparent' />
+              <div    />
+                <h1 className='text-2xl font-bold bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400 bg-clip-text text-transparent'    />
                   Zion Tech Group;
                 </h1>
-                <p className='text-xs text-gray-400' />
+                <p className='text-xs text-gray-400'    />
                   Future Technology Solutions;
                 </p>
               </div>
@@ -359,10 +1682,18 @@ className='flex items-center space-x-3'
 
             {/* Desktop Navigation *,}
 }
+<<<<<<< HEAD
 <div className='hidden lg:flex items-center space-x-8' />;
               {quickLinks.map(link => (
           <Link key={link.name}
             href={link.href className='text-gray-300 hover: text-cyan-400 transition-colors duration-200 font-medium' />
+=======
+<div className='hidden lg:flex items-center space-x-8'    />;
+              {quickLinks.map(link => (<Link;}
+                  key={link.name}
+                  href={link.href}
+                  className='text-gray-300 hover: text-cyan-400 transition-colors duration-200 font-medium'    />
+>>>>>>> origin/main
 
                   {link.nam
              
@@ -370,11 +1701,12 @@ className='flex items-center space-x-3'
                 </Link>;,}
             ))
 {/* Services Dropdown */}
-              <div className='relative group' />;
-                <button className='flex items-center space-x-1 text-gray-300 hover:text-cyan-400 transition-colors duration-200 font-medium' />;
-                  <span />Services</span>;
-                  <ChevronDown className='w-4 h-4' />;
+              <div className='relative group'    />;
+                <button className='flex items-center space-x-1 text-gray-300 hover:text-cyan-400 transition-colors duration-200 font-medium'    />;
+                  <span    />Services</span>;
+                  <ChevronDown className='w-4 h-4'    />;
                 </button>;
+<<<<<<< HEAD
                 <div className='absolute top-full left-0 w-96 bg-black/95 backdrop-blur-xl border border-cyan-500/20 rounded-xl p-4 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform translate-y-2 group-hover:translate-y-0' />;
                   <div className='grid grid-cols-2 gap-4' />;
                     {serviceCategories.slice(0,,,
@@ -397,34 +1729,104 @@ className='flex items-center space-x-3'
           <Link key={service.name}
             href={service.href className='block text-xs text-gray-300 hover: text-cyan-400 transition-colors'
                              />
+=======
+                <div className='absolute top-full left-0 w-96 bg-black/95 backdrop-blur-xl border border-cyan-500/20 rounded-xl p-4 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform translate-y-2 group-hover:translate-y-0'    />;
+                  <div className='grid grid-cols-2 gap-4'    />;
+                    {serviceCategories.slice(0, 4).map(category => (<div;}
+                        key={category.title}
+                        className='p-3 rounded-lg hover:bg-cyan-500/10 transition-colors'    />
+
+                        <div className='flex items-center space-x-2 mb-2'    />;
+                          <category.icon className='w-5 h-5 text-cyan-400'    />;
+                          <h3 className='text-sm font-semibold text-white'    />;
+                            {category.title.split(' ')[0]}
+                          </h3>;
+                        </div>;
+                        <p className='text-xs text-gray-400 mb-2'    />;
+                          {category.description}
+                        </p>;
+                        <div className='space-y-1'    />;
+                          {category.services.slice(0, 2).map(service => (<Link;}
+                              key={service.name}
+                              href={service.href}
+
+                              className='block text-xs text-gray-300 hover: text-cyan-400 transition-colors'
+                                />
+>>>>>>> origin/main
 
                               {service.name,
    )}
             </div>;
                       </div>;
 
+<<<<<<< HEAD
                     ))
 
                   </div>
 <div className='mt-4 pt-4 border-t border-cyan-500/20' />
                     <Link href='/services'
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+                    ))}
+                    <Link'
+                      href='/services''
+                      className='flex items-center justify-center w-full px-4 py-2 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-200'>;
+                      View All Services;'
+                      <ArrowRight className='w-4 h-4 ml-2' />                    </Link>                    <Link"
+                className="px-6 py-2 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-200 font-medium"
+                  </div>
+<<<<<<< HEAD
+                  <div className="mt-4 pt-4 border-t border-cyan-500/20>
+                    <Link
+                      href=/services"
+                      className="flex items-center justify-center w-full px-4 py-2 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-200
+                    >
+                      View All Services
+                      <ArrowRight className=w-4 h-4 ml-2" />
+=======
+<div className='mt-4 pt-4 border-t border-cyan-500/20'    />
+                    <Link;
+href='/services'
+>>>>>>> origin/main
                       className='flex items-center justify-center w-full px-4 py-2 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-lg hover: from-cyan-600 hover:to-blue-600 transition-all duration-200'
-                     />
+                        />
                       View All Services;
-                      <ArrowRight className='w-4 h-4 ml-2' />
+                      <ArrowRight className='w-4 h-4 ml-2'    />
+>>>>>>> origin/chore/fix-lint-and-merge
                     </Link>
                   </div>
                 </div>
               </div>
               {/* Contact Button */}
+<<<<<<< HEAD
               <Link href='/contact'
+=======
+<<<<<<< HEAD
+              <Link
+                    ))}
+                    <Link
+                      href='/services'
+                      className='flex items-center justify-center w-full px-4 py-2 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-200'>;
+                      View All Services;
+                      <ArrowRight className='w-4 h-4 ml-2' />                    </Link>                    <Link
+                className="px-6 py-2 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-200 font-medium"
+                href="/contact"
+                className="px-6 py-2 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-200 font-medium"
+              >
+                Get Started
+=======
+              <Link;
+href='/contact'
+>>>>>>> origin/main
                 className='px-6 py-2 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-200 font-medium'
-               />
+                  />
                 Get Started;
+>>>>>>> origin/chore/fix-lint-and-merge
               </Link>
             </div>
 
             {/* Mobile Menu Button */}
+<<<<<<< HEAD
 <div className='lg:hidden' />
               <button onClick={() = /> setIsOpen(!isOpen}
              
@@ -435,20 +1837,88 @@ className='flex items-center space-x-3'
           <X className='w-6 h-6' />;},,
    ) : (
           <Menu className='w-6 h-6' />;}
+=======
+<<<<<<< HEAD
+
+                )}
+                onClick={() => setIsOpen(!isOpen)}
+                className=text-gray-300 hover:text-cyan-400 transition-colors"
+              >
+                {isOpen ? <X className="w-6 h-6 /> : <Menu className=w-6 h-6" />}
+=======
+<div className='lg:hidden'    />
+              <button;
+onClick={() =    /> setIsOpen(!isOpen,}
+}
+                className='text-gray-300 hover:text-cyan-400 transition-colors'>
+
+                {isOpen ? (<X className='w-6 h-6'    />;}
+                ) : (<Menu className='w-6 h-6'    />;}
+>>>>>>> origin/main
                 )}
 
+>>>>>>> origin/chore/fix-lint-and-merge
               </button>
             </div>
           </div>
         </div>
+<<<<<<< HEAD
+              </button>;
+            </div>;
+          </div>;
+        </div>;
+        </div>;
+
 
         {/* Mobile Menu */}
+<<<<<<< HEAD
         <AnimatePresence />;
           {isOpen && (
           <motion&& motion.div;}
               initial={{ opacity: 0}
             height: 0; 
             
+=======
+        <AnimatePresence>
+          {isOpen && (
+            <motion.div
+              initial={{ opacity: 0, height: 0}}
+              animate={{ opacity: 1, height: 'auto' }}
+              exit={{ opacity: 0, height: 0}}
+              transition={{ duration: 0.3 }}
+              className="lg:hidden bg-black/95 backdrop-blur-xl border-t border-cyan-500/20"
+            >
+              <div className="px-4 py-6 space-y-4">
+                {quickLinks.map((link) => (
+                  <Link
+              exit={{ opacity: 0, height: 0 }}transition={{ duration: 0.3 }}
+className='lg:hidden bg-black/95 backdrop-blur-xl border-t border-cyan-500/20';
+            >;
+              <div className='px-4 py-6 space-y-4'>;
+                {quickLinks.map(link => (<Link;
+                    key={link.name}
+        <AnimatePresence>;
+          {isOpen && (;
+            <motion&& motion.div;
+              initial={{ opacity: 0, height: 0 }}'
+              animate={{ opacity: 1, height: 'auto' }}
+              exit={{ opacity: 0, height: 0 }}
+
+
+              transition={{ duration: 0.3 }}
+className='lg:hidden bg-black/95 backdrop-blur-xl border-t border-cyan-500/20'
+             />
+              <div className='px-4 py-6 space-y-4' />
+=======
+
+        {/* Mobile Menu */}
+        <AnimatePresence    />;
+          {isOpen && (<motion&& motion.div;}
+              initial={{ opacity: 0, height: 0 ,}
+}
+              animate={{ opacity: 1, height: 'auto' ,}
+}
+>>>>>>> origin/main
 
               animate={{ opacity: 1}
             height: 'auto' 
@@ -461,10 +1931,21 @@ className='flex items-center space-x-3'
 
               transition={{ duration: 0.3 }}
 className='lg:hidden bg-black/95 backdrop-blur-xl border-t border-cyan-500/20'
+<<<<<<< HEAD
              />
               <div className='px-4 py-6 space-y-4' />
                 {quickLinks.map(link => (},
   <Link key={link.name} href={link.href onClick={() = /> setIsOpen(false)
+=======
+                />
+              <div className='px-4 py-6 space-y-4'    />
+>>>>>>> origin/chore/fix-lint-and-merge
+                {quickLinks.map(link => (}
+                  <Link;}
+key={link.name}
+                    href={link.href}
+                    onClick={() =    /> setIsOpen(false)}
+>>>>>>> origin/main
 className='block text-gray-300 hover:text-cyan-400 transition-colors duration-200 font-medium'>
 
                     {link.nam,}
@@ -472,22 +1953,127 @@ className='block text-gray-300 hover:text-cyan-400 transition-colors duration-20
                   </Link>;
                 ))}
 {/* Mobile Services Accordion */}
+<<<<<<< HEAD
                 {serviceCategories.map(category => (
           <div key={category.title className='border-b border-cyan-500/20 pb-4' />
 },
   <button onClick={() = /> toggleDropdown(category.title)
-                      className='flex items-center justify-between w-full text-left text-gray-300 hover: text-cyan-400 transition-colors duration-200 font-medium'>
+=======
+                {serviceCategories.map(category => (<div;}
+                    key={category.title}
+<<<<<<< HEAD
+                    className='border-b border-cyan-500/20 pb-4';
+                  >;
+              initial={{ opacity: 0, height: 0 }}'
+              animate={{ opacity: 1, height: 'auto' }}
+              exit={{ opacity: 0, height: 0 }}
+              transition={{ duration: 0.3 }}'
+              className='lg:hidden bg - black / 95 backdrop - blur - xl border - t border - cyan - 500 / 20';
+            >;
+                          initial={{ opacity: 0, height: 0 }}'
+                          animate={{ opacity: 1, height: 'auto' }}
+                          exit={{ opacity: 0, height: 0 }}
+                          transition={{ duration: 0.2 }}
+                    <button;
+                      onClick={() => toggleDropdown(category.title)}
+=======
+                    className='border-b border-cyan-500/20 pb-4'    />
 
-                      <span />{category.titl,}
+                    <button;
+                      onClick={() =    /> toggleDropdown(category.title)}
+>>>>>>> origin/main
+                      className='flex items-center justify-between w-full text-left text-gray-300 hover: text-cyan-400 transition-colors duration-200 font-medium'>
+>>>>>>> origin/chore/fix-lint-and-merge
+
+                      <span    />{category.titl,}
 }</span>;
+<<<<<<< HEAD
                       <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${activeDropdown === category.title ? 'rotate-180' : '';}
+=======
+                      <ChevronDown;
+<<<<<<< HEAD
+                        className={`w-4 h-4 transition-transform duration-200 ${activeDropdown === category.title ? 'rotate-180' : '';
+                        }`}
+              exit={{ opacity: 0, height: 0 }}
+
+
+                    key={link.name}
+                    href={link.href}
+                    onClick={() => setIsOpen(false)}
+                    className="block text-gray-300 hover:text-cyan-400 transition-colors duration-200 font-medium"
+                  >
+                    {link.name}
+                  </Link>
+                ))}
+                
+                {/* Mobile Services Accordion */}
+                {serviceCategories.map((category) => (
+                  <div key={category.title} className="border-b border-cyan-500/20 pb-4">
+                    <button
+                      onClick={() => toggleDropdown(category.title)}
+                      className="flex items-center justify-between w-full text-left text-gray-300 hover:text-cyan-400 transition-colors duration-200 font-medium"
+                    >
+                      <span>{category.title}</span>
+                      <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${
+                        activeDropdown === category.title ? 'rotate-180' : ''
+                      }`} />
+                    </button>
+                    <AnimatePresence>
+                      {activeDropdown === category.title && (
+                        <motion.div
+                      />;
+                    </button>;
+                    <AnimatePresence>;
+                      {activeDropdown === category.title && (<motion.div;
+        <AnimatePresence>;
+          {is_open && (<motion.div;
+              }
+              initial={{ "opacity": 0, "height": 0 
+}
+              animate={{ "opacity": 1, "height": 'auto' ,'
+}
+              exit={{ "opacity": 0, "height": 0 }}
+              transition={{ "duration": 0.3 
+}
+              className='"lg":hidden bg - black / 95 backdrop - blur - xl border - t border - cyan - 500 / 20'>'
+
+                          initial={{ "opacity": 0, "height": 0 
+}
+                          animate={{ "opacity": 1, "height": 'auto' ,'
+}
+                          exit={{ "opacity": 0, "height": 0 }}
+
+                          transition={{ "duration": 0.2 }}
+
+className='mt-3 ml-4 space-y-2''
+                        >
+                          {category.services.map((service) => (
+                            <Link
+}
+key={service.name}
+                              href={service.href}
+                              onClick={() => setIsOpen(false)}
+className='block text-sm text-gray-400 "hover":text-cyan-400 transition-colors'>'
+
+                              {service.name}
+                            </Link>;
+                          transition={{ duration: 0.2 }}
+
+                              key={service.name}
+        <AnimatePresence>
+          {is_open && (
+            <motion.div
+=======
+                        className={`w-4 h-4 transition-transform duration-200 ${activeDropdown === category.title ? 'rotate-180' : '';}
+>>>>>>> origin/main
                         }`}
 
-                      />
+                         />
                     </button>
-                    <AnimatePresence />
+                    <AnimatePresence    />
                       {activeDropdown === category.title && (
                         <motion.div;
+<<<<<<< HEAD
         <AnimatePresence />;
           {is_open && (
           <motion.div;}
@@ -502,9 +2088,18 @@ className='block text-gray-300 hover:text-cyan-400 transition-colors duration-20
               exit={{ opacity: 0}
             height: 0
              
+=======
+        <AnimatePresence    />;
+          {is_open && (<motion.div;}
+              initial={{ opacity: 0, height: 0 ,}
+}
+              animate={{ opacity: 1, height: 'auto' ,}
+}
+              exit={{ opacity: 0, height: 0 }}
+>>>>>>> origin/main
               transition={{ duration: 0.3 ,}
 }
-              className='lg:hidden bg - black / 95 backdrop - blur - xl border - t border - cyan - 500 / 20' />
+              className='lg:hidden bg - black / 95 backdrop - blur - xl border - t border - cyan - 500 / 20'    />
 
                           initial={{ opacity: 0}
             height: 0; 
@@ -520,11 +2115,28 @@ className='block text-gray-300 hover:text-cyan-400 transition-colors duration-20
 
                           transition={{ duration: 0.2 }}
 
+>>>>>>> origin/chore/fix-lint-and-merge
 className='mt-3 ml-4 space-y-2'
                         >
                           {category.services.map(service => (}
+<<<<<<< HEAD
                             <Link key={service.name},,
   href={service.href onClick={() = /> setIsOpen(false)
+=======
+                            <Link;}
+key={service.name}
+                              href={service.href}
+<<<<<<< HEAD
+                              onClick={() => setIsOpen(false)}
+                              className="block text-sm text-gray-400 hover:text-cyan-400 transition-colors
+                            >
+                              {service.name}
+                            </Link>
+                          ))}
+                        </motion.div>
+=======
+                              onClick={() =    /> setIsOpen(false)}
+>>>>>>> origin/main
 className='block text-sm text-gray-400 hover:text-cyan-400 transition-colors'>
 
                               {service.name}
@@ -534,14 +2146,90 @@ className='block text-sm text-gray-400 hover:text-cyan-400 transition-colors'>
                           ),
 }
                         </motion && motion.div>;
+>>>>>>> origin/chore/fix-lint-and-merge
                       )}
                     </AnimatePresence>;
                   </div>;
                 ))}
+<<<<<<< HEAD
+                
+                <Link
+                  href="/contact"
+                  onClick={() => setIsOpen(false)}
+                  className="block w-full px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-200 font-medium text-center"
+<Link
+                  href='/contact'
+                  onClick={() => setIsOpen(false)}'
+                  className='block w-full px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-200 font-medium text-center'                >                <Link"
+                  href="/contact"
+                  href=/contact
 
+                  href=/contact"
+                  onClick={() => setIsOpen(false)}"
+                  className=block w-full px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-200 font-medium text-center;'
+                          className='mt - 3 ml - 4 space - y-2;
+                        >;
+                          {category.services.map (service => (                            <Link;
+                              key={service.name}
+                              href={service.href}
+                              on_click={() => setIsOpen (false)}"
+                              className='block text - sm text - gray - 400 hover:text - cyan - 400 transition - colors'                            >                          className="mt - 3 ml - 4 space - y-2;
+                        >;
+                          {category.services.map ((service) => (
+                            <Link;
+                              key={service.name}
+                              href={service.href}
+                              on_click={() => setIsOpen (false)}
+                              className=block text - sm text - gray - 400 hover:text - cyan - 400 transition - colors'                              className="block text - sm text - gray - 400 hover:text - cyan - 400 transition - colors";
+                            >;
+                              {service.name}
+                            </Link>))}
+                        </motion.div>)}
+                    </AnimatePresence>;
+                  </div>))}
+                <Link;'
+                  href=/contact;
+                  on_click={() => setIsOpen (false)}'
+                  className='block w - full px - 6 py - 3 bg - gradient - to - r from - cyan - 500 to - blue - 500 text - white rounded - lg hover:from - cyan - 600 hover:to - blue - 600 transition - all duration - 200 font - medium text - center                >                <Link;
+                  href=/contact";
+                  on_click={() => setIsOpen (false)}"
+                  className=block w - full px - 6 py - 3 bg - gradient - to - r from - cyan - 500 to - blue - 500 text - white rounded - lg hover:from - cyan - 600 hover:to - blue - 600 transition - all duration - 200 font - medium text - center;
+                >;
+                  Get Started;
+                </Link>;
+              </div>;
+    </>
+        </AnimatePresence>;
+      </nav>;
+
+      {/* Spacer for fixed navigation */}'
+      <div className='h-20'></div>;
+    </>;"
+  );      <div className="h-20"></div>;
+    </>;
+  );
+            </motion.div>)}
+        </AnimatePresence>;
+      </nav>;
+      {/* Spacer for fixed navigation */}'
+      <div className='h - 20'></div>;"
+    </>);      <div className="h - 20"></div>;
+    </>);
+}
+
+                  className='block w-full px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-200 font-medium text-center'
+=======
+
+<<<<<<< HEAD
 <Link href='/contact'
                   onClick={() = /> setIsOpen(false)}
+=======
+<Link;
+href='/contact'
+                  onClick={() =    /> setIsOpen(false)}
+>>>>>>> origin/main
 
+>>>>>>> origin/chore/fix-lint-and-merge
                   className='block w-full px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-lg hover: from-cyan-600 hover:to-blue-600 transition-all duration-200 font-medium text-center'
                 >
                   Get Started;
@@ -549,12 +2237,51 @@ className='block text-sm text-gray-400 hover:text-cyan-400 transition-colors'>
               </div>
             </motion.div>
 
+<<<<<<< HEAD
+        </AnimatePresence>;
+      </nav>;
+      {/* Spacer for fixed navigation */}
+      <div className='h - 20></div>;
+    </>)<div className="h - 20"></div>;
+    </>)}className=block w-full px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-200 font-medium text-center';
+                >;
+                  Get Started;
+                </Link>;
+              </div>;
+            </motion.div>;
+          )}
+        </AnimatePresence>;
+      </nav>;
+      {/* Spacer for fixed navigation */}
+<div className='h-20></div>;
+    </>;
+  )
+    </>);      <div className=h - 20></div>;
+    </>);
+}
+
+  )
+          )}
+        </AnimatePresence>
+      </nav>
+
+      {/* Spacer for fixed navigation */}
+      <div className="h-20"></div>
+    </>
+  )
+}
+=======
           ,
 }
         </AnimatePresence>;
       </nav>;
       {/* Spacer for fixed navigation */}
 
-<div className='h-20' /></div>
-    </>
+<div className='h-20'    /></div>
+    <   />
   );
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> origin/main

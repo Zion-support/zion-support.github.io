@@ -111,7 +111,6 @@ import { quantumSpaceServices  } from '../data/quantum-space-services';
 
 import { enterpriseITServices } from '../data/enterprise-it-services';
 
-const allServices = null;
 ...realMicroSaasServices2025;
 
 ...innovativeAIServices2025;

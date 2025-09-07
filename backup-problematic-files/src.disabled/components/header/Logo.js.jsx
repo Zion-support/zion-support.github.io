@@ -1,17 +1,9 @@
-import React from 'react';
-const Logo.js = ({ className }) => {return (<div className={className || ''} />;
-      <h1 />Logo.js</h1>;
-      <p />This component is under development.</p>;
-    </div>;
-  )}
-
-const Logo.js = ({ className }) => {}
-  return (}
-    <div className={className || ''} />
-      <h1 />Logo.js</h1>
-      <p />This component is under development.</p>
+const Logo.js = ({ className }) => {
+  return ('
+    <div className={className || ''}>'
+</div>
+      <h1>Logo.js</h1>
+      <p>This component is under development.</p>
     </div>
   )
-}
-}
-
+};

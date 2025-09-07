@@ -35,9 +35,6 @@ setIsSubmitting (true)const handleInputBlur = (//Validate individual field on bl
 }placeholder=\"Tell us about your project and requirements...\" /> {errors && errors.message && (<motion&& motion.p initial= {{opacity: 0, y: -10;}
 }animate = {{import React, {;}
   useState } from 'react';
-import { motion  } from 'framer-motion';
-import { Send,CheckCircle,AlertCircle,User,Mail,Phone,Building,MapPin,MessageSquare,Clock,Calendar,Globe,} from 'lucide-react';
-import Link from 'next/link';
 
 const EnhancedContactForm: React.FC = () = /> {const [formData, setFormData] =;}
   useState({name: '',

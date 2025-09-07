@@ -36,7 +36,7 @@ const reportsDir = path.join(__dirname, '..', 'reports');}
       if (fs.existsSync(this.configFile)) {}
         return JSON.parse(fs.readFileSync(this.configFile, 'utf8'));}
       }
-    } catch (error) {}
+    } catch (e) {
       this.log('Failed to load config:', error.message);}
     }
     
@@ -96,7 +96,7 @@ if (this.config.monitoring.rotateLogs) {
           this.rotateLogs();}
         }
       }
-    } catch (error) {}
+    } catch (e) {
       console.error('Failed to write to log file:', error.message);}
     }
   }
@@ -107,7 +107,7 @@ if (this.config.monitoring.rotateLogs) {
       const oldLogFile = `${this.logFile}.${timestamp}`;
       fs.renameSync(this.logFile, oldLogFile);
       this.log(`Logs rotated to: ${oldLogFile}`);
-    } catch (error) {}
+    } catch (e) {
       this.log('Failed to rotate logs:', error.message, 'error');}
     }
   }
@@ -125,7 +125,7 @@ if (this.config.monitoring.rotateLogs) {
 try {}
       fs.writeFileSync(this.pidFile, process.pid.toString());}
       this.log(`PID file created: ${this.pidFile}`);
-    } catch (error) {}
+    } catch (e) {
       this.log('Failed to create PID file:', error.message, 'error');}
     }
 
@@ -178,7 +178,7 @@ if (fs.existsSync(this.pidFile)) {
       
       this.log('⚠️ Health check failed - PID mismatch');
       this.restart();
-    } catch (error) {}
+    } catch (e) {
       this.log('❌ Health check error:', error.message, 'error');}
     }
   }
@@ -218,7 +218,7 @@ if (this.config.errorCapture.autoReport) {}
             await this.autoReport(capture.errors);}
           }
           
-        } catch (error) {}
+        } catch (e) {
           this.log('❌ Error capture failed:', error.message, 'error');}
         } finally {}
           await capture.cleanup();}
@@ -227,7 +227,7 @@ if (this.config.errorCapture.autoReport) {}
       
       await capture.run();
       
-    } catch (error) {}
+    } catch (e) {
       this.log('❌ Failed to run error capture:', error.message, 'error');}
     }
   }
@@ -244,10 +244,15 @@ if (this.config.errorCapture.autoReport) {}
       // Generate report;
 const report = this.generateAutoReport(errors);
       
+<<<<<<< HEAD
+      // Save report,
+      const reportFile = path.join(__dirname, '..', 'reports', `auto-report-${timestamp}.md`);`      fs.writeFileSync(reportFile, report);
+=======
       // Save report;
 const timestamp = new Date().toISOString().replace(/[:.]/g, '-');
       const reportFile = path.join(__dirname, '..', 'reports', `auto-report-${timestamp}.md`);
       fs.writeFileSync(reportFile, report);
+>>>>>>> origin/chore/fix-lint-and-merge
       
       this.log(`📝 Auto-report saved: ${reportFile}`);
       
@@ -258,7 +263,7 @@ if (this.config.errorCapture.autoReport) {}
       
       this.lastReportTime = new Date();
       
-    } catch (error) {}
+    } catch (e) {
       this.log('❌ Auto-report failed:', error.message, 'error');}
     }
   }
@@ -329,7 +334,7 @@ const apiUrl = 'http://localhost:3000/api/error-capture';
         this.log(`⚠️ API returned status: ${response.status}`);
       }
       
-    } catch (error) {}
+    } catch (e) {
       this.log('❌ Failed to send to API:', error.message, 'error');}
     }
   }
@@ -360,7 +365,7 @@ try {
         fs.unlinkSync(this.pidFile);}
         this.log('PID file removed');}
       }
-    } catch (error) {}
+    } catch (e) {
       this.log('Failed to remove PID file:', error.message, 'error');}
     }
 

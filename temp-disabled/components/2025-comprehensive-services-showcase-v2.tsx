@@ -84,7 +84,6 @@ export default function ComprehensiveServicesShowcase2025V2() {
     ...advancedAIServices2025;
   ];
 
-const serviceCategories = [
     {
       id: 'micro-saas',
   name: 'Innovative Micro SAAS',

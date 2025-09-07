@@ -1,4 +1,3 @@
-
 ;
 import type { NextPage } from 'next';
 import Head from 'next/head';
@@ -8,6 +7,15 @@ const CybersecurityChat: NextPage = () => ;
   return (<div />;
       <Head />;
 
+<<<<<<< HEAD
+  return (<div>;
+      <Head>;
+        <title>CybersecurityChat - Zion Tech Solutions</title>;
+        <meta name = "description" content="CybersecurityChat blog post" />{" "}"
+;
+  return (<div>;
+      <Head></Head>;<meta name="description" content="CybersecurityChat blog post" />;"
+=======
 const CybersecurityChat: NextPage = () => ;
   return (<div />;
       <Head />;
@@ -17,6 +25,7 @@ const CybersecurityChat: NextPage = () => ;
   const CybersecurityChat: NextPage = () => ;
   return (<div />;
       <Head /></Head>;<meta name=\"description\" content=\"CybersecurityChat blog post\" />;
+>>>>>>> origin/chore/fix-lint-and-merge
       </Head>;
       </Head>;<meta name=\"description\" content=\"CybersecurityChat blog post\" />;
       </Head>;
@@ -37,7 +46,28 @@ const CybersecurityChat: NextPage = () => {
       <Head />;
         <title />CybersecurityChat - Zion Tech Solutions</title>;
 
+<<<<<<< HEAD
 
+}
+return (;
+=======
+import type { NextPage } from "next";""
+import Head from "next/head";""
+import Link from "next/link";""
+const CybersecurityChat: NextPage = () => {
+  return (
+>>>>>>> origin/chore/fix-lint-and-merge
+    <div>
+</div>
+      <Head>
+
+    <div>;
+      <Head>;
+
+        <title>CybersecurityChat - Zion Tech Solutions</title>;
+
+<<<<<<< HEAD
+=======
 const CybersecurityChat: NextPage = () => {
   return (
     <div />
@@ -45,15 +75,12 @@ const CybersecurityChat: NextPage = () => {
 
       </Head>;
 
+>>>>>>> origin/chore/fix-lint-and-merge
+      <main>
+        <h1>CybersecurityChat</h1>
+        <p>Blog content coming soon...</p>
+        <a href="/blog">Back to Blog</a>
 
-      </Head>;
-
-
-const CybersecurityChat: NextPage = () => {
-      <main />
-        <h1 />CybersecurityChat</h1>
-        <p />Blog content coming soon...</p>
-        <a href=\"/blog\" />Back to Blog</a>
       </main>
     </div>
       </Head>;
@@ -80,19 +107,24 @@ ursor/fix-website-loading-errors-and-merge-6662;
 
 export default CybersecurityChat;
 
-
-
         <title />CybersecurityChat - Zion Tech Solutions</title>
 
 import type { NextPage } from './next';
 import Head from './next / head';
 import Link from './next / link';
 
+<<<<<<< HEAD
+  return (<div>;
+      <Head>;
+        <title > CybersecurityChat - Zion Tech Solutions</title>;
+        <meta name="description" content="CybersecurityChat blog post" />{" "}"
+=======
 const CybersecurityChat: NextPage = () => ;
   return (<div />;
       <Head />;
         <title  /> CybersecurityChat - Zion Tech Solutions</title>;
         <meta name=\"description\" content=\"CybersecurityChat blog post\" />{\" \"}
+>>>>>>> origin/chore/fix-lint-and-merge
       </Head>;
       <main />;
         <h1  /> CybersecurityChat</h1>;
@@ -116,11 +148,18 @@ export default CybersecurityChat;<div />;
     </div>;
   )},export default CybersecurityChat;
 
+<<<<<<< HEAD
+  return (<div>;
+      <Head>;
+        <title>CybersecurityChat - Zion Tech Solutions</title>;
+        <meta name="description" content="CybersecurityChat blog post" />{" "}"
+=======
 const CybersecurityChat: NextPage = () => ;
   return (<div />;
       <Head />;
         <title />CybersecurityChat - Zion Tech Solutions</title>;
         <meta name=\"description\" content=\"CybersecurityChat blog post\" />{\" \"}
+>>>>>>> origin/chore/fix-lint-and-merge
       </Head>;
       <main />;
         <h1 />CybersecurityChat</h1>;
@@ -135,9 +174,11 @@ export default CybersecurityChat;<title />CybersecurityChat - Zion Tech Solution
     </div>)
 };
 
-
 export default CybersecurityChat;
+<<<<<<< HEAD
+=======
 const CybersecurityChat: NextPage = () => {
+>>>>>>> origin/chore/fix-lint-and-merge
  ;
   return (
     <div />
@@ -159,7 +200,10 @@ export default CybersecurityChat;
         <title />CybersecurityChat - Zion Tech Solutions</title>
         <title />CybersecurityChat - Zion Tech Solutions</title>
 ;
+<<<<<<< HEAD
+=======
 const CybersecurityChat: NextPage = () => {
+>>>>>>> origin/chore/fix-lint-and-merge
  ;
   return (
     <div />
@@ -177,4 +221,3 @@ const CybersecurityChat: NextPage = () => {
 }
 
 export default CybersecurityChat;
-

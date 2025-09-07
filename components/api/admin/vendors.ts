@@ -23,6 +23,7 @@ const { action, vendorId, value } = req.body || {};
     else if (action === 'unsuspend') suspendVendor(String(vendorId), false);
 else if (action === 'commission')
       setVendorCommission(String(vendorId), Number(value));}
+<<<<<<< HEAD
     else return res.status(400).json({ error: 'Unknown action',
   },,
   });
@@ -33,6 +34,15 @@ else if (action === 'commission')
     res.status(500).json({ error: e.message,
   },,
   });
+=======
+    else return res.status(400).json({ error: 'Unknown action',}
+});
+    res.status(200).json({ ok: true,}
+});
+  } catch (e) {
+    res.status(500).json({ error: e.message,}
+});
+>>>>>>> origin/main
   }
 export default function handler(req: NextApiRequest,,,
   res: NextApiResponse) {
@@ -41,19 +51,25 @@ export default function handler(req: NextApiRequest,,,
   },,
   });
 
+<<<<<<< HEAD
 const { action, vendorId, value } = req.body || {};
 import { setVendorApproval, setVendorCommission, suspendVendor,
   from '../../../utils/vendor-store';
+=======
+<<<<<<< HEAD
+  }
+=======
+>>>>>>> origin/main
 import {
+>>>>>>> origin/chore/fix-lint-and-merge
   try {
     if (action === 'approve') setVendorApproval(String(vendorId), true);
     else if (action === 'revoke') setVendorApproval(String(vendorId), false);
     else if (action === 'suspend') suspendVendor(String(vendorId), true);}
     else if (action === 'unsuspend') suspendVendor(String(vendorId), false);}
-  } catch (e: any) {}
+  } catch (e) {
     res && res.status(500).json({ error: e && e.message })
- ,
-};
+ }
 }
   setVendorApproval,
   setVendorCommission,;
@@ -66,6 +82,7 @@ export default function handler(req: NextApiRequest,,,
   },,
   });
 
+<<<<<<< HEAD
 const { action, vendorId, value } = req.body || {};
 import { setVendorApproval, setVendorCommission, suspendVendor,
   from '../../../utils/vendor-store';
@@ -74,6 +91,16 @@ export default function handler(req: NextApiRequest,,,
   if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed',
   },,
   });
+=======
+<<<<<<< HEAD
+=======
+const { action, vendorId, value } = req.body || {};import { setVendorApproval, setVendorCommission, suspendVendor } from '../../../utils/vendor-store';
+>>>>>>> origin/chore/fix-lint-and-merge
+
+export default function handler(req: NextApiRequest, res: NextApiResponse) {;}
+  if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed',}
+});
+>>>>>>> origin/main
 
 const { action, vendorId, value } = req.body || {},
   try {
@@ -81,10 +108,9 @@ const { action, vendorId, value } = req.body || {},
     else if (action === 'revoke') setVendorApproval(String(vendorId), false);
     else if (action === 'suspend') suspendVendor(String(vendorId), true);}
     else if (action === 'unsuspend') suspendVendor(String(vendorId), false);}
-  } catch (e: any) {}
+  } catch (e) {
     res && res.status(500).json({ error: e && e.message })
- ,
-};
+ }
 }
 
 }

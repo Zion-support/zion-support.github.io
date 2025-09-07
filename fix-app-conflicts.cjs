@@ -1,11 +1,17 @@
 const fs = require('fs');
-const path = require('path');
+const path = require(path');
 
 function fixMergeConflicts(filePath) {
   try {
     let content = fs.readFileSync(filePath, 'utf8');
     
     // Check if file has merge conflicts
+<<<<<<< HEAD
+
+          takeHead = false;
+          continue;
+        } else if (line.includes(>>>>>>>')) {
+=======
       console.log(`Fixing merge conflicts in: ${filePath}`);
       
       // Simple merge conflict resolution - take the HEAD version
@@ -28,6 +34,7 @@ function fixMergeConflicts(filePath) {
           takeHead = true;
           continue;
         } else if (line.includes('')) {
+>>>>>>> origin/chore/fix-lint-and-merge
           inConflict = false;
           continue;
         }
@@ -37,8 +44,8 @@ function fixMergeConflicts(filePath) {
         }
       }
       
-      const resolvedContent = resolvedLines.join('\n');
-      fs.writeFileSync(filePath, resolvedContent, 'utf8');
+      const resolvedContent = resolvedLines.join('\n);
+      fs.writeFileSync(filePath, resolvedContent, utf8');
       console.log(`Fixed: ${filePath}`);
     }
   } catch (error) {
@@ -55,13 +62,19 @@ function findAndFixConflicts(dir) {
     
     if (stat.isDirectory()) {
       findAndFixConflicts(filePath);
-    } else if (file.endsWith('.tsx') || file.endsWith('.ts') || file.endsWith('.jsx') || file.endsWith('.js')) {
+    } else if (file.endsWith('.tsx) || file.endsWith(.ts') || file.endsWith('.jsx) || file.endsWith(.js')) {
       fixMergeConflicts(filePath);
     }
   }
 }
 
 // Fix conflicts in app directory
+<<<<<<< HEAD
+console.log('Fixing merge conflicts in app directory...);
+findAndFixConflicts(./app');
+console.log('Merge conflicts fixed!');
+=======
 console.log('Fixing merge conflicts in app directory...');
 findAndFixConflicts('./app');
 console.log('Merge conflicts fixed!');
+>>>>>>> origin/chore/fix-lint-and-merge

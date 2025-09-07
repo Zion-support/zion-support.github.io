@@ -39,6 +39,18 @@ export const AccessibilityProvider: React.FC<AccessibilityProviderProps /> = ({}
       {children}
     </AccessibilityContext.Provider>
   );
+:components/AccessibilityProvider.tsx
+};
+
+export const useAccessibility = () => {
+  const context = useContext(AccessibilityContext);
+  if (context === undefined) {
+    throw new Error(
+      "useAccessibility must be used within an AccessibilityProvider",
+    );
+  }
+  return context;
+};
   return context;
 }
 ;
@@ -64,3 +76,4 @@ export const AccessibilityProvider: React.FC < AccessibilityProviderProps> = ({}
     toggleLargeText,
     toggleReducedMotion,}
 }
+:temp-disabled/components/AccessibilityProvider.tsx

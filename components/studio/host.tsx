@@ -1,12 +1,50 @@
+<<<<<<< HEAD
 import React, { useState,
   from 'react';
+=======
 
+
+<<<<<<< HEAD
+=======
+
+import React, { useState } from 'react';
+>>>>>>> origin/main
+
+>>>>>>> origin/chore/fix-lint-and-merge
 type PersonaConfig = any;
   language: string;
   cloneStyleText?: string;
 }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
 export default function StudioHostPage() {
-  const [persona, setPersona] = useState<PersonaConfig />({
+  const [persona, setPersona] = useState<PersonaConfig>({ voice: 'Visionary', language: 'English' }),
+  const [inviteeName, setInviteeName] = useState($2);
+  const [inviteeBio, setInviteeBio] = useState($2);
+  const [topic, setTopic] = useState($2);
+  const [operatorPrompt, setOperatorPrompt] = useState($2);
+  const [generating, setGenerating] = useState($2);
+  const [episode, setEpisode] = useState<any>(null),
+  const [synthesizing, setSynthesizing] = useState($2);
+  const [publishing, setPublishing] = useState($2);
+  const handleGenerate = async () => {
+    setGenerating($2);
+    try {
+      const res = await fetch('/api/podcast/generate', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ persona, invitee: { name: inviteeName, bio: inviteeBio}, topic, operatorPrompt })}),
+      const data = await res.json($2);
+  });
+  const [inviteeName, setInviteeName] = useState('');
+  const [inviteeBio, setInviteeBio] = useState('');
+  const [topic, setTopic] = useState('');
+=======
+
+>>>>>>> origin/main
+export default function StudioHostPage() {
+  const [persona, setPersona] = useState<PersonaConfig    />({
     voice: 'Visionary',
   language: 'English'
     voice: 'Visionary',
@@ -17,6 +55,7 @@ export default function StudioHostPage() {
 const [inviteeName, setInviteeName] = useState('');
 
 const [inviteeBio, setInviteeBio] = useState('');
+>>>>>>> origin/chore/fix-lint-and-merge
 
 const [topic, setTopic] = useState('');
 
@@ -24,9 +63,28 @@ const [operatorPrompt, setOperatorPrompt] = useState('Generate a 15-minute podca
   plus a CTA.',,
    );
 
+<<<<<<< HEAD
+origin/cursor/automate-test-improve-and-merge-code-2533
+  const [generating, setGenerating] = useState(false);
+  const [episode, setEpisode] = useState<any>(null);
+  const [synthesizing, setSynthesizing] = useState(false);
+  const [publishing, setPublishing] = useState(false);
+  const handleGenerate = async () => {
+    setGenerating(true);
+    try {
+      const res = await fetch('/api/podcast/generate', {
+        method: 'POST'
+        headers: { 'Content-Type': 'application/json' }
+        body: JSON.stringify({
+          persona
+          invitee: { name: inviteeName, bio: inviteeBio }
+          topic
+          operatorPrompt
+        })
+=======
 const [generating, setGenerating] = useState(false);
 
-const [episode, setEpisode] = useState<any />(null);
+const [episode, setEpisode] = useState<any    />(null);
 
 const [synthesizing, setSynthesizing] = useState(false);
 
@@ -44,18 +102,63 @@ body: JSON.stringify({
           invitee: { name: inviteeName, bio: inviteeBio,}
 },
           topic,
+<<<<<<< HEAD
           operatorPrompt,,,
   }),
+=======
+          operatorPrompt,
+        }),
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> origin/main
       });
 
 const data = await res.json();
       setEpisode(data.episode);
     } catch (e) {
+<<<<<<< HEAD
+      console.error(e);
+      alert('Failed to generate episode');
+    } finally {
+      setGenerating(false);    }      const data = await res.json();
+      setEpisode(data.episode)
+    } catch (e) {
+      console.error($2);
+      alert('Failed to generate episode')
+    } finally {
+      setGenerating(false)
+    }
+  },
+
+  const handleSynthesize = $2;
+    setSynthesizing($2);
+    try {
+      const res = await fetch('/api/podcast/synthesize', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ episodeId: episode.id, persona })}),
+      const data = await res.json($2);
+      alert ('Failed to generate episode');
+    } finally {}
+      set_generating (false);
+    }
+
+  return ('
+    <div className='space-y-8'>;'
+      <h1 className='text-3xl font-bold'>Podcast Studio Host</h1>;
+'
+      <section className='space-y-3'>;'
+        <h2 className='text-xl font-semibold'>AI Persona</h2>;'
+        <div className='grid grid-cols-1 md:grid-cols-3 gap-4'>;
+          <div>;'
+            <label className='block text-sm font-medium'>Voice</label>;
+      setGenerating(false);
+=======
       console.error (e);}
       alert ('Failed to generate episode');}
     } finally {
 }
       setGenerating(false);}
+>>>>>>> origin/chore/fix-lint-and-merge
     }
   }
 
@@ -65,27 +168,206 @@ const handleSynthesize = async () => {
     setSynthesizing(true);
     try {
       const res = await fetch('/api/podcast/synthesize', {
+<<<<<<< HEAD
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+=======
         method: 'POST',}
   headers: { 'Content-Type': 'application/json',}
 },
+<<<<<<< HEAD
 body: JSON.stringify({ episodeId: episode.id,,,
   persona }),
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+body: JSON.stringify({ episodeId: episode.id, persona }),
+>>>>>>> origin/main
       });
 
 const data = await res.json();
       setEpisode(data.episode);
     } catch (e) {
+<<<<<<< HEAD
+      }
+      console.error(e);
+      alert('Failed to synthesize audio');'
+    } finally {
+      setSynthesizing(false);    }      const data = await res.json();
+      setEpisode(data.episode)
+    } catch (e) {
+      console.error($2);
+      alert('Failed to synthesize audio')
+    } finally {
+      setSynthesizing(false)
+    }
+  },
+
+  const handlePublishRss = $2;
+    setPublishing($2);
+    try {
+      const res = await fetch($2);
+      await res.json($2);
+      alert('RSS feed updated. Platforms will pull on next refresh.')
+=======
       console.error(e);}
       alert('Failed to synthesize audio');}
     } finally {}
       setSynthesizing(false);}
     }
+>>>>>>> origin/chore/fix-lint-and-merge
   }
 
 const handlePublishRss = async () => {
     if (!episode?.id);
   return;
     setPublishing(true);
+<<<<<<< HEAD
+    try {
+      const res = await fetch('/api/podcast/rss', { method: 'POST' });
+      await res.json();
+      alert('RSS feed updated. Platforms will pull on next refresh.');
+    } catch (e) {
+      console.error($2);
+      alert('Failed to update RSS')
+    } finally {
+      set_generating (false);
+      setPublishing(false)
+    }
+  },
+  return (
+<div className='space-y-8'>
+      <h1 className='text-3xl font-bold'>Podcast Studio Host</h1>
+      <section className='space-y-3'>
+        <h2 className='text-xl font-semibold'>AI Persona</h2>
+        <div className='grid grid-cols-1 md:grid-cols-3 gap-4'>
+          <div>
+            <label className='block text-sm font-medium'>Voice</label>
+origin/cursor/automate-test-improve-and-merge-code-2533
+            <select
+            <select'
+              className='mt-1 w-full border rounded p-2'
+              value={persona && persona.voice}
+              onChange={e =>;
+                }
+                setPersona({ ...persona, "voice": e && e.target.value as any })set_publishing (false)}
+ 
+}return (<div className='space - y-8'>;'
+      <h1 className='text - 3xl font - bold'>Podcast Studio Host</h1>;'
+      <section className='space - y-3'>;'
+        <h2 className='text - xl font - semibold'>AI Persona</h2>;'
+        <div className='grid grid - cols - 1 md:grid - cols - 3 gap - 4'>;
+          <div>;'
+            <label className='block text - sm font - medium'>Voice</label>;
+            <select;'
+              className=mt-1 w-full border rounded p-2
+              value={persona && persona.voice}
+              onChange={e =>;
+                setPersona({ ...persona, voice: e && e.target.value as any });
+      set_publishing (false);
+    }
+  }
+  return ('
+    <div className='space - y-8>;
+      <h1 className='text - 3xl font - bold'>Podcast Studio Host</h1>;
+      <section className=space - y-3'>;'
+        <h2 className=text - xl font - semibold>AI Persona</h2>;'
+        <div className='grid grid - cols - 1 md:grid - cols - 3 gap - 4>;
+          <div>;
+            <label className='block text - sm font - medium'>Voice</label>;
+
+
+  return (
+export default function StudioHostPage() {const [persona, setPersona] = useState<PersonaConfig>({voice: Visionary;
+    language: 'English';
+    voice: Visionary,language: 'English'})const [inviteeName, setInviteeName] = useState()const [inviteeBio, setInviteeBio] = useState('')const [topic, setTopic]  = useState()export default function StudioHostPage() {const [persona, setPersona] = useState<PersonaConfig>({ voice: 'Visionary', language: English }),const [inviteeName, setInviteeName] = useState('')const [inviteeBio, setInviteeBio] = useState()const [topic, setTopic] = useState('')const [operatorPrompt, setOperatorPrompt]  = useState(Generate a 15-minute podcast script interviewing the founder of a global decentralized talent protocol called Zion. Include visionary and technical questions, plus a CTA.)const [operatorPrompt, setOperatorPrompt] = useState('Generate a 15-minute podcast script interviewing the founder of a global decentralized talent protocol called Zion. Include visionary and technical questions, plus a CTA.';
+  )const [generating, setGenerating] = useState(false)const [episode, setEpisode] = useState<any>(null)const [synthesizing, setSynthesizing] = useState(false)const [publishing, setPublishing]  = useState(false)const handleGenerate = async () => {setGenerating(true)try {const res = await fetch(/api/podcast/generate, {method: 'POST',headers: { Content-Type: 'application/json' },body: JSON.stringify({persona,invitee: { name: inviteeName, bio: inviteeBio },topic,operatorPrompt})})const data = await res.json()setEpisode(data.episode)} catch (e) {console.error (e)alert (Failed to generate episode)} finally {set_generating (false)}return (<div className='space-y-8'>;
+      <h1 className=text-3xl font-bold>Podcast Studio Host</h1>;<section className='space-y-3'>;
+        <h2 className=text-xl font-semibold>AI Persona</h2>;
+        <div className='grid grid-cols-1 md:grid-cols-3 gap-4'>;
+          <div>;
+            <label className=block text-sm font-medium>Voice</label>;setGenerating(false)}
+  }
+  const handleSynthesize = async () => {if (!episode?.id) return;
+    setSynthesizing(true)try {const res = await fetch('/api/podcast/synthesize', {method: POST,headers: { 'Content-Type': application/json },body: JSON.stringify({ episodeId: episode.id, persona })})const data = await res.json()setEpisode(data.episode)} catch (e) {console.error(e)alert('Failed to synthesize audio')} finally {setSynthesizing(false)}
+  }
+  const handlePublishRss = async () => {if (!episode?.id) return;
+    setPublishing(true)try {const res = await fetch(/api/podcast/rss, { method: 'POST' })await res.json()alert(RSS feed updated. Platforms will pull on next refresh.)} catch (e) {console.error(e)alert('Failed to update RSS')} finally {setPublishing(false)}
+  }
+  return (<div className=space-y-8>;
+      <h1 className='text-3xl font-bold'>Podcast Studio Host</h1>;
+      <section className=space-y-3>;
+        <h2 className='text-xl font-semibold'>AI Persona</h2>;
+        <div className=grid grid-cols-1 md:grid-cols-3 gap-4>;
+          <div>;
+            <label className='block text-sm font-medium'>Voice</label>;
+            <select;
+              className=mt-1 w-full border rounded p-2;
+              value={persona && persona.voice}
+              onChange={e =>;
+                setPersona({ ...persona, voice: e && e.target.value as any })set_publishing (false)}
+  }return (<div className='space - y-8'>;
+      <h1 className=text - 3xl font - bold>Podcast Studio Host</h1>;
+      <section className='space - y-3'>;
+        <h2 className=text - xl font - semibold>AI Persona</h2>;
+        <div className='grid grid - cols - 1 md:grid - cols - 3 gap - 4'>;
+          <div>;
+            <label className=block text - sm font - medium>Voice</label>;
+            <select;
+              className='mt - 1 w - full border rounded p - 2';
+              value={persona.voice}
+              on_change={e =>;
+                set_persona ({ ...persona, voice: e.target.value as any })}
+            >;
+              <option value='Visionary'>Visionary</option>;'
+              <option value='Grounded'>Grounded</option>;'
+              <option value='Technical'>Technical</option>;
+
+  return (
+export default function StudioHostPage() {const [persona, setPersona] = useState<PersonaConfig>({voice: 'Visionary';
+    language: 'English';
+    voice: 'Visionary',language: 'English',})const [inviteeName, setInviteeName] = useState('')const [inviteeBio, setInviteeBio] = useState('')const [topic, setTopic]  = useState('')export default function StudioHostPage() {const [persona, setPersona] = useState<PersonaConfig>({ voice: 'Visionary', language: 'English' }),const [inviteeName, setInviteeName] = useState('')const [inviteeBio, setInviteeBio] = useState('')const [topic, setTopic] = useState('')const [operatorPrompt, setOperatorPrompt]  = useState('Generate a 15-minute podcast script interviewing the founder of a global decentralized talent protocol called Zion. Include visionary and technical questions, plus a CTA.')const [operatorPrompt, setOperatorPrompt] = useState('Generate a 15-minute podcast script interviewing the founder of a global decentralized talent protocol called Zion. Include visionary and technical questions, plus a CTA.';
+  )const [generating, setGenerating] = useState(false)const [episode, setEpisode] = useState<any>(null)const [synthesizing, setSynthesizing] = useState(false)const [publishing, setPublishing]  = useState(false)const handleGenerate = async () => {setGenerating(true)try {const res = await fetch('/api/podcast/generate', {method: 'POST',headers: { 'Content-Type': 'application/json' },body: JSON.stringify({persona,invitee: { name: inviteeName, bio: inviteeBio },topic,operatorPrompt,}),})const data = await res.json()setEpisode(data.episode)} catch (e) {console.error (e)alert ('Failed to generate episode')} finally {set_generating (false)}return (<div className='space-y-8'>;
+      <h1 className='text-3xl font-bold'>Podcast Studio Host</h1>;<section className='space-y-3'>;
+        <h2 className='text-xl font-semibold'>AI Persona</h2>;
+        <div className='grid grid-cols-1 md:grid-cols-3 gap-4'>;
+          <div>;
+            <label className='block text-sm font-medium'>Voice</label>;setGenerating(false)}
+  }
+  const handleSynthesize = async () => {if (!episode?.id) return;
+    setSynthesizing(true)try {const res = await fetch('/api/podcast/synthesize', {method: 'POST',headers: { 'Content-Type': 'application/json' },body: JSON.stringify({ episodeId: episode.id, persona }),})const data = await res.json()setEpisode(data.episode)} catch (e) {console.error(e)alert('Failed to synthesize audio')} finally {setSynthesizing(false)}
+  }
+  const handlePublishRss = async () => {if (!episode?.id) return;
+    setPublishing(true)try {const res = await fetch('/api/podcast/rss', { method: 'POST' })await res.json()alert('RSS feed updated. Platforms will pull on next refresh.')} catch (e) {console.error(e)alert('Failed to update RSS')} finally {setPublishing(false)}
+  }
+  return (<div className='space-y-8'>;
+      <h1 className='text-3xl font-bold'>Podcast Studio Host</h1>;
+      <section className='space-y-3'>;
+        <h2 className='text-xl font-semibold'>AI Persona</h2>;
+        <div className='grid grid-cols-1 md:grid-cols-3 gap-4'>;
+          <div>;
+            <label className='block text-sm font-medium'>Voice</label>;
+            <select;
+              className='mt-1 w-full border rounded p-2';
+              value={persona && persona.voice}
+              onChange={e =>;
+                setPersona({ ...persona, voice: e && e.target.value as any })set_publishing (false)}
+  }return (<div className='space - y-8'>;
+      <h1 className='text - 3xl font - bold'>Podcast Studio Host</h1>;
+      <section className='space - y-3'>;
+        <h2 className='text - xl font - semibold'>AI Persona</h2>;
+        <div className='grid grid - cols - 1 md:grid - cols - 3 gap - 4'>;
+          <div>;
+            <label className='block text - sm font - medium'>Voice</label>;
+            <select;
+              className='mt - 1 w - full border rounded p - 2';
+              value={persona.voice}
+              on_change={e =>;
+                set_persona ({ ...persona, voice: e.target.value as any })}
+            >;
+              <option value='Visionary'>Visionary</option>;
+              <option value='Grounded'>Grounded</option>;
+              <option value='Technical'>Technical</option>;
+=======
     try {}
 const res = await fetch('/api/podcast/rss', { method: 'POST',
   },,
@@ -100,6 +382,7 @@ const res = await fetch('/api/podcast/rss', { method: 'POST',
     }
   }
   return (
+<<<<<<< HEAD
 <div className='space-y-8' />
       <h1 className='text-3xl font-bold' />Podcast Studio Host</h1>
       <section className='space-y-3' />
@@ -129,11 +412,43 @@ const res = await fetch('/api/podcast/rss', { method: 'POST',
             set_persona ({ ...persona, voice: e.target.value as any 
             
 
+=======
+<div className='space-y-8'    />
+      <h1 className='text-3xl font-bold'    />Podcast Studio Host</h1>
+      <section className='space-y-3'    />
+        <h2 className='text-xl font-semibold'    />AI Persona</h2>
+        <div className='grid grid-cols-1 md: grid-cols-3 gap-4'    />
+          <div    />
+            <label className='block text-sm font-medium'    />Voice</label>
+            <select;
+className='mt-1 w-full border rounded p-2'
+
+              value={persona && persona.voic,}
+}
+              onChange={e =    />;}
+                setPersona({ ...persona, voice: e && e.target.value as any })set_publishing (false)}
+ ,
+}return (<div className='space - y-8'    />;
+      <h1 className='text - 3xl font - bold'    />Podcast Studio Host</h1>;
+      <section className='space - y-3'    />;
+        <h2 className='text - xl font - semibold'    />AI Persona</h2>;
+        <div className='grid grid - cols - 1 md:grid - cols - 3 gap - 4'    />;
+          <div    />;
+            <label className='block text - sm font - medium'    />Voice</label>;
+            <select;
+              className='mt - 1 w - full border rounded p - 2';
+              value={persona.voice}
+              on_change={e =    />;}
+                set_persona ({ ...persona, voice: e.target.value as any },
+}
+>>>>>>> origin/main
             >;
-              <option value='Visionary' />Visionary</option>;
-              <option value='Grounded' />Grounded</option>;
-              <option value='Technical' />Technical</option>;
+              <option value='Visionary'    />Visionary</option>;
+              <option value='Grounded'    />Grounded</option>;
+              <option value='Technical'    />Technical</option>;
+>>>>>>> origin/chore/fix-lint-and-merge
             </select>;
+<<<<<<< HEAD
           </div>}
             <div />
             />;
@@ -145,18 +460,110 @@ const res = await fetch('/api/podcast/rss', { method: 'POST',
                 setPersona({ ...persona, cloneStyleText: e && e.target.value,
   },,
   });
-              }
+=======
+          </div>;
+          <div    />}
+            />;
+          </div>;
+<<<<<<< HEAD
+          <div>value={persona && persona.cloneStyleText || ''}
+              onChange={e =>;
+    <div className="space-y-8">
+      <h1 className="text-3xl font-bold">Podcast Studio Host</h1>
 
+      <section className="space-y-3">
+        <h2 className="text-xl font-semibold">AI Persona</h2>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+          <div>
+            <label className="block text-sm font-medium">Voice</label>
+            <select
+              className="mt-1 w-full border rounded p-2"
+              value={persona.voice}
+              onChange={(e) => setPersona({ ...persona, voice: e.target.value as any })}
+            >
+              <option value="Visionary">Visionary</option>
+              <option value="Grounded">Grounded</option>
+              <option value="Technical">Technical</option>
+            </select>
+          </div>
+          <div>
+            <label className="block text-sm font-medium">Language</label>
+            <input className="mt-1 w-full border rounded p-2" value={persona.language} onChange={(e) => setPersona({ ...persona, language: e.target.value })} />
+          </div>
+          <div>
+            <label className="block text-sm font-medium">Clone Style (optional)</label>
+            <textarea className="mt-1 w-full border rounded p-2" rows={3} placeholder="Paste representative writing or notes to clone tone" value={persona.cloneStyleText || ''} onChange={(e) => setPersona({ ...persona, cloneStyleText: e.target.value })} />
+          <div>;'
+              value={persona && persona.cloneStyleText || ''}
+              onChange={e =>;
+=======
+          <div    />value={persona && persona.cloneStyleText || ''}
+              onChange={e =>;
+>>>>>>> origin/chore/fix-lint-and-merge
+}
+                setPersona({ ...persona, cloneStyleText: e && e.target.value,}
+});
+>>>>>>> origin/main
+              }
+<<<<<<< HEAD
+            />          </div>;
+        </div>;
+      </section>;
+      <section className=space-y-3'>;'
+        <h2 className=text-xl font-semibold>Episode Generator</h2>;'
+        <div className='grid grid-cols-1 md:grid-cols-3 gap-4>          </div>;
+        </div>;
+      </section>;
+      <section className='space-y-3'>;
+        <h2 className=text-xl font-semibold'>Episode Generator</h2>;'
+        <div className=grid grid-cols-1 md:grid-cols-3 gap-4>;
+          <div>;'
+            <label className='block text-sm font-medium'>Invitee Name</label>;
+=======
+
+>>>>>>> origin/chore/fix-lint-and-merge
             />
           </div>
         </div>
       </section>
 
+<<<<<<< HEAD
+      <section className="space-y-3">
+        <h2 className="text-xl font-semibold">Episode Generator</h2>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+          <div>
+                setPersona({ ...persona, cloneStyleText: e && e.target.value })}/>          </div>;
+            />          </div>;
+                setPersona({ ...persona, cloneStyleText: e && e.target.value })}/>          </div>;
+        </div>;
+      </section>;
+      <section className='space-y-3'>;
+        <h2 className='text-xl font-semibold'>Episode Generator</h2>;
+        <div className='grid grid-cols-1 md:grid-cols-3 gap-4'>          </div>;
+        </div>;
+      </section>;
+      <section className='space-y-3'>;
+        <h2 className='text-xl font-semibold'>Episode Generator</h2>;
+        <div className='grid grid-cols-1 md:grid-cols-3 gap-4'>;
+          <div>;
+            <label className='block text-sm font-medium'>Invitee Name</label>;/>;
+          </div>;
+        </div>;
+      </section>;
+<section className='space-y-3'>;
+        <h2 className='text-xl font-semibold'>Episode Generator</h2>;
+        <div className='grid grid-cols-1 md:grid-cols-3 gap-4'>;
+          <div>;
+            <label className='block text-sm font-medium'>Invitee Name</label>;
+            <input
+              className='mt-1 w-full border rounded p-2'
+              className='mt-1 w-full border rounded p-2'
 <section className='space-y-3' />
         <h2 className='text-xl font-semibold' />Episode Generator</h2>
         <div className='grid grid-cols-1 md: grid-cols-3 gap-4' />
           <div />
             <label className='block text-sm font-medium' />Invitee Name</label>
+<<<<<<< HEAD
             <input className='mt-1 w-full border rounded p-2'
 
               value={inviteeName,
@@ -194,10 +601,312 @@ const res = await fetch('/api/podcast/rss', { method: 'POST',
             disabled={generating
          />
           {generating ? 'Generating…' : 'Generate Episode'
+=======
+            <input;
+              className='mt-1 w-full border rounded p-2';
+              value={inviteeName}
+              onChange={e => setInviteeName(e && e.target.value)}
+            />;
+          </div>;'
+          <div className='md:col-span-2'>;'
+            <label className='block text-sm font-medium'>Invitee Bio</label>;
+            <textarea'
+              className='mt-1 w-full border rounded p-2'
+              rows={3}
+              value={inviteeBio}
+              onChange={e => setInviteeBio(e && e.target.value)}
+            />;
+          </div>;'
+          <div className='md:col-span-3'>;'
+            <label className='block text-sm font-medium'>Topic</label>;
+            <input'
+              className='mt-1 w-full border rounded p-2'
+              value={topic}
+              onChange={e => setTopic(e && e.target.value)}
+            />;
+          </div>;'
+          <div className='md:col-span-3'>;'
+            <label className='block text-sm font-medium'>Operator Prompt</label>;
+            <textarea'
+              className='mt-1 w-full border rounded p-2'
+=======
+<section className='space-y-3'    />
+        <h2 className='text-xl font-semibold'    />Episode Generator</h2>
+        <div className='grid grid-cols-1 md: grid-cols-3 gap-4'    />
+          <div    />
+            <label className='block text-sm font-medium'    />Invitee Name</label>
+            <input;
+className='mt-1 w-full border rounded p-2'
+
+              value={inviteeName}
+              onChange={e =    /> setInviteeName(e && e.target.value,}
+}
+            />;
+          </div>;
+          <div className='md:col-span-2'    />;
+            <label className='block text-sm font-medium'    />Invitee Bio</label>;
+            <textarea;
+              className='mt-1 w-full border rounded p-2';
+              rows={3}
+              value={inviteeBio}
+              onChange={e =    /> setInviteeBio(e && e.target.value)}
+            />;
+          </div>;
+          <div className='md:col-span-3'    />;
+            <label className='block text-sm font-medium'    />Topic</label>;
+            <input;
+              className='mt-1 w-full border rounded p-2';
+              value={topic}
+              onChange={e =    /> setTopic(e && e.target.value)}
+            />;
+          </div>;
+          <div className='md:col-span-3'    />;
+            <label className='block text-sm font-medium'    />Operator Prompt</label>;
+            <textarea;
+              className='mt-1 w-full border rounded p-2';
+>>>>>>> origin/chore/fix-lint-and-merge
+              rows={3}
+              value={operatorPrompt}
+              onChange={e =    /> setOperatorPrompt(e && e.target.value)}
+            />;
+          </div>;
+        </div>;
+<<<<<<< HEAD
+            <label className="block text-sm font-medium">Invitee Name</label>
+            <input className="mt-1 w-full border rounded p-2" value={inviteeName} onChange={(e) => setInviteeName(e.target.value)} />
+          </div>
+          <div className="md:col-span-2">
+            <label className="block text-sm font-medium">Invitee Bio</label>
+            <textarea className="mt-1 w-full border rounded p-2" rows={3} value={inviteeBio} onChange={(e) => setInviteeBio(e.target.value)} />
+          </div>
+          <div className="md:col-span-3">
+            <label className="block text-sm font-medium">Topic</label>
+            <input className="mt-1 w-full border rounded p-2" value={topic} onChange={(e) => setTopic(e.target.value)} />
+          </div>
+          <div className="md:col-span-3">
+            <label className="block text-sm font-medium">Operator Prompt</label>
+            <textarea className="mt-1 w-full border rounded p-2" rows={3} value={operatorPrompt} onChange={(e) => setOperatorPrompt(e.target.value)} />
+          </div>
+        </div>
+        <button className="px-4 py-2 bg-blue-600 text-white rounded" onClick={handleGenerate} disabled={generating}>
+          {generating ? 'Generating…' : 'Generate Episode'}
+        </button>
+      </section>
+        <button'
+          className='px-4 py-2 bg-blue-600 text-white rounded'
+          onClick={handleGenerate}'
+
+      {episode && (
+        <button;
+          className='px-4 py-2 bg-blue-600 text-white rounded';
+          onClick={handleGenerate}disabled={generating}>          {generating ? 'Generating…' : 'Generate Episode'}
+          disabled={generating}>          {generating ? 'Generating…' : 'Generate Episode'}
+        <button;
+          className='px-4 py-2 bg-blue-600 text-white rounded';
+          onClick={handleGenerate}disabled={generating}>          {generating ? 'Generating…' : 'Generate Episode'}
+      <section className="space-y-3">;
+        <h2 className="text-xl font-semibold">AI Persona</h2>;
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">;
+          <div>;
+            <label className="block text-sm font-medium" htmlFor="input-Voice">Voice</label>;
+            <select;
+              className="mt-1 w-full border rounded p-2";
+          <div>;
+            <label className="block text-sm font-medium" htmlFor="input-Invitee Name">Invitee Name</label>;
+            <input className="mt-1 w-full border rounded p-2" value={inviteeName} onChange={(e) => setInviteeName(e.target.value)} />;
+          </div>;
+          <div className="md:col-span-2">;
+            <label className="block text-sm font-medium" htmlFor="input-Invitee Bio">Invitee Bio</label>;
+            <textarea className="mt-1 w-full border rounded p-2" rows={3} value={inviteeBio} onChange={(e) => setInviteeBio(e.target.value)} />;
+          </div>;
+          <div className="md:col-span-3">;
+            <label className="block text-sm font-medium" htmlFor="input-Topic">Topic</label>;
+            <input className="mt-1 w-full border rounded p-2" value={topic} onChange={(e) => setTopic(e.target.value)} />;
+          </div>;
+          <div className="md:col-span-3">;
+            <label className="block text-sm font-medium" htmlFor="input-Operator Prompt">Operator Prompt</label>;
+            <textarea className="mt-1 w-full border rounded p-2" rows={3} value={operatorPrompt} onChange={(e) => setOperatorPrompt(e.target.value)} />;
+          </div>;
+        </div>;
+        <button className="px-4 py-2 bg-blue-600 text-white rounded" onClick={handleGenerate} disabled={generating}>;
+          disabled={generating}>          {generating ? 'Generating…' : 'Generate Episode'}
+      <section className="space-y-3">;"
+        <h2 className="text-xl font-semibold">AI Persona</h2>;"
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">;
+          <div>;"
+            <label className=block text-sm font-medium htmlFor="input-Voice">Voice</label>;
+            <select
+              className=mt-1 w-full border rounded p-2"
+          <div>"
+            <label className=block text-sm font-medium htmlFor="input-Invitee Name">Invitee Name</label>
+            <input className=mt-1 w-full border rounded p-2" value={inviteeName} onChange={(e) => setInviteeName(e.target.value)} />
+          </div>"
+          <div className=md:col-span-2>"
+            <label className="block text-sm font-medium htmlFor=input-Invitee Bio">Invitee Bio</label>"
+            <textarea className=mt-1 w-full border rounded p-2 rows={3} value={inviteeBio} onChange={(e) => setInviteeBio(e.target.value)} />
+          </div>"
+          <div className="md:col-span-3>
+            <label className="block text-sm font-medium" htmlFor=input-Topic>Topic</label>"
+            <input className="mt-1 w-full border rounded p-2 value={topic} onChange={(e) => setTopic(e.target.value)} />
+          </div>
+          <div className="md:col-span-3">
+            <label className=block text-sm font-medium" htmlFor="input-Operator Prompt>Operator Prompt</label>
+            <textarea className="mt-1 w-full border rounded p-2" rows={3} value={operatorPrompt} onChange={(e) => setOperatorPrompt(e.target.value)} />
+          </div>
+        </div>
+        <button className="px-4 py-2 bg-blue-600 text-white rounded" onClick={handleGenerate} disabled={generating}>
+          disabled={generating}
+        >
+origin/cursor/automate-test-improve-and-merge-code-2533
+          {generating ? 'Generating…' : 'Generate Episode'}
+        </button>
+      </section>
+      {episode && ("
+          <h2 className="text-xl font-semibold">Episode Draft</h2>"
+          <div className="border rounded p-4 space-y-3">"
+            <p className="text-sm text-gray-600">ID: {episode.id}</p>"
+
+          disabled={generating}
+        >;
+          {generating ? 'Generating…' : 'Generate Episode'}
+        </button>;
+      </section>;
+      {episode && (<h2 className="text-xl font-semibold">Episode Draft</h2>;
+          <div className="border rounded p-4 space-y-3">;
+            <p className="text-sm text-gray-600">ID: {episode.id}</p>;
+            <h3 className="text-lg font-bold">{episode.title}</h3>;
+            <div>;
+              <h4 className="font-semibold">Questions</h4>;
+              <ol className="list-decimal list-inside space-y-1">;
+            <select
+              className="mt-1 w-full border rounded p-2"
+          <div>
+            <label className="block text-sm font-medium" htmlFor="input-Invitee Name">Invitee Name</label>
+            <input className="mt-1 w-full border rounded p-2" value={inviteeName} onChange={(e) => setInviteeName(e.target.value)} />
+          </div>
+          <div className="md:col-span-2">
+            <label className="block text-sm font-medium" htmlFor="input-Invitee Bio">Invitee Bio</label>
+            <textarea className="mt-1 w-full border rounded p-2" rows={3} value={inviteeBio} onChange={(e) => setInviteeBio(e.target.value)} />
+          </div>
+          <div className="md:col-span-3">
+            <label className="block text-sm font-medium" htmlFor="input-Topic">Topic</label>
+            <input className="mt-1 w-full border rounded p-2" value={topic} onChange={(e) => setTopic(e.target.value)} />
+          </div>
+          <div className="md:col-span-3">
+            <label className="block text-sm font-medium" htmlFor="input-Operator Prompt">Operator Prompt</label>
+            <textarea className="mt-1 w-full border rounded p-2" rows={3} value={operatorPrompt} onChange={(e) => setOperatorPrompt(e.target.value)} />
+          </div>
+        </div>
+        <button className="px-4 py-2 bg-blue-600 text-white rounded" onClick={handleGenerate} disabled={generating}>
+          {generating ? 'Generating…' : 'Generate Episode'}
+        </button>
+      </section>
+      {episode && (
+        <section className="space-y-4">
+          <h2 className="text-xl font-semibold">Episode Draft</h2>
+          <div className="border rounded p-4 space-y-3">
+            <p className="text-sm text-gray-600">ID: {episode.id}</p>
+            <h3 className="text-lg font-bold">{episode.title}</h3>
+            <div>
+              <h4 className="font-semibold">Questions</h4>
+              <ol className="list-decimal list-inside space-y-1">
+              value={persona && persona.voice}
+              onChange={(e) => setPersona({ ...persona, voice: e && e.target.value as any })}
+            >;
+              <option value="Visionary">Visionary</option>;
+              <option value="Grounded">Grounded</option>;
+              <option value="Technical">Technical</option>;
+            </select>;
+          </div>;
+          <div>;
+            <label className="block text-sm font-medium" htmlFor="input-Language">Language</label>;
+            <input className="mt-1 w-full border rounded p-2" value={persona && persona.language} onChange={(e) => setPersona({ ...persona, language: e && e.target.value })} />;
+          </div>;
+          <div>;
+            <label className="block text-sm font-medium" htmlFor="input-Clone Style (optional)">Clone Style (optional)</label>;
+            <h3 className="text-lg font-bold">{episode.title}</h3>
+            <div>"
+              <h4 className="font-semibold">Questions</h4>"
+              <ol className="list-decimal list-inside space-y-1">
+              value={persona && persona.voice}
+              onChange={(e) => setPersona({ ...persona, voice: e && e.target.value as any })}
+            >;"
+              <option value="Visionary">Visionary</option>;"
+              <option value="Grounded">Grounded</option>;"
+              <option value="Technical">Technical</option>;
+            </select>;
+          </div>;
+          <div>;"
+            <label className="block text-sm font-medium" htmlFor="input-Language">Language</label>;"
+            <input className="mt-1 w-full border rounded p-2" value={persona && persona.language} onChange={(e) => setPersona({ ...persona, language: e && e.target.value })} />;
+          </div>;
+          <div>;"
+            <label className="block text-sm font-medium" htmlFor="input-Clone Style (optional)">Clone Style (optional)</label>;'"
+            <textarea className="mt-1 w-full border rounded p-2" rows={3} placeholder="Paste representative writing or notes to clone tone" value={persona && persona.cloneStyleText || ''} onChange={(e) => setPersona({ ...persona, cloneStyleText: e && e.target.value })} />;
+          </div>;
+        </div>;
+      </section>;
+          <div>;
+            <label className="block text-sm font-medium" htmlFor="input-Invitee Name">Invitee Name</label>;
+            <input className="mt-1 w-full border rounded p-2" value={inviteeName} onChange={(e) => setInviteeName(e && e.target.value)} />;
+          </div>;
+          <div className="md:col-span-2">;
+            <label className="block text-sm font-medium" htmlFor="input-Invitee Bio">Invitee Bio</label>;
+            <textarea className="mt-1 w-full border rounded p-2" rows={3} value={inviteeBio} onChange={(e) => setInviteeBio(e && e.target.value)} />;
+          </div>;
+          <div className="md:col-span-3">;
+            <label className="block text-sm font-medium" htmlFor="input-Topic">Topic</label>;
+            <input className="mt-1 w-full border rounded p-2" value={topic} onChange={(e) => setTopic(e && e.target.value)} />;
+          </div>;
+          <div className="md:col-span-3">;
+            <label className="block text-sm font-medium" htmlFor="input-Operator Prompt">Operator Prompt</label>;
+            <textarea className="mt-1 w-full border rounded p-2" rows={3} value={operatorPrompt} onChange={(e) => setOperatorPrompt(e && e.target.value)} />;
+          </div>;
+        </div>;
+        <button className="px-4 py-2 bg-blue-600 text-white rounded" onClick={handleGenerate} disabled={generating}>;
+          {generating ? 'Generating…' : 'Generate Episode'}
+        </button>;
+      </section>;
+      {episode && (<section className='space-y-4'>;
+          <h2 className='text-xl font-semibold'>Episode Draft</h2>;
+          <div className='border rounded p-4 space-y-3'>;
+            <p className='text-sm text-gray-600'>ID: {episode && episode.id}</p>;
+            <h3 className='text-lg font-bold'>{episode && episode.title}</h3>;
+            <div>;
+              <h4 className='font-semibold'>Questions</h4>;
+              <ol className='list-decimal list-inside space-y-1'>                {episode && episode.questions?.map((q: string, idx: number) => (        <section className="space-y-4">;
+          <h2 className="text-xl font-semibold">Episode Draft</h2>;
+          <div className="border rounded p-4 space-y-3">;
+            <p className="text-sm text-gray-600">ID: {episode && episode.id}</p>;
+            <h3 className="text-lg font-bold">{episode && episode.title}</h3>;
+            <div>;
+              <h4 className="font-semibold">Questions</h4>;
+              <ol className="list-decimal list-inside space-y-1">;
+                  <li key={idx}>{q}</li>;
+                {episode.audio.mp3Url && (<a;
+                    href={episode.audio.mp3Url}
+                    className='text - blue - 600 underline';
+                  >;
+                    Download MP3;
+                  </a>)}
+                {episode.audio.wav_url && (<a;
+                    href={episode.audio.wav_url}
+=======
+
+        <button;
+className='px-4 py-2 bg-blue-600 text-white rounded'
+          onClick={handleGenerate}
+
+          disabled={generating}
+            />
+          {generating ? 'Generating…' : 'Generate Episode'}
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> origin/main
         </button>
       </section>
       {episode && (
 
+<<<<<<< HEAD
 <section className='space-y-4' />
           <h2 className='text-xl font-semibold' />Episode Draft</h2>
           <div className='border rounded p-4 space-y-3' />
@@ -210,35 +919,149 @@ const res = await fetch('/api/podcast/rss', { method: 'POST',
                 {episode.questions?.map((q: string,,,
   idx: number) => (}
                   <li key={idx} />{q}</li>
+=======
+<<<<<<< HEAD
+
+            <textarea className="mt-1 w-full border rounded p-2 rows={3} placeholder=Paste representative writing or notes to clone tone" value={persona && persona.cloneStyleText || ''} onChange={(e) => setPersona({ ...persona, cloneStyleText: e && e.target.value })} />;
+          </div>;
+        </div>;
+      </section>;
+
+                    className=text - blue - 600 underline;
+                  >;
+                    Download MP3;
+                  </a>)}
+
+                    className='text - blue - 600 underline';
+                  >;
+                    Download WAV;
+                  </a>)}
+                {episode.audio.mp4Url && (<a;
+                disabled={publishing}
+              >                {publishing ? 'Publishing…' : 'Update RSS'}<section className='space-y-4'>;
+          <h2 className='text-xl font-semibold'>Episode Draft</h2>;
+          <div className='border rounded p-4 space-y-3'>;
+            <p className='text-sm text-gray-600'>ID: {episode.id}</p>;
+            <h3 className='text-lg font-bold'>{episode.title}</h3>;
+            <div>;
+              <h4 className='font-semibold'>Questions</h4>;
+              <ol className='list-decimal list-inside space-y-1'>;
+                {episode.questions?.map((q: string, idx: number) => (<li key={idx}>{q}</li>;
+                {episode.questions?.map((q: string, idx: number) => (
+                  <li key={idx}>{q}</li>
+                ))}
+              </ol>
+            </div>
+            <div>
+              <h4 className="font-semibold">Best Quote</h4>
+              <p>{episode.bestQuote}</p>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-3">
+              <div>
+                <h4 className="font-semibold">YouTube Description</h4>
+                <pre className="whitespace-pre-wrap text-sm bg-gray-50 p-3 rounded">{episode.youtubeDescription}</pre>
+              </div>
+              <div>
+                <h4 className="font-semibold">Spotify Description</h4>
+                <pre className="whitespace-pre-wrap text-sm bg-gray-50 p-3 rounded">{episode.spotifyDescription}</pre>
+              </div>
+              <div>
+                <h4 className="font-semibold">Transcript</h4>
+                <pre className="whitespace-pre-wrap text-sm bg-gray-50 p-3 rounded max-h-64 overflow-auto">{episode.transcript}</pre>
+              </div>
+            </div>
+            <div className="flex gap-3">
+              <button className="px-4 py-2 bg-purple-600 text-white rounded" onClick={handleSynthesize} disabled={synthesizing}>
+                {synthesizing ? 'Synthesizing…' : 'Synthesize Audio'}
+              >                {publishing ? 'Publishing…' : 'Update RSS'}
+              </button>
+            </div>
+            {episode.audio && (
+<div className='flex gap-3'>
+                {episode.audio.mp3Url && (
+                  <a
+              >;
+                {publishing ? 'Publishing…' : 'Update RSS'}</button>;
+            </div>;
+            {episode.audio && (<div className='flex gap-3'>;
+                {episode.audio.mp3Url && (<a;
+                    href={episode.audio.mp3Url}
+                    className='text-blue-600 underline';
+                  >;
+<div className='flex gap-3'>
+                {episode.audio.mp3Url && (
+                  <a;
+                    href={episode.audio.mp3Url}'
+                    className='text-blue-600 underline'
+                  >
+                    Download MP3;
+                  </a>
+                )}
+                {episode.audio.wavUrl && (
+                  <a;
+                    href={episode.audio.wavUrl}'
+                    className='text-blue-600 underline'
+                  >
+                    Download WAV;
+                  </a>
+                )}
+                {episode.audio.mp4Url && (
+                  <a;
+                    href={episode.audio.mp4Url}'
+                    className='text-blue-600 underline'
+                  >
+                    Download MP4
+                  </a>
+                )}
+              </div>
+<div className='flex gap-3' />
+                {episode.audio.mp3Url && (}
+                  <a;}
+href={episode.audio.mp3Url}
+                    className='text-blue-600 underline />
+=======
+<section className='space-y-4'    />
+          <h2 className='text-xl font-semibold'    />Episode Draft</h2>}
+          <div className='border rounded p-4 space-y-3'    />}
+            <p className='text-sm text-gray-600'    />ID: {episode.id}</p>
+            <h3 className='text-lg font-bold'    />{episode.titl,}
+}</h3>
+            <div    />
+              <h4 className='font-semibold'    />Questions</h4>
+              <ol className='list-decimal list-inside space-y-1'    />
+                {episode.questions?.map((q: string, idx: number) => (}
+                  <li key={idx}    />{q}</li>
+>>>>>>> origin/main
 
                 ),
 }
               </ol>;
             </div>;
-            <div />;
-<h4 className='font-semibold' />Best Quote</h4>;
-              <p />{episode.bestQuote}</p>;
+            <div    />;
+<h4 className='font-semibold'    />Best Quote</h4>;
+              <p    />{episode.bestQuote}</p>;
             </div>;
-            <div className='grid grid-cols-1 md:grid-cols-3 gap-3' />;
-              <div />;
-                <h4 className='font-semibold' />YouTube Description</h4>;
-                <pre className='whitespace-pre-wrap text-sm bg-gray-50 p-3 rounded' />;
+            <div className='grid grid-cols-1 md:grid-cols-3 gap-3'    />;
+              <div    />;
+                <h4 className='font-semibold'    />YouTube Description</h4>;
+                <pre className='whitespace-pre-wrap text-sm bg-gray-50 p-3 rounded'    />;
                   {episode.youtubeDescription}
                 </pre>;
               </div>;
-              <div />;
-                <h4 className='font-semibold' />Spotify Description</h4>;
-                <pre className='whitespace-pre-wrap text-sm bg-gray-50 p-3 rounded' />;
+              <div    />;
+                <h4 className='font-semibold'    />Spotify Description</h4>;
+                <pre className='whitespace-pre-wrap text-sm bg-gray-50 p-3 rounded'    />;
                   {episode.spotifyDescription}
                 </pre>;
               </div>;
-              <div />;
-                <h4 className='font-semibold' />Transcript</h4>;
-                <pre className='whitespace-pre-wrap text-sm bg-gray-50 p-3 rounded max-h-64 overflow-auto' />;
+              <div    />;
+                <h4 className='font-semibold'    />Transcript</h4>;
+                <pre className='whitespace-pre-wrap text-sm bg-gray-50 p-3 rounded max-h-64 overflow-auto'    />;
                   {episode.transcript}
                 </pre>;
               </div>;
             </div>;
+<<<<<<< HEAD
             <div className='flex gap-3' />;
               <button className='px-4 py-2 bg-purple-600 text-white rounded';
                 onClick={handleSynthesize}
@@ -252,11 +1075,29 @@ const res = await fetch('/api/podcast/rss', { method: 'POST',
 
                />
                 {publishing ? 'Publishing…' : 'Update RSS'
+=======
+            <div className='flex gap-3'    />;
+              <button;
+                className='px-4 py-2 bg-purple-600 text-white rounded';
+                onClick={handleSynthesize}
+                disabled={synthesizing}
+                  />;
+                {synthesizing ? 'Synthesizing…' : 'Synthesize Audio'}
+              </button>;
+              <button;
+                className='px-4 py-2 bg-gray-800 text-white rounded';
+                onClick={handlePublishRss}
+                disabled={publishing}
+
+                  />
+                {publishing ? 'Publishing…' : 'Update RSS'}
+>>>>>>> origin/main
               </button>
             </div>
             {episode.audio && (
-<div className='flex gap-3' />
+<div className='flex gap-3'    />
                 {episode.audio.mp3Url && (}
+<<<<<<< HEAD
                   <a href={episode.audio.mp3Url}
             className='text-blue-600 underline' />
 
@@ -282,7 +1123,68 @@ const res = await fetch('/api/podcast/rss', { method: 'POST',
           </div>
             </section>
             )
+=======
+                  <a;}
+href={episode.audio.mp3Url}
+                    className='text-blue-600 underline'    />
+>>>>>>> origin/chore/fix-lint-and-merge
 
+                    Download MP3;
+                  </a>;
+                )}
+                {episode.audio.wavUrl && (<a;}
+                    href={episode.audio.wavUrl}
+<<<<<<< HEAD
+=======
+                    className='text-blue-600 underline'    />
+>>>>>>> origin/chore/fix-lint-and-merge
+
+                    Download WAV;
+                  </a>;
+                )}
+                {episode.audio.mp4Url && (<a;}
+                    href={episode.audio.mp4Url}
+<<<<<<< HEAD
+=======
+                    className='text-blue-600 underline'    />
+>>>>>>> origin/chore/fix-lint-and-merge
+
+                    Download MP4;
+                  </a>;
+                )}
+              </div>;
+            )}
+          </div>;
+        </section>;
+      )}
+<<<<<<< HEAD
+    </div>;
+  )}{episode.audio && ({publishing ? Publishing…' : 'Update RSS}
+              </button>;
+            </div>;
+>>>>>>> origin/main
+
+            {episode.audio && (
+
+              </button>
+              <button className="px-4 py-2 bg-gray-800 text-white rounded onClick={handlePublishRss} disabled={publishing}>
+                {publishing ? Publishing…' : 'Update RSS'}
+              </button>
+            </div>
+            {episode.audio && (
+            {episode.audio && (
+              <div className=flex gap-3">
+                {episode.audio.mp3Url && <a href={episode.audio.mp3Url} className="text-blue-600 underline>Download MP3</a>}
+                {episode.audio.wavUrl && <a href={episode.audio.wavUrl} className=text-blue-600 underline">Download WAV</a>}
+                {episode.audio.mp4Url && <a href={episode.audio.mp4Url} className="text-blue-600 underline">Download MP4</a>}
+              </div>
+            )}
+          </div>
+        </section>
+      )}
+=======
+
+>>>>>>> origin/chore/fix-lint-and-merge
     </div>
   );
 

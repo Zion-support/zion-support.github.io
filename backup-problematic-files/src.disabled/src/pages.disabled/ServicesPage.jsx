@@ -1,21 +1,9 @@
-import React from 'react';
-const ServicesPage = (return (<div className={className || '') = /> {
-  return $3;}
-} />;
-      <h1 />ServicesPage</h1>;
-      <p />This component is under development.</p>;
-    </div>;
-  )}
-
-const ServicesPage = (
-  return () => {
-  return $3;}
-}
-    <div className={className || ''} />
-      <h1 />ServicesPage</h1>
-      <p />This component is under development.</p>
+const ServicesPage = ({ className }) => {
+  return ('
+    <div className={className || ''}>'
+</div>
+      <h1>ServicesPage</h1>
+      <p>This component is under development.</p>
     </div>
   )
-}
-}
-
+};

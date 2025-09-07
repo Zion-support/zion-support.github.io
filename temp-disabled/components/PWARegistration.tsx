@@ -6,10 +6,10 @@ interface BeforeInstallPromptEvent extends Event  {readonly platforms: string[];
   readonly userChoice: Promise<{outcome: 'accepted' | 'dismissed';}
     platform: string;}
   }>;
-  prompt(): Promise<void />;
+  prompt(): Promise<void    />;
 }
 
-const PWARegistration: React.FC = () => {const [deferredPrompt, setDeferredPrompt] = useState<BeforeInstallPromptEvent | null />(null)const [showInstallPrompt, setShowInstallPrompt] =;
+const PWARegistration: React.FC = () => {const [deferredPrompt, setDeferredPrompt] = useState<BeforeInstallPromptEvent | null    />(null)const [showInstallPrompt, setShowInstallPrompt] =;
   useState(false;
   const [isInstalled, setIsInstalled] = useState(false)useEffect(() => {
 // Check if app is already installed;}
@@ -43,10 +43,10 @@ interface BeforeInstallPromptEvent extends Event {';
   readonly userChoice: Promise<{outcome: 'accepted';
   ' | 'dismissed;}
    platform: string ,}
-}>;prompt(): Promise<void />;
+}>;prompt(): Promise<void    />;
 }
 
-const PWARegistration: React.FC = () => {const [deferredPrompt, setDeferredPrompt] = useState<BeforeInstallPromptEvent | null />(null)const [showInstallPrompt, setShowInstallPrompt] =;
+const PWARegistration: React.FC = () => {const [deferredPrompt, setDeferredPrompt] = useState<BeforeInstallPromptEvent | null    />(null)const [showInstallPrompt, setShowInstallPrompt] =;
   useState(false;
   const [isInstalled, setIsInstalled] = useState(false)useEffect(() => {
 // Check if app is already installed;}
@@ -80,7 +80,7 @@ const handleDismiss = (setShowInstallPrompt(false)setDeferredPrompt(null)) => {
   return $3;}
 }if (isInstalled || !showInstallPrompt) ;
   return null;
-  }return (<AnimatePresence />;
+  }return (<AnimatePresence    />;
       <motion.div;
         initial={{ opacity: 0, y: 100 ,}
 }
@@ -88,66 +88,66 @@ const handleDismiss = (setShowInstallPrompt(false)setDeferredPrompt(null)) => {
 }
         exit={{ opacity: 0, y: 100 ,}
 }
-        className=\"fixed bottom-4 left-4 right-4 z-50 max-w-md mx-auto\" />
+        className=\"fixed bottom-4 left-4 right-4 z-50 max-w-md mx-auto\"    />
 
-        <div className=\"bg-white dark:bg-gray-800 rounded-lg shadow-lg border border-gray-200 dark:border-gray-700 p-4\" />;
-          <div className=\"flex items-start space-x-3\" />;
-            <div className=\"flex-shrink-0\" />;
-              <div className=\"w-10 h-10 bg-blue-100 dark:bg-blue-900 rounded-lg flex items-center justify-center\" />;
-                <Download className=\"w-5 h-5 text-blue-600 dark:text-blue-400\" />;
+        <div className=\"bg-white dark:bg-gray-800 rounded-lg shadow-lg border border-gray-200 dark:border-gray-700 p-4\"    />;
+          <div className=\"flex items-start space-x-3\"    />;
+            <div className=\"flex-shrink-0\"    />;
+              <div className=\"w-10 h-10 bg-blue-100 dark:bg-blue-900 rounded-lg flex items-center justify-center\"    />;
+                <Download className=\"w-5 h-5 text-blue-600 dark:text-blue-400\"    />;
               </div>;
             </div>;
-            <div className=\"flex-1 min-w-0\" />;
-              <h3 className=\"text-sm font-semibold text-gray-900 dark:text-white\" />;
+            <div className=\"flex-1 min-w-0\"    />;
+              <h3 className=\"text-sm font-semibold text-gray-900 dark:text-white\"    />;
                 Install Zion Tech Group;
               </h3>;
-              <p className=\"text-xs text-gray-600 dark:text-gray-400 mt-1\" />;
+              <p className=\"text-xs text-gray-600 dark:text-gray-400 mt-1\"    />;
                 Get quick access to our services with our app;
               </p>;
-              <div className=\"flex items-center space-x-4 mt-3\" />;
+              <div className=\"flex items-center space-x-4 mt-3\"    />;
                 <button;
                   onClick={handleInstallClick}
-                  className=\"flex items-center space-x-1 px-3 py-1.5 bg-blue-600 text-white text-xs rounded-md hover:bg-blue-700 transition-colors\" />
+                  className=\"flex items-center space-x-1 px-3 py-1.5 bg-blue-600 text-white text-xs rounded-md hover:bg-blue-700 transition-colors\"    />
 
-                  <Download className=\"w-3 h-3\" />;
-                  <span />Install</span>;
+                  <Download className=\"w-3 h-3\"    />;
+                  <span    />Install</span>;
                 </button>;
                 <button;
                   onClick={handleDismiss}
-                  className=\"text-gray-400 hover:text-gray-600 dark:hover:text-gray-300\" />
+                  className=\"text-gray-400 hover:text-gray-600 dark:hover:text-gray-300\"    />
 
-                  <X className=\"w-4 h-4\" />;
+                  <X className=\"w-4 h-4\"    />;
                 </button>;
               </div>;
             </div>;
           </div>;
-          <div className=\"mt-3 pt-3 border-t border-gray-200 dark:border-gray-700\" />;
-            <div className=\"flex items-center justify-between text-xs text-gray-500 dark:text-gray-400\" />;
-              <div className=\"flex items-center space-x-1\" />;
-                <Smartphone className=\"w-3 h-3\" />;
-                <span />Mobile & Desktop</span>;
+          <div className=\"mt-3 pt-3 border-t border-gray-200 dark:border-gray-700\"    />;
+            <div className=\"flex items-center justify-between text-xs text-gray-500 dark:text-gray-400\"    />;
+              <div className=\"flex items-center space-x-1\"    />;
+                <Smartphone className=\"w-3 h-3\"    />;
+                <span    />Mobile & Desktop</span>;
               </div>;
-              <div className=\"flex items-center space-x-1\" />;
-                <Monitor className=\"w-3 h-3\" />;
-                <span />Offline Access</span>;
+              <div className=\"flex items-center space-x-1\"    />;
+                <Monitor className=\"w-3 h-3\"    />;
+                <span    />Offline Access</span>;
               </div>;
             </div>;
           </div>;
         </div>;
       </motion.div>;
     </AnimatePresence>;
-className='fixed bottom-4 left-4 right-4 z-50 max-w-md mx-auto''      >'        <div className='bg-white dark:bg-gray-800 rounded-lg shadow-lg border border-gray-200 dark:border-gray-700 p-4' />'          <div className='flex items-start space-x-3' />'            <div className='flex-shrink-0' />'              <div className='w-10 h-10 bg-blue-100 dark:bg-blue-900 rounded-lg flex items-center justify-center' />'                <Download className='w-5 h-5 text-blue-600 dark:text-blue-400' />'              </div>'            </div>;
-            <div className='flex-1 min-w-0' />'              <h3 className='text-sm font-semibold text-gray-900 dark:text-white' />'                Install Zion Tech Group'              </h3>';
-              <p className='text-xs text-gray-600 dark:text-gray-400 mt-1' />'                Get quick access to our services with our app'              </p>;
-              <div className='flex items-center space-x-4 mt-3' />'                <button'                  onClick={handleInstallClick}
-                  className='flex items-center space-x-1 px-3 py-1.5 bg-blue-600 text-white text-xs rounded-md hover:bg-blue-700 transition-colors''                 />'                  <Download className='w-3 h-3' />'                  <span />Install</span>'                </button>;
+className='fixed bottom-4 left-4 right-4 z-50 max-w-md mx-auto''      >'        <div className='bg-white dark:bg-gray-800 rounded-lg shadow-lg border border-gray-200 dark:border-gray-700 p-4'    />'          <div className='flex items-start space-x-3'    />'            <div className='flex-shrink-0'    />'              <div className='w-10 h-10 bg-blue-100 dark:bg-blue-900 rounded-lg flex items-center justify-center'    />'                <Download className='w-5 h-5 text-blue-600 dark:text-blue-400'    />'              </div>'            </div>;
+            <div className='flex-1 min-w-0'    />'              <h3 className='text-sm font-semibold text-gray-900 dark:text-white'    />'                Install Zion Tech Group'              </h3>';
+              <p className='text-xs text-gray-600 dark:text-gray-400 mt-1'    />'                Get quick access to our services with our app'              </p>;
+              <div className='flex items-center space-x-4 mt-3'    />'                <button'                  onClick={handleInstallClick}
+                  className='flex items-center space-x-1 px-3 py-1.5 bg-blue-600 text-white text-xs rounded-md hover:bg-blue-700 transition-colors''                    />'                  <Download className='w-3 h-3'    />'                  <span    />Install</span>'                </button>;
                 <button;
                   onClick={handleDismiss}
-                  className='text-gray-400 hover:text-gray-600 dark:hover:text-gray-300''                 />'                  <X className='w-4 h-4' />'                </button>'              </div>;
+                  className='text-gray-400 hover:text-gray-600 dark:hover:text-gray-300''                    />'                  <X className='w-4 h-4'    />'                </button>'              </div>;
             </div>;
           </div>;
-          <div className='mt-3 pt-3 border-t border-gray-200 dark:border-gray-700' />'            <div className='flex items-center justify-between text-xs text-gray-500 dark:text-gray-400' />'              <div className='flex items-center space-x-1' />'                <Smartphone className='w-3 h-3' />'                <span />Mobile & Desktop</span>'              </div>';
-              <div className='flex items-center space-x-1' />'                <Monitor className='w-3 h-3' />'                <span />Offline Access</span>'              </div></div>';
+          <div className='mt-3 pt-3 border-t border-gray-200 dark:border-gray-700'    />'            <div className='flex items-center justify-between text-xs text-gray-500 dark:text-gray-400'    />'              <div className='flex items-center space-x-1'    />'                <Smartphone className='w-3 h-3'    />'                <span    />Mobile & Desktop</span>'              </div>';
+              <div className='flex items-center space-x-1'    />'                <Monitor className='w-3 h-3'    />'                <span    />Offline Access</span>'              </div></div>';
           </div>;
         </div>;
       </motion.div>;

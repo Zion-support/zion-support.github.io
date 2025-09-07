@@ -25,11 +25,11 @@ interface SearchSuggestion {
 
 export default function AdvancedSearch() {const [query, setQuery] = useState('');
   const [isSearching, setIsSearching] = useState(false);}
-  const [results, setResults] = useState<SearchResult[] />([])const [filters, setFilters] = useState<SearchFilter />({type: [],tags: [],dateRange: { start: null, end: null,}
-},})const [suggestions, setSuggestions] = useState<SearchSuggestion[] />([])const [showFilters, setShowFilters] = useState(false);
-  const [selectedResult, setSelectedResult]  = useState<number />(-1)// Mock data - in production, this would come from your backend;
+  const [results, setResults] = useState<SearchResult[]    />([])const [filters, setFilters] = useState<SearchFilter    />({type: [],tags: [],dateRange: { start: null, end: null,}
+},})const [suggestions, setSuggestions] = useState<SearchSuggestion[]    />([])const [showFilters, setShowFilters] = useState(false);
+  const [selectedResult, setSelectedResult]  = useState<number    />(-1)// Mock data - in production, this would come from your backend;
 
-const mockData = useMemo<SearchResult[] />(() => [;
+const mockData = useMemo<SearchResult[]    />(() => [;
       {id: '1',
   title: 'Micro SaaS Development',description: 'Custom micro SaaS solutions for specific business needs',
   type: 'service',url: '/services/micro-saas',}
@@ -48,7 +48,7 @@ const mockData = useMemo<SearchResult[] />(() => [;
   tags: ['Security', 'Cybersecurity', 'Protection'],relevance: 0.82,},],[];
   )// Search suggestions;
 
-const searchSuggestions = useMemo<SearchSuggestion[] />(() => [;
+const searchSuggestions = useMemo<SearchSuggestion[]    />(() => [;
       { text: 'SaaS',}
   type: 'popular', count: 45,}
 },{ text: 'AI',}
@@ -139,24 +139,24 @@ const clearFilters = (setFilters({type: [],tags: [],dateRange: { start: null, en
   return $3;}
 }
     }
-  }return (<div className=\"w-full max-w-4xl mx-auto\" />;
+  }return (<div className=\"w-full max-w-4xl mx-auto\"    />;
       {/* Search Input */}
-      <div className=\"relative\" />;
-        <div className=\"relative\" />;
+      <div className=\"relative\"    />;
+        <div className=\"relative\"    />;
           <input;
-            type=\"text\";
+            type=\'text\';
             value={query}
-            onChange={e = /> setQuery(e.target.value)}
+            onChange={e =    /> setQuery(e.target.value)}
             onKeyDown={handleKeyDown}
             onFocus={() => setShowFilters(true)}
-            placeholder=\"Search for services, technologies, or content...\";
-            className=\"w-full px-4 py-3 pl-12 pr-20 text-lg bg-white border-2 border-gray-300 rounded-lg focus: outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-200 transition-all duration-200\";
+            placeholder=\'Search for services, technologies, or content...\';
+            className=\'w-full px-4 py-3 pl-12 pr-20 text-lg bg-white border-2 border-gray-300 rounded-lg focus: outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-200 transition-all duration-200\';
           />;
-          <div className=\"absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400\" />;
+          <div className=\"absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400\"    />;
             🔍;
           </div>;
           <button;
-            onClick={() = /> setShowFilters(!showFilters)}
+            onClick={() =    /> setShowFilters(!showFilters)}
             className=\"absolute right-4 top-1/2 transform -translate-y-1/2 text-gray-500 hover: text-gray-700 transition-colors\">
 
             {showFilters ? '🔽' : '🔍,}
@@ -164,7 +164,7 @@ const clearFilters = (setFilters({type: [],tags: [],dateRange: { start: null, en
           </button>;
         </div>;
         {/* Search Suggestions */}
-        <AnimatePresence />;
+        <AnimatePresence    />;
           {suggestions.length > 0 && query && (<motion.div;}
               initial={{ opacity: 0, y: -10 ,}
 }
@@ -172,27 +172,27 @@ const clearFilters = (setFilters({type: [],tags: [],dateRange: { start: null, en
 }
               exit={{ opacity: 0, y: -10 ,}
 }
-              className=\"absolute top-full left-0 right-0 mt-2 bg-white border border-gray-200 rounded-lg shadow-lg z-10\" />
+              className=\"absolute top-full left-0 right-0 mt-2 bg-white border border-gray-200 rounded-lg shadow-lg z-10\"    />
 
               {suggestions.map((suggestion, index) => (<button;}
                   key={index}
-                  onClick={() = /> handleSearch(suggestion.text)}
+                  onClick={() =    /> handleSearch(suggestion.text)}
                   className=\"w-full px-4 py-3 text-left hover: bg-gray-50 transition-colors flex items-center justify-between\">
 
-                  <span />{suggestion.tex,}
+                  <span    />{suggestion.tex,}
 }</span>;
-                  <div className=\"flex items-center space-x-2 text-sm text-gray-500\" />;
+                  <div className=\"flex items-center space-x-2 text-sm text-gray-500\"    />;
                     <span;
                       className={`px-2 py-1 rounded text-xs ${suggestion.type === 'popular';
                           ? 'bg-blue-100 text-blue-800';
                           : suggestion.type === 'recent';
                             ? 'bg-green-100 text-green-800';}
                             : 'bg-gray-100 text-gray-800';}
-                      }`} />
+                      }`}    />
 
                       {suggestion.type}
                     </span>;
-                    {suggestion.count && <span />{suggestion.count}</span>}
+                    {suggestion.count && <span    />{suggestion.count}</span>}
                   </div>;
                 </button>;
               ))}
@@ -201,7 +201,7 @@ const clearFilters = (setFilters({type: [],tags: [],dateRange: { start: null, en
         </AnimatePresence>;
       </div>;
       {/* Filters Panel */}
-      <AnimatePresence />;
+      <AnimatePresence    />;
         {showFilters && (<motion.div;}
             initial={{ opacity: 0, height: 0 ,}
 }
@@ -209,46 +209,46 @@ const clearFilters = (setFilters({type: [],tags: [],dateRange: { start: null, en
 }
             exit={{ opacity: 0, height: 0 ,}
 }
-            className=\"mt-4 bg-white border border-gray-200 rounded-lg p-4 shadow-sm\" />
+            className=\"mt-4 bg-white border border-gray-200 rounded-lg p-4 shadow-sm\"    />
 
-            <div className=\"flex items-center justify-between mb-4\" />;
-              <h3 className=\"text-lg font-semibold\" />Filters</h3>;
+            <div className=\"flex items-center justify-between mb-4\"    />;
+              <h3 className=\"text-lg font-semibold\"    />Filters</h3>;
               <button;
                 onClick={clearFilters}
-                className=\"text-sm text-gray-500 hover:text-gray-700 underline\" />
+                className=\"text-sm text-gray-500 hover:text-gray-700 underline\"    />
 
                 Clear All;
               </button>;
             </div>;
-            <div className=\"grid grid-cols-1 md:grid-cols-2 gap-6\" />;
+            <div className=\"grid grid-cols-1 md:grid-cols-2 gap-6\"    />;
               {/* Type Filter */}
-              <div />;
-                <h4 className=\"font-medium mb-2\" />Type</h4>;
-                <div className=\"space-y-2\" />;
-                  {filterOptions.types.map(type => (<label key={type} className=\"flex items-center space-x-2\" />;
+              <div    />;
+                <h4 className=\"font-medium mb-2\"    />Type</h4>;
+                <div className=\"space-y-2\"    />;
+                  {filterOptions.types.map(type => (<label key={type} className=\"flex items-center space-x-2\"    />;
                       <input;
-                        type=\"checkbox\";
+                        type=\'checkbox\';
                         checked={filters.type.includes(type)}
-                        onChange={() = /> toggleFilter('type', type)}
-                        className=\"rounded border-gray-300 text-blue-600 focus: ring-blue-500\";
+                        onChange={() =    /> toggleFilter('type', type)}
+                        className=\'rounded border-gray-300 text-blue-600 focus: ring-blue-500\';
                       />;
-                      <span className=\"text-sm capitalize\" />{type}</span>;
+                      <span className=\"text-sm capitalize\"    />{type}</span>;
                     </label>;
                   ))}
                 </div>;
               </div>;
               {/* Tags Filter */}
-              <div />;
-                <h4 className=\"font-medium mb-2\" />Tags</h4>;
-                <div className=\"space-y-2\" />;
-                  {filterOptions.tags.map(tag => (<label key={tag} className=\"flex items-center space-x-2\" />;
+              <div    />;
+                <h4 className=\"font-medium mb-2\"    />Tags</h4>;
+                <div className=\"space-y-2\"    />;
+                  {filterOptions.tags.map(tag => (<label key={tag} className=\"flex items-center space-x-2\"    />;
                       <input;
-                        type=\"checkbox\";
+                        type=\'checkbox\';
                         checked={filters.tags.includes(tag)}
-                        onChange={() = /> toggleFilter('tags', tag)}
-                        className=\"rounded border-gray-300 text-blue-600 focus: ring-blue-500\";
+                        onChange={() =    /> toggleFilter('tags', tag)}
+                        className=\'rounded border-gray-300 text-blue-600 focus: ring-blue-500\';
                       />;
-                      <span className=\"text-sm\" />{tag}</span>;
+                      <span className=\"text-sm\"    />{tag}</span>;
                     </label>;
                   ))}
                 </div>;
@@ -258,7 +258,7 @@ const clearFilters = (setFilters({type: [],tags: [],dateRange: { start: null, en
         )}
       </AnimatePresence>;
       {/* Search Results */}
-      <AnimatePresence />;
+      <AnimatePresence    />;
         {results.length > 0 && (<motion.div;}
             initial={{ opacity: 0, y: 20 ,}
 }
@@ -266,15 +266,15 @@ const clearFilters = (setFilters({type: [],tags: [],dateRange: { start: null, en
 }
             exit={{ opacity: 0, y: 20 ,}
 }
-            className=\"mt-6 space-y-3\" />
+            className=\"mt-6 space-y-3\"    />
 
-            <div className=\"flex items-center justify-between\" />;
-              <h3 className=\"text-lg font-semibold\" />;
+            <div className=\"flex items-center justify-between\"    />;
+              <h3 className=\"text-lg font-semibold\"    />;
                 {isSearching;}
                   ? 'Searching...';}
                   : `${results.length} results found`}
               </h3>;
-              {isSearching && (<div className=\"animate-spin rounded-full h-5 w-5 border-b-2 border-blue-500\" /></div>;}
+              {isSearching && (<div className=\"animate-spin rounded-full h-5 w-5 border-b-2 border-blue-500\"    /></div>;}
               )}
             </div>;
             {results.map((result, index) => (<motion.div;}
@@ -288,30 +288,30 @@ const clearFilters = (setFilters({type: [],tags: [],dateRange: { start: null, en
                     ? 'border-blue-500 bg-blue-50';}
                     : 'border-gray-200 hover:border-gray-300 hover:shadow-md';}
                 }`}
-                onClick={() = /> (window.location.href = result.url)}
+                onClick={() =    /> (window.location.href = result.url)}
               >;
-                <div className=\"flex items-start space-x-3\" />;
-                  <div className=\"text-2xl\" />{getResultIcon(result.type)}</div>;
-                  <div className=\"flex-1\" />;
-                    <h4 className=\"font-semibold text-lg mb-1\" />;
+                <div className=\"flex items-start space-x-3\"    />;
+                  <div className=\"text-2xl\"    />{getResultIcon(result.type)}</div>;
+                  <div className=\"flex-1\"    />;
+                    <h4 className=\"font-semibold text-lg mb-1\"    />;
                       {result.title}
                     </h4>;
-                    <p className=\"text-gray-600 mb-2\" />{result.description}</p>;
-                    <div className=\"flex items-center space-x-2\" />;
-                      <span className=\"text-xs bg-gray-100 text-gray-600 px-2 py-1 rounded capitalize\" />;
+                    <p className=\"text-gray-600 mb-2\"    />{result.description}</p>;
+                    <div className=\"flex items-center space-x-2\"    />;
+                      <span className=\"text-xs bg-gray-100 text-gray-600 px-2 py-1 rounded capitalize\"    />;
                         {result.type}
                       </span>;
                       {result.tags.map(tag => (<span;}
                           key={tag}
-                          className=\"text-xs bg-blue-100 text-blue-600 px-2 py-1 rounded\" />
+                          className=\"text-xs bg-blue-100 text-blue-600 px-2 py-1 rounded\"    />
 
                           {tag}
                         </span>;
                       ))}
                     </div>;
                   </div>;
-                  <div className=\"text-right\" />;
-                    <div className=\"text-sm text-gray-500\" />;
+                  <div className=\"text-right\"    />;
+                    <div className=\"text-sm text-gray-500\"    />;
                       {Math.round(result.relevance * 100)}% match;
                     </div>;
                   </div>;
@@ -326,13 +326,13 @@ const clearFilters = (setFilters({type: [],tags: [],dateRange: { start: null, en
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 ,}
 }
-          className=\"mt-6 text-center py-8\" />
+          className=\"mt-6 text-center py-8\"    />
 
-          <div className=\"text-6xl mb-4\" />🔍</div>;
-          <h3 className=\"text-lg font-semibold text-gray-600 mb-2\" />;
+          <div className=\"text-6xl mb-4\"    />🔍</div>;
+          <h3 className=\"text-lg font-semibold text-gray-600 mb-2\"    />;
             No results found;
           </h3>;
-          <p className=\"text-gray-500\" />;
+          <p className=\"text-gray-500\"    />;
             Try adjusting your search terms or filters to find what you&apos;re;
             looking for.'';
           </p>;

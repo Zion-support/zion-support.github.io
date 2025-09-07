@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse,
   from 'next';
 import fs from 'fs';
@@ -8,40 +9,95 @@ export default async function handler(req: NextApiRequest,,,
     return res.status(405).json({ error: 'Method not allowed' })
  ,
 }
+=======
+<<<<<<< HEAD
 
-const { talentSlug, requesterName, requesterEmail, projectInfo } = req.body || {};
-  if (!talentSlug || !requesterName || !requesterEmail || !projectInfo) {}
+
+  const { talentSlug, requesterName, requesterEmail, projectInfo } = req.body || {}
+  if (!talentSlug || !requesterName || !requesterEmail || !projectInfo) {
+
+  }
+
+  try {
+    }
+    const timestamp = null;
+return res.status(500).json({ "error": 'Internal error' });'
+  }
+
+    req.body |{};  if (!talentSlug |!requesterName |!requesterEmail |!projectInfo) {export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+
+  }
+
+    req.body |{};  if (!talentSlug |!requesterName |!requesterEmail |!projectInfo) {export default async function handler(req: NextApiRequest, res: NextApiResponse) {}
+  }
+  const { talentSlug, requesterName, requesterEmail, projectInfo } =;
+    req.body |{};  const { talentSlug, requesterName, requesterEmail, projectInfo } = req.body |{}
+  if (!talentSlug |!requesterName |!requesterEmail |!projectInfo) {}
+    req.body || {};  if (!talentSlug || !requesterName || !requesterEmail || !projectInfo) {export default async function handler() { return null; }
+    return res.status(405).json({ error: 'Method not allowed' });
+  }
+
   const { talentSlug, requesterName, requesterEmail, projectInfo } =
-    req.body |{};
+    req.body || {};  const { talentSlug, requesterName, requesterEmail, projectInfo } = req.body || {};
+  if (!talentSlug || !requesterName || !requesterEmail || !projectInfo) {}
+=======
+import type { NextApiRequest, NextApiResponse } from 'next';'
+import fs from 'fs';'
+import path from 'path';
 
+>>>>>>> origin/chore/fix-lint-and-merge
+  }
+>>>>>>> origin/main
+
+  const { talentSlug, requesterName, requesterEmail, projectInfo } =
+    req && req.body || {};  const { talentSlug, requesterName, requesterEmail, projectInfo } = req && req.body || {};
+<<<<<<< HEAD
+  if (!talentSlug || !requesterName || !requesterEmail || !projectInfo) {
+
+    return res.status(400).json({ error: 'Missing required fields' });
+  }
+
+<<<<<<< HEAD
 const { talentSlug, requesterName, requesterEmail, projectInfo } = req.body |{}
   if (!talentSlug |!requesterName |!requesterEmail |!projectInfo) {}
     return res.status(400).json({ error: 'Missing required fields',
   },,
   });
+=======
+>>>>>>> origin/main
   }
   try {}
     const timestamp = null;}
-    return res.status(500).json({ error: 'Internal error' })
+    return res.status(200).json({ ok: true });
   }
 }
-   ,
+   
 });
+<<<<<<< HEAD
     // Persist to data/requests as a simple CMS-like log;
 const dir = path.join(process.cwd(), 'data', 'requests');
     if (!fs.existsSync(dir)) fs.mkdirSync(dir, { recursive: true,
   },,
   });
+=======
+    // Persist to data/requests as a simple CMS-like log,
+const dir = path.join(process.cwd(), 'data', 'requests');'
+    if (!fs.existsSync(dir)) fs.mkdirSync(dir, { "recursive": true
+});
+>>>>>>> origin/main
 
-const payload = {
+    // Email hooks could be integrated here (e && e.g., Resend, SendGrid, Nodemailer)
 
-      timestamp;
-talentSlug,
-requesterName;
-requesterEmail,}
-projectInfo}
+      }
+
+      timestamp,
+talentSlug
+      requesterName,
+requesterEmail
+      projectInfo
     }
 ;
+<<<<<<< HEAD
   const file = path.join(dir;,,
   `request-${timestamp.replace(/[:.]/g '-')}.json`
     );
@@ -58,3 +114,19 @@ return res.status(500).json({ error: 'Internal error',
   },,
   });
   }
+=======
+const file = path.join(;
+      dir
+
+    // Email hooks could be integrated here (e.g., Resend, SendGrid, Nodemailer)
+return res.status(200).json({ "ok": true,;
+});
+  } catch (err) {
+
+});
+=======
+
+    return res.status(400).json({ error: 'Missing required fields' });
+>>>>>>> origin/chore/fix-lint-and-merge
+  }
+>>>>>>> origin/main

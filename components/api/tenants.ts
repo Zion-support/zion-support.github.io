@@ -36,8 +36,12 @@ const tenant = createTenant(branding);
   },,
   });
 
+<<<<<<< HEAD
+return res && res.status(201).json({ tenant });
+=======
 const tenant = createTenant(branding);
     return res && res.status(201).json({ tenant })
+>>>>>>> origin/chore/fix-lint-and-merge
   }
   if (method = == 'PUT') {}
   }
@@ -72,9 +76,19 @@ const result = rotateTenantApiKey(tenantId);
   },,
   });
   }
+<<<<<<< HEAD
 import { authenticate_request,
   from '@/utils / auth';
+=======
+
+<<<<<<< HEAD
+import { authenticate_request } from '@/utils / auth';'
+  }
+=======
+import { authenticate_request } from '@/utils / auth';
+>>>>>>> origin/main
 import {
+>>>>>>> origin/chore/fix-lint-and-merge
   create_tenant,
   get_tenants,
   rotateTenantApiKey,}
@@ -93,9 +107,7 @@ if ( {) {
 }
 }
    ;
-  return res.status (200).json ({ tenants: get_tenants () },
-}
-;
+  return res.status (200).json ({ tenants: get_tenants () }}
   const auth = authenticate_request (req, false)if ;
   return res.status (401).json ({ error: auth.error,}
 })) {$2;}
@@ -144,9 +156,14 @@ const { tenant_id, rotate_key } = req.body || {}
 if ( {) {$2;}
 }
 
+<<<<<<< HEAD
+    if (return res.status (400).json ({ "error": 'tenant_id and rotate_key required','
+})) {$2;
+=======
 const { tenant_id, rotate_key } = req.body || {}
     if (return res.status (400).json ({ error: 'tenant_id and rotate_key required',}
 })) {$2;}
+>>>>>>> origin/chore/fix-lint-and-merge
 }
 
 const result = rotateTenantApiKey (tenant_id)if ;
@@ -166,7 +183,15 @@ const result = rotateTenantApiKey (tenant_id)if ;
 return res.status (405).json ({ error: 'Method not allowed',}
 });
 }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+  }
+=======
+
+>>>>>>> origin/main
 import {
+>>>>>>> origin/chore/fix-lint-and-merge
   createTenant,
   getTenants,
   rotateTenantApiKey,;}
@@ -181,11 +206,21 @@ export default function handler(req: NextApiRequest,,,
 });
   }
 
+<<<<<<< HEAD
 const auth = authenticateRequest(req,,,
   false);
   if (!auth.ok) return res.status(401).json({ error: auth.error,
   },,
   });
+=======
+<<<<<<< HEAD
+  if (!auth.ok) return res.status(401).json({ "error": auth.error
+=======
+const auth = authenticateRequest(req, false);
+  if (!auth.ok) return res.status(401).json({ error: auth.error,}
+>>>>>>> origin/chore/fix-lint-and-merge
+});
+>>>>>>> origin/main
 
   if (method = == 'POST') {}
    ;}
@@ -196,16 +231,27 @@ if (!branding?.name)
   },,
   });
 
-const tenant = createTenant(branding);
     return res.status(201).json({ tenant });
   }
 
+<<<<<<< HEAD
+  if (method = == 'PUT') {'
+   ;
+  }
+    if (!tenantId) return res.status(400).json({ "error": 'tenantId required','
+=======
   if (method = == 'PUT') {}
    ;}
   const { tenantId, update } = req.body || {};
+<<<<<<< HEAD
     if (!tenantId) return res.status(400).json({ error: 'tenantId required',
   },,
   });
+=======
+    if (!tenantId) return res.status(400).json({ error: 'tenantId required',}
+>>>>>>> origin/chore/fix-lint-and-merge
+});
+>>>>>>> origin/main
 
 const result = updateTenant(tenantId,,,
   update |{});
@@ -217,21 +263,38 @@ return res.status(200).json({ tenant: result,
   });
   }
 
+<<<<<<< HEAD
+  if (method = == 'PATCH') {'
+   ;
+  }
+=======
   if (method = == 'PATCH') {}
    ;}
   const { tenantId, rotateKey } = req.body || {};
+>>>>>>> origin/chore/fix-lint-and-merge
 if (!tenantId || !rotateKey)
       return res.status(400).json({ error: 'tenantId and rotateKey required',
   },,
   });
 
+<<<<<<< HEAD
+    if (!result) return res.status(404).json({ "error": 'Tenant not found','
+=======
 const result = rotateTenantApiKey(tenantId);
+<<<<<<< HEAD
     if (!result) return res.status(404).json({ error: 'Tenant not found',
   },,
   });
     return res.status(200).json({ tenant: result,
   },,
   });
+=======
+    if (!result) return res.status(404).json({ error: 'Tenant not found',}
+>>>>>>> origin/chore/fix-lint-and-merge
+});
+    return res.status(200).json({ tenant: result,}
+});
+>>>>>>> origin/main
   }
 
   return res.status(405).json({ error: 'Method not allowed',

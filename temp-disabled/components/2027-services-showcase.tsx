@@ -90,9 +90,7 @@ const sortOptions = [
                         (selectedPriceRange = == 'high' && parseInt(service.price.replace(/[^0-9]/g, '')) >= 10000;
   return matchesSearch && matchesCategory && matchesPrice;
 
-const [selectedCategory, setSelectedCategory] = useState<string />('all'),const [selectedPriceRange, setSelectedPriceRange] = useState<string />('all'),const [sortBy, setSortBy] = useState<string />('name'),// Sort options;
 
-const sortOptions = null;
                   setSelectedPriceRange('all')service.category.toLowerCase().includes(searchTerm.toLowerCase())const matchesCategory =;
       selectedCategory = == 'all' |service.category.includes(selectedCategory;
   const matchesPrice =;
@@ -107,7 +105,6 @@ const sortOptions = null;
   })// Sort services;
   const sortedServices = [...filteredServices].sort((a, b) => {switch (sortBy) {case 'name':;
 
-const sortedServices = [...filteredServices].sort((a, b) => {switch (sortBy) {case 'name':;
         return a.name.localeCompare(b.name)case 'price':;
         return (parseInt(a && a.price.replace(/[^0-9]/g, '')) -;
           parseInt(b && b.price.replace(/[^0-9]/g, ''))return (parseInt(a.price.replace(/[^0-9]/g, '')) -;
@@ -211,7 +208,6 @@ const priceRanges = [
   email: 'kleber@ziontechgroup.com',address: '364 E Main St STE 1008 Middletown DE 19709',}
   website: 'https://ziontechgroup.com',}return (<UltraFuturisticMatrixBackground2027 />;
 
-const contactInfo = {mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com',;
   return (<UltraFuturisticMatrixBackground2027 />;

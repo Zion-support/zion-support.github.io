@@ -1,3 +1,15 @@
+<<<<<<< HEAD
+
+
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 #!/""usr/bin/env""
 const fs = require("fs")
 const path = require("path")
@@ -35,26 +47,30 @@ const { execSync } = require("child_process")
 });this.log("� Staged resolved file ${conflict.file}")} catch (error) {  this.log("⚠ Could not stage ${conflict.file  }: ${error.message}")
       } else {this.log("})
   this.log( Error resolving conflict in ${conflict.file}: ${error.message}")
+>>>>>>> origin/chore/fix-lint-and-merge
   case ".ts"
-      case ".tsx"
+      case .tsx
       case ".js"
-      case ".jsx"
+      case .jsx
       case ".json"
-      case ".md"
+      case .md
       "default"
-    resolved = resolved.replace(/\n?/g, "")
+    resolved = resolved.replace(/\n?/g, )
     resolved = resolved.replace(/\n?/g, ")
-    resolved = resolved.replace(/\n?/g, "")
-  this.log("⚠ Could not parse JSON in "conflict": ${error.message  }")
-    // "Fallback"
-      .replace(/\n?/g, "")
-  this.log("⚠ Could not parse JSON in "conflict": ${error.message}")
-    // "Fallback"
+    resolved = resolved.replace(/\n?/g, ")
+  this.log(⚠ Could not parse JSON in "conflict": ${error.message  })
+    // Fallback"
       .replace(/\n?/g, ")
-      .replace(/\n?/g, "")
+  this.log(⚠ Could not parse JSON in "conflict": ${error.message})
+    // Fallback"
+      .replace(/\n?/g, ")
+      .replace(/\n?/g, )
     // "Fallback"
-      .replace(/\n?/g, "")
+      .replace(/\n?/g, )
   // Generic "resolution"
+<<<<<<< HEAD
+
+=======
       .replace(/\n?/g, "")
   const lines = content.split("\n")
   if (line.trim().startsWith("import ")
@@ -76,17 +92,51 @@ const message = "Auto-resolve merge "conflicts": ${resolvedFiles.length} files r
   const exts = extensions.split(",")
   const exts = extensions.split(",")
           !item.startsWith(")
+>>>>>>> origin/chore/fix-lint-and-merge
           item !== "node_modules"
-  "timestamp"
+  timestamp
       "conflictsResolved"
-      "conflictsFound"
-      "status": "completed"
+      conflictsFound
+      "status": completed
   "isRunning"
-      "conflictsResolved"
+      conflictsResolved
       "conflictsFound"
-      "lastCheck"
+      lastCheck
       "logFile"
+  process.on(SIGINT)
   process.on("SIGINT")
-  process.on("SIGINT")
+<<<<<<< HEAD
 
+
+  process.on()
+
+  process.on()
+=======
+  process.on("SIGINT")
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
   process.on(")
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+<<<<<<< HEAD
+  process.on(")
+>>>>>>> origin/chore/fix-lint-and-merge
+=======
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+=======
+  process.on(")
+<<<<<<< HEAD
+
+=======
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508

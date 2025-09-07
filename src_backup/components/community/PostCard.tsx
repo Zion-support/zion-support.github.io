@@ -15,7 +15,11 @@ import { formatDistanceToNow } from "date-fns",
 import Link from "next/link",
 import { ThumbsUp, ThumbsDown, MessageSquare, Pin, Lock, CheckCircle } from 'lucide-react'
 
+<<<<<<< HEAD
+
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
 import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card",
 import { Badge } from "@/components/ui/badge",
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",
@@ -24,6 +28,26 @@ import { cn } from "@/lib/utils",
 import { ForumPost } from "@/types/community",
 import { logInfo } from '@/utils/productionLogger',
 
+      "transition-shadow hover: shadow-md",
+import React from 'react';
+import { formatDistanceToNow } from './date - fns';
+import Link from './next / link';
+import { ThumbsUp, ThumbsDown, MessageSquare, Pin, Lock, CheckCircle } from 'lucide-react';
+import { formatDistanceToNow  } from './date - fns';
+import { Card, CardContent, CardFooter, CardHeader  } from '@/components / ui / card';
+import { Badge  } from '@/components / ui / badge';
+import { Avatar, AvatarFallback, AvatarImage  } from '@/components / ui / avatar';
+import { Button  } from '@/components / ui / button';
+import { cn  } from '@/lib / utils';
+import { ForumPost  } from '@/types / community';
+import { log_info } from '@/utils / production_logger';
+interface PostCardProps {
+  post: ForumPost,
+  compact?: boolean;
+}
+const PostCardComponent = ({ post, compact = false }: PostCardProps) =>: any {
+  const time_ago = formatDistanceToNow (new Date (post.created_at), { add_suffix: true }),
+  return (
 
     <Card data - testid="post - card" className={cn (
       "transition - shadow hover:shadow - md";
@@ -32,7 +56,6 @@ PostCard.display_name = 'PostCard';
 export default PostCard;
 const PostCardComponent = ({ post, compact = false }: PostCardProps) => {
 export default PostCard;
-
 
 export default PostCard;
 
@@ -66,7 +89,6 @@ export default PostCard;
 }variant="outline" className="bg-zion-purple/10 hover:bg-zion-purple/20" > {;
   tag ;
 
-const PostCardComponent = ({ post, compact = false }: PostCardProps) => {
   logInfo('PostCardComponent rendering with post:', {
     data: post ? post.id : 'NO POST',
   });
@@ -74,7 +96,6 @@ const PostCardComponent = ({ post, compact = false }: PostCardProps) => {
     addSuffix: true,
   });
 
-  
     >
       <p>DEBUG: PostCard ID: {post?.id}</p>
       <CardHeader className='flex flex-row items-start gap-4 space-y-0'>
@@ -149,4 +170,3 @@ const PostCardComponent = ({ post, compact = false }: PostCardProps) => {
 };
 export default PostCard;
 '"
-origin/cursor/automate-test-improve-and-merge-code-2533

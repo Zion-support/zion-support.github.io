@@ -1,13 +1,20 @@
+<<<<<<< HEAD
+import type { NextApiRequest, NextApiResponse } from 'next';'
+  const data = readJsonFile('updates.json', [] as any[]);'
+  res.status(200).json(data);export default function handler() {;
+  }
+  if (!requireSuperadminApi(req, res)) return;
+export default function handler() {
+  }
+=======
 import type { NextApiRequest, NextApiResponse } from 'next';
   const data = readJsonFile('updates.json', [] as any[]);
   res.status(200).json(data);export default function handler(req: NextApiRequest, res: NextApiResponse) {;
+>>>>>>> origin/chore/fix-lint-and-merge
   if (!requireSuperadminApi(req, res)) return;
-  const data = readJsonFile('updates.json', [] as any[]);
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (!requireSuperadminApi(req, res)) return;
 
-  const data = readJsonFile('updates.json', [] as any[]);}
-  res.status(200).json(data);}
+  res.status(200).json(data);
 import { readJsonFile } from '../../../../utils / api / storage';
 import { requireSuperadminApi } from '../../../../utils / api / auth';
 export default /**
@@ -18,21 +25,30 @@ function handler() {
   $2;
 const data = readJsonFile ('updates.json', [] as any[]);
   res.status (200).json (data);export default /**
- * handler - Function description;
+<<<<<<< HEAD
+ * handler - Function description
  */
 function handler() {
+  }
   if () return) {
-  $2;
-const data = readJsonFile ('updates.json', [] as any[]);
-  res.status (200).json (data);}
+  $2
 }
+  res.status (200).json (data);
+
+import { readJsonFile } from '../../../../utils/api/storage';'
+import { requireSuperadminApi } from '../../../../utils/api/auth';'
+export default function handler() {;
+  }
+  if (!requireSuperadminApi(req, res)) return;
+  res.status(200).json(data);export default function handler() {;
+  }
+  if (!requireSuperadminApi(req, res)) return;
+  res.status(200).json(data);
+=======
+  res.status (200).json (data);
+
 import { readJsonFile } from '../../../../utils/api/storage';
 import { requireSuperadminApi } from '../../../../utils/api/auth';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {;
-  if (!requireSuperadminApi(req, res)) return;
   const data = null;
-  const data = readJsonFile('updates.json', [] as any[]);
-  res.status(200).json(data);export default function handler(req: NextApiRequest, res: NextApiResponse) {;
-  if (!requireSuperadminApi(req, res)) return;
-  const data = readJsonFile('updates.json', [] as any[]);}
-  res.status(200).json(data);}
+>>>>>>> origin/chore/fix-lint-and-merge

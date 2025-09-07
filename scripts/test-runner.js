@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 #!/usr/bin/env node
 import { execSync } from 'child_process';
 import path from 'path';
@@ -57,3 +58,76 @@ if (import.meta.url === `file://${process.argv[1]}`) {
 }
 
 export default TestRunner;
+=======
+>
+
+#!/usr/bin/env node
+const fs = // // require('fs');
+
+const path = // // require('path');
+class TestRunner {}
+  constructor() {}
+    this.results = {}
+      "unit": { passed: 0, "failed": 0 },"
+      "integration": { passed: 0, "failed": 0 },"
+      "e2e": { passed: 0, "failed": 0 }
+  }
+  checkTestFiles() {'
+    const testDirs = ['__tests__', 'src/__tests__', 'tests'];
+    let testFilesFound = 0;
+    testDirs.forEach(dir => {}
+      if (fs.existsSync(dir)) {}
+        const files = fs.readdirSync(dir);
+
+          file.includes('.test.') || file.includes('.spec.')
+        );
+        testFilesFound += testFiles.length;
+      }
+    });
+
+      console.log('⚠️ No test files found');
+    } else {}
+      console.log(`✅ Found ${testFilesFound} test files`);
+    }
+    return testFilesFound;
+
+>
+
+      console.log('⚠️ No test files found')} else {
+
+      console.log(`✅ Found ${testFilesFound} test files`)}
+    return testFilesFound}
+  checkPackageJsonScripts() {}
+    try {'
+      const packageJson = JSON.parse(fs.readFileSync('package.json', 'utf8'));
+
+        return false;
+      }'
+      console.log('✅ Test script found in package.json');
+      return true;
+    } catch (error) {'
+      console.log('❌ Error reading package.json:', error.message);
+      return false;
+    }
+
+>
+
+        return false}
+
+      console.log('✅ Test script found in package.json');
+      return true} catch (error) {'"
+      console.log('❌ Error reading package."json": ', error.message);
+      return false}
+  }
+  generateReport() {}
+    const report = {"
+      "timestamp": new Date().toISOString(),"
+      "results": this.results,"
+      "summary": {}
+        testFilesFound: this.checkTestFiles(),"
+        "testScriptExists": this.checkPackageJsonScripts()
+      }'
+    fs.writeFileSync('test-report.json', JSON.stringify(report, null, 2));'
+    console.log('Test report generated');
+  }
+>>>>>>> origin/main

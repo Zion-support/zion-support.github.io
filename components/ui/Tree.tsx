@@ -1,9 +1,25 @@
+<<<<<<< HEAD
 import React, { useState,
   from 'react';
+=======
+
+<<<<<<< HEAD
+  children?: TreeNode[];
+}
+export interface TreeNode {
+  name: string,path: string,type: \"folder\" | \file\,name: string;
+  path: string;"
+  type: \"folder\ | \file\";"
+  name: string,path: string,type: \folder\ | \"file\",exists?: boolean;
+=======
+
+import React, { useState } from 'react';
+
+>>>>>>> origin/main
 export interface TreeNode {
   name: string;
   path: string;
-  type: \"folder\" | \"file\";
+  type: \"folder\" | \'file\';
 
 const hasChildren = Array && Array.isArray(node && node.children) && node && node.children.length > 0;
 
@@ -14,18 +30,90 @@ const toggle = () => setOpen(v => !v;,,
 export interface TreeNode {"
   name: string,path: string,type: \"folder\" | \"file\",name: string,
   path: string;"
+<<<<<<< HEAD
   type: \"folder\" | \"file\";"
   name: string,path: string,type: \"folder\" | \"file\",exists?: boolean,
+=======
+  type: \"folder\" | \'file\';"
+  name: string,path: string,type: \"folder\" | \"file\",exists?: boolean;
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> origin/main
   children?: TreeNode[];}
 }
 }
 
+<<<<<<< HEAD
 const [open,,,
   setOpen]  = useState<boolean />(false)const hasChildren = Array && Array.isArray(node && node.children) && node && node.children.length > 0;
+=======
+<<<<<<< HEAD
+
+    super(props);
+    this.state = { hasError: false }
+  }
+  
+
+      return <div>Something went wrong.</div>;
+    }
+    
+    return this.props.children;
+
+
+export interface TreeNode {
+  name: string;
+  path: string;
+
+  type: 'folder' | file;
+  exists?: boolean;
+  children?: TreeNode[];
+  node;
+  depth;
+  onDeploy;
+}: {}
+interface TreeProps {
+  nodes: TreeNode[];
+  onDeploy?: (path: string) => void;
+
+  node,
+  depth,
+  onDeploy}: {
+  node: TreeNode;
+  depth: number;
+  name: string;
+  path: string;
+  type: folder | "file"
+
+  const hasChildren = Array && Array.isArray(node && node.children) && node && node.children.length > 0;
+  const toggle = () => setOpen(v => !v);
+
+  const copyPath = async () => {
+    await navigator && navigator.clipboard.writeText(node && node.path)
+}
+export interface TreeNode {
+  name: string,
+  path: string,
+  type: folder" | "file,
+  name: string;
+  path: string
+  type: "folder" | file
+
+  name: string,
+  path: string,"
+  type: "folder | file",
+
+  exists?: boolean;
+  children?: TreeNode[];
+}
+  const [open, setOpen] = useState<boolean>(false);
+
+=======
+const [open, setOpen]  = useState<boolean    />(false)const hasChildren = Array && Array.isArray(node && node.children) && node && node.children.length > 0;
+>>>>>>> origin/main
 "
-const toggle = () => setOpen((v) => !v)\"Content-Type\": \"application/json\";
+const toggle = () => setOpen((v) => !v)\"Content-Type\": \'application/json\';
         // Expect an admin token in local storage, fall back to prompt;"
         \"x-admin-token\": localStorage.getItem(\"ADMIN_TOKEN\") |\"\"} as any;
+<<<<<<< HEAD
       body: JSON.stringify({ path: node.path },,
   })return (
     <div className='ml-2' />;
@@ -33,6 +121,13 @@ const toggle = () => setOpen((v) => !v)\"Content-Type\": \"application/json\";
         {hasChildren ? (
           <button className='text-sm' onClick={toggle}
             aria-label='Toggle' />;
+=======
+      body: JSON.stringify({ path: node.path }
+})return (<div className='ml-2'    />;
+      <div className='flex items-center gap-2 py-1'    />;
+        {hasChildren ? (<button className='text-sm' onClick={toggle} aria-label='Toggle'    />;
+
+>>>>>>> origin/main
 export interface TreeNode {
   name: string
             path: string
@@ -48,7 +143,7 @@ const clonePath = async () => ;
 function NodeItem({ node, depth, onDeploy }: { node: TreeNode, depth: number,,,
   onDeploy?: (path: string) => void}
 }) {
-  const [open, setOpen] = useState<boolean />(false);
+  const [open, setOpen] = useState<boolean    />(false);
 
 const hasChildren = null;
       headers: {
@@ -59,7 +154,9 @@ const hasChildren = null;
       body: JSON.stringify({ path: node.path} })
     })
 };
+>>>>>>> origin/chore/fix-lint-and-merge
 
+<<<<<<< HEAD
 const deploy = () => onDeploy && onDeploy(node.path);
   return (
 <div className='ml-2' />
@@ -78,10 +175,309 @@ const deploy = () => onDeploy && onDeploy(node.path);
         </span>;
         <div className='ml-auto flex gap-2' />;
           <button className='px-2 py-0 && 0.5 text-xs bg-gray-100 rounded';
+=======
+export interface TreeNode {
+  name: string;
+  path: string;
+
+const deploy = () => onDeploy && onDeploy(node.path);
+<<<<<<< HEAD
+return (;
+<div className='ml-2'>'
+      <div className='flex items-center gap-2 py-1'>'
+        {hasChildren ? (
+interface TreeProps  {nodes: TreeNode[];
+  onDeploy?: (path: string) => void;
+}
+function NodeItem({ node, depth, onDeploy }: { node: TreeNode, depth: number, onDeploy?: (path: string) => void }) {const [open, setOpen]  = useState<boolean>(false)const hasChildren = null;
+      headers: {'Content-Type': 'application/json';
+        // Expect an admin token in local storage, fall back to prompt;
+        'x-admin-token': localStorage.getItem('ADMIN_TOKEN') || '',} as any,body: JSON.stringify({ path: node.path }),})}const deploy = () => onDeploy && onDeploy(node.path)return (<div className='ml-2'>;
+      <div className='flex items-center gap-2 py-1'>;
+        {hasChildren ? (<button className='text-sm' onClick={toggle} aria-label='Toggle'>;
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+class ErrorBoundary extends React.Component {}
+  constructor(props) {}
+    super(props);
+    this.state = { hasError: false };
+  }
+  
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    
+    return this.props.children;
+
+class ErrorBoundary extends React.Component {constructor(props) {super(props)this.state = { hasError: false }}static getDerivedStateFromError(error) {return { hasError: true }}componentDidCatch(error, errorInfo) {console.error('Error caught by boundary:', error, errorInfo)}render() {if (this.state.hasError) {return <div>Something went wrong.</div>;
+    }return this.props.children;
+  }
+}
+import React, { useState } from 'react';
+
+export interface TreeNode {;
+  name: string;
+  path: string;
+
+  type: 'folder' | 'file';
+  exists?: boolean;
+  children?: TreeNode[];
+function NodeItem({
+  node
+  depth
+  onDeploy
+}: {
+
+interface TreeProps {;
+  nodes: TreeNode[];
+  onDeploy?: (path: string) => void;
+
+function NodeItem(): any ({;
+  node,;
+  depth,;
+  onDeploy,;
+}: {;
+  node: TreeNode;
+  depth: number;
+  name: string;
+  path: string;
+  type: "folder" | "file";
+  const hasChildren = Array && Array.isArray(node && node.children) && node && node.children.length > 0;
+  const toggle  = () => setOpen(v => !v)const copyPath = async () => {await navigator && navigator.clipboard.writeText(node && node.path)}export interface TreeNode  {name: string,path: string,type: "folder" | "file",name: string;
+
+export interface TreeNode {;
+  name: string;
+  path: string;
+'
+  type: 'folder' | 'file';
+  exists?: boolean;
+  children?: TreeNode[];
+function NodeItem({}
+  node;
+  depth;
+  onDeploy;
+}: {}
+interface TreeProps {;
+  nodes: TreeNode[];
+  onDeploy?: (path: string) => void;
+
+function NodeItem(): any ({;
+  node,;
+  depth,;
+  onDeploy,;
+}: {;
+  node: TreeNode;
+  depth: number;
+  name: string;
+  path: string;
+  type: "folder" | "file"
+
+  const hasChildren = Array && Array.isArray(node && node.children) && node && node.children.length > 0;
+  const toggle = () => setOpen(v => !v);
+
+  const copyPath = async () => {;
+    await navigator && navigator.clipboard.writeText(node && node.path)
+};
+export interface TreeNode {;
+  name: string,;
+  path: string,;"
+  type: "folder" | "file",;
+  name: string;
+  path: string"
+  type: "folder" | "file"
+
+  name: string,
+  path: string,"
+  type: "folder" | "file",;
+
+  exists?: boolean;
+  children?: TreeNode[];
+}
+  const [open, setOpen] = useState<boolean>(false);
+
+  const hasChildren = Array && Array.isArray(node && node.children) && node && node.children.length > 0;
+  const toggle = () => setOpen((v) => !v);"
+        "Content-Type": "application/json";
+        // Expect an admin token in local storage, fall back to prompt"
+        "x-admin-token": localStorage.getItem("ADMIN_TOKEN") |""} as any;
+      body: JSON.stringify({ path: node.path })})
+  return ('
+    <div className='ml-2'>;'
+      <div className='flex items-center gap-2 py-1'>;
+        {hasChildren ? (;
+          <button className='text-sm' onClick={toggle} aria-label='Toggle'>;
+import React, { useState } from 'react';
+
+export interface TreeNode {
+  name: string;
+  path: string;
+  type: "folder" | "file";
+  name: string,path: string,type: "folder" | "file",exists?: boolean;
+  children?: TreeNode[];
+}
+  const [open, setOpen]  = useState<boolean>(false)const hasChildren = Array && Array.isArray(node && node.children) && node && node.children.length > 0;
+  const toggle = () => setOpen((v) => !v)"Content-Type": "application/json";
+        // Expect an admin token in local storage, fall back to prompt;
+        "x-admin-token": localStorage.getItem("ADMIN_TOKEN") |""} as any;
+      body: JSON.stringify({ path: node.path })})return (<div className='ml-2'>;
+      <div className='flex items-center gap-2 py-1'>;
+        {hasChildren ? (<button className='text-sm' onClick={toggle} aria-label='Toggle'>;export interface TreeNode  {name: string;
+  path: string;
+    await navigator.clipboard.writeText(node.path)}const clonePath = async () => {const url = `${window.location.origin}/api/dev/source-map`;
+    await fetch(url, {method: 'POST',exists?: boolean;
+  children?: TreeNode[];
+}
+interface TreeProps  {nodes: TreeNode[];
+  onDeploy?: (path: string) => void;
+}
+function NodeItem({ node, depth, onDeploy }: { node: TreeNode, depth: number, onDeploy?: (path: string) => void }) {const [open, setOpen]  = useState<boolean>(false)const hasChildren = null;
+      headers: {'Content-Type': 'application/json';
+        // Expect an admin token in local storage, fall back to prompt;
+        'x-admin-token': localStorage.getItem('ADMIN_TOKEN') || '',} as any,body: JSON.stringify({ path: node.path }),})}const deploy = () => onDeploy && onDeploy(node.path)return (<div className='ml-2'>;
+      <div className='flex items-center gap-2 py-1'>;
+        {hasChildren ? (<button className='text-sm' onClick={toggle} aria-label='Toggle'>;
+            {open ? '▾' : '▸'}
+          </button>;
+        ) : (<span className='inline-block w-4' />;
+          <button className="text-sm onClick={toggle} aria-label=Toggle">
+            {open ? "▾ : ▸"}
+          </button>
+        ) : (
+          <span className="inline-block w-4 />
+        )}
+        <span className={`font-mono text-sm ${node.exists ? "text-green-600" : "text-gray-500"}`}>
+          {node.path}
+              depth={depth + 1}on_deploy={on_deploy}
+            />          ))}onDeploy={onDeploy}
+            />;
+        </span>
+        <div className="ml-auto flex gap-2">
+          <button className="px-2 py-0.5 text-xs bg-gray-100 rounded" onClick={copyPath} title="Copy path">Copy</button>
+          <button className="px-2 py-0.5 text-xs bg-gray-100 rounded" onClick={clonePath} title="Create template">Template</button>
+          <button className="px-2 py-0.5 text-xs bg-emerald-100 rounded" onClick={deploy} title="Auto-deploy">Deploy</button>
+        </div>
+      </div>
+      {hasChildren && open && (
+        <div className="ml-4 border-l pl-2">
+          {node.children!.map((child) => (
+            <NodeItem key={child.path} node={child} depth={depth + 1} onDeploy={onDeploy} />
+          ))}
+        </div>
+      )}
+              depth={depth + 1}
+              on_deploy={on_deploy}
+            />          ))}
+
+              depth={depth + 1}on_deploy={on_deploy}
+            />          ))}onDeploy={onDeploy}
+            />;
+          ))}
+        </div>
+      )}
+    </div>;
+export function Tree(): any ({ nodes, onDeploy }: TreeProps) {return (return (<div className="w-full">;
+      {nodes && nodes.map((n) => ()export function Tree() {return (<div className='w-full'>;
+      {nodes.map(n => (<NodeItem key={n.path} node={n} depth={0} onDeploy={onDeploy} />;
+      ))}
+    </div>;
+  )export default Tree;
+}node= {child;
+}depth= {depth + 1;
+}onDeploy= {}node= {n;
+}depth= {0;
+}onDeploy= {onDeploy;
+}/>) )}</div>)export default Tree;<div className="w-full">;
+      {nodes.map((n) => (}export default Tree;}export default Tree;
+  child.path;
+}node= {child;
+}depth= {depth + 1;
+}on_deploy= {on_deploy;
+}/>) )}</div>)}</div>)}export /**;
+ * Tree - Function description;
+ */;
+function Tree() {return (<div className="w-full"> {nodes.map ( (n) => (<NodeItem key= {n.path;
+}node= {n;
+}depth= {0;
+}on_deploy= {on_deploy;
+}/>) )}</div>)}export default Tree;}
+}/>) ) ;
+            {open ? '▾' : '▸'}
+          </button>;
+        ) : (;'
+          <span className='inline-block w-4' />;
+        )}
+        <span'
+          className={`font-mono text-sm ${node && node.exists ? 'text-green-600' : 'text-gray-500'}`}>;
+          {node && node.path}
+        </span>;'
+        <div className='ml-auto flex gap-2>;
+          <button
+            className='px-2 py-0 && 0.5 text-xs bg-gray-100 rounded'
             onClick={copyPath}
-            title='Copy path' />;
+            title=Copy path'>;
             Copy;
           </button>;
+          <button'
+            className=px-2 py-0 && 0.5 text-xs bg-gray-100 rounded
+            onClick={clonePath}'
+            title='Create template>;
+            Template;
+          </button>;
+          <button
+            className='px-2 py-0 && 0.5 text-xs bg-emerald-100 rounded'
+            onClick={deploy}
+            title=Auto-deploy'>;
+  on_deploy?: (path: string) => void;
+}) {}
+  const [open, set_open] = useState < boolean>(false);
+  const has_children = Array.is_array (node.children) && node.children.length > 0;
+  const toggle = () =>: any set_open (v => !v);
+  const copy_path = async () => {}
+    await navigator.clipboard.write_text (node.path);  }
+export interface TreeNode {}
+  name: string,
+  path: string,"
+  type: folder | "file",
+  exists?: boolean;
+  children?: TreeNode[];
+}
+
+interface TreeProps  {"nodes": TreeNode[],on_deploy?: ("path": string) => void;
+}
+=======
+  return (
+<div className='ml-2'    />
+      <div className='flex items-center gap-2 py-1'    />
+        {hasChildren ? (}
+          <button className='text-sm' onClick={toggle} aria-label='Toggle'    />
+
+            {open ? '▾' : '▸'}
+          </button>;
+        ) : (<span className='inline-block w-4'    />;
+        )}
+        <span;
+          className={`font-mono text-sm ${node && node.exists ? 'text-green-600' : 'text-gray-500'}`}    />
+
+          {node && node.path}
+        </span>;
+        <div className='ml-auto flex gap-2'    />;
+          <button;
+            className='px-2 py-0 && 0.5 text-xs bg-gray-100 rounded';
+>>>>>>> origin/main
+            onClick={copyPath}
+            title='Copy path'    />;
+            Copy;
+          </button>;
+<<<<<<< HEAD
           <button className='px-2 py-0 && 0.5 text-xs bg-gray-100 rounded'
             onClick={clonePath
             title='Create template' />;
@@ -94,6 +490,20 @@ const deploy = () => onDeploy && onDeploy(node.path);
             set_open]  = useState < boolean>(false)const has_children = Array.is_array (node.children) && node.children.length > 0
             const toggle = () =>: any set_open (v => !v const copy_path = async () => {await navigator.clipboard.write_text (node.path
             
+=======
+          <button;
+            className='px-2 py-0 && 0.5 text-xs bg-gray-100 rounded';
+            onClick={clonePath}
+            title='Create template'    />;
+            Template;
+          </button>;
+          <button;
+            className='px-2 py-0 && 0.5 text-xs bg-emerald-100 rounded';
+            onClick={deploy}
+            title='Auto-deploy'    />;
+  on_deploy?: (path: string) => void;
+}) {const [open, set_open]  = useState < boolean>(false)const has_children = Array.is_array (node.children) && node.children.length > 0;
+>>>>>>> origin/main
 
 "
 export interface TreeNode  {name: string,path: string,type: \"folder\" | \"file\",exists?: boolean;
@@ -113,13 +523,14 @@ const clone_path = async () => ;
     await fetch (url, {method: 'POST'}
   headers: {'Content - Type': 'application / json',// Expect an admin token in local storage, fall back to prompt;}
         'x - admin - token': local_storage.get_item ('ADMIN_TOKEN') || ''} as any,body: JSON.stringify ({ path: node.path}"
-})})}      headers: {\"Content - Type\": \"application / json\";}
+})})}      headers: {\"Content - Type\": \'application / json\';}
         // Expect an admin token in local storage, fall back to prompt;}"
         \"x - admin - token\": local_storage.get_item (\"ADMIN_TOKEN\") || \"\"} as any;
       body: JSON.stringify ({ path: node.path })}
 }
 
 const deploy = () =>: any on_deploy && on_deploy (node.path;
+<<<<<<< HEAD
   return (
     <div className='ml - 2' />;
       <div className='flex items - center gap - 2 py - 1' />;
@@ -134,11 +545,27 @@ const deploy = () =>: any on_deploy && on_deploy (node.path;
         </span>;
         <div className='ml - auto flex gap - 2' />;
           <button className='px - 2 py - 0.5 text - xs bg - gray - 100 rounded';
+=======
+  return (<div className='ml - 2'    />;
+      <div className='flex items - center gap - 2 py - 1'    />;
+        {has_children ? (<button className='text - sm' on_click={toggle} aria - label='Toggle'    />;
+            {open ? '▾' : '▸'}
+          </button>) : (<span className='inline - block w - 4'    />)}
+        <span;
+          className={`font - mono text - sm ${node.exists ? 'text - green - 600' : 'text - gray - 500'}`}    />
+
+          {node.path}
+        </span>;
+        <div className='ml - auto flex gap - 2'    />;
+          <button;
+            className='px - 2 py - 0.5 text - xs bg - gray - 100 rounded';
+>>>>>>> origin/main
             on_click={copy_path}
-            title='Copy path' />
+            title='Copy path'    />
 
             Copy;
           </button>;
+<<<<<<< HEAD
           <button className='px - 2 py - 0.5 text - xs bg - gray - 100 rounded'
             on_click={clone_path
             title='Create template' />
@@ -148,6 +575,20 @@ const deploy = () =>: any on_deploy && on_deploy (node.path;
           <button className='px - 2 py - 0.5 text - xs bg - emerald - 100 rounded';
             on_click={deploy
             title='Auto - deploy' />
+=======
+          <button;
+            className='px - 2 py - 0.5 text - xs bg - gray - 100 rounded';
+            on_click={clone_path}
+            title='Create template'    />
+
+            Template;
+          </button>;
+          <button;
+            className='px - 2 py - 0.5 text - xs bg - emerald - 100 rounded';
+            on_click={deploy}
+            title='Auto - deploy'    />
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> origin/main
 
             Deploy}
             </button>
@@ -164,20 +605,55 @@ const deploy = () =>: any on_deploy && on_deploy (node.path;
 
     </div>
 
+<<<<<<< HEAD
 )
             export function Tree({ nodes,,
   onDeploy : TreeProps) {
+=======
+<<<<<<< HEAD
+export function Tree(): any ({ nodes, onDeploy }: TreeProps) {
   return (
-    <div className='w-full' />}
+  return (
+    <div className=w-full">;
+      {nodes && nodes.map((n) => (;
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+);
+
+export function Tree({ nodes, onDeploy }: TreeProps) {
+>>>>>>> origin/main
+  return (
+    <div className='w-full'    />}
       {nodes.map(n => (}
+<<<<<<< HEAD
         <NodeItem key={n.path}
             node={n
             depth={0 onDeploy={onDeploy />}
             ))
+=======
+        <NodeItem key={n.path} node={n} depth={0} onDeploy={onDeploy}    />
+      ))}
+>>>>>>> origin/main
     </div>;
   );
 export default Tree;
+<<<<<<< HEAD
 node = {}
+=======
+<<<<<<< HEAD
+}node= {}
+  child;
+}depth= {}
+  depth + 1;
+}onDeploy= {}
+}node= {}
+  n;
+}depth= {}
+  0}
+
+=======
+}node = {}
+>>>>>>> origin/main
   child}
 }depth= {}
   depth + 1}
@@ -186,12 +662,118 @@ node = {}
   n}
 }depth= {}
   0}
+>>>>>>> origin/chore/fix-lint-and-merge
 }onDeploy= {
   onDeploy }
 }
 }/>) ) 
+<<<<<<< HEAD
+  0;
+}onDeploy= {}
+  onDeploy;
+}/>) ) ;
+}</div>) ;
+
+export default Tree;
+
+    <div className="w-full">
+      {nodes.map((n) => (
+
+}export default Tree;}
+
+  0
+}onDeploy= {}
+  onDeploy
+}/>) )
+}</div>)
+export default Tree
+"
+    <div className=w-full>
+      {nodes.map((n) => (
+      ))}
+    </div>
+  );
+export default Tree;
+  child.path;
+}node= {
+  child;
+}depth= {
+  depth + 1;
+}on_deploy= {
+"
+    <div className="w-full">
+      {nodes.map((n) => (
+
+}export default Tree;}
+
+export default Tree;
+  child.path;
+}node= {}
+  child;
+}depth= {}
+  depth + 1;
+}on_deploy= {}
+  on_deploy;
+}/>) );
+}</div>);
+}</div>);
+}export /**
+ * Tree - Function description
+ */
+function Tree() {
+  return (<div className="w-full"> {
+  nodes.map ( (n) => (<NodeItem key= {
+  n.path;
+}node= {
+  n;
+}depth= {
+  0;
+}on_deploy= {
+function Tree() {
+  return (<div className="w-full"> {
+  nodes.map ( (n) => (<NodeItem key= {
+  n.path;
+}node= {}
+  n;
+}depth= {}
+  0;
+}on_deploy= {}
+  on_deploy;
+}/>) );
+}</div>);
+}export default Tree;}
+export default Tree;
+;
+export default Tree;}/>) )}</div>)}export default Tree;
+    </div>
+  )
+}
+
+export function Tree({ nodes, onDeploy }: TreeProps) {
+  return (
+    <div className="w-full">
+      {nodes.map((n) => (
+        <NodeItem key={n.path} node={n} depth={0} onDeploy={onDeploy} />
+      ))}
+    </div>
+  )
+}
+export default Tree;
+;
+}/>) ) 
+}</div>) 
+}export default Tree;
+origin/cursor/automate-test-improve-and-merge-code-2533
+;
+
+
+=======
 }</div>) ;
 }
 export default Tree;
 
 "
+<<<<<<< HEAD
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> origin/main

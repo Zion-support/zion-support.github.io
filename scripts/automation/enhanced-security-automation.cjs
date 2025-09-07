@@ -1,244 +1,602 @@
+<<<<<<< HEAD
+
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+>>>>>>> origin/chore/fix-lint-and-merge
 #!/usr/bin/env node;
+=======
+#!/usr/bin/env node
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 /**
  * Enhanced Security Automation;
  * Comprehensive security scanning and monitoring;
  */
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+>>>>>>> origin/chore/fix-lint-and-merge
 const fs = require('fs');
-const path = require('path');
+const path = require(path');
 const { execSync } = require('child_process');
+=======
 
+
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+
+
+
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+>>>>>>> origin/chore/fix-lint-and-merge
 class EnhancedSecurityAutomation {}
     constructor() {}
         this.projectRoot = process.cwd();
-        this.logFile = path.join(this.projectRoot, 'logs', 'enhanced-security-automation.log');
-        this.reportFile = path.join(this.projectRoot, 'security-automation-report.json');
-        this.ensureLogsDirectory()};
-    ensureLogsDirectory() {}
-        const logsDir = path.join(this.projectRoot, 'logs';);
+
         if () {}
-            fs.mkdirSync(logsDir, { "recursive": true })};
+<<<<<<< HEAD
+
+
+            fs.mkdirSync(logsDir, { "recursive: true })}
+    }
+=======
+            fs.mkdirSync(logsDir, { "recursive": true })};"
     };
+>>>>>>> origin/chore/fix-lint-and-merge
     log(message) {}
         const timestamp = new Date().toISOString() {}
-    ) {}
-            fs.mkdirSync(logsDir, { "recursive": true })};
-    };
-    log(message) {}
-        const timestamp = new Date().toISOString(}
+    ) {}"
+        const timestamp = new Date().toISOString(})
 });
         const logMessage = `[${timestamp}] ${message}\;n;`;`
         fs.appendFileSync(this.logFile, logMessage);
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+<<<<<<< HEAD
+        console.log(message)}
+    runSecurityAudit() {}
+        this.log(Running security audit...');
+        
+        try {}
+=======
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         console.log(message)};
     runSecurityAudit() {}
         this.log('Running security audit...');
-        
         try {}
             const auditResult = execSync('npm audit --json', { })
-                "cwd": this.projectRoot, 
+                "cwd": this.projectRoot,
                 "encoding": 'utf8',
                 "stdio": 'pipe'
             };);
-            
             const auditData = JSON.parse(auditResult;);
             const vulnerabilities = auditData.vulnerabilities?.total ||;0;
+=======
+        console.log(message)};
+    runSecurityAudit() {}"
+>>>>>>> origin/chore/fix-lint-and-merge
+
+            const auditData = JSON.parse(auditResult;);
+            const vulnerabilities = auditData.vulnerabilities?.total ||;0;
+<<<<<<< HEAD
+
+        console.log(message)}
+    runSecurityAudit() {}
+
+            });
+
+=======
             
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
+=======
+            
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+=======
+<<<<<<< HEAD
+            
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+>>>>>>> origin/chore/fix-lint-and-merge
             this.log(`Found ${vulnerabilities} security vulnerabilities`);
-            return {;}
-                "status": 'success',
-                "vulnerabilities": vulnerabilities,
+            return {}
+                "status": success',
+                vulnerabilities: vulnerabilities,
                 "details": auditData.vulnerabilities,
-                "metadata": auditData.metadata;
+                metadata: auditData.metadata;
             }} catch (error) {}
             this.log(`Security audit "failed": ${error.message}`);
-            return { "status": 'failed', "error": error.message }};
-    };
+            return { status: 'failed, "error": error.message }}
+    }
     checkForSecrets() {}
-        this.log('Checking for exposed secrets...');
+<<<<<<< HEAD
+
+=======
         
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
+        const secretPatterns = [/password\s*=\s*['][^]+["]/gi,
+            /api[_-]?key\s*=\s*['"][^']+[]/gi,
+            /secret\s*=\s*["][^'"]+[']/gi,
+            /token\s*=\s*[][^"]+['"]/gi,
+            /private[_-]?key\s*=\s*['][^]+["]/gi;
+>>>>>>> cursor/automate-test-improve-and-merge-code-18b6
+       ];
+
+=======
+        
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+=======
+        this.log('Checking for exposed secrets...');
+<<<<<<< HEAD
+=======
+        
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
         const secretPatterns = [/password\s*=\s*['"][^'"]+['"]/gi,
             /api[_-]?key\s*=\s*['"][^'"]+['"]/gi,
             /secret\s*=\s*['"][^'"]+['"]/gi,
             /token\s*=\s*['"][^'"]+['"]/gi,
             /private[_-]?key\s*=\s*['"][^'"]+['"]/gi;
        ];
-        
+<<<<<<< HEAD
+>>>>>>> origin/chore/fix-lint-and-merge
         const filesToCheck = this.findSourceFiles(;);
         const foundSecrets = [];
-        
         for (const file of filesToCheck) {}
             try {}
                 const content = fs.readFileSync(file, 'utf8';);
+<<<<<<< HEAD
+
+=======
+=======
+        
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+            `;
+            this.log(`Found ${vulnerabilities} security vulnerabilities`);
+            return {}
+
+       ];
+<<<<<<< HEAD
+
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+        const filesToCheck = this.findSourceFiles(;);
+        const foundSecrets = [];
+>>>>>>> origin/chore/fix-lint-and-merge
+        for (const file of filesToCheck) {}
+
+<<<<<<< HEAD
+=======
                 
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
+=======
+                
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+>>>>>>> origin/chore/fix-lint-and-merge
                 for (const pattern of secretPatterns) {}
                     const matches = content.match(pattern;);
                     if ( {})
                         foundSecrets.push({})
-                            "file": file,
-                            "matches": matches;
-                        })};
-                };
-            } catch (error) {}
-                this.log(`Error reading file ${file}: ${error.message}`)};
-        };
-        this.log(`Found potential secrets in ${foundSecrets.length} files`)) {`}
-     {}
-                        foundSecrets.push({})
-                            "file": file,
-                            "matches": matches;
-                        })};
-                };
-            } catch (error) {}
-                this.log(`Error reading file ${file}: ${error.message}`)};
-        };
-        this.log(`Found potential secrets in ${foundSecrets.length} files`)};
-        return {;}
-            "status": foundSecrets.length === 0 ? 'success' : 'warning',
-            "foundSecrets": foundSecrets.length,
-            "details": foundSecrets;
-        }};
-    findSourceFiles() {}
-        const extensions = ['.js', '.jsx', '.ts', '.tsx', '.json', '.env', '.config.js'];
+
         const files = [];
+<<<<<<< HEAD
+
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+        const scanDirectory = (dir) => {}
+            if () retu) {}
+    ) retu}r;n;
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
         
         const scanDirectory = (dir) => {}
             if () retu) {}
     ) retu}r;n;
             
+<<<<<<< HEAD
+
+=======
+            if () retu) {}
+    ) retu}r;n;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+=======
+        
+            if () retu) {}
+    ) retu}r;n;
+            
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
+=======
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+        const scanDirectory = (dir) => {}
+            if () retu) {}
+    ) retu}r;n;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+>>>>>>> origin/chore/fix-lint-and-merge
             const items = fs.readdirSync(dir;);
             for (const item of items) {}
                 const fullPath = path.join(dir, item;);
                 const stat = fs.statSync(fullPath;);
+<<<<<<< HEAD
+
+=======
                 
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
+=======
+                
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
+                if (&& !item.startsWith(.) && item !== 'node_modules') {}
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+                
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
                 if (&& !item.startsWith('.') && item !== 'node_modules') {}
+>>>>>>> origin/chore/fix-lint-and-merge
                     scanDirectory(fullPath)} else if (stat.isFile() && extensions.includes(path.extname(item))) {}
-                    files.push(fullPath)};
-            };
+                    files.push(fullPath)}
+            }
         }) {}
-    && !item.startsWith('.') && item !== 'node_modules') {}
+    && !item.startsWith(.) && item !== 'node_modules') {}
                     scanDirectory(fullPath)} else if (stat.isFile() && extensions.includes(path.extname(item))) {}
-                    files.push(fullPath)};
-            };
-        }};
+                    files.push(fullPath)}
+            }
+        }}
         scanDirectory(this.projectRoot);
-        return files};
+        return files}
     checkDependencies() {}
+<<<<<<< HEAD
+        this.log(Checking dependency security...);
+
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
+=======
         this.log('Checking dependency security...');
-        
+<<<<<<< HEAD
         try {}
             const packageJsonPath = path.join(this.projectRoot, 'package.json';);
             const packageJson = JSON.parse(fs.readFileSync(packageJsonPath, 'utf8';););
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+        
+        try {}
+            const packageJsonPath = path.join(this.projectRoot, 'package.json';);
+            const packageJson = JSON.parse(fs.readFileSync(packageJsonPath, utf8;););
             
+<<<<<<< HEAD
+
+=======
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+            const dependencies = {}
+                ...packageJson.dependencies || {},
+                ...packageJson.devDependencies || {}
+           }
+
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
             const dependencies = {}
                 ...packageJson.dependencies || {},
                 ...packageJson.devDependencies || {};
            };
+<<<<<<< HEAD
+            const totalDeps = Object.keys(dependencies).lengt;h;
+            this.log(`Analyzing ${totalDeps} dependencies`);
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
             
             const totalDeps = Object.keys(dependencies).lengt;h;
             this.log(`Analyzing ${totalDeps} dependencies`);
             
+<<<<<<< HEAD
+
+=======
+            
+            this.log(`Analyzing ${totalDeps} dependencies`);
+            
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
+=======
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
+            return {}
+                "status: 'success',
+                totalDependencies": totalDeps,
+                "dependencies: Object.keys(dependencies);
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
             return {;}
                 "status": 'success',
                 "totalDependencies": totalDeps,
                 "dependencies": Object.keys(dependencies);
+>>>>>>> origin/chore/fix-lint-and-merge
             }} catch (error) {}
-            this.log(`Dependency check "failed": ${error.message}`);
-            return { "status": 'failed', "error": error.message }};
-    };
+            this.log(`Dependency check failed": ${error.message}`);
+            return { "status: failed, error": error.message }}
+    }
     checkFilePermissions() {}
         this.log('Checking file permissions...');
+<<<<<<< HEAD
+
+=======
         
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
+        const criticalFiles = [package.json]
+>>>>>>> cursor/automate-test-improve-and-merge-code-18b6
+=======
+<<<<<<< HEAD
+=======
+        
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
         const criticalFiles = ['package.json',]
+>>>>>>> origin/chore/fix-lint-and-merge
             'package-lock.json',
-            '.env',
+            .env,
             '.env.local',
-            '.env.production'
+            .env.production
         ];
+<<<<<<< HEAD
+
+=======
+<<<<<<< HEAD
+        const permissionIssues = [];
+=======
         
         const permissionIssues = [];
         
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+>>>>>>> origin/chore/fix-lint-and-merge
+=======
+
+                ...packageJson.dependencies || {},
+                ...packageJson.devDependencies || {}
+            const totalDeps = Object.keys(dependencies).lengt;h;`;
+            this.log(`Analyzing ${totalDeps} dependencies`);
+
+        const permissionIssues = [];
+<<<<<<< HEAD
+
+=======
+        
+        
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
+=======
+        
+        
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+>>>>>>> origin/chore/fix-lint-and-merge
         for (const file of criticalFiles) {}
             const filePath = path.join(this.projectRoot, file;);
-            if () {}
                 const stats = fs.statSync(filePath) {}
     ) {}
-                const stats = fs.statSync(filePath}
-});
+                const stats = fs.statSync(filePath})
                 const mode = stats.mod;e;
                 const isReadableByOthers = (mode & 0o004) !==;0;
                 const isWritableByOthers = (mode & 0o002) !==;0;
+<<<<<<< HEAD
+
+=======
                 
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
+=======
+                
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+                
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+>>>>>>> origin/chore/fix-lint-and-merge
                 if ( {})
                     permissionIssues.push({})
-                        "file": file,
-                        "readableByOthers": isReadableByOthers,
-                        "writableByOthers": isWritableByOthers;
-                    })};
-            };
-        };
+                        "file: file,
+                        readableByOthers": isReadableByOthers,
+                        "writableByOthers: isWritableByOthers;
+                    })}
+            }
+        }
         this.log(`Found ${permissionIssues.length} permission issues`)) {`}
      {}
                     permissionIssues.push({})
-                        "file": file,
-                        "readableByOthers": isReadableByOthers,
-                        "writableByOthers": isWritableByOthers;
-                    })};
-            };
-        };
-        this.log(`Found ${permissionIssues.length} permission issues`)};
-        return {;}
-            "status": permissionIssues.length === 0 ? 'success' : 'warning',
-            "issues": permissionIssues.length,
-            "details": permissionIssues;
-        }};
+                        file": file,
+                        "readableByOthers: isReadableByOthers,
+                        writableByOthers": isWritableByOthers;
+                    })}
+            }
+        }
+        this.log(`Found ${permissionIssues.length} permission issues`)}
+        return {}
+            "status: permissionIssues.length === 0 ? 'success' : warning,
+            issues": permissionIssues.length,
+            "details: permissionIssues;
+        }}
     generateSecurityReport() {}
         this.log('Generating security automation report...');
+<<<<<<< HEAD
+
+=======
         
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
+=======
+        
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
+=======
+<<<<<<< HEAD
+=======
+        
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+>>>>>>> origin/chore/fix-lint-and-merge
         const report = {}
-            "timestamp": new Date().toISOString(),
-            "project": this.projectRoot,
-            "security": {}
+            timestamp": new Date().toISOString(),
+            "project: this.projectRoot,
+            security": {}
                 audit: this.runSecurityAudit(),
-                "secrets": this.checkForSecrets(),
-                "dependencies": this.checkDependencies(),
-                "permissions": this.checkFilePermissions();
+                "secrets: this.checkForSecrets(),
+                dependencies": this.checkDependencies(),
+                "permissions: this.checkFilePermissions();
             },
+<<<<<<< HEAD
+            recommendations": this.generateSecurityRecommendations();
+       }
+
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
+=======
             "recommendations": this.generateSecurityRecommendations();
        };
+<<<<<<< HEAD
+        fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2));
+        this.log(`Security report saved to ${this.reportFile}`);
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
 
         fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2));
         this.log(`Security report saved to ${this.reportFile}`);
         
+<<<<<<< HEAD
+
+=======
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+        return report}
+    generateSecurityRecommendations() {}
+
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
         return report};
     generateSecurityRecommendations() {}
         return [;]
             'Regularly update dependencies to patch security vulnerabilities',
+>>>>>>> origin/chore/fix-lint-and-merge
             'Use environment variables for sensitive configuration',
-            'Implement proper file permissions for sensitive files',
+            Implement proper file permissions for sensitive files,
             'Use HTTPS in production environments',
-            'Implement Content Security Policy (CSP) headers',
+            Implement Content Security Policy (CSP) headers,
             'Regularly scan for exposed secrets in code',
-            'Use security headers like HSTS, X-Frame-Options',
+            Use security headers like HSTS, X-Frame-Options,
             'Implement proper authentication and authorization',
-            'Use secure session management',
+            Use secure session management,
             'Regularly backup and encrypt sensitive data'
-        ]};
+        ]}
     async run() {}
-        this.log('Enhanced Security Automation started');
+<<<<<<< HEAD
+        this.log(Enhanced Security Automation started);
+
+=======
         
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
+=======
+        
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
+=======
+        this.log('Enhanced Security Automation started');
+<<<<<<< HEAD
+=======
+        
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+>>>>>>> origin/chore/fix-lint-and-merge
         try {}
             const report = this.generateSecurityReport(;);
             this.log('Enhanced Security Automation completed successfully');
             return report} catch (error) {}
+<<<<<<< HEAD
+            this.log(`Enhanced Security Automation "failed: ${error.message}`);
+=======
             this.log(`Enhanced Security Automation "failed": ${error.message}`);
-            throw error};
-    };
-};
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+
+                        writableByOthers": isWritableByOthers;"
+        this.log(`Found ${permissionIssues.length} permission issues`)) {`}
+                    permissionIssues.push({})
+
+            details": permissionIssues;"
+    generateSecurityReport() {}
+
+            security": {}"
+                audit: this.runSecurityAudit(),
+                secrets": this.checkForSecrets(),
+                "dependencies: this.checkDependencies(),
+                permissions": this.checkFilePermissions();"
+            },
+            recommendations": this.generateSecurityRecommendations();"
+
+<<<<<<< HEAD
+        return report}
+    generateSecurityRecommendations() {}
+        return [;]"
+
+            throw error}
 // Run the automation if this script is executed directly;
-if ( {})
     const automation = new EnhancedSecurityAutomation) {}
-     {}
+    const automation = new EnhancedSecurityAutomation}(;);
+    automation.run().catch(console.error)}
+
+=======
+
+        return report};
+    generateSecurityRecommendations() {}
+        return [;]"
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+            throw error};
+// Run the automation if this script is executed directly;
+    const automation = new EnhancedSecurityAutomation) {}
     const automation = new EnhancedSecurityAutomation}(;);
     automation.run().catch(console.error)};
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> origin/chore/fix-lint-and-merge
 
+=======
 module.exports = EnhancedSecurityAutomation;
+<<<<<<< HEAD
+
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+<<<<<<< HEAD
+>>>>>>> origin/chore/fix-lint-and-merge
+module.exports = EnhancedSecurityAutomation;
+=======
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+=======
+module.exports = EnhancedSecurityAutomation;
+<<<<<<< HEAD
+
+=======
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508

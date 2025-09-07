@@ -33,22 +33,36 @@ interface InteractiveButtonProps {
   className?: string;}
 }
 }
+<<<<<<< HEAD
 export const InteractiveButton: React.FC<InteractiveButtonProps /> = ({ children, onClick,variant = 'primary', size = 'md',disabled = false, loading = false,icon, className = '';}
+=======
+
+export const InteractiveButton: React.FC<InteractiveButtonProps    /> = ({ children, onClick,variant = 'primary', size = 'md',disabled = false, loading = false,icon, className = '';}
+>>>>>>> origin/main
    }) => {
 
 const [isHovered, setIsHovered] = useState(false);
   const baseClasses = 'relative inline-flex items-center justify-center font-medium rounded-lg transition-all duration-200 focus: outline-none focus:ring-2 focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed overflow-hidden';
 
+<<<<<<< HEAD
 const variantClasses: Record<ButtonVariant string /> = {primary: 'bg-blue-600 text-white hover:bg-blue-700 focus:ring-blue-500',
+=======
+const variantClasses: Record<ButtonVariant, string    /> = {primary: 'bg-blue-600 text-white hover:bg-blue-700 focus:ring-blue-500',
+>>>>>>> origin/main
   secondary: 'bg-gray-200 text-gray-900 hover:bg-gray-300 focus:ring-gray-500', ghost: 'bg-transparent text-gray-700 hover:bg-gray-100 focus:ring-gray-500'}
   gradient: 'bg-gradient-to-r from-blue-600 to-purple-600 text-white hover:from-blue-700 hover:to-purple-700 focus:ring-blue-500';}
   }
 
+<<<<<<< HEAD
 const sizeClasses: Record<ButtonSize string /> = {sm: 'px-3 py-1.5 text-sm'}
+=======
+const sizeClasses: Record<ButtonSize, string    /> = {sm: 'px-3 py-1.5 text-sm'}
+>>>>>>> origin/main
   md: 'px-4 py-2 text-base', lg: 'px-6 py-3 text-lg';}
   }
 
 const buttonClasses = `${baseClasses} ${variantClasses[variant]} ${sizeClasses[size]} ${className}`;
+<<<<<<< HEAD
   return (
           <motion.button;
       className = {buttonClasses export;
@@ -62,14 +76,43 @@ const variantClasses: Record<ButtonVariant string /> = {primary:, bg-blue-600 te
 }
 
 const sizeClasses: Record<ButtonSize string /> = {sm:, px-3 py-2 text-sm;}
+=======
+  return (<motion.button;
+      className = {buttonClasses}
+
+export;
+  const InteractiveButton: React.FC<InteractiveButtonProps    /> = ({ ursor/automate-test-fix-improve-and-merge-code-48f3;}
+   }) => {
+
+
+<<<<<<< HEAD
+
+const "variantClasses": Record<ButtonVariant, string> = {"primary":, bg-blue-600 text-white "hover": bg-blue-700 "focus":ring-blue-500, "secondary":, bg-gray-200 text-gray-900 "hover": bg-gray-300 "focus":ring-gray-500 "dark":bg-gray-700 "dark":text-white "dark":"hover":bg-gray-600, "ghost":, text-gray-700 "hover": bg-gray-100 "focus":ring-gray-500 "dark":text-gray-300 "dark":"hover":bg-gray-800, "gradient":, bg-gradient-to-r from-blue-600 to-purple-600 text-white "hover": from-blue-700 "hover":to-purple-700 "focus":ring-blue-50,;
+=======
+const [isHovered, setIsHovered] = useState(false);
+  const baseClasses = 'relative inline-flex items-center justify-center font-medium rounded-lg transition-all duration-200 focus: outline-none focus:ring-2 focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed overflow-hidden';
+}
+const variantClasses: Record<ButtonVariant, string    /> = {primary:, bg-blue-600 text-white hover: bg-blue-700 focus:ring-blue-500, secondary:, bg-gray-200 text-gray-900 hover: bg-gray-300 focus:ring-gray-500 dark:bg-gray-700 dark:text-white dark:hover:bg-gray-600, ghost:, text-gray-700 hover: bg-gray-100 focus:ring-gray-500 dark:text-gray-300 dark:hover:bg-gray-800, gradient:, bg-gradient-to-r from-blue-600 to-purple-600 text-white hover: from-blue-700 hover:to-purple-700 focus:ring-blue-50}
+>>>>>>> origin/chore/fix-lint-and-merge
+}
+
+const sizeClasses: Record<ButtonSize, string    /> = {sm:, px-3 py-2 text-sm;}
+>>>>>>> origin/main
   ', md: 'px-4 py-2 text-base, lg: 'px-6 py-3 text-lg';}
   '}';
 ursor/automate-test-fix-improve-and-merge-code-48f3;
   return (
           <motion.button;
       className={`${baseClasses} ${variantClasses[variant]} ${sizeClasses[size]} ${className}`}
+<<<<<<< HEAD
       onClick={onClick disabled={disabled || loading onHoverStart={() = /> setIsHovered(true)
       onHoverEnd={() => setIsHovered(false)
+=======
+      onClick={onClick}
+      disabled={disabled || loading}
+      onHoverStart={() =    /> setIsHovered(true)}
+      onHoverEnd={() => setIsHovered(false)}
+>>>>>>> origin/main
       whileHover={{ scale: 1.02 }}
       whileTap={{ scale: 0.98 }
 }
@@ -78,23 +121,29 @@ ursor/automate-test-fix-improve-and-merge-code-48f3;
   damping: 17; }
 }
     >;
+<<<<<<< HEAD
       {loading && (
           <motion.div;}
           className=\"absolute inset-0 flex items-center justify-center\";}
+=======
+      {loading && (<motion.div;}
+          className=\'absolute inset-0 flex items-center justify-center\';}
+>>>>>>> origin/main
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }
 }
-         />;"
-          <div className=\"w-4 h-4 border-2 border-white border-t-transparent rounded-full animate-spin\" />;
+            />;"
+          <div className=\"w-4 h-4 border-2 border-white border-t-transparent rounded-full animate-spin\"    />;
         </motion.div>;
       )}<motion.div;
         className={`flex items-center gap-2 ${loading ? 'opacity-0' : 'opacity-100'}`}
         animate={{ opacity: loading ? 0 : 1 }
 }
-       />;"
-        {icon && <span className=\"flex-shrink-0\" />{icon}</span>}
+          />;"
+        {icon && <span className=\"flex-shrink-0\"    />{icon}</span>}
         {children}
       </motion.div>;
+<<<<<<< HEAD
       {variant === 'gradient' && (
           <motion.div;}"
           className=\"absolute inset-0 bg-gradient-to-r from-white/20 to-transparent\";}
@@ -105,6 +154,16 @@ ursor/automate-test-fix-improve-and-merge-code-48f3;
             ease: 'easeInOut' 
 
         />;
+=======
+      {variant === 'gradient' && (<motion.div;}"
+          className=\'absolute inset-0 bg-gradient-to-r from-white/20 to-transparent\';}
+          initial={{ x: '-100%' }}
+          animate={{ x: isHovered ? '100%' : '-100%' }
+}
+          transition={{ duration: 0.6, ease: 'easeInOut' }
+}
+           />;
+>>>>>>> origin/main
       )}
     </motion.button>>
 
@@ -114,6 +173,7 @@ ursor/automate-test-fix-improve-and-merge-code-48f3;
             -100%;
   ', '100%;] as any: '-100%, opacity: isHovered ? [0, 0.2, 0] as any : 0 }}        transition={{ duration: 0.6 }
 }
+<<<<<<< HEAD
       />;
       <div className='relative flex items-center gap-2' />;
         {loading ? (
@@ -123,8 +183,16 @@ ursor/automate-test-fix-improve-and-merge-code-48f3;
             ease: 'linear'
             ' } />        ) : (';
           icon && <span className='flex-shrink-0' />{icon}</span>;
+=======
+         />;
+      <div className='relative flex items-center gap-2'    />;
+        {loading ? (<motion.div className='w-4 h-4 border-2 border-current border-t-transparent rounded-full' animate={{ rotate: 360 }
+} transition={{ duration: 1, repeat: Infinity, ease: 'linear';}
+  ' }}    />        ) : (';
+          icon && <span className='flex-shrink-0'    />{icon}</span>;
+>>>>>>> origin/main
         )}
-        <span />{children}</span>;
+        <span    />{children}</span>;
       </div>;
     </motion.button>;
   )}
@@ -135,7 +203,12 @@ interface AnimatedCardProps {
   delay?: number;}
 }
 }
+<<<<<<< HEAD
 export const AnimatedCard: React.FC<AnimatedCardProps /> = ({ children, className = '',delay = 0;}
+=======
+
+export const AnimatedCard: React.FC<AnimatedCardProps    /> = ({ children, className = '',delay = 0;}
+>>>>>>> origin/main
    }) => {
 
 }
@@ -154,6 +227,7 @@ if (isInView) {controls.start('visible')}
   return (
           <motion.div;
       ref={ref}
+<<<<<<< HEAD
             variants={variants"
       initial=\"hidden\"
             animate={controls
@@ -167,6 +241,21 @@ if (isInView) {controls.start('visible')}
   const ref = useRef<HTMLDivElement | null />(null)const isInView = useInView(ref, { once: true,
   margin: '-100px'},,
   })const controls = useAnimation(; useEffect(() => {}
+=======
+      variants={variants}"
+      initial=\'hidden\';
+      animate={controls}
+      className={className}
+        />;
+
+export const AnimatedCard: React.FC<AnimatedCardProps    /> = ({ children, className = '', delay = 0, direction =;}
+  'up'    }) => {
+
+}
+  const ref = useRef<HTMLDivElement | null    />(null)const isInView = useInView(ref, { once: true, margin: '-100px'}
+})const controls = useAnimation(;
+  useEffect(() => {}
+>>>>>>> origin/main
 if (isInView) controls.start('visible')}, [isInView, controls];
   const directionVariants = {up: { hidden: { y: 50;
   opacity: 0; }
@@ -190,12 +279,20 @@ if (isInView) controls.start('visible')}, [isInView, controls];
 }
       initial='hidden';
       animate={controls}
+<<<<<<< HEAD
             transition={{ duration: 0.6
             delay
             whileHover={{ y: -5 
 
      />}
             {children
+=======
+      transition={{ duration: 0.6, delay }}
+      whileHover={{ y: -5 }
+}
+        />;
+      {children}
+>>>>>>> origin/main
     </motion.div>;
   )}
 
@@ -205,19 +302,33 @@ interface HoverEffectProps {
   scale?: number;}
 }
 }
+<<<<<<< HEAD
 export const HoverEffect: React.FC<HoverEffectProps /> = ({ children, className = '',scale = 1.05;}
+=======
+
+export const HoverEffect: React.FC<HoverEffectProps    /> = ({ children, className = '',scale = 1.05;}
+>>>>>>> origin/main
    }) => {
 
 }
 return (
           <motion.div;}
       className={className}
+<<<<<<< HEAD
             whileHover={{ scale transition={{ type: 'spring'
   stiffness: 400 damping: 17
             
 
      />}
             {children
+=======
+      whileHover={{ scale }}
+      transition={{ type: 'spring'}
+  stiffness: 400, damping: 17 }
+}
+        />;
+      {children}
+>>>>>>> origin/main
     </motion.div>;
   )}
 
@@ -226,7 +337,12 @@ interface LoadingSpinnerProps {
   className?: string;}
 }
 }
+<<<<<<< HEAD
 export const LoadingSpinner: React.FC<LoadingSpinnerProps /> = ({ size = 'md', className = '';}
+=======
+
+export const LoadingSpinner: React.FC<LoadingSpinnerProps    /> = ({ size = 'md', className = '';}
+>>>>>>> origin/main
    }) => {
 
 const sizeClasses = {sm: 'w-4 h-4'}
@@ -236,11 +352,17 @@ const sizeClasses = {sm: 'w-4 h-4'}
       className={`${sizeClasses[size]} border-2 border-gray-300 border-t-blue-600 rounded-full ${className}`}
       animate={{ rotate: 360 }
 }
+<<<<<<< HEAD
       transition={{ duration: 1}
             repeat: Infinity
             ease: 'linear' 
 
     />;
+=======
+      transition={{ duration: 1, repeat: Infinity, ease: 'linear' }
+}
+       />;
+>>>>>>> origin/main
   )}
 
 interface FadeInProps {
@@ -250,7 +372,12 @@ interface FadeInProps {
   className?: string;}
 }
 }
+<<<<<<< HEAD
 export const FadeIn: React.FC<FadeInProps /> = ({ children, delay = 0,duration = 0.6, className = '';}
+=======
+
+export const FadeIn: React.FC<FadeInProps    /> = ({ children, delay = 0,duration = 0.6, className = '';}
+>>>>>>> origin/main
    }) => {
 
 }
@@ -268,6 +395,7 @@ if (isInView) {controls.start('visible')}
   return (
           <motion.div;
       ref={ref}
+<<<<<<< HEAD
             variants={variants"
       initial=\"hidden\"
             animate={controls
@@ -278,13 +406,26 @@ if (isInView) {controls.start('visible')}
             )
 export default {InteractiveButton, AnimatedCard,HoverEffect, LoadingSpinner}
             FadeIn;
+=======
+      variants={variants}"
+      initial=\'hidden\';
+      animate={controls}
+      className={className}
+        />;
+      {children}
+    </motion.div>;
+  )}
+
+export default {InteractiveButton, AnimatedCard,HoverEffect, LoadingSpinner,FadeIn;}
+>>>>>>> origin/main
 }
 
 interface InteractiveStatsProps  {stats: Array<{ number: string;
    label: string;}
-   icon: React.ComponentType<any />;}
+   icon: React.ComponentType<any    />;}
 }>;
 }
+<<<<<<< HEAD
 export const InteractiveStats: React.FC<InteractiveStatsProps /> = ({ stats}
 }) => (
           <div className='grid grid-cols-2 md: grid-cols-4 gap-6' />;
@@ -314,9 +455,33 @@ export const InteractiveStats: React.FC<InteractiveStatsProps /> = ({ stats}
 } transition={{ duration: 0.5}
             delay: index * 0.1 + 0.3 viewport={{ once: true 
 } />;
+=======
+
+export const InteractiveStats: React.FC<InteractiveStatsProps    /> = ({ stats}
+}) => (<div className='grid grid-cols-2 md: grid-cols-4 gap-6'    />;
+    {stats.map((stat, index) => (<motion.div;}
+        key={index}
+        className='text-center';
+        initial={{ opacity: 0, y: 20 }
+}
+        whileInView={{ opacity: 1, y: 0 }
+}
+        transition={{ duration: 0.6, delay: index * 0.1 }}
+        viewport={{ once: true }
+}
+          />;
+        <motion.div className='inline-flex items-center justify-center w-16 h-16 bg-gradient-to-br from-blue-500 to-purple-600 rounded-full mb-4' whileHover={{ scale: 1.1, rotate: 5 }
+} transition={{ type:;}
+  'spring', damping: 10 }
+}    />          <stat.icon className='w-8 h-8 text-white'    />;
+        </motion.div>;
+        <motion.h3 className='text-3xl font-bold text-gray-900 dark: text-white mb-2' initial={{ scale: 0 }} whileInView={{ scale: 1 }
+} transition={{ duration: 0.5, delay: index * 0.1 + 0.3 }} viewport={{ once: true }
+}    />;
+>>>>>>> origin/main
           {stat.number}
         </motion.h3>;
-        <p className='text-gray-600 dark: text-gray-400' />{stat.labe}
+        <p className='text-gray-600 dark: text-gray-400'    />{stat.labe}
 }</p>;
       </motion.div>;
     ))}
@@ -329,25 +494,40 @@ export const InteractiveStats: React.FC<InteractiveStatsProps /> = ({ stats}
    color?: 'blue' | 'green' | 'purple' | 'red';}
 }
 }
+<<<<<<< HEAD
 export const FloatingActionButton: React.FC<FloatingActionButtonProps /> = ({ icon, onClick, tooltip, position =, bottom-right', color =';}
+=======
+
+export const FloatingActionButton: React.FC<FloatingActionButtonProps    /> = ({ icon, onClick, tooltip, position =, bottom-right', color =';}
+>>>>>>> origin/main
   'blue'    }) => {
 
 const [showTooltip, setShowTooltip] = useState(false);}
   const positionClasses: Record<NonNullable<FloatingActionButtonProps[;}
-  'position] />, string> = {, bottom-right': 'bottom-6 right-6,  , bottom-left': 'bottom-6 left-6,  , top-right': 'top-6 right-6,  , top-left': 'top-6 left-6}';
+  'position]    />, string> = {, bottom-right': 'bottom-6 right-6,  , bottom-left': 'bottom-6 left-6,  , top-right': 'top-6 right-6,  , top-left': 'top-6 left-6}';
 
-const colorClasses: Record<NonNullable<FloatingActionButtonProps[, color'] />, string> = {';}
+const colorClasses: Record<NonNullable<FloatingActionButtonProps[, color']    />, string> = {';}
     blue: 'bg-blue-600 hover:bg-blue-700 focus:ring-blue-500, green:, bg-green-600 hover: bg-green-700 focus:ring-green-500, purple:, bg-purple-600 hover: bg-purple-700 focus:ring-purple-500, red:, bg-red-600 hover: bg-red-700 focus:ring-red-50}
 }';
+<<<<<<< HEAD
   return (
     <div className={`fixed ${positionClasses[position]} z-50`} />
+=======
+  return (<div className={`fixed ${positionClasses[position]} z-50`}    />
+>>>>>>> origin/main
 
       <motion.button;
         className={`w-14 h-14 rounded-full text-white shadow-lg focus: outline-none focus:ring-2 focus:ring-offset-2 ${colorClasses[color]}`}
         onClick={onClick}
+<<<<<<< HEAD
             onHoverStart={() = /> setShowTooltip(true)
         onHoverEnd={() => setShowTooltip(false)
         whileHover={{ scale: 1.1 }
+=======
+        onHoverStart={() =    /> setShowTooltip(true)}
+        onHoverEnd={() => setShowTooltip(false)}
+        whileHover={{ scale: 1.1 }}
+>>>>>>> origin/main
         whileTap={{ scale: 0.9 }}
         initial={{ scale: 0 }}
         animate={{ scale: 1 }
@@ -359,14 +539,20 @@ const colorClasses: Record<NonNullable<FloatingActionButtonProps[, color'] />, s
       >;
         {icon}
       </motion.button>;
+<<<<<<< HEAD
       {tooltip && showTooltip && (
           <motion.div initial={{ opacity: 0}
             y: 10
               animate={{ opacity: 1}
             y: 0
               className='absolute bottom-full mb-2 left-1/2 transform -translate-x-1/2 bg-gray-900 text-white text-sm px-3 py-1 rounded-lg whitespace-nowrap' />;
+=======
+      {tooltip && showTooltip && (<motion.div initial={{ opacity: 0, y: 10 }
+} animate={{ opacity: 1, y: 0 }
+} className='absolute bottom-full mb-2 left-1/2 transform -translate-x-1/2 bg-gray-900 text-white text-sm px-3 py-1 rounded-lg whitespace-nowrap'    />;
+>>>>>>> origin/main
           {tooltip}
-          <div className='absolute top-full left-1/2 transform -translate-x-1/2 w-0 h-0 border-l-4 border-r-4 border-t-4 border-transparent border-t-gray-900' />;
+          <div className='absolute top-full left-1/2 transform -translate-x-1/2 w-0 h-0 border-l-4 border-r-4 border-t-4 border-transparent border-t-gray-900'    />;
         </motion.div>;
       )}
     </div>;

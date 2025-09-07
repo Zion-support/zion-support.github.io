@@ -1,15 +1,14 @@
+import React from 'react';
 
 ;
-import React from 'react';
 
 interface UltraFuturisticBackgroundProps {
   children: React.ReactNode;className?: string;}
 }
 }
 
-const UltraFuturisticBackground: React.FC<UltraFuturisticBackgroundProps /> = ({ children,className = '';}
+const UltraFuturisticBackground: React.FC<UltraFuturisticBackgroundProps /> = ({ children;,className = '';}
    }) => {
-
 
 const getBackgroundClasses = () => ;
   const baseClasses  = 'relative overflow-hidden';switch (variant) {case 'quantum':;
@@ -21,7 +20,45 @@ interface UltraFuturisticBackgroundProps {
   className?: string;}
 }
 }
+  children: React.ReactNode;
+  variant?: 'quantum' | 'matrix' | 'neon';
+  intensity?: 'low' | 'medium' | 'high';
+  className?: string;
 
+export default function UltraFuturisticBackground({ 
+  children, 
+  variant = 'quantum',
+  intensity = 'medium',
+  className = ')
+}: UltraFuturisticBackgroundProps) {
+  const getBackgroundClasses = () => {
+    const baseClasses = 'min-h-screen relative overflow-hidden';
+    switch (variant) {
+      case 'quantum':
+        return `${baseClasses} bg-gradient-to-br from-purple-900 via-blue-900 to-indigo-900`;
+      case 'matrix':`;
+        return `${baseClasses} bg-gradient-to-br from-green-900 via-gray-900 to-black`;
+      case 'neon':`;
+        return `${baseClasses} bg-gradient-to-br from-pink-900 via-purple-900 to-cyan-900`;
+      default:`;
+        return `${baseClasses} bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900`;
+
+  };
+  
+  return ()`;
+    <div className={`${getBackgroundClasses()} ${className}`}>
+</div>
+const UltraFuturisticBackground: React.FC<UltraFuturisticBackgroundProps> = ({
+)`;
+      <div className="absolute inset-0 bg-black/20" />"
+</div>"
+      <div className="relative z-10">"
+    </div>"`;
+
+<<<<<<< HEAD
+export default function UltraFuturisticBackground() {
+  }
+=======
 export default function UltraFuturisticBackground({ 
   children, 
   variant = 'quantum', 
@@ -29,6 +66,7 @@ export default function UltraFuturisticBackground({
   className = ''}
 }: UltraFuturisticBackgroundProps) {
   const getBackgroundClasses = (
+>>>>>>> origin/chore/fix-lint-and-merge
    ;
   const baseClasses = 'min-h-screen relative overflow-hidden';
     
@@ -41,7 +79,7 @@ export default function UltraFuturisticBackground({
         return `${baseClasses} bg-gradient-to-br from-green-900 via-gray-900 to-black`;
       case 'neon':
         return `${baseClasses} bg-gradient-to-br from-pink-900 via-purple-900 to-cyan-900`;
-      default: return `${baseClasse,}
+      default: return `${baseClasse;,}
 } bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900`;
     }
   };
@@ -64,7 +102,7 @@ export default function UltraFuturisticBackground({
   className?: string;
 }
 
-const UltraFuturisticBackground: React.FC<UltraFuturisticBackgroundProps /> = ({ children,
+const UltraFuturisticBackground: React.FC<UltraFuturisticBackgroundProps /> = ({ children;,
   intensity = 'medium',
   colorScheme = 'quantum-fusion',
   particleCount = 200,
@@ -73,8 +111,11 @@ const UltraFuturisticBackground: React.FC<UltraFuturisticBackgroundProps /> = ({
   enableQuantumEffects = true,
   enableNeonEffects = true,
   enableSpaceTime = true,
+<<<<<<< HEAD
+variant = 'quantum',;'
+=======
   variant = 'quantum',
-import React from 'react';
+>>>>>>> origin/chore/fix-lint-and-merge
 interface UltraFuturisticBackgroundProps {
   children: React.ReactNode;}
   className?: string;}
@@ -84,13 +125,23 @@ const UltraFuturisticBackground: React.FC<UltraFuturisticBackgroundProps /> = ({
   className = ''}
    }) => {
 
+<<<<<<< HEAD
 
 
+  }
+
+
+
+=======
   const getBackgroundClasses = (
+>>>>>>> origin/chore/fix-lint-and-merge
    ;
   const baseClasses = 'relative overflow-hidden';
     
+<<<<<<< HEAD
+=======
     const baseClasses = 'relative overflow-hidden';
+>>>>>>> origin/chore/fix-lint-and-merge
     switch (variant) {
       case 'quantum':) => {
   return $3;}
@@ -110,11 +161,10 @@ const UltraFuturisticBackground: React.FC<UltraFuturisticBackgroundProps /> = ({
 
 export default UltraFuturisticBackground;
       case 'cyber':
-      default: return `${baseClasse,}
+      default: return `${baseClasse;,}
 } bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900`;
-      default:
-        return `${baseClasses} bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900`;
-      default: return `${baseClasse,}
+      default: return `${baseClasses;} bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900`;
+      default: return `${baseClasse;,}
 } bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900`;
     }
   };
@@ -129,7 +179,5 @@ export default UltraFuturisticBackground;
   )
 };
 
-
 export default UltraFuturisticBackground;
 export default UltraFuturisticBackground;
-

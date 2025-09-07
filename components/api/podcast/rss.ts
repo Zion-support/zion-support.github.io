@@ -1,12 +1,46 @@
+<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse,
   from 'next';
+=======
+<<<<<<< HEAD
+import type { NextApiRequest, NextApiResponse } from 'next';'
+import fs from 'fs';'
+import path from 'path';
+function ensureStorage() {
+const EPISODES_PATH = path.join(process.cwd(), 'datapodcastepisodes.json'),
+const RSS_PATH = path.join(process.cwd(), 'publicpodcast.xml'),
+
+function ensureStorage() {
+  const dir = path.dirname($2);
+  if (!fs.existsSync(dir)) fs.mkdirSync($2);
+  if (!fs.existsSync(EPISODES_PATH)) fs.writeFileSync(EPISODES_PATH, '[]utf8')
+}
+
+
+function ensureStorage() {}
+'
+  if (!fs.existsSync(EPISODES_PATH)) fs.writeFileSync(EPISODES_PATH, '[]utf8')
+}
+=======
+import type { NextApiRequest, NextApiResponse } from 'next';
+>>>>>>> origin/main
 import fs from 'fs';
 import path from 'path';
+>>>>>>> origin/chore/fix-lint-and-merge
 
 const EPISODES_PATH = null;
   return res.status(200).json({ ok: true,,,
   path: '/podcast.xml' })
 }
+const EPISODES_PATH = path.join(
+  process.cwd()
+  'data'
+  'podcast'
+  'episodes.json'
+);
+const RSS_PATH = path.join(process.cwd(), 'public', 'podcast.xml');
+origin/cursor/automate-test-improve-and-merge-code-2533
+
 
 const EPISODES_PATH = path.join(
   process.cwd()
@@ -19,6 +53,22 @@ const RSS_PATH = path.join(process.cwd(), 'public', 'podcast.xml');
 
 function ensureStorage() {
 
+<<<<<<< HEAD
+  }
+
+  const dir = path.dirname(EPISODES_PATH);
+  if (!fs.existsSync(dir)) fs.mkdirSync(dir, { recursive: true });
+if (!fs.existsSync(EPISODES_PATH))
+
+  ensureStorage();
+  const siteUrl = process.env.SITE_URL |'http://localhost:3000';
+
+  const dir = path && path.dirname(EPISODES_PATH);
+  if (!fs && fs.existsSync(dir)) fs && fs.mkdirSync(dir, { "recursive": true
+});
+  if (!fs && fs.existsSync(EPISODES_PATH))
+
+=======
   const dir = path.dirname(EPISODES_PATH);}
   if (!fs.existsSync(dir)) fs.mkdirSync(dir,
   { recursive: true},,
@@ -54,24 +104,34 @@ function ensureStorage() {
 export default function handler(req: NextApiRequest,,,
   res: NextApiResponse) {
   if (req && req.method !== 'POST')}
+<<<<<<< HEAD
     return res && res.status(405).json({ error: 'Method not allowed'},,
   });
+=======
+    return res && res.status(405).json({ error: 'Method not allowed'}
+>>>>>>> origin/chore/fix-lint-and-merge
+});
+>>>>>>> origin/main
   ensureStorage();
 
 const items = episodes;
     .filter(e => e.audio?.mp3Url)
 
+<<<<<<< HEAD
+
+=======
     .map(e => {
      ;,,
   const pubDate = new Date(e.createdAt).toUTCString();}
 }
 const audioUrl = `${siteUrl}${e.audio.mp3Url}`;
       return `
-    <item />
-      <pubDate />${pubDate}</pubDate>
-      <enclosure url=\"${audioUrl}\" length=\"0\" type=\"audio/mpeg\" />
+    <item    />
+      <pubDate    />${pubDate}</pubDate>
+      <enclosure url=\"${audioUrl}\" length=\"0\" type=\"audio/mpeg\"    />
 
     </item>`;
+<<<<<<< HEAD
     }).join('\n')
       <channel />;
     <title />Zion Podcast</title>;
@@ -79,21 +139,41 @@ const audioUrl = `${siteUrl}${e.audio.mp3Url}`;
     <language />en-us</language>;
     <itunes:author />Zion</itunes:author>;
     <description />Zion interviews builders, founders, and contributors.</description>;
+=======
+    }).join('\n')<channel    />;
+    <title    />Zion Podcast</title>;
+    <link    />${siteUrl}/media/podcast</link>;
+    <language    />en-us</language>;
+    <itunes:author    />Zion</itunes:author>;
+    <description    />Zion interviews builders, founders, and contributors.</description>;
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> origin/main
     ${items}
 
   </channel>
 </rss>`;
 
+<<<<<<< HEAD
   fs.writeFileSync(RSS_PATH, xml,,,
   'utf8');
 return res.status(200).json({ ok: true path: '/podcast.xml'} });
+=======
+<<<<<<< HEAD
+
+=======
+
+  fs.writeFileSync(RSS_PATH, xml, 'utf8');
+return res.status(200).json({ ok: true, path: '/podcast.xml'}
+});
+>>>>>>> origin/main
 
 }) .join ('\n');
-<channel /> <title />Zion Podcast</title> <link />$ {}
+<channel    /> <title    />Zion Podcast</title> <link    />$ {}
   siteUrl}
-}/media/podcast</link> <language />en-us</language> <itunes:author />Zion</itunes:author> <description />Zion interviews builders, founders, and contributors.</description> $ {
+}/media/podcast</link> <language    />en-us</language> <itunes:author    />Zion</itunes:author> <description    />Zion interviews builders, founders, and contributors.</description> $ {
 }
   items }
 }</channel> </rss>`;
+>>>>>>> origin/chore/fix-lint-and-merge
 
 "

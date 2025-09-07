@@ -1,5 +1,6 @@
 {
 
+
 ursor/automate-test-improve-and-merge-code-646c
 
   "timestamp": "2025-09-04T21:58:25.812Z",
@@ -8,6 +9,13 @@ ursor/automate-test-improve-and-merge-code-646c
   "summary": {
     "totalIssues": 0,
     "fixesApplied": 0
+
+
+
+
+
+
+
 
 
 
@@ -36,7 +44,22 @@ ursor/automate-test-improve-and-merge-code-646c
     "fixesApplied": 0
   }
   "timestamp": "2025-09-06T04:56:16.606Z",
+
   "vulnerabilities": [
+    "Found 0 dependency vulnerabilities",
+    "Potential secret in src/mobile/components/onboarding/SignUpForm.tsx",
+    "Potential secret in src/pages/Signup.tsx"
+  ],
+  "recommendations": [
+    "Run npm audit fix to resolve vulnerabilities",
+    "Review files for exposed secrets and move them to environment variables"
+  ],
+  "summary": {
+    "totalVulnerabilities": 3,
+    "totalRecommendations": 2,
+    "securityScore": 66
+  }
+}
 
     {
       "file": "/workspace/package.json",
@@ -67,6 +90,7 @@ ursor/automate-test-improve-and-merge-code-646c
     "Recommendations: 4"
   ]
 }
+origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 
 
 

@@ -17,7 +17,7 @@ class TargetedSyntaxFixer {
   fixFile(filePath) {
     try {
       let content = fs.readFileSync(filePath, 'utf8');
-      let originalContent = content;
+      const originalContent = content;
       let hasChanges = false;
 
       // Fix specific syntax issues
@@ -34,7 +34,6 @@ class TargetedSyntaxFixer {
         { 
           pattern: /<(\w+)\s+className="([^"]*\\"[^"]*)"\s*\/>/g, 
           replacement: (match, tag, className) => {
-            const fixed = className.replace(/\\"/g, '"');
             return `<${tag} className="${fixed}" />`;
           }
         },
@@ -100,7 +99,6 @@ class TargetedSyntaxFixer {
             hasChanges = true;
           }
         } else {
-          const newContent = content.replace(fix.pattern, fix.replacement);
           if (newContent !== content) {
             content = newContent;
             hasChanges = true;

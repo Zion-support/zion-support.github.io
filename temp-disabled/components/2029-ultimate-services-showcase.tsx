@@ -123,7 +123,6 @@ import { quantumSpaceInnovations2028  } from '../data/2028-quantum-space-innovat
                   setSelectedPriceRange('all')];
   const filteredServices = allServices && allServices.filter(service => {const matchesCategory =;
 
-const allServices = null;
                   setSelectedPriceRange('all')];
 
 const filteredServices = allServices && allServices.filter(service => ;

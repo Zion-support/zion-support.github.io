@@ -1,27 +1,76 @@
-import React from \"react\",
-import { WorkspaceHeader } from \"./WorkspaceHeader\",
-import { SharedInbox } from \"./SharedInbox\",
-import { TeamStats } from \"./TeamStats\",
-import { QuickActions } from \"./QuickActions\",
-import { RecentActivity } from \"./RecentActivity\";
-import { TalentPool } from \"./TalentPool\";
-import { RecentActivity } from \"./RecentActivity\",
-import { TalentPool } from \"./TalentPool\",    primaryColor: string,
-    backgroundColor: string,
+import React from "react";
+import { WorkspaceHeader } from "./WorkspaceHeader";
+import { SharedInbox } from "./SharedInbox";
+import { TeamStats } from "./TeamStats";
+import { QuickActions } from "./QuickActions";
+import { RecentActivity } from "./RecentActivity";
+import { TalentPool } from "./TalentPool";
+export interface Company {;
+  id: string;
+  name: string;
+  logoUrl?: string;
+  theme?: {
+    primaryColor: string;
+    backgroundColor: string;
     textColor: string;
+  };
+  plan: string;
+  teamSize: number;
+
+import React from "react",
+import { WorkspaceHeader } from "./WorkspaceHeader",
+import { SharedInbox } from "./SharedInbox",
+import { TeamStats } from "./TeamStats",
+import { QuickActions } from "./QuickActions",
+
+import React from "react",;
+import { WorkspaceHeader } from "./WorkspaceHeader",;
+import { SharedInbox } from "./SharedInbox",;
+import { TeamStats } from "./TeamStats",;
+import { QuickActions } from "./QuickActions",;
+
+import { RecentActivity } from "./RecentActivity";
+import { TalentPool } from "./TalentPool";
+
+export interface Company {
+  // TODO: Implement
+}
+  id: string,
+  name: string,
+  logoUrl?: string,
+  theme?: {
+
+    primaryColor: string;
+    backgroundColor: string;
+
+    textColor: string;
+  }
+
+  plan: string;
+  teamSize: number;
+  teamLimit: number;
+  billingCycle: string;
+  workspaceUrl: string
+}
+interface CompanyDashboardProps {
+  company: Company;
+}
+
+    primaryColor: string,
+
   },
   plan: string,
   teamSize: number,
   teamLimit: number,
   billingCycle: string,
-  workspaceUrl: string;
-import React from \"react\";
-import { WorkspaceHeader } from \"./WorkspaceHeader\";
-import { SharedInbox } from \"./SharedInbox\",;
-import { TeamStats } from \"./TeamStats\",;
-import { QuickActions } from \"./QuickActions\",;
-import { RecentActivity } from \"./RecentActivity\",;
-import { TalentPool } from \"./TalentPool\",;
+  workspaceUrl: string"
+import React from "react",;"
+import { WorkspaceHeader } from "./WorkspaceHeader",;"
+import { SharedInbox } from "./SharedInbox",;"
+import { TeamStats } from "./TeamStats",;"
+import { QuickActions } from "./QuickActions",;"
+import { RecentActivity } from "./RecentActivity",;"
+import { TalentPool } from "./TalentPool",;
 export interface Company {;
   id: string;
   name: string;
@@ -29,53 +78,92 @@ export interface Company {;
   theme?: {;
     primaryColor: string;
     backgroundColor: string;
-    textColor: string;  teamLimit: number;
-  billingCycle: string;}
-  workspaceUrl: string}
+
+  teamLimit: number;
+
+  billingCycle: string;
+  workspaceUrl: string;
 }
-interface CompanyDashboardProps {
+
+  company: Company;
+}
+
+  billingCycle: string;
+  workspaceUrl: string
+}
+
+}
+
+  company: Company;
+}
+
 ;
-interface CompanyDashboardProps {;}
-  company: Company;}
+interface CompanyDashboardProps {;
+interface CompanyDashboardProps {
+
+;
+interface CompanyDashboardProps {;
+
+  company: Company;
 }
-      <div className=\"mt-8 grid grid-cols-1 lg: grid-cols-3 gap-6\" />
-        <div className=\"lg:col-span-2 space-y-6\" />
+
+export function CompanyDashboard({ company }: CompanyDashboardProps) {
+  return (
+    <div className="container mx-auto max-w-7xl py-8 px-4 md:px-6">
+      <WorkspaceHeader company={company} />
+
+      <div className="mt-8 grid grid-cols-1 lg: grid-cols-3 gap-6">
+
+        <div className="lg:col-span-2 space-y-6">
           <QuickActions />
           <RecentActivity />
           <TalentPool />
         </div>
+
+        <div className="space-y-6">
+
+        <div className="space-y-6">
+
           <TeamStats />
           <SharedInbox />
         </div>
       </div>
+
+    </div>
+
   );
+});
+
+interface CompanyDashboardProps {;
+  company: Company;
 }
-  )
-;
-export function CompanyDashboard({ company }: CompanyDashboardProps) {;
-  return (;}
-  company: Company;}
-}
+
 export function CompanyDashboard(): any ({ company }: CompanyDashboardProps) {;
-  return (}
-    <div className=\"container mx-auto max-w-7xl py-8 px-4 md:px-6\" />;}
+  return (
+
+    <div className="container mx-auto max-w-7xl py-8 px-4 md:px-6">;
       <WorkspaceHeader company={company} />;
-      <div className=\"mt-8 grid grid-cols-1 lg: grid-cols-3 gap-6\" />;
-        <div className=\"lg:col-span-2 space-y-6\" />;
+"
+      <div className="mt-8 grid grid-cols-1 lg: grid-cols-3 gap-6">;"
+        <div className="lg:col-span-2 space-y-6">;
+
+import React from './react';
+
 import { WorkspaceHeader  } from './WorkspaceHeader';
 import { SharedInbox  } from './SharedInbox';
 import { TeamStats  } from './TeamStats';
 import { QuickActions  } from './QuickActions';
 import { RecentActivity  } from './RecentActivity';
+
 import { TalentPool  } from './TalentPool';
-export interface Company {
+export interface Company {};
   id: string;
   name: string;
   logo_url?: string;
-  theme?: {
+  theme?: {}
     primary_color: string;
-    background_color: string;}
-    text_color: string;}
+    background_color: string;
+    text_color: string;
   }
   plan: string;
   team_size: number;
@@ -84,17 +172,26 @@ export interface Company {
   workspace_url: string;
 }
 interface CompanyDashboardProps {}
-  company: Company;}
+  company: Company;
 }
-export /**
+export /**;
  * CompanyDashboard - Function description;
  */
-function CompanyDashboard() {
-  return (}
-    <div className=\"container mx - auto max - w-7xl py - 8 px - 4 md:px-6\" />;}
+
       <WorkspaceHeader company={company} />;
-      <div className=\"mt - 8 grid grid - cols - 1 lg: grid - cols - 3 gap-6\" />;
-        <div className=\"lg:col - span - 2 space-y-6\" />;
-}  );
-}
-}
+      ;"
+      <div className="mt-8 grid grid-cols-1 lg:grid-cols-3 gap-6">;"
+        <div className="lg:col-span-2 space-y-6">;
+          <QuickActions />;
+          <RecentActivity />;
+          <TalentPool />;
+        </div>;
+        ;"
+        <div className="space-y-6">;
+          <TeamStats />;
+          <SharedInbox />;
+        </div>;
+      </div>;
+
+    </div>;
+  );
