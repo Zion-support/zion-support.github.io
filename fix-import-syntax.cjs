@@ -1,109 +1,145 @@
-#!/usr/bin/env node
-
 const fs = require('fs');
 const path = require('path');
-const { execSync } = require('child_process');
+const glob = require('glob');
 
 console.log('🔧 Fixing import syntax errors...');
 
-// Find all TypeScript and JavaScript files
-const findFiles = (dir, extensions = ['.ts', '.tsx', '.js', '.jsx']) => {
-  let files = [];
-  const items = fs.readdirSync(dir);
-  
-  for (const item of items) {
-    const fullPath = path.join(dir, item);
-    const stat = fs.statSync(fullPath);
-    
-    if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') {
-      files = files.concat(findFiles(fullPath, extensions));
-    } else if (stat.isFile() && extensions.some(ext => item.endsWith(ext))) {
-      files.push(fullPath);
-    }
-  }
-  
-  return files;
-};
-
-// Fix import syntax in a file
-const fixImportSyntax = (filePath) => {
+// Function to fix import syntax issues
+function fixImportSyntax(filePath) {
   try {
     let content = fs.readFileSync(filePath, 'utf8');
-    let modified = false;
-    
-    // Fix import statements with commas instead of semicolons
-    const importRegex = /^import\s+.*?,\s*$/gm;
-    const matches = content.match(importRegex);
-    
-    if (matches) {
-      content = content.replace(importRegex, (match) => {
-        // Replace trailing comma with semicolon
-        return match.replace(/,\s*$/, ';');
-      });
-      modified = true;
-    }
-    
-    // Fix other common syntax issues
-    const fixes = [
-      // Fix object property syntax errors like "prop: e: value"
-      { pattern: /(\w+):\s*e:\s*/g, replacement: '$1: ' },
-      // Fix function parameter syntax errors
-      { pattern: /(\w+):\s*n:\s*/g, replacement: '$1: ' },
-      // Fix array syntax errors
-      { pattern: /(\w+):\s*s:\s*/g, replacement: '$1: ' },
-      // Fix other common syntax errors
-      { pattern: /(\w+):\s*t:\s*/g, replacement: '$1: ' },
-      { pattern: /(\w+):\s*d:\s*/g, replacement: '$1: ' },
-      { pattern: /(\w+):\s*p:\s*/g, replacement: '$1: ' },
-      { pattern: /(\w+):\s*y:\s*/g, replacement: '$1: ' },
-      { pattern: /(\w+):\s*h:\s*/g, replacement: '$1: ' },
-      { pattern: /(\w+):\s*m:\s*/g, replacement: '$1: ' },
-      { pattern: /(\w+):\s*r:\s*/g, replacement: '$1: ' },
+    const originalContent = content;
+    let changesMade = false;
+
+    // Fix import statements with extra commas
+    const importFixes = [
+      // Fix import type statements
+      { from: /import type { ([^}]+) } from '([^']+)',;/g, to: "import type { $1 } from '$2';" },
+      { from: /import type { ([^}]+) } from "([^"]+)",;/g, to: 'import type { $1 } from "$2";' },
+      
+      // Fix regular import statements
+      { from: /import { ([^}]+) } from '([^']+)',;/g, to: "import { $1 } from '$2';" },
+      { from: /import { ([^}]+) } from "([^"]+)",;/g, to: 'import { $1 } from "$2";' },
+      
+      // Fix default imports
+      { from: /import ([^,]+) from '([^']+)',;/g, to: "import $1 from '$2';" },
+      { from: /import ([^,]+) from "([^"]+)",;/g, to: 'import $1 from "$2";' },
+      
+      // Fix mixed imports
+      { from: /import ([^,]+), { ([^}]+) } from '([^']+)',;/g, to: "import $1, { $2 } from '$3';" },
+      { from: /import ([^,]+), { ([^}]+) } from "([^"]+)",;/g, to: 'import $1, { $2 } from "$3";' },
+      
+      // Fix const declarations with extra commas
+      { from: /const ([^=]+) = ([^,]+),;/g, to: 'const $1 = $2;' },
+      { from: /let ([^=]+) = ([^,]+),;/g, to: 'let $1 = $2;' },
+      { from: /var ([^=]+) = ([^,]+),;/g, to: 'var $1 = $2;' },
+      
+      // Fix export statements with extra commas
+      { from: /export { ([^}]+) } from '([^']+)',;/g, to: "export { $1 } from '$2';" },
+      { from: /export { ([^}]+) } from "([^"]+)",;/g, to: 'export { $1 } from "$2";' },
+      
+      // Fix function declarations with extra commas
+      { from: /export default async function ([^(]+)\([^)]*\) {;/g, to: 'export default async function $1(req, res) {\n  try {' },
+      { from: /export default function ([^(]+)\([^)]*\) {;/g, to: 'export default function $1(req, res) {\n  try {' },
+      
+      // Fix path.join with extra commas
+      { from: /path\.join\(([^)]+)\),;/g, to: 'path.join($1);' },
+      
+      // Fix require statements with extra commas
+      { from: /require\('([^']+)'\),;/g, to: "require('$1');" },
+      { from: /require\("([^"]+)"\),;/g, to: 'require("$1");' },
     ];
-    
-    fixes.forEach(({ pattern, replacement }) => {
-      if (pattern.test(content)) {
-        content = content.replace(pattern, replacement);
-        modified = true;
+
+    importFixes.forEach(fix => {
+      if (fix.from.test(content)) {
+        content = content.replace(fix.from, fix.to);
+        changesMade = true;
       }
     });
+
+    // Clean up extra whitespace and newlines
+    content = content.replace(/\n{3,}/g, '\n\n');
+    content = content.replace(/\s+$/gm, '');
     
-    if (modified) {
-      fs.writeFileSync(filePath, content, 'utf8');
-      console.log(`✅ Fixed: ${filePath}`);
+    if (changesMade || content !== originalContent) {
+      fs.writeFileSync(filePath, content);
+      console.log(`✅ Fixed import syntax in: ${filePath}`);
       return true;
     }
     
     return false;
   } catch (error) {
-    console.error(`❌ Error fixing ${filePath}:`, error.message);
+    console.error(`❌ Error processing ${filePath}:`, error.message);
     return false;
   }
-};
+}
+
+// Function to find all TypeScript/JavaScript files
+function getAllCodeFiles() {
+  const patterns = [
+    'pages/**/*.ts',
+    'pages/**/*.tsx',
+    'pages/**/*.js',
+    'pages/**/*.jsx',
+    'components/**/*.ts',
+    'components/**/*.tsx',
+    'components/**/*.js',
+    'components/**/*.jsx',
+    'utils/**/*.ts',
+    'utils/**/*.js',
+    'types/**/*.ts',
+    'lib/**/*.ts',
+    'lib/**/*.js',
+    '*.ts',
+    '*.tsx',
+    '*.js',
+    '*.jsx'
+  ];
+
+  let allFiles = [];
+  patterns.forEach(pattern => {
+    try {
+      const files = glob.sync(pattern, { cwd: process.cwd() });
+      allFiles = allFiles.concat(files);
+    } catch (error) {
+      // Pattern not found, continue
+    }
+  });
+
+  return [...new Set(allFiles)]; // Remove duplicates
+}
 
 // Main execution
-const main = () => {
-  const files = findFiles(process.cwd());
+function main() {
+  console.log('🚀 Starting import syntax fix...\n');
+  
+  const allFiles = getAllCodeFiles();
+  console.log(`Found ${allFiles.length} code files to check`);
+  
   let fixedCount = 0;
   
-  console.log(`Found ${files.length} files to check...`);
-  
-  for (const file of files) {
-    if (fixImportSyntax(file)) {
-      fixedCount++;
+  allFiles.forEach(filePath => {
+    if (fs.existsSync(filePath)) {
+      if (fixImportSyntax(filePath)) {
+        fixedCount++;
+      }
     }
-  }
-  
-  console.log(`\n🎉 Fixed ${fixedCount} files`);
-  
-  // Try to build after fixing
-  console.log('\n🏗️ Attempting build...');
-  try {
-    execSync('npm run build', { stdio: 'inherit' });
-    console.log('✅ Build successful!');
-  } catch (error) {
-    console.log('❌ Build still has issues, but syntax fixes applied');
-  }
-};
+  });
 
-main();
+  console.log(`\n📊 Fix Summary:`);
+  console.log(`   Total files checked: ${allFiles.length}`);
+  console.log(`   Files fixed: ${fixedCount}`);
+  
+  if (fixedCount > 0) {
+    console.log('\n✅ Import syntax fixes completed!');
+  } else {
+    console.log('\n✅ No import syntax issues found!');
+  }
+}
+
+// Run the script
+if (require.main === module) {
+  main();
+}
+
+module.exports = { fixImportSyntax };

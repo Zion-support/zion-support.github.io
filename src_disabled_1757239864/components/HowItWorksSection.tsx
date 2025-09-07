@@ -6,14 +6,11 @@ import { GradientHeading } from "./GradientHeading";
 
 
 
-import React from 'react';
-import { GradientHeading } from "./GradientHeading";
 import { Check, Handshake, Search, Send } from 'lucide-react'
 import { cn } from "@/lib/utils";
 import { useTranslation } from "react-i18next";
 interface HowItWorksSectionProps {
 
-import React from 'react';
 import { GradientHeading } from './GradientHeading';
 import { Check, Handshake, Search, Send } from 'lucide-react';
 import { cn } from '@/lib / utils';
@@ -119,7 +116,6 @@ const getSteps = (t: any,) => [
 
 import React from 'react',
 import { GradientHeading } from "./GradientHeading",
-import { Check, Handshake, Search, Send } from 'lucide-react'
 import { cn } from "@/lib/utils",
 import { useTranslation } from "react-i18next",
 interface HowItWorksSectionProps {
@@ -374,7 +370,6 @@ export default Component;
 export default HowItWorksSection;
 
 
-import React from 'react';
 import { FileText, Search, Handshake, Check } from 'lucide-react';
 
 const HowItWorksSection: React.FC = () => {

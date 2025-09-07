@@ -1,16 +1,43 @@
-const [unreadCount, setUnreadCount] = useState(0);
-const [activeConversation, setActiveConversation] = useState<Conversation | null>(null),;
+import { useState  } from 'react';
+import { Conversation, Message  } from '@/types/messaging';
+/**
+ * Hook to manage messaging state
+ */
+export function useConversationState() {
+  const [messages, setMessages] = useState<Message[]>([]),
+  const [activeMessages, setActiveMessages] = useState<Message[]>([]),
+
+import {useState} from 'react';
+
+import {Conversation, Message} from '@/types/messaging';
+/**
+ * Hook to manage messaging state;
+ */
+
+  const [conversations, setConversations] = useState<Conversation[]>([]);
+  const [unreadCount, setUnreadCount] = useState(0);
+  const [activeConversation, setActiveConversation] = useState<Conversation | null>(null),
   const [isLoading, setIsLoading] = useState(false);
-import {useState} from 'react';'
-import {Conversation, Message} from '@/types / messaging';'
+
+import {useState} from 'react';
+import {Conversation, Message} from '@/types/messaging';
+/**
+ * Hook to manage messaging state
+ */
+export function useConversationState() {;
+  const [messages, setMessages] = useState<Message[]>([]);
+  const [activeMessages, setActiveMessages] = useState<Message[]>([]);
+
+  const [conversations, setConversations] = useState<Conversation[]>([]);
+
+import {Conversation, Message} from '@/types / messaging';
 /**;
 * Hook to manage messaging state;
 */;
-export /**
- * useConversationState - Function description
+export /**;
+ * useConversationState - Function description;
  */
-function useConversationState() {
-  }
+function useConversationState() {}
   const [messages, set_messages] = useState < Message[]>([]);
   const [active_messages, setActiveMessages] = useState < Message[]>([]);
   const [conversations, set_conversations] = useState < Conversation[]>([]);
@@ -18,9 +45,8 @@ function useConversationState() {
   const [active_conversation, setActiveConversation] = useState < Conversation | null>(null);
   const [is_loading, setIsLoading] = useState (false);
 ;
-  return {
+
     // State;
-    }
     messages;
     set_messages;
     active_messages;
@@ -28,19 +54,26 @@ function useConversationState() {
     conversations;
     set_conversations;
     unread_count;
-    setUnreadCount;    activeConversation;
-import { useState } from 'react';'
-import { Conversation, Message } from '@/types/messaging';'
+
+    activeConversation;
+
+import { Conversation, Message } from '@/types/messaging',;
+    setUnreadCount;
+
+    activeConversation;'
+import { useState } from 'react',;''
+import { Conversation, Message } from '@/types/messaging',;'
+
 /**;
  * Hook to manage messaging state;
  */;
+<<<<<<< HEAD
 export function useConversationState() {;
   }
   const [messages, setMessages] = useState<Message[]>([]),;
   const [activeMessages, setActiveMessages] = useState<Message[]>([]),;
   const [conversations, setConversations] = useState<Conversation[]>([]),;
   const [unreadCount, setUnreadCount] = useState(0),;
-  const [activeConversation, setActiveConversation] = useState<Conversation | null>(null),;
   const [isLoading, setIsLoading] = useState(false),;
   return {;
     // State;
@@ -65,26 +98,8 @@ import { Conversation, Message } from '@/types/messaging';
  * Hook to manage messaging state
  */
 }
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
 
-export function useConversationState() {
-  const [messages, setMessages] = useState<Message[]>([]),
-  const [activeMessages, setActiveMessages] = useState<Message[]>([]),
-  const [conversations, setConversations] = useState<Conversation[]>([]),
-  const [unreadCount, setUnreadCount] = useState($2);
-  const [activeConversation, setActiveConversation] = useState<Conversation | null>(null),
-  const [isLoading, setIsLoading] = useState($2);
-  return {
-    // State
-    messages,
-    setMessages,
-    activeMessages,
-    setActiveMessages,
-    conversations,
-    setConversations,
-    unreadCount,
-    setUnreadCount,
-    activeConversation,
-    setActiveConversation,
-    isLoading,
-    setIsLoading}
+}
 }

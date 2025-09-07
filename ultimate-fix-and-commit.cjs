@@ -62,7 +62,6 @@ class UltimateFixAndCommit {
       const fullPath = path.join(this.projectRoot, filePath);
       if (fs.existsSync(fullPath)) {
         try {
-          let content = fs.readFileSync(fullPath, 'utf8');
           
           // Fix import statements - replace commas with semicolons
           content = content.replace(/import\s+[^;]+,\s*$/gm, (match) => {

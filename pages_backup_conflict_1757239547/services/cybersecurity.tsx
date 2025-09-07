@@ -22,8 +22,6 @@ import {
   Clock
   TrendingUp;
 } from 'lucide-react';
-import EnhancedNavigation from '../../components/EnhancedNavigation';
-import EnhancedFooter from '../../components/EnhancedFooter';
 export default function CybersecurityServicesPage() {
   const services = [
     {
@@ -89,14 +87,12 @@ export default function CybersecurityServicesPage() {
 
 import Head from 'next/head',
 import { motion } from 'framer-motion',
-import {
   Shield, Lock, Eye, Zap, Cpu, Database,
   ArrowRight, CheckCircle, Star, Users, Clock, TrendingUp
 } from 'lucide-react',
 import EnhancedNavigation from '../../components/EnhancedNavigation',
 import EnhancedFooter from '../../components/EnhancedFooter',
 export default function CybersecurityServicesPage() {
-  const services = [
     {
       title: "Advanced Threat Detection",
       description: "AI-powered threat detection and response systems",
@@ -131,7 +127,6 @@ export default function CybersecurityServicesPage() {
     },;
   ];
 
-  const stats = [
     { number: "99.99%", label: "Threat Detection Rate", icon: Shield },
     { number: "24/7", label: "Security Monitoring", icon: Eye },
     { number: "0", label: "Security Breaches", icon: Lock },

@@ -1,19 +1,19 @@
+ursor/fix-syntax-push-and-merge-to-main-40de
 
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
-ursor/fix-syntax-push-and-merge-to-main-40de;
-ursor/fix-syntax-push-and-merge-to-main-40de;
-ursor/fix-syntax-push-and-merge-to-main-40de;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 
-ursor/fix-syntax-push-and-merge-to-main-40de,
-ursor/fix-syntax-push-and-merge-to-main-40de,
-import NextLink from \'next/link\' import Sidebar from \'../../components/Sidebar\' export default function MicroSaaS() { const products = [{ \"id\": \'ai-qa\',\"name\": \'AI QA Assistant\',\"price\": \'$299–$999/mo\',\"desc\": \'Autogenerate test cases,run PR checks,and file actionable defects.\' },{ \"id\": \'lead-enrichment\',\"name\": \'Lead Enrichment API\',\"price\": \'$99–$499/mo\',\"desc\": \'Firmographic,technographic,and intent data enrichment in minutes.\' },{ \"id\": \'contract-ai\',\"name\": \'Contract AI Reviewer\',\"price\": \'$199–$799/mo\',\"desc\": \'Clause extraction,risk scoring,and redline suggestions.\' },{ \"id\": \'ai-seo-auditor\',\"name\": \'AI SEO Auditor\',\"price\": \'$149–$599/mo\',\"desc\": \'Autofix metadata,generate briefs,and monitor rankings.\' } ] return ( <div className=\"ztg-page\"> <div className=\"ztg-container\"> <div className=\"ztg-grid\"> <Sidebar /> <div> <div className=\"ztg-card\"> <h1>Micro SaaS</h1> <p>Fast-to-adopt products with transparent pricing and measurable ROI.</p> </div> <div className=\"ztg-section\" style={{ \"display\": \'grid\',\"gridTemplateColumns\": \'repeat(2,minmax(0,1fr))\',\"gap\": \'24\' }}> {products.map((p) => ( <div key={p.id} className=\"ztg-card\"> <h3>{p.name}</h3> <p>{p.desc}</p> <p><strong>{p.price}</strong></p> <NextLink className=\"ztg-btn\" href={`/services/micro-saas/${p.id}`}>View details</NextLink> </div> ))} </div> <div className=\"ztg-card\"> <p> Market \"benchmarks\": Micro SaaS typically ranges from $49–$999/mo depending on usage and SLAs. See pricing guides at{\' \'} <a href=\""https\": <a href=\""https": </p> </div> </div> </div> </div> </div> ) }"import React from 'react';'
+ursor/fix-syntax-push-and-merge-to-main-40de
+
+
+ursor/fix-syntax-push-and-merge-to-main-40de
+import NextLink from \'next/link\' import Sidebar from \'../../components/Sidebar\' export default function MicroSaaS() { const products = [{ \"id\": \'ai-qa\',\"name\": \'AI QA Assistant\',\"price\": \'$299–$999/mo\',\"desc\": \'Autogenerate test cases,run PR checks,and file actionable defects.\' },{ \"id\": \'lead-enrichment\',\"name\": \'Lead Enrichment API\',\"price\": \'$99–$499/mo\',\"desc\": \'Firmographic,technographic,and intent data enrichment in minutes.\' },{ \"id\": \'contract-ai\',\"name\": \'Contract AI Reviewer\',\"price\": \'$199–$799/mo\',\"desc\": \'Clause extraction,risk scoring,and redline suggestions.\' },{ \"id\": \'ai-seo-auditor\',\"name\": \'AI SEO Auditor\',\"price\": \'$149–$599/mo\',\"desc\": \'Autofix metadata,generate briefs,and monitor rankings.\' } ] return ( <div className=\"ztg-page\"> <div className=\"ztg-container\"> <div className=\"ztg-grid\"> <Sidebar /> <div> <div className=\"ztg-card\"> <h1>Micro SaaS</h1> <p>Fast-to-adopt products with transparent pricing and measurable ROI.</p> </div> <div className=\"ztg-section\" style={{ \"display\": \'grid\',\"gridTemplateColumns\": \'repeat(2,minmax(0,1fr))\',\"gap\": \'24\' }}> {products.map((p) => ( <div key={p.id} className=\"ztg-card\"> <h3>{p.name}</h3> <p>{p.desc}</p> <p><strong>{p.price}</strong></p> <NextLink className=\"ztg-btn\" href={`/services/micro-saas/${p.id}`}>View details</NextLink> </div> ))} </div> <div className=\"ztg-card\"> <p> Market \"benchmarks\": Micro SaaS typically ranges from $49–$999/mo depending on usage and SLAs. See pricing guides at{\' \'} <a href=\""https\": <a href=\"https: </p> </div> </div> </div> </div> </div> ) }
+import React from 'react';
 interface MicrosaasProps  {// Add props here as needed;
 }
-import NextLink from \'next/link\' import Sidebar from \'../../components/Sidebar\' export default function MicroSaaS() { const products = [{ \"id\": \'ai-qa\',\"name\": \'AI QA Assistant\',\"price\": \'$299–$999/mo\',\"desc\": \'Autogenerate test cases,run PR checks,and file actionable defects.\' },{ \"id\": \'lead-enrichment\',\"name\": \'Lead Enrichment API\',\"price\": \'$99–$499/mo\',\"desc\": \'Firmographic,technographic,and intent data enrichment in minutes.\' },{ \"id\": \'contract-ai\',\"name\": \'Contract AI Reviewer\',\"price\": \'$199–$799/mo\',\"desc\": \'Clause extraction,risk scoring,and redline suggestions.\' },{ \"id\": \'ai-seo-auditor\',\"name\": \'AI SEO Auditor\',\"price\": \'$149–$599/mo\',\"desc\": \'Autofix metadata,generate briefs,and monitor rankings.\' } ] return ( <div className=\"ztg-page\"> <div className=\"ztg-container\"> <div className=\"ztg-grid\"> <Sidebar /> <div> <div className=\"ztg-card\"> <h1>Micro SaaS</h1> <p>Fast-to-adopt products with transparent pricing and measurable ROI.</p> </div> <div className=\"ztg-section\" style={{ \"display\": \'grid\',\"gridTemplateColumns\": \'repeat(2,minmax(0,1fr))\',\"gap\": \'24\' }}> {products.map((p) => ( <div key={p.id} className=\"ztg-card\"> <h3>{p.name}</h3> <p>{p.desc}</p> <p><strong>{p.price}</strong></p> <NextLink className=\"ztg-btn\" href={`/services/micro-saas/${p.id}`}>View details</NextLink> </div> ))} </div> <div className=\"ztg-card\"> <p> Market \"benchmarks\": Micro SaaS typically ranges from $49–$999/mo depending on usage and SLAs. See pricing guides at{\' \'} <a href=\""https\": <a href=\""https": </p> </div> </div> </div> </div> </div> ) }interface MicrosaasProps  {// Add props here as needed;"
-}
+
+
+export default function Microsaas({ }: MicrosaasProps) {
+import NextLink from \'next/link\' import Sidebar from \'../../components/Sidebar\' export default function MicroSaaS() { const products = [{ \"id\": \'ai-qa\',\"name\": \'AI QA Assistant\',\"price\": \'$299–$999/mo\',\"desc\": \'Autogenerate test cases,run PR checks,and file actionable defects.\' },{ \"id\": \'lead-enrichment\',\"name\": \'Lead Enrichment API\',\"price\": \'$99–$499/mo\',\"desc\": \'Firmographic,technographic,and intent data enrichment in minutes.\' },{ \"id\": \'contract-ai\',\"name\": \'Contract AI Reviewer\',\"price\": \'$199–$799/mo\',\"desc\": \'Clause extraction,risk scoring,and redline suggestions.\' },{ \"id\": \'ai-seo-auditor\',\"name\": \'AI SEO Auditor\',\"price\": \'$149–$599/mo\',\"desc\": \'Autofix metadata,generate briefs,and monitor rankings.\' } ] return ( <div className=\"ztg-page\"> <div className=\"ztg-container\"> <div className=\"ztg-grid\"> <Sidebar /> <div> <div className=\"ztg-card\"> <h1>Micro SaaS</h1> <p>Fast-to-adopt products with transparent pricing and measurable ROI.</p> </div> <div className=\"ztg-section\" style={{ \"display\": \'grid\',\"gridTemplateColumns\": \'repeat(2,minmax(0,1fr))\',\"gap\": \'24\' }}> {products.map((p) => ( <div key={p.id} className=\"ztg-card\"> <h3>{p.name}</h3> <p>{p.desc}</p> <p><strong>{p.price}</strong></p> <NextLink className=\"ztg-btn\" href={`/services/micro-saas/${p.id}`}>View details</NextLink> </div> ))} </div> <div className=\"ztg-card\"> <p> Market \"benchmarks\": Micro SaaS typically ranges from $49–$999/mo depending on usage and SLAs. See pricing guides at{\' \'} <a href=\""https\": <a href=\"https: </p> </div> </div> </div> </div> </div> ) }interface MicrosaasProps  {// Add props here as needed;
 origin/cursor/integrate-build-improve-and-re-verify-c7b5;
 ursor/automate-test-improve-and-merge-code-646c;
 export default function Microsaas() {export default function Microsaas() {export default function Microsaas() {return (<div>;
@@ -22,49 +22,66 @@ export default function Microsaas() {export default function Microsaas() {export
     </div>;
   )}}ursor/fix-syntax-push-and-merge-to-main-40de;
 }}}
+=======
+ursor/fix-syntax-push-and-merge-to-main-40de
 
+import NextLink from \'next/link\' import Sidebar from \'../../components/Sidebar\' export default function MicroSaaS() { const products = [{ \"id\": \'ai-qa\',\"name\": \'AI QA Assistant\',\"price\": \'$299–$999/mo\',\"desc\": \'Autogenerate test cases,run PR checks,and file actionable defects.\' },{ \"id\": \'lead-enrichment\',\"name\": \'Lead Enrichment API\',\"price\": \'$99–$499/mo\',\"desc\": \'Firmographic,technographic,and intent data enrichment in minutes.\' },{ \"id\": \'contract-ai\',\"name\": \'Contract AI Reviewer\',\"price\": \'$199–$799/mo\',\"desc\": \'Clause extraction,risk scoring,and redline suggestions.\' },{ \"id\": \'ai-seo-auditor\',\"name\": \'AI SEO Auditor\',\"price\": \'$149–$599/mo\',\"desc\": \'Autofix metadata,generate briefs,and monitor rankings.\' } ] return ( <div className=\"ztg-page\"> <div className=\"ztg-container\"> <div className=\"ztg-grid\"> <Sidebar /> <div> <div className=\"ztg-card\"> <h1>Micro SaaS</h1> <p>Fast-to-adopt products with transparent pricing and measurable ROI.</p> </div> <div className=\"ztg-section\" style={{ \"display\": \'grid\',\"gridTemplateColumns\": \'repeat(2,minmax(0,1fr))\',\"gap\": \'24\' }}> {products.map((p) => ( <div key={p.id} className=\"ztg-card\"> <h3>{p.name}</h3> <p>{p.desc}</p> <p><strong>{p.price}</strong></p> <NextLink className=\"ztg-btn\" href={`/services/micro-saas/${p.id}`}>View details</NextLink> </div> ))} </div> <div className=\"ztg-card\"> <p> Market \"benchmarks\": Micro SaaS typically ranges from $49–$999/mo depending on usage and SLAs. See pricing guides at{\' \'} <a href=\""https\": <a href=\"https: </p> </div> </div> </div> </div> </div> ) };
+import React from 'react';
+interface MicrosaasProps {
+  // Add props here as needed
 
-export default function Microsaas() {
+import NextLink from \'next/link\' import Sidebar from \'../../components/Sidebar\' export default function MicroSaaS() { const products = [{ \"id\": \'ai-qa\',\"name\": \'AI QA Assistant\',\"price\": \'$299–$999/mo\',\"desc\": \'Autogenerate test cases,run PR checks,and file actionable defects.\' },{ \"id\": \'lead-enrichment\',\"name\": \'Lead Enrichment API\',\"price\": \'$99–$499/mo\',\"desc\": \'Firmographic,technographic,and intent data enrichment in minutes.\' },{ \"id\": \'contract-ai\',\"name\": \'Contract AI Reviewer\',\"price\": \'$199–$799/mo\',\"desc\": \'Clause extraction,risk scoring,and redline suggestions.\' },{ \"id\": \'ai-seo-auditor\',\"name\": \'AI SEO Auditor\',\"price\": \'$149–$599/mo\',\"desc\": \'Autofix metadata,generate briefs,and monitor rankings.\' } ] return ( <div className=\"ztg-page\"> <div className=\"ztg-container\"> <div className=\"ztg-grid\"> <Sidebar /> <div> <div className=\"ztg-card\"> <h1>Micro SaaS</h1> <p>Fast-to-adopt products with transparent pricing and measurable ROI.</p> </div> <div className=\"ztg-section\" style={{ \"display\": \'grid\',\"gridTemplateColumns\": \'repeat(2,minmax(0,1fr))\',\"gap\": \'24\' }}> {products.map((p) => ( <div key={p.id} className=\"ztg-card\"> <h3>{p.name}</h3> <p>{p.desc}</p> <p><strong>{p.price}</strong></p> <NextLink className=\"ztg-btn\" href={`/services/micro-saas/${p.id}`}>View details</NextLink> </div> ))} </div> <div className=\"ztg-card\"> <p> Market \"benchmarks\": Micro SaaS typically ranges from $49–$999/mo depending on usage and SLAs. See pricing guides at{\' \'} <a href=\""https\": <a href=\"https: </p> </div> </div> </div> </div> </div> ) }
+import React from 'react';
+interface MicrosaasProps {
+  // Add props here as needed
 }
-return (;
+import NextLink from \'next/link\' import Sidebar from \'../../components/Sidebar\' export default function MicroSaaS() { const products = [{ \"id\": \'ai-qa\',\"name\": \'AI QA Assistant\',\"price\": \'$299–$999/mo\',\"desc\": \'Autogenerate test cases,run PR checks,and file actionable defects.\' },{ \"id\": \'lead-enrichment\',\"name\": \'Lead Enrichment API\',\"price\": \'$99–$499/mo\',\"desc\": \'Firmographic,technographic,and intent data enrichment in minutes.\' },{ \"id\": \'contract-ai\',\"name\": \'Contract AI Reviewer\',\"price\": \'$199–$799/mo\',\"desc\": \'Clause extraction,risk scoring,and redline suggestions.\' },{ \"id\": \'ai-seo-auditor\',\"name\": \'AI SEO Auditor\',\"price\": \'$149–$599/mo\',\"desc\": \'Autofix metadata,generate briefs,and monitor rankings.\' } ] return ( <div className=\"ztg-page\"> <div className=\"ztg-container\"> <div className=\"ztg-grid\"> <Sidebar /> <div> <div className=\"ztg-card\"> <h1>Micro SaaS</h1> <p>Fast-to-adopt products with transparent pricing and measurable ROI.</p> </div> <div className=\"ztg-section\" style={{ \"display\": \'grid\',\"gridTemplateColumns\": \'repeat(2,minmax(0,1fr))\',\"gap\": \'24\' }}> {products.map((p) => ( <div key={p.id} className=\"ztg-card\"> <h3>{p.name}</h3> <p>{p.desc}</p> <p><strong>{p.price}</strong></p> <NextLink className=\"ztg-btn\" href={`/services/micro-saas/${p.id}`}>View details</NextLink> </div> ))} </div> <div className=\"ztg-card\"> <p> Market \"benchmarks\": Micro SaaS typically ranges from $49–$999/mo depending on usage and SLAs. See pricing guides at{\' \'} <a href=\""https\": <a href=\"https: </p> </div> </div> </div> </div> </div> ) };
+import React from 'react';
+interface MicrosaasProps {
+  // Add props here as needed
+>>>>>>> origin/chore/fix-lint-and-merge
+
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+
+<<<<<<< HEAD
+export default function Microsaas({}: MicrosaasProps) {
+=======
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+
+export default function Microsaas({ }: MicrosaasProps) {
+>>>>>>> origin/chore/fix-lint-and-merge
+  return (
     <div>
       <h1>Microsaas</h1>
       <p>This component is currently under development.</p>
     </div>
   );
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 }
 
 }
 
-<<<<<<< HEAD
 =======
+
+}
+
 }}
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+>>>>>>> origin/chore/fix-lint-and-merge
 
 }
-ursor/add-new-services-and-deploy-updates-0462;
-ursor/fix-syntax-push-and-merge-to-main-40de;
+}
+<<<<<<< HEAD
 origin/cursor/integrate-build-improve-and-re-verify-c7b5;
-ursor/fix-syntax-push-and-merge-to-main-40de;
-}ursor/automate-test-improve-and-merge-code-646c;
+ursor/add-new-services-and-deploy-updates-0462
+ursor/fix-syntax-push-and-merge-to-main-40de
+
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+
 }
-origin/cursor/integrate-build-improve-and-re-verify-c7b5;
-ursor/add-new-services-and-deploy-updates-0462,
-ursor/fix-syntax-push-and-merge-to-main-40de,
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 
 }
 =======
-origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
-origin/cursor/integrate-build-improve-and-re-verify-c7b5
-
-}
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+ursor/add-new-services-and-deploy-updates-0462
+ursor/fix-syntax-push-and-merge-to-main-40de
+>>>>>>> origin/chore/fix-lint-and-merge

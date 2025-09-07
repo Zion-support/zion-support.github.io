@@ -1,33 +1,38 @@
 ;
-import type { NextPage } from 'next';'
-import Head from 'next/head';'
-import Link from 'next/link';'
+import type { NextPage } from 'next';
+import Head from 'next/head';
+import Link from 'next/link';
 
-const "TechnicalDocumentationChat": NextPage = () => ;
-  return (<div>;
+const TechnicalDocumentationChat: NextPage = () => ;
+  return (<div />;
 
 ;
-import type { NextPage } from 'next';'
-import Head from 'next/head';'
-import Link from 'next/link';'
 
-const "TechnicalDocumentationChat": NextPage = () => ;
+<<<<<<< HEAD
   return (<div>;
 import type { NextPage } from "next";"
 import Head from "next/head";"
 import Link from "next/link";"
+=======
+const TechnicalDocumentationChat: NextPage = () => ;
+  return (<div />;
+import type { NextPage } from \"next\";
+import Head from \"next/head\";
+import Link from \"next/link\";
+>>>>>>> origin/chore/fix-lint-and-merge
 
-const "TechnicalDocumentationChat": NextPage = () => {;
-}
-return (;
+const TechnicalDocumentationChat: NextPage = () => {;
+  return (
     <div>;
 </div>
       <Head>;
 
         <title>TechnicalDocumentationChat - Zion Tech Solutions</title>;
-        <meta,
-name="description""
-          content="TechnicalDocumentationChat service"" />{" "}"
+        <meta;"
+          name="description"""
+          content="TechnicalDocumentationChat service"""
+        />{" "}"
+</meta>
       <main>
 </main>
         <h1>TechnicalDocumentationChat</h1>
@@ -59,90 +64,107 @@ name="description""
       
       
         <p>Service details coming soon...</p>
-        <a href="/services">Back to Services</a>"
+        <a href=&quot;/services&quot;>Back to Services</a>
+
+      
+"
+    <div />;
+      <Head />;
+        <title />TechnicalDocumentationChat - Zion Tech Solutions</title>;
+        <meta;
+name=\"description\"}
+          content=\"TechnicalDocumentationChat service\"}
+        />{\" \"}
+      <main />
+        <h1 />TechnicalDocumentationChat</h1>
+        <p />Service details coming soon...</p>
+        <a href=\"/services\" />Back to Services</a>
       </main>
     </div>
       </Head>;
 
-      <main>;
-        <h1>TechnicalDocumentationChat</h1>;
-        <p>Service details coming soon...</p>;
-        <a href="/services">Back to Services</a>;"
+      <main />;
+        <h1 />TechnicalDocumentationChat</h1>;
+        <p />Service details coming soon...</p>;
+        <a href=\"/services\" />Back to Services</a>;
       </main>;
     </div>;
-      </Head>;<main>;
-        <h1>TechnicalDocumentationChat</h1>;
-        <p>Service details coming soon...</p>;
-        <a href="/services">Back to Services</a>;"
+      </Head>;<main />;
+        <h1 />TechnicalDocumentationChat</h1>;
+        <p />Service details coming soon...</p>;
+        <a href=\"/services\" />Back to Services</a>;
       </main>;
     </div>;
   )}
 
 export default TechnicalDocumentationChat;
 
-const "TechnicalDocumentationChat": NextPage = () => ;
+<<<<<<< HEAD
   return (<div>;
       <Head>;
         <title>TechnicalDocumentationChat - Zion Tech Solutions</title>;
         <title>TechnicalDocumentationChat - Zion Tech Solutions</title>;
         <title>TechnicalDocumentationChat - Zion Tech Solutions</title>;
         <title>TechnicalDocumentationChat - Zion Tech Solutions</title>;
+=======
+const TechnicalDocumentationChat: NextPage = () => ;
+  return (<div />;
+      <Head />;
+        <title />TechnicalDocumentationChat - Zion Tech Solutions</title>;
+        <title />TechnicalDocumentationChat - Zion Tech Solutions</title>;
+        <title />TechnicalDocumentationChat - Zion Tech Solutions</title>;
+        <title />TechnicalDocumentationChat - Zion Tech Solutions</title>;
+>>>>>>> origin/chore/fix-lint-and-merge
 ursor/fix-website-loading-errors-and-merge-6662;
   );
 }
   );
 
 export default TechnicalDocumentationChat;
-import type { NextPage } from 'next';'
-import Head from 'next/head';'
-import Link from 'next/link';'
 
-import type { NextPage } from "next";"
-import Head from "next/head";"
-import Link from "next/link";"
-import type { NextPage } from 'next';'
-import Head from 'next/head';'
-import Link from 'next/link';'
-import type { NextPage } from 'next';'
-import Head from 'next/head';'
-import Link from 'next/link';'
 
-import type { NextPage } from "next";"
-import Head from "next/head";"
-import Link from "next/link";"
-import type { NextPage } from 'next';'
-import Head from 'next/head';'
-import Link from 'next/link';'
+<<<<<<< HEAD
 const "TechnicalDocumentationChat": NextPage = () => {
+=======
+const TechnicalDocumentationChat: NextPage = () => {
+>>>>>>> origin/chore/fix-lint-and-merge
  ;
-}
-return (;
-    <div>
-      <Head>
-        <title>TechnicalDocumentationChat - Zion Tech Solutions</title>
-        <title>TechnicalDocumentationChat - Zion Tech Solutions</title>
-        <title>TechnicalDocumentationChat - Zion Tech Solutions</title>
-        <title>TechnicalDocumentationChat - Zion Tech Solutions</title>
-import type { NextPage } from './next';'
-import Head from './next / head';'
-import Link from './next / link';'
+  return (
+    <div />
+      <Head />
+        <title />TechnicalDocumentationChat - Zion Tech Solutions</title>
+        <title />TechnicalDocumentationChat - Zion Tech Solutions</title>
+        <title />TechnicalDocumentationChat - Zion Tech Solutions</title>}
+        <title />TechnicalDocumentationChat - Zion Tech Solutions</title>}
+import type { NextPage } from './next';
+import Head from './next / head';
+import Link from './next / link';
 
-const "TechnicalDocumentationChat": NextPage = () => ;
+<<<<<<< HEAD
   return (<div>;
-const "TechnicalDocumentationChat": NextPage = () => {
 }
 return (;
     <div>;
       <Head>;
         <title > TechnicalDocumentationChat - Zion Tech Solutions</title>;
+=======
+const TechnicalDocumentationChat: NextPage = () => ;
+  return (<div />;
+const TechnicalDocumentationChat: NextPage = () => {
+  return (
+    <div />;
+      <Head />;
+        <title  /> TechnicalDocumentationChat - Zion Tech Solutions</title>;
+>>>>>>> origin/chore/fix-lint-and-merge
         <meta;
-          name="description";"
-          content="TechnicalDocumentationChat service";" />{" "}"
+          name=\"description\";}
+          content=\"TechnicalDocumentationChat service\";}
+        />{\" \"}
       </Head>;
-      <main>;
-        <h1 > TechnicalDocumentationChat</h1>;
-        <p > Service details coming soon...</p>;
-        <a href="/services">Back to Services</a>;"
+      <main />;
+        <h1  /> TechnicalDocumentationChat</h1>;
+        <p  /> Service details coming soon...</p>;
+        <a href=\"/services\" />Back to Services</a>;
       </main>
     </div>
   );
@@ -161,18 +183,25 @@ export default TechnicalDocumentationChat;<div />;
     </div>;
   )},export default TechnicalDocumentationChat;
 
-const "TechnicalDocumentationChat": NextPage = () => ;
+<<<<<<< HEAD
   return (<div>;
       <Head>;
         <title>TechnicalDocumentationChat - Zion Tech Solutions</title>;
+=======
+const TechnicalDocumentationChat: NextPage = () => ;
+  return (<div />;
+      <Head />;
+        <title />TechnicalDocumentationChat - Zion Tech Solutions</title>;
+>>>>>>> origin/chore/fix-lint-and-merge
         <meta;
-          name="description";"
-          content="TechnicalDocumentationChat service";" />{" "}"
+          name=\"description\";
+          content=\"TechnicalDocumentationChat service\";
+        />{\" \"}
       </Head>;
-      <main>;
-        <h1>TechnicalDocumentationChat</h1>;
-        <p>Service details coming soon...</p>;
-        <a href="/services">Back to Services</a>;"
+      <main />;
+        <h1 />TechnicalDocumentationChat</h1>;
+        <p />Service details coming soon...</p>;
+        <a href=\"/services\" />Back to Services</a>;
       </main>;
     </div>;
   )}
@@ -187,21 +216,24 @@ export default TechnicalDocumentationChat;<title />TechnicalDocumentationChat - 
 
 ;
 export default TechnicalDocumentationChat;
-const "TechnicalDocumentationChat": NextPage = () => {
+<<<<<<< HEAD
+=======
+const TechnicalDocumentationChat: NextPage = () => {
+>>>>>>> origin/chore/fix-lint-and-merge
  ;
-}
-return (;
-    <div>
-      <Head>
-        <title>TechnicalDocumentationChat - Zion Tech Solutions</title>
-        <meta,
-name="description""
-          content="TechnicalDocumentationChat service"" />{" "}"
+  return (
+    <div />
+      <Head />
+        <title />TechnicalDocumentationChat - Zion Tech Solutions</title>
+        <meta;
+name=\"description\"}
+          content=\"TechnicalDocumentationChat service\"}
+        />{\" \"}
       </Head>
-      <main>
-        <h1>TechnicalDocumentationChat</h1>
-        <p>Service details coming soon...</p>
-        <a href="/services">Back to Services</a>"
+      <main />
+        <h1 />TechnicalDocumentationChat</h1>
+        <p />Service details coming soon...</p>
+        <a href=\"/services\" />Back to Services</a>
       </main>
     </div>
   );
@@ -209,21 +241,24 @@ name="description""
 
 export default TechnicalDocumentationChat;
 export default TechnicalDocumentationChat;
-const "TechnicalDocumentationChat": NextPage = () => {
+<<<<<<< HEAD
+=======
+const TechnicalDocumentationChat: NextPage = () => {
+>>>>>>> origin/chore/fix-lint-and-merge
  ;
-}
-return (;
-    <div>
-      <Head>
-        <title>TechnicalDocumentationChat - Zion Tech Solutions</title>
-        <meta,
-name="description""
-          content="TechnicalDocumentationChat service"" />{" "}"
+  return (
+    <div />
+      <Head />
+        <title />TechnicalDocumentationChat - Zion Tech Solutions</title>
+        <meta;
+name=\"description\"}
+          content=\"TechnicalDocumentationChat service\"}
+        />{\" \"}
       </Head>
-      <main>
-        <h1>TechnicalDocumentationChat</h1>
-        <p>Service details coming soon...</p>
-        <a href="/services">Back to Services</a>"
+      <main />
+        <h1 />TechnicalDocumentationChat</h1>
+        <p />Service details coming soon...</p>
+        <a href=\"/services\" />Back to Services</a>
       </main>
     </div>
   );
@@ -234,21 +269,24 @@ export default TechnicalDocumentationChat;
         <title />TechnicalDocumentationChat - Zion Tech Solutions</title>
         <title />TechnicalDocumentationChat - Zion Tech Solutions</title>
 ;
-const "TechnicalDocumentationChat": NextPage = () => {
+<<<<<<< HEAD
+=======
+const TechnicalDocumentationChat: NextPage = () => {
+>>>>>>> origin/chore/fix-lint-and-merge
  ;
-}
-return (;
-    <div>
-      <Head>
-        <title>TechnicalDocumentationChat - Zion Tech Solutions</title>
-        <meta,
-name="description""
-          content="TechnicalDocumentationChat service"" />{" "}"
+  return (
+    <div />
+      <Head />
+        <title />TechnicalDocumentationChat - Zion Tech Solutions</title>
+        <meta;
+name=\"description\"}
+          content=\"TechnicalDocumentationChat service\"}
+        />{\" \"}
       </Head>
-      <main>
-        <h1>TechnicalDocumentationChat</h1>
-        <p>Service details coming soon...</p>
-        <a href="/services">Back to Services</a>"
+      <main />
+        <h1 />TechnicalDocumentationChat</h1>
+        <p />Service details coming soon...</p>
+        <a href=\"/services\" />Back to Services</a>
       </main>
     </div>
   );

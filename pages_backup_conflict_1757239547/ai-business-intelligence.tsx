@@ -146,7 +146,6 @@ const AIBusinessIntelligence: React.FC = () => {
     }
   ];
 
-  const benefits = [
     "Increase revenue by 25-40% through data-driven insights",
     "Reduce operational costs by 15-30% with process optimization",
     "Improve customer retention by 20-35% with predictive analytics",
@@ -154,7 +153,6 @@ const AIBusinessIntelligence: React.FC = () => {
     "Reduce manual reporting time by 80% with automation",
     "Achieve 99.9% data accuracy with AI-powered validation"
   ],
-  const useCases = [
     {
       industry: "Retail & E-commerce",
       description: "Customer segmentation, inventory optimization, and demand forecasting",
@@ -180,7 +178,6 @@ const AIBusinessIntelligence: React.FC = () => {
   }
 }
   ],
-  const pricing = [
     {
       plan: "Starter",
       price: "$499",

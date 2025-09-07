@@ -49,7 +49,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 
   useEffect(() => {;
-import MilestoneCard from '../../../components/monetization/MilestoneCard';
 
 import { Milestone } from '../../../utils/types/milestones';
 
@@ -113,7 +112,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
   const handleCreate = async (payload: { title: string, description?: string, dueDate: string, amountUsd: number }) => {
     if (!projectId) return;
-    const res = await createMilestone(projectId as string, payload);
     setMilestones(prev => [res.milestone, ...prev]);
   };
 

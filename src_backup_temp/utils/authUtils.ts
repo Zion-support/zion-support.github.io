@@ -33,7 +33,6 @@ export const getAuthToken = (): string | (null) => {
     }
     if (typeof window !== 'undefined') {'
       }
-      const auth = localStorage.getItem('auth') || sessionStorage.getItem('auth');'
       if (auth) {
         }
         const parsed = JSON.parse(auth);
@@ -50,10 +49,8 @@ export const getUserData = (): (unknown) => {
     }
     if (typeof window !== 'undefined') {'
       }
-      const auth = localStorage.getItem('auth') || sessionStorage.getItem('auth');'
       if (auth) {
         }
-        const parsed = JSON.parse(auth);
         return parsed.user || null}
     }
     return null} catch (error) {';'

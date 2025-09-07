@@ -42,7 +42,6 @@ function InterviewsContent() {
   );
   
   const pastInterviews = interviews.filter(interview => {
-    const interviewDate = parseISO(interview.scheduled_date);
     return !isAfter(interviewDate, now) || 
       ['completeddeclinedcancelled'].includes(interview.status)
   });

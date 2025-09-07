@@ -71,8 +71,6 @@ export default function ZeroTrustSecurityPlatformPage() {
 					"Visibility and audit for compliance",
 					"Rollout playbooks and migration kits"
 import React from 'react';
-import Head from 'next/head';
-import ServiceLanding from '../components/sections/ServiceLanding';
 export default function ZeroTrustSecurityPlatformPage(req, res) {
   try {
 	return (;

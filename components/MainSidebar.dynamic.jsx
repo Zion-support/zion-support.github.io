@@ -1,30 +1,32 @@
-import React from 'react';'
+<<<<<<< HEAD
 
-<<<<<<< HEAD
 ;
-const MainSidebar.dynamic = () => {
 =======
-<<<<<<< HEAD
-pr-12243
+import React from 'react';
+>>>>>>> cursor/automate-test-improve-and-merge-code-18b6
 =======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+import React from 'react';
+
 ;
+>>>>>>> origin/chore/fix-lint-and-merge
 const MainSidebar.dynamic = () => {}
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
   return (
-    <div data - testid="mainsidebar.dynamic">;
+    <div data - testid="mainsidebar.dynamic>;
       <h1 > MainSidebar.dynamic</h1>;
     </div>);
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
+
 const MainSidebar.dynamic = () => ;
-  return (<div data - testid="mainsidebar.dynamic">;"
-      <h1 > MainSidebar.dynamic</h1>
+
+=======
+const MainSidebar.dynamic = () => ;
+  return (<div data - testid=\"mainsidebar.dynamic\"    />;
+      <h1     /> MainSidebar.dynamic</h1>
+>>>>>>> origin/chore/fix-lint-and-merge
     </div>
   );
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 }
+;
+
+pr-12243
 export default MainSidebar.dynamic;

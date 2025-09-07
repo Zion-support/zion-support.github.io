@@ -73,7 +73,6 @@ export default function ServiceDescriptionGeneratorPage() {
           additionalNotes: additionalNotes || undefined,;
           tone})}),;
       if (!response.ok) {;
-        const data = await response.json().catch(() => ({}));
         throw new Error(data.error || 'Failed to generate');
         } catch (error) {
     console.error("Error:", error);

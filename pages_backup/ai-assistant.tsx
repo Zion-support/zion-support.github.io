@@ -5,7 +5,6 @@ import Head from 'next/head';
 import Button from '../components/ui/Button';
 export default function AIAssistantPage() {
 import Layout from '../components/layout/Layout';
-const AIAssistant: React.FC = () => {
 origin/cursor/automate-test-improve-and-merge-code-2533
   return (
     <Layout>;
@@ -121,7 +120,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 }
 
-import Button from '../components/ui/Button';
 export default function AIAssistantPage() {
   return (
     <>

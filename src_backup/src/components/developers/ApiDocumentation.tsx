@@ -1203,7 +1203,6 @@ app.post ('/webhook', express.raw ({"type": 'application / json'}), (req, res) =
                   </code>;
                   : Unix timestamp when the rate limit resets;
                 </li>;// Process the webhook event;
-  const event = JSON.parse(payload),logInfo('Received valid "webhook":', { "data": event }),// Respond to acknowledge receipt;'
   res.status(200).send('Webhook received')}),`}`                language="javascript";"
                 showLineNumbers={true}
               />;

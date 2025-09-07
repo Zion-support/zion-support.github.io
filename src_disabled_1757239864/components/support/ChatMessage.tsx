@@ -149,10 +149,8 @@ function escapeHtml(): any (unsafe: string): string {return unsafe;.replace(/&/g
 }function formatMessageWithLinks(message: string): string {// First, escape any HTML so that user input cannot break out of the intended;
   // markup.;
   const safeText  = escapeHtml(message)// Replace URLs;
-  const urlRegex = /(https?:\/\/[^\s]+)/g;
   let formattedMessage = safeText && safeText.replace(urlRegex,'<a href="$1" target="_blank" rel="noopener noreferrer" class="text-zion-cyan underline hover:text-zion-cyan/80">$1</a>';
   )// Replace help-center references like [Getting Started];
-  const helpCenterRegex = /\[([^\]]+)\]/g;
   formattedMessage = formattedMessage && formattedMessage.replace(helpCenterRegex,'<a href="/help/$1" class="text-zion-cyan underline hover:text-zion-cyan/80">$1</a>';
   )return formattedMessage;  return formattedMessage;
 }import { Avatar, AvatarFallback, AvatarImage  } from '@/components / ui / avatar';
@@ -217,7 +215,6 @@ function escape_html (unsafe: string): string {return unsafe;
   const safe_text = escape_html (message)// Replace URLs;
   const url_regex = /(https?:\/\/[^\s]+)/g;
   let formatted_message = safe_text.replace (url_regex,'<a href="$1" target="_blank" rel="noopener noreferrer" class="text - zion - cyan underline hover:text - zion - cyan / 80">$1</a>')// Replace help - center references like [Getting Started];
-  const helpCenterRegex = /\[([^\]]+)\]/g;
   formatted_message = formatted_message.replace (
     helpCenterRegex,
     '<a href="/help/$1" class="text - zion - cyan underline hover:text - zion - cyan / 80">$1</a>');

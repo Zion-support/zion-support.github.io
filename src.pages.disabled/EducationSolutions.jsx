@@ -26,10 +26,8 @@ pr-12325
   }
 }
 import React from 'react';
-
 interface EducationSolutionsProps {
   // Add props here as needed
-
 
 }
 
@@ -41,10 +39,15 @@ export default function EducationSolutions({ }: EducationSolutionsProps) {
     </div>
   );
 
-
 }
 
+:src.pages.disabled/EducationSolutions.jsx
 }
+}
+ursor/add-new-services-and-deploy-updates-0462
+
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+
 :src.pages.disabled/EducationSolutions.jsx
 }
 }
@@ -52,10 +55,7 @@ export default function EducationSolutions({ }: EducationSolutionsProps) {
 }
 }
 
-
-
-
-
+}
 
 :src.pages.disabled/EducationSolutions.jsx
 }
@@ -63,4 +63,3 @@ export default function EducationSolutions({ }: EducationSolutionsProps) {
 }
 }
 }
-:temp_exclude/src.pages.disabled/EducationSolutions.jsx;

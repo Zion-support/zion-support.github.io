@@ -1,336 +1,312 @@
-
-;
-export interface DevIdentity  {export interface DevIdentity  {isAuthenticated: boolean;roles: DevRole[];
-  userId?: string;
-}roles: DevRole[];
-  userId?: string;
-}const gitDir = path && path.join(process && process.cwd(), '.git')if (!fs && fs.existsSync(gitDir)) return { connected: false }const branch = execSync('git rev-parse --abbrev-ref HEAD', {stdio: ['ignore', 'pipe', 'ignore'];
-    }).toString().trim()return { connected: true, branch }
-  } catch {return { connected: false }
-
+import fs from 'fs';
+import path from 'path';
+import { execSync } from 'child_process';
+import type { NextApiRequest, NextApiResponse } from 'next';
+export type DevRole = 'admin' | 'maintainer' | 'contributor';
 
 export interface DevIdentity {
-
-}
 
 export interface DevIdentity {;
-  }
-  "isAuthenticated": boolean;
+  isAuthenticated: boolean;
 
-
-  "roles": DevRole[];
+  roles: DevRole[];
   userId?: string;
 }
-    const branch = execSync('git rev-parse --abbrev-ref HEAD', {'
-      }
-      "stdio": ['ignore', 'pipe', 'ignore']'
-    })
-import fs from "fs";
-import path from "path";
-import { execSync } from "child_process";
-import type { NextApiRequest, NextApiResponse } from "next";
-export type DevRole = $2;
-export interface DevIdentity {
-  isAuthenticated: boolean,
-  roles: DevRole[],
-  userId?: string
-}
 
-export function getGitStatus(): { connected: boolean, branch?: string } {
-  try {
-    const gitDir = path.join(process.cwd(), ".git"),
-    if (!fs.existsSync(gitDir)) return { connected: false},
-    const branch = execSync("git rev-parse --abbrev-ref HEAD", { stdio: ["ignore", "pipe", "ignore"] })
+    const gitDir = path && path.join(process && process.cwd(), '.git');
+    if (!fs && fs.existsSync(gitDir)) return { connected: false };
+
+    const branch = execSync('git rev-parse --abbrev-ref HEAD', {
+
+      stdio: ['ignore', 'pipe', 'ignore']
+export interface DevIdentity {
+  // TODO: Implement
+}
+export interface DevIdentity {;
+  isAuthenticated: boolean;,
+  roles: DevRole[];
+  userId?: string;
+    const branch = execSync('git rev-parse --abbrev-ref HEAD', {
+      stdio: ['ignore', 'pipe', 'ignore']')
+pr-12325
+    })
       .toString()
       .trim();
-    return { "connected": true, branch }
-  } catch {
-    }
-    return { "connected": false }
+    return { connected: true, branch }
+  } catch {}
+    return { connected: false }
   }
-  const adminToken  = process && process.env.ADMIN_TOKEN;if (token && adminToken && token === adminToken) {}
-  return { isAuthenticated: false, roles: [] }
-}export function requireRoles() {return { isAuthenticated: true, roles: ['admin'], userId: 'admin' }}
-  return { isAuthenticated: false, roles: [] }
 }
 
+  // TODO: integrate real auth; for now, check a header and env var for dev
 
-
-export function getDevIdentity("req": NextApiRequest): DevIdentity {;
-
-
-  // "TODO": integrate real auth; for now, check a header and env var for dev
-}
-const token = req && req.headers['x-dev-token'] || req && req.headers['x-admin-token'];'
+  // TODO: integrate real auth; for now, check a header and env var for dev;
+pr-12325
+  const token = req && req.headers['x-dev-token'] || req && req.headers['x-admin-token'];
   const adminToken = process && process.env.ADMIN_TOKEN;
 
-  if (config.allowedIPs.includes(ip)) {
-    return true;
-  }
-  return { "isAuthenticated": false, "roles": [] }
-}
-
-export function getDevIdentity(req: NextApiRequest): DevIdentity {
-  // TODO: integrate real auth, for now, check a header and env var for dev
-  const token = $2;
-  const adminToken = $2;
-  if (token && adminToken && token === adminToken) {
   if (token && adminToken && token === adminToken) {
 
-    }
-
-    return { "isAuthenticated": true, "roles": ['admin'], "userId": 'admin' }'
-    return { "isAuthenticated": true, "roles": ['admin'], "userId": 'admin' };'
   }
-  return { "isAuthenticated": false, "roles": [] }
+  return { isAuthenticated: false, roles: [] }
 }
+  }
+  return { isAuthenticated: false, roles: [] }
+}
+
+  if (token && adminToken && token === adminToken) {
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
     return { isAuthenticated: true, roles: ['admin'], userId: 'admin' };
-    return { isAuthenticated: true, roles: ["admin"], userId: "admin" }
-  }
-  return { isAuthenticated: false, roles: [] }
-}
 
   }
   return { isAuthenticated: false, roles: [] }
 }
 
+  if (token && adminToken && token === adminToken) {
 
+    return { isAuthenticated: true, roles: ['admin'], userId: 'admin' };
 
+  }
+  return { isAuthenticated: false, roles: [] }
+}
+  if (token && adminToken && token === adminToken) {
 
+    return { isAuthenticated: true, roles: ['admin'], userId: 'admin' }
+origin/cursor/expand-services-advertise-and-build-project-c28b
+    return { isAuthenticated: true, roles: ['admin'], userId: 'admin' };
+
+  }
+  return { isAuthenticated: false, roles: [] }
+}
 
 ursor/fix-website-loading-errors-and-merge-6662
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
+export function requireRoles(
+  req: NextApiRequest
+  res: NextApiResponse
 
+  allowed: DevRole[]
+  return { isAuthenticated: false, roles: [] }
 
-
-
-
+    return { isAuthenticated: true, roles: ['admin'], userId: 'admin' }
+    return { isAuthenticated: true, roles: ['admin'], userId: 'admin' };
 
 export function requireRoles(
-  "req": NextApiRequest,
-"res": NextApiResponse,
-"allowed": DevRole[]
+  req: NextApiRequest;,
+  res: NextApiResponse;
+  allowed: DevRole[])
+pr-12325
 ): DevIdentity | undefined {;
-  }
   const identity = getDevIdentity(req);
-  if (!identity.isAuthenticated) {
-    }
-    res.status(401).json({ "error": 'Unauthorized' });'
+  if (!identity.isAuthenticated) {'
+    res.status(401).json({ error: 'Unauthorized' });
     return undefined;
   }
-  const hasRole = identity.roles.some(r => { return allowed.includes(r)); }
-  if (!hasRole) {
-    }
-    res && res.status(403).json({ "error": 'Forbidden' });'
+  const hasRole = identity.roles.some(r => allowed.includes(r));
+  if (!hasRole) {'
+    res && res.status(403).json({ error: 'Forbidden' });
     return undefined;
   }
   return identity;
-// Development access utilities,
-export interface DevAccessConfig {
-  }
-  "enabled": boolean;
-  "allowedIps": string[];
-  "allowedUsers": string[];
-  "requireAuth": boolean;
-  "maxRequestsPerMinute": number;
+
 }
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+// Development access utilities
+export interface DevAccessConfig {
+
+  enabled: boolean;
+  allowedIps: string[];
+  allowedUsers: string[];
+  requireAuth: boolean;
+  maxRequestsPerMinute: number;
+}
+
+export interface DevUser {};
+  id: string;
+  name: string;
+  email: string;'
+  role: 'developer' | 'admin' | 'tester';
+  permissions: string[];
+  lastAccess: Date;
+}
+
+class DevAccessManager {}
+  private config: DevAccessConfig;
+  private users: Map<string, DevUser> = new Map();
+  const hasRole = identity.roles.some(r => allowed.includes(r));
+  if (!hasRole) {
+    res && res.status(403).json({ error: 'Forbidden' });
+  return identity;
+// Development access utilities;
+export interface DevAccessConfig {
+  // TODO: Implement
+  enabled: boolean;,
+  allowedIps: string[];
+  allowedUsers: string[];,
+  requireAuth: boolean;
+  maxRequestsPerMinute: number;
 
 export interface DevUser {
-  }
-  "id": string;
-  "name": string;
-  "email": string;
-  "role": 'developer' | 'admin' | 'tester';'
-  "permissions": string[];
-  "lastAccess": Date;
-}
+  // TODO: Implement
+  id: string;,
+  name: string;
+  email: string;,
+  role: 'developer' | 'admin' | 'tester';
+  permissions: string[];,
+  lastAccess: Date;
 
 class DevAccessManager {
-  }
-  private "config": DevAccessConfig;
-  private "users": Map<string, DevUser> = new Map();
-  private "accessLog": Array<{ "ip": string; "user": string; "timestamp": number; "action": string }> = [];
+  // TODO: Implement
+  private config: DevAccessConfig;
+  private users: Map<string, DevUser> = new Map();
+</string>
+pr-12325
+  private accessLog: Array<{ ip: string; user: string; timestamp: number; action: string }> = [];
 
-  constructor("config": DevAccessConfig) {
-    }
+  constructor(config: DevAccessConfig) {}
     this.config = config;
   }
 
-  isDevAccessEnabled(): boolean {
-    }
+  isDevAccessEnabled(): boolean {}
     return this.config.enabled;
   }
 
-  isIpAllowed("ip": string): boolean {
-    }
-    if (!this.config.enabled) return false;
-    return this.config.allowedIps.includes(ip) || this.config.allowedIps.includes('*');'
+  isIpAllowed(ip: string): boolean {}
+    if (!this.config.enabled) return false;'
+    return this.config.allowedIps.includes(ip) || this.config.allowedIps.includes('*');
   }
 
-  isUserAllowed("userId": string): boolean {
-    }
-    if (!this.config.enabled) return false;
-    return this.config.allowedUsers.includes(userId) || this.config.allowedUsers.includes('*');'
+  isUserAllowed(userId: string): boolean {}
+    if (!this.config.enabled) return false;'
+    return this.config.allowedUsers.includes(userId) || this.config.allowedUsers.includes('*');
   }
 
-  hasPermission("userId": string, "permission": string): boolean {
-    }
+  hasPermission(userId: string, permission: string): boolean {}
     const user = this.users.get(userId);
-    if (!user) return false;
-    return user.permissions.includes('*') || user.permissions.includes(permission);'
+    if (!user) return false;'
+    return user.permissions.includes('*') || user.permissions.includes(permission);
   }
 
-  logAccess("ip": string, "user": string, "action": string): void {
-    }
-    this.accessLog.push({
-      }
+  logAccess(ip: string, user: string, action: string): void {}
+    this.accessLog.push({}
       ip,
       user,
-      "timestamp": Date.now(),
-      action
+      timestamp: Date.now(),
+      action;
     });
 
-    // Keep only last 1000 entries,
-if (this.accessLog.length > 1000) {
-      }
+    // Keep only last 1000 entries;
+    if (this.accessLog.length > 1000) {}
       this.accessLog = this.accessLog.slice(-1000);
     }
   }
 
-  getAccessLog(): Array<{ "ip": string; "user": string; "timestamp": number; "action": string }> {
-    }
+  getAccessLog(): Array<{ ip: string; user: string; timestamp: number; action: string }> {}
     return [...this.accessLog];
   }
 
-  addUser("user": DevUser): void {
-    }
+  addUser(user: DevUser): void {}
     this.users.set(user.id, user);
   }
 
-  removeUser("userId": string): boolean {
-    }
+  removeUser(userId: string): boolean {}
     return this.users.delete(userId);
   }
 
-  getUser("userId": string): DevUser | undefined {
-    }
+  getUser(userId: string): DevUser | undefined {}
     return this.users.get(userId);
   }
 
-  getAllUsers(): DevUser[] {
-    }
+  getAllUsers(): DevUser[] {}
     return Array.from(this.users.values());
   }
 
-  updateConfig("newConfig": Partial<DevAccessConfig>): void {
-    }
+  updateConfig(newConfig: Partial<DevAccessConfig>): void {}
     this.config = { ...this.config, ...newConfig };
   }
 
-  getConfig(): DevAccessConfig {
-    }
+  getConfig(): DevAccessConfig {}
     return { ...this.config };
   }
+export type DevRole = "admin" | "maintainer" | "contributor";
+
+export interface DevIdentity {
+  role: DevRole;
+  permissions: string[];
 }
 
-// Default configuration,
-const "defaultConfig": DevAccessConfig = {
   }
-  "enabled": process.env.NODE_ENV === 'development','
-  "allowedIps": ['127.0.0.1', '::1', 'localhost'],'
-  "allowedUsers": ['*'],'
-  "requireAuth": false,
-  "maxRequestsPerMinute": 100
-};
-
-// Singleton instance,
-export const devAccessManager = new DevAccessManager(defaultConfig);
-
-// Middleware for development access,
-export function requireDevAccess() {
+'
+  const ip = req.ip || req.connection.remoteAddress || 'unknown';
+  if (!devAccessManager.isIpAllowed(ip)) {'
+    return res.status(403).json({ error: 'Access denied' });
   }
-  if (!devAccessManager.isDevAccessEnabled()) {
-    }
-    return res.status(404).json({ "error": 'Not found' });'
-  }
-
-  const ip = req.ip || req.connection.remoteAddress || 'unknown';'
-  if (!devAccessManager.isIpAllowed(ip)) {
-    }
-    return res.status(403).json({ "error": 'Access denied' });'
-  }
-
-  devAccessManager.logAccess(ip, req.user?.id || 'anonymous', req.path);'
+'
+  devAccessManager.logAccess(ip, req.user?.id || 'anonymous', req.path);
   next();
 }
 
-// Utility functions,
-export function isDevelopmentMode(): boolean {
-  }
-  return process.env.NODE_ENV === 'development';'
+// Utility functions;
+export function isDevelopmentMode(): boolean {';
+  return process.env.NODE_ENV === 'development';
 }
 
-export function isProductionMode(): boolean {
-  }
-  return process.env.NODE_ENV === 'production';'
+export function isProductionMode(): boolean {';
+  return process.env.NODE_ENV === 'production';
 }
 
-export function getClientIp("req": any): string {
-  }
+export function getClientIp(req: any): string {}
   return req.ip || 
          req.connection.remoteAddress || 
          req.socket.remoteAddress ||
-         (req.connection.socket ? req.connection.socket.remoteAddress : null) ||
-         'unknown';'
+         (req.connection.socket ? req.connection.socket.remoteAddress : null) ||';
+         'unknown';
 }
 
-export function getDevIdentity ("req": NextApiRequest): DevIdentity {
-  // "TODO": integrate real auth; for now, check a header and env var for dev;
-  }
-  const token = req.headers['x - dev - token'] || req.headers['x - admin - token'];'
+  const token = req.headers['x - dev - token'] || req.headers['x - admin - token'];
   const admin_token = process.env.ADMIN_TOKEN;
-  // Check condition,
-if ( {) {
-  $2
-}
-    return { "is_authenticated": true, "roles": ['admin'], "user_id": 'admin' }'
+  // Check condition;
+if ( {) {}
+  $2;
+}'
+    return { is_authenticated: true, roles: ['admin'], user_id: 'admin' }
   }
-  return { "is_authenticated": false, "roles": [] }
+  return { is_authenticated: false, roles: [] }
 }
 export function require_roles (
-  "req": NextApiRequest,
-  "res": NextApiResponse,
-  "allowed": DevRole[]): DevIdentity | undefined {
-  }
+  req: NextApiRequest,
+  res: NextApiResponse,
+  allowed: DevRole[]): DevIdentity | undefined {};
   const identity = getDevIdentity (req);
-  // Check condition,
-if ( {) {
-  $2
-}
-    res.status (401).json ({ "error": 'Unauthorized' });'
+  // Check condition;
+if ( {) {}
+  $2;
+}'
+    res.status (401).json ({ error: 'Unauthorized' });
     return undefined;
   }
-  const has_role = identity.roles.some (r => { return allowed.includes (r)); }
-  // Check condition,
-if ( {) {
-  $2
-}
-    res.status (403).json ({ "error": 'Forbidden' });'
+  const has_role = identity.roles.some (r => allowed.includes (r));
+  // Check condition;
+if ( {) {}
+  $2;
+}'
+    res.status (403).json ({ error: 'Forbidden' });
+
     return undefined;
   }
   return identity;
-}ursor/fix-website-loading-errors-and-merge-6662;
 }
+
 origin/cursor/automate-test-improve-and-merge-code-20a4
 
+ursor/fix-website-loading-errors-and-merge-6662
+origin/cursor/expand-services-advertise-and-build-project-c28b
+origin/cursor/automate-test-improve-and-merge-code-2533
 
-
-
-
-
-
-
-
-  return identity
-}
+  isDevAccessEnabled(): boolean {
+  // TODO: Implement
+    return this.config.enabled;

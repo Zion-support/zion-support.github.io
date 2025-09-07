@@ -30,7 +30,6 @@ export interface Achievement {
   title: string
   description: string
 
-import { BadgeCheck } from 'lucide-react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 
 export interface Achievement {
@@ -46,8 +45,6 @@ interface AchievementBadgesProps {
   achievements: Achievement[]
 }
 export function AchievementBadges({ achievements }: AchievementBadgesProps) {
-import { BadgeCheck } from 'lucide-react';
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 export interface Achievement {;
   id: string;
   title: string,
@@ -59,7 +56,6 @@ interface AchievementBadgesProps {;
   achievements: Achievement[];
 
 import { BadgeCheck } from 'lucide-react'
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card",
 
 export interface Achievement {
   id: string,
@@ -71,8 +67,6 @@ interface AchievementBadgesProps {,
   achievements: Achievement[]
 }
 export function AchievementBadges({ achievements }:,  AchievementBadgesProps) {
-import { BadgeCheck } from 'lucide-react';
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 export interface Achievement {;
   id: string;,
   title: string;,

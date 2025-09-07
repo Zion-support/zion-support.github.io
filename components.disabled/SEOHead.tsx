@@ -1,35 +1,16 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
-
-import React from 'react';'
+import React from 'react';
 interface SEOHeadProps  {// Add props here as needed;
 }
-
-export default function SEOHead() {
-}
-return (;
+export default function SEOHead({ }: SEOHeadProps) {
+  return (
     <div>
       <h1>SEOHead</h1>
       <p>This component is currently under development.</p>
     </div>
   );
 }
-=======
-=======
-
-;
-import React from 'react';
-interface SEOHeadProps  {// Add props here as needed;
-}
->>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
 export default function SEOHead() {return (<div>;
       <h1>SEOHead</h1>;
       <p>This component is currently under development.</p>;
     </div>;
   )}
-<<<<<<< HEAD
->>>>>>> 470476d15542c973cf650505a68f6472f0b68c9f
-=======
->>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422

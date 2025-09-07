@@ -1,17 +1,14 @@
+<
 
 #!/usr/bin/env node const CursorInterfaceAutomation = require('./cursor-interface-automation'); async function runTests() {  try { const automation = new CursorInterfaceAutomation();     const testSession = await automation.createSession('test-session',{ name: 'Test Session',interval: 10000,commands: ['proceed','test'],});   try { await automation.focusCursor(); } catch (error) { :',error.message )} try { await automation.sendText('test'); } catch (error) { :',error.message )}  const sessions = automation.listSessions();  const stats = automation.getStats();  automation.terminateSession('test-session');  const finalStats = automation.getStats();  );     } catch (error) { console.error('\n❌ Test failed:',error.message); console.error(error.stack); process.exit(1)} } if (require.main === module) { runTests()} module.exports = { runTests };
-#!/usr/bin/env node const CursorInterfaceAutomation = require('./cursor-interface-automation'); async function runTests() {  try { const automation = new CursorInterfaceAutomation();     const testSession = await automation.createSession('test-session',{ name: 'Test Session',interval: 10000,commands: ['proceed','test'],});   try { await automation.focusCursor(); } catch (error) { :',error.message )} try { await automation.sendText('test'); } catch (error) { :',error.message )}  const sessions = automation.listSessions();  const stats = automation.getStats();  automation.terminateSession('test-session');  const finalStats = automation.getStats();  );     } catch (error) { console.error('\n❌ Test failed:',error.message); console.error(error.stack); process.exit(1)} } if (require.main === module) { runTests()} module.exports = { runTests };
-#!/usr/bin/env node const CursorInterfaceAutomation = require('./cursor-interface-automation'); async function runTests() {  try { const automation = new CursorInterfaceAutomation();     const testSession = await automation.createSession('test-session',{ name: 'Test Session',interval: 10000,commands: ['proceed','test'],});   try { await automation.focusCursor(); } catch (error) { :',error.message )} try { await automation.sendText('test'); } catch (error) { :',error.message )}  const sessions = automation.listSessions();  const stats = automation.getStats();  automation.terminateSession('test-session');  const finalStats = automation.getStats();  );     } catch (error) { console.error('\n❌ Test failed:',error.message); console.error(error.stack); process.exit(1)} } if (require.main === module) { runTests()} module.exports = { runTests };
-#!/usr/bin/env node const CursorInterfaceAutomation = require('./cursor-interface-automation'); async function runTests() {  try { const automation = new CursorInterfaceAutomation();     const testSession = await automation.createSession('test-session',{ name: 'Test Session',interval: 10000,commands: ['proceed','test']});   try { await automation.focusCursor(); } catch (error) { :',error.message )} try { await automation.sendText('test'); } catch (error) { :',error.message )}  const sessions = automation.listSessions();  const stats = automation.getStats();  automation.terminateSession('test-session');  const finalStats = automation.getStats();  );     } catch (error) { console.error('\n❌ Test failed:',error.message); console.error(error.stack); process.exit(1)} } if (require.main === module) { runTests()} module.exports = { runTests };
-#!/usr/bin/env node const CursorInterfaceAutomation = require('./cursor-interface-automation'); async function runTests() {  try { const automation = new CursorInterfaceAutomation();     const testSession = await automation.createSession('test-session',{ name: 'Test Session',interval: 10000,commands: ['proceed','test']});   try { await automation.focusCursor(); } catch (error) { :',error.message )} try { await automation.sendText('test'); } catch (error) { :',error.message )}  const sessions = automation.listSessions();  const stats = automation.getStats();  automation.terminateSession('test-session');  const finalStats = automation.getStats();  );     } catch (error) { console.error('\n❌ Test failed:',error.message); console.error(error.stack); process.exit(1)} } if (require.main === module) { runTests()} module.exports = { runTests };
-#!/usr/bin/env node const CursorInterfaceAutomation = require('./cursor-interface-automation'); async function runTests() {  try { const automation = new CursorInterfaceAutomation();     const testSession = await automation.createSession('test-session',{ name: 'Test Session',interval: 10000,commands: ['proceed','test']});   try { await automation.focusCursor(); } catch (error) { :',error.message )} try { await automation.sendText('test'); } catch (error) { :',error.message )}  const sessions = automation.listSessions();  const stats = automation.getStats();  automation.terminateSession('test-session');  const finalStats = automation.getStats();  );     } catch (error) { console.error('\n❌ Test failed:',error.message); console.error(error.stack); process.exit(1)} } if (require.main === module) { runTests()} module.exports = { runTests };
-
 #!/usr/bin/env node const CursorInterfaceAutomation = require('./cursor-interface-automation'); async function runTests() {  try { const automation = new CursorInterfaceAutomation();     const testSession = await automation.createSession('test-session',{ name: 'Test Session',interval: 10000,commands: ['proceed','test'],});   try { await automation.focusCursor(); } catch (error) { :',error.message )} try { await automation.sendText('test'); } catch (error) { :',error.message )}  const sessions = automation.listSessions();  const stats = automation.getStats();  automation.terminateSession('test-session');  const finalStats = automation.getStats();  );     } catch (error) { console.error('\n❌ Test failed:',error.message); console.error(error.stack); process.exit(1)} } if (require.main === module) { runTests()} module.exports = { runTests };
 
 #!/usr/bin/env node const CursorInterfaceAutomation = require('./cursor-interface-automation'); async function runTests() {  try { const automation = new CursorInterfaceAutomation();     const testSession = await automation.createSession('test-session',{ name: 'Test Session',interval: 10000,commands: ['proceed','test'],});   try { await automation.focusCursor(); } catch (error) { :',error.message )} try { await automation.sendText('test'); } catch (error) { :',error.message )}  const sessions = automation.listSessions();  const stats = automation.getStats();  automation.terminateSession('test-session');  const finalStats = automation.getStats();  );     } catch (error) { console.error('\n❌ Test failed:',error.message); console.error(error.stack); process.exit(1)} } if (require.main === module) { runTests()} module.exports = { runTests };
 #!/usr/bin/env node const CursorInterfaceAutomation = require('./cursor-interface-automation'); async function runTests() {  try { const automation = new CursorInterfaceAutomation();     const testSession = await automation.createSession('test-session',{ name: 'Test Session',interval: 10000,commands: ['proceed','test'],});   try { await automation.focusCursor(); } catch (error) { :',error.message )} try { await automation.sendText('test'); } catch (error) { :',error.message )}  const sessions = automation.listSessions();  const stats = automation.getStats();  automation.terminateSession('test-session');  const finalStats = automation.getStats();  );     } catch (error) { console.error('\n❌ Test failed:',error.message); console.error(error.stack); process.exit(1)} } if (require.main === module) { runTests()} module.exports = { runTests };
 #!/usr/bin/env node const CursorInterfaceAutomation = require('./cursor-interface-automation'); async function runTests() {  try { const automation = new CursorInterfaceAutomation();     const testSession = await automation.createSession('test-session',{ name: 'Test Session',interval: 10000,commands: ['proceed','test'],});   try { await automation.focusCursor(); } catch (error) { :',error.message )} try { await automation.sendText('test'); } catch (error) { :',error.message )}  const sessions = automation.listSessions();  const stats = automation.getStats();  automation.terminateSession('test-session');  const finalStats = automation.getStats();  );     } catch (error) { console.error('\n❌ Test failed:',error.message); console.error(error.stack); process.exit(1)} } if (require.main === module) { runTests()} module.exports = { runTests };
+
 #!/usr/bin/env node
+
 /**
  * Test Script for Cursor Chat Automation
  * This script tests the automation system without starting full automation
@@ -36,13 +33,13 @@ const CursorInterfaceAutomation = // // require('./cursor-interface-automation')
         // Test session termination
         automation.terminateSession('test-session');
 
-
-
-
-
-
-
 const CursorInterfaceAutomation = // // require('./cursor-interface-automation');
+
+<<<<<<< HEAD
+=======
+const CursorInterfaceAutomation = // // require('./cursor-interface-automation');
+
+>>>>>>> origin/chore/fix-lint-and-merge
   async function runTests() {
     console.log('🧪 Testing Cursor Chat Automation System...\n');
     try {
@@ -54,7 +51,6 @@ const CursorInterfaceAutomation = // // require('./cursor-interface-automation')
         // Test basic functionality
         console.log('\n🔍 Testing basic functionality...');
         // Test session creation
-        const testSession = await automation.createSession('test-session', {
             name: 'Test Session',
             interval: 10000,
             commands: ['proceed', 'test']
@@ -105,17 +101,16 @@ const CursorInterfaceAutomation = // // require('./cursor-interface-automation')
     }
 }
 
+<
 
+<<<<<<< HEAD
 
 
     try {
       // Create automation instance
-      const automation = new CursorInterfaceAutomation();
 
-const CursorInterfaceAutomation = // // require('./cursor-interface-automation');
   async function runTests() {
         // Test session creation
-        const testSession = await automation.createSession('test-session', {
             name: 'Test Session',
             interval: 10000,
             commands: ['proceed', 'test']
@@ -130,7 +125,6 @@ const CursorInterfaceAutomation = // // require('./cursor-interface-automation')
         // Test session termination
         automation.terminateSession('test-session')
 const CursorInterfaceAutomation = // // require('./cursor-interface-automation')
-const CursorInterfaceAutomation = // // require('./cursor-interface-automation')
   async function runTests() {
     console.log('🧪 Testing Cursor Chat Automation System...\n')
     try {
@@ -142,7 +136,6 @@ const CursorInterfaceAutomation = // // require('./cursor-interface-automation')
         // Test basic functionality
         console.log('\n🔍 Testing basic functionality...')
         // Test session creation
-        const testSession = await automation.createSession('test-session', {
             name: 'Test Session',
             interval: 10000,
             commands: ['proceed', 'test']
@@ -190,21 +183,25 @@ const CursorInterfaceAutomation = // // require('./cursor-interface-automation')
         process.exit(1);
     }
 }
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
     try {
 
       // Create automation instance
-      const automation = new CursorInterfaceAutomation();
       console.log('✅ Automation instance created successfully');
+  // TODO: Implement
+      // Create automation instance;
+      console.log('✅ Automation instance created successfully');`;
       console.log(`📱 Platform detected: ${automation.platform}`);
-      console.log(
-        `⚙️  Configuration loaded: ${automation.config.automation ? 'Yes' : 'No'}`
+      console.log(`;
+        `⚙️  Configuration loaded: ${automation.config.automation ? 'Yes' : 'No'}`')
       );
+<<<<<<< HEAD
 
       // Test basic functionality
       console.log('\n🔍 Testing basic functionality...');
 
       // Test session creation
-      const testSession = await automation.createSession('test-session', {
         name: 'Test Session',
         interval: 10000,
         commands: ['proceed', 'test'],
@@ -215,21 +212,21 @@ const CursorInterfaceAutomation = // // require('./cursor-interface-automation')
       // Test automation methods
       console.log('\n🔍 Testing automation methods...');
 
+=======
+      // Test basic functionality;
+      // Test session creation;
+        commands: ['proceed', 'test'],')
+      // Test automation methods;
+>>>>>>> origin/chore/fix-lint-and-merge
       // Test focus (this will actually try to focus Cursor)
   // TODO: Implement
         console.log()
           '⚠️  Focus test failed (this is normal if Cursor is not running):',
-          error.message
-        );
-      }
-
+          error.message;
       // Test text input (this will actually try to send text)
-      try {
-        await automation.sendText('test');
-        console.log('✅ Text input test passed');
-      } catch (error) {
-        console.log(
+  // TODO: Implement
           '⚠️  Text input test failed (this is normal if Cursor is not focused):',
+<<<<<<< HEAD
           error.message
         );
       }
@@ -237,10 +234,8 @@ const CursorInterfaceAutomation = // // require('./cursor-interface-automation')
       // Test session management
       console.log('\n🔍 Testing session management...');
 
-      const sessions = automation.listSessions();
       console.log('✅ Sessions listed:', sessions.length);
 
-      const stats = automation.getStats();
       console.log('✅ Statistics retrieved:', {
         totalSessions: stats.totalSessions,
         activeSessions: stats.activeSessions,
@@ -252,7 +247,6 @@ const CursorInterfaceAutomation = // // require('./cursor-interface-automation')
       console.log('✅ Test session terminated');
 
       // Final status
-      const finalStats = automation.getStats();
       console.log('\n📊 Final Statistics:');
       console.log(JSON.stringify(finalStats, null, 2));
 
@@ -266,25 +260,28 @@ const CursorInterfaceAutomation = // // require('./cursor-interface-automation')
       console.error(error.stack);
       process.exit(1);
     }
+=======
+      // Test session management;
+        platform: stats.platform,)
+      // Test session termination;
+      // Final status;
+>>>>>>> origin/chore/fix-lint-and-merge
   };
 
+<
 
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 
+<
 
-
-
-
-
-
-
+origin/cursor/integrate-build-improve-and-re-verify-c7b5;
 
 const CursorInterfaceAutomation = require('./cursor-interface-automation');
+<<<<<<< HEAD
 async function runTests() {
   console.log('🧪 Testing Cursor Chat Automation System...\n');
   try {
     // Create automation instance
-    const automation = new CursorInterfaceAutomation();
     console.log('✅ Automation instance created successfully');
     console.log(`📱 Platform "detected": ${automation.platform}`);
     console.log(
@@ -293,24 +290,24 @@ async function runTests() {
     // Test basic functionality
     console.log('\n🔍 Testing basic functionality...');
     // Test session creation
-    const testSession = await automation.createSession('test-session', {
+=======
+  // TODO: Implement
+    // Create automation instance;
+    console.log(`📱 Platform "detected": ${automation.platform}`);"
+    console.log("`;
+      `⚙️  Configuration "loaded": ${automation.config.automation ? 'Yes' : 'No'}`')
+    // Test basic functionality;
+    // Test session creation;
+>>>>>>> origin/chore/fix-lint-and-merge
       "name": 'Test Session',
-      "interval": 10000,
+      "interval": 10000,")"
       "commands": ['proceed', 'test']});
     console.log('✅ Test session "created": ', testSession.id);
-    // Test automation methods
-    console.log('\n🔍 Testing automation methods...');
+    // Test automation methods;
     // Test focus (this will actually try to focus Cursor)
-    try {
-      await automation.focusCursor();
-      console.log('✅ Focus test passed');
-    } catch (error) {
-      console.log(
-        '⚠️  Focus test failed (this is normal if Cursor is not running):',
-        error.message
-      );
-    }
+  // TODO: Implement
     // Test text input (this will actually try to send text)
+<<<<<<< HEAD
     try {
       await automation.sendText('test');
       console.log('✅ Text input test passed');
@@ -322,9 +319,7 @@ async function runTests() {
     }
     // Test session management
     console.log('\n🔍 Testing session management...');
-    const sessions = automation.listSessions();
     console.log('✅ Sessions "listed": ', sessions.length);
-    const stats = automation.getStats();
     console.log('✅ Statistics "retrieved": ', {
       "totalSessions": stats.totalSessions,
       "activeSessions": stats.activeSessions,
@@ -333,27 +328,92 @@ async function runTests() {
     automation.terminateSession('test-session');
     console.log('✅ Test session terminated');
     // Final status
-    const finalStats = automation.getStats();
+=======
+  // TODO: Implement
+    // Test session management;
+    console.log('✅ Sessions "listed": ', sessions.length);
+    console.log('✅ Statistics "retrieved": ', {
+      "totalSessions": stats.totalSessions,""
+      "activeSessions": stats.activeSessions,")"
+      "platform": stats.platform});"
+    // Test session termination;"
+    // Final status;
+>>>>>>> origin/chore/fix-lint-and-merge
     console.log('\n📊 Final "Statistics": ');
-    console.log(JSON.stringify(finalStats, null, 2));
-    console.log('\n🎉 All tests completed successfully!');
     console.log('\n💡 To start the full automation "system": ');
-    console.log('   ./launch-cursor-automation.sh');
-    console.log('\n💡 To stop the automation system:');
-    console.log('   ./stop-cursor-automation.sh');
-  } catch (error) {
     console.error('\n❌ Test "failed": ', error.message);
-    console.error(error.stack);
-    process.exit(1);
-  }
+
 }
 // Run tests if this script is executed directly
 if (require.main === module) {
-#!/usr/bin/env node const CursorInterfaceAutomation = require('./cursor-interface-automation'); async function runTests() { console.log('🧪 Testing Cursor Chat Automation System...\n'); try { const automation = new CursorInterfaceAutomation(); console.log('✅ Automation instance created successfully'); console.log(`📱 Platform detected: ${automation.platform}`); console.log( `⚙️ Configuration loaded: ${automation.config.automation ? 'Yes' : 'No'}` ); console.log('\n🔍 Testing basic functionality...'); const testSession = await automation.createSession('test-session',{ name: 'Test Session',interval: 10000,commands: ['proceed','test']}); console.log('✅ Test session created:',testSession.id); console.log('\n🔍 Testing automation methods...'); try { await automation.focusCursor(); console.log('✅ Focus test passed')} catch (error) { console.log( '⚠️ Focus test failed (this is normal if Cursor is not running):',error.message )} try { await automation.sendText('test'); console.log('✅ Text input test passed')} catch (error) { console.log( '⚠️ Text input test failed (this is normal if Cursor is not focused):',error.message )} console.log('\n🔍 Testing session management...'); const sessions = automation.listSessions(); console.log('✅ Sessions listed:',sessions.length); const stats = automation.getStats(); console.log('✅ Statistics retrieved:',{ totalSessions: stats.totalSessions,activeSessions: stats.activeSessions,platform: stats.platform}); automation.terminateSession('test-session'); console.log('✅ Test session terminated'); const finalStats = automation.getStats(); console.log('\n📊 Final Statistics:'); console.log(JSON.stringify(finalStats,null,2)); console.log('\n🎉 All tests completed successfully!'); console.log('\n💡 To start the full automation system:'); console.log(' ./launch-cursor-automation.sh'); console.log('\n💡 To stop the automation system:'); console.log(' ./stop-cursor-automation.sh')} catch (error) { console.error('\n❌ Test failed:',error.message); console.error(error.stack); process.exit(1)} } if (require.main === module) { runTests()} module.exports = { runTests };
+
   runTests();
 }
 module.exports = { runTests };
 #!/usr/bin/env node const CursorInterfaceAutomation = require('./cursor-interface-automation'); async function runTests() { console.log('🧪 Testing Cursor Chat Automation System...\n'); try { const automation = new CursorInterfaceAutomation(); console.log('✅ Automation instance created successfully'); console.log(`📱 Platform detected: ${automation.platform}`); console.log( `⚙️ Configuration loaded: ${automation.config.automation ? 'Yes' : 'No'}` ); console.log('\n🔍 Testing basic functionality...'); const testSession = await automation.createSession('test-session',{ name: 'Test Session',interval: 10000,commands: ['proceed','test'],}); console.log('✅ Test session created:',testSession.id); console.log('\n🔍 Testing automation methods...'); try { await automation.focusCursor(); console.log('✅ Focus test passed')} catch (error) { console.log( '⚠️ Focus test failed (this is normal if Cursor is not running):',error.message )} try { await automation.sendText('test'); console.log('✅ Text input test passed')} catch (error) { console.log( '⚠️ Text input test failed (this is normal if Cursor is not focused):',error.message )} console.log('\n🔍 Testing session management...'); const sessions = automation.listSessions(); console.log('✅ Sessions listed:',sessions.length); const stats = automation.getStats(); console.log('✅ Statistics retrieved:',{ totalSessions: stats.totalSessions,activeSessions: stats.activeSessions,platform: stats.platform,}); automation.terminateSession('test-session'); console.log('✅ Test session terminated'); const finalStats = automation.getStats(); console.log('\n📊 Final Statistics:'); console.log(JSON.stringify(finalStats,null,2)); console.log('\n🎉 All tests completed successfully!'); console.log('\n💡 To start the full automation system:'); console.log(' ./launch-cursor-automation.sh'); console.log('\n💡 To stop the automation system:'); console.log(' ./stop-cursor-automation.sh')} catch (error) { console.error('\n❌ Test failed:',error.message); console.error(error.stack); process.exit(1)} } if (require.main === module) { runTests()} module.exports = { runTests };
+
+module.exports = { runTests };
+#!/usr/bin/env node const CursorInterfaceAutomation = require('./cursor-interface-automation'); async function runTests() { console.log('🧪 Testing Cursor Chat Automation System...\n'); try { const automation = new CursorInterfaceAutomation(); console.log('✅ Automation instance created successfully'); console.log(`📱 Platform detected: ${automation.platform}`); console.log( `⚙️ Configuration loaded: ${automation.config.automation ? 'Yes' : 'No'}` ); console.log('\n🔍 Testing basic functionality...'); const testSession = await automation.createSession('test-session',{ name: 'Test Session',interval: 10000,commands: ['proceed','test'],}); console.log('✅ Test session created:',testSession.id); console.log('\n🔍 Testing automation methods...'); try { await automation.focusCursor(); console.log('✅ Focus test passed')} catch (error) { console.log( '⚠️ Focus test failed (this is normal if Cursor is not running):',error.message )} try { await automation.sendText('test'); console.log('✅ Text input test passed')} catch (error) { console.log( '⚠️ Text input test failed (this is normal if Cursor is not focused):',error.message )} console.log('\n🔍 Testing session management...'); const sessions = automation.listSessions(); console.log('✅ Sessions listed:',sessions.length); const stats = automation.getStats(); console.log('✅ Statistics retrieved:',{ totalSessions: stats.totalSessions,activeSessions: stats.activeSessions,platform: stats.platform,}); automation.terminateSession('test-session'); console.log('✅ Test session terminated'); const finalStats = automation.getStats(); console.log('\n📊 Final Statistics:'); console.log(JSON.stringify(finalStats,null,2)); console.log('\n🎉 All tests completed successfully!'); console.log('\n💡 To start the full automation system:'); console.log(' ./launch-cursor-automation.sh'); console.log('\n💡 To stop the automation system:'); console.log(' ./stop-cursor-automation.sh')} catch (error) { console.error('\n❌ Test failed:',error.message); console.error(error.stack); process.exit(1)} } if (require.main === module) { runTests()} module.exports = { runTests };
+
+  runTests();
+}
+module.exports = { runTests };
+
+<
+
+    runTests();
+}
+
+  runTests();
+}
+module.exports = { runTests };
+#!/usr/bin/env node const CursorInterfaceAutomation = require('./cursor-interface-automation'); async function runTests() { console.log('🧪 Testing Cursor Chat Automation System...\n'); try { const automation = new CursorInterfaceAutomation(); console.log('✅ Automation instance created successfully'); console.log(`📱 Platform detected: ${automation.platform}`); console.log( `⚙️ Configuration loaded: ${automation.config.automation ? 'Yes' : 'No'}` ); console.log('\n🔍 Testing basic functionality...'); const testSession = await automation.createSession('test-session',{ name: 'Test Session',interval: 10000,commands: ['proceed','test'],}); console.log('✅ Test session created:',testSession.id); console.log('\n🔍 Testing automation methods...'); try { await automation.focusCursor(); console.log('✅ Focus test passed')} catch (error) { console.log( '⚠️ Focus test failed (this is normal if Cursor is not running):',error.message )} try { await automation.sendText('test'); console.log('✅ Text input test passed')} catch (error) { console.log( '⚠️ Text input test failed (this is normal if Cursor is not focused):',error.message )} console.log('\n🔍 Testing session management...'); const sessions = automation.listSessions(); console.log('✅ Sessions listed:',sessions.length); const stats = automation.getStats(); console.log('✅ Statistics retrieved:',{ totalSessions: stats.totalSessions,activeSessions: stats.activeSessions,platform: stats.platform,}); automation.terminateSession('test-session'); console.log('✅ Test session terminated'); const finalStats = automation.getStats(); console.log('\n📊 Final Statistics:'); console.log(JSON.stringify(finalStats,null,2)); console.log('\n🎉 All tests completed successfully!'); console.log('\n💡 To start the full automation system:'); console.log(' ./launch-cursor-automation.sh'); console.log('\n💡 To stop the automation system:'); console.log(' ./stop-cursor-automation.sh')} catch (error) { console.error('\n❌ Test failed:',error.message); console.error(error.stack); process.exit(1)} } if (require.main === module) { runTests()} module.exports = { runTests };
+
+=
+>    runTests();
+}
+=
+    runTests();
+}
+
+    runTests();
+
+<:corrupted_backup/test-cursor-automation.js
+
+  runTests();
+module.exports = { runTests };`;
+#!/usr/bin/env node const CursorInterfaceAutomation = require('./cursor-interface-automation'); async function runTests() { console.log('🧪 Testing Cursor Chat Automation System...\n'); try { const automation = new CursorInterfaceAutomation(); console.log('✅ Automation instance created successfully'); console.log(`📱 Platform detected: ${automation.platform}`); console.log( `⚙️ Configuration loaded: ${automation.config.automation ? 'Yes' : 'No'}` ); console.log('\n🔍 Testing basic functionality...'); const testSession = await automation.createSession('test-session',{ name: 'Test Session',interval: 10000,commands: ['proceed','test'],}); console.log('✅ Test session created:',testSession.id); console.log('\n🔍 Testing automation methods...'); try { await automation.focusCursor(); console.log('✅ Focus test passed')} catch (error) { console.log( '⚠️ Focus test failed (this is normal if Cursor is not running):',error.message )} try { await automation.sendText('test'); console.log('✅ Text input test passed')} catch (error) { console.log( '⚠️ Text input test failed (this is normal if Cursor is not focused):',error.message )} console.log('\n🔍 Testing session management...'); const sessions = automation.listSessions(); console.log('✅ Sessions listed:',sessions.length); const stats = automation.getStats(); console.log('✅ Statistics retrieved:',{ totalSessions: stats.totalSessions,activeSessions: stats.activeSessions,platform: stats.platform,}); automation.terminateSession('test-session'); console.log('✅ Test session terminated'); const finalStats = automation.getStats(); console.log('\n📊 Final Statistics:'); console.log(JSON.stringify(finalStats,null,2)); console.log('\n🎉 All tests completed successfully!'); console.log('\n💡 To start the full automation system:'); console.log(' ./launch-cursor-automation.sh'); console.log('\n💡 To stop the automation system:'); console.log(' ./stop-cursor-automation.sh')} catch (error) { console.error('\n❌ Test failed:',error.message); console.error(error.stack); process.exit(1)} } if (require.main === module) { runTests()} module.exports = { runTests };
+
+    runTests();
+
+  runTests();
+}
+
+module.exports = { runTests };
+#!/usr/bin/env node const CursorInterfaceAutomation = require('./cursor-interface-automation'); async function runTests() { console.log('🧪 Testing Cursor Chat Automation System...\n'); try { const automation = new CursorInterfaceAutomation(); console.log('✅ Automation instance created successfully'); console.log(`📱 Platform detected: ${automation.platform}`); console.log( `⚙️ Configuration loaded: ${automation.config.automation ? 'Yes' : 'No'}` ); console.log('\n🔍 Testing basic functionality...'); const testSession = await automation.createSession('test-session',{ name: 'Test Session',interval: 10000,commands: ['proceed','test'],}); console.log('✅ Test session created:',testSession.id); console.log('\n🔍 Testing automation methods...'); try { await automation.focusCursor(); console.log('✅ Focus test passed')} catch (error) { console.log( '⚠️ Focus test failed (this is normal if Cursor is not running):',error.message )} try { await automation.sendText('test'); console.log('✅ Text input test passed')} catch (error) { console.log( '⚠️ Text input test failed (this is normal if Cursor is not focused):',error.message )} console.log('\n🔍 Testing session management...'); const sessions = automation.listSessions(); console.log('✅ Sessions listed:',sessions.length); const stats = automation.getStats(); console.log('✅ Statistics retrieved:',{ totalSessions: stats.totalSessions,activeSessions: stats.activeSessions,platform: stats.platform,}); automation.terminateSession('test-session'); console.log('✅ Test session terminated'); const finalStats = automation.getStats(); console.log('\n📊 Final Statistics:'); console.log(JSON.stringify(finalStats,null,2)); console.log('\n🎉 All tests completed successfully!'); console.log('\n💡 To start the full automation system:'); console.log(' ./launch-cursor-automation.sh'); console.log('\n💡 To stop the automation system:'); console.log(' ./stop-cursor-automation.sh')} catch (error) { console.error('\n❌ Test failed:',error.message); console.error(error.stack); process.exit(1)} } if (require.main === module) { runTests()} module.exports = { runTests };
+
+runTests();
+}
+module.exports = { runTests };
+
+#!/usr/bin/env node const CursorInterfaceAutomation = require('./cursor-interface-automation'); async function runTests() { console.log('🧪 Testing Cursor Chat Automation System...\n'); try { const automation = new CursorInterfaceAutomation(); console.log('✅ Automation instance created successfully'); console.log(`📱 Platform detected: ${automation.platform}`); console.log( `⚙️ Configuration loaded: ${automation.config.automation ? 'Yes' : 'No'}` ); console.log('\n🔍 Testing basic functionality...'); const testSession = await automation.createSession('test-session',{ name: 'Test Session',interval: 10000,commands: ['proceed','test'],}); console.log('✅ Test session created:',testSession.id); console.log('\n🔍 Testing automation methods...'); try { await automation.focusCursor(); console.log('✅ Focus test passed')} catch (error) { console.log( '⚠️ Focus test failed (this is normal if Cursor is not running):',error.message )} try { await automation.sendText('test'); console.log('✅ Text input test passed')} catch (error) { console.log( '⚠️ Text input test failed (this is normal if Cursor is not focused):',error.message )} console.log('\n🔍 Testing session management...'); const sessions = automation.listSessions(); console.log('✅ Sessions listed:',sessions.length); const stats = automation.getStats(); console.log('✅ Statistics retrieved:',{ totalSessions: stats.totalSessions,activeSessions: stats.activeSessions,platform: stats.platform,}); automation.terminateSession('test-session'); console.log('✅ Test session terminated'); const finalStats = automation.getStats(); console.log('\n📊 Final Statistics:'); console.log(JSON.stringify(finalStats,null,2)); console.log('\n🎉 All tests completed successfully!'); console.log('\n💡 To start the full automation system:'); console.log(' ./launch-cursor-automation.sh'); console.log('\n💡 To stop the automation system:'); console.log(' ./stop-cursor-automation.sh')} catch (error) { console.error('\n❌ Test failed:',error.message); console.error(error.stack); process.exit(1)} } if (require.main === module) { runTests()} module.exports = { runTests };
+<:automation/test-cursor-automation.js
+
+    runTests();
+}
+
+>
+    runTests();
+}
+
+  runTests();
+}
+module.exports = { runTests };
+<:corrupted_backup/test-cursor-automation.js
+#!/usr/bin/env node const CursorInterfaceAutomation = require('./cursor-interface-automation'); async function runTests() { console.log('🧪 Testing Cursor Chat Automation System...\n'); try { const automation = new CursorInterfaceAutomation(); console.log('✅ Automation instance created successfully'); console.log(`📱 Platform detected: ${automation.platform}`); console.log( `⚙️ Configuration loaded: ${automation.config.automation ? 'Yes' : 'No'}` ); console.log('\n🔍 Testing basic functionality...'); const testSession = await automation.createSession('test-session',{ name: 'Test Session',interval: 10000,commands: ['proceed','test'],}); console.log('✅ Test session created:',testSession.id); console.log('\n🔍 Testing automation methods...'); try { await automation.focusCursor(); console.log('✅ Focus test passed')} catch (error) { console.log( '⚠️ Focus test failed (this is normal if Cursor is not running):',error.message )} try { await automation.sendText('test'); console.log('✅ Text input test passed')} catch (error) { console.log( '⚠️ Text input test failed (this is normal if Cursor is not focused):',error.message )} console.log('\n🔍 Testing session management...'); const sessions = automation.listSessions(); console.log('✅ Sessions listed:',sessions.length); const stats = automation.getStats(); console.log('✅ Statistics retrieved:',{ totalSessions: stats.totalSessions,activeSessions: stats.activeSessions,platform: stats.platform,}); automation.terminateSession('test-session'); console.log('✅ Test session terminated'); const finalStats = automation.getStats(); console.log('\n📊 Final Statistics:'); console.log(JSON.stringify(finalStats,null,2)); console.log('\n🎉 All tests completed successfully!'); console.log('\n💡 To start the full automation system:'); console.log(' ./launch-cursor-automation.sh'); console.log('\n💡 To stop the automation system:'); console.log(' ./stop-cursor-automation.sh')} catch (error) { console.error('\n❌ Test failed:',error.message); console.error(error.stack); process.exit(1)} } if (require.main === module) { runTests()} module.exports = { runTests };
+
+    runTests();
+}
   runTests();
 }
 module.exports = { runTests };
@@ -363,22 +423,4 @@ module.exports = { runTests };
   runTests();
 }
 module.exports = { runTests };
-
-    runTests();
-}
-    runTests();
-}
-  runTests();
-}
-module.exports = { runTests };
 #!/usr/bin/env node const CursorInterfaceAutomation = require('./cursor-interface-automation'); async function runTests() { console.log('🧪 Testing Cursor Chat Automation System...\n'); try { const automation = new CursorInterfaceAutomation(); console.log('✅ Automation instance created successfully'); console.log(`📱 Platform detected: ${automation.platform}`); console.log( `⚙️ Configuration loaded: ${automation.config.automation ? 'Yes' : 'No'}` ); console.log('\n🔍 Testing basic functionality...'); const testSession = await automation.createSession('test-session',{ name: 'Test Session',interval: 10000,commands: ['proceed','test'],}); console.log('✅ Test session created:',testSession.id); console.log('\n🔍 Testing automation methods...'); try { await automation.focusCursor(); console.log('✅ Focus test passed')} catch (error) { console.log( '⚠️ Focus test failed (this is normal if Cursor is not running):',error.message )} try { await automation.sendText('test'); console.log('✅ Text input test passed')} catch (error) { console.log( '⚠️ Text input test failed (this is normal if Cursor is not focused):',error.message )} console.log('\n🔍 Testing session management...'); const sessions = automation.listSessions(); console.log('✅ Sessions listed:',sessions.length); const stats = automation.getStats(); console.log('✅ Statistics retrieved:',{ totalSessions: stats.totalSessions,activeSessions: stats.activeSessions,platform: stats.platform,}); automation.terminateSession('test-session'); console.log('✅ Test session terminated'); const finalStats = automation.getStats(); console.log('\n📊 Final Statistics:'); console.log(JSON.stringify(finalStats,null,2)); console.log('\n🎉 All tests completed successfully!'); console.log('\n💡 To start the full automation system:'); console.log(' ./launch-cursor-automation.sh'); console.log('\n💡 To stop the automation system:'); console.log(' ./stop-cursor-automation.sh')} catch (error) { console.error('\n❌ Test failed:',error.message); console.error(error.stack); process.exit(1)} } if (require.main === module) { runTests()} module.exports = { runTests };
-  runTests();
-}
-module.exports = { runTests };
-#!/usr/bin/env node const CursorInterfaceAutomation = require('./cursor-interface-automation'); async function runTests() { console.log('🧪 Testing Cursor Chat Automation System...\n'); try { const automation = new CursorInterfaceAutomation(); console.log('✅ Automation instance created successfully'); console.log(`📱 Platform detected: ${automation.platform}`); console.log( `⚙️ Configuration loaded: ${automation.config.automation ? 'Yes' : 'No'}` ); console.log('\n🔍 Testing basic functionality...'); const testSession = await automation.createSession('test-session',{ name: 'Test Session',interval: 10000,commands: ['proceed','test'],}); console.log('✅ Test session created:',testSession.id); console.log('\n🔍 Testing automation methods...'); try { await automation.focusCursor(); console.log('✅ Focus test passed')} catch (error) { console.log( '⚠️ Focus test failed (this is normal if Cursor is not running):',error.message )} try { await automation.sendText('test'); console.log('✅ Text input test passed')} catch (error) { console.log( '⚠️ Text input test failed (this is normal if Cursor is not focused):',error.message )} console.log('\n🔍 Testing session management...'); const sessions = automation.listSessions(); console.log('✅ Sessions listed:',sessions.length); const stats = automation.getStats(); console.log('✅ Statistics retrieved:',{ totalSessions: stats.totalSessions,activeSessions: stats.activeSessions,platform: stats.platform,}); automation.terminateSession('test-session'); console.log('✅ Test session terminated'); const finalStats = automation.getStats(); console.log('\n📊 Final Statistics:'); console.log(JSON.stringify(finalStats,null,2)); console.log('\n🎉 All tests completed successfully!'); console.log('\n💡 To start the full automation system:'); console.log(' ./launch-cursor-automation.sh'); console.log('\n💡 To stop the automation system:'); console.log(' ./stop-cursor-automation.sh')} catch (error) { console.error('\n❌ Test failed:',error.message); console.error(error.stack); process.exit(1)} } if (require.main === module) { runTests()} module.exports = { runTests };
-
-  runTests();
-}
-module.exports = { runTests };
-#!/usr/bin/env node const CursorInterfaceAutomation = require('./cursor-interface-automation'); async function runTests() { console.log('🧪 Testing Cursor Chat Automation System...\n'); try { const automation = new CursorInterfaceAutomation(); console.log('✅ Automation instance created successfully'); console.log(`📱 Platform detected: ${automation.platform}`); console.log( `⚙️ Configuration loaded: ${automation.config.automation ? 'Yes' : 'No'}` ); console.log('\n🔍 Testing basic functionality...'); const testSession = await automation.createSession('test-session',{ name: 'Test Session',interval: 10000,commands: ['proceed','test'],}); console.log('✅ Test session created:',testSession.id); console.log('\n🔍 Testing automation methods...'); try { await automation.focusCursor(); console.log('✅ Focus test passed')} catch (error) { console.log( '⚠️ Focus test failed (this is normal if Cursor is not running):',error.message )} try { await automation.sendText('test'); console.log('✅ Text input test passed')} catch (error) { console.log( '⚠️ Text input test failed (this is normal if Cursor is not focused):',error.message )} console.log('\n🔍 Testing session management...'); const sessions = automation.listSessions(); console.log('✅ Sessions listed:',sessions.length); const stats = automation.getStats(); console.log('✅ Statistics retrieved:',{ totalSessions: stats.totalSessions,activeSessions: stats.activeSessions,platform: stats.platform,}); automation.terminateSession('test-session'); console.log('✅ Test session terminated'); const finalStats = automation.getStats(); console.log('\n📊 Final Statistics:'); console.log(JSON.stringify(finalStats,null,2)); console.log('\n🎉 All tests completed successfully!'); console.log('\n💡 To start the full automation system:'); console.log(' ./launch-cursor-automation.sh'); console.log('\n💡 To stop the automation system:'); console.log(' ./stop-cursor-automation.sh')} catch (error) { console.error('\n❌ Test failed:',error.message); console.error(error.stack); process.exit(1)} } if (require.main === module) { runTests()} module.exports = { runTests };
-

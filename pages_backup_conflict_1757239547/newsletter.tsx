@@ -138,7 +138,6 @@ export default function NewsletterPage() {
 ];
 
 export default function NewsletterPage() {;
-  const [email, setEmail] = useState("");
 
   const [isSubscribed, setIsSubscribed] = useState(false);
   const [isLoading, setIsLoading] = useState(false);

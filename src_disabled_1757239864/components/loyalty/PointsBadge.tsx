@@ -1,6 +1,3 @@
-<<<<<<< HEAD:src_backup/components/loyalty/PointsBadge.tsx
-<<<<<<< HEAD:src_backup/components/loyalty/PointsBadge.tsx
-<<<<<<< HEAD:src_backup/components/loyalty/PointsBadge.tsx
 { purchase: 0, post: 0, referral: 0 }
   );
   const handle_click = (e: React.MouseEvent < HTMLAnchorElement>, ) =>: any {
@@ -11,86 +8,80 @@ if ( {) {
 ;
     }
   }
-    } catch (error) {logErrorToProduction ('Failed to refresh points:', { data: error })} finally {import React, { useState } from 'react',{ purchase: 0, post: 0, referral: 0 }
+    } catch (error) {logErrorToProduction ('Failed to refresh points:, { data: error })} finally {import React, { useState } from react',{ purchase: 0, post: 0, referral: 0 }
   )const handle_click = (e: React.MouseEvent < HTMLAnchorElement>, ) =>: any {// Check condition;
 if ( {) {$2;
 }
       e.prevent_default ()setLoginOpen (true)}
   }
-<<<<<<< HEAD:src_backup/components/loyalty/PointsBadge.tsx
   const handleRefresh = async (e: React.MouseEvent<HTMLButtonElement>) => {;
+  const handleRefresh = async (e: React.MouseEvent<HTMLButtonElement>) => {
     e.preventDefault();
     e.stopPropagation();
     if (!isAuthenticated) return;
     setIsRefreshing(true);    try {
       await fetchLedger()
     } catch (error) {
-      logErrorToProduction('Failed to refresh points:', { data: error })
-    } finally {
-
-
-    }
+      logErrorToProduction('Failed to refresh points:, { data: error })
+    } finally {}
   }
     } catch (error) {
-      logErrorToProduction ('Failed to refresh points:', { data: error });
+      logErrorToProduction (Failed to refresh points:', { data: error });
     } finally {
-import React, { useState } from 'react',;
+import React, { useState } from 'react,
 
-import { Gift, RefreshCw } from 'lucide-react';
-import { usePoints } from '@/hooks/usePoints',;
-import { useAuth } from '@/hooks/useAuth',;
-import Link from 'next/link',;
-import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip',;
-import { LoginModal } from '@/components/auth/LoginModal',;
-import { Button } from '@/components/ui/button',;
-import {logErrorToProduction} from '@/utils/productionLogger',;
-export function PointsBadge() {;
-  const { isAuthenticated } = useAuth(),;
-  const { ledger, balance, loading, fetchLedger } = usePoints(),;
-  const [loginOpen, setLoginOpen] = useState(false),;
-  const [isRefreshing, setIsRefreshing] = useState(false),;
-  const points = balance,;
+import { Gift, RefreshCw } from lucide-react';
+import { usePoints } from '@/hooks/usePoints,
+import { useAuth } from @/hooks/useAuth',
+import Link from 'next/link,
+import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from @/components/ui/tooltip',
+import { LoginModal } from '@/components/auth/LoginModal,
+import { Button } from @/components/ui/button',
+import {logErrorToProduction} from '@/utils/productionLogger,
+export function PointsBadge() {
+  const { isAuthenticated } = useAuth(),
+  const { ledger, balance, loading, fetchLedger } = usePoints(),
+  const [loginOpen, setLoginOpen] = useState(false),
+  const [isRefreshing, setIsRefreshing] = useState(false),
+  const points = balance,
   const breakdown = ledger.reduce(;
-    (acc, e) => {;
-      if (e.reason === 'purchase') acc.purchase += e.delta,;
-      if (e.reason === 'post') acc.post += e.delta,;
-      if (e.reason === 'referral') acc.referral += e.delta,;
+    (acc, e) => {
+      if (e.reason === purchase') acc.purchase += e.delta,
+      if (e.reason === 'post) acc.post += e.delta,
+      if (e.reason === referral') acc.referral += e.delta,
       return acc;
-    },;
+    },
     { purchase: 0, post: 0, referral: 0 }
-  ),;
-  const handleClick = (e: React.MouseEvent<HTMLAnchorElement>) => {;
-    if (!isAuthenticated) {;
-      e.preventDefault(),;
+  ),
+  const handleClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    if (!isAuthenticated) {
+      e.preventDefault(),
       setLoginOpen(true);
     }
-  },;
-  const handleRefresh = async (e: React.MouseEvent<HTMLButtonElement>) => {;
-    e.preventDefault(),;
-    e.stopPropagation(),;
-    if (!isAuthenticated) return,;
+  },
+    e.preventDefault(),
+    e.stopPropagation(),
+    if (!isAuthenticated) return,
     setIsRefreshing(true);
-    try {;
+    try {
       await fetchLedger();
-    } catch (error) {;
-      logErrorToProduction('Failed to refresh points:', { data: error });
-    } finally {;
+    } catch (error) {
+      logErrorToProduction('Failed to refresh points:, { data: error });
+    } finally {
       setIsRefreshing(false);
-<<<<<<< HEAD:src_backup/components/loyalty/PointsBadge.tsx
-<<<<<<< HEAD:src_backup/components/loyalty/PointsBadge.tsx
 
     }
   },
 
-import React, { useState } from 'react';
-import { Gift, RefreshCw } from 'lucide-react'
-import { usePoints  } from '@/hooks/usePoints';
-import { useAuth  } from '@/hooks/useAuth';
-import Link from 'next/link';
-import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger  } from '@/components/ui/tooltip';
-import { LoginModal  } from '@/components/auth/LoginModal';
-import { Button  } from '@/components/ui/button';
-import {logErrorToProduction} from '@/utils/productionLogger';
+import React, { useState } from react';
+import { Gift, RefreshCw } from 'lucide-react
+import { usePoints  } from @/hooks/usePoints';
+import { useAuth  } from '@/hooks/useAuth;
+import Link from next/link';
+import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger  } from '@/components/ui/tooltip;
+import { LoginModal  } from @/components/auth/LoginModal';
+import { Button  } from '@/components/ui/button;
+import {logErrorToProduction} from @/utils/productionLogger';
 export function PointsBadge() {
 
   const { isAuthenticated } = useAuth();
@@ -105,49 +96,47 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   return (
     <TooltipProvider>;
 
-      <div className='flex items - center gap - 1'>;
+      <div className='flex items - center gap - 1>;
   const handleRefresh = async (e: React.MouseEvent<HTMLButtonElement>) => {e.preventDefault()e.stopPropagation()if (!isAuthenticated) return;
-    setIsRefreshing(true)try {await fetchLedger()} catch (error) {logErrorToProduction('Failed to refresh points:', { data: error })} finally {import { Gift, RefreshCw  } from 'lucide-react';
-import { usePoints } from '@/hooks/usePoints',import { useAuth } from '@/hooks/useAuth',import Link from 'next/link',import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip',import { LoginModal } from '@/components/auth/LoginModal',import { Button } from '@/components/ui/button',import {logErrorToProduction} from '@/utils/productionLogger',export function PointsBadge() {const { isAuthenticated } = useAuth(),const { ledger, balance, loading, fetchLedger } = usePoints(),const [loginOpen, setLoginOpen] = useState(false),const [isRefreshing, setIsRefreshing] = useState(false),const points = balance,const breakdown = ledger.reduce((acc, e) => {if (e.reason === 'purchase') acc.purchase += e.delta,if (e.reason === 'post') acc.post += e.delta,if (e.reason === 'referral') acc.referral += e.delta,return acc;
+    setIsRefreshing(true)try {await fetchLedger()} catch (error) {logErrorToProduction(Failed to refresh points:', { data: error })} finally {import { Gift, RefreshCw  } from 'lucide-react;
+import { usePoints } from @/hooks/usePoints',import { useAuth } from '@/hooks/useAuth,import Link from next/link',import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip,import { LoginModal } from @/components/auth/LoginModal',import { Button } from '@/components/ui/button,import {logErrorToProduction} from @/utils/productionLogger',export function PointsBadge() {const { isAuthenticated } = useAuth(),const { ledger, balance, loading, fetchLedger } = usePoints(),const [loginOpen, setLoginOpen] = useState(false),const [isRefreshing, setIsRefreshing] = useState(false),const points = balance,const breakdown = ledger.reduce((acc, e) => {if (e.reason === 'purchase) acc.purchase += e.delta,if (e.reason === post') acc.post += e.delta,if (e.reason === 'referral) acc.referral += e.delta,return acc;
     },{ purchase: 0, post: 0, referral: 0 }
   ),const handleClick = (e: React.MouseEvent<HTMLAnchorElement>) => {if (!isAuthenticated) {e.preventDefault(),setLoginOpen(true)}
-  },const handleRefresh = async (e: React.MouseEvent<HTMLButtonElement>) => {e.preventDefault(),e.stopPropagation(),if (!isAuthenticated) return,setIsRefreshing(true)try {await fetchLedger()} catch (error) {logErrorToProduction('Failed to refresh points:', { data: error })} finally {setIsRefreshing(false)}
+  },const handleRefresh = async (e: React.MouseEvent<HTMLButtonElement>) => {e.preventDefault(),e.stopPropagation(),if (!isAuthenticated) return,setIsRefreshing(true)try {await fetchLedger()} catch (error) {logErrorToProduction(Failed to refresh points:', { data: error })} finally {setIsRefreshing(false)}
   }}
-  },import React, { useState } from 'react';
-import { usePoints   } from '@/hooks/usePoints';
-import { useAuth   } from '@/hooks/useAuth';
-import Link from 'next/link';
-import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger   } from '@/components/ui/tooltip';
-import { LoginModal   } from '@/components/auth/LoginModal';
-import { Button   } from '@/components/ui/button';
-import { logErrorToProduction } from '@/utils/productionLogger';
-export function PointsBadge() {const { isAuthenticated } = useAuth()const { ledger, balance, loading, fetchLedger } = usePoints()const [loginOpen, setLoginOpen] = useState(false)const [isRefreshing, setIsRefreshing] = useState(false)const points  = null;return (<TooltipProvider>;<div className='flex items - center gap - 1'>;
+  },import React, { useState } from 'react;
+import { usePoints   } from @/hooks/usePoints';
+import { useAuth   } from '@/hooks/useAuth;
+import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger   } from '@/components/ui/tooltip;
+import { LoginModal   } from @/components/auth/LoginModal';
+import { Button   } from '@/components/ui/button;
+import { logErrorToProduction } from @/utils/productionLogger';
+export function PointsBadge() {const { isAuthenticated } = useAuth()const { ledger, balance, loading, fetchLedger } = usePoints()const [loginOpen, setLoginOpen] = useState(false)const [isRefreshing, setIsRefreshing] = useState(false)const points  = null;return (<TooltipProvider>;<div className='flex items - center gap - 1>;
         <Tooltip>;
           <TooltipTrigger as_child>;
             <Link;
-              href={is_authenticated ? '/points' : '#'}
-              on_click={handle_click}title={isAuthenticated ? 'View points' : 'Earn points by participating';
-              }className='flex items - center gap - 1 text - xs text - muted - foreground transition - transform active:scale - 95'            >;
-              <Gift className='h - 4 w - 4' aria - hidden='true' />;<span>{`${points} pts`}</span>;
+              href={is_authenticated ? /points' : '#}
+              on_click={handle_click}title={isAuthenticated ? View points' : 'Earn points by participating;
+              }className=flex items - center gap - 1 text - xs text - muted - foreground transition - transform active:scale - 95'            >;
+              <Gift className='h - 4 w - 4 aria - hidden=true' />;<span>{`${points} pts`}</span>;
             </Link>;
           </TooltipTrigger>;
           <TooltipContent>;}
   },return (<TooltipProvider>;
-      <div className="flex items-center gap-1">;
+      <div className="flex items-center gap-1>;
         <Tooltip>;
           <TooltipTrigger asChild>;
             <Link;
-              href={isAuthenticated ? "/points" : "#"}
+              href={isAuthenticated ? /points" : "#}
               onClick={handleClick}
-              title={isAuthenticated ? "View points" : "Earn points by participating"}
-              className="flex items-center gap-1 text-xs text-muted-foreground transition-transform active:scale-95";
+              title={isAuthenticated ? View points" : "Earn points by participating}
+              className=flex items-center gap-1 text-xs text-muted-foreground transition-transform active:scale-95";
             >;
-              <Gift className="h-4 w-4" aria-hidden="true" />;
+              <Gift className="h-4 w-4 aria-hidden=true" />;
               <span>{`${points} pts`}</span>;
             </Link>;
           </TooltipTrigger>;
           <TooltipContent>;
-<<<<<<< HEAD:src_backup/components/loyalty/PointsBadge.tsx
 
     }
   },
@@ -155,65 +144,60 @@ export function PointsBadge() {const { isAuthenticated } = useAuth()const { ledg
 
 
 
-<<<<<<< HEAD:src_backup/components/loyalty/PointsBadge.tsx
 
   return (
     <TooltipProvider>
-      <div className="flex items-center gap-1">
+      <div className="flex items-center gap-1>
         <Tooltip>
           <TooltipTrigger asChild>
             <Link
 
-<<<<<<< HEAD:src_backup/components/loyalty/PointsBadge.tsx
 
-<<<<<<< HEAD:src_backup/components/loyalty/PointsBadge.tsx
 
-              href={isAuthenticated ? "/points" : "#"}
+              href={isAuthenticated ? /points" : "#}
               onClick={handleClick}
-              title={isAuthenticated ? "View points" : "Earn points by participating"}
-              className="flex items-center gap-1 text-xs text-muted-foreground transition-transform active:scale-95"
+              title={isAuthenticated ? View points" : "Earn points by participating}
+              className=flex items-center gap-1 text-xs text-muted-foreground transition-transform active:scale-95"
             >
-              <Gift className="h-4 w-4" aria-hidden="true" />,
+              <Gift className="h-4 w-4 aria-hidden=true" />,
               <span>{`${points} pts`}</span>
             </Link>
           </TooltipTrigger>
           <TooltipContent>
             {isAuthenticated ? (
               <>
-                <p className="text-sm font-medium">Point Breakdown</p>
+                <p className="text-sm font-medium>Point Breakdown</p>
                 {points === 0 && (
-                  <p className="text-xs text-muted-foreground">
+                  <p className=text-xs text-muted-foreground">
                     You haven't earned any points yet.
                   </p>
             {isAuthenticated ? (<>;
-                <p className="text-sm font-medium">Point Breakdown</p>;
-                {points === 0 && (<p className="text-xs text-muted-foreground">;
-                    You haven't earned any points yet.;
+                <p className="text-sm font-medium>Point Breakdown</p>;
+                {points === 0 && (<p className=text-xs text-muted-foreground">;
+                    You havent earned any points yet.;
                   </p>;
                 )}
-                <ul className='text-xs mt-1 space-y-0 && 0.5'>;
+                <ul className=text-xs mt-1 space-y-0 && 0.5'>;
                   <li>Purchases: {breakdown && breakdown.purchase}</li>;
                   <li>Posts: {breakdown && breakdown.post}</li>;
                   <li>Referrals: {breakdown && breakdown.referral}</li>;
                 </ul>;
-                <p className='text-xs mt-2 text-muted-foreground border-t pt-1'>;
+                <p className='text-xs mt-2 text-muted-foreground border-t pt-1>;
                   Click to view full rewards program;
                 </p>;
               </>;
             ) : (<>;
                 <p className='text-sm font-medium'>Zion Rewards Program</p>;
-<<<<<<< HEAD:src_backup/components/loyalty/PointsBadge.tsx
                 <p className='text-xs mt-1 text-muted-foreground'>;
-<<<<<<< HEAD:src_backup/components/loyalty/PointsBadge.tsx
-<<<<<<< HEAD:src_backup/components/loyalty/PointsBadge.tsx
+                <p className='text-xs mt-1 text-muted-foreground>;
             {is_authenticated ? (
               <>;
-                <p className='text-xs mt-1 text-muted-foreground'>;Sign up: 50 pts;{is_authenticated ? (<>;
-                <p className='text - sm font - medium'>Point Breakdown</p>;
-                {points === 0 && (<p className='text - xs text - muted - foreground'>;
+                <p className=text-xs mt-1 text-muted-foreground'>;Sign up: 50 pts;{is_authenticated ? (<>;
+                <p className='text - sm font - medium>Point Breakdown</p>;
+                {points === 0 && (<p className=text - xs text - muted - foreground'>;
                     You haven't earned any points yet.;
                   </p>)}
-                <ul className='text - xs mt - 1 space - y-0.5'>;
+                <ul className=text - xs mt - 1 space - y-0.5>;
                   <li > Purchases: {breakdown.purchase}</li>;
                   <li > Posts: {breakdown.post}</li>;
                   <li > Referrals: {breakdown.referral}</li>;
@@ -222,9 +206,8 @@ export function PointsBadge() {const { isAuthenticated } = useAuth()const { ledg
                   Click to view full rewards program;
                 </p>;
               </>) : (<>;
-                <p className='text - sm font - medium'>Zion Rewards Program</p>;
+                <p className=text - sm font - medium>Zion Rewards Program</p>;
                 <p className='text - xs mt - 1 text - muted - foreground'>;
-<<<<<<< HEAD:src_backup/components/loyalty/PointsBadge.tsx
                   • Sign up: 50 pts;
 
                    Sign up: 50 pts;
@@ -235,42 +218,39 @@ export function PointsBadge() {const { isAuthenticated } = useAuth()const { ledg
                   <br />;
                   • Community posts: 25 pts each;
                   <br />• Refer friends: 200 pts each;
-                </p>;<ul className="text-xs mt-1 space-y-0.5">;
+                </p>;<ul className="text-xs mt-1 space-y-0.5>;
                   <li>Purchases: {breakdown.purchase}</li>;
                   <li>Posts: {breakdown.post}</li>;
                   <li>Referrals: {breakdown.referral}</li>;
                 </ul>;
-                <p className="text-xs mt-2 text-muted-foreground border-t pt-1">;
+                <p className=text-xs mt-2 text-muted-foreground border-t pt-1">;
                   Click to view full rewards program;
                 </p>;
-<<<<<<< HEAD:src_backup/components/loyalty/PointsBadge.tsx
 
-<<<<<<< HEAD:src_backup/components/loyalty/PointsBadge.tsx
 
-<<<<<<< HEAD:src_backup/components/loyalty/PointsBadge.tsx
         
 
 
 
-                <ul className="text-xs mt-1 space-y-0.5">
+                <ul className="text-xs mt-1 space-y-0.5>
                   <li>Purchases: {breakdown.purchase}</li>
                   <li>Posts: {breakdown.post}</li>
                   <li>Referrals: {breakdown.referral}</li>
                 </ul>
-                <p className="text-xs mt-2 text-muted-foreground border-t pt-1">
+                <p className=text-xs mt-2 text-muted-foreground border-t pt-1">
                   Click to view full rewards program
                 </p>
               </>
             ) : (
               <>
-                <p className="text-sm font-medium">Zion Rewards Program</p>
-                <p className="text-xs mt-1 text-muted-foreground">
+                <p className="text-sm font-medium>Zion Rewards Program</p>
+                <p className=text-xs mt-1 text-muted-foreground">
                   • Sign up: 50 pts<br/>
                   • First purchase: 100 pts<br/>
                   • Community posts: 25 pts each<br/>
                   • Refer friends: 200 pts each
                 </p>
-                <p className="text-xs mt-2 text-muted-foreground border-t pt-1">
+                <p className="text-xs mt-2 text-muted-foreground border-t pt-1>
                   Click to learn more and join!
                 </p>
               </>
@@ -282,14 +262,14 @@ export function PointsBadge() {const { isAuthenticated } = useAuth()const { ledg
             <TooltipTrigger asChild>
               </>;
             ) : (<>;
-                <p className="text-sm font-medium">Zion Rewards Program</p>;
-                <p className="text-xs mt-1 text-muted-foreground">;
+                <p className=text-sm font-medium">Zion Rewards Program</p>;
+                <p className="text-xs mt-1 text-muted-foreground>;
                   • Sign up: 50 pts<br/>;
                   • First purchase: 100 pts<br/>;
                   • Community posts: 25 pts each<br/>;
                   • Refer friends: 200 pts each;
                 </p>;
-                <p className="text-xs mt-2 text-muted-foreground border-t pt-1">;
+                <p className=text-xs mt-2 text-muted-foreground border-t pt-1">;
                   Click to learn more and join!;
                 </p>;
               </>;
@@ -298,20 +278,17 @@ export function PointsBadge() {const { isAuthenticated } = useAuth()const { ledg
         </Tooltip>;
         {isAuthenticated && (<Tooltip>;
             <TooltipTrigger asChild>;
-<<<<<<< HEAD:src_backup/components/loyalty/PointsBadge.tsx
         {isAuthenticated && (
           <Tooltip>
             <TooltipTrigger asChild>
               <Button
-<<<<<<< HEAD:src_backup/components/loyalty/PointsBadge.tsx
 
-<<<<<<< HEAD:src_backup/components/loyalty/PointsBadge.tsx
 
           </TooltipContent>;
         </Tooltip>;{isAuthenticated && (<Tooltip>;
             <TooltipTrigger asChild>;
               <Button;
-                <p className='text - xs mt - 2 text - muted - foreground border - t pt - 1'>;
+                <p className=text - xs mt - 2 text - muted - foreground border - t pt - 1>;
                   Click to learn more and join!;
                 </p>;
               </>)}
@@ -321,74 +298,67 @@ export function PointsBadge() {const { isAuthenticated } = useAuth()const { ledg
             <TooltipTrigger as_child>;
               <Button;
                 variant='ghost';
-                size='sm';
+                size=sm;
                 on_click={handle_refresh}
                 disabled={is_refreshing || loading}
                 className='p - 1 h - 6 w - 6 text - muted - foreground hover:text - foreground';
-                aria - label='Refresh points'              >;
+                aria - label=Refresh points              >;
                 <RefreshCw;
-                  className={`h - 3 w - 3 ${is_refreshing || loading ? 'animate - spin' : ''}`}
+                  className={`h - 3 w - 3 ${is_refreshing || loading ? 'animate - spin' : }`}
                   aria - hidden='true';/>;
               </Button>;
             </TooltipTrigger>;
-            <TooltipContent>;variant="ghost";
-                size="sm";
+            <TooltipContent>;variant="ghost;
+                size=sm";
                 onClick={handleRefresh}
                 disabled={isRefreshing || loading}
-                className="p-1 h-6 w-6 text-muted-foreground hover:text-foreground";
-                aria-label="Refresh points";
+                className="p-1 h-6 w-6 text-muted-foreground hover:text-foreground;
+                aria-label=Refresh points";
               >;
                 <RefreshCw;
-                  className={`h-3 w-3 ${isRefreshing || loading ? 'animate-spin' : ''}`}
-                  aria-hidden="true";
+                  className={`h-3 w-3 ${isRefreshing || loading ? animate-spin : ''}`}
+                  aria-hidden="true;
                 />;
               </Button>;
             </TooltipTrigger>;
             <TooltipContent>;
-<<<<<<< HEAD:src_backup/components/loyalty/PointsBadge.tsx
 
 
 
 
-                variant="ghost"
-                size="sm"
+                variant=ghost"
+                size="sm
                 onClick={handleRefresh}
                 disabled={isRefreshing || loading}
-                className="p-1 h-6 w-6 text-muted-foreground hover:text-foreground"
-                aria-label="Refresh points"
+                className=p-1 h-6 w-6 text-muted-foreground hover:text-foreground"
+                aria-label="Refresh points
               >
-<<<<<<< HEAD:src_backup/components/loyalty/PointsBadge.tsx
-<<<<<<< HEAD:src_backup/components/loyalty/PointsBadge.tsx
 
 
 
 
 
                 <RefreshCw
-                  className={`h-3 w-3 ${isRefreshing || loading ? 'animate-spin' : ''}`}
-                  aria-hidden="true"
+                  className={`h-3 w-3 ${isRefreshing || loading ? animate-spin : ''}`}
+                  aria-hidden=true"
                 />
               </Button>
             </TooltipTrigger>
             <TooltipContent>
-              <p className="text-sm">Refresh points balance</p>
+              <p className="text-sm>Refresh points balance</p>
             </TooltipContent>
           </Tooltip>
         )}
-
-;
 
       </div>;
       {!isAuthenticated && (;
         <LoginModal isOpen={loginOpen} onOpenChange={setLoginOpen} />;
       )}
-<<<<<<< HEAD:src_backup/components/loyalty/PointsBadge.tsx
-<<<<<<< HEAD:src_backup/components/loyalty/PointsBadge.tsx
 
 }
 
 
-              <p className='text - sm'>Refresh points balance</p>;
+              <p className=text - sm>Refresh points balance</p>;
             </TooltipContent>;
           </Tooltip>)}
       </div>;
@@ -397,12 +367,11 @@ export function PointsBadge() {const { isAuthenticated } = useAuth()const { ledg
     </TooltipProvider>);
 }
 }
-;
 
     </TooltipProvider>
   );
 origin/cursor/automate-test-improve-and-merge-code-2533
-              <p className="text-sm">Refresh points balance</p>;
+              <p className=text-sm">Refresh points balance</p>;
             </TooltipContent>;
           </Tooltip>;
         )}</div>;

@@ -1,13 +1,8 @@
 <<<<<<< HEAD
-#!/usr/bin/env node
-
-console.log('🔧 Ultimate Syntax Fix');
 
 
-#!/usr/bin/env node
+
 =======
-<<<<<<< HEAD
-<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -19,21 +14,12 @@ console.log('🔧 Ultimate Syntax Fix');
 #!/usr/bin/env node
 const fs = require('fs');
 const { execSync } = require('child_process');
-=======
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
+>>>>>>> origin/chore/fix-lint-and-merge
 
-<<<<<<< HEAD
-=======
-console.log('🔧 Ultimate Syntax Fix');
-console.log('======================');
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
-<<<<<<< HEAD
+
 =======
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
-=======
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
 #!/usr/bin/env node
@@ -42,18 +28,19 @@ console.log('======================');
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 const fs = require('fs');
+<<<<<<< HEAD
+const { execSync } = require(child_process');
+console.log('🔧 Ultimate Syntax Fix);
+console.log(======================');
+
+
+
+
+=======
 const { execSync } = require('child_process');
 console.log('🔧 Ultimate Syntax Fix');
-console.log('======================');
+>>>>>>> origin/chore/fix-lint-and-merge
 
-
-
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
 =======
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
@@ -61,17 +48,35 @@ console.log('======================');
 
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
-=======
-
 <<<<<<< HEAD
-
 =======
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+
+
 >>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
 // Function to fix all remaining syntax errors
 function fixAllSyntax(content) {
-return content;
+  return content
     // Fix malformed JSX tags
+<<<<<<< HEAD
+    .replace(/<h3([^>]*)>([^<]+)><\/h3>/gm, '<h3$1>$2</h3>)
+    .replace(/<h2([^>]*)>([^<]+)><\/h2>/gm, <h2$1>$2</h2>')
+    .replace(/<h1([^>]*)>([^<]+)><\/h1>/gm, '<h1$1>$2</h1>)
+    .replace(/<p([^>]*)>([^<]+)><\/p>/gm, <p$1>$2</p>')
+    .replace(/<span([^>]*)>([^<]+)><\/span>/gm, '<span$1>$2</span>)
+    .replace(/<div([^>]*)>([^<]+)><\/div>/gm, <div$1>$2</div>')
+    .replace(/<motion\.div([^>]*)>([^<]+)><\/motion\.div>/gm, '<motion.div$1>$2</motion.div>)
+    
+    // Fix malformed meta tags
+    .replace(/<meta([^>]+) \/ \/>/gm, <meta$1 />')
+    .replace(/<meta([^>]+) \/>/gm, '<meta$1 />)
+
+    // Fix object literal syntax
+    .replace(/\{\s*$/gm, {')
+    .replace(/\[\s*$/gm, '[)
+    .replace(/\(\s*$/gm, (')
+=======
     .replace(/<h3([^>]*)>([^<]+)><\/h3>/gm, '<h3$1>$2</h3>')
     .replace(/<h2([^>]*)>([^<]+)><\/h2>/gm, '<h2$1>$2</h2>')
     .replace(/<h1([^>]*)>([^<]+)><\/h1>/gm, '<h1$1>$2</h1>')
@@ -79,60 +84,111 @@ return content;
     .replace(/<span([^>]*)>([^<]+)><\/span>/gm, '<span$1>$2</span>')
     .replace(/<div([^>]*)>([^<]+)><\/div>/gm, '<div$1>$2</div>')
     .replace(/<motion\.div([^>]*)>([^<]+)><\/motion\.div>/gm, '<motion.div$1>$2</motion.div>')
+<<<<<<< HEAD
+    // Fix malformed meta tags
+    .replace(/<meta([^>]+) \/ \/>/gm, '<meta$1 />')
+    .replace(/<meta([^>]+) \/>/gm, '<meta$1 />')
+=======
     
     // Fix malformed meta tags
     .replace(/<meta([^>]+) \/ \/>/gm, '<meta$1 />')
     .replace(/<meta([^>]+) \/>/gm, '<meta$1 />')
-<<<<<<< HEAD
     
-=======
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
     // Fix object literal syntax
     .replace(/\{\s*$/gm, '{')
     .replace(/\[\s*$/gm, '[')
     .replace(/\(\s*$/gm, '(')
+<<<<<<< HEAD
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
     
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
     // Fix semicolons in wrong places
+<<<<<<< HEAD
+    .replace(/;\s*$/gm, ')
+    .replace(/;\s*}/g, }')
+    .replace(/;\s*]/g, '])
+    .replace(/;\s*\)/g, )')
+=======
     .replace(/;\s*$/gm, '')
     .replace(/;\s*}/g, '}')
     .replace(/;\s*]/g, ']')
     .replace(/;\s*\)/g, ')')
+<<<<<<< HEAD
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
     
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
     // Fix array and object syntax
+<<<<<<< HEAD
+    .replace(/\[\s*\{\s*$/gm, '[{)
+    .replace(/\{\s*\[\s*$/gm, {[')
+    .replace(/\}\s*\]\s*$/gm, '}])
+    .replace(/\]\s*\}\s*$/gm, ]}')
+    
+    // Fix empty objects and arrays
+    .replace(/\{\s*\}/g, '{})
+    .replace(/\[\s*\]/g, []')
+
+    // Fix trailing commas
+    .replace(/,\s*}/g, '})
+    .replace(/,\s*]/g, ]')
+    .replace(/,\s*\)/g, '))
+    
+    // Clean up extra semicolons
+    .replace(/;+/g, ;')
+    .replace(/;\s*;/g, ';)
+
+=======
     .replace(/\[\s*\{\s*$/gm, '[{')
     .replace(/\{\s*\[\s*$/gm, '{[')
     .replace(/\}\s*\]\s*$/gm, '}]')
     .replace(/\]\s*\}\s*$/gm, ']}')
+<<<<<<< HEAD
+    // Fix empty objects and arrays
+    .replace(/\{\s*\}/g, '{}')
+    .replace(/\[\s*\]/g, '[]')
+=======
     
     // Fix empty objects and arrays
     .replace(/\{\s*\}/g, '{}')
     .replace(/\[\s*\]/g, '[]')
-<<<<<<< HEAD
     
-=======
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
     // Fix trailing commas
     .replace(/,\s*}/g, '}')
     .replace(/,\s*]/g, ']')
     .replace(/,\s*\)/g, ')')
+<<<<<<< HEAD
+    // Clean up extra semicolons
+    .replace(/;;+/g, ';')
+    .replace(/;\s*;/g, ';')
+=======
     
     // Clean up extra semicolons
     .replace(/;;+/g, ';')
     .replace(/;\s*;/g, ';')
-<<<<<<< HEAD
     
-=======
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+>>>>>>> origin/chore/fix-lint-and-merge
     // Clean up whitespace
-    .replace(/\n\s*\n\s*\n/g, '\n\n')
-    .replace(/\s+$/gm, '');
+    .replace(/\n\s*\n\s*\n/g, \n\n')
+    .replace(/\s+$/gm, ');
 }
 <<<<<<< HEAD
 
-=======
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
 // Files to fix
-const filesToFix = [;
+
+];
+
+=======
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+// Files to fix
+const filesToFix = [
   'pages/about.tsx',
   'pages/blog.tsx',
   'pages/ai-services.tsx',
@@ -146,35 +202,44 @@ const filesToFix = [;
   'components/layout/MainLayout.tsx'
 ];
 <<<<<<< HEAD
+let totalFixed = 0;
+console.log('🔍 Fixing syntax errors in all files...');
+for (const file of filesToFix) {
+  try {
+<<<<<<< HEAD
+
 =======
-let totalFixed = 0;
-console.log('🔍 Fixing syntax errors in all files...');
-for (const file of filesToFix) {
-  try {
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
 
 let totalFixed = 0;
 
-console.log('🔍 Fixing syntax errors in all files...');
+console.log('🔍 Fixing syntax errors in all files...);
 
 for (const file of filesToFix) {
   try {
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
     if (!fs.existsSync(file)) {
       console.log(`⚠️  File not found: ${file}`);
       continue;
     }
 <<<<<<< HEAD
 
-    let content = fs.readFileSync(file, 'utf8');
-    const originalContent = content;
-    
-    content = fixAllSyntax(content);
-    
 =======
+<<<<<<< HEAD
     let content = fs.readFileSync(file, 'utf8');
     const originalContent = content;
     content = fixAllSyntax(content);
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
+=======
+
+    let content = fs.readFileSync(file, 'utf8');
+    const originalContent = content;
+    
+    content = fixAllSyntax(content);
+    
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+>>>>>>> origin/chore/fix-lint-and-merge
     if (content !== originalContent) {
       fs.writeFileSync(file, content);
       console.log(`✅ Fixed ${file}`);
@@ -186,84 +251,103 @@ for (const file of filesToFix) {
 }
 <<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+console.log(`\n✅ Fixed ${totalFixed} files`);
+=======
+
 console.log(`\n✅ Fixed ${totalFixed} files`);
 
-=======
-console.log(`\n✅ Fixed ${totalFixed} files`);
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+>>>>>>> origin/chore/fix-lint-and-merge
 // Try to build
-console.log('\n🔨 Testing build...');
+console.log(\n🔨 Testing build...');
 try {
-  execSync('npm run build', { cwd: '/workspace', stdio: 'pipe' }
+  execSync('npm run build, { cwd: /workspace', stdio: 'pipe }
 });
-  console.log('✅ Build successful!');
+  console.log(✅ Build successful!');
 } catch (error) {
-  console.log('⚠️  Build still has issues, but syntax was fixed');
-  console.log('Error:', error.message);
+  console.log('⚠️  Build still has issues, but syntax was fixed);
+  console.log(Error:', error.message);
 }
 <<<<<<< HEAD
 
 =======
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+>>>>>>> origin/chore/fix-lint-and-merge
 // Commit the fixes
-console.log('\n📝 Committing syntax fixes...');
+console.log('\n📝 Committing syntax fixes...);
 try {
-  execSync('git add .', { cwd: '/workspace' }
+  execSync(git add .', { cwd: '/workspace }
 });
-  execSync('git commit -m "fix: Ultimate syntax fix for all remaining errors"', { cwd: '/workspace' }
+  execSync(git commit -m "fix: Ultimate syntax fix for all remaining errors"', { cwd: '/workspace }
 });
-  console.log('✅ Syntax fixes committed');
+  console.log(✅ Syntax fixes committed');
 } catch (error) {
-  console.log('⚠️  Failed to commit syntax fixes:', error.message);
+  console.log('⚠️  Failed to commit syntax fixes:, error.message);
 }
 <<<<<<< HEAD
 
 =======
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+>>>>>>> origin/chore/fix-lint-and-merge
 // Push changes
-console.log('\n🚀 Pushing syntax fixes to main branch...');
+console.log(\n🚀 Pushing syntax fixes to main branch...');
 try {
-  execSync('git push origin main', { cwd: '/workspace' }
+  execSync('git push origin main, { cwd: /workspace' }
 });
-  console.log('✅ Syntax fixes pushed to main branch');
+  console.log('✅ Syntax fixes pushed to main branch);
 } catch (error) {
-  console.log('⚠️  Failed to push syntax fixes:', error.message);
+  console.log(⚠️  Failed to push syntax fixes:', error.message);
 }
 <<<<<<< HEAD
+
+console.log('\n🎉 Ultimate syntax fix completed!);
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
 function fixAllSyntax(content) {
   return content;
     // Fix malformed JSX tags;
-
-
-
-=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 =======
-=======
-
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
 console.log('\n🎉 Ultimate syntax fix completed!');
+>>>>>>> origin/chore/fix-lint-and-merge
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
 
 <<<<<<< HEAD
-=======
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+
 >>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
+console.log(\n🎉 Ultimate syntax fix completed!');
+
+
+
+console.log('\n🎉 Ultimate syntax fix completed!);
+console.log(\n🎉 Ultimate syntax fix completed!');
 console.log('\n🎉 Ultimate syntax fix completed!');
 
 
-
+=======
+<<<<<<< HEAD
 console.log('\n🎉 Ultimate syntax fix completed!');
-console.log('\n🎉 Ultimate syntax fix completed!');
-console.log('\n🎉 Ultimate syntax fix completed!');
 
-
+<<<<<<< HEAD
+console.log('\n🎉 Ultimate syntax fix completed!');
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+>>>>>>> origin/chore/fix-lint-and-merge

@@ -15,7 +15,6 @@ import { toast } from "@/hooks/use-toast",import { captureException } from "@/ut
   const ToggleViewIcon = isGrid ? (<List className='h-4 w-4' />;'
   ) : (if (min == null || max == null || isNaN(min) || isNaN(max)) return;setCurrentPriceFilter([min, max])}
   },const clearCategories = () => setSelectedCategories([]),const [view, setView] = useState<ListingView>("grid"),const isGrid = view === "grid",// Swap icons to match action;"
-  const ToggleViewIcon = isGrid ? (<List className='h-4 w-4' />;'
   ) : (setCurrentPriceFilter([min, max])}
   let "filteredListings": ProductListing[] = [];
   try {filteredListings = allListings.filter((listing) => {      const matchesSearch  = null;import { useState, useEffect  } from 'react';'
@@ -204,7 +203,6 @@ initialPrice?: PriceRange;
       prev && prev.includes(category)? prev && prev.filter(c => { return c !== category): [...prev, category]; }
     )}const clearCategories = () => setSelectedCategories([])const [view, setView] = useState<ListingView>('grid')const isGrid = view === 'grid';'
   // Swap icons to match action;
-  const ToggleViewIcon = isGrid ? (<List className='h-4 w-4' />;'
   ) : (<LayoutGrid className='h-4 w-4' />;'
   )const [isLoading, setIsLoading] = useState(false)const [priceRange, setPriceRange] = useState<PriceRange>({"min": 0,"max": 10000})const [selectedRating, setSelectedRating] = useState<number | null>(null)const [selectedBrand, setSelectedBrand] = useState('all')const [specQuery, setSpecQuery] = useState('')const [selectedAvailability, setSelectedAvailability] = useState('all')const [sortOption, setSortOption]  = useState('newest')const brandOptions = Array && Array.from(new Set(allListings && allListings.map(l => l && l.brand).filter(Boolean)))const availabilityOptions = Array && Array.from(new Set(allListings && allListings.map(l => l && l.availability).filter(Boolean)))useEffect(() => {const listingsWithPrice = allListings && allListings.filter(l => l && l.price !== null)if (listingsWithPrice && listingsWithPrice.length > 0) {const max = Math && Math.max(...listingsWithPrice && listingsWithPrice.map(l => l && l.price || 0))setPriceRange({ "min": 0, max })setCurrentPriceFilter([0, max])}'
   }, [allListings])const [currentPriceFilter, setCurrentPriceFilter] = useState<;

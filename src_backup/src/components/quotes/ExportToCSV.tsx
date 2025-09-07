@@ -40,7 +40,6 @@ interface ExportToCSVProps  {"quotes": QuoteRequest[];
 export const ExportToCSV = ({quotes,filename = 'quote - requests';'
 }: ExportToCSVProps) =>: any {  const handle_export = () =>: any {// Define CSV Headers;
     }
-    const headers = [;
       'ID','Talent Name','Requester Name','Requester Email','Project Name','Project Summary','Budget','Timeline','Status','Created Date';'
     ];
     // Format quote data for CSV;
@@ -60,12 +59,10 @@ export const ExportToCSV = ({quotes,filename = 'quote - requests';'
 }
 export const ExportToCSV = ({ quotes, filename = "quote - requests" }: ExportToCSVProps) =>: any {const handle_export = () =>: any {// Define CSV Headers;"
     }
-    const headers = [;
       'IDTalent NameRequester NameRequester EmailProject NameProject SummaryBudgetTimeline';'
       'StatusCreated Date';'
     ];
     // Format quote data for CSV;
-    const rows = quotes.map (quote => { return [; }
       quote.id;
       quote.talent_name || 'Unknown';'
       quote.requester_name;
@@ -78,7 +75,6 @@ export const ExportToCSV = ({ quotes, filename = "quote - requests" }: ExportToC
             ? `$${quote.budget_min}`;`            : 'Not specified')quote.timeline;'
       quote.status;
       new Date (quote.created_at).toLocaleDateString ()])// Create CSV content;
-    const csv_content = [;
       headers.join ()...rows.map (row =>;
         row.map (cell =>;
           // Escape commas and quotes in cell values;
@@ -93,15 +89,12 @@ export const ExportToCSV = ({ quotes, filename = "quote - requests" }: ExportToC
   return (import { Button } from "@/components/ui/button",import type { QuoteRequest } from "@/types/quotes",interface ExportToCSVProps  {"quotes": QuoteRequest[],filename?: string;"
 }export const ExportToCSV = ({ quotes, filename = "quote-requests" }: ExportToCSVProps) => {const handleExport = () => {// Define CSV Headers;"
     }
-    const headers = [;
       'IDTalent NameRequester NameRequester EmailProject NameProject SummaryBudgetTimeline','StatusCreated Date';'
     ],// Format quote data for CSV;
-    const rows = quotes.map(quote => { return [; }
       quote.id,quote.talent_name || 'Unknown',quote.requester_name,quote.requester_email,quote.project_name,quote.project_summary,quote.budget_display ||;'
         (quote.budget_min && quote.budget_max;
           ? `$${quote.budget_min} - $${quote.budget_max}`;`          : quote.budget_min;
             ? `$${quote.budget_min}`;`            : 'Not specified'),quote.timeline,quote.status,new Date(quote.created_at).toLocaleDateString()]),// Create CSV content;'
-    const csvContent = [;
       headers.join(),...rows.map(row =>;
         row.map(cell =>;
           // Escape commas and quotes in cell values;
@@ -111,7 +104,6 @@ export const ExportToCSV = ({ quotes, filename = "quote - requests" }: ExportToC
       variant="outline";interface ExportToCSVProps  {"quotes": QuoteRequest[],filename?: string;"
 }export const ExportToCSV = ({ quotes, filename = "quote-requests" }: ExportToCSVProps) => {const handleExport = () => {// Define CSV Headers;"
     }
-    const headers = [;
       'IDTalent NameRequester NameRequester EmailProject NameProject SummaryBudgetTimeline';'
       'StatusCreated Date';'
     ];// Format quote data for CSV;
@@ -128,7 +120,6 @@ export const ExportToCSV = ({ quotes, filename = "quote - requests" }: ExportToC
             ? `$${quote && quote.budget_min}` ;`            : 'Not specified')quote && quote.timeline;'
       quote && quote.status;
       new Date(quote && quote.created_at).toLocaleDateString()])// Create CSV content;
-    const csvContent = [;
       headers && headers.join()...rows && rows.map(row => { return  ; }
         row && row.map(cell => { return  ; }
           // Escape commas and quotes in cell values;
@@ -157,7 +148,6 @@ export const ExportToCSV = ({ quotes, filename = "quote - requests" }: ExportToC
     </Button>;
   )}
             : 'Not specified'),quote.timeline,quote.status,new Date(quote.created_at).toLocaleDateString()])// Create CSV content;'
-    const csvContent = [;
       headers.join(','),...rows.map(row =>;'
         row;
           .map(cell =>;

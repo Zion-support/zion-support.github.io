@@ -1,21 +1,32 @@
 
 
-import type { NextApiRequest, NextApiResponse } from 'next';'
-import fs from 'fs';'
-import path from 'path';'
+import type { NextApiRequest, NextApiResponse } from 'next';
+import fs from 'fs';
+import path from 'path';
 
 const DOCS_DIR = null;
-    res.status(200).json({ "ok": true, "version": ts
-})
-  const token = req.headers['x-admin-token'] as string | undefined;'
-  if (process.env.DOCS_ADMIN_TOKEN && token !== process.env.DOCS_ADMIN_TOKEN) {
-}
-return res.status(403).json({ "error": 'Forbidden',;'
-});
-  if (req && req.method !== 'POST') {'
-}
-return res && res.status(405).json({ "error": 'Method Not Allowed' });'
- 
+<<<<<<< HEAD
+    res.status(200).json({ ok: true, version: ts })
+
+const ts = new Date () .toISOString ()
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  if (req && req.method !== 'POST') {
+    return res && res.status(405).json({ error: 'Method Not Allowed' });  }import type { NextApiRequest, NextApiResponse } from 'next';
+
+import type { NextApiRequest, NextApiResponse } from 'next';
+
+import fs from 'fs';
+import path from 'path';
+import type { NextApiRequest, NextApiResponse } from 'next';
+import fs from 'fs';
+import path from 'path';
+const DOCS_DIR = path.join(process.cwd(), 'datadocs'),
+const CONTENT_PATH = path.join($2);
+const VERSIONS_DIR = path.join($2);
+function ensureDir(dir: string) {
+  if (!fs.existsSync(dir)) {
+    fs.mkdirSync(dir, { recursive: true})
+  }
 }
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -28,84 +39,206 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     return res.status(403).json({ error: 'Forbidden' })
   }
 
+=======
+    res.status(200).json({ ok: true, version: ts,}
+})
+  const token = req.headers['x-admin-token'] as string | undefined;
+  if (process.env.DOCS_ADMIN_TOKEN && token !== process.env.DOCS_ADMIN_TOKEN) {}
+    return res.status(403).json({ error: 'Forbidden',}
+});
+  if (req && req.method !== 'POST') {}
+    return res && res.status(405).json({ error: 'Method Not Allowed' })
+ ,
+}
+>>>>>>> origin/chore/fix-lint-and-merge
   try {
-    }
     ensureDir(DOCS_DIR);
     ensureDir(VERSIONS_DIR);
 
 const body = req.body;
 
-const jsonString =;
-      typeof body === 'string' ? body : JSON.stringify(body, null, 2);'
+const jsonString =
+      typeof body === 'string' ? body : JSON.stringify(body, null, 2);
 
-const ts = new Date();
+const ts = new Date()
       .toISOString()
-      .replace(/[-:T.Z]/g, '')'
-      .slice(0, 14);
-    fs.writeFileSync(CONTENT_PATH, jsonString, 'utf8');'
-    fs.writeFileSync(path.join(VERSIONS_DIR, `${ts}.json`), jsonString, 'utf8');'
+      .replace(/[-:T.Z]/g, '')
+      .slice(0, 14);}
+    fs.writeFileSync(CONTENT_PATH, jsonString, 'utf8');}
+    fs.writeFileSync(path.join(VERSIONS_DIR, `${ts}.json`), jsonString, 'utf8');
 
-res.status(200).json({ "ok": true, "version": ts
+res.status(200).json({ ok: true, version: ts,}
 });
   } catch (e) {
-    }
-    res && res.status(500).json({ "error": 'Failed to save content','
+    res && res.status(500).json({ error: 'Failed to save content',}
 });
 
 const ts = new Date () .toISOString ();
+
 export default /**
- * handler - Function description
+ * handler - Function description;
  */
+<<<<<<< HEAD
+function handler() {}
+=======
 function handler() {
-  // Check condition
+>>>>>>> origin/chore/fix-lint-and-merge
+  // Check condition;
+if ( {) {}
+  $2}
 }
-if ( {) {
-  $2
+<<<<<<< HEAD
+    return res.status (405).json ({ error: 'Method Not Allowed'}
+});  }
+import type { NextApiRequest, NextApiResponse } from next;
+import fs from 'fs';
+import path from path;
+
+const DOCS_DIR = path.join (process.cwd (), 'datadocs');
+
+const CONTENT_PATH = path.join (DOCS_DIR, content.json);
+=======
+    return res.status (405).json ({ error: 'Method Not Allowed',}
+});  }import type { NextApiRequest, NextApiResponse } from 'next';
+import fs from 'fs';
+import path from 'path';
+
+const DOCS_DIR = path.join (process.cwd (), 'datadocs');
+
+const CONTENT_PATH = path.join (DOCS_DIR, 'content.json');
+>>>>>>> origin/chore/fix-lint-and-merge
+
+const VERSIONS_DIR = path.join (DOCS_DIR, 'versions');
+
+const ts = new Date () .toISOString ()export default function handler() {if (req && req.method !== POST) ;}
+  return res && res.status(405).json({ error: 'Method Not Allowed' }}
+import type { NextApiRequest, NextApiResponse } from 'next';
+import fs from fs;
+import path from 'path';
+function ensureDir() {if (!fs && fs.existsSync(dir)) {fs && fs.mkdirSync(dir, { recursive: true })}}
+
+const ts = new Date () .toISOString ()export default function handler() {if (req && req.method !== 'POST') ;}
+  return res && res.status(405).json({ error: 'Method Not Allowed' },
+}import type { NextApiRequest, NextApiResponse } from 'next';
+import type { NextApiRequest, NextApiResponse } from 'next';
+import fs from 'fs';
+import path from 'path';
+function ensureDir() {if (!fs && fs.existsSync(dir)) {fs && fs.mkdirSync(dir, { recursive: true })},
 }
-return res.status (405).json ({ "error": 'Method Not Allowed',;'
-});  }import type { NextApiRequest, NextApiResponse } from 'next';'
-import fs from 'fs';'
-import path from 'path';'
+    fs.mkdir_sync (dir, { recursive: true })}
+  } catch (e) {res.status (500).json ({ error: 'Failed to save content' })}}}
+    res.status(200).json({ ok: true, version: ts})
+    return res && res.status(405).json({ error: 'Method Not Allowed' })
+  }
+  try {}
+    ensureDir(DOCS_DIR);
+    ensureDir(VERSIONS_DIR);
+    res.status(200).json({ ok: true, version: ts })
+    const body = req.body;
 
-const DOCS_DIR = path.join (process.cwd (), 'datadocs');'
+<<<<<<< HEAD
+const jsonString =
+      typeof body === 'string' ? body : JSON.stringify(body, null, 2);
 
-const CONTENT_PATH = path.join (DOCS_DIR, 'content.json');'
+    const ts = new Date()
+      .toISOString()
+      .replace(/[-:T.Z]/g, '')
+      .slice(0, 14);
+    fs.writeFileSync(CONTENT_PATH, jsonString, 'utf8');
+    fs.writeFileSync(path.join(VERSIONS_DIR, `${ts}.json`), jsonString, 'utf8');
+    res.status(200).json({ ok: true, version: ts });
+  } catch (e) {
+  } catch (e) {'
+    res && res.status(500).json({ error: 'Failed to save content' });
+const ts = new Date () .toISOString ();
+export default /**
+ * handler - Function description;
+ */
+function handler() {}
+  // Check condition;
+if ( {) {}
+  $2}
+}
+    return res.status (405).json ({ error: 'Method Not Allowed',}
+});  }
+import type { NextApiRequest, NextApiResponse } from 'next';
+import fs from 'fs';
+import path from 'path';
 
-const VERSIONS_DIR = path.join (DOCS_DIR, 'versions');'
+const DOCS_DIR = path.join (process.cwd (), 'datadocs');
 
+const CONTENT_PATH = path.join (DOCS_DIR, 'content.json');
+
+const VERSIONS_DIR = path.join (DOCS_DIR, 'versions');
 ;
 
-const ts = new Date () .toISOString ()export default function handler() {if (req && req.method !== 'POST') ;'
+const ts = new Date () .toISOString ()export default function handler() {if (req && req.method !== 'POST') ;}
+  return res && res.status(405).json({ error: 'Method Not Allowed' },
 }
-return res && res.status(405).json({ "error": 'Method Not Allowed' },;'
-}import type { NextApiRequest, NextApiResponse } from 'next';'
-import type { NextApiRequest, NextApiResponse } from 'next';'
-import fs from 'fs';'
-import path from 'path';'
-function ensureDir() {if (!fs && fs.existsSync(dir)) {fs && fs.mkdirSync(dir, { "recursive": true })}
+import type { NextApiRequest, NextApiResponse } from 'next';
+import type { NextApiRequest, NextApiResponse } from 'next';
+import fs from 'fs';
+import path from 'path';
+function ensureDir() {if (!fs && fs.existsSync(dir)) {fs && fs.mkdirSync(dir, { recursive: true })},
 }
 
-    fs.mkdir_sync (dir, { "recursive": true
+    fs.mkdir_sync (dir, { recursive: true,}
+});
+  }
+  } catch (e) {}
+=======
+    fs.mkdir_sync (dir, { recursive: true,}
 });
   }
   } catch (e) {
-    }
-    res.status (500).json ({ "error": 'Failed to save content','
+>>>>>>> origin/chore/fix-lint-and-merge
+    res.status (500).json ({ error: 'Failed to save content',}
 });
   }
 
+<<<<<<< HEAD
 }
-return res.status (405).json ({ "error": 'Method Not Allowed' },;'
-}import type { NextApiRequest, NextApiResponse } from 'next';'
 
-const DOCS_DIR = path.join (process.cwd (), 'datadocs')const CONTENT_PATH = path.join (DOCS_DIR, 'content.json';'
-  const VERSIONS_DIR  = path.join (DOCS_DIR, 'versions')/**;'
  * ensure_dir - Function description;
  */
 function ensure_dir() {}
   if () {) {}
   $2;
 }
-    fs.mkdir_sync (dir, { "recursive": true })}
-  } catch (e) {res.status (500).json ({ "error": 'Failed to save content' })},'
+    fs.mkdir_sync (dir, { recursive: true });
+  }
+  } catch (e) {
+    res.status(500).json({ error: 'Failed to save content' })
+  }
 }
+  } catch (e) {'
+    res.status (500).json ({ error: 'Failed to save content' });
+  }
+  }
+origin/cursor/automate-test-improve-and-merge-code-2533
+}
+'
+
+  } catch (e) {
+    res.status (500).json ({ error: 'Failed to save content' ;});
+  }
+  }
+origin/cursor/automate-test-improve-and-merge-code-2533
+}
+}
+=======
+
+}
+    return res.status (405).json ({ error: 'Method Not Allowed' },
+}import type { NextApiRequest, NextApiResponse } from 'next';
+
+const DOCS_DIR = path.join (process.cwd (), 'datadocs')const CONTENT_PATH = path.join (DOCS_DIR, 'content.json';
+  const VERSIONS_DIR  = path.join (DOCS_DIR, 'versions')/**;
+ * ensure_dir - Function description;
+ */;
+function ensure_dir() {if () {) {$2;}
+}
+    fs.mkdir_sync (dir, { recursive: true })}
+  } catch (e) {res.status (500).json ({ error: 'Failed to save content' })},
+}
+>>>>>>> origin/chore/fix-lint-and-merge

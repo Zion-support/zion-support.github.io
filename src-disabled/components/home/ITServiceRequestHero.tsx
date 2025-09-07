@@ -723,17 +723,6 @@ export function ITServiceRequestHero() {
       </div>
     </section>
   )
-import React, { useState } from "react",;
-import Image from "next/image",;
-import { GradientHeading } from "@/components/GradientHeading",;
-import { Button } from "@/components/ui/button",;
-import { Input } from "@/components/ui/input",;
-import { Textarea } from "@/components/ui/textarea",;
-import { useToast } from "@/hooks/use-toast",;
-import axios from "axios",;
-import { Loader2 } from 'lucide-react';
-import { useTranslation } from "react-i18next",;
-import {logErrorToProduction} from '@/utils/productionLogger',;
 export function ITServiceRequestHero() {;
   const [name, setName] = useState(""),;
   const [email, setEmail] = useState(""),;
@@ -741,9 +730,6 @@ export function ITServiceRequestHero() {;
   const [company, setCompany] = useState(""),;
   const [location, setLocation] = useState(""),;
   const [details, setDetails] = useState(""),;
-  const [isSubmitting, setIsSubmitting] = useState(false),;
-  const { toast } = useToast(),;
-  const { t } = useTranslation(),;
   const handleSubmit = async (e: React.FormEvent) => {;
     e.preventDefault(),;
     if (!name || !email || !location) {;
@@ -756,7 +742,6 @@ export function ITServiceRequestHero() {;
 ;
     setIsSubmitting(true),;
     try {;
-      const res = await axios.post("/api/onsite-request", {;
         name,;
         email,;
         phone,;

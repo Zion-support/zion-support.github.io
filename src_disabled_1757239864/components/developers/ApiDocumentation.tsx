@@ -143,7 +143,6 @@ const response = await fetch(\`https://api.ziontechgroup.com/v1/jobs/\${jobId}\`
   }
 });
 
-const data = await response.json();
 logInfo(data),`;
                 python: `import requests
 
@@ -233,7 +232,6 @@ print(data)`
   })
 });
 
-const data = await response.json();
 logInfo(data),`;
                 python: `import requests
 import json
@@ -307,7 +305,6 @@ print(data)`
   }
 });
 
-const data = await response.json();
 logInfo(data),`;
                 python: `import requests
 
@@ -367,7 +364,6 @@ const response = await fetch(\`https://api.ziontechgroup.com/v1/talent/\${talent
   }
 });
 
-const data = await response.json();
 logInfo(data),`;
                 python: `import requests
 
@@ -467,10 +463,8 @@ print(data)`
   })
 });
 
-const data = await response.json();
 logInfo(data),`;
                 python: `import requests
-import json
 
 headers = {
     'Authorization': 'Bearer YOUR_API_KEYContent-Type': 'application/json'
@@ -534,7 +528,6 @@ print(data)`
   }
 });
 
-const data = await response.json();
 logInfo(data),`;
                 python: `import requests
 

@@ -16,19 +16,19 @@ const AiConsultingChat: NextPage = () => {return (<div>;
       </Head>;
 
 
-=======
-<<<<<<< HEAD
 <div> <Head> <title>AiConsultingChat - Zion Tech Solutions</title> <meta name="description" content="AiConsultingChat blog post" /> </Head> <main> <h1>AiConsultingChat</h1> <p>Blog content coming soon...</p> <a href="/blog" >Back to Blog</a> </main> </div> export default AiConsultingChat
-=======
-import type { NextPage } from 'next';
-import Head from 'next/head';
-import Link from 'next/link';
-const AiConsultingChat: NextPage;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 import type { NextPage } from "next";
 import Head from "next/head";
+=======
+import type { NextPage } from "next";"
+import Head from "next/head";"
+>>>>>>> origin/chore/fix-lint-and-merge
 import Link from "next/link";
+import type { NextPage } from 'next';'
+import Head from 'next/head';'
+import Link from 'next/link';
 
+<<<<<<< HEAD
 
 
 
@@ -41,38 +41,72 @@ const AiConsultingChat: NextPage = () => {;
 
 
 
+import type { NextPage } from "next;
+import Head from next/head";
+import Link from "next/link;
 
 
 
 
 const AiConsultingChat: NextPage = () => {
+=======
+const AiConsultingChat: NextPage = () => {}
+>>>>>>> origin/chore/fix-lint-and-merge
+  return (
+    <div>;
+      <Head>;
+        <title>AiConsultingChat - Zion Tech Solutions</title>;
+        <meta name=description" content="AiConsultingChat blog post />{ "}
+
+
+
+
+
+
+
   return (
     <div>
       <Head>
 
+import type { NextPage } from "next";
+import Head from "next/head";
+
+import Link from "next/link";
+const AiConsultingChat: NextPage = () => {;
+  return (
+    <div>;
+      <Head>;
+        <title>AiConsultingChat - Zion Tech Solutions</title>;"
+        <meta name="description" content="AiConsultingChat blog post" />{" "}
+
       </Head>;
 
-
-        <meta name="description" content="AiConsultingChat blog post" />
+        <meta name="description content=AiConsultingChat blog post" />
       </Head>
-
-      </Head>;
+pr-12243
 
       <main>
         <h1>AiConsultingChat</h1>
+<<<<<<< HEAD
         <p>Blog content coming soon...</p>
+        <a href="/blog>Back to Blog</a>
+=======
+        <p>Blog content coming soon...</p>"
         <a href="/blog">Back to Blog</a>
+>>>>>>> origin/chore/fix-lint-and-merge
       </main>
     </div>
       </Head>;
 
-
-
-
       <main>;
         <h1>AiConsultingChat</h1>;
+<<<<<<< HEAD
         <p>Blog content coming soon...</p>;
+        <a href=/blog">Back to Blog</a>;
+=======
+        <p>Blog content coming soon...</p>;"
         <a href="/blog">Back to Blog</a>;
+>>>>>>> origin/chore/fix-lint-and-merge
       </main>;
     </div>;
   );
@@ -85,47 +119,32 @@ export default AiConsultingChat;
 
 
 
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
 
         <title>AiConsultingChat - Zion Tech Solutions</title>
-
-
-
-
-        <title>AiConsultingChat - Zion Tech Solutions</title>
-
-ursor/fix-website-loading-errors-and-merge-6662
-
-        <title>AiConsultingChat - Zion Tech Solutions</title>
-
-
-
-
-
-
-
-
-        <title>AiConsultingChat - Zion Tech Solutions</title>
-
 
 import type { NextPage } from './next';
 import Head from './next / head';
+
 import Link from './next / link';
-const AiConsultingChat: NextPage = () => {
+const AiConsultingChat: NextPage = () => {}
   return (
     <div>;
       <Head>;
-        <title > AiConsultingChat - Zion Tech Solutions</title>;
+        <title > AiConsultingChat - Zion Tech Solutions</title>;"
         <meta name="description" content="AiConsultingChat blog post" />{" "}
       </Head>;
       <main>;
         <h1 > AiConsultingChat</h1>;
-        <p > Blog content coming soon...</p>;
+        <p > Blog content coming soon...</p>;"
         <a href="/blog">Back to Blog</a>;
       </main>;
     </div>);
 }
 ;
 export default AiConsultingChat;
+<<<<<<< HEAD
 ;
     <div>
       <Head>
@@ -161,5 +180,5 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         <title>AiConsultingChat - Zion Tech Solutions</title>
 
 =======
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
+;
+>>>>>>> origin/chore/fix-lint-and-merge

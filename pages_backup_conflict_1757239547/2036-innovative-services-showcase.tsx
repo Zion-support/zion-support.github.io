@@ -42,7 +42,6 @@ import {
   MapPin;
 } from 'lucide-react';
 import { real2036InnovativeServices } from '../data/real-2036-innovative-services';
-import { real2036SpecializedServices } from '../data/real-2036-specialized-services';
 const contactInfo = {
   mobile: '+1 302 464 0950'
   email: 'kleber@ziontechgroup.com'
@@ -105,7 +104,6 @@ export default function InnovativeServicesShowcase2036() {
     return matchesCategory && matchesSearch;  });
 import Layout from '../components/layout/Layout',
 import { motion } from 'framer-motion',
-import {
   Brain, Rocket, Shield, Zap, Target, Atom, Globe,
   Cpu, Lock, Cloud, Settings, Eye, Award, Clock,
   Star, TrendingUp, Users, Building, Lightbulb,
@@ -113,17 +111,14 @@ import {
 } from 'lucide-react',
 import { real2036InnovativeServices } from '../data/real-2036-innovative-services',
 import { real2036SpecializedServices } from '../data/real-2036-specialized-services',
-const contactInfo = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com'
 },
-const categories = [
   'All ServicesAI & DataQuantum TechnologySpace TechnologyIT InfrastructureCybersecurityEdge ComputingBlockchain',
   'ManufacturingHealthcare AIEmerging TechnologyBiotechnologyHuman-Computer InteractionMetaverseAutonomous SystemsClimate Technology'
 ],
-const categoryIcons: { [key: string]: React.ReactNode } = {
   'AI & Data': <Brain className='w-5 h-5' />,
   'Quantum Technology': <Atom className='w-5 h-5' />,
   'Space Technology': <Rocket className='w-5 h-5' />,
@@ -141,19 +136,13 @@ const categoryIcons: { [key: string]: React.ReactNode } = {
   'Climate Technology': <Globe className='w-5 h-5' />,};
 
 export default function InnovativeServicesShowcase2036() {;
-  const [selectedCategory, setSelectedCategory] = useState('All Services');
-  const [searchTerm, setSearchTerm] = useState('');
-  const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
-  const [sortBy, setSortBy] = useState<
     'name' | 'price' | 'rating' | 'marketSize'
   >('name');
 
-  const allServices = [
     ...real2036InnovativeServices,
     ...real2036SpecializedServices,
   ];
 
-  const filteredServices = allServices.filter(service => {
     const matchesCategory = selectedCategory === 'All Services' || service.category === selectedCategory,
     const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
@@ -627,7 +616,6 @@ export default function InnovativeServicesShowcase2036() {;
     </Layout>
 )
 }
-const itemVariants = {
   hidden: {
   y: 20, opacity: 0
 }

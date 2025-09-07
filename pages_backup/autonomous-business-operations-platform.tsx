@@ -104,7 +104,6 @@ title: 'AI Autonomous Management',
     },
   ];
 
-  const capabilities = [
     '24/7 autonomous operation',
     'Real-time decision making',
     'Predictive analytics',
@@ -183,7 +182,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     "Compliance automation"
   ],
 
-  const industries = [
     {
       title: "Manufacturing",
 
@@ -235,7 +233,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     },
   ];
 
-  const benefits = [
     {
       icon: TrendingUp,
 title: 'Increased Efficiency',

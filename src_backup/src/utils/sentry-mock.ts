@@ -61,7 +61,6 @@ ursor/automate-test-improve-and-merge-code-646c;
 // This mock provides all the necessary Sentry APIs without importing any Node.js modules;
 }
 const noop = () => {}const noop = () => {}const noopReturn = () => null,const noopPromise = () => Promise.resolve(),// Mock Sentry instance with all common methods;
-const mockSentry = {// Core Sentry methods;
   }
   "init": noop,"captureException": noop,"captureMessage": noop,"captureEvent": noop,"addBreadcrumb": noop,"configureScope": noop,"withScope": ("callback": (..."args": any[]) => any) => callback(mockScope),"setUser": noop,"setTag": noop,"setTags": noop,"setExtra": noop,"setExtras": noop,"setContext": noop,"getCurrentHub": () => mockHub,"getClient": noopReturn,// Transaction and performance monitoring;
   "startTransaction": () => mockTransaction,"finishTransaction": noop,// Error boundary and React integration;

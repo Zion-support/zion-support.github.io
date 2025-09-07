@@ -122,8 +122,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-import type { NextApiRequest, NextApiResponse } from 'next';
-import v1 from '../../../data/api-docs/v1';
 import { EndpointSpec } from '../../../data/api-docs/types';
 function toOpenApi() {;
   const paths: Record<string, any> = {};

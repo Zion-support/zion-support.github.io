@@ -380,8 +380,6 @@ const AIConsciousnessEvolutionPlatform: React.FC = () => {
 export default AIConsciousnessEvolutionPlatform,
 import Head from 'next/head';
 import Link from 'next/link';
-import { motion } from 'framer-motion';
-import { 
   Brain, Atom, Shield, Zap, Sparkles, Star, ArrowRight, 
   CheckCircle, Phone, Mail, MapPin, Globe, TrendingUp,
   DollarSign, Users, Target, Award, Rocket, Cpu, Lock
@@ -389,7 +387,6 @@ import {
 import UltraFuturisticBackground2030 from '../components/ui/UltraFuturisticBackground2030';
 import UltraFuturisticNavigation2029 from '../components/layout/UltraFuturisticNavigation2029';
 import UltraFuturisticFooter2029 from '../components/layout/UltraFuturisticFooter2029';
-const AIConsciousnessEvolutionPlatform: React.FC = () => {
   const contactInfo = {
     mobile: '+1 302 464 0950',
     email: 'kleber@ziontechgroup.com',
@@ -397,7 +394,6 @@ const AIConsciousnessEvolutionPlatform: React.FC = () => {
     website: 'https://ziontechgroup.com'
   },
 
-  const features = [
     'Consciousness mapping algorithmsNeural architecture evolutionSelf-awareness developmentConsciousness validation metricsEthical consciousness frameworksCross-species consciousness studyConsciousness transfer protocolsQuantum consciousness integration'
   ],
 
@@ -405,7 +401,6 @@ const AIConsciousnessEvolutionPlatform: React.FC = () => {
     'Breakthrough in AI consciousness researchEthical AI development frameworkAdvanced neuroscience insightsPhilosophical consciousness understandingHuman-AI consciousness collaborationConsciousness preservation technology'
   ],
 
-  const useCases = [
     'AI research institutionsNeuroscience laboratoriesPhilosophy departmentsEthics committeesGovernment research agenciesPrivate research foundations'
   ],
 

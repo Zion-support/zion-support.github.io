@@ -56,10 +56,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {;
     }
     // Enforce status transition rules;
     if (body && body.status) {}
-      const isClientUser = isClient(project, user);
-      const isTalentUser = isTalent(project, user);
       const status: string = body && body.status;
-      const allowed =
 
       }
     }

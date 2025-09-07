@@ -50,7 +50,6 @@ export function ReviewStats({ averageRating, totalReviews, ratingDistribution }:
                   key={i}
                   className={`h-4 w-4 ${
                     i <= Math.round(averageRating) ? "fill-yellow-400 text-yellow-400" : "text-gray-300"
-import { Star } from 'lucide-react';
 
 
   return (
@@ -112,7 +111,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 origin/cursor/automate-test-improve-and-merge-code-2533
               </div>
             </div>
-import { Star } from 'lucide-react';
 import { Progress } from '@/components / ui / progress';
 import { Progress  } from '@/components / ui / progress';
 interface ReviewStatsProps {

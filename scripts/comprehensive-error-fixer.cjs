@@ -1,31 +1,98 @@
 <<<<<<< HEAD
-=======
 
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+>>>>>>> origin/chore/fix-lint-and-merge
 #!/usr/bin/env node;
+=======
 #!/usr/bin/env node
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 /**
  * Comprehensive Error Fixer
- * Automatically fixes common syntax and logical errors in the codebase
+ * Automatically fixes common syntax and import errors
  */
-const fs = require("fs");
-const path = require("path");
-const { execSync } = require("child_process");
+<<<<<<< HEAD
+const fs = require("fs);
+const path = require(path");
+const { execSync } = require("child_process);
 
 >>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
+=======
+<<<<<<< HEAD
+const fs = require("child_process");
+const path = require("child_process");
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 const { execSync } = require("child_process");
+>>>>>>> origin/chore/fix-lint-and-merge
 class ComprehensiveErrorFixer {}
   constructor() {}
     this.projectRoot = process.cwd();
     this.logs = [];
     this.errors = [];
+<<<<<<< HEAD
     this.fixes = [];
   }
 
-  log(message, type = "info") {
+  log(message, type = info") {
+=======
+    this.fixes = []};
+  log(message, type = "info") {}
+>>>>>>> origin/chore/fix-lint-and-merge
     const timestamp = new Date().toISOString();
-    const logEntry = `[${timestamp}] [${type.toUpperCase()}] ${message}`;
+    const logEntry = `[${timestamp}] [${type.toUpperCase()}] ${message}
     console.log(logEntry);
+<<<<<<< HEAD
+
+      await this.fixCommonSyntaxErrors();
+      
+      this.log(📊 Error fixing completed");
+      this.log(`✅ Files fixed: ${this.fixes.length}`);
+      this.log(`❌ Errors encountered: ${this.errors.length}`);
+      
+      if (this.errors.length > 0) {
+        this.log("Errors encountered:);
+        this.errors.forEach(error => {
+          this.log(`  - ${error.file}: ${error.error}`, error");
+        });
+      }
+      
+      return {
+        success: this.errors.length === 0,
+        fixes: this.fixes,
+        errors: this.errors
+      }
+    } catch (error) {
+      this.log(`❌ Error fixer failed: ${error.message}`, "error);
+      throw error;
+    }
+  }
+}
+
+// Main execution
+if (require.main === module) {
+  const fixer = new ComprehensiveErrorFixer();
+  fixer.run().catch(error => {
+    console.error(Error fixer failed:", error);
+    process.exit(1);
+  });
+}
+
+module.exports = ComprehensiveErrorFixer;
+
+=======
     this.logs.push(logEntry)};
   async fixCommonSyntaxErrors() {}
     try {}
@@ -68,7 +135,7 @@ class ComprehensiveErrorFixer {}
       let content = fs.readFileSync(filePath, "utf8");
       let modified = false;
       // Fix common syntax errors;
-const fixes = [// Fix semicolons in object properties;];
+      const fixes = [// Fix semicolons in object properties;]
         { "pattern": /(\w+):\s*([^}]+);/g, "replacement": "$1: $2," };
         // Fix missing commas in arrays;
         { "pattern": /(\w+)\s*\n\s*(\w+)/g, "replacement": "$1,\n$2" };
@@ -129,58 +196,40 @@ const fixes = [// Fix semicolons in object properties;];
     this.log("Starting Comprehensive Error Fixer");
     try {}
       await this.fixCommonSyntaxErrors();
-      
-      this.log("📊 Error fixing completed");
-      this.log(`✅ Files fixed: ${this.fixes.length}`);
-      this.log(`❌ Errors encountered: ${this.errors.length}`);
-      
-      if (this.errors.length > 0) {
-        this.log("Errors encountered:");
-        this.errors.forEach(error => {
-          this.log(`  - ${error.file}: ${error.error}`, "error");
-        });
-      }
-      
-      return {
-        success: this.errors.length === 0,
-        fixes: this.fixes,
-        errors: this.errors
-      };
-    } catch (error) {
-      this.log(`❌ Error fixer failed: ${error.message}`, "error");
-      throw error;
-    }
-  }
-}
-
-// Main execution
-if (require.main === module) {
+      await this.runTypeScriptCheck();
+      await this.runLinting();
+      const report = await this.generateReport();
+      this.log("Comprehensive Error Fixer completed");
+      this.log(""Summary": ${report.summary.totalFixes} fixes applied, ${report.summary.totalErrors} errors found");
+      return report} catch (error) {}
+      this.log("Error fixer "failed": ${error.message}`, "error");
+      throw error};
+  };
+};
+// Run the error fixer;
+if (require.main === module) {}
   const fixer = new ComprehensiveErrorFixer();
-  fixer.run().catch(error => {
-    console.error("Error fixer failed:", error);
-    process.exit(1);
-  });
-}
-
-module.exports = ComprehensiveErrorFixer;
+  fixer.run().catch(console.error)};
 <<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+module.exports = ComprehensiveErrorFixer;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 <<<<<<< HEAD
-=======
-
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
+>>>>>>> origin/chore/fix-lint-and-merge
 module.exports = ComprehensiveErrorFixer;
 =======
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
 =======
 module.exports = ComprehensiveErrorFixer;
 <<<<<<< HEAD
-module.exports = ComprehensiveErrorFixer;
-
 
 =======
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> origin/chore/fix-lint-and-merge
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
 =======
@@ -188,7 +237,3 @@ module.exports = ComprehensiveErrorFixer;
 
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
-=======
-
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5

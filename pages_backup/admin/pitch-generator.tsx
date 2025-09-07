@@ -94,17 +94,14 @@ return data;
 origin/cursor/automate-test-improve-and-merge-code-2533
   }, []);
 
-  const prevent = (e: React.DragEvent) => {
     e.preventDefault();
     e.stopPropagation()
   };
 
   const operatorPrompt = useMemo(() => `Create a 10-slide investor pitch deck for a high-growth AI services marketplace. Include market size, traction, business model, team, token strategy, and call to action.`, []);
 
-  const autoFetchMetrics = useCallback(async () => {
     setLoading(true);
     try {;
-      const res = await fetch('/api/admin/pitch/metrics');
     >;
       <div className='font - semibold text - sm line - clamp - 2'>;
         {slide.title || 'Untitled'}
@@ -181,7 +178,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     setLoading(true);
     try {
 const res = await fetch('/api/admin/pitch/add-slide', { method: 'POST' });
-      const json = await res.json();
       setSlides(arr => [
         ...arr
         {
@@ -220,7 +216,6 @@ URL.revokeObjectURL(url);
   const exportGoogleSlides = useCallback(async () => {
     setLoading(true);
     try {
-const res = await fetch('/api/admin/pitch/export', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
@@ -229,7 +224,6 @@ const res = await fetch('/api/admin/pitch/export', {
           version: versionTag
         })
       });
-      const json = await res.json();
       if (json && json.url) {
         window.open(json.url, '_blank');
       }

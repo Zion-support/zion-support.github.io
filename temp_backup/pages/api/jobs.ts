@@ -50,7 +50,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       else job.category = 'General'
     }
 
-    const jobs = readJsonFile<Job[]>(FILE, []),
     jobs.unshift($2);
     writeJsonFile<Job[]>(FILE, jobs),
 

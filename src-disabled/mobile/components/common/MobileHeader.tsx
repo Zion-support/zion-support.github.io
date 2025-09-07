@@ -1,8 +1,9 @@
-<<<<<<< HEAD:src_backup/mobile/components/common/MobileHeader.tsx
-<<<<<<< HEAD:src_backup/mobile/components/common/MobileHeader.tsx
+<<<<<<< HEAD
 
 title: string;  showBack?: boolean;  title: string;
   title: string;
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
 title: string;  showBack?: boolean;  title: string
 
   title: string;
@@ -12,10 +13,9 @@ title: string;  showBack?: boolean;  title: string
   showSettings?: boolean;
   className?: string;
   onNotificationsClick?: () => void;
-<<<<<<< HEAD:src_backup/mobile/components/common/MobileHeader.tsx
+<<<<<<< HEAD
 onSettingsClick?: () => void;export function MobileHeader({title;
   showBack;
-<<<<<<< HEAD:src_backup/mobile/components/common/MobileHeader.tsx
   title: string;  showBack?: boolean;  title: string
 origin/cursor/automate-test-improve-and-merge-code-2533
   showBack?: boolean
@@ -24,19 +24,19 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   className?: string
   onNotificationsClick?: () => void
 interface MobileHeaderProps {
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
 
 export function MobileHeader({
   title;
   showBack;
 
   title: string,
-  title: string;  showBack?: boolean;  title: string;
   showBack?: boolean;
   showNotifications?: boolean;
   showSettings?: boolean;
   className?: string;
   onNotificationsClick?: () => void;
-<<<<<<< HEAD:src_backup/mobile/components/common/MobileHeader.tsx
 
 export function MobileHeader({
 
@@ -51,50 +51,52 @@ export function MobileHeader({
 
   return (
     <header className={cn(
-<<<<<<< HEAD:src_backup/mobile/components/common/MobileHeader.tsx
       "sticky top-0 z-40 bg-background/80 backdrop-blur-sm border-b border-border",
+      "sticky top-0 z-40 bg-background/80 backdrop-blur-sm border-b border-border,
 
-      "sticky top-0 z-40 bg-background/80 backdrop-blur-sm border-b border-border"
+      sticky top-0 z-40 bg-background/80 backdrop-blur-sm border-b border-border"
 origin/cursor/automate-test-improve-and-merge-code-2533
       className
     )}>
-      <div className="flex items-center justify-between h-14 px-4">
+      <div className="flex items-center justify-between h-14 px-4>
 
-        <div className="flex items-center">
+        <div className=flex items-center">
           {showBack && (
 
             <Button 
-              variant="ghost" 
-              size="icon" 
-              className="mr-2" 
+              variant="ghost 
+              size=icon" 
+              className="mr-2 
               onClick={() => router.back()}
 
             >
-              <ChevronLeft className="h-5 w-5" />
+              <ChevronLeft className=h-5 w-5" />
 
-              <span className="sr-only">Back</span>
+              <span className="sr-only>Back</span>
             </Button>
-<<<<<<< HEAD:src_backup/mobile/components/common/MobileHeader.tsx
+<<<<<<< HEAD
 interface MobileHeaderProps {;
   title: string;  showBack?: boolean;  title: string,;
+interface MobileHeaderProps {
+  title: string;  showBack?: boolean;  title: string,
   showBack?: boolean;
 interface MobileHeaderProps  {title: string,showBack?: boolean;
   showNotifications?: boolean;
   showSettings?: boolean;
   className?: string;
   onNotificationsClick?: () => void;onSettingsClick?: () => void;
-export function MobileHeader() {const router = useRouter(),return (<header className={cn("sticky top-0 z-40 bg-background/80 backdrop-blur-sm border-b border-border",title,showBack = false,showNotifications = false,showSettings = false,className,onNotificationsClick,onSettingsClick}: MobileHeaderProps) {const router = useRouter(),return (<header className={cn("sticky top-0 z-40 bg-background/80 backdrop-blur-sm border-b border-border","sticky top-0 z-40 bg-background/80 backdrop-blur-sm border-b border-border";
+export function MobileHeader() {const router = useRouter(),return (<header className={cn(sticky top-0 z-40 bg-background/80 backdrop-blur-sm border-b border-border",title,showBack = false,showNotifications = false,showSettings = false,className,onNotificationsClick,onSettingsClick}: MobileHeaderProps) {const router = useRouter(),return (<header className={cn("sticky top-0 z-40 bg-background/80 backdrop-blur-sm border-b border-border,sticky top-0 z-40 bg-background/80 backdrop-blur-sm border-b border-border";
       className;
     )}>;
-      <div className="flex items-center justify-between h-14 px-4">;
-        <div className="flex items-center">;
+      <div className="flex items-center justify-between h-14 px-4>;
+        <div className=flex items-center">;
           {showBack && (<Button;
-              variant="ghost";
-              size="icon";
-              className="mr-2";
+              variant="ghost;
+              size=icon";
+              className="mr-2;
               onClick={() => router.back()}>;
-              <ChevronLeft className="h-5 w-5" />;
-              <span className="sr-only">Back</span>;
+              <ChevronLeft className=h-5 w-5" />;
+              <span className="sr-only>Back</span>;
             </Button>;
 interface MobileHeaderProps  {title: string;  showBack?: boolean;  title: string,showBack?: boolean;
   showNotifications?: boolean;
@@ -107,75 +109,74 @@ interface MobileHeaderProps  {title: string;  showBack?: boolean;  title: string
   showSettings = false;
   className;
   onNotificationsClick;
-  onSettingsClick}: MobileHeaderProps) {const router  = useRouter()return (<headerclassName={cn("sticky top-0 z-40 bg-background/80 backdrop-blur-sm border-b border-border";
+  onSettingsClick}: MobileHeaderProps) {const router  = useRouter()return (<headerclassName={cn(sticky top-0 z-40 bg-background/80 backdrop-blur-sm border-b border-border";
       className;
     )}>;
-      <div className="flex items-center justify-between h-14 px-4">;
-        <div className="flex items-center">;
+      <div className="flex items-center justify-between h-14 px-4>;
+        <div className=flex items-center">;
           {showBack && (<Button;
-              variant="ghost";
-              size="icon";
-              className="mr-2";
+              variant="ghost;
+              size=icon";
+              className="mr-2;
               onClick = {(,) => router && router.back()}
             >;
-              <ChevronLeft className="h-5 w-5" />;
-              <span className="sr-only">Back</span>;
+              <ChevronLeft className=h-5 w-5" />;
+              <span className="sr-only>Back</span>;
             </Button>;
           )}
-          <h1 className="text-lg font-medium leading-none truncate">;
+          <h1 className=text-lg font-medium leading-none truncate">;
             {title}</h1>;
         </div>;
-        <div className="flex items-center space-x-2">;
+        <div className="flex items-center space-x-2>;
           {showNotifications && (<Button;
-              variant="ghost";
-              size="icon";
+              variant=ghost";
+              size="icon;
               onClick = {onNotificationsClick}>;
-              <Bell className="h-5 w-5" />;
-              <span className="sr-only">Notifications</span>;
+              <Bell className=h-5 w-5" />;
+              <span className="sr-only>Notifications</span>;
             </Button>;
-          )}{showSettings && (<Button variant='ghost' size='icon' onClick={onSettingsClick}>;
-              <Settings className='h-5 w-5' />;
-              <span className='sr-only'>Settings</span>;<Button;
-              <span className='sr-only'>Settings</span>            </Button>            <Button;
+          )}{showSettings && (<Button variant='ghost size=icon' onClick={onSettingsClick}>;
+              <Settings className='h-5 w-5 />;
+              <span className=sr-only'>Settings</span>;<Button;
+              <span className='sr-only>Settings</span>            </Button>            <Button;
             <Button;
-              variant="ghost";
-              size="icon";
+              variant=ghost";
+              size="icon;
               onClick={onSettingsClick}
             >;
-              <Settings className="h-5 w-5" />;
-              <span className="sr-only">Settings</span>;}
+              <Settings className=h-5 w-5" />;
+              <span className="sr-only>Settings</span>;}
 }
 }</Button>;
-import React from "react",import { useRouter } from 'next/router',import { ChevronLeft, Bell, Settings  } from 'lucide-react';
-import { cn } from "@/lib/utils",import { Button } from "@/components/ui/button",interface MobileHeaderProps  {title: string,showBack?: boolean,showNotifications?: boolean,showSettings?: boolean,className?: string,onNotificationsClick?: () => void,onSettingsClick?: () => void;
+import React from react",import { useRouter } from next/router',import { ChevronLeft, Bell, Settings  } from 'lucide-react;
+import { cn } from "@/lib/utils,import { Button } from @/components/ui/button",interface MobileHeaderProps  {title: string,showBack?: boolean,showNotifications?: boolean,showSettings?: boolean,className?: string,onNotificationsClick?: () => void,onSettingsClick?: () => void;
 }export function MobileHeader() {const router  = useRouter()>;
       <div className='flex items-center justify-between h-14 px-4'>;
         <div className='flex items-center'>;
-<<<<<<< HEAD:src_backup/mobile/components/common/MobileHeader.tsx
           {showBack && (;
             <Button
-              variant='ghost'
-              size='icon'
-              className='mr-2'
+              variant=ghost'
+              size='icon
+              className=mr-2'
               onClick={() => router.back()}
             >
-              <ChevronLeft className='h-5 w-5' />
-              <span className='sr-only'>Back</span>
+              <ChevronLeft className='h-5 w-5 />
+              <span className=sr-only'>Back</span>
             </Button>
           )}
-          <h1 className='text-lg font-medium leading-none truncate'>{title}</h1>
+          <h1 className='text-lg font-medium leading-none truncate>{title}</h1>
         </div>
-        <div className='flex items-center space-x-2'>
+        <div className=flex items-center space-x-2'>
           {showNotifications && (
-            <Button variant='ghost' size='icon' onClick={onNotificationsClick}>
-              <Bell className='h-5 w-5' />
-              <span className='sr-only'>Notifications</span>
+            <Button variant='ghost size=icon' onClick={onNotificationsClick}>
+              <Bell className='h-5 w-5 />
+              <span className=sr-only'>Notifications</span>
             </Button>
           )}
           {showSettings && (
-            <Button variant='ghost' size='icon' onClick={onSettingsClick}>
-              <Settings className='h-5 w-5' />
-              <span className='sr-only'>Settings</span>
+            <Button variant='ghost size=icon' onClick={onSettingsClick}>
+              <Settings className='h-5 w-5 />
+              <span className=sr-only'>Settings</span>
             </Button>
           )}
         </div>
@@ -184,143 +185,153 @@ import { cn } from "@/lib/utils",import { Button } from "@/components/ui/button"
 );
 origin/cursor/automate-test-improve-and-merge-code-2533
           {showBack && (<Button;
-              variant='ghost';
-              size='icon';
-              className='mr-2';
+              variant='ghost;
+              size=icon';
+              className='mr-2;
               onClick={() => router && router.back()}
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
 
-              onClick = {(,) => router && router.back(),}
+              onClick = {(,) => router && router.back()}
             >;"
-              <ChevronLeft className="h-5 w-5" />;"
-              <span className="sr-only">Back</span>;
+              <ChevronLeft className=h-5 w-5 />;"
+              <span className="sr-only>Back</span>;
             </Button>;
 
-              size="icon"
-              onClick = {onNotificationsClick,}>;
-              <Bell className="h-5 w-5" />;
-              <span className="sr-only">Notifications</span>;
+              size=icon"
+              onClick = {onNotificationsClick}>;
+              <Bell className="h-5 w-5 />;
+              <span className=sr-only">Notifications</span>;
             </Button>;
           )}
           {showSettings && (
             <Button 
 
-              variant="ghost" 
+              variant="ghost 
 
-              size="icon"
+              size=icon"
               onClick={onSettingsClick}
             >"
-              <Settings className="h-5 w-5" />"
-              <span className="sr-only">Settings</span>
+              <Settings className=h-5 w-5 />"
+              <span className="sr-only>Settings</span>
 
             </Button>
-import React from "react",;
-import { useRouter } from 'next/router',;
-import { ChevronLeft, Bell, Settings } from 'lucide-react';
-import { cn } from "@/lib/utils",;
+import React from react",
+import { useRouter } from next/router',
+import { ChevronLeft, Bell, Settings } from 'lucide-react;
+import { cn } from "@/lib/utils,
 
-import { Button } from "@/components/ui/button",;
-interface MobileHeaderProps {;
-  title: string,;
-  showBack?: boolean,;
-  showNotifications?: boolean,;
-  showSettings?: boolean,;
-  className?: string,;
-  onNotificationsClick?: () => void,;
+import { Button } from @/components/ui/button",
+interface MobileHeaderProps {
+  title: string,
+  showBack?: boolean,
+  showNotifications?: boolean,
+  showSettings?: boolean,
+  className?: string,
+  onNotificationsClick?: () => void,
   onSettingsClick?: () => void;
 }
-;
 
     >;
-      <div className='flex items-center justify-between h-14 px-4'>;
-        <div className='flex items-center'>;
+      <div className=flex items-center justify-between h-14 px-4'>;
+        <div className='flex items-center>;
 
           {showBack && (;
 
             >;
-              <ChevronLeft className="h-5 w-5" />;
-              <span className="sr-only">Back</span>;
+              <ChevronLeft className="h-5 w-5 />;
+              <span className=sr-only">Back</span>;
             </Button>;
-<<<<<<< HEAD:src_backup/mobile/components/common/MobileHeader.tsx
+<<<<<<< HEAD
             <Button;
-              <span className='sr-only'>Settings</span>            </Button>            <Button;
+              <span className=sr-only'>Settings</span>            </Button>            <Button;
             <Button;
-              variant="ghost";
-              size="icon";
+              variant="ghost;
+              size=icon";
               onClick={onSettingsClick}
             >;
-              <Settings className="h-5 w-5" />;
-              <span className="sr-only">Settings</span>;
+              <Settings className="h-5 w-5 />;
+              <span className=sr-only">Settings</span>;
             </Button>;
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
 
-              size="icon"
+              size="icon
               onClick={onSettingsClick}
-            >"
-              <Settings className="h-5 w-5" />"
-              <span className="sr-only">Settings</span>
+            >
+              <Settings className="h-5 w-5" />
+              <span className=sr-only">Settings</span>
             </Button>
 
           )}
-          <h1 className="text-lg font-medium leading-none truncate">;
+          <h1 className="text-lg font-medium leading-none truncate>;
             {title}
           </h1>;
         </div>;
-<<<<<<< HEAD:src_backup/mobile/components/common/MobileHeader.tsx
+<<<<<<< HEAD
         <div className='flex items-center space-x-2'>;
           {showNotifications && (<Button variant='ghost' size='icon' onClick={onNotificationsClick}>;
               <Bell className='h-5 w-5' />;
               <span className='sr-only'>Notifications</span>;
+        <div className='flex items-center space-x-2>;
+          {showNotifications && (<Button variant=ghost' size='icon onClick={onNotificationsClick}>;
+              <Bell className=h-5 w-5' />;
+              <span className='sr-only>Notifications</span>;
             </Button>;
-          )}{showSettings && (<Button variant='ghost' size='icon' onClick={onSettingsClick}>;
-              <Settings className='h-5 w-5' />;
-              <span className='sr-only'>Settings</span>            </Button>            <Button;
-              variant="ghost";
-              size="icon";
+          )}{showSettings && (<Button variant=ghost' size='icon onClick={onSettingsClick}>;
+              <Settings className=h-5 w-5' />;
+              <span className='sr-only>Settings</span>            </Button>            <Button;
+              variant=ghost";
+              size="icon;
               onClick = {onSettingsClick}>;
-              <Settings className="h-5 w-5" />;
-              <span className="sr-only">Settings</span>;
+              <Settings className=h-5 w-5" />;
+              <span className="sr-only>Settings</span>;
           )}onClick={() => router.back()}
             >;
-              <ChevronLeft className='h-5 w-5' />;
-              <span className='sr-only'>Back</span>;
+              <ChevronLeft className=h-5 w-5' />;
+              <span className='sr-only>Back</span>;
             </Button>;
           )}
-          <h1 className='text-lg font-medium leading-none truncate'>{title}</h1>;
+          <h1 className=text-lg font-medium leading-none truncate'>{title}</h1>;
         </div>;
-        <div className='flex items-center space-x-2'>;
-          {showNotifications && (<Button variant='ghost' size='icon' onClick={onNotificationsClick}>;
-              <Bell className='h-5 w-5' />;
-              <span className='sr-only'>Notifications</span>;
+        <div className='flex items-center space-x-2>;
+          {showNotifications && (<Button variant=ghost' size='icon onClick={onNotificationsClick}>;
+              <Bell className=h-5 w-5' />;
+              <span className='sr-only>Notifications</span>;
             </Button>;
           )}
-          {showSettings && (<Button variant='ghost' size='icon' onClick={onSettingsClick}>;
-              <Settings className='h-5 w-5' />;
-              <span className='sr-only'>Settings</span>;
+          {showSettings && (<Button variant=ghost' size='icon onClick={onSettingsClick}>;
+              <Settings className=h-5 w-5' />;
+              <span className='sr-only>Settings</span>;
             </Button>;
           )}
         </div>;
       </div>;
     </header>;
 )
+        <div className=flex items-center space-x-2">;
+=======
         <div className="flex items-center space-x-2">;
+>>>>>>> origin/chore/fix-lint-and-merge
           {showNotifications && (;
             <Button;
-              variant="ghost";
-              size="icon";
+              variant="ghost;
+              size=icon";
               onClick={onNotificationsClick}
             >;
-              <Bell className="h-5 w-5" />;
-              <span className="sr-only">Notifications</span>;
+              <Bell className="h-5 w-5 />;
+              <span className=sr-only">Notifications</span>;
             </Button>;
           )}
           {showSettings && (;
             <Button;
-              variant="ghost";
-              size="icon";
+              variant="ghost;
+              size=icon";
               onClick={onSettingsClick}
             >;
-              <Settings className="h-5 w-5" />;
+              <Settings className="h-5 w-5 />;
 
-              <span className="sr-only">Settings</span>;
+              <span className=sr-only">Settings</span>;
             </Button>;
           )}
 
@@ -330,26 +341,24 @@ interface MobileHeaderProps {;
   );
 }
 
-;
-
               onClick={() => router.back()}
             >
-              <ChevronLeft className='h-5 w-5' />
-              <span className='sr-only'>Back</span>
+              <ChevronLeft className=h-5 w-5' />
+              <span className='sr-only>Back</span>
             </Button>
           )}
-          <h1 className='text-lg font-medium leading-none truncate'>{title}</h1>
+          <h1 className=text-lg font-medium leading-none truncate'>{title}</h1>
         </div>
-        <div className='flex items-center space-x-2'>
+        <div className='flex items-center space-x-2>
           {showNotifications && (
-            <Button variant='ghost' size='icon' onClick={onNotificationsClick}>
-              <Bell className='h-5 w-5' />
-              <span className='sr-only'>Notifications</span>
+            <Button variant=ghost' size='icon onClick={onNotificationsClick}>
+              <Bell className=h-5 w-5' />
+              <span className='sr-only>Notifications</span>
             </Button>
           )}
           {showSettings && (
-            <Button variant='ghost' size='icon' onClick={onSettingsClick}>
-              <Settings className='h-5 w-5' />
+            <Button variant=ghost' size='icon onClick={onSettingsClick}>
+              <Settings className=h-5 w-5' />
               <span className='sr-only'>Settings</span>
             </Button>
           )}

@@ -12,9 +12,8 @@ function nowMinute() {
 }
 
 function shouldRunEvery(n) {
-  return nowMinute() % n === 0;
+
 }
-  return nowMinute() % n === 0;}
   return nowMinute() % n === 0;}
 
 exports.config = {
@@ -23,16 +22,12 @@ exports.config = {
 
 exports.handler = async () => {
   const logs = [];
-  function logStep(name, fn) {
-    logs.push(`\n=== ${name} ===`);
-    const { status, stdout, stderr } = fn();
+
     if (stdout) logs.push(stdout);
   function logStep(name, fn) {
     logs.push(`\n=== ${name} ===`);
     const { status, stdout, stderr } = fn();    if (stdout) logs.push(stdout);
-  function logStep(name, fn) {
-    logs.push(`\n=== ${name} ===`);
-    const { status, stdout, stderr } = fn();    if (stdout) logs.push(stdout);
+
     if (stderr) logs.push(stderr);
     logs.push(`exit=${status}`);
     return status;

@@ -1,5 +1,3 @@
-<<<<<<< HEAD:src_backup/components/enterprise/workspace/QuickActions.tsx
-<<<<<<< HEAD:src_backup/components/enterprise/workspace/QuickActions.tsx
 import React from "react";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -14,6 +12,18 @@ import { Button  } from '@/components/ui/button';
 import { FileText, Plus, Search, Calendar  } from 'lucide-react';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter  } from '@/components/ui/card';
 import { Calendar  } from 'lucide-react';
+import React from "react;
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from @/components/ui/card";
+import { Button } from "@/components/ui/button;
+import { FileText, Plus, Search, Calendar } from 'lucide-react;
+import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from @/components/ui/card';
+import { Calendar } from 'lucide-react;
+import React from react';
+import { Card, CardContent, CardDescription, CardHeader, CardTitle  } from '@/components/ui/card;
+import { Button  } from @/components/ui/button';
+import { FileText, Plus, Search, Calendar  } from 'lucide-react;
+import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter  } from @/components/ui/card';
+import { Calendar  } from 'lucide-react;
   return (<Card>;
       <CardHeader>;
         <CardTitle>Quick Actions</CardTitle>;
@@ -21,82 +31,73 @@ import { Calendar  } from 'lucide-react';
       </CardHeader>;
       <CardContent>;
         <div className='grid grid-cols-1 sm:grid-cols-2 gap-4'>;
-<<<<<<< HEAD:src_backup/components/enterprise/workspace/QuickActions.tsx
           {actions && actions.map(action => (;
             <Button
 
 
 
-      id: 'post - job',
-      label: 'Post New Job',
-      icon: <FileText className='h - 5 w - 5 mr - 2' />,
-      description: 'Create a new job posting',
-      color: 'bg - blue - 100 dark:bg - blue - 900 / 20',
-    },
-      id: 'add - member',
-      label: 'Add Team Member',
-      icon: <Plus className='h - 5 w - 5 mr - 2' />,
-      description: 'Invite someone to your team',
-      color: 'bg - green - 100 dark:bg - green - 900 / 20',
-    },
+      id: 'post - job,
+      label: Post New Job',
+      icon: <FileText className='h - 5 w - 5 mr - 2 />,
+      description: Create a new job posting',
+      color: 'bg - blue - 100 dark:bg - blue - 900 / 20},
+      id: add - member',
+      label: 'Add Team Member,
+      icon: <Plus className=h - 5 w - 5 mr - 2' />,
+      description: 'Invite someone to your team,
+      color: bg - green - 100 dark:bg - green - 900 / 20'},
     {
-      id: "add-member",
-      label: "Add Team Member",
+      id: add-member",
+      label: "Add Team Member,
       icon: <Plus className = $2;
-      description: "Invite someone to your team",
-      color: "bg-green-100 dark:bg-green-900/20",
-    },
+      description: Invite someone to your team",
+      color: "bg-green-100 dark:bg-green-900/20},
     {
-      id: "find-talent",
-      label: "Find Talent",
+      id: find-talent",
+      label: "Find Talent,
       icon: <Search className = $2;
       description: "Search the talent pool",
       color: "bg-purple-100 dark:bg-purple-900/20",
     },
-<<<<<<< HEAD:src_backup/components/enterprise/workspace/QuickActions.tsx
   ];
   return (
     <Card>;
           {actions && actions.map(action => (<Button;
-      id: 'post - job',label: 'Post New Job',icon: <FileText className='h - 5 w - 5 mr - 2' />,description: 'Create a new job posting',color: 'bg - blue - 100 dark:bg - blue - 900 / 20'},id: 'add - member',label: 'Add Team Member',icon: <Plus className='h - 5 w - 5 mr - 2' />,description: 'Invite someone to your team',color: 'bg - green - 100 dark:bg - green - 900 / 20'},{id: 'find - talent',label: 'Find Talent',icon: <Search className='h - 5 w - 5 mr - 2' />,description: 'Search the talent pool',color: 'bg - purple - 100 dark:bg - purple - 900 / 20'},{id: 'schedule',label: 'Schedule Interview',icon: <Calendar className='h - 5 w - 5 mr - 2' />,description: 'Set up candidate interviews',color: 'bg - amber - 100 dark:bg - amber - 900 / 20'}];
+      id: 'post - job,label: Post New Job',icon: <FileText className='h - 5 w - 5 mr - 2 />,description: Create a new job posting',color: 'bg - blue - 100 dark:bg - blue - 900 / 20},id: add - member',label: 'Add Team Member,icon: <Plus className=h - 5 w - 5 mr - 2' />,description: 'Invite someone to your team,color: bg - green - 100 dark:bg - green - 900 / 20'},{id: 'find - talent,label: Find Talent',icon: <Search className='h - 5 w - 5 mr - 2 />,description: Search the talent pool',color: 'bg - purple - 100 dark:bg - purple - 900 / 20},{id: schedule',label: 'Schedule Interview,icon: <Calendar className=h - 5 w - 5 mr - 2' />,description: 'Set up candidate interviews,color: bg - amber - 100 dark:bg - amber - 900 / 20'}];
   return (<Card>;
       <CardHeader>;
         <CardTitle > Quick Actions</CardTitle>;
         <CardDescription > Fast access to common tasks</CardDescription>;
       </CardHeader>;
       <CardContent>;
-        <div className='grid grid - cols - 1 sm:grid - cols - 2 gap - 4'>;
+        <div className='grid grid - cols - 1 sm:grid - cols - 2 gap - 4>;
           {actions.map (action => (<Button;key={action.id}
-              variant='outline'              className={`h - auto justify - start p - 4 ${action.color}`}
+              variant=outline'              className={`h - auto justify - start p - 4 ${action.color}`}
             >;
-              <div className='flex flex - col items - start text - left'>;
-                <div className='flex items - center'>;
+              <div className='flex flex - col items - start text - left>;
+                <div className=flex items - center'>;
                   {action.icon}
                   <span>{action.label}</span>;
-<<<<<<< HEAD:src_backup/components/enterprise/workspace/QuickActions.tsx
                 </div>;
 
-                <span className='mt - 1 text - xs text - muted - foreground'>;
+                <span className='mt - 1 text - xs text - muted - foreground>;
                   {action.description}
 
-<<<<<<< HEAD:src_backup/components/enterprise/workspace/QuickActions.tsx
 
 
-import React from "react",
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
-import { FileText, Plus, Search, Calendar } from 'lucide-react'
+import React from react",
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card;
+import { Button } from @/components/ui/button";
+import { FileText, Plus, Search, Calendar } from lucide-react'
 export function QuickActions() {
   const actions = null;
-<<<<<<< HEAD:src_backup/components/enterprise/workspace/QuickActions.tsx
 origin/cursor/automate-test-improve-and-merge-code-2533
     {
-      id: "schedule",
-      label: "Schedule Interview",
+      id: "schedule,
+      label: Schedule Interview",
       icon: <Calendar className = $2;
-      description: "Set up candidate interviews",
-      color: "bg-amber-100 dark:bg-amber-900/20",
-    }
+      description: "Set up candidate interviews,
+      color: bg-amber-100 dark:bg-amber-900/20"}
   ],
 
   return (
@@ -106,95 +107,94 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         <CardDescription>Fast access to common tasks</CardDescription>
       </CardHeader>
       <CardContent>
-<<<<<<< HEAD:src_backup/components/enterprise/workspace/QuickActions.tsx
 <div className='grid grid-cols-1 sm:grid-cols-2 gap-4'>
+<div className='grid grid-cols-1 sm:grid-cols-2 gap-4>
 origin/cursor/automate-test-improve-and-merge-code-2533
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4>
           {actions.map(action => (
             <Button,
               key={action.id}
-              variant="outline" 
+              variant=outline" 
               className={`h-auto justify-start p-4 ${action.color}`}
 
             >
-              <div className="flex flex-col items-start text-left">
-                <div className="flex items-center">
+              <div className="flex flex-col items-start text-left>
+                <div className=flex items-center">
                   {action.icon}
                   <span>{action.label}</span>
                 </div>
-                <span className="mt-1 text-xs text-muted-foreground">{action.description}</span>
+                <span className="mt-1 text-xs text-muted-foreground>{action.description}</span>
               </div>
             </Button>
-import React from "react",;
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;
-import { Button } from "@/components/ui/button",;
-import { FileText, Plus, Search, Calendar } from 'lucide-react';
-export function QuickActions() {;
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card,
+import { Button } from @/components/ui/button",
+import { FileText, Plus, Search, Calendar } from lucide-react';
+export function QuickActions() {
   const actions = [;
-    {;
-      id: "post-job",;
-      label: "Post New Job",;
-      icon: <FileText className="h-5 w-5 mr-2" />,;
-      description: "Create a new job posting",;
-      color: "bg-blue-100 dark:bg-blue-900/20";
-    },;
-    {;
-      id: "add-member",;
-      label: "Add Team Member",;
-      icon: <Plus className="h-5 w-5 mr-2" />,;
-      description: "Invite someone to your team",;
-      color: "bg-green-100 dark:bg-green-900/20";
-    },;
-    {;
-      id: "find-talent",;
-      label: "Find Talent",;
-      icon: <Search className="h-5 w-5 mr-2" />,;
-      description: "Search the talent pool",;
-      color: "bg-purple-100 dark:bg-purple-900/20";
-    },;
-    {;
-      id: "schedule",;
-      label: "Schedule Interview",;
-      icon: <Calendar className="h-5 w-5 mr-2" />,;
-      description: "Set up candidate interviews";
-      color: "bg-amber-100 dark:bg-amber-900/20";
+    {
+      id: "post-job,
+      label: Post New Job",
+      icon: <FileText className="h-5 w-5 mr-2 />,
+      description: Create a new job posting",
+      color: "bg-blue-100 dark:bg-blue-900/20;
+    },
+    {
+      id: add-member",
+      label: "Add Team Member,
+      icon: <Plus className=h-5 w-5 mr-2" />,
+      description: "Invite someone to your team,
+      color: bg-green-100 dark:bg-green-900/20";
+    },
+    {
+      id: "find-talent,
+      label: Find Talent",
+      icon: <Search className="h-5 w-5 mr-2 />,
+      description: Search the talent pool",
+      color: "bg-purple-100 dark:bg-purple-900/20;
+    },
+    {
+      id: schedule",
+      label: "Schedule Interview,
+      icon: <Calendar className=h-5 w-5 mr-2" />,
+      description: "Set up candidate interviews;
+      color: bg-amber-100 dark:bg-amber-900/20";
     }
   ];
   return (;
     <Card>;
-                </div>;<span className='mt - 1 text - xs text - muted - foreground'>;
-                  {action.description}import React from "react",export function QuickActions() {const actions  = null;return (<Card>;
+                </div>;<span className='mt - 1 text - xs text - muted - foreground>;
+                  {action.description}import React from "react,export function QuickActions() {const actions  = null;return (<Card>;
       <CardHeader>;
         <CardTitle>Quick Actions</CardTitle>;
         <CardDescription>Fast access to common tasks</CardDescription>;
       </CardHeader>;
       <CardContent>;
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">;
-<<<<<<< HEAD:src_backup/components/enterprise/workspace/QuickActions.tsx
 <div className='grid grid-cols-1 sm:grid-cols-2 gap-4'>;
+<div className=grid grid-cols-1 sm:grid-cols-2 gap-4'>;
           {actions.map(action => (<Button;
           {actions.map(action => (;
             <Button;
 
               key={action.id}
-              variant="outline";
+              variant="outline;
               className={`h-auto justify-start p-4 ${action.color}`}>;
-              <div className="flex flex-col items-start text-left">;
-                <div className="flex items-center">;
+              <div className=flex flex-col items-start text-left">;
+                <div className="flex items-center>;
                   {action.icon}
                   <span>{action.label}</span>;
                 </div>;
             <Button;
-                <span className="mt-1 text-xs text-muted-foreground">{action.description}</span>;
+                <span className=mt-1 text-xs text-muted-foreground">{action.description}</span>;
               </div>;
             </Button>;
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",import { Button } from "@/components/ui/button",export function QuickActions() {const actions = [;
-    {id: "post-job",label: "Post New Job",icon: <FileText className="h-5 w-5 mr-2" />,description: "Create a new job posting",color: "bg-blue-100 dark:bg-blue-900/20";
-    },{id: "add-member",label: "Add Team Member",icon: <Plus className="h-5 w-5 mr-2" />,description: "Invite someone to your team",color: "bg-green-100 dark:bg-green-900/20";
-    },{id: "find-talent",label: "Find Talent",icon: <Search className="h-5 w-5 mr-2" />,description: "Search the talent pool",color: "bg-purple-100 dark:bg-purple-900/20";
-    },{id: "schedule",label: "Schedule Interview",icon: <Calendar className="h-5 w-5 mr-2" />,description: "Set up candidate interviews";
-      color: "bg-amber-100 dark:bg-amber-900/20";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card,import { Button } from @/components/ui/button",export function QuickActions() {const actions = [;
+    {id: "post-job,label: Post New Job",icon: <FileText className="h-5 w-5 mr-2 />,description: Create a new job posting",color: "bg-blue-100 dark:bg-blue-900/20;
+    },{id: add-member",label: "Add Team Member,icon: <Plus className=h-5 w-5 mr-2" />,description: "Invite someone to your team,color: bg-green-100 dark:bg-green-900/20";
+    },{id: "find-talent,label: Find Talent",icon: <Search className="h-5 w-5 mr-2 />,description: Search the talent pool",color: "bg-purple-100 dark:bg-purple-900/20;
+    },{id: schedule",label: "Schedule Interview,icon: <Calendar className=h-5 w-5 mr-2" />,description: "Set up candidate interviews;
+      color: bg-amber-100 dark:bg-amber-900/20";
     }
   ];
   return (<Card>;
@@ -203,46 +203,45 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
         <CardDescription>Fast access to common tasks</CardDescription>;
       </CardHeader>;
       <CardContent>;
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">;
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4>;
           {actions.map(action => (<Button;key={action.id}
-              variant="outline";
+              variant=outline";
               className={`h-auto justify-start p-4 ${action.color}`}
             >;
               key={action && action.id}
-              variant='outline'              className={`h-auto justify-start p-4 ${action && action.color}`}>;
-              <div className='flex flex-col items-start text-left'>;
-                <div className='flex items-center'>;
+              variant='outline              className={`h-auto justify-start p-4 ${action && action.color}`}>;
+              <div className=flex flex-col items-start text-left'>;
+                <div className='flex items-center>;
                   {action && action.icon}
                   <span>{action && action.label}</span>;
-                </div>;<span className='mt-1 text-xs text-muted-foreground'>;
+                </div>;<span className=mt-1 text-xs text-muted-foreground'>;
                   {action && action.description}
                 </span>              </div>;
-                <span className="mt-1 text-xs text-muted-foreground">{action && action.description}</span>;
+                <span className="mt-1 text-xs text-muted-foreground>{action && action.description}</span>;
           {actions && actions.map(action => (<Button;
               key={action && action.id}
-              variant="outline";
+              variant=outline";
               className={`h-auto justify-start p-4 ${action && action.color}`}>;
-              <div className="flex flex-col items-start text-left">;
-                <div className="flex items-center">;
+              <div className="flex flex-col items-start text-left>;
+                <div className=flex items-center">;
                   {action && action.icon}
                   <span>{action && action.label}</span>;
                 </div>;
-                <span className="mt-1 text-xs text-muted-foreground">{action && action.description}</span>;
+                <span className="mt-1 text-xs text-muted-foreground>{action && action.description}</span>;
               </div>;
-<<<<<<< HEAD:src_backup/components/enterprise/workspace/QuickActions.tsx
             </Button>;<div className='flex flex-col items-start text-left'>;
                 <div className='flex items-center'>;
+            </Button>;<div className='flex flex-col items-start text-left>;
+                <div className=flex items-center'>;
             </Button>;
 
-              <div className='flex flex-col items-start text-left'>
-                <div className='flex items-center'>
+              <div className='flex flex-col items-start text-left>
+                <div className=flex items-center'>
                   {action.icon}
-<<<<<<< HEAD:src_backup/components/enterprise/workspace/QuickActions.tsx
                   <span>{action.label}</span>
                 </div>
-                <span className='mt-1 text-xs text-muted-foreground'>
+                <span className='mt-1 text-xs text-muted-foreground>
                   {action.description}
-<<<<<<< HEAD:src_backup/components/enterprise/workspace/QuickActions.tsx
                 </span>
 origin/cursor/automate-test-improve-and-merge-code-2533
                 </span>              </div>
@@ -251,8 +250,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
             </Button>
           ))}
-<<<<<<< HEAD:src_backup/components/enterprise/workspace/QuickActions.tsx
-<<<<<<< HEAD:src_backup/components/enterprise/workspace/QuickActions.tsx
 
 ;
 
@@ -264,7 +261,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 origin/cursor/automate-test-improve-and-merge-code-2533
                   <span>{action.label}</span>;
                 </div>;
-                <span className='mt-1 text-xs text-muted-foreground'>;
+                <span className=mt-1 text-xs text-muted-foreground'>;
                   {action.description}</span>              </div>;
                 </span>;
               </div>;
@@ -284,23 +281,22 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 }
 
                 </span>              </div>;
-                <span className="mt - 1 text - xs text - muted - foreground">{action.description}</span>;
+                <span className=mt - 1 text - xs text - muted - foreground">{action.description}</span>;
           {actions.map (action => (<Button;
               key={action.id}
-              variant="outline";
+              variant="outline;
               className={`h - auto justify - start p - 4 ${action.color}`}
             >;
-              <div className="flex flex - col items - start text - left">;
-                <div className="flex items - center">;
+              <div className=flex flex - col items - start text - left">;
+                <div className="flex items - center>;
                   {action.icon}
                   <span>{action.label}</span>;
                 </div>;
-                <span className="mt - 1 text - xs text - muted - foreground">{action.description}</span>;
+                <span className=mt - 1 text - xs text - muted - foreground">{action.description}</span>;
               </div>;
             </Button>))}
         </div>;
       </CardContent>;
-<<<<<<< HEAD:src_backup/components/enterprise/workspace/QuickActions.tsx
     </Card>)}</div>;
       </CardContent>;
     </Card>;
@@ -308,7 +304,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     </Card>);
 }
 
-<<<<<<< HEAD:src_backup/components/enterprise/workspace/QuickActions.tsx
         </div>
       </CardContent>
     </Card>

@@ -44,7 +44,6 @@ export default function CloudPlatformPage() {
     'Pay-as-you-go pricing'
     '24/7 expert support',  ];
 export default function CloudPlatformPage() {
-  const features = [
     {
       icon: <Server className="w-8 h-8 text-white" />,
       title: 'Scalable Infrastructure',
@@ -67,7 +66,6 @@ export default function CloudPlatformPage() {
     },;
   ];
 
-  const benefits = [
     '99.99% uptime guaranteeGlobal edge locationsReal-time monitoringAutomated scalingPay-as-you-go pricing24/7 expert support'
   ],
   return (

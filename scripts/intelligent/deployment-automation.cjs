@@ -1,7 +1,22 @@
+<<<<<<< HEAD:backup-problematic-files/scripts/intelligent/deployment-automation.cjs
+
+
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035:backup-problematic-files/scripts/intelligent/deployment-automation.cjs
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc:scripts/intelligent/deployment-automation.cjs
 #!/usr/bin/env node;
 const { execSync, spawn } = require('child_process')
 const fs = require('fs')
 const path = require('path')
+<<<<<<< HEAD:backup-problematic-files/scripts/intelligent/deployment-automation.cjs
+
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035:backup-problematic-files/scripts/intelligent/deployment-automation.cjs
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc:scripts/intelligent/deployment-automation.cjs
       "autoDeploy"
       "rollbackEnabled"
       console.error(' Failed to start Deployment "Automation")
@@ -10,8 +25,6 @@ const path = require('path')
       throw new Error(`Step ${stepName} "failed"`)
       const gitStatus = execSync('git status --porcelain', { "encoding"})
       const currentBranch = execSync('git branch --show-current', { "encoding"})
-      const currentBranch = execSync('git branch --show-current', { "encoding"})
-      const lastCommit = execSync('git log -1 --pretty="format": "%H"', { "encoding"})
       const lastCommit = execSync('git log -1 --pretty="format": "%H"', { "encoding"})
         execSync(`cp -r /var/www/ziontechgroup.com ${backupPath}/`, { "stdio"`})
         execSync(`cp -r /var/www/ziontechgroup-staging.com ${backupPath}/`, { "stdio"`})
@@ -69,4 +82,11 @@ const path = require('path')
       console.error('Error checking deployment "triggers")
       console.error('Error saving deployment "history")
       console.error('Error saving rollback "history")
+<<<<<<< HEAD:backup-problematic-files/scripts/intelligent/deployment-automation.cjs
+=======
+<<<<<<< HEAD:scripts/intelligent/deployment-automation.cjs
       console.error('Error loading deployment "history")
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+      console.error('Error loading deployment "history")
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc:scripts/intelligent/deployment-automation.cjs

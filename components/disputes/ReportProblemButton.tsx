@@ -1,37 +1,48 @@
-import Link from 'next/link';'
-
-export default function ReportProblemButton() {const query = null;
-
-}
-
-export default function ReportProblemButton() {const query = new URLSearchParams({projectId;
-    ...(entityType ? { entityType } : {})...(entityId ? { entityId } : {})})return (})return (<Link href={`/disputes/new?${query && query.toString()}`}>;`  projectId,
-entityType
-  entityId
-}: {
-  }
-  projectId,
-  entityType,
-  entityId,
-}: {;
+import Link from 'next/link';
 <<<<<<< HEAD
 =======
 
-  }
+>>>>>>> origin/chore/fix-lint-and-merge
+export default function ReportProblemButton() {const query = null;
+}
+<<<<<<< HEAD
 
+export default function ReportProblemButton() {const query = new URLSearchParams({projectId;
+    ...(entityType ? { entityType } : {})...(entityId ? { entityId } : {})})return (})return (<Link href={`/disputes/new?${query && query.toString()}`}>;
 
-  "projectId": string;
-  entityType?: "milestone" | "contract" | "thread";"
-  entityId?: string;
-}) {
-  }
+import Link from 'next/link';
+export default function ReportProblemButton() {const query = null;
+export default function ReportProblemButton() {const query = new URLSearchParams({projectId;
+    ...(entityType ? { entityType } : {})...(entityId ? { entityId } : {})})return (})return (<Link href={`/disputes/new?${query && query.toString()}`}>;
+import Link from 'next/link';
+export default function ReportProblemButton({ projectId, entityType, entityId }: { projectId: string;, entityType?: 'milestone' | 'contract' | 'thread', entityId?: string }) {
+  const query = null;
+export default function ReportProblemButton({
+origin/cursor/automate-test-improve-and-merge-code-2533
+  projectId
+  entityType
+  entityId
+}: {
+  projectId;
+  entityType;
+  entityId;
+}: {}
+=======
+export default function ReportProblemButton() {const query = new URLSearchParams({projectId;}
+    ...(entityType ? { entityType } : {})...(entityId ? { entityId } : {})})return (})return (<Link href={`/disputes/new?${query && query.toString()}`}    />;
+  projectId;
+entityType,
+entityId;
+}: {
+>>>>>>> origin/chore/fix-lint-and-merge
+  projectId,
+  entityType}
+  entityId}
+}: {;
+<<<<<<< HEAD
   const query = new URLSearchParams({
     }
     projectId
-=======
-  const query = new URLSearchParams({}
-    projectId}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
     ...(entityType ? { entityType } : {})
     ...(entityId ? { entityId } : {})
 
@@ -40,20 +51,16 @@ entityType
   return (
 
     <Link href={`/disputes/new?${query && query.toString()}`}>;
-      <a className="inline-flex items-center gap-2 px-3 py-2 rounded-md bg-red-600 text-white hover:bg-red-700 text-sm">;
-        {" "}
+      <a className="inline-flex items-center gap-2 px-3 py-2 rounded-md bg-red-600 text-white hover:bg-red-700 text-sm>;
+        { "}
         Report a Problem;
       </a>;
     </Link>;
   );
 }
-<<<<<<< HEAD
 
-=======
-
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   projectId: string;
-  entityType?: "milestone" | "contract" | "thread";
+  entityType?: "milestone | contract" | "thread;
   entityId?: string;
 }) {}
   const query = new URLSearchParams({}
@@ -61,127 +68,263 @@ entityType
     ...(entityType ? { entityType } : {})
     ...(entityId ? { entityId } : {})
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 =======
-  });
 
 
-=======
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
+  projectId: string;
+  entityType?: \"milestone\" | \"contract\" | \'thread\';}
+  entityId?: string;}
+}) {
+  const query = new URLSearchParams({}
+    projectId}
+    ...(entityType ? { entityType } : {})
+    ...(entityId ? { entityId } : {})
+
+>>>>>>> origin/chore/fix-lint-and-merge
 export default function ReportProblemButton(): any ({;
-  }
   projectId,;
-  entityType,;
-  entityId,;
+  entityType,;}
+  entityId,;}
 }: {;
-  }
-  "projectId": string;
-  entityType?: "milestone" | "contract" | "thread";"
-  entityId?: string;
+  projectId: string;"
+  entityType?: \"milestone\" | \"contract\" | \'thread\';}
+  entityId?: string;}
 }) {;
 
-}
-
-const query = new URLSearchParams({;
-    }
-    projectId,;
+const query = new URLSearchParams({;}
+    projectId,;}
     ...(entityType ? { entityType } : {}),;
     ...(entityId ? { entityId } : {}),;
 
   });
 
-return (;
-    <Link href={`/disputes/new?${query && query.toString()}`}>;`      <a className="inline-flex items-center gap-2 px-3 py-2 rounded-md bg-red-600 text-white "hover":bg-red-700 text-sm">;"
-        {" "}"
+<<<<<<< HEAD
+  });
+
+
+    <Link href={`/disputes/new?${query && query.toString()}`}>;
+      <a className="inline-flex items-center gap-2 px-3 py-2 rounded-md bg-red-600 text-white hover:bg-red-700 text-sm">;
+        {" "}
+    <Link href={`/disputes/new?${query && query.toString()}`}>;
+      <a className="inline-flex items-center gap-2 px-3 py-2 rounded-md bg-red-600 text-white hover:bg-red-700 text-sm">;
+        {" "}
         Report a Problem;
       </a>;
     </Link>;
   );
 }
 
-export default function ReportProblemButton(): any ({projectId,entityType,entityId}: {"projectId": string;
-  }
-  entityType?: "milestone" | "contract" | "thread";"
+export default function ReportProblemButton(): any ({;
+  projectId,;
+  entityType,;
+  entityId,;
+}: {;
+  projectId: string;
+  entityType?: "milestone" | "contract" | "thread";
   entityId?: string;
+}) {;
+  const query = new URLSearchParams({;
+    projectId,;
+    ...(entityType ? { entityType } : {}),;
+    ...(entityId ? { entityId } : {}),;
+
+pr-12243
+
+
+  });
+
+
+  return (
+pr-12243
+    <Link href={`/disputes/new?${query && query.toString()}`}>;
+      <a className="inline-flex items-center gap-2 px-3 py-2 rounded-md bg-red-600 text-white hover:bg-red-700 text-sm">;
+  });
+
+
+  return (
+pr-12243
+    <Link href={`/disputes/new?${query && query.toString()}`}>;
+      <a className=inline-flex items-center gap-2 px-3 py-2 rounded-md bg-red-600 text-white hover:bg-red-700 text-sm">;
+  });
+
+  return (
+
+
+    <Link href={`/disputes/new?${query && query.toString()}`}>;"
+      <a className="inline-flex items-center gap-2 px-3 py-2 rounded-md bg-red-600 text-white hover:bg-red-700 text-sm">;"
+        {" "}
+        {" }
+        Report a Problem;
+      </a>;
+    </Link>;
+  );
+}
+
+pr-12243
+export default function ReportProblemButton(): any ({;
+  projectId,;
+  entityType,;
+  entityId,;
+}: {;
+  projectId: string;"
+  entityType?: "milestone" | "contract" | "thread";
+  entityId?: string;
+}) {;
+  const query = new URLSearchParams({;
+    projectId,;
+    ...(entityType ? { entityType } : {}),;
+    ...(entityId ? { entityId } : {}),;
+
+pr-12243
+  });
+  return (`
+    <Link href={`/disputes/new?${query && query.toString()}`}>;"
+      <a className="inline-flex items-center gap-2 px-3 py-2 rounded-md bg-red-600 text-white hover: bg-red-700 text-sm"></a>;
+  });
+
+  return (
+    <Link href={`/disputes/new?${query && query.toString()}`} />;"
+      <a className=\"inline-flex items-center gap-2 px-3 py-2 rounded-md bg-red-600 text-white hover:bg-red-700 text-sm\" />;"
+        {\" \"}
+        Report a Problem;
+      </a>;
+    </Link>;
+  )}export default function ReportProblemButton(): any ({projectId,entityType,entityId}: {projectId: string;
+  entityType?: "milestone" | "contract" | "thread";
+  entityId?: string;
+}) {const query = new URLSearchParams({projectId,...(entityType ? { entityType } : {}),...(entityId ? { entityId } : {})})return (<Link href={`/disputes/new?${query && query.toString()}`}>;
+      <a className="inline-flex items-center gap-2 px-3 py-2 rounded-md bg-red-600 text-white hover:bg-red-700 text-sm">;
+        {" "}
+        Report a Problem;
+      </a>;
+    </Link>;
+  )}export default function ReportProblemButton(): any ({projectId,entityType,entityId}: {projectId: string;
+  entityType?: "milestone" | "contract" | "thread";
+  entityId?: string;
+}) {const query = new URLSearchParams({projectId,...(entityType ? { entityType } : {}),...(entityId ? { entityId } : {})})return (<Link href={`/disputes/new?${query && query.toString()}`}>;
+      <a className="inline-flex items-center gap-2 px-3 py-2 rounded-md bg-red-600 text-white hover: bg-red-700 text-sm"></a>;
+    </Link>;export default function ReportProblemButton() {const query  = new URLSearchParams({ projectId, ...(entityType ? { entityType } : {}), ...(entityId ? { entityId } : {}) }))}
+export default function ReportProblemButton() {const query = new URLSearchParams({ projectId, ...(entityType ? { entityType } : {}), ...(entityId ? { entityId } : {}) })})return (<Link href={`/disputes/new?${query.toString()}`}>;
+      <a className="inline-flex items-center gap-2 px-3 py-2 rounded-md bg-red-600 text-white hover: bg-red-700 text-sm">;
+        Report a Problem;
+      </a>;
+    </Link>;
+import Link from './next / link';export default /**;
+ * ReportProblemButton - Function description;
+ */;
+function ReportProblemButton() {const query = new URLSearchParams ({project_id,...(entity_type ? { entity_type } : {}),...(entity_id ? { entity_id } : {})...(entity_id ? { entity_id } : {})})return (<Link href={`/disputes/new?${query.toString()}`}>;
+      <a className="inline-flex items-center gap-2 px-3 py-2 rounded-md bg-red-600 text-white hover: bg-red-700 text-sm"></a>;
+    </Link>;
+  )}
+export default function ReportProblemButton(): any ({projectId,entityType,entityId}: {projectId: string;"
+  entityType?: \"milestone\" | \"contract\" | \"thread\";}
+  entityId?: string;}
 }) {const query = new URLSearchParams({projectId,...(entityType ? { entityType } : {}),...(entityId ? { entityId } : {})};
   return (<Link href={`/disputes/new?${query && query.toString()}`}>;`      <a className="inline-flex items-center gap-2 px-3 py-2 rounded-md bg-red-600 text-white "hover":bg-red-700 text-sm">;"
         {" "}"
+=======
+  return (
+    <Link href={`/disputes/new?${query && query.toString()}`}    />;"
+      <a className=\"inline-flex items-center gap-2 px-3 py-2 rounded-md bg-red-600 text-white hover:bg-red-700 text-sm\"    />;"
+        {\" \"}
+>>>>>>> origin/chore/fix-lint-and-merge
         Report a Problem;
       </a>;
     </Link>;
   )}
 
-export default function ReportProblemButton(): any ({projectId,entityType,entityId}: {"projectId": string;
-  }
-  entityType?: "milestone" | "contract" | "thread";"
-  entityId?: string;
+<<<<<<< HEAD
+=======
+export default function ReportProblemButton(): any ({projectId,entityType,entityId}: {projectId: string;"
+  entityType?: \"milestone\" | \"contract\" | \'thread\';}
+  entityId?: string;}
 }) {const query = new URLSearchParams({projectId,...(entityType ? { entityType } : {}),...(entityId ? { entityId } : {})};
-  return (<Link href={`/disputes/new?${query && query.toString()}`}>;`      <a className="inline-flex items-center gap-2 px-3 py-2 rounded-md bg-red-600 text-white "hover": bg-red-700 text-sm"></a>;"
+  return (<Link href={`/disputes/new?${query && query.toString()}`}    />;"
+      <a className=\"inline-flex items-center gap-2 px-3 py-2 rounded-md bg-red-600 text-white hover:bg-red-700 text-sm\"    />;"
+        {\" \"}
+        Report a Problem;
+      </a>;
+    </Link>;
+  )}
+
+export default function ReportProblemButton(): any ({projectId,entityType,entityId}: {projectId: string;"
+  entityType?: \"milestone\" | \"contract\" | \'thread\';}
+  entityId?: string;}
+}) {const query = new URLSearchParams({projectId,...(entityType ? { entityType } : {}),...(entityId ? { entityId } : {})};
+  return (<Link href={`/disputes/new?${query && query.toString()}`}    />;"
+      <a className=\"inline-flex items-center gap-2 px-3 py-2 rounded-md bg-red-600 text-white hover: bg-red-700 text-sm\"    /></a>;
+>>>>>>> origin/chore/fix-lint-and-merge
     </Link>;
 
 export default function ReportProblemButton() {const query = new URLSearchParams({ projectId, ...(entityType ? { entityType } : {}), ...(entityId ? { entityId } : {}) });
 }
 
 export default function ReportProblemButton() ;
+<<<<<<< HEAD
+
+=======
   const query = new URLSearchParams({ projectId, ...(entityType ? { entityType } : {}), ...(entityId ? { entityId } : {}) })};
-  return (<Link href={`/disputes/new?${query.toString()}`}>;`      <a className="inline-flex items-center gap-2 px-3 py-2 rounded-md bg-red-600 text-white "hover": bg-red-700 text-sm">;"
+  return (<Link href={`/disputes/new?${query.toString()}`}    />;"
+      <a className=\"inline-flex items-center gap-2 px-3 py-2 rounded-md bg-red-600 text-white hover: bg-red-700 text-sm\"    />;
         Report a Problem;
       </a>;
     </Link>;
-import Link from './next / link';'
+import Link from './next / link';
 
 export default /**;
  * ReportProblemButton - Function description;
  */;
 function ReportProblemButton() {const query = new URLSearchParams ({project_id,...(entity_type ? { entity_type } : {}),...(entity_id ? { entity_id } : {})...(entity_id ? { entity_id } : {})};
-  return (<Link href={`/disputes/new?${query.toString()}`}>;`      <a className="inline-flex items-center gap-2 px-3 py-2 rounded-md bg-red-600 text-white "hover": bg-red-700 text-sm"></a>;"
+  return (<Link href={`/disputes/new?${query.toString()}`}    />;"
+      <a className=\"inline-flex items-center gap-2 px-3 py-2 rounded-md bg-red-600 text-white hover: bg-red-700 text-sm\"    /></a>;
+>>>>>>> origin/chore/fix-lint-and-merge
     </Link>;
   )}
+
 export default /**;
  * ReportProblemButton - Function description;
  */;
+<<<<<<< HEAD
+
+=======
 function ReportProblemButton() {const query = new URLSearchParams ({project_id,...(entity_type ? { entity_type } : {}),...(entity_id ? { entity_id } : {})...(entity_id ? { entity_id } : {})...(entity_id ? { entity_id } : {})};
-  return (<Link href={`/disputes / new?${query.to_string ()}`}>;`      <a className="inline - flex items - center gap - 2 px - 3 py - 2 rounded - md bg - red - 600 text - white "hover": bg - red - 700 text - sm"></a>;"
+  return (<Link href={`/disputes / new?${query.to_string ()}`}    />;"
+      <a className=\"inline - flex items - center gap - 2 px - 3 py - 2 rounded - md bg - red - 600 text - white hover: bg - red - 700 text - sm\"    /></a>;
     </Link>)}ursor/fix-website-loading-errors-and-merge-6662;
   )}
-  )return (<Link href={`/disputes/new?${query.toString()}`}>;`      <a className='inline-flex items-center gap-2 px-3 py-2 rounded-md bg-red-600 text-white "hover":bg-red-700 text-sm'>;'
+  )return (<Link href={`/disputes/new?${query.toString()}`}    />;
+      <a className='inline-flex items-center gap-2 px-3 py-2 rounded-md bg-red-600 text-white hover:bg-red-700 text-sm'    />;
+>>>>>>> origin/chore/fix-lint-and-merge
         Report a Problem;
       </a>;
     </Link>;
   )}
   );
 }
+<<<<<<< HEAD
+
+=======
+
 export default function ReportProblemButton(): any ({;
-  }
   projectId,;
-  entityType,;
-  entityId,;
+  entityType,;}
+  entityId,;}
 }: {;
-  }
-  "projectId": string;
-  entityType?: "milestone" | "contract" | "thread";"
-  entityId?: string;
+  projectId: string;"
+  entityType?: \"milestone\" | \"contract\" | \'thread\';}
+  entityId?: string;}
 }) {;
 
-}
-
-const query = new URLSearchParams({;
-    }
-    projectId,;
+const query = new URLSearchParams({;}
+    projectId,;}
     ...(entityType ? { entityType } : {}),;
     ...(entityId ? { entityId } : {}),;
 
-
-
-
-
-
-
-
   });
-return (;
-    <Link href={`/disputes/new?${query && query.toString()}`}>;`      <a className="inline-flex items-center gap-2 px-3 py-2 rounded-md bg-red-600 text-white "hover": bg-red-700 text-sm"></a>;"
+  return (
+    <Link href={`/disputes/new?${query && query.toString()}`}    />;"
+      <a className=\"inline-flex items-center gap-2 px-3 py-2 rounded-md bg-red-600 text-white hover: bg-red-700 text-sm\"    /></a>;
+>>>>>>> origin/chore/fix-lint-and-merge
     </Link>;
 
   );
@@ -195,70 +338,73 @@ export default function ReportProblemButton({ projectId, entityType, entityId }:
   );
 }
 =======
-pr-12243
-export default function ReportProblemButton({ projectId, entityType, entityId }: { projectId: string;, entityType?: 'milestone' | 'contract' | 'thread', entityId?: string }) {
-  const query = new URLSearchParams({ projectId, ...(entityType ? { entityType } : {}), ...(entityId ? { entityId } : {}) });
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+>>>>>>> origin/chore/fix-lint-and-merge
+  });
+
+
+
+  return (
+<<<<<<< HEAD
+    <Link href={`/disputes/new?${query.toString()}`}>
+  return (`
+    <Link href={`/disputes/new?${query.toString()}`}>"
+      <a className="inline-flex items-center gap-2 px-3 py-2 rounded-md bg-red-600 text-white hover: bg-red-700 text-sm">
+      <a className=inline-flex items-center gap-2 px-3 py-2 rounded-md bg-red-600 text-white hover: bg-red-700 text-sm>
+  });
+
+
+
   });
 
   return (
     <Link href={`/disputes/new?${query.toString()}`}>
-=======
-  return (`
-    <Link href={`/disputes/new?${query.toString()}`}>"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       <a className="inline-flex items-center gap-2 px-3 py-2 rounded-md bg-red-600 text-white hover: bg-red-700 text-sm">
-=======
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
-  });
-
-
-
-return (;
-    <Link href={`/disputes/new?${query.toString()}`}>`      <a className="inline-flex items-center gap-2 px-3 py-2 rounded-md bg-red-600 text-white "hover": bg-red-700 text-sm">"
         Report a Problem
-=======
-    <Link href={`/disputes/new?${query.toString()}`} />"
-      <a className=\"inline-flex items-center gap-2 px-3 py-2 rounded-md bg-red-600 text-white hover: bg-red-700 text-sm\" />
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+  return (
+
         Report a Problem;
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
       </a>
     </Link>
-<<<<<<< HEAD
   )
 }
-=======
+pr-12243
 
-import Link from './next / link';'
+
+import Link from './next / link';
+pr-12243
+import Link from ./next / link';
+pr-12243
+=======
+    <Link href={`/disputes/new?${query.toString()}`}    />"
+      <a className=\"inline-flex items-center gap-2 px-3 py-2 rounded-md bg-red-600 text-white hover: bg-red-700 text-sm\"    />
+        Report a Problem;
+      </a>
+    </Link>
+
+import Link from './next / link';
+>>>>>>> origin/chore/fix-lint-and-merge
 ;
+
 export default /**
  * ReportProblemButton - Function description;
  */
-function ReportProblemButton() {}
+<<<<<<< HEAD
   const query = new URLSearchParams ({}
     project_id,
-=======
 
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
 export default /**
  * ReportProblemButton - Function description
  */
 function ReportProblemButton() {
-  }
   const query = new URLSearchParams ({
     }
     project_id,
-=======
-  const query = new URLSearchParams ({}
-    project_id}
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
     ...(entity_type ? { entity_type } : {}),
     ...(entity_id ? { entity_id } : {}),
   });
-return (;
-    <Link href={`/disputes/new?${query.toString()}`}>`      <a className="inline-flex items-center gap-2 px-3 py-2 rounded-md bg-red-600 text-white "hover": bg-red-700 text-sm"></a>"
+  return (`
+    <Link href={`/disputes/new?${query.toString()}`}>"
+      <a className="inline-flex items-center gap-2 px-3 py-2 rounded-md bg-red-600 text-white hover: bg-red-700 text-sm"></a>
     </Link>
   );
 }
@@ -266,28 +412,56 @@ export default /**
  * ReportProblemButton - Function description;
  */
 function ReportProblemButton() {
-  }
-  const query = new URLSearchParams ({
-    }
-    project_id,
+=======
+function ReportProblemButton() {
+>>>>>>> origin/chore/fix-lint-and-merge
+  const query = new URLSearchParams ({}
+    project_id}
     ...(entity_type ? { entity_type } : {}),
     ...(entity_id ? { entity_id } : {})
   });
-return (;
-    <Link href={`/disputes / new?${query.to_string ()}`}>;`
-      <a className="inline - flex items - center gap - 2 px - 3 py - 2 rounded - md bg - red - 600 text - white "hover": bg - red - 700 text - sm"></a>;"
+<<<<<<< HEAD
+  return (`
+    <Link href={`/disputes / new?${query.to_string ()}`}>;"
+      <a className="inline - flex items - center gap - 2 px - 3 py - 2 rounded - md bg - red - 600 text - white hover: bg - red - 700 text - sm"></a>;
     </Link>);
-<<<<<<< HEAD
-<<<<<<< HEAD
+    ...(entity_type ? { entity_type } : {}),
+    ...(entity_id ? { entity_id } : {})});
+
+    ...(entity_type ? { entity_type } : {}),
+    ...(entity_id ? { entity_id } : {})
+  });
+
+    </Link>);
 =======
   return (
-    <Link href={`/disputes / new?${query.to_string ()}`} />;"
-      <a className=\"inline - flex items - center gap - 2 px - 3 py - 2 rounded - md bg - red - 600 text - white hover: bg - red - 700 text - sm\" /></a>;
+    <Link href={`/disputes/new?${query.toString()}`}    />"
+      <a className=\"inline-flex items-center gap-2 px-3 py-2 rounded-md bg-red-600 text-white hover: bg-red-700 text-sm\"    /></a>
+    </Link>
+  );
+}
+
+export default /**
+ * ReportProblemButton - Function description;
+ */
+function ReportProblemButton() {
+  const query = new URLSearchParams ({}
+    project_id}
+    ...(entity_type ? { entity_type } : {}),
+    ...(entity_id ? { entity_id } : {})
+  });
+  return (
+    <Link href={`/disputes / new?${query.to_string ()}`}    />;"
+      <a className=\"inline - flex items - center gap - 2 px - 3 py - 2 rounded - md bg - red - 600 text - white hover: bg - red - 700 text - sm\"    /></a>;
     </Link>);
 }
 
+
+
   );
 }
   );
 
+
 "
+>>>>>>> origin/chore/fix-lint-and-merge

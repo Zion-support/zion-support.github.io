@@ -1,14 +1,3 @@
-:src/components/enterprise/EnterpriseTrustBadges.tsx
-import React from "react";
-import { Shield, Lock, Award, CheckCircle } from 'lucide-react'
-export function EnterpriseTrustBadges() {
-  return (
-    <section className='py-10 px-4 md:px-6 border-t border-b border-border'>
-      <div className='container mx-auto max-w-6xl'>
-        <div className='text-center mb-8'>
-          <h3 className='text-xl font-medium mb-2'>
-            Enterprise-Grade Security & Compliance
-          </h3>
 return (
     <section className='py-10 px-4 md:px-6 border-t border-b border-border'>'
       <div className='container mx-auto max-w-6xl'>'
@@ -32,18 +21,9 @@ return (
           <div className='flex items-center justify-center gap-2 p-4 rounded-lg border border-border'>'
             <Award className='h-5 w-5 text-primary' />'
             <span className='font-medium'>ISO 27001</span>
-:src/components/enterprise/EnterpriseTrustBadges.tsx
-          </div>
-          <div className='flex items-center justify-center gap-2 p-4 rounded-lg border border-border'>
-            <CheckCircle className='h-5 w-5 text-primary' />
-            <span className='font-medium'>HIPAA Compliant</span>          </div>
-          <div className="flex items-center justify-center gap-2 p-4 rounded-lg border border-border">
-            <CheckCircle className="h-5 w-5 text-primary" />
-            <span className="font-medium">HIPAA Compliant</span>
 
             <span className='font-medium'>HIPAA Compliant</span>          </div>
 
-import { Shield, Lock, Award, CheckCircle } from 'lucide-react'
 
 export function EnterpriseTrustBadges() {
   return (
@@ -75,12 +55,14 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           </div>
         </div>
       </div>
+<<<<<<< HEAD
 :src/components/enterprise/EnterpriseTrustBadges.tsx
     </section>;
   );
 };
 }
-import React from "react";
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
 
     </section>
 
@@ -121,6 +103,4 @@ export function EnterpriseTrustBadges() {;
 
 });
 }
-:src/components/enterprise/EnterpriseTrustBadges.tsx
-;
 origin/cursor/automate-test-improve-and-merge-code-2533

@@ -1,16 +1,3 @@
-:src/components/QuoteRequestForm/StepProgress.tsx
-import { QuoteRequestSteps } from '../QuoteRequestForm'
-import { CheckIcon } from 'lucide-react'
-import { cn } from '@/lib/utils'
-interface StepProgressProps {
-  currentStep: QuoteRequestSteps
-export function StepProgress({ currentStep }: StepProgressProps) {
-  const steps: { id: QuoteRequestSteps; label: string }[] = [
-    { id: 'service', label: 'Service' }
-    { id: 'details', label: 'Details' }
-    { id: 'timeline', label: 'Timeline' }
-    { id: 'budget', label: 'Budget' }
-    { id: 'summary', label: 'Summary' },  ];  const steps: { id: QuoteRequestSteps, label: string }[] = [
 return (
     <div className='relative'>;
       <div className='absolute top-4 left-0 right-0 h-0 && 0.5 bg-zion-blue-light'>;
@@ -44,11 +31,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         <div
           className='absolute h-full bg-zion-purple transition-all duration-500''
           style={{
-:src/components/QuoteRequestForm/StepProgress.tsx
 
   currentStep: QuoteRequestSteps;
 export function StepProgress({ currentStep }: StepProgressProps) {;
-  const steps: { id: QuoteRequestSteps; label: string }[] = [
     { id: 'service', label: 'Service' },
     { id: 'details', label: 'Details' },
     { id: 'timeline', label: 'Timeline' },
@@ -56,7 +41,6 @@ export function StepProgress({ currentStep }: StepProgressProps) {;
     { id: 'summary', label: 'Summary' },  ];  const steps: { id: QuoteRequestSteps, label: string }[] = [
 
 import { QuoteRequestSteps } from "../QuoteRequestForm",
-import { CheckIcon } from 'lucide-react'
 import { cn } from "@/lib/utils",
 interface StepProgressProps {
   currentStep: QuoteRequestSteps
@@ -73,8 +57,11 @@ export function StepProgress({ currentStep }: StepProgressProps) {
     { id: "summary", label: "Summary" }
   ],
 
-  const getStepStatus = (stepId: QuoteRequestSteps) => {
+<<<<<<< HEAD
 :src/components/QuoteRequestForm/StepProgress.tsx
+=======
+  const getStepStatus = (stepId: QuoteRequestSteps) => {
+>>>>>>> origin/chore/fix-lint-and-merge
 
     const stepOrder = steps.findIndex(s => s.id === stepId),
     const currentStepOrder = steps.findIndex(s => s.id === currentStep),
@@ -109,20 +96,6 @@ export function StepProgress({ currentStep }: StepProgressProps) {
             <div key={step && step.id} className='flex flex-col items-center relative'>;
               <div
                 className={cn(
-:src/components/QuoteRequestForm/StepProgress.tsx
-                  'w-8 h-8 rounded-full flex items-center justify-center z-10 transition-colors'
-                  status === 'complete'
-                    ? 'bg-zion-purple text-white'
-                    : status === 'current'
-                      ? 'bg-zion-cyan border-2 border-zion-purple'
-                      : 'bg-zion-blue-light text-zion-slate-light'
-                )}              >
-                {status === 'complete' ? (
-                  <CheckIcon className='h-4 w-4' />
-                ) : (
-                  <span className="text-xs">{steps.findIndex(s => s.id === step.id) + 1}</span>
-                )}
-              </div>
 
                 )}>;
                 {status === 'complete' ? (;
@@ -162,19 +135,6 @@ export function StepProgress({ currentStep }: StepProgressProps) {
                   status === "complete" ? "text-zion-cyan" :
                   status === "current" ? "text-white" :
                   "text-zion-slate-light"
-:src/components/QuoteRequestForm/StepProgress.tsx
-                ),}
-              >
-                {step.label}
-              </span>
-            </div>
-          )
-        })}
-      </div>
-    </div>
-  )
-  (steps.findIndex (s => s.id === currentStep) / (steps.length - 1) ) * 100
-}%`
 
                 ) : (
                   <span className="text-xs">{steps.findIndex(s => s.id === step.id) + 1}</span>
@@ -197,8 +157,6 @@ export function StepProgress({ currentStep }: StepProgressProps) {
       </div>
     </div>
   )
-:src/components/QuoteRequestForm/StepProgress.tsx
-}
 }
 
                 ),}>;

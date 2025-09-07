@@ -79,10 +79,6 @@ const PricingPage: React.FC = () => {
 }
 export default PricingPage;
 
-import React from 'react';
-import Head from 'next/head';
-import React from 'react';
-import Head from 'next/head';
 import {
   Check
   Star
@@ -191,7 +187,6 @@ import {
     ChevronRight as ChevronRightIcon
 } from 'lucide-react';
 import Button from '../components/ui/Button';
-import {
   Check,
   Star,
   Zap,
@@ -301,7 +296,6 @@ import {
 import Card from '../components/ui/Card';
 import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground';
 import UltraFuturisticCard from '../components/ui/UltraFuturisticCard';
-import {
   enhancedRealMicroSaasServices
   getServicesByCategory
     getPopularServices
@@ -320,7 +314,6 @@ export default function PricingPage() {
     website: 'https://ziontechgroup.com'
   }
 
-  const contactInfo = {
     mobile: "+1 302 464 0950",
     email: "kleber@ziontechgroup.com",
     address: "364 E Main St STE 1008 Middletown DE 19709",
@@ -410,7 +403,6 @@ export default function PricingPage() {
       popular: false
       cta: 'Start Free Trial'
   // Enhanced pricing tiers with more realistic and comprehensive offerings
-  const pricingTiers = [
     {
       name: "Starter",
       description: "Perfect for small businesses and startups",

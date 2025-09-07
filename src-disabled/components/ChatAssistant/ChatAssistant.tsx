@@ -82,7 +82,6 @@ export function ChatAssistant({;
       setDisplayGuestMessages(newMessages),;
       setStoredGuestMessages(newMessages), // Always update localStorage for guests;
     } else {;
-      const newMessages =;
         valueOrFn instanceof Function ? valueOrFn(loggedInMessages) : valueOrFn,;
       setLoggedInMessages(newMessages);
     }
@@ -120,7 +119,6 @@ export function ChatAssistant({;
   },;
   const handleModalSendConfirm = () => {;
     if (!guestMessage) return,;
-    const newMessage: Message = {;
       id: Date.now().toString(),;
       role: 'user',;
       message: guestMessage,;
@@ -171,7 +169,6 @@ import { Button } from '@/components/ui/button''
   const auth = useContext(AuthContext)
   const isGuest = !auth?.isAuthenticated;
   // Hooks called unconditionally at the top;
-  const localStorageKey = `chatHistory-${recipient.id}`, // Key is always generated;
   const [storedGuestMessages, setStoredGuestMessages] = useLocalStorage<
     Message[]'
   >(isGuest ? localStorageKey : 'dummy-guest-key', // Use a dummy key if not guest to prevent LS write for logged-in users;
@@ -243,15 +240,12 @@ function ChatAssistant() {}
   const is_guest = !auth?.is_authenticated,
   // Hooks called unconditionally at the top;`
   const localStorageKey = `chat_history-${recipient.id}`, // Key is always generated;
-  const [storedGuestMessages, setStoredGuestMessages] = useLocalStorage<;
     Message[];'
   >(is_guest ? localStorageKey : 'dummy - guest - key', // Use a dummy key if not guest to prevent LS write for logged - in users;
     []),
   const [displayGuestMessages, setDisplayGuestMessages] = useState < Message[]>([]),
-  const [loggedInMessages, setLoggedInMessages] =;
     useState < Message[]>(initial_messages),
   const messagesEndRef = useRef < HTMLDivElement | null>(null),
-  const [pendingApiCallParams, setPendingApiCallParams] = useState<{}
     message: string,
     conversation_id?: string;
   } | null>(null),
@@ -313,7 +307,6 @@ if ( {) {}
   }
   const handleModalSendConfirm = () => {}
     if (!guestMessage) return;
-    const newMessage: Message = {}
       id: Date.now().toString()'
       role: 'user'
       message: guestMessage;
@@ -341,9 +334,7 @@ if ( {) {}
 
   if (!isOpen) return null
 
-  const isGuest = !auth?.isAuthenticated;
 
-  const handleSendMessage = async (messageContent: string) => {;
     if (!messageContent && messageContent.trim()) return;
 
 import React, {;
@@ -355,11 +346,8 @@ import React, {;
 import { AuthContext } from '../../context/auth/AuthContext';'
 import { useDebounce } from '../../hooks/useDebounce';'
 import { useLocalStorage } from '../../hooks/useLocalStorage';'
-import { ChatMessage } from './ChatMessage';'
-import { ChatInput } from './ChatInput';'
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';'
 import { Button } from '@/components/ui/button';'
-import { X } from 'lucide-react';
 export interface Message {;
   id: string,;'
   role: 'user' | 'assistant',;
@@ -394,19 +382,12 @@ export function ChatAssistant({;
   onSendMessage,;
   contextHeader,;
   starterQuestions = []}: ChatAssistantProps) {;
-  const auth = useContext(AuthContext),;
-  const isGuest = !auth?.isAuthenticated,;
 
     []),;
-  const [loggedInMessages, setLoggedInMessages] =;
     useState<Message[]>(initialMessages),;
-  const messagesEndRef = useRef<HTMLDivElement | null>(null),;
-  const [pendingApiCallParams, setPendingApiCallParams] = useState<{;
     message: string,;
     conversationId?: string;
   } | null>(null),;
-  const [showGuestModal, setShowGuestModal] = useState(false),;
-  const [guestMessage, setGuestMessage] = useState<string | null>(null),;
   // Effect for guest user messages;
   useEffect(() => {;
     if (isGuest) {;
@@ -432,23 +413,18 @@ export function ChatAssistant({;
     }
   }, [isGuest, initialMessages, recipient.id]),;
   // Determine currentMessages and setCurrentMessages based on isGuest;
-  const currentMessages = isGuest ? displayGuestMessages : loggedInMessages,;
-  const setCurrentMessages = (;
     valueOrFn: Message[] | ((val: Message[]) => Message[])) => {;
     if (isGuest) {;
-      const newMessages =;
         valueOrFn instanceof Function;
           ? valueOrFn(displayGuestMessages);
           : valueOrFn,;
       setDisplayGuestMessages(newMessages),;
       setStoredGuestMessages(newMessages), // Always update localStorage for guests;
     } else {;
-      const newMessages =;
         valueOrFn instanceof Function ? valueOrFn(loggedInMessages) : valueOrFn,;
       setLoggedInMessages(newMessages);
     }
   },;
-  const debouncedApiCallParams = useDebounce(pendingApiCallParams, 3000),;
   useEffect(() => {;
     if (debouncedApiCallParams) {;
       onSendMessage(;
@@ -461,11 +437,9 @@ export function ChatAssistant({;
   }, [currentMessages]), // currentMessages will correctly refer to either guest or logged-in state;
 
   },;
-  const handleSendMessage = async (messageContent: string) => {;
     if (!messageContent.trim()) return,;
     if (!isGuest) {;
       // Logged-in user;
-      const newMessage: Message = {;
 
         role: 'user',;
         message: messageContent,;
@@ -478,9 +452,7 @@ export function ChatAssistant({;
       setShowGuestModal(true);
     }
   },;
-  const handleModalSendConfirm = () => {;
     if (!guestMessage) return,;
-    const newMessage: Message = {;
 
       role: 'user',;
       message: guestMessage,;
@@ -490,7 +462,6 @@ export function ChatAssistant({;
     setShowGuestModal(false),;
     setGuestMessage(null);
   },;
-  const handleModalCancel = () => {;
     setShowGuestModal(false),;
     setGuestMessage(null);
   },;
@@ -597,12 +568,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
     useState<Message[]>(initialMessages),;
 
-  const messagesEndRef = useRef<HTMLDivElement | null>(null),;
 
-  const [pendingApiCallParams, setPendingApiCallParams] = useState<{;
   } | null>(null),;
-  const [showGuestModal, setShowGuestModal] = useState(false),;
-  const [guestMessage, setGuestMessage] = useState<string | null>(null),;
     <div;
       className="fixed inset-0 bg-black/50 z-50 flex items-center justify-center p-4"""
       role="dialog"""
@@ -704,7 +671,6 @@ if ( {) {}
       setDisplayGuestMessages (new_messages),
       setStoredGuestMessages (new_messages), // Always update local_storage for guests;
     } else {}
-      const new_messages =;
         valueOrFn instanceof Function ? valueOrFn (loggedInMessages) : valueOrFn,
       setLoggedInMessages (new_messages);
     }

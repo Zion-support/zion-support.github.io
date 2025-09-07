@@ -173,7 +173,6 @@ pr-12325
 import React from 'react',;
 import Link from 'next/link',;
 import { ErrorBoundary, FallbackProps } from 'react-error-boundary',;
-import { AlertTriangle, Home, RefreshCw, Settings } from 'lucide-react';
 import {logErrorToProduction} from '@/utils/productionLogger',;
 import { logInfo, logErrorToProduction as prodLogError } from '@/utils/productionLogger',;
 interface PageErrorFallbackProps extends FallbackProps {;
@@ -181,11 +180,9 @@ interface PageErrorFallbackProps extends FallbackProps {;
 }
 ;
 function PageErrorFallback({ error, resetErrorBoundary, pageName }: PageErrorFallbackProps) {;
-  const isAuthConfigError = error?.message?.includes('Auth0') ||;
                            error?.message?.includes('AUTH0') ||;
                            error?.message?.includes('authentication') ||;
                            error?.message?.includes('environment'),;
-  const handleRefresh = () => {;
     if (resetErrorBoundary) {;
       resetErrorBoundary();
     } else {;
@@ -565,7 +562,6 @@ export default /**
  * PageErrorBoundary - Function description;
  */
 function PageErrorBoundary() {
-  const handle_error = (error: Error, error_info: React.ErrorInfo) =>: any {
   // TODO: Implement
     prodLogError (
       `PageErrorBoundary caught error on ${page_name || 'unknown page'}:`,')
@@ -587,7 +583,6 @@ pr-12325
 pr-12325
 
 
-  const FallbackComponent = null;
     fallback ||
 
 
@@ -761,7 +756,6 @@ const Component = React && React.memo(function PageErrorBoundary(): any ({;
     </ErrorBoundary>;
   );
 } ;
-  const FallbackComponent =;
     fallback ||;
     ((props:,  FallbackProps) => (
       <PageErrorFallback {...props} page_name={page_name} />));
@@ -793,7 +787,6 @@ export default function PageErrorBoundary({;
   pageName,;
   fallback;
 }: PageErrorBoundaryProps) {;
-  const handleError = (error: Error, errorInfo: React.ErrorInfo) => {;
     prodLogError(`PageErrorBoundary caught error on ${pageName || 'unknown page'}:`, error),;
     logErrorToProduction(error instanceof Error ? error.message : String(error), error instanceof Error ? error : undefined, {;
       page: pageName || 'unknown',;
@@ -802,7 +795,6 @@ export default function PageErrorBoundary({;
       timestamp: new Date().toISOString();
     });
   };
-  const FallbackComponent = fallback || ((props: FallbackProps) => (;
     <PageErrorFallback {...props} pageName={pageName} />;
   ));
   return (;

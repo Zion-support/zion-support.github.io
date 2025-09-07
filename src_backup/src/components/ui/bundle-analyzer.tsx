@@ -58,7 +58,6 @@ if (return) {$2;
           (entry.name.endsWith('.js') |entry.name.endsWith('.css')))// Calculate bundle information;'
       let totalLoadTime = 0;
       const "chunkData": ChunkInfo[] = [];
-      const "chunkData": ChunkInfo[] = [];
 import { useAuth   } from '@/hooks/useAuth';'
 import { Card, CardContent, CardHeader, CardTitle   } from '@/components/ui/card';'
 import { Badge   } from '@/components/ui/badge';'
@@ -78,7 +77,6 @@ interface ChunkInfo  {"name": string;
   "cached": boolean;
 export function BundleAnalyzer() {let totalSize = 0;
       }
-      let totalLoadTime = 0;
       const "chunkData": ChunkInfo[]  = [];scriptEntries.forEach((entry) => {const size = entry.transferSize || entry.encodedBodySize || 0;
         }
         const loadTime = entry.responseEnd - entry.requestStart;
@@ -100,7 +98,6 @@ totalSize += size;
       const script_entries = resource_entries.filter (entry =>;
           entry.name.includes ('/_next / static/') &&;'
           (entry.name.ends_with ('.js') || entry.name.ends_with ('.css')))// Calculate bundle information;'
-      let totalLoadTime = 0;
       const "chunk_data": ChunkInfo[] = [];
       const "chunk_data": ChunkInfo[] = [],script_entries.for_each ((entry) => {const size = entry.transfer_size || entry.encodedBodySize || 0;
         }
@@ -131,7 +128,6 @@ totalSize += size;
 }export function BundleAnalyzer() {const { user } = useAuth(),const isAdmin = user?.userType === 'admin' || user?.role === 'admin',const isAllowed = process.env.NODE_ENV !== 'production' || isAdmin,if (!isAllowed) {return null;if (!shouldShow) {return null;'
   }const [bundleInfo, setBundleInfo] = useState<BundleInfo | null>(null),const [chunks, setChunks] = useState<ChunkInfo[]>([]),const [isVisible, setIsVisible] = useState(false),const [isCollecting, setIsCollecting] = useState(false),const [shouldShow, setShouldShow] = useState(false),useEffect(() => {// Only show in development or when explicitly enabled;
     }
-    const show =;
       process.env.NODE_ENV === 'development' ||;'
       localStorage.getItem('bundle-analyzer') === 'true',setShouldShow(show),if (!show) return,setIsVisible(true),collectBundleInfo()}, []),const collectBundleInfo = async () => {if (typeof window === 'undefined') return,setIsCollecting(true),try {// Get performance entries for script resources;'
       }

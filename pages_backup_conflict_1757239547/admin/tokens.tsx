@@ -8,7 +8,6 @@ export default function AdminTokens() {
   const [config, setConfig] = useState<any>(null),
 
 import React, { useEffect, useState } from "react";
-import EnhancedLayout from "../../components/layout/EnhancedLayout";
 export default function AdminTokens() {
   const [transactions, setTransactions] = useState<any[]>([])
   const [userId, setUserId] = useState("")
@@ -20,7 +19,6 @@ export default function AdminTokens() {
   const [userId, setUserId] = useState(""),
   const [amount, setAmount] = useState(100),
   const [reason, setReason] = useState("admin_action"),
-  const [config, setConfig] = useState<any>(null),
   async function load() {
     const [txRes, cfgRes] = await Promise.all([
       fetch("/api/admin/tokens").then((r) => r.json())
@@ -56,7 +54,6 @@ export default function AdminTokens() {
       method: "POST"
       headers: { "Content-Type": "application/json" }
       body: JSON.stringify({ userId, amount, reason })})
-    const data = await res.json()
     if (data.error) alert(data.error)
     await load()
   }
@@ -65,7 +62,6 @@ export default function AdminTokens() {
       method: "POST"
       headers: { "Content-Type": "application/json" }
       body: JSON.stringify(config)})
-    const data = await res.json()
 
     setConfig(data)
   }

@@ -18,15 +18,10 @@ export default function HelpCenter() {
   const handleCategorySelect = (categoryId:,  string) => {,
     setSelectedCategory(categoryId)
     setSelectedArticle(null)
-import React, { useState } from 'react';
 import { Input } from '@/components / ui / input';
 import { Button } from '@/components / ui / button';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components / ui / tabs';
-import { HelpCategoryList } from './HelpCategoryList';
-import { HelpArticleList } from './HelpArticleList';
-import { HelpArticleView } from './HelpArticleView';
 import { HELP_CATEGORIES } from './help - content';
-import { Search } from 'lucide-react';
 export default /**
  * HelpCenter - Function description
  */
@@ -81,19 +76,14 @@ function HelpCenter() {
   const handleBackToArticles = () =>: any {
     setSelectedArticle (null);
   }
-  const [search_query, setSearchQuery] = useState (""),"
-  const handleCategorySelect = (category_id: string, ) =>: any {
   // TODO: Implement
     setSelectedCategory (category_id),
   },
-  const handleArticleSelect = (article_id: string, ) =>: any {
   // TODO: Implement
     setSelectedArticle (article_id);
-  const handleBackToCategories = () =>: any {
   // TODO: Implement
     setSelectedCategory (null);
 
-  const handleBackToArticles = () =>: any {
   // TODO: Implement
 pr-12325
 
@@ -128,14 +118,6 @@ pr-12325
     return this.props.children;
   }
 }
-import React, { useState } from 'react';
-import { Input } from '@/components/ui/input';
-import { Button } from '@/components/ui/button';
-import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
-import { HelpCategoryList } from './HelpCategoryList';
-import { HelpArticleList } from './HelpArticleList';
-import { HelpArticleView } from './HelpArticleView';
-import { HELP_CATEGORIES } from './help-content';
           <div className="relative mb-8">"
             <Input placeholder="Search for help articles...""
               value={searchQuery}
@@ -183,7 +165,6 @@ import { HelpCategoryList } from "./HelpCategoryList",;
 import { HelpArticleList } from "./HelpArticleList",;
 import { HelpArticleView } from "./HelpArticleView",;
 import { HELP_CATEGORIES } from "./help-content",;
-import { Search } from 'lucide-react';
 export default function HelpCenter() {;,
   const [selectedCategory, setSelectedCategory] = useState<string | null>(null),;,
   const [selectedArticle, setSelectedArticle] = useState<string | null>(null),;,
@@ -218,11 +199,9 @@ export default function HelpCenter() {;
           <p className='text-zion-slate-light mb-6'>;
             Find answers to common questions or get in touch with our support;
             team.;
-  const handleCategorySelect = (categoryId: string) => {;
     setSelectedCategory(categoryId),;
     setSelectedArticle(null);
   },;
-  const handleArticleSelect = (articleId: string) => {;
     setSelectedArticle(articleId);
   },;
   const handleBackToCategories = () => {;
@@ -313,7 +292,6 @@ import { HelpCategoryList } from "./HelpCategoryList",;""
 import { HelpArticleList } from "./HelpArticleList",;""
 import { HelpArticleView } from "./HelpArticleView",;""
 import { HELP_CATEGORIES } from "./help-content",;""
-import { Search } from 'lucide-react';
 export default function HelpCenter() {;
   const [selectedCategory, setSelectedCategory] = useState<string | null>(null),;
 

@@ -17,19 +17,6 @@ import { Bot, Users, TrendingUp } from 'lucide-react'
 
 export default function AITalentMatchingPage() {
 
-
-import React from 'react';
-import { ServiceLandingTemplate } from '@/components/services/ServiceLandingTemplate';
-import { Bot, Users, TrendingUp } from 'lucide-react';
-
-export default function AITalentMatchingPage() {
-title: 'Precise Candidate Matching',
-      description:
-        'Leverage AI algorithms to pair your roles with the most qualified experts.',
-      icon: <Bot className='h-8 w-8' />,
-    },
-origin/cursor/automate-test-improve-and-merge-code-2533
-
     {
       title: "Streamlined Hiring Workflow",
       description: "Automated screening and ranking saves your team valuable time.",
@@ -45,20 +32,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       title: "Scalable Talent Pools",
       description: "Access a global network of vetted professionals ready for your projects.",
       icon: <TrendingUp className = "h-8 w-8" />}],
-main
-
-
 
   const testimonials = [
     {
       name: "Emily Stone",
       role: "HR Director",
-      text: "Zion's AI talent matching connected us with exceptional engineers in days, not weeks.";
-      text: "Zion's AI talent matching connected us with exceptional engineers in days, not weeks.";
-      text: "Zion's AI talent matching connected us with exceptional engineers in days, not weeks.";
-main
-
-
 
       avatar: "/placeholder.svg"},
     {
@@ -83,35 +61,17 @@ export default /**;
  */
 function AITalentMatchingPage() {}
   const benefits = [;
-      title: "AI-Powered Matching",
-      description:
-        "Advanced algorithms match the right talent with the right opportunities",
-      title: "AI-Powered Matching",
-      description:
-        "Advanced algorithms match the right talent with the right opportunities",
-main
-
 
     },
     {
       icon: Users,
       title: "Verified Professionals",
       description: "All candidates are pre-screened and verified for quality",
-      description: "All candidates are pre-screened and verified for quality",
-main
-
-      description: "All candidates are pre-screened and verified for quality",
 
     },
     {
       icon: TrendingUp,
       title: "Success Tracking",
-      description: "Monitor performance and success rates of placements",
-    },
-      description: "Monitor performance and success rates of placements",
-    },
-main
-
       description: "Monitor performance and success rates of placements",
     },
 
@@ -123,10 +83,6 @@ main
     "Automated interview scheduling",
     "Performance analytics dashboard",
     "Custom matching criteria",
-    "Custom matching criteria",
-main
-
-    "Custom matching criteria",
 
   ];
   const stats = [;
@@ -136,6 +92,7 @@ main
     { label: "Time to Hire", value: "50% faster" }
   ];
 
+<<<<<<< HEAD
 
       title: 'Scalable Talent Pools',
       description:
@@ -144,7 +101,6 @@ main
     },
   ];
 
-  const testimonials = [
     {
       name: 'Emily Stone',
       role: 'HR Director',
@@ -164,6 +120,8 @@ main
   );
 origin/cursor/automate-test-improve-and-merge-code-2533
 
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
   return (
     <ServiceLandingTemplate"
       title="AI Talent Matching""
@@ -178,7 +136,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   )"
 import React from "react",;"
 import { ServiceLandingTemplate } from "@/components/services/ServiceLandingTemplate",;'
-import { Bot, Users, TrendingUp } from 'lucide-react';
 export default function AITalentMatchingPage() { return null; }
       icon: <Bot className="h-8 w-8" />},;
     {;"
@@ -207,7 +164,6 @@ export default function AITalentMatchingPage() { return null; }
       heroImage="https://placehold.co/600x300/192134/9b87f5?text=AI+Talent+Matching";"
       description="Our AI-powered system analyzes your requirements and quickly surfaces the best talent for the job. Reduce hiring time and make smarter selections with data-driven insights.";
 
-
     { label: "Time to Hire", value: "50% faster" },
   ];
   return (
@@ -215,9 +171,6 @@ export default function AITalentMatchingPage() { return null; }
       title="AI Talent Matching";
       subtitle="Find the perfect talent with our AI - powered matching system";
       description="Our advanced AI technology analyzes skills, experience, and cultural fit to match the right candidates with the right opportunities, ensuring successful placements and satisfied clients.";
-main
-
-
 
       benefits={benefits}
       features={features}

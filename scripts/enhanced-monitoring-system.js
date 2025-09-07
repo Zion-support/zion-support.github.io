@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 #!/usr/bin/env node const { execSync } = const fs = const path = class EnhancedMonitoringSystem { constructor() { this && this.projectRoot = process && process.cwd()this && this.reportsDir = path && path.join(this && this.projectRoot,'automation-reports')this && this.logFile = path && path.join(this && this.reportsDir,'monitoring-system && system.log')this && this.ensureDirectories()this && this.results = { "timestamp": new Date().toISOString(),"system": { "health": 'unknown',"uptime": process && process.uptime(),"memory": process && process.memoryUsage(),"cpu": process && process.cpuUsage(),'
 },"application": { "status": 'unknown',"buildStatus": 'unknown',"testStatus": 'unknown','
 },"performance": { "metrics": 
@@ -56,7 +57,6 @@ const logMessage = `[${timestamp}] [${level}] ${message}`;  fs.appendFileSync(th
 return { "success": false,"error": error.message }},;
 } async checkSystemHealth() { this.log('🖥️ Checking System Health';'
 }
-const systemChecks = [ { "command": 'df -h',"description": 'Disk Space Check',;'
 },{ "command": 'free -h',"description": 'Memory Usage Check','
 },{ "command": 'uptime',"description": 'System Uptime Check','
 } ]; for (const check of systemChecks) { const result = await this.runCommand(check.command,check.description,10000)if (result.success) { this.results.system.health = 'healthy'} } } async checkApplicationStatus() { this.log('📱 Checking Application Status';'
@@ -73,7 +73,6 @@ const packageJsonPath = path.join(this.projectRoot,'package.json')if (fs.existsS
 
 const packageJsonPath = path.join(this.projectRoot,'package.json')if (fs.existsSync(packageJsonPath)) { try { const packageJson = JSON.parse(fs.readFileSync(packageJsonPath,'utf8'))const dependencies = Object.keys(packageJson.dependencies || {})const devDependencies = Object.keys(packageJson.devDependencies || {})this.results.security.outdatedPackages = dependencies.length + devDependencies.length} catch (error) { this.log('⚠️ Could not analyze package.json','WARN')} } } async checkTestStatus() { this.log('🧪 Checking Test Status';'
 }
-const testChecks = [ { "command": 'npm test -- --passWithNoTests --silent',"description": 'Test Suite Check',;'
 } ]; for (const check of testChecks) { const result = await this.runCommand(check.command,check.description,60000)if (result.success) { this.results.application.testStatus = 'passed'} else { this.results.application.testStatus = 'failed'; this.results.performance.alerts.push({ "type": 'error',"message": 'Test suite failed',"value": 'failed' })} },'
 } async checkCodeQuality() { this.log('🔍 Checking Code Quality')const qualityChecks = [ { "command": 'npx eslint . --max-warnings 0 --quiet',"description": 'ESLint Quality Check','
 },{ "command": 'npx tsc --noEmit --skipLibCheck',"description": 'TypeScript Type Check','
@@ -98,24 +97,18 @@ return { "success": false,"error": error.message }} },;
 } ensureDirectories() { if (!fs.existsSync(this.reportsDir)) { fs.mkdirSync(this.reportsDir,{ "recursive": true })}
 } log(message,level = 'INFO') { const timestamp = new Date().toISOString(;'
 }
-const logMessage = `[${timestamp}] [${level}] ${message}`;  fs.appendFileSync(this.logFile,logMessage + '\n')} async runCommand(command,description,timeout = 30000) { this.log(`🔍 "Monitoring": ${descriptio,;`}`)try { const result = execSync(command,{ "cwd": this.projectRoot,"encoding": 'utf8',"timeout": timeout,"maxBuffer": 1024 * 1024 * 5 })this.log(`✅ "Success": ${descriptio,`}`)return { "success": true,"output": result }} catch (error) { this.log(`❌ "Failed": ${description} - ${error.messag,`}`,'ERROR';'
 return { "success": false,"error": error.message }},;
 } async checkSystemHealth() { this.log('🖥️ Checking System Health';'
 }
-const systemChecks = [ { "command": 'df -h',"description": 'Disk Space Check',;'
 },{ "command": 'free -h',"description": 'Memory Usage Check','
 },{ "command": 'uptime',"description": 'System Uptime Check','
 } ];  } } async checkApplicationStatus() { this.log('📱 Checking Application Status')const buildDir = path.join(this.projectRoot,'.next')if (fs.existsSync(buildDir)) { this.results.application.buildStatus = 'built'; this.log('✅ Build directory exists')} else { this.results.application.buildStatus = 'not_built'; this.log('⚠️ Build directory not found')}'
 
-const packageJsonPath = path.join(this.projectRoot,'package.json')if (fs.existsSync(packageJsonPath)) { this.results.application.status = 'configured'; this.log('✅ Package.json exists')} else { this.results.application.status = 'not_configured'; this.log('❌ Package.json not found')} } async checkPerformanceMetrics() { this.log('⚡ Checking Performance Metrics')const performanceChecks = [ { "command": 'npm run "perf":monitor',"description": 'Performance Monitoring','
 } ];  }
 
-const buildSize = this.getBuildSize()this.results.performance.metrics.buildSize = buildSize; if (buildSize > 100 * 1024 * 1024) { this.results.performance.alerts.push({ "type": 'warning',"message": 'Build size is large (>100MB)',"value": `${Math.round(buildSize / (1024 * 1024))}MB` })},`} async checkSecurityStatus() { this.log('🔒 Checking Security Status')const securityChecks = [ { "command": 'npm audit --audit-level=moderate --json',"description": 'Security Audit','
 } ];  security vulnerabilities found`,"value": this.results.security.vulnerabilities })},`} catch (error) { this.log('⚠️ Could not parse security audit results','WARN')} } }'
 
-const packageJsonPath = path.join(this.projectRoot,'package.json')if (fs.existsSync(packageJsonPath)) { try { const packageJson = JSON.parse(fs.readFileSync(packageJsonPath,'utf8'))const dependencies = Object.keys(packageJson.dependencies || {})const devDependencies = Object.keys(packageJson.devDependencies || {})this.results.security.outdatedPackages = dependencies.length + devDependencies.length} catch (error) { this.log('⚠️ Could not analyze package.json','WARN')} } } async checkTestStatus() { this.log('🧪 Checking Test Status';'
 }
-const testChecks = [ { "command": 'npm test -- --passWithNoTests --silent',"description": 'Test Suite Check',;'
 } ];  else { this.results.application.testStatus = 'failed'; this.results.performance.alerts.push({ "type": 'error',"message": 'Test suite failed',"value": 'failed' })} },'
 } async checkCodeQuality() { this.log('🔍 Checking Code Quality')const qualityChecks = [ { "command": 'npx eslint . --max-warnings 0 --quiet',"description": 'ESLint Quality Check','
 },{ "command": 'npx tsc --noEmit --skipLibCheck',"description": 'TypeScript Type Check','
@@ -127,7 +120,6 @@ const testChecks = [ { "command": 'npm test -- --passWithNoTests --silent',"desc
 return { "success": false,"error": error.message }} },;
 } if (require.main === module) {;
   }
-  const monitoring = new EnhancedMonitoringSystem()monitoring.run().then((result) => { process.exit(result.success ? 0 : 1)})} module.exports = EnhancedMonitoringSystem;
 origin/cursor/integrate-build-improve-and-re-verify-c7b5;
 #!/usr/bin/env node;
 
@@ -154,7 +146,6 @@ const logMessage = `[${timestamp}] [${level}] ${message}`;  fs && fs.appendFileS
 
 }
 
-const systemChecks = [ { "command": 'df -h',"description": 'Disk Space Check',;'
 },{ "command": 'free -h',"description": 'Memory Usage Check','
 },{ "command": 'uptime',"description": 'System Uptime Check','
 } ]; for (const check of systemChecks) { const result = await this && this.runCommand(check && check.command,check && check.description,10000); if (result && result.success) { this && this.results.system && system.health = 'healthy'} } } async checkApplicationStatus() { this && this.log('📱 Checking Application Status');'
@@ -185,7 +176,6 @@ const devDependencies = Object && Object.keys(packageJson && packageJson.devDepe
 
 }
 
-const testChecks = [ { "command": 'npm test -- --passWithNoTests --silent',"description": 'Test Suite Check',;'
 } ]; for (const check of testChecks) { const result = await this && this.runCommand(check && check.command,check && check.description,60000); if (result && result.success) { this && this.results.application && application.testStatus = 'passed'} else { this && this.results.application && application.testStatus = 'failed'; this && this.results.performance && performance.alerts.push({ "type": 'error',"message": 'Test suite failed',"value": 'failed' })} },'
 } async checkCodeQuality() { this && this.log('🔍 Checking Code Quality');'
 
@@ -211,9 +201,14 @@ const reportPath = this && this.generateReport(); this && this.log('🎉 Enhance
 } if (require && require.main = == module) {;
   }
   const monitoring = new EnhancedMonitoringSystem(); monitoring && monitoring.run().then((result) => { process && process.exit(result && result.success ? 0 : 1)})} module && module.exports = EnhancedMonitoringSystem;
+=======
+#!/usr/bin/env node const { execSync } = const fs = const path = class EnhancedMonitoringSystem { constructor() { this && this.projectRoot = process && process.cwd(); this && this.reportsDir = path && path.join(this && this.projectRoot,'automation-reports'); this && this.logFile = path && path.join(this && this.reportsDir,'monitoring-system && system.log'); this && this.ensureDirectories(); this && this.results = { timestamp: new Date().toISOString(),system: { health: 'unknown',uptime: process && process.uptime(),memory: process && process.memoryUsage(),cpu: process && process.cpuUsage() },application: { status: 'unknown',buildStatus: 'unknown',testStatus: 'unknown' },performance: { metrics: {},alerts: [] },security: { vulnerabilities: 0,outdatedPackages: 0,securityScore: 0 } }} ensureDirectories() { if (!fs && fs.existsSync(this && this.reportsDir)) { fs && fs.mkdirSync(this && this.reportsDir,{ recursive: true })} } log(message,level = 'INFO') { const timestamp = new Date().toISOString(); const logMessage = `[${timestamp}] [${level}] ${message}`;  fs && fs.appendFileSync(this && this.logFile,logMessage + '\n')} async runCommand(command,description,timeout = 30000) { this && this.log(`🔍 Monitoring: ${description}`); try { const result = execSync(command,{ cwd: this && this.projectRoot,encoding: 'utf8',timeout: timeout,maxBuffer: 1024 * 1024 * 5 }); this && this.log(`✅ Success: ${description}`); return { success: true,output: result }} catch (error) { this && this.log(`❌ Failed: ${description} - ${error && error.message}`,'ERROR'); return { success: false,error: error && error.message }} } async checkSystemHealth() { this && this.log('🖥️ Checking System Health'); const systemChecks = [ { command: 'df -h',description: 'Disk Space Check' },{ command: 'free -h',description: 'Memory Usage Check' },{ command: 'uptime',description: 'System Uptime Check' } ]; for (const check of systemChecks) { const result = await this && this.runCommand(check && check.command,check && check.description,10000); if (result && result.success) { this && this.results.system && system.health = 'healthy'} } } async checkApplicationStatus() { this && this.log('📱 Checking Application Status'); const buildDir = path && path.join(this && this.projectRoot,'.next'); if (fs && fs.existsSync(buildDir)) { this && this.results.application && application.buildStatus = 'built'; this && this.log('✅ Build directory exists')} else { this && this.results.application && application.buildStatus = 'not_built'; this && this.log('⚠️ Build directory not found')} const packageJsonPath = path && path.join(this && this.projectRoot,'package && package.json'); if (fs && fs.existsSync(packageJsonPath)) { this && this.results.application && application.status = 'configured'; this && this.log('✅ Package && Package.json exists')} else { this && this.results.application && application.status = 'not_configured'; this && this.log('❌ Package && Package.json not found')} } async checkPerformanceMetrics() { this && this.log('⚡ Checking Performance Metrics'); const performanceChecks = [ { command: 'npm run perf:monitor',description: 'Performance Monitoring' } ]; for (const check of performanceChecks) { const result = await this && this.runCommand(check && check.command,check && check.description,30000); if (result && result.success) { this && this.results.performance && performance.metrics[check && check.description] = 'monitored'} } const buildSize = this && this.getBuildSize(); this && this.results.performance && performance.metrics.buildSize = buildSize; if (buildSize > 100 * 1024 * 1024) { this && this.results.performance && performance.alerts.push({ type: 'warning',message: 'Build size is large (>100MB)',value: `${Math && Math.round(buildSize / (1024 * 1024))}MB` })} } async checkSecurityStatus() { this && this.log('🔒 Checking Security Status'); const securityChecks = [ { command: 'npm audit --audit-level=moderate --json',description: 'Security Audit' } ]; for (const check of securityChecks) { const result = await this && this.runCommand(check && check.command,check && check.description,30000); if (result && result.success) { try { const auditData = JSON && JSON.parse(result && result.output); this && this.results.security && security.vulnerabilities = auditData && auditData.metadata?.vulnerabilities?.total || 0; if (this && this.results.security && security.vulnerabilities > 0) { this && this.results.performance && performance.alerts.push({ type: 'error',message: `${this && this.results.security && security.vulnerabilities} security vulnerabilities found`,value: this && this.results.security && security.vulnerabilities })} } catch (error) { this && this.log('⚠️ Could not parse security audit results','WARN')} } } const packageJsonPath = path && path.join(this && this.projectRoot,'package && package.json'); if (fs && fs.existsSync(packageJsonPath)) { try { const packageJson = JSON && JSON.parse(fs && fs.readFileSync(packageJsonPath,'utf8')); const dependencies = Object && Object.keys(packageJson && packageJson.dependencies || {}); const devDependencies = Object && Object.keys(packageJson && packageJson.devDependencies || {}); this && this.results.security && security.outdatedPackages = dependencies && dependencies.length + devDependencies && devDependencies.length} catch (error) { this && this.log('⚠️ Could not analyze package && package.json','WARN')} } } async checkTestStatus() { this && this.log('🧪 Checking Test Status'); const testChecks = [ { command: 'npm test -- --passWithNoTests --silent',description: 'Test Suite Check' } ]; for (const check of testChecks) { const result = await this && this.runCommand(check && check.command,check && check.description,60000); if (result && result.success) { this && this.results.application && application.testStatus = 'passed'} else { this && this.results.application && application.testStatus = 'failed'; this && this.results.performance && performance.alerts.push({ type: 'error',message: 'Test suite failed',value: 'failed' })} } } async checkCodeQuality() { this && this.log('🔍 Checking Code Quality'); const qualityChecks = [ { command: 'npx eslint . --max-warnings 0 --quiet',description: 'ESLint Quality Check' },{ command: 'npx tsc --noEmit --skipLibCheck',description: 'TypeScript Type Check' } ]; for (const check of qualityChecks) { const result = await this && this.runCommand(check && check.command,check && check.description,30000); if (!result && result.success) { this && this.results.performance && performance.alerts.push({ type: 'warning',message: `${check && check.description} failed`,value: 'failed' })} } } getBuildSize() { const buildDir = path && path.join(this && this.projectRoot,'.next'); if (fs && fs.existsSync(buildDir)) { return this && this.getDirectorySize(buildDir)} return 0} getDirectorySize(dir) { let size = 0; try { const items = fs && fs.readdirSync(dir); for (const item of items) { const fullPath = path && path.join(dir,item); const stat = fs && fs.statSync(fullPath); if (stat && stat.isDirectory()) { size += this && this.getDirectorySize(fullPath)} else { size += stat && stat.size} } } catch (error) { } return size} calculateOverallHealth() { let healthScore = 100; if (this && this.results.application && application.buildStatus !== 'built') healthScore -= 20; if (this && this.results.application && application.testStatus === 'failed') healthScore -= 30; if (this && this.results.security && security.vulnerabilities > 0) healthScore -= 25; if (this && this.results.performance && performance.alerts.length > 0) healthScore -= 15; this && this.results.overallHealth = { score: Math && Math.max(0,healthScore),status: healthScore >= 80 ? 'healthy' : healthScore >= 60 ? 'warning' : 'critical',timestamp: new Date().toISOString() }} generateReport() { this && this.calculateOverallHealth(); const reportPath = path && path.join(this && this.reportsDir,'monitoring-report && report.json'); fs && fs.writeFileSync(reportPath,JSON && JSON.stringify(this && this.results,null,2)); this && this.log(`📊 Monitoring report generated: ${reportPath}`); this && this.log('📊 Monitoring Summary:'); this && this.log(` Overall Health: ${this && this.results.overallHealth && overallHealth.status} (${this && this.results.overallHealth && overallHealth.score}/100)`); this && this.log(` System Health: ${this && this.results.system && system.health}`); this && this.log(` Application Status: ${this && this.results.application && application.status}`); this && this.log(` Build Status: ${this && this.results.application && application.buildStatus}`); this && this.log(` Test Status: ${this && this.results.application && application.testStatus}`); this && this.log(` Security Vulnerabilities: ${this && this.results.security && security.vulnerabilities}`); this && this.log(` Alerts: ${this && this.results.performance && performance.alerts.length}`); return reportPath} async run() { this && this.log('🎯 Starting Enhanced Monitoring System'); try { await this && this.checkSystemHealth(); await this && this.checkApplicationStatus(); await this && this.checkPerformanceMetrics(); await this && this.checkSecurityStatus(); await this && this.checkTestStatus(); await this && this.checkCodeQuality(); const reportPath = this && this.generateReport(); this && this.log('🎉 Enhanced Monitoring System Completed'); return { success: true,reportPath,results: this && this.results }} catch (error) { this && this.log(`💥 Monitoring failed: ${error && error.message}`,'ERROR'); return { success: false,error: error && error.message }} } } if (require && require.main === module) { const monitoring = new EnhancedMonitoringSystem(); monitoring && monitoring.run().then(result => { process && process.exit(result && result.success ? 0 : 1)})} module && module.exports = EnhancedMonitoringSystem;
+>>>>>>> origin/chore/fix-lint-and-merge
 
+#!/usr/bin/env node const { execSync } = const fs = const path = class EnhancedMonitoringSystem { constructor() { this && this.projectRoot = process && process.cwd(); this && this.reportsDir = path && path.join(this && this.projectRoot,'automation-reports'); this && this.logFile = path && path.join(this && this.reportsDir,'monitoring-system && system.log'); this && this.ensureDirectories(); this && this.results = { timestamp: new Date().toISOString(),system: { health: 'unknown',uptime: process && process.uptime(),memory: process && process.memoryUsage(),cpu: process && process.cpuUsage() },application: { status: 'unknown',buildStatus: 'unknown',testStatus: 'unknown' },performance: { metrics: {},alerts: [] },security: { vulnerabilities: 0,outdatedPackages: 0,securityScore: 0 } }} ensureDirectories() { if (!fs && fs.existsSync(this && this.reportsDir)) { fs && fs.mkdirSync(this && this.reportsDir,{ recursive: true })} } log(message,level = 'INFO') { const timestamp = new Date().toISOString(); const logMessage = `[${timestamp}] [${level}] ${message}`;  fs && fs.appendFileSync(this && this.logFile,logMessage + '\n')} async runCommand(command,description,timeout = 30000) { this && this.log(`🔍 Monitoring: ${description}`); try { const result = execSync(command,{ cwd: this && this.projectRoot,encoding: 'utf8',timeout: timeout,maxBuffer: 1024 * 1024 * 5 }); this && this.log(`✅ Success: ${description}`); return { success: true,output: result }} catch (error) { this && this.log(`❌ Failed: ${description} - ${error && error.message}`,'ERROR'); return { success: false,error: error && error.message }} } async checkSystemHealth() { this && this.log('🖥️ Checking System Health'); const systemChecks = [ { command: 'df -h',description: 'Disk Space Check' },{ command: 'free -h',description: 'Memory Usage Check' },{ command: 'uptime',description: 'System Uptime Check' } ]; for (const check of systemChecks) { const result = await this && this.runCommand(check && check.command,check && check.description,10000); if (result && result.success) { this && this.results.system && system.health = 'healthy'} } } async checkApplicationStatus() { this && this.log('📱 Checking Application Status'); const buildDir = path && path.join(this && this.projectRoot,'.next'); if (fs && fs.existsSync(buildDir)) { this && this.results.application && application.buildStatus = 'built'; this && this.log('✅ Build directory exists')} else { this && this.results.application && application.buildStatus = 'not_built'; this && this.log('⚠️ Build directory not found')} const packageJsonPath = path && path.join(this && this.projectRoot,'package && package.json'); if (fs && fs.existsSync(packageJsonPath)) { this && this.results.application && application.status = 'configured'; this && this.log('✅ Package && Package.json exists')} else { this && this.results.application && application.status = 'not_configured'; this && this.log('❌ Package && Package.json not found')} } async checkPerformanceMetrics() { this && this.log('⚡ Checking Performance Metrics'); const performanceChecks = [ { command: 'npm run perf:monitor',description: 'Performance Monitoring' } ]; for (const check of performanceChecks) { const result = await this && this.runCommand(check && check.command,check && check.description,30000); if (result && result.success) { this && this.results.performance && performance.metrics[check && check.description] = 'monitored'} } const buildSize = this && this.getBuildSize(); this && this.results.performance && performance.metrics.buildSize = buildSize; if (buildSize > 100 * 1024 * 1024) { this && this.results.performance && performance.alerts.push({ type: 'warning',message: 'Build size is large (>100MB)',value: `${Math && Math.round(buildSize / (1024 * 1024))}MB` })} } async checkSecurityStatus() { this && this.log('🔒 Checking Security Status'); const securityChecks = [ { command: 'npm audit --audit-level=moderate --json',description: 'Security Audit' } ]; for (const check of securityChecks) { const result = await this && this.runCommand(check && check.command,check && check.description,30000); if (result && result.success) { try { const auditData = JSON && JSON.parse(result && result.output); this && this.results.security && security.vulnerabilities = auditData && auditData.metadata?.vulnerabilities?.total || 0; if (this && this.results.security && security.vulnerabilities > 0) { this && this.results.performance && performance.alerts.push({ type: 'error',message: `${this && this.results.security && security.vulnerabilities} security vulnerabilities found`,value: this && this.results.security && security.vulnerabilities })} } catch (error) { this && this.log('⚠️ Could not parse security audit results','WARN')} } } const packageJsonPath = path && path.join(this && this.projectRoot,'package && package.json'); if (fs && fs.existsSync(packageJsonPath)) { try { const packageJson = JSON && JSON.parse(fs && fs.readFileSync(packageJsonPath,'utf8')); const dependencies = Object && Object.keys(packageJson && packageJson.dependencies || {}); const devDependencies = Object && Object.keys(packageJson && packageJson.devDependencies || {}); this && this.results.security && security.outdatedPackages = dependencies && dependencies.length + devDependencies && devDependencies.length} catch (error) { this && this.log('⚠️ Could not analyze package && package.json','WARN')} } } async checkTestStatus() { this && this.log('🧪 Checking Test Status'); const testChecks = [ { command: 'npm test -- --passWithNoTests --silent',description: 'Test Suite Check' } ]; for (const check of testChecks) { const result = await this && this.runCommand(check && check.command,check && check.description,60000); if (result && result.success) { this && this.results.application && application.testStatus = 'passed'} else { this && this.results.application && application.testStatus = 'failed'; this && this.results.performance && performance.alerts.push({ type: 'error',message: 'Test suite failed',value: 'failed' })} } } async checkCodeQuality() { this && this.log('🔍 Checking Code Quality'); const qualityChecks = [ { command: 'npx eslint . --max-warnings 0 --quiet',description: 'ESLint Quality Check' },{ command: 'npx tsc --noEmit --skipLibCheck',description: 'TypeScript Type Check' } ]; for (const check of qualityChecks) { const result = await this && this.runCommand(check && check.command,check && check.description,30000); if (!result && result.success) { this && this.results.performance && performance.alerts.push({ type: 'warning',message: `${check && check.description} failed`,value: 'failed' })} } } getBuildSize() { const buildDir = path && path.join(this && this.projectRoot,'.next'); if (fs && fs.existsSync(buildDir)) { return this && this.getDirectorySize(buildDir)} return 0} getDirectorySize(dir) { let size = 0; try { const items = fs && fs.readdirSync(dir); for (const item of items) { const fullPath = path && path.join(dir,item); const stat = fs && fs.statSync(fullPath); if (stat && stat.isDirectory()) { size += this && this.getDirectorySize(fullPath)} else { size += stat && stat.size} } } catch (error) { } return size} calculateOverallHealth() { let healthScore = 100; if (this && this.results.application && application.buildStatus !== 'built') healthScore -= 20; if (this && this.results.application && application.testStatus === 'failed') healthScore -= 30; if (this && this.results.security && security.vulnerabilities > 0) healthScore -= 25; if (this && this.results.performance && performance.alerts.length > 0) healthScore -= 15; this && this.results.overallHealth = { score: Math && Math.max(0,healthScore),status: healthScore >= 80 ? 'healthy' : healthScore >= 60 ? 'warning' : 'critical',timestamp: new Date().toISOString() }} generateReport() { this && this.calculateOverallHealth(); const reportPath = path && path.join(this && this.reportsDir,'monitoring-report && report.json'); fs && fs.writeFileSync(reportPath,JSON && JSON.stringify(this && this.results,null,2)); this && this.log(`📊 Monitoring report generated: ${reportPath}`); this && this.log('📊 Monitoring Summary:'); this && this.log(` Overall Health: ${this && this.results.overallHealth && overallHealth.status} (${this && this.results.overallHealth && overallHealth.score}/100)`); this && this.log(` System Health: ${this && this.results.system && system.health}`); this && this.log(` Application Status: ${this && this.results.application && application.status}`); this && this.log(` Build Status: ${this && this.results.application && application.buildStatus}`); this && this.log(` Test Status: ${this && this.results.application && application.testStatus}`); this && this.log(` Security Vulnerabilities: ${this && this.results.security && security.vulnerabilities}`); this && this.log(` Alerts: ${this && this.results.performance && performance.alerts.length}`); return reportPath} async run() { this && this.log('🎯 Starting Enhanced Monitoring System'); try { await this && this.checkSystemHealth(); await this && this.checkApplicationStatus(); await this && this.checkPerformanceMetrics(); await this && this.checkSecurityStatus(); await this && this.checkTestStatus(); await this && this.checkCodeQuality(); const reportPath = this && this.generateReport(); this && this.log('🎉 Enhanced Monitoring System Completed'); return { success: true,reportPath,results: this && this.results }} catch (error) { this && this.log(`💥 Monitoring failed: ${error && error.message}`,'ERROR'); return { success: false,error: error && error.message }} } } if (require && require.main === module) { const monitoring = new EnhancedMonitoringSystem(); monitoring && monitoring.run().then(result => { process && process.exit(result && result.success ? 0 : 1)})} module && module.exports = EnhancedMonitoringSystem;
 
 ursor/fix-syntax-push-and-merge-to-main-40de
+<<<<<<< HEAD
 #!/usr/bin/env node const { execSync } = const fs = const path = class EnhancedMonitoringSystem { constructor() { this.projectRoot = process.cwd(); this.reportsDir = path.join(this.projectRoot,'automation-reports'); this.logFile = path.join(this.reportsDir,'monitoring-system.log'); this.ensureDirectories(); this.results = { "timestamp": new Date().toISOString(),"system": { "health": 'unknown',"uptime": process.uptime(),"memory": process.memoryUsage(),"cpu": process.cpuUsage(),'
 },"application": { "status": 'unknown',"buildStatus": 'unknown',"testStatus": 'unknown','
 },"performance": { "metrics": 
@@ -222,7 +217,6 @@ ursor/fix-syntax-push-and-merge-to-main-40de
 } ensureDirectories() { if (!fs.existsSync(this.reportsDir)) { fs.mkdirSync(this.reportsDir,{ "recursive": true })}
 } log(message,level = 'INFO') {;'
   }
-  const timestamp = new Date().toISOString();
 
 const logMessage = `[${timestamp}] [${level}] ${message}`;  fs.appendFileSync(this.logFile,logMessage + '\n')} async runCommand(command,description,timeout = 30000) { this.log(`🔍 "Monitoring": ${descriptio,;`}`); try { const result = execSync(command,{ "cwd": this.projectRoot,"encoding": 'utf8',"timeout": timeout,"maxBuffer": 1024 * 1024 * 5,'
 }); this.log(`✅ "Success": ${descriptio,`}`); return { "success": true,"output": result }} catch (error) { this.log(`❌ "Failed": ${description} - ${error.messag,`}`,'ERROR'); return { "success": false,"error": error.message }},'
@@ -230,7 +224,6 @@ const logMessage = `[${timestamp}] [${level}] ${message}`;  fs.appendFileSync(th
 
 }
 
-const systemChecks = [ { "command": 'df -h',"description": 'Disk Space Check',;'
 },{ "command": 'free -h',"description": 'Memory Usage Check','
 },{ "command": 'uptime',"description": 'System Uptime Check','
 } ]; for (const check of systemChecks) { const result = await this.runCommand(check.command,check.description,10000); if (result.success) { this.results.system.health = 'healthy'} } } async checkApplicationStatus() { this.log('📱 Checking Application Status');'
@@ -243,14 +236,12 @@ const packageJsonPath = path.join(this.projectRoot,'package.json'); if (fs.exist
 
 }
 
-const performanceChecks = [ { "command": 'npm run "perf":monitor',"description": 'Performance Monitoring','
 } ]; for (const check of performanceChecks) { const result = await this.runCommand(check.command,check.description,30000); if (result.success) { this.results.performance.metrics[check.description] = 'monitored'} }'
 
 const buildSize = this.getBuildSize(); this.results.performance.metrics.buildSize = buildSize; if (buildSize > 100 * 1024 * 1024) { this.results.performance.alerts.push({ "type": 'warning',"message": 'Build size is large (>100MB)',"value": `${Math.round(buildSize / (1024 * 1024))}MB` })},`} async checkSecurityStatus() { this.log('🔒 Checking Security Status');'
 
 }
 
-const securityChecks = [ { "command": 'npm audit --audit-level=moderate --json',"description": 'Security Audit',;'
 } ]; for (const check of securityChecks) { const result = await this.runCommand(check.command,check.description,30000); if (result.success) { try { const auditData = JSON.parse(result.output); this.results.security.vulnerabilities = auditData.metadata?.vulnerabilities?.total || 0; if (this.results.security.vulnerabilities > 0) { this.results.performance.alerts.push({ "type": 'error',"message": `${this.results.security.vulnerabilitie,`} security vulnerabilities found`,"value": this.results.security.vulnerabilities })},`} catch (error) { this.log('⚠️ Could not parse security audit results','WARN')} } }'
 
 const packageJsonPath = path.join(this.projectRoot,'package.json'); if (fs.existsSync(packageJsonPath)) { try { const packageJson = JSON.parse(fs.readFileSync(packageJsonPath,'utf8'));'
@@ -261,13 +252,11 @@ const devDependencies = Object.keys(packageJson.devDependencies || {}); this.res
 
 }
 
-const testChecks = [ { "command": 'npm test -- --passWithNoTests --silent',"description": 'Test Suite Check',;'
 } ]; for (const check of testChecks) { const result = await this.runCommand(check.command,check.description,60000); if (result.success) { this.results.application.testStatus = 'passed'} else { this.results.application.testStatus = 'failed'; this.results.performance.alerts.push({ "type": 'error',"message": 'Test suite failed',"value": 'failed' })} },'
 } async checkCodeQuality() { this.log('🔍 Checking Code Quality');'
 
 }
 
-const qualityChecks = [ { "command": 'npx eslint . --max-warnings 0 --quiet',"description": 'ESLint Quality Check',;'
 },{ "command": 'npx tsc --noEmit --skipLibCheck',"description": 'TypeScript Type Check','
 } ]; for (const check of qualityChecks) { const result = await this.runCommand(check.command,check.description,30000); if (!result.success) { this.results.performance.alerts.push({ "type": 'warning',"message": `${check.descriptio,`} failed`,"value": 'failed' })} },'
 } getBuildSize() { const buildDir = path.join(this.projectRoot,'.next'); if (fs.existsSync(buildDir)) { return this.getDirectorySize(buildDir)} return 0} getDirectorySize(dir) { let size = 0; try { const items = fs.readdirSync(dir); for (const item of items) { const fullPath = path.join(dir,item);'
@@ -295,52 +284,40 @@ const reportPath = this.generateReport(); this.log('🎉 Enhanced Monitoring Sys
 } ensureDirectories() { if (!fs.existsSync(this.reportsDir)) { fs.mkdirSync(this.reportsDir,{ "recursive": true })}
 } log(message,level = 'INFO') {;'
   }
-  const timestamp = new Date().toISOString();
 
-const logMessage = `[${timestamp}] [${level}] ${message}`;  fs.appendFileSync(this.logFile,logMessage + '\n')} async runCommand(command,description,timeout = 30000) { this.log(`🔍 "Monitoring": ${descriptio,;`}`); try { const result = execSync(command,{ "cwd": this.projectRoot,"encoding": 'utf8',"timeout": timeout,"maxBuffer": 1024 * 1024 * 5,'
 }); this.log(`✅ "Success": ${descriptio,`}`); return { "success": true,"output": result }} catch (error) { this.log(`❌ "Failed": ${description} - ${error.messag,`}`,'ERROR'); return { "success": false,"error": error.message }},'
 } async checkSystemHealth() { this.log('🖥️ Checking System Health');'
 
 }
 
-const systemChecks = [ { "command": 'df -h',"description": 'Disk Space Check',;'
 },{ "command": 'free -h',"description": 'Memory Usage Check','
 },{ "command": 'uptime',"description": 'System Uptime Check','
 } ];  } } async checkApplicationStatus() { this.log('📱 Checking Application Status');'
 
 }
 
-const buildDir = path.join(this.projectRoot,'.next'); if (fs.existsSync(buildDir)) { this.results.application.buildStatus = 'built'; this.log('✅ Build directory exists')} else { this.results.application.buildStatus = 'not_built'; this.log('⚠️ Build directory not found')}'
 
-const packageJsonPath = path.join(this.projectRoot,'package.json'); if (fs.existsSync(packageJsonPath)) { this.results.application.status = 'configured'; this.log('✅ Package.json exists')} else { this.results.application.status = 'not_configured'; this.log('❌ Package.json not found')} } async checkPerformanceMetrics() { this.log('⚡ Checking Performance Metrics');'
 
 }
 
-const performanceChecks = [ { "command": 'npm run "perf":monitor',"description": 'Performance Monitoring','
 } ];  }
 
-const buildSize = this.getBuildSize(); this.results.performance.metrics.buildSize = buildSize; if (buildSize > 100 * 1024 * 1024) { this.results.performance.alerts.push({ "type": 'warning',"message": 'Build size is large (>100MB)',"value": `${Math.round(buildSize / (1024 * 1024))}MB` })},`} async checkSecurityStatus() { this.log('🔒 Checking Security Status');'
 
 }
 
-const securityChecks = [ { "command": 'npm audit --audit-level=moderate --json',"description": 'Security Audit',;'
 } ];  security vulnerabilities found`,"value": this.results.security.vulnerabilities })},`} catch (error) { this.log('⚠️ Could not parse security audit results','WARN')} } }'
 
-const packageJsonPath = path.join(this.projectRoot,'package.json'); if (fs.existsSync(packageJsonPath)) { try { const packageJson = JSON.parse(fs.readFileSync(packageJsonPath,'utf8'));'
 
 }
 
-const devDependencies = Object.keys(packageJson.devDependencies || {}); this.results.security.outdatedPackages = dependencies.length + devDependencies.length} catch (error) { this.log('⚠️ Could not analyze package.json','WARN')} } } async checkTestStatus() { this.log('🧪 Checking Test Status');'
 
 }
 
-const testChecks = [ { "command": 'npm test -- --passWithNoTests --silent',"description": 'Test Suite Check',;'
 } ];  else { this.results.application.testStatus = 'failed'; this.results.performance.alerts.push({ "type": 'error',"message": 'Test suite failed',"value": 'failed' })} },'
 } async checkCodeQuality() { this.log('🔍 Checking Code Quality');'
 
 }
 
-const qualityChecks = [ { "command": 'npx eslint . --max-warnings 0 --quiet',"description": 'ESLint Quality Check',;'
 },{ "command": 'npx tsc --noEmit --skipLibCheck',"description": 'TypeScript Type Check','
 } ];  failed`,"value": 'failed' })} },'
 } getBuildSize() { const buildDir = path.join(this.projectRoot,'.next'); if (fs.existsSync(buildDir)) { return this.getDirectorySize(buildDir)} return 0} getDirectorySize(dir) { let size = 0; try { const items = fs.readdirSync(dir);  else { size += stat.size} } } catch (error) {} return size} calculateOverallHealth() { let healthScore = 100; if (this.results.application.buildStatus !== 'built') healthScore -= 20; if (this.results.application.testStatus === 'failed') healthScore -= 30; if (this.results.security.vulnerabilities > 0) healthScore -= 25; if (this.results.performance.alerts.length > 0) healthScore -= 15; this.results.overallHealth = { "score": Math.max(0,healthScore),"status": healthScore >= 80 ? 'healthy' : healthScore >= 60 ? 'warning' : 'critical',"timestamp": new Date().toISOString() ,'
@@ -348,207 +325,132 @@ const qualityChecks = [ { "command": 'npx eslint . --max-warnings 0 --quiet',"de
 
 }
 
-const reportPath = path.join(this.reportsDir,'monitoring-report.json'); fs.writeFileSync(reportPath,JSON.stringify(this.results,null,2)); this.log(`📊 Monitoring report "generated": ${reportPat,`}`); this.log('📊 Monitoring "Summary":'); this.log(` Overall "Health": ${this.results.overallHealth.status} (${this.results.overallHealth.scor,`}/100)`); this.log(` System "Health": ${this.results.system.healt,`}`); this.log(` Application "Status": ${this.results.application.statu,`}`); this.log(` Build "Status": ${this.results.application.buildStatu,`}`); this.log(` Test "Status": ${this.results.application.testStatu,`}`); this.log(` Security "Vulnerabilities": ${this.results.security.vulnerabilitie,`}`); this.log(` "Alerts": ${this.results.performance.alerts.lengt,`}`); return reportPath} async run() { this.log('🎯 Starting Enhanced Monitoring System'); try { await this.checkSystemHealth(); await this.checkApplicationStatus(); await this.checkPerformanceMetrics(); await this.checkSecurityStatus(); await this.checkTestStatus(); await this.checkCodeQuality();'
 
 }
 
-const reportPath = this.generateReport(); this.log('🎉 Enhanced Monitoring System Completed'); return { "success": true,reportPath,"results": this.results }} catch (error) { this.log(`💥 Monitoring "failed": ${error.messag,`}`,'ERROR'); return { "success": false,"error": error.message }} },'
 } if (require.main = == module) {;
   }
-  const monitoring = new EnhancedMonitoringSystem(); monitoring.run().then((result) => { process.exit(result.success ? 0 : 1)})} module.exports = EnhancedMonitoringSystem;
+=======
+#!/usr/bin/env node const { execSync } = const fs = const path = class EnhancedMonitoringSystem { constructor() { this.projectRoot = process.cwd(); this.reportsDir = path.join(this.projectRoot,'automation-reports'); this.logFile = path.join(this.reportsDir,'monitoring-system.log'); this.ensureDirectories(); this.results = { timestamp: new Date().toISOString(),system: { health: 'unknown',uptime: process.uptime(),memory: process.memoryUsage(),cpu: process.cpuUsage() },application: { status: 'unknown',buildStatus: 'unknown',testStatus: 'unknown' },performance: { metrics: {},alerts: [] },security: { vulnerabilities: 0,outdatedPackages: 0,securityScore: 0 } }} ensureDirectories() { if (!fs.existsSync(this.reportsDir)) { fs.mkdirSync(this.reportsDir,{ recursive: true })} } log(message,level = 'INFO') { const timestamp = new Date().toISOString(); const logMessage = `[${timestamp}] [${level}] ${message}`;  fs.appendFileSync(this.logFile,logMessage + '\n')} async runCommand(command,description,timeout = 30000) { this.log(`🔍 Monitoring: ${description}`); try { const result = execSync(command,{ cwd: this.projectRoot,encoding: 'utf8',timeout: timeout,maxBuffer: 1024 * 1024 * 5 }); this.log(`✅ Success: ${description}`); return { success: true,output: result }} catch (error) { this.log(`❌ Failed: ${description} - ${error.message}`,'ERROR'); return { success: false,error: error.message }} } async checkSystemHealth() { this.log('🖥️ Checking System Health'); const systemChecks = [ { command: 'df -h',description: 'Disk Space Check' },{ command: 'free -h',description: 'Memory Usage Check' },{ command: 'uptime',description: 'System Uptime Check' } ]; for (const check of systemChecks) { const result = await this.runCommand(check.command,check.description,10000); if (result.success) { this.results.system.health = 'healthy'} } } async checkApplicationStatus() { this.log('📱 Checking Application Status'); const buildDir = path.join(this.projectRoot,'.next'); if (fs.existsSync(buildDir)) { this.results.application.buildStatus = 'built'; this.log('✅ Build directory exists')} else { this.results.application.buildStatus = 'not_built'; this.log('⚠️ Build directory not found')} const packageJsonPath = path.join(this.projectRoot,'package.json'); if (fs.existsSync(packageJsonPath)) { this.results.application.status = 'configured'; this.log('✅ Package.json exists')} else { this.results.application.status = 'not_configured'; this.log('❌ Package.json not found')} } async checkPerformanceMetrics() { this.log('⚡ Checking Performance Metrics'); const performanceChecks = [ { command: 'npm run perf:monitor',description: 'Performance Monitoring' } ]; for (const check of performanceChecks) { const result = await this.runCommand(check.command,check.description,30000); if (result.success) { this.results.performance.metrics[check.description] = 'monitored'} } const buildSize = this.getBuildSize(); this.results.performance.metrics.buildSize = buildSize; if (buildSize > 100 * 1024 * 1024) { this.results.performance.alerts.push({ type: 'warning',message: 'Build size is large (>100MB)',value: `${Math.round(buildSize / (1024 * 1024))}MB` })} } async checkSecurityStatus() { this.log('🔒 Checking Security Status'); const securityChecks = [ { command: 'npm audit --audit-level=moderate --json',description: 'Security Audit' } ]; for (const check of securityChecks) { const result = await this.runCommand(check.command,check.description,30000); if (result.success) { try { const auditData = JSON.parse(result.output); this.results.security.vulnerabilities = auditData.metadata?.vulnerabilities?.total || 0; if (this.results.security.vulnerabilities > 0) { this.results.performance.alerts.push({ type: 'error',message: `${this.results.security.vulnerabilities} security vulnerabilities found`,value: this.results.security.vulnerabilities })} } catch (error) { this.log('⚠️ Could not parse security audit results','WARN')} } } const packageJsonPath = path.join(this.projectRoot,'package.json'); if (fs.existsSync(packageJsonPath)) { try { const packageJson = JSON.parse(fs.readFileSync(packageJsonPath,'utf8')); const dependencies = Object.keys(packageJson.dependencies || {}); const devDependencies = Object.keys(packageJson.devDependencies || {}); this.results.security.outdatedPackages = dependencies.length + devDependencies.length} catch (error) { this.log('⚠️ Could not analyze package.json','WARN')} } } async checkTestStatus() { this.log('🧪 Checking Test Status'); const testChecks = [ { command: 'npm test -- --passWithNoTests --silent',description: 'Test Suite Check' } ]; for (const check of testChecks) { const result = await this.runCommand(check.command,check.description,60000); if (result.success) { this.results.application.testStatus = 'passed'} else { this.results.application.testStatus = 'failed'; this.results.performance.alerts.push({ type: 'error',message: 'Test suite failed',value: 'failed' })} } } async checkCodeQuality() { this.log('🔍 Checking Code Quality'); const qualityChecks = [ { command: 'npx eslint . --max-warnings 0 --quiet',description: 'ESLint Quality Check' },{ command: 'npx tsc --noEmit --skipLibCheck',description: 'TypeScript Type Check' } ]; for (const check of qualityChecks) { const result = await this.runCommand(check.command,check.description,30000); if (!result.success) { this.results.performance.alerts.push({ type: 'warning',message: `${check.description} failed`,value: 'failed' })} } } getBuildSize() { const buildDir = path.join(this.projectRoot,'.next'); if (fs.existsSync(buildDir)) { return this.getDirectorySize(buildDir)} return 0} getDirectorySize(dir) { let size = 0; try { const items = fs.readdirSync(dir); for (const item of items) { const fullPath = path.join(dir,item); const stat = fs.statSync(fullPath); if (stat.isDirectory()) { size += this.getDirectorySize(fullPath)} else { size += stat.size} } } catch (error) { } return size} calculateOverallHealth() { let healthScore = 100; if (this.results.application.buildStatus !== 'built') healthScore -= 20; if (this.results.application.testStatus === 'failed') healthScore -= 30; if (this.results.security.vulnerabilities > 0) healthScore -= 25; if (this.results.performance.alerts.length > 0) healthScore -= 15; this.results.overallHealth = { score: Math.max(0,healthScore),status: healthScore >= 80 ? 'healthy' : healthScore >= 60 ? 'warning' : 'critical',timestamp: new Date().toISOString() }} generateReport() { this.calculateOverallHealth(); const reportPath = path.join(this.reportsDir,'monitoring-report.json'); fs.writeFileSync(reportPath,JSON.stringify(this.results,null,2)); this.log(`📊 Monitoring report generated: ${reportPath}`); this.log('📊 Monitoring Summary:'); this.log(` Overall Health: ${this.results.overallHealth.status} (${this.results.overallHealth.score}/100)`); this.log(` System Health: ${this.results.system.health}`); this.log(` Application Status: ${this.results.application.status}`); this.log(` Build Status: ${this.results.application.buildStatus}`); this.log(` Test Status: ${this.results.application.testStatus}`); this.log(` Security Vulnerabilities: ${this.results.security.vulnerabilities}`); this.log(` Alerts: ${this.results.performance.alerts.length}`); return reportPath} async run() { this.log('🎯 Starting Enhanced Monitoring System'); try { await this.checkSystemHealth(); await this.checkApplicationStatus(); await this.checkPerformanceMetrics(); await this.checkSecurityStatus(); await this.checkTestStatus(); await this.checkCodeQuality(); const reportPath = this.generateReport(); this.log('🎉 Enhanced Monitoring System Completed'); return { success: true,reportPath,results: this.results }} catch (error) { this.log(`💥 Monitoring failed: ${error.message}`,'ERROR'); return { success: false,error: error.message }} } } if (require.main === module) { const monitoring = new EnhancedMonitoringSystem(); monitoring.run().then(result => { process.exit(result.success ? 0 : 1)})} module.exports = EnhancedMonitoringSystem;
+#!/usr/bin/env node const { execSync } = const fs = const path = class EnhancedMonitoringSystem { constructor() { this.projectRoot = process.cwd(); this.reportsDir = path.join(this.projectRoot,'automation-reports'); this.logFile = path.join(this.reportsDir,'monitoring-system.log'); this.ensureDirectories(); this.results = { timestamp: new Date().toISOString(),system: { health: 'unknown',uptime: process.uptime(),memory: process.memoryUsage(),cpu: process.cpuUsage() },application: { status: 'unknown',buildStatus: 'unknown',testStatus: 'unknown' },performance: { metrics: {},alerts: [] },security: { vulnerabilities: 0,outdatedPackages: 0,securityScore: 0 } }} ensureDirectories() { if (!fs.existsSync(this.reportsDir)) { fs.mkdirSync(this.reportsDir,{ recursive: true })} } log(message,level = 'INFO') { const timestamp = new Date().toISOString(); const logMessage = `[${timestamp}] [${level}] ${message}`;  fs.appendFileSync(this.logFile,logMessage + '\n')} async runCommand(command,description,timeout = 30000) { this.log(`🔍 Monitoring: ${description}`); try { const result = execSync(command,{ cwd: this.projectRoot,encoding: 'utf8',timeout: timeout,maxBuffer: 1024 * 1024 * 5 }); this.log(`✅ Success: ${description}`); return { success: true,output: result }} catch (error) { this.log(`❌ Failed: ${description} - ${error.message}`,'ERROR'); return { success: false,error: error.message }} } async checkSystemHealth() { this.log('🖥️ Checking System Health'); const systemChecks = [ { command: 'df -h',description: 'Disk Space Check' },{ command: 'free -h',description: 'Memory Usage Check' },{ command: 'uptime',description: 'System Uptime Check' } ];  } } async checkApplicationStatus() { this.log('📱 Checking Application Status'); const buildDir = path.join(this.projectRoot,'.next'); if (fs.existsSync(buildDir)) { this.results.application.buildStatus = 'built'; this.log('✅ Build directory exists')} else { this.results.application.buildStatus = 'not_built'; this.log('⚠️ Build directory not found')} const packageJsonPath = path.join(this.projectRoot,'package.json'); if (fs.existsSync(packageJsonPath)) { this.results.application.status = 'configured'; this.log('✅ Package.json exists')} else { this.results.application.status = 'not_configured'; this.log('❌ Package.json not found')} } async checkPerformanceMetrics() { this.log('⚡ Checking Performance Metrics'); const performanceChecks = [ { command: 'npm run perf:monitor',description: 'Performance Monitoring' } ];  } const buildSize = this.getBuildSize(); this.results.performance.metrics.buildSize = buildSize; if (buildSize > 100 * 1024 * 1024) { this.results.performance.alerts.push({ type: 'warning',message: 'Build size is large (>100MB)',value: `${Math.round(buildSize / (1024 * 1024))}MB` })} } async checkSecurityStatus() { this.log('🔒 Checking Security Status'); const securityChecks = [ { command: 'npm audit --audit-level=moderate --json',description: 'Security Audit' } ];  security vulnerabilities found`,value: this.results.security.vulnerabilities })} } catch (error) { this.log('⚠️ Could not parse security audit results','WARN')} } } const packageJsonPath = path.join(this.projectRoot,'package.json'); if (fs.existsSync(packageJsonPath)) { try { const packageJson = JSON.parse(fs.readFileSync(packageJsonPath,'utf8')); const dependencies = Object.keys(packageJson.dependencies || {}); const devDependencies = Object.keys(packageJson.devDependencies || {}); this.results.security.outdatedPackages = dependencies.length + devDependencies.length} catch (error) { this.log('⚠️ Could not analyze package.json','WARN')} } } async checkTestStatus() { this.log('🧪 Checking Test Status'); const testChecks = [ { command: 'npm test -- --passWithNoTests --silent',description: 'Test Suite Check' } ];  else { this.results.application.testStatus = 'failed'; this.results.performance.alerts.push({ type: 'error',message: 'Test suite failed',value: 'failed' })} } } async checkCodeQuality() { this.log('🔍 Checking Code Quality'); const qualityChecks = [ { command: 'npx eslint . --max-warnings 0 --quiet',description: 'ESLint Quality Check' },{ command: 'npx tsc --noEmit --skipLibCheck',description: 'TypeScript Type Check' } ];  failed`,value: 'failed' })} } } getBuildSize() { const buildDir = path.join(this.projectRoot,'.next'); if (fs.existsSync(buildDir)) { return this.getDirectorySize(buildDir)} return 0} getDirectorySize(dir) { let size = 0; try { const items = fs.readdirSync(dir);  else { size += stat.size} } } catch (error) { } return size} calculateOverallHealth() { let healthScore = 100; if (this.results.application.buildStatus !== 'built') healthScore -= 20; if (this.results.application.testStatus === 'failed') healthScore -= 30; if (this.results.security.vulnerabilities > 0) healthScore -= 25; if (this.results.performance.alerts.length > 0) healthScore -= 15; this.results.overallHealth = { score: Math.max(0,healthScore),status: healthScore >= 80 ? 'healthy' : healthScore >= 60 ? 'warning' : 'critical',timestamp: new Date().toISOString() }} generateReport() { this.calculateOverallHealth(); const reportPath = path.join(this.reportsDir,'monitoring-report.json'); fs.writeFileSync(reportPath,JSON.stringify(this.results,null,2)); this.log(`📊 Monitoring report generated: ${reportPath}`); this.log('📊 Monitoring Summary:'); this.log(` Overall Health: ${this.results.overallHealth.status} (${this.results.overallHealth.score}/100)`); this.log(` System Health: ${this.results.system.health}`); this.log(` Application Status: ${this.results.application.status}`); this.log(` Build Status: ${this.results.application.buildStatus}`); this.log(` Test Status: ${this.results.application.testStatus}`); this.log(` Security Vulnerabilities: ${this.results.security.vulnerabilities}`); this.log(` Alerts: ${this.results.performance.alerts.length}`); return reportPath} async run() { this.log('🎯 Starting Enhanced Monitoring System'); try { await this.checkSystemHealth(); await this.checkApplicationStatus(); await this.checkPerformanceMetrics(); await this.checkSecurityStatus(); await this.checkTestStatus(); await this.checkCodeQuality(); const reportPath = this.generateReport(); this.log('🎉 Enhanced Monitoring System Completed'); return { success: true,reportPath,results: this.results }} catch (error) { this.log(`💥 Monitoring failed: ${error.message}`,'ERROR'); return { success: false,error: error.message }} } } if (require.main === module) { const monitoring = new EnhancedMonitoringSystem(); monitoring.run().then(result => { process.exit(result.success ? 0 : 1)})} module.exports = EnhancedMonitoringSystem;
+>>>>>>> origin/chore/fix-lint-and-merge
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
-#!/usr/bin/env node,
-const { execSync } = // // require('child_process');'
 
-const fs = // // require('fs');'
+#!/usr/bin/env node
 
-const path = // // require('path');'
-class EnhancedMonitoringSystem {
-  }
-  constructor() {
-    }
-    this.projectRoot = process.cwd();
-    this.reportsDir = path.join(this.projectRoot, 'automation-reports');'
-    this.logFile = path.join(this.reportsDir, 'monitoring-system.log');'
-    this.ensureDirectories();
-    this.results = {
-      "timestamp": new Date().toISOString(),"
-      "system": {"
-        }
-        "health": 'unknown','
-        "uptime": process.uptime(),"
-        "memory": process.memoryUsage(),"
-        "cpu": process.cpuUsage()"
-      },
-      "application": {"
-        }
-        "status": 'unknown','
-        "buildStatus": 'unknown','
-        "testStatus": 'unknown''
-      },
-      "performance": {"
-        }
-        "metrics":  
-},
-        "alerts": []"
-      },
-      "security": {"
-        }
-        "vulnerabilities": 0,
-        "outdatedPackages": 0,"
-        "securityScore": 0"
-      }
-    }}
-  ensureDirectories() {if (!fs.existsSync(this.reportsDir)) {fs.mkdirSync(this.reportsDir, { "recursive": true })}"
-  }
-  log(message, level = 'INFO') {const timestamp = new Date().toISOString(;'
-  }
-  const logMessage = `[${timestamp}] [${level}] ${message}`;`    console.log(logMessage)fs.appendFileSync(this.logFile, logMessage + '\n')}'
-  async runCommand(command, description, timeout = 30000) {this.log(`🔍 "Monitoring": ${description}`)try ;`  const result = execSync(command, {"cwd": this.projectRoot,"encoding": 'utf8',"timeout": timeout,"maxBuffer": 1024 * 1024 * 5 // 5MB buffer;"
-      })this.log(`✅ "Success": ${description}`)return { "success": true, "output": result }} catch (error) {this.log(`❌ "Failed": ${description} - ${error.message}`, 'ERROR')return { "success": false, "error": error.message }}"  }
-  async checkSystemHealth() {this.log('🖥️ Checking System Health')const systemChecks = [{"command": 'df -h',"description": 'Disk Space Check';'
-      },{"command": 'free -h',"description": 'Memory Usage Check';'
-      },{"command": 'uptime',"description": 'System Uptime Check';'
-      }
+#!/usr/bin/env node const { execSync } = const fs = const path = class EnhancedMonitoringSystem { constructor() { this && this.projectRoot = process && process.cwd(); this && this.reportsDir = path && path.join(this && this.projectRoot,'automation-reports'); this && this.logFile = path && path.join(this && this.reportsDir,'monitoring-system && system.log'); this && this.ensureDirectories(); this && this.results = { timestamp: new Date().toISOString(),system: { health: 'unknown',uptime: process && process.uptime(),memory: process && process.memoryUsage(),cpu: process && process.cpuUsage() },application: { status: 'unknown',buildStatus: 'unknown',testStatus: 'unknown' },performance: { metrics: {},alerts: [] },security: { vulnerabilities: 0,outdatedPackages: 0,securityScore: 0 } }} ensureDirectories() { if (!fs && fs.existsSync(this && this.reportsDir)) { fs && fs.mkdirSync(this && this.reportsDir,{ recursive: true })} } log(message,level = 'INFO') { const timestamp = new Date().toISOString(); const logMessage = `[${timestamp}] [${level}] ${message}`;  fs && fs.appendFileSync(this && this.logFile,logMessage + '\n')} async runCommand(command,description,timeout = 30000) { this && this.log(`🔍 Monitoring: ${description}`); try { const result = execSync(command,{ cwd: this && this.projectRoot,encoding: 'utf8',timeout: timeout,maxBuffer: 1024 * 1024 * 5 }); this && this.log(`✅ Success: ${description}`); return { success: true,output: result }} catch (error) { this && this.log(`❌ Failed: ${description} - ${error && error.message}`,'ERROR'); return { success: false,error: error && error.message }} } async checkSystemHealth() { this && this.log('🖥️ Checking System Health'); const systemChecks = [ { command: 'df -h',description: 'Disk Space Check' },{ command: 'free -h',description: 'Memory Usage Check' },{ command: 'uptime',description: 'System Uptime Check' } ]; for (const check of systemChecks) { const result = await this && this.runCommand(check && check.command,check && check.description,10000); if (result && result.success) { this && this.results.system && system.health = 'healthy'} } } async checkApplicationStatus() { this && this.log('📱 Checking Application Status'); const buildDir = path && path.join(this && this.projectRoot,'.next'); if (fs && fs.existsSync(buildDir)) { this && this.results.application && application.buildStatus = 'built'; this && this.log('✅ Build directory exists')} else { this && this.results.application && application.buildStatus = 'not_built'; this && this.log('⚠️ Build directory not found')} const packageJsonPath = path && path.join(this && this.projectRoot,'package && package.json'); if (fs && fs.existsSync(packageJsonPath)) { this && this.results.application && application.status = 'configured'; this && this.log('✅ Package && Package.json exists')} else { this && this.results.application && application.status = 'not_configured'; this && this.log('❌ Package && Package.json not found')} } async checkPerformanceMetrics() { this && this.log('⚡ Checking Performance Metrics'); const performanceChecks = [ { command: 'npm run perf:monitor',description: 'Performance Monitoring' } ]; for (const check of performanceChecks) { const result = await this && this.runCommand(check && check.command,check && check.description,30000); if (result && result.success) { this && this.results.performance && performance.metrics[check && check.description] = 'monitored'} } const buildSize = this && this.getBuildSize(); this && this.results.performance && performance.metrics.buildSize = buildSize; if (buildSize > 100 * 1024 * 1024) { this && this.results.performance && performance.alerts.push({ type: 'warning',message: 'Build size is large (>100MB)',value: `${Math && Math.round(buildSize / (1024 * 1024))}MB` })} } async checkSecurityStatus() { this && this.log('🔒 Checking Security Status'); const securityChecks = [ { command: 'npm audit --audit-level=moderate --json',description: 'Security Audit' } ]; for (const check of securityChecks) { const result = await this && this.runCommand(check && check.command,check && check.description,30000); if (result && result.success) { try { const auditData = JSON && JSON.parse(result && result.output); this && this.results.security && security.vulnerabilities = auditData && auditData.metadata?.vulnerabilities?.total || 0; if (this && this.results.security && security.vulnerabilities > 0) { this && this.results.performance && performance.alerts.push({ type: 'error',message: `${this && this.results.security && security.vulnerabilities} security vulnerabilities found`,value: this && this.results.security && security.vulnerabilities })} } catch (error) { this && this.log('⚠️ Could not parse security audit results','WARN')} } } const packageJsonPath = path && path.join(this && this.projectRoot,'package && package.json'); if (fs && fs.existsSync(packageJsonPath)) { try { const packageJson = JSON && JSON.parse(fs && fs.readFileSync(packageJsonPath,'utf8')); const dependencies = Object && Object.keys(packageJson && packageJson.dependencies || {}); const devDependencies = Object && Object.keys(packageJson && packageJson.devDependencies || {}); this && this.results.security && security.outdatedPackages = dependencies && dependencies.length + devDependencies && devDependencies.length} catch (error) { this && this.log('⚠️ Could not analyze package && package.json','WARN')} } } async checkTestStatus() { this && this.log('🧪 Checking Test Status'); const testChecks = [ { command: 'npm test -- --passWithNoTests --silent',description: 'Test Suite Check' } ]; for (const check of testChecks) { const result = await this && this.runCommand(check && check.command,check && check.description,60000); if (result && result.success) { this && this.results.application && application.testStatus = 'passed'} else { this && this.results.application && application.testStatus = 'failed'; this && this.results.performance && performance.alerts.push({ type: 'error',message: 'Test suite failed',value: 'failed' })} } } async checkCodeQuality() { this && this.log('🔍 Checking Code Quality'); const qualityChecks = [ { command: 'npx eslint . --max-warnings 0 --quiet',description: 'ESLint Quality Check' },{ command: 'npx tsc --noEmit --skipLibCheck',description: 'TypeScript Type Check' } ]; for (const check of qualityChecks) { const result = await this && this.runCommand(check && check.command,check && check.description,30000); if (!result && result.success) { this && this.results.performance && performance.alerts.push({ type: 'warning',message: `${check && check.description} failed`,value: 'failed' })} } } getBuildSize() { const buildDir = path && path.join(this && this.projectRoot,'.next'); if (fs && fs.existsSync(buildDir)) { return this && this.getDirectorySize(buildDir)} return 0} getDirectorySize(dir) { let size = 0; try { const items = fs && fs.readdirSync(dir); for (const item of items) { const fullPath = path && path.join(dir,item); const stat = fs && fs.statSync(fullPath); if (stat && stat.isDirectory()) { size += this && this.getDirectorySize(fullPath)} else { size += stat && stat.size} } } catch (error) { } return size} calculateOverallHealth() { let healthScore = 100; if (this && this.results.application && application.buildStatus !== 'built') healthScore -= 20; if (this && this.results.application && application.testStatus === 'failed') healthScore -= 30; if (this && this.results.security && security.vulnerabilities > 0) healthScore -= 25; if (this && this.results.performance && performance.alerts.length > 0) healthScore -= 15; this && this.results.overallHealth = { score: Math && Math.max(0,healthScore),status: healthScore >= 80 ? 'healthy' : healthScore >= 60 ? 'warning' : 'critical',timestamp: new Date().toISOString() }} generateReport() { this && this.calculateOverallHealth(); const reportPath = path && path.join(this && this.reportsDir,'monitoring-report && report.json'); fs && fs.writeFileSync(reportPath,JSON && JSON.stringify(this && this.results,null,2)); this && this.log(`📊 Monitoring report generated: ${reportPath}`); this && this.log('📊 Monitoring Summary:'); this && this.log(` Overall Health: ${this && this.results.overallHealth && overallHealth.status} (${this && this.results.overallHealth && overallHealth.score}/100)`); this && this.log(` System Health: ${this && this.results.system && system.health}`); this && this.log(` Application Status: ${this && this.results.application && application.status}`); this && this.log(` Build Status: ${this && this.results.application && application.buildStatus}`); this && this.log(` Test Status: ${this && this.results.application && application.testStatus}`); this && this.log(` Security Vulnerabilities: ${this && this.results.security && security.vulnerabilities}`); this && this.log(` Alerts: ${this && this.results.performance && performance.alerts.length}`); return reportPath} async run() { this && this.log('🎯 Starting Enhanced Monitoring System'); try { await this && this.checkSystemHealth(); await this && this.checkApplicationStatus(); await this && this.checkPerformanceMetrics(); await this && this.checkSecurityStatus(); await this && this.checkTestStatus(); await this && this.checkCodeQuality(); const reportPath = this && this.generateReport(); this && this.log('🎉 Enhanced Monitoring System Completed'); return { success: true,reportPath,results: this && this.results }} catch (error) { this && this.log(`💥 Monitoring failed: ${error && error.message}`,'ERROR'); return { success: false,error: error && error.message }} } } if (require && require.main === module) { const monitoring = new EnhancedMonitoringSystem(); monitoring && monitoring.run().then(result => { process && process.exit(result && result.success ? 0 : 1)})} module && module.exports = EnhancedMonitoringSystem;`;
+#!/usr/bin/env node const { execSync } = const fs = const path = class EnhancedMonitoringSystem { constructor() { this && this.projectRoot = process && process.cwd(); this && this.reportsDir = path && path.join(this && this.projectRoot,'automation-reports'); this && this.logFile = path && path.join(this && this.reportsDir,'monitoring-system && system.log'); this && this.ensureDirectories(); this && this.results = { timestamp: new Date().toISOString(),system: { health: 'unknown',uptime: process && process.uptime(),memory: process && process.memoryUsage(),cpu: process && process.cpuUsage() },application: { status: 'unknown',buildStatus: 'unknown',testStatus: 'unknown' },performance: { metrics: {},alerts: [] },security: { vulnerabilities: 0,outdatedPackages: 0,securityScore: 0 } }} ensureDirectories() { if (!fs && fs.existsSync(this && this.reportsDir)) { fs && fs.mkdirSync(this && this.reportsDir,{ recursive: true })} } log(message,level = 'INFO') { const timestamp = new Date().toISOString(); const logMessage = `[${timestamp}] [${level}] ${message}`;  fs && fs.appendFileSync(this && this.logFile,logMessage + '\n')} async runCommand(command,description,timeout = 30000) { this && this.log(`🔍 Monitoring: ${description}`); try { const result = execSync(command,{ cwd: this && this.projectRoot,encoding: 'utf8',timeout: timeout,maxBuffer: 1024 * 1024 * 5 }); this && this.log(`✅ Success: ${description}`); return { success: true,output: result }} catch (error) { this && this.log(`❌ Failed: ${description} - ${error && error.message}`,'ERROR'); return { success: false,error: error && error.message }} } async checkSystemHealth() { this && this.log('🖥️ Checking System Health'); const systemChecks = [ { command: 'df -h',description: 'Disk Space Check' },{ command: 'free -h',description: 'Memory Usage Check' },{ command: 'uptime',description: 'System Uptime Check' } ]; for (const check of systemChecks) { const result = await this && this.runCommand(check && check.command,check && check.description,10000); if (result && result.success) { this && this.results.system && system.health = 'healthy'} } } async checkApplicationStatus() { this && this.log('📱 Checking Application Status'); const buildDir = path && path.join(this && this.projectRoot,'.next'); if (fs && fs.existsSync(buildDir)) { this && this.results.application && application.buildStatus = 'built'; this && this.log('✅ Build directory exists')} else { this && this.results.application && application.buildStatus = 'not_built'; this && this.log('⚠️ Build directory not found')} const packageJsonPath = path && path.join(this && this.projectRoot,'package && package.json'); if (fs && fs.existsSync(packageJsonPath)) { this && this.results.application && application.status = 'configured'; this && this.log('✅ Package && Package.json exists')} else { this && this.results.application && application.status = 'not_configured'; this && this.log('❌ Package && Package.json not found')} } async checkPerformanceMetrics() { this && this.log('⚡ Checking Performance Metrics'); const performanceChecks = [ { command: 'npm run perf:monitor',description: 'Performance Monitoring' } ]; for (const check of performanceChecks) { const result = await this && this.runCommand(check && check.command,check && check.description,30000); if (result && result.success) { this && this.results.performance && performance.metrics[check && check.description] = 'monitored'} } const buildSize = this && this.getBuildSize(); this && this.results.performance && performance.metrics.buildSize = buildSize; if (buildSize > 100 * 1024 * 1024) { this && this.results.performance && performance.alerts.push({ type: 'warning',message: 'Build size is large (>100MB)',value: `${Math && Math.round(buildSize / (1024 * 1024))}MB` })} } async checkSecurityStatus() { this && this.log('🔒 Checking Security Status'); const securityChecks = [ { command: 'npm audit --audit-level=moderate --json',description: 'Security Audit' } ]; for (const check of securityChecks) { const result = await this && this.runCommand(check && check.command,check && check.description,30000); if (result && result.success) { try { const auditData = JSON && JSON.parse(result && result.output); this && this.results.security && security.vulnerabilities = auditData && auditData.metadata?.vulnerabilities?.total || 0; if (this && this.results.security && security.vulnerabilities > 0) { this && this.results.performance && performance.alerts.push({ type: 'error',message: `${this && this.results.security && security.vulnerabilities} security vulnerabilities found`,value: this && this.results.security && security.vulnerabilities })} } catch (error) { this && this.log('⚠️ Could not parse security audit results','WARN')} } } const packageJsonPath = path && path.join(this && this.projectRoot,'package && package.json'); if (fs && fs.existsSync(packageJsonPath)) { try { const packageJson = JSON && JSON.parse(fs && fs.readFileSync(packageJsonPath,'utf8')); const dependencies = Object && Object.keys(packageJson && packageJson.dependencies || {}); const devDependencies = Object && Object.keys(packageJson && packageJson.devDependencies || {}); this && this.results.security && security.outdatedPackages = dependencies && dependencies.length + devDependencies && devDependencies.length} catch (error) { this && this.log('⚠️ Could not analyze package && package.json','WARN')} } } async checkTestStatus() { this && this.log('🧪 Checking Test Status'); const testChecks = [ { command: 'npm test -- --passWithNoTests --silent',description: 'Test Suite Check' } ]; for (const check of testChecks) { const result = await this && this.runCommand(check && check.command,check && check.description,60000); if (result && result.success) { this && this.results.application && application.testStatus = 'passed'} else { this && this.results.application && application.testStatus = 'failed'; this && this.results.performance && performance.alerts.push({ type: 'error',message: 'Test suite failed',value: 'failed' })} } } async checkCodeQuality() { this && this.log('🔍 Checking Code Quality'); const qualityChecks = [ { command: 'npx eslint . --max-warnings 0 --quiet',description: 'ESLint Quality Check' },{ command: 'npx tsc --noEmit --skipLibCheck',description: 'TypeScript Type Check' } ]; for (const check of qualityChecks) { const result = await this && this.runCommand(check && check.command,check && check.description,30000); if (!result && result.success) { this && this.results.performance && performance.alerts.push({ type: 'warning',message: `${check && check.description} failed`,value: 'failed' })} } } getBuildSize() { const buildDir = path && path.join(this && this.projectRoot,'.next'); if (fs && fs.existsSync(buildDir)) { return this && this.getDirectorySize(buildDir)} return 0} getDirectorySize(dir) { let size = 0; try { const items = fs && fs.readdirSync(dir); for (const item of items) { const fullPath = path && path.join(dir,item); const stat = fs && fs.statSync(fullPath); if (stat && stat.isDirectory()) { size += this && this.getDirectorySize(fullPath)} else { size += stat && stat.size} } } catch (error) { } return size} calculateOverallHealth() { let healthScore = 100; if (this && this.results.application && application.buildStatus !== 'built') healthScore -= 20; if (this && this.results.application && application.testStatus === 'failed') healthScore -= 30; if (this && this.results.security && security.vulnerabilities > 0) healthScore -= 25; if (this && this.results.performance && performance.alerts.length > 0) healthScore -= 15; this && this.results.overallHealth = { score: Math && Math.max(0,healthScore),status: healthScore >= 80 ? 'healthy' : healthScore >= 60 ? 'warning' : 'critical',timestamp: new Date().toISOString() }} generateReport() { this && this.calculateOverallHealth(); const reportPath = path && path.join(this && this.reportsDir,'monitoring-report && report.json'); fs && fs.writeFileSync(reportPath,JSON && JSON.stringify(this && this.results,null,2)); this && this.log(`📊 Monitoring report generated: ${reportPath}`); this && this.log('📊 Monitoring Summary:'); this && this.log(` Overall Health: ${this && this.results.overallHealth && overallHealth.status} (${this && this.results.overallHealth && overallHealth.score}/100)`); this && this.log(` System Health: ${this && this.results.system && system.health}`); this && this.log(` Application Status: ${this && this.results.application && application.status}`); this && this.log(` Build Status: ${this && this.results.application && application.buildStatus}`); this && this.log(` Test Status: ${this && this.results.application && application.testStatus}`); this && this.log(` Security Vulnerabilities: ${this && this.results.security && security.vulnerabilities}`); this && this.log(` Alerts: ${this && this.results.performance && performance.alerts.length}`); return reportPath} async run() { this && this.log('🎯 Starting Enhanced Monitoring System'); try { await this && this.checkSystemHealth(); await this && this.checkApplicationStatus(); await this && this.checkPerformanceMetrics(); await this && this.checkSecurityStatus(); await this && this.checkTestStatus(); await this && this.checkCodeQuality(); const reportPath = this && this.generateReport(); this && this.log('🎉 Enhanced Monitoring System Completed'); return { success: true,reportPath,results: this && this.results }} catch (error) { this && this.log(`💥 Monitoring failed: ${error && error.message}`,'ERROR'); return { success: false,error: error && error.message }} } } if (require && require.main === module) { const monitoring = new EnhancedMonitoringSystem(); monitoring && monitoring.run().then(result => { process && process.exit(result && result.success ? 0 : 1)})} module && module.exports = EnhancedMonitoringSystem;
+ursor/fix-syntax-push-and-merge-to-main-40de;`;
+#!/usr/bin/env node const { execSync } = const fs = const path = class EnhancedMonitoringSystem { constructor() { this.projectRoot = process.cwd(); this.reportsDir = path.join(this.projectRoot,'automation-reports'); this.logFile = path.join(this.reportsDir,'monitoring-system.log'); this.ensureDirectories(); this.results = { timestamp: new Date().toISOString(),system: { health: 'unknown',uptime: process.uptime(),memory: process.memoryUsage(),cpu: process.cpuUsage() },application: { status: 'unknown',buildStatus: 'unknown',testStatus: 'unknown' },performance: { metrics: {},alerts: [] },security: { vulnerabilities: 0,outdatedPackages: 0,securityScore: 0 } }} ensureDirectories() { if (!fs.existsSync(this.reportsDir)) { fs.mkdirSync(this.reportsDir,{ recursive: true })} } log(message,level = 'INFO') { const timestamp = new Date().toISOString(); const logMessage = `[${timestamp}] [${level}] ${message}`;  fs.appendFileSync(this.logFile,logMessage + '\n')} async runCommand(command,description,timeout = 30000) { this.log(`🔍 Monitoring: ${description}`); try { const result = execSync(command,{ cwd: this.projectRoot,encoding: 'utf8',timeout: timeout,maxBuffer: 1024 * 1024 * 5 }); this.log(`✅ Success: ${description}`); return { success: true,output: result }} catch (error) { this.log(`❌ Failed: ${description} - ${error.message}`,'ERROR'); return { success: false,error: error.message }} } async checkSystemHealth() { this.log('🖥️ Checking System Health'); const systemChecks = [ { command: 'df -h',description: 'Disk Space Check' },{ command: 'free -h',description: 'Memory Usage Check' },{ command: 'uptime',description: 'System Uptime Check' } ]; for (const check of systemChecks) { const result = await this.runCommand(check.command,check.description,10000); if (result.success) { this.results.system.health = 'healthy'} } } async checkApplicationStatus() { this.log('📱 Checking Application Status'); const buildDir = path.join(this.projectRoot,'.next'); if (fs.existsSync(buildDir)) { this.results.application.buildStatus = 'built'; this.log('✅ Build directory exists')} else { this.results.application.buildStatus = 'not_built'; this.log('⚠️ Build directory not found')} const packageJsonPath = path.join(this.projectRoot,'package.json'); if (fs.existsSync(packageJsonPath)) { this.results.application.status = 'configured'; this.log('✅ Package.json exists')} else { this.results.application.status = 'not_configured'; this.log('❌ Package.json not found')} } async checkPerformanceMetrics() { this.log('⚡ Checking Performance Metrics'); const performanceChecks = [ { command: 'npm run perf:monitor',description: 'Performance Monitoring' } ]; for (const check of performanceChecks) { const result = await this.runCommand(check.command,check.description,30000); if (result.success) { this.results.performance.metrics[check.description] = 'monitored'} } const buildSize = this.getBuildSize(); this.results.performance.metrics.buildSize = buildSize; if (buildSize > 100 * 1024 * 1024) { this.results.performance.alerts.push({ type: 'warning',message: 'Build size is large (>100MB)',value: `${Math.round(buildSize / (1024 * 1024))}MB` })} } async checkSecurityStatus() { this.log('🔒 Checking Security Status'); const securityChecks = [ { command: 'npm audit --audit-level=moderate --json',description: 'Security Audit' } ]; for (const check of securityChecks) { const result = await this.runCommand(check.command,check.description,30000); if (result.success) { try { const auditData = JSON.parse(result.output); this.results.security.vulnerabilities = auditData.metadata?.vulnerabilities?.total || 0; if (this.results.security.vulnerabilities > 0) { this.results.performance.alerts.push({ type: 'error',message: `${this.results.security.vulnerabilities} security vulnerabilities found`,value: this.results.security.vulnerabilities })} } catch (error) { this.log('⚠️ Could not parse security audit results','WARN')} } } const packageJsonPath = path.join(this.projectRoot,'package.json'); if (fs.existsSync(packageJsonPath)) { try { const packageJson = JSON.parse(fs.readFileSync(packageJsonPath,'utf8')); const dependencies = Object.keys(packageJson.dependencies || {}); const devDependencies = Object.keys(packageJson.devDependencies || {}); this.results.security.outdatedPackages = dependencies.length + devDependencies.length} catch (error) { this.log('⚠️ Could not analyze package.json','WARN')} } } async checkTestStatus() { this.log('🧪 Checking Test Status'); const testChecks = [ { command: 'npm test -- --passWithNoTests --silent',description: 'Test Suite Check' } ]; for (const check of testChecks) { const result = await this.runCommand(check.command,check.description,60000); if (result.success) { this.results.application.testStatus = 'passed'} else { this.results.application.testStatus = 'failed'; this.results.performance.alerts.push({ type: 'error',message: 'Test suite failed',value: 'failed' })} } } async checkCodeQuality() { this.log('🔍 Checking Code Quality'); const qualityChecks = [ { command: 'npx eslint . --max-warnings 0 --quiet',description: 'ESLint Quality Check' },{ command: 'npx tsc --noEmit --skipLibCheck',description: 'TypeScript Type Check' } ]; for (const check of qualityChecks) { const result = await this.runCommand(check.command,check.description,30000); if (!result.success) { this.results.performance.alerts.push({ type: 'warning',message: `${check.description} failed`,value: 'failed' })} } } getBuildSize() { const buildDir = path.join(this.projectRoot,'.next'); if (fs.existsSync(buildDir)) { return this.getDirectorySize(buildDir)} return 0} getDirectorySize(dir) { let size = 0; try { const items = fs.readdirSync(dir); for (const item of items) { const fullPath = path.join(dir,item); const stat = fs.statSync(fullPath); if (stat.isDirectory()) { size += this.getDirectorySize(fullPath)} else { size += stat.size} } } catch (error) { } return size} calculateOverallHealth() { let healthScore = 100; if (this.results.application.buildStatus !== 'built') healthScore -= 20; if (this.results.application.testStatus === 'failed') healthScore -= 30; if (this.results.security.vulnerabilities > 0) healthScore -= 25; if (this.results.performance.alerts.length > 0) healthScore -= 15; this.results.overallHealth = { score: Math.max(0,healthScore),status: healthScore >= 80 ? 'healthy' : healthScore >= 60 ? 'warning' : 'critical',timestamp: new Date().toISOString() }} generateReport() { this.calculateOverallHealth(); const reportPath = path.join(this.reportsDir,'monitoring-report.json'); fs.writeFileSync(reportPath,JSON.stringify(this.results,null,2)); this.log(`📊 Monitoring report generated: ${reportPath}`); this.log('📊 Monitoring Summary:'); this.log(` Overall Health: ${this.results.overallHealth.status} (${this.results.overallHealth.score}/100)`); this.log(` System Health: ${this.results.system.health}`); this.log(` Application Status: ${this.results.application.status}`); this.log(` Build Status: ${this.results.application.buildStatus}`); this.log(` Test Status: ${this.results.application.testStatus}`); this.log(` Security Vulnerabilities: ${this.results.security.vulnerabilities}`); this.log(` Alerts: ${this.results.performance.alerts.length}`); return reportPath} async run() { this.log('🎯 Starting Enhanced Monitoring System'); try { await this.checkSystemHealth(); await this.checkApplicationStatus(); await this.checkPerformanceMetrics(); await this.checkSecurityStatus(); await this.checkTestStatus(); await this.checkCodeQuality(); const reportPath = this.generateReport(); this.log('🎉 Enhanced Monitoring System Completed'); return { success: true,reportPath,results: this.results }} catch (error) { this.log(`💥 Monitoring failed: ${error.message}`,'ERROR'); return { success: false,error: error.message }} } } if (require.main === module) { const monitoring = new EnhancedMonitoringSystem(); monitoring.run().then(result => { process.exit(result.success ? 0 : 1)})} module.exports = EnhancedMonitoringSystem;`;
+#!/usr/bin/env node const { execSync } = const fs = const path = class EnhancedMonitoringSystem { constructor() { this.projectRoot = process.cwd(); this.reportsDir = path.join(this.projectRoot,'automation-reports'); this.logFile = path.join(this.reportsDir,'monitoring-system.log'); this.ensureDirectories(); this.results = { timestamp: new Date().toISOString(),system: { health: 'unknown',uptime: process.uptime(),memory: process.memoryUsage(),cpu: process.cpuUsage() },application: { status: 'unknown',buildStatus: 'unknown',testStatus: 'unknown' },performance: { metrics: {},alerts: [] },security: { vulnerabilities: 0,outdatedPackages: 0,securityScore: 0 } }} ensureDirectories() { if (!fs.existsSync(this.reportsDir)) { fs.mkdirSync(this.reportsDir,{ recursive: true })} } log(message,level = 'INFO') { const timestamp = new Date().toISOString(); const logMessage = `[${timestamp}] [${level}] ${message}`;  fs.appendFileSync(this.logFile,logMessage + '\n')} async runCommand(command,description,timeout = 30000) { this.log(`🔍 Monitoring: ${description}`); try { const result = execSync(command,{ cwd: this.projectRoot,encoding: 'utf8',timeout: timeout,maxBuffer: 1024 * 1024 * 5 }); this.log(`✅ Success: ${description}`); return { success: true,output: result }} catch (error) { this.log(`❌ Failed: ${description} - ${error.message}`,'ERROR'); return { success: false,error: error.message }} } async checkSystemHealth() { this.log('🖥️ Checking System Health'); const systemChecks = [ { command: 'df -h',description: 'Disk Space Check' },{ command: 'free -h',description: 'Memory Usage Check' },{ command: 'uptime',description: 'System Uptime Check' } ];  } } async checkApplicationStatus() { this.log('📱 Checking Application Status'); const buildDir = path.join(this.projectRoot,'.next'); if (fs.existsSync(buildDir)) { this.results.application.buildStatus = 'built'; this.log('✅ Build directory exists')} else { this.results.application.buildStatus = 'not_built'; this.log('⚠️ Build directory not found')} const packageJsonPath = path.join(this.projectRoot,'package.json'); if (fs.existsSync(packageJsonPath)) { this.results.application.status = 'configured'; this.log('✅ Package.json exists')} else { this.results.application.status = 'not_configured'; this.log('❌ Package.json not found')} } async checkPerformanceMetrics() { this.log('⚡ Checking Performance Metrics'); const performanceChecks = [ { command: 'npm run perf:monitor',description: 'Performance Monitoring' } ];  } const buildSize = this.getBuildSize(); this.results.performance.metrics.buildSize = buildSize; if (buildSize > 100 * 1024 * 1024) { this.results.performance.alerts.push({ type: 'warning',message: 'Build size is large (>100MB)',value: `${Math.round(buildSize / (1024 * 1024))}MB` })} } async checkSecurityStatus() { this.log('🔒 Checking Security Status'); const securityChecks = [ { command: 'npm audit --audit-level=moderate --json',description: 'Security Audit' } ];  security vulnerabilities found`,value: this.results.security.vulnerabilities })} } catch (error) { this.log('⚠️ Could not parse security audit results','WARN')} } } const packageJsonPath = path.join(this.projectRoot,'package.json'); if (fs.existsSync(packageJsonPath)) { try { const packageJson = JSON.parse(fs.readFileSync(packageJsonPath,'utf8')); const dependencies = Object.keys(packageJson.dependencies || {}); const devDependencies = Object.keys(packageJson.devDependencies || {}); this.results.security.outdatedPackages = dependencies.length + devDependencies.length} catch (error) { this.log('⚠️ Could not analyze package.json','WARN')} } } async checkTestStatus() { this.log('🧪 Checking Test Status'); const testChecks = [ { command: 'npm test -- --passWithNoTests --silent',description: 'Test Suite Check' } ];  else { this.results.application.testStatus = 'failed'; this.results.performance.alerts.push({ type: 'error',message: 'Test suite failed',value: 'failed' })} } } async checkCodeQuality() { this.log('🔍 Checking Code Quality'); const qualityChecks = [ { command: 'npx eslint . --max-warnings 0 --quiet',description: 'ESLint Quality Check' },{ command: 'npx tsc --noEmit --skipLibCheck',description: 'TypeScript Type Check' } ];  failed`,value: 'failed' })} } } getBuildSize() { const buildDir = path.join(this.projectRoot,'.next'); if (fs.existsSync(buildDir)) { return this.getDirectorySize(buildDir)} return 0} getDirectorySize(dir) { let size = 0; try { const items = fs.readdirSync(dir);  else { size += stat.size} } } catch (error) { } return size} calculateOverallHealth() { let healthScore = 100; if (this.results.application.buildStatus !== 'built') healthScore -= 20; if (this.results.application.testStatus === 'failed') healthScore -= 30; if (this.results.security.vulnerabilities > 0) healthScore -= 25; if (this.results.performance.alerts.length > 0) healthScore -= 15; this.results.overallHealth = { score: Math.max(0,healthScore),status: healthScore >= 80 ? 'healthy' : healthScore >= 60 ? 'warning' : 'critical',timestamp: new Date().toISOString() }} generateReport() { this.calculateOverallHealth(); const reportPath = path.join(this.reportsDir,'monitoring-report.json'); fs.writeFileSync(reportPath,JSON.stringify(this.results,null,2)); this.log(`📊 Monitoring report generated: ${reportPath}`); this.log('📊 Monitoring Summary:'); this.log(` Overall Health: ${this.results.overallHealth.status} (${this.results.overallHealth.score}/100)`); this.log(` System Health: ${this.results.system.health}`); this.log(` Application Status: ${this.results.application.status}`); this.log(` Build Status: ${this.results.application.buildStatus}`); this.log(` Test Status: ${this.results.application.testStatus}`); this.log(` Security Vulnerabilities: ${this.results.security.vulnerabilities}`); this.log(` Alerts: ${this.results.performance.alerts.length}`); return reportPath} async run() { this.log('🎯 Starting Enhanced Monitoring System'); try { await this.checkSystemHealth(); await this.checkApplicationStatus(); await this.checkPerformanceMetrics(); await this.checkSecurityStatus(); await this.checkTestStatus(); await this.checkCodeQuality(); const reportPath = this.generateReport(); this.log('🎉 Enhanced Monitoring System Completed'); return { success: true,reportPath,results: this.results }} catch (error) { this.log(`💥 Monitoring failed: ${error.message}`,'ERROR'); return { success: false,error: error.message }} } } if (require.main === module) { const monitoring = new EnhancedMonitoringSystem(); monitoring.run().then(result => { process.exit(result.success ? 0 : 1)})} module.exports = EnhancedMonitoringSystem;
+origin/cursor/integrate-build-improve-and-re-verify-c7b5;
+#!/usr/bin/env node;
+const { execSync } = // // require('child_process');
+const fs = // // require('fs');
+
+const path = // // require('path');
+
+    const logMessage = `[${timestamp}] [${level}] ${message}`;
+    console.log(logMessage);'
+    fs.appendFileSync(this.logFile, logMessage + '\n')}
+
     ];
 
-const result = await this && this.runCommand(check && check.command, check && check.description, 10000)if (result && result.success) {this && this.results.system && system.health = 'healthy'}for (const check of systemChecks) ;'
-  const result = await this && this.runCommand(check && check.command, check && check.description, 10000);
-      if (result && result.success) {
-        }
-        this && this.results.system && system.health = 'healthy'}'
-
-      const result = await this && this.runCommand(check && check.command, check && check.description, 10000)
-  if($2) {
+      const result = await this && this.runCommand(check && check.command, check && check.description, 10000);
+      if (result && result.success) {'
         this && this.results.system && system.health = 'healthy'}
 
-    for (const check of systemChecks) {
-     ;
-  }
-  const result = await this.runCommand(check.command, check.description, 10000);
-      if (result.success) {
-        }
-        this.results.system.health = 'healthy'}'
-    
-origin/cursor/integrate-build-improve-and-re-verify-c7b5
+      const result = await this && this.runCommand(check && check.command, check && check.description, 10000);
+      if (result && result.success) {
+        this && this.results.system && system.health = 'healthy'}
+
+      const result = await this.runCommand(check.command, check.description, 10000);
+      if (result.success) {'
+        this.results.system.health = 'healthy'}
+
     }
+
   }
-  async checkApplicationStatus() {this.log('📱 Checking Application Status')// Check if build exists;'
+  async checkApplicationStatus() {'
+    this.log('📱 Checking Application Status');
 
-}
-
-const buildDir = path.join(this.projectRoot, '.next')if (fs.existsSync(buildDir)) {this.results.application.buildStatus = 'built';'
-      }
-      this.log('✅ Build directory exists')} else {this.results.application.buildStatus = 'not_built';'
-      }
-      this.log('⚠️ Build directory not found')}'
-    // Check package.json;
-
-const packageJsonPath = path.join(this.projectRoot, 'package.json')if (fs.existsSync(packageJsonPath)) {this.results.application.status = 'configured';'
-      }
-      this.log('✅ Package.json exists')} else {this.results.application.status = 'not_configured';'
-      }
-      this.log('❌ Package.json not found')}'
-  }
-  async checkPerformanceMetrics() {this.log('⚡ Checking Performance Metrics')const performanceChecks = [{"command": 'npm run "perf":monitor',"description": 'Performance Monitoring';'
+    this.log('⚡ Checking Performance Metrics');
+    const performanceChecks = [{'"
+        "command": 'npm run perf:monitor','"
+        "description": 'Performance Monitoring'
       }
     ];
 
-const result = await this && this.runCommand(check && check.command, check && check.description, 30000)if (result && result.success) {this && this.results.performance && performance.metrics[check && check.description] = 'monitored'}for (const check of performanceChecks) ;'
-  const result = await this && this.runCommand(check && check.command, check && check.description, 30000);
-      if (result && result.success) {
-        }
-        this && this.results.performance && performance.metrics[check && check.description] = 'monitored'}'
-
-    
-
-    for (const check of performanceChecks) {
-      }
       const result = await this.runCommand(check.command, check.description, 30000);
-      if (result.success) {
-        }
-        this.results.performance.metrics[check.description] = 'monitored'}'
-    
-origin/cursor/integrate-build-improve-and-re-verify-c7b5
+
+        this.results.performance.metrics[check.description] = 'monitored'}
+
     }
+
     // Calculate build size
 
-const buildSize = this.getBuildSize()this.results.performance.metrics.buildSize = buildSize;
+    const buildSize = this.getBuildSize();
+    this.results.performance.metrics.buildSize = buildSize;
     if (buildSize > 100 * 1024 * 1024) { // 100MB;
-      }
-      this.results.performance.alerts.push({"type": 'warning',"message": 'Build size is large (>100MB)',"value": `${Math.round(buildSize / (1024 * 1024))}MB`;`      })}
+      this.results.performance.alerts.push({'"
+        "type": 'warning','"
+        "message": 'Build size is large (>100MB)',"`
+        "value": `${Math.round(buildSize / (1024 * 1024))}MB`
+      })}
   }
-  async checkSecurityStatus() {this.log('🔒 Checking Security Status')const securityChecks = [{"command": 'npm audit --audit-level=moderate --json',"description": 'Security Audit';'
+  async checkSecurityStatus() {'
+
+    this.log('🔒 Checking Security Status');
+    const securityChecks = [{'"
+        "command": 'npm audit --audit-level=moderate --json','"
+        "description": 'Security Audit'
       }
-    ];security vulnerabilities found`,security vulnerabilities found`,origin/cursor/integrate-build-improve-and-re-verify-c7b5;`              "value": this.results.security.vulnerabilities"
-];
 
+    ];
 
-
-    ]
-      const result = await this.runCommand(check.command, check.description, 30000)
-  if($2) {
+      const result = await this.runCommand(check.command, check.description, 30000);
+      if (result.success) {
         try {
-          const auditData = JSON.parse(result.output)
-          this.results.security.vulnerabilities = auditData.metadata?.vulnerabilities?.total || 0
-  if($2) {
+          const auditData = JSON.parse(result.output);
+          this.results.security.vulnerabilities = auditData.metadata?.vulnerabilities?.total || 0;
+          if (this.results.security.vulnerabilities > 0) {
             this.results.performance.alerts.push({
               "type": 'error',
               "message": `${this.results.security.vulnerabilities} security vulnerabilities found`,
 
-     security vulnerabilities found`,`
-     security vulnerabilities found`,`origin/cursor/integrate-build-improve-and-re-verify-c7b5
-              "value": this.results.security.vulnerabilities"
+     security vulnerabilities found`,
+`
+     security vulnerabilities found`,
+
+              "value": this.results.security.vulnerabilities
+
             })}
-        } catch (error) {this.log('⚠️ Could not parse security audit results', 'WARN')}'
-      }
-    }
-    // Check for outdated packages;
 
-const packageJsonPath = path.join(this.projectRoot, 'package.json')if (fs.existsSync(packageJsonPath)) {try {const packageJson = JSON.parse(fs.readFileSync(packageJsonPath, 'utf8'))const dependencies = Object.keys(packageJson.dependencies || {})const devDependencies = Object.keys(packageJson.devDependencies || {})this.results.security.outdatedPackages = dependencies.length + devDependencies.length} catch (error) {this.log('⚠️ Could not analyze package.json', 'WARN')}'
-    }
-  }
-  async checkTestStatus() {this.log('🧪 Checking Test Status';'
-  }
-  const testChecks = [{"command": 'npm test -- --passWithNoTests --silent',"description": 'Test Suite Check';'
-      }
-    ];else {else {origin/cursor/integrate-build-improve-and-re-verify-c7b5
-];
+        const packageJson = JSON.parse(fs.readFileSync(packageJsonPath, 'utf8'));
+        const dependencies = Object.keys(packageJson.dependencies || {});
+        const devDependencies = Object.keys(packageJson.devDependencies || {});
+        this.results.security.outdatedPackages = dependencies.length + devDependencies.length} catch (error) {'
+        this.log('⚠️ Could not analyze package.json', 'WARN')}
 
-    this.log('🧪 Checking Test Status')
+    this.log('🧪 Checking Test Status');
     const testChecks = [{'"
         "command": 'npm test -- --passWithNoTests --silent','"
         "description": 'Test Suite Check'
       }
     ];
 
-
-
-     }
-
-
-
-
      else {
 
-     }
-
-     else {
-}
-origin/cursor/integrate-build-improve-and-re-verify-c7b5,
-this.results.application.testStatus = 'failed';'
-        this.results.performance.alerts.push({"type": 'error',"message": 'Test suite failed',"value": 'failed';'
+        this.results.application.testStatus = 'failed';
+        this.results.performance.alerts.push({'"
+          "type": 'error','"
+          "message": 'Test suite failed','"
+          "value": 'failed'
         })}
     }
   }
-  async checkCodeQuality() {this.log('🔍 Checking Code Quality')const qualityChecks = [{"command": 'npx eslint . --max-warnings 0 --quiet',"description": 'ESLint Quality Check';'
-      },{"command": 'npx tsc --noEmit --skipLibCheck',"description": 'TypeScript Type Check';'
-      }
-    ];failed`,failed`,"message": `${check && check.description} failed`,for (const check of qualityChecks) {const result = await this.runCommand(check.command, check.description, 30000)if (!result.success) {this.results.performance.alerts.push({"type": 'warning',"message": `${check.description} failed`,failed`,origin/cursor/integrate-build-improve-and-re-verify-c7b5;`          "value": 'failed''
-];
-
   async checkCodeQuality() {'
-    this.log('🔍 Checking Code Quality')
+    this.log('🔍 Checking Code Quality');
     const qualityChecks = [{'"
         "command": 'npx eslint . --max-warnings 0 --quiet','"
         "description": 'ESLint Quality Check'
@@ -560,90 +462,97 @@ this.results.application.testStatus = 'failed';'
       }
     ];
 
-     failed`,`
+     failed`,
 
+"message": `${check && check.description} failed`,
+     failed`,
+
+     failed`,
+        "description": 'TypeScript Type Check
+     failed`,
+
+     failed`,
+
+`
+     failed`,
+"`
+          "message": `${check && check.description} failed`,
+`
+     failed`,
+
+    for (const check of qualityChecks) {}
+
+<<<<<<< HEAD
      failed`,`
      failed`,`
           "message": `${check && check.description} failed`,`
      failed`,`
     for (const check of qualityChecks) {
       }
-      const result = await this.runCommand(check.command, check.description, 30000);
       if (!result.success) {
         }
         this.results.performance.alerts.push({
           "type": 'warning','
           "message": `${check.description} failed`,`     failed`,`origin/cursor/integrate-build-improve-and-re-verify-c7b5
           "value": 'failed''
+=======
+      const result = await this.runCommand(check.command, check.description, 30000);
+      if (!result.success) {}
+        this.results.performance.alerts.push({'"
+          "type": 'warning',"`
+          "message": `${check.description} failed`,`
+     failed`,
+
+          "value": 'failed'
+
+>>>>>>> origin/chore/fix-lint-and-merge
         })}
     }
   }
-  getBuildSize() {const buildDir = path.join(this.projectRoot, '.next')if (fs.existsSync(buildDir)) {return this.getDirectorySize(buildDir)}'
-   ;
-  return 0}
-  getDirectorySize(dir) {let size = 0;
-    }
-    try {const items = fs.readdirSync(dir)const items = fs.readdirSync(dir)for (const item of items) {const fullPath = path.join(dir, item;
-  }
-  const stat = fs.statSync(fullPath)if (stat.isDirectory()) {size += this.getDirectorySize(fullPath)} else {else {origin/cursor/integrate-build-improve-and-re-verify-c7b5;
-          }
-          size += stat.size}size += stat.size}
 
-const items = fs && fs.readdirSync(dir)for (const item of items) {const fullPath = path && path.join(dir, item;
-  }
-  const stat = fs && fs.statSync(fullPath)if (stat && stat.isDirectory()) {size += this && this.getDirectorySize(fullPath)} else {size += stat && stat.size}size += stat.size}
-  getDirectorySize(dir) {
-    }
+      return this.getDirectorySize(buildDir)}
+    return 0}
+  getDirectorySize(dir) {}
     let size = 0;
-    try {
-
-      }
-
-      const items = fs && fs.readdirSync(dir);
-      const items = fs.readdirSync(dir);
-      for (const item of items) {
-        }
-        const fullPath = path && path.join(dir, item);
-
-const stat = fs && fs.statSync(fullPath);
-        if (stat && stat.isDirectory()) {
-          }
-          size += this && this.getDirectorySize(fullPath)} else {
-          }
-          size += stat && stat.size}
 
           size += stat.size}
-      }
-    } catch (error) {// Skip directories that can't be read;'
-    }
-    return size}
-  calculateOverallHealth() {let healthScore = 100;
-    // Deduct points for issues;
-    }
-    if (this.results.application.buildStatus !== 'built') healthScore -= 20;'
-    if (this.results.application.testStatus === 'failed') healthScore -= 30;'
-    if (this.results.security.vulnerabilities > 0) healthScore -= 25;
-    if (this.results.performance.alerts.length > 0) healthScore -= 15;
-    this.results.overallHealth = {"score": Math.max(0, healthScore),"status": healthScore >= 80 ? 'healthy' : healthScore >= 60 ? 'warning' : 'critical',"timestamp": new Date().toISOString()}}"
-  generateReport() {this.calculateOverallHealth(;
-  }
-  const reportPath = path.join(this.reportsDir, 'monitoring-report.json')fs.writeFileSync(reportPath, JSON.stringify(this.results, null, 2))this.log(`📊 Monitoring report "generated": ${reportPath}`)// Generate summary;`    this.log('📊 Monitoring "Summary": ')this.log(`   Overall "Health": ${this.results.overallHealth.status} (${this.results.overallHealth.score}/100)`)this.log(`   System "Health": ${this.results.system.health}`)this.log(`   Application "Status": ${this.results.application.status}`)this.log(`   Build "Status": ${this.results.application.buildStatus}`)this.log(`   Test "Status": ${this.results.application.testStatus}`)this.log(`   Security "Vulnerabilities": ${this.results.security.vulnerabilities}`)this.log(`   "Alerts": ${this.results.performance.alerts.length}`)return reportPat,`}
-  async run() {this.log('🎯 Starting Enhanced Monitoring System')try {await this.checkSystemHealth()await this.checkApplicationStatus()await this.checkPerformanceMetrics()await this.checkSecurityStatus()await this.checkTestStatus()await this.checkCodeQuality()const reportPath = this.generateReport()this.log('🎉 Enhanced Monitoring System Completed';'
-  }
-  return {"success": true,reportPath,"results": this.results;"
-      }} catch (error) {this.log(`💥 Monitoring "failed": ${error.message}`, 'ERROR')return {"success": false,"error": error.message;"      }}
-  }origin/cursor/integrate-build-improve-and-re-verify-c7b5;
-}// Run if called directly;
-if (require.main = == module) {const monitoring  = new EnhancedMonitoringSystem()monitoring.run().then((result) => {process.exit(result.success ? 0 : 1)})}
-  }
-}
 
-// Run if called directly,
-if (require.main === module) {
- ;
+      const items = fs && fs.readdirSync(dir);
+      for (const item of items) {}
+        const fullPath = path && path.join(dir, item);
+        const stat = fs && fs.statSync(fullPath);
+
+          size += stat && stat.size}
+
+      }
+
+    return size}
+  calculateOverallHealth() {}
+    let healthScore = 100;
+
+      await this.checkSystemHealth();
+      await this.checkApplicationStatus();
+      await this.checkPerformanceMetrics();
+      await this.checkSecurityStatus();
+      await this.checkTestStatus();
+      await this.checkCodeQuality();
+      const reportPath = this.generateReport();'
+      this.log('🎉 Enhanced Monitoring System Completed');
+
+      this.log(`💥 Monitoring "failed": ${error.message}`, 'ERROR');
+      return {"
+        "success": false,"
+        "error": error.message;
+      }}
   }
+
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+// Run if called directly
+// Run if called directly;
+if (require.main === module) {
   const monitoring = new EnhancedMonitoringSystem();
 
+<<<<<<< HEAD
 #!/usr/bin/env node const { execSync } = const fs = const path = class EnhancedMonitoringSystem { constructor() { this.projectRoot = process.cwd(); this.reportsDir = path.join(this.projectRoot,'automation-reports'); this.logFile = path.join(this.reportsDir,'monitoring-system.log'); this.ensureDirectories(); this.results = { "timestamp": new Date().toISOString(),"system": { "health": 'unknown',"uptime": process.uptime(),"memory": process.memoryUsage(),"cpu": process.cpuUsage(),'
 },"application": { "status": 'unknown',"buildStatus": 'unknown',"testStatus": 'unknown','
 },"performance": { "metrics": 
@@ -652,52 +561,44 @@ if (require.main === module) {
 } ensureDirectories() { if (!fs.existsSync(this.reportsDir)) { fs.mkdirSync(this.reportsDir,{ "recursive": true })}
 } log(message,level = 'INFO') {;'
   }
-  const timestamp = new Date().toISOString();
+=======
+// Run if called directly
+>>>>>>> origin/chore/fix-lint-and-merge
 
-const logMessage = `[${timestamp}] [${level}] ${message}`; console.log(logMessage); fs.appendFileSync(this.logFile,logMessage + '\n')} async runCommand(command,description,timeout = 30000) { this.log(`🔍 "Monitoring": ${descriptio,;`}`); try { const result = execSync(command,{ "cwd": this.projectRoot,"encoding": 'utf8',"timeout": timeout,"maxBuffer": 1024 * 1024 * 5,'
-}); this.log(`✅ "Success": ${descriptio,`}`); return { "success": true,"output": result }} catch (error) { this.log(`❌ "Failed": ${description} - ${error.messag,`}`,'ERROR'); return { "success": false,"error": error.message }},'
-} async checkSystemHealth() { this.log('🖥️ Checking System Health');'
+if (require.main === module) {
+  const monitoring = new EnhancedMonitoringSystem();
 
+<<<<<<< HEAD
 }
 
-const systemChecks = [ { "command": 'df -h',"description": 'Disk Space Check',;'
 },{ "command": 'free -h',"description": 'Memory Usage Check','
 },{ "command": 'uptime',"description": 'System Uptime Check','
 } ];  } } async checkApplicationStatus() { this.log('📱 Checking Application Status');'
 
 }
 
-const buildDir = path.join(this.projectRoot,'.next'); if (fs.existsSync(buildDir)) { this.results.application.buildStatus = 'built'; this.log('✅ Build directory exists')} else { this.results.application.buildStatus = 'not_built'; this.log('⚠️ Build directory not found')}'
 
-const packageJsonPath = path.join(this.projectRoot,'package.json'); if (fs.existsSync(packageJsonPath)) { this.results.application.status = 'configured'; this.log('✅ Package.json exists')} else { this.results.application.status = 'not_configured'; this.log('❌ Package.json not found')} } async checkPerformanceMetrics() { this.log('⚡ Checking Performance Metrics');'
 
 }
 
-const performanceChecks = [ { "command": 'npm run "perf":monitor',"description": 'Performance Monitoring','
 } ];  }
 
-const buildSize = this.getBuildSize(); this.results.performance.metrics.buildSize = buildSize; if (buildSize > 100 * 1024 * 1024) { this.results.performance.alerts.push({ "type": 'warning',"message": 'Build size is large (>100MB)',"value": `${Math.round(buildSize / (1024 * 1024))}MB` })},`} async checkSecurityStatus() { this.log('🔒 Checking Security Status');'
 
 }
 
-const securityChecks = [ { "command": 'npm audit --audit-level=moderate --json',"description": 'Security Audit',;'
 } ];  security vulnerabilities found`,"value": this.results.security.vulnerabilities })},`} catch (error) { this.log('⚠️ Could not parse security audit results','WARN')} } }'
 
-const packageJsonPath = path.join(this.projectRoot,'package.json'); if (fs.existsSync(packageJsonPath)) { try { const packageJson = JSON.parse(fs.readFileSync(packageJsonPath,'utf8'));'
 
 }
 
-const devDependencies = Object.keys(packageJson.devDependencies || {}); this.results.security.outdatedPackages = dependencies.length + devDependencies.length} catch (error) { this.log('⚠️ Could not analyze package.json','WARN')} } } async checkTestStatus() { this.log('🧪 Checking Test Status');'
 
 }
 
-const testChecks = [ { "command": 'npm test -- --passWithNoTests --silent',"description": 'Test Suite Check',;'
 } ];  else { this.results.application.testStatus = 'failed'; this.results.performance.alerts.push({ "type": 'error',"message": 'Test suite failed',"value": 'failed' })} },'
 } async checkCodeQuality() { this.log('🔍 Checking Code Quality');'
 
 }
 
-const qualityChecks = [ { "command": 'npx eslint . --max-warnings 0 --quiet',"description": 'ESLint Quality Check',;'
 },{ "command": 'npx tsc --noEmit --skipLibCheck',"description": 'TypeScript Type Check','
 } ];  failed`,"value": 'failed' })} },'
 } getBuildSize() { const buildDir = path.join(this.projectRoot,'.next'); if (fs.existsSync(buildDir)) { return this.getDirectorySize(buildDir)} return 0} getDirectorySize(dir) { let size = 0; try { const items = fs.readdirSync(dir);  else { size += stat.size} } } catch (error) {} return size} calculateOverallHealth() { let healthScore = 100; if (this.results.application.buildStatus !== 'built') healthScore -= 20; if (this.results.application.testStatus === 'failed') healthScore -= 30; if (this.results.security.vulnerabilities > 0) healthScore -= 25; if (this.results.performance.alerts.length > 0) healthScore -= 15; this.results.overallHealth = { "score": Math.max(0,healthScore),"status": healthScore >= 80 ? 'healthy' : healthScore >= 60 ? 'warning' : 'critical',"timestamp": new Date().toISOString() ,'
@@ -705,14 +606,11 @@ const qualityChecks = [ { "command": 'npx eslint . --max-warnings 0 --quiet',"de
 
 }
 
-const reportPath = path.join(this.reportsDir,'monitoring-report.json'); fs.writeFileSync(reportPath,JSON.stringify(this.results,null,2)); this.log(`📊 Monitoring report "generated": ${reportPat,`}`); this.log('📊 Monitoring "Summary":'); this.log(` Overall "Health": ${this.results.overallHealth.status} (${this.results.overallHealth.scor,`}/100)`); this.log(` System "Health": ${this.results.system.healt,`}`); this.log(` Application "Status": ${this.results.application.statu,`}`); this.log(` Build "Status": ${this.results.application.buildStatu,`}`); this.log(` Test "Status": ${this.results.application.testStatu,`}`); this.log(` Security "Vulnerabilities": ${this.results.security.vulnerabilitie,`}`); this.log(` "Alerts": ${this.results.performance.alerts.lengt,`}`); return reportPath} async run() { this.log('🎯 Starting Enhanced Monitoring System'); try { await this.checkSystemHealth(); await this.checkApplicationStatus(); await this.checkPerformanceMetrics(); await this.checkSecurityStatus(); await this.checkTestStatus(); await this.checkCodeQuality();'
 
 }
 
-const reportPath = this.generateReport(); this.log('🎉 Enhanced Monitoring System Completed'); return { "success": true,reportPath,"results": this.results }} catch (error) { this.log(`💥 Monitoring "failed": ${error.messag,`}`,'ERROR'); return { "success": false,"error": error.message }} },'
 } if (require.main = == module) {;
   }
-  const monitoring = new EnhancedMonitoringSystem(); monitoring.run().then((result) => { process.exit(result.success ? 0 : 1)})} module.exports = EnhancedMonitoringSystem;
 #!/usr/bin/env node const { execSync } = const fs = const path = class EnhancedMonitoringSystem { constructor() { this.projectRoot = process.cwd(); this.reportsDir = path.join(this.projectRoot,'automation-reports'); this.logFile = path.join(this.reportsDir,'monitoring-system.log'); this.ensureDirectories(); this.results = { "timestamp": new Date().toISOString(),"system": { "health": 'unknown',"uptime": process.uptime(),"memory": process.memoryUsage(),"cpu": process.cpuUsage(),'
 },"application": { "status": 'unknown',"buildStatus": 'unknown',"testStatus": 'unknown','
 },"performance": { "metrics": 
@@ -721,52 +619,40 @@ const reportPath = this.generateReport(); this.log('🎉 Enhanced Monitoring Sys
 } ensureDirectories() { if (!fs.existsSync(this.reportsDir)) { fs.mkdirSync(this.reportsDir,{ "recursive": true })}
 } log(message,level = 'INFO') {;'
   }
-  const timestamp = new Date().toISOString();
 
-const logMessage = `[${timestamp}] [${level}] ${message}`; console.log(logMessage); fs.appendFileSync(this.logFile,logMessage + '\n')} async runCommand(command,description,timeout = 30000) { this.log(`🔍 "Monitoring": ${descriptio,;`}`); try { const result = execSync(command,{ "cwd": this.projectRoot,"encoding": 'utf8',"timeout": timeout,"maxBuffer": 1024 * 1024 * 5,'
 }); this.log(`✅ "Success": ${descriptio,`}`); return { "success": true,"output": result }} catch (error) { this.log(`❌ "Failed": ${description} - ${error.messag,`}`,'ERROR'); return { "success": false,"error": error.message }},'
 } async checkSystemHealth() { this.log('🖥️ Checking System Health');'
 
 }
 
-const systemChecks = [ { "command": 'df -h',"description": 'Disk Space Check',;'
 },{ "command": 'free -h',"description": 'Memory Usage Check','
 },{ "command": 'uptime',"description": 'System Uptime Check','
 } ];  } } async checkApplicationStatus() { this.log('📱 Checking Application Status');'
 
 }
 
-const buildDir = path.join(this.projectRoot,'.next'); if (fs.existsSync(buildDir)) { this.results.application.buildStatus = 'built'; this.log('✅ Build directory exists')} else { this.results.application.buildStatus = 'not_built'; this.log('⚠️ Build directory not found')}'
 
-const packageJsonPath = path.join(this.projectRoot,'package.json'); if (fs.existsSync(packageJsonPath)) { this.results.application.status = 'configured'; this.log('✅ Package.json exists')} else { this.results.application.status = 'not_configured'; this.log('❌ Package.json not found')} } async checkPerformanceMetrics() { this.log('⚡ Checking Performance Metrics');'
 
 }
 
-const performanceChecks = [ { "command": 'npm run "perf":monitor',"description": 'Performance Monitoring','
 } ];  }
 
-const buildSize = this.getBuildSize(); this.results.performance.metrics.buildSize = buildSize; if (buildSize > 100 * 1024 * 1024) { this.results.performance.alerts.push({ "type": 'warning',"message": 'Build size is large (>100MB)',"value": `${Math.round(buildSize / (1024 * 1024))}MB` })},`} async checkSecurityStatus() { this.log('🔒 Checking Security Status');'
 
 }
 
-const securityChecks = [ { "command": 'npm audit --audit-level=moderate --json',"description": 'Security Audit',;'
 } ];  security vulnerabilities found`,"value": this.results.security.vulnerabilities })},`} catch (error) { this.log('⚠️ Could not parse security audit results','WARN')} } }'
 
-const packageJsonPath = path.join(this.projectRoot,'package.json'); if (fs.existsSync(packageJsonPath)) { try { const packageJson = JSON.parse(fs.readFileSync(packageJsonPath,'utf8'));'
 
 }
 
-const devDependencies = Object.keys(packageJson.devDependencies || {}); this.results.security.outdatedPackages = dependencies.length + devDependencies.length} catch (error) { this.log('⚠️ Could not analyze package.json','WARN')} } } async checkTestStatus() { this.log('🧪 Checking Test Status');'
 
 }
 
-const testChecks = [ { "command": 'npm test -- --passWithNoTests --silent',"description": 'Test Suite Check',;'
 } ];  else { this.results.application.testStatus = 'failed'; this.results.performance.alerts.push({ "type": 'error',"message": 'Test suite failed',"value": 'failed' })} },'
 } async checkCodeQuality() { this.log('🔍 Checking Code Quality');'
 
 }
 
-const qualityChecks = [ { "command": 'npx eslint . --max-warnings 0 --quiet',"description": 'ESLint Quality Check',;'
 },{ "command": 'npx tsc --noEmit --skipLibCheck',"description": 'TypeScript Type Check','
 } ];  failed`,"value": 'failed' })} },'
 } getBuildSize() { const buildDir = path.join(this.projectRoot,'.next'); if (fs.existsSync(buildDir)) { return this.getDirectorySize(buildDir)} return 0} getDirectorySize(dir) { let size = 0; try { const items = fs.readdirSync(dir);  else { size += stat.size} } } catch (error) {} return size} calculateOverallHealth() { let healthScore = 100; if (this.results.application.buildStatus !== 'built') healthScore -= 20; if (this.results.application.testStatus === 'failed') healthScore -= 30; if (this.results.security.vulnerabilities > 0) healthScore -= 25; if (this.results.performance.alerts.length > 0) healthScore -= 15; this.results.overallHealth = { "score": Math.max(0,healthScore),"status": healthScore >= 80 ? 'healthy' : healthScore >= 60 ? 'warning' : 'critical',"timestamp": new Date().toISOString() ,'
@@ -774,14 +660,11 @@ const qualityChecks = [ { "command": 'npx eslint . --max-warnings 0 --quiet',"de
 
 }
 
-const reportPath = path.join(this.reportsDir,'monitoring-report.json'); fs.writeFileSync(reportPath,JSON.stringify(this.results,null,2)); this.log(`📊 Monitoring report "generated": ${reportPat,`}`); this.log('📊 Monitoring "Summary":'); this.log(` Overall "Health": ${this.results.overallHealth.status} (${this.results.overallHealth.scor,`}/100)`); this.log(` System "Health": ${this.results.system.healt,`}`); this.log(` Application "Status": ${this.results.application.statu,`}`); this.log(` Build "Status": ${this.results.application.buildStatu,`}`); this.log(` Test "Status": ${this.results.application.testStatu,`}`); this.log(` Security "Vulnerabilities": ${this.results.security.vulnerabilitie,`}`); this.log(` "Alerts": ${this.results.performance.alerts.lengt,`}`); return reportPath} async run() { this.log('🎯 Starting Enhanced Monitoring System'); try { await this.checkSystemHealth(); await this.checkApplicationStatus(); await this.checkPerformanceMetrics(); await this.checkSecurityStatus(); await this.checkTestStatus(); await this.checkCodeQuality();'
 
 }
 
-const reportPath = this.generateReport(); this.log('🎉 Enhanced Monitoring System Completed'); return { "success": true,reportPath,"results": this.results }} catch (error) { this.log(`💥 Monitoring "failed": ${error.messag,`}`,'ERROR'); return { "success": false,"error": error.message }} },'
 } if (require.main = == module) {;
   }
-  const monitoring = new EnhancedMonitoringSystem(); monitoring.run().then((result) => { process.exit(result.success ? 0 : 1)})} module.exports = EnhancedMonitoringSystem;
 
   monitoring.run().then((result) => {
     }
@@ -799,20 +682,15 @@ const logMessage = `[${timestamp}] [${level}] ${message}`; console.log(logMessag
 return { "success": false,"error": error.message }},;
 } async checkSystemHealth() { this.log('🖥️ Checking System Health';'
 }
-const systemChecks = [ { "command": 'df -h',"description": 'Disk Space Check',;'
 },{ "command": 'free -h',"description": 'Memory Usage Check','
 },{ "command": 'uptime',"description": 'System Uptime Check','
 } ];  } } async checkApplicationStatus() { this.log('📱 Checking Application Status')const buildDir = path.join(this.projectRoot,'.next')if (fs.existsSync(buildDir)) { this.results.application.buildStatus = 'built'; this.log('✅ Build directory exists')} else { this.results.application.buildStatus = 'not_built'; this.log('⚠️ Build directory not found')}'
 
-const packageJsonPath = path.join(this.projectRoot,'package.json')if (fs.existsSync(packageJsonPath)) { this.results.application.status = 'configured'; this.log('✅ Package.json exists')} else { this.results.application.status = 'not_configured'; this.log('❌ Package.json not found')} } async checkPerformanceMetrics() { this.log('⚡ Checking Performance Metrics')const performanceChecks = [ { "command": 'npm run "perf":monitor',"description": 'Performance Monitoring','
 } ];  }
 
-const buildSize = this.getBuildSize()this.results.performance.metrics.buildSize = buildSize; if (buildSize > 100 * 1024 * 1024) { this.results.performance.alerts.push({ "type": 'warning',"message": 'Build size is large (>100MB)',"value": `${Math.round(buildSize / (1024 * 1024))}MB` })},`} async checkSecurityStatus() { this.log('🔒 Checking Security Status')const securityChecks = [ { "command": 'npm audit --audit-level=moderate --json',"description": 'Security Audit','
 } ];  security vulnerabilities found`,"value": this.results.security.vulnerabilities })},`} catch (error) { this.log('⚠️ Could not parse security audit results','WARN')} } }'
 
-const packageJsonPath = path.join(this.projectRoot,'package.json')if (fs.existsSync(packageJsonPath)) { try { const packageJson = JSON.parse(fs.readFileSync(packageJsonPath,'utf8'))const dependencies = Object.keys(packageJson.dependencies || {})const devDependencies = Object.keys(packageJson.devDependencies || {})this.results.security.outdatedPackages = dependencies.length + devDependencies.length} catch (error) { this.log('⚠️ Could not analyze package.json','WARN')} } } async checkTestStatus() { this.log('🧪 Checking Test Status';'
 }
-const testChecks = [ { "command": 'npm test -- --passWithNoTests --silent',"description": 'Test Suite Check',;'
 } ];  else { this.results.application.testStatus = 'failed'; this.results.performance.alerts.push({ "type": 'error',"message": 'Test suite failed',"value": 'failed' })} },'
 } async checkCodeQuality() { this.log('🔍 Checking Code Quality')const qualityChecks = [ { "command": 'npx eslint . --max-warnings 0 --quiet',"description": 'ESLint Quality Check','
 },{ "command": 'npx tsc --noEmit --skipLibCheck',"description": 'TypeScript Type Check','
@@ -824,7 +702,6 @@ const testChecks = [ { "command": 'npm test -- --passWithNoTests --silent',"desc
 return { "success": false,"error": error.message }} },;
 } if (require.main === module) {;
   }
-  const monitoring = new EnhancedMonitoringSystem()monitoring.run().then((result) => { process.exit(result.success ? 0 : 1)})} module.exports = EnhancedMonitoringSystem;
 #!/usr/bin/env node const { execSync } = const fs = const path = class EnhancedMonitoringSystem { constructor() { this.projectRoot = process.cwd()this.reportsDir = path.join(this.projectRoot,'automation-reports')this.logFile = path.join(this.reportsDir,'monitoring-system.log')this.ensureDirectories()this.results = { "timestamp": new Date().toISOString(),"system": { "health": 'unknown',"uptime": process.uptime(),"memory": process.memoryUsage(),"cpu": process.cpuUsage(),'
 },"application": { "status": 'unknown',"buildStatus": 'unknown',"testStatus": 'unknown','
 },"performance": { "metrics": 
@@ -833,24 +710,18 @@ return { "success": false,"error": error.message }} },;
 } ensureDirectories() { if (!fs.existsSync(this.reportsDir)) { fs.mkdirSync(this.reportsDir,{ "recursive": true })}
 } log(message,level = 'INFO') { const timestamp = new Date().toISOString(;'
 }
-const logMessage = `[${timestamp}] [${level}] ${message}`; console.log(logMessage)fs.appendFileSync(this.logFile,logMessage + '\n')} async runCommand(command,description,timeout = 30000) { this.log(`🔍 "Monitoring": ${descriptio,;`}`)try { const result = execSync(command,{ "cwd": this.projectRoot,"encoding": 'utf8',"timeout": timeout,"maxBuffer": 1024 * 1024 * 5 })this.log(`✅ "Success": ${descriptio,`}`)return { "success": true,"output": result }} catch (error) { this.log(`❌ "Failed": ${description} - ${error.messag,`}`,'ERROR';'
 return { "success": false,"error": error.message }},;
 } async checkSystemHealth() { this.log('🖥️ Checking System Health';'
 }
-const systemChecks = [ { "command": 'df -h',"description": 'Disk Space Check',;'
 },{ "command": 'free -h',"description": 'Memory Usage Check','
 },{ "command": 'uptime',"description": 'System Uptime Check','
 } ];  } } async checkApplicationStatus() { this.log('📱 Checking Application Status')const buildDir = path.join(this.projectRoot,'.next')if (fs.existsSync(buildDir)) { this.results.application.buildStatus = 'built'; this.log('✅ Build directory exists')} else { this.results.application.buildStatus = 'not_built'; this.log('⚠️ Build directory not found')}'
 
-const packageJsonPath = path.join(this.projectRoot,'package.json')if (fs.existsSync(packageJsonPath)) { this.results.application.status = 'configured'; this.log('✅ Package.json exists')} else { this.results.application.status = 'not_configured'; this.log('❌ Package.json not found')} } async checkPerformanceMetrics() { this.log('⚡ Checking Performance Metrics')const performanceChecks = [ { "command": 'npm run "perf":monitor',"description": 'Performance Monitoring','
 } ];  }
 
-const buildSize = this.getBuildSize()this.results.performance.metrics.buildSize = buildSize; if (buildSize > 100 * 1024 * 1024) { this.results.performance.alerts.push({ "type": 'warning',"message": 'Build size is large (>100MB)',"value": `${Math.round(buildSize / (1024 * 1024))}MB` })},`} async checkSecurityStatus() { this.log('🔒 Checking Security Status')const securityChecks = [ { "command": 'npm audit --audit-level=moderate --json',"description": 'Security Audit','
 } ];  security vulnerabilities found`,"value": this.results.security.vulnerabilities })},`} catch (error) { this.log('⚠️ Could not parse security audit results','WARN')} } }'
 
-const packageJsonPath = path.join(this.projectRoot,'package.json')if (fs.existsSync(packageJsonPath)) { try { const packageJson = JSON.parse(fs.readFileSync(packageJsonPath,'utf8'))const dependencies = Object.keys(packageJson.dependencies || {})const devDependencies = Object.keys(packageJson.devDependencies || {})this.results.security.outdatedPackages = dependencies.length + devDependencies.length} catch (error) { this.log('⚠️ Could not analyze package.json','WARN')} } } async checkTestStatus() { this.log('🧪 Checking Test Status';'
 }
-const testChecks = [ { "command": 'npm test -- --passWithNoTests --silent',"description": 'Test Suite Check',;'
 } ];  else { this.results.application.testStatus = 'failed'; this.results.performance.alerts.push({ "type": 'error',"message": 'Test suite failed',"value": 'failed' })} },'
 } async checkCodeQuality() { this.log('🔍 Checking Code Quality')const qualityChecks = [ { "command": 'npx eslint . --max-warnings 0 --quiet',"description": 'ESLint Quality Check','
 },{ "command": 'npx tsc --noEmit --skipLibCheck',"description": 'TypeScript Type Check','
@@ -862,7 +733,6 @@ const testChecks = [ { "command": 'npm test -- --passWithNoTests --silent',"desc
 return { "success": false,"error": error.message }} },;
 } if (require.main === module) {;
   }
-  const monitoring = new EnhancedMonitoringSystem()monitoring.run().then((result) => { process.exit(result.success ? 0 : 1)})} module.exports = EnhancedMonitoringSystem;
   monitoring && monitoring.run().then((result) => {process && process.exit(result && result.success ? 0 : 1)})}
 module && module.exports = EnhancedMonitoringSystem;
 #!/usr/bin/env node const { execSync } = const fs = const path = class EnhancedMonitoringSystem { constructor() { this && this.projectRoot = process && process.cwd()this && this.reportsDir = path && path.join(this && this.projectRoot,'automation-reports')this && this.logFile = path && path.join(this && this.reportsDir,'monitoring-system && system.log')this && this.ensureDirectories()this && this.results = { "timestamp": new Date().toISOString(),"system": { "health": 'unknown',"uptime": process && process.uptime(),"memory": process && process.memoryUsage(),"cpu": process && process.cpuUsage(),'
@@ -877,34 +747,25 @@ const logMessage = `[${timestamp}] [${level}] ${message}`; console && console.lo
 return { "success": false,"error": error && error.message }},;
 } async checkSystemHealth() { this && this.log('🖥️ Checking System Health';'
 }
-const systemChecks = [ { "command": 'df -h',"description": 'Disk Space Check',;'
 },{ "command": 'free -h',"description": 'Memory Usage Check','
 },{ "command": 'uptime',"description": 'System Uptime Check','
 } ]; for (const check of systemChecks) { const result = await this && this.runCommand(check && check.command,check && check.description,10000)if (result && result.success) { this && this.results.system && system.health = 'healthy'} } } async checkApplicationStatus() { this && this.log('📱 Checking Application Status';'
   }
-  const buildDir = path && path.join(this && this.projectRoot,'.next')if (fs && fs.existsSync(buildDir)) { this && this.results.application && application.buildStatus = 'built'; this && this.log('✅ Build directory exists')} else { this && this.results.application && application.buildStatus = 'not_built'; this && this.log('⚠️ Build directory not found')}'
 
-const packageJsonPath = path && path.join(this && this.projectRoot,'package && package.json')if (fs && fs.existsSync(packageJsonPath)) { this && this.results.application && application.status = 'configured'; this && this.log('✅ Package && Package.json exists')} else { this && this.results.application && application.status = 'not_configured'; this && this.log('❌ Package && Package.json not found')} } async checkPerformanceMetrics() { this && this.log('⚡ Checking Performance Metrics')const performanceChecks = [ { "command": 'npm run "perf":monitor',"description": 'Performance Monitoring','
 } ]; for (const check of performanceChecks) { const result = await this && this.runCommand(check && check.command,check && check.description,30000)if (result && result.success) { this && this.results.performance && performance.metrics[check && check.description] = 'monitored'} }'
 ;
-  const buildSize = this && this.getBuildSize()this && this.results.performance && performance.metrics.buildSize = buildSize; if (buildSize > 100 * 1024 * 1024) { this && this.results.performance && performance.alerts.push({ "type": 'warning',"message": 'Build size is large (>100MB)',"value": `${Math && Math.round(buildSize / (1024 * 1024))}MB` })},`} async checkSecurityStatus() { this && this.log('🔒 Checking Security Status')const securityChecks = [ { "command": 'npm audit --audit-level=moderate --json',"description": 'Security Audit','
 } ]; for (const check of securityChecks) { const result = await this && this.runCommand(check && check.command,check && check.description,30000)if (result && result.success) { try {;
   }
-  const auditData = JSON && JSON.parse(result && result.output)this && this.results.security && security.vulnerabilities = auditData && auditData.metadata?.vulnerabilities?.total || 0; if (this && this.results.security && security.vulnerabilities > 0) { this && this.results.performance && performance.alerts.push({ "type": 'error',"message": `${this && this.results.security && security.vulnerabilitie,`} security vulnerabilities found`,"value": this && this.results.security && security.vulnerabilities })},`} catch (error) { this && this.log('⚠️ Could not parse security audit results','WARN')} } }'
 
-const packageJsonPath = path && path.join(this && this.projectRoot,'package && package.json')if (fs && fs.existsSync(packageJsonPath)) { try { const packageJson = JSON && JSON.parse(fs && fs.readFileSync(packageJsonPath,'utf8'))const dependencies = Object && Object.keys(packageJson && packageJson.dependencies || {})const devDependencies = Object && Object.keys(packageJson && packageJson.devDependencies || {})this && this.results.security && security.outdatedPackages = dependencies && dependencies.length + devDependencies && devDependencies.length} catch (error) { this && this.log('⚠️ Could not analyze package && package.json','WARN')} } } async checkTestStatus() { this && this.log('🧪 Checking Test Status';'
 }
-const testChecks = [ { "command": 'npm test -- --passWithNoTests --silent',"description": 'Test Suite Check',;'
 } ]; for (const check of testChecks) { const result = await this && this.runCommand(check && check.command,check && check.description,60000)if (result && result.success) { this && this.results.application && application.testStatus = 'passed'} else { this && this.results.application && application.testStatus = 'failed'; this && this.results.performance && performance.alerts.push({ "type": 'error',"message": 'Test suite failed',"value": 'failed' })} },'
 } async checkCodeQuality() { this && this.log('🔍 Checking Code Quality')const qualityChecks = [ { "command": 'npx eslint . --max-warnings 0 --quiet',"description": 'ESLint Quality Check','
 },{ "command": 'npx tsc --noEmit --skipLibCheck',"description": 'TypeScript Type Check','
 } ]; for (const check of qualityChecks) { const result = await this && this.runCommand(check && check.command,check && check.description,30000)if (!result && result.success) { this && this.results.performance && performance.alerts.push({ "type": 'warning',"message": `${check && check.descriptio,`} failed`,"value": 'failed' })} },'
 } getBuildSize() {;
   }
-  const buildDir = path && path.join(this && this.projectRoot,'.next')if (fs && fs.existsSync(buildDir)) { return this && this.getDirectorySize(buildDir)};'
   return 0} getDirectorySize(dir) { let size = 0; try { const items = fs && fs.readdirSync(dir)for (const item of items) { const fullPath = path && path.join(dir,item;
   }
-  const stat = fs && fs.statSync(fullPath)if (stat && stat.isDirectory()) { size += this && this.getDirectorySize(fullPath)} else { size += stat && stat.size} } } catch (error) {};
   return size} calculateOverallHealth() { let healthScore = 100; if (this && this.results.application && application.buildStatus !== 'built') healthScore -= 20; if (this && this.results.application && application.testStatus === 'failed') healthScore -= 30; if (this && this.results.security && security.vulnerabilities > 0) healthScore -= 25; if (this && this.results.performance && performance.alerts.length > 0) healthScore -= 15; this && this.results.overallHealth = { "score": Math && Math.max(0,healthScore),"status": healthScore >= 80 ? 'healthy' : healthScore >= 60 ? 'warning' : 'critical',"timestamp": new Date().toISOString() ,'
 } generateReport() { this && this.calculateOverallHealth()const reportPath = path && path.join(this && this.reportsDir,'monitoring-report && report.json')fs && fs.writeFileSync(reportPath,JSON && JSON.stringify(this && this.results,null,2))this && this.log(`📊 Monitoring report "generated": ${reportPath}`)this && this.log('📊 Monitoring "Summary":')this && this.log(` Overall "Health": ${this && this.results.overallHealth && overallHealth.status} (${this && this.results.overallHealth && overallHealth.score}/100)`)this && this.log(` System "Health": ${this && this.results.system && system.health}`)this && this.log(` Application "Status": ${this && this.results.application && application.status}`)this && this.log(` Build "Status": ${this && this.results.application && application.buildStatus}`)this && this.log(` Test "Status": ${this && this.results.application && application.testStatus}`)this && this.log(` Security "Vulnerabilities": ${this && this.results.security && security.vulnerabilities}`)this && this.log(` "Alerts": ${this && this.results.performance && performance.alerts.length}`)return reportPat,`} async run() { this && this.log('🎯 Starting Enhanced Monitoring System')try { await this && this.checkSystemHealth()await this && this.checkApplicationStatus()await this && this.checkPerformanceMetrics()await this && this.checkSecurityStatus()await this && this.checkTestStatus()await this && this.checkCodeQuality()const reportPath = this && this.generateReport()this && this.log('🎉 Enhanced Monitoring System Completed')return { "success": true,reportPath,"results": this && this.results }} catch (error) { this && this.log(`💥 Monitoring "failed": ${error && error.messag,`}`,'ERROR';'
 return { "success": false,"error": error && error.message }} },;
@@ -919,44 +780,33 @@ return { "success": false,"error": error && error.message }} },;
 } ensureDirectories() { if (!fs && fs.existsSync(this && this.reportsDir)) { fs && fs.mkdirSync(this && this.reportsDir,{ "recursive": true })}
 } log(message,level = 'INFO') { const timestamp = new Date().toISOString(;'
 }
-const logMessage = `[${timestamp}] [${level}] ${message}`; console && console.log(logMessage)fs && fs.appendFileSync(this && this.logFile,logMessage + '\n')} async runCommand(command,description,timeout = 30000) { this && this.log(`🔍 "Monitoring": ${descriptio,;`}`)try { const result = execSync(command,{ "cwd": this && this.projectRoot,"encoding": 'utf8',"timeout": timeout,"maxBuffer": 1024 * 1024 * 5 })this && this.log(`✅ "Success": ${descriptio,`}`)return { "success": true,"output": result }} catch (error) { this && this.log(`❌ "Failed": ${description} - ${error && error.messag,`}`,'ERROR';'
 return { "success": false,"error": error && error.message }},;
 } async checkSystemHealth() { this && this.log('🖥️ Checking System Health';'
 }
-const systemChecks = [ { "command": 'df -h',"description": 'Disk Space Check',;'
 },{ "command": 'free -h',"description": 'Memory Usage Check','
 },{ "command": 'uptime',"description": 'System Uptime Check','
 } ]; for (const check of systemChecks) { const result = await this && this.runCommand(check && check.command,check && check.description,10000)if (result && result.success) { this && this.results.system && system.health = 'healthy'} } } async checkApplicationStatus() { this && this.log('📱 Checking Application Status';'
   }
-  const buildDir = path && path.join(this && this.projectRoot,'.next')if (fs && fs.existsSync(buildDir)) { this && this.results.application && application.buildStatus = 'built'; this && this.log('✅ Build directory exists')} else { this && this.results.application && application.buildStatus = 'not_built'; this && this.log('⚠️ Build directory not found')}'
 
-const packageJsonPath = path && path.join(this && this.projectRoot,'package && package.json')if (fs && fs.existsSync(packageJsonPath)) { this && this.results.application && application.status = 'configured'; this && this.log('✅ Package && Package.json exists')} else { this && this.results.application && application.status = 'not_configured'; this && this.log('❌ Package && Package.json not found')} } async checkPerformanceMetrics() { this && this.log('⚡ Checking Performance Metrics')const performanceChecks = [ { "command": 'npm run "perf":monitor',"description": 'Performance Monitoring','
 } ]; for (const check of performanceChecks) { const result = await this && this.runCommand(check && check.command,check && check.description,30000)if (result && result.success) { this && this.results.performance && performance.metrics[check && check.description] = 'monitored'} }'
 ;
-  const buildSize = this && this.getBuildSize()this && this.results.performance && performance.metrics.buildSize = buildSize; if (buildSize > 100 * 1024 * 1024) { this && this.results.performance && performance.alerts.push({ "type": 'warning',"message": 'Build size is large (>100MB)',"value": `${Math && Math.round(buildSize / (1024 * 1024))}MB` })},`} async checkSecurityStatus() { this && this.log('🔒 Checking Security Status')const securityChecks = [ { "command": 'npm audit --audit-level=moderate --json',"description": 'Security Audit','
 } ]; for (const check of securityChecks) { const result = await this && this.runCommand(check && check.command,check && check.description,30000)if (result && result.success) { try {;
   }
-  const auditData = JSON && JSON.parse(result && result.output)this && this.results.security && security.vulnerabilities = auditData && auditData.metadata?.vulnerabilities?.total || 0; if (this && this.results.security && security.vulnerabilities > 0) { this && this.results.performance && performance.alerts.push({ "type": 'error',"message": `${this && this.results.security && security.vulnerabilitie,`} security vulnerabilities found`,"value": this && this.results.security && security.vulnerabilities })},`} catch (error) { this && this.log('⚠️ Could not parse security audit results','WARN')} } }'
 
-const packageJsonPath = path && path.join(this && this.projectRoot,'package && package.json')if (fs && fs.existsSync(packageJsonPath)) { try { const packageJson = JSON && JSON.parse(fs && fs.readFileSync(packageJsonPath,'utf8'))const dependencies = Object && Object.keys(packageJson && packageJson.dependencies || {})const devDependencies = Object && Object.keys(packageJson && packageJson.devDependencies || {})this && this.results.security && security.outdatedPackages = dependencies && dependencies.length + devDependencies && devDependencies.length} catch (error) { this && this.log('⚠️ Could not analyze package && package.json','WARN')} } } async checkTestStatus() { this && this.log('🧪 Checking Test Status';'
 }
-const testChecks = [ { "command": 'npm test -- --passWithNoTests --silent',"description": 'Test Suite Check',;'
 } ]; for (const check of testChecks) { const result = await this && this.runCommand(check && check.command,check && check.description,60000)if (result && result.success) { this && this.results.application && application.testStatus = 'passed'} else { this && this.results.application && application.testStatus = 'failed'; this && this.results.performance && performance.alerts.push({ "type": 'error',"message": 'Test suite failed',"value": 'failed' })} },'
 } async checkCodeQuality() { this && this.log('🔍 Checking Code Quality')const qualityChecks = [ { "command": 'npx eslint . --max-warnings 0 --quiet',"description": 'ESLint Quality Check','
 },{ "command": 'npx tsc --noEmit --skipLibCheck',"description": 'TypeScript Type Check','
 } ]; for (const check of qualityChecks) { const result = await this && this.runCommand(check && check.command,check && check.description,30000)if (!result && result.success) { this && this.results.performance && performance.alerts.push({ "type": 'warning',"message": `${check && check.descriptio,`} failed`,"value": 'failed' })} },'
 } getBuildSize() {;
   }
-  const buildDir = path && path.join(this && this.projectRoot,'.next')if (fs && fs.existsSync(buildDir)) { return this && this.getDirectorySize(buildDir)};'
   return 0} getDirectorySize(dir) { let size = 0; try { const items = fs && fs.readdirSync(dir)for (const item of items) { const fullPath = path && path.join(dir,item;
   }
-  const stat = fs && fs.statSync(fullPath)if (stat && stat.isDirectory()) { size += this && this.getDirectorySize(fullPath)} else { size += stat && stat.size} } } catch (error) {};
   return size} calculateOverallHealth() { let healthScore = 100; if (this && this.results.application && application.buildStatus !== 'built') healthScore -= 20; if (this && this.results.application && application.testStatus === 'failed') healthScore -= 30; if (this && this.results.security && security.vulnerabilities > 0) healthScore -= 25; if (this && this.results.performance && performance.alerts.length > 0) healthScore -= 15; this && this.results.overallHealth = { "score": Math && Math.max(0,healthScore),"status": healthScore >= 80 ? 'healthy' : healthScore >= 60 ? 'warning' : 'critical',"timestamp": new Date().toISOString() ,'
 } generateReport() { this && this.calculateOverallHealth()const reportPath = path && path.join(this && this.reportsDir,'monitoring-report && report.json')fs && fs.writeFileSync(reportPath,JSON && JSON.stringify(this && this.results,null,2))this && this.log(`📊 Monitoring report "generated": ${reportPath}`)this && this.log('📊 Monitoring "Summary":')this && this.log(` Overall "Health": ${this && this.results.overallHealth && overallHealth.status} (${this && this.results.overallHealth && overallHealth.score}/100)`)this && this.log(` System "Health": ${this && this.results.system && system.health}`)this && this.log(` Application "Status": ${this && this.results.application && application.status}`)this && this.log(` Build "Status": ${this && this.results.application && application.buildStatus}`)this && this.log(` Test "Status": ${this && this.results.application && application.testStatus}`)this && this.log(` Security "Vulnerabilities": ${this && this.results.security && security.vulnerabilities}`)this && this.log(` "Alerts": ${this && this.results.performance && performance.alerts.length}`)return reportPat,`} async run() { this && this.log('🎯 Starting Enhanced Monitoring System')try { await this && this.checkSystemHealth()await this && this.checkApplicationStatus()await this && this.checkPerformanceMetrics()await this && this.checkSecurityStatus()await this && this.checkTestStatus()await this && this.checkCodeQuality()const reportPath = this && this.generateReport()this && this.log('🎉 Enhanced Monitoring System Completed')return { "success": true,reportPath,"results": this && this.results }} catch (error) { this && this.log(`💥 Monitoring "failed": ${error && error.messag,`}`,'ERROR';'
 return { "success": false,"error": error && error.message }} },;
 } if (require && require.main === module) {;
   }
-  const monitoring = new EnhancedMonitoringSystem()monitoring && monitoring.run().then((result) => { process && process.exit(result && result.success ? 0 : 1)})} module && module.exports = EnhancedMonitoringSystem;
 #!/usr/bin/env node const { execSync } = const fs = const path = class EnhancedMonitoringSystem { constructor() { this && this.projectRoot = process && process.cwd()this && this.reportsDir = path && path.join(this && this.projectRoot,'automation-reports')this && this.logFile = path && path.join(this && this.reportsDir,'monitoring-system && system.log')this && this.ensureDirectories()this && this.results = { "timestamp": new Date().toISOString(),"system": { "health": 'unknown',"uptime": process && process.uptime(),"memory": process && process.memoryUsage(),"cpu": process && process.cpuUsage(),'
 },"application": { "status": 'unknown',"buildStatus": 'unknown',"testStatus": 'unknown','
 },"performance": { "metrics": 
@@ -965,44 +815,33 @@ return { "success": false,"error": error && error.message }} },;
 } ensureDirectories() { if (!fs && fs.existsSync(this && this.reportsDir)) { fs && fs.mkdirSync(this && this.reportsDir,{ "recursive": true })}
 } log(message,level = 'INFO') { const timestamp = new Date().toISOString(;'
 }
-const logMessage = `[${timestamp}] [${level}] ${message}`; console && console.log(logMessage)fs && fs.appendFileSync(this && this.logFile,logMessage + '\n')} async runCommand(command,description,timeout = 30000) { this && this.log(`🔍 "Monitoring": ${descriptio,;`}`)try { const result = execSync(command,{ "cwd": this && this.projectRoot,"encoding": 'utf8',"timeout": timeout,"maxBuffer": 1024 * 1024 * 5 })this && this.log(`✅ "Success": ${descriptio,`}`)return { "success": true,"output": result }} catch (error) { this && this.log(`❌ "Failed": ${description} - ${error && error.messag,`}`,'ERROR';'
 return { "success": false,"error": error && error.message }},;
 } async checkSystemHealth() { this && this.log('🖥️ Checking System Health';'
 }
-const systemChecks = [ { "command": 'df -h',"description": 'Disk Space Check',;'
 },{ "command": 'free -h',"description": 'Memory Usage Check','
 },{ "command": 'uptime',"description": 'System Uptime Check','
 } ]; for (const check of systemChecks) { const result = await this && this.runCommand(check && check.command,check && check.description,10000)if (result && result.success) { this && this.results.system && system.health = 'healthy'} } } async checkApplicationStatus() { this && this.log('📱 Checking Application Status';'
   }
-  const buildDir = path && path.join(this && this.projectRoot,'.next')if (fs && fs.existsSync(buildDir)) { this && this.results.application && application.buildStatus = 'built'; this && this.log('✅ Build directory exists')} else { this && this.results.application && application.buildStatus = 'not_built'; this && this.log('⚠️ Build directory not found')}'
 
-const packageJsonPath = path && path.join(this && this.projectRoot,'package && package.json')if (fs && fs.existsSync(packageJsonPath)) { this && this.results.application && application.status = 'configured'; this && this.log('✅ Package && Package.json exists')} else { this && this.results.application && application.status = 'not_configured'; this && this.log('❌ Package && Package.json not found')} } async checkPerformanceMetrics() { this && this.log('⚡ Checking Performance Metrics')const performanceChecks = [ { "command": 'npm run "perf":monitor',"description": 'Performance Monitoring','
 } ]; for (const check of performanceChecks) { const result = await this && this.runCommand(check && check.command,check && check.description,30000)if (result && result.success) { this && this.results.performance && performance.metrics[check && check.description] = 'monitored'} }'
 ;
-  const buildSize = this && this.getBuildSize()this && this.results.performance && performance.metrics.buildSize = buildSize; if (buildSize > 100 * 1024 * 1024) { this && this.results.performance && performance.alerts.push({ "type": 'warning',"message": 'Build size is large (>100MB)',"value": `${Math && Math.round(buildSize / (1024 * 1024))}MB` })},`} async checkSecurityStatus() { this && this.log('🔒 Checking Security Status')const securityChecks = [ { "command": 'npm audit --audit-level=moderate --json',"description": 'Security Audit','
 } ]; for (const check of securityChecks) { const result = await this && this.runCommand(check && check.command,check && check.description,30000)if (result && result.success) { try {;
   }
-  const auditData = JSON && JSON.parse(result && result.output)this && this.results.security && security.vulnerabilities = auditData && auditData.metadata?.vulnerabilities?.total || 0; if (this && this.results.security && security.vulnerabilities > 0) { this && this.results.performance && performance.alerts.push({ "type": 'error',"message": `${this && this.results.security && security.vulnerabilitie,`} security vulnerabilities found`,"value": this && this.results.security && security.vulnerabilities })},`} catch (error) { this && this.log('⚠️ Could not parse security audit results','WARN')} } }'
 
-const packageJsonPath = path && path.join(this && this.projectRoot,'package && package.json')if (fs && fs.existsSync(packageJsonPath)) { try { const packageJson = JSON && JSON.parse(fs && fs.readFileSync(packageJsonPath,'utf8'))const dependencies = Object && Object.keys(packageJson && packageJson.dependencies || {})const devDependencies = Object && Object.keys(packageJson && packageJson.devDependencies || {})this && this.results.security && security.outdatedPackages = dependencies && dependencies.length + devDependencies && devDependencies.length} catch (error) { this && this.log('⚠️ Could not analyze package && package.json','WARN')} } } async checkTestStatus() { this && this.log('🧪 Checking Test Status';'
 }
-const testChecks = [ { "command": 'npm test -- --passWithNoTests --silent',"description": 'Test Suite Check',;'
 } ]; for (const check of testChecks) { const result = await this && this.runCommand(check && check.command,check && check.description,60000)if (result && result.success) { this && this.results.application && application.testStatus = 'passed'} else { this && this.results.application && application.testStatus = 'failed'; this && this.results.performance && performance.alerts.push({ "type": 'error',"message": 'Test suite failed',"value": 'failed' })} },'
 } async checkCodeQuality() { this && this.log('🔍 Checking Code Quality')const qualityChecks = [ { "command": 'npx eslint . --max-warnings 0 --quiet',"description": 'ESLint Quality Check','
 },{ "command": 'npx tsc --noEmit --skipLibCheck',"description": 'TypeScript Type Check','
 } ]; for (const check of qualityChecks) { const result = await this && this.runCommand(check && check.command,check && check.description,30000)if (!result && result.success) { this && this.results.performance && performance.alerts.push({ "type": 'warning',"message": `${check && check.descriptio,`} failed`,"value": 'failed' })} },'
 } getBuildSize() {;
   }
-  const buildDir = path && path.join(this && this.projectRoot,'.next')if (fs && fs.existsSync(buildDir)) { return this && this.getDirectorySize(buildDir)};'
   return 0} getDirectorySize(dir) { let size = 0; try { const items = fs && fs.readdirSync(dir)for (const item of items) { const fullPath = path && path.join(dir,item;
   }
-  const stat = fs && fs.statSync(fullPath)if (stat && stat.isDirectory()) { size += this && this.getDirectorySize(fullPath)} else { size += stat && stat.size} } } catch (error) {};
   return size} calculateOverallHealth() { let healthScore = 100; if (this && this.results.application && application.buildStatus !== 'built') healthScore -= 20; if (this && this.results.application && application.testStatus === 'failed') healthScore -= 30; if (this && this.results.security && security.vulnerabilities > 0) healthScore -= 25; if (this && this.results.performance && performance.alerts.length > 0) healthScore -= 15; this && this.results.overallHealth = { "score": Math && Math.max(0,healthScore),"status": healthScore >= 80 ? 'healthy' : healthScore >= 60 ? 'warning' : 'critical',"timestamp": new Date().toISOString() ,'
 } generateReport() { this && this.calculateOverallHealth()const reportPath = path && path.join(this && this.reportsDir,'monitoring-report && report.json')fs && fs.writeFileSync(reportPath,JSON && JSON.stringify(this && this.results,null,2))this && this.log(`📊 Monitoring report "generated": ${reportPath}`)this && this.log('📊 Monitoring "Summary":')this && this.log(` Overall "Health": ${this && this.results.overallHealth && overallHealth.status} (${this && this.results.overallHealth && overallHealth.score}/100)`)this && this.log(` System "Health": ${this && this.results.system && system.health}`)this && this.log(` Application "Status": ${this && this.results.application && application.status}`)this && this.log(` Build "Status": ${this && this.results.application && application.buildStatus}`)this && this.log(` Test "Status": ${this && this.results.application && application.testStatus}`)this && this.log(` Security "Vulnerabilities": ${this && this.results.security && security.vulnerabilities}`)this && this.log(` "Alerts": ${this && this.results.performance && performance.alerts.length}`)return reportPat,`} async run() { this && this.log('🎯 Starting Enhanced Monitoring System')try { await this && this.checkSystemHealth()await this && this.checkApplicationStatus()await this && this.checkPerformanceMetrics()await this && this.checkSecurityStatus()await this && this.checkTestStatus()await this && this.checkCodeQuality()const reportPath = this && this.generateReport()this && this.log('🎉 Enhanced Monitoring System Completed')return { "success": true,reportPath,"results": this && this.results }} catch (error) { this && this.log(`💥 Monitoring "failed": ${error && error.messag,`}`,'ERROR';'
 return { "success": false,"error": error && error.message }} },;
 } if (require && require.main === module) {;
   }
-  const monitoring = new EnhancedMonitoringSystem()monitoring && monitoring.run().then((result) => { process && process.exit(result && result.success ? 0 : 1)})} module && module.exports = EnhancedMonitoringSystem;
 #!/usr/bin/env node const { execSync } = const fs = const path = class EnhancedMonitoringSystem { constructor() { this && this.projectRoot = process && process.cwd()this && this.reportsDir = path && path.join(this && this.projectRoot,'automation-reports')this && this.logFile = path && path.join(this && this.reportsDir,'monitoring-system && system.log')this && this.ensureDirectories()this && this.results = { "timestamp": new Date().toISOString(),"system": { "health": 'unknown',"uptime": process && process.uptime(),"memory": process && process.memoryUsage(),"cpu": process && process.cpuUsage(),'
 },"application": { "status": 'unknown',"buildStatus": 'unknown',"testStatus": 'unknown','
 },"performance": { "metrics": 
@@ -1011,44 +850,33 @@ return { "success": false,"error": error && error.message }} },;
 } ensureDirectories() { if (!fs && fs.existsSync(this && this.reportsDir)) { fs && fs.mkdirSync(this && this.reportsDir,{ "recursive": true })}
 } log(message,level = 'INFO') { const timestamp = new Date().toISOString(;'
 }
-const logMessage = `[${timestamp}] [${level}] ${message}`; console && console.log(logMessage)fs && fs.appendFileSync(this && this.logFile,logMessage + '\n')} async runCommand(command,description,timeout = 30000) { this && this.log(`🔍 "Monitoring": ${descriptio,;`}`)try { const result = execSync(command,{ "cwd": this && this.projectRoot,"encoding": 'utf8',"timeout": timeout,"maxBuffer": 1024 * 1024 * 5 })this && this.log(`✅ "Success": ${descriptio,`}`)return { "success": true,"output": result }} catch (error) { this && this.log(`❌ "Failed": ${description} - ${error && error.messag,`}`,'ERROR';'
 return { "success": false,"error": error && error.message }},;
 } async checkSystemHealth() { this && this.log('🖥️ Checking System Health';'
 }
-const systemChecks = [ { "command": 'df -h',"description": 'Disk Space Check',;'
 },{ "command": 'free -h',"description": 'Memory Usage Check','
 },{ "command": 'uptime',"description": 'System Uptime Check','
 } ]; for (const check of systemChecks) { const result = await this && this.runCommand(check && check.command,check && check.description,10000)if (result && result.success) { this && this.results.system && system.health = 'healthy'} } } async checkApplicationStatus() { this && this.log('📱 Checking Application Status';'
   }
-  const buildDir = path && path.join(this && this.projectRoot,'.next')if (fs && fs.existsSync(buildDir)) { this && this.results.application && application.buildStatus = 'built'; this && this.log('✅ Build directory exists')} else { this && this.results.application && application.buildStatus = 'not_built'; this && this.log('⚠️ Build directory not found')}'
 
-const packageJsonPath = path && path.join(this && this.projectRoot,'package && package.json')if (fs && fs.existsSync(packageJsonPath)) { this && this.results.application && application.status = 'configured'; this && this.log('✅ Package && Package.json exists')} else { this && this.results.application && application.status = 'not_configured'; this && this.log('❌ Package && Package.json not found')} } async checkPerformanceMetrics() { this && this.log('⚡ Checking Performance Metrics')const performanceChecks = [ { "command": 'npm run "perf":monitor',"description": 'Performance Monitoring','
 } ]; for (const check of performanceChecks) { const result = await this && this.runCommand(check && check.command,check && check.description,30000)if (result && result.success) { this && this.results.performance && performance.metrics[check && check.description] = 'monitored'} }'
 ;
-  const buildSize = this && this.getBuildSize()this && this.results.performance && performance.metrics.buildSize = buildSize; if (buildSize > 100 * 1024 * 1024) { this && this.results.performance && performance.alerts.push({ "type": 'warning',"message": 'Build size is large (>100MB)',"value": `${Math && Math.round(buildSize / (1024 * 1024))}MB` })},`} async checkSecurityStatus() { this && this.log('🔒 Checking Security Status')const securityChecks = [ { "command": 'npm audit --audit-level=moderate --json',"description": 'Security Audit','
 } ]; for (const check of securityChecks) { const result = await this && this.runCommand(check && check.command,check && check.description,30000)if (result && result.success) { try {;
   }
-  const auditData = JSON && JSON.parse(result && result.output)this && this.results.security && security.vulnerabilities = auditData && auditData.metadata?.vulnerabilities?.total || 0; if (this && this.results.security && security.vulnerabilities > 0) { this && this.results.performance && performance.alerts.push({ "type": 'error',"message": `${this && this.results.security && security.vulnerabilitie,`} security vulnerabilities found`,"value": this && this.results.security && security.vulnerabilities })},`} catch (error) { this && this.log('⚠️ Could not parse security audit results','WARN')} } }'
 
-const packageJsonPath = path && path.join(this && this.projectRoot,'package && package.json')if (fs && fs.existsSync(packageJsonPath)) { try { const packageJson = JSON && JSON.parse(fs && fs.readFileSync(packageJsonPath,'utf8'))const dependencies = Object && Object.keys(packageJson && packageJson.dependencies || {})const devDependencies = Object && Object.keys(packageJson && packageJson.devDependencies || {})this && this.results.security && security.outdatedPackages = dependencies && dependencies.length + devDependencies && devDependencies.length} catch (error) { this && this.log('⚠️ Could not analyze package && package.json','WARN')} } } async checkTestStatus() { this && this.log('🧪 Checking Test Status';'
 }
-const testChecks = [ { "command": 'npm test -- --passWithNoTests --silent',"description": 'Test Suite Check',;'
 } ]; for (const check of testChecks) { const result = await this && this.runCommand(check && check.command,check && check.description,60000)if (result && result.success) { this && this.results.application && application.testStatus = 'passed'} else { this && this.results.application && application.testStatus = 'failed'; this && this.results.performance && performance.alerts.push({ "type": 'error',"message": 'Test suite failed',"value": 'failed' })} },'
 } async checkCodeQuality() { this && this.log('🔍 Checking Code Quality')const qualityChecks = [ { "command": 'npx eslint . --max-warnings 0 --quiet',"description": 'ESLint Quality Check','
 },{ "command": 'npx tsc --noEmit --skipLibCheck',"description": 'TypeScript Type Check','
 } ]; for (const check of qualityChecks) { const result = await this && this.runCommand(check && check.command,check && check.description,30000)if (!result && result.success) { this && this.results.performance && performance.alerts.push({ "type": 'warning',"message": `${check && check.descriptio,`} failed`,"value": 'failed' })} },'
 } getBuildSize() {;
   }
-  const buildDir = path && path.join(this && this.projectRoot,'.next')if (fs && fs.existsSync(buildDir)) { return this && this.getDirectorySize(buildDir)};'
   return 0} getDirectorySize(dir) { let size = 0; try { const items = fs && fs.readdirSync(dir)for (const item of items) { const fullPath = path && path.join(dir,item;
   }
-  const stat = fs && fs.statSync(fullPath)if (stat && stat.isDirectory()) { size += this && this.getDirectorySize(fullPath)} else { size += stat && stat.size} } } catch (error) {};
   return size} calculateOverallHealth() { let healthScore = 100; if (this && this.results.application && application.buildStatus !== 'built') healthScore -= 20; if (this && this.results.application && application.testStatus === 'failed') healthScore -= 30; if (this && this.results.security && security.vulnerabilities > 0) healthScore -= 25; if (this && this.results.performance && performance.alerts.length > 0) healthScore -= 15; this && this.results.overallHealth = { "score": Math && Math.max(0,healthScore),"status": healthScore >= 80 ? 'healthy' : healthScore >= 60 ? 'warning' : 'critical',"timestamp": new Date().toISOString() ,'
 } generateReport() { this && this.calculateOverallHealth()const reportPath = path && path.join(this && this.reportsDir,'monitoring-report && report.json')fs && fs.writeFileSync(reportPath,JSON && JSON.stringify(this && this.results,null,2))this && this.log(`📊 Monitoring report "generated": ${reportPath}`)this && this.log('📊 Monitoring "Summary":')this && this.log(` Overall "Health": ${this && this.results.overallHealth && overallHealth.status} (${this && this.results.overallHealth && overallHealth.score}/100)`)this && this.log(` System "Health": ${this && this.results.system && system.health}`)this && this.log(` Application "Status": ${this && this.results.application && application.status}`)this && this.log(` Build "Status": ${this && this.results.application && application.buildStatus}`)this && this.log(` Test "Status": ${this && this.results.application && application.testStatus}`)this && this.log(` Security "Vulnerabilities": ${this && this.results.security && security.vulnerabilities}`)this && this.log(` "Alerts": ${this && this.results.performance && performance.alerts.length}`)return reportPat,`} async run() { this && this.log('🎯 Starting Enhanced Monitoring System')try { await this && this.checkSystemHealth()await this && this.checkApplicationStatus()await this && this.checkPerformanceMetrics()await this && this.checkSecurityStatus()await this && this.checkTestStatus()await this && this.checkCodeQuality()const reportPath = this && this.generateReport()this && this.log('🎉 Enhanced Monitoring System Completed')return { "success": true,reportPath,"results": this && this.results }} catch (error) { this && this.log(`💥 Monitoring "failed": ${error && error.messag,`}`,'ERROR';'
 return { "success": false,"error": error && error.message }} },;
 } if (require && require.main === module) {;
   }
-  const monitoring = new EnhancedMonitoringSystem()monitoring && monitoring.run().then((result) => { process && process.exit(result && result.success ? 0 : 1)})} module && module.exports = EnhancedMonitoringSystem;
 #!/usr/bin/env node const { execSync } = const fs = const path = class EnhancedMonitoringSystem { constructor() { this.projectRoot = process.cwd()this.reportsDir = path.join(this.projectRoot,'automation-reports')this.logFile = path.join(this.reportsDir,'monitoring-system.log')this.ensureDirectories()this.results = { "timestamp": new Date().toISOString(),"system": { "health": 'unknown',"uptime": process.uptime(),"memory": process.memoryUsage(),"cpu": process.cpuUsage(),'
 },"application": { "status": 'unknown',"buildStatus": 'unknown',"testStatus": 'unknown','
 },"performance": { "metrics": 
@@ -1057,44 +885,33 @@ return { "success": false,"error": error && error.message }} },;
 } ensureDirectories() { if (!fs.existsSync(this.reportsDir)) { fs.mkdirSync(this.reportsDir,{ "recursive": true })}
 } log(message,level = 'INFO') { const timestamp = new Date().toISOString(;'
 }
-const logMessage = `[${timestamp}] [${level}] ${message}`; console.log(logMessage)fs.appendFileSync(this.logFile,logMessage + '\n')} async runCommand(command,description,timeout = 30000) { this.log(`🔍 "Monitoring": ${descriptio,;`}`)try { const result = execSync(command,{ "cwd": this.projectRoot,"encoding": 'utf8',"timeout": timeout,"maxBuffer": 1024 * 1024 * 5 })this.log(`✅ "Success": ${descriptio,`}`)return { "success": true,"output": result }} catch (error) { this.log(`❌ "Failed": ${description} - ${error.messag,`}`,'ERROR';'
 return { "success": false,"error": error.message }},;
 } async checkSystemHealth() { this.log('🖥️ Checking System Health';'
 }
-const systemChecks = [ { "command": 'df -h',"description": 'Disk Space Check',;'
 },{ "command": 'free -h',"description": 'Memory Usage Check','
 },{ "command": 'uptime',"description": 'System Uptime Check','
 } ]; for (const check of systemChecks) { const result = await this.runCommand(check.command,check.description,10000)if (result.success) { this.results.system.health = 'healthy'} } } async checkApplicationStatus() { this.log('📱 Checking Application Status';'
   }
-  const buildDir = path.join(this.projectRoot,'.next')if (fs.existsSync(buildDir)) { this.results.application.buildStatus = 'built'; this.log('✅ Build directory exists')} else { this.results.application.buildStatus = 'not_built'; this.log('⚠️ Build directory not found')}'
 
-const packageJsonPath = path.join(this.projectRoot,'package.json')if (fs.existsSync(packageJsonPath)) { this.results.application.status = 'configured'; this.log('✅ Package.json exists')} else { this.results.application.status = 'not_configured'; this.log('❌ Package.json not found')} } async checkPerformanceMetrics() { this.log('⚡ Checking Performance Metrics')const performanceChecks = [ { "command": 'npm run "perf":monitor',"description": 'Performance Monitoring','
 } ]; for (const check of performanceChecks) { const result = await this.runCommand(check.command,check.description,30000)if (result.success) { this.results.performance.metrics[check.description] = 'monitored'} }'
 ;
-  const buildSize = this.getBuildSize()this.results.performance.metrics.buildSize = buildSize; if (buildSize > 100 * 1024 * 1024) { this.results.performance.alerts.push({ "type": 'warning',"message": 'Build size is large (>100MB)',"value": `${Math.round(buildSize / (1024 * 1024))}MB` })},`} async checkSecurityStatus() { this.log('🔒 Checking Security Status')const securityChecks = [ { "command": 'npm audit --audit-level=moderate --json',"description": 'Security Audit','
 } ]; for (const check of securityChecks) { const result = await this.runCommand(check.command,check.description,30000)if (result.success) { try {;
   }
-  const auditData = JSON.parse(result.output)this.results.security.vulnerabilities = auditData.metadata?.vulnerabilities?.total || 0; if (this.results.security.vulnerabilities > 0) { this.results.performance.alerts.push({ "type": 'error',"message": `${this.results.security.vulnerabilitie,`} security vulnerabilities found`,"value": this.results.security.vulnerabilities })},`} catch (error) { this.log('⚠️ Could not parse security audit results','WARN')} } }'
 
-const packageJsonPath = path.join(this.projectRoot,'package.json')if (fs.existsSync(packageJsonPath)) { try { const packageJson = JSON.parse(fs.readFileSync(packageJsonPath,'utf8'))const dependencies = Object.keys(packageJson.dependencies || {})const devDependencies = Object.keys(packageJson.devDependencies || {})this.results.security.outdatedPackages = dependencies.length + devDependencies.length} catch (error) { this.log('⚠️ Could not analyze package.json','WARN')} } } async checkTestStatus() { this.log('🧪 Checking Test Status';'
 }
-const testChecks = [ { "command": 'npm test -- --passWithNoTests --silent',"description": 'Test Suite Check',;'
 } ]; for (const check of testChecks) { const result = await this.runCommand(check.command,check.description,60000)if (result.success) { this.results.application.testStatus = 'passed'} else { this.results.application.testStatus = 'failed'; this.results.performance.alerts.push({ "type": 'error',"message": 'Test suite failed',"value": 'failed' })} },'
 } async checkCodeQuality() { this.log('🔍 Checking Code Quality')const qualityChecks = [ { "command": 'npx eslint . --max-warnings 0 --quiet',"description": 'ESLint Quality Check','
 },{ "command": 'npx tsc --noEmit --skipLibCheck',"description": 'TypeScript Type Check','
 } ]; for (const check of qualityChecks) { const result = await this.runCommand(check.command,check.description,30000)if (!result.success) { this.results.performance.alerts.push({ "type": 'warning',"message": `${check.descriptio,`} failed`,"value": 'failed' })} },'
 } getBuildSize() {;
   }
-  const buildDir = path.join(this.projectRoot,'.next')if (fs.existsSync(buildDir)) { return this.getDirectorySize(buildDir)};'
   return 0} getDirectorySize(dir) { let size = 0; try { const items = fs.readdirSync(dir)for (const item of items) { const fullPath = path.join(dir,item;
   }
-  const stat = fs.statSync(fullPath)if (stat.isDirectory()) { size += this.getDirectorySize(fullPath)} else { size += stat.size} } } catch (error) {};
   return size} calculateOverallHealth() { let healthScore = 100; if (this.results.application.buildStatus !== 'built') healthScore -= 20; if (this.results.application.testStatus === 'failed') healthScore -= 30; if (this.results.security.vulnerabilities > 0) healthScore -= 25; if (this.results.performance.alerts.length > 0) healthScore -= 15; this.results.overallHealth = { "score": Math.max(0,healthScore),"status": healthScore >= 80 ? 'healthy' : healthScore >= 60 ? 'warning' : 'critical',"timestamp": new Date().toISOString() ,'
 } generateReport() { this.calculateOverallHealth()const reportPath = path.join(this.reportsDir,'monitoring-report.json')fs.writeFileSync(reportPath,JSON.stringify(this.results,null,2))this.log(`📊 Monitoring report "generated": ${reportPath}`)this.log('📊 Monitoring "Summary":')this.log(` Overall "Health": ${this.results.overallHealth.status} (${this.results.overallHealth.score}/100)`)this.log(` System "Health": ${this.results.system.health}`)this.log(` Application "Status": ${this.results.application.status}`)this.log(` Build "Status": ${this.results.application.buildStatus}`)this.log(` Test "Status": ${this.results.application.testStatus}`)this.log(` Security "Vulnerabilities": ${this.results.security.vulnerabilities}`)this.log(` "Alerts": ${this.results.performance.alerts.length}`)return reportPat,`} async run() { this.log('🎯 Starting Enhanced Monitoring System')try { await this.checkSystemHealth()await this.checkApplicationStatus()await this.checkPerformanceMetrics()await this.checkSecurityStatus()await this.checkTestStatus()await this.checkCodeQuality()const reportPath = this.generateReport()this.log('🎉 Enhanced Monitoring System Completed')return { "success": true,reportPath,"results": this.results }} catch (error) { this.log(`💥 Monitoring "failed": ${error.messag,`}`,'ERROR';'
 return { "success": false,"error": error.message }} },;
 } if (require.main === module) {;
   }
-  const monitoring = new EnhancedMonitoringSystem()monitoring.run().then((result) => { process.exit(result.success ? 0 : 1)})} module.exports = EnhancedMonitoringSystem;
 #!/usr/bin/env node const { execSync } = const fs = const path = class EnhancedMonitoringSystem { constructor() { this.projectRoot = process.cwd()this.reportsDir = path.join(this.projectRoot,'automation-reports')this.logFile = path.join(this.reportsDir,'monitoring-system.log')this.ensureDirectories()this.results = { "timestamp": new Date().toISOString(),"system": { "health": 'unknown',"uptime": process.uptime(),"memory": process.memoryUsage(),"cpu": process.cpuUsage(),'
 },"application": { "status": 'unknown',"buildStatus": 'unknown',"testStatus": 'unknown','
 },"performance": { "metrics": 
@@ -1103,44 +920,33 @@ return { "success": false,"error": error.message }} },;
 } ensureDirectories() { if (!fs.existsSync(this.reportsDir)) { fs.mkdirSync(this.reportsDir,{ "recursive": true })}
 } log(message,level = 'INFO') { const timestamp = new Date().toISOString(;'
 }
-const logMessage = `[${timestamp}] [${level}] ${message}`; console.log(logMessage)fs.appendFileSync(this.logFile,logMessage + '\n')} async runCommand(command,description,timeout = 30000) { this.log(`🔍 "Monitoring": ${descriptio,;`}`)try { const result = execSync(command,{ "cwd": this.projectRoot,"encoding": 'utf8',"timeout": timeout,"maxBuffer": 1024 * 1024 * 5 })this.log(`✅ "Success": ${descriptio,`}`)return { "success": true,"output": result }} catch (error) { this.log(`❌ "Failed": ${description} - ${error.messag,`}`,'ERROR';'
 return { "success": false,"error": error.message }},;
 } async checkSystemHealth() { this.log('🖥️ Checking System Health';'
 }
-const systemChecks = [ { "command": 'df -h',"description": 'Disk Space Check',;'
 },{ "command": 'free -h',"description": 'Memory Usage Check','
 },{ "command": 'uptime',"description": 'System Uptime Check','
 } ]; for (const check of systemChecks) { const result = await this.runCommand(check.command,check.description,10000)if (result.success) { this.results.system.health = 'healthy'} } } async checkApplicationStatus() { this.log('📱 Checking Application Status';'
   }
-  const buildDir = path.join(this.projectRoot,'.next')if (fs.existsSync(buildDir)) { this.results.application.buildStatus = 'built'; this.log('✅ Build directory exists')} else { this.results.application.buildStatus = 'not_built'; this.log('⚠️ Build directory not found')}'
 
-const packageJsonPath = path.join(this.projectRoot,'package.json')if (fs.existsSync(packageJsonPath)) { this.results.application.status = 'configured'; this.log('✅ Package.json exists')} else { this.results.application.status = 'not_configured'; this.log('❌ Package.json not found')} } async checkPerformanceMetrics() { this.log('⚡ Checking Performance Metrics')const performanceChecks = [ { "command": 'npm run "perf":monitor',"description": 'Performance Monitoring','
 } ]; for (const check of performanceChecks) { const result = await this.runCommand(check.command,check.description,30000)if (result.success) { this.results.performance.metrics[check.description] = 'monitored'} }'
 ;
-  const buildSize = this.getBuildSize()this.results.performance.metrics.buildSize = buildSize; if (buildSize > 100 * 1024 * 1024) { this.results.performance.alerts.push({ "type": 'warning',"message": 'Build size is large (>100MB)',"value": `${Math.round(buildSize / (1024 * 1024))}MB` })},`} async checkSecurityStatus() { this.log('🔒 Checking Security Status')const securityChecks = [ { "command": 'npm audit --audit-level=moderate --json',"description": 'Security Audit','
 } ]; for (const check of securityChecks) { const result = await this.runCommand(check.command,check.description,30000)if (result.success) { try {;
   }
-  const auditData = JSON.parse(result.output)this.results.security.vulnerabilities = auditData.metadata?.vulnerabilities?.total || 0; if (this.results.security.vulnerabilities > 0) { this.results.performance.alerts.push({ "type": 'error',"message": `${this.results.security.vulnerabilitie,`} security vulnerabilities found`,"value": this.results.security.vulnerabilities })},`} catch (error) { this.log('⚠️ Could not parse security audit results','WARN')} } }'
 
-const packageJsonPath = path.join(this.projectRoot,'package.json')if (fs.existsSync(packageJsonPath)) { try { const packageJson = JSON.parse(fs.readFileSync(packageJsonPath,'utf8'))const dependencies = Object.keys(packageJson.dependencies || {})const devDependencies = Object.keys(packageJson.devDependencies || {})this.results.security.outdatedPackages = dependencies.length + devDependencies.length} catch (error) { this.log('⚠️ Could not analyze package.json','WARN')} } } async checkTestStatus() { this.log('🧪 Checking Test Status';'
 }
-const testChecks = [ { "command": 'npm test -- --passWithNoTests --silent',"description": 'Test Suite Check',;'
 } ]; for (const check of testChecks) { const result = await this.runCommand(check.command,check.description,60000)if (result.success) { this.results.application.testStatus = 'passed'} else { this.results.application.testStatus = 'failed'; this.results.performance.alerts.push({ "type": 'error',"message": 'Test suite failed',"value": 'failed' })} },'
 } async checkCodeQuality() { this.log('🔍 Checking Code Quality')const qualityChecks = [ { "command": 'npx eslint . --max-warnings 0 --quiet',"description": 'ESLint Quality Check','
 },{ "command": 'npx tsc --noEmit --skipLibCheck',"description": 'TypeScript Type Check','
 } ]; for (const check of qualityChecks) { const result = await this.runCommand(check.command,check.description,30000)if (!result.success) { this.results.performance.alerts.push({ "type": 'warning',"message": `${check.descriptio,`} failed`,"value": 'failed' })} },'
 } getBuildSize() {;
   }
-  const buildDir = path.join(this.projectRoot,'.next')if (fs.existsSync(buildDir)) { return this.getDirectorySize(buildDir)};'
   return 0} getDirectorySize(dir) { let size = 0; try { const items = fs.readdirSync(dir)for (const item of items) { const fullPath = path.join(dir,item;
   }
-  const stat = fs.statSync(fullPath)if (stat.isDirectory()) { size += this.getDirectorySize(fullPath)} else { size += stat.size} } } catch (error) {};
   return size} calculateOverallHealth() { let healthScore = 100; if (this.results.application.buildStatus !== 'built') healthScore -= 20; if (this.results.application.testStatus === 'failed') healthScore -= 30; if (this.results.security.vulnerabilities > 0) healthScore -= 25; if (this.results.performance.alerts.length > 0) healthScore -= 15; this.results.overallHealth = { "score": Math.max(0,healthScore),"status": healthScore >= 80 ? 'healthy' : healthScore >= 60 ? 'warning' : 'critical',"timestamp": new Date().toISOString() ,'
 } generateReport() { this.calculateOverallHealth()const reportPath = path.join(this.reportsDir,'monitoring-report.json')fs.writeFileSync(reportPath,JSON.stringify(this.results,null,2))this.log(`📊 Monitoring report "generated": ${reportPath}`)this.log('📊 Monitoring "Summary":')this.log(` Overall "Health": ${this.results.overallHealth.status} (${this.results.overallHealth.score}/100)`)this.log(` System "Health": ${this.results.system.health}`)this.log(` Application "Status": ${this.results.application.status}`)this.log(` Build "Status": ${this.results.application.buildStatus}`)this.log(` Test "Status": ${this.results.application.testStatus}`)this.log(` Security "Vulnerabilities": ${this.results.security.vulnerabilities}`)this.log(` "Alerts": ${this.results.performance.alerts.length}`)return reportPat,`} async run() { this.log('🎯 Starting Enhanced Monitoring System')try { await this.checkSystemHealth()await this.checkApplicationStatus()await this.checkPerformanceMetrics()await this.checkSecurityStatus()await this.checkTestStatus()await this.checkCodeQuality()const reportPath = this.generateReport()this.log('🎉 Enhanced Monitoring System Completed')return { "success": true,reportPath,"results": this.results }} catch (error) { this.log(`💥 Monitoring "failed": ${error.messag,`}`,'ERROR';'
 return { "success": false,"error": error.message }} },;
 } if (require.main === module) {;
   }
-  const monitoring = new EnhancedMonitoringSystem()monitoring.run().then((result) => { process.exit(result.success ? 0 : 1)})} module.exports = EnhancedMonitoringSystem;
 ursor/add-new-services-and-deploy-updates-0462;
 ursor/fix-syntax-push-and-merge-to-main-40de;
 #!/usr/bin/env node const { execSync } = const fs = const path = class EnhancedMonitoringSystem { constructor() { this.projectRoot = process.cwd()this.reportsDir = path.join(this.projectRoot,'automation-reports')this.logFile = path.join(this.reportsDir,'monitoring-system.log')this.ensureDirectories()this.results = { "timestamp": new Date().toISOString(),"system": { "health": 'unknown',"uptime": process.uptime(),"memory": process.memoryUsage(),"cpu": process.cpuUsage(),'
@@ -1151,24 +957,18 @@ ursor/fix-syntax-push-and-merge-to-main-40de;
 } ensureDirectories() { if (!fs.existsSync(this.reportsDir)) { fs.mkdirSync(this.reportsDir,{ "recursive": true })}
 } log(message,level = 'INFO') { const timestamp = new Date().toISOString(;'
 }
-const logMessage = `[${timestamp}] [${level}] ${message}`; console.log(logMessage)fs.appendFileSync(this.logFile,logMessage + '\n')} async runCommand(command,description,timeout = 30000) { this.log(`🔍 "Monitoring": ${descriptio,;`}`)try { const result = execSync(command,{ "cwd": this.projectRoot,"encoding": 'utf8',"timeout": timeout,"maxBuffer": 1024 * 1024 * 5 })this.log(`✅ "Success": ${descriptio,`}`)return { "success": true,"output": result }} catch (error) { this.log(`❌ "Failed": ${description} - ${error.messag,`}`,'ERROR';'
 return { "success": false,"error": error.message }},;
 } async checkSystemHealth() { this.log('🖥️ Checking System Health';'
 }
-const systemChecks = [ { "command": 'df -h',"description": 'Disk Space Check',;'
 },{ "command": 'free -h',"description": 'Memory Usage Check','
 },{ "command": 'uptime',"description": 'System Uptime Check','
 } ];  } } async checkApplicationStatus() { this.log('📱 Checking Application Status')const buildDir = path.join(this.projectRoot,'.next')if (fs.existsSync(buildDir)) { this.results.application.buildStatus = 'built'; this.log('✅ Build directory exists')} else { this.results.application.buildStatus = 'not_built'; this.log('⚠️ Build directory not found')}'
 
-const packageJsonPath = path.join(this.projectRoot,'package.json')if (fs.existsSync(packageJsonPath)) { this.results.application.status = 'configured'; this.log('✅ Package.json exists')} else { this.results.application.status = 'not_configured'; this.log('❌ Package.json not found')} } async checkPerformanceMetrics() { this.log('⚡ Checking Performance Metrics')const performanceChecks = [ { "command": 'npm run "perf":monitor',"description": 'Performance Monitoring','
 } ];  }
 
-const buildSize = this.getBuildSize()this.results.performance.metrics.buildSize = buildSize; if (buildSize > 100 * 1024 * 1024) { this.results.performance.alerts.push({ "type": 'warning',"message": 'Build size is large (>100MB)',"value": `${Math.round(buildSize / (1024 * 1024))}MB` })},`} async checkSecurityStatus() { this.log('🔒 Checking Security Status')const securityChecks = [ { "command": 'npm audit --audit-level=moderate --json',"description": 'Security Audit','
 } ];  security vulnerabilities found`,"value": this.results.security.vulnerabilities })},`} catch (error) { this.log('⚠️ Could not parse security audit results','WARN')} } }'
 
-const packageJsonPath = path.join(this.projectRoot,'package.json')if (fs.existsSync(packageJsonPath)) { try { const packageJson = JSON.parse(fs.readFileSync(packageJsonPath,'utf8'))const dependencies = Object.keys(packageJson.dependencies || {})const devDependencies = Object.keys(packageJson.devDependencies || {})this.results.security.outdatedPackages = dependencies.length + devDependencies.length} catch (error) { this.log('⚠️ Could not analyze package.json','WARN')} } } async checkTestStatus() { this.log('🧪 Checking Test Status';'
 }
-const testChecks = [ { "command": 'npm test -- --passWithNoTests --silent',"description": 'Test Suite Check',;'
 } ];  else { this.results.application.testStatus = 'failed'; this.results.performance.alerts.push({ "type": 'error',"message": 'Test suite failed',"value": 'failed' })} },'
 } async checkCodeQuality() { this.log('🔍 Checking Code Quality')const qualityChecks = [ { "command": 'npx eslint . --max-warnings 0 --quiet',"description": 'ESLint Quality Check','
 },{ "command": 'npx tsc --noEmit --skipLibCheck',"description": 'TypeScript Type Check','
@@ -1180,7 +980,6 @@ const testChecks = [ { "command": 'npm test -- --passWithNoTests --silent',"desc
 return { "success": false,"error": error.message }} },;
 } if (require.main === module) {;
   }
-  const monitoring = new EnhancedMonitoringSystem()monitoring.run().then((result) => { process.exit(result.success ? 0 : 1)})} module.exports = EnhancedMonitoringSystem;
 #!/usr/bin/env node const { execSync } = const fs = const path = class EnhancedMonitoringSystem { constructor() { this.projectRoot = process.cwd()this.reportsDir = path.join(this.projectRoot,'automation-reports')this.logFile = path.join(this.reportsDir,'monitoring-system.log')this.ensureDirectories()this.results = { "timestamp": new Date().toISOString(),"system": { "health": 'unknown',"uptime": process.uptime(),"memory": process.memoryUsage(),"cpu": process.cpuUsage(),'
 },"application": { "status": 'unknown',"buildStatus": 'unknown',"testStatus": 'unknown','
 },"performance": { "metrics": 
@@ -1189,24 +988,18 @@ return { "success": false,"error": error.message }} },;
 } ensureDirectories() { if (!fs.existsSync(this.reportsDir)) { fs.mkdirSync(this.reportsDir,{ "recursive": true })}
 } log(message,level = 'INFO') { const timestamp = new Date().toISOString(;'
 }
-const logMessage = `[${timestamp}] [${level}] ${message}`; console.log(logMessage)fs.appendFileSync(this.logFile,logMessage + '\n')} async runCommand(command,description,timeout = 30000) { this.log(`🔍 "Monitoring": ${descriptio,;`}`)try { const result = execSync(command,{ "cwd": this.projectRoot,"encoding": 'utf8',"timeout": timeout,"maxBuffer": 1024 * 1024 * 5 })this.log(`✅ "Success": ${descriptio,`}`)return { "success": true,"output": result }} catch (error) { this.log(`❌ "Failed": ${description} - ${error.messag,`}`,'ERROR';'
 return { "success": false,"error": error.message }},;
 } async checkSystemHealth() { this.log('🖥️ Checking System Health';'
 }
-const systemChecks = [ { "command": 'df -h',"description": 'Disk Space Check',;'
 },{ "command": 'free -h',"description": 'Memory Usage Check','
 },{ "command": 'uptime',"description": 'System Uptime Check','
 } ];  } } async checkApplicationStatus() { this.log('📱 Checking Application Status')const buildDir = path.join(this.projectRoot,'.next')if (fs.existsSync(buildDir)) { this.results.application.buildStatus = 'built'; this.log('✅ Build directory exists')} else { this.results.application.buildStatus = 'not_built'; this.log('⚠️ Build directory not found')}'
 
-const packageJsonPath = path.join(this.projectRoot,'package.json')if (fs.existsSync(packageJsonPath)) { this.results.application.status = 'configured'; this.log('✅ Package.json exists')} else { this.results.application.status = 'not_configured'; this.log('❌ Package.json not found')} } async checkPerformanceMetrics() { this.log('⚡ Checking Performance Metrics')const performanceChecks = [ { "command": 'npm run "perf":monitor',"description": 'Performance Monitoring','
 } ];  }
 
-const buildSize = this.getBuildSize()this.results.performance.metrics.buildSize = buildSize; if (buildSize > 100 * 1024 * 1024) { this.results.performance.alerts.push({ "type": 'warning',"message": 'Build size is large (>100MB)',"value": `${Math.round(buildSize / (1024 * 1024))}MB` })},`} async checkSecurityStatus() { this.log('🔒 Checking Security Status')const securityChecks = [ { "command": 'npm audit --audit-level=moderate --json',"description": 'Security Audit','
 } ];  security vulnerabilities found`,"value": this.results.security.vulnerabilities })},`} catch (error) { this.log('⚠️ Could not parse security audit results','WARN')} } }'
 
-const packageJsonPath = path.join(this.projectRoot,'package.json')if (fs.existsSync(packageJsonPath)) { try { const packageJson = JSON.parse(fs.readFileSync(packageJsonPath,'utf8'))const dependencies = Object.keys(packageJson.dependencies || {})const devDependencies = Object.keys(packageJson.devDependencies || {})this.results.security.outdatedPackages = dependencies.length + devDependencies.length} catch (error) { this.log('⚠️ Could not analyze package.json','WARN')} } } async checkTestStatus() { this.log('🧪 Checking Test Status';'
 }
-const testChecks = [ { "command": 'npm test -- --passWithNoTests --silent',"description": 'Test Suite Check',;'
 } ];  else { this.results.application.testStatus = 'failed'; this.results.performance.alerts.push({ "type": 'error',"message": 'Test suite failed',"value": 'failed' })} },'
 } async checkCodeQuality() { this.log('🔍 Checking Code Quality')const qualityChecks = [ { "command": 'npx eslint . --max-warnings 0 --quiet',"description": 'ESLint Quality Check','
 },{ "command": 'npx tsc --noEmit --skipLibCheck',"description": 'TypeScript Type Check','
@@ -1218,7 +1011,6 @@ const testChecks = [ { "command": 'npm test -- --passWithNoTests --silent',"desc
 return { "success": false,"error": error.message }} },;
 } if (require.main === module) {;
   }
-  const monitoring = new EnhancedMonitoringSystem()monitoring.run().then((result) => { process.exit(result.success ? 0 : 1)})} module.exports = EnhancedMonitoringSystem;
 origin/cursor/integrate-build-improve-and-re-verify-c7b5;
 #!/usr/bin/env node const { execSync } = const fs = const path = class EnhancedMonitoringSystem { constructor() { this && this.projectRoot = process && process.cwd(); this && this.reportsDir = path && path.join(this && this.projectRoot,'automation-reports'); this && this.logFile = path && path.join(this && this.reportsDir,'monitoring-system && system.log'); this && this.ensureDirectories(); this && this.results = { "timestamp": new Date().toISOString(),"system": { "health": 'unknown',"uptime": process && process.uptime(),"memory": process && process.memoryUsage(),"cpu": process && process.cpuUsage(),'
 },"application": { "status": 'unknown',"buildStatus": 'unknown',"testStatus": 'unknown','
@@ -1228,7 +1020,6 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5;
 } ensureDirectories() { if (!fs && fs.existsSync(this && this.reportsDir)) { fs && fs.mkdirSync(this && this.reportsDir,{ "recursive": true })}
 } log(message,level = 'INFO') {;'
   }
-  const timestamp = new Date().toISOString();
 
 const logMessage = `[${timestamp}] [${level}] ${message}`; console && console.log(logMessage); fs && fs.appendFileSync(this && this.logFile,logMessage + '\n')} async runCommand(command,description,timeout = 30000) { this && this.log(`🔍 "Monitoring": ${descriptio,;`}`); try { const result = execSync(command,{ "cwd": this && this.projectRoot,"encoding": 'utf8',"timeout": timeout,"maxBuffer": 1024 * 1024 * 5,'
 }); this && this.log(`✅ "Success": ${descriptio,`}`); return { "success": true,"output": result }} catch (error) { this && this.log(`❌ "Failed": ${description} - ${error && error.messag,`}`,'ERROR'); return { "success": false,"error": error && error.message }},'
@@ -1236,63 +1027,49 @@ const logMessage = `[${timestamp}] [${level}] ${message}`; console && console.lo
 
 }
 
-const systemChecks = [ { "command": 'df -h',"description": 'Disk Space Check',;'
 },{ "command": 'free -h',"description": 'Memory Usage Check','
 },{ "command": 'uptime',"description": 'System Uptime Check','
 } ]; for (const check of systemChecks) { const result = await this && this.runCommand(check && check.command,check && check.description,10000); if (result && result.success) { this && this.results.system && system.health = 'healthy'} } } async checkApplicationStatus() { this && this.log('📱 Checking Application Status');'
 
 }
 
-const buildDir = path && path.join(this && this.projectRoot,'.next'); if (fs && fs.existsSync(buildDir)) { this && this.results.application && application.buildStatus = 'built'; this && this.log('✅ Build directory exists')} else { this && this.results.application && application.buildStatus = 'not_built'; this && this.log('⚠️ Build directory not found')}'
 
-const packageJsonPath = path && path.join(this && this.projectRoot,'package && package.json'); if (fs && fs.existsSync(packageJsonPath)) { this && this.results.application && application.status = 'configured'; this && this.log('✅ Package && Package.json exists')} else { this && this.results.application && application.status = 'not_configured'; this && this.log('❌ Package && Package.json not found')} } async checkPerformanceMetrics() { this && this.log('⚡ Checking Performance Metrics');'
 
 }
 
-const performanceChecks = [ { "command": 'npm run "perf":monitor',"description": 'Performance Monitoring','
 } ]; for (const check of performanceChecks) { const result = await this && this.runCommand(check && check.command,check && check.description,30000); if (result && result.success) { this && this.results.performance && performance.metrics[check && check.description] = 'monitored'} }'
 
-const buildSize = this && this.getBuildSize(); this && this.results.performance && performance.metrics.buildSize = buildSize; if (buildSize > 100 * 1024 * 1024) { this && this.results.performance && performance.alerts.push({ "type": 'warning',"message": 'Build size is large (>100MB)',"value": `${Math && Math.round(buildSize / (1024 * 1024))}MB` })},`} async checkSecurityStatus() { this && this.log('🔒 Checking Security Status');'
 
 }
 
-const securityChecks = [ { "command": 'npm audit --audit-level=moderate --json',"description": 'Security Audit',;'
 } ]; for (const check of securityChecks) { const result = await this && this.runCommand(check && check.command,check && check.description,30000); if (result && result.success) { try { const auditData = JSON && JSON.parse(result && result.output); this && this.results.security && security.vulnerabilities = auditData && auditData.metadata?.vulnerabilities?.total || 0; if (this && this.results.security && security.vulnerabilities > 0) { this && this.results.performance && performance.alerts.push({ "type": 'error',"message": `${this && this.results.security && security.vulnerabilitie,`} security vulnerabilities found`,"value": this && this.results.security && security.vulnerabilities })},`} catch (error) { this && this.log('⚠️ Could not parse security audit results','WARN')} } }'
 
-const packageJsonPath = path && path.join(this && this.projectRoot,'package && package.json'); if (fs && fs.existsSync(packageJsonPath)) { try { const packageJson = JSON && JSON.parse(fs && fs.readFileSync(packageJsonPath,'utf8'));'
 
 }
 
-const devDependencies = Object && Object.keys(packageJson && packageJson.devDependencies || {}); this && this.results.security && security.outdatedPackages = dependencies && dependencies.length + devDependencies && devDependencies.length} catch (error) { this && this.log('⚠️ Could not analyze package && package.json','WARN')} } } async checkTestStatus() { this && this.log('🧪 Checking Test Status');'
 
 }
 
-const testChecks = [ { "command": 'npm test -- --passWithNoTests --silent',"description": 'Test Suite Check',;'
 } ]; for (const check of testChecks) { const result = await this && this.runCommand(check && check.command,check && check.description,60000); if (result && result.success) { this && this.results.application && application.testStatus = 'passed'} else { this && this.results.application && application.testStatus = 'failed'; this && this.results.performance && performance.alerts.push({ "type": 'error',"message": 'Test suite failed',"value": 'failed' })} },'
 } async checkCodeQuality() { this && this.log('🔍 Checking Code Quality');'
 
 }
 
-const qualityChecks = [ { "command": 'npx eslint . --max-warnings 0 --quiet',"description": 'ESLint Quality Check',;'
 },{ "command": 'npx tsc --noEmit --skipLibCheck',"description": 'TypeScript Type Check','
 } ]; for (const check of qualityChecks) { const result = await this && this.runCommand(check && check.command,check && check.description,30000); if (!result && result.success) { this && this.results.performance && performance.alerts.push({ "type": 'warning',"message": `${check && check.descriptio,`} failed`,"value": 'failed' })} },'
 } getBuildSize() { const buildDir = path && path.join(this && this.projectRoot,'.next'); if (fs && fs.existsSync(buildDir)) { return this && this.getDirectorySize(buildDir)} return 0} getDirectorySize(dir) { let size = 0; try { const items = fs && fs.readdirSync(dir); for (const item of items) { const fullPath = path && path.join(dir,item);'
 
 }
 
-const stat = fs && fs.statSync(fullPath); if (stat && stat.isDirectory()) { size += this && this.getDirectorySize(fullPath)} else { size += stat && stat.size} } } catch (error) {} return size} calculateOverallHealth() { let healthScore = 100; if (this && this.results.application && application.buildStatus !== 'built') healthScore -= 20; if (this && this.results.application && application.testStatus === 'failed') healthScore -= 30; if (this && this.results.security && security.vulnerabilities > 0) healthScore -= 25; if (this && this.results.performance && performance.alerts.length > 0) healthScore -= 15; this && this.results.overallHealth = { "score": Math && Math.max(0,healthScore),"status": healthScore >= 80 ? 'healthy' : healthScore >= 60 ? 'warning' : 'critical',"timestamp": new Date().toISOString() ,'
 } generateReport() { this && this.calculateOverallHealth();
 
 }
 
-const reportPath = path && path.join(this && this.reportsDir,'monitoring-report && report.json'); fs && fs.writeFileSync(reportPath,JSON && JSON.stringify(this && this.results,null,2)); this && this.log(`📊 Monitoring report "generated": ${reportPat,`}`); this && this.log('📊 Monitoring "Summary":'); this && this.log(` Overall "Health": ${this && this.results.overallHealth && overallHealth.status} (${this && this.results.overallHealth && overallHealth.scor,`}/100)`); this && this.log(` System "Health": ${this && this.results.system && system.healt,`}`); this && this.log(` Application "Status": ${this && this.results.application && application.statu,`}`); this && this.log(` Build "Status": ${this && this.results.application && application.buildStatu,`}`); this && this.log(` Test "Status": ${this && this.results.application && application.testStatu,`}`); this && this.log(` Security "Vulnerabilities": ${this && this.results.security && security.vulnerabilitie,`}`); this && this.log(` "Alerts": ${this && this.results.performance && performance.alerts.lengt,`}`); return reportPath} async run() { this && this.log('🎯 Starting Enhanced Monitoring System'); try { await this && this.checkSystemHealth(); await this && this.checkApplicationStatus(); await this && this.checkPerformanceMetrics(); await this && this.checkSecurityStatus(); await this && this.checkTestStatus(); await this && this.checkCodeQuality();'
 
 }
 
-const reportPath = this && this.generateReport(); this && this.log('🎉 Enhanced Monitoring System Completed'); return { "success": true,reportPath,"results": this && this.results }} catch (error) { this && this.log(`💥 Monitoring "failed": ${error && error.messag,`}`,'ERROR'); return { "success": false,"error": error && error.message }} },'
 } if (require && require.main = == module) {;
   }
-  const monitoring = new EnhancedMonitoringSystem(); monitoring && monitoring.run().then((result) => { process && process.exit(result && result.success ? 0 : 1)})} module && module.exports = EnhancedMonitoringSystem;
 #!/usr/bin/env node const { execSync } = const fs = const path = class EnhancedMonitoringSystem { constructor() { this && this.projectRoot = process && process.cwd(); this && this.reportsDir = path && path.join(this && this.projectRoot,'automation-reports'); this && this.logFile = path && path.join(this && this.reportsDir,'monitoring-system && system.log'); this && this.ensureDirectories(); this && this.results = { "timestamp": new Date().toISOString(),"system": { "health": 'unknown',"uptime": process && process.uptime(),"memory": process && process.memoryUsage(),"cpu": process && process.cpuUsage(),'
 },"application": { "status": 'unknown',"buildStatus": 'unknown',"testStatus": 'unknown','
 },"performance": { "metrics": 
@@ -1301,71 +1078,55 @@ const reportPath = this && this.generateReport(); this && this.log('🎉 Enhance
 } ensureDirectories() { if (!fs && fs.existsSync(this && this.reportsDir)) { fs && fs.mkdirSync(this && this.reportsDir,{ "recursive": true })}
 } log(message,level = 'INFO') {;'
   }
-  const timestamp = new Date().toISOString();
 
-const logMessage = `[${timestamp}] [${level}] ${message}`; console && console.log(logMessage); fs && fs.appendFileSync(this && this.logFile,logMessage + '\n')} async runCommand(command,description,timeout = 30000) { this && this.log(`🔍 "Monitoring": ${descriptio,;`}`); try { const result = execSync(command,{ "cwd": this && this.projectRoot,"encoding": 'utf8',"timeout": timeout,"maxBuffer": 1024 * 1024 * 5,'
 }); this && this.log(`✅ "Success": ${descriptio,`}`); return { "success": true,"output": result }} catch (error) { this && this.log(`❌ "Failed": ${description} - ${error && error.messag,`}`,'ERROR'); return { "success": false,"error": error && error.message }},'
 } async checkSystemHealth() { this && this.log('🖥️ Checking System Health');'
 
 }
 
-const systemChecks = [ { "command": 'df -h',"description": 'Disk Space Check',;'
 },{ "command": 'free -h',"description": 'Memory Usage Check','
 },{ "command": 'uptime',"description": 'System Uptime Check','
 } ]; for (const check of systemChecks) { const result = await this && this.runCommand(check && check.command,check && check.description,10000); if (result && result.success) { this && this.results.system && system.health = 'healthy'} } } async checkApplicationStatus() { this && this.log('📱 Checking Application Status');'
 
 }
 
-const buildDir = path && path.join(this && this.projectRoot,'.next'); if (fs && fs.existsSync(buildDir)) { this && this.results.application && application.buildStatus = 'built'; this && this.log('✅ Build directory exists')} else { this && this.results.application && application.buildStatus = 'not_built'; this && this.log('⚠️ Build directory not found')}'
 
-const packageJsonPath = path && path.join(this && this.projectRoot,'package && package.json'); if (fs && fs.existsSync(packageJsonPath)) { this && this.results.application && application.status = 'configured'; this && this.log('✅ Package && Package.json exists')} else { this && this.results.application && application.status = 'not_configured'; this && this.log('❌ Package && Package.json not found')} } async checkPerformanceMetrics() { this && this.log('⚡ Checking Performance Metrics');'
 
 }
 
-const performanceChecks = [ { "command": 'npm run "perf":monitor',"description": 'Performance Monitoring','
 } ]; for (const check of performanceChecks) { const result = await this && this.runCommand(check && check.command,check && check.description,30000); if (result && result.success) { this && this.results.performance && performance.metrics[check && check.description] = 'monitored'} }'
 
-const buildSize = this && this.getBuildSize(); this && this.results.performance && performance.metrics.buildSize = buildSize; if (buildSize > 100 * 1024 * 1024) { this && this.results.performance && performance.alerts.push({ "type": 'warning',"message": 'Build size is large (>100MB)',"value": `${Math && Math.round(buildSize / (1024 * 1024))}MB` })},`} async checkSecurityStatus() { this && this.log('🔒 Checking Security Status');'
 
 }
 
-const securityChecks = [ { "command": 'npm audit --audit-level=moderate --json',"description": 'Security Audit',;'
 } ]; for (const check of securityChecks) { const result = await this && this.runCommand(check && check.command,check && check.description,30000); if (result && result.success) { try { const auditData = JSON && JSON.parse(result && result.output); this && this.results.security && security.vulnerabilities = auditData && auditData.metadata?.vulnerabilities?.total || 0; if (this && this.results.security && security.vulnerabilities > 0) { this && this.results.performance && performance.alerts.push({ "type": 'error',"message": `${this && this.results.security && security.vulnerabilitie,`} security vulnerabilities found`,"value": this && this.results.security && security.vulnerabilities })},`} catch (error) { this && this.log('⚠️ Could not parse security audit results','WARN')} } }'
 
-const packageJsonPath = path && path.join(this && this.projectRoot,'package && package.json'); if (fs && fs.existsSync(packageJsonPath)) { try { const packageJson = JSON && JSON.parse(fs && fs.readFileSync(packageJsonPath,'utf8'));'
 
 }
 
-const devDependencies = Object && Object.keys(packageJson && packageJson.devDependencies || {}); this && this.results.security && security.outdatedPackages = dependencies && dependencies.length + devDependencies && devDependencies.length} catch (error) { this && this.log('⚠️ Could not analyze package && package.json','WARN')} } } async checkTestStatus() { this && this.log('🧪 Checking Test Status');'
 
 }
 
-const testChecks = [ { "command": 'npm test -- --passWithNoTests --silent',"description": 'Test Suite Check',;'
 } ]; for (const check of testChecks) { const result = await this && this.runCommand(check && check.command,check && check.description,60000); if (result && result.success) { this && this.results.application && application.testStatus = 'passed'} else { this && this.results.application && application.testStatus = 'failed'; this && this.results.performance && performance.alerts.push({ "type": 'error',"message": 'Test suite failed',"value": 'failed' })} },'
 } async checkCodeQuality() { this && this.log('🔍 Checking Code Quality');'
 
 }
 
-const qualityChecks = [ { "command": 'npx eslint . --max-warnings 0 --quiet',"description": 'ESLint Quality Check',;'
 },{ "command": 'npx tsc --noEmit --skipLibCheck',"description": 'TypeScript Type Check','
 } ]; for (const check of qualityChecks) { const result = await this && this.runCommand(check && check.command,check && check.description,30000); if (!result && result.success) { this && this.results.performance && performance.alerts.push({ "type": 'warning',"message": `${check && check.descriptio,`} failed`,"value": 'failed' })} },'
 } getBuildSize() { const buildDir = path && path.join(this && this.projectRoot,'.next'); if (fs && fs.existsSync(buildDir)) { return this && this.getDirectorySize(buildDir)} return 0} getDirectorySize(dir) { let size = 0; try { const items = fs && fs.readdirSync(dir); for (const item of items) { const fullPath = path && path.join(dir,item);'
 
 }
 
-const stat = fs && fs.statSync(fullPath); if (stat && stat.isDirectory()) { size += this && this.getDirectorySize(fullPath)} else { size += stat && stat.size} } } catch (error) {} return size} calculateOverallHealth() { let healthScore = 100; if (this && this.results.application && application.buildStatus !== 'built') healthScore -= 20; if (this && this.results.application && application.testStatus === 'failed') healthScore -= 30; if (this && this.results.security && security.vulnerabilities > 0) healthScore -= 25; if (this && this.results.performance && performance.alerts.length > 0) healthScore -= 15; this && this.results.overallHealth = { "score": Math && Math.max(0,healthScore),"status": healthScore >= 80 ? 'healthy' : healthScore >= 60 ? 'warning' : 'critical',"timestamp": new Date().toISOString() ,'
 } generateReport() { this && this.calculateOverallHealth();
 
 }
 
-const reportPath = path && path.join(this && this.reportsDir,'monitoring-report && report.json'); fs && fs.writeFileSync(reportPath,JSON && JSON.stringify(this && this.results,null,2)); this && this.log(`📊 Monitoring report "generated": ${reportPat,`}`); this && this.log('📊 Monitoring "Summary":'); this && this.log(` Overall "Health": ${this && this.results.overallHealth && overallHealth.status} (${this && this.results.overallHealth && overallHealth.scor,`}/100)`); this && this.log(` System "Health": ${this && this.results.system && system.healt,`}`); this && this.log(` Application "Status": ${this && this.results.application && application.statu,`}`); this && this.log(` Build "Status": ${this && this.results.application && application.buildStatu,`}`); this && this.log(` Test "Status": ${this && this.results.application && application.testStatu,`}`); this && this.log(` Security "Vulnerabilities": ${this && this.results.security && security.vulnerabilitie,`}`); this && this.log(` "Alerts": ${this && this.results.performance && performance.alerts.lengt,`}`); return reportPath} async run() { this && this.log('🎯 Starting Enhanced Monitoring System'); try { await this && this.checkSystemHealth(); await this && this.checkApplicationStatus(); await this && this.checkPerformanceMetrics(); await this && this.checkSecurityStatus(); await this && this.checkTestStatus(); await this && this.checkCodeQuality();'
 
 }
 
-const reportPath = this && this.generateReport(); this && this.log('🎉 Enhanced Monitoring System Completed'); return { "success": true,reportPath,"results": this && this.results }} catch (error) { this && this.log(`💥 Monitoring "failed": ${error && error.messag,`}`,'ERROR'); return { "success": false,"error": error && error.message }} },'
 } if (require && require.main = == module) {;
   }
-  const monitoring = new EnhancedMonitoringSystem(); monitoring && monitoring.run().then((result) => { process && process.exit(result && result.success ? 0 : 1)})} module && module.exports = EnhancedMonitoringSystem;
 #!/usr/bin/env node const { execSync } = const fs = const path = class EnhancedMonitoringSystem { constructor() { this.projectRoot = process.cwd(); this.reportsDir = path.join(this.projectRoot,'automation-reports'); this.logFile = path.join(this.reportsDir,'monitoring-system.log'); this.ensureDirectories(); this.results = { "timestamp": new Date().toISOString(),"system": { "health": 'unknown',"uptime": process.uptime(),"memory": process.memoryUsage(),"cpu": process.cpuUsage(),'
 },"application": { "status": 'unknown',"buildStatus": 'unknown',"testStatus": 'unknown','
 },"performance": { "metrics": 
@@ -1374,71 +1135,55 @@ const reportPath = this && this.generateReport(); this && this.log('🎉 Enhance
 } ensureDirectories() { if (!fs.existsSync(this.reportsDir)) { fs.mkdirSync(this.reportsDir,{ "recursive": true })}
 } log(message,level = 'INFO') {;'
   }
-  const timestamp = new Date().toISOString();
 
-const logMessage = `[${timestamp}] [${level}] ${message}`; console.log(logMessage); fs.appendFileSync(this.logFile,logMessage + '\n')} async runCommand(command,description,timeout = 30000) { this.log(`🔍 "Monitoring": ${descriptio,;`}`); try { const result = execSync(command,{ "cwd": this.projectRoot,"encoding": 'utf8',"timeout": timeout,"maxBuffer": 1024 * 1024 * 5,'
 }); this.log(`✅ "Success": ${descriptio,`}`); return { "success": true,"output": result }} catch (error) { this.log(`❌ "Failed": ${description} - ${error.messag,`}`,'ERROR'); return { "success": false,"error": error.message }},'
 } async checkSystemHealth() { this.log('🖥️ Checking System Health');'
 
 }
 
-const systemChecks = [ { "command": 'df -h',"description": 'Disk Space Check',;'
 },{ "command": 'free -h',"description": 'Memory Usage Check','
 },{ "command": 'uptime',"description": 'System Uptime Check','
 } ]; for (const check of systemChecks) { const result = await this.runCommand(check.command,check.description,10000); if (result.success) { this.results.system.health = 'healthy'} } } async checkApplicationStatus() { this.log('📱 Checking Application Status');'
 
 }
 
-const buildDir = path.join(this.projectRoot,'.next'); if (fs.existsSync(buildDir)) { this.results.application.buildStatus = 'built'; this.log('✅ Build directory exists')} else { this.results.application.buildStatus = 'not_built'; this.log('⚠️ Build directory not found')}'
 
-const packageJsonPath = path.join(this.projectRoot,'package.json'); if (fs.existsSync(packageJsonPath)) { this.results.application.status = 'configured'; this.log('✅ Package.json exists')} else { this.results.application.status = 'not_configured'; this.log('❌ Package.json not found')} } async checkPerformanceMetrics() { this.log('⚡ Checking Performance Metrics');'
 
 }
 
-const performanceChecks = [ { "command": 'npm run "perf":monitor',"description": 'Performance Monitoring','
 } ]; for (const check of performanceChecks) { const result = await this.runCommand(check.command,check.description,30000); if (result.success) { this.results.performance.metrics[check.description] = 'monitored'} }'
 
-const buildSize = this.getBuildSize(); this.results.performance.metrics.buildSize = buildSize; if (buildSize > 100 * 1024 * 1024) { this.results.performance.alerts.push({ "type": 'warning',"message": 'Build size is large (>100MB)',"value": `${Math.round(buildSize / (1024 * 1024))}MB` })},`} async checkSecurityStatus() { this.log('🔒 Checking Security Status');'
 
 }
 
-const securityChecks = [ { "command": 'npm audit --audit-level=moderate --json',"description": 'Security Audit',;'
 } ]; for (const check of securityChecks) { const result = await this.runCommand(check.command,check.description,30000); if (result.success) { try { const auditData = JSON.parse(result.output); this.results.security.vulnerabilities = auditData.metadata?.vulnerabilities?.total || 0; if (this.results.security.vulnerabilities > 0) { this.results.performance.alerts.push({ "type": 'error',"message": `${this.results.security.vulnerabilitie,`} security vulnerabilities found`,"value": this.results.security.vulnerabilities })},`} catch (error) { this.log('⚠️ Could not parse security audit results','WARN')} } }'
 
-const packageJsonPath = path.join(this.projectRoot,'package.json'); if (fs.existsSync(packageJsonPath)) { try { const packageJson = JSON.parse(fs.readFileSync(packageJsonPath,'utf8'));'
 
 }
 
-const devDependencies = Object.keys(packageJson.devDependencies || {}); this.results.security.outdatedPackages = dependencies.length + devDependencies.length} catch (error) { this.log('⚠️ Could not analyze package.json','WARN')} } } async checkTestStatus() { this.log('🧪 Checking Test Status');'
 
 }
 
-const testChecks = [ { "command": 'npm test -- --passWithNoTests --silent',"description": 'Test Suite Check',;'
 } ]; for (const check of testChecks) { const result = await this.runCommand(check.command,check.description,60000); if (result.success) { this.results.application.testStatus = 'passed'} else { this.results.application.testStatus = 'failed'; this.results.performance.alerts.push({ "type": 'error',"message": 'Test suite failed',"value": 'failed' })} },'
 } async checkCodeQuality() { this.log('🔍 Checking Code Quality');'
 
 }
 
-const qualityChecks = [ { "command": 'npx eslint . --max-warnings 0 --quiet',"description": 'ESLint Quality Check',;'
 },{ "command": 'npx tsc --noEmit --skipLibCheck',"description": 'TypeScript Type Check','
 } ]; for (const check of qualityChecks) { const result = await this.runCommand(check.command,check.description,30000); if (!result.success) { this.results.performance.alerts.push({ "type": 'warning',"message": `${check.descriptio,`} failed`,"value": 'failed' })} },'
 } getBuildSize() { const buildDir = path.join(this.projectRoot,'.next'); if (fs.existsSync(buildDir)) { return this.getDirectorySize(buildDir)} return 0} getDirectorySize(dir) { let size = 0; try { const items = fs.readdirSync(dir); for (const item of items) { const fullPath = path.join(dir,item);'
 
 }
 
-const stat = fs.statSync(fullPath); if (stat.isDirectory()) { size += this.getDirectorySize(fullPath)} else { size += stat.size} } } catch (error) {} return size} calculateOverallHealth() { let healthScore = 100; if (this.results.application.buildStatus !== 'built') healthScore -= 20; if (this.results.application.testStatus === 'failed') healthScore -= 30; if (this.results.security.vulnerabilities > 0) healthScore -= 25; if (this.results.performance.alerts.length > 0) healthScore -= 15; this.results.overallHealth = { "score": Math.max(0,healthScore),"status": healthScore >= 80 ? 'healthy' : healthScore >= 60 ? 'warning' : 'critical',"timestamp": new Date().toISOString() ,'
 } generateReport() { this.calculateOverallHealth();
 
 }
 
-const reportPath = path.join(this.reportsDir,'monitoring-report.json'); fs.writeFileSync(reportPath,JSON.stringify(this.results,null,2)); this.log(`📊 Monitoring report "generated": ${reportPat,`}`); this.log('📊 Monitoring "Summary":'); this.log(` Overall "Health": ${this.results.overallHealth.status} (${this.results.overallHealth.scor,`}/100)`); this.log(` System "Health": ${this.results.system.healt,`}`); this.log(` Application "Status": ${this.results.application.statu,`}`); this.log(` Build "Status": ${this.results.application.buildStatu,`}`); this.log(` Test "Status": ${this.results.application.testStatu,`}`); this.log(` Security "Vulnerabilities": ${this.results.security.vulnerabilitie,`}`); this.log(` "Alerts": ${this.results.performance.alerts.lengt,`}`); return reportPath} async run() { this.log('🎯 Starting Enhanced Monitoring System'); try { await this.checkSystemHealth(); await this.checkApplicationStatus(); await this.checkPerformanceMetrics(); await this.checkSecurityStatus(); await this.checkTestStatus(); await this.checkCodeQuality();'
 
 }
 
-const reportPath = this.generateReport(); this.log('🎉 Enhanced Monitoring System Completed'); return { "success": true,reportPath,"results": this.results }} catch (error) { this.log(`💥 Monitoring "failed": ${error.messag,`}`,'ERROR'); return { "success": false,"error": error.message }} },'
 } if (require.main = == module) {;
   }
-  const monitoring = new EnhancedMonitoringSystem(); monitoring.run().then((result) => { process.exit(result.success ? 0 : 1)})} module.exports = EnhancedMonitoringSystem;
 #!/usr/bin/env node const { execSync } = const fs = const path = class EnhancedMonitoringSystem { constructor() { this.projectRoot = process.cwd(); this.reportsDir = path.join(this.projectRoot,'automation-reports'); this.logFile = path.join(this.reportsDir,'monitoring-system.log'); this.ensureDirectories(); this.results = { "timestamp": new Date().toISOString(),"system": { "health": 'unknown',"uptime": process.uptime(),"memory": process.memoryUsage(),"cpu": process.cpuUsage(),'
 },"application": { "status": 'unknown',"buildStatus": 'unknown',"testStatus": 'unknown','
 },"performance": { "metrics": 
@@ -1447,71 +1192,55 @@ const reportPath = this.generateReport(); this.log('🎉 Enhanced Monitoring Sys
 } ensureDirectories() { if (!fs.existsSync(this.reportsDir)) { fs.mkdirSync(this.reportsDir,{ "recursive": true })}
 } log(message,level = 'INFO') {;'
   }
-  const timestamp = new Date().toISOString();
 
-const logMessage = `[${timestamp}] [${level}] ${message}`; console.log(logMessage); fs.appendFileSync(this.logFile,logMessage + '\n')} async runCommand(command,description,timeout = 30000) { this.log(`🔍 "Monitoring": ${descriptio,;`}`); try { const result = execSync(command,{ "cwd": this.projectRoot,"encoding": 'utf8',"timeout": timeout,"maxBuffer": 1024 * 1024 * 5,'
 }); this.log(`✅ "Success": ${descriptio,`}`); return { "success": true,"output": result }} catch (error) { this.log(`❌ "Failed": ${description} - ${error.messag,`}`,'ERROR'); return { "success": false,"error": error.message }},'
 } async checkSystemHealth() { this.log('🖥️ Checking System Health');'
 
 }
 
-const systemChecks = [ { "command": 'df -h',"description": 'Disk Space Check',;'
 },{ "command": 'free -h',"description": 'Memory Usage Check','
 },{ "command": 'uptime',"description": 'System Uptime Check','
 } ]; for (const check of systemChecks) { const result = await this.runCommand(check.command,check.description,10000); if (result.success) { this.results.system.health = 'healthy'} } } async checkApplicationStatus() { this.log('📱 Checking Application Status');'
 
 }
 
-const buildDir = path.join(this.projectRoot,'.next'); if (fs.existsSync(buildDir)) { this.results.application.buildStatus = 'built'; this.log('✅ Build directory exists')} else { this.results.application.buildStatus = 'not_built'; this.log('⚠️ Build directory not found')}'
 
-const packageJsonPath = path.join(this.projectRoot,'package.json'); if (fs.existsSync(packageJsonPath)) { this.results.application.status = 'configured'; this.log('✅ Package.json exists')} else { this.results.application.status = 'not_configured'; this.log('❌ Package.json not found')} } async checkPerformanceMetrics() { this.log('⚡ Checking Performance Metrics');'
 
 }
 
-const performanceChecks = [ { "command": 'npm run "perf":monitor',"description": 'Performance Monitoring','
 } ]; for (const check of performanceChecks) { const result = await this.runCommand(check.command,check.description,30000); if (result.success) { this.results.performance.metrics[check.description] = 'monitored'} }'
 
-const buildSize = this.getBuildSize(); this.results.performance.metrics.buildSize = buildSize; if (buildSize > 100 * 1024 * 1024) { this.results.performance.alerts.push({ "type": 'warning',"message": 'Build size is large (>100MB)',"value": `${Math.round(buildSize / (1024 * 1024))}MB` })},`} async checkSecurityStatus() { this.log('🔒 Checking Security Status');'
 
 }
 
-const securityChecks = [ { "command": 'npm audit --audit-level=moderate --json',"description": 'Security Audit',;'
 } ]; for (const check of securityChecks) { const result = await this.runCommand(check.command,check.description,30000); if (result.success) { try { const auditData = JSON.parse(result.output); this.results.security.vulnerabilities = auditData.metadata?.vulnerabilities?.total || 0; if (this.results.security.vulnerabilities > 0) { this.results.performance.alerts.push({ "type": 'error',"message": `${this.results.security.vulnerabilitie,`} security vulnerabilities found`,"value": this.results.security.vulnerabilities })},`} catch (error) { this.log('⚠️ Could not parse security audit results','WARN')} } }'
 
-const packageJsonPath = path.join(this.projectRoot,'package.json'); if (fs.existsSync(packageJsonPath)) { try { const packageJson = JSON.parse(fs.readFileSync(packageJsonPath,'utf8'));'
 
 }
 
-const devDependencies = Object.keys(packageJson.devDependencies || {}); this.results.security.outdatedPackages = dependencies.length + devDependencies.length} catch (error) { this.log('⚠️ Could not analyze package.json','WARN')} } } async checkTestStatus() { this.log('🧪 Checking Test Status');'
 
 }
 
-const testChecks = [ { "command": 'npm test -- --passWithNoTests --silent',"description": 'Test Suite Check',;'
 } ]; for (const check of testChecks) { const result = await this.runCommand(check.command,check.description,60000); if (result.success) { this.results.application.testStatus = 'passed'} else { this.results.application.testStatus = 'failed'; this.results.performance.alerts.push({ "type": 'error',"message": 'Test suite failed',"value": 'failed' })} },'
 } async checkCodeQuality() { this.log('🔍 Checking Code Quality');'
 
 }
 
-const qualityChecks = [ { "command": 'npx eslint . --max-warnings 0 --quiet',"description": 'ESLint Quality Check',;'
 },{ "command": 'npx tsc --noEmit --skipLibCheck',"description": 'TypeScript Type Check','
 } ]; for (const check of qualityChecks) { const result = await this.runCommand(check.command,check.description,30000); if (!result.success) { this.results.performance.alerts.push({ "type": 'warning',"message": `${check.descriptio,`} failed`,"value": 'failed' })} },'
 } getBuildSize() { const buildDir = path.join(this.projectRoot,'.next'); if (fs.existsSync(buildDir)) { return this.getDirectorySize(buildDir)} return 0} getDirectorySize(dir) { let size = 0; try { const items = fs.readdirSync(dir); for (const item of items) { const fullPath = path.join(dir,item);'
 
 }
 
-const stat = fs.statSync(fullPath); if (stat.isDirectory()) { size += this.getDirectorySize(fullPath)} else { size += stat.size} } } catch (error) {} return size} calculateOverallHealth() { let healthScore = 100; if (this.results.application.buildStatus !== 'built') healthScore -= 20; if (this.results.application.testStatus === 'failed') healthScore -= 30; if (this.results.security.vulnerabilities > 0) healthScore -= 25; if (this.results.performance.alerts.length > 0) healthScore -= 15; this.results.overallHealth = { "score": Math.max(0,healthScore),"status": healthScore >= 80 ? 'healthy' : healthScore >= 60 ? 'warning' : 'critical',"timestamp": new Date().toISOString() ,'
 } generateReport() { this.calculateOverallHealth();
 
 }
 
-const reportPath = path.join(this.reportsDir,'monitoring-report.json'); fs.writeFileSync(reportPath,JSON.stringify(this.results,null,2)); this.log(`📊 Monitoring report "generated": ${reportPat,`}`); this.log('📊 Monitoring "Summary":'); this.log(` Overall "Health": ${this.results.overallHealth.status} (${this.results.overallHealth.scor,`}/100)`); this.log(` System "Health": ${this.results.system.healt,`}`); this.log(` Application "Status": ${this.results.application.statu,`}`); this.log(` Build "Status": ${this.results.application.buildStatu,`}`); this.log(` Test "Status": ${this.results.application.testStatu,`}`); this.log(` Security "Vulnerabilities": ${this.results.security.vulnerabilitie,`}`); this.log(` "Alerts": ${this.results.performance.alerts.lengt,`}`); return reportPath} async run() { this.log('🎯 Starting Enhanced Monitoring System'); try { await this.checkSystemHealth(); await this.checkApplicationStatus(); await this.checkPerformanceMetrics(); await this.checkSecurityStatus(); await this.checkTestStatus(); await this.checkCodeQuality();'
 
 }
 
-const reportPath = this.generateReport(); this.log('🎉 Enhanced Monitoring System Completed'); return { "success": true,reportPath,"results": this.results }} catch (error) { this.log(`💥 Monitoring "failed": ${error.messag,`}`,'ERROR'); return { "success": false,"error": error.message }} },'
 } if (require.main = == module) {;
   }
-  const monitoring = new EnhancedMonitoringSystem(); monitoring.run().then((result) => { process.exit(result.success ? 0 : 1)})} module.exports = EnhancedMonitoringSystem;
 ursor/add-new-services-and-deploy-updates-0462,
 ursor/fix-syntax-push-and-merge-to-main-40de
 #!/usr/bin/env node const { execSync } = const fs = const path = class EnhancedMonitoringSystem { constructor() { this.projectRoot = process.cwd(); this.reportsDir = path.join(this.projectRoot,'automation-reports'); this.logFile = path.join(this.reportsDir,'monitoring-system.log'); this.ensureDirectories(); this.results = { "timestamp": new Date().toISOString(),"system": { "health": 'unknown',"uptime": process.uptime(),"memory": process.memoryUsage(),"cpu": process.cpuUsage(),'
@@ -1522,52 +1251,40 @@ ursor/fix-syntax-push-and-merge-to-main-40de
 } ensureDirectories() { if (!fs.existsSync(this.reportsDir)) { fs.mkdirSync(this.reportsDir,{ "recursive": true })}
 } log(message,level = 'INFO') {;'
   }
-  const timestamp = new Date().toISOString();
 
-const logMessage = `[${timestamp}] [${level}] ${message}`; console.log(logMessage); fs.appendFileSync(this.logFile,logMessage + '\n')} async runCommand(command,description,timeout = 30000) { this.log(`🔍 "Monitoring": ${descriptio,;`}`); try { const result = execSync(command,{ "cwd": this.projectRoot,"encoding": 'utf8',"timeout": timeout,"maxBuffer": 1024 * 1024 * 5,'
 }); this.log(`✅ "Success": ${descriptio,`}`); return { "success": true,"output": result }} catch (error) { this.log(`❌ "Failed": ${description} - ${error.messag,`}`,'ERROR'); return { "success": false,"error": error.message }},'
 } async checkSystemHealth() { this.log('🖥️ Checking System Health');'
 
 }
 
-const systemChecks = [ { "command": 'df -h',"description": 'Disk Space Check',;'
 },{ "command": 'free -h',"description": 'Memory Usage Check','
 },{ "command": 'uptime',"description": 'System Uptime Check','
 } ];  } } async checkApplicationStatus() { this.log('📱 Checking Application Status');'
 
 }
 
-const buildDir = path.join(this.projectRoot,'.next'); if (fs.existsSync(buildDir)) { this.results.application.buildStatus = 'built'; this.log('✅ Build directory exists')} else { this.results.application.buildStatus = 'not_built'; this.log('⚠️ Build directory not found')}'
 
-const packageJsonPath = path.join(this.projectRoot,'package.json'); if (fs.existsSync(packageJsonPath)) { this.results.application.status = 'configured'; this.log('✅ Package.json exists')} else { this.results.application.status = 'not_configured'; this.log('❌ Package.json not found')} } async checkPerformanceMetrics() { this.log('⚡ Checking Performance Metrics');'
 
 }
 
-const performanceChecks = [ { "command": 'npm run "perf":monitor',"description": 'Performance Monitoring','
 } ];  }
 
-const buildSize = this.getBuildSize(); this.results.performance.metrics.buildSize = buildSize; if (buildSize > 100 * 1024 * 1024) { this.results.performance.alerts.push({ "type": 'warning',"message": 'Build size is large (>100MB)',"value": `${Math.round(buildSize / (1024 * 1024))}MB` })},`} async checkSecurityStatus() { this.log('🔒 Checking Security Status');'
 
 }
 
-const securityChecks = [ { "command": 'npm audit --audit-level=moderate --json',"description": 'Security Audit',;'
 } ];  security vulnerabilities found`,"value": this.results.security.vulnerabilities })},`} catch (error) { this.log('⚠️ Could not parse security audit results','WARN')} } }'
 
-const packageJsonPath = path.join(this.projectRoot,'package.json'); if (fs.existsSync(packageJsonPath)) { try { const packageJson = JSON.parse(fs.readFileSync(packageJsonPath,'utf8'));'
 
 }
 
-const devDependencies = Object.keys(packageJson.devDependencies || {}); this.results.security.outdatedPackages = dependencies.length + devDependencies.length} catch (error) { this.log('⚠️ Could not analyze package.json','WARN')} } } async checkTestStatus() { this.log('🧪 Checking Test Status');'
 
 }
 
-const testChecks = [ { "command": 'npm test -- --passWithNoTests --silent',"description": 'Test Suite Check',;'
 } ];  else { this.results.application.testStatus = 'failed'; this.results.performance.alerts.push({ "type": 'error',"message": 'Test suite failed',"value": 'failed' })} },'
 } async checkCodeQuality() { this.log('🔍 Checking Code Quality');'
 
 }
 
-const qualityChecks = [ { "command": 'npx eslint . --max-warnings 0 --quiet',"description": 'ESLint Quality Check',;'
 },{ "command": 'npx tsc --noEmit --skipLibCheck',"description": 'TypeScript Type Check','
 } ];  failed`,"value": 'failed' })} },'
 } getBuildSize() { const buildDir = path.join(this.projectRoot,'.next'); if (fs.existsSync(buildDir)) { return this.getDirectorySize(buildDir)} return 0} getDirectorySize(dir) { let size = 0; try { const items = fs.readdirSync(dir);  else { size += stat.size} } } catch (error) {} return size} calculateOverallHealth() { let healthScore = 100; if (this.results.application.buildStatus !== 'built') healthScore -= 20; if (this.results.application.testStatus === 'failed') healthScore -= 30; if (this.results.security.vulnerabilities > 0) healthScore -= 25; if (this.results.performance.alerts.length > 0) healthScore -= 15; this.results.overallHealth = { "score": Math.max(0,healthScore),"status": healthScore >= 80 ? 'healthy' : healthScore >= 60 ? 'warning' : 'critical',"timestamp": new Date().toISOString() ,'
@@ -1575,14 +1292,11 @@ const qualityChecks = [ { "command": 'npx eslint . --max-warnings 0 --quiet',"de
 
 }
 
-const reportPath = path.join(this.reportsDir,'monitoring-report.json'); fs.writeFileSync(reportPath,JSON.stringify(this.results,null,2)); this.log(`📊 Monitoring report "generated": ${reportPat,`}`); this.log('📊 Monitoring "Summary":'); this.log(` Overall "Health": ${this.results.overallHealth.status} (${this.results.overallHealth.scor,`}/100)`); this.log(` System "Health": ${this.results.system.healt,`}`); this.log(` Application "Status": ${this.results.application.statu,`}`); this.log(` Build "Status": ${this.results.application.buildStatu,`}`); this.log(` Test "Status": ${this.results.application.testStatu,`}`); this.log(` Security "Vulnerabilities": ${this.results.security.vulnerabilitie,`}`); this.log(` "Alerts": ${this.results.performance.alerts.lengt,`}`); return reportPath} async run() { this.log('🎯 Starting Enhanced Monitoring System'); try { await this.checkSystemHealth(); await this.checkApplicationStatus(); await this.checkPerformanceMetrics(); await this.checkSecurityStatus(); await this.checkTestStatus(); await this.checkCodeQuality();'
 
 }
 
-const reportPath = this.generateReport(); this.log('🎉 Enhanced Monitoring System Completed'); return { "success": true,reportPath,"results": this.results }} catch (error) { this.log(`💥 Monitoring "failed": ${error.messag,`}`,'ERROR'); return { "success": false,"error": error.message }} },'
 } if (require.main = == module) {;
   }
-  const monitoring = new EnhancedMonitoringSystem(); monitoring.run().then((result) => { process.exit(result.success ? 0 : 1)})} module.exports = EnhancedMonitoringSystem;
 #!/usr/bin/env node const { execSync } = const fs = const path = class EnhancedMonitoringSystem { constructor() { this.projectRoot = process.cwd(); this.reportsDir = path.join(this.projectRoot,'automation-reports'); this.logFile = path.join(this.reportsDir,'monitoring-system.log'); this.ensureDirectories(); this.results = { "timestamp": new Date().toISOString(),"system": { "health": 'unknown',"uptime": process.uptime(),"memory": process.memoryUsage(),"cpu": process.cpuUsage(),'
 },"application": { "status": 'unknown',"buildStatus": 'unknown',"testStatus": 'unknown','
 },"performance": { "metrics": 
@@ -1591,52 +1305,40 @@ const reportPath = this.generateReport(); this.log('🎉 Enhanced Monitoring Sys
 } ensureDirectories() { if (!fs.existsSync(this.reportsDir)) { fs.mkdirSync(this.reportsDir,{ "recursive": true })}
 } log(message,level = 'INFO') {;'
   }
-  const timestamp = new Date().toISOString();
 
-const logMessage = `[${timestamp}] [${level}] ${message}`; console.log(logMessage); fs.appendFileSync(this.logFile,logMessage + '\n')} async runCommand(command,description,timeout = 30000) { this.log(`🔍 "Monitoring": ${descriptio,;`}`); try { const result = execSync(command,{ "cwd": this.projectRoot,"encoding": 'utf8',"timeout": timeout,"maxBuffer": 1024 * 1024 * 5,'
 }); this.log(`✅ "Success": ${descriptio,`}`); return { "success": true,"output": result }} catch (error) { this.log(`❌ "Failed": ${description} - ${error.messag,`}`,'ERROR'); return { "success": false,"error": error.message }},'
 } async checkSystemHealth() { this.log('🖥️ Checking System Health');'
 
 }
 
-const systemChecks = [ { "command": 'df -h',"description": 'Disk Space Check',;'
 },{ "command": 'free -h',"description": 'Memory Usage Check','
 },{ "command": 'uptime',"description": 'System Uptime Check','
 } ];  } } async checkApplicationStatus() { this.log('📱 Checking Application Status');'
 
 }
 
-const buildDir = path.join(this.projectRoot,'.next'); if (fs.existsSync(buildDir)) { this.results.application.buildStatus = 'built'; this.log('✅ Build directory exists')} else { this.results.application.buildStatus = 'not_built'; this.log('⚠️ Build directory not found')}'
 
-const packageJsonPath = path.join(this.projectRoot,'package.json'); if (fs.existsSync(packageJsonPath)) { this.results.application.status = 'configured'; this.log('✅ Package.json exists')} else { this.results.application.status = 'not_configured'; this.log('❌ Package.json not found')} } async checkPerformanceMetrics() { this.log('⚡ Checking Performance Metrics');'
 
 }
 
-const performanceChecks = [ { "command": 'npm run "perf":monitor',"description": 'Performance Monitoring','
 } ];  }
 
-const buildSize = this.getBuildSize(); this.results.performance.metrics.buildSize = buildSize; if (buildSize > 100 * 1024 * 1024) { this.results.performance.alerts.push({ "type": 'warning',"message": 'Build size is large (>100MB)',"value": `${Math.round(buildSize / (1024 * 1024))}MB` })},`} async checkSecurityStatus() { this.log('🔒 Checking Security Status');'
 
 }
 
-const securityChecks = [ { "command": 'npm audit --audit-level=moderate --json',"description": 'Security Audit',;'
 } ];  security vulnerabilities found`,"value": this.results.security.vulnerabilities })},`} catch (error) { this.log('⚠️ Could not parse security audit results','WARN')} } }'
 
-const packageJsonPath = path.join(this.projectRoot,'package.json'); if (fs.existsSync(packageJsonPath)) { try { const packageJson = JSON.parse(fs.readFileSync(packageJsonPath,'utf8'));'
 
 }
 
-const devDependencies = Object.keys(packageJson.devDependencies || {}); this.results.security.outdatedPackages = dependencies.length + devDependencies.length} catch (error) { this.log('⚠️ Could not analyze package.json','WARN')} } } async checkTestStatus() { this.log('🧪 Checking Test Status');'
 
 }
 
-const testChecks = [ { "command": 'npm test -- --passWithNoTests --silent',"description": 'Test Suite Check',;'
 } ];  else { this.results.application.testStatus = 'failed'; this.results.performance.alerts.push({ "type": 'error',"message": 'Test suite failed',"value": 'failed' })} },'
 } async checkCodeQuality() { this.log('🔍 Checking Code Quality');'
 
 }
 
-const qualityChecks = [ { "command": 'npx eslint . --max-warnings 0 --quiet',"description": 'ESLint Quality Check',;'
 },{ "command": 'npx tsc --noEmit --skipLibCheck',"description": 'TypeScript Type Check','
 } ];  failed`,"value": 'failed' })} },'
 } getBuildSize() { const buildDir = path.join(this.projectRoot,'.next'); if (fs.existsSync(buildDir)) { return this.getDirectorySize(buildDir)} return 0} getDirectorySize(dir) { let size = 0; try { const items = fs.readdirSync(dir);  else { size += stat.size} } } catch (error) {} return size} calculateOverallHealth() { let healthScore = 100; if (this.results.application.buildStatus !== 'built') healthScore -= 20; if (this.results.application.testStatus === 'failed') healthScore -= 30; if (this.results.security.vulnerabilities > 0) healthScore -= 25; if (this.results.performance.alerts.length > 0) healthScore -= 15; this.results.overallHealth = { "score": Math.max(0,healthScore),"status": healthScore >= 80 ? 'healthy' : healthScore >= 60 ? 'warning' : 'critical',"timestamp": new Date().toISOString() ,'
@@ -1644,12 +1346,34 @@ const qualityChecks = [ { "command": 'npx eslint . --max-warnings 0 --quiet',"de
 
 }
 
-const reportPath = path.join(this.reportsDir,'monitoring-report.json'); fs.writeFileSync(reportPath,JSON.stringify(this.results,null,2)); this.log(`📊 Monitoring report "generated": ${reportPat,`}`); this.log('📊 Monitoring "Summary":'); this.log(` Overall "Health": ${this.results.overallHealth.status} (${this.results.overallHealth.scor,`}/100)`); this.log(` System "Health": ${this.results.system.healt,`}`); this.log(` Application "Status": ${this.results.application.statu,`}`); this.log(` Build "Status": ${this.results.application.buildStatu,`}`); this.log(` Test "Status": ${this.results.application.testStatu,`}`); this.log(` Security "Vulnerabilities": ${this.results.security.vulnerabilitie,`}`); this.log(` "Alerts": ${this.results.performance.alerts.lengt,`}`); return reportPath} async run() { this.log('🎯 Starting Enhanced Monitoring System'); try { await this.checkSystemHealth(); await this.checkApplicationStatus(); await this.checkPerformanceMetrics(); await this.checkSecurityStatus(); await this.checkTestStatus(); await this.checkCodeQuality();'
 
 }
 
-const reportPath = this.generateReport(); this.log('🎉 Enhanced Monitoring System Completed'); return { "success": true,reportPath,"results": this.results }} catch (error) { this.log(`💥 Monitoring "failed": ${error.messag,`}`,'ERROR'); return { "success": false,"error": error.message }} },'
 } if (require.main = == module) {;
   }
-  const monitoring = new EnhancedMonitoringSystem(); monitoring.run().then((result) => { process.exit(result.success ? 0 : 1)})} module.exports = EnhancedMonitoringSystem;
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
+=======
+  monitoring.run().then(result => {
+    process.exit(result.success ? 0 : 1)})}
+module.exports = EnhancedMonitoringSystem;
+
+  monitoring.run().then(result => {
+
+    process.exit(result.success ? 0 : 1)})}
+module.exports = EnhancedMonitoringSystem;'`
+#!/usr/bin/env node const { execSync } = const fs = const path = class EnhancedMonitoringSystem { constructor() { this.projectRoot = process.cwd(); this.reportsDir = path.join(this.projectRoot,'automation-reports'); this.logFile = path.join(this.reportsDir,'monitoring-system.log'); this.ensureDirectories(); this.results = { timestamp: new Date().toISOString(),system: { health: 'unknown',uptime: process.uptime(),memory: process.memoryUsage(),cpu: process.cpuUsage() },application: { status: 'unknown',buildStatus: 'unknown',testStatus: 'unknown' },performance: { metrics: {},alerts: [] },security: { vulnerabilities: 0,outdatedPackages: 0,securityScore: 0 } }} ensureDirectories() { if (!fs.existsSync(this.reportsDir)) { fs.mkdirSync(this.reportsDir,{ recursive: true })} } log(message,level = 'INFO') { const timestamp = new Date().toISOString(); const logMessage = `[${timestamp}] [${level}] ${message}`; console.log(logMessage); fs.appendFileSync(this.logFile,logMessage + '\n')} async runCommand(command,description,timeout = 30000) { this.log(`🔍 Monitoring: ${description}`); try { const result = execSync(command,{ cwd: this.projectRoot,encoding: 'utf8',timeout: timeout,maxBuffer: 1024 * 1024 * 5 }); this.log(`✅ Success: ${description}`); return { success: true,output: result }} catch (error) { this.log(`❌ Failed: ${description} - ${error.message}`,'ERROR'); return { success: false,error: error.message }} } async checkSystemHealth() { this.log('🖥️ Checking System Health'); const systemChecks = [ { command: 'df -h',description: 'Disk Space Check' },{ command: 'free -h',description: 'Memory Usage Check' },{ command: 'uptime',description: 'System Uptime Check' } ];  } } async checkApplicationStatus() { this.log('📱 Checking Application Status'); const buildDir = path.join(this.projectRoot,'.next'); if (fs.existsSync(buildDir)) { this.results.application.buildStatus = 'built'; this.log('✅ Build directory exists')} else { this.results.application.buildStatus = 'not_built'; this.log('⚠️ Build directory not found')} const packageJsonPath = path.join(this.projectRoot,'package.json'); if (fs.existsSync(packageJsonPath)) { this.results.application.status = 'configured'; this.log('✅ Package.json exists')} else { this.results.application.status = 'not_configured'; this.log('❌ Package.json not found')} } async checkPerformanceMetrics() { this.log('⚡ Checking Performance Metrics'); const performanceChecks = [ { command: 'npm run perf:monitor',description: 'Performance Monitoring' } ];  } const buildSize = this.getBuildSize(); this.results.performance.metrics.buildSize = buildSize; if (buildSize > 100 * 1024 * 1024) { this.results.performance.alerts.push({ type: 'warning',message: 'Build size is large (>100MB)',value: `${Math.round(buildSize / (1024 * 1024))}MB` })} } async checkSecurityStatus() { this.log('🔒 Checking Security Status'); const securityChecks = [ { command: 'npm audit --audit-level=moderate --json',description: 'Security Audit' } ];  security vulnerabilities found`,value: this.results.security.vulnerabilities })} } catch (error) { this.log('⚠️ Could not parse security audit results','WARN')} } } const packageJsonPath = path.join(this.projectRoot,'package.json'); if (fs.existsSync(packageJsonPath)) { try { const packageJson = JSON.parse(fs.readFileSync(packageJsonPath,'utf8')); const dependencies = Object.keys(packageJson.dependencies || {}); const devDependencies = Object.keys(packageJson.devDependencies || {}); this.results.security.outdatedPackages = dependencies.length + devDependencies.length} catch (error) { this.log('⚠️ Could not analyze package.json','WARN')} } } async checkTestStatus() { this.log('🧪 Checking Test Status'); const testChecks = [ { command: 'npm test -- --passWithNoTests --silent',description: 'Test Suite Check' } ];  else { this.results.application.testStatus = 'failed'; this.results.performance.alerts.push({ type: 'error',message: 'Test suite failed',value: 'failed' })} } } async checkCodeQuality() { this.log('🔍 Checking Code Quality'); const qualityChecks = [ { command: 'npx eslint . --max-warnings 0 --quiet',description: 'ESLint Quality Check' },{ command: 'npx tsc --noEmit --skipLibCheck',description: 'TypeScript Type Check' } ];  failed`,value: 'failed' })} } } getBuildSize() { const buildDir = path.join(this.projectRoot,'.next'); if (fs.existsSync(buildDir)) { return this.getDirectorySize(buildDir)} return 0} getDirectorySize(dir) { let size = 0; try { const items = fs.readdirSync(dir);  else { size += stat.size} } } catch (error) { } return size} calculateOverallHealth() { let healthScore = 100; if (this.results.application.buildStatus !== 'built') healthScore -= 20; if (this.results.application.testStatus === 'failed') healthScore -= 30; if (this.results.security.vulnerabilities > 0) healthScore -= 25; if (this.results.performance.alerts.length > 0) healthScore -= 15; this.results.overallHealth = { score: Math.max(0,healthScore),status: healthScore >= 80 ? 'healthy' : healthScore >= 60 ? 'warning' : 'critical',timestamp: new Date().toISOString() }} generateReport() { this.calculateOverallHealth(); const reportPath = path.join(this.reportsDir,'monitoring-report.json'); fs.writeFileSync(reportPath,JSON.stringify(this.results,null,2)); this.log(`📊 Monitoring report generated: ${reportPath}`); this.log('📊 Monitoring Summary:'); this.log(` Overall Health: ${this.results.overallHealth.status} (${this.results.overallHealth.score}/100)`); this.log(` System Health: ${this.results.system.health}`); this.log(` Application Status: ${this.results.application.status}`); this.log(` Build Status: ${this.results.application.buildStatus}`); this.log(` Test Status: ${this.results.application.testStatus}`); this.log(` Security Vulnerabilities: ${this.results.security.vulnerabilities}`); this.log(` Alerts: ${this.results.performance.alerts.length}`); return reportPath} async run() { this.log('🎯 Starting Enhanced Monitoring System'); try { await this.checkSystemHealth(); await this.checkApplicationStatus(); await this.checkPerformanceMetrics(); await this.checkSecurityStatus(); await this.checkTestStatus(); await this.checkCodeQuality(); const reportPath = this.generateReport(); this.log('🎉 Enhanced Monitoring System Completed'); return { success: true,reportPath,results: this.results }} catch (error) { this.log(`💥 Monitoring failed: ${error.message}`,'ERROR'); return { success: false,error: error.message }} } } if (require.main === module) { const monitoring = new EnhancedMonitoringSystem(); monitoring.run().then(result => { process.exit(result.success ? 0 : 1)})} module.exports = EnhancedMonitoringSystem;'`
+#!/usr/bin/env node const { execSync } = const fs = const path = class EnhancedMonitoringSystem { constructor() { this.projectRoot = process.cwd(); this.reportsDir = path.join(this.projectRoot,'automation-reports'); this.logFile = path.join(this.reportsDir,'monitoring-system.log'); this.ensureDirectories(); this.results = { timestamp: new Date().toISOString(),system: { health: 'unknown',uptime: process.uptime(),memory: process.memoryUsage(),cpu: process.cpuUsage() },application: { status: 'unknown',buildStatus: 'unknown',testStatus: 'unknown' },performance: { metrics: {},alerts: [] },security: { vulnerabilities: 0,outdatedPackages: 0,securityScore: 0 } }} ensureDirectories() { if (!fs.existsSync(this.reportsDir)) { fs.mkdirSync(this.reportsDir,{ recursive: true })} } log(message,level = 'INFO') { const timestamp = new Date().toISOString(); const logMessage = `[${timestamp}] [${level}] ${message}`; console.log(logMessage); fs.appendFileSync(this.logFile,logMessage + '\n')} async runCommand(command,description,timeout = 30000) { this.log(`🔍 Monitoring: ${description}`); try { const result = execSync(command,{ cwd: this.projectRoot,encoding: 'utf8',timeout: timeout,maxBuffer: 1024 * 1024 * 5 }); this.log(`✅ Success: ${description}`); return { success: true,output: result }} catch (error) { this.log(`❌ Failed: ${description} - ${error.message}`,'ERROR'); return { success: false,error: error.message }} } async checkSystemHealth() { this.log('🖥️ Checking System Health'); const systemChecks = [ { command: 'df -h',description: 'Disk Space Check' },{ command: 'free -h',description: 'Memory Usage Check' },{ command: 'uptime',description: 'System Uptime Check' } ];  } } async checkApplicationStatus() { this.log('📱 Checking Application Status'); const buildDir = path.join(this.projectRoot,'.next'); if (fs.existsSync(buildDir)) { this.results.application.buildStatus = 'built'; this.log('✅ Build directory exists')} else { this.results.application.buildStatus = 'not_built'; this.log('⚠️ Build directory not found')} const packageJsonPath = path.join(this.projectRoot,'package.json'); if (fs.existsSync(packageJsonPath)) { this.results.application.status = 'configured'; this.log('✅ Package.json exists')} else { this.results.application.status = 'not_configured'; this.log('❌ Package.json not found')} } async checkPerformanceMetrics() { this.log('⚡ Checking Performance Metrics'); const performanceChecks = [ { command: 'npm run perf:monitor',description: 'Performance Monitoring' } ];  } const buildSize = this.getBuildSize(); this.results.performance.metrics.buildSize = buildSize; if (buildSize > 100 * 1024 * 1024) { this.results.performance.alerts.push({ type: 'warning',message: 'Build size is large (>100MB)',value: `${Math.round(buildSize / (1024 * 1024))}MB` })} } async checkSecurityStatus() { this.log('🔒 Checking Security Status'); const securityChecks = [ { command: 'npm audit --audit-level=moderate --json',description: 'Security Audit' } ];  security vulnerabilities found`,value: this.results.security.vulnerabilities })} } catch (error) { this.log('⚠️ Could not parse security audit results','WARN')} } } const packageJsonPath = path.join(this.projectRoot,'package.json'); if (fs.existsSync(packageJsonPath)) { try { const packageJson = JSON.parse(fs.readFileSync(packageJsonPath,'utf8')); const dependencies = Object.keys(packageJson.dependencies || {}); const devDependencies = Object.keys(packageJson.devDependencies || {}); this.results.security.outdatedPackages = dependencies.length + devDependencies.length} catch (error) { this.log('⚠️ Could not analyze package.json','WARN')} } } async checkTestStatus() { this.log('🧪 Checking Test Status'); const testChecks = [ { command: 'npm test -- --passWithNoTests --silent',description: 'Test Suite Check' } ];  else { this.results.application.testStatus = 'failed'; this.results.performance.alerts.push({ type: 'error',message: 'Test suite failed',value: 'failed' })} } } async checkCodeQuality() { this.log('🔍 Checking Code Quality'); const qualityChecks = [ { command: 'npx eslint . --max-warnings 0 --quiet',description: 'ESLint Quality Check' },{ command: 'npx tsc --noEmit --skipLibCheck',description: 'TypeScript Type Check' } ];  failed`,value: 'failed' })} } } getBuildSize() { const buildDir = path.join(this.projectRoot,'.next'); if (fs.existsSync(buildDir)) { return this.getDirectorySize(buildDir)} return 0} getDirectorySize(dir) { let size = 0; try { const items = fs.readdirSync(dir);  else { size += stat.size} } } catch (error) { } return size} calculateOverallHealth() { let healthScore = 100; if (this.results.application.buildStatus !== 'built') healthScore -= 20; if (this.results.application.testStatus === 'failed') healthScore -= 30; if (this.results.security.vulnerabilities > 0) healthScore -= 25; if (this.results.performance.alerts.length > 0) healthScore -= 15; this.results.overallHealth = { score: Math.max(0,healthScore),status: healthScore >= 80 ? 'healthy' : healthScore >= 60 ? 'warning' : 'critical',timestamp: new Date().toISOString() }} generateReport() { this.calculateOverallHealth(); const reportPath = path.join(this.reportsDir,'monitoring-report.json'); fs.writeFileSync(reportPath,JSON.stringify(this.results,null,2)); this.log(`📊 Monitoring report generated: ${reportPath}`); this.log('📊 Monitoring Summary:'); this.log(` Overall Health: ${this.results.overallHealth.status} (${this.results.overallHealth.score}/100)`); this.log(` System Health: ${this.results.system.health}`); this.log(` Application Status: ${this.results.application.status}`); this.log(` Build Status: ${this.results.application.buildStatus}`); this.log(` Test Status: ${this.results.application.testStatus}`); this.log(` Security Vulnerabilities: ${this.results.security.vulnerabilities}`); this.log(` Alerts: ${this.results.performance.alerts.length}`); return reportPath} async run() { this.log('🎯 Starting Enhanced Monitoring System'); try { await this.checkSystemHealth(); await this.checkApplicationStatus(); await this.checkPerformanceMetrics(); await this.checkSecurityStatus(); await this.checkTestStatus(); await this.checkCodeQuality(); const reportPath = this.generateReport(); this.log('🎉 Enhanced Monitoring System Completed'); return { success: true,reportPath,results: this.results }} catch (error) { this.log(`💥 Monitoring failed: ${error.message}`,'ERROR'); return { success: false,error: error.message }} } } if (require.main === module) { const monitoring = new EnhancedMonitoringSystem(); monitoring.run().then(result => { process.exit(result.success ? 0 : 1)})} module.exports = EnhancedMonitoringSystem;
+
+    process && process.exit(result && result.success ? 0 : 1)})}
+module && module.exports = EnhancedMonitoringSystem;
+#!/usr/bin/env node const { execSync } = const fs = const path = class EnhancedMonitoringSystem { constructor() { this && this.projectRoot = process && process.cwd(); this && this.reportsDir = path && path.join(this && this.projectRoot,'automation-reports'); this && this.logFile = path && path.join(this && this.reportsDir,'monitoring-system && system.log'); this && this.ensureDirectories(); this && this.results = { timestamp: new Date().toISOString(),system: { health: 'unknown',uptime: process && process.uptime(),memory: process && process.memoryUsage(),cpu: process && process.cpuUsage() },application: { status: 'unknown',buildStatus: 'unknown',testStatus: 'unknown' },performance: { metrics: {},alerts: [] },security: { vulnerabilities: 0,outdatedPackages: 0,securityScore: 0 } }} ensureDirectories() { if (!fs && fs.existsSync(this && this.reportsDir)) { fs && fs.mkdirSync(this && this.reportsDir,{ recursive: true })} } log(message,level = 'INFO') { const timestamp = new Date().toISOString(); const logMessage = `[${timestamp}] [${level}] ${message}`; console && console.log(logMessage); fs && fs.appendFileSync(this && this.logFile,logMessage + '\n')} async runCommand(command,description,timeout = 30000) { this && this.log(`🔍 Monitoring: ${description}`); try { const result = execSync(command,{ cwd: this && this.projectRoot,encoding: 'utf8',timeout: timeout,maxBuffer: 1024 * 1024 * 5 }); this && this.log(`✅ Success: ${description}`); return { success: true,output: result }} catch (error) { this && this.log(`❌ Failed: ${description} - ${error && error.message}`,'ERROR'); return { success: false,error: error && error.message }} } async checkSystemHealth() { this && this.log('🖥️ Checking System Health'); const systemChecks = [ { command: 'df -h',description: 'Disk Space Check' },{ command: 'free -h',description: 'Memory Usage Check' },{ command: 'uptime',description: 'System Uptime Check' } ]; for (const check of systemChecks) { const result = await this && this.runCommand(check && check.command,check && check.description,10000); if (result && result.success) { this && this.results.system && system.health = 'healthy'} } } async checkApplicationStatus() { this && this.log('📱 Checking Application Status'); const buildDir = path && path.join(this && this.projectRoot,'.next'); if (fs && fs.existsSync(buildDir)) { this && this.results.application && application.buildStatus = 'built'; this && this.log('✅ Build directory exists')} else { this && this.results.application && application.buildStatus = 'not_built'; this && this.log('⚠️ Build directory not found')} const packageJsonPath = path && path.join(this && this.projectRoot,'package && package.json'); if (fs && fs.existsSync(packageJsonPath)) { this && this.results.application && application.status = 'configured'; this && this.log('✅ Package && Package.json exists')} else { this && this.results.application && application.status = 'not_configured'; this && this.log('❌ Package && Package.json not found')} } async checkPerformanceMetrics() { this && this.log('⚡ Checking Performance Metrics'); const performanceChecks = [ { command: 'npm run perf:monitor',description: 'Performance Monitoring' } ]; for (const check of performanceChecks) { const result = await this && this.runCommand(check && check.command,check && check.description,30000); if (result && result.success) { this && this.results.performance && performance.metrics[check && check.description] = 'monitored'} } const buildSize = this && this.getBuildSize(); this && this.results.performance && performance.metrics.buildSize = buildSize; if (buildSize > 100 * 1024 * 1024) { this && this.results.performance && performance.alerts.push({ type: 'warning',message: 'Build size is large (>100MB)',value: `${Math && Math.round(buildSize / (1024 * 1024))}MB` })} } async checkSecurityStatus() { this && this.log('🔒 Checking Security Status'); const securityChecks = [ { command: 'npm audit --audit-level=moderate --json',description: 'Security Audit' } ]; for (const check of securityChecks) { const result = await this && this.runCommand(check && check.command,check && check.description,30000); if (result && result.success) { try { const auditData = JSON && JSON.parse(result && result.output); this && this.results.security && security.vulnerabilities = auditData && auditData.metadata?.vulnerabilities?.total || 0; if (this && this.results.security && security.vulnerabilities > 0) { this && this.results.performance && performance.alerts.push({ type: 'error',message: `${this && this.results.security && security.vulnerabilities} security vulnerabilities found`,value: this && this.results.security && security.vulnerabilities })} } catch (error) { this && this.log('⚠️ Could not parse security audit results','WARN')} } } const packageJsonPath = path && path.join(this && this.projectRoot,'package && package.json'); if (fs && fs.existsSync(packageJsonPath)) { try { const packageJson = JSON && JSON.parse(fs && fs.readFileSync(packageJsonPath,'utf8')); const dependencies = Object && Object.keys(packageJson && packageJson.dependencies || {}); const devDependencies = Object && Object.keys(packageJson && packageJson.devDependencies || {}); this && this.results.security && security.outdatedPackages = dependencies && dependencies.length + devDependencies && devDependencies.length} catch (error) { this && this.log('⚠️ Could not analyze package && package.json','WARN')} } } async checkTestStatus() { this && this.log('🧪 Checking Test Status'); const testChecks = [ { command: 'npm test -- --passWithNoTests --silent',description: 'Test Suite Check' } ]; for (const check of testChecks) { const result = await this && this.runCommand(check && check.command,check && check.description,60000); if (result && result.success) { this && this.results.application && application.testStatus = 'passed'} else { this && this.results.application && application.testStatus = 'failed'; this && this.results.performance && performance.alerts.push({ type: 'error',message: 'Test suite failed',value: 'failed' })} } } async checkCodeQuality() { this && this.log('🔍 Checking Code Quality'); const qualityChecks = [ { command: 'npx eslint . --max-warnings 0 --quiet',description: 'ESLint Quality Check' },{ command: 'npx tsc --noEmit --skipLibCheck',description: 'TypeScript Type Check' } ]; for (const check of qualityChecks) { const result = await this && this.runCommand(check && check.command,check && check.description,30000); if (!result && result.success) { this && this.results.performance && performance.alerts.push({ type: 'warning',message: `${check && check.description} failed`,value: 'failed' })} } } getBuildSize() { const buildDir = path && path.join(this && this.projectRoot,'.next'); if (fs && fs.existsSync(buildDir)) { return this && this.getDirectorySize(buildDir)} return 0} getDirectorySize(dir) { let size = 0; try { const items = fs && fs.readdirSync(dir); for (const item of items) { const fullPath = path && path.join(dir,item); const stat = fs && fs.statSync(fullPath); if (stat && stat.isDirectory()) { size += this && this.getDirectorySize(fullPath)} else { size += stat && stat.size} } } catch (error) { } return size} calculateOverallHealth() { let healthScore = 100; if (this && this.results.application && application.buildStatus !== 'built') healthScore -= 20; if (this && this.results.application && application.testStatus === 'failed') healthScore -= 30; if (this && this.results.security && security.vulnerabilities > 0) healthScore -= 25; if (this && this.results.performance && performance.alerts.length > 0) healthScore -= 15; this && this.results.overallHealth = { score: Math && Math.max(0,healthScore),status: healthScore >= 80 ? 'healthy' : healthScore >= 60 ? 'warning' : 'critical',timestamp: new Date().toISOString() }} generateReport() { this && this.calculateOverallHealth(); const reportPath = path && path.join(this && this.reportsDir,'monitoring-report && report.json'); fs && fs.writeFileSync(reportPath,JSON && JSON.stringify(this && this.results,null,2)); this && this.log(`📊 Monitoring report generated: ${reportPath}`); this && this.log('📊 Monitoring Summary:'); this && this.log(` Overall Health: ${this && this.results.overallHealth && overallHealth.status} (${this && this.results.overallHealth && overallHealth.score}/100)`); this && this.log(` System Health: ${this && this.results.system && system.health}`); this && this.log(` Application Status: ${this && this.results.application && application.status}`); this && this.log(` Build Status: ${this && this.results.application && application.buildStatus}`); this && this.log(` Test Status: ${this && this.results.application && application.testStatus}`); this && this.log(` Security Vulnerabilities: ${this && this.results.security && security.vulnerabilities}`); this && this.log(` Alerts: ${this && this.results.performance && performance.alerts.length}`); return reportPath} async run() { this && this.log('🎯 Starting Enhanced Monitoring System'); try { await this && this.checkSystemHealth(); await this && this.checkApplicationStatus(); await this && this.checkPerformanceMetrics(); await this && this.checkSecurityStatus(); await this && this.checkTestStatus(); await this && this.checkCodeQuality(); const reportPath = this && this.generateReport(); this && this.log('🎉 Enhanced Monitoring System Completed'); return { success: true,reportPath,results: this && this.results }} catch (error) { this && this.log(`💥 Monitoring failed: ${error && error.message}`,'ERROR'); return { success: false,error: error && error.message }} } } if (require && require.main === module) { const monitoring = new EnhancedMonitoringSystem(); monitoring && monitoring.run().then(result => { process && process.exit(result && result.success ? 0 : 1)})} module && module.exports = EnhancedMonitoringSystem;
+#!/usr/bin/env node const { execSync } = const fs = const path = class EnhancedMonitoringSystem { constructor() { this && this.projectRoot = process && process.cwd(); this && this.reportsDir = path && path.join(this && this.projectRoot,'automation-reports'); this && this.logFile = path && path.join(this && this.reportsDir,'monitoring-system && system.log'); this && this.ensureDirectories(); this && this.results = { timestamp: new Date().toISOString(),system: { health: 'unknown',uptime: process && process.uptime(),memory: process && process.memoryUsage(),cpu: process && process.cpuUsage() },application: { status: 'unknown',buildStatus: 'unknown',testStatus: 'unknown' },performance: { metrics: {},alerts: [] },security: { vulnerabilities: 0,outdatedPackages: 0,securityScore: 0 } }} ensureDirectories() { if (!fs && fs.existsSync(this && this.reportsDir)) { fs && fs.mkdirSync(this && this.reportsDir,{ recursive: true })} } log(message,level = 'INFO') { const timestamp = new Date().toISOString(); const logMessage = `[${timestamp}] [${level}] ${message}`; console && console.log(logMessage); fs && fs.appendFileSync(this && this.logFile,logMessage + '\n')} async runCommand(command,description,timeout = 30000) { this && this.log(`🔍 Monitoring: ${description}`); try { const result = execSync(command,{ cwd: this && this.projectRoot,encoding: 'utf8',timeout: timeout,maxBuffer: 1024 * 1024 * 5 }); this && this.log(`✅ Success: ${description}`); return { success: true,output: result }} catch (error) { this && this.log(`❌ Failed: ${description} - ${error && error.message}`,'ERROR'); return { success: false,error: error && error.message }} } async checkSystemHealth() { this && this.log('🖥️ Checking System Health'); const systemChecks = [ { command: 'df -h',description: 'Disk Space Check' },{ command: 'free -h',description: 'Memory Usage Check' },{ command: 'uptime',description: 'System Uptime Check' } ]; for (const check of systemChecks) { const result = await this && this.runCommand(check && check.command,check && check.description,10000); if (result && result.success) { this && this.results.system && system.health = 'healthy'} } } async checkApplicationStatus() { this && this.log('📱 Checking Application Status'); const buildDir = path && path.join(this && this.projectRoot,'.next'); if (fs && fs.existsSync(buildDir)) { this && this.results.application && application.buildStatus = 'built'; this && this.log('✅ Build directory exists')} else { this && this.results.application && application.buildStatus = 'not_built'; this && this.log('⚠️ Build directory not found')} const packageJsonPath = path && path.join(this && this.projectRoot,'package && package.json'); if (fs && fs.existsSync(packageJsonPath)) { this && this.results.application && application.status = 'configured'; this && this.log('✅ Package && Package.json exists')} else { this && this.results.application && application.status = 'not_configured'; this && this.log('❌ Package && Package.json not found')} } async checkPerformanceMetrics() { this && this.log('⚡ Checking Performance Metrics'); const performanceChecks = [ { command: 'npm run perf:monitor',description: 'Performance Monitoring' } ]; for (const check of performanceChecks) { const result = await this && this.runCommand(check && check.command,check && check.description,30000); if (result && result.success) { this && this.results.performance && performance.metrics[check && check.description] = 'monitored'} } const buildSize = this && this.getBuildSize(); this && this.results.performance && performance.metrics.buildSize = buildSize; if (buildSize > 100 * 1024 * 1024) { this && this.results.performance && performance.alerts.push({ type: 'warning',message: 'Build size is large (>100MB)',value: `${Math && Math.round(buildSize / (1024 * 1024))}MB` })} } async checkSecurityStatus() { this && this.log('🔒 Checking Security Status'); const securityChecks = [ { command: 'npm audit --audit-level=moderate --json',description: 'Security Audit' } ]; for (const check of securityChecks) { const result = await this && this.runCommand(check && check.command,check && check.description,30000); if (result && result.success) { try { const auditData = JSON && JSON.parse(result && result.output); this && this.results.security && security.vulnerabilities = auditData && auditData.metadata?.vulnerabilities?.total || 0; if (this && this.results.security && security.vulnerabilities > 0) { this && this.results.performance && performance.alerts.push({ type: 'error',message: `${this && this.results.security && security.vulnerabilities} security vulnerabilities found`,value: this && this.results.security && security.vulnerabilities })} } catch (error) { this && this.log('⚠️ Could not parse security audit results','WARN')} } } const packageJsonPath = path && path.join(this && this.projectRoot,'package && package.json'); if (fs && fs.existsSync(packageJsonPath)) { try { const packageJson = JSON && JSON.parse(fs && fs.readFileSync(packageJsonPath,'utf8')); const dependencies = Object && Object.keys(packageJson && packageJson.dependencies || {}); const devDependencies = Object && Object.keys(packageJson && packageJson.devDependencies || {}); this && this.results.security && security.outdatedPackages = dependencies && dependencies.length + devDependencies && devDependencies.length} catch (error) { this && this.log('⚠️ Could not analyze package && package.json','WARN')} } } async checkTestStatus() { this && this.log('🧪 Checking Test Status'); const testChecks = [ { command: 'npm test -- --passWithNoTests --silent',description: 'Test Suite Check' } ]; for (const check of testChecks) { const result = await this && this.runCommand(check && check.command,check && check.description,60000); if (result && result.success) { this && this.results.application && application.testStatus = 'passed'} else { this && this.results.application && application.testStatus = 'failed'; this && this.results.performance && performance.alerts.push({ type: 'error',message: 'Test suite failed',value: 'failed' })} } } async checkCodeQuality() { this && this.log('🔍 Checking Code Quality'); const qualityChecks = [ { command: 'npx eslint . --max-warnings 0 --quiet',description: 'ESLint Quality Check' },{ command: 'npx tsc --noEmit --skipLibCheck',description: 'TypeScript Type Check' } ]; for (const check of qualityChecks) { const result = await this && this.runCommand(check && check.command,check && check.description,30000); if (!result && result.success) { this && this.results.performance && performance.alerts.push({ type: 'warning',message: `${check && check.description} failed`,value: 'failed' })} } } getBuildSize() { const buildDir = path && path.join(this && this.projectRoot,'.next'); if (fs && fs.existsSync(buildDir)) { return this && this.getDirectorySize(buildDir)} return 0} getDirectorySize(dir) { let size = 0; try { const items = fs && fs.readdirSync(dir); for (const item of items) { const fullPath = path && path.join(dir,item); const stat = fs && fs.statSync(fullPath); if (stat && stat.isDirectory()) { size += this && this.getDirectorySize(fullPath)} else { size += stat && stat.size} } } catch (error) { } return size} calculateOverallHealth() { let healthScore = 100; if (this && this.results.application && application.buildStatus !== 'built') healthScore -= 20; if (this && this.results.application && application.testStatus === 'failed') healthScore -= 30; if (this && this.results.security && security.vulnerabilities > 0) healthScore -= 25; if (this && this.results.performance && performance.alerts.length > 0) healthScore -= 15; this && this.results.overallHealth = { score: Math && Math.max(0,healthScore),status: healthScore >= 80 ? 'healthy' : healthScore >= 60 ? 'warning' : 'critical',timestamp: new Date().toISOString() }} generateReport() { this && this.calculateOverallHealth(); const reportPath = path && path.join(this && this.reportsDir,'monitoring-report && report.json'); fs && fs.writeFileSync(reportPath,JSON && JSON.stringify(this && this.results,null,2)); this && this.log(`📊 Monitoring report generated: ${reportPath}`); this && this.log('📊 Monitoring Summary:'); this && this.log(` Overall Health: ${this && this.results.overallHealth && overallHealth.status} (${this && this.results.overallHealth && overallHealth.score}/100)`); this && this.log(` System Health: ${this && this.results.system && system.health}`); this && this.log(` Application Status: ${this && this.results.application && application.status}`); this && this.log(` Build Status: ${this && this.results.application && application.buildStatus}`); this && this.log(` Test Status: ${this && this.results.application && application.testStatus}`); this && this.log(` Security Vulnerabilities: ${this && this.results.security && security.vulnerabilities}`); this && this.log(` Alerts: ${this && this.results.performance && performance.alerts.length}`); return reportPath} async run() { this && this.log('🎯 Starting Enhanced Monitoring System'); try { await this && this.checkSystemHealth(); await this && this.checkApplicationStatus(); await this && this.checkPerformanceMetrics(); await this && this.checkSecurityStatus(); await this && this.checkTestStatus(); await this && this.checkCodeQuality(); const reportPath = this && this.generateReport(); this && this.log('🎉 Enhanced Monitoring System Completed'); return { success: true,reportPath,results: this && this.results }} catch (error) { this && this.log(`💥 Monitoring failed: ${error && error.message}`,'ERROR'); return { success: false,error: error && error.message }} } } if (require && require.main === module) { const monitoring = new EnhancedMonitoringSystem(); monitoring && monitoring.run().then(result => { process && process.exit(result && result.success ? 0 : 1)})} module && module.exports = EnhancedMonitoringSystem;
+
+#!/usr/bin/env node const { execSync } = const fs = const path = class EnhancedMonitoringSystem { constructor() { this.projectRoot = process.cwd(); this.reportsDir = path.join(this.projectRoot,'automation-reports'); this.logFile = path.join(this.reportsDir,'monitoring-system.log'); this.ensureDirectories(); this.results = { timestamp: new Date().toISOString(),system: { health: 'unknown',uptime: process.uptime(),memory: process.memoryUsage(),cpu: process.cpuUsage() },application: { status: 'unknown',buildStatus: 'unknown',testStatus: 'unknown' },performance: { metrics: {},alerts: [] },security: { vulnerabilities: 0,outdatedPackages: 0,securityScore: 0 } }} ensureDirectories() { if (!fs.existsSync(this.reportsDir)) { fs.mkdirSync(this.reportsDir,{ recursive: true })} } log(message,level = 'INFO') { const timestamp = new Date().toISOString(); const logMessage = `[${timestamp}] [${level}] ${message}`; console.log(logMessage); fs.appendFileSync(this.logFile,logMessage + '\n')} async runCommand(command,description,timeout = 30000) { this.log(`🔍 Monitoring: ${description}`); try { const result = execSync(command,{ cwd: this.projectRoot,encoding: 'utf8',timeout: timeout,maxBuffer: 1024 * 1024 * 5 }); this.log(`✅ Success: ${description}`); return { success: true,output: result }} catch (error) { this.log(`❌ Failed: ${description} - ${error.message}`,'ERROR'); return { success: false,error: error.message }} } async checkSystemHealth() { this.log('🖥️ Checking System Health'); const systemChecks = [ { command: 'df -h',description: 'Disk Space Check' },{ command: 'free -h',description: 'Memory Usage Check' },{ command: 'uptime',description: 'System Uptime Check' } ]; for (const check of systemChecks) { const result = await this.runCommand(check.command,check.description,10000); if (result.success) { this.results.system.health = 'healthy'} } } async checkApplicationStatus() { this.log('📱 Checking Application Status'); const buildDir = path.join(this.projectRoot,'.next'); if (fs.existsSync(buildDir)) { this.results.application.buildStatus = 'built'; this.log('✅ Build directory exists')} else { this.results.application.buildStatus = 'not_built'; this.log('⚠️ Build directory not found')} const packageJsonPath = path.join(this.projectRoot,'package.json'); if (fs.existsSync(packageJsonPath)) { this.results.application.status = 'configured'; this.log('✅ Package.json exists')} else { this.results.application.status = 'not_configured'; this.log('❌ Package.json not found')} } async checkPerformanceMetrics() { this.log('⚡ Checking Performance Metrics'); const performanceChecks = [ { command: 'npm run perf:monitor',description: 'Performance Monitoring' } ]; for (const check of performanceChecks) { const result = await this.runCommand(check.command,check.description,30000); if (result.success) { this.results.performance.metrics[check.description] = 'monitored'} } const buildSize = this.getBuildSize(); this.results.performance.metrics.buildSize = buildSize; if (buildSize > 100 * 1024 * 1024) { this.results.performance.alerts.push({ type: 'warning',message: 'Build size is large (>100MB)',value: `${Math.round(buildSize / (1024 * 1024))}MB` })} } async checkSecurityStatus() { this.log('🔒 Checking Security Status'); const securityChecks = [ { command: 'npm audit --audit-level=moderate --json',description: 'Security Audit' } ]; for (const check of securityChecks) { const result = await this.runCommand(check.command,check.description,30000); if (result.success) { try { const auditData = JSON.parse(result.output); this.results.security.vulnerabilities = auditData.metadata?.vulnerabilities?.total || 0; if (this.results.security.vulnerabilities > 0) { this.results.performance.alerts.push({ type: 'error',message: `${this.results.security.vulnerabilities} security vulnerabilities found`,value: this.results.security.vulnerabilities })} } catch (error) { this.log('⚠️ Could not parse security audit results','WARN')} } } const packageJsonPath = path.join(this.projectRoot,'package.json'); if (fs.existsSync(packageJsonPath)) { try { const packageJson = JSON.parse(fs.readFileSync(packageJsonPath,'utf8')); const dependencies = Object.keys(packageJson.dependencies || {}); const devDependencies = Object.keys(packageJson.devDependencies || {}); this.results.security.outdatedPackages = dependencies.length + devDependencies.length} catch (error) { this.log('⚠️ Could not analyze package.json','WARN')} } } async checkTestStatus() { this.log('🧪 Checking Test Status'); const testChecks = [ { command: 'npm test -- --passWithNoTests --silent',description: 'Test Suite Check' } ]; for (const check of testChecks) { const result = await this.runCommand(check.command,check.description,60000); if (result.success) { this.results.application.testStatus = 'passed'} else { this.results.application.testStatus = 'failed'; this.results.performance.alerts.push({ type: 'error',message: 'Test suite failed',value: 'failed' })} } } async checkCodeQuality() { this.log('🔍 Checking Code Quality'); const qualityChecks = [ { command: 'npx eslint . --max-warnings 0 --quiet',description: 'ESLint Quality Check' },{ command: 'npx tsc --noEmit --skipLibCheck',description: 'TypeScript Type Check' } ]; for (const check of qualityChecks) { const result = await this.runCommand(check.command,check.description,30000); if (!result.success) { this.results.performance.alerts.push({ type: 'warning',message: `${check.description} failed`,value: 'failed' })} } } getBuildSize() { const buildDir = path.join(this.projectRoot,'.next'); if (fs.existsSync(buildDir)) { return this.getDirectorySize(buildDir)} return 0} getDirectorySize(dir) { let size = 0; try { const items = fs.readdirSync(dir); for (const item of items) { const fullPath = path.join(dir,item); const stat = fs.statSync(fullPath); if (stat.isDirectory()) { size += this.getDirectorySize(fullPath)} else { size += stat.size} } } catch (error) { } return size} calculateOverallHealth() { let healthScore = 100; if (this.results.application.buildStatus !== 'built') healthScore -= 20; if (this.results.application.testStatus === 'failed') healthScore -= 30; if (this.results.security.vulnerabilities > 0) healthScore -= 25; if (this.results.performance.alerts.length > 0) healthScore -= 15; this.results.overallHealth = { score: Math.max(0,healthScore),status: healthScore >= 80 ? 'healthy' : healthScore >= 60 ? 'warning' : 'critical',timestamp: new Date().toISOString() }} generateReport() { this.calculateOverallHealth(); const reportPath = path.join(this.reportsDir,'monitoring-report.json'); fs.writeFileSync(reportPath,JSON.stringify(this.results,null,2)); this.log(`📊 Monitoring report generated: ${reportPath}`); this.log('📊 Monitoring Summary:'); this.log(` Overall Health: ${this.results.overallHealth.status} (${this.results.overallHealth.score}/100)`); this.log(` System Health: ${this.results.system.health}`); this.log(` Application Status: ${this.results.application.status}`); this.log(` Build Status: ${this.results.application.buildStatus}`); this.log(` Test Status: ${this.results.application.testStatus}`); this.log(` Security Vulnerabilities: ${this.results.security.vulnerabilities}`); this.log(` Alerts: ${this.results.performance.alerts.length}`); return reportPath} async run() { this.log('🎯 Starting Enhanced Monitoring System'); try { await this.checkSystemHealth(); await this.checkApplicationStatus(); await this.checkPerformanceMetrics(); await this.checkSecurityStatus(); await this.checkTestStatus(); await this.checkCodeQuality(); const reportPath = this.generateReport(); this.log('🎉 Enhanced Monitoring System Completed'); return { success: true,reportPath,results: this.results }} catch (error) { this.log(`💥 Monitoring failed: ${error.message}`,'ERROR'); return { success: false,error: error.message }} } } if (require.main === module) { const monitoring = new EnhancedMonitoringSystem(); monitoring.run().then(result => { process.exit(result.success ? 0 : 1)})} module.exports = EnhancedMonitoringSystem;
+#!/usr/bin/env node const { execSync } = const fs = const path = class EnhancedMonitoringSystem { constructor() { this.projectRoot = process.cwd(); this.reportsDir = path.join(this.projectRoot,'automation-reports'); this.logFile = path.join(this.reportsDir,'monitoring-system.log'); this.ensureDirectories(); this.results = { timestamp: new Date().toISOString(),system: { health: 'unknown',uptime: process.uptime(),memory: process.memoryUsage(),cpu: process.cpuUsage() },application: { status: 'unknown',buildStatus: 'unknown',testStatus: 'unknown' },performance: { metrics: {},alerts: [] },security: { vulnerabilities: 0,outdatedPackages: 0,securityScore: 0 } }} ensureDirectories() { if (!fs.existsSync(this.reportsDir)) { fs.mkdirSync(this.reportsDir,{ recursive: true })} } log(message,level = 'INFO') { const timestamp = new Date().toISOString(); const logMessage = `[${timestamp}] [${level}] ${message}`; console.log(logMessage); fs.appendFileSync(this.logFile,logMessage + '\n')} async runCommand(command,description,timeout = 30000) { this.log(`🔍 Monitoring: ${description}`); try { const result = execSync(command,{ cwd: this.projectRoot,encoding: 'utf8',timeout: timeout,maxBuffer: 1024 * 1024 * 5 }); this.log(`✅ Success: ${description}`); return { success: true,output: result }} catch (error) { this.log(`❌ Failed: ${description} - ${error.message}`,'ERROR'); return { success: false,error: error.message }} } async checkSystemHealth() { this.log('🖥️ Checking System Health'); const systemChecks = [ { command: 'df -h',description: 'Disk Space Check' },{ command: 'free -h',description: 'Memory Usage Check' },{ command: 'uptime',description: 'System Uptime Check' } ]; for (const check of systemChecks) { const result = await this.runCommand(check.command,check.description,10000); if (result.success) { this.results.system.health = 'healthy'} } } async checkApplicationStatus() { this.log('📱 Checking Application Status'); const buildDir = path.join(this.projectRoot,'.next'); if (fs.existsSync(buildDir)) { this.results.application.buildStatus = 'built'; this.log('✅ Build directory exists')} else { this.results.application.buildStatus = 'not_built'; this.log('⚠️ Build directory not found')} const packageJsonPath = path.join(this.projectRoot,'package.json'); if (fs.existsSync(packageJsonPath)) { this.results.application.status = 'configured'; this.log('✅ Package.json exists')} else { this.results.application.status = 'not_configured'; this.log('❌ Package.json not found')} } async checkPerformanceMetrics() { this.log('⚡ Checking Performance Metrics'); const performanceChecks = [ { command: 'npm run perf:monitor',description: 'Performance Monitoring' } ]; for (const check of performanceChecks) { const result = await this.runCommand(check.command,check.description,30000); if (result.success) { this.results.performance.metrics[check.description] = 'monitored'} } const buildSize = this.getBuildSize(); this.results.performance.metrics.buildSize = buildSize; if (buildSize > 100 * 1024 * 1024) { this.results.performance.alerts.push({ type: 'warning',message: 'Build size is large (>100MB)',value: `${Math.round(buildSize / (1024 * 1024))}MB` })} } async checkSecurityStatus() { this.log('🔒 Checking Security Status'); const securityChecks = [ { command: 'npm audit --audit-level=moderate --json',description: 'Security Audit' } ]; for (const check of securityChecks) { const result = await this.runCommand(check.command,check.description,30000); if (result.success) { try { const auditData = JSON.parse(result.output); this.results.security.vulnerabilities = auditData.metadata?.vulnerabilities?.total || 0; if (this.results.security.vulnerabilities > 0) { this.results.performance.alerts.push({ type: 'error',message: `${this.results.security.vulnerabilities} security vulnerabilities found`,value: this.results.security.vulnerabilities })} } catch (error) { this.log('⚠️ Could not parse security audit results','WARN')} } } const packageJsonPath = path.join(this.projectRoot,'package.json'); if (fs.existsSync(packageJsonPath)) { try { const packageJson = JSON.parse(fs.readFileSync(packageJsonPath,'utf8')); const dependencies = Object.keys(packageJson.dependencies || {}); const devDependencies = Object.keys(packageJson.devDependencies || {}); this.results.security.outdatedPackages = dependencies.length + devDependencies.length} catch (error) { this.log('⚠️ Could not analyze package.json','WARN')} } } async checkTestStatus() { this.log('🧪 Checking Test Status'); const testChecks = [ { command: 'npm test -- --passWithNoTests --silent',description: 'Test Suite Check' } ]; for (const check of testChecks) { const result = await this.runCommand(check.command,check.description,60000); if (result.success) { this.results.application.testStatus = 'passed'} else { this.results.application.testStatus = 'failed'; this.results.performance.alerts.push({ type: 'error',message: 'Test suite failed',value: 'failed' })} } } async checkCodeQuality() { this.log('🔍 Checking Code Quality'); const qualityChecks = [ { command: 'npx eslint . --max-warnings 0 --quiet',description: 'ESLint Quality Check' },{ command: 'npx tsc --noEmit --skipLibCheck',description: 'TypeScript Type Check' } ]; for (const check of qualityChecks) { const result = await this.runCommand(check.command,check.description,30000); if (!result.success) { this.results.performance.alerts.push({ type: 'warning',message: `${check.description} failed`,value: 'failed' })} } } getBuildSize() { const buildDir = path.join(this.projectRoot,'.next'); if (fs.existsSync(buildDir)) { return this.getDirectorySize(buildDir)} return 0} getDirectorySize(dir) { let size = 0; try { const items = fs.readdirSync(dir); for (const item of items) { const fullPath = path.join(dir,item); const stat = fs.statSync(fullPath); if (stat.isDirectory()) { size += this.getDirectorySize(fullPath)} else { size += stat.size} } } catch (error) { } return size} calculateOverallHealth() { let healthScore = 100; if (this.results.application.buildStatus !== 'built') healthScore -= 20; if (this.results.application.testStatus === 'failed') healthScore -= 30; if (this.results.security.vulnerabilities > 0) healthScore -= 25; if (this.results.performance.alerts.length > 0) healthScore -= 15; this.results.overallHealth = { score: Math.max(0,healthScore),status: healthScore >= 80 ? 'healthy' : healthScore >= 60 ? 'warning' : 'critical',timestamp: new Date().toISOString() }} generateReport() { this.calculateOverallHealth(); const reportPath = path.join(this.reportsDir,'monitoring-report.json'); fs.writeFileSync(reportPath,JSON.stringify(this.results,null,2)); this.log(`📊 Monitoring report generated: ${reportPath}`); this.log('📊 Monitoring Summary:'); this.log(` Overall Health: ${this.results.overallHealth.status} (${this.results.overallHealth.score}/100)`); this.log(` System Health: ${this.results.system.health}`); this.log(` Application Status: ${this.results.application.status}`); this.log(` Build Status: ${this.results.application.buildStatus}`); this.log(` Test Status: ${this.results.application.testStatus}`); this.log(` Security Vulnerabilities: ${this.results.security.vulnerabilities}`); this.log(` Alerts: ${this.results.performance.alerts.length}`); return reportPath} async run() { this.log('🎯 Starting Enhanced Monitoring System'); try { await this.checkSystemHealth(); await this.checkApplicationStatus(); await this.checkPerformanceMetrics(); await this.checkSecurityStatus(); await this.checkTestStatus(); await this.checkCodeQuality(); const reportPath = this.generateReport(); this.log('🎉 Enhanced Monitoring System Completed'); return { success: true,reportPath,results: this.results }} catch (error) { this.log(`💥 Monitoring failed: ${error.message}`,'ERROR'); return { success: false,error: error.message }} } } if (require.main === module) { const monitoring = new EnhancedMonitoringSystem(); monitoring.run().then(result => { process.exit(result.success ? 0 : 1)})} module.exports = EnhancedMonitoringSystem;
+ursor/add-new-services-and-deploy-updates-0462
+ursor/fix-syntax-push-and-merge-to-main-40de
+#!/usr/bin/env node const { execSync } = const fs = const path = class EnhancedMonitoringSystem { constructor() { this.projectRoot = process.cwd(); this.reportsDir = path.join(this.projectRoot,'automation-reports'); this.logFile = path.join(this.reportsDir,'monitoring-system.log'); this.ensureDirectories(); this.results = { timestamp: new Date().toISOString(),system: { health: 'unknown',uptime: process.uptime(),memory: process.memoryUsage(),cpu: process.cpuUsage() },application: { status: 'unknown',buildStatus: 'unknown',testStatus: 'unknown' },performance: { metrics: {},alerts: [] },security: { vulnerabilities: 0,outdatedPackages: 0,securityScore: 0 } }} ensureDirectories() { if (!fs.existsSync(this.reportsDir)) { fs.mkdirSync(this.reportsDir,{ recursive: true })} } log(message,level = 'INFO') { const timestamp = new Date().toISOString(); const logMessage = `[${timestamp}] [${level}] ${message}`; console.log(logMessage); fs.appendFileSync(this.logFile,logMessage + '\n')} async runCommand(command,description,timeout = 30000) { this.log(`🔍 Monitoring: ${description}`); try { const result = execSync(command,{ cwd: this.projectRoot,encoding: 'utf8',timeout: timeout,maxBuffer: 1024 * 1024 * 5 }); this.log(`✅ Success: ${description}`); return { success: true,output: result }} catch (error) { this.log(`❌ Failed: ${description} - ${error.message}`,'ERROR'); return { success: false,error: error.message }} } async checkSystemHealth() { this.log('🖥️ Checking System Health'); const systemChecks = [ { command: 'df -h',description: 'Disk Space Check' },{ command: 'free -h',description: 'Memory Usage Check' },{ command: 'uptime',description: 'System Uptime Check' } ];  } } async checkApplicationStatus() { this.log('📱 Checking Application Status'); const buildDir = path.join(this.projectRoot,'.next'); if (fs.existsSync(buildDir)) { this.results.application.buildStatus = 'built'; this.log('✅ Build directory exists')} else { this.results.application.buildStatus = 'not_built'; this.log('⚠️ Build directory not found')} const packageJsonPath = path.join(this.projectRoot,'package.json'); if (fs.existsSync(packageJsonPath)) { this.results.application.status = 'configured'; this.log('✅ Package.json exists')} else { this.results.application.status = 'not_configured'; this.log('❌ Package.json not found')} } async checkPerformanceMetrics() { this.log('⚡ Checking Performance Metrics'); const performanceChecks = [ { command: 'npm run perf:monitor',description: 'Performance Monitoring' } ];  } const buildSize = this.getBuildSize(); this.results.performance.metrics.buildSize = buildSize; if (buildSize > 100 * 1024 * 1024) { this.results.performance.alerts.push({ type: 'warning',message: 'Build size is large (>100MB)',value: `${Math.round(buildSize / (1024 * 1024))}MB` })} } async checkSecurityStatus() { this.log('🔒 Checking Security Status'); const securityChecks = [ { command: 'npm audit --audit-level=moderate --json',description: 'Security Audit' } ];  security vulnerabilities found`,value: this.results.security.vulnerabilities })} } catch (error) { this.log('⚠️ Could not parse security audit results','WARN')} } } const packageJsonPath = path.join(this.projectRoot,'package.json'); if (fs.existsSync(packageJsonPath)) { try { const packageJson = JSON.parse(fs.readFileSync(packageJsonPath,'utf8')); const dependencies = Object.keys(packageJson.dependencies || {}); const devDependencies = Object.keys(packageJson.devDependencies || {}); this.results.security.outdatedPackages = dependencies.length + devDependencies.length} catch (error) { this.log('⚠️ Could not analyze package.json','WARN')} } } async checkTestStatus() { this.log('🧪 Checking Test Status'); const testChecks = [ { command: 'npm test -- --passWithNoTests --silent',description: 'Test Suite Check' } ];  else { this.results.application.testStatus = 'failed'; this.results.performance.alerts.push({ type: 'error',message: 'Test suite failed',value: 'failed' })} } } async checkCodeQuality() { this.log('🔍 Checking Code Quality'); const qualityChecks = [ { command: 'npx eslint . --max-warnings 0 --quiet',description: 'ESLint Quality Check' },{ command: 'npx tsc --noEmit --skipLibCheck',description: 'TypeScript Type Check' } ];  failed`,value: 'failed' })} } } getBuildSize() { const buildDir = path.join(this.projectRoot,'.next'); if (fs.existsSync(buildDir)) { return this.getDirectorySize(buildDir)} return 0} getDirectorySize(dir) { let size = 0; try { const items = fs.readdirSync(dir);  else { size += stat.size} } } catch (error) { } return size} calculateOverallHealth() { let healthScore = 100; if (this.results.application.buildStatus !== 'built') healthScore -= 20; if (this.results.application.testStatus === 'failed') healthScore -= 30; if (this.results.security.vulnerabilities > 0) healthScore -= 25; if (this.results.performance.alerts.length > 0) healthScore -= 15; this.results.overallHealth = { score: Math.max(0,healthScore),status: healthScore >= 80 ? 'healthy' : healthScore >= 60 ? 'warning' : 'critical',timestamp: new Date().toISOString() }} generateReport() { this.calculateOverallHealth(); const reportPath = path.join(this.reportsDir,'monitoring-report.json'); fs.writeFileSync(reportPath,JSON.stringify(this.results,null,2)); this.log(`📊 Monitoring report generated: ${reportPath}`); this.log('📊 Monitoring Summary:'); this.log(` Overall Health: ${this.results.overallHealth.status} (${this.results.overallHealth.score}/100)`); this.log(` System Health: ${this.results.system.health}`); this.log(` Application Status: ${this.results.application.status}`); this.log(` Build Status: ${this.results.application.buildStatus}`); this.log(` Test Status: ${this.results.application.testStatus}`); this.log(` Security Vulnerabilities: ${this.results.security.vulnerabilities}`); this.log(` Alerts: ${this.results.performance.alerts.length}`); return reportPath} async run() { this.log('🎯 Starting Enhanced Monitoring System'); try { await this.checkSystemHealth(); await this.checkApplicationStatus(); await this.checkPerformanceMetrics(); await this.checkSecurityStatus(); await this.checkTestStatus(); await this.checkCodeQuality(); const reportPath = this.generateReport(); this.log('🎉 Enhanced Monitoring System Completed'); return { success: true,reportPath,results: this.results }} catch (error) { this.log(`💥 Monitoring failed: ${error.message}`,'ERROR'); return { success: false,error: error.message }} } } if (require.main === module) { const monitoring = new EnhancedMonitoringSystem(); monitoring.run().then(result => { process.exit(result.success ? 0 : 1)})} module.exports = EnhancedMonitoringSystem;
+#!/usr/bin/env node const { execSync } = const fs = const path = class EnhancedMonitoringSystem { constructor() { this.projectRoot = process.cwd(); this.reportsDir = path.join(this.projectRoot,'automation-reports'); this.logFile = path.join(this.reportsDir,'monitoring-system.log'); this.ensureDirectories(); this.results = { timestamp: new Date().toISOString(),system: { health: 'unknown',uptime: process.uptime(),memory: process.memoryUsage(),cpu: process.cpuUsage() },application: { status: 'unknown',buildStatus: 'unknown',testStatus: 'unknown' },performance: { metrics: {},alerts: [] },security: { vulnerabilities: 0,outdatedPackages: 0,securityScore: 0 } }} ensureDirectories() { if (!fs.existsSync(this.reportsDir)) { fs.mkdirSync(this.reportsDir,{ recursive: true })} } log(message,level = 'INFO') { const timestamp = new Date().toISOString(); const logMessage = `[${timestamp}] [${level}] ${message}`; console.log(logMessage); fs.appendFileSync(this.logFile,logMessage + '\n')} async runCommand(command,description,timeout = 30000) { this.log(`🔍 Monitoring: ${description}`); try { const result = execSync(command,{ cwd: this.projectRoot,encoding: 'utf8',timeout: timeout,maxBuffer: 1024 * 1024 * 5 }); this.log(`✅ Success: ${description}`); return { success: true,output: result }} catch (error) { this.log(`❌ Failed: ${description} - ${error.message}`,'ERROR'); return { success: false,error: error.message }} } async checkSystemHealth() { this.log('🖥️ Checking System Health'); const systemChecks = [ { command: 'df -h',description: 'Disk Space Check' },{ command: 'free -h',description: 'Memory Usage Check' },{ command: 'uptime',description: 'System Uptime Check' } ];  } } async checkApplicationStatus() { this.log('📱 Checking Application Status'); const buildDir = path.join(this.projectRoot,'.next'); if (fs.existsSync(buildDir)) { this.results.application.buildStatus = 'built'; this.log('✅ Build directory exists')} else { this.results.application.buildStatus = 'not_built'; this.log('⚠️ Build directory not found')} const packageJsonPath = path.join(this.projectRoot,'package.json'); if (fs.existsSync(packageJsonPath)) { this.results.application.status = 'configured'; this.log('✅ Package.json exists')} else { this.results.application.status = 'not_configured'; this.log('❌ Package.json not found')} } async checkPerformanceMetrics() { this.log('⚡ Checking Performance Metrics'); const performanceChecks = [ { command: 'npm run perf:monitor',description: 'Performance Monitoring' } ];  } const buildSize = this.getBuildSize(); this.results.performance.metrics.buildSize = buildSize; if (buildSize > 100 * 1024 * 1024) { this.results.performance.alerts.push({ type: 'warning',message: 'Build size is large (>100MB)',value: `${Math.round(buildSize / (1024 * 1024))}MB` })} } async checkSecurityStatus() { this.log('🔒 Checking Security Status'); const securityChecks = [ { command: 'npm audit --audit-level=moderate --json',description: 'Security Audit' } ];  security vulnerabilities found`,value: this.results.security.vulnerabilities })} } catch (error) { this.log('⚠️ Could not parse security audit results','WARN')} } } const packageJsonPath = path.join(this.projectRoot,'package.json'); if (fs.existsSync(packageJsonPath)) { try { const packageJson = JSON.parse(fs.readFileSync(packageJsonPath,'utf8')); const dependencies = Object.keys(packageJson.dependencies || {}); const devDependencies = Object.keys(packageJson.devDependencies || {}); this.results.security.outdatedPackages = dependencies.length + devDependencies.length} catch (error) { this.log('⚠️ Could not analyze package.json','WARN')} } } async checkTestStatus() { this.log('🧪 Checking Test Status'); const testChecks = [ { command: 'npm test -- --passWithNoTests --silent',description: 'Test Suite Check' } ];  else { this.results.application.testStatus = 'failed'; this.results.performance.alerts.push({ type: 'error',message: 'Test suite failed',value: 'failed' })} } } async checkCodeQuality() { this.log('🔍 Checking Code Quality'); const qualityChecks = [ { command: 'npx eslint . --max-warnings 0 --quiet',description: 'ESLint Quality Check' },{ command: 'npx tsc --noEmit --skipLibCheck',description: 'TypeScript Type Check' } ];  failed`,value: 'failed' })} } } getBuildSize() { const buildDir = path.join(this.projectRoot,'.next'); if (fs.existsSync(buildDir)) { return this.getDirectorySize(buildDir)} return 0} getDirectorySize(dir) { let size = 0; try { const items = fs.readdirSync(dir);  else { size += stat.size} } } catch (error) { } return size} calculateOverallHealth() { let healthScore = 100; if (this.results.application.buildStatus !== 'built') healthScore -= 20; if (this.results.application.testStatus === 'failed') healthScore -= 30; if (this.results.security.vulnerabilities > 0) healthScore -= 25; if (this.results.performance.alerts.length > 0) healthScore -= 15; this.results.overallHealth = { score: Math.max(0,healthScore),status: healthScore >= 80 ? 'healthy' : healthScore >= 60 ? 'warning' : 'critical',timestamp: new Date().toISOString() }} generateReport() { this.calculateOverallHealth(); const reportPath = path.join(this.reportsDir,'monitoring-report.json'); fs.writeFileSync(reportPath,JSON.stringify(this.results,null,2)); this.log(`📊 Monitoring report generated: ${reportPath}`); this.log('📊 Monitoring Summary:'); this.log(` Overall Health: ${this.results.overallHealth.status} (${this.results.overallHealth.score}/100)`); this.log(` System Health: ${this.results.system.health}`); this.log(` Application Status: ${this.results.application.status}`); this.log(` Build Status: ${this.results.application.buildStatus}`); this.log(` Test Status: ${this.results.application.testStatus}`); this.log(` Security Vulnerabilities: ${this.results.security.vulnerabilities}`); this.log(` Alerts: ${this.results.performance.alerts.length}`); return reportPath} async run() { this.log('🎯 Starting Enhanced Monitoring System'); try { await this.checkSystemHealth(); await this.checkApplicationStatus(); await this.checkPerformanceMetrics(); await this.checkSecurityStatus(); await this.checkTestStatus(); await this.checkCodeQuality(); const reportPath = this.generateReport(); this.log('🎉 Enhanced Monitoring System Completed'); return { success: true,reportPath,results: this.results }} catch (error) { this.log(`💥 Monitoring failed: ${error.message}`,'ERROR'); return { success: false,error: error.message }} } } if (require.main === module) { const monitoring = new EnhancedMonitoringSystem(); monitoring.run().then(result => { process.exit(result.success ? 0 : 1)})} module.exports = EnhancedMonitoringSystem;
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> origin/chore/fix-lint-and-merge

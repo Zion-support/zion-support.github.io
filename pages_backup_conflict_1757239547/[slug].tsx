@@ -48,7 +48,6 @@ const service = useMemo(() => {
   }, [slug]);
 import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground';
 import Button from '../components/ui/Button';
-import Card from '../components/ui/Card';
 import { Check, Mail, MapPin, Phone, ExternalLink } from 'lucide-react';
 import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-services';
 import { extraServices } from '../data/extra-services';
@@ -115,12 +114,10 @@ function getExistingRootPageSlugs(): Set<string> {
 	return slugs;
 export async function getStaticPaths() {
 	const services = getAllServices()
-	const slugs = new Set<string>()
 	 }))
 		fallback: false;
 	}
 export async function getStaticProps() {
-	const services = getAllServices()
 	const incomingSlug = (params?.slug |'').replace(/^\/+|\/+$/g, '')
 	let service: Service | undefined = services.find((s) => toSlug(s.id |'') === incomingSlug |toSlug(s.name |'') === incomingSlug)
 	if (!service) {return { notFound: true }

@@ -1,35 +1,27 @@
 <<<<<<< HEAD
-=======
-<<<<<<< HEAD
 <main> <h1>ProductManagementChat</h1> <p>Blog content coming soon...</p> <a href="/blog" >Back to Blog</a> </main> </div>) 
 }
 export default ProductManagementChat
 =======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
+>>>>>>> origin/chore/fix-lint-and-merge
 import type { NextPage } from 'next';
-  return (import Link from 'next/link';
-import Seo from '../../components/seo/Seo';
-const ProductManagementChat: NextPage = () => {return (return (<div>;
 
+    <div>'
 
-  return (import Link from 'next/link';
-import Seo from '../../components/seo/Seo';
-const ProductManagementChat: NextPage = () => {return (return (<div>;
+<<<<<<< HEAD
+  return (import Link from next/link';
 
 
 
 
   return (
-import Link from 'next/link';
-import Seo from '../../components/seo/Seo';
+import Link from next/link';
 
 const ProductManagementChat: NextPage = () => {
   return (
 
 
   return (
-import Link from 'next/link';
-import Seo from '../../components/seo/Seo';
 
   return (
 
@@ -39,10 +31,13 @@ import Seo from '../../components/seo/Seo';
 
   return (
     <div>
+      <Seo title="Product Management description=Product management strategy and insights by Zion." openGraph={{ title: Product Management', description: 'Product management strategy and insights by Zion.' }} />
+=======
       <Seo title="Product Management" description="Product management strategy and insights by Zion." openGraph={{ title: 'Product Management', description: 'Product management strategy and insights by Zion.' }} />
+>>>>>>> origin/chore/fix-lint-and-merge
       <main>
         <h1>ProductManagementChat</h1>
-        <p>Blog content coming soon...</p>
+        <p>Blog content coming soon...</p>"
         <a href="/blog">Back to Blog</a>
       </main>
     </div>
@@ -61,12 +56,15 @@ import Seo from '../../components/seo/Seo';
 
 
 
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
 
     <div>;
+
       <Seo title="Product Management" description="Product management strategy and insights by Zion." openGraph={{ title: 'Product Management', description: 'Product management strategy and insights by Zion.' }} />;
       <main>;
         <h1>ProductManagementChat</h1>;
-        <p>Blog content coming soon...</p>;
+        <p>Blog content coming soon...</p>;"
         <a href="/blog">Back to Blog</a>;
       </main>;
     </div>;
@@ -74,16 +72,15 @@ import Seo from '../../components/seo/Seo';
 };
 export default ProductManagementChat;
 
-
-
 import Link from 'next / link';
+
 import Seo from '../../components / seo / Seo';
   return (
-    <div>;
+    <div>;'"
       <Seo title="Product Management" description="Product management strategy and insights by Zion." open_graph={{ title: 'Product Management', description: 'Product management strategy and insights by Zion.' }} />;
       <main>;
         <h1 > ProductManagementChat</h1>;
-        <p > Blog content coming soon...</p>;
+        <p > Blog content coming soon...</p>;"
         <a href="/blog">Back to Blog</a>;
       </main>;
     </div>);
@@ -91,12 +88,8 @@ import Seo from '../../components / seo / Seo';
 ;
 export default ProductManagementChat;
 ;
-export default ProductManagementChat;
-
 
 export default ProductManagementChat;
-
-ursor/fix-website-loading-errors-and-merge-6662
 
 export default ProductManagementChat;
 
@@ -109,10 +102,9 @@ export default ProductManagementChat;
   )
 },
 
-export default ProductManagementChat
-
 export default ProductManagementChat;
 export default ProductManagementChat;
+<<<<<<< HEAD
 const ProductManagementChat: NextPage;
 
 
@@ -129,5 +121,4 @@ const ProductManagementChat: NextPage;
 
 =======
 export default ProductManagementChat;
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
+>>>>>>> origin/chore/fix-lint-and-merge

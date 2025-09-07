@@ -44,7 +44,6 @@ if (typeof self === 'undefined') {
     (global as any).self = global,
     if (typeof globalThis !== 'undefined') {
       (globalThis as any).self = global
-  var __awaiter: any;
 // CRITICAL: Self polyfill - must be first;
 // Check condition;
 if ( {) {$2;

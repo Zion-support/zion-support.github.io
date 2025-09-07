@@ -73,7 +73,6 @@ export function ProjectForm() {const { user } = useAuth()const { addProject, upd
         "demo_url": data.demo_url |undefined;
         "pdf_url": data.pdf_url;
       }
-      let success = false;
       if (isEditing && project?.id) {success = await updateProject(project.id, projectData)} else {const projectId = await addProject(projectData)success = !!projectId;
       }// Check condition;
 if ( {) {$2;

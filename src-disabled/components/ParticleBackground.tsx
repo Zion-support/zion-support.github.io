@@ -1,39 +1,45 @@
+<<<<<<< HEAD
+import React, { useEffect, useRef } from 'react;
+=======
 import React, { useEffect, useRef } from 'react';
+const ParticleBackground: React.FC = () => {,
+  const canvasRef = useRef<HTMLCanvasElement>(null);
+>>>>>>> origin/chore/fix-lint-and-merge
 
-interface ParticleBackgroundProps {
-  particleCount?: number;
-  className?: string;
+interface Particle {
+  x: number;
+  y: number;
+  vx: number;
+  vy: number;
+  size: number;
+  opacity: number;
 }
 
+<<<<<<< HEAD
 const ParticleBackground: React.FC<ParticleBackgroundProps> = ({
   particleCount = 50,
-  className = ''
+  className = '
 }) => {
+=======
+const ParticleBackground: React.FC = () => {
+>>>>>>> origin/chore/fix-lint-and-merge
   const canvasRef = useRef<HTMLCanvasElement>(null);
+  const particlesRef = useRef<Particle[]>([]);
+  const animationRef = useRef<number>();
 
   useEffect(() => {
     const canvas = canvasRef.current;
     if (!canvas) return;
-    const ctx = canvas.getContext('2d');
+    const ctx = canvas.getContext('2d);
     if (!ctx) return;
     let animationId: number;,
-
-    let animationId: number;
-    const particles: Array<{
-      x: number;
-      y: number;
-      vx: number;
-      vy: number;
-      size: number;
-      opacity: number;
-    }> = [];
 
     const resizeCanvas = () => {
       canvas.width = window.innerWidth;
       canvas.height = window.innerHeight;
-    };
+    }
     resizeCanvas();
-    window.addEventListener('resize', resizeCanvas);
+    window.addEventListener(resize', resizeCanvas);
     interface Particle {
       x: number;,
       y: number;,
@@ -45,7 +51,7 @@ const ParticleBackground: React.FC<ParticleBackgroundProps> = ({
     const particles: Particle[] = [];,
     const particleCount = 50;
 
-<<<<<<< HEAD:src/components/ParticleBackground.tsx
+<<<<<<< HEAD
     const createParticles = () => {
       particles.length = 0;
       for (let i = 0; i < particleCount; i++) {
@@ -58,11 +64,13 @@ const ParticleBackground: React.FC<ParticleBackgroundProps> = ({
           opacity: Math.random() * 0.5 + 0.2
         });
       }
-    };
+    }
 
     const updateParticles = () => {
-      particles.forEach(particle => {
+      particles.forEach(particle => {}
+=======
     };
+>>>>>>> origin/chore/fix-lint-and-merge
 
     const animate = () => {
       ctx.clearRect(0, 0, canvas.width, canvas.height);
@@ -78,27 +86,25 @@ particles.forEach((particle) => {
 
         if (particle.x < 0 || particle.x > canvas.width) particle.vx *= -1;
         if (particle.y < 0 || particle.y > canvas.height) particle.vy *= -1;
+<<<<<<< HEAD
       });
-    };
+    }
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
 
-    const drawParticles = () => {
-      ctx.clearRect(0, 0, canvas.width, canvas.height);
-      
-      particles.forEach(particle => {
         ctx.beginPath();
         ctx.arc(particle.x, particle.y, particle.size, 0, Math.PI * 2);
         ctx.fillStyle = `rgba(59, 130, 246, ${particle.opacity})`;`
         ctx.fill();
-      });
 
-      // Draw connections
-      particles.forEach((particle, i) => {
-        particles.slice(i + 1).forEach(otherParticle => {
-          const dx = particle.x - otherParticle.x;
-          const dy = particle.y - otherParticle.y;
-          const distance = Math.sqrt(dx * dx + dy * dy);
+        // Draw connections
+        particlesRef.current.forEach((otherParticle, otherIndex) => {
+          if (index !== otherIndex) {
+            const dx = particle.x - otherParticle.x;
+            const dy = particle.y - otherParticle.y;
+            const distance = Math.sqrt(dx * dx + dy * dy);
 
-<<<<<<< HEAD:src/components/ParticleBackground.tsx
+<<<<<<< HEAD
           if (distance < 100) {
             ctx.beginPath();
             ctx.moveTo(particle.x, particle.y);
@@ -109,7 +115,9 @@ particles.forEach((particle) => {
           }
         });
       });
-    };
+    }
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
             if (distance < 100) {
               ctx.beginPath();
               ctx.moveTo(particle.x, particle.y);
@@ -124,26 +132,30 @@ particles.forEach((particle) => {
       });
       animationId = requestAnimationFrame(animate);
 
-    const animate = () => {
+<<<<<<< HEAD
       updateParticles();
       drawParticles();
       animationId = requestAnimationFrame(animate);
+    }
+=======
+      animationRef.current = requestAnimationFrame(animate);
     };
+>>>>>>> origin/chore/fix-lint-and-merge
 
     resizeCanvas();
     createParticles();
     animate();
 
-    window.addEventListener('resize', () => {
+    window.addEventListener('resize, () => {
       resizeCanvas();
       createParticles();
     });
 
     return () => {
-<<<<<<< HEAD:src/components/ParticleBackground.tsx
+<<<<<<< HEAD
       cancelAnimationFrame(animationId);
-      window.removeEventListener('resize', resizeCanvas);
-    };
+      window.removeEventListener(resize', resizeCanvas);
+    }
   }, [particleCount]);
 
   return (
@@ -151,20 +163,22 @@ particles.forEach((particle) => {
       ref={canvasRef}
       className={`fixed inset-0 pointer-events-none ${className}`}
       style={{ zIndex: -1 }}
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
       if (animationRef.current) {
         cancelAnimationFrame(animationRef.current);
       }
 
-      window.removeEventListener('resize', resizeCanvas);
-    };
+      window.removeEventListener('resize, resizeCanvas);
+    }
   }, []);,
   return (
     <canvas
       ref={canvasRef}
       className="fixed inset-0 pointer-events-none z-0""
-      style={{ background: 'transparent' }}'
+      style={{ background: transparent' }}'
     />
   );
-};
+}
 
 export default ParticleBackground;

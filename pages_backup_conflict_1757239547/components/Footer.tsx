@@ -6,8 +6,6 @@ import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { Mail, Phone, MapPin, Facebook, Twitter, Linkedin, Instagram, Github } from 'lucide-react';
 
-const Footer = () => {
-  const currentYear = new Date().getFullYear();
 
   const footerLinks = {
     services: [

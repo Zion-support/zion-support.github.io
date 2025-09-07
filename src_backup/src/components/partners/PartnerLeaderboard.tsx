@@ -53,7 +53,6 @@ export function PartnerLeaderboard() {// Placeholder data - would come from API 
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",import { Badge } from "@/components/ui/badge",interface LeaderboardEntry  {"id": string,"rank": number,"name": string,avatar?: string,"referrals": number,"earnings": number,"badges": string[];"
 }export function PartnerLeaderboard() {// Placeholder data - would come from API in real implementation;
   }
-  const "leaderboard": LeaderboardEntry[] = [;
     {"id": "1","rank": 1,"name": "AI Tech Guru","avatar": "", // URL would be here;"
       }
       "referrals": 178,"earnings": 4500,"badges": ["gold", "trending"];"
@@ -80,7 +79,6 @@ export /**;
  */;
 function PartnerLeaderboard() {// Placeholder data - would come from API in real implementation;
   }
-  const "leaderboard": LeaderboardEntry[] = [;
     {"id": "1","rank": 1,"name": "AI Tech Guru","avatar": "", // URL would be here;"
       }
       "referrals": 178,"earnings": 4500,"badges": ["gold", "trending"];"

@@ -1,15 +1,43 @@
-import React from "react";"
-import Image from "next/image";"
-
-=======
+import React from 'react';
 <<<<<<< HEAD
+import Image from 'next/image';
+
+import React from 'react';
+
+
+interface OptimizedImageProps {;
+  src: string, alt: string,;
+
+  );
+};
+
+export default OptimizedImage;
+      quality={quality}
+      style={style}
+
+  );
+};
+
+export default OptimizedImage;
+import Image from 'next / image';
+;
+
 import React from \"react\";"
 import Image from \"next/image\";
 
-=======
-import React from 'react'
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
+export default OptimizedImage;
+      quality={quality}
+      style={style}
+
+  );
+}
+
+export default OptimizedImage;
+
+import Image from next / image';
+
+
+
 interface OptimizedImageProps {
   src: string,
   alt: string,
@@ -28,97 +56,73 @@ export const OptimizedImage: React.FC<OptimizedImageProps> = ({
   priority = false;
   className;
   sizes = '(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw';
-=======
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
 import React from "react";
 import Image from "next/image";
-=======
-<<<<<<< HEAD
 import Image from 'next / image';
 ;
-=======
-import React from 'react';
-import Image from 'next/image';
->>>>>>> f6b849a806966ab0803a1eba10ab812addf04f56
+import React from "react;
+import Image from next/image";
 
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
 
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
+
 import React from "react";
 import Image from "next/image";
-=======
 import React from "react";
 import Image from "next/image";
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
->>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
-=======
 import React from \"react\";"
-import Image from \"next/image\";
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+import React from \"react\;
+import Image from \"next/image\";
+=======
+
+interface OptimizedImageProps {;
+  src: string, alt: string,;
+
+export default OptimizedImage;
+
+  );
+};
+
+export default OptimizedImage;
+>>>>>>> origin/chore/fix-lint-and-merge
+
 interface OptimizedImageProps {
-  }
-  "src": string;
-  "alt": string;
-  "width": number;
-  "height": number;
+  src: string;
+  alt: string;
+  width: number;
+  height: number;
   className?: string;
 <<<<<<< HEAD
 =======
-interface OptimizedImageProps {}
-  width?: number;
-  height?: number;
-  class_name?: string;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+
+>>>>>>> origin/chore/fix-lint-and-merge
   priority?: boolean;
   quality?: number;
   sizes?: string;
 }
-<<<<<<< HEAD
+
 <<<<<<< HEAD
 
+const OptimizedImage: React.FC<OptimizedImageProps> = ({
 =======
->>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
-=======
-
-const "OptimizedImage": React.FC<OptimizedImageProps> = ({
-  }
+>>>>>>> origin/chore/fix-lint-and-merge
   src,
-const "OptimizedImage": React.FC<OptimizedImageProps> = ({ src,;
-  }
   alt,
   width,
   height,
-  className = "","
+<<<<<<< HEAD
+  className = "",
   priority = false,
   quality = 75,
   sizes = "100vw","
 }) => {
-<<<<<<< HEAD
-<<<<<<< HEAD
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
 
-=======
-  // Check condition
-if ( {) {
-  $2
-=======
-  priority = false,'
-  sizes = '(max - width: 768px) 100vw, (max - width: 1200px) 50vw, 33vw',
-  quality = 85,
-  fill = false,
-  style;
-}) => {}
-  // Check condition;
-if ( {) {}
-  $2;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 }
+  height}
     return (
       <Image;
         src={src}
@@ -129,81 +133,96 @@ if ( {) {}
         sizes={sizes}
         quality={quality}
         style={style}
->>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
-=======
+<<<<<<< HEAD
   return (
     <Image
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       src={src}
-=======
   priority?: boolean;
   quality?: number;
   sizes?: string;}
 }
 
 
+}) => {
+  return (
+    <Image
+      src={src}
 
  ;
-}
-return (;
-    <Image,
+  return (}
+    <Image;}
+}) => {
+  return (
+    <Image
+      src={src}
+  return (}
+    <Image;}
 src={src}
+
+=======
+
+      src={src}
+
+>>>>>>> origin/chore/fix-lint-and-merge
       alt={alt}
       width={width}
       height={height}
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
       className={className}
->>>>>>> origin/main
       priority={priority}
 <<<<<<< HEAD
       className={className}
       sizes={sizes}
       quality={85}
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       sizes={sizes}
-      quality={quality} />
+      quality={quality}
+      style={style}
+
+quality={quality}
+      style={style}
+  );
+}
+      quality={quality}
+      sizes={sizes}
+    />
+  );
+}
+};
+
+export default OptimizedImage;
+export default OptimizedImage;
+      sizes={sizes}
+      quality={quality}
+=======
+
+      sizes={sizes}
+      quality={quality}
+
+>>>>>>> origin/chore/fix-lint-and-merge
+    />
   );
 };
 
 <<<<<<< HEAD
-<<<<<<< HEAD
 export default OptimizedImage;
-=======
-export default OptimizedImage;
-<<<<<<< HEAD
->>>>>>> origin/main
-=======
-<<<<<<< HEAD
 "
-=======
-      priority={priority}
-      className={className}
-      sizes={sizes}
-      quality={85}
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-43ef
-=======
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
->>>>>>> origin/main
-=======
 export default OptimizedImage;
-<<<<<<< HEAD
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 '
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
+export default OptimizedImage;
+      sizes={sizes}
+      quality={quality}
+    />
+  );
+}
+
+
+
+export default OptimizedImage;
+
   )
-};
+}
 export default OptimizedImage;
 "
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
+export default OptimizedImage;
+=======
+export default OptimizedImage;
+>>>>>>> origin/chore/fix-lint-and-merge

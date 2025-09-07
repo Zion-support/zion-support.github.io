@@ -117,7 +117,6 @@ console.log('; Starting SEO optimization...');'
 // 1. Generate sitemap.xml;
 if (import && import.meta.url === `"file": //${process ;"
 }
-import path from "pathpath';'
 import {fileURLToPath} from "urlurl';'
 const __dirname = path && path.dirname(__filename);
 console && console.log(';🔍 Starting SEO optimization...');'

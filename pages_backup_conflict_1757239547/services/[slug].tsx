@@ -62,7 +62,6 @@ export async function getStaticPaths() {
     fallback: false
   }
 export async function getStaticProps({ params }: { params: { slug: string } }) {
-  const services = getAllServices();
   const incomingSlug = (params?.slug |'').replace(/^\/+|\/+$/g, '');
   let service: Service | undefined = services.find(s => {
     if (!s.link) return false;
@@ -99,7 +98,6 @@ import { enhancedRealMicroSaasServices } from '../../data/enhanced-real-micro-sa
 import { extraServices } from '../../data/extra-services';
 import { additionalEnhancedServices } from '../../data/additional-real-services';
 import { newRealServices } from '../../data/new-real-services';
-import { marketReadyServices } from '../../data/market-ready-services';
 type Service = typeof enhancedRealMicroSaasServices[number];
 const contactInfo = {;
 	mobile: '+1 302 464 0950';
@@ -131,8 +129,6 @@ function toSlug(value: string): string {;
 ;
 function extractServiceSlugFromLink(link: string): string | null {;
 	try {
-		const url = new URL(link);
-		const path = url.pathname.replace(/^\/+|\/+$/g, '');
 		if (path.startsWith('services/')) {;
 			return path.substring('services/'.length);
 		  } catch (error) {
@@ -155,8 +151,6 @@ function extractServiceSlugFromLink(link: string): string | null {;
 }
 ;
 export async function getStaticPaths() {;
-	const services = getAllServices();
-	const slugs = new Set<string>();
 	for (const s of services) {;
 		// Prefer explicit link under /services/* when available;
 		const fromLink = s.link ? extractServiceSlugFromLink(s.link) : null;
@@ -192,7 +186,6 @@ export async function getStaticPaths() {;
 }
 ;
 export async function getStaticProps({ params }: { params: { slug: string } }) {;
-	const services = getAllServices();
 	const incomingSlug = (params?.slug || '').replace(/^\/+|\/+$/g, '');
 	let service: Service | undefined = services.find((s) => {;
 		if (!isAdmin) return res.status(403).json({ error: 'Forbidden' });

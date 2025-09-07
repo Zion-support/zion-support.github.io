@@ -1,62 +1,96 @@
 <<<<<<< HEAD
-
-const fs = require("fs");"const path = require("path");"console.log(" Fixing remaining syntax errors.");const filesToFix = [" "/workspace/components/Footer.tsx"," "/workspace/pages/about.tsx"," "/workspace/pages/ai-services.tsx"," "/workspace/pages/index.tsx"," "/workspace/pages/it-services.tsx"];let totalFixes = 0;filesToFix.forEach(filePath => { if (fs.existsSync(filePath)) {" let content = fs.readFileSync(filePath, "utf8"); let modified = false; / Fix line breaks in className attributes" content = content.replace(/className="([^"]*)\n\s*([^"]*)"/g, "className="$1 $2""); / Fix any remaining unterminated strings"" content = content.replace(/className="([^"]*)\n\s*([^"]*)"\s*>/g, "className="$1 $2">"); / Fix missing closing tags" content = content.replace(/<div([^>]*)\s*>\s*$/gm, "<div$1>"); / Fix any remaining syntax issues" content = content.replace(/\s+\n\s*>/g, ">"); " if (content !== fs.readFileSync(filePath, "utf8")) { fs.writeFileSync(filePath, content);" console.log(` Fixed: ${path.relative("/workspace", filePath)}`); totalFixes++; modified = true; } }});`console.log(`\n Summary:`);`console.log(` Files processed: ${filesToFix.length}`);`console.log(` Files fixed: ${totalFixes}`);"console.log(" Syntax error fixes completed!");""`"`
-
-
-
-
-main
-
-
-
-
-
-
-
-#!/usr/bin/env node
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> e19246f6ae7164fec78c9d9e31cb33f1a6ec056a
 
 =======
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
+>>>>>>> origin/chore/fix-lint-and-merge
 const fs = require('fs');
-const path = require('path');
+const path = require(path');
 
-// Function to fix hover syntax errors
-function fixHoverSyntax(filePath) {
+console.log('🔧 Fixing remaining syntax errors...');
+
+// Function to fix syntax errors in a file
+function fixSyntaxErrors(filePath) {
   try {
     let content = fs.readFileSync(filePath, 'utf8');
-    let originalContent = content;
+    const originalContent = content;
     
-    // Fix various hover syntax patterns
-const patterns = [;
-      { from: /"hover":\s*/g, to: 'hover:' },
-      { from: /"focus":\s*/g, to: 'focus:' },
-      { from: /"group-hover":\s*/g, to: 'group-hover:' },
-      { from: /"sm":\s*/g, to: 'sm:' },
-      { from: /"md":\s*/g, to: 'md:' },
-      { from: /"lg":\s*/g, to: 'lg:' },
-      { from: /"xl":\s*/g, to: 'xl:' },
-      { from: /"2xl":\s*/g, to: '2xl:' },
-    ];
-    
-    // Fix unterminated regexp literals
-    content = content.replace(/^\s*<\/p>\s*$/gm, '        </p>');
-    content = content.replace(/^\s*<\/div>\s*$/gm, '      </div>');
-    
-    // Fix malformed JSX
+<<<<<<< HEAD
+
+=======
+    // Fix common syntax issues
+    content = content.replace(/import\s*{\s*{\s*([^}]+)\s*}/g, 'import { $1 }');
+    content = content.replace(/^\s*{\s*$/gm, '');
     content = content.replace(/^\s*}\s*$/gm, '');
     content = content.replace(/^\s*;\s*$/gm, '');
+    content = content.replace(/^\s*icon,\s*$/gm, '');
+    content = content.replace(/^\s*title,\s*$/gm, '');
+    content = content.replace(/^\s*description,\s*$/gm, '');
+    content = content.replace(/^\s*features,\s*$/gm, '');
+    content = content.replace(/^\s*icon:\s*string;\s*$/gm, '');
+    content = content.replace(/^\s*title:\s*string;\s*$/gm, '');
+    content = content.replace(/^\s*description:\s*string;\s*$/gm, '');
+    content = content.replace(/^\s*features:\s*string\[\];\s*$/gm, '');
+    content = content.replace(/^\s*}\s*$/gm, '');
+    content = content.replace(/^\s*;\s*$/gm, '');
+>>>>>>> origin/chore/fix-lint-and-merge
+    
+    // Fix unterminated regexp literals
+    content = content.replace(/^\s*<\/p>\s*$/gm,         </p>');
+    content = content.replace(/^\s*<\/div>\s*$/gm, '      </div>);
+    
+    // Fix malformed JSX
+    content = content.replace(/^\s*}\s*$/gm, ');
+    content = content.replace(/^\s*;\s*$/gm, ');
     
     // Clean up empty lines
-    content = content.replace(/\n\s*\n\s*\n/g, '\n\n');
+    content = content.replace(/\n\s*\n\s*\n/g, \n\n');
     content = content.trim();
     
     // If the file is mostly empty or malformed, create a minimal working version
-    if (content.length < 100 || content.includes('icon:') || content.includes('title:')) {
+    if (content.length < 100 || content.includes('icon:) || content.includes(title:')) {
       const fileName = path.basename(filePath, path.extname(filePath));
-      const serviceName = fileName.replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase());
+      const serviceName = fileName.replace(/-/g, ' ).replace(/\b\w/g, l => l.toUpperCase());
       
+=======
+#!/usr/bin/env node,
+  const fs = require('fs');
+const path = require('path');
+  try {
+    let content = fs.readFileSync(filePath, 'utf8');
+    let originalContent = content;
+    // Fix common syntax issues,
+  content = content.replace(/import\s*{\s*{\s*([^}]+)\s*}/g, 'import { $1 }')
+    content = content.replace(/^\s*{\s*$/gm, '')
+    content = content.replace(/^\s*}\s*$/gm, '')
+    content = content.replace(/^\s*;\s*$/gm, '')
+    content = content.replace(/^\s*icon,\s*$/gm, '')
+    content = content.replace(/^\s*title,\s*$/gm, '')
+    content = content.replace(/^\s*description,\s*$/gm, '')
+    content = content.replace(/^\s*features,\s*$/gm, '')
+    content = content.replace(/^\s*icon:\s*string;\s*$/gm, '')
+    content = content.replace(/^\s*title:\s*string;\s*$/gm, '')
+    content = content.replace(/^\s*description:\s*string;\s*$/gm, '')
+    content = content.replace(/^\s*features:\s*string\[\];\s*$/gm, '')
+    content = content.replace(/^\s*}\s*$/gm, '')
+    content = content.replace(/^\s*;\s*$/gm, '')
+    // Fix unterminated regexp literals,
+  content = content.replace(/^\s*<\/p>\s*$/gm, '        </p>')
+    content = content.replace(/^\s*<\/div>\s*$/gm, '      </div>')
+    // Fix malformed JSX,
+  content = content.replace(/^\s*}\s*$/gm, '')
+    content = content.replace(/^\s*;\s*$/gm, '')
+    // Clean up empty lines,
+  content = content.replace(/\n\s*\n\s*\n/g, '\n\n')
+    content = content.trim()
+    // If the file is mostly empty or malformed, create a minimal working version,
+  if (content.length < 100 || content.includes('icon:') || content.includes('title:')) {
+      const fileName = path.basename(filePath, path.extname(filePath))
+      const serviceName = fileName.replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase())
+>>>>>>> cursor/integrate-build-improve-and-re-verify-f954
       content = `export default function ServicePage() {
   return (
     <main className="flex min-h-screen flex-col items-center justify-between p-24">
@@ -64,14 +98,27 @@ const patterns = [;
       <p>Learn about our ${serviceName.toLowerCase()} services.</p>
     </main>
 <<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
       }`);
       totalFixes++;
       modified = true;
+=======
+>>>>>>> e19246f6ae7164fec78c9d9e31cb33f1a6ec056a
 
 
 
 
-main
+
+
+
+
+      console.log(`✅ Fixed syntax errors in ${filePath}`);
+
+      console.log(`✅ Fixed syntax errors in ${filePath}`);
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-f954
 =======
   );
 }`;
@@ -79,34 +126,31 @@ main
     
     if (content !== originalContent) {
       fs.writeFileSync(filePath, content);
-<<<<<<< HEAD
-<<<<<<< HEAD
       console.log(`✅ Fixed: ${filePath}`);
-=======
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
-
-
-
-
-
-
-
-      console.log(`✅ Fixed syntax errors in ${filePath}`);
-
-      console.log(`✅ Fixed syntax errors in ${filePath}`);
+>>>>>>> origin/chore/fix-lint-and-merge
       return true;
     }
-    
     return false;
   } catch (error) {
     console.log(`❌ Error fixing ${filePath}: ${error.message}`);
     return false;
   }
 }
+<<<<<<< HEAD
 
+<<<<<<< HEAD
 // Function to find and fix all TypeScript/JSX files
 function fixAllFiles() {
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+// Function to find and fix all TypeScript/JSX files,
+  function fixAllFiles() {
+>>>>>>> cursor/integrate-build-improve-and-re-verify-f954
+  const filesToCheck = [
+=======
 const filesToCheck = [;
+>>>>>>> bcac19d12791e22762b61b5dda2306d7f19fe60c
     'components/Footer.tsx',
     'components/Header.tsx',
     'components/layout/MainLayout.tsx',
@@ -119,22 +163,51 @@ const filesToCheck = [;
     'pages/terms.tsx',
     'pages/services.tsx',
     'pages/pricing.tsx'
+=======
+
+>>>>>>> e19246f6ae7164fec78c9d9e31cb33f1a6ec056a
   ];
-  
   let totalFixed = 0;
-  
   filesToCheck.forEach(file => {
     const filePath = path.join(process.cwd(), file);
     if (fs.existsSync(filePath)) {
       if (fixHoverSyntax(filePath)) {
         totalFixed++;
+=======
+// Function to find all service page files
+function findServicePages(dir) {
+  const files = [];
+  
+  function scanDirectory(currentDir) {
+    try {
+      const items = fs.readdirSync(currentDir);
+      
+      for (const item of items) {
+        const fullPath = path.join(currentDir, item);
+        let stat;
+        try {
+          stat = fs.statSync(fullPath);
+        } catch (error) {
+          continue;
+        }
+        
+        if (stat.isDirectory()) {
+          scanDirectory(fullPath);
+        } else if (stat.isFile() && item === 'page.tsx') {
+          files.push(fullPath);
+        }
+>>>>>>> origin/chore/fix-lint-and-merge
       }
     } catch (error) {
-      // Skip directories that can't be read
+      // Skip directories that cant be read
     }
   }
+<<<<<<< HEAD
+<<<<<<< HEAD
 });
 });
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
   
   scanDirectory(dir);
   return files;
@@ -142,36 +215,19 @@ const filesToCheck = [;
 
 <<<<<<< HEAD
 
+try {
+  console.log('🔍 Scanning for syntax errors...');
+  const fixedCount = fixAllFiles();
+try {
+  console.log(🔍 Scanning for syntax errors...);
+  
 
-
-
-
-
-
-
-
-
-// Main execution
 =======
 // Main execution
-<<<<<<< HEAD
-<<<<<<< HEAD
 async function main() {
   console.log('🚀 Starting syntax error resolution...');
-=======
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
-try {
-  console.log('🔍 Scanning for syntax errors...');
-  const fixedCount = fixAllFiles();
-try {
-  console.log('🔍 Scanning for syntax errors...');
-  const fixedCount = fixAllFiles();
   
-<<<<<<< HEAD
-async function main() {
-  console.log('🚀 Starting syntax error resolution...')
-=======
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
+>>>>>>> origin/chore/fix-lint-and-merge
   // Find all service page files
   const servicePages = findServicePages('/workspace/app/services');
   console.log(`Found ${servicePages.length} service page files`);
@@ -181,13 +237,44 @@ async function main() {
   for (const file of servicePages) {
     if (fixSyntaxErrors(file)) {
 <<<<<<< HEAD
+
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
+} catch (error) {
+  console.error('❌ Error:', error.message);
+  process.exit(1);
+
+}
+
+}
+
+
+}}
+
+
+=======
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
+=======
+  scanDirectory(dir);
+  return files;
+}
+// Main execution
+  // Find all service page files,
+  const servicePages = findServicePages('/workspace/app/services')
+  console.log(`Found ${servicePages.length} service page files`)
+  // Fix each file,
+  let fixedCount = 0,
+  for($2) {
+    if (fixSyntaxErrors(file)) {} catch (error) {
+  console.error('❌ Error:', error.message);
+  process.exit(1);
+}
+>>>>>>> cursor/integrate-build-improve-and-re-verify-f954
 =======
       fixedCount++;
     }
   }
   
-<<<<<<< HEAD
-<<<<<<< HEAD
   // Also fix the research page
   const researchPage = '/workspace/app/research/page.tsx';
   if (fs.existsSync(researchPage)) {
@@ -201,25 +288,4 @@ async function main() {
 }
 
 main().catch(console.error);
-=======
-=======
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
-} catch (error) {
-  console.error('❌ Error:', error.message);
-  process.exit(1);
-
-}
-
-}
-
-
-}}
-
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
-=======
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
+>>>>>>> origin/chore/fix-lint-and-merge

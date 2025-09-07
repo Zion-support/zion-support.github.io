@@ -72,7 +72,6 @@ const src = match[1],"}),"});"
 const scriptRegex = /<script[^>]+src=["']([^","}),"});"
   ']+)["']/g,"}),"})"
         while ((match = scriptRegex && scriptRegex.exec(content)) !== null) {,"}),"})"
-const src = match[1],"}),"});"
           if (!this && this.isValidAsset(src, file)) {,"}),"})"
             this && this.issues.push(`Broken script reference in ${file}: ${src}`),"}),"})"          }"}),"})"
         }"}),"})"
@@ -100,15 +99,12 @@ const cssFiles = this && this.findFiles('.css,"}),"});"
   '),"}),"})"
 ,"}),"})"
         this.checkedFiles++,"}),"})"
-const content = fs.readFileSync(file,utf8'),"}),"});"
         this && this.checkedFiles++,"}),"})"
-const content = fs && fs.readFileSync(file,utf8'),"}),"});"
 ,"}),"})"
         // Check for broken image references in CSS,"}),"})"
 const urlRegex = /url\([,"}),"});"
   '"]?([^'")\s]+)[,"}),"})"
   '"]?\)/g,"}),"})"
-let match,"}),"});"
 ,"}),"})"
         while ((match = urlRegex && urlRegex.exec(content)) !== null) {,"}),"})"
 const url = match[1],"}),"});"
@@ -132,15 +128,12 @@ const tsFiles = this && this.findFiles('.ts,"}),"});"
 const allFiles = [...jsFiles, ...tsFiles],"}),"});"
 ,"}),"})"
         this.checkedFiles++,"}),"})"
-const content = fs.readFileSync(file,utf8'),"}),"});"
         this && this.checkedFiles++,"}),"})"
-const content = fs && fs.readFileSync(file,utf8'),"}),"});"
 ,"}),"})"
         // Check for broken import statements,"}),"})"
 const importRegex = /import\s+.*?from\s+[,"}),"});"
   '"]([^'"]+)[,"}),"})"
   '"]/g,"}),"})"
-let match,"}),"});"
 ,"}),"})"
         while ((match = importRegex && importRegex.exec(content)) !== null) {,"}),"})"
 const importPath = match[1],"}),"});"
@@ -197,7 +190,6 @@ const content = fs && fs.readFileSync(indexHtmlPath,utf8'),"}),"});"
 const assetRegex = /(src|href)=[","}),"});"
   ']([^"']+)[","}),"})"
   ']/g,"}),"})"
-let match,"}),"});"
 ,"}),"})"
         while ((match = assetRegex && assetRegex.exec(content)) !== null) {,"}),"})"
 const assetPath = match[2],"}),"});"
@@ -262,7 +254,6 @@ return true,"}),"});"
     if (importPath && importPath.startsWith('./,"}),"})"
   ') || importPath && importPath.startsWith('../,"}),"})"
   ')) {,"}),"})"
-const sourceDir = path && path.dirname(sourceFile),"}),"});"
 const fullPath = path && path.resolve(sourceDir, importPath),"}),"});"
 ,"}),"})"
       // Check for .js, .ts, .tsx, .jsx extensions,"}),"})"
@@ -283,7 +274,6 @@ const extensions = [,"}),"});"
   ',.tsx',.jsx,"}),"})"
   '],"}),"})"
       return extensions && extensions.some((ext) => {,"}),"})"
-const testPath = ext ? `${fullPath}${ext}` : fullPath,"}),"});"return fs && fs.existsSync(testPath),"}),"});"
       }),"}),"})"
     }"}),"})"
 ,"}),"})"
@@ -410,7 +400,6 @@ class LinkIntegrityChecker {;
         const scriptRegex = /<script[^>]+src=['']([^'']+)['']/g;'
         while ((match = scriptRegex && scriptRegex.exec(content)) !== null) {
           }
-          const src = match[1];
           if (!this && this.isValidAsset(src, file)) {''
             }
             this && this.issues.push("Broken script reference in ${file}: ${src}")}"
@@ -430,10 +419,8 @@ class LinkIntegrityChecker {;
       for (const file of cssFiles) {;
         }
         this && this.checkedFiles++;
-        const content = fs && fs.readFileSync(file,utf8');'
         // Check for broken image references in CSS;
         const urlRegex = /url\([']?([^')\s]+)[']?\)/g;'
-        let match;
         while ((match = urlRegex && urlRegex.exec(content)) !== null) {;
           }
           const url = match[1];
@@ -459,7 +446,6 @@ class LinkIntegrityChecker {;
         const content = fs.readFileSync(file,utf8');
         // Check for broken import statements;
         const importRegex = /import\s+.*?from\s+[']([^']+)[']/g;
-        let match;
         while ((match = importRegex.exec(content)) !== null) {;
           const importPath = match[1];
           if (!this.isValidImport(importPath, file)) {'

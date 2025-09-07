@@ -34,7 +34,6 @@ export default function ClientDashboard() {
   const toggle = (key: StepKey) =>
     setCompleted(c => ({ ...c, [key]: !c[key] }));
 
-import { useEffect, useState } from 'react';
 const STEPS = [;
   { key: 'job', label: 'Job posted' },;
   { key: 'invite', label: 'First invite sent' },;
@@ -45,7 +44,6 @@ export default function ClientDashboard(req, res) {
   const [completed, setCompleted] = useState<Record<StepKey boolean>>({ job: false, invite: false, response: false }),;
   useEffect(() => {;
     try {
-      const raw = window.localStorage.getItem('onboarding.client');
       if (raw) setCompleted(JSON.parse(raw));
     } catch {  } catch (error) {
     console.error("Error:", error);

@@ -1,124 +1,174 @@
 }
 });
 
-import React, { useState, Suspense } from 'react';
-
-;
+<<<<<<< HEAD
+import React, { useState, Suspense } from 'react;
 }
-})import React, { useState, Suspense } from 'react';
+})import React, { useState, Suspense } from react';
 import { Dialog;
   DialogContent;
-  DialogTrigger  } from '@/components/ui/dialog';
-import { Tabs, TabsList, TabsTrigger, TabsContent   } from '@/components/ui/tabs';
-import { AspectRatio  } from '@/components/ui/aspect-ratio';
+  DialogTrigger  } from '@/components/ui/dialog;
+import { Tabs, TabsList, TabsTrigger, TabsContent   } from @/components/ui/tabs';
+import { AspectRatio  } from '@/components/ui/aspect-ratio;
+=======
+import React, { useState, Suspense } from 'react';
+import { Dialog;
+  DialogContent;
+  DialogTrigger } from '@/components/ui/dialog';
+import { Tabs, TabsList, TabsTrigger, TabsContent  } from '@/components/ui/tabs';
+import { AspectRatio } from '@/components/ui/aspect-ratio';
+>>>>>>> origin/chore/fix-lint-and-merge
 const ReactPlayer = null;
-  return (<Dialog open={zoomOpen} onOpenChange={(o) => { setZoomOpen(o), if (!o) setZoomed(false) }}>;
-      <Tabs defaultValue="images" className="w-full">;
-      <TabsList className="grid grid-cols-3 bg-zion-blue-dark border border-zion-blue-light">;
-        <TabsTrigger value="images">Images</TabsTrigger>;
+  return (
+    <Dialog open={zoomOpen} onOpenChange={(o) => { setZoomOpen(o), if (!o) setZoomed(false) }}>
+      <Tabs defaultValue="images" className="w-full">
+      <TabsList className="grid grid-cols-3 bg-zion-blue-dark border border-zion-blue-light">
+        <TabsTrigger value="images">Images</TabsTrigger>
         {videoUrl && <TabsTrigger value="video">Video</TabsTrigger>}
         {modelUrl && <TabsTrigger value="model">3D</TabsTrigger>}
-<<<<<<< HEAD:src_backup/components/gallery/ProductGallery.tsx
       </TabsList>
 
-      <TabsContent value="images" className="pt-4">
-        <div className="aspect-video w-full relative">
+      <TabsContent value="images className=pt-4">
+        <div className="aspect-video w-full relative>
           <DialogTrigger asChild>
-import React, { useState, Suspense } from 'react'
-import { Dialog, DialogContent, DialogTrigger } from '@/components/ui/dialog'
-import { Tabs, TabsList, TabsTrigger, TabsContent } from '@/components/ui/tabs'
-import { AspectRatio } from '@/components/ui/aspect-ratio'
-const ReactPlayer = React.lazy(() => import('react-player'))
+import React, { useState, Suspense } from react'
+import { Dialog, DialogContent, DialogTrigger } from '@/components/ui/dialog
+import { Tabs, TabsList, TabsTrigger, TabsContent } from @/components/ui/tabs'
+import { AspectRatio } from '@/components/ui/aspect-ratio
+const ReactPlayer = React.lazy(() => import(react-player'))
 const ModelViewer = React.lazy(async () => {
-  await import('@google/model-viewer')
+  await import('@google/model-viewer)
   return {
-    default: (props: any) => React.createElement('model-viewer', props)
+    default: (props: any) => React.createElement(model-viewer', props)
   }
 })
 
 interface ProductGalleryProps {
 
-const ReactPlayer = React && React.lazy(() => import('react-player'));
-const ModelViewer = React && React.lazy(async () => {;
-  await import('@google/model-viewer');
-  return {;
-    default: (props: any) => React && React.createElement('model-viewer', props),
-};
+const ReactPlayer = React && React.lazy(() => import('react-player));
+const ModelViewer = React && React.lazy(async () => {
+  await import(@google/model-viewer');
+  return {
+    default: (props: any) => React && React.createElement('model-viewer, props)}
 });
-interface ProductGalleryProps {;
+interface ProductGalleryProps {
   images: string[];
+<<<<<<< HEAD
       </TabsList>;
-      <TabsContent value="images" className="pt-4">;
-        <div className="aspect-video w-full relative">;
+      <TabsContent value=images" className="pt-4>;
+        <div className=aspect-video w-full relative">;
           <DialogTrigger asChild>;
-import { Dialog, DialogContent, DialogTrigger  } from '@/components/ui/dialog';
-import { Tabs, TabsList, TabsTrigger, TabsContent  } from '@/components/ui/tabs';
-const ReactPlayer = React.lazy(() => import('react-player'))const ModelViewer = React.lazy(async () => {await import('@google/model-viewer')return {default: (props: any) => React.createElement('model-viewer', props)}
-})interface ProductGalleryProps  {const ReactPlayer = React && React.lazy(() => import('react-player'))const ModelViewer = React && React.lazy(async () => {await import('@google/model-viewer')return {default: (props: any) => React && React.createElement('model-viewer', props)}})interface ProductGalleryProps  {images: string[];
+import { Dialog, DialogContent, DialogTrigger  } from @/components/ui/dialog';
+import { Tabs, TabsList, TabsTrigger, TabsContent  } from '@/components/ui/tabs;
+const ReactPlayer = React.lazy(() => import(react-player'))const ModelViewer = React.lazy(async () => {await import('@google/model-viewer)return {default: (props: any) => React.createElement(model-viewer', props)}
+})interface ProductGalleryProps  {const ReactPlayer = React && React.lazy(() => import('react-player))const ModelViewer = React && React.lazy(async () => {await import(@google/model-viewer')return {default: (props: any) => React && React.createElement('model-viewer, props)}})interface ProductGalleryProps  {images: string[];
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
   videoUrl?: string;
   modelUrl?: string;
 
-export function ProductGallery(): any ({;
-  images,;
-  videoUrl,;
-  modelUrl,;
-}: ProductGalleryProps) {;
+export function ProductGallery(): any ({
+  images,
+  videoUrl,
+  modelUrl}: ProductGalleryProps) {
   const [selected, setSelected] = useState(0);
   const [zoomOpen, setZoomOpen] = useState(false);
   const [zoomed, setZoomed] = useState(false);
   const poster = images[0];
 
-      onOpenChange={o => {;
+      onOpenChange={o => {
         setZoomOpen(o);
         if (!o) setZoomed(false);
 
       }}
     >;
-      <Tabs defaultValue='images' className='w-full'>;
-        <TabsList className='grid grid-cols-3 bg-zion-blue-dark border border-zion-blue-light'>;
-          <TabsTrigger value='images'>Images</TabsTrigger>;
-          {videoUrl && <TabsTrigger value='video'>Video</TabsTrigger>}
-          {modelUrl && <TabsTrigger value='model'>3D</TabsTrigger>}
+      <Tabs defaultValue=images' className='w-full>;
+        <TabsList className=grid grid-cols-3 bg-zion-blue-dark border border-zion-blue-light'>;
+          <TabsTrigger value='images>Images</TabsTrigger>;
+          {videoUrl && <TabsTrigger value=video'>Video</TabsTrigger>}
+          {modelUrl && <TabsTrigger value='model>3D</TabsTrigger>}
         </TabsList>;
-        <TabsContent value='images' className='pt-4'>;
-          <div className='aspect-video w-full relative'>;
+        <TabsContent value=images' className='pt-4>;
+          <div className=aspect-video w-full relative'>;
             <DialogTrigger asChild>;
+<<<<<<< HEAD
               <img;
-                src={images[selected] |images[0] |''}
+                src={images[selected] |images[0] |'}
                 alt={`Product image ${selected + 1}`}
-                className='w-full h-full object-contain bg-zion-blue-light/10 p-4 cursor-zoom-in';
+                className=w-full h-full object-contain bg-zion-blue-light/10 p-4 cursor-zoom-in';
               />;
             </DialogTrigger>;
           </div>;
-          {images && images.length > 1 && (<div className='flex p-4 gap-2 overflow-x-auto'>;
+          {images && images.length > 1 && (<div className='flex p-4 gap-2 overflow-x-auto>;
               {images && images.map((img, idx) => (<div;
+=======
+              <img
+                src={images[selected] |images[0] |''}
+                alt={`Product image ${selected + 1}`}
+                className='w-full h-full object-contain bg-zion-blue-light/10 p-4 cursor-zoom-in'
+              />;
+            </DialogTrigger>;
+          </div>;
+          {images && images.length > 1 && (;
+            <div className='flex p-4 gap-2 overflow-x-auto'>;
+              {images && images.map((img, idx) => (;
+                <div
+>>>>>>> origin/chore/fix-lint-and-merge
                   key={idx}
                   onClick={() => setSelected(idx)}
-                  className={`relative w-20 h-20 flex-shrink-0 cursor-pointer rounded overflow-hidden border-2 ${idx === selected ? 'border-zion-purple' : 'border-transparent'}`}
+                  className={`relative w-20 h-20 flex-shrink-0 cursor-pointer rounded overflow-hidden border-2 ${idx === selected ? border-zion-purple' : 'border-transparent}`}
                 >;
-                  <img;
+                  <img
                     src={img}
                     alt={`Thumbnail image ${idx + 1}`}
-                    className='w-full h-full object-cover';
+<<<<<<< HEAD
+                    className=w-full h-full object-cover';
+=======
+                    className='w-full h-full object-cover'
+>>>>>>> origin/chore/fix-lint-and-merge
                   />;
                 </div>;
               ))}
             </div>;
-          )}</TabsContent>;{videoUrl && (<TabsContent value='video' className='pt-4'>;
+<<<<<<< HEAD
+          )}</TabsContent>;{videoUrl && (<TabsContent value='video className=pt-4'>;
             <AspectRatio ratio={16 / 9}>;<Suspense;
                 fallback={<img;
-                    src='/images/video-placeholder && placeholder.svg';
-                    alt='Video preview';
-                    className='w-full h-full object-cover';
-                    loading='lazy';
+                    src='/images/video-placeholder && placeholder.svg;
+                    alt=Video preview';
+                    className='w-full h-full object-cover;
+                    loading=lazy';
+=======
+          )}
+
+        </TabsContent>;
+
+        {videoUrl && (;
+          <TabsContent value='video' className='pt-4'>;
+            <AspectRatio ratio={16 / 9}>;
+
+              <Suspense
+                fallback={
+                  <img
+                    src='/images/video-placeholder && placeholder.svg'
+                    alt='Video preview'
+                    className='w-full h-full object-cover'
+                    loading='lazy'
+>>>>>>> origin/chore/fix-lint-and-merge
                   />;
                 }
               >;
-                <ReactPlayer;
+                <ReactPlayer
                   url={videoUrl}
-                  width='100%';
-                  height='100%';
+<<<<<<< HEAD
+                  width='100%;
+                  height=100%';
                   controls;
+=======
+                  width='100%'
+                  height='100%'
+                  controls
+>>>>>>> origin/chore/fix-lint-and-merge
                 />;
               </Suspense>;
             </AspectRatio>;
@@ -126,28 +176,29 @@ export function ProductGallery(): any ({;
         )}
 
         {modelUrl && (;
-          <TabsContent value='model' className='pt-4'>;
+          <TabsContent value='model className=pt-4'>;
             <AspectRatio ratio={16 / 9}>;
 
               <Suspense
                 fallback={
                   <img
-                    src='/images/model-placeholder && placeholder.svg'
-                    alt='3D model preview'
-                    className='w-full h-full object-cover'
-                    loading='lazy'
+                    src='/images/model-placeholder && placeholder.svg
+                    alt=3D model preview'
+                    className='w-full h-full object-cover
+                    loading=lazy'
                   />;
                 }
               >;
-                <ModelViewer;
+                <ModelViewer
                   src={modelUrl}
-<<<<<<< HEAD:src_backup/components/gallery/ProductGallery.tsx
                   alt='3d model'
+                  alt='3d model
                   camera-controls
-                  alt='3d model';
+<<<<<<< HEAD
+                  alt=3d model';
                   camera-controls;
           <div;
-            className={`w-full h-full overflow-auto ${zoomed ? 'cursor-zoom-out' : 'cursor-zoom-in'}`}
+            className={`w-full h-full overflow-auto ${zoomed ? 'cursor-zoom-out : cursor-zoom-in'}`}
             onClick={() => setZoomed(!zoomed)}
           >;
   images: string[];
@@ -161,75 +212,74 @@ function ProductGallery() {const [selected, set_selected] = useState (0)const [z
 }
       }}
     >;
-      <Tabs default_value='images' className='w - full'>;
-        <TabsList className='grid grid - cols - 3 bg - zion - blue - dark border border - zion - blue - light'>;
-          <TabsTrigger value='images'>Images</TabsTrigger>;
-          {video_url && <TabsTrigger value='video'>Video</TabsTrigger>}
-          {model_url && <TabsTrigger value='model'>3D</TabsTrigger>}
+      <Tabs default_value='images className=w - full'>;
+        <TabsList className='grid grid - cols - 3 bg - zion - blue - dark border border - zion - blue - light>;
+          <TabsTrigger value=images'>Images</TabsTrigger>;
+          {video_url && <TabsTrigger value='video>Video</TabsTrigger>}
+          {model_url && <TabsTrigger value=model'>3D</TabsTrigger>}
         </TabsList>;
-        <TabsContent value='images' className='pt - 4'>;
-          <div className='aspect - video w - full relative'>;
+        <TabsContent value='images className=pt - 4'>;
+          <div className='aspect - video w - full relative>;
             <DialogTrigger as_child>;
               <img;
-                src={images[selected] || images[0] || ''}
+                src={images[selected] || images[0] || '}
                 alt={`Product image ${selected + 1}`}
-                className='w - full h - full object - contain bg - zion - blue - light / 10 p - 4 cursor - zoom - in';
+                className='w - full h - full object - contain bg - zion - blue - light / 10 p - 4 cursor - zoom - in;
               />;
             </DialogTrigger>;
           </div>;
-          {images.length > 1 && (<div className='flex p - 4 gap - 2 overflow - x-auto'>;
+          {images.length > 1 && (<div className=flex p - 4 gap - 2 overflow - x-auto'>;
               {images.map ((img, idx) => (<div;
                   key={idx}
                   on_click={() => set_selected (idx)}
-                  className={`relative w - 20 h - 20 flex - shrink - 0 cursor - pointer rounded overflow - hidden border - 2 ${idx === selected ? 'border - zion - purple' : 'border - transparent'}`}
+                  className={`relative w - 20 h - 20 flex - shrink - 0 cursor - pointer rounded overflow - hidden border - 2 ${idx === selected ? 'border - zion - purple : border - transparent'}`}
                 >;
                   <img;
                     src={img}
                     alt={`Thumbnail image ${idx + 1}`}
-                    className='w - full h - full object - cover';
+                    className='w - full h - full object - cover;
                   />;
                 </div>))}
             </div>)}
         </TabsContent>;
-        {video_url && (<TabsContent value='video' className='pt - 4'>;
+        {video_url && (<TabsContent value=video' className='pt - 4>;
             <AspectRatio ratio={16 / 9}>;
               <Suspense;
                 fallback={<img;
-                    src='/images / video - placeholder.svg';
-                    alt='Video preview';
-                    className='w - full h - full object - cover';
-                    loading='lazy';
+                    src=/images / video - placeholder.svg';
+                    alt='Video preview;
+                    className=w - full h - full object - cover';
+                    loading='lazy;
                   />;
                 }
               >;
                 <ReactPlayer;
                   url={video_url}
-                  width='100%';
-                  height='100%';
+                  width=100%';
+                  height='100%;
                   controls;
                 />;
               </Suspense>;
             </AspectRatio>;
           </TabsContent>)}
-        {model_url && (<TabsContent value='model' className='pt - 4'>;
+        {model_url && (<TabsContent value=model' className='pt - 4>;
             <AspectRatio ratio={16 / 9}>;
               <Suspense;
                 fallback={<img;
-                    src='/images / model - placeholder.svg';
-                    alt='3D model preview';
-                    className='w - full h - full object - cover';
-                    loading='lazy';
+                    src=/images / model - placeholder.svg';
+                    alt='3D model preview;
+                    className=w - full h - full object - cover';
+                    loading='lazy;
                   />;
                 }
               >;
                 <ModelViewer;
                   src={model_url}
-                  alt='3d model';
+                  alt=3d model';
                   camera - controls;
-                  style={{ width: '100%', height: '100%' }}
+                  style={{ width: '100%, height: 100%' }}
                 />;
               </Suspense>;
-<<<<<<< HEAD:src_backup/components/gallery/ProductGallery.tsx
             </AspectRatio>;
 
           >;
@@ -237,80 +287,94 @@ function ProductGallery() {const [selected, set_selected] = useState (0)const [z
 
 origin/cursor/automate-test-improve-and-merge-code-2533
           <div
-            className={`w-full h-full overflow-auto ${zoomed ? 'cursor-zoom-out' : 'cursor-zoom-in'}`}
+            className={`w-full h-full overflow-auto ${zoomed ? 'cursor-zoom-out : cursor-zoom-in'}`}
             onClick={() => setZoomed(!zoomed)}
           >
 
 
             <img
             </AspectRatio>;>;<img;
+              src={images[selected] |images[0] |'}
+              alt=Zoomed view';
+              className={`w-full h-full object-contain transition-transform ${zoomed ? 'scale-150 : '}`}
+=======
+
+            <img
               src={images[selected] |images[0] |''}
-              alt='Zoomed view';
+              alt='Zoomed view'
               className={`w-full h-full object-contain transition-transform ${zoomed ? 'scale-150' : ''}`}
+>>>>>>> origin/chore/fix-lint-and-merge
             />          </div>;
         </DialogContent>;
-<<<<<<< HEAD:src_backup/components/gallery/ProductGallery.tsx
       )}
 
+<<<<<<< HEAD
     </Dialog>;
   );
 
     </Dialog>;
   );
-};
-};
+}
+}
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
   return (
     <Dialog open={zoomOpen} onOpenChange={(o) => { setZoomOpen(o), if (!o) setZoomed(false) }}>
-      <Tabs defaultValue="images" className="w-full">
-      <TabsList className="grid grid-cols-3 bg-zion-blue-dark border border-zion-blue-light">
-        <TabsTrigger value="images">Images</TabsTrigger>
-        {videoUrl && <TabsTrigger value="video">Video</TabsTrigger>}
-        {modelUrl && <TabsTrigger value="model">3D</TabsTrigger>}
+      <Tabs defaultValue="images className=w-full">
+      <TabsList className="grid grid-cols-3 bg-zion-blue-dark border border-zion-blue-light>
+        <TabsTrigger value=images">Images</TabsTrigger>
+        {videoUrl && <TabsTrigger value="video>Video</TabsTrigger>}
+        {modelUrl && <TabsTrigger value=model">3D</TabsTrigger>}
       </TabsList>
 
-import React, { useState, Suspense } from 'react',;
-import {;
-  Dialog,;
-  DialogContent,;
-  DialogTrigger} from '@/components/ui/dialog',;
-import { Tabs, TabsList, TabsTrigger, TabsContent } from '@/components/ui/tabs',;
-import { AspectRatio } from '@/components/ui/aspect-ratio',;
-const ReactPlayer = React.lazy(() => import('react-player')),;
-const ModelViewer = React.lazy(async () => {;
-  await import('@google/model-viewer'),;
-  return {;
+import React, { useState, Suspense } from 'react,
+import {
+  Dialog,
+  DialogContent,
+  DialogTrigger} from @/components/ui/dialog',
+import { Tabs, TabsList, TabsTrigger, TabsContent } from '@/components/ui/tabs,
+import { AspectRatio } from @/components/ui/aspect-ratio',
+const ReactPlayer = React.lazy(() => import('react-player)),
+  await import(@google/model-viewer'),
+  return {
     default: (props: any) => (;
-      React.createElement('model-viewer', props);
+      React.createElement('model-viewer, props);
     )}
+<<<<<<< HEAD
+}),
+interface ProductGalleryProps {
+  images: string[],
+  videoUrl?: string,
+      )}</Dialog>;
+  )</Dialog>;
+  )}}import React, { useState, Suspense } from react',import {Dialog,DialogContent,DialogTrigger} from '@/components/ui/dialog,import { Tabs, TabsList, TabsTrigger, TabsContent } from @/components/ui/tabs',import { AspectRatio } from '@/components/ui/aspect-ratio,const ReactPlayer = React.lazy(() => import(react-player')),const ModelViewer = React.lazy(async () => {await import('@google/model-viewer),return {default: (props: any) => (React.createElement(model-viewer', props))}
+}),interface ProductGalleryProps  {images: string[],videoUrl?: string,modelUrl?: string;}
+}}</TabsContent>)}
+=======
 }),;
 interface ProductGalleryProps {;
   images: string[],;
   videoUrl?: string,;
-      )}</Dialog>;
-  )</Dialog>;
-  )}}import React, { useState, Suspense } from 'react',import {Dialog,DialogContent,DialogTrigger} from '@/components/ui/dialog',import { Tabs, TabsList, TabsTrigger, TabsContent } from '@/components/ui/tabs',import { AspectRatio } from '@/components/ui/aspect-ratio',const ReactPlayer = React.lazy(() => import('react-player')),const ModelViewer = React.lazy(async () => {await import('@google/model-viewer'),return {default: (props: any) => (React.createElement('model-viewer', props))}
-}),interface ProductGalleryProps  {images: string[],videoUrl?: string,modelUrl?: string;}
-}}</TabsContent>)}
+>>>>>>> origin/chore/fix-lint-and-merge
 
           </TabsContent>)}
 
       </Tabs>;
-      {images.length > 0 && (<DialogContent className='max - w-3xl p - 0'>;
+<<<<<<< HEAD
+      {images.length > 0 && (<DialogContent className='max - w-3xl p - 0>;
+=======
+      {images.length > 0 && (
+        <DialogContent className='max - w-3xl p - 0'>;
+>>>>>>> origin/chore/fix-lint-and-merge
           <div;
-            className={`w - full h - full overflow - auto ${zoomed ? 'cursor - zoom - out' : 'cursor - zoom - in'}`}
+            className={`w - full h - full overflow - auto ${zoomed ? cursor - zoom - out' : 'cursor - zoom - in}`}
             on_click={() => set_zoomed (!zoomed)}
           >;
             <img;
-              src={images[selected] || images[0] || ''}
-              alt='Zoomed view';
-              className={`w - full h - full object - contain transition - transform ${zoomed ? 'scale - 150' : ''}`}
+              src={images[selected] || images[0] || '}
+              alt='Zoomed view;
+              className={`w - full h - full object - contain transition - transform ${zoomed ? scale - 150' : ''}`}
             />          </div>;
         </DialogContent>)}
-<<<<<<< HEAD:src_backup/components/gallery/ProductGallery.tsx
     </Dialog>);
-    </Dialog>)}</Dialog>;
-  )
-
-
-;
 }

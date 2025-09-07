@@ -1,101 +1,117 @@
-import Layout from '../components/layout/Layout';'
-
-import { motion } from 'framer-motion';'
-
-import { Code, Database, Shield, Zap, Globe, Cpu;
-  }
+<<<<<<< HEAD
+import React from 'react';
+max-w-5xl mx-auto space-y-6"> <h1 className=" text-4xl md:text-6xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">API Documentation</h1> <ul className=" list-disc list-inside text-slate-300 space-y-2"> <li><a className=" text-cyan-400"href=" /api-docs">API Reference</a></li> <li><a className=" text-cyan-400"href=" /api-documentation-generator">API Documentation Generator</a></li> <li><a className=" text-cyan-400"href=" /docs" >Developer Docs</a></li> </ul> </div> </div>
+import Layout from '../components/layout/Layout';
+import { motion } from 'framer-motion';
+import { 
+  Code, Database, Shield, Zap, Globe, Cpu, 
   BookOpen, CheckCircle, ArrowRight, BarChart3, Lock, Brain
  } from 'lucide-react';'
 import {
 } from 'lucide-react';'
+=======
+import Layout from '../components/layout/Layout';
+
+import { motion } from 'framer-motion';
+
+import { Code, Database, Shield, Zap, Globe, Cpu;}
+  BookOpen, CheckCircle, ArrowRight, BarChart3, Lock, Brain}
+ } from 'lucide-react';
+import {}
+} from 'lucide-react';
+>>>>>>> origin/chore/fix-lint-and-merge
 
 export default function APIDocumentation() {
-}
-return (;
-    <div className='min-h-screen pt-24 pb-20 px-4 "sm":px-6 "lg":px-8'>;'
+  return (
+    <div className='min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8'    />;
 
-      <Head>;
-        <title>API Documentation | Zion Tech Group</title>;
+      <Head    />;
+        <title    />API Documentation | Zion Tech Group</title>;
         <meta;
-          name='description';'
-          content='Explore API docs, references, and code generators.';' />;
+          name='description';
+          content='Explore API docs, references, and code generators.';
+           />;
 
-        <link,
-rel='canonical''
+        <link;
+rel='canonical'
 
-          href='"https"://ziontechgroup.com/api-documentation'' />
+          href='https://ziontechgroup.com/api-documentation'
+           />
       </Head>
-      <div className='max-w-5xl mx-auto space-y-6'>'
-        <h1 className='text-4xl "md":text-6xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent'>'
-          API Documentation
+      <div className='max-w-5xl mx-auto space-y-6'    />
+        <h1 className='text-4xl md:text-6xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent'    />
+          API Documentation;
         </h1>
-        <ul className='list-disc list-inside text-slate-300 space-y-2'>'
-          <li>
-            <a className='text-cyan-400' href='/api-docs'>'
-              API Reference
+        <ul className='list-disc list-inside text-slate-300 space-y-2'    />
+          <li    />
+            <a className='text-cyan-400' href='/api-docs'    />
+              API Reference;
             </a>
           </li>
-          <li>
-            <a className='text-cyan-400' href='/api-documentation-generator'>'
-              API Documentation Generator
+          <li    />
+            <a className='text-cyan-400' href='/api-documentation-generator'    />
+              API Documentation Generator;
             </a>
           </li>
-          <li>
-            <a className='text-cyan-400' href='/docs'>'
-              Developer Docs
+          <li    />
+            <a className='text-cyan-400' href='/docs'    />
+              Developer Docs;
             </a>
           </li>
         </ul>
       </div>
     </div>
   );
+<<<<<<< HEAD
 
 export default function APIDocumentation() {
 	return (
-		<div className="min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8">
+		<div className="min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8>
 			<Head>
 				<title>API Documentation | Zion Tech Group</title>
-				<meta name="description" content="Explore API docs, references, and code generators." />
-				<link rel="canonical" href="https: //ziontechgroup.com/api-documentation" />
+				<meta name=description" content="Explore API docs, references, and code generators. />
+				<link rel=canonical" href="https: //ziontechgroup.com/api-documentation />
 			</Head>
-			<div className="max-w-5xl mx-auto space-y-6">
-				<h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">API Documentation</h1>
-				<ul className="list-disc list-inside text-slate-300 space-y-2">
-					<li><a className="text-cyan-400" href="/api-docs">API Reference</a></li>
-					<li><a className="text-cyan-400" href="/api-documentation-generator">API Documentation Generator</a></li>
-					<li><a className="text-cyan-400" href="/docs">Developer Docs</a></li>
+			<div className=max-w-5xl mx-auto space-y-6">
+				<h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent>API Documentation</h1>
+				<ul className=list-disc list-inside text-slate-300 space-y-2">
+					<li><a className="text-cyan-400 href=/api-docs">API Reference</a></li>
+					<li><a className="text-cyan-400 href=/api-documentation-generator">API Documentation Generator</a></li>
+					<li><a className="text-cyan-400 href=/docs">Developer Docs</a></li>
 				</ul>
 			</div>
 		</div>
-  </div>),}href='https://ziontechgroup.com/api-documentation';
+  </div>)}href=https://ziontechgroup.com/api-documentation';
         />;
       </Head>;
-      <div className='max-w-5xl mx-auto space-y-6'>;
-        <h1 className='text-4xl md:text-6xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent'>;
+      <div className='max-w-5xl mx-auto space-y-6>;
+        <h1 className=text-4xl md:text-6xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent'>;
           API Documentation;
         </h1>;
-        <ul className='list-disc list-inside text-slate-300 space-y-2'>;
+        <ul className='list-disc list-inside text-slate-300 space-y-2>;
           <li>;
-            <a className='text-cyan-400' href='/api-docs'>;
+            <a className=text-cyan-400' href='/api-docs>;
               API Reference;
             </a>;
           </li>;
           <li>;
-            <a className='text-cyan-400' href='/api-documentation-generator'>;
+            <a className=text-cyan-400' href='/api-documentation-generator>;
               API Documentation Generator;
             </a>;
           </li>;
           <li>;
-            <a className='text-cyan-400' href='/docs'>;
+            <a className=text-cyan-400' href='/docs'>;
               Developer Docs;
             </a>;
           </li>;
         </ul>;
       </div>;
     </div>;
-  </div>),
-}
+  </div>)}
   )
 	)
 }
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
+=======
+}
+}
+>>>>>>> origin/chore/fix-lint-and-merge

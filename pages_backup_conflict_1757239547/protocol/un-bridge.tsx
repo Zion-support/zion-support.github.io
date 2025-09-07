@@ -60,7 +60,6 @@ export default function UNBridge() {
         headers: { 'Content-Type': 'application/json' }
         body: JSON.stringify({ markdown: result.markdown, targetLanguage })
       });
-      const data = await res.json();
       setTranslated(data.translated);
     } finally {
       setLoading(false);
@@ -91,7 +90,6 @@ export default function UNBridge() {
         headers: { 'Content-Type': 'application/json' }
         body: JSON.stringify({ id: result.meta.id, channels })
       });
-      const data = await res.json();
       setResult((r: any) => ({ ...r, meta: data.meta }));
     } finally {
       setLoading(false);

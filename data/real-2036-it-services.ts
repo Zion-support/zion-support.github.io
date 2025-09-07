@@ -1,13 +1,664 @@
-
 <<<<<<< HEAD
-export const real2036ITServices = [
-  {
-    id: 'quantum-cloud-infrastructure-platform'
-    name: 'Quantum Cloud Infrastructure Platform'
-    tagline: 'Next-generation quantum cloud computing'
+;
+export const real2036ITServices = [;
+  {id: 'quantum-cloud-infrastructure-platform';
+    name: 'Quantum Cloud Infrastructure Platform';
+    tagline: 'Next-generation quantum cloud computing';
+id: 'quantum-cloud-infrastructure-platform',name: 'Quantum Cloud Infrastructure Platform',tagline: 'Next-generation quantum cloud computing',description:;
+      'Revolutionary quantum cloud infrastructure platform providing quantum computing resources, quantum-classical hybrid computing, and quantum cloud services. Features quantum resource management, quantum networking, and quantum security.',price: '$6,999',period: 'month',features: [;
+      'Quantum computing resources','Quantum-classical hybrid computing','Quantum resource management','Quantum networking','Quantum security protocols','Scalable quantum infrastructure';
+    ],popular: true,category: 'Quantum Cloud',icon: '☁️⚛️',marketPrice: '$8,000-15,000/month',benefits: [;
+      'Access to quantum computing power','Hybrid classical-quantum processing','Future-proof cloud infrastructure','Quantum advantage in the cloud';
+    ],useCases: [;
+      'Scientific research computing','Financial modeling','Drug discovery','Climate simulation';
+    ];
+  },{id: 'ai-powered-devops-platform',name: 'AI-Powered DevOps Platform',tagline: 'Intelligent DevOps automation',description:;
+      'Advanced DevOps platform with AI-powered automation, intelligent deployment strategies, and predictive infrastructure management. Features automated testing, deployment optimization, and intelligent monitoring.',price: '$2,999',period: 'month',features: [;
+      'AI-powered deployment automation','Intelligent testing strategies','Predictive infrastructure scaling','Automated incident response','Smart resource optimization','Continuous learning algorithms';
+    ],popular: true,category: 'DevOps & AI',icon: '🤖🔄',marketPrice: '$4,000-7,000/month',benefits: [;
+      '90% faster deployment cycles','Intelligent infrastructure management','Predictive scaling','Automated incident resolution';
+    ],useCases: [;
+      'Continuous deployment','Infrastructure automation','Testing automation','Monitoring and alerting';
+    ];
+  },{id: 'quantum-cybersecurity-platform',name: 'Quantum Cybersecurity Platform',tagline: 'Quantum-resistant security solutions',description:;
+      'Advanced cybersecurity platform with quantum-resistant algorithms, quantum threat detection, and future-proof security protocols. Features quantum encryption, quantum key distribution, and quantum-resistant cryptography.',price: '$5,499',period: 'month',features: [;
+      'Quantum-resistant algorithms','Quantum threat detection','Quantum encryption','Quantum key distribution','Future-proof security','Real-time threat analysis';
+    ],popular: true,category: 'Quantum Security',icon: '🔒⚛️',marketPrice: '$7,000-12,000/month',benefits: [;
+      'Quantum-resistant security','Future-proof protection','Advanced threat detection','Military-grade security';
+    ],useCases: [;
+      'Government security','Financial institutions','Healthcare data protection','Critical infrastructure';
+    ];
+  },{id: 'edge-computing-orchestration-platform',name: 'Edge Computing Orchestration Platform',tagline: 'Intelligent edge computing management',description:;
+      'Comprehensive edge computing platform with intelligent orchestration, distributed computing optimization, and edge AI capabilities. Features edge resource management, latency optimization, and distributed AI processing.',price: '$3,999',period: 'month',features: [;
+      'Intelligent edge orchestration','Distributed computing optimization','Edge AI processing','Latency optimization','Edge resource management','Distributed data processing';
+    ],popular: true,category: 'Edge Computing',icon: '🌐⚡',marketPrice: '$5,000-8,000/month',benefits: [;
+      'Ultra-low latency processing','Distributed computing power','Edge AI capabilities','Scalable edge infrastructure';
+    ],useCases: [;
+      'IoT applications','Real-time analytics','Edge AI processing','Distributed computing';
+    ];
+  },{id: 'quantum-database-platform',name: 'Quantum Database Platform',tagline: 'Quantum-powered data management',description:;
+      'Revolutionary quantum database platform providing quantum-accelerated queries, quantum data compression, and quantum-optimized data structures. Features quantum search algorithms, quantum data indexing, and quantum data analytics.',price: '$4,999',period: 'month',features: [;
+      'Quantum-accelerated queries','Quantum data compression','Quantum search algorithms','Quantum data indexing','Quantum data analytics','Hybrid quantum-classical storage';
+    ],popular: true,category: 'Quantum Database',icon: '🗄️⚛️',marketPrice: '$6,000-10,000/month',benefits: [;
+      '1000x faster database queries','Quantum data compression','Advanced search capabilities','Future-proof data management';
+    ],useCases: [;
+      'Big data analytics','Real-time search','Data warehousing','Business intelligence';
+    ];
+  },{id: 'ai-powered-network-security',name: 'AI-Powered Network Security',tagline: 'Intelligent network protection',description:;
+      'Advanced network security platform with AI-powered threat detection, intelligent firewall management, and predictive security analytics. Features behavioral analysis, anomaly detection, and automated threat response.',price: '$2,499',period: 'month',features: [;
+      'AI threat detection','Intelligent firewall management','Behavioral analysis','Anomaly detection','Automated threat response','Predictive security analytics';
+    ],popular: true,category: 'Network Security',icon: '🛡️🤖',marketPrice: '$3,500-6,000/month',benefits: [;
+      'Proactive threat detection','Automated security response','Intelligent network protection','Reduced false positives';
+    ],useCases: [;
+      'Enterprise network security','Cloud security','IoT security','Remote work security';
+    ];
+  },{id: 'quantum-internet-protocols',name: 'Quantum Internet Protocols',tagline: 'Next-generation quantum networking',description:;
+      'Revolutionary quantum internet protocols platform providing quantum communication standards, quantum routing algorithms, and quantum network optimization. Features quantum entanglement distribution, quantum routing, and quantum network security.',price: '$7,999',period: 'month',features: [;
+      'Quantum communication protocols','Quantum routing algorithms','Quantum entanglement distribution','Quantum network optimization','Quantum network security','Quantum internet standards';
+    ],popular: false,category: 'Quantum Internet',icon: '🌐⚛️',marketPrice: '$10,000-20,000/month',benefits: [;
+      'Unbreakable quantum communication','Quantum network optimization','Future internet protocols','Quantum internet infrastructure';
+    ],useCases: [;
+      'Government communications','Financial networks','Research networks','Quantum internet backbone';
+    ];
+  },{id: 'ai-powered-infrastructure-monitoring',name: 'AI-Powered Infrastructure Monitoring',tagline: 'Intelligent infrastructure oversight',description:;
+      'Advanced infrastructure monitoring platform with AI-powered analytics, predictive maintenance, and intelligent alerting. Features automated monitoring, performance optimization, and intelligent resource management.',price: '$1,999',period: 'month',features: [;
+      'AI-powered monitoring','Predictive maintenance','Intelligent alerting','Performance optimization','Automated monitoring','Resource optimization';
+    ],popular: true,category: 'Infrastructure Monitoring',icon: '📊🤖',marketPrice: '$3,000-5,000/month',benefits: [;
+      'Proactive issue detection','Automated monitoring','Performance optimization','Reduced downtime';
+    ],useCases: [;
+      'Server monitoring','Network monitoring','Application monitoring','Cloud infrastructure';
+    ];
+  },{id: 'quantum-storage-platform',name: 'Quantum Storage Platform',tagline: 'Quantum-accelerated data storage',description:;
+      'Revolutionary quantum storage platform providing quantum data compression, quantum data encoding, and quantum-optimized storage algorithms. Features quantum compression algorithms, quantum data encoding, and quantum storage optimization.',price: '$5,499',period: 'month',features: [;
+      'Quantum data compression','Quantum data encoding','Quantum storage algorithms','Quantum data optimization','Hybrid quantum-classical storage','Quantum storage security';
+    ],popular: true,category: 'Quantum Storage',icon: '💾⚛️',marketPrice: '$7,000-12,000/month',benefits: [;
+      '100x data compression','Quantum data encoding','Advanced storage optimization','Future-proof storage technology';
+    ],useCases: [;
+      'Data center recovery';
+      'Cloud recovery';
+      'Application recovery';
+      'Business continuity';
+    ];
+  }
+    ];
+    popular: true;
+    category: 'Quantum Cloud';
+    icon: '☁️⚛️';
+    marketPrice: '$8,000-15,000/month';
+    benefits: [;
+      'Access to quantum computing power';
+      'Hybrid classical-quantum processing';
+      'Future-proof cloud infrastructure';
+      'Quantum advantage in the cloud';
+    ];
+    useCases: [;
+      'Scientific research computing';
+      'Financial modeling';
+      'Drug discovery';
+      'Climate simulation';
+    ];
+  }
+  {];      'Data center recoveryCloud recoveryApplication recoveryBusiness continuity';
+    ];
+  }
+];
+export const real2036ITServices = [;
+  {id: 'quantum-cloud-infrastructure-platform';
+    name: 'Quantum Cloud Infrastructure Platform';
+    tagline: 'Next-generation quantum cloud computing';
+    description:;
+      'Revolutionary quantum cloud infrastructure platform providing quantum computing resources, quantum-classical hybrid computing, and quantum cloud services. Features quantum resource management, quantum networking, and quantum security.';
+    price: '$6,999';
+    period: 'month';
+      'Quantum computing resources';
+      'Quantum-classical hybrid computing';
+      'Quantum resource management';
+      'Quantum networking';
+      'Quantum security protocols';
+      'Scalable quantum infrastructure';
+    ];
+    popular: true;
+    category: 'Quantum Cloud';
+    icon: '☁️⚛️';
+    marketPrice: '$8,000-15,000/month';
+    benefits: [;
+      'Access to quantum computing power';
+      'Hybrid classical-quantum processing';
+      'Future-proof cloud infrastructure';
+      'Quantum advantage in the cloud';
+    ];
+    useCases: [;
+      'Scientific research computing';
+      'Financial modeling';
+      'Drug discovery';
+      'Climate simulation';
+    ];
+  }
+  {id: 'ai-powered-devops-platform';
+    name: 'AI-Powered DevOps Platform';
+    tagline: 'Intelligent DevOps automation';
+    description:;
+      'Advanced DevOps platform with AI-powered automation, intelligent deployment strategies, and predictive infrastructure management. Features automated testing, deployment optimization, and intelligent monitoring.';
+    price: '$2,999';
+    period: 'month';
+    features: [;
+      'AI-powered deployment automation';
+      'Intelligent testing strategies';
+      'Predictive infrastructure scaling';
+      'Automated incident response';
+      'Smart resource optimization';
+      'Continuous learning algorithms';
+    ];
+    popular: true;
+    category: 'DevOps & AI';
+    icon: '🤖🔄';
+    marketPrice: '$4,000-7,000/month';
+    benefits: [;
+      '90% faster deployment cycles';
+      'Intelligent infrastructure management';
+      'Predictive scaling';
+      'Automated incident resolution';
+    ];
+    useCases: [;
+      'Continuous deployment';
+      'Infrastructure automation';
+      'Testing automation';
+      'Monitoring and alerting';
+    ];
+  }
+  {id: 'quantum-cybersecurity-platform';
+    name: 'Quantum Cybersecurity Platform';
+    tagline: 'Quantum-resistant security solutions';
+    description:;
+      'Advanced cybersecurity platform with quantum-resistant algorithms, quantum threat detection, and future-proof security protocols. Features quantum encryption, quantum key distribution, and quantum-resistant cryptography.';
+    price: '$5,499';
+    period: 'month';
+    features: [;
+      'Quantum-resistant algorithms';
+      'Quantum threat detection';
+      'Quantum encryption';
+      'Quantum key distribution';
+      'Future-proof security';
+      'Real-time threat analysis';
+    ];
+    popular: true;
+    category: 'Quantum Security';
+    icon: '🔒⚛️';
+    marketPrice: '$7,000-12,000/month';
+    benefits: [;
+      'Quantum-resistant security';
+      'Future-proof protection';
+      'Advanced threat detection';
+      'Military-grade security';
+    ];
+    useCases: [;
+      'Government security';
+      'Financial institutions';
+      'Healthcare data protection';
+      'Critical infrastructure';
+    ];
+  }
+  {id: 'edge-computing-orchestration-platform';
+    name: 'Edge Computing Orchestration Platform';
+    tagline: 'Intelligent edge computing management';
+    description:;
+      'Comprehensive edge computing platform with intelligent orchestration, distributed computing optimization, and edge AI capabilities. Features edge resource management, latency optimization, and distributed AI processing.';
+    price: '$3,999';
+    period: 'month';
+    features: [;
+      'Intelligent edge orchestration';
+      'Distributed computing optimization';
+      'Edge AI processing';
+      'Latency optimization';
+      'Edge resource management';
+      'Distributed data processing';
+    ];
+    popular: true;
+    category: 'Edge Computing';
+    icon: '🌐⚡';
+    marketPrice: '$5,000-8,000/month';
+    benefits: [;
+      'Ultra-low latency processing';
+      'Distributed computing power';
+      'Edge AI capabilities';
+      'Scalable edge infrastructure';
+    ];
+    useCases: [;
+      'IoT applications';
+      'Real-time analytics';
+      'Edge AI processing';
+      'Distributed computing';
+    ];
+  }
+  {id: 'quantum-database-platform';
+    name: 'Quantum Database Platform';
+    tagline: 'Quantum-powered data management';
+    description:;
+      'Revolutionary quantum database platform providing quantum-accelerated queries, quantum data compression, and quantum-optimized data structures. Features quantum search algorithms, quantum data indexing, and quantum data analytics.';
+    price: '$4,999';
+    period: 'month';
+    features: [;
+      'Quantum-accelerated queries';
+      'Quantum data compression';
+      'Quantum search algorithms';
+      'Quantum data indexing';
+      'Quantum data analytics';
+      'Hybrid quantum-classical storage';
+    ];
+    popular: true;
+    category: 'Quantum Database';
+    icon: '🗄️⚛️';
+    marketPrice: '$6,000-10,000/month';
+    benefits: [;
+      '1000x faster database queries';
+      'Quantum data compression';
+      'Advanced search capabilities';
+      'Future-proof data management';
+    ];
+    useCases: [;
+      'Big data analytics';
+      'Real-time search';
+      'Data warehousing';
+      'Business intelligence';
+    ];
+  }
+  {id: 'ai-powered-network-security';
+    name: 'AI-Powered Network Security';
+    tagline: 'Intelligent network protection';
+    description:;
+      'Advanced network security platform with AI-powered threat detection, intelligent firewall management, and predictive security analytics. Features behavioral analysis, anomaly detection, and automated threat response.';
+    price: '$2,499';
+    period: 'month';
+    features: [;
+      'AI threat detection';
+      'Intelligent firewall management';
+      'Behavioral analysis';
+      'Anomaly detection';
+      'Automated threat response';
+      'Predictive security analytics';
+    ];
+    popular: true;
+    category: 'Network Security';
+    icon: '🛡️🤖';
+    marketPrice: '$3,500-6,000/month';
+    benefits: [;
+      'Proactive threat detection';
+      'Automated security response';
+      'Intelligent network protection';
+      'Reduced false positives';
+    ];
+    useCases: [;
+      'Enterprise network security';
+      'Cloud security';
+      'IoT security';
+      'Remote work security';
+    ];
+  }
+  {id: 'quantum-internet-protocols';
+    name: 'Quantum Internet Protocols';
+    tagline: 'Next-generation quantum networking';
+    description:;
+      'Revolutionary quantum internet protocols platform providing quantum communication standards, quantum routing algorithms, and quantum network optimization. Features quantum entanglement distribution, quantum routing, and quantum network security.';
+    price: '$7,999';
+    period: 'month';
+    features: [;
+      'Quantum communication protocols';
+      'Quantum routing algorithms';
+      'Quantum entanglement distribution';
+      'Quantum network optimization';
+      'Quantum network security';
+      'Quantum internet standards';
+    ];
+    popular: false;
+    category: 'Quantum Internet';
+    icon: '🌐⚛️';
+    marketPrice: '$10,000-20,000/month';
+    benefits: [;
+      'Unbreakable quantum communication';
+      'Quantum network optimization';
+      'Future internet protocols';
+      'Quantum internet infrastructure';
+    ];
+    useCases: [;
+      'Government communications';
+      'Financial networks';
+      'Research networks';
+      'Quantum internet backbone';
+    ];
+  }
+  {id: 'ai-powered-infrastructure-monitoring';
+    name: 'AI-Powered Infrastructure Monitoring';
+    tagline: 'Intelligent infrastructure oversight';
+    description:;
+      'Advanced infrastructure monitoring platform with AI-powered analytics, predictive maintenance, and intelligent alerting. Features automated monitoring, performance optimization, and intelligent resource management.';
+    price: '$1,999';
+    period: 'month';
+    features: [;
+      'AI-powered monitoring';
+      'Predictive maintenance';
+      'Intelligent alerting';
+      'Performance optimization';
+      'Automated monitoring';
+      'Resource optimization';
+    ];
+    popular: true;
+    category: 'Infrastructure Monitoring';
+    icon: '📊🤖';
+    marketPrice: '$3,000-5,000/month';
+    benefits: [;
+      'Proactive issue detection';
+      'Automated monitoring';
+      'Performance optimization';
+      'Reduced downtime';
+    ];
+    useCases: [;
+      'Server monitoring';
+      'Network monitoring';
+      'Application monitoring';
+      'Cloud infrastructure';
+    ];
+  }
+  {id: 'quantum-storage-platform';
+    name: 'Quantum Storage Platform';
+    tagline: 'Quantum-accelerated data storage';
+    description:;
+      'Revolutionary quantum storage platform providing quantum data compression, quantum data encoding, and quantum-optimized storage algorithms. Features quantum compression algorithms, quantum data encoding, and quantum storage optimization.';
+    price: '$5,499';
+    period: 'month';
+    features: [;
+      'Quantum data compression';
+      'Quantum data encoding';
+      'Quantum storage algorithms';
+      'Quantum data optimization';
+      'Hybrid quantum-classical storage';
+      'Quantum storage security';
+    ];
+    popular: true;
+    category: 'Quantum Storage';
+    icon: '💾⚛️';
+    marketPrice: '$7,000-12,000/month';
+    benefits: [;
+      '100x data compression';
+      'Quantum data encoding';
+      'Advanced storage optimization';
+      'Future-proof storage technology';
+    ];
+    useCases: [;
+      'Big data storage';
+      'Data archiving';
+      'Cloud storage';
+      'Data backup';
+    ];
+  }
+  {id: 'ai-powered-disaster-recovery';
+    name: 'AI-Powered Disaster Recovery';
+    tagline: 'Intelligent recovery automation';
+    description:;
+      'Advanced disaster recovery platform with AI-powered recovery strategies, intelligent backup management, and automated recovery procedures. Features predictive recovery planning, automated testing, and intelligent backup optimization.';
+    price: '$3,499';
+    period: 'month';
+    features: [;
+      'AI recovery strategies';
+      'Intelligent backup management';
+      'Automated recovery procedures';
+      'Predictive recovery planning';
+      'Automated testing';
+      'Backup optimization';
+    ];
+    popular: true;
+    category: 'Disaster Recovery';
+    icon: '🔄🤖';
+    marketPrice: '$4,500-7,000/month';
+    benefits: [;
+      'Automated recovery procedures';
+      'Intelligent backup management';
+      'Predictive recovery planning';
+      'Reduced recovery time';
+    ];
+    useCases: [;
+export const real2036ITServices = [;
+  {id: 'quantum - cloud - infrastructure - platform',name: 'Quantum Cloud Infrastructure Platform',tagline: 'Next - generation quantum cloud computing',description:;
+      'Revolutionary quantum cloud infrastructure platform providing quantum computing resources, quantum - classical hybrid computing, and quantum cloud services. Features quantum resource management, quantum networking, and quantum security.',price: '$6, 999',period: 'month','Quantum computing resources','Quantum - classical hybrid computing','Quantum resource management','Quantum networking','Quantum security protocols','Scalable quantum infrastructure';
+    ],popular: true,category: 'Quantum Cloud',icon: '☁️⚛️',market_price: '$8, 000 - 15, 000 / month',benefits: [;
+      'Access to quantum computing power','Hybrid classical - quantum processing','Future - proof cloud infrastructure','Quantum advantage in the cloud';
+    ],use_cases: [;
+      'Scientific research computing','Financial modeling','Drug discovery','Climate simulation';
+    ];
+  },{id: 'ai - powered - devops - platform',name: 'AI - Powered DevOps Platform',tagline: 'Intelligent DevOps automation',description:;
+      'Advanced DevOps platform with AI - powered automation, intelligent deployment strategies, and predictive infrastructure management. Features automated testing, deployment optimization, and intelligent monitoring.',price: '$2, 999',period: 'month',features: [;
+      'AI - powered deployment automation','Intelligent testing strategies','Predictive infrastructure scaling','Automated incident response','Smart resource optimization','Continuous learning algorithms';
+    ],popular: true,category: 'DevOps & AI',icon: '🤖🔄',market_price: '$4, 000 - 7, 000 / month',benefits: [;
+      '90% faster deployment cycles','Intelligent infrastructure management','Predictive scaling','Automated incident resolution';
+    ],use_cases: [;
+      'Continuous deployment','Infrastructure automation','Testing automation','Monitoring and alerting';
+    ];
+  },{id: 'quantum - cybersecurity - platform',name: 'Quantum Cybersecurity Platform',tagline: 'Quantum - resistant security solutions',description:;
+      'Advanced cybersecurity platform with quantum - resistant algorithms, quantum threat detection, and future - proof security protocols. Features quantum encryption, quantum key distribution, and quantum - resistant cryptography.',price: '$5, 499',period: 'month',features: [;
+      'Quantum - resistant algorithms','Quantum threat detection','Quantum encryption','Quantum key distribution','Future - proof security','Real - time threat analysis';
+    ],popular: true,category: 'Quantum Security',icon: '🔒⚛️',market_price: '$7, 000 - 12, 000 / month',benefits: [;
+      'Quantum - resistant security','Future - proof protection','Advanced threat detection','Military - grade security';
+    ],use_cases: [;
+      'Government security','Financial institutions','Healthcare data protection','Critical infrastructure';
+    ];
+  },{id: 'edge - computing - orchestration - platform',name: 'Edge Computing Orchestration Platform',tagline: 'Intelligent edge computing management',description:;
+      'Comprehensive edge computing platform with intelligent orchestration, distributed computing optimization, and edge AI capabilities. Features edge resource management, latency optimization, and distributed AI processing.',price: '$3, 999',period: 'month',features: [;
+      'Intelligent edge orchestration','Distributed computing optimization','Edge AI processing','Latency optimization','Edge resource management','Distributed data processing';
+    ],popular: true,category: 'Edge Computing',icon: '🌐⚡',market_price: '$5, 000 - 8, 000 / month',benefits: [;
+      'Ultra - low latency processing','Distributed computing power','Edge AI capabilities','Scalable edge infrastructure';
+    ],use_cases: [;
+      'IoT applications','Real - time analytics','Edge AI processing','Distributed computing';
+    ];
+  },{id: 'quantum - database - platform',name: 'Quantum Database Platform',tagline: 'Quantum - powered data management',description:;
+      'Revolutionary quantum database platform providing quantum - accelerated queries, quantum data compression, and quantum - optimized data structures. Features quantum search algorithms, quantum data indexing, and quantum data analytics.',price: '$4, 999',period: 'month',features: [;
+      'Quantum - accelerated queries','Quantum data compression','Quantum search algorithms','Quantum data indexing','Quantum data analytics','Hybrid quantum - classical storage';
+    ],popular: true,category: 'Quantum Database',icon: '🗄️⚛️',market_price: '$6, 000 - 10, 000 / month',benefits: [;
+      '1000x faster database queries','Quantum data compression','Advanced search capabilities','Future - proof data management';
+    ],use_cases: [;
+      'Big data analytics','Real - time search','Data warehousing','Business intelligence';
+    ];
+  },{id: 'ai - powered - network - security',name: 'AI - Powered Network Security',tagline: 'Intelligent network protection',description:;
+      'Advanced network security platform with AI - powered threat detection, intelligent firewall management, and predictive security analytics. Features behavioral analysis, anomaly detection, and automated threat response.',price: '$2, 499',period: 'month',features: [;
+      'AI threat detection','Intelligent firewall management','Behavioral analysis','Anomaly detection','Automated threat response','Predictive security analytics';
+    ],popular: true,category: 'Network Security',icon: '🛡️🤖',market_price: '$3, 500 - 6, 000 / month',benefits: [;
+      'Proactive threat detection','Automated security response','Intelligent network protection','Reduced false positives';
+    ],use_cases: [;
+      'Enterprise network security','Cloud security','IoT security','Remote work security';
+    ];
+  },{id: 'quantum - internet - protocols',name: 'Quantum Internet Protocols',tagline: 'Next - generation quantum networking',description:;
+      'Revolutionary quantum internet protocols platform providing quantum communication standards, quantum routing algorithms, and quantum network optimization. Features quantum entanglement distribution, quantum routing, and quantum network security.',price: '$7, 999',period: 'month',features: [;
+      'Quantum communication protocols','Quantum routing algorithms','Quantum entanglement distribution','Quantum network optimization','Quantum network security','Quantum internet standards';
+    ],popular: false,category: 'Quantum Internet',icon: '🌐⚛️',market_price: '$10, 000 - 20, 000 / month',benefits: [;
+      'Unbreakable quantum communication','Quantum network optimization','Future internet protocols','Quantum internet infrastructure';
+    ],use_cases: [;
+      'Government communications','Financial networks','Research networks','Quantum internet backbone';
+    ];
+  },{id: 'ai - powered - infrastructure - monitoring',name: 'AI - Powered Infrastructure Monitoring',tagline: 'Intelligent infrastructure oversight',description:;
+      'Advanced infrastructure monitoring platform with AI - powered analytics, predictive maintenance, and intelligent alerting. Features automated monitoring, performance optimization, and intelligent resource management.',price: '$1, 999',period: 'month',features: [;
+      'AI - powered monitoring','Predictive maintenance','Intelligent alerting','Performance optimization','Automated monitoring','Resource optimization';
+    ],popular: true,category: 'Infrastructure Monitoring',icon: '📊🤖',market_price: '$3, 000 - 5, 000 / month',benefits: [;
+      'Proactive issue detection','Automated monitoring','Performance optimization','Reduced downtime';
+    ],use_cases: [;
+      'Server monitoring','Network monitoring','Application monitoring','Cloud infrastructure';
+    ];
+  },{id: 'quantum - storage - platform',name: 'Quantum Storage Platform',tagline: 'Quantum - accelerated data storage',description:;
+      'Revolutionary quantum storage platform providing quantum data compression, quantum data encoding, and quantum - optimized storage algorithms. Features quantum compression algorithms, quantum data encoding, and quantum storage optimization.',price: '$5, 499',period: 'month',features: [;
+      'Quantum data compression','Quantum data encoding','Quantum storage algorithms','Quantum data optimization','Hybrid quantum - classical storage','Quantum storage security';
+    ],popular: true,category: 'Quantum Storage',icon: '💾⚛️',market_price: '$7, 000 - 12, 000 / month',benefits: [;
+      '100x data compression','Quantum data encoding','Advanced storage optimization','Future - proof storage technology';
+    ],use_cases: [;
+      'Big data storage','Data archiving','Cloud storage','Data backup';
+    ];
+  },{id: 'ai - powered - disaster - recovery',name: 'AI - Powered Disaster Recovery',tagline: 'Intelligent recovery automation',description:;
+      'Advanced disaster recovery platform with AI - powered recovery strategies, intelligent backup management, and automated recovery procedures. Features predictive recovery planning, automated testing, and intelligent backup optimization.',price: '$3, 499',period: 'month',features: [;
+      'AI recovery strategies','Intelligent backup management','Automated recovery procedures','Predictive recovery planning','Automated testing','Backup optimization';
+    ],popular: true,category: 'Disaster Recovery',icon: '🔄🤖',market_price: '$4, 500 - 7, 000 / month',benefits: [;
+      'Automated recovery procedures','Intelligent backup management','Predictive recovery planning','Reduced recovery time';
+    ],use_cases: [;
+      'Data center recovery','Cloud recovery','Application recovery','Business continuity';
+    ];
+  }];      'Data center recoveryCloud recoveryApplication recoveryBusiness continuity';
+    ];
+  }];      'Data center recoveryCloud recoveryApplication recoveryBusiness continuity';
+    ];
+export const real2036ITServices = [;
+  {'Data center recovery','Cloud recovery','Application recovery','Business continuity';
+    ];
+      'Business continuity';
+    ];
+      'Business continuity';
+    ];
+  }];      'Data center recoveryCloud recoveryApplication recoveryBusiness continuity';
+    ];
+  }
+];}];      'Data center recoveryCloud recoveryApplication recoveryBusiness continuity';
+    ];
+export const real2036ITServices = [;
+  {id: 'quantum-cloud-infrastructure-platform',name: 'Quantum Cloud Infrastructure Platform',tagline: 'Next-generation quantum cloud computing',description: 'Revolutionary quantum cloud infrastructure platform providing quantum computing resources, quantum-classical hybrid computing, and quantum cloud services. Features quantum resource management, quantum networking, and quantum security.',price: '$6,999',period: 'month',features: [;
+      'Quantum computing resourcesQuantum-classical hybrid computingQuantum resource managementQuantum networkingQuantum security protocolsScalable quantum infrastructure';
+    ],popular: true,category: 'Quantum Cloud',icon: '☁️⚛️',marketPrice: '$8,000-15,000/month',benefits: [;
+      'Access to quantum computing powerHybrid classical-quantum processingFuture-proof cloud infrastructureQuantum advantage in the cloud';
+    ],useCases: [;
+      'Scientific research computingFinancial modelingDrug discoveryClimate simulation';
+    ];
+  },{id: 'ai-powered-devops-platform',name: 'AI-Powered DevOps Platform',tagline: 'Intelligent DevOps automation',description: 'Advanced DevOps platform with AI-powered automation, intelligent deployment strategies, and predictive infrastructure management. Features automated testing, deployment optimization, and intelligent monitoring.',price: '$2,999',period: 'month',features: [;
+      'AI-powered deployment automationIntelligent testing strategiesPredictive infrastructure scalingAutomated incident responseSmart resource optimizationContinuous learning algorithms';
+    ],popular: true,category: 'DevOps & AI',icon: '🤖🔄',marketPrice: '$4,000-7,000/month',benefits: [;
+      '90% faster deployment cyclesIntelligent infrastructure managementPredictive scalingAutomated incident resolution';
+    ],useCases: [;
+      'Continuous deploymentInfrastructure automationTesting automationMonitoring and alerting';
+    ];
+  },{id: 'quantum-cybersecurity-platform',name: 'Quantum Cybersecurity Platform',tagline: 'Quantum-resistant security solutions',description: 'Advanced cybersecurity platform with quantum-resistant algorithms, quantum threat detection, and future-proof security protocols. Features quantum encryption, quantum key distribution, and quantum-resistant cryptography.',price: '$5,499',period: 'month',features: [;
+      'Quantum-resistant algorithmsQuantum threat detectionQuantum encryptionQuantum key distributionFuture-proof securityReal-time threat analysis';
+    ],popular: true,category: 'Quantum Security',icon: '🔒⚛️',marketPrice: '$7,000-12,000/month',benefits: [;
+      'Quantum-resistant securityFuture-proof protectionAdvanced threat detectionMilitary-grade security';
+    ],useCases: [;
+      'Government securityFinancial institutionsHealthcare data protectionCritical infrastructure';
+    ];
+  },{id: 'edge-computing-orchestration-platform',name: 'Edge Computing Orchestration Platform',tagline: 'Intelligent edge computing management',description: 'Comprehensive edge computing platform with intelligent orchestration, distributed computing optimization, and edge AI capabilities. Features edge resource management, latency optimization, and distributed AI processing.',price: '$3,999',period: 'month',features: [;
+      'Intelligent edge orchestrationDistributed computing optimizationEdge AI processingLatency optimizationEdge resource managementDistributed data processing';
+    ],popular: true,category: 'Edge Computing',icon: '🌐⚡',marketPrice: '$5,000-8,000/month',benefits: [;
+      'Ultra-low latency processingDistributed computing powerEdge AI capabilitiesScalable edge infrastructure';
+    ],useCases: [;
+      'IoT applicationsReal-time analyticsEdge AI processingDistributed computing';
+    ];
+  },{id: 'quantum-database-platform',name: 'Quantum Database Platform',tagline: 'Quantum-powered data management',description: 'Revolutionary quantum database platform providing quantum-accelerated queries, quantum data compression, and quantum-optimized data structures. Features quantum search algorithms, quantum data indexing, and quantum data analytics.',price: '$4,999',period: 'month',features: [;
+      'Quantum-accelerated queriesQuantum data compressionQuantum search algorithmsQuantum data indexingQuantum data analyticsHybrid quantum-classical storage';
+    ],popular: true,category: 'Quantum Database',icon: '🗄️⚛️',marketPrice: '$6,000-10,000/month',benefits: [;
+      '1000x faster database queriesQuantum data compressionAdvanced search capabilitiesFuture-proof data management';
+    ],useCases: [;
+      'Big data analyticsReal-time searchData warehousingBusiness intelligence';
+    ];
+  },{id: 'ai-powered-network-security',name: 'AI-Powered Network Security',tagline: 'Intelligent network protection',description: 'Advanced network security platform with AI-powered threat detection, intelligent firewall management, and predictive security analytics. Features behavioral analysis, anomaly detection, and automated threat response.',price: '$2,499',period: 'month',features: [;
+      'AI threat detectionIntelligent firewall managementBehavioral analysisAnomaly detectionAutomated threat responsePredictive security analytics';
+    ],popular: true,category: 'Network Security',icon: '🛡️🤖',marketPrice: '$3,500-6,000/month',benefits: [;
+      'Proactive threat detectionAutomated security responseIntelligent network protectionReduced false positives';
+    ],useCases: [;
+      'Enterprise network securityCloud securityIoT securityRemote work security';
+    ];
+  },{id: 'quantum-internet-protocols',name: 'Quantum Internet Protocols',tagline: 'Next-generation quantum networking',description: 'Revolutionary quantum internet protocols platform providing quantum communication standards, quantum routing algorithms, and quantum network optimization. Features quantum entanglement distribution, quantum routing, and quantum network security.',price: '$7,999',period: 'month',features: [;
+      'Quantum communication protocolsQuantum routing algorithmsQuantum entanglement distributionQuantum network optimizationQuantum network securityQuantum internet standards';
+    ],popular: false,category: 'Quantum Internet',icon: '🌐⚛️',marketPrice: '$10,000-20,000/month',benefits: [;
+      'Unbreakable quantum communicationQuantum network optimizationFuture internet protocolsQuantum internet infrastructure';
+    ],useCases: [;
+      'Government communicationsFinancial networksResearch networksQuantum internet backbone';
+    ];
+  },{id: 'ai-powered-infrastructure-monitoring',name: 'AI-Powered Infrastructure Monitoring',tagline: 'Intelligent infrastructure oversight',description: 'Advanced infrastructure monitoring platform with AI-powered analytics, predictive maintenance, and intelligent alerting. Features automated monitoring, performance optimization, and intelligent resource management.',price: '$1,999',period: 'month',features: [;
+      'AI-powered monitoringPredictive maintenanceIntelligent alertingPerformance optimizationAutomated monitoringResource optimization';
+    ],popular: true,category: 'Infrastructure Monitoring',icon: '📊🤖',marketPrice: '$3,000-5,000/month',benefits: [;
+      'Proactive issue detectionAutomated monitoringPerformance optimizationReduced downtime';
+    ],useCases: [;
+      'Server monitoringNetwork monitoringApplication monitoringCloud infrastructure';
+    ];
+  },{id: 'quantum-storage-platform',name: 'Quantum Storage Platform',tagline: 'Quantum-accelerated data storage',description: 'Revolutionary quantum storage platform providing quantum data compression, quantum data encoding, and quantum-optimized storage algorithms. Features quantum compression algorithms, quantum data encoding, and quantum storage optimization.',price: '$5,499',period: 'month',features: [;
+      'Quantum data compressionQuantum data encodingQuantum storage algorithmsQuantum data optimizationHybrid quantum-classical storageQuantum storage security';
+    ],popular: true,category: 'Quantum Storage',icon: '💾⚛️',marketPrice: '$7,000-12,000/month',benefits: [;
+      '100x data compressionQuantum data encodingAdvanced storage optimizationFuture-proof storage technology';
+    ],useCases: [;
+      'Big data storageData archivingCloud storageData backup';
+    ];
+  },{id: 'ai-powered-disaster-recovery',name: 'AI-Powered Disaster Recovery',tagline: 'Intelligent recovery automation',description: 'Advanced disaster recovery platform with AI-powered recovery strategies, intelligent backup management, and automated recovery procedures. Features predictive recovery planning, automated testing, and intelligent backup optimization.',price: '$3,499',period: 'month',features: [;
+      'AI recovery strategiesIntelligent backup managementAutomated recovery proceduresPredictive recovery planningAutomated testingBackup optimization';
+    ],popular: true,category: 'Disaster Recovery',icon: '🔄🤖',marketPrice: '$4,500-7,000/month',benefits: [;
+      'Automated recovery proceduresIntelligent backup managementPredictive recovery planningReduced recovery time';
+    ],useCases: [;
+      'Data center recoveryCloud recoveryApplication recoveryBusiness continuity';
+    ];}
+];}
+];
+ursor/fix-website-loading-errors-and-merge-6662;
+  }
+];}];      'Data center recoveryCloud recoveryApplication recoveryBusiness continuity';
+    ];
+export const real2036ITServices = [;
+  {id: 'quantum-cloud-infrastructure-platform',name: 'Quantum Cloud Infrastructure Platform',tagline: 'Next-generation quantum cloud computing',description: 'Revolutionary quantum cloud infrastructure platform providing quantum computing resources, quantum-classical hybrid computing, and quantum cloud services. Features quantum resource management, quantum networking, and quantum security.',price: '$6,999',period: 'month',features: [;
+      'Quantum computing resourcesQuantum-classical hybrid computingQuantum resource managementQuantum networkingQuantum security protocolsScalable quantum infrastructure';
+    ],popular: true,category: 'Quantum Cloud',icon: '☁️⚛️',marketPrice: '$8,000-15,000/month',benefits: [;
+      'Access to quantum computing powerHybrid classical-quantum processingFuture-proof cloud infrastructureQuantum advantage in the cloud';
+    ],useCases: [;
+      'Scientific research computingFinancial modelingDrug discoveryClimate simulation';
+    ];
+  },{id: 'ai-powered-devops-platform',name: 'AI-Powered DevOps Platform',tagline: 'Intelligent DevOps automation',description: 'Advanced DevOps platform with AI-powered automation, intelligent deployment strategies, and predictive infrastructure management. Features automated testing, deployment optimization, and intelligent monitoring.',price: '$2,999',period: 'month',features: [;
+      'AI-powered deployment automationIntelligent testing strategiesPredictive infrastructure scalingAutomated incident responseSmart resource optimizationContinuous learning algorithms';
+    ],popular: true,category: 'DevOps & AI',icon: '🤖🔄',marketPrice: '$4,000-7,000/month',benefits: [;
+      '90% faster deployment cyclesIntelligent infrastructure managementPredictive scalingAutomated incident resolution';
+    ],useCases: [;
+      'Continuous deploymentInfrastructure automationTesting automationMonitoring and alerting';
+    ];
+  },{id: 'quantum-cybersecurity-platform',name: 'Quantum Cybersecurity Platform',tagline: 'Quantum-resistant security solutions',description: 'Advanced cybersecurity platform with quantum-resistant algorithms, quantum threat detection, and future-proof security protocols. Features quantum encryption, quantum key distribution, and quantum-resistant cryptography.',price: '$5,499',period: 'month',features: [;
+      'Quantum-resistant algorithmsQuantum threat detectionQuantum encryptionQuantum key distributionFuture-proof securityReal-time threat analysis';
+    ],popular: true,category: 'Quantum Security',icon: '🔒⚛️',marketPrice: '$7,000-12,000/month',benefits: [;
+      'Quantum-resistant securityFuture-proof protectionAdvanced threat detectionMilitary-grade security';
+    ],useCases: [;
+      'Government securityFinancial institutionsHealthcare data protectionCritical infrastructure';
+    ];
+  },{id: 'edge-computing-orchestration-platform',name: 'Edge Computing Orchestration Platform',tagline: 'Intelligent edge computing management',description: 'Comprehensive edge computing platform with intelligent orchestration, distributed computing optimization, and edge AI capabilities. Features edge resource management, latency optimization, and distributed AI processing.',price: '$3,999',period: 'month',features: [;
+      'Intelligent edge orchestrationDistributed computing optimizationEdge AI processingLatency optimizationEdge resource managementDistributed data processing';
+    ],popular: true,category: 'Edge Computing',icon: '🌐⚡',marketPrice: '$5,000-8,000/month',benefits: [;
+      'Ultra-low latency processingDistributed computing powerEdge AI capabilitiesScalable edge infrastructure';
+    ],useCases: [;
+      'IoT applicationsReal-time analyticsEdge AI processingDistributed computing';
+    ];
+  },{id: 'quantum-database-platform',name: 'Quantum Database Platform',tagline: 'Quantum-powered data management',description: 'Revolutionary quantum database platform providing quantum-accelerated queries, quantum data compression, and quantum-optimized data structures. Features quantum search algorithms, quantum data indexing, and quantum data analytics.',price: '$4,999',period: 'month',features: [;
+      'Quantum-accelerated queriesQuantum data compressionQuantum search algorithmsQuantum data indexingQuantum data analyticsHybrid quantum-classical storage';
+    ],popular: true,category: 'Quantum Database',icon: '🗄️⚛️',marketPrice: '$6,000-10,000/month',benefits: [;
+      '1000x faster database queriesQuantum data compressionAdvanced search capabilitiesFuture-proof data management';
+    ],useCases: [;
+      'Big data analyticsReal-time searchData warehousingBusiness intelligence';
+    ];
+  },{id: 'ai-powered-network-security',name: 'AI-Powered Network Security',tagline: 'Intelligent network protection',description: 'Advanced network security platform with AI-powered threat detection, intelligent firewall management, and predictive security analytics. Features behavioral analysis, anomaly detection, and automated threat response.',price: '$2,499',period: 'month',features: [;
+      'AI threat detectionIntelligent firewall managementBehavioral analysisAnomaly detectionAutomated threat responsePredictive security analytics';
+    ],popular: true,category: 'Network Security',icon: '🛡️🤖',marketPrice: '$3,500-6,000/month',benefits: [;
+      'Proactive threat detectionAutomated security responseIntelligent network protectionReduced false positives';
+    ],useCases: [;
+      'Enterprise network securityCloud securityIoT securityRemote work security';
+    ];
+  },{id: 'quantum-internet-protocols',name: 'Quantum Internet Protocols',tagline: 'Next-generation quantum networking',description: 'Revolutionary quantum internet protocols platform providing quantum communication standards, quantum routing algorithms, and quantum network optimization. Features quantum entanglement distribution, quantum routing, and quantum network security.',price: '$7,999',period: 'month',features: [;
+      'Quantum communication protocolsQuantum routing algorithmsQuantum entanglement distributionQuantum network optimizationQuantum network securityQuantum internet standards';
+    ],popular: false,category: 'Quantum Internet',icon: '🌐⚛️',marketPrice: '$10,000-20,000/month',benefits: [;
+      'Unbreakable quantum communicationQuantum network optimizationFuture internet protocolsQuantum internet infrastructure';
+    ],useCases: [;
+      'Government communicationsFinancial networksResearch networksQuantum internet backbone';
+    ];
+  },{id: 'ai-powered-infrastructure-monitoring',name: 'AI-Powered Infrastructure Monitoring',tagline: 'Intelligent infrastructure oversight',description: 'Advanced infrastructure monitoring platform with AI-powered analytics, predictive maintenance, and intelligent alerting. Features automated monitoring, performance optimization, and intelligent resource management.',price: '$1,999',period: 'month',features: [;
+      'AI-powered monitoringPredictive maintenanceIntelligent alertingPerformance optimizationAutomated monitoringResource optimization';
+    ],popular: true,category: 'Infrastructure Monitoring',icon: '📊🤖',marketPrice: '$3,000-5,000/month',benefits: [;
+      'Proactive issue detectionAutomated monitoringPerformance optimizationReduced downtime';
+    ],useCases: [;
+      'Server monitoringNetwork monitoringApplication monitoringCloud infrastructure';
+    ];
+  },{id: 'quantum-storage-platform',name: 'Quantum Storage Platform',tagline: 'Quantum-accelerated data storage',description: 'Revolutionary quantum storage platform providing quantum data compression, quantum data encoding, and quantum-optimized storage algorithms. Features quantum compression algorithms, quantum data encoding, and quantum storage optimization.',price: '$5,499',period: 'month',features: [;
+      'Quantum data compressionQuantum data encodingQuantum storage algorithmsQuantum data optimizationHybrid quantum-classical storageQuantum storage security';
+    ],popular: true,category: 'Quantum Storage',icon: '💾⚛️',marketPrice: '$7,000-12,000/month',benefits: [;
+      '100x data compressionQuantum data encodingAdvanced storage optimizationFuture-proof storage technology';
+    ],useCases: [;
+      'Big data storageData archivingCloud storageData backup';
+    ];
+  },{id: 'ai-powered-disaster-recovery',name: 'AI-Powered Disaster Recovery',tagline: 'Intelligent recovery automation',description: 'Advanced disaster recovery platform with AI-powered recovery strategies, intelligent backup management, and automated recovery procedures. Features predictive recovery planning, automated testing, and intelligent backup optimization.',price: '$3,499',period: 'month',features: [;
+      'AI recovery strategiesIntelligent backup managementAutomated recovery proceduresPredictive recovery planningAutomated testingBackup optimization';
+    ],popular: true,category: 'Disaster Recovery',icon: '🔄🤖',marketPrice: '$4,500-7,000/month',benefits: [;
+      'Automated recovery proceduresIntelligent backup managementPredictive recovery planningReduced recovery time';
+    ],useCases: [;
 =======
-<<<<<<< HEAD
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 id: 'quantum-cloud-infrastructure-platform',
     name: 'Quantum Cloud Infrastructure Platform',
     tagline: 'Next-generation quantum cloud computing',
@@ -19,30 +670,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     features: [
       'Quantum computing resources',
       'Quantum-classical hybrid computing',
-=======
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
 
-export const real2036ITServices = [
-  {
-    id: 'quantum-cloud-infrastructure-platform'
-    name: 'Quantum Cloud Infrastructure Platform'
-    tagline: 'Next-generation quantum cloud computing'
-<<<<<<< HEAD
-id: 'quantum-cloud-infrastructure-platform',
-    name: 'Quantum Cloud Infrastructure Platform',
-    tagline: 'Next-generation quantum cloud computing',
-origin/cursor/automate-test-improve-and-merge-code-2533
-
-id: 'quantum-cloud-infrastructure-platform',
-    name: 'Quantum Cloud Infrastructure Platform',
-    tagline: 'Next-generation quantum cloud computing',
-    description:
-      'Revolutionary quantum cloud infrastructure platform providing quantum computing resources, quantum-classical hybrid computing, and quantum cloud services. Features quantum resource management, quantum networking, and quantum security.',
-    price: '$6,999',
-    period: 'month',
-    features: [
-      'Quantum computing resources',
-      'Quantum-classical hybrid computing',
       'Quantum resource management',
       'Quantum networking',
       'Quantum security protocols',
@@ -51,14 +679,7 @@ id: 'quantum-cloud-infrastructure-platform',
     popular: true,
     category: 'Quantum Cloud',
     icon: '☁️⚛️',
-    marketPrice: '$8,000-15,000/month',
-    benefits: [
-      'Access to quantum computing power',
-      'Hybrid classical-quantum processing',
-      'Future-proof cloud infrastructure',
-      'Quantum advantage in the cloud',
-    ],
-    useCases: [
+
       'Scientific research computing',
       'Financial modeling',
       'Drug discovery',
@@ -66,15 +687,7 @@ id: 'quantum-cloud-infrastructure-platform',
     ],
   },
   {
-    id: 'ai-powered-devops-platform',
-    name: 'AI-Powered DevOps Platform',
-    tagline: 'Intelligent DevOps automation',
-    description:
-      'Advanced DevOps platform with AI-powered automation, intelligent deployment strategies, and predictive infrastructure management. Features automated testing, deployment optimization, and intelligent monitoring.',
-    price: '$2,999',
-    period: 'month',
-    features: [
-      'AI-powered deployment automation',
+
       'Intelligent testing strategies',
       'Predictive infrastructure scaling',
       'Automated incident response',
@@ -84,14 +697,13 @@ id: 'quantum-cloud-infrastructure-platform',
     popular: true,
     category: 'DevOps & AI',
     icon: '🤖🔄',
-    marketPrice: '$4,000-7,000/month',
-    benefits: [
+
       '90% faster deployment cycles',
       'Intelligent infrastructure management',
       'Predictive scaling',
       'Automated incident resolution',
     ],
-    useCases: [
+
       'Continuous deployment',
       'Infrastructure automation',
       'Testing automation',
@@ -99,32 +711,12 @@ id: 'quantum-cloud-infrastructure-platform',
     ],
   },
   {
-    id: 'quantum-cybersecurity-platform',
-    name: 'Quantum Cybersecurity Platform',
-    tagline: 'Quantum-resistant security solutions',
-    description:
-      'Advanced cybersecurity platform with quantum-resistant algorithms, quantum threat detection, and future-proof security protocols. Features quantum encryption, quantum key distribution, and quantum-resistant cryptography.',
-    price: '$5,499',
-    period: 'month',
-    features: [
-      'Quantum-resistant algorithms',
-      'Quantum threat detection',
-      'Quantum encryption',
-      'Quantum key distribution',
-      'Future-proof security',
-      'Real-time threat analysis',
+
     ],
     popular: true,
     category: 'Quantum Security',
     icon: '🔒⚛️',
-    marketPrice: '$7,000-12,000/month',
-    benefits: [
-      'Quantum-resistant security',
-      'Future-proof protection',
-      'Advanced threat detection',
-      'Military-grade security',
-    ],
-    useCases: [
+
       'Government security',
       'Financial institutions',
       'Healthcare data protection',
@@ -132,14 +724,7 @@ id: 'quantum-cloud-infrastructure-platform',
     ],
   },
   {
-    id: 'edge-computing-orchestration-platform',
-    name: 'Edge Computing Orchestration Platform',
-    tagline: 'Intelligent edge computing management',
-    description:
-      'Comprehensive edge computing platform with intelligent orchestration, distributed computing optimization, and edge AI capabilities. Features edge resource management, latency optimization, and distributed AI processing.',
-    price: '$3,999',
-    period: 'month',
-    features: [
+
       'Intelligent edge orchestration',
       'Distributed computing optimization',
       'Edge AI processing',
@@ -150,62 +735,34 @@ id: 'quantum-cloud-infrastructure-platform',
     popular: true,
     category: 'Edge Computing',
     icon: '🌐⚡',
-    marketPrice: '$5,000-8,000/month',
-    benefits: [
-      'Ultra-low latency processing',
+
       'Distributed computing power',
       'Edge AI capabilities',
       'Scalable edge infrastructure',
     ],
-    useCases: [
-      'IoT applications',
-      'Real-time analytics',
+
       'Edge AI processing',
       'Distributed computing',
     ],
   },
   {
-    id: 'quantum-database-platform',
-    name: 'Quantum Database Platform',
-    tagline: 'Quantum-powered data management',
-    description:
-      'Revolutionary quantum database platform providing quantum-accelerated queries, quantum data compression, and quantum-optimized data structures. Features quantum search algorithms, quantum data indexing, and quantum data analytics.',
-    price: '$4,999',
-    period: 'month',
-    features: [
-      'Quantum-accelerated queries',
+
       'Quantum data compression',
       'Quantum search algorithms',
       'Quantum data indexing',
       'Quantum data analytics',
-      'Hybrid quantum-classical storage',
+
     ],
     popular: true,
     category: 'Quantum Database',
     icon: '🗄️⚛️',
-    marketPrice: '$6,000-10,000/month',
-    benefits: [
-      '1000x faster database queries',
-      'Quantum data compression',
-      'Advanced search capabilities',
-      'Future-proof data management',
-    ],
-    useCases: [
-      'Big data analytics',
-      'Real-time search',
+
       'Data warehousing',
       'Business intelligence',
     ],
   },
   {
-    id: 'ai-powered-network-security',
-    name: 'AI-Powered Network Security',
-    tagline: 'Intelligent network protection',
-    description:
-      'Advanced network security platform with AI-powered threat detection, intelligent firewall management, and predictive security analytics. Features behavioral analysis, anomaly detection, and automated threat response.',
-    price: '$2,499',
-    period: 'month',
-    features: [
+
       'AI threat detection',
       'Intelligent firewall management',
       'Behavioral analysis',
@@ -216,14 +773,13 @@ id: 'quantum-cloud-infrastructure-platform',
     popular: true,
     category: 'Network Security',
     icon: '🛡️🤖',
-    marketPrice: '$3,500-6,000/month',
-    benefits: [
+
       'Proactive threat detection',
       'Automated security response',
       'Intelligent network protection',
       'Reduced false positives',
     ],
-    useCases: [
+
       'Enterprise network security',
       'Cloud security',
       'IoT security',
@@ -231,14 +787,7 @@ id: 'quantum-cloud-infrastructure-platform',
     ],
   },
   {
-    id: 'quantum-internet-protocols',
-    name: 'Quantum Internet Protocols',
-    tagline: 'Next-generation quantum networking',
-    description:
-      'Revolutionary quantum internet protocols platform providing quantum communication standards, quantum routing algorithms, and quantum network optimization. Features quantum entanglement distribution, quantum routing, and quantum network security.',
-    price: '$7,999',
-    period: 'month',
-    features: [
+
       'Quantum communication protocols',
       'Quantum routing algorithms',
       'Quantum entanglement distribution',
@@ -249,14 +798,13 @@ id: 'quantum-cloud-infrastructure-platform',
     popular: false,
     category: 'Quantum Internet',
     icon: '🌐⚛️',
-    marketPrice: '$10,000-20,000/month',
-    benefits: [
+
       'Unbreakable quantum communication',
       'Quantum network optimization',
       'Future internet protocols',
       'Quantum internet infrastructure',
     ],
-    useCases: [
+
       'Government communications',
       'Financial networks',
       'Research networks',
@@ -264,15 +812,7 @@ id: 'quantum-cloud-infrastructure-platform',
     ],
   },
   {
-    id: 'ai-powered-infrastructure-monitoring',
-    name: 'AI-Powered Infrastructure Monitoring',
-    tagline: 'Intelligent infrastructure oversight',
-    description:
-      'Advanced infrastructure monitoring platform with AI-powered analytics, predictive maintenance, and intelligent alerting. Features automated monitoring, performance optimization, and intelligent resource management.',
-    price: '$1,999',
-    period: 'month',
-    features: [
-      'AI-powered monitoring',
+
       'Predictive maintenance',
       'Intelligent alerting',
       'Performance optimization',
@@ -282,14 +822,13 @@ id: 'quantum-cloud-infrastructure-platform',
     popular: true,
     category: 'Infrastructure Monitoring',
     icon: '📊🤖',
-    marketPrice: '$3,000-5,000/month',
-    benefits: [
+
       'Proactive issue detection',
       'Automated monitoring',
       'Performance optimization',
       'Reduced downtime',
     ],
-    useCases: [
+
       'Server monitoring',
       'Network monitoring',
       'Application monitoring',
@@ -297,22 +836,804 @@ id: 'quantum-cloud-infrastructure-platform',
     ],
   },
   {
-    id: 'quantum-storage-platform',
-    name: 'Quantum Storage Platform',
-    tagline: 'Quantum-accelerated data storage',
-    description:
-      'Revolutionary quantum storage platform providing quantum data compression, quantum data encoding, and quantum-optimized storage algorithms. Features quantum compression algorithms, quantum data encoding, and quantum storage optimization.',
-    price: '$5,499',
-    period: 'month',
-    features: [
+
       'Quantum data compression',
       'Quantum data encoding',
       'Quantum storage algorithms',
       'Quantum data optimization',
-      'Hybrid quantum-classical storage',
+
       'Quantum storage security',
     ],
     popular: true,
+    category: 'Quantum Storage',
+    icon: '💾⚛️',
+>>>>>>> origin/chore/fix-lint-and-merge
+
+export const real2036ITServices = [
+  {
+    id: 'quantum-cloud-infrastructure-platform'
+    name: 'Quantum Cloud Infrastructure Platform'
+    tagline: 'Next-generation quantum cloud computing'
+id: 'quantum-cloud-infrastructure-platform',
+    name: 'Quantum Cloud Infrastructure Platform',
+    tagline: 'Next-generation quantum cloud computing',
+origin/cursor/automate-test-improve-and-merge-code-2533
+    description:
+      Revolutionary quantum cloud infrastructure platform providing quantum computing resources, quantum-classical hybrid computing, and quantum cloud services. Features quantum resource management, quantum networking, and quantum security.',
+    price: '$6,999,
+    period: month',
+    features: [
+      'Quantum computing resources',
+      'Quantum-classical hybrid computing',
+
+export const real2036ITServices = [
+  {
+    id: 'quantum-cloud-infrastructure-platform'
+    name: 'Quantum Cloud Infrastructure Platform'
+    tagline: 'Next-generation quantum cloud computing'
+id: 'quantum-cloud-infrastructure-platform',
+    name: 'Quantum Cloud Infrastructure Platform',
+    tagline: 'Next-generation quantum cloud computing',
+
+export const real2036ITServices = [
+  {
+    id: 'quantum-cloud-infrastructure-platform
+    name: Quantum Cloud Infrastructure Platform'
+    tagline: 'Next-generation quantum cloud computing
+
+    ]
+    popular: true
+    category: Quantum Cloud'
+    icon: '☁️⚛️
+    marketPrice: $8,000-15,000/month'
+    benefits: [
+      'Access to quantum computing power
+      Hybrid classical-quantum processing'
+      'Future-proof cloud infrastructure
+      Quantum advantage in the cloud'
+    ]
+    useCases: [
+      'Scientific research computing
+      Financial modeling'
+      'Drug discovery
+      Climate simulation'
+    ]
+  }
+  {
+
+    id: 'ai-powered-devops-platform
+    name: AI-Powered DevOps Platform'
+    tagline: 'Intelligent DevOps automation
+    description:
+      Advanced DevOps platform with AI-powered automation, intelligent deployment strategies, and predictive infrastructure management. Features automated testing, deployment optimization, and intelligent monitoring.'
+    price: '$2,999
+    period: month'
+    features: [
+      'AI-powered deployment automation
+      Intelligent testing strategies'
+      'Predictive infrastructure scaling
+      Automated incident response'
+      'Smart resource optimization
+      Continuous learning algorithms'
+    ]
+    popular: true
+    category: 'DevOps & AI
+    icon: 🤖🔄'
+    marketPrice: '$4,000-7,000/month
+    benefits: [
+      90% faster deployment cycles'
+      'Intelligent infrastructure management
+      Predictive scaling'
+      'Automated incident resolution
+    ]
+    useCases: [
+      Continuous deployment'
+      'Infrastructure automation
+      Testing automation'
+      'Monitoring and alerting
+    ]
+  }
+  {
+    id: quantum-cybersecurity-platform'
+    name: 'Quantum Cybersecurity Platform
+    tagline: Quantum-resistant security solutions'
+    description:
+      'Advanced cybersecurity platform with quantum-resistant algorithms, quantum threat detection, and future-proof security protocols. Features quantum encryption, quantum key distribution, and quantum-resistant cryptography.
+    price: $5,499'
+    period: 'month
+    features: [
+      Quantum-resistant algorithms'
+      'Quantum threat detection
+      Quantum encryption'
+      'Quantum key distribution
+      Future-proof security'
+      'Real-time threat analysis
+    ]
+    popular: true
+    category: Quantum Security'
+    icon: '🔒⚛️
+    marketPrice: $7,000-12,000/month'
+    benefits: [
+      'Quantum-resistant security
+      Future-proof protection'
+      'Advanced threat detection
+      Military-grade security'
+    ]
+    useCases: [
+      'Government security
+      Financial institutions'
+      'Healthcare data protection
+      Critical infrastructure'
+    ]
+  }
+  {
+    id: 'edge-computing-orchestration-platform
+    name: Edge Computing Orchestration Platform'
+    tagline: 'Intelligent edge computing management
+    description:
+      Comprehensive edge computing platform with intelligent orchestration, distributed computing optimization, and edge AI capabilities. Features edge resource management, latency optimization, and distributed AI processing.'
+    price: '$3,999
+    period: month'
+    features: [
+      'Intelligent edge orchestration
+      Distributed computing optimization'
+      'Edge AI processing
+      Latency optimization'
+      'Edge resource management
+      Distributed data processing'
+    ]
+    popular: true
+    category: 'Edge Computing
+    icon: 🌐⚡'
+    marketPrice: '$5,000-8,000/month
+    benefits: [
+      Ultra-low latency processing'
+      'Distributed computing power
+      Edge AI capabilities'
+      'Scalable edge infrastructure
+    ]
+    useCases: [
+      IoT applications'
+      'Real-time analytics
+      Edge AI processing'
+      'Distributed computing
+    ]
+  }
+  {
+    id: quantum-database-platform'
+    name: 'Quantum Database Platform
+    tagline: Quantum-powered data management'
+    description:
+      'Revolutionary quantum database platform providing quantum-accelerated queries, quantum data compression, and quantum-optimized data structures. Features quantum search algorithms, quantum data indexing, and quantum data analytics.
+    price: $4,999'
+    period: 'month
+    features: [
+      Quantum-accelerated queries'
+      'Quantum data compression
+      Quantum search algorithms'
+      'Quantum data indexing
+      Quantum data analytics'
+      'Hybrid quantum-classical storage
+    ]
+    popular: true
+    category: Quantum Database'
+    icon: '🗄️⚛️
+    marketPrice: $6,000-10,000/month'
+    benefits: [
+      '1000x faster database queries
+      Quantum data compression'
+      'Advanced search capabilities
+      Future-proof data management'
+    ]
+    useCases: [
+      'Big data analytics
+      Real-time search'
+      'Data warehousing
+      Business intelligence'
+    ]
+  }
+  {
+    id: 'ai-powered-network-security
+    name: AI-Powered Network Security'
+    tagline: 'Intelligent network protection
+    description:
+      Advanced network security platform with AI-powered threat detection, intelligent firewall management, and predictive security analytics. Features behavioral analysis, anomaly detection, and automated threat response.'
+    price: '$2,499
+    period: month'
+    features: [
+      'AI threat detection
+      Intelligent firewall management'
+      'Behavioral analysis
+      Anomaly detection'
+      'Automated threat response
+      Predictive security analytics'
+    ]
+    popular: true
+    category: 'Network Security
+    icon: 🛡️🤖'
+    marketPrice: '$3,500-6,000/month
+    benefits: [
+      Proactive threat detection'
+      'Automated security response
+      Intelligent network protection'
+      'Reduced false positives
+    ]
+    useCases: [
+      Enterprise network security'
+      'Cloud security
+      IoT security'
+      'Remote work security
+    ]
+  }
+  {
+    id: quantum-internet-protocols'
+    name: 'Quantum Internet Protocols
+    tagline: Next-generation quantum networking'
+    description:
+      'Revolutionary quantum internet protocols platform providing quantum communication standards, quantum routing algorithms, and quantum network optimization. Features quantum entanglement distribution, quantum routing, and quantum network security.
+    price: $7,999'
+    period: 'month
+    features: [
+      Quantum communication protocols'
+      'Quantum routing algorithms
+      Quantum entanglement distribution'
+      'Quantum network optimization
+      Quantum network security'
+      'Quantum internet standards
+    ]
+    popular: false
+    category: Quantum Internet'
+    icon: '🌐⚛️
+    marketPrice: $10,000-20,000/month'
+    benefits: [
+      'Unbreakable quantum communication
+      Quantum network optimization'
+      'Future internet protocols
+      Quantum internet infrastructure'
+    ]
+    useCases: [
+      'Government communications
+      Financial networks'
+      'Research networks
+      Quantum internet backbone'
+    ]
+  }
+  {
+    id: 'ai-powered-infrastructure-monitoring
+    name: AI-Powered Infrastructure Monitoring'
+    tagline: 'Intelligent infrastructure oversight
+    description:
+      Advanced infrastructure monitoring platform with AI-powered analytics, predictive maintenance, and intelligent alerting. Features automated monitoring, performance optimization, and intelligent resource management.'
+    price: '$1,999
+    period: month'
+    features: [
+      'AI-powered monitoring
+      Predictive maintenance'
+      'Intelligent alerting
+      Performance optimization'
+      'Automated monitoring
+      Resource optimization'
+    ]
+    popular: true
+    category: 'Infrastructure Monitoring
+    icon: 📊🤖'
+    marketPrice: '$3,000-5,000/month
+    benefits: [
+      Proactive issue detection'
+      'Automated monitoring
+      Performance optimization'
+      'Reduced downtime
+    ]
+    useCases: [
+      Server monitoring'
+      'Network monitoring
+      Application monitoring'
+      'Cloud infrastructure
+    ]
+  }
+  {
+    id: quantum-storage-platform'
+    name: 'Quantum Storage Platform
+    tagline: Quantum-accelerated data storage'
+    description:
+      'Revolutionary quantum storage platform providing quantum data compression, quantum data encoding, and quantum-optimized storage algorithms. Features quantum compression algorithms, quantum data encoding, and quantum storage optimization.
+    price: $5,499'
+    period: 'month
+    features: [
+      Quantum data compression'
+      'Quantum data encoding
+      Quantum storage algorithms'
+      'Quantum data optimization
+      Hybrid quantum-classical storage'
+      'Quantum storage security
+    ]
+    popular: true
+    category: Quantum Storage'
+    icon: '💾⚛️
+    marketPrice: $7,000-12,000/month'
+    benefits: [
+      '100x data compression
+      Quantum data encoding'
+      'Advanced storage optimization
+      Future-proof storage technology'
+    ]
+    useCases: [
+      'Big data storage
+      Data archiving'
+      'Cloud storage
+      Data backup'
+    ]
+  }
+  {
+    id: 'ai-powered-disaster-recovery
+    name: AI-Powered Disaster Recovery'
+    tagline: 'Intelligent recovery automation
+    description:
+      Advanced disaster recovery platform with AI-powered recovery strategies, intelligent backup management, and automated recovery procedures. Features predictive recovery planning, automated testing, and intelligent backup optimization.'
+    price: '$3,499
+    period: month'
+    features: [
+      'AI recovery strategies
+      Intelligent backup management'
+      'Automated recovery procedures
+      Predictive recovery planning'
+      'Automated testing
+      Backup optimization'
+    ]
+    popular: true
+    category: 'Disaster Recovery
+    icon: 🔄🤖'
+    marketPrice: '$4,500-7,000/month
+    benefits: [
+
+      Automated recovery procedures'
+      'Intelligent backup management
+      Predictive recovery planning'
+      'Reduced recovery time
+    ]
+    useCases: [
+export const real2036ITServices = [;
+  {
+    id: quantum - cloud - infrastructure - platform',
+    name: 'Quantum Cloud Infrastructure Platform,
+    tagline: Next - generation quantum cloud computing',
+    description:;
+      'Revolutionary quantum cloud infrastructure platform providing quantum computing resources, quantum - classical hybrid computing, and quantum cloud services. Features quantum resource management, quantum networking, and quantum security.,
+    price: $6, 999',
+
+      'Quantum resource management,
+      Quantum networking',
+      'Quantum security protocols,
+      Scalable quantum infrastructure',
+    ],
+    popular: true,
+    category: 'Quantum Cloud,
+    icon: ☁️⚛️',
+
+      'Scientific research computing,
+      Financial modeling',
+      'Drug discovery,
+      Climate simulation']},
+  {
+
+      'Intelligent testing strategies,
+      Predictive infrastructure scaling',
+      'Automated incident response,
+      Smart resource optimization',
+      'Continuous learning algorithms,
+    ],
+    popular: true,
+    category: DevOps & AI',
+    icon: '🤖🔄,
+
+      90% faster deployment cycles',
+      'Intelligent infrastructure management,
+      Predictive scaling',
+      'Automated incident resolution],
+
+      Continuous deployment',
+      'Infrastructure automation,
+      Testing automation',
+      'Monitoring and alerting]},
+  {
+
+    ],
+    popular: true,
+    category: Quantum Security',
+    icon: '🔒⚛️,
+
+      Government security',
+      'Financial institutions,
+      Healthcare data protection',
+      'Critical infrastructure]},
+  {
+
+      Intelligent edge orchestration',
+      'Distributed computing optimization,
+      Edge AI processing',
+      'Latency optimization,
+      Edge resource management',
+      'Distributed data processing],
+    popular: true,
+    category: Edge Computing',
+    icon: '🌐⚡,
+
+      Distributed computing power',
+      'Edge AI capabilities,
+      Scalable edge infrastructure'],
+
+      'Edge AI processing,
+      Distributed computing']},
+  {
+
+      'Quantum data compression,
+      Quantum search algorithms',
+      'Quantum data indexing,
+      Quantum data analytics'],
+    popular: true,
+    category: 'Quantum Database,
+    icon: 🗄️⚛️',
+
+      'Data warehousing,
+      Business intelligence']},
+  {
+
+      'AI threat detection,
+      Intelligent firewall management',
+      'Behavioral analysis,
+      Anomaly detection',
+      'Automated threat response,
+      Predictive security analytics'],
+    popular: true,
+    category: 'Network Security,
+    icon: 🛡️🤖',
+
+      'Proactive threat detection,
+      Automated security response',
+      'Intelligent network protection,
+      Reduced false positives'],
+
+      'Enterprise network security,
+      Cloud security',
+      'IoT security,
+      Remote work security']},
+  {
+
+      'Quantum communication protocols,
+      Quantum routing algorithms',
+      'Quantum entanglement distribution,
+      Quantum network optimization',
+      'Quantum network security,
+      Quantum internet standards'],
+    popular: false,
+    category: 'Quantum Internet,
+    icon: 🌐⚛️',
+
+      'Unbreakable quantum communication,
+      Quantum network optimization',
+      'Future internet protocols,
+      Quantum internet infrastructure'],
+
+      'Government communications,
+      Financial networks',
+      'Research networks,
+      Quantum internet backbone']},
+  {
+
+      'Predictive maintenance,
+      Intelligent alerting',
+      'Performance optimization,
+      Automated monitoring',
+      'Resource optimization],
+    popular: true,
+    category: Infrastructure Monitoring',
+    icon: '📊🤖,
+
+      Proactive issue detection',
+      'Automated monitoring,
+      Performance optimization',
+      'Reduced downtime],
+
+      Server monitoring',
+      'Network monitoring,
+      Application monitoring',
+      'Cloud infrastructure]},
+  {
+
+      Quantum data compression',
+      'Quantum data encoding,
+      Quantum storage algorithms',
+      'Quantum data optimization,
+
+      Quantum storage security'],
+    popular: true,
+<<<<<<< HEAD
+    category: 'Quantum Storage,
+    icon: 💾⚛️'],
+    popular: true,
+    category: 'Quantum Database,
+    icon: 🗄️⚛️'],
+    popular: true,
+    category: 'Network Security,
+    icon: 🛡️🤖'],
+    popular: false,
+    category: 'Quantum Internet,
+    icon: 🌐⚛️'],
+    popular: true,
+    category: 'Infrastructure Monitoring,
+    icon: 📊🤖'],
+    popular: true,
+    category: 'Quantum Storage,
+    icon: 💾⚛️',
+
+
+export const real2036ITServices = [
+  {
+    id: 'quantum-cloud-infrastructure-platform
+    name: Quantum Cloud Infrastructure Platform'
+    tagline: 'Next-generation quantum cloud computing
+id: quantum-cloud-infrastructure-platform',
+    name: 'Quantum Cloud Infrastructure Platform,
+    tagline: Next-generation quantum cloud computing',
+origin/cursor/automate-test-improve-and-merge-code-2533
+    description:
+      'Revolutionary quantum cloud infrastructure platform providing quantum computing resources, quantum-classical hybrid computing, and quantum cloud services. Features quantum resource management, quantum networking, and quantum security.,
+    price: $6,999',
+    period: 'month,
+    features: [
+      Quantum computing resources',
+      'Quantum-classical hybrid computing,
+      Quantum resource management',
+      'Quantum networking,
+      Quantum security protocols',
+      'Scalable quantum infrastructure],
+    popular: true,
+    category: Quantum Cloud',
+    icon: '☁️⚛️,
+    marketPrice: $8,000-15,000/month',
+    benefits: [
+      'Access to quantum computing power,
+      Hybrid classical-quantum processing',
+      'Future-proof cloud infrastructure,
+      Quantum advantage in the cloud'],
+    useCases: [
+      'Scientific research computing,
+      Financial modeling',
+      'Drug discovery,
+      Climate simulation']},
+  {
+    id: 'ai-powered-devops-platform,
+    name: AI-Powered DevOps Platform',
+    tagline: 'Intelligent DevOps automation,
+    description:
+      Advanced DevOps platform with AI-powered automation, intelligent deployment strategies, and predictive infrastructure management. Features automated testing, deployment optimization, and intelligent monitoring.',
+    price: '$2,999,
+    period: month',
+    features: [
+      'AI-powered deployment automation,
+      Intelligent testing strategies',
+      'Predictive infrastructure scaling,
+      Automated incident response',
+      'Smart resource optimization,
+      Continuous learning algorithms'],
+    popular: true,
+    category: 'DevOps & AI,
+    icon: 🤖🔄',
+    marketPrice: '$4,000-7,000/month,
+    benefits: [
+      90% faster deployment cycles',
+      'Intelligent infrastructure management,
+      Predictive scaling',
+      'Automated incident resolution],
+    useCases: [
+      Continuous deployment',
+      'Infrastructure automation,
+      Testing automation',
+      'Monitoring and alerting]},
+  {
+    id: quantum-cybersecurity-platform',
+    name: 'Quantum Cybersecurity Platform,
+    tagline: Quantum-resistant security solutions',
+    description:
+      'Advanced cybersecurity platform with quantum-resistant algorithms, quantum threat detection, and future-proof security protocols. Features quantum encryption, quantum key distribution, and quantum-resistant cryptography.,
+    price: $5,499',
+    period: 'month,
+    features: [
+      Quantum-resistant algorithms',
+      'Quantum threat detection,
+      Quantum encryption',
+      'Quantum key distribution,
+      Future-proof security',
+      'Real-time threat analysis],
+    popular: true,
+    category: Quantum Security',
+    icon: '🔒⚛️,
+    marketPrice: $7,000-12,000/month',
+    benefits: [
+      'Quantum-resistant security,
+      Future-proof protection',
+      'Advanced threat detection,
+      Military-grade security'],
+    useCases: [
+      'Government security,
+      Financial institutions',
+      'Healthcare data protection,
+      Critical infrastructure']},
+  {
+    id: 'edge-computing-orchestration-platform,
+    name: Edge Computing Orchestration Platform',
+    tagline: 'Intelligent edge computing management,
+    description:
+      Comprehensive edge computing platform with intelligent orchestration, distributed computing optimization, and edge AI capabilities. Features edge resource management, latency optimization, and distributed AI processing.',
+    price: '$3,999,
+    period: month',
+    features: [
+      'Intelligent edge orchestration,
+      Distributed computing optimization',
+      'Edge AI processing,
+      Latency optimization',
+      'Edge resource management,
+      Distributed data processing'],
+    popular: true,
+    category: 'Edge Computing,
+    icon: 🌐⚡',
+    marketPrice: '$5,000-8,000/month,
+    benefits: [
+      Ultra-low latency processing',
+      'Distributed computing power,
+      Edge AI capabilities',
+      'Scalable edge infrastructure],
+    useCases: [
+      IoT applications',
+      'Real-time analytics,
+      Edge AI processing',
+      'Distributed computing]},
+  {
+    id: quantum-database-platform',
+    name: 'Quantum Database Platform,
+    tagline: Quantum-powered data management',
+    description:
+      'Revolutionary quantum database platform providing quantum-accelerated queries, quantum data compression, and quantum-optimized data structures. Features quantum search algorithms, quantum data indexing, and quantum data analytics.,
+    price: $4,999',
+    period: 'month,
+    features: [
+      Quantum-accelerated queries',
+      'Quantum data compression,
+      Quantum search algorithms',
+      'Quantum data indexing,
+      Quantum data analytics',
+      'Hybrid quantum-classical storage],
+    popular: true,
+    category: Quantum Database',
+    icon: '🗄️⚛️,
+    marketPrice: $6,000-10,000/month',
+    benefits: [
+      '1000x faster database queries,
+      Quantum data compression',
+      'Advanced search capabilities,
+      Future-proof data management'],
+    useCases: [
+      'Big data analytics,
+      Real-time search',
+      'Data warehousing,
+      Business intelligence']},
+  {
+    id: 'ai-powered-network-security,
+    name: AI-Powered Network Security',
+    tagline: 'Intelligent network protection,
+    description:
+      Advanced network security platform with AI-powered threat detection, intelligent firewall management, and predictive security analytics. Features behavioral analysis, anomaly detection, and automated threat response.',
+    price: '$2,499,
+    period: month',
+    features: [
+      'AI threat detection,
+      Intelligent firewall management',
+      'Behavioral analysis,
+      Anomaly detection',
+      'Automated threat response,
+      Predictive security analytics'],
+    popular: true,
+    category: 'Network Security,
+    icon: 🛡️🤖',
+    marketPrice: '$3,500-6,000/month,
+    benefits: [
+      Proactive threat detection',
+      'Automated security response,
+      Intelligent network protection',
+      'Reduced false positives],
+    useCases: [
+      Enterprise network security',
+      'Cloud security,
+      IoT security',
+      'Remote work security]},
+  {
+    id: quantum-internet-protocols',
+    name: 'Quantum Internet Protocols,
+    tagline: Next-generation quantum networking',
+    description:
+      'Revolutionary quantum internet protocols platform providing quantum communication standards, quantum routing algorithms, and quantum network optimization. Features quantum entanglement distribution, quantum routing, and quantum network security.,
+    price: $7,999',
+    period: 'month,
+    features: [
+      Quantum communication protocols',
+      'Quantum routing algorithms,
+      Quantum entanglement distribution',
+      'Quantum network optimization,
+      Quantum network security',
+      'Quantum internet standards],
+    popular: false,
+    category: Quantum Internet',
+    icon: '🌐⚛️,
+    marketPrice: $10,000-20,000/month',
+    benefits: [
+      'Unbreakable quantum communication,
+      Quantum network optimization',
+      'Future internet protocols,
+      Quantum internet infrastructure'],
+    useCases: [
+      'Government communications,
+      Financial networks',
+      'Research networks,
+      Quantum internet backbone']},
+  {
+    id: 'ai-powered-infrastructure-monitoring,
+    name: AI-Powered Infrastructure Monitoring',
+    tagline: 'Intelligent infrastructure oversight,
+    description:
+      Advanced infrastructure monitoring platform with AI-powered analytics, predictive maintenance, and intelligent alerting. Features automated monitoring, performance optimization, and intelligent resource management.',
+    price: '$1,999,
+    period: month',
+    features: [
+      'AI-powered monitoring,
+      Predictive maintenance',
+      'Intelligent alerting,
+      Performance optimization',
+      'Automated monitoring,
+      Resource optimization'],
+    popular: true,
+    category: 'Infrastructure Monitoring,
+    icon: 📊🤖',
+    marketPrice: '$3,000-5,000/month,
+    benefits: [
+      Proactive issue detection',
+      'Automated monitoring,
+      Performance optimization',
+      'Reduced downtime],
+    useCases: [
+      Server monitoring',
+      'Network monitoring,
+      Application monitoring',
+      'Cloud infrastructure]},
+  {
+    id: quantum-storage-platform',
+    name: 'Quantum Storage Platform,
+    tagline: Quantum-accelerated data storage',
+    description:
+      'Revolutionary quantum storage platform providing quantum data compression, quantum data encoding, and quantum-optimized storage algorithms. Features quantum compression algorithms, quantum data encoding, and quantum storage optimization.,
+    price: $5,499',
+    period: 'month,
+    features: [
+      Quantum data compression',
+      'Quantum data encoding,
+      Quantum storage algorithms',
+      'Quantum data optimization,
+      Hybrid quantum-classical storage',
+      'Quantum storage security],
+    popular: true,
+    category: Quantum Storage',
+    icon: '💾⚛️,
+    marketPrice: $7,000-12,000/month',
+    benefits: [
+      '100x data compression,
+      Quantum data encoding',
+      'Advanced storage optimization,
+      Future-proof storage technology'],
+    useCases: [
+      'Data center recovery'
+      'Cloud recovery'
+      'Application recovery'
+      'Business continuity'
+=======
     category: 'Quantum Storage',
     icon: '💾⚛️',
     marketPrice: '$7,000-12,000/month',
@@ -329,18 +1650,6 @@ id: 'quantum-cloud-infrastructure-platform',
       'Business continuity'
     ]
   }
-=======
-    description:
-      'Revolutionary quantum cloud infrastructure platform providing quantum computing resources, quantum-classical hybrid computing, and quantum cloud services. Features quantum resource management, quantum networking, and quantum security.'
-    price: '$6,999'
-    period: 'month'
-      'Quantum computing resources'
-      'Quantum-classical hybrid computing'
-      'Quantum resource management'
-      'Quantum networking'
-      'Quantum security protocols'
-      'Scalable quantum infrastructure'
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
     ]
     popular: true
     category: 'Quantum Cloud'
@@ -360,7 +1669,361 @@ id: 'quantum-cloud-infrastructure-platform',
     ]
   }
   {
+];      'Data center recoveryCloud recoveryApplication recoveryBusiness continuity'
+
+export const real2036ITServices = [
+  {
+
+    id: 'quantum-cloud-infrastructure-platform'','
+  name: 'Quantum Cloud Infrastructure Platform'''
+    tagline: 'Next-generation quantum cloud computing'',
+  description:'
+      'Revolutionary quantum cloud infrastructure platform providing quantum computing resources, quantum-classical hybrid computing, and quantum cloud services. Features quantum resource management, quantum networking, and quantum security.'''
+    price: '$6,999'''
+    period: 'month'''
+      'Quantum computing resources'''
+      'Quantum-classical hybrid computing'''
+      'Quantum resource management'''
+      'Quantum networking'''
+      'Quantum security protocols'''
+      'Scalable quantum infrastructure'']
+    ]
+    popular: true;,'
+  category: 'Quantum Cloud'''
+    icon: '☁️⚛️'','
+  marketPrice: '$8,000-15,000/month''
+    benefits: ['
+      'Access to quantum computing power'''
+      'Hybrid classical-quantum processing'''
+      'Future-proof cloud infrastructure'''
+      'Quantum advantage in the cloud'']
+    ]
+    useCases: ['
+      'Scientific research computing'''
+      'Financial modeling'''
+      'Drug discovery'''
+      'Climate simulation'']
+    ]
+  }
+  {'
+    id: 'ai-powered-devops-platform'','
+  name: 'AI-Powered DevOps Platform'''
+    tagline: 'Intelligent DevOps automation'',
+  description:'
+      'Advanced DevOps platform with AI-powered automation, intelligent deployment strategies, and predictive infrastructure management. Features automated testing, deployment optimization, and intelligent monitoring.'''
+    price: '$2,999'''
+    period: 'month'',
+  features: ['
+      'AI-powered deployment automation'''
+      'Intelligent testing strategies'''
+      'Predictive infrastructure scaling'''
+      'Automated incident response'''
+      'Smart resource optimization'''
+      'Continuous learning algorithms'']
+    ]
+    popular: true;,'
+  category: 'DevOps & AI'''
+    icon: '🤖🔄'','
+  marketPrice: '$4,000-7,000/month''
+    benefits: ['
+      '90% faster deployment cycles'''
+      'Intelligent infrastructure management'''
+      'Predictive scaling'''
+      'Automated incident resolution'']
+    ]
+    useCases: ['
+      'Continuous deployment'''
+      'Infrastructure automation'''
+      'Testing automation'''
+      'Monitoring and alerting'']
+    ]
+  }
+  {'
+    id: 'quantum-cybersecurity-platform'','
+  name: 'Quantum Cybersecurity Platform'''
+    tagline: 'Quantum-resistant security solutions'',
+  description:'
+      'Advanced cybersecurity platform with quantum-resistant algorithms, quantum threat detection, and future-proof security protocols. Features quantum encryption, quantum key distribution, and quantum-resistant cryptography.'''
+    price: '$5,499'''
+    period: 'month'',
+  features: ['
+      'Quantum-resistant algorithms'''
+      'Quantum threat detection'''
+      'Quantum encryption'''
+      'Quantum key distribution'''
+      'Future-proof security'''
+      'Real-time threat analysis'']
+    ]
+    popular: true;,'
+  category: 'Quantum Security'''
+    icon: '🔒⚛️'','
+  marketPrice: '$7,000-12,000/month''
+    benefits: ['
+      'Quantum-resistant security'''
+      'Future-proof protection'''
+      'Advanced threat detection'''
+      'Military-grade security'']
+    ]
+    useCases: ['
+      'Government security'''
+      'Financial institutions'''
+      'Healthcare data protection'''
+      'Critical infrastructure'']
+    ]
+  }
+  {'
+    id: 'edge-computing-orchestration-platform'','
+  name: 'Edge Computing Orchestration Platform'''
+    tagline: 'Intelligent edge computing management'',
+  description:'
+      'Comprehensive edge computing platform with intelligent orchestration, distributed computing optimization, and edge AI capabilities. Features edge resource management, latency optimization, and distributed AI processing.'''
+    price: '$3,999'''
+    period: 'month'',
+  features: ['
+      'Intelligent edge orchestration'''
+      'Distributed computing optimization'''
+      'Edge AI processing'''
+      'Latency optimization'''
+      'Edge resource management'''
+      'Distributed data processing'']
+    ]
+    popular: true;,'
+  category: 'Edge Computing'''
+    icon: '🌐⚡'','
+  marketPrice: '$5,000-8,000/month''
+    benefits: ['
+      'Ultra-low latency processing'''
+      'Distributed computing power'''
+      'Edge AI capabilities'''
+      'Scalable edge infrastructure'']
+    ]
+    useCases: ['
+      'IoT applications'''
+      'Real-time analytics'''
+      'Edge AI processing'''
+      'Distributed computing'']
+    ]
+  }
+  {'
+    id: 'quantum-database-platform'','
+  name: 'Quantum Database Platform'''
+    tagline: 'Quantum-powered data management'',
+  description:'
+      'Revolutionary quantum database platform providing quantum-accelerated queries, quantum data compression, and quantum-optimized data structures. Features quantum search algorithms, quantum data indexing, and quantum data analytics.'''
+    price: '$4,999'''
+    period: 'month'',
+  features: ['
+      'Quantum-accelerated queries'''
+      'Quantum data compression'''
+      'Quantum search algorithms'''
+      'Quantum data indexing'''
+      'Quantum data analytics'''
+      'Hybrid quantum-classical storage'']
+    ]
+    popular: true;,'
+  category: 'Quantum Database'''
+    icon: '🗄️⚛️'','
+  marketPrice: '$6,000-10,000/month''
+    benefits: ['
+      '1000x faster database queries'''
+      'Quantum data compression'''
+      'Advanced search capabilities'''
+      'Future-proof data management'']
+    ]
+    useCases: ['
+      'Big data analytics'''
+      'Real-time search'''
+      'Data warehousing'''
+      'Business intelligence'']
+    ]
+  }
+  {'
+    id: 'ai-powered-network-security'','
+  name: 'AI-Powered Network Security'''
+    tagline: 'Intelligent network protection'',
+  description:'
+      'Advanced network security platform with AI-powered threat detection, intelligent firewall management, and predictive security analytics. Features behavioral analysis, anomaly detection, and automated threat response.'''
+    price: '$2,499'''
+    period: 'month'',
+  features: ['
+      'AI threat detection'''
+      'Intelligent firewall management'''
+      'Behavioral analysis'''
+      'Anomaly detection'''
+      'Automated threat response'''
+      'Predictive security analytics'']
+    ]
+    popular: true;,'
+  category: 'Network Security'''
+    icon: '🛡️🤖'','
+  marketPrice: '$3,500-6,000/month''
+    benefits: ['
+      'Proactive threat detection'''
+      'Automated security response'''
+      'Intelligent network protection'''
+      'Reduced false positives'']
+    ]
+    useCases: ['
+      'Enterprise network security'''
+      'Cloud security'''
+      'IoT security'''
+      'Remote work security'']
+    ]
+  }
+  {'
+    id: 'quantum-internet-protocols'','
+  name: 'Quantum Internet Protocols'''
+    tagline: 'Next-generation quantum networking'',
+  description:'
+      'Revolutionary quantum internet protocols platform providing quantum communication standards, quantum routing algorithms, and quantum network optimization. Features quantum entanglement distribution, quantum routing, and quantum network security.'''
+    price: '$7,999'''
+    period: 'month'',
+  features: ['
+      'Quantum communication protocols'''
+      'Quantum routing algorithms'''
+      'Quantum entanglement distribution'''
+      'Quantum network optimization'''
+      'Quantum network security'''
+      'Quantum internet standards'']
+    ]
+    popular: false;,'
+  category: 'Quantum Internet'''
+    icon: '🌐⚛️'','
+  marketPrice: '$10,000-20,000/month''
+    benefits: ['
+      'Unbreakable quantum communication'''
+      'Quantum network optimization'''
+      'Future internet protocols'''
+      'Quantum internet infrastructure'']
+    ]
+    useCases: ['
+      'Government communications'''
+      'Financial networks'''
+      'Research networks'''
+      'Quantum internet backbone'']
+    ]
+  }
+  {'
+    id: 'ai-powered-infrastructure-monitoring'','
+  name: 'AI-Powered Infrastructure Monitoring'''
+    tagline: 'Intelligent infrastructure oversight'',
+  description:'
+      'Advanced infrastructure monitoring platform with AI-powered analytics, predictive maintenance, and intelligent alerting. Features automated monitoring, performance optimization, and intelligent resource management.'''
+    price: '$1,999'''
+    period: 'month'',
+  features: ['
+      'AI-powered monitoring'''
+      'Predictive maintenance'''
+      'Intelligent alerting'''
+      'Performance optimization'''
+      'Automated monitoring'''
+      'Resource optimization'']
+    ]
+    popular: true;,'
+  category: 'Infrastructure Monitoring'''
+    icon: '📊🤖'','
+  marketPrice: '$3,000-5,000/month''
+    benefits: ['
+      'Proactive issue detection'''
+      'Automated monitoring'''
+      'Performance optimization'''
+      'Reduced downtime'']
+    ]
+    useCases: ['
+      'Server monitoring'''
+      'Network monitoring'''
+      'Application monitoring'''
+      'Cloud infrastructure'']
+    ]
+  }
+  {'
+    id: 'quantum-storage-platform'','
+  name: 'Quantum Storage Platform'''
+    tagline: 'Quantum-accelerated data storage'',
+  description:'
+      'Revolutionary quantum storage platform providing quantum data compression, quantum data encoding, and quantum-optimized storage algorithms. Features quantum compression algorithms, quantum data encoding, and quantum storage optimization.'''
+    price: '$5,499'''
+    period: 'month'',
+  features: ['
+      'Quantum data compression'''
+      'Quantum data encoding'''
+      'Quantum storage algorithms'''
+      'Quantum data optimization'''
+      'Hybrid quantum-classical storage'''
+      'Quantum storage security'']
+    ]
+    popular: true;,'
+  category: 'Quantum Storage'''
+    icon: '💾⚛️'','
+  marketPrice: '$7,000-12,000/month''
+    benefits: ['
+      '100x data compression'''
+      'Quantum data encoding'''
+      'Advanced storage optimization'''
+      'Future-proof storage technology'']
+    ]
+    useCases: ['
+      'Big data storage'''
+      'Data archiving'''
+      'Cloud storage'''
+      'Data backup'']
+    ]
+  }
+  {'
+    id: 'ai-powered-disaster-recovery'','
+  name: 'AI-Powered Disaster Recovery'''
+    tagline: 'Intelligent recovery automation'',
+  description:'
+      'Advanced disaster recovery platform with AI-powered recovery strategies, intelligent backup management, and automated recovery procedures. Features predictive recovery planning, automated testing, and intelligent backup optimization.'''
+    price: '$3,499'''
+    period: 'month'',
+  features: ['
+      'AI recovery strategies'''
+      'Intelligent backup management'''
+      'Automated recovery procedures'''
+      'Predictive recovery planning'''
+      'Automated testing'''
+      'Backup optimization'']
+    ]
+    popular: true;,'
+  category: 'Disaster Recovery'''
+    icon: '🔄🤖'','
+  marketPrice: '$4,500-7,000/month''
+    benefits: ['
+      'Automated recovery procedures'''
+      'Intelligent backup management'''
+      'Predictive recovery planning'''
+      'Reduced recovery time'']
+    ]
+    useCases: ['
+      'Data center recovery'''
+      'Cloud recovery'''
+      'Application recovery'''
+      'Business continuity'']
+>>>>>>> origin/chore/fix-lint-and-merge
+    ]
+  }
+    ]
+    popular: true;,'
+  category: 'Quantum Cloud'''
+    icon: '☁️⚛️'','
+  marketPrice: '$8,000-15,000/month''
+    benefits: ['
+      'Access to quantum computing power'''
+      'Hybrid classical-quantum processing'''
+      'Future-proof cloud infrastructure'''
+      'Quantum advantage in the cloud'']
+
+    ]
+    useCases: ['
+      'Scientific research computing'''
+      'Financial modeling'''
+      'Drug discovery'''
+      'Climate simulation'']
+    ]
+  }
 <<<<<<< HEAD
+  {
 ];      'Data center recoveryCloud recoveryApplication recoveryBusiness continuity'
     ]
   }
@@ -399,8 +2062,6 @@ export const real2036ITServices = [
     ]
   }
   {
-=======
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
     id: 'ai-powered-devops-platform'
     name: 'AI-Powered DevOps Platform'
     tagline: 'Intelligent DevOps automation'
@@ -685,362 +2346,6 @@ export const real2036ITServices = [
     icon: '🔄🤖'
     marketPrice: '$4,500-7,000/month'
     benefits: [
-<<<<<<< HEAD
-=======
-      'Automated recovery procedures'
-      'Intelligent backup management'
-      'Predictive recovery planning'
-      'Reduced recovery time'
-    ]
-    useCases: [
-      'Data center recovery'
-      'Cloud recovery'
-      'Application recovery'
-      'Business continuity'
-    ]
-  }
-    ]
-    popular: true
-    category: 'Quantum Cloud'
-    icon: '☁️⚛️'
-    marketPrice: '$8,000-15,000/month'
-    benefits: [
-      'Access to quantum computing power'
-      'Hybrid classical-quantum processing'
-      'Future-proof cloud infrastructure'
-      'Quantum advantage in the cloud'
-    ]
-    useCases: [
-      'Scientific research computing'
-      'Financial modeling'
-      'Drug discovery'
-      'Climate simulation'
-    ]
-  }
-  {
-];      'Data center recoveryCloud recoveryApplication recoveryBusiness continuity'
-    ]
-  }
-];
-export const real2036ITServices = [
-  {
-    id: 'quantum-cloud-infrastructure-platform'
-    name: 'Quantum Cloud Infrastructure Platform'
-    tagline: 'Next-generation quantum cloud computing'
-    description:
-      'Revolutionary quantum cloud infrastructure platform providing quantum computing resources, quantum-classical hybrid computing, and quantum cloud services. Features quantum resource management, quantum networking, and quantum security.'
-    price: '$6,999'
-    period: 'month'
-      'Quantum computing resources'
-      'Quantum-classical hybrid computing'
-      'Quantum resource management'
-      'Quantum networking'
-      'Quantum security protocols'
-      'Scalable quantum infrastructure'
-    ]
-    popular: true
-    category: 'Quantum Cloud'
-    icon: '☁️⚛️'
-    marketPrice: '$8,000-15,000/month'
-    benefits: [
-      'Access to quantum computing power'
-      'Hybrid classical-quantum processing'
-      'Future-proof cloud infrastructure'
-      'Quantum advantage in the cloud'
-    ]
-    useCases: [
-      'Scientific research computing'
-      'Financial modeling'
-      'Drug discovery'
-      'Climate simulation'
-    ]
-  }
-  {
-    id: 'ai-powered-devops-platform'
-    name: 'AI-Powered DevOps Platform'
-    tagline: 'Intelligent DevOps automation'
-    description:
-      'Advanced DevOps platform with AI-powered automation, intelligent deployment strategies, and predictive infrastructure management. Features automated testing, deployment optimization, and intelligent monitoring.'
-    price: '$2,999'
-    period: 'month'
-    features: [
-      'AI-powered deployment automation'
-      'Intelligent testing strategies'
-      'Predictive infrastructure scaling'
-      'Automated incident response'
-      'Smart resource optimization'
-      'Continuous learning algorithms'
-    ]
-    popular: true
-    category: 'DevOps & AI'
-    icon: '🤖🔄'
-    marketPrice: '$4,000-7,000/month'
-    benefits: [
-      '90% faster deployment cycles'
-      'Intelligent infrastructure management'
-      'Predictive scaling'
-      'Automated incident resolution'
-    ]
-    useCases: [
-      'Continuous deployment'
-      'Infrastructure automation'
-      'Testing automation'
-      'Monitoring and alerting'
-    ]
-  }
-  {
-    id: 'quantum-cybersecurity-platform'
-    name: 'Quantum Cybersecurity Platform'
-    tagline: 'Quantum-resistant security solutions'
-    description:
-      'Advanced cybersecurity platform with quantum-resistant algorithms, quantum threat detection, and future-proof security protocols. Features quantum encryption, quantum key distribution, and quantum-resistant cryptography.'
-    price: '$5,499'
-    period: 'month'
-    features: [
-      'Quantum-resistant algorithms'
-      'Quantum threat detection'
-      'Quantum encryption'
-      'Quantum key distribution'
-      'Future-proof security'
-      'Real-time threat analysis'
-    ]
-    popular: true
-    category: 'Quantum Security'
-    icon: '🔒⚛️'
-    marketPrice: '$7,000-12,000/month'
-    benefits: [
-      'Quantum-resistant security'
-      'Future-proof protection'
-      'Advanced threat detection'
-      'Military-grade security'
-    ]
-    useCases: [
-      'Government security'
-      'Financial institutions'
-      'Healthcare data protection'
-      'Critical infrastructure'
-    ]
-  }
-  {
-    id: 'edge-computing-orchestration-platform'
-    name: 'Edge Computing Orchestration Platform'
-    tagline: 'Intelligent edge computing management'
-    description:
-      'Comprehensive edge computing platform with intelligent orchestration, distributed computing optimization, and edge AI capabilities. Features edge resource management, latency optimization, and distributed AI processing.'
-    price: '$3,999'
-    period: 'month'
-    features: [
-      'Intelligent edge orchestration'
-      'Distributed computing optimization'
-      'Edge AI processing'
-      'Latency optimization'
-      'Edge resource management'
-      'Distributed data processing'
-    ]
-    popular: true
-    category: 'Edge Computing'
-    icon: '🌐⚡'
-    marketPrice: '$5,000-8,000/month'
-    benefits: [
-      'Ultra-low latency processing'
-      'Distributed computing power'
-      'Edge AI capabilities'
-      'Scalable edge infrastructure'
-    ]
-    useCases: [
-      'IoT applications'
-      'Real-time analytics'
-      'Edge AI processing'
-      'Distributed computing'
-    ]
-  }
-  {
-    id: 'quantum-database-platform'
-    name: 'Quantum Database Platform'
-    tagline: 'Quantum-powered data management'
-    description:
-      'Revolutionary quantum database platform providing quantum-accelerated queries, quantum data compression, and quantum-optimized data structures. Features quantum search algorithms, quantum data indexing, and quantum data analytics.'
-    price: '$4,999'
-    period: 'month'
-    features: [
-      'Quantum-accelerated queries'
-      'Quantum data compression'
-      'Quantum search algorithms'
-      'Quantum data indexing'
-      'Quantum data analytics'
-      'Hybrid quantum-classical storage'
-    ]
-    popular: true
-    category: 'Quantum Database'
-    icon: '🗄️⚛️'
-    marketPrice: '$6,000-10,000/month'
-    benefits: [
-      '1000x faster database queries'
-      'Quantum data compression'
-      'Advanced search capabilities'
-      'Future-proof data management'
-    ]
-    useCases: [
-      'Big data analytics'
-      'Real-time search'
-      'Data warehousing'
-      'Business intelligence'
-    ]
-  }
-  {
-    id: 'ai-powered-network-security'
-    name: 'AI-Powered Network Security'
-    tagline: 'Intelligent network protection'
-    description:
-      'Advanced network security platform with AI-powered threat detection, intelligent firewall management, and predictive security analytics. Features behavioral analysis, anomaly detection, and automated threat response.'
-    price: '$2,499'
-    period: 'month'
-    features: [
-      'AI threat detection'
-      'Intelligent firewall management'
-      'Behavioral analysis'
-      'Anomaly detection'
-      'Automated threat response'
-      'Predictive security analytics'
-    ]
-    popular: true
-    category: 'Network Security'
-    icon: '🛡️🤖'
-    marketPrice: '$3,500-6,000/month'
-    benefits: [
-      'Proactive threat detection'
-      'Automated security response'
-      'Intelligent network protection'
-      'Reduced false positives'
-    ]
-    useCases: [
-      'Enterprise network security'
-      'Cloud security'
-      'IoT security'
-      'Remote work security'
-    ]
-  }
-  {
-    id: 'quantum-internet-protocols'
-    name: 'Quantum Internet Protocols'
-    tagline: 'Next-generation quantum networking'
-    description:
-      'Revolutionary quantum internet protocols platform providing quantum communication standards, quantum routing algorithms, and quantum network optimization. Features quantum entanglement distribution, quantum routing, and quantum network security.'
-    price: '$7,999'
-    period: 'month'
-    features: [
-      'Quantum communication protocols'
-      'Quantum routing algorithms'
-      'Quantum entanglement distribution'
-      'Quantum network optimization'
-      'Quantum network security'
-      'Quantum internet standards'
-    ]
-    popular: false
-    category: 'Quantum Internet'
-    icon: '🌐⚛️'
-    marketPrice: '$10,000-20,000/month'
-    benefits: [
-      'Unbreakable quantum communication'
-      'Quantum network optimization'
-      'Future internet protocols'
-      'Quantum internet infrastructure'
-    ]
-    useCases: [
-      'Government communications'
-      'Financial networks'
-      'Research networks'
-      'Quantum internet backbone'
-    ]
-  }
-  {
-    id: 'ai-powered-infrastructure-monitoring'
-    name: 'AI-Powered Infrastructure Monitoring'
-    tagline: 'Intelligent infrastructure oversight'
-    description:
-      'Advanced infrastructure monitoring platform with AI-powered analytics, predictive maintenance, and intelligent alerting. Features automated monitoring, performance optimization, and intelligent resource management.'
-    price: '$1,999'
-    period: 'month'
-    features: [
-      'AI-powered monitoring'
-      'Predictive maintenance'
-      'Intelligent alerting'
-      'Performance optimization'
-      'Automated monitoring'
-      'Resource optimization'
-    ]
-    popular: true
-    category: 'Infrastructure Monitoring'
-    icon: '📊🤖'
-    marketPrice: '$3,000-5,000/month'
-    benefits: [
-      'Proactive issue detection'
-      'Automated monitoring'
-      'Performance optimization'
-      'Reduced downtime'
-    ]
-    useCases: [
-      'Server monitoring'
-      'Network monitoring'
-      'Application monitoring'
-      'Cloud infrastructure'
-    ]
-  }
-  {
-    id: 'quantum-storage-platform'
-    name: 'Quantum Storage Platform'
-    tagline: 'Quantum-accelerated data storage'
-    description:
-      'Revolutionary quantum storage platform providing quantum data compression, quantum data encoding, and quantum-optimized storage algorithms. Features quantum compression algorithms, quantum data encoding, and quantum storage optimization.'
-    price: '$5,499'
-    period: 'month'
-    features: [
-      'Quantum data compression'
-      'Quantum data encoding'
-      'Quantum storage algorithms'
-      'Quantum data optimization'
-      'Hybrid quantum-classical storage'
-      'Quantum storage security'
-    ]
-    popular: true
-    category: 'Quantum Storage'
-    icon: '💾⚛️'
-    marketPrice: '$7,000-12,000/month'
-    benefits: [
-      '100x data compression'
-      'Quantum data encoding'
-      'Advanced storage optimization'
-      'Future-proof storage technology'
-    ]
-    useCases: [
-      'Big data storage'
-      'Data archiving'
-      'Cloud storage'
-      'Data backup'
-    ]
-  }
-  {
-    id: 'ai-powered-disaster-recovery'
-    name: 'AI-Powered Disaster Recovery'
-    tagline: 'Intelligent recovery automation'
-    description:
-      'Advanced disaster recovery platform with AI-powered recovery strategies, intelligent backup management, and automated recovery procedures. Features predictive recovery planning, automated testing, and intelligent backup optimization.'
-    price: '$3,499'
-    period: 'month'
-    features: [
-      'AI recovery strategies'
-      'Intelligent backup management'
-      'Automated recovery procedures'
-      'Predictive recovery planning'
-      'Automated testing'
-      'Backup optimization'
-    ]
-    popular: true
-    category: 'Disaster Recovery'
-    icon: '🔄🤖'
-    marketPrice: '$4,500-7,000/month'
-    benefits: [
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
       'Automated recovery procedures'
       'Intelligent backup management'
       'Predictive recovery planning'
@@ -1055,7 +2360,6 @@ export const real2036ITServices = [;
     description:;
       'Revolutionary quantum cloud infrastructure platform providing quantum computing resources, quantum - classical hybrid computing, and quantum cloud services. Features quantum resource management, quantum networking, and quantum security.',
     price: '$6, 999',
-<<<<<<< HEAD
 export const real2036ITServices = $2;
     name: 'Quantum Cloud Infrastructure Platform',
     tagline: 'Next-generation quantum cloud computing',
@@ -1064,21 +2368,14 @@ export const real2036ITServices = $2;
     period: 'month',
     features: [
       'Quantum computing resourcesQuantum-classical hybrid computingQuantum resource managementQuantum networkingQuantum security protocolsScalable quantum infrastructure'
-=======
-    period: 'month',
-      'Quantum computing resources',
-      'Quantum - classical hybrid computing',
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
       'Quantum resource management',
       'Quantum networking',
       'Quantum security protocols',
       'Scalable quantum infrastructure',
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
     ],
     popular: true,
     category: 'Quantum Cloud',
     icon: '☁️⚛️',
-<<<<<<< HEAD
     marketPrice: '$8,000-15,000/month',
     benefits: [
       'Access to quantum computing powerHybrid classical-quantum processingFuture-proof cloud infrastructureQuantum advantage in the cloud'
@@ -1096,8 +2393,6 @@ export const real2036ITServices = $2;
     period: 'month',
     features: [
       'AI-powered deployment automationIntelligent testing strategiesPredictive infrastructure scalingAutomated incident responseSmart resource optimizationContinuous learning algorithms'
-=======
-<<<<<<< HEAD
     marketPrice: '$8,000-15,000/month',
     benefits: [
       'Access to quantum computing power',
@@ -1106,16 +2401,6 @@ export const real2036ITServices = $2;
       'Quantum advantage in the cloud',
     ],
     useCases: [
-=======
-    market_price: '$8, 000 - 15, 000 / month',
-    benefits: [;
-      'Access to quantum computing power',
-      'Hybrid classical - quantum processing',
-      'Future - proof cloud infrastructure',
-      'Quantum advantage in the cloud',
-    ],
-    use_cases: [;
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
       'Scientific research computing',
       'Financial modeling',
       'Drug discovery',
@@ -1123,7 +2408,6 @@ export const real2036ITServices = $2;
     ],
   },
   {
-<<<<<<< HEAD
     id: 'ai-powered-devops-platform',
     name: 'AI-Powered DevOps Platform',
     tagline: 'Intelligent DevOps automation',
@@ -1133,28 +2417,15 @@ export const real2036ITServices = $2;
     period: 'month',
     features: [
       'AI-powered deployment automation',
-=======
-    id: 'ai - powered - devops - platform',
-    name: 'AI - Powered DevOps Platform',
-    tagline: 'Intelligent DevOps automation',
-    description:;
-      'Advanced DevOps platform with AI - powered automation, intelligent deployment strategies, and predictive infrastructure management. Features automated testing, deployment optimization, and intelligent monitoring.',
-    price: '$2, 999',
-    period: 'month',
-    features: [;
-      'AI - powered deployment automation',
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
       'Intelligent testing strategies',
       'Predictive infrastructure scaling',
       'Automated incident response',
       'Smart resource optimization',
       'Continuous learning algorithms',
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
     ],
     popular: true,
     category: 'DevOps & AI',
     icon: '🤖🔄',
-<<<<<<< HEAD
     marketPrice: '$4,000-7,000/month',
     benefits: [
       '90% faster deployment cyclesIntelligent infrastructure managementPredictive scalingAutomated incident resolution'
@@ -1172,24 +2443,14 @@ export const real2036ITServices = $2;
     period: 'month',
     features: [
       'Quantum-resistant algorithmsQuantum threat detectionQuantum encryptionQuantum key distributionFuture-proof securityReal-time threat analysis'
-=======
-<<<<<<< HEAD
     marketPrice: '$4,000-7,000/month',
     benefits: [
-=======
-    market_price: '$4, 000 - 7, 000 / month',
-    benefits: [;
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
       '90% faster deployment cycles',
       'Intelligent infrastructure management',
       'Predictive scaling',
       'Automated incident resolution',
     ],
-<<<<<<< HEAD
     useCases: [
-=======
-    use_cases: [;
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
       'Continuous deployment',
       'Infrastructure automation',
       'Testing automation',
@@ -1197,7 +2458,6 @@ export const real2036ITServices = $2;
     ],
   },
   {
-<<<<<<< HEAD
     id: 'quantum-cybersecurity-platform',
     name: 'Quantum Cybersecurity Platform',
     tagline: 'Quantum-resistant security solutions',
@@ -1212,28 +2472,10 @@ export const real2036ITServices = $2;
       'Quantum key distribution',
       'Future-proof security',
       'Real-time threat analysis',
-=======
-    id: 'quantum - cybersecurity - platform',
-    name: 'Quantum Cybersecurity Platform',
-    tagline: 'Quantum - resistant security solutions',
-    description:;
-      'Advanced cybersecurity platform with quantum - resistant algorithms, quantum threat detection, and future - proof security protocols. Features quantum encryption, quantum key distribution, and quantum - resistant cryptography.',
-    price: '$5, 499',
-    period: 'month',
-    features: [;
-      'Quantum - resistant algorithms',
-      'Quantum threat detection',
-      'Quantum encryption',
-      'Quantum key distribution',
-      'Future - proof security',
-      'Real - time threat analysis',
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
     ],
     popular: true,
     category: 'Quantum Security',
     icon: '🔒⚛️',
-<<<<<<< HEAD
     marketPrice: '$7,000-12,000/month',
     benefits: [
       'Quantum-resistant securityFuture-proof protectionAdvanced threat detectionMilitary-grade security'
@@ -1251,8 +2493,6 @@ export const real2036ITServices = $2;
     period: 'month',
     features: [
       'Intelligent edge orchestrationDistributed computing optimizationEdge AI processingLatency optimizationEdge resource managementDistributed data processing'
-=======
-<<<<<<< HEAD
     marketPrice: '$7,000-12,000/month',
     benefits: [
       'Quantum-resistant security',
@@ -1261,16 +2501,6 @@ export const real2036ITServices = $2;
       'Military-grade security',
     ],
     useCases: [
-=======
-    market_price: '$7, 000 - 12, 000 / month',
-    benefits: [;
-      'Quantum - resistant security',
-      'Future - proof protection',
-      'Advanced threat detection',
-      'Military - grade security',
-    ],
-    use_cases: [;
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
       'Government security',
       'Financial institutions',
       'Healthcare data protection',
@@ -1278,7 +2508,6 @@ export const real2036ITServices = $2;
     ],
   },
   {
-<<<<<<< HEAD
     id: 'edge-computing-orchestration-platform',
     name: 'Edge Computing Orchestration Platform',
     tagline: 'Intelligent edge computing management',
@@ -1287,16 +2516,6 @@ export const real2036ITServices = $2;
     price: '$3,999',
     period: 'month',
     features: [
-=======
-    id: 'edge - computing - orchestration - platform',
-    name: 'Edge Computing Orchestration Platform',
-    tagline: 'Intelligent edge computing management',
-    description:;
-      'Comprehensive edge computing platform with intelligent orchestration, distributed computing optimization, and edge AI capabilities. Features edge resource management, latency optimization, and distributed AI processing.',
-    price: '$3, 999',
-    period: 'month',
-    features: [;
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
       'Intelligent edge orchestration',
       'Distributed computing optimization',
       'Edge AI processing',
@@ -1307,34 +2526,21 @@ export const real2036ITServices = $2;
     popular: true,
     category: 'Edge Computing',
     icon: '🌐⚡',
-<<<<<<< HEAD
     marketPrice: '$5,000-8,000/month',
     benefits: [
       'Ultra-low latency processing',
-=======
-    market_price: '$5, 000 - 8, 000 / month',
-    benefits: [;
-      'Ultra - low latency processing',
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
       'Distributed computing power',
       'Edge AI capabilities',
       'Scalable edge infrastructure',
     ],
-<<<<<<< HEAD
     useCases: [
       'IoT applications',
       'Real-time analytics',
-=======
-    use_cases: [;
-      'IoT applications',
-      'Real - time analytics',
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
       'Edge AI processing',
       'Distributed computing',
     ],
   },
   {
-<<<<<<< HEAD
     id: 'quantum-database-platform',
     name: 'Quantum Database Platform',
     tagline: 'Quantum-powered data management',
@@ -1344,31 +2550,15 @@ export const real2036ITServices = $2;
     period: 'month',
     features: [
       'Quantum-accelerated queries',
-=======
-    id: 'quantum - database - platform',
-    name: 'Quantum Database Platform',
-    tagline: 'Quantum - powered data management',
-    description:;
-      'Revolutionary quantum database platform providing quantum - accelerated queries, quantum data compression, and quantum - optimized data structures. Features quantum search algorithms, quantum data indexing, and quantum data analytics.',
-    price: '$4, 999',
-    period: 'month',
-    features: [;
-      'Quantum - accelerated queries',
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
       'Quantum data compression',
       'Quantum search algorithms',
       'Quantum data indexing',
       'Quantum data analytics',
-<<<<<<< HEAD
       'Hybrid quantum-classical storage',
-=======
-      'Hybrid quantum - classical storage',
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
     ],
     popular: true,
     category: 'Quantum Database',
     icon: '🗄️⚛️',
-<<<<<<< HEAD
     marketPrice: '$6,000-10,000/month',
     benefits: [
       '1000x faster database queries',
@@ -1379,24 +2569,11 @@ export const real2036ITServices = $2;
     useCases: [
       'Big data analytics',
       'Real-time search',
-=======
-    market_price: '$6, 000 - 10, 000 / month',
-    benefits: [;
-      '1000x faster database queries',
-      'Quantum data compression',
-      'Advanced search capabilities',
-      'Future - proof data management',
-    ],
-    use_cases: [;
-      'Big data analytics',
-      'Real - time search',
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
       'Data warehousing',
       'Business intelligence',
     ],
   },
   {
-<<<<<<< HEAD
     id: 'ai-powered-network-security',
     name: 'AI-Powered Network Security',
     tagline: 'Intelligent network protection',
@@ -1405,16 +2582,6 @@ export const real2036ITServices = $2;
     price: '$2,499',
     period: 'month',
     features: [
-=======
-    id: 'ai - powered - network - security',
-    name: 'AI - Powered Network Security',
-    tagline: 'Intelligent network protection',
-    description:;
-      'Advanced network security platform with AI - powered threat detection, intelligent firewall management, and predictive security analytics. Features behavioral analysis, anomaly detection, and automated threat response.',
-    price: '$2, 499',
-    period: 'month',
-    features: [;
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
       'AI threat detection',
       'Intelligent firewall management',
       'Behavioral analysis',
@@ -1425,23 +2592,14 @@ export const real2036ITServices = $2;
     popular: true,
     category: 'Network Security',
     icon: '🛡️🤖',
-<<<<<<< HEAD
     marketPrice: '$3,500-6,000/month',
     benefits: [
-=======
-    market_price: '$3, 500 - 6, 000 / month',
-    benefits: [;
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
       'Proactive threat detection',
       'Automated security response',
       'Intelligent network protection',
       'Reduced false positives',
     ],
-<<<<<<< HEAD
     useCases: [
-=======
-    use_cases: [;
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
       'Enterprise network security',
       'Cloud security',
       'IoT security',
@@ -1449,7 +2607,6 @@ export const real2036ITServices = $2;
     ],
   },
   {
-<<<<<<< HEAD
     id: 'quantum-internet-protocols',
     name: 'Quantum Internet Protocols',
     tagline: 'Next-generation quantum networking',
@@ -1458,16 +2615,6 @@ export const real2036ITServices = $2;
     price: '$7,999',
     period: 'month',
     features: [
-=======
-    id: 'quantum - internet - protocols',
-    name: 'Quantum Internet Protocols',
-    tagline: 'Next - generation quantum networking',
-    description:;
-      'Revolutionary quantum internet protocols platform providing quantum communication standards, quantum routing algorithms, and quantum network optimization. Features quantum entanglement distribution, quantum routing, and quantum network security.',
-    price: '$7, 999',
-    period: 'month',
-    features: [;
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
       'Quantum communication protocols',
       'Quantum routing algorithms',
       'Quantum entanglement distribution',
@@ -1478,23 +2625,14 @@ export const real2036ITServices = $2;
     popular: false,
     category: 'Quantum Internet',
     icon: '🌐⚛️',
-<<<<<<< HEAD
     marketPrice: '$10,000-20,000/month',
     benefits: [
-=======
-    market_price: '$10, 000 - 20, 000 / month',
-    benefits: [;
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
       'Unbreakable quantum communication',
       'Quantum network optimization',
       'Future internet protocols',
       'Quantum internet infrastructure',
     ],
-<<<<<<< HEAD
     useCases: [
-=======
-    use_cases: [;
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
       'Government communications',
       'Financial networks',
       'Research networks',
@@ -1502,7 +2640,6 @@ export const real2036ITServices = $2;
     ],
   },
   {
-<<<<<<< HEAD
     id: 'ai-powered-infrastructure-monitoring',
     name: 'AI-Powered Infrastructure Monitoring',
     tagline: 'Intelligent infrastructure oversight',
@@ -1512,17 +2649,6 @@ export const real2036ITServices = $2;
     period: 'month',
     features: [
       'AI-powered monitoring',
-=======
-    id: 'ai - powered - infrastructure - monitoring',
-    name: 'AI - Powered Infrastructure Monitoring',
-    tagline: 'Intelligent infrastructure oversight',
-    description:;
-      'Advanced infrastructure monitoring platform with AI - powered analytics, predictive maintenance, and intelligent alerting. Features automated monitoring, performance optimization, and intelligent resource management.',
-    price: '$1, 999',
-    period: 'month',
-    features: [;
-      'AI - powered monitoring',
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
       'Predictive maintenance',
       'Intelligent alerting',
       'Performance optimization',
@@ -1532,23 +2658,14 @@ export const real2036ITServices = $2;
     popular: true,
     category: 'Infrastructure Monitoring',
     icon: '📊🤖',
-<<<<<<< HEAD
     marketPrice: '$3,000-5,000/month',
     benefits: [
-=======
-    market_price: '$3, 000 - 5, 000 / month',
-    benefits: [;
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
       'Proactive issue detection',
       'Automated monitoring',
       'Performance optimization',
       'Reduced downtime',
     ],
-<<<<<<< HEAD
     useCases: [
-=======
-    use_cases: [;
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
       'Server monitoring',
       'Network monitoring',
       'Application monitoring',
@@ -1556,7 +2673,6 @@ export const real2036ITServices = $2;
     ],
   },
   {
-<<<<<<< HEAD
     id: 'quantum-storage-platform',
     name: 'Quantum Storage Platform',
     tagline: 'Quantum-accelerated data storage',
@@ -1565,31 +2681,16 @@ export const real2036ITServices = $2;
     price: '$5,499',
     period: 'month',
     features: [
-=======
-    id: 'quantum - storage - platform',
-    name: 'Quantum Storage Platform',
-    tagline: 'Quantum - accelerated data storage',
-    description:;
-      'Revolutionary quantum storage platform providing quantum data compression, quantum data encoding, and quantum - optimized storage algorithms. Features quantum compression algorithms, quantum data encoding, and quantum storage optimization.',
-    price: '$5, 499',
-    period: 'month',
-    features: [;
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
       'Quantum data compression',
       'Quantum data encoding',
       'Quantum storage algorithms',
       'Quantum data optimization',
-<<<<<<< HEAD
       'Hybrid quantum-classical storage',
-=======
-      'Hybrid quantum - classical storage',
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
       'Quantum storage security',
     ],
     popular: true,
     category: 'Quantum Storage',
     icon: '💾⚛️',
-<<<<<<< HEAD
     marketPrice: '$7,000-12,000/month',
     benefits: [
       '100x data compression',
@@ -1624,6 +2725,11 @@ export const real2036ITServices = $2;
   }
   {
 ];      'Data center recoveryCloud recoveryApplication recoveryBusiness continuity'
+=======
+
+  {'
+];      'Data center recoveryCloud recoveryApplication recoveryBusiness continuity''
+>>>>>>> origin/chore/fix-lint-and-merge
     ]
   }
 ];
@@ -1953,10 +3059,232 @@ export const real2036ITServices = [
     useCases: [
 export const real2036ITServices = [;
   {
+    id: 'quantum-cloud-infrastructure-platform,
+  name: 'Quantum Cloud Infrastructure Platform
+    tagline: 'Next-generation quantum cloud computing,
+  description:
+      'Revolutionary quantum cloud infrastructure platform providing quantum computing resources, quantum-classical hybrid computing, and quantum cloud services. Features quantum resource management, quantum networking, and quantum security.
+    price: '$6,999
+    period: 'month
+      'Quantum computing resources
+      'Quantum-classical hybrid computing
+      'Quantum resource management
+      'Quantum networking
+      'Quantum security protocols
+      'Scalable quantum infrastructure]
+    ]
+    popular: true;,
+  category: 'Quantum Cloud
+    icon: '☁️⚛️,
+  marketPrice: '$8,000-15,000/month
+    benefits: [
+      'Access to quantum computing power
+      'Hybrid classical-quantum processing
+      'Future-proof cloud infrastructure
+      'Quantum advantage in the cloud]
+    useCases: [
+      'Scientific research computing
+      'Financial modeling
+      'Drug discovery
+      'Climate simulation]
+  }
+    id: 'ai-powered-devops-platform,
+  name: 'AI-Powered DevOps Platform
+    tagline: 'Intelligent DevOps automation,
+      'Advanced DevOps platform with AI-powered automation, intelligent deployment strategies, and predictive infrastructure management. Features automated testing, deployment optimization, and intelligent monitoring.
+    price: '$2,999
+    period: 'month,
+  features: [
+      'AI-powered deployment automation
+      'Intelligent testing strategies
+      'Predictive infrastructure scaling
+      'Automated incident response
+      'Smart resource optimization
+      'Continuous learning algorithms]
+  category: 'DevOps & AI
+    icon: '🤖🔄,
+  marketPrice: '$4,000-7,000/month
+      '90% faster deployment cycles
+      'Intelligent infrastructure management
+      'Predictive scaling
+      'Automated incident resolution]
+      'Continuous deployment
+      'Infrastructure automation
+      'Testing automation
+      'Monitoring and alerting]
+    id: 'quantum-cybersecurity-platform,
+  name: 'Quantum Cybersecurity Platform
+    tagline: 'Quantum-resistant security solutions,
+      'Advanced cybersecurity platform with quantum-resistant algorithms, quantum threat detection, and future-proof security protocols. Features quantum encryption, quantum key distribution, and quantum-resistant cryptography.
+    price: '$5,499
+      'Quantum-resistant algorithms
+      'Quantum threat detection
+      'Quantum encryption
+      'Quantum key distribution
+      'Future-proof security
+      'Real-time threat analysis]
+  category: 'Quantum Security
+    icon: '🔒⚛️,
+  marketPrice: '$7,000-12,000/month
+      'Quantum-resistant security
+      'Future-proof protection
+      'Advanced threat detection
+      'Military-grade security]
+      'Government security
+      'Financial institutions
+      'Healthcare data protection
+      'Critical infrastructure]
+    id: 'edge-computing-orchestration-platform,
+  name: 'Edge Computing Orchestration Platform
+    tagline: 'Intelligent edge computing management,
+      'Comprehensive edge computing platform with intelligent orchestration, distributed computing optimization, and edge AI capabilities. Features edge resource management, latency optimization, and distributed AI processing.
+    price: '$3,999
+      'Intelligent edge orchestration
+      'Distributed computing optimization
+      'Edge AI processing
+      'Latency optimization
+      'Edge resource management
+      'Distributed data processing]
+  category: 'Edge Computing
+    icon: '🌐⚡,
+  marketPrice: '$5,000-8,000/month
+      'Ultra-low latency processing
+      'Distributed computing power
+      'Edge AI capabilities
+      'Scalable edge infrastructure]
+      'IoT applications
+      'Real-time analytics
+      'Distributed computing]
+    id: 'quantum-database-platform,
+  name: 'Quantum Database Platform
+    tagline: 'Quantum-powered data management,
+      'Revolutionary quantum database platform providing quantum-accelerated queries, quantum data compression, and quantum-optimized data structures. Features quantum search algorithms, quantum data indexing, and quantum data analytics.
+    price: '$4,999
+      'Quantum-accelerated queries
+      'Quantum data compression
+      'Quantum search algorithms
+      'Quantum data indexing
+      'Quantum data analytics
+      'Hybrid quantum-classical storage]
+  category: 'Quantum Database
+    icon: '🗄️⚛️,
+  marketPrice: '$6,000-10,000/month
+      '1000x faster database queries
+      'Advanced search capabilities
+      'Future-proof data management]
+      'Big data analytics
+      'Real-time search
+      'Data warehousing
+      'Business intelligence]
+    id: 'ai-powered-network-security,
+  name: 'AI-Powered Network Security
+    tagline: 'Intelligent network protection,
+      'Advanced network security platform with AI-powered threat detection, intelligent firewall management, and predictive security analytics. Features behavioral analysis, anomaly detection, and automated threat response.
+    price: '$2,499
+      'AI threat detection
+      'Intelligent firewall management
+      'Behavioral analysis
+      'Anomaly detection
+      'Automated threat response
+      'Predictive security analytics]
+  category: 'Network Security
+    icon: '🛡️🤖,
+  marketPrice: '$3,500-6,000/month
+      'Proactive threat detection
+      'Automated security response
+      'Intelligent network protection
+      'Reduced false positives]
+      'Enterprise network security
+      'Cloud security
+      'IoT security
+      'Remote work security]
+    id: 'quantum-internet-protocols,
+  name: 'Quantum Internet Protocols
+    tagline: 'Next-generation quantum networking,
+      'Revolutionary quantum internet protocols platform providing quantum communication standards, quantum routing algorithms, and quantum network optimization. Features quantum entanglement distribution, quantum routing, and quantum network security.
+    price: '$7,999
+      'Quantum communication protocols
+      'Quantum routing algorithms
+      'Quantum entanglement distribution
+      'Quantum network optimization
+      'Quantum network security
+      'Quantum internet standards]
+    popular: false;,
+  category: 'Quantum Internet
+    icon: '🌐⚛️,
+  marketPrice: '$10,000-20,000/month
+      'Unbreakable quantum communication
+      'Future internet protocols
+      'Quantum internet infrastructure]
+      'Government communications
+      'Financial networks
+      'Research networks
+      'Quantum internet backbone]
+    id: 'ai-powered-infrastructure-monitoring,
+  name: 'AI-Powered Infrastructure Monitoring
+    tagline: 'Intelligent infrastructure oversight,
+      'Advanced infrastructure monitoring platform with AI-powered analytics, predictive maintenance, and intelligent alerting. Features automated monitoring, performance optimization, and intelligent resource management.
+    price: '$1,999
+      'AI-powered monitoring
+      'Predictive maintenance
+      'Intelligent alerting
+      'Performance optimization
+      'Automated monitoring
+      'Resource optimization]
+  category: 'Infrastructure Monitoring
+    icon: '📊🤖,
+  marketPrice: '$3,000-5,000/month
+      'Proactive issue detection
+      'Reduced downtime]
+      'Server monitoring
+      'Network monitoring
+      'Application monitoring
+      'Cloud infrastructure]
+    id: 'quantum-storage-platform,
+  name: 'Quantum Storage Platform
+    tagline: 'Quantum-accelerated data storage,
+      'Revolutionary quantum storage platform providing quantum data compression, quantum data encoding, and quantum-optimized storage algorithms. Features quantum compression algorithms, quantum data encoding, and quantum storage optimization.
+      'Quantum data encoding
+      'Quantum storage algorithms
+      'Quantum data optimization
+      'Hybrid quantum-classical storage
+      'Quantum storage security]
+  category: 'Quantum Storage
+    icon: '💾⚛️,
+      '100x data compression
+      'Advanced storage optimization
+      'Future-proof storage technology]
+      'Big data storage
+      'Data archiving
+      'Cloud storage
+      'Data backup]
+    id: 'ai-powered-disaster-recovery,
+  name: 'AI-Powered Disaster Recovery
+    tagline: 'Intelligent recovery automation,
+      'Advanced disaster recovery platform with AI-powered recovery strategies, intelligent backup management, and automated recovery procedures. Features predictive recovery planning, automated testing, and intelligent backup optimization.
+    price: '$3,499
+      'AI recovery strategies
+      'Intelligent backup management
+      'Automated recovery procedures
+      'Predictive recovery planning
+      'Automated testing
+      'Backup optimization]
+  category: 'Disaster Recovery
+    icon: '🔄🤖,
+  marketPrice: '$4,500-7,000/month
+      'Reduced recovery time]
+      'Data center recovery
+      'Cloud recovery
+      'Application recovery
+      'Business continuity]
+];      'Data center recoveryCloud recoveryApplication recoveryBusiness continuity
+];
+export const real2036ITServices = [;
+pr-12325
     id: 'quantum - cloud - infrastructure - platform',
     name: 'Quantum Cloud Infrastructure Platform',
     tagline: 'Next - generation quantum cloud computing',
-    description:;
+    description:
       'Revolutionary quantum cloud infrastructure platform providing quantum computing resources, quantum - classical hybrid computing, and quantum cloud services. Features quantum resource management, quantum networking, and quantum security.',
     price: '$6, 999',
     period: 'month',
@@ -1966,6 +3294,8 @@ export const real2036ITServices = [;
       'Quantum networking',
       'Quantum security protocols',
       'Scalable quantum infrastructure',
+      'Scalable quantum infrastructure',']
+pr-12325
     ],
     popular: true,
     category: 'Quantum Cloud',
@@ -1977,6 +3307,8 @@ export const real2036ITServices = [;
       'Future - proof cloud infrastructure',
       'Quantum advantage in the cloud',
     ],
+      'Quantum advantage in the cloud',']
+pr-12325
     use_cases: [;
       'Scientific research computing',
       'Financial modeling',
@@ -1988,10 +3320,18 @@ export const real2036ITServices = [;
     id: 'ai - powered - devops - platform',
     name: 'AI - Powered DevOps Platform',
     tagline: 'Intelligent DevOps automation',
-    description:;
+    description:
       'Advanced DevOps platform with AI - powered automation, intelligent deployment strategies, and predictive infrastructure management. Features automated testing, deployment optimization, and intelligent monitoring.',
     price: '$2, 999',
     period: 'month',
+      'Climate simulation',']
+  },
+    id: 'ai - powered - devops - platform',
+    name: 'AI - Powered DevOps Platform',
+    tagline: 'Intelligent DevOps automation',
+      'Advanced DevOps platform with AI - powered automation, intelligent deployment strategies, and predictive infrastructure management. Features automated testing, deployment optimization, and intelligent monitoring.',
+    price: '$2, 999',
+pr-12325
     features: [;
       'AI - powered deployment automation',
       'Intelligent testing strategies',
@@ -2021,11 +3361,29 @@ export const real2036ITServices = [;
     id: 'quantum - cybersecurity - platform',
     name: 'Quantum Cybersecurity Platform',
     tagline: 'Quantum - resistant security solutions',
-    description:;
+    description:
       'Advanced cybersecurity platform with quantum - resistant algorithms, quantum threat detection, and future - proof security protocols. Features quantum encryption, quantum key distribution, and quantum - resistant cryptography.',
     price: '$5, 499',
     period: 'month',
     features: [;
+      'Continuous learning algorithms',']
+    category: 'DevOps & AI',
+    icon: '🤖🔄',
+    market_price: '$4, 000 - 7, 000 / month',
+      '90% faster deployment cycles',
+      'Intelligent infrastructure management',
+      'Predictive scaling',
+      'Automated incident resolution',']
+      'Continuous deployment',
+      'Infrastructure automation',
+      'Testing automation',
+      'Monitoring and alerting',']
+    id: 'quantum - cybersecurity - platform',
+    name: 'Quantum Cybersecurity Platform',
+    tagline: 'Quantum - resistant security solutions',
+      'Advanced cybersecurity platform with quantum - resistant algorithms, quantum threat detection, and future - proof security protocols. Features quantum encryption, quantum key distribution, and quantum - resistant cryptography.',
+    price: '$5, 499',
+pr-12325
       'Quantum - resistant algorithms',
       'Quantum threat detection',
       'Quantum encryption',
@@ -2054,18 +3412,35 @@ export const real2036ITServices = [;
     id: 'edge - computing - orchestration - platform',
     name: 'Edge Computing Orchestration Platform',
     tagline: 'Intelligent edge computing management',
-    description:;
+    description:
       'Comprehensive edge computing platform with intelligent orchestration, distributed computing optimization, and edge AI capabilities. Features edge resource management, latency optimization, and distributed AI processing.',
     price: '$3, 999',
     period: 'month',
     features: [;
+      'Real - time threat analysis',']
+    category: 'Quantum Security',
+    icon: '🔒⚛️',
+    market_price: '$7, 000 - 12, 000 / month',
+      'Quantum - resistant security',
+      'Future - proof protection',
+      'Advanced threat detection',
+      'Military - grade security',']
+      'Government security',
+      'Financial institutions',
+      'Healthcare data protection',
+      'Critical infrastructure',']
+    id: 'edge - computing - orchestration - platform',
+    name: 'Edge Computing Orchestration Platform',
+    tagline: 'Intelligent edge computing management',
+      'Comprehensive edge computing platform with intelligent orchestration, distributed computing optimization, and edge AI capabilities. Features edge resource management, latency optimization, and distributed AI processing.',
+    price: '$3, 999',
+pr-12325
       'Intelligent edge orchestration',
       'Distributed computing optimization',
       'Edge AI processing',
       'Latency optimization',
       'Edge resource management',
       'Distributed data processing',
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
     ],
     popular: true,
     category: 'Edge Computing',
@@ -2107,18 +3482,35 @@ export const real2036ITServices = [;
     id: 'quantum - database - platform',
     name: 'Quantum Database Platform',
     tagline: 'Quantum - powered data management',
-    description:;
+    description:
       'Revolutionary quantum database platform providing quantum - accelerated queries, quantum data compression, and quantum - optimized data structures. Features quantum search algorithms, quantum data indexing, and quantum data analytics.',
     price: '$4, 999',
     period: 'month',
     features: [;
+      'Distributed data processing',']
+    category: 'Edge Computing',
+    icon: '🌐⚡',
+    market_price: '$5, 000 - 8, 000 / month',
+      'Ultra - low latency processing',
+      'Distributed computing power',
+      'Edge AI capabilities',
+      'Scalable edge infrastructure',']
+      'IoT applications',
+      'Real - time analytics',
+      'Distributed computing',']
+    id: 'quantum - database - platform',
+    name: 'Quantum Database Platform',
+    tagline: 'Quantum - powered data management',
+      'Revolutionary quantum database platform providing quantum - accelerated queries, quantum data compression, and quantum - optimized data structures. Features quantum search algorithms, quantum data indexing, and quantum data analytics.',
+    price: '$4, 999',
+pr-12325
       'Quantum - accelerated queries',
       'Quantum data compression',
       'Quantum search algorithms',
       'Quantum data indexing',
       'Quantum data analytics',
       'Hybrid quantum - classical storage',
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
+>>>>>>> origin/chore/fix-lint-and-merge
     ],
     popular: true,
     category: 'Quantum Database',
@@ -2160,18 +3552,35 @@ export const real2036ITServices = [;
     id: 'ai - powered - network - security',
     name: 'AI - Powered Network Security',
     tagline: 'Intelligent network protection',
-    description:;
+    description:
       'Advanced network security platform with AI - powered threat detection, intelligent firewall management, and predictive security analytics. Features behavioral analysis, anomaly detection, and automated threat response.',
     price: '$2, 499',
     period: 'month',
     features: [;
+      'Hybrid quantum - classical storage',']
+    category: 'Quantum Database',
+    icon: '🗄️⚛️',
+    market_price: '$6, 000 - 10, 000 / month',
+      '1000x faster database queries',
+      'Advanced search capabilities',
+      'Future - proof data management',']
+      'Big data analytics',
+      'Real - time search',
+      'Data warehousing',
+      'Business intelligence',']
+    id: 'ai - powered - network - security',
+    name: 'AI - Powered Network Security',
+    tagline: 'Intelligent network protection',
+      'Advanced network security platform with AI - powered threat detection, intelligent firewall management, and predictive security analytics. Features behavioral analysis, anomaly detection, and automated threat response.',
+    price: '$2, 499',
+pr-12325
       'AI threat detection',
       'Intelligent firewall management',
       'Behavioral analysis',
       'Anomaly detection',
       'Automated threat response',
       'Predictive security analytics',
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
+>>>>>>> origin/chore/fix-lint-and-merge
     ],
     popular: true,
     category: 'Network Security',
@@ -2213,19 +3622,39 @@ export const real2036ITServices = [;
     id: 'quantum - internet - protocols',
     name: 'Quantum Internet Protocols',
     tagline: 'Next - generation quantum networking',
-    description:;
+    description:
       'Revolutionary quantum internet protocols platform providing quantum communication standards, quantum routing algorithms, and quantum network optimization. Features quantum entanglement distribution, quantum routing, and quantum network security.',
     price: '$7, 999',
     period: 'month',
     features: [;
+      'Predictive security analytics',']
+    category: 'Network Security',
+    icon: '🛡️🤖',
+    market_price: '$3, 500 - 6, 000 / month',
+      'Proactive threat detection',
+      'Automated security response',
+      'Intelligent network protection',
+      'Reduced false positives',']
+      'Enterprise network security',
+      'Cloud security',
+      'IoT security',
+      'Remote work security',']
+    id: 'quantum - internet - protocols',
+    name: 'Quantum Internet Protocols',
+    tagline: 'Next - generation quantum networking',
+      'Revolutionary quantum internet protocols platform providing quantum communication standards, quantum routing algorithms, and quantum network optimization. Features quantum entanglement distribution, quantum routing, and quantum network security.',
+    price: '$7, 999',
+pr-12325
       'Quantum communication protocols',
       'Quantum routing algorithms',
       'Quantum entanglement distribution',
       'Quantum network optimization',
       'Quantum network security',
       'Quantum internet standards',
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
+>>>>>>> origin/chore/fix-lint-and-merge
     ],
+      'Quantum internet standards',']
+pr-12325
     popular: false,
     category: 'Quantum Internet',
     icon: '🌐⚛️',
@@ -2266,18 +3695,31 @@ export const real2036ITServices = [;
     id: 'ai - powered - infrastructure - monitoring',
     name: 'AI - Powered Infrastructure Monitoring',
     tagline: 'Intelligent infrastructure oversight',
-    description:;
+    description:
       'Advanced infrastructure monitoring platform with AI - powered analytics, predictive maintenance, and intelligent alerting. Features automated monitoring, performance optimization, and intelligent resource management.',
     price: '$1, 999',
     period: 'month',
     features: [;
+      'Unbreakable quantum communication',
+      'Future internet protocols',
+      'Quantum internet infrastructure',']
+      'Government communications',
+      'Financial networks',
+      'Research networks',
+      'Quantum internet backbone',']
+    id: 'ai - powered - infrastructure - monitoring',
+    name: 'AI - Powered Infrastructure Monitoring',
+    tagline: 'Intelligent infrastructure oversight',
+      'Advanced infrastructure monitoring platform with AI - powered analytics, predictive maintenance, and intelligent alerting. Features automated monitoring, performance optimization, and intelligent resource management.',
+    price: '$1, 999',
+pr-12325
       'AI - powered monitoring',
       'Predictive maintenance',
       'Intelligent alerting',
       'Performance optimization',
       'Automated monitoring',
       'Resource optimization',
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
+>>>>>>> origin/chore/fix-lint-and-merge
     ],
     popular: true,
     category: 'Infrastructure Monitoring',
@@ -2319,18 +3761,33 @@ export const real2036ITServices = [;
     id: 'quantum - storage - platform',
     name: 'Quantum Storage Platform',
     tagline: 'Quantum - accelerated data storage',
-    description:;
+    description:
       'Revolutionary quantum storage platform providing quantum data compression, quantum data encoding, and quantum - optimized storage algorithms. Features quantum compression algorithms, quantum data encoding, and quantum storage optimization.',
     price: '$5, 499',
     period: 'month',
     features: [;
       'Quantum data compression',
+      'Resource optimization',']
+    category: 'Infrastructure Monitoring',
+    icon: '📊🤖',
+    market_price: '$3, 000 - 5, 000 / month',
+      'Proactive issue detection',
+      'Reduced downtime',']
+      'Server monitoring',
+      'Network monitoring',
+      'Application monitoring',
+      'Cloud infrastructure',']
+    id: 'quantum - storage - platform',
+    name: 'Quantum Storage Platform',
+    tagline: 'Quantum - accelerated data storage',
+      'Revolutionary quantum storage platform providing quantum data compression, quantum data encoding, and quantum - optimized storage algorithms. Features quantum compression algorithms, quantum data encoding, and quantum storage optimization.',
+pr-12325
       'Quantum data encoding',
       'Quantum storage algorithms',
       'Quantum data optimization',
       'Hybrid quantum - classical storage',
       'Quantum storage security',
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
+>>>>>>> origin/chore/fix-lint-and-merge
     ],
     popular: true,
     category: 'Quantum Storage',
@@ -2347,55 +3804,6 @@ export const real2036ITServices = [;
   {
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
-=======
-    market_price: '$7, 000 - 12, 000 / month',
-    benefits: [;
-      '100x data compression',
-      'Quantum data encoding',
-      'Advanced storage optimization',
-      'Future - proof storage technology',
-    ],
-    use_cases: [;
-      'Big data storage',
-      'Data archiving',
-      'Cloud storage',
-      'Data backup',
-    ],
-  },
-  {
-    id: 'ai - powered - disaster - recovery',
-    name: 'AI - Powered Disaster Recovery',
-    tagline: 'Intelligent recovery automation',
-    description:;
-      'Advanced disaster recovery platform with AI - powered recovery strategies, intelligent backup management, and automated recovery procedures. Features predictive recovery planning, automated testing, and intelligent backup optimization.',
-    price: '$3, 499',
-    period: 'month',
-    features: [;
-      'AI recovery strategies',
-      'Intelligent backup management',
-      'Automated recovery procedures',
-      'Predictive recovery planning',
-      'Automated testing',
-      'Backup optimization',
-    ],
-    popular: true,
-    category: 'Disaster Recovery',
-    icon: '🔄🤖',
-    market_price: '$4, 500 - 7, 000 / month',
-    benefits: [;
-      'Automated recovery procedures',
-      'Intelligent backup management',
-      'Predictive recovery planning',
-      'Reduced recovery time',
-    ],
-    use_cases: [;
-      'Data center recovery',
-      'Cloud recovery',
-      'Application recovery',
-=======
-
-<<<<<<< HEAD
-<<<<<<< HEAD
 ;
 export const real2036ITServices = [;
   {"id": 'quantum-cloud-infrastructure-platform';'
@@ -3061,12 +4469,11 @@ export const real2036ITServices = [;
     ],"useCases": [;
       'Big data storageData archivingCloud storageData backup';'
     ];
-  },{"id": 'ai-powered-disaster-recovery',"name": 'AI-Powered Disaster Recovery',"tagline": 'Intelligent recovery automation',"description": 'Advanced disaster recovery platform with AI-powered recovery strategies, intelligent backup management, and automated recovery procedures. Features predictive recovery planning, automated testing, and intelligent backup optimization.',"price": '$3,499',"period": 'month',"features": [;'
-      'AI recovery strategiesIntelligent backup managementAutomated recovery proceduresPredictive recovery planningAutomated testingBackup optimization';'
-    ],"popular": true,"category": 'Disaster Recovery',"icon": '🔄🤖',"marketPrice": '$4,500-7,000/month',"benefits": [;'
-      'Automated recovery proceduresIntelligent backup managementPredictive recovery planningReduced recovery time';'
-    ],"useCases": [;
-}
+  },{id: 'ai-powered-disaster-recovery',name: 'AI-Powered Disaster Recovery',tagline: 'Intelligent recovery automation',description: 'Advanced disaster recovery platform with AI-powered recovery strategies, intelligent backup management, and automated recovery procedures. Features predictive recovery planning, automated testing, and intelligent backup optimization.',price: '$3,499',period: 'month',features: [;
+      'AI recovery strategiesIntelligent backup managementAutomated recovery proceduresPredictive recovery planningAutomated testingBackup optimization';
+    ],popular: true,category: 'Disaster Recovery',icon: '🔄🤖',marketPrice: '$4,500-7,000/month',benefits: [;
+      'Automated recovery proceduresIntelligent backup managementPredictive recovery planningReduced recovery time';
+    ],useCases: [;
 export const real2036ITServices = [
   {
     }
@@ -3094,674 +4501,7 @@ export const real2036ITServices = [
       'Future-proof cloud infrastructure''
       'Quantum advantage in the cloud''
     ]
-    "useCases": [
-      'Scientific research computing''
-      'Financial modeling''
-      'Drug discovery''
-      'Climate simulation''
-    ]
-  }
-  {
-    }
-    "id": 'ai-powered-devops-platform''
-    "name": 'AI-Powered DevOps Platform''
-    "tagline": 'Intelligent DevOps automation''
-    "description":
-      'Advanced DevOps platform with AI-powered automation, intelligent deployment strategies, and predictive infrastructure management. Features automated testing, deployment optimization, and intelligent monitoring.''
-    "price": '$2,999''
-    "period": 'month''
-    "features": [
-      'AI-powered deployment automation''
-      'Intelligent testing strategies''
-      'Predictive infrastructure scaling''
-      'Automated incident response''
-      'Smart resource optimization''
-      'Continuous learning algorithms''
-    ]
-    "popular": true,
-"category": 'DevOps & AI''
-    "icon": '🤖🔄''
-    "marketPrice": '$4,000-7,000/month''
-    "benefits": [
-      '90% faster deployment cycles''
-      'Intelligent infrastructure management''
-      'Predictive scaling''
-      'Automated incident resolution''
-    ]
-    "useCases": [
-      'Continuous deployment''
-      'Infrastructure automation''
-      'Testing automation''
-      'Monitoring and alerting''
-    ]
-  }
-  {
-    }
-    "id": 'quantum-cybersecurity-platform''
-    "name": 'Quantum Cybersecurity Platform''
-    "tagline": 'Quantum-resistant security solutions''
-    "description":
-      'Advanced cybersecurity platform with quantum-resistant algorithms, quantum threat detection, and future-proof security protocols. Features quantum encryption, quantum key distribution, and quantum-resistant cryptography.''
-    "price": '$5,499''
-    "period": 'month''
-    "features": [
-      'Quantum-resistant algorithms''
-      'Quantum threat detection''
-      'Quantum encryption''
-      'Quantum key distribution''
-      'Future-proof security''
-      'Real-time threat analysis''
-    ]
-    "popular": true,
-"category": 'Quantum Security''
-    "icon": '🔒⚛️''
-    "marketPrice": '$7,000-12,000/month''
-    "benefits": [
-      'Quantum-resistant security''
-      'Future-proof protection''
-      'Advanced threat detection''
-      'Military-grade security''
-    ]
-    "useCases": [
-      'Government security''
-      'Financial institutions''
-      'Healthcare data protection''
-      'Critical infrastructure''
-    ]
-  }
-  {
-    }
-    "id": 'edge-computing-orchestration-platform''
-    "name": 'Edge Computing Orchestration Platform''
-    "tagline": 'Intelligent edge computing management''
-    "description":
-      'Comprehensive edge computing platform with intelligent orchestration, distributed computing optimization, and edge AI capabilities. Features edge resource management, latency optimization, and distributed AI processing.''
-    "price": '$3,999''
-    "period": 'month''
-    "features": [
-      'Intelligent edge orchestration''
-      'Distributed computing optimization''
-      'Edge AI processing''
-      'Latency optimization''
-      'Edge resource management''
-      'Distributed data processing''
-    ]
-    "popular": true,
-"category": 'Edge Computing''
-    "icon": '🌐⚡''
-    "marketPrice": '$5,000-8,000/month''
-    "benefits": [
-      'Ultra-low latency processing''
-      'Distributed computing power''
-      'Edge AI capabilities''
-      'Scalable edge infrastructure''
-    ]
-    "useCases": [
-      'IoT applications''
-      'Real-time analytics''
-      'Edge AI processing''
-      'Distributed computing''
-    ]
-  }
-  {
-    }
-    "id": 'quantum-database-platform''
-    "name": 'Quantum Database Platform''
-    "tagline": 'Quantum-powered data management''
-    "description":
-      'Revolutionary quantum database platform providing quantum-accelerated queries, quantum data compression, and quantum-optimized data structures. Features quantum search algorithms, quantum data indexing, and quantum data analytics.''
-    "price": '$4,999''
-    "period": 'month''
-    "features": [
-      'Quantum-accelerated queries''
-      'Quantum data compression''
-      'Quantum search algorithms''
-      'Quantum data indexing''
-      'Quantum data analytics''
-      'Hybrid quantum-classical storage''
-    ]
-    "popular": true,
-"category": 'Quantum Database''
-    "icon": '🗄️⚛️''
-    "marketPrice": '$6,000-10,000/month''
-    "benefits": [
-      '1000x faster database queries''
-      'Quantum data compression''
-      'Advanced search capabilities''
-      'Future-proof data management''
-    ]
-    "useCases": [
-      'Big data analytics''
-      'Real-time search''
-      'Data warehousing''
-      'Business intelligence''
-    ]
-  }
-  {
-    }
-    "id": 'ai-powered-network-security''
-    "name": 'AI-Powered Network Security''
-    "tagline": 'Intelligent network protection''
-    "description":
-      'Advanced network security platform with AI-powered threat detection, intelligent firewall management, and predictive security analytics. Features behavioral analysis, anomaly detection, and automated threat response.''
-    "price": '$2,499''
-    "period": 'month''
-    "features": [
-      'AI threat detection''
-      'Intelligent firewall management''
-      'Behavioral analysis''
-      'Anomaly detection''
-      'Automated threat response''
-      'Predictive security analytics''
-    ]
-    "popular": true,
-"category": 'Network Security''
-    "icon": '🛡️🤖''
-    "marketPrice": '$3,500-6,000/month''
-    "benefits": [
-      'Proactive threat detection''
-      'Automated security response''
-      'Intelligent network protection''
-      'Reduced false positives''
-    ]
-    "useCases": [
-      'Enterprise network security''
-      'Cloud security''
-      'IoT security''
-      'Remote work security''
-    ]
-  }
-  {
-    }
-    "id": 'quantum-internet-protocols''
-    "name": 'Quantum Internet Protocols''
-    "tagline": 'Next-generation quantum networking''
-    "description":
-      'Revolutionary quantum internet protocols platform providing quantum communication standards, quantum routing algorithms, and quantum network optimization. Features quantum entanglement distribution, quantum routing, and quantum network security.''
-    "price": '$7,999''
-    "period": 'month''
-    "features": [
-      'Quantum communication protocols''
-      'Quantum routing algorithms''
-      'Quantum entanglement distribution''
-      'Quantum network optimization''
-      'Quantum network security''
-      'Quantum internet standards''
-    ]
-    "popular": false,
-"category": 'Quantum Internet''
-    "icon": '🌐⚛️''
-    "marketPrice": '$10,000-20,000/month''
-    "benefits": [
-      'Unbreakable quantum communication''
-      'Quantum network optimization''
-      'Future internet protocols''
-      'Quantum internet infrastructure''
-    ]
-    "useCases": [
-      'Government communications''
-      'Financial networks''
-      'Research networks''
-      'Quantum internet backbone''
-    ]
-  }
-  {
-    }
-    "id": 'ai-powered-infrastructure-monitoring''
-    "name": 'AI-Powered Infrastructure Monitoring''
-    "tagline": 'Intelligent infrastructure oversight''
-    "description":
-      'Advanced infrastructure monitoring platform with AI-powered analytics, predictive maintenance, and intelligent alerting. Features automated monitoring, performance optimization, and intelligent resource management.''
-    "price": '$1,999''
-    "period": 'month''
-    "features": [
-      'AI-powered monitoring''
-      'Predictive maintenance''
-      'Intelligent alerting''
-      'Performance optimization''
-      'Automated monitoring''
-      'Resource optimization''
-    ]
-    "popular": true,
-"category": 'Infrastructure Monitoring''
-    "icon": '📊🤖''
-    "marketPrice": '$3,000-5,000/month''
-    "benefits": [
-      'Proactive issue detection''
-      'Automated monitoring''
-      'Performance optimization''
-      'Reduced downtime''
-    ]
-    "useCases": [
-      'Server monitoring''
-      'Network monitoring''
-      'Application monitoring''
-      'Cloud infrastructure''
-    ]
-  }
-  {
-    }
-    "id": 'quantum-storage-platform''
-    "name": 'Quantum Storage Platform''
-    "tagline": 'Quantum-accelerated data storage''
-    "description":
-      'Revolutionary quantum storage platform providing quantum data compression, quantum data encoding, and quantum-optimized storage algorithms. Features quantum compression algorithms, quantum data encoding, and quantum storage optimization.''
-    "price": '$5,499''
-    "period": 'month''
-    "features": [
-      'Quantum data compression''
-      'Quantum data encoding''
-      'Quantum storage algorithms''
-      'Quantum data optimization''
-      'Hybrid quantum-classical storage''
-      'Quantum storage security''
-    ]
-    "popular": true,
-"category": 'Quantum Storage''
-    "icon": '💾⚛️''
-    "marketPrice": '$7,000-12,000/month''
-    "benefits": [
-      '100x data compression''
-      'Quantum data encoding''
-      'Advanced storage optimization''
-      'Future-proof storage technology''
-    ]
-    "useCases": [
-      'Big data storage''
-      'Data archiving''
-      'Cloud storage''
-      'Data backup''
-    ]
-  }
-  {
-    }
-    "id": 'ai-powered-disaster-recovery''
-    "name": 'AI-Powered Disaster Recovery''
-    "tagline": 'Intelligent recovery automation''
-    "description":
-      'Advanced disaster recovery platform with AI-powered recovery strategies, intelligent backup management, and automated recovery procedures. Features predictive recovery planning, automated testing, and intelligent backup optimization.''
-    "price": '$3,499''
-    "period": 'month''
-    "features": [
-      'AI recovery strategies''
-      'Intelligent backup management''
-      'Automated recovery procedures''
-      'Predictive recovery planning''
-      'Automated testing''
-      'Backup optimization''
-    ]
-    "popular": true,
-"category": 'Disaster Recovery''
-    "icon": '🔄🤖''
-    "marketPrice": '$4,500-7,000/month''
-    "benefits": [
-      'Automated recovery procedures''
-      'Intelligent backup management''
-      'Predictive recovery planning''
-      'Reduced recovery time''
-    ]
-    "useCases": [
-      'Data center recovery''
-      'Cloud recovery''
-      'Application recovery''
-      'Business continuity''
-    ]
-  }
-    ]
-    "popular": true,
-"category": 'Quantum Cloud''
-    "icon": '☁️⚛️''
-    "marketPrice": '$8,000-15,000/month''
-    "benefits": [
-      'Access to quantum computing power''
-      'Hybrid classical-quantum processing''
-      'Future-proof cloud infrastructure''
-      'Quantum advantage in the cloud''
-    ]
-    "useCases": [
-      'Scientific research computing''
-      'Financial modeling''
-      'Drug discovery''
-      'Climate simulation''
-    ]
-  }
-  {
-];      'Data center recoveryCloud recoveryApplication recoveryBusiness continuity''
-    ]
-  }
-];
-export const real2036ITServices = [
-  {
-    }
-    "id": 'quantum-cloud-infrastructure-platform''
-    "name": 'Quantum Cloud Infrastructure Platform''
-    "tagline": 'Next-generation quantum cloud computing''
-    "description":
-      'Revolutionary quantum cloud infrastructure platform providing quantum computing resources, quantum-classical hybrid computing, and quantum cloud services. Features quantum resource management, quantum networking, and quantum security.''
-    "price": '$6,999''
-    "period": 'month''
-      'Quantum computing resources''
-      'Quantum-classical hybrid computing''
-      'Quantum resource management''
-      'Quantum networking''
-      'Quantum security protocols''
-      'Scalable quantum infrastructure''
-    ]
-    "popular": true,
-"category": 'Quantum Cloud''
-    "icon": '☁️⚛️''
-    "marketPrice": '$8,000-15,000/month''
-    "benefits": [
-      'Access to quantum computing power''
-      'Hybrid classical-quantum processing''
-      'Future-proof cloud infrastructure''
-      'Quantum advantage in the cloud''
-    ]
-    "useCases": [
-      'Scientific research computing''
-      'Financial modeling''
-      'Drug discovery''
-      'Climate simulation''
-    ]
-  }
-  {
-    }
-    "id": 'ai-powered-devops-platform''
-    "name": 'AI-Powered DevOps Platform''
-    "tagline": 'Intelligent DevOps automation''
-    "description":
-      'Advanced DevOps platform with AI-powered automation, intelligent deployment strategies, and predictive infrastructure management. Features automated testing, deployment optimization, and intelligent monitoring.''
-    "price": '$2,999''
-    "period": 'month''
-    "features": [
-      'AI-powered deployment automation''
-      'Intelligent testing strategies''
-      'Predictive infrastructure scaling''
-      'Automated incident response''
-      'Smart resource optimization''
-      'Continuous learning algorithms''
-    ]
-    "popular": true,
-"category": 'DevOps & AI''
-    "icon": '🤖🔄''
-    "marketPrice": '$4,000-7,000/month''
-    "benefits": [
-      '90% faster deployment cycles''
-      'Intelligent infrastructure management''
-      'Predictive scaling''
-      'Automated incident resolution''
-    ]
-    "useCases": [
-      'Continuous deployment''
-      'Infrastructure automation''
-      'Testing automation''
-      'Monitoring and alerting''
-    ]
-  }
-  {
-    }
-    "id": 'quantum-cybersecurity-platform''
-    "name": 'Quantum Cybersecurity Platform''
-    "tagline": 'Quantum-resistant security solutions''
-    "description":
-      'Advanced cybersecurity platform with quantum-resistant algorithms, quantum threat detection, and future-proof security protocols. Features quantum encryption, quantum key distribution, and quantum-resistant cryptography.''
-    "price": '$5,499''
-    "period": 'month''
-    "features": [
-      'Quantum-resistant algorithms''
-      'Quantum threat detection''
-      'Quantum encryption''
-      'Quantum key distribution''
-      'Future-proof security''
-      'Real-time threat analysis''
-    ]
-    "popular": true,
-"category": 'Quantum Security''
-    "icon": '🔒⚛️''
-    "marketPrice": '$7,000-12,000/month''
-    "benefits": [
-      'Quantum-resistant security''
-      'Future-proof protection''
-      'Advanced threat detection''
-      'Military-grade security''
-    ]
-    "useCases": [
-      'Government security''
-      'Financial institutions''
-      'Healthcare data protection''
-      'Critical infrastructure''
-    ]
-  }
-  {
-    }
-    "id": 'edge-computing-orchestration-platform''
-    "name": 'Edge Computing Orchestration Platform''
-    "tagline": 'Intelligent edge computing management''
-    "description":
-      'Comprehensive edge computing platform with intelligent orchestration, distributed computing optimization, and edge AI capabilities. Features edge resource management, latency optimization, and distributed AI processing.''
-    "price": '$3,999''
-    "period": 'month''
-    "features": [
-      'Intelligent edge orchestration''
-      'Distributed computing optimization''
-      'Edge AI processing''
-      'Latency optimization''
-      'Edge resource management''
-      'Distributed data processing''
-    ]
-    "popular": true,
-"category": 'Edge Computing''
-    "icon": '🌐⚡''
-    "marketPrice": '$5,000-8,000/month''
-    "benefits": [
-      'Ultra-low latency processing''
-      'Distributed computing power''
-      'Edge AI capabilities''
-      'Scalable edge infrastructure''
-    ]
-    "useCases": [
-      'IoT applications''
-      'Real-time analytics''
-      'Edge AI processing''
-      'Distributed computing''
-    ]
-  }
-  {
-    }
-    "id": 'quantum-database-platform''
-    "name": 'Quantum Database Platform''
-    "tagline": 'Quantum-powered data management''
-    "description":
-      'Revolutionary quantum database platform providing quantum-accelerated queries, quantum data compression, and quantum-optimized data structures. Features quantum search algorithms, quantum data indexing, and quantum data analytics.''
-    "price": '$4,999''
-    "period": 'month''
-    "features": [
-      'Quantum-accelerated queries''
-      'Quantum data compression''
-      'Quantum search algorithms''
-      'Quantum data indexing''
-      'Quantum data analytics''
-      'Hybrid quantum-classical storage''
-    ]
-    "popular": true,
-"category": 'Quantum Database''
-    "icon": '🗄️⚛️''
-    "marketPrice": '$6,000-10,000/month''
-    "benefits": [
-      '1000x faster database queries''
-      'Quantum data compression''
-      'Advanced search capabilities''
-      'Future-proof data management''
-    ]
-    "useCases": [
-      'Big data analytics''
-      'Real-time search''
-      'Data warehousing''
-      'Business intelligence''
-    ]
-  }
-  {
-    }
-    "id": 'ai-powered-network-security''
-    "name": 'AI-Powered Network Security''
-    "tagline": 'Intelligent network protection''
-    "description":
-      'Advanced network security platform with AI-powered threat detection, intelligent firewall management, and predictive security analytics. Features behavioral analysis, anomaly detection, and automated threat response.''
-    "price": '$2,499''
-    "period": 'month''
-    "features": [
-      'AI threat detection''
-      'Intelligent firewall management''
-      'Behavioral analysis''
-      'Anomaly detection''
-      'Automated threat response''
-      'Predictive security analytics''
-    ]
-    "popular": true,
-"category": 'Network Security''
-    "icon": '🛡️🤖''
-    "marketPrice": '$3,500-6,000/month''
-    "benefits": [
-      'Proactive threat detection''
-      'Automated security response''
-      'Intelligent network protection''
-      'Reduced false positives''
-    ]
-    "useCases": [
-      'Enterprise network security''
-      'Cloud security''
-      'IoT security''
-      'Remote work security''
-    ]
-  }
-  {
-    }
-    "id": 'quantum-internet-protocols''
-    "name": 'Quantum Internet Protocols''
-    "tagline": 'Next-generation quantum networking''
-    "description":
-      'Revolutionary quantum internet protocols platform providing quantum communication standards, quantum routing algorithms, and quantum network optimization. Features quantum entanglement distribution, quantum routing, and quantum network security.''
-    "price": '$7,999''
-    "period": 'month''
-    "features": [
-      'Quantum communication protocols''
-      'Quantum routing algorithms''
-      'Quantum entanglement distribution''
-      'Quantum network optimization''
-      'Quantum network security''
-      'Quantum internet standards''
-    ]
-    "popular": false,
-"category": 'Quantum Internet''
-    "icon": '🌐⚛️''
-    "marketPrice": '$10,000-20,000/month''
-    "benefits": [
-      'Unbreakable quantum communication''
-      'Quantum network optimization''
-      'Future internet protocols''
-      'Quantum internet infrastructure''
-    ]
-    "useCases": [
-      'Government communications''
-      'Financial networks''
-      'Research networks''
-      'Quantum internet backbone''
-    ]
-  }
-  {
-    }
-    "id": 'ai-powered-infrastructure-monitoring''
-    "name": 'AI-Powered Infrastructure Monitoring''
-    "tagline": 'Intelligent infrastructure oversight''
-    "description":
-      'Advanced infrastructure monitoring platform with AI-powered analytics, predictive maintenance, and intelligent alerting. Features automated monitoring, performance optimization, and intelligent resource management.''
-    "price": '$1,999''
-    "period": 'month''
-    "features": [
-      'AI-powered monitoring''
-      'Predictive maintenance''
-      'Intelligent alerting''
-      'Performance optimization''
-      'Automated monitoring''
-      'Resource optimization''
-    ]
-    "popular": true,
-"category": 'Infrastructure Monitoring''
-    "icon": '📊🤖''
-    "marketPrice": '$3,000-5,000/month''
-    "benefits": [
-      'Proactive issue detection''
-      'Automated monitoring''
-      'Performance optimization''
-      'Reduced downtime''
-    ]
-    "useCases": [
-      'Server monitoring''
-      'Network monitoring''
-      'Application monitoring''
-      'Cloud infrastructure''
-    ]
-  }
-  {
-    }
-    "id": 'quantum-storage-platform''
-    "name": 'Quantum Storage Platform''
-    "tagline": 'Quantum-accelerated data storage''
-    "description":
-      'Revolutionary quantum storage platform providing quantum data compression, quantum data encoding, and quantum-optimized storage algorithms. Features quantum compression algorithms, quantum data encoding, and quantum storage optimization.''
-    "price": '$5,499''
-    "period": 'month''
-    "features": [
-      'Quantum data compression''
-      'Quantum data encoding''
-      'Quantum storage algorithms''
-      'Quantum data optimization''
-      'Hybrid quantum-classical storage''
-      'Quantum storage security''
-    ]
-    "popular": true,
-"category": 'Quantum Storage''
-    "icon": '💾⚛️''
-    "marketPrice": '$7,000-12,000/month''
-    "benefits": [
-      '100x data compression''
-      'Quantum data encoding''
-      'Advanced storage optimization''
-      'Future-proof storage technology''
-    ]
-    "useCases": [
-      'Big data storage''
-      'Data archiving''
-      'Cloud storage''
-      'Data backup''
-    ]
-  }
-  {
-    }
-    "id": 'ai-powered-disaster-recovery''
-    "name": 'AI-Powered Disaster Recovery''
-    "tagline": 'Intelligent recovery automation''
-    "description":
-      'Advanced disaster recovery platform with AI-powered recovery strategies, intelligent backup management, and automated recovery procedures. Features predictive recovery planning, automated testing, and intelligent backup optimization.''
-    "price": '$3,499''
-    "period": 'month''
-    "features": [
-      'AI recovery strategies''
-      'Intelligent backup management''
-      'Automated recovery procedures''
-      'Predictive recovery planning''
-      'Automated testing''
-      'Backup optimization''
-    ]
-    "popular": true,
-"category": 'Disaster Recovery''
-    "icon": '🔄🤖''
-    "marketPrice": '$4,500-7,000/month''
-    "benefits": [
-      'Automated recovery procedures''
-      'Intelligent backup management''
-      'Predictive recovery planning''
-      'Reduced recovery time''
+
     ]
     "useCases": [
 export const real2036ITServices = [;
@@ -4063,49 +4803,7 @@ export const real2036ITServices = [;
       'Advanced storage optimization','
       'Future - proof storage technology''
     ],
-    "use_cases": [;
-      'Big data storage','
-      'Data archiving','
-      'Cloud storage','
-      'Data backup''
-    ]
-=======
-      'Business continuity',
-    ],
->>>>>>> cursor/automate-test-improve-and-merge-code-0ffd
-=======
-      'Business continuity',
-    ],
->>>>>>> 50a1590683ade09c2b82559a54c039a45bcbfcee
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
-
-
-export const real2036ITServices = [
-  {
-
-<<<<<<< HEAD
-=======
-origin/cursor/expand-services-advertise-and-build-project-c28b
-
-
-
-<<<<<<< HEAD
-
-export const real2036ITServices = []
-  {}
-      'Data center recovery','
-      'Cloud recovery','
-      'Application recovery','
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-      'Business continuity',
-    ],
-;
-  },;'
-];      'Data center recoveryCloud recoveryApplication recoveryBusiness continuity'
-    ]
-
-<<<<<<< HEAD
-origin/cursor/expand-services-advertise-and-build-project-c28b
+    use_cases: [;
 =======
     market_price: '$7, 000 - 12, 000 / month',
     benefits: [;
@@ -4122,291 +4820,3163 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     ],
   },
   {
-    }
-    "id": 'ai - powered - disaster - recovery','
-    "name": 'AI - Powered Disaster Recovery','
-    "tagline": 'Intelligent recovery automation','
-    "description":;
-      'Advanced disaster recovery platform with AI - powered recovery strategies, intelligent backup management, and automated recovery procedures. Features predictive recovery planning, automated testing, and intelligent backup optimization.','
-    "price": '$3, 499','
-    "period": 'month','
-    "features": [;
-      'AI recovery strategies','
-      'Intelligent backup management','
-      'Automated recovery procedures','
-      'Predictive recovery planning','
-      'Automated testing','
-      'Backup optimization''
+    id: 'ai - powered - disaster - recovery',
+    name: 'AI - Powered Disaster Recovery',
+    tagline: 'Intelligent recovery automation',
+    description:
+      'Advanced disaster recovery platform with AI - powered recovery strategies, intelligent backup management, and automated recovery procedures. Features predictive recovery planning, automated testing, and intelligent backup optimization.',
+    price: '$3, 499',
+    period: 'month',
+    features: [;
+      'Quantum storage security',']
+    category: 'Quantum Storage',
+    icon: '💾⚛️',
+      '100x data compression',
+      'Advanced storage optimization',
+      'Future - proof storage technology',']
+      'Big data storage',
+      'Data archiving',
+      'Cloud storage',
+      'Data backup',']
+    id: 'ai - powered - disaster - recovery',
+    name: 'AI - Powered Disaster Recovery',
+    tagline: 'Intelligent recovery automation',
+      'Advanced disaster recovery platform with AI - powered recovery strategies, intelligent backup management, and automated recovery procedures. Features predictive recovery planning, automated testing, and intelligent backup optimization.',
+    price: '$3, 499',
+pr-12325
+      'AI recovery strategies',
+      'Intelligent backup management',
+      'Automated recovery procedures',
+      'Predictive recovery planning',
+      'Automated testing',
+      'Backup optimization',
     ],
-    "popular": true,
-    "category": 'Disaster Recovery','
-    "icon": '🔄🤖','
-    "market_price": '$4, 500 - 7, 000 / month','
-    "benefits": [;
-      'Automated recovery procedures','
-      'Intelligent backup management','
-      'Predictive recovery planning','
-      'Reduced recovery time''
+    popular: true,
+    category: 'Disaster Recovery',
+    icon: '🔄🤖',
+    market_price: '$4, 500 - 7, 000 / month',
+    benefits: [;
+      'Automated recovery procedures',
+      'Intelligent backup management',
+      'Predictive recovery planning',
+      'Reduced recovery time',
     ],
-    "use_cases": [;
-      'Data center recovery','
-      'Cloud recovery','
-      'Application recovery','
-      'Business continuity''
+    use_cases: [;
+      'Data center recovery',
+      'Cloud recovery',
+      'Application recovery',
+
+  },;
+];      'Data center recoveryCloud recoveryApplication recoveryBusiness continuity'
     ]
   },;
-];      'Data center recoveryCloud recoveryApplication recoveryBusiness continuity''
+];      'Data center recoveryCloud recoveryApplication recoveryBusiness continuity'
     ]
-  },;
-];      'Data center recoveryCloud recoveryApplication recoveryBusiness continuity''
-    ]
+
 export const real2036ITServices = [
   {
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+export const real2036ITServices = [
+  {
+
+  },;
+];      'Data center recoveryCloud recoveryApplication recoveryBusiness continuity'
+    ]
+
+export const real2036ITServices = [;
+  {;
+    id: 'quantum-cloud-infrastructure-platform',;
+    name: 'Quantum Cloud Infrastructure Platform',;
+    tagline: 'Next-generation quantum cloud computing',;
+    description: 'Revolutionary quantum cloud infrastructure platform providing quantum computing resources, quantum-classical hybrid computing, and quantum cloud services. Features quantum resource management, quantum networking, and quantum security.',;
+    price: '$6,999',;
+    period: 'month',;
+    features: [;
+      'Quantum computing resourcesQuantum-classical hybrid computingQuantum resource managementQuantum networkingQuantum security protocolsScalable quantum infrastructure';
+    ],;
+    popular: true,;
+    category: 'Quantum Cloud',;
+    icon: '☁️⚛️',;
+    marketPrice: '$8,000-15,000/month',;
+    benefits: [;
+      'Access to quantum computing powerHybrid classical-quantum processingFuture-proof cloud infrastructureQuantum advantage in the cloud';
+    ],;
+    useCases: [;
+      'Scientific research computingFinancial modelingDrug discoveryClimate simulation';
+    ];
+  },;
+  {;
+    id: 'ai-powered-devops-platform',;
+    name: 'AI-Powered DevOps Platform',;
+    tagline: 'Intelligent DevOps automation',;
+    description: 'Advanced DevOps platform with AI-powered automation, intelligent deployment strategies, and predictive infrastructure management. Features automated testing, deployment optimization, and intelligent monitoring.',;
+    price: '$2,999',;
+    period: 'month',;
+    features: [;
+      'AI-powered deployment automationIntelligent testing strategiesPredictive infrastructure scalingAutomated incident responseSmart resource optimizationContinuous learning algorithms';
+    ],;
+    popular: true,;
+    category: 'DevOps & AI',;
+    icon: '🤖🔄',;
+    marketPrice: '$4,000-7,000/month',;
+    benefits: [;
+      '90% faster deployment cyclesIntelligent infrastructure managementPredictive scalingAutomated incident resolution';
+    ],;
+    useCases: [;
+      'Continuous deploymentInfrastructure automationTesting automationMonitoring and alerting';
+    ];
+  },;
+  {;
+    id: 'quantum-cybersecurity-platform',;
+    name: 'Quantum Cybersecurity Platform',;
+    tagline: 'Quantum-resistant security solutions',;
+    description: 'Advanced cybersecurity platform with quantum-resistant algorithms, quantum threat detection, and future-proof security protocols. Features quantum encryption, quantum key distribution, and quantum-resistant cryptography.',;
+    price: '$5,499',;
+    period: 'month',;
+    features: [;
+      'Quantum-resistant algorithmsQuantum threat detectionQuantum encryptionQuantum key distributionFuture-proof securityReal-time threat analysis';
+    ],;
+    popular: true,;
+    category: 'Quantum Security',;
+    icon: '🔒⚛️',;
+    marketPrice: '$7,000-12,000/month',;
+    benefits: [;
+      'Quantum-resistant securityFuture-proof protectionAdvanced threat detectionMilitary-grade security';
+    ],;
+    useCases: [;
+      'Government securityFinancial institutionsHealthcare data protectionCritical infrastructure';
+    ];
+  },;
+  {;
+    id: 'edge-computing-orchestration-platform',;
+    name: 'Edge Computing Orchestration Platform',;
+    tagline: 'Intelligent edge computing management',;
+    description: 'Comprehensive edge computing platform with intelligent orchestration, distributed computing optimization, and edge AI capabilities. Features edge resource management, latency optimization, and distributed AI processing.',;
+    price: '$3,999',;
+    period: 'month',;
+    features: [;
+      'Intelligent edge orchestrationDistributed computing optimizationEdge AI processingLatency optimizationEdge resource managementDistributed data processing';
+    ],;
+    popular: true,;
+    category: 'Edge Computing',;
+    icon: '🌐⚡',;
+    marketPrice: '$5,000-8,000/month',;
+    benefits: [;
+      'Ultra-low latency processingDistributed computing powerEdge AI capabilitiesScalable edge infrastructure';
+    ],;
+    useCases: [;
+      'IoT applicationsReal-time analyticsEdge AI processingDistributed computing';
+    ];
+  },;
+  {;
+    id: 'quantum-database-platform',;
+    name: 'Quantum Database Platform',;
+    tagline: 'Quantum-powered data management',;
+    description: 'Revolutionary quantum database platform providing quantum-accelerated queries, quantum data compression, and quantum-optimized data structures. Features quantum search algorithms, quantum data indexing, and quantum data analytics.',;
+    price: '$4,999',;
+    period: 'month',;
+    features: [;
+      'Quantum-accelerated queriesQuantum data compressionQuantum search algorithmsQuantum data indexingQuantum data analyticsHybrid quantum-classical storage';
+    ],;
+    popular: true,;
+    category: 'Quantum Database',;
+    icon: '🗄️⚛️',;
+    marketPrice: '$6,000-10,000/month',;
+    benefits: [;
+      '1000x faster database queriesQuantum data compressionAdvanced search capabilitiesFuture-proof data management';
+    ],;
+    useCases: [;
+      'Big data analyticsReal-time searchData warehousingBusiness intelligence';
+    ];
+  },;
+  {;
+    id: 'ai-powered-network-security',;
+    name: 'AI-Powered Network Security',;
+    tagline: 'Intelligent network protection',;
+    description: 'Advanced network security platform with AI-powered threat detection, intelligent firewall management, and predictive security analytics. Features behavioral analysis, anomaly detection, and automated threat response.',;
+    price: '$2,499',;
+    period: 'month',;
+    features: [;
+      'AI threat detectionIntelligent firewall managementBehavioral analysisAnomaly detectionAutomated threat responsePredictive security analytics';
+    ],;
+    popular: true,;
+    category: 'Network Security',;
+    icon: '🛡️🤖',;
+    marketPrice: '$3,500-6,000/month',;
+    benefits: [;
+      'Proactive threat detectionAutomated security responseIntelligent network protectionReduced false positives';
+    ],;
+    useCases: [;
+      'Enterprise network securityCloud securityIoT securityRemote work security';
+    ];
+  },;
+  {;
+    id: 'quantum-internet-protocols',;
+    name: 'Quantum Internet Protocols',;
+    tagline: 'Next-generation quantum networking',;
+    description: 'Revolutionary quantum internet protocols platform providing quantum communication standards, quantum routing algorithms, and quantum network optimization. Features quantum entanglement distribution, quantum routing, and quantum network security.',;
+    price: '$7,999',;
+    period: 'month',;
+    features: [;
+      'Quantum communication protocolsQuantum routing algorithmsQuantum entanglement distributionQuantum network optimizationQuantum network securityQuantum internet standards';
+    ],;
+    popular: false,;
+    category: 'Quantum Internet',;
+    icon: '🌐⚛️',;
+    marketPrice: '$10,000-20,000/month',;
+    benefits: [;
+      'Unbreakable quantum communicationQuantum network optimizationFuture internet protocolsQuantum internet infrastructure';
+    ],;
+    useCases: [;
+      'Government communicationsFinancial networksResearch networksQuantum internet backbone';
+    ];
+  },;
+  {;
+    id: 'ai-powered-infrastructure-monitoring',;
+    name: 'AI-Powered Infrastructure Monitoring',;
+    tagline: 'Intelligent infrastructure oversight',;
+    description: 'Advanced infrastructure monitoring platform with AI-powered analytics, predictive maintenance, and intelligent alerting. Features automated monitoring, performance optimization, and intelligent resource management.',;
+    price: '$1,999',;
+    period: 'month',;
+    features: [;
+      'AI-powered monitoringPredictive maintenanceIntelligent alertingPerformance optimizationAutomated monitoringResource optimization';
+    ],;
+    popular: true,;
+    category: 'Infrastructure Monitoring',;
+    icon: '📊🤖',;
+    marketPrice: '$3,000-5,000/month',;
+    benefits: [;
+      'Proactive issue detectionAutomated monitoringPerformance optimizationReduced downtime';
+    ],;
+    useCases: [;
+      'Server monitoringNetwork monitoringApplication monitoringCloud infrastructure';
+    ];
+  },;
+  {;
+    id: 'quantum-storage-platform',;
+    name: 'Quantum Storage Platform',;
+    tagline: 'Quantum-accelerated data storage',;
+    description: 'Revolutionary quantum storage platform providing quantum data compression, quantum data encoding, and quantum-optimized storage algorithms. Features quantum compression algorithms, quantum data encoding, and quantum storage optimization.',;
+    price: '$5,499',;
+    period: 'month',;
+    features: [;
+      'Quantum data compressionQuantum data encodingQuantum storage algorithmsQuantum data optimizationHybrid quantum-classical storageQuantum storage security';
+    ],;
+    popular: true,;
+    category: 'Quantum Storage',;
+    icon: '💾⚛️',;
+    marketPrice: '$7,000-12,000/month',;
+    benefits: [;
+      '100x data compressionQuantum data encodingAdvanced storage optimizationFuture-proof storage technology';
+    ],;
+    useCases: [;
+      'Big data storageData archivingCloud storageData backup';
+    ];
+  },;
+  {;
+    id: 'ai-powered-disaster-recovery',;
+    name: 'AI-Powered Disaster Recovery',;
+    tagline: 'Intelligent recovery automation',;
+    description: 'Advanced disaster recovery platform with AI-powered recovery strategies, intelligent backup management, and automated recovery procedures. Features predictive recovery planning, automated testing, and intelligent backup optimization.',;
+    price: '$3,499',;
+    period: 'month',;
+    features: [;
+      'AI recovery strategiesIntelligent backup managementAutomated recovery proceduresPredictive recovery planningAutomated testingBackup optimization';
+    ],;
+    popular: true,;
+    category: 'Disaster Recovery',;
+    icon: '🔄🤖',;
+    marketPrice: '$4,500-7,000/month',;
+    benefits: [;
+      'Automated recovery proceduresIntelligent backup managementPredictive recovery planningReduced recovery time';
+    ],;
+    useCases: [;
+      'Data center recoveryCloud recoveryApplication recoveryBusiness continuity';
+    ];
+
+ursor/fix-website-loading-errors-and-merge-6662
+
+  }
+];
+
+    ];
+  },;
+  {;
+      'Access to quantum computing powerHybrid classical-quantum processingFuture-proof cloud infrastructureQuantum advantage in the cloud';']
+    useCases: [;
+      'Scientific research computingFinancial modelingDrug discoveryClimate simulation';']
+pr-12325
+    id: 'ai-powered-devops-platform',;
+    name: 'AI-Powered DevOps Platform',;
+    tagline: 'Intelligent DevOps automation',;
+    description: 'Advanced DevOps platform with AI-powered automation, intelligent deployment strategies, and predictive infrastructure management. Features automated testing, deployment optimization, and intelligent monitoring.',;
+    price: '$2,999',;
+    period: 'month',;
+    features: [;
+      'AI-powered deployment automationIntelligent testing strategiesPredictive infrastructure scalingAutomated incident responseSmart resource optimizationContinuous learning algorithms';
+    ],;
+    popular: true,;
+    category: 'DevOps & AI',;
+    icon: '🤖🔄',;
+    marketPrice: '$4,000-7,000/month',;
+    benefits: [;
+      '90% faster deployment cyclesIntelligent infrastructure managementPredictive scalingAutomated incident resolution';
+    ],;
+    useCases: [;
+      'Continuous deploymentInfrastructure automationTesting automationMonitoring and alerting';
+    ];
+  },;
+  {;
+      'AI-powered deployment automationIntelligent testing strategiesPredictive infrastructure scalingAutomated incident responseSmart resource optimizationContinuous learning algorithms';']
+    category: 'DevOps & AI',;
+    icon: '🤖🔄',;
+    marketPrice: '$4,000-7,000/month',;
+      '90% faster deployment cyclesIntelligent infrastructure managementPredictive scalingAutomated incident resolution';']
+      'Continuous deploymentInfrastructure automationTesting automationMonitoring and alerting';']
+pr-12325
+    id: 'quantum-cybersecurity-platform',;
+    name: 'Quantum Cybersecurity Platform',;
+    tagline: 'Quantum-resistant security solutions',;
+    description: 'Advanced cybersecurity platform with quantum-resistant algorithms, quantum threat detection, and future-proof security protocols. Features quantum encryption, quantum key distribution, and quantum-resistant cryptography.',;
+    price: '$5,499',;
+    period: 'month',;
+    features: [;
+      'Quantum-resistant algorithmsQuantum threat detectionQuantum encryptionQuantum key distributionFuture-proof securityReal-time threat analysis';
+    ],;
+    popular: true,;
+    category: 'Quantum Security',;
+    icon: '🔒⚛️',;
+    marketPrice: '$7,000-12,000/month',;
+    benefits: [;
+      'Quantum-resistant securityFuture-proof protectionAdvanced threat detectionMilitary-grade security';
+    ],;
+    useCases: [;
+      'Government securityFinancial institutionsHealthcare data protectionCritical infrastructure';
+    ];
+  },;
+  {;
+      'Quantum-resistant algorithmsQuantum threat detectionQuantum encryptionQuantum key distributionFuture-proof securityReal-time threat analysis';']
+    category: 'Quantum Security',;
+    icon: '🔒⚛️',;
+    marketPrice: '$7,000-12,000/month',;
+      'Quantum-resistant securityFuture-proof protectionAdvanced threat detectionMilitary-grade security';']
+      'Government securityFinancial institutionsHealthcare data protectionCritical infrastructure';']
+pr-12325
+    id: 'edge-computing-orchestration-platform',;
+    name: 'Edge Computing Orchestration Platform',;
+    tagline: 'Intelligent edge computing management',;
+    description: 'Comprehensive edge computing platform with intelligent orchestration, distributed computing optimization, and edge AI capabilities. Features edge resource management, latency optimization, and distributed AI processing.',;
+    price: '$3,999',;
+    period: 'month',;
+    features: [;
+      'Intelligent edge orchestrationDistributed computing optimizationEdge AI processingLatency optimizationEdge resource managementDistributed data processing';
+    ],;
+    popular: true,;
+    category: 'Edge Computing',;
+    icon: '🌐⚡',;
+    marketPrice: '$5,000-8,000/month',;
+    benefits: [;
+      'Ultra-low latency processingDistributed computing powerEdge AI capabilitiesScalable edge infrastructure';
+    ],;
+    useCases: [;
+      'IoT applicationsReal-time analyticsEdge AI processingDistributed computing';
+    ];
+  },;
+  {;
+      'Intelligent edge orchestrationDistributed computing optimizationEdge AI processingLatency optimizationEdge resource managementDistributed data processing';']
+    category: 'Edge Computing',;
+    icon: '🌐⚡',;
+    marketPrice: '$5,000-8,000/month',;
+      'Ultra-low latency processingDistributed computing powerEdge AI capabilitiesScalable edge infrastructure';']
+      'IoT applicationsReal-time analyticsEdge AI processingDistributed computing';']
+pr-12325
+    id: 'quantum-database-platform',;
+    name: 'Quantum Database Platform',;
+    tagline: 'Quantum-powered data management',;
+    description: 'Revolutionary quantum database platform providing quantum-accelerated queries, quantum data compression, and quantum-optimized data structures. Features quantum search algorithms, quantum data indexing, and quantum data analytics.',;
+    price: '$4,999',;
+    period: 'month',;
+    features: [;
+      'Quantum-accelerated queriesQuantum data compressionQuantum search algorithmsQuantum data indexingQuantum data analyticsHybrid quantum-classical storage';
+    ],;
+    popular: true,;
+    category: 'Quantum Database',;
+    icon: '🗄️⚛️',;
+    marketPrice: '$6,000-10,000/month',;
+    benefits: [;
+      '1000x faster database queriesQuantum data compressionAdvanced search capabilitiesFuture-proof data management';
+    ],;
+    useCases: [;
+      'Big data analyticsReal-time searchData warehousingBusiness intelligence';
+    ];
+  },;
+  {;
+      'Quantum-accelerated queriesQuantum data compressionQuantum search algorithmsQuantum data indexingQuantum data analyticsHybrid quantum-classical storage';']
+    category: 'Quantum Database',;
+    icon: '🗄️⚛️',;
+    marketPrice: '$6,000-10,000/month',;
+      '1000x faster database queriesQuantum data compressionAdvanced search capabilitiesFuture-proof data management';']
+      'Big data analyticsReal-time searchData warehousingBusiness intelligence';']
+pr-12325
+    id: 'ai-powered-network-security',;
+    name: 'AI-Powered Network Security',;
+    tagline: 'Intelligent network protection',;
+    description: 'Advanced network security platform with AI-powered threat detection, intelligent firewall management, and predictive security analytics. Features behavioral analysis, anomaly detection, and automated threat response.',;
+    price: '$2,499',;
+    period: 'month',;
+    features: [;
+      'AI threat detectionIntelligent firewall managementBehavioral analysisAnomaly detectionAutomated threat responsePredictive security analytics';
+    ],;
+    popular: true,;
+    category: 'Network Security',;
+    icon: '🛡️🤖',;
+    marketPrice: '$3,500-6,000/month',;
+    benefits: [;
+      'Proactive threat detectionAutomated security responseIntelligent network protectionReduced false positives';
+    ],;
+    useCases: [;
+      'Enterprise network securityCloud securityIoT securityRemote work security';
+    ];
+  },;
+  {;
+      'AI threat detectionIntelligent firewall managementBehavioral analysisAnomaly detectionAutomated threat responsePredictive security analytics';']
+    category: 'Network Security',;
+    icon: '🛡️🤖',;
+    marketPrice: '$3,500-6,000/month',;
+      'Proactive threat detectionAutomated security responseIntelligent network protectionReduced false positives';']
+      'Enterprise network securityCloud securityIoT securityRemote work security';']
+pr-12325
+    id: 'quantum-internet-protocols',;
+    name: 'Quantum Internet Protocols',;
+    tagline: 'Next-generation quantum networking',;
+    description: 'Revolutionary quantum internet protocols platform providing quantum communication standards, quantum routing algorithms, and quantum network optimization. Features quantum entanglement distribution, quantum routing, and quantum network security.',;
+    price: '$7,999',;
+    period: 'month',;
+    features: [;
+      'Quantum communication protocolsQuantum routing algorithmsQuantum entanglement distributionQuantum network optimizationQuantum network securityQuantum internet standards';
+    ],;
+      'Quantum communication protocolsQuantum routing algorithmsQuantum entanglement distributionQuantum network optimizationQuantum network securityQuantum internet standards';']
+pr-12325
+    popular: false,;
+    category: 'Quantum Internet',;
+    icon: '🌐⚛️',;
+    marketPrice: '$10,000-20,000/month',;
+    benefits: [;
+      'Unbreakable quantum communicationQuantum network optimizationFuture internet protocolsQuantum internet infrastructure';
+    ],;
+    useCases: [;
+      'Government communicationsFinancial networksResearch networksQuantum internet backbone';
+    ];
+  },;
+  {;
+      'Unbreakable quantum communicationQuantum network optimizationFuture internet protocolsQuantum internet infrastructure';']
+      'Government communicationsFinancial networksResearch networksQuantum internet backbone';']
+pr-12325
+    id: 'ai-powered-infrastructure-monitoring',;
+    name: 'AI-Powered Infrastructure Monitoring',;
+    tagline: 'Intelligent infrastructure oversight',;
+    description: 'Advanced infrastructure monitoring platform with AI-powered analytics, predictive maintenance, and intelligent alerting. Features automated monitoring, performance optimization, and intelligent resource management.',;
+    price: '$1,999',;
+    period: 'month',;
+    features: [;
+      'AI-powered monitoringPredictive maintenanceIntelligent alertingPerformance optimizationAutomated monitoringResource optimization';
+    ],;
+    popular: true,;
+    category: 'Infrastructure Monitoring',;
+    icon: '📊🤖',;
+    marketPrice: '$3,000-5,000/month',;
+    benefits: [;
+      'Proactive issue detectionAutomated monitoringPerformance optimizationReduced downtime';
+    ],;
+    useCases: [;
+      'Server monitoringNetwork monitoringApplication monitoringCloud infrastructure';
+    ];
+  },;
+  {;
+      'AI-powered monitoringPredictive maintenanceIntelligent alertingPerformance optimizationAutomated monitoringResource optimization';']
+    category: 'Infrastructure Monitoring',;
+    icon: '📊🤖',;
+    marketPrice: '$3,000-5,000/month',;
+      'Proactive issue detectionAutomated monitoringPerformance optimizationReduced downtime';']
+      'Server monitoringNetwork monitoringApplication monitoringCloud infrastructure';']
+pr-12325
+    id: 'quantum-storage-platform',;
+    name: 'Quantum Storage Platform',;
+    tagline: 'Quantum-accelerated data storage',;
+    description: 'Revolutionary quantum storage platform providing quantum data compression, quantum data encoding, and quantum-optimized storage algorithms. Features quantum compression algorithms, quantum data encoding, and quantum storage optimization.',;
+    price: '$5,499',;
+    period: 'month',;
+    features: [;
+      'Quantum data compressionQuantum data encodingQuantum storage algorithmsQuantum data optimizationHybrid quantum-classical storageQuantum storage security';
+    ],;
+    popular: true,;
+    category: 'Quantum Storage',;
+    icon: '💾⚛️',;
+    marketPrice: '$7,000-12,000/month',;
+    benefits: [;
+      '100x data compressionQuantum data encodingAdvanced storage optimizationFuture-proof storage technology';
+    ],;
+    useCases: [;
+      'Big data storageData archivingCloud storageData backup';
+    ];
+  },;
+  {;
+      'Quantum data compressionQuantum data encodingQuantum storage algorithmsQuantum data optimizationHybrid quantum-classical storageQuantum storage security';']
+    category: 'Quantum Storage',;
+    icon: '💾⚛️',;
+      '100x data compressionQuantum data encodingAdvanced storage optimizationFuture-proof storage technology';']
+      'Big data storageData archivingCloud storageData backup';']
+pr-12325
+    id: 'ai-powered-disaster-recovery',;
+    name: 'AI-Powered Disaster Recovery',;
+    tagline: 'Intelligent recovery automation',;
+    description: 'Advanced disaster recovery platform with AI-powered recovery strategies, intelligent backup management, and automated recovery procedures. Features predictive recovery planning, automated testing, and intelligent backup optimization.',;
+    price: '$3,499',;
+    period: 'month',;
+    features: [;
+      'AI recovery strategiesIntelligent backup managementAutomated recovery proceduresPredictive recovery planningAutomated testingBackup optimization';
+    ],;
+    popular: true,;
+    category: 'Disaster Recovery',;
+    icon: '🔄🤖',;
+    marketPrice: '$4,500-7,000/month',;
+    benefits: [;
+      'Automated recovery proceduresIntelligent backup managementPredictive recovery planningReduced recovery time';
+    ],;
+    useCases: [;
+      'Data center recoveryCloud recoveryApplication recoveryBusiness continuity';
+    ];
+  }
+];
+>>>>>>> origin/chore/fix-lint-and-merge
+      'Big data storage',
+      'Data archiving',
+      'Cloud storage',
+      'Data backup',
+    ],
+  },
+  {
+<<<<<<< HEAD
+    id: 'ai - powered - disaster - recovery',
+    name: 'AI - Powered Disaster Recovery',
+    tagline: 'Intelligent recovery automation',
+    description:;
+      'Advanced disaster recovery platform with AI - powered recovery strategies, intelligent backup management, and automated recovery procedures. Features predictive recovery planning, automated testing, and intelligent backup optimization.',
+    price: '$3, 499',
+    period: 'month',
+    features: [;
+      'Quantum storage security',']
+    category: 'Quantum Storage',
+    icon: '💾⚛️',
+      '100x data compression',
+      'Advanced storage optimization',
+      'Future - proof storage technology',']
+      'Big data storage',
+      'Data archiving',
+      'Cloud storage',
+      'Data backup',']
+    id: 'ai - powered - disaster - recovery',
+    name: 'AI - Powered Disaster Recovery',
+    tagline: 'Intelligent recovery automation',
+      'Advanced disaster recovery platform with AI - powered recovery strategies, intelligent backup management, and automated recovery procedures. Features predictive recovery planning, automated testing, and intelligent backup optimization.',
+    price: '$3, 499',
+pr-12325
+=======
+    id: 'ai-powered-disaster-recovery',
+    name: 'AI-Powered Disaster Recovery',
+    tagline: 'Intelligent recovery automation',
+    description:
+      'Advanced disaster recovery platform with AI-powered recovery strategies, intelligent backup management, and automated recovery procedures. Features predictive recovery planning, automated testing, and intelligent backup optimization.',
+    price: '$3,499',
+    period: 'month',
+    features: [
+>>>>>>> origin/chore/fix-lint-and-merge
+      'AI recovery strategies',
+      'Intelligent backup management',
+      'Automated recovery procedures',
+      'Predictive recovery planning',
+      'Automated testing',
+      'Backup optimization',
+    ],
+    popular: true,
+    category: 'Disaster Recovery',
+    icon: '🔄🤖',
+<<<<<<< HEAD
+    market_price: '$4, 500 - 7, 000 / month',
+    benefits: [;
+=======
+    marketPrice: '$4,500-7,000/month',
+    benefits: [
+>>>>>>> origin/chore/fix-lint-and-merge
+      'Automated recovery procedures',
+      'Intelligent backup management',
+      'Predictive recovery planning',
+      'Reduced recovery time',
+    ],
+<<<<<<< HEAD
+    use_cases: [;
+      'Data center recovery',
+      'Cloud recovery',
+      'Application recovery',
+      'Business continuity'
+    ]
+      'Business continuity',
+    ],
+
+
+export const real2036ITServices = [
+  {
+
+
+export const real2036ITServices = []
+  {}
       'Data center recovery','
       'Cloud recovery','
       'Application recovery','
-      'Business continuity''
+      'Business continuity',
+    ],
+;
+  },;'
+];      'Data center recoveryCloud recoveryApplication recoveryBusiness continuity'
     ]
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+
+
+export const real2036ITServices = [
+  {
+
+
+      'Data center recovery',
+      'Cloud recovery',
+      'Application recovery',
+      'Business continuity',
+    ],
+
+
+      'Data center recovery',
+      'Cloud recovery',
+      'Application recovery',
+      'Business continuity'
+    ]
+
   },;
-];      'Data center recoveryCloud recoveryApplication recoveryBusiness continuity''
+];      'Data center recoveryCloud recoveryApplication recoveryBusiness continuity'
     ]
+
+export const real2036ITServices = [;
+  {;
+    id: 'quantum-cloud-infrastructure-platform',;
+    name: 'Quantum Cloud Infrastructure Platform',;
+    tagline: 'Next-generation quantum cloud computing',;
+    description: 'Revolutionary quantum cloud infrastructure platform providing quantum computing resources, quantum-classical hybrid computing, and quantum cloud services. Features quantum resource management, quantum networking, and quantum security.',;
+    price: '$6,999',;
+    period: 'month',;
+    features: [;
+      'Quantum computing resourcesQuantum-classical hybrid computingQuantum resource managementQuantum networkingQuantum security protocolsScalable quantum infrastructure';
+    ],;
+    popular: true,;
+    category: 'Quantum Cloud',;
+    icon: '☁️⚛️',;
+    marketPrice: '$8,000-15,000/month',;
+    benefits: [;
+      'Access to quantum computing powerHybrid classical-quantum processingFuture-proof cloud infrastructureQuantum advantage in the cloud';
+    ],;
+    useCases: [;
+      'Scientific research computingFinancial modelingDrug discoveryClimate simulation';
+    ];
+  },;
+  {;
+    id: 'ai-powered-devops-platform',;
+    name: 'AI-Powered DevOps Platform',;
+    tagline: 'Intelligent DevOps automation',;
+    description: 'Advanced DevOps platform with AI-powered automation, intelligent deployment strategies, and predictive infrastructure management. Features automated testing, deployment optimization, and intelligent monitoring.',;
+    price: '$2,999',;
+    period: 'month',;
+    features: [;
+      'AI-powered deployment automationIntelligent testing strategiesPredictive infrastructure scalingAutomated incident responseSmart resource optimizationContinuous learning algorithms';
+    ],;
+    popular: true,;
+    category: 'DevOps & AI',;
+    icon: '🤖🔄',;
+    marketPrice: '$4,000-7,000/month',;
+    benefits: [;
+      '90% faster deployment cyclesIntelligent infrastructure managementPredictive scalingAutomated incident resolution';
+    ],;
+    useCases: [;
+      'Continuous deploymentInfrastructure automationTesting automationMonitoring and alerting';
+    ];
+  },;
+  {;
+    id: 'quantum-cybersecurity-platform',;
+    name: 'Quantum Cybersecurity Platform',;
+    tagline: 'Quantum-resistant security solutions',;
+    description: 'Advanced cybersecurity platform with quantum-resistant algorithms, quantum threat detection, and future-proof security protocols. Features quantum encryption, quantum key distribution, and quantum-resistant cryptography.',;
+    price: '$5,499',;
+    period: 'month',;
+    features: [;
+      'Quantum-resistant algorithmsQuantum threat detectionQuantum encryptionQuantum key distributionFuture-proof securityReal-time threat analysis';
+    ],;
+    popular: true,;
+    category: 'Quantum Security',;
+    icon: '🔒⚛️',;
+    marketPrice: '$7,000-12,000/month',;
+    benefits: [;
+      'Quantum-resistant securityFuture-proof protectionAdvanced threat detectionMilitary-grade security';
+    ],;
+    useCases: [;
+      'Government securityFinancial institutionsHealthcare data protectionCritical infrastructure';
+    ];
+  },;
+  {;
+    id: 'edge-computing-orchestration-platform',;
+    name: 'Edge Computing Orchestration Platform',;
+    tagline: 'Intelligent edge computing management',;
+    description: 'Comprehensive edge computing platform with intelligent orchestration, distributed computing optimization, and edge AI capabilities. Features edge resource management, latency optimization, and distributed AI processing.',;
+    price: '$3,999',;
+    period: 'month',;
+    features: [;
+      'Intelligent edge orchestrationDistributed computing optimizationEdge AI processingLatency optimizationEdge resource managementDistributed data processing';
+    ],;
+    popular: true,;
+    category: 'Edge Computing',;
+    icon: '🌐⚡',;
+    marketPrice: '$5,000-8,000/month',;
+    benefits: [;
+      'Ultra-low latency processingDistributed computing powerEdge AI capabilitiesScalable edge infrastructure';
+    ],;
+    useCases: [;
+      'IoT applicationsReal-time analyticsEdge AI processingDistributed computing';
+    ];
+  },;
+  {;
+    id: 'quantum-database-platform',;
+    name: 'Quantum Database Platform',;
+    tagline: 'Quantum-powered data management',;
+    description: 'Revolutionary quantum database platform providing quantum-accelerated queries, quantum data compression, and quantum-optimized data structures. Features quantum search algorithms, quantum data indexing, and quantum data analytics.',;
+    price: '$4,999',;
+    period: 'month',;
+    features: [;
+      'Quantum-accelerated queriesQuantum data compressionQuantum search algorithmsQuantum data indexingQuantum data analyticsHybrid quantum-classical storage';
+    ],;
+    popular: true,;
+    category: 'Quantum Database',;
+    icon: '🗄️⚛️',;
+    marketPrice: '$6,000-10,000/month',;
+    benefits: [;
+      '1000x faster database queriesQuantum data compressionAdvanced search capabilitiesFuture-proof data management';
+    ],;
+    useCases: [;
+      'Big data analyticsReal-time searchData warehousingBusiness intelligence';
+    ];
+  },;
+  {;
+    id: 'ai-powered-network-security',;
+    name: 'AI-Powered Network Security',;
+    tagline: 'Intelligent network protection',;
+    description: 'Advanced network security platform with AI-powered threat detection, intelligent firewall management, and predictive security analytics. Features behavioral analysis, anomaly detection, and automated threat response.',;
+    price: '$2,499',;
+    period: 'month',;
+    features: [;
+      'AI threat detectionIntelligent firewall managementBehavioral analysisAnomaly detectionAutomated threat responsePredictive security analytics';
+    ],;
+    popular: true,;
+    category: 'Network Security',;
+    icon: '🛡️🤖',;
+    marketPrice: '$3,500-6,000/month',;
+    benefits: [;
+      'Proactive threat detectionAutomated security responseIntelligent network protectionReduced false positives';
+    ],;
+    useCases: [;
+      'Enterprise network securityCloud securityIoT securityRemote work security';
+    ];
+  },;
+  {;
+    id: 'quantum-internet-protocols',;
+    name: 'Quantum Internet Protocols',;
+    tagline: 'Next-generation quantum networking',;
+    description: 'Revolutionary quantum internet protocols platform providing quantum communication standards, quantum routing algorithms, and quantum network optimization. Features quantum entanglement distribution, quantum routing, and quantum network security.',;
+    price: '$7,999',;
+    period: 'month',;
+    features: [;
+      'Quantum communication protocolsQuantum routing algorithmsQuantum entanglement distributionQuantum network optimizationQuantum network securityQuantum internet standards';
+    ],;
+    popular: false,;
+    category: 'Quantum Internet',;
+    icon: '🌐⚛️',;
+    marketPrice: '$10,000-20,000/month',;
+    benefits: [;
+      'Unbreakable quantum communicationQuantum network optimizationFuture internet protocolsQuantum internet infrastructure';
+    ],;
+    useCases: [;
+      'Government communicationsFinancial networksResearch networksQuantum internet backbone';
+    ];
+  },;
+  {;
+    id: 'ai-powered-infrastructure-monitoring',;
+    name: 'AI-Powered Infrastructure Monitoring',;
+    tagline: 'Intelligent infrastructure oversight',;
+    description: 'Advanced infrastructure monitoring platform with AI-powered analytics, predictive maintenance, and intelligent alerting. Features automated monitoring, performance optimization, and intelligent resource management.',;
+    price: '$1,999',;
+    period: 'month',;
+    features: [;
+      'AI-powered monitoringPredictive maintenanceIntelligent alertingPerformance optimizationAutomated monitoringResource optimization';
+    ],;
+    popular: true,;
+    category: 'Infrastructure Monitoring',;
+    icon: '📊🤖',;
+    marketPrice: '$3,000-5,000/month',;
+    benefits: [;
+      'Proactive issue detectionAutomated monitoringPerformance optimizationReduced downtime';
+    ],;
+    useCases: [;
+      'Server monitoringNetwork monitoringApplication monitoringCloud infrastructure';
+    ];
+  },;
+  {;
+    id: 'quantum-storage-platform',;
+    name: 'Quantum Storage Platform',;
+    tagline: 'Quantum-accelerated data storage',;
+    description: 'Revolutionary quantum storage platform providing quantum data compression, quantum data encoding, and quantum-optimized storage algorithms. Features quantum compression algorithms, quantum data encoding, and quantum storage optimization.',;
+    price: '$5,499',;
+    period: 'month',;
+    features: [;
+      'Quantum data compressionQuantum data encodingQuantum storage algorithmsQuantum data optimizationHybrid quantum-classical storageQuantum storage security';
+    ],;
+    popular: true,;
+    category: 'Quantum Storage',;
+    icon: '💾⚛️',;
+    marketPrice: '$7,000-12,000/month',;
+    benefits: [;
+      '100x data compressionQuantum data encodingAdvanced storage optimizationFuture-proof storage technology';
+    ],;
+    useCases: [;
+      'Big data storageData archivingCloud storageData backup';
+    ];
+  },;
+  {;
+    id: 'ai-powered-disaster-recovery',;
+    name: 'AI-Powered Disaster Recovery',;
+    tagline: 'Intelligent recovery automation',;
+    description: 'Advanced disaster recovery platform with AI-powered recovery strategies, intelligent backup management, and automated recovery procedures. Features predictive recovery planning, automated testing, and intelligent backup optimization.',;
+    price: '$3,499',;
+    period: 'month',;
+    features: [;
+      'AI recovery strategiesIntelligent backup managementAutomated recovery proceduresPredictive recovery planningAutomated testingBackup optimization';
+    ],;
+    popular: true,;
+    category: 'Disaster Recovery',;
+    icon: '🔄🤖',;
+    marketPrice: '$4,500-7,000/month',;
+    benefits: [;
+      'Automated recovery proceduresIntelligent backup managementPredictive recovery planningReduced recovery time';
+    ],;
+    useCases: [;
+      'Data center recoveryCloud recoveryApplication recoveryBusiness continuity';
+
+
+export const real2036ITServices = [
+  {
+
+
+      'Business continuity']},
+];      Data center recoveryCloud recoveryApplication recoveryBusiness continuity'
+    ]
+
+
+
+
+
+export const real2036ITServices = [
+  {
+
+  }];      'Data center recoveryCloud recoveryApplication recoveryBusiness continuity
+    ]
+
+
+export const real2036ITServices = [;
+  {
+    id: quantum-cloud-infrastructure-platform',
+    name: 'Quantum Cloud Infrastructure Platform,
+    tagline: Next-generation quantum cloud computing',
+    description: 'Revolutionary quantum cloud infrastructure platform providing quantum computing resources, quantum-classical hybrid computing, and quantum cloud services. Features quantum resource management, quantum networking, and quantum security.,
+    price: $6,999',
+    period: 'month,
+    features: [;
+      Quantum computing resourcesQuantum-classical hybrid computingQuantum resource managementQuantum networkingQuantum security protocolsScalable quantum infrastructure';
+    ],
+    popular: true,
+    category: 'Quantum Cloud,
+    icon: ☁️⚛️',
+    marketPrice: '$8,000-15,000/month,
+    benefits: [;
+      Access to quantum computing powerHybrid classical-quantum processingFuture-proof cloud infrastructureQuantum advantage in the cloud';
+    ],
+    useCases: [;
+      'Scientific research computingFinancial modelingDrug discoveryClimate simulation;
+    ];
+  },
+  {
+    id: ai-powered-devops-platform',
+    name: 'AI-Powered DevOps Platform,
+    tagline: Intelligent DevOps automation',
+    description: 'Advanced DevOps platform with AI-powered automation, intelligent deployment strategies, and predictive infrastructure management. Features automated testing, deployment optimization, and intelligent monitoring.,
+    price: $2,999',
+    period: 'month,
+    features: [;
+      AI-powered deployment automationIntelligent testing strategiesPredictive infrastructure scalingAutomated incident responseSmart resource optimizationContinuous learning algorithms';
+    ],
+    popular: true,
+    category: 'DevOps & AI,
+    icon: 🤖🔄',
+    marketPrice: '$4,000-7,000/month,
+    benefits: [;
+      90% faster deployment cyclesIntelligent infrastructure managementPredictive scalingAutomated incident resolution';
+    ],
+    useCases: [;
+      'Continuous deploymentInfrastructure automationTesting automationMonitoring and alerting;
+    ];
+  },
+  {
+    id: quantum-cybersecurity-platform',
+    name: 'Quantum Cybersecurity Platform,
+    tagline: Quantum-resistant security solutions',
+    description: 'Advanced cybersecurity platform with quantum-resistant algorithms, quantum threat detection, and future-proof security protocols. Features quantum encryption, quantum key distribution, and quantum-resistant cryptography.,
+    price: $5,499',
+    period: 'month,
+    features: [;
+      Quantum-resistant algorithmsQuantum threat detectionQuantum encryptionQuantum key distributionFuture-proof securityReal-time threat analysis';
+    ],
+    popular: true,
+    category: 'Quantum Security,
+    icon: 🔒⚛️',
+    marketPrice: '$7,000-12,000/month,
+    benefits: [;
+      Quantum-resistant securityFuture-proof protectionAdvanced threat detectionMilitary-grade security';
+    ],
+    useCases: [;
+      'Government securityFinancial institutionsHealthcare data protectionCritical infrastructure;
+    ];
+  },
+  {
+    id: edge-computing-orchestration-platform',
+    name: 'Edge Computing Orchestration Platform,
+    tagline: Intelligent edge computing management',
+    description: 'Comprehensive edge computing platform with intelligent orchestration, distributed computing optimization, and edge AI capabilities. Features edge resource management, latency optimization, and distributed AI processing.,
+    price: $3,999',
+    period: 'month,
+    features: [;
+      Intelligent edge orchestrationDistributed computing optimizationEdge AI processingLatency optimizationEdge resource managementDistributed data processing';
+    ],
+    popular: true,
+    category: 'Edge Computing,
+    icon: 🌐⚡',
+    marketPrice: '$5,000-8,000/month,
+    benefits: [;
+      Ultra-low latency processingDistributed computing powerEdge AI capabilitiesScalable edge infrastructure';
+    ],
+    useCases: [;
+      'IoT applicationsReal-time analyticsEdge AI processingDistributed computing;
+    ];
+  },
+  {
+    id: quantum-database-platform',
+    name: 'Quantum Database Platform,
+    tagline: Quantum-powered data management',
+    description: 'Revolutionary quantum database platform providing quantum-accelerated queries, quantum data compression, and quantum-optimized data structures. Features quantum search algorithms, quantum data indexing, and quantum data analytics.,
+    price: $4,999',
+    period: 'month,
+    features: [;
+      Quantum-accelerated queriesQuantum data compressionQuantum search algorithmsQuantum data indexingQuantum data analyticsHybrid quantum-classical storage';
+    ],
+    popular: true,
+    category: 'Quantum Database,
+    icon: 🗄️⚛️',
+    marketPrice: '$6,000-10,000/month,
+    benefits: [;
+      1000x faster database queriesQuantum data compressionAdvanced search capabilitiesFuture-proof data management';
+    ],
+    useCases: [;
+      'Big data analyticsReal-time searchData warehousingBusiness intelligence;
+    ];
+  },
+  {
+    id: ai-powered-network-security',
+    name: 'AI-Powered Network Security,
+    tagline: Intelligent network protection',
+    description: 'Advanced network security platform with AI-powered threat detection, intelligent firewall management, and predictive security analytics. Features behavioral analysis, anomaly detection, and automated threat response.,
+    price: $2,499',
+    period: 'month,
+    features: [;
+      AI threat detectionIntelligent firewall managementBehavioral analysisAnomaly detectionAutomated threat responsePredictive security analytics';
+    ],
+    popular: true,
+    category: 'Network Security,
+    icon: 🛡️🤖',
+    marketPrice: '$3,500-6,000/month,
+    benefits: [;
+      Proactive threat detectionAutomated security responseIntelligent network protectionReduced false positives';
+    ],
+    useCases: [;
+      'Enterprise network securityCloud securityIoT securityRemote work security;
+    ];
+  },
+  {
+    id: quantum-internet-protocols',
+    name: 'Quantum Internet Protocols,
+    tagline: Next-generation quantum networking',
+    description: 'Revolutionary quantum internet protocols platform providing quantum communication standards, quantum routing algorithms, and quantum network optimization. Features quantum entanglement distribution, quantum routing, and quantum network security.,
+    price: $7,999',
+    period: 'month,
+    features: [;
+      Quantum communication protocolsQuantum routing algorithmsQuantum entanglement distributionQuantum network optimizationQuantum network securityQuantum internet standards';
+    ],
+    popular: false,
+    category: 'Quantum Internet,
+    icon: 🌐⚛️',
+    marketPrice: '$10,000-20,000/month,
+    benefits: [;
+      Unbreakable quantum communicationQuantum network optimizationFuture internet protocolsQuantum internet infrastructure';
+    ],
+    useCases: [;
+      'Government communicationsFinancial networksResearch networksQuantum internet backbone;
+    ];
+  },
+  {
+    id: ai-powered-infrastructure-monitoring',
+    name: 'AI-Powered Infrastructure Monitoring,
+    tagline: Intelligent infrastructure oversight',
+    description: 'Advanced infrastructure monitoring platform with AI-powered analytics, predictive maintenance, and intelligent alerting. Features automated monitoring, performance optimization, and intelligent resource management.,
+    price: $1,999',
+    period: 'month,
+    features: [;
+      AI-powered monitoringPredictive maintenanceIntelligent alertingPerformance optimizationAutomated monitoringResource optimization';
+    ],
+    popular: true,
+    category: 'Infrastructure Monitoring,
+    icon: 📊🤖',
+    marketPrice: '$3,000-5,000/month,
+    benefits: [;
+      Proactive issue detectionAutomated monitoringPerformance optimizationReduced downtime';
+    ],
+    useCases: [;
+      'Server monitoringNetwork monitoringApplication monitoringCloud infrastructure;
+    ];
+  },
+  {
+    id: quantum-storage-platform',
+    name: 'Quantum Storage Platform,
+    tagline: Quantum-accelerated data storage',
+    description: 'Revolutionary quantum storage platform providing quantum data compression, quantum data encoding, and quantum-optimized storage algorithms. Features quantum compression algorithms, quantum data encoding, and quantum storage optimization.,
+    price: $5,499',
+    period: 'month,
+    features: [;
+      Quantum data compressionQuantum data encodingQuantum storage algorithmsQuantum data optimizationHybrid quantum-classical storageQuantum storage security';
+    ],
+    popular: true,
+    category: 'Quantum Storage,
+    icon: 💾⚛️',
+    marketPrice: '$7,000-12,000/month,
+    benefits: [;
+      100x data compressionQuantum data encodingAdvanced storage optimizationFuture-proof storage technology';
+    ],
+    useCases: [;
+      'Big data storageData archivingCloud storageData backup;
+    ];
+  },
+  {
+    id: ai-powered-disaster-recovery',
+    name: 'AI-Powered Disaster Recovery,
+    tagline: Intelligent recovery automation',
+    description: 'Advanced disaster recovery platform with AI-powered recovery strategies, intelligent backup management, and automated recovery procedures. Features predictive recovery planning, automated testing, and intelligent backup optimization.,
+    price: $3,499',
+    period: 'month,
+    features: [;
+      AI recovery strategiesIntelligent backup managementAutomated recovery proceduresPredictive recovery planningAutomated testingBackup optimization';
+    ],
+    popular: true,
+    category: 'Disaster Recovery,
+    icon: 🔄🤖',
+    marketPrice: '$4,500-7,000/month,
+    benefits: [;
+      Automated recovery proceduresIntelligent backup managementPredictive recovery planningReduced recovery time';
+    ],
+    useCases: [;
+      'Data center recoveryCloud recoveryApplication recoveryBusiness continuity;
+    ];
+
+
+
+ursor/fix-website-loading-errors-and-merge-6662
+  }
+];
+  }
+];
+      'Big data storage','Data archiving','Cloud storage','Data backup';
+;
+  },;
+];      'Data center recoveryCloud recoveryApplication recoveryBusiness continuity'
+    ]
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+origin/cursor/expand-services-advertise-and-build-project-c28b
+export const real2036ITServices = [;
+      'Backup optimization',']
+    category: 'Disaster Recovery',
+    icon: '🔄🤖',
+    market_price: '$4, 500 - 7, 000 / month',
+      'Reduced recovery time',']
+      'Data center recovery',
+      'Cloud recovery',
+      'Application recovery',
+      'Business continuity',']
+
+  },;
+
+
+
+
+
+
+
+
+;
+pr-12325
+  {;
+    id: 'quantum-cloud-infrastructure-platform',;
+    name: 'Quantum Cloud Infrastructure Platform',;
+    tagline: 'Next-generation quantum cloud computing',;
+    description: 'Revolutionary quantum cloud infrastructure platform providing quantum computing resources, quantum-classical hybrid computing, and quantum cloud services. Features quantum resource management, quantum networking, and quantum security.',;
+    price: '$6,999',;
+    period: 'month',;
+    features: [;
+      'Quantum computing resourcesQuantum-classical hybrid computingQuantum resource managementQuantum networkingQuantum security protocolsScalable quantum infrastructure';
+      'Quantum computing resourcesQuantum-classical hybrid computingQuantum resource managementQuantum networkingQuantum security protocolsScalable quantum infrastructure';']
+pr-12325
+    ],;
+    popular: true,;
+    category: 'Quantum Cloud',;
+    icon: '☁️⚛️',;
+    marketPrice: '$8,000-15,000/month',;
+    benefits: [;
+      'Access to quantum computing powerHybrid classical-quantum processingFuture-proof cloud infrastructureQuantum advantage in the cloud';
+    ],;
+    useCases: [;
+      'Scientific research computingFinancial modelingDrug discoveryClimate simulation';
+    ];
+  },;
+  {;
+      'Access to quantum computing powerHybrid classical-quantum processingFuture-proof cloud infrastructureQuantum advantage in the cloud';']
+    useCases: [;
+      'Scientific research computingFinancial modelingDrug discoveryClimate simulation';']
+pr-12325
+    id: 'ai-powered-devops-platform',;
+    name: 'AI-Powered DevOps Platform',;
+    tagline: 'Intelligent DevOps automation',;
+    description: 'Advanced DevOps platform with AI-powered automation, intelligent deployment strategies, and predictive infrastructure management. Features automated testing, deployment optimization, and intelligent monitoring.',;
+    price: '$2,999',;
+    period: 'month',;
+    features: [;
+      'AI-powered deployment automationIntelligent testing strategiesPredictive infrastructure scalingAutomated incident responseSmart resource optimizationContinuous learning algorithms';
+    ],;
+    popular: true,;
+    category: 'DevOps & AI',;
+    icon: '🤖🔄',;
+    marketPrice: '$4,000-7,000/month',;
+    benefits: [;
+      '90% faster deployment cyclesIntelligent infrastructure managementPredictive scalingAutomated incident resolution';
+    ],;
+    useCases: [;
+      'Continuous deploymentInfrastructure automationTesting automationMonitoring and alerting';
+    ];
+  },;
+  {;
+      'AI-powered deployment automationIntelligent testing strategiesPredictive infrastructure scalingAutomated incident responseSmart resource optimizationContinuous learning algorithms';']
+    category: 'DevOps & AI',;
+    icon: '🤖🔄',;
+    marketPrice: '$4,000-7,000/month',;
+      '90% faster deployment cyclesIntelligent infrastructure managementPredictive scalingAutomated incident resolution';']
+      'Continuous deploymentInfrastructure automationTesting automationMonitoring and alerting';']
+pr-12325
+    id: 'quantum-cybersecurity-platform',;
+    name: 'Quantum Cybersecurity Platform',;
+    tagline: 'Quantum-resistant security solutions',;
+    description: 'Advanced cybersecurity platform with quantum-resistant algorithms, quantum threat detection, and future-proof security protocols. Features quantum encryption, quantum key distribution, and quantum-resistant cryptography.',;
+    price: '$5,499',;
+    period: 'month',;
+    features: [;
+      'Quantum-resistant algorithmsQuantum threat detectionQuantum encryptionQuantum key distributionFuture-proof securityReal-time threat analysis';
+    ],;
+    popular: true,;
+    category: 'Quantum Security',;
+    icon: '🔒⚛️',;
+    marketPrice: '$7,000-12,000/month',;
+    benefits: [;
+      'Quantum-resistant securityFuture-proof protectionAdvanced threat detectionMilitary-grade security';
+    ],;
+    useCases: [;
+      'Government securityFinancial institutionsHealthcare data protectionCritical infrastructure';
+    ];
+  },;
+  {;
+      'Quantum-resistant algorithmsQuantum threat detectionQuantum encryptionQuantum key distributionFuture-proof securityReal-time threat analysis';']
+    category: 'Quantum Security',;
+    icon: '🔒⚛️',;
+    marketPrice: '$7,000-12,000/month',;
+      'Quantum-resistant securityFuture-proof protectionAdvanced threat detectionMilitary-grade security';']
+      'Government securityFinancial institutionsHealthcare data protectionCritical infrastructure';']
+pr-12325
+    id: 'edge-computing-orchestration-platform',;
+    name: 'Edge Computing Orchestration Platform',;
+    tagline: 'Intelligent edge computing management',;
+    description: 'Comprehensive edge computing platform with intelligent orchestration, distributed computing optimization, and edge AI capabilities. Features edge resource management, latency optimization, and distributed AI processing.',;
+    price: '$3,999',;
+    period: 'month',;
+    features: [;
+      'Intelligent edge orchestrationDistributed computing optimizationEdge AI processingLatency optimizationEdge resource managementDistributed data processing';
+    ],;
+    popular: true,;
+    category: 'Edge Computing',;
+    icon: '🌐⚡',;
+    marketPrice: '$5,000-8,000/month',;
+    benefits: [;
+      'Ultra-low latency processingDistributed computing powerEdge AI capabilitiesScalable edge infrastructure';
+    ],;
+    useCases: [;
+      'IoT applicationsReal-time analyticsEdge AI processingDistributed computing';
+    ];
+  },;
+  {;
+      'Intelligent edge orchestrationDistributed computing optimizationEdge AI processingLatency optimizationEdge resource managementDistributed data processing';']
+    category: 'Edge Computing',;
+    icon: '🌐⚡',;
+    marketPrice: '$5,000-8,000/month',;
+      'Ultra-low latency processingDistributed computing powerEdge AI capabilitiesScalable edge infrastructure';']
+      'IoT applicationsReal-time analyticsEdge AI processingDistributed computing';']
+pr-12325
+    id: 'quantum-database-platform',;
+    name: 'Quantum Database Platform',;
+    tagline: 'Quantum-powered data management',;
+    description: 'Revolutionary quantum database platform providing quantum-accelerated queries, quantum data compression, and quantum-optimized data structures. Features quantum search algorithms, quantum data indexing, and quantum data analytics.',;
+    price: '$4,999',;
+    period: 'month',;
+    features: [;
+      'Quantum-accelerated queriesQuantum data compressionQuantum search algorithmsQuantum data indexingQuantum data analyticsHybrid quantum-classical storage';
+    ],;
+    popular: true,;
+    category: 'Quantum Database',;
+    icon: '🗄️⚛️',;
+    marketPrice: '$6,000-10,000/month',;
+    benefits: [;
+      '1000x faster database queriesQuantum data compressionAdvanced search capabilitiesFuture-proof data management';
+    ],;
+    useCases: [;
+      'Big data analyticsReal-time searchData warehousingBusiness intelligence';
+    ];
+  },;
+  {;
+      'Quantum-accelerated queriesQuantum data compressionQuantum search algorithmsQuantum data indexingQuantum data analyticsHybrid quantum-classical storage';']
+    category: 'Quantum Database',;
+    icon: '🗄️⚛️',;
+    marketPrice: '$6,000-10,000/month',;
+      '1000x faster database queriesQuantum data compressionAdvanced search capabilitiesFuture-proof data management';']
+      'Big data analyticsReal-time searchData warehousingBusiness intelligence';']
+pr-12325
+    id: 'ai-powered-network-security',;
+    name: 'AI-Powered Network Security',;
+    tagline: 'Intelligent network protection',;
+    description: 'Advanced network security platform with AI-powered threat detection, intelligent firewall management, and predictive security analytics. Features behavioral analysis, anomaly detection, and automated threat response.',;
+    price: '$2,499',;
+    period: 'month',;
+    features: [;
+      'AI threat detectionIntelligent firewall managementBehavioral analysisAnomaly detectionAutomated threat responsePredictive security analytics';
+    ],;
+    popular: true,;
+    category: 'Network Security',;
+    icon: '🛡️🤖',;
+    marketPrice: '$3,500-6,000/month',;
+    benefits: [;
+      'Proactive threat detectionAutomated security responseIntelligent network protectionReduced false positives';
+    ],;
+    useCases: [;
+      'Enterprise network securityCloud securityIoT securityRemote work security';
+    ];
+  },;
+  {;
+      'AI threat detectionIntelligent firewall managementBehavioral analysisAnomaly detectionAutomated threat responsePredictive security analytics';']
+    category: 'Network Security',;
+    icon: '🛡️🤖',;
+    marketPrice: '$3,500-6,000/month',;
+      'Proactive threat detectionAutomated security responseIntelligent network protectionReduced false positives';']
+      'Enterprise network securityCloud securityIoT securityRemote work security';']
+pr-12325
+    id: 'quantum-internet-protocols',;
+    name: 'Quantum Internet Protocols',;
+    tagline: 'Next-generation quantum networking',;
+    description: 'Revolutionary quantum internet protocols platform providing quantum communication standards, quantum routing algorithms, and quantum network optimization. Features quantum entanglement distribution, quantum routing, and quantum network security.',;
+    price: '$7,999',;
+    period: 'month',;
+    features: [;
+      'Quantum communication protocolsQuantum routing algorithmsQuantum entanglement distributionQuantum network optimizationQuantum network securityQuantum internet standards';
+    ],;
+      'Quantum communication protocolsQuantum routing algorithmsQuantum entanglement distributionQuantum network optimizationQuantum network securityQuantum internet standards';']
+pr-12325
+    popular: false,;
+    category: 'Quantum Internet',;
+    icon: '🌐⚛️',;
+    marketPrice: '$10,000-20,000/month',;
+    benefits: [;
+      'Unbreakable quantum communicationQuantum network optimizationFuture internet protocolsQuantum internet infrastructure';
+    ],;
+    useCases: [;
+      'Government communicationsFinancial networksResearch networksQuantum internet backbone';
+    ];
+  },;
+  {;
+      'Unbreakable quantum communicationQuantum network optimizationFuture internet protocolsQuantum internet infrastructure';']
+      'Government communicationsFinancial networksResearch networksQuantum internet backbone';']
+pr-12325
+    id: 'ai-powered-infrastructure-monitoring',;
+    name: 'AI-Powered Infrastructure Monitoring',;
+    tagline: 'Intelligent infrastructure oversight',;
+    description: 'Advanced infrastructure monitoring platform with AI-powered analytics, predictive maintenance, and intelligent alerting. Features automated monitoring, performance optimization, and intelligent resource management.',;
+    price: '$1,999',;
+    period: 'month',;
+    features: [;
+      'AI-powered monitoringPredictive maintenanceIntelligent alertingPerformance optimizationAutomated monitoringResource optimization';
+    ],;
+    popular: true,;
+    category: 'Infrastructure Monitoring',;
+    icon: '📊🤖',;
+    marketPrice: '$3,000-5,000/month',;
+    benefits: [;
+      'Proactive issue detectionAutomated monitoringPerformance optimizationReduced downtime';
+    ],;
+    useCases: [;
+      'Server monitoringNetwork monitoringApplication monitoringCloud infrastructure';
+    ];
+  },;
+  {;
+      'AI-powered monitoringPredictive maintenanceIntelligent alertingPerformance optimizationAutomated monitoringResource optimization';']
+    category: 'Infrastructure Monitoring',;
+    icon: '📊🤖',;
+    marketPrice: '$3,000-5,000/month',;
+      'Proactive issue detectionAutomated monitoringPerformance optimizationReduced downtime';']
+      'Server monitoringNetwork monitoringApplication monitoringCloud infrastructure';']
+pr-12325
+    id: 'quantum-storage-platform',;
+    name: 'Quantum Storage Platform',;
+    tagline: 'Quantum-accelerated data storage',;
+    description: 'Revolutionary quantum storage platform providing quantum data compression, quantum data encoding, and quantum-optimized storage algorithms. Features quantum compression algorithms, quantum data encoding, and quantum storage optimization.',;
+    price: '$5,499',;
+    period: 'month',;
+    features: [;
+      'Quantum data compressionQuantum data encodingQuantum storage algorithmsQuantum data optimizationHybrid quantum-classical storageQuantum storage security';
+    ],;
+    popular: true,;
+    category: 'Quantum Storage',;
+    icon: '💾⚛️',;
+    marketPrice: '$7,000-12,000/month',;
+    benefits: [;
+      '100x data compressionQuantum data encodingAdvanced storage optimizationFuture-proof storage technology';
+    ],;
+    useCases: [;
+      'Big data storageData archivingCloud storageData backup';
+    ];
+  },;
+  {;
+      'Quantum data compressionQuantum data encodingQuantum storage algorithmsQuantum data optimizationHybrid quantum-classical storageQuantum storage security';']
+    category: 'Quantum Storage',;
+    icon: '💾⚛️',;
+      '100x data compressionQuantum data encodingAdvanced storage optimizationFuture-proof storage technology';']
+      'Big data storageData archivingCloud storageData backup';']
+pr-12325
+    id: 'ai-powered-disaster-recovery',;
+    name: 'AI-Powered Disaster Recovery',;
+    tagline: 'Intelligent recovery automation',;
+    description: 'Advanced disaster recovery platform with AI-powered recovery strategies, intelligent backup management, and automated recovery procedures. Features predictive recovery planning, automated testing, and intelligent backup optimization.',;
+    price: '$3,499',;
+    period: 'month',;
+    features: [;
+      'AI recovery strategiesIntelligent backup managementAutomated recovery proceduresPredictive recovery planningAutomated testingBackup optimization';
+    ],;
+    popular: true,;
+    category: 'Disaster Recovery',;
+    icon: '🔄🤖',;
+    marketPrice: '$4,500-7,000/month',;
+    benefits: [;
+      'Automated recovery proceduresIntelligent backup managementPredictive recovery planningReduced recovery time';
+    ],;
+    useCases: [;
+      'Data center recoveryCloud recoveryApplication recoveryBusiness continuity';
+    ];
+  }
+];
+      'Big data storage',
+      'Data archiving',
+      'Cloud storage',
+      'Data backup',
+    ],
+  },
+  {
+    id: 'ai-powered-disaster-recovery',
+    name: 'AI-Powered Disaster Recovery',
+    tagline: 'Intelligent recovery automation',
+    description:
+      'Advanced disaster recovery platform with AI-powered recovery strategies, intelligent backup management, and automated recovery procedures. Features predictive recovery planning, automated testing, and intelligent backup optimization.',
+    price: '$3,499',
+    period: 'month',
+    features: [
+      'AI recovery strategies',
+      'Intelligent backup management',
+      'Automated recovery procedures',
+      'Predictive recovery planning',
+      'Automated testing',
+      'Backup optimization',
+    ],
+    popular: true,
+    category: 'Disaster Recovery',
+    icon: '🔄🤖',
+    marketPrice: '$4,500-7,000/month',
+    benefits: [
+      'Automated recovery procedures',
+      'Intelligent backup management',
+      'Predictive recovery planning',
+      'Reduced recovery time',
+    ],
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+    useCases: [
+      'Data center recovery',
+      'Cloud recovery',
+      'Application recovery',
+      'Business continuity',
+    ],
+
+  },;
+];      'Data center recoveryCloud recoveryApplication recoveryBusiness continuity'
+<<<<<<< HEAD
+    ]
+
+export const real2036ITServices = [;
+  {;
+    id: 'quantum-cloud-infrastructure-platform',;
+    name: 'Quantum Cloud Infrastructure Platform',;
+    tagline: 'Next-generation quantum cloud computing',;
+    description: 'Revolutionary quantum cloud infrastructure platform providing quantum computing resources, quantum-classical hybrid computing, and quantum cloud services. Features quantum resource management, quantum networking, and quantum security.',;
+    price: '$6,999',;
+    period: 'month',;
+    features: [;
+      'Quantum computing resourcesQuantum-classical hybrid computingQuantum resource managementQuantum networkingQuantum security protocolsScalable quantum infrastructure';
+    ],;
+    popular: true,;
+    category: 'Quantum Cloud',;
+    icon: '☁️⚛️',;
+    marketPrice: '$8,000-15,000/month',;
+    benefits: [;
+      'Access to quantum computing powerHybrid classical-quantum processingFuture-proof cloud infrastructureQuantum advantage in the cloud';
+    ],;
+    useCases: [;
+      'Scientific research computingFinancial modelingDrug discoveryClimate simulation';
+    ];
+  },;
+  {;
+    id: 'ai-powered-devops-platform',;
+    name: 'AI-Powered DevOps Platform',;
+    tagline: 'Intelligent DevOps automation',;
+    description: 'Advanced DevOps platform with AI-powered automation, intelligent deployment strategies, and predictive infrastructure management. Features automated testing, deployment optimization, and intelligent monitoring.',;
+    price: '$2,999',;
+    period: 'month',;
+    features: [;
+      'AI-powered deployment automationIntelligent testing strategiesPredictive infrastructure scalingAutomated incident responseSmart resource optimizationContinuous learning algorithms';
+    ],;
+    popular: true,;
+    category: 'DevOps & AI',;
+    icon: '🤖🔄',;
+    marketPrice: '$4,000-7,000/month',;
+    benefits: [;
+      '90% faster deployment cyclesIntelligent infrastructure managementPredictive scalingAutomated incident resolution';
+    ],;
+    useCases: [;
+      'Continuous deploymentInfrastructure automationTesting automationMonitoring and alerting';
+    ];
+  },;
+  {;
+    id: 'quantum-cybersecurity-platform',;
+    name: 'Quantum Cybersecurity Platform',;
+    tagline: 'Quantum-resistant security solutions',;
+    description: 'Advanced cybersecurity platform with quantum-resistant algorithms, quantum threat detection, and future-proof security protocols. Features quantum encryption, quantum key distribution, and quantum-resistant cryptography.',;
+    price: '$5,499',;
+    period: 'month',;
+    features: [;
+      'Quantum-resistant algorithmsQuantum threat detectionQuantum encryptionQuantum key distributionFuture-proof securityReal-time threat analysis';
+    ],;
+    popular: true,;
+    category: 'Quantum Security',;
+    icon: '🔒⚛️',;
+    marketPrice: '$7,000-12,000/month',;
+    benefits: [;
+      'Quantum-resistant securityFuture-proof protectionAdvanced threat detectionMilitary-grade security';
+    ],;
+    useCases: [;
+      'Government securityFinancial institutionsHealthcare data protectionCritical infrastructure';
+    ];
+  },;
+  {;
+    id: 'edge-computing-orchestration-platform',;
+    name: 'Edge Computing Orchestration Platform',;
+    tagline: 'Intelligent edge computing management',;
+    description: 'Comprehensive edge computing platform with intelligent orchestration, distributed computing optimization, and edge AI capabilities. Features edge resource management, latency optimization, and distributed AI processing.',;
+    price: '$3,999',;
+    period: 'month',;
+    features: [;
+      'Intelligent edge orchestrationDistributed computing optimizationEdge AI processingLatency optimizationEdge resource managementDistributed data processing';
+    ],;
+    popular: true,;
+    category: 'Edge Computing',;
+    icon: '🌐⚡',;
+    marketPrice: '$5,000-8,000/month',;
+    benefits: [;
+      'Ultra-low latency processingDistributed computing powerEdge AI capabilitiesScalable edge infrastructure';
+    ],;
+    useCases: [;
+      'IoT applicationsReal-time analyticsEdge AI processingDistributed computing';
+    ];
+  },;
+  {;
+    id: 'quantum-database-platform',;
+    name: 'Quantum Database Platform',;
+    tagline: 'Quantum-powered data management',;
+    description: 'Revolutionary quantum database platform providing quantum-accelerated queries, quantum data compression, and quantum-optimized data structures. Features quantum search algorithms, quantum data indexing, and quantum data analytics.',;
+    price: '$4,999',;
+    period: 'month',;
+    features: [;
+      'Quantum-accelerated queriesQuantum data compressionQuantum search algorithmsQuantum data indexingQuantum data analyticsHybrid quantum-classical storage';
+    ],;
+    popular: true,;
+    category: 'Quantum Database',;
+    icon: '🗄️⚛️',;
+    marketPrice: '$6,000-10,000/month',;
+    benefits: [;
+      '1000x faster database queriesQuantum data compressionAdvanced search capabilitiesFuture-proof data management';
+    ],;
+    useCases: [;
+      'Big data analyticsReal-time searchData warehousingBusiness intelligence';
+    ];
+  },;
+  {;
+    id: 'ai-powered-network-security',;
+    name: 'AI-Powered Network Security',;
+    tagline: 'Intelligent network protection',;
+    description: 'Advanced network security platform with AI-powered threat detection, intelligent firewall management, and predictive security analytics. Features behavioral analysis, anomaly detection, and automated threat response.',;
+    price: '$2,499',;
+    period: 'month',;
+    features: [;
+      'AI threat detectionIntelligent firewall managementBehavioral analysisAnomaly detectionAutomated threat responsePredictive security analytics';
+    ],;
+    popular: true,;
+    category: 'Network Security',;
+    icon: '🛡️🤖',;
+    marketPrice: '$3,500-6,000/month',;
+    benefits: [;
+      'Proactive threat detectionAutomated security responseIntelligent network protectionReduced false positives';
+    ],;
+    useCases: [;
+      'Enterprise network securityCloud securityIoT securityRemote work security';
+    ];
+  },;
+  {;
+    id: 'quantum-internet-protocols',;
+    name: 'Quantum Internet Protocols',;
+    tagline: 'Next-generation quantum networking',;
+    description: 'Revolutionary quantum internet protocols platform providing quantum communication standards, quantum routing algorithms, and quantum network optimization. Features quantum entanglement distribution, quantum routing, and quantum network security.',;
+    price: '$7,999',;
+    period: 'month',;
+    features: [;
+      'Quantum communication protocolsQuantum routing algorithmsQuantum entanglement distributionQuantum network optimizationQuantum network securityQuantum internet standards';
+    ],;
+    popular: false,;
+    category: 'Quantum Internet',;
+    icon: '🌐⚛️',;
+    marketPrice: '$10,000-20,000/month',;
+    benefits: [;
+      'Unbreakable quantum communicationQuantum network optimizationFuture internet protocolsQuantum internet infrastructure';
+    ],;
+    useCases: [;
+      'Government communicationsFinancial networksResearch networksQuantum internet backbone';
+    ];
+  },;
+  {;
+    id: 'ai-powered-infrastructure-monitoring',;
+    name: 'AI-Powered Infrastructure Monitoring',;
+    tagline: 'Intelligent infrastructure oversight',;
+    description: 'Advanced infrastructure monitoring platform with AI-powered analytics, predictive maintenance, and intelligent alerting. Features automated monitoring, performance optimization, and intelligent resource management.',;
+    price: '$1,999',;
+    period: 'month',;
+    features: [;
+      'AI-powered monitoringPredictive maintenanceIntelligent alertingPerformance optimizationAutomated monitoringResource optimization';
+    ],;
+    popular: true,;
+    category: 'Infrastructure Monitoring',;
+    icon: '📊🤖',;
+    marketPrice: '$3,000-5,000/month',;
+    benefits: [;
+      'Proactive issue detectionAutomated monitoringPerformance optimizationReduced downtime';
+    ],;
+    useCases: [;
+      'Server monitoringNetwork monitoringApplication monitoringCloud infrastructure';
+    ];
+  },;
+  {;
+    id: 'quantum-storage-platform',;
+    name: 'Quantum Storage Platform',;
+    tagline: 'Quantum-accelerated data storage',;
+    description: 'Revolutionary quantum storage platform providing quantum data compression, quantum data encoding, and quantum-optimized storage algorithms. Features quantum compression algorithms, quantum data encoding, and quantum storage optimization.',;
+    price: '$5,499',;
+    period: 'month',;
+    features: [;
+      'Quantum data compressionQuantum data encodingQuantum storage algorithmsQuantum data optimizationHybrid quantum-classical storageQuantum storage security';
+    ],;
+    popular: true,;
+    category: 'Quantum Storage',;
+    icon: '💾⚛️',;
+    marketPrice: '$7,000-12,000/month',;
+    benefits: [;
+      '100x data compressionQuantum data encodingAdvanced storage optimizationFuture-proof storage technology';
+    ],;
+    useCases: [;
+      'Big data storageData archivingCloud storageData backup';
+    ];
+  },;
+  {;
+    id: 'ai-powered-disaster-recovery',;
+    name: 'AI-Powered Disaster Recovery',;
+    tagline: 'Intelligent recovery automation',;
+    description: 'Advanced disaster recovery platform with AI-powered recovery strategies, intelligent backup management, and automated recovery procedures. Features predictive recovery planning, automated testing, and intelligent backup optimization.',;
+    price: '$3,499',;
+    period: 'month',;
+    features: [;
+      'AI recovery strategiesIntelligent backup managementAutomated recovery proceduresPredictive recovery planningAutomated testingBackup optimization';
+    ],;
+    popular: true,;
+    category: 'Disaster Recovery',;
+    icon: '🔄🤖',;
+    marketPrice: '$4,500-7,000/month',;
+    benefits: [;
+      'Automated recovery proceduresIntelligent backup managementPredictive recovery planningReduced recovery time';
+    ],;
+    useCases: [;
+      'Data center recoveryCloud recoveryApplication recoveryBusiness continuity';
+    ];
+
+
+  }
+];
+;
+
+  },;'
+];      'Data center recoveryCloud recoveryApplication recoveryBusiness continuity'
+    ]
+
+
+
+export const real2036ITServices = [;
+  {;'
+    id: 'quantum-cloud-infrastructure-platform',;'
+    name: 'Quantum Cloud Infrastructure Platform',;'
+    tagline: 'Next-generation quantum cloud computing',;'
+    description: 'Revolutionary quantum cloud infrastructure platform providing quantum computing resources, quantum-classical hybrid computing, and quantum cloud services. Features quantum resource management, quantum networking, and quantum security.',;'
+    price: '$6,999',;'
+    period: 'month',;
+    features: [;'
+      'Quantum computing resourcesQuantum-classical hybrid computingQuantum resource managementQuantum networkingQuantum security protocolsScalable quantum infrastructure';
+    ],;
+    popular: true,;'
+    category: 'Quantum Cloud',;'
+    icon: '☁️⚛️',;'
+    marketPrice: '$8,000-15,000/month',;
+    benefits: [;'
+      'Access to quantum computing powerHybrid classical-quantum processingFuture-proof cloud infrastructureQuantum advantage in the cloud';
+    ],;
+    useCases: [;'
+      'Scientific research computingFinancial modelingDrug discoveryClimate simulation';
+    ];
+  },;
+  {;'
+    id: 'ai-powered-devops-platform',;'
+    name: 'AI-Powered DevOps Platform',;'
+    tagline: 'Intelligent DevOps automation',;'
+    description: 'Advanced DevOps platform with AI-powered automation, intelligent deployment strategies, and predictive infrastructure management. Features automated testing, deployment optimization, and intelligent monitoring.',;'
+    price: '$2,999',;'
+    period: 'month',;
+    features: [;'
+      'AI-powered deployment automationIntelligent testing strategiesPredictive infrastructure scalingAutomated incident responseSmart resource optimizationContinuous learning algorithms';
+    ],;
+    popular: true,;'
+    category: 'DevOps & AI',;'
+    icon: '🤖🔄',;'
+    marketPrice: '$4,000-7,000/month',;
+    benefits: [;'
+      '90% faster deployment cyclesIntelligent infrastructure managementPredictive scalingAutomated incident resolution';
+    ],;
+    useCases: [;'
+      'Continuous deploymentInfrastructure automationTesting automationMonitoring and alerting';
+    ];
+  },;
+  {;'
+    id: 'quantum-cybersecurity-platform',;'
+    name: 'Quantum Cybersecurity Platform',;'
+    tagline: 'Quantum-resistant security solutions',;'
+    description: 'Advanced cybersecurity platform with quantum-resistant algorithms, quantum threat detection, and future-proof security protocols. Features quantum encryption, quantum key distribution, and quantum-resistant cryptography.',;'
+    price: '$5,499',;'
+    period: 'month',;
+    features: [;'
+      'Quantum-resistant algorithmsQuantum threat detectionQuantum encryptionQuantum key distributionFuture-proof securityReal-time threat analysis';
+    ],;
+    popular: true,;'
+    category: 'Quantum Security',;'
+    icon: '🔒⚛️',;'
+    marketPrice: '$7,000-12,000/month',;
+    benefits: [;'
+      'Quantum-resistant securityFuture-proof protectionAdvanced threat detectionMilitary-grade security';
+    ],;
+    useCases: [;'
+      'Government securityFinancial institutionsHealthcare data protectionCritical infrastructure';
+    ];
+  },;
+  {;'
+    id: 'edge-computing-orchestration-platform',;'
+    name: 'Edge Computing Orchestration Platform',;'
+    tagline: 'Intelligent edge computing management',;'
+    description: 'Comprehensive edge computing platform with intelligent orchestration, distributed computing optimization, and edge AI capabilities. Features edge resource management, latency optimization, and distributed AI processing.',;'
+    price: '$3,999',;'
+    period: 'month',;
+    features: [;'
+      'Intelligent edge orchestrationDistributed computing optimizationEdge AI processingLatency optimizationEdge resource managementDistributed data processing';
+    ],;
+    popular: true,;'
+    category: 'Edge Computing',;'
+    icon: '🌐⚡',;'
+    marketPrice: '$5,000-8,000/month',;
+    benefits: [;'
+      'Ultra-low latency processingDistributed computing powerEdge AI capabilitiesScalable edge infrastructure';
+    ],;
+    useCases: [;'
+      'IoT applicationsReal-time analyticsEdge AI processingDistributed computing';
+    ];
+  },;
+  {;'
+    id: 'quantum-database-platform',;'
+    name: 'Quantum Database Platform',;'
+    tagline: 'Quantum-powered data management',;'
+    description: 'Revolutionary quantum database platform providing quantum-accelerated queries, quantum data compression, and quantum-optimized data structures. Features quantum search algorithms, quantum data indexing, and quantum data analytics.',;'
+    price: '$4,999',;'
+    period: 'month',;
+    features: [;'
+      'Quantum-accelerated queriesQuantum data compressionQuantum search algorithmsQuantum data indexingQuantum data analyticsHybrid quantum-classical storage';
+    ],;
+    popular: true,;'
+    category: 'Quantum Database',;'
+    icon: '🗄️⚛️',;'
+    marketPrice: '$6,000-10,000/month',;
+    benefits: [;'
+      '1000x faster database queriesQuantum data compressionAdvanced search capabilitiesFuture-proof data management';
+    ],;
+    useCases: [;'
+      'Big data analyticsReal-time searchData warehousingBusiness intelligence';
+    ];
+  },;
+  {;'
+    id: 'ai-powered-network-security',;'
+    name: 'AI-Powered Network Security',;'
+    tagline: 'Intelligent network protection',;'
+    description: 'Advanced network security platform with AI-powered threat detection, intelligent firewall management, and predictive security analytics. Features behavioral analysis, anomaly detection, and automated threat response.',;'
+    price: '$2,499',;'
+    period: 'month',;
+    features: [;'
+      'AI threat detectionIntelligent firewall managementBehavioral analysisAnomaly detectionAutomated threat responsePredictive security analytics';
+    ],;
+    popular: true,;'
+    category: 'Network Security',;'
+    icon: '🛡️🤖',;'
+    marketPrice: '$3,500-6,000/month',;
+    benefits: [;'
+      'Proactive threat detectionAutomated security responseIntelligent network protectionReduced false positives';
+    ],;
+    useCases: [;'
+      'Enterprise network securityCloud securityIoT securityRemote work security';
+    ];
+  },;
+  {;'
+    id: 'quantum-internet-protocols',;'
+    name: 'Quantum Internet Protocols',;'
+    tagline: 'Next-generation quantum networking',;'
+    description: 'Revolutionary quantum internet protocols platform providing quantum communication standards, quantum routing algorithms, and quantum network optimization. Features quantum entanglement distribution, quantum routing, and quantum network security.',;'
+    price: '$7,999',;'
+    period: 'month',;
+    features: [;'
+      'Quantum communication protocolsQuantum routing algorithmsQuantum entanglement distributionQuantum network optimizationQuantum network securityQuantum internet standards';
+    ],;
+    popular: false,;'
+    category: 'Quantum Internet',;'
+    icon: '🌐⚛️',;'
+    marketPrice: '$10,000-20,000/month',;
+    benefits: [;'
+      'Unbreakable quantum communicationQuantum network optimizationFuture internet protocolsQuantum internet infrastructure';
+    ],;
+    useCases: [;'
+      'Government communicationsFinancial networksResearch networksQuantum internet backbone';
+    ];
+  },;
+  {;'
+    id: 'ai-powered-infrastructure-monitoring',;'
+    name: 'AI-Powered Infrastructure Monitoring',;'
+    tagline: 'Intelligent infrastructure oversight',;'
+    description: 'Advanced infrastructure monitoring platform with AI-powered analytics, predictive maintenance, and intelligent alerting. Features automated monitoring, performance optimization, and intelligent resource management.',;'
+    price: '$1,999',;'
+    period: 'month',;
+    features: [;'
+      'AI-powered monitoringPredictive maintenanceIntelligent alertingPerformance optimizationAutomated monitoringResource optimization';
+    ],;
+    popular: true,;'
+    category: 'Infrastructure Monitoring',;'
+    icon: '📊🤖',;'
+    marketPrice: '$3,000-5,000/month',;
+    benefits: [;'
+      'Proactive issue detectionAutomated monitoringPerformance optimizationReduced downtime';
+    ],;
+    useCases: [;'
+      'Server monitoringNetwork monitoringApplication monitoringCloud infrastructure';
+    ];
+  },;
+  {;'
+    id: 'quantum-storage-platform',;'
+    name: 'Quantum Storage Platform',;'
+    tagline: 'Quantum-accelerated data storage',;'
+    description: 'Revolutionary quantum storage platform providing quantum data compression, quantum data encoding, and quantum-optimized storage algorithms. Features quantum compression algorithms, quantum data encoding, and quantum storage optimization.',;'
+    price: '$5,499',;'
+    period: 'month',;
+    features: [;'
+      'Quantum data compressionQuantum data encodingQuantum storage algorithmsQuantum data optimizationHybrid quantum-classical storageQuantum storage security';
+    ],;
+    popular: true,;'
+    category: 'Quantum Storage',;'
+    icon: '💾⚛️',;'
+    marketPrice: '$7,000-12,000/month',;
+    benefits: [;'
+      '100x data compressionQuantum data encodingAdvanced storage optimizationFuture-proof storage technology';
+    ],;
+    useCases: [;'
+      'Big data storageData archivingCloud storageData backup';
+    ];
+  },;
+  {;'
+    id: 'ai-powered-disaster-recovery',;'
+    name: 'AI-Powered Disaster Recovery',;'
+    tagline: 'Intelligent recovery automation',;'
+    description: 'Advanced disaster recovery platform with AI-powered recovery strategies, intelligent backup management, and automated recovery procedures. Features predictive recovery planning, automated testing, and intelligent backup optimization.',;'
+    price: '$3,499',;'
+    period: 'month',;
+    features: [;'
+      'AI recovery strategiesIntelligent backup managementAutomated recovery proceduresPredictive recovery planningAutomated testingBackup optimization';
+    ],;
+    popular: true,;'
+    category: 'Disaster Recovery',;'
+    icon: '🔄🤖',;'
+    marketPrice: '$4,500-7,000/month',;
+    benefits: [;'
+      'Automated recovery proceduresIntelligent backup managementPredictive recovery planningReduced recovery time';
+    ],;
+    useCases: [;'
+      'Data center recoveryCloud recoveryApplication recoveryBusiness continuity';
+    ];
+  }
+];
+      'Big data storage',
+      'Data archiving',
+      'Cloud storage',
+      'Data backup',
+    ],
+  },
+  {
+    id: 'ai-powered-disaster-recovery',
+    name: 'AI-Powered Disaster Recovery',
+    tagline: 'Intelligent recovery automation',
+    description:
+      'Advanced disaster recovery platform with AI-powered recovery strategies, intelligent backup management, and automated recovery procedures. Features predictive recovery planning, automated testing, and intelligent backup optimization.',
+    price: '$3,499',
+    period: 'month',
+    features: [
+      'AI recovery strategies',
+      'Intelligent backup management',
+      'Automated recovery procedures',
+      'Predictive recovery planning',
+      'Automated testing',
+      'Backup optimization',
+    ],
+    popular: true,
+    category: 'Disaster Recovery',
+    icon: '🔄🤖',
+    marketPrice: '$4,500-7,000/month',
+    benefits: [
+      'Automated recovery procedures',
+      'Intelligent backup management',
+      'Predictive recovery planning',
+      'Reduced recovery time',
+    ],
+    useCases: [
+      'Data center recovery',
+      'Cloud recovery',
+      'Application recovery',
+      'Business continuity',
+    ],
+  },
+];
+origin/cursor/automate-test-improve-and-merge-code-2533
+
+
   }
 ];
 ;
   },;
-];      'Data center recoveryCloud recoveryApplication recoveryBusiness continuity''
+];      'Data center recoveryCloud recoveryApplication recoveryBusiness continuity'
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
     ]
+
 export const real2036ITServices = [;
   {;
-    }
-    "id": 'quantum-cloud-infrastructure-platform',;'
-    "name": 'Quantum Cloud Infrastructure Platform',;'
-    "tagline": 'Next-generation quantum cloud computing',;'
-    "description": 'Revolutionary quantum cloud infrastructure platform providing quantum computing resources, quantum-classical hybrid computing, and quantum cloud services. Features quantum resource management, quantum networking, and quantum security.',;'
-    "price": '$6,999',;'
-    "period": 'month',;'
-    "features": [;
-      'Quantum computing resourcesQuantum-classical hybrid computingQuantum resource managementQuantum networkingQuantum security protocolsScalable quantum infrastructure';'
+    id: 'quantum-cloud-infrastructure-platform',;
+    name: 'Quantum Cloud Infrastructure Platform',;
+    tagline: 'Next-generation quantum cloud computing',;
+    description: 'Revolutionary quantum cloud infrastructure platform providing quantum computing resources, quantum-classical hybrid computing, and quantum cloud services. Features quantum resource management, quantum networking, and quantum security.',;
+    price: '$6,999',;
+    period: 'month',;
+    features: [;
+      'Quantum computing resourcesQuantum-classical hybrid computingQuantum resource managementQuantum networkingQuantum security protocolsScalable quantum infrastructure';
     ],;
-    "popular": true,;
-    "category": 'Quantum Cloud',;'
-    "icon": '☁️⚛️',;'
-    "marketPrice": '$8,000-15,000/month',;'
-    "benefits": [;
-      'Access to quantum computing powerHybrid classical-quantum processingFuture-proof cloud infrastructureQuantum advantage in the cloud';'
+    popular: true,;
+    category: 'Quantum Cloud',;
+    icon: '☁️⚛️',;
+    marketPrice: '$8,000-15,000/month',;
+    benefits: [;
+      'Access to quantum computing powerHybrid classical-quantum processingFuture-proof cloud infrastructureQuantum advantage in the cloud';
     ],;
-    "useCases": [;
-      'Scientific research computingFinancial modelingDrug discoveryClimate simulation';'
+    useCases: [;
+      'Scientific research computingFinancial modelingDrug discoveryClimate simulation';
     ];
   },;
   {;
-    }
-    "id": 'ai-powered-devops-platform',;'
-    "name": 'AI-Powered DevOps Platform',;'
-    "tagline": 'Intelligent DevOps automation',;'
-    "description": 'Advanced DevOps platform with AI-powered automation, intelligent deployment strategies, and predictive infrastructure management. Features automated testing, deployment optimization, and intelligent monitoring.',;'
-    "price": '$2,999',;'
-    "period": 'month',;'
-    "features": [;
-      'AI-powered deployment automationIntelligent testing strategiesPredictive infrastructure scalingAutomated incident responseSmart resource optimizationContinuous learning algorithms';'
+    id: 'ai-powered-devops-platform',;
+    name: 'AI-Powered DevOps Platform',;
+    tagline: 'Intelligent DevOps automation',;
+    description: 'Advanced DevOps platform with AI-powered automation, intelligent deployment strategies, and predictive infrastructure management. Features automated testing, deployment optimization, and intelligent monitoring.',;
+    price: '$2,999',;
+    period: 'month',;
+    features: [;
+      'AI-powered deployment automationIntelligent testing strategiesPredictive infrastructure scalingAutomated incident responseSmart resource optimizationContinuous learning algorithms';
     ],;
-    "popular": true,;
-    "category": 'DevOps & AI',;'
-    "icon": '🤖🔄',;'
-    "marketPrice": '$4,000-7,000/month',;'
-    "benefits": [;
-      '90% faster deployment cyclesIntelligent infrastructure managementPredictive scalingAutomated incident resolution';'
+    popular: true,;
+    category: 'DevOps & AI',;
+    icon: '🤖🔄',;
+    marketPrice: '$4,000-7,000/month',;
+    benefits: [;
+      '90% faster deployment cyclesIntelligent infrastructure managementPredictive scalingAutomated incident resolution';
     ],;
-    "useCases": [;
-      'Continuous deploymentInfrastructure automationTesting automationMonitoring and alerting';'
+    useCases: [;
+      'Continuous deploymentInfrastructure automationTesting automationMonitoring and alerting';
     ];
   },;
   {;
-    }
-    "id": 'quantum-cybersecurity-platform',;'
-    "name": 'Quantum Cybersecurity Platform',;'
-    "tagline": 'Quantum-resistant security solutions',;'
-    "description": 'Advanced cybersecurity platform with quantum-resistant algorithms, quantum threat detection, and future-proof security protocols. Features quantum encryption, quantum key distribution, and quantum-resistant cryptography.',;'
-    "price": '$5,499',;'
-    "period": 'month',;'
-    "features": [;
-      'Quantum-resistant algorithmsQuantum threat detectionQuantum encryptionQuantum key distributionFuture-proof securityReal-time threat analysis';'
+    id: 'quantum-cybersecurity-platform',;
+    name: 'Quantum Cybersecurity Platform',;
+    tagline: 'Quantum-resistant security solutions',;
+    description: 'Advanced cybersecurity platform with quantum-resistant algorithms, quantum threat detection, and future-proof security protocols. Features quantum encryption, quantum key distribution, and quantum-resistant cryptography.',;
+    price: '$5,499',;
+    period: 'month',;
+    features: [;
+      'Quantum-resistant algorithmsQuantum threat detectionQuantum encryptionQuantum key distributionFuture-proof securityReal-time threat analysis';
     ],;
-    "popular": true,;
-    "category": 'Quantum Security',;'
-    "icon": '🔒⚛️',;'
-    "marketPrice": '$7,000-12,000/month',;'
-    "benefits": [;
-      'Quantum-resistant securityFuture-proof protectionAdvanced threat detectionMilitary-grade security';'
+    popular: true,;
+    category: 'Quantum Security',;
+    icon: '🔒⚛️',;
+    marketPrice: '$7,000-12,000/month',;
+    benefits: [;
+      'Quantum-resistant securityFuture-proof protectionAdvanced threat detectionMilitary-grade security';
     ],;
-    "useCases": [;
-      'Government securityFinancial institutionsHealthcare data protectionCritical infrastructure';'
+    useCases: [;
+      'Government securityFinancial institutionsHealthcare data protectionCritical infrastructure';
     ];
   },;
   {;
-    }
-    "id": 'edge-computing-orchestration-platform',;'
-    "name": 'Edge Computing Orchestration Platform',;'
-    "tagline": 'Intelligent edge computing management',;'
-    "description": 'Comprehensive edge computing platform with intelligent orchestration, distributed computing optimization, and edge AI capabilities. Features edge resource management, latency optimization, and distributed AI processing.',;'
-    "price": '$3,999',;'
-    "period": 'month',;'
-    "features": [;
-      'Intelligent edge orchestrationDistributed computing optimizationEdge AI processingLatency optimizationEdge resource managementDistributed data processing';'
+    id: 'edge-computing-orchestration-platform',;
+    name: 'Edge Computing Orchestration Platform',;
+    tagline: 'Intelligent edge computing management',;
+    description: 'Comprehensive edge computing platform with intelligent orchestration, distributed computing optimization, and edge AI capabilities. Features edge resource management, latency optimization, and distributed AI processing.',;
+    price: '$3,999',;
+    period: 'month',;
+    features: [;
+      'Intelligent edge orchestrationDistributed computing optimizationEdge AI processingLatency optimizationEdge resource managementDistributed data processing';
     ],;
-    "popular": true,;
-    "category": 'Edge Computing',;'
-    "icon": '🌐⚡',;'
-    "marketPrice": '$5,000-8,000/month',;'
-    "benefits": [;
-      'Ultra-low latency processingDistributed computing powerEdge AI capabilitiesScalable edge infrastructure';'
+    popular: true,;
+    category: 'Edge Computing',;
+    icon: '🌐⚡',;
+    marketPrice: '$5,000-8,000/month',;
+    benefits: [;
+      'Ultra-low latency processingDistributed computing powerEdge AI capabilitiesScalable edge infrastructure';
     ],;
-    "useCases": [;
-      'IoT applicationsReal-time analyticsEdge AI processingDistributed computing';'
+    useCases: [;
+      'IoT applicationsReal-time analyticsEdge AI processingDistributed computing';
     ];
   },;
   {;
-    }
-    "id": 'quantum-database-platform',;'
-    "name": 'Quantum Database Platform',;'
-    "tagline": 'Quantum-powered data management',;'
-    "description": 'Revolutionary quantum database platform providing quantum-accelerated queries, quantum data compression, and quantum-optimized data structures. Features quantum search algorithms, quantum data indexing, and quantum data analytics.',;'
-    "price": '$4,999',;'
-    "period": 'month',;'
-    "features": [;
-      'Quantum-accelerated queriesQuantum data compressionQuantum search algorithmsQuantum data indexingQuantum data analyticsHybrid quantum-classical storage';'
+    id: 'quantum-database-platform',;
+    name: 'Quantum Database Platform',;
+    tagline: 'Quantum-powered data management',;
+    description: 'Revolutionary quantum database platform providing quantum-accelerated queries, quantum data compression, and quantum-optimized data structures. Features quantum search algorithms, quantum data indexing, and quantum data analytics.',;
+    price: '$4,999',;
+    period: 'month',;
+    features: [;
+      'Quantum-accelerated queriesQuantum data compressionQuantum search algorithmsQuantum data indexingQuantum data analyticsHybrid quantum-classical storage';
     ],;
-    "popular": true,;
-    "category": 'Quantum Database',;'
-    "icon": '🗄️⚛️',;'
-    "marketPrice": '$6,000-10,000/month',;'
-    "benefits": [;
-      '1000x faster database queriesQuantum data compressionAdvanced search capabilitiesFuture-proof data management';'
+    popular: true,;
+    category: 'Quantum Database',;
+    icon: '🗄️⚛️',;
+    marketPrice: '$6,000-10,000/month',;
+    benefits: [;
+      '1000x faster database queriesQuantum data compressionAdvanced search capabilitiesFuture-proof data management';
     ],;
-    "useCases": [;
-      'Big data analyticsReal-time searchData warehousingBusiness intelligence';'
+    useCases: [;
+      'Big data analyticsReal-time searchData warehousingBusiness intelligence';
     ];
   },;
   {;
-    }
-    "id": 'ai-powered-network-security',;'
-    "name": 'AI-Powered Network Security',;'
-    "tagline": 'Intelligent network protection',;'
-    "description": 'Advanced network security platform with AI-powered threat detection, intelligent firewall management, and predictive security analytics. Features behavioral analysis, anomaly detection, and automated threat response.',;'
-    "price": '$2,499',;'
-    "period": 'month',;'
-    "features": [;
-      'AI threat detectionIntelligent firewall managementBehavioral analysisAnomaly detectionAutomated threat responsePredictive security analytics';'
+    id: 'ai-powered-network-security',;
+    name: 'AI-Powered Network Security',;
+    tagline: 'Intelligent network protection',;
+    description: 'Advanced network security platform with AI-powered threat detection, intelligent firewall management, and predictive security analytics. Features behavioral analysis, anomaly detection, and automated threat response.',;
+    price: '$2,499',;
+    period: 'month',;
+    features: [;
+      'AI threat detectionIntelligent firewall managementBehavioral analysisAnomaly detectionAutomated threat responsePredictive security analytics';
     ],;
-    "popular": true,;
-    "category": 'Network Security',;'
-    "icon": '🛡️🤖',;'
-    "marketPrice": '$3,500-6,000/month',;'
-    "benefits": [;
-      'Proactive threat detectionAutomated security responseIntelligent network protectionReduced false positives';'
+    popular: true,;
+    category: 'Network Security',;
+    icon: '🛡️🤖',;
+    marketPrice: '$3,500-6,000/month',;
+    benefits: [;
+      'Proactive threat detectionAutomated security responseIntelligent network protectionReduced false positives';
     ],;
-    "useCases": [;
-      'Enterprise network securityCloud securityIoT securityRemote work security';'
+    useCases: [;
+      'Enterprise network securityCloud securityIoT securityRemote work security';
     ];
   },;
   {;
-    }
-    "id": 'quantum-internet-protocols',;'
-    "name": 'Quantum Internet Protocols',;'
-    "tagline": 'Next-generation quantum networking',;'
-    "description": 'Revolutionary quantum internet protocols platform providing quantum communication standards, quantum routing algorithms, and quantum network optimization. Features quantum entanglement distribution, quantum routing, and quantum network security.',;'
-    "price": '$7,999',;'
-    "period": 'month',;'
-    "features": [;
-      'Quantum communication protocolsQuantum routing algorithmsQuantum entanglement distributionQuantum network optimizationQuantum network securityQuantum internet standards';'
+    id: 'quantum-internet-protocols',;
+    name: 'Quantum Internet Protocols',;
+    tagline: 'Next-generation quantum networking',;
+    description: 'Revolutionary quantum internet protocols platform providing quantum communication standards, quantum routing algorithms, and quantum network optimization. Features quantum entanglement distribution, quantum routing, and quantum network security.',;
+    price: '$7,999',;
+    period: 'month',;
+    features: [;
+      'Quantum communication protocolsQuantum routing algorithmsQuantum entanglement distributionQuantum network optimizationQuantum network securityQuantum internet standards';
     ],;
-    "popular": false,;
-    "category": 'Quantum Internet',;'
-    "icon": '🌐⚛️',;'
-    "marketPrice": '$10,000-20,000/month',;'
-    "benefits": [;
-      'Unbreakable quantum communicationQuantum network optimizationFuture internet protocolsQuantum internet infrastructure';'
+    popular: false,;
+    category: 'Quantum Internet',;
+    icon: '🌐⚛️',;
+    marketPrice: '$10,000-20,000/month',;
+    benefits: [;
+      'Unbreakable quantum communicationQuantum network optimizationFuture internet protocolsQuantum internet infrastructure';
     ],;
-    "useCases": [;
-      'Government communicationsFinancial networksResearch networksQuantum internet backbone';'
+    useCases: [;
+      'Government communicationsFinancial networksResearch networksQuantum internet backbone';
     ];
   },;
   {;
-    }
-    "id": 'ai-powered-infrastructure-monitoring',;'
-    "name": 'AI-Powered Infrastructure Monitoring',;'
-    "tagline": 'Intelligent infrastructure oversight',;'
-    "description": 'Advanced infrastructure monitoring platform with AI-powered analytics, predictive maintenance, and intelligent alerting. Features automated monitoring, performance optimization, and intelligent resource management.',;'
-    "price": '$1,999',;'
-    "period": 'month',;'
-    "features": [;
-      'AI-powered monitoringPredictive maintenanceIntelligent alertingPerformance optimizationAutomated monitoringResource optimization';'
+    id: 'ai-powered-infrastructure-monitoring',;
+    name: 'AI-Powered Infrastructure Monitoring',;
+    tagline: 'Intelligent infrastructure oversight',;
+    description: 'Advanced infrastructure monitoring platform with AI-powered analytics, predictive maintenance, and intelligent alerting. Features automated monitoring, performance optimization, and intelligent resource management.',;
+    price: '$1,999',;
+    period: 'month',;
+    features: [;
+      'AI-powered monitoringPredictive maintenanceIntelligent alertingPerformance optimizationAutomated monitoringResource optimization';
     ],;
-    "popular": true,;
-    "category": 'Infrastructure Monitoring',;'
-    "icon": '📊🤖',;'
-    "marketPrice": '$3,000-5,000/month',;'
-    "benefits": [;
-      'Proactive issue detectionAutomated monitoringPerformance optimizationReduced downtime';'
+    popular: true,;
+    category: 'Infrastructure Monitoring',;
+    icon: '📊🤖',;
+    marketPrice: '$3,000-5,000/month',;
+    benefits: [;
+      'Proactive issue detectionAutomated monitoringPerformance optimizationReduced downtime';
     ],;
-    "useCases": [;
-      'Server monitoringNetwork monitoringApplication monitoringCloud infrastructure';'
+    useCases: [;
+      'Server monitoringNetwork monitoringApplication monitoringCloud infrastructure';
     ];
   },;
   {;
-    }
-    "id": 'quantum-storage-platform',;'
-    "name": 'Quantum Storage Platform',;'
-    "tagline": 'Quantum-accelerated data storage',;'
-    "description": 'Revolutionary quantum storage platform providing quantum data compression, quantum data encoding, and quantum-optimized storage algorithms. Features quantum compression algorithms, quantum data encoding, and quantum storage optimization.',;'
-    "price": '$5,499',;'
-    "period": 'month',;'
-    "features": [;
-      'Quantum data compressionQuantum data encodingQuantum storage algorithmsQuantum data optimizationHybrid quantum-classical storageQuantum storage security';'
+    id: 'quantum-storage-platform',;
+    name: 'Quantum Storage Platform',;
+    tagline: 'Quantum-accelerated data storage',;
+    description: 'Revolutionary quantum storage platform providing quantum data compression, quantum data encoding, and quantum-optimized storage algorithms. Features quantum compression algorithms, quantum data encoding, and quantum storage optimization.',;
+    price: '$5,499',;
+    period: 'month',;
+    features: [;
+      'Quantum data compressionQuantum data encodingQuantum storage algorithmsQuantum data optimizationHybrid quantum-classical storageQuantum storage security';
     ],;
-    "popular": true,;
-    "category": 'Quantum Storage',;'
-    "icon": '💾⚛️',;'
-    "marketPrice": '$7,000-12,000/month',;'
-    "benefits": [;
-      '100x data compressionQuantum data encodingAdvanced storage optimizationFuture-proof storage technology';'
+    popular: true,;
+    category: 'Quantum Storage',;
+    icon: '💾⚛️',;
+    marketPrice: '$7,000-12,000/month',;
+    benefits: [;
+      '100x data compressionQuantum data encodingAdvanced storage optimizationFuture-proof storage technology';
     ],;
-    "useCases": [;
-      'Big data storageData archivingCloud storageData backup';'
+    useCases: [;
+      'Big data storageData archivingCloud storageData backup';
     ];
   },;
   {;
-    }
-    "id": 'ai-powered-disaster-recovery',;'
-    "name": 'AI-Powered Disaster Recovery',;'
-    "tagline": 'Intelligent recovery automation',;'
-    "description": 'Advanced disaster recovery platform with AI-powered recovery strategies, intelligent backup management, and automated recovery procedures. Features predictive recovery planning, automated testing, and intelligent backup optimization.',;'
-    "price": '$3,499',;'
-    "period": 'month',;'
-    "features": [;
-      'AI recovery strategiesIntelligent backup managementAutomated recovery proceduresPredictive recovery planningAutomated testingBackup optimization';'
+    id: 'ai-powered-disaster-recovery',;
+    name: 'AI-Powered Disaster Recovery',;
+    tagline: 'Intelligent recovery automation',;
+    description: 'Advanced disaster recovery platform with AI-powered recovery strategies, intelligent backup management, and automated recovery procedures. Features predictive recovery planning, automated testing, and intelligent backup optimization.',;
+    price: '$3,499',;
+    period: 'month',;
+    features: [;
+      'AI recovery strategiesIntelligent backup managementAutomated recovery proceduresPredictive recovery planningAutomated testingBackup optimization';
     ],;
-    "popular": true,;
-    "category": 'Disaster Recovery',;'
-    "icon": '🔄🤖',;'
-    "marketPrice": '$4,500-7,000/month',;'
-    "benefits": [;
-      'Automated recovery proceduresIntelligent backup managementPredictive recovery planningReduced recovery time';'
+    popular: true,;
+    category: 'Disaster Recovery',;
+    icon: '🔄🤖',;
+    marketPrice: '$4,500-7,000/month',;
+    benefits: [;
+      'Automated recovery proceduresIntelligent backup managementPredictive recovery planningReduced recovery time';
     ],;
-    "useCases": [;
-      'Data center recoveryCloud recoveryApplication recoveryBusiness continuity';'
+    useCases: [;
+      'Data center recoveryCloud recoveryApplication recoveryBusiness continuity';
+<<<<<<< HEAD
     ];
   }
 ];
-      'Big data storage','Data archiving','Cloud storage','Data backup';'
+;
+  },;
+];      'Data center recoveryCloud recoveryApplication recoveryBusiness continuity'
+    ]
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+  }
+];
+;
+
+  },;
+];      'Data center recoveryCloud recoveryApplication recoveryBusiness continuity'
+    ]
+
+
+
+export const real2036ITServices = [;
+  {;
+    id: 'quantum-cloud-infrastructure-platform',;
+    name: 'Quantum Cloud Infrastructure Platform',;
+    tagline: 'Next-generation quantum cloud computing',;
+    description: 'Revolutionary quantum cloud infrastructure platform providing quantum computing resources, quantum-classical hybrid computing, and quantum cloud services. Features quantum resource management, quantum networking, and quantum security.',;
+    price: '$6,999',;
+    period: 'month',;
+    features: [;
+      'Quantum computing resourcesQuantum-classical hybrid computingQuantum resource managementQuantum networkingQuantum security protocolsScalable quantum infrastructure';
+    ],;
+    popular: true,;
+    category: 'Quantum Cloud',;
+    icon: '☁️⚛️',;
+    marketPrice: '$8,000-15,000/month',;
+    benefits: [;
+      'Access to quantum computing powerHybrid classical-quantum processingFuture-proof cloud infrastructureQuantum advantage in the cloud';
+    ],;
+    useCases: [;
+      'Scientific research computingFinancial modelingDrug discoveryClimate simulation';
     ];
-  },{"id": 'ai-powered-disaster-recovery',"name": 'AI-Powered Disaster Recovery',"tagline": 'Intelligent recovery automation',"description":;'
-      'Advanced disaster recovery platform with AI-powered recovery strategies, intelligent backup management, and automated recovery procedures. Features predictive recovery planning, automated testing, and intelligent backup optimization.',"price": '$3,499',"period": 'month',"features": [;'
-      'AI recovery strategies','Intelligent backup management','Automated recovery procedures','Predictive recovery planning','Automated testing','Backup optimization';'
-    ],"popular": true,"category": 'Disaster Recovery',"icon": '🔄🤖',"marketPrice": '$4,500-7,000/month',"benefits": [;'
-      'Automated recovery procedures','Intelligent backup management','Predictive recovery planning','Reduced recovery time';'
-    ],"useCases": [;
-      'Data center recovery','Cloud recovery','Application recovery','Business continuity';'
+  },;
+  {;
+    id: 'ai-powered-devops-platform',;
+    name: 'AI-Powered DevOps Platform',;
+    tagline: 'Intelligent DevOps automation',;
+    description: 'Advanced DevOps platform with AI-powered automation, intelligent deployment strategies, and predictive infrastructure management. Features automated testing, deployment optimization, and intelligent monitoring.',;
+    price: '$2,999',;
+    period: 'month',;
+    features: [;
+      'AI-powered deployment automationIntelligent testing strategiesPredictive infrastructure scalingAutomated incident responseSmart resource optimizationContinuous learning algorithms';
+    ],;
+    popular: true,;
+    category: 'DevOps & AI',;
+    icon: '🤖🔄',;
+    marketPrice: '$4,000-7,000/month',;
+    benefits: [;
+      '90% faster deployment cyclesIntelligent infrastructure managementPredictive scalingAutomated incident resolution';
+    ],;
+    useCases: [;
+      'Continuous deploymentInfrastructure automationTesting automationMonitoring and alerting';
+    ];
+  },;
+  {;
+    id: 'quantum-cybersecurity-platform',;
+    name: 'Quantum Cybersecurity Platform',;
+    tagline: 'Quantum-resistant security solutions',;
+    description: 'Advanced cybersecurity platform with quantum-resistant algorithms, quantum threat detection, and future-proof security protocols. Features quantum encryption, quantum key distribution, and quantum-resistant cryptography.',;
+    price: '$5,499',;
+    period: 'month',;
+    features: [;
+      'Quantum-resistant algorithmsQuantum threat detectionQuantum encryptionQuantum key distributionFuture-proof securityReal-time threat analysis';
+    ],;
+    popular: true,;
+    category: 'Quantum Security',;
+    icon: '🔒⚛️',;
+    marketPrice: '$7,000-12,000/month',;
+    benefits: [;
+      'Quantum-resistant securityFuture-proof protectionAdvanced threat detectionMilitary-grade security';
+    ],;
+    useCases: [;
+      'Government securityFinancial institutionsHealthcare data protectionCritical infrastructure';
+    ];
+  },;
+  {;
+    id: 'edge-computing-orchestration-platform',;
+    name: 'Edge Computing Orchestration Platform',;
+    tagline: 'Intelligent edge computing management',;
+    description: 'Comprehensive edge computing platform with intelligent orchestration, distributed computing optimization, and edge AI capabilities. Features edge resource management, latency optimization, and distributed AI processing.',;
+    price: '$3,999',;
+    period: 'month',;
+    features: [;
+      'Intelligent edge orchestrationDistributed computing optimizationEdge AI processingLatency optimizationEdge resource managementDistributed data processing';
+    ],;
+    popular: true,;
+    category: 'Edge Computing',;
+    icon: '🌐⚡',;
+    marketPrice: '$5,000-8,000/month',;
+    benefits: [;
+      'Ultra-low latency processingDistributed computing powerEdge AI capabilitiesScalable edge infrastructure';
+    ],;
+    useCases: [;
+      'IoT applicationsReal-time analyticsEdge AI processingDistributed computing';
+    ];
+  },;
+  {;
+    id: 'quantum-database-platform',;
+    name: 'Quantum Database Platform',;
+    tagline: 'Quantum-powered data management',;
+    description: 'Revolutionary quantum database platform providing quantum-accelerated queries, quantum data compression, and quantum-optimized data structures. Features quantum search algorithms, quantum data indexing, and quantum data analytics.',;
+    price: '$4,999',;
+    period: 'month',;
+    features: [;
+      'Quantum-accelerated queriesQuantum data compressionQuantum search algorithmsQuantum data indexingQuantum data analyticsHybrid quantum-classical storage';
+    ],;
+    popular: true,;
+    category: 'Quantum Database',;
+    icon: '🗄️⚛️',;
+    marketPrice: '$6,000-10,000/month',;
+    benefits: [;
+      '1000x faster database queriesQuantum data compressionAdvanced search capabilitiesFuture-proof data management';
+    ],;
+    useCases: [;
+      'Big data analyticsReal-time searchData warehousingBusiness intelligence';
+    ];
+  },;
+  {;
+    id: 'ai-powered-network-security',;
+    name: 'AI-Powered Network Security',;
+    tagline: 'Intelligent network protection',;
+    description: 'Advanced network security platform with AI-powered threat detection, intelligent firewall management, and predictive security analytics. Features behavioral analysis, anomaly detection, and automated threat response.',;
+    price: '$2,499',;
+    period: 'month',;
+    features: [;
+      'AI threat detectionIntelligent firewall managementBehavioral analysisAnomaly detectionAutomated threat responsePredictive security analytics';
+    ],;
+    popular: true,;
+    category: 'Network Security',;
+    icon: '🛡️🤖',;
+    marketPrice: '$3,500-6,000/month',;
+    benefits: [;
+      'Proactive threat detectionAutomated security responseIntelligent network protectionReduced false positives';
+    ],;
+    useCases: [;
+      'Enterprise network securityCloud securityIoT securityRemote work security';
+    ];
+  },;
+  {;
+    id: 'quantum-internet-protocols',;
+    name: 'Quantum Internet Protocols',;
+    tagline: 'Next-generation quantum networking',;
+    description: 'Revolutionary quantum internet protocols platform providing quantum communication standards, quantum routing algorithms, and quantum network optimization. Features quantum entanglement distribution, quantum routing, and quantum network security.',;
+    price: '$7,999',;
+    period: 'month',;
+    features: [;
+      'Quantum communication protocolsQuantum routing algorithmsQuantum entanglement distributionQuantum network optimizationQuantum network securityQuantum internet standards';
+    ],;
+    popular: false,;
+    category: 'Quantum Internet',;
+    icon: '🌐⚛️',;
+    marketPrice: '$10,000-20,000/month',;
+    benefits: [;
+      'Unbreakable quantum communicationQuantum network optimizationFuture internet protocolsQuantum internet infrastructure';
+    ],;
+    useCases: [;
+      'Government communicationsFinancial networksResearch networksQuantum internet backbone';
+    ];
+  },;
+  {;
+    id: 'ai-powered-infrastructure-monitoring',;
+    name: 'AI-Powered Infrastructure Monitoring',;
+    tagline: 'Intelligent infrastructure oversight',;
+    description: 'Advanced infrastructure monitoring platform with AI-powered analytics, predictive maintenance, and intelligent alerting. Features automated monitoring, performance optimization, and intelligent resource management.',;
+    price: '$1,999',;
+    period: 'month',;
+    features: [;
+      'AI-powered monitoringPredictive maintenanceIntelligent alertingPerformance optimizationAutomated monitoringResource optimization';
+    ],;
+    popular: true,;
+    category: 'Infrastructure Monitoring',;
+    icon: '📊🤖',;
+    marketPrice: '$3,000-5,000/month',;
+    benefits: [;
+      'Proactive issue detectionAutomated monitoringPerformance optimizationReduced downtime';
+    ],;
+    useCases: [;
+      'Server monitoringNetwork monitoringApplication monitoringCloud infrastructure';
+    ];
+  },;
+  {;
+    id: 'quantum-storage-platform',;
+    name: 'Quantum Storage Platform',;
+    tagline: 'Quantum-accelerated data storage',;
+    description: 'Revolutionary quantum storage platform providing quantum data compression, quantum data encoding, and quantum-optimized storage algorithms. Features quantum compression algorithms, quantum data encoding, and quantum storage optimization.',;
+    price: '$5,499',;
+    period: 'month',;
+    features: [;
+      'Quantum data compressionQuantum data encodingQuantum storage algorithmsQuantum data optimizationHybrid quantum-classical storageQuantum storage security';
+    ],;
+    popular: true,;
+    category: 'Quantum Storage',;
+    icon: '💾⚛️',;
+    marketPrice: '$7,000-12,000/month',;
+    benefits: [;
+      '100x data compressionQuantum data encodingAdvanced storage optimizationFuture-proof storage technology';
+    ],;
+    useCases: [;
+      'Big data storageData archivingCloud storageData backup';
+    ];
+  },;
+  {;
+    id: 'ai-powered-disaster-recovery',;
+    name: 'AI-Powered Disaster Recovery',;
+    tagline: 'Intelligent recovery automation',;
+    description: 'Advanced disaster recovery platform with AI-powered recovery strategies, intelligent backup management, and automated recovery procedures. Features predictive recovery planning, automated testing, and intelligent backup optimization.',;
+    price: '$3,499',;
+    period: 'month',;
+    features: [;
+      'AI recovery strategiesIntelligent backup managementAutomated recovery proceduresPredictive recovery planningAutomated testingBackup optimization';
+    ],;
+    popular: true,;
+    category: 'Disaster Recovery',;
+    icon: '🔄🤖',;
+    marketPrice: '$4,500-7,000/month',;
+    benefits: [;
+      'Automated recovery proceduresIntelligent backup managementPredictive recovery planningReduced recovery time';
+    ],;
+    useCases: [;
+      'Data center recoveryCloud recoveryApplication recoveryBusiness continuity';
+    ];
+
+
+  }
+];
+
+
+      'Big data storage',
+      'Data archiving',
+      'Cloud storage',
+      'Data backup',
+    ],
+  },
+  {
+    id: 'ai-powered-disaster-recovery',
+    name: 'AI-Powered Disaster Recovery',
+    tagline: 'Intelligent recovery automation',
+    description: 'Advanced disaster recovery platform with AI-powered recovery strategies, intelligent backup management, and automated recovery procedures. Features predictive recovery planning, automated testing, and intelligent backup optimization.',
+    price: '$3,499',
+    period: 'month',
+    features: [
+      'AI recovery strategiesIntelligent backup managementAutomated recovery proceduresPredictive recovery planningAutomated testingBackup optimization'
+    ],
+    popular: true,
+    category: 'Disaster Recovery',
+    icon: '🔄🤖',
+    marketPrice: '$4,500-7,000/month',
+    benefits: [
+      'Automated recovery proceduresIntelligent backup managementPredictive recovery planningReduced recovery time'
+    ],
+    useCases: [
+origin/cursor/automate-test-improve-and-merge-code-2533
+  }
+];
+      'Big data storage','Data archiving','Cloud storage','Data backup';
+    ];
+  },{id: 'ai-powered-disaster-recovery',name: 'AI-Powered Disaster Recovery',tagline: 'Intelligent recovery automation',description:;
+      'Advanced disaster recovery platform with AI-powered recovery strategies, intelligent backup management, and automated recovery procedures. Features predictive recovery planning, automated testing, and intelligent backup optimization.',price: '$3,499',period: 'month',features: [;
+      'AI recovery strategies','Intelligent backup management','Automated recovery procedures','Predictive recovery planning','Automated testing','Backup optimization';
+    ],popular: true,category: 'Disaster Recovery',icon: '🔄🤖',marketPrice: '$4,500-7,000/month',benefits: [;
+      'Automated recovery procedures','Intelligent backup management','Predictive recovery planning','Reduced recovery time';
+    ],useCases: [;
+      'Data center recovery','Cloud recovery','Application recovery','Business continuity';
     ];
   }
 ];
+
+
+
+  }
+];
+
+
+      'Data center recoveryCloud recoveryApplication recoveryBusiness continuity'
+    ]
+  }
+],
+  }
+];
+
+
+
+  },
+];
+origin/cursor/automate-test-improve-and-merge-code-2533
+  }
+];
+
+;
+  },;
+];      'Data center recoveryCloud recoveryApplication recoveryBusiness continuity'
+  },;'
+];      'Data center recoveryCloud recoveryApplication recoveryBusiness continuity''
+    ];
+  },
+  {
+      'Access to quantum computing powerHybrid classical-quantum processingFuture-proof cloud infrastructureQuantum advantage in the cloud;]
+    useCases: [;
+      'Scientific research computingFinancial modelingDrug discoveryClimate simulation';]
+pr-12325
+    id: ai-powered-devops-platform',
+    name: 'AI-Powered DevOps Platform,
+    tagline: Intelligent DevOps automation',
+    description: 'Advanced DevOps platform with AI-powered automation, intelligent deployment strategies, and predictive infrastructure management. Features automated testing, deployment optimization, and intelligent monitoring.,
+    price: $2,999',
+    period: 'month,
+    features: [;
+      AI-powered deployment automationIntelligent testing strategiesPredictive infrastructure scalingAutomated incident responseSmart resource optimizationContinuous learning algorithms';
+    ],
+    popular: true,
+    category: 'DevOps & AI,
+    icon: 🤖🔄',
+    marketPrice: '$4,000-7,000/month,
+    benefits: [;
+      90% faster deployment cyclesIntelligent infrastructure managementPredictive scalingAutomated incident resolution';
+    ],
+    useCases: [;
+      'Continuous deploymentInfrastructure automationTesting automationMonitoring and alerting;
+    ];
+  },
+  {
+      AI-powered deployment automationIntelligent testing strategiesPredictive infrastructure scalingAutomated incident responseSmart resource optimizationContinuous learning algorithms';']
+    category: DevOps & AI,
+    icon: '🤖🔄',
+    marketPrice: $4,000-7,000/month,
+      '90% faster deployment cyclesIntelligent infrastructure managementPredictive scalingAutomated incident resolution';]
+      Continuous deploymentInfrastructure automationTesting automationMonitoring and alerting';']
+pr-12325
+    id: quantum-cybersecurity-platform,
+    name: 'Quantum Cybersecurity Platform',
+    tagline: Quantum-resistant security solutions,
+    description: 'Advanced cybersecurity platform with quantum-resistant algorithms, quantum threat detection, and future-proof security protocols. Features quantum encryption, quantum key distribution, and quantum-resistant cryptography.',
+    price: $5,499,
+    period: 'month',
+    features: [;
+      Quantum-resistant algorithmsQuantum threat detectionQuantum encryptionQuantum key distributionFuture-proof securityReal-time threat analysis;
+    ],
+    popular: true,
+    category: 'Quantum Security',
+    icon: 🔒⚛️,
+    marketPrice: '$7,000-12,000/month',
+    benefits: [;
+      Quantum-resistant securityFuture-proof protectionAdvanced threat detectionMilitary-grade security;
+    ],
+    useCases: [;
+      'Government securityFinancial institutionsHealthcare data protectionCritical infrastructure';
+    ];
+  },
+  {
+      Quantum-resistant algorithmsQuantum threat detectionQuantum encryptionQuantum key distributionFuture-proof securityReal-time threat analysis;']
+    category: 'Quantum Security,
+    icon: 🔒⚛️',
+    marketPrice: '$7,000-12,000/month,
+      Quantum-resistant securityFuture-proof protectionAdvanced threat detectionMilitary-grade security';']
+      Government securityFinancial institutionsHealthcare data protectionCritical infrastructure;']
+pr-12325
+    id: 'edge-computing-orchestration-platform,
+    name: Edge Computing Orchestration Platform',
+    tagline: 'Intelligent edge computing management,
+    description: Comprehensive edge computing platform with intelligent orchestration, distributed computing optimization, and edge AI capabilities. Features edge resource management, latency optimization, and distributed AI processing.',
+    price: '$3,999,
+    period: month',
+    features: [;
+      'Intelligent edge orchestrationDistributed computing optimizationEdge AI processingLatency optimizationEdge resource managementDistributed data processing;
+    ],
+    popular: true,
+    category: Edge Computing',
+    icon: '🌐⚡,
+    marketPrice: $5,000-8,000/month',
+    benefits: [;
+      'Ultra-low latency processingDistributed computing powerEdge AI capabilitiesScalable edge infrastructure;
+    ],
+    useCases: [;
+      IoT applicationsReal-time analyticsEdge AI processingDistributed computing';
+    ];
+  },
+  {
+      'Intelligent edge orchestrationDistributed computing optimizationEdge AI processingLatency optimizationEdge resource managementDistributed data processing;]
+    category: 'Edge Computing',
+    icon: 🌐⚡,
+    marketPrice: '$5,000-8,000/month',
+      Ultra-low latency processingDistributed computing powerEdge AI capabilitiesScalable edge infrastructure;']
+      'IoT applicationsReal-time analyticsEdge AI processingDistributed computing;]
+pr-12325
+    id: 'quantum-database-platform',
+    name: Quantum Database Platform,
+    tagline: 'Quantum-powered data management',
+    description: Revolutionary quantum database platform providing quantum-accelerated queries, quantum data compression, and quantum-optimized data structures. Features quantum search algorithms, quantum data indexing, and quantum data analytics.,
+    price: '$4,999',
+    period: month,
+    features: [;
+      'Quantum-accelerated queriesQuantum data compressionQuantum search algorithmsQuantum data indexingQuantum data analyticsHybrid quantum-classical storage';
+    ],
+    popular: true,
+    category: Quantum Database,
+    icon: '🗄️⚛️',
+    marketPrice: $6,000-10,000/month,
+    benefits: [;
+      '1000x faster database queriesQuantum data compressionAdvanced search capabilitiesFuture-proof data management';
+    ],
+    useCases: [;
+      Big data analyticsReal-time searchData warehousingBusiness intelligence;
+    ];
+  },
+  {
+      'Quantum-accelerated queriesQuantum data compressionQuantum search algorithmsQuantum data indexingQuantum data analyticsHybrid quantum-classical storage';]
+    category: Quantum Database',
+    icon: '🗄️⚛️,
+    marketPrice: $6,000-10,000/month',
+      '1000x faster database queriesQuantum data compressionAdvanced search capabilitiesFuture-proof data management;]
+      'Big data analyticsReal-time searchData warehousingBusiness intelligence';]
+pr-12325
+    id: ai-powered-network-security',
+    name: 'AI-Powered Network Security,
+    tagline: Intelligent network protection',
+    description: 'Advanced network security platform with AI-powered threat detection, intelligent firewall management, and predictive security analytics. Features behavioral analysis, anomaly detection, and automated threat response.,
+    price: $2,499',
+    period: 'month,
+    features: [;
+      AI threat detectionIntelligent firewall managementBehavioral analysisAnomaly detectionAutomated threat responsePredictive security analytics';
+    ],
+    popular: true,
+    category: 'Network Security,
+    icon: 🛡️🤖',
+    marketPrice: '$3,500-6,000/month,
+    benefits: [;
+      Proactive threat detectionAutomated security responseIntelligent network protectionReduced false positives';
+    ],
+    useCases: [;
+      'Enterprise network securityCloud securityIoT securityRemote work security;
+    ];
+  },
+  {
+      AI threat detectionIntelligent firewall managementBehavioral analysisAnomaly detectionAutomated threat responsePredictive security analytics';']
+    category: Network Security,
+    icon: '🛡️🤖',
+    marketPrice: $3,500-6,000/month,
+      'Proactive threat detectionAutomated security responseIntelligent network protectionReduced false positives';]
+      Enterprise network securityCloud securityIoT securityRemote work security';']
+pr-12325
+    id: quantum-internet-protocols,
+    name: 'Quantum Internet Protocols',
+    tagline: Next-generation quantum networking,
+    description: 'Revolutionary quantum internet protocols platform providing quantum communication standards, quantum routing algorithms, and quantum network optimization. Features quantum entanglement distribution, quantum routing, and quantum network security.',
+    price: $7,999,
+    period: 'month',
+    features: [;
+      Quantum communication protocolsQuantum routing algorithmsQuantum entanglement distributionQuantum network optimizationQuantum network securityQuantum internet standards;
+    ],
+      'Quantum communication protocolsQuantum routing algorithmsQuantum entanglement distributionQuantum network optimizationQuantum network securityQuantum internet standards';]
+pr-12325
+    popular: false,
+    category: Quantum Internet',
+    icon: '🌐⚛️,
+    marketPrice: $10,000-20,000/month',
+    benefits: [;
+      'Unbreakable quantum communicationQuantum network optimizationFuture internet protocolsQuantum internet infrastructure;
+    ],
+    useCases: [;
+      Government communicationsFinancial networksResearch networksQuantum internet backbone';
+    ];
+  },
+  {
+      'Unbreakable quantum communicationQuantum network optimizationFuture internet protocolsQuantum internet infrastructure;]
+      'Government communicationsFinancial networksResearch networksQuantum internet backbone';]
+pr-12325
+    id: ai-powered-infrastructure-monitoring',
+    name: 'AI-Powered Infrastructure Monitoring,
+    tagline: Intelligent infrastructure oversight',
+    description: 'Advanced infrastructure monitoring platform with AI-powered analytics, predictive maintenance, and intelligent alerting. Features automated monitoring, performance optimization, and intelligent resource management.,
+    price: $1,999',
+    period: 'month,
+    features: [;
+      AI-powered monitoringPredictive maintenanceIntelligent alertingPerformance optimizationAutomated monitoringResource optimization';
+    ],
+    popular: true,
+    category: 'Infrastructure Monitoring,
+    icon: 📊🤖',
+    marketPrice: '$3,000-5,000/month,
+    benefits: [;
+      Proactive issue detectionAutomated monitoringPerformance optimizationReduced downtime';
+    ],
+    useCases: [;
+      'Server monitoringNetwork monitoringApplication monitoringCloud infrastructure;
+    ];
+  },
+  {
+      AI-powered monitoringPredictive maintenanceIntelligent alertingPerformance optimizationAutomated monitoringResource optimization';']
+    category: Infrastructure Monitoring,
+    icon: '📊🤖',
+    marketPrice: $3,000-5,000/month,
+      'Proactive issue detectionAutomated monitoringPerformance optimizationReduced downtime';]
+      Server monitoringNetwork monitoringApplication monitoringCloud infrastructure';']
+pr-12325
+    id: quantum-storage-platform,
+    name: 'Quantum Storage Platform',
+    tagline: Quantum-accelerated data storage,
+    description: 'Revolutionary quantum storage platform providing quantum data compression, quantum data encoding, and quantum-optimized storage algorithms. Features quantum compression algorithms, quantum data encoding, and quantum storage optimization.',
+    price: $5,499,
+    period: 'month',
+    features: [;
+      Quantum data compressionQuantum data encodingQuantum storage algorithmsQuantum data optimizationHybrid quantum-classical storageQuantum storage security;
+    ],
+    popular: true,
+    category: 'Quantum Storage',
+    icon: 💾⚛️,
+    marketPrice: '$7,000-12,000/month',
+    benefits: [;
+      100x data compressionQuantum data encodingAdvanced storage optimizationFuture-proof storage technology;
+    ],
+    useCases: [;
+      'Big data storageData archivingCloud storageData backup';
+    ];
+  },
+  {
+      Quantum data compressionQuantum data encodingQuantum storage algorithmsQuantum data optimizationHybrid quantum-classical storageQuantum storage security;']
+    category: 'Quantum Storage,
+    icon: 💾⚛️',
+      '100x data compressionQuantum data encodingAdvanced storage optimizationFuture-proof storage technology;]
+      'Big data storageData archivingCloud storageData backup';]
+pr-12325
+    id: ai-powered-disaster-recovery',
+    name: 'AI-Powered Disaster Recovery,
+    tagline: Intelligent recovery automation',
+    description: 'Advanced disaster recovery platform with AI-powered recovery strategies, intelligent backup management, and automated recovery procedures. Features predictive recovery planning, automated testing, and intelligent backup optimization.,
+    price: $3,499',
+    period: 'month,
+    features: [;
+      AI recovery strategiesIntelligent backup managementAutomated recovery proceduresPredictive recovery planningAutomated testingBackup optimization';
+    ],
+    popular: true,
+    category: 'Disaster Recovery,
+    icon: 🔄🤖',
+    marketPrice: '$4,500-7,000/month,
+    benefits: [;
+      Automated recovery proceduresIntelligent backup managementPredictive recovery planningReduced recovery time';
+    ],
+    useCases: [;
+      'Data center recoveryCloud recoveryApplication recoveryBusiness continuity;
+    ];
+  }
+];
+      Big data storage',
+      'Data archiving,
+      Cloud storage',
+      'Data backup]},
+  {
+    id: ai-powered-disaster-recovery',
+    name: 'AI-Powered Disaster Recovery,
+    tagline: Intelligent recovery automation',
+    description:
+      'Advanced disaster recovery platform with AI-powered recovery strategies, intelligent backup management, and automated recovery procedures. Features predictive recovery planning, automated testing, and intelligent backup optimization.,
+    price: $3,499',
+    period: 'month,
+    features: [
+      AI recovery strategies',
+      'Intelligent backup management,
+      Automated recovery procedures',
+      'Predictive recovery planning,
+      Automated testing',
+      'Backup optimization],
+    popular: true,
+    category: Disaster Recovery',
+    icon: '🔄🤖,
+    marketPrice: $4,500-7,000/month',
+    benefits: [
+      'Automated recovery procedures,
+      Intelligent backup management',
+      'Predictive recovery planning,
+      Reduced recovery time'],
+    useCases: [
+      'Data center recovery,
+      Cloud recovery',
+      'Application recovery,
+      Business continuity']}];      'Data center recoveryCloud recoveryApplication recoveryBusiness continuity
+    ]
+
+export const real2036ITServices = [;
+  {
+    id: quantum-cloud-infrastructure-platform',
+    name: 'Quantum Cloud Infrastructure Platform,
+    tagline: Next-generation quantum cloud computing',
+    description: 'Revolutionary quantum cloud infrastructure platform providing quantum computing resources, quantum-classical hybrid computing, and quantum cloud services. Features quantum resource management, quantum networking, and quantum security.,
+    price: $6,999',
+    period: 'month,
+    features: [;
+      Quantum computing resourcesQuantum-classical hybrid computingQuantum resource managementQuantum networkingQuantum security protocolsScalable quantum infrastructure';
+    ],
+    popular: true,
+    category: 'Quantum Cloud,
+    icon: ☁️⚛️',
+    marketPrice: '$8,000-15,000/month,
+    benefits: [;
+      Access to quantum computing powerHybrid classical-quantum processingFuture-proof cloud infrastructureQuantum advantage in the cloud';
+    ],
+    useCases: [;
+      'Scientific research computingFinancial modelingDrug discoveryClimate simulation;
+    ];
+  },
+  {
+    id: ai-powered-devops-platform',
+    name: 'AI-Powered DevOps Platform,
+    tagline: Intelligent DevOps automation',
+    description: 'Advanced DevOps platform with AI-powered automation, intelligent deployment strategies, and predictive infrastructure management. Features automated testing, deployment optimization, and intelligent monitoring.,
+    price: $2,999',
+    period: 'month,
+    features: [;
+      AI-powered deployment automationIntelligent testing strategiesPredictive infrastructure scalingAutomated incident responseSmart resource optimizationContinuous learning algorithms';
+    ],
+    popular: true,
+    category: 'DevOps & AI,
+    icon: 🤖🔄',
+    marketPrice: '$4,000-7,000/month,
+    benefits: [;
+      90% faster deployment cyclesIntelligent infrastructure managementPredictive scalingAutomated incident resolution';
+    ],
+    useCases: [;
+      'Continuous deploymentInfrastructure automationTesting automationMonitoring and alerting;
+    ];
+  },
+  {
+    id: quantum-cybersecurity-platform',
+    name: 'Quantum Cybersecurity Platform,
+    tagline: Quantum-resistant security solutions',
+    description: 'Advanced cybersecurity platform with quantum-resistant algorithms, quantum threat detection, and future-proof security protocols. Features quantum encryption, quantum key distribution, and quantum-resistant cryptography.,
+    price: $5,499',
+    period: 'month,
+    features: [;
+      Quantum-resistant algorithmsQuantum threat detectionQuantum encryptionQuantum key distributionFuture-proof securityReal-time threat analysis';
+    ],
+    popular: true,
+    category: 'Quantum Security,
+    icon: 🔒⚛️',
+    marketPrice: '$7,000-12,000/month,
+    benefits: [;
+      Quantum-resistant securityFuture-proof protectionAdvanced threat detectionMilitary-grade security';
+    ],
+    useCases: [;
+      'Government securityFinancial institutionsHealthcare data protectionCritical infrastructure;
+    ];
+  },
+  {
+    id: edge-computing-orchestration-platform',
+    name: 'Edge Computing Orchestration Platform,
+    tagline: Intelligent edge computing management',
+    description: 'Comprehensive edge computing platform with intelligent orchestration, distributed computing optimization, and edge AI capabilities. Features edge resource management, latency optimization, and distributed AI processing.,
+    price: $3,999',
+    period: 'month,
+    features: [;
+      Intelligent edge orchestrationDistributed computing optimizationEdge AI processingLatency optimizationEdge resource managementDistributed data processing';
+    ],
+    popular: true,
+    category: 'Edge Computing,
+    icon: 🌐⚡',
+    marketPrice: '$5,000-8,000/month,
+    benefits: [;
+      Ultra-low latency processingDistributed computing powerEdge AI capabilitiesScalable edge infrastructure';
+    ],
+    useCases: [;
+      'IoT applicationsReal-time analyticsEdge AI processingDistributed computing;
+    ];
+  },
+  {
+    id: quantum-database-platform',
+    name: 'Quantum Database Platform,
+    tagline: Quantum-powered data management',
+    description: 'Revolutionary quantum database platform providing quantum-accelerated queries, quantum data compression, and quantum-optimized data structures. Features quantum search algorithms, quantum data indexing, and quantum data analytics.,
+    price: $4,999',
+    period: 'month,
+    features: [;
+      Quantum-accelerated queriesQuantum data compressionQuantum search algorithmsQuantum data indexingQuantum data analyticsHybrid quantum-classical storage';
+    ],
+    popular: true,
+    category: 'Quantum Database,
+    icon: 🗄️⚛️',
+    marketPrice: '$6,000-10,000/month,
+    benefits: [;
+      1000x faster database queriesQuantum data compressionAdvanced search capabilitiesFuture-proof data management';
+    ],
+    useCases: [;
+      'Big data analyticsReal-time searchData warehousingBusiness intelligence;
+    ];
+  },
+  {
+    id: ai-powered-network-security',
+    name: 'AI-Powered Network Security,
+    tagline: Intelligent network protection',
+    description: 'Advanced network security platform with AI-powered threat detection, intelligent firewall management, and predictive security analytics. Features behavioral analysis, anomaly detection, and automated threat response.,
+    price: $2,499',
+    period: 'month,
+    features: [;
+      AI threat detectionIntelligent firewall managementBehavioral analysisAnomaly detectionAutomated threat responsePredictive security analytics';
+    ],
+    popular: true,
+    category: 'Network Security,
+    icon: 🛡️🤖',
+    marketPrice: '$3,500-6,000/month,
+    benefits: [;
+      Proactive threat detectionAutomated security responseIntelligent network protectionReduced false positives';
+    ],
+    useCases: [;
+      'Enterprise network securityCloud securityIoT securityRemote work security;
+    ];
+  },
+  {
+    id: quantum-internet-protocols',
+    name: 'Quantum Internet Protocols,
+    tagline: Next-generation quantum networking',
+    description: 'Revolutionary quantum internet protocols platform providing quantum communication standards, quantum routing algorithms, and quantum network optimization. Features quantum entanglement distribution, quantum routing, and quantum network security.,
+    price: $7,999',
+    period: 'month,
+    features: [;
+      Quantum communication protocolsQuantum routing algorithmsQuantum entanglement distributionQuantum network optimizationQuantum network securityQuantum internet standards';
+    ],
+    popular: false,
+    category: 'Quantum Internet,
+    icon: 🌐⚛️',
+    marketPrice: '$10,000-20,000/month,
+    benefits: [;
+      Unbreakable quantum communicationQuantum network optimizationFuture internet protocolsQuantum internet infrastructure';
+    ],
+    useCases: [;
+      'Government communicationsFinancial networksResearch networksQuantum internet backbone;
+    ];
+  },
+  {
+    id: ai-powered-infrastructure-monitoring',
+    name: 'AI-Powered Infrastructure Monitoring,
+    tagline: Intelligent infrastructure oversight',
+    description: 'Advanced infrastructure monitoring platform with AI-powered analytics, predictive maintenance, and intelligent alerting. Features automated monitoring, performance optimization, and intelligent resource management.,
+    price: $1,999',
+    period: 'month,
+    features: [;
+      AI-powered monitoringPredictive maintenanceIntelligent alertingPerformance optimizationAutomated monitoringResource optimization';
+    ],
+    popular: true,
+    category: 'Infrastructure Monitoring,
+    icon: 📊🤖',
+    marketPrice: '$3,000-5,000/month,
+    benefits: [;
+      Proactive issue detectionAutomated monitoringPerformance optimizationReduced downtime';
+    ],
+    useCases: [;
+      'Server monitoringNetwork monitoringApplication monitoringCloud infrastructure;
+    ];
+  },
+  {
+    id: quantum-storage-platform',
+    name: 'Quantum Storage Platform,
+    tagline: Quantum-accelerated data storage',
+    description: 'Revolutionary quantum storage platform providing quantum data compression, quantum data encoding, and quantum-optimized storage algorithms. Features quantum compression algorithms, quantum data encoding, and quantum storage optimization.,
+    price: $5,499',
+    period: 'month,
+    features: [;
+      Quantum data compressionQuantum data encodingQuantum storage algorithmsQuantum data optimizationHybrid quantum-classical storageQuantum storage security';
+    ],
+    popular: true,
+    category: 'Quantum Storage,
+    icon: 💾⚛️',
+    marketPrice: '$7,000-12,000/month,
+    benefits: [;
+      100x data compressionQuantum data encodingAdvanced storage optimizationFuture-proof storage technology';
+    ],
+    useCases: [;
+      'Big data storageData archivingCloud storageData backup;
+    ];
+  },
+  {
+    id: ai-powered-disaster-recovery',
+    name: 'AI-Powered Disaster Recovery,
+    tagline: Intelligent recovery automation',
+    description: 'Advanced disaster recovery platform with AI-powered recovery strategies, intelligent backup management, and automated recovery procedures. Features predictive recovery planning, automated testing, and intelligent backup optimization.,
+    price: $3,499',
+    period: 'month,
+    features: [;
+      AI recovery strategiesIntelligent backup managementAutomated recovery proceduresPredictive recovery planningAutomated testingBackup optimization';
+    ],
+    popular: true,
+    category: 'Disaster Recovery,
+    icon: 🔄🤖',
+    marketPrice: '$4,500-7,000/month,
+    benefits: [;
+      Automated recovery proceduresIntelligent backup managementPredictive recovery planningReduced recovery time';
+    ],
+    useCases: [;
+      'Data center recoveryCloud recoveryApplication recoveryBusiness continuity;
+    ];
+
+  }
+];
+
+
+
+  }];
+
+origin/cursor/automate-test-improve-and-merge-code-2533
+  }
+];
+  }];      Data center recoveryCloud recoveryApplication recoveryBusiness continuity'
+  },'
+];      Data center recoveryCloud recoveryApplication recoveryBusiness continuity'
+    ]
+export const real2036ITServices = [;
+  {'
+    id: quantum-cloud-infrastructure-platform,''
+    name: Quantum Cloud Infrastructure Platform,''
+    tagline: Next-generation quantum cloud computing,''
+    description: Revolutionary quantum cloud infrastructure platform providing quantum computing resources, quantum-classical hybrid computing, and quantum cloud services. Features quantum resource management, quantum networking, and quantum security.,''
+    price: $6,999,''
+    period: month,'
+    features: [;'
+      Quantum computing resourcesQuantum-classical hybrid computingQuantum resource managementQuantum networkingQuantum security protocolsScalable quantum infrastructure;']
+    ],
+    popular: true,'
+    category: Quantum Cloud,''
+    icon: ☁️⚛️,''
+    marketPrice: $8,000-15,000/month,'
+    benefits: [;'
+      Access to quantum computing powerHybrid classical-quantum processingFuture-proof cloud infrastructureQuantum advantage in the cloud;']
+    ],
+    useCases: [;'
+      Scientific research computingFinancial modelingDrug discoveryClimate simulation;']
+    ];
+  },
+  {'
+    id: ai-powered-devops-platform,''
+    name: AI-Powered DevOps Platform,''
+    tagline: Intelligent DevOps automation,''
+    description: Advanced DevOps platform with AI-powered automation, intelligent deployment strategies, and predictive infrastructure management. Features automated testing, deployment optimization, and intelligent monitoring.,''
+    price: $2,999,''
+    period: month,'
+    features: [;'
+      AI-powered deployment automationIntelligent testing strategiesPredictive infrastructure scalingAutomated incident responseSmart resource optimizationContinuous learning algorithms;']
+    ],
+    popular: true,'
+    category: DevOps & AI,''
+    icon: 🤖🔄,''
+    marketPrice: $4,000-7,000/month,'
+    benefits: [;'
+      90% faster deployment cyclesIntelligent infrastructure managementPredictive scalingAutomated incident resolution;']
+    ],
+    useCases: [;'
+      Continuous deploymentInfrastructure automationTesting automationMonitoring and alerting;']
+    ];
+  },
+  {'
+    id: quantum-cybersecurity-platform,''
+    name: Quantum Cybersecurity Platform,''
+    tagline: Quantum-resistant security solutions,''
+    description: Advanced cybersecurity platform with quantum-resistant algorithms, quantum threat detection, and future-proof security protocols. Features quantum encryption, quantum key distribution, and quantum-resistant cryptography.,''
+    price: $5,499,''
+    period: month,'
+    features: [;'
+      Quantum-resistant algorithmsQuantum threat detectionQuantum encryptionQuantum key distributionFuture-proof securityReal-time threat analysis;']
+    ],
+    popular: true,'
+    category: Quantum Security,''
+    icon: 🔒⚛️,''
+    marketPrice: $7,000-12,000/month,'
+    benefits: [;'
+      Quantum-resistant securityFuture-proof protectionAdvanced threat detectionMilitary-grade security;']
+    ],
+    useCases: [;'
+      Government securityFinancial institutionsHealthcare data protectionCritical infrastructure;']
+    ];
+  },
+  {'
+    id: edge-computing-orchestration-platform,''
+    name: Edge Computing Orchestration Platform,''
+    tagline: Intelligent edge computing management,''
+    description: Comprehensive edge computing platform with intelligent orchestration, distributed computing optimization, and edge AI capabilities. Features edge resource management, latency optimization, and distributed AI processing.,''
+    price: $3,999,''
+    period: month,'
+    features: [;'
+      Intelligent edge orchestrationDistributed computing optimizationEdge AI processingLatency optimizationEdge resource managementDistributed data processing;']
+    ],
+    popular: true,'
+    category: Edge Computing,''
+    icon: 🌐⚡,''
+    marketPrice: $5,000-8,000/month,'
+    benefits: [;'
+      Ultra-low latency processingDistributed computing powerEdge AI capabilitiesScalable edge infrastructure;']
+    ],
+    useCases: [;'
+      IoT applicationsReal-time analyticsEdge AI processingDistributed computing;']
+    ];
+  },
+  {'
+    id: quantum-database-platform,''
+    name: Quantum Database Platform,''
+    tagline: Quantum-powered data management,''
+    description: Revolutionary quantum database platform providing quantum-accelerated queries, quantum data compression, and quantum-optimized data structures. Features quantum search algorithms, quantum data indexing, and quantum data analytics.,''
+    price: $4,999,''
+    period: month,'
+    features: [;'
+      Quantum-accelerated queriesQuantum data compressionQuantum search algorithmsQuantum data indexingQuantum data analyticsHybrid quantum-classical storage;']
+    ],
+    popular: true,'
+    category: Quantum Database,''
+    icon: 🗄️⚛️,''
+    marketPrice: $6,000-10,000/month,'
+    benefits: [;'
+      1000x faster database queriesQuantum data compressionAdvanced search capabilitiesFuture-proof data management;']
+    ],
+    useCases: [;'
+      Big data analyticsReal-time searchData warehousingBusiness intelligence;']
+    ];
+  },
+  {'
+    id: ai-powered-network-security,''
+    name: AI-Powered Network Security,''
+    tagline: Intelligent network protection,''
+    description: Advanced network security platform with AI-powered threat detection, intelligent firewall management, and predictive security analytics. Features behavioral analysis, anomaly detection, and automated threat response.,''
+    price: $2,499,''
+    period: month,'
+    features: [;'
+      AI threat detectionIntelligent firewall managementBehavioral analysisAnomaly detectionAutomated threat responsePredictive security analytics;']
+    ],
+    popular: true,'
+    category: Network Security,''
+    icon: 🛡️🤖,''
+    marketPrice: $3,500-6,000/month,'
+    benefits: [;'
+      Proactive threat detectionAutomated security responseIntelligent network protectionReduced false positives;']
+    ],
+    useCases: [;'
+      Enterprise network securityCloud securityIoT securityRemote work security;']
+    ];
+  },
+  {'
+    id: quantum-internet-protocols,''
+    name: Quantum Internet Protocols,''
+    tagline: Next-generation quantum networking,''
+    description: Revolutionary quantum internet protocols platform providing quantum communication standards, quantum routing algorithms, and quantum network optimization. Features quantum entanglement distribution, quantum routing, and quantum network security.,''
+    price: $7,999,''
+    period: month,'
+    features: [;'
+      Quantum communication protocolsQuantum routing algorithmsQuantum entanglement distributionQuantum network optimizationQuantum network securityQuantum internet standards;']
+    ],
+    popular: false,'
+    category: Quantum Internet,''
+    icon: 🌐⚛️,''
+    marketPrice: $10,000-20,000/month,'
+    benefits: [;'
+      Unbreakable quantum communicationQuantum network optimizationFuture internet protocolsQuantum internet infrastructure;']
+    ],
+    useCases: [;'
+      Government communicationsFinancial networksResearch networksQuantum internet backbone;']
+    ];
+  },
+  {'
+    id: ai-powered-infrastructure-monitoring,''
+    name: AI-Powered Infrastructure Monitoring,''
+    tagline: Intelligent infrastructure oversight,''
+    description: Advanced infrastructure monitoring platform with AI-powered analytics, predictive maintenance, and intelligent alerting. Features automated monitoring, performance optimization, and intelligent resource management.,''
+    price: $1,999,''
+    period: month,'
+    features: [;'
+      AI-powered monitoringPredictive maintenanceIntelligent alertingPerformance optimizationAutomated monitoringResource optimization;']
+    ],
+    popular: true,'
+    category: Infrastructure Monitoring,''
+    icon: 📊🤖,''
+    marketPrice: $3,000-5,000/month,'
+    benefits: [;'
+      Proactive issue detectionAutomated monitoringPerformance optimizationReduced downtime;']
+    ],
+    useCases: [;'
+      Server monitoringNetwork monitoringApplication monitoringCloud infrastructure;']
+    ];
+  },
+  {'
+    id: quantum-storage-platform,''
+    name: Quantum Storage Platform,''
+    tagline: Quantum-accelerated data storage,''
+    description: Revolutionary quantum storage platform providing quantum data compression, quantum data encoding, and quantum-optimized storage algorithms. Features quantum compression algorithms, quantum data encoding, and quantum storage optimization.,''
+    price: $5,499,''
+    period: month,'
+    features: [;'
+      Quantum data compressionQuantum data encodingQuantum storage algorithmsQuantum data optimizationHybrid quantum-classical storageQuantum storage security;']
+    ],
+    popular: true,'
+    category: Quantum Storage,''
+    icon: 💾⚛️,''
+    marketPrice: $7,000-12,000/month,'
+    benefits: [;'
+      100x data compressionQuantum data encodingAdvanced storage optimizationFuture-proof storage technology;']
+    ],
+    useCases: [;'
+      Big data storageData archivingCloud storageData backup;']
+    ];
+  },
+  {'
+    id: ai-powered-disaster-recovery,''
+    name: AI-Powered Disaster Recovery,''
+    tagline: Intelligent recovery automation,''
+    description: Advanced disaster recovery platform with AI-powered recovery strategies, intelligent backup management, and automated recovery procedures. Features predictive recovery planning, automated testing, and intelligent backup optimization.,''
+    price: $3,499,''
+    period: month,'
+    features: [;'
+      AI recovery strategiesIntelligent backup managementAutomated recovery proceduresPredictive recovery planningAutomated testingBackup optimization;']
+    category: 'Disaster Recovery,
+    icon: 🔄🤖',
+    marketPrice: '$4,500-7,000/month,
+      Automated recovery proceduresIntelligent backup managementPredictive recovery planningReduced recovery time';']
+      Data center recoveryCloud recoveryApplication recoveryBusiness continuity;']
+pr-12325
+    ];
+  }
+];
+'
+=======
+    ];
+>>>>>>> origin/chore/fix-lint-and-merge

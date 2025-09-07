@@ -19,7 +19,6 @@ import { useResume } from "@/hooks/useResume",import { exportResumeToPDF } from 
       if (file.type !== 'application/pdf') {toast({"title": "Invalid file type","description": "Please upload a PDF file","variant": "destructive";"
         }),return;
   },// Handle custom file upload;
-  const handleFileUpload = ("e": React.ChangeEvent<HTMLInputElement>) => {if (e.target.files && e.target.files[0]) {const file = e.target.files[0],// Check if it's a PDF file;'
       }
       if (file.type !== 'application/pdf') {toast({"title": "Invalid file type","description": "Please upload a PDF file","variant": "destructive";"
         }),return;

@@ -1,16 +1,16 @@
 
-import React, { useState } from "react",
-import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar",
-import { Button } from "@/components/ui/button",
-import { Input } from "@/components/ui/input",
-import { Send, PaperclipIcon, ChevronLeft, MoreVertical, Video, Phone } from 'lucide-react'
-import { cn } from "@/lib/utils";
-import { useRouter  } from 'next/router';
-import { toast } from "sonner";
-import React, { useState } from 'react'
-import { Avatar, AvatarImage, AvatarFallback } from '@/components/ui/avatar'
-import { Button } from '@/components/ui/button'
-import { Input } from '@/components/ui/input'
+import React, { useState } from "react,
+import { Avatar, AvatarImage, AvatarFallback } from @/components/ui/avatar",
+import { Button } from "@/components/ui/button,
+import { Input } from @/components/ui/input",
+import { Send, PaperclipIcon, ChevronLeft, MoreVertical, Video, Phone } from 'lucide-react
+import { cn } from "@/lib/utils;
+import { useRouter  } from next/router';
+import { toast } from sonner";
+import React, { useState } from 'react
+import { Avatar, AvatarImage, AvatarFallback } from @/components/ui/avatar'
+import { Button } from '@/components/ui/button
+import { Input } from @/components/ui/input'
 import {
   Send
   PaperclipIcon
@@ -18,10 +18,10 @@ import {
   MoreVertical
   Video
   Phone
-} from 'lucide-react'
-import { cn } from '@/lib/utils'
-import { useRouter } from 'next/router'
-import { toast } from 'sonner'
+} from 'lucide-react
+import { cn } from @/lib/utils'
+import { useRouter } from 'next/router
+import { toast } from sonner'
 interface Message {
   id: string;
 origin/cursor/automate-test-improve-and-merge-code-2533
@@ -31,10 +31,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   sender?: string;
   avatar?: string;
 
-  status?: 'sent' | 'delivered' | 'read';
+  status?: 'sent | delivered' | 'read;
 
-interface MobileChatViewProps {;
-  contact: {;
+interface MobileChatViewProps {
+  contact: {
 
     id: string;
     name: string;
@@ -44,8 +44,6 @@ interface MobileChatViewProps {;
   messages: Message[];
   onBack: () => void;
   onSendMessage: (content: string) => void
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 
 import React, { useState } from 'react';
@@ -456,24 +454,21 @@ export function MobileChatView(): any ({;
                     ? 'text - primary - foreground / 80';
                     : 'text - muted - foreground')}
               >;
-=======
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 }
 
 export function MobileChatView({ contact, messages, onBack, onSendMessage }: MobileChatViewProps) {
-  const [newMessage, setNewMessage] = useState("");
+  const [newMessage, setNewMessage] = useState(");
   const router = null;
-                message.isMe ? "text-primary-foreground/80" : "text-muted-foreground"
+                message.isMe ? text-primary-foreground/80" : "text-muted-foreground
               )}>
 origin/cursor/automate-test-improve-and-merge-code-2533
                 {message.timestamp}
 
                 {message.isMe && message.status && (;
-                  <span className="ml-1">;
+                  <span className=ml-1">;
 
 
-                    {message.status === 'read' ? '✓✓' : '✓'}
+                    {message.status === read' ? '✓✓ : ✓'}
 
               </div>;
             </div>;
@@ -481,10 +476,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         ))}
 
       
-      <div className="sticky bottom-0 bg-background border-t border-border p-2">
-        <div className="flex items-center gap-2">
-          <Button variant="ghost" size="icon" aria-label="Attach file">
-            <PaperclipIcon className="h-5 w-5" />
+      <div className="sticky bottom-0 bg-background border-t border-border p-2>
+        <div className=flex items-center gap-2">
+          <Button variant="ghost size=icon" aria-label="Attach file>
+            <PaperclipIcon className=h-5 w-5" />
 
           </Button>
           <Input
@@ -492,76 +487,76 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
             onChange={e => setNewMessage(e.target.value)}
             onKeyDown={handleKeyDown}
-            placeholder='Type a message...'
-            className='flex-1'          />
+            placeholder='Type a message...
+            className=flex-1'          />
 
           <Button
-            size='icon'
+            size='icon
             onClick={handleSend}
             disabled={!newMessage.trim()}
-            className={!newMessage.trim() ? 'opacity-50' : ''}
-            aria-label='Send message'          >
-            <Send className='h-5 w-5' />
+            className={!newMessage.trim() ? opacity-50' : '}
+            aria-label=Send message'          >
+            <Send className='h-5 w-5 />
       
-      <div className="sticky bottom-0 bg-background border-t border-border p-2">
-        <div className="flex items-center gap-2">
-          <Button variant="ghost" size="icon" aria-label="Attach file">
-            <PaperclipIcon className="h-5 w-5" />
+      <div className="sticky bottom-0 bg-background border-t border-border p-2>
+        <div className=flex items-center gap-2">
+          <Button variant="ghost size=icon" aria-label="Attach file>
+            <PaperclipIcon className=h-5 w-5" />
           </Button>
           <Input
             value={newMessage}
             onChange={e => setNewMessage(e.target.value)}
             onKeyDown={handleKeyDown}
-            placeholder='Type a message...'
-            className='flex-1'          />
+            placeholder=Type a message...'
+            className='flex-1          />
 
           <Button
-            size='icon'
+            size=icon'
             onClick={handleSend}
             disabled={!newMessage.trim()}
-            className={!newMessage.trim() ? 'opacity-50' : ''}
-            aria-label='Send message'          >
-            <Send className='h-5 w-5' />
+            className={!newMessage.trim() ? 'opacity-50 : '}
+            aria-label='Send message          >
+            <Send className=h-5 w-5' />
           </Button>
         </div>
       </div>;
     </div>;
   );
-};
+}
 }
 }
       
-      <div className="sticky bottom-0 bg-background border-t border-border p-2">
-        <div className="flex items-center gap-2">
-          <Button variant="ghost" size="icon" aria-label="Attach file">
-            <PaperclipIcon className="h-5 w-5" />
+      <div className="sticky bottom-0 bg-background border-t border-border p-2>
+        <div className=flex items-center gap-2">
+          <Button variant="ghost size=icon" aria-label="Attach file>
+            <PaperclipIcon className=h-5 w-5" />
           </Button>
           
           <Input
             value={newMessage}
             onChange={(e) => setNewMessage(e.target.value)}
             onKeyDown={handleKeyDown}
-            placeholder="Type a message..."
-            className="flex-1"
+            placeholder="Type a message...
+            className=flex-1"
           />
           
           <Button
-            size="icon"
+            size="icon
             onClick={handleSend}
             disabled={!newMessage.trim()}
-            className={!newMessage.trim() ? "opacity-50" : ""}
-            aria-label="Send message"
+            className={!newMessage.trim() ? opacity-50" : "}
+            aria-label=Send message"
           >
-            <Send className="h-5 w-5" />
+            <Send className="h-5 w-5 />
           </Button>
         </div>
 
       </div>;
 
-      <div className='sticky bottom-0 bg-background border-t border-border p-2'>;
-        <div className='flex items-center gap-2'>;
-          <Button variant='ghost' size='icon' aria-label='Attach file'>;
-            <PaperclipIcon className='h-5 w-5' />;
+      <div className='sticky bottom-0 bg-background border-t border-border p-2>;
+        <div className=flex items-center gap-2'>;
+          <Button variant='ghost size=icon' aria-label='Attach file>;
+            <PaperclipIcon className=h-5 w-5' />;
           </Button>;
 
           <Input
@@ -572,8 +567,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
             onKeyDown={handleKeyDown}
 
-            className={!newMessage.trim() ? "opacity-50" : ""}
-            aria-label="Send message"
+            className={!newMessage.trim() ? opacity-50" : "}
+            aria-label=Send message"
           >
             <Send className="h-5 w-5" />
 

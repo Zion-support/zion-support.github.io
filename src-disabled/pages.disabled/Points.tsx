@@ -15,8 +15,6 @@ import { formatDistanceToNow  } from 'date-fns';
 
 import Link from 'next/link';
 import { LoginModal } from '@/components/auth/LoginModal';
-import Link from 'next/link';
-import { LoginModal } from '@/components/auth/LoginModal';
 
 export default function PointsPage() {
 origin/cursor/automate-test-improve-and-merge-code-2533

@@ -1,9 +1,19 @@
 <<<<<<< HEAD
-=======
 
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+>>>>>>> origin/chore/fix-lint-and-merge
 #!/usr/bin/env node;
+=======
 #!/usr/bin/env node
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 /**
  * Project Health Monitor Automation;
  * Monitors overall project health and provides insights;
@@ -11,125 +21,198 @@
 <<<<<<< HEAD
 
 =======
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
+<<<<<<< HEAD
+>>>>>>> origin/chore/fix-lint-and-merge
+const fs = require('fs');
+const path = require(path');
+const { execSync } = require('child_process');
+=======
+
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
+<<<<<<< HEAD
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 class ProjectHealthMonitor {}
     constructor() {}
         this.projectRoot = process.cwd();
 
         if () {}
-            fs.mkdirSync(logsDir, { "recursive": true })};"
-    };
+            fs.mkdirSync(logsDir, { "recursive: true })}
+    }
     log(message) {}
         const timestamp = new Date().toISOString() {}
     ) {}"
         const timestamp = new Date().toISOString(})
 });
-const logMessage = `[${timestamp}] ${message}\;n;`;`;
+        const logMessage = `[${timestamp}] ${message}\;n;`;`
         fs.appendFileSync(this.logFile, logMessage);
 <<<<<<< HEAD
-=======
 
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
+        console.log(message)}
+    checkProjectStructure() {}
+
+=======
+        this.log(Checking project structure...');
+        console.log(message)}
+
+        const optionalFiles = ['README.md]
+            .gitignore',
+            '.env.example,
+            Dockerfile',
+            'docker-compose.yml
+        ];
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-18b6
+        const structure = {}
+            "required: {},
+            optional": {},
+            "score: 0;
+       }
+
+    checkProjectStructure() {}
+
+            "score": 0;
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         console.log(message)};
     checkProjectStructure() {}
         this.log('Checking project structure...');
+=======
         console.log(message)};
 <<<<<<< HEAD
-        
-=======
     checkProjectStructure() {}
         this.log('Checking project structure...');
         
-const requiredFiles = ['package.json',];
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+        const requiredFiles = ['package.json',]
             'next.config.js',
             'tsconfig.json',
             'tailwind.config.js'
         ];
+<<<<<<< HEAD
+=======
         
-const optionalFiles = ['README.md',];
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+        const optionalFiles = ['README.md',]
             '.gitignore',
             '.env.example',
             'Dockerfile',
             'docker-compose.yml'
         ];
 <<<<<<< HEAD
-        
 =======
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
+        
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
         const structure = {}
             "required": {},
             "optional": {},
             "score": 0;
        };
 <<<<<<< HEAD
-        
 =======
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
+        
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
     checkProjectStructure() {}"
 
             "score": 0;"
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+>>>>>>> origin/chore/fix-lint-and-merge
         // Check required files;
         for (const file of requiredFiles) {}
             const exists = fs.existsSync(path.join(this.projectRoot, file;););
             structure.required[file] = exists;
-            if (structure.score += 10};)
+            if (structure.score += 10})
         // Check optional files;
         for (const file of optionalFiles) {}
             const exists = fs.existsSync(path.join(this.projectRoot, file) {}
-    structure.score += 10};
+    structure.score += 10}
         // Check optional files;
             const exists = fs.existsSync(path.join(this.projectRoot, file})
 }););
             structure.optional[file] = exists;
+<<<<<<< HEAD
+            if (structure.score += 5})`;
+        this.log(`Project structure "score": ${structure.score}/100`)) {`}
+    structure.score += 5}`;
+        this.log(`Project structure "score": ${structure.score}/100`)}
+        return structure}
+
+=======
             if (structure.score += 5};)"`;
         this.log(`Project structure "score": ${structure.score}/100`)) {`}"
     structure.score += 5};"`;
         this.log(`Project structure "score": ${structure.score}/100`)};"
         return structure};
 <<<<<<< HEAD
-        
-=======
     checkCodeQuality() {}
         this.log('Checking code quality...');
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
+<<<<<<< HEAD
         try {}
             // Run linting;
             execSync('npm run lint', { })
-                "cwd": this.projectRoot, 
+                "cwd": this.projectRoot,
                 "stdio": 'pipe'
             }
 });
-<<<<<<< HEAD
-            
 =======
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
+        
+>>>>>>> origin/chore/fix-lint-and-merge
+        try {}
+            // Run linting;
+            execSync(npm run lint', {})
+                cwd": this.projectRoot, 
+                "stdio: 'pipe
+            }
+});
+<<<<<<< HEAD
+
+    checkCodeQuality() {}
+
+            }
+            return {}
+
+=======
+            
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
     checkCodeQuality() {}"
 
             }
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
             return {;}
 
                 "error": error.message;"
             }};
 <<<<<<< HEAD
-        
-=======
     };
     checkTypeScript() {}
         this.log('Checking TypeScript configuration...');
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
+<<<<<<< HEAD
+        try {}
+            execSync('npm run type-check', { })
+                "cwd": this.projectRoot,
+                "stdio": 'pipe'
+            }
+});
+=======
+        
         try {}
             execSync('npm run type-check', { })
                 "cwd": this.projectRoot, 
                 "stdio": 'pipe'
             }
 });
-<<<<<<< HEAD
             
-=======
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
             return {;}
                 "status": 'success',
                 "typeCheck": 'passed',
@@ -139,72 +222,123 @@ const optionalFiles = ['README.md',];
                 "status": 'warning',
                 "typeCheck": 'failed',
                 "score": 0,
+>>>>>>> origin/chore/fix-lint-and-merge
                 "error": error.message;
-            }};
-    };
+            }}
+
+        try {}
+            execSync(npm run type-check', {})
+                cwd": this.projectRoot, 
+                "stdio: 'pipe
+            }
+});
+
+            return {}
+                status": success',
+                "typeCheck: 'passed,
+                score": 20;
+            }} catch (error) {}
+            return {}
+                "status: warning',
+                typeCheck": 'failed,
+                "score: 0,
+                error": error.message;
+            }}
+    }
     checkBuildHealth() {}
+<<<<<<< HEAD
+        this.log(Checking build health...');
+
+=======
         this.log('Checking build health...');
 <<<<<<< HEAD
-        
-=======
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
         try {}
             execSync('npm run build', { })
-                "cwd": this.projectRoot, 
+                "cwd": this.projectRoot,
                 "stdio": 'pipe'
             }
 });
-<<<<<<< HEAD
-            
 =======
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
+        
+>>>>>>> origin/chore/fix-lint-and-merge
+        try {}
+            execSync('npm run build, {})
+                "cwd: this.projectRoot, 
+                stdio": pipe'
+            }
+});
+<<<<<<< HEAD
+
+            return {}
+                "status: 'success,
+                build": passed',
+                "score: 20;
+=======
+            
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
             return {;}
                 "status": 'success',
                 "build": 'passed',
                 "score": 20;
+>>>>>>> origin/chore/fix-lint-and-merge
             }} catch (error) {}
-            return {;}
-                "status": 'failed',
-                "build": 'failed',
-                "score": 0,
-                "error": error.message;
-            }};
-    };
+            return {}
+                status": 'failed,
+                "build: failed',
+                score": 0,
+                "error: error.message;
+            }}
+    }
     checkDependencies() {}
+<<<<<<< HEAD
+
+=======
+        this.log('Checking dependencies health...);
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-18b6
+            // Check for outdated packages;
+            let outdatedCount = ;0;
+            try {}
+                execSync(npm outdated --json', {})
+
+                    stdio": 'pipe
+=======
         this.log('Checking dependencies health...');
 <<<<<<< HEAD
-        
-        try {}
-            const packageJsonPath = path.join(this.projectRoot, 'package.json';);
-            const packageJson = JSON.parse(fs.readFileSync(packageJsonPath, 'utf8';););
-            
-const totalDeps = Object.keys(packageJson.dependencies || {}).length +;
-                             Object.keys(packageJson.devDependencies || {}).lengt;h;
-            
-=======
         try {}
             const packageJsonPath = path.join(this.projectRoot, 'package.json';);
             const packageJson = JSON.parse(fs.readFileSync(packageJsonPath, 'utf8';););
             const totalDeps = Object.keys(packageJson.dependencies || {}).length +
                              Object.keys(packageJson.devDependencies || {}).lengt;h;
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
+=======
+        
+        try {}
+            const packageJsonPath = path.join(this.projectRoot, 'package.json';);
+            const packageJson = JSON.parse(fs.readFileSync(packageJsonPath, 'utf8';););
+            
+            const totalDeps = Object.keys(packageJson.dependencies || {}).length + 
+                             Object.keys(packageJson.devDependencies || {}).lengt;h;
+            
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
             // Check for outdated packages;
             let outdatedCount = ;0;
             try {}
                 execSync('npm outdated --json', { })
 <<<<<<< HEAD
-                    "cwd": this.projectRoot, 
-=======
                     "cwd": this.projectRoot,
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
+=======
+                    "cwd": this.projectRoot, 
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
                     "stdio": 'pipe'
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
     checkTypeScript() {}"
 
             const totalDeps = Object.keys(packageJson.dependencies || {}).length + 
                              Object.keys(packageJson.devDependencies || {}).lengt;h;
             // Check for outdated packages;
-            let outdatedCount = ;0;
 
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                 })} catch (error) {}
                 if ( {})
                         const outdated = JSON.parse(error.stdout) {}
@@ -214,9 +348,14 @@ const totalDeps = Object.keys(packageJson.dependencies || {}).length +;
                         // No outdated packages;
             const score = Math.max(0, 20 - (outdatedCount * 2;););
 <<<<<<< HEAD
-            
+
 =======
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+            
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+>>>>>>> origin/chore/fix-lint-and-merge
             return {;}
                 "status": 'success',
                 "totalDependencies": totalDeps,
@@ -232,30 +371,66 @@ const totalDeps = Object.keys(packageJson.dependencies || {}).length +;
     checkSecurity() {}
         this.log('Checking security health...');
 <<<<<<< HEAD
-        
+
 =======
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
+<<<<<<< HEAD
+>>>>>>> origin/chore/fix-lint-and-merge
         try {}
-const auditResult = execSync('npm audit --json', { });
+            const auditResult = execSync('npm audit --json', { })
+                "cwd": this.projectRoot,
+                "encoding": 'utf8',
+                "stdio": 'pipe'
+            };);
+            const auditData = JSON.parse(auditResult;);
+            const vulnerabilities = auditData.vulnerabilities?.total ||;0;
+            const score = Math.max(0, 20 - (vulnerabilities * 5;););
+=======
+        
+        try {}
+            const auditResult = execSync('npm audit --json', { })
                 "cwd": this.projectRoot, 
                 "encoding": 'utf8',
                 "stdio": 'pipe'
 <<<<<<< HEAD
 
+
+            return {}
+                status: success',
+                "totalDependencies": totalDeps,
+                outdatedCount: outdatedCount,
+                "score": score;
+            }} catch (error) {}
+            return {}
+                status: 'failed,
+                "score": 0,
+                error: error.message;
+            }}
+    }
+    checkSecurity() {}
+        this.log(Checking security health...');
+
+        try {}
+            const auditResult = execSync('npm audit --json, {})
+                "cwd": this.projectRoot, 
+                encoding: utf8',
+                "stdio": 'pipe
+
+            });
+            const auditData = JSON.parse(auditResult;);
+            const vulnerabilities = auditData.vulnerabilities?.total ||;0;
+            const score = Math.max(0, 20 - (vulnerabilities * 5;););
+
 =======
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
             };);
             const auditData = JSON.parse(auditResult;);
             const vulnerabilities = auditData.vulnerabilities?.total ||;0;
             const score = Math.max(0, 20 - (vulnerabilities * 5;););
 <<<<<<< HEAD
-        
-=======
-            };);
-            const auditData = JSON.parse(auditResult;);
-            const vulnerabilities = auditData.vulnerabilities?.total ||;0;
-            const score = Math.max(0, 20 - (vulnerabilities * 5;););
             
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
             return {;}
                 "status": 'success',
                 "vulnerabilities": vulnerabilities,
@@ -269,8 +444,14 @@ const auditResult = execSync('npm audit --json', { });
     };
     generateHealthReport() {}
         this.log('Generating project health report...');
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
+<<<<<<< HEAD
+=======
+        
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
 
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
         const structure = this.checkProjectStructure(;);
         const codeQuality = this.checkCodeQuality(;);
         const typeScript = this.checkTypeScript(;);
@@ -278,66 +459,105 @@ const auditResult = execSync('npm audit --json', { });
         const dependencies = this.checkDependencies(;);
         const security = this.checkSecurity(;);
 <<<<<<< HEAD
-        
-const totalScore = structure.score + codeQuality.score + typeScript.score +;
-                          build.score + dependencies.score + security.scor;e;
-        
-const healthStatus = totalScore >= 80 ? 'excellent' :;
-                           totalScore >= 60 ? 'good' : 
-                           totalScore >= 40 ? 'fair' : 'poo;r;';
-        
+
 =======
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-18b6
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
         const totalScore = structure.score + codeQuality.score + typeScript.score +
                           build.score + dependencies.score + security.scor;e;
         const healthStatus = totalScore >= 80 ? 'excellent' :
                            totalScore >= 60 ? 'good' :
                            totalScore >= 40 ? 'fair' : 'poo;r;';
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
+=======
+        
+        const totalScore = structure.score + codeQuality.score + typeScript.score + 
+                          build.score + dependencies.score + security.scor;e;
+        
+        const healthStatus = totalScore >= 80 ? 'excellent' : 
+                           totalScore >= 60 ? 'good' : 
+                           totalScore >= 40 ? 'fair' : 'poo;r;';
+        
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+>>>>>>> origin/chore/fix-lint-and-merge
         const report = {}
-            "timestamp": new Date().toISOString(),
+            timestamp: new Date().toISOString(),
             "project": this.projectRoot,
+<<<<<<< HEAD
+            health: {}
+        const totalScore = structure.score + codeQuality.score + typeScript.score + 
+                          build.score + dependencies.score + security.scor;e;
+
             "health": {}
+=======
+            "health": {}
+=======
         const totalScore = structure.score + codeQuality.score + typeScript.score + 
                           build.score + dependencies.score + security.scor;e;
 
             "health": {}"
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+>>>>>>> origin/chore/fix-lint-and-merge
                 overall: {}
-                    score: totalScore,"
+                    score: totalScore,
                     "status": healthStatus,
-                    "maxScore": 100;"
+                    maxScore: 100;"
                 },"
-                "structure": structure,
+                structure: structure,
                 "codeQuality": codeQuality,
-                "typeScript": typeScript,
+                typeScript: typeScript,
                 "build": build,
-                "dependencies": dependencies,
 <<<<<<< HEAD
-                "security": security;"
-            "recommendations": this.generateHealthRecommendations(totalScore, healthStatus);"
+                dependencies: dependencies,
+
 
 =======
+                "dependencies": dependencies,
+<<<<<<< HEAD
                 "security": security;
             },
             "recommendations": this.generateHealthRecommendations(totalScore, healthStatus);
        };
+<<<<<<< HEAD
         fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2));
         this.log(`Project health report saved to ${this.reportFile}`);
+>>>>>>> origin/chore/fix-lint-and-merge
         this.log(`Overall health "score": ${totalScore}/100 (${healthStatus})`);
-        return report};
+        return report}
     generateHealthRecommendations(score, status) {}
         const recommendations = [];
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
+<<<<<<< HEAD
+
+            recommendations.push(Project health needs immediate attention')}
+
+            recommendations.push('Focus on improving code quality and fixing build issues)}
+            recommendations.push(Update outdated dependencies');
+            recommendations.push('Address security vulnerabilities)}
+        recommendations.push(Implement automated testing');
+        recommendations.push('Set up continuous integration);
+        recommendations.push(Regularly monitor project health');
+
+=======
+=======
+=======
+                "security": security;"
+            "recommendations": this.generateHealthRecommendations(totalScore, healthStatus);"
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+
 
         this.log(`Overall health "score": ${totalScore}/100 (${healthStatus})`);"
         return report};
     generateHealthRecommendations(score, status) {}
         const recommendations = [];
 <<<<<<< HEAD
-        if ( {})"
-=======
         
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
         if ( {})
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
+=======
+        if ( {})"
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
             recommendations.push('Project health needs immediate attention')};
 
             recommendations.push('Focus on improving code quality and fixing build issues')};
@@ -347,25 +567,42 @@ const healthStatus = totalScore >= 80 ? 'excellent' :;
         recommendations.push('Set up continuous integration');
         recommendations.push('Regularly monitor project health');
 <<<<<<< HEAD
-        
+<<<<<<< HEAD
         return recommendations};
     async run() {}
         this.log('Project Health Monitor started');
-        
 =======
+        
         return recommendations};
     async run() {}
         this.log('Project Health Monitor started');
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
+        
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+>>>>>>> origin/chore/fix-lint-and-merge
         try {}
             const report = this.generateHealthReport(;);
-            this.log('Project Health Monitor completed successfully');
+            this.log('Project Health Monitor completed successfully);
             return report} catch (error) {}
+<<<<<<< HEAD
+            this.log(`Project Health Monitor failed": ${error.message}`);
+        return recommendations}
+=======
             this.log(`Project Health Monitor "failed": ${error.message}`);
+=======
         return recommendations};
+>>>>>>> origin/chore/fix-lint-and-merge
     async run() {}
-        this.log('Project Health Monitor started');
+        this.log(Project Health Monitor started');
 
+<<<<<<< HEAD
+            throw error}
+// Run the monitor if this script is executed directly;
+    const monitor = new ProjectHealthMonitor) {}
+    const monitor = new ProjectHealthMonitor}(;);
+    monitor.run().catch(console.error)}
+
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
             throw error};
 // Run the monitor if this script is executed directly;
     const monitor = new ProjectHealthMonitor) {}
@@ -374,36 +611,29 @@ const healthStatus = totalScore >= 80 ? 'excellent' :;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+>>>>>>> origin/chore/fix-lint-and-merge
 
+=======
 module.exports = ProjectHealthMonitor;
 <<<<<<< HEAD
+
+=======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 <<<<<<< HEAD
-=======
-
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
+>>>>>>> origin/chore/fix-lint-and-merge
 module.exports = ProjectHealthMonitor;
 =======
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
 =======
 module.exports = ProjectHealthMonitor;
 <<<<<<< HEAD
-module.exports = ProjectHealthMonitor;
-
 
 =======
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> origin/chore/fix-lint-and-merge
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
 
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
-=======
-
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5

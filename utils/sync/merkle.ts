@@ -1,30 +1,15 @@
+import crypto from "crypto";
 
-// Merkle tree utilities;
-export const merkle = {
   // Add merkle tree functionality here;
   create_tree: (leaves: string[]) => null,
   get_proof: (tree: any, leaf: string) => [],
   verify_proof: (proof: any[], leaf: string, root: string) => false;
 }
 
-export class MerkleTree {
-  private root: MerkleNode | null = null;
-  private leaves: MerkleNode[] = [];
-
-  constructor(data: any[]) {
-    this.buildTree(data);
-  }
-
-  private buildTree(data: any[]): void {
-    if (data.length === 0) return;
-
-    // Create leaf nodes
-    this.leaves = data.map((item) => ({
       hash: this.hashData(JSON.stringify(item)),
-      data: item
+      data: item,
     }));
 
-    // Build tree bottom-up
     let currentLevel = [...this.leaves];
 
     while (currentLevel.length > 1) {
@@ -32,41 +17,27 @@ export class MerkleTree {
 
       for (let i = 0; i < currentLevel.length; i += 2) {
         const left = currentLevel[i];
-        const right = currentLevel[i + 1] || left; // Duplicate last node if odd number
-
+        const right = currentLevel[i + 1] || left; // Duplicate last node if odd number;
         const combinedHash = left.hash + right.hash;
-        const parent: MerkleNode = {
-          hash: this.hashData(combinedHash),
+
           left,
-          right
+          right,
         };
 
         nextLevel.push(parent);
-      }
 
       currentLevel = nextLevel;
-    }
 
     this.root = currentLevel[0];
-  }
 
-  private hashData(data: string): string {
-    return crypto.createHash("sha256").update(data).digest("hex");
-  }
-
-  getRootHash(): string | null {
-    return this.root?.hash || null;
-  }
-
-  getProof(index: number): string[] {
     if (index >= this.leaves.length) return [];
 
     const proof: string[] = [];
     let current = this.leaves[index];
     let level = [...this.leaves];
 
+<<<<<<< HEAD
     while (level.length > 1) {
-      const nextLevel: MerkleNode[] = [];
       const currentIndex = level.indexOf(current);
 
       if (currentIndex % 2 === 0) {
@@ -81,85 +52,34 @@ export class MerkleTree {
 
       // Move to parent level
       for (let i = 0; i < level.length; i += 2) {
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
         const left = level[i];
         const right = level[i + 1] || left;
 
-        const combinedHash = left.hash + right.hash;
-        const parent: MerkleNode = {
           hash: this.hashData(combinedHash),
           left,
-          right
+          right,
         };
-
-        nextLevel.push(parent);
-      }
 
       level = nextLevel;
       current = level[Math.floor(currentIndex / 2)];
-    }
 
     return proof;
-  }
 
-  verifyProof(leafData: any, proof: string[], rootHash: string): boolean {
-    let currentHash = this.hashData(JSON.stringify(leafData));
-
-    for (const siblingHash of proof) {
       currentHash = this.hashData(currentHash + siblingHash);
-    }
 
     return currentHash === rootHash;
-  }
 
-  getLeaves(): MerkleNode[] {
     return [...this.leaves];
-  }
-}
 
-export function createMerkleTree(data: any[]): MerkleTree {
   return new MerkleTree(data);
-}
 
 export function verifyMerkleProof(
   leafData: any,
   proof: string[],
-  rootHash: string,
+
 ): boolean {
+  // TODO: Implement
   const tree = new MerkleTree([leafData]);
   return tree.verifyProof(leafData, proof, rootHash);
-}
-import crypto from "crypto";
-import { ProposalVoteEntry } from "./types";
-export function sha256Hex(input: string): string {
-  return crypto.createHash("sha256").update(input).digest("hex")
-}
-
-export function leafHashForVote(vote: ProposalVoteEntry): string {
-  const canonical = JSON.stringify($2);
-  return sha256Hex(canonical)
-}
-
-export function computeMerkleRootFromVotes(votes: ProposalVoteEntry[]): string {
-  if (!votes || votes.length === 0) return sha256Hex($2);
-  const leaves = votes
-    .slice()
-    .sort((a, b) => a.voterId.localeCompare(b.voterId))
-    .map($2);
-  return computeMerkleRootFromLeaves(leaves)
-}
-
-export function computeMerkleRootFromLeaves(leaves: string[]): string {
-  if (leaves.length === 0) return sha256Hex($2);
-  let layer = leaves.slice($2);
-  while (layer.length > 1) {
-    const next: string[] = [],
-    for (let i = 0, i < layer.length, i += 2) {
-      const left = $2;
-      const right = $2;
-      next.push(sha256Hex(left + right))
-    }
-    layer = $2;
-  merkleRoot: string): boolean {
-  const root = computeMerkleRootFromVotes($2);
-  return root === merkleRoot
-}

@@ -1,23 +1,35 @@
 <<<<<<< HEAD
-=======
 
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
+
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 #!/""usr/bin/env""
-const { execSync } = require("child_process");
-const fs = require("fs");
-const path = require("path");
+const { execSync } = require("child_process")
+const fs = require("fs")
+const path = require("path")
 console.log("" Starting Smart Deployment Optimizer...")
 // Get automation interval from environment variable ("default")
+>>>>>>> origin/chore/fix-lint-and-merge
       "bundleSizes"
-      "deploymentFrequency"
+      deploymentFrequency
       "successRate"
-      "optimizationSuggestions"
+      optimizationSuggestions
     this.reportDir = path.join(process.cwd(), "deployment-reports"
-  fs.mkdirSync(this.reportDir, { "recursive"})
+  fs.mkdirSync(this.reportDir, { recursive})
         this.reportDir,deployment-history.json"
-const data = JSON.parse(fs.readFileSync(historicalFile, "utf8");
+<<<<<<< HEAD
+
+=======
+  const data = JSON.parse(fs.readFileSync(historicalFile, "utf8")
   console.log(""No historical deployment data found, starting fresh")
-const data = JSON.parse(fs.readFileSync(historicalFile, "utf8");
+  const data = JSON.parse(fs.readFileSync(historicalFile, "utf8")
 // console.log(""No historical deployment data found, starting fresh")
   console.log(" Running smart deployment optimization at ${new Date().toISOString()}"
 // console.log("No historical deployment data found, starting fresh")
@@ -26,8 +38,8 @@ const data = JSON.parse(fs.readFileSync(historicalFile, "utf8");
       console.log(" Smart deployment optimization completed successfully")
   console.error(" Smart deployment optimization "failed": ")
   console.log(" Analyzing build configuration...")
-const viteConfigPath = path.join(process.cwd(), "vite.config.ts";
-const viteConfig = fs.readFileSync(viteConfigPath, "utf8");
+    const viteConfigPath = path.join(process.cwd(), "vite.config.ts"
+  const viteConfig = fs.readFileSync(viteConfigPath, "utf8")
   "hasOptimization": viteConfig.includes("optimizeDeps")
         "hasCompression": viteConfig.includes("compression")
         "hasTreeShaking": viteConfig.includes("treeshake")
@@ -46,19 +58,23 @@ const viteConfig = fs.readFileSync(viteConfigPath, "utf8");
           "priority": "medium"
           "description": "Enable build compression for smaller bundle sizes"
           "action": "Add compression plugin to vite.config.ts"
-const packageJson = JSON.parse(fs.readFileSync("package.json", "utf8");
+    const packageJson = JSON.parse(fs.readFileSync("package.json", "utf8")
         (["name", "version")]
-const largePackages = ["lodash"", "moment", "date-fns"", "framer-motion", ""];
+          const largePackages = ["lodash"", "moment", "date-fns"", "framer-motion", ""]
   "type": "dependency_optimization"
           "priority": "
           "description": Consider optimizing large dependencies: ${largeDependencies.map(([name]) => name).join(", "})
+>>>>>>> origin/chore/fix-lint-and-merge
           "action": `Use tree-shaking or replace with lighter alternatives
-// console.log("� Optimizing bundle size...")
+// console.log(� Optimizing bundle size...)
   console.log("� Optimizing bundle size...")
-      execSync("npm run build", { "stdio": "pipe"})
+      execSync(npm run build, { "stdio": pipe})
   "timestamp"
+<<<<<<< HEAD
+
+=======
         "duration"
-const distPath = path.join(process.cwd(), ";
+      const distPath = path.join(process.cwd(), "
   "timestamp"
           "size"
           "files"
@@ -72,30 +88,34 @@ const distPath = path.join(process.cwd(), ";
             "description": "Bundle size exceeds 2MB, optimization needed"
             "action": "Implement code splitting and lazy loading"
 // console.log(""⚠ Build analysis "failed": ")
+>>>>>>> origin/chore/fix-lint-and-merge
   console.log(" Analyzing deployment patterns...")
         new Date(build.timestamp) >}
-});"
-"
-        console.log( Current bundle "size": ${(bundleSize / 1024 / 1024").toFixed(2)} MB"
-  "type": "bundle_size"
-            "priority": "high"
-            "description": "Bundle size exceeds 2MB, optimization needed"
-            "action": "Implement code splitting and lazy loading"
-// console.log(""⚠ Build analysis "failed": ")
-  console.log(" Analyzing deployment patterns...")
-    console.log( Deployment frequency (last 7 days): ${this.deploymentMetrics.deploymentFrequency}"
+});
+
+        console.log( Current bundle "size": ${(bundleSize / 1024 / 1024).toFixed(2)} MB
+  "type": bundle_size
+            "priority": high
+            "description": Bundle size exceeds 2MB, optimization needed
+            "action": Implement code splitting and lazy loading
+// console.log(""⚠ Build analysis failed: ")
+  console.log(" Analyzing deployment patterns...)
+    console.log( Deployment frequency (last 7 days): ${this.deploymentMetrics.deploymentFrequency}
     console.log( Deployment frequency (last 7 days): ${this.deploymentMetrics.deploymentFrequency}"
       totalBuilds > 0 ? (successfulBuilds / totalBuilds) * 100 : 0;"
-    console.log(  Success "rate")
-  "type": "build_time"
-          "priority": "medium"
-          "description": "Average build time exceeds 1 minute"
-          "action": "Optimize build process and enable caching"
-  "type": "build_time"
-          "priority": "medium"
-          "description": "Average build time exceeds 1 minute"
-          "action": "Optimize build process and enable caching"
+    console.log(  Success rate)
+  "type": build_time
+          "priority": medium
+          "description": Average build time exceeds 1 minute
+          "action": Optimize build process and enable caching
+  "type": build_time
+          "priority": medium
+          "description": Average build time exceeds 1 minute
+          "action": Optimize build process and enable caching
   console.log(" Generating optimization recommendations...")
+<<<<<<< HEAD
+
+=======
   "type": "code_splitting"
         "priority": "high"
         "description": "Implement code splitting for better performance"
@@ -124,9 +144,9 @@ const distPath = path.join(process.cwd(), ";
       console.log(" Linting passed")
       execSync("npm run lint", { "stdio": "pipe"})
       console.log(" Linting passed")
-const distPath = path.join(process.cwd(), "dist";
-const indexHtml = path.join(distPath, "index.html");
-const htmlContent = fs.readFileSync(indexHtml, "utf8");
+      const distPath = path.join(process.cwd(), "dist"
+  const indexHtml = path.join(distPath, "index.html")
+  const htmlContent = fs.readFileSync(indexHtml, "utf8")
           if (!htmlContent.includes("<title>")
   issues.push("Missing title tag")
           if (!htmlContent.includes("meta name="viewport"")
@@ -140,36 +160,57 @@ const htmlContent = fs.readFileSync(indexHtml, "utf8");
 // console.log(`⚠ Build testing "failed": "`)
   console.log(" Generating deployment optimization report..."")
   "timestamp"
+>>>>>>> origin/chore/fix-lint-and-merge
       "summary"
-        "averageBuildTime"
+        averageBuildTime
         "latestBundleSize"
-        "deploymentFrequency"
+        deploymentFrequency
         "successRate"
-      "metrics"
+      metrics
       "recommendations"
+<<<<<<< HEAD
+
+=======
       this.reportDir,deployment-optimization-${Date.now()}.json"
-const historicalPath = path.join(this.reportDir, "deployment-history.json");
+    const historicalPath = path.join(this.reportDir, "deployment-history.json")
+>>>>>>> origin/chore/fix-lint-and-merge
       process.cwd(),deployment-optimization-report.json"
-// console.log("⚠ Build testing "failed": ")
-  console.log(" Generating deployment optimization report...")
+// console.log(⚠ Build testing failed": ")
+  console.log( Generating deployment optimization report...)
   "timestamp"
-      "summary"
+      summary
         "averageBuildTime"
-        "latestBundleSize"
+        latestBundleSize
         "deploymentFrequency"
-        "successRate"
+        successRate
       "metrics"
-      "recommendations"
+      recommendations
       this.reportDir,deployment-optimization-${Date.now()}.json"
-const historicalPath = path.join(this.reportDir, "deployment-history.json");
+<<<<<<< HEAD
+
+=======
+    const historicalPath = path.join(this.reportDir, "deployment-history.json")
       process.cwd(),deployment-optimization-report.json"
+>>>>>>> origin/chore/fix-lint-and-merge
   // Skip directories that can"
   console.log( Starting smart deployment optimizer with ${AUTOMATION_INTERVAL / 1000 / 60} minute intervals")
-// Main continuous loop"
-async function runContinuous() {"}
+// Main continuous loop
+async function runContinuous() {}
 process.on("SIGINT")
-  console.log("� Received SIGINT, shutting down gracefully...")
+  console.log(� Received SIGINT, shutting down gracefully...)
   "
+<<<<<<< HEAD
+process.on("SIGINT)
+  console.log(� Received SIGINT, shutting down gracefully...")
+process.on("SIGTERM)
+  console.log(� Received SIGTERM, shutting down gracefully...")
+
+
+
+  console.error(" Failed to start smart deployment optimizer: ")
+
+  console.error(" Failed to start smart deployment optimizer: ")
+=======
 process.on("SIGINT")
   console.log("� Received SIGINT, shutting down gracefully...")
 process.on("SIGTERM")
@@ -177,36 +218,25 @@ process.on("SIGTERM")
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
 
-<<<<<<< HEAD
-  console.error(" Failed to start smart deployment "optimizer": ")
 =======
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
   console.error(" Failed to start smart deployment "optimizer": ")
-<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 <<<<<<< HEAD
-=======
-
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
   console.error(" Failed to start smart deployment "optimizer": ")
+>>>>>>> origin/chore/fix-lint-and-merge
 =======
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
 =======
-  console.error(" Failed to start smart deployment "optimizer": ")
+  console.error(" Failed to start smart deployment optimizer: ")
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
 =======
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-=======
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
 
-          if (!htmlContent.includes("<title>")"
+          if (!htmlContent.includes("<title>)
 </title>"`;
 
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508

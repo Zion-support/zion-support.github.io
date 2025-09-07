@@ -1,20 +1,20 @@
-Spinner.displayName = 'Spinner'
-export default Spinner; import React from 'react'
+Spinner.displayName = 'Spinner
+export default Spinner; import React from react'
 
-import { Loader2 } from 'lucide-react'
+import { Loader2 } from 'lucide-react
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { hasError: false };
+    this.state = { hasError: false }
   }
   
   static getDerivedStateFromError(error) {
-    return { hasError: true };
+    return { hasError: true }
   }
   
   componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
+    console.error(Error caught by boundary:', error, errorInfo);
   }
   
   render() {
@@ -27,58 +27,78 @@ class ErrorBoundary extends React.Component {
 }
 Spinner && Spinner.displayName = 'Spinner';
 export default Spinner;import React from 'react';
-<<<<<<< HEAD:src_backup/components/ui/spinner.tsx
 import { Loader2 } from 'lucide-react';
+import { Loader2 } from 'lucide-react;
 
-import { cn } from '@/lib/utils';
+import { cn } from @/lib/utils';
 
 export interface SpinnerProps extends React.SVGProps<SVGSVGElement> {
   size?: number | string
 
-import React from 'react',;
-import { Loader2 } from 'lucide-react';
-import { cn } from '@/lib/utils',;
-export interface SpinnerProps extends React.SVGProps<SVGSVGElement> {;
+import React from 'react,
+import { Loader2 } from lucide-react';
+import { cn } from '@/lib/utils,
+export interface SpinnerProps extends React.SVGProps<SVGSVGElement> {
   size?: number | string;
 
 }
-;
 const Spinner = React.forwardRef<SVGSVGElement SpinnerProps>(;
   ({ className, size = 24, ...props }, ref) => (;
     <Loader2;
       ref={ref}
       {...props}
 
-import { cn  } from '@/lib/utils';
+<<<<<<< HEAD
+import { cn  } from @/lib/utils';
 export interface SpinnerProps extends React.SVGProps<SVGSVGElement>  {size?: number | string;
-import React from 'react',import { cn } from '@/lib/utils',export interface SpinnerProps extends React.SVGProps<SVGSVGElement>  {size?: number | string;}const Spinner = React.forwardRef<SVGSVGElement, SpinnerProps>(({ className, size = 24, ...props }, ref,) => (<Loader2;
+import React from 'react,import { cn } from @/lib/utils',export interface SpinnerProps extends React.SVGProps<SVGSVGElement>  {size?: number | string;}const Spinner = React.forwardRef<SVGSVGElement, SpinnerProps>(({ className, size = 24, ...props }, ref,) => (<Loader2;
       ref = {ref}
-      {...props}className = {cn('animate-spin', className)}
+      {...props}className = {cn('animate-spin, className)}
       width = {size}
       height = {size}
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
     />;
   );
-),;
-Spinner && Spinner.displayName = 'Spinner',;
-export default Spinner,;
+),
+Spinner && Spinner.displayName = Spinner',
+export default Spinner,
 
+<<<<<<< HEAD
+Spinner.display_name = 'Spinner;
+export default Spinner; import React from react';
+import { cn  } from '@/lib / utils;
+export interface SpinnerProps extends React.SVGProps < SVGSVGElement>  {size?: number | string;
+=======
 Spinner.display_name = 'Spinner';
 export default Spinner; import React from 'react';
-import { cn  } from '@/lib / utils';
-export interface SpinnerProps extends React.SVGProps < SVGSVGElement>  {size?: number | string;
+import { Loader2 } from 'lucide-react';
+import { cn } from '@/lib / utils';
+export interface SpinnerProps extends React.SVGProps < SVGSVGElement> {
+  size?: number | string;
+>>>>>>> origin/chore/fix-lint-and-merge
 }
-const Spinner = React.forward_ref < SVGSVGElement, SpinnerProps>(({ class_name, size = 24, ...props }, ref, ) => (<Loader2;
-      ref = {ref }
+const Spinner = React.forward_ref < SVGSVGElement, SpinnerProps>(
+  ({ class_name, size = 24, ...props }, ref, ) => (
+    <Loader2;
+      ref = {ref, }
       {...props}
-<<<<<<< HEAD:src_backup/components/ui/spinner.tsx
       class_name = {cn ('animate - spin', class_name), }
       width = {size, }
       height = {size, }
+      class_name = {cn (animate - spin', class_name)}
+      width = {size}
+      height = {size}
     />)),
-Spinner.display_name = 'Spinner',
-      class_name = {cn ('animate - spin', class_name) }
+<<<<<<< HEAD
+Spinner.display_name = 'Spinner,
+      class_name = {cn (animate - spin', class_name) }
       width = {size }
       height = {size }
     />)),Spinner.display_name = 'Spinner',export default Spinner}
 ';
 export default Spinner,
+=======
+Spinner.display_name = 'Spinner',
+export default Spinner,
+>>>>>>> origin/chore/fix-lint-and-merge

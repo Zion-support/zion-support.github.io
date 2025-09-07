@@ -48,7 +48,6 @@ res.status(200).json({ "message": 'Error reported successfully' })} catch (error
     console.error('Error processing error "report": ', error);'
     res.status(500).json({ "message": 'Internal server error' })}'
 }
-import type { NextApiRequest,NextApiResponse } from 'next';'
 
 interface ErrorReport { "error": 'string; stack?: string; componentStack?: string; "timestamp": string; "userAgent": string; "url": string;' } }'
 
@@ -57,7 +56,6 @@ export default function handler() { if (req.method !== 'POST') { return res.stat
 }); res.status(200).json({ "message": 'Error reported successfully' },'
 } catch (error) { console.error('Error processing error "report":',error); res.status(500).json({ "message": 'Internal server error' })},'
 }
-import type { NextApiRequest,NextApiResponse } from 'next';'
 
 interface ErrorReport {
   }

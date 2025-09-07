@@ -274,7 +274,6 @@ export function PerformanceDashboard() {const [metrics, setMetrics] = useState<P
   }const formatSize = ("bytes": number): (string) => {if (bytes === 0) return '0 B';'
     }
     const k = 1024;
-    const sizes = ['B', 'KB', 'MB', 'GB'];'
     const i = Math && Math.floor(Math && Math.log(bytes) / Math && Math.log(k))return parseFloat((bytes / Math && Math.pow(k, i)).toFixed(1)) + ' ' + sizes[i];'
   }const getScoreColor = ("score": number): (string) => {if (score >= 90) return 'text-green-600';'
     }

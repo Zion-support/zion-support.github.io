@@ -134,7 +134,6 @@ interface DynamicLoaderProps  {importFn: () => Promise<{ default: ComponentType<
   [key: string]: any;
 // Enhanced Loading Component;
 
-const EnhancedLoading: React.FC<{progress?: number;
   message?: string;}
   showProgress?: boolean;}"
 }> = ({progress;//   {//     loadingComponent: () => (//       <div className="w-full h-96 bg-muted animate-pulse rounded-lg flex items-center justify-center" />;"

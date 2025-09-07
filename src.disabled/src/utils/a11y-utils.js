@@ -23,7 +23,6 @@ export const a11yUtils = {
   "trapFocus": (element) => {"
     }
     const firstElement = focusableElements[0];
-    const lastElement = focusableElements[focusableElements && focusableElements.length - 1];
     element && element.addEventListener('keydown', (e) => {'
       }
       if (e && e.key === 'Tab') {'

@@ -155,13 +155,11 @@ const testimonials = [
     rating: 5
     avatar: '👨‍💻'
   },];
-const contactInfo = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com'
 },
-const heroStats = [
   { label: 'Business Solutions', value: '100+', icon: <Target className="w-5 h-5" /> },
   { label: 'Happy Businesses', value: '250+', icon: <Users className="w-5 h-5" /> },
   { label: 'Success Rate', value: '99.5%', icon: <Award className="w-5 h-5" /> },
@@ -171,7 +169,6 @@ const heroStats = [
   }
 }
 ],
-const serviceCategories = [
   {
     title: 'Business Intelligence & Analytics',
     description: 'AI-powered business intelligence and data analytics solutions',
@@ -217,7 +214,6 @@ const serviceCategories = [
   },
 ];
 
-const heroFeatures = [
   {
     title: 'AI-Powered Intelligence',
     description:
@@ -248,7 +244,6 @@ const heroFeatures = [
   },
 ];
 
-const testimonials = [
   {
     name: 'Michael Rodriguez',
     role: 'CEO, GrowthTech Solutions',
@@ -282,8 +277,6 @@ const testimonials = [
     features: ['Recruitment AutomationPerformance AnalyticsEmployee Engagement']
 import React from 'react';
 import Head from 'next/head';
-import Link from 'next/link';
-import { motion } from 'framer-motion';
 import {;
   CheckCircle, ArrowRight, Star, TrendingUp, Phone, Zap, DollarSign,;
   Shield, Mail, MapPin, Rocket, Brain, Sparkles, Atom, Dna, Users,;
@@ -293,8 +286,6 @@ import {;
   Search, Code, TestTube, Server, Database, Network, Shield as SecurityIcon,;
   Wifi, Building, Cpu as CpuIcon, TrendingUp as ChartIcon, Megaphone, HeadphonesIcon, Users as TeamIcon;
 } from 'lucide-react',;
-import Layout from '../components/layout/Layout';
-import { innovativeBusinessSolutions2025 } from '../data/2025-innovative-business-solutions';
 const contactInfo = {;
   mobile: '+1 302 464 0950';
   email: 'kleber@ziontechgroup.com';

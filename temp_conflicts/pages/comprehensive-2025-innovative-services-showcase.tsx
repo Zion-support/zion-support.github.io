@@ -110,7 +110,6 @@ export default function Comprehensive2025InnovativeServicesShowcase() {
   },
 
   const getCategoryColor = (category: string) => {
-    const cat = categories.find(c => c.name === category),
     return cat ? cat.color : 'from-gray-500 to-gray-600'
   },
 
@@ -370,7 +369,6 @@ export default function Comprehensive2025InnovativeServicesShowcase() {
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {innovative2025MicroSaasBatch.map((service, index) => {
-              const IconComponent = getCategoryIcon(service.category),
               return (
                 <motion.div
                   key={service.id}

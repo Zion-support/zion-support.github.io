@@ -9,9 +9,6 @@ import {
   ProjectNote
 } from "../../../utils/marketplace/types";
 import type { NextApiRequest, NextApiResponse } from "next";
-import { v4 as uuidv4 } from "uuid";
-import { getDemoUser } from "../../../utils/marketplace/auth";
-import { getProjectById, saveProject } from "../../../utils/marketplace/store";
 import { Project, ProjectDocument, ProjectNote } from "../../../utils/marketplace/types";
 function bad(res: NextApiResponse, message: string, code = 400) {
   return res.status(code).json({ ok: false, error: message })
@@ -54,7 +51,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
           content
           createdAtIso: new Date().toISOString()
         }
-        const note: ProjectNote = {
           id: uuidv4(),
           authorId: user.id,
           authorRole: user.role,
@@ -74,7 +70,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
           url
           uploadedAtIso: new Date().toISOString()
         }
-        const doc: ProjectDocument = {
           id: uuidv4(),
           name,
           url,

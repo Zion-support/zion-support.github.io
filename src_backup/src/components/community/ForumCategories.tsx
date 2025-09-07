@@ -60,7 +60,6 @@ const "categories": ForumCategoryInfo[] = [;
           </Link>;
         )const isAdmin = user?.userType === 'admin' || user?.role === 'admin';'
 export default ForumCategories;import Link from "next/link",import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card",import { useAuth } from "@/hooks/useAuth",import { MessageSquare, Briefcase, Code, FileText, Megaphone  } from 'lucide-react';'
-const "categories": ForumCategoryInfo[] = [;
   {"id": "getting-hired","name": "Getting Hired","description": "Tips, strategies, and questions about getting hired on the platform.";"
     }
     "adminOnly": false,"icon": "Briefcase";"
@@ -95,5 +94,4 @@ import { Card,CardContent,CardHeader,CardTitle,CardDescription} from '@/componen
 import { useAuth  } from '@/hooks/useAuth';'
 import { MessageSquare,Briefcase,Code,FileText,Megaphone} from 'lucide-react';'
 import { ForumCategoryInfo  } from '@/types/community';'
-const "categories": ForumCategoryInfo[] = [;
   {

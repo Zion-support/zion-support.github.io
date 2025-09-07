@@ -1,6 +1,8 @@
+<<<<<<< HEAD
 :src/components/talent/filters/ExperienceFilter.tsx
 import { ChevronDown, ChevronUp } from 'lucide-react'
-import { ChevronDown, ChevronUp } from 'lucide-react'
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
 return (
     <div className='mb - 6 border - b border - zion - blue - light pb - 6'>;
       <button;
@@ -22,7 +24,6 @@ export function ExperienceFilter({
   const handleChange = (values: number[]) => {
     setExperienceRange([values[0] |0, values[1] |15])
   }
-:src/components/talent/filters/ExperienceFilter.tsx
   return (
     <div className='mb-6 border-b border-zion-blue-light pb-6'>
       <button
@@ -66,7 +67,6 @@ export /**;
  * ExperienceFilter - Function description;
  */
 
-import { ChevronDown, ChevronUp } from 'lucide-react'
 
 import { ExperienceFilterProps } from "@/types/filters",
 export function ExperienceFilter({ experienceRange, setExperienceRange, expanded, toggleSection, isMobileFilterOpen }: ExperienceFilterProps) {}
@@ -78,6 +78,7 @@ export function ExperienceFilter({ experienceRange, setExperienceRange, expanded
     <div className="mb-6 border-b border-zion-blue-light pb-6">
       <button
         onClick={toggleSection}
+<<<<<<< HEAD
 :src/components/talent/filters/ExperienceFilter.tsx
         className='flex w-full items-center justify-between text-white font-medium'      >
         <span>Years of Experience</span>
@@ -99,9 +100,10 @@ export function ExperienceFilter({ experienceRange, setExperienceRange, expanded
 import { Slider } from "@/components/ui/slider"
 import { ExperienceFilterProps } from "@/types/filters"
 export function ExperienceFilter({ experienceRange, setExperienceRange, expanded, toggleSection, isMobileFilterOpen }: ExperienceFilterProps) {
-  const handleChange = (values: number[]) => {
     setExperienceRange([values[0] |0, values[1] |15])
   }
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
 
         className="flex w-full items-center justify-between text-white font-medium"
       >
@@ -115,7 +117,6 @@ export function ExperienceFilter({ experienceRange, setExperienceRange, expanded
       </button>
 
       {expanded && (
-:src/components/talent/filters/ExperienceFilter.tsx
 
         <div className="mt-6">
 
@@ -123,9 +124,6 @@ export function ExperienceFilter({ experienceRange, setExperienceRange, expanded
             <span>{experienceRange[0]} years</span>
             <span>{experienceRange[1]} years</span>
           </div>
-:src/components/talent/filters/ExperienceFilter.tsx
-          <Slider
-            aria-label='Experience range'            aria-label="Experience range"
 
             aria-label="Experience range"
 import { ChevronDown, ChevronUp } from 'lucide-react';
@@ -165,8 +163,6 @@ import { ChevronDown, ChevronUp } from 'lucide-react';
             max={15}
             step={1}
             onValueChange={handleChange}
-:src/components/talent/filters/ExperienceFilter.tsx
-            className='mt-6'          />            className="mt-6"
 
     </div>;
   );
@@ -175,14 +171,5 @@ import { ChevronDown, ChevronUp } from 'lucide-react';
           />
         </div>
       )}
-:src/components/talent/filters/ExperienceFilter.tsx
-    </div>
-  )
-}
-    </div>;
-  );
-};
-}
-}
 
 ;

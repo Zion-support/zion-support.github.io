@@ -10,8 +10,6 @@ console.log('🚀 Starting Advanced Automation Suite...');
 function createSEOOptimizer() {
   const script = `#!/usr/bin/env node
 
-const fs = require('fs');
-const path = require('path');
 
 console.log('🔍 SEO Optimizer Started...');
 
@@ -19,17 +17,17 @@ console.log('🔍 SEO Optimizer Started...');
 function optimizeSEO() {
   const seoIssues = [];
   const optimizations = [];
-  
+
   // Check for meta tags
   const pagesDir = '/workspace/pages_minimal';
   if (fs.existsSync(pagesDir)) {
     const files = fs.readdirSync(pagesDir);
-    
+
     files.forEach(file => {
       if (file.endsWith('.tsx') || file.endsWith('.jsx')) {
         const filePath = path.join(pagesDir, file);
         const content = fs.readFileSync(filePath, 'utf8');
-        
+
         // Check for missing meta tags
         if (!content.includes('Head') && !content.includes('head')) {
           seoIssues.push({
@@ -38,7 +36,7 @@ function optimizeSEO() {
             severity: 'high'
           });
         }
-        
+
         // Check for missing title
         if (!content.includes('title')) {
           seoIssues.push({
@@ -47,7 +45,7 @@ function optimizeSEO() {
             severity: 'high'
           });
         }
-        
+
         // Check for missing description
         if (!content.includes('description')) {
           seoIssues.push({
@@ -59,7 +57,7 @@ function optimizeSEO() {
       }
     });
   }
-  
+
   // Generate SEO report
   const report = {
     timestamp: new Date().toISOString(),
@@ -81,10 +79,10 @@ function optimizeSEO() {
       'Implement breadcrumb navigation'
     ]
   };
-  
+
   fs.writeFileSync('/workspace/seo-optimization-report.json', JSON.stringify(report, null, 2));
   console.log(\`🔍 SEO analysis completed. Found \${seoIssues.length} issues.\`);
-  
+
   return report;
 }
 
@@ -98,10 +96,7 @@ optimizeSEO();
 
 // Function to create accessibility checker
 function createAccessibilityChecker() {
-  const script = `#!/usr/bin/env node
 
-const fs = require('fs');
-const path = require('path');
 
 console.log('♿ Accessibility Checker Started...');
 
@@ -109,17 +104,23 @@ console.log('♿ Accessibility Checker Started...');
 function checkAccessibility() {
   const issues = [];
   const recommendations = [];
-  
+
   // Check for accessibility issues
-  const pagesDir = '/workspace/pages_minimal';
   if (fs.existsSync(pagesDir)) {
-    const files = fs.readdirSync(pagesDir);
+<<<<<<< HEAD
     
+    files.forEach(file => {
+      if (file.endsWith('.tsx') || file.endsWith('.jsx')) {
+        
+=======
+    const files = fs.readdirSync(pagesDir);
+
     files.forEach(file => {
       if (file.endsWith('.tsx') || file.endsWith('.jsx')) {
         const filePath = path.join(pagesDir, file);
         const content = fs.readFileSync(filePath, 'utf8');
-        
+
+>>>>>>> origin/chore/fix-lint-and-merge
         // Check for missing alt attributes on images
         if (content.includes('<img') && !content.includes('alt=')) {
           issues.push({
@@ -129,7 +130,7 @@ function checkAccessibility() {
             wcag: '1.1.1'
           });
         }
-        
+
         // Check for missing form labels
         if (content.includes('<input') && !content.includes('<label')) {
           issues.push({
@@ -139,7 +140,7 @@ function checkAccessibility() {
             wcag: '1.3.1'
           });
         }
-        
+
         // Check for heading hierarchy
         const headingMatches = content.match(/<h[1-6]/g);
         if (headingMatches && headingMatches.length > 1) {
@@ -153,7 +154,7 @@ function checkAccessibility() {
             });
           }
         }
-        
+
         // Check for color contrast (basic check)
         if (content.includes('color:') && !content.includes('background-color:')) {
           issues.push({
@@ -166,9 +167,8 @@ function checkAccessibility() {
       }
     });
   }
-  
+
   // Generate accessibility report
-  const report = {
     timestamp: new Date().toISOString(),
     issues,
     recommendations: [
@@ -187,10 +187,10 @@ function checkAccessibility() {
       criticalIssues: issues.filter(i => i.severity === 'high').length
     }
   };
-  
+
   fs.writeFileSync('/workspace/accessibility-report.json', JSON.stringify(report, null, 2));
   console.log(\`♿ Accessibility check completed. Found \${issues.length} issues.\`);
-  
+
   return report;
 }
 
@@ -204,18 +204,19 @@ checkAccessibility();
 
 // Function to create performance optimizer
 function createPerformanceOptimizer() {
-  const script = `#!/usr/bin/env node
 
-const fs = require('fs');
-const path = require('path');
 
 console.log('⚡ Performance Optimizer Started...');
 
 // Optimize application performance
 function optimizePerformance() {
+<<<<<<< HEAD
+  
+=======
   const optimizations = [];
   const issues = [];
-  
+
+>>>>>>> origin/chore/fix-lint-and-merge
   // Check bundle size
   const nextDir = '/workspace/.next';
   if (fs.existsSync(nextDir)) {
@@ -223,16 +224,16 @@ function optimizePerformance() {
     if (fs.existsSync(staticDir)) {
       const files = fs.readdirSync(staticDir, { recursive: true });
       let totalSize = 0;
-      
+
       files.forEach(file => {
         const filePath = path.join(staticDir, file);
         if (fs.statSync(filePath).isFile()) {
           totalSize += fs.statSync(filePath).size;
         }
       });
-      
+
       const sizeInMB = (totalSize / (1024 * 1024)).toFixed(2);
-      
+
       if (totalSize > 5 * 1024 * 1024) { // 5MB
         issues.push({
           type: 'large_bundle',
@@ -242,17 +243,23 @@ function optimizePerformance() {
       }
     }
   }
-  
+
   // Check for performance issues in code
-  const pagesDir = '/workspace/pages_minimal';
   if (fs.existsSync(pagesDir)) {
-    const files = fs.readdirSync(pagesDir);
+<<<<<<< HEAD
     
+    files.forEach(file => {
+      if (file.endsWith('.tsx') || file.endsWith('.jsx')) {
+        
+=======
+    const files = fs.readdirSync(pagesDir);
+
     files.forEach(file => {
       if (file.endsWith('.tsx') || file.endsWith('.jsx')) {
         const filePath = path.join(pagesDir, file);
         const content = fs.readFileSync(filePath, 'utf8');
-        
+
+>>>>>>> origin/chore/fix-lint-and-merge
         // Check for large components
         const lines = content.split('\\n').length;
         if (lines > 200) {
@@ -263,7 +270,7 @@ function optimizePerformance() {
             message: \`Component has \${lines} lines, consider splitting\`
           });
         }
-        
+
         // Check for missing React.memo
         if (content.includes('export default function') && !content.includes('React.memo')) {
           optimizations.push({
@@ -272,7 +279,7 @@ function optimizePerformance() {
             message: 'Consider using React.memo for performance'
           });
         }
-        
+
         // Check for missing useMemo/useCallback
         if (content.includes('useState') && !content.includes('useMemo') && !content.includes('useCallback')) {
           optimizations.push({
@@ -284,9 +291,8 @@ function optimizePerformance() {
       }
     });
   }
-  
+
   // Generate performance report
-  const report = {
     timestamp: new Date().toISOString(),
     issues,
     optimizations,
@@ -302,10 +308,10 @@ function optimizePerformance() {
     ],
     performanceScore: Math.max(0, 100 - (issues.length * 10))
   };
-  
+
   fs.writeFileSync('/workspace/performance-optimization-report.json', JSON.stringify(report, null, 2));
   console.log(\`⚡ Performance optimization completed. Score: \${report.performanceScore}/100\`);
-  
+
   return report;
 }
 
@@ -319,10 +325,7 @@ optimizePerformance();
 
 // Function to create deployment automation
 function createDeploymentAutomation() {
-  const script = `#!/usr/bin/env node
 
-const fs = require('fs');
-const { execSync } = require('child_process');
 
 console.log('🚀 Deployment Automation Started...');
 
@@ -330,7 +333,7 @@ console.log('🚀 Deployment Automation Started...');
 function deployApplication() {
   const deploymentSteps = [];
   const errors = [];
-  
+
   try {
     // Step 1: Run tests
     console.log('🔄 Running pre-deployment tests...');
@@ -348,7 +351,7 @@ function deployApplication() {
         timestamp: new Date().toISOString()
       });
     }
-    
+
     // Step 2: Run linting
     console.log('🔄 Running linting...');
     try {
@@ -365,7 +368,7 @@ function deployApplication() {
         timestamp: new Date().toISOString()
       });
     }
-    
+
     // Step 3: Security check
     console.log('🔄 Running security check...');
     try {
@@ -382,7 +385,7 @@ function deployApplication() {
         timestamp: new Date().toISOString()
       });
     }
-    
+
     // Step 4: Generate deployment package
     console.log('🔄 Generating deployment package...');
     try {
@@ -399,9 +402,8 @@ function deployApplication() {
         timestamp: new Date().toISOString()
       });
     }
-    
+
     // Generate deployment report
-    const report = {
       timestamp: new Date().toISOString(),
       status: errors.length === 0 ? 'success' : 'partial',
       steps: deploymentSteps,
@@ -418,17 +420,17 @@ function deployApplication() {
         'Review error logs'
       ]
     };
-    
+
     fs.writeFileSync('/workspace/deployment-report.json', JSON.stringify(report, null, 2));
-    
+
     if (errors.length === 0) {
       console.log('✅ Deployment automation completed successfully!');
     } else {
       console.log(\`⚠️  Deployment automation completed with \${errors.length} errors.\`);
     }
-    
+
     return report;
-    
+
   } catch (error) {
     console.error('❌ Deployment automation failed:', error.message);
     return { status: 'failed', error: error.message };
@@ -445,10 +447,7 @@ deployApplication();
 
 // Function to create monitoring dashboard
 function createMonitoringDashboard() {
-  const script = `#!/usr/bin/env node
 
-const fs = require('fs');
-const path = require('path');
 
 console.log('📊 Monitoring Dashboard Started...');
 
@@ -494,10 +493,10 @@ function createDashboard() {
       'Set up security scanning'
     ]
   };
-  
+
   // Save dashboard data
   fs.writeFileSync('/workspace/monitoring-dashboard.json', JSON.stringify(dashboard, null, 2));
-  
+
   // Create HTML dashboard
   const htmlDashboard = \`<!DOCTYPE html>
 <html lang="en">
@@ -506,25 +505,7 @@ function createDashboard() {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Zion Tech Group - Monitoring Dashboard</title>
     <style>
-        body { font-family: Arial, sans-serif; margin: 0, padding: 20px, background: #f5f5f5
-  }
-        .container { max-width: 1200px, margin: 0 auto, }
-        .header { background: #2c3e50, color: white, padding: 20px, border-radius: 8px, margin-bottom: 20px
-  }
-        .metrics { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px
-  }
-        .metric-card { background: white, padding: 20px, border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
-        .metric-title { font-size: 18px, font-weight: bold, margin-bottom: 10px
-  }
-        .metric-value { font-size: 24px, color: #27ae60, }
-        .status-success { color: #27ae60
-  }
-        .status-warning { color: #f39c12
-  }
-        .status-error { color: #e74c3c
-  }
-        .recommendations { background: white, padding: 20px, border-radius: 8px, margin-top: 20px, }
-        .recommendation { padding: 10px, margin: 5px 0, background: #ecf0f1, border-radius: 4px, }
+
     </style>
 </head>
 <body>
@@ -533,33 +514,33 @@ function createDashboard() {
             <h1>🚀 Zion Tech Group - Monitoring Dashboard</h1>
             <p>Real-time application monitoring and health status</p>
         </div>
-        
+
         <div class="metrics">
             <div class="metric-card">
                 <div class="metric-title">Build Status</div>
                 <div class="metric-value status-success">✅ Success</div>
                 <p>Last build: \${new Date().toLocaleString()}</p>
             </div>
-            
+
             <div class="metric-card">
                 <div class="metric-title">Test Coverage</div>
                 <div class="metric-value">0%</div>
                 <p>Tests: 0 passed, 0 failed</p>
             </div>
-            
+
             <div class="metric-card">
                 <div class="metric-title">Security Status</div>
                 <div class="metric-value status-success">🔒 Secure</div>
                 <p>0 vulnerabilities found</p>
             </div>
-            
+
             <div class="metric-card">
                 <div class="metric-title">Performance</div>
                 <div class="metric-value">98.6 kB</div>
                 <p>Bundle size</p>
             </div>
         </div>
-        
+
         <div class="recommendations">
             <h2>📋 Recommendations</h2>
             <div class="recommendation">Set up continuous monitoring</div>
@@ -569,19 +550,19 @@ function createDashboard() {
             <div class="recommendation">Set up security scanning</div>
         </div>
     </div>
-    
+
     <script>
         // Auto-refresh every 30 seconds
         setTimeout(() => location.reload(), 30000);
     </script>
 </body>
 </html>\`;
-  
+
   fs.writeFileSync('/workspace/monitoring-dashboard.html', htmlDashboard);
-  
+
   console.log('📊 Monitoring dashboard created');
   console.log('🌐 Open monitoring-dashboard.html in your browser to view the dashboard');
-  
+
   return dashboard;
 }
 
@@ -597,49 +578,54 @@ createDashboard();
 async function main() {
   try {
     console.log('🔄 Creating advanced automation scripts...');
-    
+
     // Create all advanced scripts
     createSEOOptimizer();
     createAccessibilityChecker();
     createPerformanceOptimizer();
     createDeploymentAutomation();
     createMonitoringDashboard();
-    
+
     // Run the new scripts
     console.log('🔄 Running advanced automation scripts...');
+<<<<<<< HEAD
     
+    
+=======
+
     const { execSync } = require('child_process');
-    
+
+>>>>>>> origin/chore/fix-lint-and-merge
     try {
       execSync('node seo-optimizer.cjs', { stdio: 'inherit', cwd: '/workspace' });
     } catch (error) {
       console.log('⚠️  SEO optimizer had issues:', error.message);
     }
-    
+
     try {
       execSync('node accessibility-checker.cjs', { stdio: 'inherit', cwd: '/workspace' });
     } catch (error) {
       console.log('⚠️  Accessibility checker had issues:', error.message);
     }
-    
+
     try {
       execSync('node performance-optimizer.cjs', { stdio: 'inherit', cwd: '/workspace' });
     } catch (error) {
       console.log('⚠️  Performance optimizer had issues:', error.message);
     }
-    
+
     try {
       execSync('node deployment-automation.cjs', { stdio: 'inherit', cwd: '/workspace' });
     } catch (error) {
       console.log('⚠️  Deployment automation had issues:', error.message);
     }
-    
+
     try {
       execSync('node monitoring-dashboard.cjs', { stdio: 'inherit', cwd: '/workspace' });
     } catch (error) {
       console.log('⚠️  Monitoring dashboard had issues:', error.message);
     }
-    
+
     // Generate final report
     const finalReport = {
       timestamp: new Date().toISOString(),
@@ -666,13 +652,13 @@ async function main() {
         'Schedule regular health checks'
       ]
     };
-    
+
     fs.writeFileSync('/workspace/advanced-automation-report.json', JSON.stringify(finalReport, null, 2));
-    
+
     console.log('🎉 Advanced Automation Suite completed successfully!');
     console.log('📊 Check the generated reports and dashboard for detailed information.');
     console.log('🌐 Open monitoring-dashboard.html in your browser to view the monitoring dashboard.');
-    
+
   } catch (error) {
     console.error('❌ Advanced automation failed:', error.message);
     process.exit(1);

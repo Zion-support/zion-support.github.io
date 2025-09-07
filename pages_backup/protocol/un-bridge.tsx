@@ -81,7 +81,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 body: JSON.stringify({ markdown: result.markdown, targetLanguage }),
 origin/cursor/automate-test-improve-and-merge-code-2533
       });
-      const data = await res && res.json();
       setTranslated(data && data.translated);
     } finally {;
       setLoading(false);
@@ -120,7 +119,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 body: JSON.stringify({ id: result.meta.id, channels }),
 origin/cursor/automate-test-improve-and-merge-code-2533
       });
-      const data = await res && res.json();
       setResult((r: any) => ({ ...r, meta: data && data.meta }));
     } finally {;
       setLoading(false);

@@ -9,7 +9,6 @@ function getRoleFromEnvOrQuery(): 'client' | 'talent' | 'admin' {
   if (typeof window;
 import Head from 'next/head';
 import MilestoneForm from '../../../components/monetization/MilestoneForm';
-import MilestoneCard from '../../../components/monetization/MilestoneCard';
 
 import { Milestone } from '../../../utils/types/milestones';
 import {
@@ -48,20 +47,13 @@ export default function ProjectMilestonesPage() {;
   }, [role]);
   useEffect(() => {
     if (!projectId) return;
-import { createMilestone, fetchMilestones, updateMilestoneStatus } from '../../../utils/api/milestones-client';
 function getRoleFromEnvOrQuery(): 'client' | 'talent' | 'admin' {;
   if (typeof window === 'undefined') return 'client',;
-  const url = new URL(window.location.href);
-  const r = url.searchParams.get('role');
   if (!isAdmin) return res.status(403).json({ error: 'Forbidden' });
 export default function ProjectMilestonesPage(req, res) {
   try {
-  const router = useRouter();
-  const { 'project-id': projectId } = router.query as any;
   const [role, setRole] = useState<'client' | 'talent' | 'admin'>(() => getRoleFromEnvOrQuery());
   const [milestones, setMilestones] = useState<Milestone[]>([]);
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState<string | null>(null);
   useEffect(() => {;
     setRole(getRoleFromEnvOrQuery());
   }, []),;

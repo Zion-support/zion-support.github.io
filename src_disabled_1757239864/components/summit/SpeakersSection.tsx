@@ -10,7 +10,6 @@ interface Speaker {
   avatar: string,
   twitter?: string
 import Image from "next/image",
-import { Twitter, Linkedin } from 'lucide-react'
 
 interface Speaker {
   name: string,
@@ -25,8 +24,6 @@ interface Speaker {
   avatar: string,
   twitter?: string
 
-import Image from "next/image",
-import { Twitter, Linkedin } from 'lucide-react'
 
 interface Speaker {
   name: string,

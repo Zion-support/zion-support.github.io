@@ -1,87 +1,237 @@
+
 ;
 ursor/fix-website-loading-errors-and-merge-6662;
-import Head from 'next/head';'
-
-export default function Page() {return (export default function Page() {export default function Page() {return (<div className='min-h-screen bg-slate-950 text-white'>;'
-      <Head>;
-        <title />Reference Architecture — Autonomous Content Mesh</title>;
-        <meta;
-          }
-          name='description';'
-          content='High-level blueprint for an autonomous content mesh with evaluation-in-the-loop.';' />;
-        <meta;
-          property='"og":title';'
-          content='Reference Architecture — Autonomous Content Mesh';' />;
-        <meta;
-          property='"og":description';'
-          content='High-level blueprint for an autonomous content mesh with evaluation-in-the-loop.';'
+<<<<<<< HEAD
 
 export default function Page() {
 
 }
 
-return (;
-    <div className='min-h-screen bg-slate-950 text-white'>'
+
+
+
+;
+ursor/fix-website-loading-errors-and-merge-6662;
+import Head from 'next/head';
+export default function Page(){
+export default function Page() {
+  return (
+    <div className='min-h-screen bg-slate-950 text-white' />
       <Head>
-        <title>Reference Architecture — Autonomous Content Mesh</title>
-        <meta,
-name='description''
-          content='High-level blueprint for an autonomous content mesh with evaluation-in-the-loop.'' />
-        <meta,
-property='"og": title''
-          content='Reference Architecture — Autonomous Content Mesh'' />
-        <meta,
-property='"og":description''
-          content='High-level blueprint for an autonomous content mesh with evaluation-in-the-loop.'' />
-        <meta name='"twitter":card' content='summary_large_image' />'
-      </Head>
+        <title />Reference Architecture — Autonomous Content Mesh</title>
+        <meta;
+name='description'
+          content='High-level blueprint for an autonomous content mesh with evaluation-in-the-loop.'
+        />
+        <meta
+          property='og:title'
+          content='Reference Architecture — Autonomous Content Mesh'
+        />
+        <meta
+          property='og:description'
+          content='High-level blueprint for an autonomous content mesh with evaluation-in-the-loop.'
+        />'
+        <meta name='twitter:card' content='summary_large_image' />
+      </Head>'
       <main className='container mx-auto px-6 py-12 prose prose-invert'>'
-        <h1 className='text-3xl font-extrabold'>'
+        <h1 className='text-3xl font-extrabold'>
+          Reference Architecture — Autonomous Content Mesh;
+        </h1>'
+        <div className='mt-4' dangerouslySetInnerHTML={{ __html: `${body}` }} />'
+        <p className='mt-6 text-white/60 text-sm'>
+      <main className='container mx-auto px-6 py-12 prose prose-invert'>
+        <h1 className='text-3xl font-extrabold'>
           Reference Architecture — Autonomous Content Mesh
         </h1>
-        <div className='mt-4' dangerouslySetInnerHTML={{ "__html": `${body}` ,`} />
-        <p className='mt-6 text-white/60 text-sm'>'
+        <div className='mt-4' dangerouslySetInnerHTML={{ __html: `${body}` }} />
+        <p className='mt-6 text-white/60 text-sm'>
+=======
+import Head from 'next/head';
+
+export default function Page() {return (export default function Page() {export default function Page() {return (<div className='min-h-screen bg-slate-950 text-white'    />;
+      <Head    />;
+        <title    />Reference Architecture — Autonomous Content Mesh</title>;
+        <meta;
+          name='description';
+          content='High-level blueprint for an autonomous content mesh with evaluation-in-the-loop.';
+           />;
+        <meta;
+          property='og:title';
+          content='Reference Architecture — Autonomous Content Mesh';
+           />;
+        <meta;
+          property='og:description';
+          content='High-level blueprint for an autonomous content mesh with evaluation-in-the-loop.';
+
+export default function Page() {
+
+  return (
+    <div className='min-h-screen bg-slate-950 text-white'    />
+      <Head><title>Reference Architecture — Autonomous Content Mesh</title>
+        <meta;
+name='description'
+          content='High-level blueprint for an autonomous content mesh with evaluation-in-the-loop.'
+           />
+        <meta;
+property='og: title'
+          content='Reference Architecture — Autonomous Content Mesh'
+           />
+        <meta;
+property='og:description'
+          content='High-level blueprint for an autonomous content mesh with evaluation-in-the-loop.'
+           />
+        <meta name='twitter:card' content='summary_large_image'    />
+      </Head>
+      <main className='container mx-auto px-6 py-12 prose prose-invert'    />
+        <h1 className='text-3xl font-extrabold'    />
+          Reference Architecture — Autonomous Content Mesh}
+        </h1>}
+        <div className='mt-4' dangerouslySetInnerHTML={{ __html: `${body}` 
+}    />
+        <p className='mt-6 text-white/60 text-sm'    />
+>>>>>>> origin/chore/fix-lint-and-merge
           Auto-generated by Cloud Blueprint Factory.
         </p>
       </main>
-<<<<<<< HEAD
     </div>;
   );
-}/> <p className = "mt-6 text-white/60 text-sm" >Auto-generated by Cloud Blueprint Factory.</p> </main> </div>)   return ("
- ;
-return (;
-    <div className="min-h-screen bg-slate-950 text-white">"
+<<<<<<< HEAD
+  );
+}
+  )
+}/> <p className="mt-6 text-white/60 text-sm" >Auto-generated by Cloud Blueprint Factory.</p> </main> </div>)   return (
+  return ("
+    <div className="min-h-screen bg-slate-950 text-white">
+      <Head>
+        <title>Reference Architecture — Autonomous Content Mesh</title>"
+        <meta name="description" content="High-level blueprint for an autonomous content mesh with evaluation-in-the-loop." />"
+        <meta property="og:title" content="Reference Architecture — Autonomous Content Mesh" />"
+        <meta property="og:description" content="High-level blueprint for an autonomous content mesh with evaluation-in-the-loop." />"
+        <meta name="twitter:card" content="summary_large_image" />
+      </Head>"
+      <main className="container mx-auto px-6 py-12 prose prose-invert">"
+        <h1 className="text-3xl font-extrabold">Reference Architecture — Autonomous Content Mesh</h1>"`
+        <div className="mt-4" dangerouslySetInnerHTML={{ __html: `${body}` }} />"
+}/> <p className="mt-6 text-white/60 text-sm" >Auto-generated by Cloud Blueprint Factory.</p> </main> </div>)   return (
+  return (
+    <div className="min-h-screen bg-slate-950 text-white">
+          content='High-level blueprint for an autonomous content mesh with evaluation-in-the-loop.
+        />
+        <meta name='twitter:card' content=summary_large_image />
+
+          Auto-generated by Cloud Blueprint Factory.
+        </p>
+      </main>
+
+}
+  )
+
+}/> <p className="mt-6 text-white/60 text-sm >Auto-generated by Cloud Blueprint Factory.</p> </main> </div>)   return (
+  return (
+    <div className=min-h-screen bg-slate-950 text-white">
       <Head>
         <title>Reference Architecture — Autonomous Content Mesh</title>
-        <meta name="description" content="High-level blueprint for an autonomous content mesh with evaluation-in-the-loop." />"
-        <meta property=""og": title" content="Reference Architecture — Autonomous Content Mesh" />"
-        <meta property=""og":description" content="High-level blueprint for an autonomous content mesh with evaluation-in-the-loop." />"
-        <meta name=""twitter":card" content="summary_large_image" />"
+        <meta name="description content=High-level blueprint for an autonomous content mesh with evaluation-in-the-loop." />
+        <meta property="og:title content=Reference Architecture — Autonomous Content Mesh" />
+        <meta property="og:description content=High-level blueprint for an autonomous content mesh with evaluation-in-the-loop." />
+        <meta name="twitter:card content=summary_large_image" />
       </Head>
-      <main className="container mx-auto px-6 py-12 prose prose-invert">"
-        <h1 className="text-3xl font-extrabold">Reference Architecture — Autonomous Content Mesh</h1>"
-        <div className="mt-4" dangerouslySetInnerHTML={{ "__html": `${body}` ,`} />
-        <p className="mt-6 text-white/60 text-sm">Auto-generated by Cloud Blueprint Factory.</p>"
+      <main className="container mx-auto px-6 py-12 prose prose-invert">
+        <h1 className="text-3xl font-extrabold">Reference Architecture — Autonomous Content Mesh</h1>
+        <div className="mt-4" dangerouslySetInnerHTML={{ __html: `${body}` }} />
+        <p className="mt-6 text-white/60 text-sm">Auto-generated by Cloud Blueprint Factory.</p>
+        <div className="mt-4" dangerouslySetInnerHTML={{ __html: `${body}` }} />
+        <div className="mt-4" dangerouslySetInnerHTML={{ __html: `${body;}` }} />
+        <p className="mt-6 text-white/60 text-sm">Auto-generated by Cloud Blueprint Factory.</p>
+}/> <p className = \"mt-6 text-white/60 text-sm\"  />Auto-generated by Cloud Blueprint Factory.</p> </main> </div>)   return (
+ ;
+  return ("
+    <div className=\"min-h-screen bg-slate-950 text-white\" />
+      <Head>
+        <title />Reference Architecture — Autonomous Content Mesh</title>"
+        <meta name=\"description\" content=\"High-level blueprint for an autonomous content mesh with evaluation-in-the-loop.\" />"
+        <meta property=\"og: title\" content=\"Reference Architecture — Autonomous Content Mesh\" />"
+        <meta property=\"og:description\" content=\"High-level blueprint for an autonomous content mesh with evaluation-in-the-loop.\" />"
+        <meta name=\"twitter:card\" content=\"summary_large_image\" />
+      </Head>"
+      <main className=\"container mx-auto px-6 py-12 prose prose-invert\" />"
+        <h1 className=\"text-3xl font-extrabold\" />Reference Architecture — Autonomous Content Mesh</h1>"
+        <div className=\"mt-4\" dangerouslySetInnerHTML={{ __html: `${body;}` 
+} />"
+        <p className=\"mt-6 text-white/60 text-sm\" />Auto-generated by Cloud Blueprint Factory.</p>
+=======
+}/> <p className = \"mt-6 text-white/60 text-sm\"     />Auto-generated by Cloud Blueprint Factory.</p> </main> </div>)   return (
+ ;
+  return ("
+    <div className=\"min-h-screen bg-slate-950 text-white\"    />
+      <Head><title>Reference Architecture — Autonomous Content Mesh</title>"
+        <meta name=\"description\" content=\"High-level blueprint for an autonomous content mesh with evaluation-in-the-loop.\"    />"
+        <meta property=\"og: title\" content=\"Reference Architecture — Autonomous Content Mesh\"    />"
+        <meta property=\"og:description\" content=\"High-level blueprint for an autonomous content mesh with evaluation-in-the-loop.\"    />"
+        <meta name=\"twitter:card\" content=\"summary_large_image\"    />
+      </Head>"
+      <main className=\"container mx-auto px-6 py-12 prose prose-invert\"    />"
+        <h1 className=\"text-3xl font-extrabold\"    />Reference Architecture — Autonomous Content Mesh</h1>"
+        <div className=\"mt-4\" dangerouslySetInnerHTML={{ __html: `${body}` 
+}    />"
+        <p className=\"mt-6 text-white/60 text-sm\"    />Auto-generated by Cloud Blueprint Factory.</p>
+>>>>>>> origin/chore/fix-lint-and-merge
       </main>
     </div>
+  );
+}
   )
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
   } catch (error) {"
+<<<<<<< HEAD
     console.error("Error:", error);"
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+;
+  } catch (error) {"
+    console.error(\"Error: \";, error);}"
+    return res.status(500).json({ error: \"Internal server error\";}
 =======
-  } catch (error) {
-    }
-    console.error(""Error":", error);"
-return res.status(500).json({ "error": "Internal server error",;"
+    console.error(\"Error:\", error);}"
+    return res.status(500).json({ error: \"Internal server error\"}
+>>>>>>> origin/chore/fix-lint-and-merge
 });
   }
 }
 ;
-return (;
-    <div className='min-h-screen bg-slate-950 text-white'>;'
+  return (
+<<<<<<< HEAD
+    <div className='min-h-screen bg-slate-950 text-white' />;
+      <Head>;
+        <title />Reference Architecture — Autonomous Content Mesh</title>;
+        <meta;
+name='description'
+          content='High-level blueprint for an autonomous content mesh with evaluation-in-the-loop.'
+        />;
+        <meta
+          property='og:title'
+          content='Reference Architecture — Autonomous Content Mesh'
+        />;
+        <meta
+          property='og:description'
+          content='High-level blueprint for an autonomous content mesh with evaluation-in-the-loop.'
+        />;
+        <meta name='twitter:card' content='summary_large_image' />;
+      </Head>;
+      <main className='container mx-auto px-6 py-12 prose prose-invert'>;
+        <h1 className='text-3xl font-extrabold'>;
+          Reference Architecture — Autonomous Content Mesh;
+        </h1>;
+        <div className='mt-4' dangerouslySetInnerHTML={{ __html: `${body}` }} />;
+        <p className='mt-6 text-white/60 text-sm'>;
+          Auto-generated by Cloud Blueprint Factory.;
+        </p>;
+      </main>;
+    </div>;
+  )}/> <p className="mt-6 text-white/60 text-sm" >Auto-generated by Cloud Blueprint Factory.</p> </main> </div>)   return (return (<div className="min-h-screen bg-slate-950 text-white">;
+  );
+}/> <p className="mt-6 text-white/60 text-sm" >Auto-generated by Cloud Blueprint Factory.</p> </main> </div>)   return (
+    <div className="min-h-screen bg-slate-950 text-white">;
       <Head>;
         <title>Reference Architecture — Autonomous Content Mesh</title>;
         <meta,
@@ -95,122 +245,251 @@ property='"og":description''
           content='High-level blueprint for an autonomous content mesh with evaluation-in-the-loop.'' />;
         <meta name='"twitter":card' content='summary_large_image' />;'
       </Head>;
-      <main className='container mx-auto px-6 py-12 prose prose-invert'>;'
-        <h1 className='text-3xl font-extrabold'>;'
-          Reference Architecture — Autonomous Content Mesh;
-        </h1>;
-        <div className='mt-4' dangerouslySetInnerHTML={{ "__html": `${body}` ,`} />;
-        <p className='mt-6 text-white/60 text-sm'>;'
-          Auto-generated by Cloud Blueprint Factory.;
-        </p>;
-      </main>;
-    </div>;
-  )}/> <p className = "mt-6 text-white/60 text-sm" >Auto-generated by Cloud Blueprint Factory.</p> </main> </div>)   return ;"
-  return (<div className="min-h-screen bg-slate-950 text-white">;"
-  );
-}/> <p className = "mt-6 text-white/60 text-sm" >Auto-generated by Cloud Blueprint Factory.</p> </main> </div>)  ;"
-return (;
-    <div className="min-h-screen bg-slate-950 text-white">;"
-      <Head>;
-        <title>Reference Architecture — Autonomous Content Mesh</title>;
-        <meta name="description" content="High-level blueprint for an autonomous content mesh with evaluation-in-the-loop." />;"
-        <meta property=""og":title" content="Reference Architecture — Autonomous Content Mesh" />;"
-        <meta property=""og":description" content="High-level blueprint for an autonomous content mesh with evaluation-in-the-loop." />;"
-        <meta name=""twitter":card" content="summary_large_image" />;"
-      </Head>;
-      <main className="container mx-auto px-6 py-12 prose prose-invert">;"
-        <h1 className="text-3xl font-extrabold">Reference Architecture — Autonomous Content Mesh</h1>;"
-        <div className="mt-4" dangerouslySetInnerHTML={{ "__html": `${body}` ,`} />;
-        <p className="mt-6 text-white/60 text-sm">Auto-generated by Cloud Blueprint Factory.</p>;"
+      <main className="container mx-auto px-6 py-12 prose prose-invert">;
+        <h1 className="text-3xl font-extrabold">Reference Architecture — Autonomous Content Mesh</h1>;
+        <div className="mt-4" dangerouslySetInnerHTML={{ __html: `${body}` }} />;
+        <p className="mt-6 text-white/60 text-sm">Auto-generated by Cloud Blueprint Factory.</p>;
       </main>;
     </div>;
   )}
   )} catch (error) {console.error(""Error":", error)return res.status(500).json({ "error": "Internal server error" })},"
 }return (<div className='min-h-screen bg-slate-950 text-white'>;'
+        <p className=mt-6 text-white/60 text-sm">Auto-generated by Cloud Blueprint Factory.</p>
+}/> <p className = \"mt-6 text-white/60 text-sm\  />Auto-generated by Cloud Blueprint Factory.</p> </main> </div>)   return (
+ ;
+  return (
+    <div className=\"min-h-screen bg-slate-950 text-white\" />
+      <Head>
+        <title />Reference Architecture — Autonomous Content Mesh</title>
+        <meta name=\description\" content=\"High-level blueprint for an autonomous content mesh with evaluation-in-the-loop.\ />
+        <meta property=\"og: title\" content=\Reference Architecture — Autonomous Content Mesh\ />"
+        <meta property=\"og:description\ content=\High-level blueprint for an autonomous content mesh with evaluation-in-the-loop.\" />"
+        <meta name=\twitter:card\ content=\"summary_large_image\" />
+      </Head>
+      <main className=\container mx-auto px-6 py-12 prose prose-invert\" />"
+        <h1 className=\text-3xl font-extrabold\ />Reference Architecture — Autonomous Content Mesh</h1>"
+        <div className=\"mt-4\ dangerouslySetInnerHTML={{ __html: `${body;}` 
+} />
+        <p className=\"mt-6 text-white/60 text-sm\" />Auto-generated by Cloud Blueprint Factory.</p>
+      </main>
+    </div>
+  )
+
+    return res.status(500).json({ error: Internal server error });
+  }
+}
+
+  } catch (error) {"
+    console.error(\"Error: \;, error);}
+    return res.status(500).json({ error: \"Internal server error\";}
+});
+  }
+}
+
+  return (
+    <div className='min-h-screen bg-slate-950 text-white' />;
       <Head>;
         <title />Reference Architecture — Autonomous Content Mesh</title>;
         <meta;
-          name='description';'
-          content='High-level blueprint for an autonomous content mesh with evaluation-in-the-loop.';' />;
-        <meta;
-          property='"og":title';'
-          content='Reference Architecture — Autonomous Content Mesh';' />;
-        <meta;
-          property='"og":description';'
-          content='High-level blueprint for an autonomous content mesh with evaluation-in-the-loop.';' />;
-        <meta name='"twitter":card' content='summary_large_image' />;'
+name=description
+          content='High-level blueprint for an autonomous content mesh with evaluation-in-the-loop.'
+        />;
+        <meta
+          property=og:title
+          content='Reference Architecture — Autonomous Content Mesh'
+        />;
+        <meta
+          property=og:description
+          content='High-level blueprint for an autonomous content mesh with evaluation-in-the-loop.'
+        />;
+        <meta name=twitter:card content='summary_large_image' />;
       </Head>;
-      <main className='container mx-auto px-6 py-12 prose prose-invert'>;'
-        <h1 className='text-3xl font-extrabold'>;'
+      <main className=container mx-auto px-6 py-12 prose prose-invert>;
+        <h1 className='text-3xl font-extrabold'>;
           Reference Architecture — Autonomous Content Mesh;
         </h1>;
-        <div className='mt-4' dangerouslySetInnerHTML={{ "__html": `${body}` ,`} />;
-        <p className='mt-6 text-white/60 text-sm'>;'
-          Auto-generated by Cloud Blueprint Factory.;
-        </p>;
-      </main>;
-    </div>;
-  )}/> <p className = "mt-6 text-white/60 text-sm" >Auto-generated by Cloud Blueprint Factory.</p> </main> </div>)  ;"
-  return (<div className="min-h-screen bg-slate-950 text-white">;"
-      <Head>;
-        <title>Reference Architecture — Autonomous Content Mesh</title>;
-        <meta name="description" content="High-level blueprint for an autonomous content mesh with evaluation-in-the-loop." />;"
-        <meta property=""og":title" content="Reference Architecture — Autonomous Content Mesh" />;"
-        <meta property=""og":description" content="High-level blueprint for an autonomous content mesh with evaluation-in-the-loop." />;"
-        <meta name=""twitter":card" content="summary_large_image" />;"
-      </Head>;
-      <main className="container mx-auto px-6 py-12 prose prose-invert">;"
-        <h1 className="text-3xl font-extrabold">Reference Architecture — Autonomous Content Mesh</h1>;"
-        <div className="mt-4" dangerouslySetInnerHTML={{ "__html": `${body}` ,`} />;
-        <p className="mt-6 text-white/60 text-sm">Auto-generated by Cloud Blueprint Factory.</p>;"
+
       </main>;
     </div>;
   )}
-import Head from 'next / head';'
+import Head from next / head;
+=======
+    <div className='min-h-screen bg-slate-950 text-white'    />;
+      <Head    />;
+        <title    />Reference Architecture — Autonomous Content Mesh</title>;
+        <meta;
+name='description'
+          content='High-level blueprint for an autonomous content mesh with evaluation-in-the-loop.'
+           />;
+        <meta;
+property='og:title'
+          content='Reference Architecture — Autonomous Content Mesh'
+           />;
+        <meta;
+property='og:description'
+          content='High-level blueprint for an autonomous content mesh with evaluation-in-the-loop.'
+           />;
+        <meta name='twitter:card' content='summary_large_image'    />;
+      </Head>;
+      <main className='container mx-auto px-6 py-12 prose prose-invert'    />;
+        <h1 className='text-3xl font-extrabold'    />;
+          Reference Architecture — Autonomous Content Mesh;
+        </h1>;
+        <div className='mt-4' dangerouslySetInnerHTML={{ __html: `${body}` 
+}    />;
+        <p className='mt-6 text-white/60 text-sm'    />;
+          Auto-generated by Cloud Blueprint Factory.;
+        </p>;
+      </main>;
+    </div>;"
+  )}/> <p className = \"mt-6 text-white/60 text-sm\"     />Auto-generated by Cloud Blueprint Factory.</p> </main> </div>)   return ;"
+  return (<div className=\"min-h-screen bg-slate-950 text-white\"    />;
+  );"
+}/> <p className = \"mt-6 text-white/60 text-sm\"     />Auto-generated by Cloud Blueprint Factory.</p> </main> </div>)  ;
+  return ("
+    <div className=\"min-h-screen bg-slate-950 text-white\"    />;
+      <Head    />;
+        <title    />Reference Architecture — Autonomous Content Mesh</title>;"
+        <meta name=\"description\" content=\"High-level blueprint for an autonomous content mesh with evaluation-in-the-loop.\"    />;"
+        <meta property=\"og:title\" content=\"Reference Architecture — Autonomous Content Mesh\"    />;"
+        <meta property=\"og:description\" content=\"High-level blueprint for an autonomous content mesh with evaluation-in-the-loop.\"    />;"
+        <meta name=\"twitter:card\" content=\"summary_large_image\"    />;
+      </Head>;"
+      <main className=\"container mx-auto px-6 py-12 prose prose-invert\"    />;"
+        <h1 className=\"text-3xl font-extrabold\"    />Reference Architecture — Autonomous Content Mesh</h1>;"
+        <div className=\"mt-4\" dangerouslySetInnerHTML={{ __html: `${body}` 
+}    />;"
+        <p className=\"mt-6 text-white/60 text-sm\"    />Auto-generated by Cloud Blueprint Factory.</p>;
+      </main>;
+    </div>;
+  )}"
+  )} catch (error) {console.error(\"Error:\", error)return res.status(500).json({ error: \"Internal server error\" })}
+}return (<div className='min-h-screen bg-slate-950 text-white'    />;
+      <Head    />;
+        <title    />Reference Architecture — Autonomous Content Mesh</title>;
+        <meta;
+          name='description';
+          content='High-level blueprint for an autonomous content mesh with evaluation-in-the-loop.';
+           />;
+        <meta;
+          property='og:title';
+          content='Reference Architecture — Autonomous Content Mesh';
+           />;
+        <meta;
+          property='og:description';
+          content='High-level blueprint for an autonomous content mesh with evaluation-in-the-loop.';
+           />;
+        <meta name='twitter:card' content='summary_large_image'    />;
+      </Head>;
+      <main className='container mx-auto px-6 py-12 prose prose-invert'    />;
+        <h1 className='text-3xl font-extrabold'    />;
+          Reference Architecture — Autonomous Content Mesh;
+        </h1>;
+        <div className='mt-4' dangerouslySetInnerHTML={{ __html: `${body}` 
+}    />;
+        <p className='mt-6 text-white/60 text-sm'    />;
+          Auto-generated by Cloud Blueprint Factory.;
+        </p>;
+      </main>;
+    </div>;"
+  )}/> <p className = \"mt-6 text-white/60 text-sm\"     />Auto-generated by Cloud Blueprint Factory.</p> </main> </div>)  ;"
+  return (<div className=\"min-h-screen bg-slate-950 text-white\"    />;
+      <Head    />;
+        <title    />Reference Architecture — Autonomous Content Mesh</title>;"
+        <meta name=\"description\" content=\"High-level blueprint for an autonomous content mesh with evaluation-in-the-loop.\"    />;"
+        <meta property=\"og:title\" content=\"Reference Architecture — Autonomous Content Mesh\"    />;"
+        <meta property=\"og:description\" content=\"High-level blueprint for an autonomous content mesh with evaluation-in-the-loop.\"    />;"
+        <meta name=\"twitter:card\" content=\"summary_large_image\"    />;
+      </Head>;"
+      <main className=\"container mx-auto px-6 py-12 prose prose-invert\"    />;"
+        <h1 className=\"text-3xl font-extrabold\"    />Reference Architecture — Autonomous Content Mesh</h1>;"
+        <div className=\"mt-4\" dangerouslySetInnerHTML={{ __html: `${body}` 
+}    />;"
+        <p className=\"mt-6 text-white/60 text-sm\"    />Auto-generated by Cloud Blueprint Factory.</p>;
+      </main>;
+    </div>;
+  )}
+import Head from 'next / head';
 
+>>>>>>> origin/chore/fix-lint-and-merge
 export default /**;
  * Page - Function description;
  */;
-function Page() {return (<div className='min - h-screen bg - slate - 950 text - white'>;'
-  );
+function Page() {return (<div className='min - h-screen bg - slate - 950 text - white'    />;}
+  );}
 }
-import Head from 'next / head';'
+import Head from 'next / head';
 ;
+
 export default /**
- * Page - Function description
+ * Page - Function description;
  */
 function Page() {
-}
-return (;
-    <div className='min - h-screen bg - slate - 950 text - white'>;'
-      <Head>;
-        <title  /> Reference Architecture — Autonomous Content Mesh</title>;
+  return (
+    <div className='min - h-screen bg - slate - 950 text - white'    />;
+      <Head    />;
+        <title     /> Reference Architecture — Autonomous Content Mesh</title>;
         <meta;
-          name='description';'
-          content='High - level blueprint for an autonomous content mesh with evaluation - in - the - loop.';' />;
+          name='description';
+          content='High - level blueprint for an autonomous content mesh with evaluation - in - the - loop.';
+           />;
         <meta;
-          property='"og":title';'
-          content='Reference Architecture — Autonomous Content Mesh';' />;
+          property='og:title';
+          content='Reference Architecture — Autonomous Content Mesh';
+           />;
         <meta;
-          property='"og":description';'
-          content='High - level blueprint for an autonomous content mesh with evaluation - in - the - loop.';' />;
-        <meta name='"twitter":card' content='summary_large_image' />;'
+          property='og:description';
+          content='High - level blueprint for an autonomous content mesh with evaluation - in - the - loop.';
+           />;
+        <meta name='twitter:card' content='summary_large_image'    />;
       </Head>;
-      <main className='container mx - auto px - 6 py - 12 prose prose - invert'>;'
-        <h1 className='text - 3xl font - extrabold'>;'
+<<<<<<< HEAD
+      <main className='container mx - auto px - 6 py - 12 prose prose - invert'>;
+        <h1 className='text - 3xl font - extrabold'>;
           Reference Architecture — Autonomous Content Mesh;
         </h1>;
-        <div className='mt - 4' dangerouslySetInnerHTML={{ "__html": `${body}` ,`} />;
-        <p className='mt - 6 text - white / 60 text - sm'>;'
+        <div className='mt - 4' dangerouslySetInnerHTML={{ __html: `${body}` }} />;
+        <p className='mt - 6 text - white / 60 text - sm'>;
           Auto - generated by Cloud Blueprint Factory.;
         </p>;
-      </main>
-    </div>
-  );
-}/> <p className = "mt - 6 text - white / 60 text - sm" >Auto - generated by Cloud Blueprint Factory.</p> </main> </div>)  ;"
-  return (<div className="min - h-screen bg - slate - 950 text - white">;"
+      </main>;
+    </div>)}/> <p className="mt - 6 text - white / 60 text - sm" >Auto - generated by Cloud Blueprint Factory.</p> </main> </div>)   return (<div className="min - h-screen bg - slate - 950 text - white">;
     </div>);
-<<<<<<< HEAD
+;
+}/> <p className="mt - 6 text - white / 60 text - sm" >Auto - generated by Cloud Blueprint Factory.</p> </main> </div>)   return (
+    <div className="min - h-screen bg - slate - 950 text - white">;
+      <Head>;
+        <title > Reference Architecture — Autonomous Content Mesh</title>;
+        <meta name="description" content="High - level blueprint for an autonomous content mesh with evaluation - in - the - loop." />;
+        <meta property="og:title" content="Reference Architecture — Autonomous Content Mesh" />;
+        <meta property="og:description" content="High - level blueprint for an autonomous content mesh with evaluation - in - the - loop." />;
+        <meta name="twitter:card" content="summary_large_image" />;
+      </Head>;
+      <main className="container mx - auto px - 6 py - 12 prose prose - invert">;
+        <h1 className="text - 3xl font - extrabold">Reference Architecture — Autonomous Content Mesh</h1>;
+        <div className="mt - 4" dangerouslySetInnerHTML={{ __html: `${body}` }} />;
+        <p className="mt - 6 text - white / 60 text - sm">Auto - generated by Cloud Blueprint Factory.</p>;
+      </main>;
+    </div>)}}/> <p className="mt-6 text-white/60 text-sm" >Auto-generated by Cloud Blueprint Factory.</p> </main> </div>)
+    </div>);
+}
+
+}/> <p className="mt-6 text-white/60 text-sm" >Auto-generated by Cloud Blueprint Factory.</p> </main> </div>)
+
+
+
+}/> <p className="mt-6 text-white/60 text-sm" >Auto-generated by Cloud Blueprint Factory.</p> </main> </div>)
+origin/cursor/automate-test-improve-and-merge-code-2533
+
+
+
+}/> <p className="mt-6 text-white/60 text-sm" >Auto-generated by Cloud Blueprint Factory.</p> </main> </div>)
+
+
+;"
+}/> <p className = \"mt - 6 text - white / 60 text - sm\"  />Auto - generated by Cloud Blueprint Factory.</p> </main> </div>)  ;
+  return ("
+    <div className=\"min - h-screen bg - slate - 950 text - white\" />;
 ;
 }/> <p className = "mt - 6 text - white / 60 text - sm" >Auto - generated by Cloud Blueprint Factory.</p> </main> </div>)  ;"
 return (;
@@ -227,31 +506,55 @@ return (;
         <div className="mt - 4" dangerouslySetInnerHTML={{ "__html": `${body}` ,`
 } />;
         <p className="mt - 6 text - white / 60 text - sm">Auto - generated by Cloud Blueprint Factory.</p>;"
+=======
+      <main className='container mx - auto px - 6 py - 12 prose prose - invert'    />;
+        <h1 className='text - 3xl font - extrabold'    />;
+          Reference Architecture — Autonomous Content Mesh;}
+        </h1>;}
+        <div className='mt - 4' dangerouslySetInnerHTML={{ __html: `${body}` 
+}    />;
+        <p className='mt - 6 text - white / 60 text - sm'    />;
+          Auto - generated by Cloud Blueprint Factory.;
+        </p>;
       </main>
     </div>
-  );
-}}/> <p className="mt-6 text-white/60 text-sm" >Auto-generated by Cloud Blueprint Factory.</p> </main> </div>)"
+  );"
+}/> <p className = \"mt - 6 text - white / 60 text - sm\"     />Auto - generated by Cloud Blueprint Factory.</p> </main> </div>)  ;"
+  return (<div className=\"min - h-screen bg - slate - 950 text - white\"    />;
+    </div>);
+;"
+}/> <p className = \"mt - 6 text - white / 60 text - sm\"     />Auto - generated by Cloud Blueprint Factory.</p> </main> </div>)  ;
+  return ("
+    <div className=\"min - h-screen bg - slate - 950 text - white\"    />;
+      <Head    />;
+        <title     /> Reference Architecture — Autonomous Content Mesh</title>;"
+        <meta name=\"description\" content=\"High - level blueprint for an autonomous content mesh with evaluation - in - the - loop.\"    />;"
+        <meta property=\"og:title\" content=\"Reference Architecture — Autonomous Content Mesh\"    />;"
+        <meta property=\"og:description\" content=\"High - level blueprint for an autonomous content mesh with evaluation - in - the - loop.\"    />;"
+        <meta name=\"twitter:card\" content=\"summary_large_image\"    />;
+      </Head>;"
+      <main className=\"container mx - auto px - 6 py - 12 prose prose - invert\"    />;"
+        <h1 className=\"text - 3xl font - extrabold\"    />Reference Architecture — Autonomous Content Mesh</h1>;"
+        <div className=\"mt - 4\" dangerouslySetInnerHTML={{ __html: `${body}` 
+}    />;"
+        <p className=\"mt - 6 text - white / 60 text - sm\"    />Auto - generated by Cloud Blueprint Factory.</p>;
+>>>>>>> origin/chore/fix-lint-and-merge
+      </main>
+    </div>
+  );"
+}}/> <p className=\"mt-6 text-white/60 text-sm\"     />Auto-generated by Cloud Blueprint Factory.</p> </main> </div>)
     </div>);
 }
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
-}/> <p className="mt-6 text-white/60 text-sm" >Auto-generated by Cloud Blueprint Factory.</p> </main> </div>)
+    </div>);
+}
+
+
+}/> <p className=mt-6 text-white/60 text-sm" >Auto-generated by Cloud Blueprint Factory.</p> </main> </div>)
 origin/cursor/automate-test-improve-and-merge-code-2533
-<<<<<<< HEAD
 pr-12243
-<<<<<<< HEAD
-=======
-
-'"`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-=======
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+"
 =======
 "
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
+>>>>>>> origin/chore/fix-lint-and-merge

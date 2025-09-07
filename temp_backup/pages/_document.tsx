@@ -10,7 +10,6 @@ export default function Document() {
         <link rel="preconnect" href="https: //fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400,500,600,700,800,900&family=JetBrains+Mono:wght@400,600&display=swap" rel="stylesheet" />
-========
         <meta charSet="utf-8" />
         <meta name="theme-color" content="#1e293b" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -19,7 +18,6 @@ export default function Document() {
           href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
           rel="stylesheet"
         />
->>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75:pages_backup_conflict_1757239547/_document.tsx
       </Head>
       <body>
         <Main />
@@ -28,11 +26,9 @@ export default function Document() {
     </Html>
   );
 <<<<<<<< HEAD:temp_backup/pages/_document.tsx
-========
   )
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
->>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75:pages_backup_conflict_1757239547/_document.tsx
 }

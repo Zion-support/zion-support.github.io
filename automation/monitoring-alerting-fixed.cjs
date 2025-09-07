@@ -81,9 +81,7 @@ class MonitoringAlerting {
       { command: 'curl -w "@curl-format.txt" -o /dev/null -s http://localhost:3000', description: 'Response time check' }
     ];
 
-    const results = [];
     for (const check of perfChecks) {
-      const result = await this.runCommand(check.command, check.description);
       results.push({ ...check, result });
     }
 
@@ -131,9 +129,7 @@ class MonitoringAlerting {
       { command: 'pm2 logs --lines 50', description: 'PM2 security logs' }
     ];
 
-    const results = [];
     for (const check of securityChecks) {
-      const result = await this.runCommand(check.command, check.description);
       results.push({ ...check, result });
     }
 

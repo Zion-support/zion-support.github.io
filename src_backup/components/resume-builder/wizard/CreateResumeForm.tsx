@@ -1,5 +1,3 @@
-<<<<<<< HEAD:src_backup/components/resume-builder/wizard/CreateResumeForm.tsx
-<<<<<<< HEAD:src_backup/components/resume-builder/wizard/CreateResumeForm.tsx
 import { CreateResumeFormProps } from "./types";
 export const CreateResumeForm = null;
 export const CreateResumeForm = ({
@@ -7,53 +5,38 @@ export const CreateResumeForm = ({
   onCancel
   isLoading
 origin/cursor/automate-test-improve-and-merge-code-2533
-=======
-import { useState } from "react",
-import { Card, CardContent } from "@/components/ui/card",
-import { Button } from "@/components/ui/button";
-import { Loader2 } from 'lucide-react'
-import { CreateResumeFormProps } from "./types",
-export const CreateResumeForm = ({ 
-  onCreateResume,
-  onCancel,
-  isLoading,
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/resume-builder/wizard/CreateResumeForm.tsx
 }: CreateResumeFormProps) => {
-  const [newResumeTitle, setNewResumeTitle] = useState('')
+  const [newResumeTitle, setNewResumeTitle] = useState(')
   const handleSubmit = async () => {
     if (!newResumeTitle.trim()) return
     await onCreateResume(newResumeTitle)
   }
   return (
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c:src/components/resume-builder/wizard/CreateResumeForm.tsx
 
-import { useState } from "react",import { Card, CardContent } from "@/components/ui/card",import { Button  } from '@/components/ui/button';
-import { Loader2  } from 'lucide-react';
-import { CreateResumeFormProps } from "./types",export const CreateResumeForm = ({onCreateResume,onCancel,isLoading,import { CreateResumeFormProps  } from './types';
+import { useState } from "react,import { Card, CardContent } from @/components/ui/card",import { Button  } from @/components/ui/button';
+import { Loader2  } from 'lucide-react;
+import { CreateResumeFormProps } from "./types,export const CreateResumeForm = ({onCreateResume,onCancel,isLoading,import { CreateResumeFormProps  } from ./types';
 export const CreateResumeForm = null;
 export const CreateResumeForm = ({onCreateResume;
   onCancel;
   isLoading;
-}: CreateResumeFormProps) => {const [newResumeTitle, setNewResumeTitle] = useState('')const handleSubmit = async () => {if (!newResumeTitle.trim()) return;
+}: CreateResumeFormProps) => {const [newResumeTitle, setNewResumeTitle] = useState(')const handleSubmit = async () => {if (!newResumeTitle.trim()) return;
     await onCreateResume(newResumeTitle)}
-  return (<Card className='w-full max-w-2xl mx-auto'>;
-      <CardContent className='py-8'>;
-        <div className='text-center'>;
-          <h2 className='text-2xl font-bold mb-2'>Create New Resume</h2>;
-          <p className='text-muted-foreground mb-6'>;
+  return (<Card className=w-full max-w-2xl mx-auto'>;
+      <CardContent className='py-8>;
+        <div className=text-center'>;
+          <h2 className='text-2xl font-bold mb-2>Create New Resume</h2>;
+          <p className=text-muted-foreground mb-6'>;
             Give your resume a title to get started;
-          </p>;<div className='flex gap-2 max-w-md mx-auto'>;<input;
-              type='text';
-              placeholder="Resume Title (e.g. 'AI Engineer Resume')";
-              className='flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm';
+          </p>;<div className='flex gap-2 max-w-md mx-auto>;<input;
+              type=text';
+              placeholder=Resume Title (e.g. 'AI Engineer Resume)";
+              className=flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm';
               value={newResumeTitle}
               onChange={e => setNewResumeTitle(e.target.value)}
-<<<<<<< HEAD:src_backup/components/resume-builder/wizard/CreateResumeForm.tsx
             />
             <Button
               onClick={handleSubmit}
-<<<<<<< HEAD:src_backup/components/resume-builder/wizard/CreateResumeForm.tsx
               disabled={!newResumeTitle.trim() |isLoading}            >
               {isLoading && <Loader2 className='mr-2 h-4 w-4 animate-spin' />}
               Create
@@ -63,169 +46,92 @@ export const CreateResumeForm = ({onCreateResume;
           <Button variant='ghost' onClick={onCancel} className='mt-4'>
             Cancel
 origin/cursor/automate-test-improve-and-merge-code-2533
-=======
-
-
-import { useState } from "react";
-import { Card, CardContent } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
-import { Loader2 } from 'lucide-react'
-import { CreateResumeFormProps } from "./types";
-export const CreateResumeForm = ({ 
-  onCreateResume,
-  onCancel;
-  isLoading 
-}: CreateResumeFormProps) => {
-
-  const [ newResumeTitle, setNewResumeTitle ] = useState(''),
-
-
-
-  const handleSubmit = async () => {
-    if (!newResumeTitle.trim()) return
-    await onCreateResume(newResumeTitle)
-  }
-  return (
-    <Card className="w-full max-w-2xl mx-auto">
-      <CardContent className="py-8">
-        <div className="text-center">
-          <h2 className="text-2xl font-bold mb-2">Create New Resume</h2>
-          <p className="text-muted-foreground mb-6">Give your resume a title to get started</p>
-          <div className="flex gap-2 max-w-md mx-auto">
-              disabled={!newResumeTitle && newResumeTitle.trim() || isLoading}>;
-              {isLoading && <Loader2 className='mr-2 h-4 w-4 animate-spin' />}
-              Create;
-            </Button>;
-          </div>;
-
-          <Button variant='ghost' onClick={onCancel} className='mt-4'>            Cancel;
-
-  const handleSubmit = async () => {;
-    if (!newResumeTitle && newResumeTitle.trim()) return;
-    await onCreateResume(newResumeTitle);
-  };
-
-  return (
-    <Card className="w-full max-w-2xl mx-auto">;
-      <CardContent className="py-8">;
-        <div className="text-center">;
-          <h2 className="text-2xl font-bold mb-2">Create New Resume</h2>;
-          <p className="text-muted-foreground mb-6">Give your resume a title to get started</p>;
-
-          <div className="flex gap-2 max-w-md mx-auto">;
-            <input
-              type="text"
-              placeholder="Resume Title (e.g. 'AI Engineer Resume')"
-              className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm"
-              value={newResumeTitle}
-
-
-
-
-          <Button
-            variant="ghost"
-            onClick = {onCancel,}
-            className="mt-4"
-          >
-
-            Cancel
-
-
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/resume-builder/wizard/CreateResumeForm.tsx
           </Button>
         </div>
       </CardContent>
     </Card>
-<<<<<<< HEAD:src_backup/components/resume-builder/wizard/CreateResumeForm.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/resume-builder/wizard/CreateResumeForm.tsx
   )
 
               onChange={(e) => setNewResumeTitle(e && e.target.value)}
-=======
             />;
             <Button;
-              onClick={handleSubmit}import { useState  } from 'react';
-import { Card, CardContent  } from '@/components/ui/card';
+              onClick={handleSubmit}import { useState  } from 'react;
+import { Card, CardContent  } from @/components/ui/card';
 export const CreateResumeForm = ({onCreateResume,onCancel;
   isLoading;
-}: CreateResumeFormProps) => {const [ newResumeTitle, setNewResumeTitle ] = useState(''),const handleSubmit = async () => {if (!newResumeTitle.trim()) return;
+}: CreateResumeFormProps) => {const [ newResumeTitle, setNewResumeTitle ] = useState('),const handleSubmit = async () => {if (!newResumeTitle.trim()) return;
     await onCreateResume(newResumeTitle)}
-  return (<Card className="w-full max-w-2xl mx-auto">;
-      <CardContent className="py-8">;
-        <div className="text-center">;
-          <h2 className="text-2xl font-bold mb-2">Create New Resume</h2>;
-          <p className="text-muted-foreground mb-6">Give your resume a title to get started</p>;
-          <div className="flex gap-2 max-w-md mx-auto">;
+  return (<Card className="w-full max-w-2xl mx-auto>;
+      <CardContent className=py-8">;
+        <div className="text-center>;
+          <h2 className=text-2xl font-bold mb-2">Create New Resume</h2>;
+          <p className="text-muted-foreground mb-6>Give your resume a title to get started</p>;
+          <div className=flex gap-2 max-w-md mx-auto">;
               disabled={!newResumeTitle && newResumeTitle.trim() || isLoading}>;
-              {isLoading && <Loader2 className='mr-2 h-4 w-4 animate-spin' />}
+              {isLoading && <Loader2 className=mr-2 h-4 w-4 animate-spin' />}
               Create;
             </Button>;
-          </div>;<Button variant='ghost' onClick={onCancel} className='mt-4'>            Cancel;const handleSubmit = async () => {if (!newResumeTitle && newResumeTitle.trim()) return;
-    await onCreateResume(newResumeTitle)}return (<Card className="w-full max-w-2xl mx-auto">;
-      <CardContent className="py-8">;
-        <div className="text-center">;
-          <h2 className="text-2xl font-bold mb-2">Create New Resume</h2>;
-          <p className="text-muted-foreground mb-6">Give your resume a title to get started</p>;<div className="flex gap-2 max-w-md mx-auto">;
+          </div>;<Button variant='ghost onClick={onCancel} className=mt-4'>            Cancel;const handleSubmit = async () => {if (!newResumeTitle && newResumeTitle.trim()) return;
+    await onCreateResume(newResumeTitle)}return (<Card className="w-full max-w-2xl mx-auto>;
+      <CardContent className=py-8">;
+        <div className="text-center>;
+          <h2 className=text-2xl font-bold mb-2">Create New Resume</h2>;
+          <p className="text-muted-foreground mb-6>Give your resume a title to get started</p>;<div className=flex gap-2 max-w-md mx-auto">;
             <input;
-              type="text";
-              placeholder="Resume Title (e.g. 'AI Engineer Resume')";
-              className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm";
+              type="text;
+              placeholder=Resume Title (e.g. 'AI Engineer Resume)";
+              className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm;
               value={newResumeTitle}<Button;
-            variant="ghost";
+            variant=ghost";
             onClick = {onCancel}
-            className="mt-4";
+            className="mt-4;
           >;
             Cancel;
               disabled={!newResumeTitle.trim() |isLoading}            >;
-              {isLoading && <Loader2 className='mr-2 h-4 w-4 animate-spin' />}
+              {isLoading && <Loader2 className=mr-2 h-4 w-4 animate-spin' />}
               Create;
             </Button>;
           </div>;
-          <Button variant='ghost' onClick={onCancel} className='mt-4'>;
+          <Button variant='ghost onClick={onCancel} className=mt-4'>;
             Cancel;
           </Button>;
         </div>;
       </CardContent>;
     </Card>;
   )onChange={(e) => setNewResumeTitle(e && e.target.value)}
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c:src/components/resume-builder/wizard/CreateResumeForm.tsx
             />;
             <Button;
               onClick={handleSubmit}
               disabled={!newResumeTitle && newResumeTitle.trim() || isLoading}>;
-              {isLoading && <Loader2 className="mr-2 h-4 w-4 animate-spin" />}
+              {isLoading && <Loader2 className=mr-2 h-4 w-4 animate-spin" />}
               Create;
             </Button>;
           </div>;<Button;
-            variant="ghost";
+            variant="ghost;
             onClick = {onCancel}
-            className="mt-4">;
+            className=mt-4">;
           </Button>;
         </div>;
       </CardContent>;
     </Card>;
-  )}w-full max-w-2xl mx-auto"> <CardContent className=" py-8"> <div className=" text-center"> <h2 className=" text-2xl font-bold mb-2">Create New Resume</h2> <p className=" text-muted-foreground mb-6">Give your resume a title to get started</p> <div className=" flex gap-2 max-w-md mx-auto" > <input /> <ButtononClick={handleSubmit;
+  )}w-full max-w-2xl mx-auto"> <CardContent className= py-8> <div className=" text-center"> <h2 className= text-2xl font-bold mb-2>Create New Resume</h2> <p className=" text-muted-foreground mb-6">Give your resume a title to get started</p> <div className= flex gap-2 max-w-md mx-auto > <input /> <ButtononClick={handleSubmit;
 }disabled= {!newResumeTitle && newResumeTitle.trim () || isLoading;
-}> Create </Button> </div> <Button > Cancel </Button> </div> </CardContent> </Card>)}},'"},)}import { Card, CardContent  } from '@/components / ui / card';
+}> Create </Button> </div> <Button > Cancel </Button> </div> </CardContent> </Card>)}},'"},)}import { Card, CardContent  } from @/components / ui / card;
 import { Button  } from '@/components / ui / button';
-export const CreateResumeForm = ({onCreateResume,on_cancel,is_loading}: CreateResumeFormProps) =>: any {const [newResumeTitle, setNewResumeTitle] = useState ('')const handle_submit = async () => {if () return) {$2;
+export const CreateResumeForm = ({onCreateResume,on_cancel,is_loading}: CreateResumeFormProps) =>: any {const [newResumeTitle, setNewResumeTitle] = useState ()const handle_submit = async () => {if () return) {$2;
 }
     await onCreateResume (newResumeTitle)}
   return (<Card className='w - full max - w-2xl mx - auto'>;
-      <CardContent className='py - 8'>;
+      <CardContent className=py - 8>;
         <div className='text - center'>;
-          <h2 className='text - 2xl font - bold mb - 2'>Create New Resume</h2>;
+          <h2 className=text - 2xl font - bold mb - 2>Create New Resume</h2>;
           <p className='text - muted - foreground mb - 6'>;
             Give your resume a title to get started;
           </p>;
-          <div className='flex gap - 2 max - w-md mx - auto'>;
+          <div className=flex gap - 2 max - w-md mx - auto>;
             <input;
               type='text';
-              placeholder="Resume Title (e.g. 'AI Engineer Resume')";
+              placeholder="Resume Title (e.g. AI Engineer Resume);
               className='flex h - 10 w - full rounded - md border border - input bg - background px - 3 py - 2 text - sm';
               value={newResumeTitle}
               on_change={e => setNewResumeTitle (e.target.value)}
@@ -233,24 +139,24 @@ export const CreateResumeForm = ({onCreateResume,on_cancel,is_loading}: CreateRe
             <Button;
               on_click={handle_submit}
               disabled={!newResumeTitle.trim () || is_loading}            >;
-              {is_loading && <Loader2 className='mr - 2 h - 4 w - 4 animate - spin' />}
+              {is_loading && <Loader2 className=mr - 2 h - 4 w - 4 animate - spin />}
               Create;
             </Button>;
           </div>;
-          <Button variant='ghost' on_click={on_cancel} className='mt - 4'>            Cancel;
+          <Button variant='ghost' on_click={on_cancel} className=mt - 4>            Cancel;
   const handle_submit = async () => {if () return) {$2;
 }
     await onCreateResume (newResumeTitle)}
-  return (<Card className="w - full max - w-2xl mx - auto">;
-      <CardContent className="py - 8">;
-        <div className="text - center">;
-          <h2 className="text - 2xl font - bold mb - 2">Create New Resume</h2>;
-          <p className="text - muted - foreground mb - 6">Give your resume a title to get started</p>;
-          <div className="flex gap - 2 max - w-md mx - auto">;
+  return (<Card className=w - full max - w-2xl mx - auto">;
+      <CardContent className="py - 8>;
+        <div className=text - center">;
+          <h2 className="text - 2xl font - bold mb - 2>Create New Resume</h2>;
+          <p className=text - muted - foreground mb - 6">Give your resume a title to get started</p>;
+          <div className="flex gap - 2 max - w-md mx - auto>;
             <input;
-              type="text";
-              placeholder="Resume Title (e.g. 'AI Engineer Resume')";
-              className="flex h - 10 w - full rounded - md border border - input bg - background px - 3 py - 2 text - sm";
+              type=text";
+              placeholder="Resume Title (e.g. 'AI Engineer Resume');
+              className=flex h - 10 w - full rounded - md border border - input bg - background px - 3 py - 2 text - sm";
               value={newResumeTitle}
               on_change={(e) => setNewResumeTitle (e.target.value)}
             />;
@@ -258,19 +164,18 @@ export const CreateResumeForm = ({onCreateResume,on_cancel,is_loading}: CreateRe
               on_click={handle_submit}
               disabled={!newResumeTitle.trim () || is_loading}
             >;
-              {is_loading && <Loader2 className="mr - 2 h - 4 w - 4 animate - spin" />}
+              {is_loading && <Loader2 className="mr - 2 h - 4 w - 4 animate - spin />}
               Create;
             </Button>;
           </div>;
           <Button;
-            variant="ghost";
+            variant=ghost";
             on_click = {on_cancel }
-            className="mt - 4";
+            className="mt - 4;
           >;
           </Button>;
         </div>;
       </CardContent>;
-<<<<<<< HEAD:src_backup/components/resume-builder/wizard/CreateResumeForm.tsx
     </Card>);
 }
 w - full max - w-2xl mx - auto"> <CardContent className=" py - 8"> <div className=" text - center"> <h2 className=" text - 2xl font - bold mb - 2">Create New Resume</h2> <p className=" text - muted - foreground mb - 6">Give your resume a title to get started</p> <div className=" flex gap - 2 max - w-md mx - auto" > <input /> <Button on_click={
@@ -282,28 +187,20 @@ w - full max - w-2xl mx - auto"> <CardContent className=" py - 8"> <div classNam
 '"},
   );
 }
-<<<<<<< HEAD:src_backup/components/resume-builder/wizard/CreateResumeForm.tsx
-=======
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 );
-};
-w-full max-w-2xl mx-auto"> <CardContent className=" py-8"> <div className=" text-center"> <h2 className=" text-2xl font-bold mb-2">Create New Resume</h2> <p className=" text-muted-foreground mb-6">Give your resume a title to get started</p> <div className=" flex gap-2 max-w-md mx-auto" > <input /> <Button onClick={;
+}
+w-full max-w-2xl mx-auto> <CardContent className=" py-8"> <div className= text-center> <h2 className=" text-2xl font-bold mb-2">Create New Resume</h2> <p className= text-muted-foreground mb-6>Give your resume a title to get started</p> <div className=" flex gap-2 max-w-md mx-auto" > <input /> <Button onClick={
   handleSubmit ;
-}disabled= {;
+}disabled= {
   !newResumeTitle.trim () || isLoading ;
 }> Create </Button> </div> <Button > Cancel </Button> </div> </CardContent> </Card>) ;
-};
-'"
+}
+
 origin/cursor/automate-test-improve-and-merge-code-2533
-=======
     </Card>)}
-w - full max - w-2xl mx - auto"> <CardContent className=" py - 8"> <div className=" text - center"> <h2 className=" text - 2xl font - bold mb - 2">Create New Resume</h2> <p className=" text - muted - foreground mb - 6">Give your resume a title to get started</p> <div className=" flex gap - 2 max - w-md mx - auto" > <input /> <Button on_click={handle_submit;
+w - full max - w-2xl mx - auto> <CardContent className=" py - 8"> <div className= text - center> <h2 className=" text - 2xl font - bold mb - 2">Create New Resume</h2> <p className= text - muted - foreground mb - 6>Give your resume a title to get started</p> <div className=" flex gap - 2 max - w-md mx - auto" > <input /> <Button on_click={handle_submit;
 }disabled= {!newResumeTitle.trim () || is_loading;
 }> Create </Button> </div> <Button > Cancel </Button> </div> </CardContent> </Card>)}
-'"},)})}w-full max-w-2xl mx-auto"> <CardContent className=" py-8"> <div className=" text-center"> <h2 className=" text-2xl font-bold mb-2">Create New Resume</h2> <p className=" text-muted-foreground mb-6">Give your resume a title to get started</p> <div className=" flex gap-2 max-w-md mx-auto" > <input /> <Button onClick={handleSubmit ;
+},)})}w-full max-w-2xl mx-auto> <CardContent className=" py-8"> <div className= text-center> <h2 className=" text-2xl font-bold mb-2">Create New Resume</h2> <p className= text-muted-foreground mb-6>Give your resume a title to get started</p> <div className=" flex gap-2 max-w-md mx-auto" > <input /> <Button onClick={handleSubmit ;
 }disabled= {!newResumeTitle.trim () || isLoading ;
 }> Create </Button> </div> <Button > Cancel </Button> </div> </CardContent> </Card>)}'";
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c:src/components/resume-builder/wizard/CreateResumeForm.tsx
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/resume-builder/wizard/CreateResumeForm.tsx

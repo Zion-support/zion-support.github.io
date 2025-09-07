@@ -7,10 +7,9 @@ on:
 
 permissions:
   contents: write
-  actions: read
 
   actions: read
-  actions: read
+
 jobs:
   main:
     name: Main Job

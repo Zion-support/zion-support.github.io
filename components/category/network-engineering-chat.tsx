@@ -7,60 +7,60 @@ import Link from 'next/link';
 const NetworkEngineeringChat: NextPage = () => {return (<div>;
 
 
-=======
-<<<<<<< HEAD
 <div> <Head> <title>NetworkEngineeringChat - Zion Tech Solutions</title> <meta name="description" content="NetworkEngineeringChat blog post" /> </Head> <main> <h1>NetworkEngineeringChat</h1> <p>Blog content coming soon...</p> <a href="/blog" >Back to Blog</a> </main> </div> export default NetworkEngineeringChat
 =======
-import type { NextPage } from 'next';
-import Head from 'next/head';
-import Link from 'next/link';
-const NetworkEngineeringChat: NextPage;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
+>>>>>>> origin/chore/fix-lint-and-merge
 import type { NextPage } from "next";
 import Head from "next/head";
+
 import Link from "next/link";
 const NetworkEngineeringChat: NextPage = () => {;
   return (
     <div>;
       <Head>;
         <title>NetworkEngineeringChat - Zion Tech Solutions</title>;
+<<<<<<< HEAD
         <meta
-          name="description"
-          content="NetworkEngineeringChat blog post"
-        />{" "}
+          name=description"
+          content="NetworkEngineeringChat blog post
+        />{ "}
       <main>
         <h1>NetworkEngineeringChat</h1>
         <p>Blog content coming soon...</p>
+        <a href="/blog>Back to Blog</a>
+=======
+
         <a href="/blog">Back to Blog</a>
+>>>>>>> origin/chore/fix-lint-and-merge
       </main>
     </div>
       </Head>;
 
       <main>;
         <h1>NetworkEngineeringChat</h1>;
+<<<<<<< HEAD
         <p>Blog content coming soon...</p>;
+        <a href=/blog">Back to Blog</a>;
+=======
+        <p>Blog content coming soon...</p>;"
         <a href="/blog">Back to Blog</a>;
+>>>>>>> origin/chore/fix-lint-and-merge
       </main>;
     </div>;
   );
 }
 export default NetworkEngineeringChat;
-<<<<<<< HEAD
 
-
-
-
-
-
-
-import type { NextPage } from "next";
-import Head from "next/head";
+"
+import type { NextPage } from "next";"
+import Head from "next/head";"
 import Link from "next/link";
-import type { NextPage } from 'next';
-import Head from 'next/head';
+import type { NextPage } from 'next';'
+import Head from 'next/head';'
+
 import Link from 'next/link';
 
-const NetworkEngineeringChat: NextPage = () => {
+const NetworkEngineeringChat: NextPage = () => {}
   return (
     <div>
       <Head>
@@ -71,30 +71,23 @@ const NetworkEngineeringChat: NextPage = () => {
 
         <title>NetworkEngineeringChat - Zion Tech Solutions</title>
 
-
-
-
-
-
-
-
-
 import type { NextPage } from './next';
 import Head from './next / head';
+
 import Link from './next / link';
-const NetworkEngineeringChat: NextPage = () => {
+const NetworkEngineeringChat: NextPage = () => {}
   return (
     <div>;
       <Head>;
         <title > NetworkEngineeringChat - Zion Tech Solutions</title>;
-        <meta;
-          name="description";
-          content="NetworkEngineeringChat blog post";
+        <meta;"
+          name="description";"
+          content="NetworkEngineeringChat blog post";"
         />{" "}
       </Head>;
       <main>;
         <h1 > NetworkEngineeringChat</h1>;
-        <p > Blog content coming soon...</p>;
+        <p > Blog content coming soon...</p>;"
         <a href="/blog">Back to Blog</a>;
       </main>;
     </div>);
@@ -102,12 +95,14 @@ const NetworkEngineeringChat: NextPage = () => {
 ;
 export default NetworkEngineeringChat;
 ;
+
+origin/cursor/automate-test-improve-and-merge-code-20a4
+pr-12243
     <div>
       <Head>
         <title>NetworkEngineeringChat - Zion Tech Solutions</title>
         <meta name=&quot;description&quot; content=&quot;NetworkEngineeringChat blog post&quot; />
       </Head>
-      
       <main>
         <h1>NetworkEngineeringChat</h1>
         <p>Blog content coming soon...</p>
@@ -119,19 +114,30 @@ export default NetworkEngineeringChat;
 
 export default NetworkEngineeringChat
 
-
-
-
-
-
-
-origin/cursor/automate-test-improve-and-merge-code-2533
-
-
+const NetworkEngineeringChat: NextPage = () => {
+  return (
+    <div>
+      <Head>
+        <title>NetworkEngineeringChat - Zion Tech Solutions</title>
+        <meta
+          name="description"
+          content="NetworkEngineeringChat blog post"
+        />{" "}
+      </Head>
+      <main>
+        <h1>NetworkEngineeringChat</h1>
+        <p>Blog content coming soon...</p>
+        <a href="/blog">Back to Blog</a>
+      </main>
+    </div>
+  );
+}
+export default NetworkEngineeringChat;
 
         <title>NetworkEngineeringChat - Zion Tech Solutions</title>
+<<<<<<< HEAD
         <title>NetworkEngineeringChat - Zion Tech Solutions</title>
 
 =======
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
+        <title>NetworkEngineeringChat - Zion Tech Solutions</title>
+>>>>>>> origin/chore/fix-lint-and-merge

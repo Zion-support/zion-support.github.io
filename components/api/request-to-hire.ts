@@ -1,26 +1,9 @@
-import type { NextApiRequest, NextApiResponse } from 'next';'
-import fs from 'fs';'
-import path from 'path';'
+<<<<<<< HEAD
 
-export default async function handler() {
-  }
-  if (req.method !== 'POST') {'
-}
-return res.status(405).json({ "error": 'Method not allowed' });'
- 
-}
 
-  const { talentSlug, requesterName, requesterEmail, projectInfo } = req.body || {};
+  const { talentSlug, requesterName, requesterEmail, projectInfo } = req.body || {}
   if (!talentSlug || !requesterName || !requesterEmail || !projectInfo) {
-}
-const { talentSlug, requesterName, requesterEmail, projectInfo } =;
-    req.body |{};
 
-const { talentSlug, requesterName, requesterEmail, projectInfo } = req.body |{}
-  if (!talentSlug |!requesterName |!requesterEmail |!projectInfo) {
-}
-return res.status(400).json({ "error": 'Missing required fields',;'
-});
   }
 
   try {
@@ -31,13 +14,7 @@ return res.status(500).json({ "error": 'Internal error' });'
 
     req.body |{};  if (!talentSlug |!requesterName |!requesterEmail |!projectInfo) {export default async function handler(req: NextApiRequest, res: NextApiResponse) {
 
-<<<<<<< HEAD
   }
-=======
-  if (req.method !== 'POST') {
-    return res.status(405).json({ error: 'Method not allowed' })
-=======
-<<<<<<< HEAD
 
     req.body |{};  if (!talentSlug |!requesterName |!requesterEmail |!projectInfo) {export default async function handler(req: NextApiRequest, res: NextApiResponse) {}
   }
@@ -52,11 +29,11 @@ return res.status(500).json({ "error": 'Internal error' });'
     req.body || {};  const { talentSlug, requesterName, requesterEmail, projectInfo } = req.body || {};
   if (!talentSlug || !requesterName || !requesterEmail || !projectInfo) {}
 =======
+import type { NextApiRequest, NextApiResponse } from 'next';'
+import fs from 'fs';'
+import path from 'path';
 
-
-  if (!talentSlug || !requesterName || !requesterEmail || !projectInfo) {
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+>>>>>>> origin/chore/fix-lint-and-merge
   }
 
   const { talentSlug, requesterName, requesterEmail, projectInfo } =
@@ -64,14 +41,9 @@ return res.status(500).json({ "error": 'Internal error' });'
 <<<<<<< HEAD
   if (!talentSlug || !requesterName || !requesterEmail || !projectInfo) {
 
-=======
-  if (!talentSlug || !requesterName || !requesterEmail || !projectInfo) {}
-'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     return res.status(400).json({ error: 'Missing required fields' });
   }
 
-<<<<<<< HEAD
   }
   try {}
     const timestamp = null;}
@@ -98,15 +70,15 @@ requesterEmail
 ;
 const file = path.join(;
       dir
-      `request-${timestamp.replace(/[:.]/g, '-')}.json``
-    );
-    fs.writeFileSync(file, JSON.stringify(payload, null, 2), 'utf8');'
+
     // Email hooks could be integrated here (e.g., Resend, SendGrid, Nodemailer)
 return res.status(200).json({ "ok": true,;
 });
   } catch (err) {
-    }
-    console.error('Request-to-hire failed', err);'
-return res.status(500).json({ "error": 'Internal error',;'
+
 });
+=======
+
+    return res.status(400).json({ error: 'Missing required fields' });
+>>>>>>> origin/chore/fix-lint-and-merge
   }

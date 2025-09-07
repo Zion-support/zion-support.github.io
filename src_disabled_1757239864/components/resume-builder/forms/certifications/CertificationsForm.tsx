@@ -85,7 +85,6 @@ export function CertificationsForm({
     setEditingId(cert.id!);    form.reset({
       ...cert
   }
-  const handleEdit = (cert: Certification) => {
     setEditingId(cert.id!)
     form.reset({
       issue_date: formatDateValue(cert.issue_date)

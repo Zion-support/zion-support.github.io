@@ -8,16 +8,6 @@ on:
 
 permissions:
   contents: write
-  push:
-    branches: [ main ]
-  schedule:
-    - cron: '0 */6 * * *'
-  workflow_dispatch:
-
-permissions:
-  contents: write
-  issues: write
-
 
 jobs:
   lhci:
@@ -43,5 +33,6 @@ jobs:
           fi
           git add -A
           git commit -m "chore(auto): lighthouse ci artifacts [skip ci]" || true
+
           git push || true
           git push || true

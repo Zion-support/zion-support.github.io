@@ -168,7 +168,6 @@ class MasterAutomation {
       { command: 'npm run type-check', description: 'TypeScript type check' },
     ];
 
-    const results = [];
     for (const check of checks) {
       const result = await this.runCommand(check.command, check.description);
       results.push({ ...check, result });
@@ -208,7 +207,6 @@ class MasterAutomation {
       },
     ];
 
-    const results = [];
     for (const script of scripts) {
       const result = await this.runCommand(script.command, script.description);
       results.push({ ...script, result });

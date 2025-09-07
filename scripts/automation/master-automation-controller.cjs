@@ -1,15 +1,23 @@
 <<<<<<< HEAD
-=======
 
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
+
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 #!/""usr/bin/env""
-const fs = require("fs");
-const path = require("path");
-const { execSync } = require("child_process");
+const fs = require("fs")
+const path = require("path")
+const { execSync } = require("child_process")
       this.projectRoot, "master-automation-controller-report.json"
-const fs = require("fs");
-const path = require("path");
-const { execSync } = require("child_process");
+const fs = require("fs")
+const path = require("path")
+const { execSync } = require("child_process")
       this.projectRoot, "master-automation-controller-report.json"
     console.log(`[${timestamp}] � Master "Controller"`)
   this.log(" Starting Master Automation Controller...")
@@ -19,40 +27,125 @@ const { execSync } = require("child_process");
     for (const ["name", "automation")]
     this.log(" Master Controller stopped")
   this.log(" Initializing automation scripts...")
-const AutoErrorFixer = require("./auto-error-fixer.cjs");
+  const AutoErrorFixer = require("./auto-error-fixer.cjs")
       this.automations.set("auto-error-fixer")
       this.log(" Auto Error Fixer initialized")} catch (error) {  this.log(` Failed to initialize Auto Error "Fixer"`})
-const MergeConflictResolver = require("./merge-conflict-resolver.cjs");
+  const MergeConflictResolver = require("./merge-conflict-resolver.cjs")
       this.automations.set("merge-conflict-resolver")
       this.log(" Merge Conflict Resolver initialized")
   this.log( Failed to initialize Merge Conflict "Resolver": ${error.message  }")
     const automationScripts = ["comprehensive-error-fixer.cjs", "typescript-error-fixer.cjs"", "console-error-fixer.cjs", "performance-monitor.cjs"", "health-checker.cjs", "git-operations-manager.cjs"", "dependency-manager.cjs", "build-optimizer.cjs"", ""]
-const MergeConflictResolver = require("./merge-conflict-resolver.cjs");
+  const MergeConflictResolver = require("./merge-conflict-resolver.cjs")
       this.automations.set("merge-conflict-resolver")
       this.log(" Merge Conflict Resolver initialized")
   this.log( Failed to initialize Merge Conflict "Resolver": ${error.message}")
     const automationScripts = ["comprehensive-error-fixer.cjs", "typescript-error-fixer.cjs", "console-error-fixer.cjs", "performance-monitor.cjs", "health-checker.cjs", "git-operations-manager.cjs", "dependency-manager.cjs", "build-optimizer.cjs", "]
           if (AutomationClass && typeof AutomationClass === "function")
-const name = script.replace(".cjs", "");
+            const name = script.replace(".cjs", "")
   this.log(" Monitoring automation status...")
+>>>>>>> origin/chore/fix-lint-and-merge
   this.log(" Monitoring automation status...")
+  this.log( Monitoring automation status...)
       await this.generateHealthReport()} catch (error) {  this.log(` Error during "monitoring"`})
-const status = execSync("pm2 jlist", { "encoding": "utf8"});
+<<<<<<< HEAD
+
+=======
+  const status = execSync("pm2 jlist", { "encoding": "utf8"})
+>>>>>>> origin/chore/fix-lint-and-merge
       return JSON.parse(status)} catch (error) {  this.log(` Could not get PM2 "status"`})
-        if (app.pm2_env && app.pm2_env.status === "errored")
+        if (app.pm2_env && app.pm2_env.status === errored)
           this.log(⚠ ${app.name} using high memory (${Math.round(app.monit.memory / 1024 / 1024)}MB), restarting..."
-            "⚠ ${app.name} using high CPU (${app.monit.cpu}%), monitoring..."
-        if (app.pm2_env && app.pm2_env.status === "errored") {this.log("⚠ ${app.name} is in error state, attempting restart...")
-          this.log(⚠ ${app.name} using high memory (${Math.round(app.monit.memory / 1024 / 1024)}MB), restarting..."
-  try {this.log(`� Restarting ${name}...`);execSync(`pm2 restart ${name}`, { "stdio": "pipe"`})
-  "stdio": "pipe"
-  try {this.log(`� Stopping ${name}...`);execSync(`pm2 stop ${name}`, { "stdio": "pipe"`})
-  try {this.log(`� Stopping ${name}...`);execSync(`pm2 stop ${name}`, { "stdio": "pipe"`})
+            "⚠ ${app.name} using high CPU (${app.monit.cpu}%), monitoring...
+        if (app.pm2_env && app.pm2_env.status === errored") {this.log("⚠ ${app.name} is in error state, attempting restart...)
+          this.log(⚠ ${app.name} using high memory (${Math.round(app.monit.memory / 1024 / 1024)}MB), restarting...
+  try {this.log(`� Restarting ${name}...`);execSync(`pm2 restart ${name}`, { "stdio": pipe`})
+  "stdio": pipe
+  try {this.log(`� Stopping ${name}...`);execSync(`pm2 stop ${name}`, { "stdio": pipe`})
+  try {this.log(`� Stopping ${name}...`);execSync(`pm2 stop ${name}`, { "stdio": pipe`})
   "timestamp"
-        "controllerStatus"
+        controllerStatus
           "automationsCount"
-        "pm2Status"
+        pm2Status
         "automationHealth"
+<<<<<<< HEAD
+
+=======
+        recommendations
+      this.log(" Health report generated")} catch (error) {  this.log(` Failed to generate health report`})
+    for (const ["name", automation)]
+  health[name] = { "status": unknown, "error": No status method}
+  health[name] = { "status": error, "error"}
+  health[name] = { status: "error", error}
+  "type": high_error_rate
+          "message": High error rate detected, consider reviewing automation logic
+          severity": "high
+      if (memoryUsage.trend === increasing")
+  "type: memory_leak"
+          "message: Memory usage increasing, potential memory leak detected"
+          "severity: medium"
+  "type: dependencies","message
+          severity": "low
+      if (memoryUsage.trend === increasing")
+  "type: memory_leak"
+          "message: Memory usage increasing, potential memory leak detected"
+          "severity: medium"
+  "type: dependencies","message
+          severity": "low
+    } catch (error) {  this.log(`⚠ Could not generate recommendations"`})
+  const logDir = path.join(this.projectRoot, "logs)
+        .filter(file => file.includes(error")
+  const content = fs.readFileSync(path.join(logDir, logFile), "utf8
+            .split(\n")
+                line.includes("ERROR)
+                line.includes(Error")
+                line.includes("error)
+        .filter(file => file.includes(error")
+            .split(\n")
+                line.includes("ERROR)
+                line.includes(Error")
+                line.includes("error)
+  name"
+        "memory
+        timestamp"
+        const trend = last.memory > first.memory ? "increasing : decreasing"
+        return { trend, "data}
+      return { trend": "stable, data"}
+  return { "trend: unknown", "data}
+  const result = execSync(npm outdated --json", { "encoding: utf8"})
+  this.log("� EMERGENCY STOP ACTIVATED)
+      execSync(pm2 stop all", { "stdio: pipe"})
+      this.log(" All PM2 processes stopped)
+      this.stop()} catch (error) {  this.log(` Emergency stop failed"`})
+  "isRunning
+      automationsCount"
+      "automations
+      lastCheck"
+      "logFile
+  try {this.log(` Running command": ${command} ${args.join(" `})
+  case start"
+  case "start
+        case stop"
+        case "restart
+        case status"
+        case "health
+        case emergency-stop"
+        case "health
+        case emergency-stop"
+        "default
+    } catch (error) {  this.log(` Command failed"`})
+  process.on("SIGINT)
+>>>>>>> cursor/automate-test-improve-and-merge-code-18b6
+
+
+  process.on(SIGTERM")
+
+  process.on("SIGTERM)
+=======
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+=======
+  process.on(SIGTERM")
+
+=======
         "recommendations"
       this.log(" Health report generated")} catch (error) {  this.log(` Failed to generate health "report"`})
     for (const ["name", "automation")]
@@ -75,15 +168,15 @@ const status = execSync("pm2 jlist", { "encoding": "utf8"});
   "type": "dependencies","message"
           "severity": "low"
     } catch (error) {  this.log(`⚠ Could not generate "recommendations"`})
-const logDir = path.join(this.projectRoot, "logs");
+  const logDir = path.join(this.projectRoot, "logs")
         .filter(file => file.includes("error")
-const content = fs.readFileSync(path.join(logDir, logFile), "utf8";
+  const content = fs.readFileSync(path.join(logDir, logFile), "utf8"
             .split("\n")
                 line.includes("ERROR")
                 line.includes("Error")
                 line.includes("error")
         .filter(file => file.includes("error")
-const content = fs.readFileSync(path.join(logDir, logFile), "utf8";
+  const content = fs.readFileSync(path.join(logDir, logFile), "utf8"
             .split("\n")
                 line.includes("ERROR")
                 line.includes("Error")
@@ -91,11 +184,11 @@ const content = fs.readFileSync(path.join(logDir, logFile), "utf8";
   "name"
         "memory"
         "timestamp"
-const trend = last.memory > first.memory ? "increasing" : "decreasing";
+        const trend = last.memory > first.memory ? "increasing" : "decreasing"
         return { trend, "data"}
       return { "trend": "stable", "data"}
   return { "trend": "unknown", "data"}
-const result = execSync("npm outdated --json", { "encoding": "utf8"});
+  const result = execSync("npm outdated --json", { "encoding": "utf8"})
   this.log("� EMERGENCY STOP ACTIVATED")
       execSync("pm2 stop all", { "stdio": "pipe"})
       this.log(" All PM2 processes stopped")
@@ -121,30 +214,19 @@ const result = execSync("npm outdated --json", { "encoding": "utf8"});
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
 
+=======
   process.on("SIGTERM")
-<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 <<<<<<< HEAD
-=======
-
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
   process.on("SIGTERM")
 =======
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
 =======
   process.on("SIGTERM")
-<<<<<<< HEAD
-  process.on("SIGTERM")
-
-
-=======
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> origin/chore/fix-lint-and-merge
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
 =======
@@ -152,7 +234,3 @@ const result = execSync("npm outdated --json", { "encoding": "utf8"});
 
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
-=======
-
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5

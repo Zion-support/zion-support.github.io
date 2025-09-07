@@ -156,7 +156,6 @@ const benefits = [
   },
 ];
 
-const benefits = [
   {
     title: '99.99% Threat Detection',
     description:
@@ -186,14 +185,11 @@ const benefits = [
 ];
 }
 
-import { motion } from 'framer-motion';
 import {;
   Shield, Lock, Eye, AlertTriangle, Cpu, Globe, Cloud,;
   CheckCircle, ArrowRight, Star, Clock, Target,;
   Zap, Users, BarChart3, Settings, Database;
 } from 'lucide-react',;
-import Layout from '../components/layout/Layout';
-import { advancedCybersecurityServices2025 } from '../data/2025-advanced-cybersecurity-services';
 const contactInfo = {;
   mobile: '+1 302 464 0950';
   email: 'kleber@ziontechgroup.com';

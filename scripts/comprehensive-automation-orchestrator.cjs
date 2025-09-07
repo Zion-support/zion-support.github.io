@@ -1,32 +1,36 @@
+<<<<<<< HEAD
 #!/usr/bin/env node
-
 /**
  * Comprehensive Automation Orchestrator
  * Orchestrates all automation scripts for maximum efficiency
  * Enhanced with parallel execution, better error handling, and comprehensive monitoring
  */
 <<<<<<< HEAD
+
+const fs = require("fs)
+const path = require(path")
+const { execSync, spawn } = require("child_process)
+const os = require(os")
+
+>>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
 =======
 <<<<<<< HEAD
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
 const fs = require("fs")
 const path = require("path")
 const { execSync, spawn } = require("child_process")
 const os = require("os")
-<<<<<<< HEAD
-=======
 =======
 const fs = require("fs");
 const path = require("path");
 const { execSync, spawn } = require("child_process");
 >>>>>>> main
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
+>>>>>>> origin/chore/fix-lint-and-merge
 
-class ComprehensiveAutomationOrchestrator {
+class AutomationOrchestrator {
   constructor() {
     this.projectRoot = process.cwd();
-    this.reportsDir = path.join(this.projectRoot, "automation-reports");
-    this.logsDir = path.join(this.projectRoot, "logs");
+    this.reportsDir = path.join(this.projectRoot, "automation-reports);
+    this.logsDir = path.join(this.projectRoot, logs");
     this.results = {
       success: [],
       errors: [],
@@ -38,7 +42,12 @@ class ComprehensiveAutomationOrchestrator {
         memoryUsage: {},
         systemInfo: {}
       }
+<<<<<<< HEAD
+    }
+=======
     };
+    this.startTime = Date.now();
+>>>>>>> origin/chore/fix-lint-and-merge
     
     // Ensure directories exist
     [this.reportsDir, this.logsDir].forEach(dir => {
@@ -55,22 +64,24 @@ class ComprehensiveAutomationOrchestrator {
       cpus: os.cpus().length,
       totalMemory: os.totalmem(),
       freeMemory: os.freemem()
-    };
+    }
   }
 
-  log(message, type = "info") {
+  log(message, type = "info) {
     const timestamp = new Date().toISOString();
+<<<<<<< HEAD
+    const prefix = type === error" ? "❌ : type === success" ? "✅ : ℹ️";
+
+=======
     const prefix = type === "error" ? "❌" : type === "success" ? "✅" : "ℹ️";
 <<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
+>>>>>>> origin/chore/fix-lint-and-merge
     const logMessage = `[${timestamp}] ${prefix} ${message}`;
     console.log(logMessage);
     
     // Write to log file
-    const logFile = path.join(this.logsDir, "automation-orchestrator.log");
-    fs.appendFileSync(logFile, logMessage + "\n");
+    const logFile = path.join(this.logsDir, "automation-orchestrator.log);
+    fs.appendFileSync(logFile, logMessage + \n");
   }
 
   async runScriptsInParallel(scripts, category, maxConcurrency = 3) {
@@ -100,34 +111,17 @@ class ComprehensiveAutomationOrchestrator {
     
     this.log(`Completed ${category} scripts execution`);
 <<<<<<< HEAD
+
+>>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
+  }
+
+
 =======
 =======
     console.log(`[${timestamp}] ${prefix} ${message}`);
 >>>>>>> main
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
   }
 
-<<<<<<< HEAD
-  async run() {
-    try {
-      this.log("🚀 Starting Comprehensive Automation Orchestration...");
-      this.log("🏢 Zion Tech Group - Advanced Automation System");
-      
-      await this.init();
-      await this.preAutomationChecks();
-      await this.runErrorFixing();
-      await this.runBuildOptimization();
-      await this.runPerformanceMonitoring();
-      await this.runQualityChecks();
-      await this.generateReport();
-      
-      this.log("🎉 Comprehensive automation completed successfully!", "success");
-      this.log(`⏱️ Total orchestration time: ${Date.now() - this.startTime}ms`);
-      
-    } catch (error) {
-      this.log(`Orchestration failed: ${error.message}`, "error");
-      process.exit(1);
-=======
   async runScript(scriptName, category) {
     try {
       this.log(`Running ${scriptName} (${category})...`);
@@ -168,136 +162,102 @@ class ComprehensiveAutomationOrchestrator {
     } catch (error) {
       this.results.warnings.push(`${name} had issues: ${error.message}`);
       this.log(`${name} had issues: ${error.message}`, "warning");
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
+>>>>>>> origin/chore/fix-lint-and-merge
     }
   }
 
   async preAutomationChecks() {
 <<<<<<< HEAD
-    this.log("🔍 Running pre-automation checks...");
+
 =======
     this.log("Running pre-automation checks...");
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
+>>>>>>> origin/chore/fix-lint-and-merge
     
     // Check if we're in a Node.js project
-    if (!fs.existsSync("package.json")) {
-      throw new Error("Not in a Node.js project directory");
+    if (!fs.existsSync("package.json)) {
+      throw new Error(Not in a Node.js project directory");
     }
     
 <<<<<<< HEAD
+
+    if (!fs.existsSync("scripts)) {
+      this.log(Creating scripts directory...");
+      fs.mkdirSync("scripts, { recursive: true });
 =======
     // Ensure scripts directory exists
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
     if (!fs.existsSync("scripts")) {
       this.log("Creating scripts directory...");
       fs.mkdirSync("scripts", { recursive: true });
+>>>>>>> origin/chore/fix-lint-and-merge
     }
     
     // Check Node.js version
     const nodeVersion = process.version;
     this.log(`Node.js version: ${nodeVersion}`);
     
-    this.results.success.push("Pre-automation checks passed");
+    this.results.success.push(Pre-automation checks passed");
   }
 
   async runErrorFixing() {
-    this.log("🔧 Running error fixing automation...");
+    this.log("🔧 Running error fixing automation...);
     
     const errorFixingScripts = [
-      "comprehensive-error-fixer.cjs",
 <<<<<<< HEAD
-      "auto-fixer.js"
+      comprehensive-error-fixer.cjs"];
 =======
+      "comprehensive-error-fixer.cjs",
       "auto-fixer.js",
       "syntax-fixer.cjs",
       "fix-all-syntax-errors.cjs"
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
     ];
+>>>>>>> origin/chore/fix-lint-and-merge
     
     for (const script of errorFixingScripts) {
-      await this.runScript(script, "error-fixing");
+      await this.runScript(script, "error-fixing);
     }
   }
 
   async runBuildOptimization() {
-    this.log("⚡ Running build optimization...");
+    this.log(⚡ Running build optimization...");
     
     const buildScripts = [
-      "advanced-build-optimizer.js",
 <<<<<<< HEAD
-      "optimize-build.js"
+      "advanced-build-optimizer.js];
 =======
+      "advanced-build-optimizer.js",
       "build-optimizer.cjs",
       "optimize-performance.js"
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
     ];
+>>>>>>> origin/chore/fix-lint-and-merge
     
     for (const script of buildScripts) {
-      await this.runScript(script, "build-optimization");
+      await this.runScript(script, build-optimization");
     }
   }
 
   async runPerformanceMonitoring() {
-    this.log("📊 Running performance monitoring...");
+    this.log("📊 Running performance monitoring...);
     
     const performanceScripts = [
-      "performance-monitor-enhanced.js",
 <<<<<<< HEAD
-      "performance-optimizer.js"
+      performance-monitor-enhanced.js"];
 =======
+      "performance-monitor-enhanced.js",
       "performance-optimizer.js",
       "performance-monitor.cjs"
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
     ];
+>>>>>>> origin/chore/fix-lint-and-merge
     
     for (const script of performanceScripts) {
-      await this.runScript(script, "performance-monitoring");
+      await this.runScript(script, "performance-monitoring);
     }
   }
 
   async runQualityChecks() {
-    this.log("🔍 Running quality checks...");
+    this.log(🔍 Running quality checks...");
     
 <<<<<<< HEAD
-    const qualityChecks = [
-      { cmd: "npm run lint", name: "ESLint" },
-      { cmd: "npm run type-check", name: "TypeScript" },
-      { cmd: "npm run build", name: "Build" }
-    ];
-    
-    for (const check of qualityChecks) {
-      try {
-        execSync(check.cmd, { stdio: "pipe" });
-        this.log(`${check.name} completed successfully`, "success");
-        this.results.success.push(`${check.name} check passed`);
-      } catch (error) {
-        this.results.warnings.push(`${check.name} had issues`);
-        this.log(`${check.name} had issues`, "error");
-      }
-    }
-  }
 
-  async runScript(scriptName, category) {
-    const scriptPath = path.join("scripts", scriptName);
-    
-    if (!fs.existsSync(scriptPath)) {
-      this.log(`⚠️ Script not found: ${scriptName}`);
-      return;
-    }
-    
-    try {
-      execSync(`node ${scriptPath}`, { stdio: "pipe" });
-      this.log(`${scriptName} completed successfully`, "success");
-      this.results.success.push(`${scriptName} (${category}) completed`);
-    } catch (error) {
-      this.results.errors.push(`${scriptName} failed`);
-      this.log(`${scriptName} failed: ${error.message}`, "error");
-    }
-  }
-
-  async generateReport() {
-    this.log("📊 Generating comprehensive automation report...");
-    
 =======
     const qualityCommands = [
       { cmd: "npm run lint", name: "ESLint" },
@@ -342,10 +302,10 @@ class ComprehensiveAutomationOrchestrator {
     this.log("📋 Generating comprehensive automation report...");
     
     const duration = Date.now() - this.startTime;
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
+>>>>>>> origin/chore/fix-lint-and-merge
     const report = {
       timestamp: new Date().toISOString(),
-      duration: Date.now() - this.startTime,
+      duration: `${duration}ms`,
       summary: {
         successful: this.results.success.length,
         errors: this.results.errors.length,
@@ -354,14 +314,12 @@ class ComprehensiveAutomationOrchestrator {
       results: this.results,
       recommendations: this.generateRecommendations(),
       nextSteps: this.generateNextSteps()
-    };
+    }
     
-    const reportPath = path.join(process.cwd(), "comprehensive-automation-report.json");
+    const reportPath = path.join(process.cwd(), "comprehensive-automation-report.json);
     fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
 <<<<<<< HEAD
-    this.log(`📄 Comprehensive report saved to ${reportPath}`, "success");
-    
-    // Generate markdown summary
+
 =======
     this.log(`📊 Comprehensive report saved to ${reportPath}`, "success");
     
@@ -370,82 +328,94 @@ class ComprehensiveAutomationOrchestrator {
   }
 
   generateMarkdownReport(report) {
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
+>>>>>>> origin/chore/fix-lint-and-merge
     const markdown = `# Comprehensive Automation Report
 
 ## Summary
-- ✅ Successful: ${report.results.success.length}
-- ❌ Errors: ${report.results.errors.length}
-- ⚠️ Warnings: ${report.results.warnings.length}
+- **Timestamp**: ${report.timestamp}
+- **Duration**: ${report.duration}
+- **Successful**: ${report.summary.successful}
+- **Errors**: ${report.summary.errors}
+- **Warnings**: ${report.summary.warnings}
 
+<<<<<<< HEAD
 ## Successful Operations
-${report.results.success.map(item => `- ${item}`).join("\n")}
+${report.results.success.map(item => `- ${item}`).join(\n")}
 
 ## Errors
-${report.results.errors.map(item => `- ${item}`).join("\n")}
+${report.results.errors.map(item => `- ${item}`).join("\n)}
 
 ## Warnings
+${report.results.warnings.map(item => `- ${item}`).join(\n")}
+=======
+## Results
+
+### Successful Operations
+${report.results.success.map(item => `- ${item}`).join("\n")}
+
+### Errors
+${report.results.errors.map(item => `- ${item}`).join("\n")}
+
+### Warnings
 ${report.results.warnings.map(item => `- ${item}`).join("\n")}
+>>>>>>> origin/chore/fix-lint-and-merge
 
 ## Recommendations
-${report.recommendations.map(item => `- ${item}`).join("\n")}
+${report.recommendations.map(item => `- ${item}`).join("\n)}
 
 ## Next Steps
-${report.nextSteps.map(item => `- ${item}`).join("\n")}
 <<<<<<< HEAD
+${report.nextSteps.map(item => `- ${item}`).join(\n")}
 
-*Generated on ${report.timestamp}*
 =======
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
+${report.nextSteps.map(item => `- ${item}`).join("\n")}
+>>>>>>> origin/chore/fix-lint-and-merge
 `;
     
-    const markdownPath = path.join(process.cwd(), "AUTOMATION_REPORT.md");
+    const markdownPath = path.join(process.cwd(), "AUTOMATION_REPORT.md);
     fs.writeFileSync(markdownPath, markdown);
 <<<<<<< HEAD
-    this.log(`📄 Markdown summary saved to ${markdownPath}`, "success");
+
 =======
     this.log(`📝 Markdown summary saved to ${markdownPath}`, "success");
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
+>>>>>>> origin/chore/fix-lint-and-merge
   }
 
   generateRecommendations() {
     const recommendations = [];
     
     if (this.results.errors.length > 0) {
-      recommendations.push("Address all errors before deployment");
+      recommendations.push(Address all errors before deployment");
     }
     
     if (this.results.warnings.length > 0) {
-      recommendations.push("Review and address warnings for better code quality");
+      recommendations.push("Review and address warnings for better code quality);
     }
     
-    recommendations.push("Implement continuous integration for automated testing");
-    recommendations.push("Set up automated deployment pipeline");
-    recommendations.push("Monitor performance metrics in production");
-    recommendations.push("Regular security audits and dependency updates");
+    recommendations.push(Implement continuous integration for automated testing");
+    recommendations.push("Set up automated deployment pipeline);
+    recommendations.push(Monitor performance metrics in production");
+    recommendations.push("Regular security audits and dependency updates);
     
     return recommendations;
   }
 
   generateNextSteps() {
     return [
-      "Review the comprehensive automation report",
-      "Address any critical errors identified",
-      "Implement recommended optimizations",
-      "Set up monitoring for production environment",
-      "Schedule regular automation runs",
-      "Document any custom automation workflows"
+      Review the comprehensive automation report",
+      "Address any critical errors identified,
+      Implement recommended optimizations",
+      "Set up monitoring for production environment,
+      Schedule regular automation runs",
+      "Document any custom automation workflows
     ];
   }
 
 <<<<<<< HEAD
-      this.log(")
 
-      this.log(")
-      this.log(")
 =======
 <<<<<<< HEAD
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
+>>>>>>> origin/chore/fix-lint-and-merge
   generateMarkdownReport(report) {
     return `# Automation Report
 
@@ -458,13 +428,13 @@ ${report.nextSteps.map(item => `- ${item}`).join("\n")}
 - ⚠️ Warnings: ${report.summary.warnings}
 
 ## Successful Operations
-${report.results.success.map(item => `- ${item.script || item.command || item.check || 'Operation'}`).join('\n')}
+${report.results.success.map(item => `- ${item.script || item.command || item.check || Operation}`).join('\n')}
 
 ## Errors
-${report.results.errors.map(item => `- ${item.script || item.command || item.check || 'Operation'}: ${item.error}`).join('\n')}
+${report.results.errors.map(item => `- ${item.script || item.command || item.check || Operation}: ${item.error}`).join('\n')}
 
 ## Warnings
-${report.results.warnings.map(item => `- ${item}`).join('\n')}
+${report.results.warnings.map(item => `- ${item}`).join(\n)}
 
 ## Recommendations
 ${report.recommendations.map(item => `- ${item}`).join('\n')}
@@ -476,8 +446,8 @@ ${report.nextSteps.map(item => `- ${item}`).join('\n')}
 
   async run() {
     this.results.metrics.startTime = Date.now();
-    this.log("🚀 Starting Comprehensive Automation Orchestration...");
-    this.log("🏢 Zion Tech Group - Advanced Automation System");
+    this.log(🚀 Starting Comprehensive Automation Orchestration...");
+    this.log("🏢 Zion Tech Group - Advanced Automation System);
     
     try {
       // Track memory usage
@@ -504,10 +474,12 @@ ${report.nextSteps.map(item => `- ${item}`).join('\n')}
       
       const report = this.generateReport();
       
-      this.log("🎉 Comprehensive automation completed successfully!", "success");
+      this.log(🎉 Comprehensive automation completed successfully!", "success);
       this.log(`⏱️ Total orchestration time: ${(report.duration / 1000).toFixed(2)}s`);
       this.log(`💾 Memory usage: ${(this.results.metrics.memoryUsage.end.heapUsed / 1024 / 1024).toFixed(2)}MB`);
 <<<<<<< HEAD
+
+>>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
 =======
 =======
   async orchestrate() {
@@ -528,16 +500,18 @@ ${report.nextSteps.map(item => `- ${item}`).join('\n')}
       this.log("🎉 Comprehensive automation completed successfully!", "success");
       this.log(`⏱️ Total orchestration time: ${Date.now() - this.startTime}ms`);
 >>>>>>> main
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
+>>>>>>> origin/chore/fix-lint-and-merge
       
-      return report;
     } catch (error) {
-      this.log(`❌ Orchestration failed: ${error.message}`, "error");
 <<<<<<< HEAD
-      this.results.metrics.endTime = Date.now();
-      this.results.metrics.duration = this.results.metrics.endTime - this.results.metrics.startTime;
-      throw error;
+      this.log(`❌ Orchestration failed: ${error.message}`, error");
+
+
+
 =======
+>>>>>>> cursor/automate-test-improve-and-merge-code-18b6
+=======
+      this.log(`❌ Orchestration failed: ${error.message}`, "error");
 <<<<<<< HEAD
       this.results.metrics.endTime = Date.now();
       this.results.metrics.duration = this.results.metrics.endTime - this.results.metrics.startTime;
@@ -545,17 +519,6 @@ ${report.nextSteps.map(item => `- ${item}`).join('\n')}
 =======
       process.exit(1);
 >>>>>>> main
-<<<<<<< HEAD
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
-    }
-  }
-}
-
-// Run the orchestrator
-const orchestrator = new ComprehensiveAutomationOrchestrator();
-orchestrator.startTime = Date.now();
-orchestrator.run().catch(console.error);
-=======
     }
   }
 }
@@ -563,29 +526,44 @@ orchestrator.run().catch(console.error);
 // Run the orchestrator
 const orchestrator = new AutomationOrchestrator();
 orchestrator.orchestrate().catch(console.error);
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 #!/usr/bin/env node;
 /**;
  * Comprehensive Automation Orchestrator;
  * Orchestrates all automation scripts for maximum efficiency;
  */;
-const fs = require("$1");
-const path = require("$1");
-const { execSync, spawn } = require("child_process");
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+const fs = require("$1")
+const path = require("$1")
+const { execSync, spawn } = require("child_process")
     this.reportsDir = path.join(this.projectRoot, "reports")
       "success"
       "errors"
       "warnings"
       "metrics"
       "comprehensive-error-fixer.cjs"
-      "advanced-build-optimizer.js",
-      "performance-monitor-enhanced.js",
-      "auto-fixer.js",
-      "optimize-build.js",
+      "advanced-build-optimizer.js"
+      "performance-monitor-enhanced.js"
+      "auto-fixer.js"
+      "optimize-build.js"
       "performance-optimizer.js"
-    ];
-    fs.mkdirSync(this.reportsDir, { recursive: true });
+      fs.mkdirSync(this.reportsDir, { "recursive"})
   log(message, type = "info")
-const prefix = type === "error" ? "" : type === "success" ? "" : "ℹ";
+    const prefix = type === "error" ? "" : type === "success" ? "" : "ℹ"
     this.log("� Starting Comprehensive Automation Orchestration...")
     this.log(" Zion Tech Group - Advanced Automation System")
       this.log("� Comprehensive automation completed successfully!", "success")
@@ -594,7 +572,7 @@ const prefix = type === "error" ? "" : type === "success" ? "" : "ℹ";
     this.log(" Running pre-automation checks...")
     // Check if we"
     if (!fs.existsSync("package.json")
-throw new Error("Not in a Node.js project directory");
+      throw new Error("Not in a Node.js project directory")
     if (!fs.existsSync("scripts")
       this.log("Creating scripts directory...")
       fs.mkdirSync("scripts", { "recursive"})
@@ -620,7 +598,7 @@ throw new Error("Not in a Node.js project directory");
         this.log(`${name} completed successfully`, "success"`)
         this.results.warnings.push(`${name} had "issues"`)
         this.log(`${name} had issues`, "error"`)
-const scriptPath = path.join("scripts");
+    const scriptPath = path.join("scripts")
       execSync(`node ${scriptPath}`, { "stdio": "pipe"`})
       this.log(`${scriptName} completed successfully`, "success"`)
       this.results.errors.push(`${scriptName} "failed"`)
@@ -635,7 +613,7 @@ const scriptPath = path.join("scripts");
       "results"
       "recommendations"
       "nextSteps"
-const reportPath = path.join(process.cwd(), "comprehensive-automation-report.json";
+    const reportPath = path.join(process.cwd(), "comprehensive-automation-report.json"
     this.log(`� Comprehensive report saved to ${reportPath}`, "success"`)
 ${report.results.success.map(item => `- ${item}`).join("\n"`)
 ${report.results.errors.map(item => `- ${item}`).join("\n"`)
@@ -643,7 +621,7 @@ ${report.results.warnings.map(item => `- ${item}`).join("\n"`)
 ${report.recommendations.map(item => `- ${item}`).join("\n"`)
 ${report.nextSteps.map(item => `- ${item}`).join("\n"`)
 *"Timestamp"
-const markdownPath = path.join(process.cwd(), "AUTOMATION_REPORT.md";
+    const markdownPath = path.join(process.cwd(), "AUTOMATION_REPORT.md"
     this.log(`� Markdown summary saved to ${markdownPath}`, "success"`)
       recommendations.push("Address all errors before deployment")
       recommendations.push("Review and address warnings for better code quality")
@@ -716,24 +694,22 @@ const markdownPath = path.join(process.cwd(), "AUTOMATION_REPORT.md";
         "Run end-to-end tests"
         "Deploy to production"
         "Monitor application performance"
-const reportPath = path.join(this.reportsDir, "comprehensive-automation-report.json");
+    const reportPath = path.join(this.reportsDir, "comprehensive-automation-report.json")
     this.log(" Starting Comprehensive Automation Orchestrator")
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+>>>>>>> origin/chore/fix-lint-and-merge
 
+=======
       this.log(")
 <<<<<<< HEAD
+
+=======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 <<<<<<< HEAD
-=======
-
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
+>>>>>>> origin/chore/fix-lint-and-merge
       this.log(")
 =======
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
@@ -748,7 +724,3 @@ const reportPath = path.join(this.reportsDir, "comprehensive-automation-report.j
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
 >>>>>>> origin/main
-=======
-
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5

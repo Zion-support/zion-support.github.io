@@ -33,7 +33,6 @@ export default function ResumePreviewPage({
     const found = versions.find(v => v.id === selectedVersionId);
     return found?.data |initialData;
   }, [selectedVersionId, initialData, versions]);
-  const activeData = useMemo(() => {
     if (selectedVersionId === 'current') return initialData,
     const found = versions.find(v => v.id === selectedVersionId),
     return found?.data || initialData
@@ -182,7 +181,6 @@ return { props: { initialData, versions } }
 export const getServerSideProps: GetServerSideProps = async (ctx) => {;
   // Simple auth guard for talent users, adjust with real roles when available;
   const supabase = createServerClient();
-  const user = await (supabase as any).auth.getUser?.();
   if (!user) {;
     return {;
       redirect: {;

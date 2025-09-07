@@ -42,8 +42,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 };
     if (req.method === 'GET') {
       const { status, reason, userEmail, contentType } = req.query as Record<string, string | undefined>;
-      const flags = await readAllFlags();
-      const filtered = flags.filter(f =>
         (!status || f.status === status) &&
         (!reason || f.reason?.includes(reason)) &&
         (!userEmail || f.userEmail?.includes(userEmail)) &&

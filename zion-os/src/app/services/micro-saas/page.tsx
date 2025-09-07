@@ -1,173 +1,357 @@
+<<<<<<< HEAD
 
-;
-"use client",import { useState } from "react",interface MicroSAASService  {"id": string,"name": string,"description": string,"targetMarket": string[],"features": string[],"pricing": string,"startingPrice": number,"contactLink": string,"icon": string,"benefits": string[],"integrations": string[],"deployment": string;"
-}const "microSAASServices": MicroSAASService[] = [;
-  {"id": "marketplace-platform-pro","name": "Digital Marketplace Platform Pro","description": "White-label marketplace solution for jobs, talent, and projects with integrated payment processing, governance, and AI-powered matching.","targetMarket": [;"
-      "Job boards and recruitment","Freelance platforms","Service marketplaces","E-commerce platforms","Educational platforms","Healthcare services";"
-    ],"features": [;
-      "Custom branding and theming","Multi-currency support","Integrated payment gateways","User management and roles","Analytics and reporting","Mobile-responsive design","AI-powered matching","Escrow and dispute resolution","Multi-language support","API access and webhooks";"
-    ],"pricing": "Starting at $1,499/month","startingPrice": 1499,"contactLink": ""mailto":kleber@ziontechgroup.com?subject=Marketplace%20Platform%20Pro%20Inquiry","icon": "🏪","benefits": [;"
-      "Reduce time to market by 80%","Lower development costs by 60%","Scalable architecture","Built-in compliance features","24/7 technical support","Regular feature updates";"
-    ],"integrations": [;
-      "Stripe, PayPal, Coinbase","Slack, Teams, Discord","Zapier, Make.com","Google Analytics, Mixpanel","Mailchimp, SendGrid","AWS, Azure, Google Cloud";"
-    ],"deployment": "Cloud-hosted with white-label options";"
-  },{"id": "token-economy-platform","name": "Token Economy Platform","description": "Complete token system with rewards, governance, and economic incentives for community engagement and loyalty programs.","targetMarket": [;"
-      "Gaming platforms","Community platforms","Loyalty programs","Educational platforms","Social networks","DeFi applications";"
-    ],"features": [;
-      "Custom token creation","Reward distribution system","Governance voting mechanisms","Staking and liquidity pools","Multi-chain support","Analytics and reporting","Smart contract templates","Wallet integration","Compliance tools","API and SDK access";"
-    ],"pricing": "Starting at $999/month","startingPrice": 999,"contactLink": ""mailto":kleber@ziontechgroup.com?subject=Token%20Economy%20Platform%20Inquiry","icon": "🪙","benefits": [;"
-      "Increase user engagement by 300%","Reduce churn by 40%","Monetize community activities","Regulatory compliance built-in","Multi-blockchain support","Professional support team";"
-    ],"integrations": [;
-      "MetaMask, WalletConnect","Ethereum, Polygon, BSC","Discord, Telegram bots","Shopify, WooCommerce","WordPress, Webflow","Mobile apps (iOS/Android)";"
-    ],"deployment": "Multi-cloud with blockchain integration";"
-  },{"id": "kyc-aml-enterprise","name": "KYC/AML Verification Enterprise","description": "Comprehensive identity verification and compliance system for financial services and regulated industries with advanced fraud detection.","targetMarket": [;"
-      "Financial institutions","Cryptocurrency exchanges","Real estate platforms","Healthcare services","Legal services","Government agencies";"
-    ],"features": [;
-      "Document verification","Biometric authentication","Compliance reporting","Risk scoring","Multi-jurisdiction support","API integration","Fraud detection AI","Audit trails","Custom compliance rules","Real-time monitoring";"
-    ],"pricing": "Starting at $499/month","startingPrice": 499,"contactLink": ""mailto":kleber@ziontechgroup.com?subject=KYC%20AML%20Enterprise%20Inquiry","icon": "🆔","benefits": [;"
-      "Reduce compliance costs by 50%","Improve verification accuracy by 95%","Faster customer onboarding","Regulatory compliance assurance","Reduced fraud incidents","Scalable verification process";"
-    ],"integrations": [;
-      "Banking systems","CRM platforms","Payment processors","Blockchain networks","Government databases","Third-party verification services";"
-    ],"deployment": "Enterprise-grade cloud with on-premise options";"
-  },{"id": "dao-governance-platform","name": "DAO Governance Platform","description": "Complete DAO platform with proposal creation, voting mechanisms, treasury management, and governance analytics for decentralized organizations.","targetMarket": [;"
-      "DeFi protocols","NFT communities","Investment DAOs","Governance tokens","Decentralized organizations","Community projects";"
-    ],"features": [;
-      "Proposal creation and management","Multiple voting mechanisms","Treasury management","Member onboarding","Governance analytics","Integration with major wallets","Custom governance rules","Multi-signature support","Compliance reporting","Mobile governance app";"
-    ],"pricing": "Starting at $799/month","startingPrice": 799,"contactLink": ""mailto":kleber@ziontechgroup.com?subject=DAO%20Governance%20Platform%20Inquiry","icon": "🏛️","benefits": [;"
-      "Streamline governance processes","Increase community participation","Transparent decision-making","Reduce governance overhead","Compliance with regulations","Professional support and maintenance";"
-    ],"integrations": [;
-      "MetaMask, WalletConnect","Ethereum, Polygon, BSC","Discord, Telegram","Snapshot, Tally","Gnosis Safe","DeFi protocols";"
-    ],"deployment": "Blockchain-native with cloud management";"
-  },{"id": "ai-learning-platform","name": "AI-Powered Learning Platform","description": "Comprehensive learning management system with AI-powered content creation, assessment, and personalized learning paths.","targetMarket": [;"
-      "Educational institutions","Corporate training","Online course creators","Skill development platforms","Language learning","Professional certification";"
-    ],"features": [;
-      "AI content generation","Interactive assessments","Certification tracking","Learning analytics","Multi-format support","Mobile learning","Personalized learning paths","Collaborative learning tools","Gamification elements","Multi-language support";"
-    ],"pricing": "Starting at $599/month","startingPrice": 599,"contactLink": ""mailto":kleber@ziontechgroup.com?subject=AI%20Learning%20Platform%20Inquiry","icon": "🎓","benefits": [;"
-      "Reduce content creation time by 70%","Improve learning outcomes by 40%","Personalized learning experience","Scalable content generation","Advanced analytics insights","Mobile-first design";"
-    ],"integrations": [;
-      "LMS systems","Video platforms","Payment processors","CRM systems","Analytics tools","Social learning platforms";"
-    ],"deployment": "Cloud-hosted with offline capabilities";"
-  },{"id": "incubator-grants-platform","name": "Incubator & Grants Management Platform","description": "Platform for managing startup incubators, grant programs, and funding distribution with transparent governance and impact measurement.","targetMarket": [;"
-      "Startup incubators","Government agencies","Non-profit organizations","Corporate innovation programs","Educational institutions","Investment funds";"
-    ],"features": [;
-      "Application management","Review and scoring systems","Fund distribution tracking","Progress monitoring","Impact measurement","Reporting and analytics","Compliance tracking","Stakeholder communication","Performance dashboards","API access";"
-    ],"pricing": "Starting at $1,199/month","startingPrice": 1199,"contactLink": ""mailto":kleber@ziontechgroup.com?subject=Incubator%20Grants%20Platform%20Inquiry","icon": "🌱","benefits": [;"
-      "Streamline application processes","Improve decision-making transparency","Reduce administrative overhead","Better impact measurement","Compliance automation","Data-driven insights";"
-    ],"integrations": [;
-      "Payment systems","CRM platforms","Accounting software","Communication tools","Analytics platforms","Government databases";"
-    ],"deployment": "Enterprise cloud with compliance features";"
-  }
-],export default function MicroSAASPage() {return (<div className="space-y-8">;{/* Header */}"
-      <div className="text - center space - y-4">;"
-        <h1 className="text - 4xl font - bold">Micro SAAS Solutions</h1>;"
-        <p className="text - xl opacity - 80 max - w-3xl mx - auto">;"
-"use client",import { useState  } from './react';,interface MicroSAASService  {"id": string,"name": string,"description": string,"target_market": string[],"features": string[],"pricing": string,"starting_price": number,"contact_link": string,"icon": string,"benefits": string[],"integrations": string[],"deployment": string;'
-"use client","
-}
-import { useState  } from './react';,'
-interface MicroSAASService {
-  }
-  "id": string,
-  "name": string,
-  "description": string,
-  "target_market": string[],
-  "features": string[],
-  "pricing": string,
-  "starting_price": number,
-  "contact_link": string,
-  "icon": string,
-  "benefits": string[],
-  "integrations": string[],
-"use client";"
-import { useState } from "react";"
-interface MicroSAASService {"id": string;
-  }
-  "name": string;
-  "description": string;
-  "targetMarket": string[];
-  "features": string[];
-  "pricing": string;
-  "startingPrice": number;
-  "contactLink": string;
-  "icon": string;
-  "benefits": string[];
-  "integrations": string[];
-  "deployment": string;
-}
-const "microSAASServices": MicroSAASService[] = [;
-  {"id": "marketplace - platform - pro","name": "Digital Marketplace Platform Pro","description": "White - label marketplace solution for jobs, talent, and projects with integrated payment processing, governance, and AI - powered matching.","target_market": [;"
-      "Job boards and recruitment","Freelance platforms","Service marketplaces","E - commerce platforms","Educational platforms","Healthcare services";"
-    ],"features": [;
-      "Custom branding and theming","Multi - currency support","Integrated payment gateways","User management and roles","Analytics and reporting","Mobile - responsive design","AI - powered matching","Escrow and dispute resolution","Multi - language support","API access and webhooks";"
-    ],"pricing": "Starting at $1, 499 / month","starting_price": 1499,"contact_link": ""mailto":kleber@ziontechgroup.com?subject = Marketplace%20Platform%20Pro%20Inquiry","benefits": [;"
-      "Reduce time to market by 80%","Lower development costs by 60%","Scalable architecture","Built - in compliance features","24 / 7 technical support","Regular feature updates";"
-    ],"integrations": [;
-      "Stripe, PayPal, Coinbase","Slack, Teams, Discord","Zapier, Make.com","Google Analytics, Mixpanel","Mailchimp, SendGrid","AWS, Azure, Google Cloud";"
-    ],"deployment": "Cloud - hosted with white - label options";"
-  },{"id": "token - economy - platform","name": "Token Economy Platform","description": "Complete token system with rewards, governance, and economic incentives for community engagement and loyalty programs.","target_market": [;"
-      "Gaming platforms","Community platforms","Loyalty programs","Educational platforms","Social networks","DeFi applications";"
-    ],"features": [;
-      "Custom token creation","Reward distribution system","Governance voting mechanisms","Staking and liquidity pools","Multi - chain support","Analytics and reporting","Smart contract templates","Wallet integration","Compliance tools","API and SDK access";"
-    ],"pricing": "Starting at $999 / month","starting_price": 999,"contact_link": ""mailto":kleber@ziontechgroup.com?subject = Token%20Economy%20Platform%20Inquiry","benefits": [;"
-      "Increase user engagement by 300%","Reduce churn by 40%","Monetize community activities","Regulatory compliance built - in","Multi - blockchain support","Professional support team";"
-    ],"integrations": [;
-      "MetaMask, WalletConnect","Ethereum, Polygon, BSC","Discord, Telegram bots","Shopify, WooCommerce","WordPress, Webflow","Mobile apps (iOS / Android)";"
-    ],"deployment": "Multi - cloud with blockchain integration";"
-  },{"id": "kyc - aml - enterprise","name": "KYC / AML Verification Enterprise","description": "Comprehensive identity verification and compliance system for financial services and regulated industries with advanced fraud detection.","target_market": [;"
-      "Financial institutions","Cryptocurrency exchanges","Real estate platforms","Healthcare services","Legal services","Government agencies";"
-    ],"features": [;
-      "Document verification","Biometric authentication","Compliance reporting","Risk scoring","Multi - jurisdiction support","API integration","Fraud detection AI","Audit trails","Custom compliance rules","Real - time monitoring";"
-    ],"pricing": "Starting at $499 / month","starting_price": 499,"contact_link": ""mailto":kleber@ziontechgroup.com?subject = KYC%20AML%20Enterprise%20Inquiry","benefits": [;"
-      "Reduce compliance costs by 50%","Improve verification accuracy by 95%","Faster customer onboarding","Regulatory compliance assurance","Reduced fraud incidents","Scalable verification process";"
-    ],"integrations": [;
-      "Banking systems","CRM platforms","Payment processors","Blockchain networks","Government databases","Third - party verification services";"
-    ],"deployment": "Enterprise - grade cloud with on - premise options";"
-  },{"id": "dao - governance - platform","name": "DAO Governance Platform","description": "Complete DAO platform with proposal creation, voting mechanisms, treasury management, and governance analytics for decentralized organizations.","target_market": [;"
-      "DeFi protocols","NFT communities","Investment DAOs","Governance tokens","Decentralized organizations","Community projects";"
-    ],"features": [;
-      "Proposal creation and management","Multiple voting mechanisms","Treasury management","Member onboarding","Governance analytics","Integration with major wallets","Custom governance rules","Multi - signature support","Compliance reporting","Mobile governance app";"
-    ],"pricing": "Starting at $799 / month","starting_price": 799,"contact_link": ""mailto":kleber@ziontechgroup.com?subject = DAO%20Governance%20Platform%20Inquiry","benefits": [;"
-      "Streamline governance processes","Increase community participation","Transparent decision - making","Reduce governance overhead","Compliance with regulations","Professional support and maintenance";"
-    ],"integrations": [;
-      "MetaMask, WalletConnect","Ethereum, Polygon, BSC","Discord, Telegram","Snapshot, Tally","Gnosis Safe","DeFi protocols";"
-    ],"deployment": "Blockchain - native with cloud management";"
-  },{"id": "ai - learning - platform","name": "AI - Powered Learning Platform","description": "Comprehensive learning management system with AI - powered content creation, assessment, and personalized learning paths.","target_market": [;"
-      "Educational institutions","Corporate training","Online course creators","Skill development platforms","Language learning","Professional certification";"
-    ],"features": [;
-      "AI content generation","Interactive assessments","Certification tracking","Learning analytics","Multi - format support","Mobile learning","Personalized learning paths","Collaborative learning tools","Gamification elements","Multi - language support";"
-    ],"pricing": "Starting at $599 / month","starting_price": 599,"contact_link": ""mailto":kleber@ziontechgroup.com?subject = AI%20Learning%20Platform%20Inquiry","benefits": [;"
-      "Reduce content creation time by 70%","Improve learning outcomes by 40%","Personalized learning experience","Scalable content generation","Advanced analytics insights","Mobile - first design";"
-    ],"integrations": [;
-      "LMS systems","Video platforms","Payment processors","CRM systems","Analytics tools","Social learning platforms";"
-    ],"deployment": "Cloud - hosted with offline capabilities";"
-  },{"id": "incubator - grants - platform","name": "Incubator & Grants Management Platform","description": "Platform for managing startup incubators, grant programs, and funding distribution with transparent governance and impact measurement.","target_market": [;"
-      "Startup incubators","Government agencies","Non - profit organizations","Corporate innovation programs","Educational institutions","Investment funds";"
-    ],"features": [;
-      "Application management","Review and scoring systems","Fund distribution tracking","Progress monitoring","Impact measurement","Reporting and analytics","Compliance tracking","Stakeholder communication","Performance dashboards","API access";"
-    ],"pricing": "Starting at $1, 199 / month","starting_price": 1199,"contact_link": ""mailto":kleber@ziontechgroup.com?subject = Incubator%20Grants%20Platform%20Inquiry","benefits": [;"
-      "Streamline application processes","Improve decision - making transparency","Reduce administrative overhead","Better impact measurement","Compliance automation","Data - driven insights";"
-    ],"integrations": [;
-      "Payment systems","CRM platforms","Accounting software","Communication tools","Analytics platforms","Government databases";"
-    ],"deployment": "Enterprise cloud with compliance features";"
   }
 ],export default /**;
  * MicroSAASPage - Function description;
  */;
-function MicroSAASPage() {return (<div className="space-y-8">;    <div className="space-y-8">;"
-  {
-    }
-    "id": "marketplace - platform - pro","
-    "name": "Digital Marketplace Platform Pro","
-    "description": "White - label marketplace solution for jobs, talent, and projects with integrated payment processing, governance, and AI - powered matching.","
-    "target_market": [;
+=======
+"use client",;
+import { useState } from "react",;
+interface MicroSAASService {;
+  id: string,;
+  name: string,;
+  description: string,;
+  targetMarket: string[],;
+  features: string[],;
+  pricing: string,;
+  startingPrice: number,;
+  contactLink: string,;
+  icon: string,;
+  benefits: string[],;
+  integrations: string[],;
+  deployment: string;
+}
+;
+const microSAASServices: MicroSAASService[] = [;
+  {;
+    id: "marketplace-platform-pro",;
+    name: "Digital Marketplace Platform Pro",;
+    description: "White-label marketplace solution for jobs, talent, and projects with integrated payment processing, governance, and AI-powered matching.",;
+    targetMarket: [;
+      "Job boards and recruitment",;
+      "Freelance platforms",;
+      "Service marketplaces",;
+      "E-commerce platforms",;
+      "Educational platforms",;
+      "Healthcare services";
+    ],;
+    features: [;
+      "Custom branding and theming",;
+      "Multi-currency support",;
+      "Integrated payment gateways",;
+      "User management and roles",;
+      "Analytics and reporting",;
+      "Mobile-responsive design",;
+      "AI-powered matching",;
+      "Escrow and dispute resolution",;
+      "Multi-language support",;
+      "API access and webhooks";
+    ],;
+    pricing: "Starting at $1,499/month",;
+    startingPrice: 1499,;
+    contactLink: "mailto:kleber@ziontechgroup.com?subject=Marketplace%20Platform%20Pro%20Inquiry",;
+    icon: "🏪",;
+    benefits: [;
+      "Reduce time to market by 80%",;
+      "Lower development costs by 60%",;
+      "Scalable architecture",;
+      "Built-in compliance features",;
+      "24/7 technical support",;
+      "Regular feature updates";
+    ],;
+    integrations: [;
+      "Stripe, PayPal, Coinbase",;
+      "Slack, Teams, Discord",;
+      "Zapier, Make.com",;
+      "Google Analytics, Mixpanel",;
+      "Mailchimp, SendGrid",;
+      "AWS, Azure, Google Cloud";
+    ],;
+    deployment: "Cloud-hosted with white-label options";
+  },;
+  {;
+    id: "token-economy-platform",;
+    name: "Token Economy Platform",;
+    description: "Complete token system with rewards, governance, and economic incentives for community engagement and loyalty programs.",;
+    targetMarket: [;
+      "Gaming platforms",;
+      "Community platforms",;
+      "Loyalty programs",;
+      "Educational platforms",;
+      "Social networks",;
+      "DeFi applications";
+    ],;
+    features: [;
+      "Custom token creation",;
+      "Reward distribution system",;
+      "Governance voting mechanisms",;
+      "Staking and liquidity pools",;
+      "Multi-chain support",;
+      "Analytics and reporting",;
+      "Smart contract templates",;
+      "Wallet integration",;
+      "Compliance tools",;
+      "API and SDK access";
+    ],;
+    pricing: "Starting at $999/month",;
+    startingPrice: 999,;
+    contactLink: "mailto:kleber@ziontechgroup.com?subject=Token%20Economy%20Platform%20Inquiry",;
+    icon: "🪙",;
+    benefits: [;
+      "Increase user engagement by 300%",;
+      "Reduce churn by 40%",;
+      "Monetize community activities",;
+      "Regulatory compliance built-in",;
+      "Multi-blockchain support",;
+      "Professional support team";
+    ],;
+    integrations: [;
+      "MetaMask, WalletConnect",;
+      "Ethereum, Polygon, BSC",;
+      "Discord, Telegram bots",;
+      "Shopify, WooCommerce",;
+      "WordPress, Webflow",;
+      "Mobile apps (iOS/Android)";
+    ],;
+    deployment: "Multi-cloud with blockchain integration";
+  },;
+  {;
+    id: "kyc-aml-enterprise",;
+    name: "KYC/AML Verification Enterprise",;
+    description: "Comprehensive identity verification and compliance system for financial services and regulated industries with advanced fraud detection.",;
+    targetMarket: [;
+      "Financial institutions",;
+      "Cryptocurrency exchanges",;
+      "Real estate platforms",;
+      "Healthcare services",;
+      "Legal services",;
+      "Government agencies";
+    ],;
+    features: [;
+      "Document verification",;
+      "Biometric authentication",;
+      "Compliance reporting",;
+      "Risk scoring",;
+      "Multi-jurisdiction support",;
+      "API integration",;
+      "Fraud detection AI",;
+      "Audit trails",;
+      "Custom compliance rules",;
+      "Real-time monitoring";
+    ],;
+    pricing: "Starting at $499/month",;
+    startingPrice: 499,;
+    contactLink: "mailto:kleber@ziontechgroup.com?subject=KYC%20AML%20Enterprise%20Inquiry",;
+    icon: "🆔",;
+    benefits: [;
+      "Reduce compliance costs by 50%",;
+      "Improve verification accuracy by 95%",;
+      "Faster customer onboarding",;
+      "Regulatory compliance assurance",;
+      "Reduced fraud incidents",;
+      "Scalable verification process";
+    ],;
+    integrations: [;
+      "Banking systems",;
+      "CRM platforms",;
+      "Payment processors",;
+      "Blockchain networks",;
+      "Government databases",;
+      "Third-party verification services";
+    ],;
+    deployment: "Enterprise-grade cloud with on-premise options";
+  },;
+  {;
+    id: "dao-governance-platform",;
+    name: "DAO Governance Platform",;
+    description: "Complete DAO platform with proposal creation, voting mechanisms, treasury management, and governance analytics for decentralized organizations.",;
+    targetMarket: [;
+      "DeFi protocols",;
+      "NFT communities",;
+      "Investment DAOs",;
+      "Governance tokens",;
+      "Decentralized organizations",;
+      "Community projects";
+    ],;
+    features: [;
+      "Proposal creation and management",;
+      "Multiple voting mechanisms",;
+      "Treasury management",;
+      "Member onboarding",;
+      "Governance analytics",;
+      "Integration with major wallets",;
+      "Custom governance rules",;
+      "Multi-signature support",;
+      "Compliance reporting",;
+      "Mobile governance app";
+    ],;
+    pricing: "Starting at $799/month",;
+    startingPrice: 799,;
+    contactLink: "mailto:kleber@ziontechgroup.com?subject=DAO%20Governance%20Platform%20Inquiry",;
+    icon: "🏛️",;
+    benefits: [;
+      "Streamline governance processes",;
+      "Increase community participation",;
+      "Transparent decision-making",;
+      "Reduce governance overhead",;
+      "Compliance with regulations",;
+      "Professional support and maintenance";
+    ],;
+    integrations: [;
+      "MetaMask, WalletConnect",;
+      "Ethereum, Polygon, BSC",;
+      "Discord, Telegram",;
+      "Snapshot, Tally",;
+      "Gnosis Safe",;
+      "DeFi protocols";
+    ],;
+    deployment: "Blockchain-native with cloud management";
+  },;
+  {;
+    id: "ai-learning-platform",;
+    name: "AI-Powered Learning Platform",;
+    description: "Comprehensive learning management system with AI-powered content creation, assessment, and personalized learning paths.",;
+    targetMarket: [;
+      "Educational institutions",;
+      "Corporate training",;
+      "Online course creators",;
+      "Skill development platforms",;
+      "Language learning",;
+      "Professional certification";
+    ],;
+    features: [;
+      "AI content generation",;
+      "Interactive assessments",;
+      "Certification tracking",;
+      "Learning analytics",;
+      "Multi-format support",;
+      "Mobile learning",;
+      "Personalized learning paths",;
+      "Collaborative learning tools",;
+      "Gamification elements",;
+      "Multi-language support";
+    ],;
+    pricing: "Starting at $599/month",;
+    startingPrice: 599,;
+    contactLink: "mailto:kleber@ziontechgroup.com?subject=AI%20Learning%20Platform%20Inquiry",;
+    icon: "🎓",;
+    benefits: [;
+      "Reduce content creation time by 70%",;
+      "Improve learning outcomes by 40%",;
+      "Personalized learning experience",;
+      "Scalable content generation",;
+      "Advanced analytics insights",;
+      "Mobile-first design";
+    ],;
+    integrations: [;
+      "LMS systems",;
+      "Video platforms",;
+      "Payment processors",;
+      "CRM systems",;
+      "Analytics tools",;
+      "Social learning platforms";
+    ],;
+    deployment: "Cloud-hosted with offline capabilities";
+  },;
+  {;
+    id: "incubator-grants-platform",;
+    name: "Incubator & Grants Management Platform",;
+    description: "Platform for managing startup incubators, grant programs, and funding distribution with transparent governance and impact measurement.",;
+    targetMarket: [;
+      "Startup incubators",;
+      "Government agencies",;
+      "Non-profit organizations",;
+      "Corporate innovation programs",;
+      "Educational institutions",;
+      "Investment funds";
+    ],;
+    features: [;
+      "Application management",;
+      "Review and scoring systems",;
+      "Fund distribution tracking",;
+      "Progress monitoring",;
+      "Impact measurement",;
+      "Reporting and analytics",;
+      "Compliance tracking",;
+      "Stakeholder communication",;
+      "Performance dashboards",;
+      "API access";
+    ],;
+    pricing: "Starting at $1,199/month",;
+    startingPrice: 1199,;
+    contactLink: "mailto:kleber@ziontechgroup.com?subject=Incubator%20Grants%20Platform%20Inquiry",;
+    icon: "🌱",;
+    benefits: [;
+      "Streamline application processes",;
+      "Improve decision-making transparency",;
+      "Reduce administrative overhead",;
+      "Better impact measurement",;
+      "Compliance automation",;
+      "Data-driven insights";
+    ],;
+    integrations: [;
+      "Payment systems",;
+      "CRM platforms",;
+      "Accounting software",;
+      "Communication tools",;
+      "Analytics platforms",;
+      "Government databases";
+    ],;
+    deployment: "Enterprise cloud with compliance features";
+  }
+],;
+export default function MicroSAASPage() {;
+  return (;
+
+    <div className="space-y-8">;
+
+"use client",
+import { useState  } from './react';,
+interface MicroSAASService {}
+
+  id: string,
+  name: string,
+  description: string,
+  target_market: string[],
+  features: string[],
+  pricing: string,
+  starting_price: number,
+  contact_link: string,
+  icon: string,
+  benefits: string[],
+  integrations: string[],
+
+"use client";
+import { useState } from "react";
+interface MicroSAASService {id: string;
+  name: string;
+  description: string;
+  targetMarket: string[];
+  features: string[];
+  pricing: string;
+  startingPrice: number;
+  contactLink: string;
+  icon: string;
+  benefits: string[];
+  integrations: string[];
+
+  deployment: string;
+
+}
+const microSAASServices: MicroSAASService[] = [;
+  {"
+    id: "marketplace - platform - pro","
+    name: "Digital Marketplace Platform Pro","
+    description: "White - label marketplace solution for jobs, talent, and projects with integrated payment processing, governance, and AI - powered matching.",
+    target_market: [;"
       "Job boards and recruitment","
       "Freelance platforms","
       "Service marketplaces","
       "E - commerce platforms","
       "Educational platforms","
-      "Healthcare services";"
+      "Healthcare services";
     ],
-    "features": [;
+    features: [;"
       "Custom branding and theming","
       "Multi - currency support","
       "Integrated payment gateways","
@@ -177,43 +361,42 @@ function MicroSAASPage() {return (<div className="space-y-8">;    <div className
       "AI - powered matching","
       "Escrow and dispute resolution","
       "Multi - language support","
-      "API access and webhooks";"
-    ],
-    "pricing": "Starting at $1, 499 / month","
-    "starting_price": 1499,
-    "contact_link": ""mailto":kleber@ziontechgroup.com?subject = Marketplace%20Platform%20Pro%20Inquiry","
-    "benefits": [;
+      "API access and webhooks";
+    ],"
+    pricing: "Starting at $1, 499 / month",
+    starting_price: 1499,"
+    contact_link: "mailto:kleber@ziontechgroup.com?subject = Marketplace%20Platform%20Pro%20Inquiry",
+    benefits: [;"
       "Reduce time to market by 80%","
       "Lower development costs by 60%","
       "Scalable architecture","
       "Built - in compliance features","
       "24 / 7 technical support","
-      "Regular feature updates";"
+      "Regular feature updates";
     ],
-    "integrations": [;
+    integrations: [;"
       "Stripe, PayPal, Coinbase","
       "Slack, Teams, Discord","
       "Zapier, Make.com","
       "Google Analytics, Mixpanel","
       "Mailchimp, SendGrid","
-      "AWS, Azure, Google Cloud";"
-    ],
-    "deployment": "Cloud - hosted with white - label options";"
+      "AWS, Azure, Google Cloud";
+    ],"
+    deployment: "Cloud - hosted with white - label options";
   },
-  {
-    }
-    "id": "token - economy - platform","
-    "name": "Token Economy Platform","
-    "description": "Complete token system with rewards, governance, and economic incentives for community engagement and loyalty programs.","
-    "target_market": [;
+  {"
+    id: "token - economy - platform","
+    name: "Token Economy Platform","
+    description: "Complete token system with rewards, governance, and economic incentives for community engagement and loyalty programs.",
+    target_market: [;"
       "Gaming platforms","
       "Community platforms","
       "Loyalty programs","
       "Educational platforms","
       "Social networks","
-      "DeFi applications";"
+      "DeFi applications";
     ],
-    "features": [;
+    features: [;"
       "Custom token creation","
       "Reward distribution system","
       "Governance voting mechanisms","
@@ -223,43 +406,42 @@ function MicroSAASPage() {return (<div className="space-y-8">;    <div className
       "Smart contract templates","
       "Wallet integration","
       "Compliance tools","
-      "API and SDK access";"
-    ],
-    "pricing": "Starting at $999 / month","
-    "starting_price": 999,
-    "contact_link": ""mailto":kleber@ziontechgroup.com?subject = Token%20Economy%20Platform%20Inquiry","
-    "benefits": [;
+      "API and SDK access";
+    ],"
+    pricing: "Starting at $999 / month",
+    starting_price: 999,"
+    contact_link: "mailto:kleber@ziontechgroup.com?subject = Token%20Economy%20Platform%20Inquiry",
+    benefits: [;"
       "Increase user engagement by 300%","
       "Reduce churn by 40%","
       "Monetize community activities","
       "Regulatory compliance built - in","
       "Multi - blockchain support","
-      "Professional support team";"
+      "Professional support team";
     ],
-    "integrations": [;
+    integrations: [;"
       "MetaMask, WalletConnect","
       "Ethereum, Polygon, BSC","
       "Discord, Telegram bots","
       "Shopify, WooCommerce","
       "WordPress, Webflow","
-      "Mobile apps (iOS / Android)";"
-    ],
-    "deployment": "Multi - cloud with blockchain integration";"
+      "Mobile apps (iOS / Android)";
+    ],"
+    deployment: "Multi - cloud with blockchain integration";
   },
-  {
-    }
-    "id": "kyc - aml - enterprise","
-    "name": "KYC / AML Verification Enterprise","
-    "description": "Comprehensive identity verification and compliance system for financial services and regulated industries with advanced fraud detection.","
-    "target_market": [;
+  {"
+    id: "kyc - aml - enterprise","
+    name: "KYC / AML Verification Enterprise","
+    description: "Comprehensive identity verification and compliance system for financial services and regulated industries with advanced fraud detection.",
+    target_market: [;"
       "Financial institutions","
       "Cryptocurrency exchanges","
       "Real estate platforms","
       "Healthcare services","
       "Legal services","
-      "Government agencies";"
+      "Government agencies";
     ],
-    "features": [;
+    features: [;"
       "Document verification","
       "Biometric authentication","
       "Compliance reporting","
@@ -269,43 +451,42 @@ function MicroSAASPage() {return (<div className="space-y-8">;    <div className
       "Fraud detection AI","
       "Audit trails","
       "Custom compliance rules","
-      "Real - time monitoring";"
-    ],
-    "pricing": "Starting at $499 / month","
-    "starting_price": 499,
-    "contact_link": ""mailto":kleber@ziontechgroup.com?subject = KYC%20AML%20Enterprise%20Inquiry","
-    "benefits": [;
+      "Real - time monitoring";
+    ],"
+    pricing: "Starting at $499 / month",
+    starting_price: 499,"
+    contact_link: "mailto:kleber@ziontechgroup.com?subject = KYC%20AML%20Enterprise%20Inquiry",
+    benefits: [;"
       "Reduce compliance costs by 50%","
       "Improve verification accuracy by 95%","
       "Faster customer onboarding","
       "Regulatory compliance assurance","
       "Reduced fraud incidents","
-      "Scalable verification process";"
+      "Scalable verification process";
     ],
-    "integrations": [;
+    integrations: [;"
       "Banking systems","
       "CRM platforms","
       "Payment processors","
       "Blockchain networks","
       "Government databases","
-      "Third - party verification services";"
-    ],
-    "deployment": "Enterprise - grade cloud with on - premise options";"
+      "Third - party verification services";
+    ],"
+    deployment: "Enterprise - grade cloud with on - premise options";
   },
-  {
-    }
-    "id": "dao - governance - platform","
-    "name": "DAO Governance Platform","
-    "description": "Complete DAO platform with proposal creation, voting mechanisms, treasury management, and governance analytics for decentralized organizations.","
-    "target_market": [;
+  {"
+    id: "dao - governance - platform","
+    name: "DAO Governance Platform","
+    description: "Complete DAO platform with proposal creation, voting mechanisms, treasury management, and governance analytics for decentralized organizations.",
+    target_market: [;"
       "DeFi protocols","
       "NFT communities","
       "Investment DAOs","
       "Governance tokens","
       "Decentralized organizations","
-      "Community projects";"
+      "Community projects";
     ],
-    "features": [;
+    features: [;"
       "Proposal creation and management","
       "Multiple voting mechanisms","
       "Treasury management","
@@ -315,43 +496,42 @@ function MicroSAASPage() {return (<div className="space-y-8">;    <div className
       "Custom governance rules","
       "Multi - signature support","
       "Compliance reporting","
-      "Mobile governance app";"
-    ],
-    "pricing": "Starting at $799 / month","
-    "starting_price": 799,
-    "contact_link": ""mailto":kleber@ziontechgroup.com?subject = DAO%20Governance%20Platform%20Inquiry","
-    "benefits": [;
+      "Mobile governance app";
+    ],"
+    pricing: "Starting at $799 / month",
+    starting_price: 799,"
+    contact_link: "mailto:kleber@ziontechgroup.com?subject = DAO%20Governance%20Platform%20Inquiry",
+    benefits: [;"
       "Streamline governance processes","
       "Increase community participation","
       "Transparent decision - making","
       "Reduce governance overhead","
       "Compliance with regulations","
-      "Professional support and maintenance";"
+      "Professional support and maintenance";
     ],
-    "integrations": [;
+    integrations: [;"
       "MetaMask, WalletConnect","
       "Ethereum, Polygon, BSC","
       "Discord, Telegram","
       "Snapshot, Tally","
       "Gnosis Safe","
-      "DeFi protocols";"
-    ],
-    "deployment": "Blockchain - native with cloud management";"
+      "DeFi protocols";
+    ],"
+    deployment: "Blockchain - native with cloud management";
   },
-  {
-    }
-    "id": "ai - learning - platform","
-    "name": "AI - Powered Learning Platform","
-    "description": "Comprehensive learning management system with AI - powered content creation, assessment, and personalized learning paths.","
-    "target_market": [;
+  {"
+    id: "ai - learning - platform","
+    name: "AI - Powered Learning Platform","
+    description: "Comprehensive learning management system with AI - powered content creation, assessment, and personalized learning paths.",
+    target_market: [;"
       "Educational institutions","
       "Corporate training","
       "Online course creators","
       "Skill development platforms","
       "Language learning","
-      "Professional certification";"
+      "Professional certification";
     ],
-    "features": [;
+    features: [;"
       "AI content generation","
       "Interactive assessments","
       "Certification tracking","
@@ -361,43 +541,42 @@ function MicroSAASPage() {return (<div className="space-y-8">;    <div className
       "Personalized learning paths","
       "Collaborative learning tools","
       "Gamification elements","
-      "Multi - language support";"
-    ],
-    "pricing": "Starting at $599 / month","
-    "starting_price": 599,
-    "contact_link": ""mailto":kleber@ziontechgroup.com?subject = AI%20Learning%20Platform%20Inquiry","
-    "benefits": [;
+      "Multi - language support";
+    ],"
+    pricing: "Starting at $599 / month",
+    starting_price: 599,"
+    contact_link: "mailto:kleber@ziontechgroup.com?subject = AI%20Learning%20Platform%20Inquiry",
+    benefits: [;"
       "Reduce content creation time by 70%","
       "Improve learning outcomes by 40%","
       "Personalized learning experience","
       "Scalable content generation","
       "Advanced analytics insights","
-      "Mobile - first design";"
+      "Mobile - first design";
     ],
-    "integrations": [;
+    integrations: [;"
       "LMS systems","
       "Video platforms","
       "Payment processors","
       "CRM systems","
       "Analytics tools","
-      "Social learning platforms";"
-    ],
-    "deployment": "Cloud - hosted with offline capabilities";"
+      "Social learning platforms";
+    ],"
+    deployment: "Cloud - hosted with offline capabilities";
   },
-  {
-    }
-    "id": "incubator - grants - platform","
-    "name": "Incubator & Grants Management Platform","
-    "description": "Platform for managing startup incubators, grant programs, and funding distribution with transparent governance and impact measurement.","
-    "target_market": [;
+  {"
+    id: "incubator - grants - platform","
+    name: "Incubator & Grants Management Platform","
+    description: "Platform for managing startup incubators, grant programs, and funding distribution with transparent governance and impact measurement.",
+    target_market: [;"
       "Startup incubators","
       "Government agencies","
       "Non - profit organizations","
       "Corporate innovation programs","
       "Educational institutions","
-      "Investment funds";"
+      "Investment funds";
     ],
-    "features": [;
+    features: [;"
       "Application management","
       "Review and scoring systems","
       "Fund distribution tracking","
@@ -407,271 +586,219 @@ function MicroSAASPage() {return (<div className="space-y-8">;    <div className
       "Compliance tracking","
       "Stakeholder communication","
       "Performance dashboards","
-      "API access";"
-    ],
-    "pricing": "Starting at $1, 199 / month","
-    "starting_price": 1199,
-    "contact_link": ""mailto":kleber@ziontechgroup.com?subject = Incubator%20Grants%20Platform%20Inquiry","
-    "benefits": [;
+      "API access";
+    ],"
+    pricing: "Starting at $1, 199 / month",
+    starting_price: 1199,"
+    contact_link: "mailto:kleber@ziontechgroup.com?subject = Incubator%20Grants%20Platform%20Inquiry",
+    benefits: [;"
       "Streamline application processes","
       "Improve decision - making transparency","
       "Reduce administrative overhead","
       "Better impact measurement","
       "Compliance automation","
-      "Data - driven insights";"
+      "Data - driven insights";
     ],
-    "integrations": [;
+    integrations: [;"
       "Payment systems","
       "CRM platforms","
       "Accounting software","
       "Communication tools","
       "Analytics platforms","
-      "Government databases";"
-    ],
-    "deployment": "Enterprise cloud with compliance features";"
+      "Government databases";
+    ],"
+    deployment: "Enterprise cloud with compliance features";
   }
+>>>>>>> origin/chore/fix-lint-and-merge
+
 ],
 export default /**
  * MicroSAASPage - Function description
  */
-function MicroSAASPage() {
-  }
-  return (
-    <div className="space - y-8">;"
-    <div className="space-y-8">;"
-      {/* Header */}
-      <div className="text - center space - y-4">;"
-        <h1 className="text - 4xl font - bold">Micro SAAS Solutions</h1>;"
-        <p className="text - xl opacity - 80 max - w-3xl mx - auto">;"
+<<<<<<< HEAD
+
           Innovative software - as - a-service solutions designed to accelerate your business growth;
           streamline operations, and provide competitive advantages in the digital economy.;
         </p>;
       </div>;
       {/* Micro SAAS Services Grid */}
-      <div className="grid grid - cols - 1 "lg":grid - cols - 2 gap - 8">;"
-        {microSAASServices.map (service => { return (<div; }
-            }
+=======
+function MicroSAASPage() {
+  return (
+
+    <div className="space-y-8">;
+
+      {/* Header */}
+      <div className="text-center space-y-4">;
+        <h1 className="text-4xl font-bold">Micro SAAS Solutions</h1>;
+        <p className="text-xl opacity-80 max-w-3xl mx-auto">;
+          Innovative software-as-a-service solutions designed to accelerate your business growth;
+
+      <div className="text - center space-y-4">;
+        <h1 className="text - 4xl font-bold">Micro SAAS Solutions</h1>;
+        <p className="text - xl opacity - 80 max - w-3xl mx-auto">;
+
+        {microSAASServices.map (service => (
+          <div;
             key={service.id}
-            className="rounded - lg border border - white / 10 bg - white / 5 p - 6 space - y-6";"
+            className="rounded - lg border border - white / 10 bg - white / 5 p - 6 space-y-6";
           >;
             {/* Service Header */}
-            <div className="text - center space - y-3">;"
-              <div className="text - 4xl">{service.icon}</div>;"
-              <h2 className="text - 2xl font - bold">{service.name}</h2>;"
-              <p className="opacity - 80">{service.description}</p>;"
-              <div className="text - 2xl font - bold text - blue - 400">{service.pricing}</div>;"
+            <div className="text - center space-y-3">;
+              <div className="text-4xl">{service.icon}</div>;
+              <h2 className="text - 2xl font-bold">{service.name}</h2>;
+              <p className="opacity-80">{service.description}</p>;
+              <div className="text - 2xl font - bold text - blue-400">{service.pricing}</div>;
             </div>;
             {/* Target Market */}
             <div>;
-              <h3 className="font - semibold mb - 3 text - blue - 400">Target Markets</h3>;"
-              <div className="grid grid - cols - 1 "sm":grid - cols - 2 gap - 2">;"
-                {service.target_market.map ((market, index) => (<div key={index} className="flex items - center gap - 2 text - sm">;"
-                    <span className="text - green - 400">🎯</span>;"
-      <div className="grid grid - cols - 1 "lg":grid - cols - 2 gap-8">;"
-        {microSAASServices.map (service => { return (<div; }
-        {microSAASServices.map (service => { return (
-          <div; }
-            }
-            key={service.id}
-            className="rounded - lg border border - white / 10 bg - white / 5 p - 6 space - y-6";"
-          >;
-            {/* Service Header */}
-            <div className="text - center space - y-3">;"
-              <div className="text - 4xl">{service.icon}</div>;"
-              <h2 className="text - 2xl font - bold">{service.name}</h2>;"
-              <p className="opacity - 80">{service.description}</p>;"
-              <div className="text - 2xl font - bold text - blue - 400">{service.pricing}</div>;"
-            </div>;
-            {/* Target Market */}
-            <div>;
-              <h3 className="font - semibold mb - 3 text - blue-400">Target Markets</h3>;"
-              <div className="grid grid - cols - 1 "sm":grid - cols - 2 gap-2">;"
-                {service.target_market.map ((market, index) => (<div key={index} className="flex items - center gap - 2 text-sm">;"
-                    <span className="text - green-400">🎯</span>;"
-              <h3 className="font - semibold mb - 3 text - blue - 400">Target Markets</h3>;"
-              <div className="grid grid - cols - 1 "sm":grid - cols - 2 gap - 2">;"
+
+              <h3 className="font - semibold mb - 3 text - blue-400">Target Markets</h3>;
+              <div className="grid grid - cols - 1 sm:grid - cols - 2 gap-2">;
                 {service.target_market.map ((market, index) => (
-                  <div key={index} className="flex items - center gap - 2 text - sm">;"
-                    <span className="text - green - 400">🎯</span>;"
+                  <div key={index} className="flex items - center gap - 2 text-sm">;
+                    <span className="text - green-400">🎯</span>;
+>>>>>>> origin/chore/fix-lint-and-merge
+
                     <span>{market}</span>;
                   </div>))}
+
               </div>;
             </div>;
             {/* Features */}
+<<<<<<< HEAD
             <div>;
-              <h3 className="font - semibold mb - 3 text - purple - 400">Key Features</h3>;"
-              <div className="grid grid - cols - 1 gap - 2">;"
-                {service.features.map ((feature, index) => (<div key={index} className="flex items - center gap - 2 text - sm">;"
-                    <span className="text - blue - 400">✓</span>;"
-              <h3 className="font - semibold mb - 3 text - purple-400">Key Features</h3>;"
-              <div className="grid grid - cols - 1 gap-2">;"
-                {service.features.map ((feature, index) => (<div key={index} className="flex items - center gap - 2 text-sm">;"
-                    <span className="text - blue-400">✓</span>;"
+=======
+
+              <h3 className="font - semibold mb - 3 text - purple-400">Key Features</h3>;
+              <div className="grid grid - cols - 1 gap-2">;
                 {service.features.map ((feature, index) => (
-                  <div key={index} className="flex items - center gap - 2 text - sm">;"
-                    <span className="text - blue - 400">✓</span>;"
+                  <div key={index} className="flex items - center gap - 2 text-sm">;
+                    <span className="text - blue-400">✓</span>;
+>>>>>>> origin/chore/fix-lint-and-merge
+
                     <span>{feature}</span>;
                   </div>))}
+
               </div>;
             </div>;
             {/* Benefits */}
+<<<<<<< HEAD
             <div>;
-              <h3 className="font - semibold mb - 3 text - green - 400">Business Benefits</h3>;"
-              <div className="grid grid - cols - 1 gap - 2">;"
-                {service.benefits.map ((benefit, index) => (<div key={index} className="flex items - center gap - 2 text - sm">;"
-                    <span className="text - yellow - 400">💡</span>;"
-              <h3 className="font - semibold mb - 3 text - green-400">Business Benefits</h3>;"
-              <div className="grid grid - cols - 1 gap-2">;"
-                {service.benefits.map ((benefit, index) => (<div key={index} className="flex items - center gap - 2 text-sm">;"
-                    <span className="text - yellow-400">💡</span>;"
+=======
+
+              <h3 className="font - semibold mb - 3 text - green-400">Business Benefits</h3>;
+              <div className="grid grid - cols - 1 gap-2">;
                 {service.benefits.map ((benefit, index) => (
-                  <div key={index} className="flex items - center gap - 2 text - sm">;"
-                    <span className="text - yellow - 400">💡</span>;"
+                  <div key={index} className="flex items - center gap - 2 text-sm">;
+                    <span className="text - yellow-400">💡</span>;
+>>>>>>> origin/chore/fix-lint-and-merge
+
                     <span>{benefit}</span>;
                   </div>))}
+
               </div>;
             </div>;
             {/* Integrations */}
+<<<<<<< HEAD
             <div>;
-              <h3 className="font - semibold mb - 3 text - orange - 400">Integrations</h3>;"
-              <div className="grid grid - cols - 1 "sm":grid - cols - 2 gap - 2">;"
-                {service.integrations.map ((integration, index) => (<div key={index} className="flex items - center gap - 2 text - sm">;"
-                    <span className="text - purple - 400">🔗</span>;"
-              <h3 className="font - semibold mb - 3 text - orange-400">Integrations</h3>;"
-              <div className="grid grid - cols - 1 "sm":grid - cols - 2 gap-2">;"
-                {service.integrations.map ((integration, index) => (<div key={index} className="flex items - center gap - 2 text-sm">;"
-                    <span className="text - purple-400">🔗</span>;"
+=======
+
+              <h3 className="font - semibold mb - 3 text - orange-400">Integrations</h3>;
+              <div className="grid grid - cols - 1 sm:grid - cols - 2 gap-2">;
                 {service.integrations.map ((integration, index) => (
-                  <div key={index} className="flex items - center gap - 2 text - sm">;"
-                    <span className="text - purple - 400">🔗</span>;"
+                  <div key={index} className="flex items - center gap - 2 text-sm">;
+                    <span className="text - purple-400">🔗</span>;
+>>>>>>> origin/chore/fix-lint-and-merge
+
                     <span>{integration}</span>;
                   </div>))}
+
               </div>;
             </div>;
             {/* Deployment */}
+<<<<<<< HEAD
             <div>;
-              <h3 className="font - semibold mb - 3 text - cyan - 400">Deployment</h3>;"
-              <div className="text - sm opacity - 80">{service.deployment}</div>;"
-            </div>;
-            {/* CTA */}
-            <div className="space - y-3 pt - 4 border - t border - white / 10">;"
+=======
+
+            <div className="space - y-3 pt - 4 border - t border-white / 10">;
               <a;
                 href={service.contact_link}
-                className="w - full block text - center bg - gradient - to - r from - blue - 600 to - purple - 600 text - white py - 3 px - 6 rounded - lg "hover":from - blue - 700 "hover":to - purple - 700 transition - all font - semibold";"
-              <h3 className="font - semibold mb - 3 text - cyan-400">Deployment</h3>;"
-              <div className="text - sm opacity-80">{service.deployment}</div>;"
+                className="w - full block text - center bg - gradient - to - r from - blue - 600 to - purple - 600 text - white py - 3 px - 6 rounded - lg hover:from - blue - 700 hover:to - purple - 700 transition - all font-semibold";
+
             </div>;
             {/* CTA */}
-            <div className="space - y-3 pt - 4 border - t border - white / 10">;"
+            <div className="space - y-3 pt - 4 border - t border-white / 10">;
               <a;
                 href={service.contact_link}
-                className="w - full block text - center bg - gradient - to - r from - blue - 600 to - purple - 600 text - white py - 3 px - 6 rounded - lg "hover":from - blue - 700 "hover":to - purple - 700 transition - all font - semibold";"
+                className="w - full block text - center bg - gradient - to - r from - blue - 600 to - purple - 600 text - white py - 3 px - 6 rounded - lg hover:from - blue - 700 hover:to - purple - 700 transition - all font - semibold";
+>>>>>>> origin/chore/fix-lint-and-merge
+
               >;
                 Get Started;
               </a>;
               <a;
-                href={`"https"://ziontechgroup.com / services/${service.id}`}`
-                className="w - full block text - center text - blue - 400 "hover":text - blue - 300 text - sm underline";"
-                className="w - full block text - center text - blue - 400 "hover":text - blue - 300 text-sm underline";"
+
               >;
                 Learn More;
               </a>;
             </div>;
+<<<<<<< HEAD
           </div>))}
       </div>;
       {/* SAAS Capabilities Overview */}
-      <div className="space - y-6">;"
-        <h2 className="text - 3xl font - bold text - center">SAAS Capabilities Overview</h2>;"
-        <div className="grid grid - cols - 1 "md":grid - cols - 4 gap - 6">;"
-          <div className="text - center p - 6 rounded - lg bg - white / 5 border border - white / 10">;"
-            <div className="text - 3xl mb - 3">🚀</div>;"
-            <h3 className="font - semibold mb - 2">Rapid Deployment</h3>;"
-            <p className="text - sm opacity - 80">Get to market faster with pre - built solutions</p>;"
-          </div>;
-          <div className="text - center p - 6 rounded - lg bg - white / 5 border border - white / 10">;"
-            <div className="text - 3xl mb - 3">🔧</div>;"
-            <h3 className="font - semibold mb - 2">Customization</h3>;"
-            <p className="text - sm opacity - 80">White - label and customize for your brand</p>;"
-          </div>;
-          <div className="text - center p - 6 rounded - lg bg - white / 5 border border - white / 10">;"
-            <div className="text - 3xl mb - 3">📊</div>;"
-            <h3 className="font - semibold mb - 2">Analytics</h3>;"
-            <p className="text - sm opacity - 80">Built - in analytics and reporting</p>;"
-          </div>;
-          <div className="text - center p - 6 rounded - lg bg - white / 5 border border - white / 10">;"
-            <div className="text - 3xl mb - 3">🔌</div>;"
-            <h3 className="font - semibold mb - 2">Integrations</h3>;"
-            <p className="text - sm opacity - 80">Connect with your existing tools</p>;"
-      <div className="space-y-6">;"
-        <h2 className="text - 3xl font - bold text-center">SAAS Capabilities Overview</h2>;"
-        <div className="grid grid - cols - 1 "md":grid - cols - 4 gap-6">;"
-          <div className="text - center p - 6 rounded - lg bg - white / 5 border border-white / 10">;"
-            <div className="text - 3xl mb-3">🚀</div>;"
-            <h3 className="font - semibold mb-2">Rapid Deployment</h3>;"
-            <p className="text - sm opacity-80">Get to market faster with pre - built solutions</p>;"
-          </div>;
-          <div className="text - center p - 6 rounded - lg bg - white / 5 border border - white / 10">;"
-            <div className="text - 3xl mb - 3">🔧</div>;"
-            <h3 className="font - semibold mb - 2">Customization</h3>;"
-            <p className="text - sm opacity - 80">White - label and customize for your brand</p>;"
-          </div>;
-          <div className="text - center p - 6 rounded - lg bg - white / 5 border border - white / 10">;"
-            <div className="text - 3xl mb - 3">📊</div>;"
-            <h3 className="font - semibold mb - 2">Analytics</h3>;"
-            <p className="text - sm opacity - 80">Built - in analytics and reporting</p>;"
-          </div>;
-          <div className="text - center p - 6 rounded - lg bg - white / 5 border border - white / 10">;"
-            <div className="text - 3xl mb - 3">🔌</div>;"
-            <h3 className="font - semibold mb - 2">Integrations</h3>;"
-            <p className="text - sm opacity - 80">Connect with your existing tools</p>;"
+=======
+
+          <div className="text - center p - 6 rounded - lg bg - white / 5 border border-white / 10">;
+            <div className="text - 3xl mb-3">🔌</div>;
+            <h3 className="font - semibold mb-2">Integrations</h3>;
+            <p className="text - sm opacity-80">Connect with your existing tools</p>;
+>>>>>>> origin/chore/fix-lint-and-merge
+
           </div>;
         </div>;
       </div>;
       {/* CTA Section */}
-      <div className="text - center space - y-6 py - 12 bg - gradient - to - r from - blue - 600 / 10 to - purple - 600 / 10 rounded - lg border border - white / 10">;"
-        <h2 className="text - 3xl font - bold">Ready to Accelerate Your Business?</h2>;"
-        <p className="text - xl opacity - 80 max - w-2xl mx - auto">;"
-          Let's discuss how our micro SAAS solutions can transform your business operations;'
+
+<<<<<<< HEAD
+=======
+        <div className="flex flex - col sm:flex - row gap - 4 justify-center">;
+          <a;
+            href="mailto:kleber@ziontechgroup.com?subject = Micro%20SAAS%20Consultation";
+            className="bg - gradient - to - r from - blue - 600 to - purple - 600 text - white px - 8 py - 3 rounded - lg hover:from - blue - 700 hover:to - purple - 700 transition - all font - semibold text-lg";
+
+          Let's discuss how our micro SAAS solutions can transform your business operations;
           reduce costs, and provide competitive advantages. Get in touch for a personalized consultation.;
         </p>;
-        <div className="flex flex - col "sm":flex - row gap - 4 justify - center">;"
+        <div className="flex flex - col sm:flex - row gap - 4 justify-center">;
           <a;
-            href=""mailto":kleber@ziontechgroup.com?subject = Micro%20SAAS%20Consultation";"
-            className="bg - gradient - to - r from - blue - 600 to - purple - 600 text - white px - 8 py - 3 rounded - lg "hover":from - blue - 700 "hover":to - purple - 700 transition - all font - semibold text - lg";"
-      <div className="text - center space - y-6 py - 12 bg - gradient - to - r from - blue - 600 / 10 to - purple - 600 / 10 rounded - lg border border-white / 10">;"
-        <h2 className="text - 3xl font-bold">Ready to Accelerate Your Business?</h2>;"
-        <p className="text - xl opacity - 80 max - w-2xl mx-auto">;"
-          Let's discuss how our micro SAAS solutions can transform your business operations;'
-          reduce costs, and provide competitive advantages. Get in touch for a personalized consultation.;
-        </p>;
-        <div className="flex flex - col "sm":flex - row gap - 4 justify - center">;"
-          <a;
-            href=""mailto":kleber@ziontechgroup.com?subject = Micro%20SAAS%20Consultation";"
-            className="bg - gradient - to - r from - blue - 600 to - purple - 600 text - white px - 8 py - 3 rounded - lg "hover":from - blue - 700 "hover":to - purple - 700 transition - all font - semibold text - lg";"
+            href="mailto:kleber@ziontechgroup.com?subject = Micro%20SAAS%20Consultation";
+            className="bg - gradient - to - r from - blue - 600 to - purple - 600 text - white px - 8 py - 3 rounded - lg hover:from - blue - 700 hover:to - purple - 700 transition - all font - semibold text - lg";
+
+>>>>>>> origin/chore/fix-lint-and-merge
           >;
             Schedule SAAS Consultation;
           </a>;
           <a;
-            href=""tel":+13024640950";"
-            className="border border - white / 20 text - white px - 8 py - 3 rounded - lg "hover":bg - white / 10 transition - all font - semibold text - lg";"
-            className="border border - white / 20 text - white px - 8 py - 3 rounded - lg "hover":bg - white / 10 transition - all font - semibold text-lg";"
+<<<<<<< HEAD
+=======
+            href="tel:+13024640950";
+>>>>>>> origin/chore/fix-lint-and-merge
+
           >;
-            "Call": +1 302 464 0950;
+            Call: +1 302 464 0950;
           </a>;
         </div>;
       </div>;
+<<<<<<< HEAD
       {/* Back to Services */}
-      <div className="text - center">;"
-        <a;
-          href="/services";"
-          className="inline - block px - 6 py - 3 rounded - lg border border - white / 20 text - white "hover": bg - white / 10 transition - all font - semibold";"
-      <div className="text-center">;"
-        <a;
-          href="/services";"
-          className="inline - block px - 6 py - 3 rounded - lg border border - white / 20 text - white "hover": bg - white / 10 transition - all font - semibold";"
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+
         >;
           ← Back to All Services;
         </a>;
+<<<<<<< HEAD
       </div>;
     </div>)}
   targetMarket: string[],
@@ -686,280 +813,280 @@ function MicroSAASPage() {
 
 const microSAASServices: MicroSAASService[] = [
   {
-    id: "marketplace-platform-pro",
-    name: "Digital Marketplace Platform Pro",
-    description: "White-label marketplace solution for jobs, talent, and projects with integrated payment processing, governance, and AI-powered matching.",
+    id: marketplace-platform-pro",
+    name: "Digital Marketplace Platform Pro,
+    description: White-label marketplace solution for jobs, talent, and projects with integrated payment processing, governance, and AI-powered matching.",
     targetMarket: [
-      "Job boards and recruitment",
-      "Freelance platforms",
-      "Service marketplaces",
-      "E-commerce platforms",
-      "Educational platforms",
-      "Healthcare services"
+      "Job boards and recruitment,
+      Freelance platforms",
+      "Service marketplaces,
+      E-commerce platforms",
+      "Educational platforms,
+      Healthcare services"
     ],
     features: [
-      "Custom branding and theming",
-      "Multi-currency support",
-      "Integrated payment gateways",
-      "User management and roles",
-      "Analytics and reporting",
-      "Mobile-responsive design",
-      "AI-powered matching",
-      "Escrow and dispute resolution",
-      "Multi-language support",
-      "API access and webhooks"
+      "Custom branding and theming,
+      Multi-currency support",
+      "Integrated payment gateways,
+      User management and roles",
+      "Analytics and reporting,
+      Mobile-responsive design",
+      "AI-powered matching,
+      Escrow and dispute resolution",
+      "Multi-language support,
+      API access and webhooks"
     ],
-    pricing: "Starting at $1,499/month",
+    pricing: "Starting at $1,499/month,
     startingPrice: 1499,
-    contactLink: "mailto:kleber@ziontechgroup.com?subject = $2;
+    contactLink: mailto:kleber@ziontechgroup.com?subject = $2;
     icon: "🏪",
     benefits: [
-      "Reduce time to market by 80%",
+      Reduce time to market by 80%,
       "Lower development costs by 60%",
-      "Scalable architecture",
+      Scalable architecture,
       "Built-in compliance features",
-      "24/7 technical support",
+      24/7 technical support,
       "Regular feature updates"
     ],
     integrations: [
-      "Stripe, PayPal, Coinbase",
+      Stripe, PayPal, Coinbase,
       "Slack, Teams, Discord",
-      "Zapier, Make.com",
+      Zapier, Make.com,
       "Google Analytics, Mixpanel",
-      "Mailchimp, SendGrid",
+      Mailchimp, SendGrid,
       "AWS, Azure, Google Cloud"
     ],
-    deployment: "Cloud-hosted with white-label options"
+    deployment: Cloud-hosted with white-label options
   },
   {
     id: "token-economy-platform",
-    name: "Token Economy Platform",
+    name: Token Economy Platform,
     description: "Complete token system with rewards, governance, and economic incentives for community engagement and loyalty programs.",
     targetMarket: [
-      "Gaming platforms",
+      Gaming platforms,
       "Community platforms",
-      "Loyalty programs",
+      Loyalty programs,
       "Educational platforms",
-      "Social networks",
+      Social networks,
       "DeFi applications"
     ],
     features: [
-      "Custom token creation",
+      Custom token creation,
       "Reward distribution system",
-      "Governance voting mechanisms",
+      Governance voting mechanisms,
       "Staking and liquidity pools",
-      "Multi-chain support",
+      Multi-chain support,
       "Analytics and reporting",
-      "Smart contract templates",
+      Smart contract templates,
       "Wallet integration",
-      "Compliance tools",
+      Compliance tools,
       "API and SDK access"
     ],
-    pricing: "Starting at $999/month",
+    pricing: Starting at $999/month,
     startingPrice: 999,
     contactLink: "mailto:kleber@ziontechgroup.com?subject = $2;
-    icon: "🪙",
+    icon: "🪙,
     benefits: [
-      "Increase user engagement by 300%",
-      "Reduce churn by 40%",
-      "Monetize community activities",
-      "Regulatory compliance built-in",
-      "Multi-blockchain support",
-      "Professional support team"
+      Increase user engagement by 300%",
+      "Reduce churn by 40%,
+      Monetize community activities",
+      "Regulatory compliance built-in,
+      Multi-blockchain support",
+      "Professional support team
     ],
     integrations: [
-      "MetaMask, WalletConnect",
-      "Ethereum, Polygon, BSC",
-      "Discord, Telegram bots",
-      "Shopify, WooCommerce",
-      "WordPress, Webflow",
-      "Mobile apps (iOS/Android)"
+      MetaMask, WalletConnect",
+      "Ethereum, Polygon, BSC,
+      Discord, Telegram bots",
+      "Shopify, WooCommerce,
+      WordPress, Webflow",
+      "Mobile apps (iOS/Android)
     ],
-    deployment: "Multi-cloud with blockchain integration"
+    deployment: Multi-cloud with blockchain integration"
   },
   {
-    id: "kyc-aml-enterprise",
-    name: "KYC/AML Verification Enterprise",
-    description: "Comprehensive identity verification and compliance system for financial services and regulated industries with advanced fraud detection.",
+    id: "kyc-aml-enterprise,
+    name: KYC/AML Verification Enterprise",
+    description: "Comprehensive identity verification and compliance system for financial services and regulated industries with advanced fraud detection.,
     targetMarket: [
-      "Financial institutions",
-      "Cryptocurrency exchanges",
-      "Real estate platforms",
-      "Healthcare services",
-      "Legal services",
-      "Government agencies"
+      Financial institutions",
+      "Cryptocurrency exchanges,
+      Real estate platforms",
+      "Healthcare services,
+      Legal services",
+      "Government agencies
     ],
     features: [
-      "Document verification",
-      "Biometric authentication",
-      "Compliance reporting",
-      "Risk scoring",
-      "Multi-jurisdiction support",
-      "API integration",
-      "Fraud detection AI",
-      "Audit trails",
-      "Custom compliance rules",
-      "Real-time monitoring"
+      Document verification",
+      "Biometric authentication,
+      Compliance reporting",
+      "Risk scoring,
+      Multi-jurisdiction support",
+      "API integration,
+      Fraud detection AI",
+      "Audit trails,
+      Custom compliance rules",
+      "Real-time monitoring
     ],
-    pricing: "Starting at $499/month",
+    pricing: Starting at $499/month",
     startingPrice: 499,
     contactLink: "mailto:kleber@ziontechgroup.com?subject = $2;
-    icon: "🆔",
+    icon: 🆔,
     benefits: [
       "Reduce compliance costs by 50%",
-      "Improve verification accuracy by 95%",
+      Improve verification accuracy by 95%,
       "Faster customer onboarding",
-      "Regulatory compliance assurance",
+      Regulatory compliance assurance,
       "Reduced fraud incidents",
-      "Scalable verification process"
+      Scalable verification process
     ],
     integrations: [
       "Banking systems",
-      "CRM platforms",
+      CRM platforms,
       "Payment processors",
-      "Blockchain networks",
+      Blockchain networks,
       "Government databases",
-      "Third-party verification services"
+      Third-party verification services
     ],
     deployment: "Enterprise-grade cloud with on-premise options"
   },
   {
-    id: "dao-governance-platform",
+    id: dao-governance-platform,
     name: "DAO Governance Platform",
-    description: "Complete DAO platform with proposal creation, voting mechanisms, treasury management, and governance analytics for decentralized organizations.",
+    description: Complete DAO platform with proposal creation, voting mechanisms, treasury management, and governance analytics for decentralized organizations.,
     targetMarket: [
       "DeFi protocols",
-      "NFT communities",
+      NFT communities,
       "Investment DAOs",
-      "Governance tokens",
+      Governance tokens,
       "Decentralized organizations",
-      "Community projects"
+      Community projects
     ],
     features: [
       "Proposal creation and management",
-      "Multiple voting mechanisms",
+      Multiple voting mechanisms,
       "Treasury management",
-      "Member onboarding",
+      Member onboarding,
       "Governance analytics",
-      "Integration with major wallets",
+      Integration with major wallets,
       "Custom governance rules",
-      "Multi-signature support",
+      Multi-signature support,
       "Compliance reporting",
-      "Mobile governance app"
+      Mobile governance app
     ],
     pricing: "Starting at $799/month",
     startingPrice: 799,
-    contactLink: "mailto:kleber@ziontechgroup.com?subject = $2;
-    icon: "🏛️",
+    contactLink: mailto:kleber@ziontechgroup.com?subject = $2;
+    icon: 🏛️",
     benefits: [
-      "Streamline governance processes",
-      "Increase community participation",
-      "Transparent decision-making",
-      "Reduce governance overhead",
-      "Compliance with regulations",
-      "Professional support and maintenance"
+      "Streamline governance processes,
+      Increase community participation",
+      "Transparent decision-making,
+      Reduce governance overhead",
+      "Compliance with regulations,
+      Professional support and maintenance"
     ],
     integrations: [
-      "MetaMask, WalletConnect",
-      "Ethereum, Polygon, BSC",
-      "Discord, Telegram",
-      "Snapshot, Tally",
-      "Gnosis Safe",
-      "DeFi protocols"
+      "MetaMask, WalletConnect,
+      Ethereum, Polygon, BSC",
+      "Discord, Telegram,
+      Snapshot, Tally",
+      "Gnosis Safe,
+      DeFi protocols"
     ],
-    deployment: "Blockchain-native with cloud management"
+    deployment: "Blockchain-native with cloud management
   },
   {
-    id: "ai-learning-platform",
-    name: "AI-Powered Learning Platform",
-    description: "Comprehensive learning management system with AI-powered content creation, assessment, and personalized learning paths.",
+    id: ai-learning-platform",
+    name: "AI-Powered Learning Platform,
+    description: Comprehensive learning management system with AI-powered content creation, assessment, and personalized learning paths.",
     targetMarket: [
-      "Educational institutions",
-      "Corporate training",
-      "Online course creators",
-      "Skill development platforms",
-      "Language learning",
-      "Professional certification"
+      "Educational institutions,
+      Corporate training",
+      "Online course creators,
+      Skill development platforms",
+      "Language learning,
+      Professional certification"
     ],
     features: [
-      "AI content generation",
-      "Interactive assessments",
-      "Certification tracking",
-      "Learning analytics",
-      "Multi-format support",
-      "Mobile learning",
-      "Personalized learning paths",
-      "Collaborative learning tools",
-      "Gamification elements",
-      "Multi-language support"
+      "AI content generation,
+      Interactive assessments",
+      "Certification tracking,
+      Learning analytics",
+      "Multi-format support,
+      Mobile learning",
+      "Personalized learning paths,
+      Collaborative learning tools",
+      "Gamification elements,
+      Multi-language support"
     ],
-    pricing: "Starting at $599/month",
+    pricing: "Starting at $599/month,
     startingPrice: 599,
-    contactLink: "mailto:kleber@ziontechgroup.com?subject = $2;
+    contactLink: mailto:kleber@ziontechgroup.com?subject = $2;
     icon: "🎓",
     benefits: [
-      "Reduce content creation time by 70%",
+      Reduce content creation time by 70%,
       "Improve learning outcomes by 40%",
-      "Personalized learning experience",
+      Personalized learning experience,
       "Scalable content generation",
-      "Advanced analytics insights",
+      Advanced analytics insights,
       "Mobile-first design"
     ],
     integrations: [
-      "LMS systems",
+      LMS systems,
       "Video platforms",
-      "Payment processors",
+      Payment processors,
       "CRM systems",
-      "Analytics tools",
+      Analytics tools,
       "Social learning platforms"
     ],
-    deployment: "Cloud-hosted with offline capabilities"
+    deployment: Cloud-hosted with offline capabilities
   },
   {
     id: "incubator-grants-platform",
-    name: "Incubator & Grants Management Platform",
+    name: Incubator & Grants Management Platform,
     description: "Platform for managing startup incubators, grant programs, and funding distribution with transparent governance and impact measurement.",
     targetMarket: [
-      "Startup incubators",
+      Startup incubators,
       "Government agencies",
-      "Non-profit organizations",
+      Non-profit organizations,
       "Corporate innovation programs",
-      "Educational institutions",
+      Educational institutions,
       "Investment funds"
     ],
     features: [
-      "Application management",
+      Application management,
       "Review and scoring systems",
-      "Fund distribution tracking",
+      Fund distribution tracking,
       "Progress monitoring",
-      "Impact measurement",
+      Impact measurement,
       "Reporting and analytics",
-      "Compliance tracking",
+      Compliance tracking,
       "Stakeholder communication",
-      "Performance dashboards",
+      Performance dashboards,
       "API access"
     ],
-    pricing: "Starting at $1,199/month",
+    pricing: Starting at $1,199/month,
     startingPrice: 1199,
     contactLink: "mailto:kleber@ziontechgroup.com?subject = $2;
-    icon: "🌱",
+    icon: "🌱,
     benefits: [
-      "Streamline application processes",
-      "Improve decision-making transparency",
-      "Reduce administrative overhead",
-      "Better impact measurement",
-      "Compliance automation",
-      "Data-driven insights"
+      Streamline application processes",
+      "Improve decision-making transparency,
+      Reduce administrative overhead",
+      "Better impact measurement,
+      Compliance automation",
+      "Data-driven insights
     ],
     integrations: [
-      "Payment systems",
-      "CRM platforms",
-      "Accounting software",
-      "Communication tools",
-      "Analytics platforms",
-      "Government databases"
+      Payment systems",
+      "CRM platforms,
+      Accounting software",
+      "Communication tools,
+      Analytics platforms",
+      "Government databases
     ],
-    deployment: "Enterprise cloud with compliance features"
+    deployment: Enterprise cloud with compliance features"
   }
 ],
 
@@ -971,27 +1098,27 @@ export default function MicroSAASPage() {
       </div>
 
       {/* Micro SAAS Services Grid */}
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-8>
         {microSAASServices.map(service => (
           <div
             key={service.id}
-            className="rounded-lg border border-white/10 bg-white/5 p-6 space-y-6"
+            className=rounded-lg border border-white/10 bg-white/5 p-6 space-y-6"
           >
             {/* Service Header */}
-            <div className="text-center space-y-3">
-              <div className="text-4xl">{service.icon}</div>
-              <h2 className="text-2xl font-bold">{service.name}</h2>
-              <p className="opacity-80">{service.description}</p>
-              <div className="text-2xl font-bold text-blue-400">{service.pricing}</div>
+            <div className="text-center space-y-3>
+              <div className=text-4xl">{service.icon}</div>
+              <h2 className="text-2xl font-bold>{service.name}</h2>
+              <p className=opacity-80">{service.description}</p>
+              <div className="text-2xl font-bold text-blue-400>{service.pricing}</div>
             </div>
 
             {/* Target Market */}
             <div>
-              <h3 className="font-semibold mb-3 text-blue-400">Target Markets</h3>
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
+              <h3 className=font-semibold mb-3 text-blue-400">Target Markets</h3>
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-2>
                 {service.targetMarket.map((market, index) => (
-                  <div key={index} className="flex items-center gap-2 text-sm">
-                    <span className="text-green-400">🎯</span>
+                  <div key={index} className=flex items-center gap-2 text-sm">
+                    <span className="text-green-400>🎯</span>
                     <span>{market}</span>
                   </div>
                 ))}
@@ -1000,11 +1127,11 @@ export default function MicroSAASPage() {
 
             {/* Features */}
             <div>
-              <h3 className="font-semibold mb-3 text-purple-400">Key Features</h3>
-              <div className="grid grid-cols-1 gap-2">
+              <h3 className=font-semibold mb-3 text-purple-400">Key Features</h3>
+              <div className="grid grid-cols-1 gap-2>
                 {service.features.map((feature, index) => (
-                  <div key={index} className="flex items-center gap-2 text-sm">
-                    <span className="text-blue-400">✓</span>
+                  <div key={index} className=flex items-center gap-2 text-sm">
+                    <span className="text-blue-400>✓</span>
                     <span>{feature}</span>
                   </div>
                 ))}
@@ -1013,11 +1140,11 @@ export default function MicroSAASPage() {
 
             {/* Benefits */}
             <div>
-              <h3 className="font-semibold mb-3 text-green-400">Business Benefits</h3>
-              <div className="grid grid-cols-1 gap-2">
+              <h3 className=font-semibold mb-3 text-green-400">Business Benefits</h3>
+              <div className="grid grid-cols-1 gap-2>
                 {service.benefits.map((benefit, index) => (
-                  <div key={index} className="flex items-center gap-2 text-sm">
-                    <span className="text-yellow-400">💡</span>
+                  <div key={index} className=flex items-center gap-2 text-sm">
+                    <span className="text-yellow-400>💡</span>
                     <span>{benefit}</span>
                   </div>
                 ))}
@@ -1026,22 +1153,22 @@ export default function MicroSAASPage() {
 
             {/* Integrations */}
             <div>
-              <h3 className="font-semibold mb-3 text-orange-400">Integrations</h3>
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
+              <h3 className=font-semibold mb-3 text-orange-400">Integrations</h3>
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-2>
                 {service.integrations.map((integration, index) => (
                   <div key = $2;
           reduce costs, and provide competitive advantages. Get in touch for a personalized consultation.
         </p>
-        <div className="flex flex-col sm:flex-row gap-4 justify-center">
+        <div className=flex flex-col sm:flex-row gap-4 justify-center">
           <a
-            href="mailto:kleber@ziontechgroup.com?subject=Micro%20SAAS%20Consultation"
-            className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-3 rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all font-semibold text-lg"
+            href="mailto:kleber@ziontechgroup.com?subject=Micro%20SAAS%20Consultation
+            className=bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-3 rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all font-semibold text-lg"
           >
             Schedule SAAS Consultation
           </a>
           <a
-            href="tel:+13024640950"
-            className="border border-white/20 text-white px-8 py-3 rounded-lg hover:bg-white/10 transition-all font-semibold text-lg"
+            href="tel:+13024640950
+            className=border border-white/20 text-white px-8 py-3 rounded-lg hover:bg-white/10 transition-all font-semibold text-lg"
           >
             Call: +1 302 464 0950
           </a>
@@ -1049,9 +1176,9 @@ export default function MicroSAASPage() {
       </div>
 
       {/* Back to Services */}
-      <div className="text-center">
+      <div className="text-center>
         <a
-          href="/services"
+          href=/services"
           className="inline-block px-6 py-3 rounded-lg border border-white/20 text-white hover: bg-white/10 transition-all font-semibold"
         >
           ← Back to All Services
@@ -1060,3 +1187,6 @@ export default function MicroSAASPage() {
     </div>
   )
 }
+=======
+      </div>;
+>>>>>>> origin/chore/fix-lint-and-merge

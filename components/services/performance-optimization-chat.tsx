@@ -7,60 +7,60 @@ import Link from 'next/link';
 const PerformanceOptimizationChat: NextPage = () => {return (<div>;
 
 
-=======
-<<<<<<< HEAD
 <div> <Head> <title>PerformanceOptimizationChat - Zion Tech Solutions</title> <meta name="description" content="PerformanceOptimizationChat service" /> </Head> <main> <h1>PerformanceOptimizationChat</h1> <p>Service details coming soon...</p> <a href="/services" >Back to Services</a> </main> </div> export default PerformanceOptimizationChat
 =======
-import type { NextPage } from 'next';
-import Head from 'next/head';
-import Link from 'next/link';
-const PerformanceOptimizationChat: NextPage;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
+>>>>>>> origin/chore/fix-lint-and-merge
 import type { NextPage } from "next";
 import Head from "next/head";
+
 import Link from "next/link";
 const PerformanceOptimizationChat: NextPage = () => {;
   return (
     <div>;
       <Head>;
         <title>PerformanceOptimizationChat - Zion Tech Solutions</title>;
+<<<<<<< HEAD
         <meta
-          name="description"
-          content="PerformanceOptimizationChat service"
-        />{" "}
+          name=description"
+          content="PerformanceOptimizationChat service
+        />{ "}
       <main>
         <h1>PerformanceOptimizationChat</h1>
         <p>Service details coming soon...</p>
+        <a href="/services>Back to Services</a>
+=======
+
         <a href="/services">Back to Services</a>
+>>>>>>> origin/chore/fix-lint-and-merge
       </main>
     </div>
       </Head>;
 
       <main>;
         <h1>PerformanceOptimizationChat</h1>;
+<<<<<<< HEAD
         <p>Service details coming soon...</p>;
+        <a href=/services">Back to Services</a>;
+=======
+        <p>Service details coming soon...</p>;"
         <a href="/services">Back to Services</a>;
+>>>>>>> origin/chore/fix-lint-and-merge
       </main>;
     </div>;
   );
 }
 export default PerformanceOptimizationChat;
-<<<<<<< HEAD
 
-
-
-
-
-
-
-import type { NextPage } from "next";
-import Head from "next/head";
+"
+import type { NextPage } from "next";"
+import Head from "next/head";"
 import Link from "next/link";
-import type { NextPage } from 'next';
-import Head from 'next/head';
+import type { NextPage } from 'next';'
+import Head from 'next/head';'
+
 import Link from 'next/link';
 
-const PerformanceOptimizationChat: NextPage = () => {
+const PerformanceOptimizationChat: NextPage = () => {}
   return (
     <div>
       <Head>
@@ -71,30 +71,23 @@ const PerformanceOptimizationChat: NextPage = () => {
 
         <title>PerformanceOptimizationChat - Zion Tech Solutions</title>
 
-
-
-
-
-
-
-
-
 import type { NextPage } from './next';
 import Head from './next / head';
+
 import Link from './next / link';
-const PerformanceOptimizationChat: NextPage = () => {
+const PerformanceOptimizationChat: NextPage = () => {}
   return (
     <div>;
       <Head>;
         <title > PerformanceOptimizationChat - Zion Tech Solutions</title>;
-        <meta;
-          name="description";
-          content="PerformanceOptimizationChat service";
+        <meta;"
+          name="description";"
+          content="PerformanceOptimizationChat service";"
         />{" "}
       </Head>;
       <main>;
         <h1 > PerformanceOptimizationChat</h1>;
-        <p > Service details coming soon...</p>;
+        <p > Service details coming soon...</p>;"
         <a href="/services">Back to Services</a>;
       </main>;
     </div>);
@@ -102,12 +95,14 @@ const PerformanceOptimizationChat: NextPage = () => {
 ;
 export default PerformanceOptimizationChat;
 ;
+
+origin/cursor/automate-test-improve-and-merge-code-20a4
+pr-12243
     <div>
       <Head>
         <title>PerformanceOptimizationChat - Zion Tech Solutions</title>
         <meta name=&quot;description&quot; content=&quot;PerformanceOptimizationChat service&quot; />
       </Head>
-      
       <main>
         <h1>PerformanceOptimizationChat</h1>
         <p>Service details coming soon...</p>
@@ -119,19 +114,30 @@ export default PerformanceOptimizationChat;
 
 export default PerformanceOptimizationChat
 
-
-
-
-
-
-
-origin/cursor/automate-test-improve-and-merge-code-2533
-
-
+const PerformanceOptimizationChat: NextPage = () => {
+  return (
+    <div>
+      <Head>
+        <title>PerformanceOptimizationChat - Zion Tech Solutions</title>
+        <meta
+          name="description"
+          content="PerformanceOptimizationChat service"
+        />{" "}
+      </Head>
+      <main>
+        <h1>PerformanceOptimizationChat</h1>
+        <p>Service details coming soon...</p>
+        <a href="/services">Back to Services</a>
+      </main>
+    </div>
+  );
+}
+export default PerformanceOptimizationChat;
 
         <title>PerformanceOptimizationChat - Zion Tech Solutions</title>
+<<<<<<< HEAD
         <title>PerformanceOptimizationChat - Zion Tech Solutions</title>
 
 =======
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
+        <title>PerformanceOptimizationChat - Zion Tech Solutions</title>
+>>>>>>> origin/chore/fix-lint-and-merge

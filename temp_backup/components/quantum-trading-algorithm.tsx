@@ -20,7 +20,6 @@ const features = [
   'Custom strategy builder'
   'Performance analytics dashboard',];  website: 'https://ziontechgroup.com'
 }
-const features = [
   'Quantum-enhanced market prediction algorithmsReal-time market data processingAI-powered risk assessmentMulti-asset portfolio optimizationRegulatory compliance automationBacktesting and simulation engineCustom strategy builderPerformance analytics dashboard'
 const pricingPlans = [
   {

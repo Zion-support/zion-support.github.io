@@ -1,7 +1,3 @@
-export interface EmergingTechnologyService  {"id": string;"
-
-}
-
 export interface EmergingTechnologyService {
   "id": string;"
   }

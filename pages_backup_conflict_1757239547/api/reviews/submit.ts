@@ -22,7 +22,6 @@ export default async function handler(
     return res.status(405).json({ error: "Method not allowed" });
 import { v4 as uuidv4 } from 'uuid';
 import { findProjectById, hasExistingReview, upsertReview, counterpartRole } from '../../../utils/dataStore';
-import type { Review } from '../../../types/reviews';
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'POST') {
     return res.status(405).json({ error: 'Method not allowed' })
@@ -79,7 +78,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
         .status(403)
         .json({ error: "Invalid reviewer for this project" });
     }
-    const toRole = counterpartRole(fromRole);
     const toId = toRole === 'talent' ? project.talentSlug : project.clientId;
     const expectedFromId = fromRole === 'client' ? project.clientId : project.talentSlug;
     if (expectedFromId !== fromId) {

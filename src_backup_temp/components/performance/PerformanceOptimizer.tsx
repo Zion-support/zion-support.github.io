@@ -102,7 +102,6 @@ interface PerformanceMetrics {"loadTime": "number;'",';';'
 import React { useEffect, useState } from &apos;react',';';';'
     ',';';'
     ';';';'
-import React { useEffect, useState } from 'react';'
 interface PerformanceMetrics { "loadTime": "number;"
   "renderTime": number;"
   "memoryUsage": number;"
@@ -122,7 +121,6 @@ export const "PerformanceOptimizer": "React.FC = () => {';'
 export const "PerformanceOptimizer": "React.FC = () => {"}"
 export const "PerformanceOptimizer": React.FC = () => {''
   }
-  const [metrics, setMetrics] = useState<PerformanceMetrics | null" >(null);"
   useEffect(() => {""
   }
   networkLatenc,"y": number}&apos;&apos;
@@ -205,7 +203,6 @@ const networkLatency = navigation.responseEnd - navigation.requestStart;
           "networkLatency": }
     );
         // "Check": if performance is optimized,
-const isGoodPerformance = loadTime < 3000 && renderTime < 1500 && memoryUsage < 50;
         setIsOptimized(isGoodPerformance))}
     </div>;
     )';'

@@ -1,17 +1,17 @@
+<<<<<<< HEAD
 
 ;
-export function SelectResumeSection({import React from 'react';
-import { FileText  } from 'lucide-react';
-import { ResumeOption  } from '../resume-selector/types';
-import { ResumePreviewCard  } from './ResumePreviewCard';
-import { Resume  } from '@/types/resume';
-import { ResumeOption   } from '../resume-selector/types';
-import { ResumePreviewCard   } from './ResumePreviewCard';
+export function SelectResumeSection({import React from 'react;
+import { FileText  } from lucide-react';
+import { ResumeOption  } from '../resume-selector/types;
+import { ResumePreviewCard  } from ./ResumePreviewCard';
+import { Resume  } from '@/types/resume;
+import { ResumeOption   } from ../resume-selector/types';
+import { ResumePreviewCard   } from './ResumePreviewCard;
 interface SelectResumeSectionProps  {resumeOptions: ResumeOption[];
   selectedResume: ResumeOption | null;
   handleResumeSelect: (resumeId: string) => void;
   handleDownloadResume: () => void;
-<<<<<<< HEAD:src_backup/components/messaging/resume-selector/SelectResumeSection.tsx
   isLoading: boolean
 export function SelectResumeSection({
   resumeOptions;
@@ -21,83 +21,118 @@ export function SelectResumeSection({
 :recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/messaging/resume-selector/SelectResumeSection.tsx
 export function SelectResumeSection({
 
+import React from react';
+import { FileText } from 'lucide-react;
+import { ResumeOption } from ../resume-selector/types';
+import { ResumePreviewCard } from './ResumePreviewCard;
+import { Resume } from @/types/resume';
+=======
+export function SelectResumeSection({
+
 import React from 'react';
 import { FileText } from 'lucide-react';
 import { ResumeOption } from '../resume-selector/types';
 import { ResumePreviewCard } from './ResumePreviewCard';
 import { Resume } from '@/types/resume';
+
+import React from 'react';
+import { FileText } from 'lucide-react'
+import { ResumeOption  } from '../resume-selector/types';
+import { ResumePreviewCard  } from './ResumePreviewCard';
+import { Resume } from '@/types/resume';
+>>>>>>> origin/chore/fix-lint-and-merge
 interface SelectResumeSectionProps {
-  resumeOptions: ResumeOption[],
-  selectedResume: ResumeOption | null,
-  handleResumeSelect: (resumeId: string) => void,
-  handleDownloadResume: () => void,
-  isLoading: boolean}
-
-  resumeOptions: ResumeOption[]
-  selectedResume: ResumeOption | null
-  handleResumeSelect: (resumeId: string) => void
-  handleDownloadResume: () => void
-
+  resumeOptions: ResumeOption[];
+  selectedResume: ResumeOption | null;
+  handleResumeSelect: (resumeId: string) => void;
+  handleDownloadResume: () => void;
   isLoading: boolean
-}
 export function SelectResumeSection({
-  resumeOptions,
-  selectedResume,
-  handleResumeSelect,
-  handleDownloadResume,
+  resumeOptions;
+  selectedResume;
+  handleResumeSelect;
+  handleDownloadResume;
 origin/cursor/automate-test-improve-and-merge-code-2533
   isLoading
 }: SelectResumeSectionProps) {
   return (
-    <div className="space-y-2">
+    <div className="space-y-2>
       {resumeOptions.length === 0 ? (
-        <p className="text-sm text-zion-slate">No saved resumes found.</p>
+        <p className=text-sm text-zion-slate">No saved resumes found.</p>
       ) : (
         <>
 
             >
-              <div className="flex items-center">
-                <FileText className="h-4 w-4 mr-2 text-zion-cyan" />
-                <span className="text-white">{option.title}</span>
+              <div className="flex items-center>
+                <FileText className=h-4 w-4 mr-2 text-zion-cyan" />
+                <span className="text-white>{option.title}</span>
               </div>
             </button>
           ))}
 
           {resumeOptions.map((option) => (
             <button
+<<<<<<< HEAD
   isLoading: boolean;
-export function SelectResumeSection() {return (<div className="space-y-2">;
-      {resumeOptions.length === 0 ? (<p className="text-sm text-zion-slate">No saved resumes found.</p>;
+export function SelectResumeSection() {return (<div className=space-y-2">;
+      {resumeOptions.length === 0 ? (<p className="text-sm text-zion-slate>No saved resumes found.</p>;
       ) : (<>;
             >;
-              <div className="flex items-center">;
-                <FileText className="h-4 w-4 mr-2 text-zion-cyan" />;
-                <span className="text-white">{option.title}</span>;
+              <div className=flex items-center">;
+                <FileText className="h-4 w-4 mr-2 text-zion-cyan />;
+                <span className=text-white">{option.title}</span>;
               </div>;
             </button>;
           ))}{resumeOptions.map((option) => (<button;
               key={option.id}
               className={`w-full text-left p-3 rounded-md transition ${selectedResume?.id === option.id;
-                  ? 'bg-zion-purple/20 border border-zion-purple';
-                  : 'bg-zion-blue-dark/30 hover:bg-zion-blue-dark/50';
+                  ? 'bg-zion-purple/20 border border-zion-purple;
+                  : bg-zion-blue-dark/30 hover:bg-zion-blue-dark/50';
               }`}
               onClick={() => handleResumeSelect(option.id)}
             >;
-              <div className='flex items-center'>;
-                <FileText className='h-4 w-4 mr-2 text-zion-cyan' />;
-                <span className='text-white'>{option.title}</span>;
+              <div className='flex items-center>;
+                <FileText className=h-4 w-4 mr-2 text-zion-cyan' />;
+                <span className='text-white>{option.title}</span>;
               </div>;
             </button>;
-          ))}{selectedResume?.type === 'ai_resume' && selectedResume.resume && (<ResumePreviewCard;
+          ))}{selectedResume?.type === ai_resume' && selectedResume.resume && (<ResumePreviewCard;
               resume = {selectedResume.resume as Resume}
               onDownload = {handleDownloadResume}
               isLoading = {isLoading}
-            />;{selectedResume?.type === 'ai_resume' && selectedResume.resume && (<ResumePreviewCard;
+            />;{selectedResume?.type === 'ai_resume && selectedResume.resume && (<ResumePreviewCard;
+=======
+              key={option.id}
+              className={`w-full text-left p-3 rounded-md transition ${
+                selectedResume?.id === option.id
+                  ? 'bg-zion-purple/20 border border-zion-purple'
+                  : 'bg-zion-blue-dark/30 hover:bg-zion-blue-dark/50'
+              }`}
+              onClick={() => handleResumeSelect(option.id)}
+            >
+              <div className='flex items-center'>
+                <FileText className='h-4 w-4 mr-2 text-zion-cyan' />
+                <span className='text-white'>{option.title}</span>
+              </div>
+            </button>
+          ))}
+
+          {selectedResume?.type === 'ai_resume' && selectedResume.resume && (
+            <ResumePreviewCard
+              resume = {selectedResume.resume as Resume,}
+              onDownload = {handleDownloadResume,}
+              isLoading = {isLoading,}
+            />
+;
+          {selectedResume?.type === 'ai_resume' && selectedResume.resume && (;
+            <ResumePreviewCard;
+>>>>>>> origin/chore/fix-lint-and-merge
               resume={selectedResume.resume as Resume}
               onDownload={handleDownloadResume}
               isLoading={isLoading}
             />;
           )}
+<<<<<<< HEAD
         </>;
       )}
   )}}}</div>;
@@ -118,18 +153,17 @@ export function SelectResumeSection() {return (<div className="space-y-2">;
   onSelect: (resume: Resume) => void;
 }const ResumePreviewCard: React.FC<ResumePreviewCardProps> = ({resume,isSelected,onSelect}) => {return (<div;
       className={`p-4 border rounded-lg cursor-pointer transition-colors ${isSelected;
-          ? 'border-blue-500 bg-blue-50';
+          ? border-blue-500 bg-blue-50';
           : 'border-gray-200 hover:border-gray-300';
       }`}
       onClick={() => onSelect(resume)}
-<<<<<<< HEAD:src_backup/components/messaging/resume-selector/SelectResumeSection.tsx
     >
-      <div className="flex items-start space-x-3">
-        <FileText className="h-8 w-8 text-gray-400" />
-        <div className="flex-1">
-          <h3 className="font-medium text-gray-900">{resume.title}</h3>
-          <p className="text-sm text-gray-500 mt-1">{resume.description}</p>
-          <div className="flex items-center space-x-4 mt-2 text-xs text-gray-400">
+      <div className="flex items-start space-x-3>
+        <FileText className=h-8 w-8 text-gray-400" />
+        <div className="flex-1>
+          <h3 className=font-medium text-gray-900">{resume.title}</h3>
+          <p className="text-sm text-gray-500 mt-1>{resume.description}</p>
+          <div className=flex items-center space-x-4 mt-2 text-xs text-gray-400">
             <span>Modified: {resume.lastModified}</span>
             <span>{resume.fileSize}</span>
           </div>
@@ -140,12 +174,12 @@ export function SelectResumeSection() {return (<div className="space-y-2">;
 }
 origin/cursor/automate-test-improve-and-merge-code-2533
     >;
-      <div className="flex items-start space-x-3">;
-        <FileText className="h-8 w-8 text-gray-400" />;
-        <div className="flex-1">;
-          <h3 className="font-medium text-gray-900">{resume.title}</h3>;
-          <p className="text-sm text-gray-500 mt-1">{resume.description}</p>;
-          <div className="flex items-center space-x-4 mt-2 text-xs text-gray-400">;
+      <div className="flex items-start space-x-3>;
+        <FileText className=h-8 w-8 text-gray-400" />;
+        <div className="flex-1>;
+          <h3 className=font-medium text-gray-900">{resume.title}</h3>;
+          <p className="text-sm text-gray-500 mt-1>{resume.description}</p>;
+          <div className=flex items-center space-x-4 mt-2 text-xs text-gray-400">;
             <span>Modified: {resume.lastModified}</span>;
             <span>{resume.fileSize}</span>;
           </div>;
@@ -156,20 +190,20 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   selectedResume: ResumeOption | null;
   onSelectResume: (resume: ResumeOption) => void;
   onUploadNew: () => void;
-}export const SelectResumeSection: React.FC<SelectResumeSectionProps> = ({resumes,selectedResume,onSelectResume,onUploadNew}) => {return (<div className="space-y-4">;
-      <div className="flex items-center justify-between">;
-        <h3 className="text-lg font-semibold">Select Resume</h3>;
+}export const SelectResumeSection: React.FC<SelectResumeSectionProps> = ({resumes,selectedResume,onSelectResume,onUploadNew}) => {return (<div className="space-y-4>;
+      <div className=flex items-center justify-between">;
+        <h3 className="text-lg font-semibold>Select Resume</h3>;
         <button;
           onClick={onUploadNew}
-          className="px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition-colors";
+          className=px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition-colors";
         >;
           Upload New;
         </button>;
       </div>;
-      {resumes.length === 0 ? (<div className="text-center py-8">;
-          <FileText className="mx-auto h-12 w-12 text-gray-400" />;
-          <h3 className="mt-2 text-sm font-medium text-gray-900">No resumes found</h3>;
-          <p className="mt-1 text-sm text-gray-500">;
+      {resumes.length === 0 ? (<div className="text-center py-8>;
+          <FileText className=mx-auto h-12 w-12 text-gray-400" />;
+          <h3 className="mt-2 text-sm font-medium text-gray-900>No resumes found</h3>;
+          <p className=mt-1 text-sm text-gray-500">;
             Upload your first resume to get started.;
           </p>;
         </div>;
@@ -188,3 +222,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     </div>
   )
 }
+=======
+        </>
+      )});
+
+};
+>>>>>>> origin/chore/fix-lint-and-merge

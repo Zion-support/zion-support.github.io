@@ -14,7 +14,6 @@ export const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
 origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
   className = ''
 ursor/fix-syntax-push-and-merge-to-main-54a3
-const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
   size = 'md',
   text = 'Loading...',
   className = '',

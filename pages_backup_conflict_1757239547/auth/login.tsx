@@ -14,7 +14,6 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 const LoginPage = null;
 import Link from 'next/link';
 import { Facebook, Mail, Clock, RefreshCw } from 'lucide-react';
-import Head from 'next/head';
 
 import { signIn } from 'next-auth/react';
 import { supabase } from '@/utils/supabase/client';
@@ -31,8 +30,6 @@ import {
 } from '@/utils/productionLogger';
 import { useTranslation } from 'react-i18next';
 import { Button } from '@/components/ui/button';
-import { Input } from '@/components/ui/input';
-import {
   Card
   CardContent
   CardDescription
@@ -235,11 +232,9 @@ const LoginPage = () => {
     setIsProactivelyResending(true);
     setProactiveResendMessage(null);
     try {
-      const response = await fetch('/api/resend-verification-email', {
         method: 'POST'
         headers: { 'Content-Type': 'application/json' }
         body: JSON.stringify({ email: proactiveResendEmail }),      });
-      const data = await response.json();
       if (response.ok) {
         setProactiveResendMessage({
           type: 'success'
@@ -347,7 +342,6 @@ const LoginPage = () => {
   }
 }
     },;
-    const unsubscribePromise = checkSessionAndListen();
     return () => {;
       mounted = false;
       clearTimeout(sessionTimeoutId), // Clear timeout on unmount;
@@ -446,7 +440,6 @@ const LoginPage = () => {
         setVerificationEmailSent(true);
         setError(null);
       } else {;
-        const data = await response.json();
         setError({ name: 'ResendError', message: data.message || 'Failed to resend verification email' } as AuthError);
         } catch (error) {
     console.error("Error:", error);
@@ -477,12 +470,10 @@ const LoginPage = () => {
     setIsProactivelyResending(true);
     setProactiveResendMessage(null);
     try {
-      const response = await fetch('/api/resend-verification-email', {;
         method: 'POST',;
         headers: { 'Content-Type': 'application/json' },;
         body: JSON.stringify({ email: proactiveResendEmail });
       }),;
-      const data = await response.json();
       if (response.ok) {;
         setProactiveResendMessage({ type: 'success', text: `Verification email sent to ${proactiveResendEmail}. Please check your inbox (and spam folder).` });
       } else {;
@@ -502,7 +493,6 @@ const LoginPage = () => {
   }
 }
   },
-  const handleLogin = async (e: FormEvent) => {
     e.preventDefault(),
     setIsLoading(true),
     setError(null),

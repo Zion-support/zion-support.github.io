@@ -58,7 +58,6 @@ const getServiceTrialDays = (service: any) => {
 },
 
 // All services combined
-const allServices = [
   ...advancedAIMLServices,
   ...advancedCybersecurityServices,
       ...advancedCloudDevOpsServices2025,

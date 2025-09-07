@@ -120,13 +120,10 @@ export function ApplicationsTable({
   onStatusChange,
   onViewScore
 }: ApplicationsTableProps) {
-  const [hireModalOpen, setHireModalOpen] = useState(false),
-  const [selectedApplication, setSelectedApplication] = useState<JobApplication | null>(null),
   const handleHireClick = (application: JobApplication) => {
     setSelectedApplication(application),
     setHireModalOpen(true)
   },
-  const handleHireConfirmed = () => {
     toast({
       title: "Hiring process initiated",
       description: "Offer has been sent to the talent."
@@ -274,12 +271,8 @@ import {;
   TableHeader,;
   TableRow;
 } from "@/components/ui/table",;
-import { ApplicationActions } from "./ApplicationActions",;
-import { StatusBadge } from "./StatusBadge",;
 import { Briefcase, User } from 'lucide-react';
-import { HireConfirmationModal } from "@/components/hiring-tracker/HireConfirmationModal",;
 import React, { useState } from "react", // Import React and useState;
-import { toast } from "@/hooks/use-toast",;
 import Image from 'next/image', // Import next/image;
 interface ApplicationsTableProps {;
   applications: JobApplication[],;
@@ -409,7 +402,6 @@ export function ApplicationsTable({;
     ;
     useState<JobApplication | null>(null);
 
-  const [selectedApplication, setSelectedApplication] = useState<JobApplication | null>(null),
 
     <>;
 

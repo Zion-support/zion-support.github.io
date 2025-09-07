@@ -1,7 +1,7 @@
-name: Workflow Auto-Healer
+
 
 name: Workflow Auto-Healer
-name: Workflow Auto-Healer
+
 on:
   workflow_run:
     workflows: ["*"]
@@ -59,18 +59,17 @@ PY
           if [ ${#invalid_files[@]} -gt 0 ]; then
             echo "needs_fix=true" >> "$GITHUB_OUTPUT"
             echo "invalid_count=${#invalid_files[@]}" >> "$GITHUB_OUTPUT"
-            echo "Found ${#invalid_files[@]} invalid workflows"
+
           else
             echo "Found ${#invalid_files[@]} invalid workflows"          else
-            echo "Found ${#invalid_files[@]} invalid workflows"          else
+
             echo "needs_fix=false" >> "$GITHUB_OUTPUT"
             echo "All workflows are valid"
           fi
       - name: Report workflow status
         run: |
           echo "📊 Auto-Heal Report" > auto-heal-report.md
-          echo "=====" >> auto-heal-report.md
-          echo "=====" >> auto-heal-report.md
+
           echo "" >> auto-heal-report.md
           echo "**Timestamp:** $(date)" >> auto-heal-report.md
           echo "**Workflows Checked:** $(ls .github/workflows/*.yml | wc -l)" >> auto-heal-report.md

@@ -68,7 +68,6 @@ if (response.ok) {';''
 }'
 };''
 const handleCheckStatus = () => {';''
-  const email = form.getValues ('email');''
 if (!email) {';''
   form.setError ('root', {';''
   message: 'Please enter your email address.' ;

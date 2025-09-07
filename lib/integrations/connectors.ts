@@ -1,198 +1,415 @@
-import { ProviderConnection, SyncLogEntry } from './types';'
-import { v4 as uuidv4 } from 'uuid';'
+<<<<<<< HEAD
 
-// Base connector interface,
-export interface BaseConnector {
-  }
-  "id": string;
-  "name": string;
-  "type": string;
-  "isActive": boolean;
-  lastSync?: Date;
-  "config": Record<string, any>;
+
+
+
+import { ProviderConnection, SyncLogEntry } from './types';
+import { v4 as uuidv4 } from 'uuid';
+import { ProviderConnection, SyncLogEntry } from "./types";
+import { v4 as uuidv4 } from "uuid";
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+
+
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+
+
+
+
+
+
+
+import { ProviderConnection, SyncLogEntry } from "./types";
+import { v4 as uuidv4 } from "uuid";
+
+
+
+
+
+
+async function mockProviderCall<T>(
+  connection: ProviderConnection
+  action: string
+  details: Record<string, any>
+): Promise<{ log: SyncLogEntry; result: T }> {
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+
+
+
+
+
+async function callProvider<T>(
+  connection: ProviderConnection,
+import { ProviderConnection, SyncLogEntry } from './types';
+import { v4 as uuidv4 } from 'uuid';
+export async function simulateAction<T = any>(
+  connection: ProviderConnection,
+  action: string,
+  details: Record<string, any> = {}
+): Promise<{ log: SyncLogEntry, result: T }> {
+  const log: SyncLogEntry = {
+    id: uuidv4(),
+    timestamp: Date.now(),
+    providerId: connection.providerId,
+    level: 'info',
+    action,
+    details
+  };
+  // In a real implementation, call provider SDK/API here using connection.accessToken
+  return { log, result: { ok: true } as unknown as T };
 }
+=======
+import { ProviderConnection, SyncLogEntry } from './types';
+import { v4 as uuidv4 } from 'uuid';
+import { ProviderConnection, SyncLogEntry } from "./types";
+import { v4 as uuidv4 } from "uuid";
+import { ProviderConnection, SyncLogEntry } from './types';
+import { v4 as uuidv4 } from 'uuid';
 
-// Specific connector implementations,
-export class SlackConnector implements BaseConnector {
-  }
-  "id": string;
-  "name": string;
-  "type": string;
-  "isActive": boolean;
-  lastSync?: Date;
-  "config": Record<string, any>;
+pr-12243
+>>>>>>> origin/chore/fix-lint-and-merge
 
-  constructor("config": Record<string, any>) {
-    }
-    this.id = uuidv4();
-    this.name = 'Slack';'
-    this.type = 'slack';'
-    this.isActive = true;
+import { IntegrationConfig, IntegrationResponse, ApiEndpoint } from './types';
+
+export class BaseConnector {
+  protected config: IntegrationConfig;
+
+  constructor(config: IntegrationConfig) {
     this.config = config;
-  }
 
+<<<<<<< HEAD
   async sync(): Promise<SyncLogEntry[]> {
     // Implementation for Slack sync
 }
-return [];
-  }
+// ATS actions
+export const ats = {
+
+  const log: SyncLogEntry = {
+    id: uuidv4(),
+    timestamp: Date.now(),
+    providerId: connection.providerId,
+    level: 'info',
+    action,
+  return { log, result: { ok: true } as unknown as T };
+import { ProviderConnection, SyncLogEntry  } from './types';
+import { v4 as uuidv4  } from 'uuid';
+async function mockProviderCall<T>(connection: ProviderConnection;
+  action: string;
+  details: Record<string, any>;
+): Promise<{ log: SyncLogEntry; result: T }> {async function callProvider<T>(connection: ProviderConnection,action: string,details: Record<string, any>;
+): Promise<{ log: SyncLogEntry; result: T }> {const log: SyncLogEntry = {id: uuidv4(),timestamp: Date.now(),providerId: connection.providerId,level: 'info',action,details;
+  }// In a real implementation, call provider SDK/API here using connection.accessToken;
+  return { log, result: { ok: true } as unknown as T }}// CRM actions;
+export const crm = {async syncContact(connection: ProviderConnection;
+    contact: Record<string, any>;
+  ) {return mockProviderCall(connection, "sync_contact", { contact })}
+  async addEmailTouchpoint(connection: ProviderConnection;
+    touchpoint: Record<string, any>;
+  ) {return mockProviderCall(connection, "add_email_touchpoint", { touchpoint })}
+  async addProjectNote(connection: ProviderConnection;
+    note: Record<string, any>;
+  ) {return mockProviderCall(connection, "add_project_note", { note })}
 }
-
-export class DiscordConnector implements BaseConnector {
-  }
-  "id": string;
-  "name": string;
-  "type": string;
-  "isActive": boolean;
-  lastSync?: Date;
-  "config": Record<string, any>;
-
-  constructor("config": Record<string, any>) {
-    }
-    this.id = uuidv4();
-    this.name = 'Discord';'
-    this.type = 'discord';'
-    this.isActive = true;
-    this.config = config;
-  }
-  // In a real implementation, call provider SDK/API here using connection.accessToken
+// ATS actions;
+export const ats = {return simulateAction(connection, 'crm.addProjectNote', { note })},async addEmailTouchpoint(connection: ProviderConnection,touch: Record<string, any>;
+  ) {return simulateAction(connection, 'crm.addEmailTouchpoint', { touch })}
+}// ATS actions;
+export const ats = {const log: SyncLogEntry = {id: uuidv4(),timestamp: Date.now(),providerId: connection.providerId,level: 'info',action,return { log, result: { ok: true } as unknown as T }import { ProviderConnection, SyncLogEntry   } from './types';
+import { v4 as uuidv4    } from './uuid';async function mockProviderCall < T>(connection: ProviderConnection,action: string,details: Record < string, any>,): Promise<{ log: SyncLogEntry; result: T }> {const log: SyncLogEntry = {id: uuidv4 (),timestamp: Date.now (),provider_id: connection.provider_id,level: "info",action,details;
+    details;
+    details;
+  }// In a real implementation, call provider SDK / API here using connection.access_token;
   return { log, result: { ok: true } as unknown as T }
-
-  async sync(): Promise<SyncLogEntry[]> {
-    // Implementation for Discord sync
 }
-return [];
+// CRM actions;
+export const crm = {async addEmailTouchpoint(connection: ProviderConnection, touch: Record<string, any>) {return simulateAction(connection, 'crm.addEmailTouchpoint', { touch })async addEmailTouchpoint(connection: ProviderConnection, touch: Record<string, any>) {return simulateAction(connection, 'crm.addEmailTouchpoint', { touch })async addEmailTouchpoint(connection: ProviderConnection, touch: Record<string, any>) {return simulateAction(connection, 'crm.addEmailTouchpoint', { touch })}}// ATS actions;
+export const ats = {async pushApplicant($2) {return simulateAction($3)},async uploadResume($2) {return simulateAction($3)},async updateStatus(connection: ProviderConnection, change: Record<string, any>) {return simulateAction(connection, 'ats.updateStatus', { change })}}async pushApplicant(connection: ProviderConnection,applicant: Record<string, any>;
+  ) {return simulateAction(connection, 'ats.pushApplicant', { applicant })},async uploadResume(connection: ProviderConnection,resume: Record<string, any>;
+  ) {return simulateAction(connection, 'ats.uploadResume', {resumeMeta: { name: resume?.name }
+    })},async updateStatus(connection: ProviderConnection;
+    status: Record<string, any>;
+  ) {connection: ProviderConnection,status: Record<string, any>,) {return mockProviderCall(connection, "update_status", { status })}
+}
+  async sync_contact (connection: ProviderConnection,contact: Record < string, any>,) {return mockProviderCall (connection, "sync_contact", { contact })},async addEmailTouchpoint (connection: ProviderConnection,touchpoint: Record < string, any>,) {return mockProviderCall (connection, "add_email_touchpoint", { touchpoint })},async addProjectNote (connection: ProviderConnection,note: Record < string, any>,) {return mockProviderCall (connection, "add_project_note", { note })},const log: SyncLogEntry = {id: uuidv4()timestamp: Date.now()providerId: connection.providerId;
+    level: "info";
+    action;
+    details;
   }
+  // In a real implementation, call provider SDK/API here using connection.accessToken;
+  return { log, result: { ok: true } as unknown as T }}// ATS actions;
+export const ats = {async update_status (connection: ProviderConnection,status: Record < string, any>,) {return mockProviderCall (connection, "update_status", { status })}
+}}
+}}
+}}// ATS actions;
+export const ats = {async update_status (connection: ProviderConnection,status: Record < string, any>,) {return mockProviderCall (connection, "update_status", { status })}
+}}
+}async createCandidate(connection: ProviderConnection,candidate: Record<string, any>;
+  ) {return executeProviderAction(connection, 'createCandidate', { candidate })}
+}}
+}}
+}ursor/fix-website-loading-errors-and-merge-6662;
+// Email actions;
+export const email = {async sendNotification(connection: ProviderConnection,notification: Record<string, any>;
+  ) {return executeProviderAction(connection, 'sendNotification', { notification })}
+}}
+}ursor/fix-website-loading-errors-and-merge-6662;
+    return simulateAction(connection, 'ats.updateStatus', { change })}
+}
+export const crm = {
+
+  async addEmailTouchpoint(connection: ProviderConnection, touch: Record<string, any>) {
+    return simulateAction(connection, 'crm.addEmailTouchpoint', { touch });
+
+  async addEmailTouchpoint(connection: ProviderConnection, touch: Record<string, any>) {
+    return simulateAction(connection, 'crm.addEmailTouchpoint', { touch });
+=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+import { ProviderConnection, SyncLogEntry } from "./types";
+
+import { v4 as uuidv4 } from "uuid";
+async function mockProviderCall<T>(
+  connection: ProviderConnection;
+  action: string;
+  details: Record<string, any>
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+async function callProvider<T>(
+
+async function mockProviderCall<T>(
+pr-12325
+
+async function mockProviderCall<T>(
+  connection: ProviderConnection;,
+  action: string;,
+  details: Record<string;, any>
+): Promise<{ log: SyncLogEntry; result: T ;}> {
+  const log: SyncLogEntry = {
+    id: uuidv4();,
+    timestamp: Date.now();,
+    providerId: connection.providerId;,
+    level: 'info';,
+    action,
+    details,
+  };
+  // In a real implementation, call provider SDK/API here using connection.accessToken
+  return { log, result: { ok: true ;} as unknown as T };
 }
 
-export class GitHubConnector implements BaseConnector {
-  }
-  "id": string;
-  "name": string;
-  "type": string;
-  "isActive": boolean;
-  lastSync?: Date;
-  "config": Record<string, any>;
+// CRM actions
+export const crm = {
+origin/cursor/automate-test-improve-and-merge-code-2533
 
-  constructor("config": Record<string, any>) {
-    }
-    this.id = uuidv4();
-    this.name = 'GitHub';'
-    this.type = 'github';'
-    this.isActive = true;
-    this.config = config;
+  async syncContact(
+    connection: ProviderConnection;
+    contact: Record<string, any>
+  ) {"
+    return mockProviderCall(connection, "sync_contact", { contact });
   }
+  async addEmailTouchpoint(
+    connection: ProviderConnection;
+    touchpoint: Record<string, any>
+  ) {"
+    return mockProviderCall(connection, "add_email_touchpoint", { touchpoint });
+  }
+  async addProjectNote(
+    connection: ProviderConnection;
+    note: Record<string, any>
 
-  async sync(): Promise<SyncLogEntry[]> {
-    // Implementation for GitHub sync
-}
-return [];
-  }
-}
+  ) {
+    return simulateAction(connection, 'crm.addProjectNote', { note });
+  },
+  async addEmailTouchpoint(
+    connection: ProviderConnection;,
+    touch: Record<string;, any>
+  ) {
+    return simulateAction(connection, 'crm.addEmailTouchpoint', { touch });
+  },
+};
 
-// Connector factory,
-export class ConnectorFactory {
-  }
-  static createConnector("type": string, "config": Record<string, any>): BaseConnector {
-    }
-    switch (type) {
-      }
-      case 'slack':'
-        return new SlackConnector(config);
-      case 'discord':'
-        return new DiscordConnector(config);
-      case 'github':'
-        return new GitHubConnector(config);
-      "default":
-        throw new Error(`Unknown connector "type": ${type}`);`    }
-  }
-}
+// ATS actions
+export const ats = {
+
+    id: uuidv4(),
+    timestamp: Date.now(),
+    providerId: connection.providerId,'
+    level: 'info',
+    action,;
+  return { log, result: { ok: true } as unknown as T };'
+import { ProviderConnection, SyncLogEntry  } from './types';'
+import { v4 as uuidv4  } from './uuid';
 ;
-
-// Connector manager,
-export class ConnectorManager {
-  }
-  private "connectors": Map<string, BaseConnector> = new Map();
-
-  addConnector("connector": BaseConnector): void {
-    }
-    this.connectors.set(connector.id, connector);
-  }
-};
-
-  removeConnector("id": string): void {
-    }
-    this.connectors.delete(id);
-  }
-
-  getConnector("id": string): BaseConnector | undefined {
-    }
-    return this.connectors.get(id);
-  }
-
-  getAllConnectors(): BaseConnector[] {
-    }
-    return Array.from(this.connectors.values());
-  }
-
-  async syncAll(): Promise<SyncLogEntry[]> {
-    }
-    const "allLogs": SyncLogEntry[] = [];
-    
-    for (const connector of this.connectors.values()) {
-      }
-      if (connector.isActive) {
-        }
-        try {
-          }
-          const logs = await connector.sync();
-          allLogs.push(...logs);
-          connector.lastSync = new Date();
-        } catch (error) {
-          }
-          console.error(`Error syncing connector ${connector.name}:`, error);`
-        }
-      }
-    }
-    
-    return allLogs;
-  }
-};
-
-export async function executeProviderAction<T>(
+async function mockProviderCall < T>(
   connection: ProviderConnection,
   action: string,
-  details: Record<string, any>
-): Promise<{ log: SyncLogEntry; result: T }> {
-  return mockProviderCall(connection, action, details);
+  details: Record < string, any>,
+): Promise<{ log: SyncLogEntry; result: T }> {}
+  const log: SyncLogEntry = {}
+    id: uuidv4 (),
+    timestamp: Date.now (),
+    provider_id: connection.provider_id,"
+    level: "info",
+    action,
+    details,
+  }
+;
+  // In a real implementation, call provider SDK / API here using connection.access_token;
+  return { log, result: { ok: true } as unknown as T }
 }
+// CRM actions;
+>>>>>>> origin/chore/fix-lint-and-merge
 
-export const notificationConnector = {
-  async sendNotification(connection: ProviderConnection, notification: any) {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
-    return executeProviderAction(connection, 'sendNotification', { notification });
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+  async addEmailTouchpoint(connection: ProviderConnection, touch: Record<string, any>) {
+    return simulateAction(connection, 'crm.addEmailTouchpoint', { touch });
+<<<<<<< HEAD
+
+
+
+  async addEmailTouchpoint(connection: ProviderConnection, touch: Record<string, any>) {
+    return simulateAction(connection, 'crm.addEmailTouchpoint', { touch });
+
+
+  async addEmailTouchpoint(connection: ProviderConnection, touch: Record<string, any>) {
+    return simulateAction(connection, 'crm.addEmailTouchpoint', { touch });
+
+
+
+
+  async addEmailTouchpoint(connection: ProviderConnection, touch: Record<string, any>) {
+    return simulateAction(connection, 'crm.addEmailTouchpoint', { touch });
+  }
+
+};
+
+// ATS actions
+export const ats = {
+
+
+  async pushApplicant($2) {
+    return simulateAction($3);
+  async syncContact(connection: ProviderConnection, contact: Record<string, any>) {
+    return simulateAction(connection, 'crm.syncContact', { contact });
+  },
+  async addProjectNote(connection: ProviderConnection, note: Record<string, any>) {
+    return simulateAction(connection, 'crm.addProjectNote', { note });
+  },
+  async addEmailTouchpoint(connection: ProviderConnection, touch: Record<string, any>) {
+    return simulateAction(connection, 'crm.addEmailTouchpoint', { touch });
   }
 };
 
-    return simulateAction(connection, 'ats.updateStatus', { change });
+// ATS actions
+export const ats = {
+  async pushApplicant(connection: ProviderConnection, applicant: Record<string, any>) {
+    return simulateAction(connection, 'ats.pushApplicant', { applicant });
   },
+  async uploadResume(connection: ProviderConnection, resume: Record<string, any>) {
+    return simulateAction(connection, 'ats.uploadResume', { resumeMeta: { name: resume?.name } });
+  },
+  async updateStatus(connection: ProviderConnection, change: Record<string, any>) {
+    return simulateAction(connection, 'ats.updateStatus', { change });
+  }
+};
+    return executeProviderAction(connection, 'sendNotification', { notification });
+=======
+pr-12243
+
+    status: Record<string, any>
+
+}
+;
+// ATS actions;
+export const ats = {}
+  async update_status (
+    connection: ProviderConnection,
+    status: Record < string, any>,
+  ) {";
+    return mockProviderCall (connection, "update_status", { status });
+  },
+}
+
+;
+
+}
+;
+// ATS actions;
+export const ats = {}
+  async update_status (
+    connection: ProviderConnection,
+    status: Record < string, any>,
+  ) {";
+    return mockProviderCall (connection, "update_status", { status });
+  },
+}
+
+;
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+pr-12243
+
+export class WebhookConnector extends BaseConnector {
+  async connect(): Promise<IntegrationResponse> {
+    return { success: true ;};
+>>>>>>> origin/chore/fix-lint-and-merge
+  }
+
+  async disconnect(): Promise<IntegrationResponse> {
+    return { success: true ;};
+  }
+
+  async test(): Promise<IntegrationResponse> {
+    return { success: true ;};
+  }
+}
+ursor/fix-website-loading-errors-and-merge-6662
+// Email actions
+export const email = {
+
+  async createCandidate(
+    connection: ProviderConnection,
+    candidate: Record<string, any>
+  ) {'
+    return executeProviderAction(connection, 'createCandidate', { candidate });
+  },
+};
+
+// Email actions
+export const email = {
+
+  async sendNotification(
+
+    return executeProviderAction(connection, 'sendNotification', { notification });
+  },
+
 };
 
 ursor/fix-website-loading-errors-and-merge-6662
 origin/cursor/expand-services-advertise-and-build-project-c28b
+<<<<<<< HEAD
 
-    return simulateAction(connection, 'ats.updateStatus', { change });
-  },
-};
+    return simulateAction(connection, 'ats.updateStatus, { change });
+  }}
 origin/cursor/automate-test-improve-and-merge-code-2533
 
 
 
 
 
+    return simulateAction(connection, ats.updateStatus', { change });
+  }}
+
+  }},
+=======
     return simulateAction(connection, 'ats.updateStatus', { change });
   },
 };
-
-  }},
->>>>>>> origin/main
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/chore/fix-lint-and-merge

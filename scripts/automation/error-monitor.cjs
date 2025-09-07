@@ -1,83 +1,118 @@
 <<<<<<< HEAD
-=======
 
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
+#!/"usr/bin/env" node;
+#!/usr/bin/env node;
+const fs = require("fs);
+const path = require(path");
+const { spawn, exec } = require("child_process);
+
+#!/usr/bin/env node;
+#!/usr/bin/env node"
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 #!/""usr/bin/env"" node;
 #!/usr/bin/env node;
 const fs = require("fs");
 const path = require("path");
 const { spawn, exec } = require("child_process");
 <<<<<<< HEAD
-
 =======
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
 #!/usr/bin/env node;"
 #!/usr/bin/env node"
 const fs = require("fs");
 const path = require("path");
 const { spawn, exec } = require("child_process");"
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+>>>>>>> origin/chore/fix-lint-and-merge
 class $1 {}
   constructor() {}"
-  this.projectRoot = "/workspace";
+  this.projectRoot = /workspace;
     this.logDir = path.join(this.projectRoot, "logs");
-    this.reportDir = path.join(this.projectRoot, "error-reports");"
+    this.reportDir = path.join(this.projectRoot, error-reports);"
     this.checkInterval = 5 * 60 * 1000; // 5 minutes;
     this.isRunning = false;
     this.ensureDirectories();
-    this.setupSignalHandlers()};
-;
+    this.setupSignalHandlers()}
   ensureDirectories() {}"
-  ["this.logDir", "this.reportDir"].forEach(dir => {})"
-  if (!fs.existsSync(dir)) {}"
-  fs.mkdirSync(dir, { "recursive": true })};"
-    })};
-  setupSignalHandlers() {}"
+  [this.logDir, "this.reportDir"].forEach(dir => {})
+  if (!fs.existsSync(dir)) {}
+  fs.mkdirSync(dir, { "recursive": true })}
+    })}
+  setupSignalHandlers() {}
   process.on("SIGTERM", () => this.shutdown());
-    process.on("SIGINT", () => this.shutdown());
+    process.on(SIGINT, () => this.shutdown());
     process.on("uncaughtException", (error) => {}
-  this.log("error", "Uncaught "exception": ", error);      this.shutdown()})};"
+  this.log(error, "Uncaught "exception: , error);      this.shutdown()})}"
   log(level, ...args) {}
 <<<<<<< HEAD
+
+    const logFile = path.join(this.logDir, "error-monitor.log");
+    fs.appendFileSync(logFile, message + \\n);
+
+    fs.appendFileSync(logFile, message + \n)}
+  const timestamp = new Date().toISOString();"
+
+    fs.appendFileSync(logFile, message + "\n)}
 =======
+<<<<<<< HEAD
   const timestamp = new Date().toISOString();
-const message = `[${timestamp}] [${level.toUpperCase()}] ${args.join(" ")}`;`;
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+    const message = `[${timestamp}] [${level.toUpperCase()}] ${args.join(" ")}`;`
     console.log("message);
     const logFile = path.join(this.logDir, "error-monitor.log");
     fs.appendFileSync(logFile, message + "\\n");
 <<<<<<< HEAD
-    
 =======
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
+    
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
     const logFile = path.join(this.logDir, "error-monitor.log");
     fs.appendFileSync(logFile, message + "\n")};
 ;
+=======
   const timestamp = new Date().toISOString();"
 
     fs.appendFileSync(logFile, message + "\n")};"
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+>>>>>>> origin/chore/fix-lint-and-merge
   async runLintCheck() {}
   return new Promise((resolve) => {}"
-  exec("npm run lint", { "cwd": this.projectRoot }, (error, stdout, stderr) => {}"
-  const hasErrors = error !== null;"
+  exec("npm run lint, { cwd": this.projectRoot }, (error, stdout, stderr) => {}"
+  const hasErrors = error !== null;
         const errorCount = hasErrors ? (stdout.match(/error/g) || []).length : 0;
-        const warningCount = hasErrors ? (stdout.match(/warning/g) || []).length : 0;"
+        const warningCount = hasErrors ? (stdout.match(/warning/g) || []).length : 0;
         resolve({})
   hasErrors,
           errorCount,
           warningCount,"
-          "output": stdout + stderr})})})};"
+          "output: stdout + stderr})})})}
   async runTypeCheck() {}
-  exec("npm run type-check", { "cwd": this.projectRoot }, (error, stdout, stderr) => {}"
+  exec("npm run type-check", { cwd: this.projectRoot }, (error, stdout, stderr) => {}"
 
           errorCount,"
-        const errorCount = hasErrors ? (stderr.match(/error "TS/g") || []).length : 0;"
+        const errorCount = hasErrors ? (stderr.match(/error TS/g) || []).length : 0;"
   async runBuildCheck() {}
-  exec("npm run build", { "cwd": this.projectRoot, "timeout": 120000 }, (error, stdout, stderr) => {}"
-  const hasErrors = error !== null;
+  exec("npm run build, { cwd": this.projectRoot, "timeout: 120000 }, (error, stdout, stderr) => {}
   hasErrors,"
 
   async detectCorruptedFiles() {}
   const corruptedFiles = [];"
-    const srcDir = path.join(this.projectRoot, "src");"
+    const srcDir = path.join(this.projectRoot, src);"
     const scanDirectory = (dir) => {}
   try {}
   const items = fs.readdirSync(dir);
@@ -87,177 +122,190 @@ const message = `[${timestamp}] [${level.toUpperCase()}] ${args.join(" ")}`;`;
           if (stat.isDirectory()) {}
   scanDirectory(itemPath)} else if (item.match(/\\.(ts|tsx|js|jsx)$/)) {}
   try {}"
-  const content = fs.readFileSync(itemPath, "utf8");"
+  const content = fs.readFileSync(itemPath, utf8);"
               // Check for common corruption patterns;
               if (;)"
-                content.includes("Unterminated string literal") ||;
+                content.includes(Unterminated string literal) ||;
                 content.match(/^"[^"]*$/m) ||;
-                content.match(/^"[^]*$/m) ||;
-                content.includes("                content.includes("                content.includes("Parsing "error": ") ||;"
+                content.match(/^[^]*$/m) ||;
+                content.includes(                content.includes("                content.includes("Parsing error: ") ||;"
                 content.length === 0;
               ) {}
   corruptedFiles.push({})
-  path: itemPath,"
-                  "relativePath": path.relative(this.projectRoot, itemPath),
-                  "size": stat.size,
-                  "issues": this.analyzeFileIssues(content)})};"
+  path: itemPath,
+                  relativePath": path.relative(this.projectRoot, itemPath),
+                  "size: stat.size,
+                  issues": this.analyzeFileIssues(content)})}"
             } catch (error) {}
   // Check for common corruption patterns;
 
-                "issues": ["read_error"]})};"
-          };
-      } catch (error) {}"
-  this.log("error", "Error scanning directory ${dir}: ${error.message}")} catch (error) {}"
+                issues: ["read_error"]})}
+          }
+      } catch (error) {}
+  this.log("error", Error scanning directory ${dir}: ${error.message})} catch (error) {}"
 
-});")}")}")}")} catch (error) {this.log("error", Error scanning directory ${dir}:, error.message")};"
+});")})})}")} catch (error) {this.log("error, Error scanning directory ${dir}:, error.message)}"
     if (fs.existsSync(srcDir)) {}
-  scanDirectory(srcDir)};
-    return corruptedFiles};
+  scanDirectory(srcDir)}
+    return corruptedFiles}
   analyzeFileIssues(content) {}
   const issues = [];"
 
-    if (content.includes("require is not defined")) issues.push("module_system_error");"
-    return issues};
+    if (content.includes(require is not defined)) issues.push("module_system_error");
+    return issues}
   async generateReport() {}
 
-    const ["lintResults", "typeResults", "buildResults", "corruptedFiles"] = await Promise.all(["this.runLintCheck()", "this.runTypeCheck()", "this.runBuildCheck()", "this.detectCorruptedFiles()"]);"
+    const [lintResults", "typeResults, buildResults", "corruptedFiles] = await Promise.all([this.runLintCheck()", "this.runTypeCheck(), this.runBuildCheck()", "this.detectCorruptedFiles()]);
     const report = {}
   timestamp,
       reportId,"
-      "summary": {}"
+      "summary: {}
   totalErrors: lintResults.errorCount + typeResults.errorCount,"
-        "lintErrors": lintResults.errorCount,
-        "lintWarnings": lintResults.warningCount,
-        "typeErrors": typeResults.errorCount,
-        "buildSuccess": buildResults.buildSuccess,
-        "corruptedFiles": corruptedFiles.length},
-      "details": {}"
-  lint: lintResults,"
-        "typeCheck": typeResults,
-        "build": buildResults,"
+        "lintErrors: lintResults.errorCount,
+        lintWarnings": lintResults.warningCount,
+        "typeErrors: typeResults.errorCount,
+        buildSuccess": buildResults.buildSuccess,
+        "corruptedFiles: corruptedFiles.length},
+      details": {}"
+  lint: lintResults,
+        typeCheck": typeResults,
+        "build: buildResults,
         corruptedFiles},"
-      "recommendations": this.generateRecommendations(lintResults, typeResults, buildResults, corruptedFiles)};
-    // Save reportconst reportFile = path.join(this.reportDir, error-report-${reportId}.json");
+      "recommendations: this.generateRecommendations(lintResults, typeResults, buildResults, corruptedFiles)}
+    // Save reportconst reportFile = path.join(this.reportDir, error-report-${reportId}.json);
     fs.writeFileSync(reportFile", JSON.stringify(report, null, 2));"
-    // Update latest report;"
-    const latestReportFile = path.join(this.reportDir, "latest-error-report.json");"
+    // Update latest report;
+    const latestReportFile = path.join(this.reportDir, latest-error-report.json");"
 
-    return report};
+    return report}
   generateRecommendations(lintResults, typeResults, buildResults, corruptedFiles) {}
   const recommendations = [];
     if (corruptedFiles.length > 0) {}
-  recommendations.push({})"
+  recommendations.push({})
 
-        "files": corruptedFiles.map(f => f.relativePath)})};"
+        files": corruptedFiles.map(f => f.relativePath)})}"
     if (lintResults.errorCount > 100) {}
 
-        "action": "run_lint_fix","description": "Run "npm run lint --fix` to automatically fix ${lintResults.errorCount} lint errors`})};"
+        action: "run_lint_fix",description: "Run "npm run lint --fix` to automatically fix ${lintResults.errorCount} lint errors`})}
     if (typeResults.errorCount > 50) {}
 
-        "action": "fix_type_errors","description": `Fix ${typeResults.errorCount} TypeScript errors`})};"
+        action": "fix_type_errors,description": `Fix ${typeResults.errorCount} TypeScript errors`})}"
     if (!buildResults.buildSuccess) {}
 
-        "description": "Project build is failing - fix build errors immediately"})};"
-    return recommendations};
+        description: "Project build is failing - fix build errors immediately"})}
+    return recommendations}
   async triggerAutomaticFixes(report) {}
   if (report.summary.totalErrors === 0) {}
-  return};
-    ;"
-    this.log("info", "Triggering automatic fixes...");"
+  return}
+    this.log("info", Triggering automatic fixes...);"
     // Trigger syntax fixer for corrupted files;
     if (report.summary.corruptedFiles > 0) {}"
-  this.log("info", "Triggering syntax fixer...");
-      exec("pm2 restart syntax-fixer", { "cwd": this.projectRoot }, (error) => {}"
-  if (error) {}"
-  this.log("error", "Failed to trigger syntax "fixer": ", error.message)} else {}
-  this.log("info", "Syntax fixer triggered successfully")};"
+  this.log(info, "Triggering syntax fixer...");
+      exec(pm2 restart syntax-fixer, { "cwd": this.projectRoot }, (error) => {}
+  if (error) {}
+  this.log("error", Failed to trigger syntax fixer": ", error.message)} else {}
+  this.log(info, "Syntax fixer triggered successfully")}
     // Auto-fix lint errors if not too many;
     if (report.summary.lintErrors > 0 && report.summary.lintErrors < 50) {}
   // Auto-fix lint errors if not too many;
-    if (report.summary.lintErrors > 0 && report.summary.lintErrors < 50) {}"
-  this.log("info", "Running automatic lint fixes...");
-      exec("npm run lint -- --fix", { "cwd": this.projectRoot }, (error, stdout, stderr) => {}"
+    if (report.summary.lintErrors > 0 && report.summary.lintErrors < 50) {}
+  this.log("info", Running automatic lint fixes...);
+      exec("npm run lint -- --fix", { cwd: this.projectRoot }, (error, stdout, stderr) => {}"
 
-  this.log("info", "Lint fixes applied successfully")};"
+  this.log("info, Lint fixes applied successfully")}"
   async performHealthCheck() {}
   const report = await this.generateReport();
       // Trigger automatic fixes if needed;
       await this.triggerAutomaticFixes(report);
-      // Check if PM2 processes are running;"
-      exec("pm2 list", { "cwd": this.projectRoot }, (error, stdout) => {}"
+      // Check if PM2 processes are running;
+      exec(pm2 list", { "cwd: this.projectRoot }, (error, stdout) => {}
   if (!error) {}"
-  const onlineProcesses = (stdout.match(/online/g) || []).length;this.log("info", "PM2 processes "online": ${onlineProcesses}")};"
+  const onlineProcesses = (stdout.match(/online/g) || []).length;this.log("info, PM2 processes "online": ${onlineProcesses})}
       })} catch (error) {}"
-  this.log("error", "Health check "failed": ", error.message)} catch (error) {}
-  this.log("error", "Health check "failed": ", error.message)};"
-  async start() {}"
-  this.log("info", "Error Monitor starting...");"
+  this.log("error, Health check "failed": , error.message)} catch (error) {}
+  this.log(error", "Health check failed: ", error.message)}"
+  async start() {}
+  this.log(info", "Error Monitor starting...);
     this.isRunning = true;
     // Initial health check;
     await this.performHealthCheck();
     // Set up periodic checks;
     this.healthCheckInterval = setInterval(async () => {}
   if (this.isRunning) {}
+<<<<<<< HEAD
+  await this.performHealthCheck()}
+
+  shutdown() {}
+  this.log("info", Error Monitor shutting down...);
+=======
   await this.performHealthCheck()};
 <<<<<<< HEAD
-
-=======
     }, this.checkInterval);
     this.log("info", "Error Monitor started. Health checks every ${this.checkInterval / 1000 / 60} minutes.")};
 ;
   shutdown() {}
   this.log("info", "Error Monitor shutting down...`);
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
   shutdown() {}
   this.log("info", "Error Monitor shutting down...");
+>>>>>>> origin/chore/fix-lint-and-merge
     this.isRunning = false;
+=======
     }, this.checkInterval);"
+<<<<<<< HEAD
+    this.log("info, Error Monitor started. Health checks every ${this.checkInterval / 1000 / 60} minutes.")}"
+  shutdown() {}`;
+  this.log(info", "Error Monitor shutting down...`);
+  shutdown() {}
+  this.log("info", Error Monitor shutting down...);"
+=======
     this.log("info", "Error Monitor started. Health checks every ${this.checkInterval / 1000 / 60} minutes.")};"
   shutdown() {}"`;
   this.log("info", "Error Monitor shutting down...`);"
   shutdown() {}"
   this.log("info", "Error Monitor shutting down...");"
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+>>>>>>> origin/chore/fix-lint-and-merge
     if (this.healthCheckInterval) {}
-  clearInterval(this.healthCheckInterval)};
-    process.exit(0)};
+  clearInterval(this.healthCheckInterval)}
+    process.exit(0)}
 // Start the monitor;
 const monitor = new ErrorMonitor();
 monitor.start().catch(error => {})"
-  console.error("Failed to start Error "Monitor": ", error);"
+  console.error(Failed to start Error Monitor": ", error);"
   process.exit(1)}
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
 
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> origin/chore/fix-lint-and-merge
+
+=======
 });
 <<<<<<< HEAD
+
+=======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 <<<<<<< HEAD
-=======
-
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
+>>>>>>> origin/chore/fix-lint-and-merge
 });
 =======
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
 =======
 });
 <<<<<<< HEAD
-});
-
 
 =======
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> origin/chore/fix-lint-and-merge
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
 
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
-=======
-
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5

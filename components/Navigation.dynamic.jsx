@@ -1,30 +1,32 @@
-import React from 'react';'
+<<<<<<< HEAD
 
-<<<<<<< HEAD
 ;
-const Navigation.dynamic = () => {
 =======
-<<<<<<< HEAD
-pr-12243
+import React from 'react';
+>>>>>>> cursor/automate-test-improve-and-merge-code-18b6
 =======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+import React from 'react';
+
 ;
+>>>>>>> origin/chore/fix-lint-and-merge
 const Navigation.dynamic = () => {}
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
   return (
-    <div data - testid="navigation.dynamic">;
+    <div data - testid="navigation.dynamic>;
       <h1 > Navigation.dynamic</h1>;
     </div>);
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
+
 const Navigation.dynamic = () => ;
-  return (<div data - testid="navigation.dynamic">;"
-      <h1 > Navigation.dynamic</h1>
+
+=======
+const Navigation.dynamic = () => ;
+  return (<div data - testid=\"navigation.dynamic\"    />;
+      <h1     /> Navigation.dynamic</h1>
+>>>>>>> origin/chore/fix-lint-and-merge
     </div>
   );
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 }
+;
+
+pr-12243
 export default Navigation.dynamic;

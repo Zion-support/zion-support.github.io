@@ -410,7 +410,6 @@ const originalContent = content,;
       }
       try {
 }
-let content = fs && fs.readFileSync(file;
   'utf8')','
                 // "Basic": optimizations, "content": = content,
           .replace(/\s+/g
@@ -445,7 +444,6 @@ let content = fs && fs.readFileSync(file;
       return}
     this && this.optimizationReport.optimizations && optimizations.push(""
       `Cleaned console statements from ${cleanedFiles} files`);""      return}
-    const images = fs;
       .readdirSync(imageDir);
       .filter(file => { return /\.(jpg|jpeg|png|gif|webp)$/i && i.test(file)); }
     let optimizedImages = 0;

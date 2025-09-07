@@ -1,91 +1,102 @@
-import React from "react","
-import { AppHeader } from "./AppHeader";"
-import { Footer } from "@/components/Footer";"
-import { AppHeader } from "./AppHeader","
-import { Footer } from "@/components/Footer",interface AppLayoutProps {"
-  }
-  "children": React.ReactNode;
+import React from "react";
+import { AppHeader } from "./AppHeader";
+import { Footer } from "@/components/Footer";
+
+interface AppLayoutProps {
+
+import React from "react",
+import { AppHeader } from "./AppHeader";
+import { Footer } from "@/components/Footer";
+import { AppHeader } from "./AppHeader",
+import { Footer } from "@/components/Footer",interface AppLayoutProps {
+
+  children: React.ReactNode;
   hideFooter?: boolean;
+
+    <div className="flex flex-col min-h-screen bg-background">
+
+      <main className="flex-grow">
+
 }
-export function AppLayout() {
+
+import React from "react",;
+import { AppHeader } from "./AppHeader",;
+import { Footer } from "@/components/Footer",;
+
+interface AppLayoutProps {;
+  children: React && React.ReactNode,;
+  hideFooter?: boolean;
+
 }
-return (;
-    <div className="flex flex-col min-h-screen bg-background">"
-      <AppHeader />
-      <main className="flex-grow">"
+  return (
+
+      <main className="flex-grow">{children}</main>
+      {!hideFooter && <Footer />}
+    </div>;
+  );
+
 }
+<<<<<<< HEAD
 import React from "react";"
-import { AppHeader } from "./AppHeader";"
 import { Footer } from "@/components/Footer",;"
+=======
+
+import React from "react",;
+import { AppHeader } from "./AppHeader",;
+
+import { Footer } from "@/components/Footer",;
+>>>>>>> origin/chore/fix-lint-and-merge
 ;
 interface AppLayoutProps {;
-  }
-  "children":React.ReactNode,;
+  children:React.ReactNode,;
   hideFooter?:boolean;
 }
 ;
-export function AppLayout() {;
-  }
-  return (;
-      <main className="flex-grow">
+export function AppLayout() { return null; }
         {children}
       </main>
       {!hideFooter && <Footer />}
     </div>
   )
-}
-import React from "React";"
+}"
+import React from "react",;"
 import { AppHeader } from "./AppHeader",;"
-import { Footer } from "@/components/Footer",;"
+<<<<<<< HEAD
+=======
+import { Footer } from "@/components/Footer",;
+>>>>>>> origin/chore/fix-lint-and-merge
 interface AppLayoutProps {;
-  }
-  "children": React.ReactNode;
+  children: React.ReactNode;
   hideFooter?: boolean;
 }
 ;
-export function AppLayout() {;
-  }
-  return (;
-import React from './react';'
-import { AppHeader } from './AppHeader';'
-import { Footer } from '@/components / Footer';'
-interface AppLayoutProps {
-  }
-  "children": React.ReactNode,
+
+    <div className="flex flex-col min-h-screen bg-background">;
+      <AppHeader />;
+      <main className="flex-grow">;
+
+        {children}
+
+;
+    </div>;
+}
+
+;
+
+import React from './react';
+import { AppHeader } from './AppHeader';
+
+import { Footer } from '@/components / Footer';
+interface AppLayoutProps {}
+  children: React.ReactNode,
   hide_footer?: boolean;
 }
-export /**
- * AppLayout - Function description
+export /**;
+ * AppLayout - Function description;
  */
-function AppLayout() {
-}
-return (;
-    <div className="flex flex - col min - h-screen bg-background">;"
-      <AppHeader />;
-      <main className="flex-grow">;"
+
         {children}
       </main>;
       {!hide_footer && <Footer />}
     </div>);
 }
-  ),;}
- interface AppLayoutProps {
-  }
-  "children": React.ReactNode;
-hideFooter?: boolean
-}export function AppLayout() {
-  }
-  return (<div className="flex flex-col min-h-screen bg-background" > flex-grow" > {"
-  }
-  children
-}</main> {
-  !hideFooter && <Footer />
-}</div>)
-}
-      </main>
-      {!hideFooter && <Footer />}
-    </div>;
-  );
-}
-;
-;

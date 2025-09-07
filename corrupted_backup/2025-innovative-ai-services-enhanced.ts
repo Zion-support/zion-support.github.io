@@ -1,48 +1,47 @@
-"export": interface InnovativeAIService  {"id": string;"
-"export": interface InnovativeAIService {"
-   }
-   "id": string;
-   "name": string;
-   "tagline": string;
-   "price": string;
-   "period": string;
-   "description": string;
-   "features": string[];
-   "popular": boolean;
-   "icon": string;
-   "color": string;
-   "textColor": string;
-   "link": string;
-   "marketPosition": string;
-   "targetAudience": string;
-   "trialDays": number;
-   "setupTime": string;
-   "category": string;
-   "realService": boolean;
-   "technology": string[];
-   "integrations": string[];
-   "useCases": string[];
-   "roi": string;
-   "competitors": string[];
-   "marketSize": string;
-   "growthRate": string;
-   "contactInfo": {"mobile": string;
-   }
-   "contactInfo": {
-   }
-   "mobile": string;
-   "email": string;
-   "address": string;
-   "website": strin,g}
-  "realImplementation": boolean;"
-  "implementationDetails": string;
-  "launchDate": string;
-  "customers": number;
-  "rating": number;
-  "reviews": numbe,r}
-
-const contact = {"mobile": +"1": 302 464 0950', ';'
-
+"export": interface InnovativeAIService {
+   id: string;
+   name: string;
+   tagline: string;
+   price: string;
+   period: string;
+   description: string;
+   features: string[];
+   popular: boolean;
+   icon: string;
+   color: string;
+   textColor: string;
+   link: string;
+   marketPosition: string;
+   targetAudience: string;
+   trialDays: number;
+   setupTime: string;
+   category: string;
+   realService: boolean;
+   technology: string[];
+   integrations: string[];
+   useCases: string[];
+   roi: string;
+   competitors: string[];
+   marketSize: string;
+   growthRate: string;
+   contactInfo: {mobile: string;
+   contactInfo: {
+   mobile: string;
+   email: string;
+   address: string;
+   website: strin,g}
+  "realImplementation": boolean;
+  implementationDetails: string;
+  launchDate: string;
+  customers: number;
+  rating: number;
+  reviews: numbe,r}
+const contact = {"mobile": +1: 302 464 0950', ';
+const contact = {
+  "mobile": +1: 302 464 0950', ';
+  "email": 'kleber@ziontechgroup.co,m, ';
+  "address": 364: E Main St STE 1008 Middletown DE 19709', ';
+  "website": 'https://ziontechgroup.com';
 }
 
 const contact = {

@@ -1,9 +1,20 @@
 <<<<<<< HEAD
-=======
 
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
+#!/"usr/bin/env" node;
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 #!/""usr/bin/env"" node;
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
 #!/usr/bin/env node;"
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 /**;
  * AI-Powered Code Quality Enhancer - PM2 Automation;
  * Intelligently analyzes and improves code quality using pattern recognition;
@@ -11,25 +22,17 @@
  */;
 #!/usr/bin/env node
 /**;
- */;"
-const fs = require("fs");
-const path = require("path");
-const { execSync, spawn } = require("child_process");
 <<<<<<< HEAD
-=======
-const crypto = require("crypto");
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
+ */;
+const fs = require(fs");
+const path = require("path);
+const { execSync, spawn } = require(child_process");
+
 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
-const crypto = require("crypto");"
-<<<<<<< HEAD
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+const crypto = require("crypto);
+
 =======
 
 >>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
@@ -37,26 +40,54 @@ const crypto = require("crypto");"
 
 >>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
 >>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
+=======
+ */;"
+const fs = require("fs");
+const path = require("path");
+const { execSync, spawn } = require("child_process");
+<<<<<<< HEAD
+const crypto = require("crypto");
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+const crypto = require("crypto");"
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+>>>>>>> origin/chore/fix-lint-and-merge
 class $1 {}
   constructor() {}
   this.projectRoot = process.cwd();
     this.logFile = path.join(;)"
       this.projectRoot,logs",
-      "ai-code-quality-enhancer.log";"
+      ai-code-quality-enhancer.log;"
     );
     this.improvementsLog = path.join(;)"
 
-      "ai-improvements.json";"
+      ai-improvements.json;"
     );"
-    this.patternsLog = path.join(this.projectRoot, "logs", "ai-patterns.json");"
+    this.patternsLog = path.join(this.projectRoot, logs, "ai-patterns.json");
     this.ensureLogsDirectory();
     // AI Pattern Recognition Rules;
+<<<<<<< HEAD
+    this.qualityPatterns = {}
+  "performance": [{}]
+  pattern: /useCallback\([^)]*\)/g,
+          "improvement": useCallback optimization,
+
+=======
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
+
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
+=======
+
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+=======
     this.qualityPatterns = {}"
   "performance": [{}]"
   pattern: /useCallback\([^)]*\)/g,"
           "improvement": "useCallback optimization",
 <<<<<<< HEAD
-=======
           "priority": "HIGH"},
         {}
   "pattern": /useMemo\([^)]*\)/g,
@@ -87,33 +118,50 @@ class $1 {}
   "pattern": /:\s*string\s*\|\s*""undefined/g""", ""improvement": Use optional properties (?) instead of union with undefined"", ""priority": "MEDIUM"", "}", "{}
   "pattern": /as\s+""any/g""", ""improvement": "Avoid type assertions to any"", ""priority": "HIGH"", "}", ""],
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 =======
 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
-
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
-=======
-
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+>>>>>>> origin/chore/fix-lint-and-merge
     // AI Pattern Recognition Rules;
     this.qualityPatterns = {}
   "performance": [{}]
   pattern: /useCallback\([^)]*\)/g,
-          "improvement": "useCallback optimization",
-          "priority": "HIGH"},
+          improvement: "useCallback optimization",
+          priority: "HIGH"},
         {}
-  "pattern": /useMemo\([^)]*\)/g,
-          "improvement": "useMemo optimization",
-          "priority": "HIGH"},
+  pattern: /useMemo\([^)]*\)/g,
+          "improvement": useMemo optimization,
+          "priority": HIGH},
         {}
   "pattern": /React\.memo\(/g,)
-          "improvement": "React.memo optimization",
-          "priority": "MEDIUM"},
+          improvement: "React.memo optimization",
+          priority: "MEDIUM"},
         {}
+  pattern: /\.map\(["^)]*\)\.filter\(/g", improvement": "Combine map and filter operations, "priority": HIGH, "}", {})
+  pattern": /for\s*\(\s*let\s+i\s*=\s*0/g", improvement": Use forEach or for...of instead of traditional for loop", priority": "MEDIUM, }", "],)
+      accessibility: ["{}]
+  pattern: /<div\s+onClick=/g", improvement": "Add role and tabIndex for accessibility, "priority": HIGH, "}", {}
+  pattern": /<img\s+(?!.*alt=)/g", improvement": "Missing alt attribute for images, "priority": CRITICAL, "}", {}
+  pattern": /<button\s+(?!.*aria-label=)/g", improvement": "Add aria-label for button accessibility, "priority": MEDIUM, "}", ],
+      security": ["{}]
+  pattern: /dangerouslySetInnerHTML/g", "improvement: "Security risk - sanitize HTML content", priority": "CRITICAL, }", "{}
+  pattern: /eval\(/g", "improvement: "Security risk - avoid eval()", priority": "CRITICAL, }", "{}
+  pattern: /innerHTML\s*=/g", "improvement: "Security risk - use textContent instead", priority": "HIGH, }", "],
+      maintainability: ["{}]
+  pattern: /console\.log\(/g", improvement": "Remove console.log statements in production, "priority": MEDIUM, "}", {})
+  pattern": /TODO:/g", improvement": "Address TODO comments, "priority": LOW, "}", {}
+  pattern": /FIXME:/g", improvement": "Address FIXME comments, "priority": HIGH, "}", {}
+  pattern": /[a-zA-Z_$"][a-zA-Z0-9_$]*\s*=\s*function\s*\(/g, ""improvement: Use arrow function syntax", "priority: "MEDIUM", }, "],)
+      "typescript: [{}]
+  pattern: /any\s*:/g", "improvement: "Replace any with proper types", priority": "HIGH, }", "{}
+  pattern: /:\s*string\s*\|\s*"undefined/g", "improvement": Use optional properties (?) instead of union with undefined, "priority": MEDIUM, "}", {}
+  pattern": /as\s+"any/g, ""improvement: Avoid type assertions to any", "priority: "HIGH", }, "]}
+          "priority: HIGH"},"
+        {}
+<<<<<<< HEAD
+
+  }
+=======
   "pattern": /\.map\(["^)]*\)\.filter\(/g", ""improvement": "Combine map and filter operations", ""priority": "HIGH", "}", "{})
   "pattern": /for\s*\(\s*let\s+i\s*=\s*0/g", ""improvement": Use forEach or for...of instead of traditional for loop", ""priority": "MEDIUM", "}", "],)
       "accessibility": ["{}]
@@ -133,34 +181,45 @@ class $1 {}
   pattern: /any\s*:/g", ""improvement": "Replace any with proper types", ""priority": "HIGH", "}", "{}
   "pattern": /:\s*string\s*\|\s*"undefined/g"", ""improvement": Use optional properties (?) instead of union with undefined", ""priority": "MEDIUM", "}", "{}
   "pattern": /as\s+"any/g"", ""improvement": "Avoid type assertions to any", ""priority": "HIGH", "}", "]};
+=======
           "priority": "HIGH"},"
         {}"
 
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   };
 ;
+>>>>>>> origin/chore/fix-lint-and-merge
   ensureLogsDirectory() {}
   const logsDir = path.dirname(this.logFile);
-    if (!fs.existsSync(logsDir)) {}"
-  fs.mkdirSync(logsDir, { "recursive": true })};"
-;"
-  log(message, level = "INFO") {}"
+    if (!fs.existsSync(logsDir)) {}
+  fs.mkdirSync(logsDir, { "recursive": true })}
+;
+  log(message, level = "INFO") {}
   const timestamp = new Date().toISOString();
     const logEntry = `[${timestamp}] [${level}] ${message}\n`;`
 <<<<<<< HEAD
 
 
 
-=======
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
 
+
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+=======
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
+=======
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+    fs.appendFileSync(this.logFile, logEntry);console.log(`[${level}] ${message}`)}
+=======
 <<<<<<< HEAD
+<<<<<<< HEAD
+
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
 
-<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -171,49 +230,44 @@ class $1 {}
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
 =======
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-=======
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
-=======
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
     fs.appendFileSync(this.logFile, logEntry);console.log(`[${level}] ${message}`)};
+>>>>>>> origin/chore/fix-lint-and-merge
 
-  async analyzeCodeQuality() {}"
-  this.log("🤖 Starting AI-powered code quality analysis...");"
+  async analyzeCodeQuality() {}
+  this.log("🤖 Starting AI-powered code quality analysis...");
     const improvements = [];
     const patterns = [];
     try {}
 <<<<<<< HEAD
+
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
 =======
+<<<<<<< HEAD
   async analyzeCodeQuality() {}
   this.log("🤖 Starting AI-powered code quality analysis...");
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
     const improvements = [];
     const patterns = [];
 =======
-=======
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
+>>>>>>> origin/chore/fix-lint-and-merge
 
-    const improvements = [];
-    const patterns = [];
 
 <<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+
 =======
 
-    const improvements = [];
-    const patterns = [];
 
 >>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
 =======
 >>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
 >>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+>>>>>>> origin/chore/fix-lint-and-merge
     try {}
+=======
 
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   // 1. Analyze source files for quality patterns;
       const sourceAnalysis = await this.analyzeSourceFiles();
       improvements.push(...sourceAnalysis.improvements);
@@ -243,6 +297,7 @@ class $1 {}
 <<<<<<< HEAD
 
 =======
+<<<<<<< HEAD
   await this.commitImprovements(appliedFixes)};
     } catch (error) {  this.log(`AI code quality analysis "failed": ${error.message  }`, "ERROR")};
 ;
@@ -253,60 +308,56 @@ class $1 {}
   const improvements = [];
     const patterns = [];
     const sourceDir = path.join(this.projectRoot, "src");
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
+>>>>>>> origin/chore/fix-lint-and-merge
     if (!fs.existsSync(sourceDir)) {}
-  return { improvements, patterns };
-    };
-;
-    const files = this.getAllFiles(sourceDir, [".tsx", ".ts", ".jsx", ".js"]);
+  return { improvements, patterns }
+    }
+    const files = this.getAllFiles(sourceDir, [.tsx", ".ts, .jsx", ".js]);
     for (const file of files) {}
   try {}
+<<<<<<< HEAD
+  const content = fs.readFileSync(file, utf8");
+    const sourceDir = path.join(this.projectRoot, "src);
+
+=======
+
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
+=======
+
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+    if (!fs.existsSync(sourceDir)) {}
+  return { improvements, patterns }
+    }
+
+=======
+
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
+=======
+
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
+=======
   const content = fs.readFileSync(file, "utf8");
     const sourceDir = path.join(this.projectRoot, "src");
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 =======
 
-<<<<<<< HEAD
-=======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
-
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
-=======
-
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
     if (!fs.existsSync(sourceDir)) {}
   return { improvements, patterns };
     };
 ;
     const files = this.getAllFiles(sourceDir, [".tsx", ".ts", ".jsx", ".js"]);
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 =======
 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
-
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
-=======
-
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
+>>>>>>> origin/chore/fix-lint-and-merge
     for (const file of files) {}
   try {}
-  const content = fs.readFileSync(file, "utf8");
         const fileAnalysis = this.analyzeFileContent(content, file);
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
 
 >>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
@@ -314,44 +365,38 @@ class $1 {}
 
 >>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
 >>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
+=======
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+>>>>>>> origin/chore/fix-lint-and-merge
         if (fileAnalysis.improvements.length > 0) {}
-  improvements.push(...fileAnalysis.improvements)};
-;
+  improvements.push(...fileAnalysis.improvements)}
         if (fileAnalysis.patterns.length > 0) {}
-  patterns.push(...fileAnalysis.patterns)};
-      } catch (error) {  this.log(`Error analyzing file ${file  }: ${error.message}`, "WARN")};
-    };
-;
-    return { improvements, patterns };
-  };
-;
+  patterns.push(...fileAnalysis.patterns)}
+      } catch (error) {  this.log(`Error analyzing file ${file  }: ${error.message}`, "WARN)}
+    }
+    return { improvements, patterns }
+  }
   analyzeFileContent(content, filePath) {}
-  const improvements = [];
-    const patterns = [];
     // Analyze each quality pattern category;
-    for (const ["category", "rules"] of Object.entries(this.qualityPatterns)) {}
+    for (const [category", "rules] of Object.entries(this.qualityPatterns)) {}
   for (const rule of rules) {}
   const matches = content.match(rule.pattern);
         if (matches) {}
   const improvement = {}
-  "file": filePath,
+  file": filePath,
             category,
-            "pattern": rule.pattern.source,
-            "improvement": rule.improvement,
-            "priority": rule.priority,
-            "matches": matches.length,
-            "lineNumbers": this.findLineNumbers(content, rule.pattern),
-            "timestamp": new Date().toISOString()};
-;
+            "pattern: rule.pattern.source,
+            improvement": rule.improvement,
+            "priority: rule.priority,
+            matches": matches.length,
+            "lineNumbers: this.findLineNumbers(content, rule.pattern),
+            timestamp": new Date().toISOString()}
           improvements.push(improvement);
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
 
 >>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
@@ -359,25 +404,24 @@ class $1 {}
 
 >>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
 >>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
+=======
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+>>>>>>> origin/chore/fix-lint-and-merge
           patterns.push({})
-  "pattern": rule.pattern.source,
+  "pattern: rule.pattern.source,
             category,
-            "frequency": matches.length,
-            "files": [filePath]})};
-      };
-    };
-;
+            frequency": matches.length,
+            "files: [filePath]})}
+      }
+    }
     // Additional intelligent analysis;
-const additionalIssues = this.findAdditionalQualityIssues(;);
+    const additionalIssues = this.findAdditionalQualityIssues(;)
       content,
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
 
 >>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
@@ -386,19 +430,20 @@ const additionalIssues = this.findAdditionalQualityIssues(;);
 >>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
 >>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
     // Additional intelligent analysis;
-const additionalIssues = this.findAdditionalQualityIssues(;);
+=======
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+    // Additional intelligent analysis;
+    const additionalIssues = this.findAdditionalQualityIssues(;)
+>>>>>>> origin/chore/fix-lint-and-merge
       content,
       filePath;
     );
     improvements.push(...additionalIssues);
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
 
 >>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
@@ -406,77 +451,74 @@ const additionalIssues = this.findAdditionalQualityIssues(;);
 
 >>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
 >>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
+    return { improvements, patterns }
+  }
+  findAdditionalQualityIssues(content, filePath) {}
+  const issues = [];
+
+=======
+
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
+=======
+
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
+=======
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
     return { improvements, patterns };
   };
 ;
   findAdditionalQualityIssues(content, filePath) {}
   const issues = [];
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 =======
 
-<<<<<<< HEAD
-=======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
-
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
-=======
-
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
+>>>>>>> origin/chore/fix-lint-and-merge
     // Check for large components (more than 200 lines);
-    const lines = content.split("\n");
+    const lines = content.split(\n");
     if (lines.length > 200) {}
   issues.push({})
-  "file": filePath,
-        "category": "maintainability",
-        "pattern": "large-component",
-        "improvement": Component is very large - consider breaking into smaller components",
-        "priority": "MEDIUM",
-        "matches": lines.length,
-        "lineNumbers": ["1", "lines.length"],
-        "timestamp": new Date().toISOString()})};
-;
+  "file: filePath,
+        category": "maintainability,
+        pattern": "large-component,
+        improvement": Component is very large - consider breaking into smaller components",
+        priority: "MEDIUM",
+        matches: lines.length,
+        "lineNumbers": [1, "lines.length"],
+        timestamp: new Date().toISOString()})}
     // Check for deeply nested JSX (more than 5 levels);
     const maxNesting = this.calculateJSXNesting(content);
     if (maxNesting > 5) {}
   issues.push({})
   "file": filePath,
-        "category": "maintainability",
-        "pattern": "deep-jsx-nesting",
-        "improvement": JSX nesting is very deep - consider extracting components",
-        "priority": "MEDIUM",
-        "matches": maxNesting,
-        "lineNumbers": ["1", "lines.length"],
-        "timestamp": new Date().toISOString()})};
-;
+        category: "maintainability",
+        pattern: "deep-jsx-nesting",
+        improvement: JSX nesting is very deep - consider extracting components",
+        "priority: MEDIUM",
+        "matches: maxNesting,
+        lineNumbers": ["1, lines.length"],
+        "timestamp: new Date().toISOString()})}
     // Check for unused imports;
     const unusedImports = this.findUnusedImports(content, filePath);
     if (unusedImports.length > 0) {}
   issues.push({})
-  "file": filePath,
-        "category": "maintainability",
-        "pattern": "unused-imports","improvement": `Remove unused imports: ${unusedImports.join(", ")}`,`
-        "priority": "LOW",
-        "matches": unusedImports.length,
-        "lineNumbers": ["1", "lines.length"],
-        "timestamp": new Date().toISOString()})};
-;
-    return issues};
-;
+  file": filePath,
+        "category: maintainability",
+        "pattern: unused-imports","improvement: `Remove unused imports: ${unusedImports.join(, ")}`,`
+        "priority: LOW",
+        "matches: unusedImports.length,
+        lineNumbers": ["1, lines.length"],
+        "timestamp: new Date().toISOString()})}
+    return issues}
   calculateJSXNesting(content) {}
   let maxNesting = 0;
     let currentNesting = 0;
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
 
 >>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
@@ -484,36 +526,41 @@ const additionalIssues = this.findAdditionalQualityIssues(;);
 
 >>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
 >>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
+=======
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+>>>>>>> origin/chore/fix-lint-and-merge
     for (const char of content) {}
-  if (char === "<" && content[content.indexOf(char) + 1] !== "/") {}
+  if (char === <" && content[content.indexOf(char) + 1] !== "/) {}
   currentNesting++;
+<<<<<<< HEAD
+        maxNesting = Math.max(maxNesting, currentNesting)} else if (char === <" && content[content.indexOf(char) + 1] === "/) {}
+</div>
+  if (char === "<" && content[content.indexOf(char) + 1] !== /) {}"
+  currentNesting++;"
+=======
         maxNesting = Math.max(maxNesting, currentNesting)} else if (char === "<" && content[content.indexOf(char) + 1] === "/") {}
+=======
 </div>"
   if (char === "<" && content[content.indexOf(char) + 1] !== "/") {}"
   currentNesting++;"
         maxNesting = Math.max(maxNesting, currentNesting)} else if (char === "<" && content[content.indexOf(char) + 1] === "/") {}"
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   currentNesting = Math.max(0, currentNesting - 1)};
     return maxNesting};
-;
-  findUnusedImports(content, filePath) {}
-  // This is a simplified check - in a real implementation, you"d use TypeScript compiler API;
-const importMatches = content.match(;);
-      /import\s+{([^}]+)}\s+from\s+[""][^"]+["]/g;
-    );
+  findUnusedImports(content, filePath) {}"
+  // This is a simplified check - in a real implementation, you"d use TypeScript compiler API;"
+    const importMatches = content.match(;)"
+>>>>>>> origin/chore/fix-lint-and-merge
+
     if (!importMatches) return [];
     const imports = importMatches;
       .map(match => {})
   const importContent = match.match(/import\s+{([^}]+)}\s+from/);
 <<<<<<< HEAD
-=======
-        return importContent;
-          ? importContent[1].split(",").map(i => i.trim());
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
 >>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
 
@@ -522,54 +569,62 @@ const importMatches = content.match(;);
 
 >>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
   findUnusedImports(content, filePath) {}
+
+    );
+    if (!importMatches) return [];
+
+=======
+
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
+=======
+
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
+=======
+<<<<<<< HEAD
+        return importContent;
+          ? importContent[1].split(",").map(i => i.trim());
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+  findUnusedImports(content, filePath) {}
   // This is a simplified check - in a real implementation, you"d use TypeScript compiler API;
-const importMatches = content.match(;);
+    const importMatches = content.match(;)
       /import\s+{([^}]+)}\s+from\s+["][^"]+[""]/g;
     );
     if (!importMatches) return [];
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 =======
 
-<<<<<<< HEAD
-=======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
-
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
-=======
-
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
     const imports = importMatches;
+>>>>>>> origin/chore/fix-lint-and-merge
       .map(match => {})
-  const importContent = match.match(/import\s+{([^}]+)}\s+from/);
         return importContent;
           ? importContent[1].split(",").map(i => i.trim());
+<<<<<<< HEAD
+        return importContent;
+          ? importContent[1].split(,").map(i => i.trim());"
+  // This is a simplified check - in a real implementation, youd use TypeScript compiler API;
+=======
+=======
         return importContent;"
           ? importContent[1].split(",").map(i => i.trim());"
   // This is a simplified check - in a real implementation, you"d use TypeScript compiler API;"
+>>>>>>> origin/chore/fix-lint-and-merge
 
 
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
           : []}
 });
       .flat();
     // Check if imports are used in the file;
-    const unused = imports.filter(imp => {})
-  const importName = imp.split(" as ")[0].trim();
-return (;);
+<<<<<<< HEAD
+
         !content.includes(importName) ||content.indexOf(importName) === content.indexOf(`import {${imp}}`);
       )}
-<<<<<<< HEAD
-=======
-});
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+
 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
@@ -579,29 +634,37 @@ return (;);
 >>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
 
 >>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
-    return unused};
+    return unused}
+=======
+    const unused = imports.filter(imp => {})"
+  const importName = imp.split(" as ")[0].trim();"
+      return (;)`;
+        !content.includes(importName) ||content.indexOf(importName) === content.indexOf(`import {${imp}}`);
+      )}
+<<<<<<< HEAD
+});
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+    return unused};
+<<<<<<< HEAD
 ;
   findLineNumbers(content, pattern) {}
   const lines = content.split("\n");
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
   findLineNumbers(content, pattern) {}
   const lines = content.split("\n");
     const lineNumbers = [];
 =======
+>>>>>>> origin/chore/fix-lint-and-merge
 
-  findLineNumbers(content, pattern) {}
-  const lines = content.split("\n");
-=======
-  findLineNumbers(content, pattern) {}"
-  const lines = content.split("\n");"
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     const lineNumbers = [];
 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
@@ -609,110 +672,91 @@ return (;);
 
   findLineNumbers(content, pattern) {}
   const lines = content.split("\n");
-  findLineNumbers(content, pattern) {}"
-  const lines = content.split("\n");"
-    const lineNumbers = [];
+  findLineNumbers(content, pattern) {}
+  const lines = content.split(\n");"
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
+
 =======
 >>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
 >>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
     for (let i = 0; i < lines.length; i++) {}
   if (pattern.test(lines[i])) {}
-  lineNumbers.push(i + 1)};
-    return lineNumbers};
+  lineNumbers.push(i + 1)}
+    return lineNumbers}
   async analyzeComponentStructure() {}
-  const improvements = [];"
-    const componentsDir = path.join(this.projectRoot, "src", "components");"
+    const componentsDir = path.join(this.projectRoot, src", "components);
     if (!fs.existsSync(componentsDir)) {}
+<<<<<<< HEAD
+  return { improvements }
+
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
+=======
   return { improvements };
 <<<<<<< HEAD
-=======
     };
 ;
     const componentFiles = this.getAllFiles(componentsDir, [".tsx", ".ts", ".jsx", ".js", "]);
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
     for (const file of componentFiles) {}
   try {}
   const content = fs.readFileSync(file, "utf8");
 =======
-=======
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
+>>>>>>> origin/chore/fix-lint-and-merge
 
     for (const file of componentFiles) {}
   try {}
   const content = fs.readFileSync(file, "utf8");
 
 <<<<<<< HEAD
-    const componentFiles = this.getAllFiles(componentsDir, [".tsx", ".ts", ".jsx", ".js", "]);"
-    for (const file of componentFiles) {}
-  try {}"
-  const content = fs.readFileSync(file, "utf8");"
-        // Check component naming convention;
-        const fileName = path.basename(file, path.extname(file));
-return { improvements }
-    }
-    const componentFiles = this.getAllFiles(componentsDir, [".tsx", ".ts", ".jsx", ".js", "])
-  for($2) {}
-  try {}
-  const content = fs.readFileSync(file, "utf8");    const componentFiles = this.getAllFiles(componentsDir, [".tsx", ".ts", ".jsx", ".js", "]);"
-  for($2) {}
+
 =======
-<<<<<<< HEAD
+    const componentFiles = this.getAllFiles(componentsDir, [.tsx, ".ts", .jsx, ".js", ]);
+=======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
     const componentFiles = this.getAllFiles(componentsDir, [".tsx", ".ts", ".jsx", ".js", "]);"
+>>>>>>> origin/chore/fix-lint-and-merge
     for (const file of componentFiles) {}
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
   try {}"
-  const content = fs.readFileSync(file, "utf8");"
+  const content = fs.readFileSync(file, "utf8);
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+<<<<<<< HEAD
 =======
 
     for (const file of componentFiles) {}
   try {}
-  const content = fs.readFileSync(file, "utf8");
 
 >>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
 =======
 >>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
         // Check component naming convention;
         const fileName = path.basename(file, path.extname(file));
         if (!/^[A-Z]/.test(fileName)) {}
   improvements.push({})
-  file,"
-            "category": "naming",
-            "pattern": "component-naming",
-            "improvement": "Component files should start with uppercase letter",
-            "priority": "LOW",
-            "matches": 1,
-            "lineNumbers": [1],
-            "timestamp": new Date().toISOString()})};"
+  file,
+            category": "naming,
+            pattern": "component-naming,
+            improvement": "Component files should start with uppercase letter,
+            priority": "LOW,
+            matches": 1,
+            "lineNumbers: [1],
+            timestamp": new Date().toISOString()})}"
         // Check for proper component export;
-        if (;)"
-          !content.includes("export default") &&;
-          !content.includes("export const");"
+        if (;)
+          !content.includes(export default") &&;
+          !content.includes("export const);
         ) {}
 
   async analyzePerformancePatterns() {}
-    const sourceDir = path.join(this.projectRoot, "src");"
-    if (!fs.existsSync(sourceDir)) {}"
+    const sourceDir = path.join(this.projectRoot, "src");
+    if (!fs.existsSync(sourceDir)) {}
     if (!fs.existsSync(sourceDir)) {}
 <<<<<<< HEAD
-=======
-  const sourceDir = path.join(this.projectRoot, "src");
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
 >>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
 
@@ -720,24 +764,60 @@ return { improvements }
 =======
 
 >>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+    if (!fs.existsSync(sourceDir)) {}
+  return { improvements }
+    }
+    const files = this.getAllFiles(sourceDir, [".tsx", .ts, ".jsx", .js]);
+
+=======
+    const files = this.getAllFiles(sourceDir, [".tsx", .ts, ".jsx", .js]);"
+=======
+<<<<<<< HEAD
+  const sourceDir = path.join(this.projectRoot, "src");
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
     if (!fs.existsSync(sourceDir)) {}
   return { improvements };
     };
 ;
     const files = this.getAllFiles(sourceDir, [".tsx", ".ts", ".jsx", ".js"]);
 <<<<<<< HEAD
-
-    const files = this.getAllFiles(sourceDir, [".tsx", ".ts", ".jsx", ".js"]);"
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 =======
 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
     const files = this.getAllFiles(sourceDir, [".tsx", ".ts", ".jsx", ".js"]);"
+>>>>>>> origin/chore/fix-lint-and-merge
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+    for (const file of files) {}
+        // Check for expensive operations in render;
+
+        // Check for missing dependency arrays in useEffect;
+        const useEffectMatches = content.match(;)
+          /useEffect\s*\(\s*\(\)\s*=>\s*{[^}]*}\s*\)/g;
+        if (useEffectMatches) {}
+
+      } catch (error) {}"
+  this.log(Error analyzing performance in ${file  }: ${error.message})
+          WARN";"
+        )}
+  async analyzeAccessibilityPatterns() {}
+<<<<<<< HEAD
+
+=======
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
+
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
+=======
+
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+    if (!fs.existsSync(sourceDir)) {}
+  return { improvements }
+    }
+    const files = this.getAllFiles(sourceDir, [.tsx, ".ts", .jsx, ".js"]);
+
 =======
 
 >>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
@@ -745,86 +825,62 @@ return { improvements }
 
 >>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
 >>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
-    for (const file of files) {}
-        // Check for expensive operations in render;
-
-        // Check for missing dependency arrays in useEffect;
-const useEffectMatches = content.match(;);
-          /useEffect\s*\(\s*\(\)\s*=>\s*{[^}]*}\s*\)/g;
-        if (useEffectMatches) {}
-
-      } catch (error) {}"
-  this.log(Error analyzing performance in ${file  }: ${error.message}")
-          "WARN";"
-        )};
-  async analyzeAccessibilityPatterns() {}
-<<<<<<< HEAD
 =======
+<<<<<<< HEAD
   const improvements = [];
     const sourceDir = path.join(this.projectRoot, "src");
     if (!fs.existsSync(sourceDir)) {}
   const sourceDir = path.join(this.projectRoot, "src");
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 =======
 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
-
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
-=======
-
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
     if (!fs.existsSync(sourceDir)) {}
   return { improvements };
     };
 ;
     const files = this.getAllFiles(sourceDir, [".tsx", ".ts", ".jsx", ".js"]);
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 =======
 
-<<<<<<< HEAD
-=======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
-
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
-=======
-
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
+>>>>>>> origin/chore/fix-lint-and-merge
     for (const file of files) {}
   try {}
-  const content = fs.readFileSync(file, "utf8");
+  const content = fs.readFileSync(file, utf8);
         // Check for clickable divs without proper accessibility;
-        if (content.includes("onClick") && content.includes("<div")) {}
+        if (content.includes("onClick") && content.includes(<div)) {}
   improvements.push({})
   file,
-            "category": "accessibility",
-            "pattern": "clickable-div",
-            "improvement": Clickable div should have role="button" and tabIndex for accessibility",
-            "priority": "HIGH",
-            "matches": 1,
-            "lineNumbers": [1],
-            "timestamp": new Date().toISOString()})};
-;
+            "category": accessibility,
+            "pattern": clickable-div,
+            "improvement": Clickable div should have role=button and tabIndex for accessibility",
+            "priority: HIGH",
+            "matches: 1,
+            lineNumbers": [1],
+            "timestamp: new Date().toISOString()})}
         // Check for form inputs without labels;
-        if (content.includes("<input") && !content.includes("<label")) {}
+        if (content.includes(<input") && !content.includes("<label)) {}
   improvements.push({})
   file,
-            "category": "accessibility",
-            "pattern": "input-without-label",
-            "improvement": Form inputs should have associated labels for accessibility",
-            "priority": "HIGH",
-            "matches": 1,
+            category": "accessibility,
+            pattern": "input-without-label,
+            improvement": Form inputs should have associated labels for accessibility",
+            priority: "HIGH",
+            matches: 1,
             "lineNumbers": [1],
-            "timestamp": new Date().toISOString()})};
+            timestamp: new Date().toISOString()})}
       } catch (error) {}
   this.log(Error analyzing accessibility in ${file  }: ${error.message}",)
+<<<<<<< HEAD
+          "WARN;
+        )}
+    }
+    return { improvements }
+  }
+        // Check for clickable divs without proper accessibility;
+        if (content.includes("onClick") && content.includes(<div)) {}"
+=======
           "WARN";
         )};
     };
@@ -832,15 +888,28 @@ const useEffectMatches = content.match(;);
     return { improvements };
   };
 ;
+=======
         // Check for clickable divs without proper accessibility;"
         if (content.includes("onClick") && content.includes("<div")) {}"
+>>>>>>> origin/chore/fix-lint-and-merge
 
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   async generateIntelligentRecommendations(improvements) {}
   const recommendations = [];
     // Group improvements by category and priority;
     const grouped = improvements.reduce((acc, imp) => {}
 <<<<<<< HEAD
+
+
 =======
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
+
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
+=======
+
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+=======
+<<<<<<< HEAD
   // Group improvements by category and priority;
     const grouped = improvements.reduce((acc, imp) => {}
   if (!acc[imp.category]) acc[imp.category] = {};
@@ -851,7 +920,7 @@ const useEffectMatches = content.match(;);
 });
     // Generate recommendations for each category;
     for (const ["category", "priorities"] of Object.entries(grouped)) {}
-const categoryRecommendations = this.generateCategoryRecommendations(;);
+  const categoryRecommendations = this.generateCategoryRecommendations(;)
         category,
         priorities;
       );
@@ -888,65 +957,47 @@ const categoryRecommendations = this.generateCategoryRecommendations(;);
         "estimatedTime": "4-8 hours",
         "impact": "Low - affects code quality and developer experience",
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 =======
 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
-
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
-=======
-
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+>>>>>>> origin/chore/fix-lint-and-merge
     // Critical priority recommendations;
     if (priorities.CRITICAL && priorities.CRITICAL.length > 0) {}
   recommendations.push({})
   category,
-        "priority": "CRITICAL","title": `Immediate ${category} fixes required`,"description": `Found ${priorities.CRITICAL.length} critical ${category} issues that need immediate attention`,`
-        "actions": priorities.CRITICAL.map(imp => imp.improvement),
-        "estimatedTime": "1-2 hours",
-        "impact": "High - affects security and stability"})};
-;
+        "priority: CRITICAL","title: `Immediate ${category} fixes required`,description": `Found ${priorities.CRITICAL.length} critical ${category} issues that need immediate attention`,`
+        "actions: priorities.CRITICAL.map(imp => imp.improvement),
+        estimatedTime": "1-2 hours,
+        impact": "High - affects security and stability})}
     // High priority recommendations;
     if (priorities.HIGH && priorities.HIGH.length > 0) {}
   recommendations.push({})
   category,
-        "priority": "HIGH","title": `High priority ${category} improvements`,"description": `Found ${priorities.HIGH.length} high priority ${category} issues`,`
-        "actions": priorities.HIGH.map(imp => imp.improvement),
-        "estimatedTime": "2-4 hours",
-        "impact": "Medium - affects performance and maintainability"})};
-;
+        priority": "HIGH,title": `High priority ${category} improvements`,"description: `Found ${priorities.HIGH.length} high priority ${category} issues`,`
+        actions": priorities.HIGH.map(imp => imp.improvement),
+        "estimatedTime: 2-4 hours",
+        "impact: Medium - affects performance and maintainability"})}
     // Medium priority recommendations;
     if (priorities.MEDIUM && priorities.MEDIUM.length > 0) {}
   recommendations.push({})
   category,
-        "priority": "MEDIUM","title": `Medium priority ${category} improvements`,"description": `Found ${priorities.MEDIUM.length} medium priority ${category} issues`,`
-        "actions": priorities.MEDIUM.map(imp => imp.improvement),
-        "estimatedTime": "4-8 hours",
-        "impact": "Low - affects code quality and developer experience"})};
-;
-    return recommendations};
-;
+        "priority: MEDIUM","title: `Medium priority ${category} improvements`,description": `Found ${priorities.MEDIUM.length} medium priority ${category} issues`,`
+        "actions: priorities.MEDIUM.map(imp => imp.improvement),
+        estimatedTime": "4-8 hours,
+        impact": "Low - affects code quality and developer experience})}
+    return recommendations}
   async applyAutomaticImprovements(improvements) {}
   const appliedFixes = [];
     // Only apply safe, automatic fixes;
-const safeFixes = improvements.filter(;);
+    const safeFixes = improvements.filter(;)
       imp =>;
-        imp.priority === "LOW" &&;
-        ["unused-imports", "component-naming", "console-log"].includes(;)
+        imp.priority === LOW" &&;
+        ["unused-imports, component-naming", "console-log].includes(;)
           imp.pattern;
         );
     );
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
 
 >>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
@@ -954,33 +1005,31 @@ const safeFixes = improvements.filter(;);
 
 >>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
 >>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
+=======
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+>>>>>>> origin/chore/fix-lint-and-merge
     for (const fix of safeFixes) {}
   try {}
   const success = await this.applyFix(fix);
         if (success) {}
-  appliedFixes.push(fix)};
+  appliedFixes.push(fix)}
       } catch (error) {}
-  this.log(Failed to apply fix for ${fix.file  }: ${error.message}",)
+  this.log(Failed to apply fix for ${fix.file  }: ${error.message},)
           "ERROR`} catch (error) {`}
   this.log(Failed to apply fix for ${fix.file}: ${error.message}",)
-          "ERROR";
-        )};
-    };
-;
-    return appliedFixes};
-;
+          ERROR;
+        )}
+    }
+    return appliedFixes}
   async applyFix(improvement) {}
   try {}
   const content = fs.readFileSync(improvement.file, `utf8");
       let newContent = content;
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
 
 >>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
@@ -988,42 +1037,44 @@ const safeFixes = improvements.filter(;);
 
 >>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
 >>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
+=======
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+>>>>>>> origin/chore/fix-lint-and-merge
       switch (improvement.pattern) {}
-  case "unused-imports":;
+  case "unused-imports:;
           // Remove unused imports (simplified);
           newContent = this.removeUnusedImports(content);
           break;
-        case "console-log":;
+        case console-log":;
           // Remove console.log statements;
-          newContent = content.replace(/console\.log\([^)]*\);?\n?/g, "");
-        case "console-log":;
+          newContent = content.replace(/console\.log\([^)]*\);?\n?/g, ");
+        case console-log":;
           // Remove console.log statements;
           newContent = content.replace(/console\.log\([^)]*\);?\n?/g, ");
           break;
-        "default": ;
-          return false};
-;
+        default: ;
+          return false}
       if (newContent !== content) {}
   fs.writeFileSync(improvement.file, newContent);
         this.log(Applied fix to ${improvement.file}: ${improvement.improvement}",)
           "INFO`;`
         );
-        return true};
-;
+        return true}
       return false} catch (error) {}
   this.log(Error applying fix to ${improvement.file  }: ${error.message}`,`)
-        "ERROR"} catch (error) {}
+        ERROR} catch (error) {}
   this.log(Error applying fix to ${improvement.file}: ${error.message}",)
-        "ERROR";
+        "ERROR;
       );
-      return false};
-  };
-;
+      return false}
+  }
   removeUnusedImports(content) {}
   // This is a simplified implementation;
     // In production, you`d use the TypeScript compiler API for accurate analysis;
-    return content};
-;
+    return content}
   async generateQualityReport(;)
     improvements,
     patterns,
@@ -1031,65 +1082,60 @@ const safeFixes = improvements.filter(;);
     appliedFixes;
   ) {}
   const report = {}
-  "timestamp": new Date().toISOString(),
-      "summary": {}
+  timestamp": new Date().toISOString(),
+      "summary: {}
   totalImprovements: improvements.length,
-        "totalPatterns": patterns.length,
-        "totalRecommendations": recommendations.length,
-        "appliedFixes": appliedFixes.length,
-        "categories": this.getCategorySummary(improvements)},
+        totalPatterns": patterns.length,
+        "totalRecommendations: recommendations.length,
+        appliedFixes": appliedFixes.length,
+        "categories: this.getCategorySummary(improvements)},
       improvements,
       patterns,
       recommendations,
-      appliedFixes};
+      appliedFixes}
     // Save detailed report;
     fs.writeFileSync(this.improvementsLog, JSON.stringify(report, null, 2));
     // Save patterns data;
     fs.writeFileSync(this.patternsLog, JSON.stringify(patterns, null, 2));
-    this.log(Quality report "generated": ${improvements.length} improvements, ${recommendations.length} recommendations`;`)
-    )};
-;
+    this.log(Quality report generated": ${improvements.length} improvements, ${recommendations.length} recommendations`;`)
+    )}
   getCategorySummary(improvements) {}
   return improvements.reduce((acc, imp) => {}
   acc[imp.category] = (acc[imp.category] || 0) + 1;
-      return acc}, {})};
-;
+      return acc}, {})}
   async commitImprovements(appliedFixes) {}
   if (appliedFixes.length === 0) return;
     try {}
   // Stage all changes;
-      execSync("git add .", { "cwd": this.projectRoot, "stdio": "pipe" }
+      execSync("git add ., { cwd": this.projectRoot, "stdio: pipe" }
 });
+<<<<<<< HEAD
+      // Commit with descriptive messageconst commitMessage = `🤖 AI Code Quality "Improvements: ${appliedFixes.length} automatic fixes applied`;execSync(`git commit -m ${commitMessage}`, {`})
+  cwd": this.projectRoot,
+        "stdio: pipe",
+
+=======
+
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
+=======
+
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
+=======
       // Commit with descriptive messageconst commitMessage = `🤖 AI Code Quality "Improvements": ${appliedFixes.length} automatic fixes applied`;execSync(`git commit -m ${commitMessage}`, {`})
   "cwd": this.projectRoot,
         "stdio": "pipe",
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 =======
 
-<<<<<<< HEAD
-=======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
-
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
-=======
-
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
+>>>>>>> origin/chore/fix-lint-and-merge
     try {}
   // Stage all changes;
-      execSync("git add .", { "cwd": this.projectRoot, "stdio": "pipe" }
+      execSync("git add ., { cwd": this.projectRoot, "stdio: pipe" }
 });
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
 
 >>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
@@ -1097,26 +1143,25 @@ const safeFixes = improvements.filter(;);
 
 >>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
 >>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
+      // Commit with descriptive messageconst commitMessage = `🤖 AI Code Quality "Improvements: ${appliedFixes.length} automatic fixes applied`;execSync(`git commit -m ${commitMessage}"`, {`})
+  "cwd: this.projectRoot,
+        stdio": "pipe'}
+=======
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
       // Commit with descriptive messageconst commitMessage = `🤖 AI Code Quality "Improvements": ${appliedFixes.length} automatic fixes applied`;execSync(`git commit -m "${commitMessage}"`, {`})
   "cwd": this.projectRoot,
         "stdio": "pipe'}
+>>>>>>> origin/chore/fix-lint-and-merge
 });
-this.log(`Committed ${appliedFixes.length} AI improvements`, "INFO")} catch (error) {  this.log(`Failed to commit "improvements": ${error.message  }`, "ERROR")};
-  };
-;
+this.log(`Committed ${appliedFixes.length} AI improvements`, INFO)} catch (error) {  this.log(`Failed to commit "improvements": ${error.message  }`, ERROR)}
+  }
   getAllFiles(dir, extensions) {}
   const files = [];
 <<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-    if (!fs.existsSync(dir)) return files;
-=======
 
-    if (!fs.existsSync(dir)) return files;
-
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
 >>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
 
@@ -1128,6 +1173,15 @@ this.log(`Committed ${appliedFixes.length} AI improvements`, "INFO")} catch (err
     if (!fs.existsSync(dir)) return files;
 
 >>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+=======
+<<<<<<< HEAD
+    if (!fs.existsSync(dir)) return files;
+=======
+
+    if (!fs.existsSync(dir)) return files;
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+>>>>>>> origin/chore/fix-lint-and-merge
     const items = fs.readdirSync(dir);
     for (const item of items) {}
   const fullPath = path.join(dir, "item);
@@ -1136,42 +1190,39 @@ this.log(`Committed ${appliedFixes.length} AI improvements`, "INFO")} catch (err
   files.push(...this.getAllFiles(fullPath", extensions))} else if (stat.isFile()) {}
   const ext = path.extname(item);
         if (extensions.includes(ext)) {}
-  files.push(fullPath)};
-      };
-    };
-;
-    return files};
-;
+  files.push(fullPath)}
+      }
+    }
+    return files}
   async run() {}
   try {}
   await this.analyzeCodeQuality();
-      this.log("🤖 AI Code Quality Enhancement completed successfully")} catch (error) {  this.log(`AI Code Quality Enhancement "failed": ${error.message  }`, "ERROR")};
-  };
-};
-;
+      this.log(🤖 AI Code Quality Enhancement completed successfully)} catch (error) {  this.log(`AI Code Quality Enhancement "failed": ${error.message  }`, "ERROR")}
+  }
+}
 // Run the automation if called directly;
 if (require.main === module) {}
   // Run the automation if called directly;
 if (require.main === module) {}
   const enhancer = new AICodeQualityEnhancer();
+<<<<<<< HEAD
+  enhancer.run()}
+
+=======
+
+=======
   enhancer.run()};
 ;
-<<<<<<< HEAD
-<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
 module.exports = AICodeQualityEnhancer;
-<<<<<<< HEAD
-=======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 <<<<<<< HEAD
-=======
-
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
+>>>>>>> origin/chore/fix-lint-and-merge
 module.exports = AICodeQualityEnhancer;
 =======
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
@@ -1180,16 +1231,18 @@ module.exports = AICodeQualityEnhancer;
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
-=======
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
-
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
-module.exports = AICodeQualityEnhancer;
-
-module.exports = AICodeQualityEnhancer;
 
 <<<<<<< HEAD
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
 module.exports = AICodeQualityEnhancer;
+
+module.exports = AICodeQualityEnhancer;
+
+
+=======
 module.exports = AICodeQualityEnhancer;
 =======
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
+>>>>>>> origin/chore/fix-lint-and-merge

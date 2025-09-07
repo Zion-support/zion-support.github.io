@@ -91,7 +91,6 @@ export const AdvancedForm = ({ fields, onSubmit, title = 'Contact Us', subtitle 
     }, [validateField, enableAnalytics, trackEvent])// Handle field blur;
     const handleFieldBlur = useCallback((name) => {}
         const value = formData[name];
-        const error = validateField(name, value)setValidation(prev => ({}
             ...prev, [name]: {}
                 ...prev[name], isValid: !error,'';
                 message: error || '', isTouched: true;

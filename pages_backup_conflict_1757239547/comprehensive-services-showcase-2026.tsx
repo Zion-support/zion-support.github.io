@@ -252,8 +252,6 @@ const ComprehensiveServicesShowcase2026: React.FC = () => {;
   }
 }
   }),
-  const getCategoryIcon = (category: string) => {
-    const iconMap: { [key: string]: React.ReactNode } = {
       'Business Intelligence & Analytics': <Database className="w-5 h-5" />,
       'Content Creation & Marketing': <Sparkles className="w-5 h-5" />,
       'Customer Service & Support': <Users className="w-5 h-5" />,

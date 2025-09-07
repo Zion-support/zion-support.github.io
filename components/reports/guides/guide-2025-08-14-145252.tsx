@@ -1,52 +1,276 @@
 
-export default function Page() {export default function Page() {return (<div className='min-h-screen bg-slate-950 text-white'>;'
+<<<<<<< HEAD
       <Head>;
-        <title>Guide — Capabilities Live Implementation</title>;import Head from 'next/head';'
+        <title />Guide — Capabilities Live Implementation</title>;
+=======
+export default function Page() {export default function Page() {return (<div className='min-h-screen bg-slate-950 text-white'    />;
+      <Head    />;
+        <title    />Guide — Capabilities Live Implementation</title>;import Head from 'next/head';
+
+export default function Page() {return (<div className='min-h-screen bg-slate-950 text-white'    />;
+      <Head    />;
+        <title    />Guide — Capabilities Live Implementation</title>;
+>>>>>>> origin/chore/fix-lint-and-merge
+        <meta;
+          name='description';
+          content='Step-by-step guidance derived from live research signals.';
+           />;
+        <meta;
+          property='og:title';
+          content='Guide — Capabilities Live Implementation';
+           />;
+        <meta;
+          property='og:description';
+          content='Step-by-step guidance derived from live research signals.';
+<<<<<<< HEAD
+          content='Step-by-step guidance derived from live research signals.'
+        />;'
+        <meta name='twitter:card' content='summary_large_image' />;
+      </Head>;'
+      <main className='container mx-auto px-6 py-12 prose prose-invert'>;'
+        <h1 className='text-3xl font-extrabold'>;
+          Guide — Capabilities Live Implementation;
+        </h1>;
+        <div'
+          className='mt-4'
+          dangerouslySetInnerHTML={{}
+            __html:
+
+              '<p>Source: <a class="text-cyan-300 underline" href="https://ziontechgroup && ziontechgroup.com/main/front" target="_blank" rel="noopener">https://ziontechgroup && ziontechgroup.com/main/front</a></p><h2>Overview</h2><p>Focus: capabilities, live, site, seo, front, systems.</p><h2>Steps</h2><ol><li>Clarify objectives and measurable outcomes.</li><li>Map data, models, evaluation, and deployment workflow.</li><li>Automate checks for security, cost, and reliability.</li><li>Instrument telemetry; iterate with feedback loops.</li><li>Publish results and integrate learnings.</li></ol><h2>Links</h2><p><a class="text-cyan-300 underline" href="https://ziontechgroup && ziontechgroup.com" target="_blank" rel="noopener">https://ziontechgroup && ziontechgroup.com</a></p>',;
+              '<p>Source: <a class="text-cyan-300 underline" href="https://ziontechgroup && ziontechgroup.com/main/front" target="_blank" rel="noopener">https://ziontechgroup && ziontechgroup.com/main/front</a></p><h2>Overview</h2><p>Focus: capabilities, live, site, seo, front, systems.</p><h2>Steps</h2><ol><li>Clarify objectives and measurable outcomes.</li><li>Map data, models, evaluation, and deployment workflow.</li><li>Automate checks for security, cost, and reliability.</li><li>Instrument telemetry; iterate with feedback loops.</li><li>Publish results and integrate learnings.</li></ol><h2>Links</h2><p><a class="text-cyan-300 underline" href="https://ziontechgroup && ziontechgroup.com" target="_blank" rel="noopener">https://ziontechgroup && ziontechgroup.com</a></p>',;
+
+pr-12243
+          }}
+        />;'
+        <p className='mt-6 text-white/60 text-sm'>;
+            __html: '<p>Source: <a class="text-cyan-300 underline" href="https://ziontechgroup && ziontechgroup.com/main/front" target="_blank" rel="noopener">https://ziontechgroup && ziontechgroup.com/main/front</a></p><h2>Overview</h2><p>Focus: capabilities;, live, site, seo, front, systems.</p><h2>Steps</h2><ol><li>Clarify objectives and measurable outcomes.</li><li>Map data, models, evaluation, and deployment workflow.</li><li>Automate checks for security, cost, and reliability.</li><li>Instrument telemetry; iterate with feedback loops.</li><li>Publish results and integrate learnings.</li></ol><h2>Links</h2><p><a class="text-cyan-300 underline" href="https: //ziontechgroup && ziontechgroup.com" target="_blank" rel="noopener">https://ziontechgroup && ziontechgroup.com</a></p>';,;
+
+pr-12243
+"
+              '<p />Source: <a class=\"text-cyan-300 underline\" href=\"https://ziontechgroup && ziontechgroup.com/main/front\" target=\"_blank\" rel=\"noopener\" />https://ziontechgroup && ziontechgroup.com/main/front</a></p><h2 />Overview</h2><p />Focus: capabilities;, live, site, seo, front, systems.</p><h2 />Steps</h2><ol /><li />Clarify objectives and measurable outcomes.</li><li />Map data, models, evaluation, and deployment workflow.</li><li />Automate checks for security, cost, and reliability.</li><li />Instrument telemetry; iterate with feedback loops.</li><li />Publish results and integrate learnings.</li></ol><h2 />Links</h2><p /><a class=\"text-cyan-300 underline\" href=\"https: //ziontechgroup && ziontechgroup.com\" target=\"_blank\" rel=\"noopener\" />https://ziontechgroup && ziontechgroup.com</a></p>';,;}
+}
+          }}
+        />;
+        <p className='mt-6 text-white/60 text-sm' />;
+          Auto-generated by Cloud Deep Research Factory.;
+        </p>;
+      </main>;
+    </div>;"
+  )export default function Page() {export default function Page() {return ('<p />Source: <a class=\"text-cyan-300 underline\" href=\"https://ziontechgroup.com/main/front\" target=\"_blank\" rel=\"noopener\" />https://ziontechgroup.com/main/front</a></p><h2 />Overview</h2><p />Focus: capabilities, live, site, seo, front, systems.</p><h2 />Steps</h2><ol /><li />Clarify objectives and measurable outcomes.</li><li />Map data, models, evaluation, and deployment workflow.</li><li />Automate checks for security, cost, and reliability.</li><li />Instrument telemetry; iterate with feedback loops.</li><li />Publish results and integrate learnings.</li></ol><h2 />Links</h2><p /><a class=\"text-cyan-300 underline\" href=\"https://ziontechgroup.com\" target=\"_blank\" rel=\"noopener\" />https://ziontechgroup.com</a></p>';
+            __html:;"
+              '<p />Source: <a class=\"text-cyan-300 underline\" href=\"https://ziontechgroup.com/main/front\" target=\"_blank\" rel=\"noopener\" />https://ziontechgroup.com/main/front</a></p><h2 />Overview</h2><p />Focus: capabilities, live, site, seo, front, systems.</p><h2 />Steps</h2><ol /><li />Clarify objectives and measurable outcomes.</li><li />Map data, models, evaluation, and deployment workflow.</li><li />Automate checks for security, cost, and reliability.</li><li />Instrument telemetry; iterate with feedback loops.</li><li />Publish results and integrate learnings.</li></ol><h2 />Links</h2><p /><a class = \"text-cyan-300 underline\" href=\"https://ziontechgroup.com\" target=\"_blank\" rel=\"noopener\" />https://ziontechgroup.com</a></p>',export default function Page() {return ;"
+  return (<div className=\"min-h-screen bg-slate-950 text-white\" />;
+  );
+export default function Page() {;
+export default function Page() {
+
+  return ("
+    <div className=\"min-h-screen bg-slate-950 text-white\" />;
+      <Head>;
+        <title />Guide — Capabilities Live Implementation</title>;"
+        <meta name=\"description\" content=\"Step-by-step guidance derived from live research signals.\" />;"
+        <meta property=\"og:title\" content=\"Guide — Capabilities Live Implementation\" />;"
+        <meta property=\"og:description\" content=\"Step-by-step guidance derived from live research signals.\" />;"
+        <meta name=\"twitter:card\" content=\"summary_large_image\" />;
+      </Head>;"
+      <main className="container mx-auto px-6 py-12 prose prose-invert">;"
+        <h1 className="text-3xl font-extrabold">Guide — Capabilities Live Implementation</h1>;"
+        <div className="mt-4" dangerouslySetInnerHTML={{ __html: "<p>Source: <a class=\"text-cyan-300 underline\" href=\"https://ziontechgroup && ziontechgroup.com/main/front\" target=\"_blank\" rel=\"noopener\">https://ziontechgroup && ziontechgroup.com/main/front</a></p><h2>Overview</h2><p>Focus: capabilities, live, site, seo, front, systems.</p><h2>Steps</h2><ol><li>Clarify objectives and measurable outcomes.</li><li>Map data, models, evaluation, and deployment workflow.</li><li>Automate checks for security, cost, and reliability.</li><li>Instrument telemetry, iterate with feedback loops.</li><li>Publish results and integrate learnings.</li></ol><h2>Links</h2><p><a class=\"text-cyan-300 underline\" href=\"https://ziontechgroup && ziontechgroup.com\" target=\"_blank\" rel=\"noopener\">https://ziontechgroup && ziontechgroup.com</a></p>" }} />;"
+      </Head>;
+      <main className="container mx-auto px-6 py-12 prose prose-invert">;
+        <h1 className="text-3xl font-extrabold">Guide — Capabilities Live Implementation</h1>;
+        <div className="mt-4" dangerouslySetInnerHTML={{ __html: "<p>Source: <a class=\"text-cyan-300 underline\" href=\"https://ziontechgroup && ziontechgroup.com/main/front\" target=\"_blank\" rel=\"noopener\">https://ziontechgroup && ziontechgroup.com/main/front</a></p><h2>Overview</h2><p>Focus: capabilities;, live, site, seo, front, systems.</p><h2>Steps</h2><ol><li>Clarify objectives and measurable outcomes.</li><li>Map data, models, evaluation, and deployment workflow.</li><li>Automate checks for security, cost, and reliability.</li><li>Instrument telemetry, iterate with feedback loops.</li><li>Publish results and integrate learnings.</li></ol><h2>Links</h2><p><a class=\"text-cyan-300 underline\" href=\"https: //ziontechgroup && ziontechgroup.com\" target=\"_blank\" rel=\"noopener\">https://ziontechgroup && ziontechgroup.com</a></p>" ;}} />;
+        <p className="mt-6 text-white/60 text-sm">Auto-generated by Cloud Deep Research Factory.</p>;
+      </main>;
+    </div>;
+  );
+export default function Page() {
+  return (
+}
 
 }
 
-export default function Page() {return (<div className='min-h-screen bg-slate-950 text-white'>;'
-      <Head>;
-        <title />Guide — Capabilities Live Implementation</title>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
-        <meta;
-          }
-          name='description';'
-          content='Step-by-step guidance derived from live research signals.';' />;
-        <meta;
-          property='"og":title';'
-          content='Guide — Capabilities Live Implementation';' />;
-        <meta;
-          property='"og":description';'
-          content='Step-by-step guidance derived from live research signals.';'
+export default function Page() {
 
-return (;
-    <div className='min-h-screen bg-slate-950 text-white'>;'
+export default function Page() {;
+
+
+export default function Page() {;
+
+
+
+
+
+
+
+
+
+  return (
+    <div className='min-h-screen bg-slate-950 text-white'>;
       <Head>;
         <title>Guide — Capabilities Live Implementation</title>;
-        <meta,
-name='description''
-          content='Step-by-step guidance derived from live research signals.'' />;
-        <meta,
-property='"og":title''
-          content='Guide — Capabilities Live Implementation'' />;
-        <meta,
-property='"og":description''
-          content='Step-by-step guidance derived from live research signals.'' />;
-        <meta name='"twitter":card' content='summary_large_image' />;'
+import Head from 'next/head';
+export default function Page() {
+  return (
+    <div className='min-h-screen bg-slate-950 text-white'>
+      <Head>
+        <title>Guide — Capabilities Live Implementation</title>
+
+
+
+
+        <meta
+          name='description'
+          content='Step-by-step guidance derived from live research signals.'
+        />;
+export default function Page() {
+export default function Page() {
+pr-12243
+  return($2) {
+  return($2) {
+
+  return (
+  return (
+
+    <div className="min-h-screen bg-slate-950 text-white">
+      <Head>
+        <title>Guide — Capabilities Live Implementation</title>;"
+        <meta name="description" content="Step-by-step guidance derived from live research signals." />;"
+        <meta property="og:title" content="Guide — Capabilities Live Implementation" />;"
+        <meta property="og:description" content="Step-by-step guidance derived from live research signals." />;"
+        <meta name="twitter:card" content="summary_large_image" />
+        <p className="mt-6 text-white/60 text-sm">Auto-generated by Cloud Deep Research Factory.</p>
+      </main>
+    </div>
+  )
+export default function Page() {
+  return($2) {
+export default function Page() {
+
+  return ("
+    <div className=\"min-h-screen bg-slate-950 text-white\"    />
+      <Head    />
+        <title    />Guide — Capabilities Live Implementation</title>;"
+        <meta name=\"description\" content=\"Step-by-step guidance derived from live research signals.\"    />;"
+        <meta property=\"og:title\" content=\"Guide — Capabilities Live Implementation\"    />;"
+        <meta property=\"og:description\" content=\"Step-by-step guidance derived from live research signals.\"    />;"
+        <meta name=\"twitter:card\" content=\"summary_large_image\"    />
+      </Head>;"
+      <main className=\"container mx-auto px-6 py-12 prose prose-invert\"    />;"
+        <h1 className=\"text-3xl font-extrabold\"    />Guide — Capabilities Live Implementation</h1>;}"
+        <div className=\"mt-4\" dangerouslySetInnerHTML={{ __html: \"<p    />Source: <a class=\"text-cyan-300 underline\" href=\"https://ziontechgroup && ziontechgroup.com/main/front\" target=\"_blank\" rel=\"noopener\"    />https://ziontechgroup && ziontechgroup.com/main/front</a></p><h2    />Overview</h2><p    />Focus: capabilities, live, site, seo, front, systems.</p><h2    />Steps</h2><ol    /><li    />Clarify objectives and measurable outcomes.</li><li    />Map data, models, evaluation, and deployment workflow.</li><li    />Automate checks for security, cost, and reliability.</li><li    />Instrument telemetry, iterate with feedback loops.</li><li    />Publish results and integrate learnings.</li></ol><h2    />Links</h2><p    /><a class=\"text-cyan-300 underline\" href=\"https: //ziontechgroup && ziontechgroup.com\" target=\"_blank\" rel=\"noopener\"    />https://ziontechgroup && ziontechgroup.com</a></p>\" }
+} />;"
+        <p className=\"mt-6 text-white/60 text-sm\"    />Auto-generated by Cloud Deep Research Factory.</p>
+      </main>
+    </div>
+  )}
+export default function Page() {return (}
+import Head from 'next / head';
+export default /**;
+ * Page - Function description;
+ */;
+function Page() {return (<div className='min - h-screen bg - slate - 950 text - white' />;
+  );}
+}
+}
+export default /**
+ * Page - Function description
+ */
+function Page() {return (<div className='min - h-screen bg - slate - 950 text - white'    />
+  );}
+
+import Head from 'next / head';
+export default /**
+ * Page - Function description
+ */
+function Page() {
+  return($2) {}
+  return ('
+    <div className='min - h-screen bg - slate - 950 text - white'>
+      <Head>
+        <title > Guide — Capabilities Live Implementation</title>
+        <meta;'
+          name='description';'
+
+          content='Step - by - step guidance derived from live research signals.'
+           />
+        <meta
+          property='og:title'
+          content='Guide — Capabilities Live Implementation'
+        />;
+        <meta
+          property='og:description'
+          content='Step-by-step guidance derived from live research signals.'
+        />;
+  return (
+}
+pr-12243
+import Head from 'next / head';
+export default /**;
+ * Page - Function description;
+ */
+function Page() {}
+  return ('
+    <div className='min - h-screen bg - slate - 950 text - white'>;
+      <Head>;
+        <title > Guide — Capabilities Live Implementation</title>;
+        <meta;'
+          name='description';'
+    <div className='min - h-screen bg - slate - 950 text - white' />;
+      <Head>;
+        <title  /> Guide — Capabilities Live Implementation</title>;
+        <meta;
+          name='description';
+          content='Step - by - step guidance derived from live research signals.';
+        />;
+        <meta;'
+          property='og:title';'
+          content='Guide — Capabilities Live Implementation';
+        />;
+        <meta;'
+          property='og:description';'
+          content='Step - by - step guidance derived from live research signals.';
+        />;'
+        <meta name='twitter:card' content='summary_large_image' />;
+      </Head>;'
+      <main className='container mx - auto px - 6 py - 12 prose prose - invert'>;'
+        <h1 className='text - 3xl font - extrabold'>;
+      <main className='container mx-auto px-6 py-12 prose prose-invert'>;
+        <h1 className='text-3xl font-extrabold'>;
+=======
+
+  return (
+    <div className='min-h-screen bg-slate-950 text-white'    />;
+      <Head    />;
+        <title    />Guide — Capabilities Live Implementation</title>;
+        <meta;
+name='description'
+          content='Step-by-step guidance derived from live research signals.'
+           />;
+        <meta;
+property='og:title'
+          content='Guide — Capabilities Live Implementation'
+           />;
+        <meta;
+property='og:description'
+          content='Step-by-step guidance derived from live research signals.'
+           />;
+        <meta name='twitter:card' content='summary_large_image'    />;
       </Head>;
-      <main className='container mx-auto px-6 py-12 prose prose-invert'>;'
-        <h1 className='text-3xl font-extrabold'>;'
+      <main className='container mx-auto px-6 py-12 prose prose-invert'    />;
+        <h1 className='text-3xl font-extrabold'    />;
+>>>>>>> origin/chore/fix-lint-and-merge
           Guide — Capabilities Live Implementation;
         </h1>;
         <div;
-          className='mt-4';'
-          dangerouslySetInnerHTML={{"__html":;
-              '<p>"Source": <a class="text-cyan-300 underline" href=""https"://ziontechgroup && ziontechgroup.com/main/front" target="_blank" rel="noopener">"https"://ziontechgroup && ziontechgroup.com/main/front</a></p><h2>Overview</h2><p>"Focus": capabilities, live, site, seo, front, systems.</p><h2>Steps</h2><ol><li>Clarify objectives and measurable outcomes.</li><li>Map data, models, evaluation, and deployment workflow.</li><li>Automate checks for security, cost, and reliability.</li><li>Instrument telemetry; iterate with feedback loops.</li><li>Publish results and integrate learnings.</li></ol><h2>Links</h2><p><a class="text-cyan-300 underline" href=""https": //ziontechgroup && ziontechgroup.com" target="_blank" rel="noopener">"https"://ziontechgroup && ziontechgroup.com</a></p>','
+          className='mt-4';
+          dangerouslySetInnerHTML={{__html:;}
+              '<p    />Source: <a class=\"text-cyan-300 underline\" href=\"https://ziontechgroup && ziontechgroup.com/main/front\" target=\"_blank\" rel=\"noopener\"    />https://ziontechgroup && ziontechgroup.com/main/front</a></p><h2    />Overview</h2><p    />Focus: capabilities, live, site, seo, front, systems.</p><h2    />Steps</h2><ol    /><li    />Clarify objectives and measurable outcomes.</li><li    />Map data, models, evaluation, and deployment workflow.</li><li    />Automate checks for security, cost, and reliability.</li><li    />Instrument telemetry; iterate with feedback loops.</li><li    />Publish results and integrate learnings.</li></ol><h2    />Links</h2><p    /><a class=\"text-cyan-300 underline\" href=\"https: //ziontechgroup && ziontechgroup.com\" target=\"_blank\" rel=\"noopener\"    />https://ziontechgroup && ziontechgroup.com</a></p>'}
 }
-        <div,
-className='mt-4''
+        <div;
+className='mt-4'
           dangerouslySetInnerHTML={{
+<<<<<<< HEAD
             }
             "__html":
 
@@ -55,27 +279,69 @@ className='mt-4''
 
               '<p>Source: <a class="text-cyan-300 underline" href="https://ziontechgroup && ziontechgroup.com/main/front" target="_blank" rel="noopener">https://ziontechgroup && ziontechgroup.com/main/front</a></p><h2>Overview</h2><p>Focus: capabilities, live, site, seo, front, systems.</p><h2>Steps</h2><ol><li>Clarify objectives and measurable outcomes.</li><li>Map data, models, evaluation, and deployment workflow.</li><li>Automate checks for security, cost, and reliability.</li><li>Instrument telemetry; iterate with feedback loops.</li><li>Publish results and integrate learnings.</li></ol><h2>Links</h2><p><a class="text-cyan-300 underline" href="https://ziontechgroup && ziontechgroup.com" target="_blank" rel="noopener">https://ziontechgroup && ziontechgroup.com</a></p>',;
 
-=======
-      <main className='container mx - auto px - 6 py - 12 prose prose - invert' />;
-        <h1 className='text - 3xl font - extrabold' />;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
           Guide — Capabilities Live Implementation;
         </h1>;
         <div;'
           className='mt - 4';
-<<<<<<< HEAD
           dangerouslySetInnerHTML={{}
             __html:;'"
               '<p > Source: <a class="text - cyan - 300 underline" href="https://ziontechgroup.com / main / front" target="_blank" rel="noopener">https://ziontechgroup.com / main / front</a></p><h2 > Overview</h2><p > Focus: capabilities, live, site, seo, front, systems.</p><h2 > Steps</h2><ol><li > Clarify objectives and measurable outcomes.</li><li > Map data, models, evaluation, and deployment workflow.</li><li > Automate checks for security, cost, and reliability.</li><li > Instrument telemetry; iterate with feedback loops.</li><li > Publish results and integrate learnings.</li></ol><h2 > Links</h2><p><a class="text - cyan - 300 underline" href="https://ziontechgroup.com" target="_blank" rel="noopener">https://ziontechgroup.com</a></p>',
+=======
+            __html:
+"
+              '<p    />Source: <a class=\"text-cyan-300 underline\" href=\"https://ziontechgroup && ziontechgroup.com/main/front\" target=\"_blank\" rel=\"noopener\"    />https://ziontechgroup && ziontechgroup.com/main/front</a></p><h2    />Overview</h2><p    />Focus: capabilities, live, site, seo, front, systems.</p><h2    />Steps</h2><ol    /><li    />Clarify objectives and measurable outcomes.</li><li    />Map data, models, evaluation, and deployment workflow.</li><li    />Automate checks for security, cost, and reliability.</li><li    />Instrument telemetry; iterate with feedback loops.</li><li    />Publish results and integrate learnings.</li></ol><h2    />Links</h2><p    /><a class=\"text-cyan-300 underline\" href=\"https://ziontechgroup && ziontechgroup.com\" target=\"_blank\" rel=\"noopener\"    />https://ziontechgroup && ziontechgroup.com</a></p>',;}
+}
+>>>>>>> origin/chore/fix-lint-and-merge
           }}
-        />;'
-        <p className='mt - 6 text - white / 60 text - sm'>;
-          Auto - generated by Cloud Deep Research Factory.;
+        />;
+        <p className='mt-6 text-white/60 text-sm'    />;
+          Auto-generated by Cloud Deep Research Factory.;
         </p>;
       </main>;
-    </div>);export default /**;
+    </div>;"
+  )export default function Page() {export default function Page() {return ('<p    />Source: <a class=\"text-cyan-300 underline\" href=\"https://ziontechgroup.com/main/front\" target=\"_blank\" rel=\"noopener\"    />https://ziontechgroup.com/main/front</a></p><h2    />Overview</h2><p    />Focus: capabilities, live, site, seo, front, systems.</p><h2    />Steps</h2><ol    /><li    />Clarify objectives and measurable outcomes.</li><li    />Map data, models, evaluation, and deployment workflow.</li><li    />Automate checks for security, cost, and reliability.</li><li    />Instrument telemetry; iterate with feedback loops.</li><li    />Publish results and integrate learnings.</li></ol><h2    />Links</h2><p    /><a class=\"text-cyan-300 underline\" href=\"https://ziontechgroup.com\" target=\"_blank\" rel=\"noopener\"    />https://ziontechgroup.com</a></p>';
+            __html:;"
+              '<p    />Source: <a class=\"text-cyan-300 underline\" href=\"https://ziontechgroup.com/main/front\" target=\"_blank\" rel=\"noopener\"    />https://ziontechgroup.com/main/front</a></p><h2    />Overview</h2><p    />Focus: capabilities, live, site, seo, front, systems.</p><h2    />Steps</h2><ol    /><li    />Clarify objectives and measurable outcomes.</li><li    />Map data, models, evaluation, and deployment workflow.</li><li    />Automate checks for security, cost, and reliability.</li><li    />Instrument telemetry; iterate with feedback loops.</li><li    />Publish results and integrate learnings.</li></ol><h2    />Links</h2><p    /><a class = \"text-cyan-300 underline\" href=\"https://ziontechgroup.com\" target=\"_blank\" rel=\"noopener\"    />https://ziontechgroup.com</a></p>',export default function Page() {return ;"
+  return (<div className=\"min-h-screen bg-slate-950 text-white\"    />;
+  );
+
+export default function Page() {;
+
+export default function Page() {
+
+  return ("
+    <div className=\"min-h-screen bg-slate-950 text-white\"    />;
+      <Head    />;
+        <title    />Guide — Capabilities Live Implementation</title>;"
+        <meta name=\"description\" content=\"Step-by-step guidance derived from live research signals.\"    />;"
+        <meta property=\"og:title\" content=\"Guide — Capabilities Live Implementation\"    />;"
+        <meta property=\"og:description\" content=\"Step-by-step guidance derived from live research signals.\"    />;"
+        <meta name=\"twitter:card\" content=\"summary_large_image\"    />;
+      </Head>;"
+      <main className=\"container mx-auto px-6 py-12 prose prose-invert\"    />;"
+        <h1 className=\"text-3xl font-extrabold\"    />Guide — Capabilities Live Implementation</h1>;}"
+        <div className=\"mt-4\" dangerouslySetInnerHTML={{ __html: \"<p    />Source: <a class=\"text-cyan-300 underline\" href=\"https://ziontechgroup && ziontechgroup.com/main/front\" target=\"_blank\" rel=\"noopener\"    />https://ziontechgroup && ziontechgroup.com/main/front</a></p><h2    />Overview</h2><p    />Focus: capabilities, live, site, seo, front, systems.</p><h2    />Steps</h2><ol    /><li    />Clarify objectives and measurable outcomes.</li><li    />Map data, models, evaluation, and deployment workflow.</li><li    />Automate checks for security, cost, and reliability.</li><li    />Instrument telemetry, iterate with feedback loops.</li><li    />Publish results and integrate learnings.</li></ol><h2    />Links</h2><p    /><a class=\"text-cyan-300 underline\" href=\"https: //ziontechgroup && ziontechgroup.com\" target=\"_blank\" rel=\"noopener\"    />https://ziontechgroup && ziontechgroup.com</a></p>\" }
+} />;"
+        <p className=\"mt-6 text-white/60 text-sm\"    />Auto-generated by Cloud Deep Research Factory.</p>;
+      </main>;
+    </div>;
+  )}
+
+export default function Page() {return (}
+import Head from 'next / head';
+
+export default /**;
+ * Page - Function description;
+ */;
+function Page() {return (<div className='min - h-screen bg - slate - 950 text - white'    />;
+  );}
+}
+}
+
+export default /**
  * Page - Function description;
  */
+<<<<<<< HEAD
 function Page() {}
   return ("
     <div className="min - h-screen bg - slate - 950 text - white">;
@@ -90,351 +356,745 @@ function Page() {}
         <h1 className="text - 3xl font - extrabold">Guide — Capabilities Live Implementation</h1>;"
         <div className="mt - 4" dangerouslySetInnerHTML={{ __html: "<p > Source: <a class="text - cyan - 300 underline" href="https://ziontechgroup.com / main / front" target="_blank" rel="noopener">https://ziontechgroup.com / main / front</a></p><h2 > Overview</h2><p > Focus: capabilities, live, site, seo, front, systems.</p><h2 > Steps</h2><ol><li > Clarify objectives and measurable outcomes.</li><li > Map data, models, evaluation, and deployment workflow.</li><li > Automate checks for security, cost, and reliability.</li><li > Instrument telemetry, iterate with feedback loops.</li><li > Publish results and integrate learnings.</li></ol><h2 > Links</h2><p><a class="text - cyan - 300 underline" href="https://ziontechgroup.com" target="_blank" rel="noopener">https://ziontechgroup.com</a></p>" }} />;"
         <p className="mt - 6 text - white / 60 text - sm">Auto - generated by Cloud Deep Research Factory.</p>;
+
+
+          }}
+        />;
+        <p className=mt-6 text-white/60 text-sm'>;
+            __html: '<p>Source: <a class="text-cyan-300 underline href=https://ziontechgroup && ziontechgroup.com/main/front" target="_blank rel=noopener">https://ziontechgroup && ziontechgroup.com/main/front</a></p><h2>Overview</h2><p>Focus: capabilities;, live, site, seo, front, systems.</p><h2>Steps</h2><ol><li>Clarify objectives and measurable outcomes.</li><li>Map data, models, evaluation, and deployment workflow.</li><li>Automate checks for security, cost, and reliability.</li><li>Instrument telemetry; iterate with feedback loops.</li><li>Publish results and integrate learnings.</li></ol><h2>Links</h2><p><a class="text-cyan-300 underline href=https: //ziontechgroup && ziontechgroup.com" target="_blank rel=noopener">https://ziontechgroup && ziontechgroup.com</a></p>;,
+
+pr-12243
+"
+              <p />Source: <a class=\text-cyan-300 underline\ href=\"https://ziontechgroup && ziontechgroup.com/main/front\" target=\_blank\ rel=\"noopener\" />https://ziontechgroup && ziontechgroup.com/main/front</a></p><h2 />Overview</h2><p />Focus: capabilities;, live, site, seo, front, systems.</p><h2 />Steps</h2><ol /><li />Clarify objectives and measurable outcomes.</li><li />Map data, models, evaluation, and deployment workflow.</li><li />Automate checks for security, cost, and reliability.</li><li />Instrument telemetry; iterate with feedback loops.</li><li />Publish results and integrate learnings.</li></ol><h2 />Links</h2><p /><a class=\text-cyan-300 underline\ href=\"https: //ziontechgroup && ziontechgroup.com\" target=\_blank\ rel=\"noopener\" />https://ziontechgroup && ziontechgroup.com</a></p>';}
+}
+          }}
+        />;
+        <p className='mt-6 text-white/60 text-sm />;
+          Auto-generated by Cloud Deep Research Factory.;
+        </p>;
+      </main>;
+    </div>;
+              '<p>Source: <a class="text-cyan-300 underline" href="https://ziontechgroup.com/main/front" target="_blank" rel="noopener">https://ziontechgroup.com/main/front</a></p><h2>Overview</h2><p>Focus: capabilities, live, site, seo, front, systems.</p><h2>Steps</h2><ol><li>Clarify objectives and measurable outcomes.</li><li>Map data, models, evaluation, and deployment workflow.</li><li>Automate checks for security, cost, and reliability.</li><li>Instrument telemetry; iterate with feedback loops.</li><li>Publish results and integrate learnings.</li></ol><h2>Links</h2><p><a class="text-cyan-300 underline" href="https://ziontechgroup.com" target="_blank" rel="noopener">https://ziontechgroup.com</a></p>'
+            __html:;
+              '<p>Source: <a class="text-cyan-300 underline" href="https://ziontechgroup.com/main/front" target="_blank" rel="noopener">https://ziontechgroup.com/main/front</a></p><h2>Overview</h2><p>Focus: capabilities, live, site, seo, front, systems.</p><h2>Steps</h2><ol><li>Clarify objectives and measurable outcomes.</li><li>Map data, models, evaluation, and deployment workflow.</li><li>Automate checks for security, cost, and reliability.</li><li>Instrument telemetry; iterate with feedback loops.</li><li>Publish results and integrate learnings.</li></ol><h2>Links</h2><p><a class="text-cyan-300 underline" href="https://ziontechgroup.com" target="_blank" rel="noopener">https://ziontechgroup.com</a></p>',
+  )export default function Page() {export default function Page() {return ('<p>Source: <a class="text-cyan-300 underline" href="https://ziontechgroup.com/main/front" target="_blank" rel="noopener">https://ziontechgroup.com/main/front</a></p><h2>Overview</h2><p>Focus: capabilities, live, site, seo, front, systems.</p><h2>Steps</h2><ol><li>Clarify objectives and measurable outcomes.</li><li>Map data, models, evaluation, and deployment workflow.</li><li>Automate checks for security, cost, and reliability.</li><li>Instrument telemetry; iterate with feedback loops.</li><li>Publish results and integrate learnings.</li></ol><h2>Links</h2><p><a class="text-cyan-300 underline" href="https://ziontechgroup.com" target="_blank" rel="noopener">https://ziontechgroup.com</a></p>';
+            __html:;
+              '<p>Source: <a class="text-cyan-300 underline" href="https://ziontechgroup.com/main/front" target="_blank" rel="noopener">https://ziontechgroup.com/main/front</a></p><h2>Overview</h2><p>Focus: capabilities, live, site, seo, front, systems.</p><h2>Steps</h2><ol><li>Clarify objectives and measurable outcomes.</li><li>Map data, models, evaluation, and deployment workflow.</li><li>Automate checks for security, cost, and reliability.</li><li>Instrument telemetry; iterate with feedback loops.</li><li>Publish results and integrate learnings.</li></ol><h2>Links</h2><p><a class="text-cyan-300 underline" href="https://ziontechgroup.com" target="_blank" rel="noopener">https://ziontechgroup.com</a></p>',export default function Page() {return (return (<div className="min-h-screen bg-slate-950 text-white">;
+  );export default function Page() {;
+
+export default function Page() {
+
+
+  return (
+  return (
+
+
+
+
+export default function Page() {
+
+  return (
+
+origin/cursor/automate-test-improve-and-merge-code-20a4
+pr-12243
+
+
+
+
+            __html:;'"
+            __html:;
+              '<p>Source: <a class="text-cyan-300 underline" href="https://ziontechgroup.com/main/front" target="_blank" rel="noopener">https://ziontechgroup.com/main/front</a></p><h2>Overview</h2><p>Focus: capabilities, live, site, seo, front, systems.</p><h2>Steps</h2><ol><li>Clarify objectives and measurable outcomes.</li><li>Map data, models, evaluation, and deployment workflow.</li><li>Automate checks for security, cost, and reliability.</li><li>Instrument telemetry; iterate with feedback loops.</li><li>Publish results and integrate learnings.</li></ol><h2>Links</h2><p><a class="text-cyan-300 underline" href="https://ziontechgroup.com" target="_blank" rel="noopener">https://ziontechgroup.com</a></p>',
+          }}
+        />'
+        <p className='mt-6 text-white/60 text-sm'>
+origin/cursor/automate-test-improve-and-merge-code-20a4
+pr-12243
+
+            __html:;"
+              '<p />Source: <a class=\"text-cyan-300 underline\" href=\"https://ziontechgroup.com/main/front\" target=\"_blank\" rel=\"noopener\" />https://ziontechgroup.com/main/front</a></p><h2 />Overview</h2><p />Focus: capabilities, live, site, seo, front, systems.</p><h2 />Steps</h2><ol /><li />Clarify objectives and measurable outcomes.</li><li />Map data, models, evaluation, and deployment workflow.</li><li />Automate checks for security, cost, and reliability.</li><li />Instrument telemetry; iterate with feedback loops.</li><li />Publish results and integrate learnings.</li></ol><h2 />Links</h2><p /><a class=\"text-cyan-300 underline\" href=\"https: //ziontechgroup.com\" target=\"_blank\" rel=\"noopener\" />https://ziontechgroup.com</a></p>'
+
+}
+        />
+        <p className='mt-6 text-white/60 text-sm' />
+          Auto-generated by Cloud Deep Research Factory.
+        </p>
+      </main>
+    </div>
+  );export default function Page() {
+  return (
+    <div className="min-h-screen bg-slate-950 text-white">
+      <Head>
+        <title>Guide — Capabilities Live Implementation</title>
+  );export default function Page() {}
+  return (
+  );export default function Page() {
+  return (
+
+export default function Page() {
+  return (
+
+
+    <div className="min-h-screen bg-slate-950 text-white">
+      <Head>
+        <title>Guide — Capabilities Live Implementation</title>
+        <meta name="description" content="Step-by-step guidance derived from live research signals." />
+        <meta property="og:title" content="Guide — Capabilities Live Implementation" />
+        <meta property="og:description" content="Step-by-step guidance derived from live research signals." />
+        <meta name="twitter:card" content="summary_large_image" />
+      </Head>
+      <main className="container mx-auto px-6 py-12 prose prose-invert">
+        <h1 className="text-3xl font-extrabold">Guide — Capabilities Live Implementation</h1>
+        <div className="mt-4" dangerouslySetInnerHTML={{ __html: "<p>Source: <a class=\"text-cyan-300 underline\" href=\"https://ziontechgroup.com/main/front\" target=\"_blank\" rel=\"noopener\">https://ziontechgroup.com/main/front</a></p><h2>Overview</h2><p>Focus: capabilities;, live, site, seo, front, systems.</p><h2>Steps</h2><ol><li>Clarify objectives and measurable outcomes.</li><li>Map data, models, evaluation, and deployment workflow.</li><li>Automate checks for security, cost, and reliability.</li><li>Instrument telemetry, iterate with feedback loops.</li><li>Publish results and integrate learnings.</li></ol><h2>Links</h2><p><a class=\"text-cyan-300 underline\" href=\"https: //ziontechgroup.com\" target=\"_blank\" rel=\"noopener\">https://ziontechgroup.com</a></p>" ;}} />
+        <p className="mt-6 text-white/60 text-sm">Auto-generated by Cloud Deep Research Factory.</p>
+      </main>
+
+ursor/fix-website-loading-errors-and-merge-6662
+pr-12243
+
+
+    <div className="min-h-screen bg-slate-950 text-white">
+      <Head>
+        <title>Guide — Capabilities Live Implementation</title>
+        <meta name="description" content="Step-by-step guidance derived from live research signals." />
+        <meta property="og:title" content="Guide — Capabilities Live Implementation" />
+        <meta property="og:description" content="Step-by-step guidance derived from live research signals." />
+        <meta name="twitter:card" content="summary_large_image" />
+      </Head>
+      <main className="container mx-auto px-6 py-12 prose prose-invert">
+        <h1 className="text-3xl font-extrabold">Guide — Capabilities Live Implementation</h1>
+        <div className="mt-4" dangerouslySetInnerHTML={{ __html: "<p>Source: <a class=\"text-cyan-300 underline\" href=\"https://ziontechgroup.com/main/front\" target=\"_blank\" rel=\"noopener\">https://ziontechgroup.com/main/front</a></p><h2>Overview</h2><p>Focus: capabilities;, live, site, seo, front, systems.</p><h2>Steps</h2><ol><li>Clarify objectives and measurable outcomes.</li><li>Map data, models, evaluation, and deployment workflow.</li><li>Automate checks for security, cost, and reliability.</li><li>Instrument telemetry, iterate with feedback loops.</li><li>Publish results and integrate learnings.</li></ol><h2>Links</h2><p><a class=\"text-cyan-300 underline\" href=\"https: //ziontechgroup.com\" target=\"_blank\" rel=\"noopener\">https://ziontechgroup.com</a></p>" ;}} />
+        <p className="mt-6 text-white/60 text-sm">Auto-generated by Cloud Deep Research Factory.</p>
+      </main>
+  );
+export default function Page() {
+  return (
+
+
+pr-12243
+    <div className="min-h-screen bg-slate-950 text-white">
+      <Head>
+        <title>Guide — Capabilities Live Implementation</title>"
+        <meta name="description" content="Step-by-step guidance derived from live research signals." />"
+        <meta property="og:title" content="Guide — Capabilities Live Implementation" />"
+        <meta property="og:description" content="Step-by-step guidance derived from live research signals." />"
+        <meta name="twitter:card" content="summary_large_image" />
+      </Head>
+      <main className="container mx-auto px-6 py-12 prose prose-invert">
+        <h1 className="text-3xl font-extrabold">Guide — Capabilities Live Implementation</h1>
+        <div className="mt-4" dangerouslySetInnerHTML={{ __html: "<p>Source: <a class=\"text-cyan-300 underline\" href=\"https://ziontechgroup.com/main/front\" target=\"_blank\" rel=\"noopener\">https://ziontechgroup.com/main/front</a></p><h2>Overview</h2><p>Focus: capabilities, live, site, seo, front, systems.</p><h2>Steps</h2><ol><li>Clarify objectives and measurable outcomes.</li><li>Map data, models, evaluation, and deployment workflow.</li><li>Automate checks for security, cost, and reliability.</li><li>Instrument telemetry, iterate with feedback loops.</li><li>Publish results and integrate learnings.</li></ol><h2>Links</h2><p><a class=\"text-cyan-300 underline\" href=\"https://ziontechgroup.com\" target=\"_blank\" rel=\"noopener\">https://ziontechgroup.com</a></p>" }} />
+        <p className="mt-6 text-white/60 text-sm">Auto-generated by Cloud Deep Research Factory.</p>
+      </main>
+pr-12243
+
+
+    <div className="min-h-screen bg-slate-950 text-white">
+      <Head>
+        <title>Guide — Capabilities Live Implementation</title>
+        <meta name="description" content="Step-by-step guidance derived from live research signals." />
+        <meta property="og:title" content="Guide — Capabilities Live Implementation" />
+        <meta property="og:description" content="Step-by-step guidance derived from live research signals." />
+        <meta name="twitter:card" content="summary_large_image" />
+      </Head>
+      <main className="container mx-auto px-6 py-12 prose prose-invert">
+        <h1 className="text-3xl font-extrabold">Guide — Capabilities Live Implementation</h1>
+        <div className="mt-4" dangerouslySetInnerHTML={{ __html: "<p>Source: <a class=\"text-cyan-300 underline\" href=\"https://ziontechgroup.com/main/front\" target=\"_blank\" rel=\"noopener\">https://ziontechgroup.com/main/front</a></p><h2>Overview</h2><p>Focus: capabilities, live, site, seo, front, systems.</p><h2>Steps</h2><ol><li>Clarify objectives and measurable outcomes.</li><li>Map data, models, evaluation, and deployment workflow.</li><li>Automate checks for security, cost, and reliability.</li><li>Instrument telemetry, iterate with feedback loops.</li><li>Publish results and integrate learnings.</li></ol><h2>Links</h2><p><a class=\"text-cyan-300 underline\" href=\"https://ziontechgroup.com\" target=\"_blank\" rel=\"noopener\">https://ziontechgroup.com</a></p>" }} />
+        <p className="mt-6 text-white/60 text-sm">Auto-generated by Cloud Deep Research Factory.</p>
+      </main>
+
+
+"
+    <div className="min-h-screen bg-slate-950 text-white">
+      <Head>
+        <title>Guide — Capabilities Live Implementation</title>"
+        <meta name="description" content="Step-by-step guidance derived from live research signals." />"
+        <meta property="og:title" content="Guide — Capabilities Live Implementation" />"
+        <meta property="og:description" content="Step-by-step guidance derived from live research signals." />"
+        <meta name="twitter:card" content="summary_large_image" />
+      </Head>"
+      <main className="container mx-auto px-6 py-12 prose prose-invert">"
+        <h1 className="text-3xl font-extrabold">Guide — Capabilities Live Implementation</h1>"
+        <div className="mt-4" dangerouslySetInnerHTML={{ __html: "<p>Source: <a class=\"text-cyan-300 underline\" href=\"https://ziontechgroup.com/main/front\" target=\"_blank\" rel=\"noopener\">https://ziontechgroup.com/main/front</a></p><h2>Overview</h2><p>Focus: capabilities, live, site, seo, front, systems.</p><h2>Steps</h2><ol><li>Clarify objectives and measurable outcomes.</li><li>Map data, models, evaluation, and deployment workflow.</li><li>Automate checks for security, cost, and reliability.</li><li>Instrument telemetry, iterate with feedback loops.</li><li>Publish results and integrate learnings.</li></ol><h2>Links</h2><p><a class=\"text-cyan-300 underline\" href=\"https://ziontechgroup.com\" target=\"_blank\" rel=\"noopener\">https://ziontechgroup.com</a></p>" }} />"
+        <p className="mt-6 text-white/60 text-sm">Auto-generated by Cloud Deep Research Factory.</p>
+      </main>
+
+export default function Page() {}
+  return ("
+    <div className="min-h-screen bg-slate-950 text-white">
+      <Head>
+        <title>Guide — Capabilities Live Implementation</title>;
+export default function Page() {
+  return (
+
+"
+    <div className = \"min-h-screen bg-slate-950 text-white\" />
+      <Head>
+        <title />Guide — Capabilities Live Implementation</title>"
+        <meta name=\"description\" content=\"Step-by-step guidance derived from live research signals.\" />"
+        <meta property=\"og:title\" content=\"Guide — Capabilities Live Implementation\" />"
+        <meta property=\"og:description\" content=\"Step-by-step guidance derived from live research signals.\" />"
+        <meta name=\"twitter:card\" content=\"summary_large_image\" />
+      </Head>"
+      <main className=\"container mx-auto px-6 py-12 prose prose-invert\" />"
+        <h1 className=\"text-3xl font-extrabold\" />Guide — Capabilities Live Implementation</h1>}"
+        <div className=\"mt-4\" dangerouslySetInnerHTML={{ __html: \"<p />Source: <a class=\"text-cyan-300 underline\" href=\"https://ziontechgroup.com/main/front\" target=\"_blank\" rel=\"noopener\" />https://ziontechgroup.com/main/front</a></p><h2 />Overview</h2><p />Focus: capabilities;, live, site, seo, front, systems.</p><h2 />Steps</h2><ol /><li />Clarify objectives and measurable outcomes.</li><li />Map data, models, evaluation, and deployment workflow.</li><li />Automate checks for security, cost, and reliability.</li><li />Instrument telemetry, iterate with feedback loops.</li><li />Publish results and integrate learnings.</li></ol><h2 />Links</h2><p /><a class=\"text-cyan-300 underline\" href=\"https: //ziontechgroup.com\" target=\"_blank\" rel=\"noopener\" />https://ziontechgroup.com</a></p>\" ;}
+} />"
+        <p className=\"mt-6 text-white/60 text-sm\" />Auto-generated by Cloud Deep Research Factory.</p>
+      </main>
+
+"
+    <div className=\"min-h-screen bg-slate-950 text-white\" />
+      <Head>
+        <title />Guide — Capabilities Live Implementation</title>"
+        <meta name=\"description\" content=\"Step-by-step guidance derived from live research signals.\" />"
+        <meta property=\"og:title\" content=\"Guide — Capabilities Live Implementation\" />"
+        <meta property=\"og:description\" content=\"Step-by-step guidance derived from live research signals.\" />"
+        <meta name=\"twitter:card\" content=\"summary_large_image\" />
+      </Head>"
+      <main className=\"container mx-auto px-6 py-12 prose prose-invert\" />"
+        <h1 className=\"text-3xl font-extrabold\" />Guide — Capabilities Live Implementation</h1>"
+        <div className=\"mt-4\" dangerouslySetInnerHTML={{ __html: \"<p />Source: <a class=\"text-cyan-300 underline\" href=\"https://ziontechgroup.com/main/front\" target=\"_blank\" rel=\"noopener\" />https://ziontechgroup.com/main/front</a></p><h2 />Overview</h2><p />Focus: capabilities;, live, site, seo, front, systems.</p><h2 />Steps</h2><ol /><li />Clarify objectives and measurable outcomes.</li><li />Map data, models, evaluation, and deployment workflow.</li><li />Automate checks for security, cost, and reliability.</li><li />Instrument telemetry, iterate with feedback loops.</li><li />Publish results and integrate learnings.</li></ol><h2 />Links</h2><p /><a class=\"text-cyan-300 underline\" href=\"https: //ziontechgroup.com\" target=\"_blank\" rel=\"noopener\" />https://ziontechgroup.com</a></p>\" ;}
+} />"
+        <p className=\"mt-6 text-white/60 text-sm\" />Auto-generated by Cloud Deep Research Factory.</p>
+      </main>
+
+export default function Page() {
+ ;
+  return ("
+    <div className=\"min-h-screen bg-slate-950 text-white\" />
+      <Head>
+        <title />Guide — Capabilities Live Implementation</title>
+        <meta name=&quot;description&quot; content=&quot;Step-by-step guidance derived from live research signals.&quot; />
+        <meta property=&quot;og:title&quot; content=&quot;Guide — Capabilities Live Implementation&quot; />
+        <meta property=&quot;og:description&quot; content=&quot;Step-by-step guidance derived from live research signals.&quot; />
+        <meta name=&quot;twitter:card&quot; content=&quot;summary_large_image&quot; />
+      </Head>"
+
+      <main className="container mx-auto px-6 py-12 prose prose-invert">"
+        <h1 className="text-3xl font-extrabold">Guide — Capabilities Live Implementation</h1>"
+        <div className="mt-4" dangerouslySetInnerHTML={{ __html: "<p>Source: <a class=\"text-cyan-300 underline\" href=\"https://ziontechgroup.com/main/front\" target=\"_blank\" rel=\"noopener\">https://ziontechgroup.com/main/front</a></p><h2>Overview</h2><p>Focus: capabilities, live, site, seo, front, systems.</p><h2>Steps</h2><ol><li>Clarify objectives and measurable outcomes.</li><li>Map data, models, evaluation, and deployment workflow.</li><li>Automate checks for security, cost, and reliability.</li><li>Instrument telemetry, iterate with feedback loops.</li><li>Publish results and integrate learnings.</li></ol><h2>Links</h2><p><a class=\"text-cyan-300 underline\" href=\"https://ziontechgroup.com\" target=\"_blank\" rel=\"noopener\">https://ziontechgroup.com</a></p>" }} />"
+        <p className="mt-6 text-white/60 text-sm">Auto-generated by Cloud Deep Research Factory.</p>
+      </main>
+    </div>
+  );
+}
+  )
+import Head from 'next/head';
+export default function Page(req, res) {
+  try {
+  return (;
+    <div className="min-h-screen bg-slate-950 text-white">;
+      <Head>;
+        <title />Guide — Capabilities Live Implementation</title>;
+        <meta name=\description\" content=\"Step-by-step guidance derived from live research signals.\ />;
+        <meta property=\"og:title\" content=\Guide — Capabilities Live Implementation\ />;"
+        <meta property=\"og:description\ content=\Step-by-step guidance derived from live research signals.\" />;"
+        <meta name=\twitter:card\ content=\"summary_large_image\" />;
+      </Head>;
+      <main className="container mx-auto px-6 py-12 prose prose-invert">;
+        <h1 className="text-3xl font-extrabold">Guide — Capabilities Live Implementation</h1>;
+        <div className="mt-4" dangerouslySetInnerHTML={{ __html: "<p>Source: <a class=\"text-cyan-300 underline\" href=\"https://ziontechgroup && ziontechgroup.com/main/front\" target=\"_blank\" rel=\"noopener\">https://ziontechgroup && ziontechgroup.com/main/front</a></p><h2>Overview</h2><p>Focus: capabilities, live, site, seo, front, systems.</p><h2>Steps</h2><ol><li>Clarify objectives and measurable outcomes.</li><li>Map data, models, evaluation, and deployment workflow.</li><li>Automate checks for security, cost, and reliability.</li><li>Instrument telemetry, iterate with feedback loops.</li><li>Publish results and integrate learnings.</li></ol><h2>Links</h2><p><a class=\"text-cyan-300 underline\" href=\"https://ziontechgroup && ziontechgroup.com\" target=\"_blank\" rel=\"noopener\">https://ziontechgroup && ziontechgroup.com</a></p>" }} />;
+        <p className="mt-6 text-white/60 text-sm">Auto-generated by Cloud Deep Research Factory.</p>;
+        <p className=mt-6 text-white/60 text-sm>Auto-generated by Cloud Deep Research Factory.</p>;
+      </main>;
+    </div>;
+  );
+
+export default function Page() {
+  return (
+}
+
+}
+
+
+
+export default function Page() {
+
+
+export default function Page() {
+
+
+
+
+
+
+
+
+
+  return (
+    <div className=min-h-screen bg-slate-950 text-white'>;
+      <Head>;
+        <title>Guide — Capabilities Live Implementation</title>;
+import Head from 'next/head;
+export default function Page() {
+  return (
+    <div className=min-h-screen bg-slate-950 text-white'>
+      <Head>
+        <title>Guide — Capabilities Live Implementation</title>
+
+
+
+
+        <meta
+          name='description
+          content=Step-by-step guidance derived from live research signals.'
+        />;
+export default function Page() {
+export default function Page() {
+pr-12243
+  return($2) {
+  return($2) {
+
+  return (
+  return (
+
+    <div className="min-h-screen bg-slate-950 text-white">
+      <Head>
+        <title>Guide — Capabilities Live Implementation</title>;
+        <meta name=description" content="Step-by-step guidance derived from live research signals. />;
+        <meta property="og:title" content=Guide — Capabilities Live Implementation />;"
+        <meta property="og:description content=Step-by-step guidance derived from live research signals." />;"
+        <meta name=twitter:card content="summary_large_image" />
+        <p className=mt-6 text-white/60 text-sm>Auto-generated by Cloud Deep Research Factory.</p>
+      </main>
+    </div>
+  )
+export default function Page() {
+  return($2) {
+export default function Page() {
+
+  return ("
+    <div className=\"min-h-screen bg-slate-950 text-white\    />
+      <Head    />
+        <title    />Guide — Capabilities Live Implementation</title>;
+        <meta name=\"description\" content=\Step-by-step guidance derived from live research signals.\    />;"
+        <meta property=\"og:title\ content=\Guide — Capabilities Live Implementation\"    />;"
+        <meta property=\og:description\ content=\"Step-by-step guidance derived from live research signals.\"    />;
+        <meta name=\twitter:card\" content=\"summary_large_image\    />
+      </Head>;
+
+} />;"
+        <p className=\"mt-6 text-white/60 text-sm\    />Auto-generated by Cloud Deep Research Factory.</p>
+      </main>
+    </div>
+  )}
+export default function Page() {return (}
+import Head from 'next / head;
+export default /**;
+ * Page - Function description;
+ */;
+function Page() {return (<div className=min - h-screen bg - slate - 950 text - white' />;
+  );}
+}
+}
+export default /**
+ * Page - Function description
+ */
+  );}
+
+
+export default /**
+ * Page - Function description
+ */
+
+  return (
+
+export default /**;
+ * Page - Function description;
+ */
+  return (
+    <div className='min - h-screen bg - slate - 950 text - white'>;
+      <Head>;
+        <title > Guide — Capabilities Live Implementation</title>;
+        <meta;
+          name=description';'
+    <div className=min - h-screen bg - slate - 950 text - white />;
+      <Head>;
+        <title  /> Guide — Capabilities Live Implementation</title>;
+        <meta;
+          name='description';
+          content=Step - by - step guidance derived from live research signals.;
+        />;
+        <meta;'
+          property='og:title;
+          content='Guide — Capabilities Live Implementation';
+        />;
+        <meta;
+          property=og:description';'
+          content=Step - by - step guidance derived from live research signals.;
+        />;'
+        <meta name='twitter:card content=summary_large_image' />;
+
+          Guide — Capabilities Live Implementation;
+        </h1>;
+        <div;'
+          className=mt - 4;
+
+          }}
+
+          }}
+
+
+
+
+            __html:;
+              '<p>Source: <a class=text-cyan-300 underline" href="https://ziontechgroup.com/main/front target=_blank" rel="noopener>https://ziontechgroup.com/main/front</a></p><h2>Overview</h2><p>Focus: capabilities, live, site, seo, front, systems.</p><h2>Steps</h2><ol><li>Clarify objectives and measurable outcomes.</li><li>Map data, models, evaluation, and deployment workflow.</li><li>Automate checks for security, cost, and reliability.</li><li>Instrument telemetry; iterate with feedback loops.</li><li>Publish results and integrate learnings.</li></ol><h2>Links</h2><p><a class=text-cyan-300 underline" href="https://ziontechgroup.com target=_blank" rel="noopener>https://ziontechgroup.com</a></p>'}}
+        />
+        <p className=mt-6 text-white/60 text-sm'>
+origin/cursor/automate-test-improve-and-merge-code-20a4
+pr-12243
+
+            __html:;
+              '<p />Source: <a class=\"text-cyan-300 underline\" href=\https://ziontechgroup.com/main/front\ target=\"_blank\" rel=\noopener\ />https://ziontechgroup.com/main/front</a></p><h2 />Overview</h2><p />Focus: capabilities, live, site, seo, front, systems.</p><h2 />Steps</h2><ol /><li />Clarify objectives and measurable outcomes.</li><li />Map data, models, evaluation, and deployment workflow.</li><li />Automate checks for security, cost, and reliability.</li><li />Instrument telemetry; iterate with feedback loops.</li><li />Publish results and integrate learnings.</li></ol><h2 />Links</h2><p /><a class=\"text-cyan-300 underline\" href=\https: //ziontechgroup.com\ target=\"_blank\" rel=\noopener\ />https://ziontechgroup.com</a></p>
+
+}
+        />
+        <p className=mt-6 text-white/60 text-sm' />
 =======
+function Page() {
+  return (
+    <div className='min - h-screen bg - slate - 950 text - white'    />;
+      <Head    />;
+        <title     /> Guide — Capabilities Live Implementation</title>;
+        <meta;
+          name='description';
+          content='Step - by - step guidance derived from live research signals.';
+           />;
+        <meta;
+          property='og:title';
+          content='Guide — Capabilities Live Implementation';
+           />;
+        <meta;
+          property='og:description';
+          content='Step - by - step guidance derived from live research signals.';
+           />;
+        <meta name='twitter:card' content='summary_large_image'    />;
+      </Head>;
+      <main className='container mx - auto px - 6 py - 12 prose prose - invert'    />;
+        <h1 className='text - 3xl font - extrabold'    />;
+          Guide — Capabilities Live Implementation;
+        </h1>;
+        <div;
+          className='mt - 4';
           dangerouslySetInnerHTML={{__html:;"
-              '<p  /> Source: <a class=\"text - cyan - 300 underline\" href=\"https://ziontechgroup.com / main / front\" target=\"_blank\" rel=\"noopener\" />https://ziontechgroup.com / main / front</a></p><h2  /> Overview</h2><p  /> Focus: capabilities;, live, site, seo, front, systems.</p><h2  /> Steps</h2><ol /><li  /> Clarify objectives and measurable outcomes.</li><li  /> Map data, models, evaluation, and deployment workflow.</li><li  /> Automate checks for security, cost, and reliability.</li><li  /> Instrument telemetry; iterate with feedback loops.</li><li  /> Publish results and integrate learnings.</li></ol><h2  /> Links</h2><p /><a class=\"text - cyan - 300 underline\" href=\"https://ziontechgroup.com\" target=\"_blank\" rel=\"noopener\" />https://ziontechgroup.com</a></p>';"
-              '<p  /> Source: <a class=\"text - cyan - 300 underline\" href=\"https://ziontechgroup.com / main / front\" target=\"_blank\" rel=\"noopener\" />https://ziontechgroup.com / main / front</a></p><h2  /> Overview</h2><p  /> Focus: capabilities;, live, site, seo, front, systems.</p><h2  /> Steps</h2><ol /><li  /> Clarify objectives and measurable outcomes.</li><li  /> Map data, models, evaluation, and deployment workflow.</li><li  /> Automate checks for security, cost, and reliability.</li><li  /> Instrument telemetry; iterate with feedback loops.</li><li  /> Publish results and integrate learnings.</li></ol><h2  /> Links</h2><p /><a class=\"text - cyan - 300 underline\" href=\"https://ziontechgroup.com\" target=\"_blank\" rel=\"noopener\" />https://ziontechgroup.com</a></p>';"
-              '<p  /> Source: <a class=\"text - cyan - 300 underline\" href=\"https://ziontechgroup.com / main / front\" target=\"_blank\" rel=\"noopener\" />https://ziontechgroup.com / main / front</a></p><h2  /> Overview</h2><p  /> Focus: capabilities;, live, site, seo, front, systems.</p><h2  /> Steps</h2><ol /><li  /> Clarify objectives and measurable outcomes.</li><li  /> Map data, models, evaluation, and deployment workflow.</li><li  /> Automate checks for security, cost, and reliability.</li><li  /> Instrument telemetry; iterate with feedback loops.</li><li  /> Publish results and integrate learnings.</li></ol><h2  /> Links</h2><p /><a class=\"text - cyan - 300 underline\" href=\"https://ziontechgroup.com\" target=\"_blank\" rel=\"noopener\" />https://ziontechgroup.com</a></p>';
+              '<p     /> Source: <a class=\"text - cyan - 300 underline\" href=\"https://ziontechgroup.com / main / front\" target=\"_blank\" rel=\"noopener\"    />https://ziontechgroup.com / main / front</a></p><h2     /> Overview</h2><p     /> Focus: capabilities, live, site, seo, front, systems.</p><h2     /> Steps</h2><ol    /><li     /> Clarify objectives and measurable outcomes.</li><li     /> Map data, models, evaluation, and deployment workflow.</li><li     /> Automate checks for security, cost, and reliability.</li><li     /> Instrument telemetry; iterate with feedback loops.</li><li     /> Publish results and integrate learnings.</li></ol><h2     /> Links</h2><p    /><a class=\"text - cyan - 300 underline\" href=\"https://ziontechgroup.com\" target=\"_blank\" rel=\"noopener\"    />https://ziontechgroup.com</a></p>';"
+              '<p     /> Source: <a class=\"text - cyan - 300 underline\" href=\"https://ziontechgroup.com / main / front\" target=\"_blank\" rel=\"noopener\"    />https://ziontechgroup.com / main / front</a></p><h2     /> Overview</h2><p     /> Focus: capabilities, live, site, seo, front, systems.</p><h2     /> Steps</h2><ol    /><li     /> Clarify objectives and measurable outcomes.</li><li     /> Map data, models, evaluation, and deployment workflow.</li><li     /> Automate checks for security, cost, and reliability.</li><li     /> Instrument telemetry; iterate with feedback loops.</li><li     /> Publish results and integrate learnings.</li></ol><h2     /> Links</h2><p    /><a class=\"text - cyan - 300 underline\" href=\"https://ziontechgroup.com\" target=\"_blank\" rel=\"noopener\"    />https://ziontechgroup.com</a></p>';"
+              '<p     /> Source: <a class=\"text - cyan - 300 underline\" href=\"https://ziontechgroup.com / main / front\" target=\"_blank\" rel=\"noopener\"    />https://ziontechgroup.com / main / front</a></p><h2     /> Overview</h2><p     /> Focus: capabilities, live, site, seo, front, systems.</p><h2     /> Steps</h2><ol    /><li     /> Clarify objectives and measurable outcomes.</li><li     /> Map data, models, evaluation, and deployment workflow.</li><li     /> Automate checks for security, cost, and reliability.</li><li     /> Instrument telemetry; iterate with feedback loops.</li><li     /> Publish results and integrate learnings.</li></ol><h2     /> Links</h2><p    /><a class=\"text - cyan - 300 underline\" href=\"https://ziontechgroup.com\" target=\"_blank\" rel=\"noopener\"    />https://ziontechgroup.com</a></p>';
           dangerouslySetInnerHTML={{
             __html:;"
-              '<p  /> Source: <a class=\"text - cyan - 300 underline\" href=\"https://ziontechgroup.com / main / front\" target=\"_blank\" rel=\"noopener\" />https://ziontechgroup.com / main / front</a></p><h2  /> Overview</h2><p  /> Focus: capabilities;, live, site, seo, front, systems.</p><h2  /> Steps</h2><ol /><li  /> Clarify objectives and measurable outcomes.</li><li  /> Map data, models, evaluation, and deployment workflow.</li><li  /> Automate checks for security, cost, and reliability.</li><li  /> Instrument telemetry; iterate with feedback loops.</li><li  /> Publish results and integrate learnings.</li></ol><h2  /> Links</h2><p /><a class=\"text - cyan - 300 underline\" href=\"https: //ziontechgroup.com\" target=\"_blank\" rel=\"noopener\" />https://ziontechgroup.com</a></p>';}
+              '<p     /> Source: <a class=\"text - cyan - 300 underline\" href=\"https://ziontechgroup.com / main / front\" target=\"_blank\" rel=\"noopener\"    />https://ziontechgroup.com / main / front</a></p><h2     /> Overview</h2><p     /> Focus: capabilities, live, site, seo, front, systems.</p><h2     /> Steps</h2><ol    /><li     /> Clarify objectives and measurable outcomes.</li><li     /> Map data, models, evaluation, and deployment workflow.</li><li     /> Automate checks for security, cost, and reliability.</li><li     /> Instrument telemetry; iterate with feedback loops.</li><li     /> Publish results and integrate learnings.</li></ol><h2     /> Links</h2><p    /><a class=\"text - cyan - 300 underline\" href=\"https: //ziontechgroup.com\" target=\"_blank\" rel=\"noopener\"    />https://ziontechgroup.com</a></p>'}
           }
 }
         />;
-        <p className='mt - 6 text - white / 60 text - sm' />;
+        <p className='mt - 6 text - white / 60 text - sm'    />;
           Auto - generated by Cloud Deep Research Factory.;
         </p>;
       </main>;
     </div>)export default /**;
  * Page - Function description;
  */;"
-function Page() {return (<div className=\"min - h-screen bg - slate - 950 text - white\" />;
+function Page() {return (<div className=\"min - h-screen bg - slate - 950 text - white\"    />;
     </div>);
+
 export default /**
  * Page - Function description;
  */
 function Page() {
   return ("
-    <div className=\"min - h-screen bg - slate - 950 text - white\" />;
-      <Head>;
-        <title  /> Guide — Capabilities Live Implementation</title>;"
-        <meta name=\"description\" content=\"Step - by - step guidance derived from live research signals.\" />;"
-        <meta property=\"og:title\" content=\"Guide — Capabilities Live Implementation\" />;"
-        <meta property=\"og:description\" content=\"Step - by - step guidance derived from live research signals.\" />;"
-        <meta name=\"twitter:card\" content=\"summary_large_image\" />;
+    <div className=\"min - h-screen bg - slate - 950 text - white\"    />;
+      <Head    />;
+        <title     /> Guide — Capabilities Live Implementation</title>;"
+        <meta name=\"description\" content=\"Step - by - step guidance derived from live research signals.\"    />;"
+        <meta property=\"og:title\" content=\"Guide — Capabilities Live Implementation\"    />;"
+        <meta property=\"og:description\" content=\"Step - by - step guidance derived from live research signals.\"    />;"
+        <meta name=\"twitter:card\" content=\"summary_large_image\"    />;
       </Head>;"
-      <main className=\"container mx - auto px - 6 py - 12 prose prose - invert\" />;"
-        <h1 className=\"text - 3xl font - extrabold\" />Guide — Capabilities Live Implementation</h1>;}"
-        <div className=\"mt - 4\" dangerouslySetInnerHTML={{ __html: \"<p  /> Source: <a class=\"text - cyan - 300 underline\" href=\"https://ziontechgroup.com / main / front\" target=\"_blank\" rel=\"noopener\" />https://ziontechgroup.com / main / front</a></p><h2  /> Overview</h2><p  /> Focus: capabilities;, live, site, seo, front, systems.</p><h2  /> Steps</h2><ol /><li  /> Clarify objectives and measurable outcomes.</li><li  /> Map data, models, evaluation, and deployment workflow.</li><li  /> Automate checks for security, cost, and reliability.</li><li  /> Instrument telemetry, iterate with feedback loops.</li><li  /> Publish results and integrate learnings.</li></ol><h2  /> Links</h2><p /><a class=\"text - cyan - 300 underline\" href=\"https: //ziontechgroup.com\" target=\"_blank\" rel=\"noopener\" />https://ziontechgroup.com</a></p>\" ;}
+      <main className=\"container mx - auto px - 6 py - 12 prose prose - invert\"    />;"
+        <h1 className=\"text - 3xl font - extrabold\"    />Guide — Capabilities Live Implementation</h1>;}"
+        <div className=\"mt - 4\" dangerouslySetInnerHTML={{ __html: \"<p     /> Source: <a class=\"text - cyan - 300 underline\" href=\"https://ziontechgroup.com / main / front\" target=\"_blank\" rel=\"noopener\"    />https://ziontechgroup.com / main / front</a></p><h2     /> Overview</h2><p     /> Focus: capabilities, live, site, seo, front, systems.</p><h2     /> Steps</h2><ol    /><li     /> Clarify objectives and measurable outcomes.</li><li     /> Map data, models, evaluation, and deployment workflow.</li><li     /> Automate checks for security, cost, and reliability.</li><li     /> Instrument telemetry, iterate with feedback loops.</li><li     /> Publish results and integrate learnings.</li></ol><h2     /> Links</h2><p    /><a class=\"text - cyan - 300 underline\" href=\"https: //ziontechgroup.com\" target=\"_blank\" rel=\"noopener\"    />https://ziontechgroup.com</a></p>\" }
 } />;"
-        <p className=\"mt - 6 text - white / 60 text - sm\" />Auto - generated by Cloud Deep Research Factory.</p>;
+        <p className=\"mt - 6 text - white / 60 text - sm\"    />Auto - generated by Cloud Deep Research Factory.</p>;
       </main>
     </div>
   );
 }__html:;"
-              '<p />Source: <a class=\"text-cyan-300 underline\" href=\"https://ziontechgroup.com/main/front\" target=\"_blank\" rel=\"noopener\" />https://ziontechgroup.com/main/front</a></p><h2 />Overview</h2><p />Focus: capabilities;, live, site, seo, front, systems.</p><h2 />Steps</h2><ol /><li />Clarify objectives and measurable outcomes.</li><li />Map data, models, evaluation, and deployment workflow.</li><li />Automate checks for security, cost, and reliability.</li><li />Instrument telemetry; iterate with feedback loops.</li><li />Publish results and integrate learnings.</li></ol><h2 />Links</h2><p /><a class=\"text-cyan-300 underline\" href=\"https://ziontechgroup.com\" target=\"_blank\" rel=\"noopener\" />https://ziontechgroup.com</a></p>';
+              '<p    />Source: <a class=\"text-cyan-300 underline\" href=\"https://ziontechgroup.com/main/front\" target=\"_blank\" rel=\"noopener\"    />https://ziontechgroup.com/main/front</a></p><h2    />Overview</h2><p    />Focus: capabilities, live, site, seo, front, systems.</p><h2    />Steps</h2><ol    /><li    />Clarify objectives and measurable outcomes.</li><li    />Map data, models, evaluation, and deployment workflow.</li><li    />Automate checks for security, cost, and reliability.</li><li    />Instrument telemetry; iterate with feedback loops.</li><li    />Publish results and integrate learnings.</li></ol><h2    />Links</h2><p    /><a class=\"text-cyan-300 underline\" href=\"https://ziontechgroup.com\" target=\"_blank\" rel=\"noopener\"    />https://ziontechgroup.com</a></p>';
             __html:;"
-              '<p />Source: <a class=\"text-cyan-300 underline\" href=\"https://ziontechgroup.com/main/front\" target=\"_blank\" rel=\"noopener\" />https://ziontechgroup.com/main/front</a></p><h2 />Overview</h2><p />Focus: capabilities;, live, site, seo, front, systems.</p><h2 />Steps</h2><ol /><li />Clarify objectives and measurable outcomes.</li><li />Map data, models, evaluation, and deployment workflow.</li><li />Automate checks for security, cost, and reliability.</li><li />Instrument telemetry; iterate with feedback loops.</li><li />Publish results and integrate learnings.</li></ol><h2 />Links</h2><p /><a class=\"text-cyan-300 underline\" href=\"https://ziontechgroup.com\" target=\"_blank\" rel=\"noopener\" />https://ziontechgroup.com</a></p>';
+              '<p    />Source: <a class=\"text-cyan-300 underline\" href=\"https://ziontechgroup.com/main/front\" target=\"_blank\" rel=\"noopener\"    />https://ziontechgroup.com/main/front</a></p><h2    />Overview</h2><p    />Focus: capabilities, live, site, seo, front, systems.</p><h2    />Steps</h2><ol    /><li    />Clarify objectives and measurable outcomes.</li><li    />Map data, models, evaluation, and deployment workflow.</li><li    />Automate checks for security, cost, and reliability.</li><li    />Instrument telemetry; iterate with feedback loops.</li><li    />Publish results and integrate learnings.</li></ol><h2    />Links</h2><p    /><a class=\"text-cyan-300 underline\" href=\"https://ziontechgroup.com\" target=\"_blank\" rel=\"noopener\"    />https://ziontechgroup.com</a></p>';
             __html:;"
-              '<p />Source: <a class=\"text-cyan-300 underline\" href=\"https://ziontechgroup.com/main/front\" target=\"_blank\" rel=\"noopener\" />https://ziontechgroup.com/main/front</a></p><h2 />Overview</h2><p />Focus: capabilities;, live, site, seo, front, systems.</p><h2 />Steps</h2><ol /><li />Clarify objectives and measurable outcomes.</li><li />Map data, models, evaluation, and deployment workflow.</li><li />Automate checks for security, cost, and reliability.</li><li />Instrument telemetry; iterate with feedback loops.</li><li />Publish results and integrate learnings.</li></ol><h2 />Links</h2><p /><a class=\"text-cyan-300 underline\" href=\"https://ziontechgroup.com\" target=\"_blank\" rel=\"noopener\" />https://ziontechgroup.com</a></p>';
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
-          }}
-<<<<<<< HEAD
-        />;
-        <p className='mt-6 text-white/60 text-sm'>;'
-          Auto-generated by Cloud Deep Research Factory.;
-        </p>;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-      </main>;
-<<<<<<< HEAD
-    </div>;
-  )export default function Page() {export default function Page() {return ('<p>"Source": <a class="text-cyan-300 underline" href=""https"://ziontechgroup.com/main/front" target="_blank" rel="noopener">"https"://ziontechgroup.com/main/front</a></p><h2>Overview</h2><p>"Focus": capabilities, live, site, seo, front, systems.</p><h2>Steps</h2><ol><li>Clarify objectives and measurable outcomes.</li><li>Map data, models, evaluation, and deployment workflow.</li><li>Automate checks for security, cost, and reliability.</li><li>Instrument telemetry; iterate with feedback loops.</li><li>Publish results and integrate learnings.</li></ol><h2>Links</h2><p><a class="text-cyan-300 underline" href=""https"://ziontechgroup.com" target="_blank" rel="noopener">"https"://ziontechgroup.com</a></p>';'
-            }
-            "__html":;
-              '<p>"Source": <a class="text-cyan-300 underline" href=""https"://ziontechgroup.com/main/front" target="_blank" rel="noopener">"https"://ziontechgroup.com/main/front</a></p><h2>Overview</h2><p>"Focus": capabilities, live, site, seo, front, systems.</p><h2>Steps</h2><ol><li>Clarify objectives and measurable outcomes.</li><li>Map data, models, evaluation, and deployment workflow.</li><li>Automate checks for security, cost, and reliability.</li><li>Instrument telemetry; iterate with feedback loops.</li><li>Publish results and integrate learnings.</li></ol><h2>Links</h2><p><a class = "text-cyan-300 underline" href=""https"://ziontechgroup.com" target="_blank" rel="noopener">"https"://ziontechgroup.com</a></p>',export default function Page() {return ;'
-  }
-  return (<div className="min-h-screen bg-slate-950 text-white">;"
-  );
-
-
-}
-
-export default function Page() {
-
-}
-
-return (;
-    <div className="min-h-screen bg-slate-950 text-white">;"
-      <Head>;
-        <title>Guide — Capabilities Live Implementation</title>;
-        <meta name="description" content="Step-by-step guidance derived from live research signals." />;"
-        <meta property=""og":title" content="Guide — Capabilities Live Implementation" />;"
-        <meta property=""og":description" content="Step-by-step guidance derived from live research signals." />;"
-        <meta name=""twitter":card" content="summary_large_image" />;"
-      </Head>;
-      <main className="container mx-auto px-6 py-12 prose prose-invert">;"
-        <h1 className="text-3xl font-extrabold">Guide — Capabilities Live Implementation</h1>;"
-        <div className="mt-4" dangerouslySetInnerHTML={{ "__html": "<p>"Source": <a class=\"text-cyan-300 underline\" href=\""https"://ziontechgroup && ziontechgroup.com/main/front\" target=\"_blank\" rel=\"noopener\">"https"://ziontechgroup && ziontechgroup.com/main/front</a></p><h2>Overview</h2><p>"Focus": capabilities, live, site, seo, front, systems.</p><h2>Steps</h2><ol><li>Clarify objectives and measurable outcomes.</li><li>Map data, models, evaluation, and deployment workflow.</li><li>Automate checks for security, cost, and reliability.</li><li>Instrument telemetry, iterate with feedback loops.</li><li>Publish results and integrate learnings.</li></ol><h2>Links</h2><p><a class=\"text-cyan-300 underline\" href=\""https": //ziontechgroup && ziontechgroup.com\" target=\"_blank\" rel=\"noopener\">"https"://ziontechgroup && ziontechgroup.com</a></p>" ,"
-} />;
-        <p className="mt-6 text-white/60 text-sm">Auto-generated by Cloud Deep Research Factory.</p>;"
-      </main>;
-    </div>;
-
-export default function Page() {return (}
-import Head from 'next / head';'
-
-export default /**;
- * Page - Function description;
- */;
-function Page() {return (<div className='min - h-screen bg - slate - 950 text - white'>;'
-  );
-
-}
-
-export default function Page() {
-  return (
-}
-
-
-
-  )}export default function Page() {return (}
-  )}export default function Page() {return (}
-  );
-
-import Head from 'next / head';
-export default /**
- * Page - Function description
- */
-function Page() {
-}
-return (;
-    <div className='min - h-screen bg - slate - 950 text - white'>;'
-      <Head>;
-        <title > Guide — Capabilities Live Implementation</title>;
-        <meta;
-          name='description';'
-          content='Step - by - step guidance derived from live research signals.';' />;
-        <meta;
-          property='"og":title';'
-          content='Guide — Capabilities Live Implementation';' />;
-        <meta;
-          property='"og":description';'
-          content='Step - by - step guidance derived from live research signals.';' />;
-        <meta name='"twitter":card' content='summary_large_image' />;'
-      </Head>;
-      <main className='container mx - auto px - 6 py - 12 prose prose - invert'>;'
-        <h1 className='text - 3xl font - extrabold'>;'
-          Guide — Capabilities Live Implementation;
-        </h1>;
-        <div;
-          className='mt - 4';'
-          dangerouslySetInnerHTML={{"__html":;
-              '<p > "Source": <a class="text - cyan - 300 underline" href=""https"://ziontechgroup.com / main / front" target="_blank" rel="noopener">"https"://ziontechgroup.com / main / front</a></p><h2 > Overview</h2><p > "Focus": capabilities, live, site, seo, front, systems.</p><h2 > Steps</h2><ol><li > Clarify objectives and measurable outcomes.</li><li > Map data, models, evaluation, and deployment workflow.</li><li > Automate checks for security, cost, and reliability.</li><li > Instrument telemetry; iterate with feedback loops.</li><li > Publish results and integrate learnings.</li></ol><h2 > Links</h2><p><a class="text - cyan - 300 underline" href=""https"://ziontechgroup.com" target="_blank" rel="noopener">"https"://ziontechgroup.com</a></p>';'
-              '<p > "Source": <a class="text - cyan - 300 underline" href=""https"://ziontechgroup.com / main / front" target="_blank" rel="noopener">"https"://ziontechgroup.com / main / front</a></p><h2 > Overview</h2><p > "Focus": capabilities, live, site, seo, front, systems.</p><h2 > Steps</h2><ol><li > Clarify objectives and measurable outcomes.</li><li > Map data, models, evaluation, and deployment workflow.</li><li > Automate checks for security, cost, and reliability.</li><li > Instrument telemetry; iterate with feedback loops.</li><li > Publish results and integrate learnings.</li></ol><h2 > Links</h2><p><a class="text - cyan - 300 underline" href=""https"://ziontechgroup.com" target="_blank" rel="noopener">"https"://ziontechgroup.com</a></p>';'
-              '<p > "Source": <a class="text - cyan - 300 underline" href=""https"://ziontechgroup.com / main / front" target="_blank" rel="noopener">"https"://ziontechgroup.com / main / front</a></p><h2 > Overview</h2><p > "Focus": capabilities, live, site, seo, front, systems.</p><h2 > Steps</h2><ol><li > Clarify objectives and measurable outcomes.</li><li > Map data, models, evaluation, and deployment workflow.</li><li > Automate checks for security, cost, and reliability.</li><li > Instrument telemetry; iterate with feedback loops.</li><li > Publish results and integrate learnings.</li></ol><h2 > Links</h2><p><a class="text - cyan - 300 underline" href=""https"://ziontechgroup.com" target="_blank" rel="noopener">"https"://ziontechgroup.com</a></p>';'
-          }
-          dangerouslySetInnerHTML={{
-            }
-            "__html":;
-              '<p > "Source": <a class="text - cyan - 300 underline" href=""https"://ziontechgroup.com / main / front" target="_blank" rel="noopener">"https"://ziontechgroup.com / main / front</a></p><h2 > Overview</h2><p > "Focus": capabilities, live, site, seo, front, systems.</p><h2 > Steps</h2><ol><li > Clarify objectives and measurable outcomes.</li><li > Map data, models, evaluation, and deployment workflow.</li><li > Automate checks for security, cost, and reliability.</li><li > Instrument telemetry; iterate with feedback loops.</li><li > Publish results and integrate learnings.</li></ol><h2 > Links</h2><p><a class="text - cyan - 300 underline" href=""https": //ziontechgroup.com" target="_blank" rel="noopener">"https"://ziontechgroup.com</a></p>''
-          
-}
-        />;
-        <p className='mt - 6 text - white / 60 text - sm'>;'
-          Auto - generated by Cloud Deep Research Factory.;
-        </p>;
-      </main>;
-    </div>)export default /**;
- * Page - Function description;
- */;
-function Page() {return (<div className="min - h-screen bg - slate - 950 text - white">;"
-    </div>);
-
-}
-
-export default /**
- * Page - Function description
- */
-function Page() {
-}
-return (;
-    <div className="min - h-screen bg - slate - 950 text - white">;"
-      <Head>;
-        <title > Guide — Capabilities Live Implementation</title>;
-        <meta name="description" content="Step - by - step guidance derived from live research signals." />;"
-        <meta property=""og":title" content="Guide — Capabilities Live Implementation" />;"
-        <meta property=""og":description" content="Step - by - step guidance derived from live research signals." />;"
-        <meta name=""twitter":card" content="summary_large_image" />;"
-      </Head>;
-      <main className="container mx - auto px - 6 py - 12 prose prose - invert">;"
-        <h1 className="text - 3xl font - extrabold">Guide — Capabilities Live Implementation</h1>;"
-        <div className="mt - 4" dangerouslySetInnerHTML={{ "__html": "<p > "Source": <a class="text - cyan - 300 underline" href=""https"://ziontechgroup.com / main / front" target="_blank" rel="noopener">"https"://ziontechgroup.com / main / front</a></p><h2 > Overview</h2><p > "Focus": capabilities, live, site, seo, front, systems.</p><h2 > Steps</h2><ol><li > Clarify objectives and measurable outcomes.</li><li > Map data, models, evaluation, and deployment workflow.</li><li > Automate checks for security, cost, and reliability.</li><li > Instrument telemetry, iterate with feedback loops.</li><li > Publish results and integrate learnings.</li></ol><h2 > Links</h2><p><a class="text - cyan - 300 underline" href=""https": //ziontechgroup.com" target="_blank" rel="noopener">"https"://ziontechgroup.com</a></p>" ,"
-} />;
-        <p className="mt - 6 text - white / 60 text - sm">Auto - generated by Cloud Deep Research Factory.</p>;"
-      </main>
-    </div>
-  );
-}"__html":;
-              '<p>"Source": <a class="text-cyan-300 underline" href=""https"://ziontechgroup.com/main/front" target="_blank" rel="noopener">"https"://ziontechgroup.com/main/front</a></p><h2>Overview</h2><p>"Focus": capabilities, live, site, seo, front, systems.</p><h2>Steps</h2><ol><li>Clarify objectives and measurable outcomes.</li><li>Map data, models, evaluation, and deployment workflow.</li><li>Automate checks for security, cost, and reliability.</li><li>Instrument telemetry; iterate with feedback loops.</li><li>Publish results and integrate learnings.</li></ol><h2>Links</h2><p><a class="text-cyan-300 underline" href=""https"://ziontechgroup.com" target="_blank" rel="noopener">"https"://ziontechgroup.com</a></p>';'
-            "__html":;
-              '<p>"Source": <a class="text-cyan-300 underline" href=""https"://ziontechgroup.com/main/front" target="_blank" rel="noopener">"https"://ziontechgroup.com/main/front</a></p><h2>Overview</h2><p>"Focus": capabilities, live, site, seo, front, systems.</p><h2>Steps</h2><ol><li>Clarify objectives and measurable outcomes.</li><li>Map data, models, evaluation, and deployment workflow.</li><li>Automate checks for security, cost, and reliability.</li><li>Instrument telemetry; iterate with feedback loops.</li><li>Publish results and integrate learnings.</li></ol><h2>Links</h2><p><a class="text-cyan-300 underline" href=""https"://ziontechgroup.com" target="_blank" rel="noopener">"https"://ziontechgroup.com</a></p>';'
-            "__html":;
-              '<p>"Source": <a class="text-cyan-300 underline" href=""https"://ziontechgroup.com/main/front" target="_blank" rel="noopener">"https"://ziontechgroup.com/main/front</a></p><h2>Overview</h2><p>"Focus": capabilities, live, site, seo, front, systems.</p><h2>Steps</h2><ol><li>Clarify objectives and measurable outcomes.</li><li>Map data, models, evaluation, and deployment workflow.</li><li>Automate checks for security, cost, and reliability.</li><li>Instrument telemetry; iterate with feedback loops.</li><li>Publish results and integrate learnings.</li></ol><h2>Links</h2><p><a class="text-cyan-300 underline" href=""https"://ziontechgroup.com" target="_blank" rel="noopener">"https"://ziontechgroup.com</a></p>';'
+              '<p    />Source: <a class=\"text-cyan-300 underline\" href=\"https://ziontechgroup.com/main/front\" target=\"_blank\" rel=\"noopener\"    />https://ziontechgroup.com/main/front</a></p><h2    />Overview</h2><p    />Focus: capabilities, live, site, seo, front, systems.</p><h2    />Steps</h2><ol    /><li    />Clarify objectives and measurable outcomes.</li><li    />Map data, models, evaluation, and deployment workflow.</li><li    />Automate checks for security, cost, and reliability.</li><li    />Instrument telemetry; iterate with feedback loops.</li><li    />Publish results and integrate learnings.</li></ol><h2    />Links</h2><p    /><a class=\"text-cyan-300 underline\" href=\"https://ziontechgroup.com\" target=\"_blank\" rel=\"noopener\"    />https://ziontechgroup.com</a></p>';
           }}
         />;
-        <p className='mt-6 text-white/60 text-sm'>;'
+        <p className='mt-6 text-white/60 text-sm'    />;
           Auto-generated by Cloud Deep Research Factory.;
         </p>;
       </main>;
-    </div>;
-  )export default function Page() {return ()export default function Page() {return (export default function Page() {return (<div className="min-h-screen bg-slate-950 text-white">;"
-      <Head>;
-        <title>Guide — Capabilities Live Implementation</title>;
-        <meta name="description" content="Step-by-step guidance derived from live research signals." />;"
-        <meta property=""og":title" content="Guide — Capabilities Live Implementation" />;"
-        <meta property=""og":description" content="Step-by-step guidance derived from live research signals." />;"
-        <meta name=""twitter":card" content="summary_large_image" />;"
-      </Head>;
-      <main className="container mx-auto px-6 py-12 prose prose-invert">;"
-        <h1 className="text-3xl font-extrabold">Guide — Capabilities Live Implementation</h1>;"
-        <div className="mt-4" dangerouslySetInnerHTML={{ "__html": "<p>"Source": <a class=\"text-cyan-300 underline\" href=\""https"://ziontechgroup.com/main/front\" target=\"_blank\" rel=\"noopener\">"https"://ziontechgroup.com/main/front</a></p><h2>Overview</h2><p>"Focus": capabilities, live, site, seo, front, systems.</p><h2>Steps</h2><ol><li>Clarify objectives and measurable outcomes.</li><li>Map data, models, evaluation, and deployment workflow.</li><li>Automate checks for security, cost, and reliability.</li><li>Instrument telemetry, iterate with feedback loops.</li><li>Publish results and integrate learnings.</li></ol><h2>Links</h2><p><a class=\"text-cyan-300 underline\" href=\""https": //ziontechgroup.com\" target=\"_blank\" rel=\"noopener\">"https"://ziontechgroup.com</a></p>" ,"
-} />;
-        <p className="mt-6 text-white/60 text-sm">Auto-generated by Cloud Deep Research Factory.</p>;"
+    </div>;"
+  )export default function Page() {return ()export default function Page() {return (export default function Page() {return (<div className=\"min-h-screen bg-slate-950 text-white\"    />;
+      <Head    />;
+        <title    />Guide — Capabilities Live Implementation</title>;"
+        <meta name=\"description\" content=\"Step-by-step guidance derived from live research signals.\"    />;"
+        <meta property=\"og:title\" content=\"Guide — Capabilities Live Implementation\"    />;"
+        <meta property=\"og:description\" content=\"Step-by-step guidance derived from live research signals.\"    />;"
+        <meta name=\"twitter:card\" content=\"summary_large_image\"    />;
+      </Head>;"
+      <main className=\"container mx-auto px-6 py-12 prose prose-invert\"    />;"
+        <h1 className=\"text-3xl font-extrabold\"    />Guide — Capabilities Live Implementation</h1>;}"
+        <div className=\"mt-4\" dangerouslySetInnerHTML={{ __html: \"<p    />Source: <a class=\"text-cyan-300 underline\" href=\"https://ziontechgroup.com/main/front\" target=\"_blank\" rel=\"noopener\"    />https://ziontechgroup.com/main/front</a></p><h2    />Overview</h2><p    />Focus: capabilities, live, site, seo, front, systems.</p><h2    />Steps</h2><ol    /><li    />Clarify objectives and measurable outcomes.</li><li    />Map data, models, evaluation, and deployment workflow.</li><li    />Automate checks for security, cost, and reliability.</li><li    />Instrument telemetry, iterate with feedback loops.</li><li    />Publish results and integrate learnings.</li></ol><h2    />Links</h2><p    /><a class=\"text-cyan-300 underline\" href=\"https: //ziontechgroup.com\" target=\"_blank\" rel=\"noopener\"    />https://ziontechgroup.com</a></p>\" }
+} />;"
+        <p className=\"mt-6 text-white/60 text-sm\"    />Auto-generated by Cloud Deep Research Factory.</p>;
       </main>;
 ursor/fix-website-loading-errors-and-merge-6662;
     </div>);
 }
 
-            "__html":;
-              '<p>"Source": <a class="text-cyan-300 underline" href=""https"://ziontechgroup.com/main/front" target="_blank" rel="noopener">"https"://ziontechgroup.com/main/front</a></p><h2>Overview</h2><p>"Focus": capabilities, live, site, seo, front, systems.</p><h2>Steps</h2><ol><li>Clarify objectives and measurable outcomes.</li><li>Map data, models, evaluation, and deployment workflow.</li><li>Automate checks for security, cost, and reliability.</li><li>Instrument telemetry; iterate with feedback loops.</li><li>Publish results and integrate learnings.</li></ol><h2>Links</h2><p><a class="text-cyan-300 underline" href=""https": //ziontechgroup.com" target="_blank" rel="noopener">"https"://ziontechgroup.com</a></p>''
+            __html:;"
+              '<p    />Source: <a class=\"text-cyan-300 underline\" href=\"https://ziontechgroup.com/main/front\" target=\"_blank\" rel=\"noopener\"    />https://ziontechgroup.com/main/front</a></p><h2    />Overview</h2><p    />Focus: capabilities, live, site, seo, front, systems.</p><h2    />Steps</h2><ol    /><li    />Clarify objectives and measurable outcomes.</li><li    />Map data, models, evaluation, and deployment workflow.</li><li    />Automate checks for security, cost, and reliability.</li><li    />Instrument telemetry; iterate with feedback loops.</li><li    />Publish results and integrate learnings.</li></ol><h2    />Links</h2><p    /><a class=\"text-cyan-300 underline\" href=\"https: //ziontechgroup.com\" target=\"_blank\" rel=\"noopener\"    />https://ziontechgroup.com</a></p>'
           
 }
         />
-        <p className='mt-6 text-white/60 text-sm'>'
+        <p className='mt-6 text-white/60 text-sm'    />
+>>>>>>> origin/chore/fix-lint-and-merge
           Auto-generated by Cloud Deep Research Factory.
         </p>
       </main>
     </div>
+  );
+
+<<<<<<< HEAD
+  );export default function Page() {
+=======
+export default function Page() {
+>>>>>>> origin/chore/fix-lint-and-merge
+  return (
 
 export default function Page() {
-}
-return (;
+  return (
 
-export default function Page() {
-}
-return (;
+<<<<<<< HEAD
 
 
-    <div className = "min-h-screen bg-slate-950 text-white">"
+  );export default function Page() {
+  return (
+
+
+    <div className="min-h-screen bg-slate-950 text-white">
       <Head>
         <title>Guide — Capabilities Live Implementation</title>
-        <meta name="description" content="Step-by-step guidance derived from live research signals." />"
-        <meta property=""og":title" content="Guide — Capabilities Live Implementation" />"
-        <meta property=""og":description" content="Step-by-step guidance derived from live research signals." />"
-        <meta name=""twitter":card" content="summary_large_image" />"
+        <meta name=description content="Step-by-step guidance derived from live research signals." />
+        <meta property=og:title content="Guide — Capabilities Live Implementation" />
+        <meta property=og:description content="Step-by-step guidance derived from live research signals." />
+        <meta name=twitter:card content="summary_large_image" />
       </Head>
-      <main className="container mx-auto px-6 py-12 prose prose-invert">"
-        <h1 className="text-3xl font-extrabold">Guide — Capabilities Live Implementation</h1>"
-        <div className="mt-4" dangerouslySetInnerHTML={{ "__html": "<p>"Source": <a class=\"text-cyan-300 underline\" href=\""https"://ziontechgroup.com/main/front\" target=\"_blank\" rel=\"noopener\">"https"://ziontechgroup.com/main/front</a></p><h2>Overview</h2><p>"Focus": capabilities, live, site, seo, front, systems.</p><h2>Steps</h2><ol><li>Clarify objectives and measurable outcomes.</li><li>Map data, models, evaluation, and deployment workflow.</li><li>Automate checks for security, cost, and reliability.</li><li>Instrument telemetry, iterate with feedback loops.</li><li>Publish results and integrate learnings.</li></ol><h2>Links</h2><p><a class=\"text-cyan-300 underline\" href=\""https": //ziontechgroup.com\" target=\"_blank\" rel=\"noopener\">"https"://ziontechgroup.com</a></p>" ,"
-} />
-        <p className="mt-6 text-white/60 text-sm">Auto-generated by Cloud Deep Research Factory.</p>"
+      <main className=container mx-auto px-6 py-12 prose prose-invert>
+        <h1 className="text-3xl font-extrabold">Guide — Capabilities Live Implementation</h1>
+        <div className=mt-4 dangerouslySetInnerHTML={{ __html: "<p>Source: <a class=\"text-cyan-300 underline\ href=\https://ziontechgroup.com/main/front\" target=\"_blank\ rel=\noopener\">https://ziontechgroup.com/main/front</a></p><h2>Overview</h2><p>Focus: capabilities;, live, site, seo, front, systems.</p><h2>Steps</h2><ol><li>Clarify objectives and measurable outcomes.</li><li>Map data, models, evaluation, and deployment workflow.</li><li>Automate checks for security, cost, and reliability.</li><li>Instrument telemetry, iterate with feedback loops.</li><li>Publish results and integrate learnings.</li></ol><h2>Links</h2><p><a class=\"text-cyan-300 underline\ href=\https: //ziontechgroup.com\" target=\"_blank\ rel=\noopener\">https://ziontechgroup.com</a></p>" ;}} />
+        <p className=mt-6 text-white/60 text-sm>Auto-generated by Cloud Deep Research Factory.</p>
       </main>
-<<<<<<< HEAD
     </div>
   )
 }
-=======
+    </div>
+  )
+}
+pr-12243
 
 
 
-
-
-    <div className="min-h-screen bg-slate-950 text-white">"
+    <div className="min-h-screen bg-slate-950 text-white">
       <Head>
         <title>Guide — Capabilities Live Implementation</title>
-        <meta name="description" content="Step-by-step guidance derived from live research signals." />"
-        <meta property=""og":title" content="Guide — Capabilities Live Implementation" />"
-        <meta property=""og":description" content="Step-by-step guidance derived from live research signals." />"
-        <meta name=""twitter":card" content="summary_large_image" />"
+        <meta name=description content="Step-by-step guidance derived from live research signals." />
+        <meta property=og:title content="Guide — Capabilities Live Implementation" />
+        <meta property=og:description content="Step-by-step guidance derived from live research signals." />
+        <meta name=twitter:card content="summary_large_image" />
       </Head>
-      <main className="container mx-auto px-6 py-12 prose prose-invert">"
-        <h1 className="text-3xl font-extrabold">Guide — Capabilities Live Implementation</h1>"
-        <div className="mt-4" dangerouslySetInnerHTML={{ "__html": "<p>"Source": <a class=\"text-cyan-300 underline\" href=\""https"://ziontechgroup.com/main/front\" target=\"_blank\" rel=\"noopener\">"https"://ziontechgroup.com/main/front</a></p><h2>Overview</h2><p>"Focus": capabilities, live, site, seo, front, systems.</p><h2>Steps</h2><ol><li>Clarify objectives and measurable outcomes.</li><li>Map data, models, evaluation, and deployment workflow.</li><li>Automate checks for security, cost, and reliability.</li><li>Instrument telemetry, iterate with feedback loops.</li><li>Publish results and integrate learnings.</li></ol><h2>Links</h2><p><a class=\"text-cyan-300 underline\" href=\""https": //ziontechgroup.com\" target=\"_blank\" rel=\"noopener\">"https"://ziontechgroup.com</a></p>" ,"
+      <main className=container mx-auto px-6 py-12 prose prose-invert>
+        <h1 className="text-3xl font-extrabold">Guide — Capabilities Live Implementation</h1>
+        <div className=mt-4 dangerouslySetInnerHTML={{ __html: "<p>Source: <a class=\"text-cyan-300 underline\ href=\https://ziontechgroup.com/main/front\" target=\"_blank\ rel=\noopener\">https://ziontechgroup.com/main/front</a></p><h2>Overview</h2><p>Focus: capabilities;, live, site, seo, front, systems.</p><h2>Steps</h2><ol><li>Clarify objectives and measurable outcomes.</li><li>Map data, models, evaluation, and deployment workflow.</li><li>Automate checks for security, cost, and reliability.</li><li>Instrument telemetry, iterate with feedback loops.</li><li>Publish results and integrate learnings.</li></ol><h2>Links</h2><p><a class=\"text-cyan-300 underline\ href=\https: //ziontechgroup.com\" target=\"_blank\ rel=\noopener\">https://ziontechgroup.com</a></p>" ;}} />
+        <p className=mt-6 text-white/60 text-sm>Auto-generated by Cloud Deep Research Factory.</p>
+      </main>
+
+    <div className="min-h-screen bg-slate-950 text-white">
+      <Head>
+        <title>Guide — Capabilities Live Implementation</title>
+        <meta name=description" content="Step-by-step guidance derived from live research signals. />
+        <meta property="og:title" content=Guide — Capabilities Live Implementation />"
+        <meta property="og:description content=Step-by-step guidance derived from live research signals." />"
+        <meta name=twitter:card content="summary_large_image" />
+
+        <p className=mt-6 text-white/60 text-sm>Auto-generated by Cloud Deep Research Factory.</p>
+      </main>
+
+
+"
+    <div className="min-h-screen bg-slate-950 text-white>
+      <Head>
+        <title>Guide — Capabilities Live Implementation</title>
+        <meta name="description" content=Step-by-step guidance derived from live research signals. />"
+        <meta property="og:title content=Guide — Capabilities Live Implementation" />"
+        <meta property=og:description content="Step-by-step guidance derived from live research signals." />
+        <meta name=twitter:card" content="summary_large_image />
+      </Head>
+      <main className="container mx-auto px-6 py-12 prose prose-invert">
+        <h1 className=text-3xl font-extrabold">Guide — Capabilities Live Implementation</h1>"
+        <div className=mt-4 dangerouslySetInnerHTML={{ __html: "<p>Source: <a class=\"text-cyan-300 underline\ href=\https://ziontechgroup.com/main/front\" target=\"_blank\ rel=\noopener\">https://ziontechgroup.com/main/front</a></p><h2>Overview</h2><p>Focus: capabilities, live, site, seo, front, systems.</p><h2>Steps</h2><ol><li>Clarify objectives and measurable outcomes.</li><li>Map data, models, evaluation, and deployment workflow.</li><li>Automate checks for security, cost, and reliability.</li><li>Instrument telemetry, iterate with feedback loops.</li><li>Publish results and integrate learnings.</li></ol><h2>Links</h2><p><a class=\"text-cyan-300 underline\ href=\https://ziontechgroup.com\" target=\"_blank\ rel=\noopener\">https://ziontechgroup.com</a></p>" }} />
+        <p className=mt-6 text-white/60 text-sm">Auto-generated by Cloud Deep Research Factory.</p>
+      </main>
+
+export default function Page() {}
+  return ("
+    <div className=min-h-screen bg-slate-950 text-white>
+      <Head>
+        <title>Guide — Capabilities Live Implementation</title>;
+export default function Page() {
+  return (
+
+"
+    <div className = \"min-h-screen bg-slate-950 text-white\ />
+      <Head>
+        <title />Guide — Capabilities Live Implementation</title>
+        <meta name=\"description\" content=\Step-by-step guidance derived from live research signals.\ />"
+        <meta property=\"og:title\ content=\Guide — Capabilities Live Implementation\" />"
+        <meta property=\og:description\ content=\"Step-by-step guidance derived from live research signals.\" />
+        <meta name=\twitter:card\" content=\"summary_large_image\ />
+      </Head>
+      <main className=\"container mx-auto px-6 py-12 prose prose-invert\" />
+        <h1 className=\text-3xl font-extrabold\" />Guide — Capabilities Live Implementation</h1>}"
+        <div className=\mt-4\ dangerouslySetInnerHTML={{ __html: \"<p />Source: <a class=\"text-cyan-300 underline\ href=\https://ziontechgroup.com/main/front\" target=\"_blank\ rel=\noopener\" />https://ziontechgroup.com/main/front</a></p><h2 />Overview</h2><p />Focus: capabilities;, live, site, seo, front, systems.</p><h2 />Steps</h2><ol /><li />Clarify objectives and measurable outcomes.</li><li />Map data, models, evaluation, and deployment workflow.</li><li />Automate checks for security, cost, and reliability.</li><li />Instrument telemetry, iterate with feedback loops.</li><li />Publish results and integrate learnings.</li></ol><h2 />Links</h2><p /><a class=\"text-cyan-300 underline\ href=\https: //ziontechgroup.com\" target=\"_blank\ rel=\noopener\" />https://ziontechgroup.com</a></p>\" ;}
 } />
-        <p className="mt-6 text-white/60 text-sm">Auto-generated by Cloud Deep Research Factory.</p>"
+        <p className=\mt-6 text-white/60 text-sm\" />Auto-generated by Cloud Deep Research Factory.</p>
+      </main>
+
+"
+    <div className=\min-h-screen bg-slate-950 text-white\ />
+      <Head>
+        <title />Guide — Capabilities Live Implementation</title>"
+        <meta name=\"description\ content=\Step-by-step guidance derived from live research signals.\" />"
+        <meta property=\og:title\ content=\"Guide — Capabilities Live Implementation\" />
+        <meta property=\og:description\" content=\"Step-by-step guidance derived from live research signals.\ />
+        <meta name=\"twitter:card\" content=\summary_large_image\ />
+      </Head>"
+      <main className=\"container mx-auto px-6 py-12 prose prose-invert\ />
+        <h1 className=\"text-3xl font-extrabold\" />Guide — Capabilities Live Implementation</h1>
+        <div className=\mt-4\" dangerouslySetInnerHTML={{ __html: \"<p />Source: <a class=\text-cyan-300 underline\ href=\"https://ziontechgroup.com/main/front\" target=\_blank\ rel=\"noopener\" />https://ziontechgroup.com/main/front</a></p><h2 />Overview</h2><p />Focus: capabilities;, live, site, seo, front, systems.</p><h2 />Steps</h2><ol /><li />Clarify objectives and measurable outcomes.</li><li />Map data, models, evaluation, and deployment workflow.</li><li />Automate checks for security, cost, and reliability.</li><li />Instrument telemetry, iterate with feedback loops.</li><li />Publish results and integrate learnings.</li></ol><h2 />Links</h2><p /><a class=\text-cyan-300 underline\ href=\"https: //ziontechgroup.com\" target=\_blank\ rel=\"noopener\" />https://ziontechgroup.com</a></p>\ ;}
+} />
+        <p className=\"mt-6 text-white/60 text-sm\" />Auto-generated by Cloud Deep Research Factory.</p>
+      </main>
+
+export default function Page() {
+  return (
+    <div className=\min-h-screen bg-slate-950 text-white\" />
+      <Head>
+        <title />Guide — Capabilities Live Implementation</title>
+        <meta name=&quot;description&quot; content=&quot;Step-by-step guidance derived from live research signals.&quot; />
+        <meta property=&quot;og:title&quot; content=&quot;Guide — Capabilities Live Implementation&quot; />
+        <meta property=&quot;og:description&quot; content=&quot;Step-by-step guidance derived from live research signals.&quot; />
+        <meta name=&quot;twitter:card&quot; content=&quot;summary_large_image&quot; />
+      </Head>"
+
+=======
+"
+    <div className = \"min-h-screen bg-slate-950 text-white\"    />
+      <Head><title>Guide — Capabilities Live Implementation</title>"
+        <meta name=\"description\" content=\"Step-by-step guidance derived from live research signals.\"    />"
+        <meta property=\"og:title\" content=\"Guide — Capabilities Live Implementation\"    />"
+        <meta property=\"og:description\" content=\"Step-by-step guidance derived from live research signals.\"    />"
+        <meta name=\"twitter:card\" content=\"summary_large_image\"    />
+      </Head>"
+      <main className=\"container mx-auto px-6 py-12 prose prose-invert\"    />"
+        <h1 className=\"text-3xl font-extrabold\"    />Guide — Capabilities Live Implementation</h1>}"
+        <div className=\"mt-4\" dangerouslySetInnerHTML={{ __html: \"<p    />Source: <a class=\"text-cyan-300 underline\" href=\"https://ziontechgroup.com/main/front\" target=\"_blank\" rel=\"noopener\"    />https://ziontechgroup.com/main/front</a></p><h2    />Overview</h2><p    />Focus: capabilities, live, site, seo, front, systems.</p><h2    />Steps</h2><ol    /><li    />Clarify objectives and measurable outcomes.</li><li    />Map data, models, evaluation, and deployment workflow.</li><li    />Automate checks for security, cost, and reliability.</li><li    />Instrument telemetry, iterate with feedback loops.</li><li    />Publish results and integrate learnings.</li></ol><h2    />Links</h2><p    /><a class=\"text-cyan-300 underline\" href=\"https: //ziontechgroup.com\" target=\"_blank\" rel=\"noopener\"    />https://ziontechgroup.com</a></p>\" }
+} />"
+        <p className=\"mt-6 text-white/60 text-sm\"    />Auto-generated by Cloud Deep Research Factory.</p>
+      </main>
+
+"
+    <div className=\"min-h-screen bg-slate-950 text-white\"    />
+      <Head><title>Guide — Capabilities Live Implementation</title>"
+        <meta name=\"description\" content=\"Step-by-step guidance derived from live research signals.\"    />"
+        <meta property=\"og:title\" content=\"Guide — Capabilities Live Implementation\"    />"
+        <meta property=\"og:description\" content=\"Step-by-step guidance derived from live research signals.\"    />"
+        <meta name=\"twitter:card\" content=\"summary_large_image\"    />
+      </Head>"
+      <main className=\"container mx-auto px-6 py-12 prose prose-invert\"    />"
+        <h1 className=\"text-3xl font-extrabold\"    />Guide — Capabilities Live Implementation</h1>"
+        <div className=\"mt-4\" dangerouslySetInnerHTML={{ __html: \"<p    />Source: <a class=\"text-cyan-300 underline\" href=\"https://ziontechgroup.com/main/front\" target=\"_blank\" rel=\"noopener\"    />https://ziontechgroup.com/main/front</a></p><h2    />Overview</h2><p    />Focus: capabilities, live, site, seo, front, systems.</p><h2    />Steps</h2><ol    /><li    />Clarify objectives and measurable outcomes.</li><li    />Map data, models, evaluation, and deployment workflow.</li><li    />Automate checks for security, cost, and reliability.</li><li    />Instrument telemetry, iterate with feedback loops.</li><li    />Publish results and integrate learnings.</li></ol><h2    />Links</h2><p    /><a class=\"text-cyan-300 underline\" href=\"https: //ziontechgroup.com\" target=\"_blank\" rel=\"noopener\"    />https://ziontechgroup.com</a></p>\" }
+} />"
+        <p className=\"mt-6 text-white/60 text-sm\"    />Auto-generated by Cloud Deep Research Factory.</p>
       </main>
 
 export default function Page() {
  ;
-}
-return (;
-    <div className="min-h-screen bg-slate-950 text-white">"
-      <Head>
-        <title>Guide — Capabilities Live Implementation</title>
-        <meta name=&quot;description&quot; content=&quot;Step-by-step guidance derived from live research signals.&quot; />
-        <meta property=&quot;"og":title&quot; content=&quot;Guide — Capabilities Live Implementation&quot; />
-        <meta property=&quot;"og":description&quot; content=&quot;Step-by-step guidance derived from live research signals.&quot; />
-        <meta name=&quot;"twitter":card&quot; content=&quot;summary_large_image&quot; />
-      </Head>
-      <main className="container mx-auto px-6 py-12 prose prose-invert">"
-        <h1 className="text-3xl font-extrabold">Guide — Capabilities Live Implementation</h1>"
-        <div className="mt-4" dangerouslySetInnerHTML={{ "__html": "<p>"Source": <a class=\"text-cyan-300 underline\" href=\""https"://ziontechgroup.com/main/front\" target=\"_blank\" rel=\"noopener\">"https"://ziontechgroup.com/main/front</a></p><h2>Overview</h2><p>"Focus": capabilities, live, site, seo, front, systems.</p><h2>Steps</h2><ol><li>Clarify objectives and measurable outcomes.</li><li>Map data, models, evaluation, and deployment workflow.</li><li>Automate checks for security, cost, and reliability.</li><li>Instrument telemetry, iterate with feedback loops.</li><li>Publish results and integrate learnings.</li></ol><h2>Links</h2><p><a class=\"text-cyan-300 underline\" href=\""https": //ziontechgroup.com\" target=\"_blank\" rel=\"noopener\">"https"://ziontechgroup.com</a></p>" ,"
-} />
-        <p className="mt-6 text-white/60 text-sm">Auto-generated by Cloud Deep Research Factory.</p>"
+  return ("
+    <div className=\"min-h-screen bg-slate-950 text-white\"    />
+      <Head><title>Guide — Capabilities Live Implementation</title>
+        <meta name=&quot;description&quot; content=&quot;Step-by-step guidance derived from live research signals.&quot;    />
+        <meta property=&quot;og:title&quot; content=&quot;Guide — Capabilities Live Implementation&quot;    />
+        <meta property=&quot;og:description&quot; content=&quot;Step-by-step guidance derived from live research signals.&quot;    />
+        <meta name=&quot;twitter:card&quot; content=&quot;summary_large_image&quot;    />
+      </Head>"
+      <main className=\"container mx-auto px-6 py-12 prose prose-invert\"    />"
+        <h1 className=\"text-3xl font-extrabold\"    />Guide — Capabilities Live Implementation</h1>}"
+        <div className=\"mt-4\" dangerouslySetInnerHTML={{ __html: \"<p    />Source: <a class=\"text-cyan-300 underline\" href=\"https://ziontechgroup.com/main/front\" target=\"_blank\" rel=\"noopener\"    />https://ziontechgroup.com/main/front</a></p><h2    />Overview</h2><p    />Focus: capabilities, live, site, seo, front, systems.</p><h2    />Steps</h2><ol    /><li    />Clarify objectives and measurable outcomes.</li><li    />Map data, models, evaluation, and deployment workflow.</li><li    />Automate checks for security, cost, and reliability.</li><li    />Instrument telemetry, iterate with feedback loops.</li><li    />Publish results and integrate learnings.</li></ol><h2    />Links</h2><p    /><a class=\"text-cyan-300 underline\" href=\"https: //ziontechgroup.com\" target=\"_blank\" rel=\"noopener\"    />https://ziontechgroup.com</a></p>\" }
+} />"
+        <p className=\"mt-6 text-white/60 text-sm\"    />Auto-generated by Cloud Deep Research Factory.</p>
+>>>>>>> origin/chore/fix-lint-and-merge
       </main>
     </div>
   );
 }
-
-
-
-
-=======
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 pr-12243
 =======
-
-
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-
-
-=======
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
-pr-12243
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
+>>>>>>> origin/chore/fix-lint-and-merge
     </div>;
   );
 }
 
-<<<<<<< HEAD
   )
-import Head from 'next/head';'
+import Head from 'next/head';
 
-export default function Page() {
-  }
+<<<<<<< HEAD
+  );
+  )'
+import Head from 'next/head';
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+export default function Page(req, res) {
   try {
-  }
-  return (;
-    <div className="min-h-screen bg-slate-950 text-white">;"
-      <Head>;
-        <title>Guide — Capabilities Live Implementation</title>;
-        <meta name="description" content="Step-by-step guidance derived from live research signals." />;"
-        <meta property=""og":title" content="Guide — Capabilities Live Implementation" />;"
-        <meta property=""og":description" content="Step-by-step guidance derived from live research signals." />;"
-        <meta name=""twitter":card" content="summary_large_image" />;"
-      </Head>;
-      <main className="container mx-auto px-6 py-12 prose prose-invert">;"
-        <h1 className="text-3xl font-extrabold">Guide — Capabilities Live Implementation</h1>;"
-        <div className="mt-4" dangerouslySetInnerHTML={{ "__html": "<p>"Source": <a class=\"text-cyan-300 underline\" href=\""https"://ziontechgroup.com/main/front\" target=\"_blank\" rel=\"noopener\">"https"://ziontechgroup.com/main/front</a></p><h2>Overview</h2><p>"Focus": capabilities, live, site, seo, front, systems.</p><h2>Steps</h2><ol><li>Clarify objectives and measurable outcomes.</li><li>Map data, models, evaluation, and deployment workflow.</li><li>Automate checks for security, cost, and reliability.</li><li>Instrument telemetry, iterate with feedback loops.</li><li>Publish results and integrate learnings.</li></ol><h2>Links</h2><p><a class=\"text-cyan-300 underline\" href=\""https": //ziontechgroup.com\" target=\"_blank\" rel=\"noopener\">"https"://ziontechgroup.com</a></p>" ,"
-} />;
-        <p className="mt-6 text-white/60 text-sm">Auto-generated by Cloud Deep Research Factory.</p>;"
+  return (;"
+    <div className=\"min-h-screen bg-slate-950 text-white\"    />;
+      <Head    />;
+        <title    />Guide — Capabilities Live Implementation</title>;"
+        <meta name=\"description\" content=\"Step-by-step guidance derived from live research signals.\"    />;"
+        <meta property=\"og:title\" content=\"Guide — Capabilities Live Implementation\"    />;"
+        <meta property=\"og:description\" content=\"Step-by-step guidance derived from live research signals.\"    />;"
+        <meta name=\"twitter:card\" content=\"summary_large_image\"    />;
+      </Head>;"
+      <main className=\"container mx-auto px-6 py-12 prose prose-invert\"    />;"
+        <h1 className=\"text-3xl font-extrabold\"    />Guide — Capabilities Live Implementation</h1>;}"
+        <div className=\"mt-4\" dangerouslySetInnerHTML={{ __html: \"<p    />Source: <a class=\"text-cyan-300 underline\" href=\"https://ziontechgroup.com/main/front\" target=\"_blank\" rel=\"noopener\"    />https://ziontechgroup.com/main/front</a></p><h2    />Overview</h2><p    />Focus: capabilities, live, site, seo, front, systems.</p><h2    />Steps</h2><ol    /><li    />Clarify objectives and measurable outcomes.</li><li    />Map data, models, evaluation, and deployment workflow.</li><li    />Automate checks for security, cost, and reliability.</li><li    />Instrument telemetry, iterate with feedback loops.</li><li    />Publish results and integrate learnings.</li></ol><h2    />Links</h2><p    /><a class=\"text-cyan-300 underline\" href=\"https: //ziontechgroup.com\" target=\"_blank\" rel=\"noopener\"    />https://ziontechgroup.com</a></p>\" }
+} />;"
+        <p className=\"mt-6 text-white/60 text-sm\"    />Auto-generated by Cloud Deep Research Factory.</p>;
+      </main>;"
+    <div className=\"min-h-screen bg-slate-950 text-white\"    />;
+      <Head    />;
+        <title    />Guide — Capabilities Live Implementation</title>;"
+        <meta name=\"description\" content=\"Step-by-step guidance derived from live research signals.\"    />;"
+        <meta property=\"og:title\" content=\"Guide — Capabilities Live Implementation\"    />;"
+        <meta property=\"og:description\" content=\"Step-by-step guidance derived from live research signals.\"    />;"
+        <meta name=\"twitter:card\" content=\"summary_large_image\"    />;
+      </Head>;"
+      <main className=\"container mx-auto px-6 py-12 prose prose-invert\"    />;"
+        <h1 className=\"text-3xl font-extrabold\"    />Guide — Capabilities Live Implementation</h1>;"
+        <div className=\"mt-4\" dangerouslySetInnerHTML={{ __html: \"<p    />Source: <a class=\"text-cyan-300 underline\" href=\"https://ziontechgroup.com/main/front\" target=\"_blank\" rel=\"noopener\"    />https://ziontechgroup.com/main/front</a></p><h2    />Overview</h2><p    />Focus: capabilities, live, site, seo, front, systems.</p><h2    />Steps</h2><ol    /><li    />Clarify objectives and measurable outcomes.</li><li    />Map data, models, evaluation, and deployment workflow.</li><li    />Automate checks for security, cost, and reliability.</li><li    />Instrument telemetry, iterate with feedback loops.</li><li    />Publish results and integrate learnings.</li></ol><h2    />Links</h2><p    /><a class=\"text-cyan-300 underline\" href=\"https: //ziontechgroup.com\" target=\"_blank\" rel=\"noopener\"    />https://ziontechgroup.com</a></p>\" }
+} />;"
+        <p className=\"mt-6 text-white/60 text-sm\"    />Auto-generated by Cloud Deep Research Factory.</p>;
       </main>;
+<<<<<<< HEAD
     <div className="min-h-screen bg-slate-950 text-white">;"
       <Head>;
         <title>Guide — Capabilities Live Implementation</title>;
@@ -454,46 +1114,65 @@ export default function Page() {return (<div className="min-h-screen bg-slate-95
       <Head>;
         <title>Guide — Capabilities Live Implementation</title>;
         <meta name=&quot;description&quot; content=&quot;Step-by-step guidance derived from live research signals.&quot; />;
-        <meta property=&quot;"og":title&quot; content=&quot;Guide — Capabilities Live Implementation&quot; />;
-        <meta property=&quot;"og":description&quot; content=&quot;Step-by-step guidance derived from live research signals.&quot; />;
-        <meta name=&quot;"twitter":card&quot; content=&quot;summary_large_image&quot; />;
-      </Head>;
-      <main className="container mx-auto px-6 py-12 prose prose-invert">;"
-        <h1 className="text-3xl font-extrabold">Guide — Capabilities Live Implementation</h1>;"
-        <div className="mt-4" dangerouslySetInnerHTML={{ "__html": "<p>"Source": <a class=\"text-cyan-300 underline\" href=\""https"://ziontechgroup.com/main/front\" target=\"_blank\" rel=\"noopener\">"https"://ziontechgroup.com/main/front</a></p><h2>Overview</h2><p>"Focus": capabilities, live, site, seo, front, systems.</p><h2>Steps</h2><ol><li>Clarify objectives and measurable outcomes.</li><li>Map data, models, evaluation, and deployment workflow.</li><li>Automate checks for security, cost, and reliability.</li><li>Instrument telemetry, iterate with feedback loops.</li><li>Publish results and integrate learnings.</li></ol><h2>Links</h2><p><a class=\"text-cyan-300 underline\" href=\""https": //ziontechgroup.com\" target=\"_blank\" rel=\"noopener\">"https"://ziontechgroup.com</a></p>" ,"
-} />;
-        <p className="mt-6 text-white/60 text-sm">Auto-generated by Cloud Deep Research Factory.</p>;"
+        <meta property=&quot;og:title&quot; content=&quot;Guide — Capabilities Live Implementation&quot; />;
+        <meta property=&quot;og:description&quot; content=&quot;Step-by-step guidance derived from live research signals.&quot; />;
+        <meta name=&quot;twitter:card&quot; content=&quot;summary_large_image&quot; />;
+      </Head>;"
+      <main className=\"container mx-auto px-6 py-12 prose prose-invert\" />;"
+        <h1 className=\"text-3xl font-extrabold\" />Guide — Capabilities Live Implementation</h1>;}"
+        <div className=\"mt-4\" dangerouslySetInnerHTML={{ __html: \"<p />Source: <a class=\"text-cyan-300 underline\" href=\"https://ziontechgroup.com/main/front\" target=\"_blank\" rel=\"noopener\" />https://ziontechgroup.com/main/front</a></p><h2 />Overview</h2><p />Focus: capabilities;, live, site, seo, front, systems.</p><h2 />Steps</h2><ol /><li />Clarify objectives and measurable outcomes.</li><li />Map data, models, evaluation, and deployment workflow.</li><li />Automate checks for security, cost, and reliability.</li><li />Instrument telemetry, iterate with feedback loops.</li><li />Publish results and integrate learnings.</li></ol><h2 />Links</h2><p /><a class=\"text-cyan-300 underline\" href=\"https: //ziontechgroup.com\" target=\"_blank\" rel=\"noopener\" />https://ziontechgroup.com</a></p>\" ;}
+} />;"
+        <p className=\"mt-6 text-white/60 text-sm\" />Auto-generated by Cloud Deep Research Factory.</p>;
+=======
+"
+export default function Page() {return (<div className=\"min-h-screen bg-slate-950 text-white\"    />;
+      <Head    />;
+        <title    />Guide — Capabilities Live Implementation</title>;
+        <meta name=&quot;description&quot; content=&quot;Step-by-step guidance derived from live research signals.&quot;    />;
+        <meta property=&quot;og:title&quot; content=&quot;Guide — Capabilities Live Implementation&quot;    />;
+        <meta property=&quot;og:description&quot; content=&quot;Step-by-step guidance derived from live research signals.&quot;    />;
+        <meta name=&quot;twitter:card&quot; content=&quot;summary_large_image&quot;    />;
+      </Head>;"
+      <main className=\"container mx-auto px-6 py-12 prose prose-invert\"    />;"
+        <h1 className=\"text-3xl font-extrabold\"    />Guide — Capabilities Live Implementation</h1>;}"
+        <div className=\"mt-4\" dangerouslySetInnerHTML={{ __html: \"<p    />Source: <a class=\"text-cyan-300 underline\" href=\"https://ziontechgroup.com/main/front\" target=\"_blank\" rel=\"noopener\"    />https://ziontechgroup.com/main/front</a></p><h2    />Overview</h2><p    />Focus: capabilities, live, site, seo, front, systems.</p><h2    />Steps</h2><ol    /><li    />Clarify objectives and measurable outcomes.</li><li    />Map data, models, evaluation, and deployment workflow.</li><li    />Automate checks for security, cost, and reliability.</li><li    />Instrument telemetry, iterate with feedback loops.</li><li    />Publish results and integrate learnings.</li></ol><h2    />Links</h2><p    /><a class=\"text-cyan-300 underline\" href=\"https: //ziontechgroup.com\" target=\"_blank\" rel=\"noopener\"    />https://ziontechgroup.com</a></p>\" }
+} />;"
+        <p className=\"mt-6 text-white/60 text-sm\"    />Auto-generated by Cloud Deep Research Factory.</p>;
+>>>>>>> origin/chore/fix-lint-and-merge
       </main>;
     </div>;
   )}
-    </div>;
-  )})export default function Page() {try {return (<div className="min-h-screen bg-slate-950 text-white">;"
-      <Head>;
-        <title>Guide — Capabilities Live Implementation</title>;
-        <meta name="description" content="Step-by-step guidance derived from live research signals." />;"
-        <meta property=""og":title" content="Guide — Capabilities Live Implementation" />;"
-        <meta property=""og":description" content="Step-by-step guidance derived from live research signals." />;"
-        <meta name=""twitter":card" content="summary_large_image" />;"
-      </Head>;
-      <main className="container mx-auto px-6 py-12 prose prose-invert">;"
-        <h1 className="text-3xl font-extrabold">Guide — Capabilities Live Implementation</h1>;"
-        <div className="mt-4" dangerouslySetInnerHTML={{ "__html": "<p>"Source": <a class=\"text-cyan-300 underline\" href=\""https"://ziontechgroup.com/main/front\" target=\"_blank\" rel=\"noopener\">"https"://ziontechgroup.com/main/front</a></p><h2>Overview</h2><p>"Focus": capabilities, live, site, seo, front, systems.</p><h2>Steps</h2><ol><li>Clarify objectives and measurable outcomes.</li><li>Map data, models, evaluation, and deployment workflow.</li><li>Automate checks for security, cost, and reliability.</li><li>Instrument telemetry, iterate with feedback loops.</li><li>Publish results and integrate learnings.</li></ol><h2>Links</h2><p><a class=\"text-cyan-300 underline\" href=\""https": //ziontechgroup.com\" target=\"_blank\" rel=\"noopener\">"https"://ziontechgroup.com</a></p>" ,"
-} />;
-        <p className="mt-6 text-white/60 text-sm">Auto-generated by Cloud Deep Research Factory.</p>;"
+    </div>;"
+  )})export default function Page() {try {return (<div className=\"min-h-screen bg-slate-950 text-white\"    />;
+      <Head    />;
+        <title    />Guide — Capabilities Live Implementation</title>;"
+        <meta name=\"description\" content=\"Step-by-step guidance derived from live research signals.\"    />;"
+        <meta property=\"og:title\" content=\"Guide — Capabilities Live Implementation\"    />;"
+        <meta property=\"og:description\" content=\"Step-by-step guidance derived from live research signals.\"    />;"
+        <meta name=\"twitter:card\" content=\"summary_large_image\"    />;
+      </Head>;"
+      <main className=\"container mx-auto px-6 py-12 prose prose-invert\"    />;"
+        <h1 className=\"text-3xl font-extrabold\"    />Guide — Capabilities Live Implementation</h1>;}"
+        <div className=\"mt-4\" dangerouslySetInnerHTML={{ __html: \"<p    />Source: <a class=\"text-cyan-300 underline\" href=\"https://ziontechgroup.com/main/front\" target=\"_blank\" rel=\"noopener\"    />https://ziontechgroup.com/main/front</a></p><h2    />Overview</h2><p    />Focus: capabilities, live, site, seo, front, systems.</p><h2    />Steps</h2><ol    /><li    />Clarify objectives and measurable outcomes.</li><li    />Map data, models, evaluation, and deployment workflow.</li><li    />Automate checks for security, cost, and reliability.</li><li    />Instrument telemetry, iterate with feedback loops.</li><li    />Publish results and integrate learnings.</li></ol><h2    />Links</h2><p    /><a class=\"text-cyan-300 underline\" href=\"https: //ziontechgroup.com\" target=\"_blank\" rel=\"noopener\"    />https://ziontechgroup.com</a></p>\" }
+} />;"
+        <p className=\"mt-6 text-white/60 text-sm\"    />Auto-generated by Cloud Deep Research Factory.</p>;
       </main>;
-    </div>;
-  )} catch (error) {console.error(""Error":", error)return res.status(500).json({ "error": "Internal server error" })},"
+    </div>;"
+  )} catch (error) {console.error(\"Error:\", error)return res.status(500).json({ error: \"Internal server error\" })}
 })
     </div>;
   );
-  } catch (error) {
-    }
-    console.error(""Error":", error);"
-return res.status(500).json({ "error": "Internal server error",;"
+  } catch (error) {"
+<<<<<<< HEAD
+    console.error("Error:", error);"
+    return res.status(500).json({ error: "Internal server error" });
+=======
+    console.error(\"Error:\", error);}"
+    return res.status(500).json({ error: \"Internal server error\"}
 });
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+>>>>>>> origin/chore/fix-lint-and-merge
   }
 }
-;
+
 
 "

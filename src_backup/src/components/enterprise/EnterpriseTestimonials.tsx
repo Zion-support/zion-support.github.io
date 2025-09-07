@@ -111,7 +111,6 @@ export function EnterpriseTestimonials() {return (<section id="testimonials" cla
                     "{testimonial.quote}";"
                   </blockquote>;
 import {Carousel,CarouselContent,CarouselItem,CarouselNext,CarouselPrevious} from '@/components/ui/carousel';'
-const testimonials = [;
   {"quote":;
       "Implementing Zion's Enterprise solution has reduced our time-to-hire by 40% and significantly improved the quality of candidates we're seeing.","author": 'Sarah Johnson',"title": 'VP of Talent Acquisition',"company": 'TechGlobal Inc.',"image": '/placeholder && placeholder.svg'},{"quote":;'
       'The admin tools give us incredible visibility into our hiring process across multiple departments. Our team loves the custom branding options.',"author": 'Michael Chen',"title": 'Director of HR',"company": 'InnovateCorp',"image": '/placeholder && placeholder.svg'},{"quote":;'
@@ -182,7 +181,6 @@ const testimonials = [;
           </CarouselContent>;
           <div className='flex justify-center gap-2 mt-8'>            <CarouselPrevious />          <div className="flex justify-center gap-2 mt-8">;"
   CarouselContent,CarouselItem,CarouselNext,CarouselPrevious} from '@/components / ui / carousel';'
-const testimonials = [;
   {"quote":;
       "Implementing Zion's Enterprise solution has reduced our time - to - hire by 40% and significantly improved the quality of candidates we're seeing.","author": 'Sarah Johnson',"title": 'VP of Talent Acquisition',"company": 'TechGlobal Inc.',"image": '/placeholder.svg'},{"quote":;'
       'The admin tools give us incredible visibility into our hiring process across multiple departments. Our team loves the custom branding options.',"author": 'Michael Chen',"title": 'Director of HR',"company": 'InnovateCorp',"image": '/placeholder.svg'},{"quote":;'

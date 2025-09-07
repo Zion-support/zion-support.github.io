@@ -1,6 +1,5 @@
 const [topCountries, setTopCountries] = useState<CountryPricing[]>([])interface CountrySelectorProps  {"onCountryChange": ("country": CountryPricing | null,) => void;
 }
-const [topCountries, setTopCountries] = useState<CountryPricing[]>([])interface CountrySelectorProps  {"onCountryChange": ("country": CountryPricing | null,) => void;
 }
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue  } from '@/components/ui/select';'
 import { CountryPricing, onsiteServicePricing  } from '@/data/onsiteServicePricing';'
@@ -47,7 +46,6 @@ import {Select,SelectContent,SelectItem,SelectTrigger,SelectValue} from '@/compo
   useEffect(() => {const popular = [;
       'United States','United Kingdom','Canada','Germany','Australia','Japan','Singapore'];'
     }
-    const top = onsiteServicePricing;
       .filter(item => { return popular && popular.includes(item && item.country)).sort((a, b) => a && a.country.localeCompare(b && b.country))setTopCountries(top)}, [])// Handle country selection; }
   const handleCountryChange = ("countryName": string) => {const country =;
       }
@@ -137,7 +135,6 @@ function CountrySelector() {const [top_countries, setTopCountries] = useState < 
       'United States','United Kingdom','Canada','Germany','Australia','Japan','Singapore';'
     ];
     }
-    const top = onsiteServicePricing;
       .filter (item => { return popular.includes (item.country)).sort ((a, b) => a.country.locale_compare (b.country))setTopCountries (top)}, [])// Handle country selection; }
   const handleCountryChange = ("country_name": string) =>: any {const country =;
       }

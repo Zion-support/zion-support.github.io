@@ -1,22 +1,22 @@
 
-import { useState, useEffect } from 'react';
-import { useAuth } from '@/hooks/useAuth';
-import { useResume } from '@/hooks/useResume';
-import { Tabs } from '@/components/ui/tabs';
-import { Card, CardContent } from '@/components/ui/card';
-import { Alert, AlertDescription, AlertTitle } from '@/components/ui/alert';
-import { AlertCircle, FilePlus, Loader2 } from 'lucide-react'
-import { Button } from '@/components/ui/button';
-import { Resume } from '@/types/resume';
+import { useState, useEffect } from 'react;
+import { useAuth } from @/hooks/useAuth';
+import { useResume } from '@/hooks/useResume;
+import { Tabs } from @/components/ui/tabs';
+import { Card, CardContent } from '@/components/ui/card;
+import { Alert, AlertDescription, AlertTitle } from @/components/ui/alert';
+import { AlertCircle, FilePlus, Loader2 } from 'lucide-react
+import { Button } from @/components/ui/button';
+import { Resume } from '@/types/resume;
 // Import components
-import { ResumeProgress } from './ResumeProgress';
-import { EmptyResumeState } from './EmptyResumeState';
-import { CreateResumeForm } from './CreateResumeForm';
-import { ResumeSteps } from './ResumeSteps';
-import { ResumeStepContent } from './ResumeStepContent';
-import { useResumeProgress } from './useResumeProgress';
-import { ResumeVersionSelector } from './ResumeVersionSelector';
-import { RESUME_STEPS } from './constants';
+import { ResumeProgress } from ./ResumeProgress';
+import { EmptyResumeState } from './EmptyResumeState;
+import { CreateResumeForm } from ./CreateResumeForm';
+import { ResumeSteps } from './ResumeSteps;
+import { ResumeStepContent } from ./ResumeStepContent';
+import { useResumeProgress } from './useResumeProgress;
+import { ResumeVersionSelector } from ./ResumeVersionSelector';
+import { RESUME_STEPS } from './constants;
 export function ResumeWizard() {
   const { user } = useAuth();
   const { 
@@ -27,7 +27,7 @@ export function ResumeWizard() {
     createResume
   } = useResume();
   
-  const [activeTab, setActiveTab] = useState('basic-info');
+  const [activeTab, setActiveTab] = useState(basic-info');
   const [showNewResumeForm, setShowNewResumeForm] = useState(false);
   
   // Use the extracted hook for progress calculation
@@ -45,7 +45,7 @@ export function ResumeWizard() {
       await fetchResume(resumeId);
       setShowNewResumeForm(false)
     }
-  };
+  }
   
   const nextStep = () => {
     const currentIndex = RESUME_STEPS.findIndex(step => step.id === activeTab);
@@ -55,34 +55,33 @@ export function ResumeWizard() {
         setActiveTab(nextStep.id)
       }
     }
-  };
+  }
   
   const prevStep = () => {
-    const currentIndex = RESUME_STEPS.findIndex(step => step.id === activeTab);
     if (currentIndex > 0) {
       const prevStep = RESUME_STEPS[currentIndex - 1];
       if (prevStep) {
         setActiveTab(prevStep.id)
       }
     }
-  };
+  }
 
   const handleResumeChange = (resumeId: string) => {
     fetchResume(resumeId)
-  };
+  }
   
   if (isLoading) {
     return (
-      <div className="flex justify-center items-center h-64">
-        <Loader2 className="h-8 w-8 animate-spin text-primary" />
+      <div className="flex justify-center items-center h-64>
+        <Loader2 className=h-8 w-8 animate-spin text-primary" />
       </div>
     )
   }
   
   if (error) {
     return (
-      <Alert variant="destructive" className="mb-6">
-        <AlertCircle className="h-4 w-4" />
+      <Alert variant="destructive className=mb-6">
+        <AlertCircle className="h-4 w-4 />
         <AlertTitle>Error</AlertTitle>
         <AlertDescription>{error}</AlertDescription>
       </Alert>
@@ -104,27 +103,27 @@ export function ResumeWizard() {
   }
   
   return (
-    <div className="space-y-6">
-      <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
-        <h1 className="text-2xl font-bold">Resume Builder</h1>
-        <div className="flex gap-4 flex-wrap items-center">
+    <div className=space-y-6">
+      <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4>
+        <h1 className=text-2xl font-bold">Resume Builder</h1>
+        <div className="flex gap-4 flex-wrap items-center>
           {resume && <ResumeVersionSelector currentResume={resume} onResumeChange={handleResumeChange} />}
           <Button 
             onClick={() => setShowNewResumeForm(true)}
-            variant="outline"
-            size="sm"
-            className="gap-2"
+            variant=outline"
+            size="sm
+            className=gap-2"
           >
-            <FilePlus className="h-4 w-4" /> 
+            <FilePlus className="h-4 w-4 /> 
             Create New
           </Button>
         </div>
       </div>
       
       <Card>
-        <CardContent className="pt-6">
-          <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 mb-6">
-            <h2 className="text-xl font-semibold">{resume?.basic_info?.title || 'My Resume'}</h2>
+        <CardContent className=pt-6">
+          <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 mb-6>
+            <h2 className=text-xl font-semibold">{resume?.basic_info?.title || 'My Resume'}</h2>
             <ResumeProgress resume={resume} progress={progress} />
           </div>
           
@@ -149,42 +148,3 @@ export function ResumeWizard() {
     </div>
   )
 }
-<<<<<<< HEAD:src/components/resume-builder/wizard/ResumeWizard.tsx
-=======
-}
-<AlertTitle > Error</AlertTitle> <AlertDescription> {
-  error;
-}</AlertDescription> </Alert>);
-}// Check condition
-if ( {) {
-  $2
-}
-  () => setShowNewResumeForm (false);
-}is_loading= {
-  is_loading;
-}/>);
-}> <FilePlus className="h - 4 w - 4" /> Create New </Button> </div> </div> <Card> </div> <Tabs value= {
-  active_tab;
-}onValueChange= {
-  setActiveTab;
-}> <ResumeSteps steps= {
-  RESUME STEPS;
-}active_tab= {
-  active_tab;
-}on_change= {
-  setActiveTab;
-}/> {
-  resume && (<ResumeStepContent active_tab= {
-  active_tab;
-
-}resume= {
-  resume as Resume;
-}onNextStep= {
-  next_step;
-}onPrevStep= {
-
-  prev_step;
-}/>);
-}</Tabs> </CardContent> </Card> </div>);
-}'"}
->>>>>>> origin/main:src_disabled_1757239864/components/resume-builder/wizard/ResumeWizard.tsx

@@ -1,10 +1,8 @@
 <<<<<<< HEAD
-<<<<<<< HEAD:pages_minimal/_app.tsx
 import React from 'react';
 import type { AppProps } from 'next/app';
 import '../styles/globals.css';
 
-=======
 ;
 export default MyApp,:pages_minimal/_app && _app.tsx;
 export default function App(): any ({ Component, pageProps }: AppProps) {return <Component {...pageProps} />;
@@ -21,10 +19,14 @@ import type { AppProps } from 'next / app',import '../styles / globals.css',/**;
 function MyApp() {return <Component {...page_props} />;
 }export default MyApp,export default MyApp,
 
+=======
+export default MyApp,;
+>>>>>>> origin/chore/fix-lint-and-merge
 
 export default MyApp,
 ;
 ;
+<<<<<<< HEAD
 :pages_minimal/_app && _app.tsx;
 export default function App(): any ({ Component, pageProps }: AppProps) {;
   }
@@ -47,16 +49,9 @@ function MyApp() {
   }
   return <Component {...page_props} />;
 :pages_minimal/_app.tsx
->>>>>>> origin/main
 export default function App({ Component, pageProps }: AppProps) {
   return <Component {...pageProps} />;
 }
-
-export default MyApp;
-
-import type { AppProps } from 'next/app';'
-import '../styles/globals.css''
-function MyApp() {
 }
 return <Component {...pageProps} />;
 }
@@ -68,4 +63,7 @@ export default MyApp,
 export default MyApp,
 
 export default MyApp;
->>>>>>> pr-11992:components/_app.tsx
+=======
+
+export default MyApp,
+>>>>>>> origin/chore/fix-lint-and-merge

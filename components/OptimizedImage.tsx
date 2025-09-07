@@ -9,8 +9,6 @@ interface OptimizedImageProps {
   heigh: number,
   className?: string,
   priority?: boolean,
-=======
-<<<<<<< HEAD
 import React from 'react'
 import Image from 'next/image'
 interface OptimizedImageProps {
@@ -20,7 +18,6 @@ interface OptimizedImageProps {
   height: number
   className?: string
   priority?: boolean
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
   quality?: number
 }
 
@@ -29,24 +26,23 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
   alt,
   width = 800,
   height = 600,
-  className = "",
+  className = ",
   priority = false,
   quality = 75,
 }) => {
-<<<<<<< HEAD
 =======
-=======
-import React from "react"
-import Image from "next/image"
+import React from "react";
+import Image from "next/image";
 interface OptimizedImageProps {
 
-  src: string
-  alt: string
-  width?: number
-  height?: number
-  className?: string
-  priority?: boolean
-  quality?: number
+  src: string;
+  alt: string;
+  width?: number;
+  height?: number;
+  className?: string;
+  priority?: boolean;
+  quality?: number;
+
 'use client'
 import React, { useState, useRef, useEffect } from 'react'
 import Image from 'next/image'
@@ -70,15 +66,14 @@ interface OptimizedImageProps {
   onLoad?: () => void
   onError?: () => void
 origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
-
+}
 const OptimizedImage: React.FC<OptimizedImageProps> = ({
 
 }) => {
 
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
+>>>>>>> origin/chore/fix-lint-and-merge
   return (
-    <Image
+    <Image;
       src={src}
       alt={alt}
       width={width}
@@ -86,30 +81,34 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
       className={className}
       priority={priority}
 <<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
       quality={quality}
-      placeholder="blur"
-      blurDataURL="data:image/jpeg,base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAABAAEDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAUEAEAAAAAAAAAAAAAAAAAAAAA/8QAFQEBAQAAAAAAAAAAAAAAAAAAAAX/xAAUEQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIRAxEAPwCdABmX/9k="
-    />
-<<<<<<< HEAD
-  );
-};
-export default OptimizedImage;
-
-
-=======
-  )
-}
-export default OptimizedImage
+      placeholder=blur"
 =======
       quality={quality}"
       placeholder="blur""
+>>>>>>> origin/chore/fix-lint-and-merge
       blurDataURL="data:image/jpeg,base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAABAAEDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAUEAEAAAAAAAAAAAAAAAAAAAAA/8QAFQEBAQAAAAAAAAAAAAAAAAAAAAX/xAAUEQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIRAxEAPwCdABmX/9k="
     />
-  )
-}
+  );
+};
 export default OptimizedImage;
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
+<<<<<<< HEAD
+
+
+return (
+    <Image,
+  src={src}
+      alt={alt}
+      width={width}
+      height={height}
+=======
+  src, alt,
+  width, height,
+  className = '', priority = false,
+  quality = 75, placeholder = 'empty',
+  blurDataURL, sizes,
+  fill = false, style,
+  onClick, onLoad,
+  onError
+}) => {
+>>>>>>> origin/chore/fix-lint-and-merge

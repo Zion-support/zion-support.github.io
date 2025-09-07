@@ -15,7 +15,6 @@ export default async function handler(
   }
   const { prompt, region, service } = req.body |{}
   if (!prompt) return res.status(400).json({ error: "Missing prompt" });
-import OpenAI from 'openai';
 const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY || '' });
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'POST') {
@@ -25,7 +24,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   const { prompt, region, service } = req.body || {};
   if (!prompt) return res.status(400).json({ error: 'Prompt required' });
   }
-  const { prompt, region, service } = req.body || {};
   if (!prompt) return res.status(400).json({ error: "Missing prompt" });
   try {
     const system = `You generate conversion-focused, SEO-optimized landing pages in HTML. Include:
@@ -63,7 +61,6 @@ Tone: professional, modern, trustworthy`;
           content: `Topic: ${prompt} in ${region |"global"} for ${service |"general"}`
         }
       ]
-    const response = await openai.chat.completions.create({
       model: "gpt-4o-mini",
       messages: [
         { role: 'system', content: system },
@@ -72,9 +69,7 @@ Tone: professional, modern, trustworthy`;
       temperature: 0.7,
     });
     const content = response.choices?.[0]?.message?.content || '';
-    const title = `Zion Marketplace — ${prompt}`;
     // FAQ generation
-    const faqResp = await openai.chat.completions.create({
       model: "gpt-4o-mini",
       messages: [
         { role: 'system', content: 'Generate 4 concise Q&A pairs as JSON array [{"q":"","a":""}], focus on buyer concerns for the topic.' },
@@ -87,7 +82,6 @@ Tone: professional, modern, trustworthy`;
       faq = JSON.parse(faqResp.choices?.[0]?.message?.content |"[]");
     } catch {
       faq = [];
-    let faq: Array<{ q: string; a: string }> = [];
     try {
       faq = JSON.parse(faqResp.choices?.[0]?.message?.content || "[]");
     } catch {

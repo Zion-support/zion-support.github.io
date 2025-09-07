@@ -247,7 +247,6 @@ return () => {
 ;
     const handleRouteChange = (..."args": unknow n[]): (unknown) => {;
       }
-      const newPage = window.location.pathname;      if(newPage !== currentPage) {;
         // Track page view';'
         }
         trackEvent('page_view', {;'

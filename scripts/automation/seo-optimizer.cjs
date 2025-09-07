@@ -1,9 +1,19 @@
 <<<<<<< HEAD
-=======
 
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+>>>>>>> origin/chore/fix-lint-and-merge
 #!/usr/bin/env node;
+=======
 #!/usr/bin/env node
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 /**
  * SEO Optimizer Automation;
  * Optimizes the application for search engines;
@@ -11,133 +21,203 @@
 <<<<<<< HEAD
 
 =======
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
+<<<<<<< HEAD
+>>>>>>> origin/chore/fix-lint-and-merge
+const fs = require('fs');
+const path = require(path');
+const { execSync } = require('child_process');
+=======
+
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
+<<<<<<< HEAD
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 class SEOOptimizer {}
     constructor() {}
         this.projectRoot = process.cwd();
 
         if () {}
-            fs.mkdirSync(logsDir, { "recursive": true })};"
-    };
+            fs.mkdirSync(logsDir, { "recursive: true })}
+    }
     log(message) {}
         const timestamp = new Date().toISOString() {}
     ) {}"
         const timestamp = new Date().toISOString(})
 });
-const logMessage = `[${timestamp}] ${message}\;n;`;`;
+        const logMessage = `[${timestamp}] ${message}\;n;`;`
         fs.appendFileSync(this.logFile, logMessage);
 <<<<<<< HEAD
-=======
 
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
+        console.log(message)}
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         console.log(message)};
+>>>>>>> origin/chore/fix-lint-and-merge
     generateSitemap() {}
-        this.log('Generating sitemap...');
-        const sitemapPath = path.join(this.projectRoot, 'public', 'sitemap.xml';);
+        this.log(Generating sitemap...');
+        const sitemapPath = path.join(this.projectRoot, 'public, sitemap.xml';);
         const pages = this.findPages(;);
+<<<<<<< HEAD
+        console.log(message)}
+
+
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-18b6
+=======
+=======
         console.log(message)};
 <<<<<<< HEAD
-    generateSitemap() {}"
-
-=======
     generateSitemap() {}
         this.log('Generating sitemap...');
         
         const sitemapPath = path.join(this.projectRoot, 'public', 'sitemap.xml';);
         const pages = this.findPages(;);
         
-const sitemap = `<?xml version="1.0" encoding="UTF-8"?>;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+        const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns=""http": //www.sitemaps.org/schemas/sitemap/0.9">
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
+=======
+    generateSitemap() {}"
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+>>>>>>> origin/chore/fix-lint-and-merge
 ${pages.map(page => `  <url>`})
 </url>
     <loc>https://ziontechgroup.com${page}</loc>"
-    <lastmod>${new Date().toISOString().split('T')[0]}</lastmod>
+    <lastmod>${new Date().toISOString().split('T)[0]}</lastmod>
     <changefreq>weekly</changefreq>
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
     <priority>0.8</priority>
   </url>").join('\n')};
 </urlset;>;";
+<<<<<<< HEAD
         fs.writeFileSync(sitemapPath, sitemap);
         this.log(`Sitemap generated with ${pages.length} pages`);
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
+=======
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+>>>>>>> origin/chore/fix-lint-and-merge
 
-  </url>").join('\n')};
-</urlset;>;";"
+
+  </url>).join(\n')}
+</urlset;>;;"
         fs.writeFileSync(sitemapPath, sitemap);`;
         this.log(`Sitemap generated with ${pages.length} pages`);
-        
 <<<<<<< HEAD
+        
+
+        // Find pages from pages directory;
+        if () {}
+            this.findPagesInDirectory(pagesDir, ', pages)}
 =======
+<<<<<<< HEAD
+        
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
         return { "status": 'success', "pages": pages.length }};
     findPages() {}
         const pagesDir = path.join(this.projectRoot, 'pages';);
         const appDir = path.join(this.projectRoot, 'app';);
         const pages = ['/'];
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
+<<<<<<< HEAD
+=======
+        
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
         // Find pages from pages directory;
         if () {}
             this.findPagesInDirectory(pagesDir, '', pages)};
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
         "
-        return { "status": success, "pages": pages.length }};"
-    findPages() {}"
+        return { status: success, "pages": pages.length }}
+    findPages() {}
 
-            this.findPagesInDirectory(pagesDir, , pages)};
+<<<<<<< HEAD
+            this.findPagesInDirectory(pagesDir, , pages)}
         // Find pages from app directory (App Router);
         if (fs.existsSync(appDir)) {}
-            this.findPagesInAppDirectory(appDir, '', pages)};
-return [...new Set(pages)) {}];
+
+=======
+            this.findPagesInDirectory(pagesDir, , pages)};
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+        // Find pages from app directory (App Router);
+        if (fs.existsSync(appDir)) {}
+            this.findPagesInAppDirectory(appDir, , pages)};
+        return [...new Set(pages)) {}]
+>>>>>>> origin/chore/fix-lint-and-merge
     ) {}
 
         return [...new Set(pages)}]; // Remove duplicates;
     findPagesInDirectory(dir, basePath, pages) {}
         const items = fs.readdirSync(dir;);
 <<<<<<< HEAD
+
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+        for (const item of items) {}
+            const fullPath = path.join(dir, item;);
+            const stat = fs.statSync(fullPath;);
+=======
         
         for (const item of items) {}
             const fullPath = path.join(dir, item;);
             const stat = fs.statSync(fullPath;);
             
-=======
-        for (const item of items) {}
-            const fullPath = path.join(dir, item;);
-            const stat = fs.statSync(fullPath;);
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+>>>>>>> origin/chore/fix-lint-and-merge
             if () {}
-                this.findPagesInDirectory(fullPath, path.join(basePath, item), pages)} else if (item.endsWith('.js') || item.endsWith('.jsx') || item.endsWith('.ts') || item.endsWith('.tsx')) {}
+                this.findPagesInDirectory(fullPath, path.join(basePath, item), pages)} else if (item.endsWith(.js') || item.endsWith('.jsx) || item.endsWith(.ts') || item.endsWith('.tsx)) {}
                 let pagePath = path.join(basePath, item) {}
     ) {}
-                this.findPagesInDirectory(fullPath, path.join(basePath, item), pages)} else if (item.endsWith('.js') || item.endsWith('.jsx') || item.endsWith('.ts') || item.endsWith('.tsx')) {}
+                this.findPagesInDirectory(fullPath, path.join(basePath, item), pages)} else if (item.endsWith(.js') || item.endsWith('.jsx) || item.endsWith(.ts') || item.endsWith('.tsx)) {}
                 let pagePath = path.join(basePath, item}
 });
+<<<<<<< HEAD
+                pagePath = pagePath.replace(/\.(js|jsx|ts|tsx)$/, ');
+                pagePath = pagePath.replace(/\\/g, '/);
+
+                if ( {})
+                    pagePath = basePath || /'}
+                if (pagePath !== '/index) {}
+=======
                 pagePath = pagePath.replace(/\.(js|jsx|ts|tsx)$/, '');
                 pagePath = pagePath.replace(/\\/g, '/');
 <<<<<<< HEAD
-                
 =======
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
+                
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
                 if ( {})
                     pagePath = basePath || '/'};
                 if (pagePath !== '/index') {}
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
         for (const item of items) {}
             const fullPath = path.join(dir, item;);
             const stat = fs.statSync(fullPath;);
 
+<<<<<<< HEAD
+                    pages.push(pagePath)}
+    findPagesInAppDirectory(dir, basePath, pages) {}
+        const items = fs.readdirSync(dir) {}
+     {}
+
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                     pages.push(pagePath)};
     findPagesInAppDirectory(dir, basePath, pages) {}
         const items = fs.readdirSync(dir) {}
      {}
 <<<<<<< HEAD
-        
-        for (const item of items) {}
-            const fullPath = path.join(dir, item;);
-            const stat = fs.statSync(fullPath;);
-            
-=======
                     pagePath = basePath || '/'};
                 if (pagePath !== '/index') {}
                     pages.push(pagePath)};
@@ -147,35 +227,65 @@ return [...new Set(pages)) {}];
     findPagesInAppDirectory(dir, basePath, pages) {}
         const items = fs.readdirSync(dir}
 });
+<<<<<<< HEAD
         for (const item of items) {}
             const fullPath = path.join(dir, item;);
             const stat = fs.statSync(fullPath;);
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
+=======
+        
+        for (const item of items) {}
+            const fullPath = path.join(dir, item;);
+            const stat = fs.statSync(fullPath;);
+            
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+>>>>>>> origin/chore/fix-lint-and-merge
             if () {}
-                this.findPagesInAppDirectory(fullPath, path.join(basePath, item), pages)} else if (item === 'page.js' || item === 'page.jsx' || item === 'page.ts' || item === 'page.tsx') {}
-                let pagePath = basePath || ') {}
+                this.findPagesInAppDirectory(fullPath, path.join(basePath, item), pages)} else if (item === page.js' || item === 'page.jsx || item === page.ts' || item === 'page.tsx) {}
+                let pagePath = basePath || ) {}
     ) {}
-                this.findPagesInAppDirectory(fullPath, path.join(basePath, item), pages)} else if (item === 'page.js' || item === 'page.jsx' || item === 'page.ts' || item === 'page.tsx') {}
+                this.findPagesInAppDirectory(fullPath, path.join(basePath, item), pages)} else if (item === 'page.js' || item === page.jsx || item === 'page.ts' || item === page.tsx) {}
                 let pagePath = basePath || '}/;';
-                pagePath = pagePath.replace(/\\/g, '/');
-                pages.push(pagePath)};
-        };
-    };
+                pagePath = pagePath.replace(/\\/g, /);
+                pages.push(pagePath)}
+        }
+    }
     generateRobotsTxt() {}
         this.log('Generating robots.txt...');
 <<<<<<< HEAD
+
+
+# Crawl delay;"
+Crawl-delay: 1;";
+        fs.writeFileSync(robotsPath, robotsContent);
+        this.log(Robots.txt generated);
+
+=======
+<<<<<<< HEAD
+        const robotsPath = path.join(this.projectRoot, 'public', 'robots.txt';);
+        const robotsContent = "User-"agent": *
+Allow: /
+=======
         
         const robotsPath = path.join(this.projectRoot, 'public', 'robots.txt';);
-const robotsContent = "User-"agent": *;
+        const robotsContent = "User-"agent": *
+=======
+
+        const items = fs.readdirSync(dir})
+
+        const robotsContent = "User-"agent": *"
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 Allow: /
 
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 # Sitemap;
 Sitemap: https://ziontechgroup.com/sitemap.xml;
 # Disallow admin and private areas;
+<<<<<<< HEAD
 Disallow: /admin/
 Disallow: /api/
 Disallow: /_next/
 Disallow: /private/
+<<<<<<< HEAD
 # Crawl delay;
 Crawl-delay: 1;";
         fs.writeFileSync(robotsPath, robotsContent);
@@ -183,19 +293,25 @@ Crawl-delay: 1;";
         return { "status": 'success' }};
     createSEOMetaComponent() {}
         this.log('Creating SEO meta component...');
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
+=======
+=======
+Disallow: /admin/,
+  Disallow: /api/
+Disallow: /_next/,
+  Disallow: /private/
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 # Crawl delay;"
 Crawl-delay: 1;";"
         fs.writeFileSync(robotsPath, robotsContent);"
         this.log('Robots.txt generated');
 <<<<<<< HEAD
-=======
         
         return { "status": 'success' }};
     createSEOMetaComponent() {}
         this.log('Creating SEO meta component...');
         
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
         const componentsDir = path.join(this.projectRoot, 'components';);
         if () {}
             fs.mkdirSync(componentsDir, { "recursive": true })};
@@ -203,8 +319,13 @@ Crawl-delay: 1;";"
     ) {}
             fs.mkdirSync(componentsDir, { "recursive": true })};
         const seoMeta = "import Head from 'next/hea}d;';
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+>>>>>>> origin/chore/fix-lint-and-merge
 
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 interface SEOProps {}
   title?: string;
   description?: string;
@@ -216,11 +337,15 @@ interface SEOProps {}
   modifiedTime?: string;
   author?: string;
   section?: string;
-  tags?: string[]};
+  tags?: string[]}
 export default function SEO({})
 <<<<<<< HEAD
-  
+
+    <Head>
+
+      <title>{fullTitle}</title>
 =======
+<<<<<<< HEAD
   title = 'Zion Tech Group - Advanced Technology Solutions',
   description = 'Leading provider of cutting-edge technology solutions, AI automation, and digital transformation services.',
   keywords = 'technology, AI, automation, digital transformation, software development, consulting',
@@ -233,16 +358,20 @@ export default function SEO({})
   section,
   tags = [];
 }: SEOProps) {}
-const fullTitle = title.includes('Zion Tech Group') ? title : \`\${title} | Zion Tech Group;\;`;`;
+  const fullTitle = title.includes('Zion Tech Group') ? title : \`\${title} | Zion Tech Group;\;`;`
   const fullDescription = description.length > 160 ? description.substring(0, 157) + '...' : descripti;o;n;
+<<<<<<< HEAD
+=======
   
-return (;);
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+  return (;)
     <Head>
 
       <title>{fullTitle}</title>
 <<<<<<< HEAD
-      
-=======
       <meta name="description" content={fullDescription} />
       <meta name="keywords" content={keywords} />
       <meta name="author" content={author} />
@@ -250,7 +379,10 @@ return (;);
       <meta name="robots" content="index, follow" />
       <meta name="language" content="en" />
       <meta name="revisit-after" content="7 days" />
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
+<<<<<<< HEAD
+=======
+      
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
       {/* Open Graph Meta Tags */};
       <meta property=""og": type" content={type} />
       <meta property=""og": title" content={fullTitle} />
@@ -260,18 +392,18 @@ return (;);
       <meta property=""og": site_name" content="Zion Tech Group" />
       <meta property="og:locale" content="en_US" />
 <<<<<<< HEAD
-      
 =======
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
+      
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
       {/* Twitter Card Meta Tags */};
       <meta name=""twitter": card" content="summary_large_image" />
       <meta name="twitter:title" content={fullTitle} />
       <meta name=""twitter": description" content={fullDescription} />
       <meta name=""twitter": image" content={image} />
 <<<<<<< HEAD
-      
 =======
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
+      
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
       {/* Additional Meta Tags */};
       {publishedTime && <meta property=""article": published_time" content={publishedTime} />};
       {modifiedTime && <meta property=""article": modified_time" content={modifiedTime} />};
@@ -283,9 +415,9 @@ return (;);
       {/* Canonical URL */};
       <link rel="canonical" href={url} />
 <<<<<<< HEAD
-      
 =======
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
+      
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
       {/* Favicon */};
       <link rel="icon" href="/favicon.ico" />
       <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
@@ -293,13 +425,14 @@ return (;);
       <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
       <link rel="manifest" href="/site.webmanifest" />
 <<<<<<< HEAD
-      
 =======
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
+      
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
       {/* Structured Data */};
       <script;
         type="application/ld+json"
         dangerouslySetInnerHTML={{}
+=======
       <meta name="description" content={fullDescription} />"
 </meta>"
       <meta name="keywords" content={keywords} />"
@@ -308,35 +441,102 @@ return (;);
       <meta name="robots" content="index, follow" />"
       <meta name="language" content="en" />"
       <meta name="revisit-after" content="7 days" />"
+>>>>>>> origin/chore/fix-lint-and-merge
 
-      <link rel="canonical" href={url} />"
+      {/* Open Graph Meta Tags */}
+      <meta property=""og: type content={type} />
+      <meta property=""og: title content={fullTitle} />
+      <meta property=""og: description content={fullDescription} />
+      <meta property=""og: image content={image} />
+      <meta property=""og: url content={url} />
+      <meta property=""og: site_name content="Zion Tech Group" />
+      <meta property=og:locale content="en_US" />
+
+      {/* Twitter Card Meta Tags */}
+      <meta name=twitter": card" content=summary_large_image />
+      <meta name="twitter:title" content={fullTitle} />
+      <meta name=twitter": description" content={fullDescription} />
+      <meta name=twitter": image" content={image} />
+
+      {/* Additional Meta Tags */}
+      {publishedTime && <meta property=article": published_time" content={publishedTime} />}
+      {modifiedTime && <meta property=article": modified_time" content={modifiedTime} />}
+      {author && <meta property=article": author" content={author} />}
+      {section && <meta property=article": section" content={section} />}
+      {tags.map(tag => (})
+        <meta key={tag} property=article": tag" content={tag} />
+      ))}
+      {/* Canonical URL */}
+      <link rel=canonical href={url} />
+
+      {/* Favicon */}
+      <link rel="icon" href=/favicon.ico />
+      <link rel="apple-touch-icon" sizes=180x180 href="/apple-touch-icon.png" />
+      <link rel=icon type="image/png" sizes=32x32 href="/favicon-32x32.png" />
+      <link rel=icon type="image/png" sizes=16x16 href="/favicon-16x16.png" />
+      <link rel=manifest href="/site.webmanifest" />
+
+      {/* Structured Data */}
+      <script;
+        type=application/ld+json
+        dangerouslySetInnerHTML={{}
+      <meta name="description" content={fullDescription} />
+</meta>
+      <meta name="keywords" content={keywords} />
+      <meta name=author" content={author} />"
+      <meta name=viewport content="width=device-width, initial-scale=1.0" />
+      <meta name=robots" content="index, follow />
+      <meta name="language" content=en />"
+      <meta name="revisit-after content=7 days" />"
+
+      <link rel=canonical href={url} />"
 </link>"
-      <link rel="icon" href="/favicon.ico" />"
-      <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />"
-      <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />"
-      <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />"
-      <link rel="manifest" href="/site.webmanifest" />"
+      <link rel=icon href="/favicon.ico" />
+      <link rel=apple-touch-icon" sizes="180x180 href=/apple-touch-icon.png" />"
+      <link rel=icon type="image/png" sizes=32x32 href="/favicon-32x32.png" />
+      <link rel=icon" type="image/png sizes=16x16" href="/favicon-16x16.png />
+      <link rel="manifest" href=/site.webmanifest />"
 </link>
       <script;"
+<<<<<<< HEAD
+        type=application/ld+json
+        dangerouslySetInnerHTML={{}
+=======
         type="application/ld+json
         dangerouslySetInnerHTML={{}"
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+>>>>>>> origin/chore/fix-lint-and-merge
           "__html": JSON.stringify({})
-            "@context": "https://schema.org",
-            "@type": "Organization",
-            "name": "Zion Tech Group",
-            "url": https": //ziontechgroup.com",
-            "logo": https": //ziontechgroup.com/logo.png",
-            "description": "Leading provider of cutting-edge technology solutions",
-            "address": {}
-              "@type": "PostalAddress",
-              "addressCountry": "US
-            },"
+            @context: "https://schema.org",
+            @type: "Organization",
+            name: "Zion Tech Group",
+            url: https": //ziontechgroup.com",
+            logo: https": //ziontechgroup.com/logo.png",
+            description: "Leading provider of cutting-edge technology solutions",
+            address: {}
+              "@type": PostalAddress,
+              "addressCountry": US
+            },
 
             ];
           }
-        }};
+        }}
       />
 <<<<<<< HEAD
+
+        const manifestPath = path.join(this.projectRoot, 'public', site.webmanifest;);
+=======
+<<<<<<< HEAD
+    </Head>
+  )};
+";
+<<<<<<< HEAD
+        fs.writeFileSync(path.join(componentsDir, 'SEO.tsx'), seoMeta);
+        this.log('SEO meta component created');
+        return { "status": 'success' }};
+    generateManifest() {}
+        this.log('Generating web app manifest...');
+=======
 
         fs.writeFileSync(path.join(componentsDir, 'SEO.tsx'), seoMeta);
         this.log('SEO meta component created');
@@ -345,41 +545,46 @@ return (;);
     generateManifest() {}
         this.log('Generating web app manifest...');
         
-=======
-    </Head>
-  )};
-";
-        fs.writeFileSync(path.join(componentsDir, 'SEO.tsx'), seoMeta);
-        this.log('SEO meta component created');
-        return { "status": 'success' }};
-    generateManifest() {}
-        this.log('Generating web app manifest...');
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
         const manifestPath = path.join(this.projectRoot, 'public', 'site.webmanifest';);
+>>>>>>> origin/chore/fix-lint-and-merge
         const manifest = {}
-            "name": "Zion Tech Group",
-            "short_name": "Zion Tech",
-            "description": "Advanced Technology Solutions",
-            "start_url": "/",
-            "display": "standalone",
-            "background_color": "#ffffff",
-            "theme_color": "#3b82f6",
+            "name": Zion Tech Group,
+            "short_name": Zion Tech,
+            "description": Advanced Technology Solutions,
+            "start_url": /,
+            "display": standalone,
+            "background_color": #ffffff,
+            "theme_color": #3b82f6,
             "icons": [{}]
-                    "src": "/android-chrome-192x192.png",
-                    "sizes": "192x192",
-                    "type": "image/png"
+                    src: "/android-chrome-192x192.png",
+                    sizes: "192x192",
+                    type: "image/png"
                 },
                 {}
-                    "src": "/android-chrome-512x512.png",
-                    "sizes": "512x512",
-                    "type": "image/png"
-                };
+                    src: "/android-chrome-512x512.png",
+                    sizes: "512x512",
+                    type: "image/png"
+                }
             ],
+<<<<<<< HEAD
+            categories: ["business", technology, "productivity"],
+            lang: "en",
+            dir: "ltr"
+       }
+
+=======
             "categories": ["business", "technology", "productivity"],
             "lang": "en",
             "dir": "ltr"
        };
 <<<<<<< HEAD
+        fs.writeFileSync(manifestPath, JSON.stringify(manifest, null, 2));
+        this.log('Web app manifest generated');
+        return { "status": 'success' }};
+    generateSEOReport() {}
+        this.log('Generating SEO optimization report...');
+=======
 
         fs.writeFileSync(manifestPath, JSON.stringify(manifest, null, 2));
         this.log('Web app manifest generated');
@@ -388,83 +593,89 @@ return (;);
     generateSEOReport() {}
         this.log('Generating SEO optimization report...');
         
-=======
-        fs.writeFileSync(manifestPath, JSON.stringify(manifest, null, 2));
-        this.log('Web app manifest generated');
-        return { "status": 'success' }};
-    generateSEOReport() {}
-        this.log('Generating SEO optimization report...');
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+>>>>>>> origin/chore/fix-lint-and-merge
         const report = {}
-            "timestamp": new Date().toISOString(),
+            timestamp: new Date().toISOString(),
             "project": this.projectRoot,
-            "seo": {}
+            seo: {}
                 sitemap: this.generateSitemap(),
                 "robots": this.generateRobotsTxt(),
-                "metaComponent": this.createSEOMetaComponent(),
+                metaComponent: this.createSEOMetaComponent(),
                 "manifest": this.generateManifest();
             },
+<<<<<<< HEAD
+            recommendations: this.generateSEORecommendations();
+       }
+
+        return report}
+=======
             "recommendations": this.generateSEORecommendations();
        };
 <<<<<<< HEAD
+        fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2));
+        this.log("SEO optimization report saved to ${this.reportFile}");
+=======
 
         fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2));
         this.log("SEO optimization report saved to ${this.reportFile}");
         
-=======
-        fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2));
-        this.log("SEO optimization report saved to ${this.reportFile}");
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
         return report};
+>>>>>>> origin/chore/fix-lint-and-merge
     generateSEORecommendations() {}
-return [;];
+        return [;]
             'Implement structured data markup for better search visibility',
-            'Optimize page loading speed for better Core Web Vitals',
+            Optimize page loading speed for better Core Web Vitals,
             'Use descriptive and keyword-rich URLs',
-            'Implement breadcrumb navigation',
+            Implement breadcrumb navigation,
             'Add alt text to all images',
-            'Use heading tags (H1, H2, H3) properly for content hierarchy',
+            Use heading tags (H1, H2, H3) properly for content hierarchy,
             'Implement internal linking strategy',
-            'Create high-quality, original content regularly',
+            Create high-quality, original content regularly,
             'Optimize for mobile-first indexing',
-            'Implement AMP (Accelerated Mobile Pages) for better mobile performance'
-        ]};
+            Implement AMP (Accelerated Mobile Pages) for better mobile performance
+        ]}
     async run() {}
         this.log('SEO Optimizer started');
 <<<<<<< HEAD
-        
+
 =======
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
+<<<<<<< HEAD
+=======
+        
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+>>>>>>> origin/chore/fix-lint-and-merge
         try {}
             const report = this.generateSEOReport(;);
             this.log('SEO Optimizer completed successfully');
             return report} catch (error) {}
             this.log("SEO Optimizer "failed": ${error.message}`);
-            throw error};
-    };
-};
+            throw error}
+    }
+}
 // Run the optimizer if this script is executed directly;
 if ( {})
     const optimizer = new SEOOptimizer) {}
      {}
     const optimizer = new SEOOptimizer}(;);
+<<<<<<< HEAD
+    optimizer.run().catch(console.error)}
+
+=======
+
+=======
     optimizer.run().catch(console.error)};
-<<<<<<< HEAD
-<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
 module.exports = SEOOptimizer;
-<<<<<<< HEAD
-=======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 <<<<<<< HEAD
-=======
-
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
+>>>>>>> origin/chore/fix-lint-and-merge
 module.exports = SEOOptimizer;
 =======
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
@@ -473,16 +684,18 @@ module.exports = SEOOptimizer;
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
-=======
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
-
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
-module.exports = SEOOptimizer;
-
-module.exports = SEOOptimizer;
 
 <<<<<<< HEAD
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
 module.exports = SEOOptimizer;
+
+module.exports = SEOOptimizer;
+
+
+=======
 module.exports = SEOOptimizer;
 =======
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
+>>>>>>> origin/chore/fix-lint-and-merge

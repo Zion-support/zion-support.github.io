@@ -50,7 +50,6 @@ export default function ComprehensivePricing2029() {
     return billingCycle === 'monthly' ? numericPrice : Math.round(numericPrice * 0.8)
   }
   const getBillingText = (price: string) => {
-    const numericPrice = parseInt(price.replace(/[^0-9]/g, ''))
     if (billingCycle === 'monthly') {
       return `$${numericPrice.toLocaleString()}/month`
     } else {

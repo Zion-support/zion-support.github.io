@@ -90,8 +90,6 @@ export function AuthGuard({
 
   // Show role denied state if user doesn't have required role
   if (requireRole && isAuthenticated && user) {
-    const userRoles = user.role ? [user.role] : [];
-    const hasRequiredRole = requireRole.some(role => userRoles.includes(role));
 
     if (!hasRequiredRole) {
       return fallback || (
@@ -128,8 +126,6 @@ export function withAuthGuard<P extends object>(
 
 // Hook for programmatic auth checks
 export function useAuthGuard() {
-  const { user, isAuthenticated, isLoading } = useAuth();
-  const router = useRouter();
 
   const requireAuth = (options?: {
     redirectTo?: string;

@@ -19,7 +19,6 @@ export default function AdminTrustPage() {
 
   async function save() {
     const res = await fetch('/api/trust/weights', { method: 'PUT', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(weights) }),
-    const json = await res.json(),
     setWeights(json.updated),
     alert('Weights updated')
   }

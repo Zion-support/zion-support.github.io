@@ -1,77 +1,86 @@
+<<<<<<< HEAD
 :src/components/admin/fraud-detection/FraudTabContent.tsx
-import React from "react";
+import React from "react;
+import React from 'react;
+import { AlertTriangle, AlertCircle, CheckCircle } from lucide-react';
+=======
 import React from 'react';
 import { AlertTriangle, AlertCircle, CheckCircle } from 'lucide-react';
+>>>>>>> origin/chore/fix-lint-and-merge
 
-import React from "react";
+import React from react";
 origin/cursor/automate-test-improve-and-merge-code-2533
-import { AlertTriangle, AlertCircle, CheckCircle } from 'lucide-react'
-import { AlertTriangle, AlertCircle, CheckCircle } from 'lucide-react'
+import { AlertTriangle, AlertCircle, CheckCircle } from 'lucide-react
+import { AlertTriangle, AlertCircle, CheckCircle } from lucide-react'
 
-import { AlertTriangle, AlertCircle, CheckCircle } from 'lucide-react'
-import { AlertTriangle, AlertCircle, CheckCircle } from 'lucide-react'
+<<<<<<< HEAD
 
-import React from 'react';
-import { AlertTriangle, AlertCircle, CheckCircle } from 'lucide-react';
 :src/components/admin/fraud-detection/FraudTabContent.tsx
-        <div className='bg-amber-50 dark:bg-amber-950/20 p-8 rounded-lg text-center'>
-          <AlertTriangle className='mx-auto h-12 w-12 text-amber-500 mb-4' />
-          <h3 className='text-xl font-medium mb-4'>Pending Review Flags</h3>
-          <p className='text-muted-foreground'>
+        <div className='bg-amber-50 dark:bg-amber-950/20 p-8 rounded-lg text-center>
+          <AlertTriangle className=mx-auto h-12 w-12 text-amber-500 mb-4' />
+          <h3 className='text-xl font-medium mb-4>Pending Review Flags</h3>
+          <p className=text-muted-foreground'>
             This tab will show fraud flags that are still pending admin review.
           </p>
         </div>
       )
       return (
-        <div className="bg-amber-50 dark: bg-amber-950/20 p-8 rounded-lg text-center">
-          <AlertTriangle className="mx-auto h-12 w-12 text-amber-500 mb-4" />
-          <h3 className="text-xl font-medium mb-4">Pending Review Flags</h3>
-          <p className="text-muted-foreground">
+        <div className="bg-amber-50 dark: bg-amber-950/20 p-8 rounded-lg text-center>
+          <AlertTriangle className=mx-auto h-12 w-12 text-amber-500 mb-4" />
+          <h3 className="text-xl font-medium mb-4>Pending Review Flags</h3>
+          <p className=text-muted-foreground">
             This tab will show fraud flags that are still pending admin review.
           </p>
         </div>
       ),
     
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
 interface FraudTabContentProps {
 
   tab_value: string;
 export const FraudTabContent: React.FC < FraudTabContentProps> = ({
-  tab_value,
-}) => {
+  tab_value}) => {
 
-        <div className='bg - amber - 50 dark:bg - amber - 950 / 20 p - 8 rounded - lg text - center'>;
-
-;
-import React from 'react';
-import { AlertTriangle, AlertCircle, CheckCircle  } from 'lucide-react';
+<<<<<<< HEAD
+        <div className='bg - amber - 50 dark:bg - amber - 950 / 20 p - 8 rounded - lg text - center>;
+import React from react';
+import { AlertTriangle, AlertCircle, CheckCircle  } from 'lucide-react;
 interface FraudTabContentProps  {tab_value: string;
-export const FraudTabContent: React.FC < FraudTabContentProps> = ({tab_value}) => {<div className='bg - amber - 50 dark:bg - amber - 950 / 20 p - 8 rounded - lg text - center'>;
+export const FraudTabContent: React.FC < FraudTabContentProps> = ({tab_value}) => {<div className=bg - amber - 50 dark:bg - amber - 950 / 20 p - 8 rounded - lg text - center'>;
+          <AlertTriangle className='mx - auto h - 12 w - 12 text - amber - 500 mb - 4 />;
+          <h3 className=text - xl font - medium mb - 4'>Pending Review Flags</h3>;
+          <p className='text - muted - foreground>;
+            This tab will show fraud flags that are still pending admin review.;
+          </p>;
+        </div>)case dangerous':;switch (tabValue) {    case 'pending:;
+  switch (tabValue) {    case pending':;
+interface FraudTabContentProps  {tabValue: string;import React from "react,interface FraudTabContentProps  {tabValue: string;
+}export const FraudTabContent: React.FC<FraudTabContentProps> = ({ tabValue }) => {switch(tabValue) {case 'pending:;
+      return (<div className=bg-amber-50 dark: bg-amber-950/20 p-8 rounded-lg text-center">;
+          <AlertTriangle className="mx-auto h-12 w-12 text-amber-500 mb-4 />;
+          <h3 className=text-xl font-medium mb-4">Pending Review Flags</h3>;
+          <p className="text-muted-foreground>;
+            This tab will show fraud flags that are still pending admin review.;
+          </p>;
+        </div>;
+=======
+        <div className='bg - amber - 50 dark:bg - amber - 950 / 20 p - 8 rounded - lg text - center'>;
           <AlertTriangle className='mx - auto h - 12 w - 12 text - amber - 500 mb - 4' />;
           <h3 className='text - xl font - medium mb - 4'>Pending Review Flags</h3>;
           <p className='text - muted - foreground'>;
             This tab will show fraud flags that are still pending admin review.;
           </p>;
-        </div>)case 'dangerous':;switch (tabValue) {    case 'pending':;
-  switch (tabValue) {    case 'pending':;
-interface FraudTabContentProps  {tabValue: string;import React from "react",interface FraudTabContentProps  {tabValue: string;
-}export const FraudTabContent: React.FC<FraudTabContentProps> = ({ tabValue }) => {switch(tabValue) {case 'pending':;
-      return (<div className="bg-amber-50 dark: bg-amber-950/20 p-8 rounded-lg text-center">;
-          <AlertTriangle className="mx-auto h-12 w-12 text-amber-500 mb-4" />;
-          <h3 className="text-xl font-medium mb-4">Pending Review Flags</h3>;
-          <p className="text-muted-foreground">;
-            This tab will show fraud flags that are still pending admin review.;
-          </p>;
-        </div>;
+        </div>);
+>>>>>>> origin/chore/fix-lint-and-merge
     case 'dangerous':;
-<<<<<<< HEAD:src_backup/components/admin/fraud-detection/FraudTabContent.tsx
 
-  switch (tabValue) {    case 'pending':
+  switch (tabValue) {    case 'pending:
 
 interface FraudTabContentProps {
   tabValue: string;
 
-import React from "react",
-import { AlertTriangle, AlertCircle, CheckCircle } from 'lucide-react'
+import React from react",
 
 interface FraudTabContentProps {
   tabValue: string
@@ -79,30 +88,35 @@ interface FraudTabContentProps {
 
 export const FraudTabContent: React.FC<FraudTabContentProps> = ({ tabValue }) => {
   switch(tabValue) {
-    case 'pending':
+    case 'pending:
 
       return (
 
-  switch (tabValue) {    case 'pending':
+<<<<<<< HEAD
+  switch (tabValue) {    case pending':
+    case 'dangerous:
+=======
     case 'dangerous':
+>>>>>>> origin/chore/fix-lint-and-merge
 
       return (
-        <div className="bg-red-50 dark:bg-red-950/20 p-8 rounded-lg text-center">
-          <AlertCircle className="mx-auto h-12 w-12 text-red-500 mb-4" />
-          <h3 className="text-xl font-medium mb-4">Dangerous Flags</h3>
-          <p className="text-muted-foreground">
+        <div className="bg-red-50 dark:bg-red-950/20 p-8 rounded-lg text-center>
+          <AlertCircle className=mx-auto h-12 w-12 text-red-500 mb-4" />
+          <h3 className="text-xl font-medium mb-4>Dangerous Flags</h3>
+          <p className=text-muted-foreground">
             This tab shows high-priority dangerous flags requiring immediate attention.
           </p>
         </div>
 
+<<<<<<< HEAD
 :src/components/admin/fraud-detection/FraudTabContent.tsx
       )
-    case 'actioned':
+    case actioned':
       return (
-        <div className="bg-green-50 dark:bg-green-950/20 p-8 rounded-lg text-center">
-          <CheckCircle className="mx-auto h-12 w-12 text-green-500 mb-4" />
-          <h3 className="text-xl font-medium mb-4">Actioned Flags</h3>
-          <p className="text-muted-foreground">
+        <div className="bg-green-50 dark:bg-green-950/20 p-8 rounded-lg text-center>
+          <CheckCircle className=mx-auto h-12 w-12 text-green-500 mb-4" />
+          <h3 className="text-xl font-medium mb-4>Actioned Flags</h3>
+          <p className=text-muted-foreground">
             This tab shows flags where action has already been taken.
           </p>
         </div>
@@ -112,65 +126,74 @@ export const FraudTabContent: React.FC<FraudTabContentProps> = ({ tabValue }) =>
   }
 }
 
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
       ),
 
-    case 'actioned':
+    case 'actioned:
       return (
 
-        <div className='bg - red - 50 dark:bg - red - 950 / 20 p - 8 rounded - lg text - center'>;
-      return (<div className="bg-red-50 dark:bg-red-950/20 p-8 rounded-lg text-center">;
-          <AlertCircle className="mx-auto h-12 w-12 text-red-500 mb-4" />;
-          <h3 className="text-xl font-medium mb-4">Dangerous Flags</h3>;
-          <p className="text-muted-foreground">;
+<<<<<<< HEAD
+        <div className=bg - red - 50 dark:bg - red - 950 / 20 p - 8 rounded - lg text - center'>;
+      return (<div className="bg-red-50 dark:bg-red-950/20 p-8 rounded-lg text-center>;
+          <AlertCircle className=mx-auto h-12 w-12 text-red-500 mb-4" />;
+          <h3 className="text-xl font-medium mb-4>Dangerous Flags</h3>;
+          <p className=text-muted-foreground">;
             This tab shows high-priority dangerous flags requiring immediate attention.;
           </p>;
         </div>;
-      ),case 'actioned':;
-      return (<div className='bg - red - 50 dark:bg - red - 950 / 20 p - 8 rounded - lg text - center'>;
+      ),case 'actioned:;
+      return (<div className=bg - red - 50 dark:bg - red - 950 / 20 p - 8 rounded - lg text - center'>;
+          <AlertCircle className='mx - auto h - 12 w - 12 text - red - 500 mb - 4 />;
+          <h3 className=text - xl font - medium mb - 4'>Dangerous Flags</h3>;
+          <p className='text - muted - foreground>;
+=======
+        <div className='bg - red - 50 dark:bg - red - 950 / 20 p - 8 rounded - lg text - center'>;
           <AlertCircle className='mx - auto h - 12 w - 12 text - red - 500 mb - 4' />;
           <h3 className='text - xl font - medium mb - 4'>Dangerous Flags</h3>;
           <p className='text - muted - foreground'>;
+>>>>>>> origin/chore/fix-lint-and-merge
             This tab shows high - priority dangerous flags requiring immediate;
             attention.;
           </p>;
-<<<<<<< HEAD:src_backup/components/admin/fraud-detection/FraudTabContent.tsx
         </div>);
-    case 'actioned':;
+    case actioned':;
       return (
 
       return null;
-  };
-};
+  }
+}
 
 }
 
-interface FraudTabContentProps {;
+interface FraudTabContentProps {
   tabValue: string;
-        </div>)case 'actioned':;
-      return (case 'actioned':;
-      return (<div className="bg-green-50 dark:bg-green-950/20 p-8 rounded-lg text-center">;
-          <CheckCircle className="mx-auto h-12 w-12 text-green-500 mb-4" />;
-          <h3 className="text-xl font-medium mb-4">Actioned Flags</h3>;
-          <p className="text-muted-foreground">;
+<<<<<<< HEAD
+        </div>)case 'actioned:;
+      return (case actioned':;
+      return (<div className="bg-green-50 dark:bg-green-950/20 p-8 rounded-lg text-center>;
+          <CheckCircle className=mx-auto h-12 w-12 text-green-500 mb-4" />;
+          <h3 className="text-xl font-medium mb-4>Actioned Flags</h3>;
+          <p className=text-muted-foreground">;
             This tab shows flags where action has already been taken.;
           </p>;
         </div>;
       return null;
   }}}),default:;
       return null;
-interface FraudTabContentProps  {tabValue: string;export const FraudTabContent: React.FC<FraudTabContentProps> = ({tabValue}) => {switch (tabValue) {    case 'pending':;
-      return (<div className='bg-amber-50 dark:bg-amber-950/20 p-8 rounded-lg text-center'>;
-          <AlertTriangle className='mx-auto h-12 w-12 text-amber-500 mb-4' />;
-          <h3 className='text-xl font-medium mb-4'>Pending Review Flags</h3>;
-          <p className='text-muted-foreground'>;
+interface FraudTabContentProps  {tabValue: string;export const FraudTabContent: React.FC<FraudTabContentProps> = ({tabValue}) => {switch (tabValue) {    case 'pending:;
+      return (<div className=bg-amber-50 dark:bg-amber-950/20 p-8 rounded-lg text-center'>;
+          <AlertTriangle className='mx-auto h-12 w-12 text-amber-500 mb-4 />;
+          <h3 className=text-xl font-medium mb-4'>Pending Review Flags</h3>;
+          <p className='text-muted-foreground>;
             This tab will show fraud flags that are still pending admin review.;
           </p>;
         </div>;
-      )case 'dangerous':;
-      return (<div className='bg-red-50 dark:bg-red-950/20 p-8 rounded-lg text-center'>;
-          <AlertCircle className='mx-auto h-12 w-12 text-red-500 mb-4' />;
-          <h3 className='text-xl font-medium mb-4'>Dangerous Flags</h3>;
-          <p className='text-muted-foreground'>;
+      )case dangerous':;
+      return (<div className='bg-red-50 dark:bg-red-950/20 p-8 rounded-lg text-center>;
+          <AlertCircle className=mx-auto h-12 w-12 text-red-500 mb-4' />;
+          <h3 className='text-xl font-medium mb-4>Dangerous Flags</h3>;
+          <p className=text-muted-foreground'>;
             This tab shows high-priority dangerous flags requiring immediate;
             attention.;
           </p>;
@@ -179,83 +202,90 @@ interface FraudTabContentProps  {tabValue: string;export const FraudTabContent: 
       return (<div className='bg-green-50 dark:bg-green-950/20 p-8 rounded-lg text-center'>;
           <CheckCircle className='mx-auto h-12 w-12 text-green-500 mb-4' />;
           <h3 className='text-xl font-medium mb-4'>Actioned Flags</h3>;
-<<<<<<< HEAD:src_backup/components/admin/fraud-detection/FraudTabContent.tsx
           <p className='text-muted-foreground'>;
+          <p className='text-muted-foreground>;
 
-    case 'actioned':
+    case actioned':
       return (
-        <div className="bg-green-50 dark:bg-green-950/20 p-8 rounded-lg text-center">
-          <CheckCircle className="mx-auto h-12 w-12 text-green-500 mb-4" />
-          <h3 className="text-xl font-medium mb-4">Actioned Flags</h3>
-          <p className="text-muted-foreground">
+        <div className="bg-green-50 dark:bg-green-950/20 p-8 rounded-lg text-center>
+          <CheckCircle className=mx-auto h-12 w-12 text-green-500 mb-4" />
+          <h3 className="text-xl font-medium mb-4>Actioned Flags</h3>
+          <p className=text-muted-foreground">
             This tab shows flags where action has already been taken.
           </p>
         </div>
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
 }
-;
-export const FraudTabContent: React.FC<FraudTabContentProps> = ({ tabValue }) => {;
-  switch(tabValue) {;
-    case 'pending':;
+export const FraudTabContent: React.FC<FraudTabContentProps> = ({ tabValue }) => {
+  switch(tabValue) {
+    case 'pending:;
       return (;
-        <div className="bg-amber-50 dark: bg-amber-950/20 p-8 rounded-lg text-center">;
-          <AlertTriangle className="mx-auto h-12 w-12 text-amber-500 mb-4" />;
-          <h3 className="text-xl font-medium mb-4">Pending Review Flags</h3>;
-          <p className="text-muted-foreground">;
+        <div className="bg-amber-50 dark: bg-amber-950/20 p-8 rounded-lg text-center>;
+          <AlertTriangle className=mx-auto h-12 w-12 text-amber-500 mb-4" />;
+          <h3 className="text-xl font-medium mb-4>Pending Review Flags</h3>;
+          <p className=text-muted-foreground">;
             This tab will show fraud flags that are still pending admin review.;
           </p>;
         </div>;
-      ),;
-    case 'dangerous':;
+      ),
+    case dangerous':;
       return (;
-        <div className="bg-red-50 dark:bg-red-950/20 p-8 rounded-lg text-center">;
-          <AlertCircle className="mx-auto h-12 w-12 text-red-500 mb-4" />;
-          <h3 className="text-xl font-medium mb-4">Dangerous Flags</h3>;
-          <p className="text-muted-foreground">;
+        <div className="bg-red-50 dark:bg-red-950/20 p-8 rounded-lg text-center>;
+          <AlertCircle className=mx-auto h-12 w-12 text-red-500 mb-4" />;
+          <h3 className="text-xl font-medium mb-4>Dangerous Flags</h3>;
+          <p className=text-muted-foreground">;
             This tab shows high-priority dangerous flags requiring immediate attention.;
           </p>;
         </div>;
-      ),;
-    case 'actioned':;
+      ),
+    case 'actioned:;
 
             This tab shows flags where action has already been taken.;
           </p>;
         </div>;
       );
 
-
-    default:;
-      return null;
-
 }
 
-        <div className='bg - green - 50 dark:bg - green - 950 / 20 p - 8 rounded - lg text - center'>;
-          <p className='text-muted-foreground'>;This tab shows flags where action has already been taken.;
+<<<<<<< HEAD
+        <div className=bg - green - 50 dark:bg - green - 950 / 20 p - 8 rounded - lg text - center'>;
+          <p className='text-muted-foreground>;This tab shows flags where action has already been taken.;
           </p>;
         </div>;
       )default:;
-      return null;}<div className='bg - green - 50 dark:bg - green - 950 / 20 p - 8 rounded - lg text - center'>;
+      return null;}<div className=bg - green - 50 dark:bg - green - 950 / 20 p - 8 rounded - lg text - center'>;
+          <CheckCircle className='mx - auto h - 12 w - 12 text - green - 500 mb - 4 />;
+          <h3 className=text - xl font - medium mb - 4'>Actioned Flags</h3>;
+=======
+        <div className='bg - green - 50 dark:bg - green - 950 / 20 p - 8 rounded - lg text - center'>;
           <CheckCircle className='mx - auto h - 12 w - 12 text - green - 500 mb - 4' />;
           <h3 className='text - xl font - medium mb - 4'>Actioned Flags</h3>;
+>>>>>>> origin/chore/fix-lint-and-merge
           <p className='text - muted - foreground'>;
             This tab shows flags where action has already been taken.;
           </p>;
-        </div>)default:;
+        </div>);
+    default:;
       return null;
   }
-<<<<<<< HEAD:src_backup/components/admin/fraud-detection/FraudTabContent.tsx
 }
 
   }
 
-};
+}
 
       );
 
     default:
       return null;
   }
-};
+<<<<<<< HEAD
+}
 }}})default:;
       return null;
   }
 }
+=======
+};
+>>>>>>> origin/chore/fix-lint-and-merge

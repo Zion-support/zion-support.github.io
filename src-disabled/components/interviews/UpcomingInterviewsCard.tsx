@@ -71,7 +71,6 @@ import { useInterviews } from '@/hooks/useInterviews';
 import { Interview } from '@/types/interview';
 import { format, isPast, parseISO } from 'date-fns';
 import Link from 'next/link';
-import { Calendar, Clock, Video } from 'lucide-react';
 
 import { Avatar } from '@/components/ui/avatar';
 import { logErrorToProduction } from '@/utils/productionLogger';
@@ -310,7 +309,6 @@ if ( {) {}
             const formatted_date = format (interview_date, 'EEE, MMM d');'
             const formatted_time = format (interview_date, 'h:mm a');
             // Determine if interview is happening soon (within 30,  minutes)            const now = new Date ();
-            const isStartingSoon =;
               interview_date.get_time () - now.get_time () < 30 * 60 * 1000 &&;
               interview_date.get_time () > now.get_time ();
             return ('

@@ -79,7 +79,6 @@ export default async function handler(
         job.category = "Cloud";
       else job.category = "General";
     }
-    const jobs = readJsonFile<Job[]>(FILE, []);
     jobs.unshift(job);
     writeJsonFile<Job[]>(FILE, jobs);
     res.status(201).json({ job });

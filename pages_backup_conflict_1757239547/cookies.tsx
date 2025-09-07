@@ -337,7 +337,6 @@ export default function CookiePolicyPage() {
     </MainLayout>
   );
 }
-import { motion } from 'framer-motion';
 import Head from 'next/head';
 import Layout from '../components/Layout';
 

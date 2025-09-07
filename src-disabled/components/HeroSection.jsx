@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 :src/components/HeroSection.jsx
 import { Button } from "@/components/ui/button";";
 import { GradientHeading } from "@/components/GradientHeading";";
@@ -178,7 +179,6 @@ import { Search, Rocket } from "lucide-react";
 }
 
 export const HeroSection = () => {;
-    const containerVariants = {;
         hidden: { opacity: 0 },;
         visible: {;
             opacity: 1, ;
@@ -188,7 +188,6 @@ export const HeroSection = () => {;
             }
         }
     };
-    const itemVariants = {;
         hidden: { y: 30, opacity: 0 },;
         visible: {;
             y: 0,;
@@ -199,7 +198,6 @@ export const HeroSection = () => {;
             }
         }
     };
-    const floatingVariants = {;
         animate: {;
             y: [-15, 15, -15],;
             rotate: [0, 5, -5, 0],;
@@ -307,6 +305,8 @@ export const HeroSection = () => {;
     </section>);
 };
 '"
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
 " \" \" \" export function HeroSection() { const { t } = useTranslation() const containerRef = useRef(null) const { scrollYProgress } = useScroll({ target: containerRef, \" offset[\"start start\", \"end start\"] })\" const y = useTransform(scrollYProgress, [0, 1], [\"0%\", \"50%\"]) const opacity = useTransform(scrollYProgress, [0, 0.5], [1, 0]) const containerVariants = { hidden: { opacity: 0,}
 }, visible: { opacity: 1, transition: { staggerChildren: 0.2, delayChildren: 0.1 } },
 }
@@ -347,7 +347,6 @@ const floatingVariants = { animate: { y[-15, 15, -15], rotate[0, 5, 0], transiti
 }, visible: { opacity: 1, transition: { staggerChildren: 0.2, delayChildren: 0.1 } },
 }
 
-const itemVariants = { hidden: { y: 30, opacity: 0,}
 }, visible: { opacity: 1, y: 0, transition: { duration: 0.8,' ease: 'easeOut' },
 };
 }

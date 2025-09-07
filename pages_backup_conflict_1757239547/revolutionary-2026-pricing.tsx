@@ -58,8 +58,6 @@ export default function Revolutionary2026Pricing() {
         return priceA - priceB
       }
       if (sortBy === 'price-high') {
-        const priceA = parseFloat(a.price.replace(/[^0-9.]/g, '')) |0
-        const priceB = parseFloat(b.price.replace(/[^0-9.]/g, '')) |0
         return priceB - priceA
       }
       if (sortBy === 'rating') return b.rating - a.rating

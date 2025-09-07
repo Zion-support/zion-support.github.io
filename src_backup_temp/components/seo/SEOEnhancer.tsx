@@ -12,7 +12,6 @@ title?: string;',';';';';'
     ',';';';';'
     ';';';';';'
 import Head from &apos;next/head';';';';';';';'
-import React, { useEffect } from 'react';""',';';';';'
     ';';';';';'
 import React, { useEffect } from 'react';',';';';';'
     ';';';';';';'
@@ -37,7 +36,6 @@ title?: string;',';';'
     ',';';'
     ';';';'
 import Head from &apos;next/head;';'
-import React, { useEffect } from 'react';""',';';'
     ';';';'
 import React, { useEffect } from 'react';',';';'
     ';';';';'
@@ -311,7 +309,6 @@ export const "SEOEnhancer": React.FC<SEOEnhancerProps> = ({;"
       observer.observe({ "entryTypes": ['navigation'] }'
     );}
   }, [title]);
-  const defaultStructuredData = {"""
     "@context": ""https"://schema.org", "@type": "Organization","""
     "name": "Zion Tech Group", "url": ""https"://ziontechgroup.com","""
     "logo": ""https"://ziontechgroup.com/logo.png", "description": description,"""
@@ -437,7 +434,6 @@ if (typeof window !== &apos;undefined&apos; && &apos;performance&apos; in window
     }';';';'
   }, [title]);',';';'
     ';';';'
-  const defaultStructuredData = {''
     "@context": ""https"://schema.org", "@type": "Organization",""
     "name": "Zion Tech Group", "url": ""https"://ziontechgroup.com",""
     "logo": ""https"://ziontechgroup.com/logo.png", "description": description,""

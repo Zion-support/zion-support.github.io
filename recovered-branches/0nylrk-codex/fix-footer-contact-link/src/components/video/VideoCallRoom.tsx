@@ -1,32 +1,58 @@
-import React, { useState } from 'react';'
-import {Button} from "@/components/ui/button";"
-import {Card, CardContent, CardHeader, CardTitle} from "@/components/ui/card";"
-import {Badge} from "@/components/ui/badge";"
-import {Avatar, AvatarFallback, AvatarImage} from "@/components/ui/avatar";"
-import {Video, VideoOff, Mic, MicOff, Phone, ScreenShare, ScreenShareOff, Volume2, VolumeX} from '@/components/icons';  onLeave;'
-  onToggleMute;
-  onToggleVideo;
-  onToggleScreenShare;interface Participant {
-  }
-  "id": string,
-  "name": string,
+import './video-call ;
+interface Participant {;
+  id: string,;
+  name: string,;
+
+  avatar?: string;
+  is_muted?: boolean;
+  isVideoEnabled?: boolean;
+  isScreenSharing?: boolean;
+
+interface VideoCallRoomProps {;
+  roomId: string,;
+  participants?: Participant[];
+  onLeave?: () => void;
+  onToggleMute?: (isMuted: boolean) => void,;
+  onToggleVideo?: (isEnabled: boolean) => void,;
+  onToggleScreenShare?: (isSharing: boolean) => void,;
+  className?: string;
+}
+
+    if (onToggleVideo) {
+      onToggleVideo(newVideoState)
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",
+import { Video, VideoOff, Mic, MicOff, Phone, ScreenShare, ScreenShareOff, Volume2, VolumeX } from '@/components/icons',
+import './video-call.css',
+
+interface Participant {
+
+  id: string,
+  name: string,
   avatar?: string,
   isMuted?: boolean,
   isVideoEnabled?: boolean,
   isScreenSharing?: boolean,
-  isHost?: boolean
+
+    }
+
+    }
+
   };
-import React, { useState } from 'react';'
+<<<<<<< HEAD
 import { Button } from "@/components/ui/button";"
+=======
+'
+import React, { useState } from 'react',;"
+import { Button } from "@/components/ui/button",;"
+>>>>>>> origin/chore/fix-lint-and-merge
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card",;"
 import { Badge } from "@/components/ui/badge",;"
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",;"
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",;'
 import { Video, VideoOff, Mic, MicOff, Phone, ScreenShare, ScreenShareOff, Volume2, VolumeX } from '@/components/icons',;'
-import './video-call.css',;'
+import './video-call.css',;
 interface Participant {;
-  }
-  "id": string,;
-  "name": string,;
+  id: string,;
+  name: string,;
   avatar?: string,;
   isMuted?: boolean,;
   isVideoEnabled?: boolean,;
@@ -35,18 +61,16 @@ interface Participant {;
 }
 ;
 interface VideoCallRoomProps {;
-  }
-  "roomId": string,;
+  roomId: string,;
   participants?: Participant[],;
   onLeave?: () => void,;
-  onToggleMute?: ("isMuted": boolean) => void,;
-  onToggleVideo?: ("isEnabled": boolean) => void,;
-  onToggleScreenShare?: ("isSharing": boolean) => void,;
+  onToggleMute?: (isMuted: boolean) => void,;
+  onToggleVideo?: (isEnabled: boolean) => void,;
+  onToggleScreenShare?: (isSharing: boolean) => void,;
   className?: string;
 }
 ;
-export const "VideoCallRoom": React.FC<VideoCallRoomProps> = ({;
-  }
+export const VideoCallRoom: React.FC<VideoCallRoomProps> = ({;
   roomId,;
   participants = [],;
   onLeave,;
@@ -55,7 +79,6 @@ export const "VideoCallRoom": React.FC<VideoCallRoomProps> = ({;
   onToggleScreenShare,;
   className;
 }) => {;
-  }
   const [isMuted, setIsMuted] = useState(false),;
   const [isVideoEnabled, setIsVideoEnabled] = useState(true),;
   const [isScreenSharing, setIsScreenSharing] = useState(false),;
@@ -63,111 +86,54 @@ export const "VideoCallRoom": React.FC<VideoCallRoomProps> = ({;
   const [callDuration, setCallDuration] = useState(0),;
   // Call duration timer;
   React.useEffect(() => {;
-    }
     const timer = setInterval(() => {;
-      }
-      setCallDuration(prevDuration => { return prevDuration + 1); }
+      setCallDuration(prevDuration => prevDuration + 1);
     }, 1000),;
     return () => clearInterval(timer);
   }, []),;
-  const formatDuration = ("seconds": number) => {;
-    }
+  const formatDuration = (seconds: number) => {;
     const hrs = Math.floor(seconds / 3600),;
     const mins = Math.floor((seconds % 3600) / 60),;
-    const secs = seconds % 60,;
-    return `${hrs > 0 ? `${hrs}:` : ''}${mins < 10 && hrs > 0 ? '0' : ''}${mins}:${secs < 10 ? '0' : ''}${secs}`;`  },;
+    const secs = seconds % 60,;'
+    return `${hrs > 0 ? `${hrs}:` : ''}${mins < 10 && hrs > 0 ? '0' : ''}${mins}:${secs < 10 ? '0' : ''}${secs}`;
+  },;
   const handleToggleMute = () => {;
-    }
     const newMuteState = !isMuted,;
     setIsMuted(newMuteState),;
     if (onToggleMute) {;
-      }
       onToggleMute(newMuteState);
     }
   },;
   const handleToggleVideo = () => {;
-    }
     const newVideoState = !isVideoEnabled,;
     setIsVideoEnabled(newVideoState),;
     if (onToggleVideo) {;
-      }
       onToggleVideo(newVideoState);
-}
-interface VideoCallRoomProps {
-  roomId: string,
-  participants?: Participant[],
-  onLeave?: () => void,
-  onToggleMute?: (isMuted: boolean) => void,
-  onToggleVideo?: (isEnabled: boolean) => void,
-  onToggleScreenShare?: (isSharing: boolean) => void,
-  className?: string
-}
-
-export const VideoCallRoom: React.FC<VideoCallRoomProps> = ({ 
-  roomId,
-  participants = $2;
-  onLeave,
-  onToggleMute,
-  onToggleVideo,
-  onToggleScreenShare,
-  className 
-}) => {
-  const [isMuted, setIsMuted] = useState($2);
-  const [isVideoEnabled, setIsVideoEnabled] = useState($2);
-  const [isScreenSharing, setIsScreenSharing] = useState($2);
-  const [isAudioOnly, setIsAudioOnly] = useState($2);
-  const [callDuration, setCallDuration] = useState($2);
-  // Call duration timer
-  React.useEffect(() => {
-    const timer = setInterval(() => {
-      setCallDuration(prevDuration => prevDuration + 1)
-    }, 1000),
-    
-    return () => clearInterval(timer)
-  }, []),
-
-  const formatDuration = (seconds: number) => {
-    const hrs = Math.floor($2);
-    const mins = $2;
-    const secs = $2;
-    return `${hrs > 0 ? `${hrs}:` : ''}${mins < 10 && hrs > 0 ? '0' : ''}${mins}:${secs < 10 ? '0' : ''}${secs}`
-  },
-
-  const handleToggleMute = $2;
-    setIsMuted($2);
-    if (onToggleMute) {
-      onToggleMute(newMuteState)
-    }
-  },
-
-  const handleToggleVideo = $2;
-    setIsVideoEnabled($2);
-    if (onToggleVideo) {
-      onToggleVideo(newVideoState)
-    }
-    // If turning video back on, ensure we're not in audio-only mode'
-    if (newVideoState) {
-      }
+    }'
+    // If turning video back on, ensure we're not in audio-only mode;
+    if (newVideoState) {}
       setIsAudioOnly(false)
-    }    const newScreenShareState = !isScreenSharing;
-    setIsScreenSharing(newScreenShareState)
-};
 
-  const handleToggleScreenShare = () => {
-    }
+  const handleToggleScreenShare = () => {;
+
     const newScreenShareState = !isScreenSharing;
     setIsScreenSharing(newScreenShareState);
-    if (onToggleScreenShare) {
-      }
+
+  };
+
+  const handleToggleScreenShare = () => {
+
+    const newScreenShareState = !isScreenSharing;
+    setIsScreenSharing(newScreenShareState);
+    if (onToggleScreenShare) {}
       onToggleScreenShare(newScreenShareState)
     }
   }
-  const handleToggleAudioOnly = () => {
-    }
+  const handleToggleAudioOnly = () => {}
     setIsAudioOnly(!isAudioOnly);
-    if (!isAudioOnly) {
-      }
+    if (!isAudioOnly) {}
       setIsVideoEnabled(false);
+<<<<<<< HEAD
     }
   },
 
@@ -178,22 +144,23 @@ export const VideoCallRoom: React.FC<VideoCallRoomProps> = ({
     }
   },
 
-  const handleToggleAudioOnly = () => {
     setIsAudioOnly($2);
     if (!isAudioOnly) {
       setIsVideoEnabled($2);
       if (onToggleVideo) {
         }
+=======
+      if (onToggleVideo) {}
+>>>>>>> origin/chore/fix-lint-and-merge
         onToggleVideo(false)
       }
     }
   }
-  const handleLeaveCall = () => {
-    }
-    if (onLeave) {
-      }
+  const handleLeaveCall = () => {}
+    if (onLeave) {}
       onLeave()
     }
+<<<<<<< HEAD
   }
 };
 
@@ -203,40 +170,61 @@ export const VideoCallRoom: React.FC<VideoCallRoomProps> = ({
     const newScreenShareState = !isScreenSharing,;
     setIsScreenSharing(newScreenShareState),;
     }
-    const newScreenShareState = !isScreenSharing;
     setIsScreenSharing(newScreenShareState);    if (onToggleScreenShare) {;
       }
       onToggleScreenShare(newScreenShareState);
     }
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
 
   };
 
-  const handleToggleAudioOnly = () => {;
+  };
+
+  },;
+  const handleToggleScreenShare = () => {;
+    const newScreenShareState = !isScreenSharing,;
+    setIsScreenSharing(newScreenShareState),;
+
+      onToggleScreenShare(newScreenShareState);
     }
+
+    }
+    const newScreenShareState = !isScreenSharing;
+    setIsScreenSharing(newScreenShareState);    if (onToggleScreenShare) {;
+
+      onToggleScreenShare(newScreenShareState);
+    }
+
     setIsAudioOnly(!isAudioOnly);
     if (!isAudioOnly) {;
-      }
       setIsVideoEnabled(false);
       if (onToggleVideo) {;
-        }
         onToggleVideo(false);
       }
     }
-return (;
-    <Card className={`w-full ${className || 'max-w-5xl mx-auto'}`}>;`      <CardHeader className="flex flex-row items-center justify-between bg-zion-blue-dark rounded-t-lg p-4">;"
-        <div className="flex items-center space-x-2">;"
-          <CardTitle className="text-white">Video Call</CardTitle>;"
-          <Badge variant="outline" className="text-white border-zion-purple bg-zion-blue-light">;"
-            "Room": {roomId}    }
+
+  };
+
+  const handleLeaveCall = () => {;
+    if (onLeave) {;
+      onLeave();
+
+  return (
+
+    }
+
   }
-return (;
-            "Room": {roomId}
+  return (
+            Room: {roomId}
+
           </Badge>;
-        </div>;
+        </div>;"
         <div className="flex items-center space-x-2">;"
-          <Badge variant="secondary" className="bg-zion-blue-light text-white">;"
+          <Badge variant="secondary" className="bg-zion-blue-light text-white">;
             {formatDuration(callDuration)}
 
+<<<<<<< HEAD
   is_host?: boolean;
 }
 interface VideoCallRoomProps {
@@ -281,7 +269,6 @@ export const "VideoCallRoom": React.FC < VideoCallRoomProps> = ({
     }
     const hrs = Math.floor (seconds / 3600);
     const mins = Math.floor ((seconds % 3600) / 60);
-const secs = seconds % 60,;
     return `${hrs > 0 ? `${hrs}:` : ''}${mins < 10 && hrs > 0 ? '0' : ''}${mins}:${secs < 10 ? '0' : ''}${secs}`;`  }
 ;
   const handleToggleMute = () =>: any {
@@ -317,7 +304,6 @@ if ( {) {
 ;
   const handleToggleScreenShare = () =>: any {
     }
-    const newScreenShareState = !isScreenSharing;
     setIsScreenSharing (newScreenShareState);
     // Check condition,
 if ( {) {
@@ -369,132 +355,168 @@ return (;
           </Badge>;
           <Badge variant="outline" className="text-white">;"
             {participants.length} participant{participants.length !== 1 ? 's' : ''}'
+=======
+              <div key={participant.id} className="video - participant bg - zion - blue - dark rounded - lg overflow - hidden relative">;
+                {participant.isVideoEnabled && !participant.isScreenSharing ? (
+
+          </Badge>;"
+          <Badge variant="outline" className="text-white">;'
+
+            {participants && participants.length} participant{participants && participants.length !== 1 ? 's' : ''}
+>>>>>>> origin/chore/fix-lint-and-merge
           </Badge>;
         </div>;
       </CardHeader>;
-      <CardContent className="p-0">;"
-        <div className="video - container p - 4 grid grid - cols - 1 "md":grid - cols - 2 "lg":grid - cols - 3 gap-4">;"
-          {participants.length > 0 ? (
-            }
-            participants.map ((participant) => (
-              <div key={participant.id} className="video - participant bg - zion - blue - dark rounded - lg overflow-hidden relative">;"
-                {participant.isVideoEnabled && !participant.isScreenSharing ? (          </Button>;
 
-          <Button
-          <Button
-}
-variant="outline";"
-            size="icon" "
-            className="video-button rounded-full h-10 w-10""
+                      </AvatarFallback>;
+                    </Avatar>;
+                  </div>;
+                )}
+
+                <div className="video-metadata flex items-center space-x-2">
+                  <span>{participant.name}</span>"
+                  {participant.isMuted && <MicOff className="h-4 w-4" />}"
+
+                  {participant.isHost && <Badge variant="secondary" className="text-xs">Host</Badge>}
+                </div>
+              </div>
+            ))
+
+                <div className="video-metadata flex items-center space-x-2">;
+                  <span>{participant && participant.name}</span>;"
+                  {participant && participant.isMuted && <MicOff className="h-4 w-4" />}"
+
+                  {participant && participant.isHost && <Badge variant="secondary" className="text-xs">Host</Badge>}
+                </div>;
+              </div>;
+            ));
+          ) : (;
+
+              <p className="text-center text-sm text-gray-300">;
+                Share the meeting link to invite others;
+              </p>;
+            </div>;
+          )}
+        </div>;
+
+            className="video-button rounded-full h-10 w-10"
+            onClick={handleToggleMute}>;
+            {isMuted ? <MicOff /> : <Mic />}
+
+          <Button 
+
+            variant="outline" 
+            size="icon" 
+            className="video-button rounded-full h-10 w-10"
             onClick={handleToggleVideo}>;
             {isVideoEnabled ? <Video /> : <VideoOff />}
-            size="icon""
-            className="video-button video-button-danger rounded-full h-10 w-10""
+
+          </Button>;
+
+          <Button"
+            variant="outline"
+
+            size="icon"
+            className="video-button rounded-full h-10 w-10"
+            onClick={handleToggleScreenShare}>;
+            {isScreenSharing ? <ScreenShareOff /> : <ScreenShare />}
+
+          <Button 
+
+            variant="outline" 
+
+            size="icon"
+
+            className="video-button rounded-full h-10 w-10"
+            onClick={handleToggleAudioOnly}>;
+            {isAudioOnly ? <VolumeX /> : <Volume2 />}
+
+          <Button "
+            variant="destructive" 
+
+          <Button
+            variant="destructive"
+          <Button 
+            variant="destructive" 
+
+            size="icon"
+
+            className="video-button video-button-danger rounded-full h-10 w-10"
             onClick={handleLeaveCall}
-          >
-            <Phone className="rotate-135" />"
+          >"
+            <Phone className="rotate-135" />
           </Button>
         </div>
       </CardContent>
     </Card>
   )
-}
-}
-};
-},
 
-          </Button>;
-          <Button,
-variant="destructive";"
-            size="icon""
-            className="video-button video-button-danger rounded-full h-10 w-10""
-            onClick={handleLeaveCall}>;
-            <Phone className="rotate-135" />;"
+            <Phone className="rotate-135" />;
           </Button>;
         </div>;
       </CardContent>;
     </Card>;
-  );  );
-}
+
+},
+
 };
-                  <div className="bg - zion - blue - light h - full w - full flex items - center justify - center text-white">;"
+                  <div className="bg - zion - blue - light h - full w - full flex items - center justify - center text - white">;
                     {/* Placeholder for actual video stream */}
-                    <Video className="h - 12 w - 12 opacity-50" />;"
+                    <Video className="h - 12 w - 12 opacity - 50" />;
                   </div>) : participant.isScreenSharing ? (
-                  <div className="bg - zion - blue h - full w - full flex items - center justify - center text-white">;"
+                  <div className="bg - zion - blue h - full w - full flex items - center justify - center text - white">;
                     {/* Placeholder for screen share */}
-                    <ScreenShare className="h - 12 w - 12 opacity-50" />;"
+                    <ScreenShare className="h - 12 w - 12 opacity - 50" />;
                   </div>) : (
-                  <div className="bg - zion - blue - dark h - full w - full flex items - center justify-center">;"
-                    <Avatar className="h - 20 w-20">;"
+                  <div className="bg - zion - blue - dark h - full w - full flex items - center justify - center">;
+                    <Avatar className="h - 20 w - 20">;
                       <AvatarImage src={participant.avatar} alt={participant.name} />;
-                      <AvatarFallback className="bg - zion - purple text - white text-2xl">;"
+                      <AvatarFallback className="bg - zion - purple text - white text - 2xl">;
                         {participant.name.char_at (0).toUpperCase ()}
                       </AvatarFallback>;
                     </Avatar>;
                   </div>)}
-                <div className="video - metadata flex items - center space-x-2">;"
+                <div className="video - metadata flex items - center space - x-2">;
                   <span>{participant.name}</span>;
-                  {participant.is_muted && <MicOff className="h - 4 w-4" />}"
-                  {participant.is_host && <Badge variant="secondary" className="text-xs">Host</Badge>}"
+                  {participant.is_muted && <MicOff className="h - 4 w - 4" />}
+                  {participant.is_host && <Badge variant="secondary" className="text - xs">Host</Badge>}
                 </div>;
               </div>))) : (
-            <div className="col - span - full flex flex - col items - center justify - center py - 12 text-white">;"
-              <Video className="h - 16 w - 16 mb - 4 opacity-30" />;"
-              <p className="text - center text - lg mb-2">No participants yet</p>;"
-              <p className="text - center text - sm text - gray-300">;"
+            <div className="col - span - full flex flex - col items - center justify - center py - 12 text - white">;
+              <Video className="h - 16 w - 16 mb - 4 opacity - 30" />;
+              <p className="text - center text - lg mb - 2">No participants yet</p>;
+              <p className="text - center text - sm text - gray - 300">;
                 Share the meeting link to invite others;
               </p>;
             </div>)}
         </div>;
-        <div className="bg - zion - blue - dark border - t border - zion - blue - light p - 4 flex items - center justify - center space-x-3">;"
+        <div className="bg - zion - blue - dark border - t border - zion - blue - light p - 4 flex items - center justify - center space - x-3">;
           <Button;
-            variant="outline";"
-            size="icon";"
-            className="video - button rounded - full h - 10 w-10";"
+            variant="outline";
+            size="icon";
+
             on_click={handleToggleMute}
           >;
             {is_muted ? <MicOff /> : <Mic />}
           </Button>;
-          <Button;
-            variant="outline";"
-            size="icon";"
-            className="video - button rounded - full h - 10 w-10";"
+
             on_click={handleToggleVideo}
           >;
             {isVideoEnabled ? <Video /> : <VideoOff />}
           </Button>;
-          <Button;
-            variant="outline";"
-            size="icon";"
-            className="video - button rounded - full h - 10 w-10";"
+
             on_click={handleToggleScreenShare}
           >;
             {isScreenSharing ? <ScreenShareOff /> : <ScreenShare />}
           </Button>;
-          <Button;
-            variant="outline";"
-            size="icon";"
-            className="video - button rounded - full h - 10 w-10";"
+
             on_click={handleToggleAudioOnly}
           >;
             {isAudioOnly ? <VolumeX /> : <Volume2 />}
           </Button>;
-          <Button;
-            variant="destructive";"
-            size="icon";"
-            className="video - button video - button - danger rounded - full h - 10 w-10";"
-            on_click={handleLeaveCall}
-          >;
-            <Phone className="rotate-135" />;"
+
           </Button>;
         </div>;
       </CardContent>;
     </Card>);
 }
-;
-  },
-
-  const handleLeaveCall = $2;
-  return (
-    <Card className = $2;

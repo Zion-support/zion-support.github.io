@@ -1,0 +1,7 @@
+{
+  "bundleAnalysis": true,
+  "codeSplitting": true,
+  "imageOptimization": true,
+  "caching": true,
+  "compression": true
+}

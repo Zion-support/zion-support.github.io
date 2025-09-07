@@ -35,5 +35,6 @@ jobs:
             git add data/reports/lighthouse.json
             git commit -m "chore(autonomy): update lighthouse summary"
             git push
+
           fi
           fi

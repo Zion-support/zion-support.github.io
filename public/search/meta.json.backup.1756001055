@@ -53,6 +53,15 @@
     "route": "/404",
     "title": "",
     "h1": "404 - Page Not Found"
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+  },
+    "title": "",
+    "h1": "404 - Page Not Found"  },
+    "title": "",
+    "h1": "404 - Page Not Found"  },
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   {
     "route": "/500",
     "title": "",
@@ -75,14 +84,16 @@
   },
   {
     "route": "/about",
+<<<<<<< HEAD
+<<<<<<< HEAD
+    "title": "About Us - Zion Tech Group | AI-Powered Technology Solutions",
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
     "title": "About Us - Zion Tech Group | AI-Powered Technology Solutions",
     "h1": "About Zion Tech Group"
     "title": "About Us - Zion Tech Group | AI-Powered Technology Solutions",    "h1": "About Zion Tech Group"
     "title": "About Us - Zion Tech Group | AI-Powered Technology Solutions",    "h1": "About Zion Tech Group"
-    "title": "About Us - Zion Tech Group | AI-Powered Technology Solutions",
-    "h1": "About Zion Tech Group"
-    "title": "About Us - Zion Tech Group | AI-Powered Technology Solutions",    "h1": "About Zion Tech Group"
-    "title": "About Us - Zion Tech Group | AI-Powered Technology Solutions",    "h1": "About Zion Tech Group"
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   },
   {
     "route": "/agency-dashboard",
@@ -251,14 +262,16 @@
   },
   {
     "route": "/case-studies",
+<<<<<<< HEAD
+<<<<<<< HEAD
+    "title": "Case Studies - Zion Tech Group | Client Success Stories & AI Implementations",
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
     "title": "Case Studies - Zion Tech Group | Client Success Stories & AI Implementations",
     "h1": "Case Studies"
     "title": "Case Studies - Zion Tech Group | Client Success Stories & AI Implementations",    "h1": "Case Studies"
     "title": "Case Studies - Zion Tech Group | Client Success Stories & AI Implementations",    "h1": "Case Studies"
-    "title": "Case Studies - Zion Tech Group | Client Success Stories & AI Implementations",
-    "h1": "Case Studies"
-    "title": "Case Studies - Zion Tech Group | Client Success Stories & AI Implementations",    "h1": "Case Studies"
-    "title": "Case Studies - Zion Tech Group | Client Success Stories & AI Implementations",    "h1": "Case Studies"
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   },
   {
     "route": "/changelog",
@@ -302,8 +315,25 @@
   },
   {
     "route": "/contact",
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
   },
     "h1": "Cookie Policy"  },
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+    "title": "Contact Us - Zion Tech Group | Get Started with Revolutionary Micro SaaS Services",
+    "h1": "Let's Transform Your Business"
+  },
+  {
+    "route": "/cookies",
+    "title": "Cookie Policy - Zion Tech Group | Cookie Usage & Management",
+    "h1": "Cookie Policy"
+  },
+    "h1": "Cookie Policy"  },
+    "h1": "Cookie Policy"  },
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   {
     "route": "/cutting-edge-pricing-2025",
     "title": "Cutting-Edge Pricing 2025 - Zion Tech Group | Future Technology Solutions",
@@ -375,11 +405,290 @@
     "h1": "Enhanced Services Showcase"
   },
   {
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     "route": "/explore",
     "title": "Explore Technology Categories | Zion Tech Group",
     "h1": "Explore Technology Categories"
   },
   {
+<<<<<<< HEAD
+>>>>>>> origin/cursor/website-audit-and-enhancement-7c0f
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+    "route": "/expo",
+    "title": "",
+    "h1": ""
+  },
+  {
+    "route": "/favorites",
+    "title": "Favorites — Zion AI Marketplace",
+    "h1": "Saved Talent"
+  },
+  {
+    "route": "/features.page",
+    "title": "",
+    "h1": "Features"
+  },
+  {
+    "route": "/holographic-ai-communication-platform",
+    "title": "Holographic AI Communication Platform - Zion Tech Group",
+    "h1": ""
+  },
+  {
+    "route": "/iam-access-review",
+    "title": "{service.name} - Zion Tech Group",
+    "h1": ""
+  },
+  {
+    "route": "/incident-automation-suite",
+    "title": "{service.name} - Zion Tech Group",
+    "h1": ""
+  },
+  {
+    "route": "/incubator",
+    "title": "",
+    "h1": "Zion Incubator"
+  },
+  {
+    "route": "/index-enhanced",
+    "title": "",
+    "h1": ""
+  },
+  {
+    "route": "/index.page",
+    "title": "",
+    "h1": ""
+  },
+  {
+    "route": "/",
+    "title": "Zion Tech Group — Leading-Edge Technology Solutions & Autonomous Innovation Platform",
+    "h1": "Zion Tech Group"
+  },
+  {
+    "route": "/innovative-services-showcase-2025",
+    "title": "Innovative Services Showcase 2025 | Zion Tech Group",
+    "h1": ""
+  },
+  {
+    "route": "/innovative-services-showcase",
+    "title": "Innovative Services Showcase - Zion Tech Group | Cutting-Edge Technology",
+    "h1": ""
+  },
+  {
+    "route": "/innovative-services",
+    "title": "Innovative Micro SAAS Services - Zion Tech Group",
+    "h1": "Revolutionary Innovation"
+  },
+  {
+    "route": "/investors",
+    "title": "Investors | Zion Tech Group",
+    "h1": "Investors"
+  },
+  {
+    "route": "/iot-platforms",
+    "title": "",
+    "h1": "IoT Platforms"
+  },
+  {
+    "route": "/json-formatter",
+    "title": "JSON Formatter - Zion Tech Group",
+    "h1": "JSON Formatter"
+  },
+  {
+    "route": "/leadership",
+    "title": "Leadership | Zion Tech Group",
+    "h1": "Leadership"
+  },
+  {
+    "route": "/locations",
+    "title": "Locations | Zion Tech Group",
+    "h1": "Locations"
+  },
+  {
+    "route": "/market-pricing-2026",
+    "title": "Zion Tech Group - 2026 Market Pricing & Competitive Analysis | 1500+ Solutions",
+    "h1": ""
+  },
+  {
+    "route": "/market-pricing",
+    "title": "Market Pricing & Competitor References | Zion Tech Group",
+    "h1": "Market Pricing & References"
+  },
+  {
+    "route": "/market-research",
+    "title": "Market Research & Industry Insights | Zion Tech Group",
+    "h1": "Comprehensive Market Research & Industry Insights"
+  },
+  {
+    "route": "/mdm-mobile-device-management",
+    "title": "{service.name} - Zion Tech Group",
+    "h1": ""
+  },
+  {
+    "route": "/metaverse-ai-development-platform",
+    "title": "{service.name} - Zion Tech Group",
+    "h1": ""
+  },
+  {
+    "route": "/micro-saas-services",
+    "title": "Micro SaaS Services | Zion Tech Group - Professional Business Solutions",
+    "h1": "Professional Micro SaaS Solutions"
+  },
+  {
+    "route": "/micro-saas",
+    "title": "Micro SaaS Services | Zion Tech Group - Specialized Business Solutions",
+    "h1": "Micro SaaS Services"
+  },
+  {
+    "route": "/mobile-launch.page",
+    "title": "",
+    "h1": ""
+  },
+  {
+    "route": "/mobile-launch",
+    "title": "Zion Mobile App — iOS & Android",
+    "h1": "Zion App"
+  },
+  {
+    "route": "/news",
+    "title": "News & Updates - Zion Tech Group | Latest Technology Insights & Company Updates",
+    "h1": "News & Press"
+  },
+  {
+    "route": "/notifications",
+    "title": "",
+    "h1": ""
+  },
+  {
+    "route": "/open-app.page",
+    "title": "",
+    "h1": ""
+  },
+  {
+    "route": "/open-app",
+    "title": "",
+    "h1": ""
+  },
+  {
+    "route": "/partners",
+    "title": "Partners | Zion Tech Group",
+    "h1": "Partners"
+  },
+  {
+    "route": "/password-checker",
+    "title": "Password Strength Checker - Zion Tech Group",
+    "h1": "Password Strength Checker"
+  },
+  {
+    "route": "/performance-optimization-sre",
+    "title": "{service.name} - Zion Tech Group",
+    "h1": ""
+  },
+  {
+    "route": "/pricing-2025",
+    "title": "2025 Pricing & Services — Zion Tech Group",
+    "h1": "2025 Pricing & Services"
+  },
+  {
+    "route": "/pricing-comparison",
+    "title": "Pricing Comparison - Zion Tech Group | How We Stack Up Against the Competition",
+    "h1": "How We Compare to the Competition"
+  },
+  {
+    "route": "/pricing",
+    "title": "Revolutionary 2029 Technology Pricing | Zion Tech Group",
+    "h1": ""
+  },
+  {
+    "route": "/privacy",
+    "title": "Privacy Policy - Zion Tech Group | Data Protection & Privacy",
+    "h1": "Privacy Policy"
+  },
+  {
+    "route": "/products",
+    "title": "Products - Placeholder",
+    "h1": "Products"
+  },
+  {
+    "route": "/quantum-ai-brain-computer-interface",
+    "title": "{service.name} - Zion Tech Group",
+    "h1": ""
+  },
+  {
+    "route": "/quantum-ai-cognitive",
+    "title": "{service.name} - Zion Tech Group",
+    "h1": "{service.name}"
+  },
+  {
+    "route": "/quantum-ai-neural-network-platform",
+    "title": "",
+    "h1": "Quantum AI Neural Network Platform 2045"
+  },
+  {
+    "route": "/quantum-internet-security-platform",
+    "title": "{service.name} - Zion Tech Group",
+    "h1": ""
+  },
+  {
+    "route": "/quantum-secure-cloud-infrastructure",
+    "title": "",
+    "h1": "Quantum-Secure Cloud Infrastructure 2045"
+  },
+  {
+    "route": "/quantum-trading-algorithm",
+    "title": "Quantum Trading Algorithm Pro | Zion Tech Group",
+    "h1": ""
+  },
+  {
+    "route": "/rag-evaluation-lab",
+    "title": "",
+    "h1": "RAG Evaluation Lab"
+  },
+  {
+    "route": "/reports",
+    "title": "Research Reports - Zion Tech Group | Industry Analysis & Technology Insights",
+    "h1": ""
+  },
+  {
+    "route": "/request-to-hire",
+    "title": "",
+    "h1": "Thanks!"
+  },
+  {
+    "route": "/resources",
+    "title": "",
+    "h1": "Resources"
+  },
+  {
+    "route": "/revolutionary-2028-pricing",
+    "title": "2028 Revolutionary Pricing - Zion Tech Group",
+    "h1": ""
+  },
+  {
+    "route": "/revolutionary-services",
+    "title": "Revolutionary Micro SaaS Services | Zion Tech Group - Quantum AI, Autonomous Systems, Space Technology",
+    "h1": ""
+  },
+  {
+    "route": "/saas-marketplace",
+    "title": "SaaS Marketplace - Zion Tech Group",
+    "h1": "SaaS Marketplace"
+  },
+  {
+    "route": "/salary-insights",
+    "title": "",
+    "h1": "Salary Insights"
+  },
+  {
+    "route": "/secrets-rotation-automation",
+  {    "route": "/secrets-rotation-automation",
+  {    "route": "/secrets-rotation-automation",
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     "title": "",
     "h1": "Secrets Rotation Automation"
   },
@@ -405,8 +714,12 @@
   },
   {
     "route": "/services",
+<<<<<<< HEAD
+<<<<<<< HEAD
     "title": "Revolutionary 2029 Technology Services | Zion Tech Group",
     "h1": ""
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
     "title": "Revolutionary 2029 Technology Services | Zion Tech Group",
     "h1": ""
   },
@@ -414,6 +727,7 @@
     "h1": ""  },
     "title": "Revolutionary 2029 Technology Services | Zion Tech Group",
     "h1": ""  },
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   {
     "route": "/site-health",
     "title": "Site Health — A11y, Performance, Links",
@@ -422,14 +736,16 @@
   {
     "route": "/sitemap",
     "title": "Sitemap | Zion Tech Group",
+<<<<<<< HEAD
+<<<<<<< HEAD
+    "h1": "Sitemap"
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
     "h1": "Sitemap"
   },
     "h1": "Sitemap"  },
     "h1": "Sitemap"  },
-    "h1": "Sitemap"
-  },
-    "h1": "Sitemap"  },
-    "h1": "Sitemap"  },
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   {
     "route": "/soc2-compliance-automation",
     "title": "",
@@ -556,11 +872,19 @@
     "h1": "{service.name}"
   },
   {
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
+=======
     "route": "/services/ai-autonomous-business-manager",
     "title": "AI Autonomous Business Manager - Zion Tech Group | Autonomous Business Operations",
     "h1": "AI Autonomous Business Manager"
   },
   {
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     "route": "/services/ai-model-development-chat",
     "title": "AiModelDevelopmentChat - Zion Tech Solutions",
     "h1": "AiModelDevelopmentChat"
@@ -3715,4 +4039,8 @@
     "title": "",
     "h1": "Founder Course: Launch Your Zion Instance"
   }
+<<<<<<< HEAD
 ]
+=======
+]
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

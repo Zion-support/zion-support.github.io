@@ -1,8 +1,10 @@
-import React from 'react';'
-import Image from 'next/image';'
-interface OptimizedImageProps  {"src": string;
-  }
-  "alt": string;
+import Image from 'next/image';
+import { useState } from 'react';
+
+interface ImageOptimizerProps {
+  src: string;
+interface OptimizedImageProps  {src: string;
+  alt: string;
   width?: number;
   height?: number;
   className?: string;
@@ -10,9 +12,6 @@ interface OptimizedImageProps  {"src": string;
   quality?: number;
   placeholder?: 'blur' | 'empty';'
   blurDataURL?: string;
-}const "OptimizedImage": React.FC<OptimizedImageProps> = ({src,alt,width = 800,height = 600,className = '',priority = false,quality = 85,placeholder = 'blur',blurDataURL = '"data":image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAIAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWGRkqGx0f/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRkf/aAAwDAQACEQMRAD8AltJagyeH0AthI5xdrLcNM91BF5pX2HaH9bcfaSXWGaRmknyJckliyjqTzSlT54b6bk+h0R//2Q==';'
-}) => {return (<Image;
-
 }
 
 const "OptimizedImage": React.FC<OptimizedImageProps> = ({ src,alt,width = 800,height = 600,className = '',priority = false,quality = 85,placeholder = 'blur',blurDataURL = '"data":image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAIAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWGRkqGx0f/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRkf/aAAwDAQACEQMRAD8AltJagyeH0AthI5xdrLcNM91BF5pX2HaH9bcfaSXWGaRmknyJckliyjqTzSlT54b6bk+h0R//2Q==';'
@@ -22,9 +21,8 @@ const "OptimizedImage": React.FC<OptimizedImageProps> = ({ src,alt,width = 800,h
   const defaultBlurDataURL = 'data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAABAAEDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAUEAEAAAAAAAAAAAAAAAAAAAAA/8QAFQEBAQAAAAAAAAAAAAAAAAAAAAX/xAAUEQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIRAxEAPwCdABmX/9k=';
 
 }
-
-
-return (<Image;
+}const OptimizedImage: React.FC<OptimizedImageProps> = ({src,alt,width = 800,height = 600,className = '',priority = false,quality = 85,placeholder = 'blur',blurDataURL = 'data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAIAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWGRkqGx0f/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRkf/aAAwDAQACEQMRAD8AltJagyeH0AthI5xdrLcNM91BF5pX2HaH9bcfaSXWGaRmknyJckliyjqTzSlT54b6bk+h0R//2Q==';
+}) => {return (<Image;
       src={src}
       alt={alt}
       width={width}
@@ -34,10 +32,8 @@ return (<Image;
       quality={quality}
       placeholder={placeholder}
       blurDataURL={blurDataURL}
-      sizes="(max-"width": 768px) 100vw, (max-"width": 1200px) 50vw, 33vw";"
-      style={{"objectFit": 'cover'}}' />;
+      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw";
+      style={{objectFit: 'cover',}}
+    />;
   )}export default OptimizedImage;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
   )}export default OptimizedImage;
->>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422

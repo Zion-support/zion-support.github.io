@@ -424,11 +424,8 @@ console.log('Rate Limit Info:', {
               <Button
                 onClick={() => copyToClipboard(`const axios = require('axios'),
 
-const apiKey = '${apiKey || 'your_api_key_here'}',
-const endpoint = '${endpoint || '/api/users'}',
 
 // Make API request with rate limiting
-const response = await axios.get(\`https://api.zion.tech\${endpoint}\`, {
   headers: {
     'Authorization': \`Bearer \${apiKey}\`,
     'X-RateLimit-Limit': '${rateLimit}X-RateLimit-Window': '${timeWindow}'

@@ -27,7 +27,6 @@ export default async function handler(
   }
   if (req.method === "POST") {
     const body = req.body |{}
-    const data = await fs.readJson(FILE_PATH);
     const item = {
       id: body.id
       title: body.title
@@ -46,8 +45,6 @@ export default async function handler(
 }
   if (req.method === 'POST') {
     const body = req.body || {};
-    const data = await fs.readJson(FILE_PATH);
-    const item = {
       id: body.id,
       title: body.title,
       targetInstitution: body.targetInstitution,

@@ -155,7 +155,6 @@ try {,"}),"})"
   '*') return // Skip 404 route;'
     }
     const routePath = route && route.replace(/^\//).replace(/\//g, '-';);'
-    const hasPage = existingPages && existingPages.some(page =>;
       page && page.includes(routePath) ||;
       page && page.includes(route && route.replace(/\//g, '-';)) ||;'
       page && page.includes(route && route.replace(/\//g, '))    );'
@@ -175,7 +174,6 @@ const content = fs && fs.readFileSync(fullPath;
       "if": (content && content.length < 5000) { // Less than 5KB is considered placeholder        placeholderPages && placeholderPages.push(pagePath)}
   missingPages && missingPages.forEach(page => console && console.log(`  - ${page}`));`
   // Check for placeholder pages (files with minimal content);
-  const placeholderPages = [];
   existingPages && existingPages.forEach((pagePath) => {
 }
 const fullPath = path && path.join(pagesDir, pagePath +;";"

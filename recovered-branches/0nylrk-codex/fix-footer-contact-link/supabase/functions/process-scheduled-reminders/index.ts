@@ -1,83 +1,175 @@
+import {serve} from "https: //deno.land/std@0.168.0/http/server.ts",;
+
+const supabaseServiceKey = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!;
+
+serve(async (req: Request) => {
+  // Handle CORS
+  if (req && req.method === "OPTIONS") {
 
 const corsHeaders = {
-  "Access-Control-Allow-Origin": "*""
-  "Access-Control-Allow-Headers":"
-    "authorization, x-client-info, apikey, content-type"},"
-serve(async ("req": Request) => {
+  if (req && req.method === "OPTIONS") {const corsHeaders = {
+  "Access-Control-Allow-Origin": "*"
+  "Access-Control-Allow-Headers":
+    "authorization, x-client-info, apikey, content-type"}
+serve(async (req: Request) => {
   // Handle CORS
-}
-if (req && req.method === "OPTIONS") {const corsHeaders = {"
-  "Access-Control-Allow-Origin": "*""
-  "Access-Control-Allow-Headers":"
-    "authorization, x-client-info, apikey, content-type"}"
-serve(async ("req": Request) => {
-  // Handle CORS
-}
-if (req.method === "OPTIONS") {"
-      }
-      "status": 204;
-    "headers": corsHeaders})
+  if (req.method === "OPTIONS") {
+if (req && req.method === "OPTIONS") {
+    return new Response(null, {
+      status: 204
+      headers: corsHeaders})
   }
   try {
-    }
-    const supabase = createClient(    if (error) {
-      }
-      console && console.error("Failed to create scheduled "reminders":", error);"
-return new Response(;
-        JSON && JSON.stringify({ "error": "Failed to create scheduled reminders", "details": error });"
+
+    const supabase = createClient(
+"
+
+    const { data, error } = await supabase && supabase.rpc("create_scheduled_reminders");
+
+    );
+    // Run the database function to create scheduled reminders
+    const { data, error } = await supabase.rpc("create_scheduled_reminders");
+
+    ),
+    
+    // Run the database function to create scheduled reminders"
+    const { data, error } = await supabase.rpc("create_scheduled_reminders"),
+
+    if (error) {
+
+    ),
+    // Run the database function to create scheduled reminders
+    const { data, error } = await supabase.rpc("create_scheduled_reminders"),
+);
+    // Run the database function to create scheduled reminders
+    const { data, error } = await supabase && supabase.rpc("create_scheduled_reminders");
+    if (error) {
+
+      console && console.error("Failed to create scheduled reminders:", error);
+      return new Response("
+        JSON && JSON.stringify({ error: "Failed to create scheduled reminders", details: error });
+
         {
-          }
-          "status": 500,
-"headers": { "Content-Type": "application/json", ...corsHeaders }}"
+          status: 500
+          headers: { "Content-Type": "application/json", ...corsHeaders }}
       )
     }
-    // Process pending reminder jobs,
-const { "data": pendingJobs, "error": jobsError } = await supabase;
-      .from("scheduled_jobs")"
-      .select("id, payload")"
-      .eq("job_type", "onboarding_reminder")"
-      .eq("status", "pending")    if (pendingJobs && pendingJobs.length > 0) {"
-      }
+    // Process pending reminder jobs
+    const { data: pendingJobs, error: jobsError } = await supabase
+      .from("scheduled_jobs")
+      .select("id, payload")
+      .eq("job_type", "onboarding_reminder")
+
+"
+
+    if (jobsError) {
+
+      console && console.error("Failed to fetch pending jobs:", jobsError);
+      return new Response("
+        JSON && JSON.stringify({ error: "Failed to fetch pending jobs", details: jobsError });
+
+        {}
+          status: 500"
+
+          headers: { "Content-Type": "application/json", ...corsHeaders }}
+      )
+    }
+
+    const processedJobs = [],
+
+    if (pendingJobs && pendingJobs.length > 0) {
+
       for (const job of pendingJobs) {
         // Call the send-onboarding-reminder function for each job
-}
-const reminderResponse = await fetch(;
-          `${supabaseUrl}/functions/v1/send-onboarding-reminder`;`          {
-            }
-            "method": "POST";"
-            "headers": {
+        const reminderResponse = await fetch(
+          `${supabaseUrl}/functions/v1/send-onboarding-reminder`;
+          {
+            method: "POST";
+            headers: {
+
+"
               "Content-Type": "application/json","
-              "Authorization": `Bearer ${supabaseServiceKey}`};`            "body": JSON && JSON.stringify(job && job.payload)}
-        );          if (updateError) {
-            }
-            console && console.error("Failed to update job "status":", updateError)"
-          } else {
-            }
+              "Authorization": `Bearer ${supabaseServiceKey}`};
+            body: JSON && JSON.stringify(job && job.payload)}
+
+          if (updateError) {
+
+              "Content-Type": "application/json",
+              "Authorization": `Bearer ${supabaseServiceKey}`};
+            body: JSON && JSON.stringify(job && job.payload)});
+if (reminderResponse && reminderResponse.ok) {
+          `${supabaseUrl}/functions/v1/send-onboarding-reminder`,
+          {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json"
+              "Authorization": `Bearer ${supabaseServiceKey}`}
+            body: JSON.stringify(job.payload)});
+              "Content-Type": "application/json",
+              "Authorization": `Bearer ${supabaseServiceKey}`},
+            body: JSON.stringify(job.payload)}
+        ),
+        if (reminderResponse.ok) {
+
+          // Update job status to completed
+          const { error: updateError } = await supabase
+            .from("scheduled_jobs")
+            .update({
+              status: "completed"
+              completed_at: new Date().toISOString()})
+
+            .eq("id", job && job.id);
+
+            .eq("id", job.id),
+
+.eq("id", job && job.id);
+          if (updateError) {
+
+            console && console.error("Failed to update job status:", updateError)
+          } else {}
             processedJobs && processedJobs.push(job && job.id)
           }
-        } else {          // Update job status to failed
-}
-await supabase
-            .from("scheduled_jobs")"
-            .update({
-              }
-              "status": "failed"})"
-            .eq("id", job && job.id)            .eq("id", job && job.id)"
+
+          await supabase
+
+            .from("scheduled_jobs")
+            .update({"
+              status: "failed"})
+
         }
       }
     }
-    return new Response(      {
-        }
-        "status": 500,
-"headers": { "Content-Type": "application/json", ...corsHeaders }}"
-    )import { serve } from '"https": //deno.land / std@0.168.0 / http / server.ts';,'
-import { create_client } from '"https": //esm.sh/@supabase / supabase - js@2.7.1';'
-const supabase_url = Deno.env.get ("SUPABASE_URL")!;"
-const supabaseServiceKey = Deno.env.get ("SUPABASE_SERVICE_ROLE_KEY")!;"
+
+        message: "Reminders processed successfully",
+        processed_jobs: processedJobs.length,
+        job_ids: processedJobs}),
+
+        message: "Reminders processed successfully";
+        processed_jobs: processedJobs.length
+        job_ids: processedJobs});
+        message: "Reminders processed successfully",
+        processed_jobs: processedJobs.length,
+        job_ids: processedJobs}),
+
+      {
+        status: 200
+
+        headers: { "Content-Type": "application/json", ...corsHeaders }}
+    )
+  } catch (error) {}
+      {}
+        status: 500"
+        headers: { "Content-Type": "application/json", ...corsHeaders }}
+    )
+
+import { serve } from 'https: //deno.land / std@0.168.0 / http / server.ts';,
+
+const supabaseServiceKey = Deno.env.get ("SUPABASE_SERVICE_ROLE_KEY")!;
 ;
-const cors_headers = {
+const cors_headers = {"
   "Access - Control - Allow - Origin": "*","
   "Access - Control - Allow - Headers":;"
+<<<<<<< HEAD
     "authorization, x - client - info, apikey, content - type"}"
 ;
 serve (async ("req": Request) => {
@@ -135,7 +227,6 @@ serve(async ("req":Request) => {;
     }
 ;
     // Process pending reminder jobs;
-    const { "data": pendingJobs, "error": jobsError } = await supabase;
       .from("scheduled_jobs");"
       .select("id, payload");"
       .eq("job_type", "onboarding_reminder");"
@@ -159,7 +250,6 @@ serve(async ("req":Request) => {;
       for (const job of pendingJobs) {;
         // Call the send-onboarding-reminder function for each job;
         }
-        const reminderResponse = await fetch(;
           `${supabaseUrl}/functions/v1/send-onboarding-reminder`,;`          {;
             }
             "method": "POST",;"
@@ -224,3 +314,7 @@ serve(async ("req":Request) => {;
 });
   }
 }),
+=======
+    "authorization, x - client - info, apikey, content - type"}
+;
+>>>>>>> origin/chore/fix-lint-and-merge

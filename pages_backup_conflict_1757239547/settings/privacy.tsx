@@ -28,7 +28,6 @@ export default function PrivacySettingsPage() {
       method: 'POST'
       headers: { 'Content-Type': 'application/json' }
       body: JSON.stringify({ userId, optOut })})
-    const json = await res.json()
     if (res.ok) setMessage('Saved')
     else setMessage(json.error |'Save failed')
     setLoading(false)

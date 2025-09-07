@@ -45,7 +45,6 @@ import { Card, CardContent, CardFooter, CardHeader, CardTitle } from '@/componen
 origin/cursor/automate-test-improve-and-merge-code-2533
 import { Rocket, FileText, Users, Calendar, Eye, MessageSquare } from 'lucide-react'
 
-import { cn } from '@/lib/utils';
 interface WizardStep {;
   title: string;
   description: string;
@@ -54,7 +53,6 @@ import { useState, useEffect } from 'react
 import { useRouter } from 'next/router
 import { useAuth } from '@/hooks/useAuth
 import { Button } from '@/components/ui/button
-import {
   // TODO: Implement
 }
   Card;
@@ -73,7 +71,6 @@ import {
 import { cn } from '@/lib/utils
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from '@/components/ui/card
 import { Rocket, FileText, Users, Calendar, Eye, MessageSquare } from 'lucide-react
-import { cn } from '@/lib/utils';
 interface WizardStep {;
   title: string;,
   description: string;
@@ -86,7 +83,6 @@ import { useState, useEffect } from 'react';
 import { use_router } from 'next / router';
 import { use_auth } from '@/hooks / use_auth';
 import { Button } from '@/components / ui / button';
-import {
 import { use_router } from 'next/router';
 import { use_auth } from '@/hooks/ use_auth';
 import { Button } from '@/components/ui/ button';
@@ -116,7 +112,6 @@ interface WizardStep {
 
 
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from '@/components/ui/ card';
-import { Rocket, FileText, Users, Calendar, Eye, MessageSquare } from 'lucide-react';
 interface WizardStep {
   // TODO: Implement
   icon: React.ReactNode;,
@@ -148,7 +143,6 @@ export function OnboardingWizard(): any ({;
   const router = useRouter(); // Changed from useNavigate to useRouter
   className,;)
 }: OnboardingWizardProps) {;
-  const [currentStep, setCurrentStep] = useState(0);
   const router = useRouter(); // Changed from useNavigate to useRouter;
 pr-12325
   const { user } = useAuth()
@@ -162,7 +156,6 @@ import { useRouter } from 'next/router',;
 import { useAuth } from '@/hooks/useAuth',;
 import { Button } from '@/components/ui/button',;
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from '@/components/ui/card',;
-import { Rocket, FileText, Users, Calendar, Eye, MessageSquare } from 'lucide-react';
 import { cn } from '@/lib/utils',;
 interface WizardStep {;
   title: string,;
@@ -262,9 +255,6 @@ export function OnboardingWizard({ type, onComplete, onSkip, className }:,  Onbo
           <div className="flex items-center justify-center flex-1">"
 
 export function OnboardingWizard({ type, onComplete, onSkip, className }: OnboardingWizardProps) {
-  const [currentStep, setCurrentStep] = useState(0),
-  const router = useRouter(), // Changed from useNavigate to useRouter
-  const { user } = useAuth(),
 
   // Define steps based on user type
   const clientSteps: WizardStep[] = [
@@ -412,7 +402,6 @@ export function OnboardingWizard({ type, onComplete, onSkip, className }: Onboar
 }
 
 export function OnboardingWizard({ type, onComplete, onSkip, className }: OnboardingWizardProps) {
-  const [currentStep, setCurrentStep] = useState(0);
   const router = null;
 origin/cursor/automate-test-improve-and-merge-code-2533
                   index === currentStep

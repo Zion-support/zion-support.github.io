@@ -1,13 +1,9 @@
-:pages/api/disputes/[id]/message.ts
-import type { NextApiRequest, NextApiResponse } from 'next';
-import { getDisputeById, upsertDispute } from '[^']*';
-import { parseUserFromRequest, ensureInvolvedOrAdmin } from '[^']*';
 import type { NextApiRequest, NextApiResponse } from "next";"
 import { getDisputeById, upsertDispute } from "../../../../utils/fsdb";
 
 import type { NextApiRequest, NextApiResponse } from "next";
 
-import { getDisputeById, upsertDispute } from "../../../../utils/fsdb";
+<<<<<<< HEAD
 :pages/api/disputes/[id]/message.ts
 import {
   parseUserFromRequest
@@ -17,6 +13,9 @@ export default async function handler(
   req: NextApiRequest
   res: NextApiResponse
 ) {
+=======
+import { getDisputeById, upsertDispute } from "../../../../utils/fsdb";
+>>>>>>> origin/chore/fix-lint-and-merge
 import {}
   parseUserFromRequest,;
   ensureInvolvedOrAdmin,;"
@@ -54,7 +53,6 @@ export default async function handler(
   if (typeof id !== "string")"
     return res.status(400).json({ error: "Invalid id" });
 
-  const user = parseUserFromRequest(req);
   if (req.method === "POST") {
     const dispute = await getDisputeById(id);
     if (!dispute) return res.status($1).json({ $2 });
@@ -84,12 +82,9 @@ export default async function handler(
       createdAt: now;
     });
 
-  const { id } = req.query;
   if (typeof id !== "string")
     return res.status(400).json({ error: "Invalid id" });
-  const user = parseUserFromRequest(req);
   if (req.method === "POST") {
-    const dispute = await getDisputeById(id);
     if (!dispute) return res.status($1).json({ $2 });
     try {
       ensureInvolvedOrAdmin(user, dispute.clientUserId, dispute.talentUserId);
@@ -103,18 +98,15 @@ export default async function handler(
     dispute.updatedAt = now;
     await upsertDispute(dispute);
     return res.status(201).json({ dispute });
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
   }
 
+<<<<<<< HEAD
 :pages/api/disputes/[id]/message.ts
   res.setHeader("Allow", "POST");
   return res.status(405).end("Method Not Allowed");
+=======
 import type { NextApiRequest, NextApiResponse } from 'next';
+>>>>>>> origin/chore/fix-lint-and-merge
 export default function handler() { return null; }
 import type { NextApiRequest, NextApiResponse } from 'next';'
 import { getDisputeById, upsertDispute } from '../../../../utils/fsdb';'

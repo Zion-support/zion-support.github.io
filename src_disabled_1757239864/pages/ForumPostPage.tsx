@@ -138,7 +138,6 @@ export default function ForumPostPage() {
       toast({
         title: "Authentication required",
         description: "Please sign in to vote on posts"}),
-      const returnTo = encodeURIComponent(router.asPath);
       router.push(`/auth/login?returnTo=${returnTo}`);
       return
     }
@@ -154,7 +153,6 @@ export default function ForumPostPage() {
       toast({
         title: "Authentication required",
         description: "Please sign in to reply"}),
-      const returnTo = encodeURIComponent(router.asPath);
       router.push(`/auth/login?returnTo=${returnTo}`);
       return
     }
@@ -211,7 +209,6 @@ export default function ForumPostPage() {
       toast({
         title: "Authentication required",
         description: "Please sign in to report content"}),
-      const returnTo = encodeURIComponent(router.asPath);
       router.push(`/auth/login?returnTo=${returnTo}`);
       return
     }

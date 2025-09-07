@@ -111,8 +111,6 @@ pr-12325
                       <span className="text-primary font-semibold">JOB</span>;
                     </div>;
 
-import { Bookmark, BookmarkCheck, ChevronRight, MapPin, Clock, DollarSign } from 'lucide-react'
-import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
 
 interface BrowseItem {}
   id: string,

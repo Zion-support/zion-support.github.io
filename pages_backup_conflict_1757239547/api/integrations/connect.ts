@@ -58,7 +58,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     lastSyncAt: undefined
   };
   res.status(200).json({ connection });
-import type { NextApiRequest, NextApiResponse } from 'next';
 import { writeState } from '../../../lib/integrations/fileStore';
 import { getProviderById } from '../../../lib/integrations/registry';
 import { ProviderConnection, SyncRules } from '../../../lib/integrations/types';
@@ -81,7 +80,6 @@ export default function handler(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-  const now = Date.now();
   const updated = writeState(state => {;
     const existingIdx = state.connections.findIndex(c => c.providerId === providerId);
     const connection: ProviderConnection = {;

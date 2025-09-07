@@ -60,7 +60,6 @@ export default function FraudAdminPage() {
         'Content-Type': 'application/json'
         ...(adminToken ? { 'x-admin-token': adminToken } : {})}
       body: JSON.stringify({ fraudId: id, action })})
-    const json = await res.json()
     if (res.ok) fetchItems()
     else alert(json.error |'Action failed')
   }

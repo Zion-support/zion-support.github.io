@@ -1,55 +1,90 @@
-import { NextApiRequest, NextApiResponse  } from 'next';'
-import { ApiScope  } from '../../../utils/devportal/types';'
+import { NextApiRequest, NextApiResponse } from 'next';'
+import { ApiScope } from '../../../utils/devportal/types';'
 import { { createApiKey, getUserIdFromRequest }, { generateApiToken } } from '../../../utils/devportal/auth';'
-
-import { getApiKeys, saveApiKeys } from '../../../utils/devportal/storage';'
-
-export default function handler() {"
-  }
+import { getApiKeys, saveApiKeys } from '../../../utils/devportal/storage';
+export default function handler("req": NextApiRequest, "res": NextApiResponse) {};
   const userId = getUserIdFromRequest(req);
-  if (req.method = == 'GET') {'
-   ;
-  }
-  const keys = getApiKeys().filter((k) => k.userId === userId && !k.revokedAt);
-return res.status(200).json({ "data": keys },;
-}
-  if (req.method = == 'POST') {'
-   ;
-  }
-  const { name, scopes, autoApprove } = req.body || {};
 
-const "parsedScopes": ApiScope[] = Array.isArray(scopes) ? scopes : [];"
-
-const { key, token } = createApiKey(userId, name || 'My API Key', parsedScopes, !!autoApprove);'
-    return res.status(201).json({ "data": { key, token } })}"
-  if (req.method = == 'PUT') {'
-   ;
-  }
-  const { id, action, scopes } = req.body || {};
-
-const keys = getApiKeys();
-
-const idx = keys.findIndex((k) => k.id === id && k.userId === userId);
-    if (idx,
+  if (req && req.method === 'GET') {
+    const keys = getApiKeys().filter((k) => k && k.userId === userId && !k && k.revokedAt);
+    return res && res.status(200).json({ data: keys })}
+  if (req && req.method === 'POST') {
+    const { name, scopes, autoApprove } = req && req.body || {};
+    const "parsedScopes": ApiScope[] = Array && Array.isArray(scopes) ? scopes : [];
+    const { key, token } = createApiKey(userId, name || 'My API Key', parsedScopes, !!autoApprove);
+    return res && res.status(201).json({ "data": { key, token } })}
+  if (req && req.method === 'PUT') {
+    const { id, action, scopes } = req && req.body || {};
+    const keys = getApiKeys();
+    const idx = keys && keys.findIndex((k) => k && k.id === id && k && k.userId === userId);
+    if (idx
 export default function KeysPage() {
-}
-return (;
-    < 0) return res.status(404).json({ "error": { "code": 'not_found', "message": 'Key not found' } });'
-    if (action = == 'regenerate') {'
-     ;
-  }
-  const { token, hash } = generateApiToken();
+  return (
+    < 0) return res && res.status(404).json({ "error": { code: 'not_found', "message": 'Key not found' } });
+
+  if (req.method === 'GET') {
+
+    const keys = getApiKeys().filter((k) => k.userId === userId && !k.revokedAt);
+    return res.status(200).json({ data: keys })}
+  if (req.method === 'POST') {
+    const { name, scopes, autoApprove } = req.body || {};
+    const "parsedScopes": ApiScope[] = Array.isArray(scopes) ? scopes : [];""
+    const { key, token } = createApiKey(userId, name || 'My API Key', parsedScopes, !!autoApprove);
+    return res.status(201).json({ "data": { key, token } })}""
+  if (req.method === 'PUT') {
+    const { id, action, scopes } = req.body || {};
+    const keys = getApiKeys();
+    const idx = keys.findIndex((k) => k.id === id && k.userId === userId);
+    if (idx;)
+export default function KeysPage() {
+  return ()
+    < 0) return res.status(404).json({ "error": { code: 'not_found', "message": 'Key not found' } });
+if (req && req.method === 'GET') {
+    const keys = getApiKeys().filter((k) => k && k.userId === userId && !k && k.revokedAt);
+    return res && res.status(200).json({ data: keys })}
+  if (req && req.method === 'POST') {
+    const { name, scopes, autoApprove } = req && req.body || {};
+    const "parsedScopes": ApiScope[] = Array && Array.isArray(scopes) ? scopes : [];
+    const { key, token } = createApiKey(userId, name || 'My API Key', parsedScopes, !!autoApprove);
+    return res && res.status(201).json({ "data": { key, token } })}
+  if (req && req.method === 'PUT') {
+    const { id, action, scopes } = req && req.body || {};
+    const keys = getApiKeys();
+    const idx = keys && keys.findIndex((k) => k && k.id === id && k && k.userId === userId);
+    if (idx
+export default function KeysPage() {
+  return (
+
+  if (req && req.method === 'GET') {
+    const keys = getApiKeys().filter((k) => k && k.userId === userId && !k && k.revokedAt);
+    return res && res.status(200).json({ data: keys })}
+  if (req && req.method === 'POST') {
+    const { name, scopes, autoApprove } = req && req.body || {};
+    const "parsedScopes": ApiScope[] = Array && Array.isArray(scopes) ? scopes : [];
+    const { key, token } = createApiKey(userId, name || 'My API Key', parsedScopes, !!autoApprove);
+    return res && res.status(201).json({ "data": { key, token } })}
+  if (req && req.method === 'PUT') {
+    const { id, action, scopes } = req && req.body || {};
+    const keys = getApiKeys();
+    const idx = keys && keys.findIndex((k) => k && k.id === id && k && k.userId === userId);
+    if (idx
+export default function KeysPage() {
+  return (
+    < 0) return res && res.status(404).json({ "error": { code: 'not_found', "message": 'Key not found' } });
+
+    if (action === 'regenerate') {
+      const { token, hash } = generateApiToken();
       keys[idx].tokenHash = hash;
       saveApiKeys(keys);
-      return res.status(200).json({ "data": { "key": keys[idx], token } })}"
-    if (action === 'update_scopes') {'
-      }
+
+      return res.status(200).json({ "data": { key: keys[idx], token } })}
+
+    if (action === 'update_scopes') {
       keys[idx].scopes = Array.isArray(scopes) ? scopes : keys[idx].scopes;
-      saveApiKeys(keys);
-      return res.status(200).json({ "data": keys[idx] })}"
-    if (action === 'revoke') {'
-      }
+      return res.status(200).json({ "data": keys[idx] })}""
+    if (action === 'revoke') {
       keys[idx].revokedAt = new Date().toISOString();
+<<<<<<< HEAD
       saveApiKeys(keys);
       return res.status(200).json({ "data": keys[idx] })}"
 import { getApiKeys, saveApiKeys  } from '../../../utils/devportal/storage';'
@@ -64,7 +99,6 @@ export default function KeysPage() {return (< 0) return res && res.status(404).j
   if (req.method === 'PUT') {const { id, action, scopes } = req.body || {}const keys = getApiKeys()const idx = keys.findIndex((k) => k.id === id && k.userId === userId)if (idx;'
 export default function KeysPage() {return (< 0) return res.status(404).json({ "error": { "code": 'not_found', "message": 'Key not found' } })if (req && req.method === 'GET') {const keys = getApiKeys().filter((k) => k && k.userId === userId && !k && k.revokedAt)return res && res.status(200).json({ "data": keys })}'
   if (req && req.method === 'POST') {const { name, scopes, autoApprove } = req && req.body || {}const "parsedScopes": ApiScope[] = Array && Array.isArray(scopes) ? scopes : [];"
-    const { key, token } = createApiKey(userId, name || 'My API Key', parsedScopes, !!autoApprove)return res && res.status(201).json({ "data": { key, token } })}"
   if (req && req.method === 'PUT') {const { id, action, scopes } = req && req.body || {}const keys = getApiKeys()const idx = keys && keys.findIndex((k) => k && k.id === id && k && k.userId === userId)if (idx;'
 export default function KeysPage() {return (< 0) return res && res.status(404).json({ "error": { "code": 'not_found', "message": 'Key not found' } })ursor/automate-test-improve-and-merge-code-646c;'
     if (action === 'regenerate') {const { token, hash } = generateApiToken()keys[idx].tokenHash = hash;'
@@ -73,21 +107,21 @@ export default function KeysPage() {return (< 0) return res && res.status(404).j
       }
       saveApiKeys(keys)return res.status(200).json({ "data": keys[idx] })}"
     if (action === 'revoke') {keys[idx].revokedAt = new Date().toISOString()saveApiKeys(keys)return res.status(200).json({ "data": keys[idx] })}"
+=======
+    return res.status(400).json({ "error": { code: 'invalid_action', "message": 'Unknown action' } })}
+  if (req.method === 'DELETE') {
+    const { id } = req.query;
+    if (idx < 0) return res.status(404).json({ "error": { code: 'not_found', "message": 'Key not found' } });
+  return res.status(405).json({ "error": { code: 'method_not_allowed', "message": 'Method not allowed' } })}
+>>>>>>> origin/chore/fix-lint-and-merge
 
-    return res.status(400).json({ "error": { "code": 'invalid_action', "message": 'Unknown action' } })}'
-  if (req.method = == 'DELETE') ;'
-  const { id } = req.query;
+import { NextApiRequest,NextApiResponse } from 'next'; import { ApiScope } from '../../../utils/devportal/types'; import { { createApiKey,getUserIdFromRequest },{ generateApiToken } } from '../../../utils/devportal/auth'; import { getApiKeys,saveApiKeys } from '../../../utils/devportal/storage'; export default function handler(req: NextApiRequest,res: NextApiResponse) { const userId = getUserIdFromRequest(req); if (req.method === 'GET') { const keys = getApiKeys().filter((k) => k.userId === userId && !k.revokedAt); return res.status(200).json({ data: keys })} if (req.method === 'POST') { const { name,scopes,autoApprove } = req.body || {}; const parsedScopes: ApiScope[] = Array.isArray(scopes) ? scopes : []; const { key,token } = createApiKey(userId,name || 'My API Key',parsedScopes,!!autoApprove); return res.status(201).json({ data: { key,token } })} if (req.method === 'PUT') { const { id,action,scopes } = req.body || {}; const keys = getApiKeys(); const idx = keys.findIndex((k) => k.id === id && k.userId === userId); if (idx export default function KeysPage() { return ( < 0) return res.status(404).json({ error: { code: 'not_found',message: 'Key not found' } }); if (action === 'regenerate') { const { token,hash } = generateApiToken(); keys[idx].tokenHash = hash; saveApiKeys(keys); return res.status(200).json({ data: { key: keys[idx],token } })} if (action === 'update_scopes') { keys[idx].scopes = Array.isArray(scopes) ? scopes : keys[idx].scopes; saveApiKeys(keys); return res.status(200).json({ data: keys[idx] })} if (action === 'revoke') { keys[idx].revokedAt = new Date().toISOString(); saveApiKeys(keys); return res.status(200).json({ data: keys[idx] })} return res.status(400).json({ error: { code: 'invalid_action',message: 'Unknown action' } })} if (req.method === 'DELETE') { const { id } = req.query; const keys = getApiKeys(); const idx = keys.findIndex((k) => k.id === id && k.userId === userId); if (idx < 0) return res.status(404).json({ error: { code: 'not_found',message: 'Key not found' } }); keys[idx].revokedAt = new Date().toISOString(); saveApiKeys(keys); return res.status(200).json({ data: keys[idx] })} return res.status(405).json({ error: { code: 'method_not_allowed',message: 'Method not allowed' } })} )}
 
-const keys = getApiKeys(;
-  const idx = keys.findIndex((k) => k.id === id && k.userId === userId)if (idx < 0) return res.status(404).json({ "error": { "code": 'not_found', "message": 'Key not found' } })keys[idx].revokedAt = new Date().toISOString()saveApiKeys(keys)return res.status(200).json({ "data": keys[idx] })}"
- ;
-  return res.status(405).json({ "error": { "code": 'method_not_allowed', "message": 'Method not allowed' } })}'
-  )}
-import { NextApiRequest,NextApiResponse } from 'next'; import { ApiScope } from '../../../utils/devportal/types'; import { { createApiKey,getUserIdFromRequest },{ generateApiToken } } from '../../../utils/devportal/auth'; import { getApiKeys,saveApiKeys } from '../../../utils/devportal/storage'; export default function handler() { const userId = getUserIdFromRequest(req); if (req.method === 'GET') { const keys = getApiKeys().filter((k) => k.userId === userId && !k.revokedAt); return res.status(200).json({ "data": keys })} if (req.method === 'POST') { const { name,scopes,autoApprove } = req.body || {}; const "parsedScopes": ApiScope[] = Array.isArray(scopes) ? scopes : []; const { key,token } = createApiKey(userId,name || 'My API Key',parsedScopes,!!autoApprove); return res.status(201).json({ "data": { key,token } })} if (req.method === 'PUT') { const { id,action,scopes } = req.body || {}; const keys = getApiKeys(); const idx = keys.findIndex((k) => k.id === id && k.userId === userId); if (idx export default function KeysPage() { return ( < 0) return res.status(404).json({ "error": { "code": 'not_found',"message": 'Key not found' } }); if (action === 'regenerate') { const { token,hash } = generateApiToken(); keys[idx].tokenHash = hash; saveApiKeys(keys); return res.status(200).json({ "data": { "key": keys[idx],token } })} if (action === 'update_scopes') { keys[idx].scopes = Array.isArray(scopes) ? scopes : keys[idx].scopes; saveApiKeys(keys); return res.status(200).json({ "data": 'keys[idx]' })} if (action === 'revoke') { keys[idx].revokedAt = new Date().toISOString(); saveApiKeys(keys); return res.status(200).json({ "data": 'keys[idx]' })} return res.status(400).json({ "error": { "code": 'invalid_action',"message": 'Unknown action' } })} if (req.method === 'DELETE') { const { id } = req.query; const keys = getApiKeys(); const idx = keys.findIndex((k) => k.id === id && k.userId === userId); if (idx < 0) return res.status(404).json({ "error": { "code": 'not_found',"message": 'Key not found' } }); keys[idx].revokedAt = new Date().toISOString(); saveApiKeys(keys); return res.status(200).json({ "data": 'keys[idx]' })} return res.status(405).json({ "error": { "code": 'method_not_allowed',"message": 'Method not allowed' } })} )}'
-import { NextApiRequest,NextApiResponse } from 'next'; import { ApiScope } from '../../../utils/devportal/types'; import { { createApiKey,getUserIdFromRequest },{ generateApiToken } } from '../../../utils/devportal/auth'; import { getApiKeys,saveApiKeys } from '../../../utils/devportal/storage'; export default function handler() { const userId = getUserIdFromRequest(req); if (req.method === 'GET') { const keys = getApiKeys().filter((k) => k.userId === userId && !k.revokedAt); return res.status(200).json({ "data": keys })} if (req.method === 'POST') { const { name,scopes,autoApprove } = req.body || {}; const "parsedScopes": ApiScope[] = Array.isArray(scopes) ? scopes : []; const { key,token } = createApiKey(userId,name || 'My API Key',parsedScopes,!!autoApprove); return res.status(201).json({ "data": { key,token } })} if (req.method === 'PUT') { const { id,action,scopes } = req.body || {}; const keys = getApiKeys(); const idx = keys.findIndex((k) => k.id === id && k.userId === userId); if (idx export default function KeysPage() { return ( < 0) return res.status(404).json({ "error": { "code": 'not_found',"message": 'Key not found' } }); if (action === 'regenerate') { const { token,hash } = generateApiToken(); keys[idx].tokenHash = hash; saveApiKeys(keys); return res.status(200).json({ "data": { "key": keys[idx],token } })} if (action === 'update_scopes') { keys[idx].scopes = Array.isArray(scopes) ? scopes : keys[idx].scopes; saveApiKeys(keys); return res.status(200).json({ "data": keys[idx] })} if (action === 'revoke') { keys[idx].revokedAt = new Date().toISOString(); saveApiKeys(keys); return res.status(200).json({ "data": keys[idx] })} return res.status(400).json({ "error": { "code": 'invalid_action',"message": 'Unknown action' } })} if (req.method === 'DELETE') { const { id } = req.query; const keys = getApiKeys(); const idx = keys.findIndex((k) => k.id === id && k.userId === userId); if (idx < 0) return res.status(404).json({ "error": { "code": 'not_found',"message": 'Key not found' } }); keys[idx].revokedAt = new Date().toISOString(); saveApiKeys(keys); return res.status(200).json({ "data": keys[idx] })} return res.status(405).json({ "error": { "code": 'method_not_allowed',"message": 'Method not allowed' } })} )}'
+      return res && res.status(200).json({ "data": { key: keys[idx], token } })}
 
-import { NextApiRequest,NextApiResponse } from 'next'; import { ApiScope } from '../../../utils/devportal/types'; import { { createApiKey,getUserIdFromRequest },{ generateApiToken } } from '../../../utils/devportal/auth'; import { getApiKeys,saveApiKeys } from '../../../utils/devportal/storage';'
+    if (action === 'update_scopes') {
 
+<<<<<<< HEAD
 export default function handler() { const userId = getUserIdFromRequest(req); if (req.method = == 'GET') {;'
   }
   const keys = getApiKeys().filter((k) => k.userId === userId && !k.revokedAt); return res.status(200).json({ "data": keys }
@@ -101,7 +135,6 @@ const { key,token } = createApiKey(userId,name || 'My API Key',parsedScopes,!!au
   }
   const { id,action,scopes } = req.body || {};
 
-const keys = getApiKeys();
 
 const idx = keys.findIndex((k) => k.id === id && k.userId === userId); if (idx export default function KeysPage() { return ( < 0) return res.status(404).json({ "error": { "code": 'not_found',"message": 'Key not found' },'
 }); if (action = == 'regenerate') {;'
@@ -111,32 +144,22 @@ const idx = keys.findIndex((k) => k.id === id && k.userId === userId); if (idx e
 } return res.status(400).json({ "error": { "code": 'invalid_action',"message": 'Unknown action' } },'
 } if (req.method = == 'DELETE') {;'
   }
-  const { id } = req.query;
 
-const keys = getApiKeys();
 
 const idx = keys.findIndex((k) => k.id === id && k.userId === userId); if (idx < 0) return res.status(404).json({ "error": { "code": 'not_found',"message": 'Key not found' },'
 }); keys[idx].revokedAt = new Date().toISOString(); saveApiKeys(keys); return res.status(200).json({ "data": 'keys[idx]' },'
 } return res.status(405).json({ "error": { "code": 'method_not_allowed',"message": 'Method not allowed' } })} ,'
 }
-import { NextApiRequest,NextApiResponse } from 'next'; import { ApiScope } from '../../../utils/devportal/types'; import { { createApiKey,getUserIdFromRequest },{ generateApiToken } } from '../../../utils/devportal/auth'; import { getApiKeys,saveApiKeys } from '../../../utils/devportal/storage';'
 
 export default function handler() { const userId = getUserIdFromRequest(req); if (req.method = == 'GET') {;'
   }
-  const keys = getApiKeys().filter((k) => k.userId === userId && !k.revokedAt); return res.status(200).json({ "data": keys }
 } if (req.method = == 'POST') {;'
   }
-  const { name,scopes,autoApprove } = req.body || {};
 
-const "parsedScopes": ApiScope[] = Array.isArray(scopes) ? scopes : [];
 
-const { key,token } = createApiKey(userId,name || 'My API Key',parsedScopes,!!autoApprove); return res.status(201).json({ "data": { key,token } })} if (req.method = == 'PUT') {;'
   }
-  const { id,action,scopes } = req.body || {};
 
-const keys = getApiKeys();
 
-const idx = keys.findIndex((k) => k.id === id && k.userId === userId); if (idx export default function KeysPage() { return ( < 0) return res.status(404).json({ "error": { "code": 'not_found',"message": 'Key not found' },'
 }); if (action = == 'regenerate') {;'
   }
   const { token,hash } = generateApiToken(); keys[idx].tokenHash = hash; saveApiKeys(keys); return res.status(200).json({ "data": { "key": keys[idx],token } })} if (action === 'update_scopes') { keys[idx].scopes = Array.isArray(scopes) ? scopes : keys[idx].scopes; saveApiKeys(keys); return res.status(200).json({ "data": keys[idx] },'
@@ -144,47 +167,66 @@ const idx = keys.findIndex((k) => k.id === id && k.userId === userId); if (idx e
 } return res.status(400).json({ "error": { "code": 'invalid_action',"message": 'Unknown action' } },'
 } if (req.method = == 'DELETE') {;'
   }
-  const { id } = req.query;
 
-const keys = getApiKeys();
 
-const idx = keys.findIndex((k) => k.id === id && k.userId === userId); if (idx < 0) return res.status(404).json({ "error": { "code": 'not_found',"message": 'Key not found' },'
 }); keys[idx].revokedAt = new Date().toISOString(); saveApiKeys(keys); return res.status(200).json({ "data": keys[idx] }
 } return res.status(405).json({ "error": { "code": 'method_not_allowed',"message": 'Method not allowed' } })} ,'
 }
       return res && res.status(200).json({ "data": { "key": keys[idx], token } })}"
     if (action === 'update_scopes') {'
       }
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
       keys[idx].scopes = Array && Array.isArray(scopes) ? scopes : keys[idx].scopes;
-      saveApiKeys(keys);
-      return res && res.status(200).json({ "data": keys[idx] })}"
+      saveApiKeys(keys);'
+      return res && res.status(200).json({ "data": keys[idx] })}""
     if (action === 'revoke') {'
-      }
       keys[idx].revokedAt = new Date().toISOString();
-      saveApiKeys(keys);
-      return res && res.status(200).json({ "data": keys[idx] })}"
-import { NextApiRequest,NextApiResponse } from 'next'; import { ApiScope } from '../../../utils/devportal/types'; import { { createApiKey,getUserIdFromRequest },{ generateApiToken } } from '../../../utils/devportal/auth'; import { getApiKeys,saveApiKeys } from '../../../utils/devportal/storage'; export default function handler() { const userId = getUserIdFromRequest(req)if (req.method === 'GET') { const keys = getApiKeys().filter((k) => k.userId === userId && !k.revokedAt)return res.status(200).json({ "data": keys })} if (req.method === 'POST') { const { name,scopes,autoApprove } = req.body || {}const "parsedScopes": ApiScope[] = Array.isArray(scopes) ? scopes : []; const { key,token } = createApiKey(userId,name || 'My API Key',parsedScopes,!!autoApprove)return res.status(201).json({ "data": { key,token } })} if (req.method === 'PUT') { const { id,action,scopes } = req.body || {}const keys = getApiKeys()const idx = keys.findIndex((k) => k.id === id && k.userId === userId)if (idx export default function KeysPage() { return ( < 0) return res.status(404).json({ "error": { "code": 'not_found',"message": 'Key not found' } })if (action === 'regenerate') { const { token,hash } = generateApiToken()keys[idx].tokenHash = hash; saveApiKeys(keys)return res.status(200).json({ "data": { "key": keys[idx],token } })} if (action === 'update_scopes') { keys[idx].scopes = Array.isArray(scopes) ? scopes : keys[idx].scopes; saveApiKeys(keys)return res.status(200).json({ "data": 'keys[idx]' })} if (action === 'revoke') { keys[idx].revokedAt = new Date().toISOString()saveApiKeys(keys)return res.status(200).json({ "data": 'keys[idx]' })} return res.status(400).json({ "error": { "code": 'invalid_action',"message": 'Unknown action' } })} if (req.method === 'DELETE') { const { id } = req.query; const keys = getApiKeys()const idx = keys.findIndex((k) => k.id === id && k.userId === userId)if (idx < 0) return res.status(404).json({ "error": { "code": 'not_found',"message": 'Key not found' } })keys[idx].revokedAt = new Date().toISOString()saveApiKeys(keys)return res.status(200).json({ "data": 'keys[idx]' })} return res.status(405).json({ "error": { "code": 'method_not_allowed',"message": 'Method not allowed' } })} )}'
-import { NextApiRequest,NextApiResponse } from 'next'; import { ApiScope } from '../../../utils/devportal/types'; import { { createApiKey,getUserIdFromRequest },{ generateApiToken } } from '../../../utils/devportal/auth'; import { getApiKeys,saveApiKeys } from '../../../utils/devportal/storage'; export default function handler() { const userId = getUserIdFromRequest(req)if (req.method === 'GET') { const keys = getApiKeys().filter((k) => k.userId === userId && !k.revokedAt)return res.status(200).json({ "data": keys })} if (req.method === 'POST') { const { name,scopes,autoApprove } = req.body || {}const "parsedScopes": ApiScope[] = Array.isArray(scopes) ? scopes : []; const { key,token } = createApiKey(userId,name || 'My API Key',parsedScopes,!!autoApprove)return res.status(201).json({ "data": { key,token } })} if (req.method === 'PUT') { const { id,action,scopes } = req.body || {}const keys = getApiKeys()const idx = keys.findIndex((k) => k.id === id && k.userId === userId)if (idx export default function KeysPage() { return ( < 0) return res.status(404).json({ "error": { "code": 'not_found',"message": 'Key not found' } })if (action === 'regenerate') { const { token,hash } = generateApiToken()keys[idx].tokenHash = hash; saveApiKeys(keys)return res.status(200).json({ "data": { "key": keys[idx],token } })} if (action === 'update_scopes') { keys[idx].scopes = Array.isArray(scopes) ? scopes : keys[idx].scopes; saveApiKeys(keys)return res.status(200).json({ "data": keys[idx] })} if (action === 'revoke') { keys[idx].revokedAt = new Date().toISOString()saveApiKeys(keys)return res.status(200).json({ "data": keys[idx] })} return res.status(400).json({ "error": { "code": 'invalid_action',"message": 'Unknown action' } })} if (req.method === 'DELETE') { const { id } = req.query; const keys = getApiKeys()const idx = keys.findIndex((k) => k.id === id && k.userId === userId)if (idx < 0) return res.status(404).json({ "error": { "code": 'not_found',"message": 'Key not found' } })keys[idx].revokedAt = new Date().toISOString()saveApiKeys(keys)return res.status(200).json({ "data": keys[idx] })} return res.status(405).json({ "error": { "code": 'method_not_allowed',"message": 'Method not allowed' } })} )}return res && res.status(200).json({ "data": { "key": keys[idx], token } })}"
-    if (action === 'update_scopes') {keys[idx].scopes = Array && Array.isArray(scopes) ? scopes : keys[idx].scopes;'
-      }
-      saveApiKeys(keys)return res && res.status(200).json({ "data": keys[idx] })}"
-    if (action === 'revoke') {keys[idx].revokedAt = new Date().toISOString()saveApiKeys(keys)return res && res.status(200).json({ "data": keys[idx] })}"
+      saveApiKeys(keys);'
+      return res && res.status(200).json({ "data": keys[idx] })}""
+    return res && res.status(400).json({ "error": { code: 'invalid_action', "message": 'Unknown action' } })}''
+  if (req && req.method === 'DELETE') {'
+    const { id } = req && req.query;
+    const keys = getApiKeys();
+    const idx = keys && keys.findIndex((k) => k && k.id === id && k && k.userId === userId);'
+    if (idx < 0) return res && res.status(404).json({ "error": { code: 'not_found', "message": 'Key not found' } });'
+    keys[idx].revokedAt = new Date().toISOString();
+    saveApiKeys(keys);'
+    return res && res.status(200).json({ "data": keys[idx] })}""
+  return res && res.status(405).json({ "error": { code: 'method_not_allowed', "message": 'Method not allowed' } })}'
 
+<<<<<<< HEAD
     return res && res.status(400).json({ "error": { "code": 'invalid_action', "message": 'Unknown action' } })}'
   if (req && req.method = == 'DELETE') ;'
   const { id } = req && req.query;
 
-const keys = getApiKeys(;
   const idx = keys && keys.findIndex((k) => k && k.id === id && k && k.userId === userId)if (idx < 0) return res && res.status(404).json({ "error": { "code": 'not_found', "message": 'Key not found' } })keys[idx].revokedAt = new Date().toISOString()saveApiKeys(keys)return res && res.status(200).json({ "data": keys[idx] })}"
  ;
   return res && res.status(405).json({ "error": { "code": 'method_not_allowed', "message": 'Method not allowed' } })}'
+=======
+  )}
+import { NextApiRequest, NextApiResponse, ApiScope } from 'lucide-react'; import { { createApiKey,getUserIdFromRequest },{ generateApiToken } } from '../../../utils/devportal/auth'; import { getApiKeys,saveApiKeys } from '../../../utils/devportal/storage'; export default function handler(req: 'NextApiRequest',res: NextApiResponse) { const userId = getUserIdFromRequest(req); if (req.method === 'GET') { const keys = getApiKeys().filter((k) => k.userId === userId && !k.revokedAt); return res.status(200).json({ data: keys })} if (req.method === 'POST') { const { name,scopes,autoApprove } = req.body || {}; const parsedScopes: ApiScope[] = Array.isArray(scopes) ? scopes : []; const { key,token } = createApiKey(userId,name || 'My API Key',parsedScopes,!!autoApprove); return res.status(201).json({ data: { key,token } })} if (req.method === 'PUT') { const { id,action,scopes } = req.body || {}; const keys = getApiKeys(); const idx = keys.findIndex((k) => k.id === id && k.userId === userId); if (idx export default function KeysPage() { return ( < 0) return res.status(404).json({ error: { code: 'not_found',message: 'Key not found' } }); if (action === 'regenerate') { const { token,hash } = generateApiToken(); keys[idx].tokenHash = hash; saveApiKeys(keys); return res.status(200).json({ data: { key: keys[idx],token } })} if (action === 'update_scopes') { keys[idx].scopes = Array.isArray(scopes) ? scopes : keys[idx].scopes; saveApiKeys(keys); return res.status(200).json({ data: 'keys[idx]' })} if (action === 'revoke') { keys[idx].revokedAt = new Date().toISOString(); saveApiKeys(keys); return res.status(200).json({ data: 'keys[idx]' })} return res.status(400).json({ error: { code: 'invalid_action',message: 'Unknown action' } })} if (req.method === 'DELETE') { const { id } = req.query; const keys = getApiKeys(); const idx = keys.findIndex((k) => k.id === id && k.userId === userId); if (idx < 0) return res.status(404).json({ error: { code: 'not_found',message: 'Key not found' } }); keys[idx].revokedAt = new Date().toISOString(); saveApiKeys(keys); return res.status(200).json({ data: 'keys[idx]' })} return res.status(405).json({ error: { code: 'method_not_allowed',message: 'Method not allowed' } })} )}
+import { NextApiRequest, NextApiResponse, ApiScope } from 'lucide-react'; import { { createApiKey,getUserIdFromRequest },{ generateApiToken } } from '../../../utils/devportal/auth'; import { getApiKeys,saveApiKeys } from '../../../utils/devportal/storage'; export default function handler(req: NextApiRequest,res: NextApiResponse) { const userId = getUserIdFromRequest(req); if (req.method === 'GET') { const keys = getApiKeys().filter((k) => k.userId === userId && !k.revokedAt); return res.status(200).json({ data: keys })} if (req.method === 'POST') { const { name,scopes,autoApprove } = req.body || {}; const parsedScopes: ApiScope[] = Array.isArray(scopes) ? scopes : []; const { key,token } = createApiKey(userId,name || 'My API Key',parsedScopes,!!autoApprove); return res.status(201).json({ data: { key,token } })} if (req.method === 'PUT') { const { id,action,scopes } = req.body || {}; const keys = getApiKeys(); const idx = keys.findIndex((k) => k.id === id && k.userId === userId); if (idx export default function KeysPage() { return ( < 0) return res.status(404).json({ error: { code: 'not_found',message: 'Key not found' } }); if (action === 'regenerate') { const { token,hash } = generateApiToken(); keys[idx].tokenHash = hash; saveApiKeys(keys); return res.status(200).json({ data: { key: keys[idx],token } })} if (action === 'update_scopes') { keys[idx].scopes = Array.isArray(scopes) ? scopes : keys[idx].scopes; saveApiKeys(keys); return res.status(200).json({ data: keys[idx] })} if (action === 'revoke') { keys[idx].revokedAt = new Date().toISOString(); saveApiKeys(keys); return res.status(200).json({ data: keys[idx] })} return res.status(400).json({ error: { code: 'invalid_action',message: 'Unknown action' } })} if (req.method === 'DELETE') { const { id } = req.query; const keys = getApiKeys(); const idx = keys.findIndex((k) => k.id === id && k.userId === userId); if (idx < 0) return res.status(404).json({ error: { code: 'not_found',message: 'Key not found' } }); keys[idx].revokedAt = new Date().toISOString(); saveApiKeys(keys); return res.status(200).json({ data: keys[idx] })} return res.status(405).json({ error: { code: 'method_not_allowed',message: 'Method not allowed' } })} )}
+      return res && res.status(200).json({ "data": { key: keys[idx], token } })}""
+      keys[idx].scopes = Array && Array.isArray(scopes) ? scopes : keys[idx].scopes;
+      return res && res.status(200).json({ "data": keys[idx] })}""
+    return res && res.status(400).json({ "error": { code: 'invalid_action', "message": 'Unknown action' } })}
+  if (req && req.method === 'DELETE') {
+    const { id } = req && req.query;
+    const idx = keys && keys.findIndex((k) => k && k.id === id && k && k.userId === userId);
+    if (idx < 0) return res && res.status(404).json({ "error": { code: 'not_found', "message": 'Key not found' } });
+  return res && res.status(405).json({ "error": { code: 'method_not_allowed', "message": 'Method not allowed' } })}
+>>>>>>> origin/chore/fix-lint-and-merge
   )}
 
+import { NextApiRequest,NextApiResponse } from 'next'; import { ApiScope } from '../../../utils/devportal/types'; import { { createApiKey,getUserIdFromRequest },{ generateApiToken } } from '../../../utils/devportal/auth'; import { getApiKeys,saveApiKeys } from '../../../utils/devportal/storage'; export default function handler(req: 'NextApiRequest',res: NextApiResponse) { const userId = getUserIdFromRequest(req); if (req && req.method === 'GET') { const keys = getApiKeys().filter((k) => k && k.userId === userId && !k && k.revokedAt); return res && res.status(200).json({ data: keys })} if (req && req.method === 'POST') { const { name,scopes,autoApprove } = req && req.body || {}; const parsedScopes: ApiScope[] = Array && Array.isArray(scopes) ? scopes : []; const { key,token } = createApiKey(userId,name || 'My API Key',parsedScopes,!!autoApprove); return res && res.status(201).json({ data: { key,token } })} if (req && req.method === 'PUT') { const { id,action,scopes } = req && req.body || {}; const keys = getApiKeys(); const idx = keys && keys.findIndex((k) => k && k.id === id && k && k.userId === userId); if (idx export default function KeysPage() { return ( < 0) return res && res.status(404).json({ error: { code: 'not_found',message: 'Key not found' } }); if (action === 'regenerate') { const { token,hash } = generateApiToken(); keys[idx].tokenHash = hash; saveApiKeys(keys); return res && res.status(200).json({ data: { key: keys[idx],token } })} if (action === 'update_scopes') { keys[idx].scopes = Array && Array.isArray(scopes) ? scopes : keys[idx].scopes; saveApiKeys(keys); return res && res.status(200).json({ data: 'keys[idx]' })} if (action === 'revoke') { keys[idx].revokedAt = new Date().toISOString(); saveApiKeys(keys); return res && res.status(200).json({ data: 'keys[idx]' })} return res && res.status(400).json({ error: { code: 'invalid_action',message: 'Unknown action' } })} if (req && req.method === 'DELETE') { const { id } = req && req.query; const keys = getApiKeys(); const idx = keys && keys.findIndex((k) => k && k.id === id && k && k.userId === userId); if (idx < 0) return res && res.status(404).json({ error: { code: 'not_found',message: 'Key not found' } }); keys[idx].revokedAt = new Date().toISOString(); saveApiKeys(keys); return res && res.status(200).json({ data: 'keys[idx]' })} return res && res.status(405).json({ error: { code: 'method_not_allowed',message: 'Method not allowed' } })} )}
+import { NextApiRequest,NextApiResponse } from 'next'; import { ApiScope } from '../../../utils/devportal/types'; import { { createApiKey,getUserIdFromRequest },{ generateApiToken } } from '../../../utils/devportal/auth'; import { getApiKeys,saveApiKeys } from '../../../utils/devportal/storage'; export default function handler(req: NextApiRequest,res: NextApiResponse) { const userId = getUserIdFromRequest(req); if (req && req.method === 'GET') { const keys = getApiKeys().filter((k) => k && k.userId === userId && !k && k.revokedAt); return res && res.status(200).json({ data: keys })} if (req && req.method === 'POST') { const { name,scopes,autoApprove } = req && req.body || {}; const parsedScopes: ApiScope[] = Array && Array.isArray(scopes) ? scopes : []; const { key,token } = createApiKey(userId,name || 'My API Key',parsedScopes,!!autoApprove); return res && res.status(201).json({ data: { key,token } })} if (req && req.method === 'PUT') { const { id,action,scopes } = req && req.body || {}; const keys = getApiKeys(); const idx = keys && keys.findIndex((k) => k && k.id === id && k && k.userId === userId); if (idx export default function KeysPage() { return ( < 0) return res && res.status(404).json({ error: { code: 'not_found',message: 'Key not found' } }); if (action === 'regenerate') { const { token,hash } = generateApiToken(); keys[idx].tokenHash = hash; saveApiKeys(keys); return res && res.status(200).json({ data: { key: keys[idx],token } })} if (action === 'update_scopes') { keys[idx].scopes = Array && Array.isArray(scopes) ? scopes : keys[idx].scopes; saveApiKeys(keys); return res && res.status(200).json({ data: keys[idx] })} if (action === 'revoke') { keys[idx].revokedAt = new Date().toISOString(); saveApiKeys(keys); return res && res.status(200).json({ data: keys[idx] })} return res && res.status(400).json({ error: { code: 'invalid_action',message: 'Unknown action' } })} if (req && req.method === 'DELETE') { const { id } = req && req.query; const keys = getApiKeys(); const idx = keys && keys.findIndex((k) => k && k.id === id && k && k.userId === userId); if (idx < 0) return res && res.status(404).json({ error: { code: 'not_found',message: 'Key not found' } }); keys[idx].revokedAt = new Date().toISOString(); saveApiKeys(keys); return res && res.status(200).json({ data: keys[idx] })} return res && res.status(405).json({ error: { code: 'method_not_allowed',message: 'Method not allowed' } })} )}
+
+import { NextApiRequest,NextApiResponse } from 'next'; import { ApiScope } from '../../../utils/devportal/types'; import { { createApiKey,getUserIdFromRequest },{ generateApiToken } } from '../../../utils/devportal/auth'; import { getApiKeys,saveApiKeys } from '../../../utils/devportal/storage'; export default function handler(req: NextApiRequest,res: NextApiResponse) { const userId = getUserIdFromRequest(req); if (req && req.method === 'GET') { const keys = getApiKeys().filter((k) => k && k.userId === userId && !k && k.revokedAt); return res && res.status(200).json({ data: keys })} if (req && req.method === 'POST') { const { name,scopes,autoApprove } = req && req.body || {}; const parsedScopes: ApiScope[] = Array && Array.isArray(scopes) ? scopes : []; const { key,token } = createApiKey(userId,name || 'My API Key',parsedScopes,!!autoApprove); return res && res.status(201).json({ data: { key,token } })} if (req && req.method === 'PUT') { const { id,action,scopes } = req && req.body || {}; const keys = getApiKeys(); const idx = keys && keys.findIndex((k) => k && k.id === id && k && k.userId === userId); if (idx export default function KeysPage() { return ( < 0) return res && res.status(404).json({ error: { code: 'not_found',message: 'Key not found' } }); if (action === 'regenerate') { const { token,hash } = generateApiToken(); keys[idx].tokenHash = hash; saveApiKeys(keys); return res && res.status(200).json({ data: { key: keys[idx],token } })} if (action === 'update_scopes') { keys[idx].scopes = Array && Array.isArray(scopes) ? scopes : keys[idx].scopes; saveApiKeys(keys); return res && res.status(200).json({ data: keys[idx] })} if (action === 'revoke') { keys[idx].revokedAt = new Date().toISOString(); saveApiKeys(keys); return res && res.status(200).json({ data: keys[idx] })} return res && res.status(400).json({ error: { code: 'invalid_action',message: 'Unknown action' } })} if (req && req.method === 'DELETE') { const { id } = req && req.query; const keys = getApiKeys(); const idx = keys && keys.findIndex((k) => k && k.id === id && k && k.userId === userId); if (idx < 0) return res && res.status(404).json({ error: { code: 'not_found',message: 'Key not found' } }); keys[idx].revokedAt = new Date().toISOString(); saveApiKeys(keys); return res && res.status(200).json({ data: keys[idx] })} return res && res.status(405).json({ error: { code: 'method_not_allowed',message: 'Method not allowed' } })} )}
+
+<<<<<<< HEAD
 
 
-
-
-import { NextApiRequest,NextApiResponse } from 'next'; import { ApiScope } from '../../../utils/devportal/types'; import { { createApiKey,getUserIdFromRequest },{ generateApiToken } } from '../../../utils/devportal/auth'; import { getApiKeys,saveApiKeys } from '../../../utils/devportal/storage';'
 
 export default function handler() { const userId = getUserIdFromRequest(req); if (req && req.method = == 'GET') {;'
   }
@@ -199,7 +241,6 @@ const { key,token } = createApiKey(userId,name || 'My API Key',parsedScopes,!!au
   }
   const { id,action,scopes } = req && req.body || {};
 
-const keys = getApiKeys();
 
 const idx = keys && keys.findIndex((k) => k && k.id === id && k && k.userId === userId); if (idx export default function KeysPage() { return ( < 0) return res && res.status(404).json({ "error": { "code": 'not_found',"message": 'Key not found' },'
 }); if (action = == 'regenerate') {;'
@@ -209,32 +250,22 @@ const idx = keys && keys.findIndex((k) => k && k.id === id && k && k.userId === 
 } return res && res.status(400).json({ "error": { "code": 'invalid_action',"message": 'Unknown action' } },'
 } if (req && req.method = == 'DELETE') {;'
   }
-  const { id } = req && req.query;
 
-const keys = getApiKeys();
 
 const idx = keys && keys.findIndex((k) => k && k.id === id && k && k.userId === userId); if (idx < 0) return res && res.status(404).json({ "error": { "code": 'not_found',"message": 'Key not found' },'
 }); keys[idx].revokedAt = new Date().toISOString(); saveApiKeys(keys); return res && res.status(200).json({ "data": 'keys[idx]' },'
 } return res && res.status(405).json({ "error": { "code": 'method_not_allowed',"message": 'Method not allowed' } })} ,'
 }
-import { NextApiRequest,NextApiResponse } from 'next'; import { ApiScope } from '../../../utils/devportal/types'; import { { createApiKey,getUserIdFromRequest },{ generateApiToken } } from '../../../utils/devportal/auth'; import { getApiKeys,saveApiKeys } from '../../../utils/devportal/storage';'
 
 export default function handler() { const userId = getUserIdFromRequest(req); if (req && req.method = == 'GET') {;'
   }
-  const keys = getApiKeys().filter((k) => k && k.userId === userId && !k && k.revokedAt); return res && res.status(200).json({ "data": keys }
 } if (req && req.method = == 'POST') {;'
   }
-  const { name,scopes,autoApprove } = req && req.body || {};
 
-const "parsedScopes": ApiScope[] = Array && Array.isArray(scopes) ? scopes : [];
 
-const { key,token } = createApiKey(userId,name || 'My API Key',parsedScopes,!!autoApprove); return res && res.status(201).json({ "data": { key,token } })} if (req && req.method = == 'PUT') {;'
   }
-  const { id,action,scopes } = req && req.body || {};
 
-const keys = getApiKeys();
 
-const idx = keys && keys.findIndex((k) => k && k.id === id && k && k.userId === userId); if (idx export default function KeysPage() { return ( < 0) return res && res.status(404).json({ "error": { "code": 'not_found',"message": 'Key not found' },'
 }); if (action = == 'regenerate') {;'
   }
   const { token,hash } = generateApiToken(); keys[idx].tokenHash = hash; saveApiKeys(keys); return res && res.status(200).json({ "data": { "key": keys[idx],token } })} if (action === 'update_scopes') { keys[idx].scopes = Array && Array.isArray(scopes) ? scopes : keys[idx].scopes; saveApiKeys(keys); return res && res.status(200).json({ "data": keys[idx] },'
@@ -242,277 +273,178 @@ const idx = keys && keys.findIndex((k) => k && k.id === id && k && k.userId === 
 } return res && res.status(400).json({ "error": { "code": 'invalid_action',"message": 'Unknown action' } },'
 } if (req && req.method = == 'DELETE') {;'
   }
-  const { id } = req && req.query;
 
-const keys = getApiKeys();
 
-const idx = keys && keys.findIndex((k) => k && k.id === id && k && k.userId === userId); if (idx < 0) return res && res.status(404).json({ "error": { "code": 'not_found',"message": 'Key not found' },'
 }); keys[idx].revokedAt = new Date().toISOString(); saveApiKeys(keys); return res && res.status(200).json({ "data": keys[idx] }
 } return res && res.status(405).json({ "error": { "code": 'method_not_allowed',"message": 'Method not allowed' } })} ,'
 }
-import { NextApiRequest,NextApiResponse } from 'next'; import { ApiScope } from '../../../utils/devportal/types'; import { { createApiKey,getUserIdFromRequest },{ generateApiToken } } from '../../../utils/devportal/auth'; import { getApiKeys,saveApiKeys } from '../../../utils/devportal/storage';'
 
 export default function handler() { const userId = getUserIdFromRequest(req); if (req && req.method = == 'GET') {;'
   }
-  const keys = getApiKeys().filter((k) => k && k.userId === userId && !k && k.revokedAt); return res && res.status(200).json({ "data": keys }
 } if (req && req.method = == 'POST') {;'
   }
-  const { name,scopes,autoApprove } = req && req.body || {};
 
-const "parsedScopes": ApiScope[] = Array && Array.isArray(scopes) ? scopes : [];
 
-const { key,token } = createApiKey(userId,name || 'My API Key',parsedScopes,!!autoApprove); return res && res.status(201).json({ "data": { key,token } })} if (req && req.method = == 'PUT') {;'
   }
-  const { id,action,scopes } = req && req.body || {};
 
-const keys = getApiKeys();
 
-const idx = keys && keys.findIndex((k) => k && k.id === id && k && k.userId === userId); if (idx export default function KeysPage() { return ( < 0) return res && res.status(404).json({ "error": { "code": 'not_found',"message": 'Key not found' },'
 }); if (action = == 'regenerate') {;'
   }
-  const { token,hash } = generateApiToken(); keys[idx].tokenHash = hash; saveApiKeys(keys); return res && res.status(200).json({ "data": { "key": keys[idx],token } })} if (action === 'update_scopes') { keys[idx].scopes = Array && Array.isArray(scopes) ? scopes : keys[idx].scopes; saveApiKeys(keys); return res && res.status(200).json({ "data": keys[idx] },'
 } if (action === 'revoke') { keys[idx].revokedAt = new Date().toISOString(); saveApiKeys(keys); return res && res.status(200).json({ "data": keys[idx] },'
 } return res && res.status(400).json({ "error": { "code": 'invalid_action',"message": 'Unknown action' } },'
 } if (req && req.method = == 'DELETE') {;'
   }
-  const { id } = req && req.query;
 
-const keys = getApiKeys();
 
-const idx = keys && keys.findIndex((k) => k && k.id === id && k && k.userId === userId); if (idx < 0) return res && res.status(404).json({ "error": { "code": 'not_found',"message": 'Key not found' },'
 }); keys[idx].revokedAt = new Date().toISOString(); saveApiKeys(keys); return res && res.status(200).json({ "data": keys[idx] }
 } return res && res.status(405).json({ "error": { "code": 'method_not_allowed',"message": 'Method not allowed' } })} ,'
 }
 
 
-import { NextApiRequest,NextApiResponse } from 'next'; import { ApiScope } from '../../../utils/devportal/types'; import { { createApiKey,getUserIdFromRequest },{ generateApiToken } } from '../../../utils/devportal/auth'; import { getApiKeys,saveApiKeys } from '../../../utils/devportal/storage';'
 
 export default function handler() { const userId = getUserIdFromRequest(req); if (req.method = == 'GET') {;'
   }
-  const keys = getApiKeys().filter((k) => k.userId === userId && !k.revokedAt); return res.status(200).json({ "data": keys }
 } if (req.method = == 'POST') {;'
   }
-  const { name,scopes,autoApprove } = req.body || {};
 
-const "parsedScopes": ApiScope[] = Array.isArray(scopes) ? scopes : [];
 
-const { key,token } = createApiKey(userId,name || 'My API Key',parsedScopes,!!autoApprove); return res.status(201).json({ "data": { key,token } })} if (req.method = == 'PUT') {;'
   }
-  const { id,action,scopes } = req.body || {};
 
-const keys = getApiKeys();
 
-const idx = keys.findIndex((k) => k.id === id && k.userId === userId); if (idx export default function KeysPage() { return ( < 0) return res.status(404).json({ "error": { "code": 'not_found',"message": 'Key not found' },'
 }); if (action = == 'regenerate') {;'
   }
-  const { token,hash } = generateApiToken(); keys[idx].tokenHash = hash; saveApiKeys(keys); return res.status(200).json({ "data": { "key": keys[idx],token } })} if (action === 'update_scopes') { keys[idx].scopes = Array.isArray(scopes) ? scopes : keys[idx].scopes; saveApiKeys(keys); return res.status(200).json({ "data": keys[idx] },'
 } if (action === 'revoke') { keys[idx].revokedAt = new Date().toISOString(); saveApiKeys(keys); return res.status(200).json({ "data": keys[idx] },'
 } return res.status(400).json({ "error": { "code": 'invalid_action',"message": 'Unknown action' } },'
 } if (req.method = == 'DELETE') {;'
   }
-  const { id } = req.query;
 
-const keys = getApiKeys();
 
-const idx = keys.findIndex((k) => k.id === id && k.userId === userId); if (idx < 0) return res.status(404).json({ "error": { "code": 'not_found',"message": 'Key not found' },'
 }); keys[idx].revokedAt = new Date().toISOString(); saveApiKeys(keys); return res.status(200).json({ "data": keys[idx] }
 } return res.status(405).json({ "error": { "code": 'method_not_allowed',"message": 'Method not allowed' } })} ,'
 }
-import { NextApiRequest,NextApiResponse } from 'next'; import { ApiScope } from '../../../utils/devportal/types'; import { { createApiKey,getUserIdFromRequest },{ generateApiToken } } from '../../../utils/devportal/auth'; import { getApiKeys,saveApiKeys } from '../../../utils/devportal/storage';'
 
 export default function handler() { const userId = getUserIdFromRequest(req); if (req && req.method = == 'GET') {;'
   }
-  const keys = getApiKeys().filter((k) => k && k.userId === userId && !k && k.revokedAt); return res && res.status(200).json({ "data": keys }
 } if (req && req.method = == 'POST') {;'
   }
-  const { name,scopes,autoApprove } = req && req.body || {};
 
-const "parsedScopes": ApiScope[] = Array && Array.isArray(scopes) ? scopes : [];
 
-const { key,token } = createApiKey(userId,name || 'My API Key',parsedScopes,!!autoApprove); return res && res.status(201).json({ "data": { key,token } })} if (req && req.method = == 'PUT') {;'
   }
-  const { id,action,scopes } = req && req.body || {};
 
-const keys = getApiKeys();
 
-const idx = keys && keys.findIndex((k) => k && k.id === id && k && k.userId === userId); if (idx export default function KeysPage() { return ( < 0) return res && res.status(404).json({ "error": { "code": 'not_found',"message": 'Key not found' },'
 }); if (action = == 'regenerate') {;'
   }
-  const { token,hash } = generateApiToken(); keys[idx].tokenHash = hash; saveApiKeys(keys); return res && res.status(200).json({ "data": { "key": keys[idx],token } })} if (action === 'update_scopes') { keys[idx].scopes = Array && Array.isArray(scopes) ? scopes : keys[idx].scopes; saveApiKeys(keys); return res && res.status(200).json({ "data": 'keys[idx]' },'
 } if (action === 'revoke') { keys[idx].revokedAt = new Date().toISOString(); saveApiKeys(keys); return res && res.status(200).json({ "data": 'keys[idx]' },'
 } return res && res.status(400).json({ "error": { "code": 'invalid_action',"message": 'Unknown action' } },'
 } if (req && req.method = == 'DELETE') {;'
   }
-  const { id } = req && req.query;
 
-const keys = getApiKeys();
 
-const idx = keys && keys.findIndex((k) => k && k.id === id && k && k.userId === userId); if (idx < 0) return res && res.status(404).json({ "error": { "code": 'not_found',"message": 'Key not found' },'
 }); keys[idx].revokedAt = new Date().toISOString(); saveApiKeys(keys); return res && res.status(200).json({ "data": 'keys[idx]' },'
 } return res && res.status(405).json({ "error": { "code": 'method_not_allowed',"message": 'Method not allowed' } })} ,'
 }
-import { NextApiRequest,NextApiResponse } from 'next'; import { ApiScope } from '../../../utils/devportal/types'; import { { createApiKey,getUserIdFromRequest },{ generateApiToken } } from '../../../utils/devportal/auth'; import { getApiKeys,saveApiKeys } from '../../../utils/devportal/storage';'
 
 export default function handler() { const userId = getUserIdFromRequest(req); if (req && req.method = == 'GET') {;'
   }
-  const keys = getApiKeys().filter((k) => k && k.userId === userId && !k && k.revokedAt); return res && res.status(200).json({ "data": keys }
 } if (req && req.method = == 'POST') {;'
   }
-  const { name,scopes,autoApprove } = req && req.body || {};
 
-const "parsedScopes": ApiScope[] = Array && Array.isArray(scopes) ? scopes : [];
 
-const { key,token } = createApiKey(userId,name || 'My API Key',parsedScopes,!!autoApprove); return res && res.status(201).json({ "data": { key,token } })} if (req && req.method = == 'PUT') {;'
   }
-  const { id,action,scopes } = req && req.body || {};
 
-const keys = getApiKeys();
 
-const idx = keys && keys.findIndex((k) => k && k.id === id && k && k.userId === userId); if (idx export default function KeysPage() { return ( < 0) return res && res.status(404).json({ "error": { "code": 'not_found',"message": 'Key not found' },'
 }); if (action = == 'regenerate') {;'
   }
-  const { token,hash } = generateApiToken(); keys[idx].tokenHash = hash; saveApiKeys(keys); return res && res.status(200).json({ "data": { "key": keys[idx],token } })} if (action === 'update_scopes') { keys[idx].scopes = Array && Array.isArray(scopes) ? scopes : keys[idx].scopes; saveApiKeys(keys); return res && res.status(200).json({ "data": keys[idx] },'
 } if (action === 'revoke') { keys[idx].revokedAt = new Date().toISOString(); saveApiKeys(keys); return res && res.status(200).json({ "data": keys[idx] },'
 } return res && res.status(400).json({ "error": { "code": 'invalid_action',"message": 'Unknown action' } },'
 } if (req && req.method = == 'DELETE') {;'
   }
-  const { id } = req && req.query;
 
-const keys = getApiKeys();
 
-const idx = keys && keys.findIndex((k) => k && k.id === id && k && k.userId === userId); if (idx < 0) return res && res.status(404).json({ "error": { "code": 'not_found',"message": 'Key not found' },'
 }); keys[idx].revokedAt = new Date().toISOString(); saveApiKeys(keys); return res && res.status(200).json({ "data": keys[idx] }
 } return res && res.status(405).json({ "error": { "code": 'method_not_allowed',"message": 'Method not allowed' } })} ,'
 }
-import { NextApiRequest,NextApiResponse } from 'next'; import { ApiScope } from '../../../utils/devportal/types'; import { { createApiKey,getUserIdFromRequest },{ generateApiToken } } from '../../../utils/devportal/auth'; import { getApiKeys,saveApiKeys } from '../../../utils/devportal/storage';'
 
 export default function handler() { const userId = getUserIdFromRequest(req); if (req && req.method = == 'GET') {;'
   }
-  const keys = getApiKeys().filter((k) => k && k.userId === userId && !k && k.revokedAt); return res && res.status(200).json({ "data": keys }
 } if (req && req.method = == 'POST') {;'
   }
-  const { name,scopes,autoApprove } = req && req.body || {};
 
-const "parsedScopes": ApiScope[] = Array && Array.isArray(scopes) ? scopes : [];
 
-const { key,token } = createApiKey(userId,name || 'My API Key',parsedScopes,!!autoApprove); return res && res.status(201).json({ "data": { key,token } })} if (req && req.method = == 'PUT') {;'
   }
-  const { id,action,scopes } = req && req.body || {};
 
-const keys = getApiKeys();
 
-const idx = keys && keys.findIndex((k) => k && k.id === id && k && k.userId === userId); if (idx export default function KeysPage() { return ( < 0) return res && res.status(404).json({ "error": { "code": 'not_found',"message": 'Key not found' },'
 }); if (action = == 'regenerate') {;'
   }
-  const { token,hash } = generateApiToken(); keys[idx].tokenHash = hash; saveApiKeys(keys); return res && res.status(200).json({ "data": { "key": keys[idx],token } })} if (action === 'update_scopes') { keys[idx].scopes = Array && Array.isArray(scopes) ? scopes : keys[idx].scopes; saveApiKeys(keys); return res && res.status(200).json({ "data": keys[idx] },'
 } if (action === 'revoke') { keys[idx].revokedAt = new Date().toISOString(); saveApiKeys(keys); return res && res.status(200).json({ "data": keys[idx] },'
 } return res && res.status(400).json({ "error": { "code": 'invalid_action',"message": 'Unknown action' } },'
 } if (req && req.method = == 'DELETE') {;'
   }
-  const { id } = req && req.query;
 
-const keys = getApiKeys();
 
-const idx = keys && keys.findIndex((k) => k && k.id === id && k && k.userId === userId); if (idx < 0) return res && res.status(404).json({ "error": { "code": 'not_found',"message": 'Key not found' },'
 }); keys[idx].revokedAt = new Date().toISOString(); saveApiKeys(keys); return res && res.status(200).json({ "data": keys[idx] }
 } return res && res.status(405).json({ "error": { "code": 'method_not_allowed',"message": 'Method not allowed' } })} ,'
 }
-import { NextApiRequest,NextApiResponse } from 'next'; import { ApiScope } from '../../../utils/devportal/types'; import { { createApiKey,getUserIdFromRequest },{ generateApiToken } } from '../../../utils/devportal/auth'; import { getApiKeys,saveApiKeys } from '../../../utils/devportal/storage';'
 
 export default function handler() { const userId = getUserIdFromRequest(req); if (req.method = == 'GET') {;'
   }
-  const keys = getApiKeys().filter((k) => k.userId === userId && !k.revokedAt); return res.status(200).json({ "data": keys }
 } if (req.method = == 'POST') {;'
   }
-  const { name,scopes,autoApprove } = req.body || {};
 
-const "parsedScopes": ApiScope[] = Array.isArray(scopes) ? scopes : [];
 
-const { key,token } = createApiKey(userId,name || 'My API Key',parsedScopes,!!autoApprove); return res.status(201).json({ "data": { key,token } })} if (req.method = == 'PUT') {;'
   }
-  const { id,action,scopes } = req.body || {};
 
-const keys = getApiKeys();
 
-const idx = keys.findIndex((k) => k.id === id && k.userId === userId); if (idx export default function KeysPage() { return ( < 0) return res.status(404).json({ "error": { "code": 'not_found',"message": 'Key not found' },'
 }); if (action = == 'regenerate') {;'
   }
-  const { token,hash } = generateApiToken(); keys[idx].tokenHash = hash; saveApiKeys(keys); return res.status(200).json({ "data": { "key": keys[idx],token } })} if (action === 'update_scopes') { keys[idx].scopes = Array.isArray(scopes) ? scopes : keys[idx].scopes; saveApiKeys(keys); return res.status(200).json({ "data": keys[idx] },'
 } if (action === 'revoke') { keys[idx].revokedAt = new Date().toISOString(); saveApiKeys(keys); return res.status(200).json({ "data": keys[idx] },'
 } return res.status(400).json({ "error": { "code": 'invalid_action',"message": 'Unknown action' } },'
 } if (req.method = == 'DELETE') {;'
   }
-  const { id } = req.query;
 
-const keys = getApiKeys();
 
-const idx = keys.findIndex((k) => k.id === id && k.userId === userId); if (idx < 0) return res.status(404).json({ "error": { "code": 'not_found',"message": 'Key not found' },'
 }); keys[idx].revokedAt = new Date().toISOString(); saveApiKeys(keys); return res.status(200).json({ "data": keys[idx] }
 } return res.status(405).json({ "error": { "code": 'method_not_allowed',"message": 'Method not allowed' } })} ,'
 }
-import { NextApiRequest,NextApiResponse } from 'next'; import { ApiScope } from '../../../utils/devportal/types'; import { { createApiKey,getUserIdFromRequest },{ generateApiToken } } from '../../../utils/devportal/auth'; import { getApiKeys,saveApiKeys } from '../../../utils/devportal/storage';'
 
 export default function handler() { const userId = getUserIdFromRequest(req); if (req.method = == 'GET') {;'
   }
-  const keys = getApiKeys().filter((k) => k.userId === userId && !k.revokedAt); return res.status(200).json({ "data": keys }
 } if (req.method = == 'POST') {;'
   }
-  const { name,scopes,autoApprove } = req.body || {};
 
-const "parsedScopes": ApiScope[] = Array.isArray(scopes) ? scopes : [];
 
-const { key,token } = createApiKey(userId,name || 'My API Key',parsedScopes,!!autoApprove); return res.status(201).json({ "data": { key,token } })} if (req.method = == 'PUT') {;'
   }
-  const { id,action,scopes } = req.body || {};
 
-const keys = getApiKeys();
 
-const idx = keys.findIndex((k) => k.id === id && k.userId === userId); if (idx export default function KeysPage() { return ( < 0) return res.status(404).json({ "error": { "code": 'not_found',"message": 'Key not found' },'
 }); if (action = == 'regenerate') {;'
   }
-  const { token,hash } = generateApiToken(); keys[idx].tokenHash = hash; saveApiKeys(keys); return res.status(200).json({ "data": { "key": keys[idx],token } })} if (action === 'update_scopes') { keys[idx].scopes = Array.isArray(scopes) ? scopes : keys[idx].scopes; saveApiKeys(keys); return res.status(200).json({ "data": keys[idx] },'
 } if (action === 'revoke') { keys[idx].revokedAt = new Date().toISOString(); saveApiKeys(keys); return res.status(200).json({ "data": keys[idx] },'
 } return res.status(400).json({ "error": { "code": 'invalid_action',"message": 'Unknown action' } },'
 } if (req.method = == 'DELETE') {;'
   }
-  const { id } = req.query;
 
-const keys = getApiKeys();
 
-const idx = keys.findIndex((k) => k.id === id && k.userId === userId); if (idx < 0) return res.status(404).json({ "error": { "code": 'not_found',"message": 'Key not found' },'
 }); keys[idx].revokedAt = new Date().toISOString(); saveApiKeys(keys); return res.status(200).json({ "data": keys[idx] }
 } return res.status(405).json({ "error": { "code": 'method_not_allowed',"message": 'Method not allowed' } })} ,'
 }
-import { NextApiRequest,NextApiResponse } from 'next'; import { ApiScope } from '../../../utils/devportal/types'; import { { createApiKey,getUserIdFromRequest },{ generateApiToken } } from '../../../utils/devportal/auth'; import { getApiKeys,saveApiKeys } from '../../../utils/devportal/storage';'
 
 export default function handler() { const userId = getUserIdFromRequest(req); if (req.method = == 'GET') {;'
   }
-  const keys = getApiKeys().filter((k) => k.userId === userId && !k.revokedAt); return res.status(200).json({ "data": keys }
 } if (req.method = == 'POST') {;'
   }
-  const { name,scopes,autoApprove } = req.body || {};
 
-const "parsedScopes": ApiScope[] = Array.isArray(scopes) ? scopes : [];
 
-const { key,token } = createApiKey(userId,name || 'My API Key',parsedScopes,!!autoApprove); return res.status(201).json({ "data": { key,token } })} if (req.method = == 'PUT') {;'
   }
-  const { id,action,scopes } = req.body || {};
 
-const keys = getApiKeys();
 
-const idx = keys.findIndex((k) => k.id === id && k.userId === userId); if (idx export default function KeysPage() { return ( < 0) return res.status(404).json({ "error": { "code": 'not_found',"message": 'Key not found' },'
 }); if (action = == 'regenerate') {;'
   }
-  const { token,hash } = generateApiToken(); keys[idx].tokenHash = hash; saveApiKeys(keys); return res.status(200).json({ "data": { "key": keys[idx],token } })} if (action === 'update_scopes') { keys[idx].scopes = Array.isArray(scopes) ? scopes : keys[idx].scopes; saveApiKeys(keys); return res.status(200).json({ "data": keys[idx] },'
 } if (action === 'revoke') { keys[idx].revokedAt = new Date().toISOString(); saveApiKeys(keys); return res.status(200).json({ "data": keys[idx] },'
 } return res.status(400).json({ "error": { "code": 'invalid_action',"message": 'Unknown action' } },'
 } if (req.method = == 'DELETE') {;'
   }
-  const { id } = req.query;
 
-const keys = getApiKeys();
 
-const idx = keys.findIndex((k) => k.id === id && k.userId === userId); if (idx < 0) return res.status(404).json({ "error": { "code": 'not_found',"message": 'Key not found' },'
 }); keys[idx].revokedAt = new Date().toISOString(); saveApiKeys(keys); return res.status(200).json({ "data": keys[idx] }
 } return res.status(405).json({ "error": { "code": 'method_not_allowed',"message": 'Method not allowed' } })} ,'
 }
@@ -520,111 +452,71 @@ ursor/add-new-services-and-deploy-updates-0462,
 ursor/fix-syntax-push-and-merge-to-main-40de,
 import { NextApiRequest,NextApiResponse } from 'next'; import { ApiScope } from '../../../utils/devportal/types'; import { { createApiKey,getUserIdFromRequest },{ generateApiToken } } from '../../../utils/devportal/auth'; import { getApiKeys,saveApiKeys } from '../../../utils/devportal/storage'; export default function handler() { const userId = getUserIdFromRequest(req); if (req && req.method === 'GET') { const keys = getApiKeys().filter((k) => k && k.userId === userId && !k && k.revokedAt); return res && res.status(200).json({ "data": keys })} if (req && req.method === 'POST') { const { name,scopes,autoApprove } = req && req.body || {}; const "parsedScopes": ApiScope[] = Array && Array.isArray(scopes) ? scopes : []; const { key,token } = createApiKey(userId,name || 'My API Key',parsedScopes,!!autoApprove); return res && res.status(201).json({ "data": { key,token } })} if (req && req.method === 'PUT') { const { id,action,scopes } = req && req.body || {}; const keys = getApiKeys(); const idx = keys && keys.findIndex((k) => k && k.id === id && k && k.userId === userId); if (idx export default function KeysPage() { return ( < 0) return res && res.status(404).json({ "error": { "code": 'not_found',"message": 'Key not found' } }); if (action === 'regenerate') { const { token,hash } = generateApiToken(); keys[idx].tokenHash = hash; saveApiKeys(keys); return res && res.status(200).json({ "data": { "key": keys[idx],token } })} if (action === 'update_scopes') { keys[idx].scopes = Array && Array.isArray(scopes) ? scopes : keys[idx].scopes; saveApiKeys(keys); return res && res.status(200).json({ "data": 'keys[idx]' })} if (action === 'revoke') { keys[idx].revokedAt = new Date().toISOString(); saveApiKeys(keys); return res && res.status(200).json({ "data": 'keys[idx]' })} return res && res.status(400).json({ "error": { "code": 'invalid_action',"message": 'Unknown action' } })} if (req && req.method === 'DELETE') { const { id } = req && req.query; const keys = getApiKeys(); const idx = keys && keys.findIndex((k) => k && k.id === id && k && k.userId === userId); if (idx < 0) return res && res.status(404).json({ "error": { "code": 'not_found',"message": 'Key not found' } }); keys[idx].revokedAt = new Date().toISOString(); saveApiKeys(keys); return res && res.status(200).json({ "data": 'keys[idx]' })} return res && res.status(405).json({ "error": { "code": 'method_not_allowed',"message": 'Method not allowed' } })} )}'
 import { NextApiRequest,NextApiResponse } from 'next'; import { ApiScope } from '../../../utils/devportal/types'; import { { createApiKey,getUserIdFromRequest },{ generateApiToken } } from '../../../utils/devportal/auth'; import { getApiKeys,saveApiKeys } from '../../../utils/devportal/storage'; export default function handler() { const userId = getUserIdFromRequest(req); if (req && req.method === 'GET') { const keys = getApiKeys().filter((k) => k && k.userId === userId && !k && k.revokedAt); return res && res.status(200).json({ "data": keys })} if (req && req.method === 'POST') { const { name,scopes,autoApprove } = req && req.body || {}; const "parsedScopes": ApiScope[] = Array && Array.isArray(scopes) ? scopes : []; const { key,token } = createApiKey(userId,name || 'My API Key',parsedScopes,!!autoApprove); return res && res.status(201).json({ "data": { key,token } })} if (req && req.method === 'PUT') { const { id,action,scopes } = req && req.body || {}; const keys = getApiKeys(); const idx = keys && keys.findIndex((k) => k && k.id === id && k && k.userId === userId); if (idx export default function KeysPage() { return ( < 0) return res && res.status(404).json({ "error": { "code": 'not_found',"message": 'Key not found' } }); if (action === 'regenerate') { const { token,hash } = generateApiToken(); keys[idx].tokenHash = hash; saveApiKeys(keys); return res && res.status(200).json({ "data": { "key": keys[idx],token } })} if (action === 'update_scopes') { keys[idx].scopes = Array && Array.isArray(scopes) ? scopes : keys[idx].scopes; saveApiKeys(keys); return res && res.status(200).json({ "data": keys[idx] })} if (action === 'revoke') { keys[idx].revokedAt = new Date().toISOString(); saveApiKeys(keys); return res && res.status(200).json({ "data": keys[idx] })} return res && res.status(400).json({ "error": { "code": 'invalid_action',"message": 'Unknown action' } })} if (req && req.method === 'DELETE') { const { id } = req && req.query; const keys = getApiKeys(); const idx = keys && keys.findIndex((k) => k && k.id === id && k && k.userId === userId); if (idx < 0) return res && res.status(404).json({ "error": { "code": 'not_found',"message": 'Key not found' } }); keys[idx].revokedAt = new Date().toISOString(); saveApiKeys(keys); return res && res.status(200).json({ "data": keys[idx] })} return res && res.status(405).json({ "error": { "code": 'method_not_allowed',"message": 'Method not allowed' } })} )}'
-import { NextApiRequest,NextApiResponse } from 'next'; import { ApiScope } from '../../../utils/devportal/types'; import { { createApiKey,getUserIdFromRequest },{ generateApiToken } } from '../../../utils/devportal/auth'; import { getApiKeys,saveApiKeys } from '../../../utils/devportal/storage'; export default function handler() { const userId = getUserIdFromRequest(req); if (req && req.method === 'GET') { const keys = getApiKeys().filter((k) => k && k.userId === userId && !k && k.revokedAt); return res && res.status(200).json({ "data": keys })} if (req && req.method === 'POST') { const { name,scopes,autoApprove } = req && req.body || {}; const "parsedScopes": ApiScope[] = Array && Array.isArray(scopes) ? scopes : []; const { key,token } = createApiKey(userId,name || 'My API Key',parsedScopes,!!autoApprove); return res && res.status(201).json({ "data": { key,token } })} if (req && req.method === 'PUT') { const { id,action,scopes } = req && req.body || {}; const keys = getApiKeys(); const idx = keys && keys.findIndex((k) => k && k.id === id && k && k.userId === userId); if (idx export default function KeysPage() { return ( < 0) return res && res.status(404).json({ "error": { "code": 'not_found',"message": 'Key not found' } }); if (action === 'regenerate') { const { token,hash } = generateApiToken(); keys[idx].tokenHash = hash; saveApiKeys(keys); return res && res.status(200).json({ "data": { "key": keys[idx],token } })} if (action === 'update_scopes') { keys[idx].scopes = Array && Array.isArray(scopes) ? scopes : keys[idx].scopes; saveApiKeys(keys); return res && res.status(200).json({ "data": keys[idx] })} if (action === 'revoke') { keys[idx].revokedAt = new Date().toISOString(); saveApiKeys(keys); return res && res.status(200).json({ "data": keys[idx] })} return res && res.status(400).json({ "error": { "code": 'invalid_action',"message": 'Unknown action' } })} if (req && req.method === 'DELETE') { const { id } = req && req.query; const keys = getApiKeys(); const idx = keys && keys.findIndex((k) => k && k.id === id && k && k.userId === userId); if (idx < 0) return res && res.status(404).json({ "error": { "code": 'not_found',"message": 'Key not found' } }); keys[idx].revokedAt = new Date().toISOString(); saveApiKeys(keys); return res && res.status(200).json({ "data": keys[idx] })} return res && res.status(405).json({ "error": { "code": 'method_not_allowed',"message": 'Method not allowed' } })} )}'
 ursor/automate-test-improve-and-merge-code-646c;
 import { NextApiRequest,NextApiResponse } from 'next'; import { ApiScope } from '../../../utils/devportal/types'; import { { createApiKey,getUserIdFromRequest },{ generateApiToken } } from '../../../utils/devportal/auth'; import { getApiKeys,saveApiKeys } from '../../../utils/devportal/storage'; export default function handler() { const userId = getUserIdFromRequest(req)if (req && req.method === 'GET') { const keys = getApiKeys().filter((k) => k && k.userId === userId && !k && k.revokedAt)return res && res.status(200).json({ "data": keys })} if (req && req.method === 'POST') { const { name,scopes,autoApprove } = req && req.body || {}const "parsedScopes": ApiScope[] = Array && Array.isArray(scopes) ? scopes : []; const { key,token } = createApiKey(userId,name || 'My API Key',parsedScopes,!!autoApprove)return res && res.status(201).json({ "data": { key,token } })} if (req && req.method === 'PUT') { const { id,action,scopes } = req && req.body || {}const keys = getApiKeys()const idx = keys && keys.findIndex((k) => k && k.id === id && k && k.userId === userId)if (idx export default function KeysPage() { return ( < 0) return res && res.status(404).json({ "error": { "code": 'not_found',"message": 'Key not found' } })if (action === 'regenerate') { const { token,hash } = generateApiToken()keys[idx].tokenHash = hash; saveApiKeys(keys)return res && res.status(200).json({ "data": { "key": keys[idx],token } })} if (action === 'update_scopes') { keys[idx].scopes = Array && Array.isArray(scopes) ? scopes : keys[idx].scopes; saveApiKeys(keys)return res && res.status(200).json({ "data": 'keys[idx]' })} if (action === 'revoke') { keys[idx].revokedAt = new Date().toISOString()saveApiKeys(keys)return res && res.status(200).json({ "data": 'keys[idx]' })} return res && res.status(400).json({ "error": { "code": 'invalid_action',"message": 'Unknown action' } })} if (req && req.method === 'DELETE') { const { id } = req && req.query; const keys = getApiKeys()const idx = keys && keys.findIndex((k) => k && k.id === id && k && k.userId === userId)if (idx < 0) return res && res.status(404).json({ "error": { "code": 'not_found',"message": 'Key not found' } })keys[idx].revokedAt = new Date().toISOString()saveApiKeys(keys)return res && res.status(200).json({ "data": 'keys[idx]' })} return res && res.status(405).json({ "error": { "code": 'method_not_allowed',"message": 'Method not allowed' } })} )}'
 import { NextApiRequest,NextApiResponse } from 'next'; import { ApiScope } from '../../../utils/devportal/types'; import { { createApiKey,getUserIdFromRequest },{ generateApiToken } } from '../../../utils/devportal/auth'; import { getApiKeys,saveApiKeys } from '../../../utils/devportal/storage'; export default function handler() { const userId = getUserIdFromRequest(req)if (req && req.method === 'GET') { const keys = getApiKeys().filter((k) => k && k.userId === userId && !k && k.revokedAt)return res && res.status(200).json({ "data": keys })} if (req && req.method === 'POST') { const { name,scopes,autoApprove } = req && req.body || {}const "parsedScopes": ApiScope[] = Array && Array.isArray(scopes) ? scopes : []; const { key,token } = createApiKey(userId,name || 'My API Key',parsedScopes,!!autoApprove)return res && res.status(201).json({ "data": { key,token } })} if (req && req.method === 'PUT') { const { id,action,scopes } = req && req.body || {}const keys = getApiKeys()const idx = keys && keys.findIndex((k) => k && k.id === id && k && k.userId === userId)if (idx export default function KeysPage() { return ( < 0) return res && res.status(404).json({ "error": { "code": 'not_found',"message": 'Key not found' } })if (action === 'regenerate') { const { token,hash } = generateApiToken()keys[idx].tokenHash = hash; saveApiKeys(keys)return res && res.status(200).json({ "data": { "key": keys[idx],token } })} if (action === 'update_scopes') { keys[idx].scopes = Array && Array.isArray(scopes) ? scopes : keys[idx].scopes; saveApiKeys(keys)return res && res.status(200).json({ "data": keys[idx] })} if (action === 'revoke') { keys[idx].revokedAt = new Date().toISOString()saveApiKeys(keys)return res && res.status(200).json({ "data": keys[idx] })} return res && res.status(400).json({ "error": { "code": 'invalid_action',"message": 'Unknown action' } })} if (req && req.method === 'DELETE') { const { id } = req && req.query; const keys = getApiKeys()const idx = keys && keys.findIndex((k) => k && k.id === id && k && k.userId === userId)if (idx < 0) return res && res.status(404).json({ "error": { "code": 'not_found',"message": 'Key not found' } })keys[idx].revokedAt = new Date().toISOString()saveApiKeys(keys)return res && res.status(200).json({ "data": keys[idx] })} return res && res.status(405).json({ "error": { "code": 'method_not_allowed',"message": 'Method not allowed' } })} )}ursor/add-new-services-and-deploy-updates-0462;'
 ursor/fix-syntax-push-and-merge-to-main-40de;
 ursor/fix-website-loading-errors-and-merge-6662;
-import { NextApiRequest,NextApiResponse } from 'next'; import { ApiScope } from '../../../utils/devportal/types'; import { { createApiKey,getUserIdFromRequest },{ generateApiToken } } from '../../../utils/devportal/auth'; import { getApiKeys,saveApiKeys } from '../../../utils/devportal/storage';'
-import { NextApiRequest,NextApiResponse } from 'next'; import { ApiScope } from '../../../utils/devportal/types'; import { { createApiKey,getUserIdFromRequest },{ generateApiToken } } from '../../../utils/devportal/auth'; import { getApiKeys,saveApiKeys } from '../../../utils/devportal/storage'; export default function handler() { const userId = getUserIdFromRequest(req); if (req && req.method === 'GET') { const keys = getApiKeys().filter((k) => k && k.userId === userId && !k && k.revokedAt); return res && res.status(200).json({ "data": keys })} if (req && req.method === 'POST') { const { name,scopes,autoApprove } = req && req.body || {}; const "parsedScopes": ApiScope[] = Array && Array.isArray(scopes) ? scopes : []; const { key,token } = createApiKey(userId,name || 'My API Key',parsedScopes,!!autoApprove); return res && res.status(201).json({ "data": { key,token } })} if (req && req.method === 'PUT') { const { id,action,scopes } = req && req.body || {}; const keys = getApiKeys(); const idx = keys && keys.findIndex((k) => k && k.id === id && k && k.userId === userId); if (idx export default function KeysPage() { return ( < 0) return res && res.status(404).json({ "error": { "code": 'not_found',"message": 'Key not found' } }); if (action === 'regenerate') { const { token,hash } = generateApiToken(); keys[idx].tokenHash = hash; saveApiKeys(keys); return res && res.status(200).json({ "data": { "key": keys[idx],token } })} if (action === 'update_scopes') { keys[idx].scopes = Array && Array.isArray(scopes) ? scopes : keys[idx].scopes; saveApiKeys(keys); return res && res.status(200).json({ "data": 'keys[idx]' })} if (action === 'revoke') { keys[idx].revokedAt = new Date().toISOString(); saveApiKeys(keys); return res && res.status(200).json({ "data": 'keys[idx]' })} return res && res.status(400).json({ "error": { "code": 'invalid_action',"message": 'Unknown action' } })} if (req && req.method === 'DELETE') { const { id } = req && req.query; const keys = getApiKeys(); const idx = keys && keys.findIndex((k) => k && k.id === id && k && k.userId === userId); if (idx < 0) return res && res.status(404).json({ "error": { "code": 'not_found',"message": 'Key not found' } }); keys[idx].revokedAt = new Date().toISOString(); saveApiKeys(keys); return res && res.status(200).json({ "data": 'keys[idx]' })} return res && res.status(405).json({ "error": { "code": 'method_not_allowed',"message": 'Method not allowed' } })} )}'
-import { NextApiRequest,NextApiResponse } from 'next'; import { ApiScope } from '../../../utils/devportal/types'; import { { createApiKey,getUserIdFromRequest },{ generateApiToken } } from '../../../utils/devportal/auth'; import { getApiKeys,saveApiKeys } from '../../../utils/devportal/storage'; export default function handler() { const userId = getUserIdFromRequest(req); if (req && req.method === 'GET') { const keys = getApiKeys().filter((k) => k && k.userId === userId && !k && k.revokedAt); return res && res.status(200).json({ "data": keys })} if (req && req.method === 'POST') { const { name,scopes,autoApprove } = req && req.body || {}; const "parsedScopes": ApiScope[] = Array && Array.isArray(scopes) ? scopes : []; const { key,token } = createApiKey(userId,name || 'My API Key',parsedScopes,!!autoApprove); return res && res.status(201).json({ "data": { key,token } })} if (req && req.method === 'PUT') { const { id,action,scopes } = req && req.body || {}; const keys = getApiKeys(); const idx = keys && keys.findIndex((k) => k && k.id === id && k && k.userId === userId); if (idx export default function KeysPage() { return ( < 0) return res && res.status(404).json({ "error": { "code": 'not_found',"message": 'Key not found' } }); if (action === 'regenerate') { const { token,hash } = generateApiToken(); keys[idx].tokenHash = hash; saveApiKeys(keys); return res && res.status(200).json({ "data": { "key": keys[idx],token } })} if (action === 'update_scopes') { keys[idx].scopes = Array && Array.isArray(scopes) ? scopes : keys[idx].scopes; saveApiKeys(keys); return res && res.status(200).json({ "data": keys[idx] })} if (action === 'revoke') { keys[idx].revokedAt = new Date().toISOString(); saveApiKeys(keys); return res && res.status(200).json({ "data": keys[idx] })} return res && res.status(400).json({ "error": { "code": 'invalid_action',"message": 'Unknown action' } })} if (req && req.method === 'DELETE') { const { id } = req && req.query; const keys = getApiKeys(); const idx = keys && keys.findIndex((k) => k && k.id === id && k && k.userId === userId); if (idx < 0) return res && res.status(404).json({ "error": { "code": 'not_found',"message": 'Key not found' } }); keys[idx].revokedAt = new Date().toISOString(); saveApiKeys(keys); return res && res.status(200).json({ "data": keys[idx] })} return res && res.status(405).json({ "error": { "code": 'method_not_allowed',"message": 'Method not allowed' } })} )}'
-import { NextApiRequest,NextApiResponse } from 'next'; import { ApiScope } from '../../../utils/devportal/types'; import { { createApiKey,getUserIdFromRequest },{ generateApiToken } } from '../../../utils/devportal/auth'; import { getApiKeys,saveApiKeys } from '../../../utils/devportal/storage'; export default function handler() { const userId = getUserIdFromRequest(req); if (req && req.method === 'GET') { const keys = getApiKeys().filter((k) => k && k.userId === userId && !k && k.revokedAt); return res && res.status(200).json({ "data": keys })} if (req && req.method === 'POST') { const { name,scopes,autoApprove } = req && req.body || {}; const "parsedScopes": ApiScope[] = Array && Array.isArray(scopes) ? scopes : []; const { key,token } = createApiKey(userId,name || 'My API Key',parsedScopes,!!autoApprove); return res && res.status(201).json({ "data": { key,token } })} if (req && req.method === 'PUT') { const { id,action,scopes } = req && req.body || {}; const keys = getApiKeys(); const idx = keys && keys.findIndex((k) => k && k.id === id && k && k.userId === userId); if (idx export default function KeysPage() { return ( < 0) return res && res.status(404).json({ "error": { "code": 'not_found',"message": 'Key not found' } }); if (action === 'regenerate') { const { token,hash } = generateApiToken(); keys[idx].tokenHash = hash; saveApiKeys(keys); return res && res.status(200).json({ "data": { "key": keys[idx],token } })} if (action === 'update_scopes') { keys[idx].scopes = Array && Array.isArray(scopes) ? scopes : keys[idx].scopes; saveApiKeys(keys); return res && res.status(200).json({ "data": keys[idx] })} if (action === 'revoke') { keys[idx].revokedAt = new Date().toISOString(); saveApiKeys(keys); return res && res.status(200).json({ "data": keys[idx] })} return res && res.status(400).json({ "error": { "code": 'invalid_action',"message": 'Unknown action' } })} if (req && req.method === 'DELETE') { const { id } = req && req.query; const keys = getApiKeys(); const idx = keys && keys.findIndex((k) => k && k.id === id && k && k.userId === userId); if (idx < 0) return res && res.status(404).json({ "error": { "code": 'not_found',"message": 'Key not found' } }); keys[idx].revokedAt = new Date().toISOString(); saveApiKeys(keys); return res && res.status(200).json({ "data": keys[idx] })} return res && res.status(405).json({ "error": { "code": 'method_not_allowed',"message": 'Method not allowed' } })} )}'
 
 export default function handler() { const userId = getUserIdFromRequest(req); if (req && req.method = == 'GET') {;'
   }
-  const keys = getApiKeys().filter((k) => k && k.userId === userId && !k && k.revokedAt); return res && res.status(200).json({ "data": keys }
 } if (req && req.method = == 'POST') {;'
   }
-  const { name,scopes,autoApprove } = req && req.body || {};
 
-const "parsedScopes": ApiScope[] = Array && Array.isArray(scopes) ? scopes : [];
 
-const { key,token } = createApiKey(userId,name || 'My API Key',parsedScopes,!!autoApprove); return res && res.status(201).json({ "data": { key,token } })} if (req && req.method = == 'PUT') {;'
   }
-  const { id,action,scopes } = req && req.body || {};
 
-const keys = getApiKeys();
 
-const idx = keys && keys.findIndex((k) => k && k.id === id && k && k.userId === userId); if (idx export default function KeysPage() { return ( < 0) return res && res.status(404).json({ "error": { "code": 'not_found',"message": 'Key not found' },'
 }); if (action = == 'regenerate') {;'
   }
-  const { token,hash } = generateApiToken(); keys[idx].tokenHash = hash; saveApiKeys(keys); return res && res.status(200).json({ "data": { "key": keys[idx],token } })} if (action === 'update_scopes') { keys[idx].scopes = Array && Array.isArray(scopes) ? scopes : keys[idx].scopes; saveApiKeys(keys); return res && res.status(200).json({ "data": 'keys[idx]' },'
 } if (action === 'revoke') { keys[idx].revokedAt = new Date().toISOString(); saveApiKeys(keys); return res && res.status(200).json({ "data": 'keys[idx]' },'
 } return res && res.status(400).json({ "error": { "code": 'invalid_action',"message": 'Unknown action' } },'
 } if (req && req.method = == 'DELETE') {;'
   }
-  const { id } = req && req.query;
 
-const keys = getApiKeys();
 
-const idx = keys && keys.findIndex((k) => k && k.id === id && k && k.userId === userId); if (idx < 0) return res && res.status(404).json({ "error": { "code": 'not_found',"message": 'Key not found' },'
 }); keys[idx].revokedAt = new Date().toISOString(); saveApiKeys(keys); return res && res.status(200).json({ "data": 'keys[idx]' },'
 } return res && res.status(405).json({ "error": { "code": 'method_not_allowed',"message": 'Method not allowed' } })} ,'
 }
-import { NextApiRequest,NextApiResponse } from 'next'; import { ApiScope } from '../../../utils/devportal/types'; import { { createApiKey,getUserIdFromRequest },{ generateApiToken } } from '../../../utils/devportal/auth'; import { getApiKeys,saveApiKeys } from '../../../utils/devportal/storage';'
 
 export default function handler() { const userId = getUserIdFromRequest(req); if (req && req.method = == 'GET') {;'
   }
-  const keys = getApiKeys().filter((k) => k && k.userId === userId && !k && k.revokedAt); return res && res.status(200).json({ "data": keys }
 } if (req && req.method = == 'POST') {;'
   }
-  const { name,scopes,autoApprove } = req && req.body || {};
 
-const "parsedScopes": ApiScope[] = Array && Array.isArray(scopes) ? scopes : [];
 
-const { key,token } = createApiKey(userId,name || 'My API Key',parsedScopes,!!autoApprove); return res && res.status(201).json({ "data": { key,token } })} if (req && req.method = == 'PUT') {;'
   }
-  const { id,action,scopes } = req && req.body || {};
 
-const keys = getApiKeys();
 
-const idx = keys && keys.findIndex((k) => k && k.id === id && k && k.userId === userId); if (idx export default function KeysPage() { return ( < 0) return res && res.status(404).json({ "error": { "code": 'not_found',"message": 'Key not found' },'
 }); if (action = == 'regenerate') {;'
   }
-  const { token,hash } = generateApiToken(); keys[idx].tokenHash = hash; saveApiKeys(keys); return res && res.status(200).json({ "data": { "key": keys[idx],token } })} if (action === 'update_scopes') { keys[idx].scopes = Array && Array.isArray(scopes) ? scopes : keys[idx].scopes; saveApiKeys(keys); return res && res.status(200).json({ "data": keys[idx] },'
 } if (action === 'revoke') { keys[idx].revokedAt = new Date().toISOString(); saveApiKeys(keys); return res && res.status(200).json({ "data": keys[idx] },'
 } return res && res.status(400).json({ "error": { "code": 'invalid_action',"message": 'Unknown action' } },'
 } if (req && req.method = == 'DELETE') {;'
   }
-  const { id } = req && req.query;
 
-const keys = getApiKeys();
 
-const idx = keys && keys.findIndex((k) => k && k.id === id && k && k.userId === userId); if (idx < 0) return res && res.status(404).json({ "error": { "code": 'not_found',"message": 'Key not found' },'
 }); keys[idx].revokedAt = new Date().toISOString(); saveApiKeys(keys); return res && res.status(200).json({ "data": keys[idx] }
 } return res && res.status(405).json({ "error": { "code": 'method_not_allowed',"message": 'Method not allowed' } })} ,'
 }
-import { NextApiRequest,NextApiResponse } from 'next'; import { ApiScope } from '../../../utils/devportal/types'; import { { createApiKey,getUserIdFromRequest },{ generateApiToken } } from '../../../utils/devportal/auth'; import { getApiKeys,saveApiKeys } from '../../../utils/devportal/storage';'
 
 export default function handler() { const userId = getUserIdFromRequest(req); if (req && req.method = == 'GET') {;'
   }
-  const keys = getApiKeys().filter((k) => k && k.userId === userId && !k && k.revokedAt); return res && res.status(200).json({ "data": keys }
 } if (req && req.method = == 'POST') {;'
   }
-  const { name,scopes,autoApprove } = req && req.body || {};
 
-const "parsedScopes": ApiScope[] = Array && Array.isArray(scopes) ? scopes : [];
 
-const { key,token } = createApiKey(userId,name || 'My API Key',parsedScopes,!!autoApprove); return res && res.status(201).json({ "data": { key,token } })} if (req && req.method = == 'PUT') {;'
   }
-  const { id,action,scopes } = req && req.body || {};
 
-const keys = getApiKeys();
 
-const idx = keys && keys.findIndex((k) => k && k.id === id && k && k.userId === userId); if (idx export default function KeysPage() { return ( < 0) return res && res.status(404).json({ "error": { "code": 'not_found',"message": 'Key not found' },'
 }); if (action = == 'regenerate') {;'
   }
-  const { token,hash } = generateApiToken(); keys[idx].tokenHash = hash; saveApiKeys(keys); return res && res.status(200).json({ "data": { "key": keys[idx],token } })} if (action === 'update_scopes') { keys[idx].scopes = Array && Array.isArray(scopes) ? scopes : keys[idx].scopes; saveApiKeys(keys); return res && res.status(200).json({ "data": keys[idx] },'
 } if (action === 'revoke') { keys[idx].revokedAt = new Date().toISOString(); saveApiKeys(keys); return res && res.status(200).json({ "data": keys[idx] },'
 } return res && res.status(400).json({ "error": { "code": 'invalid_action',"message": 'Unknown action' } },'
 } if (req && req.method = == 'DELETE') {;'
   }
-  const { id } = req && req.query;
 
-const keys = getApiKeys();
 
-const idx = keys && keys.findIndex((k) => k && k.id === id && k && k.userId === userId); if (idx < 0) return res && res.status(404).json({ "error": { "code": 'not_found',"message": 'Key not found' },'
 }); keys[idx].revokedAt = new Date().toISOString(); saveApiKeys(keys); return res && res.status(200).json({ "data": keys[idx] }
 } return res && res.status(405).json({ "error": { "code": 'method_not_allowed',"message": 'Method not allowed' } })} ,'
 }
@@ -639,92 +531,78 @@ const idx = keys && keys.findIndex((k) => k && k.id === id && k && k.userId === 
    ;
   return res.status(400).json({ "error": { "code": 'invalid_action', "message": 'Unknown action' } })}'
   if (req.method === 'DELETE') ;'
-  const { id } = req.query;
 
-const keys = getApiKeys(;
-  const idx = keys.findIndex((k) => k.id === id && k.userId === userId)if (idx < 0) return res.status(404).json({ "error": { "code": 'not_found', "message": 'Key not found' } })keys[idx].revokedAt = new Date().toISOString()saveApiKeys(keys)return res.status(200).json({ "data": keys[idx] })}"
  ;
   return res.status(405).json({ "error": { "code": 'method_not_allowed', "message": 'Method not allowed' } })}'
   )}
-import { NextApiRequest,NextApiResponse } from 'next'; import { ApiScope } from '../../../utils/devportal/types'; import { { createApiKey,getUserIdFromRequest },{ generateApiToken } } from '../../../utils/devportal/auth'; import { getApiKeys,saveApiKeys } from '../../../utils/devportal/storage'; export default function handler() { const userId = getUserIdFromRequest(req); if (req.method === 'GET') { const keys = getApiKeys().filter((k) => k.userId === userId && !k.revokedAt); return res.status(200).json({ "data": keys })} if (req.method === 'POST') { const { name,scopes,autoApprove } = req.body || {}; const "parsedScopes": ApiScope[] = Array.isArray(scopes) ? scopes : []; const { key,token } = createApiKey(userId,name || 'My API Key',parsedScopes,!!autoApprove); return res.status(201).json({ "data": { key,token } })} if (req.method === 'PUT') { const { id,action,scopes } = req.body || {}; const keys = getApiKeys(); const idx = keys.findIndex((k) => k.id === id && k.userId === userId); if (idx export default function KeysPage() { return ( < 0) return res.status(404).json({ "error": { "code": 'not_found',"message": 'Key not found' } }); if (action === 'regenerate') { const { token,hash } = generateApiToken(); keys[idx].tokenHash = hash; saveApiKeys(keys); return res.status(200).json({ "data": { "key": keys[idx],token } })} if (action === 'update_scopes') { keys[idx].scopes = Array.isArray(scopes) ? scopes : keys[idx].scopes; saveApiKeys(keys); return res.status(200).json({ "data": 'keys[idx]' })} if (action === 'revoke') { keys[idx].revokedAt = new Date().toISOString(); saveApiKeys(keys); return res.status(200).json({ "data": 'keys[idx]' })} return res.status(400).json({ "error": { "code": 'invalid_action',"message": 'Unknown action' } })} if (req.method === 'DELETE') { const { id } = req.query; const keys = getApiKeys(); const idx = keys.findIndex((k) => k.id === id && k.userId === userId); if (idx < 0) return res.status(404).json({ "error": { "code": 'not_found',"message": 'Key not found' } }); keys[idx].revokedAt = new Date().toISOString(); saveApiKeys(keys); return res.status(200).json({ "data": 'keys[idx]' })} return res.status(405).json({ "error": { "code": 'method_not_allowed',"message": 'Method not allowed' } })} )}'
-import { NextApiRequest,NextApiResponse } from 'next'; import { ApiScope } from '../../../utils/devportal/types'; import { { createApiKey,getUserIdFromRequest },{ generateApiToken } } from '../../../utils/devportal/auth'; import { getApiKeys,saveApiKeys } from '../../../utils/devportal/storage'; export default function handler() { const userId = getUserIdFromRequest(req); if (req.method === 'GET') { const keys = getApiKeys().filter((k) => k.userId === userId && !k.revokedAt); return res.status(200).json({ "data": keys })} if (req.method === 'POST') { const { name,scopes,autoApprove } = req.body || {}; const "parsedScopes": ApiScope[] = Array.isArray(scopes) ? scopes : []; const { key,token } = createApiKey(userId,name || 'My API Key',parsedScopes,!!autoApprove); return res.status(201).json({ "data": { key,token } })} if (req.method === 'PUT') { const { id,action,scopes } = req.body || {}; const keys = getApiKeys(); const idx = keys.findIndex((k) => k.id === id && k.userId === userId); if (idx export default function KeysPage() { return ( < 0) return res.status(404).json({ "error": { "code": 'not_found',"message": 'Key not found' } }); if (action === 'regenerate') { const { token,hash } = generateApiToken(); keys[idx].tokenHash = hash; saveApiKeys(keys); return res.status(200).json({ "data": { "key": keys[idx],token } })} if (action === 'update_scopes') { keys[idx].scopes = Array.isArray(scopes) ? scopes : keys[idx].scopes; saveApiKeys(keys); return res.status(200).json({ "data": keys[idx] })} if (action === 'revoke') { keys[idx].revokedAt = new Date().toISOString(); saveApiKeys(keys); return res.status(200).json({ "data": keys[idx] })} return res.status(400).json({ "error": { "code": 'invalid_action',"message": 'Unknown action' } })} if (req.method === 'DELETE') { const { id } = req.query; const keys = getApiKeys(); const idx = keys.findIndex((k) => k.id === id && k.userId === userId); if (idx < 0) return res.status(404).json({ "error": { "code": 'not_found',"message": 'Key not found' } }); keys[idx].revokedAt = new Date().toISOString(); saveApiKeys(keys); return res.status(200).json({ "data": keys[idx] })} return res.status(405).json({ "error": { "code": 'method_not_allowed',"message": 'Method not allowed' } })} )}'
   )}ursor/automate-test-improve-and-merge-code-646c;
 
   )}
-import { NextApiRequest,NextApiResponse } from 'next'; import { ApiScope } from '../../../utils/devportal/types'; import { { createApiKey,getUserIdFromRequest },{ generateApiToken } } from '../../../utils/devportal/auth'; import { getApiKeys,saveApiKeys } from '../../../utils/devportal/storage';'
 
 export default function handler() { const userId = getUserIdFromRequest(req); if (req.method = == 'GET') {;'
   }
-  const keys = getApiKeys().filter((k) => k.userId === userId && !k.revokedAt); return res.status(200).json({ "data": keys }
 } if (req.method = == 'POST') {;'
   }
-  const { name,scopes,autoApprove } = req.body || {};
 
-const "parsedScopes": ApiScope[] = Array.isArray(scopes) ? scopes : [];
 
-const { key,token } = createApiKey(userId,name || 'My API Key',parsedScopes,!!autoApprove); return res.status(201).json({ "data": { key,token } })} if (req.method = == 'PUT') {;'
   }
-  const { id,action,scopes } = req.body || {};
 
-const keys = getApiKeys();
 
-const idx = keys.findIndex((k) => k.id === id && k.userId === userId); if (idx export default function KeysPage() { return ( < 0) return res.status(404).json({ "error": { "code": 'not_found',"message": 'Key not found' },'
 }); if (action = == 'regenerate') {;'
   }
-  const { token,hash } = generateApiToken(); keys[idx].tokenHash = hash; saveApiKeys(keys); return res.status(200).json({ "data": { "key": keys[idx],token } })} if (action === 'update_scopes') { keys[idx].scopes = Array.isArray(scopes) ? scopes : keys[idx].scopes; saveApiKeys(keys); return res.status(200).json({ "data": 'keys[idx]' },'
 } if (action === 'revoke') { keys[idx].revokedAt = new Date().toISOString(); saveApiKeys(keys); return res.status(200).json({ "data": 'keys[idx]' },'
 } return res.status(400).json({ "error": { "code": 'invalid_action',"message": 'Unknown action' } },'
 } if (req.method = == 'DELETE') {;'
   }
-  const { id } = req.query;
 
-const keys = getApiKeys();
 
-const idx = keys.findIndex((k) => k.id === id && k.userId === userId); if (idx < 0) return res.status(404).json({ "error": { "code": 'not_found',"message": 'Key not found' },'
 }); keys[idx].revokedAt = new Date().toISOString(); saveApiKeys(keys); return res.status(200).json({ "data": 'keys[idx]' },'
 } return res.status(405).json({ "error": { "code": 'method_not_allowed',"message": 'Method not allowed' } })} ,'
 }
-import { NextApiRequest,NextApiResponse } from 'next'; import { ApiScope } from '../../../utils/devportal/types'; import { { createApiKey,getUserIdFromRequest },{ generateApiToken } } from '../../../utils/devportal/auth'; import { getApiKeys,saveApiKeys } from '../../../utils/devportal/storage';'
 
 export default function handler() { const userId = getUserIdFromRequest(req); if (req.method = == 'GET') {;'
   }
-  const keys = getApiKeys().filter((k) => k.userId === userId && !k.revokedAt); return res.status(200).json({ "data": keys }
 } if (req.method = == 'POST') {;'
   }
-  const { name,scopes,autoApprove } = req.body || {};
 
-const "parsedScopes": ApiScope[] = Array.isArray(scopes) ? scopes : [];
 
-const { key,token } = createApiKey(userId,name || 'My API Key',parsedScopes,!!autoApprove); return res.status(201).json({ "data": { key,token } })} if (req.method = == 'PUT') {;'
   }
-  const { id,action,scopes } = req.body || {};
 
-const keys = getApiKeys();
 
-const idx = keys.findIndex((k) => k.id === id && k.userId === userId); if (idx export default function KeysPage() { return ( < 0) return res.status(404).json({ "error": { "code": 'not_found',"message": 'Key not found' },'
 }); if (action = == 'regenerate') {;'
   }
-  const { token,hash } = generateApiToken(); keys[idx].tokenHash = hash; saveApiKeys(keys); return res.status(200).json({ "data": { "key": keys[idx],token } })} if (action === 'update_scopes') { keys[idx].scopes = Array.isArray(scopes) ? scopes : keys[idx].scopes; saveApiKeys(keys); return res.status(200).json({ "data": keys[idx] },'
 } if (action === 'revoke') { keys[idx].revokedAt = new Date().toISOString(); saveApiKeys(keys); return res.status(200).json({ "data": keys[idx] },'
 } return res.status(400).json({ "error": { "code": 'invalid_action',"message": 'Unknown action' } },'
 } if (req.method = == 'DELETE') {;'
   }
-  const { id } = req.query;
 
-const keys = getApiKeys();
 
-const idx = keys.findIndex((k) => k.id === id && k.userId === userId); if (idx < 0) return res.status(404).json({ "error": { "code": 'not_found',"message": 'Key not found' },'
 }); keys[idx].revokedAt = new Date().toISOString(); saveApiKeys(keys); return res.status(200).json({ "data": keys[idx] }
 } return res.status(405).json({ "error": { "code": 'method_not_allowed',"message": 'Method not allowed' } })} ,'
 }
 
   )}
-import { NextApiRequest,NextApiResponse } from 'next'; import { ApiScope } from '../../../utils/devportal/types'; import { { createApiKey,getUserIdFromRequest },{ generateApiToken } } from '../../../utils/devportal/auth'; import { getApiKeys,saveApiKeys } from '../../../utils/devportal/storage'; export default function handler() { const userId = getUserIdFromRequest(req); if (req.method === 'GET') { const keys = getApiKeys().filter((k) => k.userId === userId && !k.revokedAt); return res.status(200).json({ "data": keys })} if (req.method === 'POST') { const { name,scopes,autoApprove } = req.body || {}; const "parsedScopes": ApiScope[] = Array.isArray(scopes) ? scopes : []; const { key,token } = createApiKey(userId,name || 'My API Key',parsedScopes,!!autoApprove); return res.status(201).json({ "data": { key,token } })} if (req.method === 'PUT') { const { id,action,scopes } = req.body || {}; const keys = getApiKeys(); const idx = keys.findIndex((k) => k.id === id && k.userId === userId); if (idx export default function KeysPage() { return ( < 0) return res.status(404).json({ "error": { "code": 'not_found',"message": 'Key not found' } }); if (action === 'regenerate') { const { token,hash } = generateApiToken(); keys[idx].tokenHash = hash; saveApiKeys(keys); return res.status(200).json({ "data": { "key": keys[idx],token } })} if (action === 'update_scopes') { keys[idx].scopes = Array.isArray(scopes) ? scopes : keys[idx].scopes; saveApiKeys(keys); return res.status(200).json({ "data": 'keys[idx]' })} if (action === 'revoke') { keys[idx].revokedAt = new Date().toISOString(); saveApiKeys(keys); return res.status(200).json({ "data": 'keys[idx]' })} return res.status(400).json({ "error": { "code": 'invalid_action',"message": 'Unknown action' } })} if (req.method === 'DELETE') { const { id } = req.query; const keys = getApiKeys(); const idx = keys.findIndex((k) => k.id === id && k.userId === userId); if (idx < 0) return res.status(404).json({ "error": { "code": 'not_found',"message": 'Key not found' } }); keys[idx].revokedAt = new Date().toISOString(); saveApiKeys(keys); return res.status(200).json({ "data": 'keys[idx]' })} return res.status(405).json({ "error": { "code": 'method_not_allowed',"message": 'Method not allowed' } })} )}'
-import { NextApiRequest,NextApiResponse } from 'next'; import { ApiScope } from '../../../utils/devportal/types'; import { { createApiKey,getUserIdFromRequest },{ generateApiToken } } from '../../../utils/devportal/auth'; import { getApiKeys,saveApiKeys } from '../../../utils/devportal/storage'; export default function handler() { const userId = getUserIdFromRequest(req); if (req.method === 'GET') { const keys = getApiKeys().filter((k) => k.userId === userId && !k.revokedAt); return res.status(200).json({ "data": keys })} if (req.method === 'POST') { const { name,scopes,autoApprove } = req.body || {}; const "parsedScopes": ApiScope[] = Array.isArray(scopes) ? scopes : []; const { key,token } = createApiKey(userId,name || 'My API Key',parsedScopes,!!autoApprove); return res.status(201).json({ "data": { key,token } })} if (req.method === 'PUT') { const { id,action,scopes } = req.body || {}; const keys = getApiKeys(); const idx = keys.findIndex((k) => k.id === id && k.userId === userId); if (idx export default function KeysPage() { return ( < 0) return res.status(404).json({ "error": { "code": 'not_found',"message": 'Key not found' } }); if (action === 'regenerate') { const { token,hash } = generateApiToken(); keys[idx].tokenHash = hash; saveApiKeys(keys); return res.status(200).json({ "data": { "key": keys[idx],token } })} if (action === 'update_scopes') { keys[idx].scopes = Array.isArray(scopes) ? scopes : keys[idx].scopes; saveApiKeys(keys); return res.status(200).json({ "data": keys[idx] })} if (action === 'revoke') { keys[idx].revokedAt = new Date().toISOString(); saveApiKeys(keys); return res.status(200).json({ "data": keys[idx] })} return res.status(400).json({ "error": { "code": 'invalid_action',"message": 'Unknown action' } })} if (req.method === 'DELETE') { const { id } = req.query; const keys = getApiKeys(); const idx = keys.findIndex((k) => k.id === id && k.userId === userId); if (idx < 0) return res.status(404).json({ "error": { "code": 'not_found',"message": 'Key not found' } }); keys[idx].revokedAt = new Date().toISOString(); saveApiKeys(keys); return res.status(200).json({ "data": keys[idx] })} return res.status(405).json({ "error": { "code": 'method_not_allowed',"message": 'Method not allowed' } })} )}'
   )}ursor/automate-test-improve-and-merge-code-646c;
   )}ursor/automate-test-improve-and-merge-code-646c;
   )}
-import { NextApiRequest,NextApiResponse } from 'next'; import { ApiScope } from '../../../utils/devportal/types'; import { { createApiKey,getUserIdFromRequest },{ generateApiToken } } from '../../../utils/devportal/auth'; import { getApiKeys,saveApiKeys } from '../../../utils/devportal/storage'; export default function handler() { const userId = getUserIdFromRequest(req); if (req.method === 'GET') { const keys = getApiKeys().filter((k) => k.userId === userId && !k.revokedAt); return res.status(200).json({ "data": keys })} if (req.method === 'POST') { const { name,scopes,autoApprove } = req.body || {}; const "parsedScopes": ApiScope[] = Array.isArray(scopes) ? scopes : []; const { key,token } = createApiKey(userId,name || 'My API Key',parsedScopes,!!autoApprove); return res.status(201).json({ "data": { key,token } })} if (req.method === 'PUT') { const { id,action,scopes } = req.body || {}; const keys = getApiKeys(); const idx = keys.findIndex((k) => k.id === id && k.userId === userId); if (idx export default function KeysPage() { return ( < 0) return res.status(404).json({ "error": { "code": 'not_found',"message": 'Key not found' } }); if (action === 'regenerate') { const { token,hash } = generateApiToken(); keys[idx].tokenHash = hash; saveApiKeys(keys); return res.status(200).json({ "data": { "key": keys[idx],token } })} if (action === 'update_scopes') { keys[idx].scopes = Array.isArray(scopes) ? scopes : keys[idx].scopes; saveApiKeys(keys); return res.status(200).json({ "data": 'keys[idx]' })} if (action === 'revoke') { keys[idx].revokedAt = new Date().toISOString(); saveApiKeys(keys); return res.status(200).json({ "data": 'keys[idx]' })} return res.status(400).json({ "error": { "code": 'invalid_action',"message": 'Unknown action' } })} if (req.method === 'DELETE') { const { id } = req.query; const keys = getApiKeys(); const idx = keys.findIndex((k) => k.id === id && k.userId === userId); if (idx < 0) return res.status(404).json({ "error": { "code": 'not_found',"message": 'Key not found' } }); keys[idx].revokedAt = new Date().toISOString(); saveApiKeys(keys); return res.status(200).json({ "data": 'keys[idx]' })} return res.status(405).json({ "error": { "code": 'method_not_allowed',"message": 'Method not allowed' } })} )}'
-import { NextApiRequest,NextApiResponse } from 'next'; import { ApiScope } from '../../../utils/devportal/types'; import { { createApiKey,getUserIdFromRequest },{ generateApiToken } } from '../../../utils/devportal/auth'; import { getApiKeys,saveApiKeys } from '../../../utils/devportal/storage'; export default function handler() { const userId = getUserIdFromRequest(req); if (req.method === 'GET') { const keys = getApiKeys().filter((k) => k.userId === userId && !k.revokedAt); return res.status(200).json({ "data": keys })} if (req.method === 'POST') { const { name,scopes,autoApprove } = req.body || {}; const "parsedScopes": ApiScope[] = Array.isArray(scopes) ? scopes : []; const { key,token } = createApiKey(userId,name || 'My API Key',parsedScopes,!!autoApprove); return res.status(201).json({ "data": { key,token } })} if (req.method === 'PUT') { const { id,action,scopes } = req.body || {}; const keys = getApiKeys(); const idx = keys.findIndex((k) => k.id === id && k.userId === userId); if (idx export default function KeysPage() { return ( < 0) return res.status(404).json({ "error": { "code": 'not_found',"message": 'Key not found' } }); if (action === 'regenerate') { const { token,hash } = generateApiToken(); keys[idx].tokenHash = hash; saveApiKeys(keys); return res.status(200).json({ "data": { "key": keys[idx],token } })} if (action === 'update_scopes') { keys[idx].scopes = Array.isArray(scopes) ? scopes : keys[idx].scopes; saveApiKeys(keys); return res.status(200).json({ "data": keys[idx] })} if (action === 'revoke') { keys[idx].revokedAt = new Date().toISOString(); saveApiKeys(keys); return res.status(200).json({ "data": keys[idx] })} return res.status(400).json({ "error": { "code": 'invalid_action',"message": 'Unknown action' } })} if (req.method === 'DELETE') { const { id } = req.query; const keys = getApiKeys(); const idx = keys.findIndex((k) => k.id === id && k.userId === userId); if (idx < 0) return res.status(404).json({ "error": { "code": 'not_found',"message": 'Key not found' } }); keys[idx].revokedAt = new Date().toISOString(); saveApiKeys(keys); return res.status(200).json({ "data": keys[idx] })} return res.status(405).json({ "error": { "code": 'method_not_allowed',"message": 'Method not allowed' } })} )}'
   )}ursor/automate-test-improve-and-merge-code-646c;
+=======
+import { NextApiRequest,NextApiResponse } from 'next'; import { ApiScope } from '../../../utils/devportal/types'; import { { createApiKey,getUserIdFromRequest },{ generateApiToken } } from '../../../utils/devportal/auth'; import { getApiKeys,saveApiKeys } from '../../../utils/devportal/storage'; export default function handler(req: NextApiRequest,res: NextApiResponse) { const userId = getUserIdFromRequest(req); if (req.method === 'GET') { const keys = getApiKeys().filter((k) => k.userId === userId && !k.revokedAt); return res.status(200).json({ data: keys })} if (req.method === 'POST') { const { name,scopes,autoApprove } = req.body || {}; const parsedScopes: ApiScope[] = Array.isArray(scopes) ? scopes : []; const { key,token } = createApiKey(userId,name || 'My API Key',parsedScopes,!!autoApprove); return res.status(201).json({ data: { key,token } })} if (req.method === 'PUT') { const { id,action,scopes } = req.body || {}; const keys = getApiKeys(); const idx = keys.findIndex((k) => k.id === id && k.userId === userId); if (idx export default function KeysPage() { return ( < 0) return res.status(404).json({ error: { code: 'not_found',message: 'Key not found' } }); if (action === 'regenerate') { const { token,hash } = generateApiToken(); keys[idx].tokenHash = hash; saveApiKeys(keys); return res.status(200).json({ data: { key: keys[idx],token } })} if (action === 'update_scopes') { keys[idx].scopes = Array.isArray(scopes) ? scopes : keys[idx].scopes; saveApiKeys(keys); return res.status(200).json({ data: keys[idx] })} if (action === 'revoke') { keys[idx].revokedAt = new Date().toISOString(); saveApiKeys(keys); return res.status(200).json({ data: keys[idx] })} return res.status(400).json({ error: { code: 'invalid_action',message: 'Unknown action' } })} if (req.method === 'DELETE') { const { id } = req.query; const keys = getApiKeys(); const idx = keys.findIndex((k) => k.id === id && k.userId === userId); if (idx < 0) return res.status(404).json({ error: { code: 'not_found',message: 'Key not found' } }); keys[idx].revokedAt = new Date().toISOString(); saveApiKeys(keys); return res.status(200).json({ data: keys[idx] })} return res.status(405).json({ error: { code: 'method_not_allowed',message: 'Method not allowed' } })} )}
+ursor/add-new-services-and-deploy-updates-0462;
+ursor/fix-syntax-push-and-merge-to-main-40de;
+'
+import { NextApiRequest,NextApiResponse } from 'next'; import { ApiScope } from '../../../utils/devportal/types'; import { { createApiKey,getUserIdFromRequest },{ generateApiToken } } from '../../../utils/devportal/auth'; import { getApiKeys,saveApiKeys } from '../../../utils/devportal/storage'; export default function handler(req: 'NextApiRequest',res: NextApiResponse) { const userId = getUserIdFromRequest(req); if (req && req.method === 'GET') { const keys = getApiKeys().filter((k) => k && k.userId === userId && !k && k.revokedAt); return res && res.status(200).json({ data: keys })} if (req && req.method === 'POST') { const { name,scopes,autoApprove } = req && req.body || {}; const parsedScopes: ApiScope[] = Array && Array.isArray(scopes) ? scopes : []; const { key,token } = createApiKey(userId,name || 'My API Key',parsedScopes,!!autoApprove); return res && res.status(201).json({ data: { key,token } })} if (req && req.method === 'PUT') { const { id,action,scopes } = req && req.body || {}; const keys = getApiKeys(); const idx = keys && keys.findIndex((k) => k && k.id === id && k && k.userId === userId); if (idx export default function KeysPage() { return ( < 0) return res && res.status(404).json({ error: { code: 'not_found',message: 'Key not found' } }); if (action === 'regenerate') { const { token,hash } = generateApiToken(); keys[idx].tokenHash = hash; saveApiKeys(keys); return res && res.status(200).json({ data: { key: keys[idx],token } })} if (action === 'update_scopes') { keys[idx].scopes = Array && Array.isArray(scopes) ? scopes : keys[idx].scopes; saveApiKeys(keys); return res && res.status(200).json({ data: 'keys[idx]' })} if (action === 'revoke') { keys[idx].revokedAt = new Date().toISOString(); saveApiKeys(keys); return res && res.status(200).json({ data: 'keys[idx]' })} return res && res.status(400).json({ error: { code: 'invalid_action',message: 'Unknown action' } })} if (req && req.method === 'DELETE') { const { id } = req && req.query; const keys = getApiKeys(); const idx = keys && keys.findIndex((k) => k && k.id === id && k && k.userId === userId); if (idx < 0) return res && res.status(404).json({ error: { code: 'not_found',message: 'Key not found' } }); keys[idx].revokedAt = new Date().toISOString(); saveApiKeys(keys); return res && res.status(200).json({ data: 'keys[idx]' })} return res && res.status(405).json({ error: { code: 'method_not_allowed',message: 'Method not allowed' } })} )}'
+import { NextApiRequest,NextApiResponse } from 'next'; import { ApiScope } from '../../../utils/devportal/types'; import { { createApiKey,getUserIdFromRequest },{ generateApiToken } } from '../../../utils/devportal/auth'; import { getApiKeys,saveApiKeys } from '../../../utils/devportal/storage'; export default function handler(req: NextApiRequest,res: NextApiResponse) { const userId = getUserIdFromRequest(req); if (req && req.method === 'GET') { const keys = getApiKeys().filter((k) => k && k.userId === userId && !k && k.revokedAt); return res && res.status(200).json({ data: keys })} if (req && req.method === 'POST') { const { name,scopes,autoApprove } = req && req.body || {}; const parsedScopes: ApiScope[] = Array && Array.isArray(scopes) ? scopes : []; const { key,token } = createApiKey(userId,name || 'My API Key',parsedScopes,!!autoApprove); return res && res.status(201).json({ data: { key,token } })} if (req && req.method === 'PUT') { const { id,action,scopes } = req && req.body || {}; const keys = getApiKeys(); const idx = keys && keys.findIndex((k) => k && k.id === id && k && k.userId === userId); if (idx export default function KeysPage() { return ( < 0) return res && res.status(404).json({ error: { code: 'not_found',message: 'Key not found' } }); if (action === 'regenerate') { const { token,hash } = generateApiToken(); keys[idx].tokenHash = hash; saveApiKeys(keys); return res && res.status(200).json({ data: { key: keys[idx],token } })} if (action === 'update_scopes') { keys[idx].scopes = Array && Array.isArray(scopes) ? scopes : keys[idx].scopes; saveApiKeys(keys); return res && res.status(200).json({ data: keys[idx] })} if (action === 'revoke') { keys[idx].revokedAt = new Date().toISOString(); saveApiKeys(keys); return res && res.status(200).json({ data: keys[idx] })} return res && res.status(400).json({ error: { code: 'invalid_action',message: 'Unknown action' } })} if (req && req.method === 'DELETE') { const { id } = req && req.query; const keys = getApiKeys(); const idx = keys && keys.findIndex((k) => k && k.id === id && k && k.userId === userId); if (idx < 0) return res && res.status(404).json({ error: { code: 'not_found',message: 'Key not found' } }); keys[idx].revokedAt = new Date().toISOString(); saveApiKeys(keys); return res && res.status(200).json({ data: keys[idx] })} return res && res.status(405).json({ error: { code: 'method_not_allowed',message: 'Method not allowed' } })} )}'
+import { NextApiRequest,NextApiResponse } from 'next'; import { ApiScope } from '../../../utils/devportal/types'; import { { createApiKey,getUserIdFromRequest },{ generateApiToken } } from '../../../utils/devportal/auth'; import { getApiKeys,saveApiKeys } from '../../../utils/devportal/storage'; export default function handler(req: NextApiRequest,res: NextApiResponse) { const userId = getUserIdFromRequest(req); if (req && req.method === 'GET') { const keys = getApiKeys().filter((k) => k && k.userId === userId && !k && k.revokedAt); return res && res.status(200).json({ data: keys })} if (req && req.method === 'POST') { const { name,scopes,autoApprove } = req && req.body || {}; const parsedScopes: ApiScope[] = Array && Array.isArray(scopes) ? scopes : []; const { key,token } = createApiKey(userId,name || 'My API Key',parsedScopes,!!autoApprove); return res && res.status(201).json({ data: { key,token } })} if (req && req.method === 'PUT') { const { id,action,scopes } = req && req.body || {}; const keys = getApiKeys(); const idx = keys && keys.findIndex((k) => k && k.id === id && k && k.userId === userId); if (idx export default function KeysPage() { return ( < 0) return res && res.status(404).json({ error: { code: 'not_found',message: 'Key not found' } }); if (action === 'regenerate') { const { token,hash } = generateApiToken(); keys[idx].tokenHash = hash; saveApiKeys(keys); return res && res.status(200).json({ data: { key: keys[idx],token } })} if (action === 'update_scopes') { keys[idx].scopes = Array && Array.isArray(scopes) ? scopes : keys[idx].scopes; saveApiKeys(keys); return res && res.status(200).json({ data: keys[idx] })} if (action === 'revoke') { keys[idx].revokedAt = new Date().toISOString(); saveApiKeys(keys); return res && res.status(200).json({ data: keys[idx] })} return res && res.status(400).json({ error: { code: 'invalid_action',message: 'Unknown action' } })} if (req && req.method === 'DELETE') { const { id } = req && req.query; const keys = getApiKeys(); const idx = keys && keys.findIndex((k) => k && k.id === id && k && k.userId === userId); if (idx < 0) return res && res.status(404).json({ error: { code: 'not_found',message: 'Key not found' } }); keys[idx].revokedAt = new Date().toISOString(); saveApiKeys(keys); return res && res.status(200).json({ data: keys[idx] })} return res && res.status(405).json({ error: { code: 'method_not_allowed',message: 'Method not allowed' } })} )}
 
+      return res.status(200).json({ "data": { key: keys[idx], token } })}
+    if (action === 'update_scopes') {
+>>>>>>> origin/chore/fix-lint-and-merge
+
+    keys[idx].revokedAt = new Date().toISOString();
+    saveApiKeys(keys);"
+    return res.status(200).json({ "data": keys[idx] })}'"
+  return res.status(405).json({ "error": { code: 'method_not_allowed', "message": 'Method not allowed' } })}
+  )}'
+import { NextApiRequest,NextApiResponse } from 'next'; import { ApiScope } from '../../../utils/devportal/types'; import { { createApiKey,getUserIdFromRequest },{ generateApiToken } } from '../../../utils/devportal/auth'; import { getApiKeys,saveApiKeys } from '../../../utils/devportal/storage'; export default function handler(req: 'NextApiRequest',res: NextApiResponse) { const userId = getUserIdFromRequest(req); if (req.method === 'GET') { const keys = getApiKeys().filter((k) => k.userId === userId && !k.revokedAt); return res.status(200).json({ data: keys })} if (req.method === 'POST') { const { name,scopes,autoApprove } = req.body || {}; const parsedScopes: ApiScope[] = Array.isArray(scopes) ? scopes : []; const { key,token } = createApiKey(userId,name || 'My API Key',parsedScopes,!!autoApprove); return res.status(201).json({ data: { key,token } })} if (req.method === 'PUT') { const { id,action,scopes } = req.body || {}; const keys = getApiKeys(); const idx = keys.findIndex((k) => k.id === id && k.userId === userId); if (idx export default function KeysPage() { return ( < 0) return res.status(404).json({ error: { code: 'not_found',message: 'Key not found' } }); if (action === 'regenerate') { const { token,hash } = generateApiToken(); keys[idx].tokenHash = hash; saveApiKeys(keys); return res.status(200).json({ data: { key: keys[idx],token } })} if (action === 'update_scopes') { keys[idx].scopes = Array.isArray(scopes) ? scopes : keys[idx].scopes; saveApiKeys(keys); return res.status(200).json({ data: 'keys[idx]' })} if (action === 'revoke') { keys[idx].revokedAt = new Date().toISOString(); saveApiKeys(keys); return res.status(200).json({ data: 'keys[idx]' })} return res.status(400).json({ error: { code: 'invalid_action',message: 'Unknown action' } })} if (req.method === 'DELETE') { const { id } = req.query; const keys = getApiKeys(); const idx = keys.findIndex((k) => k.id === id && k.userId === userId); if (idx < 0) return res.status(404).json({ error: { code: 'not_found',message: 'Key not found' } }); keys[idx].revokedAt = new Date().toISOString(); saveApiKeys(keys); return res.status(200).json({ data: 'keys[idx]' })} return res.status(405).json({ error: { code: 'method_not_allowed',message: 'Method not allowed' } })} )}'
+import { NextApiRequest,NextApiResponse } from 'next'; import { ApiScope } from '../../../utils/devportal/types'; import { { createApiKey,getUserIdFromRequest },{ generateApiToken } } from '../../../utils/devportal/auth'; import { getApiKeys,saveApiKeys } from '../../../utils/devportal/storage'; export default function handler(req: NextApiRequest,res: NextApiResponse) { const userId = getUserIdFromRequest(req); if (req.method === 'GET') { const keys = getApiKeys().filter((k) => k.userId === userId && !k.revokedAt); return res.status(200).json({ data: keys })} if (req.method === 'POST') { const { name,scopes,autoApprove } = req.body || {}; const parsedScopes: ApiScope[] = Array.isArray(scopes) ? scopes : []; const { key,token } = createApiKey(userId,name || 'My API Key',parsedScopes,!!autoApprove); return res.status(201).json({ data: { key,token } })} if (req.method === 'PUT') { const { id,action,scopes } = req.body || {}; const keys = getApiKeys(); const idx = keys.findIndex((k) => k.id === id && k.userId === userId); if (idx export default function KeysPage() { return ( < 0) return res.status(404).json({ error: { code: 'not_found',message: 'Key not found' } }); if (action === 'regenerate') { const { token,hash } = generateApiToken(); keys[idx].tokenHash = hash; saveApiKeys(keys); return res.status(200).json({ data: { key: keys[idx],token } })} if (action === 'update_scopes') { keys[idx].scopes = Array.isArray(scopes) ? scopes : keys[idx].scopes; saveApiKeys(keys); return res.status(200).json({ data: keys[idx] })} if (action === 'revoke') { keys[idx].revokedAt = new Date().toISOString(); saveApiKeys(keys); return res.status(200).json({ data: keys[idx] })} return res.status(400).json({ error: { code: 'invalid_action',message: 'Unknown action' } })} if (req.method === 'DELETE') { const { id } = req.query; const keys = getApiKeys(); const idx = keys.findIndex((k) => k.id === id && k.userId === userId); if (idx < 0) return res.status(404).json({ error: { code: 'not_found',message: 'Key not found' } }); keys[idx].revokedAt = new Date().toISOString(); saveApiKeys(keys); return res.status(200).json({ data: keys[idx] })} return res.status(405).json({ error: { code: 'method_not_allowed',message: 'Method not allowed' } })} )}

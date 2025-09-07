@@ -16,8 +16,6 @@ export function PageHero() {
         190+ countries worldwide
       </p>
 
-import { GradientHeading } from "@/components/GradientHeading";
-import { Clock, Map, DollarSign } from 'lucide-react'
 
 export function PageHero() {
   return (

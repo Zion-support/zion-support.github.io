@@ -43,7 +43,6 @@ export const ReputationDisplay = ({reputation,size = 'md' }: ReputationDisplayPr
 }: ReputationDisplayProps, ) =>: any {// Calculate next milestone;
   }
   const current_level = Math.floor (reputation / 100)const next_milestone = (current_level + 1) * 100;
-  const progress = ((reputation % 100) / 100) * 100;
   // Styling based on size;
   const size_classes = {"sm": {"container": 'text - xs',"icon": 'w - 3 h - 3',"progress": 'h - 1',  // Styling based on size;'
   }
@@ -81,8 +80,6 @@ export const ReputationDisplay = ({reputation,size = 'md' }: ReputationDisplayPr
 }: ReputationDisplayProps,) => {// Calculate next milestone;
   }
   const currentLevel = Math && Math.floor(reputation / 100)const nextMilestone = (currentLevel + 1) * 100;
-  const progress  = ((reputation % 100) / 100) * 100;// Styling based on size;
-  const sizeClasses = {"sm": {"container": 'text-xs',"icon": 'w-3 h-3',"progress": 'h-1',  // Styling based on size;'
   }
   const sizeClasses = {"sm": {"container": "text-xs","icon": "w-3 h-3","progress": "h-1";"
     }"md": {"container": "text-sm","icon": "w-4 h-4","progress": "h-2" ;"

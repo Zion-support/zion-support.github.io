@@ -25,7 +25,6 @@ export function RatingStars({ value;
   const total = 5;
 }
 }}const half = value - filled >= 0.5;
-  const total = 5;
 }
 })})}{";"
   }

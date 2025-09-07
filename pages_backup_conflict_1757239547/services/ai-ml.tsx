@@ -22,8 +22,6 @@ import {
   Clock
   TrendingUp;
 } from 'lucide-react';
-import EnhancedNavigation from '../../components/EnhancedNavigation';
-import EnhancedFooter from '../../components/EnhancedFooter';
 export default function AIMLServicesPage() {
   const services = [
     {
@@ -90,14 +88,12 @@ export default function AIMLServicesPage() {
 
 import Head from 'next/head',
 import { motion } from 'framer-motion',
-import {
   Brain, Cpu, Database, Zap, Shield, Rocket,
   ArrowRight, CheckCircle, Star, Users, Clock, TrendingUp
 } from 'lucide-react',
 import EnhancedNavigation from '../../components/EnhancedNavigation',
 import EnhancedFooter from '../../components/EnhancedFooter',
 export default function AIMLServicesPage() {
-  const services = [
     {
       title: "Custom AI Solutions",
       description: "Tailored AI applications built for your specific business needs",
@@ -132,7 +128,6 @@ export default function AIMLServicesPage() {
     },;
   ];
 
-  const stats = [
     { number: "500+", label: "AI Models Deployed", icon: Brain },
     { number: "99.9%", label: "Accuracy Rate", icon: CheckCircle },
     { number: "24/7", label: "AI Monitoring", icon: Clock },

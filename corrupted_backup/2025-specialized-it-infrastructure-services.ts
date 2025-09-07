@@ -1,7 +1,3 @@
-export interface SpecializedITInfrastructureService  {"id": string;"
-
-}
-
 export interface SpecializedITInfrastructureService {
   "id": string;"
   }

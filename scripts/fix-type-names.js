@@ -1,20 +1,13 @@
+#!/usr/bin/env node
 
-#!/usr/bin/env node import fs from 'fs'; import path from 'path'; import { glob } from 'glob';'
+#!/usr/bin/env node import fs from 'fs'; import path from 'path'; import {glob} from 'glob'; const typeFixes = [ { pattern: /strin\s+g/g,replacement: 'string' },{ pattern: /numbe\s+r/g,replacement: 'number' },{ pattern: /boolea\s+n/g,replacement: 'boolean' },{ pattern: /ClassValu\s+e/g,replacement: 'ClassValue' },{ pattern: /EmergingTechService202\s+7/g,replacement: 'EmergingTechService2027' },{ pattern: /EMERGING_TECH_SERVICES_202\s+7/g,replacement: 'EMERGING_TECH_SERVICES_2027' } ]; function fixFile(filePath) { try { const content = fs && fs.readFileSync(filePath,'utf8'); let fixedContent = content; let hasChanges = false; typeFixes && typeFixes.forEach(fix => { const newContent = fixedContent && fixedContent.replace(fix && fix.pattern,fix && fix.replacement); if (newContent !== fixedContent) { fixedContent = newContent; hasChanges = true} }); if (hasChanges) { fs && fs.writeFileSync(filePath,fixedContent,'utf8');  return true} return false} catch (error) { console && console.error(`Error fixing ${filePath}:`,error && error.message); return false} } async function main() { const patterns = [ 'src*.tsx','src*.ts','components*.tsx','components*.ts','pages*.tsx','pages*.ts' ]; let totalFixed = 0; for (const pattern of patterns) { const files = await glob(pattern,{ cwd: process && process.cwd() }); for (const file of files) { if (fixFile(file)) { totalFixed++} } } } main().catch(console && console.error);
+#!/usr/bin/env node;
+import fs from 'fs';
+import path from 'path';
 
-const typeFixes = [ { "pattern": /strin\s+g/g,"replacement": 'string',;'
-},{ "pattern": /numbe\s+r/g,"replacement": 'number','
-},{ "pattern": /boolea\s+n/g,"replacement": 'boolean','
-},{ "pattern": /ClassValu\s+e/g,"replacement": 'ClassValue','
-},{ "pattern": /EmergingTechService202\s+7/g,"replacement": 'EmergingTechService2027','
-},{ "pattern": /EMERGING_TECH_SERVICES_202\s+7/g,"replacement": 'EMERGING_TECH_SERVICES_2027','
-} ]; function fixFile() { try { const content = fs.readFileSync(filePath,'utf8')let fixedContent = content; let hasChanges = false; typeFixes.forEach(fix = > {;'
-  }
-  const newContent = fixedContent.replace(fix.pattern,fix.replacement)if (newContent !== fixedContent) { fixedContent = newContent; hasChanges = true} })if (hasChanges) { fs.writeFileSync(filePath,fixedContent,'utf8')return true} return false} catch (error) { console.error(`Error fixing ${filePath}:`,error.message;`  return false} } async function main() {;
-  }
-  const patterns = [ 'src*.tsx','src*.ts','components*.tsx','components*.ts','pages*.tsx','pages*.ts' ]; let totalFixed = 0; )} } } main().catch(console.error)#!/usr/bin/env node;'
-#!/usr/bin/env node import fs from 'fs'; import path from 'path'; import {glob} from 'glob';'
+import { glob } from 'glob';
 
-const typeFixes = [ { "pattern": /strin\s+g/g,"replacement": 'string',;'
+<<<<<<< HEAD
 },{ "pattern": /numbe\s+r/g,"replacement": 'number','
 },{ "pattern": /boolea\s+n/g,"replacement": 'boolean','
 },{ "pattern": /ClassValu\s+e/g,"replacement": 'ClassValue','
@@ -38,11 +31,15 @@ function fixFile() {try {const content = fs && fs.readFileSync(filePath, 'utf8')
     typeFixes && typeFixes.forEach(fix = > ;
   const newContent = fixedContent && fixedContent.replace(fix && fix.pattern, fix && fix.replacement)if (newContent !== fixedContent) {fixedContent = newContent;
         }
+=======
+      const newContent = fixedContent && fixedContent.replace(fix && fix.pattern, fix && fix.replacement);
+      if (newContent !== fixedContent) {}
+        fixedContent = newContent;
+>>>>>>> origin/chore/fix-lint-and-merge
         hasChanges = true}
-    })if (hasChanges) {fs && fs.writeFileSync(filePath, fixedContent, 'utf8')console && console.log(`Fixed types "in": ${filePath}`)return true}`    return false} catch (error) {console && console.error(`Error fixing ${filePath}:`, error && error.message;`  return false}async function main() ;
-const patterns = ['src/**/*.tsx','src/**/*.ts','components/**/*.tsx','components/**/*.ts','pages/**/*.tsx','pages/**/*.ts';'
-];
+    });
 
+<<<<<<< HEAD
   let totalFixed  = 0;)}
   }
   console.log(`\nFixed type names in ${totalFixed} files`)}`main().catch(console.error)#!/usr/bin/env node import fs from 'fs'; import path from 'path'; import { glob } from 'glob';'
@@ -58,7 +55,6 @@ const typeFixes = [ { "pattern": '/strin\s+g/g',"replacement": 'string',;'
   const newContent = fixedContent.replace(fix.pattern,fix.replacement)if (newContent !== fixedContent) { fixedContent = newContent; hasChanges = true} })if (hasChanges) { fs.writeFileSync(filePath,fixedContent,'utf8')console.log(`Fixed types "in": ${filePath}`)return true} return false} catch (error) { console.error(`Error fixing ${filePat,`}:`,error.message;`  return false} } async function main() {;
   }
   const patterns = [ 'src*.tsx','src*.ts','components*.tsx','components*.ts','pages*.tsx','pages*.ts' ]; let totalFixed = 0; for (const pattern of patterns) { const file of files) { if (fixFile(file)) { totalFixed++} } } console.log(`\nFixed type names in ${totalFixed} files`)} main().catch(console.error)#!/usr/bin/env node import fs from 'fs'; import path from 'path'; import { glob } from 'glob';'
-const typeFixes = [ { "pattern": /strin\s+g/g,"replacement": 'string',;'
 },{ "pattern": /numbe\s+r/g,"replacement": 'number','
 },{ "pattern": /boolea\s+n/g,"replacement": 'boolean','
 },{ "pattern": /ClassValu\s+e/g,"replacement": 'ClassValue','
@@ -66,10 +62,7 @@ const typeFixes = [ { "pattern": /strin\s+g/g,"replacement": 'string',;'
 },{ "pattern": /EMERGING_TECH_SERVICES_202\s+7/g,"replacement": 'EMERGING_TECH_SERVICES_2027','
 } ]; function fixFile() { try { const content = fs.readFileSync(filePath,'utf8')let fixedContent = content; let hasChanges = false; typeFixes.forEach(fix = > {;'
   }
-  const newContent = fixedContent.replace(fix.pattern,fix.replacement)if (newContent !== fixedContent) { fixedContent = newContent; hasChanges = true} })if (hasChanges) { fs.writeFileSync(filePath,fixedContent,'utf8')console.log(`Fixed types "in": ${filePath}`)return true} return false} catch (error) { console.error(`Error fixing ${filePat,`}:`,error.message;`  return false} } async function main() {;
   }
-  const patterns = [ 'src*.tsx','src*.ts','components*.tsx','components*.ts','pages*.tsx','pages*.ts' ]; let totalFixed = 0; for (const pattern of patterns) { const file of files) { if (fixFile(file)) { totalFixed++} } } console.log(`\nFixed type names in ${totalFixed} files`)} main().catch(console.error)#!/usr/bin/env node import fs from 'fs'; import path from 'path'; import { glob } from 'glob';'
-const typeFixes = [ { "pattern": /strin\s+g/g,"replacement": 'string',;'
 },{ "pattern": /numbe\s+r/g,"replacement": 'number','
 },{ "pattern": /boolea\s+n/g,"replacement": 'boolean','
 },{ "pattern": /ClassValu\s+e/g,"replacement": 'ClassValue','
@@ -77,10 +70,7 @@ const typeFixes = [ { "pattern": /strin\s+g/g,"replacement": 'string',;'
 },{ "pattern": /EMERGING_TECH_SERVICES_202\s+7/g,"replacement": 'EMERGING_TECH_SERVICES_2027','
 } ]; function fixFile() { try { const content = fs.readFileSync(filePath,'utf8')let fixedContent = content; let hasChanges = false; typeFixes.forEach(fix = > {;'
   }
-  const newContent = fixedContent.replace(fix.pattern,fix.replacement)if (newContent !== fixedContent) { fixedContent = newContent; hasChanges = true} })if (hasChanges) { fs.writeFileSync(filePath,fixedContent,'utf8')console.log(`Fixed types "in": ${filePath}`)return true} return false} catch (error) { console.error(`Error fixing ${filePat,`}:`,error.message;`  return false} } async function main() {;
   }
-  const patterns = [ 'src*.tsx','src*.ts','components*.tsx','components*.ts','pages*.tsx','pages*.ts' ]; let totalFixed = 0; for (const pattern of patterns) { const file of files) { if (fixFile(file)) { totalFixed++} } } console.log(`\nFixed type names in ${totalFixed} files`)} main().catch(console.error)#!/usr/bin/env node import fs from 'fs'; import path from 'path'; import { glob } from 'glob';'
-const typeFixes = [ { "pattern": /strin\s+g/g,"replacement": 'string',;'
 },{ "pattern": /numbe\s+r/g,"replacement": 'number','
 },{ "pattern": /boolea\s+n/g,"replacement": 'boolean','
 },{ "pattern": /ClassValu\s+e/g,"replacement": 'ClassValue','
@@ -88,12 +78,10 @@ const typeFixes = [ { "pattern": /strin\s+g/g,"replacement": 'string',;'
 },{ "pattern": /EMERGING_TECH_SERVICES_202\s+7/g,"replacement": 'EMERGING_TECH_SERVICES_2027','
 } ]; function fixFile() { try { const content = fs.readFileSync(filePath,'utf8')let fixedContent = content; let hasChanges = false; typeFixes.forEach(fix = > {;'
   }
-  const newContent = fixedContent.replace(fix.pattern,fix.replacement)if (newContent !== fixedContent) { fixedContent = newContent; hasChanges = true} })if (hasChanges) { fs.writeFileSync(filePath,fixedContent,'utf8')console.log(`Fixed types "in": ${filePath}`)return true} return false} catch (error) { console.error(`Error fixing ${filePat,`}:`,error.message;`  return false} } async function main() {;
   }
   const patterns = [ 'src*.tsx','src*.ts','components*.tsx','components*.ts','pages*.tsx','pages*.ts' ]; let totalFixed = 0; for (const pattern of patterns) { const file of files) { if (fixFile(file)) { totalFixed++} } } console.log(`\nFixed type names in ${totalFixed} files`)} main().catch(console.error)ursor/add-new-services-and-deploy-updates-0462;`ursor/fix-syntax-push-and-merge-to-main-40de;
 #!/usr/bin/env node import fs from 'fs'; import path from 'path'; import { glob } from 'glob';'
 
-const typeFixes = [ { "pattern": '/strin\s+g/g',"replacement": 'string',;'
 },{ "pattern": '/numbe\s+r/g',"replacement": 'number','
 },{ "pattern": '/boolea\s+n/g',"replacement": 'boolean','
 },{ "pattern": '/ClassValu\s+e/g',"replacement": 'ClassValue','
@@ -101,10 +89,8 @@ const typeFixes = [ { "pattern": '/strin\s+g/g',"replacement": 'string',;'
 },{ "pattern": '/EMERGING_TECH_SERVICES_202\s+7/g',"replacement": 'EMERGING_TECH_SERVICES_2027','
 } ]; function fixFile() { try { const content = fs.readFileSync(filePath,'utf8')let fixedContent = content; let hasChanges = false; typeFixes.forEach(fix = > {;'
   }
-  const newContent = fixedContent.replace(fix.pattern,fix.replacement)if (newContent !== fixedContent) { fixedContent = newContent; hasChanges = true} })if (hasChanges) { fs.writeFileSync(filePath,fixedContent,'utf8')console.log(`Fixed types "in": ${filePath}`)return true} return false} catch (error) { console.error(`Error fixing ${filePat,`}:`,error.message;`  return false} } async function main() {;
   }
   const patterns = [ 'src*.tsx','src*.ts','components*.tsx','components*.ts','pages*.tsx','pages*.ts' ]; let totalFixed = 0; )} } console.log(`\nFixed type names in ${totalFixed} files`)} main().catch(console.error)#!/usr/bin/env node import fs from 'fs'; import path from 'path'; import { glob } from 'glob';'
-const typeFixes = [ { "pattern": /strin\s+g/g,"replacement": 'string',;'
 },{ "pattern": /numbe\s+r/g,"replacement": 'number','
 },{ "pattern": /boolea\s+n/g,"replacement": 'boolean','
 },{ "pattern": /ClassValu\s+e/g,"replacement": 'ClassValue','
@@ -112,10 +98,7 @@ const typeFixes = [ { "pattern": /strin\s+g/g,"replacement": 'string',;'
 },{ "pattern": /EMERGING_TECH_SERVICES_202\s+7/g,"replacement": 'EMERGING_TECH_SERVICES_2027','
 } ]; function fixFile() { try { const content = fs.readFileSync(filePath,'utf8')let fixedContent = content; let hasChanges = false; typeFixes.forEach(fix = > {;'
   }
-  const newContent = fixedContent.replace(fix.pattern,fix.replacement)if (newContent !== fixedContent) { fixedContent = newContent; hasChanges = true} })if (hasChanges) { fs.writeFileSync(filePath,fixedContent,'utf8')console.log(`Fixed types "in": ${filePath}`)return true} return false} catch (error) { console.error(`Error fixing ${filePat,`}:`,error.message;`  return false} } async function main() {;
   }
-  const patterns = [ 'src*.tsx','src*.ts','components*.tsx','components*.ts','pages*.tsx','pages*.ts' ]; let totalFixed = 0; )} } console.log(`\nFixed type names in ${totalFixed} files`)} main().catch(console.error)#!/usr/bin/env node import fs from 'fs'; import path from 'path'; import { glob } from 'glob';'
-const typeFixes = [ { "pattern": /strin\s+g/g,"replacement": 'string',;'
 },{ "pattern": /numbe\s+r/g,"replacement": 'number','
 },{ "pattern": /boolea\s+n/g,"replacement": 'boolean','
 },{ "pattern": /ClassValu\s+e/g,"replacement": 'ClassValue','
@@ -123,10 +106,7 @@ const typeFixes = [ { "pattern": /strin\s+g/g,"replacement": 'string',;'
 },{ "pattern": /EMERGING_TECH_SERVICES_202\s+7/g,"replacement": 'EMERGING_TECH_SERVICES_2027','
 } ]; function fixFile() { try { const content = fs.readFileSync(filePath,'utf8')let fixedContent = content; let hasChanges = false; typeFixes.forEach(fix = > {;'
   }
-  const newContent = fixedContent.replace(fix.pattern,fix.replacement)if (newContent !== fixedContent) { fixedContent = newContent; hasChanges = true} })if (hasChanges) { fs.writeFileSync(filePath,fixedContent,'utf8')console.log(`Fixed types "in": ${filePath}`)return true} return false} catch (error) { console.error(`Error fixing ${filePat,`}:`,error.message;`  return false} } async function main() {;
   }
-  const patterns = [ 'src*.tsx','src*.ts','components*.tsx','components*.ts','pages*.tsx','pages*.ts' ]; let totalFixed = 0; )} } console.log(`\nFixed type names in ${totalFixed} files`)} main().catch(console.error)#!/usr/bin/env node import fs from 'fs'; import path from 'path'; import { glob } from 'glob';'
-const typeFixes = [ { "pattern": /strin\s+g/g,"replacement": 'string',;'
 },{ "pattern": /numbe\s+r/g,"replacement": 'number','
 },{ "pattern": /boolea\s+n/g,"replacement": 'boolean','
 },{ "pattern": /ClassValu\s+e/g,"replacement": 'ClassValue','
@@ -134,10 +114,7 @@ const typeFixes = [ { "pattern": /strin\s+g/g,"replacement": 'string',;'
 },{ "pattern": /EMERGING_TECH_SERVICES_202\s+7/g,"replacement": 'EMERGING_TECH_SERVICES_2027','
 } ]; function fixFile() { try { const content = fs.readFileSync(filePath,'utf8')let fixedContent = content; let hasChanges = false; typeFixes.forEach(fix = > {;'
   }
-  const newContent = fixedContent.replace(fix.pattern,fix.replacement)if (newContent !== fixedContent) { fixedContent = newContent; hasChanges = true} })if (hasChanges) { fs.writeFileSync(filePath,fixedContent,'utf8')console.log(`Fixed types "in": ${filePath}`)return true} return false} catch (error) { console.error(`Error fixing ${filePat,`}:`,error.message;`  return false} } async function main() {;
   }
-  const patterns = [ 'src*.tsx','src*.ts','components*.tsx','components*.ts','pages*.tsx','pages*.ts' ]; let totalFixed = 0; )} } console.log(`\nFixed type names in ${totalFixed} files`)} main().catch(console.error)#!/usr/bin/env node import fs from 'fs'; import path from 'path'; import { glob } from 'glob';'
-const typeFixes = [ { "pattern": /strin\s+g/g,"replacement": 'string',;'
 },{ "pattern": /numbe\s+r/g,"replacement": 'number','
 },{ "pattern": /boolea\s+n/g,"replacement": 'boolean','
 },{ "pattern": /ClassValu\s+e/g,"replacement": 'ClassValue','
@@ -145,14 +122,12 @@ const typeFixes = [ { "pattern": /strin\s+g/g,"replacement": 'string',;'
 },{ "pattern": /EMERGING_TECH_SERVICES_202\s+7/g,"replacement": 'EMERGING_TECH_SERVICES_2027','
 } ]; function fixFile() { try { const content = fs.readFileSync(filePath,'utf8')let fixedContent = content; let hasChanges = false; typeFixes.forEach(fix = > {;'
   }
-  const newContent = fixedContent.replace(fix.pattern,fix.replacement)if (newContent !== fixedContent) { fixedContent = newContent; hasChanges = true} })if (hasChanges) { fs.writeFileSync(filePath,fixedContent,'utf8')console.log(`Fixed types "in": ${filePath}`)return true} return false} catch (error) { console.error(`Error fixing ${filePat,`}:`,error.message;`  return false} } async function main() {;
   }
   const patterns = [ 'src*.tsx','src*.ts','components*.tsx','components*.ts','pages*.tsx','pages*.ts' ]; let totalFixed = 0; )} } console.log(`\nFixed type names in ${totalFixed} files`)} main().catch(console.error)for (const pattern of patterns) {const files = await glob(pattern, { "cwd": process && process.cwd() })for ;"  const file of files) {if (fixFile(file)) {totalFixed++}
   let totalFixed = 0;
 
 #!/usr/bin/env node import fs from 'fs'; import path from 'path'; import { glob } from 'glob';'
 
-const typeFixes = [ { "pattern": '/strin\s+g/g',"replacement": 'string',;'
 },{ "pattern": '/numbe\s+r/g',"replacement": 'number','
 },{ "pattern": '/boolea\s+n/g',"replacement": 'boolean','
 },{ "pattern": '/ClassValu\s+e/g',"replacement": 'ClassValue','
@@ -162,7 +137,6 @@ const typeFixes = [ { "pattern": '/strin\s+g/g',"replacement": 'string',;'
   }
   const newContent = fixedContent.replace(fix.pattern,fix.replacement); if (newContent !== fixedContent) { fixedContent = newContent; hasChanges = true} }); if (hasChanges) { fs.writeFileSync(filePath,fixedContent,'utf8'); console.log(`Fixed types "in": ${filePat,`}`); return true} return false} catch (error) { console.error(`Error fixing ${filePath}:`,error.message); return false} } async function main() { const patterns = [ 'src*.tsx','src*.ts','components*.tsx','components*.ts','pages*.tsx','pages*.ts' ]; let totalFixed = 0; );  } } console.log(`\nFixed type names in ${totalFixed} files`)} main().catch(console.error);`#!/usr/bin/env node import fs from 'fs'; import path from 'path'; import { glob } from 'glob';'
 
-const typeFixes = [ { "pattern": /strin\s+g/g,"replacement": 'string',;'
 },{ "pattern": /numbe\s+r/g,"replacement": 'number','
 },{ "pattern": /boolea\s+n/g,"replacement": 'boolean','
 },{ "pattern": /ClassValu\s+e/g,"replacement": 'ClassValue','
@@ -170,9 +144,7 @@ const typeFixes = [ { "pattern": /strin\s+g/g,"replacement": 'string',;'
 },{ "pattern": /EMERGING_TECH_SERVICES_202\s+7/g,"replacement": 'EMERGING_TECH_SERVICES_2027','
 } ]; function fixFile() { try { const content = fs.readFileSync(filePath,'utf8'); let fixedContent = content; let hasChanges = false; typeFixes.forEach(fix = > {;'
   }
-  const newContent = fixedContent.replace(fix.pattern,fix.replacement); if (newContent !== fixedContent) { fixedContent = newContent; hasChanges = true} }); if (hasChanges) { fs.writeFileSync(filePath,fixedContent,'utf8'); console.log(`Fixed types "in": ${filePat,`}`); return true} return false} catch (error) { console.error(`Error fixing ${filePath}:`,error.message); return false} } async function main() { const patterns = [ 'src*.tsx','src*.ts','components*.tsx','components*.ts','pages*.tsx','pages*.ts' ]; let totalFixed = 0; );  } } console.log(`\nFixed type names in ${totalFixed} files`)} main().catch(console.error);`#!/usr/bin/env node import fs from 'fs'; import path from 'path'; import { glob } from 'glob';'
 
-const typeFixes = [ { "pattern": /strin\s+g/g,"replacement": 'string',;'
 },{ "pattern": /numbe\s+r/g,"replacement": 'number','
 },{ "pattern": /boolea\s+n/g,"replacement": 'boolean','
 },{ "pattern": /ClassValu\s+e/g,"replacement": 'ClassValue','
@@ -180,9 +152,7 @@ const typeFixes = [ { "pattern": /strin\s+g/g,"replacement": 'string',;'
 },{ "pattern": /EMERGING_TECH_SERVICES_202\s+7/g,"replacement": 'EMERGING_TECH_SERVICES_2027','
 } ]; function fixFile() { try { const content = fs.readFileSync(filePath,'utf8'); let fixedContent = content; let hasChanges = false; typeFixes.forEach(fix = > {;'
   }
-  const newContent = fixedContent.replace(fix.pattern,fix.replacement); if (newContent !== fixedContent) { fixedContent = newContent; hasChanges = true} }); if (hasChanges) { fs.writeFileSync(filePath,fixedContent,'utf8'); console.log(`Fixed types "in": ${filePat,`}`); return true} return false} catch (error) { console.error(`Error fixing ${filePath}:`,error.message); return false} } async function main() { const patterns = [ 'src*.tsx','src*.ts','components*.tsx','components*.ts','pages*.tsx','pages*.ts' ]; let totalFixed = 0; );  } } console.log(`\nFixed type names in ${totalFixed} files`)} main().catch(console.error);`#!/usr/bin/env node import fs from 'fs'; import path from 'path'; import { glob } from 'glob';'
 
-const typeFixes = [ { "pattern": /strin\s+g/g,"replacement": 'string',;'
 },{ "pattern": /numbe\s+r/g,"replacement": 'number','
 },{ "pattern": /boolea\s+n/g,"replacement": 'boolean','
 },{ "pattern": /ClassValu\s+e/g,"replacement": 'ClassValue','
@@ -190,9 +160,7 @@ const typeFixes = [ { "pattern": /strin\s+g/g,"replacement": 'string',;'
 },{ "pattern": /EMERGING_TECH_SERVICES_202\s+7/g,"replacement": 'EMERGING_TECH_SERVICES_2027','
 } ]; function fixFile() { try { const content = fs.readFileSync(filePath,'utf8'); let fixedContent = content; let hasChanges = false; typeFixes.forEach(fix = > {;'
   }
-  const newContent = fixedContent.replace(fix.pattern,fix.replacement); if (newContent !== fixedContent) { fixedContent = newContent; hasChanges = true} }); if (hasChanges) { fs.writeFileSync(filePath,fixedContent,'utf8'); console.log(`Fixed types "in": ${filePat,`}`); return true} return false} catch (error) { console.error(`Error fixing ${filePath}:`,error.message); return false} } async function main() { const patterns = [ 'src*.tsx','src*.ts','components*.tsx','components*.ts','pages*.tsx','pages*.ts' ]; let totalFixed = 0; );  } } console.log(`\nFixed type names in ${totalFixed} files`)} main().catch(console.error);`#!/usr/bin/env node import fs from 'fs'; import path from 'path'; import { glob } from 'glob';'
 
-const typeFixes = [ { "pattern": /strin\s+g/g,"replacement": 'string',;'
 },{ "pattern": /numbe\s+r/g,"replacement": 'number','
 },{ "pattern": /boolea\s+n/g,"replacement": 'boolean','
 },{ "pattern": /ClassValu\s+e/g,"replacement": 'ClassValue','
@@ -202,18 +170,52 @@ const typeFixes = [ { "pattern": /strin\s+g/g,"replacement": 'string',;'
   }
   const newContent = fixedContent.replace(fix.pattern,fix.replacement); if (newContent !== fixedContent) { fixedContent = newContent; hasChanges = true} }); if (hasChanges) { fs.writeFileSync(filePath,fixedContent,'utf8'); console.log(`Fixed types "in": ${filePat,`}`); return true} return false} catch (error) { console.error(`Error fixing ${filePath}:`,error.message); return false} } async function main() { const patterns = [ 'src*.tsx','src*.ts','components*.tsx','components*.ts','pages*.tsx','pages*.ts' ]; let totalFixed = 0; );  } } console.log(`\nFixed type names in ${totalFixed} files`)} main().catch(console.error);`
   for (const pattern of patterns) {
-    }
-    const files = await glob(pattern, { "cwd": process && process.cwd() });"
-    for (const file of files) {
-      }
-      if (fixFile(file)) {
-        }
-        totalFixed++}
+=======
+  const patterns = ['src/**/*.tsx',
+    'src/**/*.ts',
+    'components/**/*.tsx',
+    'components/**/*.ts',
+    'pages/**/*.tsx',
+    'pages/**/*.ts]
+  let totalFixed = 0;
+
+>>>>>>> origin/chore/fix-lint-and-merge
     }
   }
-  console && console.log(`\nFixed type names in ${totalFixed} files`)}`main().catch(console && console.error)#!/usr/bin/env node import fs from 'fs'; import path from 'path'; import { glob } from 'glob';'
+  console.log(`\nFixed type names in ${totalFixed} files`)}
+main().catch(console.error);
 
-const typeFixes = [ { "pattern": '/strin\s+g/g',"replacement": 'string',;'
+#!/usr/bin/env node import fs from 'fs'; import path from 'path'; import { glob } from 'glob'; const typeFixes = [ { pattern: '/strin\s+g/g',replacement: 'string' },{ pattern: '/numbe\s+r/g',replacement: 'number' },{ pattern: '/boolea\s+n/g',replacement: 'boolean' },{ pattern: '/ClassValu\s+e/g',replacement: 'ClassValue' },{ pattern: '/EmergingTechService202\s+7/g',replacement: 'EmergingTechService2027' },{ pattern: '/EMERGING_TECH_SERVICES_202\s+7/g',replacement: 'EMERGING_TECH_SERVICES_2027' } ]; function fixFile(filePath) { try { const content = fs.readFileSync(filePath,'utf8'); let fixedContent = content; let hasChanges = false; typeFixes.forEach(fix => { const newContent = fixedContent.replace(fix.pattern,fix.replacement); if (newContent !== fixedContent) { fixedContent = newContent; hasChanges = true} }); if (hasChanges) { fs.writeFileSync(filePath,fixedContent,'utf8'); console.log(`Fixed types in: ${filePath}`); return true} return false} catch (error) { console.error(`Error fixing ${filePath}:`,error.message); return false} } async function main() { const patterns = [ 'src*.tsx','src*.ts','components*.tsx','components*.ts','pages*.tsx','pages*.ts' ]; let totalFixed = 0; for (const pattern of patterns) { const files = await glob(pattern,{ cwd: process.cwd() }); for (const file of files) { if (fixFile(file)) { totalFixed++} } } console.log(`\nFixed type names in ${totalFixed} files`)} main().catch(console.error);
+#!/usr/bin/env node import fs from 'fs'; import path from 'path'; import { glob } from 'glob'; const typeFixes = [ { pattern: /strin\s+g/g,replacement: 'string' },{ pattern: /numbe\s+r/g,replacement: 'number' },{ pattern: /boolea\s+n/g,replacement: 'boolean' },{ pattern: /ClassValu\s+e/g,replacement: 'ClassValue' },{ pattern: /EmergingTechService202\s+7/g,replacement: 'EmergingTechService2027' },{ pattern: /EMERGING_TECH_SERVICES_202\s+7/g,replacement: 'EMERGING_TECH_SERVICES_2027' } ]; function fixFile(filePath) { try { const content = fs.readFileSync(filePath,'utf8'); let fixedContent = content; let hasChanges = false; typeFixes.forEach(fix => { const newContent = fixedContent.replace(fix.pattern,fix.replacement); if (newContent !== fixedContent) { fixedContent = newContent; hasChanges = true} }); if (hasChanges) { fs.writeFileSync(filePath,fixedContent,'utf8'); console.log(`Fixed types in: ${filePath}`); return true} return false} catch (error) { console.error(`Error fixing ${filePath}:`,error.message); return false} } async function main() { const patterns = [ 'src*.tsx','src*.ts','components*.tsx','components*.ts','pages*.tsx','pages*.ts' ]; let totalFixed = 0; for (const pattern of patterns) { const files = await glob(pattern,{ cwd: process.cwd() }); for (const file of files) { if (fixFile(file)) { totalFixed++} } } console.log(`\nFixed type names in ${totalFixed} files`)} main().catch(console.error);
+#!/usr/bin/env node import fs from 'fs'; import path from 'path'; import { glob } from 'glob'; const typeFixes = [ { pattern: /strin\s+g/g,replacement: 'string' },{ pattern: /numbe\s+r/g,replacement: 'number' },{ pattern: /boolea\s+n/g,replacement: 'boolean' },{ pattern: /ClassValu\s+e/g,replacement: 'ClassValue' },{ pattern: /EmergingTechService202\s+7/g,replacement: 'EmergingTechService2027' },{ pattern: /EMERGING_TECH_SERVICES_202\s+7/g,replacement: 'EMERGING_TECH_SERVICES_2027' } ]; function fixFile(filePath) { try { const content = fs.readFileSync(filePath,'utf8'); let fixedContent = content; let hasChanges = false; typeFixes.forEach(fix => { const newContent = fixedContent.replace(fix.pattern,fix.replacement); if (newContent !== fixedContent) { fixedContent = newContent; hasChanges = true} }); if (hasChanges) { fs.writeFileSync(filePath,fixedContent,'utf8'); console.log(`Fixed types in: ${filePath}`); return true} return false} catch (error) { console.error(`Error fixing ${filePath}:`,error.message); return false} } async function main() { const patterns = [ 'src*.tsx','src*.ts','components*.tsx','components*.ts','pages*.tsx','pages*.ts' ]; let totalFixed = 0; for (const pattern of patterns) { const files = await glob(pattern,{ cwd: process.cwd() }); for (const file of files) { if (fixFile(file)) { totalFixed++} } } console.log(`\nFixed type names in ${totalFixed} files`)} main().catch(console.error);
+#!/usr/bin/env node import fs from 'fs'; import path from 'path'; import { glob } from 'glob'; const typeFixes = [ { pattern: /strin\s+g/g,replacement: 'string' },{ pattern: /numbe\s+r/g,replacement: 'number' },{ pattern: /boolea\s+n/g,replacement: 'boolean' },{ pattern: /ClassValu\s+e/g,replacement: 'ClassValue' },{ pattern: /EmergingTechService202\s+7/g,replacement: 'EmergingTechService2027' },{ pattern: /EMERGING_TECH_SERVICES_202\s+7/g,replacement: 'EMERGING_TECH_SERVICES_2027' } ]; function fixFile(filePath) { try { const content = fs.readFileSync(filePath,'utf8'); let fixedContent = content; let hasChanges = false; typeFixes.forEach(fix => { const newContent = fixedContent.replace(fix.pattern,fix.replacement); if (newContent !== fixedContent) { fixedContent = newContent; hasChanges = true} }); if (hasChanges) { fs.writeFileSync(filePath,fixedContent,'utf8'); console.log(`Fixed types in: ${filePath}`); return true} return false} catch (error) { console.error(`Error fixing ${filePath}:`,error.message); return false} } async function main() { const patterns = [ 'src*.tsx','src*.ts','components*.tsx','components*.ts','pages*.tsx','pages*.ts' ]; let totalFixed = 0; for (const pattern of patterns) { const files = await glob(pattern,{ cwd: process.cwd() }); for (const file of files) { if (fixFile(file)) { totalFixed++} } } console.log(`\nFixed type names in ${totalFixed} files`)} main().catch(console.error);
+ursor/add-new-services-and-deploy-updates-0462
+ursor/fix-syntax-push-and-merge-to-main-40de
+
+#!/usr/bin/env node import fs from 'fs'; import path from 'path'; import { glob } from 'glob'; const typeFixes = [ { pattern: '/strin\s+g/g',replacement: 'string' },{ pattern: '/numbe\s+r/g',replacement: 'number' },{ pattern: '/boolea\s+n/g',replacement: 'boolean' },{ pattern: '/ClassValu\s+e/g',replacement: 'ClassValue' },{ pattern: '/EmergingTechService202\s+7/g',replacement: 'EmergingTechService2027' },{ pattern: '/EMERGING_TECH_SERVICES_202\s+7/g',replacement: 'EMERGING_TECH_SERVICES_2027' } ]; function fixFile(filePath) { try { const content = fs.readFileSync(filePath,'utf8'); let fixedContent = content; let hasChanges = false; typeFixes.forEach(fix => { const newContent = fixedContent.replace(fix.pattern,fix.replacement); if (newContent !== fixedContent) { fixedContent = newContent; hasChanges = true} }); if (hasChanges) { fs.writeFileSync(filePath,fixedContent,'utf8'); console.log(`Fixed types in: ${filePath}`); return true} return false} catch (error) { console.error(`Error fixing ${filePath}:`,error.message); return false} } async function main() { const patterns = [ 'src*.tsx','src*.ts','components*.tsx','components*.ts','pages*.tsx','pages*.ts' ]; let totalFixed = 0; );  } } console.log(`\nFixed type names in ${totalFixed} files`)} main().catch(console.error);
+#!/usr/bin/env node import fs from 'fs'; import path from 'path'; import { glob } from 'glob'; const typeFixes = [ { pattern: /strin\s+g/g,replacement: 'string' },{ pattern: /numbe\s+r/g,replacement: 'number' },{ pattern: /boolea\s+n/g,replacement: 'boolean' },{ pattern: /ClassValu\s+e/g,replacement: 'ClassValue' },{ pattern: /EmergingTechService202\s+7/g,replacement: 'EmergingTechService2027' },{ pattern: /EMERGING_TECH_SERVICES_202\s+7/g,replacement: 'EMERGING_TECH_SERVICES_2027' } ]; function fixFile(filePath) { try { const content = fs.readFileSync(filePath,'utf8'); let fixedContent = content; let hasChanges = false; typeFixes.forEach(fix => { const newContent = fixedContent.replace(fix.pattern,fix.replacement); if (newContent !== fixedContent) { fixedContent = newContent; hasChanges = true} }); if (hasChanges) { fs.writeFileSync(filePath,fixedContent,'utf8'); console.log(`Fixed types in: ${filePath}`); return true} return false} catch (error) { console.error(`Error fixing ${filePath}:`,error.message); return false} } async function main() { const patterns = [ 'src*.tsx','src*.ts','components*.tsx','components*.ts','pages*.tsx','pages*.ts' ]; let totalFixed = 0; );  } } console.log(`\nFixed type names in ${totalFixed} files`)} main().catch(console.error);
+#!/usr/bin/env node import fs from 'fs'; import path from 'path'; import { glob } from 'glob'; const typeFixes = [ { pattern: /strin\s+g/g,replacement: 'string' },{ pattern: /numbe\s+r/g,replacement: 'number' },{ pattern: /boolea\s+n/g,replacement: 'boolean' },{ pattern: /ClassValu\s+e/g,replacement: 'ClassValue' },{ pattern: /EmergingTechService202\s+7/g,replacement: 'EmergingTechService2027' },{ pattern: /EMERGING_TECH_SERVICES_202\s+7/g,replacement: 'EMERGING_TECH_SERVICES_2027' } ]; function fixFile(filePath) { try { const content = fs.readFileSync(filePath,'utf8'); let fixedContent = content; let hasChanges = false; typeFixes.forEach(fix => { const newContent = fixedContent.replace(fix.pattern,fix.replacement); if (newContent !== fixedContent) { fixedContent = newContent; hasChanges = true} }); if (hasChanges) { fs.writeFileSync(filePath,fixedContent,'utf8'); console.log(`Fixed types in: ${filePath}`); return true} return false} catch (error) { console.error(`Error fixing ${filePath}:`,error.message); return false} } async function main() { const patterns = [ 'src*.tsx','src*.ts','components*.tsx','components*.ts','pages*.tsx','pages*.ts' ]; let totalFixed = 0; );  } } console.log(`\nFixed type names in ${totalFixed} files`)} main().catch(console.error);
+#!/usr/bin/env node import fs from 'fs'; import path from 'path'; import { glob } from 'glob'; const typeFixes = [ { pattern: /strin\s+g/g,replacement: 'string' },{ pattern: /numbe\s+r/g,replacement: 'number' },{ pattern: /boolea\s+n/g,replacement: 'boolean' },{ pattern: /ClassValu\s+e/g,replacement: 'ClassValue' },{ pattern: /EmergingTechService202\s+7/g,replacement: 'EmergingTechService2027' },{ pattern: /EMERGING_TECH_SERVICES_202\s+7/g,replacement: 'EMERGING_TECH_SERVICES_2027' } ]; function fixFile(filePath) { try { const content = fs.readFileSync(filePath,'utf8'); let fixedContent = content; let hasChanges = false; typeFixes.forEach(fix => { const newContent = fixedContent.replace(fix.pattern,fix.replacement); if (newContent !== fixedContent) { fixedContent = newContent; hasChanges = true} }); if (hasChanges) { fs.writeFileSync(filePath,fixedContent,'utf8'); console.log(`Fixed types in: ${filePath}`); return true} return false} catch (error) { console.error(`Error fixing ${filePath}:`,error.message); return false} } async function main() { const patterns = [ 'src*.tsx','src*.ts','components*.tsx','components*.ts','pages*.tsx','pages*.ts' ]; let totalFixed = 0; );  } } console.log(`\nFixed type names in ${totalFixed} files`)} main().catch(console.error);
+#!/usr/bin/env node import fs from 'fs'; import path from 'path'; import { glob } from 'glob'; const typeFixes = [ { pattern: /strin\s+g/g,replacement: 'string' },{ pattern: /numbe\s+r/g,replacement: 'number' },{ pattern: /boolea\s+n/g,replacement: 'boolean' },{ pattern: /ClassValu\s+e/g,replacement: 'ClassValue' },{ pattern: /EmergingTechService202\s+7/g,replacement: 'EmergingTechService2027' },{ pattern: /EMERGING_TECH_SERVICES_202\s+7/g,replacement: 'EMERGING_TECH_SERVICES_2027' } ]; function fixFile(filePath) { try { const content = fs.readFileSync(filePath,'utf8'); let fixedContent = content; let hasChanges = false; typeFixes.forEach(fix => { const newContent = fixedContent.replace(fix.pattern,fix.replacement); if (newContent !== fixedContent) { fixedContent = newContent; hasChanges = true} }); if (hasChanges) { fs.writeFileSync(filePath,fixedContent,'utf8'); console.log(`Fixed types in: ${filePath}`); return true} return false} catch (error) { console.error(`Error fixing ${filePath}:`,error.message); return false} } async function main() { const patterns = [ 'src*.tsx','src*.ts','components*.tsx','components*.ts','pages*.tsx','pages*.ts' ]; let totalFixed = 0; );  } } console.log(`\nFixed type names in ${totalFixed} files`)} main().catch(console.error);
+
+  for (const pattern of patterns) {
+
+    const files = await glob(pattern, { "cwd": process && process.cwd() });
+    for (const file of files) {}
+      if (fixFile(file)) {}
+        totalFixed++}
+    }
+  }`
+  console && console.log(`\nFixed type names in ${totalFixed} files`)}
+main().catch(console && console.error);'`
+#!/usr/bin/env node import fs from 'fs'; import path from 'path'; import { glob } from 'glob'; const typeFixes = [ { pattern: '/strin\s+g/g',replacement: 'string' },{ pattern: '/numbe\s+r/g',replacement: 'number' },{ pattern: '/boolea\s+n/g',replacement: 'boolean' },{ pattern: '/ClassValu\s+e/g',replacement: 'ClassValue' },{ pattern: '/EmergingTechService202\s+7/g',replacement: 'EmergingTechService2027' },{ pattern: '/EMERGING_TECH_SERVICES_202\s+7/g',replacement: 'EMERGING_TECH_SERVICES_2027' } ]; function fixFile(filePath) { try { const content = fs && fs.readFileSync(filePath,'utf8'); let fixedContent = content; let hasChanges = false; typeFixes && typeFixes.forEach(fix => { const newContent = fixedContent && fixedContent.replace(fix && fix.pattern,fix && fix.replacement); if (newContent !== fixedContent) { fixedContent = newContent; hasChanges = true} }); if (hasChanges) { fs && fs.writeFileSync(filePath,fixedContent,'utf8'); console && console.log(`Fixed types in: ${filePath}`); return true} return false} catch (error) { console && console.error(`Error fixing ${filePath}:`,error && error.message); return false} } async function main() { const patterns = [ 'src*.tsx','src*.ts','components*.tsx','components*.ts','pages*.tsx','pages*.ts' ]; let totalFixed = 0; for (const pattern of patterns) { const files = await glob(pattern,{ cwd: process && process.cwd() }); for (const file of files) { if (fixFile(file)) { totalFixed++} } } console && console.log(`\nFixed type names in ${totalFixed} files`)} main().catch(console && console.error);'`
+#!/usr/bin/env node import fs from 'fs'; import path from 'path'; import { glob } from 'glob'; const typeFixes = [ { pattern: /strin\s+g/g,replacement: 'string' },{ pattern: /numbe\s+r/g,replacement: 'number' },{ pattern: /boolea\s+n/g,replacement: 'boolean' },{ pattern: /ClassValu\s+e/g,replacement: 'ClassValue' },{ pattern: /EmergingTechService202\s+7/g,replacement: 'EmergingTechService2027' },{ pattern: /EMERGING_TECH_SERVICES_202\s+7/g,replacement: 'EMERGING_TECH_SERVICES_2027' } ]; function fixFile(filePath) { try { const content = fs && fs.readFileSync(filePath,'utf8'); let fixedContent = content; let hasChanges = false; typeFixes && typeFixes.forEach(fix => { const newContent = fixedContent && fixedContent.replace(fix && fix.pattern,fix && fix.replacement); if (newContent !== fixedContent) { fixedContent = newContent; hasChanges = true} }); if (hasChanges) { fs && fs.writeFileSync(filePath,fixedContent,'utf8'); console && console.log(`Fixed types in: ${filePath}`); return true} return false} catch (error) { console && console.error(`Error fixing ${filePath}:`,error && error.message); return false} } async function main() { const patterns = [ 'src*.tsx','src*.ts','components*.tsx','components*.ts','pages*.tsx','pages*.ts' ]; let totalFixed = 0; for (const pattern of patterns) { const files = await glob(pattern,{ cwd: process && process.cwd() }); for (const file of files) { if (fixFile(file)) { totalFixed++} } } console && console.log(`\nFixed type names in ${totalFixed} files`)} main().catch(console && console.error);'`
+#!/usr/bin/env node import fs from 'fs'; import path from 'path'; import { glob } from 'glob'; const typeFixes = [ { pattern: /strin\s+g/g,replacement: 'string' },{ pattern: /numbe\s+r/g,replacement: 'number' },{ pattern: /boolea\s+n/g,replacement: 'boolean' },{ pattern: /ClassValu\s+e/g,replacement: 'ClassValue' },{ pattern: /EmergingTechService202\s+7/g,replacement: 'EmergingTechService2027' },{ pattern: /EMERGING_TECH_SERVICES_202\s+7/g,replacement: 'EMERGING_TECH_SERVICES_2027' } ]; function fixFile(filePath) { try { const content = fs && fs.readFileSync(filePath,'utf8'); let fixedContent = content; let hasChanges = false; typeFixes && typeFixes.forEach(fix => { const newContent = fixedContent && fixedContent.replace(fix && fix.pattern,fix && fix.replacement); if (newContent !== fixedContent) { fixedContent = newContent; hasChanges = true} }); if (hasChanges) { fs && fs.writeFileSync(filePath,fixedContent,'utf8'); console && console.log(`Fixed types in: ${filePath}`); return true} return false} catch (error) { console && console.error(`Error fixing ${filePath}:`,error && error.message); return false} } async function main() { const patterns = [ 'src*.tsx','src*.ts','components*.tsx','components*.ts','pages*.tsx','pages*.ts' ]; let totalFixed = 0; for (const pattern of patterns) { const files = await glob(pattern,{ cwd: process && process.cwd() }); for (const file of files) { if (fixFile(file)) { totalFixed++} } } console && console.log(`\nFixed type names in ${totalFixed} files`)} main().catch(console && console.error);'`
+#!/usr/bin/env node import fs from 'fs'; import path from 'path'; import { glob } from 'glob'; const typeFixes = [ { pattern: /strin\s+g/g,replacement: 'string' },{ pattern: /numbe\s+r/g,replacement: 'number' },{ pattern: /boolea\s+n/g,replacement: 'boolean' },{ pattern: /ClassValu\s+e/g,replacement: 'ClassValue' },{ pattern: /EmergingTechService202\s+7/g,replacement: 'EmergingTechService2027' },{ pattern: /EMERGING_TECH_SERVICES_202\s+7/g,replacement: 'EMERGING_TECH_SERVICES_2027' } ]; function fixFile(filePath) { try { const content = fs && fs.readFileSync(filePath,'utf8'); let fixedContent = content; let hasChanges = false; typeFixes && typeFixes.forEach(fix => { const newContent = fixedContent && fixedContent.replace(fix && fix.pattern,fix && fix.replacement); if (newContent !== fixedContent) { fixedContent = newContent; hasChanges = true} }); if (hasChanges) { fs && fs.writeFileSync(filePath,fixedContent,'utf8'); console && console.log(`Fixed types in: ${filePath}`); return true} return false} catch (error) { console && console.error(`Error fixing ${filePath}:`,error && error.message); return false} } async function main() { const patterns = [ 'src*.tsx','src*.ts','components*.tsx','components*.ts','pages*.tsx','pages*.ts' ]; let totalFixed = 0; for (const pattern of patterns) { const files = await glob(pattern,{ cwd: process && process.cwd() }); for (const file of files) { if (fixFile(file)) { totalFixed++} } } console && console.log(`\nFixed type names in ${totalFixed} files`)} main().catch(console && console.error);'`
+#!/usr/bin/env node import fs from 'fs'; import path from 'path'; import { glob } from 'glob'; const typeFixes = [ { pattern: /strin\s+g/g,replacement: 'string' },{ pattern: /numbe\s+r/g,replacement: 'number' },{ pattern: /boolea\s+n/g,replacement: 'boolean' },{ pattern: /ClassValu\s+e/g,replacement: 'ClassValue' },{ pattern: /EmergingTechService202\s+7/g,replacement: 'EmergingTechService2027' },{ pattern: /EMERGING_TECH_SERVICES_202\s+7/g,replacement: 'EMERGING_TECH_SERVICES_2027' } ]; function fixFile(filePath) { try { const content = fs && fs.readFileSync(filePath,'utf8'); let fixedContent = content; let hasChanges = false; typeFixes && typeFixes.forEach(fix => { const newContent = fixedContent && fixedContent.replace(fix && fix.pattern,fix && fix.replacement); if (newContent !== fixedContent) { fixedContent = newContent; hasChanges = true} }); if (hasChanges) { fs && fs.writeFileSync(filePath,fixedContent,'utf8'); console && console.log(`Fixed types in: ${filePath}`); return true} return false} catch (error) { console && console.error(`Error fixing ${filePath}:`,error && error.message); return false} } async function main() { const patterns = [ 'src*.tsx','src*.ts','components*.tsx','components*.ts','pages*.tsx','pages*.ts' ]; let totalFixed = 0; for (const pattern of patterns) { const files = await glob(pattern,{ cwd: process && process.cwd() }); for (const file of files) { if (fixFile(file)) { totalFixed++} } } console && console.log(`\nFixed type names in ${totalFixed} files`)} main().catch(console && console.error);'`
+#!/usr/bin/env node import fs from 'fs'; import path from 'path'; import { glob } from 'glob'; const typeFixes = [ { pattern: /strin\s+g/g,replacement: 'string' },{ pattern: /numbe\s+r/g,replacement: 'number' },{ pattern: /boolea\s+n/g,replacement: 'boolean' },{ pattern: /ClassValu\s+e/g,replacement: 'ClassValue' },{ pattern: /EmergingTechService202\s+7/g,replacement: 'EmergingTechService2027' },{ pattern: /EMERGING_TECH_SERVICES_202\s+7/g,replacement: 'EMERGING_TECH_SERVICES_2027' } ]; function fixFile(filePath) { try { const content = fs && fs.readFileSync(filePath,'utf8'); let fixedContent = content; let hasChanges = false; typeFixes && typeFixes.forEach(fix => { const newContent = fixedContent && fixedContent.replace(fix && fix.pattern,fix && fix.replacement); if (newContent !== fixedContent) { fixedContent = newContent; hasChanges = true} }); if (hasChanges) { fs && fs.writeFileSync(filePath,fixedContent,'utf8'); console && console.log(`Fixed types in: ${filePath}`); return true} return false} catch (error) { console && console.error(`Error fixing ${filePath}:`,error && error.message); return false} } async function main() { const patterns = [ 'src*.tsx','src*.ts','components*.tsx','components*.ts','pages*.tsx','pages*.ts' ]; let totalFixed = 0; for (const pattern of patterns) { const files = await glob(pattern,{ cwd: process && process.cwd() }); for (const file of files) { if (fixFile(file)) { totalFixed++} } } console && console.log(`\nFixed type names in ${totalFixed} files`)} main().catch(console && console.error);
+
+<<<<<<< HEAD
 },{ "pattern": '/numbe\s+r/g',"replacement": 'number','
 },{ "pattern": '/boolea\s+n/g',"replacement": 'boolean','
 },{ "pattern": '/ClassValu\s+e/g',"replacement": 'ClassValue','
@@ -224,7 +226,6 @@ const typeFixes = [ { "pattern": '/strin\s+g/g',"replacement": 'string',;'
   const newContent = fixedContent && fixedContent.replace(fix && fix.pattern,fix && fix.replacement)if (newContent !== fixedContent) { fixedContent = newContent; hasChanges = true} })if (hasChanges) { fs && fs.writeFileSync(filePath,fixedContent,'utf8')console && console.log(`Fixed types "in": ${filePath}`)return true} return false} catch (error) { console && console.error(`Error fixing ${filePat,`}:`,error && error.message;`  return false} } async function main() {;
   }
   const patterns = [ 'src*.tsx','src*.ts','components*.tsx','components*.ts','pages*.tsx','pages*.ts' ]; let totalFixed = 0; for (const pattern of patterns) { const file of files) { if (fixFile(file)) { totalFixed++} } } console && console.log(`\nFixed type names in ${totalFixed} files`)} main().catch(console && console.error)#!/usr/bin/env node import fs from 'fs'; import path from 'path'; import { glob } from 'glob';'
-const typeFixes = [ { "pattern": /strin\s+g/g,"replacement": 'string',;'
 },{ "pattern": /numbe\s+r/g,"replacement": 'number','
 },{ "pattern": /boolea\s+n/g,"replacement": 'boolean','
 },{ "pattern": /ClassValu\s+e/g,"replacement": 'ClassValue','
@@ -232,10 +233,7 @@ const typeFixes = [ { "pattern": /strin\s+g/g,"replacement": 'string',;'
 },{ "pattern": /EMERGING_TECH_SERVICES_202\s+7/g,"replacement": 'EMERGING_TECH_SERVICES_2027','
 } ]; function fixFile() { try { const content = fs && fs.readFileSync(filePath,'utf8')let fixedContent = content; let hasChanges = false; typeFixes && typeFixes.forEach(fix = > {;'
   }
-  const newContent = fixedContent && fixedContent.replace(fix && fix.pattern,fix && fix.replacement)if (newContent !== fixedContent) { fixedContent = newContent; hasChanges = true} })if (hasChanges) { fs && fs.writeFileSync(filePath,fixedContent,'utf8')console && console.log(`Fixed types "in": ${filePath}`)return true} return false} catch (error) { console && console.error(`Error fixing ${filePat,`}:`,error && error.message;`  return false} } async function main() {;
   }
-  const patterns = [ 'src*.tsx','src*.ts','components*.tsx','components*.ts','pages*.tsx','pages*.ts' ]; let totalFixed = 0; for (const pattern of patterns) { const file of files) { if (fixFile(file)) { totalFixed++} } } console && console.log(`\nFixed type names in ${totalFixed} files`)} main().catch(console && console.error)#!/usr/bin/env node import fs from 'fs'; import path from 'path'; import { glob } from 'glob';'
-const typeFixes = [ { "pattern": /strin\s+g/g,"replacement": 'string',;'
 },{ "pattern": /numbe\s+r/g,"replacement": 'number','
 },{ "pattern": /boolea\s+n/g,"replacement": 'boolean','
 },{ "pattern": /ClassValu\s+e/g,"replacement": 'ClassValue','
@@ -243,10 +241,7 @@ const typeFixes = [ { "pattern": /strin\s+g/g,"replacement": 'string',;'
 },{ "pattern": /EMERGING_TECH_SERVICES_202\s+7/g,"replacement": 'EMERGING_TECH_SERVICES_2027','
 } ]; function fixFile() { try { const content = fs && fs.readFileSync(filePath,'utf8')let fixedContent = content; let hasChanges = false; typeFixes && typeFixes.forEach(fix = > {;'
   }
-  const newContent = fixedContent && fixedContent.replace(fix && fix.pattern,fix && fix.replacement)if (newContent !== fixedContent) { fixedContent = newContent; hasChanges = true} })if (hasChanges) { fs && fs.writeFileSync(filePath,fixedContent,'utf8')console && console.log(`Fixed types "in": ${filePath}`)return true} return false} catch (error) { console && console.error(`Error fixing ${filePat,`}:`,error && error.message;`  return false} } async function main() {;
   }
-  const patterns = [ 'src*.tsx','src*.ts','components*.tsx','components*.ts','pages*.tsx','pages*.ts' ]; let totalFixed = 0; for (const pattern of patterns) { const file of files) { if (fixFile(file)) { totalFixed++} } } console && console.log(`\nFixed type names in ${totalFixed} files`)} main().catch(console && console.error)#!/usr/bin/env node import fs from 'fs'; import path from 'path'; import { glob } from 'glob';'
-const typeFixes = [ { "pattern": /strin\s+g/g,"replacement": 'string',;'
 },{ "pattern": /numbe\s+r/g,"replacement": 'number','
 },{ "pattern": /boolea\s+n/g,"replacement": 'boolean','
 },{ "pattern": /ClassValu\s+e/g,"replacement": 'ClassValue','
@@ -254,10 +249,7 @@ const typeFixes = [ { "pattern": /strin\s+g/g,"replacement": 'string',;'
 },{ "pattern": /EMERGING_TECH_SERVICES_202\s+7/g,"replacement": 'EMERGING_TECH_SERVICES_2027','
 } ]; function fixFile() { try { const content = fs && fs.readFileSync(filePath,'utf8')let fixedContent = content; let hasChanges = false; typeFixes && typeFixes.forEach(fix = > {;'
   }
-  const newContent = fixedContent && fixedContent.replace(fix && fix.pattern,fix && fix.replacement)if (newContent !== fixedContent) { fixedContent = newContent; hasChanges = true} })if (hasChanges) { fs && fs.writeFileSync(filePath,fixedContent,'utf8')console && console.log(`Fixed types "in": ${filePath}`)return true} return false} catch (error) { console && console.error(`Error fixing ${filePat,`}:`,error && error.message;`  return false} } async function main() {;
   }
-  const patterns = [ 'src*.tsx','src*.ts','components*.tsx','components*.ts','pages*.tsx','pages*.ts' ]; let totalFixed = 0; for (const pattern of patterns) { const file of files) { if (fixFile(file)) { totalFixed++} } } console && console.log(`\nFixed type names in ${totalFixed} files`)} main().catch(console && console.error)#!/usr/bin/env node import fs from 'fs'; import path from 'path'; import { glob } from 'glob';'
-const typeFixes = [ { "pattern": /strin\s+g/g,"replacement": 'string',;'
 },{ "pattern": /numbe\s+r/g,"replacement": 'number','
 },{ "pattern": /boolea\s+n/g,"replacement": 'boolean','
 },{ "pattern": /ClassValu\s+e/g,"replacement": 'ClassValue','
@@ -265,10 +257,7 @@ const typeFixes = [ { "pattern": /strin\s+g/g,"replacement": 'string',;'
 },{ "pattern": /EMERGING_TECH_SERVICES_202\s+7/g,"replacement": 'EMERGING_TECH_SERVICES_2027','
 } ]; function fixFile() { try { const content = fs && fs.readFileSync(filePath,'utf8')let fixedContent = content; let hasChanges = false; typeFixes && typeFixes.forEach(fix = > {;'
   }
-  const newContent = fixedContent && fixedContent.replace(fix && fix.pattern,fix && fix.replacement)if (newContent !== fixedContent) { fixedContent = newContent; hasChanges = true} })if (hasChanges) { fs && fs.writeFileSync(filePath,fixedContent,'utf8')console && console.log(`Fixed types "in": ${filePath}`)return true} return false} catch (error) { console && console.error(`Error fixing ${filePat,`}:`,error && error.message;`  return false} } async function main() {;
   }
-  const patterns = [ 'src*.tsx','src*.ts','components*.tsx','components*.ts','pages*.tsx','pages*.ts' ]; let totalFixed = 0; for (const pattern of patterns) { const file of files) { if (fixFile(file)) { totalFixed++} } } console && console.log(`\nFixed type names in ${totalFixed} files`)} main().catch(console && console.error)#!/usr/bin/env node import fs from 'fs'; import path from 'path'; import { glob } from 'glob';'
-const typeFixes = [ { "pattern": /strin\s+g/g,"replacement": 'string',;'
 },{ "pattern": /numbe\s+r/g,"replacement": 'number','
 },{ "pattern": /boolea\s+n/g,"replacement": 'boolean','
 },{ "pattern": /ClassValu\s+e/g,"replacement": 'ClassValue','
@@ -276,7 +265,12 @@ const typeFixes = [ { "pattern": /strin\s+g/g,"replacement": 'string',;'
 },{ "pattern": /EMERGING_TECH_SERVICES_202\s+7/g,"replacement": 'EMERGING_TECH_SERVICES_2027','
 } ]; function fixFile() { try { const content = fs && fs.readFileSync(filePath,'utf8')let fixedContent = content; let hasChanges = false; typeFixes && typeFixes.forEach(fix = > {;'
   }
-  const newContent = fixedContent && fixedContent.replace(fix && fix.pattern,fix && fix.replacement)if (newContent !== fixedContent) { fixedContent = newContent; hasChanges = true} })if (hasChanges) { fs && fs.writeFileSync(filePath,fixedContent,'utf8')console && console.log(`Fixed types "in": ${filePath}`)return true} return false} catch (error) { console && console.error(`Error fixing ${filePat,`}:`,error && error.message;`  return false} } async function main() {;
   }
   const patterns = [ 'src*.tsx','src*.ts','components*.tsx','components*.ts','pages*.tsx','pages*.ts' ]; let totalFixed = 0; for (const pattern of patterns) { const file of files) { if (fixFile(file)) { totalFixed++} } } console && console.log(`\nFixed type names in ${totalFixed} files`)} main().catch(console && console.error)origin/cursor/integrate-build-improve-and-re-verify-c7b5;`
 origin/cursor/integrate-build-improve-and-re-verify-c7b5;
+=======
+#!/usr/bin/env node import fs from 'fs'; import path from 'path'; import { glob } from 'glob'; const typeFixes = [ { pattern: /strin\s+g/g,replacement: 'string' },{ pattern: /numbe\s+r/g,replacement: 'number' },{ pattern: /boolea\s+n/g,replacement: 'boolean' },{ pattern: /ClassValu\s+e/g,replacement: 'ClassValue' },{ pattern: /EmergingTechService202\s+7/g,replacement: 'EmergingTechService2027' },{ pattern: /EMERGING_TECH_SERVICES_202\s+7/g,replacement: 'EMERGING_TECH_SERVICES_2027' } ]; function fixFile(filePath) { try { const content = fs && fs.readFileSync(filePath,'utf8'); let fixedContent = content; let hasChanges = false; typeFixes && typeFixes.forEach(fix => { const newContent = fixedContent && fixedContent.replace(fix && fix.pattern,fix && fix.replacement); if (newContent !== fixedContent) { fixedContent = newContent; hasChanges = true} }); if (hasChanges) { fs && fs.writeFileSync(filePath,fixedContent,'utf8'); console && console.log(`Fixed types in: ${filePath}`); return true} return false} catch (error) { console && console.error(`Error fixing ${filePath}:`,error && error.message); return false} } async function main() { const patterns = [ 'src*.tsx','src*.ts','components*.tsx','components*.ts','pages*.tsx','pages*.ts' ]; let totalFixed = 0; for (const pattern of patterns) { const files = await glob(pattern,{ cwd: process && process.cwd() }); for (const file of files) { if (fixFile(file)) { totalFixed++} } } console && console.log(`\nFixed type names in ${totalFixed} files`)} main().catch(console && console.error);
+#!/usr/bin/env node import fs from 'fs'; import path from 'path'; import { glob } from 'glob'; const typeFixes = [ { pattern: /strin\s+g/g,replacement: 'string' },{ pattern: /numbe\s+r/g,replacement: 'number' },{ pattern: /boolea\s+n/g,replacement: 'boolean' },{ pattern: /ClassValu\s+e/g,replacement: 'ClassValue' },{ pattern: /EmergingTechService202\s+7/g,replacement: 'EmergingTechService2027' },{ pattern: /EMERGING_TECH_SERVICES_202\s+7/g,replacement: 'EMERGING_TECH_SERVICES_2027' } ]; function fixFile(filePath) { try { const content = fs && fs.readFileSync(filePath,'utf8'); let fixedContent = content; let hasChanges = false; typeFixes && typeFixes.forEach(fix => { const newContent = fixedContent && fixedContent.replace(fix && fix.pattern,fix && fix.replacement); if (newContent !== fixedContent) { fixedContent = newContent; hasChanges = true} }); if (hasChanges) { fs && fs.writeFileSync(filePath,fixedContent,'utf8'); console && console.log(`Fixed types in: ${filePath}`); return true} return false} catch (error) { console && console.error(`Error fixing ${filePath}:`,error && error.message); return false} } async function main() { const patterns = [ 'src*.tsx','src*.ts','components*.tsx','components*.ts','pages*.tsx','pages*.ts' ]; let totalFixed = 0; for (const pattern of patterns) { const files = await glob(pattern,{ cwd: process && process.cwd() }); for (const file of files) { if (fixFile(file)) { totalFixed++} } } console && console.log(`\nFixed type names in ${totalFixed} files`)} main().catch(console && console.error);
+#!/usr/bin/env node import fs from 'fs'; import path from 'path'; import { glob } from 'glob'; const typeFixes = [ { pattern: /strin\s+g/g,replacement: 'string' },{ pattern: /numbe\s+r/g,replacement: 'number' },{ pattern: /boolea\s+n/g,replacement: 'boolean' },{ pattern: /ClassValu\s+e/g,replacement: 'ClassValue' },{ pattern: /EmergingTechService202\s+7/g,replacement: 'EmergingTechService2027' },{ pattern: /EMERGING_TECH_SERVICES_202\s+7/g,replacement: 'EMERGING_TECH_SERVICES_2027' } ]; function fixFile(filePath) { try { const content = fs && fs.readFileSync(filePath,'utf8'); let fixedContent = content; let hasChanges = false; typeFixes && typeFixes.forEach(fix => { const newContent = fixedContent && fixedContent.replace(fix && fix.pattern,fix && fix.replacement); if (newContent !== fixedContent) { fixedContent = newContent; hasChanges = true} }); if (hasChanges) { fs && fs.writeFileSync(filePath,fixedContent,'utf8'); console && console.log(`Fixed types in: ${filePath}`); return true} return false} catch (error) { console && console.error(`Error fixing ${filePath}:`,error && error.message); return false} } async function main() { const patterns = [ 'src*.tsx','src*.ts','components*.tsx','components*.ts','pages*.tsx','pages*.ts' ]; let totalFixed = 0; for (const pattern of patterns) { const files = await glob(pattern,{ cwd: process && process.cwd() }); for (const file of files) { if (fixFile(file)) { totalFixed++} } } console && console.log(`\nFixed type names in ${totalFixed} files`)} main().catch(console && console.error);
+#!/usr/bin/env node import fs from 'fs'; import path from 'path'; import { glob } from 'glob'; const typeFixes = [ { pattern: /strin\s+g/g,replacement: 'string' },{ pattern: /numbe\s+r/g,replacement: 'number' },{ pattern: /boolea\s+n/g,replacement: 'boolean' },{ pattern: /ClassValu\s+e/g,replacement: 'ClassValue' },{ pattern: /EmergingTechService202\s+7/g,replacement: 'EmergingTechService2027' },{ pattern: /EMERGING_TECH_SERVICES_202\s+7/g,replacement: 'EMERGING_TECH_SERVICES_2027' } ]; function fixFile(filePath) { try { const content = fs && fs.readFileSync(filePath,'utf8'); let fixedContent = content; let hasChanges = false; typeFixes && typeFixes.forEach(fix => { const newContent = fixedContent && fixedContent.replace(fix && fix.pattern,fix && fix.replacement); if (newContent !== fixedContent) { fixedContent = newContent; hasChanges = true} }); if (hasChanges) { fs && fs.writeFileSync(filePath,fixedContent,'utf8'); console && console.log(`Fixed types in: ${filePath}`); return true} return false} catch (error) { console && console.error(`Error fixing ${filePath}:`,error && error.message); return false} } async function main() { const patterns = [ 'src*.tsx','src*.ts','components*.tsx','components*.ts','pages*.tsx','pages*.ts' ]; let totalFixed = 0; for (const pattern of patterns) { const files = await glob(pattern,{ cwd: process && process.cwd() }); for (const file of files) { if (fixFile(file)) { totalFixed++} } } console && console.log(`\nFixed type names in ${totalFixed} files`)} main().catch(console && console.error);
+>>>>>>> origin/chore/fix-lint-and-merge

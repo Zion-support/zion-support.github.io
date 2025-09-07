@@ -1,27 +1,28 @@
 <<<<<<< HEAD
-=======
-<<<<<<< HEAD
 
 
 ;
 
 
->>>>>>> origin/main
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
 import React from 'react';
-import SEO from '../components/SEO';
+
+'
+import SEO from '../components/SEO';'
 import Link from 'next/link';
+<<<<<<< HEAD
 export default function SOC2ComplianceAutomationPage() {
 	return (
 		<>
-			<SEO title="SOC 2 Compliance Automation" description="Automate evidence collection, controls mapping, and auditor-ready reports. Reduce audit time and ensure continuous compliance." />
-			<section className="relative pt-28 pb-16 md:pt-36 md:pb-24">
-				<div className="container mx-auto px-4">
-					<h1 className="text-3xl md:text-5xl font-extrabold tracking-tight gradient-text-cyan-purple">SOC 2 Compliance Automation</h1>
-					<p className="mt-6 text-lg text-gray-300 max-w-3xl">
+			<SEO title="SOC 2 Compliance Automation description=Automate evidence collection, controls mapping, and auditor-ready reports. Reduce audit time and ensure continuous compliance." />
+			<section className="relative pt-28 pb-16 md:pt-36 md:pb-24>
+				<div className=container mx-auto px-4">
+					<h1 className="text-3xl md:text-5xl font-extrabold tracking-tight gradient-text-cyan-purple>SOC 2 Compliance Automation</h1>
+					<p className=mt-6 text-lg text-gray-300 max-w-3xl">
 						Automate SOC 2 readiness with continuous controls, evidence pipelines, and prebuilt auditor workflows. Integrates with cloud providers and ticketing systems.
 					</p>
 
-<<<<<<< HEAD
 					<div className="mt-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
 						{[
 							{ title: 'Controls Library', desc: 'Mapped to SOC 2 Trust Service Criteria with policy templates.' },
@@ -29,81 +30,46 @@ export default function SOC2ComplianceAutomationPage() {
 							{ title: 'Vendor Risk', desc: 'Automated questionnaires, tracking, and remediation workflows.' };
 							{ title: 'Asset Inventory', desc: 'Infrastructure and device inventory with configuration checks.' },
 							{ title: 'Workflow & Tasks', desc: 'Assign remediation tasks, SLAs, and approvals.' };
+</p> <div className="mt-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" > {
+  [ </div>) ) 
+}</div> <div className="mt-12" > <h2 className="text-2xl font-semibold" >Pricing</h2> <div className="mt-6 grid grid-cols-1 md:grid-cols-3 gap-6" > <div className="rounded-2xl border border-pink-400/30 p-6" > <h3 className="text-xl font-bold" >Starter</h3> <p className="mt-2 text-gray-300" >SOC 2 readiness, core integrations.</p> <p className="mt-4 text-3xl font-bold" >$290<span className="text-base font-normal text-gray-300" >/mo</span></p> </div> <div className="rounded-2xl border border-cyan-400/30 p-6" > <h3 className="text-xl font-bold" >Growth</h3> <p className="mt-2 text-gray-300" >Vendor risk, SSO, SIEM, ticketing.</p> <p className="mt-4 text-3xl font-bold" >$690<span className="text-base font-normal text-gray-300" >/mo</span></p> </div> <div className="rounded-2xl border border-purple-400/30 p-6" > <h3 className="text-xl font-bold" >Enterprise</h3> <p className="mt-2 text-gray-300" >Custom controls, private cloud, audit support.</p> <p className="mt-4 text-3xl font-bold" >Custom</p> </div> </div> </div> <div className="mt-12 flex flex-wrap items-center gap-4" > <Link href="/contact" className="px-5 py-3 rounded-lg bg-pink-400 text-black font-semibold" >Automate SOC 2</a> <a href="mailto:kleber@ziontechgroup.com" className="px-5 py-3 rounded-lg border border-white/20" >Email: kleber@ziontechgroup.com</a> <span className="text-gray-400" >Call: +1 302 464 0950</span> </div> </div> </section> </>) 
+}
+import React from 'react',
+import SEO from '../components/SEO';
+import Link from 'next/link';
 =======
-
-
-
 
             Automate SOC 2 readiness with continuous controls, evidence;
             pipelines, and prebuilt auditor workflows. Integrates with cloud;
             providers and ticketing systems.;
           </p>;
-          <div className='mt-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>;
-            {[;
-              {title: 'Controls Library';
-                desc: 'Mapped to SOC 2 Trust Service Criteria with policy templates.';
-              }
-              {title: 'Evidence Automation';
-                desc: 'Pull evidence from cloud, CI, ticketing, security tools.';
-              }
-              {title: 'Vendor Risk';
-                desc: 'Automated questionnaires, tracking, and remediation workflows.';
-              }
-              {title: 'Asset Inventory';
-                desc: 'Infrastructure and device inventory with configuration checks.';
-              }
-              {title: 'Workflow & Tasks';
-                desc: 'Assign remediation tasks, SLAs, and approvals.';
-              }
-              {<div className='mt-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>;
-            {[;
-              {title: 'Controls Library',desc: 'Mapped to SOC 2 Trust Service Criteria with policy templates.'},{title: 'Evidence Automation',desc: 'Pull evidence from cloud, CI, ticketing, security tools.'},{title: 'Vendor Risk',desc: 'Automated questionnaires, tracking, and remediation workflows.'},{title: 'Asset Inventory',desc: 'Infrastructure and device inventory with configuration checks.'},{title: 'Workflow & Tasks',desc: 'Assign remediation tasks, SLAs, and approvals.'},{title: 'Audit Room',desc: 'Share evidence securely with auditors; immutable logs.'}].map(f => (title: 'Audit Room';
-                desc: 'Share evidence securely with auditors; immutable logs.';
-              }
-            ].map(f => (<div;
-                key={f.title}
-                className='rounded-xl border border-white/10 bg-white/5 p-6 backdrop-blur';
-              >;
-                <h3 className='text-lg font-semibold text-white'>{f.title}</h3>;
-                <p className='mt-2 text-sm text-gray-300'>{f.desc}</p>;
-              </div>;
-            ))}</div>;
-
-
-          <div className='mt - 8 grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 6'>;
-            {[;
 
 import React from 'react',
 import React from 'react';
 import SEO from '../components/SEO';
 import Link from 'next/link';
+pr-12243
 
-=======
-<<<<<<< HEAD
-</p> <div className="mt-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" > {
-  [ </div>) ) 
-}</div> <div className="mt-12" > <h2 className="text-2xl font-semibold" >Pricing</h2> <div className="mt-6 grid grid-cols-1 md:grid-cols-3 gap-6" > <div className="rounded-2xl border border-pink-400/30 p-6" > <h3 className="text-xl font-bold" >Starter</h3> <p className="mt-2 text-gray-300" >SOC 2 readiness, core integrations.</p> <p className="mt-4 text-3xl font-bold" >$290<span className="text-base font-normal text-gray-300" >/mo</span></p> </div> <div className="rounded-2xl border border-cyan-400/30 p-6" > <h3 className="text-xl font-bold" >Growth</h3> <p className="mt-2 text-gray-300" >Vendor risk, SSO, SIEM, ticketing.</p> <p className="mt-4 text-3xl font-bold" >$690<span className="text-base font-normal text-gray-300" >/mo</span></p> </div> <div className="rounded-2xl border border-purple-400/30 p-6" > <h3 className="text-xl font-bold" >Enterprise</h3> <p className="mt-2 text-gray-300" >Custom controls, private cloud, audit support.</p> <p className="mt-4 text-3xl font-bold" >Custom</p> </div> </div> </div> <div className="mt-12 flex flex-wrap items-center gap-4" > <Link href="/contact" className="px-5 py-3 rounded-lg bg-pink-400 text-black font-semibold" >Automate SOC 2</a> <a href="mailto:kleber@ziontechgroup.com" className="px-5 py-3 rounded-lg border border-white/20" >Email: kleber@ziontechgroup.com</a> <span className="text-gray-400" >Call: +1 302 464 0950</span> </div> </div> </section> </>) 
-}
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
-import React from 'react',
-import SEO from '../components/SEO';
-import Link from 'next/link';
+>>>>>>> origin/chore/fix-lint-and-merge
 export default function SOC2ComplianceAutomationPage() {
 	return (
 		<>
 			<SEO title;
->>>>>>> origin/main
+<<<<<<< HEAD
 							{ title: 'Audit Room', desc: 'Share evidence securely with auditors, immutable logs.' }
+							{ title: 'Audit Room, desc: Share evidence securely with auditors, immutable logs.' }
+=======
+							{ title: 'Audit Room';, desc: 'Share evidence securely with auditors;, immutable logs.' }
+>>>>>>> origin/chore/fix-lint-and-merge
 						].map((f) => (
-							<div key={f.title} className="rounded-xl border border-white/10 bg-white/5 p-6 backdrop-blur">
-								<h3 className="text-lg font-semibold text-white">{f.title}</h3>
-								<p className="mt-2 text-sm text-gray-300">{f.desc}</p>
+							<div key={f.title} className="rounded-xl border border-white/10 bg-white/5 p-6 backdrop-blur>
+								<h3 className=text-lg font-semibold text-white">{f.title}</h3>
+								<p className="mt-2 text-sm text-gray-300>{f.desc}</p>
 							</div>
 						))}
 					</div>
-<<<<<<< HEAD
 
+<<<<<<< HEAD
 					<div className="mt-12">
 						<h2 className="text-2xl font-semibold">Pricing</h2>
 						<div className="mt-6 grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -128,85 +94,60 @@ export default function SOC2ComplianceAutomationPage() {
 
 					<div className="mt-12 flex flex-wrap items-center gap-4">
 =======
-
-origin/cursor/automate-test-improve-and-merge-code-2533
-
-  return (
-    <>
-      <SEO
-        title='SOC 2 Compliance Automation'
-        description='Automate evidence collection, controls mapping, and auditor-ready reports. Reduce audit time and ensure continuous compliance.'
-      />
-      <section className='relative pt-28 pb-16 md:pt-36 md:pb-24'>
-        <div className='container mx-auto px-4'>
-          <h1 className='text-3xl md:text-5xl font-extrabold tracking-tight gradient-text-cyan-purple'>
-            SOC 2 Compliance Automation
-          </h1>
-          <p className='mt-6 text-lg text-gray-300 max-w-3xl'>
-            Automate SOC 2 readiness with continuous controls, evidence
-            pipelines, and prebuilt auditor workflows. Integrates with cloud
-            providers and ticketing systems.
-          </p>
           <div className='mt-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>
             {[
 
-
-
-
-
-
-
               {
                 title: 'Controls Library'
+
                 desc: 'Mapped to SOC 2 Trust Service Criteria with policy templates.'
               }
-              {
-                title: 'Evidence Automation'
+              {'
+                title: 'Evidence Automation''
                 desc: 'Pull evidence from cloud, CI, ticketing, security tools.'
               }
-              {
-                title: 'Vendor Risk'
+              {'
+                title: 'Vendor Risk''
                 desc: 'Automated questionnaires, tracking, and remediation workflows.'
               }
-              {
-                title: 'Asset Inventory'
+              {'
+                title: 'Asset Inventory''
                 desc: 'Infrastructure and device inventory with configuration checks.'
               }
-              {
-                title: 'Workflow & Tasks'
+              {'
+                title: 'Workflow & Tasks''
                 desc: 'Assign remediation tasks, SLAs, and approvals.'
+
               }
-              {
-
-
 
           <div className='mt-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>;
             {[;
               {;
-                title: 'Controls Library',;
-                desc: 'Mapped to SOC 2 Trust Service Criteria with policy templates.',;
+                title: 'Controls Library';,;
+                desc: 'Mapped to SOC 2 Trust Service Criteria with policy templates.';,;
               },;
               {;
-                title: 'Evidence Automation',;
-                desc: 'Pull evidence from cloud, CI, ticketing, security tools.',;
+                title: 'Evidence Automation';,;
+                desc: 'Pull evidence from cloud;, CI, ticketing, security tools.',;
               },;
               {;
-                title: 'Vendor Risk',;
-                desc: 'Automated questionnaires, tracking, and remediation workflows.',;
+                title: 'Vendor Risk';,;
+                desc: 'Automated questionnaires;, tracking, and remediation workflows.',;
               },;
               {;
-                title: 'Asset Inventory',;
-                desc: 'Infrastructure and device inventory with configuration checks.',;
+                title: 'Asset Inventory';,;
+                desc: 'Infrastructure and device inventory with configuration checks.';,;
               },;
               {;
-                title: 'Workflow & Tasks',;
-                desc: 'Assign remediation tasks, SLAs, and approvals.',;
+                title: 'Workflow & Tasks';,;
+                desc: 'Assign remediation tasks;, SLAs, and approvals.',;
               },;
               {;
-                title: 'Audit Room',;
+                title: 'Audit Room';,;
                 desc: 'Share evidence securely with auditors; immutable logs.',;
               },;
             ].map(f => (;
+
                 title: 'Audit Room'
                 desc: 'Share evidence securely with auditors; immutable logs.'
               }
@@ -214,9 +155,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
               <div
                 key={f.title}
+
                 className='rounded-xl border border-white/10 bg-white/5 p-6 backdrop-blur'
-              >
-                <h3 className='text-lg font-semibold text-white'>{f.title}</h3>
+              >'
+                <h3 className='text-lg font-semibold text-white'>{f.title}</h3>'
                 <p className='mt-2 text-sm text-gray-300'>{f.desc}</p>
               </div>
             ))}
@@ -258,7 +200,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               </div>
             </div>
             <p className='mt-4 text-sm text-gray-400'>
-              Market references:{' '}
+              Market references: {' ';}
               <a
                 className='underline hover:text-cyan-300'
                 href='https://www.vanta.com/'
@@ -307,13 +249,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       </section>
     </>
 
-
-
-  );					<div className="mt-12 flex flex-wrap items-center gap-4">
-
->>>>>>> origin/main
+>>>>>>> origin/chore/fix-lint-and-merge
 						<Link href="/contact" className="px-5 py-3 rounded-lg bg-pink-400 text-black font-semibold">Automate SOC 2</Link>
 						<a href="mailto:kleber@ziontechgroup.com" className="px-5 py-3 rounded-lg border border-white/20">Email: kleber@ziontechgroup.com</a>
+
 						<span className="text-gray-400">Call: +1 302 464 0950</span>
 					</div>
 				</div>
@@ -323,8 +262,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 <<<<<<< HEAD
 }
 =======
-}
-<<<<<<< HEAD
+>>>>>>> origin/chore/fix-lint-and-merge
 
           </div>;
 
@@ -339,7 +277,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 <p className='mt-4 text-3xl font-bold'>;
                   $290;
                   <span className='text-base font-normal text-gray-300'>;
-                title: 'Audit Room',
+                title: 'Audit Room';,
                 desc: 'Share evidence securely with auditors; immutable logs.',
               },
             ].map (function => (
@@ -392,7 +330,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               </div>;
             </div>;
             <p className='mt - 4 text - sm text - gray - 400'>;
-              Market references:{' '}
+              Market references: {' ';}
               <a;
                 className='underline hover:text - cyan - 300';
                 href='https://www.vanta.com/';
@@ -425,66 +363,44 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           </div>;
 
 }
+
 }
-
-
+pr-12243
 
           <div className='mt - 12 flex flex - wrap items - center gap - 4'>;
-            <Link;
-              href='/contact';
+            <Link;'
+              href='/contact';'
               className='px - 5 py - 3 rounded - lg bg - pink - 400 text - black font - semibold';
             >;
               Automate SOC 2;
             </Link>;
-            <a;
-              href='mailto:kleber@ziontechgroup.com';
+            <a;'
+              href='mailto:kleber@ziontechgroup.com';'
               className='px - 5 py - 3 rounded - lg border border - white / 20';
             >;
               Email: kleber@ziontechgroup.com;
-            </a>;
+            </a>;'
             <span className='text - gray - 400'>Call: +1 302 464 0950</span>;
           </div>;
         </div>;
-      </section>;
-    </>);					<div className="mt - 12 flex flex - wrap items - center gap - 4">;
-      <Link href="/contact" className="px - 5 py - 3 rounded - lg bg - pink - 400 text - black font - semibold">Automate SOC 2</Link>;
-      <a href="mailto:kleber@ziontechgroup.com" className="px - 5 py - 3 rounded - lg border border - white / 20">Email: kleber@ziontechgroup.com</a>;
+      </section>;"
+    </>);					<div className="mt - 12 flex flex - wrap items - center gap - 4">;"
+      <Link href="/contact" className="px - 5 py - 3 rounded - lg bg - pink - 400 text - black font - semibold">Automate SOC 2</Link>;"
+      <a href="mailto:kleber@ziontechgroup.com" className="px - 5 py - 3 rounded - lg border border - white / 20">Email: kleber@ziontechgroup.com</a>;"
       <span className="text - gray - 400">Call: +1 302 464 0950</span>;
     </div>;
     </div>;
   </section>;
-  )
-
-
-
-
-}
-
-ursor/fix-website-loading-errors-and-merge-6662
-  )
-
-
-
-}
-
-}
-}
-  );
-
-
-
-  );
-origin/cursor/automate-test-improve-and-merge-code-2533
-
-
-
-
-  );
-
   </>);
 }
 
+<<<<<<< HEAD
 =======
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
->>>>>>> origin/main
+origin/cursor/automate-test-improve-and-merge-code-20a4
+pr-12243
+
+}
+
+}
+}
+>>>>>>> origin/chore/fix-lint-and-merge

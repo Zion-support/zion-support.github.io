@@ -39,7 +39,6 @@ import {
   Lightbulb;} from 'lucide-react';
 import { innovative2025Services } from '../data/innovative-2025-services';
 import { emergingTech2025Services } from '../data/emerging-tech-2025-services';
-import EnhancedFuturisticBackground from '../components/ui/EnhancedFuturisticBackground';
   const categories = [
     { id: 'all', name: 'All Services', icon: '🚀', count: allServices.length }
     { id: 'ai', name: 'AI & Machine Learning', icon: '🧠', count: aiCount }
@@ -162,12 +161,8 @@ import {;
   Zap, Database, Cloud, Lock, Code,;
   Sparkles, Target, Award, Lightbulb;
 } from 'lucide-react',;
-import { innovative2025Services } from '../data/innovative-2025-services';
-import { emergingTech2025Services } from '../data/emerging-tech-2025-services';
-import EnhancedFuturisticBackground from '../components/ui/EnhancedFuturisticBackground';
 export default function EnhancedServicesShowcase2025(req, res) {
   try {
-  const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
   const [selectedPriceRange, setSelectedPriceRange] = useState<string>('all');
   const [sortBy, setSortBy] = useState<string>('name');
@@ -221,7 +216,6 @@ export default function EnhancedServicesShowcase2025(req, res) {
   const filteredServices = React.useMemo(() => {;
     const parsePriceToNumber = (price: string | number): number => {;
       if (!isAdmin) return res.status(403).json({ error: 'Forbidden' });
-        const match = price.replace(/[^0-9.]/g, '');
         const parsed = parseFloat(match || '0');
         return isNaN(parsed) ? 0 : parsed;
         } catch (error) {

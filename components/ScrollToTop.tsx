@@ -1,52 +1,20 @@
+
+
 <<<<<<< HEAD
-
-
-import React, { useState, useEffect } from 'react';'
-setIsVisible(true);
-      } else {
-        }
-        setIsVisible(false);
-      }
-      "behavior": 'smooth''
-    })
-};
-
-    window.addEventListener('scroll', toggleVisibility);'
-
-return () => window.removeEventListener('scroll', toggleVisibility);'
-  }, []);
-
-const scrollToTop = () => {
-    }
-    window.scrollTo({
-      }
-      "top": 0,
-"behavior": 'smooth','
-    })
-};
-
-    window && window.addEventListener('scroll', toggleVisibility);
-    return () => window && window.removeEventListener('scroll', toggleVisibility);  }, []);        setIsVisible(true);
-      } else {;
-        setIsVisible(false);
-      }
-    };
-
-    window && window.addEventListener('scroll', toggleVisibility);
-    return () => window && window.removeEventListener('scroll', toggleVisibility);    return () => window && window.removeEventListener('scroll', toggleVisibility);
-  }, []);
-
-  const scrollToTop = () => {;
-    window && window.scrollTo({;
-      top: 0,;
-      behavior: 'smooth',;
-    })
-};      behavior: 'smooth'});
-    const toggleVisibility = $2;
-    window.addEventListener($2);
-    return () => window.removeEventListener('scroll', toggleVisibility)
-  }, []),
->>>>>>> origin/main
+useEffect ( () => {
+  const toggleVisibility = () => {
+  if (window.pageYOffset > 300) {
+  window.addEventListener ('scroll', toggleVisibility)
+return () => window.removeEventListener ('scroll', toggleVisibility) 
+}, [])
+return (<> {
+  isVisible && (<button onClick= {
+  scrollToTop 
+}className="fixed bottom-8 right-8 z-40 w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-full shadow-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-110 hover:shadow-xl hover:shadow-cyan-500/25 flex items-center justify-center group" aria-label="Scroll to top" > <svg className="w-6 h-6 transform group-hover:-translate-y-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" > <path /> </svg> </button>) 
+}</>) 
+}
+export default ScrollToTop
+import React, { useState, useEffect } from 'react';
 
 const ScrollToTop: React.FC = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -58,27 +26,39 @@ const ScrollToTop: React.FC = () => {
       } else {
         setIsVisible(false)
       }
-    };
+    }
+
+    window.addEventListener(scroll', toggleVisibility);
+    return () => window.removeEventListener('scroll, toggleVisibility)
+=======
+import React, { useState, useEffect } from 'react';
+setIsVisible(true);
+      } else {}
+        setIsVisible(false);}
+      }
+      behavior: 'smooth'
+    })}
 
     window.addEventListener('scroll', toggleVisibility);
-    return () => window.removeEventListener('scroll', toggleVisibility)
+
+return () => window.removeEventListener('scroll', toggleVisibility);
+>>>>>>> origin/chore/fix-lint-and-merge
   }, []);
 
-  const scrollToTop = () => {
+const scrollToTop = (
     window.scrollTo({
       top: 0,
-      behavior: 'smooth'})
-  };
+<<<<<<< HEAD
+      behavior: smooth'})
+  }
 
 return (;
     <>
       {isVisible && (
         <button
-}
-onClick={scrollToTop}
-
-className='fixed bottom-8 right-8 z-40 w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-full shadow-lg "hover": from-cyan-600 "hover":to-blue-700 transition-all duration-300 transform "hover":scale-110 "hover":shadow-xl "hover":shadow-cyan-500/25 flex items-center justify-center group''
-          aria-label='Scroll to top''
+          onClick={scrollToTop}
+          className="fixed bottom-8 right-8 z-40 w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-full shadow-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-110 hover:shadow-xl hover:shadow-cyan-500/25 flex items-center justify-center group"
+          aria-label="Scroll to top"
         >
           <svg,
 className='w-6 h-6 transform group-"hover":-translate-y-1 transition-transform duration-300''
@@ -89,27 +69,7 @@ className='w-6 h-6 transform group-"hover":-translate-y-1 transition-transform d
 strokeLinecap='round''
               strokeLinejoin='round''
 
-              strokeWidth={
-}
-              d='M5 10l7-7m0 0l7 7m-7-7v18';' />;
-          </svg>;
-        </button>;
-      )}
-    </>
-  );
-}
-}
 export default ScrollToTop;
-  )
-};
-
-export default ScrollToTop;
-origin/cursor/automate-test-improve-and-merge-code-2533
-    </>;
-  )}
-}
-export default ScrollToTop;
-<<<<<<< HEAD
   )}export default ScrollToTop;
 origin/cursor/integrate-build-improve-and-re-verify-c7b5;
 ursor/integrate-build-improve-and-re-verify-8f7d;
@@ -172,6 +132,45 @@ export default ScrollToTop;
           onClick = $2;
 export default ScrollToTop,
 =======
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
->>>>>>> origin/main
+behavior: 'smooth',) => {
+  return $3;}
+}
+    })
+};
+
+
+  return (
+    <>
+      {isVisible && (}
+        <button;}
+onClick={scrollToTop}
+
+className='fixed bottom-8 right-8 z-40 w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-full shadow-lg hover: from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-110 hover:shadow-xl hover:shadow-cyan-500/25 flex items-center justify-center group'
+          aria-label='Scroll to top'
+            />
+          <svg;
+className='w-6 h-6 transform group-hover:-translate-y-1 transition-transform duration-300'
+            fill='none'
+            stroke='currentColor'
+            viewBox='0 0 24 24'
+            <path;
+strokeLinecap='round'
+              strokeLinejoin='round'
+
+              strokeWidth={,}
+}
+              d='M5 10l7-7m0 0l7 7m-7-7v18';
+               />;
+          </svg>;
+        </button>;
+      )}
+
+    <   />
+
+)
+};
+
+
+export default ScrollToTop;
+
+>>>>>>> origin/chore/fix-lint-and-merge

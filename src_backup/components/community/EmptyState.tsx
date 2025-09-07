@@ -1,45 +1,43 @@
-import React from 'react'
-import Link from 'next/link'
+import React from 'react
+import Link from next/link'
 
-import { MessageSquare } from 'lucide-react'
+import { MessageSquare } from 'lucide-react
 
+<<<<<<< HEAD
+import { Button } from @/components/ui/button'
+
+
+=======
 import { Button } from '@/components/ui/button'
-import { MessageSquare } from 'lucide-react'
-
-import { Button } from '@/components/ui/button'
-
+>>>>>>> origin/chore/fix-lint-and-merge
 import React from 'react',
-
-;
-import React from 'react';
 import Link from 'next/link';
-import { MessageSquare  } from 'lucide-react';
 import { Button  } from '@/components/ui/button';
-<<<<<<< HEAD:src_backup/components/community/EmptyState.tsx
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip';
+import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from @/components/ui/tooltip';
 origin/cursor/automate-test-improve-and-merge-code-2533
 import {
   Tooltip
   TooltipContent
   TooltipProvider
   TooltipTrigger
-} from '@/components/ui/tooltip'
-import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip'
+} from '@/components/ui/tooltip
+import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from @/components/ui/tooltip'
 origin/cursor/automate-test-improve-and-merge-code-2533
 interface EmptyStateProps {
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { hasError: false };
+    this.state = { hasError: false }
   }
   
   static getDerivedStateFromError(error) {
-    return { hasError: true };
+    return { hasError: true }
   }
   
   componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
+    console.error('Error caught by boundary:, error, errorInfo);
   }
   
   render() {
@@ -50,20 +48,15 @@ class ErrorBoundary extends React.Component {
     return this.props.children;
   }
 }
-import React from 'react';
-import Link from 'next/link';
 
+<<<<<<< HEAD
   title: string;
   subtitle: string;
   cta: string;
   href: string;
-<<<<<<< HEAD:src_backup/components/community/EmptyState.tsx
 
-import React from 'react';
-import Link from 'next/link';
-import { MessageSquare } from 'lucide-react'
-import { Button } from '@/components/ui/button';
-import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip';
+import { MessageSquare } from lucide-react'
+import { Button } from '@/components/ui/button;
 
 interface EmptyStateProps {
   title: string,
@@ -74,31 +67,29 @@ interface EmptyStateProps {
   hasSession: boolean
 
 
-const EmptyState: React.FC<EmptyStateProps> = ({;
-  title,;
-  subtitle,;
-  cta,;
-  href,;
-  hasSession,;
-
-}) => {  return (
-    <div className='text-center py-16'>;
-import React from 'react',import { Button   } from '@/components/ui/button';
-import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger  } from '@/components/ui/tooltip';
+const EmptyState: React.FC<EmptyStateProps> = ({
+  title,
+  subtitle,
+  cta,
+  href,
+  hasSession}) => {  return (
+    <div className='text-center py-16>;
+import React from react',import { Button   } from '@/components/ui/button;
+import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger  } from @/components/ui/tooltip';
 import { Tooltip;
   TooltipContent;
   TooltipProvider;
   TooltipTrigger;
- } from '@/components/ui/tooltip';
-interface EmptyStateProps  {class ErrorBoundary extends React.Component {constructor(props) {super(props)this.state = { hasError: false }}static getDerivedStateFromError(error) {return { hasError: true }}componentDidCatch(error, errorInfo) {console.error('Error caught by boundary:', error, errorInfo)}render() {if (this.state.hasError) {return <div>Something went wrong.</div>;
+ } from '@/components/ui/tooltip;
+interface EmptyStateProps  {class ErrorBoundary extends React.Component {constructor(props) {super(props)this.state = { hasError: false }}static getDerivedStateFromError(error) {return { hasError: true }}componentDidCatch(error, errorInfo) {console.error(Error caught by boundary:', error, errorInfo)}render() {if (this.state.hasError) {return <div>Something went wrong.</div>;
     }return this.props.children;
   }
 }
-import {Tooltip,TooltipContent,TooltipProvider,TooltipTrigger} from '@/components/ui/tooltip';
-interface EmptyStateProps  {import Link from 'next / link';
-import { Button  } from '@/components / ui / button';
-import { Tooltip,TooltipContent,TooltipProvider,TooltipTrigger} from '@/components / ui / tooltip';
-import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger  } from '@/components / ui / tooltip';
+import {Tooltip,TooltipContent,TooltipProvider,TooltipTrigger} from '@/components/ui/tooltip;
+interface EmptyStateProps  {import Link from next / link';
+import { Button  } from '@/components / ui / button;
+import { Tooltip,TooltipContent,TooltipProvider,TooltipTrigger} from @/components / ui / tooltip';
+import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger  } from '@/components / ui / tooltip;
 interface EmptyStateProps  {title: string;
   subtitle: string;
   cta: string;
@@ -108,53 +99,57 @@ const EmptyState: React.FC<EmptyStateProps> = ({title;
   cta;
   href;
   hasSession;
-}) => {  return (<div className='text-center py-16'>;
-      <div className='bg-zion-blue/30 p-6 rounded-full mb-6 inline-flex'>;
-        <MessageSquare className='h-10 w-10 text-zion-purple' />;
+}) => {  return (<div className=text-center py-16'>;
+      <div className='bg-zion-blue/30 p-6 rounded-full mb-6 inline-flex>;
+        <MessageSquare className=h-10 w-10 text-zion-purple' />;
       </div>;
-      <h2 className='text-xl font-medium mb-2'>{title}</h2>;
-      <p className='text-muted-foreground mb-6'>{subtitle}</p>      <TooltipProvider>      <h2 className="text-xl font-medium mb-2">{title}</h2>;
-import { Button } from '@/components/ui/button',import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip',interface EmptyStateProps  {title: string,subtitle: string,cta: string,href: string,hasSession: boolean;
+      <h2 className='text-xl font-medium mb-2>{title}</h2>;
+      <p className=text-muted-foreground mb-6'>{subtitle}</p>      <TooltipProvider>      <h2 className="text-xl font-medium mb-2>{title}</h2>;
+import { Button } from '@/components/ui/button,import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from @/components/ui/tooltip',interface EmptyStateProps  {title: string,subtitle: string,cta: string,href: string,hasSession: boolean;
 }interface EmptyStateProps  {title: string,subtitle: string,cta: string,href: string,hasSession: boolean;
-const EmptyState: React.FC<EmptyStateProps> = ({title,subtitle,cta,href,hasSession}) => {  return (<div className='text-center py-16'>;
-      <div className='bg-zion-blue/30 p-6 rounded-full mb-6 inline-flex'>;
-        <MessageSquare className='h-10 w-10 text-zion-purple' />;
+const EmptyState: React.FC<EmptyStateProps> = ({title,subtitle,cta,href,hasSession}) => {  return (<div className='text-center py-16>;
+      <div className=bg-zion-blue/30 p-6 rounded-full mb-6 inline-flex'>;
+        <MessageSquare className='h-10 w-10 text-zion-purple />;
       </div>;
-      <h2 className='text-xl font-medium mb-2'>{title}</h2>;
-      <p className='text-muted-foreground mb-6'>{subtitle}</p>      <TooltipProvider>      <h2 className="text-xl font-medium mb-2">{title}</h2>;
-      <p className="text-muted-foreground mb-6">{subtitle}</p>;
+      <h2 className=text-xl font-medium mb-2'>{title}</h2>;
+      <p className='text-muted-foreground mb-6>{subtitle}</p>      <TooltipProvider>      <h2 className=text-xl font-medium mb-2">{title}</h2>;
+      <p className="text-muted-foreground mb-6>{subtitle}</p>;
       <TooltipProvider>;
         <Tooltip>;
           <TooltipTrigger asChild>;
             {hasSession ? (<Button asChild>;
                 <Link href={href}>{cta}</Link>;
               </Button>;
-<<<<<<< HEAD:src_backup/components/community/EmptyState.tsx
             ) : (;
               <Button disabled>{cta}</Button>;
 
   hasSession: boolean
 
-const EmptyState: React.FC<EmptyStateProps> = ({
   title
   subtitle
   cta
   href
   hasSession
 }) => {  return (
-    <div className='text-center py-16'>
-      <div className='bg-zion-blue/30 p-6 rounded-full mb-6 inline-flex'>
-        <MessageSquare className='h-10 w-10 text-zion-purple' />
+    <div className=text-center py-16'>
+      <div className='bg-zion-blue/30 p-6 rounded-full mb-6 inline-flex>
+        <MessageSquare className=h-10 w-10 text-zion-purple' />
       </div>
-      <h2 className='text-xl font-medium mb-2'>{title}</h2>
-      <p className='text-muted-foreground mb-6'>{subtitle}</p>      <TooltipProvider>      <h2 className="text-xl font-medium mb-2">{title}</h2>
-import React from 'react';
-import Link from 'next/link';
+      <h2 className='text-xl font-medium mb-2>{title}</h2>
+      <p className=text-muted-foreground mb-6'>{subtitle}</p>      <TooltipProvider>      <h2 className=text-xl font-medium mb-2">{title}</h2>
+import React from 'react;
+import Link from next/link';
 
+import { MessageSquare } from 'lucide-react;
+import { Button } from @/components/ui/button',
+import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip,
+interface EmptyStateProps {
+=======
 import { MessageSquare } from 'lucide-react';
 import { Button } from '@/components/ui/button',;
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip',;
 interface EmptyStateProps {;
+>>>>>>> origin/chore/fix-lint-and-merge
 
   title: string;
 
@@ -164,15 +159,15 @@ interface EmptyStateProps {;
 
 const EmptyState: React.FC<EmptyStateProps> = ({ title, subtitle, cta, href, hasSession }) => {
   return (
-    <div className="text-center py-16">
-      <div className="bg-zion-blue/30 p-6 rounded-full mb-6 inline-flex">
-        <MessageSquare className="h-10 w-10 text-zion-purple" />
+    <div className="text-center py-16>
+      <div className=bg-zion-blue/30 p-6 rounded-full mb-6 inline-flex">
+        <MessageSquare className="h-10 w-10 text-zion-purple />
       </div>
-      <h2 className="text-xl font-medium mb-2">{title}</h2>
+      <h2 className=text-xl font-medium mb-2">{title}</h2>
 
-      <p className="text-muted-foreground mb-6">{subtitle}</p>
+      <p className="text-muted-foreground mb-6>{subtitle}</p>
   hasSession: boolean
-      <p className='text-muted-foreground mb-6'>{subtitle}</p>
+      <p className=text-muted-foreground mb-6'>{subtitle}</p>
 origin/cursor/automate-test-improve-and-merge-code-2533
       <TooltipProvider>
         <Tooltip>
@@ -192,7 +187,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 export default EmptyState;
 
-};
+}
 
 export default EmptyState;
 
@@ -202,17 +197,17 @@ const EmptyState: React.FC < EmptyStateProps> = ({
   subtitle,
   cta,
   href,
-  has_session,
-}) => {  return (
-    <div className='text - center py - 16'>;
-            ) : (<Button disabled>{cta}</Button>;const EmptyState: React.FC<EmptyStateProps> = ({ title, subtitle, cta, href, hasSession }) => {return (<div className="text-center py-16">;
-      <div className="bg-zion-blue/30 p-6 rounded-full mb-6 inline-flex">;
-        <MessageSquare className="h-10 w-10 text-zion-purple" />;
+<<<<<<< HEAD
+  has_session}) => {  return (
+    <div className='text - center py - 16>;
+            ) : (<Button disabled>{cta}</Button>;const EmptyState: React.FC<EmptyStateProps> = ({ title, subtitle, cta, href, hasSession }) => {return (<div className=text-center py-16">;
+      <div className="bg-zion-blue/30 p-6 rounded-full mb-6 inline-flex>;
+        <MessageSquare className=h-10 w-10 text-zion-purple" />;
       </div>;
-      <h2 className="text-xl font-medium mb-2">{title}</h2>;
-      <p className="text-muted-foreground mb-6">{subtitle}</p>;
+      <h2 className="text-xl font-medium mb-2>{title}</h2>;
+      <p className=text-muted-foreground mb-6">{subtitle}</p>;
   hasSession: boolean;
-      <p className='text-muted-foreground mb-6'>{subtitle}</p>;
+      <p className=text-muted-foreground mb-6'>{subtitle}</p>;
       <TooltipProvider>;
         <Tooltip>;
           <TooltipTrigger asChild>;
@@ -225,26 +220,37 @@ const EmptyState: React.FC < EmptyStateProps> = ({
       </TooltipProvider>;
     </div>;
   )export default EmptyState;}export default EmptyState;has_session: boolean;
-const EmptyState: React.FC < EmptyStateProps> = ({title,subtitle,cta,href,has_session}) => {  return (<div className='text - center py - 16'>;
+const EmptyState: React.FC < EmptyStateProps> = ({title,subtitle,cta,href,has_session}) => {  return (<div className='text - center py - 16>;
+      <div className=bg - zion - blue / 30 p - 6 rounded - full mb - 6 inline - flex'>;
+        <MessageSquare className='h - 10 w - 10 text - zion - purple />;
+=======
+  has_session,
+}) => {  return (
+    <div className='text - center py - 16'>;
       <div className='bg - zion - blue / 30 p - 6 rounded - full mb - 6 inline - flex'>;
         <MessageSquare className='h - 10 w - 10 text - zion - purple' />;
+>>>>>>> origin/chore/fix-lint-and-merge
       </div>;
-      <h2 className='text - xl font - medium mb - 2'>{title}</h2>;
-      <p className='text - muted - foreground mb - 6'>{subtitle}</p>      <TooltipProvider>      <h2 className="text - xl font - medium mb - 2">{title}</h2>;
-      <p className="text - muted - foreground mb - 6">{subtitle}</p>;
+      <h2 className=text - xl font - medium mb - 2'>{title}</h2>;
+      <p className='text - muted - foreground mb - 6'>{subtitle}</p>      <TooltipProvider>      <h2 className="text - xl font - medium mb - 2>{title}</h2>;
+      <p className=text - muted - foreground mb - 6">{subtitle}</p>;
       <TooltipProvider>;
         <Tooltip>;
           <TooltipTrigger as_child>;
-            {has_session ? (<Button as_child>;
+            {has_session ? (
+              <Button as_child>;
                 <Link href={href}>{cta}</Link>;
-              </Button>) : (<Button disabled>{cta}</Button>)}
+              </Button>) : (
+              <Button disabled>{cta}</Button>)}
           </TooltipTrigger>;
           {!has_session && <TooltipContent > Login required</TooltipContent>}
         </Tooltip>;
       </TooltipProvider>;
-    </div>)}
+    </div>);
+}
 export default EmptyState;
 
+<<<<<<< HEAD
           </TooltipTrigger>;
           {!hasSession && <TooltipContent>Login required</TooltipContent>}
 
@@ -257,16 +263,24 @@ export default EmptyState;
   );
 
 
+},
+=======
 },;
+>>>>>>> origin/chore/fix-lint-and-merge
 export default EmptyState;
 
         </Tooltip>
       </TooltipProvider>
     </div>
 );
-};
+<<<<<<< HEAD
+}
 },export default EmptyState;</Tooltip>;
       </TooltipProvider>;
     </div>;
 )}export default EmptyState;
 export default EmptyState;
+=======
+};
+export default EmptyState;
+>>>>>>> origin/chore/fix-lint-and-merge

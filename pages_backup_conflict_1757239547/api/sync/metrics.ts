@@ -16,10 +16,8 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       const p = e.payload as any
       totalsByToken[p.token] = (totalsByToken[p.token] |0) + (p.amount |0)
     } else if (e.type === "leaderboard_entry") {
-      const p = e.payload as any
       contributionsBySubject[p.subjectId] = (contributionsBySubject[p.subjectId] |0) + (p.score |0)
     } else if (e.type === "proposal") {
-      const p = e.payload as any
       globalVotes += Array.isArray(p.votes) ? p.votes.length : 0
     }
   }
@@ -35,8 +33,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     lastSyncedAt: state.lastSyncedAt})
 }
       globalVotes += Array.isArray(p.votes) ? p.votes.length : 0;
-import type { NextApiRequest, NextApiResponse } from "next";
-import { readState, filterEventsByScope } from "../../../utils/sync/storage";
 export default function handler(req, res) {
   try {
   if (!isAdmin) return res.status(403).json({ error: 'Forbidden' });
@@ -49,10 +45,8 @@ export default function handler(req, res) {
       const p = e.payload as any;
       totalsByToken[p.token] = (totalsByToken[p.token] || 0) + (p.amount || 0);
     } else if (e.type === "leaderboard_entry") {;
-      const p = e.payload as any;
       contributionsBySubject[p.subjectId] = (contributionsBySubject[p.subjectId] || 0) + (p.score || 0);
     } else if (e.type === "proposal") {;
-      const p = e.payload as any;
       globalVotes += Array.isArray(p.votes) ? p.votes.length : 0;
       } catch (error) {
     console.error("Error:", error);

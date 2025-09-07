@@ -66,8 +66,6 @@ export function listAllTags(): string[] {
 }
 
 export function incrementMetric(id: string, metric: keyof BlogPost['metrics']): BlogPost | undefined {
-  const posts = readPosts($2);
-  const idx = $2;
   if (idx < 0) return undefined,
   posts[idx].metrics[metric] += 1,
   writePosts($2);

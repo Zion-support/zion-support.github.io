@@ -120,7 +120,6 @@ export default function SavedTalentsPage() {
           description: "Talent removed from saved list."})
       } else {
         // Add to saved talents
-        const { error } = await supabase
           .from('saved_talents')
           .insert([{ user_id: user.id, talent_id: talentId }]),
   

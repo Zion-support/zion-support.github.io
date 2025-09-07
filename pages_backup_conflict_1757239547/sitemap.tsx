@@ -24,7 +24,6 @@ import {
   ArrowRight ;
 } from 'lucide-react';
 
-import {
   Home
   Brain
   Network
@@ -143,7 +142,6 @@ export default function SitemapPage() {
     </>
   );
 }
-import {
   Home
   Search
   Rocket
@@ -157,8 +155,6 @@ import {
   Globe
   Building;
 } from 'lucide-react';
-import SmartHeader from '../components/SmartHeader';
-import SmartFooter from '../components/SmartFooter';
 export default function SitemapPage() {
   const mainPages = [
     {

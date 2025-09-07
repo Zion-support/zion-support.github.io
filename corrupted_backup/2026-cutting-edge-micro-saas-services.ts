@@ -1,7 +1,3 @@
-export interface CuttingEdgeMicroSAASService  {"id": string;"
-
-}
-
 export interface CuttingEdgeMicroSAASService {
   "id": string;"
   }

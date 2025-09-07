@@ -1,8 +1,6 @@
 <<<<<<< HEAD
 import EnhancedLayout from '../components/layout/EnhancedLayout';
 import { Bot, Globe2, MonitorSmartphone } from 'lucide-react';
-=======
-<<<<<<< HEAD
 
 export default function FeaturesPage() {;
 
@@ -10,17 +8,14 @@ export default function FeaturesPage() {;
 
 
 
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
 import {Bot, Globe2, MonitorSmartphone} from 'lucide-react';
 
 export default function FeaturesPage() {
 
-
-
-
 import {Bot, Globe2, MonitorSmartphone} from 'lucide-react';
->>>>>>> origin/main
 
-export default function FeaturesPage() {
   return (
 <<<<<<< HEAD
 =======
@@ -30,133 +25,138 @@ export default function FeaturesPage() {
         <div className='rounded-2xl border border-gray-200 dark:border-gray-800 p-6 bg-white dark:bg-gray-950'>;
           <Globe2 className='h-6 w-6 text-indigo-500' />;
           <div className='mt-3 text-lg font-semibold'>Global Hiring</div>;
+
           <p className='mt-1 text-sm opacity-80'>;
             Source across timezones and markets with vetted profiles.;
-          </p>;
-        <div className='rounded-2xl border border-gray-200 dark:border-gray-800 p-6 bg-white dark:bg-gray-950'>;
-          <Bot className='h-6 w-6 text-indigo-500' />;
-          <div className='mt-3 text-lg font-semibold'>AI Matching</div>;
+          </p>;'
+        <div className='rounded-2xl border border-gray-200 dark:border-gray-800 p-6 bg-white dark:bg-gray-950'>;'
+          <Bot className='h-6 w-6 text-indigo-500' />;'
+          <div className='mt-3 text-lg font-semibold'>AI Matching</div>;'
           <p className='mt-1 text-sm opacity-80'>;
             Instantly surface best-fit candidates for your role.;
           </p>;
-        </div>;
-        <div className='rounded-2xl border border-gray-200 dark:border-gray-800 p-6 bg-white dark:bg-gray-950'>;
-          <MonitorSmartphone className='h-6 w-6 text-indigo-500' />;
-          <div className='mt-3 text-lg font-semibold'>Mobile Milestones</div>;
+        </div>;'
+        <div className='rounded-2xl border border-gray-200 dark:border-gray-800 p-6 bg-white dark:bg-gray-950'>;'
+          <MonitorSmartphone className='h-6 w-6 text-indigo-500' />;'
+          <div className='mt-3 text-lg font-semibold'>Mobile Milestones</div>;'
           <p className='mt-1 text-sm opacity-80'>;
             Track deliverables and approvals anywhere.;
           </p>        </div>;
       </div>;
     </EnhancedLayout>;
-  );
-import EnhancedLayout from '../components / layout / EnhancedLayout';
-import {Bot, Globe2, MonitorSmartphone} from 'lucide-react';
-export default /**
- * FeaturesPage - Function description
+
  */
-function FeaturesPage() {
+function FeaturesPage() {}
   return (
-    <EnhancedLayout>;
-      <h1 className='text - 2xl font - semibold'>Features</h1>;
-      <div className='mt - 6 grid md:grid - cols - 3 gap - 6'>;
-        <div className='rounded - 2xl border border - gray - 200 dark:border - gray - 800 p - 6 bg - white dark:bg - gray - 950'>;
-          <Globe2 className='h - 6 w - 6 text - indigo - 500' />;
-          <div className='mt - 3 text - lg font - semibold'>Global Hiring</div>;
+    <EnhancedLayout>;'
+      <h1 className='text - 2xl font - semibold'>Features</h1>;'
+      <div className='mt - 6 grid md:grid - cols - 3 gap - 6'>;'
+        <div className='rounded - 2xl border border - gray - 200 dark:border - gray - 800 p - 6 bg - white dark:bg - gray - 950'>;'
+          <Globe2 className='h - 6 w - 6 text - indigo - 500' />;'
+          <div className='mt - 3 text - lg font - semibold'>Global Hiring</div>;'
           <p className='mt - 1 text - sm opacity - 80'>;
             Source across timezones and markets with vetted profiles.;
-          </p>;
-        <div className='rounded - 2xl border border - gray - 200 dark:border - gray - 800 p - 6 bg - white dark:bg - gray - 950'>;
-          <Bot className='h - 6 w - 6 text - indigo - 500' />;
-          <div className='mt - 3 text - lg font - semibold'>AI Matching</div>;
+          </p>;'
+        <div className='rounded - 2xl border border - gray - 200 dark:border - gray - 800 p - 6 bg - white dark:bg - gray - 950'>;'
+          <Bot className='h - 6 w - 6 text - indigo - 500' />;'
+          <div className='mt - 3 text - lg font - semibold'>AI Matching</div>;'
           <p className='mt - 1 text - sm opacity - 80'>;
             Instantly surface best - fit candidates for your role.;
           </p>;
-        </div>;
-        <div className='rounded - 2xl border border - gray - 200 dark:border - gray - 800 p - 6 bg - white dark:bg - gray - 950'>;
-          <MonitorSmartphone className='h - 6 w - 6 text - indigo - 500' />;
-          <div className='mt - 3 text - lg font - semibold'>Mobile Milestones</div>;
+        </div>;'
+        <div className='rounded - 2xl border border - gray - 200 dark:border - gray - 800 p - 6 bg - white dark:bg - gray - 950'>;'
+          <MonitorSmartphone className='h - 6 w - 6 text - indigo - 500' />;'
+          <div className='mt - 3 text - lg font - semibold'>Mobile Milestones</div>;'
           <p className='mt - 1 text - sm opacity - 80'>;
             Track deliverables and approvals anywhere.;
           </p>        </div>;
       </div>;
     </EnhancedLayout>);
-}        <div className="rounded - 2xl border border - gray - 200 dark:border - gray - 800 p - 6 bg - white dark:bg - gray - 950">;
-          <MonitorSmartphone className="h - 6 w - 6 text - indigo - 500" />;
-          <div className="mt - 3 text - lg font - semibold">Mobile Milestones</div>;
+}        <div className="rounded - 2xl border border - gray - 200 dark:border - gray - 800 p - 6 bg - white dark:bg - gray - 950">;"
+          <MonitorSmartphone className="h - 6 w - 6 text - indigo - 500" />;"
+          <div className="mt - 3 text - lg font - semibold">Mobile Milestones</div>;"
           <p className="mt - 1 text - sm opacity - 80">Track deliverables and approvals anywhere.</p>;
       </div>;
     </EnhancedLayout>);
 }
-  return (
 
+origin/cursor/automate-test-improve-and-merge-code-20a4
+pr-12243
+  return (
 
 export default function FeaturesPage() {;
   return (
 
 export default function FeaturesPage() {_return (
 
->>>>>>> origin/main
+>>>>>>> origin/chore/fix-lint-and-merge
     <EnhancedLayout>
-      <h1 className="text-2xl font-semibold">Features</h1>
-      <div className="mt-6 grid md: grid-cols-3 gap-6">
-        <div className="rounded-2xl border border-gray-200 dark:border-gray-800 p-6 bg-white dark:bg-gray-950">
-          <Globe2 className="h-6 w-6 text-indigo-500" />
-          <div className="mt-3 text-lg font-semibold">Global Hiring</div>
-          <p className="mt-1 text-sm opacity-80">Source across timezones and markets with vetted profiles.</p>
+      <h1 className="text-2xl font-semibold>Features</h1>
+      <div className=mt-6 grid md: grid-cols-3 gap-6">
+        <div className="rounded-2xl border border-gray-200 dark:border-gray-800 p-6 bg-white dark:bg-gray-950>
+          <Globe2 className=h-6 w-6 text-indigo-500" />
+          <div className="mt-3 text-lg font-semibold>Global Hiring</div>
+          <p className=mt-1 text-sm opacity-80">Source across timezones and markets with vetted profiles.</p>
         </div>
 <<<<<<< HEAD
         <div className="rounded-2xl border border-gray-200 dark:border-gray-800 p-6 bg-white dark:bg-gray-950">
 =======
 <div className="rounded-2xl border border-gray-200 dark:border-gray-800 p-6 bg-white dark:bg-gray-950">
->>>>>>> origin/main
+>>>>>>> origin/chore/fix-lint-and-merge
           <Bot className="h-6 w-6 text-indigo-500" />
           <div className="mt-3 text-lg font-semibold">AI Matching</div>
           <p className="mt-1 text-sm opacity-80">Instantly surface best-fit candidates for your role.</p>
         </div>
         <div className="rounded-2xl border border-gray-200 dark:border-gray-800 p-6 bg-white dark:bg-gray-950">
 <<<<<<< HEAD
-=======
-=======
-<<<<<<< HEAD
 export default function FeaturesPage () {
   return (<EnhancedLayout> </div> <div className="rounded-2xl border border-gray-200 dark:border-gray-800 p-6 bg-white dark:bg-gray-950" > <Bot className="h-6 w-6 text-indigo-500" /> <div className="mt-3 text-lg font-semibold" >AI Matching</div> <p className="mt-1 text-sm opacity-80" >Instantly surface best-fit candidates for your role.</p> </div> <div className="rounded-2xl border border-gray-200 dark:border-gray-800 p-6 bg-white dark:bg-gray-950" > <MonitorSmartphone className="h-6 w-6 text-indigo-500" /> <div className="mt-3 text-lg font-semibold" >Mobile Milestones</div> <p className="mt-1 text-sm opacity-80" >Track deliverables and approvals anywhere.</p> </div> </div> </EnhancedLayout>
 =======
 import EnhancedLayout from '../components/layout/EnhancedLayout';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
+>>>>>>> origin/chore/fix-lint-and-merge
 import { Bot, Globe2, MonitorSmartphone } from 'lucide-react';
-
 
 export default function FeaturesPage() {
   return (
     <EnhancedLayout>
-      <h1 className='text-2xl font-semibold'>Features</h1>
+<<<<<<< HEAD
+      <h1 className=text-2xl font-semibold'>Features</h1>
+      <div className='mt-6 grid md:grid-cols-3 gap-6>
+        <div className=rounded-2xl border border-gray-200 dark:border-gray-800 p-6 bg-white dark:bg-gray-950'>
+          <Globe2 className='h-6 w-6 text-indigo-500 />
+          <div className=mt-3 text-lg font-semibold'>Global Hiring</div>
+          <p className='mt-1 text-sm opacity-80>
+=======
+<h1 className='text-2xl font-semibold'>Features</h1>
       <div className='mt-6 grid md:grid-cols-3 gap-6'>
         <div className='rounded-2xl border border-gray-200 dark:border-gray-800 p-6 bg-white dark:bg-gray-950'>
           <Globe2 className='h-6 w-6 text-indigo-500' />
           <div className='mt-3 text-lg font-semibold'>Global Hiring</div>
           <p className='mt-1 text-sm opacity-80'>
+>>>>>>> origin/chore/fix-lint-and-merge
             Source across timezones and markets with vetted profiles.
           </p>
-        <div className='rounded-2xl border border-gray-200 dark:border-gray-800 p-6 bg-white dark:bg-gray-950'>
-          <Bot className='h-6 w-6 text-indigo-500' />
-          <div className='mt-3 text-lg font-semibold'>AI Matching</div>
-          <p className='mt-1 text-sm opacity-80'>
+        <div className=rounded-2xl border border-gray-200 dark:border-gray-800 p-6 bg-white dark:bg-gray-950'>
+          <Bot className='h-6 w-6 text-indigo-500 />
+          <div className=mt-3 text-lg font-semibold'>AI Matching</div>
+          <p className='mt-1 text-sm opacity-80>
             Instantly surface best-fit candidates for your role.
           </p>
         </div>
-        <div className='rounded-2xl border border-gray-200 dark:border-gray-800 p-6 bg-white dark:bg-gray-950'>
-          <MonitorSmartphone className='h-6 w-6 text-indigo-500' />
-          <div className='mt-3 text-lg font-semibold'>Mobile Milestones</div>
+        <div className=rounded-2xl border border-gray-200 dark:border-gray-800 p-6 bg-white dark:bg-gray-950'>
+          <MonitorSmartphone className='h-6 w-6 text-indigo-500 />
+          <div className=mt-3 text-lg font-semibold'>Mobile Milestones</div>
           <p className='mt-1 text-sm opacity-80'>
             Track deliverables and approvals anywhere.
-          </p>        </div>
+          </p>
+        </div>
       </div>
     </EnhancedLayout>;
   );
-}        <div className="rounded-2xl border border-gray-200 dark:border-gray-800 p-6 bg-white dark:bg-gray-950">
-          <MonitorSmartphone className="h-6 w-6 text-indigo-500" />
-          <div className="mt-3 text-lg font-semibold">Mobile Milestones</div>
-          <p className="mt-1 text-sm opacity-80">Track deliverables and approvals anywhere.</p>
+}        <div className="rounded-2xl border border-gray-200 dark:border-gray-800 p-6 bg-white dark:bg-gray-950>
+          <MonitorSmartphone className=h-6 w-6 text-indigo-500" />
+          <div className="mt-3 text-lg font-semibold>Mobile Milestones</div>
+          <p className=mt-1 text-sm opacity-80">Track deliverables and approvals anywhere.</p>
         </div>
       </div>
     </EnhancedLayout>
@@ -169,13 +169,13 @@ export default function FeaturesPage() {
 
 
 
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
 
 }        <div className="rounded-2xl border border-gray-200 dark:border-gray-800 p-6 bg-white dark:bg-gray-950">
->>>>>>> origin/main
           <MonitorSmartphone className="h-6 w-6 text-indigo-500" />
           <div className="mt-3 text-lg font-semibold">Mobile Milestones</div>
           <p className="mt-1 text-sm opacity-80">Track deliverables and approvals anywhere.</p>
-        </div>
       </div>
     </EnhancedLayout>
 <<<<<<< HEAD
@@ -183,27 +183,14 @@ export default function FeaturesPage() {
 }
 =======
 
-
-  );
-
-
-
   );
   );
 
+  );
 
+ursor/fix-website-loading-errors-and-merge-6662
 
+  );
+  );
 origin/cursor/automate-test-improve-and-merge-code-2533
-
-
-
-
-
-
-  );
-  );
-
-=======
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
->>>>>>> origin/main
+>>>>>>> origin/chore/fix-lint-and-merge

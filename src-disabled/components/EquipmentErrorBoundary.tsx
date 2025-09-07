@@ -1,36 +1,40 @@
-<<<<<<< HEAD:src_backup/components/EquipmentErrorBoundary.tsx
-<<<<<<< HEAD:src_backup/components/EquipmentErrorBoundary.tsx
+<<<<<<< HEAD
 import React from 'react';
 import { Button  } from '@/components/ui/button';
 import { Card, CardContent  } from '@/components/ui/card';
 import {logErrorToProduction} from '@/utils/productionLogger';
+import React from 'react;
+import { Button  } from @/components/ui/button';
+import { Card, CardContent  } from '@/components/ui/card;
+import {logErrorToProduction} from @/utils/productionLogger';
 origin/cursor/automate-test-improve-and-merge-code-2533
+interface Props {
+=======
 interface Props {;
+>>>>>>> origin/chore/fix-lint-and-merge
   children: React.ReactNode;
 }
 
   }
-;
-  static getDerivedStateFromError(error: Error): State {;
+  static getDerivedStateFromError(error: Error): State {
 
-<<<<<<< HEAD:src_backup/components/EquipmentErrorBoundary.tsx
 import React from 'react';
 import { Button  } from '@/components/ui/button';
 import { Card, CardContent  } from '@/components/ui/card';
 
-import {logErrorToProduction} from '@/utils/productionLogger';
 origin/cursor/automate-test-improve-and-merge-code-2533
 interface Props {
   children: React.ReactNode
 }
 interface State {
-<<<<<<< HEAD:src_backup/components/EquipmentErrorBoundary.tsx
+<<<<<<< HEAD
   hasError: boolean;
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
 
   hasError: boolean
 
-<<<<<<< HEAD:src_backup/components/EquipmentErrorBoundary.tsx
   hasError: boolean;
 origin/cursor/automate-test-improve-and-merge-code-2533
   error?: Error
@@ -49,14 +53,14 @@ export class EquipmentErrorBoundary extends React.Component<Props, State> {
     if (this.state.hasError) {
       return (
 
-          <Card className='border-red-200 bg-red-50'>
-            <CardContent className='p-8 text-center'>
-              <AlertTriangle className='mx-auto mb-4 h-12 w-12 text-red-600' />
-              <h2 className='text-2xl font-bold text-red-900 mb-2'>
+          <Card className='border-red-200 bg-red-50>
+            <CardContent className=p-8 text-center'>
+              <AlertTriangle className='mx-auto mb-4 h-12 w-12 text-red-600 />
+              <h2 className=text-2xl font-bold text-red-900 mb-2'>
                 Something went wrong
               </h2>
-              <p className='text-red-700 mb-4'>
-                We're having trouble loading the equipment listings. This might
+              <p className='text-red-700 mb-4>
+                Were having trouble loading the equipment listings. This might
                 be a temporary issue.
               </p>
               <div className='flex gap-2 justify-center'>
@@ -64,37 +68,36 @@ export class EquipmentErrorBoundary extends React.Component<Props, State> {
                   onClick={() =>
                     this.setState({ hasError: false, error: undefined })
                   }
-                  variant='outline'                >
+                  variant=outline                >
                   <RefreshCw className='h-4 w-4 mr-2' />
                   Try Again
                 </Button>
                 <Button
                   onClick={() => window.location.reload()}
-                  variant='default'
+                  variant=default
 
                 >
-<<<<<<< HEAD:src_backup/components/EquipmentErrorBoundary.tsx
-<<<<<<< HEAD:src_backup/components/EquipmentErrorBoundary.tsx
+<<<<<<< HEAD
 import { Button } from '@/components/ui/button';
-import { Card, CardContent } from '@/components/ui/card';
+import { Card, CardContent } from @/components/ui/card;
 import {logErrorToProduction} from '@/utils/productionLogger';
-interface Props {;
+interface Props {
   children: React && React.ReactNode;
 }
 
-interface State {;
-  hasError: boolean,;
+interface State {
+  hasError: boolean,
   error?: Error;
 }
 
-export class EquipmentErrorBoundary extends React && React.Component<Props, State> {;
-  constructor(props: Props) {;
+export class EquipmentErrorBoundary extends React && React.Component<Props, State> {
+  constructor(props: Props) {
     super(props);
 
 
   }
 
-  static getDerivedStateFromError(error: Error): State {;
+  static getDerivedStateFromError(error: Error): State {
     return { hasError: true, error }
   }
 
@@ -102,97 +105,95 @@ export class EquipmentErrorBoundary extends React && React.Component<Props, Stat
 
   }
 
-  render() {;
-    if (this && this.state.hasError) {;
+  render() {
+    if (this && this.state.hasError) {
       return (
 
 
 
-                <Button onClick={() => window.location.reload()} variant="default">
+                <Button onClick={() => window.location.reload()} variant="default>
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
 
-                  <RefreshCw className="h-4 w-4 mr-2" />
+                  <RefreshCw className=h-4 w-4 mr-2" />
                   Try Again
                 </Button>
-        <div className="container py-8">
-          <Card className="border-red-200 bg-red-50">
-            <CardContent className="p-8 text-center">
-              <AlertTriangle className="mx-auto mb-4 h-12 w-12 text-red-600" />
-              <h2 className="text-2xl font-bold text-red-900 mb-2">Something went wrong</h2>
-              <p className="text-red-700 mb-4">
-                We're having trouble loading the equipment listings. This might be a temporary issue.
+        <div className="container py-8>
+          <Card className=border-red-200 bg-red-50">
+            <CardContent className="p-8 text-center>
+              <AlertTriangle className=mx-auto mb-4 h-12 w-12 text-red-600" />
+              <h2 className="text-2xl font-bold text-red-900 mb-2>Something went wrong</h2>
+              <p className=text-red-700 mb-4">
+                Were having trouble loading the equipment listings. This might be a temporary issue.
               </p>
-              <div className="flex gap-2 justify-center">
+              <div className="flex gap-2 justify-center>
                 <Button 
                   onClick={() => this.setState({ hasError: false, error: undefined })} 
-                  variant="outline"
+                  variant=outline"
                 >
-                  <RefreshCw className="h-4 w-4 mr-2" />
+                  <RefreshCw className="h-4 w-4 mr-2 />
                   Try Again
 
-import { Button } from '@/components/ui/button';
-import { Card, CardContent } from '@/components/ui/card';
-import {logErrorToProduction} from '@/utils/productionLogger';
-interface Props {;
+import { Button } from @/components/ui/button';
+import { Card, CardContent } from '@/components/ui/card;
+interface Props {
   children: React && React.ReactNode;
 }
-import React from 'react',;
-import { AlertTriangle, RefreshCw } from 'lucide-react';
-import { Button } from '@/components/ui/button',;
-import { Card, CardContent } from '@/components/ui/card',;
-import {logErrorToProduction} from '@/utils/productionLogger',;
-interface Props {;
+import React from 'react,
+import { AlertTriangle, RefreshCw } from lucide-react';
+import { Button } from '@/components/ui/button,
+import { Card, CardContent } from @/components/ui/card',
+import {logErrorToProduction} from '@/utils/productionLogger,
+interface Props {
   children: React.ReactNode;
 }
-;
-interface State {;
-  hasError: boolean,;
+interface State {
+  hasError: boolean,
   error?: Error;
 }
-export class EquipmentErrorBoundary extends React && React.Component<Props, State> {;
-  constructor(props:,  Props) {;,
+export class EquipmentErrorBoundary extends React && React.Component<Props, State> {
+  constructor(props:,  Props) {,
     super(props);
   }
-  static getDerivedStateFromError(error:,  Error): State {;,
+  static getDerivedStateFromError(error:,  Error): State {,
     return { hasError: true, error }
   }
   }
-  render() {;
-    if (this && this.state.hasError) {;
+  render() {
+    if (this && this.state.hasError) {
       return (
-                <Button onClick={() => window.location.reload()} variant="default">"
+                <Button onClick={() => window.location.reload()} variant=default">"
 ;
-export class EquipmentErrorBoundary extends React.Component<Props State> {;
-  constructor(props: Props) {;
+export class EquipmentErrorBoundary extends React.Component<Props State> {
+  constructor(props: Props) {
     super(props);
     this.state = { hasError: false }
   }
-;
-  static getDerivedStateFromError(error: Error): State {;
+  static getDerivedStateFromError(error: Error): State {
     return { hasError: true, error }
   }
-;
-  componentDidCatch(error: Error, errorInfo: React.ErrorInfo) {;
-    logErrorToProduction('Equipment page error:', error, { componentStack: errorInfo.componentStack });
+  componentDidCatch(error: Error, errorInfo: React.ErrorInfo) {
+    logErrorToProduction(Equipment page error:', error, { componentStack: errorInfo.componentStack });
   }
 
   render() {
     if (this.state.hasError) {
       return (
-        <div className="container py-8">
+        <div className=container py-8>
           <Card className="border-red-200 bg-red-50">
-            <CardContent className="p-8 text-center">
+            <CardContent className=p-8 text-center>
               <AlertTriangle className="mx-auto mb-4 h-12 w-12 text-red-600" />
-              <h2 className="text-2xl font-bold text-red-900 mb-2">Something went wrong</h2>
+              <h2 className=text-2xl font-bold text-red-900 mb-2>Something went wrong</h2>
               <p className="text-red-700 mb-4">
                 We're having trouble loading the equipment listings. This might be a temporary issue.
               </p>
-              <div className="flex gap-2 justify-center">
+              <div className=flex gap-2 justify-center>
                 <Button 
                   onClick={() => this.setState({ hasError: false, error: undefined })} 
                   variant="outline"
                 >
-                  <RefreshCw className="h-4 w-4 mr-2" />
+                  <RefreshCw className=h-4 w-4 mr-2 />
                   Try Again
                 </Button>
                 <Button onClick={() => window.location.reload()} variant="default">
@@ -204,12 +205,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             </CardContent>
           </Card>
         </div>
-<<<<<<< HEAD:src_backup/components/EquipmentErrorBoundary.tsx
-<<<<<<< HEAD:src_backup/components/EquipmentErrorBoundary.tsx
+<<<<<<< HEAD
 
 
 
       )
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
 
     return this.props.children
   }      )
@@ -217,9 +219,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     }
 
 } ;
-<<<<<<< HEAD:src_backup/components/EquipmentErrorBoundary.tsx
 
-<<<<<<< HEAD:src_backup/components/EquipmentErrorBoundary.tsx
+<<<<<<< HEAD
 
 
 
@@ -229,9 +230,9 @@ interface Props  {children: React && React.ReactNode;
 
 
 }
-import { AlertTriangle, RefreshCw  } from 'lucide-react';
+import { AlertTriangle, RefreshCw  } from lucide-react;
 import { Button  } from '@/components/ui/button';
-import { Card, CardContent  } from '@/components/ui/card';
+import { Card, CardContent  } from @/components/ui/card;
 import { logErrorToProduction  } from '@/utils/productionLogger';
 interface Props  {children: React.ReactNode;
 interface State  {hasError: boolean;
@@ -240,9 +241,9 @@ export class EquipmentErrorBoundary extends React.Component<Props, State> {const
   hasError: boolean;
   error?: Error;
 }
-import { logErrorToProduction } from '@/utils/productionLogger';
+import { logErrorToProduction } from @/utils/productionLogger;
 import React from 'react';
-import { Button   } from '@/components/ui/button';
+import { Button   } from @/components/ui/button;
 import { Card, CardContent   } from '@/components/ui/card';
 interface Props  {children: React.ReactNode;
 }
@@ -252,43 +253,43 @@ interface State  {hasError: boolean;
 export class EquipmentErrorBoundary extends React.Component<Props, State> {constructor(props: Props) {super(props)this.state = { hasError: false }
   static getDerivedStateFromError(error: Error): State {return { hasError: true, error }
   }
-  }render() {if (this.state.hasError) {return (<div className='container py-8'>;
+  }render() {if (this.state.hasError) {return (<div className=container py-8>;
           <Card className='border-red-200 bg-red-50'>;
-            <CardContent className='p-8 text-center'>;
+            <CardContent className=p-8 text-center>;
               <AlertTriangle className='mx-auto mb-4 h-12 w-12 text-red-600' />;
-              <h2 className='text-2xl font-bold text-red-900 mb-2'>;
+              <h2 className=text-2xl font-bold text-red-900 mb-2>;
                 Something went wrong;
               </h2>;
               <p className='text-red-700 mb-4'>;
-                We're having trouble loading the equipment listings. This might;
+                Were having trouble loading the equipment listings. This might;
                 be a temporary issue.;
               </p>;
-              <div className='flex gap-2 justify-center'>;
+              <div className=flex gap-2 justify-center'>;
                 <Button;
                   onClick={() =>;
                     this.setState({ hasError: false, error: undefined })}
-                  variant='outline'                >;
-                  <RefreshCw className='h-4 w-4 mr-2' />;
+                  variant='outline                >;
+                  <RefreshCw className=h-4 w-4 mr-2' />;
                   Try Again;
                 </Button>;
                 <Button;
                   onClick={() => window.location.reload()}
-                  variant='default';
+                  variant='default;
                 >;
-                  <RefreshCw className="h-4 w-4 mr-2" />;
+                  <RefreshCw className=h-4 w-4 mr-2 />;
                   Try Again;
                 </Button>;
         <div className="container py-8">;
-          <Card className="border-red-200 bg-red-50">;
+          <Card className=border-red-200 bg-red-50>;
             <CardContent className="p-8 text-center">;
-              <AlertTriangle className="mx-auto mb-4 h-12 w-12 text-red-600" />;
+              <AlertTriangle className=mx-auto mb-4 h-12 w-12 text-red-600 />;
               <h2 className="text-2xl font-bold text-red-900 mb-2">Something went wrong</h2>;
-              <p className="text-red-700 mb-4">;
-                We're having trouble loading the equipment listings. This might be a temporary issue.;
+              <p className=text-red-700 mb-4>;
+                Were having trouble loading the equipment listings. This might be a temporary issue.;
               </p>;
               <div className="flex gap-2 justify-center">;
                 <Button;
-                  onClick={() => this.setState({ hasError: false, error: undefined })}variant="outline";
+                  onClick={() => this.setState({ hasError: false, error: undefined })}variant=outline;
                 >;
                   <RefreshCw className="h-4 w-4 mr-2" />;
                   Try Again;
@@ -296,7 +297,7 @@ export class EquipmentErrorBoundary extends React.Component<Props, State> {const
 interface Props  {children: React && React.ReactNode;
 }interface State  {hasError: boolean,error?: Error;
 }export class EquipmentErrorBoundary extends React && React.Component<Props, State> {constructor(props: Props) {super(props)}static getDerivedStateFromError(error: Error): State {return { hasError: true, error }
-  }}render() {if (this && this.state.hasError) {return (<Button onClick={() => window.location.reload()} variant="default">;
+  }}render() {if (this && this.state.hasError) {return (<Button onClick={() => window.location.reload()} variant=default>;
                   Refresh Page;
                 </Button>;
               </div>;
@@ -306,6 +307,8 @@ interface Props  {children: React && React.ReactNode;
       )return this.props.children;
   }      )}return this.props.children;
   }}}
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
 }
 
                   onClick={() => window && window.location.reload()}
@@ -313,11 +316,18 @@ interface Props  {children: React && React.ReactNode;
                 >                  Refresh Page;
                 <Button onClick={() => window && window.location.reload()} variant="default">;
               </p>;
-              <div className="flex gap-2 justify-center">;
+<<<<<<< HEAD
+              <div className=flex gap-2 justify-center>;
                 <Button;
                   onClick={() => this && this.setState({ hasError: false, error: undefined })}variant="outline";
+=======
+              <div className="flex gap-2 justify-center">;
+                <Button
+                  onClick={() => this && this.setState({ hasError: false, error: undefined })} ;
+                  variant="outline";
+>>>>>>> origin/chore/fix-lint-and-merge
                 >;
-                  <RefreshCw className="h-4 w-4 mr-2" />;
+                  <RefreshCw className=h-4 w-4 mr-2 />;
                   Try Again;
                 </Button>;
                 <Button onClick={() => window && window.location.reload()} variant="default">;
@@ -327,14 +337,16 @@ interface Props  {children: React && React.ReactNode;
             </CardContent>;
           </Card>;
         </div>;
-<<<<<<< HEAD:src_backup/components/EquipmentErrorBoundary.tsx
+<<<<<<< HEAD
       )}return this && this.props.children;
   }      )}return this && this.props.children;
   }static getDerivedStateFromError (error: Error): State {return { has_error: true, error }
   }
-  componentDidCatch (error: Error, error_info: React.ErrorInfo) {logErrorToProduction ('Equipment page error:', error, { component_stack: error_info.component_stack })}
+  componentDidCatch (error: Error, error_info: React.ErrorInfo) {logErrorToProduction (Equipment page error:, error, { component_stack: error_info.component_stack })}
   render () {// Check condition;
 if ( {) {$2;
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
       );
     }
     return this && this.props.children;
@@ -352,35 +364,47 @@ if ( {) {$2;
 if ( {) {
   $2
 }
-      return (<div className='container py - 8'>;
+<<<<<<< HEAD
+      return (<div className=container py - 8>;
+=======
+      return (
+        <div className='container py - 8'>;
+>>>>>>> origin/chore/fix-lint-and-merge
           <Card className='border - red - 200 bg - red - 50'>;
-            <CardContent className='p - 8 text - center'>;
+            <CardContent className=p - 8 text - center>;
               <AlertTriangle className='mx - auto mb - 4 h - 12 w - 12 text - red - 600' />;
-              <h2 className='text - 2xl font - bold text - red - 900 mb - 2'>;
+              <h2 className=text - 2xl font - bold text - red - 900 mb - 2>;
                 Something went wrong;
               </h2>;
               <p className='text - red - 700 mb - 4'>;
-                We're having trouble loading the equipment listings. This might;
+                Were having trouble loading the equipment listings. This might;
                 be a temporary issue.;
               </p>;
-              <div className='flex gap - 2 justify - center'>;
+              <div className=flex gap - 2 justify - center'>;
                 <Button;
                   on_click={() =>;
+<<<<<<< HEAD
                     this.set_state ({ has_error: false, error: undefined })}
+                  variant='outline                >;
+                  <RefreshCw className=h - 4 w - 4 mr - 2' />;
+=======
+                    this.set_state ({ has_error: false, error: undefined });
+                  }
                   variant='outline'                >;
                   <RefreshCw className='h - 4 w - 4 mr - 2' />;
+>>>>>>> origin/chore/fix-lint-and-merge
                   Try Again;
                 </Button>;
                 <Button;
                   on_click={() => window.location.reload ()}
                   variant='default';
                 >                  Refresh Page;
-                <Button on_click={() => window.location.reload ()} variant="default">;
+                <Button on_click={() => window.location.reload ()} variant=default>;
               </p>;
               <div className="flex gap - 2 justify-center">;
                 <Button;
                   on_click={() => this.set_state ({ has_error: false, error: undefined })}
-                  variant="outline";
+                  variant=outline;
                 >;
                   <RefreshCw className="h - 4 w - 4 mr-2" />;
                   Try Again;
@@ -391,35 +415,40 @@ if ( {) {
               </div>;
             </CardContent>;
           </Card>;
-        </div>)}
+        </div>);
+    }
     return this.props.children;
-<<<<<<< HEAD:src_backup/components/EquipmentErrorBoundary.tsx
-<<<<<<< HEAD:src_backup/components/EquipmentErrorBoundary.tsx
+<<<<<<< HEAD
   }      );
   });
     }
-<<<<<<< HEAD:src_backup/components/EquipmentErrorBoundary.tsx
-    return this.props.children;
-  }
-
-<<<<<<< HEAD:src_backup/components/EquipmentErrorBoundary.tsx
-} ;
-
-
     return this.props.children;
   }
 
 } ;
+}
+
+=======
+  });
+    }
+>>>>>>> origin/chore/fix-lint-and-merge
+
+    return this.props.children;
+  }
+
+}
 
 );
     }
 
     return this.props.children;
-<<<<<<< HEAD:src_backup/components/EquipmentErrorBoundary.tsx
+<<<<<<< HEAD
   }
-<<<<<<< HEAD:src_backup/components/EquipmentErrorBoundary.tsx
 origin/cursor/automate-test-improve-and-merge-code-2533
   }      )}return this.props.children;
   }})}return this.props.children;
   }
   }
+=======
+  }
+>>>>>>> origin/chore/fix-lint-and-merge

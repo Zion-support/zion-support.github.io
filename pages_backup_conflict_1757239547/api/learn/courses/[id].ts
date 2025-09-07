@@ -17,9 +17,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     res.status(500).json({ error: e?.message ?? 'Failed to load course' })
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.status(200).json({ message: 'API endpoint' });
-import type { NextApiRequest, NextApiResponse } from 'next';
-import fs from 'fs';
-import path from 'path';
 const dataPath = path.join(process.cwd(), 'datalearncourses.json'),;
 export default function handler(req, res) {
   try {

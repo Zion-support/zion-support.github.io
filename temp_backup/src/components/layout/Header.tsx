@@ -128,7 +128,6 @@
                     {item.dropdown && (,";""
                       <div className="pl-6 space-y-2">,;
                         {item.dropdown.map((subItem, subIndex) => {,;
-                          const IconComponent = subItem.icon,;
                           return (, ;
                             <Link,;"
                               key={subIndex};""

@@ -7,7 +7,6 @@ export default function AISEOOptimizationPage() {
   const service = enhancedRealMicroSaasServices.find(s => s.link.endsWith('/ai-seo-optimization'))
   if (!service) return null
 export default function AISEOOptimizationPage() {
-  const service = enhancedRealMicroSaasServices.find(s => s.link.endsWith('/ai-seo-optimization'))
   if (!service) return null,
   return (
     <Layout>

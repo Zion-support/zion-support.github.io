@@ -62,7 +62,6 @@ export default function FAQ() {
         "Yes, we work with businesses of all sizes, from startups to enterprises. Our micro SaaS products are particularly well-suited for small and medium businesses looking for cost-effective solutions."
     }
   ];
-  const faqs = [
     {
       question: "What services does Zion Tech Group offer ? ",
       answer : "We offer 40+ micro SaaS products, 16+ AI services, and 16+ IT solutions including cloud migration, cybersecurity, data engineering, machine learning, and more."
