@@ -1,3 +1,13 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 }
       // Check condition
 if ( {) {
@@ -7,6 +17,15 @@ if ( {) {
       } else {
         success = await addWorkExperience(resumeId, experienceData)
       }
+<<<<<<< HEAD
+>>>>>>> origin/chore/fix-lint-and-merge
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 
   };
   const handleEdit = (work: WorkExperience) => {;
@@ -54,6 +73,23 @@ import { AIEnhancementButton } from '@/components/resume-builder/forms/AIEnhance
 
   const handleEdit = (work: WorkExperience) => {
 
+<<<<<<< HEAD
+  const handleEdit = (work: WorkExperience) => {
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> origin/resolved-merge-conflicts
+origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+=======
+=======
+<<<<<<< HEAD
+origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     setEditingId(work.id!);    form.reset({
       ...work
   const handleEdit = (work: WorkExperience) => {
@@ -90,7 +126,7 @@ export function WorkExperienceForm({ resumeId, workExperiences, onComplete, onBa
       start_date: format(new Date(), 'yyyy-MM-dd'),;
       is_current: false,,
   description: '',;
-      location: ''}}),;
+      location: ''}),;
   const handleAddOrUpdate = async (data: WorkExperienceFormValues) => {;
     try {;
       setError(null),;
@@ -131,10 +167,10 @@ export function WorkExperienceForm({ resumeId, workExperiences, onComplete, onBa
   },
 
   return (
-    <div className="space-y-6">
+    <div className='space-y-6'>
       <div>
-        <h2 className="text-xl font-semibold mb-2">Work Experience</h2>
-        <p className="text-muted-foreground">
+        <h2 className='text-xl font-semibold mb-2'>Work Experience</h2>
+        <p className='text-muted-foreground'>
           Add your work history to showcase your professional experience.
         </p>
       </div>
@@ -178,6 +214,28 @@ interface WorkExperienceFormProps {;
   resumeId: string;
   workExperiences: WorkExperience[];
   onComplete: () => void;
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+  onBack: () => void;export function WorkExperienceForm(): any ({resumeId,workExperiences,onComplete,onBack}: WorkExperienceFormProps) {const {addWorkExperience,updateWorkExperience,deleteWorkExperience,isLoading} = useResume()const [editingId, setEditingId] = useState<string | null>(null)const [error, setError]  = useState<string | null>(null)// Helper function to format dates to string;
+<<<<<<< HEAD
+  const formatDateValue = (dateValue: string | Date | undefined): string => {if (!dateValue) return '';
+    if (typeof dateValue === 'string') return dateValue;
+    return format(dateValue, 'yyyy-MM-dd')
+};
+=======
+  const formatDateValue = (dateValue: string | Date | undefined): string => {if (!dateValue) return ';
+    if (typeof dateValue === 'string) return dateValue;
+    return format(dateValue, yyyy-MM-dd')
+}
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   onBack: () => void;
 
 export function WorkExperienceForm(): any ({;
@@ -201,6 +259,8 @@ export function WorkExperienceForm(): any ({;
     if (typeof dateValue === 'string') return dateValue;
     return format(dateValue, 'yyyy-MM-dd')
 };
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> origin/resolved-merge-conflicts
 
   const form = useForm<WorkExperienceFormValues>({;
     resolver: zodResolver(workExperienceSchema),;
@@ -281,6 +341,29 @@ export function WorkExperienceForm(): any ({;
         <p className='text-muted-foreground'>;
           Add your work history to showcase your professional experience.;
         </p>;
+<<<<<<< HEAD
+      </div>;{workExperiences && workExperiences.length > 0 && (<div className='space-y-4'>;
+          <h3 className='text-md font-medium'>Added Experience</h3>;
+          {workExperiences && workExperiences.map(work => (<Card key={work && work.id} className='bg-muted/40'>;
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+      </div>;{workExperiences && workExperiences.length > 0 && (<div className='space-y-4>;
+          <h3 className=text-md font-medium'>Added Experience</h3>;
+          {workExperiences && workExperiences.map(work => (<Card key={work && work.id} className='bg-muted/40>;
+              <CardContent className=pt-6'>;
+                <div className='flex justify-between>                  <div>;
+                    <h4 className=font-medium'>{work && work.role_title}</h4>;
+                    <p className='text-sm text-muted-foreground>;
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
       </div>;
 
       {workExperiences && workExperiences.length > 0 && (;
@@ -288,10 +371,15 @@ export function WorkExperienceForm(): any ({;
           <h3 className='text-md font-medium'>Added Experience</h3>;
           {workExperiences && workExperiences.map(work => (;
             <Card key={work && work.id} className='bg-muted/40'>;
+>>>>>>> origin/resolved-merge-conflicts
               <CardContent className='pt-6'>;
                 <div className='flex justify-between'>                  <div>;
                     <h4 className='font-medium'>{work && work.role_title}</h4>;
                     <p className='text-sm text-muted-foreground'>;
+<<<<<<< HEAD
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> origin/resolved-merge-conflicts
                       {work && work.company_name}
                     </p>;
                     <p className='text-xs text-muted-foreground mt-1'>;
@@ -307,16 +395,16 @@ export function WorkExperienceForm(): any ({;
                             : format(work.end_date, 'MMM yyyy')
                           : ''}
 
-        <div className="space-y-4">
-          <h3 className="text-md font-medium">Added Experience</h3>
+        <div className='space-y-4'>
+          <h3 className='text-md font-medium'>Added Experience</h3>
           {workExperiences.map((work) => (
-            <Card key={work.id} className="bg-muted/40">
-              <CardContent className="pt-6">
-                <div className="flex justify-between">
+            <Card key={work.id} className='bg-muted/40'>
+              <CardContent className='pt-6'>
+                <div className='flex justify-between'>
                   <div>
-                    <h4 className="font-medium">{work.role_title}</h4>
-                    <p className="text-sm text-muted-foreground">{work.company_name}</p>
-                    <p className="text-xs text-muted-foreground mt-1">
+                    <h4 className='font-medium'>{work.role_title}</h4>
+                    <p className='text-sm text-muted-foreground'>{work.company_name}</p>
+                    <p className='text-xs text-muted-foreground mt-1'>
                       {typeof work.start_date === 'string' 
                         ? work.start_date 
                         : format(work.start_date, 'MMM yyyy')} - {work.is_current 
@@ -326,7 +414,7 @@ export function WorkExperienceForm(): any ({;
                           : format(work.end_date, 'MMM yyyy')) : '')}
                     </p>
                     {work.location && (
-                      <p className="text-xs text-muted-foreground">{work.location}</p>
+                      <p className='text-xs text-muted-foreground'>{work.location}</p>
                     )}
 
                     <Button
@@ -359,14 +447,14 @@ export function WorkExperienceForm(): any ({;
                     onBack()
 
                   }
-                }}
+                }
               >;
                 {editingId ? 'Cancel' : 'Back'}
               </Button>
 
-              <div className="flex gap-2">
-                <Button type="submit" disabled={isLoading}>
-                  {isLoading && <Loader2 className="mr-2 h-4 w-4 animate-spin" />}
+              <div className='flex gap-2'>
+                <Button type='submit' disabled={isLoading}>
+                  {isLoading && <Loader2 className='mr-2 h-4 w-4 animate-spin' />}
 
                   {editingId ? 'Update' : 'Add'} Experience
                 </Button>
@@ -377,6 +465,13 @@ export function WorkExperienceForm(): any ({;
                   </Button>
                 )}
 
+<<<<<<< HEAD
+}> {';
+  editingId ? 'Cancel': 'Back' ;
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
               </Button>;
 
               <div className='flex gap-2'>;
@@ -389,6 +484,65 @@ export function WorkExperienceForm(): any ({;
 
                 {!editingId && workExperiences && workExperiences.length > 0 && (;
                   <Button type='button' onClick={onComplete}>;
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+}> {;
+  editingId ? 'Cancel': Back ;
+>>>>>>> origin/resolved-merge-conflicts
+}</Button> Next </Button>) ;
+}</div> </div> </form> </Form> </div> </div>) ;
+}''
+origin/cursor/automate-test-improve-and-merge-code-2533
+                    </p>;
+                    {work.location && (<p className='text-xs text-muted-foreground'>{work.location}</p>;
+                    )}</div>;
+                  <div className='flex gap-2'>;</div>;
+                  <div className='flex gap-2'>;
+                    <Button;
+                    setEditingId(null),setEditingId(null),form.reset({company_name: '',role_title: '',start_date: format(new Date(), 'yyyy-MM-dd'),is_current: false,description: '',location: ''})} else {onBack()/>;{error && (<Alert variant='destructive'>;
+                <AlertDescription>{error}</AlertDescription>;
+              </Alert>;
+            )}<div className='flex justify-between pt-2'>;
+              <Button;
+                type='button';
+                variant='outline';
+                onClick={() => {if (editingId) {setEditingId(null)form && form.reset({company_name: '',role_title: '',start_date: format(new Date(), 'yyyy-MM-dd'),is_current: false,description: '',location: ''})} else {onBack()onClick={() => {if (editingId) {setEditingId(null)form.reset({company_name: '';
+                      role_title: '';
+                      start_date: format(new Date(), 'yyyy-MM-dd')is_current: false;
+                      description: '';
+                      location: '';
+                    })} else {onBack()}
+                }
+              >;
+                {editingId ? 'Cancel' : 'Back'}</Button>;
+              <div className='flex gap-2'>;
+                <Button type='submit' disabled={isLoading}>;
+                  {isLoading && <Loader2 className='mr-2 h-4 w-4 animate-spin' />}{editingId ? 'Update' : 'Add'} Experience;
+                </Button>;
+<<<<<<< HEAD
+                {!editingId && workExperiences.length > 0 && (<Button type='button' onClick={onComplete}>;
+=======
+                {!editingId && workExperiences.length > 0 && (<Button type='button onClick={onComplete}>;
+=======
+              </Button>;
+
+              <div className='flex gap-2'>;
+                <Button type='submit' disabled={isLoading}>;
+                  {isLoading && (;
+                    <Loader2 className='mr-2 h-4 w-4 animate-spin' />;
+                  )}
+                  {editingId ? 'Update' : 'Add'} Experience;
+                </Button>;
+
+                {!editingId && workExperiences && workExperiences.length > 0 && (;
+                  <Button type='button' onClick={onComplete}>;
+>>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
                     Next;
                   </Button>;
                 )}
@@ -397,12 +551,43 @@ export function WorkExperienceForm(): any ({;
 
                 </FormItem>)}
             />;
+<<<<<<< HEAD
+            {error && (<Alert variant='destructive'>;
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
             {error && (
               <Alert variant='destructive'>;
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+            {error && (<Alert variant=destructive'>;
+=======
+            {error && (
+              <Alert variant='destructive'>;
+>>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
                 <AlertDescription>{error}</AlertDescription>;
               </Alert>)}
             <div className='flex justify - between pt - 2'>;
               <Button;
+<<<<<<< HEAD
+                type='button';
+                variant='outline';
+                on_click={() => {// Check condition;
+if ( {) {$2;
+}
+                    setEditingId (null)form.reset ({company_name: '',role_title: '',start_date: format (new Date (), 'yyyy - MM - dd'),is_current: false,description: '',location: ''})} else {on_back ()}
+                }
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
                 type='button';
                 variant='outline';
                 on_click={() => {
@@ -410,6 +595,27 @@ export function WorkExperienceForm(): any ({;
 if ( {) {
   $2
 }
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+                type=button';
+                variant='outline;
+                on_click={() => {// Check condition;
+if ( {) {$2;
+}
+                    setEditingId (null)form.reset ({company_name: ',role_title: ',start_date: format (new Date (), yyyy - MM - dd'),is_current: false,description: ',location: '})} else {on_back ()}
+=======
+                type='button';
+                variant='outline';
+                on_click={() => {
+                  // Check condition
+if ( {) {
+  $2
+}
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
                     setEditingId (null);
                     form.reset ({
                       company_name: '',
@@ -422,10 +628,35 @@ if ( {) {
                   } else {
                     on_back ();
                   }
+<<<<<<< HEAD
+>>>>>>> origin/chore/fix-lint-and-merge
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
                 }}
+>>>>>>> origin/resolved-merge-conflicts
               >;
                 {editing_id ? 'Cancel' : 'Back'}
               </Button>;
+<<<<<<< HEAD
+              <div className='flex gap - 2'>;
+                <Button type='submit' disabled={is_loading}>;
+                  {is_loading && (<Loader2 className='mr - 2 h - 4 w - 4 animate - spin' />)}
+                  {editing_id ? 'Update' : 'Add'} Experience;
+                </Button>;
+                {!editing_id && work_experiences.length > 0 && (<Button type='button' on_click={on_complete}>;
+=======
+<<<<<<< HEAD
+              <div className='flex gap - 2>;
+                <Button type=submit' disabled={is_loading}>;
+                  {is_loading && (<Loader2 className='mr - 2 h - 4 w - 4 animate - spin />)}
+                  {editing_id ? Update' : 'Add} Experience;
+                </Button>;
+                {!editing_id && work_experiences.length > 0 && (<Button type=button' on_click={on_complete}>;
+=======
               <div className='flex gap - 2'>;
                 <Button type='submit' disabled={is_loading}>;
                   {is_loading && (
@@ -434,6 +665,15 @@ if ( {) {
                 </Button>;
                 {!editing_id && work_experiences.length > 0 && (
                   <Button type='button' on_click={on_complete}>;
+<<<<<<< HEAD
+>>>>>>> origin/chore/fix-lint-and-merge
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
                     Next;
                   </Button>)}
               </div>;
@@ -452,7 +692,7 @@ if ( {) {
   editing_id ? 'Cancel': 'Back';
 }</Button> Next </Button>);
 }</div> </div> </form> </Form> </div> </div>);
-}'"  );
+}''  );
 }
 
               </div>
@@ -467,4 +707,8 @@ if ( {) {
   editingId ? 'Cancel': 'Back' ;
 }</Button> Next </Button>) ;
 }</div> </div> </form> </Form> </div> </div>) ;
+<<<<<<< HEAD
+}''
+=======
 }'"
+>>>>>>> origin/resolved-merge-conflicts

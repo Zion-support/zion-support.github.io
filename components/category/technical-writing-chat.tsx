@@ -30,12 +30,14 @@ const TechnicalWritingChat: NextPage = () => {;
 }
 export default TechnicalWritingChat;
 
+
 import type { NextPage } from "next";
 import Head from "next/head";
 import Link from "next/link";
 import type { NextPage } from 'next';
 import Head from 'next/head';
 import Link from 'next/link';
+
 
 const TechnicalWritingChat: NextPage = () => {
   return (
@@ -48,10 +50,12 @@ const TechnicalWritingChat: NextPage = () => {
 
         <title>TechnicalWritingChat - Zion Tech Solutions</title>
 
+
 import type { NextPage } from './next';
 import Head from './next / head';
+
 import Link from './next / link';
-const TechnicalWritingChat: NextPage = () => {
+const TechnicalWritingChat: NextPage = () => {}
   return (
     <div>;
       <Head>;
@@ -71,4 +75,6 @@ const TechnicalWritingChat: NextPage = () => {
 ;
 export default TechnicalWritingChat;
 ;
+
+        <title>TechnicalWritingChat - Zion Tech Solutions</title>
 

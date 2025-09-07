@@ -12,12 +12,159 @@ import {
   Wifi, Building, Cpu as CpuIcon
 } from 'lucide-react',
 import Layout from '../components/layout/Layout';
+<<<<<<< HEAD:pages_backup_1757220418/advanced-it-infrastructure-services.tsx
 import { advancedITInfrastructureServices2025 } from '../data/2025-advanced-it-infrastructure-services';
 const contactInfo = $2;
+=======
+
+const contactInfo = {
+  mobile: '+1 302 464 0950'
+  email: 'kleber@ziontechgroup.com'
+  address: '364 E Main St STE 1008 Middletown DE 19709'
+  website: 'https://ziontechgroup.com'
+}
+const heroStats = [
+  {
+    label: 'Infrastructure Projects'
+    value: '150+'
+    icon: <Server className='w-5 h-5' />
+  }
+  {
+    label: 'Enterprise Clients'
+    value: '300+'
+    icon: <Building className='w-5 h-5' />
+  }
+  {
+    label: 'Uptime Guarantee'
+    value: '99.99%'
+    icon: <Award className='w-5 h-5' />
+  }
+  {
+    label: 'Cost Reduction'
+    value: '60%'
+    icon: <TrendingUp className='w-5 h-5' />
+  },];
+const serviceCategories = [
+  {
+    title: 'Quantum Cloud Computing'
+    description:
+      'Next-generation cloud infrastructure with quantum processing capabilities'
+    services: advancedITInfrastructureServices2025.filter(
+      s => s.category === 'Quantum Cloud Computing'
+    )
+    icon: Cloud
+    color: 'from-indigo-500 to-purple-600'
+    features: ['Quantum Processing', 'Hybrid Computing', 'AI Acceleration']
+  }
+  {
+    title: 'Edge Computing & IoT'
+    description: 'Autonomous edge infrastructure with intelligent optimization'
+    services: advancedITInfrastructureServices2025.filter(
+      s => s.category === 'Edge Computing & IoT'
+    )
+    icon: Wifi
+    color: 'from-green-500 to-emerald-600'
+    features: ['Edge Processing', 'IoT Orchestration', '5G Optimization']
+  }
+  {
+    title: 'Cybersecurity'
+    description:
+      'Comprehensive security framework with continuous verification'
+    services: advancedITInfrastructureServices2025.filter(
+      s => s.category === 'Cybersecurity'
+    )
+    icon: SecurityIcon
+    color: 'from-red-500 to-orange-600'
+    features: ['Zero Trust', 'Threat Detection', 'Compliance Automation']
+  }
+  {
+    title: 'Data Center Infrastructure'
+    description:
+      'Self-managing data center infrastructure with AI optimization'
+    services: advancedITInfrastructureServices2025.filter(
+      s => s.category === 'Data Center Infrastructure'
+    )
+    icon: Building
+    color: 'from-blue-500 to-cyan-600'
+    features: ['AI Management', 'Predictive Maintenance', 'Cost Optimization']
+  }
+  {
+    title: 'Quantum Networking'
+    description:
+      'Next-generation networking with quantum encryption and optimization'
+    services: advancedITInfrastructureServices2025.filter(
+      s => s.category === 'Quantum Networking'
+    )
+    icon: Network
+    color: 'from-purple-500 to-pink-600'
+    features: [
+      'Quantum Encryption'
+      'Network Optimization'
+      'Security Monitoring'
+    ]
+  },];
+const heroFeatures = [
+  {
+    title: 'Quantum Computing'
+    description:
+      'Revolutionary quantum processing capabilities that provide 1000x performance for specific workloads.'
+    icon: Atom
+    gradient: 'bg-gradient-to-r from-cyan-500 to-blue-600'
+  }
+  {
+    title: 'AI-Powered Automation'
+    description:
+      'Intelligent automation that reduces operational costs by up to 70% while improving reliability.'
+    icon: Brain
+    gradient: 'bg-gradient-to-r from-purple-500 to-pink-600'
+  }
+  {
+    title: 'Edge Computing'
+    description:
+      'Distributed edge infrastructure that reduces latency and provides real-time processing capabilities.'
+    icon: Wifi
+    gradient: 'bg-gradient-to-r from-green-500 to-emerald-600'
+  }
+  {
+    title: 'Zero Trust Security'
+    description:
+      'Continuous verification and monitoring that provides comprehensive protection against modern threats.'
+    icon: Shield
+    gradient: 'bg-gradient-to-r from-orange-500 to-red-600'
+  },];
+const testimonials = [
+  {
+    name: 'Dr. Jennifer Martinez'
+    role: 'CTO, QuantumTech Industries'
+    company: 'QuantumTech Industries'
+    content:
+      "Zion Tech Group's quantum cloud infrastructure has revolutionized our research capabilities. We've achieved computational breakthroughs that were previously impossible."
+    rating: 5
+    avatar: '👩‍🔬'
+  },  {
+    name: 'Robert Thompson'
+    role: 'Infrastructure Director, EdgeNet Solutions'
+    company: 'EdgeNet Solutions'
+    content:
+      'The autonomous edge computing network has transformed our IoT operations. We now have real-time processing with 90% lower latency and 70% cost reduction.'
+    rating: 5
+    avatar: '👨‍💼'
+  },  {
+    name: 'Lisa Chang'
+    role: 'Security CISO, SecureCorp International'
+    company: 'SecureCorp International'
+    content:
+      'Their zero-trust security architecture provides comprehensive protection that has prevented multiple sophisticated cyber attacks. The ROI has been exceptional.'
+    rating: 5
+    avatar: '👩‍🔒'
+  },];
+  mobile: '+1 302 464 0950',
+>>>>>>> merged-prs-20250907-203621:pages_backup_conflict_1757239547/advanced-it-infrastructure-services.tsx
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com'
 },
+<<<<<<< HEAD:pages_backup_1757220418/advanced-it-infrastructure-services.tsx
 
 const heroStats = [
   { label: 'Infrastructure Projects', value: '150+', icon: <Server className = $2;
@@ -25,6 +172,19 @@ const heroStats = [
   { label: 'Uptime Guarantee', value: '99.99%', icon: <Award className = $2;
   { label: 'Cost Reduction', value: '60%', icon: <TrendingUp className = $2;
 const serviceCategories = $2;
+=======
+  { label: 'Infrastructure Projects', value: '150+', icon: <Server className="w-5 h-5" /> },
+  { label: 'Enterprise Clients', value: '300+', icon: <Building className="w-5 h-5" /> },
+  { label: 'Uptime Guarantee', value: '99.99%', icon: <Award className="w-5 h-5" /> },
+  { label: 'Cost Reduction', value: '60%', icon: <TrendingUp className="w-5 h-5" />   } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+],
+  {
+    title: 'Quantum Cloud Computing',
+>>>>>>> merged-prs-20250907-203621:pages_backup_conflict_1757239547/advanced-it-infrastructure-services.tsx
     description: 'Next-generation cloud infrastructure with quantum processing capabilities',
     services: advancedITInfrastructureServices2025.filter($2);
     icon: Cloud,
@@ -65,8 +225,15 @@ const serviceCategories = $2;
   }
 ],
 
+<<<<<<< HEAD:pages_backup_1757220418/advanced-it-infrastructure-services.tsx
 const heroFeatures = $2;
     description: 'Revolutionary quantum processing capabilities that provide 1000x performance for specific workloads.',
+=======
+  {
+    title: 'Quantum Computing',
+    description:
+      'Revolutionary quantum processing capabilities that provide 1000x performance for specific workloads.',
+>>>>>>> merged-prs-20250907-203621:pages_backup_conflict_1757239547/advanced-it-infrastructure-services.tsx
     icon: Atom,
     gradient: 'bg-gradient-to-r from-cyan-500 to-blue-600'
   },
@@ -90,7 +257,12 @@ const heroFeatures = $2;
   }
 ],
 
+<<<<<<< HEAD:pages_backup_1757220418/advanced-it-infrastructure-services.tsx
 const testimonials = $2;
+=======
+  {
+    name: 'Dr. Jennifer Martinez',
+>>>>>>> merged-prs-20250907-203621:pages_backup_conflict_1757239547/advanced-it-infrastructure-services.tsx
     role: 'CTO, QuantumTech Industries',
     company: 'QuantumTech Industries',
     content: 'Zion Tech Group\'s quantum cloud infrastructure has revolutionized our research capabilities. We\'ve achieved computational breakthroughs that were previously impossible.',
@@ -111,7 +283,41 @@ const testimonials = $2;
     company: 'SecureCorp International',
     content: 'Their zero-trust security architecture provides comprehensive protection that has prevented multiple sophisticated cyber attacks. The ROI has been exceptional.',
     rating: 5,
+<<<<<<< HEAD:pages_backup_1757220418/advanced-it-infrastructure-services.tsx
     avatar: '👩‍🔒'
+=======
+    avatar: '👩‍🔒',
+  },
+];
+}
+
+    features: ['Quantum EncryptionNetwork OptimizationSecurity Monitoring']
+import React from 'react';
+import Head from 'next/head';
+import {;
+  CheckCircle, ArrowRight, Star, TrendingUp, Phone, Zap, DollarSign,;
+  Shield, Mail, MapPin, Rocket, Brain, Sparkles, Atom, Dna, Users,;
+  Globe, Cpu, Target, Microscope, Lock, Cloud, BarChart3, Settings,;
+  Eye, Award, Clock, Heart, Lightbulb, Target as TargetIcon,;
+  Zap as ZapIcon, Shield as ShieldIcon, Globe as GlobeIcon,;
+  Search, Code, TestTube, Server, Database, Network, Shield as SecurityIcon,;
+  Wifi, Building, Cpu as CpuIcon;
+} from 'lucide-react',;
+import { advancedITInfrastructureServices2025 } from '../data/2025-advanced-it-infrastructure-services';
+const contactInfo = {;
+  mobile: '+1 302 464 0950';
+  email: 'kleber@ziontechgroup.com';
+  address: '364 E Main St STE 1008 Middletown DE 19709';
+  website: 'https://ziontechgroup.com';
+};
+const heroStats = [;
+  { label: 'Infrastructure Projects', value: '150+', icon: <Server className="w-5 h-5" /> },;
+  { label: 'Enterprise Clients', value: '300+', icon: <Building className="w-5 h-5" /> },;
+  { label: 'Uptime Guarantee', value: '99.99%', icon: <Award className="w-5 h-5" /> },;
+  { label: 'Cost Reduction', value: '60%', icon: <TrendingUp className="w-5 h-5" />   } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+>>>>>>> merged-prs-20250907-203621:pages_backup_conflict_1757239547/advanced-it-infrastructure-services.tsx
   }
 ],
 

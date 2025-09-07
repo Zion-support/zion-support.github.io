@@ -53,12 +53,12 @@ type={type}
       className={classes}
       disabled={disabled || loading}
       onClick={onClick}
-      whileHover={{ scale: 1.02 }}
-      whileTap={{ scale: 0.98 }}
+      whileHover={ scale: 1.02 }
+      whileTap={ scale: 0.98 }
       {...props}
      />
       {loading ? (
-        <LoadingSpinner size="sm" />
+        <LoadingSpinner size='sm' />
       ) : (}
         children}
       )}
@@ -67,4 +67,4 @@ type={type}
 };
 
 
-export default Button;"
+export default Button;'

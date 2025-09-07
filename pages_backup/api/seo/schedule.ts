@@ -9,6 +9,21 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   if (req && req.method !== 'POST') {
     res && res.setHeader('Allow', 'POST');
     return res && res.status(405).json({ error: 'Method not allowed' });
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+
+const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY |'' });
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  res.status(200).json({ message: 'API endpoint' });
+import type { NextApiRequest, NextApiResponse } from 'next';
+import fs from 'fs';
+import path from 'path';
+import OpenAI from 'openai';
+const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY || '' });
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+  if (req.method !== 'POST') {;
+    res.setHeader('Allow', 'POST');
+    return res.status(405).json({ error: 'Method not allowed' });
   }
   try {
     const seedTopics = [
@@ -37,6 +52,8 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       const region = regionMatch ? regionMatch[1].trim() : undefined;
       const serviceMatch = prompt && prompt.match(/^(.*?)\s+in\s+/i);
       const service = serviceMatch ? serviceMatch[1].trim() : undefined;
+<<<<<<< HEAD
+=======
 
       if (gen?.slug && gen?.payload) {
         fs && fs.writeFileSync(path && path.join(outDir, `${gen && gen.slug}.json`), JSON && JSON.stringify(gen && gen.payload, null, 2))

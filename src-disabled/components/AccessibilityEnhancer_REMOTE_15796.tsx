@@ -1,12 +1,45 @@
-:src/components/AccessibilityEnhancer_REMOTE_15796.tsx
-</AccessibilityFeature>,;
-</AccessibilitySettings>,;
-</any>,',,';
-import React,{ useState, useEffect,useCallback } from 'react', import { motion,AnimatePresence } from framer-motion', import { , Eye, EyeOff, Volume2, VolumeX, ZoomIn, ZoomOut, Contrast, Palette, Keyboard, MousePointer, Accessibility, Settings, X, CheckCircle, AlertTriangle,  Info, Brain} from 'lucide-react, , interface AccessibilitySettings { highContrast: boolean, largeText: boolean, reducedMotion: boolean, screenReader: boolean, keyboardNavigation: boolean, colorBlindFriendly: boolean, fontSize: number,  lineHeight: number, letterSpacing: number}; interface AccessibilityFeature { id: string, name: string, description: string, enabled: boolean,  category: 'visual' | auditory' | 'motor | 'cognitive', impact: high' | 'medium | 'low'};
-}
-
-export const AccessibilityEnhancer: Reac t.FC = () => {, const [isOpen,setIsOpen] = useState<any>(false), const [settings,setSettings] = useState<AccessibilitySettings>({, highContrast: fals e, largeText: fals e, reducedMotion: fals e, screenReader: fals e, keyboardNavigation: fals e, colorBlindFriendly: fals e, fontSize: 10 0,  lineHeight: 1.5, letterSpacing: 0}), , const [features,setFeatures] = useState<AccessibilityFeature[]>([ {, id: skip-links',name: 'Skip Links,description: 'Quick navigation to main content areas',enabled: tru e,  category: motor',impact: 'high},{, id: 'focus-indicators',name: Focus Indicators',description: 'Clear visual indicators for keyboard navigation,enabled: tru e,  category: 'visual',impact: high'},{, id: 'alt-text,name: 'Alt Text',description: Descriptive text for images and media',enabled: tru e,  category: 'visual,impact: 'high'},{, id: semantic-html',name: 'Semantic HTML,description: 'Proper HTML structure for screen readers',enabled: tru e,  category: cognitive',impact: 'medium},{, id: 'color-contrast',name: Color Contrast',description: 'High contrast ratios for better readability,enabled: tru e,  category: 'visual',impact: high'},{, id: 'keyboard-shortcuts,name: 'Keyboard Shortcuts',description: Alternative navigation methods',enabled: fals e,  category: 'motor,impact: 'medium'}; ]), , </AccessibilityFeature> </AccessibilitySettings> </any>,,';
-
-}'
+<<<<<<< HEAD
 import React from 'react';
 }''
+=======
+<<<<<<< HEAD:src-disabled/components/AccessibilityEnhancer_REMOTE_15796.tsx
+import React from 'react';
+}''
+=======
+<<<<<<< HEAD
+import React from 'react';
+import React from 'react';
+import React from 'react';
+
+export default function MainLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
+  return <div className="main-layout">{children}</div>;
+}
+                isOpen={sidebarOpen},;
+                onClose={() => setSidebarOpen(false)},;
+              />,;
+              <div className="flex-1 ml-80">,;
+                {children},;
+              </div>,;
+            </div>,;
+          )},;
+          {!showSidebar && children},;
+        </main>,;
+        <Footer />,;
+      </div>,;
+    </>,;
+  );
+},;
+=======
+
+import React from 'react';
+
+
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:src/components/layout/MainLayout.tsx
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc

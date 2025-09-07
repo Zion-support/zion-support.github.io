@@ -45,7 +45,6 @@ export function listUsers(): UserSummary[] {
 export function listConversations(userId: string): InboxItem[] {
   const conversations = readJson<Conversation[]>(CONVERSATIONS_FILE)
   const messages = readJson<Message[]>(MESSAGES_FILE)
-  const users = readJson<UserSummary[]>(USERS_FILE)
 
   const items: InboxItem[] = conversations
     .filter((c) => c.participants.includes(userId))
@@ -88,7 +87,6 @@ export function listConversations(_userId: string): InboxItem[] {_const _convers
   const _messages = readJson<Message[]>(MESSAGES_FILE);
   const _users = readJson<UserSummary[]>(USERS_FILE);
 
-  const items: InboxItem[] = conversations
     .filter(_(c) => c.participants.includes(userId))
     .map(_(c) => {
       const _convMessages = messages
@@ -108,20 +106,16 @@ export function listConversations(_userId: string): InboxItem[] {_const _convers
 }
 
 export function getConversationById(conversationId: string): Conversation | undefined {
-  const conversations = readJson<Conversation[]>(CONVERSATIONS_FILE)
   return conversations.find((c) => c.id === conversationId)
 }
 
 export function getMessages(conversationId: string): Message[] {
-  const messages = readJson<Message[]>(MESSAGES_FILE)
   return messages
     .filter((m) => m.conversationId === conversationId)
     .sort((a, b) => a.createdAt.localeCompare(b.createdAt))
 }
 
 export function markAsRead(conversationId: string, userId: string): void {
-  const conversations = readJson<Conversation[]>(CONVERSATIONS_FILE)
-  const messages = readJson<Message[]>(MESSAGES_FILE)
   const now = new Date().toISOString()
 
   // Update message statuses
@@ -159,7 +153,6 @@ export function createOrGetConversation(
   recipientId: string,
   context?: ConversationContext
 ): Conversation {
-  const conversations = readJson<Conversation[]>(CONVERSATIONS_FILE)
   const existing = conversations.find(
     (c) => c.participants.includes(senderId) && c.participants.includes(recipientId) && JSON.stringify(c.context || {}) === JSON.stringify(context || {})
   ),
@@ -177,14 +170,12 @@ export function createOrGetConversation(
 }
 
 export function sendMessage(input: NewMessageInput): { conversation: Conversation, message: Message } {
-  const conversations = readJson<Conversation[]>(CONVERSATIONS_FILE)
-  const messages = readJson<Message[]>(MESSAGES_FILE)
 
   let conversation: Conversation | undefined
   if (input.conversationId) {
 
-  let conversation: Conversation | undefined
   if (input.conversationId) {
+
     conversation = conversations.find((c) => c.id === input.conversationId)
   }
   if (!conversation) {

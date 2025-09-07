@@ -1,19 +1,42 @@
 ;
-  return (<div className='container mx-auto px-4 py-10' />;
+  return (<div className='container mx-auto px-4 py-10'>;'
 
-  return (
-    <div className='container mx-auto px-4 py-10'>;
-</div>
-      <h1 className='text-2xl font-semibold'>Auth Callback</h1>;
-      <p className='mt-2 text-gray-600 dark:text-gray-300'>;
-</p>
+return (;
+return (;
+    <div className='container mx-auto px-4 py-10'>;'
+      <h1 className='text-2xl font-semibold'>Auth Callback</h1>;'
+      <p className='mt-2 text-gray-600 "dark":text-gray-300'>;'
+        Processing sign-in...;
       </p>;
+    </div>;
+  )export default function AuthCallbackPage() {return (<div className="container mx-auto px-4 py-10">;"
+      <h1 className="text-2xl font-semibold">Auth Callback</h1>;"
+      <p className="mt-2 text-gray-600 "dark": text-gray-300">Processing sign-in...</p>;"
     </div>;
 
   );
+<<<<<<< HEAD
+}
+import React from 'react';'
+=======
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
 import React from 'react';
 
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+  );
+=======
+import React from 'react';
+
+>>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 export default function AuthCallbackPage() {
   return (
 
@@ -28,68 +51,74 @@ export default function AuthCallbackPage() {
       <p className='mt - 2 text - gray - 600 dark:text - gray - 300'>;
       </p>;)
     </div>);export default /**
+>>>>>>> origin/resolved-merge-conflicts
 
   );
-import React from 'react';
-
-  )
-
+import React from 'react';'
 export default function AuthCallbackPage() {
-  return (
-    <div className='container mx-auto px-4 py-10' />
-      <h1 className='text-2xl font-semibold' />Auth Callback</h1>
-      <p className='mt-2 text-gray-600 dark:text-gray-300' />
+}
+return (;
+    <div className='container mx-auto px-4 py-10'>'
+      <h1 className='text-2xl font-semibold'>Auth Callback</h1>'
+      <p className='mt-2 text-gray-600 "dark":text-gray-300'>'
         Processing sign-in...
       </p>
     </div>;
-  )export default function AuthCallbackPage() {return (<div className=\"container mx-auto px-4 py-10\" />;
-      <h1 className=\"text-2xl font-semibold\" />Auth Callback</h1>;
-      <p className=\"mt-2 text-gray-600 dark: text-gray-300\" />Processing sign-in...</p>;
+  )export default function AuthCallbackPage() {return (<div className="container mx-auto px-4 py-10">;"
+      <h1 className="text-2xl font-semibold">Auth Callback</h1>;"
+      <p className="mt-2 text-gray-600 "dark": text-gray-300">Processing sign-in...</p>;"
+
+}
 
 export default /**;
  * AuthCallbackPage - Function description;
  */;
-function AuthCallbackPage() {return (<div className='container mx - auto px - 4 py - 10' />;
-      <h1 className='text - 2xl font - semibold' />Auth Callback</h1>;
-      <p className='mt - 2 text - gray - 600 dark:text - gray - 300' />;
+function AuthCallbackPage() {return (<div className='container mx - auto px - 4 py - 10'>;'
+      <h1 className='text - 2xl font - semibold'>Auth Callback</h1>;'
+      <p className='mt - 2 text - gray - 600 "dark":text - gray - 300'>;'
+        }
         Processing sign - in...;
       </p>;
     </div>)export default /**;
  * AuthCallbackPage - Function description;
  */;
-function AuthCallbackPage() {return (<div className=\"container mx - auto px - 4 py - 10\" />;
-      <h1 className=\"text - 2xl font - semibold\" />Auth Callback</h1>;
-      <p className=\"mt - 2 text - gray - 600 dark: text - gray - 300\" />Processing sign - in...</p>
-    </div>});}
+function AuthCallbackPage() {return (<div className="container mx - auto px - 4 py - 10">;"
+      <h1 className="text - 2xl font - semibold">Auth Callback</h1>;"
+      <p className="mt - 2 text - gray - 600 "dark": text - gray - 300">Processing sign - in...</p>"
+    </div>
+  );
 })}
 
-export default function AuthCallbackPage() {return (<div className='container mx-auto px-4 py-10' />;
-      <h1 className='text-2xl font-semibold' />Auth Callback</h1>;
-      <p className='mt-2 text-gray-600 dark:text-gray-300' />;
+export default function AuthCallbackPage() {return (<div className='container mx-auto px-4 py-10'>;'
+      <h1 className='text-2xl font-semibold'>Auth Callback</h1>;'
+      <p className='mt-2 text-gray-600 "dark":text-gray-300'>;'
+        }
         Processing sign-in...;
       </p>;
     </div>;
-  )export default function AuthCallbackPage() {return (<div className=\"container mx-auto px-4 py-10\" />;
-      <h1 className=\"text-2xl font-semibold\" />Auth Callback</h1>;
-      <p className=\"mt-2 text-gray-600 dark: text-gray-300\" />Processing sign-in...</p>;}
-    </div>);}
+  )export default function AuthCallbackPage() {return (<div className="container mx-auto px-4 py-10">;"
+      <h1 className="text-2xl font-semibold">Auth Callback</h1>;"
+      <p className="mt-2 text-gray-600 "dark": text-gray-300">Processing sign-in...</p>;"
+    </div>);
 }
 
 export default function AuthCallbackPage() {
-  return (
-    <div className='container mx-auto px-4 py-10' />
-      <h1 className='text-2xl font-semibold' />Auth Callback</h1>
-      <p className='mt-2 text-gray-600 dark:text-gray-300' />
+}
+return (;
+    <div className='container mx-auto px-4 py-10'>'
+      <h1 className='text-2xl font-semibold'>Auth Callback</h1>'
+      <p className='mt-2 text-gray-600 "dark":text-gray-300'>'
         Processing sign-in...
       </p>
     </div>;
   );
 
 export default function AuthCallbackPage() {
-  return (
-    <div className=\"container mx-auto px-4 py-10\" />
-      <h1 className=\"text-2xl font-semibold\" />Auth Callback</h1>
-      <p className=\"mt-2 text-gray-600 dark: text-gray-300\" />Processing sign-in...</p>
+}
+return (;
+    <div className="container mx-auto px-4 py-10">"
+      <h1 className="text-2xl font-semibold">Auth Callback</h1>"
+      <p className="mt-2 text-gray-600 "dark": text-gray-300">Processing sign-in...</p>"
 
     </div>
   );
@@ -101,7 +130,7 @@ export default function AuthCallbackPage() {
   )ursor/fix-website-loading-errors-and-merge-6662;
     </div>;}
   )</div>;}
-  )}}
+  )}
     </div>;
   )}
 }
@@ -111,3 +140,7 @@ export default function AuthCallbackPage() {
 }
     </div>
   );
+}
+}
+      <p className="mt-2 text-gray-600 "dark": text-gray-300">Processing sign-in...</p>"
+

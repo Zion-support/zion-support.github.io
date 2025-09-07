@@ -1,9 +1,9 @@
 /* eslint-disable */
- "I'm here to help! You can browse our help documentation, contact support at support@ziontechgroup.com, or try asking your question in a different way.";'";'"'"
-"Thanks for reaching out! While I'm having trouble connecting to my knowledge base, I can suggest checking our FAQ section or contacting our support team directly.";";'"'"
-"I understand you need assistance. For immediate help, please visit our help center or reach out to support@ziontechgroup.com.";'";'"'"
-"I'm currently experiencing technical difficulties, but I'd be happy to help you get to the right resource. Try browsing our documentation or contacting support.";";""
-"While I work on resolving my connection issues, you can find helpful information in our help section or contact our support team for immediate assistance." ];
+ 'I'm here to help! You can browse our help documentation, contact support at support@ziontechgroup.com, or try asking your question in a different way.';'';''''
+'Thanks for reaching out! While I'm having trouble connecting to my knowledge base, I can suggest checking our FAQ section or contacting our support team directly.';';''''
+'I understand you need assistance. For immediate help, please visit our help center or reach out to support@ziontechgroup.com.';'';''''
+'I'm currently experiencing technical difficulties, but I'd be happy to help you get to the right resource. Try browsing our documentation or contacting support.';';''
+'While I work on resolving my connection issues, you can find helpful information in our help section or contact our support team for immediate assistance.' ];
 }) ;'
 });''
 //If Supabase function fails, try local API fallback if (!res.ok) {';''
@@ -71,11 +71,11 @@ setMessages (prev => [...prev, errorMsg]) ;
   setLoading (false);
 setTyping (false) ;
 }
-};"
-return (<Button onClick={;"'"
-  () => setOpen (true) ";'"'"
-}> <MessageSquare className="h-5 w-5" /> </Button>) '";'"'"
-}> <X className="h-5 w-5" /> </Button> </div> <ChatMessage role="assistant" message="Hi! I'm here to help you with questions about Zion. What can I assist you with today?" />) ;
+};'
+return (<Button onClick={;'''
+  () => setOpen (true) ';''''
+}> <MessageSquare className='h-5 w-5' /> </Button>) '';''''
+}> <X className='h-5 w-5' /> </Button> </div> <ChatMessage role='assistant' message='Hi! I'm here to help you with questions about Zion. What can I assist you with today?' />) ;
 }{;
   messages.map (m => (<ChatMessage key= {;
   m.id ;
@@ -86,6 +86,6 @@ return (<Button onClick={;"'"
 }/>) ) ;
 }) ;
 }<div ref= {;
-  endRef ;'"
-}/> </div> </div> </div>) ;'"'"
-}'"'"'"
+  endRef ;''
+}/> </div> </div> </div>) ;''''
+}''''''

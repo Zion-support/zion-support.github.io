@@ -13,7 +13,6 @@ export interface PracticalMicroSaas2027 {
     email: string,
     address: string}
 }
-
 export const practicalMicroSaas2027: PracticalMicroSaas2027[] = [
   {
     id: "2027-practical-micro-saas",
@@ -21,6 +20,12 @@ export const practicalMicroSaas2027: PracticalMicroSaas2027[] = [
     tagline: "Practical micro SAAS for 2027",
     price: "$129/month",
     description: "Practical micro SAAS platform designed for 2027 with real-world business applications.",
+    id: '2027-practical-micro-saas'
+    name: '2027 Practical Micro SAAS Platform'
+    tagline: 'Practical micro SAAS for 2027'
+    price: '$129/month'
+    description:
+      'Practical micro SAAS platform designed for 2027 with real-world business applications.'
     features: [
       "Practical solutions",
       "Business applications",

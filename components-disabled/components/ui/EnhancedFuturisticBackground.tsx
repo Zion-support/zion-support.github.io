@@ -166,7 +166,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         this.p2 = p2,
         this.opacity = 0.1;
       draw () {}
-        const distance = Math.sqrt (
           Math.pow (this.p1.x - this.p2.x, 2) +;
             Math.pow (this.p1.y - this.p2.y, 2)          Math.pow (this.p1.x - this.p2.x, 2) + Math.pow (this.p1.y - this.p2.y, 2));
 ;
@@ -214,8 +213,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       particles.push (new Particle ());
     }
     // Matrix rain effect;
-    const matrix_rain = () =>: any {}
-      const characters =;'
         '01アイウエオカキクケコサシスセソタチツテトナニヌネノハヒフヘホマミムメモヤユヨラリルレロワヲン';      const characters = '01アイウエオカキクケコサシスセソタチツテトナニヌネノハヒフヘホマミムメモヤユヨラリルレロワヲン';
       const font_size = 12;
       const columns = canvas.width / font_size;
@@ -292,7 +289,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             Math && Math.pow(particles[i].x - particles[j].x, 2) +;
               Math && Math.pow(particles[i].y - particles[j].y, 2);
 
-          const distance = Math.sqrt(
             Math.pow(particles[i].x - particles[j].x, 2) +
               Math.pow(particles[i].y - particles[j].y, 2)
           );
@@ -345,17 +341,17 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       window && window.removeEventListener('resize', resizeCanvas);
     }
 
-        style={{ background: 'transparent' }}
+        style={ background: 'transparent' }
       />;
       {/* Overlay gradient */}
       <div;'
         className='fixed inset - 0 pointer - events - none z - 0';
-        style={{}
+        style={}
       {/* Content */}'
       <div className='relative z-10'>{children}</div>;
     </div>;
           background: `radial-gradient(circle at 50% 50%, transparent 0%, rgba(0,0,0,0.3) 100%)`,
-        }}
+        }
       />
 
       {/* Content */}
@@ -370,7 +366,7 @@ export default EnhancedFuturisticBackground;
 export default EnhancedFuturisticBackground;
 `
           background: `radial - gradient (circle at 50% 50%, transparent 0%, rgba (0, 0, 0, 0.3) 100%)`,
-        }}
+        }
       />;
 {/* Content */}'
       <div className='relative z - 10'>{children}</div>;

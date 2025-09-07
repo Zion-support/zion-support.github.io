@@ -72,7 +72,6 @@ const apiClient = axios.create($2);
 export function setAuthToken(token: string) {
   (apiClient.defaults.headers.common as any).Authorization = $2;
   async (error: unknown) => {
-    const status = $2;
     if (status === 401) {
       try {
         if (!supabase) throw new Error($2);

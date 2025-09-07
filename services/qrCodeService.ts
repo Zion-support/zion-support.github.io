@@ -14,6 +14,11 @@ export interface QRCodeOptions {
 
     url: string;  }
 
+<<<<<<< HEAD
+    width: number,
+    height: number;
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   }
 }
 export interface QRCodeResult {
@@ -298,6 +303,7 @@ class QRCodeService {
       {
         id: 'business - card';
         name: 'Business Card';
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
         description: 'Professional contact information in QR format',
         options: { size: 300, errorCorrectionLevel: 'H' }
@@ -498,15 +504,26 @@ class QRCodeService {
     recommendedLevel: string
     maxCapacity: number
   } {
+<<<<<<< HEAD
+    const textLength = text && text.length;
+    const level = this && this.ERROR_CORRECTION_LEVELS[errorCorrectionLevel];
+    const maxCapacity = Math && Math.floor(level && level.capacity * 177 * 177), // Approximate capacity for 177x177 QR code
+    const textLength = text.length;
+    const level = this.ERROR_CORRECTION_LEVELS[errorCorrectionLevel];
+    const maxCapacity = Math.floor(level.capacity * 177 * 177), // Approximate capacity for 177x177 QR code
+=======
 
     const textLength = text && text.length;
     const level = this && this.ERROR_CORRECTION_LEVELS[errorCorrectionLevel];
     const maxCapacity = Math && Math.floor(level && level.capacity * 177 * 177), // Approximate capacity for 177x177 QR code
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     return {
       canFit: textLength <= maxCapacity;
       recommendedLevel: textLength > maxCapacity ? 'H' : errorCorrectionLevel
       maxCapacity
+<<<<<<< HEAD
+=======
 
 ;
   // Utility methods;'

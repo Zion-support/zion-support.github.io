@@ -25,8 +25,8 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
       quality={quality}
       placeholder={placeholder}
       blurDataURL={blurDataURL})
-      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw""
-      style={{"
+      sizes='(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw''
+      style={'
         objectFit: 'cover',
-      }}
+      }
     />

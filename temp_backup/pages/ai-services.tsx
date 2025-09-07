@@ -1093,21 +1093,21 @@ export default function AIServices() {
     <>
       <Head>
         <title>AI Services | Zion Tech Group</title>
-        <meta name="description" content="Advanced AI services including autonomous agents, financial trading systems, and legal document analysis." />
+        <meta name='description' content='Advanced AI services including autonomous agents, financial trading systems, and legal document analysis.' />
       </Head>
-      <ErrorBoundary level="page">
-        <main className=" min-h-screen bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950 text-white">
-          <div className=" container mx-auto px-4 py-16">
-            <h1 className=" text-4xl font-bold text-center mb-8">AI Services</h1>
-            <p className=" text-xl text-slate-300 text-center">
+      <ErrorBoundary level='page'>
+        <main className=' min-h-screen bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950 text-white'>
+          <div className=' container mx-auto px-4 py-16'>
+            <h1 className=' text-4xl font-bold text-center mb-8'>AI Services</h1>
+            <p className=' text-xl text-slate-300 text-center'>
               Advanced artificial intelligence solutions for your business.
             </p>
           </div>
           
-          <div className="mt-12 text-center">
+          <div className='mt-12 text-center'>
             <Link 
-              href="/contact" 
-              className="px-6 py-3 bg-purple-600 hover:bg-purple-700 rounded-lg font-semibold transition-colors"
+              href='/contact' 
+              className='px-6 py-3 bg-purple-600 hover:bg-purple-700 rounded-lg font-semibold transition-colors'
             >
               Get AI Services Quote
             </Link>

@@ -41,7 +41,6 @@ class ComprehensiveTestRunner {}
         "type": 'build'
       };
     ];
-
     for (const test of tests) {
       try {
         console.log(`Running: ${test.name}`);
@@ -53,6 +52,5 @@ class ComprehensiveTestRunner {}
     }
   }
 }
-
 const runner = new ComprehensiveTestRunner();
 runner.runTests().catch(console.error);

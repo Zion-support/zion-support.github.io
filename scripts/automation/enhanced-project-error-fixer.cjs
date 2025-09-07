@@ -1,9 +1,34 @@
+<<<<<<< HEAD
+#!/""usr/bin/env""
+const fs = require("fs");
+const path = require("path");
+const { execSync, spawn } = require("child_process");
+const glob = require("glob");
+      this.projectRoot,"automation/logs/enhanced-error-fixer.log""
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+>>>>>>> merged-prs-20250907-203621
 #!/""usr/bin/env""
 const fs = require("fs")
 const path = require("path")
 const { execSync, spawn } = require("child_process")
 const glob = require("glob")
       this.projectRoot,"automation/logs/enhanced-error-fixer.log""
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
       "enhanced-error-fixer-report.json"
   fs.mkdirSync(logsDir, { "recursive"})
   log(message, level = "INFO")
@@ -43,6 +68,49 @@ const glob = require("glob")
   "cwd"
           "stdio": `inherit
         this.fixesApplied.push(")
+<<<<<<< HEAD
+=======
+  this.log("Warning)
+        WARN"
+  this.log(` Fixing TypeScript configuration...``)
+  execSync("npx tsc --version, { cwd": this.projectRoot, "stdio: pipe"})
+  this.log("TypeScript not found, installing...)
+        execSync(npm install --save-dev typescript")
+  "cwd
+          stdio": "inherit
+        this.fixesApplied.push(INSTALLED_TYPESCRIPT")
+  this.log("Warning: Could not ensure dependencies: ${error.message})
+        "WARN"
+<<<<<<< HEAD
+
+=======
+  this.log(" Fixing TypeScript configuration...")
+    const tsConfigPath = path.join(this.projectRoot, "tsconfig.json")
+  const tsConfig = JSON.parse(fs.readFileSync(tsConfigPath, "utf8")
+<<<<<<< HEAD
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
+          "compilerOptions"
+            allowJs
+            "skipLibCheck"
+            noEmit
+            "esModuleInterop"
+            allowSyntheticDefaultImports
+            "strict"
+            forceConsistentCasingInFileNames
+            "moduleResolution": node
+            "resolveJsonModule"
+            isolatedModules
+            "jsx": preserve
+            "incremental"
+            plugins: ["]
+  name: "next, "}", 
+          "include": [next-env.d.ts", "**/*.ts, **/*.tsx"", **/*.js, "**/*.jsx", "]
+          "exclude: [node_modules", ".next, out", "dist]
+        this.fixesApplied.push(`FIXED_TYPESCRIPT_CONFIG``)
+        this.log()
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   this.log("Warning")
         "WARN"
   this.log(` Fixing TypeScript configuration...``)
@@ -55,8 +123,8 @@ const glob = require("glob")
   this.log("Warning": Could not ensure dependencies: ${error.message}")
         "WARN"
   this.log(" Fixing TypeScript configuration...")
-    const tsConfigPath = path.join(this.projectRoot, "tsconfig.json")
-  const tsConfig = JSON.parse(fs.readFileSync(tsConfigPath, "utf8")
+const tsConfigPath = path.join(this.projectRoot, "tsconfig.json");
+const tsConfig = JSON.parse(fs.readFileSync(tsConfigPath, "utf8");
           "compilerOptions"
             "allowJs"
             "skipLibCheck"
@@ -79,11 +147,25 @@ const glob = require("glob")
   this.log("Warning")
           "WARN"
         this.fixesApplied.push("FIXED_TYPESCRIPT_CONFIG")
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
         this.log(" TypeScript configuration updated")
   this.log("Warning": Could not fix TypeScript config: ${error.message}")
           "WARN"
   this.log(" Fixing ESLint configuration...")
+<<<<<<< HEAD
+const eslintConfigPath = path.join(this.projectRoot, ".eslintrc.js");
+=======
     const eslintConfigPath = path.join(this.projectRoot, ".eslintrc.js")
+<<<<<<< HEAD
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   try {const eslintConfig = "}
   "extends": [""next/core-web-vitals"", ""next/typescript""]
   "rules": {@typescript-"eslint/no-unused-vars"": "warn",@typescript-"eslint/no-explicit-any"": "warn","react/react-in-jsx-scope"": "off","react/prop-types"": "off",no-console": "warn"}
@@ -97,21 +179,43 @@ const glob = require("glob")
   this.log("Warning": Could not fix ESLint config: ${error.message}")
           "WARN"
   this.log(" Fixing common TypeScript errors...")
+<<<<<<< HEAD
+const patterns = ["src/**/*.ts"", "src/**/*.tsx", "pages/**/*.ts"", "pages/**/*.tsx", "components/**/*.ts"", "components/**/*.tsx", ""];
+const files = glob.sync(pattern, { "cwd"});
+const filePath = path.join(this.projectRoot, ");
+let content = fs.readFileSync(filePath", "utf8");
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+=======
+>>>>>>> merged-prs-20250907-203621
     const patterns = ["src/**/*.ts"", "src/**/*.tsx", "pages/**/*.ts"", "pages/**/*.tsx", "components/**/*.ts"", "components/**/*.tsx", ""]
   const files = glob.sync(pattern, { "cwd"})
   const filePath = path.join(this.projectRoot, ")
   let content = fs.readFileSync(filePath", "utf8")
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
             content.includes("React")
             !content.includes("import React")
             !content.includes("import * as React")
               content.includes("export default")
               content.includes("export {"})
+<<<<<<< HEAD
+  content = "import React from "react";
+            file.endsWith(".ts")
+            content.includes("<")
+            content.includes(">")
+const newPath = file.replace(".ts", ".tsx");
+const newFilePath = path.join(this.projectRoot, ");
+=======
   content = "import React from "react"
             file.endsWith(".ts")
             content.includes("<")
             content.includes(">")
   const newPath = file.replace(".ts", ".tsx")
             const newFilePath = path.join(this.projectRoot, ")
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   fs.renameSync(filePath", newFilePath);this.fixesApplied.push(""RENAMED_TS_TO_TSX": ${file}");this.log(" Renamed ${file} to ${newPath}")
           content = content.replace(/:\s*any\s*=\s*\[\]/g, ": any[] = []")
           content = content.replace(/:\s*any\s*=\s*\{\}/g, ": any = {}")
@@ -122,8 +226,13 @@ const glob = require("glob")
             file.endsWith(".ts")
             content.includes("<")
             content.includes(">")
+<<<<<<< HEAD
+const newPath = file.replace(".ts", ".tsx");
+const newFilePath = path.join(this.projectRoot, ");
+=======
   const newPath = file.replace(".ts", ".tsx")
             const newFilePath = path.join(this.projectRoot, ")
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   fs.renameSync(filePath", newFilePath);this.fixesApplied.push(`"RENAMED_TS_TO_TSX"`)
           content = content.replace(/:\s*any\s*=\s*\[\]/g, ": any[] = []")
           content = content.replace(/:\s*any\s*=\s*\{\}/g, ": any = {}")
@@ -132,15 +241,26 @@ const glob = require("glob")
   this.log("Warning": Could not process ${file}: ${error.message}")
             "WARN"
   this.log(" Fixing "React/JSX" errors...")
+<<<<<<< HEAD
+const patterns = ["src/**/*.jsx", "src/**/*.tsx", "pages/**/*.jsx", "pages/**/*.tsx", "components/**/*.jsx", "components/**/*.tsx", "];
+const files = glob.sync(pattern, { "cwd"});
+const filePath = path.join(this.projectRoot, ");
+let content = fs.readFileSync(filePath", "utf8");
+=======
     const patterns = ["src/**/*.jsx", "src/**/*.tsx", "pages/**/*.jsx", "pages/**/*.tsx", "components/**/*.jsx", "components/**/*.tsx", "]
   const files = glob.sync(pattern, { "cwd"})
   const filePath = path.join(this.projectRoot, ")
   let content = fs.readFileSync(filePath", "utf8")
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
             content.includes("return (")
             content.includes("<")
             !content.includes("import React")
             !content.includes("import * as React")
+<<<<<<< HEAD
+  content = import React from "react";
+=======
   content = import React from "react"
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
             /<>\s*<\/>/g,<React.Fragment></React.Fragment>"
             "className={$1}"
             this.fixesApplied.push(""FIXED_REACT")
@@ -149,10 +269,17 @@ const glob = require("glob")
   this.log("Warning": Could not process ${file}: ${error.message}")
             "WARN"
   this.log(" Fixing "import/export" issues...")
+<<<<<<< HEAD
+const patterns = ["src/**/*.{js", "jsx", "ts", "tsx}", "pages/**/*.{js, "jsx", "ts", "tsx}", "components/**/*.{js", "jsx", "ts", "tsx}", "];
+const files = glob.sync(pattern, { "cwd"});
+const filePath = path.join(this.projectRoot, ");
+let content = fs.readFileSync(filePath", "utf8");
+=======
     const patterns = ["src/**/*.{js", "jsx", "ts", "tsx}", "pages/**/*.{js, "jsx", "ts", "tsx}", "components/**/*.{js", "jsx", "ts", "tsx}", "]
   const files = glob.sync(pattern, { "cwd"})
   const filePath = path.join(this.projectRoot, ")
   let content = fs.readFileSync(filePath", "utf8")
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
             /from\s+[""]\.\.\/\.\.\/\.\.\/\.\.\//g,from "
             /from\s+["]([^""]+)[""]
   if (importPath.startsWith(".") && !importPath.includes(".")) {return "from `${importPath}.js
@@ -162,12 +289,70 @@ const glob = require("glob")
   fs.writeFileSync(filePath, content);this.fixesApplied.push(`"FIXED_IMPORTS": ${file}"`)
   this.log("Warning": Could not process ${file}: ${error.message}")
             "WARN"
+<<<<<<< HEAD
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   this.log(` Fixing file extension issues...``)
       .sync("**/*.js", { "cwd"})
           path.join(this.projectRoot, "file)", utf8"
           content.includes("<")
           content.includes(">")
           content.includes("return")
+<<<<<<< HEAD
+const oldPath = path.join(this.projectRoot, ");
+          this.projectRoot", file.replace(".js", ".jsx")
+          this.fixesApplied.push(`"RENAMED_JS_TO_JSX": ${file}`);this.log(` Renamed ${file} to ${file.replace(".js", ".jsx"`})
+      } catch (error) {  this.log(`"Warning": Could not rename ${file  }: ${error.message}`, "WARN"`)
+  this.log(" Running comprehensive fixes...")
+  execSync("npx tsc --noEmit", { "cwd": this.projectRoot, "stdio": "pipe"})
+        this.log(" TypeScript compilation successful")} catch (error) {  this.log(`TypeScript errors "remain": ${error.message  }`, "WARN"`)
+  "type": "TYPESCRIPT_ERRORS"
+          "message"
+  execSync("npx eslint . --ext .js,.jsx,.ts,.tsx --fix")
+  "cwd"
+          "stdio": "pipe"
+        this.log(" ESLint fixes applied")
+        this.fixesApplied.push("ESLINT_FIXES_APPLIED")} catch (error) {  this.log(`ESLint issues "remain": ${error.message  }`, "WARN"`)
+  "type": "ESLINT_ERRORS"
+          "message"
+  execSync("npx prettier --write .")
+  "cwd"
+          "stdio": "pipe"
+        this.log(" Prettier formatting applied")
+        this.fixesApplied.push("PRETTIER_FORMATTING_APPLIED")} catch (error) {  this.log(`Prettier "issues": ${error.message  }`, "WARN"`)
+    } catch (error) {  this.log(`Error in comprehensive "fixes": ${error.message  }`, "ERROR"`)
+  "timestamp": new Date().toISOString(),"duration"
+      "fixesApplied"
+      "errorsFound"
+      "summary"
+        "totalErrors"
+        "success"
+    this.log(" Report generated")
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+
+  this.log("Remaining "errors": ")
+
+
+<<<<<<< HEAD
+
+
+
+=======
+  this.log(Remaining "errors": )
+
+  this.log(Remaining "errors": )
+=======
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+=======
+  this.log(Remaining "errors": ")
+
+=======
+>>>>>>> merged-prs-20250907-203621
   const oldPath = path.join(this.projectRoot, ")
           this.projectRoot", file.replace(".js", ".jsx")
           this.projectRoot", file.replace(".js", ".jsx")
@@ -198,7 +383,38 @@ const glob = require("glob")
         "totalErrors"
         "success"
     this.log(" Report generated")
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> merged-prs-20250907-203621
+
+=======
+  this.log("Remaining "errors": ")
+<<<<<<< HEAD
   this.log("Remaining "errors": ")
   this.log("Remaining "errors": ")
 
 
+
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+<<<<<<< HEAD
+  this.log("Remaining "errors": ")
+=======
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+=======
+  this.log("Remaining "errors": ")
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc

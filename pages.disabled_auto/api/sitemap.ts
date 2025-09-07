@@ -1,5 +1,24 @@
 import React from 'react';
 
+<<<<<<< HEAD
+interface SitemapProps {
+  // Add props here as needed
+}
+
+interface SitemapProps {
+  // Add props here as needed
+}
+interface SitemapProps {
+  // Add props here as needed
+}
+interface SitemapProps {
+  // Add props here as needed
+}
+interface SitemapProps {
+  // Add props here as needed
+}
+ursor/add-new-services-and-deploy-updates-0462
+=======
 =======
 
 interface SitemapProps {

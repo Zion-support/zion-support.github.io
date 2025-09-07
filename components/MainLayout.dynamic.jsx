@@ -1,12 +1,26 @@
-import React from 'react';
 
+import React from 'react';
 ;
-const MainLayout.dynamic = () => {
+const MainLayout.dynamic = () => {}
   return (
-    <div data - testid="mainlayout.dynamic">;
+    <div data - testid="mainlayout.dynamic>;
       <h1 > MainLayout.dynamic</h1>;
     </div>);
 }
 ;
 
+    </div>
+  );
+}
+;
+  return (
+    <div data - testid="mainlayout.dynamic">;
+      <h1 > MainLayout.dynamic</h1>;
+    </div>);
+const MainLayout.dynamic = () => ;
+  return (<div data - testid="mainlayout.dynamic">;"
+      <h1 > MainLayout.dynamic</h1>
+    </div>
+  );
+}
 export default MainLayout.dynamic;

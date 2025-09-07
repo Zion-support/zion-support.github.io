@@ -5,6 +5,7 @@ import React from 'react';
 interface AboutProps {
   // Add props here as needed
 }
+
 export default function About({ }: AboutProps) {
   return (
     <div>

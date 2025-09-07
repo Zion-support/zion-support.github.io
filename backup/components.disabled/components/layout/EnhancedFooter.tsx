@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react;
 // Common interfaces for better type safety
 interface ApiResponse<T = unknown> {
   data: T;
@@ -10,7 +10,7 @@ interface User {
   id: string;
   email: string;
   name: string;
-  role: 'admin' | 'user' | 'guest';
+  role: admin' | 'user | guest';
 }
 
 interface Service {
@@ -31,7 +31,7 @@ interface ComponentProps {
   [key: string]: unknown;
 }
 
-import Link from 'next/link';
+import Link from 'next/link;
 import {
   Cloud,
   Facebook,
@@ -42,82 +42,81 @@ import {
   MapPin,
   Phone,
   Twitter,
-  User,
-} from 'lucide-react';
+  User} from lucide-react';
 
 const EnhancedFooter: React.FC = () => {
   return (
-    <footer className="bg-gray-900 text-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+    <footer className="bg-gray-900 text-white>
+      <div className=max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-8>
           {/* Company Info */}
-          <div className="col-span-1 md:col-span-2">
-            <h3 className="text-2xl font-bold mb-4">Zion Tech Group</h3>
-            <p className="text-gray-300 mb-6 max-w-md">
+          <div className=col-span-1 md:col-span-2">
+            <h3 className="text-2xl font-bold mb-4>Zion Tech Group</h3>
+            <p className=text-gray-300 mb-6 max-w-md">
               Leading provider of revolutionary AI services, innovative micro
               SaaS solutions, and comprehensive IT services. Transform your
               business with cutting-edge technology.
             </p>
-            <div className="flex space-x-4">
+            <div className="flex space-x-4>
               <a
-                href="https://linkedin.com/company/ziontechgroup"
-                className="text-gray-400 hover:text-white"
+                href=https://linkedin.com/company/ziontechgroup"
+                className="text-gray-400 hover:text-white
               >
-                <Linkedin className="w-6 h-6" />
+                <Linkedin className=w-6 h-6" />
               </a>
               <a
-                href="https://twitter.com/ziontechgroup"
-                className="text-gray-400 hover:text-white"
+                href="https://twitter.com/ziontechgroup
+                className=text-gray-400 hover:text-white"
               >
-                <Twitter className="w-6 h-6" />
+                <Twitter className="w-6 h-6 />
               </a>
               <a
-                href="https://github.com/ziontechgroup"
-                className="text-gray-400 hover:text-white"
+                href=https://github.com/ziontechgroup"
+                className="text-gray-400 hover:text-white
               >
-                <Github className="w-6 h-6" />
+                <Github className=w-6 h-6" />
               </a>
               <a
-                href="https://facebook.com/ziontechgroup"
-                className="text-gray-400 hover:text-white"
+                href="https://facebook.com/ziontechgroup
+                className=text-gray-400 hover:text-white"
               >
-                <Facebook className="w-6 h-6" />
+                <Facebook className="w-6 h-6 />
               </a>
             </div>
           </div>
 
           {/* Services */}
           <div>
-            <h4 className="text-lg font-semibold mb-4">Services</h4>
-            <ul className="space-y-2">
+            <h4 className=text-lg font-semibold mb-4">Services</h4>
+            <ul className="space-y-2>
               <li>
                 <Link
-                  href="/services/ai-services"
-                  className="text-gray-300 hover:text-white"
+                  href=/services/ai-services"
+                  className="text-gray-300 hover:text-white
                 >
                   AI Services
                 </Link>
               </li>
               <li>
                 <Link
-                  href="/services/micro-saas"
-                  className="text-gray-300 hover:text-white"
+                  href=/services/micro-saas"
+                  className="text-gray-300 hover:text-white
                 >
                   Micro SaaS
                 </Link>
               </li>
               <li>
                 <Link
-                  href="/services/it-services"
-                  className="text-gray-300 hover:text-white"
+                  href=/services/it-services"
+                  className="text-gray-300 hover:text-white
                 >
                   IT Services
                 </Link>
               </li>
               <li>
                 <Link
-                  href="/solutions"
-                  className="text-gray-300 hover:text-white"
+                  href=/solutions"
+                  className="text-gray-300 hover:text-white
                 >
                   Solutions
                 </Link>
@@ -127,29 +126,29 @@ const EnhancedFooter: React.FC = () => {
 
           {/* Contact */}
           <div>
-            <h4 className="text-lg font-semibold mb-4">Contact</h4>
-            <div className="space-y-3">
-              <div className="flex items-center">
-                <Phone className="w-5 h-5 mr-3 text-blue-400" />
+            <h4 className=text-lg font-semibold mb-4">Contact</h4>
+            <div className="space-y-3>
+              <div className=flex items-center">
+                <Phone className="w-5 h-5 mr-3 text-blue-400 />
                 <a
-                  href="tel:+13024640950"
-                  className="text-gray-300 hover:text-white"
+                  href=tel:+13024640950"
+                  className="text-gray-300 hover:text-white
                 >
                   +1 302 464 0950
                 </a>
               </div>
-              <div className="flex items-center">
-                <Mail className="w-5 h-5 mr-3 text-blue-400" />
+              <div className=flex items-center">
+                <Mail className="w-5 h-5 mr-3 text-blue-400 />
                 <a
-                  href="mailto:kleber@ziontechgroup.com"
-                  className="text-gray-300 hover:text-white"
+                  href=mailto:kleber@ziontechgroup.com"
+                  className="text-gray-300 hover:text-white
                 >
                   kleber@ziontechgroup.com
                 </a>
               </div>
-              <div className="flex items-start">
-                <MapPin className="w-5 h-5 mr-3 text-blue-400 mt-1" />
-                <span className="text-gray-300">
+              <div className=flex items-start">
+                <MapPin className="w-5 h-5 mr-3 text-blue-400 mt-1 />
+                <span className=text-gray-300">
                   364 E Main St STE 1008
                   <br />
                   Middletown DE 19709
@@ -159,14 +158,14 @@ const EnhancedFooter: React.FC = () => {
           </div>
         </div>
 
-        <div className="border-t border-gray-800 mt-8 pt-8 text-center">
-          <p className="text-gray-400">
+        <div className="border-t border-gray-800 mt-8 pt-8 text-center>
+          <p className=text-gray-400">
             © 2025 Zion Tech Group. All rights reserved. |
-            <Link href="/privacy" className="hover:text-white ml-1">
+            <Link href="/privacy className=hover:text-white ml-1">
               Privacy Policy
-            </Link>{' '}
+            </Link>{' }
             |
-            <Link href="/terms" className="hover:text-white ml-1">
+            <Link href="/terms className=hover:text-white ml-1">
               Terms of Service
             </Link>
           </p>
@@ -174,12 +173,12 @@ const EnhancedFooter: React.FC = () => {
       </div>
     </footer>
   );
-};
+}
 
 export default EnhancedFooter;
 origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 
-import React from 'react';
+import React from react';
 // Common interfaces for better type safety
 interface ApiResponse<T = unknown> {
   data: T;
@@ -191,7 +190,7 @@ interface User {
   id: string;
   email: string;
   name: string;
-  role: 'admin' | 'user' | 'guest';
+  role: 'admin | user' | 'guest;
 }
 
 interface Service {
@@ -212,8 +211,7 @@ interface ComponentProps {
   [key: string]: unknown;
 }
 
-import Link from 'next/link';
-import {
+import Link from next/link';
   Cloud,
   Facebook,
   Github,
@@ -223,82 +221,80 @@ import {
   MapPin,
   Phone,
   Twitter,
-  User,
-} from 'lucide-react';
+  User} from 'lucide-react;
 
-const EnhancedFooter: React.FC = () => {
   return (
-    <footer className="bg-gray-900 text-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+    <footer className="bg-gray-900 text-white>
+      <div className=max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-8>
           {/* Company Info */}
-          <div className="col-span-1 md:col-span-2">
-            <h3 className="text-2xl font-bold mb-4">Zion Tech Group</h3>
-            <p className="text-gray-300 mb-6 max-w-md">
+          <div className=col-span-1 md:col-span-2">
+            <h3 className="text-2xl font-bold mb-4>Zion Tech Group</h3>
+            <p className=text-gray-300 mb-6 max-w-md">
               Leading provider of revolutionary AI services, innovative micro
               SaaS solutions, and comprehensive IT services. Transform your
               business with cutting-edge technology.
             </p>
-            <div className="flex space-x-4">
+            <div className="flex space-x-4>
               <a
-                href="https://linkedin.com/company/ziontechgroup"
-                className="text-gray-400 hover:text-white"
+                href=https://linkedin.com/company/ziontechgroup"
+                className="text-gray-400 hover:text-white
               >
-                <Linkedin className="w-6 h-6" />
+                <Linkedin className=w-6 h-6" />
               </a>
               <a
-                href="https://twitter.com/ziontechgroup"
-                className="text-gray-400 hover:text-white"
+                href="https://twitter.com/ziontechgroup
+                className=text-gray-400 hover:text-white"
               >
-                <Twitter className="w-6 h-6" />
+                <Twitter className="w-6 h-6 />
               </a>
               <a
-                href="https://github.com/ziontechgroup"
-                className="text-gray-400 hover:text-white"
+                href=https://github.com/ziontechgroup"
+                className="text-gray-400 hover:text-white
               >
-                <Github className="w-6 h-6" />
+                <Github className=w-6 h-6" />
               </a>
               <a
-                href="https://facebook.com/ziontechgroup"
-                className="text-gray-400 hover:text-white"
+                href="https://facebook.com/ziontechgroup
+                className=text-gray-400 hover:text-white"
               >
-                <Facebook className="w-6 h-6" />
+                <Facebook className="w-6 h-6 />
               </a>
             </div>
           </div>
 
           {/* Services */}
           <div>
-            <h4 className="text-lg font-semibold mb-4">Services</h4>
-            <ul className="space-y-2">
+            <h4 className=text-lg font-semibold mb-4">Services</h4>
+            <ul className="space-y-2>
               <li>
                 <Link
-                  href="/services/ai-services"
-                  className="text-gray-300 hover:text-white"
+                  href=/services/ai-services"
+                  className="text-gray-300 hover:text-white
                 >
                   AI Services
                 </Link>
               </li>
               <li>
                 <Link
-                  href="/services/micro-saas"
-                  className="text-gray-300 hover:text-white"
+                  href=/services/micro-saas"
+                  className="text-gray-300 hover:text-white
                 >
                   Micro SaaS
                 </Link>
               </li>
               <li>
                 <Link
-                  href="/services/it-services"
-                  className="text-gray-300 hover:text-white"
+                  href=/services/it-services"
+                  className="text-gray-300 hover:text-white
                 >
                   IT Services
                 </Link>
               </li>
               <li>
                 <Link
-                  href="/solutions"
-                  className="text-gray-300 hover:text-white"
+                  href=/solutions"
+                  className="text-gray-300 hover:text-white
                 >
                   Solutions
                 </Link>
@@ -308,29 +304,29 @@ const EnhancedFooter: React.FC = () => {
 
           {/* Contact */}
           <div>
-            <h4 className="text-lg font-semibold mb-4">Contact</h4>
-            <div className="space-y-3">
-              <div className="flex items-center">
-                <Phone className="w-5 h-5 mr-3 text-blue-400" />
+            <h4 className=text-lg font-semibold mb-4">Contact</h4>
+            <div className="space-y-3>
+              <div className=flex items-center">
+                <Phone className="w-5 h-5 mr-3 text-blue-400 />
                 <a
-                  href="tel:+13024640950"
-                  className="text-gray-300 hover:text-white"
+                  href=tel:+13024640950"
+                  className="text-gray-300 hover:text-white
                 >
                   +1 302 464 0950
                 </a>
               </div>
-              <div className="flex items-center">
-                <Mail className="w-5 h-5 mr-3 text-blue-400" />
+              <div className=flex items-center">
+                <Mail className="w-5 h-5 mr-3 text-blue-400 />
                 <a
-                  href="mailto:kleber@ziontechgroup.com"
-                  className="text-gray-300 hover:text-white"
+                  href=mailto:kleber@ziontechgroup.com"
+                  className="text-gray-300 hover:text-white
                 >
                   kleber@ziontechgroup.com
                 </a>
               </div>
-              <div className="flex items-start">
-                <MapPin className="w-5 h-5 mr-3 text-blue-400 mt-1" />
-                <span className="text-gray-300">
+              <div className=flex items-start">
+                <MapPin className="w-5 h-5 mr-3 text-blue-400 mt-1 />
+                <span className=text-gray-300">
                   364 E Main St STE 1008
                   <br />
                   Middletown DE 19709
@@ -340,14 +336,14 @@ const EnhancedFooter: React.FC = () => {
           </div>
         </div>
 
-        <div className="border-t border-gray-800 mt-8 pt-8 text-center">
-          <p className="text-gray-400">
+        <div className="border-t border-gray-800 mt-8 pt-8 text-center>
+          <p className=text-gray-400">
             © 2025 Zion Tech Group. All rights reserved. |
-            <Link href="/privacy" className="hover:text-white ml-1">
+            <Link href="/privacy className=hover:text-white ml-1">
               Privacy Policy
-            </Link>{' '}
+            </Link>{ '}
             |
-            <Link href="/terms" className="hover:text-white ml-1">
+            <Link href="/terms className=hover:text-white ml-1">
               Terms of Service
             </Link>
           </p>
@@ -355,8 +351,7 @@ const EnhancedFooter: React.FC = () => {
       </div>
     </footer>
   );
-};
+}
 
 export default EnhancedFooter;
 origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
->>>>>>> cursor/automate-test-improve-and-merge-code-dd7a

@@ -13,7 +13,6 @@ export interface Revolutionary2026Innovation {
     email: string,
     address: string}
 }
-
 export const revolutionary2026Innovations: Revolutionary2026Innovation[] = [
   {
     id: "2026-revolutionary-innovation",
@@ -21,6 +20,12 @@ export const revolutionary2026Innovations: Revolutionary2026Innovation[] = [
     tagline: "Breakthrough innovations for 2026",
     price: "$399/month",
     description: "Platform showcasing revolutionary innovations and breakthrough technologies for 2026.",
+    id: '2026-revolutionary-innovation'
+    name: '2026 Revolutionary Innovation Platform'
+    tagline: 'Breakthrough innovations for 2026'
+    price: '$399/month'
+    description:
+      'Platform showcasing revolutionary innovations and breakthrough technologies for 2026.'
     features: [
       "Revolutionary innovations",
       "Breakthrough technologies",

@@ -70,9 +70,7 @@ export function updateTenant(tenantId: string, partial: Partial<Omit<Tenant, 'id
 }
 
 export function rotateTenantApiKey(tenantId: string): Tenant | undefined {
-  let result: Tenant | undefined = $2;
   updateJsonFile<TenantsFile>(FILE, (curr) => {
-    const tenants = $2;
       const updated: Tenant = { ...t, apiKey: crypto.randomBytes(24).toString('hex'), updatedAt: new Date().toISOString() },
       result = $2;
       return updated

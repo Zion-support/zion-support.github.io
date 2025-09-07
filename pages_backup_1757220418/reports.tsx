@@ -1,8 +1,13 @@
+<<<<<<< HEAD
 import React from 'react';
 import Head from 'next/head';
 import Layout from '../components/layout/Layout';
 
 export default function reports() {
+=======
+import Link from 'next/link';
+export default function Reports() {
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   return (
     <Layout>
       <Head>
@@ -18,6 +23,11 @@ export default function reports() {
           </p>
         </div>
       </div>
+<<<<<<< HEAD
     </Layout>
   );
+=======
+    </div>
+  )
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 }

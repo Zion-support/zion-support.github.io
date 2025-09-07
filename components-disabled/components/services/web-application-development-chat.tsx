@@ -8,11 +8,34 @@ const WebApplicationDevelopmentChat: NextPage = () => ;
 
 ;
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+  return (<div>;
+import type { NextPage } from "next";"
+import Head from "next/head";"
+import Link from "next/link";"
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 const WebApplicationDevelopmentChat: NextPage = () => ;
   return (<div />;
 import type { NextPage } from \"next\";
 import Head from \"next/head\";
 import Link from \"next/link\";
+<<<<<<< HEAD
+>>>>>>> origin/chore/fix-lint-and-merge
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
 const WebApplicationDevelopmentChat: NextPage = () => {;
   return (
@@ -92,6 +115,23 @@ name=\"description\"}
 
 export default WebApplicationDevelopmentChat;
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+  return (<div>;
+      <Head>;
+        <title>WebApplicationDevelopmentChat - Zion Tech Solutions</title>;
+        <title>WebApplicationDevelopmentChat - Zion Tech Solutions</title>;
+        <title>WebApplicationDevelopmentChat - Zion Tech Solutions</title>;
+        <title>WebApplicationDevelopmentChat - Zion Tech Solutions</title>;
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 const WebApplicationDevelopmentChat: NextPage = () => ;
   return (<div />;
       <Head />;
@@ -99,6 +139,14 @@ const WebApplicationDevelopmentChat: NextPage = () => ;
         <title />WebApplicationDevelopmentChat - Zion Tech Solutions</title>;
         <title />WebApplicationDevelopmentChat - Zion Tech Solutions</title>;
         <title />WebApplicationDevelopmentChat - Zion Tech Solutions</title>;
+<<<<<<< HEAD
+>>>>>>> origin/chore/fix-lint-and-merge
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 ursor/fix-website-loading-errors-and-merge-6662;
   );
 }
@@ -107,7 +155,21 @@ ursor/fix-website-loading-errors-and-merge-6662;
 export default WebApplicationDevelopmentChat;
 
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
 const WebApplicationDevelopmentChat: NextPage = () => {
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+const "WebApplicationDevelopmentChat": NextPage = () => {
+=======
+const WebApplicationDevelopmentChat: NextPage = () => {
+>>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
  ;
   return (
     <div />
@@ -120,6 +182,23 @@ import type { NextPage } from './next';
 import Head from './next / head';
 import Link from './next / link';
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+  return (<div>;
+}
+return (;
+    <div>;
+      <Head>;
+        <title > WebApplicationDevelopmentChat - Zion Tech Solutions</title>;
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 const WebApplicationDevelopmentChat: NextPage = () => ;
   return (<div />;
 const WebApplicationDevelopmentChat: NextPage = () => {
@@ -127,6 +206,14 @@ const WebApplicationDevelopmentChat: NextPage = () => {
     <div />;
       <Head />;
         <title  /> WebApplicationDevelopmentChat - Zion Tech Solutions</title>;
+<<<<<<< HEAD
+>>>>>>> origin/chore/fix-lint-and-merge
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
         <meta;
           name=\"description\";}
           content=\"WebApplicationDevelopmentChat service\";}
@@ -154,10 +241,32 @@ export default WebApplicationDevelopmentChat;<div />;
     </div>;
   )},export default WebApplicationDevelopmentChat;
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+  return (<div>;
+      <Head>;
+        <title>WebApplicationDevelopmentChat - Zion Tech Solutions</title>;
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 const WebApplicationDevelopmentChat: NextPage = () => ;
   return (<div />;
       <Head />;
         <title />WebApplicationDevelopmentChat - Zion Tech Solutions</title>;
+<<<<<<< HEAD
+>>>>>>> origin/chore/fix-lint-and-merge
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
         <meta;
           name=\"description\";
           content=\"WebApplicationDevelopmentChat service\";
@@ -181,7 +290,20 @@ export default WebApplicationDevelopmentChat;<title />WebApplicationDevelopmentC
 
 ;
 export default WebApplicationDevelopmentChat;
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
 const WebApplicationDevelopmentChat: NextPage = () => {
+>>>>>>> origin/chore/fix-lint-and-merge
+=======
+const WebApplicationDevelopmentChat: NextPage = () => {
+=======
+<<<<<<< HEAD
+=======
+const WebApplicationDevelopmentChat: NextPage = () => {
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
  ;
   return (
     <div />
@@ -203,7 +325,20 @@ name=\"description\"}
 
 export default WebApplicationDevelopmentChat;
 export default WebApplicationDevelopmentChat;
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
 const WebApplicationDevelopmentChat: NextPage = () => {
+>>>>>>> origin/chore/fix-lint-and-merge
+=======
+const WebApplicationDevelopmentChat: NextPage = () => {
+=======
+<<<<<<< HEAD
+=======
+const WebApplicationDevelopmentChat: NextPage = () => {
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
  ;
   return (
     <div />
@@ -228,7 +363,20 @@ export default WebApplicationDevelopmentChat;
         <title />WebApplicationDevelopmentChat - Zion Tech Solutions</title>
         <title />WebApplicationDevelopmentChat - Zion Tech Solutions</title>
 ;
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
 const WebApplicationDevelopmentChat: NextPage = () => {
+>>>>>>> origin/chore/fix-lint-and-merge
+=======
+const WebApplicationDevelopmentChat: NextPage = () => {
+=======
+<<<<<<< HEAD
+=======
+const WebApplicationDevelopmentChat: NextPage = () => {
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
  ;
   return (
     <div />

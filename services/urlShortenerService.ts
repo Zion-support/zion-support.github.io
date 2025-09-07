@@ -15,6 +15,11 @@ export interface ShortUrl {
   short_code: string;
   // TODO: Implement
 
+export interface ShortUrl {
+  id: string;
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   original_url: string;
   short_code: string;
   short_url: string;
@@ -49,10 +54,12 @@ export interface ShortUrl {
   countries: string[];
   devices: string[];
   browsers: string[];
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   last_clicked: Date,
   click_history: ClickEvent[];
-
 }
 export interface ClickEvent {
   id: string,
@@ -108,6 +115,101 @@ class UrlShortenerService {
     if (url.expiresAt && url.expiresAt < new Date()) {
       url.isActive = $2;
       return null
+      lastClicked: new Date()
+      clickHistory: []
+    });
+    this.clicks.set(shortCode, []);
+    return shortUrl
+  }
+  async getShortUrl(shortCode: string): Promise<ShortUrl | null> {
+    const url = this.urls.get(shortCode);
+    if (!url |!url.isActive) return null;
+    if (url.expiresAt && url.expiresAt < new Date()) {
+      url.isActive = false
+      return null
+export interface ShortUrl {;
+  id: string,;
+  originalUrl: string,;
+  shortCode: string,;
+  shortUrl: string,;
+  createdAt: Date,;
+  expiresAt?: Date,;
+  isActive: boolean,;
+  userId?: string;
+}
+;
+export interface UrlAnalytics {;
+  totalClicks: number,;
+  uniqueVisitors: number,;
+  referrers: string[],;
+  countries: string[],;
+  devices: string[],;
+  browsers: string[],;
+  lastClicked: Date,;
+  clickHistory: ClickEvent[];
+}
+;
+export interface ClickEvent {;
+  id: string,;
+  timestamp: Date,;
+  ipAddress: string,;
+  userAgent: string,;
+  referrer: string,;
+  country: string,;
+  city: string,;
+  device: string,;
+  browser: string,;
+  os: string;
+}
+;
+export interface CreateShortUrlRequest {;
+  originalUrl: string,;
+  customCode?: string,;
+  expiresAt?: Date,;
+  userId?: string;
+}
+;
+class UrlShortenerService {;
+  private urls: Map<string ShortUrl> = new Map(),;
+  private analytics: Map<string UrlAnalytics> = new Map(),;
+  private clicks: Map<string ClickEvent[]> = new Map(),;
+  async createShortUrl(request: CreateShortUrlRequest): Promise<ShortUrl> {;
+    const shortCode = request.customCode || this.generateShortCode(),;
+    if (this.urls.has(shortCode)) {;
+      throw new Error('Short code already exists');
+    }
+;
+    const shortUrl: ShortUrl = {;
+      id: this.generateId(),;
+      originalUrl: request.originalUrl,;
+      shortCode,;
+      shortUrl: `${process.env.NEXT_PUBLIC_BASE_URL || 'https://zion.app'}/s/${shortCode}`,;
+      createdAt: new Date(),;
+      expiresAt: request.expiresAt,;
+      isActive: true,;
+      userId: request.userId;
+    },;
+    this.urls.set(shortCode, shortUrl),;
+    this.analytics.set(shortCode, {;
+      totalClicks: 0,;
+      uniqueVisitors: 0,;
+      referrers: [],;
+      countries: [],;
+      devices: [],;
+      browsers: [],;
+      lastClicked: new Date(),;
+      clickHistory: [];
+    }),;
+    this.clicks.set(shortCode, []),;
+    return shortUrl;
+  }
+;
+  async getShortUrl(shortCode: string): Promise<ShortUrl | null> {;
+    const url = this.urls.get(shortCode),;
+    if (!url || !url.isActive) return null,;
+    if (url.expiresAt && url.expiresAt < new Date()) {;
+      url.isActive = false,;
+      return null;
     }
 
     return url

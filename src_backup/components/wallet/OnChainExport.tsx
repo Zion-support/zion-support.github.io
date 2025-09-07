@@ -3,7 +3,6 @@ import {
   TooltipContent,
   TooltipProvider,
 
-import {
   Tooltip;
   TooltipContent;
   TooltipProvider;

@@ -14,10 +14,33 @@ import type { NextApiRequest, NextApiResponse } from 'next';
     caseStudies;
   } = req.body |{}
   if (!slug |!name)
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+    return res.status(400).json({ "error": 'Missing required fields' });'
+  if (req && req.method !== 'POST')'
+    return res && res.status(405).json({ "error": 'Method not allowed' });'
+    }
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     return res.status(400).json({ error: 'Missing required fields' });
   if (req && req.method !== 'POST')
     return res && res.status(405).json({ error: 'Method not allowed' });
   // TODO: Implement
+<<<<<<< HEAD
+>>>>>>> origin/chore/fix-lint-and-merge
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     slug,
     name,
     services_offered,
@@ -37,11 +60,38 @@ import type { NextApiRequest, NextApiResponse } from 'next';
   // TODO: Implement
     const vendor = registerVendor({
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+      }
+      slug;
+      name;
+      "servicesOffered": Array && Array.isArray(servicesOffered) ? servicesOffered : [];
+      "teamSize": Number(teamSize || 0);
+      about;
+      "verificationDocs": Array && Array.isArray(verificationDocs) ? verificationDocs : [],
+      "caseStudies": Array && Array.isArray(caseStudies) ? caseStudies : []});
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
       name;)
       servicesOffered: Array && Array.isArray(servicesOffered) ? servicesOffered : [];,
   teamSize: Number(teamSize || 0);
       verificationDocs: Array && Array.isArray(verificationDocs) ? verificationDocs : [],
       caseStudies: Array && Array.isArray(caseStudies) ? caseStudies : []});
+<<<<<<< HEAD
+>>>>>>> origin/chore/fix-lint-and-merge
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     res && res.status(201).json({ vendor });
   } catch (e: any) {
     res && res.status(500).json({ error: e && e.message });
@@ -61,6 +111,32 @@ import type { NextApiRequest, NextApiResponse } from 'next';
     return res.status (409).json ({ error: 'Slug already taken' });
   // TODO: Implement
     const vendor = register_vendor ({
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+      }
+      slug,
+      name,
+      "services_offered": Array.is_array (services_offered) ? services_offered : [],
+      "team_size": Number (team_size || 0),
+      about,  try {
+    }
+      }
+      slug;
+      name;
+      "services_offered": Array.is_array (services_offered) ? services_offered : [];
+      "team_size": Number (team_size || 0);
+      about;
+      "verification_docs": Array.is_array (verification_docs) ? verification_docs : [],
+      "case_studies": Array.is_array (case_studies) ? case_studies : []});
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
       name,)
       services_offered: Array.is_array (services_offered) ? services_offered : [],
       team_size: Number (team_size || 0),
@@ -69,6 +145,14 @@ import type { NextApiRequest, NextApiResponse } from 'next';
   team_size: Number (team_size || 0);
       verification_docs: Array.is_array (verification_docs) ? verification_docs : [],
       case_studies: Array.is_array (case_studies) ? case_studies : []});
+<<<<<<< HEAD
+>>>>>>> origin/chore/fix-lint-and-merge
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     res.status (201).json ({ vendor });
     res.status (500).json ({ error: e.message });
 

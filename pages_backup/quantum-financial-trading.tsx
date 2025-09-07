@@ -1,58 +1,7 @@
-:pages/quantum-financial-trading.tsx
-import React from 'react';
-import Head from 'next/head';
-import { Phone, Mail, MapPin, Check, ArrowRight, TrendingUp, Star } from 'lucide-react';
-import Layout from '../components/layout/Layout';
-import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-services';
-export default function QuantumFinancialTradingPage() {
-  const service = enhancedRealMicroSaasServices.find(s => s.link.endsWith('/quantum-financial-trading'))
-  if (!service) return null
-export default function QuantumFinancialTradingPage() {
-  const service = enhancedRealMicroSaasServices.find(s => s.link.endsWith('/quantum-financial-trading'))
-  if (!service) return null,
-
-import React from 'react',;
-import Head from 'next/head',;
-import { Phone, Mail, MapPin, Check, ArrowRight, TrendingUp, Star } from 'lucide-react',;
-import Layout from '../components/layout/Layout',;
-
-import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-services',;
-
-import React from 'react'
-import Head from 'next/head'
-import { Phone, Mail, MapPin, Check, ArrowRight, TrendingUp, Star } from 'lucide-react',
-import Layout from '../components/layout/Layout'
-
-import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-services'
-
-import React from 'react',;
-import Head from 'next/head',;
-import { Phone, Mail, MapPin, Check, ArrowRight, TrendingUp, Star } from 'lucide-react',;
-import Layout from '../components/layout/Layout',;
-import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-services',;
 
 export default function QuantumFinancialTradingPage() {
   const service = enhancedRealMicroSaasServices.find(s => s.link.endsWith('/quantum-financial-trading'))
   if (!service) return null,
-
-import {
-  Phone,
-  Mail,
-  MapPin,
-  Check,
-  ArrowRight,
-  TrendingUp,
-  Star,;
-} from 'lucide-react';
-import Layout from '../components/layout/Layout';
-
-import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-services';
-
-export default function QuantumFinancialTradingPage() {
-  const service = enhancedRealMicroSaasServices.find(s =>
-    s.link.endsWith('/quantum-financial-trading')
-  );
-  if (!service) return null;
 
   return (
     <Layout>
@@ -75,8 +24,7 @@ export default function QuantumFinancialTradingPage() {
               <ul className="grid grid-cols-1 md:grid-cols-2 gap-3">
                 {service.features.slice(0, 12).map((feat, i) => ("
                   <li key={i} className="flex items-start space-x-3 text-slate-200 w-5 h-5 text-yellow-400 mt-0.5"><Check /><span>{feat}</span></li>
-:pages/quantum-financial-trading.tsx
-                ))}
+
 
               </ul>
             </div>"
@@ -88,6 +36,8 @@ export default function QuantumFinancialTradingPage() {
                 </div>"
                 <div className="flex items-center text-yellow-400 w-4 h-4 mr-1"><Star />{service.rating.toFixed(1)}</div>
               </div>
+
+
 :pages/quantum-financial-trading.tsx
               <a href="/contact" className="w-full px-6 py-3 bg-gradient-to-r from-cyan-600 to-blue-700 hover:from-cyan-700 hover:to-blue-800 text-white font-semibold rounded-lg transition-all duration-200 w-5 h-5 ml-2">Book a Strategy Call<ArrowRight /></a>
               <div className="mt-6 space-y-3 text-sm text-slate-300">
@@ -119,16 +69,17 @@ export default function QuantumFinancialTradingPage() {
                   <span>{service.contactInfo.address}</span>
                 </div>
 
+
+              <div className="mt-6 space-y-3 text-sm text-slate-300">
+                <div className="flex items-center space-x-2 w-4 h-4 text-cyan-400"><Phone /><span>{service.contactInfo.mobile}</span></div>
+                <div className="flex items-center space-x-2 w-4 h-4 text-purple-400"><Mail /><span>{service.contactInfo.email}</span></div>
+                <div className="flex items-center space-x-2 w-4 h-4 text-green-400 text-xs"><MapPin /><span >{service.contactInfo.address}</span></div>
               </div>
             </div>
           </div>
         </div>
       </div>
     </Layout>
-
-}
-:pages/quantum-financial-trading.tsx
-;
 
   } catch (error) {"
     console.error("Error:", error);"

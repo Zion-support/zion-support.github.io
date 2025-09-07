@@ -120,53 +120,53 @@ const toggleDropdown = (setActiveDropdown(activeDropdown === dropdown ? null : d
  ;
   return (: 'bg-transparent';
     }`}>;
-      <div className="max-w-7xl mx-auto px-6" />;
-        <div className="flex items-center justify-between h-20" />;
+      <div className='max-w-7xl mx-auto px-6' />;
+        <div className='flex items-center justify-between h-20' />;
           {/* Logo */}
           {/* Desktop Navigation */}
-          <div className="hidden lg:flex items-center space-x-8" />;
+          <div className='hidden lg:flex items-center space-x-8' />;
             {/* Services Dropdown */}
-            <div className="relative" />;
+            <div className='relative' />;
               <button;
                 onClick={() = /> toggleDropdown('services')}
               {activeDropdown === 'services' && (<motion.div;
-                className="flex items-center space-x-1 text-white hover:text-blue-300 transition-colors";
+                className='flex items-center space-x-1 text-white hover:text-blue-300 transition-colors';
                />;}
                 <span />Services</span>;}
                 <ChevronDown className={`w-4 h-4 transition-transform ${activeDropdown === 'services' ? 'rotate-180' : ''}`} />;
               </button>;{activeDropdown === 'services' && (<motion&& motion.div;}
-                  initial={{ opacity: 0, y: 10 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  exit={{ opacity: 0, y: 10 }}
-                  className="absolute top-full left-0 mt-2 w-96 bg-white rounded-xl shadow-2xl border border-gray-200 py-6";
+                  initial={ opacity: 0, y: 10 }
+                  animate={ opacity: 1, y: 0 }
+                  exit={ opacity: 0, y: 10 }
+                  className='absolute top-full left-0 mt-2 w-96 bg-white rounded-xl shadow-2xl border border-gray-200 py-6';
                  />;
-                className="flex items-center space-x-1 text-white hover:text-blue-300 transition-colors">
+                className='flex items-center space-x-1 text-white hover:text-blue-300 transition-colors'>
 
                 <span />Services</span>;
                 <ChevronDown className={`w-4 h-4 transition-transform ${activeDropdown === 'services' ? 'rotate-180' : ''}`} />;
               </button>;{activeDropdown === 'services' && (<motion&& motion.div;}
-                  initial={{ opacity: 0, y: 10 ,}
+                  initial={ opacity: 0, y: 10 ,}
 }
-                  animate={{ opacity: 1, y: 0 ,}
+                  animate={ opacity: 1, y: 0 ,}
 }
-                  exit={{ opacity: 0, y: 10 ,}
+                  exit={ opacity: 0, y: 10 ,}
 }
-                  className="absolute top-full left-0 mt-2 w-96 bg-white rounded-xl shadow-2xl border border-gray-200 py-6" />
+                  className='absolute top-full left-0 mt-2 w-96 bg-white rounded-xl shadow-2xl border border-gray-200 py-6' />
 
-                  <div className="grid grid-cols-2 gap-4 px-6" />;
+                  <div className='grid grid-cols-2 gap-4 px-6' />;
                     {services.map((service) => (<Link;}
                         key={service.name}
                         href={service.href}
-                        className="group p-4 rounded-lg hover:bg-gray-50 transition-colors";
+                        className='group p-4 rounded-lg hover:bg-gray-50 transition-colors';
                         onClick={closeAllDropdowns}
                        />;
-                        <div className="flex items-start space-x-3" />;
-                          <service.icon className="w-6 h-6 text-blue-600 mt-1" />;
+                        <div className='flex items-start space-x-3' />;
+                          <service.icon className='w-6 h-6 text-blue-600 mt-1' />;
                           <div />;
-                            <h3 className="font-semibold text-gray-900 group-hover:text-blue-600" />;
+                            <h3 className='font-semibold text-gray-900 group-hover:text-blue-600' />;
                               {service.name}
                             </h3>;
-                            <p className="text-sm text-gray-600" />{service.description}</p>;
+                            <p className='text-sm text-gray-600' />{service.description}</p>;
                           </div>;
                         </div>;
                       </Link>;
@@ -176,50 +176,50 @@ const toggleDropdown = (setActiveDropdown(activeDropdown === dropdown ? null : d
               )}
             </div>;
             {/* Company Dropdown */}
-            <div className="relative" />;
+            <div className='relative' />;
               <button;
                 onClick={() = /> toggleDropdown('company')}
-                className="flex items-center space-x-1 text-white hover:text-blue-300 transition-colors";
+                className='flex items-center space-x-1 text-white hover:text-blue-300 transition-colors';
               >;
-                className="flex items-center space-x-1 text-white hover:text-blue-300 transition-colors">
+                className='flex items-center space-x-1 text-white hover:text-blue-300 transition-colors'>
 
                 <span />Company</span>;
                 <ChevronDown className={`w-4 h-4 transition-transform ${activeDropdown === 'company' ? 'rotate-180' : ''}`} />;
               </button>;
               {activeDropdown === 'company' && ({activeDropdown === 'services' && (<motion.div;
-                className="flex items-center space-x-1 text-white hover:text-blue-300 transition-colors";
+                className='flex items-center space-x-1 text-white hover:text-blue-300 transition-colors';
                />;}
                 <span />Services</span>;}
                 <ChevronDown className={`w-4 h-4 transition-transform ${activeDropdown === 'services' ? 'rotate-180' : ''}`} />;
               </button>;{activeDropdown === 'services' && (<motion&& motion.div;}
-                  initial={{ opacity: 0, y: 10 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  exit={{ opacity: 0, y: 10 }}
-                className="flex items-center space-x-1 text-white hover:text-blue-300 transition-colors" />
+                  initial={ opacity: 0, y: 10 }
+                  animate={ opacity: 1, y: 0 }
+                  exit={ opacity: 0, y: 10 }
+                className='flex items-center space-x-1 text-white hover:text-blue-300 transition-colors' />
 
                 <span />Services</span>;
                 <ChevronDown className={`w-4 h-4 transition-transform ${activeDropdown === 'services' ? 'rotate-180' : ''}`} />;
               </button>;{activeDropdown === 'services' && (<motion&& motion.div;}
-                  initial={{ opacity: 0, y: 10 ,}
+                  initial={ opacity: 0, y: 10 ,}
 }
-                  animate={{ opacity: 1, y: 0 ,}
+                  animate={ opacity: 1, y: 0 ,}
 }
-                  exit={{ opacity: 0, y: 10 ,}
+                  exit={ opacity: 0, y: 10 ,}
 }
-                  className="absolute top-full left-0 mt-2 w-96 bg-white rounded-xl shadow-2xl border border-gray-200 py-6" />;
-                  <div className="grid grid-cols-2 gap-4 px-6" />;
+                  className='absolute top-full left-0 mt-2 w-96 bg-white rounded-xl shadow-2xl border border-gray-200 py-6' />;
+                  <div className='grid grid-cols-2 gap-4 px-6' />;
                     {services && services.map((service) => (<Link;}
                         key={service && service.name}
                         href={service && service.href}
-                        className="group p-4 rounded-lg hover:bg-gray-50 transition-colors";
+                        className='group p-4 rounded-lg hover:bg-gray-50 transition-colors';
                         onClick={closeAllDropdowns} />;
-                        <div className="flex items-start space-x-3" />;
-                          <service && service.icon className="w-6 h-6 text-blue-600 mt-1" />;
+                        <div className='flex items-start space-x-3' />;
+                          <service && service.icon className='w-6 h-6 text-blue-600 mt-1' />;
                           <div />;
-                            <h3 className="font-semibold text-gray-900 group-hover:text-blue-600" />;
+                            <h3 className='font-semibold text-gray-900 group-hover:text-blue-600' />;
                               {service && service.name}
                             </h3>;
-                            <p className="text-sm text-gray-600" />{service && service.description}</p>;
+                            <p className='text-sm text-gray-600' />{service && service.description}</p>;
                           </div>;
                         </div>;
                       </Link>;
@@ -228,28 +228,28 @@ const toggleDropdown = (setActiveDropdown(activeDropdown === dropdown ? null : d
                 </motion && motion.div>;
               )}
             {/* Company Dropdown */}
-            <div className="relative" />;
+            <div className='relative' />;
               <button;
                 onClick={() = /> toggleDropdown('company')}
-                  initial={{ opacity: 0, y: 10 ,}
+                  initial={ opacity: 0, y: 10 ,}
 }
-                  animate={{ opacity: 1, y: 0 ,}
+                  animate={ opacity: 1, y: 0 ,}
 }
-                  exit={{ opacity: 0, y: 10 ,}
+                  exit={ opacity: 0, y: 10 ,}
 }
-                  className="absolute top-full left-0 mt-2 w-80 bg-white rounded-xl shadow-2xl border border-gray-200 py-6">;
-                  <div className="space-y-2 px-6" />;
+                  className='absolute top-full left-0 mt-2 w-80 bg-white rounded-xl shadow-2xl border border-gray-200 py-6'>;
+                  <div className='space-y-2 px-6' />;
                     {company && company.map((item) => (<Link;}
                         key={item && item.name}
                         href={item && item.href}
-                        className="group flex items-start space-x-3 p-3 rounded-lg hover:bg-gray-50 transition-colors";
+                        className='group flex items-start space-x-3 p-3 rounded-lg hover:bg-gray-50 transition-colors';
                         onClick={closeAllDropdowns} />;
-                        <item && item.icon className="w-5 h-5 text-blue-600 mt-1" />;
+                        <item && item.icon className='w-5 h-5 text-blue-600 mt-1' />;
                         <div />;
-                          <h3 className="font-semibold text-gray-900 group-hover:text-blue-600" />;
+                          <h3 className='font-semibold text-gray-900 group-hover:text-blue-600' />;
                             {item && item.name}
                           </h3>;
-                          <p className="text-sm text-gray-600" />{item && item.description}</p>;
+                          <p className='text-sm text-gray-600' />{item && item.description}</p>;
                         </div>;
                       </Link>;
                     ))}
@@ -259,62 +259,62 @@ const toggleDropdown = (setActiveDropdown(activeDropdown === dropdown ? null : d
           {/* Mobile Menu Button */}
           <button;
             onClick={() = /> setIsOpen(!isOpen)}
-            className="lg: hidden p-2 text-white hover:text-blue-300 transition-colors">
+            className='lg: hidden p-2 text-white hover:text-blue-300 transition-colors'>
 
-            {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+            {isOpen ? <X className='w-6 h-6' /> : <Menu className='w-6 h-6' />}
         {/* Mobile Menu */}
         {isOpen && (<motion&& motion.div;}
-            initial={{ opacity: 0, height: 0 }}
-            animate={{ opacity: 1, height: 'auto' }}
-            exit={{ opacity: 0, height: 0 }}
+            initial={ opacity: 0, height: 0 }
+            animate={ opacity: 1, height: 'auto' }
+            exit={ opacity: 0, height: 0 }
         {/* Mobile Menu *,}
 }
         {isOpen && (<motion&& motion.div;}
-            initial={{ opacity: 0, height: 0 ,}
+            initial={ opacity: 0, height: 0 ,}
 }
-            animate={{ opacity: 1, height: 'auto' ,}
+            animate={ opacity: 1, height: 'auto' ,}
 }
-            exit={{ opacity: 0, height: 0 ,}
+            exit={ opacity: 0, height: 0 ,}
 }
-            className="lg:hidden bg-white rounded-xl shadow-2xl border border-gray-200 mt-2 py-6" />;
-            <div className="px-6 space-y-6" />;
+            className='lg:hidden bg-white rounded-xl shadow-2xl border border-gray-200 mt-2 py-6' />;
+            <div className='px-6 space-y-6' />;
               {/* Mobile Services */}
               <div />;
-                <h3 className="text-lg font-semibold text-gray-900 mb-4" />Services</h3>;
-                <div className="space-y-2" />;
+                <h3 className='text-lg font-semibold text-gray-900 mb-4' />Services</h3>;
+                <div className='space-y-2' />;
                   {services && services.map((service) => (<Link;}
                       key={service && service.name}
                       href={service && service.href}
-                      className="flex items-start space-x-3 p-3 rounded-lg hover:bg-gray-50 transition-colors";
+                      className='flex items-start space-x-3 p-3 rounded-lg hover:bg-gray-50 transition-colors';
                       onClick={closeAllDropdowns} />;
-                      <service && service.icon className="w-5 h-5 text-blue-600 mt-1" />;
+                      <service && service.icon className='w-5 h-5 text-blue-600 mt-1' />;
                       <div />;
-                        <h4 className="font-medium text-gray-900" />{service && service.name}</h4>;
-                        <p className="text-sm text-gray-600" />{service && service.description}</p>;
+                        <h4 className='font-medium text-gray-900' />{service && service.name}</h4>;
+                        <p className='text-sm text-gray-600' />{service && service.description}</p>;
                       </div>;
                     </Link>;
                   ))}
               {/* Mobile Company */}
               <div />;
-                <h3 className="text-lg font-semibold text-gray-900 mb-4" />Company</h3>;
-                <div className="space-y-2" />;
+                <h3 className='text-lg font-semibold text-gray-900 mb-4' />Company</h3>;
+                <div className='space-y-2' />;
                   {company && company.map((item) => (<Link;}
                       key={item && item.name}
                       href={item && item.href}
-                      className="flex items-start space-x-3 p-3 rounded-lg hover:bg-gray-50 transition-colors";
+                      className='flex items-start space-x-3 p-3 rounded-lg hover:bg-gray-50 transition-colors';
                       onClick={closeAllDropdowns} />;
-                      <item && item.icon className="w-5 h-5 text-blue-600 mt-1" />;
+                      <item && item.icon className='w-5 h-5 text-blue-600 mt-1' />;
                       <div />;
-                        <h4 className="font-medium text-gray-900" />{item && item.name}</h4>;
-                        <p className="text-sm text-gray-600" />{item && item.description}</p>;
+                        <h4 className='font-medium text-gray-900' />{item && item.name}</h4>;
+                        <p className='text-sm text-gray-600' />{item && item.description}</p>;
                       </div>;
                     </Link>;
                   ))}
               {/* Mobile CTA */}
-              <div className="pt-4 border-t border-gray-200" />;
+              <div className='pt-4 border-t border-gray-200' />;
                 <Link;
-                  href="/contact";
-                  className="block w-full text-center px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white rounded-lg font-semibold transition-colors";
+                  href='/contact';
+                  className='block w-full text-center px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white rounded-lg font-semibold transition-colors';
                   onClick={closeAllDropdowns} />;const EnhancedNavigation: React.FC = () => {const [is_open, setIsOpen] = useState (false)const [is_scrolled, setIsScrolled] = useState (false)const [active_dropdown, setActiveDropdown]  = useState < string | null>(null)useEffect (() => {const handle_scroll = () =>: any {setIsScrolled (window.scroll_y > 20)}window.addEventListener ('scroll', handle_scroll)return () => window.removeEventListener ('scroll', handle_scroll)}, [])const services = [;
     {name: 'All Solutions'}
   href: '/comprehensive - 2025 - services - showcase', icon: Globe, description: 'Complete collection of innovative solutions' },{name: 'AI Business Intelligence'}
@@ -375,56 +375,56 @@ const toggle_dropdown = (dropdown: string) =>: any {setActiveDropdown (active_dr
         : 'bg - transparent';}
     }`} />
 
-      <div className="max - w-7xl mx-auto px-6" />;
-        <div className="flex items - center justify-between h-20" />;
+      <div className='max - w-7xl mx-auto px-6' />;
+        <div className='flex items - center justify-between h-20' />;
           {/* Logo */}
-          <Link href="/" className="flex items-center space-x-3" on_click={closeAllDropdowns} />;
-            <div className="w - 10 h - 10 rounded - xl bg - gradient - to - br from - blue - 600 to - cyan - 600 flex items-center justify-center" />;
-              <Brain className="w - 6 h-6 text-white" />;
+          <Link href='/' className='flex items-center space-x-3' on_click={closeAllDropdowns} />;
+            <div className='w - 10 h - 10 rounded - xl bg - gradient - to - br from - blue - 600 to - cyan - 600 flex items-center justify-center' />;
+              <Brain className='w - 6 h-6 text-white' />;
             </div>;
-            <span className="text - xl font - bold bg - gradient - to - r from - white to - blue - 100 bg - clip-text text-transparent" />;
+            <span className='text - xl font - bold bg - gradient - to - r from - white to - blue - 100 bg - clip-text text-transparent' />;
               Zion Tech Group;
             </span>;
           </Link>;
           {/* Desktop Navigation */}
-          <div className="hidden lg:flex items-center space-x-8" />;
+          <div className='hidden lg:flex items-center space-x-8' />;
             {/* Services Dropdown */}
-            <div className="relative" />;
+            <div className='relative' />;
               <button;
                 on_click={() = /> toggle_dropdown ('services')}
-                className="flex items - center space - x-1 text - white hover:text - blue-300 transition-colors">
+                className='flex items - center space - x-1 text - white hover:text - blue-300 transition-colors'>
 
                 <span /> Services</span>;
                 <ChevronDown className={`w - 4 h - 4 transition - transform ${active_dropdown === 'services' ? 'rotate - 180' : ''}`} />;
               </button>;
               {active_dropdown === 'services' && (<motion.div;}
-                  initial={{ opacity: 0, coordinate_y: 10 }}
-                  animate={{ opacity: 1, coordinate_y: 0 }}
-                  exit={{ opacity: 0, coordinate_y: 10 }}
-                  className="absolute top - full left - 0 mt - 2 w - 96 bg - white rounded - xl shadow - 2xl border border - gray-200 py-6";
+                  initial={ opacity: 0, coordinate_y: 10 }
+                  animate={ opacity: 1, coordinate_y: 0 }
+                  exit={ opacity: 0, coordinate_y: 10 }
+                  className='absolute top - full left - 0 mt - 2 w - 96 bg - white rounded - xl shadow - 2xl border border - gray-200 py-6';
                  />;
-                  initial={{ opacity: 0, coordinate_y: 10 ,}
+                  initial={ opacity: 0, coordinate_y: 10 ,}
 }
-                  animate={{ opacity: 1, coordinate_y: 0 ,}
+                  animate={ opacity: 1, coordinate_y: 0 ,}
 }
-                  exit={{ opacity: 0, coordinate_y: 10 ,}
+                  exit={ opacity: 0, coordinate_y: 10 ,}
 }
-                  className="absolute top - full left - 0 mt - 2 w - 96 bg - white rounded - xl shadow - 2xl border border - gray-200 py-6">
+                  className='absolute top - full left - 0 mt - 2 w - 96 bg - white rounded - xl shadow - 2xl border border - gray-200 py-6'>
 
-                  <div className="grid grid - cols - 2 gap-4 px-6" />;
+                  <div className='grid grid - cols - 2 gap-4 px-6' />;
                     {services.map ((service) => (<Link;}
                         key={service.name}
                         href={service.href}
-                        className="group p - 4 rounded - lg hover:bg - gray-50 transition-colors";
+                        className='group p - 4 rounded - lg hover:bg - gray-50 transition-colors';
                         on_click={closeAllDropdowns}
                        />;
-                        <div className="flex items-start space-x-3" />;
-                          <service.icon className="w - 6 h - 6 text - blue-600 mt-1" />;
+                        <div className='flex items-start space-x-3' />;
+                          <service.icon className='w - 6 h - 6 text - blue-600 mt-1' />;
                           <div />;
-                            <h3 className="font - semibold text - gray - 900 group - hover:text-blue-600" />;
+                            <h3 className='font - semibold text - gray - 900 group - hover:text-blue-600' />;
                               {service.name}
                             </h3>;
-                            <p className="text - sm text-gray-600" />{service.description}</p>;
+                            <p className='text - sm text-gray-600' />{service.description}</p>;
                           </div>;
                         </div>;
                       </Link>))}
@@ -432,41 +432,41 @@ const toggle_dropdown = (dropdown: string) =>: any {setActiveDropdown (active_dr
                 </motion.div>)}
             </div>;
             {/* Company Dropdown */}
-            <div className="relative" />;
+            <div className='relative' />;
               <button;
                 on_click={() = /> toggle_dropdown ('company')}
-                className="flex items - center space - x-1 text - white hover:text - blue-300 transition-colors">
+                className='flex items - center space - x-1 text - white hover:text - blue-300 transition-colors'>
 
                 <span /> Company</span>;
                 <ChevronDown className={`w - 4 h - 4 transition - transform ${active_dropdown === 'company' ? 'rotate - 180' : ''}`} />;
               </button>;
               {active_dropdown === 'company' && (<motion.div;}
-                  initial={{ opacity: 0, coordinate_y: 10 }}
-                  animate={{ opacity: 1, coordinate_y: 0 }}
-                  exit={{ opacity: 0, coordinate_y: 10 }}
-                  className="absolute top - full left - 0 mt - 2 w - 80 bg - white rounded - xl shadow - 2xl border border - gray-200 py-6";
+                  initial={ opacity: 0, coordinate_y: 10 }
+                  animate={ opacity: 1, coordinate_y: 0 }
+                  exit={ opacity: 0, coordinate_y: 10 }
+                  className='absolute top - full left - 0 mt - 2 w - 80 bg - white rounded - xl shadow - 2xl border border - gray-200 py-6';
                  />;
-                  initial={{ opacity: 0, coordinate_y: 10 ,}
+                  initial={ opacity: 0, coordinate_y: 10 ,}
 }
-                  animate={{ opacity: 1, coordinate_y: 0 ,}
+                  animate={ opacity: 1, coordinate_y: 0 ,}
 }
-                  exit={{ opacity: 0, coordinate_y: 10 ,}
+                  exit={ opacity: 0, coordinate_y: 10 ,}
 }
-                  className="absolute top - full left - 0 mt - 2 w - 80 bg - white rounded - xl shadow - 2xl border border - gray-200 py-6">
+                  className='absolute top - full left - 0 mt - 2 w - 80 bg - white rounded - xl shadow - 2xl border border - gray-200 py-6'>
 
-                  <div className="space-y-2 px-6" />;
+                  <div className='space-y-2 px-6' />;
                     {company.map ((item) => (<Link;}
                         key={item.name}
                         href={item.href}
-                        className="group flex items - start space - x-3 p - 3 rounded - lg hover:bg - gray-50 transition-colors";
+                        className='group flex items - start space - x-3 p - 3 rounded - lg hover:bg - gray-50 transition-colors';
                         on_click={closeAllDropdowns}
                        />;
-                        <item.icon className="w - 5 h - 5 text - blue-600 mt-1" />;
+                        <item.icon className='w - 5 h - 5 text - blue-600 mt-1' />;
                         <div />;
-                          <h3 className="font - semibold text - gray - 900 group - hover:text-blue-600" />;
+                          <h3 className='font - semibold text - gray - 900 group - hover:text-blue-600' />;
                             {item.name}
                           </h3>;
-                          <p className="text - sm text-gray-600" />{item.description}</p>;
+                          <p className='text - sm text-gray-600' />{item.description}</p>;
                         </div>;
                       </Link>))}
                   </div>;
@@ -474,8 +474,8 @@ const toggle_dropdown = (dropdown: string) =>: any {setActiveDropdown (active_dr
             </div>;
             {/* CTA Button */}
             <Link;
-              href="/contact";
-              className="px - 6 py - 2 bg - blue - 600 hover:bg - blue - 700 text - white rounded - lg font-semibold transition-colors" />
+              href='/contact';
+              className='px - 6 py - 2 bg - blue - 600 hover:bg - blue - 700 text - white rounded - lg font-semibold transition-colors' />
 
               Get Started;
             </Link>;
@@ -483,69 +483,69 @@ const toggle_dropdown = (dropdown: string) =>: any {setActiveDropdown (active_dr
           {/* Mobile Menu Button */}
           <button;
             on_click={() = /> setIsOpen (!is_open)}
-            className="lg: hidden p - 2 text - white hover:text - blue-300 transition-colors">
+            className='lg: hidden p - 2 text - white hover:text - blue-300 transition-colors'>
 
-            {is_open ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" /,}
+            {is_open ? <X className='w-6 h-6' /> : <Menu className='w-6 h-6' /,}
 }
           </button />;
         </div>;
         {/* Mobile Menu */}
         {is_open && (<motion.div;}
-            initial={{ opacity: 0, height: 0 }}
-            animate={{ opacity: 1, height: 'auto' }}
-            exit={{ opacity: 0, height: 0 }}
-            className="lg:hidden bg - white rounded - xl shadow - 2xl border border - gray - 200 mt-2 py-6";
+            initial={ opacity: 0, height: 0 }
+            animate={ opacity: 1, height: 'auto' }
+            exit={ opacity: 0, height: 0 }
+            className='lg:hidden bg - white rounded - xl shadow - 2xl border border - gray - 200 mt-2 py-6';
            />;
-            initial={{ opacity: 0, height: 0 ,}
+            initial={ opacity: 0, height: 0 ,}
 }
-            animate={{ opacity: 1, height: 'auto' ,}
+            animate={ opacity: 1, height: 'auto' ,}
 }
-            exit={{ opacity: 0, height: 0 ,}
+            exit={ opacity: 0, height: 0 ,}
 }
-            className="lg:hidden bg - white rounded - xl shadow - 2xl border border - gray - 200 mt-2 py-6">
+            className='lg:hidden bg - white rounded - xl shadow - 2xl border border - gray - 200 mt-2 py-6'>
 
-            <div className="px-6 space-y-6" />;
+            <div className='px-6 space-y-6' />;
               {/* Mobile Services */}
               <div />;
-                <h3 className="text - lg font - semibold text - gray-900 mb-4" />Services</h3>;
-                <div className="space-y-2" />;
+                <h3 className='text - lg font - semibold text - gray-900 mb-4' />Services</h3>;
+                <div className='space-y-2' />;
                   {services.map ((service) => (<Link;}
                       key={service.name}
                       href={service.href}
-                      className="flex items - start space - x-3 p - 3 rounded - lg hover:bg - gray-50 transition-colors";
+                      className='flex items - start space - x-3 p - 3 rounded - lg hover:bg - gray-50 transition-colors';
                       on_click={closeAllDropdowns}
                      />;
-                      <service.icon className="w - 5 h - 5 text - blue-600 mt-1" />;
+                      <service.icon className='w - 5 h - 5 text - blue-600 mt-1' />;
                       <div />;
-                        <h4 className="font - medium text-gray-900" />{service.name}</h4>;
-                        <p className="text - sm text-gray-600" />{service.description}</p>;
+                        <h4 className='font - medium text-gray-900' />{service.name}</h4>;
+                        <p className='text - sm text-gray-600' />{service.description}</p>;
                       </div>;
                     </Link>))}
                 </div>;
               </div>;
               {/* Mobile Company */}
               <div />;
-                <h3 className="text - lg font - semibold text - gray-900 mb-4" />Company</h3>;
-                <div className="space-y-2" />;
+                <h3 className='text - lg font - semibold text - gray-900 mb-4' />Company</h3>;
+                <div className='space-y-2' />;
                   {company.map ((item) => (<Link;}
                       key={item.name}
                       href={item.href}
-                      className="flex items - start space - x-3 p - 3 rounded - lg hover:bg - gray-50 transition-colors";
+                      className='flex items - start space - x-3 p - 3 rounded - lg hover:bg - gray-50 transition-colors';
                       on_click={closeAllDropdowns}
                      />;
-                      <item.icon className="w - 5 h - 5 text - blue-600 mt-1" />;
+                      <item.icon className='w - 5 h - 5 text - blue-600 mt-1' />;
                       <div />;
-                        <h4 className="font - medium text-gray-900" />{item.name}</h4>;
-                        <p className="text - sm text-gray-600" />{item.description}</p>;
+                        <h4 className='font - medium text-gray-900' />{item.name}</h4>;
+                        <p className='text - sm text-gray-600' />{item.description}</p>;
                       </div>;
                     </Link>))}
                 </div>;
               </div>;
               {/* Mobile CTA */}
-              <div className="pt - 4 border - t border-gray-200" />;
+              <div className='pt - 4 border - t border-gray-200' />;
                 <Link;
-                  href="/contact";
-                  className="block w - full text - center px - 6 py - 3 bg - blue - 600 hover:bg - blue - 700 text - white rounded - lg font-semibold transition-colors";
+                  href='/contact';
+                  className='block w - full text - center px - 6 py - 3 bg - blue - 600 hover:bg - blue - 700 text - white rounded - lg font-semibold transition-colors';
                   on_click={closeAllDropdowns}
                  />;
                   Get Started;

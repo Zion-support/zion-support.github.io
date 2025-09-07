@@ -16,17 +16,17 @@ title=\"Expanded Services Catalog - Zion Tech Group\"
       <section className=\"bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-16\" />
         <div className=\"container mx-auto px-4 text-center\" />
           <motion.h1;
-initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
+initial={ opacity: 0, y: 20 }
+            animate={ opacity: 1, y: 0 }
+            transition={ duration: 0.6 }
             className=\"text-4xl md:text-5xl font-bold mb-4\"
            />
             Expanded Services & Solutions;
           </motion.h1>
           <motion.p;
-initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.1 }}
+initial={ opacity: 0, y: 20 }
+            animate={ opacity: 1, y: 0 }
+            transition={ duration: 0.6, delay: 0.1 }
             className=\"text-lg md:text-xl text-gray-200 max-w-3xl mx-auto\"
            />
             Explore our full catalog of Micro SaaS products, enterprise IT;
@@ -309,17 +309,17 @@ title=\"Expanded Services Catalog - Zion Tech Group\"
       <section className=\"bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-16\" />
         <div className=\"container mx-auto px-4 text-center\" />
           <motion.h1;
-initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
+initial={ opacity: 0, y: 20 }
+            animate={ opacity: 1, y: 0 }
+            transition={ duration: 0.6 }
             className=\"text-4xl md:text-5xl font-bold mb-4\"
            />
             Expanded Services & Solutions;
           </motion.h1>
           <motion.p;
-initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.1 }}
+initial={ opacity: 0, y: 20 }
+            animate={ opacity: 1, y: 0 }
+            transition={ duration: 0.6, delay: 0.1 }
             className=\"text-lg md:text-xl text-gray-200 max-w-3xl mx-auto\"
            />
             Explore our full catalog of Micro SaaS products, enterprise IT;
@@ -606,17 +606,17 @@ const ExpandedServicesPage: NextPage = () => {const micro = getServicesByCategor
       <section className=\"bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-16\" />;
         <div className=\"container mx-auto px-4 text-center\" />;
           <motion.h1;
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
+            initial={ opacity: 0, y: 20 }
+            animate={ opacity: 1, y: 0 }
+            transition={ duration: 0.6 }
             className=\"text-4xl md:text-5xl font-bold mb-4\";
            />;
             Expanded Services & Solutions;
           </motion.h1>;
           <motion.p;
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.1 }}
+            initial={ opacity: 0, y: 20 }
+            animate={ opacity: 1, y: 0 }
+            transition={ duration: 0.6, delay: 0.1 }
             className=\"text-lg md:text-xl text-gray-200 max-w-3xl mx-auto\";
            />;
             Explore our full catalog of Micro SaaS products, enterprise IT;

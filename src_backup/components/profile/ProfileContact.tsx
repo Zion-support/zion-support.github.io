@@ -4,7 +4,11 @@ profileType: 'service' | 'talent'
 export function ProfileContact({ email, profileName, profileType }: ProfileContactProps) {
 
       <form onSubmit={handleSendMessage}>
+<<<<<<< HEAD
+        <div className='space-y-4'>
+=======
         <div className="space-y-4">
+>>>>>>> origin/resolved-merge-conflicts
           <div>
             <Input
 

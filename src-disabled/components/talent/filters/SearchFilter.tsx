@@ -63,7 +63,6 @@ export function SearchFilter({ searchTerm, setSearchTerm }: SearchFilterProps) {
   );
 }
 import { Input } from '@/components / ui / input';
-import { SearchIcon } from 'lucide-react';
 import { SearchFilterProps } from '@/types / filters';
   return (
     <div className='mb - 6'>;

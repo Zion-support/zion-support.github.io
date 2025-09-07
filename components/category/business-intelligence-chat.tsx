@@ -30,12 +30,14 @@ const BusinessIntelligenceChat: NextPage = () => {;
 }
 export default BusinessIntelligenceChat;
 
+
 import type { NextPage } from "next";
 import Head from "next/head";
 import Link from "next/link";
 import type { NextPage } from 'next';
 import Head from 'next/head';
 import Link from 'next/link';
+
 
 const BusinessIntelligenceChat: NextPage = () => {
   return (
@@ -48,10 +50,12 @@ const BusinessIntelligenceChat: NextPage = () => {
 
         <title>BusinessIntelligenceChat - Zion Tech Solutions</title>
 
+
 import type { NextPage } from './next';
 import Head from './next / head';
+
 import Link from './next / link';
-const BusinessIntelligenceChat: NextPage = () => {
+const BusinessIntelligenceChat: NextPage = () => {}
   return (
     <div>;
       <Head>;
@@ -71,4 +75,6 @@ const BusinessIntelligenceChat: NextPage = () => {
 ;
 export default BusinessIntelligenceChat;
 ;
+
+        <title>BusinessIntelligenceChat - Zion Tech Solutions</title>
 

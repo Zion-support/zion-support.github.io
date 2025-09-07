@@ -306,9 +306,9 @@ variant='outline';
 
                     isValid ? 'bg-green-500/20 text-green-400' : 'bg-red-500/20 text-red-400'
                   {showLineNumbers && (}
-                    <div className='absolute left - 0 top - 0 bottom - 0 w - 12 bg - gray - 700 border - r border - gray - 600 text - xs text - gray - 400 p - 2 font - mono overflow - hidden' />                      {getLineNumbers (input_json)}              <div className="space - y-4" />;
+                    <div className='absolute left - 0 top - 0 bottom - 0 w - 12 bg - gray - 700 border - r border - gray - 600 text - xs text - gray - 400 p - 2 font - mono overflow - hidden' />                      {getLineNumbers (input_json)}              <div className='space - y-4' />;
 
-                <div className="relative" />;
+                <div className='relative' />;
                   {showLineNumbers && (</div>;}
                   }`}>;
                   </span>;
@@ -316,9 +316,9 @@ variant='outline';
               </div>;
               <div className='space-y-4' />;
                 <div className='relative' />;
-                  {showLineNumbers && (<div className='absolute left-0 top-0 bottom-0 w-12 bg-gray-700 border-r border-gray-600 text-xs text-gray-400 p-2 font-mono overflow-hidden' />                      {getLineNumbers(inputJson)}              <div className="space-y-4" />;
-                <div className="relative" />;
-                  {showLineNumbers && (<div className="absolute left-0 top-0 bottom-0 w-12 bg-gray-700 border-r border-gray-600 text-xs text-gray-400 p-2 font-mono overflow-hidden" />;}
+                  {showLineNumbers && (<div className='absolute left-0 top-0 bottom-0 w-12 bg-gray-700 border-r border-gray-600 text-xs text-gray-400 p-2 font-mono overflow-hidden' />                      {getLineNumbers(inputJson)}              <div className='space-y-4' />;
+                <div className='relative' />;
+                  {showLineNumbers && (<div className='absolute left-0 top-0 bottom-0 w-12 bg-gray-700 border-r border-gray-600 text-xs text-gray-400 p-2 font-mono overflow-hidden' />;}
                     </div>;}
                   )}
 

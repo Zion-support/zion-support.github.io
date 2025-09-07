@@ -1,3 +1,12 @@
+import React, { useState } from 'react';
+import Link from 'next/link';
+import { Menu, X, ChevronDown } from 'lucide-react';
+
+const EnhancedNavigation: React.FC = () => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [servicesOpen, setServicesOpen] = useState(false);
+
+
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
@@ -9,67 +18,76 @@ interface EnhancedNavigationProps {
   className?: string
 }
 
-const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({ className = '' }) => {
-  const [isOpen, setIsOpen] = useState($2);
-  const [isScrolled, setIsScrolled] = useState($2);
-  const [activeDropdown, setActiveDropdown] = useState<string | null>(null),
 
+
+
+
+const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({
+  className = ""
+}) => {
+  const [isOpen, setIsOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+  const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
   useEffect(() => {
-    const handleScroll = $2;
-    window.addEventListener($2);
-    return () => window.removeEventListener('scroll', handleScroll)
-  }, []),
-
-  const navigationItems = $2;
-      href: '/services',
-      icon: <Brain className = $2;
-      dropdown: [
-        { name: 'AI & Machine Learning', href: '/services?category=ai-ml', icon: <Brain className = $2;
-        { name: 'Quantum Computing', href: '/services?category=quantum', icon: <Rocket className = $2;
-        { name: 'Space Technology', href: '/services?category=space', icon: <Globe className = $2;
-        { name: 'Biotech & Healthcare', href: '/services?category=biotech', icon: <Dna className = $2;
-        { name: 'Financial Services', href: '/services?category=finance', icon: <DollarSign className = $2;
-        { name: 'Cybersecurity', href: '/services?category=security', icon: <Lock className = $2;
-        { name: 'IoT & Smart Devices', href: '/services?category=iot', icon: <Wifi className = $2;
-        { name: 'Logistics & Supply Chain', href: '/services?category=logistics', icon: <Truck className = $2;
-        { name: 'Metaverse & Gaming', href: '/services?category=metaverse', icon: <Gamepad2 className = $2;
-        { name: 'Robotics & Automation', href: '/services?category=robotics', icon: <Bot className = $2;
-        { name: 'Manufacturing', href: '/services?category=manufacturing', icon: <Factory className = $2;
-        { name: 'Autonomous Vehicles', href: '/services?category=vehicles', icon: <Car className = $2;
-      hasDropdown: true,
-      dropdownItems: [
-        { name: 'AI & Machine Learning', href: '/services?category = $2;
-        { name: 'Quantum Computing', href: '/services?category = $2;
-        { name: 'Space Technology', href: '/services?category = $2;
-        { name: 'Biotech & Healthcare', href: '/services?category = $2;
-        { name: 'Financial Services', href: '/services?category = $2;
-        { name: 'Cybersecurity', href: '/services?category = $2;
-        { name: 'Edge Computing', href: '/services?category = $2;
-        { name: 'Blockchain', href: '/services?category = $2;
-        { name: 'View All Services', href: '/services' }
-      ]
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 20);
+    }
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+  const navigationItems = [
+    {
+      name: "Services"
+      href: "/services"
+      icon: <Brain className="w-4 h-4" />
     },
     {
-      name: 'Solutions',
-      href: '/solutions',
-      hasDropdown: true,
+      name: "Solutions"
+      href: "/solutions"
+      hasDropdown: true
       dropdownItems: [
-        { name: 'Enterprise Solutions', href: '/solutions?type = $2;
-        { name: 'Startup Solutions', href: '/solutions?type = $2;
-        { name: 'Government Solutions', href: '/solutions?type = $2;
-        { name: 'Healthcare Solutions', href: '/solutions?type = $2;
-        { name: 'Financial Solutions', href: '/solutions?type = $2;
-    { name: 'Pricing', href: '/pricing' },
-    { name: 'Resources', href: '/resources' },
-    { name: 'Blog', href: '/blog' },
-    { name: 'Contact', href: '/contact' }
-  ],
+        { name: "Enterprise Solutions", href: "/solutions?type=enterprise" }
+        { name: "Startup Solutions", href: "/solutions?type=startup" }
+        { name: "Government Solutions", href: "/solutions?type=government" }
+        { name: "Healthcare Solutions", href: "/solutions?type=healthcare" }
+        { name: "Financial Solutions", href: "/solutions?type=financial" }
+      ]
+    }
+    { name: "Pricing", href: "/pricing" }
+    { name: "Resources", href: "/resources" }
+    { name: "Blog", href: "/blog" }
+    { name: "Contact", href: "/contact" }
+  ];
 
-  const contactInfo = $2;
-    email: 'kleber@ziontechgroup.com',
-    address: '364 E Main St STE 1008 Middletown DE 19709',
-    website: 'https://ziontechgroup.com'
-  },
+
+
+
+
+  const contactInfo = {
+    mobile: "+1 302 464 0950"
+    email: "kleber@ziontechgroup.com"
+    address: "364 E Main St STE 1008 Middletown DE 19709"
+    website: "https://ziontechgroup.com"
+  }
+
+const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({;
+  className = "",;
+}) => {;
+const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({
+  className = ""
+}) => {
+
+  const [isOpen, setIsOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+  const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
+  useEffect(() => {;
+    const handleScroll = () => {;
+      setIsScrolled(window && window.scrollY > 20);
+    };
+    window && window.addEventListener("scroll", handleScroll);
+    return () => window && window.removeEventListener("scroll", handleScroll);
+  }, []);
+
 
   return (
     <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
@@ -102,10 +120,11 @@ const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({ className = '' 
             </Link>
           </motion.div>
 
+
           {/* Desktop Navigation */}
-          <div className="hidden lg:flex items-center space-x-8">
-            {navigationItems.map((item, index) => (
-              <motion.div
+          <div className="hidden lg:flex items - center space - x-8">;
+            {navigation_items.map ((item, index) => (
+              <motion.div;
                 key={item.name}
                 initial={{ opacity: 0, y: -20 }}
                 animate={{ opacity: 1, y: 0}}
@@ -175,29 +194,21 @@ const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({ className = '' 
             <motion.button
               initial={{ opacity: 0, scale: 0.8 }}
               animate={{ opacity: 1, scale: 1}}
-              transition={{ duration: 0.5, delay: 0.7 }}
-              className="p-2 text-gray-400 hover:text-cyan-400 hover:bg-cyan-500/10 rounded-lg transition-all duration-300 relative"
-            >
-              <Bell className="w-5 h-5" />
-              <div className="absolute top-1 right-1 w-2 h-2 bg-red-500 rounded-full animate-pulse" />
-            </motion.button>
 
             {/* CTA Button */}
-            <motion.div
-              initial={{ opacity: 0, scale: 0.8 }}
-              animate={{ opacity: 1, scale: 1}}
-              transition={{ duration: 0.5, delay: 0.8 }}
-            >
+            <motion&& motion.div
+              initial={{ opacity: 0, scale: 0 && 0.8 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0 && 0.5, delay: 0 && 0.8 }}>;
               <Link
                 href="/contact"
-                className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white px-6 py-2 rounded-full font-medium transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-cyan-500/25"
-              >
-                Get Started
-              </Link>
-            </motion.div>
-          </div>
-
+                className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white px-6 py-2 rounded-full font-medium transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-cyan-500/25">;
+                Get Started;
+              </Link>;
+            </motion && motion.div>;
+          </div>;
           {/* Mobile menu button */}
+
           <motion.button
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1}}
@@ -214,6 +225,28 @@ const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({ className = '' 
       <AnimatePresence>
         {isOpen && (
           <motion.div
+            initial={{ opacity: 0, height: 0 }}
+            animate={{ opacity: 1, height: "auto" }}
+            exit={{ opacity: 0, height: 0 }}
+            transition={{ duration: 0.3 }}
+            className="lg:hidden bg-black/95 backdrop-blur-xl border-t border-cyan-500/20"
+          >
+            <div className="px-4 py-6 space-y-4">
+              {/* Search */}
+              <div className="relative">
+                <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
+                <input
+                  type="text"
+                  placeholder="Search services..."
+                  className="w-full pl-10 pr-4 py-3 bg-white/10 border border-cyan-500/30 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-500"
+                />
+              </div>
+              {/* Navigation Items */}
+              {navigationItems.map((item) => (
+                <div key={item.name} className="space-y-2">
+                  <Link
+                    href={item.href}
+
             initial={{ opacity: 0, height: 0}}
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0}}

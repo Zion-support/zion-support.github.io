@@ -1,11 +1,8 @@
-const nextJest = require('next/jest')
+const nextJest = require('next/jest');
 
-const createJestConfig = nextJest({
-  // Provide the path to your Next.js app to load next.config.js and .env files
-  dir: './'})
 
-// Add any custom config to be passed to Jest
 const customJestConfig = {
+
   setupFilesAfterEnv: ['<rootDir>/jest.setup.js'],
   testEnvironment: 'jsdom',
   testPathIgnorePatterns: [
@@ -80,34 +77,91 @@ const customJestConfig = {
     '<rootDir>/scripts/',
     '<rootDir>/tests/',
     '<rootDir>/test-results/',
-    '<rootDir>/test-reports/'],
+    '<rootDir>/test-reports/',
+  ],
   moduleNameMapper: {
-    '^@/(.*)$': '<rootDir>/$1'},
+    '^@/(.*)$': '<rootDir>/$1',
+    '\\.(css|less|scss|sass)$': 'identity-obj-proxy'
+  },
   collectCoverageFrom: [
     '**/*.{js,jsx,ts,tsx}',
     '!**/*.d.ts',
     '!**/node_modules/**',
-    '!**/.next/**',
-    '!**/dist/**',
-    '!**/build/**',
-    '!**/out/**',
-    '!**/coverage/**',
-    '!**/*.config.js',
-    '!**/*.config.cjs',
-    '!**/*.config.mjs',
-    '!**/jest.setup.js',
-    '!**/next-env.d.ts'],
+  ],
   testMatch: [
+    '<rootDir>/tests/**/*.{js,jsx,ts,tsx}',
     '<rootDir>/**/__tests__/**/*.{js,jsx,ts,tsx}',
-    '<rootDir>/**/*.{test,spec}.{js,jsx,ts,tsx}'],
+    '<rootDir>/**/*.{test,spec}.{js,jsx,ts,tsx}',
+  ],
   transform: {
-    '^.+\\.(js|jsx|ts|tsx)$': ['babel-jest', { presets: ['next/babel'] }]},
+    '^.+\\.(js|jsx|ts|tsx)$': ['babel-jest', { presets: ['next/babel'] }],
+  },
   transformIgnorePatterns: [
     '/node_modules/',
-    '^.+\\.module\\.(css|sass|scss)$'],
+    '^.+\\.module\\.(css|sass|scss)$',
+  ],
   moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx', 'json', 'node'],
   verbose: true,
-  passWithNoTests: true}
+  passWithNoTests: true,
+}
+  testMatch: [
+    '**/__tests__/**/*.(js|jsx|ts|tsx)',
+    '**/*.(test|spec).(js|jsx|ts|tsx)'
+  ],
+  testPathIgnorePatterns: [
+    '/node_modules/',
+    '/.next/',
+    '/dist/',
+    '/build/',
+    '/out/'
+  ],
+  moduleNameMapping: {
+    '^@/(.*)$': '<rootDir>/src/$1',
+  },
+  testTimeout: 30000,
+  passWithNoTests: true
+};
 
+
+module.exports = createJestConfig(customJestConfig)
+  testMatch: [
+    '**/__tests__/**/*.(test|spec).(js|jsx|ts|tsx)',
+    '**/*.(test|spec).(js|jsx|ts|tsx)',
+  ],
+  testPathIgnorePatterns: [
+    '/node_modules/',
+    '/.next/',
+    '/out/',
+    '/dist/',
+    '/recovered-branches/',
+    '/src_backup/',
+    '/e2e/',
+  ],
+  collectCoverageFrom: [
+    'src/**/*.{js,jsx,ts,tsx}',
+    'components/**/*.{js,jsx,ts|tsx}',
+    '!src/**/*.d.ts',
+    '!src/**/*.stories.{js,jsx,ts,tsx}',
+  ],
+  moduleNameMapper: {
+    '^@/(.*)$': '<rootDir>/$1',
+  },
+  transform: {
+    '^.+\\.(js|jsx|ts|tsx)$': ['babel-jest', { presets: ['next/babel'] }],
+  },
+  transformIgnorePatterns: [
+    '/node_modules/',
+    '^.+\\.module\\.(css|sass|scss)$',
+  ],
+  moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx', 'json', 'node'],
+  verbose: true,
+  collectCoverage: false,
+  coverageDirectory: 'coverage',
+  coverageReporters: ['text', 'lcov', 'html'],
+  testTimeout: 10000,
+};
+
+module.exports = createJestConfig(customJestConfig);
+module.exports = createJestConfig(customJestConfig)
 // createJestConfig is exported this way to ensure that next/jest can load the Next.js config which is async
 module.exports = createJestConfig(customJestConfig)

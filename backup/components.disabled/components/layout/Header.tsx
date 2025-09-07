@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import Link from 'next/link';
+import React, { useState } from 'react;
+import Link from next/link';
 import {
   Brain,
   ChevronDown,
@@ -10,80 +10,73 @@ import {
   Mail,
   Menu,
   Phone,
-  X,
-} from 'lucide-react';
+  X} from 'lucide-react;
 
 const Header: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isServicesOpen, setIsServicesOpen] = useState(false);
   const services = [
     {
-      name: 'AI Services',
-      href: '/ai-services',
+      name: AI Services',
+      href: '/ai-services,
       icon: Brain,
-      description: 'Artificial Intelligence Solutions',
-    },
+      description: Artificial Intelligence Solutions'},
     {
-      name: 'IT Services',
-      href: '/it-services',
+      name: 'IT Services,
+      href: /it-services',
       icon: Cloud,
-      description: 'Information Technology Services',
-    },
+      description: 'Information Technology Services},
     {
-      name: 'Micro SaaS',
-      href: '/micro-saas',
+      name: Micro SaaS',
+      href: '/micro-saas,
       icon: Code,
-      description: 'Custom Software Solutions',
-    },
+      description: Custom Software Solutions'},
     {
-      name: 'All Services',
-      href: '/services',
+      name: 'All Services,
+      href: /services',
       icon: null,
-      description: 'Complete Service Portfolio',
-    },
-  ];
+      description: 'Complete Service Portfolio}];
   const navigation = [
-    { name: 'Home', href: '/' },
-    { name: 'Services', href: '/services', hasDropdown: true },
-    { name: 'Pricing', href: '/pricing-guide' },
-    { name: 'About', href: '/about' },
-    { name: 'Contact', href: '/contact' },
-  ];
+    { name: Home', href: '/ },
+    { name: Services', href: '/services, hasDropdown: true },
+    { name: Pricing', href: '/pricing-guide },
+    { name: About', href: '/about },
+    { name: Contact', href: '/contact }];
   return (
-    <header className="bg-white shadow-sm sticky top-0 z-50">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-16">
+    <header className="bg-white shadow-sm sticky top-0 z-50>
+      <div className=max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex justify-between items-center h-16>
           {/* Logo */}
-          <div className="flex-shrink-0">
-            <Link href="/" className="flex items-center space-x-2">
-              <div className="w-8 h-8 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg flex items-center justify-center">
-                <Brain className="w-5 h-5 text-white" />
+          <div className=flex-shrink-0">
+            <Link href="/ className=flex items-center space-x-2">
+              <div className="w-8 h-8 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg flex items-center justify-center>
+                <Brain className=w-5 h-5 text-white" />
               </div>
-              <span className="text-xl font-bold text-gray-900">
+              <span className="text-xl font-bold text-gray-900>
                 Zion Tech Group
               </span>
             </Link>
           </div>
 
           {/* Desktop Navigation */}
-          <nav className="hidden lg:block">
-            <div className="ml-10 flex items-baseline space-x-8">
+          <nav className=hidden lg:block">
+            <div className="ml-10 flex items-baseline space-x-8>
               {navigation.map(item => (
-                <div key={item.name} className="relative">
+                <div key={item.name} className=relative">
                   {item.hasDropdown ? (
                     <div
-                      className="relative"
+                      className="relative
                       onMouseEnter={() => setIsServicesOpen(true)}
                       onMouseLeave={() => setIsServicesOpen(false)}
                     >
-                      <button className="text-gray-900 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium flex items-center">
+                      <button className=text-gray-900 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium flex items-center">
                         {item.name}
-                        <ChevronDown className="ml-1 h-4 w-4" />
+                        <ChevronDown className="ml-1 h-4 w-4 />
                       </button>
                       {isServicesOpen && (
-                        <div className="absolute top-full left-0 mt-2 w-80 bg-white rounded-lg shadow-lg border border-gray-200 py-2 z-50">
-                          <div className="px-4 py-2 border-b border-gray-100">
-                            <h3 className="text-sm font-semibold text-gray-900">
+                        <div className=absolute top-full left-0 mt-2 w-80 bg-white rounded-lg shadow-lg border border-gray-200 py-2 z-50">
+                          <div className="px-4 py-2 border-b border-gray-100>
+                            <h3 className=text-sm font-semibold text-gray-900">
                               Our Services
                             </h3>
                           </div>
@@ -91,18 +84,18 @@ const Header: React.FC = () => {
                             <Link
                               key={service.name}
                               href={service.href}
-                              className="flex items-center px-4 py-3 hover:bg-gray-50 transition-colors"
+                              className="flex items-center px-4 py-3 hover:bg-gray-50 transition-colors
                             >
                               {service.icon && (
-                                <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-blue-100 mr-3">
-                                  <service.icon className="h-4 w-4 text-blue-600" />
+                                <div className=flex h-8 w-8 items-center justify-center rounded-lg bg-blue-100 mr-3">
+                                  <service.icon className="h-4 w-4 text-blue-600 />
                                 </div>
                               )}
                               <div>
-                                <div className="text-sm font-medium text-gray-900">
+                                <div className=text-sm font-medium text-gray-900">
                                   {service.name}
                                 </div>
-                                <div className="text-xs text-gray-500">
+                                <div className="text-xs text-gray-500>
                                   {service.description}
                                 </div>
                               </div>
@@ -114,7 +107,7 @@ const Header: React.FC = () => {
                   ) : (
                     <Link
                       href={item.href}
-                      className="text-gray-900 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium"
+                      className=text-gray-900 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium"
                     >
                       {item.name}
                     </Link>
@@ -125,31 +118,31 @@ const Header: React.FC = () => {
           </nav>
 
           {/* Contact Info & CTA */}
-          <div className="hidden lg:flex items-center space-x-4">
-            <div className="flex items-center space-x-2 text-sm text-gray-600">
-              <Phone className="h-4 w-4" />
-              <a href="tel:+13024640950" className="hover:text-blue-600">
+          <div className="hidden lg:flex items-center space-x-4>
+            <div className=flex items-center space-x-2 text-sm text-gray-600">
+              <Phone className="h-4 w-4 />
+              <a href=tel:+13024640950" className="hover:text-blue-600>
                 +1 302 464 0950
               </a>
             </div>
             <Link
-              href="/contact"
-              className="bg-blue-600 text-white px-4 py-2 rounded-md text-sm font-medium hover:bg-blue-700 transition-colors"
+              href=/contact"
+              className="bg-blue-600 text-white px-4 py-2 rounded-md text-sm font-medium hover:bg-blue-700 transition-colors
             >
               Get Started
             </Link>
           </div>
 
           {/* Mobile menu button */}
-          <div className="lg:hidden">
+          <div className=lg:hidden">
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="text-gray-900 hover:text-blue-600 p-2"
+              className="text-gray-900 hover:text-blue-600 p-2
             >
               {isMenuOpen ? (
-                <X className="h-6 w-6" />
+                <X className=h-6 w-6" />
               ) : (
-                <Menu className="h-6 w-6" />
+                <Menu className="h-6 w-6 />
               )}
             </button>
           </div>
@@ -157,25 +150,25 @@ const Header: React.FC = () => {
 
         {/* Mobile Navigation */}
         {isMenuOpen && (
-          <div className="lg:hidden border-t border-gray-200 py-4">
-            <div className="space-y-2">
+          <div className=lg:hidden border-t border-gray-200 py-4">
+            <div className="space-y-2>
               {navigation.map(item => (
                 <div key={item.name}>
                   {item.hasDropdown ? (
                     <div>
-                      <div className="text-gray-900 px-3 py-2 text-sm font-medium">
+                      <div className=text-gray-900 px-3 py-2 text-sm font-medium">
                         {item.name}
                       </div>
-                      <div className="ml-4 space-y-1">
+                      <div className="ml-4 space-y-1>
                         {services.map(service => (
                           <Link
                             key={service.name}
                             href={service.href}
-                            className="flex items-center px-3 py-2 text-sm text-gray-600 hover:text-blue-600"
+                            className=flex items-center px-3 py-2 text-sm text-gray-600 hover:text-blue-600"
                             onClick={() => setIsMenuOpen(false)}
                           >
                             {service.icon && (
-                              <service.icon className="h-4 w-4 mr-2 text-blue-600" />
+                              <service.icon className="h-4 w-4 mr-2 text-blue-600 />
                             )}
                             {service.name}
                           </Link>
@@ -185,7 +178,7 @@ const Header: React.FC = () => {
                   ) : (
                     <Link
                       href={item.href}
-                      className="block text-gray-900 hover:text-blue-600 px-3 py-2 text-sm font-medium"
+                      className=block text-gray-900 hover:text-blue-600 px-3 py-2 text-sm font-medium"
                       onClick={() => setIsMenuOpen(false)}
                     >
                       {item.name}
@@ -194,25 +187,25 @@ const Header: React.FC = () => {
                 </div>
               ))}
             </div>
-            <div className="mt-4 pt-4 border-t border-gray-200">
-              <div className="flex items-center space-x-2 text-sm text-gray-600 px-3 py-2">
-                <Phone className="h-4 w-4" />
-                <a href="tel:+13024640950" className="hover:text-blue-600">
+            <div className="mt-4 pt-4 border-t border-gray-200>
+              <div className=flex items-center space-x-2 text-sm text-gray-600 px-3 py-2">
+                <Phone className="h-4 w-4 />
+                <a href=tel:+13024640950" className="hover:text-blue-600>
                   +1 302 464 0950
                 </a>
               </div>
-              <div className="flex items-center space-x-2 text-sm text-gray-600 px-3 py-2">
-                <Mail className="h-4 w-4" />
+              <div className=flex items-center space-x-2 text-sm text-gray-600 px-3 py-2">
+                <Mail className="h-4 w-4 />
                 <a
-                  href="mailto:kleber@ziontechgroup.com"
-                  className="hover:text-blue-600"
+                  href=mailto:kleber@ziontechgroup.com"
+                  className="hover:text-blue-600
                 >
                   kleber@ziontechgroup.com
                 </a>
               </div>
               <Link
-                href="/contact"
-                className="block bg-blue-600 text-white px-3 py-2 rounded-md text-sm font-medium hover:bg-blue-700 transition-colors mt-2 mx-3 text-center"
+                href=/contact"
+                className="block bg-blue-600 text-white px-3 py-2 rounded-md text-sm font-medium hover:bg-blue-700 transition-colors mt-2 mx-3 text-center
                 onClick={() => setIsMenuOpen(false)}
               >
                 Get Started
@@ -223,14 +216,13 @@ const Header: React.FC = () => {
       </div>
     </header>
   );
-};
+}
 
 export default Header;
 origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 
-import React, { useState } from 'react';
-import Link from 'next/link';
-import {
+import React, { useState } from react';
+import Link from 'next/link;
   Brain,
   ChevronDown,
   Cloud,
@@ -240,80 +232,68 @@ import {
   Mail,
   Menu,
   Phone,
-  X,
-} from 'lucide-react';
+  X} from lucide-react';
 
-const Header: React.FC = () => {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [isServicesOpen, setIsServicesOpen] = useState(false);
-  const services = [
     {
-      name: 'AI Services',
-      href: '/ai-services',
+      name: 'AI Services,
+      href: /ai-services',
       icon: Brain,
-      description: 'Artificial Intelligence Solutions',
-    },
+      description: 'Artificial Intelligence Solutions},
     {
-      name: 'IT Services',
-      href: '/it-services',
+      name: IT Services',
+      href: '/it-services,
       icon: Cloud,
-      description: 'Information Technology Services',
-    },
+      description: Information Technology Services'},
     {
-      name: 'Micro SaaS',
-      href: '/micro-saas',
+      name: 'Micro SaaS,
+      href: /micro-saas',
       icon: Code,
-      description: 'Custom Software Solutions',
-    },
+      description: 'Custom Software Solutions},
     {
-      name: 'All Services',
-      href: '/services',
+      name: All Services',
+      href: '/services,
       icon: null,
-      description: 'Complete Service Portfolio',
-    },
-  ];
-  const navigation = [
-    { name: 'Home', href: '/' },
-    { name: 'Services', href: '/services', hasDropdown: true },
-    { name: 'Pricing', href: '/pricing-guide' },
-    { name: 'About', href: '/about' },
-    { name: 'Contact', href: '/contact' },
-  ];
+      description: Complete Service Portfolio'}];
+    { name: 'Home, href: /' },
+    { name: 'Services, href: /services', hasDropdown: true },
+    { name: 'Pricing, href: /pricing-guide' },
+    { name: 'About, href: /about' },
+    { name: 'Contact, href: /contact' }];
   return (
-    <header className="bg-white shadow-sm sticky top-0 z-50">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-16">
+    <header className=bg-white shadow-sm sticky top-0 z-50">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8>
+        <div className=flex justify-between items-center h-16">
           {/* Logo */}
-          <div className="flex-shrink-0">
-            <Link href="/" className="flex items-center space-x-2">
-              <div className="w-8 h-8 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg flex items-center justify-center">
-                <Brain className="w-5 h-5 text-white" />
+          <div className="flex-shrink-0>
+            <Link href=/" className="flex items-center space-x-2>
+              <div className=w-8 h-8 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg flex items-center justify-center">
+                <Brain className="w-5 h-5 text-white />
               </div>
-              <span className="text-xl font-bold text-gray-900">
+              <span className=text-xl font-bold text-gray-900">
                 Zion Tech Group
               </span>
             </Link>
           </div>
 
           {/* Desktop Navigation */}
-          <nav className="hidden lg:block">
-            <div className="ml-10 flex items-baseline space-x-8">
+          <nav className="hidden lg:block>
+            <div className=ml-10 flex items-baseline space-x-8">
               {navigation.map(item => (
-                <div key={item.name} className="relative">
+                <div key={item.name} className="relative>
                   {item.hasDropdown ? (
                     <div
-                      className="relative"
+                      className=relative"
                       onMouseEnter={() => setIsServicesOpen(true)}
                       onMouseLeave={() => setIsServicesOpen(false)}
                     >
-                      <button className="text-gray-900 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium flex items-center">
+                      <button className="text-gray-900 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium flex items-center>
                         {item.name}
-                        <ChevronDown className="ml-1 h-4 w-4" />
+                        <ChevronDown className=ml-1 h-4 w-4" />
                       </button>
                       {isServicesOpen && (
-                        <div className="absolute top-full left-0 mt-2 w-80 bg-white rounded-lg shadow-lg border border-gray-200 py-2 z-50">
-                          <div className="px-4 py-2 border-b border-gray-100">
-                            <h3 className="text-sm font-semibold text-gray-900">
+                        <div className="absolute top-full left-0 mt-2 w-80 bg-white rounded-lg shadow-lg border border-gray-200 py-2 z-50>
+                          <div className=px-4 py-2 border-b border-gray-100">
+                            <h3 className="text-sm font-semibold text-gray-900>
                               Our Services
                             </h3>
                           </div>
@@ -321,18 +301,18 @@ const Header: React.FC = () => {
                             <Link
                               key={service.name}
                               href={service.href}
-                              className="flex items-center px-4 py-3 hover:bg-gray-50 transition-colors"
+                              className=flex items-center px-4 py-3 hover:bg-gray-50 transition-colors"
                             >
                               {service.icon && (
-                                <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-blue-100 mr-3">
-                                  <service.icon className="h-4 w-4 text-blue-600" />
+                                <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-blue-100 mr-3>
+                                  <service.icon className=h-4 w-4 text-blue-600" />
                                 </div>
                               )}
                               <div>
-                                <div className="text-sm font-medium text-gray-900">
+                                <div className="text-sm font-medium text-gray-900>
                                   {service.name}
                                 </div>
-                                <div className="text-xs text-gray-500">
+                                <div className=text-xs text-gray-500">
                                   {service.description}
                                 </div>
                               </div>
@@ -344,7 +324,7 @@ const Header: React.FC = () => {
                   ) : (
                     <Link
                       href={item.href}
-                      className="text-gray-900 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium"
+                      className="text-gray-900 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium
                     >
                       {item.name}
                     </Link>
@@ -355,31 +335,31 @@ const Header: React.FC = () => {
           </nav>
 
           {/* Contact Info & CTA */}
-          <div className="hidden lg:flex items-center space-x-4">
-            <div className="flex items-center space-x-2 text-sm text-gray-600">
-              <Phone className="h-4 w-4" />
-              <a href="tel:+13024640950" className="hover:text-blue-600">
+          <div className=hidden lg:flex items-center space-x-4">
+            <div className="flex items-center space-x-2 text-sm text-gray-600>
+              <Phone className=h-4 w-4" />
+              <a href="tel:+13024640950 className=hover:text-blue-600">
                 +1 302 464 0950
               </a>
             </div>
             <Link
-              href="/contact"
-              className="bg-blue-600 text-white px-4 py-2 rounded-md text-sm font-medium hover:bg-blue-700 transition-colors"
+              href="/contact
+              className=bg-blue-600 text-white px-4 py-2 rounded-md text-sm font-medium hover:bg-blue-700 transition-colors"
             >
               Get Started
             </Link>
           </div>
 
           {/* Mobile menu button */}
-          <div className="lg:hidden">
+          <div className="lg:hidden>
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="text-gray-900 hover:text-blue-600 p-2"
+              className=text-gray-900 hover:text-blue-600 p-2"
             >
               {isMenuOpen ? (
-                <X className="h-6 w-6" />
+                <X className="h-6 w-6 />
               ) : (
-                <Menu className="h-6 w-6" />
+                <Menu className=h-6 w-6" />
               )}
             </button>
           </div>
@@ -387,25 +367,25 @@ const Header: React.FC = () => {
 
         {/* Mobile Navigation */}
         {isMenuOpen && (
-          <div className="lg:hidden border-t border-gray-200 py-4">
-            <div className="space-y-2">
+          <div className="lg:hidden border-t border-gray-200 py-4>
+            <div className=space-y-2">
               {navigation.map(item => (
                 <div key={item.name}>
                   {item.hasDropdown ? (
                     <div>
-                      <div className="text-gray-900 px-3 py-2 text-sm font-medium">
+                      <div className="text-gray-900 px-3 py-2 text-sm font-medium>
                         {item.name}
                       </div>
-                      <div className="ml-4 space-y-1">
+                      <div className=ml-4 space-y-1">
                         {services.map(service => (
                           <Link
                             key={service.name}
                             href={service.href}
-                            className="flex items-center px-3 py-2 text-sm text-gray-600 hover:text-blue-600"
+                            className="flex items-center px-3 py-2 text-sm text-gray-600 hover:text-blue-600
                             onClick={() => setIsMenuOpen(false)}
                           >
                             {service.icon && (
-                              <service.icon className="h-4 w-4 mr-2 text-blue-600" />
+                              <service.icon className=h-4 w-4 mr-2 text-blue-600" />
                             )}
                             {service.name}
                           </Link>
@@ -415,7 +395,7 @@ const Header: React.FC = () => {
                   ) : (
                     <Link
                       href={item.href}
-                      className="block text-gray-900 hover:text-blue-600 px-3 py-2 text-sm font-medium"
+                      className="block text-gray-900 hover:text-blue-600 px-3 py-2 text-sm font-medium
                       onClick={() => setIsMenuOpen(false)}
                     >
                       {item.name}
@@ -424,25 +404,25 @@ const Header: React.FC = () => {
                 </div>
               ))}
             </div>
-            <div className="mt-4 pt-4 border-t border-gray-200">
-              <div className="flex items-center space-x-2 text-sm text-gray-600 px-3 py-2">
-                <Phone className="h-4 w-4" />
-                <a href="tel:+13024640950" className="hover:text-blue-600">
+            <div className=mt-4 pt-4 border-t border-gray-200">
+              <div className="flex items-center space-x-2 text-sm text-gray-600 px-3 py-2>
+                <Phone className=h-4 w-4" />
+                <a href="tel:+13024640950 className=hover:text-blue-600">
                   +1 302 464 0950
                 </a>
               </div>
-              <div className="flex items-center space-x-2 text-sm text-gray-600 px-3 py-2">
-                <Mail className="h-4 w-4" />
+              <div className="flex items-center space-x-2 text-sm text-gray-600 px-3 py-2>
+                <Mail className=h-4 w-4" />
                 <a
-                  href="mailto:kleber@ziontechgroup.com"
-                  className="hover:text-blue-600"
+                  href="mailto:kleber@ziontechgroup.com
+                  className=hover:text-blue-600"
                 >
                   kleber@ziontechgroup.com
                 </a>
               </div>
               <Link
-                href="/contact"
-                className="block bg-blue-600 text-white px-3 py-2 rounded-md text-sm font-medium hover:bg-blue-700 transition-colors mt-2 mx-3 text-center"
+                href="/contact
+                className=block bg-blue-600 text-white px-3 py-2 rounded-md text-sm font-medium hover:bg-blue-700 transition-colors mt-2 mx-3 text-center"
                 onClick={() => setIsMenuOpen(false)}
               >
                 Get Started
@@ -453,8 +433,7 @@ const Header: React.FC = () => {
       </div>
     </header>
   );
-};
+}
 
 export default Header;
 origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
->>>>>>> cursor/automate-test-improve-and-merge-code-dd7a

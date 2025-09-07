@@ -1,5 +1,9 @@
 
 
+<<<<<<< HEAD
+ursor/fix-syntax-push-and-merge-to-main-40de
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+=======
 =======
 =======
       ],
@@ -7,6 +11,10 @@
     },
     {
 
+<<<<<<< HEAD
+ursor/fix-syntax-push-and-merge-to-main-40de
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+=======
 
 =======
 =======
@@ -39,6 +47,10 @@
         <meta name=\"description\" content=\"Transparent pricing for our technology services. Choose the plan that fits your business needs.\" />
       </Head>
 
+<<<<<<< HEAD
+ursor/fix-syntax-push-and-merge-to-main-40de
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+=======
 
 =======
 =======
@@ -49,6 +61,8 @@
             </p>
           </div>
 
+<<<<<<< HEAD
+=======
 
 =======
             {pricingPlans.map((plan, index) => (
@@ -67,6 +81,10 @@
                 )}
 
 
+
+<<<<<<< HEAD
+ursor/fix-syntax-push-and-merge-to-main-40de
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
 =======
 =======
                   {plan.features.map((feature, featureIndex) => (

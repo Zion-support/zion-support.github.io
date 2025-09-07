@@ -1,13 +1,7 @@
-:pages/services-2024.tsx
-import React, { useState, useMemo } from 'react',
-import Head from 'next/head';
-import { motion } from 'framer-motion';
-import { Search, Filter, Star, Users, TrendingUp;
-  Brain, Atom, Cpu, Shield, Database, Cloud;
-  ArrowRight, CheckCircle, Zap, Sparkles
- } from 'lucide-react';
-import { realMicroSaasServices2024  } from '../data/2024-real-micro-saas-services';
-import { innovativeITServices2024  } from '../data/2024-innovative-it-services';
+
+
+import { realMicroSaasServices2024 } from '../data/2024-real-micro-saas-services';
+import { innovativeITServices2024 } from '../data/2024-innovative-it-services';
 import UltraFuturisticBackground2034 from '../components/backgrounds/UltraFuturisticBackground2034';
 import Link from 'next/link';
 const Services2024Page: React.FC;
@@ -41,10 +35,6 @@ import {
   Cloud,
   ArrowRight,
   CheckCircle,
-:pages/services-2024.tsx
-  Zap,
-  Sparkles,;
-} from 'lucide-react';
   Zap,;
   Sparkles,;} from 'lucide-react';
 
@@ -54,21 +44,7 @@ import {;
   ArrowRight, CheckCircle, Zap, Sparkles;
 } from 'lucide-react',;
 
-import React, { useState, useMemo } from 'react',
-import Head from 'next/head';
-import { motion } from 'framer-motion';
-import { Search, Filter, Star, Users, TrendingUp;
-  Brain, Atom, Cpu, Shield, Database, Cloud;
-  ArrowRight, CheckCircle, Zap, Sparkles
- } from 'lucide-react';
-import { realMicroSaasServices2024  } from '../data/2024-real-micro-saas-services';
-import { innovativeITServices2024  } from '../data/2024-innovative-it-services';
-import UltraFuturisticBackground2034 from '../components/backgrounds/UltraFuturisticBackground2034';
-import Link from 'next/link';
-const Services2024Page: React.FC;
 
-import { realMicroSaasServices2024 } from '../data/2024-real-micro-saas-services';
-import { innovativeITServices2024 } from '../data/2024-innovative-it-services';
 import UltraFuturisticBackground2034 from '../components/backgrounds/UltraFuturisticBackground2034';
 
 import Link from 'next/link';
@@ -115,49 +91,12 @@ import Link from 'next/link';
           aValue = parseFloat(a && a.price.replace(/[^0-9.]/g, ''));'
           bValue = parseFloat(b && b.price.replace(/[^0-9.]/g, ''));
 
-      const matchesCategory =
-        selectedCategory === 'all' |
-        (selectedCategory === 'ai' && service.variant.includes('ai')) |
-        (selectedCategory === 'quantum' &&
-          service.variant.includes('security')) |
-        (selectedCategory === 'it' && service.variant.includes('it')) |
-        (selectedCategory === 'api' && service.variant.includes('api')) |
-        (selectedCategory === 'cloud' && service.variant.includes('cloud')) |
-        (selectedCategory === 'marketing' &&
-          service.variant.includes('marketing')) |
-        (selectedCategory === 'project' &&
-          service.variant.includes('project')) |
-        (selectedCategory === 'customer' &&
-          service.variant.includes('customer'));
 
-      return matchesSearch && matchesCategory;
-    });
-
-    // Sort services
-    filtered.sort((a, b) => {
-let aValue: any, bValue: any;
-      switch (sortBy) {
-        case 'price':
-          aValue = parseFloat(a.price.replace(/[^0-9.]/g, ''));
-          bValue = parseFloat(b.price.replace(/[^0-9.]/g, ''));
-
-          break;
-
-        case 'rating':;
-          aValue = a && a.rating;
-          bValue = b && b.rating;
-          break;'
-        case 'customers':;'
-          aValue = parseInt(a && a.customers.replace(/[^0-9]/g, ''));'
-          bValue = parseInt(b && b.customers.replace(/[^0-9]/g, ''));
-          break;
-
-default:
-          aValue = a.name.toLowerCase();
-          bValue = b.name.toLowerCase();
-origin/cursor/automate-test-improve-and-merge-code-2533
       }
-
+      if (sortOrder === 'asc') {
+        return aValue > bValue ? 1 : -1;
+      } else {
+        return aValue < bValue ? 1 : -1;
       }
     });
     return filtered;
@@ -212,7 +151,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       count: allServices.filter(s => s.variant.includes('project')).length
     }
     {
-
+      id: 'customer'
+      name: 'Customer Success'
+      icon: CheckCircle
+      count: allServices.filter(s => s.variant.includes('customer')).length
+    },  ];
   const getVariantIcon = (variant: string) => {
     if (variant.includes('ai')) return Brain;
     if (variant.includes('security')) return Shield;
@@ -223,10 +166,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     if (variant.includes('project')) return Users;
 
     if (variant.includes('customer')) return CheckCircle;
-
-    return Sparkles;
-  };
-
+    return Sparkles;  }
   const getVariantColor = (variant: string) => {
     if (variant.includes('ai')) return 'from-blue-500 to-cyan-500';
     if (variant.includes('security')) return 'from-red-500 to-pink-500';
@@ -236,6 +176,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     if (variant.includes('marketing')) return 'from-yellow-500 to-orange-500';
     if (variant.includes('project')) return 'from-teal-500 to-cyan-500';
     if (variant.includes('customer')) return 'from-pink-500 to-rose-500';
+
 :pages/services-2024.tsx
     return 'from-gray-500 to-slate-500';  }
 
@@ -247,7 +188,6 @@ const Services2024Page: React.FC = () => {;
   // Combine all services;
   const allServices = [...realMicroSaasServices2024, ...innovativeITServices2024],;
   // Filter and sort services;
-  const filteredServices = useMemo(() => {;
     const filtered = allServices.filter(service => {;
       const matchesSearch = service.name.toLowerCase().includes(searchQuery.toLowerCase()) ||;
                            service.tagline.toLowerCase().includes(searchQuery.toLowerCase()) ||;
@@ -315,26 +255,7 @@ const Services2024Page: React.FC = () => {;
 }
   ],
 
-  const getVariantIcon = (variant: string) => {
-    if (variant.includes('ai')) return Brain,
-    if (variant.includes('security')) return Shield,
-    if (variant.includes('it')) return Cpu,
-    if (variant.includes('api')) return Database,
-    if (variant.includes('cloud')) return Cloud,
-    if (variant.includes('marketing')) return TrendingUp,
-    if (variant.includes('project')) return Users,
-    if (variant.includes('customer')) return CheckCircle,
-    return Sparkles
-  },
-  const getVariantColor = (variant: string) => {
-    if (variant.includes('ai')) return 'from-blue-500 to-cyan-500',
-    if (variant.includes('security')) return 'from-red-500 to-pink-500',
-    if (variant.includes('it')) return 'from-green-500 to-emerald-500',
-    if (variant.includes('api')) return 'from-purple-500 to-violet-500',
-    if (variant.includes('cloud')) return 'from-indigo-500 to-blue-500',
-    if (variant.includes('marketing')) return 'from-yellow-500 to-orange-500',
-    if (variant.includes('project')) return 'from-teal-500 to-cyan-500',
-    if (variant.includes('customer')) return 'from-pink-500 to-rose-500',
+
 :pages/services-2024.tsx
     return 'from-gray-500 to-slate-500'
   },
@@ -430,7 +351,6 @@ const Services2024Page: React.FC = () => {;
   }
 }
   ],
-
   const getVariantIcon = (variant: string) => {
     if (variant.includes('ai')) return Brain,
     if (variant.includes('security')) return Shield,
@@ -439,27 +359,21 @@ const Services2024Page: React.FC = () => {;
     if (variant.includes('cloud')) return Cloud,
     if (variant.includes('marketing')) return TrendingUp,
     if (variant.includes('project')) return Users,
-
     if (variant.includes('customer')) return CheckCircle,
-    return Sparkles;
+    return Sparkles
   },
-  const getVariantColor = (variant: string) => {'
-    if (variant.includes('ai')) return 'from-blue-500 to-cyan-500','
-    if (variant.includes('security')) return 'from-red-500 to-pink-500','
-    if (variant.includes('it')) return 'from-green-500 to-emerald-500','
-    if (variant.includes('api')) return 'from-purple-500 to-violet-500','
-    if (variant.includes('cloud')) return 'from-indigo-500 to-blue-500','
-    if (variant.includes('marketing')) return 'from-yellow-500 to-orange-500','
-    if (variant.includes('project')) return 'from-teal-500 to-cyan-500','
-    if (variant.includes('customer')) return 'from-pink-500 to-rose-500','
+  const getVariantColor = (variant: string) => {
+    if (variant.includes('ai')) return 'from-blue-500 to-cyan-500',
+    if (variant.includes('security')) return 'from-red-500 to-pink-500',
+    if (variant.includes('it')) return 'from-green-500 to-emerald-500',
+    if (variant.includes('api')) return 'from-purple-500 to-violet-500',
+    if (variant.includes('cloud')) return 'from-indigo-500 to-blue-500',
+    if (variant.includes('marketing')) return 'from-yellow-500 to-orange-500',
+    if (variant.includes('project')) return 'from-teal-500 to-cyan-500',
+    if (variant.includes('customer')) return 'from-pink-500 to-rose-500',
     return 'from-gray-500 to-slate-500'
   },
-
   return (
-
-        />;'
-        <link rel='canonical' href='https://ziontechgroup && ziontechgroup.com/services-2024' />;
-      </Head>;
 
     <>
       <Head>
@@ -468,10 +382,64 @@ const Services2024Page: React.FC = () => {;
         <meta name="keywords" content="AI services, quantum security, enterprise IT, automation, 2024 technology, Zion Tech Group" />"
         <link rel="canonical" href="https://ziontechgroup.com/services-2024" />
       </Head>
+        {/* Hero Section */}
 
         <section className="pt-32 pb-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto text-center">
             <motion.div
+
+        <section className='pt-32 pb-20 px-4 sm:px-6 lg:px-8'>
+          <div className='max-w-7xl mx-auto text-center'>
+            <motion.div
+origin/cursor/automate-test-improve-and-merge-code-2533
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+
+      <UltraFuturisticBackground2034 intensity={0.8} theme="quantum" />
+
+      <div className="relative z-10 min-h-screen">
+        {/* Hero Section */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+        <section className="pt-32 pb-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto text-center">
+            <motion.div
+      <UltraFuturisticBackground2034 intensity={0.8} theme='quantum' />
+      <div className='relative z-10 min-h-screen'>
+        {/* Hero Section */}
+        <section className='pt-32 pb-20 px-4 sm:px-6 lg:px-8'>
+          <div className='max-w-7xl mx-auto text-center'>            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+      <UltraFuturisticBackground2034 intensity={0.8} theme="quantum" />
+      <div className="relative z-10 min-h-screen">
+        {/* Hero Section */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+        <section className="pt-32 pb-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto text-center">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+              animate={{ opacity: 1, y: 0 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+              transition={{ duration: 0.8 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
 
         <section className='pt-32 pb-20 px-4 sm:px-6 lg:px-8'>
           <div className='max-w-7xl mx-auto text-center'>
@@ -513,38 +481,28 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 <Sparkles className="w-5 h-5 text-cyan-400" />
                 <span className="text-cyan-400 font-medium">2024 Revolutionary Services</span>
               </div>
-
-              <h1 className='text-5xl md:text-7xl font-bold text-white mb-6'>
-                <span className='bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent'>
-:pages/services-2024.tsx
               <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
                 <span className="bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent">
 
+              <h1 className='text-5xl md:text-7xl font-bold text-white mb-6'>
+                <span className='bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent'>
+              <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
+                <span className="bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent">
+                  Future-Ready
+
+                </span>
+
+                <br />
+                <span className="text-white">Solutions</span>
                   Future-Ready
 
                 </span>
                 <br />'
                 <span className='text-white'>Solutions</span>
               </h1>
+              
 
-              <div className="inline-flex items-center space-x-2 bg-gradient-to-r from-cyan-500/20 to-purple-600/20 border border-cyan-500/30 rounded-full px-6 py-2 mb-8">
-                <Sparkles className="w-5 h-5 text-cyan-400" />
-                <span className="text-cyan-400 font-medium">2024 Revolutionary Services</span>
-              </div>
 
-              <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
-
-                <span className="bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent">
-
-                  Future-Ready;
-                </span>
-              </div>
-                  Future-Ready;
-                </span>
-                <br />"
-                <span className="text-white">Solutions</span>
-              </h1>
-:pages/services-2024.tsx
               <p className='text-xl md:text-2xl text-gray-300 mb-12 max-w-4xl mx-auto leading-relaxed'>
                 Experience the next generation of AI, quantum security, and
                 enterprise IT solutions. Transform your business with our
@@ -557,16 +515,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     {allServices.length}
                   </div>
                   <div className='text-gray-400'>Revolutionary Services</div>
-
               <p className="text-xl md:text-2xl text-gray-300 mb-12 max-w-4xl mx-auto leading-relaxed">
-                Experience the next generation of AI, quantum security, and enterprise IT solutions. 
+                Experience the next generation of AI, quantum security, and enterprise IT solutions.
                 Transform your business with our revolutionary 2024 service portfolio.
-              </p>"
-              <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-16">"
-                <div className="text-center">"
-                  <div className="text-3xl font-bold text-cyan-400 mb-2">{allServices.length}</div>"
-                  <div className="text-gray-400">Revolutionary Services</div>
 
+                  <div className="text-gray-400">Revolutionary Services</div>
                 </div>
                 <div className="text-center">
                   <div className="text-3xl font-bold text-purple-400 mb-2">17</div>
@@ -585,6 +538,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   </div>
                   <div className='text-gray-400'>Happy Customers</div>
                 </div>
+
 :pages/services-2024.tsx
                 <div className='text-center'>
                   <div className='text-3xl font-bold text-green-400 mb-2'>
@@ -596,7 +550,26 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             </motion.div>
           </div>
         </section>
-
+              transition={{ duration: 0 && 0.8 }}>;
+        {/* Search and Filters */}
+        {/* Search and Filters */}
+        <section className='px-4 sm:px-6 lg:px-8 mb-16'>
+          <div className='max-w-7xl mx-auto'>
+            <div className='bg-black/50 border border-cyan-500/30 rounded-2xl p-6 backdrop-blur-sm'>
+              <div className='grid grid-cols-1 lg:grid-cols-4 gap-6'>
+                {/* Search */}
+                <div className='lg:col-span-2'>
+                  <div className='relative'>
+                    <Search className='absolute left-4 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400' />
+        {/* Search and Filters */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+        <section className="px-4 sm:px-6 lg:px-8 mb-16">
+          <div className="max-w-7xl mx-auto">
+            <div className="bg-black/50 border border-cyan-500/30 rounded-2xl p-6 backdrop-blur-sm">
+              <div className="grid grid-cols-1 lg:grid-cols-4 gap-6">
         {/* Search and Filters */}
 <section className='px-4 sm:px-6 lg:px-8 mb-16'>
           <div className='max-w-7xl mx-auto'>
@@ -606,30 +579,14 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 <div className='lg:col-span-2'>
                   <div className='relative'>
                     <Search className='absolute left-4 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400' />
-:pages/services-2024.tsx
-                    <input
-                      type='text'
-                      placeholder='Search services by name, features, or description...'
-                      value={searchQuery}
-                      onChange={e => setSearchQuery(e.target.value)}
-                      className='w-full pl-12 pr-4 py-3 bg-black/50 border border-cyan-500/30 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 focus:ring-1 focus:ring-cyan-400 transition-all duration-200'                    />
 
                     <input
                       type="text"
                       placeholder="Search services by name, features, or description..."
                       value={searchQuery}
+
 
     console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-
-                    <input
-                      type="text"
-
-                      placeholder="Search services by name, features, or description..."
-                      value={searchQuery  } catch (error) {"
-    console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
   }
 }
@@ -640,12 +597,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   </div>
                 </div>
 
-                      onChange={e => setSearchQuery(e.target.value)}
-                      className='w-full pl-12 pr-4 py-3 bg-black/50 border border-cyan-500/30 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 focus:ring-1 focus:ring-cyan-400 transition-all duration-200'
-origin/cursor/automate-test-improve-and-merge-code-2533
-                    />
-                  </div>
-                </div>
 
                 {/* Category Filter */}
                 <div>;
@@ -666,7 +617,6 @@ onChange={e => setSelectedCategory(e.target.value)}
                 {/* Sort */}
 
                 <div className='flex space-x-2'>
-:pages/services-2024.tsx
                 {/* Category Filter */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -704,6 +654,7 @@ onChange={e => setSelectedCategory(e.target.value)}
   }
 }
 
+
                   <select
 
                     value={sortBy}
@@ -717,6 +668,7 @@ onChange={e => setSelectedCategory(e.target.value)}
 if ( {) {}
   $2;
 }
+
 
 <div className='flex space-x-2'>
                   <select
@@ -743,6 +695,7 @@ if ( {) {}
             </div>
           </div>
         </section>
+
 :pages/services-2024.tsx
         {/* Services Grid */}
         <section className='px-4 sm:px-6 lg:px-8 mb-20'>
@@ -753,72 +706,23 @@ if ( {) {}
             </div>;
           </div>;
         </section>;
-
-          <div className='max - w-7xl mx - auto'>;
-            {filtered_services.length === 0 ? ('
-              <div className='text - center py - 20'>;'
-                <div className='text - 6xl mb - 4'>🔍</div>;'
-                <h3 className='text - 2xl font - semibold text - white mb - 2'>;
-                  No services found;
-                </h3>;'
-                <p className='text - gray - 400'>;
-                  Try adjusting your search criteria or filters.;
-                </p>;
-              </div>) : ('
-              <div className='grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 8'>                {filtered_services.map ((service, index) => (
-                  <motion.div;
-                    key={service.id}
-                    initial={{ opacity: 0, coordinate_y: 20 }}
-                    animate={{ opacity: 1, coordinate_y: 0 }}
-                    transition={{ duration: 0.6, delay: index * 0.1 }}'
-                    className='group';
-                  >;'
-                    <div className='bg - black / 50 border border - cyan - 500 / 30 rounded - 2xl p - 6 h - full hover:border - cyan - 400 / 50 transition - all duration - 300 hover:transform hover:scale - 105 backdrop - blur - sm'>;
-
-<section className='px-4 sm:px-6 lg:px-8 mb-20'>
-          <div className='max-w-7xl mx-auto'>
-            {filteredServices.length === 0 ? (
-              <div className='text-center py-20'>
-                <div className='text-6xl mb-4'>🔍</div>
-                <h3 className='text-2xl font-semibold text-white mb-2'>
-                  No services found
-                </h3>
-                <p className='text-gray-400'>
-                  Try adjusting your search criteria or filters.
-                </p>
-              </div>
-            ) : (
-:pages/services-2024.tsx
-              <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>                {filteredServices.map((service, index) => (
-              <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
-                {filteredServices.map((service, index) => (
-                  <motion.div
-                    key={service.id}
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-transition={{ duration: 0.6, delay: index * 0.1 }}
-                    className='group'
-                  >
-                    <div className='bg-black/50 border border-cyan-500/30 rounded-2xl p-6 h-full hover:border-cyan-400/50 transition-all duration-300 hover:transform hover:scale-105 backdrop-blur-sm'>
-
-                      {/* Service Header */}
-                      <div className='flex items - start justify - between mb - 4'>;
-
-                        <div className='w - 12 h - 12 bg - gradient - to - r from - cyan - 500 / 20 to - purple - 600 / 20 rounded - lg flex items - center justify - center'>;
-                          {React.create_element (
-                            getVariantIcon (service.variant),
-                            {}
-                              class_name: `w - 6 h - 6 text - cyan - 400`,
-
                             }
                           )}
-:pages/services-2024.tsx
                         </div>;
 '
                         <div className='text - right'>;'
                           <div className='text - 2xl font - bold text - cyan - 400'>;
                             {service.price}
-
+        {/* Services Grid */}
+        <section className="px-4 sm:px-6 lg:px-8 mb-20">
+          <div className="max-w-7xl mx-auto">
+        {/* Services Grid */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+        <section className="px-4 sm:px-6 lg:px-8 mb-20">
+          <div className="max-w-7xl mx-auto">
             {filteredServices.length === 0 ? (
               <div className="text-center py-20">
                 <div className="text-6xl mb-4">🔍</div>
@@ -829,6 +733,7 @@ transition={{ duration: 0.6, delay: index * 0.1 }}
             ) : ("
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 {filteredServices.map((service, index) => (
+
 
                     key={service.id  } catch (error) {
     console.error("Error:", error);
@@ -848,6 +753,81 @@ transition={{ duration: 0.6, delay: index * 0.1 }}
 }
 
                     transition={{ duration: 0.6, delay: index * 0.1 }} className="group">
+                    key={service.id}
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                          {React.createElement(getVariantIcon(service.variant), {
+                            className: `w-6 h-6 text-cyan-400`
+                          })  } catch (error) {
+
+
+                      {/* Service Info */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+
+
+                        {service.name}
+                      </h3>
+                      <p className='text-gray-300 mb-4 leading-relaxed'>
+                        {service.tagline}
+                      </p>
+
+
+                        <div className='w-12 h-12 bg-gradient-to-r from-cyan-500/20 to-purple-600/20 rounded-lg flex items-center justify-center'>;
+                          {React && React.createElement(;
+                            getVariantIcon(service && service.variant),;
+                            {;`
+                              className: `w-6 h-6 text-cyan-400`,;
+                            }
+                          )}
+                        </div>;
+
+
+                        <div className='text-right'>;
+
+                          <div className='text-2xl font-bold text-cyan-400'>;
+                            {service && service.price}
+                          </div>;'
+                          <div className='text-sm text-gray-400'>per month</div>                        </div>;
+                      </div>;
+                      {/* Service Info */}
+                      <h3 className='text-xl font-semibold text-white mb-2 group-hover:text-cyan-400 transition-colors duration-200'>;
+                        {service && service.name}
+                      </h3>;
+                      <p className='text-gray-300 mb-4 leading-relaxed'>                        {service && service.tagline}
+                      </p>;
+                      {/* Features */}
+                    transition={{ duration: 0.6, delay: index * 0.1 }}
+                    className='group'
+                  >
+                    <div className='bg-black/50 border border-cyan-500/30 rounded-2xl p-6 h-full hover:border-cyan-400/50 transition-all duration-300 hover:transform hover:scale-105 backdrop-blur-sm'>
+                      {/* Service Header */}
+                      <div className='flex items-start justify-between mb-4'>
+                        <div className='w-12 h-12 bg-gradient-to-r from-cyan-500/20 to-purple-600/20 rounded-lg flex items-center justify-center'>
+                          {React.createElement(
+                            getVariantIcon(service.variant)
+                            {
+                              className: `w-6 h-6 text-cyan-400`
+                            }
+                          )}
+                    key={service.id  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                    initial={{ opacity: 0, y: 20 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                    animate={{ opacity: 1, y: 0 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                    transition={{ duration: 0.6, delay: index * 0.1 }} className="group">
                     <div className="bg-black/50 border border-cyan-500/30 rounded-2xl p-6 h-full hover:border-cyan-400/50 transition-all duration-300 hover:transform hover:scale-105 backdrop-blur-sm">
                       {/* Service Header */  } catch (error) {
     console.error("Error:", error);
@@ -859,61 +839,65 @@ transition={{ duration: 0.6, delay: index * 0.1 }}
                           {React.createElement(getVariantIcon(service.variant), {
                             className: `w-6 h-6 text-cyan-400`
                           })  } catch (error) {
-
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-
                         </div>
                         <div className="text-right">
                           <div className="text-2xl font-bold text-cyan-400">{service.price}</div>
                           <div className="text-sm text-gray-400">per month</div>
-
-                          </div>
-                          <div className='text-sm text-gray-400'>per month</div>
-origin/cursor/automate-test-improve-and-merge-code-2533
                         </div>
-                        <div className='text-right'>
-                          <div className='text-2xl font-bold text-cyan-400'>
-                            {service.price}
-                          </div>
-                          <div className='text-sm text-gray-400'>per month</div>                        </div>
                       </div>
                       {/* Service Info */}
-<h3 className='text-xl font-semibold text-white mb-2 group-hover:text-cyan-400 transition-colors duration-200'>
+                      <h3 className='text-xl font-semibold text-white mb-2 group-hover:text-cyan-400 transition-colors duration-200'>
                         {service.name}
                       </h3>
-                      <p className='text-gray-300 mb-4 leading-relaxed'>
-                        {service.tagline}
+                      <p className='text-gray-300 mb-4 leading-relaxed'>                        {service.tagline}
                       </p>
-
-                        <div className='w-12 h-12 bg-gradient-to-r from-cyan-500/20 to-purple-600/20 rounded-lg flex items-center justify-center'>;
-                          {React && React.createElement(;
-                            getVariantIcon(service && service.variant),;
-                            {;`
-                              className: `w-6 h-6 text-cyan-400`,;
-                            }
-                          )}
-                        </div>;
-
-                        <div className='text-right'>;
-
-                          <div className='text-2xl font-bold text-cyan-400'>;
-                            {service && service.price}
-                          </div>;'
-                          <div className='text-sm text-gray-400'>per month</div>                        </div>;
-                      </div>;
-
-                      {/* Service Info */}
-                      <h3 className='text-xl font-semibold text-white mb-2 group-hover:text-cyan-400 transition-colors duration-200'>;
-                        {service && service.name}
-                      </h3>;
-                      <p className='text-gray-300 mb-4 leading-relaxed'>                        {service && service.tagline}
-                      </p>;
-
                       {/* Features */}
-
+                      <div className='mb-6'>
+                        <h4 className='text-sm font-semibold text-gray-400 mb-3 uppercase tracking-wider'>
+                          Key Features
+                        </h4>
+                        <div className='space-y-2'>
+                          {service.features
+                            .slice(0, 3)
+                            .map((feature, featureIndex) => (
+                              <div
+                                key={featureIndex}
+                                className='flex items-center space-x-2'
+                              >
+                                <CheckCircle className='w-4 h-4 text-green-400 flex-shrink-0' />
+                                <span className='text-sm text-gray-300'>
+                                  {feature}
+                                </span>
+                              </div>
+                            ))}
+                      {/* Service Info */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                      <h3 className="text-xl font-semibold text-white mb-2 group-hover:text-cyan-400 transition-colors duration-200">
+                        {service.name  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                      </h3>
+                      <p className="text-gray-300 mb-4 leading-relaxed">
+                        {service.tagline  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                      </p>;
+                      {/* Features */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
                       <div className="mb-6">
                         <h4 className="text-sm font-semibold text-gray-400 mb-3 uppercase tracking-wider">Key Features</h4>
 
@@ -923,9 +907,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                               <CheckCircle className="w-4 h-4 text-green-400 flex-shrink-0" />"
                               <span className="text-sm text-gray-300">{feature}</span>
 
+
                           {service.features.length > 3 && (
                             <div className="text-sm text-cyan-400">
                               +{service.features.length - 3} more features
+
+
+                          )  } catch (error) {
 
                             </div>
 
@@ -953,15 +941,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                                 </span>
                               </div>
                             ))}
-:pages/services-2024.tsx
-                          {service.features.length > 3 && (
-                            <div className='text-sm text-cyan-400'>                              +{service.features.length - 3} more features
-                            </div>
-                          ))  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
                           {service.features.length > 3 && (
                             <div className='text-sm text-cyan-400'>
                               +{service.features.length - 3} more features
@@ -970,16 +949,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                         </div>
                       </div>
                       {/* Stats */}
-<div className='grid grid-cols-3 gap-4 mb-6'>
-                        <div className='text-center'>
-                          <div className='flex items-center justify-center space-x-1 mb-1'>
-                            <Star className='w-4 h-4 text-yellow-400 fill-current' />
-                            <span className='text-sm font-semibold text-white'>
 
                               {service.rating}
-:pages/services-2024.tsx
-                            </span>
-                          </div>
                             </span>;
                           </div>;'
                           <div className='text - xs text - gray - 400'>Rating</div>;
@@ -987,14 +958,35 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                         <div className='text - center'>;'
                           <div className='text - sm font - semibold text - white mb - 1'>;
                             {service.customers}
-
+                        </div>
+                      </div>
+                      {/* Stats */}
+                      <div className='grid grid-cols-3 gap-4 mb-6'>
+                        <div className='text-center'>
+                          <div className='flex items-center justify-center space-x-1 mb-1'>
+                            <Star className='w-4 h-4 text-yellow-400 fill-current' />
+                            <span className='text-sm font-semibold text-white'>
+                              {service.rating}
+                            </span>
+                          )  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                        </div>;
+                      </div>;
+                      {/* Stats */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
                       <div className="grid grid-cols-3 gap-4 mb-6">
                         <div className="text-center">
                           <div className="flex items-center justify-center space-x-1 mb-1">
                             <Star className="w-4 h-4 text-yellow-400 fill-current" />
 
                             <span className="text-sm font-semibold text-white">{service.rating}</span>
-
+                          </div>
                           </div>"
                           <div className="text-xs text-gray-400">Rating</div>
                         </div>"
@@ -1006,12 +998,15 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                           <div className="text-sm font-semibold text-white mb-1">{service.launchDate}</div>"
                           <div className="text-xs text-gray-400">Launched</div>
                         </div>
-:pages/services-2024.tsx
 
-                        <div className='text-center'>
-                          <div className='text-sm font-semibold text-white mb-1'>
-                            {service.launchDate}
-                          </div>
+                      <div className="flex items-center justify-between">
+
+                      {/* CTA */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                      <div className="flex items-center justify-between">
 :pages/services-2024.tsx
                           <div className='text-xs text-gray-400'>Launched</div>                        </div>
                       </div>
@@ -1028,6 +1023,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                           <span className="font-medium">Learn More</span>
                           <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-200" />
                         </Link>
+
 :pages/services-2024.tsx
                         <div className='text-xs text-gray-400 bg-gray-800/50 px-2 py-1 rounded'>
                           {service.variant
@@ -1056,6 +1052,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+
 
                         </div>
                       </div>
@@ -1113,6 +1110,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   }
 }
 
+
         {/* CTA Section */}
         <section className='px-4 sm:px-6 lg:px-8 mb-20'>;
           <div className='max-w-4xl mx-auto text-center'>            <motion&& motion.div
@@ -1131,6 +1129,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 Ready to Transform Your Business?;
               </h2>;'
               <p className='text-xl text-gray-300 mb-8 leading-relaxed'>;
+
 
                           </div>;
 
@@ -1177,6 +1176,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               </h2>;'
               <p className='text - xl text - gray - 300 mb - 8 leading - relaxed'>;
 
+
                 Join thousands of businesses already leveraging our;
                 revolutionary 2024 services. Get started today and experience;
                 the future of technology.;
@@ -1192,6 +1192,7 @@ viewport={{ once: true }}
               <p className="text-xl text-gray-300 mb-8 leading-relaxed">
                 Join thousands of businesses already leveraging our revolutionary 2024 services. 
 
+
                   href="/contact" className="flex items-center space-x-2 bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-200 shadow-lg hover:shadow-cyan-500/25 font-semibold">
 
                   <Zap className="w-5 h-5" />
@@ -1199,16 +1200,9 @@ viewport={{ once: true }}
                 </Link>
                 <Link"
                   href="/pricing-2033" className="flex items-center space-x-2 border border-cyan-500/30 text-cyan-400 px-8 py-4 rounded-lg hover:bg-cyan-500/10 transition-all duration-200 font-semibold">
-:pages/services-2024.tsx
-                  <span>View Pricing Plans</span>
-                  <ArrowRight className='w-4 h-4' />                </Link>
 
                   <ArrowRight className="w-4 h-4" />
 
-                </Link>
-
-                  <ArrowRight className='w-4 h-4' />
-origin/cursor/automate-test-improve-and-merge-code-2533
                 </Link>
 
               </div>
@@ -1217,10 +1211,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         </section>
       </div>
     </>
-:pages/services-2024.tsx
-  )
-}
-export default Services2024Page;
+
 
 '
                   className='flex items-center space-x-2 border border-cyan-500/30 text-cyan-400 px-8 py-4 rounded-lg hover:bg-cyan-500/10 transition-all duration-200 font-semibold'>;
@@ -1235,37 +1226,6 @@ export default Services2024Page;
   ),;
 };
 
-},
-export default Services2024Page,";
-        <section className="px-4 sm:px-6 lg:px-8 mb-20">;"
-          <div className="max-w-4xl mx-auto text-center">;
-            <motion.div;
-              initial={{ opacity: 0, y: 20 }  } catch (error) {"
-    console.error("Error:", error);"
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-              whileInView={{ opacity: 1, y: 0 }  } catch (error) {"
-    console.error("Error:", error);"
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-              transition={{ duration: 0.8 }  } catch (error) {"
-    console.error("Error:", error);"
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}"
-              viewport={{ once: true }} className="bg-gradient-to-r from-cyan-500/10 to-purple-600/10 border border-cyan-500/30 rounded-2xl p-12 backdrop-blur-sm">;"
-              <h2 className="text-4xl font-bold text-white mb-6">;
-                Ready to Transform Your Business?;
-              </h2>;"
-              <p className="text-xl text-gray-300 mb-8 leading-relaxed">;
-                Join thousands of businesses already leveraging our revolutionary 2024 services.;
-                Get started today and experience the future of technology.;
-              </p>;"
-              <div className="flex flex-col sm: flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6">;
-                <Link;'
-                  href='/contact';'
                   className='flex items - center space - x-2 bg - gradient - to - r from - cyan - 500 to - purple - 600 text - white px - 8 py - 4 rounded - lg hover:from - cyan - 600 hover:to - purple - 700 transition - all duration - 200 shadow - lg hover:shadow - cyan - 500 / 25 font - semibold';
                 >;'
                   <Zap className='w - 5 h - 5' />;
@@ -1279,21 +1239,10 @@ export default Services2024Page,";
                   <span > View Pricing Plans</span>;
                   <ArrowRight className='w - 4 h - 4' />                </Link>;
 
+
               </div>;
             </motion.div>;
           </div>;
         </section>;
-
-export default Services2024Page;
-export default Services2024Page;
-;
-
-export default Services2024Page;
-
-export default Services2024Page;
-
-);
-};
-origin/cursor/automate-test-improve-and-merge-code-2533
 
 export default Services2024Page;

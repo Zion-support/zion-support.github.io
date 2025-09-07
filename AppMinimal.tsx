@@ -1,5 +1,6 @@
 import React from 'react';
 
+<<<<<<< HEAD
 interface AppMinimalProps {
   className?: string;
   children?: React.ReactNode;
@@ -26,3 +27,25 @@ const AppMinimal: React.FC<AppMinimalProps> = ({
 };
 
 export default AppMinimal;
+}
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+export default function AppMinimal(): React.JSX.Element {
+  return (
+    <main>
+      <h1>Zion Tech Group - Minimal App</h1>
+      <p>Building the future with innovative technology solutions</p>
+<<<<<<< HEAD
+    </main>)
+<<<<<<< HEAD
+=======
+
+=======
+    </main>
+  );
+}
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc

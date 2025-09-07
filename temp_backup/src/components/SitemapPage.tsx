@@ -1,6 +1,6 @@
 /* eslint-disable */
  export const SitemapPage: React.FC = () => {;
-  return (<> <SEO /> <div className="container mx-auto px-4 py-12" > <h1 className="text-3xl font-bold mb-8" >Sitemap</h1> <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8" > {;
+  return (<> <SEO /> <div className='container mx-auto px-4 py-12' > <h1 className='text-3xl font-bold mb-8' >Sitemap</h1> <div className='grid md:grid-cols-2 lg:grid-cols-3 gap-8' > {;
   /* Public Pages */ ;
 }.filter (route => !route.requiredAuth) .map (route => (<li key= {;
   route.path ;
@@ -18,6 +18,6 @@
   route.path ;
 }> <Link </Link> </li>) ) ;
 }</ul> </div> </div> </li>) ) ;
-}</ul> </div> </div> </div> </>) ;'"
-};'"'"
-'"'"'"
+}</ul> </div> </div> </div> </>) ;''
+};''''
+''''''

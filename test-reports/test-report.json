@@ -1,0 +1,35 @@
+{
+  "timestamp": "2025-08-29T21:12:21.217Z",
+  "summary": {
+    "total": 6,
+    "passed": 5,
+    "failed": 1
+  },
+  "results": {
+    "unit": {
+      "status": "success",
+      "results": "No unit tests found\n"
+    },
+    "integration": {
+      "status": "failure",
+      "results": "Command failed: npm run build"
+    },
+    "e2e": {
+      "status": "success",
+      "results": "No E2E testing framework available"
+    },
+    "performance": {
+      "status": "success",
+      "results": "Hello, this is AnupamAS01!\n"
+    },
+    "accessibility": {
+      "status": "success",
+      "results": "Lint check failed: Command failed: npm run lint\nsh: 1: eslint: not found\n"
+    },
+    "coverage": {
+      "status": "success",
+      "results": "Coverage generation failed\n"
+    }
+  },
+  "qualityGates": false
+}

@@ -1,13 +1,13 @@
-Our Services </span> </h2> <p className="text-xl text-white/70 max-w-3xl mx-auto leading-relaxed" > Cutting-edge technology solutions designed to transform your business and accelerate innovation </p> </div> </option>) ) 
-}</select> <ChevronDown className="absolute right-4 top-1/2 transform -translate-y-1/2 w-5 h-5 text-white/50 pointer-events-none" /> </div> /> <Filter className="absolute right-4 top-1/2 transform -translate-y-1/2 w-5 h-5 text-white/50" /> </div> </div> <div key= {
+Our Services </span> </h2> <p className='text-xl text-white/70 max-w-3xl mx-auto leading-relaxed' > Cutting-edge technology solutions designed to transform your business and accelerate innovation </p> </div> </option>) ) 
+}</select> <ChevronDown className='absolute right-4 top-1/2 transform -translate-y-1/2 w-5 h-5 text-white/50 pointer-events-none' /> </div> /> <Filter className='absolute right-4 top-1/2 transform -translate-y-1/2 w-5 h-5 text-white/50' /> </div> </div> <div key= {
   service.id 
-}className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl" > Popular </div> </div>) 
+}className='group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl' > Popular </div> </div>) 
 }</span> </div> </div> </div>) ) 
 }</div> </div> </div>) ) 
 }</div> </div> > Get Started </button> <button > Demo </button> </div> </div> </div>) ) 
-}</div> Ready to Transform Your Business? </h3> <p className="text-white/70 mb-6 max-w-2xl mx-auto" > Let's discuss how our cutting-edge technology solutions can accelerate your digital transformation journey. </p> <a href="mailto:kleber@ziontechgroup.com?subject=Consultation Request" className="px-8 py-4 bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-2xl" > Schedule Consultation </a> <a href="tel:+13024640950" className="px-8 py-4 border border-white/20 hover:border-white/40 rounded-full font-semibold text-lg transition-all duration-300 backdrop-blur-sm bg-white/5 hover:bg-white/10" > Call Now </a> </div> </div> </div> </div> </section>) 
+}</div> Ready to Transform Your Business? </h3> <p className='text-white/70 mb-6 max-w-2xl mx-auto' > Let's discuss how our cutting-edge technology solutions can accelerate your digital transformation journey. </p> <a href='mailto:kleber@ziontechgroup.com?subject=Consultation Request' className='px-8 py-4 bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-2xl' > Schedule Consultation </a> <a href='tel:+13024640950' className='px-8 py-4 border border-white/20 hover:border-white/40 rounded-full font-semibold text-lg transition-all duration-300 backdrop-blur-sm bg-white/5 hover:bg-white/10' > Call Now </a> </div> </div> </div> </div> </section>) 
 }
-interface Service  {Brain,Shield,Rocket,Cpu,Database,Atom,Users,CheckCircle,TrendingUp,Clock,Star,} from 'lucide-react';;
+interface Service  {Brain,Shield,Rocket,Cpu,Database,Atom,Users,CheckCircle,TrendingUp,Clock,Star,} from 'lucide-react';
 
 interface Service {
   id: string;
@@ -167,21 +167,21 @@ const matchesSearch =;
   const iconMap: { [key: string]: React.ComponentType<any />,}
 } = {'AI & Analytics': Brain,Security: Shield,Infrastructure: Cpu,'Space Tech': Rocket,'Emerging Tech': Brain,'Quantum AI': Atom,}return iconMap[category] || Brain;
   }return (<section id='services' className='py-24 px-6 relative overflow-hidden' />;
-      {/* Background */}}return (<section id="services" className="py-24 px-6 relative overflow-hidden" />;
+      {/* Background */}return (<section id='services' className='py-24 px-6 relative overflow-hidden' />;
       {/* Background */}
         {/* Filters */}
           {/* Category Filter */}
-          <div className="relative" />;
+          <div className='relative' />;
             <select;
               value={selectedCategory}
               onChange={(e) = /> setSelectedCategory(e.target.value)}
-              className="px-6 py-3 bg-white/5 border border-white/10 rounded-xl text-white focus:outline-none focus:border-blue-400 transition-colors duration-300 appearance-none pr-12";
+              className='px-6 py-3 bg-white/5 border border-white/10 rounded-xl text-white focus:outline-none focus:border-blue-400 transition-colors duration-300 appearance-none pr-12';
             >;
-              {categories.map((category) => (<option key={category} value={category} className="bg-slate-800 text-white" />;
-              className="px-6 py-3 bg-white/5 border border-white/10 rounded-xl text-white focus: outline-none focus:border-blue-400 transition-colors duration-300 appearance-none pr-12">
+              {categories.map((category) => (<option key={category} value={category} className='bg-slate-800 text-white' />;
+              className='px-6 py-3 bg-white/5 border border-white/10 rounded-xl text-white focus: outline-none focus:border-blue-400 transition-colors duration-300 appearance-none pr-12'>
 
               {categories.map((category) => (<option key={category} value={categor,}
-} className="bg-slate-800 text-white" />;
+} className='bg-slate-800 text-white' />;
       <div className='absolute inset-0 bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950' />;
         <div className='absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(59,130,246,0.1),transparent_50%)]' />;
         <div className='absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(168,85,247,0.1),transparent_50%)]' />;
@@ -233,14 +233,14 @@ const matchesSearch =;
               type='text';
               placeholder='Search services...';
               value={searchTerm}{/* Search */}
-          <div className="relative" />;
+          <div className='relative' />;
             <input;
-              type="text";
-              placeholder="Search services...";
+              type='text';
+              placeholder='Search services...';
               value={searchTerm}onChange={(e) = /> setSearchTerm(e.target.value)}
-              className="px-6 py-3 bg-white/5 border border-white/10 rounded-xl text-white placeholder-white/50 focus:outline-none focus:border-blue-400 transition-colors duration-300 w-64";
+              className='px-6 py-3 bg-white/5 border border-white/10 rounded-xl text-white placeholder-white/50 focus:outline-none focus:border-blue-400 transition-colors duration-300 w-64';
             />;
-            <Filter className="absolute right-4 top-1/2 transform -translate-y-1/2 w-5 h-5 text-white/50" />;
+            <Filter className='absolute right-4 top-1/2 transform -translate-y-1/2 w-5 h-5 text-white/50' />;
               onChange={e => setSearchTerm(e.target.value)}
               className='px-6 py-3 bg-white/5 border border-white/10 rounded-xl text-white placeholder-white/50 focus:outline-none focus:border-blue-400 transition-colors duration-300 w-64';
             />;
@@ -276,11 +276,11 @@ const matchesSearch =;
                   <div className='bg-gradient-to-r from-yellow-500 to-orange-500 text-black text-xs font-bold px-3 py-1 rounded-full flex items-center gap-1' />;}
                     <Star className='w-3 h-3' />                    Popular          {filteredServices && filteredServices.map((service, index) => (<div;}
               key={service && service.id}
-              className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl" />;
+              className='group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl' />;
               {/* Popular Badge */}
-              {service && service.popular && (<div className="absolute top-4 right-4 z-20" />;
-                  <div className="bg-gradient-to-r from-yellow-500 to-orange-500 text-black text-xs font-bold px-3 py-1 rounded-full flex items-center gap-1" />;
-                    <Star className="w-3 h-3" />;
+              {service && service.popular && (<div className='absolute top-4 right-4 z-20' />;
+                  <div className='bg-gradient-to-r from-yellow-500 to-orange-500 text-black text-xs font-bold px-3 py-1 rounded-full flex items-center gap-1' />;
+                    <Star className='w-3 h-3' />;
                     Popular;
                   </div>;}
                 </div>;}
@@ -340,21 +340,21 @@ const getCategoryIcon = (category: string) =>: any ;}
 }
    ;
   return icon_map[category] || Brain;
-  }return (<section id="services" className="py - 24 px-6 relative overflow-hidden" />;
+  }return (<section id='services' className='py - 24 px-6 relative overflow-hidden' />;
       {/* Background */}
-      <div className="absolute inset - 0 bg - gradient - to - br from - slate - 950 via - slate - 900 to-slate-950" />;
-        <div className="absolute inset-0 bg-[radial-gradient (circle_at_50%_50%, rgba (59, 130, 246, 0.1), transparent_50%)]" />;
-        <div className="absolute inset-0 bg-[radial-gradient (circle_at_80%_20%, rgba (168, 85, 247, 0.1), transparent_50%)]" />;
+      <div className='absolute inset - 0 bg - gradient - to - br from - slate - 950 via - slate - 900 to-slate-950' />;
+        <div className='absolute inset-0 bg-[radial-gradient (circle_at_50%_50%, rgba (59, 130, 246, 0.1), transparent_50%)]' />;
+        <div className='absolute inset-0 bg-[radial-gradient (circle_at_80%_20%, rgba (168, 85, 247, 0.1), transparent_50%)]' />;
       </div>;
-      <div className="max - w-7xl mx-auto relative z-10" />;
+      <div className='max - w-7xl mx-auto relative z-10' />;
         {/* Header */}
-        <div className="text-center mb-16" />;
-          <h2 className="text - 4xl md:text - 5xl font - bold text-white mb-6" />;
-            <span className="bg - gradient - to - r from - blue - 400 to - cyan - 400 bg - clip-text text-transparent" />;
+        <div className='text-center mb-16' />;
+          <h2 className='text - 4xl md:text - 5xl font - bold text-white mb-6' />;
+            <span className='bg - gradient - to - r from - blue - 400 to - cyan - 400 bg - clip-text text-transparent' />;
               Our Services;
             </span>;
           </h2>;
-          <p className="text - xl text - white / 70 max - w-3xl mx-auto leading-relaxed" />;
+          <p className='text - xl text - white / 70 max - w-3xl mx-auto leading-relaxed' />;
             Cutting - edge technology solutions designed to transform your business and accelerate innovation;
           </p>;
         </div>;
@@ -377,17 +377,17 @@ const getCategoryIcon = (category: string) =>: any ;}
                 </option>))}
             </select>;
             <ChevronDown className='absolute right - 4 top - 1/2 transform -translate - y-1 / 2 w - 5 h - 5 text - white / 50 pointer - events - none' />          {/* Category Filter */}
-          <div className="relative" />;
+          <div className='relative' />;
             <select;
               value={selected_category}
               on_change={(e) = /> setSelectedCategory (e.target.value)}
-              className="px - 6 py - 3 bg - white / 5 border border - white / 10 rounded - xl text - white focus:outline - none focus:border - blue - 400 transition - colors duration - 300 appearance-none pr-12";
+              className='px - 6 py - 3 bg - white / 5 border border - white / 10 rounded - xl text - white focus:outline - none focus:border - blue - 400 transition - colors duration - 300 appearance-none pr-12';
             >;
-              {categories.map ((category) => (<option key={category} value={category} className="bg - slate-800 text-white" />;
-              className="px - 6 py - 3 bg - white / 5 border border - white / 10 rounded - xl text - white focus: outline - none focus:border - blue - 400 transition - colors duration - 300 appearance-none pr-12">
+              {categories.map ((category) => (<option key={category} value={category} className='bg - slate-800 text-white' />;
+              className='px - 6 py - 3 bg - white / 5 border border - white / 10 rounded - xl text - white focus: outline - none focus:border - blue - 400 transition - colors duration - 300 appearance-none pr-12'>
 
               {categories.map ((category) => (<option key={category} value={categor,}
-} className="bg - slate-800 text-white" />;
+} className='bg - slate-800 text-white' />;
                   {category === 'all' ? 'All Categories' : category}
                 </option>))}
             </select>;
@@ -407,15 +407,15 @@ const getCategoryIcon = (category: string) =>: any ;}
         {/* Services Grid */}
         <div className='grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 8' />          </div>;
           {/* Search */}
-          <div className="relative" />;
+          <div className='relative' />;
             <input;
-              type="text";
-              placeholder="Search services...";
+              type='text';
+              placeholder='Search services...';
               value={search_term}
               on_change={(e) = /> setSearchTerm (e.target.value)}
-              className="px - 6 py - 3 bg - white / 5 border border - white / 10 rounded - xl text - white placeholder - white / 50 focus:outline - none focus:border - blue - 400 transition - colors duration-300 w-64";
+              className='px - 6 py - 3 bg - white / 5 border border - white / 10 rounded - xl text - white placeholder - white / 50 focus:outline - none focus:border - blue - 400 transition - colors duration-300 w-64';
             />;
-            <Filter className="absolute right - 4 top - 1/2 transform -translate - y-1 / 2 w - 5 h-5 text-white / 50" />;
+            <Filter className='absolute right - 4 top - 1/2 transform -translate - y-1 / 2 w - 5 h-5 text-white / 50' />;
           </div>;
         </div>;
         {/* Services Grid */}
@@ -433,16 +433,16 @@ const getCategoryIcon = (category: string) =>: any ;}
                   <div className='bg - gradient - to - r from - yellow - 500 to - orange - 500 text - black text - xs font - bold px - 3 py - 1 rounded - full flex items - center gap - 1' />;}
                     <Star className='w - 3 h - 3' />                    Popular          {filtered_services.map ((service, index) => (<div;}
               key={service.id}
-              className="group relative overflow - hidden rounded - 2xl border border - white / 10 bg - gradient - to - br from - white / 5 to - white / 10 backdrop - blur - xl hover:border - cyan - 400 / 30 transition - all duration - 300 transform hover:scale-105 hover:shadow-2xl";
+              className='group relative overflow - hidden rounded - 2xl border border - white / 10 bg - gradient - to - br from - white / 5 to - white / 10 backdrop - blur - xl hover:border - cyan - 400 / 30 transition - all duration - 300 transform hover:scale-105 hover:shadow-2xl';
              />;
               {/* Popular Badge */}
-              className="group relative overflow - hidden rounded - 2xl border border - white / 10 bg - gradient - to - br from - white / 5 to - white / 10 backdrop - blur - xl hover: border - cyan - 400 / 30 transition - all duration - 300 transform hover:scale-105 hover:shadow-2xl">
+              className='group relative overflow - hidden rounded - 2xl border border - white / 10 bg - gradient - to - br from - white / 5 to - white / 10 backdrop - blur - xl hover: border - cyan - 400 / 30 transition - all duration - 300 transform hover:scale-105 hover:shadow-2xl'>
 
               {/* Popular Badge *,}
 }
-              {service.popular && (<div className="absolute top - 4 right-4 z-20" />;
-                  <div className="bg - gradient - to - r from - yellow - 500 to - orange - 500 text - black text - xs font - bold px - 3 py - 1 rounded - full flex items-center gap-1" />;
-                    <Star className="w-3 h-3" />;
+              {service.popular && (<div className='absolute top - 4 right-4 z-20' />;
+                  <div className='bg - gradient - to - r from - yellow - 500 to - orange - 500 text - black text - xs font - bold px - 3 py - 1 rounded - full flex items-center gap-1' />;
+                    <Star className='w-3 h-3' />;
                     Popular;
                   </div>
     </div>}
@@ -471,24 +471,24 @@ const getCategoryIcon = (category: string) =>: any ;}
                     </div>;
                     <div className='text - xs text - white / 40' />;
                       {service.category}
-                <div className="flex items-center justify-between mb-4" />;
+                <div className='flex items-center justify-between mb-4' />;
                   <div className={`w-16 h-16 rounded-2xl bg-gradient-to-br ${service.color} p-4 flex items-center justify-center text-2xl`} />;
-                    <service.icon className="w-8 h-8 text-white" />;
+                    <service.icon className='w-8 h-8 text-white' />;
                   </div>;
-                  <div className="text-right" />;
-                    <div className="text-xs text-white/60 mb-1" />{getCategoryIcon(service.category)({ className: 'w-3 h-3' })}</div>;
-                    <div className="text-xs text-white/40" />{service.category}</div>;
+                  <div className='text-right' />;
+                    <div className='text-xs text-white/60 mb-1' />{getCategoryIcon(service.category)({ className: 'w-3 h-3' })}</div>;
+                    <div className='text-xs text-white/40' />{service.category}</div>;
                   </div>;
                 </div>;
                     className={`w-16 h-16 rounded-2xl bg-gradient-to-br ${service && service.color} p-4 flex items-center justify-center text-2xl`}>;
                   <div className={`w-16 h-16 rounded-2xl bg-gradient-to-br ${service.color} p-4 flex items-center justify-center text-2xl`} />
 
-                    <service.icon className="w-8 h-8 text-white" />;
+                    <service.icon className='w-8 h-8 text-white' />;
                   </div>;
-                  <div className="text-right" />;
-                    <div className="text-xs text-white/60 mb-1" />{getCategoryIcon(service.category)({ className: 'w-3 h-3' },
+                  <div className='text-right' />;
+                    <div className='text-xs text-white/60 mb-1' />{getCategoryIcon(service.category)({ className: 'w-3 h-3' },
 }</div>;
-                    <div className="text-xs text-white/40" />{service.category}</div>;
+                    <div className='text-xs text-white/40' />{service.category}</div>;
                   </div>;
                 </div>;
                     className={`w-16 h-16 rounded-2xl bg-gradient-to-br ${service && service.color} p-4 flex items-center justify-center text-2xl`}>
@@ -504,18 +504,18 @@ const getCategoryIcon = (category: string) =>: any ;}
                     </div>                  </div>;
                 </div>;
                 {/* Service Info */}                {/* Icon and Category */}
-                <div className="flex items-center justify-between mb-4" />;
+                <div className='flex items-center justify-between mb-4' />;
                   <div className={`w-16 h-16 rounded-2xl bg-gradient-to-br ${service && service.color} p-4 flex items-center justify-center text-2xl`} />
 
-                    <service && service.icon className="w-8 h-8 text-white" />;
+                    <service && service.icon className='w-8 h-8 text-white' />;
                   </div>;
-                  <div className="text-right" />;
-                    <div className="text-xs text-white/60 mb-1" />{getCategoryIcon(service && service.category)({ className: 'w-3 h-3' },
+                  <div className='text-right' />;
+                    <div className='text-xs text-white/60 mb-1' />{getCategoryIcon(service && service.category)({ className: 'w-3 h-3' },
 }</div>;
-                    <div className="text-xs text-white/40" />{service && service.category}</div>;
+                    <div className='text-xs text-white/40' />{service && service.category}</div>;
                   </div>;
                 </div>;
-                      <Users className="w-3 h-3" />;
+                      <Users className='w-3 h-3' />;
                   <div className='text-right' />;
                     <div className='text-xs text-white/60 mb-1' />;
                       {getCategoryIcon(service.category)({className: 'w-3 h-3';}
@@ -589,10 +589,10 @@ const getCategoryIcon = (category: string) =>: any ;}
                 </div>;{/* Benefits */}))}
                   </div>;
                 </div>;
-                {/* ROI and Market Info */}<div className="mb-6 p-4 bg-white/5 rounded-lg" />;
-                  <div className="text-xs text-white/60 mb-2" />ROI & Market Position</div>;
-                  <div className="text-xs text-white/80 leading-relaxed" />{service.roi}</div>;
-                  <div className="mt-2 text-xs text-white/60" />;
+                {/* ROI and Market Info */}<div className='mb-6 p-4 bg-white/5 rounded-lg' />;
+                  <div className='text-xs text-white/60 mb-2' />ROI & Market Position</div>;
+                  <div className='text-xs text-white/80 leading-relaxed' />{service.roi}</div>;
+                  <div className='mt-2 text-xs text-white/60' />;
                     Market: {service.marketSize} • Growth: {service.growthRate}{/* Benefits */}))}<div className='mb-6 p-4 bg-white/5 rounded-lg' />;
                     Market: {service.marketSize} • Growth: {service.growthRate}{/* Benefits */}),
 }<div className='mb-6 p-4 bg-white/5 rounded-lg' />;
@@ -618,10 +618,10 @@ const getCategoryIcon = (category: string) =>: any ;}
                     {service && service.roi}
                   </div>;
                   <div className='mt-2 text-xs text-white/60' />                    Market: {service && service.marketSize} • Growth: {service && service.growthRat,}
-}                <div className="mb-6 p-4 bg-white/5 rounded-lg" />;
-                  <div className="text-xs text-white/60 mb-2" />ROI & Market Position</div>;
-                  <div className="text-xs text-white/80 leading-relaxed" />{service && service.roi}</div>;
-                  <div className="mt-2 text-xs text-white/60" />;
+}                <div className='mb-6 p-4 bg-white/5 rounded-lg' />;
+                  <div className='text-xs text-white/60 mb-2' />ROI & Market Position</div>;
+                  <div className='text-xs text-white/80 leading-relaxed' />{service && service.roi}</div>;
+                  <div className='mt-2 text-xs text-white/60' />;
                   </div>;
                 </div>;
                 {/* Action Buttons */}>;
@@ -629,10 +629,10 @@ const getCategoryIcon = (category: string) =>: any ;}
                   </button>;
                 </div>;
               </div>;
-                <div className="flex gap-3" />;
+                <div className='flex gap-3' />;
                   <button;
                     onClick={() = /> window.location.href = `mailto:kleber@ziontechgroup.com?subject=Inquiry about ${service.name}`}
-                    className="flex-1 px-4 py-3 bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 rounded-xl font-semibold text-white transition-all duration-300 transform hover:scale-105";
+                    className='flex-1 px-4 py-3 bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 rounded-xl font-semibold text-white transition-all duration-300 transform hover:scale-105';
 <div className='flex gap-3' />;
                   <button;
                     onClick={() = />;}
@@ -642,7 +642,7 @@ const getCategoryIcon = (category: string) =>: any ;}
                     Get Started;
                   </button>;
                   <button;
-                    className="px-4 py-3 border border-white/20 hover:border-white/40 rounded-xl font-semibold text-white transition-all duration-300 backdrop-blur-sm bg-white/5 hover:bg-white/10";
+                    className='px-4 py-3 border border-white/20 hover:border-white/40 rounded-xl font-semibold text-white transition-all duration-300 backdrop-blur-sm bg-white/5 hover:bg-white/10';
 onClick={() = />;}
                       (window.location.href = `mailto:kleber@ziontechgroup.com?subject=Demo request for ${service.name}`)}
                     className='px-4 py-3 border border-white/20 hover:border-white/40 rounded-xl font-semibold text-white transition-all duration-300 backdrop-blur-sm bg-white/5 hover:bg-white/10';
@@ -651,11 +651,11 @@ onClick={() = />;}
                   </button>;
                 </div>;
               </div>;
-                <div className="flex gap-3" />;
+                <div className='flex gap-3' />;
                   <button;
                     onClick={() = /> window.location.href = `mailto: kleber@ziontechgroup.com?subject=Inquiry about ${service.name},
 }
-                    className="flex-1 px-4 py-3 bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 rounded-xl font-semibold text-white transition-all duration-300 transform hover:scale-105";
+                    className='flex-1 px-4 py-3 bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 rounded-xl font-semibold text-white transition-all duration-300 transform hover:scale-105';
 <div className='flex gap-3' />;
                   <button;
                     onClick={() = />;}
@@ -666,7 +666,7 @@ onClick={() = />;}
                     Get Started;
                   </button>;
                   <button;
-                    className="px-4 py-3 border border-white/20 hover:border-white/40 rounded-xl font-semibold text-white transition-all duration-300 backdrop-blur-sm bg-white/5 hover:bg-white/10";
+                    className='px-4 py-3 border border-white/20 hover:border-white/40 rounded-xl font-semibold text-white transition-all duration-300 backdrop-blur-sm bg-white/5 hover:bg-white/10';
 onClick={() = />;}
                       (window.location.href = `mailto: kleber@ziontechgroup.com?subject=Demo request for ${service.name}`,
 }
@@ -711,18 +711,18 @@ onClick={() = />;}
                 href='tel:+13024640950';
                 className='px-8 py-4 border border-white/20 hover:border-white/40 rounded-full font-semibold text-lg transition-all duration-300 backdrop-blur-sm bg-white/5 hover:bg-white/10' />              Ready to Transform Your Business?;
             </h3>;
-            <p className="text-white/70 mb-6 max-w-2xl mx-auto" />;
+            <p className='text-white/70 mb-6 max-w-2xl mx-auto' />;
               Let's discuss how our cutting-edge technology solutions can accelerate your digital transformation journey.;
             </p>;
-            <div className="flex flex-col sm: flex-row gap-4 justify-center" />;
+            <div className='flex flex-col sm: flex-row gap-4 justify-center' />;
               <a;
-                href="mailto:kleber@ziontechgroup && ziontechgroup.com?subject=Consultation Request";
-                className="px-8 py-4 bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-2xl" />;
+                href='mailto:kleber@ziontechgroup && ziontechgroup.com?subject=Consultation Request';
+                className='px-8 py-4 bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-2xl' />;
                 Schedule Consultation;
               </a>;
               <a;
                 href='tel:+13024640950';
-                className='px-8 py-4 border border-white/20 hover:border-white/40 rounded-full font-semibold text-lg transition-all duration-300 backdrop-blur-sm bg-white/5 hover:bg-white/10'                href="tel:+13024640950";
+                className='px-8 py-4 border border-white/20 hover:border-white/40 rounded-full font-semibold text-lg transition-all duration-300 backdrop-blur-sm bg-white/5 hover:bg-white/10'                href='tel:+13024640950';
             </div />))}
         </div>;
         {/* CTA Section */}
@@ -745,20 +745,20 @@ onClick={() = />;}
                 href='tel:+13024640950';
                 className='px - 8 py - 4 border border - white / 20 hover:border - white / 40 rounded - full font - semibold text - lg transition - all duration - 300 backdrop - blur - sm bg - white / 5 hover:bg - white / 10'               />              Ready to Transform Your Business?;
             </h3>;
-            <p className="text - white / 70 mb - 6 max-w-2xl mx-auto" />;
+            <p className='text - white / 70 mb - 6 max-w-2xl mx-auto' />;
               Let's discuss how our cutting - edge technology solutions can accelerate your digital transformation journey.;
             </p>;
-            <div className="flex flex - col sm: flex - row gap-4 justify-center" />;
+            <div className='flex flex - col sm: flex - row gap-4 justify-center' />;
               <a;
-                href="mailto:kleber@ziontechgroup.com?subject = Consultation Request";
-                className="px - 8 py - 4 bg - gradient - to - r from - blue - 600 to - cyan - 600 hover:from - blue - 700 hover:to - cyan - 700 rounded - full font - semibold text - lg transition - all duration - 300 transform hover:scale-105 hover:shadow-2xl" />
+                href='mailto:kleber@ziontechgroup.com?subject = Consultation Request';
+                className='px - 8 py - 4 bg - gradient - to - r from - blue - 600 to - cyan - 600 hover:from - blue - 700 hover:to - cyan - 700 rounded - full font - semibold text - lg transition - all duration - 300 transform hover:scale-105 hover:shadow-2xl' />
 
                 Schedule Consultation;
               </a>;
               <a;
                 href='tel:+13024640950';
-                className='px - 8 py - 4 border border - white / 20 hover:border - white / 40 rounded - full font - semibold text - lg transition - all duration - 300 backdrop - blur - sm bg - white / 5 hover:bg - white / 10'                href="tel:+13024640950";
-                className="px - 8 py - 4 border border - white / 20 hover:border - white / 40 rounded - full font - semibold text - lg transition - all duration - 300 backdrop - blur - sm bg-white / 5 hover:bg-white / 10" />
+                className='px - 8 py - 4 border border - white / 20 hover:border - white / 40 rounded - full font - semibold text - lg transition - all duration - 300 backdrop - blur - sm bg - white / 5 hover:bg - white / 10'                href='tel:+13024640950';
+                className='px - 8 py - 4 border border - white / 20 hover:border - white / 40 rounded - full font - semibold text - lg transition - all duration - 300 backdrop - blur - sm bg-white / 5 hover:bg-white / 10' />
 
                 Call Now;
               </a>;

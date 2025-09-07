@@ -1,14 +1,50 @@
+<<<<<<< HEAD
+#!/""usr/bin/env""
+const fs = require("fs");
+const path = require("path");
+const { execSync, spawn } = require("child_process");
+      this.projectRoot,logs"
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+>>>>>>> merged-prs-20250907-203621
 #!/""usr/bin/env""
 const fs = require("fs")
 const path = require("path")
 const { execSync, spawn } = require("child_process")
       this.projectRoot,logs"
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
       "ai-code-review.log"
       this.projectRoot,logs"
       "code-review-history.json"
   console.log(""🤖 AI-Powered Code Review System Initialized")
   fs.mkdirSync(logDir, { "recursive"})
+<<<<<<< HEAD
+const data = fs.readFileSync(this.reviewHistory, "utf8");
+=======
+<<<<<<< HEAD
   const data = fs.readFileSync(this.reviewHistory, "utf8")
+=======
+<<<<<<< HEAD
+
+=======
+  const data = fs.readFileSync(this.reviewHistory, "utf8")
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   "totalReviews"
           "totalIssues"
           "totalImprovements"
@@ -40,6 +76,17 @@ const { execSync, spawn } = require("child_process")
       "summary"
   // Review ""TypeScript/JavaScript""
   // Review "TypeScript/JavaScript"
+<<<<<<< HEAD
+      console.log( Code review completed in ${reviewResults.duration}ms);console.log( Found ${reviewResults.issues.length} issues, ${reviewResults.improvements.length} improvements"")
+  console.error(" Error during code "review": ")
+this.logError("Code review failed")
+  console.log("" Reviewing ""TypeScript/JavaScript"" files...")
+const tsFiles = this.findFiles(["**/*.ts", "**/*.tsx", "**/*.js", "**/*.jsx")];
+const content = fs.readFileSync(file, ");
+=======
+<<<<<<< HEAD
+
+=======
       console.log( Code review completed in ${reviewResults.duration}ms);console.log( Found ${reviewResults.issues.length} issues, ${reviewResults.improvements.length} improvements"")
   console.error(" Error during code "review": ")
   console.error(" Error during code "review": ")
@@ -47,6 +94,11 @@ this.logError("Code review failed")
   console.log("" Reviewing ""TypeScript/JavaScript"" files...")
     const tsFiles = this.findFiles(["**/*.ts", "**/*.tsx", "**/*.js", "**/*.jsx")]
   const content = fs.readFileSync(file, ")
+<<<<<<< HEAD
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
         results.filesReviewed++;"
         results.issues.push(...fileResults.issues);"
         results.improvements.push(...fileResults.improvements);"
@@ -54,22 +106,60 @@ this.logError("Code review failed")
   const results = { "issues": [], "improvements"}
     if (content.includes("any")
   "file"
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
         "type": "typescript"
         "severity": "warning"
         "message": "Usage of "any type detected. Consider using proper TypeScript types."
         "line": this.findLineNumber(content, "any")
         "suggestion": "Replace with specific interface or union type"
+<<<<<<< HEAD
+const importMatches = content.match(/import\s+.*\s+from\s+["][^""]+["")];
+=======
     const importMatches = content.match(/import\s+.*\s+from\s+["][^""]+["")]
+<<<<<<< HEAD
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   "file"
             "type": "typescript"
             "severity": "info","message": "Unused import ${importedItem}"
             "line"
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
             "suggestion": "Remove unused import"
             "type": "typescript"
             "severity": "info","message": "Unused import ${importedItem}"
             "line"
             "suggestion": "Remove unused import"
     if (content.includes("useEffect") && content.includes("[]")
+<<<<<<< HEAD
+  "file"
+        "type": "react"
+        "severity": "info"
+        "message": "Consider adding dependencies to useEffect or using ""useCallback/useMemo"""
+        "line": this.findLineNumber(content, "useEffect")
+        "suggestion": "Review useEffect dependencies for optimization"
+// console.log(""⚛ Reviewing React components...")
+  console.log("⚛ Reviewing React components...")
+const reactFiles = this.findFiles(["**/*.tsx", "**/*.jsx")];
+const content = fs.readFileSync(file, "utf8");
+const reactFiles = this.findFiles(["**/*.tsx", "**/*.jsx")];
+const content = fs.readFileSync(file, "utf8");
+        } catch (error) {  console.error(Error reviewing React component ${file  }:, error")
+  const results = { "issues": [], "improvements"}
+    if (!content.includes("interface") && !content.includes("type Props") && !content.includes("PropTypes")
+  "file"
+=======
   "file"
         "type": "react"
         "severity": "info"
@@ -82,10 +172,17 @@ this.logError("Code review failed")
   const content = fs.readFileSync(file, "utf8")
     const reactFiles = this.findFiles(["**/*.tsx", "**/*.jsx")]
   const content = fs.readFileSync(file, "utf8")
+<<<<<<< HEAD
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
         } catch (error) {  console.error(Error reviewing React component ${file  }:, error")
-  const results = { "issues": [], "improvements"}
-    if (!content.includes("interface") && !content.includes("type Props") && !content.includes("PropTypes")
+    if (!content.includes(interface) && !content.includes("type Props") && !content.includes(PropTypes)
   "file"
+<<<<<<< HEAD
+
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
         "type": "react"
         "severity": "info"
         "message": "Component lacks type definitions"
@@ -112,8 +209,13 @@ this.logError("Code review failed")
         "line": this.findLineNumber(content, "<button")
         "suggestion": "Add aria-label or aria-labelledby for screen readers"
   console.log(""⚙ Reviewing configuration files...")
+<<<<<<< HEAD
+const configFiles = ["package.json", "tsconfig.json", "next.config.js", "tailwind.config.js", "eslint.config.js"];
+const content = fs.readFileSync(configFile, "utf8");
+=======
     const configFiles = ["package.json", "tsconfig.json", "next.config.js", "tailwind.config.js", "eslint.config.js"]
   const content = fs.readFileSync(configFile, "utf8")
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   const results = { "issues": [], "improvements"}
     if (filePath === "package.json")
   for (const ["dep", "version")]
@@ -138,14 +240,23 @@ this.logError("Code review failed")
             "line": this.findLineNumber(content, "--inspect")
             "suggestion": "Remove --inspect flag from production scripts"
   console.error("Error parsing package."json": ")
+<<<<<<< HEAD
+  console.log(""� Reviewing package dependencies...")
+const outdatedCheck = execSync("npm outdated --json");
+=======
   console.error("Error parsing package."json": ")
   console.log(""� Reviewing package dependencies...")
       const outdatedCheck = execSync("npm outdated --json")
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   "cwd"
         "encoding": "utf8"
         "stdio": "pipe"
   console.log("� Reviewing package dependencies...")
+<<<<<<< HEAD
+const outdatedCheck = execSync("npm outdated --json");
+=======
       const outdatedCheck = execSync("npm outdated --json")
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   "cwd"
         "encoding": "utf8"
         "stdio": "pipe"
@@ -154,7 +265,11 @@ this.logError("Code review failed")
             "type": "dependencies"
             "severity": "info`,"message": Outdated package: ${pkg} ("current": ${info.current}, "latest"`)
             "line": 0,"suggestion": `Update ${pkg} to latest version"}"
+<<<<<<< HEAD
+const auditCheck = execSync("npm audit --json");
+=======
       const auditCheck = execSync("npm audit --json")
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   "cwd"
         "encoding": "utf8"
         "stdio": "pipe"
@@ -177,6 +292,10 @@ this.logError("Code review failed")
         "severity": "info"
         "message"
         "line"
+<<<<<<< HEAD
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 // console.log("No dependency issues found")
   console.log("🧠 Generating AI-powered suggestions...")
   "file": "AI Analysis"
@@ -195,22 +314,50 @@ this.logError("Code review failed")
   if (issue.severity === "info" && issue.type === ")
   if (issue.severity === "info" && issue.type === "typescript")
   if (issue.message.includes(`Unused import``)
+<<<<<<< HEAD
+const content = fs.readFileSync(issue.file, "utf8");
+const lines = content.split("\n");
+        if (importLine.includes("import")
+          fs.writeFileSync(issue.file, lines.join(")
+const glob = require("glob");
+const matches = glob.sync(pattern, { "cwd"});
+const glob = require("glob");
+const matches = glob.sync(pattern, { "cwd"});
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+=======
+>>>>>>> merged-prs-20250907-203621
         const content = fs.readFileSync(issue.file, "utf8")
         const lines = content.split("\n")
         if (importLine.includes("import")
           fs.writeFileSync(issue.file, lines.join(")
   const glob = require("glob")
         const matches = glob.sync(pattern, { "cwd"})
+<<<<<<< HEAD
 
+=======
+  const glob = require("glob")
+>>>>>>> merged-prs-20250907-203621
         const matches = glob.sync(pattern, { "cwd"})
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
         if (stat.isDirectory() && !item.startsWith(".") && !item.includes("node_modules")
     if (pattern.includes("*.ts") && ext === ".ts"
     if (pattern.includes("*.tsx") && ext === ".tsx"
     if (pattern.includes("*.js") && ext === ".js"
     if (pattern.includes("*.jsx") && ext === ".jsx"
+<<<<<<< HEAD
+const lines = content.split("\n");
+  console.error("Error saving review "history": ")
+  "timestamp"
+=======
   const lines = content.split("\n")
   console.error("Error saving review "history": ")
   "timestamp"
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
       "summary"
         "issuesFound"
         "improvementsSuggested"
@@ -225,7 +372,6 @@ this.logError("Code review failed")
       "details"
   fs.appendFileSync(this.logFile, JSON.stringify(logEntry) + "\n"
   console.error("Error logging review "results": ")
-  console.error("Error logging review "results": ")
   "timestamp"
       "error"
   "timestamp"
@@ -233,25 +379,92 @@ this.logError("Code review failed")
       "stack"
   fs.appendFileSync(this.logFile, JSON.stringify(errorEntry) + "\n"
   console.error("Error logging "error": ")
-  console.error("Error logging "error": ")
   console.log(""� Setting up file change monitoring...")
     // In production, you"
   console.log("� Setting up file change monitoring...")
     // In production, you"
+<<<<<<< HEAD
+const gitStatus = execSync("git status --porcelain");
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+=======
+>>>>>>> merged-prs-20250907-203621
   const gitStatus = execSync("git status --porcelain")
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   "cwd"
         "encoding": "utf8"
   console.log(""� Changes detected, performing quick review...")
   if (file.endsWith(".ts") || file.endsWith(".tsx")
+<<<<<<< HEAD
+const gitStatus = execSync("git status --porcelain");
+  "cwd"
+        "encoding": "utf8"
+=======
   const gitStatus = execSync("git status --porcelain")
   "cwd"
         "encoding": "utf8"
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
         .split("\n")
         .map(line => line.split(" ")
         .filter(file => file && !file.startsWith(".")
+<<<<<<< HEAD
+
   const content = fs.readFileSync(filePath, ")
   const content = fs.readFileSync(filePath, ")
+  const content = fs.readFileSync(filePath, ")
+=======
+<<<<<<< HEAD
+
+<<<<<<< HEAD
+const content = fs.readFileSync(filePath, ");
+=======
+
+=======
+  const content = fs.readFileSync(filePath, ")
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+=======
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+
+        .map(line => line.split(" )
+</button>"`;
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-18b6
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+  const content = fs.readFileSync(filePath, ")
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+<<<<<<< HEAD
+  const content = fs.readFileSync(filePath, ")
+=======
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+=======
+  const content = fs.readFileSync(filePath, ")
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+>>>>>>> merged-prs-20250907-203621
 
         .map(line => line.split(" ")"
 </button>"`;
 
+<<<<<<< HEAD
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc

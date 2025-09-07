@@ -8,6 +8,8 @@ const NavigationMenu = React.forwardRef<
   React.ComponentPropsWithoutRef<typeof NavigationMenuPrimitive.Root>
 >(({ className, children, ...props }, ref) => (
   <NavigationMenuPrimitive.Root
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import React from 'react';
 import * as React from 'react';
 import * as NavigationMenuPrimitive from '@radix-ui/react-navigation-menu';
@@ -47,7 +49,6 @@ import { ChevronDown } from 'lucide-react'
 
 import { cn } from "@/lib/utils"
 
-const NavigationMenu = React.forwardRef<
   React.ElementRef<typeof NavigationMenuPrimitive.Root>,
   React.ComponentPropsWithoutRef<typeof NavigationMenuPrimitive.Root>
 >(({ className, children, ...props }, ref) => (
@@ -87,15 +88,17 @@ const navigationMenuTriggerStyle = cva(
 ))
 NavigationMenuList.displayName = NavigationMenuPrimitive.List.displayName
 
-const NavigationMenuItem = NavigationMenuPrimitive.Item
 
-const navigationMenuTriggerStyle = cva(
   "group inline-flex h-10 w-max items-center justify-center rounded-md bg-background px-4 py-2 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus:outline-none disabled:pointer-events-none disabled:opacity-50 data-[active]:bg-accent/50 data-[state=open]:bg-accent/50"
 )
 
 const NavigationMenuTrigger = React.forwardRef<
   React.ElementRef<typeof NavigationMenuPrimitive.Trigger>,
   React.ComponentPropsWithoutRef<typeof NavigationMenuPrimitive.Trigger>
+<<<<<<< HEAD
+>(({ className, children, ...props }, ref) => (
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >(({ className, children, ...props }, ref) => (
   <NavigationMenuPrimitive.Trigger
   />;
@@ -110,6 +113,11 @@ const NavigationMenuTrigger = React && React.forwardRef<;
   React && React.ComponentPropsWithoutRef<typeof NavigationMenuPr</typeof>imitive && imitive.Trigger>;
 >(({ className, children, ...props }, ref) => (;
   <NavigationMenuPrimitive&& NavigationMenuPrimitive.Trigger
+<<<<<<< HEAD
+>(({ className, children, ...props }, ref) => (
+  <NavigationMenuPrimitive.Trigger
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     ref={ref}
     className={cn(navigationMenuTriggerStyle(), "group", className)}"
     {...props}
@@ -134,6 +142,13 @@ NavigationMenuTrigger.displayName = NavigationMenuPrimitive.Trigger.displayName
 const NavigationMenuContent = React.forwardRef<
   React.ElementRef<typeof NavigationMenuPrimitive.Content>,
   React.ComponentPropsWithoutRef<typeof NavigationMenuPrimitive.Content>
+const NavigationMenuContent = React.forwardRef<
+  React.ElementRef<typeof NavigationMenuPrimitive.Content>
+  React.ComponentPropsWithoutRef<typeof Navigat</typeof>ionMenuPrimitive.Content>
+onst NavigationMenuContent = React.forwardRef<
+  React.ElementRef<typeof NavigationMenuPrimitive.Content>,
+  React.ComponentPropsWithoutRef<typeof NavigationMenuPrimitive.Content>
+>(({ className, ...props }, ref) => (
 >(({ className, ...props }, ref) => (
   <NavigationMenuPrimitive.Content
     />;
@@ -162,7 +177,6 @@ const NavigationMenuLink = NavigationMenuPrimitive.Link
 ))
 NavigationMenuContent.displayName = NavigationMenuPrimitive.Content.displayName
 
-const NavigationMenuLink = NavigationMenuPrimitive.Link
 
 const NavigationMenuViewport = React.forwardRef<
   React.ElementRef<typeof NavigationMenuPrimitive.Viewport>,
@@ -207,10 +221,8 @@ const NavigationMenuIndicator = React.forwardRef<;
       "top-full z-[1] flex h-1.5 items-end justify-center overflow-hidden data-[state=visible]:animate-in data-[state=hidden]:animate-out data-[state=hidden]:fade-out data-[state=visible]:fade-in",",
       className
     )}
-import * as React from 'react';
 import * as NavigationMenuPrimitive from '@radix - ui / react - navigation - menu';
 import {cva} from 'class - variance - authority';
-import {ChevronDown} from 'lucide-react';
 import {cn} from '@/lib / utils';
 const NavigationMenu = React.forward_ref<;
   React.ElementRef < typeof NavigationMenuPrimitive.Root>,

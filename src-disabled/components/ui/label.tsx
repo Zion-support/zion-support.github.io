@@ -1,4 +1,18 @@
 import React from 'react';
+<<<<<<< HEAD
+:src_backup/components/ui/label.tsx
+interface LabelProps extends React.LabelHTMLAttributes<HTMLLabelElement>  {className?: string;
+}export const Label: React.FC<LabelProps> = ({ className = '', ...props }) => {return (<label;
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+interface LabelProps extends React.LabelHTMLAttributes<HTMLLabelElement>  {className?: string;
+}export const Label: React.FC<LabelProps> = ({ className = ', ...props }) => {return (<label;
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
 interface LabelProps extends React.LabelHTMLAttributes<HTMLLabelElement />  {className?: string;}
 }

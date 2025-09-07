@@ -18,7 +18,7 @@ export const LazyImage: React.FC<LazyImageProps /> = ({src;
   className;
 
         }`}
-        style={{ width, height }}
+        style={ width, height }
       />
 
       />
@@ -33,29 +33,29 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           onLoad={handleLoad}
 };
 
-export default LazyImage;          className="w-full h-full object-cover";"
-          loading="lazy";
-          initial={{ opacity: 0, scale: 1.1 }}
-          animate={{ opacity: isLoaded ? 1 : 0, scale: isLoaded ? 1 : 1.1 }}
-          transition={{ duration: 0.5 }}
+export default LazyImage;          className='w-full h-full object-cover';'
+          loading='lazy';
+          initial={ opacity: 0, scale: 1.1 }
+          animate={ opacity: isLoaded ? 1 : 0, scale: isLoaded ? 1 : 1.1 }
+          transition={ duration: 0.5 }
 className='w-full h-full object-cover'
           loading='lazy'
 origin/cursor/automate-test-improve-and-merge-code-2533
-          style={{ width, height }}
+          style={ width, height }
         />;
       )}
     </div>;
   );
 export default LazyImage;'
           className='w - full h - full object - cover';'
-          loading='lazy'          style={{ width, height }}
+          loading='lazy'          style={ width, height }
         />)}
     </div>);
 }
-;"
-export default LazyImage;          className="w - full h - full object - cover";"
-          loading="lazy";
-          style={{ width, height }}
+;'
+export default LazyImage;          className='w - full h - full object - cover';'
+          loading='lazy';
+          style={ width, height }
         />)}
     </div>);
 }

@@ -6,7 +6,6 @@ FormDescription;
 FormField;
 FormItem;
 FormLabel;
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7 //Define form schema ;
 }
 };
 //Handle removing service tags const handleRemoveService = (service: string) => {;
@@ -26,7 +25,10 @@ reader.readAsDataURL (file) ;
 }
 };
 //Generate enhanced profile with AI return;
+<<<<<<< HEAD
+=======
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7 ;
+>>>>>>> origin/resolved-merge-conflicts
 }//Call the Supabase Edge Function const {;
   data, error ;
 }= await supabase.functions.invoke ('service-profile-enhancer', {;
@@ -60,7 +62,6 @@ if (newServices.length > 0) {;
   if (serviceTags.length === 0) {;
   toast ({;
   return;
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7 ;
 }setIsSubmitting (true);
 try {;
   //For actual implementation with Supabase if (!user?.id) {;

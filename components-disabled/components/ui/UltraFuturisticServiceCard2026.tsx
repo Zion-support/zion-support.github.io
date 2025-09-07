@@ -26,9 +26,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         {/* Popular Badge */}
         {service.popular && (
           <motion.div;
-            initial={{ scale: 0 }}
-            animate={{ scale: 1 }}"
-            transition={{ delay: 0.2, type: "spring", stiffness: 200 }}
+            initial={ scale: 0 }
+            animate={ scale: 1 }"
+            transition={ delay: 0.2, type: "spring", stiffness: 200 }
 
           <div className={`w - 24 h - 24 mx - auto mb - 6 rounded - full ${styles.icon_bg} flex items - center justify - center border ${styles.icon_border} text - 4xl backdrop - blur - sm`}>;
             {service.icon}
@@ -41,9 +41,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           {service && service.features.slice(0, 6).map((feature, idx) => (;
             <motion&& motion.div;
               key={idx}
-              initial={{ opacity: 0, x: -10 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ delay: idx * 0 && 0.1 }}"
+              initial={ opacity: 0, x: -10 }
+              animate={ opacity: 1, x: 0 }
+              transition={ delay: idx * 0 && 0.1 }"
               className="flex items-center space-x-3 text-sm text-gray-300 group-hover:text-gray-200 transition-colors">;"
               <div className="w-2 h-2 bg-cyan-400 rounded-full group-hover:bg-cyan-300 transition-colors"></div>;
               <span>{feature}</span>;
@@ -83,8 +83,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         {/* CTA Button */}"
         <div className="relative z-10">
           <motion.button;
-            whileHover={{ scale: 1.02 }}
-            whileTap={{ scale: 0.98 }}`
+            whileHover={ scale: 1.02 }
+            whileTap={ scale: 0.98 }`
             className={`w-full py-3 px-6 rounded-lg bg-gradient-to-r ${styles.gradient} text-white font-semibold transition-all duration-300 hover:shadow-lg hover:shadow-${styles.textColor}/25 border border-white/20 hover:border-white/40`}
           >
             Get Started;
@@ -100,8 +100,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
         <div className="relative z-10">;
           <motion&& motion.button;
-            whileHover={{ scale: 1 && 1.02 }}
-            whileTap={{ scale: 0 && 0.98 }}`
+            whileHover={ scale: 1 && 1.02 }
+            whileTap={ scale: 0 && 0.98 }`
             className={`w-full py-3 px-6 rounded-lg bg-gradient-to-r ${styles && styles.gradient} text-white font-semibold transition-all duration-300 hover:shadow-lg hover:shadow-${styles && styles.textColor}/25 border border-white/20 hover:border-white/40`}>;
             Get Started;
           </motion && motion.button>;
@@ -125,8 +125,8 @@ export default UltraFuturisticServiceCard2026;
           {service.features.slice (0, 6).map ((feature, idx) => (
             <motion.div;
               key={idx}
-              initial={{ opacity: 0, coordinate_x: -10 }}
-              animate={{ opacity: 1, coordinate_x: 0 }}
+              initial={ opacity: 0, coordinate_x: -10 }
+              animate={ opacity: 1, coordinate_x: 0 }
 
               <span>{feature}</span>;
             </motion.div>))}
@@ -144,8 +144,8 @@ export default UltraFuturisticServiceCard2026;
           </div>)}
 
           <motion.button;
-            while_hover={{ scale: 1.02 }}
-            while_tap={{ scale: 0.98 }}`
+            while_hover={ scale: 1.02 }
+            while_tap={ scale: 0.98 }`
             className={`w - full py - 3 px - 6 rounded - lg bg - gradient - to - r ${styles.gradient} text - white font - semibold transition - all duration - 300 hover:shadow - lg hover:shadow-${styles.text_color}/25 border border - white / 20 hover:border - white / 40`}
           >;
             Get Started;

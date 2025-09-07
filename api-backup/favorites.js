@@ -50,7 +50,6 @@ export default async function handler(req, res) {
     return;
   }
   if (req.method === "DELETE") {
-    const { error } = await supabase
       .from("favorites")
       .delete()
       .eq("user_id", userId)

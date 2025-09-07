@@ -1,4 +1,90 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
 #!/usr/bin/env node;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
+=======
+
+>>>>>>> e19246f6ae7164fec78c9d9e31cb33f1a6ec056a
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+
+
+
+main
+#!/usr/bin/env node;
+
+
+
+
+
+
+#!/usr/bin/env node;
+
+      log(❌ Error processing directory ${currentPath}: ${error.message}", ""red""),"}
+
+  }
+  processDirectory(dirPath)
+  return { totalFiles, fixedFiles }}
+;
+function main() {;"
+  log("🔧 Advanced Syntax Fixer Starting...", "cyan");";  const sourceDirs = ["src", "pages", "components", "utils", "hooks", "types"];  let totalProcessed = 0;  let totalFixed = 0;"
+  for (const dir of sourceDirs) {;"
+
+    if (fs.existsSync(dir)) {log("\n📁 Processing "directory": ${dir}", "blue");"
+      const { totalFiles, fixedFiles } = scanAndFixDirectory(dir);
+      totalProcessed += totalFiles;
+      totalFixed += fixedFiles}
+  }"
+log("\n🎯 "Summary": ", "cyan");log("   Total files "processed": ${totalProcessed}", "white");log("   Files "fixed": ${totalFixed}", "green");log("   Files "unchanged": ${totalProcessed - totalFixed}", "white");
+  if (totalFixed > 0) {log("\n✅ Advanced syntax fixing completed!", "green");log("   Run "npm run lint" again to check for remaining issues.", "yellow")} else {;
+    log(\nℹ️  No syntax issues found that could be automatically fixed.",")"
+
+if (require.main === module) {;
+  main()}
+module.exports = { fixFile, scanAndFixDirectory }}}}}}
+
+
+
+
+
+
+
+
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+const fs = require("$1")
+const path = require("$1")
+const { execSync } = require("child_process")
+=======
+const fs = require("$1");
+const path = require("$1");
+const { execSync } = require("child_process");
+>>>>>>> bcac19d12791e22762b61b5dda2306d7f19fe60c
+=======
+
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+
+
+
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+const fs = require("$1")
+const path = require("$1")
+const { execSync } = require("child_process")
+>>>>>>> origin/chore/fix-lint-and-merge
+=======
 const fs = require("$1")
 const path = require("$1")
 const { execSync } = require("child_process")
@@ -11,6 +97,7 @@ const { execSync } = require("child_process")
   "cyan": "\x1b[36m"]
 function log(message, color = "reset")
 const { execSync } = require("child_process")
+>>>>>>> merged-prs-20250907-203621
   "reset": "\x1b[0m"]
   "red": "\x1b[31m"]
   "green": "\x1b[32m"]
@@ -19,7 +106,16 @@ const { execSync } = require("child_process")
   "magenta": "\x1b[35m"]
   "cyan": "\x1b[36m"]
 function log(message, color = "reset")
-    let content = fs.readFileSync(filePath, "utf8")
+const { execSync } = require("child_process")
+  "reset": "\x1b[0m"]
+  "red": "\x1b[31m"]
+  "green": "\x1b[32m"]
+  "yellow": "\x1b[33m"]
+  "blue": "\x1b[34m"]
+  "magenta": "\x1b[35m"]
+  "cyan": "\x1b[36m"]
+function log(message, color = "reset")
+let content = fs.readFileSync(filePath, "utf8");
     // Fix "1"
       /import\s+\{\s*useState\s*\}\s+from\s+[]react["];?\s*\nimport\s+\{\s*useState\s*\}\s+from\s+["]react[]
         useStateRegex,import { useState } from "react"
@@ -29,7 +125,7 @@ function log(message, color = "reset")
       content = content.replace(linkRegex, "import { Link } from "next/link")
       fixed = true;log(`Fixed duplicate Link imports in ${filePath}, "yellow"`)
     // Fix "3"
-    const unterminatedStringRegex = /(["])([^")]
+const unterminatedStringRegex = /(["])([^")];
       content = content.replace(unterminatedStringRegex, "$1$2$1")
       fixed = true;log(`Fixed unterminated strings in ${filePath}, "yellow"`)
     // Fix "4": Fix unexpected keyword "import"
@@ -45,7 +141,11 @@ function log(message, color = "reset")
       content = content.replace(linkRegex, import { Link  } from "next/link)
       fixed = true;log("Fixed duplicate Link imports in ${filePath}", "yellow")
     // Fix "3"
+<<<<<<< HEAD
+const unterminatedStringRegex = /([""])([^")];
+=======
     const unterminatedStringRegex = /([])([^")]
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
       content = content.replace(unterminatedStringRegex, "$1$2$1")
       fixed = true;log("Fixed unterminated strings in ${filePath}", "yellow")
     // Fix "4": Fix unexpected keyword "import"
@@ -81,11 +181,30 @@ function log(message, color = "reset")
   log(" Advanced Syntax Fixer Starting...", "cyan");";  const sourceDirs = ["src", "pages", "components", "utils", "hooks", "types"]
     if (fs.existsSync(dir)) {log(`\n� Processing "directory": ${dir}, "blue");";      const { totalFiles, fixedFiles } = scanAndFixDirectory(dir);"
   log(" Advanced Syntax Fixer Starting...", "cyan")
-  const sourceDirs = ["src", "pages", "components", "utils", "hooks", "types"]
+const sourceDirs = ["src", "pages", "components", "utils", "hooks", "types"];
     if (fs.existsSync(dir)) {log("\n� Processing "directory": ${dir}", "blue")
-  const sourceDirs = ["src", "pages", "components", "utils", "hooks", "types"]
+const sourceDirs = ["src", "pages", "components", "utils", "hooks", "types"];
     if (fs.existsSync(dir)) {log("\n� Processing "directory": ${dir}", "blue")
 log("\n "Summary": ", "cyan");log("   Total files "processed": ${totalProcessed}", "white");log("   Files "fixed": ${totalFixed}", "green");log("   Files "unchanged": ${totalProcessed - totalFixed}", "white")
-  if($2) {log("\n Advanced syntax fixing completed!", "green");log("   Run "npm run lint" again to check for remaining issues.", "yellow"})
+  if (totalFixed > 0) {log("\n Advanced syntax fixing completed!", "green");log("   Run "npm run lint" again to check for remaining issues.", "yellow"})
     log(\nℹ  No syntax issues found that could be automatically fixed.")
+<<<<<<< HEAD
       "blue"
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+      "blue"
+log("\n "Summary": ", "cyan");log("   Total files "processed": ${totalProcessed}", "white");log("   Files "fixed": ${totalFixed}", "green");log("   Files "unchanged": ${totalProcessed - totalFixed}", "white");";";  if (totalFixed > 0) {log("\n Advanced syntax fixing completed!", "green");log("   Run "npm run lint" again to check for remaining issues.", "yellow");"} else {`;    log(\nℹ  No syntax issues found that could be automatically fixed.", blue),"`}
+
+
+<<<<<<< HEAD
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
+=======
+      "blue"
+>>>>>>> cursor/integrate-build-improve-and-re-verify-f954
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+=======
+      "blue"
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc

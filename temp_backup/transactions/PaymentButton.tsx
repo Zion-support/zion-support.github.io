@@ -3,7 +3,7 @@
   {;
   {;
   Loader2 ;
-  } from "lucide-react";
+  } from 'lucide-react';
 import {;
   {;
   {;
@@ -24,9 +24,9 @@ onPaymentInitiated?: () => void;
 redirectUrl?: string ;
 }export function PaymentButton ({;
   amount;
-serviceId;"
-providerId;""
-buttonText = "Purchase";
+serviceId;'
+providerId;''
+buttonText = 'Purchase';
 className;
 onPaymentInitiated;
 redirectUrl ;
@@ -48,10 +48,10 @@ return ;
 }try {;
   setIsProcessing (true);
 if (onPaymentInitiated) {;
-  onPaymentInitiated () ;"
-}//Call the create-checkout edge function const {;""
-  data, error ";""
-}= await supabase.functions.invoke ("create-checkout", {;
+  onPaymentInitiated () ;'
+}//Call the create-checkout edge function const {;''
+  data, error ';''
+}= await supabase.functions.invoke ('create-checkout', {;
   body: {;
   amount;
 serviceId;
@@ -77,9 +77,9 @@ toast ({;
   setIsProcessing (false) ;
 }, 1500) ;
 }
-};"
-return (<Button) ;""
-}> {";""
-  isProcessing ? (<> <Loader2 className="h-4 w-4 mr-2 animate-spin" /> Processing... </>) : (buttonText) ;'"
-}</Button>) ;'"'"
-}'"'"'"`
+};'
+return (<Button) ;''
+}> {';''
+  isProcessing ? (<> <Loader2 className='h-4 w-4 mr-2 animate-spin' /> Processing... </>) : (buttonText) ;''
+}</Button>) ;''''
+}''''''`

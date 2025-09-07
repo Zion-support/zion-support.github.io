@@ -13,7 +13,6 @@ export interface ServiceExpansion2025 {
     email: string,
     address: string}
 }
-
 export const serviceExpansions2025: ServiceExpansion2025[] = [
   {
     id: "ai-workflow-automation",
@@ -21,6 +20,12 @@ export const serviceExpansions2025: ServiceExpansion2025[] = [
     tagline: "Intelligent process automation and optimization",
     price: "$89/month",
     description: "Advanced AI-powered workflow automation platform that streamlines business processes.",
+    id: 'ai-workflow-automation'
+    name: 'AI Workflow Automation'
+    tagline: 'Intelligent process automation and optimization'
+    price: '$89/month'
+    description:
+      'Advanced AI-powered workflow automation platform that streamlines business processes.'
     features: [
       "Process automation",
       "AI optimization",

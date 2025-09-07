@@ -93,9 +93,23 @@ export function middleware(request: NextRequest) {
   );
   
   return response;
+<<<<<<< HEAD
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+ursor/integrate-build-improve-and-re-verify-8f7d
+origin/automation-improvements-final
+
+=======
 
   return response;
 }
+<<<<<<< HEAD
+origin/main
+export const config = {
+  matcher: ["/((?!api|_next/static|_next/image|favicon.ico).*)"]
+}
+  matcher: ["/((?!api|_next/static|_next/image|favicon.ico).*)"],;
+};
+=======
 
 export const config = {
   matcher: ["/((?!api|_next/static|_next/image|favicon.ico).*)"]

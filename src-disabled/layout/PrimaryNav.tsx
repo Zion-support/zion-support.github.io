@@ -81,12 +81,7 @@ import { ResponsiveNavigation } from '@/components/navigation/ResponsiveNavigati
 import { MobileMenu } from '@/components/header/MobileMenu
 import { MobileBottomNav } from '@/components/header/MobileBottomNav
 import { Menu, X } from 'lucide-react
-import { useTranslation  } from 'react-i18next';
-import { CartDrawer  } from '@/components/cart/CartDrawer';
-import { LoginModal } from '@/components/auth/LoginModal';
-import { useState } from 'react';
 import { log_debug, logErrorToProduction } from '@/utils/ production_logger';
-import Link from 'next / link';
 import { use_router } from 'next/router';
 import { Logo } from '@/components/ header / Logo';
 import { PointsBadge } from '@/components/ loyalty / PointsBadge';
@@ -95,15 +90,10 @@ import { LanguageSelector } from '@/components/ header / LanguageSelector';
 import { ModeToggle } from '@/components/ ModeToggle';
 import { use_auth } from '@/hooks/ use_auth';
 import { useIsMobile } from '@/hooks/ use - mobile';
-import { use_messaging } from '@/context / MessagingContext';
 import { EnhancedSearchInput } from '@/components/ search / EnhancedSearchInput';
-import { generateSearchSuggestions } from '@/data / marketplace_data';
-import { slugify } from '@/lib / slugify';
 import { ResponsiveNavigation } from '@/components/ navigation / ResponsiveNavigation';
 import { MobileMenu } from '@/components/ header / MobileMenu';
 import { MobileBottomNav } from '@/components/ header / MobileBottomNav';
-import { Menu, X } from 'lucide-react';
-import { use_translation } from 'react - i18next';
 import { CartDrawer } from '@/components/ cart / CartDrawer';
 import { LoginModal } from '@/components/ auth / LoginModal';
 export /**
@@ -131,7 +121,6 @@ pr-12325
 
   // TODO: Implement
 }
-    const messaging = useMessaging()
     unreadCount = messaging.unreadCount;
   } catch {
   // TODO: Implement
@@ -167,6 +156,33 @@ if ( {) {
             query: trimmed,
             component: 'PrimaryNav','
           })) }
+<<<<<<< HEAD
+  }
+  }
+import { useState } from 'react',;
+import { logDebug, logErrorToProduction } from '@/utils/productionLogger',;
+import Link from 'next/link',;
+import { useRouter } from 'next/router',;
+import { Logo } from '@/components/header/Logo',;
+import { PointsBadge } from '@/components/loyalty/PointsBadge',;
+import { UserMenu } from '@/components/header/UserMenu',;
+import { LanguageSelector } from '@/components/header/LanguageSelector',;
+import { ModeToggle } from '@/components/ModeToggle',;
+import { useAuth } from '@/hooks/useAuth',;
+import { useIsMobile } from '@/hooks/use-mobile',;
+import { useMessaging } from '@/context/MessagingContext',;
+import { EnhancedSearchInput } from '@/components/search/EnhancedSearchInput',;
+import { generateSearchSuggestions } from '@/data/marketplaceData',;
+import { slugify } from '@/lib/slugify',;
+import { ResponsiveNavigation } from '@/components/navigation/ResponsiveNavigation',;
+import { MobileMenu } from '@/components/header/MobileMenu',;
+import { MobileBottomNav } from '@/components/header/MobileBottomNav',;
+import { Menu, X } from 'lucide-react';
+import { useTranslation } from 'react-i18next',;
+import { CartDrawer } from '@/components/cart/CartDrawer',;
+import { LoginModal } from '@/components/auth/LoginModal',;
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   }
 export function PrimaryNav() {;
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false),;,
@@ -186,7 +202,6 @@ export function PrimaryNav() {;
     // context not available;
   }
 ;
-  const handleSubmit = (e: React.FormEvent) => {;,
     e.preventDefault(),;
     const trimmed = query.trim(),;
     if (trimmed) {;
@@ -250,6 +265,7 @@ export function PrimaryNav() {;
               <EnhancedSearchInput;
                 value={query}
                 on_change={set_query}
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 onSelectSuggestion={sugg => {
                   log_debug ('PrimaryNav search suggestion selected:', {'
                     suggestion: sugg,
@@ -415,7 +431,11 @@ if ( {) {
               <CartDrawer />;
             </div>;
             {/* Compact controls group */}
+<<<<<<< HEAD
+            <div className="flex items-center gap-1 border-l border-primary/20 pl-1 ml-1">;
+=======
             <div className='flex items - center gap - 1 border - l border - primary / 20 pl - 1 ml - 1'>;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               <ModeToggle />;
               <LanguageSelector />;
             </div>;
@@ -712,7 +732,6 @@ import { slugify } from '@/lib/slugify',;
 import { ResponsiveNavigation } from '@/components/navigation/ResponsiveNavigation',;
 import { MobileMenu } from '@/components/header/MobileMenu',;
 import { MobileBottomNav } from '@/components/header/MobileBottomNav',;
-import { Menu, X } from 'lucide-react';
 import { useTranslation } from 'react-i18next',;
 import { CartDrawer } from '@/components/cart/CartDrawer',;
 import { LoginModal } from '@/components/auth/LoginModal',;
@@ -792,6 +811,7 @@ pr-12325
           {/* Mobile menu button */}
 
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           </div>;
           {/* Mobile menu button */}
           <button
@@ -987,8 +1007,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   )}
 '"`;
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 }
-
 return (<> <header className="sticky top-0 z-70 w-full border-b border-primary/20 bg-card/90 backdrop-blur-md" role="navigation" aria-label="Primary" data-testid="header" > <div className="container flex items-center justify-between gap-2 min-h-16 px-4 sm:px-6 max-[320px]:flex-wrap" > <Logo />
 }setQuery ('')
 //Track analytics event
@@ -1030,8 +1050,11 @@ setLoginOpen (true)
   unreadCount
 
   unreadCount 
+<<<<<<< HEAD
+=======
 
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 }/>
 }<LoginModal isOpen= {
   loginOpen
@@ -1048,6 +1071,22 @@ setLoginOpen (true)
               exit = {
   { opacity: 0
   height: 0
+<<<<<<< HEAD
+;
+;
+            className="absolute inset-0 bg-black/50 backdrop-blur-sm"
+            onClick={() => setMobileMenuOpen(false)}
+            aria-hidden="true"
+          />
+          <div className="relative bg-card border-t border-primary/20 max-h-[calc(100vh-4rem)] overflow-y-auto">
+            <MobileMenu
+              unreadCount={unreadCount}
+              onClose={() => setMobileMenuOpen(false)}
+              openLoginModal={(returnToPath) => setLoginOpen(true)}
+            />;
+          </div>;
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           <button;
             className='lg:hidden p - 2 rounded focus:outline - none flex - shrink - 0';
             on_click={() => setMobileMenuOpen (!mobileMenuOpen)}
@@ -1058,24 +1097,6 @@ setLoginOpen (true)
               <Menu className='h - 6 w - 6' />)}
           </button>;
         </div>;
-      </header>;
-      {mobileMenuOpen && (
-        <div className='lg:hidden fixed inset - 0 z - 60 pt - 16'>;
-          <div;
-            className='absolute inset - 0 bg - black / 50 backdrop - blur - sm';
-            on_click={() => setMobileMenuOpen (false)}
-            aria - hidden='true'          />;
-          <div className='relative bg - card border - t border - primary / 20 max - h-[calc (100vh - 4rem)] overflow - y-auto'>;
-            <MobileMenu;
-              unread_count={unread_count}
-              on_close={() => setMobileMenuOpen (false)}
-              openLoginModal={returnToPath => setLoginOpen (true)}            />;
-          </div>;
-        </div>)}
-      {is_mobile && <MobileBottomNav unread_count={unread_count} />}
-      <LoginModal is_open={login_open} onOpenChange={setLoginOpen} />;
-    </>);
-}
 return (<> <header className="sticky top - 0 z - 70 w - full border - b border - primary / 20 bg - card / 90 backdrop - blur - md" role="navigation" aria - label="Primary" data - testid="header" > <div className="container flex items - center justify - between gap - 2 min - h-16 px - 4 sm:px - 6 max-[320px]:flex - wrap" > <Logo />;
 }set_query ('');
 //Track analytics event;
@@ -1144,7 +1165,7 @@ setLoginOpen (true);
 
 
 ;
-
+ursor/fix-website-loading-errors-and-merge-6662
                     </h3>";
                     <div className="space - y-2 ml - 4">;
                       {category.items.map ((service: unknown, service_index: unknown;

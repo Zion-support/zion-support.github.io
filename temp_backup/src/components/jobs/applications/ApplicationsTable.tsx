@@ -6,8 +6,12 @@ TableCell;
 TableHead;
 TableHeader;
 TableRow import Image from 'next/image';
+<<<<<<< HEAD
+//Import next/image   /* Using Renamed AvatarPrimitive */ ;
+=======
 //Import next/image >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7 return (<AvatarPrimitive className="h-8 w-8" > {;
   /* Using Renamed AvatarPrimitive */ ;
+>>>>>>> origin/resolved-merge-conflicts
 }{;
   application.talent profile?.profile picture url && !avatarError ? (<Image src= {;
   application.talent profile.profile picture url ;

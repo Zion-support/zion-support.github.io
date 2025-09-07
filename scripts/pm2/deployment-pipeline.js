@@ -392,7 +392,7 @@ class DeploymentPipeline {
       
       // Check application health (if health endpoint exists)
       try {
-        const healthResponse = execSync('curl -f http://localhost:3000/health || echo "health check failed"', {
+        const healthResponse = execSync('curl -f http://localhost:3000/health || echo 'health check failed'', {
           encoding: 'utf8',
           timeout: 10000
         });

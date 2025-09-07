@@ -26,20 +26,20 @@ import { registerServiceWorker } from './serviceWorkerRegistration';
 // Initialize a React Query client with global error handling
 const queryClient = $2;
     mutations: {
-      onError: (error) => showApiError(error)}}}),
+      onError: (error) => showApiError(error)}}),
 
 try {
   console.log($2);
   // Render the app with proper provider structure
   ReactDOM.createRoot(document.getElementById('root')!).render($2);
-  console.log("main.tsx: After ReactDOM.createRoot")
+  console.log('main.tsx: After ReactDOM.createRoot')
 } catch (error) {
   console.error($2);
   console.log($2);
   const rootElement = document.getElementById($2);
   if (rootElement) {
     rootElement.innerHTML = `
-      <div style="padding: 20px, text-align: center, font-family: sans-serif,">
+      <div style='padding: 20px, text-align: center, font-family: sans-serif,'>
         <h1>Application Error</h1>
         <p>A critical error occurred while loading the application.</p>
         <p>Error: ${(error as Error).message}</p>

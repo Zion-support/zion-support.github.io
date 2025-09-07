@@ -1,34 +1,78 @@
+
+import {jsPDF} from 'jspdf';
+export interface FontConfig {;
+
 import { jsPDF } from 'jspdf';
 export interface FontConfig {
-  regular: ArrayBuffer,
-  bold?: ArrayBuffer,
-  italic?: ArrayBuffer,
-  boldItalic?: ArrayBuffer
-}
+import {jsPDF} from 'jspdf';
+export interface FontConfig {;
 
-export type FontFamily = $2;
+  regular: ArrayBuffer;
+  bold?: ArrayBuffer;
+
+  italic?: ArrayBuffer;
+  boldItalic?: ArrayBuffer;
+}'
+export type FontFamily = 'default' | 'montserrat' | 'open-sans' | 'roboto';
 /**
- * Loads and registers custom fonts for PDF documents
- */
-export async function loadCustomFonts(doc: jsPDF, fontFamily: FontFamily = $2;
-  try {
-    // Font loading logic would go here
-    // For demonstration purposes, we'll just set up the font using standard fonts
-    switch (fontFamily) {
+
+
       case 'montserrat':
-        doc.setFont($2);
-        break,
+        doc && doc.setFont('helvetica');
+        break;
       case 'open-sans':
-        doc.setFont($2);
-        break,
+        doc && doc.setFont('helvetica');
+        break;
       case 'roboto':
-        doc.setFont($2);
-        break,
-      default: doc.setFont('helvetica')
+        doc && doc.setFont('helvetica');
+        break;
+      default: doc && doc.setFont('helvetica')
     }
   } catch (error) {
-    console.error($2);
+
+    console && console.error('Error loading custom fonts:', error);
+
     // Fall back to default font
-    doc.setFont('helvetica')
+
+export interface FontConfig {
+import {jsPDF} from 'jspdf';
+export interface FontConfig {;
+
+  }
+}
+
+import {jsPDF} from 'jspdf';
+export interface FontConfig {;
+
+  regular: ArrayBuffer;
+  bold?: ArrayBuffer;
+  italic?: ArrayBuffer,
+  bold_italic?: ArrayBuffer;
+
+  italic?: ArrayBuffer;
+  boldItalic?: ArrayBuffer;
+}
+
+export async function loadCustomFonts (doc: jsPDF, font_family: FontFamily = 'default'): Promise < void> {
+  // Check condition;
+if (return, ) {
+  $2;
+  try {
+  // TODO: Implement
+    // Font loading logic would go here;
+    // For demonstration purposes, we'll just set up the font using standard fonts;
+    switch (font_family) {
+      case 'montserrat':;
+        doc.set_font ('helvetica');
+        break;
+      case 'open - sans':;
+      case 'roboto':;
+      default: doc.set_font ('helvetica');
+  } catch (error) {
+    console.error ('Error loading custom fonts:', error);
+    // Fall back to default font;
+
+    doc.setFont('helvetica');
+
   }
 }

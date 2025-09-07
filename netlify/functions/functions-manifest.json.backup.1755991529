@@ -4,10 +4,10 @@
   "functions": [
     "a11y-alt-text-runner",
     "adaptive-orchestrator",
-    "agent-swarm-orchestrator",
+
     "ai-changelog-runner",
     "agent-swarm-orchestrator",    "ai-changelog-runner",
-    "agent-swarm-orchestrator",    "ai-changelog-runner",
+
     "ai-trends-radar-runner",
     "auto-discovery-runner",
     "auto-scheduler",
@@ -88,10 +88,10 @@
     "seo-audit-runner",
     "site-crawler",
     "sitemap_runner",
-    "supreme-orchestrator",
+
     "todo-scanner-runner",
     "supreme-orchestrator",    "todo-scanner-runner",
-    "supreme-orchestrator",    "todo-scanner-runner",
+
     "todo-summary-runner",
     "trigger-all-and-commit",
     "ultra-fast-automation-orchestrator",

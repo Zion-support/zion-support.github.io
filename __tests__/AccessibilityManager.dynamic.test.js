@@ -1,8 +1,10 @@
+
+describe('AccessibilityManagerdynamic', () => {
 import React from 'react';
 import { render, screen } from '@testing-library/react';
 import '@testing-library/jest-dom';
-import AccessibilityManagerdynamic from '../components/AccessibilityManager.dynamic';
-describe('AccessibilityManagerdynamic', () => {
+
+describe('AccessibilityManager.dynamic.test', () => {
   test('renders without crashing', () => {
     render(<AccessibilityManagerdynamic />);
     expect(screen.getByTestId('accessibilitymanager.dynamic')).toBeInTheDocument();
@@ -16,4 +18,5 @@ describe('AccessibilityManagerdynamic', () => {
   test('applies correct styling', () => {
     render(<AccessibilityManagerdynamic />);
   });
+
 });

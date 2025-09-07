@@ -45,7 +45,6 @@ import { Card, CardContent, CardFooter, CardHeader, CardTitle } from '@/componen
 origin/cursor/automate-test-improve-and-merge-code-2533
 import { Rocket, FileText, Users, Calendar, Eye, MessageSquare } from 'lucide-react'
 
-import { cn } from '@/lib/utils';
 interface WizardStep {;
   title: string;
   description: string;
@@ -54,7 +53,6 @@ import { useState, useEffect } from 'react
 import { useRouter } from 'next/router
 import { useAuth } from '@/hooks/useAuth
 import { Button } from '@/components/ui/button
-import {
   // TODO: Implement
 }
   Card;
@@ -73,7 +71,6 @@ import {
 import { cn } from '@/lib/utils
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from '@/components/ui/card
 import { Rocket, FileText, Users, Calendar, Eye, MessageSquare } from 'lucide-react
-import { cn } from '@/lib/utils';
 interface WizardStep {;
   title: string;,
   description: string;
@@ -86,7 +83,6 @@ import { useState, useEffect } from 'react';
 import { use_router } from 'next / router';
 import { use_auth } from '@/hooks / use_auth';
 import { Button } from '@/components / ui / button';
-import {
 import { use_router } from 'next/router';
 import { use_auth } from '@/hooks/ use_auth';
 import { Button } from '@/components/ui/ button';
@@ -110,13 +106,121 @@ pr-12325
 import { cn } from '@/lib / utils';
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from '@/components / ui / card';
 import { Rocket, FileText, Users, Calendar, Eye, MessageSquare } from 'lucide-react';
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 interface WizardStep {
 
   className?: string
 
+<<<<<<< HEAD
+  type
+  onComplete
+  onSkip
+  className
+}: OnboardingWizardProps) {
+  const [currentStep, setCurrentStep] = useState(0)
+  const router = useRouter(); // Changed from useNavigate to useRouter
+  const { user } = useAuth()
+  // Define steps based on user type
+  const clientSteps: WizardStep[] = [
+    {
+      title: 'Post your first job'
+      description: 'Describe the talent you need for your project'
+      icon: <FileText className='h-6 w-6 text-zion-purple' />
+      action: {
+        text: 'Post a Job'
+        url: '/post-job'
+      }
+      skipText: "I'll do this later"
+    }
+    {
+      title: 'View suggested matches'
+      description: 'Our AI system will find the best talent matches'
+      icon: <Users className='h-6 w-6 text-zion-cyan' />
+      action: {
+        text: 'View Matches'
+        url: '/talent'
+      }
+      skipText: 'Skip for now'
+    }
+    {
+      title: 'Contact talent'
+      description: 'Reach out to the talent that fits your needs'
+      icon: <MessageSquare className='h-6 w-6 text-zion-purple' />
+      action: {
+        text: 'Browse Talent'
+        url: '/talent'
+      }
+    }
+  ]
+  const talentSteps: WizardStep[] = [
+    {
+      title: 'Complete your profile'
+      description: 'Add your skills, experience, and preferences'
+      icon: <FileText className='h-6 w-6 text-zion-purple' />
+      action: {
+        text: 'Edit Profile'
+        url: '/profile'
+      }
+      skipText: "I'll do this later"
+    }
+    {
+      title: 'Define skills & availability'
+      description: "Let clients know when you're available and what you can do"
+      icon: <Calendar className='h-6 w-6 text-zion-cyan' />
+      action: {
+        text: 'Set Availability'
+        url: '/profile?tab=skills'
+      }
+      skipText: 'Skip for now'
+    }
+    {
+      title: 'Preview your profile'
+      description: 'See how clients will view your profile'
+      icon: <Eye className='h-6 w-6 text-zion-purple' />
+      action: {
+        text: 'Preview Profile'
+        url: `/talent/${user?.id}`
+      }
+      skipText: 'Skip for now'
+    }
+    {
+      title: 'Enable AI matchmaking'
+      description: 'Let our AI find the perfect opportunities for you'
+      icon: <Rocket className='h-6 w-6 text-zion-cyan' />
+      action: {
+        text: 'Enable Matchmaking'
+        url: '/talent-dashboard'
+      }
+    }
+  ]
+  const steps = type === 'client' ? clientSteps : talentSteps
+  // Navigate to the specified URL
+  const handleAction = () => {
+    const currentStepData = steps[currentStep]
+    if (!currentStepData) return
+    if (currentStep < steps.length - 1) {
+      router.push(currentStepData.action.url); // Changed to router.push
+      setCurrentStep(currentStep + 1)
+    } else {
+      // Last step
+      router.push(currentStepData.action.url); // Changed to router.push
+      onComplete()
+    }
+  }
+  // Skip the current step
+  const handleSkip = () => {
+    if (currentStep < steps.length - 1) {
+      setCurrentStep(currentStep + 1)
+    } else {
+      // Last step
+      onSkip()
+    }
+  }
+    >
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from '@/components/ui/ card';
-import { Rocket, FileText, Users, Calendar, Eye, MessageSquare } from 'lucide-react';
 interface WizardStep {
   // TODO: Implement
   icon: React.ReactNode;,
@@ -148,7 +252,6 @@ export function OnboardingWizard(): any ({;
   const router = useRouter(); // Changed from useNavigate to useRouter
   className,;)
 }: OnboardingWizardProps) {;
-  const [currentStep, setCurrentStep] = useState(0);
   const router = useRouter(); // Changed from useNavigate to useRouter;
 pr-12325
   const { user } = useAuth()
@@ -162,7 +265,6 @@ import { useRouter } from 'next/router',;
 import { useAuth } from '@/hooks/useAuth',;
 import { Button } from '@/components/ui/button',;
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from '@/components/ui/card',;
-import { Rocket, FileText, Users, Calendar, Eye, MessageSquare } from 'lucide-react';
 import { cn } from '@/lib/utils',;
 interface WizardStep {;
   title: string,;
@@ -262,9 +364,6 @@ export function OnboardingWizard({ type, onComplete, onSkip, className }:,  Onbo
           <div className="flex items-center justify-center flex-1">"
 
 export function OnboardingWizard({ type, onComplete, onSkip, className }: OnboardingWizardProps) {
-  const [currentStep, setCurrentStep] = useState(0),
-  const router = useRouter(), // Changed from useNavigate to useRouter
-  const { user } = useAuth(),
 
   // Define steps based on user type
   const clientSteps: WizardStep[] = [
@@ -412,7 +511,6 @@ export function OnboardingWizard({ type, onComplete, onSkip, className }: Onboar
 }
 
 export function OnboardingWizard({ type, onComplete, onSkip, className }: OnboardingWizardProps) {
-  const [currentStep, setCurrentStep] = useState(0);
   const router = null;
 origin/cursor/automate-test-improve-and-merge-code-2533
                   index === currentStep
@@ -425,11 +523,24 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             variant='ghost
             className='text-zion-slate-light hover:text-white
             onClick={handleSkip}>;
+                  "h-2 w-2 rounded-full mx-1",
+                  index === currentStep
+                    ? "bg-zion-purple scale-125"
+                    : index < currentStep
+                    ? "bg-zion-cyan"
+                    : "bg-zion-blue-light"
+                )}
+              />;
+            ))}
+          </div>
+        </div>
 
             variant="ghost"""
             className="text-zion-slate-light hover:text-white""
             onClick={handleSkip}
           >;
+<<<<<<< HEAD
+=======
 
     ;"
       icon: <FileText className='h - 6 w - 6 text - zion - purple' />,

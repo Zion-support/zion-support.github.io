@@ -1,84 +1,374 @@
 export default function GlobalSearchBar() {
 
+}
+
 export default function GlobalSearchBar() {;
+  }
   const router = useRouter();
-  const [query, setQuery] = useState();
+  const [query, setQuery] = useState('');'
   const [suggestions, setSuggestions] = useState<string[]>([]);
 </string>
   const controller = useRef<AbortController | null>(null);
+  useEffect(() => {
+    }
+    if (!query) {
+      }
+      setSuggestions([]);
+return;      return;
 
+class ErrorBoundary extends React.Component {
+  }
+  constructor(props) {
+    }
+    super(props);
+    this.state = { "hasError": false };
+
+  static getDerivedStateFromError(error) {
+    }
+    return { "hasError": true };
+
+  componentDidCatch(error, errorInfo) {
+    }
+    console.error('Error caught by "boundary":', error, errorInfo);'
+
+  render() {
+    }
+    if (this.state.hasError) {
+      }
       return <div>Something went wrong.</div>;
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
       <input;
         value={query}
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
+import React from 'react';'
+import { useEffect, useMemo, useRef, useState } from 'react';'
+import { useRouter } from 'next/router';'
+export default function GlobalSearchBar() {;
+
+    }
+
+    controller && controller.current?.abort();
+    controller && controller.current = new AbortController();
+    const run = async () => {;
+      }
+      try {;
+        }
+        const r = await fetch(`/api/suggest?q=${encodeURIComponent(query)}`, {;`          }
+          "signal": controller && controller.current!.signal,;
+        });
+        const j = await r && r.json();
+        setSuggestions(j && j.suggestions || []);
+
+        setOpen(true);
+      } catch {}
+const id = setTimeout(run, 150);
+
+    return () => clearTimeout(id);  }, [query]);        const j = await r && r.json();
+        setSuggestions(j && j.suggestions || []);
+        setOpen(true);
+
+      } catch {}
+const id = setTimeout(run, 150);
+
+  const router = useRouter();
+  const [query, setQuery] = useState('');'
+  const [suggestions, setSuggestions] = useState<string[]>([]);
+  const [open, setOpen] = useState(false);
+  const controller = useRef<AbortController | null>(null);
+      setSuggestions([]);
+      return;      return;
+      setSuggestions([]);
+return;
+
+        setOpen(true);
+      } catch {}
+const id = setTimeout(run, 150);
+  }, [query]);
+    if (!Speech) return;
+    const rec = new Speech();
+    rec.lang = 'en-US';'
+    rec.onresult = ("e": any) => {
+      <input
+}
+value={query}
+<<<<<<< HEAD
+=======
+=======
+      <input;
+        value={query}
+>>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
         onChange={e => setQuery(e && e.target.value)}
-</input>
-      <div className='absolute inset-y-0 right-2 flex items-center gap-2'>;
-</div>
-        <button;
-          type='button
+        onFocus={() => setOpen(suggestions && suggestions.length > 0)}
+        className='w-full rounded-md border border-gray-300 "dark":border-gray-700 bg-white/80 "dark":bg-gray-900/60 backdrop-blur px-3 py-2 pr-20 text-sm "focus":outline-none "focus":ring-2 "focus":ring-indigo-500';'
+        placeholder='Search talent, jobs, projects...';'
+        aria-label='Search';'
+      />;
+      <div className='absolute inset-y-0 right-2 flex items-center gap-2'>;'
+        <button,
+type='button''
           onClick={startVoice}
-          className='inline-flex sm:hidden text-gray-500 hover:text-gray-800 dark:hover:text-gray-200
-          aria-label='Voice search'>;
-</button>
+          className='inline-flex "sm":hidden text-gray-500 "hover":text-gray-800 "dark":"hover":text-gray-200''
+          aria-label='Voice search'>;'
+          🎤;
         </button>;
-          type='submit
-          className='text-sm font-medium text-indigo-600 hover:text-indigo-700'>;
+        <button,
+type='submit''
+          className='text-sm font-medium text-indigo-600 "hover":text-indigo-700'>;'
+          Search;
+        </button>;
       </div>;
-        <div className='absolute z-50 mt-1 w-full rounded-md border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-900 shadow-lg'>;
-          <ul className='max-h-64 overflow-auto py-1 text-sm'>;
-</ul>
+      {open && suggestions && suggestions.length > 0 && (;
+        <div className='absolute z-50 mt-1 w-full rounded-md border border-gray-200 "dark":border-gray-800 bg-white "dark":bg-gray-900 shadow-lg'>;'
+          <ul className='max-h-64 overflow-auto py-1 text-sm'>;'
+            {suggestions && suggestions.map((s, i) => (;
               <li key={i}>;
-</li>
+                <button,
+type='button''
                   onClick={() => {;
+                    }
+                    setQuery(s);
+                    setOpen(false);
+                    router && router.push(`/search?q=${encodeURIComponent(s)}`);`                  }
+    rec.start();
+                  className='w-full text-left px-3 py-2 "hover":bg-gray-50 "dark":"hover":bg-gray-800'                >    };'
+    rec && rec.start();
+  };
+
+return (;
     <form onSubmit={onSubmit} className="relative w-full max-w-lg" role="search">;"
-</form>
+      <input,
+value={query}
         onChange={(e) => setQuery(e && e.target.value)}
-</input>"
+        onFocus={() => setOpen(suggestions && suggestions.length > 0)}
+        className="w-full rounded-md border border-gray-300 "dark":border-gray-700 bg-white/80 "dark":bg-gray-900/60 backdrop-blur px-3 py-2 pr-20 text-sm "focus":outline-none "focus":ring-2 "focus":ring-indigo-500";"
+        placeholder="Search talent, jobs, projects...";"
+        aria-label="Search";"
+      />;
       <div className="absolute inset-y-0 right-2 flex items-center gap-2">;"
-</div>"
-        <button type="button" onClick={startVoice} className="inline-flex sm:hidden text-gray-500 hover:text-gray-800 dark:hover:text-gray-200" aria-label="Voice search">🎤</button>;""
-        <button type="submit" className="text-sm font-medium text-indigo-600 hover:text-indigo-700">Search</button>;"
-      </div>;"
-        <div className="absolute z-50 mt-1 w-full rounded-md border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-900 shadow-lg">;"
+        <button type="button" onClick={startVoice} className="inline-flex "sm":hidden text-gray-500 "hover":text-gray-800 "dark":"hover":text-gray-200" aria-label="Voice search">🎤</button>;"
+        <button type="submit" className="text-sm font-medium text-indigo-600 "hover":text-indigo-700">Search</button>;"
+      </div>;
+      {open && suggestions && suggestions.length > 0 && (;
+        <div className="absolute z-50 mt-1 w-full rounded-md border border-gray-200 "dark":border-gray-800 bg-white "dark":bg-gray-900 shadow-lg">;"
           <ul className="max-h-64 overflow-auto py-1 text-sm">;"
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
         <button;"
           aria-label='Voice search
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
+            {suggestions && suggestions.map((s, i) => (;
+              <li key={i}>;
+
+    controller.current?.abort();
+    controller.current = new AbortController();
+    const run = async () => {
+      }
+      try {
+        }
+        const r = await fetch(`/api/suggest?q=${encodeURIComponent(query)}`, {`          }
+          "signal": controller.current!.signal
+        });
+        const j = await r.json();
+        setSuggestions(j.suggestions |[]);
+        setOpen(true);
+      } catch {}
+const id = setTimeout(run, 150);
+    return () => clearTimeout(id);  }, [query]);        const j = await r.json();
+        setSuggestions(j.suggestions |[]);
+        setOpen(true);
+      } catch {}
+const id = setTimeout(run, 150);
+    return () => clearTimeout(id);
+  }, [query]);
+  const onSubmit = (e?: React.FormEvent) => {
+    }
+    e?.preventDefault();
+    if (!query.trim()) return;
+    fetch('/api/telemetry/search', {'
+      }
+      "method": 'POST''
+      "headers": { 'Content-Type': 'application/json' }'
+      "body": JSON.stringify({ "q": query });
+    }).catch(() => {});
+    router.push(`/search?q=${encodeURIComponent(query)}`);`    setOpen(false);  
+const startVoice = () => {
+    }
+    if (typeof window === 'undefined') return;'
+const "Speech": any =;
+      (window as any).SpeechRecognition |
+      (window as any).webkitSpeechRecognition;    if (!Speech) return;    fetch('/api/telemetry/search', { "method": 'POST', "headers": { 'Content-Type': 'application/json' }, "body": JSON.stringify({ "q": query }) }).catch(() => {})'
+    router.push(`/search?q=${encodeURIComponent(query)}`);`    setOpen(false);
+const startVoice = () => {
+    }
+    if (typeof window === 'undefined') return;'
+const "Speech": any =;
+      (window as any).SpeechRecognition |
+      (window as any).webkitSpeechRecognition;    const "Speech": any = (window as any).SpeechRecognition |(window as any).webkitSpeechRecognition,
+if (!Speech) return;
+    const rec = new Speech();
+    rec.lang = 'en-US';'
+    rec.onresult = ("e": any) => {
+        <button
+}
+type='button''
+          onClick={startVoice}
+          className='inline-flex "sm":hidden text-gray-500 "hover":text-gray-800 "dark":"hover":text-gray-200''
+          aria-label='Voice search''
+<<<<<<< HEAD
+=======
+=======
+        <button;"
+          aria-label='Voice search
+>>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
         >
-          className='text-sm font-medium text-indigo-600 hover:text-indigo-700
-        <div className='absolute z-50 mt-1 w-full rounded-md border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-900 shadow-lg'>
-          <ul className='max-h-64 overflow-auto py-1 text-sm'>
+          🎤
+        </button>
+        <button,
+type='submit''
+          className='text-sm font-medium text-indigo-600 "hover":text-indigo-700''
+        >
+          Search
+        </button>
+      </div>
+      {open && suggestions.length > 0 && (
+        <div className='absolute z-50 mt-1 w-full rounded-md border border-gray-200 "dark":border-gray-800 bg-white "dark":bg-gray-900 shadow-lg'>'
+          <ul className='max-h-64 overflow-auto py-1 text-sm'>'
+            {suggestions.map((s, i) => (
               <li key={i}>
+                <button,
+type='button''
                   onClick={() => {
+                    }
+                    setQuery(s);
+                    setOpen(false);
+                    router.push(`/search?q=${encodeURIComponent(s)}`);`                  }
+                  className='w-full text-left px-3 py-2 "hover":bg-gray-50 "dark":"hover":bg-gray-800'                >    }'
+    rec.start();
+  };
+
+return (;
     <form onSubmit={onSubmit} className="relative w-full max-w-lg" role="search">"
+      <input,
+value={query}
         onChange={(e) => setQuery(e.target.value)}
+        onFocus={() => setOpen(suggestions.length > 0)}
+        className="w-full rounded-md border border-gray-300 "dark":border-gray-700 bg-white/80 "dark":bg-gray-900/60 backdrop-blur px-3 py-2 pr-20 text-sm "focus":outline-none "focus":ring-2 "focus":ring-indigo-500""
+        placeholder="Search talent, jobs, projects...""
+        aria-label="Search""
+      />
       <div className="absolute inset-y-0 right-2 flex items-center gap-2">"
-        <button type="button" onClick={startVoice} className="inline-flex sm:hidden text-gray-500 hover:text-gray-800 dark:hover:text-gray-200" aria-label="Voice search">🎤</button>""
-        <button type="submit" className="text-sm font-medium text-indigo-600 hover:text-indigo-700">Search</button>"
-        <div className="absolute z-50 mt-1 w-full rounded-md border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-900 shadow-lg">"
+        <button type="button" onClick={startVoice} className="inline-flex "sm":hidden text-gray-500 "hover":text-gray-800 "dark":"hover":text-gray-200" aria-label="Voice search">🎤</button>"
+        <button type="submit" className="text-sm font-medium text-indigo-600 "hover":text-indigo-700">Search</button>"
+      </div>
+      {open && suggestions.length > 0 && (
+        <div className="absolute z-50 mt-1 w-full rounded-md border border-gray-200 "dark":border-gray-800 bg-white "dark":bg-gray-900 shadow-lg">"
           <ul className="max-h-64 overflow-auto py-1 text-sm">"
-                  type="button""
+            {suggestions.map((s, i) => (
+              <li key={i}>
+                <button,
+type="button""
+                  onClick={() => {;
+                    }
+                    setQuery(s);
+                    setOpen(false);
+                  className='w-full text-left px-3 py-2 "hover":bg-gray-50 "dark":"hover":bg-gray-800'                >'
+
+                    router && router.push(`/search?q=${encodeURIComponent(s)}`);`
+                  }
+                >
+
+                  className="w-full text-left px-3 py-2 "hover":bg-gray-50 "dark":"hover":bg-gray-800";"
+                >;
+                  {s}
+                </button>;
               </li>;
           </ul>;
+        </div>;
+      )}
+                  {s}
+                    router.push(`/search?q=${encodeURIComponent(s)}`)`                  }
+                  className="w-full text-left px-3 py-2 "hover":bg-gray-50 "dark":"hover":bg-gray-800""
+                >
+                  {s}
+                </button>
+              </li>
+            ))}
+          </ul>
+        </div>
+      )}
+    </form>
+
+import { use_router } from 'next / router';'
+export default /**
+ * GlobalSearchBar - Function description
+ */
+function GlobalSearchBar() {
+  }
+  const router = use_router ();
+  const [query, set_query] = useState ('');'
   const [suggestions, set_suggestions] = useState < string[]>([]);
   const [open, set_open] = useState (false);
   const controller = useRef < AbortController | null>(null);
 ;
   useEffect (() => {
-    // Check condition;
+    // Check condition
+}
 if ( {) {
-  $2;
-      set_suggestions ([]);
+  $2
+}
+set_suggestions ([]);
       return;      return;
 
     controller.current?.abort ();
     controller.current = new AbortController ();
+<<<<<<< HEAD
     const run = async () => {
+      }
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+    const run = async () => {
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+      }
+=======
+    const run = async () => {
+>>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
       try {
-  // TODO: Implement
-}
-        const r = await fetch (`/api / suggest?q=${encodeURIComponent (query)}`, {
-          signal: controller.current!.signal});
+        }
+        const r = await fetch (`/api / suggest?q=${encodeURIComponent (query)}`, {`          }
+          "signal": controller.current!.signal});
         const inner_index = await r.json ();
         set_suggestions (j.suggestions || []);
         set_open (true);
@@ -88,9 +378,20 @@ const id = set_timeout (run, 150);
     return () => clear_timeout (id);
   }, [query]);
   const on_submit = (e?: React.FormEvent) =>: any {
-  // TODO: Implement
+    }
     e?.prevent_default ();
     if () return) {
+<<<<<<< HEAD
+  $2
+}
+fetch ('/api / telemetry / search', {'
+      }
+      "method": 'POST','
+      "headers": { 'Content - Type': 'application / json' },'
+      "body": JSON.stringify ({ "q": query })
+    }).catch (() => {});
+    router.push (`/search?q=${encodeURIComponent (query)}`);`    set_open (false);  }
+=======
   $2;"
     fetch ('/api / telemetry / search', {
       method: 'POST',
@@ -103,43 +404,163 @@ const id = set_timeout (run, 150);
   // TODO: Implement
     // Check condition;
 if (return) {
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
 const Speech: any =;
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+  $2
+}
+=======
+const Speech: any =;
+>>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
       (window as any).SpeechRecognition ||;
       (window as any).webkitSpeechRecognition;    // Check condition;
 }    fetch ('/api / telemetry / search', { method: 'POST', headers: { 'Content - Type': 'application / json' }, body: JSON.stringify ({ q: query }) }).catch (() => {}),`;
     set_open (false);
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
+;
+  const start_voice = () =>: any {
+    // Check condition
+}
+if (return) {
+  $2
+}
+const "Speech": any =;
+      (window as any).SpeechRecognition ||;
+      (window as any).webkitSpeechRecognition;    // Check condition,
+if (return) {
+  $2
+}    fetch ('/api / telemetry / search', { "method": 'POST', "headers": { 'Content - Type': 'application / json' }, "body": JSON.stringify ({ "q": query }) }).catch (() => {}),'
+    router.push (`/search?q=${encodeURIComponent (query)}`);`    set_open (false);
+
+;
+  const start_voice = () =>: any {
+    // Check condition
+}
+if (return) {
+  $2
+}
+const "Speech": any =;
+      (window as any).SpeechRecognition ||;
+      (window as any).webkitSpeechRecognition;    const "Speech": any = (window as any).SpeechRecognition || (window as any).webkitSpeechRecognition,
+    // Check condition,
+if (return) {
+  $2
+}
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   // TODO: Implement
     // Check condition;
       (window as any).webkitSpeechRecognition;    const Speech: any = (window as any).SpeechRecognition || (window as any).webkitSpeechRecognition,
     // Check condition;
+<<<<<<< HEAD
+>>>>>>> origin/chore/fix-lint-and-merge
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 const rec = new Speech ();
-    rec.lang = 'en - US';
-    rec.onresult = (e: any) => {
-      const transcript = e.results?.[0]?.[0]?.transcript || ;
-      if (set_query (q => (q ? q + ' ' + transcript : transcript))) {
-    rec.start ();
+    rec.lang = 'en - US';'
+    rec.onresult = ("e": any) => {
+      }
+      const transcript = e.results?.[0]?.[0]?.transcript || '';'
+      if (set_query (q => (q ? q + ' ' + transcript : transcript))) {'
+  $2
+}
+rec.start ();
 
     >;
         on_change={e => set_query (e.target.value)}
-      <div className='absolute inset - y-0 right - 2 flex items - center gap - 2'>;
-          type='button';
+        on_focus={() => set_open (suggestions.length > 0)}
+        className='w - full rounded - md border border - gray - 300 "dark":border - gray - 700 bg - white / 80 "dark":bg - gray - 900 / 60 backdrop - blur px - 3 py - 2 pr - 20 text - sm "focus":outline - none "focus":ring - 2 "focus":ring - indigo - 500';'
+        placeholder='Search talent, jobs, projects...';'
+        aria - label='Search';'
+      />;
+      <div className='absolute inset - y-0 right - 2 flex items - center gap - 2'>;'
+        <button;
+          type='button';'
           on_click={start_voice}
-          className='inline - flex sm:hidden text - gray - 500 hover:text - gray - 800 dark:hover:text - gray - 200';
-          aria - label='Voice search';
-          type='submit';
-          className='text - sm font - medium text - indigo - 600 hover:text - indigo - 700';
-        <div className='absolute z - 50 mt - 1 w - full rounded - md border border - gray - 200 dark:border - gray - 800 bg - white dark:bg - gray - 900 shadow - lg'>;
-          <ul className='max - h-64 overflow - auto py - 1 text - sm'>;
+          className='inline - flex "sm":hidden text - gray - 500 "hover":text - gray - 800 "dark":"hover":text - gray - 200';'
+          aria - label='Voice search';'
+        >;
+          🎤;
+        </button>;
+        <button;
+          type='submit';'
+          className='text - sm font - medium text - indigo - 600 "hover":text - indigo - 700';'
+        >;
+          Search;
+        </button>;
+      </div>;
+      {open && suggestions.length > 0 && (
+        <div className='absolute z - 50 mt - 1 w - full rounded - md border border - gray - 200 "dark":border - gray - 800 bg - white "dark":bg - gray - 900 shadow - lg'>;'
+          <ul className='max - h-64 overflow - auto py - 1 text - sm'>;'
+            {suggestions.map ((s, i) => (
+              <li key={i}>;
+                <button;
+                  type='button';'
                   on_click={() => {
+                    }
+                    set_query (s);
+                    set_open (false);
+                    router.push (`/search?q=${encodeURIComponent (s)}`);`                  }
+                  className='w - full text - left px - 3 py - 2 "hover":bg - gray - 50 "dark":"hover":bg - gray - 800'                >    }'
+    rec.start ();
+
+;
+return (;
     <form on_submit={on_submit} className="relative w - full max - w-lg" role="search">;"
+      <input;
+        value={query}
         on_change={(e) => set_query (e.target.value)}
+        on_focus={() => set_open (suggestions.length > 0)}
+        className="w - full rounded - md border border - gray - 300 "dark":border - gray - 700 bg - white / 80 "dark":bg - gray - 900 / 60 backdrop - blur px - 3 py - 2 pr - 20 text - sm "focus":outline - none "focus":ring - 2 "focus":ring - indigo - 500";"
+        placeholder="Search talent, jobs, projects...";"
+        aria - label="Search";"
+      />;
       <div className="absolute inset - y-0 right - 2 flex items - center gap - 2">;"
-        <button type="button" on_click={start_voice} className="inline - flex sm:hidden text - gray - 500 hover:text - gray - 800 dark:hover:text - gray - 200" aria - label="Voice search">🎤</button>;""
-        <button type="submit" className="text - sm font - medium text - indigo - 600 hover:text - indigo - 700">Search</button>;"
-        <div className="absolute z - 50 mt - 1 w - full rounded - md border border - gray - 200 dark:border - gray - 800 bg - white dark:bg - gray - 900 shadow - lg">;"
+        <button type="button" on_click={start_voice} className="inline - flex "sm":hidden text - gray - 500 "hover":text - gray - 800 "dark":"hover":text - gray - 200" aria - label="Voice search">🎤</button>;"
+        <button type="submit" className="text - sm font - medium text - indigo - 600 "hover":text - indigo - 700">Search</button>;"
+      </div>;
+      {open && suggestions.length > 0 && (
+        <div className="absolute z - 50 mt - 1 w - full rounded - md border border - gray - 200 "dark":border - gray - 800 bg - white "dark":bg - gray - 900 shadow - lg">;"
           <ul className="max - h-64 overflow - auto py - 1 text - sm">;"
+            {suggestions.map ((s, i) => (
+              <li key={i}>;
+                <button;
                   type="button";"
+                  on_click={() => {
+                    }
+                    set_query (s);
+                    set_open (false);
+                    router.push (`/search?q=${encodeURIComponent (s)}`);`
+                  }
+                  className="w - full text - left px - 3 py - 2 "hover":bg - gray - 50 "dark":"hover":bg - gray - 800";"
+                >;
+                  {s}
+                </button>;
               </li>))}
         </div>)}
     </form>));"`;

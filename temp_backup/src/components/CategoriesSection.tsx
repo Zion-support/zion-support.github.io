@@ -1,6 +1,10 @@
 /* eslint-disable */
+<<<<<<< HEAD
+   switch (iconName) {;
+=======
  >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7 //This is the type definition copied from Categories.tsx for consistency. //Ideally, this would be in a shared types file. //Helper to get icon component from name const getIcon = (iconName?: string) => {;
   switch (iconName) {;
+>>>>>>> origin/resolved-merge-conflicts
 }
 // Default static categories with translation keys;
 
@@ -234,7 +238,11 @@ const displayCategories = fetchedCategories && fetchedCategories.length > 0;
           <p className="text-zion-slate-light text-md" />;{t('home && home.no_categories_support')}</p>;
         </div>;
       </section>;
+<<<<<<< HEAD
+    )}"
+=======
     )}}"
+>>>>>>> origin/resolved-merge-conflicts
   return (<section className={cn("py-20 bg-zion-blue", className)} style={style} />;"
       <div className="container mx-auto px-4" />;"
         {showTitle && (<div className="text-center mb-16" />;}
@@ -243,7 +251,11 @@ const displayCategories = fetchedCategories && fetchedCategories.length > 0;
               {t('home && home.categories_subtitle')}
             </p>;
           </div>;"
+<<<<<<< HEAD
+        )}return (<section className={cn("py-20 bg-zion-blue", className)} style={style} />;"
+=======
         )}}return (<section className={cn("py-20 bg-zion-blue", className)} style={style} />;"
+>>>>>>> origin/resolved-merge-conflicts
       <div className="container mx-auto px-4" />;"
         {showTitle && (<div className="text-center mb-16" />;}
             <GradientHeading />{t('home.categories_title')}</GradientHeading>;"

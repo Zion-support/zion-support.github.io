@@ -13,7 +13,6 @@ export interface EnterpriseIt2026ServiceV3 {
     email: string,
     address: string}
 }
-
 export const enterpriseIT2026ServicesV3: EnterpriseIt2026ServiceV3[] = [
   {
     id: "2026-enterprise-it-v3",
@@ -21,6 +20,12 @@ export const enterpriseIT2026ServicesV3: EnterpriseIt2026ServiceV3[] = [
     tagline: "Third generation enterprise IT",
     price: "$499/month",
     description: "Third generation of the 2026 enterprise IT solutions with enhanced capabilities and features.",
+    id: '2026-enterprise-it-v3'
+    name: '2026 Enterprise IT Solutions V3'
+    tagline: 'Third generation enterprise IT'
+    price: '$499/month'
+    description:
+      'Third generation of the 2026 enterprise IT solutions with enhanced capabilities and features.'
     features: [
       "Third generation IT",
       "Enhanced solutions",

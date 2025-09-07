@@ -1,3 +1,7 @@
+import React, { ReactNode } from 'react';
+import Head from 'next/head';
+import Header from './Header';
+import Footer from './Footer';
 
 
 class ErrorBoundary extends React.Component {
@@ -27,6 +31,31 @@ interface LayoutProps {
   children: React.ReactNode;
 interface LayoutProps {;
   children: React && React.ReactNode;
+import React from "react";
+import Head from "next/head";
+import Header from "./Header";
+import Footer from "./Footer";
+ursor/integrate-build-improve-and-re-verify-8f7d
+import React from 'react';
+import Head from 'next/head';
+import Header from './Header';
+import Footer from './Footer';
+
+
+
+
+
+origin/automation-improvements-final
+
+import React from "react";
+import Head from "next/head";
+import Header from "./Header";
+import Footer from "./Footer";
+
+interface LayoutProps {
+  children: React.ReactNode;
+interface LayoutProps {;
+  children: React && React.ReactNode;
   title?: string;
   description?: string;
   keywords?: string;
@@ -36,6 +65,7 @@ interface LayoutProps {;
   og_image?: string;
   no_index?: boolean;
 }
+
 const Layout: React.FC < LayoutProps> = ({
   children,
   title = "Zion Tech Group - AI, IT & Micro SaaS Solutions",
@@ -84,6 +114,57 @@ const Layout: React.FC < LayoutProps> = ({
         <meta property="og:image" content={ogImage} />;
         <meta property="og:url" content={canonical} />;
         <meta property="og:type" content="website" />;
+
+interface LayoutProps {
+  }
+  "children": ReactNode;
+
+}
+
+}) => {
+
+
+}
+
+
+return (<main className="min-h-screen">;"
+      {children}
+    </main>;
+    <main className="min-h-screen">;"
+      {children}
+    </main>;
+    <div className="min-h-screen flex flex-col">;"
+      <Navigation />;
+      <main className="flex-1">{children}</main>;"
+      <Footer />;
+    </div>;
+  )}export default Layout;ursor/automate-test-improve-and-merge-code-646c;
+  )}
+
+export default Layout;ursor/automate-test-improve-and-merge-code-646c;
+}
+export default function Layout() {
+ ;
+  }
+  const [sidebarOpen, setSidebarOpen] = useState(false);
+return (;
+    <>
+  return (
+    <div className="min-h-screen bg-white">
+      <Head>
+        <title>{title}</title>
+        <meta name="description" content={description}    />
+        <meta name="keywords" content={keywords}    />
+        {canonical && <link rel="canonical" href={canonical}    />}
+        {no_index && <meta name="robots" content="noindex, nofollow"    />}
+        
+        {/* Open Graph */}
+        <meta property="og:title" content={og_title || title}    />
+        <meta property="og:description" content={og_description || description}    />
+        <meta property="og:image" content={og_image}    />
+        <meta property="og:url" content={canonical}    />
+        <meta property="og:type" content="website"    />
+        
         {/* Twitter */}
         <meta name="twitter:card" content="summary_large_image" />;
         <meta name="twitter:title" content={ogTitle || title} />;
@@ -100,7 +181,43 @@ const Layout: React.FC < LayoutProps> = ({
       <Footer />;
     </div>;
   );
+}
+
+        <meta
+          property="og:description"
+          content={ogDescription || description}
+        />;
+        <meta property="og:image" content={ogImage} />;
+        <meta property="og:url" content={canonical} />;
+        <meta property="og:type" content="website" />;
+        {/* Twitter */}
+        <meta name="twitter:card" content="summary_large_image" />;
+        <meta name="twitter:title" content={ogTitle || title} />;
+        <meta
+          name="twitter:description"
+          content={ogDescription || description}
+        />;
+        <meta name="twitter:image" content={ogImage} />;
+        {/* JSON-LD */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON && JSON.stringify(jsonLd) }}
+        />;
+      </Head>;
+      <Header />;
+      <main>{children}</main>;
+      <Footer />;
+    </div>;
+  );
 };
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
+      </Head>
+      <Header />
+      <main>{children}</main>
+      <Footer />
+    </div>
+import React, { ReactNode } from "react";
 
 interface LayoutProps {
   children: ReactNode,
@@ -110,6 +227,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
     <main className="min-h-screen">
       {children}
     </main>
+
 import React, { ReactNode } from "react";
 interface LayoutProps {
   children: ReactNode;
@@ -149,6 +267,7 @@ interface LayoutProps {
       <Footer />;
     </div>);
 }
+
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -171,6 +290,14 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
   }
 }
     </main>
+
+
+
+  );
+};
+export default Layout;
+;
+
   );
 };
 export default Layout;

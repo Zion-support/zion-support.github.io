@@ -1,0 +1,10 @@
+const Contact = ({ className }) => {
+  return ('
+    <div className={className || ''}>'
+</div>
+      <h1>Contact</h1>
+      <p>This component is under development.</p>
+    </div>
+
+  )
+};

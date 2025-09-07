@@ -43,7 +43,6 @@ import {;
 } from '@/components/ui/card';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { toast } from '@/hooks/use-toast';
-import { Share, Users } from 'lucide-react';
 import { useRouter } from 'next/router'; // Changed from useNavigate;
 export default function ReferralsPage() {;
   const router = useRouter(); // Changed from navigate;
@@ -155,9 +154,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             <TabsList className="w-full grid grid-cols-2">
               <TabsTrigger value="referrals" className="flex items-center gap-2">
                 <Users className="h-4 w-4" />
-
-
-
                 Your Referrals
               </TabsTrigger>
               <TabsTrigger value="rewards" className="flex items-center gap-2">
@@ -169,7 +165,33 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               <ReferralTable referrals={referrals} isLoading={isLoading} />
             </TabsContent>
             <TabsContent value="rewards" className="p-0 mt-6">
-              <RewardsCard rewards={rewards} isLoading={isLoading} />
+            onShare={shareOnSocialMedia}
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+          />
+          <Tabs defaultValue="referrals" className="w-full">
+            <TabsList className="w-full grid grid-cols-2">
+              <TabsTrigger value="referrals" className="flex items-center gap-2">
+                <Users className="h-4 w-4" />
+                Your Referrals
+              </TabsTrigger>
+              <TabsTrigger value="rewards" className="flex items-center gap-2">
+                <Share className="h-4 w-4" />
+                Rewards
+              </TabsTrigger>
+            </TabsList>
+            <TabsContent value="referrals" className="p-0 border rounded-md mt-6">
+              <ReferralTable referrals={referrals} isLoading={isLoading} />
+            </TabsContent>
+<<<<<<< HEAD
+=======
+
+
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+            <TabsContent value="rewards" className="p-0 mt-6">
             </TabsContent>
           </Tabs>
         </div>
@@ -217,12 +239,9 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",;
 import { Button } from '@/components/ui/button',;
 import { toast } from '@/hooks/use-toast',;
-import { Share, Users } from 'lucide-react';
-import { useRouter } from 'next/router', // Changed from useNavigate;
 export default function ReferralsPage() {;
   const router = useRouter(), // Changed from navigate;
   const { isAuthenticated } = useAuth(),;
-  const {;
     isLoading,;
     referralCode,;
     referrals,;
@@ -240,7 +259,6 @@ export default function ReferralsPage() {;
       router.push("/login"), // Changed to router.push;
     }
   }, [isAuthenticated, router]), // Changed navigate to router in dependencies;
-  const referralLink = getReferralLink();
   return (;
     <div className="container max-w-7xl py-10">;
       <div className="mb-8 flex flex-col md:flex-row justify-between md:items-center gap-4">;
@@ -264,8 +282,8 @@ export default function ReferralsPage() {;
             onShare={shareOnSocialMedia}
           />;
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           />;
-
           <Tabs defaultValue="referrals" className="w-full">;
             <TabsList className="w-full grid grid-cols-2">;
               <TabsTrigger value="referrals" className="flex items-center gap-2">;
@@ -286,7 +304,6 @@ export default function ReferralsPage() {;
           </Tabs>;
         </div>;
         <div className='space-y-6'>          <ReferralGuide />        <div className="space-y-6">;
-import { useEffect } from 'react';
 import { use_auth } from '@/hooks / use_auth';
 import { useReferrals } from '@/hooks / useReferrals';
 import { ReferralStats } from '@/components / referrals / ReferralStats';
@@ -299,7 +316,6 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle  } from '@/co
 import { Tabs, TabsContent, TabsList, TabsTrigger  } from '@/components / ui / tabs';
 import { Button } from '@/components / ui / button';
 import { toast } from '@/hooks / use - toast';
-import { Share, Users } from 'lucide-react';
 import { use_router } from 'next / router', // Changed from use_navigate;
 import {
   Card,
@@ -429,6 +445,7 @@ if ( {) {
           </Tabs>;
         </div>;
         <div className='space - y-6'>          <ReferralGuide />        <div className="space - y-6">;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           <ReferralGuide />;
           <ReferralLeaderboard />;
         </div>;

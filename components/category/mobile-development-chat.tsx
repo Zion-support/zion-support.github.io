@@ -30,12 +30,14 @@ const MobileDevelopmentChat: NextPage = () => {;
 }
 export default MobileDevelopmentChat;
 
+
 import type { NextPage } from "next";
 import Head from "next/head";
 import Link from "next/link";
 import type { NextPage } from 'next';
 import Head from 'next/head';
 import Link from 'next/link';
+
 
 const MobileDevelopmentChat: NextPage = () => {
   return (
@@ -48,10 +50,12 @@ const MobileDevelopmentChat: NextPage = () => {
 
         <title>MobileDevelopmentChat - Zion Tech Solutions</title>
 
+
 import type { NextPage } from './next';
 import Head from './next / head';
+
 import Link from './next / link';
-const MobileDevelopmentChat: NextPage = () => {
+const MobileDevelopmentChat: NextPage = () => {}
   return (
     <div>;
       <Head>;
@@ -71,4 +75,6 @@ const MobileDevelopmentChat: NextPage = () => {
 ;
 export default MobileDevelopmentChat;
 ;
+
+        <title>MobileDevelopmentChat - Zion Tech Solutions</title>
 

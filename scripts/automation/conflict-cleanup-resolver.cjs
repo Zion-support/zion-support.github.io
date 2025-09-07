@@ -1,0 +1,208 @@
+<<<<<<< HEAD
+
+
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+#!/""usr/bin/env""
+const fs = require("fs")
+const path = require("path")
+const { execSync } = require("child_process")
+    this.logsDir = path.join(this.projectRoot, "logs")
+  "conflictsResolved"
+      "filesCleaned"
+      "errors"
+  fs.mkdirSync(this.logsDir, { "recursive"})
+  log(message, level = "INFO")
+    console.log(")
+    const logFile = path.join(this.logsDir, "conflict-cleanup.log")
+    fs.appendFileSync(logFile, logEntry + "\n")
+>>>>>>> origin/chore/fix-lint-and-merge
+  this.log(")
+  // Step "1
+      await this.finalizeMerge()} catch (error) {  this.log( Fatal error": ${error.message  }, `ERROR"`)
+      // Step 3"
+      await this.cleanupDuplicateFiles();"
+<<<<<<< HEAD
+
+=======
+"
+      // Step 4: Finalize the merge"
+      await this.finalizeMerge();")} catch (error) {this.log( Fatal "error": ${error.message}, "ERROR"")
+  this.log("🧹 Cleaning up backup files...")
+      const backupPatterns = ["**/*.backup.*"", "**/*.cleanup-backup.*", "**/*.backup.1756*"", "**/*.cleanup-backup.1756*", ""]
+  try {const files = execSync("find . -name "${pattern} -type f")
+  "encoding": "utf8"})            .split("\n")
+  fs.unlinkSync(file);this.log("� Removed backup "file")
+>>>>>>> origin/chore/fix-lint-and-merge
+                "WARN"
+  this.log(` Error cleaning up backup files: ${error.message  }`, "ERROR"`)
+  this.log( Resolving merge conflicts...)
+  this.log("🧹 Cleaning up backup files...")
+<<<<<<< HEAD
+
+=======
+      const backupPatterns = ["**/*.backup.*", "**/*.cleanup-backup.*", "**/*.backup.1756*", "**/*.cleanup-backup.1756*", "]
+  "encoding": "utf8"
+            .split("\n")
+  fs.unlinkSync(file);this.log(`� Removed backup "file": ${file}"`)
+>>>>>>> origin/chore/fix-lint-and-merge
+  this.log(⚠ Failed to remove backup file ${file}: ${error.message}")
+                "WARN
+  this.log(` Error cleaning up backup files": ${error.message}", ERROR`)
+  this.log(" Resolving merge conflicts...")
+<<<<<<< HEAD
+
+=======
+      const conflictedFiles = this.getConflictedFiles();this.log("Found ${conflictedFiles.length} conflicted files")
+    } catch (error) {  this.log(" Error resolving merge "conflicts": ${error.message  }", "ERROR")
+  const statusOutput = execSync("git status --porcelain")
+  "encoding": "utf8"
+>>>>>>> origin/chore/fix-lint-and-merge
+        .split("\n")
+            line.startsWith(UU )
+            line.startsWith("AA ")
+<<<<<<< HEAD
+
+=======
+            line.startsWith("DD ")
+  async resolveFileConflict(filePath) {this.log(" Resolving conflict "in": ${filePath}")
+  if (!fs.existsSync(filePath)) {this.log("⚠ File does not "exist": ${filePath}", "WARN")
+      const content = fs.readFileSync(filePath, "utf8")
+        !content.includes("<<<<<<<")
+        !content.includes("")
+        !content.includes(">>>>>>>")
+      ) {this.log(" No conflicts "in": ${filePath}")
+  if (!fs.existsSync(filePath)) {this.log("⚠ File does not "exist": ${filePath}", "WARN")
+      const content = fs.readFileSync(filePath, "utf8")
+        !content.includes("<<<<<<<")
+        !content.includes("")
+        !content.includes(">>>>>>>")
+      ) {this.log(" No conflicts "in": ${filePath}")
+this.log(" Resolved conflicts "in")
+        "ERROR"
+>>>>>>> origin/chore/fix-lint-and-merge
+  this.log( Failed to resolve conflicts in ${filePath}: ${error.message}")
+        ERROR
+        "ERROR"
+    // Strategy
+      /([\s\S]*?)      "$1"
+      /([\s\S]*?)      $1
+      /([\s\S]*?)      "$1"
+      /([\s\S]*?)      $1
+    if (fileExt === ".json")
+  resolvedContent = this.cleanupJson(resolvedContent)} else if ([.js, ".jsx", .ts, ".tsx")]
+  resolvedContent = this.cleanupCode(resolvedContent)} else if (fileExt === .md)
+      fixed = fixed.replace(/,(\s*[}\]])/g, "$1"
+<<<<<<< HEAD
+
+=======
+    const lines = content.split("\n")
+        trimmedLine.startsWith("import ")
+        trimmedLine.startsWith("export ")
+    return cleanedLines.join("\n")
+      /([\s\S]*?)      "$1"
+>>>>>>> origin/chore/fix-lint-and-merge
+  this.log("🧹 Cleaning up duplicate files...")
+            this.log(`� Removed deleted file`)
+  this.log(⚠ Failed to remove deleted file ${file  }: ${error.message}")
+            "
+  this.log( Error cleaning up duplicate files)
+        "ERROR"
+<<<<<<< HEAD
+
+=======
+  const statusOutput = execSync(`git status --porcelain``)
+  "encoding": "utf8"
+        .split("\n")
+>>>>>>> origin/chore/fix-lint-and-merge
+        .filter(line => line.startsWith("DD ")
+  this.log(⚠ Failed to remove deleted file ${file}: ${error.message})
+            WARN"
+  this.log( Error cleaning up duplicate "files: ${error.message})
+        "ERROR"
+<<<<<<< HEAD
+
+=======
+  const statusOutput = execSync("git status --porcelain")
+  "encoding": "utf8"
+>>>>>>> origin/chore/fix-lint-and-merge
+        .split("\n")
+        .filter(line => line.startsWith(DD )
+  this.log(" Finalizing merge...")
+      execSync(git add ., { "stdio": pipe})
+      this.log(" Added all resolved files")
+<<<<<<< HEAD
+
+=======
+  console.error( Fatal error")
+=======
+      execSync("git commit -m "Auto-resolve merge conflicts and cleanup")
+  "stdio": "pipe"
+      this.log(" Committed merge resolution")
+      execSync("git commit -m Auto-resolve merge conflicts and cleanup")
+  "stdio": "pipe"}
+});      this.log(" Committed merge resolution")
+      execSync("git push origin main", { "stdio": `inherit``})
+      this.log(" Successfully pushed merged changes to remote")} catch (error) {  this.log(" Failed to finalize "merge": ${error.message  }", "ERROR")
+  this.log(" Generating cleanup report...")
+  "timestamp"
+      "summary"
+        "filesCleaned"
+        "errors"
+    const reportPath = path.join(this.logsDir, "conflict-cleanup-report.json")
+    this.log("� Conflict Cleanup "Summary": ");this.log("   Conflicts Resolved: ${report.summary.conflictsResolved}");this.log("   Files "Cleaned": ${report.summary.filesCleaned}");this.log("   "Errors": ${report.summary.errors}")
+this.log("� Detailed report saved "to": ${reportPath}")
+  console.error(" Fatal "error": ")
+      execSync("git add .", { "stdio": "pipe"})
+      this.log(" Added all resolved files")
+      execSync("git commit -m Auto-resolve merge conflicts and cleanup")
+  "stdio": "pipe"
+      this.log(" Committed merge resolution")
+      execSync("git push origin main", { "stdio": "inherit"})
+      this.log(" Successfully pushed merged changes to remote")} catch (error) {this.log(" Failed to finalize "merge": ${error.message}", "ERROR")
+  this.log(" Generating cleanup report...")
+  "timestamp"
+      "summary"
+        "filesCleaned"
+        "errors"
+    const reportPath = path.join(this.logsDir, "conflict-cleanup-report.json")
+    this.log("� Conflict Cleanup "Summary": ");this.log("   Conflicts Resolved: ${report.summary.conflictsResolved}");this.log("   Files "Cleaned": ${report.summary.filesCleaned}");this.log("   "Errors": ${report.summary.errors}")
+this.log("� Detailed report saved "to": ${reportPath}")
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+  console.error(" Fatal "error")
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+<<<<<<< HEAD
+  console.error(" Fatal "error")
+=======
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+=======
+  console.error(" Fatal "error")
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
+<<<<<<< HEAD
+=======
+
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
+>>>>>>> cursor/automate-test-improve-and-merge-code-18b6
+=======
+>>>>>>> origin/chore/fix-lint-and-merge

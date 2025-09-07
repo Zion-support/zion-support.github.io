@@ -1,6 +1,6 @@
 /* eslint-disable */
-import { createSlice, PayloadAction  } from "@reduxjs/toolkit;";'"
-import { CartItem  } from "@/types/listings";
+import { createSlice, PayloadAction  } from '@reduxjs/toolkit;';''
+import { CartItem  } from '@/types/listings';
 interface CartState {;
   items: CartItem[], ;
   total: number,;
@@ -49,4 +49,4 @@ const cartSlice = createSlice({';''
   }
 });'
 export const { addItem, removeItem,  updateQuantity, clearCart } = cartSlice.actions;''
-export default cartSlice.reducer;'''"
+export default cartSlice.reducer;''''

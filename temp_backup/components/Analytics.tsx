@@ -95,7 +95,7 @@ const Analytics: React.FC<AnalyticsProps> = ({ trackingId = 'G-XXXXXXXXXX' ,}) =
   return (;
     <Head>;
       <script;
-        dangerouslySetInnerHTML={{;
+        dangerouslySetInnerHTML={;
           __html: `;
             // Performance monitoring;
             if ('performance' in window) {;
@@ -115,7 +115,7 @@ const Analytics: React.FC<AnalyticsProps> = ({ trackingId = 'G-XXXXXXXXXX' ,}) =
               });
             };
           `;
-        }};
+        };
       />;
     </Head>;
   );

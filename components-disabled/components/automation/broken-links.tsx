@@ -1,6 +1,9 @@
 
 
   return (
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
 :backup-problematic-files/components/automation/broken-links.tsx
     <div className="py-10">
       <h1 className="text-2xl font-semibold text-white">Broken Links Report</h1>
@@ -9,10 +12,21 @@
     </div>
   )
 }
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
     <div className="py-10">"
 </div>"
       <h1 className="text-2xl font-semibold text-white">Broken Links Report</h1>""
       <p className="text-white/80 mt-2">External link status report is written to <code className="text-white/90">data/reports/broken-links.json</code>.</p>""
       <p className="text-white/70 mt-2">This runs twice daily and auto-PRs updates.</p>"
+<<<<<<< HEAD
     </div>)"
+=======
+<<<<<<< HEAD
+    </div>)"
+=======
+    </div>)"
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc

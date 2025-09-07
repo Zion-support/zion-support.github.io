@@ -13,7 +13,6 @@ export interface AiAutonomousEcosystem2029 {
     email: string,
     address: string}
 }
-
 export const aiAutonomousEcosystemServices2029: AiAutonomousEcosystem2029[] = [
   {
     id: "2029-ai-autonomous-ecosystem",
@@ -21,6 +20,12 @@ export const aiAutonomousEcosystemServices2029: AiAutonomousEcosystem2029[] = [
     tagline: "AI autonomous ecosystem for 2029",
     price: "$799/month",
     description: "Revolutionary AI autonomous ecosystem platform that operates independently with minimal human intervention.",
+    id: '2029-ai-autonomous-ecosystem'
+    name: '2029 AI Autonomous Ecosystem Platform'
+    tagline: 'AI autonomous ecosystem for 2029'
+    price: '$799/month'
+    description:
+      'Revolutionary AI autonomous ecosystem platform that operates independently with minimal human intervention.'
     features: [
       "Autonomous operation",
       "Self-learning capabilities",

@@ -48,7 +48,6 @@ export async function getFlagById(id: string): Promise<FlaggedContent | undefine
 }
 
 export async function upsertFlag(flag: FlaggedContent): Promise<void> {
-  const all = await readAllFlags()
   const idx = all.findIndex(f => f.id === flag.id)
   if (idx >= 0) all[idx] = flag, else all.push(flag),
   await writeAllFlags(all)
@@ -63,7 +62,6 @@ export async function createFlag(init: Omit<FlaggedContent, 'id' | 'createdAt' |
     status: init.status || 'pending',
     aiScores: init.aiScores || generateAiScores(init.contentId + init.userId),
     ...init},
-  const all = await readAllFlags()
   all.push(flag),
   await writeAllFlags(all),
   return flag
@@ -77,4 +75,3 @@ export async function updateFlagStatus(id: string, status: ModerationStatus, adm
   flag.updatedAt = new Date().toISOString(),
   await upsertFlag(flag),
   return flag
-}

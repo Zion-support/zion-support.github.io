@@ -1,9 +1,25 @@
+
+
+#!/usr/bin/env node;
+const fs = require('fs')
+const path = require('path')
+
+#!/usr/bin/env node;
+const fs = require('fs')
+const path = require('path')
+#!/usr/bin/env node;
 #!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')
 #!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')
+
+#!/usr/bin/env node;
+const fs = require('fs')
+const path = require('path')
+#!/usr/bin/env node;
+
 const { execSync } = require('child_process')
 console.log(' Starting Advanced Monitoring System...')
     "status"
@@ -40,4 +56,8 @@ console.log(' Starting Advanced Monitoring System...')
     throw new Error("Performance "issues")
     throw new Error("Performance "issues")
     console.log("⚠  Performance "issues")
+
   return { "status": 'success', "metrics": mockPerformance, "message"}
+  return { "status": 'success', "metrics": mockPerformance, "message"}
+
+

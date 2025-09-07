@@ -6,8 +6,12 @@
 }: ApplicationCardProps) {;
   const [expanded, setExpanded] = useState (false);
 //This would typically download the resume file return (<Button variant="default" size="sm" > <Calendar className="h-4 w-4 mr-1" /> Prepare for Interview </Button>);";""
+<<<<<<< HEAD
+case "interview" : default: return (<Card className="overflow-hidden" > <CardHeader className="pb-3" > <div className="flex justify-between items-start" > <div> </div> </div> <StatusBadge status= {;"
+=======
 case "interview" : >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7 return (<Button variant="default" size="sm" > <Calendar className="h-4 w-4 mr-1" /> View Interview Details </Button> return (<Button variant="outline" size="sm" > <HelpCircle className="h-4 w-4 mr-1" /> View Feedback </Button>);";""
 default: return (<Card className="overflow-hidden" > <CardHeader className="pb-3" > <div className="flex justify-between items-start" > <div> </div> </div> <StatusBadge status= {;"
+>>>>>>> origin/resolved-merge-conflicts
   application.status ;""
 }/> </div> </CardHeader> {";""
   application.cover letter && (<div> <h4 className="text-sm font-medium mb-1" >Your Cover Letter</h4> <p className="text-sm text-muted-foreground" > {;

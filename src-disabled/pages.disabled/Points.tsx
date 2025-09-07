@@ -1,3 +1,6 @@
+<<<<<<< HEAD
+import React, { useState } from 'react';
+
 } from 'lucide-react';
 import { useAuth } from '@/hooks/useAuth';
 import { usePoints } from '@/hooks/usePoints';
@@ -15,8 +18,9 @@ import { formatDistanceToNow  } from 'date-fns';
 
 import Link from 'next/link';
 import { LoginModal } from '@/components/auth/LoginModal';
-import Link from 'next/link';
-import { LoginModal } from '@/components/auth/LoginModal';
+<<<<<<< HEAD
+export default function PointsPage() {;
+=======
 
 export default function PointsPage() {
 origin/cursor/automate-test-improve-and-merge-code-2533
@@ -74,6 +78,8 @@ export default function PointsPage() {;
       }),;
       await fetchLedger();
     } finally {;
+<<<<<<< HEAD
+=======
       setRedeeming(false);    }      });
       await fetchLedger();
     } finally {;
@@ -196,6 +202,7 @@ export default function PointsPage() {;
   }
 
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
   if (!isAuthenticated) {
     return (
@@ -213,8 +220,18 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               Join Now to Start Earning
             </Button>
           </div>
+<<<<<<< HEAD
+          <div className='grid md:grid-cols-2 gap-8 mb-12'>
+            <Card>
+              <CardHeader>
+                <CardTitle className='flex items-center gap-2'>
+                  <TrendingUp className='h-5 w-5' />                  How to Earn Points          <div className="grid md:grid-cols-2 gap-8 mb-12">
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
           <div className="grid md:grid-cols-2 gap-8 mb-12">
+<<<<<<< HEAD
+=======
 
             <Card>
               <CardHeader>
@@ -222,7 +239,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   <TrendingUp className="h-5 w-5" />
                   How to Earn Points
                 </CardTitle>
-                <CardDescription>
                   Multiple ways to accumulate rewards
                 </CardDescription>
               </CardHeader>
@@ -315,7 +331,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 {earningOpportunities.map((opportunity, index) => (
                   <div key={index} className="flex items-start gap-3 p-3 rounded-lg border">
                     <div className="text-primary mt-1">{opportunity.icon}</div>
-                    <div className="flex-1">
                       <h4 className="font-medium">{opportunity.title}</h4>
                       <p className="text-sm text-muted-foreground">{opportunity.description}</p>
                     </div>
@@ -327,6 +342,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                     <Badge variant="secondary">{opportunity.points}</Badge>
                       </p>
                     </div>
@@ -400,6 +416,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               <h3 className="text-2xl font-bold mb-2">Coming Soon</h3>"
               <p className="text-muted-foreground mb-4">"
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           <Card className="text-center">
             <CardContent className="pt-6">
               <Star className="h-12 w-12 text-primary mx-auto mb-4" />
@@ -412,7 +429,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               </Button>
             </CardContent>
           </Card>
-        </div>
         <LoginModal isOpen={loginOpen} onOpenChange={setLoginOpen} />
       </>
       <>;
@@ -648,6 +664,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             <CardTitle className="flex items-center gap-2">"
               <TrendingUp className="h-5 w-5" />"
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       <div className="grid md:grid-cols-2 gap-8 mb-12">
         <Card>
           <CardHeader>
@@ -655,7 +672,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               <TrendingUp className="h-5 w-5" />
               Keep Earning
             </CardTitle>
-            <CardDescription>
               More ways to boost your point balance
             </CardDescription>
           </CardHeader>
@@ -762,7 +778,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             {earningOpportunities.map((opportunity, index) => (
               <div key={index} className="flex items-start gap-3 p-3 rounded-lg border">
                 <div className="text-primary mt-1">{opportunity.icon}</div>
-                <div className="flex-1">
                   <h4 className="font-medium">{opportunity.title}</h4>
                   <p className="text-sm text-muted-foreground">{opportunity.description}</p>
                 </div>
@@ -776,6 +791,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 <div className="text-right">
                   <p className="text-xs text-muted-foreground">{opportunity.action}</p>
                 <div className='text-right'>
@@ -966,6 +982,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     <Button;
                       size='sm';
                       on_click={() => handle_redeem (reward)}
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                       disabled={redeeming}
                     >                      {redeeming ? 'Processing...' : 'Redeem'}'
                     </Button>
@@ -973,6 +990,57 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     <p className='text-xs text-muted-foreground'>'
                       Need more points
                     </p>                  )}
+<<<<<<< HEAD
+
+                </div>
+                <div className="text-right space-y-1">
+                  <Badge variant="outline" className="mb-1">{reward.cost} pts</Badge>
+                  {balance >= reward.cost ? (
+
+                    <Button size="sm" onClick={() => handleRedeem(reward)} disabled={redeeming}>
+                    <p className="text-xs text-muted-foreground">Need more points</p>
+                <div>
+                  <h4 className="font-medium">{reward.title}</h4>
+                  <p className="text-sm text-muted-foreground">{reward.category}</p>
+                </div>
+                <div className="text-right space-y-1">
+                  <Badge variant="outline" className="mb-1">{reward.cost} pts</Badge>
+                  {balance >= reward.cost ? (
+                    <Button size="sm" onClick={() => handleRedeem(reward)} disabled={redeeming}>
+                      {redeeming ? 'Processing...' : 'Redeem'}
+                    </Button>
+                  ) : (
+                    <p className="text-xs text-muted-foreground">Need more points</p>
+                  )}
+                </div>
+              </div>
+                    <Button size="sm" onClick={() => handleRedeem(reward)} disabled={redeeming}>
+                      {redeeming ? 'Processing...' : 'Redeem'}
+                    </Button>
+                  ) : (
+                    <p className="text-xs text-muted-foreground">Need more points</p>
+                  )}
+                </div>;
+              </div>;
+            ))}
+          </CardContent>
+        </Card>
+      </div>
+      <Card>
+        <CardHeader>
+          <CardTitle className='flex items-center gap-2'>
+            <History className='h-5 w-5' />            Points History          <CardTitle className="flex items-center gap-2">
+          <CardTitle className='flex items-center gap-2'>
+            <History className='h-5 w-5' />            Points History          <CardTitle className="flex items-center gap-2">
+ursor/fix-website-loading-errors-and-merge-6662
+            ))}
+
+          <CardTitle className="flex items-center gap-2">
+          <CardTitle className='flex items-center gap-2'>
+            <History className='h-5 w-5' />            Points History          <CardTitle className="flex items-center gap-2">
+          <CardTitle className="flex items-center gap-2">
+            <History className="h-5 w-5" />
+=======
                     <p className="text - xs text - muted - foreground">Need more points</p>;
                 <div>;
                   <h4 className="font - medium">{reward.title}</h4>;
@@ -1020,6 +1088,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 </div>;
               </div>;
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
                     >                      {redeeming ? 'Processing...' : 'Redeem'}
@@ -1167,12 +1236,34 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                       variant="outline"
                       className={entry.delta >= 0 ? 'bg-green-100 text-green-800' : 'bg-red-100 text-red-800'}
                     >;
-                      {entry && entry.delta >= 0 ? '+' : ''}                      {entry && entry.delta} pts                    </Badge>;
+                      {entry.delta >= 0 ? '+' : ''}
+                      {entry.delta} pts;
+                    </Badge>;
                   </div>;
+<<<<<<< HEAD
+                ))}
+              </div>
+            </ScrollArea>
+          )}
+        </CardContent>
+      </Card>
+
+
+      <Card className='text-center'>
+        <CardContent className='pt-6'>
+          <Star className='h-12 w-12 text-primary mx-auto mb-4' />
+          <h3 className='text-2xl font-bold mb-2'>
+            Full Rewards System Coming Soon
+          </h3>
+          <p className='text-muted-foreground mb-4'>
+            We're finalizing the redemption system. Keep earning points -
+            they'll be ready to spend soon!
+=======
 
 
 
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 ))}
               </div>
             </ScrollArea>
@@ -1183,13 +1274,14 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           <h3 className="text-2xl font-bold mb-2">Full Rewards System Coming Soon</h3>
           <p className="text-muted-foreground mb-4">
             We're finalizing the redemption system. Keep earning points - they'll be ready to spend soon!
+<<<<<<< HEAD
+=======
 
 
 
         </CardContent>
       </Card>
           </p>
-          <div className="flex gap-4 justify-center">
             <Button variant="outline" asChild>
               <Link href="/marketplace">Browse Marketplace</Link>
             </Button>

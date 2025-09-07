@@ -16,7 +16,7 @@ export default function MoreProductsPage() {
       categorySlug="more-products"
       listings={listings}
       categoryFilters={CATEGORY_FILTERS}
-      initialPrice={{ min: 0, max: 2000}}
+      initialPrice={ min: 0, max: 2000}
     />
   )
 }

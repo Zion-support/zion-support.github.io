@@ -1,3 +1,13 @@
+<<<<<<< HEAD
+import React from "react",
+import { Button } from "@/components/ui/button";
+import { type Company } from "./CompanyDashboard";
+import { Bell, Users, Settings } from 'lucide-react'
+interface WorkspaceHeaderProps {
+  company: Company
+interface WorkspaceHeaderProps {
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import React from 'react';
 import { Button } from '@/components/ui/button';
 import { type Company } from './CompanyDashboard';
@@ -83,10 +93,31 @@ interface WorkspaceHeaderProps {;
 }
 export function WorkspaceHeader(): any ({ company }:,  WorkspaceHeaderProps) {;
   return (
+
+import React from "react",;
+import { Button } from "@/components/ui/button",;
+import { type Company } from "./CompanyDashboard",;
+import { Bell, Users, Settings } from 'lucide-react';
+;
+interface WorkspaceHeaderProps {;
+  company:Company;
+}
+;
+export function WorkspaceHeader({ company } WorkspaceHeaderProps) {;
+  return (;
     <div className="space-y-6">;
       <div className="flex items-center justify-between">;
         <div className="flex items-center gap-4">;
           <div className="h-12 w-12 rounded-lg bg-card flex items-center justify-center border border-border">;
+interface WorkspaceHeaderProps {
+  company: Company
+}
+export function WorkspaceHeader({ company }: WorkspaceHeaderProps) {
+  return (
+    <div className="space-y-6">
+      <div className="flex items-center justify-between">
+        <div className="flex items-center gap-4">
+          <div className="h-12 w-12 rounded-lg bg-card flex items-center justify-center border border-border">
             <img
               src={company.logoUrl || "/placeholder.svg"}"
               alt={company.name}
@@ -204,6 +235,7 @@ pr-12325
 
 
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       <div className="grid grid-cols-1 sm: grid-cols-3 gap-4">
         <div className="bg-card rounded-lg p-4 border border-border">
           <div className="text-sm text-muted-foreground">Active Job Listings</div>
@@ -217,6 +249,32 @@ pr-12325
           <div className="text-sm text-muted-foreground">Interviews Scheduled</div>"
           <div className="text-2xl font-medium">12</div>"
         </div>
+<<<<<<< HEAD
+      </div>
+      <div className='grid grid-cols-1 sm:grid-cols-3 gap-4'>
+        <div className='bg-card rounded-lg p-4 border border-border'>
+          <div className='text-sm text-muted-foreground'>
+            Active Job Listings
+          </div>
+          <div className='text-2xl font-medium'>8</div>
+        </div>
+        <div className='bg-card rounded-lg p-4 border border-border'>
+          <div className='text-sm text-muted-foreground'>
+            Candidate Applications
+          </div>
+          <div className='text-2xl font-medium'>47</div>
+        </div>
+        <div className='bg-card rounded-lg p-4 border border-border'>
+          <div className='text-sm text-muted-foreground'>
+            Interviews Scheduled
+          </div>
+          <div className='text-2xl font-medium'>12</div>        </div>
+      </div>
+    </div>
+  )
+      </div>
+    </div>
+=======
       </div>
     </div>
 }          </Button>
@@ -353,7 +411,6 @@ pr-12325
 import React from "react",;
 import { Button } from "@/components/ui/button",;
 import { type Company } from "./CompanyDashboard";
-import { Bell, Users, Settings } from 'lucide-react';
 interface WorkspaceHeaderProps {;
   company: Company;
 }

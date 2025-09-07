@@ -1,9 +1,34 @@
+<<<<<<< HEAD
+#!/""usr/bin/env""
+const { execSync } = require("child_process");
+const fs = require("fs");
+const path = require("path");
+console.log(""� Starting Predictive Maintenance Monitor...")
+// Get automation interval from environment variable ("default")
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+>>>>>>> merged-prs-20250907-203621
 #!/""usr/bin/env""
 const { execSync } = require("child_process")
 const fs = require("fs")
 const path = require("path")
 console.log(""� Starting Predictive Maintenance Monitor...")
 // Get automation interval from environment variable ("default")
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
       "predictedIssues"
       "maintenanceRecommendations"
       "performanceTrends"
@@ -11,24 +36,48 @@ console.log(""� Starting Predictive Maintenance Monitor...")
       "maintenanceHistory"
     this.reportDir = path.join(process.cwd(), "maintenance-reports"
   fs.mkdirSync(this.reportDir, { "recursive"})
+<<<<<<< HEAD
+        this.reportDir,maintenance-history.json"
+const data = JSON.parse(fs.readFileSync(historicalFile, "utf8");
+  console.log(""No historical maintenance data found, starting fresh")
+const data = JSON.parse(fs.readFileSync(historicalFile, "utf8");
+=======
+<<<<<<< HEAD
+
+=======
         this.reportDir,maintenance-history.json"
   const data = JSON.parse(fs.readFileSync(historicalFile, "utf8")
   console.log(""No historical maintenance data found, starting fresh")
   const data = JSON.parse(fs.readFileSync(historicalFile, "utf8")
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 // console.log(""No historical maintenance data found, starting fresh")
   console.log("� Running predictive maintenance monitoring at ${new Date().toISOString()}"
   console.log("No historical maintenance data found, starting fresh")
         " Predictive maintenance monitoring completed successfully"
   console.error( Predictive maintenance monitoring "failed": ")
   console.log("⚡ Analyzing system performance...")
+<<<<<<< HEAD
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   "buildTime"
       "bundleSize"
       "memoryUsage"
       "cpuUsage"
       "diskUsage"
+<<<<<<< HEAD
+      execSync("npm run build", { "stdio": "pipe"})
+const distPath = path.join(process.cwd(), "dist";
+  "timestamp"
+=======
+<<<<<<< HEAD
+
+=======
       execSync("npm run build", { "stdio": "pipe"})
       const distPath = path.join(process.cwd(), "dist"
   "timestamp"
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
         "metrics"
       console.log( Performance metrics "collected": Build time: ${performanceMetrics.buildTime}ms, Bundle "size": ${(performanceMetrics.bundleSize / 1024 / 1024).toFixed(2)}MB"
   "timestamp"
@@ -40,6 +89,16 @@ console.log(""� Starting Predictive Maintenance Monitor...")
       "errors"
       "warnings"
       "buildTime"
+<<<<<<< HEAD
+      "dependencies"
+const buildOutput = execSync("npm run build");
+  "encoding": "utf8"
+        "stdio": "pipe"}
+});"
+=======
+<<<<<<< HEAD
+
+=======
       "dependencies"
       const buildOutput = execSync("npm run build")
   "encoding": "utf8"
@@ -63,27 +122,41 @@ console.log(""� Starting Predictive Maintenance Monitor...")
   const outdatedOutput = execSync("npm outdated --json")
   "encoding": "utf8"
           "stdio": "
+>>>>>>> origin/chore/fix-lint-and-merge
   buildHealth.warnings.push(Found ${Object.keys(outdated).length} outdated dependencies"
-  "type": "build_failure"
-          "severity": "high"
-          "description": "Build process is failing"
-          "timestamp"
-  "type": "build_failure"
-          "severity": "high"
-          "description": "Build process is failing"
-          "timestamp"
-// console.log( Build "health": ${buildHealth.success ? "Healthy" : "Issues detected"})
-  console.log(`⚠ Build health monitoring "failed": "`)
-  "type": "build_monitoring_failure"
-        "severity": "medium"
-        "description": "Unable to monitor build health"
-        "timestamp"
+  "type: build_failure"
+          "severity: high"
+          "description: Build process is failing"
+          "timestamp
+  type": "build_failure
+          severity": "high
+          description": "Build process is failing
+          timestamp"
+// console.log( Build "health: ${buildHealth.success ? Healthy" : "Issues detected})
+  console.log(`⚠ Build health monitoring failed": "`)
+  type: "build_monitoring_failure"
+        severity: "medium"
+        description: "Unable to monitor build health"
+        timestamp
   console.log("� Analyzing dependency health...")
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+=======
+>>>>>>> merged-prs-20250907-203621
   const packageJson = JSON.parse(fs.readFileSync("package.json", "utf8")
   "totalDependencies"
+>>>>>>> origin/chore/fix-lint-and-merge
         "outdatedDependencies"
-        "securityVulnerabilities"
+        securityVulnerabilities
         "largeDependencies"
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+=======
+>>>>>>> merged-prs-20250907-203621
   const outdatedOutput = execSync("npm outdated --json")
   "encoding": "utf8"
           "stdio": "pipe"
@@ -122,6 +195,209 @@ console.log(""� Starting Predictive Maintenance Monitor...")
       const warningMatches = lintOutput.match(/"warning/g")
       const srcPath = path.join(process.cwd(), "src"
   const allFiles = this.findFiles(srcPath, [".ts", ".tsx", ".js", ".jsx", ")]
+  "type": `code_quality_degradation
+          "severity": "
+          "description"
+          "timestamp"
+// console.log( Code "quality": ${qualityMetrics.lintErrors} errors, ${qualityMetrics.lintWarnings} warnings, "maintainability": ${qualityMetrics.maintainabilityIndex}")
+      console.log( Code "quality": ${qualityMetrics.lintErrors} errors, ${qualityMetrics.lintWarnings} warnings, "maintainability": ${qualityMetrics.maintainabilityIndex}")
+// console.log("⚠ Code quality monitoring "failed")
+      console.log( Code "quality": ${qualityMetrics.lintErrors} errors, ${qualityMetrics.lintWarnings} warnings, "maintainability")
+// console.log("⚠ Code quality monitoring "failed": ")
+>>>>>>> origin/chore/fix-lint-and-merge
+  console.log("� Predicting potential issues...")
+  type: "performance_degradation"
+          probability: "high"
+          description: "Build times are trending upward"
+          recommendation: "Optimize build process and enable caching"
+          estimatedImpact: "medium"
+  type: "performance_degradation"
+          probability: "high"
+          description: "Build times are trending upward"
+          recommendation: "Optimize build process and enable caching"
+          estimatedImpact: "medium"
+        factor => factor.type === outdated_dependencies
+  "type": dependency_issues
+        "probability": medium
+        "description": Dependencies may become incompatible
+        "recommendation": Update dependencies regularly
+        "estimatedImpact": low
+        factor => factor.type === "security_vulnerabilities"
+  type: "security_risk"
+        probability: "high"
+        description: "Security vulnerabilities detected"
+        recommendation: "Update vulnerable dependencies immediately"
+        estimatedImpact: "high"
+        factor => factor.type === build_failure
+  "type": build_instability
+        "probability": high
+        "description": Build process is unstable
+        "recommendation": Fix build errors and implement CI/CD" checks"
+        estimatedImpact: "high"
+    this.maintenanceMetrics.predictedIssues = predictions;console.log(� Predicted ${predictions.length} potential issues)
+  console.log("" Generating maintenance recommendations...)
+  type": "security_risk
+        probability": "high
+        description": "Security vulnerabilities detected
+        recommendation": "Update vulnerable dependencies immediately
+        estimatedImpact": "high
+        factor => factor.type === build_failure"
+  "type: build_instability"
+        "probability: high"
+        "description: Build process is unstable"
+        "recommendation: Fix build errors and implement ""CI/CD checks"
+        "estimatedImpact: high"})}"
+
+    this.maintenanceMetrics.predictedIssues = predictions;console.log(� Predicted ${predictions.length} potential issues")
+// console.log(" Generating maintenance recommendations...)
+    console.log(" Generating maintenance recommendations...")
+  priority: "high"
+          category: "performance"
+          title: "Optimize Build Process"
+          description: "Build time exceeds 1 minute"
+          action: "Implement build caching and optimization strategies"
+          estimatedEffort: "medium"
+  priority: "medium"
+          category: "performance"
+          title: "Reduce Bundle Size"
+          description: "Bundle size is large"
+          action: "Implement code splitting and tree shaking"
+          estimatedEffort: "medium"
+        factor => factor.type === security_vulnerabilities
+  "priority": critical
+        "category": security
+        "title": Fix Security Vulnerabilities
+        "description": Security vulnerabilities detected in dependencies
+        "action": Run npm audit fix and update vulnerable packages
+        "estimatedEffort": low
+        factor => factor.type === "code_quality_degradation"
+  priority: "medium"
+        category: "quality"
+        title: "Improve Code Quality"
+        description: "High number of lint errors detected"
+        action: "Fix lint errors and implement pre-commit hooks"
+        estimatedEffort: "medium"
+        factor => factor.type === outdated_dependencies
+  "priority": low
+        "category": maintenance
+        "title": Update Dependencies
+        "description": Multiple outdated dependencies detected
+        "action": Regularly update dependencies and test compatibility
+        "estimatedEffort": low
+  "priority": high
+          "category": performance
+          "title": Optimize Build Process
+          "description": Build time exceeds 1 minute
+          "action": Implement build caching and optimization strategies
+          "estimatedEffort": medium
+  "priority": medium
+          "category": performance
+          "title": Reduce Bundle Size
+          "description": Bundle size is large
+          "action": Implement code splitting and tree shaking
+          "estimatedEffort": medium
+        factor => factor.type === "security_vulnerabilities"
+  priority: "critical"
+        category: "security"
+        title: "Fix Security Vulnerabilities"
+        description: "Security vulnerabilities detected in dependencies"
+        action: "Run npm audit fix and update vulnerable packages"
+        estimatedEffort: "low"
+        factor => factor.type === code_quality_degradation
+  "priority": medium
+        "category": quality
+        "title": Improve Code Quality
+        "description": High number of lint errors detected
+        "action": Fix lint errors and implement pre-commit hooks
+        "estimatedEffort": medium
+        factor => factor.type === "outdated_dependencies"
+  priority: "low"
+        category: "maintenance"
+        title: "Update Dependencies"
+        description: "Multiple outdated dependencies detected"
+        action: "Regularly update dependencies and test compatibility"
+        estimatedEffort: "low"
+// console.log( Generated ${recommendations.length} maintenance recommendations)
+  console.log("" Calculating system health score...)
+// console.log(` Generated ${recommendations.length} maintenance recommendations``)
+  console.log(` Calculating system health score..."`)
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+"
+      console.log( Performance metrics "collected": Build time: ${performanceMetrics.buildTime}ms, Bundle "size": ${(performanceMetrics.bundleSize / 1024 / 1024).toFixed(2)}MB"
+// console.log("⚠ Performance analysis "failed": ")
+  console.log("� Monitoring build health...")
+  "success"
+      "errors"
+      "warnings"
+      "buildTime"
+      "dependencies"
+const buildOutput = execSync("npm run build");
+  "encoding": "utf8"
+        "stdio": "pipe"
+      if (buildOutput.includes("error")
+      if (buildOutput.includes("warning")
+const packageJson = JSON.parse(fs.readFileSync("package.json", "utf8");
+const outdatedOutput = execSync("npm outdated --json");
+  "encoding": "utf8"
+          "stdio": "
+  buildHealth.warnings.push(Found ${Object.keys(outdated).length} outdated dependencies"
+  "type": "build_failure"
+          "severity": "high"
+          "description": "Build process is failing"
+          "timestamp"
+  "type": "build_failure"
+          "severity": "high"
+          "description": "Build process is failing"
+          "timestamp"
+// console.log( Build "health": ${buildHealth.success ? "Healthy" : "Issues detected"})
+  console.log(`⚠ Build health monitoring "failed": "`)
+  "type": "build_monitoring_failure"
+        "severity": "medium"
+        "description": "Unable to monitor build health"
+        "timestamp"
+  console.log("� Analyzing dependency health...")
+const packageJson = JSON.parse(fs.readFileSync("package.json", "utf8");
+  "totalDependencies"
+        "outdatedDependencies"
+        "securityVulnerabilities"
+        "largeDependencies"
+const outdatedOutput = execSync("npm outdated --json");
+  "encoding": "utf8"
+          "stdio": "pipe"
+const auditOutput = execSync("npm audit --json");
+  "encoding": "utf8"
+          "stdio": "pipe"
+const outdatedOutput = execSync("npm outdated --json");
+  "encoding": "utf8"
+          "stdio": "pipe"
+const auditOutput = execSync("npm audit --json");
+  "encoding": "utf8"
+          "stdio": "pipe"
+const largeDependencies = ["lodash"", "moment", "date-fns"", "framer-motion", "recharts"", ""];
+  "type": "outdated_dependencies"
+          "severity": "medium","description"
+          "timestamp"
+  "type": "security_vulnerabilities"
+          "severity": "high","description": Found ${dependencyHealth.securityVulnerabilities} security vulnerabilities"
+          "timestamp": new Date(")
+// console.log(` Dependency "health"`)
+  console.log("⚠ Dependency health analysis "failed": ")
+// console.log(` Dependency "health": ${dependencyHealth.totalDependencies} total, ${dependencyHealth.outdatedDependencies} outdated, ${dependencyHealth.securityVulnerabilities} vulnerabilities"`)
+  console.log("⚠ Dependency health analysis "failed": ")
+  console.log(" Monitoring code quality trends...")
+const lintOutput = execSync("npm run lint");
+  "encoding": "utf8"
+        "stdio": "pipe"
+  "lintErrors"
+        "lintWarnings"
+        "codeComplexity"
+        "maintainabilityIndex"
+const errorMatches = lintOutput.match(/""error/g"");
+const warningMatches = lintOutput.match(/""warning/g"");
+const errorMatches = lintOutput.match(/"error/g");
+const warningMatches = lintOutput.match(/"warning/g");
+const srcPath = path.join(process.cwd(), "src";
+const allFiles = this.findFiles(srcPath, [".ts", ".tsx", ".js", ".jsx", ")];
   "type": `code_quality_degradation
           "severity": "
           "description"
@@ -289,7 +565,44 @@ console.log(""� Starting Predictive Maintenance Monitor...")
       this.reportDir,maintenance-${Date.now()}.json"
       "maintenance-history.json"
   // Skip directories that can"
+<<<<<<< HEAD
+  "memoryUsage"
+      "cpuUsage"
+      "diskUsage"
+process.on("SIGINT")
+  console.log("� Received SIGINT, shutting down gracefully...")
+process.on("SIGTERM")
+  console.log("� Received SIGTERM, shutting down gracefully...")
+
+  console.error(" Failed to start predictive maintenance "monitor": ")
+
+
+
+
+
+=======
   // Skip directories that can"
+<<<<<<< HEAD
+  // Skip directories that can
+  memoryUsage"
+      "cpuUsage
+      diskUsage"
+process.on("SIGINT)
+process.on(SIGINT")
+  console.log("� Received SIGINT, shutting down gracefully...)
+process.on(SIGTERM")
+  console.log("� Received SIGTERM, shutting down gracefully...)
+
+
+  console.error( Failed to start predictive maintenance "monitor": )
+
+  console.error( Failed to start predictive maintenance "monitor": )
+=======
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+=======
+  console.error( Failed to start predictive maintenance "monitor": ")
+
+=======
   // Skip directories that can"
   "memoryUsage"
       "cpuUsage"
@@ -299,7 +612,38 @@ process.on("SIGINT")
   console.log("� Received SIGINT, shutting down gracefully...")
 process.on("SIGTERM")
   console.log("� Received SIGTERM, shutting down gracefully...")
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> merged-prs-20250907-203621
+
+=======
+  console.error(" Failed to start predictive maintenance "monitor": ")
+<<<<<<< HEAD
   console.error(" Failed to start predictive maintenance "monitor": ")
   console.error(" Failed to start predictive maintenance "monitor": ")
 
 
+
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+<<<<<<< HEAD
+  console.error(" Failed to start predictive maintenance "monitor": ")
+=======
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+=======
+  console.error(" Failed to start predictive maintenance "monitor": ")
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc

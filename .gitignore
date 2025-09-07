@@ -183,35 +183,4 @@ health-check-report.json
 performance-metrics.json
 security-scan-report.json
 
-# Cache directories
-.cache/
-.parcel-cache/
-.next/
-out/
-build/
-dist/
-
-# Test coverage
-coverage/
-.nyc_output/
-
-# IDE files
-.vscode/
-.idea/
-*.swp
-*.swo
-*~
-
-# OS files
-.DS_Store
-Thumbs.db
-ehthumbs.db
-Desktop.ini
-
-# Large log files
-logs/enhanced-sync-manager.log
-logs/enhanced-sync-manager.log.backup
-automation/logs/autonomous-system.log
-
-# Core dumps
 core

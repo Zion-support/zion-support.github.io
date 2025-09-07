@@ -4,7 +4,6 @@ import Link from "next/link";
 import { motion } from "framer-motion";
 import Layout from "./components/Layout";
 import {
-import {
   Mail,
   Lock,
   Eye,

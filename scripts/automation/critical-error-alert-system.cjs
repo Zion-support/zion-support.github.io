@@ -1,7 +1,29 @@
+<<<<<<< HEAD
+#!/""usr/bin/env""
+const fs = require("fs");
+const path = require("path");
+const { execSync } = require("child_process");
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+>>>>>>> merged-prs-20250907-203621
 #!/""usr/bin/env""
 const fs = require("fs")
 const path = require("path")
 const { execSync } = require("child_process")
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     this.logsPath = path.join(this.workspacePath, "logs")
     this.reportsPath = path.join(this.workspacePath, "automation-reports")
   "buildFailures"
@@ -12,6 +34,20 @@ const { execSync } = require("child_process")
   fs.mkdirSync(dir, { "recursive"})
   log(message, level = "INFO")
     console.log(")
+<<<<<<< HEAD
+const logFile = path.join(this.logsPath, "critical-error-alert-system.log");
+    fs.appendFileSync(logFile, logMessage + "\n")
+  this.log("� Checking for critical errors...")
+  log(message, level = "INFO")
+const logMessage = "[${timestamp}] [${level}] ${message}";
+    console.log(")
+const logFile = path.join(this.logsPath, "critical-error-alert-system.log");
+    fs.appendFileSync(logFile, logMessage + "\n")
+  this.log("� Checking for critical errors...")
+const resourceStatus = await this.checkSystemResources();";
+    if (resourceStatus.critical) {"}
+      criticalErrors.push(resourceStatus);")}"
+=======
     const logFile = path.join(this.logsPath, "critical-error-alert-system.log")
     fs.appendFileSync(logFile, logMessage + "\n")
   this.log("� Checking for critical errors...")
@@ -22,14 +58,26 @@ const { execSync } = require("child_process")
     fs.appendFileSync(logFile, logMessage + "\n")
   this.log("� Checking for critical errors...")
     const resourceStatus = await this.checkSystemResources();"
+<<<<<<< HEAD
   if($2) {"}
+=======
+    if (resourceStatus.critical) {"}
+>>>>>>> merged-prs-20250907-203621
       criticalErrors.push(resourceStatus);")}"
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 this.log(Found ${criticalErrors.length} critical error conditions")
   this.log(" Checking build status...")
       execSync("npm run build")
   "cwd"
         "stdio": "pipe"
         "timeout"
+<<<<<<< HEAD
+  "type": "build"
+=======
+<<<<<<< HEAD
+
+=======
   "type": "build"
         "critical"
         "message": "Build successful"
@@ -37,14 +85,18 @@ this.log(Found ${criticalErrors.length} critical error conditions")
   const errorCount = this.countBuildErrors(error.stdout || "")
   "type": "build"
         "critical": errorCount >= this.criticalThresholds.buildFailures,"message": "Build failed with ${errorCount  } errors"
+>>>>>>> origin/chore/fix-lint-and-merge
         "severity"
-            ? "critical"
+            ? critical
             : "high"
-  this.log(" Checking TypeScript status...")
+  this.log( Checking TypeScript status...)
       execSync("npm run type-check")
-  "cwd"
-        "stdio": "pipe"
+  cwd
+        "stdio": pipe
         "timeout"
+<<<<<<< HEAD
+
+=======
   "type": "typescript"
         "critical"
         "message": "TypeScript check passed"
@@ -52,14 +104,18 @@ this.log(Found ${criticalErrors.length} critical error conditions")
   const errorCount = this.countTypeScriptErrors(error.stdout || "")
   "type": "typescript"
         "critical": errorCount >= this.criticalThresholds.typeErrors,"message": "TypeScript check failed with ${errorCount  } errors"
+>>>>>>> origin/chore/fix-lint-and-merge
         "severity"
-            ? "critical"
+            ? critical
             : "high"
-  this.log(" Checking ESLint status...")
+  this.log( Checking ESLint status...)
       execSync("npm run lint")
-  "cwd"
-        "stdio": "pipe"
+  cwd
+        "stdio": pipe
         "timeout"
+<<<<<<< HEAD
+
+=======
   "type": "lint"
         "critical"
         "message": "ESLint check passed"
@@ -67,14 +123,18 @@ this.log(Found ${criticalErrors.length} critical error conditions")
   const errorCount = this.countLintErrors(error.stdout || "")
   "type": "lint"
         "critical": errorCount >= this.criticalThresholds.lintErrors,"message": "ESLint check failed with ${errorCount  } errors"
+>>>>>>> origin/chore/fix-lint-and-merge
         "severity"
-            ? "critical"
+            ? critical
             : "high"
-  this.log(" Checking dependency status...")
+  this.log( Checking dependency status...)
       execSync("npm ls")
-  "cwd"
-        "stdio": "pipe"
+  cwd
+        "stdio": pipe
         "timeout"
+<<<<<<< HEAD
+
+=======
   "type": "dependencies"
         "critical"
         "message": "Dependencies check passed"
@@ -82,9 +142,13 @@ this.log(Found ${criticalErrors.length} critical error conditions")
   const issueCount = this.countDependencyIssues(error.stdout || "")
   "type": "dependencies"
         "critical": issueCount >= this.criticalThresholds.dependencyIssues,"message": "Dependency check failed with ${issueCount  } issues"
+>>>>>>> origin/chore/fix-lint-and-merge
         "severity"
-            ? "critical"
+            ? critical
             : "high"
+<<<<<<< HEAD
+
+=======
   this.log(" Checking system resources...")
       const diskSpace = execSync("df -h .")
   "cwd"
@@ -105,6 +169,91 @@ this.log(Found ${criticalErrors.length} critical error conditions")
       const diskLines = diskSpace.split("\n")
       const usageLine = diskLines.find(line => line.includes("%")
   const usage = parseInt(usageLine.match(/(\d+)%/)?.[1] || "0"
+  "type": "system"
+            "critical": true,"message": "Disk usage critical: ${usage}%"
+            "severity": "critical"
+>>>>>>> origin/chore/fix-lint-and-merge
+            "details"
+  type: "system"
+        critical
+        "message": System resources OK
+        "severity": low
+  "type": system
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+        "critical"
+        "message": "Build successful"
+        "severity": "low"
+const errorCount = this.countBuildErrors(error.stdout || "");
+  "type": "build"
+        "critical": errorCount >= this.criticalThresholds.buildFailures,"message": "Build failed with ${errorCount  } errors"
+        "severity"
+            ? "critical"
+            : "high"
+  this.log(" Checking TypeScript status...")
+      execSync("npm run type-check")
+  "cwd"
+        "stdio": "pipe"
+        "timeout"
+  "type": "typescript"
+        "critical"
+        "message": "TypeScript check passed"
+        "severity": "low"
+const errorCount = this.countTypeScriptErrors(error.stdout || "");
+  "type": "typescript"
+        "critical": errorCount >= this.criticalThresholds.typeErrors,"message": "TypeScript check failed with ${errorCount  } errors"
+        "severity"
+            ? "critical"
+            : "high"
+  this.log(" Checking ESLint status...")
+      execSync("npm run lint")
+  "cwd"
+        "stdio": "pipe"
+        "timeout"
+  "type": "lint"
+        "critical"
+        "message": "ESLint check passed"
+        "severity": "low"
+const errorCount = this.countLintErrors(error.stdout || "");
+  "type": "lint"
+        "critical": errorCount >= this.criticalThresholds.lintErrors,"message": "ESLint check failed with ${errorCount  } errors"
+        "severity"
+            ? "critical"
+            : "high"
+  this.log(" Checking dependency status...")
+      execSync("npm ls")
+  "cwd"
+        "stdio": "pipe"
+        "timeout"
+  "type": "dependencies"
+        "critical"
+        "message": "Dependencies check passed"
+        "severity": "low"
+const issueCount = this.countDependencyIssues(error.stdout || "");
+  "type": "dependencies"
+        "critical": issueCount >= this.criticalThresholds.dependencyIssues,"message": "Dependency check failed with ${issueCount  } issues"
+        "severity"
+            ? "critical"
+            : "high"
+  this.log(" Checking system resources...")
+const diskSpace = execSync("df -h .");
+  "cwd"
+        "encoding": "utf8"
+        "stdio": "pipe"
+const memory = execSync("free -h");
+  "cwd"
+        "encoding": "utf8"
+        "stdio": "pipe"
+const diskSpace = execSync("df -h .");
+  "cwd"
+        "encoding": "utf8"
+        "stdio": "pipe"
+const memory = execSync("free -h");
+  "cwd"
+        "encoding": "utf8"
+        "stdio": "pipe"
+const diskLines = diskSpace.split("\n");
+      const usageLine = diskLines.find(line => line.includes("%")
+const usage = parseInt(usageLine.match(/(\d+)%/)?.[1] || "0";
   "type": "system"
             "critical": true,"message": "Disk usage critical: ${usage}%"
             "severity": "critical"
@@ -172,11 +321,71 @@ this.log(`� Report "generated"`)
       this.log("� Critical Error Alert System completed!")
       this.log( Detected ${criticalErrors.length} critical error conditions")
       );this.log(")
+<<<<<<< HEAD
   "success"
         "criticalErrors"
         "alerts"
   this.log(� Critical Error Alert System "failed")
+
+=======
+<<<<<<< HEAD
+  "success
+        criticalErrors"
+        "alerts
+  this.log(� Critical Error Alert System failed")
+
+
+        "ERROR
+
+        ERROR"
+=======
+  "success"
+        "criticalErrors"
+        "alerts"
+  this.log(� Critical Error Alert System "failed")
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> merged-prs-20250907-203621
+
+=======
+        "ERROR"
+<<<<<<< HEAD
         "ERROR"
         "ERROR"
 
 
+
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+<<<<<<< HEAD
+        "ERROR"
+>>>>>>> origin/chore/fix-lint-and-merge
+=======
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+        "ERROR"
+<<<<<<< HEAD
+
+<<<<<<< HEAD
+
+
+
+
+=======
+=======
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc

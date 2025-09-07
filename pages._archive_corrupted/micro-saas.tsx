@@ -1,5 +1,9 @@
 
 
+<<<<<<< HEAD
+ursor/fix-syntax-push-and-merge-to-main-40de
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+=======
 =======
 =======
       ],
@@ -56,6 +60,10 @@
       \"features\": [\'Smart follow-up sequence creation and management,AI-powered personalization and timing optimization,Engagement tracking and response analysis,A/B testing for email campaigns,CRM integration and lead scoring,Compliance with email regulations (CAN-SPAM, GDPR)\'
       ],
 
+<<<<<<< HEAD
+ursor/fix-syntax-push-and-merge-to-main-40de
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+=======
 
 =======
 =======
@@ -367,6 +375,10 @@
         \'Real-time collaboration tools\'
       ],
 
+<<<<<<< HEAD
+ursor/fix-syntax-push-and-merge-to-main-40de
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+=======
 
 =======
 =======
@@ -458,6 +470,10 @@
       \"features\": [\'Predictive maintenance scheduling,Real-time vehicle health monitoring,Maintenance cost optimization,Driver behavior analysis and coaching,Route optimization and fuel efficiency,Integration with fleet management systems\'
       ],
 
+<<<<<<< HEAD
+ursor/fix-syntax-push-and-merge-to-main-40de
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+=======
 
 =======
 =======
@@ -494,6 +510,11 @@
 }
   ]
 
+<<<<<<< HEAD
+ursor/add-new-services-and-deploy-updates-0462
+ursor/fix-syntax-push-and-merge-to-main-40de
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+=======
 
 =======
 =======

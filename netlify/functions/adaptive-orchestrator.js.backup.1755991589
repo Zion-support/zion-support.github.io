@@ -21,10 +21,9 @@ exports.handler = async () => {
   const { hour, dow, minutes } = now();
   logs.push(`UTC time h=${hour} dow=${dow} m=${minutes}`);
 
-  function step(name, rel, args = []) {
     logs.push(`\n=== ${name} ===`);
   function step(name, rel, args = []) {    logs.push(`\n=== ${name} ===`);
-  function step(name, rel, args = []) {    logs.push(`\n=== ${name} ===`);
+
     const { status, stdout, stderr } = runNode(rel, args);
     if (stdout) logs.push(stdout);
     if (stderr) logs.push(stderr);
@@ -60,9 +59,6 @@ exports.handler = async () => {
     try { step('code-smell', 'automation/code-smell-audit.cjs'); } catch { logs.push('code-smell failed'); }
     try { step('topics:clusters', 'automation/topic-cluster-builder.cjs'); } catch { logs.push('topics:clusters failed'); }
   }
-  logStep('adaptive:orchestrator', () => runNode('automation/adaptive-orchestrator.cjs'));
-  logStep('git:sync', () => runNode('automation/advanced-git-sync.cjs'));
-
 
   step('git:sync', 'automation/advanced-git-sync.cjs');
 

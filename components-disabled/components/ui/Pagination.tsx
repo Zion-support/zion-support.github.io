@@ -21,7 +21,7 @@ export type PaginationProps = any;
           Previous;
         </span>;
       )}
-      {/* Page Numbers */}"
+      {/* Page Numbers */}'
 
               href={`${baseUrl}?page=${pageNumber}`}
               {pageNumber}
@@ -31,8 +31,8 @@ export type PaginationProps = any;
       {/* Next Button */}
       {currentPage < totalPages ? (;
         <Link;`
-          href={`${baseUrl}?page=${currentPage + 1}`}"
-          className="flex items-center px-3 py-2 text-sm font-medium text-gray-500 bg-white border border-gray-300 rounded-lg hover:bg-gray-50 hover:text-gray-700 transition-colors">;
+          href={`${baseUrl}?page=${currentPage + 1}`}'
+          className='flex items-center px-3 py-2 text-sm font-medium text-gray-500 bg-white border border-gray-300 rounded-lg hover:bg-gray-50 hover:text-gray-700 transition-colors'>;
     // Check condition;
 if ( {) {}
   $2;

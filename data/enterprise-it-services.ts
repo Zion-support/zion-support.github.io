@@ -13,7 +13,6 @@ export interface EnterpriseItService {
     email: string,
     address: string}
 }
-
 export const enterpriseITServices: EnterpriseItService[] = [
   {
     id: "enterprise-architecture",
@@ -21,6 +20,12 @@ export const enterpriseITServices: EnterpriseItService[] = [
     tagline: "Strategic IT architecture for large organizations",
     price: "$150/hour",
     description: "Comprehensive enterprise architecture consulting services for digital transformation.",
+    id: 'enterprise-architecture'
+    name: 'Enterprise Architecture Consulting'
+    tagline: 'Strategic IT architecture for large organizations'
+    price: '$150/hour'
+    description:
+      'Comprehensive enterprise architecture consulting services for digital transformation.'
     features: [
       "Architecture assessment",
       "Technology roadmap",

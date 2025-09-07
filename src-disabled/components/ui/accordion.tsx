@@ -9,6 +9,8 @@ const AccordionItem = React.forwardRef<
   ComponentPropsWithoutRef<typeof AccordionPrimitive.Item>
 >(({ className, ...props }, ref) => (
   <AccordionPrimitive.Item
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import * as React from 'react';
 import {ElementRef, ComponentPropsWithoutRef} from 'react';
 import * as AccordionPrimitive from '@radix - ui / react - accordion';
@@ -32,9 +34,8 @@ import { ChevronDown } from 'lucide-react'
 
 import { cn } from "@/lib/utils"
 
-const Accordion = AccordionPrimitive.Root
+<<<<<<< HEAD
 
-const AccordionItem = React.forwardRef<
   ElementRef<typeof AccordionPrimitive.Item>,
   ComponentPropsWithoutRef<typeof AccordionPrimitive.Item>
 >(({ className, ...props }, ref) => (
@@ -55,10 +56,7 @@ const AccordionTrigger = React.forwardRef<
       ref={ref}
       className={cn(
 import React from 'react';
-import * as React from 'react';
-import {ElementRef, ComponentPropsWithoutRef} from 'react';
 import * as AccordionPrimitive from '@radix-ui/react-accordion';
-import {ChevronDown} from 'lucide-react';
 import {cn} from '@/lib/utils';
 const Accordion = AccordionPrimitive && AccordionPrimitive.Root;
 const AccordionItem = React && React.forwardRef<;
@@ -105,6 +103,8 @@ const AccordionTrigger = React && React.forwardRef<;
   </AccordionPrimitive.Header>
 ))
 AccordionTrigger.displayName = AccordionPrimitive.Trigger.displayName
+<<<<<<< HEAD
+=======
 
 const AccordionContent = React.forwardRef<
   ElementRef<typeof AccordionPrimitive.Content>,

@@ -5,18 +5,8 @@ import React from 'react','
 import { Button } from '@/components/ui/button','
 import { useRouter } from 'next/router', // Changed from useNavigate'
 import { XCircle } from 'lucide-react''
-import React from 'react','
-import { Button } from '@/components/ui/button','
-import { useRouter } from 'next/router', // Changed from useNavigate'
-import { XCircle } from 'lucide-react''
-import { XCircle } from 'lucide-react''
-import { useRouter } from 'next/router', // Changed from useNavigate'
 export default function PaymentCanceled() {
   const router = useRouter(), // Changed from navigate
-import React from 'react';
-import { Button } from '@/components/ui/button';
-import { useRouter } from 'next/router'; // Changed from useNavigate'
-import { XCircle } from 'lucide-react''
 export default function PaymentCanceled() {
   const router = useRouter(); // Changed from navigate
   return (
@@ -41,7 +31,6 @@ export default function PaymentCanceled() {
             onClick={() => router.push('/dashboard')} // Changed to router.push;
             className='border-zion-blue-light text-zion-slate-light hover:bg-zion-blue-light hover:text-white';',
 export default function PaymentCanceled() {;
-  const router = useRouter(); // Changed from navigate
   return (
     <div className='flex flex-1 bg-zion-blue items-center justify-center p-4'>'
       <div className='max-w-md w-full bg-zion-blue-dark rounded-xl p-8 border border-zion-blue-light shadow-lg text-center'>'
@@ -68,10 +57,8 @@ import { XCircle } from 'lucide-react'
 
 
 origin/cursor/automate-test-improve-and-merge-code-2533
-import { XCircle } from 'lucide-react'
 import { useRouter } from 'next/router', // Changed from useNavigate
 export default function PaymentCanceled() {
-  const router = useRouter(), // Changed from navigate
   return (
 ursor/fix-website-loading-errors-and-merge-6662
     <div className="flex flex-1 bg-zion-blue items-center justify-center p-4">
@@ -87,7 +74,7 @@ ursor/fix-website-loading-errors-and-merge-6662
 
         <div className="flex flex-col space-y-3">
           <Button
-            onClick={(,) => router.push('/payments')} // Changed to router.push
+            onClick={() => router.push('/payments')} // Changed to router.push
             className="bg-zion-purple hover:bg-zion-purple-dark text-white"
           >
             Try Again
@@ -97,7 +84,6 @@ ursor/fix-website-loading-errors-and-merge-6662
             onClick={() => router.push('/dashboard')} // Changed to router.push;
             className='border-zion-blue-light text-zion-slate-light hover:bg-zion-blue-light hover:text-white';
 export default function PaymentCanceled() {;
-  const router = useRouter(); // Changed from navigate
   return (
     <div className='flex flex-1 bg-zion-blue items-center justify-center p-4'>
       <div className='max-w-md w-full bg-zion-blue-dark rounded-xl p-8 border border-zion-blue-light shadow-lg text-center'>
@@ -169,21 +155,13 @@ class ErrorBoundary extends React.Component {
     return this.props.children;
   }
 }
-import React from 'react';
-import { Button } from '@/components/ui/button';
-import React from 'react';
-import { Button } from '@/components/ui/button';
 import { useRouter } from 'next/router'; // Changed from useNavigate;
 import { XCircle } from 'lucide-react';
-import React from 'react';
 
 import React from 'react',
 import { Button } from '@/components/ui/button',
-import { useRouter } from 'next/router', // Changed from useNavigate
-import { XCircle } from 'lucide-react'
 
 export default function PaymentCanceled() {
-  const router = useRouter(), // Changed from navigate
   return (
     <div className="flex flex-1 bg-zion-blue items-center justify-center p-4">
         <div className="max-w-md w-full bg-zion-blue-dark rounded-xl p-8 border border-zion-blue-light shadow-lg text-center">
@@ -206,10 +184,7 @@ export default function PaymentCanceled() {
             onClick={() => router.push('/dashboard')} // Changed to router.push
             className="border-zion-blue-light text-zion-slate-light hover: bg-zion-blue-light hover:text-white"
 
-import { useRouter } from 'next/router'; // Changed from useNavigate;
 
-import { XCircle } from 'lucide-react';
-import React from 'react';
           >
           >
             Return to Dashboard
@@ -228,9 +203,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       </div>
   )
 import React from 'react',;
-import { Button } from '@/components/ui/button';
 import { useRouter } from 'next/router', // Changed from useNavigate;
-import { XCircle } from 'lucide-react';
 export default function PaymentCanceled() {;
   const router = useRouter(), // Changed from navigate;
   return (;
@@ -246,6 +219,8 @@ export default function PaymentCanceled() {;
           Your payment process was canceled. No charges have been made to your account.;
         </p>;
         <div className="flex flex-col space-y-3">;
+<<<<<<< HEAD
+=======
           <Button
             onClick={(,) => router && router.push('/payments')} // Changed to router && router.push;
             className="bg-zion-purple hover:bg-zion-purple-dark text-white";
@@ -256,8 +231,6 @@ export default function PaymentCanceled() {;
             variant="outline""
             onClick={() => router && router.push('/dashboard')} // Changed to router && router.push;
             className='border-zion-blue-light text-zion-slate-light hover:bg-zion-blue-light hover:text-white';',
-import { useRouter } from 'next/router'; // Changed from useNavigate;
-import { XCircle } from 'lucide-react';
 export default function PaymentCanceled() {;
   const router = useRouter(); // Changed from navigate;
   return (
@@ -282,10 +255,8 @@ export default function PaymentCanceled() {;
             variant='outline''
             onClick={() => router && router.push('/dashboard')} // Changed to router && router.push;
             className='border-zion-blue-light text-zion-slate-light hover:bg-zion-blue-light hover:text-white'          >;',
-import React from 'react';
 import { Button } from '@/components / ui / button';
 import { use_router } from 'next / router'; // Changed from use_navigate;
-import { XCircle } from 'lucide-react';
 import { use_router } from 'next / router', // Changed from use_navigate;
 export default /**
  * PaymentCanceled - Function description
@@ -303,6 +274,7 @@ function PaymentCanceled() {
           Your payment process was canceled. No charges have been made to your account.;
         </p>;
         <div className="flex flex - col space - y-3">;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           <Button;
             onClick={() => router.push('/payments')} // Changed to router.push;
             className="bg-zion-purple hover:bg-zion-purple-dark text-white";
@@ -322,6 +294,10 @@ function PaymentCanceled() {
           </Button>;
           <Button;
             variant="outline";
+<<<<<<< HEAD
+            onClick={() => router.push('/dashboard')} // Changed to router.push;
+            className="border-zion-blue-light text-zion-slate-light hover: bg-zion-blue-light hover:text-white";
+=======
             on_click={() => router.push ('/dashboard')} // Changed to router.push;
             className='border - zion - blue - light text - zion - slate - light hover:bg - zion - blue - light hover:text - white';',
 export default /**
@@ -362,6 +338,7 @@ function PaymentCanceled() {
         </div>;
         </div>
       </div>
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   );
 }
       </div>);

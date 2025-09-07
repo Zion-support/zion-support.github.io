@@ -1,9 +1,25 @@
+
+
+#!/usr/bin/env node;
+const fs = require('fs')
+const path = require('path')
+
+#!/usr/bin/env node;
+const fs = require('fs')
+const path = require('path')
+#!/usr/bin/env node;
 #!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')
 #!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')
+
+#!/usr/bin/env node;
+const fs = require('fs')
+const path = require('path')
+#!/usr/bin/env node;
+
 const { execSync } = require('child_process')
 console.log(' Starting Comprehensive Deployment Automation...')
   "status"
@@ -21,4 +37,8 @@ runDeploymentStep('Create Robots.txt', 'echo "User-"agent": *\nAllow: /\nSitemap
 // console.log('\n� Phase "7")
 console.log('\n� Phase "8")
   "criticalFailures"
+
 console.log('� Deployment summary saved "to")
+console.log('� Deployment summary saved "to")
+
+

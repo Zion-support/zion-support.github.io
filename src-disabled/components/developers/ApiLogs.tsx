@@ -1,4 +1,15 @@
+<<<<<<< HEAD
+:src_backup/components/developers/ApiLogs.tsx
 :src/components/developers/ApiLogs.tsx
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> merged-prs-20250907-203621
+:src/components/developers/ApiLogs.tsx
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 import { useState, useEffect  } from './react';
 import { format  } from './date - fns';
 import { List, RefreshCw } from 'lucide-react'import { useApiKeys  } from '@/hooks / useApiKeys';
@@ -6,6 +17,30 @@ import { Button  } from '@/components / ui / button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle  } from '@/components / ui / card';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue  } from '@/components / ui / select';
 import { Badge  } from '@/components / ui / badge';
+<<<<<<< HEAD
+:src_backup/components/developers/ApiLogs.tsx
+import { ApiLogsChart  } from './ApiLogsChart';
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+import { ApiLogsChart  } from './ApiLogsChart';
+import { ApiLogsChart  } from './ApiLogsChart;
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+export /**
+ * ApiLogs - Function description
+ */
+function ApiLogs() {
+  const { logs, total_logs, loading, fetchApiLogs } = useApiKeys ();
+  const [page_size, setPageSize] = useState (25);
+  const [current_page, setCurrentPage] = useState (0);
+  const hasNextPage = current_page < total_pages - 1;
+  const hasPrevPage = current_page > 0);
+}
+  );
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
 
 import { ApiLogsChart  } from './ApiLogsChart';
 export /**
@@ -44,6 +79,7 @@ import {
 import { Badge } from '@/components/ui/badge';
 import { ApiLogsChart } from './ApiLogsChart';
 
+<<<<<<< HEAD
 import { useState, useEffect } from "react";
 import { format } from "date-fns";
 import { List, RefreshCw } from 'lucide-react'
@@ -53,14 +89,50 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Badge } from "@/components/ui/badge";
 import { ApiLogsChart } from "./ApiLogsChart";
+=======
+<<<<<<< HEAD
+import { useState, useEffect } from "react;
+import { format } from date-fns";
+import { List, RefreshCw } from lucide-react'
+import { useApiKeys } from "@/hooks/useApiKeys;
+import { Button } from @/components/ui/button";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card;
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from @/components/ui/select";
+import { Badge } from "@/components/ui/badge;
+import { ApiLogsChart } from ./ApiLogsChart";
+=======
+import { useState, useEffect } from "react",
+import { format } from "date-fns",
+import { List, RefreshCw } from 'lucide-react'
+import { useApiKeys } from "@/hooks/useApiKeys",
+import { Button } from "@/components/ui/button",
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select",
+import { Badge } from "@/components/ui/badge",
+import { ApiLogsChart } from "./ApiLogsChart",
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 export function ApiLogs() {
-  const { logs, totalLogs, loading, fetchApiLogs } = useApiKeys($2);
-  const [pageSize, setPageSize] = useState($2);
-  const [currentPage, setCurrentPage] = useState($2);
+  const { logs, totalLogs, loading, fetchApiLogs } = useApiKeys(),
+  const [pageSize, setPageSize] = useState(25),
+  const [currentPage, setCurrentPage] = useState(0),
+import { useState, useEffect } from 'react';
+import { format } from 'date-fns';
+import { List, RefreshCw } from 'lucide-react';
+import { useApiKeys } from '@/hooks/useApiKeys';
+
+import { Badge } from "@/components/ui/badge";
+import { ApiLogsChart } from "./ApiLogsChart";
+>>>>>>> origin/chore/fix-lint-and-merge
+export function ApiLogs() {
+  const { logs, totalLogs, loading, fetchApiLogs } = useApiKeys();
+  const [pageSize, setPageSize] = useState(25);
+  const [currentPage, setCurrentPage] = useState(0);
+
   // Load logs on mount and when pagination changes
   useEffect(() => {
     fetchApiLogs(pageSize, currentPage * pageSize)
   }, [pageSize, currentPage]),
+<<<<<<< HEAD
   
   const handleRefresh = () => {
     fetchApiLogs(pageSize, currentPage * pageSize)
@@ -90,6 +162,10 @@ export function ApiLogs() {
   const hasPrevPage = $2;
   return (
     <Card className = $2;
+=======
+
+  const handleRefresh = null;
+>>>>>>> origin/chore/fix-lint-and-merge
                 setCurrentPage(0), // Reset to first page when changing page size
               }}
             >
@@ -153,9 +229,21 @@ export function ApiLogs() {
                 </tr>
               ) : (
                 logs.map((log) => (
+<<<<<<< HEAD
                   <tr key={log.id} className="border-b border-zinc-800 hover:bg-zinc-800/40">,
                     <td className="px-4 py-3 text-sm">{formatTimestamp(log.created_at)}</td>
                     <td className="px-4 py-3">
+=======
+<<<<<<< HEAD
+                  <tr key={log.id} className="border-b border-zinc-800 hover:bg-zinc-800/40>,
+                    <td className=px-4 py-3 text-sm">{formatTimestamp(log.created_at)}</td>
+                    <td className="px-4 py-3>
+=======
+                  <tr key={log.id} className="border-b border-zinc-800 hover:bg-zinc-800/40">
+                    <td className="px-4 py-3 text-sm">{formatTimestamp(log.created_at)}</td>
+                    <td className="px-4 py-3">
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
                       <Badge 
                         variant="outline"
                         className={
@@ -212,7 +300,6 @@ export function ApiLogs() {
                 Next;
               </Button>;
             </div>;
-          </div>;
         )}
       </CardContent>;
     </Card>;
@@ -223,11 +310,46 @@ export function ApiLogs() {
                 Next
               </Button>
             </div>
-          </div>
         )}
       </CardContent>
+<<<<<<< HEAD
 :src/components/developers/ApiLogs.tsx
     </Card>
+<<<<<<< HEAD
+:src_backup/components/developers/ApiLogs.tsx
+=======
+<<<<<<< HEAD
   )
 }
 ;
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+  );
+
+};
+//Calculate pagination info const totalPages = Math.ceil (totalLogs / pageSize);
+const hasNextPage = currentPage < totalPages - 1;
+const hasPrevPage = currentPage > 0;
+bg-zinc-900 border-zinc-800 text-white"> <CardHeader> </CardTitle> <CardDescription className=" text-zinc-400"> View logs of requests made using your API keys. </CardDescription> </CardHeader> <CardContent> <div className=" flex justify-between items-center mb-6"> <div className=" flex items-center space-x-2"> <span className=" text-sm text-zinc-400">Show</span> <Select > <SelectTrigger className=" w-20 bg-zinc-800 border-zinc-700"> <SelectValue placeholder=" 25"/> </SelectTrigger> <SelectContent className=" bg-zinc-900 border-zinc-800"> <SelectItem value=" 10">10</SelectItem> <SelectItem value=" 25">25</SelectItem> <SelectItem value=" 50">50</SelectItem> <SelectItem value=" 100">100</SelectItem> </SelectContent> </Select> <span className=" text-sm text-zinc-400">per page</span> </div> <ApiLogsChart logs= {;
+  logs ;
+}/> </div>) ";
+}<div className=" overflow-x-auto"> <table className=" w-full border-collapse"> <thead> <tr className=" border-b border-zinc-800"> <th className=" px-4 py-2 text-left font-medium text-zinc-300">Timestamp</th> <th className=" px-4 py-2 text-left font-medium text-zinc-300">Method</th> <th className=" px-4 py-2 text-left font-medium text-zinc-300">Endpoint</th> <th className=" px-4 py-2 text-left font-medium text-zinc-300">Status</th> <th className=" px-4 py-2 text-left font-medium text-zinc-300">Response Time</th> <th className=" px-4 py-2 text-left font-medium text-zinc-300">IP Address</th> </tr> </thead> <tbody> {;
+  loading ? (<tr> <td colSpan= {;
+  6 '";
+}className=" text-center py-12"> <div className=" flex flex-col items-center"> <div className=" animate-spin rounded-full h-8 w-8 border-t-2 border-b-2 border-zion-cyan mb-4"></div> <span className=" text-zinc-500">Loading logs...</span> </div> </td> </tr>) : logs.length === 0 ? (<tr> Logs will appear here when you make API requests. </span> </div> </td> </tr> : log.method === 'POST' ? " border-blue-500 text-blue-400": log.method === 'PUT' > {;
+  log.method ;
+}</Badge> </td> </tr>) ) ) ";
+}</tbody> </table> </div> </div> <div className=" flex space-x-2" > <Button > Previous </Button> <Button > Next </Button> </div> </div>) ;
+}</CardContent> </Card>) ;
+}'"
+origin/cursor/automate-test-improve-and-merge-code-2533
+  )
+}
+<<<<<<< HEAD
+;
+=======
+=======
+    </Card>
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc

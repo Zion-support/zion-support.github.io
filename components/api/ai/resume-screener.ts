@@ -15,3 +15,21 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   const text = await generateText($2);
   return res.status(200).json({ results: text})
 }
+  const auth = authenticateRequest(req, false);
+  if (!auth.ok) return res.status(401).json({ error: auth.error });
+  const { jobDescription, resumes } = req.body |{}
+  if (!jobDescription |!Array.isArray(resumes))
+  try {
+  const method = (req && req.method || 'POST').toUpperCase();
+  if (method !== 'POST')
+    return res && res.status(405).json({ error: 'Method not allowed' });export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+  try {
+  const method = (req && req.method || 'POST').toUpperCase();
+  if (method !== 'POST') return res && res.status(405).json({ error: 'Method not allowed' });
+
+
+
+
+
+  return res.status(200).json({ results: text });
+}

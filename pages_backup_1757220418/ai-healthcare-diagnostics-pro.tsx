@@ -609,4 +609,12 @@ const AIHealthcareDiagnosticsPro: React.FC = $2;
             initial={{ opacity: 0, y: 30}}
             whileInView={{ opacity: 1, y: 0}}
             transition = $2;
+<<<<<<< HEAD
 export default AIHealthcareDiagnosticsPro,
+=======
+<<<<<<< HEAD
+export default AIHealthcareDiagnosticsPro,
+=======
+export default AIHealthcareDiagnosticsPro,
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc

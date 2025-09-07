@@ -1,7 +1,7 @@
-
-
+<div> <Head> <title>MobileAppDevelopmentChat - Zion Tech Solutions</title> <meta name="description" content="MobileAppDevelopmentChat service" /> </Head> <main> <h1>MobileAppDevelopmentChat</h1> <p>Service details coming soon...</p> <a href="/services" >Back to Services</a> </main> </div> export default MobileAppDevelopmentChat
 import type { NextPage } from "next";
 import Head from "next/head";
+
 import Link from "next/link";
 const MobileAppDevelopmentChat: NextPage = () => {;
   return (
@@ -15,20 +15,6 @@ const MobileAppDevelopmentChat: NextPage = () => {;
       <main>
         <h1>MobileAppDevelopmentChat</h1>
         <p>Service details coming soon...</p>
-        <a href="/services">Back to Services</a>
-      </main>
-    </div>
-      </Head>;
-
-      <main>;
-        <h1>MobileAppDevelopmentChat</h1>;
-        <p>Service details coming soon...</p>;
-        <a href="/services">Back to Services</a>;
-      </main>;
-    </div>;
-  );
-}
-export default MobileAppDevelopmentChat;
 
 import type { NextPage } from "next";
 import Head from "next/head";
@@ -36,6 +22,9 @@ import Link from "next/link";
 import type { NextPage } from 'next';
 import Head from 'next/head';
 import Link from 'next/link';
+
+
+
 
 const MobileAppDevelopmentChat: NextPage = () => {
   return (
@@ -48,10 +37,12 @@ const MobileAppDevelopmentChat: NextPage = () => {
 
         <title>MobileAppDevelopmentChat - Zion Tech Solutions</title>
 
+
 import type { NextPage } from './next';
 import Head from './next / head';
+
 import Link from './next / link';
-const MobileAppDevelopmentChat: NextPage = () => {
+const MobileAppDevelopmentChat: NextPage = () => {}
   return (
     <div>;
       <Head>;
@@ -71,4 +62,6 @@ const MobileAppDevelopmentChat: NextPage = () => {
 ;
 export default MobileAppDevelopmentChat;
 ;
+
+        <title>MobileAppDevelopmentChat - Zion Tech Solutions</title>
 

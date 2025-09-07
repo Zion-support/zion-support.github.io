@@ -1,7 +1,11 @@
 /* eslint-disable */
  import Image from 'next/image';';''
+<<<<<<< HEAD
+//Import next/image const stockVariant = listing.stock === undefined ? 'success' : listing.stock <= 0 ? 'destructive' : listing.stock <= 5 ? 'warning' : 'success';'
+=======
 //Import next/image >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7 const stockStatus = listing.stock === undefined ? 'In stock' : listing.stock <= 0 ? 'Out of stock' : listing.stock <= 5 ? 'Low stock' : 'In stock';';''
 const stockVariant = listing.stock === undefined ? 'success' : listing.stock <= 0 ? 'destructive' : listing.stock <= 5 ? 'warning' : 'success';'
+>>>>>>> origin/resolved-merge-conflicts
 const handleImageError = () => {;''
   if (!imageError) {';''
   //Prevent infinite loops if placeholder also fails setImageSrc ('/placeholder.svg');

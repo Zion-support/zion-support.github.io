@@ -1,6 +1,76 @@
+<<<<<<< HEAD
+:src_backup/pages/BlogPost.tsx
+import { useState, useEffect } from "react";
+import { useRouter  } from 'next/router';
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+import { useState, useEffect } from "react";
+import { useRouter  } from 'next/router';
+import { useState, useEffect } from "react;
+import { useRouter  } from 'next/router;
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+origin/cursor/automate-test-improve-and-merge-code-2533
+import Link from 'next/link',
+import { SEO } from "@/components/SEO",
+import JsonLd from "@/components/JsonLd",
+import { Button } from "@/components/ui/button",
+import ImageWithRetry from '@/components/ui/ImageWithRetry',
+import {
+  ArrowLeft
+  Calendar
+  Clock
+  ChevronLeft
+  ChevronRight
+  Share2
+  Facebook
+  Twitter
+  Linkedin
+} from 'lucide-react'
+import type { BlogPost as BlogPostType } from '@/types/blog'
+import { Separator } from '@/components/ui/separator'
+import ReactMarkdown from 'react-markdown'
+import { logErrorToProduction } from '@/utils/productionLogger'
+// Importing the sample blog posts - in a real app, you would fetch this from an API
+import { BLOG_POSTS } from '@/data/blog-posts'
+import { useSkeletonTimeout } from '@/hooks/useSkeletonTimeout'
+import { fetchWithRetry } from '@/utils/fetchWithRetry'
+export default function BlogPost() {
+  const router = useRouter()
+  const { slug } = router.query as { slug: string }
+  const [post, setPost] = useState<BlogPostType | null>(null)
+  const [relatedPosts, setRelatedPosts] = useState<BlogPostType[]>([])
+  const [showShareMenu, setShowShareMenu] = useState(false)
+  const [isLoading, setIsLoading] = useState(true)
+  const [error, setError] = useState<string | null>(null)
+  const timedOut = useSkeletonTimeout(20000)
+  useEffect(() => {import { useRouter } from 'next/router'
+import { SEO } from "@/components/SEO"
+import JsonLd from "@/components/JsonLd"
+import { Button } from "@/components/ui/button"
+origin/cursor/automate-test-improve-and-merge-code-2533
+import { ArrowLeft, Calendar, Clock, ChevronLeft, ChevronRight, Share2, Facebook, Twitter, Linkedin } from 'lucide-react'
+import type { BlogPost as BlogPostType } from "@/types/blog",
+import { Separator } from "@/components/ui/separator",
+import ReactMarkdown from 'react-markdown',
+import {logErrorToProduction} from '@/utils/productionLogger',
+// Importing the sample blog posts - in a real app, you would fetch this from an API
+<<<<<<< HEAD
 import { BLOG_POSTS } from "@/data/blog-posts";
 import { useSkeletonTimeout } from '@/hooks/useSkeletonTimeout';
 import { fetchWithRetry } from '@/utils/fetchWithRetry';
+=======
+import { BLOG_POSTS } from @/data/blog-posts";
+import { useSkeletonTimeout } from @/hooks/useSkeletonTimeout';
+import { fetchWithRetry } from '@/utils/fetchWithRetry;
+=======
+>>>>>>> merged-prs-20250907-203621
+import { BLOG_POSTS } from "@/data/blog-posts";
+import { useSkeletonTimeout } from '@/hooks/useSkeletonTimeout';
+import { fetchWithRetry } from '@/utils/fetchWithRetry';
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 export default function BlogPost() {
         return `https://www.facebook.com/sharer/sharer.php?u=${url}`;
       case 'twitter':
@@ -12,6 +82,29 @@ default:
     }
   };
 
+<<<<<<< HEAD
+:src_backup/pages/BlogPost.tsx
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+  const articleLd = {
+    '@context': 'https://schema.org'
+    '@type': 'BlogPosting'
+    headline: post.title
+    description: post.excerpt
+    image: post.featuredImage
+    datePublished: post.publishedDate
+origin/cursor/automate-test-improve-and-merge-code-2533
+    author: {
+      '@type': 'Person'
+      name: post.author.name
+    }
+origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
   return (
     <>
       <SEO
@@ -76,7 +169,6 @@ default:
                   <p className="text-white font-medium">{post.author.name}</p>
                   <p className="text-sm text-zion-slate-light">{post.author.title}</p>
                 </div>
-              </div>
               <div className="flex items-center space-x-4">
                 <div className="flex items-center text-zion-slate-light">
                   <Calendar className="h-4 w-4 mr-1" />
@@ -275,9 +367,6 @@ default:
                     </Link>
                   ))}
                 </div>;
-              </div>;
-            </div>;
-          </div>;
           {/* Featured image */}
           <div className="mb-12 max-w-5xl mx-auto">
             <div className="aspect-[21/9] rounded-lg overflow-hidden">
@@ -288,7 +377,6 @@ default:
                 fallbackSrc="/images/blog-placeholder.svg"
               />
             </div>
-          </div>
           {/* Article content */}
           <div className="max-w-4xl mx-auto">
             <div className="prose prose-lg prose-invert max-w-none">
@@ -339,13 +427,11 @@ default:
                     </Link>
                   ))}
                 </div>;
-              </div>;
             )}
                       </div>
                     </Link>
                   ))}
                 </div>
-              </div>
             )}
                 Ready to put these ideas into action? Explore our{' '}
                 <Link href="/services" className="text-zion-cyan underline">AI services</Link>{' '}
@@ -384,10 +470,11 @@ default:
                 </Link>
               </Button>
             </div>
-          </div>
-        </div>
-      </div>
     </>
+<<<<<<< HEAD
+:src_backup/pages/BlogPost.tsx
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
   );
 
@@ -406,4 +493,17 @@ outline"className=" border-zion-blue-light text-zion-slate-light hover:bg-zion-b
 }</div> </div>) ";
 }<Button asChild > <Link href=" /blog"> <ChevronLeft className=" mr-2 h-4 w-4" /> All Articles </Link> </Button> </div> </div> </div> </div> </>) ;
 }'"
+<<<<<<< HEAD
+:src_backup/pages/BlogPost.tsx
+=======
+<<<<<<< HEAD
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+<<<<<<< HEAD
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621

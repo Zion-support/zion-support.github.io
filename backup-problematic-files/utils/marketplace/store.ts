@@ -46,12 +46,10 @@ export function saveOffer(offer: Offer): Offer {
 }
 
 export function getOfferById(id: string): Offer | undefined {
-  const db = readDb()
   return db.offers.find((o) => o.id === id)
 }
 
 export function listOffers(params?: { talentSlug?: string, clientId?: string, status?: string }): Offer[] {
-  const db = readDb()
   let list = db.offers
   if (params?.talentSlug) list = list.filter((o) => o.talentSlug === params.talentSlug),
   if (params?.clientId) list = list.filter((o) => o.clientId === params.clientId),
@@ -60,7 +58,6 @@ export function listOffers(params?: { talentSlug?: string, clientId?: string, st
 }
 
 export function saveProject(project: Project): Project {
-  const db = readDb()
   const index = db.projects.findIndex((p) => p.id === project.id)
   if (index >= 0) {
     db.projects[index] = project
@@ -72,6 +69,10 @@ export function saveProject(project: Project): Project {
 }
 
 export function getProjectById(id: string): Project | undefined {
-  const db = readDb()
+<<<<<<< HEAD
   return db.projects.find((p) => p.id === id)
 }
+=======
+  const db = readDb()
+  return db.projects.find((p) => p.id === id)
+>>>>>>> origin/chore/fix-lint-and-merge

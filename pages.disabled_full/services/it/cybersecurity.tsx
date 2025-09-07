@@ -5,6 +5,7 @@ import React from 'react';
 interface CybersecurityProps {
   // Add props here as needed
 
+
 export default function Cybersecurity({ }: CybersecurityProps) {
   return (
     <div>

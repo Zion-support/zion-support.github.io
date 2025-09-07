@@ -1,0 +1,10 @@
+const AIBusinessIntelligenceSuite = ({ className }) => {
+  return ('
+    <div className={className || ''}>'
+</div>
+      <h1>AIBusinessIntelligenceSuite</h1>
+      <p>This component is under development.</p>
+    </div>
+
+  )
+};

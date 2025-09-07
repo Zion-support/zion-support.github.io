@@ -346,7 +346,7 @@ const ComprehensiveServicesShowcase2025 = () => {
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">;"
             </p>;
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">;"
-              transition={{ duration: 0 && 0.5 }}"
+              transition={ duration: 0 && 0.5 }"
               className="text-center p-6">;"
               <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">;"
                 <Brain className="w-8 h-8 text-blue-600" />;"

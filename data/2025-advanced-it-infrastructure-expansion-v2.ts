@@ -277,6 +277,7 @@ export const advancedITInfrastructureExpansion2025V2 = $2;
     ]
   },
   {
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     name: 'Quantum Identity Verification',
     description: 'Quantum-powered identity verification',
     category: 'Quantum Computing',

@@ -1,0 +1,10 @@
+const Infrastructure = ({ className }) => {
+  return ('
+    <div className={className || ''}>'
+</div>
+      <h1>Infrastructure</h1>
+      <p>This component is under development.</p>
+    </div>
+
+  )
+};

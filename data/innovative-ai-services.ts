@@ -1,75 +1,61 @@
-export interface InnovativeAIService {
-  id: string,
-  name: string,
-  tagline: string,
-  price: string,
-  period: string,
-  description: string,
-  features: string[],
-  popular: boolean,
-  icon: string,
-  color: string,
-  textColor: string,
-  link: string,
-  marketPosition: string,
-  targetAudience: string,
-  trialDays: number,
-  setupTime: string,
-  category: string,
-  realService: boolean,
-  technology: string[],
-  integrations: string[],
-  useCases: string[],
-  roi: string,
-  competitors: string[],
-  marketSize: string,
-  growthRate: string,
-  variant: string,
-  contactInfo: {
-    mobile: string,
-    email: string,
-    address: string,
-    website: string},
-  realImplementation: boolean,
-  implementationDetails: string,
-  launchDate: string,
-  customers: number,
-  rating: number,
-  reviews: number}
 
+      website: 'https://ziontechgroup.com';
+    }
+    real_implementation: true;
+    implementation_details: 'Quantum AI logistics platform with supply chain optimization and real - time analytics capabilities.';
+    launch_date: '2024 - 08 - 01';
+
+    "mobile": string, "email": string,
+    "address": string,
+    "website": string
+    },
+    "realImplementation": boolean, "implementationDetails": string,
+  "launchDate": string, "customers": number,
+  "rating": number,
+  "reviews": number
+  }
+];
+  contactInfo: {,
+  mobile: string, email: string,
+    address: string,
+    website: string;
+    realImplementation: boolean, implementationDetails: string,
+  launchDate: string, customers: number,
+  rating: number,
+  reviews: number
+}
 export const innovativeAIServices: InnovativeAIService[] = [
   {
-    id: 'quantum-ai-brain-computer-interface',
-    name: 'Quantum AI Brain-Computer Interface',
+    id: 'quantum-ai-brain-computer-interface', name: 'Quantum AI Brain-Computer Interface',
     tagline: 'Revolutionary quantum-enhanced AI with human-like reasoning',
     price: '$2,999',
-    period: '/month',
-    description: 'World\'s first quantum-enhanced AI with human-like reasoning capabilities. Achieve breakthrough discoveries with 1000% ROI within 6 months. Advanced neural signal processing with quantum encryption.',
+    period: '/month', description: 'World\'s first quantum-enhanced AI with human-like reasoning capabilities. Achieve breakthrough discoveries with 1000% ROI within 6 months. Advanced neural signal processing with quantum encryption.',
     features: [
-      'Quantum neural signal processingReal-time brain activity monitoringAI-powered cognitive enhancementNeural pattern recognitionSecure quantum encryptionMulti-modal interface supportAdvanced analytics dashboardAPI for research integrationCompliance with medical standards24/7 quantum AI support'
+      'Quantum neural signal processing',
+      'Real-time brain activity monitoring',
+      'AI-powered cognitive enhancement',
+      'Neural pattern recognition',
+      'Secure quantum encryption',
+      'Multi-modal interface support',
+      'Advanced analytics dashboard',
+      'API for research integration',
+      'Compliance with medical standards',
+
+      '24/7 quantum AI support'
     ],
-    popular: true,
-    icon: '🧠',
-    color: 'from-purple-600 to-indigo-700',
-    textColor: 'text-purple-400',
-    link: 'https://ziontechgroup.com/quantum-ai-brain-computer-interface',
-    marketPosition: 'Revolutionary technology surpassing Neuralink and Kernel with quantum AI capabilities',
+    popular: true, icon: '🧠',
+    color: 'from-purple-600 to-indigo-700', textColor: 'text-purple-400',
+    link: 'https://ziontechgroup.com/quantum-ai-brain-computer-interface', marketPosition: 'Revolutionary technology surpassing Neuralink and Kernel with quantum AI capabilities',
     targetAudience: 'Research institutions, Medical centers, Defense contractors, Tech companies',
-    trialDays: 30,
-    setupTime: '2 weeks',
-    category: 'Quantum AI & Neuroscience',
-    realService: true,
-    technology: ['Quantum ComputingNeural NetworksBrain-Computer InterfaceAI/MLQuantum Encryption'],
-    integrations: ['Research APIsMedical devicesData analysis toolsCloud platforms'],
-    useCases: ['Medical researchCognitive enhancementNeural rehabilitationAI development'],
-    roi: '1000% ROI within 6 months through breakthrough discoveries and patents',
-    competitors: ['Neuralink ($10,000+/month)Kernel ($50,000+/month)Synchron'],
-    marketSize: '$1.5B BCI market',
-    growthRate: '300% annual growth',
+    trialDays: 30, setupTime: '2 weeks',
+    category: 'Quantum AI & Neuroscience', realService: true,
+    technology: ['Quantum ComputingNeural NetworksBrain-Computer InterfaceAI/MLQuantum Encryption'], integrations: ['Research APIsMedical devicesData analysis toolsCloud platforms'],
+    useCases: ['Medical researchCognitive enhancementNeural rehabilitationAI development'], roi: '1000% ROI within 6 months through breakthrough discoveries and patents',
+    competitors: ['Neuralink ($10,000+/month)', 'Kernel ($50,000+/month)', 'Synchron'],
+    marketSize: '$1.5B BCI market', growthRate: '300% annual growth',
     variant: 'quantum-neural-advanced',
     contactInfo: {
-      mobile: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup.com',
+      mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
     },
@@ -328,6 +314,9 @@ export const innovativeAIServices: InnovativeAIService[] = [
   {
     id: 'quantum-cybersecurity-platform',
     name: 'Quantum Cybersecurity Platform',
+  };
+  {
+    id: 'quantum-cybersecurity-platform', name: 'Quantum Cybersecurity Platform',
     tagline: 'Quantum-resistant security with AI threat detection',
     price: '$2,999',
     period: '/month',
@@ -369,6 +358,14 @@ export const innovativeAIServices: InnovativeAIService[] = [
   {
     id: 'quantum-internet-security',
     name: 'Quantum Internet Security Platform',
+    },
+    realImplementation: true, implementationDetails: 'Quantum-resistant cybersecurity platform with AI threat detection and automated response capabilities.',
+    launchDate: '2024-10-01', customers: 95,
+    rating: 4.8,
+    reviews: 48
+  };
+  {
+    id: 'quantum-internet-security', name: 'Quantum Internet Security Platform',
     tagline: 'Quantum-secured internet infrastructure',
     price: '$4,999',
     period: '/month',
@@ -410,6 +407,14 @@ export const innovativeAIServices: InnovativeAIService[] = [
   {
     id: 'quantum-logistics-platform',
     name: 'Quantum Logistics Platform',
+    },
+    realImplementation: true, implementationDetails: 'Quantum internet security platform with quantum key distribution and ultra-secure network infrastructure.',
+    launchDate: '2024-11-15', customers: 12,
+    rating: 4.9,
+    reviews: 6
+  };
+  {
+    id: 'quantum-logistics-platform', name: 'Quantum Logistics Platform',
     tagline: 'Quantum AI-powered supply chain optimization',
     price: '$3,499',
     period: '/month',
@@ -449,3 +454,10 @@ export const innovativeAIServices: InnovativeAIService[] = [
     rating: 4.7,
     reviews: 34}
 ],
+
+  }
+];
+
+;
+
+

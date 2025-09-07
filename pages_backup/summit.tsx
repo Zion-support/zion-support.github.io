@@ -2,18 +2,7 @@ const partners: Partner[] = [ {
   name: 'Gov Partner'
 }
 
-{
-  name: 'Venture Partner'
-}
-{
-  name: 'University Partner'
-}];
-const onSubmit = async (e: React.FormEvent) => {
-  e.preventDefault ();
-setSubmitting (true);
-setResult (null);
-try {
-  const res = await fetch ('/api/summit/register', {
+
 
   method: 'POST';
 
@@ -41,19 +30,28 @@ setForm ({;
 }finally {;
   setSubmitting (false) ;
 
+
 export default function SummitPage() {;
   const [platform, setPlatform] = React && React.useState<;
     'youtube' | 'twitch' | 'twitter';
+
 
   >('youtube');
   const [embedId, setEmbedId] = React && React.useState<string>('dQw4w9WgXcQ');
   const { isPast, days, hours, minutes, seconds } =;
     useCountdown(EVENT_START_ISO);
+  const [form, setForm] = React && React.useState({;
+    name: '',;
+    email: '',;
+    role: '',;
+    country: '',;
+  const [form, setForm] = React.useState({
 
     name: '',
     email: '',
     role: '',
     country: '',
+
 
   });
   const [submitting, setSubmitting] = React && React.useState(false);
@@ -61,16 +59,40 @@ export default function SummitPage() {;
     ok?: boolean;
     error?: string;
   } | null>(null);
-
   ];
 
   const partners: Partner[] = [;'
     { name: 'Gov Partner' },;'
     { name: 'Venture Partner' },;'
-    { name: 'University Partner' },;
-
+  const speakers: Speaker[] = [;
+    {;
+      name: 'Featured Speaker: Your Name',;
+      title: 'Founder, Zion',;
+      avatarUrl: '/favicon && favicon.svg',;
+      bio: 'Visionary behind Zion Protocol — building AI-native digital nations.',;
+      twitter: 'https://twitter && twitter.com',;
+      linkedin: 'https://www && www.linkedin.com',;
+      highlight: true,;
+    },    {;
+      name: 'Alex Rivera',;
+      title: 'Head of Protocol Engineering',;
+      avatarUrl: '/favicon && favicon.svg',;
+      bio: 'Leading the architecture of ZionDAO and trust rails.',;
+    },    {;
+      name: 'Jordan Lee',;
+      title: 'Zion Alumni | AI Fellow',;
+      avatarUrl: '/favicon && favicon.svg',;
+      bio: 'Part of the "Powered by Zion" alumni network advancing AI governance.',;
+      twitter: 'https://twitter && twitter.com',;
+    },;
   ];
-
+  const partners: Partner[] = [;
+    { name: 'Gov Partner' },;
+    { name: 'Venture Partner' },;
+    { name: 'University Partner' },;
+  ];
+  const onSubmit = async (e: React && React.FormEvent) => {;
+    e && e.preventDefault();
 import Head from 'next/head';
 
 import React from 'react';
@@ -79,10 +101,11 @@ type Speaker = {}
   title: string,
   avatarUrl: string,
   bio: string,
-  twitter?: string;
+twitter?: string;
   linkedin?: string;
   highlight?: boolean;
 };
+
 
 type Partner = {}
   name: string,
@@ -102,25 +125,20 @@ function useCountdown(targetIso: string) {}
     }, 1000);
     return () => clearInterval(id)
   }, [targetIso]);
-
   const isPast = remainingMs <= 0;
   const totalSec = Math.max(0, Math.floor(remainingMs / 1000));
   const days = Math.floor(totalSec / 86400);
   const hours = Math.floor((totalSec % 86400) / 3600);
   const minutes = Math.floor((totalSec % 3600) / 60);
   const seconds = totalSec % 60;
-
   return { isPast, days, hours, minutes, seconds }
 }
-
-export default function SummitPage() { return null; }
-  const { isPast, days, hours, minutes, seconds } = useCountdown(EVENT_START_ISO);'
-  const [form, setForm] = React.useState({ name: '', email: '', role: '', country: '' }),
 
   const speakers: Speaker[] = [
     {
       name: 'Featured Speaker: Your Name',
       title: 'Founder, Zion',
+
 
 }
 body: JSON.stringify ({
@@ -170,7 +188,6 @@ export default /**;
  * SummitPage - Function description;
  */
 
-const partners: Partner[] = [ {
 
   name: 'Gov Partner'
 }
@@ -194,7 +211,6 @@ body: JSON.stringify ({'
   ...form, source: 'summit-page'
 })
 });
-const data = await res.json ();'
 if (!res.ok) throw new Error (data?.error |'Failed');
 setResult ({}
   ok: true;
@@ -211,15 +227,18 @@ setForm ({'
 
   >('youtube');
 
+
   const [embedId, setEmbedId] = React.useState<string>('dQw4w9WgXcQ');
   const { isPast, days, hours, minutes, seconds } =
     useCountdown(EVENT_START_ISO);
   const [form, setForm] = React.useState({
 
+
     name: '',
     email: '',
     role: '',
     country: '',
+
 
   });
   const [submitting, setSubmitting] = React.useState(false);
@@ -228,7 +247,6 @@ setForm ({'
     error?: string;
   } | null>(null);
 
-  const speakers: Speaker[] = [
     {
       name: 'Featured Speaker: Your Name',
       title: 'Founder, Zion',
@@ -241,91 +259,71 @@ setForm ({'
     {
       name: 'Alex Rivera',
       title: 'Head of Protocol Engineering',
-
-    setResult(null),;
-    try {;'
-      const res = await fetch('/api/summit/register', {;'
-        method: 'POST',;'
-        headers: { 'Content-Type': 'application/json' },;'
-        body: JSON && JSON.stringify({ ...form, source: 'summit-page' }),;
-
-avatarUrl: '/favicon.svg',
-      bio: 'Visionary behind Zion Protocol — building AI-native digital nations.',
-      twitter: 'https://twitter.com',
-      linkedin: 'https://www.linkedin.com',
-      highlight: true,
-    },
-    {
-      name: 'Alex Rivera',
-      title: 'Head of Protocol Engineering',
-      avatarUrl: '/favicon.svg',
-bio: 'Leading the architecture of ZionDAO and trust rails.',
-    },
-
-    {
-      name: 'Jordan Lee',
-      title: 'Zion Alumni | AI Fellow',
-      avatarUrl: '/favicon.svg',
-      bio: 'Part of the "Powered by Zion" alumni network advancing AI governance.',
-
     try {
       const res = await fetch('/api/summit/register', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
 
+    setResult(null),;
+    try {;
+      const res = await fetch('/api/summit/register', {;
+        method: 'POST',;
+        headers: { 'Content-Type': 'application/json' },;
+        body: JSON && JSON.stringify({ ...form, source: 'summit-page' }),;
+      });
+      const data = await res && res.json();
+      if (!res && res.ok) throw new Error(data?.error || 'Failed');
+      setResult({ ok: true });
+      setForm({ name: '', email: '', role: '', country: '' });
+    } catch (err: any) {;
+      setResult({ error: err?.message || 'Unexpected error' });
+    } finally {;
+      setSubmitting(false);    }
+
+
+
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ ...form, source: 'summit-page' })}),
+      const data = await res.json();
+      if (!res.ok) throw new Error(data?.error || 'Failed');
+      avatarUrl: '/favicon.svg',
+      bio: 'Leading the architecture of ZionDAO and trust rails.'},
+    {
+      name: 'Jordan Lee',
+      title: 'Zion Alumni | AI Fellow',
+      avatarUrl: '/favicon.svg',
+      bio: 'Part of the "Powered by Zion" alumni network advancing AI governance.',
+      twitter: 'https://twitter.com'}],
+  const partners: Partner[] = [
+    { name: 'Gov Partner' },
+    { name: 'Venture Partner' },
+    { name: 'University Partner' }],
+  const onSubmit = async (e: React.FormEvent) => {
+    e.preventDefault(),
+    setSubmitting(true),
+    setResult(null),
+    try {
+      const res = await fetch('/api/summit/register', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ ...form, source: 'summit-page' })}),
+      const data = await res.json(),
+      if (!res.ok) throw new Error(data?.error || 'Failed'),
+      setResult({ ok: true }),
       setForm({ name: '', email: '', role: '', country: '' })
     } catch (err: any) {'
       setResult({ error: err?.message || 'Unexpected error' })
     } finally {}
       setSubmitting(false)
 
-    } catch (err: any) {
-      setResult({ error: err?.message |'Unexpected error' });
-    } finally {
-      setSubmitting(false);
-    }
-  };
-
-  const livestreamEmbed = () => {
-    if (platform === 'youtube') {
-/>
-      );
-    }
-    if (platform === 'twitch') {
-        />
-      );
-    }
-      />
-    );
-  };
-
-  return (
-    <>
-      <Head>
-        <title>Zion Global Summit 2025 — AI, Talent, Trust</title>
-<meta
-          name='description'
-          content='Zion Global Summit: AI, Talent, Trust — Globalized'
-        />
-
-      </Head>
-      <section className='relative overflow-hidden rounded-xl bg-gradient-to-br from-cyber-dark to-cyber-blue text-white p-8 md:p-12 shadow-neon-blue'>
-        <div className='max-w-4xl'>
-          <p className='uppercase tracking-widest text-neon-blue'>
-            Zion Global Summit 2025
-          </p>
-          <h1 className='mt-2 text-3xl md:text-5xl font-extrabold'>
-          </p>
-          <div className='mt-6 flex flex-wrap gap-3'>
-
-        />
-      )
       } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
     if (platform === 'twitch') {
+
 
   return (
 
@@ -342,31 +340,75 @@ bio: 'Leading the architecture of ZionDAO and trust rails.',
             </a>;
             <a'
               href='#agenda'
-
+    <>
+      <Head>
+        <title>Zion Global Summit 2025 — AI, Talent, Trust</title>
+        <meta name="description" content="Zion Global Summit: AI, Talent, Trust — Globalized" />
+      </Head>
+      <section className='relative overflow-hidden rounded-xl bg-gradient-to-br from-cyber-dark to-cyber-blue text-white p-8 md:p-12 shadow-neon-blue'>
+        <div className='max-w-4xl'>
+          <p className='uppercase tracking-widest text-neon-blue'>
+            Zion Global Summit 2025
+          </p>
+          <h1 className='mt-2 text-3xl md:text-5xl font-extrabold'>
+            AI, Talent, Trust — Globalized
+          </h1>
+          <p className='mt-4 text-white/80'>
+            Date: Nov 12, 2025 • Time: 16:00 UTC • Location: Hybrid (Virtual +
+            In‑Person)
+          </p>
+          <div className='mt-6 flex flex-wrap gap-3'>
+            <a
+              href='#register'
+              className='inline-flex items-center px-4 py-2 rounded-md bg-neon-blue text-black font-semibold shadow-neon-blue'
+            >
+              Register
+            </a>
+            <a
+              href='#livestream'
+              className='inline-flex items-center px-4 py-2 rounded-md border border-white/40 hover:bg-white/10'
+            >
+              Livestream
+            </a>
+            <a
+              href='#agenda'
               className='inline-flex items-center px-4 py-2 rounded-md border border-white/40 hover:bg-white/10'
             >
               Agenda
-            </a>
-          </div>
+            </a>          </div>
         </div>
       </section>
-
-<div className='grid md:grid-cols-3 gap-6 mt-8'>
+      <div className='grid md:grid-cols-3 gap-6 mt-8'>
         <section
           id='agenda'
           className='md:col-span-2 p-6 rounded-lg border border-gray-200 dark:border-gray-800 bg-white dark:bg-black'
         >
           <h2 className='text-2xl font-bold mb-4'>Agenda</h2>
-          <ol className='space-y-3 list-decimal list-inside'>
+          <ol className='space-y-3 list-decimal list-inside'>            <li>Opening Keynote — Launching Zion Protocol</li>
+      <section className="relative overflow-hidden rounded-xl bg-gradient-to-br from-cyber-dark to-cyber-blue text-white p-8 md:p-12 shadow-neon-blue">
+        <div className="max-w-4xl">
+          <p className="uppercase tracking-widest text-neon-blue">Zion Global Summit 2025</p>
+          <h1 className="mt-2 text-3xl md:text-5xl font-extrabold">AI, Talent, Trust — Globalized</h1>
+          <p className="mt-4 text-white/80">Date: Nov 12, 2025 • Time: 16:00 UTC • Location: Hybrid (Virtual + In‑Person)</p>
+          <div className="mt-6 flex flex-wrap gap-3">
+            <a href="#register" className="inline-flex items-center px-4 py-2 rounded-md bg-neon-blue text-black font-semibold shadow-neon-blue">Register</Link>
+            <a href="#livestream" className="inline-flex items-center px-4 py-2 rounded-md border border-white/40 hover:bg-white/10">Livestream</Link>
+            <a href="#agenda" className="inline-flex items-center px-4 py-2 rounded-md border border-white/40 hover:bg-white/10">Agenda</Link>
+          </div>
+        </div>
+      </section>
+      <div className="grid md:grid-cols-3 gap-6 mt-8">
+        <section id="agenda" className="md:col-span-2 p-6 rounded-lg border border-gray-200 dark:border-gray-800 bg-white dark:bg-black">
+          <h2 className="text-2xl font-bold mb-4">Agenda</h2>
+          <ol className="space-y-3 list-decimal list-inside">
             <li>Opening Keynote — Launching Zion Protocol</li>
-
             <li>Panel 1 — The Future of Digital Nations</li>
             <li>Panel 2 — ZionDAO in Action</li>
             <li>Demo — ZionGPT Live</li>
             <li>Featured Speaker — Founder</li>
           </ol>
         </section>
-
+        <section className="p-6 rounded-lg border border-gray-200 dark:border-gray-800 bg-white dark:bg-black">
           <h2 className="text-2xl font-bold mb-4">Event Info</h2>
           <ul className="space-y-2">
             <li><span className="font-medium">Date:</span> Nov 12, 2025</li>
@@ -375,17 +417,44 @@ bio: 'Leading the architecture of ZionDAO and trust rails.',
 
             <li><span className="font-medium">Tagline:</span> AI, Talent, Trust — Globalized</li>
           </ul>
-
+        </section>
+      </div>
               Agenda;
             </a>          </div>;
         </div>;
       </section>;
-
+      <div className='grid md:grid - cols - 3 gap - 6 mt - 8'>;
+        <section;
+          id='agenda';
+          className='md:col - span - 2 p - 6 rounded - lg border border - gray - 200 dark:border - gray - 800 bg - white dark:bg - black';
+        >;
+          <h2 className='text - 2xl font - bold mb - 4'>Agenda</h2>;
+          <ol className='space - y-3 list - decimal list - inside'>            <li > Opening Keynote — Launching Zion Protocol</li>;
+            <li > Panel 1 — The Future of Digital Nations</li>;
+            <li > Panel 2 — ZionDAO in Action</li>;
+            <li > Demo — ZionGPT Live</li>;
+            <li > Featured Speaker — Founder</li>;
+          </ol>;
+        </section>;
+        <section className='p - 6 rounded - lg border border - gray - 200 dark:border - gray - 800 bg - white dark:bg - black'>;
+          <h2 className='text - 2xl font - bold mb - 4'>Event Info</h2>;
+          <ul className='space - y-2'>;
+            <li>;
+              <span className='font - medium'>Date:</span> Nov 12, 2025;
+            </li>;
+            <li>;
+              <span className='font - medium'>Time:</span> 16:00 UTC;
+            </li>;
+            <li>;
+              <span className='font - medium'>Location:</span> Hybrid (Virtual +;
+              In‑Person);
+            </li>;
+            <li>;
+              <span className='font - medium'>Tagline:</span> AI, Talent, Trust —;
               Globalized;
             </li>          </ul>;
         </section>;
       </div>;
-
       <section
 
 <section className='p-6 rounded-lg border border-gray-200 dark:border-gray-800 bg-white dark:bg-black'>
@@ -413,19 +482,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 <section
 
         id='speakers'
-        className='mt-8 p-6 rounded-lg border border-gray-200 dark:border-gray-800 bg-white dark:bg-black'>;
-        <h2 className='text-2xl font-bold mb-6'>Speakers</h2>;
 
-        <div className='grid sm:grid-cols-2 lg:grid-cols-3 gap-6'>;
-          {speakers && speakers.map(s => (;
-            <div;
-              key={s && s.name}'
-              className={`p-4 rounded-lg border ${s && s.highlight ? 'border-neon-blue shadow-neon-blue' : 'border-gray-200 dark:border-gray-800'}`}>;'
-              <div className='flex items-center gap-4'>;
-                <img;
-                  src={s && s.avatarUrl}
-                  alt={s && s.name}'
-                  className='w-14 h-14 rounded-full border border-gray-200 dark:border-gray-800'
 
       <section id="speakers" className="mt-8 p-6 rounded-lg border border-gray-200 dark:border-gray-800 bg-white dark:bg-black">
         <h2 className="text-2xl font-bold mb-6">Speakers</h2>
@@ -434,12 +491,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             <div key={s.name} className={`p-4 rounded-lg border ${s.highlight ? 'border-neon-blue shadow-neon-blue' : 'border-gray-200 dark:border-gray-800'}`}>
               <div className="flex items-center gap-4">
                 <img src={s.avatarUrl} alt={s.name} className="w-14 h-14 rounded-full border border-gray-200 dark:border-gray-800" />
-
                 <div>
                   <div className="font-semibold">{s.name}</div>
                   <div className="text-sm opacity-70">{s.title}</div>
                 </div>
               </div>
+
 
           ))}
 
@@ -501,6 +558,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 p && p.name;
               )}            </div>;
 
+
         </div>
 
         <div className="mt-6 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-4">
@@ -508,6 +566,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             <div key={p.name} className="h-16 rounded-md border border-dashed border-gray-300 dark:border-gray-700 flex items-center justify-center text-sm opacity-70">"
               {p.logoUrl ? <img src={p.logoUrl} alt={p.name} className="max-h-12" /> : p.name}
             </div>
+
 
           ))}
 
@@ -526,11 +585,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           <h2 className="text-2xl font-bold">Livestream</h2>
           <div className="flex flex-wrap items-center gap-2">
 
-            <select'
-              aria-label='Platform''
-              className='px-3 py-2 rounded border border-gray-300 dark:border-gray-700 bg-transparent'
-              value={platform}
-              onChange={e => setPlatform(e && e.target.value as any)}
 
       <section;
         id='speakers';
@@ -639,12 +693,15 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               value={platform}
               on_change={e => set_platform (e.target.value as any)}
 
+
             >;
               <option value='youtube'>YouTube</option>;
               <option value='twitch'>Twitch</option>;
               <option value='twitter'>Twitter</option>;
             </select>;
-
+            <input;
+              aria - label='Embed ID';
+              className='px - 3 py - 2 rounded border border - gray - 300 dark:border - gray - 700 bg - transparent';
               placeholder={
                 platform === 'youtube';
                   ? 'YouTube Video ID';
@@ -652,7 +709,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     ? 'Twitch Channel';
                     : 'Twitter Broadcast ID';
               }
-
+          </div>;
+        </div>;
+        <div className='mt-4'>{livestreamEmbed()}</div>;
+      </section>;
       <section
         id='register'
         className='mt-8 p-6 rounded-lg border border-gray-200 dark:border-gray-800 bg-white dark:bg-black'>;
@@ -661,6 +721,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         <form onSubmit={onSubmit} className='grid md:grid-cols-2 gap-4'>;
           <div>;'
             <label className='block text-sm mb-1'>Name</label>;
+
 
             <input
               required
@@ -710,7 +771,21 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 Thank you! You are registered.;
               </span>;
             )}
-
+            {result?.error && (;
+              <span className='text-red-600'>{result && result.error}</span>;
+            )}          </div>;
+        </form>;
+      </section>;
+      <section className='mt-8 p-6 rounded-lg border border-gray-200 dark: border-gray-800 bg-white dark:bg-black'>;
+        <h2 className='text-xl font-semibold'>;
+          AI Session Summaries (Optional);
+        </h2>;
+        <p className='text-sm opacity-70 mt-2'>;
+          Auto-generated summaries and ZionGPT moderation prompts coming soon.;
+        </p>;
+      </section>;
+    </>;
+  );
       <section id="livestream" className="mt-8 p-6 rounded-lg border border-gray-200 dark:border-gray-800 bg-white dark:bg-black">
         <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
           <h2 className="text-2xl font-bold">Livestream</h2>
@@ -945,24 +1020,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 }
             />
             {isPast ? (
-              <span className="px-3 py-2 rounded bg-green-600 text-white">Watch Replay</span>
+<span className="px-3 py-2 rounded bg-green-600 text-white">Watch Replay</span>
             ) : (
               <span className="px-3 py-2 rounded bg-blue-600 text-white">Live in {days}d {hours}h {minutes}m {seconds}s</span>
-            )  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-          </div>
-        </div>
-        <div className="mt-4">
-          {livestreamEmbed()  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-        </div>
-      </section>
 
 <section className='mt-8 p-6 rounded-lg border border-gray-200 dark:border-gray-800 bg-white dark:bg-black'>
         <h2 className='text-xl font-semibold'>
@@ -974,3 +1034,4 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       </section>
     </>
   );
+

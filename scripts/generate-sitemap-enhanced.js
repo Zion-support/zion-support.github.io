@@ -61,6 +61,13 @@ Disallow: /api/
 Disallow: /_next/
 Disallow: /automation/
 Disallow: /scripts/
+<<<<<<< HEAD
+`;
+  const robotsPath = path.join(__dirname, '..', 'public', 'robots.txt');
+  fs.writeFileSync(robotsPath, robotsContent);
+  console.log('✅ robots.txt generated successfully!');
+  console.log(`📄 Robots.txt saved "to": ${robotsPath}`)}
+=======
 
 // Run if this is the main module
 

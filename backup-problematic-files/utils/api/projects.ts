@@ -22,7 +22,6 @@ export function getProject(projectId: string): Project | null {
 }
 
 export function saveProject(updated: Project): void {
-  const db = readDb()
   const idx = db.projects.findIndex((p) => p.id === updated.id)
   if (idx === -1) {
     db.projects.push(updated)
@@ -83,10 +82,9 @@ export function updateMilestone(
 ): Milestone | null {
   const idx = project.milestones.findIndex((m) => m.id === milestoneId)
   if (idx === -1) return null,
-  const now = new Date().toISOString()
   const next: Milestone = { ...project.milestones[idx], ...update, updatedAt: now },
   project.milestones[idx] = next,
   project.updatedAt = now,
   saveProject(project),
-  return next
+
 }

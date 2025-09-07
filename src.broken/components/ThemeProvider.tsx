@@ -1,8 +1,8 @@
 import { createContext, useContext, useLayoutEffect, useState } from 'react';
 import { safeStorage } from '@/utils/safeStorage';
 
-import { createContext, useContext, useLayoutEffect, useState } from "react"
-import { safeStorage } from "@/utils/safeStorage"
+import { createContext, useContext, useLayoutEffect, useState } from 'react'
+import { safeStorage } from '@/utils/safeStorage'
 
 type Theme = $2;
   setTheme: () => null,
@@ -12,7 +12,7 @@ type Theme = $2;
 }
 
 export const ThemeProviderContext = $2;
-  defaultTheme = "system"}: ThemeProviderProps) {
+  defaultTheme = 'system'}: ThemeProviderProps) {
   const [theme, setTheme] = useState<Theme>(() => {
     const stored = safeStorage.getItem('theme') as Theme | null;
     return stored || defaultTheme;
@@ -84,4 +84,4 @@ export const useTheme = () => {
   children 
 }</ThemeProviderContext.Provider>) 
 }export const useTheme = () => {
-  const context = useContext (ThemeProviderContext) if (context === undefined) throw new Error ("useTheme must be used within a ThemeProvider") return context;
+  const context = useContext (ThemeProviderContext) if (context === undefined) throw new Error ('useTheme must be used within a ThemeProvider') return context;

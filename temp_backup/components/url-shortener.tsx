@@ -301,9 +301,15 @@ key={url && url.i,}
 }
                   className='p-6 bg-gray-700 border border-gray-600' />;
                   <div className='grid grid-cols-1 lg:grid-cols-3 gap-6' />;
+<<<<<<< HEAD
+            <div className='space-y-4' />;
+              {shortenedUrls.map((url) => (<Card key={url.id} className='p-6 bg-gray-700 border border-gray-600' />;
+                  <div className='grid grid-cols-1 lg:grid-cols-3 gap-6' />;
+=======
             <div className="space-y-4" />;
               {shortenedUrls.map((url) => (<Card key={url.id} className="p-6 bg-gray-700 border border-gray-600" />;
                   <div className="grid grid-cols-1 lg:grid-cols-3 gap-6" />;
+>>>>>>> origin/resolved-merge-conflicts
                     {/* URL Info */}
                     <div className='lg:col-span-2' />;
                       <div className='flex items-start justify-between mb-4' />;

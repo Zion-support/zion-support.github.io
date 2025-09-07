@@ -1,3 +1,6 @@
+
+
+
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 ursor/integrate-build-improve-and-re-verify-8f7d
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
@@ -15,10 +18,15 @@ main
 
 
 
+
 const fs = require('fs');
 const path = require('path');
 const { exec } = require('child_process');
 const { promisify } = require('util');
+
+const execAsync = promisify(exec);
+
+const execAsync = promisify(exec);
 const execAsync = promisify(exec);
 
 const execAsync = promisify(exec);
@@ -70,6 +78,7 @@ this.lastBuild = null
 const execAsync = promisify(exec);
 
 
+
 const execAsync = promisify(exec);
 
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
@@ -79,6 +88,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 const execAsync = promisify(exec);
 
 main
+
 
 
 
@@ -101,12 +111,15 @@ class BuildMonitor {}
   };
   log(message) {}
     const timestamp = new Date().toISOString();
+
+
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 ursor/integrate-build-improve-and-re-verify-8f7d
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 main
+
 
 
 
@@ -125,6 +138,13 @@ main
 
 
 
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+
+
+
+
+
 
 
 
@@ -137,6 +157,12 @@ main
       this.log('Build cleaned')
       const buildOutput = execSync('npm run build', {
         encoding: 'utf8',
+      const { stdout, stderr } = await execAsync('npm run build', {})
+        "cwd": process.cwd(),
+        "timeout": 300000, // 5 minutes timeout;
+      }
+});
+
         timeout: 300000,)
 
 
@@ -177,17 +203,22 @@ main
 
       const endTime = Date.now();
       const duration = endTime - startTime;
+
       const endTime = Date.now();
       const duration = endTime - startTime;
       const endTime = Date.now();
       const duration = endTime - startTime;
 
 
+
+      const endTime = Date.now();
+      const duration = endTime - startTime;
       this.lastBuild = {
         timestamp: new Date().toISOString(),
         success: true,
         buildTime,
         output: buildOutput,
+
 
       const endTime = Date.now();
       const duration = endTime - startTime;
@@ -197,6 +228,8 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
 main
+
+
 
 
 
@@ -220,6 +253,12 @@ main
       };
       this.lastBuildTime = new Date();
       this.log(`Build completed successfully in ${duration}ms`);
+
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+
+
 
 
 
@@ -254,6 +293,9 @@ main
 
 
 
+
+
+
       return buildResult;
     } catch (error) {}
       const endTime = Date.now()
@@ -269,6 +311,13 @@ main
         this.buildHistory.shift();
       };
       this.log(`Build failed after ${duration}"ms": ${error.message}`);
+
+
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+
+
 
 
 
@@ -317,6 +366,9 @@ main
 
 
 
+
+
+
       return buildResult;
     };
   };
@@ -327,6 +379,13 @@ main
         "cwd": process.cwd(),
         "timeout": 60000}
 });
+
+
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+
+
 
 
 
@@ -394,6 +453,8 @@ main
 
 
 
+
+
       this.log('Type check completed successfully');
       return { "success": true, "output": stdout, "errors": stderr };"
     } catch (error) {}"`;
@@ -430,9 +491,13 @@ main
     fs.writeFileSync(resultsFile, JSON.stringify(results, null, 2));
     return results;
   async cleanupOldBuilds() {}
+
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
 main
+
+
+
 
 
 
@@ -476,13 +541,13 @@ if (require.main === module) {}
   monitor.start().catch(error => {})
 
     process.exit(1);
-});
-};
-module.exports = BuildMonitor;
 
 });
 };
 module.exports = BuildMonitor;
+});
+};
+module.exports = BuildMonitor;
 
 
 module.exports = BuildMonitor;
@@ -494,6 +559,8 @@ module.exports = BuildMonitor;
 });
 };
 module.exports = BuildMonitor;
+
+
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
@@ -526,6 +593,7 @@ module.exports = BuildMonitor;
 
 monitor.start().catch(error => {)
   console.error('Failed to start build monitor:', error);
+
 
 
 

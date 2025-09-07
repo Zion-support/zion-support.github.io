@@ -9,6 +9,12 @@ export { textAnalysisService } from './textAnalysisService',
   PasswordStrength;
   GeneratedPassword;'
 } from './passwordGeneratorService';
+<<<<<<< HEAD
+;
+
+;
+export type {
+=======
 
 ;
 
@@ -22,6 +28,12 @@ export type {;
   QRCodeResult;
   QRCodeTemplate;'
 } from './qrCodeService';
+<<<<<<< HEAD
+;
+
+;
+export type {
+=======
 
 ;
 
@@ -36,6 +48,12 @@ export type {;
   SupportedFormat;
   FileInfo;'
 } from './fileConverterService';
+<<<<<<< HEAD
+;
+
+;
+export type {
+=======
 
 ;
 
@@ -146,6 +164,7 @@ export const SERVICES_METADATA = $2;
     pricing: 'Free'
     apiEndpoint: '/api/password-generator'
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   }
   qrCodeGenerator: {
     name: 'QR Code Generator',
@@ -159,6 +178,15 @@ export const SERVICES_METADATA = $2;
     api_endpoint: '/api / qr - code - generator';
   }
   file_converter: {
+<<<<<<< HEAD
+    features: [
+      'Multiple QR code typesCustom stylingLogo integrationError correctionTemplate library'
+    ];
+    pricing: 'Free'
+    apiEndpoint: '/api/qr-code-generator'
+  }
+  fileConverter: {
+=======
 
     features: [
       'Multiple QR code typesCustom stylingLogo integrationError correctionTemplate library'
@@ -202,11 +230,15 @@ export const getServiceStatus = () => {
     qrCodeGenerator: { status: 'active', uptime: '99.9%', lastUpdated: new Date() }
     fileConverter: { status: 'active', uptime: '99.9%', lastUpdated: new Date() }
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   return {;
     urlShortener: { status: 'active', uptime: '99.9%', lastUpdated: new Date() };
     passwordGenerator: { status: 'active', uptime: '99.9%', lastUpdated: new Date() };
     qrCodeGenerator: { status: 'active', uptime: '99.9%', lastUpdated: new Date() };
     fileConverter: { status: 'active', uptime: '99.9%', lastUpdated: new Date() };
+<<<<<<< HEAD
+  return {
+=======
 
     textAnalysis: { status: 'active', uptime: '99.9%', lastUpdated: new Date() }
 
@@ -395,6 +427,8 @@ textAnalysis: {}
       passwordGenerator: { users: 12450, requests: 890000, avgResponse: 45 };
       qrCodeGenerator: { users: 6780, requests: 456000, avgResponse: 156 };
       fileConverter: { users: 5430, requests: 234000, avgResponse: 234 };
+<<<<<<< HEAD
+=======
 
 // Export all micro SaaS services;
 
@@ -464,6 +498,8 @@ export const getServiceStatus = () =>: any {}
       passwordGenerator: { users: 12450, requests: 890000, avgResponse: 45 },;
       qrCodeGenerator: { users: 6780, requests: 456000, avgResponse: 156 },;
       fileConverter: { users: 5430, requests: 234000, avgResponse: 234 },;
+<<<<<<< HEAD
+=======
 
       textAnalysis: { users: 3890, requests: 11500, avgResponse: 178 }
 

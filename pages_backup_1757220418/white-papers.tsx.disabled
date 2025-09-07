@@ -1,3 +1,4 @@
+
 <:pages/white-papers.tsx.backup
 
 
@@ -7,83 +8,7 @@ import React, { useState } from 'react';
 import MainLayout from '../src/components/layout/MainLayout';
 
 import { motion } from 'framer-motion';
-import Link from 'next/link';
-<:pages/white-papers.tsx.backup
-
-const whitePapers = [;
-  {}
-    id: 1,
-    title: "The Future of AI in Enterprise: A Comprehensive Guide","
-    description: "Explore how artificial intelligence is transforming enterprise operations and what businesses need to know to stay competitive.","
-    author: "Dr. Sarah Chen","
-    date: "2024-01-15","
-    category: "Artificial Intelligence","
-    readTime: "45 min read","
-    downloadCount: "2,341","
-    featured: true,
-    pdfUrl: "/whitepapers/ai-enterprise-guide.pdf""
-  },
-  {}
-    id: 2,
-    title: "Cloud Security Best Practices for Modern Businesses","
-    description: "A detailed analysis of cloud security challenges and proven strategies to protect your organization's data and infrastructure.","
-    author: "Michael Rodriguez","
-    date: "2024-01-10","
-    category: "Cybersecurity","
-    readTime: "30 min read","
-    downloadCount: "1,876","
-    featured: false,
-    pdfUrl: "/whitepapers/cloud-security-best-practices.pdf""
-  },
-  {}
-    id: 3,
-    title: "Quantum Computing: The Next Frontier in Technology","
-    description: "Understanding quantum computing's potential impact on various industries and how to prepare for the quantum revolution.","
-    author: "Dr. Alex Thompson","
-    date: "2024-01-05","
-    category: "Quantum Computing","
-    readTime: "60 min read","
-    downloadCount: "1,234","
-    featured: false,
-    pdfUrl: "/whitepapers/quantum-computing-frontier.pdf""
-  },
-  {}
-    id: 4,
-    title: "Digital Transformation Strategies for Healthcare","
-    description: "How healthcare organizations can leverage technology to improve patient outcomes and operational efficiency.","
-    author: "Jennifer Lee","
-    date: "2023-12-28","
-    category: "Healthcare Technology","
-    readTime: "40 min read","
-    downloadCount: "987","
-    featured: false,
-    pdfUrl: "/whitepapers/healthcare-digital-transformation.pdf""
-  },
-  {}
-    id: 5,
-    title: "The Economics of Micro SaaS: Building Profitable Solutions","
-    description: "A comprehensive guide to building, launching, and scaling micro SaaS applications for sustainable business growth.","
-    author: "David Kim","
-    date: "2023-12-20","
-    category: "SaaS","
-    readTime: "35 min read","
-    downloadCount: "1,567","
-    featured: false,
-    pdfUrl: "/whitepapers/micro-saas-economics.pdf""
-  },
-  {}
-    id: 6,
-    title: "Data Privacy in the Age of AI: Compliance and Best Practices","
-    description: "Navigating the complex landscape of data privacy regulations while implementing AI solutions effectively.","
-    author: "Emma Wilson","
-    date: "2023-12-15","
-    category: "Data Privacy","
-    readTime: "50 min read","
-    downloadCount: "1,123","
-    featured: false,
-    pdfUrl: "/whitepapers/data-privacy-ai-compliance.pdf""
-import { FileText, Download, Calendar, Eye } from 'lucide-react';
-import MainLayout from '../components/layout/MainLayout';
+<
 import React from 'react';
 import React, { useState } from 'react';
 import MainLayout from '../src/components/layout/MainLayout';
@@ -94,6 +19,7 @@ import Head from 'next/head';
 >import Link from 'next/link';
 import { motion } from 'framer-motion';
 import MainLayout from '../components/layout/MainLayout';
+
 import {
   FileText,
   Download,
@@ -106,6 +32,7 @@ import {
   BookOpen,
   Star,
   Clock,
+
   Tag
 } from 'lucide-react';
 
@@ -113,6 +40,7 @@ import {
   Tag
 } from 'lucide-react';
 import Layout from '../components/Layout';
+
 
 const whitePaperCategories = [
   { name: 'AI & Machine Learning', count: 8, color: 'bg-blue-100 text-blue-800' },
@@ -224,6 +152,7 @@ const stats = [
   { number: '10K+', label: 'Downloads' },
   { number: '15+', label: 'Industry Experts' },
   { number: '95%', label: 'Reader Satisfaction' }
+
 import Head from 'next/head';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
@@ -234,6 +163,7 @@ import {
   User, 
   ArrowRight, 
   Tag, 
+
 =
   Tag,
 >=
@@ -247,6 +177,30 @@ const whitePapers = [
     id: 1,
     title: "The Future of AI in Enterprise: A Comprehensive Guide",
 
+
+    author: "Dr. Sarah Chen",
+    date: "2024-01-15",
+    category: "Artificial Intelligence",
+    description: "Explore how artificial intelligence is transforming enterprise operations and what it means for your business.",
+    downloadCount: 1250
+  },
+  {
+    id: 2,
+    title: "Cloud Migration Strategies: Best Practices and Pitfalls",
+    author: "Michael Rodriguez",
+    date: "2024-01-10",
+    category: "Cloud Computing",
+    description: "Learn the essential strategies for successful cloud migration and avoid common mistakes.",
+    downloadCount: 980
+  },
+  {
+
+title: 'Cybersecurity Best Practices 2024',
+
+
+
+    title: 'Cybersecurity Best Practices 2024',
+
     description: 'Latest cybersecurity trends and protection strategies for modern businesses.',
     category: 'Cybersecurity',
     downloadCount: 1500,
@@ -255,7 +209,36 @@ const whitePapers = [
   }
 ;];
 
+
+
+    id: 3,
+    title: "Cybersecurity in the Digital Age: Protecting Your Assets",
+    author: "Emily Johnson",
+    date: "2024-01-05",
+    category: "Cybersecurity",
+    description: "Comprehensive guide to modern cybersecurity threats and how to protect your organization.",
+    downloadCount: 1500
+  },
+  {
+    id: 4,
+    title: "Data Analytics: Turning Information into Insights",
+    author: "David Kim",
+    date: "2023-12-20",
+    category: "Data Analytics",
+    description: "Discover how to leverage data analytics to drive business decisions and growth.",
+    downloadCount: 750
+  }
+
 ];
+
+export default function WhitePapersPage() {
+
+    <Layout
+
+    <MainLayout
+
+];
+
 
 export default function WhitePapersPage() {
   const [searchTerm, setSearchTerm] = useState('');
@@ -387,6 +370,14 @@ export default function WhitePapersPage() {
 
   return (
 title="White Papers - Zion Tech Group"
+
+    <Layout
+
+    <MainLayout
+
+      title="White Papers - Zion Tech Group"
+
+
       title="White Papers - Zion Tech Group"
       description="Access our comprehensive collection of white papers covering AI, cloud solutions, cybersecurity, and more. Download free technical resources and insights."
       keywords="white papers, technical papers, AI research, cloud solutions, cybersecurity, business strategy, free downloads"
@@ -412,6 +403,18 @@ title="White Papers - Zion Tech Group"
                   Papers
                 </span>
               </h1>
+
+<p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+                In-depth research and insights on the latest technology trends and industry developments
+
+
+  return (
+
+              <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+                In-depth research and insights on the latest technology trends and industry developments
+
+  return (
+
 <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
                 In-depth research and insights on the latest technology trends and industry developments
               <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
@@ -421,6 +424,7 @@ title="White Papers - Zion Tech Group"
 
               <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
                 In-depth research and insights on the latest technology trends and industry developments
+
     <>
       <Head>
         <title>White Papers - Zion Tech Group</title>
@@ -440,6 +444,7 @@ title="White Papers - Zion Tech Group"
               <h1 className="text-4xl md:text-6xl font-bold mb-6">White Papers</h1>
               <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
                 Download our comprehensive white papers on technology trends and best practices.
+
 
               <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
                 Access our comprehensive collection of technical white papers and research documents. 
@@ -484,6 +489,7 @@ title="White Papers - Zion Tech Group"
             </motion.div>
           </div>
         </section>
+
 
 </motion.div>
         {/* Stats Section */}
@@ -560,6 +566,7 @@ title="White Papers - Zion Tech Group"
 
         {/* Categories */}
 <section className="py-16 bg-gray-50">
+
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
               <h2 className="text-3xl font-bold text-gray-900 mb-4">Research Categories</h2>
@@ -580,12 +587,41 @@ title="White Papers - Zion Tech Group"
                   </div>
                   <div className="text-2xl font-bold text-gray-900">{category.count}</div>
                   <div className="text-sm text-gray-500">papers</div>
+
+        <section className="py-16 bg-white">
+          <div className="max-w-7xl mx-auto px-4">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              className="text-center mb-12"
+            >
+              <h2 className="text-3xl md:text-4xl font-bold mb-4">Browse by Category</h2>
+              <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+                Find white papers by technology area.
+              </p>
+            </motion.div>
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+              {['Artificial Intelligence', 'Cloud Computing', 'Cybersecurity', 'Data Analytics'].map((category, index) => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  className="bg-gray-50 rounded-lg p-4 text-center hover:bg-gray-100 transition-colors cursor-pointer"
+                >
+                  <Tag className="w-6 h-6 text-blue-600 mx-auto mb-2" />
+                  <span className="text-sm font-medium">{category}</span>
+
+
                 </motion.div>
               ))}
             </div>
           </div>
         </section>
 
+
+</Link>
               </Link>
 </Link>
         {/* Featured White Papers */}
@@ -833,6 +869,11 @@ title="White Papers - Zion Tech Group"
           </div>
         </section>
       </div>
+
+</Layout>
+
+    </Layout>
+
 </Layout>
 
     </Layout>
@@ -866,12 +907,21 @@ title="White Papers - Zion Tech Group"
                 </Link>
               </div>
 
+
 </Layout>
             </motion.div>
           </div>
         </section>
       </div>
+
 <:pages/white-papers.tsx.backup
+
+
+
+<
+
+
+
 
 
     </>
@@ -885,5 +935,7 @@ title="White Papers - Zion Tech Group"
 <:pages/white-papers.tsx.backup
 
     </MainLayout>
+    </MainLayout>
+
   );
 }

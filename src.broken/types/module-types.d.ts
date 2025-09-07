@@ -31,7 +31,6 @@ export function dirname(path: string): string;
 export default path;
 
 declare module 'lovable-tagger' {
-  import { Plugin } from 'vite',
   export function componentTagger(): Plugin
 }
 

@@ -1,5 +1,11 @@
 
 
+<<<<<<< HEAD
+
+import React from 'react';
+import Link from 'next/link';
+import Head from 'next/head';
+=======
 =======
 export default function HomePage() {
   return (
@@ -21,6 +27,7 @@ export default function HomePage() {
             <p>
 
 
+<<<<<<< HEAD
 =======
 =======
               Main St STE 1008 Middletown DE 19709

@@ -1,30 +1,63 @@
-import { format  } from 'date-fns';
-import { toast } from '@/hooks/use-toast';
+
+import {format} from 'date-fns';
+import {toast} from '@/hooks/use-toast';
 // Utility function to format dates for DB operations
-export const formatDateForDB = $2;
+export const formatDateForDB = (date: Date | string | undefined) => {
+  if (!date) return undefined,
+
+};
+
+// Error handling with toast;
+export const handleResumeError = (e: any, errorMessage: string) => {;
+
+
+import { format } from 'date-fns',
+
+import { toast } from '@/hooks/use-toast',
+// Utility function to format dates for DB operations
+export const formatDateForDB = (date: Date | string | undefined) => {
+  if (!date) return undefined,
+
   return typeof date === 'string' ? date : format(date, 'yyyy-MM-dd')
 },
 
-// Error handling with toast
-export const handleResumeError = (e: any, errorMessage: string) => {
-  console.error($2);
-  toast($2);
-  return false
-},
+export const formatDateForDB = (date: Date | string | undefined) => {}
+  if (!date) return undefined'
 
-export const handleResumeError = (e: any, errorMessage: string) => {
-  console.error(`Error: ${errorMessage}`, e),
-  toast({
-    title: "Error"
-    description: `${errorMessage}: ${e.message}`;
-    variant: "destructive"
+  return typeof date === 'string' ? date : format(date, 'yyyy-MM-dd')
+};
+// Error handling with toast;
+export const handleResumeError = (e: any, errorMessage: string) => {}
+    title,;
+    description;
   }),
-  return false
-}
-// Success notification
-}
+  return true;
+},'
+import { format } from 'date-fns',;'
+import { toast } from '@/hooks/use-toast',;
+// Utility function to format dates for DB operations;
+export const formatDateForDB = (date: Date | string | undefined) => {;
+  if (!date) return undefined,;'
+  return typeof date === 'string' ? date : format(date, 'yyyy-MM-dd');
+},;
+// Error handling with toast;
+export const handleResumeError = (e: any, errorMessage: string) => {;`
+  console.error(`Error: ${errorMessage}`, e),;
+  toast({;
+    title: "Error",`
+    description: `${errorMessage}: ${e.message}`,;"
 
-export const showSuccessToast = (title: string, description: string) => {
-  toast($2);
-  return true
-},
+    variant: "destructive";
+  }),;
+  return false;
+},;
+// Success notification;
+export const showSuccessToast = (title: string, description: string) => {;
+  toast({;
+    title,;
+
+    description;
+  });
+  return true;
+};
+};

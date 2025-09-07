@@ -13,7 +13,6 @@ export interface ProfessionalService {
     email: string,
     address: string}
 }
-
 export const professionalServices: ProfessionalService[] = [
   {
     id: "it-consulting",
@@ -21,6 +20,12 @@ export const professionalServices: ProfessionalService[] = [
     tagline: "Expert IT consulting for business growth",
     price: "$120/hour",
     description: "Professional IT consulting services to help businesses optimize their technology investments.",
+    id: 'it-consulting'
+    name: 'IT Consulting Services'
+    tagline: 'Expert IT consulting for business growth'
+    price: '$120/hour'
+    description:
+      'Professional IT consulting services to help businesses optimize their technology investments.'
     features: [
       "Technology assessment",
       "Strategic planning",

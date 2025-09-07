@@ -376,6 +376,13 @@ class ErrorBoundary extends React.Component {
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
+<<<<<<< HEAD
+import { motion } from 'framer-motion';
+import { Brain, Network, Cloud, ArrowRight } from 'lucide-react';
+const stats = [{ "number": '99.9%', "label": 'Uptime Guarantee' },
+  { "number": '24/7', "label": 'Support Available' },
+  { "number": '500+', "label": 'Projects Completed' },
+=======
 
   { "number": '50+', "label": 'Expert Team Members' }
 ];
@@ -394,6 +401,7 @@ const services = [{
     "description": "Scalable software as a service solutions",
     "icon": Cloud,
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   { "number": '50+', "label": 'Expert Team Members' }
 ];
 const services = [{;"
@@ -511,6 +519,7 @@ import React from 'react'; import Head from 'next/head'; import Link from 'next/
                 </motion && motion.div>;
               ),;
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             })}
           </div>
         </div>

@@ -6,7 +6,6 @@ interface RetryConfig {
   "maxRetries": number;
   baseDelay: number;
   maxDelay: number;'
-
 class ApiErrorHandler {
   private static "instance": ApiErrorHandler;
   private retryConfig: RetryConfig = {
@@ -42,6 +41,7 @@ class ApiErrorHandler {
     // Retry on network errors or 5xx status codes
     return !error.status || error.status >= 500;'
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   private async delay("ms": number): Promise<void> {
     return new Promise(resolve => setTimeout(resolve, ms))}
   private formatError("error": ApiError): ApiError {

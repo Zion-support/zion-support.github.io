@@ -1,3 +1,26 @@
+<<<<<<< HEAD
+:src_backup/components/interviews/InterviewCard.tsx
+}
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+}
+import React, { useState } from './react;
+import { Card, CardContent, CardFooter, CardHeader, CardTitle  } from @/components / ui / card';
+import { Button  } from '@/components / ui / button;
+import { Badge  } from @/components / ui / badge';
+import { Interview  } from '@/types / interview;
+import { use_auth  } from @/hooks / use_auth';
+import { use_interviews  } from '@/hooks / use_interviews;
+import { format, formatDistanceToNow, is_past, parseISO  } from ./date - fns';
+import { AlertDialog, AlertDialogAction, AlertDialogCancel, AlertDialogContent, AlertDialogDescription, AlertDialogFooter, AlertDialogHeader, AlertDialogTitle, AlertDialogTrigger  } from '@/components / ui / alert - dialog;
+import { Dialog, DialogContent, DialogHeader, DialogTitle  } from @/components / ui / dialog';
+import { Clock, ExternalLink, MessageSquare, Video, X } from 'lucide-reactimport { toast  } from @/components / ui / use - toast';
+import { InterviewResponseForm  } from './InterviewResponseForm;
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 import React, { useState } from './react';
 import { Card, CardContent, CardFooter, CardHeader, CardTitle  } from '@/components / ui / card';
 import { Button  } from '@/components / ui / button';
@@ -10,6 +33,10 @@ import { AlertDialog, AlertDialogAction, AlertDialogCancel, AlertDialogContent, 
 import { Dialog, DialogContent, DialogHeader, DialogTitle  } from '@/components / ui / dialog';
 import { Clock, ExternalLink, MessageSquare, Video, X } from 'lucide-react'import { toast  } from '@/components / ui / use - toast';
 import { InterviewResponseForm  } from './InterviewResponseForm';
+<<<<<<< HEAD
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 interface InterviewCardProps {
   // TODO: Implement
 }
@@ -86,4 +113,18 @@ export function InterviewCard({ interview, onRefresh }: InterviewCardProps) {
 }/> </DialogContent> </Dialog> </Card>) ;
 }'"
   )
+<<<<<<< HEAD
+:src_backup/components/interviews/InterviewCard.tsx
+=======
+<<<<<<< HEAD
 }
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+}
+origin/cursor/automate-test-improve-and-merge-code-2533
+}
+=======
+}
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621

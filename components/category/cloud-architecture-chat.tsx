@@ -30,12 +30,14 @@ const CloudArchitectureChat: NextPage = () => {;
 }
 export default CloudArchitectureChat;
 
+
 import type { NextPage } from "next";
 import Head from "next/head";
 import Link from "next/link";
 import type { NextPage } from 'next';
 import Head from 'next/head';
 import Link from 'next/link';
+
 
 const CloudArchitectureChat: NextPage = () => {
   return (
@@ -48,10 +50,12 @@ const CloudArchitectureChat: NextPage = () => {
 
         <title>CloudArchitectureChat - Zion Tech Solutions</title>
 
+
 import type { NextPage } from './next';
 import Head from './next / head';
+
 import Link from './next / link';
-const CloudArchitectureChat: NextPage = () => {
+const CloudArchitectureChat: NextPage = () => {}
   return (
     <div>;
       <Head>;
@@ -71,4 +75,6 @@ const CloudArchitectureChat: NextPage = () => {
 ;
 export default CloudArchitectureChat;
 ;
+
+        <title>CloudArchitectureChat - Zion Tech Solutions</title>
 

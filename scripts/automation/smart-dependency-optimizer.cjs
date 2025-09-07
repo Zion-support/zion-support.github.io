@@ -1,8 +1,35 @@
+<<<<<<< HEAD
+#!/""usr/bin/env""
+const fs = require("fs");
+const path = require("path");
+const { execSync, spawn } = require("child_process");
+const crypto = require("crypto");
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+>>>>>>> merged-prs-20250907-203621
 #!/""usr/bin/env""
 const fs = require("fs")
 const path = require("path")
 const { execSync, spawn } = require("child_process")
 const crypto = require("crypto")
+<<<<<<< HEAD
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
       this.projectRoot,logs"
       "smart-dependency-optimizer.log"
       this.projectRoot,logs"
@@ -18,7 +45,6 @@ const crypto = require("crypto")
         "lastRun"
         "totalSavings"
   log(message, level = "INFO")
-  log(message, level = "INFO")
   this.log("🧠 Starting Smart Dependency Optimization...")
     const savings = { "size": 0, "installTime": 0, "buildTime"}
       this.log( Smart Dependency Optimization "completed": ${appliedOpts.length} optimizations applied")
@@ -29,15 +55,44 @@ const crypto = require("crypto")
   "direct"
       "indirect"
       "unused"
+<<<<<<< HEAD
+      "usagePatterns"
+        fs.readFileSync(path.join(this.projectRoot, "package.json"), "utf8"
+const depName = dep.split("@");
+=======
+<<<<<<< HEAD
+
+=======
       "usagePatterns"
         fs.readFileSync(path.join(this.projectRoot, "package.json"), "utf8"
   const depName = dep.split("@")
   const depName = dep.split("@")
+<<<<<<< HEAD
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   "name"
             "version"
             "usageCount"
             "files"
             "lastUsed"
+<<<<<<< HEAD
+  this.log(`Dependency usage analysis "failed": ${error.message  }`, "ERROR"`)
+const sourceDirs = ["src", "components", "pages", "utils", "hooks", "api"];
+const fullPath = path.join(this.projectRoot, ");
+          fullPath", [".ts", ".tsx", ".js", ".jsx"]
+        !item.startsWith(".")
+        item !== "node_modules"
+const content = fs.readFileSync(file, "utf8");
+const lines = content.split("\n");
+  if (line.includes("import") && line.includes("from")
+const importMatch = line.match(/from\s+[""]([^""]+)[""];
+              if (packageName && !packageName.startsWith(".")
+=======
+<<<<<<< HEAD
+
+=======
   this.log(`Dependency usage analysis "failed": ${error.message  }`, "ERROR"`)
   const sourceDirs = ["src", "components", "pages", "utils", "hooks", "api"]
   const sourceDirs = ["src", "components", "pages", "utils", "hooks", "api"]
@@ -50,42 +105,86 @@ const crypto = require("crypto")
   if (line.includes("import") && line.includes("from")
   const importMatch = line.match(/from\s+[""]([^""]+)[""]
               if (packageName && !packageName.startsWith(".")
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   "count"
                     "files"
                     "lastUsed"
   // Skip files that can"
-  // Skip files that can"
     if (importPath.startsWith("@")
+<<<<<<< HEAD
+const parts = importPath.split("/");
+return importPath.split("/");
+  const usage = { "count": 0, "files": [], "lastUsed"}
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+=======
+>>>>>>> merged-prs-20250907-203621
   const parts = importPath.split("/")
   return importPath.split("/")
   const usage = { "count": 0, "files": [], "lastUsed"}
   if (pkg === depName || pkg.startsWith(depName + "/")
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   if (pkg === depName || pkg.startsWith(depName + "/")
   "mostUsed"
       "recentlyUsed"
       "rarelyUsed"
+<<<<<<< HEAD
       (["", "a"], ["", "b")]
     patterns.mostUsed = sortedByUsage.slice(0, 10).map((["pkg", "data")]
-  "package"
+=======
+      ([, "a"], [, "b")]
+    patterns.mostUsed = sortedByUsage.slice(0, 10).map(([pkg, "data")]
+  package
       "usageCount"
-      "files"
-      ([", "a"], [", "b")]
-    patterns.recentlyUsed = sortedByDate.slice(0, 10).map((["pkg", "data")]
-  "package"
+      files
+      ([", "a], [, "b")]
+    patterns.recentlyUsed = sortedByDate.slice(0, 10).map(([pkg, "data")]
+  package
       "lastUsed"
-      "usageCount"
+      usageCount
   this.log(" Identifying unused dependencies...")
+<<<<<<< HEAD
+
+=======
         fs.readFileSync(path.join(this.projectRoot, "package.json"), "utf8"
         fs.readFileSync(path.join(this.projectRoot, "package.json"), "utf8"
   const depName = dep.split("@")
+<<<<<<< HEAD
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
   "name"
-            "version"
+            version
             "type"
-              ? "dependency"
+              ? dependency
               : "devDependency"
-            "reason": "No imports found in source code"
-  this.log(Unused dependency identification "failed": ${error.message  }")
+            reason: "No imports found in source code"
+  this.log(Unused dependency identification failed: ${error.message  }")
+        "ERROR
+  const packageLockPath = path.join(this.projectRoot, package-lock.json")
+          fs.readFileSync(packageLockPath, "utf8)
+          fs.readFileSync(packageLockPath, "utf8)
+  this.log(⚡ Analyzing dependency conflicts...")
+      const packageLockPath = path.join(this.projectRoot, "package-lock.json)
+          fs.readFileSync(packageLockPath, utf8")
+  "type: DUPLICATE_PACKAGE"
+            "package
+            versions"
+            "severity: MEDIUM"
+            "suggestion: Consider using package resolution to avoid duplicates"
+  this.log(Dependency conflict analysis "failed: ${error.message  })
         "ERROR"
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+=======
+>>>>>>> merged-prs-20250907-203621
   const packageLockPath = path.join(this.projectRoot, "package-lock.json")
           fs.readFileSync(packageLockPath, "utf8")
   const packageLockPath = path.join(this.projectRoot, "package-lock.json")
@@ -117,16 +216,94 @@ const crypto = require("crypto")
               "required"
               "severity": "HIGH","suggestion": `Install ${peerDep}@${requiredVersion} as a dependency
         "package.json"
+>>>>>>> origin/chore/fix-lint-and-merge
         this.projectRoot,node_modules"
+        package.json
         "package.json"
+<<<<<<< HEAD
+
+=======
         "package.json"
   const pkg = JSON.parse(fs.readFileSync(packageJsonPath, "utf8")
+<<<<<<< HEAD
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
+  this.log("� Checking for outdated dependencies...")
+      // For now, we
+        fs.readFileSync(path.join(this.projectRoot, package.json"), "utf8
+  package"
+            "current
+            latest"
+            "severity: LOW"
+            "suggestion: Consider updating to latest version for security and features
+  this.log(`Outdated dependency check "failed": ${error.message  }`, ERROR`)
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+  "package"
+      "usageCount"
+      "files"
+      ([", "a"], [", "b")]
+    patterns.recentlyUsed = sortedByDate.slice(0, 10).map((["pkg", "data")]
+  "package"
+      "lastUsed"
+      "usageCount"
+  this.log(" Identifying unused dependencies...")
+        fs.readFileSync(path.join(this.projectRoot, "package.json"), "utf8"
+const depName = dep.split("@");
+  "name"
+            "version"
+            "type"
+              ? "dependency"
+              : "devDependency"
+            "reason": "No imports found in source code"
+  this.log(Unused dependency identification "failed": ${error.message  }")
+        "ERROR"
+const packageLockPath = path.join(this.projectRoot, "package-lock.json");
+          fs.readFileSync(packageLockPath, "utf8")
+const packageLockPath = path.join(this.projectRoot, "package-lock.json");
+          fs.readFileSync(packageLockPath, "utf8")
+  this.log("⚡ Analyzing dependency conflicts...")
+const packageLockPath = path.join(this.projectRoot, "package-lock.json");
+          fs.readFileSync(packageLockPath, "utf8")
+  "type": "DUPLICATE_PACKAGE"
+            "package"
+            "versions"
+            "severity": "MEDIUM"
+            "suggestion": "Consider using package resolution to avoid duplicates"
+  this.log(Dependency conflict analysis "failed": ${error.message  }")
+        "ERROR"
+const traverse = (deps, path = "");
+const traverse = (deps, path = ");
+  Object.keys(deps).forEach(pkg => {const fullPath = path ? "${path}.${pkg}")
+          "path"
+  "package"
+            "versions"
+            "paths"
+        fs.readFileSync(path.join(this.projectRoot, "package.json"), "utf8"
+  "type": "MISSING_PEER_DEPENDENCY"
+              "package"
+              "required"
+              "severity": "HIGH","suggestion"
+  "type": "MISSING_PEER_DEPENDENCY"
+              "package"
+              "required"
+              "severity": "HIGH","suggestion": `Install ${peerDep}@${requiredVersion} as a dependency
+        "package.json"
+        this.projectRoot,node_modules"
+        "package.json"
+const pkg = JSON.parse(fs.readFileSync(packageJsonPath, "utf8");
   this.log("� Checking for outdated dependencies...")
       // For now, we"
         fs.readFileSync(path.join(this.projectRoot, "package.json"), "utf8"
   "package"
             "current"
             "latest"
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
             "severity": "LOW"
             "suggestion": Consider updating to latest version for security and features"
   this.log(`Outdated dependency check "failed": ${error.message  }`, "ERROR"`)
@@ -136,7 +313,11 @@ const crypto = require("crypto")
             "severity": "LOW"
             "suggestion": Consider updating to latest version for security and features"
   this.log(`Outdated dependency check "failed": ${error.message}`, "ERROR"`)
+<<<<<<< HEAD
+const versionParts = currentVersion.replace(/^[\^~]/, "").split(".");
+=======
     const versionParts = currentVersion.replace(/^[\^~]/, "").split(".")
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   this.log("� Analyzing bundle impact...")
   "totalSize"
       "largestPackages"
@@ -149,11 +330,20 @@ const crypto = require("crypto")
     } catch (error) {  this.log(`Bundle impact analysis "failed": ${error.message  }`, "ERROR"`)
   "totalSize"
       "largestPackages"
+<<<<<<< HEAD
+const distPath = path.join(this.projectRoot, "dist");
+    } catch (error) {  this.log(`Bundle size analysis "failed": ${error.message  }`, "ERROR"`)
+const fullPath = path.join(directory, ");
+=======
   const distPath = path.join(this.projectRoot, "dist")
   const distPath = path.join(this.projectRoot, "dist")
     } catch (error) {  this.log(`Bundle size analysis "failed": ${error.message  }`, "ERROR"`)
   const fullPath = path.join(directory, ")
-    usageAnalysis"
+<<<<<<< HEAD
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     usageAnalysis"
   this.log(" Generating optimization recommendations...")
   "type": "REMOVE_UNUSED"
@@ -247,9 +437,65 @@ const crypto = require("crypto")
 this.log(` Optimization Report "generated"`)
   this.log(" Smart Dependency Optimizer starting...")
 this.log(" Smart Dependency Optimization completed successfully")
+<<<<<<< HEAD
       this.log(� Total "savings": ${(this.optimizationHistory.totalSavings / (1024 * 1024)).toFixed(2)}MB"
         " Smart Dependency Optimization "failed": ${error.message  }",ERROR"
+
+=======
+<<<<<<< HEAD
+      this.log(� Total savings: ${(this.optimizationHistory.totalSavings / (1024 * 1024)).toFixed(2)}MB"
+        " Smart Dependency Optimization failed: ${error.message  }",ERROR"
+
+
+        ` Smart Dependency Optimization failed: ${error.message}"
+
+        ` Smart Dependency Optimization "failed: ${error.message}
+=======
+      this.log(� Total "savings": ${(this.optimizationHistory.totalSavings / (1024 * 1024)).toFixed(2)}MB"
+        " Smart Dependency Optimization "failed": ${error.message  }",ERROR"
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> merged-prs-20250907-203621
+
+=======
+        ` Smart Dependency Optimization "failed": ${error.message}"
+<<<<<<< HEAD
         ` Smart Dependency Optimization "failed": ${error.message}"
         ` Smart Dependency Optimization "failed": ${error.message}"
 
 
+
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+<<<<<<< HEAD
+        ` Smart Dependency Optimization "failed": ${error.message}"
+>>>>>>> origin/chore/fix-lint-and-merge
+=======
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+        ` Smart Dependency Optimization "failed": ${error.message}"
+<<<<<<< HEAD
+
+<<<<<<< HEAD
+
+
+
+
+=======
+=======
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc

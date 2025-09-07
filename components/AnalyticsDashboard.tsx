@@ -1,14 +1,15 @@
 import React, { useState, useEffect } from 'react';
-import { motion  } from 'framer-motion';
 
-interface AnalyticsData  {pageViews: number;
+interface AnalyticsData {
+  totalViews: number;
   uniqueVisitors: number;
   bounceRate: number;
-  avgSessionDuration: number;
-  topPages: {path: string;}
-    views: number;}
+  topPages: {
+    path: string;
+    views: number;
   }[];
-  performance: {fcp: number;
+  performance: {
+    fcp: number;
     lcp: number;
     fid: number;
     cls: number;}

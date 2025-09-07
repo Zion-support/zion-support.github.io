@@ -4,6 +4,8 @@
   textContent: string | null;
   style: { [key: string]: string }
 }
+<<<<<<< HEAD
+=======
 
   return (
     <div className={cn(badgeVariants({ variant }), className)} {...props} />;

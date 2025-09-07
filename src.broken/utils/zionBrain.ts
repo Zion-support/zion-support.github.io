@@ -111,7 +111,6 @@ export async function optimizePrompt(original: string, userIntent?: string): Pro
     const optimized = resp.choices?.[0]?.message?.content?.trim() || heuristicTighten($2);
     return { optimized, suggestions: ['Used OpenAI optimization for speed and specificity'] }
   } catch {
-    const tightened = heuristicTighten($2);
     return { optimized: tightened, suggestions: ['OpenAI not available at runtime, applied heuristic tightening'] }
   }
 }
@@ -158,7 +157,6 @@ export function appendLog(entry: Omit<LogEntry, 'id' | 'timestamp'>): void {
 export function readState<T = unknown>(): T {
   ensureDataFiles($2);
   try {
-    const raw = fs.readFileSync($2);
     return JSON.parse(raw) as T
   } catch {
     return {} as unknown as T

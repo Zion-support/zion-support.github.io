@@ -1,7 +1,24 @@
 
-import { ResumeBasicInfo } from '@/types/resume';
+import { ResumeBasicInfo  } from '@/types / resume';
+
 interface ResumeBasicInfoSectionProps {
-  basicInfo: ResumeBasicInfo}
+  basic_info: ResumeBasicInfo;
+
+}
+
+import {ResumeBasicInfo} from '@/types/resume';
+interface ResumeBasicInfoSectionProps {;
+
+  basicInfo: ResumeBasicInfo;
+
+
+
+}
+
+export function ResumeBasicInfoSection({ basicInfo }: ResumeBasicInfoSectionProps) {
+  return (
+    <div className="space-y-2 border-b pb-4 mb-6">
+      <h1 className="text-2xl font-bold">{basicInfo.headline || basicInfo.title}</h1>
 
 export function ResumeBasicInfoSection({
   basicInfo,
@@ -12,6 +29,42 @@ export function ResumeBasicInfoSection({
       {basicInfo.summary && (
         <p className="text-sm">{basicInfo.summary}</p>
       )}
-    </div>
-  )
+      {basicInfo.summary && (
+        <p className="text-sm">{basicInfo.summary}</p>
+      )}
+
+
+  basicInfo,
+}: ResumeBasicInfoSectionProps) {}
+  return ("
+    <div className="space-y-2 border-b pb-4 mb-6">"
+      <h1 className="text-2xl font-bold">
+        {basicInfo.headline || basicInfo.title}
+      </h1>"
+      {basicInfo.summary && <p className="text-sm">{basicInfo.summary}</p>});
 }
+;
+
+import { ResumeBasicInfo } from "@/types/resume";
+interface ResumeBasicInfoSectionProps {
+  basicInfo: ResumeBasicInfo;
+
+}
+
+export function ResumeBasicInfoSection({
+  basicInfo,
+}: ResumeBasicInfoSectionProps) {
+  return (
+    <div className="space-y-2 border-b pb-4 mb-6">
+      <h1 className="text-2xl font-bold">
+        {basicInfo.headline || basicInfo.title}
+      </h1>
+      {basicInfo.summary && <p className="text-sm">{basicInfo.summary}</p>}
+
+    </div>
+  );
+}
+;
+
+
+;

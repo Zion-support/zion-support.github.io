@@ -45,6 +45,7 @@ export interface PortfolioAsset {
     totalReturn: number}
 }
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   current_price: number;
   market_value: number,
   allocation: number, // percentage of portfolio;
@@ -56,6 +57,8 @@ export interface PortfolioAsset {
     monthly_return: number;
     yearly_return: number,
     total_return: number;
+<<<<<<< HEAD
+=======
 
   volatility: number;
   sharpe_ratio: number;
@@ -177,6 +180,60 @@ export interface FinancialPlan {
 
   preferences?: Record<string, any>
 }
+
+<<<<<<< HEAD
+    property: boolean
+
+    recommendations: string[]
+  }
+  tax: {
+    estimatedTaxLiability: number;
+
+    taxOptimizationStrategies: string[]
+
+    deductions: string[]
+  }
+  retirement: {
+    targetAge: number;
+    estimatedNeeds: number;
+    currentSavings: number;
+
+    monthlyContribution: number
+    projectedValue: number
+  }
+  createdAt: Date
+
+  updatedAt: Date
+}
+export interface FinancialRequest {
+
+export interface FinancialRequest {;
+  userId: string;
+
+  requestType: 'portfolio_analysis' | 'investment_recommendation' | 'financial_planning' | 'market_analysis' | 'goal_tracking'
+  parameters: Record<string, any>;
+
+  preferences?: Record<string, any>
+=======
+    property: boolean,
+    recommendations: string[];
+  }
+  tax: {
+    estimatedTaxLiability: number;
+    taxOptimizationStrategies: string[],
+    deductions: string[];
+  }
+  retirement: {
+    target_age: number;
+    estimated_needs: number;
+    current_savings: number;
+    monthly_contribution: number,
+    projected_value: number;
+  }
+  created_at: Date,
+  updated_at: Date;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+}
 export interface FinancialRequest {
   userId: string,
   requestType: 'portfolio_analysis' | 'investment_recommendation' | 'financial_planning' | 'market_analysis' | 'goal_tracking',
@@ -223,6 +280,8 @@ export class AIFinancialAdvisorService {
   }
   async getInvestmentRecommendations(userId: string, riskTolerance: string, investmentHorizon: number): Promise<InvestmentRecommendation[]> {
     try {
+<<<<<<< HEAD
+=======
 
         method: 'POST',
         headers: {

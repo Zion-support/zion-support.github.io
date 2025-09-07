@@ -1,109 +1,112 @@
-<<<<<<< HEAD
+import React from 'react';
 
-const "HowItWorksSection": React.FC = () => ;
-const steps = [;
-  {"number": '01',"title": 'Consultation',"description": 'We start with a detailed consultation to understand your business needs and challenges.',"icon": <FileText className="w-8 h-8" />;"
-    },{"number": '02',"title": 'Strategy & Planning',"description": 'Our experts develop a customized strategy and implementation plan tailored to your goals.',"icon": <Search className="w-8 h-8" />;"
-    },{"number": '03',"title": 'Implementation',"description": 'We implement the solution with minimal disruption to your existing operations.',"icon": <Handshake className="w-8 h-8" />;"
-    },{"number": '04',"title": 'Support & Optimization',"description": 'Ongoing support and continuous optimization to ensure maximum value and performance.',"icon": <Check className="w-8 h-8" />;"
+export function HowItWorksSection() {
+  const steps = [
+    {
+      icon: "🔍",
+      title: "Discover",
+      description: "Browse our comprehensive catalog of services, talent, and solutions",
+      color: "from-zion-cyan to-zion-cyan-dark"
+    },
+    {
+      icon: "🤝",
+      title: "Connect",
+      description: "Get matched with the perfect team or service for your project",
+      color: "from-zion-purple to-zion-purple-dark"
+    },
+    {
+      icon: "📋",
+      title: "Plan",
+      description: "Collaborate on project requirements, timeline, and deliverables",
+      color: "from-zion-blue to-zion-blue-dark"
+    },
+    {
+      icon: "🚀",
+      title: "Execute",
+      description: "Watch your vision come to life with our expert execution",
+      color: "from-zion-cyan-light to-zion-cyan"
+    },
+    {
+      icon: "✅",
+      title: "Deliver",
+      description: "Receive your completed project with ongoing support and maintenance",
+      color: "from-zion-purple-light to-zion-purple"
     }
-  ];return (<section className="py-16 px-4 bg-white">;"
-      <div className="container mx-auto max-w-6xl">;"
-        <div className="text-center mb-16">;"
-          <h2 className="text-4xl font-bold mb-4">How It Works</h2>;"
-          <p className="text-xl text-gray-600 max-w-2xl mx-auto">;"
-            Our proven process ensures successful implementation and maximum value from your investment.;
-          </p>;
-        </div>;
-        <div className="grid grid-cols-1 "md":grid-cols-2 "lg":grid-cols-4 gap-8">;"
-          {steps.map((step, index) => (<div key={index} className="text-center relative">;"
-              <div className="bg-blue-600 text-white w-16 h-16 rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4">;"
-                {step.number}
-              </div>;
-              <div className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">;"
-                {step.icon}
-              </div>;
-              <h3 className="text-xl font-semibold mb-3">{step.title}</h3>;"
-              <p className="text-gray-600">{step.description}</p>;"
-              {index < steps.length - 1 && (<div className="hidden "lg":block absolute top-8 left-1/2 w-full h-0.5 bg-gray-300 transform translate-x-8"></div>;"
-              )}
-            </div>;
-          ))}
-        </div>;
-        <div className="mt-16 text-center">;"
-          <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-8 text-white">;"
-            <h3 className="text-2xl font-bold mb-4">Ready to Get Started?</h3>;"
-            <p className="text-xl mb-6 opacity-90">;"
-              Join hundreds of companies that trust Zion Tech for their technology needs.;
-            </p>;
-            <div className="flex flex-col "sm":flex-row gap-4 justify-center">;"
-              <button className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold "hover":bg-gray-100 transition-colors">;"
-                Start Your Project;
-              </button>;
-              <button className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold "hover":bg-white "hover":text-blue-600 transition-colors">;"
-                Schedule a Demo;
-              </button>;
-            </div>;
-          </div>;
-        </div>;
-      </div>;
-    </section>;
-  )}
+  ];
 
-export function HowItWorksSection({ className, style }: HowItWorksSectionProps) {
-  const { t } = useTranslation();
-  const steps = getSteps(t);
-  
+  const stats = [
+    { icon: "⏱️", value: "3x Faster", label: "Project Delivery" },
+    { icon: "🎯", value: "99.9%", label: "Success Rate" },
+    { icon: "📈", value: "50%", label: "Cost Reduction" },
+    { icon: "🏆", value: "1000+", label: "Projects Completed" }
+  ];
+
   return (
-    <section className={cn("py-20 bg-zion-blue", className)} style={style}>
-      <div className="container mx-auto px-4">
-        <div className="text-center mb-16">
-          <GradientHeading>{t('home.how_it_works_title')}</GradientHeading>
-          <p className="text-zion-slate-light text-lg mt-4 max-w-2xl mx-auto">
-            {t('home.how_it_works_subtitle')}
+    <section className="py-20 bg-gradient-to-br from-zion-blue via-zion-slate-dark to-zion-blue-dark relative overflow-hidden">
+      {/* Background pattern */}
+      <div className="absolute inset-0 opacity-5">
+        <div className="absolute inset-0" style={{
+          backgroundImage: `radial-gradient(circle at 50% 50%, currentColor 1px, transparent 1px)`,
+          backgroundSize: '40px 40px'
+        }} />
+      </div>
+
+      <div className="max-w-7xl mx-auto px-6 relative z-10">
+        {/* Header */}
+        <div className="text-center mb-20">
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
+            How It <span className="bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent">Works</span>
+          </h2>
+          <p className="text-zion-slate-light text-lg md:text-xl max-w-4xl mx-auto leading-relaxed">
+            Our streamlined process ensures your project success from concept to completion. 
+            Experience the Zion difference with our proven methodology.
           </p>
         </div>
 
+        {/* Stats section */}
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16 max-w-4xl mx-auto">
+          {stats.map((stat, index) => (
+            <div key={index} className="text-center p-4 rounded-xl bg-zion-blue-dark/40 backdrop-blur-sm border border-zion-blue-light/20">
+              <div className="text-zion-cyan mb-2 flex justify-center text-2xl">
+                {stat.icon}
+              </div>
+              <div className="text-2xl font-bold text-white mb-1">{stat.value}</div>
+              <div className="text-zion-slate-light text-sm">{stat.label}</div>
+            </div>
+          ))}
+        </div>
+        
+        {/* Steps */}
         <div className="relative">
-          {/* Timeline line */}
-          <div className="absolute left-4 md:left-1/2 top-0 h-full w-0.5 bg-gradient-to-b from-zion-purple via-zion-cyan to-zion-purple-light transform -translate-x-1/2 md:block hidden"></div>
+          {/* Connection line */}
+          <div className="absolute top-1/2 left-0 right-0 h-1 bg-gradient-to-r from-zion-cyan via-zion-purple to-zion-blue transform -translate-y-1/2 hidden lg:block"></div>
           
-          <div className="space-y-12 md:space-y-0">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
             {steps.map((step, index) => (
-              <div 
-                key={step.title}
-                className={`flex flex-col md:flex-row items-center ${
-                  index % 2 === 0 ? "md:flex-row-reverse" : ""
-                } relative`}
-              >
-                <div className="md:w-1/2 mb-6 md:mb-0 md:px-12 text-center md:text-right">
-                  {index % 2 === 0 ? (
-                    <div>
-                      <h3 className="text-2xl font-bold text-white mb-3">{step.title}</h3>
-                      <p className="text-zion-slate-light">{step.description}</p>
-                    </div>
-                  ) : null}
+              <div key={index} className="relative text-center group">
+                {/* Step number */}
+                <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-full flex items-center justify-center text-2xl font-bold text-white mx-auto mb-6 relative z-10">
+                  {index + 1}
                 </div>
                 
-                <div className="relative z-10 flex items-center justify-center w-12 h-12 rounded-full bg-zion-blue-light border-2 border-zion-purple mx-4 md:mx-0">
-                  <step.icon className="w-6 h-6 text-zion-cyan" />
-                </div>
-
-                <div className="md:w-1/2 md:px-12 text-center md:text-left">
-                  {index % 2 !== 0 ? (
-                    <div>
-                      <h3 className="text-2xl font-bold text-white mb-3">{step.title}</h3>
-                      <p className="text-zion-slate-light">{step.description}</p>
-                    </div>
-                  ) : null}
+                {/* Step content */}
+                <div className="bg-zion-blue-dark/40 backdrop-blur-sm p-6 rounded-xl border border-zion-blue-light/20 hover:border-zion-cyan/40 transition-all duration-300 hover:shadow-lg hover:shadow-zion-cyan/20">
+                  <div className="text-4xl mb-4">{step.icon}</div>
+                  <h3 className="text-xl font-semibold text-white mb-3">{step.title}</h3>
+                  <p className="text-zion-slate-light text-sm leading-relaxed">{step.description}</p>
                 </div>
               </div>
             ))}
           </div>
         </div>
+
+        {/* CTA */}
+        <div className="text-center mt-16">
+          <button className="px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-purple text-white font-semibold rounded-lg hover:from-zion-cyan/80 hover:to-zion-purple/80 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-zion-cyan/25">
+            Get Started Today
+          </button>
+        </div>
       </div>
     </section>
-  )
+  );
 }
-=======
->>>>>>> cursor/automate-test-improve-and-merge-code-6d57

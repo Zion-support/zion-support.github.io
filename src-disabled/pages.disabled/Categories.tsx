@@ -1,3 +1,5 @@
+<<<<<<< HEAD
+:src_backup/pages/Categories.tsx
 :src/pages/Categories.tsx
 import useSWR from 'swr',
 import { CategoryCard } from "@/components/CategoryCard",
@@ -8,6 +10,32 @@ import { Folder } from 'lucide-react'
 import { CATEGORIES  } from '@/data/categories';
 import { NextSeo  } from '@/components/NextSeo';
 import {logErrorToProduction} from '@/utils/productionLogger';
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> merged-prs-20250907-203621
+:src/pages/Categories.tsx
+import useSWR from 'swr,
+import { CategoryCard } from "@/components/CategoryCard,
+import { GradientHeading } from @/components/GradientHeading";
+import { SkeletonCard  } from @/components/ui';
+import ErrorBoundary from "@/components/GlobalErrorBoundary;
+import { Folder } from 'lucide-react
+import { CATEGORIES  } from @/data/categories';
+import { NextSeo  } from '@/components/NextSeo;
+import {logErrorToProduction} from @/utils/productionLogger';
+import useSWR from 'swr;
+import { CategoryCard } from @/components/CategoryCard';
+import { GradientHeading } from '@/components/GradientHeading;
+import { SkeletonCard } from @/components/ui';
+import ErrorBoundary from '@/components/GlobalErrorBoundary;
+import { Folder } from lucide-react';
+import { CATEGORIES } from '@/data/categories;
+import { NextSeo } from @/components/NextSeo';
+import { logErrorToProduction } from '@/utils/productionLogger;
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 import useSWR from 'swr';
 import { CategoryCard } from '@/components/CategoryCard';
 import { GradientHeading } from '@/components/GradientHeading';
@@ -17,6 +45,10 @@ import { Folder } from 'lucide-react';
 import { CATEGORIES } from '@/data/categories';
 import { NextSeo } from '@/components/NextSeo';
 import { logErrorToProduction } from '@/utils/productionLogger';
+<<<<<<< HEAD
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
 origin/cursor/automate-test-improve-and-merge-code-2533
 interface CategoryType {
@@ -40,6 +72,7 @@ return (<> <NextSeo title="Browse Categories" description="Explore AI service an
 }</ErrorBoundary> </div> </div> </>) ;
 }'"
 }
+<<<<<<< HEAD
 :src/pages/Categories.tsx
 
 const fetcher = null;
@@ -97,7 +130,6 @@ const fetcher = null;
           )}
         </ErrorBoundary>
       </div>
-    </div>
     </>
   )
 
@@ -109,8 +141,17 @@ const fetcher = null;
 
 }
 import React from "react";
+<<<<<<< HEAD
 import React from "react"
 import { Brain, Cloud, Shield, Code, Database, Network } from "lucide-react";"});"})
+=======
+import React from react
+import { Brain, Cloud, Shield, Code, Database, Network } from "lucide-react";});})
+=======
+import React from "react"
+import { Brain, Cloud, Shield, Code, Database, Network } from "lucide-react";"});"})
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 origin/cursor/automate-test-improve-and-merge-code-2533
 }
 const Categories: React.FC: = () => {,"
@@ -252,11 +293,23 @@ const Categories: React.FC = () => {}
 export default Categories""
 "
   )}
+<<<<<<< HEAD
+:src_backup/pages/Categories.tsx
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
 export: default Categories
 export default Categories," ]
 export default Categories"")))))))))
 }
+<<<<<<< HEAD
+:src_backup/pages/Categories.tsx
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 :src/pages/Categories.tsx
 import useSWR from 'swr',;
 import { CategoryCard } from "@/components/CategoryCard",;
@@ -352,7 +405,6 @@ export default function Categories({ categories: initialCategories = [] }: Categ
           )}
         </ErrorBoundary>;
       </div>;
-    </div>;
     </>;
   );
 }
@@ -360,3 +412,8 @@ export default function Categories({ categories: initialCategories = [] }: Categ
 origin/cursor/automate-test-improve-and-merge-code-2533
 export default Categories"`"
 origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+export default Categories"`"
+origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
+>>>>>>> origin/chore/fix-lint-and-merge

@@ -20,7 +20,7 @@ const { execSync } = // // require('child_process');
     fs.mkdirSync(path.dirname(this.logFile), { recursive: true });
   }
 
-    fs.mkdirSync(path.dirname(this.logFile), { "recursive": true })}
+    fs.mkdirSync(path.dirname(this.logFile), { 'recursive': true })}
   log(message, level = 'INFO') {
     const timestamp = new Date().toISOString();
     const logMessage = `[${timestamp}] [${level}] ${message}\n`;
@@ -41,8 +41,7 @@ const { execSync } = // // require('child_process');
 
         issues.push('Invalid return statement syntax');
       }
-      if (content.includes('') || content.includes('') || content.includes('>>>>>>>')) {
-
+      if (content.includes('') || content.includes('') || content.includes('
         issues.push('Merge conflict markers found');
       }
       // Check for unmatched braces (simple check)
@@ -57,6 +56,8 @@ const { execSync } = // // require('child_process');
       if (openParens !== closeParens) {
         issues.push('Unmatched parentheses detected');
       }
+
+
       // Check for React usage without import
       if (content.includes('React.') && !content.includes('import React')) {
         issues.push('React used without import');
@@ -93,14 +94,14 @@ const { execSync } = // // require('child_process');
           description: 'Fixed return statement syntax'
 
         issues.push('Invalid return statement syntax')}
-          "replacement": '',
+          'replacement': '',
 
-          "description": 'Removed merge conflict markers'
+          'description': 'Removed merge conflict markers'
 
         },
-        {'"
-          "replacement": '','"
-          "description": 'Removed merge conflict markers'
+        {''
+          'replacement': '',''
+          'description': 'Removed merge conflict markers'
         }
       ];
       for (const fix of fixes) {
@@ -111,6 +112,7 @@ const { execSync } = // // require('child_process');
           this.log(`Applied fix: ${fix.description} in ${filePath}`);
         }
 
+          this.log(`Applied 'fix': ${fix.description} in ${filePath}`)}
           this.log(`Applied "fix": ${fix.description} in ${filePath}`)}
       }
       // Add React import if needed
@@ -135,7 +137,7 @@ const { execSync } = // // require('child_process');
       return false;
     } catch (error) {
 
-        this.log(`Auto-fixed "file": ${filePath}`);
+        this.log(`Auto-fixed 'file': ${filePath}`);
         return true}
       return false} catch (error) {'`
       this.log(`Error auto-fixing file ${filePath}: ${error.message}`, 'ERROR')
@@ -143,14 +145,14 @@ const { execSync } = // // require('child_process');
   async processChanges() {}
     if (this.pendingChanges.size === 0) return;`
     this.log(`Processing ${this.pendingChanges.size} file changes...`)
-    const results = {"
-      "validated": 0,"
-      "issues": 0,"
-      "autoFixed": 0,"
-      "files": []
+    const results = {'
+      'validated': 0,'
+      'issues': 0,'
+      'autoFixed': 0,'
+      'files': []
     }
-  for($2) {"`
-      this.log(`"Validating": ${filePath}`)
+  for($2) {'`
+      this.log(`'Validating': ${filePath}`)
       const issues = await this.validateFile(filePath)
       const typeErrors = await this.quickTypeCheck(filePath)
       results.validated++
@@ -173,32 +175,32 @@ const { execSync } = // // require('child_process');
       });
     }
 
-        "path": filePath,
-        "issues": issues,
-        "typeErrors": typeErrors,
+        'path': filePath,
+        'issues': issues,
+        'typeErrors': typeErrors,
 
-        "timestamp": new Date().toISOString()
+        'timestamp': new Date().toISOString()
 
-        "path": filePath,""
-        "issues": issues,""
-        "typeErrors": typeErrors,""
-        "timestamp": new Date().toISOString()"
+        'path': filePath,''
+        'issues': issues,''
+        'typeErrors': typeErrors,''
+        'timestamp': new Date().toISOString()'
       })}
     // Save results
     const reportPath = path.join(__dirname, 'reports', 'real-time-validation.json');
-    fs.mkdirSync(path.dirname(reportPath), { "recursive": true });
+    fs.mkdirSync(path.dirname(reportPath), { 'recursive': true });
     fs.writeFileSync(reportPath, JSON.stringify(results, null, 2));
 
     this.log(`Validation complete: ${results.validated} files, ${results.issues} with issues, ${results.autoFixed} auto-fixed`);
     this.pendingChanges.clear();
   }
 
-    this.log(`Validation "complete": ${results.validated} files, ${results.issues} with issues, ${results.autoFixed} auto-fixed`);
+    this.log(`Validation 'complete': ${results.validated} files, ${results.issues} with issues, ${results.autoFixed} auto-fixed`);
     this.pendingChanges.clear()}
   setupWatcher() {
     this.log('Setting up file watcher...');
     const watcher = chokidar.watch(this.watchPaths, {
-      "ignored": ['**/node_modules/**',
+      'ignored': ['**/node_modules/**',
         '**/.git/**',
         '**/.next/**',
         '**/dist/**',
@@ -206,11 +208,11 @@ const { execSync } = // // require('child_process');
         '**/*.log',
         '**/*.backup*'
       ],
-      "persistent": true,
-      "ignoreInitial": true
+      'persistent': true,
+      'ignoreInitial': true
     });
     watcher.on('change', (filePath) => {
-      this.log(`File "changed": ${filePath}`);
+      this.log(`File 'changed': ${filePath}`);
       this.pendingChanges.add(filePath);
       // Debounce processing
       if (this.debounceTimer) {
@@ -239,12 +241,12 @@ const { execSync } = // // require('child_process');
         clearTimeout(this.debounceTimer)}
       this.debounceTimer = setTimeout(() => {
         this.processChanges().catch(error => {
-          this.log(`Error processing "changes": ${error.message}`, 'ERROR')})}, this.debounceDelay)});
+          this.log(`Error processing 'changes': ${error.message}`, 'ERROR')})}, this.debounceDelay)});
     watcher.on('add', (filePath) => {
-      this.log(`File "added": ${filePath}`);
+      this.log(`File 'added': ${filePath}`);
       this.pendingChanges.add(filePath)});
     watcher.on('error', (error) => {
-      this.log(`Watcher "error": ${error.message}`, 'ERROR')});
+      this.log(`Watcher 'error': ${error.message}`, 'ERROR')});
     watcher.on('ready', () => {
       this.log('File watcher ready. Monitoring for changes...')});
     return watcher}
@@ -273,7 +275,7 @@ const { execSync } = // // require('child_process');
         this.log('Received SIGINT, closing watcher...');
         watcher.close();
         process.exit(0)})} catch (error) {
-      this.log(`Error in file "watcher": ${error.message}`, 'ERROR')}
+      this.log(`Error in file 'watcher': ${error.message}`, 'ERROR')}
   }
 }
 // Install chokidar if not present
@@ -284,6 +286,7 @@ try {
   console.log('Installing chokidar...');
   execSync('yarn add chokidar', { stdio: 'inherit' });
 }
+}
 // Main execution
 if (require.main === module) {
   const watcher = new FileWatcher();
@@ -293,7 +296,7 @@ module.exports = FileWatcher;
 
   require('chokidar')} catch (error) {
   console.log('Installing chokidar...')
-  execSync('yarn add chokidar', { "stdio": 'inherit' })}
+  execSync('yarn add chokidar', { 'stdio': 'inherit' })}
 // Main execution
   if($2) {}
   const watcher = new FileWatcher()

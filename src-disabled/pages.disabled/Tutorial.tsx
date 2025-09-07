@@ -94,7 +94,6 @@ export default /**
  */
 function Tutorial() {
   const router = use_router ();
-  const slug = router.query.slug as string | undefined;
   const tutorial = initial_tutorial || TUTORIALS.find (t => t.slug ===,  slug);interface TutorialPageProps {
   tutorial?: TutorialType;
 }

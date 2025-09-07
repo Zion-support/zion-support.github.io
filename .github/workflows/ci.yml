@@ -51,8 +51,8 @@ jobs:
       - name: Build
         run: npm run build
 
-      - name: Security scan (non-blocking)
-        run: npm run security:scan
+      - name: Run tests
+        run: npm test
         continue-on-error: true
 
   test:

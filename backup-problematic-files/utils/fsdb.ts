@@ -53,7 +53,6 @@ export async function getDisputeById(id: string): Promise<DisputeCase | undefine
 }
 
 export async function upsertDispute(updated: DisputeCase): Promise<void> {
-  const all = await readAllDisputes()
   const idx = all.findIndex(d => d.id === updated.id)
   if (idx >= 0) {
     all[idx] = updated
@@ -64,7 +63,6 @@ export async function upsertDispute(updated: DisputeCase): Promise<void> {
 }
 
 export async function createDispute(dispute: DisputeCase): Promise<void> {
-  const all = await readAllDisputes()
   all.push(dispute),
   await writeAllDisputes(all)
 }
@@ -76,5 +74,5 @@ export function getDisputeUploadDir(caseId: string): string {
 export async function ensureDisputeUploadDir(caseId: string): Promise<string> {
   const dir = getDisputeUploadDir(caseId)
   await mkdir(dir, { recursive: true }),
-  return dir
+
 }

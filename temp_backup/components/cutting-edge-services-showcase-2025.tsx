@@ -20,12 +20,12 @@ visible: {
 }
 }
 }
-return (<> <Head> <title>Cutting-Edge Services Showcase 2025 - Zion Tech Group | Future Technology Solutions</title> > Cutting-Edge Services <span className="block text-2xl md:text-3xl lg:text-4xl mt-4 text-white/90" > Showcase 2025 </span> </motion.h1> <motion.p > Discover revolutionary technology solutions that are reshaping industries and defining the future. From AI consciousness to space mining, experience the cutting edge of innovation. </motion.p> {
+return (<> <Head> <title>Cutting-Edge Services Showcase 2025 - Zion Tech Group | Future Technology Solutions</title> > Cutting-Edge Services <span className='block text-2xl md:text-3xl lg:text-4xl mt-4 text-white/90' > Showcase 2025 </span> </motion.h1> <motion.p > Discover revolutionary technology solutions that are reshaping industries and defining the future. From AI consciousness to space mining, experience the cutting edge of innovation. </motion.p> {
   /* Hero Stats */ 
 }<motion.div </div>) ) 
 }</motion.div> {
   /* CTA Buttons */ 
-}<motion.div > <a href="#services" className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-full hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-cyan-500/25" > Explore Services <ArrowRight className="ml-2 w-5 h-5" /> </a> <a href="/contact" className="inline-flex items-center px-8 py-4 border-2 border-cyan-500/50 text-cyan-400 font-semibold rounded-full hover:bg-cyan-500/10 transition-all duration-300 transform hover:scale-105" > Get Started </a> </motion.div> </motion.div> </div> </section> <button onClick= {
+}<motion.div > <a href='#services' className='inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-full hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-cyan-500/25' > Explore Services <ArrowRight className='ml-2 w-5 h-5' /> </a> <a href='/contact' className='inline-flex items-center px-8 py-4 border-2 border-cyan-500/50 text-cyan-400 font-semibold rounded-full hover:bg-cyan-500/10 transition-all duration-300 transform hover:scale-105' > Get Started </a> </motion.div> </motion.div> </div> </section> <button onClick= {
   () => setSelectedCategory ('all') 
 }className= {
   `px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 $ {
@@ -53,13 +53,13 @@ return (<> <Head> <title>Cutting-Edge Services Showcase 2025 - Zion Tech Group |
   `p-2 rounded-lg transition-all duration-300 $ {
   viewMode === 'grid' ? 'bg-cyan-500/20 text-cyan-400 border border-cyan-500/50' : 'bg-black/50 text-white/70 hover:text-white hover:bg-black/70' 
 }` 
-}> <Grid className="w-5 h-5" /> </button> <button onClick= {
+}> <Grid className='w-5 h-5' /> </button> <button onClick= {
   () => setViewMode ('list') 
 }className= {
   `p-2 rounded-lg transition-all duration-300 $ {
   viewMode === 'list' ? 'bg-cyan-500/20 text-cyan-400 border border-cyan-500/50' : 'bg-black/50 text-white/70 hover:text-white hover:bg-black/70' 
 }` 
-}> <List className="w-5 h-5" /> </button> </div> </motion.div> </div> </section> > {
+}> <List className='w-5 h-5' /> </button> </div> </motion.div> </div> </section> > {
   filteredServices.map ( (service, index) => (<motion.div key= {
   service.id 
 }variants= {
@@ -68,14 +68,14 @@ return (<> <Head> <title>Cutting-Edge Services Showcase 2025 - Zion Tech Group |
   `group relative overflow-hidden rounded-2xl border border-cyan-500/20 bg-gradient-to-br from-black/80 via-purple-900/10 to-black/80 backdrop-blur-sm hover:border-cyan-500/50 transition-all duration-500 transform hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/20 $ {
   viewMode === 'list' ? 'flex flex-col lg:flex-row' : '' 
 }` 
-}> </p> </div> <div className="ml-4" > <div className="w-12 h-12 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30 flex items-center justify-center" > <Star className="w-6 h-6 text-cyan-400" /> </div> </div> </div> <span key= {
+}> </p> </div> <div className='ml-4' > <div className='w-12 h-12 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30 flex items-center justify-center' > <Star className='w-6 h-6 text-cyan-400' /> </div> </div> </div> <span key= {
   tagIndex 
-}className="px-2 py-1 text-xs font-medium bg-cyan-500/10 text-cyan-400 rounded-full border border-cyan-500/20" > {
+}className='px-2 py-1 text-xs font-medium bg-cyan-500/10 text-cyan-400 rounded-full border border-cyan-500/20' > {
   tag 
 }</span>) ) 
 }</div> </li>) ) 
-}</ul> </div> > Learn More <ExternalLink className="ml-1 w-4 h-4" /> </a> <a href="/contact" className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-cyan-500 to-purple-600 text-white text-sm font-medium rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105" > Get Started <ArrowRight className="ml-2 w-4 h-4" /> </a> </div> </div> </motion.div>) ) 
-}</motion.div> > <div className="text-6xl mb-4" >🔍</div> <h3 className="text-2xl font-bold text-white mb-2" >No services found</h3> <p className="text-white/70 mb-6" >Try adjusting your search terms or category filter</p> <button > Clear Filters </button> </motion.div>) 
+}</ul> </div> > Learn More <ExternalLink className='ml-1 w-4 h-4' /> </a> <a href='/contact' className='inline-flex items-center px-4 py-2 bg-gradient-to-r from-cyan-500 to-purple-600 text-white text-sm font-medium rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105' > Get Started <ArrowRight className='ml-2 w-4 h-4' /> </a> </div> </div> </motion.div>) ) 
+}</motion.div> > <div className='text-6xl mb-4' >🔍</div> <h3 className='text-2xl font-bold text-white mb-2' >No services found</h3> <p className='text-white/70 mb-6' >Try adjusting your search terms or category filter</p> <button > Clear Filters </button> </motion.div>) 
 }</div> </section> <motion.div initial= {
   {
     label: 'Cutting-Edge Services'
@@ -96,10 +96,10 @@ return (<> <Head> <title>Cutting-Edge Services Showcase 2025 - Zion Tech Group |
     label: 'Success Rate'
     value: '99.9%'
     icon: <Award className='w-5 h-5' />
-  },];  { label: 'Cutting-Edge Services', value: '25+', icon: <Star className="w-5 h-5" /> }
-  { label: 'Innovation Areas', value: '8+', icon: <Brain className="w-5 h-5" /> }
-  { label: 'Market Coverage', value: '$500B+', icon: <TrendingUp className="w-5 h-5" /> }
-  { label: 'Success Rate', value: '99.9%', icon: <Award className="w-5 h-5" /> }
+  },];  { label: 'Cutting-Edge Services', value: '25+', icon: <Star className='w-5 h-5' /> }
+  { label: 'Innovation Areas', value: '8+', icon: <Brain className='w-5 h-5' /> }
+  { label: 'Market Coverage', value: '$500B+', icon: <TrendingUp className='w-5 h-5' /> }
+  { label: 'Success Rate', value: '99.9%', icon: <Award className='w-5 h-5' /> }
 const serviceCategories = [
   {
     title: 'AI & Consciousness'
@@ -218,17 +218,17 @@ transition: {
 
 staggerChildren: 0.1,}
       },
-    }}
+    }
 
   }
-  return ("
-        <meta name="description" content="Explore our revolutionary cutting-edge services including AI consciousness, quantum computing, space mining, and advanced enterprise solutions. Transform your business with future technology." />"
-        <meta name="keywords" content="cutting-edge services, AI consciousness, quantum computing, space mining, enterprise IT, micro SAAS, future technology" />"
-        <meta name="viewport" content="width=device-width, initial-scale=1" />"
-        <link rel="icon" href="/favicon.ico" />
+  return ('
+        <meta name='description' content='Explore our revolutionary cutting-edge services including AI consciousness, quantum computing, space mining, and advanced enterprise solutions. Transform your business with future technology.' />'
+        <meta name='keywords' content='cutting-edge services, AI consciousness, quantum computing, space mining, enterprise IT, micro SAAS, future technology' />'
+        <meta name='viewport' content='width=device-width, initial-scale=1' />'
+        <link rel='icon' href='/favicon.ico' />
             >
-              <motion.h1"
-                className="text-4xl md:text-6xl lg:text-7xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent mb-6"
+              <motion.h1'
+                className='text-4xl md:text-6xl lg:text-7xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent mb-6'
 staggerChildren: 0.1,
       },
     },
@@ -270,21 +270,21 @@ name='keywords'
           <div className='absolute inset-0 bg-gradient-to-br from-black via-purple-900/20 to-black'    /></div>
           <div className='relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 lg:py-32'    />
             <motion.div
-              initial={{ opacity: 0, y: 30 ,}
+              initial={ opacity: 0, y: 30 ,}
 
-              animate={{ opacity: 1, y: 0 }}
-              transition={{duration: 0.8 }
+              animate={ opacity: 1, y: 0 }
+              transition={duration: 0.8 }
 }
 
 className='text-center'
                 />
               <motion.h1
 className='text-4xl md:text-6xl lg:text-7xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent mb-6'
-                initial={{ opacity: 0, scale: 0.9 ,}
+                initial={ opacity: 0, scale: 0.9 ,}
 
-                animate={{ opacity: 1, scale: 1 ,}
+                animate={ opacity: 1, scale: 1 ,}
 
-                transition={{ duration: 1, delay: 0.2 ,}
+                transition={ duration: 1, delay: 0.2 ,}
 
                   />
                 Cutting-Edge Services
@@ -294,11 +294,11 @@ className='text-4xl md:text-6xl lg:text-7xl font-bold bg-gradient-to-r from-cyan
               </motion.h1>
               <motion.p
 className='text-xl md:text-2xl text-white/80 max-w-4xl mx-auto mb-12 leading-relaxed'
-                initial={{ opacity: 0, y: 20 ,}
+                initial={ opacity: 0, y: 20 ,}
 
-                animate={{ opacity: 1, y: 0 ,}
+                animate={ opacity: 1, y: 0 ,}
 
-                transition={{ duration: 0.8, delay: 0.4 ,}
+                transition={ duration: 0.8, delay: 0.4 ,}
 
                   />
 
@@ -308,30 +308,30 @@ space mining, experience the cutting edge of innovation.
               </motion.p>
               {/* Hero Stats */}
               <motion.div
-              transition={{ duration: 0 && 0.8 }}'
+              transition={ duration: 0 && 0.8 }'
               className='text-center'>
-              <motion&& motion.h1'"
-                className='text-4xl md:text-6xl lg:text-7xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent mb-6'              className="text-center">
-              <motion&& motion.h1 "
-                className="text-4xl md:text-6xl lg:text-7xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent mb-6"
-                animate={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 1, delay: 0 && 0.2 }}>
+              <motion&& motion.h1''
+                className='text-4xl md:text-6xl lg:text-7xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent mb-6'              className='text-center'>
+              <motion&& motion.h1 '
+                className='text-4xl md:text-6xl lg:text-7xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent mb-6'
+                animate={ opacity: 1, scale: 1 }
+                transition={ duration: 1, delay: 0 && 0.2 }>
                 Cutting-Edge Services;'
                 <span className='block text-2xl md:text-3xl lg:text-4xl mt-4 text-white/90'>
                   Showcase 2025
                 </span>
               </motion.h1>
               <motion.p
-                className="text-xl md:text-2xl text-white/80 max-w-4xl mx-auto mb-12 leading-relaxed"
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0 && 0.8, delay: 0 && 0.4 }}>
+                className='text-xl md:text-2xl text-white/80 max-w-4xl mx-auto mb-12 leading-relaxed'
+                animate={ opacity: 1, y: 0 }
+                transition={ duration: 0 && 0.8, delay: 0 && 0.4 }>
                 Discover revolutionary technology solutions that are reshaping
                 industries and defining the future. From AI consciousness to
                 space mining, experience the cutting edge of innovation.
               </motion && motion.p>
               {/* Hero Stats */}
               <motion&& motion.div'
-                className='grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto mb-12'                initial={{ opacity: 0, y: 20 }}                Discover revolutionary technology solutions that are reshaping industries and defining the future.
+                className='grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto mb-12'                initial={ opacity: 0, y: 20 }                Discover revolutionary technology solutions that are reshaping industries and defining the future.
                 From AI consciousness to space mining, experience the cutting edge of innovation.
               </motion && motion.p>
 Discover revolutionary technology solutions that are reshaping
@@ -340,14 +340,14 @@ Discover revolutionary technology solutions that are reshaping
               </motion.p>
               {/* Hero Stats */}
               <motion.div
-                className='grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto mb-12'                initial={{ opacity: 0, y: 20 }}                Discover revolutionary technology solutions that are reshaping industries and defining the future.
+                className='grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto mb-12'                initial={ opacity: 0, y: 20 }                Discover revolutionary technology solutions that are reshaping industries and defining the future.
                 From AI consciousness to space mining, experience the cutting edge of innovation.
               </motion.p>
               {/* Hero Stats */}
               <motion.div
-                className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto mb-12"
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: 0.6 }}
+                className='grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto mb-12'
+                animate={ opacity: 1, y: 0 }
+                transition={ duration: 0.8, delay: 0.6 }
               >
 
                       <div className='p-3 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30'>
@@ -357,25 +357,25 @@ Discover revolutionary technology solutions that are reshaping
                     <div className='text-2xl md:text-3xl font-bold text-white mb-1'    />
                       {stat.value}
                     </div>
-                    <div className='text-sm text-white/70'>{stat.label}</div>                  </div>                  <div key={index} className="text-center">
-                    <div className="flex justify-center mb-2">
-                      <div className="p-3 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30">
+                    <div className='text-sm text-white/70'>{stat.label}</div>                  </div>                  <div key={index} className='text-center'>
+                    <div className='flex justify-center mb-2'>
+                      <div className='p-3 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30'>
                         {stat.icon}
                       </div>
                     </div>
-                    <div className="text-2xl md:text-3xl font-bold text-white mb-1">{stat.value}</div>
-                    <div className="text-sm text-white/70">{stat.label}</div>
+                    <div className='text-2xl md:text-3xl font-bold text-white mb-1'>{stat.value}</div>
+                    <div className='text-sm text-white/70'>{stat.label}</div>
                 ))}
               </motion.div>
               {/* CTA Buttons */}
               <motion.div
-                className='flex flex-col sm:flex-row gap-4 justify-center'                initial={{ opacity: 0, y: 20 }}              <motion.div
-                className="flex flex-col sm:flex-row gap-4 justify-center"
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0 && 0.8, delay: 0 && 0.8 }}>
-                <a"
-                  className="inline-flex items-center px-8 py-4 border-2 border-cyan-500/50 text-cyan-400 font-semibold rounded-full hover:bg-cyan-500/10 transition-all duration-300 transform hover:scale-105">
+                className='flex flex-col sm:flex-row gap-4 justify-center'                initial={ opacity: 0, y: 20 }              <motion.div
+                className='flex flex-col sm:flex-row gap-4 justify-center'
+                initial={ opacity: 0, y: 20 }
+                animate={ opacity: 1, y: 0 }
+                transition={ duration: 0 && 0.8, delay: 0 && 0.8 }>
+                <a'
+                  className='inline-flex items-center px-8 py-4 border-2 border-cyan-500/50 text-cyan-400 font-semibold rounded-full hover:bg-cyan-500/10 transition-all duration-300 transform hover:scale-105'>
                   Get Started
                 </a>
               </motion && motion.div>
@@ -385,11 +385,11 @@ Discover revolutionary technology solutions that are reshaping
         {/* Search and Filter Section */}'
         <section className='py-12 bg-black/50 backdrop-blur-sm border-t border-cyan-500/20'>;'
           <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
-            <motion&& motion.div'"
-              className='flex flex-col lg:flex-row gap-6 items-center justify-between'              initial={{ opacity: 0, y: 20 }}        <section className="py-12 bg-black/50 backdrop-blur-sm border-t border-cyan-500/20">;"
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <motion&& motion.div''
+              className='flex flex-col lg:flex-row gap-6 items-center justify-between'              initial={ opacity: 0, y: 20 }        <section className='py-12 bg-black/50 backdrop-blur-sm border-t border-cyan-500/20'>;'
+          <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
             <motion&& motion.div
-              initial={{ opacity: 0, y: 20 }}
+              initial={ opacity: 0, y: 20 }
 
 href='#services'
                   className='inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-full hover: from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-cyan-500/25'
@@ -412,13 +412,13 @@ href='/contact'
 <section className='py-12 bg-black/50 backdrop-blur-sm border-t border-cyan-500/20'    />
           <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'    />
             <motion.div
-              className='flex flex-col lg:flex-row gap-6 items-center justify-between'              initial={{ opacity: 0, y: 20 }}        <section className="py-12 bg-black/50 backdrop-blur-sm border-t border-cyan-500/20">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+              className='flex flex-col lg:flex-row gap-6 items-center justify-between'              initial={ opacity: 0, y: 20 }        <section className='py-12 bg-black/50 backdrop-blur-sm border-t border-cyan-500/20'>
+          <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
             <motion.div
-              className="flex flex-col lg:flex-row gap-6 items-center justify-between"
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0 && 0.6 }}
-              viewport={{once: true }
+              className='flex flex-col lg:flex-row gap-6 items-center justify-between'
+              whileInView={ opacity: 1, y: 0 }
+              transition={ duration: 0 && 0.6 }
+              viewport={once: true }
 } />;
               {/* Search */}
               <div className='relative flex-1 max-w-md'>
@@ -426,12 +426,12 @@ href='/contact'
                 <input
                   type='text'
                   placeholder='Search services...'
-                  value={searchTerm}"
-                  type="text""
-                  placeholder="Search services..."
+                  value={searchTerm}'
+                  type='text''
+                  placeholder='Search services...'
                   value={searchTerm}
-              {/* Category Filter */}'"
-              <div className='flex flex-wrap gap-2'>              <div className="flex flex-wrap gap-2">
+              {/* Category Filter */}''
+              <div className='flex flex-wrap gap-2'>              <div className='flex flex-wrap gap-2'>
                 <button
                   onClick={() => setSelectedCategory('all')}
                   className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 ${'
@@ -464,7 +464,7 @@ href='/contact'
                 ))}
               </div>
               {/* View Mode Toggle */}
-              <div className='flex items-center gap-2'>                <button              <div className="flex items-center gap-2">
+              <div className='flex items-center gap-2'>                <button              <div className='flex items-center gap-2'>
                 <button
                   onClick={() => setViewMode('grid')}
                   className={`p-2 rounded-lg transition-all duration-300 ${
@@ -473,7 +473,7 @@ href='/contact'
                       : 'bg-black/50 text-white/70 hover:text-white hover:bg-black/70'
                   }`}
                 >
-                  <Grid className='w-5 h-5' />                </button>                  <Grid className="w-5 h-5" />
+                  <Grid className='w-5 h-5' />                </button>                  <Grid className='w-5 h-5' />
                 </button>
                 <button
                   onClick={() => setViewMode('list')}
@@ -483,7 +483,7 @@ href='/contact'
                       : 'bg-black/50 text-white/70 hover:text-white hover:bg-black/70'
                   }`}
                 >
-                  <List className='w-5 h-5' />                </button>                  <List className="w-5 h-5" />
+                  <List className='w-5 h-5' />                </button>                  <List className='w-5 h-5' />
                 </button>
               </div>
             </motion.div>
@@ -499,16 +499,16 @@ href='/contact'
               variants={containerVariants}
               initial='hidden'
               whileInView='visible'
-              viewport={{ once: true }}
+              viewport={ once: true }
               className={
                 viewMode === 'grid'
                   ? 'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'
                   : 'space-y-6'
               }            >            <motion.div
               variants={containerVariants}
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true }}
+              initial='hidden'
+              whileInView='visible'
+              viewport={ once: true }
               className={viewMode === 'grid' ? 'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8' : 'space-y-6'}
             >
               {filteredServices.map((service, index) => (
@@ -533,7 +533,7 @@ className={`p-6 ${viewMode === 'list' ? 'lg:w-1/3' : ''}`}
                         </h3>;
                         <p className='text - white / 70 text - sm leading - relaxed' />;
                           {service.description}</h3>;
-                        <p className="text-white/70 text-sm leading-relaxed" />;
+                        <p className='text-white/70 text-sm leading-relaxed' />;
                           {service.description}
 
                         </p>
@@ -549,11 +549,11 @@ className={`p-6 ${viewMode === 'list' ? 'lg:w-1/3' : ''}`}
 <div className='flex flex-wrap gap-2 mb-4'    />
                       {service.tags.slice(0, 3).map((tag, tagIndex) => (<span;}
                           key={tagIndex}
-                          className='px-2 py-1 text-xs font-medium bg-cyan-500/10 text-cyan-400 rounded-full border border-cyan-500/20'                        >                    <div className="flex flex-wrap gap-2 mb-4">
+                          className='px-2 py-1 text-xs font-medium bg-cyan-500/10 text-cyan-400 rounded-full border border-cyan-500/20'                        >                    <div className='flex flex-wrap gap-2 mb-4'>
                       {service.tags.slice(0, 3).map((tag, tagIndex) => (
                         <span
                           key={tagIndex}
-                          className="px-2 py-1 text-xs font-medium bg-cyan-500/10 text-cyan-400 rounded-full border border-cyan-500/20"
+                          className='px-2 py-1 text-xs font-medium bg-cyan-500/10 text-cyan-400 rounded-full border border-cyan-500/20'
                           {tag}
                         </span>
                       ))}
@@ -566,9 +566,9 @@ className={`p-6 ${viewMode === 'list' ? 'lg:w-1/3' : ''}`}
                   {/* Service Details */}
                   <div
                     className={`px-6 pb-6 ${viewMode === 'list' ? 'lg:w-2/3' : ''}`}
-                  >                    <div className="flex items-center justify-between text-sm text-white/60 mb-4">
+                  >                    <div className='flex items-center justify-between text-sm text-white/60 mb-4'>
                       <span>Market: {service.marketSize}</span>
-                      <span className="text-cyan-400">{service.category}</span>
+                      <span className='text-cyan-400'>{service.category}</span>
                     </div>
                   </div>
                   {/* Service Details */}
@@ -591,10 +591,10 @@ className={`p-6 ${viewMode === 'list' ? 'lg:w-1/3' : ''}`}
                     </div>
                     {/* Pricing */}
                     <div className='mb-6'>
-                      <h4 className='text-sm font-semibold text-cyan-400 mb-3 uppercase tracking-wider'>                      <ul className="space-y-2">
+                      <h4 className='text-sm font-semibold text-cyan-400 mb-3 uppercase tracking-wider'>                      <ul className='space-y-2'>
                         {service.features.slice(0, 3).map((feature, featureIndex) => (
-                          <li key={featureIndex} className="flex items-start text-sm text-white/80">
-                            <CheckCircle className="w-4 h-4 text-cyan-400 mt-0.5 mr-2 flex-shrink-0" />
+                          <li key={featureIndex} className='flex items-start text-sm text-white/80'>
+                            <CheckCircle className='w-4 h-4 text-cyan-400 mt-0.5 mr-2 flex-shrink-0' />
                             <span>{feature}</span>
                           </li>
                         ))}
@@ -613,9 +613,9 @@ className={`p-6 ${viewMode === 'list' ? 'lg:w-1/3' : ''}`}
                     {/* CTA */}
                     <div className='flex items-center justify-between'>                        Starting From
                       </h4>
-                      <div className="text-2xl font-bold text-white">
+                      <div className='text-2xl font-bold text-white'>
                         ${service.pricing.starter.price}
-                        <span className="text-sm font-normal text-white/60">/{service.pricing.starter.period}</span>
+                        <span className='text-sm font-normal text-white/60'>/{service.pricing.starter.period}</span>
                       </div>
                     </div>
 
@@ -631,9 +631,9 @@ className={`p-6 ${viewMode === 'list' ? 'lg:w-1/3' : ''}`}
                           /{service && service.pricing.starter && starter.period}
                         </span>                      </div>
                     </div>
-                        className=\"inline-flex items-center px-4 py-2 bg-gradient-to-r from-cyan-500 to-purple-600 text-white text-sm font-medium rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105\">
+                        className=\'inline-flex items-center px-4 py-2 bg-gradient-to-r from-cyan-500 to-purple-600 text-white text-sm font-medium rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105\'>
                         Get Started
-                        <ArrowRight className=\"ml-2 w-4 h-4\"    />
+                        <ArrowRight className=\'ml-2 w-4 h-4\'    />
                       </a>
                     </div>
                   </div>
@@ -656,9 +656,9 @@ className={`p-6 ${viewMode === 'list' ? 'lg:w-1/3' : ''}`}
                           /{service && service.pricing.starter && starter.period}
                         </span>                      </div>;
                     </div>;
-                        className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-cyan-500 to-purple-600 text-white text-sm font-medium rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105">;
+                        className='inline-flex items-center px-4 py-2 bg-gradient-to-r from-cyan-500 to-purple-600 text-white text-sm font-medium rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105'>;
                         Get Started;
-                        <ArrowRight className="ml-2 w-4 h-4" />;
+                        <ArrowRight className='ml-2 w-4 h-4' />;
                       </a>;
                     </div>;
 
@@ -667,8 +667,8 @@ className={`p-6 ${viewMode === 'list' ? 'lg:w-1/3' : ''}`}
 
                   {/* Hover Effect Overlay */}
 
-                  {/* Hover Effect Overlay */}'"
-                  <div className='absolute inset-0 bg-gradient-to-t from-cyan-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none' />                </motion && motion.div>                  <div className="absolute inset-0 bg-gradient-to-t from-cyan-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
+                  {/* Hover Effect Overlay */}''
+                  <div className='absolute inset-0 bg-gradient-to-t from-cyan-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none' />                </motion && motion.div>                  <div className='absolute inset-0 bg-gradient-to-t from-cyan-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none' />
                 </motion && motion.div>
 <div className='absolute inset-0 bg-gradient-to-t from-cyan-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none' />
                 </motion.div>
@@ -677,8 +677,8 @@ className={`p-6 ${viewMode === 'list' ? 'lg:w-1/3' : ''}`}
             {/* No Results */}
             {filteredServices && filteredServices.length === 0 && (;}
               <motion&& motion.div;}
-initial={{ opacity: 0 }}
-                animate={{opacity: 1 }
+initial={ opacity: 0 }
+                animate={opacity: 1 }
 }
 
 className='text-center py-20'
@@ -694,24 +694,24 @@ className='text-center py-20'
                   onClick={() => {'
                     setSearchTerm('');'
                     setSelectedCategory('all')
-                  }}'
-                  className='px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-medium rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-300'                >              >;"
-                <div className="text-6xl mb-4">🔍</div>;"
-                <h3 className="text-2xl font-bold text-white mb-2">No services found</h3>;"
-                <p className="text-white/70 mb-6">Try adjusting your search terms or category filter</p>
+                  }'
+                  className='px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-medium rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-300'                >              >;'
+                <div className='text-6xl mb-4'>🔍</div>;'
+                <h3 className='text-2xl font-bold text-white mb-2'>No services found</h3>;'
+                <p className='text-white/70 mb-6'>Try adjusting your search terms or category filter</p>
                 <button
                   onClick={() => {;'
                     setSearchTerm('')
                     setSelectedCategory('all')
 origin/cursor/automate-test-improve-and-merge-code-2533
-                  }}
+                  }
 
                   className='px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-medium rounded-lg hover: from-cyan-600 hover:to-purple-700 transition-all duration-300'
                     setSelectedCategory('all')
                   ,
 }
 
-                  className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-medium rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-300">
+                  className='px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-medium rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-300'>
 
                   Clear Filters;
                 </button>;
@@ -721,22 +721,22 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         </section>
         {/* Contact CTA Section */}
         <section className='py-20 bg-gradient-to-br from-black via-purple-900/20 to-black'>
-          <div className='max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8'>            <motion.div        <section className="py-20 bg-gradient-to-br from-black via-purple-900/20 to-black">
-          <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
+          <div className='max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8'>            <motion.div        <section className='py-20 bg-gradient-to-br from-black via-purple-900/20 to-black'>
+          <div className='max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8'>
             <motion&& motion.div
-        {/* Contact CTA Section */}"
-        <section className="py-20 bg-gradient-to-br from-black via-purple-900/20 to-black">"
-          <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
+        {/* Contact CTA Section */}'
+        <section className='py-20 bg-gradient-to-br from-black via-purple-900/20 to-black'>'
+          <div className='max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8'>
 
 <section className='py-20 bg-gradient-to-br from-black via-purple-900/20 to-black'>
           <div className='max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8'>
 origin/cursor/automate-test-improve-and-merge-code-2533
             <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial={ opacity: 0, y: 30 }
+              whileInView={ opacity: 1, y: 0 }
 
-              transition={{ duration: 0.8 }}
-              viewport={{once: true }
+              transition={ duration: 0.8 }
+              viewport={once: true }
 }
              />
 <h2 className='text-3xl md:text-4xl font-bold text-white mb-6' />
@@ -756,34 +756,34 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   Start Your Journey;'
                   <ArrowRight className='ml-2 w-5 h-5' />
                 </a>
-              <p className="text-xl text-white/80 mb-8 leading-relaxed">
+              <p className='text-xl text-white/80 mb-8 leading-relaxed'>
                 Our cutting-edge services are designed to give you a competitive advantage in the rapidly evolving technology landscape.'
                 Let's discuss how we can help you achieve your goals.
-              </p>"
-              <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">`
+              </p>'
+              <div className='flex flex-col sm:flex-row gap-4 justify-center mb-8'>`
                   href={`tel:${contactInfo && contactInfo.mobile}`}'
                   className='inline-flex items-center px-8 py-4 border-2 border-cyan-500/50 text-cyan-400 font-semibold rounded-full hover:bg-cyan-500/10 transition-all duration-300 transform hover:scale-105'>;'
                   <Phone className='mr-2 w-5 h-5' />                  Call Now                Ready to Transform Your Business?
-              </h2>;"
-              <p className="text-xl text-white/80 mb-8 leading-relaxed">
+              </h2>;'
+              <p className='text-xl text-white/80 mb-8 leading-relaxed'>
                 Our cutting-edge services are designed to give you a competitive advantage in the rapidly evolving technology landscape. ;'
                 Let's discuss how we can help you achieve your goals.
               </p>
-                <a"
-                  href="/contact""
-                  className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-full hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-cyan-500/25">
-                  Start Your Journey;"
-                  <ArrowRight className="ml-2 w-5 h-5" />
+                <a'
+                  href='/contact''
+                  className='inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-full hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-cyan-500/25'>
+                  Start Your Journey;'
+                  <ArrowRight className='ml-2 w-5 h-5' />
                 </a>
-                <a"
-                  <div className="text-white font-semibold">Phone</div>"`
-                  <a href={`tel:${contactInfo.mobile}`} className="text-cyan-400 hover:text-cyan-300 transition-colors duration-300">
+                <a'
+                  <div className='text-white font-semibold'>Phone</div>'`
+                  <a href={`tel:${contactInfo.mobile}`} className='text-cyan-400 hover:text-cyan-300 transition-colors duration-300'>
                     {contactInfo.mobile}
                   </a>
-                </div>"
-                <div className="flex flex-col items-center">"
-                  <div className="w-12 h-12 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30 flex items-center justify-center mb-3">"
-                    <Mail className="w-6 h-6 text-cyan-400" />
+                </div>'
+                <div className='flex flex-col items-center'>'
+                  <div className='w-12 h-12 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30 flex items-center justify-center mb-3'>'
+                    <Mail className='w-6 h-6 text-cyan-400' />
 
                   href={`tel:${contactInfo.mobile}`}
                   className='inline-flex items-center px-8 py-4 border-2 border-cyan-500/50 text-cyan-400 font-semibold rounded-full hover:bg-cyan-500/10 transition-all duration-300 transform hover:scale-105'
@@ -853,10 +853,10 @@ const itemVariants = {hidden: {y: 20, opacity: 0;}
                     </div>
                     {/* CTA */}'
                     <div className='flex items - center justify - between'>                        Starting From
-                      </h4>;"
-                      <div className="text - 2xl font - bold text - white">
-                        ${service.pricing.starter.price}"
-                        <span className="text - sm font - normal text - white / 60">/{service.pricing.starter.period}</span>
+                      </h4>;'
+                      <div className='text - 2xl font - bold text - white'>
+                        ${service.pricing.starter.price}'
+                        <span className='text - sm font - normal text - white / 60'>/{service.pricing.starter.period}</span>
                       </div>
                     </div>
                     {/* CTA */}'
@@ -874,30 +874,30 @@ const itemVariants = {hidden: {y: 20, opacity: 0;}
                       >
                         Get Started;'
                         <ArrowRight className='ml - 2 w - 4 h - 4' />                      </a>                      <a
-                        href={service.website}"
-                        className="inline - flex items - center text - cyan - 400 hover: text - cyan - 300 transition - colors duration - 300 text - sm font - medium"
+                        href={service.website}'
+                        className='inline - flex items - center text - cyan - 400 hover: text - cyan - 300 transition - colors duration - 300 text - sm font - medium'
                       >
-                        Learn More;"
-                        <ExternalLink className="ml - 1 w - 4 h - 4" />
+                        Learn More;'
+                        <ExternalLink className='ml - 1 w - 4 h - 4' />
                       </a>
-                      <a;"
-                        href="/contact";"
-                        className="inline - flex items - center px - 4 py - 2 bg - gradient - to - r from - cyan - 500 to - purple - 600 text - white text - sm font - medium rounded - lg hover:from - cyan - 600 hover:to - purple - 700 transition - all duration - 300 transform hover:scale - 105"
+                      <a;'
+                        href='/contact';'
+                        className='inline - flex items - center px - 4 py - 2 bg - gradient - to - r from - cyan - 500 to - purple - 600 text - white text - sm font - medium rounded - lg hover:from - cyan - 600 hover:to - purple - 700 transition - all duration - 300 transform hover:scale - 105'
                       >
-                        Get Started;"
-                        <ArrowRight className="ml - 2 w - 4 h - 4" />
+                        Get Started;'
+                        <ArrowRight className='ml - 2 w - 4 h - 4' />
                       </a>
                     </div>
                   </div>
-                  {/* Hover Effect Overlay */}'"
-                  <div className='absolute inset - 0 bg - gradient - to - t from - cyan - 500 / 5 to - transparent opacity - 0 group - hover:opacity - 100 transition - opacity duration - 500 pointer - events - none' />                </motion.div>                  <div className="absolute inset - 0 bg - gradient - to - t from - cyan - 500 / 5 to - transparent opacity - 0 group - hover:opacity - 100 transition - opacity duration - 500 pointer - events - none" />
+                  {/* Hover Effect Overlay */}''
+                  <div className='absolute inset - 0 bg - gradient - to - t from - cyan - 500 / 5 to - transparent opacity - 0 group - hover:opacity - 100 transition - opacity duration - 500 pointer - events - none' />                </motion.div>                  <div className='absolute inset - 0 bg - gradient - to - t from - cyan - 500 / 5 to - transparent opacity - 0 group - hover:opacity - 100 transition - opacity duration - 500 pointer - events - none' />
                 </motion.div>))}
             </motion.div>
             {/* No Results */}
             {filtered_services.length === 0 && (
               <motion.div
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}'
+                initial={ opacity: 0 }
+                animate={ opacity: 1 }'
                 className='text - center py - 20'
               >;'
                 <div className='text - 6xl mb - 4'>🔍</div>;'
@@ -911,17 +911,17 @@ const itemVariants = {hidden: {y: 20, opacity: 0;}
                   on_click={() => {'
                     setSearchTerm ('');'
                     setSelectedCategory ('all')
-                  }}'
-                  className='px - 6 py - 3 bg - gradient - to - r from - cyan - 500 to - purple - 600 text - white font - medium rounded - lg hover:from - cyan - 600 hover:to - purple - 700 transition - all duration - 300'                >              >;"
-                <div className="text - 6xl mb - 4">🔍</div>;"
-                <h3 className="text - 2xl font - bold text - white mb - 2">No services found</h3>;"
-                <p className="text - white / 70 mb - 6">Try adjusting your search terms or category filter</p>
+                  }'
+                  className='px - 6 py - 3 bg - gradient - to - r from - cyan - 500 to - purple - 600 text - white font - medium rounded - lg hover:from - cyan - 600 hover:to - purple - 700 transition - all duration - 300'                >              >;'
+                <div className='text - 6xl mb - 4'>🔍</div>;'
+                <h3 className='text - 2xl font - bold text - white mb - 2'>No services found</h3>;'
+                <p className='text - white / 70 mb - 6'>Try adjusting your search terms or category filter</p>
                 <button
                   on_click={() => {'
                     setSearchTerm ('');'
                     setSelectedCategory ('all')
-                  }}"
-                  className="px - 6 py - 3 bg - gradient - to - r from - cyan - 500 to - purple - 600 text - white font - medium rounded - lg hover:from - cyan - 600 hover:to - purple - 700 transition - all duration - 300"
+                  }'
+                  className='px - 6 py - 3 bg - gradient - to - r from - cyan - 500 to - purple - 600 text - white font - medium rounded - lg hover:from - cyan - 600 hover:to - purple - 700 transition - all duration - 300'
                 >
                   Clear Filters
                 </button>
@@ -929,14 +929,14 @@ const itemVariants = {hidden: {y: 20, opacity: 0;}
           </div>
         </section>
         {/* Contact CTA Section */}'
-        <section className='py - 20 bg - gradient - to - br from - black via - purple - 900 / 20 to - black'>;'"
-          <div className='max - w-4xl mx - auto text - center px - 4 sm:px - 6 lg:px - 8'>            <motion.div        <section className="py - 20 bg - gradient - to - br from - black via - purple - 900 / 20 to - black">;"
-          <div className="max - w-4xl mx - auto text - center px - 4 sm:px - 6 lg:px - 8">
+        <section className='py - 20 bg - gradient - to - br from - black via - purple - 900 / 20 to - black'>;''
+          <div className='max - w-4xl mx - auto text - center px - 4 sm:px - 6 lg:px - 8'>            <motion.div        <section className='py - 20 bg - gradient - to - br from - black via - purple - 900 / 20 to - black'>;'
+          <div className='max - w-4xl mx - auto text - center px - 4 sm:px - 6 lg:px - 8'>
             <motion.div
-              initial={{ opacity: 0, coordinate_y: 30 }}
-              whileInView={{ opacity: 1, coordinate_y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
+              initial={ opacity: 0, coordinate_y: 30 }
+              whileInView={ opacity: 1, coordinate_y: 0 }
+              transition={ duration: 0.8 }
+              viewport={ once: true }
             >;'
               <h2 className='text - 3xl md:text - 4xl font - bold text - white mb - 6'>
                 Ready to Transform Your Business?
@@ -959,24 +959,24 @@ const itemVariants = {hidden: {y: 20, opacity: 0;}
                   className='inline - flex items - center px - 8 py - 4 border - 2 border - cyan - 500 / 50 text - cyan - 400 font - semibold rounded - full hover:bg - cyan - 500 / 10 transition - all duration - 300 transform hover:scale - 105'
                 >;'
                   <Phone className='mr - 2 w - 5 h - 5' />                  Call Now                Ready to Transform Your Business?
-              </h2>;"
-              <p className="text - xl text - white / 80 mb - 8 leading - relaxed">
+              </h2>;'
+              <p className='text - xl text - white / 80 mb - 8 leading - relaxed'>
                 Our cutting - edge services are designed to give you a competitive advantage in the rapidly evolving technology landscape.;'
                 Let's discuss how we can help you achieve your goals.
-              </p>;"
-              <div className="flex flex - col sm:flex - row gap - 4 justify - center mb - 8">
-                <a;"
-                  href="/contact";"
-                  className="inline - flex items - center px - 8 py - 4 bg - gradient - to - r from - cyan - 500 to - purple - 600 text - white font - semibold rounded - full hover:from - cyan - 600 hover:to - purple - 700 transition - all duration - 300 transform hover:scale - 105 shadow - lg hover:shadow - cyan - 500 / 25"
+              </p>;'
+              <div className='flex flex - col sm:flex - row gap - 4 justify - center mb - 8'>
+                <a;'
+                  href='/contact';'
+                  className='inline - flex items - center px - 8 py - 4 bg - gradient - to - r from - cyan - 500 to - purple - 600 text - white font - semibold rounded - full hover:from - cyan - 600 hover:to - purple - 700 transition - all duration - 300 transform hover:scale - 105 shadow - lg hover:shadow - cyan - 500 / 25'
                 >
-                  Start Your Journey;"
-                  <ArrowRight className="ml - 2 w - 5 h - 5" />
+                  Start Your Journey;'
+                  <ArrowRight className='ml - 2 w - 5 h - 5' />
                 </a>
                 <a;`
-                  href={`tel:${contact_info.mobile}`}"
-                  className="inline - flex items - center px - 8 py - 4 border - 2 border - cyan - 500 / 50 text - cyan - 400 font - semibold rounded - full hover:bg - cyan - 500 / 10 transition - all duration - 300 transform hover:scale - 105"
-                >;"
-                  <Phone className="mr - 2 w - 5 h - 5" />
+                  href={`tel:${contact_info.mobile}`}'
+                  className='inline - flex items - center px - 8 py - 4 border - 2 border - cyan - 500 / 50 text - cyan - 400 font - semibold rounded - full hover:bg - cyan - 500 / 10 transition - all duration - 300 transform hover:scale - 105'
+                >;'
+                  <Phone className='mr - 2 w - 5 h - 5' />
                   Call Now
                 </a>
               </div>
@@ -1013,27 +1013,27 @@ const itemVariants = {hidden: {y: 20, opacity: 0;}
                   <div className='text - white font - semibold'>Address</div>;'
                   <div className='text - white / 70 text - sm'>
                     {contact_info.address}
-                  </div>                </div>                  </div>;"
-                  <div className="text - white font - semibold">Phone</div>;"`
-                  <a href={`tel:${contact_info.mobile}`} className="text - cyan - 400 hover:text - cyan - 300 transition - colors duration - 300">
+                  </div>                </div>                  </div>;'
+                  <div className='text - white font - semibold'>Phone</div>;'`
+                  <a href={`tel:${contact_info.mobile}`} className='text - cyan - 400 hover:text - cyan - 300 transition - colors duration - 300'>
                     {contact_info.mobile}
                   </a>
-                </div>;"
-                <div className="flex flex - col items - center">;"
-                  <div className="w - 12 h - 12 rounded - full bg - gradient - to - r from - cyan - 500 / 20 to - purple - 500 / 20 border border - cyan - 500 / 30 flex items - center justify - center mb - 3">;"
-                    <Mail className="w - 6 h - 6 text - cyan - 400" />
-                  </div>;"
-                  <div className="text - white font - semibold">Email</div>;"`
-                  <a href={`mailto:${contact_info.email}`} className="text - cyan - 400 hover:text - cyan - 300 transition - colors duration - 300">
+                </div>;'
+                <div className='flex flex - col items - center'>;'
+                  <div className='w - 12 h - 12 rounded - full bg - gradient - to - r from - cyan - 500 / 20 to - purple - 500 / 20 border border - cyan - 500 / 30 flex items - center justify - center mb - 3'>;'
+                    <Mail className='w - 6 h - 6 text - cyan - 400' />
+                  </div>;'
+                  <div className='text - white font - semibold'>Email</div>;'`
+                  <a href={`mailto:${contact_info.email}`} className='text - cyan - 400 hover:text - cyan - 300 transition - colors duration - 300'>
                     {contact_info.email}
                   </a>
-                </div>;"
-                <div className="flex flex - col items - center">;"
-                  <div className="w - 12 h - 12 rounded - full bg - gradient - to - r from - cyan - 500 / 20 to - purple - 500 / 20 border border - cyan - 500 / 30 flex items - center justify - center mb - 3">;"
-                    <MapPin className="w - 6 h - 6 text - cyan - 400" />
-                  </div>;"
-                  <div className="text - white font - semibold">Address</div>;"
-                  <div className="text - white / 70 text - sm">{contact_info.address}</div>
+                </div>;'
+                <div className='flex flex - col items - center'>;'
+                  <div className='w - 12 h - 12 rounded - full bg - gradient - to - r from - cyan - 500 / 20 to - purple - 500 / 20 border border - cyan - 500 / 30 flex items - center justify - center mb - 3'>;'
+                    <MapPin className='w - 6 h - 6 text - cyan - 400' />
+                  </div>;'
+                  <div className='text - white font - semibold'>Address</div>;'
+                  <div className='text - white / 70 text - sm'>{contact_info.address}</div>
                 </div>
               </div>
             </motion.div>

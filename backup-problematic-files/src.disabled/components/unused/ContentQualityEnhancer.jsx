@@ -1,0 +1,10 @@
+const ContentQualityEnhancer = ({ className }) => {
+  return ('
+    <div className={className || ''}>'
+</div>
+      <h1>ContentQualityEnhancer</h1>
+      <p>This component is under development.</p>
+    </div>
+
+  )
+};

@@ -1,0 +1,35 @@
+
+<<<<<<< HEAD
+import { useParams, Link } from 'react-router-dom';
+import { motion } from 'framer-motion';
+import { 
+  Calendar, 
+  User, 
+  Clock, 
+  ArrowLeft,
+  Tag,
+  Share2,
+  BookOpen,
+  MessageCircle,
+  Heart,
+  Eye,
+  ArrowRight
+} from "lucide-react";
+=======
+import React from 'react'
+import { SEO } from '@/components/SEO'
+>>>>>>> e220500ccca44de2253ff84a9759db22263da039
+
+const BlogPost: React.FC = () => {
+	return (
+		<div className="min-h-screen bg-slate-950 text-white py-16">
+			<SEO title="Blog Post" description="Read our latest insights and articles from Zion Tech Group." />
+			<div className="container mx-auto max-w-3xl px-6">
+				<h1 className="text-3xl font-bold mb-4">Blog Post</h1>
+				<p className="text-slate-300">Coming soon.</p>
+			</div>
+		</div>
+	)
+}
+
+export default BlogPost

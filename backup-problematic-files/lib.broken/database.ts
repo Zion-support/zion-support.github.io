@@ -6,7 +6,6 @@ interface DatabaseConfig {
   maxPoolSize?: number;
   minPoolSize?: number;
   maxIdleTimeMS?: number;'
-
 class DatabaseManager {
   private static "instance": DatabaseManager;
   private client: any = null;

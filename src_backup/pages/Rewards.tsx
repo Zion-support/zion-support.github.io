@@ -10,11 +10,12 @@ return (
               <p className='font-medium'>{r && r.title}</p>;
               <p className='text-sm text-muted-foreground'>{r && r.cost} pts</p>;
             </div>;
-            <Gift className='h-5 w-5' />          </li>            <Gift className="h-5 w-5" />;
+            <Gift className='h-5 w-5' />          </li>            <Gift className='h-5 w-5' />;
           </li>;
 
 import { Gift } from 'lucide-react'
 
+<<<<<<< HEAD
 :src/pages/Rewards.tsx
 const REWARDS = [
   { id: 'coupon5', title: '$5 Coupon', cost: 500 }
@@ -39,13 +40,15 @@ const REWARDS = [
               <p className='font-medium'>{r.title}</p>
               <p className='text-sm text-muted-foreground'>{r.cost} pts</p>
             </div>
-            <Gift className='h-5 w-5' />          </li>            <Gift className="h-5 w-5" />
+            <Gift className='h-5 w-5' />          </li>            <Gift className='h-5 w-5' />
           </li>
         ))}
       </ul>
     </div>
   )
 }
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
 
 const REWARDS = [
   { id: 'coupon5', title: '$5 Coupon', cost: 500 },
@@ -68,14 +71,14 @@ const REWARDS = [
 ]
 origin/cursor/automate-test-improve-and-merge-code-2533
   return (
-    <div className="container max-w-xl py-10">
-      <h1 className="text-3xl font-bold mb-6">Rewards</h1>
-      <ul className="space-y-4">
+    <div className='container max-w-xl py-10'>
+      <h1 className='text-3xl font-bold mb-6'>Rewards</h1>
+      <ul className='space-y-4'>
         {REWARDS.map((r) => (
-          <li key={r.id} className="flex justify-between items-center border rounded-md p-4">
+          <li key={r.id} className='flex justify-between items-center border rounded-md p-4'>
             <div>
-              <p className="font-medium">{r.title}</p>
-              <p className="text-sm text-muted-foreground">{r.cost} pts</p>
+              <p className='font-medium'>{r.title}</p>
+              <p className='text-sm text-muted-foreground'>{r.cost} pts</p>
             </div>
             <Gift className='h-5 w-5' />
 origin/cursor/automate-test-improve-and-merge-code-2533
@@ -88,6 +91,4 @@ import { Gift } from 'lucide-react'
     </div>
   );
 }
-:src/pages/Rewards.tsx
-;
 origin/cursor/automate-test-improve-and-merge-code-2533

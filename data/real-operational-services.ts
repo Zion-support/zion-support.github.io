@@ -13,7 +13,6 @@ export interface RealOperationalService {
     email: string,
     address: string}
 }
-
 export const realOperationalServices: RealOperationalService[] = [
   {
     id: "operational-intelligence",
@@ -21,6 +20,12 @@ export const realOperationalServices: RealOperationalService[] = [
     tagline: "Real-time operational insights and optimization",
     price: "$99/month",
     description: "Comprehensive operational intelligence platform for monitoring and optimizing business operations.",
+    id: 'operational-intelligence'
+    name: 'Operational Intelligence Platform'
+    tagline: 'Real-time operational insights and optimization'
+    price: '$99/month'
+    description:
+      'Comprehensive operational intelligence platform for monitoring and optimizing business operations.'
     features: [
       "Real-time monitoring",
       "Performance analytics",

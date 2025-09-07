@@ -21,10 +21,10 @@
     "cloud_orchestrator",
     "code-smell-audit-runner",
     "component-props-docs-runner",
-    "component-size-report",
+
     "continuous-front-runner",
     "component-size-report",    "continuous-front-runner",
-    "component-size-report",    "continuous-front-runner",
+
     "continuous-orchestrator",
     "contributing-refresher",
     "dead-code-audit",
@@ -40,10 +40,10 @@
     "features-capabilities-benefits-advertiser",
     "front-ads-promoter",
     "front-enhancer",
-    "front-enhancer",
+
     "front-index-futurizer",
     "front-enhancer",    "front-index-futurizer",
-    "front-enhancer",    "front-index-futurizer",
+
     "front-index-orchestrator",
     "front-index-scheduler",
     "front-maximizer",
@@ -82,13 +82,13 @@
     "pm2-automation-redundancy",
     "pagespeed-insights-runner",
     "pm2-automation-redundancy",
+
     "readme-advertiser",
     "redirect-manager",
     "repo-knowledge-graph-runner",
     "repo-radar-and-graph",
     "repo-radar-runner",
-    "revenue-ideas-lab",
-    "roadmap-curator",
+
     "schedule-content-index",
     "schedule-homepage",
     "schedule-knowledge-graph",
@@ -99,8 +99,7 @@
     "todo-scanner-runner",
     "revenue-ideas-lab",
     "roadmap-curator",    "todo-scanner-runner",
-    "revenue-ideas-lab",
-    "roadmap-curator",    "todo-scanner-runner",
+
     "todo-summary-runner",
     "trigger-all-and-commit",
     "ultra-fast-automation-orchestrator",

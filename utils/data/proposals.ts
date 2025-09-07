@@ -66,7 +66,7 @@ export function createProposal(payload: ProposalPayload): ProposalMeta {
     status: 'Draft',
     artifacts: {
       markdownPath: `/proposals/${id}/proposal.md`,
-      jsonPath: path.relative(process.cwd(), jsonPath)}},
+      jsonPath: path.relative(process.cwd(), jsonPath)},
 
   fs.writeFileSync($2);
   fs.writeFileSync(jsonPath, JSON.stringify({ meta, payload }, null, 2), 'utf8'),

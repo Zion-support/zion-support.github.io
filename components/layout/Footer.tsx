@@ -1,53 +1,12 @@
-<<<<<<< HEAD
-import React from 'react';
-import Link from 'next/link';
-<<<<<<< HEAD
-import { Mail, Phone, MapPin, Facebook, Twitter, Linkedin, Instagram } from 'lucide-react';
-=======
-import { Mail, Phone, MapPin, Linkedin, Twitter, Github } from 'lucide-react';
->>>>>>> ecc7d9f9794e0ded6a8fec40c9673b04874eb1ff
 
-const Footer = () => {
- ;
-}
-const services = [;
-      { "name": 'AI Services', "href": '/ai-services','
-},
-
-  const services = [
-<<<<<<< HEAD
-    { name: 'AI Services', href: '/ai-services' },
-    { name: 'IT Services', href: '/it-services' },
-    { name: 'Micro SaaS', href: '/micro-saas' },
-    { name: 'Cloud Solutions', href: '/cloud-solutions' },
-    { name: 'Cybersecurity', href: '/security' },
-    { name: 'Data Analytics', href: '/data-analytics' }
-=======
-    { name: 'AI Development', href: '/services/ai-development' },
-    { name: 'Cloud Solutions', href: '/services/cloud-solutions' },
-    { name: 'Web Development', href: '/services/web-development' },
-    { name: 'Mobile Apps', href: '/services/mobile-development' },
-    { name: 'Blockchain Solutions', href: '/services/blockchain' },
-    { name: 'IoT Platforms', href: '/services/iot-platforms' },
-    { name: 'Data Analytics', href: '/services/data-analytics' },
-    { name: 'Cybersecurity', href: '/services/cybersecurity' },
->>>>>>> ecc7d9f9794e0ded6a8fec40c9673b04874eb1ff
-  ];
 
   const company = [
     { name: 'About Us', href: '/about' },
-<<<<<<< HEAD
-    { name: 'Our Team', href: '/team' },
-    { name: 'Careers', href: '/careers' },
-    { name: 'News', href: '/news' },
-    { name: 'Contact', href: '/contact' }
-=======
     { name: 'Our Team', href: '/about#team' },
     { name: 'Careers', href: '/careers' },
     { name: 'News & Updates', href: '/blog' },
     { name: 'Privacy Policy', href: '/privacy' },
     { name: 'Terms of Service', href: '/terms' },
->>>>>>> ecc7d9f9794e0ded6a8fec40c9673b04874eb1ff
   ];
 
   const resources = [
@@ -55,16 +14,6 @@ const services = [;
     { name: 'Case Studies', href: '/case-studies' },
     { name: 'Documentation', href: '/docs' },
     { name: 'Support', href: '/support' },
-<<<<<<< HEAD
-    { name: 'FAQ', href: '/faq' }
-  ];
-
-  const socialLinks = [
-    { name: 'Facebook', href: '#', icon: Facebook },
-    { name: 'Twitter', href: '#', icon: Twitter },
-    { name: 'LinkedIn', href: '#', icon: Linkedin },
-    { name: 'Instagram', href: '#', icon: Instagram }
-=======
     { name: 'FAQ', href: '/faq' },
   ];
 
@@ -72,7 +21,6 @@ const services = [;
     { name: 'LinkedIn', href: 'https://linkedin.com/company/zion-tech-group', icon: Linkedin },
     { name: 'Twitter', href: 'https://twitter.com/ziontechgroup', icon: Twitter },
     { name: 'GitHub', href: 'https://github.com/zion-tech-group', icon: Github },
->>>>>>> ecc7d9f9794e0ded6a8fec40c9673b04874eb1ff
   ];
 
 const company = [;
@@ -88,25 +36,46 @@ const company = [;
 }
   ];
 
-const resources = [;
-    { "name": 'Documentation', "href": '/docs','
+const company = [
+    { name: 'About Us'}
+  href: '/about'}
 },
-  { "name": 'API Reference', "href": '/api','
+  { name: 'Our Team'}
+  href: '/team'}
 },
-  { "name": 'Blog', "href": '/blog','
+  { name: 'Careers'}
+  href: '/careers'}
 },
-  { "name": 'Case Studies', "href": '/case-studies','
+  { name: 'News'}
+  href: '/news'}
 },
-{ "name": 'White Papers', "href": '/white-papers','
+{ name: 'Contact'}
+  href: '/contact'}
 }
-  ];import { Phone,Mail,MapPin,Facebook,Twitter,Linkedin,Instagram,Code,Smartphone,Cloud,Database,Shield,Zap;
- } from 'lucide-react';'
+  ];
 
-const "Footer": React.FC = () => {const currentYear = new Date().getFullYear(;
+const resources = [
+    { name: 'Documentation'}
+  href: '/docs'}
+},
+  { name: 'API Reference'}
+  href: '/api'}
+},
+  { name: 'Blog'}
+  href: '/blog'}
+},
+  { name: 'Case Studies'}
+  href: '/case-studies'}
+},
+{ name: 'White Papers'}
+  href: '/white-papers'}
 }
-const services = [;
+  ];import { Phone,Mail,MapPin,Facebook,Twitter,Linkedin,Instagram,Code,Smartphone,Cloud,Database,Shield,Zap;}
+ } from 'lucide-react';
+
+const Footer: React.FC = () => {const currentYear = new Date().getFullYear(;
+  const services = [
   import { 
-  }
   Phone, 
   Mail, 
   MapPin, 
@@ -118,11 +87,17 @@ const services = [;
   Smartphone,
   Cloud,
   Database,
-  Shield,
-  Zap;
-} from 'lucide-react';'
+  Shield}
+  Zap;}
 
-const "Footer": React.FC = () => {
+
+} from 'lucide-react';
+
+const Footer: React.FC = () => {
+
+  const currentYear = new Date().getFullYear()
+ ;
+  const services = [
 
 }
 
@@ -139,18 +114,25 @@ const services = [;
 }
   ];
 
-const solutions = [;
+const solutions = [
   ];
 
-const company = [;
-    { "name": 'Careers', "href": '/careers','
+const company = [
+    { name: 'Careers'}
+  href: '/careers'}
 },
-  { "name": 'Contact', "href": '/contact','
+  { name: 'Contact'}
+  href: '/contact'}
 },
-  { "name": 'Privacy Policy', "href": '/privacy','
+  { name: 'Privacy Policy'}
+  href: '/privacy'}
 },
-{ "name": 'Terms of Service', "href": '/terms','
+{ name: 'Terms of Service'}
+  href: '/terms'}
 }
+  ];
+
+const socialLinks = [
   ];
 
 const socialLinks = [;
@@ -162,12 +144,8 @@ const socialLinks = [;
           <div className="lg:col-span-1">
             <div className="text-2xl font-bold text-blue-400 mb-4">Zion Tech Group</div>
             <p className="text-gray-300 mb-6">
-<<<<<<< HEAD
-              Leading technology solutions provider helping businesses transform their digital presence with cutting-edge AI, cloud architecture, and innovative development services.
-=======
               Leading technology solutions provider helping businesses transform their digital presence;
               with cutting-edge AI, cloud architecture, and innovative development services.
->>>>>>> ecc7d9f9794e0ded6a8fec40c9673b04874eb1ff
             </p>
             <div className="space-y-3">"
               <div className="flex items-center space-x-3">"
@@ -649,8 +627,11 @@ export default Footer;ursor/automate-test-improve-and-merge-code-646c;
 
 };
 
-export default Footer;import React from 'react'; import Link from 'next/link'; import { Mail,Phone,MapPin,Linkedin,Twitter,Github,Facebook } from 'lucide-react';'
-
+export default Footer;
+}
+}
+}
+}
 const "Footer": React.FC = () => {;
   }
   const currentYear = new Date().getFullYear();
@@ -971,25 +952,15 @@ href={resource.href}
               </div>
               <div className="flex items-center text-gray-300">
                 <Phone className="h-4 w-4 mr-2" />
-<<<<<<< HEAD
-                <a href="tel:+13024640950" className="hover:text-blue-400">
-                  +1 302 464 0950
-=======
                 <a href="tel:+1-555-123-4567" className="hover:text-blue-400">
                   +1 (555) 123-4567
->>>>>>> ecc7d9f9794e0ded6a8fec40c9673b04874eb1ff
                 </a>
               </div>
               <div className="flex items-start text-gray-300">"
                 <MapPin className="h-4 w-4 mr-2 mt-0.5" />"
                 <span>
-<<<<<<< HEAD
-                  364 E Main St STE 1008<br />
-                  Middletown DE 19709
-=======
                   123 Tech Street<br />
                   San Francisco, CA 94105
->>>>>>> ecc7d9f9794e0ded6a8fec40c9673b04874eb1ff
                 </span>
 import { Facebook, Twitter, Linkedin, Instagram, Mail, Phone } from 'lucide-react';'
 
@@ -1044,19 +1015,11 @@ return (;
             </div>
           </div>
         </div>
-<<<<<<< HEAD
-
-=======
->>>>>>> ecc7d9f9794e0ded6a8fec40c9673b04874eb1ff
         {/* Bottom Section */}
         <div className="border-t border-gray-700 mt-8 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <p className="text-gray-300 text-sm">
-<<<<<<< HEAD
-              © {currentYear} Zion Tech Group. All rights reserved.
-=======
               &copy; {currentYear} Zion Tech Group. All rights reserved.
->>>>>>> ecc7d9f9794e0ded6a8fec40c9673b04874eb1ff
             </p>
             <div className="flex space-x-6 mt-4 "md":mt-0">"
               <Link href="/privacy" className="text-gray-400 "hover":text-blue-400 text-sm transition-colors">"
@@ -1086,14 +1049,10 @@ return (;
         </div>
       </div>
     </footer>
-  )
+  );
 };
 
-<<<<<<< HEAD
 export default Footer;
-=======
-export default Footer;
-=======
                   key = $2;
                   href = $2;
                   target = $2;
@@ -1168,5 +1127,3 @@ export default Footer;
           </div>,
         </div>,
         {/* Bottom Section */},
->>>>>>> origin/merge-automation-changes
->>>>>>> ecc7d9f9794e0ded6a8fec40c9673b04874eb1ff

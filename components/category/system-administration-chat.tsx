@@ -30,12 +30,14 @@ const SystemAdministrationChat: NextPage = () => {;
 }
 export default SystemAdministrationChat;
 
+
 import type { NextPage } from "next";
 import Head from "next/head";
 import Link from "next/link";
 import type { NextPage } from 'next';
 import Head from 'next/head';
 import Link from 'next/link';
+
 
 const SystemAdministrationChat: NextPage = () => {
   return (
@@ -48,10 +50,12 @@ const SystemAdministrationChat: NextPage = () => {
 
         <title>SystemAdministrationChat - Zion Tech Solutions</title>
 
+
 import type { NextPage } from './next';
 import Head from './next / head';
+
 import Link from './next / link';
-const SystemAdministrationChat: NextPage = () => {
+const SystemAdministrationChat: NextPage = () => {}
   return (
     <div>;
       <Head>;
@@ -71,4 +75,6 @@ const SystemAdministrationChat: NextPage = () => {
 ;
 export default SystemAdministrationChat;
 ;
+
+        <title>SystemAdministrationChat - Zion Tech Solutions</title>
 

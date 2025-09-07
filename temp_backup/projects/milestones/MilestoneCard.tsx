@@ -3,7 +3,7 @@
   {;
   {;
   Check,  ArrowDown, X ;
-  } from "lucide-react";
+  } from 'lucide-react';
 import {;
   {;
   {;
@@ -40,9 +40,9 @@ interface MilestoneCardProps {;
   dueDate?: string;
   onApprove?: (id: string) => Promise<void>;
   onReject?: (id: string) => Promise<void>; import React from 'react'
-import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
-import { Badge } from "@/components/ui/badge"
-import { Button } from "@/components/ui/button"
+import { Card, CardContent, CardFooter, CardHeader, CardTitle } from '@/components/ui/card'
+import { Badge } from '@/components/ui/badge'
+import { Button } from '@/components/ui/button'
 interface MilestoneCardProps {
   id: string
   projectId: string
@@ -83,9 +83,9 @@ export function MilestoneCard({
   onApprove?: (id: string) => Promise<void>,
   onReject?: (id: string) => Promise<void>
 import React from 'react',;
-import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",;
-import { Badge } from "@/components/ui/badge",;
-import { Button } from "@/components/ui/button",;
+import { Card, CardContent, CardFooter, CardHeader, CardTitle } from '@/components/ui/card',;
+import { Badge } from '@/components/ui/badge',;
+import { Button } from '@/components/ui/button',;
 import { format } from 'date-fns',;
 import { Check, ArrowDown, X } from 'lucide-react';
 import { useDisputeCheck } from '@/hooks/useDisputeCheck',;
@@ -120,16 +120,16 @@ export function MilestoneCard({;
 switch (status) {';''
   case 'completed': return 'bg-green-500';';''
 case 'in progress': return 'bg-blue-500';';''
-case 'pending': return 'bg-yellow-500';';''"
-case 'rejected': ;""
-}return (<Card> <CardHeader className="pb-2" > <div className="flex justify-between items-start" > <div> </p>) ;
-}</div> isUnderDispute && disputeStatus && (<DisputeStatusBadge status= {;"
-  disputeStatus ;"'"
-}/>) ";'"'"
-}</div> </div> </CardHeader> </div> </CardContent> <CardFooter className="pt-2 flex justify-between" > <div> {';''
+case 'pending': return 'bg-yellow-500';';'''
+case 'rejected': ;''
+}return (<Card> <CardHeader className='pb-2' > <div className='flex justify-between items-start' > <div> </p>) ;
+}</div> isUnderDispute && disputeStatus && (<DisputeStatusBadge status= {;'
+  disputeStatus ;'''
+}/>) ';''''
+}</div> </div> </CardHeader> </div> </CardContent> <CardFooter className='pt-2 flex justify-between' > <div> {';''
   status !== 'completed' && status !== 'rejected' && (<RaiseDisputeButton projectId= {;
   projectId ;
 }/>) ;
-}</div> Actions frozen due to dispute </Button>) ;'"
-}</div> </CardFooter> </Card>) ;'"'"
-}'"'"'"
+}</div> Actions frozen due to dispute </Button>) ;''
+}</div> </CardFooter> </Card>) ;''''
+}''''''

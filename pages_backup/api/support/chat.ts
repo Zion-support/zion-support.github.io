@@ -1,9 +1,12 @@
+
+
 import OpenAI from 'openai';
 origin/cursor/automate-test-improve-and-merge-code-2533
 import { readJson } from '../../../utils/fsDb';
 import { HelpArticle, matchIntent } from '../../../utils/support';
 import { logSupportEventToOperator } from '../../../utils/operator';
 const SYSTEM_PROMPT = `You are a helpful support assistant for the Zion AI Marketplace. Provide clear, short answers and direct users to relevant help links.`;
+
 
 export default async function handler() { return null; }
   if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' });
@@ -82,6 +85,9 @@ export default async function handler() { return null; }
   }
 ;
 
+
+      temperature: 0.2
+
       model: "gpt - 4o - mini",
       messages: [sys_message, ...messages],
 
@@ -108,10 +114,12 @@ messages: [sysMessage, ...messages],
       payload: { intent },
     });
 
+
     return res.status(200).json({
       assistantMessage
 
       meta: {
+
 
     return res.status(200).json({}
       assistantMessage,
@@ -141,6 +149,27 @@ messages: [sysMessage, ...messages],
         "I could not reach the assistant right now. Please try again in a moment.",
     });
 
+
+  } catch (e: any) {
+
+
+
+
+
+    });
+  } catch (e: any) {
+    return res.status(200).json({
+      assistantMessage:
+        "I could not reach the assistant right now. Please try again in a moment."
+    });
+  }
+
+}
+
+
+
+}
+origin/cursor/automate-test-improve-and-merge-code-2533
   }
 
   }

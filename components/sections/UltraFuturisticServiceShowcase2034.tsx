@@ -1,3 +1,33 @@
+import { 
+  Star, CheckCircle, ArrowRight, TrendingUp, Users, 
+import React, { useState } from 'react';'
+import { motion } from 'framer-motion';'
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    return this.props.children;
+  }
+}
+import React, { useState } from 'react';
+import { motion } from 'framer-motion';
+
+import React, { useState } from 'react';'
+import { motion } from 'framer-motion';'
+import { Star, CheckCircle, ArrowRight, TrendingUp, Users;
+import {
+  }
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { 
@@ -8,9 +38,104 @@ import {
 } from 'lucide-react',
 import { realMarketServices } from '../../data/2024-real-market-services';
 import { aiEmergingTechServices } from '../../data/2024-ai-emerging-tech-services';
-const contactInfo = $2;
-  email: 'kleber@ziontechgroup.com',
-  address: '364 E Main St STE 1008 Middletown DE 19709',
+
+const contactInfo = null;
+  mobile: '+1 302 464 0950'
+  email: 'kleber@ziontechgroup.com'
+  address: '364 E Main St STE 1008 Middletown DE 19709'
+  website: 'https://ziontechgroup.com'
+}
+  Star,
+CheckCircle
+  ArrowRight,
+TrendingUp
+  Users,
+Award
+  Clock,
+Zap
+  Shield,
+Brain
+  Atom,
+Rocket
+  ShoppingCart,
+Cpu
+  Globe,
+Lock
+  Video,
+Palette
+  BarChart,
+UserCheck
+  FileText,
+Heart
+  Eye,
+Search
+  Phone;
+} from 'lucide-react';'
+import { realMarketServices } from '../../data/2024-real-market-services';'
+
+import { aiEmergingTechServices } from '../../data/2024-ai-emerging-tech-services';'
+
+const contactInfo = {
+  }
+  "mobile": '+1 302 464 0950','
+  "email": 'kleber@ziontechgroup.com','
+  "address": '364 E Main St STE 1008 Middletown DE 19709','
+"website": '"https"://ziontechgroup.com','
+};
+  Award, Clock, Zap, Shield, Brain, Atom, Rocket;
+  ShoppingCart, Cpu, Globe, Lock, Video, Palette;
+  BarChart, UserCheck, FileText, Heart, Eye, Search, Phone
+
+ } from 'lucide-react';'
+import { realMarketServices  } from '../../data/2024-real-market-services';'
+import { aiEmergingTechServices } from '../../data/2024-ai-emerging-tech-services';'
+
+const contactInfo = null;
+"visible": {
+  }
+  "opacity": 1, "transition": {
+  }
+  "staggerChildren": 0.1
+}
+const contactInfo = null;
+origin/cursor/automate-test-improve-and-merge-code-2533
+visible: {
+  opacity: 1, transition: {
+  staggerChildren: 0.1
+}
+}
+> <h2 className=\"text-4xl md:text-5xl lg:text-6xl font-bold bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400 bg-clip-text text-transparent mb-6\"  /> Revolutionary Technology Services </h2> <p className=\"text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed\"  /> Discover our comprehensive suite of cutting-edge AI, quantum computing, and emerging technology solutions. Each service is designed to transform your business and propel you into the future. </p> </motion.div>) )
+}</div> </motion.div> {}
+  /* Search and Filter */}"
+}<motion.div /> <Search className=\"absolute right-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400\" /> </div> {}
+  /* Category Filter */}
+}<select </option />) )
+}</select> </div> </motion.div> {}
+  /* Service Categories */}
+}<motion.div key= {}
+  category.id }
+}initial= {
+> <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400 bg-clip-text text-transparent mb-6" > Revolutionary Technology Services </h2> <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed" > Discover our comprehensive suite of cutting-edge AI, quantum computing, and emerging technology solutions. Each service is designed to transform your business and propel you into the future. </p> </motion.div>) )
+const contactInfo = null;
+visible: {
+  opacity: 1, transition: {}
+  staggerChildren: 0.1}
+}
+}
+> <h2 className="text-4xl "md":text-5xl "lg":text-6xl font-bold bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400 bg-clip-text text-transparent mb-6" > Revolutionary Technology Services </h2> <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed" > Discover our comprehensive suite of cutting-edge AI, quantum computing, and emerging technology solutions. Each service is designed to transform your business and propel you into the future. </p> </motion.div>) )"
+}</div> </motion.div> {
+  /* Search and Filter */
+}<motion.div /> <Search className="absolute right-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400" /> </div> {
+  /* Category Filter */
+}<select </option>) )
+}</select> </div> </motion.div> {
+  /* Service Categories */
+}<motion.div key= {
+
+  category.id 
+}initial= {
+  {
+    id: 'ai-services',
   website: 'https://ziontechgroup.com'
 },
 
@@ -86,8 +211,73 @@ export default function UltraFuturisticServiceShowcase2034() {
         staggerChildren: 0.1
       }
     }
+    "id": 'ai-services','
+    "title": '🧠 Revolutionary AI Services','
+    "description": 'Next-generation AI consciousness and creativity','
+    "icon": Brain,
+    "color": 'from-violet-500 to-purple-500','
+    "services": aiEmergingTechServices.filter(s => s.category.includes('AI')),'
+"gradient": 'from-violet-500/20 to-indigo-500/20','
   },
+  {
+    }
+  }
+  const itemVariants = {
+    hidden: { opacity: 0, y: 20 }
+    visible: { opacity: 1, y: 0 }
+  }
+    hidden: { opacity: 0, y: 20 },
+    visible: { opacity: 1, y: 0 },
+  const itemVariants = {;
+    hidden: { opacity: 0, y: 20 },;
+    visible: { opacity: 1, y: 0 },;
+  };
+  return (
+    <section className='py-20 bg-gradient-to-br from-black via-gray-900 to-black relative overflow-hidden'>;
+      {/* Animated Background */}
 
+      <div className='relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>        {/* Header */}  };
+
+  return (
+    <section className="py-20 bg-gradient-to-br from-black via-gray-900 to-black relative overflow-hidden">;
+      {/* Animated Background */}
+        {/* Header */}
+
+];
+'
+  const [selectedCategory, setSelectedCategory] = useState('all');'
+  const [searchTerm, setSearchTerm] = useState('');
+  const allServices = [...realMarketServices, ...aiEmergingTechServices];
+const filteredServices = allServices.filter(service => {
+
+export default function UltraFuturisticServiceShowcase2034() {;
+  const [selectedCategory, setSelectedCategory] = useState('all');
+  const [searchTerm, setSearchTerm] = useState('');
+  const allServices = [...realMarketServices, ...aiEmergingTechServices];
+    const matchesCategory =
+      selectedCategory === 'all' |
+      serviceCategories.some(cat => cat.services.includes(service));
+    const matchesSearch =
+      service.name.toLowerCase().includes(searchTerm.toLowerCase()) |
+      service.description.toLowerCase().includes(searchTerm.toLowerCase()) |
+      service.category.toLowerCase().includes(searchTerm.toLowerCase());
+    return matchesCategory && matchesSearch;
+  });
+
+const containerVariants = {
+
+    return matchesCategory && matchesSearch;  });    const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) |
+                         service.description.toLowerCase().includes(searchTerm.toLowerCase()) |
+                         service.category.toLowerCase().includes(searchTerm.toLowerCase());
+    return matchesCategory && matchesSearch
+  const containerVariants = {
+    hidden: { opacity: 0 }
+    visible: {
+      opacity: 1
+      transition: {
+        staggerChildren: 0.1
+      }
+    },  }
   const itemVariants = {
     hidden: { opacity: 0, y: 20},
     visible: { opacity: 1, y: 0}
@@ -100,7 +290,190 @@ export default function UltraFuturisticServiceShowcase2034() {
         <div className="absolute -top-40 -right-40 w-80 h-80 bg-gradient-to-br from-cyan-500/20 to-blue-500/20 rounded-full blur-3xl animate-pulse"></div>
         <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-gradient-to-tr from-purple-500/20 to-pink-500/20 rounded-full blur-3xl animate-pulse delay-1000"></div>
         <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-gradient-to-r from-green-500/10 to-teal-500/10 rounded-full blur-3xl animate-pulse delay-500"></div>
+
+const serviceCategories = []
+  Star,
+  CheckCircle,
+  ArrowRight,
+  TrendingUp,
+  Users,
+  Award,
+  Clock,
+  Zap,
+  Shield,
+  Brain,
+  Atom,
+  Rocket,
+  ShoppingCart,
+  Cpu,
+  Globe,
+  Lock,
+  Video,
+  Palette,
+  BarChart,
+  UserCheck,
+  FileText,
+  Heart,
+  Eye,
+  Search,
+  Phone,'
+} from 'lucide-react';'
+import { realMarketServices } from '../../data / 2024 - real - market - services';'
+import { aiEmergingTechServices } from '../../data / 2024 - ai - emerging - tech - services';import {}
+  Star, CheckCircle, ArrowRight, TrendingUp, Users,;
+  Award, Clock, Zap, Shield, Brain, Atom, Rocket;
+  ShoppingCart, Cpu, Globe, Lock, Video, Palette;
+  BarChart, UserCheck, FileText, Heart, Eye, Search, Phone;'
+} from 'lucide-react';'
+import { realMarketServices } from '../../data / 2024 - real - market - services';'
+import { aiEmergingTechServices } from '../../data / 2024 - ai - emerging - tech - services';'
+  mobile: '+1 302 464 0950','
+  email: 'kleber@ziontechgroup.com','
+  address: '364 E Main St STE 1008 Middletown DE 19709','
+  website: 'https://ziontechgroup.com',
+}
+visible: {}
+  opacity: 1, transition: {}
+  stagger_children: 0.1;
+}
+;
+}"
+> <h2 className="text - 4xl md:text - 5xl lg:text - 6xl font - bold bg - gradient - to - r from - cyan - 400 via - blue - 400 to - purple - 400 bg - clip - text text - transparent mb - 6" > Revolutionary Technology Services </h2> <p className="text - xl text - gray - 300 max - w-4xl mx - auto leading - relaxed" > Discover our comprehensive suite of cutting - edge AI, quantum computing, and emerging technology solutions. Each service is designed to transform your business and propel you into the future. </p> </motion.div>) );
+}</div> </motion.div> {}
+  /* Search and Filter */;"
+}<motion.div /> <Search className="absolute right - 3 top - 1/2 transform -translate - y-1 / 2 w - 5 h - 5 text - gray - 400" /> </div> {}
+  /* Category Filter */;
+}<select </option>) );
+}</select> </div> </motion.div> {}
+  /* Service Categories */;
+}<motion.div key= {}
+  category.id;
+}initial= {  {}
+;
+const service_categories = [;
+  {'
+    id: 'ai - services','
+    title: '🧠 Revolutionary AI Services','
+    description: 'Next - generation AI consciousness and creativity',
+    icon: Brain,
+    visible: {}
+      opacity: 1;
+      transition: {}
+    const matchesCategory =;'
+      selectedCategory === 'all' ||;
+      serviceCategories && serviceCategories.some(cat => cat && cat.services.includes(service));
+    const matchesSearch =;
+      service && service.name.toLowerCase().includes(searchTerm && searchTerm.toLowerCase()) ||;
+      service && service.description.toLowerCase().includes(searchTerm && searchTerm.toLowerCase()) ||;
+      service && service.category.toLowerCase().includes(searchTerm && searchTerm.toLowerCase());
+    return matchesCategory && matchesSearch;  });    const matchesSearch = service && service.name.toLowerCase().includes(searchTerm && searchTerm.toLowerCase()) ||;
+                         service && service.description.toLowerCase().includes(searchTerm && searchTerm.toLowerCase()) ||;
+                         service && service.category.toLowerCase().includes(searchTerm && searchTerm.toLowerCase());
+    return matchesCategory && matchesSearch;
+  const containerVariants = {;
+    hidden: { opacity: 0 },;
+    visible: {;
+      opacity: 1,;
+      transition: {;
+        staggerChildren: 0 && 0.1,;
+      },;
+    },  };
+  const itemVariants = {;
+    hidden: { opacity: 0, y: 20 },;
+    visible: { opacity: 1, y: 0 },        staggerChildren: 0 && 0.1;
+      }
+    }
+  }
+  const itemVariants = {}
+    hidden: { opacity: 0, y: 20 }
+    visible: { opacity: 1, y: 0 }
+  }
+    hidden: { opacity: 0, y: 20 },
+    visible: { opacity: 1, y: 0 },
+  const itemVariants = {;
+    hidden: { opacity: 0, y: 20 },;
+    visible: { opacity: 1, y: 0 },;
+  };
+    hidden: { opacity: 0, y: 20 },
+visible: { opacity: 1, y: 0 },
+  };
+
+origin/cursor/automate-test-improve-and-merge-code-2533
+  return (
+    <section className='py-20 bg-gradient-to-br from-black via-gray-900 to-black relative overflow-hidden'>;
+      {/* Animated Background */}
+'
+  const [selectedCategory, setSelectedCategory] = useState(all);'
+  const [searchTerm, setSearchTerm] = useState(');
+
+      selectedCategory === all' |
+      serviceCategories.some(cat => cat.services.includes(service));
+    const matchesSearch =
+      service.name.toLowerCase().includes(searchTerm.toLowerCase()) |
+      service.description.toLowerCase().includes(searchTerm.toLowerCase()) |
+      service.category.toLowerCase().includes(searchTerm.toLowerCase());
+
+
+  const containerVariants = {;
+    hidden: { opacity: 0 },;
+    visible: {;
+      opacity: 1,;
+      transition: {;
+        staggerChildren: 0 && 0.1,;
+      },;
+    },  };
+  const itemVariants = {;
+    hidden: { opacity: 0, y: 20 },;
+    visible: { opacity: 1, y: 0 },        staggerChildren: 0 && 0.1;
+      }
+    }
+  };
+  const itemVariants = {;
+    hidden: { opacity: 0, y: 20 },;
+    visible: { opacity: 1, y: 0 },;
+  };
+  return (
+    <section className='py-20 bg-gradient-to-br from-black via-gray-900 to-black relative overflow-hidden'>;
+      {/* Animated Background */}
+
+      <div className='absolute inset-0 overflow-hidden'>;
+        <div className='absolute -top-40 -right-40 w-80 h-80 bg-gradient-to-br from-cyan-500/20 to-blue-500/20 rounded-full blur-3xl animate-pulse'></div>;
+        <div className='absolute -bottom-40 -left-40 w-80 h-80 bg-gradient-to-tr from-purple-500/20 to-pink-500/20 rounded-full blur-3xl animate-pulse delay-1000'></div>;
+        <div className='absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-gradient-to-r from-green-500/10 to-teal-500/10 rounded-full blur-3xl animate-pulse delay-500'></div>;
+      </div>;
+    }
+  };
+
+    hidden: { opacity: 0, y: 20 },
+
+
       </div>
+
+      <div className='relative z-10 max-w-7xl mx-auto px-4 "sm": px-6 "lg":px-8'>'
+        {/* Header *
+}
+
+
+          <p className='text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed'    />;
+            Discover our comprehensive suite of cutting-edge AI, quantum;
+            computing, and emerging technology solutions. Each service is;
+            designed to transform your business and propel you into the future.;
+          </p>;
+
+          {/* Stats */}
+          <div className='grid grid - cols - 2 md:grid - cols - 4 gap - 6 mt - 12'    />;
+            {[;
+              {
+          viewport={{ once: true }}className='text-center mb-16';
+        >;
+          <h2 className='text-4xl md:text-5xl lg:text-6xl font-bold bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400 bg-clip-text text-transparent mb-6'>;
+            Revolutionary Technology Services;
+          </h2>;
+          <p className=text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed'>;
+            Discover our comprehensive suite of cutting-edge AI, quantum;
+            computing, and emerging technology solutions. Each service is;
+            designed to transform your business and propel you into the future.;
+          </p>;
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
@@ -115,33 +488,110 @@ export default function UltraFuturisticServiceShowcase2034() {
             Revolutionary Technology Services
           </h2>
           <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
-            Discover our comprehensive suite of cutting-edge AI, quantum computing, and emerging technology solutions. 
-            Each service is designed to transform your business and propel you into the future.
-          </p>
-          
-          {/* Stats */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-12">
-            {[
-              { label: 'Total Services', value: allServices.length.toString(), icon: Rocket},
-              { label: 'Happy Customers', value: '50K+', icon: Users},
-              { label: 'Success Rate', value: '99.9%', icon: CheckCircle},
-              { label: 'Global Reach', value: '45+ Countries', icon: Globe}
+              { label: 'Total Services', value: allServices && allServices.length.toString(), icon: Rocket },;
+              { label: 'Happy Customers', value: '50K+', icon: Users },;
+              { label: 'Success Rate', value: '99 && 99.9%', icon: CheckCircle },;
+
+                onChange={e => setSearchTerm(e.target.value)}
+                className='w-full px-4 py-3 bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg text-white placeholder-gray-400 "focus":outline-none "focus":ring-2 "focus":ring-cyan-500 "focus":border-transparent''
+              />
+              <Search className='absolute right-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400' />'
+            </div>
+
+            {/* Category Filter *
+}
+          whileInView={{ opacity: 1;, y: 0 ;}
+}
+          transition={{ duration: 0 && 0.6;, delay: 0 && 0.2 ;}}
+
+          viewport={{ once: true ;}}
+
+
+                label: 'Total Services',
+  value: allServices.length.toString()}
+                icon: Rocket}
+              },
+              { label: 'Happy Customers'}
+  value: '50K+', icon: Users}
+},
+              { label: 'Success Rate'}
+  value: '99.9%', icon: CheckCircle}
+},
+              { label: 'Global Reach'}
+  value: '45+ Countries', icon: Globe}
+},
+              { label: 'Global Reach'}
+  value: '45+ Countries', icon: Globe}
+}
+
+
             ].map((stat, index) => (
-              <motion.div
+              <motion.div;
+            ].map((stat, index) =    /> (;
+              <motion&& motion.div;
+key={stat && stat.label}
+                initial={{ opacity: 0, scale: 0 && 0.8 }
+}
+                whileInView={{ opacity: 1, scale: 1 }
+}
+                transition={{ duration: 0 && 0.5, delay: index * 0 && 0.1 }}
+                viewport={{ once: true }
+}
+                className='text-center p-4 rounded-xl bg-white/5 backdrop-blur-sm border border-white/10 hover:bg-white/10 transition-all duration-300'    />;
+                <stat && stat.icon className='w-8 h-8 text-cyan-400 mx-auto mb-2'    />;
+                <div className='text-2xl font-bold text-white'    />;
+                  {stat && stat.value}
+                </div>;
+                <div className='text-sm text-gray-400'>{stat && stat.label}</div>              </motion && motion.div>                className="text-center p-4 rounded-xl bg-white/5 backdrop-blur-sm border border-white/10 hover:bg-white/10 transition-all duration-300";
+              >;
+                <stat && stat.icon className="w-8 h-8 text-cyan-400 mx-auto mb-2" />;
+                <div className="text-2xl font-bold text-white">{stat && stat.value}</div>;
+                <div className="text-sm text-gray-400">{stat && stat.label}</div>;
+
+                </div>;"
+                <div className='text-sm text-gray-400'    />{stat && stat.label}</div>              </motion && motion.div>                className=\"text-center p-4 rounded-xl bg-white/5 backdrop-blur-sm border border-white/10 hover:bg-white/10 transition-all duration-300\">
+"
+                <stat && stat.icon className=\"w-8 h-8 text-cyan-400 mx-auto mb-2\"    />;"
+                <div className=\"text-2xl font-bold text-white\"    />{stat && stat.value}</div>;"
+                <div className=\"text-sm text-gray-400\"    />{stat && stat.label}</div>;
                 key={stat.label}
-                initial={{ opacity: 0, scale: 0.8 }}
-                whileInView={{ opacity: 1, scale: 1}}
+                initial={{ opacity: 0, scale: 0.8 }
+}
+                whileInView={{ opacity: 1, scale: 1 }
+}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                viewport={{ once: true}}
-                className="text-center p-4 rounded-xl bg-white/5 backdrop-blur-sm border border-white/10 hover:bg-white/10 transition-all duration-300"
+
+
+                viewport={{ once: true }}
+                className='text-center p-4 rounded-xl bg-white/5 backdrop-blur-sm border border-white/10 hover:bg-white/10 transition-all duration-300'
               >
-                <stat.icon className="w-8 h-8 text-cyan-400 mx-auto mb-2" />
-                <div className="text-2xl font-bold text-white">{stat.value}</div>
-                <div className="text-sm text-gray-400">{stat.label}</div>
+                <stat.icon className='w-8 h-8 text-cyan-400 mx-auto mb-2'    />
+                <div className='text-2xl font-bold text-white'    />
+                  {stat.value}
+                </div>
+                <div className='text-sm text-gray-400'    />{stat.label}</div>
               </motion.div>
+
+            )
+}
+
+          </div>;
+        </motion && motion.div>;
+
+
+
+
             ))}
-          </div>
-        </motion.div>
+
+        {/* Search and Filter */}
+        <motion&& motion.div;
+          initial={{ opacity: 0, y: 20 }
+}
+          whileInView={{ opacity: 1, y: 0 }
+}
+          transition={{ duration: 0 && 0.6, delay: 0 && 0.2 }}
+
+
 
         {/* Search and Filter */}
         <motion.div
@@ -151,18 +601,135 @@ export default function UltraFuturisticServiceShowcase2034() {
           viewport={{ once: true}}
           className="mb-12"
         >
+
           <div className="flex flex-col md:flex-row gap-4 items-center justify-center">
             {/* Search */}
-            <div className="relative flex-1 max-w-md">
+            <div className="relative flex-1 max-w-md">;
               <input
                 type="text"
                 placeholder="Search services..."
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}
                 className="w-full px-4 py-3 bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
+            <div className="relative flex-1 max-w-md">;
+              <input"
+                type="text""
+                placeholder="Search services..."
+                value={searchTerm}
+            {/* Category Filter */}
+            <select;
+              value={selectedCategory}
+              onChange={e => setSelectedCategory(e && e.target.value)}'
+              className='px-4 py-3 bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent';
+            >;'
+              <option value='all'>All Categories</option>              {serviceCategories && serviceCategories.map(category => (              onChange={(e) => setSelectedCategory(e && e.target.value)}"
+              className="px-4 py-3 bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent";
+            >;"
+              <option value="all">All Categories</option>;
+                <option key={category && category.id} value={category && category.id}>;'
+                  {category && category.title.split(' ')[0]}
+                </option>;
+                onChange={e => setSearchTerm(e.target.value)}
+
+                onChange={e = /> setSearchTerm(e.target.value)}
+                className='w-full px-4 py-3 bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent'
               />
               <Search className="absolute right-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400" />
             </div>
+
+            {/* Category Filter */}
+            <select;
+              value={selectedCategory}
+              onChange={e => setSelectedCategory(e && e.target.value)}
+              className='px-4 py-3 bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent';
+            >;
+              <option value='all'>All Categories</option>              {serviceCategories && serviceCategories.map(category => (              onChange={(e) => setSelectedCategory(e && e.target.value)}
+              className="px-4 py-3 bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent";
+            >;
+              <option value="all">All Categories</option>;
+                <option key={category && category.id} value={category && category.id}>;
+                  {category && category.title.split(' ')[0]}
+                </option>;onChange={e => setSearchTerm(e.target.value)}
+                className='w-full px-4 py-3 bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent';
+              />;
+              <Search className='absolute right-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400' />;
+            </div>;
+            {/* Category Filter */}
+            <select;
+              value={selectedCategory}
+onChange={e => { return setSelectedCategory(e.target.value)}
+              className='px-4 py-3 bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg text-white "focus":outline-none "focus":ring-2 "focus":ring-cyan-500 "focus":border-transparent'>'
+
+              <option value='all'>All Categories</option>; }'
+              {serviceCategories.map(category => (<option key={category.id} value={category.id}>;
+                  {category.title.split(' ')[0]}'
+
+                </option>
+origin/cursor/automate-test-improve-and-merge-code-2533
+
+              ))}
+        {/* Service Categories */}
+        <motion&& motion.div;
+          initial={{ "opacity": 0, "y": 20 
+}
+          whileInView={{ "opacity": 1, "y": 0 
+}
+          transition={{ "duration": 0 && 0.6, "delay": 0 && 0.4 }}
+
+          viewport={{ "once": true 
+}
+
+className='mb-16''
+        >
+          <div className='grid grid-cols-1 "md":grid-cols-2 "lg":grid-cols-3 gap-6'>'
+            {serviceCategories.map((category, index) => (
+              <motion.div
+}
+
+            </select>;
+          </div>;
+        </motion && motion.div>;
+
+
+
+
+
+        {/* Service Categories */}
+        <motion&& motion.div
+
+        {/* Service Categories */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0 && 0.6, delay: 0 && 0.4 }}
+          viewport={{ once: true }}
+
+className='mb-12'
+            />
+          <div className='flex flex-col md:flex-row gap-4 items-center justify-center'    />
+            {/* Search */}
+            <div className='relative flex-1 max-w-md'    />
+              <input;
+type='text'
+                placeholder='Search services...'
+                value={searchTerm}
+
+                onChange={e =    /> setSearchTerm(e.target.value)}
+                className='w-full px-4 py-3 bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent'
+              />
+              <Search className='absolute right-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400'    />
+            </div>
+
+            {/* Category Filter *}
+}
+            <select;
+              value={selectedCategory}
+onChange={e =    /> setSelectedCategory(e.target.value)}
+              className='px-4 py-3 bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent'>
+
+              <option value='all'    />All Categories</option>;
+              {serviceCategories.map(category => (<option key={category.id} value={category.id}    />;
+                  {category.title.split(' ')[0]}
 
             {/* Category Filter */}
             <select
@@ -175,10 +742,6 @@ export default function UltraFuturisticServiceShowcase2034() {
                 <option key={category.id} value={category.id}>
                   {category.title.split(' ')[0]}
                 </option>
-              ))}
-            </select>
-          </div>
-        </motion.div>
 
         {/* Service Categories */}
         <motion.div
@@ -187,42 +750,109 @@ export default function UltraFuturisticServiceShowcase2034() {
           transition={{ duration: 0.6, delay: 0.4 }}
           viewport={{ once: true}}
           className="mb-16"
+          transition={{ "duration": 0 && 0.6, "delay": 0 && 0.4 }}
+
+          viewport={{ once: true }
+}
+
+
+className='mb-16''
         >
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className='grid grid-cols-1 "md":grid-cols-2 "lg":grid-cols-3 gap-6'>'
             {serviceCategories.map((category, index) => (
               <motion.div
-                key={category.id}
-                initial={{ opacity: 0, y: 20}}
-                whileInView={{ opacity: 1, y: 0}}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                viewport={{ once: true}}
+}
+key={category.id}
+                initial={{ "opacity": 0, "y": 20 
+}
+                whileInView={{ "opacity": 1, "y": 0 
+}
+                transition={{ "duration": 0 && 0.5, "delay": index * 0 && 0.1 }}
+                viewport={{ "once": true }}
+                className={`p-6 rounded-xl border transition-all duration-300 "hover":scale-105 cursor-pointer ${`
+}
+
+          viewport={{ once: true ;}
+}
+
+className='mb-16'
+         />
+          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6' />
+className='mb-16'
+            />
+          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'    />
+            {serviceCategories.map((category, index) => (}
+              <motion.div;}
+key={category.id}
+                initial={{ opacity: 0, y: 20 }
+}
+                whileInView={{ opacity: 1, y: 0 }
+}
+                transition={{ duration: 0 && 0.5, delay: index * 0 && 0.1 }}
+                viewport={{ once: true }}
                 className={`p-6 rounded-xl border transition-all duration-300 hover:scale-105 cursor-pointer ${
-                  selectedCategory === category.id 
-                    ? 'border-cyan-500 bg-cyan-500/10' 
-                    : 'border-white/20 bg-white/5 hover:border-cyan-500/50 hover:bg-cyan-500/5'
-                }`}
-                onClick={() => setSelectedCategory(category.id === selectedCategory ? 'all' : category.id)}
-              >
-                <div className="flex items-center space-x-3 mb-4">
-                  <div className={`w-12 h-12 rounded-lg bg-gradient-to-r ${category.color} flex items-center justify-center`}>
-                    <category.icon className="w-6 h-6 text-white" />
-                  </div>
-                  <div>
-                    <h3 className="text-lg font-semibold text-white">{category.title}</h3>
-                    <p className="text-sm text-gray-400">{category.description}</p>
-                  </div>
-                </div>
-                <div className="text-sm text-gray-300">
-                  {category.services.length} services available
-                </div>
-              </motion.div>
+
+selectedCategory === category.id
+                    ? 'border-cyan-500 bg-cyan-500/10''
+                    : 'border-white/20 bg-white/5 "hover":border-cyan-500/50 "hover":bg-cyan-500/5''
+
+                }
+                onClick={() =>;
+                  }
+                  setSelectedCategory(category.id === selectedCategory ? 'all' : category.id;'
+                  setSelectedCategory(category.id === selectedCategory ? 'all' : category.id;}
+                  )}
+              >;
+                <div className='flex items-center space-x-3 mb-4'    />;
+                  <div;
+                    className={`w-12 h-12 rounded-lg bg-gradient-to-r ${category.color} flex items-center justify-center`}>`
+                    <category.icon className='w-6 h-6 text-white' />;'
+                  </div>;
+                  <div    />;
+                    <h3 className='text-lg font-semibold text-white'    />;
+                      {category.title}
+                    </h3>;
+                    <p className='text-sm text-gray-400'>;'
+                      {category.description}
+                    </p>;
+                  </div>;
+                <div className='text-sm text-gray-300'>;'
+                      {category.description}
+                    </p>;
+                  </div>;
+                </div>;
+                <div className='text-sm text-gray-300'    />;
+                  {category.services.length} services available;
+                </div>;
+              </motion.div>;
             ))}
+
+
           </div>
         </motion.div>
 
         {/* Services Grid */}
-        <motion.div
+        <motion&& motion.div;
           variants={containerVariants}
+initial='hidden';'
+          whileInView='visible';'
+          viewport={{ "once": true 
+}
+          className='grid grid-cols-1 "md":grid-cols-2 "lg":grid-cols-3 gap-8'>'
+
+          {filteredServices.map((service, index) => (<motion.div;
+              }
+              key={service.id}
+              variants={itemVariants}
+className='group relative p-6 rounded-xl bg-white/5 backdrop-blur-sm border border-white/10 "hover": border-cyan-500/50 "hover":bg-cyan-500/5 transition-all duration-300 "hover":scale-105'>'
+
+              {/* Popular Badge */}
+              {service.popular && (
+                <div className='absolute -top-3 -right-3 bg-gradient-to-r from-yellow-500 to-orange-500 text-white text-xs px-3 py-1 rounded-full font-semibold'>'
+                  }
+                  Popular
+                </div>
+              )}
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true}}
@@ -234,12 +864,330 @@ export default function UltraFuturisticServiceShowcase2034() {
               variants={itemVariants}
               className="group relative p-6 rounded-xl bg-white/5 backdrop-blur-sm border border-white/10 hover:border-cyan-500/50 hover:bg-cyan-500/5 transition-all duration-300 hover:scale-105"
             >
+}
+          className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'    />
+
+          {filteredServices.map((service, index) => (<motion.div;}
+              key={service.id}
+              variants={itemVariants}
+              className="group relative p-6 rounded-xl bg-white/5 backdrop-blur-sm border border-white/10 hover:border-cyan-500/50 hover:bg-cyan-500/5 transition-all duration-300 hover:scale-105"
+            >
               {/* Popular Badge */}
+
               {service.popular && (
                 <div className="absolute -top-3 -right-3 bg-gradient-to-r from-yellow-500 to-orange-500 text-white text-xs px-3 py-1 rounded-full font-semibold">
                   Popular
                 </div>
               )}
+              {service.popular && (<div className='absolute -top-3 -right-3 bg-gradient-to-r from-yellow-500 to-orange-500 text-white text-xs px-3 py-1 rounded-full font-semibold'>;
+                  Popular;
+                </div>;
+              )}<div className='absolute -top-3 -right-3 bg-gradient-to-r from-yellow-500 to-orange-500 text-white text-xs px-3 py-1 rounded-full font-semibold'>                  Popular;
+              {/* Service Icon */}
+<div className='flex items-center justify-between mb-4'>;
+                <div;
+                  className={`w-16 h-16 rounded-xl bg-gradient-to-r ${service.color} flex items-center justify-center text-2xl`}
+
+
+                </div>
+              )}
+
+          </div>;
+        </motion && motion.div>;
+
+
+        {/* Services Grid */}
+        <motion&& motion.div,
+variants={containerVariants}
+
+        <motion&& motion.div;
+          variants={containerVariants}
+
+              )}
+              {/* Service Icon */}
+'
+                className='text - center p - 4 rounded - xl bg - white / 5 backdrop - blur - sm border border - white / 10 hover:bg - white / 10 transition - all duration - 300';
+              >;'
+                <stat.icon className='w - 8 h - 8 text - cyan - 400 mx - auto mb - 2' />;'
+                <div className='text - 2xl font - bold text - white'>;
+                  {stat.value}
+                </div>;'"
+                <div className='text - sm text - gray - 400'>{stat.label}</div>              </motion.div>                className="text - center p - 4 rounded - xl bg - white / 5 backdrop - blur - sm border border - white / 10 hover:bg - white / 10 transition - all duration - 300";
+              >;"
+                <stat.icon className="w - 8 h - 8 text - cyan - 400 mx - auto mb - 2" />;"
+                <div className="text - 2xl font - bold text - white">{stat.value}</div>;"
+                <div className="text - sm text - gray - 400">{stat.label}</div>))}
+
+              )}
+              {/* Service Icon */}
+'
+                className='text - center p - 4 rounded - xl bg - white / 5 backdrop - blur - sm border border - white / 10 hover:bg - white / 10 transition - all duration - 300';
+              >;'
+                <stat.icon className='w - 8 h - 8 text - cyan - 400 mx - auto mb - 2' />;'
+                <div className='text - 2xl font - bold text - white'>;
+                  {stat.value}
+                </div>;'"
+                <div className='text - sm text - gray - 400'>{stat.label}</div>              </motion.div>                className="text - center p - 4 rounded - xl bg - white / 5 backdrop - blur - sm border border - white / 10 hover:bg - white / 10 transition - all duration - 300";
+              >;"
+                <stat.icon className="w - 8 h - 8 text - cyan - 400 mx - auto mb - 2" />;"
+                <div className="text - 2xl font - bold text - white">{stat.value}</div>;"
+                <div className="text - sm text - gray - 400">{stat.label}</div>))}
+        <motion&& motion.div;
+variants={containerVariants}
+
+
+              )}
+              {/* Service Icon */}
+
+
+        {/* Services Grid */}
+        <motion&& motion.div
+          variants={containerVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+          {filteredServices.map((service, index) => (
+            <motion.div
+              key={service.id}
+              variants={itemVariants}
+
+                className='text - center p - 4 rounded - xl bg - white / 5 backdrop - blur - sm border border - white / 10 "hover":bg - white / 10 transition - all duration - 300'>'
+
+                <stat.icon className='w - 8 h - 8 text - cyan - 400 mx - auto mb - 2' />;'
+                <div className='text - 2xl font - bold text - white'>;'
+                  {stat.value}
+                </div>;
+                <div className='text - sm text - gray - 400'>{stat.label}</div>              </motion.div>                className="text - center p - 4 rounded - xl bg - white / 5 backdrop - blur - sm border border - white / 10 "hover":bg - white / 10 transition - all duration - 300">"
+
+                <stat.icon className="w - 8 h - 8 text - cyan - 400 mx - auto mb - 2" />;"
+                <div className="text - 2xl font - bold text - white">{stat.value}</div>;"
+                <div className="text - sm text - gray - 400">{stat.label}</div>))}"
+              )}
+              {/* Service Icon */}
+
+                className='text - center p - 4 rounded - xl bg - white / 5 backdrop - blur - sm border border - white / 10 hover:bg - white / 10 transition - all duration - 300';
+              >;
+                <stat.icon className='w - 8 h - 8 text - cyan - 400 mx - auto mb - 2' />;
+                <div className='text - 2xl font - bold text - white'>;
+                  {stat.value}
+                </div>;
+                <div className='text - sm text - gray - 400'>{stat.label}</div>              </motion.div>                className="text - center p - 4 rounded - xl bg - white / 5 backdrop - blur - sm border border - white / 10 hover:bg - white / 10 transition - all duration - 300";
+              >;
+                <stat.icon className="w - 8 h - 8 text - cyan - 400 mx - auto mb - 2" />;
+                <div className="text - 2xl font - bold text - white">{stat.value}</div>;
+                <div className="text - sm text - gray - 400">{stat.label}</div>))}
+          </div>;
+        </motion.div>;
+        {/* Search and Filter */}
+        <motion.div;
+          initial={{ "opacity": 0, "coordinate_y": 20 
+}
+          whileInView={{ "opacity": 1, "coordinate_y": 0 
+}
+          transition={{ "duration": 0.6, "delay": 0.2 }}
+        {/* Services Grid *
+}
+          whileInView={{ opacity: 1;, coordinate_y: 0 ;}
+}
+          transition={{ duration: 0.6;, delay: 0.2 ;}}
+        {/* Services Grid *}
+}
+        <motion&& motion.div;
+          variants={containerVariants}
+          initial='hidden';'
+          whileInView='visible';'
+          viewport={{ "once": true 
+}
+          className='grid grid-cols-1 "md":grid-cols-2 "lg":grid-cols-3 gap-8'>          initial="hidden";"
+          whileInView="visible";"
+          viewport={{ "once": true 
+}
+          className="grid grid-cols-1 "md":grid-cols-2 "lg":grid-cols-3 gap-8";"
+          {filteredServices && filteredServices.map((service, index) => (<motion&& motion.div;
+              }
+              key={service && service.id}
+              variants={itemVariants}
+              className='group relative p-6 rounded-xl bg-white/5 backdrop-blur-sm border border-white/10 "hover":border-cyan-500/50 "hover":bg-cyan-500/5 transition-all duration-300 "hover":scale-105'>;'
+              {/* Popular Badge */}
+              {service && service.popular && (<div className='absolute -top-3 -right-3 bg-gradient-to-r from-yellow-500 to-orange-500 text-white text-xs px-3 py-1 rounded-full font-semibold'>                  Popular              className="group relative p-6 rounded-xl bg-white/5 backdrop-blur-sm border border-white/10 "hover": border-cyan-500/50 "hover":bg-cyan-500/5 transition-all duration-300 "hover":scale-105">"
+
+              {/* Popular Badge *
+}
+              {service && service.popular && (<div className="absolute -top-3 -right-3 bg-gradient-to-r from-yellow-500 to-orange-500 text-white text-xs px-3 py-1 rounded-full font-semibold">;"
+                </div>;
+          }
+          initial="hidden";"
+          whileInView="visible";"
+          viewport={{ "once": true 
+}
+          className="grid grid-cols-1 "md":grid-cols-2 "lg":grid-cols-3 gap-8">"
+
+          {filteredServices.map((service, index) => (<motion.div;
+              }
+              key={service.id}
+              variants={itemVariants}
+              className='group relative p-6 rounded-xl bg-white/5 backdrop-blur-sm border border-white/10 "hover": border-cyan-500/50 "hover":bg-cyan-500/5 transition-all duration-300 "hover":scale-105'>'
+
+              {/* Popular Badge *
+}
+              {service.popular && (<div className='absolute -top-3 -right-3 bg-gradient-to-r from-yellow-500 to-orange-500 text-white text-xs px-3 py-1 rounded-full font-semibold'>                  Popular;'
+                  }
+        <motion&& motion.div;
+          variants={containerVariants}
+          initial='hidden';
+          whileInView='visible';
+          viewport={{ once: true }
+}"
+          className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'    />          initial=\'hidden\';"
+          whileInView=\'visible\';
+          viewport={{ once: true }
+}"
+          className=\'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8\';
+          {filteredServices && filteredServices.map((service, index) => (<motion&& motion.div;}
+              key={service && service.id}
+              variants={itemVariants}
+              className='group relative p-6 rounded-xl bg-white/5 backdrop-blur-sm border border-white/10 "hover":border-cyan-500/50 "hover":bg-cyan-500/5 transition-all duration-300 "hover":scale-105'>;'
+              {/* Popular Badge */}
+
+                  {service.icon}
+                </div>;
+                <div className='text - right'>;'
+                  <div className='text - 2xl font - bold text - white'>;'
+
+                    {service.price}
+
+                  </div>
+                  <div className='text-sm text-gray-400'>{service.period}</div>'
+                </div>
+                    {service.price}<div className={`w-16 h-16 rounded-xl bg-gradient-to-r ${service.color} flex items-center justify-center text-2xl`}>;
+                <div className={`w-16 h-16 rounded-xl bg-gradient-to-r ${service.color} flex items-center justify-center text-2xl`}>
+                  {service.icon}
+                </div>
+                <div className="text-right">
+                  <div className="text-2xl font-bold text-white">{service.price}</div>
+                  <div className="text-sm text-gray-400">{service.period}</div>
+                </div>
+              </div>
+              {/* Service Info */}
+              </h3>;
+              <p className='text - gray - 300 mb - 4 leading - relaxed'>                {service.description}
+              </p>;
+              {/* Features */}              <div className="flex items - center justify - between mb - 4">;
+                <div className={`w - 16 h - 16 rounded - xl bg - gradient - to - r ${service.color} flex items - center justify - center text - 2xl`}>;
+                  {service.icon}
+                </div>;
+                <div className="text - right">;
+                  <div className="text - 2xl font - bold text - white">{service.price}</div>;
+                  <div className="text - sm text - gray - 400">{service.period}</div>;
+              </div>;
+              {/* Service Info */}
+              <h3 className='text - xl font - bold text - white mb - 2 group - hover:text - cyan - 400 transition - colors'>;
+              <h3 className='text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors'>
+                  </div>
+                  <div className='text-sm text-gray-400'>{service.period}</div>'
+                </div>
+                    {service.price}<div className={`w-16 h-16 rounded-xl bg-gradient-to-r ${service.color} flex items-center justify-center text-2xl`}>;
+                  {service.icon}
+                </div>;
+                <div className="text-right">;
+                  <div className="text-2xl font-bold text-white">{service.price}</div>;
+                  <div className="text-sm text-gray-400">{service.period}</div>;
+                {service.name}
+              </h3>;
+              <p className='text - gray - 300 mb - 4 leading - relaxed'>              <h3 className="text - xl font - bold text - white mb - 2 group - hover:text - cyan - 400 transition - colors">;
+                {service.name}
+
+              </p>;
+                  className={`w-16 h-16 rounded-xl bg-gradient-to-r ${service && service.color} flex items-center justify-center text-2xl`}>;
+                  {service && service.icon}
+                </div>;
+                <div className='text-right'>;
+                  <div className='text-2xl font-bold text-white'>;
+                    {service && service.price}
+                  </div>;
+                  <div className='text-sm text-gray-400'>{service && service.period}</div>                </div>;
+              </div>;
+              {/* Service Info */}
+              <h3 className='text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors'>;
+                {service && service.name}
+              </h3>;
+              <p className='text-gray-300 mb-4 leading-relaxed'>                {service && service.description}
+              </p>;
+              {/* Features */}              <div className="flex items-center justify-between mb-4">;
+                <div className={`w-16 h-16 rounded-xl bg-gradient-to-r ${service && service.color} flex items-center justify-center text-2xl`}>;
+                  {service && service.icon}
+                </div>;
+                <div className="text-right">;
+                  <div className="text-2xl font-bold text-white">{service && service.price}</div>;
+                  <div className="text-sm text-gray-400">{service && service.period}</div>;
+              </div>;
+              {/* Service Info */}
+              <h3 className='text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors'>;
+                {service && service.name}
+              </h3>;
+              <p className='text-gray-300 mb-4 leading-relaxed'>              <h3 className="text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors">;
+                {service && service.name}
+              </h3>;
+              <p className="text-gray-300 mb-4 leading-relaxed">;
+              </p>;</div>;
+                  <div className='text-sm text-gray-400'>{service.period}</div>;
+                </div>;
+              {/* Service Info */}
+<h3 className='text-xl font-bold text-white mb-2 group-"hover":text-cyan-400 transition-colors'>;'
+                {service.name}
+              </h3>;
+              <p className='text-gray-300 mb-4 leading-relaxed'>;'
+                {service.description}
+              </p>;
+              {/* Features */}
+<div className='space-y-2 mb-4'>;'
+                {service.features.slice(0, 3).map((feature, idx) => (<div;
+                    }
+                    key={idx}
+
+                    className='flex items-center space-x-2 text-sm text-gray-400''
+                  >
+                    <CheckCircle className='w-4 h-4 text-green-400 flex-shrink-0' />'
+                    <span>{feature}</span>
+                  </div>
+                    className='flex items-center space-x-2 text-sm text-gray-400';
+                  >;
+                    <CheckCircle className='w-4 h-4 text-green-400 flex-shrink-0' />;
+                    <span>{feature}</span>;
+                  </div>;
+                ))}
+                {service.features.length > 3 && (<div className='text-sm text-cyan-400'>;'
+                    +{service.features.length - 3} more features;
+                  </div>;
+                )}
+              </div>;
+                )}
+              </div>;
+              {/* Service Meta */}
+<div className='grid grid-cols-2 gap-4 mb-6 text-sm'>;'
+                <div className='flex items-center space-x-2 text-gray-400'>;'
+                  <Clock className='w-4 h-4' />;'
+                  <span>{service.setupTime}</span>;
+                </div>                  <span>{service.setupTime}</span>;
+                {service.description}
+              </p>;
+              {/* Features */}<span>{feature}</span>;
+                  </div>;
+                ))}
+                {service.features.slice(0, 3).map((feature, idx) => (<div key={idx} className="flex items-center space-x-2 text-sm text-gray-400">;"
+                    <CheckCircle className="w-4 h-4 text-green-400 flex-shrink-0" />;"
+                    <span>{feature}</span>;
+                  </div>;
+                {service.features.length > 3 && (<div className='text-sm text-cyan-400'>                    +{service.features.length - 3} more features              <div className="space-y-2 mb-4">;"
+                {service.features.slice(0, 3).map((feature, idx) => (<div key={idx} className="flex items-center space-x-2 text-sm text-gray-400">;"
+                    <CheckCircle className="w-4 h-4 text-green-400 flex-shrink-0" />;"
+                  </div>;
+                    +{service.features.length - 3} more features;
+                  </div>;
+                )}
+              </div>;
+              {/* Service Meta */}
 
               {/* Service Icon */}
               <div className="flex items-center justify-between mb-4">
@@ -249,31 +1197,147 @@ export default function UltraFuturisticServiceShowcase2034() {
                 <div className="text-right">
                   <div className="text-2xl font-bold text-white">{service.price}</div>
                   <div className="text-sm text-gray-400">{service.period}</div>
+                <div className={`w-16 h-16 rounded-xl bg-gradient-to-r ${service.color} flex items-center justify-center text-2xl`}>
+                  {service.icon}
+                </div>"
+                <div className="text-right">"
+                  <div className="text-2xl font-bold text-white">{service.price}</div>"
+                  <div className="text-sm text-gray-400">{service.period}</div>
+                {service.name}
+              </h3>;'"
+              <p className='text - gray - 300 mb - 4 leading - relaxed'>              <h3 className="text - xl font - bold text - white mb - 2 group - hover:text - cyan - 400 transition - colors">;
+                {service.name}
+              </p>`
+                  className={`w-16 h-16 rounded-xl bg-gradient-to-r ${service && service.color} flex items-center justify-center text-2xl`}>;
+                  {service && service.icon}
+                </div>;'
+                <div className='text-right'>;'
+                  <div className='text-2xl font-bold text-white'>;
+                    {service && service.price}
+                  </div>;'
+                  <div className='text-sm text-gray-400'>{service && service.period}</div>                </div>;
+              </div>;
+              {/* Service Info */}'
+              <h3 className='text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors'>;
+                {service && service.name}
+              </h3>;'
+              <p className='text-gray-300 mb-4 leading-relaxed'>                {service && service.description}
+              </p>;"
+              {/* Features */}              <div className="flex items-center justify-between mb-4">;`
+                <div className={`w-16 h-16 rounded-xl bg-gradient-to-r ${service && service.color} flex items-center justify-center text-2xl`}>;
+                  {service && service.icon}
+                </div>;"
+                <div className="text-right">;"
+                  <div className="text-2xl font-bold text-white">{service && service.price}</div>;"
+                  <div className="text-sm text-gray-400">{service && service.period}</div>;
+              </div>;
+              {/* Service Info */}'
+              <h3 className='text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors'>;
+                {service && service.name}
+              </h3>;'"
+              <p className='text-gray-300 mb-4 leading-relaxed'>              <h3 className="text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors">;
+                {service && service.name}
+              </h3>;"
+              <p className="text-gray-300 mb-4 leading-relaxed">;
+              </p>;
+                  </div>
+                  <div className='text-sm text-gray-400'>{service.period}</div>
                 </div>
-              </div>
 
               {/* Service Info */}
               <h3 className="text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors">
                 {service.name}
               </h3>
               <p className="text-gray-300 mb-4 leading-relaxed">
+
                 {service.description}
               </p>
 
               {/* Features */}
+
               <div className="space-y-2 mb-4">
                 {service.features.slice(0, 3).map((feature, idx) => (
                   <div key={idx} className="flex items-center space-x-2 text-sm text-gray-400">
                     <CheckCircle className="w-4 h-4 text-green-400 flex-shrink-0" />
                     <span>{feature}</span>
                   </div>
+
                 ))}
                 {service.features.length > 3 && (
-                  <div className="text-sm text-cyan-400">
+                  <div className='text-sm text-cyan-400'>                  <div className="text-sm text-cyan-400">
                     +{service.features.length - 3} more features
                   </div>
+
+                {service.features.length > 3 && (<div className='text-sm text-cyan-400'    />;}
+                    +{service.features.length - 3} more features;
+                  </div>;
+                )}
+              </div>;
                 )}
               </div>
+
+              {/* Service Meta */}
+<div className='grid grid-cols-2 gap-4 mb-6 text-sm'>
+                <div className='flex items-center space-x-2 text-gray-400'>
+                  <Clock className='w-4 h-4' />
+                  <span>{service.setupTime}</span>
+                </div>                  <span>{service.setupTime}</span>
+
+                {service.description}
+              </p>
+
+              {/* Features */}
+
+                    <span>{feature}</span>
+                  </div>
+                ))}
+                {service.features.slice(0, 3).map((feature, idx) => ("
+                  <div key={idx} className="flex items-center space-x-2 text-sm text-gray-400">"
+                    <CheckCircle className="w-4 h-4 text-green-400 flex-shrink-0" />
+                    <span>{feature}</span>
+                  </div>
+                {service.features.length > 3 && ('"
+                  <div className='text-sm text-cyan-400'>                    +{service.features.length - 3} more features              <div className="space-y-2 mb-4">
+                {service.features.slice(0, 3).map((feature, idx) => ("
+                  <div key={idx} className="flex items-center space-x-2 text-sm text-gray-400">"
+                    <CheckCircle className="w-4 h-4 text-green-400 flex-shrink-0" />
+                  </div>
+                    +{service.features.length - 3} more features;
+                  </div>
+              </div>;
+              {/* Service Meta */}
+<div className='grid grid-cols-2 gap-4 mb-6 text-sm' />;
+                <div className='flex items-center space-x-2 text-gray-400' />;
+                  <Clock className='w-4 h-4' />;
+                  <span />{service.setupTime}</span>;
+                </div>                  <span />{service.setupTime}</span>;
+              </div>;
+              {/* Service Meta */}
+<div className='grid grid-cols-2 gap-4 mb-6 text-sm'    />;
+                <div className='flex items-center space-x-2 text-gray-400'    />;
+                  <Clock className='w-4 h-4'    />;
+                  <span    />{service.setupTime}</span>;
+                </div>                  <span    />{service.setupTime}</span>;
+                {service.description}
+              </p>;
+              {/* Features */}<span    />{feature}</span>;
+                  </div>;
+                ))}"
+                {service.features.slice(0, 3).map((feature, idx) => (<div key={idx} className=\"flex items-center space-x-2 text-sm text-gray-400\" />;"
+                    <CheckCircle className=\"w-4 h-4 text-green-400 flex-shrink-0\" />;
+                    <span />{feature}</span>;
+                  </div>;"
+                {service.features.length > 3 && (<div className='text-sm text-cyan-400' />                    +{service.features.length - 3} more features              <div className=\"space-y-2 mb-4\" />;"
+                {service.features.slice(0, 3).map((feature, idx) => (<div key={idx} className=\"flex items-center space-x-2 text-sm text-gray-400\" />;"
+                    <CheckCircle className=\"w-4 h-4 text-green-400 flex-shrink-0\" />;
+                  </div>;
+                    +{service.features.length - 3} more features;
+                  </div>;
+                )}
+              </div>;
+              {/* Service Meta */}
+                </div>"
+                <div className="flex items-center space-x-2 text-gray-400">"
 
               {/* Service Meta */}
               <div className="grid grid-cols-2 gap-4 mb-6 text-sm">
@@ -283,37 +1347,185 @@ export default function UltraFuturisticServiceShowcase2034() {
                 </div>
                 <div className="flex items-center space-x-2 text-gray-400">
                   <Users className="w-4 h-4" />
+              <div className='grid grid-cols-2 gap-4 mb-6 text-sm'>
+                <div className='flex items-center space-x-2 text-gray-400'>
+                  <Clock className='w-4 h-4' />
+                  <span>{service.setupTime}</span>
+                </div>                  <span>{service.setupTime}</span>
+                </div>
+                <div className="flex items-center space-x-2 text-gray-400">
+                  <Users className="w-4 h-4" />
                   <span>{service.customers.toLocaleString()}</span>
                 </div>
                 <div className="flex items-center space-x-2 text-gray-400">
                   <Star className="w-4 h-4 text-yellow-400" />
                   <span>{service.rating}/5</span>
                 </div>
-                <div className="flex items-center space-x-2 text-gray-400">
+                  <Users className="w-4 h-4" />
+                  <span>{service.customers.toLocaleString()}</span>
+                </div>"
+                <div className="flex items-center space-x-2 text-gray-400">"
+                  <Star className="w-4 h-4 text-yellow-400" />
+                  <span>{service.rating}/5</span>
+                </div>"
                   <TrendingUp className="w-4 h-4 text-green-400" />
-                  <span>{service.growthRate}</span>
+                <div className='flex items-center space-x-2 text-gray-400'>
+
+                <div className='flex items-center space-x-2 text-gray-400' />
+                  <Users className='w-4 h-4' />
+                <div className='flex items-center space-x-2 text-gray-400'>'
+                  <Users className='w-4 h-4' />'
+                  <span>{service.customers.toLocaleString()}</span>
+                </div>
+                <div className="flex items-center space-x-2 text-gray-400">
+                  <Star className="w-4 h-4 text-yellow-400" />
+                  <span>{service.rating}/5</span>
+                </div>
+
+
+                </div>"
+                <div className=\"flex items-center space-x-2 text-gray-400\"    />"
+                  <Users className=\"w-4 h-4\"    />
+                  <span    />{service.customers.toLocaleString()}</span>
+                </div>"
+                <div className=\"flex items-center space-x-2 text-gray-400\"    />"
+                  <Star className=\"w-4 h-4 text-yellow-400\"    />
+                  <span    />{service.rating}/5</span>
+                </div>
+
+                <div className='flex items-center space-x-2 text-gray-400'    />
+                  <Users className='w-4 h-4'    />
+                  <span    />{service.customers.toLocaleString()}</span>
+                </div>
+                <div className='flex items-center space-x-2 text-gray-400'    />
+                  <Star className='w-4 h-4 text-yellow-400'    />
+                  <span    />{service.rating}/5</span>
+                </div>
+                <div className='flex items-center space-x-2 text-gray-400'    />
+                  <TrendingUp className='w-4 h-4 text-green-400'    />
+                  <span    />{service.growthRate}</span>
                 </div>
               </div>
-
               {/* Market Position */}
-              <div className="mb-4 p-3 rounded-lg bg-white/5 border border-white/10">
-                <div className="text-xs text-gray-400 mb-1">Market Position</div>
-                <div className="text-sm text-gray-300 leading-relaxed">
+
+<div className='mb-4 p-3 rounded-lg bg-white/5 border border-white/10'    />
+                <div className='text-xs text-gray-400 mb-1'    />
+                  Market Position;
+                </div>
+                <div className='text-sm text-gray-300 leading-relaxed'    />
                   {service.marketPosition}
                 </div>
               </div>
-
               {/* ROI */}
-              <div className="mb-6 p-3 rounded-lg bg-gradient-to-r from-green-500/20 to-emerald-500/20 border border-green-500/30">
-                <div className="text-xs text-green-400 mb-1 font-semibold">Expected ROI</div>
-                <div className="text-sm text-green-300 font-medium">
-                  {service.roi}
-                </div>
-              </div>
 
-              {/* Action Buttons */}
-              <div className="flex space-x-3">
+<div className='mb-6 p-3 rounded-lg bg-gradient-to-r from-green-500/20 to-emerald-500/20 border border-green-500/30'    />
+                <div className='text-xs text-green-400 mb-1 font-semibold'    />
+                  Expected ROI;
+                </div>
+                <div className='text-sm text-green-300 font-medium'    />
+
+                  {service.roi}
+                </div>;
+              {/* Service Meta */}
+              <div className='grid grid-cols-2 gap-4 mb-6 text-sm'>;'
+                <div className='flex items-center space-x-2 text-gray-400'>;'
+                  <Clock className='w-4 h-4' />;'
+                  <span>{service && service.setupTime}</span>;
+                </div>                  <span>{service && service.setupTime}</span>;
+                </div>;
+                <div className="flex items-center space-x-2 text-gray-400">;"
+                  <Users className="w-4 h-4" />;"
+                  <span>{service && service.customers.toLocaleString()}</span>;
+                </div>;
+                <div className="flex items-center space-x-2 text-gray-400">;"
+                  <Star className="w-4 h-4 text-yellow-400" />;"
+                  <span>{service && service.rating}/5</span>;
+                </div>;
+                <div className='flex items-center space-x-2 text-gray-400'>;'
+                  <Users className='w-4 h-4' />;'
+                  <span>{service && service.customers.toLocaleString()}</span>;
+                </div>;
+                <div className='flex items-center space-x-2 text-gray-400'>;'
+                  <Star className='w-4 h-4 text-yellow-400' />;'
+                  <span>{service && service.rating}/5</span>;
+                </div>;
+                <div className='flex items-center space-x-2 text-gray-400'>;'
+                  <TrendingUp className='w-4 h-4 text-green-400' />                  <span>{service && service.growthRate}</span>                <div className="flex items-center space-x-2 text-gray-400">;"
+                  <TrendingUp className="w-4 h-4 text-green-400" />;"
+                  <span>{service && service.growthRate}</span>;
+                </div>;
+              {/* Market Position */}
+
+
+              <div className='grid grid-cols-2 gap-4 mb-6 text-sm'    />;
+                <div className='flex items-center space-x-2 text-gray-400'    />;
+                  <Clock className='w-4 h-4'    />;
+                  <span    />{service && service.setupTime}</span>;
+                </div>                  <span    />{service && service.setupTime}</span>;
+                </div>;"
+                <div className=\"flex items-center space-x-2 text-gray-400\"    />;"
+                  <Users className=\"w-4 h-4\"    />;
+                  <span    />{service && service.customers.toLocaleString()}</span>;
+                </div>;"
+                <div className=\"flex items-center space-x-2 text-gray-400\"    />;"
+                  <Star className=\"w-4 h-4 text-yellow-400\"    />;
+                  <span    />{service && service.rating}/5</span>;
+                </div>;
+                <div className='flex items-center space-x-2 text-gray-400'    />;
+                  <Users className='w-4 h-4'    />;
+                  <span    />{service && service.customers.toLocaleString()}</span>;
+                </div>;
+                <div className='flex items-center space-x-2 text-gray-400'    />;
+                  <Star className='w-4 h-4 text-yellow-400'    />;
+                  <span    />{service && service.rating}/5</span>;
+                </div>;
+                <div className='flex items-center space-x-2 text-gray-400'    />;"
+                  <TrendingUp className='w-4 h-4 text-green-400'    />                  <span    />{service && service.growthRate}</span>                <div className=\"flex items-center space-x-2 text-gray-400\"    />;"
+                  <TrendingUp className=\"w-4 h-4 text-green-400\"    />;
+                  <span    />{service && service.growthRate}</span>;
+                </div>;
+              </div>;
+              {/* Market Position */}
+              <div className='mb-4 p-3 rounded-lg bg-white/5 border border-white/10'    />;
+                <div className='text-xs text-gray-400 mb-1'    />;
+                  Market Position;
+                </div>;"
+                <div className='text-sm text-gray-300 leading-relaxed'    />                  {service && service.marketPosition}              <div className=\"mb-4 p-3 rounded-lg bg-white/5 border border-white/10\"    />;"
+                <div className=\"text-xs text-gray-400 mb-1\"    />Market Position</div>;"
+                <div className=\"text-sm text-gray-300 leading-relaxed\"    />;
+                  {service && service.marketPosition}
+                </div>;
+              {/* ROI */}
+              <div className='mb-6 p-3 rounded-lg bg-gradient-to-r from-green-500/20 to-emerald-500/20 border border-green-500/30'>;'
+                <div className='text-xs text-green-400 mb-1 font-semibold'>;'
+                  Expected ROI;
+                </div>;
+                <div className='text-sm text-green-300 font-medium'>                  {service && service.roi}              <div className="mb-6 p-3 rounded-lg bg-gradient-to-r from-green-500/20 to-emerald-500/20 border border-green-500/30">;"
+                <div className="text-xs text-green-400 mb-1 font-semibold">Expected ROI</div>;"
+                <div className="text-sm text-green-300 font-medium">;"
+
+                  {service && service.roi}
+                </div>;
+              <div className='flex space-x-3'>
+
                 <a
+              </div>;{/* Action Buttons */}<div className='flex space-x-3'>;
+
+              <div className='flex space-x-3'>
+                <a
+
+                  href={service.link}
+                  className='flex-1 bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-4 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-600 transition-all duration-200 text-center group'
+                >
+                  Get Started
+                  <ArrowRight className='w-4 h-4 ml-2 inline group-hover:translate-x-1 transition-transform' />
+                </a>
+                <button className='px-4 py-3 border border-white/20 text-white rounded-lg hover:border-cyan-500/50 hover:bg-cyan-500/10 transition-all duration-200'>
+                  <Eye className='w-4 h-4' />
+                </button>
+              </div>
+              {/* Trial Info */}
+
                   href={service.link}
                   className="flex-1 bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-4 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-600 transition-all duration-200 text-center group"
                 >
@@ -324,18 +1536,35 @@ export default function UltraFuturisticServiceShowcase2034() {
                   <Eye className="w-4 h-4" />
                 </button>
               </div>
-
+                  href={service && service.link}
+                  className='flex-1 bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-4 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-600 transition-all duration-200 text-center group'>;
+                  Get Started;
+                  <ArrowRight className='w-4 h-4 ml-2 inline group-hover:translate-x-1 transition-transform' />;
+                </a>;
+                <button className='px-4 py-3 border border-white/20 text-white rounded-lg hover:border-cyan-500/50 hover:bg-cyan-500/10 transition-all duration-200'>;
+                  <Eye className='w-4 h-4' />                </button>;
+              </div>;
               {/* Trial Info */}
               <div className="mt-4 text-center">
                 <div className="text-sm text-gray-400">
                   <span className="text-cyan-400 font-semibold">{service.trialDays} days</span> free trial
                 </div>
-              </div>
             </motion.div>
           ))}
-        </motion.div>
+
+origin/cursor/automate-test-improve-and-merge-code-2533
+          ))}
+
+
 
         {/* Call to Action */}
+        <motion&& motion.div
+        </motion && motion.div>;
+        {/* Call to Action */}
+        <motion&& motion.div
+
+        {/* Call to Action */}
+        <motion.div
         <motion.div
           initial={{ opacity: 0, y: 20}}
           whileInView={{ opacity: 1, y: 0}}
@@ -351,9 +1580,535 @@ export default function UltraFuturisticServiceShowcase2034() {
               Join thousands of businesses already leveraging our cutting-edge technology solutions. 
               Get started today and experience the future of business automation.
             </p>
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+
+        {/* Call to Action */}
+        <motion&& motion.div;
+initial={{ opacity: 0, y: 20 }
+}
+          whileInView={{ opacity: 1, y: 0 }
+}
+          transition={{ duration: 0 && 0.6, delay: 0 && 0.6 }}
+          viewport={{ once: true }}
+
+className='text-center mt-20'
+
+        <motion&& motion.div,
+initial={{ "opacity": 0, "y": 20 
+}
+          whileInView={{ "opacity": 1, "y": 0 
+}
+          transition={{ "duration": 0 && 0.6, "delay": 0 && 0.6 }}
+          viewport={{ "once": true }}
+
+            <h3 className="text-3xl font-bold text-white mb-4>
+              Ready to Transform Your Business?
+            </h3>
+            <p className='text-xl text-gray-300 mb-8 max-w-3xl mx-auto'>'
+              Join thousands of businesses already leveraging our cutting-edge,
+technology solutions. Get started today and experience the future,
+of business automation.
+            </p>
+            <div className='flex flex-col "sm":flex-row gap-4 justify-center items-center'>'
+              <a,
+href='/contact''
+                className='px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-lg font-semibold "hover":from-cyan-600 "hover":to-blue-600 transition-all duration-200 text-lg''
+              >
+                Start Your Free Trial;
+              </a>
+              <a'
+                href='/pricing-2034'"
+          <div className="bg-gradient-to-r from-cyan-500/10 to-blue-500/10 border border-cyan-500/20 rounded-2xl p-12 backdrop-blur-sm">"
+            </h3>
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+              Join thousands of businesses already leveraging our cutting-edge technology solutions. 
+              Get started today and experience the future of business automation.
+            </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <a
                 href="/contact"
+                className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-600 transition-all duration-200 text-lg"
+              >
+                Start Your Free Trial
+                className='px-8 py-4 border border-cyan-500 text-cyan-400 rounded-lg font-semibold hover:bg-cyan-500 hover:text-white transition-all duration-200 text-lg'>;
+                View Pricing;
+              </a>;
+            </div>;
+            <div className=mt-6 text-sm text-gray-400'>;'
+              <Phone className=w-4 h-4 inline mr-2 />              Need help? Call us at {contactInfo && contactInfo.mobile}        >;"
+          <div className=bg-gradient-to-r from-cyan-500/10 to-blue-500/10 border border-cyan-500/20 rounded-2xl p-12 backdrop-blur-sm>;"
+            <h3 className="text-3xl font-bold text-white mb-4>;
+              Ready to Transform Your Business?;
+            </h3>;
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">;
+              Join thousands of businesses already leveraging our cutting-edge technology solutions. ;
+              Get started today and experience the future of business automation.;
+            </p>;
+            <div className=flex flex-col sm:flex-row gap-4 justify-center items-center">;
+              <a"
+                href=/contact
+  );
+}
+}
+  );
+}
+              </h3>;"
+              <p className="text - gray - 300 mb - 4 leading - relaxed>;
+              <a
+                href="/contact"
+                className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-600 transition-all duration-200 text-lg">;
+                Start Your Free Trial;
+              </a>;
+                             <a
+                 href="/pricing-2034"
+
+
+}
+  );
+}
+              </h3>;
+              <p className="text - gray - 300 mb - 4 leading - relaxed">;
+              </p>;
+              {/* Features */}'
+              <div className='space - y-2 mb - 4>;
+                {service.features.slice (0, 3).map ((feature, idx) => (
+                  <div;
+                    key={idx}
+                    className='flex items - center space - x-2 text - sm text - gray - 400';
+                  >;
+                    <CheckCircle className=w - 4 h - 4 text - green - 400 flex - shrink - 0' />                    <span>{feature}</span>;
+                  </div>))}
+                {service.features.length > 3 && ('
+                  <div className=text - sm text - cyan - 400>                    +{service.features.length - 3} more features              <div className="space - y-2 mb - 4">;
+                {service.features.slice (0, 3).map ((feature, idx) => (
+                  <div key={idx} className=flex items - center space - x-2 text - sm text - gray - 400">;"
+                    <CheckCircle className=w - 4 h - 4 text - green - 400 flex - shrink - 0 />;
+                  </div>))}
+                {service.features.length > 3 && ('"
+                  <div className='text - sm text - cyan - 400>                  <div className="text - sm text - cyan - 400>;
+                    +{service.features.length - 3} more features;
+                  </div>)}
+              </div>;
+              {/* Service Meta */}
+              <div className='grid grid - cols - 2 gap - 4 mb - 6 text - sm'>;
+                <div className=flex items - center space - x-2 text - gray - 400'>;'
+                  <Clock className=w - 4 h - 4 />;
+                  <span>{service.setup_time}</span>;
+                </div>                  <span>{service.setup_time}</span>;
+                </div>;
+                <div className="flex items - center space - x-2 text - gray - 400">;
+                  <Users className=w - 4 h - 4" />;
+                  <span>{service.customers.toLocaleString ()}</span>;
+                </div>;"
+                <div className=flex items - center space - x-2 text - gray - 400>;"
+                  <Star className="w - 4 h - 4 text - yellow - 400 />;
+                  <span>{service.rating}/5</span>;
+                </div>;'
+                <div className='flex items - center space - x-2 text - gray - 400>;
+                  <Users className='w - 4 h - 4' />;
+                  <span>{service.customers.toLocaleString ()}</span>;
+                </div>;
+                <div className=flex items - center space - x-2 text - gray - 400'>;'
+                  <Star className=w - 4 h - 4 text - yellow - 400 />;
+                  <span>{service.rating}/5</span>;
+                </div>;'
+                <div className='flex items - center space - x-2 text - gray - 400>;
+                  <TrendingUp className='w - 4 h - 4 text - green - 400' />                  <span>{service.growth_rate}</span>                <div className="flex items - center space - x-2 text - gray - 400">;
+                  <TrendingUp className=w - 4 h - 4 text - green - 400" />;
+                  <span>{service.growth_rate}</span>;
+                </div>;
+              </div>;
+              {/* Market Position */}
+              <div className=mb - 4 p - 3 rounded - lg bg - white / 5 border border - white / 10'>;'
+                <div className=text - xs text - gray - 400 mb - 1>;
+                  Market Position;
+                </div>;'"
+                <div className='text - sm text - gray - 300 leading - relaxed>                  {service.market_position}              <div className=mb - 4 p - 3 rounded - lg bg - white / 5 border border - white / 10>;"
+                <div className="text - xs text - gray - 400 mb - 1>Market Position</div>;
+                <div className="text - sm text - gray - 300 leading - relaxed">;
+                  {service.market_position}
+                </div>;
+              </div>;
+              {/* ROI */}
+              <div className='mb - 6 p - 3 rounded - lg bg - gradient - to - r from - green - 500 / 20 to - emerald - 500 / 20 border border - green - 500 / 30'>;
+                <div className=text - xs text - green - 400 mb - 1 font - semibold'>;
+                  Expected ROI;
+                </div>;'
+                <div className=text - sm text - green - 300 font - medium>                  {service.roi}              <div className=mb - 6 p - 3 rounded - lg bg - gradient - to - r from - green - 500 / 20 to - emerald - 500 / 20 border border - green - 500 / 30">;"
+                <div className=text - xs text - green - 400 mb - 1 font - semibold>Expected ROI</div>;"
+                <div className="text - sm text - green - 300 font - medium>;
+                  {service.roi}
+                </div>;
+              </div>;
+              {/* Action Buttons */}'
+              <div className='flex space - x-3>;
+                <a;
+                  href={service.link}
+                  className='flex - 1 bg - gradient - to - r from - cyan - 500 to - blue - 500 text - white px - 4 py - 3 rounded - lg font - semibold hover:from - cyan - 600 hover:to - blue - 600 transition - all duration - 200 text - center group';
+                >;
+                  Get Started;
+                  <ArrowRight className=w - 4 h - 4 ml - 2 inline group - hover:translate - x-1 transition - transform' />;
+                </a>;'
+                <button className=px - 4 py - 3 border border - white / 20 text - white rounded - lg hover:border - cyan - 500 / 50 hover:bg - cyan - 500 / 10 transition - all duration - 200>;'
+                  <Eye className='w - 4 h - 4 />                </button>;
+              </div>;
+              {/* Trial Info */}                <a;
+                  href={service.link}
+                  className="flex - 1 bg - gradient - to - r from - cyan - 500 to - blue - 500 text - white px - 4 py - 3 rounded - lg font - semibold hover:from - cyan - 600 hover:to - blue - 600 transition - all duration - 200 text - center group";
+                >;
+                  Get Started;
+                  <ArrowRight className=w - 4 h - 4 ml - 2 inline group - hover:translate - x-1 transition - transform" />;
+                </a>;"
+                <button className=px - 4 py - 3 border border - white / 20 text - white rounded - lg hover:border - cyan - 500 / 50 hover:bg - cyan - 500 / 10 transition - all duration - 200>;"
+                  <Eye className="w - 4 h - 4 />;
+                </button>;
+              </div>;
+              {/* Trial Info */}
+              <div className='mt - 4 text - center'>;
+                <div className=text - sm text - gray - 400'>;'
+                  <span className=text - cyan - 400 font - semibold>;
+                    {service.trial_days} days;'
+                  </span>{' }
+                  free trial                </div>              <div className="mt - 4 text - center">;
+                <div className=text - sm text - gray - 400">;"
+                  <span className=text - cyan - 400 font - semibold>{service.trial_days} days</span> free trial;
+                </div>;
+              </div>;
+            </motion.div>))}
+        </motion.div>;
+        {/* Call to Action */}
+        <motion.div;
+          initial={{ opacity: 0, coordinate_y: 20 }}
+          whileInView={{ opacity: 1, coordinate_y: 0 }}
+          transition={{ duration: 0.6, delay: 0.6 }}
+          viewport={{ once: true }}'
+          className='text - center mt - 20';
+        >;'
+          <div className='bg - gradient - to - r from - cyan - 500 / 10 to - blue - 500 / 10 border border - cyan - 500 / 20 rounded - 2xl p - 12 backdrop - blur - sm'>;'
+            <h3 className='text - 3xl font - bold text - white mb - 4'>;
+              Ready to Transform Your Business?;
+            </h3>;'
+            <p className='text - xl text - gray - 300 mb - 8 max - w-3xl mx - auto'>;
+              Join thousands of businesses already leveraging our cutting - edge;
+              technology solutions. Get started today and experience the future;
+              of business automation.;
+            </p>;'
+            <div className='flex flex - col sm:flex - row gap - 4 justify - center items - center'>;
+              <a;'
+                href='/contact';'
+                className='px - 8 py - 4 bg - gradient - to - r from - cyan - 500 to - blue - 500 text - white rounded - lg font - semibold hover:from - cyan - 600 hover:to - blue - 600 transition - all duration - 200 text - lg';
+              >;
+                Start Your Free Trial;
+              </a>;
+              <a;'
+                href='/pricing - 2034';'
+                className='px - 8 py - 4 border border - cyan - 500 text - cyan - 400 rounded - lg font - semibold hover:bg - cyan - 500 hover:text - white transition - all duration - 200 text - lg';
+              >;
+                View Pricing;
+              </a>;
+            </div>;'
+            <div className='mt - 6 text - sm text - gray - 400'>;'
+              <Phone className='w - 4 h - 4 inline mr - 2' />              Need help? Call us at {contact_info.mobile}        >;"
+          <div className="bg - gradient - to - r from - cyan - 500 / 10 to - blue - 500 / 10 border border - cyan - 500 / 20 rounded - 2xl p - 12 backdrop - blur - sm">;"
+            <h3 className="text - 3xl font - bold text - white mb - 4">;
+              Ready to Transform Your Business?;
+            </h3>;"
+            <p className="text - xl text - gray - 300 mb - 8 max - w-3xl mx - auto">;
+              Join thousands of businesses already leveraging our cutting - edge technology solutions.;
+              Get started today and experience the future of business automation.;
+            </p>;"
+            <div className="flex flex - col sm:flex - row gap - 4 justify - center items - center">;
+              <a;"
+                href="/contact";"
+                className="px - 8 py - 4 bg - gradient - to - r from - cyan - 500 to - blue - 500 text - white rounded - lg font - semibold hover:from - cyan - 600 hover:to - blue - 600 transition - all duration - 200 text - lg";
+              >;
+                Start Your Free Trial;
+              </a>;
+                            <a;"
+                href="/pricing - 2034";"
+                className="px - 8 py - 4 border border - cyan - 500 text - cyan - 400 rounded - lg font - semibold hover:bg - cyan - 500 hover:text - white transition - all duration - 200 text - lg";
+              >;
+                View Pricing;
+              </a>;
+            </div>;"
+            <div className="mt - 6 text - sm text - gray - 400">;"
+              <Phone className="w - 4 h - 4 inline mr - 2" />;
+              Need help? Call us at {contact_info.mobile}
+            </div>;
+        </motion.div>;
+      </div>;
+    </section>);
+}
+                className='px-8 py-4 border border-cyan-500 text-cyan-400 rounded-lg font-semibold hover:bg-cyan-500 hover:text-white transition-all duration-200 text-lg'
+               />
+                View Pricing;
+              </a>
+              <a;
+href='/pricing-2034'
+
+                className='px-8 py-4 border border-cyan-500 text-cyan-400 rounded-lg font-semibold hover:bg-cyan-500 hover:text-white transition-all duration-200 text-lg'
+                  />
+                View Pricing;
+              </a>
+                             <a
+                 href="/pricing-2034"
+                 className="px-8 py-4 border border-cyan-500 text-cyan-400 rounded-lg font-semibold hover:bg-cyan-500 hover:text-white transition-all duration-200 text-lg"
+               >
+                 View Pricing
+               </a>
+            </div>
+            <div className="mt-6 text-sm text-gray-400">
+              <Phone className="w-4 h-4 inline mr-2" />
+              Need help? Call us at {contactInfo.mobile}
+            </div>
+        </motion.div>
+      </div>
+    </section>
+                  free trial;
+                </div>;
+            </motion.div>;
+          ))}</motion && motion.div>;{/* Call to Action */}
+        <motion&& motion.div;
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0 && 0.6, delay: 0 && 0.6 }}
+          viewport={{ once: true }}className='text-center mt-20';
+        >;
+          <div className='bg-gradient-to-r from-cyan-500/10 to-blue-500/10 border border-cyan-500/20 rounded-2xl p-12 backdrop-blur-sm'>;
+            <h3 className='text-3xl font-bold text-white mb-4'>;
+              Ready to Transform Your Business?;
+            </h3>;
+            <p className='text-xl text-gray-300 mb-8 max-w-3xl mx-auto'>;
+              Join thousands of businesses already leveraging our cutting-edge;
+              technology solutions. Get started today and experience the future;
+              of business automation.;
+            </p>;
+            <div className='flex flex-col sm:flex-row gap-4 justify-center items-center'>;
+              <a;
+                href='/contact';
+                className='px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-600 transition-all duration-200 text-lg';
+              >;
+                Start Your Free Trial;
+              </a>;
+              <a;
+                href='/pricing-2034';
+          <div className="bg-gradient-to-r from-cyan-500/10 to-blue-500/10 border border-cyan-500/20 rounded-2xl p-12 backdrop-blur-sm">;
+            <h3 className="text-3xl font-bold text-white mb-4">;
+              Ready to Transform Your Business?;
+            </h3>;
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">;
+              Join thousands of businesses already leveraging our cutting-edge technology solutions.;
+              Get started today and experience the future of business automation.;
+            </p>;
+            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">;
+          <div className="bg-gradient-to-r from-cyan-500/10 to-blue-500/10 border border-cyan-500/20 rounded-2xl p-12 backdrop-blur-sm">
+            <h3 className="text-3xl font-bold text-white mb-4">
+              Ready to Transform Your Business?
+            </h3>
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+              Join thousands of businesses already leveraging our cutting-edge technology solutions.
+              Get started today and experience the future of business automation.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+                className='px-8 py-4 border border-cyan-500 text-cyan-400 rounded-lg font-semibold hover:bg-cyan-500 hover:text-white transition-all duration-200 text-lg'>;
+                View Pricing;
+              </a>;
+            </div>;
+            <div className='mt-6 text-sm text-gray-400'>;
+              <Phone className='w-4 h-4 inline mr-2' />              Need help? Call us at {contactInfo && contactInfo.mobile}        >;
+          <div className="bg-gradient-to-r from-cyan-500/10 to-blue-500/10 border border-cyan-500/20 rounded-2xl p-12 backdrop-blur-sm">;
+            <h3 className="text-3xl font-bold text-white mb-4">;
+              Ready to Transform Your Business?;
+            </h3>;
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">;
+              Join thousands of businesses already leveraging our cutting-edge technology solutions. ;
+              Get started today and experience the future of business automation.;
+            </p>;
+            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">;
+              <a;
+                href="/contact";
+  )}
+}
+  )}
+              </h3>;
+              <p className="text - gray - 300 mb - 4 leading - relaxed">;
+              </p>;
+              {/* Features */}
+              <div className='space - y-2 mb - 4'>;
+                {service.features.slice (0, 3).map ((feature, idx) => (<div;
+                    key={idx}
+                    className='flex items - center space - x-2 text - sm text - gray - 400';
+                  >;
+                    <CheckCircle className='w - 4 h - 4 text - green - 400 flex - shrink - 0' />                    <span>{feature}</span>;
+                  </div>))}
+                {service.features.length > 3 && (<div className='text - sm text - cyan - 400'>                    +{service.features.length - 3} more features              <div className="space - y-2 mb - 4">;
+                {service.features.slice (0, 3).map ((feature, idx) => (<div key={idx} className="flex items - center space - x-2 text - sm text - gray - 400">;
+                    <CheckCircle className="w - 4 h - 4 text - green - 400 flex - shrink - 0" />;
+                  </div>))}
+                {service.features.length > 3 && (<div className='text - sm text - cyan - 400'>                  <div className="text - sm text - cyan - 400">;
+                    +{service.features.length - 3} more features;
+                  </div>)}
+              </div>;
+              {/* Service Meta */}
+              <div className='grid grid - cols - 2 gap - 4 mb - 6 text - sm'>;
+                <div className='flex items - center space - x-2 text - gray - 400'>;
+                  <Clock className='w - 4 h - 4' />;
+                  <span>{service.setup_time}</span>;
+                </div>                  <span>{service.setup_time}</span>;
+                </div>;
+                <div className="flex items - center space - x-2 text - gray - 400">;
+                  <Users className="w - 4 h - 4" />;
+                  <span>{service.customers.toLocaleString ()}</span>;
+                </div>;
+                <div className="flex items - center space - x-2 text - gray - 400">;
+                  <Star className="w - 4 h - 4 text - yellow - 400" />;
+                  <span>{service.rating}/5</span>;
+                </div>;
+                <div className='flex items - center space - x-2 text - gray - 400'>;
+                  <Users className='w - 4 h - 4' />;
+                  <span>{service.customers.toLocaleString ()}</span>;
+                </div>;
+                <div className='flex items - center space - x-2 text - gray - 400'>;
+                  <Star className='w - 4 h - 4 text - yellow - 400' />;
+                  <span>{service.rating}/5</span>;
+                </div>;
+                <div className='flex items - center space - x-2 text - gray - 400'>;
+                  <TrendingUp className='w - 4 h - 4 text - green - 400' />                  <span>{service.growth_rate}</span>                <div className="flex items - center space - x-2 text - gray - 400">;
+                  <TrendingUp className="w - 4 h - 4 text - green - 400" />;
+                  <span>{service.growth_rate}</span>;
+                </div>;
+              {/* Market Position */}
+              <div className='mb - 4 p - 3 rounded - lg bg - white / 5 border border - white / 10'>;
+                <div className='text - xs text - gray - 400 mb - 1'>;
+                  Market Position;
+                </div>;
+                <div className='text - sm text - gray - 300 leading - relaxed'>                  {service.market_position}              <div className="mb - 4 p - 3 rounded - lg bg - white / 5 border border - white / 10">;
+                <div className="text - xs text - gray - 400 mb - 1">Market Position</div>;
+                <div className="text - sm text - gray - 300 leading - relaxed">;
+                  {service.market_position}
+                </div>;
+              {/* ROI */}
+              <div className='mb - 6 p - 3 rounded - lg bg - gradient - to - r from - green - 500 / 20 to - emerald - 500 / 20 border border - green - 500 / 30'>;
+                <div className='text - xs text - green - 400 mb - 1 font - semibold'>;
+                  Expected ROI;
+                </div>;
+                <div className='text - sm text - green - 300 font - medium'>                  {service.roi}              <div className="mb - 6 p - 3 rounded - lg bg - gradient - to - r from - green - 500 / 20 to - emerald - 500 / 20 border border - green - 500 / 30">;
+                <div className="text - xs text - green - 400 mb - 1 font - semibold">Expected ROI</div>;
+                <div className="text - sm text - green - 300 font - medium">;
+                  {service.roi}
+                </div>;
+              {/* Action Buttons */}
+              <div className='flex space - x-3'>;
+                <a;
+                  href={service.link}
+                  className='flex - 1 bg - gradient - to - r from - cyan - 500 to - blue - 500 text - white px - 4 py - 3 rounded - lg font - semibold hover:from - cyan - 600 hover:to - blue - 600 transition - all duration - 200 text - center group';
+                >;
+                  Get Started;
+                  <ArrowRight className='w - 4 h - 4 ml - 2 inline group - hover:translate - x-1 transition - transform' />;
+                </a>;
+                <button className='px - 4 py - 3 border border - white / 20 text - white rounded - lg hover:border - cyan - 500 / 50 hover:bg - cyan - 500 / 10 transition - all duration - 200'>;
+                  <Eye className='w - 4 h - 4' />                </button>;
+              </div>;
+              {/* Trial Info */}                <a;
+                  href={service.link}
+                  className="flex - 1 bg - gradient - to - r from - cyan - 500 to - blue - 500 text - white px - 4 py - 3 rounded - lg font - semibold hover:from - cyan - 600 hover:to - blue - 600 transition - all duration - 200 text - center group";
+                >;
+                  Get Started;
+                  <ArrowRight className="w - 4 h - 4 ml - 2 inline group - hover:translate - x-1 transition - transform" />;
+                </a>;
+                <button className="px - 4 py - 3 border border - white / 20 text - white rounded - lg hover:border - cyan - 500 / 50 hover:bg - cyan - 500 / 10 transition - all duration - 200">;
+                  <Eye className="w - 4 h - 4" />;
+                </button>;
+              </div>;
+              {/* Trial Info */}
+              <div className='mt - 4 text - center'>;
+                <div className='text - sm text - gray - 400'>;
+                  <span className='text - cyan - 400 font - semibold'>;
+                    {service.trial_days} days;
+                  </span>{' '}
+                  free trial                </div>              <div className="mt - 4 text - center">;
+                <div className="text - sm text - gray - 400">;
+                  <span className="text - cyan - 400 font - semibold">{service.trial_days} days</span> free trial;
+                </div>;
+            </motion.div>))}
+        </motion.div>;
+        {/* Call to Action */}
+        <motion.div;
+          initial={{ opacity: 0, coordinate_y: 20 }}
+          whileInView={{ opacity: 1, coordinate_y: 0 }}
+          transition={{ duration: 0.6, delay: 0.6 }}
+          viewport={{ once: true }}
+          className='text - center mt - 20';
+        >;
+          <div className='bg - gradient - to - r from - cyan - 500 / 10 to - blue - 500 / 10 border border - cyan - 500 / 20 rounded - 2xl p - 12 backdrop - blur - sm'>;
+            <h3 className='text - 3xl font - bold text - white mb - 4'>;
+              Ready to Transform Your Business?;
+            </h3>;
+            <p className='text - xl text - gray - 300 mb - 8 max - w-3xl mx - auto'>;
+              Join thousands of businesses already leveraging our cutting - edge;
+              technology solutions. Get started today and experience the future;
+              of business automation.;
+            </p>;
+            <div className='flex flex - col sm:flex - row gap - 4 justify - center items - center'>;
+              <a;
+                href='/contact';
+                className='px - 8 py - 4 bg - gradient - to - r from - cyan - 500 to - blue - 500 text - white rounded - lg font - semibold hover:from - cyan - 600 hover:to - blue - 600 transition - all duration - 200 text - lg';
+              >;
+                Start Your Free Trial;
+              </a>;
+              <a;
+                href='/pricing - 2034';
+                className='px - 8 py - 4 border border - cyan - 500 text - cyan - 400 rounded - lg font - semibold hover:bg - cyan - 500 hover:text - white transition - all duration - 200 text - lg';
+              >;
+                View Pricing;
+              </a>;
+            </div>;
+            <div className='mt - 6 text - sm text - gray - 400'>;
+              <Phone className='w - 4 h - 4 inline mr - 2' />              Need help? Call us at {contact_info.mobile}        >;
+          <div className="bg - gradient - to - r from - cyan - 500 / 10 to - blue - 500 / 10 border border - cyan - 500 / 20 rounded - 2xl p - 12 backdrop - blur - sm">;
+            <h3 className="text - 3xl font - bold text - white mb - 4">;
+              Ready to Transform Your Business?;
+            </h3>;
+            <p className="text - xl text - gray - 300 mb - 8 max - w-3xl mx - auto">;
+              Join thousands of businesses already leveraging our cutting - edge technology solutions.;
+              Get started today and experience the future of business automation.;
+            </p>;
+            <div className="flex flex - col sm:flex - row gap - 4 justify - center items - center">;
+              <a;
+                href="/contact";
+                className="px - 8 py - 4 bg - gradient - to - r from - cyan - 500 to - blue - 500 text - white rounded - lg font - semibold hover:from - cyan - 600 hover:to - blue - 600 transition - all duration - 200 text - lg";
+              >;
+                Start Your Free Trial;
+              </a>;
+                            <a;
+                href="/pricing - 2034";
+                className="px - 8 py - 4 border border - cyan - 500 text - cyan - 400 rounded - lg font - semibold hover:bg - cyan - 500 hover:text - white transition - all duration - 200 text - lg";
+              >;
+                View Pricing;
+              </a>;
+            </div>;
+            <div className="mt - 6 text - sm text - gray - 400">;
+              <Phone className="w - 4 h - 4 inline mr - 2" />;
+              Need help? Call us at {contact_info.mobile}
+            </div>;
+        </motion.div>;
+      </div>;
+    </section>)}className='px-8 py-4 border border-cyan-500 text-cyan-400 rounded-lg font-semibold hover:bg-cyan-500 hover:text-white transition-all duration-200 text-lg';
+              >;
+                View Pricing;
+              </a>;
+            </div>;
+            <div className='mt-6 text-sm text-gray-400'>;
+              <Phone className='w-4 h-4 inline mr-2' />;
+              Need help? Call us at {contactInfo.mobile}
+            </div>;
+        </motion.div>;
+      </div>;
+    </section>;
+    </section>);
+}
+
                 className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-600 transition-all duration-200 text-lg"
               >
                 Start Your Free Trial
@@ -373,5 +2128,5 @@ export default function UltraFuturisticServiceShowcase2034() {
         </motion.div>
       </div>
     </section>
-  )
-}
+
+"

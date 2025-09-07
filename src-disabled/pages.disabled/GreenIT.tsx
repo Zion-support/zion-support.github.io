@@ -18,7 +18,6 @@ class ErrorBoundary extends React.Component {
     }
 export default function GreenIT() {
 
-  const greenITSolutions = [
     {
     }
     return this.props.children;
@@ -33,14 +32,25 @@ export default function GreenIT() {;,
 
 
 
+          <div className='mb-16'>
+            <div className='bg-zion-blue-dark border border-zion-blue-light rounded-xl p-8 md:p-12 mb-16'>
+              <div className='grid grid-cols-1 lg:grid-cols-2 gap-12 items-center'>
+                  <h2 className="text-3xl font-bold text-white mb-6">Sustainable IT for a Better Future</h2>
+                  <p className="text-zion-slate-light text-lg mb-6">
+                    As AI and cloud computing demand grows exponentially, so does the environmental impact of data centers. 
+                    Our Green IT solutions help organizations implement sustainable practices in their IT infrastructure 
+                    while maintaining performance and reliability.
+ursor/fix-website-loading-errors-and-merge-6662
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   return (
     <>
       <SEO
           <div className="mb-16">
             <div className="bg-zion-blue-dark border border-zion-blue-light rounded-xl p-8 md:p-12 mb-16">
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-
-
+<<<<<<< HEAD
                 <div>
                   <h2 className="text-3xl font-bold text-white mb-6">Sustainable IT for a Better Future</h2>
                   <p className="text-zion-slate-light text-lg mb-6">
@@ -60,11 +70,6 @@ export default function GreenIT() {;,
       icon: Leaf}
   ]
 
-import { SEO } from '@/components/SEO';
-import { GradientHeading } from '@/components/GradientHeading';
-import { Button } from '@/components/ui/button';
-import { Leaf, Server, Cloud } from 'lucide-react';
-import Link from 'next/link';
 
 import { SEO } from "@/components/SEO",;
 import { GradientHeading } from "@/components/GradientHeading",;
@@ -75,7 +80,7 @@ export default function GreenIT() {
                     <Button className='bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple'>
 origin/cursor/automate-test-improve-and-merge-code-2533
   return (
-    <>;
+    <>
       <SEO
         title="Green IT Solutions - Sustainable Technology"
         description="Explore eco-friendly IT solutions and sustainable technology practices that reduce environmental impact while maintaining performance."
@@ -1272,7 +1277,6 @@ export default function GreenIT(): any (...args: any[]): any {): unknown {): unk
 import React, { useState } from 'react'
 import { motion } from 'framer-motion'
 import { SEO } from '../components/SEO'
-import {
   Leaf
   Zap
   Sun
@@ -1453,7 +1457,6 @@ export default function GreenIT(...args: unknown[]): unknown {
     { id: 'hardware', name: 'Green Hardware', count: 3 },    { id: 'software', name: 'Sustainable Software', count: 3 }
     { id: 'data', name: 'Data Centers', count: 2 }
   ]
-  const greenSolutions: unknown = [{}
       id: 'energy - monitoring'
       name: 'Smart Energy Monitoring'
       category: 'energy'
@@ -1768,10 +1771,17 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             <div className="mb-16">
               <h2 className="text-2xl font-bold text-white mb-8">Our Green IT Solutions</h2>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+<<<<<<< HEAD
+ursor/fix-website-loading-errors-and-merge-6662
+
+
+
+=======
 
 
 
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 {greenITSolutions.map((solution, index) => (
                     <div className="flex justify-center mb-4">
                       <solution.icon className="h-12 w-12 text-zion-cyan" />
@@ -2073,10 +2083,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   )
 export { GreenIT, GreenIT };
 };
-import { SEO } from "@/components/SEO",;
-import { GradientHeading } from "@/components/GradientHeading",;
 import { Button } from "@/components/ui/button",;
-import { Leaf, Server, Cloud } from 'lucide-react';
 import Link from "next/link",;
 export default function GreenIT() {;
   const greenITSolutions = [;,
@@ -2246,10 +2253,8 @@ export { GreenIT, GreenIT }
 import { SEO } from "@/components/SEO",
 import { GradientHeading } from "@/components/GradientHeading",
 import { Button } from "@/components/ui/button",
-import { Leaf, Server, Cloud } from 'lucide-react'
 import Link from "next/link",
 export default function GreenIT() {
-  const greenITSolutions = [
     {
       title: "Energy-Efficient Hardware",
       description: "Modern processors, storage solutions, and networking equipment delivering significant performance improvements while consuming less power.",
@@ -2452,11 +2457,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   )
 export { GreenIT, GreenIT };
 };
-import { SEO } from "@/components/SEO",;
-import { GradientHeading } from "@/components/GradientHeading",;
-import { Button } from "@/components/ui/button",;
-import { Leaf, Server, Cloud } from 'lucide-react';
-import Link from "next/link",;
 export default function GreenIT() {;
   const greenITSolutions = [;
     {;
@@ -2555,31 +2555,10 @@ export default function GreenIT() {;
                       • Reduced carbon footprint and greenhouse gas emissions;
                     </li>;
                     <li>• Lower energy consumption and resource utilization</li>;
-                    <li>;
-                      • Decreased electronic waste through better lifecycle;
-                      management;
-                    </li>;
-                    <li>• Support for renewable energy initiatives</li>;
-                  </ul>;
-                </div>;
-
-                <div className='bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6'>;
-                  <h3 className='text-white font-medium text-xl mb-4'>;
-                    Business Benefits;
-                  </h3>;
-                  <ul className='text-zion-slate-light space-y-2'>;
-                    <li>• Significant cost savings on energy and cooling</li>;
-                    <li>;
-                      • Enhanced brand reputation and stakeholder relations;
-                    </li>;
-                    <li>;
-                      • Compliance with emerging environmental regulations;
-                    </li>                    <li>• Improved operational efficiency and performance</li>                    <li>• Lower energy consumption and resource utilization</li>;
                     <li>• Decreased electronic waste through better lifecycle management</li>;
                     <li>• Support for renewable energy initiatives</li>;
                   </ul>;
                 </div>;
-
                 <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6">;
                   <h3 className="text-white font-medium text-xl mb-4">Business Benefits</h3>;
                   <ul className="text-zion-slate-light space-y-2">;
@@ -2592,19 +2571,6 @@ export default function GreenIT() {;
               </div>;
             </div>;
           </div>;
-
-          <div className='bg-gradient-to-r from-zion-blue-dark to-zion-blue-light border border-zion-purple/30 rounded-xl p-8 md:p-12 text-center'>;
-            <h2 className='text-3xl font-bold text-white mb-6'>;
-              Ready to implement Green IT solutions?;
-            </h2>;
-            <p className='text-zion-slate-light text-lg mb-8 max-w-2xl mx-auto'>;
-              Connect with our experts to discuss how we can help you build a;
-              more sustainable IT infrastructure.;
-            </p>;
-            <Button
-              className='bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple'
-              asChild>;
-              <Link href='/contact'>Contact Our Team</Link>            </Button>          ;
           <div className="bg-gradient-to-r from-zion-blue-dark to-zion-blue-light border border-zion-purple/30 rounded-xl p-8 md:p-12 text-center">;
             <h2 className="text-3xl font-bold text-white mb-6">Ready to implement Green IT solutions?</h2>;
             <p className="text-zion-slate-light text-lg mb-8 max-w-2xl mx-auto">;

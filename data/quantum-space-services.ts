@@ -13,7 +13,6 @@ export interface QuantumSpaceService {
     email: string,
     address: string}
 }
-
 export const quantumSpaceServices: QuantumSpaceService[] = [
   {
     id: "quantum-computing-platform",
@@ -21,6 +20,12 @@ export const quantumSpaceServices: QuantumSpaceService[] = [
     tagline: "Next-generation quantum computing solutions",
     price: "$199/month",
     description: "Advanced quantum computing platform for complex calculations and simulations.",
+    id: 'quantum-computing-platform'
+    name: 'Quantum Computing Platform'
+    tagline: 'Next-generation quantum computing solutions'
+    price: '$199/month'
+    description:
+      'Advanced quantum computing platform for complex calculations and simulations.'
     features: [
       "Quantum algorithms",
       "Simulation tools",

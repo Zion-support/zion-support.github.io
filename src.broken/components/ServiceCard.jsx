@@ -44,7 +44,6 @@ export default function ServiceCard({ service, onSelect }) {
   )
 }
 };
-const handleSave = (e) => {
   e.stopPropagation ();
 toast.info ('Log in to save favorites');
 navigate (`/login?next=$ {

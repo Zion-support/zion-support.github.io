@@ -13,6 +13,7 @@ export interface FuturisticInnovation2028 {
     email: string,
     address: string}
 }
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 export const futuristic2028Services: FuturisticInnovation2028[] = [
   {

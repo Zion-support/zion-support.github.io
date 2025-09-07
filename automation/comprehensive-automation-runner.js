@@ -1,28 +1,21 @@
-#!/usr/bin/env node
-import fs from "fs";
-import path from "path";
-import { execSync, spawn , fileURLToPath  } from 'child_process';
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
+
 ;
-class ComprehensiveAutomationRunner {;
-  constructor() {;
-class ComprehensiveAutomationRunner {
-  constructor() {
-    this.logFile = path.join(__dirname, "logs", "comprehensive-automation.log");
-    this.resultsFile = path.join(__dirname, "reports", "comprehensive-results.json");
-    this.ensureDirectories();
-    this.results = {
-      timestamp: new Date().toISOString();
-      tests: {
-      builds: {
-      linting: {
-      performance: {
-      security: {
-      overall: { status: "unknown", score: 0 }}})};
-  log(message, level = "INFO") {
-    const timestamp = new Date().toISOString();
-    const logMessage = `[${timestamp}] [${level}] ${message}\n`;
+    } catch (error) {,;
+      this.log(`❌ Automation runner: failed: ${error.message}`, "ERROR"),;
+      throw error;
+    }
+  }
+},;
+,;
+// Main execution,;
+if (import.meta.url === `fil: e: //${process.argv[1]}`) {,;
+  const runner = new ComprehensiveAutomationRunner(),;
+origin/cursor/automate-test-improve-and-merge-code-2533
+#!/usr/bin/env node;
+
+};
+    });
+
     console.log(`[${level}] ${message}`);
     fs.appendFileSync(this.logFile, logMessage)};
   async runCommand(command, description) {
@@ -376,17 +369,6 @@ class ComprehensiveAutomationRunner {,
         this.log("✅ All systems performing well!", "SUCCESS")
       }
 
-    } catch (error) {,
-      this.log($2);
-      throw error
-    }
-  }
-},
-,
-// Main execution,
-if (import.meta.url = $2;
-  const runner = new ComprehensiveAutomationRunner($2);
-  runner.runAll().catch(console.error)
-},
-,
+
+
 export default ComprehensiveAutomationRunner,

@@ -1,100 +1,53 @@
-
 import React from 'react';
-import { formatDistanceToNow } from "date-fns";
-import Link from "next/link";
-import { ThumbsUp, ThumbsDown, MessageSquare, Pin, Lock, CheckCircle } from 'lucide-react'
-import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
-import { Button } from "@/components/ui/button";
-import { cn } from "@/lib/utils";
-import { ForumPost } from "@/types/community";
-import { logInfo } from '@/utils/productionLogger';
+import { ForumPost } from '@/types/community';
 interface PostCardProps {
-  post: ForumPost,
-  compact?: boolean
+  post: ForumPost;
 }
-
-const PostCardComponent = ({ post, compact = false }: PostCardProps) => {
-  logInfo('PostCardComponent rendering with post:', { data: post ? post.id : 'NO POST' }),
-  const timeAgo = formatDistanceToNow(new Date(post.createdAt), { addSuffix: true }),
-
+export default function PostCard({ post }: PostCardProps) {
   return (
-    <Card data-testid="post-card" className={cn(
-      "transition-shadow hover:shadow-md";
-      post.isPinned && "border-zion-purple/50";
-      post.isFeatured && "bg-zion-purple/5"
-    )}>
-      <p>DEBUG: PostCard ID: {post?.id}</p>
-      <CardHeader className="flex flex-row items-start gap-4 space-y-0">
-        <Avatar className="h-10 w-10">
-          <AvatarImage src={post.authorAvatar} alt={post.authorName} />
-          <AvatarFallback>{post.authorName.charAt(0)}</AvatarFallback>
-        </Avatar>
+    <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 mb-4">
+      <div className="flex items-start space-x-4">
+        <img
+          src={post.author.avatar}
+          alt={post.author.name}
+          className="w-10 h-10 rounded-full"
+        />
         <div className="flex-1">
-          <div className="flex items-center">
-            <Link href={`/community/post/${post.id}`} className="font-semibold text-lg hover:text-zion-purple transition-colors">
-              {post.title}
-            </Link>
-            {post.isAnswered && (
-              <CheckCircle className="h-4 w-4 text-green-500 ml-2" />
-            )}
-            {post.isPinned && (
-              <Pin className="h-4 w-4 text-amber-500 ml-2" />
-            )}
-            {post.isLocked && (
-              <Lock className="h-4 w-4 text-red-500 ml-2" />
-            )}
+          <h3 className="text-lg font-semibold text-zion-cyan mb-2">{post.title}</h3>
+          <p className="text-zion-slate-light mb-3 line-clamp-3">{post.content}</p>
+          <div className="flex items-center justify-between text-sm text-zion-slate-light">
+            <span>By {post.author.name}</span>
+            <span>{new Date(post.createdAt).toLocaleDateString()}</span>
           </div>
-          <div className="text-sm text-muted-foreground">
-            Posted by {post.authorName} {timeAgo}
+          <div className="flex items-center space-x-4 mt-2 text-sm text-zion-slate-light">
+            <span>{post.replies.length} replies</span>
+            <span>{post.likes} likes</span>
+            <span>{post.views} views</span>
           </div>
-          
-          <div className="flex flex-wrap gap-2 mt-2">
-            {post.tags?.map(tag => (
-              <Badge key={tag} variant="outline" className="bg-zion-purple/10 hover:bg-zion-purple/20">
-                {tag}
-              </Badge>
-            ))}
-          </div>
+    id: string;
+    title: string;
+    content: string;
+    authorName: string;
+    createdAt: string;
+    likes: number;
+    replies: number;
+  };
+}
+const PostCard: React.FC<PostCardProps> = ({ post }) => {
+  return (
+    <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 mb-4">
+      <h3 className="text-xl font-semibold text-white mb-2">{post.title}</h3>
+      <p className="text-zion-slate-light mb-4 line-clamp-3">{post.content}</p>
+      <div className="flex justify-between items-center text-sm text-zion-slate-light">
+        <span>By {post.authorName}</span>
+        <span>{new Date(post.createdAt).toLocaleDateString()}</span>
+        <div className="flex items-center space-x-4">
+          <span>{post.likes} likes</span>
+          <span>{post.replies} replies</span>
         </div>
-      </CardHeader>
-
-      {!compact && (
-        <CardContent>
-          <div className="line-clamp-3">{post.content}</div>
-        </CardContent>
-      )}
-
-      <CardFooter className="flex justify-between">
-        <div className="flex items-center gap-4">
-          <div className="flex items-center gap-1">
-            <Button variant="ghost" size="sm" className="px-2">
-              <ThumbsUp className="h-4 w-4 mr-1" />
-              <span>{post.upvotes}</span>
-            </Button>
-            <Button variant="ghost" size="sm" className="px-2">
-              <ThumbsDown className="h-4 w-4 mr-1" />
-              <span>{post.downvotes}</span>
-            </Button>
-          </div>
-          <div className="flex items-center gap-1">
-            <MessageSquare className="h-4 w-4" />
-            <span className="text-sm">{post.replyCount} replies</span>
-          </div>
-        </div>
-        
-        {post.isFeatured && (
-          <div>
-            <Badge className="bg-zion-purple">Featured</Badge>
-          </div>
-        )}
-      </CardFooter>
-    </Card>
-  )
+      </div>
+    </div>
+  );
 };
-
-export const PostCard = React.memo(PostCardComponent);
-PostCard.displayName = 'PostCard';
-
 export default PostCard;
+}

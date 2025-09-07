@@ -1,5 +1,10 @@
+<<<<<<< HEAD
+import React, { useState, useEffect, useRef, useMemo } from "react";
+=======
+<<<<<<< HEAD:_conflicted_disabled/src/components/search/EnhancedSearchInput.tsx
 import React, { useState, useEffect, useRef, useMemo } from "react";
 <<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 import { useTranslation } from "react-i18next";
 import { Search, X } from 'lucide-react'
 import { Input } from "@/components/ui/input";
@@ -10,6 +15,22 @@ import { useRouter } from "next/router";
 import { slugify } from "@/lib/slugify";
 import { debounce } from "lodash";
 import { logInfo, logWarn } from '@/utils/productionLogger';
+<<<<<<< HEAD
+=======
+=======
+import React, { useState, useEffect, useRef, useMemo } from "react;
+import { useTranslation } from react-i18next";
+import { Search, X } from 'lucide-react
+import { Input } from "@/components/ui/input;
+import { AutocompleteSuggestions } from @/components/search/AutocompleteSuggestions";
+import { SearchSuggestion } from "@/types/search;
+import { useDebounce } from @/hooks/useDebounce";
+import { useRouter } from "next/router;
+import { slugify } from @/lib/slugify";
+import { debounce } from "lodash;
+import { logInfo, logWarn } from @/utils/productionLogger';
+>>>>>>> merged-prs-20250907-203621:src_disabled_1757239864/components/search/EnhancedSearchInput.tsx
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
 
 interface EnhancedSearchInputProps {
@@ -127,7 +148,6 @@ export function EnhancedSearchInput({
         setIsFocused(false);
         // setHighlightedIndex(-1), // Already handled in onBlur generally
       }
-    }
     
     document.addEventListener("mousedown", handleClickOutside);
     return () => document.removeEventListener("mousedown", handleClickOutside)
@@ -153,7 +173,6 @@ export function EnhancedSearchInput({
       } else {
         router.push(`/search/${suggestionObj.slug || slugify(suggestionObj.text)}`)
       }
-    }
     setIsFocused(false);
     inputRef.current?.blur();
     setHighlightedIndex(-1)
@@ -253,6 +272,12 @@ export function EnhancedSearchInput({
         />
         {value && (
           <button
+<<<<<<< HEAD
+            className="absolute right-3 top-1/2 transform -translate-y-1/2 text-zion-slate hover:text-white"
+            onClick={() => onChange('')}
+            aria-label="Clear search"
+=======
+<<<<<<< HEAD:_conflicted_disabled/src/components/search/EnhancedSearchInput.tsx
             className="absolute right-3 top-1/2 transform -translate-y-1/2 text-zion-slate hover:text-white"
             onClick={() => onChange('')}
             aria-label="Clear search"
@@ -275,6 +300,12 @@ export function EnhancedSearchInput({
             }}
             className="absolute right-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-gray-400 hover:text-gray-600"
 >>>>>>> cursor/automate-test-improve-and-merge-code-6d57
+=======
+            className="absolute right-3 top-1/2 transform -translate-y-1/2 text-zion-slate hover:text-white
+            onClick={() => onChange(')}
+            aria-label=Clear search"
+>>>>>>> merged-prs-20250907-203621:src_disabled_1757239864/components/search/EnhancedSearchInput.tsx
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
           >
             <X className="h-4 w-4" />
           </button>
@@ -293,6 +324,174 @@ export function EnhancedSearchInput({
     </div>
   )
 }
+<<<<<<< HEAD
+:src/components/search/EnhancedSearchInput.tsx
+  };
+
+  return (<div
+      className="relative w-full"
+      ref={containerRef}
+      role="combobox"
+
+      aria-expanded={isFocused && filteredSuggestions && filteredSuggestions.length> 0}
+      aria-haspopup="listbox";
+      aria-controls="autocomplete-suggestions-list">;
+      <div className="relative">;
+        <Search
+          className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-zion-slate" 
+        />;
+
+        <Input
+          ref={inputRef}
+          type="text"
+          value={value}
+
+          onChange={(e) => {;
+            onChange(e && e.target.value);
+
+}}
+          onFocus={() => setIsFocused(true)}
+          onKeyDown={handleKeyDown}
+          placeholder={placeholder}
+          className="pl-10 bg-zion-blue border border-zion-blue-light text-white placeholder:text-zion-slate"
+          aria-autocomplete="list"
+          aria-activedescendant={highlightedIndex !== -1 ? `suggestion-item-${highlightedIndex}` : undefined}
+
+        />;
+        {value && (;
+
+          <button
+            className="absolute right-3 top-1/2 transform -translate-y-1/2 text-zion-slate hover:text-white"
+            onClick={() => onChange('')}
+          >
+            <X className="h-4 w-4" />
+          </button>
+        )}
+
+      </div>;
+
+      <AutocompleteSuggestions
+        suggestions={filteredSuggestions}
+        searchTerm={value}
+        onSelectSuggestion={handleSelectSuggestion}
+        visible={isFocused}
+
+        highlightedIndex={highlightedIndex} 
+        listId="autocomplete-suggestions-list" 
+      />;
+    </div>;
+  );
+}
+
+          on_blur={(e) => {
+            const related_target = e.related_target as HTMLElement;            if () {) {
+  $2
+}
+              setIsFocused (false);
+              setHighlightedIndex (-1);
+            , }
+            setValueOnFocus (null);
+          }}
+          onKeyDown = {handleKeyDown, }
+          aria - label = {t ('general.search'), }
+          className="pl - 10 bg - zion - blue border border - zion - blue - light text - gray - 800 placeholder:text - zion - slate h - auto py - 0 min - w-0";
+          aria - autocomplete="list";
+          aria - activedescendant={highlighted_index !== -1 ? `suggestion - item-${highlighted_index}` : undefined}
+          auto_complete="off";
+        />;
+        {value && (
+          <button;
+            className="absolute right - 3 top - 1/2 transform -translate - y-1 / 2 text - zion - slate hover:text - white";
+            on_click = {(, ) => on_change (''), }
+            aria - label="Clear search";
+          >;
+            <X className="h - 4 w - 4" />;
+          </button>)}
+      </div>;
+      <AutocompleteSuggestions;
+        suggestions = {filtered_suggestions, }
+        search_term = {value, }
+        onSelectSuggestion = {handleSelectSuggestion, }
+        visible = {is_focused, }
+        highlighted_index={highlighted_index} // Pass highlighted_index;
+        list_id="autocomplete - suggestions - list" // Pass ID for aria - controls;
+      />;
+    </div>);
+}setIsFocused (false);
+input_ref.current?.blur ();
+setHighlightedIndex (-1);
+}
+const handleKeyDown = (e: React.KeyboardEvent < HTMLInputElement>) =>: any {
+  switch (e.key) {';
+  case 'ArrowDown': // Check condition
+if ( {') {
+  $2
+}
+  case 'Escape': e.prevent_default ();
+setIsFocused (false);
+setHighlightedIndex (-1);
+setValueOnFocus (null);
+input_ref.current?.blur ();
+break;
+default: //For other keys (character input), reset enterHandledPostFocus setEnterHandledPostFocus (false);
+break;
+}
+> <div className="relative flex items - center w - full" > <Search className="absolute left - 3 top - 1/2 transform -translate - y-1 / 2 h - 4 w - 4 text - zion - slate" /> <Input on_click={';
+  () => on_change ('') ";
+}aria - label="Clear search" > <X className="h - 4 w - 4" /> </button>);
+}</div> <AutocompleteSuggestions /> </div>);
+}'"  );
+      default:;
+        break;
+}
+  return (<div;
+      className="relative w - full";
+      ref={container_ref}
+      role="combobox";
+      aria - expanded={is_focused && filtered_suggestions.length > 0}
+      aria - haspopup="listbox";
+      aria - controls="autocomplete - suggestions - list">;
+      <div className="relative">;
+        <Search;
+          className="absolute left - 3 top - 1/2 transform -translate - y-1 / 2 h - 4 w - 4 text - zion - slate";
+        />;
+        <Input;
+          ref={input_ref}
+          type="text";
+          value={value}
+          on_change={(e) => {
+            on_change (e.target.value);
+}}
+          on_focus={() => setIsFocused (true)}
+          onKeyDown={handleKeyDown}
+          placeholder={placeholder}
+          className="pl - 10 bg - zion - blue border border - zion - blue - light text - white placeholder:text - zion - slate";
+          aria - autocomplete="list";
+          aria - activedescendant={highlighted_index !== -1 ? `suggestion - item-${highlighted_index}` : undefined}
+        />;
+        {value && (
+          <button;
+            className="absolute right - 3 top - 1/2 transform -translate - y-1 / 2 text - zion - slate hover:text - white";
+            on_click={() => on_change ('')}
+          >;
+            <X className="h - 4 w - 4" />;
+          </button>)}
+      </div>;
+      <AutocompleteSuggestions;
+        suggestions={filtered_suggestions}
+        search_term={value}
+        onSelectSuggestion={handleSelectSuggestion}
+        visible={is_focused}
+        highlighted_index={highlighted_index}
+        list_id="autocomplete - suggestions - list";
+      />;
+    </div>);
+}
+=======
+<<<<<<< HEAD:_conflicted_disabled/src/components/search/EnhancedSearchInput.tsx
 =======
 }
 >>>>>>> cursor/automate-test-improve-and-merge-code-6d57
+=======
+>>>>>>> merged-prs-20250907-203621:src_disabled_1757239864/components/search/EnhancedSearchInput.tsx
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc

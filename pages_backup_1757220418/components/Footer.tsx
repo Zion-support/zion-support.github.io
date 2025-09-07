@@ -1,3 +1,4 @@
+<<<<<<< HEAD:pages_backup_1757220418/components/Footer.tsx
 import React from 'react'
 import Link from 'next/link'
 import { 
@@ -59,6 +60,25 @@ const footerSections = [
       { title: 'IoT Solutions', href: '/iot', icon: Globe },
       { title: 'AR/VR Solutions', href: '/ar-vr', icon: Eye },
       { title: 'Space Technology', href: '/space-tech', icon: Settings }
+=======
+} from "lucide-react";
+const Footer = () => {
+  const currentYear = new Date().getFullYear();
+import React from 'react';
+import Link from 'next/link';
+import { motion } from 'framer-motion';
+import { Mail, Phone, MapPin, Facebook, Twitter, Linkedin, Instagram, Github } from 'lucide-react';
+
+
+  const footerLinks = {
+    services: [
+      { name: "AI Services", href: "/ai-services" }
+      { name: "IT Services", href: "/it-services" }
+      { name: "Micro SaaS", href: "/micro-saas" }
+      { name: "Cloud Solutions", href: "/cloud-solutions" }
+      { name: "Cybersecurity", href: "/cybersecurity" }
+      { name: "Database Solutions", href: "/database-solutions" }
+>>>>>>> merged-prs-20250907-203621:pages_backup_conflict_1757239547/components/Footer.tsx
     ]
   },
   {

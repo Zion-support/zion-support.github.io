@@ -1,4 +1,6 @@
 
+<<<<<<< HEAD
+=======
 
 =======
 =======
@@ -58,6 +60,10 @@
           </div>
         </header>
 
+<<<<<<< HEAD
+ursor/fix-syntax-push-and-merge-to-main-40de
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+=======
 
 =======
 =======
@@ -70,6 +76,10 @@
           </div>
         </section>
 
+<<<<<<< HEAD
+ursor/fix-syntax-push-and-merge-to-main-40de
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+=======
 
 =======
 =======
@@ -87,6 +97,10 @@
                   <ul className=\"space-y-2 mb-6\">
                     {service.features.map((feature, featureIndex) => (
 
+<<<<<<< HEAD
+ursor/fix-syntax-push-and-merge-to-main-40de
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+=======
 
 =======
 =======
@@ -275,6 +289,10 @@
                   <ul className=\"space-y-2 mb-6\">
                     {service.features.slice(0, 3).map((feature) => (
 
+<<<<<<< HEAD
+ursor/fix-syntax-push-and-merge-to-main-40de
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+=======
 
 =======
 =======
@@ -369,6 +387,10 @@
                   </div>
                 </div>
 
+<<<<<<< HEAD
+ursor/fix-syntax-push-and-merge-to-main-40de
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+=======
 
 =======
 =======
@@ -386,6 +408,10 @@
               </div>
             </div>
 
+<<<<<<< HEAD
+ursor/fix-syntax-push-and-merge-to-main-40de
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+=======
 
 =======
 =======

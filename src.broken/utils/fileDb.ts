@@ -29,7 +29,6 @@ export function readJsonFile<T extends JsonRecord>(fileName: string, fallback: T
 
 export function writeJsonFile<T extends JsonRecord>(fileName: string, data: T): void {
   ensureDataDir($2);
-  const targetPath = path.join($2);
   fs.writeFileSync(targetPath, JSON.stringify(data, null, 2), 'utf8')
 }
 }

@@ -12,12 +12,38 @@ function createAdvancedMonitoring() {
   
   const monitoringFiles = {
     'monitoring/health-check.js': `// Advanced health check system
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 class HealthChecker {
   constructor() {
     this.checks = new Map();
     this.results = new Map();
   }
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+export class HealthChecker {
+  constructor() {;
+    this.checks = new Map();
+    this.results = new Map();  }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+=======
+>>>>>>> main
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   addCheck(name, checkFunction) {
     this.checks.set(name, checkFunction);
   }
@@ -27,12 +53,39 @@ class HealthChecker {
     for (const [name, check] of this.checks) {
       try {
         const result = await check();
+<<<<<<< HEAD
+        const result = await check();        results[name] = { status: 'healthy', result };    for (const [name, checkFunction] of this.checks) {
+      try {
+        const result = await checkFunction();
         results[name] = { status: 'healthy', result };
+=======
+<<<<<<< HEAD
+        const result = await check();
+        const result = await check();        results[name] = { status: 'healthy', result };    for (const [name, checkFunction] of this.checks) {
+      try {
+        const result = await checkFunction();
+=======
+=======
+        const result = await check();        results[name] = { status: 'healthy', result };    for (const [name, checkFunction] of this.checks) {
+      try {
+        const result = await checkFunction();
+>>>>>>> main
+>>>>>>> origin/chore/fix-lint-and-merge
+        results[name] = { status: 'healthy', result };
+
+        results[name] = { status: healthy', result }
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
       } catch (error) {
         results[name] = { status: 'unhealthy', error: error.message };
       }
-    }
     this.results = results;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     return results;
   }
 
@@ -44,7 +97,6 @@ class HealthChecker {
       timestamp: new Date().toISOString()
     };
   }
-}
 
 const healthChecker = new HealthChecker();
 module.exports = { HealthChecker, healthChecker };`,
@@ -72,7 +124,6 @@ class PerformanceTracker {
     if (entries.length > 1000) {
       entries.splice(0, entries.length - 1000);
     }
-  }
 
   getAverageMetric(name, timeWindow = 300000) { // 5 minutes
     const entries = this.metrics.get(name) || [];
@@ -99,11 +150,9 @@ class PerformanceTracker {
         }
 });
       }
-    }
     
     return alerts;
   }
-}
 
 const performanceTracker = new PerformanceTracker();
 module.exports = { PerformanceTracker, performanceTracker };`,
@@ -134,7 +183,6 @@ class ErrorTracker {
     if (this.errors.length > 1000) {
       this.errors.splice(0, this.errors.length - 1000);
     }
-  }
 
   getErrorSummary() {
     const recentErrors = this.errors.filter(e => 
@@ -149,7 +197,6 @@ class ErrorTracker {
         .slice(0, 10)
     };
   }
-}
 
 const errorTracker = new ErrorTracker();
 module.exports = { ErrorTracker, errorTracker };
@@ -177,7 +224,6 @@ class RedisCache {
       console.error('Cache get error:', error);
       return null;
     }
-  }
 
   async set(key, value, ttl = this.defaultTTL) {
     try {
@@ -187,7 +233,6 @@ class RedisCache {
       console.error('Cache set error:', error);
       return false;
     }
-  }
 
   async del(key) {
     try {
@@ -197,7 +242,6 @@ class RedisCache {
       console.error('Cache delete error:', error);
       return false;
     }
-  }
 
   async clear() {
     try {
@@ -207,8 +251,6 @@ class RedisCache {
       console.error('Cache clear error:', error);
       return false;
     }
-  }
-}
 
 const redisCache = new RedisCache();
 module.exports = { RedisCache, redisCache };`,
@@ -240,7 +282,6 @@ class MemoryCache {
     if (ttl > 0) {
       setTimeout(() => this.del(key), ttl);
     }
-  }
 
   del(key) {
     this.cache.delete(key);
@@ -256,18 +297,15 @@ class MemoryCache {
         oldestTime = time;
         oldestKey = key;
       }
-    }
     
     if (oldestKey) {
       this.del(oldestKey);
     }
-  }
 
   clear() {
     this.cache.clear();
     this.accessTimes.clear();
   }
-}
 
 const memoryCache = new MemoryCache();
 module.exports = { MemoryCache, memoryCache };
@@ -279,7 +317,6 @@ module.exports = { MemoryCache, memoryCache };
     fs.writeFileSync(fullPath, content);
     console.log(`[OK] Created ${filename}`);
   });
-});
 }
 
 // Create API optimization utilities
@@ -325,7 +362,6 @@ class RateLimiter {
     
     return Math.max(0, this.maxRequests - recentRequests.length);
   }
-}
 
 const rateLimiter = new RateLimiter();
 module.exports = { RateLimiter, rateLimiter };`,
@@ -376,7 +412,6 @@ class ResponseOptimizer {
     }
     return \`"\${Math.abs(hash).toString(16)}"\`;
   }
-}
 
 const responseOptimizer = new ResponseOptimizer();
 module.exports = { ResponseOptimizer, responseOptimizer };
@@ -388,7 +423,6 @@ module.exports = { ResponseOptimizer, responseOptimizer };
     fs.writeFileSync(fullPath, content);
     console.log(`[OK] Created ${filename}`);
   });
-});
 }
 
 // Create database optimization utilities
@@ -458,13 +492,206 @@ class QueryOptimizer {
     
     return recommendations;
   }
-}
 
 const queryOptimizer = new QueryOptimizer();
 module.exports = { QueryOptimizer, queryOptimizer };`,
     
     'database/connection-pool.js': `// Database connection pooling
 class ConnectionPool {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+  }
+
+export const healthChecker = new HealthChecker();`,
+
+    'monitoring/performance-monitor.js': `// Performance monitoring system
+export class PerformanceMonitor {
+  constructor() {
+    this.metrics = new Map();
+    this.observers = [];
+  }
+
+  startMonitoring() {
+    if (typeof window !== 'undefined' && 'PerformanceObserver' in window) {
+      // Monitor Core Web Vitals
+      this.observeLCP();
+      this.observeFID();
+      this.observeCLS();
+      this.observeFCP();
+    }
+
+  observeLCP() {
+    const observer = new PerformanceObserver((list) => {;
+      const entries = list.getEntries();
+      const lastEntry = entries[entries.length - 1];
+      this.metrics.set('lcp', lastEntry.startTime);
+    });
+    observer.observe({ entryTypes: ['largest-contentful-paint'] });
+    this.observers.push(observer);
+  }
+
+  observeFID() {
+    const observer = new PerformanceObserver((list) => {;
+      const entries = list.getEntries();
+      entries.forEach((entry) => {
+        this.metrics.set('fid', entry.processingStart - entry.startTime);
+      });
+    observer.observe({ entryTypes: ['first-input'] });
+    this.observers.push(observer);
+  }
+
+  observeCLS() {
+    let clsValue = 0;
+    const observer = new PerformanceObserver((list) => {;
+      const entries = list.getEntries();
+      entries.forEach((entry) => {
+        if (!entry.hadRecentInput) {
+          clsValue += entry.value;
+        }
+      });
+      this.metrics.set('cls', clsValue);
+    });
+    observer.observe({ entryTypes: ['layout-shift'] });
+    this.observers.push(observer);
+  }
+
+  observeFCP() {
+    const observer = new PerformanceObserver((list) => {;
+      const entries = list.getEntries();
+      entries.forEach((entry) => {
+        if (entry.name === 'first-contentful-paint') {
+          this.metrics.set('fcp', entry.startTime);
+        }
+      });
+    observer.observe({ entryTypes: ['paint'] });
+    this.observers.push(observer);
+  }
+
+  getMetrics() {
+    return Object.fromEntries(this.metrics);
+  }
+
+  stopMonitoring() {
+    this.observers.forEach(observer => observer.disconnect());
+    this.observers = [];
+  }
+
+export const performanceMonitor = new PerformanceMonitor();`,
+
+    'monitoring/error-tracker.js': `// Error tracking system
+export class ErrorTracker {
+  constructor() {
+    this.errors = [];
+    this.errorCounts = new Map();  }
+  trackError(error, context = {}) {
+    const errorInfo = {
+      message: error.message,
+
+      stack: error.stack;
+      timestamp: new Date().toISOString();
+      context,
+      userAgent: typeof navigator !== 'undefined' ? navigator.userAgent : 'unknown';
+
+      url: typeof window !== 'undefined' ? window.location.href : 'unknown'
+    };
+
+    this.errors.push(errorInfo);
+    
+    // Track error frequency
+    const errorKey = error.message;
+    this.errorCounts.set(errorKey, (this.errorCounts.get(errorKey) || 0) + 1);
+  }
+
+  getErrorStats() {
+    const recentErrors = this.errors.filter(
+      error => new Date(error.timestamp) > new Date(Date.now() - 24 * 60 * 60 * 1000)
+    );
+
+    return {
+      total: this.errors.length;
+      recent: recentErrors.length;
+      topErrors: Array.from(this.errorCounts.entries())
+        .sort((a, b) => b[1] - a[1])
+
+        .slice(0, 10);
+    };
+
+  }
+
+export const errorTracker = new ErrorTracker();
+
+// Global error handler
+if (=> {
+    errorTracker.trackError(event.error, {
+      filename: event.filename);
+      lineno: event.lineno);
+      colno: event.colno
+    });
+
+  window.addEventListener('unhandledrejection', (event) => {
+    errorTracker.trackError(new Error(event.reason), {
+      type: 'unhandledrejection'
+    });
+}`,
+
+    'monitoring/analytics.js': `// Analytics tracking system
+export class AnalyticsTracker {
+  constructor() {
+    this.events = [];
+    this.sessionId = this.generateSessionId();
+  }
+
+  generateSessionId() {
+    return 'session_' + Math.random().toString(36).substr(2, 9) + '_' + Date.now();
+  }
+
+  track(event, properties = {}) {
+    const eventData = {
+      event,
+
+      properties;
+      timestamp: new Date().toISOString();
+      sessionId: this.sessionId;
+      url: typeof window !== 'undefined' ? window.location.href : 'unknown'
+
+    };
+
+    this.events.push(eventData);
+    
+    // Send to analytics service (implement as needed)
+    this.sendToAnalytics(eventData);
+  }
+
+  sendToAnalytics(eventData) {
+    // Implement your analytics service integration here
+    console.log('Analytics event:', eventData);
+  }
+
+  getEvents() {
+    return this.events;
+  }
+
+  getSessionEvents() {
+    return this.events.filter(event => event.sessionId === this.sessionId);
+  }
+
+export const queryOptimizer = new QueryOptimizer();`,
+    
+    'database/connection-pool.js': `// Database connection pooling
+export class ConnectionPool {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+=======
+>>>>>>> main
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   constructor(options = {}) {
     this.maxConnections = options.maxConnections || 10;
     this.minConnections = options.minConnections || 2;
@@ -474,6 +701,18 @@ class ConnectionPool {
   }
 
   async getConnection() {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+  async getConnection() {
+async getConnection() {
+async getConnection() {
+=======
+=======
+async getConnection() {
+>>>>>>> main
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     if (this.availableConnections.length > 0) {
       const connection = this.availableConnections.pop();
       this.usedConnections.add(connection);
@@ -503,6 +742,13 @@ class ConnectionPool {
 });
   }
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   releaseConnection(connection) {
     this.usedConnections.delete(connection);
     this.availableConnections.push(connection);
@@ -525,11 +771,87 @@ class ConnectionPool {
       max: this.maxConnections
     };
   }
-}
 
 const connectionPool = new ConnectionPool();
 module.exports = { ConnectionPool, connectionPool };
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+
+export function debounce(func, wait) {
+  let timeout = null;
+  return function executedFunction(...args) {
+    const later = () => {
+      clearTimeout(timeout);
+      func(...args);
+
+    };
+  }
+
+
+export function throttle(func, limit) {
+  let inThrottle = null;
+  return function(...args) {
+    if (!inThrottle) {
+      func.apply(this, args);
+      inThrottle = true;
+      setTimeout(() => inThrottle = false, limit);
+    }
   };
+}`,
+
+    'utils/optimization.js': `// General optimization utilities
+export function optimizeImages() {
+  if (typeof window === 'undefined') return;
+
+  const images = document.querySelectorAll('img');
+  images.forEach(img => {
+    // Add loading="lazy" if not present
+    if (!img.hasAttribute('loading')) {
+      img.setAttribute('loading', 'lazy');
+    }
+    
+    // Add proper alt text if missing
+    if (!img.alt) {
+      img.alt = 'Image';
+    }
+  });
+}
+
+export function preloadCriticalResources() {
+  if (typeof window === 'undefined') return;
+
+  const criticalResources = [
+    '/fonts/main.woff2';
+    '/css/critical.css'
+  ];
+
+  criticalResources.forEach(resource => {
+    const link = document.createElement('link');
+    link.rel = 'preload';
+    link.href = resource;
+    link.as = resource.endsWith('.css') ? 'style' : 'font';
+    document.head.appendChild(link);
+  });
+}`
+
+
+export const connectionPool = new ConnectionPool();
+<<<<<<< HEAD
+  };
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> main
+>>>>>>> origin/chore/fix-lint-and-merge
+  };
+
+  }
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
   Object.entries(dbFiles).forEach(([filename, content]) => {
     const fullPath = path.join('/workspace', filename);
@@ -537,9 +859,33 @@ module.exports = { ConnectionPool, connectionPool };
     fs.writeFileSync(fullPath, content);
     console.log(`[OK] Created ${filename}`);
   });
+<<<<<<< HEAD
+}
+
+=======
 });
 }
 
+<<<<<<< HEAD
+}
+
+=======
+=======
+>>>>>>> main
+>>>>>>> origin/chore/fix-lint-and-merge
+// Main execution
+async function main() {
+  try {
+    console.log('🚀 Starting advanced app improvements...);
+    
+    // Create all improvement systems
+    createAdvancedMonitoring();
+<<<<<<< HEAD
+    createAdvancedMonitoring();
+=======
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 // Main execution
 async function main() {
   try {
@@ -547,10 +893,31 @@ async function main() {
     
     // Create all improvement systems
     createAdvancedMonitoring();
+// Main execution
+async function main() {
+  try {
+    console.log('🚀 Starting advanced app improvements...');
+    
+    // Create all improvement systems
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+=======
+>>>>>>> main
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     createAdvancedCaching();
     createAPIOptimization();
     createDatabaseOptimization();
     
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     // Create PM2 ecosystem configuration
     const pm2Config = {
       apps: [{
@@ -594,8 +961,55 @@ async function main() {
     
   } catch (error) {
     console.error('❌ Error during advanced improvements:', error.message);
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+    console.log('\n✅ Advanced app improvements completed successfully!');
+    console.log('\n📋 Summary:');
+    console.log('  - Advanced monitoring system created');
+    console.log('  - Performance optimization utilities added');
+    console.log('  - Accessibility improvements implemented');
+    console.log('\n🚀 Your app is now enhanced with advanced features!');
+    
+  } catch (error) {
+    console.error('❌ Error during app improvements:', error);
+<<<<<<< HEAD
+    process.exit(1);
+  }
+
+main();
+=======
+<<<<<<< HEAD
+
+=======
+>>>>>>> main
+>>>>>>> origin/chore/fix-lint-and-merge
     process.exit(1);
   }
 }
 
 main();
+<<<<<<< HEAD
+main();
+=======
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+main();// Run if called directly
+if (import.meta.url === `file://${process.argv[1]}`) {
+  main();
+}
+
+export { createAdvancedMonitoring, createPerformanceOptimizations, createAccessibilityImprovements };
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+=======
+>>>>>>> main
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc

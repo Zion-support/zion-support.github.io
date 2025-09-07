@@ -1,16 +1,13 @@
 import React from 'react';
 
-interface PricingProps {
-  // Add props here as needed
-}
 
-export default function Pricing({ }: PricingProps) {
-  return (
-    <div>
-      <h1>Pricing</h1>
-      <p>This component is currently under development.</p>
-    </div>
-  );
+  it('renders add to cart button', () => {
+    render(<MockAddToCart productId="test-product" onAddToCart={mockOnAddToCart} />);
+    
+    const button = screen.getByTestId('add-to-cart');
+    expect(button).toBeInTheDocument();
+    expect(button).toHaveTextContent('Add to Cart');
+  });
 
-}
-}
+
+});

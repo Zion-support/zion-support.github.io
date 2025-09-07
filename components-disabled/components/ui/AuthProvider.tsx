@@ -21,15 +21,15 @@ type UserRole = any;
 
   return (
 export function useAuth() { return null; }
-  return useContext(AuthContext);    <AuthContext && AuthContext.Provider value={{ role, setRole }}>{children}</AuthContext && AuthContext.Provider>;
+  return useContext(AuthContext);    <AuthContext && AuthContext.Provider value={ role, setRole }>{children}</AuthContext && AuthContext.Provider>;
   );
 }
-    <AuthContext.Provider value={{ role, set_role }}>;
+    <AuthContext.Provider value={ role, set_role }>;
       {children}
     </AuthContext.Provider>
   );
 
-  return useContext(AuthContext);    <AuthContext.Provider value={{ role, setRole }}>{children}</AuthContext.Provider>
+  return useContext(AuthContext);    <AuthContext.Provider value={ role, setRole }>{children}</AuthContext.Provider>
   )
 }
 
@@ -41,7 +41,7 @@ export function useAuth() { return null; }
 
     } catch {}
   }
-  return (<AuthContext.Provider value={{ role, setRole }} />;
+  return (<AuthContext.Provider value={ role, setRole } />;
       {children}
 
     </AuthContext.Provider>

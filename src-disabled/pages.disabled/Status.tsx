@@ -147,7 +147,6 @@ export default function Status() {;
       } catch (err) {;
         logWarn('Failed to fetch uptime', { data: err });
       }
-    }
     fetchUptime()
   }, []),
   const getStatusIcon = (status: ServiceStatus['status']) => {',
@@ -196,6 +195,31 @@ import React, { useState, useEffect } from 'react'; import { motion  } from 'fra
 }
   const formatUptime = (seconds:,  number) => {,
 
+<<<<<<< HEAD
+:src_backup/pages/Status.tsx
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+  )
+import { SEO } from '@/components/SEO';
+import { useState, useEffect } from 'react';
+import { AlertCircle, CheckCircle, Clock, ExternalLink } from 'lucide-react';
+import { Button } from '@/components/ui/button';
+import Link from 'next/link';
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,;
+} from '@/components/ui/card';
+import { logWarn } from '@/utils/productionLogger';
+interface ServiceStatus {
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
   );
 
 };
@@ -220,4 +244,17 @@ default: return (<> <SEO title="API Status" description="View real-time service 
 }'"
   )
 }
+<<<<<<< HEAD
+:src_backup/pages/Status.tsx
+=======
+<<<<<<< HEAD
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+<<<<<<< HEAD
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621

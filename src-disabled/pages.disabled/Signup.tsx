@@ -33,7 +33,6 @@ export default function Signup() {;
   // Check if this is a partner signup
   const isPartnerSignup = router.query.type === 'partner''
   const signupSource = (router.query.source as,  string) |'direct''
-import { useState, useEffect } from 'react';
 import { use_router } from 'next / router'; // Changed from react-router-domimport { use_formik } from 'formik';
 import * as Yup from 'yup';
 import axios from 'axios';
@@ -189,7 +188,6 @@ if ( {) {
             });
           } else {
             // Account created and ready to use;
-            const message = isPartnerSignup;
               ? 'Partner application submitted successfully! You can now log in and your application will be reviewed.';
               : 'Account created successfully!';
             setSuccessMessage (data.message ||,  message);
@@ -251,15 +249,12 @@ const SignupSchema = Yup.object({
   const [loading, setLoading] = useState(false)
   const [errorMessage, setErrorMessage] = useState('')
   const [successMessage, setSuccessMessage] = useState('')
-  const [emailVerificationRequired, setEmailVerificationRequired] =
     useState(false)
   const [authServiceAvailable, setAuthServiceAvailable] = useState(true)
   const [healthCheckLoading, setHealthCheckLoading] = useState(true)
-  const [healthCheckError, setHealthCheckError] = useState<string | null>(null)
   // Check if this is a partner signup
   const isPartnerSignup = router.query.type === 'partner'
   const signupSource = (router.query.source as string) |'direct'
-  const performHealthCheck = async () => {
     setHealthCheckLoading (true);
     setHealthCheckError (null);
     try {
@@ -470,7 +465,6 @@ import { LoadingSpinner } from '@/components/ui/enhanced-loading-states',;
 import { Alert, AlertDescription } from '@/components/ui/alert',;
 import { PasswordStrengthMeter } from '@/components/PasswordStrengthMeter',;
 import { AuthButtons } from '@/components/AuthButtons',;
-import { AlertCircle, CheckCircle, Mail } from 'lucide-react';
 import { toast } from '@/hooks/use-toast',;
 import { AuthLayout } from '@/layout',;
 import { logInfo, logErrorToProduction } from '@/utils/productionLogger',;
@@ -495,7 +489,6 @@ const SignupSchema = Yup.object({;
   }, []),;
   const formik = useFormik({;
     initialValues: {;,
-  const formik = useFormik({;
     initialValues: {;
       name: '',;
       email: '',;
@@ -543,7 +536,6 @@ const SignupSchema = Yup.object({;
           if (data.emailVerificationRequired) {;
             // Email verification is required;
             setEmailVerificationRequired(true),;
-            const message = isPartnerSignup;
               ? 'Partner application submitted! Please check your email to verify your account. Once verified, your partner application will be reviewed.';
               : 'Account created! Please check your email to verify your account.',;
             setSuccessMessage(data.message ||,  message),;
@@ -559,7 +551,6 @@ const SignupSchema = Yup.object({;
               partnerProgram: true,;
           } else {;
             // Account created and ready to use;
-            const message = isPartnerSignup;
               ? 'Partner application submitted successfully! You can now log in and your application will be reviewed.';
               : 'Account created successfully!',;
             setSuccessMessage(data.message ||,  message),;
@@ -638,6 +629,10 @@ const SignupSchema = Yup.object({;
       email: true,;
       password: true,;
       confirm: true,;
+<<<<<<< HEAD
+
+  if (healthCheckLoading) {
+=======
       terms: true,;
     });
     await formik && formik.handleSubmit(e);
@@ -1205,7 +1200,6 @@ export default function Signup() {;
 },,;
 }) as UseFormReturn<SignupFormValues>;
   // Form submission handler;
-  const onSubmit = async (data:,  SignupFormValues) => {;,
     if (isSubmitting) return; // Prevent multiple submissions;
     setIsSubmitting(true);
     try {;
@@ -1366,23 +1360,6 @@ const Signup = () => {;
   );
 }
 ;
-import { useState, useEffect } from 'react',;
-import { useRouter } from 'next/router', // Changed from react-router-dom;
-import { useFormik } from 'formik',;
-import * as Yup from 'yup',;
-import axios from 'axios',;
-import Link from 'next/link',;
-import { Input } from '@/components/ui/input',;
-import { Button } from '@/components/ui/button',;
-import { LoadingSpinner } from '@/components/ui/enhanced-loading-states',;
-import { Alert, AlertDescription } from '@/components/ui/alert',;
-import { PasswordStrengthMeter } from '@/components/PasswordStrengthMeter',;
-import { AuthButtons } from '@/components/AuthButtons',;
-import { AlertCircle, CheckCircle, Mail } from 'lucide-react';
-import { toast } from '@/hooks/use-toast',;
-import { AuthLayout } from '@/layout',;
-import { logInfo, logErrorToProduction } from '@/utils/productionLogger',;
-const SignupSchema = Yup.object({;
   name: Yup.string().required('Name is required'),;
   email: Yup.string().email('Invalid email').required('Email is required'),;
   password: Yup.string();
@@ -1404,15 +1381,10 @@ export default function Signup() {;
   const [emailVerificationRequired, setEmailVerificationRequired] = useState(false),;
   const [authServiceAvailable, setAuthServiceAvailable] = useState(true),;
   const [healthCheckLoading, setHealthCheckLoading] = useState(true),;
-  const [healthCheckError, setHealthCheckError] = useState<string | null>(null),;
   // Check if this is a partner signup;
-  const isPartnerSignup = router.query.type === 'partner',;
-  const signupSource = router.query.source as string || 'direct',;
-  const performHealthCheck = async () => {;
     setHealthCheckLoading(true),;
     setHealthCheckError(null),;
     try {;
-      const res = await axios.get('/api/auth/health'),;
       setAuthServiceAvailable(res.status === 200),;
       if (res.status !== 200) {;
         setHealthCheckError('Authentication service is experiencing issues');
@@ -1435,7 +1407,6 @@ export default function Signup() {;
   useEffect(() => {;
     performHealthCheck();
   }, []),;
-  const formik = useFormik({;
     initialValues: {;
       name: '',;
       email: '',;
@@ -1456,7 +1427,6 @@ export default function Signup() {;
       setSuccessMessage(''), // Clear any previous success message;
       setEmailVerificationRequired(false),;
       try {;
-        const requestData = {;
           name: values.name,;
           email: values.email,;
           password: values.password,;
@@ -1473,17 +1443,14 @@ export default function Signup() {;
           ...requestData,;
           password: '[REDACTED]';
         }),;
-        const res = await axios.post('/api/auth/register', requestData),;
         logInfo('API response received:', {;
           status: res.status,;
           data: res.data;
         }),;
         if (res.status === 201) {;
-          const data = res.data,;
           if (data.emailVerificationRequired) {;
             // Email verification is required;
             setEmailVerificationRequired(true),;
-            const message = isPartnerSignup;
               ? 'Partner application submitted! Please check your email to verify your account. Once verified, your partner application will be reviewed.';
               : 'Account created! Please check your email to verify your account.',;
             setSuccessMessage(data.message || message),;
@@ -1494,7 +1461,6 @@ export default function Signup() {;
                 : 'Please check your email to verify your account before logging in.'});
           } else {;
             // Account created and ready to use;
-            const message = isPartnerSignup;
               ? 'Partner application submitted successfully! You can now log in and your application will be reviewed.';
               : 'Account created successfully!',;
             setSuccessMessage(data.message || message),;
@@ -1523,9 +1489,7 @@ export default function Signup() {;
             method: err.config.method;
           } : 'No config';
         }),;
-        const status = err.response?.status,;
         // Try both 'error' and 'message' fields for compatibility;
-        const errorMsg = err.response?.data?.error || err.response?.data?.message || 'Signup failed. Please try again.',;
         logInfo('Processed error message:', { data: errorMsg }),;
         if (status === 409) {;
           // Handle duplicate email specifically;

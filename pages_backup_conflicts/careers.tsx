@@ -1,3 +1,4 @@
+
 import React from 'react';
 
 interface CareersProps {
@@ -14,3 +15,91 @@ export default function Careers({ }: CareersProps) {
 
 }
 }
+
+  afterEach(() => {
+    cache.clear();
+  });
+
+  describe('set and get', () => {
+    it('should store and retrieve values', () => {
+      cache.set('key1', 'value1');
+      expect(cache.get('key1')).toBe('value1');
+    });
+
+    it('should return undefined for non-existent keys', () => {
+      expect(cache.get('non-existent')).toBeUndefined();
+    });
+
+    it('should overwrite existing values', () => {
+      cache.set('key1', 'value1');
+      cache.set('key1', 'value2');
+      expect(cache.get('key1')).toBe('value2');
+    });
+  });
+
+  describe('TTL (Time To Live)', () => {
+    beforeEach(() => {
+      jest.useFakeTimers();
+    });
+
+    afterEach(() => {
+      jest.useRealTimers();
+    });
+
+    it('should expire values after TTL', () => {
+      cache.set('key1', 'value1', 1000); // 1 second TTL
+      expect(cache.get('key1')).toBe('value1');
+
+      jest.advanceTimersByTime(1001);
+      expect(cache.get('key1')).toBeUndefined();
+    });
+
+    it('should not expire values without TTL', () => {
+      cache.set('key1', 'value1');
+      jest.advanceTimersByTime(10000);
+      expect(cache.get('key1')).toBe('value1');
+    });
+  });
+
+  describe('delete', () => {
+    it('should delete existing keys', () => {
+      cache.set('key1', 'value1');
+      expect(cache.delete('key1')).toBe(true);
+      expect(cache.get('key1')).toBeUndefined();
+    });
+
+    it('should return false for non-existent keys', () => {
+      expect(cache.delete('non-existent')).toBe(false);
+    });
+  });
+
+  describe('has', () => {
+    it('should return true for existing keys', () => {
+      cache.set('key1', 'value1');
+      expect(cache.has('key1')).toBe(true);
+    });
+
+    it('should return false for non-existent keys', () => {
+      expect(cache.has('non-existent')).toBe(false);
+    });
+
+    it('should return false for expired keys', () => {
+      jest.useFakeTimers();
+      cache.set('key1', 'value1', 1000);
+      jest.advanceTimersByTime(1001);
+      expect(cache.has('key1')).toBe(false);
+      jest.useRealTimers();
+    });
+  });
+
+  describe('clear', () => {
+    it('should remove all keys', () => {
+      cache.set('key1', 'value1');
+      cache.set('key2', 'value2');
+      cache.clear();
+      expect(cache.get('key1')).toBeUndefined();
+      expect(cache.get('key2')).toBeUndefined();
+    });
+  });
+});
+});

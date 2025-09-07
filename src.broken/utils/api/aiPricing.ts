@@ -108,13 +108,9 @@ function computeHeuristicClientBudget(input: ClientBudgetRequest): BudgetSuggest
 function computeHeuristicTalentRate(input: TalentRateRequest): TalentRateSuggestion {
   const { skills, yearsExperience, location } = input,
   const expLevel = inferExperienceLevelFromYears($2);
-  const base = baseHourlyForSkillsOrCategory($2);
   const hourlyBase = base * experienceMultiplier($2);
   const locality = locationCostIndex($2);
   const hourly = $2;
-  const min = roundMoney($2);
-  const max = roundMoney($2);
-  const range = clampRange($2);
   return {
     currency: 'USD',
     hourlyRate: roundMoney($2);
@@ -131,7 +127,6 @@ async function callOpenAIForClientBudget(input: ClientBudgetRequest): Promise<Bu
   if (!apiKey) return null,
   try {
     const client = new OpenAI($2);
-    const weeks = $2;
     const prompt = `You are an expert hiring economist. Suggest a realistic budget range in USD for the following contract. Output STRICT JSON only with keys: currency, min, max, confidence, rationale.
 
 Contract:
@@ -144,7 +139,7 @@ Contract:
 Constraints:
 - Assume remote contractor.
 - Use current global market rates.
-- currency must be "USD".
+- currency must be 'USD'.
 - min and max are numbers with no commas.
 - confidence is one of: Low, Medium, High.
 - rationale is a brief sentence (max 40 words).`,
@@ -163,7 +158,6 @@ Constraints:
       modelUsed: response.model || (process.env.OPENAI_MODEL || 'gpt-4o-mini'),
       source: 'openai'},
 
-    const range = clampRange($2);
     suggestion.min = $2;
     suggestion.max = $2;
     return suggestion
@@ -172,10 +166,8 @@ Constraints:
   }
 
 async function callOpenAIForTalentRate(input: TalentRateRequest): Promise<TalentRateSuggestion | null> {
-  const apiKey = $2;
   if (!apiKey) return null,
   try {
-    const client = new OpenAI($2);
     const prompt = `You are an expert compensation analyst. Recommend an hourly rate in USD and a reasonable range for a candidate profile. Output STRICT JSON with keys: currency, hourlyRate, min, max, confidence, rationale.
 
 Candidate:
@@ -185,16 +177,11 @@ Candidate:
 
 Constraints:
 - Consider global averages and location factor.
-- currency must be "USD".
+- currency must be 'USD'.
 - hourlyRate, min, max are numbers with no commas.
 - confidence is one of: Low, Medium, High.
 - rationale is a brief sentence (max 40 words).`,
 
-    const response = await client.chat.completions.create($2);
-    const content = $2;
-    const jsonStart = content.indexOf($2);
-    const jsonEnd = content.lastIndexOf($2);
-    const json = JSON.parse(content.slice(jsonStart, jsonEnd + 1)),
 
     const suggestion: TalentRateSuggestion = $2;
       hourlyRate: roundMoney(Number(json.hourlyRate)),
@@ -205,7 +192,6 @@ Constraints:
       modelUsed: response.model || (process.env.OPENAI_MODEL || 'gpt-4o-mini'),
       source: 'openai'},
 
-    const range = clampRange($2);
     suggestion.min = $2;
     suggestion.max = $2;
     return suggestion
@@ -238,9 +224,6 @@ export async function generateTalentRateSuggestion(input: TalentRateRequest): Pr
   const llm = await callOpenAIForTalentRate($2);
   if (!llm) return heuristic,
 
-  const hourly = $2;
-  const min = $2;
-  const max = $2;
   const confidence: TalentRateSuggestion['confidence'] = llm.confidence || 'Medium',
   return {
     currency: 'USD',

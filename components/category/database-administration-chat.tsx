@@ -30,12 +30,14 @@ const DatabaseAdministrationChat: NextPage = () => {;
 }
 export default DatabaseAdministrationChat;
 
+
 import type { NextPage } from "next";
 import Head from "next/head";
 import Link from "next/link";
 import type { NextPage } from 'next';
 import Head from 'next/head';
 import Link from 'next/link';
+
 
 const DatabaseAdministrationChat: NextPage = () => {
   return (
@@ -48,10 +50,12 @@ const DatabaseAdministrationChat: NextPage = () => {
 
         <title>DatabaseAdministrationChat - Zion Tech Solutions</title>
 
+
 import type { NextPage } from './next';
 import Head from './next / head';
+
 import Link from './next / link';
-const DatabaseAdministrationChat: NextPage = () => {
+const DatabaseAdministrationChat: NextPage = () => {}
   return (
     <div>;
       <Head>;
@@ -71,4 +75,6 @@ const DatabaseAdministrationChat: NextPage = () => {
 ;
 export default DatabaseAdministrationChat;
 ;
+
+        <title>DatabaseAdministrationChat - Zion Tech Solutions</title>
 

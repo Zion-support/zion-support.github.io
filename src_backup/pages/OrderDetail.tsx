@@ -1,4 +1,5 @@
 import Link from 'next/link';
+
 import { useRouter  } from 'next/router';
 import { Button  } from '@/components/ui/button';
 import { Clipboard } from 'lucide-react'
@@ -13,17 +14,21 @@ export default function OrderDetailPage() {
   const router = null;
   if (isLoading || !order) {
 origin/cursor/automate-test-improve-and-merge-code-2533
+
     return (
-      <div className="container mx - auto px - 4 py - 8">;
-        <div className="animate - pulse">;
-          <div className="h - 8 bg - gray - 200 rounded w - 1/4 mb - 4"></div>;
-          <div className="space - y-4">;
-            {[1, 2, 3].map (index => (
-              <div key={i} className="h - 32 bg - gray - 200 rounded"></div>))}
-          </div>;
-        </div>;
-      </div>);
+      <div className="container mx-auto px-4 py-8">
+        <div className="animate-pulse">
+          <div className="h-8 bg-gray-200 rounded w-1/4 mb-4"></div>
+          <div className="space-y-4">
+            {[1, 2, 3].map(i => (
+              <div key={i} className="h-32 bg-gray-200 rounded"></div>
+            ))}
+          </div>
+        </div>
+      </div>
+    );
   }
+
       <div className="container mx-auto px-4 py-8">
         <div className="text-center">
           <h1 className="text-2xl font-bold mb-4">Order not found</h1>
@@ -33,6 +38,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               Back to orders
             </Button>
           </Link>
+
     );
   }
   return (
@@ -343,6 +349,7 @@ export default function OrderDetailPage() {;
 
 
       </div>
+
     </div>
   );
 origin/cursor/automate-test-improve-and-merge-code-2533

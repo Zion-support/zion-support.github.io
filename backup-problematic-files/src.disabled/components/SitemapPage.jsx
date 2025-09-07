@@ -1,0 +1,10 @@
+const SitemapPage = ({ className }) => {
+  return ('
+    <div className={className || ''}>'
+</div>
+      <h1>SitemapPage</h1>
+      <p>This component is under development.</p>
+    </div>
+
+  )
+};

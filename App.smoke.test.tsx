@@ -1,13 +1,47 @@
+
+  
+  it('should render a basic structure', () => {
+    const { container } = render(<App />);
+    expect(container).toBeInTheDocument();
+  });
+
+});
+});
+
 import React from 'react';
 import { render } from '@testing-library/react';
 import App from './App';
-
-describe('App Smoke Tests', () => {
-  it('should render without crashing', () => {
+describe('App Smoke Tests', () => {;
+  it('should render without crashing', () => {;
     expect(() => render(<App />)).not.toThrow();
   });
-  
-  it('should render a basic structure', () => {
+  it('should render a basic structure', () => {;
+    const { container } = render(<App />);
+    expect(container.firstChild).toBeTruthy();
+  });
+});
+import { render, screen } from '@testing-library/react;
+import @testing-library/jest-dom';
+
+
+it('renders without crashing, () => {
+  render(<HomePage />);
+  expect(screen.getByText(Welcome to Zion Tech Group')).toBeInTheDocument();
+import { render, screen } from '@testing-library/react';
+import '@testing-library/jest-dom';
+import App from './App';
+
+it('renders without crashing', () => {
+  render(<App />);
+  expect(screen.getByText('Zion Tech Group')).toBeInTheDocument();
+});
+
+it('renders without crashing', () => {
+  render(<HomePage />);
+  expect(screen.getByText('Welcome to Zion Tech Group')).toBeInTheDocument();
+});
+
+  it('should render the main app component', () => {
     const { container } = render(<App />);
     expect(container).toBeInTheDocument();
   });

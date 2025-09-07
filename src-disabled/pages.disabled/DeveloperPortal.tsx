@@ -32,19 +32,13 @@ interface TabDefinition {
   icon: LucideIcon
 export function DeveloperPortal() {
 
-import { useState } from "react",;
-import { useAuth } from "@/hooks/useAuth",;
-import { BookOpen, Code, Key, List, LucideIcon, Terminal, Webhook } from 'lucide-react'
 
 import { ProtectedRoute } from "@/components/ProtectedRoute";
 import { ApiKeysManager } from "@/components/developers/ApiKeysManager";
 import { WebhooksManager } from "@/components/developers/WebhooksManager";
-import { ApiDocumentation } from "@/components/developers/ApiDocumentation";
-import { ApiLogs } from "@/components/developers/ApiLogs";
 
 import { useState } from "react",
 import { useAuth } from "@/hooks/useAuth",
-import { BookOpen, Code, Key, List, LucideIcon, Terminal, Webhook } from 'lucide-react'
 
 import { ProtectedRoute } from "@/components/ProtectedRoute",
 import { ApiKeysManager } from "@/components/developers/ApiKeysManager",
@@ -150,7 +144,6 @@ export function DeveloperPortal() {
                     : "text-zinc-500 border-transparent hover:text-zinc-400 hover:border-zinc-700"
 import { useState } from 'react';
 import { use_auth } from '@/hooks / use_auth';
-import {
   BookOpen,
   Code,
   Key,
@@ -184,7 +177,6 @@ function DeveloperPortal() {
     { id: 'webhooks', label: 'Webhooks', icon: Webhook },'
     { id: 'logs', label: 'Logs', icon: List },'
   const { user } = use_auth ();
-  const [active_tab, setActiveTab] = useState < string>('documentation');
   // Define the tabs;
   const tabs: TabDefinition[] = [;
     { id: 'documentation', label: 'Documentation', icon: BookOpen },
@@ -219,7 +211,6 @@ function DeveloperPortal() {
                 {tab.label}
               </button>);
           })}
-import { useState } from 'react';
 import { useAuth } from '@/hooks/useAuth';
 import {;
   BookOpen,;
@@ -243,7 +234,6 @@ export function DeveloperPortal() {;
   const { user } = useAuth();
   const [activeTab, setActiveTab] = useState<string>('documentation');
   // Define the tabs;
-  const tabs: TabDefinition[] = [;,
     { id: 'documentation', label: 'Documentation', icon: BookOpen },;
     { id: 'api-keys', label: 'API Keys', icon: Key },;
     { id: 'webhooks', label: 'Webhooks', icon: Webhook },;
@@ -265,12 +255,7 @@ export function DeveloperPortal() {;
                 onClick={() => setActiveTab(tab.id)}
               >
                 <Icon size={16} className="mr-2" />
-import { useState } from "react",;
-import { useAuth } from "@/hooks/useAuth",;
 import { BookOpen, Code, Key, List, LucideIcon, Terminal, Webhook } from 'lucide-react';
-import { ProtectedRoute } from "@/components/ProtectedRoute",;
-import { ApiKeysManager } from "@/components/developers/ApiKeysManager",;
-import { WebhooksManager } from "@/components/developers/WebhooksManager",;
 import { ApiDocumentation } from "@/components/developers/ApiDocumentation",;
 import { ApiLogs } from "@/components/developers/ApiLogs",;
 interface TabDefinition {;
@@ -283,7 +268,6 @@ export function DeveloperPortal() {;
   const { user } = useAuth(),;
   const [activeTab, setActiveTab] = useState<string>("documentation"),;
   // Define the tabs;
-  const tabs: TabDefinition[] = [;
     { id: "documentation", label: "Documentation", icon: BookOpen },;
     { id: "api-keys", label: "API Keys", icon: Key },;
     { id: "webhooks", label: "Webhooks", icon: Webhook },;
@@ -350,7 +334,6 @@ export function DeveloperPortal() {;
       <div className="border-b border-zinc-800 mb-8">;
         <div className="flex flex-wrap -mb-px">;
           {tabs.map((tab) => {;
-            const Icon = tab.icon;
             return (;
               <button;
                 key={tab.id}
@@ -394,6 +377,7 @@ export default function ProtectedDeveloperPortal() {
       {/* Tab content */}
       <div>
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         {activeTab === "documentation" && <ApiDocumentation />}
         {activeTab === "api-keys" && <ApiKeysManager />}
         {activeTab === "webhooks" && <WebhooksManager />}
@@ -424,12 +408,18 @@ export default function ProtectedDeveloperPortal() {
   )
 ;
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 export default function ProtectedDeveloperPortal() {;
   return (;
     <ProtectedRoute>;
       <DeveloperPortal />;
     </ProtectedRoute>;
   );
+<<<<<<< HEAD
+}
+;
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 }
 }
   )

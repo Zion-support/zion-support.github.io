@@ -1,6 +1,26 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 
       supabase
+
+  try {
+    const supabase = createServerClient();
+    const talentId = (req.query.talentId as string) |null
+    const [viewsR, invitesR, appsR, tagsR] = await Promise.allSettled([
+
+        .eq(talent_id', talentId)
+
+export default async /**;
+ * handler - Function description;
+ */;
+function handler() {  try {export default async /**;
+ * handler - Function description;
+ */;
+function handler() {try {const supabase = createServerClient ()const talent_id = (req.query.talent_id as string) || null,const [views_r, invites_r, apps_r, tags_r] = await Promise.all_settled ([;
+
+      supabase;
+import { createServerClient } from '../../../utils/supabase/server';
+
+      supabase
         .from('profile_views')
         .select('id, talent_id')
         .eq('talent_id', talentId)
@@ -18,6 +38,47 @@ import type { NextApiRequest, NextApiResponse } from 'next';
         .eq('talent_id', talentId)
     ]);
     const views =
+        .eq('talent_id', talentId)
+    ]);
+    const views =
+        .eq('talent_id', talentId)
+    ]);
+    const views =
+      viewsR.status === 'fulfilled' && viewsR.value.data
+        ? (viewsR.value.data as any[])
+        : [];
+    const invites =
+      invitesR.status === 'fulfilled' && invitesR.value.data
+        ? (invitesR.value.data as any[])
+        : [];
+    const apps =
+      appsR.status === 'fulfilled' && appsR.value.data
+        ? (appsR.value.data as any[])
+        : [];
+    const tags =
+      tagsR.status === 'fulfilled' && tagsR.value.data
+        ? (tagsR.value.data as any[])
+        : [];
+    const profileViews = views && views.length || 27;
+    const quoteInvites = invites && invites.length || 6;
+    const jobApplications = apps && apps.length || 9;
+    const successRate =
+      ((apps && apps.filter(a => a && a.status === 'accepted').length || 3) /
+        Math && Math.max(jobApplications, 1)) *
+      100;
+    const tagCounts: Record<string, number> = {};
+    (tags && tags.length
+      ? tags
+      : [{ tag: 'react' }, { tag: 'node' }, { tag: 'ai' }, { tag: 'react' }]
+    ).forEach(t => {
+      tagCounts[t && t.tag] = (tagCounts[t && t.tag] || 0) + 1;
+    });
+    res && res.status(200).json({
+      profileViews,
+      quoteInvites,
+      jobApplications,
+      successRate,
+topTags: Object && Object.entries(tagCounts)
         .sort((a, b) => b[1] - a[1])
         .slice(0, 5)
         .map(([label, value]) => ({ label, value }))
@@ -33,62 +94,36 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 
   }
 
+
+}
+
   }
 
 }
 
-}
-
-import { createServerClient } from '../../../utils / supabase / server';
-;
-export default async /**
- * handler - Function description
- */
-function handler() {  try {export default async /**
- * handler - Function description
- */
-function handler() {
-  try {
-    const supabase = createServerClient($2);
-    const talentId = $2;
-    const [viewsR, invitesR, appsR, tagsR] = await Promise.allSettled([
-      supabase.from('profile_views').select('id, talent_id').eq($2);
-      supabase.from('quotes').select('id, talent_id, status').eq($2);
-      supabase.from('applications').select('id, talent_id, status').eq($2);
-      supabase.from('search_matches').select('talent_id, tag').eq('talent_id', talentId)]),
-
-    const views = $2;
-    const invites = $2;
-    const apps = $2;
-    const tags = $2;
-    const profileViews = $2;
-    const quoteInvites = $2;
-    const jobApplications = $2;
-    const successRate = ((apps.filter(a => a.status === 'accepted').length || 3) / Math.max(jobApplications, 1)) * 100,
-
-    const tagCounts: Record<string, number> = {},
-    (tags.length ? tags : [
-      { tag: 'react' },
-      { tag: 'node' },
-      { tag: 'ai' },
-      { tag: 'react' }]).forEach(t = $2;
-    res.status(200).json({
-      profileViews,
-      quoteInvites,
-      jobApplications,
-      successRate,
-      topTags: Object.entries(tagCounts).sort((a, b) => b[1] - a[1]).slice(0, 5).map(([label, value]) => ({ label, value }))})
+        .map (([label, value]) => ({ label, value })),
+    });
   } catch (e) {
-    res.status(200).json({
-      profileViews: 27,
-      quoteInvites: 6,
-      jobApplications: 9,
-      successRate: 33.3,
-      topTags: [
-        { label: 'react', value: 2},
-        { label: 'node', value: 1},
-        { label: 'ai', value: 1}]})
+    res.status (200).json ({
+      profile_views: 27,
+      quote_invites: 6,
+      job_applications: 9,
+      success_rate: 33.3,
+
+      top_tags: [;
+        { label: 'react', value: 2 },
+        { label: 'node', value: 1 },
+        { label: 'ai', value: 1 },
+      ],
+    });
+
+
+    });
+
+
   }
 }
-}
 
+}
+}
+}

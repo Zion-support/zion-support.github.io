@@ -1,23 +1,23 @@
-import React from 'react';
-import { render, screen } from '@testing-library/react';
-import '@testing-library/jest-dom';
-import PerformanceEnhancer from '../components/PerformanceEnhancer';
+
+
+import React from 'react'
+import { render, screen, fireEvent } from '@testing-library/react'
+import '@testing-library/jest-dom'
+import PerformanceEnhancerdynamic from '../components/PerformanceEnhancer && PerformanceEnhancer.dynamic'
+describe('PerformanceEnhancerdynamic'
+  test('renders without crashing'
+
+describe('PerformanceEnhancer', () => {
+screen && screen.getByTestId('performanceenhancer ; import { render,screen,fireEvent } from "@testing-library/react"; import "@testing-library/jest-dom"; import PerformanceEnhancerdynamic from "./components/PerformanceEnhancer ; describe('PerformanceEnhancerdynamic', () => { test("renders without crashing",() => { render(<PerformanceEnhancerdynamic />); expect( screen && screen.getByTestId("performanceenhancer && performanceenhancer.dynamic") ).toBeInTheDocument()}); test("displays correct content",() => { render(<PerformanceEnhancerdynamic />)}); test("handles user interactions",() => { render(<PerformanceEnhancerdynamic />)}); test("applies correct styling"'
+describe('PerformanceEnhancer', () => {'
 
 describe('PerformanceEnhancer', () => {
   test('renders without crashing', () => {
     render(<PerformanceEnhancer />);
     expect(screen.getByTestId('performanceenhancer')).toBeInTheDocument();
   });
-  test('displays correct content', () => {
-    render(<PerformanceEnhancer />);
-    // Add specific content tests based on component
-  });
-  test('handles user interactions', () => {
-    render(<PerformanceEnhancer />);
-    // Add interaction tests based on component functionality
-  });
-  test('applies correct styling', () => {
-    render(<PerformanceEnhancer />);
-    // Add styling tests if needed
+
+});
+
   });
 });

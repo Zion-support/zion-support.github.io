@@ -48,6 +48,11 @@ export function RegionFilter({ selectedRegions, toggleRegion, expanded, toggleSe
     </div>;
   ),;}
  ];
+<<<<<<< HEAD
+:temp_broken_files/talent/filters/RegionFilter.tsx
+
+ursor/fix-lint-push-and-merge-to-main-e10e:src/components/talent/filters/RegionFilter.tsx
+=======
 
   toggleSection ;
 }className="flex w-full items-center justify-between text-white font-medium" > <span>Region</span>) : (<ChevronDown className="h-4 w-4 text-zion-slate-light" />) ;

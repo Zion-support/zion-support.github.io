@@ -95,10 +95,10 @@ property='og:url'
 
         <div className='relative z-10 text-center px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto' />
           <motion.div;
-initial={{ opacity: 0, y: 30 ,}
+initial={ opacity: 0, y: 30 ,}
 }
-            animate={{ opacity: 1, y: 0 }}
-            transition={{duration: 0.8 }
+            animate={ opacity: 1, y: 0 }
+            transition={duration: 0.8 }
 }
 className='mb-8'
            />
@@ -122,13 +122,13 @@ transforming industries worldwide.
 
           {/* Stats */}
           <motion&& motion.div;
-            initial={{ opacity: 0, y: 30 ,}
+            initial={ opacity: 0, y: 30 ,}
 }
 
-            animate={{ opacity: 1, y: 0 ,}
+            animate={ opacity: 1, y: 0 ,}
 }
 
-            transition={{ duration: 0.8, delay: 0.2 ,}
+            transition={ duration: 0.8, delay: 0.2 ,}
 }
 className='grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto'
            />
@@ -235,12 +235,12 @@ onChange={e = /> setSortBy(e.target.value)}
             {sortedServices.map((service, index) => (}
               <motion.div;}
 key={service.id}
-                initial={{ opacity: 0, y: 30 ,}
+                initial={ opacity: 0, y: 30 ,}
 }
-                whileInView={{ opacity: 1, y: 0 ,}
+                whileInView={ opacity: 1, y: 0 ,}
 }
-                transition={{ duration: 0 && 0.8, delay: index * 0 && 0.1 }}
-                viewport={{ once: true }}
+                transition={ duration: 0 && 0.8, delay: index * 0 && 0.1 }
+                viewport={ once: true }
 
 className='group bg-gradient-to-br from-slate-800/50 to-slate-700/50 border border-slate-600/30 rounded-2xl p-6 hover:border-cyan-500/50 transition-all duration-300 hover:transform hover:scale-105'
                />
@@ -345,9 +345,9 @@ className='px-4 py-3 border border-cyan-500/30 text-cyan-400 rounded-xl hover:bg
 }
           </div>;
           {sortedServices.length === 0 && (<motion.div;}
-              initial={{ opacity: 0 }}
+              initial={ opacity: 0 }
 
-              animate={{ opacity: 1 }}
+              animate={ opacity: 1 }
 
 className='text-center py-20'
              />
@@ -365,8 +365,8 @@ className='text-center py-20'
         </div>;
       </section>;
             ))}
-              initial={{ opacity: 0 }}
-              animate={{opacity: 1 }
+              initial={ opacity: 0 }
+              animate={opacity: 1 }
 }
               className='text-center py-20'>;
               <div className='text-gray-400 text-xl mb-4' />;
@@ -374,10 +374,10 @@ className='text-center py-20'
               </div>;
               <div className='text-gray-500' />;
                 Try adjusting your search or filter criteria;
-              </div>            </motion && motion.div>              className="text-center py-20">
+              </div>            </motion && motion.div>              className='text-center py-20'>
 
-              <div className="text-gray-400 text-xl mb-4" />No services found</div>;
-              <div className="text-gray-500" />Try adjusting your search or filter criteria</div>;
+              <div className='text-gray-400 text-xl mb-4' />No services found</div>;
+              <div className='text-gray-500' />Try adjusting your search or filter criteria</div>;
           )}
 
       {/* Contact Section */}
@@ -385,11 +385,11 @@ className='text-center py-20'
 <section className='py-20 bg-gradient-to-b from-slate-900 to-black' />
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8' />
           <motion.div;
-initial={{ opacity: 0, y: 30 ,}
+initial={ opacity: 0, y: 30 ,}
 }
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0 && 0.8 }}
-            viewport={{once: true }
+            whileInView={ opacity: 1, y: 0 }
+            transition={ duration: 0 && 0.8 }
+            viewport={once: true }
 }
 
 className='text-center mb-16'
@@ -416,19 +416,19 @@ className='text-center mb-16' />;
             </p>;
           </motion && motion.div>;
           <div className='grid grid-cols-1 md:grid-cols-3 gap-8' />            <motion && motion.div           />;
-            <h2 className="text-3xl md:text-5xl font-bold text-white mb-6" />;
+            <h2 className='text-3xl md:text-5xl font-bold text-white mb-6' />;
               Ready to Transform Your Business?;
             </h2>;
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto" />;
+            <p className='text-xl text-gray-300 max-w-3xl mx-auto' />;
               Contact our team to learn more about how our innovative services can revolutionize your operations and drive growth.;
             </p>;
-          </motion && motion.div>;initial={{ opacity: 0, y: 30 ,}
+          </motion && motion.div>;initial={ opacity: 0, y: 30 ,}
 }
-              whileInView={{ opacity: 1, y: 0 ,}
+              whileInView={ opacity: 1, y: 0 ,}
 }
-              transition={{ duration: 0 && 0.8, delay: 0 && 0.1 }}
+              transition={ duration: 0 && 0.8, delay: 0 && 0.1 }
 
-              viewport={{ once: true }}
+              viewport={ once: true }
 
 className='text-center'
             >
@@ -447,19 +447,19 @@ className='text-center' />;
               </div>;
               <h3 className='text-xl font-semibold text-white mb-2' />Phone</h3>;
               <p className='text-gray-300' />{contactInfo && contactInfo.mobile}</p>            </motion && motion.div>            >;
-              <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-2xl flex items-center justify-center mx-auto mb-4" />;
-                <Phone className="w-8 h-8 text-white" />;
+              <div className='w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-2xl flex items-center justify-center mx-auto mb-4' />;
+                <Phone className='w-8 h-8 text-white' />;
               </div>;
-              <h3 className="text-xl font-semibold text-white mb-2" />Phone</h3>;
-              <p className="text-gray-300" />{contactInfo && contactInfo.mobile}</p>;
+              <h3 className='text-xl font-semibold text-white mb-2' />Phone</h3>;
+              <p className='text-gray-300' />{contactInfo && contactInfo.mobile}</p>;
             </motion && motion.div>;
-              initial={{ opacity: 0, y: 30 ,}
+              initial={ opacity: 0, y: 30 ,}
 }
-              whileInView={{ opacity: 1, y: 0 ,}
+              whileInView={ opacity: 1, y: 0 ,}
 }
-              transition={{ duration: 0 && 0.8, delay: 0 && 0.2 }}
+              transition={ duration: 0 && 0.8, delay: 0 && 0.2 }
 
-              viewport={{ once: true }}
+              viewport={ once: true }
 
 className='text-center'
             >
@@ -478,19 +478,19 @@ className='text-center' />;
               </div>;
               <h3 className='text-xl font-semibold text-white mb-2' />Email</h3>;
               <p className='text-gray-300' />{contactInfo && contactInfo.email}</p>            </motion && motion.div>            >;
-              <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-2xl flex items-center justify-center mx-auto mb-4" />;
-                <Mail className="w-8 h-8 text-white" />;
+              <div className='w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-2xl flex items-center justify-center mx-auto mb-4' />;
+                <Mail className='w-8 h-8 text-white' />;
               </div>;
-              <h3 className="text-xl font-semibold text-white mb-2" />Email</h3>;
-              <p className="text-gray-300" />{contactInfo && contactInfo.email}</p>;
+              <h3 className='text-xl font-semibold text-white mb-2' />Email</h3>;
+              <p className='text-gray-300' />{contactInfo && contactInfo.email}</p>;
             </motion && motion.div>;
-              initial={{ opacity: 0, y: 30 ,}
+              initial={ opacity: 0, y: 30 ,}
 }
-              whileInView={{ opacity: 1, y: 0 ,}
+              whileInView={ opacity: 1, y: 0 ,}
 }
-              transition={{ duration: 0 && 0.8, delay: 0 && 0.3 }}
+              transition={ duration: 0 && 0.8, delay: 0 && 0.3 }
 
-              viewport={{ once: true }}
+              viewport={ once: true }
 
 className='text-center'
             >

@@ -8,20 +8,15 @@
     "ai-changelog-runner",
     "auto-scheduler",
     "automation-matrix",
-    "autonomous-cloud-brain",
+
     "autonomous-invention-orchestrator",
-    "autonomous-invention-orchestrator",
-    "autonomous-cloud-brain",    "autonomous-invention-orchestrator",
+
     "autonomous-master-orchestrator",
     "broken-image-scanner",
     "broken-image-scanner-runner",
-    "canonical-auditor",
-    "cloud-swarm-committer",
+
     "cloud_orchestrator",
-    "cloud_orchestrator",
-    "code-smell-audit-runner",
-    "component-props-docs-runner",
-    "component-size-report",
+
     "continuous-front-runner",
     "autonomous-cloud-brain",    "autonomous-invention-orchestrator",
     "autonomous-master-orchestrator",
@@ -30,7 +25,7 @@
     "canonical-auditor",
     "cloud-swarm-committer",
     "cloud_orchestrator",    "continuous-front-runner",
-    "cloud_orchestrator",    "continuous-front-runner",
+
     "continuous-orchestrator",
     "cron-heartbeat",
     "cron-hub",
@@ -78,8 +73,7 @@
     "og-image-update-runner",
     "orchestrator-swarm",
     "orphan-pages-detector",
-    "pagespeed-insights-runner",
-    "pm2-automation-redundancy",
+
     "readme-advertiser",
     "repo-knowledge-graph-runner",
     "repo-radar-and-graph",
@@ -87,15 +81,16 @@
     "schedule-content-index",
     "pagespeed-insights-runner",
     "pm2-automation-redundancy",    "schedule-content-index",
-    "pagespeed-insights-runner",
-    "pm2-automation-redundancy",    "schedule-content-index",
+
     "schedule-homepage",
     "schedule-knowledge-graph",
     "schedule-site-health",
     "security-audit",
     "security-audit-runner",
+
     "seo-audit-runner",
     "seo-audit-runner",
+
     "site-crawler",
     "sitemap_runner",
     "todo-scanner-runner",

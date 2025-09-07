@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 :src/components/services/PaymentSection.tsx
 import { MapPin } from 'lucide-react'
 import { PaymentButton } from "@/components/transactions/PaymentButton",
@@ -5,10 +6,13 @@ import { CountryPricing } from "@/data/onsiteServicePricing";
 import { toast } from "@/hooks/use-toast";
 interface PaymentSectionProps {
   selectedCountry: CountryPricing
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 export function PaymentSection({ selectedCountry }: PaymentSectionProps) {
   // Handle successful payment
   const handlePaymentInitiated = () => {
     toast({
+<<<<<<< HEAD
 :src/components/services/PaymentSection.tsx
       title: 'Processing your request'
       description:
@@ -16,6 +20,8 @@ export function PaymentSection({ selectedCountry }: PaymentSectionProps) {
     })
   }
 
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
       title: "Processing your request",
       description: "You'll be redirected to our secure payment portal momentarily."})
   },
@@ -27,6 +33,7 @@ export function PaymentSection({ selectedCountry }: PaymentSectionProps) {
         <MapPin className="mr-2 h-5 w-5 text-zion-purple" />
         {selectedCountry.country}
       </h4>
+<<<<<<< HEAD
 :src/components/services/PaymentSection.tsx
       <p className='text-2xl font-bold text-zion-cyan mb-6'>
         ${selectedCountry.pricePerIncident.toFixed(2)}
@@ -46,6 +53,8 @@ export function PaymentSection({ selectedCountry }: PaymentSectionProps) {
     </div>
   )
 }"}
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
       <p className="text-2xl font-bold text-zion-cyan mb-6">
 import { MapPin } from 'lucide-react';
 import { PaymentButton } from "@/components/transactions/PaymentButton",;
@@ -87,4 +96,8 @@ export function PaymentSection({ selectedCountry }: PaymentSectionProps) {;
     </div>
   )
 }
+<<<<<<< HEAD
 ;
+=======
+;
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc

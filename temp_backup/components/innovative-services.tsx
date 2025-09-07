@@ -353,8 +353,8 @@ value={sortBy}
                   </div>;
                   {/* View Mode Toggle */}<div className='flex-shrink-0' />;
                     <div className='flex bg-white/10 rounded-xl p-1 border border-white/20' />;{/* View Mode Toggle */}
-                  <div className="flex-shrink-0" />;
-                    <div className="flex bg-white/10 rounded-xl p-1 border border-white/20" />;
+                  <div className='flex-shrink-0' />;
+                    <div className='flex bg-white/10 rounded-xl p-1 border border-white/20' />;
                   {/* View Mode Toggle */}
 
 

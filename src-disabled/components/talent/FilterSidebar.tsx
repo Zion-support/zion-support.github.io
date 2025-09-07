@@ -159,7 +159,6 @@ import { FilterSidebarProps } from "@/types/filters",;
       </div>;
 
       {/* Search */}
-{/* Search */}
 origin/cursor/automate-test-improve-and-merge-code-2533
       <SearchFilter searchTerm={searchTerm} setSearchTerm={setSearchTerm} />
       {/* Sorting */}
@@ -177,7 +176,40 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         isMobileFilterOpen={isMobileFilterOpen}      />;
       {isMobileFilterOpen && (;
 
+<<<<<<< HEAD
+:src_backup/components/talent/FilterSidebar.tsx
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+        <Button
+          onClick={() =>
+            window.dispatchEvent(new CustomEvent('closeMobileFilter'))
+          }
+
+import React from 'react';
+import { Button } from '@/components/ui/ button';
+import { Filter } from 'lucide-react';
+import { SearchFilter } from './filters / SearchFilter';
+import { SortFilter } from './filters / SortFilter';
+import { SkillsFilter } from './filters / SkillsFilter';
+import { AvailabilityFilter } from './filters / AvailabilityFilter';
+import { RegionFilter } from './filters / RegionFilter';
+import { ExperienceFilter } from './filters / ExperienceFilter';
+import { PriceFilter } from './filters / PriceFilter';
+import { FilterSidebarProps } from '@/types/ filters';
+export /**
+ * FilterSidebar - Function description
+<<<<<<< HEAD
 import { FilterSidebarProps } from '@/types / filters';
+=======
+import { FilterSidebarProps } from @/types / filters';
+=======
+>>>>>>> merged-prs-20250907-203621
+import { FilterSidebarProps } from '@/types / filters';
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 export /**;
  * FilterSidebar - Function description;
  */

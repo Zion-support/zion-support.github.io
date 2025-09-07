@@ -1,9 +1,22 @@
+
+
+
 #!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')
+
 #!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')
+
+
+#!/usr/bin/env node;
+const fs = require('fs')
+const path = require('path')
+const fs = require('fs')
+const path = require('path')
+#!/usr/bin/env node;
+
 const { execSync } = require('child_process')
 // console.log(' Final Automation Orchestrator')
 console.log('=====')
@@ -20,4 +33,8 @@ console.log('=====')
       execSync('git push origin main', { "stdio"})
 // console.log('\n Final Automation "Summary")
       console.log('\n "Recommendations")
+
     console.error(' Final automation orchestrator "failed")
+    console.error(' Final automation orchestrator "failed")
+
+

@@ -13,7 +13,6 @@ export interface Innovative2026AiServiceV3 {
     email: string,
     address: string}
 }
-
 export const innovative2026AIServicesV3: Innovative2026AiServiceV3[] = [
   {
     id: "2026-innovative-ai-v3",
@@ -21,6 +20,12 @@ export const innovative2026AIServicesV3: Innovative2026AiServiceV3[] = [
     tagline: "Third generation innovative AI",
     price: "$349/month",
     description: "Third generation of the 2026 innovative AI platform with enhanced capabilities and features.",
+    id: '2026-innovative-ai-v3'
+    name: '2026 Innovative AI Platform V3'
+    tagline: 'Third generation innovative AI'
+    price: '$349/month'
+    description:
+      'Third generation of the 2026 innovative AI platform with enhanced capabilities and features.'
     features: [
       "Third generation AI",
       "Enhanced capabilities",

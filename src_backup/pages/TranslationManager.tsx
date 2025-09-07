@@ -61,6 +61,33 @@ const getMissingLanguages = (key: string) : SupportedLanguage[] => {;
   `container mx-auto px-$ {';
   isMobile ? '4': '6' ;
 }py-8` ;
+<<<<<<< HEAD
+}> <Card> <CardHeader> <CardTitle className='text-2xl'> {';
+  t ('translation.manager title') ';
+}</CardTitle> </CardHeader> <CardContent> <div className='space-y-6'> {;
+  /* Search and filter */ ';
+}<div className='flex flex-col sm:flex-row gap-4'> <div className='relative flex-1'> <Search className='absolute left-2.5 top-2.5 h-4 w-4 text-muted-foreground' /> <Input > <TabsList> <TabsTrigger value='translation' >General</TabsTrigger> <TabsTrigger value='admin'>Admin</TabsTrigger> </TabsList> </Tabs> </div> {;
+  /* Translations table */ ';
+}<div className='border rounded-md'> <div className='grid grid-cols-[1fr 2fr] sm:grid-cols-[1fr 2fr auto] border-b'> <div className='p-3 font-medium'> {';
+  t ('translation.key') ';
+}</div> <div className='p-3 font-medium'> {';
+  t ('translation.translations') ';
+}</div> <div className='hidden sm:block p-3 font-medium'> {';
+  t ('translation.actions') ;
+}</div> </div> {';
+  filteredKeys.length === 0 ? (<div className='p-6 text-center text-muted-foreground'> {';
+  t ('translation.no results') ';
+}</div>) : (<div className='divide-y'> {;
+  filteredKeys.map ( (key) => (<div key= {;
+  key ';
+}className='grid grid-cols-[1fr 2fr] sm:grid-cols-[1fr 2fr auto]'> <div className='p-3 break-words'> {;
+  key ;
+}</div> {';
+  editingKey === key ? (<div className='p-3'> <div className='space-y-4'> {;
+  supportedLanguages.map ( (lang) => (<div key= {;
+  lang.code ';
+}> <div className='flex items-center gap-2 mb-1'> <span> {;
+=======
 }> <Card> <CardHeader> <CardTitle className="text-2xl"> {';
   t ('translation.manager title') ";
 }</CardTitle> </CardHeader> <CardContent> <div className="space-y-6"> {;
@@ -86,6 +113,7 @@ const getMissingLanguages = (key: string) : SupportedLanguage[] => {;
   supportedLanguages.map ( (lang) => (<div key= {;
   lang.code ";
 }> <div className="flex items-center gap-2 mb-1"> <span> {;
+>>>>>>> origin/resolved-merge-conflicts
   lang.flag ;
 }</span> <span> {;
   lang.name ;
@@ -95,21 +123,42 @@ const getMissingLanguages = (key: string) : SupportedLanguage[] => {;
 }onChange= {;
   (e) => handleChange (lang.code,  key, e.target.value) ;
 }dir= {';
+<<<<<<< HEAD
+  lang.code === 'ar'? 'rtl': 'ltr' ';
+}className='min-h-20' />) : (<Input value= {';
+=======
   lang.code === 'ar'? 'rtl': 'ltr' ";
 }className="min-h-20" />) : (<Input value= {';
+>>>>>>> origin/resolved-merge-conflicts
   editedTranslations[key]?.[lang.code] || '' ;
 }onChange= {;
   (e) => handleChange (lang.code,  key, e.target.value) ;
 }dir= {';
   lang.code === 'ar'? 'rtl': 'ltr' ;
 }/>) ;
+<<<<<<< HEAD
+}</div>) ) ';
+}</div> <div className='flex gap-2 mt-4' > <Button > {';
+  isSaving ? (<> <Loader2 className='mr-2 h-4 w-4 animate-spin' /> {';
+=======
 }</div>) ) ";
 }</div> <div className="flex gap-2 mt-4" > <Button > {";
   isSaving ? (<> <Loader2 className="mr-2 h-4 w-4 animate-spin" /> {';
+>>>>>>> origin/resolved-merge-conflicts
   t ('general.saving') ;
 }</>) : (<> </>) ;
 }</Button> <Button > {';
   t ('general.cancel') ;
+<<<<<<< HEAD
+}</Button> <Button > {';
+  isTranslating ? (<Loader2 className='mr-2 h-4 w-4 animate-spin' />) : (<Globe className='mr-2 h-4 w-4' />) ;
+}{';
+  t ('translation.auto translate') ';
+}</Button> </div> </div>) : (<div className='p-3'> <div className='space-y-2'> {;
+  supportedLanguages.slice (0, 2) .map ( (lang) => (<div key= {;
+  lang.code ';
+}className='flex items-start gap-2'> <span className='mt-0.5 flex-shrink-0'> {;
+=======
 }</Button> <Button > {";
   isTranslating ? (<Loader2 className="mr-2 h-4 w-4 animate-spin" />) : (<Globe className="mr-2 h-4 w-4" />) ;
 }{';
@@ -118,6 +167,7 @@ const getMissingLanguages = (key: string) : SupportedLanguage[] => {;
   supportedLanguages.slice (0, 2) .map ( (lang) => (<div key= {;
   lang.code ";
 }className="flex items-start gap-2"> <span className="mt-0.5 flex-shrink-0"> {;
+>>>>>>> origin/resolved-merge-conflicts
   lang.flag ;
 }</span> <span className= {;
   `$ {';
@@ -128,8 +178,13 @@ const getMissingLanguages = (key: string) : SupportedLanguage[] => {;
 }> {';
   translations[lang.code]?.[key] || t ('translation.missing') ;
 }</span> </div>) ) ;
+<<<<<<< HEAD
+}{';
+  getMissingLanguages (key) .length > 0 && (<div className='flex items-center gap-2 text-sm text-zion-purple'> <AlertTriangle className='h-4 w-4' /> {';
+=======
 }{";
   getMissingLanguages (key) .length > 0 && (<div className="flex items-center gap-2 text-sm text-zion-purple"> <AlertTriangle className="h-4 w-4" /> {';
+>>>>>>> origin/resolved-merge-conflicts
   t ('translation.missing languages', {;
   count: getMissingLanguages (key) .length ;
 }) ;
@@ -143,7 +198,11 @@ const getMissingLanguages = (key: string) : SupportedLanguage[] => {;
 }</div> </div>) ) ;
 }</div>) ;
 }</div> </div> </CardContent> </Card> </main> </>) ;
+<<<<<<< HEAD
+}''
+=======
 }'"
+>>>>>>> origin/resolved-merge-conflicts
 }
 }
 origin/cursor/automate-test-improve-and-merge-code-2533

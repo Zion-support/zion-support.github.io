@@ -1,9 +1,8 @@
-import React from "react";
-import { SeverityIndicator } from "@/components/ui/severity-indicator";
-interface SeverityDisplayProps {
-  severity: string}
 
-export const SeverityDisplay: React.FC<SeverityDisplayProps> = ({ severity }) => {
-  return (
-    <SeverityIndicator 
-      severity = $2;
+severity: string;
+}
+export const SeverityDisplay: React.FC < SeverityDisplayProps> = ({
+  severity,
+
+
+};

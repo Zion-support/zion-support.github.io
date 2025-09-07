@@ -602,6 +602,9 @@ function fixAllMissingImports(content, filePath) {
     const existingIcons =
       existingImport[0]
         .match(/{([^}]*)}/)?.[1]
+<<<<<<< HEAD
+        ?.split(',')
+=======
 
     const existingIcons = existingImport[0]
       .match(/{([^}]*)}/)?.[1]

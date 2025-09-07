@@ -4,3 +4,4 @@ const ExpoPage = dynamic(() => import('../components/expo/ExpoPage'), { ssr: fal
 export default function ExpoRoute() {
   return <ExpoPage />
 }
+

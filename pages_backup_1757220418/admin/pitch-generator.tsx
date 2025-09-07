@@ -5,8 +5,207 @@ interface Slide {
   title: string
   content: string
   chart?: {
+<<<<<<< HEAD:pages_backup_1757220418/admin/pitch-generator.tsx
     type: string
     data: Array<{ label: string; value: number }>
+=======
+    type: string;
+    data: Array<{ label: string; value: number }>;
+  }
+function SlidePreview({
+  slide
+  isActive
+  onClick
+}: {
+  slide: Slide;
+  isActive: boolean;
+  onClick: () => void;
+}) {
+    >
+      <div className='font-semibold text-sm line-clamp-2'>
+        {slide.title |'Untitled'}
+      </div>
+      <div className='text-xs text-gray-500 dark:text-gray-400 line-clamp-3 mt-1 whitespace-pre-wrap'>
+        {slide.content |'—'}
+      </div>
+    </button>
+  );
+export const getServerSideProps: GetServerSideProps = async ctx => {
+  const result = await requireAdminRole(ctx);
+  // @ts-ignore
+  if ('redirect' in result) return result;
+  return result;
+}
+export default function PitchGenerator() {
+  const [builder, setBuilder] = useState<BuilderState>({
+    mission: ''
+    fundingStage: ''
+    vision: ''
+    roundType: ''
+    targetRaise: ''
+    assets: []
+  });  const [slides, setSlides] = useState<Slide[]>([]);
+  const [activeIndex, setActiveIndex] = useState(0);
+  const [loading, setLoading] = useState(false);
+  const [versionTag, setVersionTag] = useState<string | null>(null);
+  const [history, setHistory] = useState<
+    { id: string; createdAt: string, version: string }[]
+  >([]);
+  const activeSlide = slides[activeIndex];
+  const onAssetDrop = useCallback((e: React.DragEvent<HTMLDivElement>) => {
+    e.preventDefault();
+    const files = Array.from(e.dataTransfer.files |[]);
+    setBuilder(b => ({ ...b, assets: [...b.assets, ...files] }));  }, []);
+  const prevent = (e: React.DragEvent) => {
+    e.preventDefault();
+    e.stopPropagation()
+  }
+  const operatorPrompt = useMemo(
+    () =>
+      `Create a 10-slide investor pitch deck for a high-growth AI services marketplace. Include market size, traction, business model, team, token strategy, and call to action.`
+    []
+  );
+  const autoFetchMetrics = useCallback(async () => {
+    setLoading(true);
+    try {
+      const res = await fetch('/api/admin/pitch/metrics');
+      const data = await res.json();
+      return data;
+    } catch (e) {
+      return {}
+    } finally {
+      setLoading(false);    }
+  }, []);
+  const buildDeck = useCallback(async () => {
+    setLoading(true);
+    try {
+      const metrics = await autoFetchMetrics();
+      const res = await fetch('/api/admin/pitch/generate', {
+        method: 'POST'
+        headers: { 'Content-Type': 'application/json' }
+        body: JSON.stringify({
+          operatorPrompt
+          inputs: builder
+          metrics
+        })
+      });
+      const json = await res.json();
+      const newSlides: Slide[] = json.slides |[];      setSlides(newSlides);
+      setActiveIndex(0);
+      const v = json.version |`v${new Date().toISOString()}`;
+      setVersionTag(v);
+      setHistory(h => [
+        { id: uid(), createdAt: new Date().toISOString(), version: v }
+        ...h
+      ]);
+    } catch (e) {
+      // noop
+    } finally {
+      setLoading(false);
+    }
+  }, [autoFetchMetrics, builder, operatorPrompt]);
+  const rephraseSlide = useCallback(
+    async (idx: number) => {
+      if (!slides[idx]) return;
+      setLoading(true)
+      try {
+        const res = await fetch('/api/admin/pitch/rewrite', {
+          method: 'POST'
+          headers: { 'Content-Type': 'application/json' }
+          body: JSON.stringify({ slide: slides[idx] })
+        });
+        setSlides(arr =>
+          arr.map((s, i) =>
+            i === idx
+              ? {
+                  ...s
+                  title: json.title |s.title
+                  content: json.content |s.content
+                }
+              : s
+          )
+        );
+      } catch (e) {
+      } finally {
+        setLoading(false);
+      }
+    }
+    [slides]
+  );
+  const addSlide = useCallback(async () => {
+    setLoading(true);
+    try {
+      const res = await fetch('/api/admin/pitch/add-slide', { method: 'POST' });
+      setSlides(arr => [
+        ...arr
+        {
+          id: uid()
+          title: json.title |'New Slide'
+          content: json.content |''
+        }
+      ]);
+      setActiveIndex(slides.length);
+    } catch (e) {
+    } finally {
+      setLoading(false);    }
+  }, [slides.length]);
+  const exportPdf = useCallback(async () => {
+    setLoading(true);
+    try {
+      const res = await fetch('/api/admin/pitch/export', {
+        method: 'POST'
+        headers: { 'Content-Type': 'application/json' }
+        body: JSON.stringify({ slides, format: 'pdf', version: versionTag })
+      });      const blob = await res.blob();
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = `pitch-deck-${versionTag |'draft'}.pdf`;
+      a.click();
+      URL.revokeObjectURL(url);
+    } catch (e) {
+    } finally {
+      setLoading(false);    }
+  }, [slides, versionTag]);
+  const exportGoogleSlides = useCallback(async () => {
+    setLoading(true);
+    try {
+        method: 'POST'
+        headers: { 'Content-Type': 'application/json' }
+        body: JSON.stringify({
+          slides
+          format: 'gslides'
+          version: versionTag
+        })
+      });
+      if (json && json.url) {;
+        window.open(json.url, '_blank');
+      }
+    } catch (e) {
+    } finally {
+      setLoading(false);    }
+  }, [slides, versionTag]);
+  const updateActiveSlide = (updates: Partial<Slide>) => {
+    setSlides(arr =>
+      arr.map((s, i) => (i === activeIndex ? { ...s, ...updates } : s))
+    );  }
+  const renderChartPreview = (slide: Slide) => {
+    if (!slide.chart) return null
+    const { type, data } = slide.chart;
+    setSlides((arr) => arr.map((s, i) => (i === activeIndex ? { ...s, ...updates } : s)))
+  },
+    if (!slide.chart) return null,
+    const { type, data } = slide.chart,
+    return (
+      <div className="mt-3">
+        <div className="text-xs text-gray-500 dark:text-gray-400">Chart preview: {type}</div>
+        <div className="flex gap-2 items-end h-24 mt-2">
+          {type === 'bar' && data.map((d) => (
+            <div key={d.label} className="bg-blue-500 w-6" style={{ height: `${Math.max(4, d.value)}px` }} title={`${d.label}: ${d.value}`} />
+          ))  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+>>>>>>> merged-prs-20250907-203621:pages_backup_conflict_1757239547/admin/pitch-generator.tsx
   }
 }
 

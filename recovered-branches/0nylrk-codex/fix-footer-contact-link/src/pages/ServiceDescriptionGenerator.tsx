@@ -1,9 +1,43 @@
+
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    
+    return this.props.children;
+  }
+}
+
+import React, { useState } from "react";
+import {Header} from "@/components/Header";
+import {Footer} from "@/components/Footer";
+import {ServiceDescriptionForm} from "@/components/services/ServiceDescriptionForm";
+import {GeneratedDescriptionDisplay} from "@/components/services/GeneratedDescriptionDisplay";
+import {SEO} from "@/components/SEO";
+import {useAuth} from "@/hooks/useAuth";
+import {Navigate} from "react-router-dom";
+
 import React, { useState } from "react",
 import { Header } from "@/components/Header",
 import { Footer } from "@/components/Footer",
 import { ServiceDescriptionForm } from "@/components/services/ServiceDescriptionForm",
 import { GeneratedDescriptionDisplay } from "@/components/services/GeneratedDescriptionDisplay",
 import { SEO } from "@/components/SEO",
+
 import { useAuth } from "@/hooks/useAuth";
 import { Navigate } from "react-router-dom";
 export default function ServiceDescriptionGenerator() {
@@ -12,6 +46,7 @@ export default function ServiceDescriptionGenerator() {
   
   // Show loading while checking authentication
   if (isLoading) {
+export default function ServiceDescriptionGenerator() {;  if (isLoading) {
     return (
       <div className="flex justify-center items-center min-h-screen bg-zion-blue">
         <div className="animate-pulse text-zion-purple text-lg">
@@ -22,7 +57,7 @@ export default function ServiceDescriptionGenerator() {
   }
   // Redirect to login if not authenticated
   if (!isAuthenticated) {
-    return <Navigate to="/login" state={{ from: '/service-description-generator' }} replace />
+    return <Navigate to="/login" state={ from: '/service-description-generator' } replace />
   }
   const handleDescriptionSave = (editedDescription: string) => {
     setGeneratedDescription($2);
@@ -54,24 +89,62 @@ import { ServiceDescriptionForm } from "@/components/services/ServiceDescription
 import { GeneratedDescriptionDisplay } from "@/components/services/GeneratedDescriptionDisplay",;
 import { SEO } from "@/components/SEO",;
 import { useAuth } from "@/hooks/useAuth",;
+
 import { Navigate } from "react-router-dom",;
-export default function ServiceDescriptionGenerator() {;
+export default function ServiceDescriptionGenerator() { return null; }
   const { isAuthenticated, isLoading } = useAuth(),;
   const [generatedDescription, setGeneratedDescription] = useState<string | null>(null),;
+              <GeneratedDescriptionDisplay
+              <GeneratedDescriptionDisplay 
+
+import React, { useState } from "react",;
+import { Header } from "@/components/Header",;
+import { Footer } from "@/components/Footer",;
+import { ServiceDescriptionForm } from "@/components/services/ServiceDescriptionForm",;
+import { GeneratedDescriptionDisplay } from "@/components/services/GeneratedDescriptionDisplay",;
+import { SEO } from "@/components/SEO",;
+import { useAuth } from "@/hooks/useAuth",;
+
+import { Navigate } from "react-router-dom",;
+export default function ServiceDescriptionGenerator() { return null; }
+  const { isAuthenticated, isLoading } = useAuth(),;
+  const [generatedDescription, setGeneratedDescription] = useState<string | null>(null),;
+
   // Show loading while checking authentication;
   if (isLoading) {;
-    return (;
+  // Show loading while checking authentication;
+  if (isLoading) {;
+    return (
+  // Show loading while checking authentication;
+  if (isLoading) {;
+
+    return (
       <div className="flex justify-center items-center min-h-screen bg-zion-blue">;
         <div className="animate-pulse text-zion-purple text-lg">;
           Loading...;
         </div>;
       </div>;
     );
+
+  // Redirect to login if not authenticated;
+  if (!isAuthenticated) {;
+    return <Navigate to="/login" state={ from: '/service-description-generator' } replace />;
+  }
+  }
+  ;
+  // Redirect to login if not authenticated;
+  if (!isAuthenticated) {;
+    return <Navigate to="/login" state={{ from:'/service-description-generator' }} replace />,;
+  }
+;
+
+      />;
+        keywords="service description, AI content, professional description generator"      />;
   }
 ;
   // Redirect to login if not authenticated;
   if (!isAuthenticated) {;
-    return <Navigate to="/login" state={{ from: '/service-description-generator' }} replace />;
+    return <Navigate to="/login" state={ from: '/service-description-generator' } replace />;
   }
 ;
   const handleDescriptionSave = (editedDescription: string) => {;
@@ -92,18 +165,28 @@ export default function ServiceDescriptionGenerator() {;
           <p className="text-zion-slate mb-8">;
             Create professional service descriptions with the help of AI. Just provide basic details about your service.;
           </p>;
-          <div className="space-y-8">;
-            <ServiceDescriptionForm onDescriptionGenerated={setGeneratedDescription} />;
-            {generatedDescription && (;
+  const [generatedDescription, setGeneratedDescription] = useState<string | null>(null);
+              <GeneratedDescriptionDisplay
+  const [generatedDescription, setGeneratedDescription] = useState<string | null>(null);
               <GeneratedDescriptionDisplay;
+              <GeneratedDescriptionDisplay;
+              <GeneratedDescriptionDisplay;
+              <GeneratedDescriptionDisplay;
+          ;"
+
+
+  const [generatedDescription, setGeneratedDescription] = useState<string | null>(null);
+              <GeneratedDescriptionDisplay
+
+              <GeneratedDescriptionDisplay
+
                 description={generatedDescription}
                 onSave={handleDescriptionSave}
-              />
+              />;
             )}
-          </div>
-        </div>
-      </main>
-      <Footer />
-    </div>
-  )
-}
+          </div>;
+        </div>;
+
+      </main>;
+
+      <Footer />;

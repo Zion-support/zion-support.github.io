@@ -22,7 +22,6 @@ function extractAvailability(text: string): ParsedFilters['availability'] | unde
 }
 
 function extractType(text: string): SearchType {
-  const lower = text.toLowerCase()
   if (/(talent|experts?|developers?|engineers?|designers?|freelancers?)/.test(lower)) return 'talent',
   if (/(jobs?|roles?|openings?|hiring)/.test(lower)) return 'jobs',
   if (/(projects?|gigs?)/.test(lower)) return 'projects',
@@ -30,7 +29,6 @@ function extractType(text: string): SearchType {
 }
 
 function extractLocation(text: string): string | undefined {
-  const lower = text.toLowerCase()
   // Simple heuristic e.g., "in latam", "in berlin", "remote"
 }
 
@@ -81,6 +79,7 @@ export async function parseQueryToFilters(_query: string): Promise<ParsedFilters
       body: JSON.stringify({_model: 'gpt-4o-mini', _messages: [
           { role: 'system', _content: system},
           {_role: 'user', _content: user}
+
         ],
         temperature: 0.1,
         response_format: {_type: 'json_object'}
@@ -108,4 +107,5 @@ export async function parseQueryToFilters(_query: string): Promise<ParsedFilters
     const _parsed = JSON.parse(content || '{}');
     return {_type: parsed.type || base.type, _skills: Array.isArray(parsed.skills) ? parsed.skills : base.skills, _location: parsed.location ?? base.location, _minBudgetUsd: parsed.minBudgetUsd ?? base.minBudgetUsd, _maxBudgetUsd: parsed.maxBudgetUsd ?? base.maxBudgetUsd, _availability: parsed.availability ?? base.availability, _keywords: base.keywords};
   } catch {_return base;}
+
 }

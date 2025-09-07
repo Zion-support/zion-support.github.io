@@ -30,6 +30,17 @@ export interface CompetitorAnalysis {
   socialMediaPresence: Record<string, number>,
   lastUpdated: Date}
 
+<<<<<<< HEAD
+  pricingStrategy: string
+  featureComparison: Record<string, boolean>;
+  socialMediaPresence: Record<string, number>;
+
+  lastUpdated: Date
+}
+export interface MarketSegment {
+
+export interface MarketSegment {;
+=======
   pricing_strategy: string,
   feature_comparison: Record < string, boolean>;
   socialMediaPresence: Record < string, number>;
@@ -70,6 +81,19 @@ export interface MarketSegment {
   name: string;
   size: number;
 
+<<<<<<< HEAD
+  growthRate: number
+  demographics: Record<string, any>;
+  psychographics: Record<string, any>;
+  buyingBehavior: Record<string, any>;
+  painPoints: string[]
+
+  solutions: string[]
+}
+export interface MarketReport {
+
+export interface MarketReport {;
+=======
   growth_rate: number,
   demographics: Record < string, any>;
   psychographics: Record < string, any>;
@@ -152,6 +176,11 @@ export interface MarketReport {
   title: string;
   industry: string;
   summary: string;
+<<<<<<< HEAD
+  data_sources: string[];
+  generated_at: Date,
+  expires_at: Date;
+=======
   key_findings: string[];
   market_size: number;
   growth_projection: number;
@@ -161,6 +190,7 @@ export interface MarketReport {
   generated_at: Date,
   expires_at: Date;
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 }
 export interface MarketResearchRequest {
   industry: string,
@@ -561,6 +591,37 @@ export interface MarketResearchRequest {
   target_market: string;
   research_type: 'trends' | 'competitors' | 'segments' | 'comprehensive';
   timeframe: '7d' | '30d' | '90d' | '1y';
+<<<<<<< HEAD
+  includeHistoricalData: boolean,
+  custom_metrics?: string[];
+}
+export interface MarketResearchResponse {
+  keyFindings: string[];
+  marketSize: number;
+  growthProjection: number;
+  recommendations: string[];
+  dataSources: string[];
+
+  generatedAt: Date
+
+  expiresAt: Date
+}
+export interface MarketResearchRequest {
+
+export interface MarketResearchRequest {;
+  industry: string;
+  targetMarket: string;
+  researchType: 'trends' | 'competitors' | 'segments' | 'comprehensive';
+  timeframe: '7d' | '30d' | '90d' | '1y';
+
+  includeHistoricalData: boolean
+
+  customMetrics?: string[]
+}
+export interface MarketResearchResponse {
+
+export interface MarketResearchResponse {;
+=======
 
   includeHistoricalData: boolean,
   custom_metrics?: string[];
@@ -694,6 +755,26 @@ export class AIMarketResearchService {
   }
   async getRealTimeInsights(keyword: string): Promise<MarketTrend[]> {
     try {
+<<<<<<< HEAD
+          'Authorization': `Bearer ${this && this.apiKey}`}});
+      if (!response && response.ok) {
+        throw new Error(`HTTP error! status: ${response && response.status}`)
+      }
+      const data = await response && response.json();
+      return data && data.trends || []
+    } catch (error) {
+      console && console.error('Error getting real-time insights:', error);
+      const response = await fetch(`${this.baseUrl}/api/market-research/realtime?keyword=${encodeURIComponent(keyword)}`, {
+        headers: {
+          'Authorization': `Bearer ${this.apiKey}`}});
+      if (!response.ok) {
+        throw new Error(`HTTP error! status: ${response.status}`)
+      }
+      const data = await response.json();
+      return data.trends |[]
+    } catch (error) {
+      console.error('Error getting real-time insights:', error);
+=======
       const response = await fetch(`${this && this.baseUrl}/api/market-research/realtime?keyword=${encodeURIComponent(keyword)}`, {
         headers: {
 
@@ -708,12 +789,16 @@ export class AIMarketResearchService {
 
     } catch (error) {
       console && console.error('Error getting real-time insights:', error);
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       throw error
     }
   }
   async exportReport(reportId: string, format: 'pdf' | 'csv' | 'excel'): Promise<string> {
     try {
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       const response = await fetch(`${this && this.baseUrl}/api/market-research/export/${reportId}`, {
         method: 'POST',
         headers: {

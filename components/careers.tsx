@@ -1,11 +1,17 @@
-import React, { useState } from 'react';
-import Head from 'next/head';
-import Layout from '../components/layout/Layout';
-import { motion } from 'framer-motion';
-import { 
-  Users, Rocket, Brain, Globe, Award, Zap, 
+
+
+import React, { useState } from 'react','
+import Head from 'next/head','
+import Layout from '../components/layout/Layout';'
+import { motion } from 'framer-motion';'
+import { Users, Rocket, Brain, Globe, Award, Zap;
+  }
   Heart, Star, ArrowRight, CheckCircle, Briefcase
-} from 'lucide-react',
+ } from 'lucide-react';'
+
+export default function Careers() {
+  }
+  const [selectedDepartment, setSelectedDepartment] = useState('all');'
 
 export default function Careers() {
   const [selectedDepartment, setSelectedDepartment] = useState($2);
@@ -99,6 +105,12 @@ export default function Careers() {
       icon: <Star className = $2;
       title: 'Excellence',
       description: 'We strive for the highest quality in everything we do.'
+      type: 'Full - time',
+      experience: '3+ years',
+      description: 'Build scalable web applications and cloud - based solutions.',
+      requirements: [;
+        'Experience with React, Node.js, and cloud platforms_knowledge of modern web technologies and APIsUnderstanding of software architecture and design patterns_experience with DevOps and CI / CD practices';
+      ];
     }
   ],
 
@@ -111,78 +123,85 @@ export default function Careers() {
     : jobOpenings.filter($2);
   return (
     <UltraFuturisticBackground>
-      <div className="min-h-screen">
+      <div className='min-h-screen'>
         <Head>
           <title>Careers - Zion Tech Group | Join Our Revolutionary Technology Team</title>
-          <meta name="description" content="Join Zion Tech Group's team of innovators. Explore career opportunities in AI, quantum computing, and emerging technologies. Remote work, competitive benefits, and cutting-edge projects." />
+          <meta name='description' content='Join Zion Tech Group's team of innovators. Explore career opportunities in AI, quantum computing, and emerging technologies. Remote work, competitive benefits, and cutting-edge projects.' />
         </Head>
 
-      <div className="min-h-screen py-12 px-4 sm:px-6 lg:px-8">
+      <div className='min-h-screen py-12 px-4 sm:px-6 lg:px-8'>
         {/* Hero Section */}
         <motion.div 
-          initial={{ opacity: 0, y: 20}}
-          animate={{ opacity: 1, y: 0}}
-          transition={{ duration: 0.6 }}
-          className="text-center mb-16"
+          initial={ opacity: 0, y: 20}
+          animate={ opacity: 1, y: 0}
+          transition={ duration: 0.6 }
+          className='text-center mb-16'
         >
-          <h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500 bg-clip-text text-transparent mb-6">
+          <h1 className='text-4xl md:text-6xl font-bold bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500 bg-clip-text text-transparent mb-6'>
             Join Our Team
           </h1>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Be part of a team that's revolutionizing technology through AI, quantum computing, 
-            and space technology. Help us build the future.
+          <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}"
+          className="text-center mb-16"
+        >"
+          <h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500 bg-clip-text text-transparent mb-6">
+            Join Our Team;
+          </h1>"
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto">'
+            Be part of a team that's revolutionizing technology through AI, quantum computing, and space technology. Help us build the future.
           </p>
         </motion.div>
 
-        {/* Company Culture */}
-        <motion.div 
-          initial={{ opacity: 0, y: 20}}
-          animate={{ opacity: 1, y: 0}}
-          transition={{ duration: 0.6, delay: 0.2 }}
-          className="mb-16"
-        >
-          <h2 className="text-3xl font-bold text-white text-center mb-12">Our Culture & Values</h2>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {companyValues.map((value, index) => (
-              <div key={index} className="bg-gradient-to-br from-gray-900/40 to-blue-900/20 p-6 rounded-2xl border border-gray-600/20 text-center">
-                <div className="w-16 h-16 bg-blue-500/20 rounded-full flex items-center justify-center mx-auto mb-4 text-blue-400">
-                  {value.icon}
-                </div>
-                <h3 className="text-lg font-bold text-white mb-3">{value.title}</h3>
-                <p className="text-gray-300 text-sm">{value.description}</p>
-              </div>
+
+        <motion&& motion.div 
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0 && 0.6, delay: 0 && 0.2 }}"
+          className="mb-16">;"
+          <h2 className="text-3xl font-bold text-white text-center mb-12">Our Culture & Values</h2>;"
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">;
+            {companyValues && companyValues.map((value, index) => (;"
+              <div key={index} className="bg-gradient-to-br from-gray-900/40 to-blue-900/20 p-6 rounded-2xl border border-gray-600/20 text-center">;"
+                <div className="w-16 h-16 bg-blue-500/20 rounded-full flex items-center justify-center mx-auto mb-4 text-blue-400">;
+                  {value && value.icon}
+                </div>;"
+                <h3 className="text-lg font-bold text-white mb-3">{value && value.title}</h3>;"
+                <p className="text-gray-300 text-sm">{value && value.description}</p>;
+              </div>;
             ))}
-          </div>
-        </motion.div>
 
-        {/* Benefits */}
-        <motion.div 
-          initial={{ opacity: 0, y: 20}}
-          animate={{ opacity: 1, y: 0}}
-          transition={{ duration: 0.6, delay: 0.4 }}
-          className="mb-16"
-        >
-          <h2 className="text-3xl font-bold text-white text-center mb-12">Why Work With Us?</h2>
-          <div className="bg-gradient-to-br from-gray-900/40 to-purple-900/20 p-8 rounded-2xl border border-gray-600/20 max-w-4xl mx-auto">
-            <div className="grid md:grid-cols-2 gap-6">
-              {benefits.map((benefit, index) => (
-                <div key={index} className="flex items-center">
-                  <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
-                  <span className="text-gray-300">{benefit}</span>
-                </div>
-              ))}
-            </div>
-          </div>
-        </motion.div>
 
-        {/* Job Openings */}
-        <motion.div 
-          initial={{ opacity: 0, y: 20}}
-          animate={{ opacity: 1, y: 0}}
           transition={{ duration: 0.6, delay: 0.6 }}
           className="mb-16"
         >
           <h2 className="text-3xl font-bold text-white text-center mb-8">Open Positions</h2>
+          
+          {/* Department Filter */}
+          <div className="flex flex-wrap justify-center gap-3 mb-8">
+        {/* Job Openings */}
+        <motion&& motion.div 
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0 && 0.6, delay: 0 && 0.6 }}
+          className="mb-16">;
+          <h2 className="text-3xl font-bold text-white text-center mb-8">Open Positions</h2>;
+          {/* Department Filter */}
+          <div className="flex flex-wrap justify-center gap-3 mb-8">;
+            {departments && departments.map((dept) => (;
+              <button
+                key={dept && dept.id}
+                onClick={() => setSelectedDepartment(dept && dept.id)}
+                className={`px-4 py-2 rounded-lg font-medium transition-all duration-300 ${;
+                  selectedDepartment === dept && dept.id;
+                    ? 'bg-blue-500 text-white';
+                    : 'bg-gray-800/50 text-gray-300 hover:bg-gray-700/50';
+                }`}
+              >;
+                {dept && dept.name}
+              </button>;
+            ))}
           
           {/* Department Filter */}
           <div className="flex flex-wrap justify-center gap-3 mb-8">
@@ -195,9 +214,9 @@ export default function Careers() {
                     ? 'bg-blue-500 text-white'
                     : 'bg-gray-800/50 text-gray-300 hover:bg-gray-700/50'
                 }`}
-              >
-                {dept.name}
-              </button>
+              >;
+                {dept && dept.name}
+              </button>;
             ))}
           </div>
 
@@ -227,7 +246,6 @@ export default function Careers() {
                         {job.experience}
                       </span>
                     </div>
-                  </div>
                   <a
                     href={`/contact?position=${encodeURIComponent(job.title)}`}
                     className="mt-4 lg:mt-0 inline-flex items-center px-6 py-3 bg-gradient-to-r from-blue-500 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105"
@@ -259,17 +277,7 @@ export default function Careers() {
               <Briefcase className="w-16 h-16 text-gray-500 mx-auto mb-4" />
               <h3 className="text-xl font-semibold text-gray-400 mb-2">No Open Positions</h3>
               <p className="text-gray-500">
-                We don't have any open positions in this department at the moment. 
-                Check back later or send us your resume for future opportunities.
-              </p>
-            </div>
-          )}
-        </motion.div>
 
-        {/* General Application */}
-        <motion.div 
-          initial={{ opacity: 0, y: 20}}
-          animate={{ opacity: 1, y: 0}}
-          transition={{ duration: 0.6, delay: 0.8 }}
-          className = $2;
-export default CareersPage,
+
+export default CareersPage;
+
