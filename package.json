@@ -8,30 +8,20 @@
     "npm": ">=10.0.0"
   },
   "scripts": {
-<<<<<<< HEAD
     "ci:preflight": "node -e \"try{require('fs').accessSync('dist');console.log('dist exists')}catch(e){process.exit(0)}\" && echo prebuilt || echo building",
     "ci:build-test": "npm run build && npm run test:smoke",
     "sitemap": "node scripts/generate-sitemap.js",
     "dev": "next dev",
-    "build": "next build",
     "build": "node --max-old-space-size=8192 ./node_modules/.bin/next build",
-    "start": "next start",
-    "build": "node --max-old-space-size=8192 ./node_modules/.bin/next build",
+    "start": "next start -p 3000",
     "build:netlify": "node scripts/build-with-error-handling.js",
     "prebuild": "echo \"Starting build...\"",
     "export": "next build && next export",
-    "start": "next start -p 3000",
     "postbuild": "echo \"Build completed\"",
-    "lint": "node --max-old-space-size=4096 ./node_modules/.bin/eslint . --max-warnings 1000",
-    "lint:fix": "eslint . --fix --max-warnings 0",
+    "lint": "eslint . --no-error-on-unmatched-pattern",
+    "lint:fix": "eslint . --fix --no-error-on-unmatched-pattern",
     "lint:check": "eslint . --max-warnings 0",
     "type-check": "tsc --noEmit --skipLibCheck",
-=======
-    "dev": "next dev",
-    "build": "node --max-old-space-size=8192 ./node_modules/.bin/next build",
-    "start": "next start",
-    "export": "next export",
->>>>>>> origin/chore/fix-lint-and-merge
     "test": "jest --config jest.config.cjs",
     "test:smoke": "jest --config jest.config.cjs --passWithNoTests",
     "test:watch": "jest --config jest.config.cjs --watch",
@@ -40,8 +30,7 @@
     "check": "npm run lint && npm run type-check && npm run test:smoke",
     "clean": "rm -rf .next out dist",
     "precommit": "npm run check",
-<<<<<<< HEAD
-    "prepare": "echo 'Husky prepare script disabled'",
+    "prepare": "echo \"Husky prepare script disabled\"",
     "autonomous": "node automation/launch-enhanced-autonomous-system.js",
     "autonomous:dev": "nodemon automation/launch-enhanced-autonomous-system.js",
     "autonomous:status": "node automation/launch-autonomous-systems-clean.js status",
@@ -235,29 +224,14 @@
     "ecosystem": "ecosystem.maintenance.cjs"
   },
   "dependencies": {
-=======
-    "prepare": "echo \"Husky prepare script disabled\"",
-    "lint": "eslint . --no-error-on-unmatched-pattern",
-    "lint:fix": "eslint . --fix --no-error-on-unmatched-pattern",
-    "type-check": "tsc --noEmit"
->>>>>>> origin/chore/fix-lint-and-merge
-  },
-  "dependencies": {
     "@babel/core": "^7.28.4",
     "@fastify/cors": "^11.1.0",
     "@fastify/rate-limit": "^10.3.0",
     "@google-analytics/data": "^5.2.0",
     "@google/generative-ai": "^0.24.1",
-<<<<<<< HEAD
-=======
     "@headlessui/react": "^2.2.7",
->>>>>>> origin/chore/fix-lint-and-merge
     "@heroicons/react": "^2.2.0",
     "@hookform/resolvers": "^5.2.1",
-    "@modelcontextprotocol/sdk": "^1.17.1",
-    "@modelcontextprotocol/server-filesystem": "^2025.7.29",
-    "@modelcontextprotocol/server-memory": "^2025.8.4",
-    "@modelcontextprotocol/server-sequential-thinking": "^2025.7.1",
     "@next/swc-linux-x64-gnu": "^15.5.2",
     "@radix-ui/react-accordion": "^1.2.1",
     "@radix-ui/react-alert-dialog": "^1.1.2",
@@ -345,8 +319,6 @@
     "web-vitals": "^5.1.0"
   },
   "devDependencies": {
-<<<<<<< HEAD
-=======
     "@axe-core/cli": "^4.10.2",
     "@axe-core/react": "^4.10.2",
     "@babel/plugin-transform-class-properties": "^7.27.1",
@@ -360,21 +332,19 @@
     "@next/bundle-analyzer": "^15.5.2",
     "@next/eslint-plugin-next": "^15.5.2",
     "@rollup/rollup-linux-x64-gnu": "^4.50.0",
->>>>>>> origin/chore/fix-lint-and-merge
     "@testing-library/dom": "^10.4.1",
     "@testing-library/jest-dom": "^6.8.0",
     "@testing-library/react": "^16.3.0",
     "@testing-library/user-event": "^14.6.1",
-<<<<<<< HEAD
+    "@types/jest": "^29.5.8",
     "@types/next": "^8.0.7",
     "@types/node": "^18.0.0",
     "@types/node-cron": "^3.0.11",
     "@types/react": "^18.3.24",
     "@types/react-dom": "^18.3.7",
-    "@typescript-eslint/eslint-plugin": "^7.18.0",
-    "@typescript-eslint/parser": "^7.18.0",
-    "autoprefixer": "^10.4.21",
-    "axios": "^1.11.0",
+    "@typescript-eslint/eslint-plugin": "^8.42.0",
+    "@typescript-eslint/parser": "^8.42.0",
+    "autoprefixer": "^10.4.20",
     "bs58": "^6.0.0",
     "bwip-js": "^4.7.0",
     "cheerio": "^1.1.2",
@@ -389,6 +359,12 @@
     "d3-time-format": "^4.1.0",
     "date-fns": "^2.30.0",
     "epub-gen": "^0.1.0",
+    "eslint": "^9.35.0",
+    "eslint-config-next": "^15.5.2",
+    "eslint-formatter-junit": "^8.40.0",
+    "eslint-plugin-jsx-a11y": "^6.10.2",
+    "eslint-plugin-react": "^7.37.5",
+    "eslint-plugin-react-hooks": "^5.2.0",
     "ethers": "^6.15.0",
     "events": "^3.3.0",
     "firebase-admin": "^13.5.0",
@@ -399,9 +375,13 @@
     "html2pdf.js": "^0.12.0",
     "https": "^1.0.0",
     "i18next-browser-languagedetector": "^8.2.0",
+    "identity-obj-proxy": "^3.0.0",
     "import-fresh": "^3.3.1",
     "ipfs-http-client": "^60.0.1",
-    "jszip": "^3.10.1",
+    "jest": "^29.7.0",
+    "jest-environment-jsdom": "^29.7.0",
+    "jsdom": "^24.0.0",
+    "lighthouse": "^12.8.2",
     "livekit-server-sdk": "^2.13.3",
     "lucide-react": "^0.536.0",
     "mongodb": "^6.19.0",
@@ -412,28 +392,16 @@
     "path": "^0.12.7",
     "pdf-lib": "^1.17.1",
     "pdfkit": "^0.17.2",
-    "postcss": "^8.4.32",
+    "postcss": "^8.5.0",
     "postcss-preset-env": "^10.3.1",
     "puppeteer": "^24.19.0",
-    "react": "^18.3.1",
-    "react-datepicker": "^8.4.0",
-    "react-day-picker": "^8.9.1",
-    "react-dom": "^18.3.1",
-    "react-error-boundary": "^6.0.0",
-    "react-helmet-async": "^2.0.5",
-    "react-hook-form": "^7.62.0",
-    "react-hot-toast": "^2.6.0",
-    "react-i18next": "^15.7.3",
-    "react-is": "^19.1.1",
-    "react-router-dom": "^6.30.1",
-    "sharp": "^0.34.3",
-    "sonner": "^2.0.7",
-    "swr": "^2.3.6",
-    "tailwind-merge": "^3.3.1",
-    "tailwindcss-animate": "^1.0.7",
-    "tweetnacl": "^1.0.3",
-    "uuid": "^11.1.0",
-    "web-vitals": "^5.1.0",
+    "rollup": "^4.50.0",
+    "tailwindcss": "^3.4.17",
+    "terser": "^5.43.1",
+    "ts-jest": "^29.4.1",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.9.2",
+    "vite": "^7.1.4",
     "web3.storage": "^4.5.5"
   },
   "optionalDependencies": {
@@ -448,38 +416,6 @@
       "tailwindcss": {},
       "autoprefixer": {}
     }
-=======
-    "@types/jest": "^29.5.8",
-    "@typescript-eslint/eslint-plugin": "^8.42.0",
-    "@typescript-eslint/parser": "^8.42.0",
-    "autoprefixer": "^10.4.20",
-    "critters": "^0.0.23",
-    "eslint": "^8.57.0",
-    "eslint-config-next": "^15.5.2",
-    "eslint-formatter-junit": "^8.40.0",
-    "eslint-plugin-jsx-a11y": "^6.10.2",
-    "eslint-plugin-react": "^7.37.5",
-    "eslint-plugin-react-hooks": "^5.2.0",
-    "eslint-plugin-react-refresh": "^0.4.20",
-    "globals": "^16.3.0",
-    "identity-obj-proxy": "^3.0.0",
-    "jest": "^29.7.0",
-    "jest-environment-jsdom": "^29.7.0",
-    "jsdom": "^24.0.0",
-    "lighthouse": "^12.8.2",
-    "postcss": "^8.5.0",
-    "rollup": "^4.50.0",
-    "tailwindcss": "^3.4.17",
-    "terser": "^5.43.1",
-    "ts-jest": "^29.4.1",
-    "ts-node": "^10.9.2",
-    "typescript": "^5.9.2",
-    "vite": "^7.1.4"
-  },
-  "engines": {
-    "node": ">=18.0.0",
-    "npm": ">=10.0.0"
->>>>>>> origin/chore/fix-lint-and-merge
   },
   "repository": {
     "type": "git",
@@ -495,15 +431,5 @@
     "zion-tech-group"
   ],
   "author": "Zion Tech Group",
-<<<<<<< HEAD
   "license": "MIT"
 }
-=======
-  "license": "MIT",
-  "nextConfig": {
-    "compress": true,
-    "poweredByHeader": false,
-    "generateEtags": false
-  }
-}
->>>>>>> origin/chore/fix-lint-and-merge
