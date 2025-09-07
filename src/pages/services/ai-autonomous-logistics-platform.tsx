@@ -94,9 +94,9 @@ export default function AIAutonomousLogisticsPlatform() {
       name: "Starter",
       price: "$299",
       period: "/month",
-      description: "Perfect for small logistics operations",
+      description: "Perfect for small logistics companies",
       features: [
-        "Up to 50 vehicles",
+        "Up to 100 shipments/month",
         "Basic route optimization",
         "Real-time tracking",
         "Basic analytics dashboard",
@@ -109,9 +109,9 @@ export default function AIAutonomousLogisticsPlatform() {
       name: "Professional",
       price: "$799",
       period: "/month",
-      description: "Ideal for growing logistics companies",
+      description: "Ideal for growing businesses",
       features: [
-        "Up to 200 vehicles",
+        "Up to 1,000 shipments/month",
         "Advanced AI optimization",
         "Predictive analytics",
         "Multi-warehouse support",
@@ -125,7 +125,7 @@ export default function AIAutonomousLogisticsPlatform() {
       name: "Enterprise",
       price: "$1,999",
       period: "/month",
-      description: "For large-scale logistics operations",
+      description: "For large-scale operations",
       features: [
         "Unlimited vehicles",
         "Full AI autonomy",
@@ -178,7 +178,6 @@ export default function AIAutonomousLogisticsPlatform() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="text-center max-w-4xl mx-auto"
           >
             <div className="inline-flex items-center px-4 py-2 rounded-full bg-zion-cyan/20 border border-zion-cyan/30 text-zion-cyan text-sm font-medium mb-6">
               <Truck className="w-4 h-4 mr-2" />
@@ -186,7 +185,7 @@ export default function AIAutonomousLogisticsPlatform() {
             </div>
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight">
               AI Autonomous
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-zion-cyan to-zion-purple"> Logistics Platform</span>
+              <span className="text-zion-cyan"> Logistics Platform</span>
             </h1>
             <p className="text-xl text-zion-slate-light mb-8 max-w-3xl mx-auto">
               Transform your logistics operations with cutting-edge AI that optimizes routes, manages fleets autonomously, 
@@ -402,4 +401,6 @@ export default function AIAutonomousLogisticsPlatform() {
       </section>
     </div>
   );
-}
+};
+
+export default AIAutonomousLogisticsPlatform;
