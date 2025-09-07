@@ -1,60 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-export default function Home() {
-  return (
-    <div>
-      <h1>Zion Tech Group</h1>
-      <p>AI, Micro SaaS, and IT Services</p>
-=======
-import React from 'react';
-import Link from 'next/link';
-import {
-  LightBulbIcon,
-  CpuChipIcon,
-  GlobeAltIcon,
-  ShieldCheckIcon,
-  ChartBarIcon,
-  UserGroupIcon,
-  ArrowRightIcon,
-  CheckCircleIcon,
-  StarIcon,
-  RocketLaunchIcon
-} from '@heroicons/react/24/outline';
-=======
-import React from "react";
-import Link from "next/link";
-import { Metadata } from 'next';
-
-export const metadata: Metadata = {
-  title: 'Zion Tech Group - Enterprise AI & IT Solutions | Micro SaaS Development',
-  description: 'Leading provider of enterprise-grade AI solutions, micro SaaS development, and IT services. 500+ services including AI automation, blockchain solutions, and cloud infrastructure.',
-  keywords: 'AI solutions, micro SaaS, IT services, enterprise software, blockchain, cloud computing, automation, machine learning, software development',
-  authors: [{ name: 'Zion Tech Group' }],
-  openGraph: {
-    title: 'Zion Tech Group - Enterprise AI & IT Solutions',
-    description: 'Leading provider of enterprise-grade AI solutions, micro SaaS development, and IT services.',
-    type: 'website',
-    locale: 'en_US',
-    siteName: 'Zion Tech Group',
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: 'Zion Tech Group - Enterprise AI & IT Solutions',
-    description: 'Leading provider of enterprise-grade AI solutions, micro SaaS development, and IT services.',
-  },
-  robots: {
-    index: true,
-    follow: true,
-    googleBot: {
-      index: true,
-      follow: true,
-      'max-video-preview': -1,
-      'max-image-preview': 'large',
-      'max-snippet': -1,
-    },
-  },
-};
->>>>>>> 19d1d1ef532f9e4690306331c74cc9ccbd0b556b
 
 interface CardProps {
   title: string;
@@ -329,9 +272,6 @@ export default function HomePage() {
             </Link>
           </div>
         </div>
-<<<<<<< HEAD
-      </div>
->>>>>>> 91fec3a61bf105731881304ea8d3824dd093e739
 =======
       </section>
 >>>>>>> 19d1d1ef532f9e4690306331c74cc9ccbd0b556b
