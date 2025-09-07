@@ -26,7 +26,7 @@ export default [
     'plugin:react-hooks/recommended'
   ),
   {
-    files: ['**/*.{js,jsx,ts,tsx}'],
+    files: ['app/**/*.{js,jsx,ts,tsx}'],
     languageOptions: {
       ecmaVersion: 'latest',
       sourceType: 'module',

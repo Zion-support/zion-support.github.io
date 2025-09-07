@@ -59,7 +59,7 @@ export default function MicroSaaSPage() {
             Ready to Build Your Micro SaaS?
           </h2>
           <p className="text-lg text-gray-600 mb-8">
-            Let's discuss your idea and create a custom solution that drives real business value.
+            Let&apos;s discuss your idea and create a custom solution that drives real business value.
           </p>
           <a
             href="mailto:kleber@ziontechgroup.com?subject=Micro SaaS Consultation"
