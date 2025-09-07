@@ -870,6 +870,27 @@ export function MainNavigation({ className }: MainNavigationProps) {
                     <Link to="/micro-saas" className="block py-1 text-zion-slate-light hover:text-zion-cyan transition-colors">
                       Micro SaaS
                     </Link>
+                    <Link 
+                      to="/services/ai-content-optimizer-pro" 
+                      className="block px-3 py-2 rounded-md text-sm text-muted-foreground hover:text-zion-cyan hover:bg-zion-cyan/5 transition-colors"
+                      onClick={() => setIsMobileMenuOpen(false)}
+                    >
+                      AI Content Optimizer Pro
+                    </Link>
+                    <Link 
+                      to="/services/ai-powered-customer-churn-predictor" 
+                      className="block px-3 py-2 rounded-md text-sm text-muted-foreground hover:text-zion-cyan hover:bg-zion-cyan/5 transition-colors"
+                      onClick={() => setIsMobileMenuOpen(false)}
+                    >
+                      AI Customer Churn Predictor
+                    </Link>
+                    <Link 
+                      to="/services/ai-iot-edge-computing-platform" 
+                      className="block px-3 py-2 rounded-md text-sm text-muted-foreground hover:text-zion-cyan hover:bg-zion-cyan/5 transition-colors"
+                      onClick={() => setIsMobileMenuOpen(false)}
+                    >
+                      AI IoT Edge Computing
+                    </Link>
                   </div>
                 </div>
                 
