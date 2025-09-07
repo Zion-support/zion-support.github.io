@@ -15,7 +15,7 @@ describe('/api/reviews API Endpoint', () => {
     it('should return reviews with pagination', async () => {
       const { req, res } = createMocks<NextApiRequest, NextApiResponse>({
         method: 'GET' as RequestMethod,
-        query: { page: '1', limit: '10' }
+        query: { page: '1', limit: '10' },
       });
 
       await reviewsHandler(req, res);
@@ -31,8 +31,8 @@ describe('/api/reviews API Endpoint', () => {
         body: {
           productId: '1',
           rating: 5,
-          comment: 'Great product!'
-        }
+          comment: 'Great product!',
+        },
       });
 
       await reviewsHandler(req, res);

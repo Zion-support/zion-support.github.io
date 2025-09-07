@@ -1,20 +1,18 @@
-import React from 'react'
-import { Metadata } from 'next'
+import React from 'react';
+import { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: 'Finance Solutions | Zion Tech Group',
   description: 'Professional finance solutions for your business needs.',
-  keywords: 'finance, solutions, business, technology'
-}
+  keywords: 'finance, solutions, business, technology',
+};
 
 export default function ServicePage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <div className="container mx-auto px-4 py-16">
         <div className="text-center mb-16">
-          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-            Finance Solutions
-          </h1>
+          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">Finance Solutions</h1>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
             Professional finance solutions for your business needs.
           </p>
@@ -24,25 +22,19 @@ export default function ServicePage() {
           <div className="bg-gray-800 rounded-lg p-6">
             <div className="text-4xl mb-4">💰</div>
             <h3 className="text-xl font-bold text-white mb-4">Financial Planning</h3>
-            <p className="text-gray-300">
-              Comprehensive financial planning and analysis solutions.
-            </p>
+            <p className="text-gray-300">Comprehensive financial planning and analysis solutions.</p>
           </div>
-          
+
           <div className="bg-gray-800 rounded-lg p-6">
             <div className="text-4xl mb-4">📊</div>
             <h3 className="text-xl font-bold text-white mb-4">Analytics</h3>
-            <p className="text-gray-300">
-              Advanced financial analytics and reporting tools.
-            </p>
+            <p className="text-gray-300">Advanced financial analytics and reporting tools.</p>
           </div>
-          
+
           <div className="bg-gray-800 rounded-lg p-6">
             <div className="text-4xl mb-4">🔒</div>
             <h3 className="text-xl font-bold text-white mb-4">Security</h3>
-            <p className="text-gray-300">
-              Secure financial data management and compliance.
-            </p>
+            <p className="text-gray-300">Secure financial data management and compliance.</p>
           </div>
         </div>
 
@@ -57,5 +49,5 @@ export default function ServicePage() {
         </div>
       </div>
     </div>
-  )
+  );
 }
