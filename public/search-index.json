@@ -1,0 +1,20 @@
+{
+  "pages": [
+    {
+      "url": "/",
+      "title": "Home",
+      "description": "Zion Tech Group - Homepage"
+    },
+    {
+      "url": "/about",
+      "title": "About",
+      "description": "About Zion Tech Group"
+    },
+    {
+      "url": "/contact",
+      "title": "Contact",
+      "description": "Contact Zion Tech Group"
+    }
+  ],
+  "generatedAt": "2025-09-07T08:40:22.346Z"
+}

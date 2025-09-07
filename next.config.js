@@ -6,18 +6,16 @@ const withBundleAnalyzer = bundleAnalyzer({
 
 const nextConfig = {
   reactStrictMode: true,
-  eslint: {
-    ignoreDuringBuilds: true
+  compress: true,
+  poweredByHeader: false,
+  eslint: { 
+    ignoreDuringBuilds: true 
   },
   typescript: {
     ignoreBuildErrors: true
   },
-  pageExtensions: ['tsx', 'ts', 'jsx', 'js'],
-  trailingSlash: true,
-  
-  // Disable linting during build
-  eslint: {
-    ignoreDuringBuilds: true,
+  experimental: {
+    forceSwcTransforms: false
   },
   
   // Disable type checking during build
