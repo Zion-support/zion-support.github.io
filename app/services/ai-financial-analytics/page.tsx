@@ -1,6 +1,6 @@
-<<<<<<< HEAD
-import React from 'react'
-import { Metadata } from 'next'
+import React from 'react';
+import Link from 'next/link';
+import { ArrowRightIcon } from '@heroicons/react/24/outline';
 
 export const metadata: Metadata = {
   title: 'Ai Financial Analytics | Zion Tech Group',

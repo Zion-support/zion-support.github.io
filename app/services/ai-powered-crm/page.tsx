@@ -1,50 +1,49 @@
-import React from 'react'
-import { Metadata } from 'next'
+import React from 'react';
+import Link from 'next/link';
+import { ArrowRightIcon } from '@heroicons/react/24/outline';
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-export const metadata: Metadata = {
-<<<<<<< HEAD
-  title: 'Ai Powered Crm | Zion Tech Group',
-  description: 'Professional ai powered crm services for your business needs.',
-  keywords: 'ai powered crm, services, business, technology'
-}
+export const metadata = {
+  title: 'AI-Powered CRM Platform | Zion Tech Group',
+  description: 'Revolutionary CRM with AI-powered lead scoring, automated follow-ups, predictive analytics, and intelligent sales insights. Boost conversion rates by 40% with our smart CRM solution.',
+  keywords: 'AI CRM, customer relationship management, lead scoring, sales automation, predictive analytics, sales intelligence'
+};
 
 export default function ServicePage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <div className="container mx-auto px-4 py-16">
         <div className="text-center mb-16">
-          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-            Ai Powered Crm
+          <h1 className="text-5xl font-bold text-gray-900 mb-6">
+            AI-Powered CRM Platform
           </h1>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Professional ai powered crm services for your business needs.
+          <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
+            Transform your sales process with our intelligent CRM that uses AI to score leads, 
+            automate follow-ups, and provide predictive insights to boost your conversion rates.
           </p>
         </div>
-
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-          <div className="bg-gray-800 rounded-lg p-6">
-            <div className="text-4xl mb-4">🚀</div>
-            <h3 className="text-xl font-bold text-white mb-4">Fast & Reliable</h3>
-            <p className="text-gray-300">
-              High-performance solutions that deliver results quickly and consistently.
+        
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="bg-white rounded-lg p-6 shadow-lg">
+            <h3 className="text-xl font-bold text-gray-900 mb-4">AI Lead Scoring</h3>
+            <p className="text-gray-600">
+              Automatically score and prioritize leads using machine learning algorithms 
+              that analyze customer behavior and engagement patterns.
             </p>
           </div>
           
-          <div className="bg-gray-800 rounded-lg p-6">
-            <div className="text-4xl mb-4">🔧</div>
-            <h3 className="text-xl font-bold text-white mb-4">Easy Integration</h3>
-            <p className="text-gray-300">
-              Seamlessly integrate with your existing systems and workflows.
+          <div className="bg-white rounded-lg p-6 shadow-lg">
+            <h3 className="text-xl font-bold text-gray-900 mb-4">Automated Follow-ups</h3>
+            <p className="text-gray-600">
+              Never miss an opportunity with intelligent follow-up sequences that adapt 
+              to customer responses and engagement levels.
             </p>
           </div>
           
-          <div className="bg-gray-800 rounded-lg p-6">
-            <div className="text-4xl mb-4">📈</div>
-            <h3 className="text-xl font-bold text-white mb-4">Scalable Solutions</h3>
-            <p className="text-gray-300">
-              Grow with your business with our flexible and scalable platform.
+          <div className="bg-white rounded-lg p-6 shadow-lg">
+            <h3 className="text-xl font-bold text-gray-900 mb-4">Predictive Analytics</h3>
+            <p className="text-gray-600">
+              Get insights into sales trends, customer lifetime value, and churn risk 
+              with our advanced predictive analytics engine.
             </p>
           </div>
         </div>

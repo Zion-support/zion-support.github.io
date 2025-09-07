@@ -1,6 +1,4 @@
 import React, { useEffect, useRef } from 'react';
-const ParticleBackground: React.FC = () => {,
-  const canvasRef = useRef<HTMLCanvasElement>(null);
 
 interface ParticleBackgroundProps {
   particleCount?: number;

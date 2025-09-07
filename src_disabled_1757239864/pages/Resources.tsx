@@ -36,7 +36,11 @@ import {
   Bookmark,
   Share2
 } from 'lucide-react';
+<<<<<<< HEAD
 import SEO from '@/components/SEO';
+=======
+// import SEO from '@/components/SEO';
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9451
 
 export default function Resources() {
   const [activeCategory, setActiveCategory] = useState('all');
