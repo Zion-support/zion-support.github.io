@@ -1,5 +1,5 @@
-import type { NextApiRequest, NextApiResponse } from 'next',;
-const bwipjs = require('bwip-js'),
+import type { NextApiRequest, NextApiResponse } from 'next';
+const bwipjs = require('bwip-js')
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   const code = (req.query.code as string) || ''

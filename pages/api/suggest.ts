@@ -124,7 +124,7 @@ const SAMPLE_QUERIES = [;
 ];
 const SKILLS = [;
   'ReactNext.jsTypeScriptNodePythonAWSKubernetesDevOps', 'DockerTerraformOpenAILangChainRAGNLPPostgreSQLRust';
-],;
+];
 export default function handler(req, res) {
   try {
   const q = ((req.query.q as string) || '').toLowerCase();

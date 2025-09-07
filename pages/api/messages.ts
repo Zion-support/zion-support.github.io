@@ -259,7 +259,7 @@ import { rateLimit } from '../../utils/rateLimit';
 const FILE = 'conversations.json';
 export default function handler(req, res) {
   try {
-  if (!rateLimit(req, res)) return,;
+  if (!rateLimit(req, res)) return;
   if (req.method === 'GET') {
     const { conversationId, sender, text, attachments } = req.body || {};
     if (!conversationId || !sender || (!text && (!attachments || attachments.length === 0))) {;
@@ -279,7 +279,7 @@ export default function handler(req, res) {
   }
 }
 ;
-    const conversations = readJsonFile<Conversation[]>(FILE, []),;
+    const conversations = readJsonFile<Conversation[]>(FILE, []);
     const idx = conversations.findIndex((c) => c.id === String(conversationId));
     if (idx === -1) {;
       res.status(404).json({ error: 'Conversation not found' });
@@ -302,14 +302,14 @@ export default function handler(req, res) {
     const msg: Message = {;
       id: uuidv4();
       conversationId: String(conversationId);
-      sender: { type: sender.type, id: String(sender.id) },;
-      text: text ? String(text) : undefined,;
-      attachments: Array.isArray(attachments) ? attachments : undefined,;
-      createdAtIso: now,;
-      readBy: [{ participantId: String(sender.id), readAtIso: now }]},;
+      sender: { type: sender.type, id: String(sender.id) };
+      text: text ? String(text) : undefined;
+      attachments: Array.isArray(attachments) ? attachments : undefined;
+      createdAtIso: now;
+      readBy: [{ participantId: String(sender.id), readAtIso: now }]};
     conversations[idx].messages.push(msg);
     conversations[idx].updatedAtIso = now;
-    writeJsonFile<Conversation[]>(FILE, conversations),;
+    writeJsonFile<Conversation[]>(FILE, conversations);
     res.status(201).json({ message: msg });
     return;
   }
@@ -332,7 +332,7 @@ export default function handler(req, res) {
 ;
   if (req.method === 'GET') {
     const { conversationId } = req.query;
-    const conversations = readJsonFile<Conversation[]>(FILE, []),;
+    const conversations = readJsonFile<Conversation[]>(FILE, []);
     const conv = conversations.find((c) => c.id === String(conversationId));
     if (!conv) {;
       res.status(404).json({ error: 'Conversation not found' });

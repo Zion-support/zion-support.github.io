@@ -13,31 +13,31 @@ export default async function handler(_req: NextApiRequest, res: NextApiResponse
     // Mock changelog data
     const changelog = [
       {
-        version: '1.2.0',
-        date: '2024-01-20',
+        version: '1.2.0'
+        date: '2024-01-20'
         changes: [
-          'Added new dashboard features',
-          'Improved performance',
+          'Added new dashboard features'
+          'Improved performance'
           'Fixed security vulnerabilities'
-        ],
+        ]
         type: 'major'
-      },
+      }
       {
-        version: '1.1.5',
-        date: '2024-01-15',
+        version: '1.1.5'
+        date: '2024-01-15'
         changes: [
-          'Bug fixes',
+          'Bug fixes'
           'Minor UI improvements'
-        ],
+        ]
         type: 'patch'
-      },
+      }
       {
-        version: '1.1.0',
-        date: '2024-01-10',
+        version: '1.1.0'
+        date: '2024-01-10'
         changes: [
-          'New API endpoints',
+          'New API endpoints'
           'Enhanced user experience'
-        ],
+        ]
         type: 'minor'
       }
     ];
@@ -51,8 +51,8 @@ export default async function handler(_req: NextApiRequest, res: NextApiResponse
     filteredChangelog = filteredChangelog.slice(0, limitNum);
 
     res.status(200).json({
-      success: true,
-      changelog: filteredChangelog,
+      success: true
+      changelog: filteredChangelog
       total: changelog.length
     });
     return;

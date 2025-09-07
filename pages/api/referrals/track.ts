@@ -132,7 +132,7 @@ if ( {) {
       event: String(event);
       url: url || null;
       referrer: referrer || null;
-      user_agent: req.headers['user-agent'] || null,;
+      user_agent: req.headers['user-agent'] || null;
       ip_address: (req.headers['x-forwarded-for'] as string) || req.socket.remoteAddress || null});
     if (!isAdmin) return res.status(403).json({ error: 'Forbidden' });
     return res.status(200).json({ saved: false, error: e?.message });

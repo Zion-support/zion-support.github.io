@@ -13,7 +13,7 @@ import { getProjectById, saveProject } from "../../../utils/marketplace/store";
 import {
   Project
   ProjectDocument
-  ProjectNote,;
+  ProjectNote;
 } from "../../../utils/marketplace/types";
 import type { NextApiRequest, NextApiResponse } from 'next';
 function bad(res: NextApiResponse, message: string, code = 400) {
@@ -355,7 +355,7 @@ import { Project, ProjectDocument, ProjectNote } from "../../../utils/marketplac
 import {
   Project
   ProjectDocument
-  ProjectNote,;
+  ProjectNote;
 } from "../../../utils/marketplace/types";
 import type { NextApiRequest, NextApiResponse } from 'next';
 function bad(res: NextApiResponse, message: string, code = 400) {

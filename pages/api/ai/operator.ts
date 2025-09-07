@@ -1,5 +1,5 @@
-import type { NextApiRequest, NextApiResponse } from 'next',;
-import OpenAI from 'openai',;
+import type { NextApiRequest, NextApiResponse } from 'next';
+import OpenAI from 'openai';
 const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY })
 
 
@@ -9,8 +9,8 @@ function isRateLimited(ip: string): boolean {
   const now = Date.now()
   const bucket = ipToRequests[ip] || { timestamps: [] }
   // Drop old timestamps
-  bucket.timestamps = bucket.timestamps.filter(ts => now - ts < RATE_LIMIT_WINDOW_MS),
-  const limited = bucket.timestamps.length >= RATE_LIMIT_MAX_REQUESTS,
+  bucket.timestamps = bucket.timestamps.filter(ts => now - ts < RATE_LIMIT_WINDOW_MS)
+  const limited = bucket.timestamps.length >= RATE_LIMIT_MAX_REQUESTS
   if (!limited) {
     bucket.timestamps.push(now)
   }
@@ -44,8 +44,8 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     return res.status(405).json({ error: 'Method Not Allowed' })
   }
   // Auth via Bearer token
-  const authHeader = req.headers.authorization || '',
-  const token = authHeader.startsWith('Bearer ') ? authHeader.slice(7) : undefined,
+  const authHeader = req.headers.authorization || ''
+  const token = authHeader.startsWith('Bearer ') ? authHeader.slice(7) : undefined
   if (!token || token !== process.env.OPERATOR_API_TOKEN) {
     return res.status(401).json({ error: 'Unauthorized' })
   }
@@ -76,7 +76,7 @@ const sys = system |'You are a professional writing assistant. Write clear, conc
     const sys = system || 'You are a professional writing assistant. Write clear, concise, and helpful content. Format output as markdown.'
 
 
-    const sys = system || 'You are a professional writing assistant. Write clear, concise, and helpful content. Format output as markdown.',
+    const sys = system || 'You are a professional writing assistant. Write clear, concise, and helpful content. Format output as markdown.'
 
     const completion = await openai.chat.completions.create({
       model: 'gpt-4o-mini'
@@ -87,7 +87,7 @@ const sys = system |'You are a professional writing assistant. Write clear, conc
       ]
     })
 
-    const text = completion.choices?.[0]?.message?.content ?? '',
+    const text = completion.choices?.[0]?.message?.content ?? ''
     return res.status(200).json({ text })
   } catch (err: any) {
     console.error('Operator error', err)

@@ -1,338 +1,88 @@
-<<<<<<< HEAD
 export const metadata = {
-<<<<<<< HEAD
-<<<<<<< HEAD
-  title: 'Helpdesk Platform Development | Zion Tech Group',
-  description: 'Build comprehensive helpdesk platforms with ticket management, knowledge base, and customer support tools. Professional helpdesk solutions starting at $14k.',
-=======
-import Link from 'next/link';
-import { ArrowRightIcon } from '@heroicons/react/24/outline';
-
-export const metadata = {
-  title: 'Helpdesk Platform - Zion Tech Group',
-  description: 'Professional helpdesk platform solutions for your business needs.',
->>>>>>> 2bbbac51cb394a4b194a2ff75bed1e7dbe99ed55
+  title: 'Page | Zion Tech Group',
+  description: 'Professional page solutions for your business needs.',
+  keywords: 'page, services, business, technology',
 };
 
-export default function HelpdeskPlatformPage() {
+function FeatureCard({ title, details }: { title: string; details: string[] }) {
   return (
-<<<<<<< HEAD
-    <div className="max-w-6xl mx-auto px-4 py-8">
-      <section className="mb-12">
-        <h1 className="text-4xl font-bold text-gray-900 mb-6">Helpdesk Platform Development</h1>
-        <p className="text-xl text-gray-600 mb-8">
-          Build comprehensive helpdesk platforms with ticket management, knowledge base, live chat, and customer support automation.
-        </p>
-
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
-          <Item
-            title="Ticket Management"
-            details={[
-              'Multi-channel ticket creation',
-              'Priority & status tracking',
-              'Auto-assignment rules',
-              'SLA monitoring',
-              'Ticket routing',
-              'Escalation workflows',
-              'Bulk operations',
-            ]}
-          />
-          <Item
-            title="Knowledge Base"
-            details={[
-              'Article management',
-              'Search functionality',
-              'Category organization',
-              'Version control',
-              'Feedback system',
-              'Analytics tracking',
-              'Multi-language support',
-            ]}
-          />
-          <Item
-            title="Customer Support"
-            details={[
-              'Live chat integration',
-              'Customer portal',
-              'Self-service options',
-              'Satisfaction surveys',
-              'Agent performance tracking',
-              'Reporting & analytics',
-              'Mobile app support',
-            ]}
-          />
-        </div>
-
-        <div className="bg-gradient-to-r from-yellow-50 to-orange-50 border border-yellow-200 rounded-lg p-6 mb-8">
-          <h2 className="text-2xl font-bold text-gray-900 mb-4">Helpdesk Platform Features</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <div>
-              <h3 className="font-semibold text-gray-900 mb-2">Multi-Channel Support</h3>
-              <p className="text-gray-600">Unify support across email, chat, phone, social media, and web forms in one centralized platform.</p>
-            </div>
-            <div>
-              <h3 className="font-semibold text-gray-900 mb-2">AI-Powered Automation</h3>
-              <p className="text-gray-600">Automate ticket routing, suggest solutions, and provide instant responses using AI technology.</p>
-            </div>
-            <div>
-              <h3 className="font-semibold text-gray-900 mb-2">Team Collaboration</h3>
-              <p className="text-gray-600">Enable internal notes, team assignments, and collaboration tools for efficient support delivery.</p>
-            </div>
-            <div>
-              <h3 className="font-semibold text-gray-900 mb-2">Custom Branding</h3>
-              <p className="text-gray-600">White-label the platform with your branding for a seamless customer experience.</p>
-=======
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50">
-      <div className="container mx-auto px-4 py-20">
-        <div className="text-center mb-16">
-          <h1 className="text-5xl font-bold text-gray-900 mb-6">
-            Helpdesk Platform
-          </h1>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Professional helpdesk platform solutions designed to meet your business requirements 
-            and drive growth. Our expert team delivers high-quality, scalable solutions.
-          </p>
-        </div>
-
-        <div className="max-w-6xl mx-auto">
-          {/* Features Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-            <div className="bg-white rounded-xl shadow-lg p-8 hover:shadow-xl transition-shadow">
-              <div className="w-16 h-16 bg-blue-100 rounded-lg flex items-center justify-center mb-6">
-                <span className="text-3xl">⚡</span>
-              </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-4">Fast Implementation</h3>
-              <p className="text-gray-600">
-                Quick deployment and setup to get your solution running in no time.
-              </p>
-            </div>
-
-            <div className="bg-white rounded-xl shadow-lg p-8 hover:shadow-xl transition-shadow">
-              <div className="w-16 h-16 bg-green-100 rounded-lg flex items-center justify-center mb-6">
-                <span className="text-3xl">🔒</span>
-              </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-4">Secure & Reliable</h3>
-              <p className="text-gray-600">
-                Enterprise-grade security and reliability for your peace of mind.
-              </p>
-            </div>
-
-            <div className="bg-white rounded-xl shadow-lg p-8 hover:shadow-xl transition-shadow">
-              <div className="w-16 h-16 bg-purple-100 rounded-lg flex items-center justify-center mb-6">
-                <span className="text-3xl">📈</span>
-              </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-4">Scalable Solutions</h3>
-              <p className="text-gray-600">
-                Built to grow with your business and adapt to changing needs.
-              </p>
-            </div>
-          </div>
-
-          {/* CTA Section */}
-          <div className="text-center bg-white rounded-xl shadow-lg p-12">
-            <h2 className="text-3xl font-bold text-gray-900 mb-6">
-              Ready to Get Started?
-            </h2>
-            <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
-              Contact us today to discuss your helpdesk platform requirements 
-              and get a custom solution tailored to your needs.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
-                href="/contact"
-                className="bg-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:bg-blue-700 transition-colors inline-flex items-center"
-              >
-                Get Started
-                <ArrowRightIcon className="h-5 w-5 ml-2" />
-              </Link>
-              <Link
-                href="/services"
-                className="border-2 border-gray-300 text-gray-700 px-8 py-4 rounded-lg font-semibold hover:border-blue-400 hover:text-blue-600 transition-colors"
-              >
-                View All Services
-              </Link>
->>>>>>> 2bbbac51cb394a4b194a2ff75bed1e7dbe99ed55
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <Pricing />
-    </div>
-  );
-}
-
-function Item({ title, details }: { title: string; details: string[] }) {
-  return (
-    <div className="border border-gray-200 rounded-xl p-6 bg-white">
-      <h3 className="text-lg font-semibold text-gray-900 mb-4">{title}</h3>
-      <ul className="space-y-2">
+    <div className="border border-gray-200 rounded-xl p-6 bg-white shadow-sm hover:shadow-md transition-shadow">
+      <h3 className="text-xl font-bold text-gray-900 mb-4">{title}</h3>
+      <ul className="space-y-2 text-gray-600">
         {details.map((detail, index) => (
-          <li key={index} className="flex items-start">
-            <span className="text-yellow-500 mr-2 mt-1">•</span>
-            <span className="text-gray-600">{detail}</span>
+          <li key={index} className="flex items-center">
+            <span className="text-orange-500 mr-2">•</span> {detail}
           </li>
         ))}
       </ul>
     </div>
   );
 }
-
-function Pricing() {
-  return (
-    <section>
-      <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">Helpdesk Platform Pricing</h2>
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-        <Plan
-          name="Basic Helpdesk"
-          price="$14k–$28k"
-          duration="6–10 weeks"
-          features={[
-            'Basic ticket management',
-            'Email integration',
-            'Simple knowledge base',
-            'Agent dashboard',
-            'Basic reporting',
-            'Mobile responsive',
-            'Standard support',
-          ]}
-        />
-        <Plan
-          name="Professional Helpdesk"
-          price="$28k–$55k"
-          duration="10–16 weeks"
-          features={[
-            'Everything in Basic',
-            'Live chat integration',
-            'Advanced automation',
-            'Customer portal',
-            'Advanced analytics',
-            'API integrations',
-            'Priority support',
-          ]}
-        />
-        <Plan
-          name="Enterprise Helpdesk"
-          price="$55k+"
-          duration="14–22 weeks"
-          features={[
-            'Everything in Professional',
-            'Custom development',
-            'Advanced security',
-            'Multi-tenant architecture',
-            'Dedicated support',
-            'SLA guarantees',
-            'White-label options',
-          ]}
-        />
-      </div>
-
-      <div className="mt-12 text-center">
-        <h3 className="text-2xl font-bold text-gray-900 mb-4">Ready to Build Your Helpdesk?</h3>
-        <p className="text-gray-600 mb-6 max-w-2xl mx-auto">
-          Let&apos;s create a powerful helpdesk platform that streamlines your customer support and improves satisfaction.
-        </p>
-        <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <a
-            href="tel:+13024640950"
-            className="bg-yellow-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-yellow-700 transition-colors"
-          >
-            Call +1 302 464 0950
-          </a>
-          <a
-            href="mailto:kleber@ziontechgroup.com"
-            className="border-2 border-yellow-600 text-yellow-600 px-8 py-3 rounded-lg font-semibold hover:bg-yellow-600 hover:text-white transition-colors"
-          >
-            Email Us
-          </a>
-        </div>
-      </div>
-    </section>
-  );
-}
-
-function Plan({ name, price, duration, features }: {
-  name: string;
-  price: string;
-  duration: string;
-  features: string[];
-}) {
-  return (
-    <div className="border border-gray-200 rounded-xl p-6 bg-white hover:shadow-lg transition-shadow">
-      <h4 className="text-xl font-bold text-gray-900 mb-2">{name}</h4>
-      <div className="text-3xl font-bold text-yellow-600 mb-1">{price}</div>
-      <div className="text-gray-500 mb-6">{duration}</div>
-      <ul className="space-y-3">
-        {features.map((feature, index) => (
-          <li key={index} className="flex items-start">
-            <span className="text-green-500 mr-2 mt-1">✓</span>
-            <span className="text-gray-600">{feature}</span>
-          </li>
-        ))}
-      </ul>
-      <a
-        href="mailto:kleber@ziontechgroup.com?subject=Helpdesk Platform Development Inquiry"
-        className="block w-full mt-6 bg-yellow-600 text-white text-center py-3 rounded-lg font-semibold hover:bg-yellow-700 transition-colors"
-      >
-        Get Started
-      </a>
-=======
-=======
-
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
-  title: 'Helpdesk Platform | Zion Tech Group',
-  description:
-    'Professional helpdesk platform services for your business needs.',
-  keywords: 'helpdesk-platform, services, business, technology',
-};
 
 export default function ServicePage() {
   return (
-    <div className='min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900'>
-      <div className='container mx-auto px-4 py-16'>
-        <div className='text-center mb-16'>
-          <h1 className='text-4xl md:text-6xl font-bold text-white mb-6'>
-            Helpdesk Platform
-          </h1>
-          <p className='text-xl text-gray-300 mb-8 max-w-3xl mx-auto'>
-            Professional helpdesk platform services for your business needs.
-          </p>
-        </div>
+    <div className="max-w-6xl mx-auto px-4 py-8">
+      <div className="text-center mb-12">
+        <h1 className="text-5xl font-bold text-gray-900 mb-6">Page</h1>
+        <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          Professional page solutions for your business needs.
+        </p>
+      </div>
 
-        <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
-          <div className='bg-gray-800 rounded-lg p-6'>
-            <h3 className='text-xl font-bold text-white mb-4'>
-              Expert Solutions
-            </h3>
-            <p className='text-gray-300'>
-              Tailored helpdesk platform solutions designed for your specific
-              business requirements.
-            </p>
-          </div>
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+        <FeatureCard
+          title="Professional Solutions"
+          details={[
+            'Expert implementation',
+            'Custom development',
+            'Quality assurance',
+            'Ongoing support',
+            'Scalable architecture',
+          ]}
+        />
+        <FeatureCard
+          title="Advanced Technology"
+          details={[
+            'Cutting-edge tools',
+            'Modern frameworks',
+            'Best practices',
+            'Performance optimization',
+            'Security compliance',
+          ]}
+        />
+        <FeatureCard
+          title="Business Value"
+          details={[
+            'ROI optimization',
+            'Process improvement',
+            'Cost reduction',
+            'Efficiency gains',
+            'Competitive advantage',
+          ]}
+        />
+      </div>
 
-          <div className='bg-gray-800 rounded-lg p-6'>
-            <h3 className='text-xl font-bold text-white mb-4'>
-              Advanced Technology
-            </h3>
-            <p className='text-gray-300'>
-              Cutting-edge technology and best practices to deliver exceptional
-              results.
-            </p>
-          </div>
-
-          <div className='bg-gray-800 rounded-lg p-6'>
-            <h3 className='text-xl font-bold text-white mb-4'>24/7 Support</h3>
-            <p className='text-gray-300'>
-              Round-the-clock support to ensure your helpdesk platform solutions
-              run smoothly.
-            </p>
-          </div>
+      <div className="bg-blue-50 rounded-xl p-8 text-center">
+        <h2 className="text-3xl font-bold text-gray-900 mb-4">Ready to Get Started?</h2>
+        <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
+          Transform your business with our professional page solutions.
+          Contact us today to discuss your requirements.
+        </p>
+        <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <a
+            href="/contact"
+            className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
+          >
+            Get Started
+          </a>
+          <a
+            href="/services"
+            className="border border-gray-300 text-gray-700 px-8 py-3 rounded-lg font-semibold hover:bg-gray-50 transition-colors"
+          >
+            View All Services
+          </a>
         </div>
       </div>
-<<<<<<< HEAD
->>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     </div>
   );
 }

@@ -1,347 +1,88 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-export const metadata = { title: 'Project Management Suite | Zion Tech Group' };
-
-export default function ProjectManagementSuitePage() {
-  return (
-    <div className="max-w-6xl mx-auto px-4 py-12">
-      <div className="text-center mb-16">
-        <h1 className="text-4xl font-bold text-gray-900 mb-6">
-          Project Management Suite
-        </h1>
-        <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-          All-in-one project management platform with AI-powered insights, team
-          collaboration, and advanced analytics to keep your projects on track
-          and profitable.
-        </p>
-      </div>
-
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
-        <FeatureCard
-          title="Project Planning & Tracking"
-          features={[
-            'Gantt charts & timeline management',
-            'Task dependencies & critical path analysis',
-            'Resource allocation & capacity planning',
-            'Milestone tracking & progress monitoring',
-            'Risk assessment & mitigation planning',
-            'Budget tracking & cost management',
-          ]}
-          icon="📋"
-        />
-        <FeatureCard
-          title="Team Collaboration"
-          features={[
-            'Real-time team communication',
-            'File sharing & document management',
-            'Comment threads & @mentions',
-            'Video conferencing integration',
-            'Team calendars & scheduling',
-            'Activity feeds & notifications',
-          ]}
-          icon="👥"
-        />
-        <FeatureCard
-          title="AI-Powered Insights"
-          features={[
-            'Predictive project completion times',
-            'Resource optimization recommendations',
-            'Risk prediction & early warnings',
-            'Performance analytics & reporting',
-            'Automated status updates',
-            'Smart task prioritization',
-          ]}
-          icon="🤖"
-        />
-      </div>
-
-      <div className="bg-gradient-to-r from-orange-50 to-red-50 border border-orange-200 rounded-xl p-8 mb-16">
-        <h2 className="text-3xl font-bold text-gray-900 mb-6 text-center">
-          Why Choose Our Project Management Suite?
-        </h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-          <div className="text-center">
-            <div className="text-4xl mb-4">⚡</div>
-            <h3 className="text-lg font-semibold text-gray-900 mb-2">
-              30% Faster Delivery
-            </h3>
-            <p className="text-gray-600">
-              AI-optimized workflows reduce project completion time
-            </p>
-          </div>
-          <div className="text-center">
-            <div className="text-4xl mb-4">💰</div>
-            <h3 className="text-lg font-semibold text-gray-900 mb-2">
-              25% Cost Savings
-            </h3>
-            <p className="text-gray-600">
-              Better resource allocation and risk management
-            </p>
-          </div>
-          <div className="text-center">
-            <div className="text-4xl mb-4">📊</div>
-            <h3 className="text-lg font-semibold text-gray-900 mb-2">
-              Real-time Analytics
-            </h3>
-            <p className="text-gray-600">
-              Comprehensive dashboards and reporting
-            </p>
-          </div>
-          <div className="text-center">
-            <div className="text-4xl mb-4">🔗</div>
-            <h3 className="text-lg font-semibold text-gray-900 mb-2">
-              Easy Integrations
-            </h3>
-            <p className="text-gray-600">
-              Connect with 100+ popular business tools
-=======
-=======
-
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 export const metadata = {
-  title: 'Project Management Suite | Zion Tech Group',
-  description:
-    'Professional project management suite services for your business needs.',
-  keywords: 'project-management-suite, services, business, technology',
+  title: 'Page | Zion Tech Group',
+  description: 'Professional page solutions for your business needs.',
+  keywords: 'page, services, business, technology',
 };
+
+function FeatureCard({ title, details }: { title: string; details: string[] }) {
+  return (
+    <div className="border border-gray-200 rounded-xl p-6 bg-white shadow-sm hover:shadow-md transition-shadow">
+      <h3 className="text-xl font-bold text-gray-900 mb-4">{title}</h3>
+      <ul className="space-y-2 text-gray-600">
+        {details.map((detail, index) => (
+          <li key={index} className="flex items-center">
+            <span className="text-orange-500 mr-2">•</span> {detail}
+          </li>
+        ))}
+      </ul>
+    </div>
+  );
+}
 
 export default function ServicePage() {
   return (
-    <div className='min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900'>
-      <div className='container mx-auto px-4 py-16'>
-        <div className='text-center mb-16'>
-          <h1 className='text-4xl md:text-6xl font-bold text-white mb-6'>
-            Project Management Suite
-          </h1>
-          <p className='text-xl text-gray-300 mb-8 max-w-3xl mx-auto'>
-            Professional project management suite services for your business
-            needs.
-          </p>
-        </div>
-
-        <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
-          <div className='bg-gray-800 rounded-lg p-6'>
-            <h3 className='text-xl font-bold text-white mb-4'>
-              Expert Solutions
-            </h3>
-            <p className='text-gray-300'>
-              Tailored project management suite solutions designed for your
-              specific business requirements.
-            </p>
-          </div>
-
-          <div className='bg-gray-800 rounded-lg p-6'>
-            <h3 className='text-xl font-bold text-white mb-4'>
-              Advanced Technology
-            </h3>
-            <p className='text-gray-300'>
-              Cutting-edge technology and best practices to deliver exceptional
-              results.
-            </p>
-          </div>
-<<<<<<< HEAD
-          
-          <div className="bg-gray-800 rounded-lg p-6">
-            <h3 className="text-xl font-bold text-white mb-4">24/7 Support</h3>
-            <p className="text-gray-300">
-              Round-the-clock support to ensure your project management suite solutions run smoothly.
-<<<<<<< HEAD
->>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
-=======
-
-          <div className='bg-gray-800 rounded-lg p-6'>
-            <h3 className='text-xl font-bold text-white mb-4'>24/7 Support</h3>
-            <p className='text-gray-300'>
-              Round-the-clock support to ensure your project management suite
-              solutions run smoothly.
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-6c29
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
-            </p>
-          </div>
-        </div>
+    <div className="max-w-6xl mx-auto px-4 py-8">
+      <div className="text-center mb-12">
+        <h1 className="text-5xl font-bold text-gray-900 mb-6">Page</h1>
+        <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          Professional page solutions for your business needs.
+        </p>
       </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-      <PricingSection />
-
-      <ContactSection />
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
-    </div>
-  );
-}
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-function FeatureCard({
-  title,
-  features,
-  icon,
-}: {
-  title: string;
-  features: string[];
-  icon: string;
-}) {
-  return (
-    <div className="bg-white border border-gray-200 rounded-xl p-6 hover:shadow-lg transition-shadow">
-      <div className="text-4xl mb-4">{icon}</div>
-      <h3 className="text-xl font-bold text-gray-900 mb-4">{title}</h3>
-      <ul className="space-y-2">
-        {features.map((feature, index) => (
-          <li key={index} className="flex items-start">
-            <span className="text-orange-500 mr-2 mt-1">•</span>
-            <span className="text-gray-600">{feature}</span>
-          </li>
-        ))}
-      </ul>
-    </div>
-  );
-}
-
-function PricingSection() {
-  return (
-    <div className="mb-16">
-      <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">
-        Pricing Plans
-      </h2>
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-        <PricingCard
-          name="Starter"
-          price="$29/mo"
-          duration="Up to 10 users"
-          features={[
-            'Basic project management',
-            'Task tracking & assignments',
-            'Team collaboration tools',
-            'Mobile app access',
-            'Basic reporting',
-            'Email support',
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+        <FeatureCard
+          title="Professional Solutions"
+          details={[
+            'Expert implementation',
+            'Custom development',
+            'Quality assurance',
+            'Ongoing support',
+            'Scalable architecture',
           ]}
-          popular={false}
         />
-        <PricingCard
-          name="Professional"
-          price="$79/mo"
-          duration="Up to 50 users"
-          features={[
-            'Everything in Starter',
-            'Advanced Gantt charts',
-            'Resource management',
-            'Time tracking & billing',
-            'Advanced analytics',
-            'API access & integrations',
-            'Priority support',
+        <FeatureCard
+          title="Advanced Technology"
+          details={[
+            'Cutting-edge tools',
+            'Modern frameworks',
+            'Best practices',
+            'Performance optimization',
+            'Security compliance',
           ]}
-          popular={true}
         />
-        <PricingCard
-          name="Enterprise"
-          price="$199/mo"
-          duration="Unlimited users"
-          features={[
-            'Everything in Professional',
-            'AI-powered insights',
-            'Custom workflows',
-            'Advanced security & compliance',
-            'Dedicated account manager',
-            'Custom integrations',
-            '24/7 phone support',
+        <FeatureCard
+          title="Business Value"
+          details={[
+            'ROI optimization',
+            'Process improvement',
+            'Cost reduction',
+            'Efficiency gains',
+            'Competitive advantage',
           ]}
-          popular={false}
         />
       </div>
-    </div>
-  );
-}
 
-function PricingCard({
-  name,
-  price,
-  duration,
-  features,
-  popular,
-}: {
-  name: string;
-  price: string;
-  duration: string;
-  features: string[];
-  popular: boolean;
-}) {
-  return (
-    <div
-      className={`relative bg-white border-2 rounded-xl p-8 ${popular ? 'border-orange-500 shadow-lg' : 'border-gray-200'}`}
-    >
-      {popular && (
-        <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-          <span className="bg-orange-500 text-white px-4 py-1 rounded-full text-sm font-semibold">
-            Most Popular
-          </span>
+      <div className="bg-blue-50 rounded-xl p-8 text-center">
+        <h2 className="text-3xl font-bold text-gray-900 mb-4">Ready to Get Started?</h2>
+        <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
+          Transform your business with our professional page solutions.
+          Contact us today to discuss your requirements.
+        </p>
+        <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <a
+            href="/contact"
+            className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
+          >
+            Get Started
+          </a>
+          <a
+            href="/services"
+            className="border border-gray-300 text-gray-700 px-8 py-3 rounded-lg font-semibold hover:bg-gray-50 transition-colors"
+          >
+            View All Services
+          </a>
         </div>
-      )}
-      <h3 className="text-2xl font-bold text-gray-900 mb-2">{name}</h3>
-      <div className="text-3xl font-bold text-orange-600 mb-1">{price}</div>
-      <div className="text-gray-500 mb-6">{duration}</div>
-      <ul className="space-y-3 mb-8">
-        {features.map((feature, index) => (
-          <li key={index} className="flex items-start">
-            <span className="text-green-500 mr-2 mt-1">✓</span>
-            <span className="text-gray-600">{feature}</span>
-          </li>
-        ))}
-      </ul>
-      <a
-        href="tel:+13024640950"
-        className={`w-full block text-center py-3 px-6 rounded-lg font-semibold transition-colors ${
-          popular
-            ? 'bg-orange-600 text-white hover:bg-orange-700'
-            : 'bg-gray-100 text-gray-900 hover:bg-gray-200'
-        }`}
-      >
-        Get Started
-      </a>
+      </div>
     </div>
   );
 }
-
-function ContactSection() {
-  return (
-    <div className="bg-gradient-to-r from-orange-50 to-red-50 border border-orange-200 rounded-xl p-8 text-center">
-      <h3 className="text-2xl font-bold text-gray-900 mb-4">
-        Ready to Streamline Your Project Management?
-      </h3>
-      <p className="text-gray-600 mb-6 max-w-2xl mx-auto">
-        Let&apos;s discuss your project management needs and create a solution that
-        boosts team productivity and project success.
-      </p>
-      <div className="flex flex-col sm:flex-row gap-4 justify-center">
-        <a
-          href="tel:+13024640950"
-          className="bg-orange-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-orange-700 transition-colors"
-        >
-          Call +1 302 464 0950
-        </a>
-        <a
-          href="mailto:kleber@ziontechgroup.com"
-          className="border-2 border-orange-600 text-orange-600 px-8 py-3 rounded-lg font-semibold hover:bg-orange-600 hover:text-white transition-colors"
-        >
-          Email Us
-        </a>
-      </div>
-      <div className="mt-6 text-sm text-gray-500">
-        <p>📍 364 E Main St STE 1008, Middletown DE 19709</p>
-        <p>📧 kleber@ziontechgroup.com | 📞 +1 302 464 0950</p>
-      </div>
-=======
->>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
-    </div>
-  );
-}
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-6c29
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
-=======
->>>>>>> 2bbbac51cb394a4b194a2ff75bed1e7dbe99ed55

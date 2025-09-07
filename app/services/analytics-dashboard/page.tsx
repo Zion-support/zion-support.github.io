@@ -1,338 +1,88 @@
-<<<<<<< HEAD
 export const metadata = {
-<<<<<<< HEAD
-<<<<<<< HEAD
-  title: 'Analytics Dashboard Platform | Zion Tech Group',
-  description: 'Build powerful analytics dashboards with real-time data visualization, custom metrics, and business intelligence. Professional analytics solutions starting at $16k.',
-=======
-import Link from 'next/link';
-import { ArrowRightIcon } from '@heroicons/react/24/outline';
-
-export const metadata = {
-  title: 'Analytics Dashboard - Zion Tech Group',
-  description: 'Professional analytics dashboard solutions for your business needs.',
->>>>>>> 2bbbac51cb394a4b194a2ff75bed1e7dbe99ed55
+  title: 'Page | Zion Tech Group',
+  description: 'Professional page solutions for your business needs.',
+  keywords: 'page, services, business, technology',
 };
 
-export default function AnalyticsDashboardPage() {
+function FeatureCard({ title, details }: { title: string; details: string[] }) {
   return (
-<<<<<<< HEAD
-    <div className="max-w-6xl mx-auto px-4 py-8">
-      <section className="mb-12">
-        <h1 className="text-4xl font-bold text-gray-900 mb-6">Analytics Dashboard Platform</h1>
-        <p className="text-xl text-gray-600 mb-8">
-          Build powerful analytics dashboards with real-time data visualization, custom metrics, and business intelligence tools.
-        </p>
-
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
-          <Item
-            title="Data Visualization"
-            details={[
-              'Interactive charts & graphs',
-              'Real-time data updates',
-              'Custom dashboard builder',
-              'Drag-and-drop interface',
-              'Multiple chart types',
-              'Responsive design',
-              'Export capabilities',
-            ]}
-          />
-          <Item
-            title="Data Integration"
-            details={[
-              'API connections',
-              'Database integration',
-              'CSV/Excel import',
-              'Real-time streaming',
-              'Data transformation',
-              'ETL pipelines',
-              'Data validation',
-            ]}
-          />
-          <Item
-            title="Business Intelligence"
-            details={[
-              'Custom KPI tracking',
-              'Automated alerts',
-              'Trend analysis',
-              'Predictive analytics',
-              'Cohort analysis',
-              'A/B testing insights',
-              'ROI calculations',
-            ]}
-          />
-        </div>
-
-        <div className="bg-gradient-to-r from-teal-50 to-cyan-50 border border-teal-200 rounded-lg p-6 mb-8">
-          <h2 className="text-2xl font-bold text-gray-900 mb-4">Analytics Platform Features</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <div>
-              <h3 className="font-semibold text-gray-900 mb-2">Real-Time Processing</h3>
-              <p className="text-gray-600">Process and visualize data in real-time with sub-second latency for instant business insights.</p>
-            </div>
-            <div>
-              <h3 className="font-semibold text-gray-900 mb-2">Custom Metrics</h3>
-              <p className="text-gray-600">Create custom KPIs and metrics tailored to your business needs with flexible calculation engines.</p>
-            </div>
-            <div>
-              <h3 className="font-semibold text-gray-900 mb-2">Multi-User Access</h3>
-              <p className="text-gray-600">Role-based access control with personalized dashboards for different user types and departments.</p>
-            </div>
-            <div>
-              <h3 className="font-semibold text-gray-900 mb-2">Mobile Analytics</h3>
-              <p className="text-gray-600">Access your analytics anywhere with mobile-optimized dashboards and push notifications for alerts.</p>
-=======
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50">
-      <div className="container mx-auto px-4 py-20">
-        <div className="text-center mb-16">
-          <h1 className="text-5xl font-bold text-gray-900 mb-6">
-            Analytics Dashboard
-          </h1>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Professional analytics dashboard solutions designed to meet your business requirements 
-            and drive growth. Our expert team delivers high-quality, scalable solutions.
-          </p>
-        </div>
-
-        <div className="max-w-6xl mx-auto">
-          {/* Features Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-            <div className="bg-white rounded-xl shadow-lg p-8 hover:shadow-xl transition-shadow">
-              <div className="w-16 h-16 bg-blue-100 rounded-lg flex items-center justify-center mb-6">
-                <span className="text-3xl">⚡</span>
-              </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-4">Fast Implementation</h3>
-              <p className="text-gray-600">
-                Quick deployment and setup to get your solution running in no time.
-              </p>
-            </div>
-
-            <div className="bg-white rounded-xl shadow-lg p-8 hover:shadow-xl transition-shadow">
-              <div className="w-16 h-16 bg-green-100 rounded-lg flex items-center justify-center mb-6">
-                <span className="text-3xl">🔒</span>
-              </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-4">Secure & Reliable</h3>
-              <p className="text-gray-600">
-                Enterprise-grade security and reliability for your peace of mind.
-              </p>
-            </div>
-
-            <div className="bg-white rounded-xl shadow-lg p-8 hover:shadow-xl transition-shadow">
-              <div className="w-16 h-16 bg-purple-100 rounded-lg flex items-center justify-center mb-6">
-                <span className="text-3xl">📈</span>
-              </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-4">Scalable Solutions</h3>
-              <p className="text-gray-600">
-                Built to grow with your business and adapt to changing needs.
-              </p>
-            </div>
-          </div>
-
-          {/* CTA Section */}
-          <div className="text-center bg-white rounded-xl shadow-lg p-12">
-            <h2 className="text-3xl font-bold text-gray-900 mb-6">
-              Ready to Get Started?
-            </h2>
-            <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
-              Contact us today to discuss your analytics dashboard requirements 
-              and get a custom solution tailored to your needs.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
-                href="/contact"
-                className="bg-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:bg-blue-700 transition-colors inline-flex items-center"
-              >
-                Get Started
-                <ArrowRightIcon className="h-5 w-5 ml-2" />
-              </Link>
-              <Link
-                href="/services"
-                className="border-2 border-gray-300 text-gray-700 px-8 py-4 rounded-lg font-semibold hover:border-blue-400 hover:text-blue-600 transition-colors"
-              >
-                View All Services
-              </Link>
->>>>>>> 2bbbac51cb394a4b194a2ff75bed1e7dbe99ed55
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <Pricing />
-    </div>
-  );
-}
-
-function Item({ title, details }: { title: string; details: string[] }) {
-  return (
-    <div className="border border-gray-200 rounded-xl p-6 bg-white">
-      <h3 className="text-lg font-semibold text-gray-900 mb-4">{title}</h3>
-      <ul className="space-y-2">
+    <div className="border border-gray-200 rounded-xl p-6 bg-white shadow-sm hover:shadow-md transition-shadow">
+      <h3 className="text-xl font-bold text-gray-900 mb-4">{title}</h3>
+      <ul className="space-y-2 text-gray-600">
         {details.map((detail, index) => (
-          <li key={index} className="flex items-start">
-            <span className="text-teal-500 mr-2 mt-1">•</span>
-            <span className="text-gray-600">{detail}</span>
+          <li key={index} className="flex items-center">
+            <span className="text-orange-500 mr-2">•</span> {detail}
           </li>
         ))}
       </ul>
     </div>
   );
 }
-
-function Pricing() {
-  return (
-    <section>
-      <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">Analytics Platform Pricing</h2>
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-        <Plan
-          name="Basic Analytics"
-          price="$16k–$32k"
-          duration="6–10 weeks"
-          features={[
-            'Basic dashboard builder',
-            '5 data sources',
-            'Standard chart types',
-            'Export functionality',
-            'User management',
-            'Mobile responsive',
-            'Basic support',
-          ]}
-        />
-        <Plan
-          name="Professional Analytics"
-          price="$32k–$65k"
-          duration="10–16 weeks"
-          features={[
-            'Everything in Basic',
-            'Advanced visualizations',
-            'Real-time data',
-            'Custom metrics',
-            'API integrations',
-            'White-label options',
-            'Priority support',
-          ]}
-        />
-        <Plan
-          name="Enterprise Analytics"
-          price="$65k+"
-          duration="14–22 weeks"
-          features={[
-            'Everything in Professional',
-            'Custom development',
-            'Advanced security',
-            'Multi-tenant architecture',
-            'Dedicated support',
-            'SLA guarantees',
-            'On-premise deployment',
-          ]}
-        />
-      </div>
-
-      <div className="mt-12 text-center">
-        <h3 className="text-2xl font-bold text-gray-900 mb-4">Ready to Build Your Analytics Platform?</h3>
-        <p className="text-gray-600 mb-6 max-w-2xl mx-auto">
-          Let&apos;s create a powerful analytics platform that transforms your data into actionable business insights.
-        </p>
-        <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <a
-            href="tel:+13024640950"
-            className="bg-teal-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-teal-700 transition-colors"
-          >
-            Call +1 302 464 0950
-          </a>
-          <a
-            href="mailto:kleber@ziontechgroup.com"
-            className="border-2 border-teal-600 text-teal-600 px-8 py-3 rounded-lg font-semibold hover:bg-teal-600 hover:text-white transition-colors"
-          >
-            Email Us
-          </a>
-        </div>
-      </div>
-    </section>
-  );
-}
-
-function Plan({ name, price, duration, features }: {
-  name: string;
-  price: string;
-  duration: string;
-  features: string[];
-}) {
-  return (
-    <div className="border border-gray-200 rounded-xl p-6 bg-white hover:shadow-lg transition-shadow">
-      <h4 className="text-xl font-bold text-gray-900 mb-2">{name}</h4>
-      <div className="text-3xl font-bold text-teal-600 mb-1">{price}</div>
-      <div className="text-gray-500 mb-6">{duration}</div>
-      <ul className="space-y-3">
-        {features.map((feature, index) => (
-          <li key={index} className="flex items-start">
-            <span className="text-green-500 mr-2 mt-1">✓</span>
-            <span className="text-gray-600">{feature}</span>
-          </li>
-        ))}
-      </ul>
-      <a
-        href="mailto:kleber@ziontechgroup.com?subject=Analytics Dashboard Platform Inquiry"
-        className="block w-full mt-6 bg-teal-600 text-white text-center py-3 rounded-lg font-semibold hover:bg-teal-700 transition-colors"
-      >
-        Get Started
-      </a>
-=======
-=======
-
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
-  title: 'Analytics Dashboard | Zion Tech Group',
-  description:
-    'Professional analytics dashboard services for your business needs.',
-  keywords: 'analytics-dashboard, services, business, technology',
-};
 
 export default function ServicePage() {
   return (
-    <div className='min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900'>
-      <div className='container mx-auto px-4 py-16'>
-        <div className='text-center mb-16'>
-          <h1 className='text-4xl md:text-6xl font-bold text-white mb-6'>
-            Analytics Dashboard
-          </h1>
-          <p className='text-xl text-gray-300 mb-8 max-w-3xl mx-auto'>
-            Professional analytics dashboard services for your business needs.
-          </p>
-        </div>
+    <div className="max-w-6xl mx-auto px-4 py-8">
+      <div className="text-center mb-12">
+        <h1 className="text-5xl font-bold text-gray-900 mb-6">Page</h1>
+        <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          Professional page solutions for your business needs.
+        </p>
+      </div>
 
-        <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
-          <div className='bg-gray-800 rounded-lg p-6'>
-            <h3 className='text-xl font-bold text-white mb-4'>
-              Expert Solutions
-            </h3>
-            <p className='text-gray-300'>
-              Tailored analytics dashboard solutions designed for your specific
-              business requirements.
-            </p>
-          </div>
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+        <FeatureCard
+          title="Professional Solutions"
+          details={[
+            'Expert implementation',
+            'Custom development',
+            'Quality assurance',
+            'Ongoing support',
+            'Scalable architecture',
+          ]}
+        />
+        <FeatureCard
+          title="Advanced Technology"
+          details={[
+            'Cutting-edge tools',
+            'Modern frameworks',
+            'Best practices',
+            'Performance optimization',
+            'Security compliance',
+          ]}
+        />
+        <FeatureCard
+          title="Business Value"
+          details={[
+            'ROI optimization',
+            'Process improvement',
+            'Cost reduction',
+            'Efficiency gains',
+            'Competitive advantage',
+          ]}
+        />
+      </div>
 
-          <div className='bg-gray-800 rounded-lg p-6'>
-            <h3 className='text-xl font-bold text-white mb-4'>
-              Advanced Technology
-            </h3>
-            <p className='text-gray-300'>
-              Cutting-edge technology and best practices to deliver exceptional
-              results.
-            </p>
-          </div>
-
-          <div className='bg-gray-800 rounded-lg p-6'>
-            <h3 className='text-xl font-bold text-white mb-4'>24/7 Support</h3>
-            <p className='text-gray-300'>
-              Round-the-clock support to ensure your analytics dashboard
-              solutions run smoothly.
-            </p>
-          </div>
+      <div className="bg-blue-50 rounded-xl p-8 text-center">
+        <h2 className="text-3xl font-bold text-gray-900 mb-4">Ready to Get Started?</h2>
+        <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
+          Transform your business with our professional page solutions.
+          Contact us today to discuss your requirements.
+        </p>
+        <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <a
+            href="/contact"
+            className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
+          >
+            Get Started
+          </a>
+          <a
+            href="/services"
+            className="border border-gray-300 text-gray-700 px-8 py-3 rounded-lg font-semibold hover:bg-gray-50 transition-colors"
+          >
+            View All Services
+          </a>
         </div>
       </div>
-<<<<<<< HEAD
->>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     </div>
   );
 }

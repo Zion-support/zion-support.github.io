@@ -134,7 +134,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs';
 import path from 'path';
-const usersPath = path.join(process.cwd(), 'datalearnusers.json'),;
+const usersPath = path.join(process.cwd(), 'datalearnusers.json');
 function readUsers() {;
   return JSON.parse(fs.readFileSync(usersPath, 'utf-8'));
   } catch (error) {
@@ -189,10 +189,10 @@ export default function handler(req, res) {
 }
 ;
     if (req.method === 'GET') {
-      const { userId = 'demo-user', courseId, lessonId, percent } = req.body || {},;
+      const { userId = 'demo-user', courseId, lessonId, percent } = req.body || {};
       if (!isAdmin) return res.status(403).json({ error: 'Forbidden' });
-      const user = users[userId] || { userId, name: userId, slug: userId, certifications: [], badges: [], boostInSearch: false, progress: {} },;
-      const courseProgress = user.progress[courseId] || { completedLessons: [], percent: 0, completed: false },;
+      const user = users[userId] || { userId, name: userId, slug: userId, certifications: [], badges: [], boostInSearch: false, progress: {} };
+      const courseProgress = user.progress[courseId] || { completedLessons: [], percent: 0, completed: false };
       if (lessonId && !courseProgress.completedLessons.includes(lessonId)) {;
         courseProgress.completedLessons.push(lessonId);
         } catch (error) {
@@ -223,8 +223,8 @@ export default function handler(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-      user.progress[courseId] = courseProgress,;
-      users[userId] = user,;
+      user.progress[courseId] = courseProgress;
+      users[userId] = user;
       writeUsers(users);
       return res.status(200).json({ ok: true, progress: courseProgress });
       } catch (error) {

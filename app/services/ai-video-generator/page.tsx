@@ -1,322 +1,88 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
-
 export const metadata = {
-  title: 'AI Video Generator | Zion Tech Group',
-  description: 'Create professional videos with AI. Generate marketing videos, explainer content, and social media videos automatically.',
+  title: 'Page | Zion Tech Group',
+  description: 'Professional page solutions for your business needs.',
+  keywords: 'page, services, business, technology',
 };
 
-export default function AIVideoGeneratorPage() {
+function FeatureCard({ title, details }: { title: string; details: string[] }) {
+  return (
+    <div className="border border-gray-200 rounded-xl p-6 bg-white shadow-sm hover:shadow-md transition-shadow">
+      <h3 className="text-xl font-bold text-gray-900 mb-4">{title}</h3>
+      <ul className="space-y-2 text-gray-600">
+        {details.map((detail, index) => (
+          <li key={index} className="flex items-center">
+            <span className="text-orange-500 mr-2">•</span> {detail}
+          </li>
+        ))}
+      </ul>
+    </div>
+  );
+}
+
+export default function ServicePage() {
   return (
     <div className="max-w-6xl mx-auto px-4 py-8">
       <div className="text-center mb-12">
-        <h1 className="text-5xl font-bold text-gray-900 mb-6">AI Video Generator</h1>
+        <h1 className="text-5xl font-bold text-gray-900 mb-6">Page</h1>
         <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-          Create professional videos with AI in minutes. Generate marketing videos, explainer content,
-          and social media videos automatically from text, images, or scripts.
+          Professional page solutions for your business needs.
         </p>
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
         <FeatureCard
-          title="Video Creation"
+          title="Professional Solutions"
           details={[
-            'Text-to-video generation',
-            'Image-to-video conversion',
-            'Script-based video creation',
-            'Multiple video formats',
-            'HD/4K quality output',
+            'Expert implementation',
+            'Custom development',
+            'Quality assurance',
+            'Ongoing support',
+            'Scalable architecture',
           ]}
         />
         <FeatureCard
-          title="AI Features"
+          title="Advanced Technology"
           details={[
-            'Voice synthesis (20+ languages)',
-            'Automatic scene generation',
-            'Smart transitions & effects',
-            'Background music generation',
-            'Subtitle generation',
+            'Cutting-edge tools',
+            'Modern frameworks',
+            'Best practices',
+            'Performance optimization',
+            'Security compliance',
           ]}
         />
         <FeatureCard
-          title="Templates & Customization"
+          title="Business Value"
           details={[
-            'Professional templates',
-            'Brand customization',
-            'Logo integration',
-            'Color scheme matching',
-            'Custom animations',
+            'ROI optimization',
+            'Process improvement',
+            'Cost reduction',
+            'Efficiency gains',
+            'Competitive advantage',
           ]}
         />
       </div>
 
-      <PricingSection />
-
-      <div className="mt-16 bg-gradient-to-r from-pink-50 to-rose-50 border border-pink-200 rounded-xl p-8 text-center">
-        <h3 className="text-2xl font-bold text-gray-900 mb-4">Ready to Create Amazing Videos?</h3>
-        <p className="text-gray-600 mb-6 max-w-2xl mx-auto">
-          Transform your ideas into engaging videos with our AI-powered platform.
-          Perfect for marketers, content creators, and businesses of all sizes.
+      <div className="bg-blue-50 rounded-xl p-8 text-center">
+        <h2 className="text-3xl font-bold text-gray-900 mb-4">Ready to Get Started?</h2>
+        <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
+          Transform your business with our professional page solutions.
+          Contact us today to discuss your requirements.
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <a
-            href="tel:+13024640950"
-            className="bg-pink-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-pink-700 transition-colors"
+            href="/contact"
+            className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
           >
-            Call +1 302 464 0950
+            Get Started
           </a>
           <a
-            href="mailto:kleber@ziontechgroup.com"
-            className="border-2 border-pink-600 text-pink-600 px-8 py-3 rounded-lg font-semibold hover:bg-pink-600 hover:text-white transition-colors"
+            href="/services"
+            className="border border-gray-300 text-gray-700 px-8 py-3 rounded-lg font-semibold hover:bg-gray-50 transition-colors"
           >
-            Email Us
+            View All Services
           </a>
-=======
-=======
-
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
-export const metadata = {
-  title: 'Ai Video Generator | Zion Tech Group',
-  description:
-    'Professional ai video generator services for your business needs.',
-  keywords: 'ai-video-generator, services, business, technology',
-=======
-import Link from 'next/link';
-import { ArrowRightIcon } from '@heroicons/react/24/outline';
-
-export const metadata = {
-  title: 'Ai Video Generator - Zion Tech Group',
-  description: 'Professional ai video generator solutions for your business needs.',
->>>>>>> 2bbbac51cb394a4b194a2ff75bed1e7dbe99ed55
-};
-
-export default function AiVideoGeneratorPage() {
-  return (
-<<<<<<< HEAD
-    <div className='min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900'>
-      <div className='container mx-auto px-4 py-16'>
-        <div className='text-center mb-16'>
-          <h1 className='text-4xl md:text-6xl font-bold text-white mb-6'>
-            Ai Video Generator
-          </h1>
-          <p className='text-xl text-gray-300 mb-8 max-w-3xl mx-auto'>
-            Professional ai video generator services for your business needs.
-          </p>
-        </div>
-
-        <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
-          <div className='bg-gray-800 rounded-lg p-6'>
-            <h3 className='text-xl font-bold text-white mb-4'>
-              Expert Solutions
-            </h3>
-            <p className='text-gray-300'>
-              Tailored ai video generator solutions designed for your specific
-              business requirements.
-            </p>
-          </div>
-
-          <div className='bg-gray-800 rounded-lg p-6'>
-            <h3 className='text-xl font-bold text-white mb-4'>
-              Advanced Technology
-            </h3>
-            <p className='text-gray-300'>
-              Cutting-edge technology and best practices to deliver exceptional
-              results.
-            </p>
-          </div>
-
-          <div className='bg-gray-800 rounded-lg p-6'>
-            <h3 className='text-xl font-bold text-white mb-4'>24/7 Support</h3>
-            <p className='text-gray-300'>
-              Round-the-clock support to ensure your ai video generator
-              solutions run smoothly.
-            </p>
-          </div>
-<<<<<<< HEAD
->>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
-=======
-
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
-=======
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50">
-      <div className="container mx-auto px-4 py-20">
-        <div className="text-center mb-16">
-          <h1 className="text-5xl font-bold text-gray-900 mb-6">
-            Ai Video Generator
-          </h1>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Professional ai video generator solutions designed to meet your business requirements 
-            and drive growth. Our expert team delivers high-quality, scalable solutions.
-          </p>
-        </div>
-
-        <div className="max-w-6xl mx-auto">
-          {/* Features Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-            <div className="bg-white rounded-xl shadow-lg p-8 hover:shadow-xl transition-shadow">
-              <div className="w-16 h-16 bg-blue-100 rounded-lg flex items-center justify-center mb-6">
-                <span className="text-3xl">⚡</span>
-              </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-4">Fast Implementation</h3>
-              <p className="text-gray-600">
-                Quick deployment and setup to get your solution running in no time.
-              </p>
-            </div>
-
-            <div className="bg-white rounded-xl shadow-lg p-8 hover:shadow-xl transition-shadow">
-              <div className="w-16 h-16 bg-green-100 rounded-lg flex items-center justify-center mb-6">
-                <span className="text-3xl">🔒</span>
-              </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-4">Secure & Reliable</h3>
-              <p className="text-gray-600">
-                Enterprise-grade security and reliability for your peace of mind.
-              </p>
-            </div>
-
-            <div className="bg-white rounded-xl shadow-lg p-8 hover:shadow-xl transition-shadow">
-              <div className="w-16 h-16 bg-purple-100 rounded-lg flex items-center justify-center mb-6">
-                <span className="text-3xl">📈</span>
-              </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-4">Scalable Solutions</h3>
-              <p className="text-gray-600">
-                Built to grow with your business and adapt to changing needs.
-              </p>
-            </div>
-          </div>
-
-          {/* CTA Section */}
-          <div className="text-center bg-white rounded-xl shadow-lg p-12">
-            <h2 className="text-3xl font-bold text-gray-900 mb-6">
-              Ready to Get Started?
-            </h2>
-            <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
-              Contact us today to discuss your ai video generator requirements 
-              and get a custom solution tailored to your needs.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
-                href="/contact"
-                className="bg-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:bg-blue-700 transition-colors inline-flex items-center"
-              >
-                Get Started
-                <ArrowRightIcon className="h-5 w-5 ml-2" />
-              </Link>
-              <Link
-                href="/services"
-                className="border-2 border-gray-300 text-gray-700 px-8 py-4 rounded-lg font-semibold hover:border-blue-400 hover:text-blue-600 transition-colors"
-              >
-                View All Services
-              </Link>
-            </div>
-          </div>
->>>>>>> 2bbbac51cb394a4b194a2ff75bed1e7dbe99ed55
         </div>
       </div>
     </div>
   );
-<<<<<<< HEAD
-<<<<<<< HEAD
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
-
-}
-
-<<<<<<< HEAD
-function PricingSection() {
-  return (
-    <div className="mb-12">
-      <h2 className="text-3xl font-bold text-center text-gray-900 mb-8">Pricing Plans</h2>
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-        <PricingPlan
-          name="Starter"
-          price="$39/mo"
-          features={[
-            '10 videos/month (up to 2 min each)',
-            'Basic templates',
-            'Standard quality (1080p)',
-            'Email support',
-            'Basic customization',
-          ]}
-        />
-        <PricingPlan
-          name="Professional"
-          price="$129/mo"
-          features={[
-            '50 videos/month (up to 5 min each)',
-            'Premium templates',
-            '4K quality output',
-            'Priority support',
-            'Advanced customization & branding',
-          ]}
-          featured={true}
-        />
-        <PricingPlan
-          name="Enterprise"
-          price="$399/mo"
-          features={[
-            'Unlimited videos',
-            'Custom template creation',
-            'White-label solution',
-            'Dedicated support',
-            'API access & integrations',
-          ]}
-        />
-      </div>
-    </div>
-  );
-}
-
-function PricingPlan({
-  name,
-  price,
-  features,
-  featured = false,
-}: {
-  name: string;
-  price: string;
-  features: string[];
-  featured?: boolean;
-}) {
-  return (
-    <div className={`border rounded-xl p-6 ${
-      featured
-        ? 'border-pink-500 bg-pink-50 shadow-lg'
-        : 'border-gray-200 bg-white shadow-sm'
-    }`}>
-      <h4 className="text-xl font-bold text-gray-900 mb-2">{name}</h4>
-      <div className="text-3xl font-bold text-gray-900 mb-4">{price}</div>
-      <ul className="space-y-2 text-gray-600 mb-6">
-        {features.map((feature, index) => (
-          <li key={index} className="flex items-center">
-            <span className="text-pink-500 mr-2">✓</span> {feature}
-          </li>
-        ))}
-      </ul>
-      <a
-        href="tel:+13024640950"
-        className={`w-full block text-center py-3 rounded-lg font-semibold transition-colors ${
-          featured
-            ? 'bg-pink-600 text-white hover:bg-pink-700'
-            : 'bg-gray-100 text-gray-900 hover:bg-gray-200'
-        }`}
-      >
-        Get Started
-      </a>
-    </div>
-  );
-}
-=======
->>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-6c29
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
-=======
-}
->>>>>>> 2bbbac51cb394a4b194a2ff75bed1e7dbe99ed55
