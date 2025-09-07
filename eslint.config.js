@@ -2,14 +2,22 @@ import js from '@eslint/js';
 import reactHooks from 'eslint-plugin-react-hooks';
 import reactRefresh from 'eslint-plugin-react-refresh';
 import tseslint from '@typescript-eslint/eslint-plugin';
+import tsparser from '@typescript-eslint/parser';
+import globals from 'globals';
 
 export default [
   js.configs.recommended,
   {
     files: ['**/*.{js,jsx,ts,tsx}'],
+    ignores: ['**/*.d.ts'],
     languageOptions: {
       ecmaVersion: 2022,
       sourceType: 'module',
+      globals: {
+        ...globals.browser,
+        ...globals.node,
+      },
+      parser: tsparser,
       parserOptions: {
         ecmaFeatures: {
           jsx: true,
@@ -31,10 +39,7 @@ export default [
         'warn',
         { argsIgnorePattern: '^_' }
       ],
-<<<<<<< HEAD
       // '@typescript-eslint/no-explicit-any': 'warn', // Disabled due to plugin config issue
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-e453
     },
   },
   {
