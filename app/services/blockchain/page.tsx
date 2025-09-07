@@ -1,5 +1,4 @@
 import { Metadata } from 'next';
-import Link from 'next/link';
 import React from 'react';
 
 export const metadata: Metadata = { 
@@ -375,7 +374,7 @@ function CTASection() {
     <div className="bg-gradient-to-r from-blue-600 to-indigo-600 p-8 rounded-2xl text-center">
       <h2 className="text-3xl font-bold text-white mb-4">Ready to Build on Blockchain?</h2>
       <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
-        Let's discuss your blockchain project and create a custom solution that drives innovation and value.
+        Let&apos;s discuss your blockchain project and create a custom solution that drives innovation and value.
       </p>
       <div className="flex flex-col sm:flex-row gap-4 justify-center">
         <a
