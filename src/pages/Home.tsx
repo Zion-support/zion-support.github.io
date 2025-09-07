@@ -15,8 +15,8 @@ import {
   Star,
   CheckCircle,
   Phone,
-  Mail,}
-  MapPin}
+  Mail,
+  MapPin
 } from \"lucide-react\";
 import Card from \"../components/Card\";
 import Header from \"../components/Header\";
