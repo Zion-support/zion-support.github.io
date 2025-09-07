@@ -7,36 +7,62 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint",
+    "lint": "node --max-old-space-size=4096 ./node_modules/.bin/eslint . --max-warnings 1000",
+    "lint:fix": "node --max-old-space-size=4096 ./node_modules/.bin/eslint . --fix --max-warnings 1000",
+    "lint:check": "eslint . --max-warnings 0",
+    "type-check": "node --max-old-space-size=8192 ./node_modules/.bin/tsc --noEmit --skipLibCheck",
+    "test": "jest --config jest.config.cjs",
+    "test:smoke": "jest --config jest.config.smoke.cjs --passWithNoTests",
+    "test:watch": "jest --watch --config jest.config.ts",
+    "test:coverage": "jest --coverage --config jest.config.ts",
+    "verify": "npm run type-check && npm run build && npm run test:smoke",
+    "check": "npm run lint && npm run type-check && npm run test:smoke",
     "seo:generate": "node scripts/generate-dynamic-sitemap.js"
   },
   "dependencies": {
     "@heroicons/react": "^2.2.0",
-    "@supabase/supabase-js": "^2.57.2",
+    "@supabase/supabase-js": "^2.57.0",
     "@tailwindcss/aspect-ratio": "^0.4.2",
     "@tailwindcss/forms": "^0.5.10",
     "@tailwindcss/typography": "^0.5.16",
+    "critters": "^0.0.23",
     "framer-motion": "^10.18.0",
     "lucide-react": "^0.536.0",
-    "next": "^14.0.0",
-    "react": "^18.0.0",
-    "react-dom": "^18.0.0",
-    "react-helmet-async": "^2.0.5",
+    "next": "^15.5.2",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
     "web-vitals": "^5.1.0"
   },
   "devDependencies": {
-    "@types/node": "^20.0.0",
-    "@types/react": "^18.0.0",
-    "@types/react-dom": "^18.0.0",
+    "@next/bundle-analyzer": "^15.5.2",
+    "@types/node": "^18.0.0",
+    "@types/react": "^18.3.24",
+    "@types/react-dom": "^18.3.7",
     "autoprefixer": "^10.4.16",
-    "eslint": "^8.0.0",
-    "eslint-config-next": "^14.0.0",
-    "postcss": "^8.4.32",
-    "tailwindcss": "^3.4.0",
+    "eslint": "^8.57.1",
+    "eslint-config-next": "^14.2.32",
+    "eslint-plugin-react-refresh": "^0.4.20",
+    "postcss": "^8.4.31",
+    "tailwindcss": "^3.3.5",
     "typescript": "^5.0.0"
   },
   "engines": {
     "node": ">=18.0.0",
     "npm": ">=8.0.0"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Zion-Holdings/zion.app.git"
+  },
+  "keywords": [
+    "nextjs",
+    "react",
+    "typescript",
+    "tailwindcss",
+    "ai",
+    "automation",
+    "zion-tech-group"
+  ],
+  "author": "Zion Tech Group",
+  "license": "MIT"
 }

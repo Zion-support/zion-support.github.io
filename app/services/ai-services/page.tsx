@@ -1,181 +1,83 @@
-import type { Metadata } from 'next';
-import Link from "next/link";
+import Link from 'next/link';
+import { ArrowRightIcon } from '@heroicons/react/24/outline';
 
-export const metadata: Metadata = {
-  title: 'AI Services - Comprehensive AI Solutions | Zion Tech Group',
-  description: 'Comprehensive AI services including custom LLM development, RAG systems, AI agents, computer vision, and MLOps solutions for enterprise applications.',
-  keywords: 'AI services, machine learning, LLM development, RAG systems, AI agents, computer vision, MLOps, AI consulting',
+export const metadata = {
+  title: 'Ai Services - Zion Tech Group',
+  description: 'Professional ai services solutions for your business needs.',
 };
 
-interface ServiceCardProps {
-  title: string;
-  description: string;
-  features: string[];
-  pricing: string;
-  link: string;
-  icon: string;
-}
-
-function ServiceCard({ title, description, features, pricing, link, icon }: ServiceCardProps) {
+export default function AiServicesPage() {
   return (
-    <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20 hover:shadow-lg transition-shadow">
-      <div className="text-4xl mb-4">{icon}</div>
-      <h3 className="text-xl font-semibold text-white mb-3">{title}</h3>
-      <p className="text-gray-300 mb-4">{description}</p>
-      <ul className="space-y-2 mb-6">
-        {features.map((feature, index) => (
-          <li key={index} className="text-sm text-gray-300 flex items-center">
-            <span className="w-2 h-2 bg-blue-400 rounded-full mr-3"></span>
-            {feature}
-          </li>
-        ))}
-      </ul>
-      <div className="text-2xl font-bold text-blue-400 mb-4">{pricing}</div>
-      <Link href={link} className="block w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors text-center">
-        Learn More
-      </Link>
-    </div>
-  );
-}
-
-export default function ServicePage() {
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      <div className="container mx-auto px-4 py-16">
+    <div className="min-h-screen bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50">
+      <div className="container mx-auto px-4 py-20">
         <div className="text-center mb-16">
-          <h1 className="text-5xl font-bold text-white mb-6">
-            AI Services
+          <h1 className="text-5xl font-bold text-gray-900 mb-6">
+            Ai Services
           </h1>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Comprehensive AI services including custom LLM development, RAG systems, 
-            AI agents, computer vision, and MLOps solutions for enterprise applications.
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            Professional ai services solutions designed to meet your business requirements 
+            and drive growth. Our expert team delivers high-quality, scalable solutions.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-          <ServiceCard
-            title="Custom LLM Development"
-            description="Build and deploy custom large language models tailored to your specific business needs and use cases."
-            features={[
-              'Custom model training',
-              'Fine-tuning services',
-              'API integration',
-              'Performance optimization',
-              'Ongoing maintenance'
-            ]}
-            pricing="Starting at $5,000/month"
-            link="/services/ai-chatbot"
-            icon="🧠"
-          />
-          <ServiceCard
-            title="RAG Systems"
-            description="Retrieval-Augmented Generation systems that combine knowledge retrieval with AI generation for accurate responses."
-            features={[
-              'Knowledge base integration',
-              'Vector database setup',
-              'Query optimization',
-              'Response accuracy tuning',
-              'Scalable architecture'
-            ]}
-            pricing="Starting at $3,000/month"
-            link="/services/ai-analytics-dashboard"
-            icon="🔍"
-          />
-          <ServiceCard
-            title="AI Agents"
-            description="Intelligent autonomous agents that can perform complex tasks, make decisions, and interact with users naturally."
-            features={[
-              'Multi-modal capabilities',
-              'Task automation',
-              'Decision making',
-              'User interaction',
-              'Learning and adaptation'
-            ]}
-            pricing="Starting at $4,000/month"
-            link="/services/ai-content-generation"
-            icon="🤖"
-          />
-          <ServiceCard
-            title="Computer Vision"
-            description="Advanced computer vision solutions for image recognition, object detection, and visual analysis applications."
-            features={[
-              'Image classification',
-              'Object detection',
-              'Facial recognition',
-              'OCR capabilities',
-              'Real-time processing'
-            ]}
-            pricing="Starting at $2,500/month"
-            link="/services/ai-chatbot"
-            icon="👁️"
-          />
-          <ServiceCard
-            title="MLOps Solutions"
-            description="Complete machine learning operations platform for model deployment, monitoring, and lifecycle management."
-            features={[
-              'Model deployment',
-              'Performance monitoring',
-              'A/B testing',
-              'Automated retraining',
-              'CI/CD pipelines'
-            ]}
-            pricing="Starting at $3,500/month"
-            link="/services/ai-analytics-dashboard"
-            icon="⚙️"
-          />
-          <ServiceCard
-            title="AI Consulting"
-            description="Strategic AI consulting to help you identify opportunities, plan implementations, and maximize AI ROI."
-            features={[
-              'AI strategy development',
-              'Technology assessment',
-              'Implementation planning',
-              'ROI analysis',
-              'Change management'
-            ]}
-            pricing="Starting at $500/hour"
-            link="/services/ai-content-generation"
-            icon="💡"
-          />
-        </div>
+        <div className="max-w-6xl mx-auto">
+          {/* Features Grid */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+            <div className="bg-white rounded-xl shadow-lg p-8 hover:shadow-xl transition-shadow">
+              <div className="w-16 h-16 bg-blue-100 rounded-lg flex items-center justify-center mb-6">
+                <span className="text-3xl">⚡</span>
+              </div>
+              <h3 className="text-xl font-semibold text-gray-900 mb-4">Fast Implementation</h3>
+              <p className="text-gray-600">
+                Quick deployment and setup to get your solution running in no time.
+              </p>
+            </div>
 
-        <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 mb-16">
-          <h2 className="text-3xl font-bold text-white text-center mb-8">Why Choose Our AI Services?</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            <div className="text-center">
-              <div className="text-4xl font-bold text-blue-400 mb-2">10+</div>
-              <p className="text-gray-300">Years Experience</p>
+            <div className="bg-white rounded-xl shadow-lg p-8 hover:shadow-xl transition-shadow">
+              <div className="w-16 h-16 bg-green-100 rounded-lg flex items-center justify-center mb-6">
+                <span className="text-3xl">🔒</span>
+              </div>
+              <h3 className="text-xl font-semibold text-gray-900 mb-4">Secure & Reliable</h3>
+              <p className="text-gray-600">
+                Enterprise-grade security and reliability for your peace of mind.
+              </p>
             </div>
-            <div className="text-center">
-              <div className="text-4xl font-bold text-blue-400 mb-2">500+</div>
-              <p className="text-gray-300">Projects Delivered</p>
-            </div>
-            <div className="text-center">
-              <div className="text-4xl font-bold text-blue-400 mb-2">99%</div>
-              <p className="text-gray-300">Client Satisfaction</p>
-            </div>
-            <div className="text-center">
-              <div className="text-4xl font-bold text-blue-400 mb-2">24/7</div>
-              <p className="text-gray-300">Support Available</p>
+
+            <div className="bg-white rounded-xl shadow-lg p-8 hover:shadow-xl transition-shadow">
+              <div className="w-16 h-16 bg-purple-100 rounded-lg flex items-center justify-center mb-6">
+                <span className="text-3xl">📈</span>
+              </div>
+              <h3 className="text-xl font-semibold text-gray-900 mb-4">Scalable Solutions</h3>
+              <p className="text-gray-600">
+                Built to grow with your business and adapt to changing needs.
+              </p>
             </div>
           </div>
-        </div>
 
-        <div className="text-center">
-          <h2 className="text-3xl font-bold text-white mb-8">Ready to Transform Your Business with AI?</h2>
-          <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-            Let our AI experts help you identify opportunities and implement solutions that drive real business value.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-4 px-8 rounded-lg transition-colors">
-              Schedule Consultation
-            </button>
-            <button className="border border-white text-white hover:bg-white hover:text-slate-900 font-semibold py-4 px-8 rounded-lg transition-colors">
-              View Portfolio
-            </button>
-          </div>
-          <div className="mt-8 text-gray-400">
-            <p>📧 kleber@ziontechgroup.com | 📞 +1 302 464 0950</p>
+          {/* CTA Section */}
+          <div className="text-center bg-white rounded-xl shadow-lg p-12">
+            <h2 className="text-3xl font-bold text-gray-900 mb-6">
+              Ready to Get Started?
+            </h2>
+            <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
+              Contact us today to discuss your ai services requirements 
+              and get a custom solution tailored to your needs.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link
+                href="/contact"
+                className="bg-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:bg-blue-700 transition-colors inline-flex items-center"
+              >
+                Get Started
+                <ArrowRightIcon className="h-5 w-5 ml-2" />
+              </Link>
+              <Link
+                href="/services"
+                className="border-2 border-gray-300 text-gray-700 px-8 py-4 rounded-lg font-semibold hover:border-blue-400 hover:text-blue-600 transition-colors"
+              >
+                View All Services
+              </Link>
+            </div>
           </div>
         </div>
       </div>

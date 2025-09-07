@@ -1,169 +1,83 @@
-import type { Metadata } from 'next';
+import Link from 'next/link';
+import { ArrowRightIcon } from '@heroicons/react/24/outline';
 
-export const metadata: Metadata = {
-  title: 'AI Marketing Automation Platform - Intelligent Marketing Solutions | Zion Tech Group',
-  description: 'AI-powered marketing automation with personalization, predictive analytics, and automated campaign optimization to maximize ROI and customer engagement.',
-  keywords: 'AI marketing automation, personalized marketing, campaign optimization, customer segmentation, marketing analytics, lead generation',
+export const metadata = {
+  title: 'Ai Marketing Automation - Zion Tech Group',
+  description: 'Professional ai marketing automation solutions for your business needs.',
 };
 
-function FeatureCard({ title, features, icon }: { title: string; features: string[]; icon: string }) {
+export default function AiMarketingAutomationPage() {
   return (
-    <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 hover:shadow-xl transition-shadow">
-      <div className="text-4xl mb-4">{icon}</div>
-      <h3 className="text-xl font-semibold text-white mb-4">{title}</h3>
-      <ul className="space-y-2">
-        {features.map((feature, index) => (
-          <li key={index} className="flex items-center text-gray-300">
-            <div className="w-2 h-2 bg-blue-500 rounded-full mr-3"></div>
-            {feature}
-          </li>
-        ))}
-      </ul>
-    </div>
-  );
-}
-
-export default function AIMarketingAutomationPage() {
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      <div className="container mx-auto px-4 py-16">
+    <div className="min-h-screen bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50">
+      <div className="container mx-auto px-4 py-20">
         <div className="text-center mb-16">
-          <h1 className="text-5xl font-bold text-white mb-6">
-            AI Marketing Automation Platform
+          <h1 className="text-5xl font-bold text-gray-900 mb-6">
+            Ai Marketing Automation
           </h1>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Intelligent marketing automation with AI-powered personalization,
-            predictive analytics, and automated campaign optimization to maximize
-            ROI and customer engagement.
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            Professional ai marketing automation solutions designed to meet your business requirements 
+            and drive growth. Our expert team delivers high-quality, scalable solutions.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
-          <FeatureCard
-            title="AI-Powered Campaigns"
-            features={[
-              'Automated email marketing sequences',
-              'Social media content generation',
-              'Personalized ad targeting',
-              'A/B testing optimization',
-              'Cross-channel campaign orchestration',
-              'Real-time campaign adjustments',
-            ]}
-            icon="📧"
-          />
-          <FeatureCard
-            title="Customer Segmentation"
-            features={[
-              'AI-driven customer profiling',
-              'Behavioral segmentation',
-              'Predictive customer scoring',
-              'Dynamic audience creation',
-              'Lifecycle stage identification',
-              'Churn prediction & prevention',
-            ]}
-            icon="🎯"
-          />
-          <FeatureCard
-            title="Analytics & Optimization"
-            features={[
-              'Real-time performance tracking',
-              'ROI analysis & attribution',
-              'Predictive analytics & forecasting',
-              'Automated optimization recommendations',
-              'Customer journey mapping',
-              'Competitive intelligence',
-            ]}
-            icon="📊"
-          />
-        </div>
+        <div className="max-w-6xl mx-auto">
+          {/* Features Grid */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+            <div className="bg-white rounded-xl shadow-lg p-8 hover:shadow-xl transition-shadow">
+              <div className="w-16 h-16 bg-blue-100 rounded-lg flex items-center justify-center mb-6">
+                <span className="text-3xl">⚡</span>
+              </div>
+              <h3 className="text-xl font-semibold text-gray-900 mb-4">Fast Implementation</h3>
+              <p className="text-gray-600">
+                Quick deployment and setup to get your solution running in no time.
+              </p>
+            </div>
 
-        <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 mb-16">
-          <h2 className="text-3xl font-bold text-white text-center mb-8">Key Benefits</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            <div className="text-center">
-              <div className="text-4xl font-bold text-blue-400 mb-2">300%</div>
-              <p className="text-gray-300">Higher ROI</p>
+            <div className="bg-white rounded-xl shadow-lg p-8 hover:shadow-xl transition-shadow">
+              <div className="w-16 h-16 bg-green-100 rounded-lg flex items-center justify-center mb-6">
+                <span className="text-3xl">🔒</span>
+              </div>
+              <h3 className="text-xl font-semibold text-gray-900 mb-4">Secure & Reliable</h3>
+              <p className="text-gray-600">
+                Enterprise-grade security and reliability for your peace of mind.
+              </p>
             </div>
-            <div className="text-center">
-              <div className="text-4xl font-bold text-blue-400 mb-2">85%</div>
-              <p className="text-gray-300">Time Savings</p>
-            </div>
-            <div className="text-center">
-              <div className="text-4xl font-bold text-blue-400 mb-2">250%</div>
-              <p className="text-gray-300">Lead Generation</p>
-            </div>
-            <div className="text-center">
-              <div className="text-4xl font-bold text-blue-400 mb-2">90%</div>
-              <p className="text-gray-300">Customer Satisfaction</p>
+
+            <div className="bg-white rounded-xl shadow-lg p-8 hover:shadow-xl transition-shadow">
+              <div className="w-16 h-16 bg-purple-100 rounded-lg flex items-center justify-center mb-6">
+                <span className="text-3xl">📈</span>
+              </div>
+              <h3 className="text-xl font-semibold text-gray-900 mb-4">Scalable Solutions</h3>
+              <p className="text-gray-600">
+                Built to grow with your business and adapt to changing needs.
+              </p>
             </div>
           </div>
-        </div>
 
-        <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 mb-16">
-          <h2 className="text-3xl font-bold text-white text-center mb-8">Pricing Plans</h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="bg-white/5 rounded-xl p-6 text-center">
-              <h3 className="text-2xl font-bold text-white mb-4">Starter</h3>
-              <div className="text-4xl font-bold text-blue-400 mb-6">$399<span className="text-lg text-gray-300">/month</span></div>
-              <ul className="space-y-3 text-gray-300 mb-8">
-                <li>Up to 10,000 contacts</li>
-                <li>Basic automation</li>
-                <li>Email marketing</li>
-                <li>Standard analytics</li>
-                <li>Email support</li>
-              </ul>
-              <button className="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors">
+          {/* CTA Section */}
+          <div className="text-center bg-white rounded-xl shadow-lg p-12">
+            <h2 className="text-3xl font-bold text-gray-900 mb-6">
+              Ready to Get Started?
+            </h2>
+            <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
+              Contact us today to discuss your ai marketing automation requirements 
+              and get a custom solution tailored to your needs.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link
+                href="/contact"
+                className="bg-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:bg-blue-700 transition-colors inline-flex items-center"
+              >
                 Get Started
-              </button>
+                <ArrowRightIcon className="h-5 w-5 ml-2" />
+              </Link>
+              <Link
+                href="/services"
+                className="border-2 border-gray-300 text-gray-700 px-8 py-4 rounded-lg font-semibold hover:border-blue-400 hover:text-blue-600 transition-colors"
+              >
+                View All Services
+              </Link>
             </div>
-            <div className="bg-white/5 rounded-xl p-6 text-center border-2 border-blue-500">
-              <h3 className="text-2xl font-bold text-white mb-4">Professional</h3>
-              <div className="text-4xl font-bold text-blue-400 mb-6">$799<span className="text-lg text-gray-300">/month</span></div>
-              <ul className="space-y-3 text-gray-300 mb-8">
-                <li>Up to 50,000 contacts</li>
-                <li>Advanced automation</li>
-                <li>Multi-channel campaigns</li>
-                <li>AI-powered personalization</li>
-                <li>Priority support</li>
-                <li>Custom integrations</li>
-              </ul>
-              <button className="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors">
-                Most Popular
-              </button>
-            </div>
-            <div className="bg-white/5 rounded-xl p-6 text-center">
-              <h3 className="text-2xl font-bold text-white mb-4">Enterprise</h3>
-              <div className="text-4xl font-bold text-blue-400 mb-6">$1,599<span className="text-lg text-gray-300">/month</span></div>
-              <ul className="space-y-3 text-gray-300 mb-8">
-                <li>Unlimited contacts</li>
-                <li>Full AI capabilities</li>
-                <li>Advanced analytics</li>
-                <li>Custom AI models</li>
-                <li>24/7 dedicated support</li>
-                <li>White-label solution</li>
-              </ul>
-              <button className="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors">
-                Contact Sales
-              </button>
-            </div>
-          </div>
-        </div>
-
-        <div className="text-center">
-          <h2 className="text-3xl font-bold text-white mb-8">Ready to Transform Your Marketing?</h2>
-          <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-            Join leading companies who trust our AI Marketing Automation Platform to drive growth and maximize ROI.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-4 px-8 rounded-lg transition-colors">
-              Start Free Trial
-            </button>
-            <button className="border border-white text-white hover:bg-white hover:text-slate-900 font-semibold py-4 px-8 rounded-lg transition-colors">
-              Schedule Demo
-            </button>
-          </div>
-          <div className="mt-8 text-gray-400">
-            <p>📧 kleber@ziontechgroup.com | 📞 +1 302 464 0950</p>
           </div>
         </div>
       </div>
