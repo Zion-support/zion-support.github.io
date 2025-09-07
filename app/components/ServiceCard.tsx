@@ -43,4 +43,5 @@ export default function ServiceCard({
         </div>
       </div>
     </Link>
-  )
+  );
+}

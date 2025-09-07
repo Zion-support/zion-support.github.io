@@ -4,4 +4,5 @@ export default function ServicePage() {
       <h1>Page</h1>
       <p>Learn about our page services.</p>
     </main>
-  )
+  );
+}

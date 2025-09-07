@@ -183,4 +183,5 @@ export default function AIDataAnalysisPage() {
 
       <Pricing />
     </div>
-  )
+  );
+}

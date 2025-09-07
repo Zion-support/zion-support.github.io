@@ -62,8 +62,8 @@ export default function BlogPage() {
       category: "Infrastructure",
       readTime: "6 min read",
       image: "/api/placeholder/600/400"
-
-  ]
+    }
+  ];
   const categories = [
     "All",
     "AI & Machine Learning",
@@ -210,4 +210,5 @@ export default function BlogPage() {
         </div>
       </section>
     </div>
-  )
+  );
+}

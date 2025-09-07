@@ -54,8 +54,9 @@ export default function ResearchPage() {
         { metric: 'Scalability', value: '100x', description: 'Auto-scaling capability' },
         { metric: 'Cost Reduction', value: '40%', description: 'Infrastructure cost savings' }
       ]
-
-  ]
+    }
+  ];
+  
   const publications = [
     {
       title: 'Advanced Neural Networks for Enterprise Applications',
@@ -231,4 +232,5 @@ export default function ResearchPage() {
         </div>
       </section>
     </div>
-  )
+  );
+}

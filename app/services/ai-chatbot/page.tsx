@@ -183,4 +183,5 @@ export default function AIChatbotPage() {
 
       <Pricing />
     </div>
-  )
+  );
+}

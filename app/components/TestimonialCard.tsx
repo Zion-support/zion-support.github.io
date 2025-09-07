@@ -53,4 +53,5 @@ export default function TestimonialCard({
         &ldquo;{content}&rdquo
       </blockquote>
     </div>
-  )
+  );
+}

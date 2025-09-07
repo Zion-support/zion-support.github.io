@@ -53,4 +53,5 @@ export default function ServicePage() {
         </div>
       </section>
     </div>
-  )
+  );
+}

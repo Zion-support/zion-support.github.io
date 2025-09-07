@@ -34,4 +34,5 @@ export default function CaseStudy({
         </ul>
       </div>
     </div>
-  )
+  );
+}
