@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 
 
 }};
@@ -18,7 +16,6 @@
     severity: 'low'})};
 ; // Unused imports (basic check); if (line && line.match(/^import.*from/) && !line && line.includes('//')) {; const importMatch = line && line.match(/import\s+(\w+)/); if (importMatch) {; const importName = importMatch[1]; if (importName ! = = 'React' && !content && content.includes(importName)) {; analysis && analysis.issues.push({; line: lineNum, type: 'unused-import', message: `Potentially unused import ${importName}`; severity: 'medium'})}}}});
 ; return analysis} catch (error) {; this && this.log(`Error analyzing file ${filePath}: ${error && error.message}`); return null}};
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 ; async walkDirectory(dir) {; const analyses = [];
 ; try {; const items = fs && fs.readdirSync(dir);
 ; for (const item of items) {; const fullPath = path && path.join(dir, item); const stat = fs && fs.statSync(fullPath);
@@ -26,8 +23,6 @@
 ; return analyses};
 ; generateReport(analyses) {; const totalFiles = analyses && analyses.length; const totalIssues = analyses && analyses.reduce((sum, analysis) = > sum + analysis && analysis.issues.length, 0);
 ; const issuesByType = {}; const issuesBySeverity = { low: 0, medium: 0, high: 0 };
-<<<<<<< HEAD
-=======
 ; analyses && analyses.forEach(analysis = > {; analysis && analysis.issues.forEach(issue = > {; // Count by type; issuesByType[issue && issue.type] = (issuesByType[issue && issue.type] || 0) + 1;
 ; // Count by severity; issuesBySeverity[issue && issue.severity]++})});
 ; const report = {; timestamp: new Date().toISOString(), summary: {
@@ -69,7 +64,6 @@
 const monitor = new CodeQualityMonitor();
 
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 };
 };
 ;
@@ -99,12 +93,9 @@ const monitor = new CodeQualityMonitor();
             message: 'Trailing spaces found';
             severity: 'low';
           });
-<<<<<<< HEAD
-=======
 
 }};
 monitor && monitor.run().catch(error = > {; process && process.exit(1)});
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
     };
   };
 ,
@@ -221,8 +212,6 @@ monitor && monitor.run().catch(error = > {; process && process.exit(1)});
           };
         };
       };
-<<<<<<< HEAD
-=======
     } catch (error) {,
       this.log(`Error walking directory ${dir}: ${error.message}`),
     };
@@ -245,7 +234,6 @@ monitor && monitor.run().catch(error = > {; process && process.exit(1)});
         // Count by severity,
         issuesBySeverity[issue.severity]++,
       }),
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
     }),
 ,
     const report = {,
@@ -254,8 +242,6 @@ monitor && monitor.run().catch(error = > {; process && process.exit(1)});
         totalFiles,
         totalIssues,
         issuesByType,
-<<<<<<< HEAD
-=======
         issuesBySeverity,
       },
       files: analyses.filter(analysis => analysis.issues.length > 0),
@@ -263,7 +249,6 @@ monitor && monitor.run().catch(error = > {; process && process.exit(1)});
     };
 ,
     return report,
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
   };
 ,
   generateRecommendations(issuesByType, totalIssues) {,
@@ -274,11 +259,8 @@ monitor && monitor.run().catch(error = > {; process && process.exit(1)});
         type: 'trailing-spaces',
         priority: 'low',
         message: 'Remove trailing spaces from files',
-<<<<<<< HEAD
-=======
         action: 'Run the lint-fixer to automatically remove trailing spaces',
       }),
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
     };
 ,
     if (issuesByType['console-statement'] > 0) {,
@@ -286,11 +268,8 @@ monitor && monitor.run().catch(error = > {; process && process.exit(1)});
         type: 'console-statement',
         priority: 'medium',
         message: 'Remove console statements from production code',
-<<<<<<< HEAD
-=======
         action: 'Replace console statements with proper logging or remove them',
       }),
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
     };
 ,
     if (issuesByType['unused-import'] > 0) {,
@@ -298,11 +277,8 @@ monitor && monitor.run().catch(error = > {; process && process.exit(1)});
         type: 'unused-import',
         priority: 'medium',
         message: 'Remove unused imports',
-<<<<<<< HEAD
-=======
         action: 'Clean up unused imports to reduce bundle size',
       }),
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
     };
 ,
     if (totalIssues > 100) {,
@@ -310,22 +286,17 @@ monitor && monitor.run().catch(error = > {; process && process.exit(1)});
         type: 'general',
         priority: 'high',
         message: 'High number of code quality issues detected',
-<<<<<<< HEAD
-=======
         action: 'Run comprehensive code cleanup and establish coding standards',
       }),
     };
 ,
     return recommendations,
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
   };
 ,
   async saveReport(report) {,
     try {,
       const reportDir = path.dirname(this.reportFile),
       if (!fs.existsSync(reportDir)) {,
-<<<<<<< HEAD
-=======
         fs.mkdirSync(reportDir, { recursive: true }),
       };
 ,
@@ -333,7 +304,6 @@ monitor && monitor.run().catch(error = > {; process && process.exit(1)});
       this.log(`Report saved to: ${this.reportFile}`),
     } catch (error) {,
       this.log(`Error saving report: ${error.message}`),
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
     };
   };
 ,
@@ -341,10 +311,7 @@ monitor && monitor.run().catch(error = > {; process && process.exit(1)});
     try {,
       const status = execSync('git status --porcelain', {,
         cwd: this.projectRoot,
-<<<<<<< HEAD
-=======
         encoding: 'utf8',
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
       }),
 ,
       if (status.trim()) {,
@@ -366,10 +333,7 @@ monitor && monitor.run().catch(error = > {; process && process.exit(1)});
       // Create logs directory if it doesn't exist,
       const logsDir = path.dirname(this.logFile),
       if (!fs.existsSync(logsDir)) {,
-<<<<<<< HEAD
-=======
         fs.mkdirSync(logsDir, { recursive: true }),
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
       };
 ,
       // Check git status,
@@ -389,12 +353,9 @@ monitor && monitor.run().catch(error = > {; process && process.exit(1)});
       this.log(`Duration: ${duration}ms`),
 ,
       if (report.summary.totalIssues > 0) {,
-<<<<<<< HEAD
-=======
         this.log('\n🚨 Issues by type: '),
         Object.entries(report.summary.issuesByType).forEach(([type, count]) => {,
           this.log(`  ${type}: ${count}`),
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
         }),
 ,
         this.log('\n💡 Recommendations: '),
@@ -405,8 +366,6 @@ monitor && monitor.run().catch(error = > {; process && process.exit(1)});
 ,
         // If there are many issues and git is clean, suggest running the lint fixer,
         if (report.summary.totalIssues > 50 && isClean) {,
-<<<<<<< HEAD
-=======
           this.log('\n🔧 Suggesting to run lint-fixer to auto-fix issues'),
         };
       } else {,
@@ -416,7 +375,6 @@ monitor && monitor.run().catch(error = > {; process && process.exit(1)});
     } catch (error) {,
       this.log(`❌ Error running code quality monitor: ${error.message}`),
       process.exit(1),
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
     };
   };
 };
@@ -424,11 +382,8 @@ monitor && monitor.run().catch(error = > {; process && process.exit(1)});
 // Run the code quality monitor,
 const monitor = new CodeQualityMonitor(),
 monitor.run().catch(error => {,
-<<<<<<< HEAD
-=======
   process.exit(1),
 }),
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 }}
 ; async analyze_file (file_path) { try { const content = fs.readFileSync (file_path, 'utf8'); const stats = fs.stat_sync (file_path);
 ; const analysis = { file: file_path, size: stats.size, lines: content.split ('\n').length,
@@ -846,8 +801,5 @@ monitor.run().catch(error => {,;
 });
 monitor.run().catch(error = > {; process.exit(1)});
 
-<<<<<<< HEAD
-=======
   process.exit(1)
 }),
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452

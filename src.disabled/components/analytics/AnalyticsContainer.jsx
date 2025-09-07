@@ -3,11 +3,8 @@
 :src && src.disabled/components/analytics/AnalyticsContainer && AnalyticsContainer.js.jsx
 
 " " export: function AnalyticsContainer({ children }) { const { isAuthenticated,isLoading,user } = useAuth()";";";"""
-<<<<<<< HEAD
-=======
 :src.disabled/components/analytics/AnalyticsContainer.js.jsx
 " " export: function AnalyticsContainer({ children }) { const { isAuthenticated,isLoading,user } = useAuth()";";";"""
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 :src && src.disabled/components/analytics/AnalyticsContainer && AnalyticsContainer.js.jsx
 
 :src.disabled/components/analytics/AnalyticsContainer.jsx
@@ -20,10 +17,7 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 " " export: function AnalyticsContainer({ children }) { const { isAuthenticated,isLoading,user } = useAuth()";";";"""
 :temp_exclude/src.disabled/components/analytics/AnalyticsContainer.jsx
 ' ' "export": function AnalyticsContainer({ children }) { const { isAuthenticated,isLoading,user } = useAuth()';";";""
-<<<<<<< HEAD
-=======
 ' ' "export": function AnalyticsContainer({ children }) { const { isAuthenticated,isLoading,user } = useAuth()';";";""
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 :src.disabled/components/analytics/AnalyticsContainer.js.jsx
 " " export: function AnalyticsContainer({ children }) { const { isAuthenticated,isLoading,user } = useAuth()";";";"""
 ' ' "export": function AnalyticsContainer({ children }) { const { isAuthenticated,isLoading,user } = useAuth()';";";""

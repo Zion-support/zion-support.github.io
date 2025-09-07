@@ -1,19 +1,4 @@
-<<<<<<< HEAD
-import React from 'react';
-
-function App() {
-  return (
-    <div className="min-h-screen bg-gray-50">
-      <h1 className="text-4xl font-bold text-center py-20">
-        Zion Tech Group
-      </h1>
-      <p className="text-center text-gray-600">
-        This is a Next.js application. Please navigate to the appropriate pages using the Next.js routing system.
-      </p>
-    </div>
-=======
 import React, { JSX } from 'react';
-import React from 'react';
 import Header from './src/components/Header';
 import Footer from './src/components/Footer';
 import ServiceCard from './src/components/ServiceCard';
@@ -26,7 +11,7 @@ import ChatAssistant from './src/components/ChatAssistant';
 import ScrollToTop from './src/components/ScrollToTop';
 import ParticleBackground from './src/components/ParticleBackground';
 
-export default function App() {
+export default function App(): JSX.Element {
   const services = [
     {
       title: 'AI Solutions',
@@ -42,45 +27,73 @@ export default function App() {
     },
     {
       title: 'Cloud Solutions',
-      description: 'Scalable cloud infrastructure and migration services. Modernize your infrastructure with our cloud expertise.',
+      description: 'Scalable cloud infrastructure and migration services. Move your business to the cloud with confidence.',
       icon: '☁️',
-      features: ['AWS/Azure/GCP', 'DevOps', 'Containerization', 'Auto-scaling'],
+      features: ['AWS Migration', 'Azure Solutions', 'Google Cloud', 'Hybrid Cloud'],
     },
     {
-      title: 'Cybersecurity',
-      description: 'Advanced security solutions to protect your business from evolving threats and ensure compliance.',
-      icon: '🔒',
-      features: ['Threat Detection', 'Compliance', 'Penetration Testing', 'Security Audits'],
-    },
-    {
-      title: 'Data Analytics',
-      description: 'Transform your data into actionable insights with our advanced analytics and business intelligence solutions.',
-      icon: '📊',
-      features: ['Data Visualization', 'Business Intelligence', 'Real-time Analytics', 'Custom Dashboards'],
-    },
-    {
-      title: 'Digital Transformation',
-      description: 'Complete digital transformation services to modernize your business processes and improve efficiency.',
-      icon: '🚀',
-      features: ['Process Automation', 'Workflow Optimization', 'Digital Strategy', 'Change Management'],
+      title: 'Blockchain',
+      description: 'Revolutionary blockchain technology solutions. Build secure, transparent, and decentralized applications.',
+      icon: '⛓️',
+      features: ['Smart Contracts', 'DeFi', 'NFTs', 'Web3 Development'],
     },
   ];
 
-export default function App(): JSX.Element {
-export default function App(): React.JSX.Element {
-export default function App(): React.JSX.Element {
-export default function App(): JSX.Element {
   return (
-    <main>
-      <h1>Hello App</h1>
-    </main>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <ParticleBackground />
+      <ScrollToTop />
+      <Header />
+      
+      <main className="relative z-10">
+        <section className="py-20 px-4 text-center">
+          <div className="max-w-4xl mx-auto">
+            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 animate-fade-in">
+              Welcome to <span className="text-cyan-400">Zion Tech Group</span>
+            </h1>
+            <p className="text-xl text-gray-300 mb-8 animate-slide-up">
+              Transforming businesses through innovative technology solutions
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center animate-bounce-in">
+              <button className="bg-cyan-500 hover:bg-cyan-600 text-white px-8 py-3 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105">
+                Get Started
+              </button>
+              <button className="border-2 border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-white px-8 py-3 rounded-lg font-semibold transition-all duration-300">
+                Learn More
+              </button>
+            </div>
+          </div>
+        </section>
 
-  return (
-    <main>
+        <BenefitsSection />
+        <HowItWorksSection />
+        
+        <section className="py-20 px-4">
+          <div className="max-w-6xl mx-auto">
+            <h2 className="text-4xl font-bold text-center text-white mb-12">
+              Our Services
+            </h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {services.map((service, index) => (
+                <ServiceCard
+                  key={index}
+                  title={service.title}
+                  description={service.description}
+                  icon={service.icon}
+                  features={service.features}
+                />
+              ))}
+            </div>
+          </div>
+        </section>
 
-    </main>
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+        <TestimonialCarousel />
+        <FaqSection />
+        <ContactSection />
+      </main>
+
+      <Footer />
+      <ChatAssistant />
+    </div>
   );
 }
-
-export default App;

@@ -10,10 +10,7 @@ import _React from 'react"  import '@testing-library/jest-dom import ImageOptimi
 ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de
 ursor/fix-syntax-push-and-merge-to-main-40de
-<<<<<<< HEAD
-=======
 
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 import _React from 'react"  import '@testing-library/jest-dom import ImageOptimizer from '../components/ImageOptimizer" describe('ImageOptimizer',() => {' test('renders without crashing',() => {' render(<ImageOptimizer / / />) expect(screen.getByTestId("imageoptimizer")).toBeInTheDocument();' }) test('displays correct content',() => {' render(<ImageOptimizer / / />) }) test('handles user interactions',() => {' render(<ImageOptimizer / / />) }) test('applies correct styling',() => {' render(<ImageOptimizer / / />) }) })
 import _React from 'react"  import '@testing-library/jest-dom import ImageOptimizer from '../components/ImageOptimizer" describe('ImageOptimizer',() => {' test('renders without crashing',() => {' render(<ImageOptimizer / / />) expect(screen.getByTestId("imageoptimizer")).toBeInTheDocument();' }) test('displays correct content',() => {' render(<ImageOptimizer / / />) }) test('handles user interactions',() => {' render(<ImageOptimizer / / />) }) test('applies correct styling',() => {' render(<ImageOptimizer / / />) }) })

@@ -2,19 +2,6 @@ import type { NextPage } from \'next\'; import Head from \'next/head\'; import L
 import React from 'react';
 
 interface IndexProps {
-<<<<<<< HEAD:backup-problematic-files/pages.broken/blog/index.tsx
-  className?: string;
-}
-
-const Index: React.FC<IndexProps> = ({ className }) => {
-  return (
-    <div className={className || ''}>
-      <h1>Index</h1>
-      <p>This component is under development.</p>
-    </div>
-  );
-}
-=======
   // Add props here as needed
   return (
     <div>;
@@ -23,4 +10,3 @@ const Index: React.FC<IndexProps> = ({ className }) => {
     </div>;
   );
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:pages.disabled_auto/blog/index.tsx

@@ -70,8 +70,6 @@ process.on ('SIGTERM', () => {
   dev_process.kill ('SIGTERM'),
   process.exit (0);
 }),
-<<<<<<< HEAD
-=======
 const { spawn } = require('child_process');
 ;
 console.log('🚀 Starting development server...');
@@ -102,4 +100,3 @@ process.on('SIGTERM', () => {;
   devProcess.kill('SIGTERM');
   process.exit(0);
 });
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452

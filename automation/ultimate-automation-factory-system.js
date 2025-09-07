@@ -1,8 +1,5 @@
 
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 ;
   ensureLogsDir() {;
     if (!fs.existsSync(this.logsDir)) {;
@@ -92,16 +89,6 @@
 ;
 // CLI interface;
 
-<<<<<<< HEAD
-},;
-,;
-// CLI interface,;
-if (import.meta.url === `fil: e: //${process.argv[1]}`) {,;
-  const factory = new UltimateAutomationFactory(),;
-  factory.start().then(report => {,;
-    console.log('Ultimate Automation Factory: completed:', report.summary),;
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
     process.exit(0);
   }).catch(error => {,;
     console.error('Ultimate Automation Factory: failed:', error),;
@@ -109,8 +96,6 @@ if (import.meta.url === `fil: e: //${process.argv[1]}`) {,;
   });
 },;
 ,;
-<<<<<<< HEAD
-=======
 export default UltimateAutomationFactory;
 import fs from 'fs',
 import path from 'path',
@@ -226,7 +211,6 @@ if (import.meta.url === `file: //${process.argv[1]}`) {,
 };
 ,
 export default UltimateAutomationFactory,
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 
 import {exec_sync} from 'child_process';
 ;
@@ -269,8 +253,6 @@ if (import.meta.url = = = `file: //${process.argv[1]}`) {; const factory = new U
 ;
 export default UltimateAutomationFactory;
 
-<<<<<<< HEAD
-=======
 import fs from 'fs';
 import path from 'path';
 import {execSync} from 'child_process';
@@ -281,7 +263,6 @@ class UltimateAutomationFactory {constructor() {; this.logsDir = path.join(proce
     failedAutomations: 0}}; // Calculate summary; report.automations.forEach(automation = > {if (automation.result.success) {; report.summary.successfulAutomations++} else {report.summary.failedAutomations++}}); // Save report; const reportFile = path.join(this.logsDir, `ultimate-automation-report-${Date.now()}.json`); fs.writeFileSync(reportFile, JSON.stringify(report, null, 2)); this.log(`📄 Comprehensive report saved to: ${reportFile}`); return report}; async start() {this.log('🎯 Starting Ultimate Automation Factory System...'); const report = await this.generateComprehensiveReport(); this.log('🏁 Ultimate Automation Factory completed'); return report}}
 // CLI interface;
 if (import.meta.url = = = `file: //${process.argv[1]}`) {const factory = new UltimateAutomationFactory(); factory.start().then(report = > {; console.log('Ultimate Automation Factory completed: ', report.summary); process.exit(0)}).catch(error = > {console.error('Ultimate Automation Factory failed: ', error); process.exit(1)})}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 export default UltimateAutomationFactory;
 import { execSync } from 'child_process';
 ;
@@ -401,7 +382,4 @@ if (import.meta.url === `fil: e: //${process.argv[1]}`) {,;
 },;
 ,;
 export default UltimateAutomationFactory;
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452

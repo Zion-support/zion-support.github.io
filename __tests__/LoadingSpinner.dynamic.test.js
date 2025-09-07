@@ -24,8 +24,6 @@ import React from 'react';
 import { render, screen } from '@testing-library/react';
 import '@testing-library/jest-dom';
 import LoadingSpinner from '../components/LoadingSpinner.dynamic';
-<<<<<<< HEAD
-=======
 
 
 import React from 'react';
@@ -34,7 +32,6 @@ import React from 'react';
 
 
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 import React from 'react'
 import { render, screen, fireEvent } from '@testing-library/react'
 import '@testing-library/jest-dom'

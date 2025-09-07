@@ -30,36 +30,9 @@ function fixMergeConflicts(filePath) {;
     let content = fs.readFileSync(filePath, 'utf8'),;
     // Remove merge conflict markers and keep HEAD version;
     const originalContent = content;
-<<<<<<< HEAD
-    // Remove merge conflict markers and keep HEAD version;
-    content = content.replace(/[\s\S]*?[\s\S]*?[a-f0-9]+/g, ''),;
-    content = content.replace(/[\s\S]*?[a-f0-9]+/g, ''),;
-
-
-    const originalContent = content;
-    // Remove merge conflict markers and keep HEAD version;
-    if (content !== originalContent) {;
-      fs.writeFileSync(filePath, content, 'utf8'),;
-      console.log(`✅ Fixed merge conflicts in: ${path.relative(process.cwd(), filePath)}`),;
-      return true;
-    }
-    return false;
-  } catch (error) {;
-    console.log(`❌ Error fixing ${filePath}: ${error.message}`),;
-    return false;
-  }
-}
-;
-// Function to get all files recursively;
-function getAllFiles(dir, extensions) {;
-  let files = [];
-  try {;
-    content = content.replace(/    
-=======
     
     // Remove merge conflict markers and keep HEAD version
     
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
     if (content !== originalContent) {
       fs.writeFileSync(filePath, content, 'utf8');
       console.log(`✅ Fixed merge conflicts in: ${path.relative(process.cwd(), filePath)}`);
@@ -100,17 +73,6 @@ async function main() {;
   for (const file of files) {;
     try {;
       const content = fs.readFileSync(file, 'utf8');
-<<<<<<< HEAD
-      if (content.includes('') |content.includes('
-      } else if (extensions.some(ext => item.endsWith(ext))) {;
-      }
-    } catch (error) {;
-      // Skip files that can't be read;
-    }
-  }
-}
-;
-=======
         if (fixMergeConflicts(file)) {;
           fixedCount++;        }
   let fixedCount = 0,;
@@ -121,17 +83,12 @@ async function main() {;
 }
 }
 }
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
   let fixedCount = 0;
   for (const file of files) {;
     try {;
       const content = fs.readFileSync(file, 'utf8'),;
         if (fixMergeConflicts(file)) {;
-<<<<<<< HEAD
-      if (content.includes('        if (fixMergeConflicts(file)) {
-=======
         if (fixMergeConflicts(file)) {
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
           fixedCount++;
         }
       }
@@ -143,11 +100,5 @@ async function main() {;
   console.log(`✅ Fixed merge conflicts in ${fixedCount} files`);
   console.log('🎉 Merge conflict resolution completed!');
 }
-<<<<<<< HEAD
-;
-main().catch(console.error),;
-main().catch(console.error),;
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 main().catch(console.error);

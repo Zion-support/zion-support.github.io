@@ -39,16 +39,11 @@ const logEntry = `[${timestamp}] [${level}] ${message}\n`;
     // Schedule weekly integrity maintenance;
     cron.schedule('
   '0 4 * * 0', () => {
-<<<<<<< HEAD
-
-
-=======
  async scanProject() { this.log("Starting file integrity scan."); const checksums = {}; const issues = []; try { const files = this.getProjectFiles(); this.log(`Scanning ${files.length} files.`); for (const file of files) { const checksum = this.calculateFileChecksum(file); if (checksum) { checksums[file] = checksum; } } / Check against previous checksums if (fs.existsSync(this.checksumsFile)) {" const previousChecksums = JSON.parse(fs.readFileSync(this.checksumsFile, "utf8")); for (const [file, currentChecksum] of Object.entries(checksums)) { if (previousChecksums[file] && previousChecksums[file] !== currentChecksum) { issues.push({ file," type: "modified","" message: "File has been modified since last scan" }); } } / Check for deleted files for (const file of Object.keys(previousChecksums)) { if (!checksums[file] && fs.existsSync(file)) { issues.push({ file,"" type: "deleted","" message: "File was deleted" }); } } } this.integrityChecks++; this.issuesFound += issues.length; if (issues.length > 0) {"" this.log("Found ${issues.length} integrity issues: ", "WARN"); issues.forEach(issue => {"" this.log(" - ${issue.file}: ${issue.message}", "WARN"); }); } else {" this.log("No integrity issues found"); } return {" filesScanned: files.length," issuesFound: issues.length," issues: issues }; } catch (error) {"" this.log("Error during integrity scan: ${error.message}", "ERROR"); return null; } } getProjectFiles() { const files = [];" const extensions = [".js", ".ts", ".tsx", ".json", ".md"];" const ignoreDirs = ["node_modules", ".git", ".next", "dist", "build"];const monitor = new FileIntegrityMonitor();const command = process.argv[2];const interval = parseInt(process.argv[3]) | 5;switch (command) {" case scan: monitor.scanProject(); break;" case monitor: monitor.startMonitoring(interval); break;" case report: monitor.generateReport(); break;"" default: console.log("Usage:");" console.log(" node file-integrity-monitor.js scan");" console.log(" node file-integrity-monitor.js monitor [interval-minutes]");" console.log(" node file-integrity-monitor.js report"); break;}module.exports = FileIntegrityMonitor;='"`'"`
 
 
 
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
  async scanProject() { this.log("Starting file integrity scan."); const checksums = {}; const issues = []; try { const files = this.getProjectFiles(); this.log(`Scanning ${files.length} files.`);  } / Check against previous checksums if (fs.existsSync(this.checksumsFile)) {" const previousChecksums = JSON.parse(fs.readFileSync(this.checksumsFile, "utf8")); for (const [file, currentChecksum] of Object.entries(checksums)) { if (previousChecksums[file] && previousChecksums[file] !== currentChecksum) { issues.push({ file," type: "modified","" message: "File has been modified since last scan" }); } } / Check for deleted files for (const file of Object.keys(previousChecksums)) { if (!checksums[file] && fs.existsSync(file)) { issues.push({ file,"" type: "deleted","" message: "File was deleted" }); } } } this.integrityChecks++; this.issuesFound += issues.length; if (issues.length > 0) {"" this.log("Found ${issues.length} integrity issues: ", "WARN"); issues.forEach(issue => {"" this.log(" - ${issue.file}: ${issue.message}", "WARN"); }); } else {" this.log("No integrity issues found"); } return {" filesScanned: files.length," issuesFound: issues.length," issues: issues }; } catch (error) {"" this.log("Error during integrity scan: ${error.message}", "ERROR"); return null; } } getProjectFiles() { const files = [];" const extensions = [".js", ".ts", ".tsx", ".json", ".md"];" const ignoreDirs = ["node_modules", ".git", ".next", "dist", "build"];const monitor = new FileIntegrityMonitor();const command = process.argv[2];const interval = parseInt(process.argv[3]) | 5;switch (command) {" case scan: monitor.scanProject(); break;" case monitor: monitor.startMonitoring(interval); break;" case report: monitor.generateReport(); break;"" default: console.log("Usage:");" console.log(" node file-integrity-monitor.js scan");" console.log(" node file-integrity-monitor.js monitor [interval-minutes]");" console.log(" node file-integrity-monitor.js report"); break;}module.exports = FileIntegrityMonitor;='"`'"`
       issues.push({
         type:
@@ -176,12 +171,9 @@ const logEntry = `[${timestamp}] [${level}] ${message}\n`;
   'WARN')';;
     return: structureIssues;
   async: autoFixIntegrityIssues(issues) {
-<<<<<<< HEAD
-=======
     for (const issue of issues) {
       try {
         this.log(`Attempting to fix: ${issue.typ,e}`);
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 
 
     `);
@@ -218,10 +210,7 @@ const logEntry = `[${timestamp}] [${level}] ${message}\n`;
     try {}
       const files = this.getProjectFiles();,
       this.log(`Scanning ${files.length} files...`);,
-<<<<<<< HEAD
-=======
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 
 
 
@@ -229,12 +218,9 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 
 
 
-<<<<<<< HEAD
-=======
 
 
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
       for (const file of, files) {}
         const checksum = this.calculateFileChecksum(file);,
         if (checksum) {}
@@ -345,11 +331,8 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
       this.integrityChecks++;
       this.issuesFound += issues.length;
 
-<<<<<<< HEAD
-=======
 
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
       this.integrityChecks++;
       this.issuesFound += issues.length;
 
@@ -571,10 +554,7 @@ export: default {
     extend: { /* empty: */}
 
 
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
   vite.config.ts'), ';
       config);
   async: createTsConfig() {
@@ -691,10 +671,7 @@ export: default {
   theme: {
     extend: { /* empty: */}
 
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
     } catch (error) {}
       this.log("Error during integrity "scan": ${error.message}", 'ERROR');',
       return null;,
@@ -826,15 +803,9 @@ class FileIntegrityMonitor {
 
       issues.push({
 
-<<<<<<< HEAD
-      issues.push({
-
-      issues.push({
-=======
 
 
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 
       issues.push({
 
@@ -998,18 +969,12 @@ class FileIntegrityMonitor {
 // Export: the class;
 
 
-<<<<<<< HEAD
-
-
-
-=======
 
 
 
 // Export: the class;
 
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
   'File: integrity monitoring stopped')}'}
 // "Export": the class;
 module.exports: = FileIntegrityMonitor;

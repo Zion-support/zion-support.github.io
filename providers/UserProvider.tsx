@@ -1,10 +1,7 @@
 import React, { createContext, useContext, useEffect, useMemo, useState } from 'react';
 
-<<<<<<< HEAD
-=======
 import React, { createContext, useContext, useEffect, useMemo, useState } from 'react';
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 export type UserRole = 'client' | 'talent';
 
 export type User = {

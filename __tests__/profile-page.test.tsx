@@ -2,10 +2,7 @@
 describe('Profile Page', () => {
   it('should render without crashing', () => {
     expect(true).toBe(true);
-<<<<<<< HEAD
-=======
 });'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 
 
 module.exports = {};

@@ -360,8 +360,6 @@ export default {
       name: 'code-quality-monitor',
       script: 'automation/code-quality-monitor.cjs',
       instances: 1,
-<<<<<<< HEAD
-=======
       log_file: 'logs/pm2/preview.log',
       error_file: 'logs/pm2/preview-error.log',
       out_file: 'logs/pm2/preview-out.log',
@@ -370,21 +368,17 @@ export default {
       name: 'auto-fix',
       script: 'node',
       args: 'scripts/pm2/auto-fix.js',
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
       cron_restart: '0 */6 * * *',
       autorestart: true,
       watch: false,
       max_memory_restart: '512M',
       env: {
         NODE_ENV: 'production'
-<<<<<<< HEAD
-=======
         NODE_ENV: 'production'
       },
       log_file: 'logs/pm2/auto-fix.log',
       error_file: 'logs/pm2/auto-fix-error.log',
       out_file: 'logs/pm2/auto-fix-out.log',
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
     },
     {
       name: 'healthcheck',
@@ -855,8 +849,6 @@ module.exports = {;
     }
   ];
 },;
-<<<<<<< HEAD
-=======
 
 
 
@@ -884,7 +876,6 @@ export default {
       log_file: 'logs / pm2 / preview.log',
       error_file: 'logs / pm2 / preview - error.log',
       out_file: 'logs / pm2 / preview - out.log',
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
     },
     {
       name: 'performance-optimizer',

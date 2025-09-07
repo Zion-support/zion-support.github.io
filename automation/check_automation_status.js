@@ -41,11 +41,6 @@ async function checkAutomationStatus() { const statusReport = {
 
 
 
-<<<<<<< HEAD
-
-
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
     // Check automation scripts}
     _console.log('📋 Checking automation scripts...');',
     const automationScripts = ['scripts/comprehensive-automation-suite.cjs',',

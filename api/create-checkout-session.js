@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 export default function handler(req,res) { res.status(200).json({ message: "Checkout session created" })}
   res.status(200).json({ message: 'Checkout session created' });
 }
@@ -59,10 +55,7 @@ async function handler(req, res) {
 }
 
 export default withErrorLogging(handler);
-<<<<<<< HEAD
-=======
 export default function handler(req,res) { res.status(200).json({ message: 'Checkout session created' })}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 
 export default function handler(req, res) {
   res.status(200).json({ message: "Checkout session created" })}
@@ -72,10 +65,7 @@ export default function handler(req,res) { res.status(200).json({ message: "Chec
 export default function handler(req, res) {
   res.status(200).json({ "message": 'Checkout session created' });
 }
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
       url: session.url
     })
   } catch (err) {,
@@ -88,7 +78,4 @@ export default withErrorLogging(handler),
 }
 
 export default withErrorLogging(handler);
-<<<<<<< HEAD
-=======
 export default function handler(req,res) { res.status(200).json({ message: 'Checkout session created' })}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452

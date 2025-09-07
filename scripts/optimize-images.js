@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-#!/usr/bin/env node const sharp = const fs = const path = async function optimizeImages() { const publicDir = path.join(process.cwd(),'public';); const imagesDir = path.join(publicDir,'images';); if () { ) { ) { } return} const files = fs.readdirSync(imagesDir;); const imageFiles = files.filter(file => /.(jpg|jpeg|png|webp)$/i.test(file) ;); ) .toFile(outputPath); } catch (error) { console.error(`Error optimizing ${file}:`,error.message)} } } optimizeImages();
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 #!/usr/bin/env node
 const sharp = // // require('sharp')
 const fs = // // require('fs')
@@ -12,21 +8,12 @@ async function optimizeImages() {
   if () {
     console.log('No images directory found')) {
     ) {
-<<<<<<< HEAD
-    console.log('No images directory found');
-  }
-    return;
-  }
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
     console.log('No images directory found')}
     return}
   const files = fs.readdirSync(imagesDir;);
   const imageFiles = files.filter(file => 
     /.(jpg|jpeg|png|webp)$/i.test(file)
   ;);
-<<<<<<< HEAD
-=======
   for (const file of imageFiles) {
     const inputPath = path.join(imagesDir, file;);
     const outputPath = path.join(imagesDir, file.replace(/\.(jpg|jpeg|png)$/i, '.webp'););
@@ -34,7 +21,6 @@ async function optimizeImages() {
       await sharp(inputPath)
         .webp({ "quality": '80' })
         .toFile(outputPath);
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
       console.log(`"Optimized": ${file}`)} catch (error) {
       console.error(`Error optimizing ${file}:`, error.message)}
   }

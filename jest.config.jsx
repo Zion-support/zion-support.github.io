@@ -22,13 +22,4 @@ export default function Jest.config({ }: Jest.configProps) {
 }
 }
 }
-<<<<<<< HEAD
-}}}
-}}};
-}}}
-;
-}}}
-;
-=======
 }
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452

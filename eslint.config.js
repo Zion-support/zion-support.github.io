@@ -1,16 +1,3 @@
-<<<<<<< HEAD
-const { FlatCompat } = require('@eslint/eslintrc');
-const js = require('@eslint/js');
-
-const compat = new FlatCompat({
-  baseDirectory: __dirname,
-  recommendedConfig: js.configs.recommended,
-});
-
-module.exports = [
-  ...compat.extends('next/core-web-vitals'),
-  {
-=======
 import { FlatCompat } from '@eslint/eslintrc';
 import js from '@eslint/js';
 import react from 'eslint-plugin-react';
@@ -54,8 +41,6 @@ export default [
       'server/**',
       'temp_*/**',
       'test_build/**',
-      'tests/**',
-      '__tests__/**',
       'types/**',
       '*.cjs',
       '*.mjs',
@@ -92,7 +77,7 @@ export default [
     ],
   },
   {
-    files: ['src/**/*.{js,jsx,ts,tsx}', 'app/**/*.{js,jsx,ts,tsx}'],
+    files: ['**/*.{js,jsx,ts,tsx}'],
     languageOptions: {
       ecmaVersion: 2020,
       globals: {
@@ -107,6 +92,17 @@ export default [
         afterEach: 'readonly',
         beforeAll: 'readonly',
         afterAll: 'readonly',
+        window: 'readonly',
+        document: 'readonly',
+        console: 'readonly',
+        process: 'readonly',
+        Buffer: 'readonly',
+        global: 'readonly',
+        __dirname: 'readonly',
+        __filename: 'readonly',
+        module: 'readonly',
+        require: 'readonly',
+        exports: 'readonly',
       },
       parser: tsparser,
       parserOptions: {
@@ -122,38 +118,12 @@ export default [
       'react': react,
       'react-hooks': reactHooks,
     },
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
     rules: {
       'no-unused-vars': 'warn',
       'no-console': 'warn',
-      'prefer-const': 'warn'
-    },
-    languageOptions: {
-      ecmaVersion: 'latest',
-      sourceType: 'module',
-      globals: {
-        window: 'readonly',
-        document: 'readonly',
-        console: 'readonly',
-        process: 'readonly',
-        Buffer: 'readonly',
-        global: 'readonly',
-        __dirname: 'readonly',
-        __filename: 'readonly',
-        module: 'readonly',
-        require: 'readonly',
-<<<<<<< HEAD
-        exports: 'readonly'
-      }
-    }
-  }
-=======
-        exports: 'readonly',
-      },
-    },
-    rules: {
-      'no-console': 'off',
+      'prefer-const': 'warn',
+      'react/react-in-jsx-scope': 'off',
+      'react/prop-types': 'off',
     },
   },
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 ];

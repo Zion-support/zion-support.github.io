@@ -1,9 +1,4 @@
-<<<<<<< HEAD
-import { AnimatePresence,motion } from \'framer-motion\'; import { ; CheckCircle,; Clock,; ExternalLink,; Mail,; MapPin,; Phone,; Search,; Shield,; TrendingUp} from \'lucide-react\'; import { useState } from \'react\';
-const { AnimatePresence,motion } from "framer-motion"; import { ; CheckCircle,; Clock,; ExternalLink,; Mail,; MapPin,; Phone,; Search,; Shield,; TrendingUp} from "lucide-react"; import { useState } from "react";''"
-=======
 import { AnimatePresence, motion, ; CheckCircle, ; Clock, ; ExternalLink, ; Mail, ; MapPin, ; Phone, ; Search, ; Shield, ; TrendingUp } from 'lucide-react'; import { useState } from 'react';''
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 
 
 import { AnimatePresence,motion } from \'framer-motion\'; import { ; CheckCircle,; Clock,; ExternalLink,; Mail,; MapPin,; Phone,; Search,; Shield,; TrendingUp} from \'lucide-react\'; import { useState } from \'react\';
@@ -18,10 +13,7 @@ const { AnimatePresence,motion } from "framer-motion"; import { ; CheckCircle,; 
 import { AnimatePresence,motion } from \'framer-motion\'; import { ; CheckCircle,; Clock,; ExternalLink,; Mail,; MapPin,; Phone,; Search,; Shield,; TrendingUp} from \'lucide-react\'; import { useState } from \'react\';
 const { AnimatePresence,motion } from "framer-motion"; import { ; CheckCircle,; Clock,; ExternalLink,; Mail,; MapPin,; Phone,; Search,; Shield,; TrendingUp} from "lucide-react"; import { useState } from "react";''"
 import { AnimatePresence, motion, ; CheckCircle, ; Clock, ; ExternalLink, ; Mail, ; MapPin, ; Phone, ; Search, ; Shield, ; TrendingUp } from 'lucide-react'; import { useState } from 'react';''
-<<<<<<< HEAD
-=======
 import { AnimatePresence, motion, ; CheckCircle, ; Clock, ; ExternalLink, ; Mail, ; MapPin, ; Phone, ; Search, ; Shield, ; TrendingUp } from 'lucide-react'; import { useState } from 'react';''
 import { AnimatePresence,motion } from \'framer-motion\'; import { ; CheckCircle,; Clock,; ExternalLink,; Mail,; MapPin,; Phone,; Search,; Shield,; TrendingUp} from \'lucide-react\'; import { useState } from \'react\';
 const { AnimatePresence,motion } from "framer-motion"; import { ; CheckCircle,; Clock,; ExternalLink,; Mail,; MapPin,; Phone,; Search,; Shield,; TrendingUp} from "lucide-react"; import { useState } from "react";''"
 import { AnimatePresence, motion, ; CheckCircle, ; Clock, ; ExternalLink, ; Mail, ; MapPin, ; Phone, ; Search, ; Shield, ; TrendingUp } from 'lucide-react'; import { useState } from 'react';''
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452

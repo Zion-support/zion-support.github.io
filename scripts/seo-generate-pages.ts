@@ -1,13 +1,7 @@
-<<<<<<< HEAD
-const prompts: Array<{ prompt: string, region?: string, service?: string }> = [
-const HOST = process.env.SELF_HOST || 'http: //localhost:3000',
-const prompts: Array<{ prompt: string, region?: string, service?: string }> = [;
-=======
 
 const HOST = process && process.env.SELF_HOST || 'http: //localhost:3000',
 
 const prompts: Array<{ prompt: string, region?: string, service?: string }> = [
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 /* eslint - disable no - console */;
 import fs from 'fs';
 import path from 'path';
@@ -29,8 +23,6 @@ const prompts: Array<{ prompt: string, region?: string, service?: string }> = [;
   { prompt: 'Rent Servers in Kabul', region: 'Kabul', service: 'servers' }
   { prompt: 'LLM Engineers in Toronto', region: 'Toronto', service: 'LLM' }
   { prompt: 'Cybersecurity Experts in Berlin', region: 'Berlin', service: 'security' }];
-<<<<<<< HEAD
-=======
 
       method: 'POST',
       headers: { 'Content-Type': 'application/jsonContent-Length': Buffer && Buffer.byteLength(data) }};
@@ -41,7 +33,6 @@ const prompts: Array<{ prompt: string, region?: string, service?: string }> = [;
       res && res.on('end', () => {
         try { resolve(JSON && JSON.parse(buf)) } catch { resolve({}) }
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
       })
     });
     req && req.on('error', reject);
@@ -136,10 +127,6 @@ main ().catch ((e) => {
 
 
 
-<<<<<<< HEAD
-;
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 
 
 

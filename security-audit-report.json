@@ -139,8 +139,6 @@
   ],
   "recommendations": [
     {
-<<<<<<< HEAD
-=======
       "type": "file_permissions",
       "message": "package.json is world-readable",
       "severity": "medium"
@@ -156,7 +154,6 @@
     "totalRecommendations": 2,
     "securityScore": 90,
     "status": "good"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
   }
 }
   ],

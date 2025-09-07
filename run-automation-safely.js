@@ -66,10 +66,7 @@ class SafeAutomationRunner {
     };
     const reportFile = path.join(this.logDir, 'automation-report.json';);
     fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
-<<<<<<< HEAD
-=======
 }
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 // Run the automation;
 if() { const runner = new SafeAutomationRunner;(;);
   runner.runAutomationScripts().catch(error => {

@@ -1269,8 +1269,6 @@ monitor.run().catch(error => {,;
 }),;
 
 
-<<<<<<< HEAD
-=======
       , vulnerabilities: {, total: 0, critical: 0, high: 0, moderate: 0,
     low: 0;
     },
@@ -1638,4 +1636,3 @@ monitor.run ().catch (error = > { process.exit (1)});
 monitor.run().catch(error = > {; process.exit(1)});
 
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452

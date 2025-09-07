@@ -4,8 +4,5 @@ import { render, axe, toHaveNoViolations } from 'lucide-react'; import { ModeTog
 </ModeToggle>'
 </ModeToggle>'
 </ModeToggle>'
-<<<<<<< HEAD
-=======
 </ModeToggle>'
 </ModeToggle>'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452

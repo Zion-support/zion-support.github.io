@@ -1,9 +1,6 @@
 
-<<<<<<< HEAD
-=======
 /** @type {import ('next').NextConfig} */;
 const next_config = {
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 
 
   reactStrictMode: true,
@@ -30,10 +27,7 @@ const next_config = {
     formats: ["image/webp", "image/avif"],
   },
   // Output configuration
-<<<<<<< HEAD
-=======
   // Output configuration
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
   output: 'standalone',
 
   // Trailing slash

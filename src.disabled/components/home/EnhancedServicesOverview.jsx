@@ -1,9 +1,4 @@
-<<<<<<< HEAD
-import React from\';react\''\';\'';
-const React from";react""";"";''"
-=======
 import _React from';react''';'';
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 
 
 import React from\';react\''\';\'';
