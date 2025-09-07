@@ -1,10 +1,29 @@
+<<<<<<< HEAD
 
 
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+
+=======
+>>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
+import React, { useEffect, useRef } from 'react';
+import { motion } from 'framer-motion';
+export default function UltraFuturisticBackground2035() {
+export default function UltraFuturisticBackground2035() {
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 
   const canvasRef = useRef<HTMLCanvasElement>(null);
   useEffect(() => {
     const canvas = canvasRef.current;
     if (!canvas) return;
+<<<<<<< HEAD
+=======
+    const prefersReducedMotion = window.matchMedia(
+      '(prefers-reduced-motion: reduce)'
+    ).matches;    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
     const ctx = canvas.getContext('2d');
     if (!ctx) return;
     canvas.width = window.innerWidth * (window.devicePixelRatio |1);
@@ -37,6 +56,7 @@ export default function UltraFuturisticBackground2035() {
       vy: number;
       size: number;
       opacity: number;
+<<<<<<< HEAD
       x: number,
       y: number,
       vx: number,
@@ -44,6 +64,64 @@ export default function UltraFuturisticBackground2035() {
       size: number,
       opacity: number,
 
+=======
+<<<<<<< HEAD
+=======
+canvas.width = window.innerWidth * (window.devicePixelRatio || 1)
+canvas.height = window.innerHeight * (window.devicePixelRatio || 1)
+if (ctx) {
+  
+}
+}
+//Update and draw particles //Wrap around edges if (particle.x < 0) particle.x = canvas.width / (window.devicePixelRatio || 1)
+if (particle.x > canvas.width / (window.devicePixelRatio || 1) ) particle.x = 0
+if (particle.y < 0) particle.y = canvas.height / (window.devicePixelRatio || 1)
+if (particle.y > canvas.height / (window.devicePixelRatio || 1) ) particle.y = 0
+//Draw particle if (maxDistance > 0) {
+  particles.forEach ( (otherParticle, otherIndex) => {
+  if (index !== otherIndex) {
+  
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-43ef
+}
+      color: string;}
+    }> = [];
+
+    // Initialize particles;
+const initParticles = (
+      particles = [];
+
+const isSmallScreen = window.innerWidth < 768;
+
+const particleCount = prefersReducedMotion;
+        ? 12;
+        : isSmallScreen;
+          ? 40;
+          : 100;
+      for (let i = 0; i < particleCount; i++) {
+        particles.push({
+          x: (Math.random() * canvas.width) / (window.devicePixelRatio || 1),
+          y: (Math.random() * canvas.height) / (window.devicePixelRatio || 1),
+          vx: prefersReducedMotion ? 0 : (Math.random() - 0.5) * 0.4,
+          vy: prefersReducedMotion ? 0 : (Math.random() - 0.5) * 0.4,
+          size: Math.random() * (isSmallScreen ? 1.5 : 2) + 0.8,
+          opacity: Math.random() * 0.35 + 0.08,
+color: ['#8b5cf6', '#06b6d4', '#ec4899', '#10b981'][
+            Math.floor(Math.random() * 4)
+          ],) => {
+  return $3;}
+}
+<<<<<<< HEAD
+        });
+      }
+    }
+    // Update and draw particles;
+const updateParticles = (
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      particles.forEach((particle, index) => {
+        particle.x += particle.vx;
+        particle.y += particle.vy;
+        // Wrap around edges;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 if (particle.x < 0)
           particle.x = canvas.width / (window.devicePixelRatio || 1);
         if (particle.x > canvas.width / (window.devicePixelRatio || 1))
@@ -53,26 +131,48 @@ if (particle.x < 0)
         if (particle.y > canvas.height / (window.devicePixelRatio || 1))
           particle.y = 0;
 
+<<<<<<< HEAD
         // Draw particle
         ctx.beginPath();
+=======
+        // Draw particle;
+ctx.beginPath();
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
         ctx.arc(particle.x, particle.y, particle.size, 0, Math.PI * 2);
         ctx.fillStyle = particle.color;
         ctx.globalAlpha = particle.opacity;
         ctx.fill();
+<<<<<<< HEAD
         // Draw connections
 
+=======
+        // Draw connections;
+const maxDistance = prefersReducedMotion;
+          ? 0;
+          : window.innerWidth < 768;
+            ? 90;
+            : 140;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
         if (maxDistance > 0) {
           particles.forEach((otherParticle, otherIndex) => {
             if (index !== otherIndex) {
               const dx = particle.x - otherParticle.x;
+<<<<<<< HEAD
               const dy = particle.y - otherParticle.y;
               const distance = Math.sqrt(dx * dx + dy * dy);
+=======
+
+const dy = particle.y - otherParticle.y;
+
+const distance = Math.sqrt(dx * dx + dy * dy);
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
               if (distance < maxDistance) {
                 ctx.beginPath();
                 ctx.moveTo(particle.x, particle.y);
                 ctx.lineTo(otherParticle.x, otherParticle.y);
                 ctx.strokeStyle = particle.color;
 
+<<<<<<< HEAD
 ;
   const canvasRef = useRef<HTMLCanvasElement>(null)useEffect(() => {const canvas = canvasRef.current;
     if (!canvas) return;import React, { useEffect, useRef } from 'react';
@@ -312,9 +412,39 @@ className='fixed inset-0 w-full h-full pointer-events-none z-0';
 
   return (
     <>
+=======
+ctx.globalAlpha =
+
+                  ((maxDistance - distance) / maxDistance) * 0.08;
+                ctx.lineWidth = 1;) => {
+  return $3;}
+=======
+})
+initParticles ()
+updateParticles ()
+window.addEventListener ('resize', handleResize)
+return (<> {
+  /* Fixed Background Canvas */ 
+}<canvas backgroundImage: `linear-gradient (rgba (139, 92, 246, 0.3) 1px, transparent 1px), linear-gradient (90deg, rgba (139, 92, 246, 0.3) 1px, transparent 1px) `, backgroundSize: '50px 50px' 
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-43ef
+}
+                ctx.stroke()}
+            }
+          })}
+      })if (!prefersReducedMotion) {animationFrameId = requestAnimationFrame(updateParticles)}
+    }
+    initParticles()updateParticles(;
+  const handleResize = (canvas.width = window.innerWidth * (window.devicePixelRatio |1)canvas.height = window.innerHeight * (window.devicePixelRatio |1)if (ctx) {ctx.setTransform(1, 0, 0, 1, 0, 0)ctx.scale(window.devicePixelRatio || 1, window.devicePixelRatio || 1)) => {
+  return $3;}
+}
+      initParticles()}window.addEventListener('resize', handleResize)return () => {window.removeEventListener('resize', handleResize)if (animationFrameId) {cancelAnimationFrame(animationFrameId)}
+    }}, [];
+  return (<>;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
       {/* Fixed Background Canvas */}
-      <canvas
+      <canvas;
         ref={canvasRef}
+<<<<<<< HEAD
         className="fixed inset-0 w-full h-full pointer-events-none z-0"
         style={{ background: 'radial-gradient(ellipse at center, rgba(139,92,246,0.04) 0%, rgba(0,0,0,0) 70%)' }}
       />
@@ -401,6 +531,60 @@ className='fixed inset-0 w-full h-full pointer-events-none z-0';
             opacity: [0.4, 0.7, 0.4]
           }}
           transition={{
+=======
+className='fixed inset-0 w-full h-full pointer-events-none z-0';
+        style={{background:;}
+            'radial-gradient(ellipse at center, rgba(139,92,246,0.04) 0%, rgba(0,0,0,0) 70%)';}
+        }}
+      />;
+      {/* Animated Background Elements */}
+      <div className='fixed inset-0 pointer-events-none z-0 overflow-hidden' />;
+        {/* Floating Geometric Shapes */}
+
+        <motion.div;
+className='absolute top-20 left-20 w-32 h-32 border border-purple-500/15 rounded-full'
+          animate={{
+            scale: [1, 1.15, 1],
+            rotate: [0, 180, 360]}
+            opacity: [0.22, 0.45, 0.22]}
+          }}
+          transition={{
+            duration: 8,
+            repeat: Infinity}
+ease: 'easeInOut'}
+          }}
+        />
+
+        <motion.div;
+className='absolute top-40 right-32 w-24 h-24 border border-cyan-500/20 transform rotate-45'
+          animate={{
+            scale: [1, 1.3, 1],
+            rotate: [45, 225, 405]}
+            opacity: [0.2, 0.5, 0.2]}
+          }}
+          transition={{
+
+            duration: 10,
+            repeat: Infinity}
+ease: 'easeInOut'}
+          }}
+        />
+        <motion.div;
+className='absolute bottom-32 left-1/4 w-20 h-20 border border-pink-500/20 rounded-full'
+          animate={{
+            scale: [1, 1.4, 1],
+            y: [0, -20, 0]}
+            opacity: [0.4, 0.7, 0.4]}
+          }}
+          transition={{
+            duration: 12,
+            repeat: Infinity}
+ease: 'easeInOut'}
+=======
+      color: string;    }> = [];      x: number
+      y: number
+>>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
           }}
         />
         {/* Neon Glow Effects */}
@@ -513,6 +697,7 @@ className='absolute w-1 h-1 bg-purple-400 rounded-full'
             duration: 4
             repeat: Infinity
             ease: 'easeInOut',          }}
+<<<<<<< HEAD
           animate={{
             scale_x: [0, 1, 0];
             opacity: [0, 1, 0];
@@ -548,6 +733,28 @@ className='absolute w-1 h-1 bg-purple-400 rounded-full'
             repeat: Infinity,
             delay: 2,
 ease: 'easeInOut',
+=======
+          animate={{}
+            scale_x: [0, 1, 0]
+            opacity: [0, 1, 0]
+          }}
+          transition={{}
+            duration: 4,
+            repeat: Infinity,
+          animate={{}
+            scaleX: [0, 1, 0]
+            opacity: [0, 1, 0]
+          }}
+          transition={{'
+          className='absolute top-1/2 left-0 w-full h-px bg-gradient-to-r from-transparent via-cyan-500/50 to-transparent'
+          animate={{}
+            scaleX: [0, 1, 0]"
+            opacity: [0, 1, 0],          className="absolute top-1/2 left-0 w-full h-px bg-gradient-to-r from-transparent via-cyan-500/50 to-transparent"
+          animate={{}
+            scaleX: [0, 1, 0]
+            opacity: [0, 1, 0]'"
+            ease: 'easeInOut',            ease: "easeInOut"
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
           }}
             ease: 'easeInOut',          }}            ease: "easeInOut"
           }}
@@ -824,6 +1031,7 @@ className='absolute w-2 h-2 bg-gradient-to-r from-cyan-400 to-purple-400 rounded
           />;
         ))}
         {/* Neural Network Connections */}
+<<<<<<< HEAD
         <svg className='absolute inset-0 w-full h-full opacity-20'>;
           <defs>;
             <linearGradient
@@ -935,6 +1143,11 @@ className='absolute w-2 h-2 bg-gradient-to-r from-cyan-400 to-purple-400 rounded
           <motion.div;
             className='absolute top-1/4 left-1/4 w-64 h-64 border border-cyan-500/30 rounded-full';
                 delay: i * 0.5,ease: 'easeInOut',              }}                ease: "easeInOut";
+=======
+        <svg className='absolute inset-0 w-full h-full opacity-20'>
+
+                ease: 'easeInOut',              }}                ease: "easeInOut"
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
               }}
             />))}
         </svg>;

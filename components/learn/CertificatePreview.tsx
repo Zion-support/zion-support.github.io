@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 export default function CertificatePreview({ courseId, userId;
 export default function CertificatePreview({
@@ -16,6 +17,20 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+
+
+=======
+>>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
+import React from 'react';
+export default function CertificatePreview({ courseId, userId;
+
+import React from "react";
+export default function CertificatePreview({
+  courseId
+  userId = "demo-user"
+}: {
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
   courseId: string;
   userId?: string;
 }) {;
@@ -46,9 +61,20 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     </div>
   );
 <<<<<<< HEAD
+<<<<<<< HEAD
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 =======
+=======
+
+"
+=======
+return (<div className="border rounded p-4" > <div className="text-sm text-gray-600" >Zion Certificate</div> <div className="mt-2 h-40 bg-gradient-to-br from-slate-800 to-slate-900 text-white flex items-center justify-center rounded" > <div className="text-center" > <div className="text-xl font-semibold" >Certificate of Completion</div> <div className="text-xs opacity-80" >Preview</div> </div> </div> </div>) 
+}
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-43ef
+=======
+  );
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
   const url = `/api/learn/certificates/${courseId}?userId=${encodeURIComponent(userId)}`;
   return (
     <div className="border rounded p-4">
@@ -66,6 +92,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         Download PDF
       </a>
     </div>
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
 =======
@@ -162,3 +189,8 @@ function CertificatePreview() {const url = `/api / learn / certificates/${course
 =======
     </div>)
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
+=======
+  );
+}
+>>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75

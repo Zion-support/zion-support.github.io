@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 import React from 'react';
 
 import { motion } from 'framer-motion';
@@ -162,6 +166,7 @@ export default function Enhanced2026ServiceShowcase() {const containerVariants =
       transition: {duration: 0.3,ease: 'easeOut' as const,},},}const renderServiceCard = (service: any, index: number) => (<motion.div;
       key={service.id}
       variants={itemVariants}
+<<<<<<< HEAD
 whileHover='hover';
       className='group relative';
     >;
@@ -351,6 +356,68 @@ className='flex items-center space-x-2 bg-gradient-to-r from-cyan-500 to-purple-
           {/* Market info */}
           </p>;
 
+=======
+      whileHover='hover'
+      className='group relative'
+    >
+      <motion.div'
+      className='group relative'>
+      <motion&& motion.div
+        variants={cardVariants}
+        className='relative overflow-hidden rounded-2xl bg-gradient-to-br from-slate-900/80 via-slate-800/80 to-slate-900/80 backdrop-blur-xl border border-slate-700/50 hover:border-slate-600/50 transition-all duration-300'    />
+        {/* Glowing border effect */}
+
+<<<<<<< HEAD
+          {/* Service header */}
+
+          <div className='flex items-start justify-between mb-4' />
+            <div className='flex items-center space-x-3' />
+              <div className='text-3xl' />{service.icon}</div>
+              <div />
+                <h3 className='text-xl font-bold text-white group-hover: text-cyan-400 transition-colors duration-300' />
+
+                  {service.nam}
+=======
+}
+}
+}
+}
+}
+}
+const renderServiceCard = (service: unknown, index: number) => (<motion.div <span>Popular</span> </div>) 
+}</div> </div>) ) 
+}</div> </div> > <span>Learn More</span> <ArrowRight className="w-4 h-4" /> </motion.button> </div> </div> </div> </div> > <div className="flex items-center justify-center space-x-2 mb-4" > <div className="w-8 h-8 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center" > <Rocket className="w-5 h-5 text-white" /> </div> <span className="text-cyan-400 font-semibold text-sm uppercase tracking-wider" > Innovation 2026 </span> </div> <h2 className="text-4xl md:text-5xl font-bold text-white mb-6" > Next-Generation <span className="block bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent" > AI & IT Services </span> </h2> </p> </motion.div> {
+  /* AI Services Section */ 
+}<motion.div > <div className="flex items-center space-x-3 mb-8" > <Brain className="w-6 h-6 text-cyan-400" /> <h3 className="text-2xl font-bold text-white" >AI-Powered Services</h3> </div> <motion.div > {
+  innovative2026AIServices.map ( (service, index) => renderServiceCard (service, index) ) 
+}</motion.div> </motion.div> {
+  /* IT Infrastructure Section */ 
+}<motion.div > <div className="flex items-center space-x-3 mb-8" > <Globe className="w-6 h-6 text-purple-400" /> <h3 className="text-2xl font-bold text-white" >IT Infrastructure & Security</h3> </div> <motion.div > {
+  innovative2026ITInfrastructureServices.map ( (service, index) => renderServiceCard (service, index) ) 
+}</motion.div> </motion.div> {
+  /* Micro SAAS Section */ 
+}<motion.div initial= {
+  {
+  opacity: 0, y: 30 
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-43ef
+}
+                </h3>;
+                <p className='text-slate-400 text-sm' />{service.tagline}</p>;
+              </div>;
+            </div>;
+            {service.popular && (<div className='flex items-center space-x-1 bg-gradient-to-r from-yellow-500 to-orange-500 text-white px-2 py-1 rounded-full text-xs font-medium' />;
+                <Star className='w-3 h-3 fill-current' />;
+                <span />Popular</span>;}
+              </div>;}
+            )}
+          </div>;
+          {/* Description */}
+<p className='text-slate-300 text-sm mb-4 leading-relaxed' />;
+            {service.description}
+          </p>;
+=======
+>>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
           {/* Features */}
                   <div
                     key={idx}
@@ -494,6 +561,7 @@ className="flex items-center space-x-2 bg-gradient-to-r from-cyan-500 to-purple-
         {/* Section header */}<motion.div;
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
+<<<<<<< HEAD
           transition={{ duration: 0.8 }}className='text-center mb-16';
         >;
           <div className='flex items-center justify-center space-x-2 mb-4'>;
@@ -604,10 +672,25 @@ className='mb-20';
           <div className='flex items-center space-x-3 mb-8'>
             <Brain className='w-6 h-6 text-cyan-400' />
             <h3 className='text-2xl font-bold text-white'>
+=======
+          transition={{ duration: 0.8, delay: 0.2 }}
+          className='mb-20'
+        >
+          <div className='flex items-center space-x-3 mb-8'>
+          transition={{ duration: 0.8;, delay: 0.2 ;}}
+className='mb-20'
+         />
+          <div className='flex items-center space-x-3 mb-8' />
+            <Brain className='w-6 h-6 text-cyan-400' />
+
+            <h3 className='text-2xl font-bold text-white'>
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
               AI-Powered Services
             </h3>
           </div>
           <motion.div
+<<<<<<< HEAD
             variants={containerVariants}
             initial='hidden'
             whileInView='visible'
@@ -687,6 +770,34 @@ className='mb-20';
 
 
 
+=======
+            className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'
+              />
+            {innovative2026AIServices.map((service, index) =>
+              renderServiceCard(service, index)
+            )}          </motion.div>        >
+
+          className="mb-20"
+        >"
+          <div className="flex items-center space-x-3 mb-8">"
+            <Brain className="w-6 h-6 text-cyan-400" />"
+            <h3 className="text-2xl font-bold text-white">AI-Powered Services</h3>
+          </div>
+          <motion.div
+            variants={containerVariants}"
+            initial="hidden""
+            whileInView="visible""
+            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
+          >
+            {innovative2026AIServices.map((service, index) => renderServiceCard(service, index))}
+            )}
+origin/cursor/automate-test-improve-and-merge-code-2533
+              renderServiceCard(service, index)}
+
+            )}
+          </motion.div>
+        </motion.div>
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
         {/* IT Infrastructure Section */}
         <motion.div
           initial={{ opacity: 0, y: 30}}

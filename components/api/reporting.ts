@@ -11,7 +11,13 @@ interface ReportingData {
     updatedAt: string}>
 }
 
+<<<<<<< HEAD
 
+=======
+const FILE = null;
+  byTenant: Record<
+    string
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
     {
       funnel: { stage: string; count: number }[];
       timeToHireDays: number;
@@ -30,10 +36,17 @@ const FALLBACK: ReportingData = { byTenant: {} }
 const FILE = $2;
 const FALLBACK: ReportingData = $2;
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
+<<<<<<< HEAD
   const method = (req.method || 'GET').toUpperCase($2);
   const auth = authenticateRequest($2);
   if (!auth.ok) return res.status(401).json($2);
   const tenantId = $2;
+=======
+  const method = (req.method |'GET').toUpperCase()
+  const auth = authenticateRequest(req, method === 'GET');
+  if (!auth.ok) return res.status(401).json({ error: auth.error });
+  const tenantId = auth.tenantId!;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
   if (method === 'GET') {
     const entry = data.byTenant[tenantId] |{
       funnel: []
@@ -44,6 +57,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (method === 'POST') {
     const { funnel, timeToHireDays, costPerHireUsd } = req.body |{};    const entry = data.byTenant[tenantId] |{ funnel: [], timeToHireDays: 0, updatedAt: new Date().toISOString() }
     return res.status(200).json(entry)
+<<<<<<< HEAD
     const updated = updateJsonFile<ReportingData>(
       FILE
       curr => {
@@ -215,3 +229,8 @@ return res.status(405).json({ error: 'Method not allowed' })}
 
   return res.status(405).json({ error: 'Method not allowed' })
 }
+=======
+  }
+  if (method === 'POST') {
+    const { funnel, timeToHireDays, costPerHireUsd } = req.body |{}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75

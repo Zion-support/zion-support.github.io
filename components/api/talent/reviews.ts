@@ -34,7 +34,11 @@ export default async function handler(
   req: NextApiRequest
   res: NextApiResponse
 ) {
+<<<<<<< HEAD
   if (req.method === 'GET') {
+=======
+  if($2) {
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 
     // In a real implementation, fetch reviews from Supabase by talent id/slug
 

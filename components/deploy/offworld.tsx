@@ -1,4 +1,14 @@
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+
+=======
+import { useState  } from 'react';
+import Head from 'next/head',
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 export default function OffworldDeploy() {
   const [cid, setCid] = useState<string | null>(null),
   const [status, setStatus] = useState<string>(''),
@@ -23,6 +33,7 @@ export default function OffworldDeploy() {
     setCid($2);
     setProvider($2);
     try {
+<<<<<<< HEAD
       const res = await fetch($2);
       const data = await res.json($2);
       if (!res.ok) throw new Error($2);
@@ -31,6 +42,10 @@ export default function OffworldDeploy() {
       setStatus('Deployed successfully')
     } catch (e: any) {
       setError($2);
+=======
+>>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
+      const res = null;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
       setStatus('')
     }
   }
@@ -145,6 +160,7 @@ function handle_deploy() {
   $2
 }
 
+<<<<<<< HEAD
     }
       set_cid (data.cid);
       set_provider (data.provider || '');
@@ -172,3 +188,29 @@ function handle_deploy() {
     </div>
   )
 }
+=======
+<<<<<<< HEAD
+=======
+async function handleDeploy () {
+  setStatus ('Exporting and deploying to IPFS...')
+setError ('')
+setCid (null)
+setProvider ('')
+try {
+  
+}return (<div className="min-h-screen p-8" > <Head> <title>Zion Offworld Deploy</title> </Head> </div>) 
+}</div>) 
+}
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-43ef
+=======
+    }
+  }
+
+  return (
+
+        </div>
+      )}
+    </div>
+  );
+>>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75

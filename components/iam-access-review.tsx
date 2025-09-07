@@ -1,3 +1,14 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+return (<UltraAdvancedFuturisticBackground> <Head> <title> {
+  service.name 
+}- Zion Tech Group</title>) ) 
+}</ul> </div> <div className="bg-black/30 rounded-2xl border border-cyan-500/30 p-6 h-fit" > <div className="flex items-end justify-between mb-3" > <div> </div> </div> </div> </div> </div> </UltraAdvancedFuturisticBackground>) 
+}
+=======
+import React from 'react',
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 import Head from 'next/head';
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -30,6 +41,7 @@ export default function IAMAccessReviewPage() {;
   const service = extraServices && extraServices.find(s => s && s.link.endsWith('/iam-access-review'));
   if (!service) return null;
 
+<<<<<<< HEAD
   return (
     <UltraAdvancedFuturisticBackground>;
       <Head>;
@@ -337,3 +349,6 @@ if (return null) {$2;
 =======
 }</UltraAdvancedFuturisticBackground>)})}
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
+=======
+>>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75

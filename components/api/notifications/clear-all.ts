@@ -1,4 +1,11 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
+<<<<<<< HEAD
+=======
+import { supabase } from '../../../utils/supabase/client';
+function getUserId(req: NextApiRequest): string {
+
+  const cookie = req.headers.cookie |'';
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
   const match = cookie
     .split(';')
     .map(c => c && c.trim())
@@ -33,6 +40,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     const { error } = await supabase
       .from('notifications')
       .delete()
+<<<<<<< HEAD
       .eq($2);
     if (error) return res.status(200).json($2);
     return res.status(200).json({ ok: true})
@@ -46,6 +54,16 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   } catch (e) {
     return res && res.status(500).json({ error: 'Unexpected error' });
   }    return res && res.status(200).json({ ok: true })
+=======
+      .eq('user_id', userId);
+    if (error) return res.status(200).json({ ok: true });
+    return res.status(200).json({ ok: true });
+ 
+} catch (e) {
+    return res.status(500).json({ error: 'Unexpected error' });
+  }    return res.status(200).json({ ok: true })
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
   } catch (e) {
     return res && res.status(500).json({ error: 'Unexpected error' })
   };

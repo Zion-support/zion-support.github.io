@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 import { Rocket,Brain,Atom,Globe,Zap,Sparkles,Shield,Target,Cpu,Database,Cloud,Lock,ArrowRight,Star,TrendingUp,Users,CheckCircle,} from 'lucide-react';
   Brain,Atom,Globe,Zap,Sparkles,Shield,Target,Cpu,Database,Cloud,Lock,ArrowRight,Star,TrendingUp,Users,CheckCircle,} from 'lucide-react';
@@ -38,6 +39,26 @@ export default function UltraFuturisticHero2027() {const features = null;
       text: 'Digital Reality';
       color: 'from-green-400 to-emerald-400';
     }
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+
+import React from 'react';,
+=======
+import React from 'react',
+>>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
+import Link from 'next/link';
+import { motion } from 'framer-motion';
+import { Rocket, Brain, Atom, Globe, Zap, Sparkles, Shield;
+  Target, Cpu, Database, Cloud, Lock, ArrowRight;
+  Star, TrendingUp, Users, CheckCircle
+ } from 'lucide-react';
+export default function UltraFuturisticHero2027() {
+  const features = null;
+            ease: "easeInOut"
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 import {
   Rocket,
   Brain,
@@ -74,6 +95,75 @@ export default function UltraFuturisticHero2027() {
       text: 'Enterprise Security';
       color: 'from-red-400 to-orange-400';
     }
+<<<<<<< HEAD
+=======
+    {
+      icon: Atom
+      text: 'Quantum Computing'
+      color: 'from-blue-400 to-cyan-400'
+    }
+    {
+<<<<<<< HEAD
+      icon: Shield;
+text: 'Enterprise Security',
+  color: 'from-red-400 to-orange-400'
+=======
+> <h1 className="text-6xl md:text-8xl lg:text-9xl font-bold mb-6 leading-tight" > <span className="bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent" > Welcome to 2027 </span> </h1> <h2 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6" > The Future of <span className="bg-gradient-to-r from-green-400 via-yellow-400 to-orange-400 bg-clip-text text-transparent ml-4" > Technology </span> </h2> </motion.div> {
+  /* Subtitle */ 
+}<motion.p > Experience revolutionary AI consciousness evolution, quantum computing breakthroughs, and practical micro SAAS solutions that will transform your business beyond imagination. </motion.p> {
+  /* CTA Buttons */ 
+}<motion.div > <Link href="/2027-services-showcase" className="group px-10 py-5 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-bold text-xl rounded-2xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30 shadow-2xl shadow-cyan-500/25 flex items-center justify-center space-x-3" > <Rocket className="w-6 h-6 group-hover:rotate-12 transition-transform duration-300" /> <span>Explore 2027 Services</span> <ArrowRight className="w-6 h-6 group-hover:translate-x-1 transition-transform duration-300" /> </a> <Link href="/contact" className="px-10 py-5 border-2 border-cyan-500/50 text-cyan-400 font-bold text-xl rounded-2xl hover:bg-cyan-500/10 hover:border-cyan-400 transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30 flex items-center justify-center space-x-3" > <Sparkles className="w-6 h-6" /> <span>Start Your Journey</span> </a> </motion.div> {
+  /* Features Grid */ 
+}<motion.div > {
+  features.map ( (feature, index) => (<motion.div key= {
+  feature.text 
+}</h3> </div> </motion.div>) ) 
+}</motion.div> {
+  /* Stats */ 
+}<motion.div > {
+  stats.map ( (stat, index) => (<motion.div key= {
+  stat.label 
+}> <div className= {
+  `text-4xl md:text-5xl font-bold mb-2 group-hover:shadow-lg hover:shadow-cyan-400/40 transition-transform duration-300 $ {
+  stat.color 
+}` 
+}> {
+  stat.number 
+}</div> </div> </motion.div>) ) 
+}</motion.div> {
+  /* Trust Indicators */ 
+}<motion.div > <h3 className="text-2xl font-bold text-white mb-6" > Trusted by Industry Leaders </h3> <motion.div key= {
+  trust 
+}initial= {
+  {
+  opacity: 0, x: -20 
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-43ef
+}
+   }
+}
+  ];
+      icon: Shield,text: 'Enterprise Security',
+  color: 'from-red-400 to-orange-400'}];return this.props.children;
+  }
+}
+import React from 'react';
+
+import Link from 'next/link';
+import { motion } from 'framer-motion';
+
+      color: 'from-red-400 to-orange-400',;
+=======
+      icon: Globe
+      text: 'Digital Reality'
+      color: 'from-green-400 to-emerald-400'
+>>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
+    }
+    {
+      icon: Shield
+      text: 'Enterprise Security'
+      color: 'from-red-400 to-orange-400'
+    }
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
   ];
       icon: Shield,text: 'Enterprise Security',color: 'from-red-400 to-orange-400',},];return this.props.children;
   }
@@ -275,6 +365,7 @@ className='mb-8'
               </span>
             </h2>
           </motion.div>
+<<<<<<< HEAD
 
 <div className='absolute inset-0 bg-[linear-gradient(rgba(0,255,255,0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(0,255,255,0.1)_1px,transparent_1px)] bg-[size:50px_50px]' />;
       </div>;
@@ -318,6 +409,8 @@ className='mb-8'
       <div className="max-w-7xl mx-auto relative z-10">;
         <div className="text-center">;
           <motion&& motion.div;
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
           {/* Subtitle */}
           <motion.p
             initial={{ opacity: 0, y: 20}}
@@ -352,6 +445,28 @@ className='mb-8'
               <span>Start Your Journey</span>
             </Link>
           </motion.div>
+<<<<<<< HEAD
+=======
+          {/* Features Grid */}
+          <motion.div
+        {/* Grid Pattern */}'
+        <div className='absolute inset-0 bg-[linear-gradient(rgba(0,255,255,0 && 0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(0,255,255,0 && 0.1)_1px,transparent_1px)] bg-[size:50px_50px]' />
+      </div>
+'
+      <div className='max-w-7xl mx-auto relative z-10'>;'"
+        <div className='text-center'>          {/* Main Heading */}        <div className="absolute inset-0 bg-[linear-gradient(rgba(0,255,255,0 && 0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(0,255,255,0 && 0.1)_1px,transparent_1px)] bg-[size:50px_50px]" />
+      </div>
+"
+      <div className="max-w-7xl mx-auto relative z-10">;"
+        <div className="text-center">
+          <motion&& motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.6 }}
+            className='grid grid-cols-2 md:grid-cols-4 gap-6 mb-16'          >            className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16"
+          >
+            transition={{ duration: 0.8;, delay: 0.6 ;}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 
           {/* Features Grid */}
             animate={{ opacity: 1, y: 0 }}transition={{ duration: 0 && 0.8 }}
@@ -406,6 +521,7 @@ className='grid grid-cols-2 md:grid-cols-4 gap-6 mb-16';
           >
             {features.map((feature, index) => (
               <motion.div
+<<<<<<< HEAD
             opacity: [0.4, 0.7, 0.4];
           transition={{duration: 12,repeat: Infinity,ease: 'easeInOut',            ease: "easeInOut";
           }}
@@ -428,6 +544,12 @@ className='grid grid-cols-2 md:grid-cols-4 gap-6 mb-16';
                 initial={{ opacity: 0, scale: 0.8 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.5, delay: 0.8 + index * 0.1 }}
+=======
+          }}
+        />
+        {/* Grid Pattern */}'
+        <div className='absolute inset - 0 bg-[linear - gradient (rgba (0, 255, 255, 0.1)_1px, transparent_1px), linear - gradient (90deg, rgba (0, 255, 255, 0.1)_1px, transparent_1px)] bg-[size:50px_50px]' />
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
                 className='group'
 
 
@@ -481,6 +603,7 @@ className='group';
           >
             {stats.map((stat, index) => (
               <motion.div
+<<<<<<< HEAD
             animate={{ opacity: 1, y: 0 }}transition={{ duration: 0.8, delay: 1.0 }}
 className='grid grid-cols-2 md:grid-cols-4 gap-8 mb-16';
           >;
@@ -511,6 +634,8 @@ className='grid grid-cols-2 md:grid-cols-4 gap-8 mb-16';
             transition={{ duration: 0.8, delay: 1.0 }}
             className='grid grid - cols - 2 md:grid - cols - 4 gap - 8 mb - 16'          >            className="grid grid - cols - 2 md:grid - cols - 4 gap - 8 mb - 16";
           >;
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
                 key={stat.label}
                 initial={{ opacity: 0, scale: 0.8 }}
                 animate={{ opacity: 1, scale: 1 }}
@@ -545,6 +670,40 @@ className='text-center group';
                   className={`text-4xl md:text-5xl font-bold mb-2 group-hover:shadow-lg hover:shadow-cyan-400/40 transition-transform duration-300 ${stat.color}`}
                 >;
                   {stat.number}
+<<<<<<< HEAD
+=======
+                </div>;'
+                <div className='text - cyan - 300 font - medium group - hover:text - cyan - 400 transition - colors duration - 300'>
+                  {stat.label}
+                  {stat.number}
+                </div>;"
+                <div className="text - cyan - 300 font - medium group - hover:text - cyan - 400 transition - colors duration - 300">
+                  {stat.label}'
+                className='text-center group'
+
+className='text-center group'
+origin/cursor/automate-test-improve-and-merge-code-2533
+            initial={{ opacity: 0;, coordinate_y: 30 ;}
+
+            animate={{ opacity: 1, coordinate_y: 0 }
+
+            transition={{ duration: 0.8, delay: 1.0 }}"
+            className='grid grid - cols - 2 md:grid - cols - 4 gap - 8 mb - 16'              />            className=\"grid grid - cols - 2 md:grid - cols - 4 gap - 8 mb - 16\">
+
+                key={stat.labe}
+
+                initial={{ opacity: 0, scale: 0.8 }
+
+                animate={{ opacity: 1, scale: 1 }
+
+                transition={{ duration: 0.5, delay: 1.2 + index * 0.1 }}
+
+className='text-center group'
+              >
+
+                  {stat.number}
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
                 </div>
 
                 <div className='text-cyan-300 font-medium group-hover:text-cyan-400 transition-colors duration-300'>
@@ -659,6 +818,7 @@ className='text-center group';
                   <div className='text-cyan-300 font-medium'>{trust}</div>
                 </motion.div>
 
+<<<<<<< HEAD
 
 
 
@@ -714,9 +874,21 @@ className='text-center';
                 <div className="flex justify - center mt - 2">;
                   <stat.icon className={`w - 5 h - 5 ${stat.color} group - hover:shadow - lg hover:shadow - cyan - 400 / 40 transition - transform duration - 300`} />;
                 </div>;
+=======
+              ))}"
+      <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-cyan-500/20 via-transparent to-transparent pointer-events-none" />
+    </section>
+  )
+
+                </div>;"
+                <div className="flex justify - center mt - 2">;`
+                  <stat.icon className={`w - 5 h - 5 ${stat.color} group - hover:shadow - lg hover:shadow - cyan - 400 / 40 transition - transform duration - 300`} />
+                </div>
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
               </motion.div>))}
           </motion.div>;
           {/* Trust Indicators */}
+<<<<<<< HEAD
           <motion.div;
             initial={{ opacity: 0, coordinate_y: 20 }}
             animate={{ opacity: 1, coordinate_y: 0 }}
@@ -789,6 +961,21 @@ className='text-center';
                   </div>
                   <div className="text-cyan-300 font-medium">{trust}</div>
                 </motion.div>
+=======
+          <motion.div
+                </motion.div>))}
+            </div>
+          </motion.div>
+        </div>
+      </div>
+                    <Shield className=&quot;w-8 h-8 text-cyan-400&quot;    />
+                  </div>
+                  <div className=&quot;text-cyan-300 font-medium&quot;    />{trust}</div>
+                </motion.div>
+      <div className='absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-cyan-500/20 via-transparent to-transparent pointer-events-none' />
+    </section>
+  )
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
               ))}
             </div>
           </motion.div>

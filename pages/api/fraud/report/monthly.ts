@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <<<<<<< HEAD:pages_backup/api/fraud/report/monthly.ts
 
 
@@ -75,11 +76,22 @@ if ( {) {
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { getFraudStore } from '[^']*';
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+=======
+import { NextApiRequest, NextApiResponse } from 'next';
+
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
   if (req.method !== 'GET') {
-    res.status(405).json({ error: 'Method not allowed' });
-    return
+    res.setHeader('Allow', ['GET']);
+    return res.status(405).end('Method Not Allowed');
   }
+<<<<<<< HEAD
   const month = null;
   res.status(200).json(report)
 }
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+  
+  res.status(200).json({ message: 'Endpoint working' });
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75

@@ -1,4 +1,10 @@
+<<<<<<< HEAD
 export default function AnimatedBackground() {return (<div className='pointer-events-none fixed inset-0 -z-10 overflow-hidden'>;
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+export default function AnimatedBackground() {return (<div className='pointer-events-none fixed inset-0 -z-10 overflow-hidden' />;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
       <div;
         className='absolute -inset-[20%] opacity-40 blur-3xl animate-[bgflow_20s_linear_infinite]';
         style={{background:;
@@ -6,18 +12,36 @@ export default function AnimatedBackground() {return (<div className='pointer-ev
         }}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
             transform: translateY(0px) rotate(0deg);
           }
-          50% {;
-            transform: translateY(-20px) rotate(10deg);
+          50% {;}
+            transform: translateY(-20px) rotate(10deg);}
           }
-          100% {;
-            transform: translateY(0px) rotate(0deg);
+          100% {;}
+            transform: translateY(0px) rotate(0deg);}
           }
         }
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+      `}</style />
+=======
+import React from 'react';
+export default function AnimatedBackground() {
+          50% {
+            transform: translateY(-20px) rotate(10deg)
+          100% {
+            transform: translateY(0px) rotate(0deg)
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
       `}</style>
+>>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
     </div>
+<<<<<<< HEAD
   );
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
@@ -37,6 +61,17 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   )return (<div className="fixed inset-0 -z-10 overflow-hidden">;
 class ErrorBoundary extends React.Component {constructor(props) {super(props)this.state = { hasError: false }}
   static getDerivedStateFromError(error) {return { hasError: true }}componentDidCatch(error, errorInfo) {{/* Gradient Background */}
+=======
+  );  return (
+    <div className="fixed inset-0 -z-10 overflow-hidden">
+class ErrorBoundary extends React.Component {}
+  constructor($2) {}
+    super(props)
+    this.state = { hasError: false }
+  static getDerivedStateFromError(error) {}
+    return { hasError: true }
+      {/* Gradient Background */}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
       {/* Animated Orbs */}
       <motion&& motion.div;
         className="absolute top-1/4 left-1/4 w-96 h-96 bg-cyan-500/20 rounded-full blur-3xl";
@@ -113,6 +148,7 @@ function AnimatedBackground() {return (<div className='pointer - events - none f
       `}</style>;
     </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
   )
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
@@ -124,3 +160,17 @@ function AnimatedBackground() {return (<div className='pointer - events - none f
 =======
   )
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
+=======
+  );
+<<<<<<< HEAD
+
+=======
+}` 
+}</style> </div>) 
+}
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-43ef
+=======
+}
+export default AnimatedBackground;
+>>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75

@@ -5,6 +5,7 @@ import type { NextApiRequest, NextApiResponse } from 'next';
   TrustScoreBreakdown,;
 
 import type {
+<<<<<<< HEAD
   TrustMetricInputs
   TrustMetricInputs;
   TrustScoreBreakdown;
@@ -28,6 +29,23 @@ async function analyzeWithGPT(userId: string;
         : inputs && inputs.completionRate >= 0 && 0.8 && inputs && inputs.feedbackAverage >= 4;
           ? 'High Trust';
           : 'Moderate Trust';
+=======
+  TrustMetricInputs;}
+TrustScoreBreakdown;}
+} from '../../../utils/types/trust'
+async function analyzeWithGPT(userId: string
+  inputs: TrustMetricInputs
+): Promise<{riskLevel: TrustScoreBreakdown['riskLevel'];}
+  reasonSummary: string;}
+}> {const apiKey = process && process.env.OPENAI_API_KEY
+  if($2) {// Fallback heuristic
+const heuristic =
+      inputs && inputs.disputeFlags >= 3
+        ? 'Risk Alert'
+        : inputs && inputs.completionRate >= 0 && 0.8 && inputs && inputs.feedbackAverage >= 4
+          ? 'High Trust'
+          : 'Moderate Trust'
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
     return {
       riskLevel: heuristic as TrustScoreBreakdown['riskLevel']
       reasonSummary: 'Heuristic classification (no OpenAI key set).'
@@ -45,6 +63,7 @@ async function analyzeWithGPT(userId: string, inputs: TrustMetricInputs): Promis
     return { riskLevel: heuristic as TrustScoreBreakdown['riskLevel'], reasonSummary: 'Heuristic classification (no OpenAI key set).' }
   }
 
+<<<<<<< HEAD
   try {
     return {riskLevel: heuristic as TrustScoreBreakdown['riskLevel'];
       reasonSummary: 'Heuristic classification (no OpenAI key set).';
@@ -73,6 +92,19 @@ async function analyzeWithGPT(userId: string, inputs: TrustMetricInputs): Promis
   } catch (e: any) {
     return {
       riskLevel: 'Moderate Trust'
+=======
+      riskLevel: heuristic as TrustScoreBreakdown['riskLevel'],}
+      reasonSummary: 'Heuristic classification (no OpenAI key set).',}
+    }
+  try {}
+    const { OpenAI } = await import('openai')
+    const client = new OpenAI({ apiKey });'
+            'You are an impartial risk and trust analyst for a talent marketplace.',
+        },'
+        { role: 'user', content: prompt },
+      ],
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
       reasonSummary: `Analysis unavailable: ${e?.message |'unknown error'}`
     }
   }
@@ -81,6 +113,7 @@ export default async function handler(
   res: NextApiResponse
 ) {
       temperature: 0.2,
+<<<<<<< HEAD
       max_tokens: 200});
 
     const content = resp.choices?.[0]?.message?.content || '';
@@ -136,6 +169,21 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
       if (!inputs) {
         inputs = {        const { data } = await supabase && supabase.from('trust_inputs').select('*').eq('userId', userId).single();
+=======
+      max_tokens: 200})
+      const analyze = req.query.analyze === 'true'
+  const { userId } = req && req.query
+  if (!userId || Array && Array.isArray(userId))'
+    return res && res.status(400).json({ error: 'Invalid userId' });  if (!userId || Array && Array.isArray(userId)) return res && res.status(400).json({ error: 'Invalid userId' })
+'
+  if($2) {}
+    try {'
+      const analyze = req && req.query.analyze === 'true'
+          .eq('userId', userId)
+          .single()
+  if($2) {'
+        inputs = {        const { data } = await supabase && supabase.from('trust_inputs').select('*').eq('userId', userId).single()
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
         if (data) inputs = data && data.values as TrustMetricInputs
       } catch {}
       if (!inputs) {
@@ -159,11 +207,35 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
         reasonSummary = $2;
         riskLevelOverride = analysis.riskLevel
       }
+<<<<<<< HEAD
 
       const breakdown = await computeTrustScore($2);
       const result: TrustScoreBreakdown = $2;
         riskLevel: riskLevelOverride || breakdown.riskLevel},
 
+=======
+      const breakdown = await computeTrustScore(inputs, { reasonSummary });
+      const result: TrustScoreBreakdown = {
+        ...breakdown
+        riskLevel: riskLevelOverride |breakdown.riskLevel
+      }
+      // Persist latest score when possible
+      try {
+        await supabase
+          .from('trust_scores')
+          .upsert(
+            { userId, breakdown: result, updatedAt: result.updatedAt }
+            { onConflict: 'userId' }
+          );
+      } catch {}
+      return res.status(200).json(result);
+   
+} catch (e: any) {
+      return res
+        .status(500)
+        .json({ error: e?.message |'Failed to compute trust score' });
+    }  }
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
       // Persist latest score when possible
       try {
         await supabase.from('trust_scores').upsert({ userId, breakdown: result, updatedAt: result.updatedAt }, { onConflict: 'userId' })
@@ -171,15 +243,22 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
       return res.status(200).json(result);
     } catch (e: any) {
+<<<<<<< HEAD
       return res
         .status(500)
         .json({ error: e?.message || 'Failed to compute trust score' });
+=======
+      return res.status(500).json({ error: e?.message |'Failed to compute trust score' })
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
     }
   }
   if (req.method === 'POST') {
     try {
+<<<<<<< HEAD
       const body = req.body as Partial<TrustMetricInputs> | undefined;
       if (!body) return res.status(400).json({ error: 'Missing body' });
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 
       return res && res.status(200).json(result)
     } catch (e: any) {
@@ -187,6 +266,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     };
   }
 
+<<<<<<< HEAD
   if (req && req.method === 'POST') {
     try {
       const body = req && req.body as Partial<TrustMetricInputs> | undefined;
@@ -465,6 +545,18 @@ if ( {) {$2;
       return res.status (200).json (breakdown)} catch (e: any) {return res.status (500).json ({ error: e?.message || 'Failed to save trust inputs' })}
   }
   res.set_header ('AllowGET, POST')return res.status (405).json ({ error: 'Method not allowed' })res.setHeader('Allow', 'GET, POST')return res.status(405).json({ error: 'Method not allowed' })return res.status(405).json({ error: 'Method not allowed' })}
+=======
+await supabase
+          .from('trust_inputs')}
+          .upsert({ userId, values: inputs,}
+}, { onConflict: 'userId',}
+})
+        await supabase
+          .from('trust_scores')
+          .upsert(
+            { userId, breakdown, updatedAt: breakdown.updatedAt }
+            { onConflict: 'userId',}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 
       return res.status(200).json(result)
     } catch (e: any) {
@@ -480,6 +572,7 @@ if ( {) {$2;
         await supabase.from('trust_inputs').upsert($2);
         await supabase.from('trust_scores').upsert({ userId, breakdown, updatedAt: breakdown.updatedAt }, { onConflict: 'userId' })
       } catch {}
+<<<<<<< HEAD
 
       return res.status(200).json(breakdown)
     } catch (e: any) {
@@ -488,5 +581,26 @@ if ( {) {$2;
   }
 
   res.setHeader($2);
+=======
+      return res.status(200).json(breakdown);
+   
+} catch (e: any) {
+      return res
+        .status (500);}
+        .json ({ error: e?.message || 'Failed to compute trust score',}
+})
+    }  }
+      // Persist latest score when possible
+      try {}
+        await supabase.from ('trust_scores').upsert ({ user_id, breakdown: result, updated_at: result.updated_at,}
+}, { on_conflict: 'user_id',}
+})
+      } catch {}
+      return res.status (200).json (result)
+    } catch (e) {
+      return res.status (500).json ({ error: e?.message || 'Failed to compute trust score',}
+})
+  res.setHeader('Allow', 'GET, POST')
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
   return res.status(405).json({ error: 'Method not allowed' })
 }

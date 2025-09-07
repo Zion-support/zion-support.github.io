@@ -1,4 +1,11 @@
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+<Head> <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin=""/> <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400, 500, 600, 700, 800, 900&family=JetBrains+Mono:wght@400, 600&display=swap"rel="stylesheet" /> 
+}
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 import Document, { Html, Head, Main, NextScript, DocumentContext } from 'next/document';
 
 import Document, {
@@ -101,4 +108,8 @@ export default function Document() {
     </Html>
   )
 }
+<<<<<<< HEAD
   )}}
+=======
+>>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75

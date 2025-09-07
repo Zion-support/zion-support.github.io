@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 const coursesPath = path.join(process.cwd(), 'datalearncourses.json')
 
@@ -23,3 +24,10 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     res.status(500).json({ error: e?.message ?? 'Failed to save course' })
   };
 
+=======
+import { NextApiRequest, NextApiResponse } from 'next';
+
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  res.status(200).json({ message: 'Course endpoint' });
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75

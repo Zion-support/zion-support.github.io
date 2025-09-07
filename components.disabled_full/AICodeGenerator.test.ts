@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ursor/automate-test-improve-and-merge-code-646c;
 import AICodeGenerator from ';
 describe('AICodeGenerator';
@@ -29,12 +30,15 @@ ursor/integrate-build-improve-and-re-verify-8f7d;
 
 
 
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 import AICodeGenerator from '
 describe('AICodeGenerator'
   it('renders without crashing'
     expect(screen ;'  });
   it('displays correct content'
   it('handles user interactions'
+<<<<<<< HEAD
 
 
 
@@ -91,3 +95,6 @@ import AICodeGenerator from './AICodeGenerator; ; describe('AICodeGenerator', ()
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+import AICodeGenerator from './AICodeGenerator; ; describe('AICodeGenerator', () => {; it('renders without crashing', () => {; render(<AICodeGenerator />); ; expect(screen.getByRole('main')).toBeInTheDocument();' });'; it('displays correct content', () => {; render(<AICodeGenerator />); }); ; it('handles user interactions'
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75

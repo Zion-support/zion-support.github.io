@@ -1,4 +1,12 @@
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+import { useState } from "react";
+import Head from "next/head";
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 export default function Partners() {
   const [form, setForm] = useState({
 
@@ -15,6 +23,7 @@ export default function Partners() {
     pocEmail: "",
     useCaseType: "Education Partnership"}),
   const [loading, setLoading] = useState(false);
+>>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
 
     name: ''
     entityType: ''
@@ -227,6 +236,7 @@ export default function Partners() {
               <input placeholder="Name" className="border rounded px-3 py-2" value={form.pocName} onChange={(e) => setForm({ ...form, pocName: e.target.value })} required />
               <input placeholder="Email" type="email" className="border rounded px-3 py-2" value={form.pocEmail} onChange={(e) => setForm({ ...form, pocEmail: e.target.value })} required />
             </div>
+<<<<<<< HEAD
             <label className="block text-sm mb-2">Use Case</label>
             <select className="w-full border rounded px-3 py-2 mb-6" value={form.useCaseType} onChange={(e) => setForm({ ...form, useCaseType: e.target.value })}>
               <option>Education Partnership</option>
@@ -235,6 +245,55 @@ export default function Partners() {
               <option>Custom Marketplace Instance</option>
             </select>
             <button disabled={loading} className="bg-black text-white px-4 py-2 rounded disabled:opacity-50">{loading ? "Submitting..." : "Register"}</button>
+=======
+            <label className='block text-sm mb-2'>Use Case</label>
+            <select
+              className='w-full border rounded px-3 py-2 mb-6'
+              value={form.useCaseType}
+
+              onChange={e =    /> setForm({ ...form, useCaseType: e.target.value }
+
+            >
+    setResult(data)}"
+  return (<div className=\"min-h-screen bg-gray-50 text-gray-900\"    />
+      <Head    />
+        <title    />Zion Partners</title>
+      </Head>;"
+      <div className=\"max-w-4xl mx-auto py-12 px-4\"    />;"
+        <h1 className=\"text-3xl font-semibold mb-2\"    />Integrate Zion</h1>;"
+        <p className=\"text-gray-600 mb-8\"    />Trusted institutions can embed Zion into platforms, programs, or marketplaces.</p>;"
+        <div className=\"grid md:grid-cols-2 gap-8\"    />;"
+          <form onSubmit={submit} className=\"bg-white p-6 rounded-lg shadow\"    />;"
+            <h2 className=\"text-xl font-medium mb-4\"    />Partner Registration</h2>;"
+            <label className=\"block text-sm mb-2\" htmlFor=\"input-Name\"    />Name</label>;"
+            <input className=\"w-full border rounded px-3 py-2 mb-4\" value={form.name} onChange={(e) =    /> setForm({ ...form, name: e.target.value }
+} required />;"
+            <label className=\"block text-sm mb-2\" htmlFor=\"input-Entity Type\"    />Entity Type</label>;"
+            <input className=\"w-full border rounded px-3 py-2 mb-4\" value={form.entityType} onChange={(e) =    /> setForm({ ...form, entityType: e.target.value }
+} required />;"
+            <label className=\"block text-sm mb-2\" htmlFor=\"input-Point of Contact\"    />Point of Contact</label>;"
+            <div className=\"grid grid-cols-2 gap-3 mb-4\"    />;"
+              <input placeholder=\"Name\" className=\"border rounded px-3 py-2\" value={form.pocName} onChange={(e) =    /> setForm({ ...form, pocName: e.target.value }
+} required />;"
+              <input placeholder=\"Email\" type=\"email\" className=\"border rounded px-3 py-2\" value={form.pocEmail} onChange={(e) =    /> setForm({ ...form, pocEmail: e.target.value }
+} required />
+            </div>;"
+            <label className=\"block text-sm mb-2\" htmlFor=\"input-Use Case\"    />Use Case</label>;"
+            <select className=\"w-full border rounded px-3 py-2 mb-6\" value={form.useCaseType} onChange={(e) =    /> setForm({ ...form, useCaseType: e.target.value }
+}>
+              <option    />Education Partnership</option>
+              <option    />Workforce Development</option>
+              <option    />Token Integration</option>
+              <option    />Custom Marketplace Instance</option>
+            </select>
+<button
+              disabled={loading}
+              className='bg-black text-white px-4 py-2 rounded disabled: opacity-50'    />
+
+              {loading ? 'Submitting...' : 'Register}
+
+            </button>
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
           </form>
 
           <div className="bg-white p-6 rounded-lg shadow">
@@ -468,3 +527,28 @@ export default function Partners() {
     </div>
   )
 }
+<<<<<<< HEAD
+=======
+        )}
+
+      </div>
+    </div>
+  );
+}
+<<<<<<< HEAD
+
+"
+=======
+const [result, setResult] = useState<any> (null)
+const [loading, setLoading] = useState (false)
+async function submit (e: React.FormEvent) {
+  e.preventDefault ()
+setLoading (true)
+setResult (null)
+<option>Education Partnership</option> <option>Workforce Development</option> <option>Token Integration</option> <option>Custom Marketplace Instance</option> </select> </form> <div className="bg-white p-6 rounded-lg shadow" > <h2 className="text-xl font-medium mb-4" >Available Endpoints</h2> <ul className="list-disc ml-6 space-y-1 text-sm" > <li>POST /talents</li> <li>GET /jobs</li> <li>GET /certifications</li> <li>POST /verify-student</li> <li>POST /redeem-grant</li> </ul> <div className="mt-6" > <a className="text-blue-600 underline mr-4" href="/api/partners/sdk?type=rest" >Download REST SDK</a> <a className="text-blue-600 underline" href="/api/partners/sdk?type=graphql" >Download GraphQL SDK</a> </div> <div className="mt-6 text-sm text-gray-600" > <p>Badges:</p> <div className="flex gap-2 mt-2" > <span className="inline-flex items-center bg-green-100 text-green-800 px-2 py-1 rounded" >Verified Partner</span> <span className="inline-flex items-center bg-blue-100 text-blue-800 px-2 py-1 rounded" >Government API Active</span> </div> </div> </div> </div> </div>) 
+}</div> </div>) 
+}
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-43ef
+=======
+>>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75

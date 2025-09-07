@@ -1,6 +1,15 @@
+<<<<<<< HEAD
 
 ;
 const RevolutionaryServicesShowcase: React.FC = () => {const [activeCategory, setActiveCategory] = useState('all')const [visibleServices, setVisibleServices] = useState(12)const categories = [;
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+
+=======
+>>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 import React, { useState } from 'react';
 import { motion   } from 'framer-motion';
 import { ArrowRight, Star, TrendingUp, Users, Shield, Zap   } from 'lucide-react';
@@ -8,6 +17,7 @@ import { revolutionary2025MicroSaasServices   } from '../../data/revolutionary-2
 import { emergingTech2025Services   } from '../../data/emerging-tech-2025-services';
 import { enterpriseIT2025Services  } from '../../data/enterprise-it-2025-services';
 const RevolutionaryServicesShowcase: React.FC;
+<<<<<<< HEAD
 
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
@@ -15,10 +25,28 @@ import { ArrowRight, Star, TrendingUp, Users, Shield, Zap } from 'lucide-react';
 import { revolutionary2025MicroSaasServices } from '../../data/revolutionary-2025-micro-saas';
 import { emergingTech2025Services } from '../../data/emerging-tech-2025-services';
 import { enterpriseIT2025Services } from '../../data/enterprise-it-2025-services';
+=======
+<<<<<<< HEAD
+
+const containerVariants = {}
+    hidden: { opacity: 0}
+=======
+const filteredServices = activeCategory === 'all' ? allServices const containerVariants = {
+  hidden: {
+  opacity: 0 
+}
+visible: {
+  opacity: 1, transition: {
+  staggerChildren: 0.1 
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-43ef
+}
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 const RevolutionaryServicesShowcase: React.FC = () => {
   const [activeCategory, setActiveCategory] = useState($2);
   const [visibleServices, setVisibleServices] = useState($2);
   const categories = [
+<<<<<<< HEAD
     { id: 'all', name: 'All Services', count: revolutionary2025MicroSaasServices.length + emergingTech2025Services.length + enterpriseIT2025Services.length },
     { id: 'ai', name: 'AI & ML', count: [...revolutionary2025MicroSaasServices, ...emergingTech2025Services, ...enterpriseIT2025Services].filter(s = $2;
     { id: 'quantum', name: 'Quantum Tech', count: [...revolutionary2025MicroSaasServices, ...emergingTech2025Services, ...enterpriseIT2025Services].filter(s = $2;
@@ -123,6 +151,117 @@ const RevolutionaryServicesShowcase: React.FC;
       <div className="max-w-7xl mx-auto">;
         {/* Header */}
           initial={{ opacity: 0, y: 30 }}
+=======
+    {
+      id: 'all'
+      name: 'All Services'
+      count:
+        revolutionary2025MicroSaasServices.length +
+        emergingTech2025Services.length +
+        enterpriseIT2025Services.length
+    }
+    {
+      id: 'ai'
+      name: 'AI & ML'
+      count: [
+        ...revolutionary2025MicroSaasServices
+        ...emergingTech2025Services
+        ...enterpriseIT2025Services
+      ].filter(s => s.category.includes('AI')).length
+    }
+    {
+      id: 'quantum'
+      name: 'Quantum Tech'
+      count: [
+        ...revolutionary2025MicroSaasServices
+        ...emergingTech2025Services
+        ...enterpriseIT2025Services
+      ].filter(s => s.category.includes('Quantum')).length
+    }
+    {
+      id: 'emerging'
+      name: 'Emerging Tech'
+      count: emergingTech2025Services.length
+    }
+    {
+      id: 'enterprise'
+      name: 'Enterprise IT'
+      count: enterpriseIT2025Services.length
+    }
+    {
+      id: 'revolutionary'
+      name: 'Revolutionary'
+      count: revolutionary2025MicroSaasServices.length
+    },  ];
+  const allServices = [...revolutionary2025MicroSaasServices, ...emergingTech2025Services, ...enterpriseIT2025Services];
+  const filteredServices = activeCategory === 'all'
+    ? allServices
+    : allServices.filter(service => {
+        if (activeCategory === 'ai') return service.category.includes('AI');
+        if (activeCategory === 'quantum') return service.category.includes('Quantum');
+        if (activeCategory === 'emerging') return emergingTech2025Services.includes(service);
+        if (activeCategory === 'enterprise') return enterpriseIT2025Services.includes(service);
+        if (activeCategory === 'revolutionary') return revolutionary2025MicroSaasServices.includes(service);
+        return true
+      });
+  const loadMore = () => {
+    setVisibleServices(prev => Math.min(prev + 12, filteredServices.length));    setVisibleServices(prev => Math.min(prev + 12, filteredServices.length))
+  }
+  const containerVariants = {
+    hidden: { opacity: 0 }
+>>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
+    visible: {
+      opacity: 1
+      transition: {
+        staggerChildren: 0.1
+      }
+    },  };        staggerChildren: 0.1
+      }
+    }
+<<<<<<< HEAD
+  };
+
+const itemVariants = {}
+    hidden: { opacity: 0, y: 20}
+}
+<<<<<<< HEAD
+    visible: {
+      opacity: 1;
+y: 0;
+transition: {
+=======
+}
+const itemVariants = {
+  hidden: {
+  opacity: 0, y: 20 
+}
+visible: {
+  opacity: 1, y: 0, transition: {
+  duration: 0.5 
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-43ef
+}
+duration: 0.5}
+      }
+    }
+  };
+
+  return (
+    <section className='relative z-10 py-20 px-4 sm:px-6 lg:px-8' />;
+      <div className='max-w-7xl mx-auto' />;
+        {/* Header */}
+
+        <motion.div;
+className='text-center mb-16'
+
+          initial={{ opacity: 0, y: 30 }
+}
+<<<<<<< HEAD
+=======
+  }
+  const itemVariants = {
+          initial={{ opacity: 0, y: 30 }}
+>>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
@@ -443,6 +582,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     POPULAR
                   </div>
                 )}
+<<<<<<< HEAD
 
         <motion.div;
           className='grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 8 mb - 12';
@@ -454,6 +594,26 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           whileInView="visible";
         >;
           {filtered_services.slice (0, visible_services).map ((service, index) => (<motion.div;
+=======
+                {/* Service Header */}
+                <div className='relative z-10'>
+                  <div className='flex items-start justify-between mb-4'>
+                    <div className='flex items-center space-x-3'>
+                      <div className='text-4xl'>{service.icon}</div>
+                      <div>
+                        <h3 className='text-xl font-bold text-white group-hover:text-cyan-400 transition-colors duration-300'>
+        <motion.div;'
+          className='grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 8 mb - 12'
+          variants={container_variants}
+          initial='hidden'
+          whileInView='visible'          viewport={{ once: true }
+}          className=\'grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 8 mb - 12\'
+          variants={container_variants}"
+          initial=\'hidden\';"
+          whileInView=\"visible\"    />
+
+          {filtered_services.slice (0, visible_services).map ((service, index) => (<motion.div;}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
               key={service.id}
               variants={item_variants}
               className='group relative cursor - pointer';
@@ -466,6 +626,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   <div className='absolute inset - 0 bg - gradient - to - r from - cyan - 500 / 20 via - purple - 500 / 20 to - pink - 500 / 20 opacity - 0 group - hover:opacity - 100 transition - opacity duration - 500'></div>;
                   <div className='absolute inset - 0 bg - gradient - to - br from - transparent via - white / 5 to - transparent opacity - 0 group - hover:opacity - 100 transition - opacity duration - 700'></div>                </div>;
                 {/* Popular Badge */}
+<<<<<<< HEAD
                 {service.popular && (<div className='absolute -top - 3 -right - 3 bg - gradient - to - r from - yellow - 400 to - orange - 500 text - black text - xs font - bold px - 3 py - 1 rounded - full shadow - lg transform scale - 0 group - hover:scale - 100 transition - transform duration - 300'>;
                     <Star className='w - 3 h - 3 inline mr - 1' />                    POPULAR              style={{ perspective: '1000px' }}
             >;
@@ -489,6 +650,42 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                       <div className="text-4xl">{service.icon}</div>
                       <div>
                         <h3 className="text-xl font-bold text-white group-hover:text-cyan-400 transition-colors duration-300">
+=======
+                {service.popular && (<div className='absolute -top - 3 -right - 3 bg - gradient - to - r from - yellow - 400 to - orange - 500 text - black text - xs font - bold px - 3 py - 1 rounded - full shadow - lg transform scale - 0 group - hover:scale - 100 transition - transform duration - 300'    />;}
+                    <Star className='w - 3 h - 3 inline mr - 1'    />                    POPULAR              style={{ perspective: '1000px' }
+
+            >;"
+              <div className=\"absolute -inset - 1 rounded - 2xl bg - gradient - to - r from - cyan - 500 via - purple - 500 to - pink - 500 opacity - 0 blur - lg transition - all duration - 300 group - hover:opacity - 75\"    /></div>;"
+              <div className=\"relative bg - black / 80 backdrop - blur - xl border border - white / 10 rounded - 2xl p - 6 overflow - hidden h - full\"    />
+                {/* Background Effects */}"
+                <div className=\"absolute inset - 0 rounded - 2xl overflow - hidden\"    />;"
+                  <div className=\"absolute inset - 0 bg - gradient - to - r from - cyan - 500 / 20 via - purple - 500 / 20 to - pink - 500 / 20 opacity - 0 group - hover:opacity - 100 transition - opacity duration - 500\"    /></div>;"
+                  <div className=\"absolute inset - 0 bg - gradient - to - br from - transparent via - white / 5 to - transparent opacity - 0 group - hover:opacity - 100 transition - opacity duration - 700\"    /></div>
+                </div>
+                {/* Popular Badge */}
+                {service.popular && (<div className='absolute -top - 3 -right - 3 bg - gradient - to - r from - yellow - 400 to - orange - 500 text - black text - xs font - bold px - 3 py - 1 rounded - full shadow - lg transform scale - 0 group - hover:scale - 100 transition - transform duration - 300'    />;"
+                    <Star className='w - 3 h - 3 inline mr - 1'    />                  <div className=\"absolute -top - 3 -right - 3 bg - gradient - to - r from - yellow - 400 to - orange - 500 text - black text - xs font - bold px - 3 py - 1 rounded - full shadow - lg transform scale - 0 group - hover:scale - 100 transition - transform duration - 300\"    />;"
+                    <Star className=\"w - 3 h - 3 inline mr - 1\"    />
+                    POPULAR
+                  </div>)}
+                {/* Service Header */}'
+                <div className='relative z - 10'>;'
+                  <div className='flex items - start justify - between mb - 4'>;'
+                    <div className='flex items - center space - x-3'>;'
+                      <div className='text - 4xl'>{service.icon}</div>
+                      <div>;'
+                        <h3 className='text - xl font - bold text - white group - hover:text - cyan - 400 transition - colors duration - 300'>
+                      <div className='text-4xl'>{service.icon}</div>
+                      <div>'
+                        <h3 className='text-xl font-bold text-white group-hover:text-cyan-400 transition-colors duration-300'>
+                {/* Popular Badge */}
+                {service && service.popular && (<div className='absolute -top-3 -right-3 bg-gradient-to-r from-yellow-400 to-orange-500 text-black text-xs font-bold px-3 py-1 rounded-full shadow-lg transform scale-0 group-hover:scale-100 transition-transform duration-300'    />;"
+                    <Star className='w-3 h-3 inline mr-1'    />                  <div className=\"absolute -top-3 -right-3 bg-gradient-to-r from-yellow-400 to-orange-500 text-black text-xs font-bold px-3 py-1 rounded-full shadow-lg transform scale-0 group-hover:scale-100 transition-transform duration-300\"    />;"
+                    <Star className=\"w-3 h-3 inline mr-1\"    />
+                    POPULAR;}
+                  </div>;}
+                )}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
                           {service.name}
                         </h3>
                         <p className="text-gray-400 text-sm">{service.tagline}</p>
@@ -746,6 +943,7 @@ className='px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white fon
               href='/pricing'
           </h3>
 
+<<<<<<< HEAD
         {/* Call to Action */}
         <motion.div 
           className="text-center mt-20 p-8 bg-gradient-to-r from-cyan-500/10 via-purple-500/10 to-pink-500/10 rounded-2xl border border-cyan-500/20"
@@ -922,3 +1120,50 @@ export default RevolutionaryServicesShowcase;
     </section>)}export default RevolutionaryServicesShowcase)}export default RevolutionaryServicesShowcase;export default RevolutionaryServicesShowcase;})}export default RevolutionaryServicesShowcase;
           <div className = $2;
 export default RevolutionaryServicesShowcase,
+=======
+              className='px-8 py-4 border border-cyan-500/30 text-cyan-300 font-semibold rounded-xl hover: bg-cyan-500/10 transition-all duration-300'
+                />
+              View Pricing
+            </a>
+          </div>
+        </motion.div>
+      </div>
+    </section>
+  );
+}
+export default RevolutionaryServicesShowcase;  )
+}
+export default RevolutionaryServicesShowcase;
+<<<<<<< HEAD
+
+"
+=======
+}
+> <h2 className="text-5xl md:text-6xl font-bold text-white mb-6" > <span className="bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent" > Revolutionary 2025 </span> <br /> <span className="text-white" >Services</span> </h2> Transform your business with services that were once science fiction. </p> </motion.div> {
+  /* Category Filter */ 
+}<motion.div > {
+  categories.map ( (category) => (<button key= {
+  category.id 
+}activeCategory === category.id ? 'bg-gradient-to-r from-cyan-500 to-purple-600 text-white shadow-lg shadow-cyan-500/25' : 'bg-gray-800/50 text-gray-300 hover:bg-gray-700/50 border border-gray-600/50' 
+}` 
+}> </span> </button>) ) 
+}</motion.div> {
+  /* Services Grid */ 
+}<motion.div > {
+  filteredServices.slice (0, visibleServices) .map ( (service, index) => (<motion.div key= {
+  service.id 
+}POPULAR </div>) 
+}> <span>Get Started</span> <ArrowRight className="w-4 h-4 group-hover/btn:translate-x-1 transition-transform duration-300" /> </a> <button className="px-4 py-3 border border-white/20 hover:border-cyan-400/50 text-white rounded-lg transition-all duration-300 hover:bg-white/5" > Learn More </button> </div> </div> </div> </div> </motion.div>) ) 
+}</motion.div> {
+  /* Load More Button */ 
+}{
+  visibleServices < filteredServices.length && (<motion.div > Load More Revolutionary Services </button> </motion.div>) 
+}{
+  /* Call to Action */ 
+}<motion.div > <h3 className="text-3xl font-bold text-white mb-4" > Ready to Experience the Future? </h3> <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto" > Join the revolution with our cutting-edge AI, quantum, and emerging technology services. Transform your business and stay ahead of the competition. </p> <a href="/contact" className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30 shadow-lg shadow-cyan-500/25 hover:shadow-cyan-500/40" > Start Your Transformation </a> <a href="/pricing" className="px-8 py-4 border border-cyan-500/30 text-cyan-300 font-semibold rounded-xl hover:bg-cyan-500/10 transition-all duration-300" > View Pricing </a> </div> </motion.div> </div> </section>) 
+}
+export default RevolutionaryServicesShowcase
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-43ef
+=======
+>>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75

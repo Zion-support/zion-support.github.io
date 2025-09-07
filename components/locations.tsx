@@ -1,3 +1,6 @@
+<<<<<<< HEAD
+<Head> <title>Locations | Zion Tech Group</title> <meta name="description" content="Our office locations and contact information." /> <link rel="canonical" href="https://ziontechgroup.com/locations" /> </Head> </div> </div> </div>
+=======
 import React from 'react';
 import Head from 'next/head';
           or email{" "}import React from './react';
@@ -73,3 +76,4 @@ export default function LocationsPage() {
 		</div>
 	)
 }
+>>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7

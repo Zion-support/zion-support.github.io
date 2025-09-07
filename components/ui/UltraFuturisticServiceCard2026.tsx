@@ -1,3 +1,11 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+
+  id: string;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 
 import React from 'react';
     monthly?: number;
@@ -25,6 +33,7 @@ import React from 'react';
   competitors?: string[];
   targetMarket?: string;
   useCases?: string[];
+<<<<<<< HEAD
     switch (variant) {case 'ai':;
         return {}
     }
@@ -89,10 +98,53 @@ interface Service {
     currency?: string,
     trialDays?: number,
     setupTime?: string
+=======
+  integration?: string[],benefits?: string[];
+=======
+const UltraFuturisticServiceCard2026: React.FC<ServiceCardProps> = ({
+  service, variant = 'default' 
+}) => {
+  const getVariantStyles = () => {
+  switch (variant) {
+  case 'ai': return {
+  
+}
+}
+{
+  /* Popular Badge */ 
+}{
+  service.popular && (<motion.div > <Star className="w-4 h-4 inline mr-1" /> Popular </motion.div>) 
+}Key Features </h4> {
+  service.features.slice (0, 6) .map ( (feature, idx) => (<motion.div key= {
+  idx 
+}</motion.div>) ) 
+}</div> 
+}</div>) 
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-43ef
+}
+
+interface ServiceCardProps {
+  service: Service;
+  variant?: 'ai' | 'quantum' | 'space' | 'cybersecurity' | 'enterprise' | 'automation' | 'it' | 'emerging' | 'premium' | 'default'}
+}
+}
+<<<<<<< HEAD
+=======
+  id: string
+  name: string
+  tagline: string
+  description: string
+  price?: string | {monthly?: number
+    yearly?: number
+    currency?: string
+    trialDays?: number
+    setupTime?: string}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
   },
   period?: string,
   pricing?: any,
   features: string[],
+<<<<<<< HEAD
   popular?: boolean,
   category: string,
   icon: string,
@@ -103,16 +155,52 @@ interface Service {
   integration?: string[],
   benefits?: string[]
 }
+=======
+  popular?: boolean
+  category: string
+  icon: string
+  marketPrice?: string
+  competitors?: string[]
+  targetMarket?: string
+  useCases?: string[]
+  integration?: string[],benefits?: string[]
+interface ServiceCardProps {
+>>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 
 interface ServiceCardProps {
   service: Service,
   variant?: 'ai' | 'quantum' | 'space' | 'cybersecurity' | 'enterprise' | 'automation' | 'it' | 'emerging' | 'premium' | 'default'
 }
+<<<<<<< HEAD
 
 const UltraFuturisticServiceCard2026: React.FC<ServiceCardProps> = ({ service, variant = $2;
           borderColor: 'border-purple-400/30',
           textColor: 'text-purple-400',
           iconBg: 'bg-purple-500/20',
+=======
+<<<<<<< HEAD
+}
+=======
+}className= {
+  `w-full py-3 px-6 rounded-lg bg-gradient-to-r $ {
+  styles.gradient 
+}text-white font-semibold transition-all duration-300 hover:shadow-lg hover:shadow-$ {
+  styles.textColor 
+}/25 border border-white/20 hover:border-white/40` 
+}> Get Started </motion.button> </div> export default UltraFuturisticServiceCard2026
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-43ef
+=======
+const UltraFuturisticServiceCard2026: React.FC<ServiceCardProps> = ({ service, variant = 'default' }) => {
+  const getVariantStyles = () => {
+    switch (variant) {
+      case 'ai':
+        return {
+          gradient: 'from-purple-600 via-pink-600 to-purple-700'
+          borderColor: 'border-purple-400/30'
+          textColor: 'text-purple-400'
+          iconBg: 'bg-purple-500/20'
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
           iconBorder: 'border-purple-400/30'
         },
       case 'quantum':
@@ -331,6 +419,36 @@ export default UltraFuturisticServiceCard2026;
             </h4>
             <div className="space-y-2">
               {service.benefits.slice(0, 3).map((benefit, idx) => (
+<<<<<<< HEAD
                 <div key = $2;
 UltraFuturisticServiceCard2026.displayName = $2;
 export default UltraFuturisticServiceCard2026,
+=======
+                <div key={idx} className="text-xs text-gray-400 flex items-start space-x-2">
+                  <Check className="w-3 h-3 text-green-400 mt-0.5 flex-shrink-0" />
+                  <span>{benefit}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+        )}
+        {/* CTA Button */}
+        <div className="relative z-10">
+          <motion.button
+            whileHover={{ scale: 1.02 }}
+            whileTap={{ scale: 0.98 }}
+            className={`w-full py-3 px-6 rounded-lg bg-gradient-to-r ${styles.gradient} text-white font-semibold transition-all duration-300 hover:shadow-lg hover:shadow-${styles.textColor}/25 border border-white/20 hover:border-white/40`}
+          >
+            Get Started
+          </motion.button>
+        </div>
+        {/* Enhanced Hover Effects */}
+        <div className="absolute inset-0 bg-gradient-to-br from-white/0 via-white/0 to-white/0 group-hover: from-white/5 group-hover:via-white/2 group-hover:to-white/5 transition-all duration-500 rounded-2xl"></div>
+      </div>
+    </motion.div>
+  )
+});
+UltraFuturisticServiceCard2026.displayName = 'UltraFuturisticServiceCard2026';
+export default UltraFuturisticServiceCard2026;
+>>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75

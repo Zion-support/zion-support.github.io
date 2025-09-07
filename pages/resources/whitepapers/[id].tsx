@@ -1,5 +1,6 @@
 import React from 'react';
 import Head from 'next/head';
+<<<<<<< HEAD
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 // Mock whitepaper data - in a real app, this would come from an API or database
@@ -73,15 +74,19 @@ export default function WhitepaperPage() {
     )
   }
 
+=======
+import Layout from '../../components/layout/Layout';
+
+export default function [id]() {
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
   return (
-    <>
+    <Layout>
       <Head>
-        <title>{whitepaper.title} | Zion Tech Group</title>
-        <meta name="description" content={whitepaper.description} />
-        <meta property="og:title" content={whitepaper.title} />
-        <meta property="og:description" content={whitepaper.description} />
+        <title>[Id] - Zion Tech Group</title>
+        <meta name="description" content="[Id] solutions and services." />
       </Head>
       
+<<<<<<< HEAD
       <div className="min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 text-white">
         <main className="container mx-auto px-6 py-12">
           {/* Breadcrumb */}
@@ -202,4 +207,16 @@ export default function WhitepaperPage() {
       </div>
     </>
   )
+=======
+      <div className="min-h-screen bg-gray-50">
+        <div className="container mx-auto px-6 py-16">
+          <h1 className="text-4xl font-bold text-gray-900 mb-8">[Id]</h1>
+          <p className="text-lg text-gray-600">
+            Professional [id] solutions tailored to your business needs.
+          </p>
+        </div>
+      </div>
+    </Layout>
+  );
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 }

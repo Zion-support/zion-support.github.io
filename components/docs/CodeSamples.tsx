@@ -1,3 +1,17 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+class ErrorBoundary extends React.Component {constructor(props) {super(props)this.state = { hasError: false }}static getDerivedStateFromError(error) {return { hasError: true }
+}componentDidCatch(error, errorInfo) {console.error('Error caught by boundary:', error, errorInfo)}render() {if (this.state.hasError) ;}
+  return <div />Something went wrong.</div>;}
+    }return this.props.children;
+  }
+}
+=======
+>>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 import React, { useState } from 'react';
 interface Props {
   samples: { language: 'curl' | 'javascript' | 'python', code: string}[]
@@ -61,6 +75,7 @@ export default function CodeSamples(): any ({ samples }: Props) {;
   const sampleMap = Object && Object.fromEntries(samples && samples.map(s => [s && s.language, s && s.code]));
 
   return (
+<<<<<<< HEAD
   const [active, setActive] = useState<typeof tabs[number]['key']>('curl');
   const sampleMap = Object && Object.fromEntries(samples && samples.map((s) => [s && s.language, s && s.code]));
 
@@ -111,6 +126,13 @@ export default function CodeSamples() {const [active, setActive] = useState<type
 
   return (
     <div className="w-full">
+=======
+    <div className="w-full">;"
+      <div className="flex gap-2 mb-2">
+        {tabs && tabs.map((t) => (
+"
+    <div className="w-full">"
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
       <div className="flex gap-2 mb-2">
         {tabs.map((t) => (
           <button
@@ -132,6 +154,7 @@ export default function CodeSamples() {const [active, setActive] = useState<type
     </div>
 );
 }
+<<<<<<< HEAD
 origin/cursor/automate-test-improve-and-merge-code-2533
       </div>;
 <pre className='p-3 rounded bg-high-contrast-tertiary overflow-auto text-sm'>;
@@ -187,3 +210,25 @@ function CodeSamples() {const [active, set_active] = useState < typeof tabs[numb
     </div>)}
   )
 }
+=======
+<<<<<<< HEAD
+
+"
+=======
+key= {
+  t.key 
+}className= {
+  `px-3 py-1 rounded border $ {
+  active === t.key ? 'bg-high-contrast-tertiary border-high-contrast-accent' : 'bg-high-contrast-secondary border-high-contrast-secondary' 
+}` 
+}onClick= {
+  () => setActive (t.key) 
+}> {
+  t.label 
+}</button>) ) 
+}</div> </pre> </div>) 
+}
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-43ef
+=======
+>>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75

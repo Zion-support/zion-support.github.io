@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 ;
 import React, { useEffect, useRef } from 'react';
@@ -10,6 +11,29 @@ canvas.width = window.innerWidth;
 
 let animationFrameId: number;
 canvas.height = window.innerHeight;let animationFrameId: number;
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+
+=======
+>>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
+import React, { useEffect, useRef } from 'react';
+import { motion } from 'framer-motion';
+interface UltraAdvancedQuantumBackgroundProps {
+  children: React.ReactNode;
+  className?: string
+}
+
+<<<<<<< HEAD
+const UltraAdvancedQuantumBackground: React.FC<UltraAdvancedQuantumBackgroundProps /> = ({children;
+  className;
+canvas.width = window.innerWidth;
+
+canvas.height = window.innerHeight;
+let animationFrameId: number;
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 let particles: Particle[] = [];
 let quantumFields: QuantumField[] = [];
 let neuralNetworks: NeuralNetwork[] = [];
@@ -24,23 +48,75 @@ this.size = Math.random () * 3 + 1;
 this.color = `hsl ($ {this.radius = Math.random () * 100 + 50;
 this.intensity = Math.random () * 0.5 + 0.5;
 this.phase = Math.random () * Math.PI * 2;
+<<<<<<< HEAD
 this.color = `hsl ($ {
 
   200 + Math.random () * 60
+=======
+
+=======
+canvas.width = window.innerWidth
+canvas.height = window.innerHeight
+let animationFrameId: number
+let particles: Particle[] = []
+let quantumFields: QuantumField[] = []
+let neuralNetworks: NeuralNetwork[] = []
+class Particle {
+  x: number
+y: number
+vx: number
+vy: number
+size: number
+color: string
+life: number
+maxLife: number
+constructor () {
+  this.x = Math.random () * canvas.width
+this.y = Math.random () * canvas.height
+this.vx = (Math.random () - 0.5) * 2
+this.vy = (Math.random () - 0.5) * 2
+this.size = Math.random () * 3 + 1
+this.color = `hsl ($ {
+  Math.random () * 360 
+}, 70%, 60%) `
+this.life = Math.random () * 100
+this.maxLife = 100 
+}if (this.x < 0 || this.x > canvas.width) this.vx *= -1
+if (this.y < 0 || this.y > canvas.height) this.vy *= -1
+if (this.life <= 0) {
+  constructor () {
+  this.x = Math.random () * canvas.width
+this.y = Math.random () * canvas.height
+this.radius = Math.random () * 100 + 50
+this.intensity = Math.random () * 0.5 + 0.5
+this.phase = Math.random () * Math.PI * 2
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-43ef
+this.color = `hsl ($ {
+}
+  200 + Math.random () * 60}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 }, 80%, 60%) `
 const UltraAdvancedQuantumBackground: React.FC<
-  UltraAdvancedQuantumBackgroundProps
-> = ({ children, className = '' }) => {
-  const canvasRef = useRef<HTMLCanvasElement>(null);
+  UltraAdvancedQuantumBackgroundProps;
+> = ({ children, className = ''    }) => {
 
+ ;
+  const canvasRef = useRef<HTMLCanvasElement />(null);
 
+<<<<<<< HEAD
+
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
   useEffect(() => {
+
     const canvas = canvasRef.current;
     if (!canvas) return;
-    const ctx = canvas.getContext('2d');
+
+const ctx = canvas.getContext('2d');
     if (!ctx) return;
     canvas.width = window.innerWidth;
     canvas.height = window.innerHeight;
+<<<<<<< HEAD
 this.color = `hsl ($ {200 + Math.random () * 60;
   200 + Math.random () * 60;
 this.color = `hsl ($ {200 + Math.random () * 60;
@@ -70,6 +146,12 @@ if (return) {$2;
     let animationFrameId: number;
     let particles: Particle[] = [];
     canvas.height = window.inner_height;let animationFrameId: number;let animationFrameId: number;let particles: Particle[] = [];
+=======
+
+let animationFrameId: number;
+    let particles: Particle[] = [];
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
     let quantum_fields: QuantumField[] = [];
     let neural_networks: NeuralNetwork[]  = [];class Particle {coordinate_x: number;
       coordinate_y: number;
@@ -77,8 +159,38 @@ if (return) {$2;
       vy: number;
       size: number;
       color: string;
+<<<<<<< HEAD
       life: number;vx: number,vy: number,size: number,color: string,life: number,maxLife: number;
       constructor() {this.x = Math.random() * canvas.width;
+=======
+
+      life: number;
+
+      maxLife: number;
+      constructor() {
+=======
+const UltraAdvancedQuantumBackground: React.FC<UltraAdvancedQuantumBackgroundProps    /> = ({children
+  className
+    const canvas = canvasRef.current
+    if (!canvas) return
+const ctx = canvas.getContext('2d')
+    if (!ctx) return
+    canvas.width = window.innerWidth
+    canvas.height = window.innerHeight
+let animationFrameId: number
+    let particles: Particle[] = []
+    let quantum_fields: QuantumField[] = []
+    let neural_networks: NeuralNetwork[]  = [];class Particle {coordinate_x: number
+      coordinate_y: number
+      vx: number
+      vy: number
+      size: number
+      color: string
+      life: number
+      maxLife: number
+>>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
+        this.x = Math.random() * canvas.width;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
         this.y = Math.random() * canvas.height;
         this.vx = (Math.random() - 0.5) * 2;
         this.vy = (Math.random() - 0.5) * 2;
@@ -217,6 +329,7 @@ if (return) {$2;
       phase: number;
       color: string;
 
+<<<<<<< HEAD
       constructor() {
         this.x = Math.random() * canvas.width;
     class QuantumField {coordinate_x: number;
@@ -254,6 +367,53 @@ this.color = `hsl(${200 + Math.random() * 60}, 80%, 60%)`;
           for (let i = 0, i < layerSize, i++) {
             const x = (layerIndex / (layers.length - 1)) * canvas.width;
             const y = (i / (layerSize - 1)) * canvas.height;
+=======
+    class QuantumField {        ctx.restore ()
+    class QuantumField {}
+      coordinate_x: number
+      coordinate_y: number
+        ctx.save()
+        ctx.globalAlpha = this.life / this.maxLife
+        ctx.fillStyle = this.color
+        ctx.beginPath()ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2)ctx.fill()ctx.restore()}
+
+    class QuantumField {
+x: number
+      y: number
+      radius: number
+      intensity: number
+      phase: number
+      color: string
+class AutoGeneratedClass {
+  constructor($2) {
+        this.x = Math.random() * canvas.width
+        this.y = Math.random() * canvas.height
+        this.radius = Math.random() * 100 + 50
+        this.intensity = Math.random() * 0.5 + 0.5;}
+        this.phase = Math.random() * Math.PI * 2;}
+this.color = `hsl(${200 + Math.random() * 60}, 80%, 60%)`
+  update($2) {this.phase += 0.02;}
+      }draw() {if (!ctx) return
+        ctx.save()ctx.globalAlpha = this.intensity * (0.5 + 0.5 * Math.sin(this.phase))ctx.strokeStyle = this.color;}
+        ctx.lineWidth = 2;}
+        ctx.beginPath()ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2)ctx.stroke()ctx.restore()}
+
+    class NeuralNetwork {nodes: { x: number; y: number; connections: number[],}
+}[]
+      connections: { from: number; to: number; weight: number,}
+}[]
+class AutoGeneratedClass {
+  constructor($2) {
+        this.nodes = []
+        this.connections = []
+        // Create neural network structure
+const layers = [5, 8, 6, 4]
+        let nodeIndex = 0
+        layers.forEach((layerSize, layerIndex) => {}
+  for($2) {}
+            const x = (layerIndex / (layers.length - 1)) * canvas.width
+            const y = (i / (layerSize - 1)) * canvas.height
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
             this.nodes.push({ x, y, connections: [] })
             // Connect to previous layer
             if (layerIndex > 0) {
@@ -404,8 +564,22 @@ node.y += (Math.random() - 0.5) * 0.5;
       update() {
         // Animate neural network
         this.nodes.forEach((node, index) => {
+<<<<<<< HEAD
           node.x += (Math.random() - 0.5) * 0.5,
           node.y += (Math.random() - 0.5) * 0.5
+=======
+          node.x += (Math.random() - 0.5) * 0.5;
+<<<<<<< HEAD
+}
+<<<<<<< HEAD
+node.y += (Math.random() - 0.5) * 0.5;}
+        })}
+      draw() {if (!ctx) return;
+        ctx.save()// Draw connections;
+=======
+          node.y += (Math.random() - 0.5) * 0.5;
+        });      }          node.y += (Math.random() - 0.5) * 0.5
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
         })
       }
 
@@ -413,6 +587,7 @@ node.y += (Math.random() - 0.5) * 0.5;
         if (!ctx) return,
         ctx.save($2);
         // Draw connections
+<<<<<<< HEAD
         ctx.strokeStyle = 'rgba(100, 200, 255, 0.3)',
         ctx.lineWidth = $2;
         this.connections.forEach($2);
@@ -421,6 +596,19 @@ node.y += (Math.random() - 0.5) * 0.5;
           ctx.stroke()
         }),
 
+=======
+>>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
+        ctx.strokeStyle = 'rgba(100, 200, 255, 0.3)';
+        ctx.lineWidth = 1;
+        this.connections.forEach(connection => {
+          const from = this.nodes[connection.from];
+          const to = this.nodes[connection.to];
+          ctx.beginPath();
+          ctx.moveTo(from.x, from.y);
+          ctx.lineTo(to.x, to.y);
+          ctx.stroke();        });          ctx.stroke()
+        });
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
         // Draw nodes
         ctx.fillStyle = 'rgba(100, 200, 255, 0.8)',
         this.nodes.forEach($2);
@@ -633,6 +821,7 @@ className='absolute top-20 left-20 w-32 h-32 bg-gradient-to-r from-cyan-400 to-b
           delay: 1}}
       />
 
+<<<<<<< HEAD
       <motion.div
         className="absolute bottom-32 left-1/3 w-28 h-28 bg-gradient-to-r from-green-400 to-emerald-500 rounded-full opacity-20 blur-xl"
         animate={{
@@ -701,6 +890,24 @@ className='absolute bottom-32 left-1/3 w-28 h-28 bg-gradient-to-r from-green-400
         ref={canvas_ref}
         className='absolute inset - 0 w - full h - full opacity - 60'        style={{ z_index: 1 }}
       />;
+=======
+      {/* Content Layer */}'"
+      <div className='relative z-10'>{children}</div>        className="absolute inset-0 w-full h-full opacity-60"
+        style={{ zIndex: 1 }}
+
+      <div className='absolute bottom-0 left-0 right-0 h-32 overflow-hidden'>
+        <motion&& motion.div'
+          className='absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-cyan-500/20 to-transparent'
+          animate={{}
+            x: [0, -100, 0]
+      />
+      {/* Quantum Canvas */}
+      <canvas
+        ref={canvas_ref}
+        className='absolute inset - 0 w - full h - full opacity - 60'        style={{ z_index: 1 ,}
+
+         />
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
       {/* Content Layer */}
           }}
           transition={{duration: 8;
@@ -750,6 +957,7 @@ className='absolute bottom-32 left-1/3 w-28 h-28 bg-gradient-to-r from-green-400
       </div>
     </div>
   )
+<<<<<<< HEAD
 },
 
           transition={{duration: 10;
@@ -780,6 +988,8 @@ export default UltraAdvancedQuantumBackground;
 
 export default UltraAdvancedQuantumBackground;            ease: "linear",;
             delay: 2;
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
           }}
         />;
       </div>;
@@ -806,6 +1016,40 @@ export default UltraAdvancedQuantumBackground;            ease: "linear",;
       </div>;
     </div>;
 
+<<<<<<< HEAD
 
       {/* Content Layer */}
 export default UltraAdvancedQuantumBackground,
+=======
+export default UltraAdvancedQuantumBackground;            ease: "linear",
+            delay: 2
+          }}
+        />
+      </div>
+    </div>
+  );
+}
+export default UltraAdvancedQuantumBackground;  )
+}
+export default UltraAdvancedQuantumBackground;
+<<<<<<< HEAD
+
+=======
+}// Initialize neuralNetworks.push (new NeuralNetwork () )
+}
+}ctx.restore ()
+animationFrameId = requestAnimationFrame (animate) 
+}
+animate ()
+window.addEventListener ('resize', handleResize)
+</div> {
+  /* Floating Quantum Elements */ 
+}<motion.div /> {
+  /* Quantum Canvas */ 
+}<canvas /> </div> </div>) 
+}
+export default UltraAdvancedQuantumBackground
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-43ef
+=======
+>>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75

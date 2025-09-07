@@ -1,3 +1,16 @@
+<<<<<<< HEAD
+}load () 
+}, [userId])
+</li>) ) 
+}</ul> </div>) 
+}<strong>Operator GPT Analysis:</strong> {
+  data.reasonSummary 
+}</div>) 
+}</div> </form> </div>) 
+}</div> </div>) 
+}</div> </EnhancedLayout>) 
+}
+=======
 import React, { useEffect, useState } from 'react';
 import EnhancedLayout from '../components/layout/EnhancedLayout';
 import TrustBadge from '../components/ui/TrustBadge';
@@ -380,3 +393,4 @@ function submit_appeal() {e.prevent_default ()const form = e.target as HTMLFormE
     </EnhancedLayout>
   )
 }
+>>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7

@@ -1,10 +1,24 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
 
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
+
+import React from \"react\";
+
+=======
 import React from "react";
+<<<<<<< HEAD
+=======
+>>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 export type Badge = any;
 
 import React from 'react';
   id: string;
 label: string;
+<<<<<<< HEAD
 
 ;
 import React from 'react';
@@ -30,6 +44,44 @@ export default function Badges(): any ({ balance }: { balance: number }) {;
 
 export default function Badges({ balance }: { balance: number }) {
   const active = currentBadge(balance);
+=======
+threshold: number, //token balance threshold
+}
+const BADGES: Badge[] = [
+  { id: 'starter', label: 'Starter', threshold: 50 }
+  { id: 'rising', label: 'Rising Star', threshold: 200 }
+  { id: 'pro', label: 'Pro', threshold: 500 }
+  { id: 'elite', label: 'Elite', threshold: 1000 }
+];
+export function currentBadge(balance: number): Badge | null {
+  let current: Badge | null = null;
+  return current;
+export default function Badges({ balance }: { balance: number }) {;
+  const active = currentBadge(balance);
+  return (
+    <div className='flex gap-2 items-center flex-wrap'>
+      {BADGES.map(b => (        <span
+          key={b.id}
+          className={`px-3 py-1 rounded-full text-xs border ${
+            balance >= b.threshold
+              ? 'bg-yellow-100 border-yellow-300 text-yellow-800'
+              : 'bg-gray-100 border-gray-200 text-gray-500'          }`}  let current: Badge | null = null
+  for (const b of BADGES) {
+    if (balance >= b.threshold) current = b
+  }
+  return current
+}
+export default function Badges({ balance }: { balance: number }) {
+  const active = currentBadge(balance);
+
+  return (
+    <div className='flex gap-2 items-center flex-wrap'>
+      {BADGES.map(b => (    <div className="flex gap-2 items-center flex-wrap">
+      {BADGES.map((b) => (
+
+export default function Badges({ balance }: { balance: number ;}) {
+  const active = currentBadge(balance)
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
   return (
 <div className='flex gap-2 items-center flex-wrap'>
       {BADGES.map(b => (
@@ -131,6 +183,7 @@ export default function Badges({ balance }: { balance: number}) {
   )
       {active && (
   );
+<<<<<<< HEAD
 
 }
   );
@@ -151,3 +204,39 @@ export default function Badges({ balance }: { balance: number}) {
   )
   )
 }
+=======
+<<<<<<< HEAD
+
+"
+=======
+export type Badge = {
+  id: string
+label: string
+threshold: number, //token balance threshold 
+}
+const BADGES: Badge[] = [ export function currentBadge (balance: number) : Badge | null {
+  let current: Badge | null = null
+for (const b of BADGES) {
+  if (balance >= b.threshold) current = b 
+}return current
+}export default function Badges ({
+  balance 
+}: {
+  balance: number 
+}) {
+  const active = currentBadge (balance)
+return (<div className="flex gap-2 items-center flex-wrap" > BADGES.map ( (b) => (<span key= {
+  b.id 
+}className= {
+  `px-3 py-1 rounded-full text-xs border $ {
+  balance >= b.threshold > {
+  b.label 
+}</span>) ) 
+}) 
+}</div>) 
+}
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-43ef
+=======
+}
+>>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75

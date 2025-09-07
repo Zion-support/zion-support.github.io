@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
@@ -42,6 +43,8 @@ import { describe, it, expect } from 'vitest';
 
 
 
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 import { render, screen } from '@testing-library/react'
 import { describe, it, expect } from 'vitest'
 import AIChatAssistant from './AIChatAssistant'
@@ -137,6 +140,7 @@ import { render,screen } from '@testing-library/react'; import { describe,it,exp
 <<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 import { render,screen } from '@testing-library/react'; import { describe,it,expect } from 'vitest'; import AIChatAssistant from './AIChatAssistant'; ; describe('AIChatAssistant', () => {; it('renders without crashing', () => {; render(<AIChatAssistant />); expect(screen.getByRole('main')).toBeInTheDocument();,}); ; it('displays correct content', () => {; render(<AIChatAssistant />)}); ; it('handles user interactions'
+<<<<<<< HEAD
 import { render,screen } from '@testing-library/react'; import { describe,it,expect } from 'vitest'; import AIChatAssistant from './AIChatAssistant'; ; describe('AIChatAssistant',() => {; it('renders without crashing',() => {; render(<AIChatAssistant />); expect(screen.getByRole('main')).toBeInTheDocument(),}); ; it('displays correct content',() => {; render(<AIChatAssistant />)}); ; it('handles user interactions',() => {; render(<AIChatAssistant />)}),});
 import { render,screen } from '@testing-library/react'; import { describe,it,expect } from 'vitest'; import AIChatAssistant from './AIChatAssistant'; ; describe('AIChatAssistant',() => {; it('renders without crashing',() => {; render(<AIChatAssistant />); expect(screen.getByRole('main')).toBeInTheDocument(),}); ; it('displays correct content',() => {; render(<AIChatAssistant />)}); ; it('handles user interactions',() => {; render(<AIChatAssistant />)}),});
 import { render,screen } from '@testing-library/react'; import { describe,it,expect } from 'vitest'; import AIChatAssistant from './AIChatAssistant'; ; describe('AIChatAssistant',() => {; it('renders without crashing',() => {; render(<AIChatAssistant />); expect(screen.getByRole('main')).toBeInTheDocument(),}); ; it('displays correct content',() => {; render(<AIChatAssistant />)}); ; it('handles user interactions',() => {; render(<AIChatAssistant />)}),});
@@ -171,3 +175,5 @@ ursor/integrate-build-improve-and-re-verify-8f7d
 >>>>>>> 470476d15542c973cf650505a68f6472f0b68c9f
 =======
 >>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 
@@ -105,6 +106,14 @@ function SecurityAudit() {
 };
 </pre> </div>) 
 
+=======
+<<<<<<< HEAD
+}
+}
+</pre> </div>) 
+}
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 import fs from 'fs',
 import path from 'path';
 import type { GetStaticProps } from 'next';
@@ -136,6 +145,7 @@ export default function SecurityAudit({ report }: Props) {
   )})}
 );
 }
+<<<<<<< HEAD
 
 
 origin/cursor/automate-test-improve-and-merge-code-2533
@@ -144,3 +154,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   );
 }
 
+=======
+>>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75

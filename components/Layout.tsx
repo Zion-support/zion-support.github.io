@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 ;
 
@@ -38,10 +39,17 @@ class ErrorBoundary extends React.Component {
   }
 }
 
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+import React, { ReactNode } from 'react';
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 import React from "react";
 import Head from "next/head";
 import Header from "./Header";
 import Footer from "./Footer";
+<<<<<<< HEAD
 interface LayoutProps {
   children: React.ReactNode;
 interface LayoutProps {;
@@ -196,6 +204,10 @@ export default Layout;
 
 
 import React, { useState } from 'react';
+=======
+import React from 'react';
+>>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 import Head from 'next/head';
 import Header from './Header';
 import Footer from './Footer';
@@ -217,6 +229,7 @@ import {
 } from 'lucide-react';
 
 interface LayoutProps {
+<<<<<<< HEAD
   title?: string;
   description?: string;
   keywords?: string;
@@ -280,12 +293,34 @@ interface LayoutProps {
 }
 
 const Layout: React.FC<LayoutProps> = ({ children }) => {
+=======
+  children: React.ReactNode
+  title?: string
+  description?: string
+class ErrorBoundary extends React.Component<
+  { children: React.ReactNode },
+  { hasError: boolean }
+> {
+  constructor($2) {
+    super(props)
+    this.state = { hasError: false }
+  static getDerivedStateFromError(error: Error) {
+    return { hasError: true }
+  componentDidCatch($2) {
+    console.error('Error caught by boundary:', error, errorInfo)
+  render($2) {
+  if($2) {
+      return <div>Something went wrong.</div>
+    return this.props.children
+export default function Layout({ children, title, description }: LayoutProps) {
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
   return (
     <div className="min-h-screen flex flex-col">
       <Navigation />
       <main className="flex-1">{children}</main>
       <Footer />
     </div>
+<<<<<<< HEAD
 origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
   );
 };
@@ -297,3 +332,29 @@ main
 
 origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 
+=======
+  );
+}
+<<<<<<< HEAD
+=======
+import React, { ReactNode } from "react"
+interface LayoutProps {
+  children: ReactNode
+}
+
+const Layout: React.FC<LayoutProps> = ({ children }) => {
+  return (
+    <main className="min-h-screen">
+      {children}
+    </main>
+  )
+}
+export default Layout
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-43ef
+=======
+export default Layout;
+  );
+};
+export default Layout;
+>>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75

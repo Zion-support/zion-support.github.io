@@ -1,5 +1,6 @@
 import React from 'react';
 import Head from 'next/head';
+<<<<<<< HEAD
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { 
@@ -116,18 +117,18 @@ const testimonials = $2;
 ],
 
 export default function InnovativeBusinessSolutions() {
+=======
+import Layout from '../components/layout/Layout';
+
+export default function innovativebusinesssolutions() {
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
   return (
     <Layout>
       <Head>
         <title>Innovative Business Solutions - Zion Tech Group</title>
-        <meta name="description" content="Revolutionary AI-powered business solutions including business intelligence, marketing automation, sales intelligence, customer service, and HR management. Transform your business operations with intelligent automation." />
-        <meta name="keywords" content="business solutions, AI automation, business intelligence, marketing automation, sales intelligence, customer service, HR management" />
-        <meta property="og:title" content="Innovative Business Solutions - Zion Tech Group" />
-        <meta property="og:description" content="Revolutionary AI-powered business solutions including business intelligence, marketing automation, sales intelligence, customer service, and HR management." />
-        <meta property="og:url" content="https://ziontechgroup.com/innovative-business-solutions" />
-        <meta property="og:type" content="website" />
-        <link rel="canonical" href="https://ziontechgroup.com/innovative-business-solutions" />
+        <meta name="description" content="Innovative Business Solutions solutions and services." />
       </Head>
+<<<<<<< HEAD
 
       {/* Hero Section */}
       <section className="relative py-20 lg:py-32 overflow-hidden">
@@ -405,4 +406,17 @@ export default function InnovativeBusinessSolutions() {
       </section>
     </Layout>
   )
+=======
+      
+      <div className="min-h-screen bg-gray-50">
+        <div className="container mx-auto px-6 py-16">
+          <h1 className="text-4xl font-bold text-gray-900 mb-8">Innovative Business Solutions</h1>
+          <p className="text-lg text-gray-600">
+            Professional innovative business solutions solutions tailored to your business needs.
+          </p>
+        </div>
+      </div>
+    </Layout>
+  );
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 }

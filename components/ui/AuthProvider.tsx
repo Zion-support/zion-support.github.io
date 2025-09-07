@@ -1,8 +1,36 @@
+<<<<<<< HEAD
 import React, { createContext, useContext, useEffect, useState } from 'react';
 type UserRole = $2;
 type AuthContextType = $2;
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+
+=======
+>>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
+import React, { createContext, useContext, useEffect, useState } from 'react';
+type UserRole = any;
+type UserRole = 'talent' | 'client';
+type AuthContextType = {
+  role: UserRole;
+  setRole: (role: UserRole) => void;
+}
+const AuthContext = createContext<AuthContextType>({
+  role: 'talent'
+  setRole: () => {}
+});  role: UserRole
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
   setRole: (role: UserRole) => void
 },
+<<<<<<< HEAD
+=======
+})
+export function AuthProvider({ children }: { children: React.ReactNode,}
+}) {
+  const [role, setRoleState] = useState<UserRole    />('talent')
+  useEffect(() => {
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 
 const AuthContext = createContext<AuthContextType>({ role: 'talent', setRole: () => {} }),
 
@@ -11,6 +39,7 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
 
   useEffect(() => {
     try {
+<<<<<<< HEAD
       const stored = $2;
       if (stored === 'talent' || stored === 'client') {
       if (stored === 'talent' |stored === 'client') {
@@ -67,6 +96,28 @@ const AuthContext = createContext<AuthContextType>({role: 'talent',setRole: () =
 
 export function useAuth() {;
   return useContext(AuthContext);    <AuthContext.Provider value={{ role, setRole }}>{children}</AuthContext.Provider>
+=======
+      const stored = window.localStorage.getItem('userRole') as UserRole | null;
+      if (stored === 'talent' |stored === 'client') {
+        setRoleState(stored);      }        setRoleState(stored)
+      }
+    } catch {}
+  }, [])
+const setRole = (
+    setRoleState(r)
+try {
+      window.localStorage.setItem('userRole', r)
+) => {
+  return $3;}
+
+      document.cookie = `userRole=${r}; path=/; max-age=${60 * 60 * 24 * 365}`
+    } catch {}
+
+  return (<AuthContext.Provider value={{ role, setRole }}    />
+      {children}
+
+    </AuthContext.Provider>
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
   )
 }
 
@@ -88,3 +139,27 @@ return useContext(AuthContext);
 export function useAuth() {
   return useContext(AuthContext)
 }
+<<<<<<< HEAD
+=======
+return useContext(AuthContext);
+}
+<<<<<<< HEAD
+}
+=======
+type UserRole = 'talent' | 'client'
+useEffect ( () => {
+  try {
+  
+}catch {
+  
+}
+}, [])
+}catch {
+  
+}
+}
+return (
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-43ef
+=======
+>>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75

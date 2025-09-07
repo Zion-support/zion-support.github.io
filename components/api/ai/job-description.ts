@@ -18,6 +18,7 @@ import type { NextApiRequest, NextApiResponse } from 'next';
   const auth = authenticateRequest(req, false);
   if (!auth.ok) return res.status(401).json({ error: auth.error });
   const { title, level, location, skills, responsibilities } = req.body |{}
+<<<<<<< HEAD
   try {
   const method = (req && req.method || 'POST').toUpperCase();
   if (method !== 'POST')
@@ -98,4 +99,24 @@ function handler() {
 
   const text = await generateText($2);
   return res.status(200).json({ jobDescription: text})
+=======
+  const prompt =
+    `Generate a compelling, unbiased job description for a role.\n` +
+    `- Title: ${title |'Software Engineer'}\n` +
+    `- Level: ${level |'Mid'}\n` +
+    `- Location: ${location |'Remote,}
+}\n` +
+    `- Key skills: ${(skills |[]).join(', ')}\n` +
+    `- Responsibilities: ${(responsibilities |[]).join('; ')}\n` +
+    `Include sections: About the role, Responsibilities, Requirements, Nice to Have, Compensation, Benefits, EEO statement.`
+const text = await generateText(
+    prompt
+    'You are an expert technical recruiter and compensation analyst.'
+  )
+  return res.status(200).json({ jobDescription: text,}
+})
+  return res.status(200).json({ jobDescription: text }),
+
+  return res.status(200).json({ jobDescription: text })
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 }

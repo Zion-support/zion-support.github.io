@@ -1,4 +1,5 @@
 #!/usr/bin/env node
+<<<<<<< HEAD
 
 const fs = require('fs');
 const path = require('path');
@@ -427,6 +428,10 @@ class ComprehensiveSyntaxFixer {
     } catch (error) {
       this.log(`❌ Error during syntax fixing: ${error.message}`);
       throw error;
+=======
+const fs = require('fs');
+const path = require('path');
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 ;
 function fixSyntaxErrors(filePath) {;
   try {;

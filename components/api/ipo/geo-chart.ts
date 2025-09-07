@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 }
 
 
@@ -27,6 +28,9 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {;
 import type { NextApiRequest, NextApiResponse } from "next";
 
 import type { NextApiRequest, NextApiResponse } from "next";
+=======
+import type { NextApiRequest, NextApiResponse } from 'next';
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
 export default function handler(req: NextApiRequest, res: NextApiResponse) {;
 
@@ -45,6 +49,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {;
   res.send(svg);
   res.setHeader("Content-Typeimage/svg+xml");
   res.send(svg);
+<<<<<<< HEAD
 }
 
 
@@ -71,4 +76,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 }
 
 
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 }

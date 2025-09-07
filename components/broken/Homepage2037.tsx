@@ -1,3 +1,14 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+import React from 'react',
+import Layout from './layout/Layout',
+import UltraFuturisticServiceCard2026 from './ui/UltraFuturisticServiceCard2026',
+>>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
+import Link from 'next/link';
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 import { motion } from 'framer-motion';
 
 import {
@@ -91,6 +102,7 @@ const Homepage2037: React.FC = () => {
       <main className="relative z-10">
         {/* Hero Section */}
 
+<<<<<<< HEAD
         <section className="min-h-screen flex items-center justify-center px-4 relative">
           {/* Animated background elements */}
           <div className="absolute inset-0 overflow-hidden">
@@ -160,6 +172,70 @@ const Homepage2037: React.FC = () => {// Get featured services from each categor
           </div>;<div className="text-center max-w-5xl mx-auto relative z-10">;
             <motion&& motion.div;
               initial={{ opacity: 0, y: 30 }}
+=======
+        <section className=\"min-h-screen flex items-center justify-center px-4 relative\"    />
+          {/* Animated background elements */}"
+          <div className=\"absolute inset-0 overflow-hidden\"    />;"
+            <div className=\"absolute top-20 left-20 w-72 h-72 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 rounded-full blur-3xl animate-pulse\"    /></div>;"
+            <div className=\"absolute bottom-20 right-20 w-96 h-96 bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-full blur-3xl animate-pulse delay-1000\"    /></div>;"
+            <div className=\"absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-80 h-80 bg-gradient-to-r from-green-500/20 to-teal-500/20 rounded-full blur-3xl animate-pulse delay-500\"    /></div>
+          </div>;"
+          <div className=\"text-center max-w-5xl mx-auto relative z-10\"    />
+const Homepage2037: React.FC
+const Homepage2037: React.FC = () => {// Get featured services from each category
+const featuredMicroSaas = realMicroSaasServices2025
+    .filter(service = > service.popular).slice(0, 3
+  const featuredIT = realITServices2025
+    .filter(service = > service.popular).slice(0, 3
+  const featuredAI = realAIServices2025
+    .filter(service = > service.popular).slice(0, 3;}
+  return (<Layout    />;}
+      {/* Main Content */}
+<main className='relative z-10'    />
+        {/* Hero Section */}
+        <section className='min-h-screen flex items-center justify-center px-4 relative'    />
+          {/* Animated background elements */}
+<<<<<<< HEAD
+          <div className='absolute inset-0 overflow-hidden' />;
+            <div className='absolute top-20 left-20 w-72 h-72 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 rounded-full blur-3xl animate-pulse' /></div>;
+            <div className='absolute bottom-20 right-20 w-96 h-96 bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-full blur-3xl animate-pulse delay-1000' /></div>;
+            <div className='absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-80 h-80 bg-gradient-to-r from-green-500/20 to-teal-500/20 rounded-full blur-3xl animate-pulse delay-500' /></div>;
+          </div>;
+          <div className='text-center max-w-5xl mx-auto relative z-10' />;
+            <motion.div;
+          <div className='absolute inset-0 overflow-hidden' />;
+            <div className='absolute top-20 left-20 w-72 h-72 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 rounded-full blur-3xl animate-pulse' /></div>;
+            <div className='absolute bottom-20 right-20 w-96 h-96 bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-full blur-3xl animate-pulse delay-1000' /></div>;
+            <div className='absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-80 h-80 bg-gradient-to-r from-green-500/20 to-teal-500/20 rounded-full blur-3xl animate-pulse delay-500' /></div>;
+          </div>;<div className='text-center max-w-5xl mx-auto relative z-10' />            <motion && motion.div        {/* Hero Section */}"
+        <section className=\"min-h-screen flex items-center justify-center px-4 relative\" />;
+          {/* Animated background elements */}"
+          <div className=\"absolute inset-0 overflow-hidden\" />;"
+            <div className=\"absolute top-20 left-20 w-72 h-72 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 rounded-full blur-3xl animate-pulse\" /></div>;"
+            <div className=\"absolute bottom-20 right-20 w-96 h-96 bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-full blur-3xl animate-pulse delay-1000\" /></div>;"
+            <div className=\"absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-80 h-80 bg-gradient-to-r from-green-500/20 to-teal-500/20 rounded-full blur-3xl animate-pulse delay-500\" /></div>;"
+          </div>;<div className=\"text-center max-w-5xl mx-auto relative z-10\" />;
+            <motion&& motion.div;
+              initial={{ opacity: 0, y: 30 }
+=======
+return (<Layout> {
+  /* Main Content */ 
+}</div> <div className="text-center max-w-5xl mx-auto relative z-10" > <motion.div initial= {
+  {
+  opacity: 0, y: 30 
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-43ef
+}
+=======
+          <div className='absolute inset-0 overflow-hidden'    />
+            <div className='absolute top-20 left-20 w-72 h-72 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 rounded-full blur-3xl animate-pulse'    /></div>
+            <div className='absolute bottom-20 right-20 w-96 h-96 bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-full blur-3xl animate-pulse delay-1000'    /></div>
+            <div className='absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-80 h-80 bg-gradient-to-r from-green-500/20 to-teal-500/20 rounded-full blur-3xl animate-pulse delay-500'    /></div>
+          </div>
+          <div className='text-center max-w-5xl mx-auto relative z-10'    />
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+>>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 1 }}>;
               {/* Main heading with enhanced typography */}
@@ -231,9 +307,14 @@ const Homepage2037: React.FC = () => {// Get featured services from each categor
             </motion.div>
           </div>
         </section>
+<<<<<<< HEAD
 
         {/* Enhanced Company Stats */}
         <section className="py-24 px-4 bg-black/40 backdrop-blur-sm">
+=======
+        {/* Enhanced Company Stats */}"
+        <section className="py-24 px-4 bg-black/40 backdrop-blur-sm">"
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
           <div className="max-w-7xl mx-auto">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -317,6 +398,95 @@ const Homepage2037: React.FC = () => {// Get featured services from each categor
             </motion && motion.div>;initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0 && 0.8, delay: 0 && 0.1 }}
+<<<<<<< HEAD
+=======
+
+                <div className='text-cyan-400 text-sm mt-2'>
+                  Revolutionary Solutions
+                </div>
+
+                <div className='text-cyan-400 text-sm mt-2'>
+                  Revolutionary Solutions
+                </div>
+              </motion && motion.div>              >;"
+                <div className=\"text-5xl font-bold text-cyan-400 mb-3\"    />50+</div>;"
+                <div className=\"text-gray-300 text-lg\"    />AI Services</div>;"
+                <div className=\"text-cyan-400 text-sm mt-2\"    />Revolutionary Solutions</div>
+              </motion && motion.div>
+                initial={{ opacity: 0, y: 20 }
+
+                whileInView={{ opacity: 1, y: 0 }
+
+                transition={{ duration: 0 && 0.8, delay: 0 && 0.2 }}
+
+                <div className='text-5xl font-bold text-blue-400 mb-3'>
+                  100+
+                </div>
+                <div className='text-gray-300 text-lg'    />Quantum Solutions</div>
+                <div className='text-blue-400 text-sm mt-2'    />
+                  Future Technology
+                </div>
+
+                <div className='text-5xl font-bold text-blue-400 mb-3'>
+                  100+
+                </div>
+                <div className='text-gray-300 text-lg'    />Quantum Solutions</div>
+                <div className='text-blue-400 text-sm mt-2'    />
+                  Future Technology
+                </div>
+              </motion && motion.div>              >;"
+                <div className=\"text-5xl font-bold text-blue-400 mb-3\"    />100+</div>;"
+                <div className=\"text-gray-300 text-lg\"    />Quantum Solutions</div>;"
+                <div className=\"text-blue-400 text-sm mt-2\"    />Future Technology</div>
+              </motion && motion.div>
+                initial={{ opacity: 0, y: 20 }
+
+                whileInView={{ opacity: 1, y: 0 }
+
+                transition={{ duration: 0 && 0.8, delay: 0 && 0.3 }}
+
+                viewport={{ once: true }
+
+className='text-center p-8 bg-gradient-to-br from-purple-500/10 to-pink-500/10 rounded-2xl border border-purple-500/20 hover:border-purple-500/40 transition-all duration-300'
+              >
+                <div className='text-5xl font-bold text-purple-400 mb-3'    />
+                  24/7
+                </div>
+                <div className='text-gray-300 text-lg'    />
+                  Autonomous Operations
+                </div>
+                <div className='text-purple-400 text-sm mt-2'    />
+                  Always Available
+                </div>
+              </motion.div>
+
+                className='text-center p-8 bg-gradient-to-br from-purple-500/10 to-pink-500/10 rounded-2xl border border-purple-500/20 hover:border-purple-500/40 transition-all duration-300'>
+                <div className='text-5xl font-bold text-purple-400 mb-3'    />
+                  24/7
+                </div>
+                <div className='text-gray-300 text-lg'    />
+                  Autonomous Operations
+                </div>
+                <div className='text-purple-400 text-sm mt-2'    />
+                  Always Available
+                </div>
+              </motion && motion.div>              >;"
+                <div className=\"text-5xl font-bold text-purple-400 mb-3\"    />24/7</div>;"
+                <div className=\"text-gray-300 text-lg\"    />Autonomous Operations</div>;"
+                <div className=\"text-purple-400 text-sm mt-2\"    />Always Available</div>
+              </motion && motion.div>
+                initial={{ opacity: 0, y: 20 }
+
+                whileInView={{ opacity: 1, y: 0 }
+<<<<<<< HEAD
+}
+<<<<<<< HEAD
+=======
+
+>>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
+                transition={{ duration: 0 && 0.8, delay: 0 && 0.4 }}
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
                 viewport={{ once: true }}
 
                 initial={{ opacity: 0, y: 20}}
@@ -1592,6 +1762,7 @@ className='relative';
         </section>
       </main>
     </Layout>
+<<<<<<< HEAD
 
 };
 
@@ -1877,3 +2048,21 @@ export default Homepage2037;
               whileInView={{ opacity: 1, y: 0}}
               transition = $2;
 export default Homepage2037,
+=======
+  );
+}
+export default Homepage2037;  )
+}
+export default Homepage2037;
+<<<<<<< HEAD
+
+"
+=======
+}> <UltraFuturisticServiceCard2026 /> </motion.div>) ) 
+}</div> <motion.div > <Link href="/micro-saas" > <button className="px-8 py-4 bg-gradient-to-r from-green-500 to-teal-600 text-white font-semibold rounded-xl hover:from-green-600 hover:to-teal-700 transition-all duration-300 transform hover:scale-105 flex items-center gap-2 mx-auto shadow-lg shadow-green-500/25" > View All SAAS Solutions <ArrowRight className="w-5 h-5" /> </button> </a> </motion.div> </div> </section> > <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-pink-500 bg-clip-text text-transparent" > Why Choose Zion Tech Group? </h2> <p className="text-xl text-gray-300 max-w-3xl mx-auto" > We combine cutting-edge technology with proven expertise to deliver exceptional results </p> </motion.div> <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8" > <motion.div > <div className="w-20 h-20 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300" > <Brain className="w-10 h-10 text-white" /> </div> <h3 className="text-2xl font-bold text-white mb-4" >AI-First Approach</h3> <p className="text-gray-300 leading-relaxed" >Leading-edge artificial intelligence solutions that adapt, evolve, and transform your business operations</p> </motion.div> <motion.div > <div className="w-20 h-20 bg-gradient-to-r from-blue-500 to-purple-600 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300" > <Atom className="w-10 h-10 text-white" /> </div> <h3 className="text-2xl font-bold text-white mb-4" >Quantum Innovation</h3> <p className="text-gray-300 leading-relaxed" >Next-generation quantum computing and security solutions that prepare you for the future</p> </motion.div> <motion.div > <div className="w-20 h-20 bg-gradient-to-r from-purple-500 to-pink-600 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300" > <Shield className="w-10 h-10 text-white" /> </div> <h3 className="text-2xl font-bold text-white mb-4" >Enterprise Security</h3> <p className="text-gray-300 leading-relaxed" >Military-grade security and compliance solutions that protect your most valuable assets</p> </motion.div> <motion.div > <div className="w-20 h-20 bg-gradient-to-r from-green-500 to-teal-600 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300" > <Zap className="w-10 h-10 text-white" /> </div> <h3 className="text-2xl font-bold text-white mb-4" >Rapid Deployment</h3> <p className="text-gray-300 leading-relaxed" >Fast implementation and continuous optimization to get you up and running quickly</p> </motion.div> </div> </div> </section> <div className="relative z-10 p-12 bg-gradient-to-r from-black/80 to-gray-900/80 backdrop-blur-xl rounded-3xl border border-cyan-500/30" > <h2 className="text-5xl md:text-6xl font-bold mb-8 bg-gradient-to-r from-green-400 via-cyan-400 to-teal-500 bg-clip-text text-transparent" > Ready to Transform Your Business? </h2> <p className="text-xl md:text-2xl text-gray-300 mb-10 max-w-3xl mx-auto leading-relaxed" > Join the future of technology with Zion Tech Group. Let's build something extraordinary together and shape the future of your industry. </p> <div className="flex flex-col sm:flex-row gap-6 justify-center items-center" > <Link href="/contact" > <motion.button > Start Your Journey Today </motion.button> </a> <Link href="/demo" > <motion.button mt-8 text-gray-400"> <p className=" text-sm">Contact us: <a href=" tel:+13024640950"className=" text-cyan-400 hover:text-cyan-300">+1 302 464 0950</a></p> <p className=" text-sm">Email: <a href=" mailto:kleber@ziontechgroup.com"className=" text-cyan-400 hover:text-cyan-300" >kleber@ziontechgroup.com</a></p> </div> </div> </motion.div> </div> </section> </main> </Layout>) 
+}
+export default Homepage2037
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-43ef
+=======
+>>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75

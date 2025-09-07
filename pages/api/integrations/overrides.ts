@@ -1,6 +1,11 @@
+<<<<<<< HEAD
+=======
+import { NextApiRequest, NextApiResponse } from 'next';
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 
 <<<<<<< HEAD:pages_backup/api/integrations/overrides.ts
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
+<<<<<<< HEAD
   if (req.method;
     return res.status(200).json({ ok: true, override: updated.overrides.find(o => o.jobId === jobId) })
 origin/cursor/automate-test-improve-and-merge-code-2533
@@ -92,3 +97,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     return res.status(500).json({ error: "Internal server error" });
   }
 
+=======
+  if (req.method !== 'GET') {
+    res.setHeader('Allow', ['GET']);
+    return res.status(405).end('Method Not Allowed');
+  }
+  
+  res.status(200).json({ message: 'Endpoint working' });
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75

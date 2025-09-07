@@ -134,8 +134,26 @@ export default function Sidebar({ spec, activeEndpointId, onSelectEndpoint, sele
             </ul>
           </div>
         ))}
+<<<<<<< HEAD
     </aside>;
   )}
+=======
+  onSelectEndpoint: (endpoint_id: string) => void
+  selected_version: string
+  onChangeVersion: (v: string) => void
+  visibility_filter: Visibility | 'all'
+  onChangeVisibility: (v: Visibility | 'all') => void
+            <button key={v} on_click={() => onChangeVersion (v)} className={`px - 2 py - 1 rounded border text - xs ${selected_version === v ? 'bg - high - contrast - tertiary border - high - contrast - accent' : 'bg - high - contrast - tertiary border - high - contrast - secondary'}`}>{v}</button>
+        </div>
+      </div>
+      <div>;'
+        <div className='text - xs text - high - contrast - muted mb - 1'>
+          Publish Mode
+        </div>
+        <select
+          className='w - full px - 2 py - 1 rounded bg - high - contrast - tertiary border border - high - contrast - secondary text - sm'
+          value={visibility_filter}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 
     </aside>;
   )}

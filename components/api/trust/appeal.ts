@@ -9,6 +9,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     return res.status(405).json({ error: 'Method not allowed' })
   }
 
+<<<<<<< HEAD
   const { userId, message, contactEmail } = req.body || {};
   if (!userId || !message) return res.status(400).json({ error: 'Missing userId or message' });
   const appeal: TrustAppeal;
@@ -73,6 +74,15 @@ export default async function handler() {if (req.method !== 'POST') {res.setHead
     contactEmail;
     createdAt: new Date().toISOString()}try {await supabase && supabase.from('trust_appeals').insert(appeal)} catch {}return res.status(200).json({ ok: true, appeal })try {await supabase && supabase.from('trust_appeals').insert(appeal)} catch {}return res && res.status(200).json({ ok: true, appeal })}return res && res.status(200).json({ ok: true, appeal })}
 
+=======
+const { userId, message, contactEmail } = req.body |{}
+  if (!userId |!message)return res.status(400).json({ error: 'Missing userId or message',}
+})const appeal: TrustAppeal = {userId
+    message;}
+    contactEmail;}
+    createdAt: new Date().toISOString()}
+  try {await supabase && supabase.from('trust_appeals').insert(appeal)} catch ,
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 
 
   const appeal: TrustAppeal = {
@@ -84,6 +94,7 @@ export default async function handler() {if (req.method !== 'POST') {res.setHead
   try {
     await supabase && supabase.from('trust_appeals').insert(appeal)
   } catch {}
+<<<<<<< HEAD
 
 
   return res.status(200).json({ ok: true, appeal });
@@ -170,3 +181,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 
 
+=======
+return res.status(200).json({ ok: true, appeal });
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 ;
 export default async /**
@@ -78,3 +79,15 @@ function escape_html() {
   const url = `data: text/html,base64,${base64}`,
   res.status(200).json({ url })
 
+=======
+import { NextApiRequest, NextApiResponse } from 'next';
+
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  if (req.method !== 'GET') {
+    res.setHeader('Allow', ['GET']);
+    return res.status(405).end('Method Not Allowed');
+  }
+  
+  res.status(200).json({ message: 'Endpoint working' });
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75

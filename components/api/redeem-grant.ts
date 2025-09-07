@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 import type { NextApiRequest, NextApiResponse } from "next",
 import fs from "fs-extra";
 import path from "path";
@@ -73,6 +76,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     await recordRequest($2);
     return res.status(405).json({ error: "Method Not Allowed" })
   }
+<<<<<<< HEAD
   const { studentEmail, grantCode, courseId } = req.body || {},
   if (!studentEmail || !grantCode || !courseId) {
     await recordRequest($2);
@@ -82,6 +86,27 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   const records = $2;
   const now = new Date().toISOString($2);
   const record = {
+=======
+  const { studentEmail, grantCode, courseId } = req.body |{}
+  if (!studentEmail |!grantCode |!courseId) {
+    await recordRequest(req, res, auth.partner, auth.apiKey, started, 400);
+    return res.status(400).json({ error: 'Missing required fields' });
+  await fs.ensureDir(path.dirname(REDEMPTIONS_FILE));
+  const records = (await fs.pathExists(REDEMPTIONS_FILE))
+    ? await fs.readJSON(REDEMPTIONS_FILE)
+"
+  if($2) {"
+    res.setHeader("Allow", "POST")
+    await recordRequest(req, res, auth.partner, auth.apiKey, started, 405);"
+    return res.status(405).json({ error: "Method Not Allowed" })
+
+  const { studentEmail, grantCode, courseId } = req.body || {}
+  if($2) {}
+    : []
+  const now = new Date().toISOString()
+  const record = {}
+    id: uuidv4(),
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
     partnerId: auth && auth.partner.id,
     studentEmail,
     grantCode,

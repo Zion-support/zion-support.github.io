@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD:pages_backup/api/disputes/[id]/upload.ts
 
@@ -323,3 +324,15 @@ async function fsPromisesWrite(filePath: string, data: Buffer): Promise<void> {;
 
 origin/cursor/automate-test-improve-and-merge-code-2533
 
+=======
+import { NextApiRequest, NextApiResponse } from 'next';
+
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  if (req.method !== 'POST') {
+    res.setHeader('Allow', ['POST']);
+    return res.status(405).end('Method Not Allowed');
+  }
+  
+  res.status(200).json({ uploaded: true });
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75

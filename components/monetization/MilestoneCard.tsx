@@ -1,3 +1,20 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+class ErrorBoundary extends React.Component {constructor(props) {super(props)this.state = { hasError: false }}
+  static getDerivedStateFromError(error) {return { hasError: true }
+}componentDidCatch(error, errorInfo) {console.error('Error caught by boundary:', error, errorInfo)}static getDerivedStateFromError(error) {return { hasError: true }
+}componentDidCatch(error, errorInfo) {console.error('Error caught by boundary:', error, errorInfo)}render() {if (this.state.hasError) ;}
+  return <div />Something went wrong.</div>;}
+    }
+    return this.props.children;
+  }
+}
+=======
+>>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 import React, { useState } from 'react';
 
   milestone: Milestone;
@@ -191,6 +208,7 @@ export default function MilestoneCard({ milestone, projectId, role, onAction }: 
               )}
             </div>
           ))}
+<<<<<<< HEAD
                 />              )}
             </div>
           ))}
@@ -271,6 +289,16 @@ export default function MilestoneCard({ milestone, projectId, role, onAction }: 
                     </a>;
                   </li>;
                       {a.label || a.url}
+=======
+        </div>
+
+                      className='text-blue-600 underline'
+
+              <ul className="list-disc ml-5">
+                {milestone.attachments.map((a) => (
+                  <li key={a.id}>"
+                    <a className="text-blue-600 underline" href={a.url} target="_blank" rel="noreferrer">
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
                     </a>
                   </li>
                 ))}
@@ -333,6 +361,7 @@ className='px-3 py-1 text-sm rounded bg-slate-700 text-white hover:bg-slate-800'
         )}
       </div>
     </div>
+<<<<<<< HEAD
 
 
 
@@ -438,3 +467,33 @@ className='px-3 py-1 text-sm rounded bg-slate-700 text-white hover:bg-slate-800'
     </div>)})}
   )
 }
+=======
+);
+}
+}
+<<<<<<< HEAD
+
+"
+=======
+return (<div className="border rounded-lg p-4 bg-white shadow-sm" > <div className="flex items-start justify-between" > <div> <div className= {
+  'h-2 w-2 rounded-full ' + (idx <= currentIndex ? 'bg-green-600' : 'bg-gray-300') 
+}title= {
+  step 
+}/> {
+  idx < statusSteps.length - 1 && (<div className= {
+  'h-0.5 w-8 ' + (idx < currentIndex ? 'bg-green-600' : 'bg-gray-300') 
+}/>) 
+}</div>) ) 
+}</div> </a> </li>) ) 
+}</ul> </div>) 
+}</div>) 
+}> Mark In Progress </button>) 
+}> Submit Work </button>) 
+}> Approve </button>) 
+}> Mark as Paid </button>) 
+}</div> </div>) 
+}
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-43ef
+=======
+>>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75

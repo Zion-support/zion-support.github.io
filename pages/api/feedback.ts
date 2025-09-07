@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <<<<<<< HEAD:pages_backup/api/feedback.ts
 import { saveFeedbackFallback, FeedbackRecord } from "../../utils/feedback/store";
 function ok(res: NextApiResponse, data: any) { return res.status(200).json({ ok: true, ...data }) }
@@ -205,10 +206,40 @@ async function tryWriteToFirestore(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+=======
+import { NextApiRequest, NextApiResponse } from 'next';
+
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+  if (req.method !== 'POST') {
+    res.setHeader('Allow', ['POST']);
+    return res.status(405).end('Method Not Allowed');
   }
+  
+  try {
+    const { user, rating, comment, kind, context } = req.body;
+    
+    const doc = {
+      id: Date.now().toString(),
+      createdAtIso: new Date().toISOString(),
+      user,
+      rating,
+      comment: comment || undefined,
+      kind,
+      context: context || undefined
+    };
+    
+    res.status(200).json({
+      ok: true,
+      id: doc.id
+    });
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
+  } catch (error) {
+    res.status(500).json({
+      ok: false,
+      error: 'Internal server error'
+    });
+  }
+<<<<<<< HEAD
 }
     const db = admin.firestore()
     await db.collection("interaction_feedback").doc(doc.id).set(doc)
@@ -389,3 +420,6 @@ export default async function handler(req, res) {
 
 }}
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 ;
 import React, { useState, useEffect } from 'react';
@@ -31,6 +32,27 @@ import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { X, Building2, ChevronDown, ChevronRight } from 'lucide-react';
 import { useRouter } from 'next/router';
+=======
+<<<<<<< HEAD
+{/* Backdrop */}
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            className="fixed inset-0 bg-black bg-opacity-50 z-40"
+            onClick={onClose}
+          />
+          {/* Sidebar */}
+=======
+import React, { useState } from 'react'
+import Link from 'next/link'
+import { motion, AnimatePresence } from 'framer-motion'
+import { X, Building2, ChevronDown, ChevronRight } from 'lucide-react'
+import React, { useState, useEffect } from 'react'
+import Link from 'next/link'
+import { motion, AnimatePresence } from 'framer-motion'
+import { useRouter } from 'next/router'
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 import {
   X,
   ChevronDown,
@@ -155,6 +177,7 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
       {isOpen && (
         <>
           {/* Backdrop */}
+<<<<<<< HEAD
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
@@ -176,6 +199,18 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
 
           >
             <div className="p-6">
+=======
+          <motion&& motion.div
+            initial={{ opacity: 0 ;}}
+            animate={{ opacity: 1 ;}}
+            exit={{ opacity: 0 ;}}
+            initial={{ x: -300 ;}}
+            animate={{ x: 0 ;}}
+            exit={{ x: -300 ;}}
+            transition={{ type: 'spring';, damping: 25;, stiffness: 200 ;}}
+            className="fixed left-0 top-0 h-full w-80 bg-white shadow-xl z-50"
+>>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
               {/* Header */}
               <div className="flex items-center justify-between mb-8">
                 <div className="flex items-center space-x-2">
@@ -201,7 +236,34 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
 
               {/* Navigation */}
               <nav className="space-y-4">
+<<<<<<< HEAD
                 {Object.entries(navigation).map(([title, links]) => (
+=======
+<<<<<<< HEAD
+                {Object.entries(navigation).map(([title, links]) => (
+                  <div key={title}>
+                    <button
+                      onClick={() => handleDropdownToggle(title)}
+                            key={link.name}
+                            href={link.href}
+                            className="block text-gray-600 hover:text-blue-600 transition-colors py-1"
+                            onClick={onClose}
+                          >
+                            {link.name}
+                          </Link>))}
+              {/* Quick Links */}
+              <div className="mt-8 pt-8 border-t border-gray-200">
+                <h3 className="text-lg font-semibold text-gray-900 mb-4">Quick Links</h3>
+                <div className="space-y-2">
+                  {quickLinks.map((link) => (
+                    <Link
+                      key={link.name}
+                      href={link.href}
+                      className="block text-gray-600 hover:text-blue-600 transition-colors py-1"
+                      onClick={onClose}
+=======
+                {Object && Object.entries(navigation).map(([title, links]) => (
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
                   <div key={title}>
                     <button
                       onClick={() => handleDropdownToggle(title)}
@@ -495,11 +557,23 @@ const Sidebar: React.FC < SidebarProps> = ({ is_open, on_close }) => {
                       href={link.href}
                       className="block text - gray - 600 hover:text - blue - 600 transition - colors py - 1";
                       on_click={on_close}
+<<<<<<< HEAD
                     >;
                       {link.name}
                     </Link>))}
                 </div>;
               </div>;
+=======
+>>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
+                    >
+                      {link.name}
+                    </Link>))}
+                </div>
+              </div>
+<<<<<<< HEAD
+              {/* Contact Info */}
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
               {/* Contact Info */}
               <div className="mt - 8 pt - 8 border - t border - gray - 200">;
                 <h3 className="text - lg font - semibold text - gray - 900 mb - 4">Contact Us</h3>;
@@ -727,3 +801,8 @@ export default function Sidebar({ isOpen, onClose }: SidebarProps) {
     </AnimatePresence>
   );
 }
+<<<<<<< HEAD
+=======
+export default Sidebar;
+>>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75

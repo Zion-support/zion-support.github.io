@@ -1,3 +1,11 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+return (<UltraAdvancedFuturisticBackground> <Head> <title>Holographic AI Communication Platform - Zion Tech Group</title> <meta name="description" content="AI-powered holographic communication platform enabling photorealistic 3D meetings with gesture and voice control." /> <link rel="canonical" href="https://ziontechgroup.com/holographic-ai-communication-platform" /> </Head> <div className="min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8" > <div className="max-w-6xl mx-auto" > <div className="text-center mb-10" > <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-violet-400 via-fuchsia-400 to-pink-400 bg-clip-text text-transparent flex items-center justify-center gap-3" > <Eye className="w-10 h-10" />Holographic AI Communication Platform </h1> <p className="mt-4 text-xl text-slate-300 max-w-3xl mx-auto" >Revolutionary holographic communication platform powered by AI that creates lifelike 3D projections for immersive remote interactions.</p> </div> </div> </div> </div> </div> </div> </UltraAdvancedFuturisticBackground>) 
+}
+=======
+import React from 'react',
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 import Head from 'next/head';
 import { Phone, Mail, MapPin, Check, ArrowRight, Eye   } from 'lucide-react';
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
@@ -176,6 +184,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     </UltraAdvancedFuturisticBackground>
   );
 }
+<<<<<<< HEAD
 
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
@@ -325,3 +334,6 @@ function HolographicAICommunicationPage() {
 =======
 function HolographicAICommunicationPage() {const contact_info = {mobile: '+1 302 464 0950',email: 'kleber@ziontechgroup.com',address: '364 E Main St STE 1008 Middletown DE 19709',}})}
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
+=======
+>>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75

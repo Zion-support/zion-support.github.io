@@ -1,6 +1,16 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 
 ;
 
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 import React from 'react';
 import { motion   } from 'framer-motion';
 import { Star, Zap, Shield, TrendingUp, ArrowRight, ExternalLink, Check, Users, Clock, DollarSign  } from 'lucide-react';
@@ -433,6 +443,7 @@ const QuantumHolographicCard: React.FC<QuantumHolographicCardProps> = ({ service
               </div>
             </div>
           </div>
+<<<<<<< HEAD
           </div>;
           {/* Price and trial */}<div className="flex items-center justify-between mb-4">;
             <div className="flex items-center space-x-2">;
@@ -674,6 +685,8 @@ const QuantumHolographicCard: React.FC<QuantumHolographicCardProps> = ({ service
           </div>;{/* ROI and competitors */}</div>;
             </div>;
           </div>;
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
           {/* CTA Button */}
           <motion.a;
             href={service.link}className='group relative inline-flex items-center justify-center w-full bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-semibold py-3 px-6 rounded-xl transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30 hover:shadow-2xl hover:shadow-cyan-500/25';
@@ -727,6 +740,7 @@ export default QuantumHolographicCard;
 export default QuantumHolographicCard;  )
 }
 export default QuantumHolographicCard;
+<<<<<<< HEAD
 
 export default QuantumHolographicCard;
 export default QuantumHolographicCard;
@@ -755,13 +769,39 @@ export default QuantumHolographicCard;
       </div>;
     </motion.div>;
     </motion.div>);
+=======
+<<<<<<< HEAD
+
+"
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 }
 ;
 export default QuantumHolographicCard);
 }
+<<<<<<< HEAD
 ;
 export default QuantumHolographicCard;
 ;
 )}export default QuantumHolographicCard;
           <div className = $2;
 export default QuantumHolographicCard,
+=======
+}
+}
+}) 
+}
+return (<motion.div > {
+  /* Holographic glow effect */ 
+}<motion.div </div> </div> {
+  service.popular && (<motion.div > <Star className="w-3 h-3 fill-current" /> <span>Popular</span> </motion.div>) 
+}</div> </div> <div className="bg-gray-800/50 rounded-lg p-3 border border-gray-700/50" > <div className="flex items-center space-x-2 text-sm text-gray-400 mb-1" > <Star className="w-4 h-4 fill-yellow-400 text-yellow-400" /> <span>Rating</span> </div> </motion.div>) ) 
+}</div> </div> </div> </div> </div> </div> </div> </div> {
+  /* CTA Button */ 
+}<motion.a > <span className="mr-2" >Get Started</span> <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" /> </a> </div> </div> </div> </motion.div>) 
+}
+export default QuantumHolographicCard
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-43ef
+=======
+>>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75

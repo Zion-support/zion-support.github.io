@@ -74,6 +74,7 @@ supabase;
     const shortlisted = 5, // Placeholder
 
     const funnel = [
+<<<<<<< HEAD
       { label: 'Post', value: jobsData.length },
       { label: 'Invite', value: Math.max(shortlisted, Math.floor(jobsData.length * 0.8)) },
       { label: 'Hire', value: filled.length }],
@@ -86,6 +87,35 @@ supabase;
       shortlisted,
       funnel})
   } catch (e) {
+=======
+      { label: 'Post', value: jobsData.length }
+      {
+        label: 'Invite'
+        value: Math.max(shortlisted, Math.floor(jobsData.length * 0.8))
+      }
+      { label: 'Hire', value: filled.length }
+    ];
+    res.status(200).json({
+      jobsPosted
+      quotesReceived
+      timeToHireDays
+      talentViewed
+      shortlisted
+      funnel
+    });
+  } catch (e) {
+    res.status(200).json({
+      jobsPosted: 3
+      quotesReceived: 2
+      timeToHireDays: 3.1
+      talentViewed: 12
+      shortlisted: 5
+      funnel: [
+        { label: 'Post', value: 3 }
+        { label: 'Invite', value: 2 }
+'
+        { label: 'Hire', value: 2 }]})
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 
 
         { label: 'Hire', value: 2 }]})

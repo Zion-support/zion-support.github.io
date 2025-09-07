@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 ;
@@ -10,6 +11,39 @@ interface Props  {children: ReactNode;
   fallback?: ReactNode;
 interface Props  {children: ReactNode;
   fallback?: ReactNode;
+=======
+<<<<<<< HEAD
+class ErrorBoundary extends Component<Props, State> {
+  constructor (props: Props) {
+  super (props)
+this.state = {
+  hasError: false 
+}
+}static getDerivedStateFromError (error: Error) : State {
+  return {
+  hasError: true, error 
+}
+}> Reload Page </button> >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7 console.error ('Error caught by boundary:', error, errorInfo)
+this.setState ({
+  error
+errorInfo 
+})
+//Call the onError prop if provided if (this.props.onError) {
+  this.props.onError (error, errorInfo)
+}//Log error to external service (e.g., Sentry) if (typeof window !== 'undefined' && (window as any) .Sentry) {
+  (window as any) .Sentry.captureException (error, {
+  extra: errorInfo 
+})
+}
+=======
+'use client';
+import React, { Component, ErrorInfo, ReactNode } from 'react';
+interface Props {
+  children: ReactNode
+  level?: string
+  fallback?: ReactNode
+interface Props {
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
   children: ReactNode;
   fallback?: ReactNode;
   onError?: (error: Error, errorInfo: ErrorInfo) => void;
@@ -400,6 +434,7 @@ class ErrorBoundary extends Component<Props, State> {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
               className="px-4 py-2 bg-blue-600 rounded-lg hover:bg-blue-700"
             >
               Reload Page
@@ -595,3 +630,6 @@ main
 main
 
 origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
+=======
+>>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75

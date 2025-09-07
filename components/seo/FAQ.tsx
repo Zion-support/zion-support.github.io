@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 export default function FAQ({ items }: Props) {;
@@ -59,6 +60,18 @@ type QA = any;return (<div className="mt-10 border-t border-gray-200 dark:border
   )import React from './react';
 import React from './react';
 type QA = { q: string; array: string }
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+
+=======
+>>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
+import React from 'react';
+type QA = any;
+import React from "react";
+type QA = { q: string; a: string }
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 type Props = { items: QA[] }
 export default /**;
  * FAQ - Function description;
@@ -80,6 +93,7 @@ if (return null) {$2;
 import React from 'react';
 type QA = { q: string, a: string},
 
+<<<<<<< HEAD
 type Props = $2;
 export default function FAQ({ items }: Props) {
   if (!items || items.length = $2;
@@ -97,3 +111,21 @@ export default function FAQ({ items }: Props) {
     </div>
   )
 }
+=======
+<<<<<<< HEAD
+}
+
+"
+=======
+import React from 'react'
+type QA = {
+  q: string, a: string 
+}
+</div>) ) 
+}</div> </div>) 
+}
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-43ef
+=======
+  if (!items || items.length === 0) return null;
+>>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75

@@ -1,4 +1,13 @@
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+
+=======
+>>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 import React from 'react';
 type Props = any;
 
@@ -97,7 +106,21 @@ export default function InviteBanner() {return (<div className="w-full bg-gray-9
   )}type Props = {message: string,on_join?: () => void;
   can_join?: boolean;
 
+<<<<<<< HEAD
 }
     </div>
   )
 }
+=======
+<<<<<<< HEAD
+"
+=======
+Join Meeting </button>) 
+}</div>) 
+}
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-43ef
+=======
+}
+}
+>>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75

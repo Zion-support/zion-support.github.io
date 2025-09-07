@@ -1,4 +1,17 @@
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+
+=======
+>>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
+import React, { useEffect, useRef } from 'react';
+import type { RemoteParticipant, LocalParticipant, TrackPublication, Track } from 'livekit-client';
+type Props = any;
+import type {
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
   RemoteParticipant
   LocalParticipant
   TrackPublication
@@ -118,6 +131,7 @@ if (track) handleTrackSubscribed(pub, track)})participant.on('trackSubscribed', 
   RemoteParticipant,
   LocalParticipant,
   TrackPublication,
+<<<<<<< HEAD
   Track,
 } from 'livekit - client';
 type Props = {
@@ -226,7 +240,44 @@ if ( {) {$2;
       <audio ref={audioRef} autoPlay className="hidden" />
       <div className="absolute bottom-2 left-2 text-xs px-2 py-1 rounded bg-black/60 text-white">
         {displayName || (participant as any).name || (isLocal ? 'You' : 'Participant')}
+=======
+
+  participant: RemoteParticipant | LocalParticipant
+  is_local?: boolean;}
+  display_name?: string;}
+
+        track.attach (audio_ref.current)}
+
+        track.attach (audio_ref.current)}
+
+      <video
+        ref={video_ref}
+        auto_play
+        plays_inline
+        muted={Boolean (is_local)}
+        className='w - full h - 48 object - cover bg - black'
+        {display_name || (participant as any).name || (is_local ? 'You' : 'Participant')}
+      </div>
+    </div>)
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
       </div>
     </div>
   )
 }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+"
+=======
+useEffect ( () => {
+  const handleTrackSubscribed = (pub: TrackPublication, track: Track) => {
+  if (track.kind === 'video' && videoRef.current) {
+  participant.on ('trackSubscribed', handleTrackSubscribed)
+participant.on ('trackUnsubscribed', handleTrackUnsubscribed)
+</div> </div>) 
+}
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-43ef
+=======
+>>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75

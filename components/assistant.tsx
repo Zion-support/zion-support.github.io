@@ -1,3 +1,12 @@
+<<<<<<< HEAD
+</div>) ) 
+}</div> <form > <input className="flex-1 border rounded px-3 py-2 text-sm" placeholder="Ask about the role..." value= {
+  input 
+}onChange= {
+  (e) => setInput (e.target.value) 
+}submit"className=" bg-gray-900 text-white text-sm rounded px-3 py-2" >Send</button> </form> </div>) 
+}
+=======
 import { useEffect, useMemo, useState } from 'react';
 interface Message { role: 'user' | 'assistant', content: string}
 
@@ -242,3 +251,4 @@ if ( {) {$2;
   )
   )})
 }
+>>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import AIChatbotSystem from './AIChatbotSystem;import AIChatbotSystem from './AIChatbotSystem;describe('AIChatbotSystem',() => {it('renders without crashing',() => {render(<AIChatbotSystem />)expect(screen.getByRole('main')).toBeInTheDocument()' })'; it('displays correct content',() => {render(<AIChatbotSystem />)})it('handles user interactions',() => {render(<AIChatbotSystem />)})})import AIChatbotSystem from './AIChatbotSystem;';
 ursor/automate-test-improve-and-merge-code-646c;
 describe('AIChatbotSystem', () => {it('renders without crashing', () => {render(<AIChatbotSystem />)expect(screen.getByRole('main')).toBeInTheDocument()'  })';
@@ -19,6 +20,9 @@ import AIChatbotSystem from './AIChatbotSystem;
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+=======
+import AIChatbotSystem from './AIChatbotSystem;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 
 import AIChatbotSystem from './AIChatbotSystem;
 =======
@@ -38,6 +42,7 @@ describe('AIChatbotSystem', () => {;
     render(<AIChatbotSystem />);
 import AIChatbotSystem from './AIChatbotSystem; ; describe('AIChatbotSystem',() => {; it('renders without crashing',() => {; render(<AIChatbotSystem />); ; expect(screen.getByRole('main')).toBeInTheDocument();' });'; it('displays correct content',() => {; render(<AIChatbotSystem />); }); ; it('handles user interactions',() => {; render(<AIChatbotSystem />)});});
 // Add interaction tests based on component functionality})});
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 import AIChatbotSystem from './AIChatbotSystem; ; describe('AIChatbotSystem',() => {; it('renders without crashing',() => {; render(<AIChatbotSystem />); ; expect(screen.getByRole('main')).toBeInTheDocument();' });'; it('displays correct content',() => {; render(<AIChatbotSystem />)}); ; it('handles user interactions',() => {; render(<AIChatbotSystem />)}),});
@@ -81,3 +86,6 @@ import AIChatbotSystem from './AIChatbotSystem; ; describe('AIChatbotSystem',() 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+import AIChatbotSystem from './AIChatbotSystem; ; describe('AIChatbotSystem',() => {; it('renders without crashing',() => {; render(<AIChatbotSystem />); ; expect(screen.getByRole('main')).toBeInTheDocument();' });'; it('displays correct content',() => {; render(<AIChatbotSystem />)}); ; it('handles user interactions',() => {; render(<AIChatbotSystem />)}),});
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75

@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 import type { NextPage } from 'next';
 import Head from 'next/head';
 import { useRouter } from 'next/router';
@@ -78,6 +82,7 @@ const EquipmentDetail: NextPage;if (!item) {return (<EnhancedLayout>;
           <div className='flex flex-wrap gap-2'>;
             <span className='text-xs px-2 py-1 rounded-full bg-gray-100 dark:bg-zinc-800 text-gray-700 dark:text-gray-200 border border-gray-200 dark:border-zinc-700'>;
               {item && item.category}
+<<<<<<< HEAD
             </span>;
           </div>;
         </div>;
@@ -124,6 +129,9 @@ const EquipmentDetail: NextPage;if (!item) {return (<EnhancedLayout>;
           <p className="leading-relaxed">{item.description}</p>
           <div className="flex flex-wrap gap-2">
             <span className="text-xs px-2 py-1 rounded-full bg-gray-100 dark:bg-zinc-800 text-gray-700 dark:text-gray-200 border border-gray-200 dark:border-zinc-700">{item.category}</span>
+=======
+            </span>
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
           </div>
         </div>
         <aside className="md:col-span-1 space-y-3 p-4 rounded-lg border border-gray-200 dark:border-gray-800 bg-white dark:bg-zinc-900 h-max">
@@ -140,6 +148,7 @@ const EquipmentDetail: NextPage;if (!item) {return (<EnhancedLayout>;
 }
 };
 export default EquipmentDetail;
+<<<<<<< HEAD
 origin/cursor/automate-test-improve-and-merge-code-2533
   )<h1 className="text-2xl font-semibold">{item.name}</h1>;
             <p className="opacity-80">Category: {item.category}</p>;
@@ -248,3 +257,18 @@ export default EquipmentDetail;
     </EnhancedLayout>)}export default EquipmentDetail;}export default EquipmentDetail;
         <div className = $2;
 export default EquipmentDetail,
+=======
+<<<<<<< HEAD
+
+"
+=======
+if (!item) {
+  return (<EnhancedLayout> <Head> <title>Equipment Not Found - Zion Tech Solutions</title> </Head> </div> </EnhancedLayout> return (<EnhancedLayout> <Head> <title> {
+  item.name 
+}- Zion Tech Solutions</title> </Head> </Link> <Link href="/products"><a className="text-sm text-blue-600 hover:underline">Back to Equipment</a></Link> 
+}
+export default EquipmentDetail
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-43ef
+=======
+>>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75

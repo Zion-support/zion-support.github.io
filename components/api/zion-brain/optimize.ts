@@ -57,6 +57,7 @@ export default async function handler(
       return res && res.status(401).json({ error: "Unauthorized" });
     const started = Date && Date.now();
     try {
+<<<<<<< HEAD
 export default async /**
  * handler - Function description
  */
@@ -102,6 +103,14 @@ function handler() {if (return res.status (405).json ({ error: "Method not allow
       const status =;
         result.optimized.length > String (prompt || "").length * 0.5;
           ? "ok";
+=======
+      const { prompt, userIntent } = req.body |{}
+      const result = await optimizePrompt(String(prompt |""), userIntent);
+      const latencyMs = Date.now() - started;
+      const status =
+        result.optimized.length > String(prompt |"").length * 0.5
+          ? "ok"
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
           : "laggy";
 ;
       append_log ({

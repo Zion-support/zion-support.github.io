@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 ;
 import React, { useEffect, useRef } from 'react';
@@ -5,10 +6,28 @@ import { motion  } from 'framer-motion';
 interface UltraAdvancedFuturisticBackgroundV2Props  {children: React.ReactNode;
   className?: string;
 }const UltraAdvancedFuturisticBackgroundV2: React.FC<UltraAdvancedFuturisticBackgroundV2Props> = ({children;
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+
+=======
+>>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
+import React, { useEffect, useRef } from 'react';
+import { motion } from 'framer-motion';
+interface UltraAdvancedFuturisticBackgroundV2Props {
+  children: React.ReactNode;
+  className?: string
+}
+
+<<<<<<< HEAD
+const UltraAdvancedFuturisticBackgroundV2: React.FC<UltraAdvancedFuturisticBackgroundV2Props /> = ({ children;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
   className;
 canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
 let animationFrameId: number;
+<<<<<<< HEAD
 let particles: Array< {const UltraAdvancedFuturisticBackgroundV2: React.FC<;
   UltraAdvancedFuturisticBackgroundV2Props;
 > = ({ children, className = '' }) => {const canvasRef  = useRef<HTMLCanvasElement>(null)useEffect(() => {const canvas = canvasRef.current;
@@ -16,16 +35,37 @@ let particles: Array< {const UltraAdvancedFuturisticBackgroundV2: React.FC<;
     const ctx = canvas.getContext('2d')if (!ctx) return;
     canvas.width = window.innerWidth;
 
+=======
+
+=======
+canvas.width = window.innerWidth
+canvas.height = window.innerHeight
+let animationFrameId: number
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-43ef
+let particles: Array< {
+
+const UltraAdvancedFuturisticBackgroundV2: React.FC<}
+  UltraAdvancedFuturisticBackgroundV2Props}
+> = ({ children, className = ''    }) => {
+
+ ;
+  const canvasRef = useRef<HTMLCanvasElement />(null);
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
   useEffect(() => {
+
     const canvas = canvasRef.current;
+
     if (!canvas) return;
-    const ctx = canvas.getContext('2d');
-    if (!ctx) return;
+
+const ctx = canvas.getContext('2d')if (!ctx);
+  return;
     canvas.width = window.innerWidth;
+
     canvas.height = window.innerHeight;
-canvas.width = window.inner_width;
-canvas.height = window.inner_height;
+
 let animationFrameId: number;
+<<<<<<< HEAD
 let particles: Array< {
 const UltraAdvancedFuturisticBackgroundV2: React.FC<;
   UltraAdvancedFuturisticBackgroundV2Props;
@@ -35,6 +75,47 @@ const UltraAdvancedFuturisticBackgroundV2: React.FC<;
 }) => {
   useEffect (() => {
     const canvas = canvas_ref.current;
+=======
+    let particles: Array<{
+      coordinate_x: number;
+
+      coordinate_y: number;
+      vx: number;
+      vy: number;
+      size: number;
+      color: string;
+
+      life: number;
+
+      maxLife: number;}
+}
+<<<<<<< HEAD
+    }> = [];
+=======
+const UltraAdvancedFuturisticBackgroundV2: React.FC<UltraAdvancedFuturisticBackgroundV2Props    /> = ({ children
+  className
+canvas.width = window.innerWidth
+canvas.height = window.innerHeight
+let animationFrameId: number
+    const canvas = canvasRef.current
+    if (!canvas) return
+const ctx = canvas.getContext('2d')if (!ctx)
+  return
+    canvas.width = window.innerWidth
+    canvas.height = window.innerHeight
+canvas.width = window.inner_width
+canvas.height = window.inner_height
+let animationFrameId: number
+let particles: Array< {}
+const UltraAdvancedFuturisticBackgroundV2: React.FC<
+  UltraAdvancedFuturisticBackgroundV2Props;'
+> = ({ children, class_name = '' }) => {  const canvas_ref = useRef < HTMLCanvasElement>(null);const UltraAdvancedFuturisticBackgroundV2: React.FC < UltraAdvancedFuturisticBackgroundV2Props> = ({}
+  children;'
+  class_name = ''
+}) => {}
+  useEffect (() => {}
+    const canvas = canvas_ref.current
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
     // Check condition
 if (return) {
   $2
@@ -43,6 +124,7 @@ if (return) {
     // Check condition
 if (return) {
   $2
+<<<<<<< HEAD
 }
     canvas.width = window.inner_width;
     canvas.height = window.inner_height;
@@ -134,6 +216,24 @@ const UltraAdvancedFuturisticBackgroundV2: React.FC<UltraAdvancedFuturisticBackg
       maxLife: number}> = [],
 
     const colors = $2;
+=======
+    canvas.width = window.inner_width
+    canvas.height = window.inner_height
+    let animationFrameId: number
+      coordinate_x: number
+      coordinate_y: number
+      vx: number
+      vy: number
+      size: number
+      color: string
+      life: number
+      maxLife: number;}
+>>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
+
+    }> = []
+const colors = [
+  '#00ffff','#ff00ff','#ffff00','#00ff00','#ff0080','#8000ff','#ff8000','#0080ff','#ff0080','#80ff00']
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
     // Initialize particles
     const initParticles = $2;
       for (let i = 0, i < 150, i++) {
@@ -341,9 +441,13 @@ ctx.stroke()}
             scale: [1, 0.9, 1],
             opacity: [0.1, 0.3, 0.1]
           }}
+<<<<<<< HEAD
           transition = $2;
             repeat: Infinity,
           animate={{
+=======
+          transition={{
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
             duration: 7
             repeat: Infinity
             ease: 'easeInOut',            ease: "easeInOut"
@@ -377,7 +481,10 @@ ctx.stroke()}
           }}
         />
       </div>
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
       {/* Quantum Energy Particles */}
       <div className="fixed inset-0 pointer-events-none z-20">
         {[...Array(20)].map((_, i) => (
@@ -418,6 +525,7 @@ ctx.stroke()}
             }}
           />
         ))}
+<<<<<<< HEAD
       <div className='fixed inset-0 pointer-events-none z-30'>;
         <svg className='w-full h-full'>;
           <defs>;
@@ -426,6 +534,27 @@ ctx.stroke()}
               x1='0%'
               y1='0%'
               x2='100%'
+=======
+      </div>
+            transition={{
+              duration: 3 + Math.random() * 2,
+              repeat: Infinity,
+              delay: Math.random() * 2,
+              ease: 'easeInOut',            }}
+
+            }}
+            transition={{duration: 3 + Math.random() * 2
+              repeat: Infinity;}
+              delay: Math.random() * 2;}"
+              duration: 3 + Math && Math.random() * 2,repeat: Infinity,delay: Math && Math.random() * 2,transition={{ease: 'easeInOut'            }}              ease: \'easeInOut\'
+              y: [0, -100, 0],opacity: [0, 1, 0],scale: [0, 1, 0]}}
+            transition={{duration: 3 + Math.random() * 2,repeat: Infinity,delay: Math.random() * 2,ease: 'easeInOut'}}
+             />
+        ))}
+            transition={{duration: 3 + Math.random() * 2,repeat: Infinity,delay: Math.random() * 2,ease: 'easeInOut'            }}/>
+        ))}
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
       </div>
 
       {/* Neural Network Connections */}
@@ -505,6 +634,7 @@ ctx.stroke()}
 
       {/* Content */}
 
+<<<<<<< HEAD
 };
 
 export default UltraAdvancedFuturisticBackgroundV2;
@@ -550,15 +680,38 @@ stroke='url(#neuralGradient)';
       {/* Content */}
       <div className='relative z - 40'>{children}</div>;
     </div>);
+=======
+}
+export default UltraAdvancedFuturisticBackgroundV2
+      {/* Content */}'
+      <div className='relative z-40'>{children}</div>
+    </div>
+  );
+}
+export default UltraAdvancedFuturisticBackgroundV2;    </div>
+  )
+}
+export default UltraAdvancedFuturisticBackgroundV2;
+<<<<<<< HEAD
+
+"
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 }
 ;
 export default UltraAdvancedFuturisticBackgroundV2;    </div>);
 }
 ;
 export default UltraAdvancedFuturisticBackgroundV2
+<<<<<<< HEAD
 };
 
     </div>)}export default UltraAdvancedFuturisticBackgroundV2;    </div>)}export default UltraAdvancedFuturisticBackgroundV2;
 }}export default UltraAdvancedFuturisticBackgroundV2;
       <div className = $2;
 export default UltraAdvancedFuturisticBackgroundV2,
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-43ef
+=======
+>>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75

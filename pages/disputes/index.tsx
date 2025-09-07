@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import useSWR from 'swr';
 import EnhancedLayout from '../../components/layout/EnhancedLayout';
 import Link from 'next/link';
@@ -5,13 +6,28 @@ const fetcher = $2;
 export default function DisputesIndexPage() {
   const { data } = useSWR($2);
   const disputes = $2;
+=======
+import React from 'react';
+import Head from 'next/head';
+import Layout from '../../components/layout/Layout';
+
+export default function DisputesIndex() {
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
   return (
-    <EnhancedLayout>
-      <div className="max-w-4xl mx-auto">
-        <div className="flex items-center justify-between mb-4">
-          <h1 className="text-2xl font-semibold">My Disputes</h1>
-          <Link href="/disputes/new"><a className="text-sm text-blue-700 hover:underline">Raise Dispute</a></Link>
+    <Layout>
+      <Head>
+        <title>Disputes - Zion Tech Group</title>
+        <meta name="description" content="Disputes solutions and services." />
+      </Head>
+      
+      <div className="min-h-screen bg-gray-50">
+        <div className="container mx-auto px-6 py-16">
+          <h1 className="text-4xl font-bold text-gray-900 mb-8">Disputes</h1>
+          <p className="text-lg text-gray-600">
+            Professional disputes solutions tailored to your business needs.
+          </p>
         </div>
+<<<<<<< HEAD
         <div className="overflow-auto border rounded">
           <table className="min-w-full text-sm">
             <thead className="bg-gray-50 dark:bg-gray-900">
@@ -42,4 +58,9 @@ export default function DisputesIndexPage() {
       </div>
     </EnhancedLayout>
   )
+=======
+      </div>
+    </Layout>
+  );
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 }

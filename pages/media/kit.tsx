@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { useCallback, useMemo, useState } from 'react';
 import Head from 'next/head';
 import DatePicker from 'react-datepicker';
@@ -83,12 +84,34 @@ const KitPage = () => {
     const onCopy = () => navigator.clipboard.writeText($2);
     return (
       <div className = $2;
+=======
+import React from 'react';
+import Head from 'next/head';
+import Layout from '../components/layout/Layout';
+
+export default function kit() {
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
   return (
-    <div>
+    <Layout>
       <Head>
-        <title>Media Kit - Zion</title>
-        <meta name="description" content="Zion media kit: brand, assets, legal, and rollout playbooks." />
+        <title>Kit - Zion Tech Group</title>
+        <meta name="description" content="Kit solutions and services." />
       </Head>
+<<<<<<< HEAD
 
       <div className = $2;
 export default KitPage,
+=======
+      
+      <div className="min-h-screen bg-gray-50">
+        <div className="container mx-auto px-6 py-16">
+          <h1 className="text-4xl font-bold text-gray-900 mb-8">Kit</h1>
+          <p className="text-lg text-gray-600">
+            Professional kit solutions tailored to your business needs.
+          </p>
+        </div>
+      </div>
+    </Layout>
+  );
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75

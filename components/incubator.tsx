@@ -1,5 +1,12 @@
+<<<<<<< HEAD
   );
 }      <div className="max-w-3xl">
+=======
+<<<<<<< HEAD
+</div> </div> </EnhancedLayout>) 
+}
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 import Link from 'next/link';
 import EnhancedLayout from '../components/layout/EnhancedLayout';
 export default function IncubatorPage() {
@@ -48,3 +55,4 @@ function IncubatorPage() {return (<EnhancedLayout>;
     </EnhancedLayout>)}
   )
 }
+>>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7

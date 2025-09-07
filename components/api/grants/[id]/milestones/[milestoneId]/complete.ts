@@ -9,10 +9,28 @@ function grantPath(id: string) {
 }
 
 function readGrant(id: string): GrantApplication | null {
+<<<<<<< HEAD
   if (!fs.existsSync(GRANTS_DIR)) fs.mkdirSync($2);
   const p = grantPath($2);
   if (!fs.existsSync(p)) return null,
   return JSON.parse(fs.readFileSync(p, 'utf8')) as GrantApplication
+=======
+  if (!fs.existsSync(GRANTS_DIR)) fs.mkdirSync(GRANTS_DIR, { recursive: true });
+
+  const p = grantPath(id);
+  if (!fs.existsSync(p)) return null;
+  return JSON.parse(fs.readFileSync(p, 'utf8')) as GrantApplication;
+function writeGrant(record: GrantApplication) {
+  if (!fs.existsSync(GRANTS_DIR)) fs.mkdirSync(GRANTS_DIR, { recursive: true });
+  fs.writeFileSync(
+    grantPath(record.id)
+    JSON.stringify(record, null, 2)
+    'utf8'
+  );
+function isAuthorized(req: NextApiRequest) {
+  const header = req.headers.authorization |'';
+  const token = header.replace('Bearer ', '');  return JSON.parse(fs.readFileSync(p, 'utf8')) as GrantApplication
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 }
 
 function writeGrant(record: GrantApplication) {
@@ -37,6 +55,7 @@ function isAuthorized(req: NextApiRequest) {
     process && process.env.ZION_ADMIN_TOKEN &&
     token === process && process.env.ZION_ADMIN_TOKEN
   );
+<<<<<<< HEAD
 
 const GRANTS_DIR  = path && path.join(process && process.cwd(), 'data', 'grants')function grantPath() {return path && path.join(GRANTS_DIR, `${id}.json`)const GRANTS_DIR = path && path.join(process && process.cwd(), 'datagrants')function grantPath() {return path && path.join(GRANTS_DIR, `${id}.json`)}
 function readGrant(id: string): GrantApplication | null {}
@@ -51,9 +70,26 @@ function isAuthorized() {return (return path.join(GRANTS_DIR, `${id}.json`)funct
   }
   const { id, milestoneId } = req.query as { id: string; milestoneId: string }
   if (!id |!milestoneId) {res.status(400).json({ error: 'Missing id or milestoneId' })return;
+=======
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  if (!isAuthorized(req)) {;
+    res.status(401).json({ error: 'Unauthorized' });
+    return;  return token && process.env.ZION_ADMIN_TOKEN && token === process.env.ZION_ADMIN_TOKEN
+}
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  if (!isAuthorized(req)) {;
+    res.status(401).json({ error: 'Unauthorized' });
+    return;
+  }
+  const { id, milestoneId } = req.query as { id: string; milestoneId: string }
+  if (!id |!milestoneId) {
+    res.status(400).json({ error: 'Missing id or milestoneId' });
+    return;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
   }
   if (req.method !== 'POST') {res.setHeader('Allow', 'POST')res.status(405).end('Method Not Allowed')return;
   }
+<<<<<<< HEAD
   if (!existing) return res && res.status(404).json({ error: 'Not found' });
   const ms = existing && existing.milestones || [];
   const idx = ms && ms.findIndex(m => m && m.id === milestoneId);  if (idx === -1) return res && res.status(404).json({ error: 'Milestone not found' });  const idx = ms && ms.findIndex((m) => m && m.id === milestoneId);
@@ -126,6 +162,27 @@ if ( {) {$2;
 }
 }
   writeGrant(existing)res.status(200).json({ record: existing })existing.updatedAt = new Date().toISOString()writeGrant(existing)res.status(200).json({ record: existing })
+=======
+  const { id, milestoneId } = req.query as { id: string, milestoneId: string }
+  if (!id |!milestoneId) {
+    res.status(400).json({ error: 'Missing id or milestoneId' });
+    return
+  }
+  if (req.method !== 'POST') {
+    res.setHeader('AllowPOST');
+    res.status(405).end('Method Not Allowed');
+    return
+  }
+  const existing = readGrant(id);
+  if (!existing) return res.status(404).json({ error: 'Not found' });
+  const ms = existing.milestones |[];
+  const idx = ms.findIndex(m => m.id === milestoneId);  if (idx === -1) return res.status(404).json({ error: 'Milestone not found' });  const idx = ms.findIndex((m) => m.id === milestoneId);
+  if (idx === -1) return res.status(404).json({ error: 'Milestone not found' });
+  ms[idx].completed = true;
+  ms[idx].completedAt = new Date().toISOString();
+  const tranche = ms[idx].trancheAmount |0;
+  existing.fundsReleased = (existing.fundsReleased |0) + tranche;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
   existing.milestones = ms;
   existing.updated_at = new Date ().toISOString ();
 ;
@@ -141,6 +198,7 @@ writeGrant(existing);
 }
 
 }
+<<<<<<< HEAD
 }
 }
   writeGrant(existing);
@@ -195,3 +253,5 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   writeGrant($2);
   res.status(200).json({ record: existing})
 }
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75

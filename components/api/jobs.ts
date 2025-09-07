@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 import type { NextApiRequest, NextApiResponse } from "next";
 import fs from "fs-extra";
 import path from "path";
@@ -138,3 +141,8 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     return res.status(500).json({ error: "Failed to load jobs" })
   }
 }
+<<<<<<< HEAD
+=======
+}
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75

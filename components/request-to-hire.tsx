@@ -1,6 +1,24 @@
+<<<<<<< HEAD
 import { useEffect, useMemo, useState } from 'react';
 import { useRouter } from 'next/router';
 import { TALENT_PROFILES } from '../data/talent';
+=======
+<<<<<<< HEAD
+</div>) 
+}</button> </form> </div>) 
+}
+=======
+import React, { useState, useMemo } from 'react'
+import { useRouter } from 'next/router'
+const TALENT_PROFILES = [
+  { slug: 'senior-developer', name: 'Senior Developer' },
+  { slug: 'ui-designer', name: 'UI Designer' },
+  { slug: 'product-manager', name: 'Product Manager' },
+  { slug: 'data-scientist', name: 'Data Scientist' },
+  { slug: 'devops-engineer', name: 'DevOps Engineer' }
+]
+export default function RequestToHirePage() {
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 export default function RequestToHirePage() {
 import { useEffect, useMemo, useState  } from 'react';
 export default function RequestToHirePage() {export default function RequestToHirePage() {const router = useRouter()const { talent } = router.query as { talent?: string }
@@ -364,3 +382,4 @@ if ( {) {$2;
   )}
   )
 }
+>>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7

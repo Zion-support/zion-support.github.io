@@ -1,4 +1,20 @@
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+return (<UltraAdvancedFuturisticBackground> <Head> <title> {
+  service.name 
+}- Zion Tech Group</title>) ) 
+}</ul> </div> <div className="bg-black/30 rounded-2xl border border-cyan-500/30 p-6 h-fit" > <div className="flex items-end justify-between mb-3" > <div> </div> </div> </div> </div> </div> </UltraAdvancedFuturisticBackground>) 
+}
+=======
+import React from 'react',
+return (<UltraAdvancedFuturisticBackground> <Head> <title> {
+  service.name
+}- Zion Tech Group</title>) )
+  service.name 
+}- Zion Tech Group</title>) ) 
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 }</ul> </div> <div className="bg-black/30 rounded-2xl border border-cyan-500/30 p-6 h-fit" > <div className="flex items-end justify-between mb-3" > <div> </div> </div> </div> </div> </div> </UltraAdvancedFuturisticBackground>) import React from 'react';
 import React from 'react';
 import Head from 'next/head';
@@ -81,6 +97,7 @@ export default function ApiObservabilityPage() {
     </UltraAdvancedFuturisticBackground>
   )
 }
+<<<<<<< HEAD
                 {service && service.features.slice(0, 12).map((feat, i) => (<li key={i} className="flex items-start space-x-3 text-slate-200"><Check className="w-5 h-5 text-cyan-400 mt-0 && 0.5" /><span>{feat}</span></li>;
                 ))}</ul>;
               </ul>;
@@ -161,3 +178,6 @@ if (return null) {
 ;
   )}
 
+=======
+>>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75

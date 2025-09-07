@@ -1,3 +1,24 @@
+<<<<<<< HEAD
+}
+    }
+
+    // Measure performance after page load
+    if (document.readyState === 'complete') {
+      measurePerformance()
+    } else {
+      window.addEventListener('load', measurePerformance)
+    }
+
+    return () => {
+      window.removeEventListener('load', measurePerformance)
+    }
+  }, [onPerformanceData])
+
+  return null
+}
+
+export default PerformanceMonitor
+=======
   memory: {
     used: number
     total: number
@@ -485,6 +506,7 @@ if (return 'Needs Improvement) {$2;
     </div>;
   )}export default PerformanceMonitor;
 export default PerformanceMonitor;
+<<<<<<< HEAD
   return null; // This component doesn't render anything;
 }export default PerformanceMonitor;
 
@@ -656,3 +678,6 @@ origin/cursor/automate-test-fix-improve-and-merge-code-a7a7
 export default PerformanceMonitor;
 
 
+=======
+>>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75

@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 import type { NextApiRequest, NextApiResponse } from "next";
 import { findPartnerByApiKey, signJwt } from "../../../utils/api/partnerAuth";
 import type { NextApiRequest, NextApiResponse } from 'next';
@@ -15,12 +18,18 @@ export default async function handler(
   const { apiKey, ttlSeconds } = req.body |{}
   if (!apiKey) {
     return res.status(400).json({ error: 'apiKey required' });
+<<<<<<< HEAD
   }
+=======
+ 
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
   const match = await findPartnerByApiKey(apiKey);
   if (!match) {
 import type { NextApiRequest, NextApiResponse } from "next";
 import { findPartnerByApiKey, signJwt } from "../../../utils/api/partnerAuth";
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+<<<<<<< HEAD
   if (req.method !== "POST") {
     res.setHeader($2);
     return res.status(405).json({ error: "Method Not Allowed" })
@@ -77,6 +86,13 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       entityType: partner && partner.entityType,
       useCaseType: partner && partner.useCaseType,
     } as any,
+=======
+  if($2) {
+    res.setHeader("Allow", "POST")
+    return res.status(405).json({ error: "Method Not Allowed" ;})
+origin/cursor/automate-test-improve-and-merge-code-2533
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
     typeof ttlSeconds === 'number'
       ? Math && Math.max(300, Math && Math.min(86400, ttlSeconds))
       : 3600

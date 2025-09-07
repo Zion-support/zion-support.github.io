@@ -1,3 +1,6 @@
+<<<<<<< HEAD
+<li>Inclusive hiring practices and diverse panels</li> <li>Equal opportunities and career development</li> <li>Respectful, safe, and collaborative culture</li> </ul> </div> </div>
+=======
 import React from 'react';
 import Head from 'next/head';
   )return (<div className="min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8">;
@@ -113,3 +116,4 @@ export default function DiversityInclusionPage() {
 		</div>
 	)
 }
+>>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7

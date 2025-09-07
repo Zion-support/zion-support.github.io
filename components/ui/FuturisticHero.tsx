@@ -1,5 +1,15 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+export default function FuturisticHero() {
+
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 import Link from 'next/link';
 import AnimatedBackground from './AnimatedBackground';
+>>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
 export default function FuturisticHero() {
   return (
     <section className="relative py-20 sm:py-28">
@@ -15,6 +25,7 @@ export default function FuturisticHero() {
           <Link href="/partners"><a className="px-5 py-3 rounded-lg bg-indigo-600 text-white shadow hover: bg-indigo-500">Become a Partner</a></Link>
           <Link href="/services"><a className="px-5 py-3 rounded-lg border border-gray-300 dark:border-gray-700 hover:bg-gray-100 dark: hover: bg-gray-900">Explore Services</a></Link>
         </div>
+<<<<<<< HEAD
     <section className='relative py-20 sm:py-28'>;
       <AnimatedBackground />;
       <div className='text-center max-w-4xl mx-auto'>;
@@ -156,8 +167,24 @@ function FuturisticHero() {return (<section className="relative py-20 sm:py-28">
         </div>;
       </div>;
     </section>);
+=======
+        <div className='mt-10 mx-auto max-w-3xl p-6 rounded-2xl bg-white/70 dark:bg-black/40 backdrop-blur border border-gray-200 dark:border-gray-800 shadow'    />
+          <p className='text-sm text-gray-700 dark:text-gray-300'    />
+            Talent marketplace • Project accelerators • Secure contracts •
+            Integrated AI toolchain
+          </p>
+        </div>
+      </div>
+  );}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 
+<<<<<<< HEAD
+=======
+<AnimatedBackground /> <div className="text-center max-w-4xl mx-auto" > <h1 className="text-4xl sm:text-6xl font-extrabold tracking-tight" > Build and Hire with Zion AI Marketplace </h1> </p> </div> <div className="mt-10 mx-auto max-w-3xl p-6 rounded-2xl bg-white/70 dark:bg-black/40 backdrop-blur border border-gray-200 dark:border-gray-800 shadow" > <p className="text-sm text-gray-700 dark:text-gray-300" > Talent marketplace • Project accelerators • Secure contracts • Integrated AI toolchain </p> </div> </div> </section>
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-43ef
+=======
 }
+<<<<<<< HEAD
     </section>)}
         <div className="mt-10 mx-auto max-w-3xl p-6 rounded-2xl bg-white/70 dark:bg-black/40 backdrop-blur border border-gray-200 dark:border-gray-800 shadow">
           <p className="text-sm text-gray-700 dark:text-gray-300">
@@ -168,3 +195,6 @@ function FuturisticHero() {return (<section className="relative py-20 sm:py-28">
     </section>
   )
 }
+=======
+>>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75

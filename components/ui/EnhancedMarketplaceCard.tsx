@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 import Link from 'next/link';
 ursor/automate-test-improve-and-merge-code-646c;
@@ -9,6 +10,13 @@ ursor/automate-test-improve-and-merge-code-646c;
         {price && <span className="text-sm font-medium text-blue-600">{price}</span>}
 import Link from 'next/link';
 import Image from 'next/image';
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+import Link from 'next/link'
+>>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 interface EnhancedMarketplaceCardProps {
   title: string, description: string
   price?: string;
@@ -79,8 +87,41 @@ const EnhancedMarketplaceCard: React.FC<MarketplaceCardProps> = ({
           Add to Cart
         </button>
       </div>
+<<<<<<< HEAD
     </div>
   );
 };
 
 export default EnhancedMarketplaceCard;
+=======
+</div>
+  );
+};
+}
+
+export default EnhancedMarketplaceCard;
+
+          <div className;
+export default function EnhancedMarketplaceCard({ title, subtitle, description, footer }: MarketplaceCardProps) {
+  return (
+    <EnhancedCard className="p-5">
+      <div className="space-y-2">
+        <div>
+          <h3 className="text-base font-semibold leading-tight">{title}</h3>
+          {subtitle && <p className="text-sm text-gray-500 dark:text-gray-400">{subtitle}</p>}
+        </div>
+        {description && <p className="text-sm text-gray-700 dark:text-gray-300">{description}</p>}
+        {footer && <div className="pt-2">{footer}</div>}
+      </div>
+    </EnhancedCard>
+  )
+}
+=======
+<div className="h-12 w-12 rounded bg-gray-200" />)}
+        <h3 className="text-lg font-semibold text-gray-900">{title}</h3>
+      </div>
+      <p className="text-sm text-gray-600 mb-4">{description}</p>
+      <div className="mt-auto flex items-center justify-between">
+        {price && <span className="text-sm font-medium text-blue-600">{price}</span>}
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-43ef
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75

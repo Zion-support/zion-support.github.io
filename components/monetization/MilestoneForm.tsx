@@ -1,7 +1,18 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 
-};
 
+<<<<<<< HEAD
 export default function MilestoneForm(): any ({ onSubmit }: Props) {;
+=======
+=======
+>>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
+import React, { useState } from 'react';
+type Props = any;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 type Props = {
   onSubmit: (payload: {
     title: string;
@@ -263,3 +274,17 @@ type='submit';
     </form>
   )
 }
+<<<<<<< HEAD
+=======
+}
+<<<<<<< HEAD
+
+=======
+<div> <label className="block text-sm font-medium" >Title</label> <input required /> </div> <div> <label className="block text-sm font-medium" >Description</label> <textarea /> </div> <div className="grid grid-cols-1 md:grid-cols-2 gap-4" > <div> <label className="block text-sm font-medium" >Due Date</label> <input required /> </div> <div> <label className="block text-sm font-medium" >Amount (USD) </label> <input required /> </div> </div> <button > {
+  loading ? 'Adding...' : 'Add Milestone' 
+}</button> </form>) 
+}
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-43ef
+=======
+>>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75

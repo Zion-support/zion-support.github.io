@@ -1,6 +1,7 @@
 import React from 'react';
 import Head from 'next/head';
 import Layout from '../components/layout/Layout';
+<<<<<<< HEAD
 import { Server, CheckCircle, Database, Cloud } from 'lucide-react';
 export default function EnterpriseITPage() {
   const features = [
@@ -12,13 +13,17 @@ export default function EnterpriseITPage() {
     { name: 'Data Pipeline Observability', href: '/data-pipeline-observability' },
     { name: 'Uptime & SLO Monitor', href: '/uptime-slo-monitor' }],
 
+=======
+
+export default function enterpriseit() {
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
   return (
     <Layout>
       <Head>
-        <title>Enterprise IT | Zion Tech Group</title>
-        <meta name="description" content="Cloud, DevOps, data platforms, and SRE with cost, performance, and reliability in focus." />
-        <link rel="canonical" href="https://ziontechgroup.com/enterprise-it" />
+        <title>Enterprise It - Zion Tech Group</title>
+        <meta name="description" content="Enterprise It solutions and services." />
       </Head>
+<<<<<<< HEAD
       <div className="min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto space-y-12">
           <header className="text-center">
@@ -60,4 +65,17 @@ export default function EnterpriseITPage() {
       </div>
     </Layout>
   )
+=======
+      
+      <div className="min-h-screen bg-gray-50">
+        <div className="container mx-auto px-6 py-16">
+          <h1 className="text-4xl font-bold text-gray-900 mb-8">Enterprise It</h1>
+          <p className="text-lg text-gray-600">
+            Professional enterprise it solutions tailored to your business needs.
+          </p>
+        </div>
+      </div>
+    </Layout>
+  );
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 }

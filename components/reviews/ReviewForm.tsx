@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
   categories?: {
@@ -58,6 +59,15 @@ type Props = {;
 
 const ReviewForm: React.FC<Props> = ({ initial }) => {;
 
+=======
+<<<<<<< HEAD
+</div> <div> <label className="block text-sm font-medium mb-2" >Your Review</label> <textarea required /> </div> </div> <span className="pill" >Optional</span> </div> </div> <span className="pill" >Optional</span> </div> </div> <span className="pill" >Optional</span> </div> </div> <span className="pill" >Optional</span> </div> </div> <button > {
+  submitting ? 'Submitting...' : 'Submit Review' 
+}</button> </form>) 
+}
+export default ReviewForm
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 import React, { useState } from 'react';
 import StarRating from './StarRating';
 export type ReviewFormValues = any;
@@ -375,6 +385,7 @@ export default ReviewForm;    </form>);
 }
 ;
 export default ReviewForm;
+<<<<<<< HEAD
 ;
 
       </button>
@@ -387,3 +398,6 @@ export default ReviewForm;
 export default ReviewForm;
 origin/cursor/automate-test-improve-and-merge-code-2533
 
+=======
+>>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -259,6 +260,81 @@ const contactInfo  = null;{name: 'AI Emotional Intelligence', href: '/ai-emotion
 }
 {name: 'AI Autonomous Business Manager', href: '/ai-autonomous-business-manager', description: 'Autonomous business AI', price: '$3, 999/month';
 }];
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+
+=======
+>>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
+import React, { useState, useEffect } from 'react',
+import Link from 'next/link';
+import { motion, AnimatePresence } from 'framer-motion';
+import { Phone, Mail, MapPin, Globe, Rocket, Brain, Atom;
+  Cpu, Target, Microscope, Shield, Zap, Sparkles;
+  Menu, X, Search, ChevronDown, Home, Briefcase;
+  DollarSign, BookOpen, Users, MessageCircle
+ } from 'lucide-react';
+const contactInfo = null;
+
+import {
+  Phone
+  Mail
+  MapPin
+  Globe
+  Rocket
+  Brain
+  Atom
+  Cpu
+  Target
+  Microscope
+  Shield
+  Zap
+  Sparkles
+  Menu
+  X
+  Search
+  ChevronDown
+  Home
+  Briefcase
+  DollarSign
+  BookOpen
+  Users
+  MessageCircle;} from 'lucide-react';import {
+  Phone, Mail, MapPin, Globe, Rocket, Brain, Atom
+  Cpu, Target, Microscope, Shield, Zap, Sparkles;
+  Menu, X, Search, ChevronDown, Home, Briefcase
+  DollarSign, BookOpen, Users, MessageCircle
+const contactInfo = {
+  mobile: '+1 302 464 0950'
+  email: 'kleber@ziontechgroup.com'
+  address: '364 E Main St STE 1008 Middletown DE 19709'
+  website: 'https://ziontechgroup.com'
+}
+{
+<<<<<<< HEAD
+  name: 'AI Emotional Intelligence',
+  href: '/ai-emotional-intelligence-platform', description: 'Emotional AI platform',
+  price: '$1, 999/month'}
+}
+}
+{name: 'AI Autonomous Business Manager',
+  href: '/ai-autonomous-business-manager', description: 'Autonomous business AI'}
+  price: '$3, 999/month';}
+}];
+
+</div> </div> </div> </div> </div> > <Link href=\"/\" className=\"flex items-center space-x-3\"  /> <div className=\"relative\"  /> <div className=\"w-12 h-12 bg-gradient-to-br from-purple-500 via-cyan-500 to-blue-500 rounded-xl flex items-center justify-center shadow-2xl\"  /> <Rocket className=\"w-7 h-7 text-white\" /> </div> <div className=\"absolute -inset-1 bg-gradient-to-br from-purple-500 via-cyan-500 to-blue-500 rounded-xl blur opacity-75 animate-pulse\"  /></div> </div> <div className=\"flex flex-col\"  /> <span className=\"text-2xl font-bold bg-gradient-to-r from-purple-400 via-cyan-400 to-blue-400 bg-clip-text text-transparent\"  /> Zion Tech Group </span> <span className=\"text-xs text-purple-300 font-medium\"  /> Future Technology Solutions </span> </div> </a> </motion.div> > <span />Services</span> <ChevronDown className=\"w-4 h-4 transition-transform duration-200 group-hover: rotate-180\" /> </button> {}
+  /* Mega Menu */}
+}<AnimatePresence /> </div> </a>) )
+}</div> </div>) )
+}</div> </motion.div>)
+}</AnimatePresence> </div> {}
+  /* Quick Links */}
+=======
+const serviceCategories = [ {
+  title: '🧠 Revolutionary AI', icon: Brain, color: 'from-violet-500 to-purple-600', services: [ {
+  name: 'AI Consciousness Evolution', href: '/ai-consciousness-evolution-platform', description: 'Advanced AI consciousness', price: '$2, 999/month' 
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 }
 {title: '⚛️ Quantum & Emerging Tech', icon: Atom, color: 'from-indigo-500 to-blue-600', services: [ {name: 'Quantum Internet Security', href: '/quantum-internet-security-gateway', description: 'Quantum security', price: '$4, 999/month';
 }
@@ -295,6 +371,7 @@ const contactInfo  = null;{name: 'AI Emotional Intelligence', href: '/ai-emotion
 }) )}{/* Contact Button */;
 }<motion.div whileHover= {  {  website: 'https://ziontechgroup.com';
 }
+<<<<<<< HEAD
 const serviceCategories = [;
       {name: 'AI Autonomous Business Manager',href: '/ai - autonomous - business - manager',description: 'Autonomous business AI',price: '$3, 999 / month',},],title: '⚛️ Quantum & Emerging Tech',icon: Atom,color: 'from-indigo-500 to-blue-600',services: [;
       {name: 'Swarm Robotics Platform',href: '/swarm - robotics - platform',description: 'Collective robot intelligence',price: '$1, 199 / month',},],title: '🏙️ Enterprise IT Solutions',icon: Cpu,color: 'from-blue-500 to-cyan-600',services: [;
@@ -490,6 +567,193 @@ export default function UltraFuturisticNavigation2033() {
     return () => document.removeEventListener('keydown', handleEscape)
   }, []),
 
+=======
+{
+  title: '🌌 Space & Metaverse Tech', icon: Rocket, color: 'from-teal-500 to-emerald-600', services: [ {
+  name: 'Space Mining Automation', href: '/space-mining-automation-platform', description: 'Space mining platform', price: '$9, 999/month' 
+}
+{
+  name: 'Metaverse Development', href: '/metaverse-development-platform', description: 'Metaverse platform', price: '$3, 999/month' 
+}
+{
+  name: 'Virtual Event Holograms', href: '/virtual-event-hologram-platform', description: 'Holographic events', price: '$2, 499/month' 
+}] 
+}]
+</div> </div> </div> </div> </div> > <Link href="/" className="flex items-center space-x-3" > <div className="relative" > <div className="w-12 h-12 bg-gradient-to-br from-purple-500 via-cyan-500 to-blue-500 rounded-xl flex items-center justify-center shadow-2xl" > <Rocket className="w-7 h-7 text-white" /> </div> <div className="absolute -inset-1 bg-gradient-to-br from-purple-500 via-cyan-500 to-blue-500 rounded-xl blur opacity-75 animate-pulse" ></div> </div> <div className="flex flex-col" > <span className="text-2xl font-bold bg-gradient-to-r from-purple-400 via-cyan-400 to-blue-400 bg-clip-text text-transparent" > Zion Tech Group </span> <span className="text-xs text-purple-300 font-medium" > Future Technology Solutions </span> </div> </a> </motion.div> > <span>Services</span> <ChevronDown className="w-4 h-4 transition-transform duration-200 group-hover:rotate-180" /> </button> {
+  /* Mega Menu */ 
+}<AnimatePresence> </div> </a>) ) 
+}</div> </div>) ) 
+}</div> </motion.div>) 
+}</AnimatePresence> </div> {
+  /* Quick Links */ 
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-43ef
+}{
+  quickLinks.map ( (link) => (<Link key= {}
+  link.name}
+}) )
+}{
+}
+  /* Contact Button */ }
+}<motion.div whileHover= {
+  {
+    title: '🧠 Revolutionary AI',
+  icon: Brain,
+    color: 'from-violet-500 to-purple-600',
+  services: [
+{
+        name: 'AI Consciousness Evolution',
+  href: '/ai-consciousness-evolution-platform',
+        description: 'Advanced AI consciousness'}
+  price: '$2,999/month'}
+      },
+      {
+        name: 'AI Emotional Intelligence',
+  href: '/ai-emotional-intelligence-platform'
+        description: 'Emotional AI platform',
+  price: '$1,999/month'}
+}
+      }
+      {name: 'AI Creativity Orchestrator';
+        href: '/ai-creativity-orchestrator';
+        description: 'Creative AI solutions';}
+        price: '$1,499/month';}
+      }
+      {name: 'AI Autonomous Business Manager',
+  href: '/ai-autonomous-business-manager',description: 'Autonomous business AI'}
+  price: '$3,999/month'}]},{title: '⚛️ Quantum & Emerging Tech',
+  icon: Atom,color: 'from-indigo-500 to-blue-600'}
+  services: [;}
+{name: 'Quantum Internet Security',
+  href: '/quantum-internet-security-gateway',description: 'Quantum security'}
+  price: '$4,999/month'},{name: 'Biotech DNA Computing';
+        href: '/biotech-dna-computing-platform';
+        description: 'DNA computing platform';}
+        price: '$3,999/month';}
+      }
+      {name: 'Quantum Financial Trading';
+        href: '/quantum-financial-trading-platform';
+        description: 'Quantum trading';}
+        price: '$5,999/month';}
+      }
+      {name: 'DNA Computing Platform';
+        href: '/dna-computing-platform';
+        description: 'Molecular computing';}
+        price: '$1,299/month';}
+      }
+      {name: 'Photonic Computing Infrastructure';
+        href: '/photonic-computing-infrastructure';
+        description: 'Light-speed computing';}
+        price: '$699/month';}
+      }
+      {name: 'Swarm Robotics Platform',
+  href: '/swarm-robotics-platform',description: 'Collective robot intelligence'}
+  price: '$1,199/month'}]},{title: '🏙️ Enterprise IT Solutions',
+  icon: Cpu,color: 'from-blue-500 to-cyan-600'}
+  services: [;}
+{name: 'Autonomous DevOps Platform',
+  href: '/autonomous-devops-platform',description: 'Self-managing DevOps'}
+  price: '$2,499/month'},{name: 'Zero Trust Network Architecture';
+        href: '/zero-trust-network-architecture';
+        description: 'Zero trust security';}
+        price: '$1,999/month';}
+      }
+      {name: 'Edge Computing Orchestration';
+        href: '/edge-computing-orchestration';
+        description: 'Edge computing platform';}
+        price: '$1,799/month';}
+      }
+      {name: 'AI IT Operations Center',
+  href: '/ai-it-operations-center',description: 'AI-powered IT ops'}
+  price: '$2,999/month'}]},{title: '🌌 Space & Metaverse Tech',
+  icon: Rocket,color: 'from-teal-500 to-emerald-600'}
+  services: [;}
+{name: 'Space Mining Automation',
+  href: '/space-mining-automation-platform',description: 'Space mining platform'}
+  price: '$9,999/month'},{name: 'Metaverse Development';
+        href: '/metaverse-development-platform';
+        description: 'Metaverse platform';}
+        price: '$3,999/month';}
+      }
+
+      {
+        name: 'Virtual Event Holograms',
+  href: '/virtual-event-hologram-platform',
+        description: 'Holographic events'}
+  price: '$2,499/month'}
+      }
+    ]
+  }
+];
+
+const quickLinks = [
+  {
+    name: 'Services Overview',
+  href: '/enhanced-services-overview',
+    icon: Globe}
+    color: 'from-cyan-500 to-blue-600'}
+  },
+  {
+    name: 'AI Services',
+  href: '/ai-services',
+    icon: Brain}
+    color: 'from-violet-500 to-purple-600'}
+  },
+  {
+    name: 'Quantum Tech',
+  href: '/quantum-services',
+    icon: Atom}
+    color: 'from-indigo-500 to-blue-600'}
+  },
+  {
+    name: 'Space Tech',
+  href: '/space-technology',
+    icon: Rocket}
+    color: 'from-teal-500 to-emerald-600'}
+  },
+  {
+    name: 'Enterprise IT',
+  href: '/enterprise-it',
+    icon: Cpu}
+    color: 'from-blue-500 to-cyan-600'}
+  },
+  {
+    name: 'Micro SAAS',
+  href: '/enhanced-micro-saas-showcase',
+    icon: Target}
+    color: 'from-green-500 to-yellow-600'}
+  }
+];
+
+export default function UltraFuturisticNavigation2033() {
+  const [isOpen, setIsOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);
+
+export default function UltraFuturisticNavigation2033() {
+  const [isOpen, setIsOpen] = useState(false);
+  const [activeCategory, setActiveCategory] = useState<string | null />(null);
+
+const [searchQuery, setSearchQuery] = useState('');
+
+const toggleMenu = () => setIsOpen(!isOpen);
+
+const closeMenu = () => setIsOpen(false);
+
+  // Close menu on escape key;
+useEffect(() => {
+
+    const handleEscape = (
+if (e.key === 'Escape') closeMenu(),) => {
+  return $3;}
+}
+};
+
+    document.addEventListener('keydown', handleEscape);
+    return () => document.removeEventListener('keydown', handleEscape);
+  }, []);
+
+=======
+>>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
   return (
     <>
       {name: 'Virtual Event Holograms',href: '/virtual-event-hologram-platform',description: 'Holographic events',price: '$2,499/month',},],},];const quickLinks = [;
@@ -519,6 +783,7 @@ export default function UltraFuturisticNavigation2033() {
               <div className='relative group'>;
                 <button;
                   onMouseEnter={() => setActiveCategory('services')}
+<<<<<<< HEAD
                   onMouseLeave={() => setActiveCategory(null)}
                   <ChevronDown className='w-4 h-4 transition-transform duration-200 group-hover:rotate-180' />                </button>              {/* Services Mega Menu */}
               <div className="relative group">;
@@ -656,6 +921,13 @@ export default function UltraFuturisticNavigation2033() {
             {/* Desktop Navigation */}
             <div className="hidden lg:flex items-center space-x-8">
               {/* Services Mega Menu */}
+=======
+                  onMouseLeave={() => setActiveCategory(null)}'
+                  className='flex items-center space-x-2 text-gray-300 hover:text-white transition-colors duration-200 py-2 px-3 rounded-lg hover:bg-gray-800/50'
+                >
+                  <span>Services</span>
+                  <ChevronDown className='w-4 h-4 transition-transform duration-200 group-hover:rotate-180' />                </button>              {/* Services Mega Menu */}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
               <div className="relative group">
                 <button
                   onMouseEnter={() => setActiveCategory('services')}
@@ -947,6 +1219,7 @@ href='/contact';
             <motion.div
               initial={{ opacity: 0, height: 0}}
               animate={{ opacity: 1, height: 'auto' }}
+<<<<<<< HEAD
               transition={{ duration: 0.3 }}className='lg:hidden bg - gray - 900 / 95 backdrop - blur - xl border - t border - purple - 500 / 20';
               <div className='px - 4 py - 6 space - y-6'>;className='lg:hidden bg-gray-900/95 backdrop-blur-xl border-t border-purple-500/20';
             >;
@@ -954,6 +1227,12 @@ href='/contact';
               transition={{ duration: 0.3 }}
               className='lg:hidden bg - gray - 900 / 95 backdrop - blur - xl border - t border - purple - 500 / 20';
               <div className='px - 4 py - 6 space - y-6'>;
+=======
+              exit={{ opacity: 0, height: 0 }}
+              transition={{ duration: 0.3 }}
+              className='lg:hidden bg-gray-900/95 backdrop-blur-xl border-t border-purple-500/20'
+              <div className='px-4 py-6 space-y-6'>
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
                 {/* Mobile Services */}
                 <div className='space - y-4'>;
                   <h3 className='text - lg font - semibold text - white'>Services</h3>;
@@ -1112,6 +1391,7 @@ href='/contact';
                     onClick={closeMenu}
                     className="block w-full px-6 py-3 bg-gradient-to-r from-purple-600 to-cyan-600 text-white font-medium rounded-lg text-center hover:from-purple-700 hover:to-cyan-700 transition-all duration-200"
                   >
+<<<<<<< HEAD
                     Get Started
                   </Link>
                 </div>
@@ -1123,3 +1403,5 @@ href='/contact';
     </>
   )
 }
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75

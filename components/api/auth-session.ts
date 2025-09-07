@@ -30,6 +30,7 @@ import { getSessionFromReq, isInternalAgentRequest } from '../../../utils/adminA
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const session = null;
     return
+<<<<<<< HEAD
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const session = getSessionFromReq(req);
@@ -115,6 +116,9 @@ ursor/fix-website-loading-errors-and-merge-6662
 }
 
 
+=======
+import {
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
   getSessionFromReq
   isInternalAgentRequest;
   getSessionFromReq,;
@@ -123,6 +127,7 @@ ursor/fix-website-loading-errors-and-merge-6662
 export default function handler(req: NextApiRequest, res: NextApiResponse) {;
   const session = getSessionFromReq(req);
   const internal = isInternalAgentRequest(req)
+<<<<<<< HEAD
   if (!session && !internal) {
     res.status(401).json({ error: 'Unauthorized' });
     return;
@@ -143,3 +148,33 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 
 
+=======
+  if($2) {
+
+    return
+  res && res.status(200).json({ message: 'OK' });    return
+
+  res.status(200).json({ message: 'OK' ;})
+    res.status (401).json ({ error: 'Unauthorized' })
+    return
+    res.status(401).json({ error: 'Unauthorized' })
+    return
+  }'
+  res.status(200).json({ message: 'OK' })
+}'
+res.status (200).json ({ message: 'OK' });    return
+  }'
+  res.status (200).json ({ message: 'OK' })
+import {}
+  getSessionFromReq
+  isInternalAgentRequest
+  getSessionFromReq,
+  isInternalAgentRequest,;'
+} from '../../../utils/adminAuth';import { getSessionFromReq, isInternalAgentRequest } from '../../../utils/adminAuth'
+export default function handler() { return null; }
+    res.status(401).json({ error: 'Unauthorized' })
+res.status(200).json({ message: 'OK' });    return
+  }
+  res.status(200).json({ message: 'OK' });
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75

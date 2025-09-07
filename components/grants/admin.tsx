@@ -1,11 +1,23 @@
+<<<<<<< HEAD
 import { useEffect, useMemo, useState } from 'react';
 import EnhancedLayout from '../../components/layout/EnhancedLayout';
 import type { GrantApplication, Milestone } from '../../types/grants';
 export default function GrantsAdminPage() {
   const [token, setToken] = useState($2);
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+import { useEffect, useMemo, useState  } from 'react';
+import EnhancedLayout from '../../components/layout/EnhancedLayout';
+import type { GrantApplication, Milestone } from '../../types/grants';
+export default function GrantsAdminPage() {
+  const [token, setToken] = useState('');
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
   const [items, setItems] = useState<GrantApplication[]>([]),
   const [selected, setSelected] = useState<GrantApplication | null>(null),
   const [milestones, setMilestones] = useState<Milestone[]>([]),
+>>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
 
   const headers = useMemo(() => (token ? { Authorization: `Bearer ${token}`, 'Content-Type': 'application/json' } : { 'Content-Type': 'application/json' }), [token]),
 
@@ -466,6 +478,7 @@ await fetch(`/api/grants/${selected.id}/milestones/${milestoneId}/complete`,{ me
         </div>
       </div>
     </EnhancedLayout>
+<<<<<<< HEAD
                         ...(ms.length ? ms : selected.milestones || []),{id: `${Date.now ()}-${Math.random ()}`,title: '',tranche_amount: 0,tranche_currency: 'USDC',} as any,])}>;
                     Add Milestone;
                   </button>;
@@ -588,3 +601,33 @@ await fetch(`/api/grants/${selected.id}/milestones/${milestoneId}/complete`,{ me
     </EnhancedLayout>)})}
   )
 }
+=======
+);
+}
+}
+<<<<<<< HEAD
+
+=======
+</div> </div> </div>) ) 
+}</div> <div className="mt-2 flex items-center gap-2" > <button className="px-2 py-1 border rounded" onClick= {
+  () => markComplete (m.id!) 
+}disabled= {
+  !m.id 
+}>Mark Complete</button> </div> </div>) ) 
+}<div className="flex gap-2 mt-2" > <button className="px-2 py-1 border rounded" onClick= {
+  () => setMilestones ( (ms) => [... (ms.length ? ms : (selected.milestones || []) ), {
+  id: `$ {
+  Date.now () 
+}-$ {
+  Math.random () 
+}`, title: '', trancheAmount: 0, trancheCurrency: 'USDC' 
+}as any]) 
+}>Add Milestone</button> <button className="px-2 py-1 bg-blue-600 text-white rounded" onClick= {
+  saveMilestones 
+}>Save Milestones</button> text-sm text-gray-600" >Select a grant to plan milestones.</div>) 
+}</div> </div> </div> </EnhancedLayout>) 
+}
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-43ef
+=======
+>>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 import { Interface } from 'ethers',;
 // Simple ABI for demonstration (release/refund)
@@ -6,9 +7,16 @@ const abi = [
 ],
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+=======
+import { NextApiRequest, NextApiResponse } from 'next';
+
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
   if (req.method !== 'POST') {
-    return res.status(405).json({ error: 'Method not allowed' })
+    res.setHeader('Allow', ['POST']);
+    return res.status(405).end('Method Not Allowed');
   }
+<<<<<<< HEAD
   const { bytecode, constructorArgs } = req.body |{}
   if (!bytecode |!constructorArgs) {
 
@@ -67,3 +75,8 @@ if ( {) {
 
 }
 
+=======
+  
+  res.status(200).json({ deployed: true });
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75

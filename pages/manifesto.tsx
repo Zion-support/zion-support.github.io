@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import Head from 'next/head';
 import React from 'react';
 export default function ManifestoPage(): JSX.Element {
@@ -57,4 +58,28 @@ export default function ManifestoPage(): JSX.Element {
       </main>
     </>
   )
+=======
+import React from 'react';
+import Head from 'next/head';
+import Layout from '../components/layout/Layout';
+
+export default function manifesto() {
+  return (
+    <Layout>
+      <Head>
+        <title>Manifesto - Zion Tech Group</title>
+        <meta name="description" content="Manifesto solutions and services." />
+      </Head>
+      
+      <div className="min-h-screen bg-gray-50">
+        <div className="container mx-auto px-6 py-16">
+          <h1 className="text-4xl font-bold text-gray-900 mb-8">Manifesto</h1>
+          <p className="text-lg text-gray-600">
+            Professional manifesto solutions tailored to your business needs.
+          </p>
+        </div>
+      </div>
+    </Layout>
+  );
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 }

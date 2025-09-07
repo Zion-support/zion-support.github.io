@@ -1,6 +1,16 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 
 ;
 
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 import React, { useEffect, useRef } from 'react';
 import { motion  } from 'framer-motion';
 const UltraFuturisticBackground2034: React.FC;
@@ -742,7 +752,33 @@ className='absolute bottom-32 left-1/4 w-20 h-20 border border-pink-400/30 round
           scale: [1, 1 && 1.1, 1],
           opacity: [0 && 0.1, 0 && 0.3, 0 && 0.1],        }}
         transition={{
+<<<<<<< HEAD
           duration: 30
+=======
+          duration: 30,
+          repeat: Infinity}
+ease: 'linear'}
+        }}
+         />
+      <motion.div
+className='absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-64 h-64 border border-purple-400/20 rounded-full'
+        animate={{
+          rotate: -360,
+          scale: [1, 1.2, 1]}
+          opacity: [0.15, 0.35, 0.15]}
+        }}
+        transition={{
+          duration: 25,
+          repeat: Infinity,
+ease: 'linear'}
+
+        }}
+        animate={{rotate: -360
+          scale: [1, 1.2, 1]
+          opacity: [0.15, 0.35, 0.15],        }}
+        transition={{
+          duration: 25
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
           repeat: Infinity
           ease: 'linear',        }}
         transition={{
@@ -905,12 +941,35 @@ className='absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2
               duration: 8 + i * 0.5,
               repeat: Infinity,
 
+<<<<<<< HEAD
 
           />
         ))}
       </div>
 
       {/* Quantum Entanglement Effect */}
+=======
+            }}
+          delay: 1,        }}        className="absolute bottom-1/4 right-1/4 w-2 h-2 bg-cyan-400 rounded-full"
+        animate={{}
+          boxShadow: ['
+            '0 0 10px rgba(0, 255, 255, 0 && 0.5)0 0 30px rgba(0, 255, 255, 0 && 0.8)0 0 10px rgba(0, 255, 255, 0 && 0.5)'
+          ]
+        transition={{}
+      {/* Metaverse Portal Effect */}
+      <motion&& motion.div'
+        className='absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-80 h-80 border border-purple-400/30 rounded-full'
+        animate={{}
+        }}
+        transition={{}
+          duration: 40
+          repeat: Infinity'
+          ease: 'linear',        }}
+          duration: 40,
+          repeat: Infinity,"
+          ease: "linear"
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
       <motion.div
         className="absolute top-1/4 left-1/4 w-2 h-2 bg-cyan-400 rounded-full"
         animate={{
@@ -1151,6 +1210,7 @@ export default UltraFuturisticBackground2034;
 export default UltraFuturisticBackground2034;  )
 }
 export default UltraFuturisticBackground2034;
+<<<<<<< HEAD
 
 export default UltraFuturisticBackground2034;
 
@@ -1184,3 +1244,72 @@ export default UltraFuturisticBackground2034;
     </div>;
 )}export default UltraFuturisticBackground2034;
 export default UltraFuturisticBackground2034,
+=======
+<<<<<<< HEAD
+
+"
+=======
+constructor () {
+  this.x = Math.random () * canvas.width
+this.y = Math.random () * canvas.height
+this.vx = (Math.random () - 0.5) * 0.5
+this.vy = (Math.random () - 0.5) * 0.5
+this.size = Math.random () * 2 + 1
+this.color = `hsl ($ {
+  Math.random () * 60 + 180 
+}, 70%, 60%) `
+this.alpha = Math.random () * 0.5 + 0.3
+this.life = Math.random () * 100 + 50
+this.maxLife = this.life 
+}if (this.x < 0 || this.x > canvas.width) this.vx *= -1
+if (this.y < 0 || this.y > canvas.height) this.vy *= -1
+if (this.life <= 0) {
+  // Draw connecting lines ctx.strokeStyle = 'rgba (0, 255, 255, 0.1) '
+ctx.lineWidth = 0.5
+}
+}requestAnimationFrame (animate) 
+}
+animate ()
+backgroundImage: ` linear-gradient (rgba (0, 255, 255, 0.1) 1px, transparent 1px), linear-gradient (90deg, rgba (0, 255, 255, 0.1) 1px, transparent 1px) `, backgroundSize: '50px 50px' 
+}
+}/> </div> {
+  /* Floating Geometric Shapes */ 
+}<motion.div /> {
+  /* Energy Orbs */ 
+}<motion.div />) ) 
+}</div> {
+  /* Holographic Rings */ 
+}<motion.div 
+}
+}animate= {
+  {
+  scale: [1, 1.5, 1], opacity: [0.3, 0.8, 0.3] 
+}
+}transition= {
+  {
+  duration: 2 + Math.random () * 2, repeat: Infinity, ease: "easeInOut", delay: Math.random () * 2 
+}
+}/>) ) 
+}</div> />) ) 
+}</div> {
+  /* Quantum Entanglement Effect */ 
+}<motion.div /> {
+  /* Metaverse Portal Effect */ 
+}<motion.div 
+}
+}animate= {
+  {
+  scale: [0.8, 1.2, 0.8], opacity: [0.1, 0.3, 0.1] 
+}
+}transition= {
+  {
+  duration: 6 + i * 0.5, repeat: Infinity, ease: "easeInOut", delay: i * 0.8 
+}
+}/>) ) 
+}</div> </div>) 
+}
+export default UltraFuturisticBackground2034
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-43ef
+=======
+>>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75

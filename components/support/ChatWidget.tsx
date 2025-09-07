@@ -1,4 +1,15 @@
+<<<<<<< HEAD
 import { X } from 'lucide-react';
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+import React, { useEffect, useMemo, useRef, useState } from 'react';
+import { X } from 'lucide-react';
+import React, { useEffect, useMemo, useRef, useState } from 'react';
+import { X } from 'lucide-react';
+>>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 
 type ChatMessage = {
   role: 'user' | 'assistant' | 'system'
@@ -37,6 +48,7 @@ export default function ChatWidget() {
   useEffect(() => {
     if (!isOpen && messages.length === 0) {
       // Seed greeting
+<<<<<<< HEAD
       setMessages([
         { role: 'assistant', content: 'Hi! How can I help you?', timestamp: Date.now() }])
     }
@@ -47,6 +59,66 @@ export default function ChatWidget() {
   }, [messages]),
 
   const quickReplies = $2;
+=======
+setMessages([
+{
+          role: 'assistant',
+  content: 'Hi! How can I help you?'}
+          timestamp: Date.now()}
+<<<<<<< HEAD
+        }
+      ]);
+    }
+  }, [isOpen, messages.length]);
+  useEffect(() => {
+=======
+useEffect ( () => {
+  if (!isOpen && messages.length === 0) {
+  //Seed greeting setMessages ([ 
+}
+}, [isOpen, messages.length])
+[])
+<button aria-label="Open support chat" onClick= {
+  () => setIsOpen (true) 
+}className="rounded-full shadow-lg bg-blue-600 text-white w-14 h-14 flex items-center justify-center focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 dark:focus:ring-offset-black" > ? </button>) 
+}<div className= {
+  m.role === 'assistant' ? 'inline-block rounded-2xl px-3 py-2 bg-gray-100 dark:bg-gray-800' : 'inline-block rounded-2xl px-3 py-2 bg-blue-600 text-white' 
+}> {
+  m.content 
+}</div> </div>) ) 
+}</div>) 
+}<div ref= {
+  messagesEndRef 
+}/> </div> > {
+  q 
+}</button>) ) 
+}</div> </div>) 
+}<input value= {
+  input 
+}onChange= {
+  (e) => setInput (e.target.value) 
+}onKeyDown= {
+  (e) => {
+  if (e.key === 'Enter' && !e.shiftKey) {
+  
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-43ef
+}
+messagesEndRef.current?.scrollIntoView({ behavior: 'smooth'}
+});
+  }, [messages]);
+=======
+>>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
+
+      ])
+  }, [isOpen, messages.length])
+  useEffect(() => {
+
+messagesEndRef.current?.scrollIntoView({ behavior: 'smooth'}
+})
+  }, [messages])
+const quickReplies = useMemo(
+    () => ['How do I hire?', 'How do I get matched?', 'Billing help'],
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
     []
   ),
 
@@ -448,6 +520,7 @@ export default function ChatWidget() {const [isOpen, setIsOpen] = useState(false
                   }}
                   placeholder="Ask a question…"
                   className="flex-1 rounded-xl border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-900 px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
+<<<<<<< HEAD
                   placeholder='Ask a question…';
                   onKeyDown={e => {if (e && e.key === 'Enter' && !e && e.shiftKey) {e && e.preventDefault()onSend()}
                   }}placeholder='Ask a question…';
@@ -455,6 +528,8 @@ export default function ChatWidget() {const [isOpen, setIsOpen] = useState(false
                 <button
                   onClick={() => onSend()}
                   disabled={isLoading}
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
                 />
                 <button
                   onClick={() => onSend()}

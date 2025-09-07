@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (!requireSuperadminApi(req, res)) return;
@@ -121,3 +122,14 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.status(200).send(JSON.stringify(data, null, 2));
 origin/cursor/automate-test-improve-and-merge-code-2533
 
+=======
+import type { NextApiRequest, NextApiResponse } from 'next'
+  const data = null
+  res.status(200).send(JSON.stringify(data, null, 2))
+}
+  if (!requireSuperadminApi(req, res)) return;
+  const data = readJsonFile('audit-log.json', [] as unknown[]);
+  res.setHeader('Content-Type', 'application/json');
+  res.setHeader('Content-Disposition', 'attachment; filename="audit-log.json"');
+  res.status(200).send(JSON.stringify(data, null, 2));
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75

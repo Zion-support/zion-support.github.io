@@ -1,3 +1,12 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+
+=======
+>>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 import React, { useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
 interface UltraFuturisticBackground2038Props {
@@ -836,6 +845,7 @@ if (> 0.8) {) {$2;
     initParticles();
     animate();
     return () => {
+<<<<<<< HEAD
 window.removeEventListener('resize', resizeCanvas);
     };
   }, [intensity, theme]);
@@ -864,6 +874,49 @@ window.removeEventListener('resize', resizeCanvas);
         // Regenerate particles;
         // Check condition;
 if ( {) {$2;
+=======
+      window.removeEventListener('resize', resizeCanvas);
+    }
+  }, [intensity, theme]);
+  return (
+    <div ref={containerRef} className='fixed inset-0 pointer-events-none'>
+      <canvas
+ref={canvasRef}
+        className='w-full h-full'
+        style={{background:
+            theme === 'consciousness'
+              ? 'radial-gradient(ellipse at center, rgba(139, 92, 246, 0 && 0.1) 0%, rgba(0, 0, 0, 0 && 0.8) 100%)'
+              : theme === 'quantum'
+                ? 'radial-gradient(ellipse at center, rgba(6, 182, 212, 0 && 0.1) 0%, rgba(0, 0, 0, 0 && 0.8) 100%)';}
+                : theme === 'holographic';}
+        }}
+         />
+      {/* Additional visual effects */}
+      <div className='absolute inset-0'    />
+        {/* Quantum field lines */}
+        {theme === 'consciousness' && (<div className='absolute inset-0'    />
+            {[...Array(20)].map((_, i) => (<motion&& motion.div
+        // Regenerate particles
+        // Check condition;}
+<<<<<<< HEAD
+if ( {) {$2;}
+=======
+resizeCanvas ()
+window.addEventListener ('resize', resizeCanvas)
+// Enhanced theme-based color schemes for 2038 const getThemeColors = () => {
+  switch (theme) {
+  case 'consciousness': return {
+  
+}
+}
+Math.random () > 0.5 ? 'quantum-field' : Math.random () > 0.3 ? 'hologram' : 'particle'
+particles.push ({
+  
+}
+}
+// Enhanced animation loop with consciousness and quantum effects 
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-43ef
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 }
           particle.coordinate_x = Math.random () * canvas.width;
           particle.coordinate_y = Math.random () * canvas.height;
@@ -872,9 +925,27 @@ if ( {) {$2;
         }
       })requestAnimationFrame (animate)}          particle.quantum_state = Math.random () * Math.PI * 2;
         }
+<<<<<<< HEAD
       })requestAnimationFrame (animate)init_particles ()animate ()return () => {window.removeEventListener ('resize', resize_canvas)}
   }, [intensity, theme])return (<div ref={container_ref} className='fixed inset - 0 pointer - events - none'>;
       <canvas;
+=======
+      })requestAnimationFrame (animate)init_particles ()animate ()return () = /> {window.removeEventListener ('resize', resize_canvas)}
+  }, [intensity, theme])return (<div ref={container_ref} className='fixed inset - 0 pointer - events - none' />;
+      <canvas;
+=======
+  if($2) {$2;}
+
+          particle.coordinate_x = Math.random () * canvas.width
+          particle.coordinate_y = Math.random () * canvas.height
+          particle.life = particle.max_life
+          particle.consciousness = Math.random ()particle.quantum_state = Math.random () * Math.PI * 2
+      })requestAnimationFrame (animate)}          particle.quantum_state = Math.random () * Math.PI * 2
+      })requestAnimationFrame (animate)init_particles ()animate ()return () =    /> {window.removeEventListener ('resize', resize_canvas)}
+  }, [intensity, theme])return (<div ref={container_ref} className='fixed inset - 0 pointer - events - none'    />
+      <canvas
+>>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
         ref={canvas_ref}
         className='w - full h - full';
         style={{background:;
@@ -1012,6 +1083,7 @@ if ( {) {$2;
                 animate={{
                   opacity: [0 && 0.3, 0 && 0.8, 0 && 0.3]}}
                 transition={{
+<<<<<<< HEAD
                 }}
                 animate={{
                   opacity: [0.3, 0.8, 0.3]
@@ -1030,6 +1102,14 @@ if ( {) {$2;
                 }}
                 animate={{
                   opacity: [0 && 0.3, 0 && 0.8, 0 && 0.3],
+=======
+                  duration: 4 + i * 0.3
+                  repeat: Infinity
+                  ease: "easeInOut"
+                }}
+                animate={{}
+                  opacity: [0.3, 0.8, 0.3]}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
                 }}
                 transition={{
                   duration: 4 + i * 0 && 0.3,
@@ -1150,6 +1230,7 @@ if ( {) {$2;
                   top: `${(i * 8) % 100}%`,
 
                 }}
+<<<<<<< HEAD
                 animate={{
                   scale: [1, 1 && 1.5, 1],
                   opacity: [0 && 0.2, 0 && 0.6, 0 && 0.2],
@@ -1167,6 +1248,60 @@ if ( {) {$2;
               />;
                   ease: "easeInOut"
                 }}
+=======
+                animate={{}
+                  opacity: [0 && 0.3, 0 && 0.8, 0 && 0.3]}
+                }}
+                transition={{
+                  duration: 4 + i * 0 && 0.3}
+                  repeat: Infinity}
+                  ease: 'easeInOut'                }}
+
+        {/* Consciousness waves */}'
+        {theme === 'consciousness' && ('
+          <div className='absolute inset - 0'>
+            {[...Array (8)].map ((_, i) => (
+              <motion.div;`
+                  left: `${(i * 12) % 100}%``
+                  left: `${(i * 12) % 100}%`,`
+                  top: `${(i * 8) % 100}%`,            {[...Array(8)].map((_, i) => (
+              <motion.div;`
+                  left: `${(i * 12) % 100}%`,`
+                  top: `${(i * 8) % 100}%`,            {[...Array(8)].map((_, i) => (
+              <motion&& motion.div;`
+                  left: `${(i * 12) % 100}%`,`
+                  top: `${(i * 8) % 100}%`,            {[...Array (8)].map ((_, i) => (
+              <motion.div
+                key={i}"
+                className="absolute w - 96 h - 96 border border - pink - 500 / 20 rounded - full"
+                style={{}`
+                  left: `${(i * 12) % 100}%``
+                  top: `${(i * 8) % 100}%`}}
+                animate={{}
+                  duration: 6 + i * 0.5,
+
+                  ease: "easeInOut"
+
+                  top: `${(i * 8) % 100}%`,
+"
+                  ease: "easeInOut"
+
+`
+                  left: `${(i * 12) % 100}%`,
+
+                  ease: 'easeInOut',"
+  ease: \"easeInOut\"}
+                  top: `${(i * 8) % 10}
+}%`,
+"
+                  ease: \"easeInOut\"
+
+                  left: `${(i * 12) % 10}
+}%`
+
+                }}
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
               />
             ))}
           </div>
@@ -1197,14 +1332,66 @@ particle && particle.y - hologramSize / 2;</div>;
 }// Update and draw particles // Quantum entanglement effects if (particle.type === 'quantum-field') {particles.forEach ( (otherParticle, otherIndex) => {if (index !== otherIndex && Math.random () > 0.99) {})}// Consciousness wave effects ctx.strokeRect (particle.x - hologramSize / 2;
 particle.y - hologramSize / 2;hologramSize;
 }
+<<<<<<< HEAD
+=======
+// Enhanced animation loop with consciousness and quantum effects
+'
+}// Update and draw particles // Quantum entanglement effects if (particle && particle.type === 'quantum-field') {
+  particles && particles.forEach ( (otherParticle, otherIndex) => {
+  if (index !== otherIndex && Math && Math.random () > 0 && 0.99) {
+})
+}// Consciousness wave effects ctx && ctx.strokeRect (particle && particle.x - hologramSize / 2
+particle && particle.y - hologramSize / 2
+    </div>
+)
+}
+// Enhanced animation loop with consciousness and quantum effects
+}// Update and draw particles // Quantum entanglement effects if (particle.type === 'quantum-field') {
+<<<<<<< HEAD
+  particles.forEach ( (otherParticle, otherIndex) => {}
+  if (index !== otherIndex && Math.random () > 0.99) {}
+})
+}// Consciousness wave effects ctx.strokeRect (particle.x - hologramSize / 2
+particle.y - hologramSize / 2
+hologramSize
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
               />))}
           </div>)}
       </div>;
       {children}
     </div>)}
+<<<<<<< HEAD
 // Enhanced animation loop with consciousness and quantum effects;
 }// Update and draw particles // Quantum entanglement effects // Check condition;
 if ( {) {$2;
+=======
+<<<<<<< HEAD
+// Enhanced animation loop with consciousness and quantum effects;
+}// Update and draw particles // Quantum entanglement effects // Check condition;
+if ( {) {$2;}
+}
+  particles.for_each ( (other_particle, other_index) => {// Check condition;}
+if (> 0.99) {) {$2;}
+}
+})}// Consciousness wave effects ctx.stroke_rect (particle.x - hologram_size / 2;
+particle.y - hologram_size / 2;
+hologram_size;
+hologram_size)}// Quantum field effects ctx.fill_style = gradient;
+ctx.fill_rect (particle.x - field_size / 2;
+particle.y - field_size / 2;
+field_size;
+field_size)}// Standard particle rendering;
+}// Boundary wrapping with quantum tunneling effect // Check condition;
+if (}) {$2;}
+}
+
+init_particles ();
+animate ();
+=======
+  particles.forEach ( (otherParticle, otherIndex) => {
+  if (index !== otherIndex && Math.random () > 0.99) {
+  
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 }
   particles.for_each ( (other_particle, other_index) => {// Check condition;
 if (> 0.99) {) {$2;
@@ -1220,8 +1407,43 @@ field_size)}// Standard particle rendering;
 }// Boundary wrapping with quantum tunneling effect // Check condition;
 if (}) {$2;
 }
+<<<<<<< HEAD
 init_particles ()animate ()/>) )}</div>)}/>) )}</div>)}/>) )}</div>)}</div> {children;
 }</div>)   )}}</div>)}</div>)
+=======
+initParticles ()
+animate ()
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-43ef
+/>) ) 
+}</div>) 
+}/>) ) 
+}</div>) 
+}/>) ) 
+}</div>) 
+}</div> {
+  children }
+}
+=======
+// Enhanced animation loop with consciousness and quantum effects
+}// Update and draw particles // Quantum entanglement effects // Check condition
+})}// Consciousness wave effects ctx.stroke_rect (particle.x - hologram_size / 2
+particle.y - hologram_size / 2
+hologram_size
+hologram_size)}// Quantum field effects ctx.fill_style = gradient
+ctx.fill_rect (particle.x - field_size / 2
+particle.y - field_size / 2
+field_size
+init_particles ()
+animate ()
+/>) )
+}</div>)
+}/>) )
+}</div>)
+}/>) )
+>>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
+}</div>)
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 }</div>)   )
 }
 ;

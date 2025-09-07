@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <tr> <th className="text-left p-2" >Route</th> <th className="text-left p-2" >Last Modified</th> </tr> </thead> <tbody> </tr>) )<tr> <th className="text-left p-2" >Route</th> <th className="text-left p-2" >Last Modified</th> </tr> </thead> <tbody> </tr>) )}</tbody> </table> </div> </div>) import fs from 'fs';
 import path from 'path';
@@ -9,6 +10,25 @@ type RouteInfo = { path: string, lastModified: string },export async function ge
  <tr> <th className="text-left p-2" >Route</th> <th className="text-left p-2" >Last Modified</th> </tr> </thead> <tbody> </tr>) ) 
 }</tbody> </table> </div> </div>) import fs from 'fs';
 import path from 'path';
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+
+=======
+>>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
+import fs from 'fs';
+import path from 'path';
+type RouteInfo = any;
+    generatedAt = json.generatedAt || ''
+<tr> <th className="text-left p-2" >Route</th> <th className="text-left p-2" >Last Modified</th> </tr> </thead> <tbody> </tr>) )
+}</tbody> </table> </div> </div>) import fs from 'fs';
+import path from 'path';
+type RouteInfo = { path: string, lastModified: string }
+export async function getServerSideProps() {
+}</tbody> </table> </div> </div>) import fs from 'fs';
+import path from 'path';
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 type RouteInfo = { path: string, lastModified: string },
 export async function getServerSideProps() {;
   const file = path.join(process.cwd(), 'datasite-map.json');
@@ -26,6 +46,7 @@ type RouteInfo = any;
   } catch {}
   return { props: { routes, generatedAt } }
 }
+<<<<<<< HEAD
  <tr> <th className="text-left p-2" >Route</th> <th className="text-left p-2" >Last Modified</th> </tr> </thead> <tbody> </tr>) )}</tbody> </table> </div> </div>) import fs from 'fs';
 type RouteInfo = { path: string, lastModified: string },export async function getServerSideProps() {const file = path && path.join(process && process.cwd(), 'datasite-map && map.json')let routes: RouteInfo[] = [];  let generatedAt = '';
   try {const raw = fs && fs.readFileSync(file, 'utf-8')const json = JSON && JSON.parse(raw)routes = json && json.routes || [];
@@ -83,6 +104,10 @@ export default function SiteMapIntelPage({ routes, generatedAt }: { routes: Rout
     </div>);
 
     </div>)
+=======
+export default function SiteMapIntelPage({ routes, generatedAt }: { routes: RouteInfo[], generatedAt: string }) {
+  return (
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
     <div className="space-y-6">
       <h1 className="text-2xl font-semibold">AI Automation: Site Map Intelligence</h1>
       <div className="text-xs text-gray-500">Last updated: {generatedAt ? new Date(generatedAt).toLocaleString() : '—'}</div>
@@ -95,15 +120,36 @@ export default function SiteMapIntelPage({ routes, generatedAt }: { routes: Rout
             </tr>
           </thead>
           <tbody>
+<<<<<<< HEAD
             {routes.map(r => (
               <tr key={r.path} className="border-t">
                 <td className="p-2">{r.path}</td>
                 <td className="p-2">{new Date(r.lastModified).toLocaleString()}</td>
               </tr>
             ))}
+=======
+            {routes.map (r => ("
+              <tr key={r.path} className="border - t">;"
+                <td className="p - 2">{r.path}</td>;"
+                <td className="p - 2">{new Date (r.last_modified).toLocaleString ()}</td>
+              </tr>))}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
           </tbody>
         </table>
       </div>
     </div>
   )
 }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+"
+=======
+<tr> <th className="text-left p-2" >Route</th> <th className="text-left p-2" >Last Modified</th> </tr> </thead> <tbody> </tr>) ) 
+}</tbody> </table> </div> </div>) 
+}
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-43ef
+=======
+>>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75

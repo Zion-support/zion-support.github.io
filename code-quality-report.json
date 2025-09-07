@@ -1,4 +1,5 @@
 {
+<<<<<<< HEAD
   ]
 }
   ]
@@ -30,3 +31,24 @@ ursor/automate-test-improve-and-merge-code-646c
     }
   ]
 }
+=======
+  "timestamp": "2025-09-07T10:14:30.109Z",
+  "issues": [
+    {
+      "type": "code_style",
+      "priority": "low",
+      "message": "Consider adding JSDoc comments to functions",
+      "recommendation": "Add comprehensive documentation"
+    },
+    {
+      "type": "code_style",
+      "priority": "medium",
+      "message": "Review console.log statements",
+      "recommendation": "Replace with proper logging"
+    }
+  ],
+  "summary": {
+    "totalIssues": 2
+  }
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75

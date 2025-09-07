@@ -1,3 +1,9 @@
+<<<<<<< HEAD
+fetch ('/api/cloud-automations-status') .then ( (r) => r.json () ) .then (setData) ) : null 
+}</div>) ) 
+}</div> </div>) 
+}
+=======
 import React, { useEffect, useState } from 'react';
 export default function CloudAutomationsPage() {
   const [data, setData] = useState<any>(null),
@@ -88,3 +94,4 @@ export default function CloudAutomationsPage() {export default function CloudAut
     </div>
   )
 }
+>>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7

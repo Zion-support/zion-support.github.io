@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 import React, { useState } from 'react';
@@ -52,6 +53,36 @@ interface FormData {
   message: string;
 }
 
+=======
+<<<<<<< HEAD
+import React, { useState } from 'react'
+import LoadingSpinner from './LoadingSpinner'
+=======
+>>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
+interface FormData {
+  name: string
+  email: string
+  company: string
+<<<<<<< HEAD
+  phone: string
+  service: string
+  message: string
+}
+
+const ContactForm: React.FC = () => {
+  const [formData, setFormData] = useState<FormData>({
+    name: ''
+    email: ''
+    company: ''
+    phone: ''
+    service: ''
+    message: ''
+=======
+origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
+
+  service: string
+  message: string
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 const ContactForm: React.FC = () => {
   const [formData, setFormData] = useState<FormData>({
     name: '',
@@ -65,15 +96,27 @@ const ContactForm: React.FC = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
 
+<<<<<<< HEAD
+=======
+>>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
+  })
+  const [isSubmitting, setIsSubmitting] = useState(false)
+  const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle')
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     const { name, value } = e.target;
     setFormData(prev => ({
+<<<<<<< HEAD
+      ...prev
+=======
       ...prev,
+>>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
       [name]: value
     }));
   };
 
   const handleSubmit = async (e: React.FormEvent) => {
+<<<<<<< HEAD
     e.preventDefault();
     setIsSubmitting(true);
     setSubmitStatus('idle');
@@ -109,6 +152,348 @@ const ContactForm: React.FC = () => {
             </div>;
           ) : (;
             'Send Message';
+=======
+    e.preventDefault()
+    setIsSubmitting(true)
+    setSubmitStatus('idle')
+    try {
+      // Simulate form submission
+      await new Promise(resolve => setTimeout(resolve, 2000))
+      setSubmitStatus('success')
+      setFormData({
+<<<<<<< HEAD
+        name: ''
+        email: ''
+        company: ''
+        phone: ''
+        service: ''
+=======
+        name: '';,
+        email: '';,
+        company: '';,
+        phone: '';,
+        service: '';,
+>>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
+        message: ''
+      })
+    } catch {
+      setSubmitStatus('error')
+<<<<<<< HEAD
+    } finally {
+      setIsSubmitting(false)
+    }
+  }
+  return (
+    <div className="max-w-2xl mx-auto bg-white rounded-lg shadow-lg p-8">
+      <h2 className="text-3xl font-bold text-gray-900 mb-6 text-center">Get In Touch</h2>
+      
+      {submitStatus === 'success' && (
+        <div className="mb-6 p-4 bg-green-100 border border-green-400 text-green-700 rounded">
+          Thank you for your message! We'll get back to you soon.
+        </div>
+      )}
+      
+      {submitStatus === 'error' && (
+        <div className="mb-6 p-4 bg-red-100 border border-red-400 text-red-700 rounded">
+          Sorry, there was an error sending your message. Please try again.
+        </div>
+      )}
+
+      <form onSubmit={handleSubmit} className="space-y-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div>
+            <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
+              Name *
+            </label>
+            <input
+              type="text"
+              id="name"
+              name="name"
+              value={formData.name}
+              onChange={handleInputChange}
+              required
+              className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+            />
+          </div>
+          
+          <div>
+            <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
+              Email *
+            </label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              value={formData.email}
+              onChange={handleInputChange}
+              required
+              className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+            />
+          </div>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div>
+            <label htmlFor="company" className="block text-sm font-medium text-gray-700 mb-2">
+              Company
+            </label>
+            <input
+              type="text"
+              id="company"
+              name="company"
+              value={formData.company}
+              onChange={handleInputChange}
+              className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+            />
+          </div>
+          
+          <div>
+            <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-2">
+              Phone
+            </label>
+            <input
+              type="tel"
+              id="phone"
+              name="phone"
+              value={formData.phone}
+              onChange={handleInputChange}
+              className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+            />
+          </div>
+        </div>
+
+        <div>
+          <label htmlFor="service" className="block text-sm font-medium text-gray-700 mb-2">
+            Service Interest
+          </label>
+          <select
+            id="service"
+            name="service"
+            value={formData.service}
+            onChange={handleInputChange}
+            className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+          >
+            <option value="">Select a service</option>
+            <option value="web-development">Web Development</option>
+            <option value="mobile-development">Mobile Development</option>
+            <option value="cloud-solutions">Cloud Solutions</option>
+            <option value="consulting">Consulting</option>
+            <option value="other">Other</option>
+          </select>
+        </div>
+
+        <div>
+          <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
+=======
+    message: '',
+
+  })
+  const [isSubmitting, setIsSubmitting] = useState(false)
+  const [isSubmitted, setIsSubmitted] = useState(false)
+  const handleChange = ({ name, value ) => {
+  return $3;}
+} = e.target
+    setFormData(prev => ({...prev,[name]: value;}
+    }))}
+
+const handleSubmit = async (e: React.FormEvent) => {e.preventDefault()setIsSubmitting(true)try {// Simulate API call;}
+      await new Promise(resolve = > setTimeout(resolve, 2000))setIsSubmitted(true)} catch (error) {console.error('Error submitting form: ', error)} finally {setIsSubmitting(false)}
+
+  return (<div className=\"max-w-2xl mx-auto bg-white rounded-lgshadow-lgp-8\"    />
+      <h2 className=\"text-3xl font-bold text-gray-900mb-6text-center\"    />Get In Touch</h2>
+      {submitStatus === 'success' && (<div className=\"mb-6 p-4 bg-green-100 border border-green-400text-green-700rounded\"    />
+          Thank you for your message! We&apos;ll get back to you soon.;}
+        </div>;}
+      )}{submitStatus === 'error' && (<div className=\"mb-6 p-4 bg-red-100 border border-red-400text-red-700rounded\"    />
+          Sorry, there was an error sending your message. Please try again.;}
+        </div>;}
+      )}<form onSubmit={handleSubmit} className=\"space-y-6\"    />
+        <div className=\"grid grid-cols-1md:grid-cols-2gap-6\"    />
+          <div    />
+            <label htmlFor=\"name\" className=\"block text-sm font-mediumtext-gray-700mb-2\"    />
+              Name *
+            </label>
+            <input
+              type=\'text\'
+              id=\'name\'
+              name=\'name\'
+interface FormData {
+  name: string
+  email: string
+  company: string
+  phone: string
+  service: string
+  message: string;}
+
+const ContactForm: React.FC = () =    /> {
+
+  const [formData, setFormData] = useState<FormData    />({
+    name: '',
+  email: '',
+    company: '',
+  phone: '',
+    service: '',
+  message: ''}
+ ,}
+})
+const [isSubmitting, setIsSubmitting] = useState(false)
+const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle')
+const handleInputChange = (
+   ;) => {
+  return $3;}
+
+  const { name, value } = e.target
+    setFormData(prev => ({
+      ...prev,
+      [name]: value,
+    }))
+  }
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault()
+    setIsSubmitting(true)
+    try {
+      // Simulate API call
+      await new Promise(resolve => setTimeout(resolve, 2000))
+      setIsSubmitted(true)
+    } catch (error) {
+      console.error('Error submitting form: ';, error)
+origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
+
+    } finally {
+      setIsSubmitting(false)
+  }
+  return (
+    <div className=\"max-w-2xl mx-auto bg-white rounded-lgshadow-lgp-8\"    />
+      <h2 className=\"text-3xl font-bold text-gray-900mb-6text-center\"    />Get In Touch</h2>
+
+      {submitStatus === 'success' && (
+        <div className=\"mb-6 p-4 bg-green-100 border border-green-400text-green-700rounded\"    />
+          Thank you for your message! We&apos;ll get back to you soon.}
+        </div>}
+      )}
+
+      {submitStatus === 'error' && (
+        <div className=\"mb-6 p-4 bg-red-100 border border-red-400text-red-700rounded\"    />
+          Sorry, there was an error sending your message. Please try again.}
+        </div>}
+      )}
+
+      <form onSubmit={handleSubmit} className=\"space-y-6\"    />
+        <div className=\"grid grid-cols-1md: grid-cols-2gap-6\"    />
+          <div    />
+            <label htmlFor=\"name\" className=\"block text-sm font-mediumtext-gray-700mb-2\"    />
+              Name *
+            </label>
+            <input
+type=\"text\"
+              id=\"name\"
+              name=\"name\"
+              value={formData.name}
+              onChange={handleInputChange}
+              onChange={handleInputChang,}
+
+              required
+              className=\'w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2focus:ring-blue-500focus:border-transparent\'
+               />
+          </div>
+          <div    />
+            <label htmlFor=\"email\" className=\"block text-sm font-mediumtext-gray-700mb-2\"    />
+              Email *
+            </label>
+            <input
+              type=\'email\'
+              id=\'email\'
+              name=\'email\'
+              value={formData.email}
+              onChange={handleInputChange}
+              required
+              className=\'w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2focus:ring-blue-500focus:border-transparent\'
+               />
+          </div>
+        </div>
+        <div className=\"grid grid-cols-1md:grid-cols-2gap-6\"    />
+          <div    />
+            <label htmlFor=\"company\" className=\"block text-sm font-mediumtext-gray-700mb-2\"    />
+              Company
+            </label>
+            <input
+              type=\'text\'
+              id=\'company\'
+              name=\'company\'
+              value={formData.company}
+              onChange={handleInputChange}
+              className=\'w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2focus:ring-blue-500focus:border-transparent\'
+               />
+          </div>
+          <div    />
+            <label htmlFor=\"phone\" className=\"block text-sm font-mediumtext-gray-700mb-2\"    />
+              Phone
+            </label>
+            <input
+              type=\'tel\'
+              id=\'phone\'
+              name=\'phone\'
+              value={formData.phone}
+              onChange={handleInputChange}
+              className=\'w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2focus:ring-blue-500focus:border-transparent\'
+               />
+          </div>
+        </div>
+        <div    />
+          <label htmlFor=\"service\" className=\"block text-sm font-mediumtext-gray-700mb-2\"    />
+            Service Interest
+          </label>
+          <select
+            id=\'service\'
+            name=\'service\'
+            value={formData.service}
+            onChange={handleInputChange}
+            className=\'w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2focus:ring-blue-500focus:border-transparent\'
+              />
+            className=\"w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2focus:ring-blue-500focus:border-transparent\">
+
+        <div>
+          <label htmlFor="message" className="block text-sm font-mediumtext-gray-700mb-2">
+>>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
+            Message *
+          </label>
+          <textarea
+            id="message"
+            name="message"
+            value={formData.message}
+            onChange={handleInputChange}
+            required
+            rows={5}
+<<<<<<< HEAD
+            className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+            placeholder="Tell us about your project or how we can help you..."
+=======
+            className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2focus:ring-blue-500focus:border-transparent"
+            placeholder="Tell us about your project..."
+>>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
+          />
+        </div>
+
+        <button
+          type="submit"
+          disabled={isSubmitting}
+<<<<<<< HEAD
+          className="w-full bg-blue-600 text-white py-3 px-6 rounded-md font-medium hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed transition-colors duration-200"
+        >
+          {isSubmitting ? (
+            <div className="flex items-center justify-center">
+=======
+          className="w-full bg-blue-600 text-white py-3 px-6 rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowedtransition-colorsduration-200"
+        >
+          {isSubmitting ? (
+            <div className="flexitems-centerjustify-center">
+>>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
+              <LoadingSpinner />
+              <span className="ml-2">Sending...</span>
+            </div>
+          ) : (
+            'Send Message'
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
           )}
         </button>;
       </form>;
@@ -320,7 +705,17 @@ const ContactForm: React.FC = () => {
         </form>
       </div>
     </div>
+<<<<<<< HEAD
   );
 };
 export default ContactForm;
 origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
+=======
+  )
+}
+<<<<<<< HEAD
+export default ContactForm
+=======
+export default ContactForm;
+>>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75

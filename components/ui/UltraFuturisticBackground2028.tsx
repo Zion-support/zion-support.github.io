@@ -1,5 +1,14 @@
+<<<<<<< HEAD
 
 ;
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+
+=======
+>>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 import React, { useEffect, useRef } from 'react';
 canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
@@ -9,6 +18,7 @@ if (particle.y < 0) particle.y = canvas.height;
 if (particle.y > canvas.height) particle.y = 0;
 
 }
+<<<<<<< HEAD
 animate ();
 // Handle resize window.addEventListener ('resize', handle_resize);
 /> {
@@ -68,6 +78,36 @@ if (particle && particle.y < 0) particle && particle.y = canvas && canvas.height
 if (particle && particle.y > canvas && canvas.height) particle && particle.y = 0;
     const canvas = $2;
     if (!canvas) return,
+=======
+<<<<<<< HEAD
+// Draw particle requestAnimationFrame (animate)}
+}
+animate ();
+// Handle resize window.addEventListener ('resize', handle_resize);
+=======
+canvas.width = window.innerWidth
+canvas.height = window.innerHeight
+// Particle system const particles: Array< {
+  // Wrap around edges if (particle.x < 0) particle.x = canvas.width
+if (particle.x > canvas.width) particle.x = 0
+if (particle.y < 0) particle.y = canvas.height
+if (particle.y > canvas.height) particle.y = 0
+// Draw particle requestAnimationFrame (animate) 
+}
+animate ()
+// Handle resize window.addEventListener ('resize', handleResize)
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-43ef
+=======
+animate ();'
+// Handle resize window && window.addEventListener ('resize', handleResize)
+>>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
+/> {
+  /* Floating Circles */
+}<motion.div
+export default function UltraFuturisticBackground2028({
+  children
+}: UltraFuturisticBackground2028Props) {  const canvasRef = useRef<HTMLCanvasElement>(null);import React, { useEffect, useRef } from 'react';
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 
     const ctx = canvas.getContext($2);
     if (!ctx) return,
@@ -291,6 +331,7 @@ canvas.height = window.innerHeight;
         className="absolute inset-0 w-full h-full pointer-events-none"
         style={{ zIndex: 0}}
       />
+<<<<<<< HEAD
 
       {/* Gradient Overlays */}
       <div className="absolute inset-0 bg-gradient-to-br from-purple-900/20 via-blue-900/20 to-cyan-900/20" style={{ zIndex: 1}} />
@@ -298,6 +339,17 @@ canvas.height = window.innerHeight;
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_80%,rgba(59,130,246,0.15),transparent_50%)]" style={{ zIndex: 1}} />
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(6,182,212,0.1),transparent_50%)]" style={{ zIndex: 1}} />
 
+=======
+      {/* Gradient Overlays */}"
+      <div className=\"absolute inset-0 bg-gradient-to-br from-purple-900/20 via-blue-900/20 to-cyan-900/20\" style={{ zIndex: 1 }
+}    />;"
+      <div className=\"absolute inset-0 bg-[radial-gradient(circle_at_20%_20%,rgba(147,51,234,0.15),transparent_50%)]\" style={{ zIndex: 1 }
+}    />;"
+      <div className=\"absolute inset-0 bg-[radial-gradient(circle_at_80%_80%,rgba(59,130,246,0.15),transparent_50%)]\" style={{ zIndex: 1 }
+}    />;"
+      <div className=\"absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(6,182,212,0.1),transparent_50%)]\" style={{ zIndex: 1 }
+}    />
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
       {/* Floating Geometric Shapes */}
           animate={{}}
           transition={{duration: 8;
@@ -452,6 +504,7 @@ ease: 'easeInOut',
 
         />
       </div>
+<<<<<<< HEAD
           animate={{}}
           transition={{duration: 8;
             repeat: Infinity;
@@ -572,6 +625,8 @@ className='absolute bottom-1/3 right-1/3 w-12 h-12 border border-cyan-400/40 rou
         />;
       </div>;
 
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
       {/* Energy Waves */}
           className='absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-purple-500 to-transparent'
           animate={{
@@ -658,6 +713,7 @@ className='absolute bottom-1/3 right-1/3 w-12 h-12 border border-cyan-400/40 rou
 
             delay: 4
           }}
+<<<<<<< HEAD
             duration: 8,
             repeat: Infinity,
 
@@ -667,6 +723,8 @@ className='absolute bottom-1/3 right-1/3 w-12 h-12 border border-cyan-400/40 rou
             repeat: Infinity,
             ease: 'linear',
             delay: 4,            ease: "linear",
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
         />
       </div>
         />;

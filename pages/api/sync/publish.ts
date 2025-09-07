@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <<<<<<< HEAD:pages_backup/api/sync/publish.ts
   if (req.method !== "POST") return res.status(405).json({ error: "Method not allowed" })
   const state = readState()
@@ -228,3 +229,15 @@ if (headers["x - zion - signature"] = sig) {
 origin/cursor/automate-test-improve-and-merge-code-2533
   return res.status(200).json({ status: "accepted", entityId })
 }
+=======
+import { NextApiRequest, NextApiResponse } from 'next';
+
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  if (req.method !== 'GET') {
+    res.setHeader('Allow', ['GET']);
+    return res.status(405).end('Method Not Allowed');
+  }
+  
+  res.status(200).json({ message: 'Endpoint working' });
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75

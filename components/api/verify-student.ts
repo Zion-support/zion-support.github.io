@@ -1,11 +1,20 @@
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 import type { NextApiRequest, NextApiResponse } from "next";
 import fs from "fs-extra";
 import path from "path";
 import { authenticateRequest, enforceRateLimit, recordRequest } from "../../utils/api/partnerAuth";
+<<<<<<< HEAD
 
 ;
 
+=======
+const TALENTS_FILE = null;
+  return res.status(200).json({ verified })
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs-extra';
 import path from 'path';

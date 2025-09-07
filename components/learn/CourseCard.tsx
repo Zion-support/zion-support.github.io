@@ -1,3 +1,14 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+
+=======
+>>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
+import Link from 'next/link';
+export type Course = any;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 
 export type Course = {
 
@@ -114,5 +125,18 @@ export default function CourseCard({ course }: { course: Course}) {
         </Link>
       </div>
     </div>
+<<<<<<< HEAD
   )
 }
+=======
+  );
+}
+<<<<<<< HEAD
+
+=======
+</Link> 
+}
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-43ef
+=======
+>>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <<<<<<< HEAD:pages_backup/api/figma/wireframe-suggest.ts
 import type { NextApiRequest, NextApiResponse } from 'next';
 import OpenAI from 'openai';
@@ -160,10 +161,17 @@ const openai = new OpenAI({
 export default async function handler(req, res) {
   try {
   if (req.method !== 'POST') {
+=======
+import type { NextApiRequest, NextApiResponse } from 'next';
+
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+  if (req.method !== 'POST') {
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
     res.status(405).json({
       error: 'Method not allowed'
     });
     return;
+<<<<<<< HEAD
     } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -336,3 +344,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
   }
 
+=======
+  }
+  
+  res.status(200).json({ suggestion: 'generated' });
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75

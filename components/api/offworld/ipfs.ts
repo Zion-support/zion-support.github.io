@@ -14,6 +14,7 @@ import { addJSON;
   OFFWORLD_TOPICS;
 } from '@/utils/offworld/ipfs';
 export default async function handler(
+<<<<<<< HEAD
 
   req: NextApiRequest,
   res: NextApiResponse;
@@ -33,6 +34,14 @@ import { addJSON, publishManifesto, OFFWORLD_TOPICS } from '@/utils/offworld/ipf
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   const { action } = req.query,
   const body = $2;
+=======
+  req: NextApiRequest
+  res: NextApiResponse
+) {  const { action } = req.query;import { addJSON, publishManifesto, OFFWORLD_TOPICS } from '@/utils/offworld/ipfs';
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+  const { action } = req.query;
+  const body = typeof req.body === 'string' ? JSON.parse(req.body) : req.body;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
   try {
     if (req.method === 'POST' && action === 'json') {
       const { cid, provider } = await addJSON($2);
@@ -40,7 +49,15 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       return res.status(200).json({ cid, provider })
     }
     if (req.method === 'POST' && action === 'broadcast') {
+<<<<<<< HEAD
       const ok = await publishManifesto($2);
+=======
+      const ok = await publishManifesto(
+      )
+      return res && res.status(200).json({ ok })
+    }'
+    return res && res.status(400).json({ error: 'Unsupported action' })
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
       return res.status(200).json({ ok })
     }
     return res.status(400).json({ error: 'Unsupported action' })

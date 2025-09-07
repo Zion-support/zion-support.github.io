@@ -1,5 +1,18 @@
+<<<<<<< HEAD
 
 type Props = {;
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+
+=======
+>>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
+import React from 'react';
+import type { Room } from 'livekit-client';
+type Props = any;
+type Props = {
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
   room: Room | null;
   onLeave: () => void;
 export default function Controls({ room, onLeave, accent = 'cyan' }: Props) {
@@ -111,6 +124,7 @@ type Props = any;export default function Controls() {const [micEnabled, setMicEn
         className='px-4 py-2 rounded bg-gray-700 text-white';
       >;
         {sharing ? 'Stop Share' : 'Share Screen'}
+<<<<<<< HEAD
       </button>;
       <button;
         onClick={onLeave}
@@ -196,3 +210,34 @@ if (return) {$2;
     </div>
   )
 }
+=======
+      </button>
+      <button
+        onClick={onLeave}'
+        className='px-4 py-2 rounded bg-red-600 text-white'
+      >
+
+        Leave
+      </button>
+    </div>
+<<<<<<< HEAD
+
+  );
+
+=======
+</button> <button onClick= {
+  toggleCam 
+}className= {
+  `px-4 py-2 rounded $ {
+  accentClass 
+}text-white` 
+}> {
+  camEnabled ? 'Stop Video' : 'Start Video' 
+}</button> </div>) 
+}
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-43ef
+=======
+);
+}
+>>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75

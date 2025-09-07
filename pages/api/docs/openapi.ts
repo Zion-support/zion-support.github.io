@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from "next";
 import v1 from "../../../data/api-docs/v1";
 import { EndpointSpec } from "../../../data/api-docs/types";
@@ -64,3 +65,28 @@ export default function handler(_req: NextApiRequest, res: NextApiResponse) {
   }
 }
 
+=======
+import { NextApiRequest, NextApiResponse } from 'next';
+
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  if (req.method !== 'GET') {
+    res.setHeader('Allow', ['GET']);
+    return res.status(405).end('Method Not Allowed');
+  }
+  
+  const openapi = {
+    openapi: '3.0.3',
+    info: {
+      title: 'Zion OS API',
+      version: 'v1',
+      description: 'Zion OS API generated from internal spec'
+    },
+    servers: [{
+      url: 'https://api.zion.os'
+    }],
+    paths: {}
+  };
+  
+  res.status(200).json(openapi);
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75

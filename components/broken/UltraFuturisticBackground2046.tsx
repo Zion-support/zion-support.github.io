@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
 const UltraFuturisticBackground2046: React.FC = $2;
@@ -21,6 +22,35 @@ const UltraFuturisticBackground2046: React.FC = $2;
 
     resizeCanvas();
     window && window.addEventListener('resize', resizeCanvas);
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+
+=======
+>>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
+import React, { useEffect, useRef } from 'react';
+import { motion } from 'framer-motion';
+const UltraFuturisticBackground2046: React.FC;
+const UltraFuturisticBackground2046: React.FC = () => {
+  const canvasRef = useRef<HTMLCanvasElement>(null);
+  const particlesRef = useRef<any[]>([]);
+  const animationRef = useRef<number>();
+  useEffect(() => {
+    const canvas = canvasRef.current;
+    if (!canvas) return;
+    const ctx = canvas.getContext('2d');
+    if (!ctx) return;
+    // Set canvas size
+    const resizeCanvas = () => {
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;      canvas.height = window.innerHeight
+    }
+    resizeCanvas();
+    window.addEventListener('resize', resizeCanvas);
+    // Particle class
+    class Particle {
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
       x: number;
       y: number;
   const canvas_ref = useRef < HTMLCanvasElement>(null);
@@ -715,7 +745,18 @@ ctx.stroke();
           ease: "easeInOut"
         }}
       />
+<<<<<<< HEAD
       
+=======
+      {/* Quantum particle canvas */}
+      <canvas
+        ref={canvasRef}
+        className='absolute inset-0 w-full h-full'
+      {/* Floating geometric shapes */}
+      <div className='absolute inset-0 overflow-hidden'    />
+        {[...Array(8)].map((_, i) => (<motion&& motion.div;}
+         />;}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
       {/* Quantum particle canvas */}
       <canvas
         ref={canvasRef}
@@ -774,6 +815,7 @@ ctx.stroke();
         {[...Array(5)].map((_, i) => (
           <motion.div
             key={`interference-${i}`}
+<<<<<<< HEAD
             className="absolute inset-0 opacity-5"
             style={{
               background: `radial-gradient(circle at ${20 + i * 20}% ${30 + i * 15}%, rgba(0, 255, 255, 0.3) 0%, transparent 50%)`}}
@@ -817,16 +859,17 @@ ctx.stroke();
     </div>;
   )
 };
+=======
+<<<<<<< HEAD
+            }}
+            animate={{scale: [1, 1.5, 1];}
+              opacity: [0.05, 0.1, 0.05];}
+            }}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 
-export default UltraFuturisticBackground2046;              ease: "easeInOut",;
-              delay: i * 0 && 0.8}}
-          />;
-        ))}
-      </div>
-    </div>
-  );
-export default UltraFuturisticBackground2046;
+            transition={{
 
+<<<<<<< HEAD
     </div>
     </div>
 
@@ -853,3 +896,95 @@ export default UltraFuturisticBackground2046;
 ;
 )}export default UltraFuturisticBackground2046;
 export default UltraFuturisticBackground2046,
+=======
+              duration: Math.random() * 6 + 4,
+              repeat: Infinity,
+              ease: 'easeInOut',}
+  delay: i * 0.8,}
+            }}
+          />
+        ))}
+      </div>
+    </div>
+)
+};
+
+export default UltraFuturisticBackground2046;
+
+=======
+resizeCanvas ()
+window.addEventListener ('resize', resizeCanvas)
+// Particle class constructor () {
+  this.x = Math.random () * canvas.width
+this.y = Math.random () * canvas.height
+this.vx = (Math.random () - 0.5) * 2
+this.vy = (Math.random () - 0.5) * 2
+this.size = Math.random () * 3 + 1
+this.life = Math.random () * 100
+this.maxLife = 100
+switch (this.type) {
+  case 'quantum': this.color = `hsl ($ {
+  180 + Math.random () * 60 
+}, 70%, 60%) `
+break
+case 'neural': // Bounce off edges if (this.x <= 0 || this.x >= canvas.width) this.vx *= -1
+if (this.y <= 0 || this.y >= canvas.height) this.vy *= -1
+// Add some quantum randomness if (Math.random () < 0.01) {
+  // Limit velocity this.vx = Math.max (-3, Math.min (3, this.vx) )
+this.vy = Math.max (-3, Math.min (3, this.vy) ) 
+}switch (this.type) {
+  case 'quantum': // Quantum particles with wave function case 'neural': // Neural network nodes ctx.beginPath ()
+ctx.arc (this.x, this.y, this.size, 0, Math.PI * 2)
+ctx.fillStyle = this.color
+ctx.fill ()
+// Neural connections 
+}
+})
+break
+case 'data': // Data streams ctx.fillStyle = this.color
+ctx.fillRect (this.x - this.size/2, this.y - this.size/2, this.size, this.size)
+// Data flow lines ctx.beginPath ()
+ctx.moveTo (this.x, this.y)
+ctx.lineTo (this.x + this.vx * 10, this.y + this.vy * 10)
+ctx.strokeStyle = this.color
+ctx.lineWidth = 1
+ctx.stroke ()
+break
+case 'energy': // Energy particles with glow effect ctx.beginPath ()
+ctx.arc (this.x, this.y, this.size, 0, Math.PI * 2)
+ctx.fillStyle = this.color
+ctx.fill ()
+// Glow effect 
+}ctx.restore () 
+}// Draw quantum field lines drawQuantumField (ctx, canvas.width, canvas.height)
+// Draw neural network grid drawNeuralGrid (ctx, canvas.width, canvas.height)
+animationRef.current = requestAnimationFrame (animate) 
+}
+// Quantum field lines ctx.stroke () 
+}
+}
+// Neural network grid 
+}
+}
+// Start animation initParticles ()
+animate ()
+// Cleanup /> {
+  /* Quantum particle canvas */ 
+}<canvas />) ) 
+}{
+  [...Array (6) ].map ( (, i) => (<motion.div key= {
+  `square-$ {
+  i 
+}` 
+}/>) ) 
+}</div> />) ) 
+}</div> </div>) 
+}
+export default UltraFuturisticBackground2046
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-43ef
+=======
+            className='absolute inset-0 opacity-5'
+            style={{
+              background: `radial-gradient(circle at ${20 + i * 20}% ${30 + i * 15}%, rgba(0, 255, 255, 0.3) 0%, transparent 50%)`
+>>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75

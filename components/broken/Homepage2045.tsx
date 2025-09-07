@@ -1,3 +1,12 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+import React, { useState, useEffect } from 'react',
+>>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
+import Layout from './layout/Layout';
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 import { motion, AnimatePresence } from 'framer-motion';
 
 import {
@@ -413,12 +422,67 @@ const Homepage2045: React.FC = () => {
                 rotate: [0, 360],
                 scale: [1, 1.1, 1],
                 opacity: [0.3, 0.6, 0.3]}}
+<<<<<<< HEAD
+=======
+              transition={{duration: 8,repeat: Infinity,ease: 'easeInOut'              }}
+               />
+            <motion.div
+              className='absolute top - 40 right - 32 w - 24 h - 24 border border - purple - 400 / 20 rounded - full'
+              animate = {{rotate: [360, 0],scale: [1, 1.2, 1],opacity: [0.3, 0.7, 0.3],staggerChildren: 0.1,delayChildren: 0.2}}  }
+<<<<<<< HEAD
+=======
+> <div className="relative" > <Loader2 className="w-16 h-16 text-cyan-400 animate-spin mx-auto mb-4" /> <div className="absolute inset-0 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-full blur-xl opacity-20 animate-pulse" ></div> </div> <p className="text-xl text-gray-300 mb-2" >Loading Zion Tech Group 2045...</p> <p className="text-sm text-gray-500" >Preparing your futuristic digital transformation journey</p> </motion.div> </div>)
+useEffect ( () => {
+  //Simulate content loading with better timing return () => clearTimeout (timer) 
+}, [])
+//Intersection Observer for better performance useEffect ( () => {
+  if (typeof window !== 'undefined' && 'IntersectionObserver' in window) {
+  const observer = new (window as any) .IntersectionObserver ( (entries: unknown[]) => {
+  entries.forEach ( (entry) => {
+  if (entry.isIntersecting) {
+  return () => observer.disconnect () 
+}
+}, [])
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 
                 ease: 'easeInOut',
 
+<<<<<<< HEAD
               transition = $2;
                 repeat: Infinity,
                 ease: "easeInOut"
+=======
+  /* CTA Buttons */ 
+}<motion.div > <Link href="/contact" className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-500 text-white rounded-lg font-semibold text-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 shadow-lg shadow-cyan-500/25 hover:shadow-xl hover:shadow-cyan-500/30 transform hover:scale-105" > Get Started </a> <Link href="/services" className="px-8 py-4 border border-cyan-400/50 text-cyan-400 rounded-lg font-semibold text-lg hover:bg-cyan-400/10 transition-all duration-300 transform hover:scale-105" > Explore Services </a> </motion.div> {
+  /* Stats */ 
+}<motion.div > <div className="text-center" > <div className="text-3xl md:text-4xl font-bold text-cyan-400 mb-2" >500+</div> <div className="text-gray-400" >Innovative Services</div> </div> <div className="text-center" > <div className="text-3xl md:text-4xl font-bold text-purple-400 mb-2" >4.9/5</div> <div className="text-gray-400" >Customer Rating</div> </div> <div className="text-center" > <div className="text-3xl md:text-4xl font-bold text-pink-400 mb-2" >1000+</div> <div className="text-gray-400" >Happy Clients</div> </div> </motion.div> </div> </section> > <h2 className="text-4xl md:text-5xl font-bold mb-6" > <span className="bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent" > Revolutionary Services </span> </h2> <p className="text-xl text-gray-300 max-w-3xl mx-auto" > Discover our cutting-edge solutions that are transforming industries and pushing the boundaries of what's possible with technology. </p> </motion.div> </div> </div> </a> </motion.div>) ) 
+}</div> </div> </section> > <h2 className="text-4xl md:text-5xl font-bold mb-6" > <span className="bg-gradient-to-r from-purple-400 to-pink-500 bg-clip-text text-transparent" > Latest Innovations </span> </h2> <p className="text-xl text-gray-300 max-w-3xl mx-auto" > Explore our newest revolutionary services that are setting new standards in technology innovation. </p> </motion.div> New </span>) 
+}</div> </div> <div className="flex items-center text-cyan-400 group-hover:text-cyan-300 transition-colors" > <span className="mr-2 text-sm" >Learn More</span> <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" /> </div> </div> </div> </a> </motion.div>) ) 
+}</div> {
+  /* View All Services CTA */ 
+}<motion.div > <Link href="/services" className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-500 text-white rounded-lg font-semibold text-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 shadow-lg shadow-cyan-500/25 hover:shadow-xl hover:shadow-cyan-500/30 transform hover:scale-105" > View All Services <ArrowRight className="ml-2 w-5 h-5" /> </a> </motion.div> </div> </section> <motion.div initial= {
+  {
+  opacity: 0, y: 30 
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-43ef
+}
+;
+=======
+
+>>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
+  const backgroundVariants = {initial: { opacity: 0, scale: 0.8}
+},animate: { opacity: 1, scale: 1}
+}
+  return (}}
+              }}duration: 6,animate={{rotate: [45, 405];}
+                scale: [1, 1.15, 1];}
+                opacity: [0.3, 0.5, 0.3]}}
+
+              transition={{
+                duration: 10,
+                repeat: Infinity
+                ease: 'easeInOut'
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
               }}
             />
             <motion.div
@@ -473,6 +537,7 @@ const Homepage2045: React.FC = () => {
               </motion.h1>
               <motion.p
 
+<<<<<<< HEAD
                 initial={{ opacity: 0, y: 20}}
                 animate={{ opacity: 1, y: 0}}
                 transition={{ duration: 0.8, delay: 0.4 }}
@@ -531,6 +596,19 @@ className='text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto';
               </motion.p>
             </motion.div>
 
+=======
+                animate={{ opacity: 1, y: 0 }
+
+                transition={{ duration: 0.8, delay: 0.4 }
+
+className='text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto'
+                  />
+                Transform your business with Zion Tech Group's revolutionary AI
+services, quantum computing, and cutting-edge emerging
+technologies. Leading the future of technology innovation.
+              </motion.p>
+            </motion.div>
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
             {/* CTA Buttons */}
             <motion.div
               initial={{ opacity: 0, y: 20}}
@@ -1133,6 +1211,7 @@ className='group';
                 Explore our newest revolutionary services that are setting new standards in technology innovation.
               </p>
             </motion.div>
+<<<<<<< HEAD
               className='text-center mb-16'>;
               <h2 className='text-4xl md:text-5xl font-bold mb-6'>;
                 <span className='bg-gradient-to-r from-purple-400 to-pink-500 bg-clip-text text-transparent'>;
@@ -1162,6 +1241,41 @@ className='group';
                     key={service.id}
                     initial={{ opacity: 0, x: index % 2 === 0 ? -30 : 30 }}
                     whileInView={{ opacity: 1, x: 0 }}
+=======
+
+              className='text-center mb-16'>
+              <h2 className='text-4xl md:text-5xl font-bold mb-6'    />
+                <span className='bg-gradient-to-r from-purple-400 to-pink-500 bg-clip-text text-transparent'    />
+                  Latest Innovations
+                </span>
+              </h2>
+              <p className='text-xl text-gray-300 max-w-3xl mx-auto'    />
+                Explore our newest revolutionary services that are setting new
+                standards in technology innovation.              </p>
+            </motion && motion.div>
+            {/* Featured New Services */}            >;"
+              <h2 className=\"text-4xl md:text-5xl font-bold mb-6\"    />;"
+                <span className=\"bg-gradient-to-r from-purple-400 to-pink-500 bg-clip-text text-transparent\"    />
+                  Latest Innovations
+                </span>
+              </h2>;"
+              <p className=\"text-xl text-gray-300 max-w-3xl mx-auto\"    />
+                Explore our newest revolutionary services that are setting new standards in technology innovation.
+              </p>
+            </motion && motion.div>
+            {/* Featured New Services */}
+
+<div className='grid grid-cols-1 lg:grid-cols-2 gap-8'    />
+              {revolutionary2043AdvancedServices
+                .slice(0, 4)
+                .map((service, index) => (}
+                  <motion.div;}
+key={service.id}
+                    initial={{ opacity: 0, x: index % 2 === 0 ? -30 : 30 }
+
+                    whileInView={{ opacity: 1, x: 0 }
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
                     transition={{ duration: 0.6, delay: index * 0.1 }}
                     viewport={{ once: true }}
                     className='group';
@@ -1333,6 +1447,7 @@ className='group';
       </div>
     </Layout>
 };
+<<<<<<< HEAD
   /* CTA Buttons */ 
 }<motion.div > <Link href="/contact" className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-500 text-white rounded-lg font-semibold text-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 shadow-lg shadow-cyan-500/25 hover:shadow-xl hover:shadow-cyan-500/30 transform hover:scale-105" > Get Started </a> <Link href="/services" className="px-8 py-4 border border-cyan-400/50 text-cyan-400 rounded-lg font-semibold text-lg hover:bg-cyan-400/10 transition-all duration-300 transform hover:scale-105" > Explore Services </a> </motion.div> {
   /* Stats */
@@ -1489,6 +1604,8 @@ href='tel:+1 302 464 0950';
   animate: {
   transition: {
 };
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
   /* CTA Buttons */ 
 }<motion.div > <Link href="/contact" className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-500 text-white rounded-lg font-semibold text-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 shadow-lg shadow-cyan-500/25 hover:shadow-xl hover:shadow-cyan-500/30 transform hover:scale-105" > Get Started </a> <Link href="/services" className="px-8 py-4 border border-cyan-400/50 text-cyan-400 rounded-lg font-semibold text-lg hover:bg-cyan-400/10 transition-all duration-300 transform hover:scale-105" > Explore Services </a> </motion.div> {
   /* Stats */
@@ -1508,6 +1625,7 @@ href='tel:+1 302 464 0950';
   duration: 0.8;
 }viewport= {
   {
+<<<<<<< HEAD
 }> Ready to Transform? </span> </h2> <p className="text-xl text-gray-300 mb-8" > Let's discuss how our revolutionary technology solutions can drive your business into the future. </p> <div className="flex flex-col sm:flex-row gap-4 justify-center items-center" > <Link href="/contact" className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-500 text-white rounded-lg font-semibold text-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 shadow-lg shadow-cyan-500/25 hover:shadow-xl hover:shadow-cyan-500/30 transform hover:scale-105" > Get Started </a> <a href="tel:+1 302 464 0950" className="px-8 py-4 border border-cyan-400/50 text-cyan-400 rounded-lg font-semibold text-lg hover:bg-cyan-400/10 transition-all duration-300 transform hover:scale-105" > Call Now </a> </div> </motion.div> </div> </section> </div> </Layout>) 
 };export default Homepage2045;
 
@@ -1536,3 +1654,28 @@ export default Homepage2045;
               whileInView={{ opacity: 1, y: 0}}
               transition = $2;
 export default Homepage2045,
+=======
+<<<<<<< HEAD
+
+<<<<<<< HEAD
+  once: true }
+}"
+} /> Ready to Transform? </span> </h2> <p className=\"text-xl text-gray-300 mb-8\"  /> Let's discuss how our revolutionary technology solutions can drive your business into the future. </p> <div className=\"flex flex-col sm:flex-row gap-4 justify-center items-center\"  /> <Link href=\"/contact\" className=\"px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-500 text-white rounded-lg font-semibold text-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 shadow-lg shadow-cyan-500/25 hover:shadow-xl hover:shadow-cyan-500/30 transform hover:scale-105\"  /> Get Started </a> <a href=\"tel:+1 302 464 0950\" className=\"px-8 py-4 border border-cyan-400/50 text-cyan-400 rounded-lg font-semibold text-lg hover:bg-cyan-400/10 transition-all duration-300 transform hover:scale-105\"  /> Call Now </a> </div> </motion.div> </div> </section> </div> </Layout>) 
+};
+
+export default Homepage2045;
+
+"
+=======
+  once: true 
+}
+}> Ready to Transform? </span> </h2> <p className="text-xl text-gray-300 mb-8" > Let's discuss how our revolutionary technology solutions can drive your business into the future. </p> <div className="flex flex-col sm:flex-row gap-4 justify-center items-center" > <Link href="/contact" className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-500 text-white rounded-lg font-semibold text-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 shadow-lg shadow-cyan-500/25 hover:shadow-xl hover:shadow-cyan-500/30 transform hover:scale-105" > Get Started </a> <a href="tel:+1 302 464 0950" className="px-8 py-4 border border-cyan-400/50 text-cyan-400 rounded-lg font-semibold text-lg hover:bg-cyan-400/10 transition-all duration-300 transform hover:scale-105" > Call Now </a> </div> </motion.div> </div> </section> </div> </Layout>) 
+}
+export default Homepage2045
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-43ef
+=======
+export default Homepage2045
+}> Ready to Transform? </span> </h2> <p className="text-xl text-gray-300 mb-8" > Let's discuss how our revolutionary technology solutions can drive your business into the future. </p> <div className="flex flex-col sm:flex-row gap-4 justify-center items-center" > <Link href="/contact" className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-500 text-white rounded-lg font-semibold text-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 shadow-lg shadow-cyan-500/25 hover:shadow-xl hover:shadow-cyan-500/30 transform hover:scale-105" > Get Started </a> <a href="tel:+1 302 464 0950" className="px-8 py-4 border border-cyan-400/50 text-cyan-400 rounded-lg font-semibold text-lg hover:bg-cyan-400/10 transition-all duration-300 transform hover:scale-105" > Call Now </a> </div> </motion.div> </div> </section> </div> </Layout>)
+};export default Homepage2045;export default Homepage2045;
+>>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -14,6 +15,18 @@ class ErrorBoundary extends React.Component {
       return <div>Something went wrong.</div>;
 class ErrorBoundary extends React.Component {constructor(props) {super(props)this.state = { hasError: false }}
   static getDerivedStateFromError(error) {return { hasError: true }}
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+class ErrorBoundary extends React.Component {constructor(props) {super(props)this.state = { hasError: false }}
+  static getDerivedStateFromError(error) {return { hasError: true }
+=======
+useEffect ( () => {
+  if (!query) {
+  
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-43ef
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
   componentDidCatch(error, errorInfo) {console.error('Error caught by boundary:', error, errorInfo)}
   render() {if (this.state.hasError) {return <div>Something went wrong.</div>;
     }
@@ -21,6 +34,7 @@ class ErrorBoundary extends React.Component {constructor(props) {super(props)thi
   }
 }
 import React from 'react';
+<<<<<<< HEAD
 import { useEffect, useMemo, useRef, useState  } from 'react';
 
 
@@ -200,6 +214,16 @@ export default function GlobalSearchBar() {
     if (!query) {
       setSuggestions($2);
       return
+=======
+=======
+>>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
+import { useEffect, useMemo, useRef, useState  } from 'react';
+import { useRouter } from 'next/router';
+export default function GlobalSearchBar() {
+import { useEffect, useMemo, useRef, useState  } from 'react';
+import { useRouter } from 'next/router';
+export default function GlobalSearchBar() {
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 
 origin/cursor/automate-test-improve-and-merge-code-2533
             {suggestions && suggestions.map((s, i) => (<li key={i}>;
@@ -345,6 +369,7 @@ if (transcript) setQuery(q => (q ? q + ' ' + transcript : transcript))}rec.start
           <ul className='max-h-64 overflow-auto py-1 text-sm'>
             {suggestions.map((s, i) => (
               <li key={i}>
+<<<<<<< HEAD
                 <button
                   type='button'
                   onClick={() => {
@@ -388,6 +413,26 @@ if (transcript) setQuery(q => (q ? q + ' ' + transcript : transcript))}rec.start
       )}{s}
                   className='w-full text-left px-3 py-2 hover:bg-gray-50 dark:hover:bg-gray-800';
                     router.push(`/search?q=${encodeURIComponent(s)}`)}}
+=======
+
+                <button
+                  type='button'
+                  onClick={() => {
+                    setQuery(s)
+                    setOpen(false)
+                    router.push(`/search?q=${encodeURIComponent(s)}`)
+                  }}
+                  className='w-full text-left px-3 py-2 hover:bg-gray-50 dark:hover:bg-gray-800'                >    }
+    rec.start()
+
+  }
+  return (
+    <form onSubmit={onSubmit} className="relative w-full max-w-lg" role="search">
+      <input
+        value={query}
+        onChange={(e) => setQuery(e.target.value)}
+        onFocus={() => setOpen(suggestions.length > 0)}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
         className="w-full rounded-md border border-gray-300 dark:border-gray-700 bg-white/80 dark:bg-gray-900/60 backdrop-blur px-3 py-2 pr-20 text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500"
         placeholder="Search talent, jobs, projects..."
         aria-label="Search"
@@ -409,6 +454,7 @@ if (transcript) setQuery(q => (q ? q + ' ' + transcript : transcript))}rec.start
                   onClick={() => {;
                     setQuery(s);
                     setOpen(false);
+<<<<<<< HEAD
                   className='w-full text-left px-3 py-2 hover:bg-gray-50 dark:hover:bg-gray-800'                >
 
                     router && router.push(`/search?q=${encodeURIComponent(s)}`);
@@ -460,6 +506,13 @@ if ( {) {$2;
       set_suggestions ([])return;      return;
 
 
+=======
+
+                    router.push(`/search?q=${encodeURIComponent(s)}`)
+                  }}
+                  className="w-full text-left px-3 py-2 hover:bg-gray-50 dark:hover:bg-gray-800"
+                >
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
                   {s}
 
 
@@ -468,7 +521,12 @@ if ( {) {$2;
 
 
                   className='w-full text-left px-3 py-2 hover:bg-gray-50 dark:hover:bg-gray-800'
+<<<<<<< HEAD
 
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+pr-12243
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 
                     router.push(`/search?q=${encodeURIComponent(s)}`)
                   }}
@@ -476,7 +534,10 @@ if ( {) {$2;
                 >
                   {s}
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
                 </button>
               </li>
             ))}
@@ -556,6 +617,7 @@ if (return) {
     const Speech: any =;
       (window as any).SpeechRecognition ||;
       (window as any).webkitSpeechRecognition;    // Check condition
+<<<<<<< HEAD
 if (return) {
   $2
 }    fetch ('/api / telemetry / search', { method: 'POST', headers: { 'Content - Type': 'application / json' }, body: JSON.stringify ({ q: query }) }).catch (() => {}),
@@ -657,6 +719,15 @@ if (return) {
                 >;
                   {s}
                 </button>;
+=======
+const Speech: any =
+      (window as any).SpeechRecognition ||
+    rec.start ()}>
+      <input
+        value={query}
+
+                </button>
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
               </li>))}
           </ul>;
         </div>)}

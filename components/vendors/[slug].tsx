@@ -24,6 +24,7 @@ export default function VendorProfilePage({ vendor }: Props) {
   const [loading, setLoading] = useState($2);
   if (!vendor) return <div className = $2;
   async function submitLead(e: FormEvent<HTMLFormElement>) {
+<<<<<<< HEAD
     e.preventDefault($2);
     const form = $2;
     const formData = new FormData($2);
@@ -184,6 +185,24 @@ type Props = any;async function submitLead() {e.preventDefault()const form = e.c
                 ) : (;
                   <div className="w-full h-40 bg-gray-100 dark:bg-gray-900" />;
                 )}
+=======
+    e.preventDefault();
+    const form = e.currentTarget;
+    const formData = new FormData(form);
+    const title = String(formData.get('title') |'New lead');
+    setLoading(true);
+    setMessage(null)
+    try {}
+          // eslint-disable-next-line @next/next/no-img-element
+          <img src={vendor.logoUrl} alt={vendor.name} className="w-16 h-16 rounded" />
+        ) : ("
+          <div className="w-16 h-16 rounded bg-gray-100 dark: bg-gray-900" />
+        )}
+        <div>"
+          <div className="text-2xl font-semibold flex items-center gap-2">
+            {vendor.name}"
+            {vendor.verified && <span className="text-xs px-2 py-0.5 rounded bg-green-100 text-green-700">Verified</span>}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 
         </div>
       </div>

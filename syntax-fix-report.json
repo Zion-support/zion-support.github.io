@@ -1,4 +1,5 @@
 {
+<<<<<<< HEAD
 
 
 
@@ -328,6 +329,18 @@ main
     "api/quotes.js",
     "api/shipping-rates.js",
     "api/wallet.js",
+=======
+"timestamp": "2025-09-07T09:46:21.975Z",
+  "totalFilesChecked": 2256,
+  "fixedFiles": 2246,
+  "failedFiles": 0,
+  "fixedFileList": [
+    "automation/accessibility-checker.cjs",
+    "automation/ai-intelligent-code-analyzer.cjs",
+    "automation/app-improvement-suite.cjs",
+    "automation/auto-fix-orchestrator.cjs",
+    "automation/automated-test-runner.cjs",
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
     "automation/automation-dashboard.js",
     "automation/automation-factory.js",
     "automation/backups/data-sync/2025-08-25T15-27-09-798Z/data/2025-emerging-tech-services.ts",
@@ -6922,6 +6935,7 @@ main
     "zion_academy/static/js/script.js",
     "zion_academy/static/js/script.jsx"
   ],
+<<<<<<< HEAD
   "errorList": []
 }
 
@@ -8500,3 +8514,7 @@ main
     "/workspace/vite.config-backup.ts"
   ]
 }
+=======
+"errors": []
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75

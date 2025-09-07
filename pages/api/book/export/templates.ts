@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <<<<<<< HEAD:pages_backup/api/book/export/templates.ts
 
 
@@ -6,6 +7,9 @@
 ursor/fix-website-loading-errors-and-merge-6662
 
 import type { NextApiRequest, NextApiResponse } from 'next';
+=======
+import { NextApiRequest, NextApiResponse } from 'next';
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 
 import type { NextApiRequest, NextApiResponse } from 'next';
 ;
@@ -21,6 +25,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 const templates = {
   lulu: {
     sizes: [
+<<<<<<< HEAD
       { name: 'US Letter', widthIn: 8.5, heightIn: 11, bleedIn: 0.125, marginIn: 0.75 }
       { name: 'A4', widthIn: 8.27, heightIn: 11.69, bleedIn: 0.125, marginIn: 0.75 }]}
   blurb: {
@@ -87,3 +92,19 @@ export default function handler(req, res) {
 
 
 
+=======
+      { name: 'A4', width: 210, height: 297 },
+      { name: 'A5', width: 148, height: 210 }
+    ]
+  }
+};
+
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  if (req.method !== 'GET') {
+    res.setHeader('Allow', ['GET']);
+    return res.status(405).end('Method Not Allowed');
+  }
+  
+  res.status(200).json(templates);
+} 
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75

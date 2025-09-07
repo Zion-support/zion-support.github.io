@@ -111,6 +111,7 @@ interface PasswordStrengthResult {
     entropy: number},
   suggestions: string[]
 }
+<<<<<<< HEAD
 
 export default async function handler(
   req: NextApiRequest,
@@ -128,6 +129,8 @@ export default async function handler(
     }
 
     // Password analysis
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 export default async function handler(
 
   req: NextApiRequest

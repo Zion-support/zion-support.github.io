@@ -15,6 +15,7 @@ export default async function handler(
   req: NextApiRequest
   res: NextApiResponse
 ) {
+<<<<<<< HEAD
   if (req && req.method === 'GET') {
 import { supabase as supabaseClient } from '@/utils/supabase/client';
 import { TALENT_PROFILES as LOCAL } from '@/data/talent';
@@ -24,6 +25,24 @@ import { translateText, detectLanguageSimple } from '@/utils/api/translate';
 const hasSupabase = $2;
 const SUPPORTED_LANGS = (process.env.SUPPORTED_LANGS || 'en,es,de,fr,pt,ja,zh').split().map((x) => x.trim()),
 
+=======
+  if (req.method === 'GET') {
+    try {
+      if (hasSupabase) {
+        const { data, error } = await supabaseClient
+          .from('talent_profiles')
+          .select('*');
+          .order('created_at', { ascending: false });
+        if (error) throw error;
+        return res.status(200).json({ items: data as TalentProfile[] });
+     
+}
+      return res.status(200).json({ items: LOCAL });
+   
+} catch (e: any) {
+      return res.status(500).json({ error: e.message });
+    }  }
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method === 'GET') {
     try {
@@ -34,6 +53,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       }
       return res.status(200).json({ items: LOCAL})
     } catch (e: any) {
+<<<<<<< HEAD
 const SUPPORTED_LANGS = (process.env.SUPPORTED_LANGS |'en,es,de,fr,pt,ja,zh').split(',').map(x => x.trim())export default async function handler() {if (req && req.method === 'GET') {try {if (hasSupabase) {const { data, error } = await supabaseClient;
           .from('talent_profiles').order('created_at', { ascending: false })if (error) throw error;
         return res && res.status(200).json({ items: data as TalentProfile[] })}
@@ -42,6 +62,10 @@ export default async function handler() {if (req && req.method === 'GET') {try {
 if (throw error) {$2;
 }
         return res.status (201).json ({ slug: item.slug })return res.status(500).json({ error: e.message })}
+=======
+      return res.status(500).json({ error: e.message })
+    }
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
   }
   if (req.method === 'POST') {try {const payload = req.body as Partial<TalentProfile>;
 const slug =;
@@ -79,6 +103,7 @@ const slug =;
             lang;
             originalLang;
           )}
+<<<<<<< HEAD
       }
       item.originalLanguage = originalLang;
       item.translations = translations;
@@ -140,6 +165,41 @@ if (throw error) {
         if (error) throw error,
         return res.status(201).json({ slug: item.slug })
       }
+=======
+
+      item.originalLanguage = originalLang
+      item.translations = translations
+  if($2) {}
+        const { error } = await supabaseClient.from('talent_profiles').insert({
+id: item.id,
+          slug: item.slug,
+          name: item.name,
+          title: item.title,
+          category: item.category,
+          location: item.location,
+          timezone: item.timezone,
+          region: item.region,
+          skills: item.skills,
+          summary: item.summary,
+          bio: item.bio,
+          hourly_rate_usd: item.hourlyRateUsd ?? null,
+          request_quote: item.requestQuote ?? null,
+          availability: item.availability,
+          profile_image_url: item.profileImageUrl ?? null,
+          video_url: item.videoUrl ?? null,
+          portfolio: item.portfolio ?? null,
+          verified: item.verified ?? null,
+          rating: item.rating ?? null,
+          reviews_count: item.reviewsCount ?? null,
+          created_at: item.createdAt,
+          // i18n
+original_language: item.originalLanguage,}
+          translations: item.translations as any,}
+        } as any)
+        if (error) throw error
+        return res.status(201).json({ slug: item.slug })
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 
       // Fallback: return the slug as if saved
       return res.status(201).json({ slug: item.slug })

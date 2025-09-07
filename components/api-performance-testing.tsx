@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -30,6 +31,16 @@ import React from "react";
 import SEO from "../components/SEO";
 import { Check, ExternalLink } from "lucide-react";
 
+=======
+<<<<<<< HEAD
+</div>) ) 
+}</div> </a> <a href="https://gatling.io/open-source/" target="blank" rel="noreferrer" className="inline-flex items-center gap-2 text-cyan-400 hover:text-cyan-300" > <ExternalLink className="w-4 h-4" /> Gatling OSS </a> </div> </section> </main> </>) 
+}
+=======
+import React from 'react',
+import SEO from '../components/SEO';
+import { Check, ExternalLink } from 'lucide-react';
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 export default function ApiPerformanceTestingPage() {
 
   const features = [
@@ -472,6 +483,7 @@ return (
     </>
   );
 }
+<<<<<<< HEAD
 
 
 
@@ -550,3 +562,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 
 
+=======
+>>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 import { Menu,ChevronDown,X,Phone,Mail,MapPin,ArrowRight,Brain,Rocket,Shield,Zap,Target,Atom,BookOpen,Truck,DollarSign,BarChart3,Globe,Users,Star,Sparkles,Cpu,Lock,Cloud,Settings,Eye,Award,Clock,Heart,Lightbulb,Search,Grid,List,TrendingUp,Shield as ShieldIcon,Globe as GlobeIcon,User,ShoppingCart,Bell,HelpCircle,FileText,Video,Headphones,Code,Database,Network,Server,Monitor,Smartphone,Camera,Gamepad2,Palette,Music,Film,BookOpenCheck,Building,MessageCircle,} from 'lucide-react';
 import { Menu;
@@ -78,6 +79,17 @@ interface NavigationItem  {name: string;href: string;  icon?: React.ReactNode;im
   Building, MessageCircle;
 } from 'lucide-react';import React, { useState, useEffect } from 'react',import Link from 'next/link';
 import { motion, AnimatePresence  } from 'framer-motion';
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+
+=======
+>>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
+import React, { useState, useEffect } from 'react',
+import Link from 'next/link';
+import { motion, AnimatePresence } from 'framer-motion';
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 import { Menu, ChevronDown, X, Phone, Mail, MapPin, ArrowRight;
   Brain, Rocket, Shield, Zap, Target, Atom, BookOpen;
   Truck, DollarSign, BarChart3, Globe, Users, Star, Sparkles;
@@ -86,6 +98,7 @@ import { Menu, ChevronDown, X, Phone, Mail, MapPin, ArrowRight;
   User, ShoppingCart, Bell, HelpCircle, FileText, Video, Headphones;
   Code, Database, Network, Server, Monitor, Smartphone;
   Camera, Gamepad2, Palette, Music, Film, BookOpenCheck;
+<<<<<<< HEAD
   Building, MessageCircle;
   } from 'lucide-react';
 interface NavigationItem  {name: string;
@@ -149,6 +162,14 @@ import {
   Building,;
   MessageCircle,;
 } from 'lucide-react';
+=======
+  Building, MessageCircle
+ } from 'lucide-react';
+interface NavigationItem {
+  name: string;
+  href: string;
+  icon?: React.ReactNode;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 
 import {
   Menu
@@ -1616,6 +1637,107 @@ const contact_info = {mobile: '+1 302 464 0950',email: 'kleber@ziontechgroup.com
                         className='absolute top-full left-0 mt-2 w-80 bg-gray-900/95 backdrop-blur-xl border border-gray-800/50 rounded-2xl shadow-2xl shadow-black/50 overflow-hidden';
                         className='absolute top-full left-0 mt-2 w-80 bg-gray-900/95 backdrop-blur-xl border border-gray-800/50 rounded-2xl shadow-2xl shadow-black/50 overflow-hidden'
 
+<<<<<<< HEAD
+=======
+                                key={child && child.name}
+                                href={child && child.href}`
+                                className={`flex items-center gap-3 p-3 rounded-xl transition-all duration-200 ${'
+                                    : 'text-gray-300 hover:text-white hover:bg-gray-800/50'`
+                                }`}
+                                onClick={closeDropdowns}    />
+                                {child && child.featured && (<Star className='w-4 h-4 text-cyan-400'    />;}
+                                )}
+                                <div className='flex-1'    />
+                                  <div className='font-medium'    />
+                                    {child && child.name}
+                                  </div>
+                                    <div className='text-sm opacity-75'    />
+                                      {child && child.description}
+                                    </div>
+                                  )}
+                                </div>;"
+                                <ArrowRight className='w-4 h-4 opacity-50'    />                              </Link>                                <ArrowRight className=\"w-4 h-4 opacity-50\"    />
+                              </Link>
+                            ))}
+                          </div>
+                        </div>
+                      </motion && motion.div>
+                    )}
+                  </AnimatePresence>
+                </div>
+              ))}
+                    }`}
+                  >
+                    {action && action.icon}
+                    <span    />{action && action.name}</span>
+                  </Link>
+                ))}
+              {/* Contact Info */}
+              <div className='flex items-center gap-4 text-sm text-gray-400'    />
+                <a
+                  href={`tel: ${contactInfo && contactInfo.mobile}
+
+                  className='flex items-center gap-2 hover:text-cyan-400 transition-colors duration-200'    />
+                  <Phone className='w-4 h-4'    />
+                  <span className='hidden xl: inline'    />{contactInfo && contactInfo.mobil}
+}</span>
+                </a>
+                <a
+                    key={action.name}
+                    href={action.href}
+                    className={`flex items - center gap - 2 px - 4 py - 2 rounded - xl text - sm font - medium transition - all duration - 200 ${action.primary
+                        ? 'bg - gradient - to - r from - cyan - 500 to - blue - 500 text - white hover:from - cyan - 600 hover:to - blue - 600 shadow - lg shadow - cyan - 500 / 25';}
+                        : 'text - gray - 300 hover:text - white hover:bg - gray - 800 / 50';}
+                    }`}    />
+
+                    {action.icon}
+                    <span    />{action.name}</span>
+                  </Link>))}
+              </div>
+              {/* Contact Info */}
+                  href={`mailto: ${contactInfo && contactInfo.email}
+
+                  className='flex items-center gap-2 hover:text-purple-400 transition-colors duration-200'>
+                  <Mail className='w-4 h-4'    />
+                  <span className='hidden xl: inline'    />{contactInfo && contactInfo.emai}"
+}</span>                </a>              <div className=\"flex items-center gap-4 text-sm text-gray-400\"    />
+                <a href={`tel: ${contactInfo && contactInfo.mobile},"
+} className=\"flex items-center gap-2 hover:text-cyan-400 transition-colors duration-200\"    />;"
+                  <Phone className=\"w-4 h-4\"    />;"
+                  <span className=\"hidden xl: inline\"    />{contactInfo && contactInfo.mobil}
+}</span>
+                </a>
+                <a href={`mailto: ${contactInfo && contactInfo.email},"
+} className=\"flex items-center gap-2 hover:text-purple-400 transition-colors duration-200\"    />;"
+                  <Mail className=\"w-4 h-4\"    />;"
+                  <span className=\"hidden xl: inline\"    />{contactInfo && contactInfo.emai}
+}</span>
+              </div>
+            </div>;{/* Mobile Menu Button */}
+            <button
+              onClick={() =    /> setIsOpen(!isOpen)}
+              className='lg:hidden p-2 text-gray-300 hover:text-white transition-colors duration-200'
+              aria-label='Toggle mobile menu'>
+
+              {isOpen ? (<X className='w-6 h-6'    />;}
+              ) : (<Menu className='w-6 h-6'    />;}"
+              )}            </button>              className=\'lg:hidden p-2 text-gray-300 hover:text-white transition-colors duration-200\';"
+              aria-label=\"Toggle mobile menu\">
+"
+              {isOpen ? <X className=\"w-6 h-6\"    /> : <Menu className=\"w-6 h-6\"    />}
+          </div>
+        </div>
+        {/* Mobile Menu */}
+        <AnimatePresence>
+          {isOpen && (
+            <motion&& motion.div'
+                        item.badge === 'New' ? 'bg-green-500/20 text-green-400 border border-green-500/30' :'
+                        item.badge === 'Hot' ? 'bg-red-500/20 text-red-400 border border-red-500/30' :'
+                        item.badge === 'Showcase' ? 'bg-cyan-500/20 text-cyan-400 border border-cyan-500/30' :'
+                        item.badge === 'Future' ? 'bg-purple-500/20 text-purple-400 border border-purple-500/30' :'
+                        item.badge === 'Enterprise' ? 'bg-blue-500/20 text-blue-400 border border-blue-500/30' :'
+                        item.badge === 'Industry' ? 'bg-orange-500/20 text-orange-400 border border-orange-500/30' :
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
                   {/* Dropdown Menu */}
                   <AnimatePresence>
                     {activeDropdown === item.name && (
@@ -2197,6 +2319,7 @@ export default UltraFuturisticNavigation2035;
 
                       {/* Mobile Dropdown */}
                       <AnimatePresence>
+<<<<<<< HEAD
                         {activeDropdown === item.name && (
                           <motion.div
                             initial={{ opacity: 0, height: 0}}
@@ -2204,3 +2327,297 @@ export default UltraFuturisticNavigation2035;
                             exit={{ opacity: 0, height: 0}}
                             transition = $2;
 export default UltraFuturisticNavigation2035,
+=======
+                        {activeDropdown === item && item.name && (
+                                key={child && child.name}
+                                href={child && child.href}`
+                                className={`block p-3 rounded-lg transition-colors duration-200 ${'
+                                    : 'text-gray-400 hover:text-white hover:bg-gray-800/50'`
+                                }`}
+                                onClick={closeMobileMenu}>;'
+                                <div className='font-medium'>{child && child.name}</div>
+                                {child && child.description && (;'
+                                  <div className='text-sm opacity-75 mt-1'>
+                                    {child && child.description}"
+                                  </div>                                )}                                <div className="font-medium">{child && child.name}</div>
+                                {child && child.description && (;"
+                                  <div className="text-sm opacity-75 mt-1">{child && child.description}</div>
+child.featured
+                                    ? 'bg-gradient-to-r from-cyan-500/10 to-blue-500/10 text-cyan-400'
+                                    : 'text-gray-400 hover:text-white hover:bg-gray-800/50'}
+
+                                }`}
+                                onClick={closeMobileMen}
+
+                                  />
+<div className='font-medium'    />{child.name}</div>
+                                {child.description && (<div className='text-sm opacity-75 mt-1'    />;}
+                                    {child.description}
+
+                                  </div>
+                                )}
+                              </Link>
+
+                              </Link>
+                            ))}
+                          </motion && motion.div>
+                        )}
+                      </AnimatePresence>
+                    </div>
+                  ))}
+                  {/* Mobile Quick Actions */}
+                  <div className='pt-4 border-t border-gray-800/50'>
+                    <div className='space-y-3'>
+                      {quickActions.map(action => (                        <Link                  <div className="pt-4 border-t border-gray-800/50">
+                    <div className="space-y-3">
+                      {quickActions.map((action) => (
+                        <Link
+                          key={action.name}
+                          href={action.href}
+                        <Link
+                          key={action && action.name}
+                          href={action && action.href}
+                          className={`flex items-center gap-3 p-3 rounded-xl text-sm font-medium transition-all duration-200 ${action && action.primary
+                              ? 'bg-gradient-to-r from-cyan-500 to-blue-500 text-white';}
+                              : 'text-gray-300 hover:text-white hover:bg-gray-800/50';}
+                          }`}
+                          onClick={closeMobileMenu}    />
+                          {action && action.icon}
+                          <span    />{action && action.name}</span>
+                        </Link>
+                      ))}
+                    </div>
+                  </div>
+                  {/* Mobile Contact Info */}
+                  <div className='pt-4 border-t border-gray-800/50'>
+                    <div className='space-y-3 text-sm text-gray-400'>
+                      <a
+                        href={`tel:${contactInfo.mobile}`}
+                        className='flex items-center gap-3 p-3 rounded-lg hover:text-cyan-400 hover:bg-gray-800/50 transition-all duration-200'
+                      >
+                        <Phone className='w-4 h-4' />
+                        <span>{contactInfo.mobile}</span>
+                      </a>
+                      <a
+href={`mailto: ${contactInfo.email}`}
+                        className='flex items-center gap-3 p-3 rounded-lg hover:text-purple-400 hover:bg-gray-800/50 transition-all duration-200'
+                          />
+                        <Mail className='w-4 h-4'    />
+                        <span    />{contactInfo.email}</span>
+                      </a>
+                      <div className='flex items-center gap-3 p-3 rounded-lg'    />
+                        <MapPin className='w-4 h-4'    />
+                        <span className='text-sm'    />{contactInfo.address}</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </motion.div>
+          )}
+        </AnimatePresence>
+      </div>
+    </nav>
+)
+}
+origin/cursor/automate-test-improve-and-merge-code-2533
+}, [])
+}, []);"
+</div> <div    /> <div className=\"text - xl font - bold bg - gradient - to - r from - cyan - 400 to - blue - 500 bg - clip - text text - transparent\"     /> Zion Tech Group </div> <div className=\"text - xs text - gray - 400\"     />Revolutionary Technology</div> </div> </a> > {}
+  item.icon;}
+}<span    /> {}
+  item.name;}
+}</span> {
+  item.badge && (<span className= {
+  `px-2 py-1 text-xs rounded-full $ {
+  item.badge === 'New' ? 'bg-green-500/20 text-green-400 border border-green-500/30' : item.badge === 'Hot' ? 'bg-red-500/20 text-red-400 border border-red-500/30' : item.badge === 'Showcase' ? 'bg-cyan-500/20 text-cyan-400 border border-cyan-500/30' : item.badge === 'Future' ? 'bg-purple-500/20 text-purple-400 border border-purple-500/30' : item.badge === 'Enterprise' ? 'bg-blue-500/20 text-blue-400 border border-blue-500/30' : item.badge === 'Industry' ? 'bg-orange-500/20 text-orange-400 border border-orange-500/30' : 'bg-gray-500/20 text-gray-400 border border-gray-500/30'
+}`
+}> {
+  item.badge
+}</span>)
+}<ChevronDown className= {
+  `w-4 h-4 transition-transform duration-200 $ {
+  activeDropdown === item.name ? 'rotate-180' : ''
+}`
+}/> </button> {
+  /* Dropdown Menu */
+}<AnimatePresence> {
+  activeDropdown === item.name && (<motion.div)
+}</div> </div> <Link key= {
+  child.name
+}href= {
+  child.href
+}className= {
+  `flex items-center gap-3 p-3 rounded-xl transition-all duration-200 $ {
+  child.featured ? 'bg-gradient-to-r from-cyan-500/10 to-blue-500/10 border border-cyan-500/20 text-cyan-400 hover:bg-cyan-500/20': 'text-gray-300 hover:text-white hover:bg-gray-800/50'
+}`
+}onClick= {
+  closeDropdowns
+}>)
+}</div> <ArrowRight className="w-4 h-4 opacity-50" /> </a>) )
+}</div> </div> </motion.div>)
+}</AnimatePresence> </div>) )
+}</div> <Link key= {
+  action.name
+}href= {
+  action.href
+}className= {
+  `flex items-center gap-2 px-4 py-2 rounded-xl text-sm font-medium transition-all duration-200 $ {
+  action.primary ? 'bg-gradient-to-r from-cyan-500 to-blue-500 text-white hover:from-cyan-600 hover:to-blue-600 shadow-lg shadow-cyan-500/25': 'text-gray-300 hover:text-white hover:bg-gray-800/50'
+}`
+}> </a> </div> </div> {
+  /* Mobile Menu Button */
+}<button </button> </div> </div> {
+  /* Mobile Menu */
+}<AnimatePresence> <span className= {
+  `px-2 py-1 text-xs rounded-full $ {
+  item.badge === 'New'? 'bg-green-500/20 text-green-400': item.badge === 'Hot'? 'bg-red-500/20 text-red-400': item.badge === 'Showcase'? 'bg-cyan-500/20 text-cyan-400': 'bg-gray-500/20 text-gray-400'
+}`
+}> {
+  item.badge
+}</span>)
+}</div> <ChevronDown className= {
+  `w-4 h-4 transition-transform duration-200 $ {
+  activeDropdown === item.name ? 'rotate-180': ''
+}`
+}/> </button> {
+  /* Mobile Dropdown */
+}<AnimatePresence> > {
+  item.children?.map ( (child) => (<Link key= {
+  child.name
+}href= {
+  child.href
+}className= {
+  `block p-3 rounded-lg transition-colors duration-200 $ {
+  child.featured ? 'bg-gradient-to-r from-cyan-500/10 to-blue-500/10 text-cyan-400': 'text-gray-400 hover:text-white hover:bg-gray-800/50'
+}`
+}onClick= {
+  closeMobileMenu
+}>)
+}</a>) )
+}</motion.div>)
+}</AnimatePresence> </div>) )
+}<Link key= {
+  action.name
+}href= {
+  action.href
+}className= {
+  `flex items-center gap-3 p-3 rounded-xl text-sm font-medium transition-all duration-200 $ {
+  action.primary ? 'bg-gradient-to-r from-cyan-500 to-blue-500 text-white': 'text-gray-300 hover:text-white hover:bg-gray-800/50'
+}`
+}onClick= {
+  closeMobileMenu
+}>) )
+}</div> </div> </div> </div> </div> </div> </div> </motion.div>)
+}</AnimatePresence> </div> </nav>)
+}
+export default UltraFuturisticNavigation2035;  )
+}
+export default UltraFuturisticNavigation2035;
+<<<<<<< HEAD
+
+export default UltraFuturisticNavigation2035;  )}
+
+export default UltraFuturisticNavigation2035;
+
+export default UltraFuturisticNavigation2035;"
+=======
+] 
+}]
+]
+
+return () => window.removeEventListener ('scroll', handleScroll) 
+}, [])
+</div> <div> <div className="text-xl font-bold bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent" > Zion Tech Group </div> <div className="text-xs text-gray-400" >Revolutionary Technology</div> </div> </a> > {
+  item.icon 
+}<span> {
+  item.name 
+}</span> {
+  item.badge && (<span className= {
+  `px-2 py-1 text-xs rounded-full $ {
+  item.badge === 'New' ? 'bg-green-500/20 text-green-400 border border-green-500/30' : item.badge === 'Hot' ? 'bg-red-500/20 text-red-400 border border-red-500/30' : item.badge === 'Showcase' ? 'bg-cyan-500/20 text-cyan-400 border border-cyan-500/30' : item.badge === 'Future' ? 'bg-purple-500/20 text-purple-400 border border-purple-500/30' : item.badge === 'Enterprise' ? 'bg-blue-500/20 text-blue-400 border border-blue-500/30' : item.badge === 'Industry' ? 'bg-orange-500/20 text-orange-400 border border-orange-500/30' : 'bg-gray-500/20 text-gray-400 border border-gray-500/30' 
+}` 
+}> {
+  item.badge 
+}</span>) 
+}<ChevronDown className= {
+  `w-4 h-4 transition-transform duration-200 $ {
+  activeDropdown === item.name ? 'rotate-180' : '' 
+}` 
+}/> </button> {
+  /* Dropdown Menu */ 
+}<AnimatePresence> {
+  activeDropdown === item.name && (<motion.div) 
+}</div> </div> <Link key= {
+  child.name 
+}href= {
+  child.href 
+}className= {
+  `flex items-center gap-3 p-3 rounded-xl transition-all duration-200 $ {
+  child.featured ? 'bg-gradient-to-r from-cyan-500/10 to-blue-500/10 border border-cyan-500/20 text-cyan-400 hover:bg-cyan-500/20': 'text-gray-300 hover:text-white hover:bg-gray-800/50' 
+}` 
+}onClick= {
+  closeDropdowns 
+}>) 
+}</div> <ArrowRight className="w-4 h-4 opacity-50" /> </a>) ) 
+}</div> </div> </motion.div>) 
+}</AnimatePresence> </div>) ) 
+}</div> <Link key= {
+  action.name 
+}href= {
+  action.href 
+}className= {
+  `flex items-center gap-2 px-4 py-2 rounded-xl text-sm font-medium transition-all duration-200 $ {
+  action.primary ? 'bg-gradient-to-r from-cyan-500 to-blue-500 text-white hover:from-cyan-600 hover:to-blue-600 shadow-lg shadow-cyan-500/25': 'text-gray-300 hover:text-white hover:bg-gray-800/50' 
+}` 
+}> </a> </div> </div> {
+  /* Mobile Menu Button */ 
+}<button </button> </div> </div> {
+  /* Mobile Menu */ 
+}<AnimatePresence> <span className= {
+  `px-2 py-1 text-xs rounded-full $ {
+  item.badge === 'New'? 'bg-green-500/20 text-green-400': item.badge === 'Hot'? 'bg-red-500/20 text-red-400': item.badge === 'Showcase'? 'bg-cyan-500/20 text-cyan-400': 'bg-gray-500/20 text-gray-400' 
+}` 
+}> {
+  item.badge 
+}</span>) 
+}</div> <ChevronDown className= {
+  `w-4 h-4 transition-transform duration-200 $ {
+  activeDropdown === item.name ? 'rotate-180': '' 
+}` 
+}/> </button> {
+  /* Mobile Dropdown */ 
+}<AnimatePresence> > {
+  item.children?.map ( (child) => (<Link key= {
+  child.name 
+}href= {
+  child.href 
+}className= {
+  `block p-3 rounded-lg transition-colors duration-200 $ {
+  child.featured ? 'bg-gradient-to-r from-cyan-500/10 to-blue-500/10 text-cyan-400': 'text-gray-400 hover:text-white hover:bg-gray-800/50' 
+}` 
+}onClick= {
+  closeMobileMenu 
+}>) 
+}</a>) ) 
+}</motion.div>) 
+}</AnimatePresence> </div>) ) 
+}<Link key= {
+  action.name 
+}href= {
+  action.href 
+}className= {
+  `flex items-center gap-3 p-3 rounded-xl text-sm font-medium transition-all duration-200 $ {
+  action.primary ? 'bg-gradient-to-r from-cyan-500 to-blue-500 text-white': 'text-gray-300 hover:text-white hover:bg-gray-800/50' 
+}` 
+}onClick= {
+  closeMobileMenu 
+}>) ) 
+}</div> </div> </div> </div> </div> </div> </div> </motion.div>) 
+}</AnimatePresence> </div> </nav>) 
+}
+export default UltraFuturisticNavigation2035
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-43ef
+=======
+>>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75

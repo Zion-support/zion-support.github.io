@@ -1,4 +1,5 @@
 {
+<<<<<<< HEAD
   "timestamp": "2025-09-06T00:07:28.790Z",
   "vulnerabilities": [
     {
@@ -301,34 +302,50 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       "message": "Address code security issues",
       "action": "Review and fix dangerous code patterns identified in the audit"
     },
+=======
+  "timestamp": "2025-09-07T10:14:30.085Z",
+  "vulnerabilities": [],
+  "recommendations": [
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
     {
+      "type": "configuration",
       "priority": "medium",
-      "category": "environment",
-      "message": "Secure environment variables",
-      "action": "Ensure sensitive environment variables are properly secured and not committed to version control"
+      "message": "Missing security headers in Next.js config",
+      "action": "Add security headers configuration"
     },
     {
-      "priority": "low",
-      "category": "permissions",
-      "message": "Review file permissions",
-      "action": "Consider restricting file permissions for sensitive files"
-      } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
+      "type": "configuration",
+      "priority": "high",
+      "message": "Missing Content Security Policy",
+      "action": "Implement CSP headers"
+    },
+    {
+      "type": "code_security",
+      "priority": "high",
+      "message": "Use of eval() function detected",
+      "action": "Replace eval() with safer alternatives"
+    },
+    {
+      "type": "code_security",
+      "priority": "medium",
+      "message": "Direct innerHTML assignment detected",
+      "action": "Use textContent or sanitize HTML content"
+    },
+    {
+      "type": "code_security",
+      "priority": "medium",
+      "message": "dangerouslySetInnerHTML usage detected",
+      "action": "Sanitize HTML content before rendering"
+    }
   ],
   "summary": {
     "totalVulnerabilities": 0,
-    "totalSecurityIssues": 17,
-    "criticalIssues": 0,
-    "warnings": 13,
-    "info": 4,
-    "totalRecommendations": 4
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    "totalRecommendations": 5,
+    "highPriority": 2,
+    "mediumPriority": 3,
+    "lowPriority": 0
   }
+<<<<<<< HEAD
 }
   } catch (error) {
     console.error("Error:", error);
@@ -373,3 +390,6 @@ origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
   "vulnerabilities": 11,
   "recommendations": [
 
+=======
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75

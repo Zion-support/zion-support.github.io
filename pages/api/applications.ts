@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 import type { NextApiRequest, NextApiResponse } from 'next';
 
@@ -22,3 +23,15 @@ import { rateLimit } from '../../utils/rateLimit',;
   res.setHeader($2);
   res.status(405).end('Method Not Allowed')
 
+=======
+import { NextApiRequest, NextApiResponse } from 'next';
+
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  if (req.method !== 'GET' && req.method !== 'POST') {
+    res.setHeader('Allow', ['GET', 'POST']);
+    return res.status(405).end('Method Not Allowed');
+  }
+  
+  res.status(200).json({ applications: [] });
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75

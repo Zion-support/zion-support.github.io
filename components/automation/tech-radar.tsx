@@ -1,3 +1,4 @@
+<<<<<<< HEAD
  
 
  
@@ -18,6 +19,16 @@ export const getStaticProps: GetStaticProps < Props> = async () => {
     return { props: { pypi: [], crates: [], github: {} }, revalidate: 7200 }
   }
 import fs from 'fs';
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+
+import fs from 'fs';,
+=======
+import fs from 'fs',
+>>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 import path from 'path';
 import type { GetStaticProps } from 'next';
 type Item = { source: string, name: string, url: string, description?: string, downloads?: number },
@@ -43,6 +54,7 @@ export const getStaticProps: GetStaticProps<Props> = async () => {
 export default function TechRadar({ pypi, crates, github }: Props) {
   const langs = Object.keys($2);
   return (
+<<<<<<< HEAD
     <div className="space-y-8">
       <header className="space-y-2">
         <h1 className="text-3xl font-bold">Tech Radar</h1>
@@ -57,12 +69,16 @@ export default function TechRadar({ pypi, crates, github }: Props) {
               <a href={it.url} target="_blank" rel="noreferrer" className="font-medium text-blue-600 dark:text-cyan-400">{it.name}</a>
               {typeof it.downloads === 'number' && (
                 <div className="text-xs text-gray-500">Downloads: {it.downloads.toLocaleString()}</div>
+=======
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
               )}
             </li>
           ))}
         </ul>
       </section>
 
+<<<<<<< HEAD
 
 ;
 export const getStaticProps: GetStaticProps<Props>  = async () => {}
@@ -127,6 +143,22 @@ function TechRadar() {const langs = Object.keys (github)return (<div className="
           {crates.map ((it, i) => (<li key={i} className="p - 4 rounded - lg border border - gray - 200 dark:border-gray-800">;
               <a href={it.url} target="_blank" rel="noreferrer" className="font - medium text - blue - 600 dark:text-cyan-400">{it.name}</a>;
               {it.description && <div className="text - sm text - gray - 600 dark:text-gray-300">{it.description}</div>}
+=======
+        </ul>
+      </section>
+      </header>
+      <section    />;"
+        <h2 className=\"font - semibold text-lg mb-3\"    />PyPI (30 days)</h2>;}"
+        <ul className=\"grid md:grid - cols-2 gap-3\"    />;}"
+          {pypi.map ((it, i) => (<li key={i} className=\"p - 4 rounded - lg border border - gray - 200 dark:border-gray-800\"    />;"
+              <a href={it.url} target=\"_blank\" rel=\"noreferrer\" className=\"font - medium text - blue - 600 dark: text-cyan-400\"    />{it.nam}
+}</a>;"
+              {typeof it.downloads === 'number' && (<div className=\"text - xs text-gray-500\"    />Downloads: {it.downloads.toLocaleString ()}</div>)}
+            </li>)
+
+        </ul>
+      </section>
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
             </li>))}
         </ul>;
       </section>;
@@ -137,6 +169,7 @@ function TechRadar() {const langs = Object.keys (github)return (<div className="
                 <a href={it.url} target="_blank" rel="noreferrer" className="font - medium text - blue - 600 dark:text-cyan-400">{it.name}</a>;
                 {it.description && <div className="text - sm text - gray - 600 dark:text-gray-300">{it.description}</div>}
               </li>))}
+<<<<<<< HEAD
           </ul>;
         </section>))}
     </div>)</div>;
@@ -174,3 +207,32 @@ function TechRadar() {const langs = Object.keys (github)return (<div className="
     </div>
   )
 }
+=======
+
+          </ul>
+        </section>))}
+
+    </div>)
+    </div>
+);
+}
+<<<<<<< HEAD
+
+"
+=======
+}
+}
+return (<div className="space-y-8" > <header className="space-y-2" > <h1 className="text-3xl font-bold" >Tech Radar</h1> <p className="text-gray-600 dark:text-gray-300" >Trending packages and projects across ecosystems.</p> </header> <section>) 
+}</li>) ) 
+}</ul> </section> <section> </li>) ) 
+}</ul> </section> {
+  langs.map ( (lang) => (<section key= {
+  lang 
+}> </li>) ) 
+}</ul> </section>) ) 
+}</div>) 
+}
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-43ef
+=======
+>>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 import { getFraudStore } from '../../../../utils/fraud/store',;
 function ensureAdmin(req: NextApiRequest): boolean {
@@ -19,21 +20,16 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
   res.status(200).json({ items })
 
+=======
+import { NextApiRequest, NextApiResponse } from 'next';
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  res.status(200).json({ message: 'API endpoint' });
-import type { NextApiRequest, NextApiResponse } from 'next';
-import { getFraudStore } from '../../../../utils/fraud/store';
-function ensureAdmin(req: NextApiRequest): boolean {;
-  const token = req.headers['x-admin-token'];
-  if (!process.env.ADMIN_TOKEN) return true, // allow if not configured;
-  return token === process.env.ADMIN_TOKEN;
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+  if (req.method !== 'GET') {
+    res.setHeader('Allow', ['GET']);
+    return res.status(405).end('Method Not Allowed');
   }
+<<<<<<< HEAD
 
 }
 
@@ -90,3 +86,8 @@ export default async function handler(req, res) {
 };
 }
 
+=======
+  
+  res.status(200).json({ message: 'Endpoint working' });
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75

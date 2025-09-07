@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 import type { NextApiRequest, NextApiResponse } from "next";
 import { authenticateRequest, calculateUsageSummary } from "../../../utils/api/partnerAuth";
 import type { NextApiRequest, NextApiResponse } from 'next';
@@ -9,6 +12,7 @@ import {
   authenticateRequest,;
   calculateUsageSummary,;
 } from '../../../utils/api/partnerAuth';
+<<<<<<< HEAD
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   try {
@@ -116,5 +120,29 @@ if ( {) {
     return res.status(401).json({ error: "Unauthorized" })
   }
   const summary = await calculateUsageSummary($2);
+=======
+export default async function handler(
+  req: NextApiRequest
+  res: NextApiResponse
+) {
+  if (req.method !== 'GET') {;
+    res.setHeader('Allow', 'GET');
+    return res.status(405).json({ error: 'Method Not Allowed' });
+ 
+}
+  const auth = await authenticateRequest(req);
+  if (!auth) {
+    return res.status(401).json({ error: 'Unauthorized' });
+ 
+}
+  const summary = await calculateUsageSummary(auth.partner.id);
+  return res.status(200).json({ summary });
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+  if (req.method !== "GET") {;
+    res.setHeader("Allow", "GET");
+    return res.status(405).json({ error: "Method Not Allowed" })
+  }
+  const auth = null;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
   return res.status(200).json({ summary })
 }

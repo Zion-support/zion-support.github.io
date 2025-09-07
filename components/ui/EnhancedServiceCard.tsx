@@ -1,3 +1,12 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+
+=======
+>>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 import React from 'react';
 import { motion } from 'framer-motion';
   }
@@ -208,6 +217,7 @@ const EnhancedServiceCard: React.FC<EnhancedServiceCardProps> = ({ service }) =>
             POPULAR
           </motion.div>
         </div>
+<<<<<<< HEAD
       {/* Popular Badge */}
 
 
@@ -239,6 +249,27 @@ const EnhancedServiceCard: React.FC<EnhancedServiceCardProps> = ({ service }) =>
             animate="visible"
             whileHover="hover"
           >
+=======
+      )}
+      {/* Card Content */}
+      <div className='relative p-6'>
+        <div className='flex items-start justify-between mb-4'>
+          <motion.div;`
+            className={`text-4xl ${service.textColor}`}
+            variants={iconVariants}
+            initial='hidden'
+            animate='visible'
+      <div className=\"relative p-6\"    />
+        {/* Header */}"
+        <div className=\"flex items-start justify-between mb-4\"    />
+          <motion.div
+            className={`text-4xl ${service.textColor}`}
+            variants={iconVariants}"
+            initial=\'hidden\';"
+            animate=\'visible\';"
+            whileHover=\"hover\"    />
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
             {service.icon}
           </motion.div>;
           <div className="text-right">;
@@ -471,14 +502,45 @@ const EnhancedServiceCard: React.FC<EnhancedServiceCardProps> = ({ service }) =>
           </div>
         </div>
         {/* Trial & Setup Info */}
+<<<<<<< HEAD
           <div className="flex items-center gap-2 text-gray-400">
             <Clock className="w-4 h-4" />
+=======
+<div className='flex items-center justify-between mb-6 text-sm'    />
+          <div className='flex items-center gap-2 text-gray-400'    />
+            <Clock className='w-4 h-4'    />
+            {service.trialDays} day trial
+          </div>
+          <div className='flex items-center gap-2 text-gray-400'    />
+            <Shield className='w-4 h-4'    />
+            {service.setupTime}
+          </div>
+        </div>
+
+          </div>
+        </div>
+        {/* Trial & Setup Info */}"
+          <div className=\"flex items-center gap-2 text-gray-400\"    />;"
+            <Clock className=\"w-4 h-4\"    />
+            {service.trialDays} day trial
+          </div>;"
+          <div className=\"flex items-center gap-2 text-gray-400\"    />;"
+            <Shield className=\"w-4 h-4\"    />
+            <span className='text-xs text-yellow-400'    />{service.roi}</span>
+          </div>
+        </div>
+        {/* Trial & Setup Info */}
+<div className='flex items-center justify-between mb-6 text-sm'    />
+          <div className='flex items-center gap-2 text-gray-400'    />
+            <Clock className='w-4 h-4'    />
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
             {service.trialDays} day trial
           </div>
           <div className="flex items-center gap-2 text-gray-400">
             <Shield className="w-4 h-4" />
           </div>
         </div>
+<<<<<<< HEAD
               >;
 <div className='w-1.5 h-1.5 bg-cyan-400 rounded-full' />;
                 {feature}
@@ -585,6 +647,9 @@ const EnhancedServiceCard: React.FC<EnhancedServiceCardProps> = ({ service }) =>
           </div>;
         </div>;{/* Action Buttons */}{service.setupTime}</div>;
         </div>;
+=======
+        {/* Action Buttons */}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
         <div className='flex gap-3'>
 
 
@@ -628,6 +693,7 @@ const EnhancedServiceCard: React.FC<EnhancedServiceCardProps> = ({ service }) =>
           </div>
         </div>
       </div>
+<<<<<<< HEAD
 <div className='mt-4 pt-4 border-t border-white/10'>;
           <div className='text-xs text-gray-500 text-center'>;
             Contact: {service.contactInfo.email}</div>;
@@ -652,6 +718,8 @@ const EnhancedServiceCard: React.FC<EnhancedServiceCardProps> = ({ service }) =>
           </div>;
         </div>;
       </div>;
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
       {/* Hover Effect Border */}
 }
 };
@@ -660,6 +728,7 @@ export default EnhancedServiceCard;    </motion.div>
   )
 }
 export default EnhancedServiceCard;
+<<<<<<< HEAD
 
 };
 export default EnhancedServiceCard;
@@ -924,3 +993,41 @@ export default EnhancedServiceCard;
                 animate={{ opacity: 1, x: 0}}
                 transition = $2;
 export default EnhancedServiceCard,
+=======
+<<<<<<< HEAD
+
+"
+=======
+}
+}
+}
+}
+return (<motion.div > {
+  /* Background Glow */ 
+}<div className= {
+  `absolute inset-0 bg-gradient-to-br $ {
+  service.color 
+}opacity-0 group-hover:opacity-10 transition-opacity duration-500` 
+}style= {
+  {
+  background: `linear-gradient (135deg, $ {
+  service.color.replace ('from-', '') .replace ('to-', '') .split (' ') .map (c => `var (--tw-$ {
+  c.split ('-') [0] 
+}-$ {
+  c.split ('-') [1] 
+}) `) .join (', ') 
+}) ` 
+}
+}/> > <Star className="w-3 h-3 fill-current" /> POPULAR </motion.div> </div>) 
+}> {
+  service.icon 
+}</motion.div> + {
+  service.features.length - 3 
+}more features </div>) 
+}</div> </div> > <ExternalLink className="w-4 h-4" /> Learn More </motion.a> <motion.a > <ArrowRight className="w-4 h-4" /> </motion.a> </div> </div> </div> </div> 
+}
+export default EnhancedServiceCard
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-43ef
+=======
+>>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75

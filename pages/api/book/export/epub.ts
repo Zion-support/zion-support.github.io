@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <<<<<<< HEAD:pages_backup/api/book/export/epub.ts
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { randomUUID } from '[^']*';
@@ -31,22 +32,38 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
   },;
 };
+=======
+import { NextApiRequest, NextApiResponse } from 'next';
 
-function escapeHtml(s: string): string {
-  return s
-    .replace(/&/g, "&amp;")
-    .replace(/</g, "&lt;")
-    .replace(/>/g, "&gt;")
-    .replace(/"/g, "&quot;")
-    .replace(/'/g, "&#039;");
+export const config = {
+  api: {
+    bodyParser: {
+      sizeLimit: '10mb'
+    }
+  }
+};
+
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+  try {
+    if (req.method !== 'POST') {
+      res.setHeader('Allow', ['POST']);
+      return res.status(405).end('Method Not Allowed');
+    }
+    
+    res.status(200).json({ epub: 'generated' });
+  } catch (e: any) {
+    res.status(500).json({
+      error: e?.message || 'Failed to build EPUB'
+    });
+  }
 }
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
+
 function chapterToHtml(text: string): string {
-  if (!text) return "";
-  return text
-    .split(/\n\n+/)
-    .map((p) => `<p>${escapeHtml(p)}</p>`)
-    .join("\n");
+  if (!text) return '';
+  return text.split(/\n\n+/).map((p) => `<p>${escapeHtml(p)}</p>`).join('\n');
 }
+<<<<<<< HEAD
 export default async function handler(
   req: NextApiRequest
   res: NextApiResponse
@@ -251,3 +268,9 @@ function escape_html (string: string): string {
       "Content - Disposition"
       'attachment; filename="zion - os - book.epub"'
     );
+=======
+
+function escapeHtml(s: string): string {
+  return s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;').replace(/'/g, '&#039;');
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75

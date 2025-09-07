@@ -1,3 +1,6 @@
+<<<<<<< HEAD
+<Head> <title>Partners | Zion Tech Group</title> <meta name="description" content="Technology and go-to-market partners powering our customer outcomes." /> <link rel="canonical" href="https://ziontechgroup.com/partners" /> </Head> </ul> <div className="pt-4 text-slate-300" >Partner with us: <a className="text-cyan-400" href="mailto:kleber@ziontechgroup.com" >kleber@ziontechgroup.com</a></div> </div> </div>
+=======
 import React from 'react';
         <meta;
           name='description';
@@ -51,6 +54,7 @@ export default function PartnersPage() {
         </ul>;
         <div className='pt - 4 text - slate - 300'>;
           Partner with us:{' '}
+<<<<<<< HEAD
           <a className='text - cyan - 400' href='mailto:kleber@ziontechgroup.com'>;
             kleber@ziontechgroup.com;
           </a>;
@@ -107,3 +111,13 @@ export default function PartnersPage() {
 		</div>
 	)
 }
+=======
+          <a className='text-cyan-400' href='mailto:kleber@ziontechgroup.com'>
+            kleber@ziontechgroup.com
+          </a>
+        </div>
+      </div>
+    </div>
+  );	return (
+>>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75

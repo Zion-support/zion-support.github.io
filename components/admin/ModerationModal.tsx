@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 export type ModerationModalProps = {
   flag: any | null;
@@ -19,6 +20,12 @@ class ErrorBoundary extends React.Component {
     return this.props.children;
   }
 }
+=======
+<<<<<<< HEAD
+</div> <div className="p-4 space-y-4 text-sm" > <div className="grid grid-cols-2 gap-4" > <div> </div> </div> </div>) 
+}
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 import React, { useState } from 'react';
 
 
@@ -558,6 +565,7 @@ export default function ModerationModal({
     </div>
 );
 }
+<<<<<<< HEAD
 }
 origin/cursor/automate-test-improve-and-merge-code-2533
 
@@ -567,3 +575,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 }
 
+=======
+>>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75

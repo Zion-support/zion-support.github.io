@@ -1,3 +1,12 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+
+=======
+>>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 import React, { useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
 const UltraFuturisticBackground2040: React.FC = $2;
@@ -342,6 +351,7 @@ canvas.height = window.innerHeight;
       
       {/* Floating Elements */}
       <div className="absolute inset-0">
+<<<<<<< HEAD
         {/* Animated Grid Pattern */}
         <div className="absolute inset-0 opacity-20">
           <div className="absolute top-0 left-0 w-full h-full" style={{
@@ -429,6 +439,21 @@ canvas.height = window.innerHeight;
             animation: 'grid_move 20s linear infinite';
           }} />;
         </div>;
+=======
+        {/* Animated Grid Pattern */}"
+        <div className="absolute inset-0 opacity-20">;"
+          <divclassName="absolute top-0 left-0 w-full h-full" style={{}`
+            backgroundImage: `'
+            ease: 'linear',  }, [])
+            background_image: `
+              linear - gradient (rgba (6, 182, 212, 0.1) 1px, transparent 1px)
+              linear - gradient (90deg, rgba (6, 182, 212, 0.1) 1px, transparent 1px);`
+            `;'
+            background_size: '50px 50px','
+            animation: 'grid_move 20s linear infinite'
+          }} />
+        </div>
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
         {/* Floating Geometric Elements */}
         <motion.div;
           className="absolute top - 20 left - 20 w - 32 h - 32 border border - cyan-400 / 20 rounded-lg";
@@ -883,6 +908,7 @@ canvas.height = window.innerHeight;
       `}</style>;
     </div>)}  )}export default UltraFuturisticBackground2040;
 export default UltraFuturisticBackground2040;
+<<<<<<< HEAD
 export default UltraFuturisticBackground2040;50% {opacity: 0.5;
           }
         }
@@ -914,3 +940,52 @@ export default UltraFuturisticBackground2040;
 },
 
 export default UltraFuturisticBackground2040,
+=======
+<<<<<<< HEAD
+
+=======
+canvas.width = window.innerWidth
+canvas.height = window.innerHeight
+// Wrap around edges if (particle.x < 0) particle.x = canvas.width
+if (particle.x > canvas.width) particle.x = 0
+if (particle.y < 0) particle.y = canvas.height
+if (particle.y > canvas.height) particle.y = 0
+// Draw particle with glow effect ctx.save ()
+ctx.globalAlpha = particle.opacity
+// Glow effect ctx.shadowColor = particle.color
+ctx.shadowBlur = 10
+// Draw connecting lines between nearby particles ctx.strokeStyle = 'rgba (6, 182, 212, 0.1) '
+ctx.lineWidth = 0.5
+}
+}// Draw animated grid ctx.strokeStyle = 'rgba (6, 182, 212, 0.05) '
+ctx.lineWidth = 0.5
+ctx.restore () 
+})
+// Draw energy waves 
+}ctx.stroke () 
+}animationFrameId = requestAnimationFrame (animate) 
+}
+animate ()
+window.addEventListener ('resize', handleResize)
+backgroundImage: ` linear-gradient (rgba (6, 182, 212, 0.1) 1px, transparent 1px), linear-gradient (90deg, rgba (6, 182, 212, 0.1) 1px, transparent 1px) `, backgroundSize: '50px 50px', animation: 'gridMove 20s linear infinite' 
+}
+}/> </div> {
+  /* Floating Geometric Elements */ 
+}<motion.div /> {
+  /* Additional Floating Elements */ 
+}<motion.div /> {
+  /* Particle Effects */ 
+}<motion.div /> </div> {
+  /* CSS Animations */ 
+}<style jsx> {
+  ` @keyframes gridMove {
+  0% {
+  
+}` 
+}</style> </div>) 
+}
+export default UltraFuturisticBackground2040
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-43ef
+=======
+>>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75

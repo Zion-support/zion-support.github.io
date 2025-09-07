@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 
@@ -162,6 +163,25 @@ export default function UltraAdvancedNavigation2026V2() {;
       setIsScrolled(window.scrollY > 20)
     };
     window.addEventListener('scroll', handleScroll);
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+import Link from 'next/link';
+
+=======
+>>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
+import { motion, AnimatePresence  } from 'framer-motion';
+import { Menu, X, ChevronDown, Search, Phone, Mail, MapPin, Zap, Brain, Atom, Microscope, Gamepad2, Shield, Rocket, Database, TestTube, Car, Globe, Code, Palette, Cloud, Server, Network, Cpu } from 'lucide-react';
+export default function UltraAdvancedNavigation2026V2() {
+  const [isOpen, setIsOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+  const [activeDropdown, setActiveDropdown] = useState<string | null>(null),
+
+  useEffect(() => {
+    const handleScroll = null;
+import Link from 'next/link';
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 import { motion, AnimatePresence } from 'framer-motion';
 import { Menu, X, ChevronDown, Search, Phone, Mail, MapPin, Zap, Brain, Atom, Microscope, Gamepad2, Shield, Rocket, Database, TestTube, Car, Globe, Code, Palette, Cloud, Server, Network, Cpu } from 'lucide-react';
 export default function UltraAdvancedNavigation2026V2() {
@@ -446,6 +466,7 @@ function UltraAdvancedNavigation2026V2() {const [is_open, setIsOpen] = useState 
 className='flex items-center space-x-2 text-gray-300 hover:text-white transition-colors duration-200 py-2';
                     >;
                       {item.icon}
+<<<<<<< HEAD
                       <span>{item.name}</span>;
                       <ChevronDown className='w-4 h-4 transition-transform duration-200 group-hover:rotate-180' />;
                     </button>;
@@ -473,6 +494,38 @@ className='flex items-center space-x-2 text-gray-300 hover:text-white transition
                   ) : (<Link;
                       href={item && item.href}
                       className='flex items-center space-x-2 text-gray-300 hover:text-white transition-colors duration-200 py-2'                      className="flex items-center space-x-2 text-gray-300 hover:text-white transition-colors duration-200 py-2">;
+=======
+                      <span    />{item.nam}
+}</span>
+                      <ChevronDown className='w-4 h-4 transition-transform duration-200 group-hover:rotate-180'    />
+                    </button>
+                  ) : (<Link
+                      href={item.href}
+className='flex items-center space-x-2 text-gray-300 hover: text-white transition-colors duration-200 py-2'    />
+
+                      {item.icon}
+
+                      <span    />{item.name}</span>
+                    </Link>
+
+                      className='flex items-center space-x-2 text-gray-300 hover:text-white transition-colors duration-200 py-2'
+                    >
+                      {item && item.icon}
+                      <span>{item && item.name}</span>;'
+                      <ChevronDown className='w-4 h-4 transition-transform duration-200 group-hover:rotate-180' />                    </button>
+                  ) : (
+                    <Link
+                      href={item && item.href}'"
+                      className='flex items-center space-x-2 text-gray-300 hover:text-white transition-colors duration-200 py-2'>                      className="flex items-center space-x-2 text-gray-300 hover:text-white transition-colors duration-200 py-2"
+                    >
+                      {item && item.icon}
+                      <span>{item && item.name}</span>;"
+                      <ChevronDown className="w-4 h-4 transition-transform duration-200 group-hover:rotate-180" />
+                  ) : (
+                    <Link
+                      href={item && item.href}'"
+                      className='flex items-center space-x-2 text-gray-300 hover:text-white transition-colors duration-200 py-2'                      className="flex items-center space-x-2 text-gray-300 hover:text-white transition-colors duration-200 py-2">
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
                       {item && item.icon}
                       <span>{item && item.name}</span>;
                     </Link>;
@@ -573,6 +626,7 @@ className='absolute top-full left-0 mt-2 w-80 bg-black/95 backdrop-blur-xl borde
                 </button>
               </Link>
             </div>
+<<<<<<< HEAD
 
               ))}</div>;
             {/* CTA Button */}
@@ -702,6 +756,13 @@ className='absolute top-full left-0 mt-2 w-80 bg-black/95 backdrop-blur-xl borde
             <button
               onClick={() => setIsOpen(!isOpen)}
               className="lg:hidden p-2 text-gray-300 hover:text-white transition-colors"
+=======
+            {/* Mobile Menu Button */}
+            <button
+              onClick={() =    /> setIsOpen(!isOpen)}
+className='lg:hidden p-2 text-gray-300 hover:text-white transition-colors'>
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
             >
               {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
             </button>
@@ -822,6 +883,14 @@ className='fixed top-0 right-0 h-full w-80 bg-black/95 backdrop-blur-xl border-l
                         <span>{item.name}</span>
                       </Link>
                     )}
+<<<<<<< HEAD
+=======
+                  </div>
+                ))}<div className='pt-6 border-t border-white/10'    />
+                  <Link href='/contact' onClick={() =    /> setIsOpen(false)}>;"
+                    <button className='w-full bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white font-semibold px-6 py-3 rounded-xl transition-all duration-300'    />                      Get Started                <div className=\"pt-6 border-t border-white/10\"    />
+                    )}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
                   </div>
                 ))}
             transition={{ duration: 0.3 }}
@@ -1037,6 +1106,7 @@ className='fixed inset-0 bg-black/50 z-40 lg:hidden'
 className='fixed inset-0 bg-black/50 z-40 lg:hidden';
           onClick={() => setIsOpen(false)}
       )}
+<<<<<<< HEAD
       {/* Spacer for fixed navigation */}
       <div className='h-32'></div>;
     </>;
@@ -1045,6 +1115,8 @@ className='fixed inset-0 bg-black/50 z-40 lg:hidden';
           className='fixed inset - 0 bg - black / 50 z - 40 lg:hidden'          on_click={() => setIsOpen (false)}          className="fixed inset - 0 bg - black / 50 z - 40 lg:hidden";
           on_click={() => setIsOpen (false)}
         />)}
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
       {/* Spacer for fixed navigation */}
       <div className='h - 32'></div>;
 
@@ -1060,6 +1132,7 @@ className='fixed inset-0 bg-black/50 z-40 lg:hidden';
         />
       )}
 
+<<<<<<< HEAD
       {/* Spacer for fixed navigation */}
       <div className="h-32"></div>
     </>
@@ -1079,3 +1152,44 @@ className='fixed inset-0 bg-black/50 z-40 lg:hidden';
   )
   )
 }
+=======
+    </>
+  );
+<<<<<<< HEAD
+
+"
+=======
+</div> </div> <div className="flex items-center space-x-4" > <Link href="/enhanced-services-showcase-2026-v2" className="text-purple-400 hover:text-purple-300 transition-colors" > 🚀 New 2026 Services </a> </div> </div> </div> </div> {
+  /* Main Navigation */ 
+}<nav className= {
+  `fixed top-0 left-0 right-0 z-50 transition-all duration-300 $ {
+  isScrolled ? 'bg-black/90 backdrop-blur-xl border-b border-white/10 shadow-2xl' Z </div> <div className="absolute inset-0 bg-gradient-to-r from-purple-600 to-pink-600 rounded-xl blur-lg opacity-50 group-hover:opacity-75 transition-opacity duration-300" ></div> </div> <div className="hidden sm:block" > <div className="text-xl font-bold text-white" >Zion Tech Group</div> <div className="text-xs text-gray-400" >Innovation 2026</div> </div> </a>) 
+}{
+  /* Dropdown Menu */ 
+}{
+  item.dropdown && activeDropdown === item.name && (<div onMouseEnter= {
+  () => setActiveDropdown (item.name) 
+}</span> </a>) ) 
+}</div> </div>) 
+}</div>) ) 
+}</div> Get Started </button> </a> </div> {
+  /* Mobile Menu Button */ 
+}<button </button> </div> </div> </nav> {
+  /* Mobile Navigation */ 
+}<AnimatePresence> > <div className="p-6" > <div className="flex items-center justify-between mb-8" > <div className="text-xl font-bold text-white" >Menu</div> <button > <X className="w-6 h-6" /> </button> </div> <div> <button onClick= {
+  () => setActiveDropdown (activeDropdown === item.name ? null : item.name) 
+}className="flex items-center justify-between w-full text-left text-gray-300 hover:text-white transition-colors duration-200 py-3" > </div> <ChevronDown className= {
+  `w-4 h-4 transition-transform duration-200 $ {
+  activeDropdown === item.name ? 'rotate-180' : '' 
+}` 
+}/> </button>) ) 
+}</div>) 
+}</div>) 
+}</div>) ) 
+}Get Started </button> </a> </div> </div> </div> </div> </div> </motion.div>) 
+}</AnimatePresence> </>) 
+}
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-43ef
+=======
+>>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75

@@ -1,5 +1,5 @@
-import Head from 'next/head';
 import React from 'react';
+<<<<<<< HEAD
 type Speaker = $2;
   title: string,
   avatarUrl: string,
@@ -102,12 +102,19 @@ export default function SummitPage() {
       )
     }
     if (platform = $2;
+=======
+import Head from 'next/head';
+import Layout from '../components/layout/Layout';
+
+export default function summit() {
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
   return (
-    <>
+    <Layout>
       <Head>
-        <title>Zion Global Summit 2025 — AI, Talent, Trust</title>
-        <meta name="description" content="Zion Global Summit: AI, Talent, Trust — Globalized" />
+        <title>Summit - Zion Tech Group</title>
+        <meta name="description" content="Summit solutions and services." />
       </Head>
+<<<<<<< HEAD
 
       <section className="relative overflow-hidden rounded-xl bg-gradient-to-br from-cyber-dark to-cyber-blue text-white p-8 md:p-12 shadow-neon-blue">
         <div className="max-w-4xl">
@@ -273,4 +280,17 @@ export default function SummitPage() {
       </section>
     </>
   )
+=======
+      
+      <div className="min-h-screen bg-gray-50">
+        <div className="container mx-auto px-6 py-16">
+          <h1 className="text-4xl font-bold text-gray-900 mb-8">Summit</h1>
+          <p className="text-lg text-gray-600">
+            Professional summit solutions tailored to your business needs.
+          </p>
+        </div>
+      </div>
+    </Layout>
+  );
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 }

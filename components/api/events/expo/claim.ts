@@ -7,6 +7,7 @@ export default async function handler(
   res: NextApiResponse
 ) {
   // In production: verify signature, mint or issue POAP
+<<<<<<< HEAD
   console.log(
     "[NFT Claim] address:"
     address
@@ -84,3 +85,5 @@ function handler() {
   console.log('[NFT Claim] address:', address, 'signature:', signature.slice(0, 18) + '…'),
   return res.status(200).json({ ok: true})
 }
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next';
 import type { KycDocumentMeta, KycProfile } from '../../../utils/kyc';
 import fs from 'fs';
@@ -83,3 +84,15 @@ function save() {
   fs.mkdir_sync (DATA_DIR, { recursive: true });
   fs.writeFileSync (FILE, JSON.stringify (db, null, 2));
 }
+=======
+import { NextApiRequest, NextApiResponse } from 'next';
+
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  if (req.method !== 'POST') {
+    res.setHeader('Allow', ['POST']);
+    return res.status(405).end('Method Not Allowed');
+  }
+  
+  res.status(200).json({ uploaded: true });
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75

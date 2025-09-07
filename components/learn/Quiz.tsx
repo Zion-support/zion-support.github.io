@@ -1,6 +1,16 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 
 ;
 
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 import React, { useState } from 'react';
 type Question = any;
   question: string;
@@ -26,6 +36,7 @@ export default function Quiz({ questions, onComplete }: Props) {
   const score = questions.reduce((acc, q) => acc + (answers[q.id] === q.answerIndex ? 1 : 0), 0),
 
   function submit() {
+<<<<<<< HEAD
 }export default function Quiz() {export default function Quiz() {const [answers, setAnswers] = useState<Record<string, number>>({})const [submitted, setSubmitted]  = useState(false)const score = questions.reduce((acc, q) => acc + (answers[q.id] === q.answerIndex ? 1 : 0),0;
   )function submit() {setSubmitted(true)onComplete(score)}
   return (<div className='space-y-4'>;
@@ -75,6 +86,13 @@ export default function Quiz({ questions, onComplete }: Props) {
 
 <div className='mt-2 text-sm'>
     <div className="space-y-4">
+=======
+    setSubmitted(true);
+    onComplete(score);
+  }
+  return (
+    <div className='space-y-4'>
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
       {questions.map((q, idx) => (
         <div key={q.id} className="border rounded p-3">
           <div className="font-medium">{idx + 1}. {q.question}</div>
@@ -132,9 +150,36 @@ export default function Quiz({ questions, onComplete }: Props) {
 
   )
         </div>
+<<<<<<< HEAD
       ))}
       <button onClick={submit} className="px-4 py-2 bg-blue-600 text-white rounded">Submit Quiz</button>
+=======
+        </div>
+      )}
+    </div>
+<<<<<<< HEAD
+  );
+
+"
+=======
+/> <span> {
+  opt 
+}</span> </label>) ) 
+}</div> {
+  answers[q.id] === q.answerIndex ? (<span className="text-green-600" >Correct</span>) : (<span className="text-red-600" >Incorrect</span>) 
+}</div>) 
+}</div>) ) 
+}</div>) 
+}
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-43ef
+=======
+  );      <button onClick={submit} className="px-4 py-2 bg-blue-600 text-white rounded">Submit Quiz</button>
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
       {submitted && <div className="text-sm">Score: {score} / {questions.length}</div>}
     </div>
   )
 }
+<<<<<<< HEAD
+=======
+>>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75

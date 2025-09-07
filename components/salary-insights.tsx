@@ -1,7 +1,29 @@
+<<<<<<< HEAD
 import {;
   LineChart,;
   BarChart,;
   DonutChart,;
+=======
+<<<<<<< HEAD
+</div> <div className="absolute -right-24 -top-24 h-72 w-72 rounded-full bg-white/10 blur-2xl" /> </div> <div className="grid grid-cols-2 gap-3 mt-3" > <div> <option>Junior</option> <option>Mid</option> <option>Senior</option> <option>Lead</option> </select> </div> <div> </select> </div> </div> Advanced filters are available when you sign in. </div>) 
+}</div> </div> </div>) : (<div className="h-40 animate-pulse bg-gray-100 dark:bg-gray-900 rounded" />) 
+}<thead> <tr className="text-left text-xs text-gray-500" > <th className="py-1" >Region</th> <th className="py-1" >Median (USD/hr) </th> </tr> </thead> <tbody> </tr>) ) 
+}</tbody> </table>) 
+}</div>) ) 
+}</div> </div>) : (<div className="h-40 animate-pulse bg-gray-100 dark:bg-gray-900 rounded" />) 
+}</div> </div>) ) 
+}</div> </div>) 
+}</div> </div> </div>) 
+}
+=======
+import React, { useEffect, useMemo, useState } from 'react';
+import { LineChart, BarChart, DonutChart } from '../components/salary/InsightCharts';
+type InsightResponse = any;
+import {
+  LineChart
+  BarChart
+  DonutChart;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 } from '../components/salary/InsightCharts';
 type InsightResponse = {;
   recommendedHourlyUsd: number;
@@ -942,3 +964,31 @@ if (return [] as { label: string, value: number }[], ) {
     </div>
   )
 }
+<<<<<<< HEAD
+=======
+          {data && (
+
+            </div>
+          )}
+'
+            <div className='rounded - lg border border - gray - 200 dark:border - gray - 800 p - 4'>;'
+              <h3 className='font - medium mb - 3'>Signals</h3>;'
+              <div className='flex gap - 2 flex - wrap'>;'
+                <span className='rounded - full bg - gray - 100 dark:bg - gray - 900 border border - gray - 200 dark:border - gray - 800 px - 3 py - 1 text - xs'>
+                  Range: ${data.minHourlyUsd;} - ${data.maxHourlyUsd} / hr
+                </span>
+                {data.tags.map (t => (
+                  <span
+                    key={t}'
+                    className='rounded - full bg - indigo - 50 dark:bg - indigo - 900 / 30 text - indigo - 700 dark:text - indigo - 300 border border - indigo - 200 dark:border - indigo - 800 px - 3 py - 1 text - xs'
+                  >
+              </div>
+            </div>)}
+        </div>
+      </div>
+    </div>)
+                  </span>
+
+          {data && (
+>>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75

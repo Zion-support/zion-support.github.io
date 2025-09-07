@@ -1,7 +1,27 @@
+<<<<<<< HEAD
 
   const router = useRouter();
   const { id } = router && router.query as { id: string };  const [item, setItem] = useState<GrantApplication | null>(null);export default function GrantDetailPage() {;
   const router = useRouter();
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+
+=======
+>>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
+import { useEffect, useState  } from 'react';
+import { useRouter  } from 'next/router';
+import EnhancedLayout from '../../components/layout/EnhancedLayout';
+import type { GrantApplication } from '../../types/grants';
+export default function GrantDetailPage() {
+export default function GrantDetailPage() {
+
+  const router = useRouter();
+  const { id } = router.query as { id: string };  const [item, setItem] = useState<GrantApplication | null>(null);export default function GrantDetailPage() {;
+  const router = useRouter();
+  const { id } = router.query as { id: string }
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
   const [item, setItem] = useState<GrantApplication | null>(null);
   const [loading, setLoading] = useState(true);
   const [updateContent, setUpdateContent] = useState('');
@@ -15,6 +35,7 @@
     if (!id || !updateContent.trim()) return;    fetch(`/api/grants/${id}`).then((r) => r.json()).then((d) => setItem(d.record)).finally(() => setLoading(false))
     if (!id || !updateContent.trim()) return;
 
+<<<<<<< HEAD
   }, [id]);
 
   const addUpdate = async () => {
@@ -23,6 +44,21 @@ const resp = await fetch(`/api/grants/${id}/updates`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ content: updateContent }),
+=======
+fetch(`/api/grants/${id}`)
+      .then(r => r.json())
+      .then(d => setItem(d.record))
+      .finally(() => setLoading(false));  }, [id]);
+  const addUpdate = async () => {
+    if (!id |!updateContent.trim()) return;    fetch(`/api/grants/${id}`).then((r) => r.json()).then((d) => setItem(d.record)).finally(() => setLoading(false))
+  }, [id]);
+  const addUpdate = async () => {
+    if (!id |!updateContent.trim()) return;
+    const resp = await fetch(`/api/grants/${id}/updates`, {
+      method: 'POST'
+      headers: { 'Content-Type': 'application/json' }
+      body: JSON.stringify({ content: updateContent })
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
     });
       const u = await resp.json();
       setItem(prev =>
@@ -258,6 +294,7 @@ export default function GrantDetailPage() {
     </EnhancedLayout>
   );
 }
+<<<<<<< HEAD
   );
 }
 origin/cursor/automate-test-improve-and-merge-code-2533
@@ -399,7 +436,24 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         </aside>;
       </div>;
     </EnhancedLayout>);
+=======
+}
+<<<<<<< HEAD
+
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 }
     </EnhancedLayout>)})}
   )
 }
+<<<<<<< HEAD
+=======
+if (loading) return <EnhancedLayout><div>Loading...</div></EnhancedLayout>
+if (!item) return <EnhancedLayout><div>Not found</div></EnhancedLayout>
+</ul> </div>) 
+}</section> </div> </div> </section> </div> </section> </aside> </div> </EnhancedLayout>) 
+}
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-43ef
+=======
+>>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75

@@ -2,17 +2,33 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs';
 import path from 'path';
 function ensureStorage() {
+<<<<<<< HEAD
   const dir = path && path.dirname(EPISODES_PATH);
   if (!fs && fs.existsSync(dir)) fs && fs.mkdirSync(dir, { recursive: true });
   if (!fs && fs.existsSync(EPISODES_PATH))
     fs && fs.writeFileSync(EPISODES_PATH, '[]', 'utf8');  if (!fs && fs.existsSync(EPISODES_PATH)) fs && fs.writeFileSync(EPISODES_PATH, '[]utf8')
+=======
+  const dir = path.dirname(EPISODES_PATH);
+  if (!fs.existsSync(dir)) fs.mkdirSync(dir, { recursive: true });
+  if (!fs.existsSync(EPISODES_PATH))
+    fs.writeFileSync(EPISODES_PATH, '[]', 'utf8');const EPISODES_PATH = path.join(process.cwd(), 'datapodcastepisodes.json');
+function ensureStorage() {
+  const dir = path.dirname(EPISODES_PATH);
+  if (!fs.existsSync(dir)) fs.mkdirSync(dir, { recursive: true });
+  if (!fs.existsSync(EPISODES_PATH))
+    fs.writeFileSync(EPISODES_PATH, '[]', 'utf8');  if (!fs.existsSync(EPISODES_PATH)) fs.writeFileSync(EPISODES_PATH, '[]utf8')
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 }
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
   ensureStorage();
   const { id } = req.query as { id?: string };
   const episodes = JSON.parse(fs.readFileSync(EPISODES_PATH, 'utf8')) as any[];
+<<<<<<< HEAD
 const episode = episodes.find(e => e.id === id);
+=======
+  const episode = episodes.find(e => e.id === id);
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
   if (!episode) return res.status(404).json({ error: 'Not found' });
 function ensureStorage() {const dir = path && path.dirname(EPISODES_PATH)if (!fs && fs.existsSync(dir)) fs && fs.mkdirSync(dir, { recursive: true })if (!fs && fs.existsSync(EPISODES_PATH))fs && fs.writeFileSync(EPISODES_PATH, '[]', 'utf8')if (!fs && fs.existsSync(EPISODES_PATH)) fs && fs.writeFileSync(EPISODES_PATH, '[]utf8')}const EPISODES_PATH = null;
 const EPISODES_PATH = path.join(process.cwd()'data';

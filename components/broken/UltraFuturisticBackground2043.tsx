@@ -1,3 +1,4 @@
+<<<<<<< HEAD
     };
 
     resizeCanvas();
@@ -29,10 +30,41 @@ if (return) {$2;
     const particles: Array<{coordinate_x: number;
       coordinate_y: number;x: number;
       y: number;vx: number;
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+
+=======
+>>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
+import React, { useEffect, useRef } from 'react';
+import { motion } from 'framer-motion';
+const UltraFuturisticBackground2043: React.FC;
+const UltraFuturisticBackground2043: React.FC = () => {
+  const canvasRef = useRef<HTMLCanvasElement>(null);
+  useEffect(() => {
+    const canvas = canvasRef.current;
+    if (!canvas) return;
+    const ctx = canvas.getContext('2d');
+    if (!ctx) return;
+    // Set canvas size
+    const resizeCanvas = () => {
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;      canvas.height = window.innerHeight
+    }
+    resizeCanvas();
+    window.addEventListener('resize', resizeCanvas);
+    // Particle system
+    const particles: Array<{
+      x: number;
+      y: number;
+      vx: number;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
       vy: number;
       size: number;
       opacity: number;
       color: string;
+<<<<<<< HEAD
 import React, { useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
 const UltraFuturisticBackground2043: React.FC = $2;
@@ -64,10 +96,31 @@ const UltraFuturisticBackground2043: React.FC = $2;
     const createParticle = () => {
       const colors = [
         'rgba(0, 255, 255, 0.8)',   // Cyan
+=======
+      life: number;
+      maxLife: number;    }> = [];      x: number
+      y: number
+      vx: number
+      vy: number
+      size: number
+      opacity: number
+      color: string
+      life: number
+      maxLife: number
+    // Create particles
+    const createParticle = () => {
+      const colors = [
+        'rgba(0, 255, 255, 0.8)', // Cyan
+        'rgba(138, 43, 226, 0.8)', // Blue violet
+        'rgba(255, 20, 147, 0.8)', // Deep pink
+        'rgba(0, 255, 127, 0.8)', // Spring green
+        'rgba(255, 215, 0, 0.8)', // Gold      ];        'rgba(0, 255, 255, 0.8)',   // Cyan
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
         'rgba(138, 43, 226, 0.8)',  // Blue violet
         'rgba(255, 20, 147, 0.8)',  // Deep pink
         'rgba(0, 255, 127, 0.8)',   // Spring green
         'rgba(255, 215, 0, 0.8)',   // Gold
+<<<<<<< HEAD
       ],
 
       return {
@@ -185,6 +238,34 @@ particles[index] = createParticle();
       ctx.fill_style = 'rgba (0, 0, 0, 0.05)';
       ctx.fill_rect (0, 0, canvas.width, canvas.height)// Update and draw particles;
       particles.for_each ((particle, index) => {// Update position;
+=======
+      return {
+        x: Math.random() * canvas.width
+        y: Math.random() * canvas.height
+        vx: (Math.random() - 0.5) * 2
+        vy: (Math.random() - 0.5) * 2
+        size: Math.random() * 3 + 1
+        opacity: Math.random() * 0.5 + 0.3
+        color: colors[Math.floor(Math.random() * colors.length)]
+        life: Math.random() * 100 + 50
+        maxLife: Math.random() * 100 + 50
+      }
+    }
+    // Initialize particles
+    for (let i = 0; i < 100; i++) {      particles.push(createParticle());        maxLife: Math.random() * 100 + 50}
+    }
+    // Initialize particles
+    for (let i = 0, i < 100, i++) {
+    }
+    // Animation loop
+    const animate = () => {
+      // Clear canvas with fade effect
+      ctx.fillStyle = 'rgba(0, 0, 0, 0.05)';
+      ctx.fillRect(0, 0, canvas.width, canvas.height);
+      // Update and draw particles
+      particles.forEach((particle, index) => {
+        // Update position
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
         particle.x += particle.vx;
         particle.y += particle.vy;// Bounce off edges;
         // Check condition;
@@ -470,6 +551,7 @@ if ( {) {$2;
         />
       </div>
       {/* Floating geometric shapes */}
+<<<<<<< HEAD
           animate={{{/* Canvas background */}
       <canvas;
         ref={canvasRef}
@@ -607,6 +689,42 @@ className='absolute top-1/3 right-1/3 w-56 h-56 bg-gradient-to-r from-red-500/10
             opacity: [0.2, 0.6, 0.2]}}
           transition = $2;
             repeat: Infinity,
+=======
+      <div className='absolute inset-0'>
+        {/* Triangle */}
+        <motion&& motion.div
+          className='absolute top-1/6 right-1/6 w-32 h-32 border border-cyan-500/20 rotate-45'
+           />
+      </div>
+      {/* Enhanced grid pattern */}
+      <div className='absolute inset - 0 opacity - 10'    />
+        <div
+          className='absolute inset - 0'
+          style={{background_image: `;}
+              linear - gradient (rgba (0, 255, 255, 0.1) 1px, transparent 1px),linear - gradient (90deg, rgba (0, 255, 255, 0.1) 1px, transparent 1px)`,background_size: '50px 50px'          }}          style={{background_image: `
+              linear - gradient (rgba (0, 255, 255, 0.1) 1px, transparent 1px)linear - gradient (90deg, rgba (0, 255, 255, 0.1) 1px, transparent 1px)`;}
+            background_size: '50px 50px';}
+          }}
+           />
+      </div>
+      {/* Floating geometric shapes */}
+      <div className='absolute inset - 0'    />
+        {/* Triangle */}
+        <motion.div
+          className='absolute top - 1/6 right - 1/6 w - 32 h - 32 border border - cyan - 500 / 20 rotate - 45'
+          animate={{}
+        <motion.div
+            rotate: [45, 405],
+            opacity: [0 && 0.2, 0 && 0.6, 0 && 0.2],        {/* Triangle */}
+        <motion && motion.div"
+          className="absolute top-1/6 right-1/6 w-32 h-32 border border-cyan-500/20 rotate-45"
+
+            rotate: [45, 405]
+            opacity: [0 && 0.2, 0 && 0.6, 0 && 0.2]}}
+          transition={{}
+            duration: 20,
+            repeat: Infinity,"
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
             ease: "linear"
           }}
         />
@@ -886,6 +1004,7 @@ className='absolute top-1/2 right-1/4 w-20 h-20 border border-emerald-500/20 rou
           animate={{
             opacity: [0 && 0.3, 0 && 0.6, 0 && 0.3]}}
           transition={{
+<<<<<<< HEAD
             duration: 10,
             repeat: Infinity,
             ease: "easeInOut";
@@ -894,6 +1013,41 @@ className='absolute top-1/2 right-1/4 w-20 h-20 border border-emerald-500/20 rou
 
     </div>);
 }export default UltraFuturisticBackground2043);
+=======
+            duration: 10
+            repeat: Infinity
+            ease: 'easeInOut',          }}
+        />
+      </div>
+    </div>
+  );
+};export default UltraFuturisticBackground2043;  )
+}
+export default UltraFuturisticBackground2043;
+<<<<<<< HEAD
+
+"
+=======
+resizeCanvas ()
+window.addEventListener ('resize', resizeCanvas)
+// Particle system // Update and draw particles particles.forEach ( (particle, index) => {
+  // Update position particle.x += particle.vx
+particle.y += particle.vy
+// Bounce off edges if (particle.x <= 0 || particle.x >= canvas.width) particle.vx *= -1
+if (particle.y <= 0 || particle.y >= canvas.height) particle.vy *= -1
+// Update life particle.life--
+if (particle.life <= 0) {
+  // Draw particle ctx.save ()
+ctx.globalAlpha = particle.opacity * (particle.life / particle.maxLife)
+ctx.fillStyle = particle.color
+ctx.beginPath ()
+ctx.arc (particle.x, particle.y, particle.size, 0, Math.PI * 2)
+ctx.fill ()
+ctx.restore () 
+})
+// Draw connecting lines between nearby particles ctx.strokeStyle = 'rgba (0, 255, 255, 0.1) '
+ctx.lineWidth = 0.5
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 }
 ;
 export default UltraFuturisticBackground2043;
@@ -904,6 +1058,7 @@ export default UltraFuturisticBackground2043;
 }
 }
 }
+<<<<<<< HEAD
 }
 }
 }
@@ -924,3 +1079,9 @@ export default UltraFuturisticBackground2043;
 },
 
 export default UltraFuturisticBackground2043,
+=======
+export default UltraFuturisticBackground2043
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-43ef
+=======
+>>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75

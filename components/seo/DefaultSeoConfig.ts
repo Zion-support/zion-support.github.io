@@ -4,6 +4,7 @@
 ;
 import type { DefaultSeoProps } from 'next-seo';
   defaultTitle: 'Zion Tech Solutions';
+<<<<<<< HEAD
   titleTemplate: '%s | Zion Tech Solutions';
   description: 'Engineering services, AI/ML, DevOps, and product development by Zion.';
   openGraph: {type: 'website';
@@ -27,10 +28,35 @@ export default config;import type { DefaultSeoProps } from 'next - seo';
 
 
 
+=======
+  titleTemplate: '%s | Zion Tech Solutions'
+  description: 'Engineering services, AI/ML, DevOps, and product development by Zion.'
+  openGraph: {
+    type: 'website'
+    locale: 'en_US'
+    url: 'https://ziontechgroup.netlify.app'
+    siteName: 'Zion Tech Solutions'}
+  twitter: {
+    handle: '@ziontech'
+    site: '@ziontech'
+    cardType: 'summary_large_image'}
+const config: DefaultSeoProps = {
+  defaultTitle: 'Zion Tech Solutions', titleTemplate: '%s | Zion Tech Solutions',
+  description: 'Engineering services, AI/ML, DevOps, and product development by Zion.',
+    openGraph: {
+    type: 'website', locale: 'en_US',
+    url: 'https://ziontechgroup.netlify.app',
+    siteName: 'Zion Tech Solutions'
+    },
+    twitter: {
+    handle: '@ziontech', site: '@ziontech',
+    cardType: 'summary_large_image'}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
   additionalMetaTags: [
 { name: 'viewport', content: 'width=device-width, initial-scale=1' }
     { name: 'theme-color', content: '#111827' }]}
 export default config;
+<<<<<<< HEAD
 
 
 
@@ -82,3 +108,5 @@ import type { DefaultSeoProps } from 'next-seo';
 const config: DefaultSeoProps;
 export default config;
 
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75

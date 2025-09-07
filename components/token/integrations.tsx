@@ -1,7 +1,24 @@
+<<<<<<< HEAD
 
 import dynamic from 'next/dynamic',
 import dynamic from 'next/dynamic';
 import React, { useEffect, useState } from 'react';
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+
+import dynamic from 'next/dynamic';,
+import React, { useEffect, useState } from 'react';
+=======
+>>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
+import { useWallet  } from '../../hooks/useWallet';
+import { fetchDepinActivities, calculateRewards, DepinReward  } from '../../utils/depins';
+import { CHAINS } from '../../utils/chains';
+const ClientOnlyBridge = null;
+import React, { useEffect, useState } from 'react';
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 import { useWallet } from '../../hooks/useWallet';
 
 } from '../../utils/depins';
@@ -250,6 +267,7 @@ const ClientOnlyBridge = dynamic(() => import('../../components/ui/BridgeForm'),
     </div>
   )
 }
+<<<<<<< HEAD
     </div>)</section>;
 <section className='space-y-2 text-xs text-gray-500'>;
         <div>Security</div>;
@@ -264,3 +282,20 @@ const ClientOnlyBridge = dynamic(() => import('../../components/ui/BridgeForm'),
     </div>);
 }
   )}
+=======
+<<<<<<< HEAD
+
+"
+=======
+</section> <section className="space-y-4" > <ClientOnlyBridge /> </section> </div>) ) 
+}</div>) 
+}</section> <div> <span className="text-gray-500" >Recommendation:</span> <b> {
+  suggestion.recommendation?.chain?.name 
+}</b> </div>) 
+}</div>) 
+}</section> <section className="space-y-2 text-xs text-gray-500" > <div>Security</div> <ul className="list-disc ml-5 space-y-1" > <li>Onchain tx logs (client + API echo) </li> <li>Rate limits (client + API token bucket) </li> <li>Burn-and-mint model via LayerZero OFT (requires token addresses configured) </li> </ul> </section> </div>) 
+}
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-43ef
+=======
+>>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75

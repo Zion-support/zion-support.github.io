@@ -1,7 +1,20 @@
+<<<<<<< HEAD
 
   enableNeonEffects = true,enableSpaceTime = true;import React, { useEffect, useRef } from 'react';
 import { motion  } from 'framer-motion';
 interface UltraFuturisticBackground2035Props  {children: React.ReactNode;
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+
+=======
+>>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
+import React, { useEffect, useRef } from 'react';
+import { motion } from 'framer-motion';
+interface UltraFuturisticBackground2035Props {
+  children: React.ReactNode;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
   intensity?: 'low' | 'medium' | 'high';
     | 'space-time';
   colorScheme?: 'quantum-fusion' | 'neon-cyber' | 'holographic-matrix' | 'space-time';
@@ -548,11 +561,28 @@ const alpha  = 1 - i / 20;ctx.globalAlpha = alpha * 0.5;
         />
         
         {/* Holographic scan lines */}
+<<<<<<< HEAD
         <div className="absolute inset-0 opacity-20">
           {[...Array(20)].map((_, i) => (
             <motion.div
               key = $2;
                 color: colors.primary
+=======
+        <div className=\"absolute inset-0 opacity-20\"    />
+          {[...Array(20)].map((_, i) => (<motion&& motion.div;}
+                opacity: [0, 1, 0],scale_x: [0, 1, 0]              }}          }}
+           />
+        {/* Holographic scan lines */}"
+        <div className=\"absolute inset - 0 opacity - 20\"    />
+          {[...Array (20)].map ((_, i) => (<motion.div;}
+              key={i}"
+              className=\'absolute w - full h - px bg - gradient - to - r from - transparent via - current to - transparent\'
+              style={{}}
+              animate={{opacity: [0, 1, 0]
+                scaleX: [0, 1, 0];}
+                top: `${(i / 20) * 10}
+}%`,color: colors.primary
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
               }}
               animate={{
                 opacity: [0, 1, 0]
@@ -579,6 +609,7 @@ const alpha  = 1 - i / 20;ctx.globalAlpha = alpha * 0.5;
             />;export default UltraFuturisticBackground2035;
                 ease: "easeInOut"
 
+<<<<<<< HEAD
               }}
             />;
 
@@ -608,3 +639,63 @@ export default UltraFuturisticBackground2035;
 export default UltraFuturisticBackground2035;
 )}export default UltraFuturisticBackground2035;
 export default UltraFuturisticBackground2035,
+=======
+<<<<<<< HEAD
+            />}
+}
+          ))}
+
+        </div>
+      </div>
+    </div>
+)
+};
+
+export default UltraFuturisticBackground2035;
+
+"
+=======
+const getColorScheme = () => {
+  switch (colorScheme) {
+  case 'quantum-fusion': return {
+  
+}
+}
+resizeCanvas ()
+window.addEventListener ('resize', resizeCanvas)
+//Initialize particles 
+}
+}
+initParticles ()
+//Animation loop //Update and draw particles particlesRef.current.forEach ( (particle, index) => {
+  //Update position particle.x += particle.vx
+particle.y += particle.vy
+//Bounce off edges if (particle.x <= 0 || particle.x >= canvas.width) particle.vx *= -1
+if (particle.y <= 0 || particle.y >= canvas.height) particle.vy *= -1
+//Update life particle.life--
+//Regenerate particle if it dies if (particle.life <= 0) {
+  animationRef.current = requestAnimationFrame (animate) 
+}
+animate ()
+ctx.strokeStyle = colors.primary
+ctx.lineWidth = 0.5
+ctx.globalAlpha = 0.3
+return (<div className="fixed inset-0 -z-10 overflow-hidden" > <canvas background: [ `radial-gradient (circle at 20% 20%, $ {
+  colors.glow 
+}0%, transparent 50%) `
+`radial-gradient (circle at 80% 80%, $ {
+  colors.glow 
+}0%, transparent 50%) `
+`radial-gradient (circle at 20% 20%, $ {
+  colors.glow 
+}0%, transparent 50%) ` ] 
+}
+}/>) ) 
+}</div> </div> </div>) 
+}
+export default UltraFuturisticBackground2035
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-43ef
+=======
+              }}
+>>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75

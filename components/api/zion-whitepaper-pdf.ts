@@ -16,6 +16,7 @@ function writeSection(doc: PDFDocument, title: string, content: string) {
 
 } from '../../utils/whitepaper/zionWhitepaper';import { getWhitepaperSections, OPERATOR_PROMPT } from '../../utils/whitepaper/zionWhitepaper';
 function writeSection(doc: PDFDocument, title: string, content: string) {
+<<<<<<< HEAD
 
   doc && doc.addPage(),
   doc && doc.fontSize(20).fillColor('#111111').text(title, { underline: true });
@@ -42,13 +43,37 @@ function write_section() {
 ) {;
   const editionParam = (req.query.edition as string) || 'full';
 
+=======
+  doc.addPage()
+  doc.fontSize(20).fillColor('#111111').text(title, { underline: true });
+  doc.moveDown();
+  doc.fontSize(11).fillColor('#222222').text(content, {
+    width: 480
+    align: 'left'
+  });
+
+export default async function handler(
+  req: NextApiRequest,
+  res: NextApiResponse
+) {
+  const editionParam = (req.query.edition as string) |'full';
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
   const edition =
     editionParam === 'investor' |editionParam === 'developer'
       ? editionParam
       : 'full';
+<<<<<<< HEAD
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {;
   const editionParam = (req.query.edition as string) || 'full';
   const edition = editionParam === 'investor' || editionParam === 'developer' ? editionParam : 'full';
+=======
+  res.setHeader('Content-Type', 'application/pdf');
+  res.setHeader(
+    'Content-Disposition'
+    `attachment; filename="zion-protocol-${edition}.pdf"`
+  );
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 
   const editionParam = (req.query.edition as string) |'full';
   const edition = editionParam === 'investor' |editionParam === 'developer' ? editionParam : 'full';

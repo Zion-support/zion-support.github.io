@@ -2,6 +2,11 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 import { readOrgData, filterOrgData } from '../../../utils/org-data';
 import type { OrgFilters, RoleType } from '../../../types/org';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
+<<<<<<< HEAD
+=======
+  if (req.method !== 'GET') {;
+    return res.status(405).json({ error: 'Method not allowed' });  }export default function handler(req: NextApiRequest, res: NextApiResponse) {
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
   if (req.method !== 'GET') {
     return res.status(405).json({ error: 'Method not allowed' })
   }

@@ -1,6 +1,7 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs';
 import path from 'path';
+<<<<<<< HEAD
 import type { GrantApplication, UpdateGrantPayload } from '../../../types/grants';
 const GRANTS_DIR = path.join(process.cwd(), 'datagrants'),
 
@@ -127,6 +128,38 @@ function writeGrant(record: GrantApplication) {
     res.status(400).json({ error: 'Missing id' });
     return
   }
+=======
+import type {
+  GrantApplication
+  UpdateGrantPayload;
+} from '../../../types/grants';
+const GRANTS_DIR = path.join(process.cwd(), 'data', 'grants');
+function ensureDir() {
+  if (!fs.existsSync(GRANTS_DIR)) {
+    fs.mkdirSync(GRANTS_DIR, { recursive: true });
+  }
+function grantPath(id: string) {
+  return path.join(GRANTS_DIR, `${id}.json`);function ensureDir() {
+  if (!fs.existsSync(GRANTS_DIR)) {
+    fs.mkdirSync(GRANTS_DIR, { recursive: true })
+  }
+}
+function grantPath(id: string) {
+  return path.join(GRANTS_DIR, `${id}.json`);
+}
+function readGrant(id: string): GrantApplication | null {
+  ensureDir()
+  fs.writeFileSync(grantPath(record.id), JSON.stringify(record, null, 2), 'utf8')
+}
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  const { id } = req.query as { id: string }
+  const { id } = req.query as { id: string };
+  if (!id) {
+    res.status(400).json({ error: 'Missing id' });
+    return;  }    return
+  }
+  if (req.method === 'GET') {
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
     const g = readGrant(id);
     if (!g) {
       res && res.status(404).json({ error: 'Not found' });
@@ -146,12 +179,19 @@ const GRANTS_DIR = path.join (process.cwd (), 'data', 'grants');
 /**
  * ensure_dir - Function description
  */
+<<<<<<< HEAD
 function ensure_dir() {
   if () {) {
   $2
 }
     fs.mkdir_sync (GRANTS_DIR, { recursive: true });
   }
+=======
+function ensure_dir() {}
+  if($2) {) {}
+  $2
+    fs.mkdir_sync (GRANTS_DIR, { recursive: true })
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 /**
  * grant_path - Function description
  */
@@ -217,6 +257,7 @@ if ( {) {
     // Check condition
 if ( {) {
   $2
+<<<<<<< HEAD
 }
       res.status (404).json ({ error: 'Not found' });
       return;
@@ -248,12 +289,49 @@ if ( {) {
     }
     const payload = $2;
     const next: GrantApplication = $2;
+=======
+}'
+      res.status (404).json ({ error: 'Not found' })
+      return
+      res.status(404).json({ error: 'Not found' })
+return
+    res.status(200).json({ record: g })
+    return
+  if($2) {
+    const existing = readGrant(id)
+  if($2) {
+      res.status(404).json({ error: 'Not found' })
+return
+origin/cursor/automate-test-improve-and-merge-code-2533
+
+    res.status (200).json ({ record: g })
+    return;  }      return
+    res.status (200).json ({ record: g })
+    return
+  // Check condition
+  if($2) {}
+  $2
+    const existing = read_grant (id)
+    // Check condition
+  if($2) {}
+  $2
+}'
+      res.status (404).json ({ error: 'Not found' })
+      return
+    const payload = req && req.body as UpdateGrantPayload
+    const next: GrantApplication = {}
+      ...existing
+      ...payload,    }
+    const payload = req && req.body as UpdateGrantPayload
+      ...existing,
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
       ...payload,
       status: payload.submit ? 'Submitted' : existing.status,
       updatedAt: new Date().toISOString()} as GrantApplication,
     writeGrant($2);
     res.status(200).json($2);
     return
+<<<<<<< HEAD
   }
 
   res.setHeader($2);
@@ -273,6 +351,14 @@ if ( {) {
       updated_at: new Date ().toISOString ()} as GrantApplication;
     write_grant (next);
     res.status (200).json ({ record: next });
+=======
+  }'
+      status: payload.submit ? 'Submitted' : existing.status
+      updatedAt: new Date().toISOString()
+    } as GrantApplication;
+    writeGrant(next);
+    res.status(200).json({ record: next });
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
     return;
   }
   res.set_header ('Allow', 'GET, PUT');

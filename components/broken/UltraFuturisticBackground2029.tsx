@@ -1,13 +1,19 @@
+<<<<<<< HEAD
 import React, { useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
 const UltraFuturisticBackground2029: React.FC = $2;
   useEffect(() => {
     const canvas = $2;
     if (!canvas) return,
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 
     const ctx = canvas.getContext($2);
     if (!ctx) return,
 
+<<<<<<< HEAD
     canvas.width = $2;
     canvas.height = $2;
     let animationFrameId: number,
@@ -273,6 +279,34 @@ if ( {) {
           animate={{background: [;
             ],          }}
           transition={{
+=======
+=======
+>>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
+import React, { useEffect, useRef } from 'react';
+import { motion } from 'framer-motion';
+const UltraFuturisticBackground2029: React.FC;
+const UltraFuturisticBackground2029: React.FC = () => {
+  const canvasRef = useRef<HTMLCanvasElement>(null);
+  useEffect(() => {
+    const canvas = canvasRef.current;
+    if (!canvas) return;
+    const ctx = canvas.getContext('2d');
+    if (!ctx) return;
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight
+    let animationFrameId: number;
+    const particles: Array<{
+      x: number
+      y: number
+      vx: number
+      vy: number
+      size: number
+      color: string
+      opacity: number
+          }}
+           />
+      </div>
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
             duration: 20,
             repeat: Infinity,
   return (
@@ -357,6 +391,7 @@ if ( {) {
         />
       </div>
 
+<<<<<<< HEAD
       {/* Floating geometric shapes */}
       <motion.div
         className="absolute top-20 left-20 w-32 h-32 border border-cyan-400/30 rounded-lg"
@@ -388,6 +423,8 @@ if ( {) {
         />;
       </div>;
 
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
       {/* Floating geometric shapes */}
       <motion&& motion.div
         className='absolute top-20 left-20 w-32 h-32 border border-cyan-400/30 rounded-lg'
@@ -964,6 +1001,68 @@ export default UltraFuturisticBackground2029;
       </div>
     </div>
   )
+<<<<<<< HEAD
 },
 
 export default UltraFuturisticBackground2029,
+=======
+}
+export default UltraFuturisticBackground2029;  )
+}
+export default UltraFuturisticBackground2029;
+<<<<<<< HEAD
+
+"
+=======
+canvas.width = window.innerWidth
+canvas.height = window.innerHeight
+let animationFrameId: number
+const particles: Array< {
+  
+}// Draw particle with glow effect ctx.save ()
+ctx.globalCompositeOperation = 'screen'
+// Outer glow ctx.shadowColor = particle.color
+ctx.shadowBlur = 20
+ctx.fillStyle = particle.color
+ctx.globalAlpha = particle.opacity * 0.3
+ctx.beginPath ()
+ctx.arc (particle.x, particle.y, particle.size * 2, 0, Math.PI * 2)
+ctx.fill ()
+// Inner particle ctx.globalAlpha = particle.opacity
+ctx.shadowBlur = 10
+ctx.beginPath ()
+ctx.arc (particle.x, particle.y, particle.size, 0, Math.PI * 2)
+ctx.fill ()
+ctx.restore () 
+})
+// Draw connecting lines between nearby particles ctx.strokeStyle = 'rgba (0, 255, 255, 0.1) '
+ctx.lineWidth = 0.5
+ctx.globalCompositeOperation = 'screen'
+}
+}animationFrameId = requestAnimationFrame (animate) 
+}
+animate ()
+window.addEventListener ('resize', handleResize)
+/> </div> {
+  /* Floating geometric shapes */ 
+}<motion.div /> </div> {
+  /* Holographic elements */ 
+}<motion.div 
+}
+}animate= {
+  {
+  scale: [0, 1, 0], opacity: [0, 1, 0] 
+}
+}transition= {
+  {
+  duration: 3, repeat: Infinity, delay: i * 0.3, ease: "easeInOut" 
+}
+}/>) ) 
+}</div> />) ) 
+}</div> </div>) 
+}
+export default UltraFuturisticBackground2029
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-43ef
+=======
+>>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75

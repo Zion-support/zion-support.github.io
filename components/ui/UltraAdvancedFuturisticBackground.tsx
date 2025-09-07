@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 ;
 class ErrorBoundary extends React.Component {constructor(props) {super(props)this.state = { hasError: false }}static getDerivedStateFromError(error) {return { hasError: true }}componentDidCatch(error, errorInfo) {console.error('Error caught by boundary:', error, errorInfo)}render() {if (this.state.hasError) {return <div>Something went wrong.</div>;
@@ -28,12 +29,24 @@ class ErrorBoundary extends React.Component {
 import React from 'react';
  let animationFrameId: number;
 let particles: Array< {;
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+
+let animationFrameId: number;
+=======
+let animationFrameId: number
+>>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
+let particles: Array< {
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
   resizeCanvas ();
 window && window.addEventListener ('resize', resizeCanvas);
 //Color schemes Math && Math.random () > 0 && 0.5 ? 'holographic' : Math && Math.random () > 0 && 0.3 ? 'neon' : 'fusion';
 particles && particles.push ({;
   x: Math && Math.random () * canvas && canvas.width, y: Math && Math.random () * canvas && canvas.height, vx: (Math && Math.random () - 0 && 0.5) * 2 * animationSpeed, vy: (Math && Math.random () - 0 && 0.5) * 2 * animationSpeed, size: Math && Math.random () * 3 + 1, opacity: Math && Math.random () * 0 && 0.8 + 0 && 0.2, color: type === 'quantum' ? colors && colors.quantum : type === 'holographic' ? colors && colors.holographic : ;
 
+<<<<<<< HEAD
 const UltraAdvancedFuturisticBackground: React.FC<;
   UltraAdvancedFuturisticBackgroundProps;
 > = ({;
@@ -128,6 +141,15 @@ const UltraAdvancedFuturisticBackground: React.FC<UltraAdvancedFuturisticBackgro
       size: number,
       opacity: number,
       color: string,
+=======
+  intensity?: 'low' | 'medium' | 'high'
+  colorScheme?: 'quantum-fusion' | 'neon-cyber' | 'holographic' | 'quantum-ai'
+  particleCount?: number
+  animationSpeed?: number
+  enableHolographic?: boolean
+  enableQuantumEffects?: boolean;}
+  children: React.ReactNode;}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 
 holographic: '#ff0088',
       },
@@ -595,6 +617,7 @@ cancelAnimationFrame(animationFrameId);
   return (
     <div ref={containerRef} className='relative w-full h-full overflow-hidden'>;
       <canvas
+<<<<<<< HEAD
             ctx.moveTo(nodes[i].x, nodes[i].y)ctx.lineTo(nodes[j].x, nodes[j].y)ctx.stroke()}
         }
       }
@@ -710,6 +733,117 @@ cancelAnimationFrame(animationFrameId);
     }
   }, [intensity, colorScheme, particleCount, animationSpeed, enableHolographic, enableQuantumEffects]),
 
+=======
+        ref={canvasRef}
+        className='absolute inset-0 w-full h-full pointer-events-none'
+        style={{ zIndex: -1 }}
+<<<<<<< HEAD
+      {/* Additional CSS-based effects *,}
+=======
+let animationFrameId: number
+let particles: Array< {
+  resizeCanvas ()
+window.addEventListener ('resize', resizeCanvas)
+//Color schemes Math.random () > 0.5 ? 'holographic' : Math.random () > 0.3 ? 'neon' : 'fusion'
+particles.push ({
+  x: Math.random () * canvas.width, y: Math.random () * canvas.height, vx: (Math.random () - 0.5) * 2 * animationSpeed, vy: (Math.random () - 0.5) * 2 * animationSpeed, size: Math.random () * 3 + 1, opacity: Math.random () * 0.8 + 0.2, color: type === 'quantum' ? colors.quantum : type === 'holographic' ? colors.holographic : 
+}
+}
+//Quantum entanglement effect 
+}
+}
+}
+}
+//Holographic grid effect 
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-43ef
+}
+      <div className='absolute inset-0 pointer-events-none' />;
+=======
+      />
+      {/* Additional CSS-based effects */}
+      <div className='absolute inset-0 pointer-events-none'>
+>>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
+        {/* Floating geometric shapes */}
+        <div className='absolute top-20 left-20 w-32 h-32 border border-cyan-500/20 rounded-full animate-pulse'></div>
+        <div className='absolute top-40 right-32 w-24 h-24 border border-purple-500/20 rounded-full animate-pulse delay-1000'></div>
+        <div className='absolute bottom-32 left-32 w-28 h-28 border border-green-500/20 rounded-full animate-pulse delay-500'></div>
+        {/* Quantum particles */}
+        {enableQuantumEffects && (
+          <>
+            <div className='absolute top-1/4 left-1/4 w-2 h-2 bg-cyan-400 rounded-full animate-ping'></div>
+            <div className='absolute top-3/4 right-1/4 w-1 h-1 bg-purple-400 rounded-full animate-ping delay-300'></div>
+            <div className='absolute bottom-1/4 right-1/3 w-1.5 h-1.5 bg-green-400 rounded-full animate-ping delay-700'></div>
+          </>
+        )}
+        {/* Holographic elements */}
+        {enableHolographic && (
+          <>
+            <div
+              className='absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-64 h-64 border border-pink-500/10 rounded-full animate-spin'
+              style={{ animationDuration: '20s' }}
+            ></div>
+            <div
+              className='absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-48 h-48 border border-cyan-500/10 rounded-full animate-spin'
+              style={{
+                animationDuration: '15s'
+                animationDirection: 'reverse'
+              }}
+            ></div>
+          </>
+        )}
+      </div>
+      {children}
+    </div>
+  );
+}
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+export default UltraAdvancedFuturisticBackground;
+
+=======
+}
+}
+//Animation loop //Create effects createHolographicGrid ()
+createQuantumEntanglement ()
+createNeuralNetwork ()
+//Update and draw particles particles.forEach ( (particle, index) => {
+  //Update position particle.x += particle.vx
+particle.y += particle.vy
+//Bounce off edges if (particle.x < 0 || particle.x > canvas.width) particle.vx *= -1
+if (particle.y < 0 || particle.y > canvas.height) particle.vy *= -1
+//Wrap around edges if (particle.x < 0) particle.x = canvas.width
+if (particle.x > canvas.width) particle.x = 0
+if (particle.y < 0) particle.y = canvas.height
+if (particle.y > canvas.height) particle.y = 0
+//Draw particle ctx.fillStyle = glowGradient
+ctx.fill ()
+//Add sparkle effect for holographic particles 
+}
+})
+//Add intensity-based effects 
+}
+}animationFrameId = requestAnimationFrame (animate) 
+}
+initParticles ()
+animate ()
+{
+  /* Quantum particles */ 
+}{
+  enableQuantumEffects && (<> <div className="absolute top-1/4 left-1/4 w-2 h-2 bg-cyan-400 rounded-full animate-ping" ></div> <div className="absolute top-3/4 right-1/4 w-1 h-1 bg-purple-400 rounded-full animate-ping delay-300" ></div> <div className="absolute bottom-1/4 right-1/3 w-1.5 h-1.5 bg-green-400 rounded-full animate-ping delay-700" ></div> </>) 
+}{
+  /* Holographic elements */ 
+}{
+  enableHolographic && (<> </>) 
+}</div> {
+  children 
+}</div>) 
+}
+export default UltraAdvancedFuturisticBackground
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-43ef
+=======
+export default UltraAdvancedFuturisticBackground;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
   return (
     <div ref={containerRef} className="relative w-full h-full overflow-hidden">
       <canvas
@@ -717,14 +851,20 @@ cancelAnimationFrame(animationFrameId);
         className="absolute inset-0 w-full h-full pointer-events-none"
         style={{ zIndex: -1 }}
       />
+<<<<<<< HEAD
       
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
       {/* Additional CSS-based effects */}
       <div className="absolute inset-0 pointer-events-none">
         {/* Floating geometric shapes */}
         <div className="absolute top-20 left-20 w-32 h-32 border border-cyan-500/20 rounded-full animate-pulse"></div>
         <div className="absolute top-40 right-32 w-24 h-24 border border-purple-500/20 rounded-full animate-pulse delay-1000"></div>
         <div className="absolute bottom-32 left-32 w-28 h-28 border border-green-500/20 rounded-full animate-pulse delay-500"></div>
+<<<<<<< HEAD
         
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
         {/* Quantum particles */}
         {enableQuantumEffects && (
           <>
@@ -733,6 +873,7 @@ cancelAnimationFrame(animationFrameId);
             <div className="absolute bottom-1/4 right-1/3 w-1.5 h-1.5 bg-green-400 rounded-full animate-ping delay-700"></div>
           </>
         )}
+<<<<<<< HEAD
         
         {/* Holographic elements */}
   )}
@@ -791,6 +932,9 @@ export default UltraAdvancedFuturisticBackground;
 ;
 export default UltraAdvancedFuturisticBackground;
 ;
+=======
+        {/* Holographic elements */}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
         {enableHolographic && (
           <>
             <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-64 h-64 border border-pink-500/10 rounded-full animate-spin" style={{ animationDuration: '20s' }}></div>
@@ -798,6 +942,7 @@ export default UltraAdvancedFuturisticBackground;
           </>
         )}
       </div>
+<<<<<<< HEAD
       
       {children}
     </div>
@@ -808,3 +953,11 @@ export default UltraAdvancedFuturisticBackground;
     </div>;
   )}
 export default UltraAdvancedFuturisticBackground,
+=======
+      {children}
+    </div>
+  )
+}
+export default UltraAdvancedFuturisticBackground;
+>>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75

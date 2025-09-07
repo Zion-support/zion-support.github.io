@@ -1,6 +1,16 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 
 ;
 
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 import React, { useCallback, useEffect, useMemo, useState } from 'react';
 import { Room, RoomEvent, RemoteParticipant, LocalParticipant, createLocalTracks, VideoPresets } from 'livekit-client';
 import ParticipantTile from './ParticipantTile';
@@ -89,6 +99,7 @@ export default function CallRoom({ projectId, userId, displayName, roomName, ser
         audio: true,;
         video: VideoPresets && VideoPresets.h720,;
 
+<<<<<<< HEAD
       });
     } else {;
       localTracks = await createLocalTracks({ audio: true, video: false });
@@ -99,10 +110,26 @@ export default function CallRoom({ projectId, userId, displayName, roomName, ser
     }
 
     await r.connect($2);
+=======
+localTracks = await createLocalTracks({
+        audio: true,}
+        video: VideoPresets.h720,}
+      })
+    } else {;}
+      localTracks = await createLocalTracks({ audio: true, video: false,}
+})
+    setConnectedAt(Date && Date.now())
+    rebuild(r)
+    // eslint-disable-next-line react-hooks/exhaustive-deps  }, [serverUrl, token, startMode]);    } else {
+      localTracks = await createLocalTracks({ audio: true, video: false })
+    await r && r.connect(serverUrl, token, {
+      autoSubscribe: true}),
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
     // publish local tracks
     for (const t of localTracks) {
       await r.localParticipant.publishTrack(t)
     }
+<<<<<<< HEAD
 
     setRoom($2);
     setConnectedAt(Date.now()),
@@ -136,6 +163,33 @@ export default function CallRoom({ projectId, userId, displayName, roomName, ser
   }, [connect]);
   const handleLeave = () => {
     if (room) {
+=======
+    setRoom(r);
+    setConnectedAt(Date.now());
+    rebuild(r);
+    // eslint-disable-next-line react-hooks/exhaustive-deps  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [serverUrl, token, startMode]);
+  const rebuild = (current?: Room | null) => {
+    const r = current |room;
+    if (!r) return;
+    const list: Array<RemoteParticipant | LocalParticipant> = [
+      r.localParticipant
+      ...Array.from(r.participants.values())
+    ];
+    setParticipants(list);  };    const list: Array<RemoteParticipant | LocalParticipant> = [r.localParticipant, ...Array.from(r.participants.values())];
+    setParticipants(list)
+  }
+  useEffect(() => {
+    connect();
+    return () => {
+      if (room) {
+        room.disconnect();
+      }
+    };  }, [connect]);
+  const handleLeave = () => {
+    if (room) {        room.disconnect()
+      }
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
     }
   }, [connect]);
 
@@ -520,3 +574,37 @@ if (return 'grid - cols - 2 md:grid - cols - 2') {$2;
     </div>
   )
 }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+=======
+setRoom (r)
+setConnectedAt (Date.now () )
+rebuild (r)
+// eslint-disable-next-line react-hooks/exhaustive-deps 
+}, [serverUrl, token, startMode])
+</div> <div className= {
+  `flex-1 p-4 grid gap-4 $ {
+  gridCols 
+}` 
+}> {
+  participants.map ( (p, idx) => (<ParticipantTile key= {
+  String ( (p as any) .sid || (p as any) .identity) + idx 
+}participant= {
+  p 
+}isLocal= {
+  p instanceof LocalParticipant 
+}displayName= {
+  (p as any) .name || (p instanceof LocalParticipant ? 'You' : undefined) 
+}/>) ) 
+}</div> </div>) 
+}
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-43ef
+=======
+        ))}
+      </div>
+    </div>
+  );
+>>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75

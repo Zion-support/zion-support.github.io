@@ -1,6 +1,16 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 
 ;
 
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 import React, { useState } from 'react';
 type PersonaConfig = any;
   language: string;
@@ -27,6 +37,7 @@ export default function StudioHostPage() {;
   const [episode, setEpisode] = useState<any>(null);
   const [synthesizing, setSynthesizing] = useState(false);
   const [publishing, setPublishing] = useState(false);
+<<<<<<< HEAD
 
 import React, { useState } from 'react';
 type PersonaConfig = $2;
@@ -52,6 +63,28 @@ export default function StudioHostPage() {
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ persona, invitee: { name: inviteeName, bio: inviteeBio}, topic, operatorPrompt })}),
       const data = await res.json($2);
+=======
+  const handleGenerate = async () => {
+    setGenerating(true);
+    try {
+      const res = await fetch('/api/podcast/generate', {
+        method: 'POST'
+        headers: { 'Content-Type': 'application/json' }
+        body: JSON.stringify({
+          persona
+          invitee: { name: inviteeName, bio: inviteeBio }
+          topic
+          operatorPrompt
+        })
+      });
+      const data = await res.json();
+      setEpisode(data.episode);
+    } catch (e) {
+      console.error(e);
+      alert('Failed to generate episode');
+    } finally {
+      setGenerating(false);    }      const data = await res.json();
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
       setEpisode(data.episode)
     } catch (e) {
       console.error($2);
@@ -65,10 +98,24 @@ export default function StudioHostPage() {
     setSynthesizing($2);
     try {
       const res = await fetch('/api/podcast/synthesize', {
+<<<<<<< HEAD
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ episodeId: episode.id, persona })}),
       const data = await res.json($2);
+=======
+        method: 'POST'
+        headers: { 'Content-Type': 'application/json' }
+        body: JSON.stringify({ episodeId: episode.id, persona })
+      });
+      const data = await res.json();
+      setEpisode(data.episode);
+    } catch (e) {
+      console.error(e);
+      alert('Failed to synthesize audio');
+    } finally {
+      setSynthesizing(false);    }      const data = await res.json();
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
       setEpisode(data.episode)
     } catch (e) {
       console.error($2);
@@ -76,6 +123,7 @@ export default function StudioHostPage() {
     } finally {
       setSynthesizing(false)
     }
+<<<<<<< HEAD
   },
 
   const handlePublishRss = $2;
@@ -84,6 +132,16 @@ export default function StudioHostPage() {
       const res = await fetch($2);
       await res.json($2);
       alert('RSS feed updated. Platforms will pull on next refresh.')
+=======
+  }
+  const handlePublishRss = async () => {
+    if (!episode?.id) return;
+    setPublishing(true);
+    try {
+      const res = await fetch('/api/podcast/rss', { method: 'POST' });
+      await res.json();
+      alert('RSS feed updated. Platforms will pull on next refresh.');
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
     } catch (e) {
       console.error($2);
       alert('Failed to update RSS')
@@ -504,3 +562,21 @@ export default function StudioHostPage() {const [persona, setPersona] = useState
     </div>
   )
 }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+=======
+const [generating, setGenerating] = useState (false)
+const [episode, setEpisode] = useState<any> (null)
+const [synthesizing, setSynthesizing] = useState (false)
+const [publishing, setPublishing] = useState (false)
+<section className="space-y-3" > <h2 className="text-xl font-semibold" >AI Persona</h2> <div className="grid grid-cols-1 md:grid-cols-3 gap-4" > <div> <label className="block text-sm font-medium" >Voice</label> <select > <option value="Visionary" >Visionary</option> <option value="Grounded" >Grounded</option> <option value="Technical" >Technical</option> </select> </div> <div> </div> </div> </section> <section className="space-y-3" > <h2 className="text-xl font-semibold" >Episode Generator</h2> <div className="grid grid-cols-1 md:grid-cols-3 gap-4" > <div>) ) 
+}</ol> </div> <div> </div> <div className="grid grid-cols-1 md:grid-cols-3 gap-3" > <div> </div>) 
+}</div> </section>) 
+}</div>) 
+}
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-43ef
+=======
+>>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75

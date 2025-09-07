@@ -8,6 +8,7 @@ function ensureStorage() {
   if (!fs.existsSync(dir)) fs.mkdirSync($2);
   if (!fs.existsSync(EPISODES_PATH)) fs.writeFileSync(EPISODES_PATH, '[]utf8')
 }
+<<<<<<< HEAD
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
 function ensureStorage() {const dir = path && path.dirname(EPISODES_PATH)if (!fs && fs.existsSync(dir)) fs && fs.mkdirSync(dir, { recursive: true })if (!fs && fs.existsSync(EPISODES_PATH))fs && fs.writeFileSync(EPISODES_PATH, '[]', 'utf8')export default function handler() {if (req && req.method !== 'POST')return res && res.status(405).json({ error: 'Method not allowed' })ensureStorage()}const highlights = segments.map((t: string, i: number) => ({label: `Highlight ${i + 1}`;
@@ -43,6 +44,38 @@ function handler() {if (return res.status (405).json ({ error: 'Method not allow
   const episodes = JSON.parse (fs.readFileSync (EPISODES_PATH, 'utf8')) as any[];
   const idx = episodes.find_index ((e) => e.id === episode_id)if (return res.status (404).json ({ error: 'Episode not found' })) {$2;
 }
+=======
+const EPISODES_PATH = path.join(
+  process.cwd()
+  'data'
+  'podcast'
+  'episodes.json'
+);
+function ensureStorage() {
+  const dir = path.dirname(EPISODES_PATH);
+  if (!fs.existsSync(dir)) fs.mkdirSync(dir, { recursive: true });
+  if (!fs.existsSync(EPISODES_PATH))
+    fs.writeFileSync(EPISODES_PATH, '[]', 'utf8');const EPISODES_PATH = path.join(process.cwd(), 'datapodcastepisodes.json');
+function ensureStorage() {
+  const dir = path.dirname(EPISODES_PATH);
+  if (!fs.existsSync(dir)) fs.mkdirSync(dir, { recursive: true });
+  if (!fs.existsSync(EPISODES_PATH))
+    fs.writeFileSync(EPISODES_PATH, '[]', 'utf8');
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  if (req.method !== 'POST');
+    return res.status(405).json({ error: 'Method not allowed' });
+  ensureStorage();
+  const { episodeId } = req.body |{}
+  const episodes = JSON.parse(fs.readFileSync(EPISODES_PATH, 'utf8')) as any[];
+  const idx = episodes.findIndex(e => e.id === episodeId);  if (idx === -1) return res.status(404).json({ error: 'Episode not found' });
+export default function handler(req: NextApiRequest, res: NextApiResponse) {;
+  if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' });
+  ensureStorage();
+  const { episodeId } = req.body |{}
+  const episodes = JSON.parse(fs.readFileSync(EPISODES_PATH, 'utf8')) as any[];
+  const idx = episodes.findIndex((e) => e.id === episodeId);
+  if (idx === -1) return res.status(404).json({ error: 'Episode not found' });
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
   const episode = episodes[idx];
   const segments = episode?.time_markers?.segments || [];
   const highlights = segments.map ((t: string, index: number) => ({label: `Highlight ${i + 1}`,start: t,end:;
@@ -63,6 +96,7 @@ const EPISODES_PATH = path.join(process.cwd()'data';
   const episodes = JSON.parse(fs.readFileSync(EPISODES_PATH, 'utf8')) as any[];
   const idx = episodes.findIndex(e => e.id === episodeId)if (idx === -1) return res.status(404).json({ error: 'Episode not found' })const episode = episodes[idx];
   const segments = episode?.timeMarkers?.segments |[];
+<<<<<<< HEAD
   const highlights = segments.map((t: string, i: number) => ({label: `Highlight ${i + 1}`,start: t,end:;
       i + 1 < segments.length;
         ? segments[i + 1];
@@ -162,6 +196,18 @@ function handler() {
     start: t;
     end: i + 1 < segments.length ? segments[i + 1] : episode?.time_markers?.closing || '15:00'}));
 ;
+=======
+  const highlights = segments.map((t: string, i: number) => ({
+    label: `Highlight ${i + 1}`
+    start: t
+    end:
+      i + 1 < segments.length
+        ? segments[i + 1]
+        : episode?.timeMarkers?.closing |'15:00'
+  }));    label: `Highlight ${i + 1}`;
+    start: t;
+    end: i + 1 < segments.length ? segments[i + 1] : episode?.timeMarkers?.closing |'15:00'}));
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
   episode.highlights = highlights;
   episodes[idx] = episode;
   fs.writeFileSync (EPISODES_PATH, JSON.stringify (episodes, null, 2), 'utf8');

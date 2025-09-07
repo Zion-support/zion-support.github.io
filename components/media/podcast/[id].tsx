@@ -1,3 +1,8 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 
 ;
 export default function EpisodePage() {export default function EpisodePage() {const router = useRouter()const { id } = router.query as { id?: string }
@@ -77,11 +82,16 @@ import { useRouter  } from 'next/router';
     </div>;
   )
 
+<<<<<<< HEAD
   );
         </pre>;
       </div>;
     </div>;
   )
+=======
+=======
+>>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 import React, { useEffect, useState } from 'react';
 import { useRouter } from 'next/router';
 export default function EpisodePage() {
@@ -114,5 +124,21 @@ export default function EpisodePage() {
         <pre className="whitespace-pre-wrap bg-gray-50 p-3 rounded">{episode.transcript}</pre>
       </div>
     </div>
+<<<<<<< HEAD
   )
 }
+=======
+<<<<<<< HEAD
+
+  );
+
+=======
+if (!episode) return <div>Loading…</div>
+return (</div> </div>) 
+}
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-43ef
+=======
+);
+}
+>>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75

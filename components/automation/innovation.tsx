@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 };
 </header> {;
@@ -29,14 +30,36 @@ export default function InnovationDigest(): any ({ items }: Props) {;
 
  
  
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+
+import fs from 'fs';,
+=======
+import fs from 'fs',
+>>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
+import path from 'path';
+import type { GetStaticProps } from 'next';
+type Item = any;
+}
+</header> {
+  items.length === 0 && (<div className="text-gray-600 dark:text-gray-400" >No entries yet. The automation will populate this feed shortly.</div>)
+}</li>) )
+}</ul> </div>)
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 };
 </header> {
   items.length === 0 && (<div className="text-gray-600 dark:text-gray-400" >No entries yet. The automation will populate this feed shortly.</div>) 
 }</li>) ) 
+<<<<<<< HEAD
 }</ul> </div>)
 }</ul> </div>) 
 
 
+=======
+}</ul> </div>) 
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 export default function InnovationDigest({ items }: Props) {
   return (
     <div className="space-y-6">
@@ -110,6 +133,7 @@ export default function InnovationDigest({ items }: Props) {
             {it.summary && <p className="mt-2 text-sm text-gray-600 dark:text-gray-300">{it.summary}</p>}
           </li>
         ))}
+<<<<<<< HEAD
       </ul>;
 )})}}
 </header> {items.length === 0 && (<div className="text - gray - 600 dark:text - gray - 400" >No entries yet. The automation will populate this feed shortly.</div>)}</li>) )}</ul> </div>)export default /**;
@@ -153,3 +177,23 @@ function InnovationDigest() {
     </div>
   )
 }
+=======
+      </ul>
+    </div>
+);
+}
+<<<<<<< HEAD
+
+"
+=======
+}
+}
+</header> {
+  items.length === 0 && (<div className="text-gray-600 dark:text-gray-400" >No entries yet. The automation will populate this feed shortly.</div>) 
+}</li>) ) 
+}</ul> </div>) 
+}
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-43ef
+=======
+>>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75

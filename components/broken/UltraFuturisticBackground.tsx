@@ -1,3 +1,26 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+
+=======
+>>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
+import React, { useEffect, useRef } from 'react';
+import { motion } from 'framer-motion';
+const UltraFuturisticBackground: React.FC;
+const UltraFuturisticBackground: React.FC = () => {
+  const canvasRef = useRef<HTMLCanvasElement>(null);
+  useEffect(() => {
+    const canvas = canvasRef.current;
+    if (!canvas) return;
+    const ctx = canvas.getContext('2d');
+    if (!ctx) return;
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight
+    // Quantum particle system
+    const particles: Array<{
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
       x: number;
       y: number;
   const canvas_ref = useRef < HTMLCanvasElement>(null);
@@ -24,12 +47,41 @@ if (return) {
       size: number;
       color: string;
       life: number;
+<<<<<<< HEAD
       max_life: number;
       vx: number,
       vy: number,
       size: number,
       color: string,
       life: number,
+=======
+      maxLife: number;
+    }> = [];
+    // Create initial particles
+    for (let i = 0; i < 100; i++) {      x: number
+      y: number
+      vx: number
+      vy: number
+      size: number
+      color: string
+      life: number
+      maxLife: number
+    }> = [];
+    // Create initial particles
+    for (let i = 0, i < 100, i++) {
+        x: Math.random() * canvas.width
+        y: Math.random() * canvas.height
+        vx: (Math.random() - 0.5) * 2
+        vy: (Math.random() - 0.5) * 2
+        size: Math.random() * 3 + 1
+        color: `hsl(${Math.random() * 360}, 70%, 60%)`
+        life: Math.random() * 100
+        maxLife: 100
+      });    }        color: `hsl(${Math.random() * 360}, 70%, 60%)`;
+        life: Math.random() * 100
+        maxLife: 100
+      })
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
     // Animation loop
     const animate = () => {
       ctx.fillStyle = 'rgba(0, 0, 0, 0.1)';
@@ -284,6 +336,7 @@ canvas.height = window.innerHeight;
         <motion.div
           className="absolute top-40 right-32 w-24 h-24 border border-purple-400/30"
           style={{
+<<<<<<< HEAD
             clipPath: 'polygon(50% 0%, 0% 100%, 100% 100%)'
           style={{clip_path:;
               'polygon (50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%)',}}
@@ -321,6 +374,10 @@ className='absolute top-40 right-32 w-24 h-24 border border-purple-400/30';
           animate={{duration: 15;
             repeat: Infinity;
             duration: 15,repeat: Infinity,ease: 'linear',          }}          style={{clipPath: 'polygon(50% 0%, 0% 100%, 100% 100%)';
+=======
+            clipPath: 'polygon(50% 0%, 0% 100%, 100% 100%)'}
+  ease: 'linear',            ease: \'linear\';}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
           }}
           animate={{
             duration: 15
@@ -619,6 +676,7 @@ ease: 'easeInOut',delay: i * 0.3,}}
               duration: 8 + i * 2,repeat: Infinity,ease: 'linear',}}
             transition={{duration: 8 + i * 2,repeat: Infinity,}}/>;
         ))}
+<<<<<<< HEAD
       </div>;
       {/* Neon Glow Effects */}
 <div className='absolute inset-0'>;
@@ -658,6 +716,72 @@ ease: 'easeInOut',delay: i * 0.3,}}
       <div className='absolute inset-0'>;
         {[...Array(20)].map((_, i) => (<motion.div;
             key={i}
+=======
+      </div>
+
+        <div className='absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-gradient-to-r from-emerald-500/10 to-teal-500/10 rounded-full blur-3xl animate-pulse delay-500' />
+      </div>
+      </div>
+      </div>
+      {/* Neon Glow Effects */}
+      <div className='absolute inset-0'    />
+        <div className='absolute top-1/4 left-1/4 w-96 h-96 bg-gradient-to-r from-cyan-500/10 to-blue-500/10 rounded-full blur-3xl animate-pulse'    />
+        <div className='absolute bottom-1/4 right-1/4 w-80 h-80 bg-gradient-to-r from-purple-500/10 to-pink-500/10 rounded-full blur-3xl animate-pulse delay-1000'    />
+        <div className='absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-gradient-to-r from-emerald-500/10 to-teal-500/10 rounded-full blur-3xl animate-pulse delay-500'    />
+      </div>
+      {/* Data Stream Effect */}
+      <div className='absolute inset-0'    />
+        {[...Array(20)].map((_, i) => (<motion&& motion.div;}
+            key={i}
+            className='absolute w-0 && 0.5 h-8 bg-gradient-to-b from-cyan-400 to-transparent'
+            style={{left: `${Math && Math.random() * 10}"
+}%`,delay: i * 1.5,              ease: \"linear\",delay: i * 1.5
+            }}
+             />))}
+      </div>
+      {/* Neon Glow Effects */}
+      <div className='absolute inset - 0'    />
+        <div className='absolute top - 1/4 left - 1/4 w - 96 h - 96 bg - gradient - to - r from - cyan - 500 / 10 to - blue - 500 / 10 rounded - full blur - 3xl animate - pulse'    />
+        <div className='absolute bottom - 1/4 right - 1/4 w - 80 h - 80 bg - gradient - to - r from - purple - 500 / 10 to - pink - 500 / 10 rounded - full blur - 3xl animate - pulse delay - 1000'    />
+        <div className='absolute top - 1/2 left - 1/2 transform -translate - x-1 / 2 -translate - y-1 / 2 w - 64 h - 64 bg - gradient - to - r from - emerald - 500 / 10 to - teal - 500 / 10 rounded - full blur - 3xl animate - pulse delay - 500'    />
+      </div>
+      {/* Data Stream Effect */}
+      <div className='absolute inset - 0'    />
+        {[...Array (20)].map ((_, i) => (<motion.div;}
+            key={i}
+            className='absolute w - 0.5 h - 8 bg - gradient - to - b from - cyan - 400 to - transparent'
+            style={{left: `${Math.random () * 10}
+}%`,top: '-2rem',</div    />
+      {/* Data Stream Effect */}
+      <div className='absolute inset-0'    />
+        {[...Array(20)].map((_, i) => (<motion.div;}
+            key={i}
+
+            className='absolute w-0.5 h-8 bg-gradient-to-b from-cyan-400 to-transparent'
+            style={{}
+              left: `${Math.random() * 10}
+}%`,
+              top: '-2rem'
+            }}
+            animate={{
+
+      {/* Data Stream Effect */}"
+      <div className="absolute inset-0">
+        {[...Array(20)].map((_, i) => (
+          <motion&& motion.div
+            key={i}"
+            className="absolute w-0 && 0.5 h-8 bg-gradient-to-b from-cyan-400 to-transparent"
+            style={{'
+              top: '-2rem''
+              top: '-2rem',
+
+      </div>
+      {/* Data Stream Effect */}'
+      <div className='absolute inset-0'>
+        {[...Array(20)].map((_, i) => (
+          <motion.div
+            key={i}'
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
             className='absolute w-0.5 h-8 bg-gradient-to-b from-cyan-400 to-transparent'
             style={{
               left: `${Math.random() * 100}%`,
@@ -994,6 +1118,7 @@ export default UltraFuturisticBackground;
 export default UltraFuturisticBackground;  )
 }
 export default UltraFuturisticBackground;
+<<<<<<< HEAD
 
 export default UltraFuturisticBackground;
 )}export default UltraFuturisticBackground;
@@ -1004,3 +1129,66 @@ export default UltraFuturisticBackground;
 },
 
 export default UltraFuturisticBackground,
+=======
+<<<<<<< HEAD
+
+"
+=======
+canvas.width = window.innerWidth
+canvas.height = window.innerHeight
+//Quantum particle system const particles: Array< {
+  life: Math.random () * 100
+maxLife: 100 
+}) 
+}//Animation loop //Wrap around edges if (particle.x < 0) particle.x = canvas.width
+if (particle.x > canvas.width) particle.x = 0
+if (particle.y < 0) particle.y = canvas.height
+if (particle.y > canvas.height) particle.y = 0
+//Draw particle //Reset particle if it dies if (particle.life <= 0) {
+  particles[index] = {
+  x: Math.random () * canvas.width, y: Math.random () * canvas.height, vx: (Math.random () - 0.5) * 2, vy: (Math.random () - 0.5) * 2, size: Math.random () * 3 + 1, color: `hsl ($ {
+  Math.random () * 360 
+}, 70%, 60%) `
+life: 100
+maxLife: 100 
+}
+}
+})
+//Draw quantum entanglement lines 
+}
+}) 
+})
+requestAnimationFrame (animate) 
+}
+animate ()
+//Handle resize window.addEventListener ('resize', handleResize)
+/> {
+  /* Triangle */ 
+}<motion.div /> {
+  /* Circle */ 
+}<motion.div /> {
+  /* Square */ 
+}<motion.div 
+}
+}animate= {
+  {
+  scale: [0.5, 2, 0.5], opacity: [0.3, 1, 0.3], y: [0, -20, 0] 
+}
+}transition= {
+  {
+  duration: 3 + i * 0.5, repeat: Infinity, ease: "easeInOut", delay: i * 0.3 
+}
+}/>) ) 
+}</div> />) ) 
+}</div> />) ) 
+}</div> <defs> <linearGradient id="quantumGradient" x1="0%" y1="0%" x2="100%" y2="100%" > <stop offset="0%" stopColor="rgba (0, 255, 255, 0.3) " /> <stop offset="50%" stopColor="rgba (255, 0, 255, 0.3) " /> <stop offset="100%" stopColor="rgba (0, 255, 255, 0.3) " /> </linearGradient> </defs> {
+  [...Array (15) ].map ( (, i) => (<motion.line key= {
+  i 
+}/>) ) 
+}</svg> </div> </div>) 
+}
+export default UltraFuturisticBackground
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-43ef
+=======
+>>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75

@@ -1,18 +1,50 @@
+<<<<<<< HEAD
   life: number;children: React.ReactNode;
   children,}: {children: React.ReactNode;
 }) {  const canvasRef = useRef<HTMLCanvasElement>(null)const particlesRef = useRef<Particle[]>([])const energyFieldsRef = useRef<EnergyField[]>([])const animationRef  = useRef<number | undefined>(undefined)interface EnergyField  {x: number,y: number,radius: number,intensity: number,color: string,pulse: number;
 }export default function UltraFuturisticBackground2029(): any ({ children }: { children: React && React.ReactNode }) {export default function UltraFuturisticBackground2029() {maxLife: number;
 }interface EnergyField  {x: number;
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+import React, { useEffect, useRef, useState } from 'react';
+import { motion } from 'framer-motion';
+interface Particle {
+>>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
+  x: number;
+  y: number;
+  vx: number;
+  vy: number;
+  size: number;
+  opacity: number;
+  color: string;
+  type: 'energy' | 'data' | 'quantum' | 'neon';
+  life: number;
+
+  maxLife: number;
+
+interface EnergyField {
+  x: number;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
   y: number;
   radius: number;
   intensity: number;
   color: string;
+<<<<<<< HEAD
 }) {pulse: number;
 }
   life: number;
   children: React.ReactNode;
   children,
 }: {;
+=======
+
+  pulse: number;
+export default function UltraFuturisticBackground2029({
+  children
+}: {
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
   children: React.ReactNode;
 }) {  const canvasRef = useRef<HTMLCanvasElement>(null);
   const particlesRef = useRef<Particle[]>([]);
@@ -60,11 +92,18 @@ interface Particle {
   color: string,
   type: 'energy' | 'data' | 'quantum' | 'neon',
   life: number,
+<<<<<<< HEAD
   maxLife: number}
 
 interface EnergyField {
   x: number,
   y: number,
+=======
+
+interface EnergyField {}
+  coordinate_x: number,
+  coordinate_y: number,
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
   radius: number,
   intensity: number,
   color: string,
@@ -527,6 +566,7 @@ for (let i = 0; i < 20; i++) {const x1 = Math.random() * canvas.width;
             ease: "easeInOut"
           }}
           transition={{
+<<<<<<< HEAD
             duration: 12
             repeat: Infinity
         className='absolute inset-0 w-full h-full pointer-events-none';
@@ -574,6 +614,23 @@ for (let i = 0; i < 20; i++) {const x1 = Math.random() * canvas.width;
           animate={{
             rotate: [45, 405],
             scale: [1, 1.1, 1]
+=======
+            duration: 6,
+            repeat: Infinity}
+ease: 'easeInOut'}
+          }}
+          transition={{
+            duration: 12;}
+repeat: Infinity;}
+ease: 'easeInOut'          }}
+          }}"
+          transition={{duration: 6,repeat: Infinity,ease: \'easeInOut\';}
+          }}"
+          className=\'absolute bottom-32 left-1/4 w-40 h-40 border border-purple-400 opacity-20 transform rotate-45\'
+           />
+        <motion.div
+          className='absolute bottom - 32 left - 1/4 w - 40 h - 40 border border - purple - 400 opacity - 20 transform rotate - 45'
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
           }}
           transition = $2;
             repeat: Infinity,
@@ -603,6 +660,7 @@ for (let i = 0; i < 20; i++) {const x1 = Math.random() * canvas.width;
             repeat: Infinity
             ease: 'easeInOut',          }}          }}
 
+<<<<<<< HEAD
           }}
 
 
@@ -614,10 +672,13 @@ for (let i = 0; i < 20; i++) {const x1 = Math.random() * canvas.width;
 
 
             ease: "easeInOut"
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
           }}
         />
       </div>
 
+<<<<<<< HEAD
       {/* Gradient overlays for depth */}
           animate={{rotate: [45, 405],scale: [1, 1.1, 1],          }}
           transition={{duration: 12,repeat: Infinity,ease: 'easeInOut',          }}
@@ -675,14 +736,101 @@ for (let i = 0; i < 20; i++) {const x1 = Math.random() * canvas.width;
 
   );      {/* Content */}
       <div className="absolute inset-0 bg-gradient-to-br from-transparent via-transparent to-black/20 pointer-events-none" />
+=======
+        />
+      </div>
+      {/* Gradient overlays for depth */}'
+      <div className='absolute inset-0 bg-gradient-to-br from-transparent via-transparent to-black/20 pointer-events-none' />;'
+      <div className='absolute inset-0 bg-gradient-to-tl from-transparent via-transparent to-blue-900/10 pointer-events-none' />
+"
+      <div className="absolute inset-0 bg-gradient-to-br from-transparent via-transparent to-black/20 pointer-events-none" />"
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
       <div className="absolute inset-0 bg-gradient-to-tl from-transparent via-transparent to-blue-900/10 pointer-events-none" />
       
       {/* Content */}
+<<<<<<< HEAD
+=======
+
+      <div className='relative z-10'>{children}</div>
+    </div>
+<<<<<<< HEAD
+
+  );
+
+"
+=======
+resizeCanvas ()
+window.addEventListener ('resize', resizeCanvas)
+// Mouse move handler for interactive effects window.addEventListener ('mousemove', handleMouseMove)
+// Initialize particles with different types 
+}particlesRef.current = particles 
+}
+// Initialize energy fields for (let i = 0, i < 8, i++) {
+  fields.push ({
+  
+}energyFieldsRef.current = fields 
+}
+initParticles ()
+initEnergyFields ()
+// Animation loop ctx.fillStyle = gradient
+ctx.beginPath ()
+ctx.arc (field.x, field.y, field.radius, 0, Math.PI * 2)
+ctx.fill () 
+})
+// Update and draw particles particle.x += particle.vx
+particle.y += particle.vy
+// Wrap around edges if (particle.x < 0) particle.x = canvas.width
+if (particle.x > canvas.width) particle.x = 0
+if (particle.y < 0) particle.y = canvas.height
+if (particle.y > canvas.height) particle.y = 0
+// Draw particle with type-specific effects ctx.save ()
+switch (particle.type) {
+  case 'energy': // Energy particles with glow effect ctx.shadowColor = particle.color
+ctx.shadowBlur = 15
+ctx.globalCompositeOperation = 'screen'
+break
+case 'data': // Data particles with digital effect ctx.globalCompositeOperation = 'multiply'
+break
+case 'quantum': // Quantum particles with uncertainty effect ctx.globalCompositeOperation = 'overlay'
+ctx.shadowColor = particle.color
+ctx.shadowBlur = 10
+break
+case 'neon': // Neon particles with bright glow ctx.beginPath ()
+ctx.arc (particle.x, particle.y, particle.size, 0, Math.PI * 2)
+ctx.fillStyle = particle.color + Math.floor (currentOpacity * 255) .toString (16) .padStart (2, '0')
+ctx.fill ()
+ctx.restore ()
+// Draw connections between nearby particles 
+}ctx.stroke () 
+}// Draw neural network connections ctx.strokeStyle = 'rgba (255, 0, 255, 0.1) '
+ctx.lineWidth = 1
+animationRef.current = requestAnimationFrame (animate) 
+}
+animate ()
+</div> </div>) 
+}
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-43ef
+=======
+  );      {/* Content */}"
+      <div className="relative z-10">
+        {children}'"
+            ease: 'easeInOut',            ease: "easeInOut"
+          }}
+        />
+      </div>
+      {/* Gradient overlays for depth */}'
+      <div className='absolute inset - 0 bg - gradient - to - br from - transparent via - transparent to - black / 20 pointer - events - none' />;'
+      <div className='absolute inset - 0 bg - gradient - to - tl from - transparent via - transparent to - blue - 900 / 10 pointer - events - none' />
+        {children}
+      </div>
+    </div>)
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
       <div className="relative z-10">
         {children}
       </div>
     </div>
   )
+<<<<<<< HEAD
     </div>)}
       <div className='relative z-10'>{children}</div>;
     </div>;
@@ -693,3 +841,7 @@ for (let i = 0; i < 20; i++) {const x1 = Math.random() * canvas.width;
     </div>;
   )})
 }
+=======
+}
+>>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75

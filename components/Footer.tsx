@@ -1,3 +1,19 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+'use client';
+
+=======
+>>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
+import React from 'react';
+import Link from 'next/link';
+import { Phone, Mail, MapPin, Facebook, Twitter, Linkedin, Instagram, ArrowRight } from 'lucide-react';
+
+import React from "react";
+import Link from "next/link";
+import {
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
   Phone
   Mail
   MapPin
@@ -208,6 +224,7 @@ import {
   Instagram,
 } from "lucide-react";
 
+<<<<<<< HEAD
 import React from 'react;';
 import Link from 'next/link';
 
@@ -230,6 +247,8 @@ import Link from 'next/link';
             {/* Contact Info */}
 import React from 'react';
 
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 export default function Footer() {
   return (
     <footer className="bg-gray-900 text-white">
@@ -644,6 +663,7 @@ main
       </div>
     </footer>
   );
+<<<<<<< HEAD
 };
 
 export default Footer;
@@ -657,3 +677,15 @@ origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
               </Link>;
               <Link
 
+=======
+<<<<<<< HEAD
+};
+
+export default Footer;
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-43ef
+=======
+}
+}
+>>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75

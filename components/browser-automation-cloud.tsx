@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -241,11 +242,19 @@ origin/cursor/integrate-build-improve-and-re-verify-2156
 	const features = [
 		'Parallel Playwright/Puppeteer executionQueued jobs with retries and rate limitsArtifacts: HAR, traces, screenshots, videosRotating proxies and geo targetingWebhook callbacks and REST API'
 	];
+=======
+<<<<<<< HEAD
+</div>) ) 
+}</div> </a> <a href="https://pptr.dev/" target="blank" rel="noreferrer" className="inline-flex items-center gap-2 text-cyan-400 hover:text-cyan-300" > <ExternalLink className="w-4 h-4" /> Puppeteer </a> </div> </section> </main> </>) 
+}
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 import React from 'react',
 import SEO from '../components/SEO';
 import React from 'react';
 
 export default function BrowserAutomationCloudPage() {
+<<<<<<< HEAD
 
 export default function BrowserAutomationCloudPage() {
   const features = [
@@ -444,3 +453,9 @@ export default function BrowserAutomationCloudPage() {
 	),
 }
 
+=======
+	const features = null;
+	return (
+export default function BrowserAutomationCloudPage() {
+>>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75

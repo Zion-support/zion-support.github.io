@@ -1,8 +1,17 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react',
 import Head from 'next/head';
+=======
+return (<UltraAdvancedFuturisticBackground> <Head> <title> {
+  service.name 
+}- Zion Tech Group</title>) ) 
+}</ul> </div> <div className="bg-black/30 rounded-2xl border border-purple-500/30 p-6 h-fit" > <div className="flex items-end justify-between mb-3" > <div> </div> </div> </div> </div> </div> </UltraAdvancedFuturisticBackground>) 
+}
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 import { Phone, Mail, MapPin, Check, ArrowRight, Brain, Star  } from 'lucide-react';
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground',
 import Button from '../components/ui/Button';
@@ -175,6 +184,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   );
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
                 </div>;
@@ -317,3 +327,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
     </UltraAdvancedFuturisticBackground>)}}
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
+=======
+>>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75

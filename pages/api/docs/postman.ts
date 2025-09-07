@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from "next";
 import v1 from "../../../data/api-docs/v1";
 function toPostman() {
@@ -125,3 +126,24 @@ export default function handler(req, res) {
       { key: "token", value: "" }
     ]
 
+=======
+import { NextApiRequest, NextApiResponse } from 'next';
+
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  if (req.method !== 'GET') {
+    res.setHeader('Allow', ['GET']);
+    return res.status(405).end('Method Not Allowed');
+  }
+  
+  const postman = {
+    info: {
+      name: 'Zion OS API',
+      schema: 'https://schema.getpostman.com/json/collection/v2.1.0/collection.json'
+    },
+    item: [],
+    variable: []
+  };
+  
+  res.status(200).json(postman);
+} 
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75

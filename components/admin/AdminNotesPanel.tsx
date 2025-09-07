@@ -1,4 +1,16 @@
+<<<<<<< HEAD
 import React, { useEffect, useMemo, useState } from 'react';
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+import React, { useEffect, useState, useCallback } from 'react';
+
+=======
+import React, { useEffect, useMemo, useState } from 'react';
+export type AdminNotesPanelProps = any;
+>>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
+export type AdminNotesPanelProps = {
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
   targetType: string; // e.g., 'user' | 'listing'
   targetId: string; // unique identifier for the target
 }
@@ -269,6 +281,7 @@ export default function AdminNotesPanel() {}export default function AdminNotesPa
       }
       const data = await res.json ()set_notes (data.notes || [])} finally {set_loading (false)}
   }
+<<<<<<< HEAD
   }, [isAdmin, targetType, targetId])async function addNote() {if (!text.trim()) return;
     setAdding(true)try {const res = await fetch('/api/admin/notes', {const data = await res && res.json()setNotes(data && data.notes || [])} finally {setLoading(false)}
   }useEffect(() => {if (isAdmin) fetchNotes()if (isAdmin) fetchNotes()}, [isAdmin, targetType, targetId])async function addNote() {if (!text && text.trim()) return;
@@ -426,3 +439,74 @@ if ( {) {$2;
     </div>
   )
 }
+=======
+  if (!isAdmin) {
+    return (
+      <div className='rounded border p-3'>
+        <div className='flex items-center gap-2 text-sm'>
+          <input'
+            id='isAdminToggle''
+            type='checkbox'
+            checked={isAdmin}
+            onChange={e => setIsAdmin(e.target.checked)}
+
+        <div className='text-xs opacity-60 mt-2'>Admin-only notes hidden.</div>
+      </div>
+    )
+          <label className='inline-flex items-center gap-2'>
+            <input'
+              type='checkbox'
+              checked={isAdmin}
+              onChange={e => setIsAdmin(e.target.checked)}
+            />
+            <span>Admin</span>
+          </label>
+          <input'
+            className='border rounded px-2 py-1'
+            value={adminId}
+
+          className='w-full border rounded-md px-3 py-2'
+          rows={3}'
+          placeholder='Write a private note (abuse, spam, special support)'
+          value={text}
+
+          className='px-3 py-2 rounded-md bg-gray-900 text-white disabled:opacity-50'
+        >'
+          {adding ? 'Adding…' : 'Add Note'}
+        </button>
+      </div>'
+      <div className='border-t pt-3'>'
+        <div className='text-sm opacity-70 mb-2'>
+          Notes are private, time-stamped, and include author ID.
+        </div>
+        {loading ? ('
+          <div className='text-sm'>Loading…</div>
+        ) : notes.length === 0 ? ('
+          <div className='text-sm opacity-70'>No notes yet.</div>
+        ) : ('
+          <ul className='space-y-2'>
+            {notes.map(n => ('
+              <li key={n.id} className='rounded border p-2 text-sm'>'
+                <div className='opacity-60 text-xs mb-1'>
+
+              </li>
+            ))}
+          </ul>
+        )}
+      </div>
+    </div>
+<<<<<<< HEAD
+  );
+=======
+</div> <div className="text-xs opacity-60 mt-2" >Admin-only notes hidden.</div> </div>) 
+}</li>) ) 
+}</ul>) 
+}</div> </div>) 
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-43ef
+}
+=======
+);
+}
+}
+>>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75

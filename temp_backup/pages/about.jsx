@@ -1,6 +1,13 @@
 import Layout from '../components/Layout'
 const About = () => {
+<<<<<<< HEAD:temp_backup/pages/about.jsx
   
+=======
+  return (
+    <Layout 
+      title="About Us - Zion Tech Group"
+      description="Learn about Zion Tech Group's mission, vision, and team of expert technology professionals dedicated to transforming businesses through innovative solutions."
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75:pages/about.jsx
     >
       <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
         <main className="container mx-auto px-4 py-12">

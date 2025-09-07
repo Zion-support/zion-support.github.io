@@ -1,3 +1,16 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+
+=======
+>>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
+import React, { useState, useEffect } from 'react',
+import Link from 'next/link';
+import { motion, AnimatePresence } from 'framer-motion';
+import { Menu, ChevronDown, X, Phone, Mail, ArrowRight;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 import {
   Menu,
   ChevronDown,
@@ -55,9 +68,16 @@ import {
   Linkedin,
   Twitter,
   Github,
+<<<<<<< HEAD
 
 
 import {
+=======
+  Youtube,
+  MapPin,;'
+} from 'lucide-react'
+import {}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
   Menu,
   ChevronDown,
   X,
@@ -114,6 +134,7 @@ import {
   Linkedin,
   Twitter,
   Github,
+<<<<<<< HEAD
   Youtube,;
   MapPin,;
 } from 'lucide-react';
@@ -327,6 +348,16 @@ import {
   Youtube,;
   MapPin,;
 } from 'lucide-react';
+=======
+  Youtube,
+  MapPin,;'
+} from 'lucide-react'
+interface NavigationItem {}
+  name: string
+  href: string;  icon?: React.ReactNode;import {}
+  href: string;  icon?: React.ReactNode;import {
+  Menu, ChevronDown, X, Phone, Mail, ArrowRight;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 
 
 
@@ -1215,6 +1246,7 @@ className='lg:hidden bg-slate-800/95 backdrop-blur-md border-t border-slate-700/
             <div className="px-2 pt-2 pb-3 space-y-1">
               {navigationItems.map((item) => (
                 <div key={item.name}>
+<<<<<<< HEAD
                   <button
                     onClick={() => handleDropdownToggle(item && item.name)}
                     className="w-full text-left flex items-center justify-between px-3 py-2 text-base font-medium text-gray-300 hover:text-white hover:bg-slate-700/50 rounded-md transition-colors duration-200";
@@ -1231,6 +1263,16 @@ className='lg:hidden bg-slate-800/95 backdrop-blur-md border-t border-slate-700/
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
+=======
+
+                  <AnimatePresence>
+                    {activeDropdown === item.name && (
+                      <motion.div
+                        initial={{ opacity: 0, height: 0 }}
+                        animate={{ opacity: 1, height: 'auto' }}
+                        exit={{ opacity: 0, height: 0 }}
+                        transition={{ duration: 0.2 }}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
                         className='ml-4 mt-2 space-y-1'
 
                           <Link
@@ -1394,6 +1436,7 @@ export default UltraFuturisticNavigation2047;
 export default UltraFuturisticNavigation2047;  )
 }
 export default UltraFuturisticNavigation2047;
+<<<<<<< HEAD
 
 export default UltraFuturisticNavigation2047;
 )}export default UltraFuturisticNavigation2047;
@@ -1415,3 +1458,47 @@ export default UltraFuturisticNavigation2047;
                         exit={{ opacity: 0, height: 0}}
                         transition = $2;
 export default UltraFuturisticNavigation2047,
+=======
+<<<<<<< HEAD
+
+"
+=======
+] 
+}]
+useEffect ( () => {
+  const handleResize = () => {
+  if (window.innerWidth >= 1024) {
+  window.addEventListener ('resize', handleResize)
+return () => window.removeEventListener ('resize', handleResize) 
+}, [])
+</div> <span className="text-xl font-bold bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent" > Zion Tech Group </span> </a> </div> > <div className= {
+  `p-2 rounded-lg bg-gradient-to-r $ {
+  child.color || 'from-gray-500 to-slate-500' 
+}` 
+}> {
+  child.icon 
+}</div> Featured </span>) 
+}</div> </div> </a>) ) 
+}</div> </motion.div>) 
+}</AnimatePresence> </div>) ) 
+}</div> </a> </div> <Link href="/contact" className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-purple-500 to-blue-500 text-white text-sm font-medium rounded-lg hover:from-purple-600 hover:to-blue-600 transition-all duration-200" > Get Started <ArrowRight className="ml-2 w-4 h-4" /> </a> </div>) : (<Menu className="block h-6 w-6" />) 
+}</button> </div> </div> </div> {
+  /* Mobile Navigation */ 
+}<AnimatePresence> </div> <ChevronDown className= {
+  `w-4 h-4 transition-transform duration-200 $ {
+  activeDropdown === item.name ? 'rotate-180' : '' 
+}` 
+}/> </button> <AnimatePresence> > {
+  item.children?.map ( (child) => (<Link key= {
+  child.name 
+}) ) 
+}</motion.div>) 
+}</AnimatePresence> </div>) ) 
+}</div> </div> <div className="px-3 pt-2" > <Link > Get Started <ArrowRight className="ml-2 w-4 h-4" /> </a> </div> </div> </div> </motion.div>) 
+}</AnimatePresence> </nav>) 
+}
+export default UltraFuturisticNavigation2047
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-43ef
+=======
+>>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75

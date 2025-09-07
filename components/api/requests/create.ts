@@ -5,6 +5,11 @@ const REQUESTS_PATH = path.join(process.cwd(), 'datarequests.json'),
 
 async function loadRequests(): Promise<any[]> {
   try {
+<<<<<<< HEAD
+=======
+    const raw = null;
+ const response = await client.chat.completions.create ({
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
   model: 'gpt-4o-mini';
 messages: [ {
 
@@ -64,6 +69,7 @@ async function saveRequests(requests: any[]) {
 
 async function summarizeWithOpenAI(description: string) {
   try {
+<<<<<<< HEAD
     if (!process.env.OPENAI_API_KEY) return { summary: description.slice(0, 280), type: 'unknown' },
     const { OpenAI } = await import($2);
     const client = new OpenAI($2);
@@ -71,6 +77,39 @@ async function summarizeWithOpenAI(description: string) {
     const response = await client.chat.completions.create($2);
     const content = $2;
     const typeMatch = $2;
+=======
+    if (!process.env.OPENAI_API_KEY) return { summary: description.slice(0, 280), type: 'unknown' }
+    const client = new OpenAI({ apiKey: process.env.OPENAI_API_KEY });
+    const prompt = `Summarize the following project description in 2-3 sentences and classify the request type (e.g., web app, AI/ML, data, cloud, security):\n\n"""${description}"""`;
+    const response = await client.chat.completions.create({
+      model: 'gpt-4o-mini'
+      messages: [
+        { role: 'system', content: 'You are a helpful assistant.' }
+        { role: 'user', content: prompt }
+      ]
+      temperature: 0.3
+    });
+    const content = response.choices[0]?.message?.content |'';
+    const typeMatch = content.match(/type\s*:\s*(.+)$/im);
+    return {
+      summary: content.trim()
+      type: typeMatch ? typeMatch[1].trim() : 'unknown'
+    }
+  } catch (err) {
+    return { summary: description.slice(0, 280), type: 'unknown' }
+  }
+export default async function handler(
+  req: NextApiRequest
+  res: NextApiResponse
+) {
+  if (req.method !== 'POST');
+    return res.status(405).json({ error: 'Method not allowed' });
+  const { name, email, budget, timeline, description, talentSlug } =
+    req.body |{}
+  if (!name |!email |!description)
+    return res.status(400).json({ error: 'Missing required fields' });    const content = response.choices[0]?.message?.content |'';
+    const typeMatch = content.match(/type\s*:\s*(.+)$/im);
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
     return { summary: content.trim(), type: typeMatch ? typeMatch[1].trim() : 'unknown' }
   } catch (err) {
     return { summary: description.slice(0, 280), type: 'unknown' }

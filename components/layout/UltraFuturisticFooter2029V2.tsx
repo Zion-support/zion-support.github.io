@@ -1,4 +1,12 @@
+<<<<<<< HEAD
 import React from 'react';
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+import React from 'react',
+>>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 
@@ -318,11 +326,328 @@ const contactInfo = $2;
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com'
+<<<<<<< HEAD
 },
 
 const serviceCategories = $2;
     icon: Brain,
     color: 'from-violet-600 via-purple-600 to-indigo-600',
+=======
+}
+<<<<<<< HEAD
+ } from 'lucide-react';
+
+const contactInfo = null;
+{name: 'AI Emotional Intelligence'}
+  href: '/services/ai-emotional-intelligence-platform';}
+}
+{name: 'AI Creativity Orchestrator'}
+  href: '/services/ai-creativity-orchestrator';}
+}
+{name: 'AI Autonomous Business Manager'}
+  href: '/services/ai-autonomous-business-manager';}
+}];
+}
+{title: 'Quantum Technology',
+  icon: Globe, color: 'from-indigo-600 via-blue-600 to-cyan-600',
+  services: [ {name: 'Quantum Internet Security'}
+  href: '/services/quantum-internet-security-gateway';}
+}
+{name: 'Biotech DNA Computing'}
+  href: '/services/biotech-dna-computing-platform';}
+}
+{name: 'Quantum Financial Trading'}
+  href: '/services/quantum-financial-trading-platform';}
+}
+{name: 'Quantum Creativity Studio'}
+  href: '/services/quantum-creativity-studio';}
+}];
+
+=======
+const serviceCategories = [ {
+  title: 'AI & Consciousness', icon: Brain, color: 'from-violet-600 via-purple-600 to-indigo-600', services: [ {
+  name: 'AI Consciousness Evolution', href: '/services/ai-consciousness-evolution-platform' 
+}
+{
+  name: 'AI Emotional Intelligence', href: '/services/ai-emotional-intelligence-platform' 
+}
+{
+  name: 'AI Creativity Orchestrator', href: '/services/ai-creativity-orchestrator' 
+}
+{
+  name: 'AI Autonomous Business Manager', href: '/services/ai-autonomous-business-manager' 
+}] 
+}
+{
+  title: 'Quantum Technology', icon: Globe, color: 'from-indigo-600 via-blue-600 to-cyan-600', services: [ {
+  name: 'Quantum Internet Security', href: '/services/quantum-internet-security-gateway' 
+}
+{
+  name: 'Biotech DNA Computing', href: '/services/biotech-dna-computing-platform' 
+}
+{
+  name: 'Quantum Financial Trading', href: '/services/quantum-financial-trading-platform' 
+}
+{
+  name: 'Quantum Creativity Studio', href: '/services/quantum-creativity-studio' 
+}] 
+}
+{
+  title: 'Space & Metaverse', icon: Rocket, color: 'from-teal-600 via-emerald-600 to-green-600', services: [ {
+  name: 'Space Mining Automation', href: '/services/space-mining-automation-platform' 
+}
+{
+  name: 'Metaverse Digital Reality', href: '/services/metaverse-digital-reality-platform' 
+}
+{
+  name: 'AI Predictive Health', href: '/services/ai-predictive-health-analytics' 
+}
+{
+  name: 'Virtual Event Holograms', href: '/services/virtual-event-hologram-platform' 
+}] 
+}
+{
+  title: 'Enterprise IT', icon: Cpu, color: 'from-blue-600 via-cyan-600 to-teal-600', services: [ {
+  name: 'AI Business Intelligence', href: '/services/ai-business-intelligence-suite' 
+}
+{
+  name: 'Smart Supply Chain', href: '/services/smart-supply-chain-optimization' 
+}
+{
+  name: 'Intelligent HR Management', href: '/services/intelligent-hr-management-system' 
+}
+{
+  name: 'Smart Financial Management', href: '/services/smart-financial-management-platform' 
+}] 
+}]
+const footerSections = [ {
+  title: 'Services', links: [ {
+  name: 'AI & Machine Learning', href: '/services/ai-ml' 
+}
+{
+  name: 'Quantum Computing', href: '/services/quantum-computing' 
+}
+{
+  name: 'Space Technology', href: '/services/space-technology' 
+}
+{
+  name: 'Enterprise IT', href: '/services/enterprise-it' 
+}
+{
+  name: 'Micro SAAS', href: '/services/micro-saas' 
+}
+{
+  name: 'Cybersecurity', href: '/services/cybersecurity' 
+}] 
+}
+{
+  title: 'Solutions', links: [ {
+  name: 'AI Consciousness', href: '/solutions/ai-consciousness' 
+}
+{
+  name: 'Quantum Security', href: '/solutions/quantum-security' 
+}
+{
+  name: 'Space Mining', href: '/solutions/space-mining' 
+}
+{
+  name: 'Metaverse Platform', href: '/solutions/metaverse' 
+}
+{
+  name: 'Business Intelligence', href: '/solutions/business-intelligence' 
+}
+{
+  name: 'Supply Chain AI', href: '/solutions/supply-chain-ai' 
+}] 
+}
+{
+  title: 'Industries', links: [ {
+  name: 'Healthcare', href: '/industries/healthcare' 
+}
+{
+  name: 'Finance', href: '/industries/finance' 
+}
+{
+  name: 'Manufacturing', href: '/industries/manufacturing' 
+}
+{
+  name: 'Retail', href: '/industries/retail' 
+}
+{
+  name: 'Education', href: '/industries/education' 
+}
+{
+  name: 'Government', href: '/industries/government' 
+}] 
+}
+{
+  title: 'Resources', links: [ {
+  name: 'Documentation', href: '/docs' 
+}
+{
+  name: 'API Reference', href: '/api' 
+}
+{
+  name: 'Case Studies', href: '/case-studies' 
+}
+{
+  name: 'White Papers', href: '/white-papers' 
+}
+{
+  name: 'Blog', href: '/blog' 
+}
+{
+  name: 'Research', href: '/research' 
+}] 
+}]
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-43ef
+<motion.div initial= {
+  {
+    title: 'AI & Consciousness',
+  icon: Brain,
+    color: 'from-violet-600 via-purple-600 to-indigo-600',
+  services: [
+=======
+>>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
+{
+  name: 'AI Emotional Intelligence', href: '/services/ai-emotional-intelligence-platform'
+}
+{
+  name: 'AI Creativity Orchestrator', href: '/services/ai-creativity-orchestrator'
+}
+{
+  name: 'AI Autonomous Business Manager', href: '/services/ai-autonomous-business-manager'
+}]
+}
+{
+  title: 'Quantum Technology', icon: Globe, color: 'from-indigo-600 via-blue-600 to-cyan-600', services: [ {
+  name: 'Quantum Internet Security', href: '/services/quantum-internet-security-gateway'
+}
+{
+  name: 'Biotech DNA Computing', href: '/services/biotech-dna-computing-platform'
+}
+{
+  name: 'Quantum Financial Trading', href: '/services/quantum-financial-trading-platform'
+}
+{
+  name: 'Quantum Creativity Studio', href: '/services/quantum-creativity-studio'
+}]
+}
+{
+  title: 'Space & Metaverse', icon: Rocket, color: 'from-teal-600 via-emerald-600 to-green-600', services: [ {
+  name: 'Space Mining Automation', href: '/services/space-mining-automation-platform'
+}
+{
+  name: 'Metaverse Digital Reality', href: '/services/metaverse-digital-reality-platform'
+}
+{
+  name: 'AI Predictive Health', href: '/services/ai-predictive-health-analytics'
+}
+{
+  name: 'Virtual Event Holograms', href: '/services/virtual-event-hologram-platform'
+}]
+}
+{
+  title: 'Enterprise IT', icon: Cpu, color: 'from-blue-600 via-cyan-600 to-teal-600', services: [ {
+  name: 'AI Business Intelligence', href: '/services/ai-business-intelligence-suite'
+}
+{
+  name: 'Smart Supply Chain', href: '/services/smart-supply-chain-optimization'
+}
+{
+  name: 'Intelligent HR Management', href: '/services/intelligent-hr-management-system'
+}
+{
+  name: 'Smart Financial Management', href: '/services/smart-financial-management-platform'
+}]
+}];
+const footerSections = [ {
+  title: 'Services', links: [ {
+  name: 'AI & Machine Learning', href: '/services/ai-ml'
+}
+{
+  name: 'Quantum Computing', href: '/services/quantum-computing'
+}
+{
+  name: 'Space Technology', href: '/services/space-technology'
+}
+{
+  name: 'Enterprise IT', href: '/services/enterprise-it'
+}
+{
+  name: 'Micro SAAS', href: '/services/micro-saas'
+}
+{
+  name: 'Cybersecurity', href: '/services/cybersecurity'
+}]
+}
+{
+  title: 'Solutions', links: [ {
+  name: 'AI Consciousness', href: '/solutions/ai-consciousness'
+}
+{
+  name: 'Quantum Security', href: '/solutions/quantum-security'
+}
+{
+  name: 'Space Mining', href: '/solutions/space-mining'
+}
+{
+  name: 'Metaverse Platform', href: '/solutions/metaverse'
+}
+{
+  name: 'Business Intelligence', href: '/solutions/business-intelligence'
+}
+{
+  name: 'Supply Chain AI', href: '/solutions/supply-chain-ai'
+}]
+}
+{
+  title: 'Industries', links: [ {
+  name: 'Healthcare', href: '/industries/healthcare'
+}
+{
+  name: 'Finance', href: '/industries/finance'
+}
+{
+  name: 'Manufacturing', href: '/industries/manufacturing'
+}
+{
+  name: 'Retail', href: '/industries/retail'
+}
+{
+  name: 'Education', href: '/industries/education'
+}
+{
+  name: 'Government', href: '/industries/government'
+}]
+}
+{
+  title: 'Resources', links: [ {
+  name: 'Documentation', href: '/docs'
+}
+{
+  name: 'API Reference', href: '/api'
+}
+{
+  name: 'Case Studies', href: '/case-studies'
+}
+{
+  name: 'White Papers', href: '/white-papers'
+}
+{
+  name: 'Blog', href: '/blog'
+}
+{
+  name: 'Research', href: '/research'
+}]
+}];
+<motion.div initial= {  {  website: 'https://ziontechgroup.com'
+}
+const serviceCategories = [
+    title: 'AI & Consciousness'
+    icon: Brain
+    color: 'from-violet-600 via-purple-600 to-indigo-600'
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
     services: [
       { name: 'AI Consciousness Evolution', href: '/services/ai-consciousness-evolution-platform' },
       { name: 'AI Emotional Intelligence', href: '/services/ai-emotional-intelligence-platform' },
@@ -631,6 +956,7 @@ function UltraFuturisticFooter2029V2() {return (<div className="absolute inset-0
                   <span className="text-sm">{contactInfo.website}</span>;
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
+<<<<<<< HEAD
             >;
 <Link href='/' className='flex items-center space-x-3 mb-6 group'>;
                 <div className='relative'>;
@@ -699,10 +1025,53 @@ function UltraFuturisticFooter2029V2() {return (<div className="absolute inset-0
                 <div className="flex items-center space-x-3 text-gray-300">
                   <Globe className="w-4 h-4 text-cyan-400" />
                   <span className="text-sm">{contactInfo.website}</span>
+=======
+            >
+<Link href='/' className='flex items-center space-x-3 mb-6 group'>
+                <div className='relative'>
+                  <div className='w-12 h-12 bg-gradient-to-r from-cyan-400 to-purple-500 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300'>
+                    <Rocket className='w-7 h-7 text-white' />
+                  </div>
+                  <div className='absolute inset-0 bg-gradient-to-r from-cyan-400 to-purple-500 rounded-xl blur-lg opacity-50 group-hover:opacity-75 transition-opacity duration-300' />
+                </div>
+                <div>
+                  <h3 className='text-xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent'>
+                    Zion Tech Group
+                  </h3>
+                  <p className='text-sm text-gray-400'>
+                    Future Technology Solutions
+                  </p>
+                </div>
+              </Link>
+              <p className='text-gray-300 mb-6 leading-relaxed'>
+                Leading the future with cutting-edge AI, quantum computing
+                space technology, and innovative micro SAAS solutions.
+                Transforming businesses through next-generation technology.
+              </p>
+              {/* Contact Info */}
+              <div className='space-y-3'>
+                <div className='flex items-center space-x-3 text-gray-300'>
+                  <Phone className='w-4 h-4 text-cyan-400' />
+                  <span className='text-sm'>{contactInfo.mobile}</span>
+                </div>
+                <div className='flex items-center space-x-3 text-gray-300'>
+                  <Mail className='w-4 h-4 text-cyan-400' />
+                  <span className='text-sm'>{contactInfo.email}</span>
+                </div>
+                <div className='flex items-center space-x-3 text-gray-300'>
+                  <MapPin className='w-4 h-4 text-cyan-400' />
+                  <span className='text-sm'>{contactInfo.address}</span>
+                </div>
+                <div className='flex items-center space-x-3 text-gray-300'>
+                  <Globe className='w-4 h-4 text-cyan-400' />
+                  <span className='text-sm'>{contactInfo.website}</span>
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
                 </div>
               </div>
             </motion.div>
           </div>
+<<<<<<< HEAD
               <div className='space-y-3'>;
                 <div className='flex items-center space-x-3 text-gray-300'>;
                   <Phone className='w-4 h-4 text-cyan-400' />;
@@ -807,6 +1176,8 @@ function UltraFuturisticFooter2029V2() {return (<div className="absolute inset-0
 <h4 className='text-lg font-semibold text-white mb-6 flex items-center'>;
                 <div className='w-2 h-2 bg-gradient-to-r from-cyan-400 to-purple-500 rounded-full mr-3' />;
 
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
           {/* Service Categories */}
           {footerSections.map((section, index) => (
             <motion.div

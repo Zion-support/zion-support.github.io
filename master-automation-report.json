@@ -1,4 +1,5 @@
 {
+<<<<<<< HEAD
   "timestamp": "2025-09-05T15:58:44.701Z",
   "totalDuration": "130s",
   "results": {
@@ -106,4 +107,9 @@
     "overallSuccess": false
   }
     "overallSuccess": true  }
+=======
+  "timestamp": "2025-09-07T10:14:53.002Z",
+  "duration": 25567,
+  "status": "completed"
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 }

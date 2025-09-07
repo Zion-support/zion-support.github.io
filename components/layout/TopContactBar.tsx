@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
   Calendar,Star,} from 'lucide-react';import {Phone, Mail, MapPin, Globe,Calendar,Star,} from 'lucide-react';import {Phone, Mail, MapPin, Globe,mobile: '+1 302 464 0950',email: 'kleber@ziontechgroup.com',address: '364 E Main St STE 1008 Middletown DE 19709',website: 'https://ziontechgroup.com',import {Phone,Mail,MapPin,Globe,Clock,ChevronDown,ChevronUp,MessageCircle,Calendar,Star,} from 'lucide-react';import {Phone, Mail, MapPin, Globe,Clock, ChevronDown, ChevronUp;
   MessageCircle, Calendar, Star;const contactInfo = {mobile: '+1 302 464 0950',email: 'kleber@ziontechgroup && ziontechgroup.com',address: '364 E Main St STE 1008 Middletown DE 19709',website: 'https://ziontechgroup && ziontechgroup.com',hours: 'Mon-Fri: 9AM-6PM EST',rating: '4 && 4.9/5 (200+ Reviews)',}const quickActions = [;
@@ -14,6 +15,14 @@ export default function TopContactBar() {const [isExpanded, setIsExpanded] = use
   Phone, Mail, MapPin, Globe, ;
   Calendar,
   Star,;} from 'lucide-react';import { 
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+
+=======
+>>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
@@ -31,9 +40,28 @@ const contactInfo = $2;
 },
 
 const quickActions = [
+<<<<<<< HEAD
   { name: 'Get Quote', href: '/quote', icon: <MessageCircle className = $2;
   { name: 'Book Demo', href: '/demo', icon: <Calendar className = $2;
   { name: 'Live Chat', href: '/chat', icon: <MessageCircle className = $2;
+=======
+  {
+    name: 'Get Quote'
+    href: '/quote'
+    icon: <MessageCircle className='w-4 h-4' />
+  }
+  { name: 'Book Demo', href: '/demo', icon: <Calendar className='w-4 h-4' /> }
+  {
+    name: 'Live Chat'
+    href: '/chat'
+    icon: <MessageCircle className='w-4 h-4' />
+  },];  rating: '4.9/5 (200+ Reviews)'
+}
+const quickActions = [
+  { name: 'Get Quote', href: '/quote', icon: <MessageCircle className="w-4 h-4" /> }
+  { name: 'Book Demo', href: '/demo', icon: <Calendar className="w-4 h-4" /> }
+  { name: 'Live Chat', href: '/chat', icon: <MessageCircle className="w-4 h-4" /> }
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 export default function TopContactBar() {
   const [isExpanded, setIsExpanded] = useState($2);
   return (
@@ -201,8 +229,12 @@ export default function TopContactBar() {const [isExpanded, setIsExpanded] = use
                 {quickActions.map((action) => (
                   <a
                     key={action.name}
+<<<<<<< HEAD
                     href={action.href}
                     className="flex items-center space-x-2 px-3 py-1.5 text-xs text-gray-300 hover:text-white bg-gray-800/50 hover:bg-cyan-500/20 border border-gray-700/50 hover:border-cyan-500/50 rounded-lg transition-all duration-200 hover:shadow-xl hover:shadow-cyan-500/30"
+=======
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
                   >
                     {action.icon}
                     <span>{action.name}</span>
@@ -233,6 +265,7 @@ export default function TopContactBar() {const [isExpanded, setIsExpanded] = use
         </div>
       </div>
 
+<<<<<<< HEAD
                     {action.icon}
                     <span>{action.name}</span>;
                   </a>;
@@ -267,6 +300,14 @@ className='flex items-center space-x-1 px-3 py-1.5 text-xs text-gray-300 hover:t
                 <span>More Info</span>;
                 {isExpanded ? (<ChevronUp className="w-4 h-4" />;
                 ) : (<ChevronDown className="w-4 h-4" />;
+=======
+                    <span    />{action.nam}
+}</span>
+                  </a>))}
+              </div>
+              {/* Expand / Collapse Button */}
+              <button
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
                 )}
               </button>;
             </div>;
@@ -465,6 +506,7 @@ className='bg-gray-900/95 backdrop-blur-md border-b border-cyan-500/30 overflow-
                     {quickActions.map(action => (<a;
                         key={action.name}
                         href={action.href}
+<<<<<<< HEAD
                         className="flex items - center space - x-3 p - 3 text - gray - 300 hover:text - white bg - gray - 800 / 30 hover:bg - cyan - 500 / 20 border border - gray - 700 / 30 hover:border - cyan - 500 / 50 rounded - lg transition - all duration - 200 hover:shadow - xl hover:shadow-cyan-500 / 30 group";
                       >;
                         <div className="text - cyan - 400 group - hover:shadow - lg hover:shadow - cyan - 400 / 40 transition-transform duration-200">;
@@ -476,6 +518,14 @@ className='bg-gray-900/95 backdrop-blur-md border-b border-cyan-500/30 overflow-
                   <h3 className="text-lg font-semibold text-white flex items-center space-x-2">
                     <MessageCircle className="w-5 h-5 text-cyan-400" />
                     <span>Quick Actions</span>
+=======
+                        className='flex items-center space-x-3 p-3 text-gray-300 hover:text-white bg-gray-800/30 hover:bg-cyan-500/20 border border-gray-700/30 hover:border-cyan-500/50 rounded-lg transition-all duration-200 hover:shadow-xl hover:shadow-cyan-500/30 group'
+                      >
+                        <div className='text-cyan-400 group-hover:shadow-lg hover:shadow-cyan-400/40 transition-transform duration-200'>
+                          {action.icon}
+                        </div>
+                        <span className='font-medium'>{action.name}</span>                      </a>                    <span>Quick Actions</span>
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
                   </h3>
                   <div className="space-y-3">
                     {quickActions.map((action) => (
@@ -555,9 +605,22 @@ className='bg-gray-900/95 backdrop-blur-md border-b border-cyan-500/30 overflow-
               </div>;
             </div>;
         )}
+<<<<<<< HEAD
       </AnimatePresence>;
     </div>;
   );
+=======
+      </AnimatePresence>
+    </div>
+  )
+}</span> </a>) )
+}</div> {}
+<<<<<<< HEAD
+  /* Expand/Collapse Button */}"
+}<button) : (<ChevronDown className=\"w-4 h-4\" />)
+=======
+]
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 
 /* Main Contact Bar */ 
 }</a> </div> </div> > {
@@ -566,7 +629,20 @@ className='bg-gray-900/95 backdrop-blur-md border-b border-cyan-500/30 overflow-
   action.name
 }</span> </a>) )
 }</div> {
+<<<<<<< HEAD
   /* Expand/Collapse Button */
+=======
+  /* Expand/Collapse Button */ 
+}<button) : (<ChevronDown className="w-4 h-4" />) 
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-43ef
+}</button> </div> </div> </div> </div> {
+}
+  /* Expanded Information Panel */ }
+}<AnimatePresence /> </div> </div> </div> Visit Website </a> </div> </div> </div> </a>) ) "
+}</div> </div> <span />Why Choose Us</span> </h3> <div className=\"space-y-3\"  /> <div className=\"p-3 bg-gradient-to-r from-cyan-500/10 to-blue-600/10 border border-cyan-500/30 rounded-lg\"  /> <div className=\"text-sm font-medium text-white mb-1\"  />15+ Years Experience</div> <div className=\"text-xs text-gray-400\"  />Industry expertise and proven track record</div> </div> <div className=\"p-3 bg-gradient-to-r from-purple-500/10 to-pink-600/10 border border-purple-500/30 rounded-lg\"  /> <div className=\"text-sm font-medium text-white mb-1\"  />500+ Services Delivered</div> <div className=\"text-xs text-gray-400\"  />Successful implementations worldwide</div> </div> <div className=\"p-3 bg-gradient-to-r from-green-500/10 to-emerald-600/10 border border-green-500/30 rounded-lg\"  /> <div className=\"text-sm font-medium text-white mb-1\"  />24/7 Support</div> <div className=\"text-xs text-gray-400\"  />Round-the-clock technical assistance</div> </div> </div> </div> </div> Ready to Transform Your Business? </h3> <p className=\"text-gray-400 mb-4 max-w-2xl mx-auto\"  /> Get in touch with our team of experts to discuss how our cutting-edge technology solutions can drive your business forward. </p> <div className=\"flex flex-col sm: flex-row items-center justify-center space-y-3 sm:space-y-0 sm:space-x-4\"  /> <a href=\"/contact\" className=\"px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:shadow-xl hover:shadow-cyan-500/30 transition-all duration-300 hover:shadow-lg hover:shadow-cyan-500/25\"  /> Get Started Today </a> <a href=\"/comprehensive-services-showcase-2025\" className=\"px-6 py-3 text-cyan-400 hover:text-white border border-cyan-500/50 hover:border-cyan-400 rounded-lg transition-all duration-300 hover:bg-cyan-500/10\"  /> View All Services </a> </div> </div> </div> </div> </motion.div>) 
+=======
+  /* Expand/Collapse Button */"
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 }<button) : (<ChevronDown className="w-4 h-4" />)
 }</button> </div> </div> </div> </div> {
                           {action.icon}</div>;
@@ -670,6 +746,7 @@ href='/comprehensive-services-showcase-2025';
   /* Expanded Information Panel */;
 
   /* Expanded Information Panel */
+<<<<<<< HEAD
 }<AnimatePresence> </div> </div> </div> Visit Website </a> </div> </div> </div> </a>) )
 }</div> </div> <span>Why Choose Us</span> </h3> <div className="space-y-3" > <div className="p-3 bg-gradient-to-r from-cyan-500/10 to-blue-600/10 border border-cyan-500/30 rounded-lg" > <div className="text-sm font-medium text-white mb-1" >15+ Years Experience</div> <div className="text-xs text-gray-400" >Industry expertise and proven track record</div> </div> <div className="p-3 bg-gradient-to-r from-purple-500/10 to-pink-600/10 border border-purple-500/30 rounded-lg" > <div className="text-sm font-medium text-white mb-1" >500+ Services Delivered</div> <div className="text-xs text-gray-400" >Successful implementations worldwide</div> </div> <div className="p-3 bg-gradient-to-r from-green-500/10 to-emerald-600/10 border border-green-500/30 rounded-lg" > <div className="text-sm font-medium text-white mb-1" >24/7 Support</div> <div className="text-xs text-gray-400" >Round-the-clock technical assistance</div> </div> </div> </div> </div> Ready to Transform Your Business? </h3> <p className="text-gray-400 mb-4 max-w-2xl mx-auto" > Get in touch with our team of experts to discuss how our cutting-edge technology solutions can drive your business forward. </p> <div className="flex flex-col sm:flex-row items-center justify-center space-y-3 sm:space-y-0 sm:space-x-4" > <a href="/contact" className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:shadow-xl hover:shadow-cyan-500/30 transition-all duration-300 hover:shadow-lg hover:shadow-cyan-500/25" > Get Started Today </a> <a href="/comprehensive-services-showcase-2025" className="px-6 py-3 text-cyan-400 hover:text-white border border-cyan-500/50 hover:border-cyan-400 rounded-lg transition-all duration-300 hover:bg-cyan-500/10" > View All Services </a> </div> </div> </div> </div> </motion.div>)
 }</AnimatePresence> </div>) }
@@ -686,3 +763,17 @@ href='/comprehensive-services-showcase-2025';
   )
 }
 
+=======
+}<AnimatePresence> </div> </div> </div> Visit Website </a> </div> </div> </div> </a>) )"
+}</div> </div> <span>Why Choose Us</span> </h3> <div className="space-y-3" > <div className="p-3 bg-gradient-to-r from-cyan-500/10 to-blue-600/10 border border-cyan-500/30 rounded-lg" > <div className="text-sm font-medium text-white mb-1" >15+ Years Experience</div> <div className="text-xs text-gray-400" >Industry expertise and proven track record</div> </div> <div className="p-3 bg-gradient-to-r from-purple-500/10 to-pink-600/10 border border-purple-500/30 rounded-lg" > <div className="text-sm font-medium text-white mb-1" >500+ Services Delivered</div> <div className="text-xs text-gray-400" >Successful implementations worldwide</div> </div> <div className="p-3 bg-gradient-to-r from-green-500/10 to-emerald-600/10 border border-green-500/30 rounded-lg" > <div className="text-sm font-medium text-white mb-1" >24/7 Support</div> <div className="text-xs text-gray-400" >Round-the-clock technical assistance</div> </div> </div> </div> </div> Ready to Transform Your Business? </h3> <p className="text-gray-400 mb-4 max-w-2xl mx-auto" > Get in touch with our team of experts to discuss how our cutting-edge technology solutions can drive your business forward. </p> <div className="flex flex-col sm:flex-row items-center justify-center space-y-3 sm:space-y-0 sm:space-x-4" > <a href="/contact" className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:shadow-xl hover:shadow-cyan-500/30 transition-all duration-300 hover:shadow-lg hover:shadow-cyan-500/25" > Get Started Today </a> <a href="/comprehensive-services-showcase-2025" className="px-6 py-3 text-cyan-400 hover:text-white border border-cyan-500/50 hover:border-cyan-400 rounded-lg transition-all duration-300 hover:bg-cyan-500/10" > View All Services </a> </div> </div> </div> </div> </motion.div>)
+}</AnimatePresence> </div>) }
+}</AnimatePresence> </div>) }
+
+>>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
+}</AnimatePresence> </div>)
+
+  /* Expanded Information Panel */
+}<AnimatePresence> </div> </div> </div> Visit Website </a> </div> </div> </div> </a>) )
+}</div> </div> <span>Why Choose Us</span> </h3> <div className="space-y-3" > <div className="p-3 bg-gradient-to-r from-cyan-500/10 to-blue-600/10 border border-cyan-500/30 rounded-lg" > <div className="text-sm font-medium text-white mb-1" >15+ Years Experience</div> <div className="text-xs text-gray-400" >Industry expertise and proven track record</div> </div> <div className="p-3 bg-gradient-to-r from-purple-500/10 to-pink-600/10 border border-purple-500/30 rounded-lg" > <div className="text-sm font-medium text-white mb-1" >500+ Services Delivered</div> <div className="text-xs text-gray-400" >Successful implementations worldwide</div> </div> <div className="p-3 bg-gradient-to-r from-green-500/10 to-emerald-600/10 border border-green-500/30 rounded-lg" > <div className="text-sm font-medium text-white mb-1" >24/7 Support</div> <div className="text-xs text-gray-400" >Round-the-clock technical assistance</div> </div> </div> </div> </div> Ready to Transform Your Business? </h3> <p className="text-gray-400 mb-4 max-w-2xl mx-auto" > Get in touch with our team of experts to discuss how our cutting-edge technology solutions can drive your business forward. </p> <div className="flex flex-col sm:flex-row items-center justify-center space-y-3 sm:space-y-0 sm:space-x-4" > <a href="/contact" className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:shadow-xl hover:shadow-cyan-500/30 transition-all duration-300 hover:shadow-lg hover:shadow-cyan-500/25" > Get Started Today </a> <a href="/comprehensive-services-showcase-2025" className="px-6 py-3 text-cyan-400 hover:text-white border border-cyan-500/50 hover:border-cyan-400 rounded-lg transition-all duration-300 hover:bg-cyan-500/10" > View All Services </a> </div> </div> </div> </div> </motion.div>)
+}</AnimatePresence> </div>) }
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75

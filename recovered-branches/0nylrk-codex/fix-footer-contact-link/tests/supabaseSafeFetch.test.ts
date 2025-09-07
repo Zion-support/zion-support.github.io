@@ -1,3 +1,8 @@
+<<<<<<< HEAD
+=======
+import { checkOnline, safeFetch  } from '@/integrations/supabase/client';
+import { vi  } from 'vitest';
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 // Test that checkOnline returns false when navigator is offline
 it('checkOnline returns false when navigator is offline', async () => {
   Object.defineProperty(window, 'navigator', {
@@ -43,3 +48,8 @@ it('safeFetch throws when fetch rejects', async () => {
   vi.spyOn(global, 'fetch').mockRejectedValue(new Error('Network error')),
   await expect(safeFetch('https: //example.com')).rejects.toThrow('Failed to connect to Supabase')
 }),
+<<<<<<< HEAD
+=======
+;
+;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75

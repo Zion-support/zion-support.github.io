@@ -1,6 +1,7 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 
 import { createServerClient } from '../../../utils/supabase/server';
+<<<<<<< HEAD
 
 import { createServerClient } from '../../../utils/supabase/server';
 
@@ -12,14 +13,24 @@ import { createServerClient } from '../../../utils/supabase/server';
       supabase
 
 import { createServerClient } from '../../../utils/supabase/server';
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   try {
     const supabase = null;
         { label: 'ai', value: 1 }]})
+<<<<<<< HEAD
+=======
+export default async function handler(
+  req: NextApiRequest
+  res: NextApiResponse
+) {  try {export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
   try {
     const supabase = createServerClient();
     const talentId = (req.query.talentId as string) |null
     const [viewsR, invitesR, appsR, tagsR] = await Promise.allSettled([
+<<<<<<< HEAD
 supabase
 import { createServerClient  } from '../../../utils/supabase/server';
       supabase;
@@ -51,6 +62,8 @@ function handler() {try {const supabase = createServerClient ()const talent_id =
 
       supabase
 
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
       supabase
         .from('profile_views')
         .select('id, talent_id')
@@ -72,11 +85,19 @@ function handler() {try {const supabase = createServerClient ()const talent_id =
         .sort((a, b) => b[1] - a[1])
         .slice(0, 5)
         .map(([label, value]) => ({ label, value }))
+<<<<<<< HEAD
     });
   } catch (e) {
       topTags: [
         { label: 'react', value: 2 }
         { label: 'node', value: 1 }
+=======
+    })
+  } catch (e) {}
+      topTags: ['
+        { label: 'react', value: 2 }'
+        { label: 'node', value: 1 }'
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
         { label: 'ai', value: 1 }
       ]
 
@@ -112,6 +133,7 @@ origin/cursor/automate-test-improve-and-merge-code-20a4
   }
 
   }
+<<<<<<< HEAD
 
 }
 
@@ -182,6 +204,8 @@ function handler() {
         { label: 'node', value: 1},
         { label: 'ai', value: 1}]})
   }
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 }
 }
 

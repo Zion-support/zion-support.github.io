@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
@@ -80,15 +81,53 @@ import { ArrowRight;
   Globe; } from 'lucide-react';
   Users, Zap, Shield, Clock, Check, Brain;
   Rocket, Dna, DollarSign, Lock, Globe;
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+
+=======
+>>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 import React, { useState } from 'react';
 import { motion, AnimatePresence  } from 'framer-motion';
 import { ArrowRight, ExternalLink, Star, TrendingUp;
   Users, Zap, Shield, Clock, Check, Brain;
+<<<<<<< HEAD
   Rocket, Dna, DollarSign, Lock, Globe;
   } from 'lucide-react';
 interface UltraAdvancedServiceCardProps  {import {ArrowRight,ExternalLink,Star,TrendingUp,Users,Zap,Shield,Clock,Check,Brain,Rocket,Dna,DollarSign,Lock,Globe,} from 'lucide-react';
   Users, Zap, Shield, Clock, Check, Brain;
   Rocket, Dna, DollarSign, Lock, Globe;interface UltraAdvancedServiceCardProps  {service: {id: string;
+=======
+  Rocket, Dna, DollarSign, Lock, Globe
+ } from 'lucide-react';
+
+import {
+  ArrowRight
+  ExternalLink
+  Star
+  TrendingUp
+  Users
+  Zap
+  Shield
+  Clock
+  Check
+  Brain
+  Rocket
+  Dna
+  DollarSign
+  Lock
+  Globe;} from 'lucide-react';
+interface UltraAdvancedServiceCardProps {
+  service: {import {
+  ArrowRight, ExternalLink, Star, TrendingUp
+  Users, Zap, Shield, Clock, Check, Brain;
+  Rocket, Dna, DollarSign, Lock, Globe
+interface UltraAdvancedServiceCardProps {
+  service: {
+    id: string;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
     name: string;
     tagline: string;
     price: string;
@@ -97,6 +136,7 @@ interface UltraAdvancedServiceCardProps  {import {ArrowRight,ExternalLink,Star,T
     features: string[];
     popular: boolean;
     icon: string;
+<<<<<<< HEAD
     color: string;website: string;
     }reviews: number;
   }service: {id: string,name: string,tagline: string,price: string,period: string,description: string,features: string[],popular: boolean,icon: string,color: string,textColor: string,link: string,marketPosition: string,targetAudience: string,trialDays: number,setupTime: string,category: string,realService: boolean,technology: string[],integrations: string[],useCases: string[],roi: string,competitors: string[],marketSize: string,growthRate: string,variant: string,contactInfo: {mobile: string,email: string,address: string,website: string;
@@ -106,6 +146,9 @@ interface UltraAdvancedServiceCardProps  {import {ArrowRight,ExternalLink,Star,T
     launchDate: string;
     customers: number;
     rating: number;
+=======
+    color: string;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
     textColor: string;
     link: string;
     marketPosition: string;
@@ -122,6 +165,7 @@ interface UltraAdvancedServiceCardProps  {import {ArrowRight,ExternalLink,Star,T
     marketSize: string;
     growthRate: string;
     variant: string;
+<<<<<<< HEAD
     contactInfo: {mobile: string;
       email: string;
       address: string;
@@ -131,10 +175,17 @@ interface UltraAdvancedServiceCardProps  {import {ArrowRight,ExternalLink,Star,T
     launchDate: string;
     customers: number;
     color: string;
+=======
+    contactInfo: {
+      mobile: string;
+      email: string;
+      address: string;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 
       website: string;
     }
 
+<<<<<<< HEAD
 
     reviews: number;
   };
@@ -180,11 +231,106 @@ interface UltraAdvancedServiceCardProps {
   }
 }
 const UltraAdvancedServiceCard: React.FC<UltraAdvancedServiceCardProps> = ({ service }) => {const [isExpanded, setIsExpanded] = useState(false)const [isHovered, setIsHovered]  = useState(false)if (category.includes('Quantum')) return <Zap className="w-4 h-4" />;
+=======
+    realImplementation: boolean;
+    implementationDetails: string;
+    launchDate: string;
+    customers: number;
+    rating: number;
+
+    reviews: number;
+  }
+      website: string
+    realImplementation: boolean
+    implementationDetails: string
+    launchDate: string
+    customers: number
+    rating: number
+const UltraAdvancedServiceCard: React.FC<UltraAdvancedServiceCardProps    /> = ({ service   }
+}) => {
+
+  const [isExpanded, setIsExpanded] = useState(false)
+  const contentVariants = {
+    hidden: { opacity: 0, height: 0 },
+    visible: {;'
+      height: 'auto',
+      transition: {
+        duration: 0 && 0.5,;'
+        ease: 'easeOut' as const,
+      },
+'
+          isHovered ? 'opacity-100' : 'opacity-50';'
+        ease: 'ease_out' as const,
+      },
+    },
+      {/* Glow Effect */}
+      <div  return (
+    <motion.div;"
+      className="relative group"
+      variants={container_variants}"
+      initial="hidden";"
+      animate="visible";"
+      while_hover="hover"
+      onHoverEnd={() => setIsHovered (false)}
+    >
+      {/* Glow Effect */}
+      <div
+        className={`absolute inset - 0 rounded - 2xl blur - xl transition - all duration - 500 ${'
+          is_hovered ? 'opacity - 100' : 'opacity - 50';`
+        }`}
+        style={{}`
+          background: `linear - gradient (135deg, ${service.color})`,'
+          transform: is_hovered ? 'scale (1.05)' : 'scale (1)',
+        }}
+      />
+      {/* Main Card */}`
+      <div        className={`relative bg - gradient - to - br ${service.color} p - 1 rounded - 2xl transition - all duration - 500 ${'
+          is_hovered ? 'shadow - 2xl' : 'shadow - lg';`
+        }`}
+      >;'`
+        <div className='bg - gray - 900 / 90 backdrop - blur - xl rounded - 2xl p - 6 h - full'>        className={`absolute inset - 0 rounded - 2xl blur - xl transition - all duration - 500 ${'
+          is_hovered ? 'opacity - 100' : 'opacity - 50';`
+        }`}
+
+  const getCategoryIcon = (category: string) => {
+    if (category.includes('AI') |category.includes('Machine Learning'))
+      return <Brain className='w-4 h-4' />;
+    if (category.includes('Quantum')) return <Zap className='w-4 h-4' />;
+    if (category.includes('Space')) return <Rocket className='w-4 h-4' />;
+    if (category.includes('Biotech') |category.includes('Healthcare'))
+      return <Dna className='w-4 h-4' />;
+    if (category.includes('Finance') |category.includes('Trading'))
+      return <DollarSign className='w-4 h-4' />;
+    if (category.includes('Security') |category.includes('Cybersecurity'))
+      return <Lock className='w-4 h-4' />;
+    if (category.includes('Internet') |category.includes('Network'))
+      return <Globe className='w-4 h-4' />;
+    return <Zap className='w-4 h-4' />;  }
+  const containerVariants = {
+    hidden: { opacity: 0, y: 20 }
+    visible: {      opacity: 1
+      y: 0
+      transition: {
+        duration: 0.6
+        ease: 'easeOut' as const
+      }
+    },    hover: {
+      y: -10
+      transition: {
+        duration: 0.3
+        ease: 'easeOut' as const
+      }
+    },  }
+  const contentVariants = {
+    hidden: { opacity: 0, height: 0 }
+    visible: {    if (category.includes('AI') |category.includes('Machine Learning')) return <Brain className="w-4 h-4" />;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
     if (category.includes('Quantum')) return <Zap className="w-4 h-4" />;
     if (category.includes('Space')) return <Rocket className="w-4 h-4" />;
     if (category.includes('Biotech') |category.includes('Healthcare')) return <Dna className="w-4 h-4" />;
     if (category.includes('Finance') |category.includes('Trading')) return <DollarSign className="w-4 h-4" />;
     if (category.includes('Security') |category.includes('Cybersecurity')) return <Lock className="w-4 h-4" />;
+<<<<<<< HEAD
     if (category.includes('Internet') |category.includes('Network')) return <Globe className="w-4 h-4" />;
     return <Zap className="w-4 h-4" />;
   }
@@ -257,6 +403,42 @@ const UltraAdvancedServiceCard: React.FC<UltraAdvancedServiceCardProps> = ({ ser
       >;
 <div className='bg-gray-900/90 backdrop-blur-xl rounded-2xl p-6 h-full'>;
 
+=======
+    if (category.includes('Internet') |category.includes('Network')) return <Globe className="w-4 h-4" />
+    return <Zap className="w-4 h-4" />
+  const containerVariants = {
+    hidden: { opacity: 0, y: 20 }
+    visible: {    visible: {
+      opacity: 1
+      y: 0
+      transition: {
+        duration: 0.6
+        ease: 'easeOut' as const
+      }
+    },        ease: "easeOut" as const
+      }
+    }
+    hover: {
+      y: -10
+      transition: {
+        duration: 0.3
+        ease: 'easeOut' as const
+      }
+    },        ease: "easeOut" as const
+      }
+    }
+  }
+  const contentVariants = {
+    hidden: { opacity: 0, height: 0 }
+    visible: {
+      height: 'auto'
+      transition: {
+        duration: 0.5
+        ease: 'easeOut' as const
+      }
+    }
+  }
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
         onHoverStart={() => setIsHovered(true)}
       website: string},
     realImplementation: boolean,
@@ -938,6 +1120,7 @@ export default UltraAdvancedServiceCard;
         </div>
       </div>
     </motion.div>
+<<<<<<< HEAD
 
 };
 
@@ -945,3 +1128,94 @@ export default UltraAdvancedServiceCard;
 })}export default UltraAdvancedServiceCard;
               <ExternalLink className = $2;
 export default UltraAdvancedServiceCard,
+=======
+<<<<<<< HEAD
+
+)
+};
+
+export default UltraAdvancedServiceCard;
+
+"
+=======
+const containerVariants = {
+  hidden: {
+  opacity: 0, y: 20 
+}
+visible: {
+  opacity: 1
+y: 0
+transition: {
+  duration: 0.6
+ease: "easeOut" as const 
+}
+}
+hover: {
+  y: -10
+transition: {
+  duration: 0.3
+ease: "easeOut" as const 
+}
+}
+}
+}
+}
+> {
+  /* Glow Effect */ 
+}<div className= {
+  `absolute inset-0 rounded-2xl blur-xl transition-all duration-500 $ {
+  isHovered ? 'opacity-100' : 'opacity-50' 
+}` 
+}style= {
+  {
+  background: `linear-gradient (135deg, $ {
+  service.color 
+}) `
+transform: isHovered ? 'scale (1.05) ' : 'scale (1) ' 
+}
+}/> {
+  /* Main Card */ 
+}<div className= {
+  `relative bg-gradient-to-br $ {
+  service.color 
+}p-1 rounded-2xl transition-all duration-500 $ {
+  isHovered ? 'shadow-2xl' : 'shadow-lg' 
+}` 
+}> </div> </div> {
+  service.popular && (<motion.div > POPULAR </motion.div>) 
+}</div> </div> </div> {
+  /* Expandable Content */ 
+}<AnimatePresence> {
+  isExpanded && (<motion.div variants= {
+  contentVariants 
+}initial="hidden" animate="visible" exit="hidden" className="space-y-4" > {
+  /* Description */ 
+}<div> </p> </div> {
+  /* Features */ 
+}<div> </div>) ) 
+}</div> </div> </div> </div> </div> </motion.div>) 
+}</AnimatePresence> > <span>Learn More</span> <ExternalLink className="w-4 h-4" /> </motion.button> <motion.button className= {
+  `px-4 py-3 rounded-lg border-2 transition-all duration-300 flex items-center justify-center $ {
+  isExpanded ? 'border-gray-600 text-gray-400' : 'border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-black' 
+}` 
+}whileHover= {
+  {
+  scale: 1.02 
+}
+}whileTap= {
+  {
+  scale: 0.98 
+}
+}onClick= {
+  () => setIsExpanded (!isExpanded) 
+}> {
+  isExpanded ? 'Show Less' : 'Details' 
+}</motion.button> </div> {
+  /* Expand/Collapse Indicator */ 
+}<motion.div > <ArrowRight className="w-5 h-5 text-gray-400" /> </motion.div> </div> </div> </motion.div>) 
+}
+export default UltraAdvancedServiceCard
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-43ef
+=======
+>>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75

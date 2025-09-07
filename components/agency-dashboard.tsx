@@ -1,3 +1,12 @@
+<<<<<<< HEAD
+.map (s => s.trim () ) .filter (Boolean) 
+}as Vendor
+//For MVP, update via direct API not implemented, keep local preview only setActiveVendor (updated) 
+}</div> md:col-span-2"> <button className=" px-4 py-2 rounded bg-black text-white dark:bg-white dark:text-black">Save</button> </div> </form> </section> </div> </div> </section> </section> <div className=" text-center text-xs text-gray-500" >Powered by Zion</div> </div>) 
+}</select> </div>) ) 
+}</div>) 
+}
+=======
 import type { GetServerSideProps } from 'next';
 
 type Props = { vendor: Vendor | null };type Props = { vendor: Vendor | null }
@@ -437,6 +446,7 @@ export const getServerSideProps: GetServerSideProps < Props> = async () => {cons
   const vendor = listVendors()[0] |null, // tie to auth later
   return { props: { vendor } }
 }
+<<<<<<< HEAD
 }
 
     </div>
@@ -464,3 +474,6 @@ export const getServerSideProps: GetServerSideProps < Props> = async () => {
   const vendor = listVendors()[0] || null, // tie to auth later
   return { props: { vendor } }
 },
+=======
+>>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75

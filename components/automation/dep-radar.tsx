@@ -19,6 +19,7 @@ type Outdated = any;
   } catch {}
   return { props: { outdated, generatedAt } }
 }
+<<<<<<< HEAD
     outdated = json.outdated || [];
     generatedAt = json.generatedAt || '';
   } catch {}
@@ -60,6 +61,9 @@ export async function getServerSideProps() {
 }
 
 export default function DepRadarPage({ outdated, generatedAt }: { outdated: Outdated[], generatedAt: string}) {
+=======
+export default function DepRadarPage({ outdated, generatedAt }: { outdated: Outdated[], generatedAt: string }) {
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
   return (
     <div className="space-y-6">
       <h1 className="text-2xl font-semibold">AI Automation: Dependency Radar</h1>
@@ -115,3 +119,7 @@ export default function DepRadarPage({ outdated, generatedAt }: { outdated: Outd
     </div>
   )
 }
+<<<<<<< HEAD
+=======
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75

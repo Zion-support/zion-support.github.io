@@ -8,11 +8,14 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (!itemId |!status)
     return res.status(400).json({ error: 'Missing required fields' });
 
+<<<<<<< HEAD
     return res.status(405).json({ error: 'Method not allowed' });
   const { itemId, status } = req.body |{}
   if (!itemId |!status)
     return res.status(400).json({ error: 'Missing required fields' });
 
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
   try {
     updatePipelineItemStatus(String(itemId), String(status) as any);
     res.status(200).json({ ok: true });
@@ -41,6 +44,7 @@ export default function handler() {if (req.method !== 'POST') return res.status(
   }
 }
 }
+<<<<<<< HEAD
 
 }
 
@@ -54,3 +58,5 @@ export default function handler() {if (req.method !== 'POST') return res.status(
     res.status(500).json({ error: e.message })
   }
 }
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75

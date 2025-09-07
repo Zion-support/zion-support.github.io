@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useEffect, useRef, useState } from 'react';
 import { motion } from 'framer-motion';
 interface UltraFuturisticBackground2034Props {
@@ -40,6 +41,20 @@ const UltraFuturisticBackground2034: React.FC<;
       canvas.width = window.innerWidth;
 
 canvas.height = window.innerHeight;
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+
+=======
+>>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
+import React, { useEffect, useRef, useState } from 'react';
+import { motion } from 'framer-motion';
+interface UltraFuturisticBackground2034Props {
+  intensity?: number;
+  theme?: 'quantum' | 'cyberpunk' | 'neural' | 'holographic'
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 
     };
 
@@ -1154,6 +1169,10 @@ if ( {) {$2;
 
             transition={{
 
+<<<<<<< HEAD
+=======
+            transition={{}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
               duration: 3,
               delay: i * 0 && 0.1,
               repeat: -1,
@@ -1182,9 +1201,14 @@ if ( {) {$2;
           className="absolute inset-0 bg-[linear-gradient(rgba(0,255,255,0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(0,255,255,0.1)_1px,transparent_1px)]";
         <motion&& motion.div
           className='absolute inset-0 bg-[linear-gradient(rgba(0,255,255,0 && 0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(0,255,255,0 && 0.1)_1px,transparent_1px)]'
+<<<<<<< HEAD
         <motion.div
           className="absolute inset-0 bg-[linear-gradient(rgba(0,255,255,0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(0,255,255,0.1)_1px,transparent_1px)]"
               ease: 'easeInOut',            }}              ease: "easeInOut";
+=======
+
+              ease: 'easeInOut',            }}              ease: "easeInOut"
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
             }}
           />))}
       </div>;
@@ -1205,6 +1229,7 @@ if ( {) {$2;
           transition={{
             duration: 4,
             repeat: -1,
+<<<<<<< HEAD
             ease: 'easeInOut',          }}
           style={{background_size: '50px 50px',}}
           animate={{opacity: [0.3, 0.6, 0.3],          }}
@@ -1260,6 +1285,24 @@ export default UltraFuturisticBackground2034;}}
       </div>;
     </div>;
             opacity: [0.3, 0.6, 0.3]
+=======
+ease: 'easeInOut'}
+
+          }}
+          transition={{duration: 4
+            repeat: -1;}
+
+export default UltraFuturisticBackground2034;}}
+          transition={{duration: 4,repeat: -1,ease: 'easeInOut'}"
+  ease: \'easeInOut\';}
+            opacity: [0.3, 0.6, 0.3]}}
+          transition={{duration: 4,repeat: -1,ease: 'easeInOut'}}
+           />
+      </div>
+    </div>
+  )
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
           }}
           transition = $2;
             repeat: -1,
@@ -1280,6 +1323,7 @@ export default UltraFuturisticBackground2034;  );
 };
 
 export default UltraFuturisticBackground2034;
+<<<<<<< HEAD
             ease: 'easeInOut',            ease: "easeInOut";
           }}
         />;
@@ -1297,3 +1341,67 @@ export default UltraFuturisticBackground2034;
 },
 
 export default UltraFuturisticBackground2034,
+=======
+
+<<<<<<< HEAD
+"
+=======
+resizeCanvas ()
+window.addEventListener ('resize', resizeCanvas)
+type ParticleType = 'quantum' | 'neural' | 'holographic'
+// Particle system 
+}
+}
+// Initialize neural network 
+}
+}) 
+}
+// Initialize entanglement lines 
+}
+}
+initParticles ()
+initNeuralNetwork ()
+initEntanglementLines ()
+// Animation loop // Bounce off edges if (particle.x <= 0 || particle.x >= canvas.width) particle.vx *= -1
+if (particle.y <= 0 || particle.y >= canvas.height) particle.vy *= -1
+// Draw particle 
+}ctx.beginPath ()
+ctx.arc (particle.x, particle.y, particle.size, 0, Math.PI * 2)
+ctx.fill ()
+ctx.restore ()
+// Remove dead particles ctx.beginPath ()
+ctx.moveTo (line.x1, line.y1)
+ctx.lineTo (line.x2, line.y2)
+ctx.stroke ()
+ctx.restore ()
+ctx.beginPath ()
+ctx.moveTo (node.x, node.y)
+ctx.lineTo (targetNode.x, targetNode.y)
+ctx.stroke ()
+ctx.restore () 
+}
+})
+// Draw node ctx.beginPath ()
+ctx.arc (node.x, node.y, 4, 0, Math.PI * 2)
+ctx.fill ()
+ctx.restore () 
+})
+// Add new particles 
+}animationRef.current = requestAnimationFrame (animate) 
+}
+animate ()
+window.addEventListener ('mousemove', handleMouseMove)
+return () => window.removeEventListener ('mousemove', handleMouseMove) 
+}, [])
+return (/>) ) 
+}</div> /> </div> </div>) 
+}
+export default UltraFuturisticBackground2034
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-43ef
+=======
+          }}
+        />
+      </div>
+    </div>
+>>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75

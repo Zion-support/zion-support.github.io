@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <<<<<<< HEAD:pages_backup/team.tsx
 import React from 'react';
 import MainLayout from '../components/layout/MainLayout';
@@ -1016,3 +1017,28 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 ;
 
+=======
+import React from 'react';
+import Head from 'next/head';
+import Layout from '../components/layout/Layout';
+
+export default function team() {
+  return (
+    <Layout>
+      <Head>
+        <title>Team - Zion Tech Group</title>
+        <meta name="description" content="Team solutions and services." />
+      </Head>
+      
+      <div className="min-h-screen bg-gray-50">
+        <div className="container mx-auto px-6 py-16">
+          <h1 className="text-4xl font-bold text-gray-900 mb-8">Team</h1>
+          <p className="text-lg text-gray-600">
+            Professional team solutions tailored to your business needs.
+          </p>
+        </div>
+      </div>
+    </Layout>
+  );
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75

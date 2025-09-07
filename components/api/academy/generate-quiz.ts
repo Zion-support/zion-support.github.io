@@ -73,6 +73,7 @@ export default async function handler() {if (req.method !== 'POST') return res.s
         }
       ]
     })
+<<<<<<< HEAD
 };          question: 'Which docs are needed for launch?';
           options: ['Whitepaper + governance docsNovelRecipe bookNone'];
   const apiKey = $2;
@@ -101,6 +102,13 @@ export default async function handler() {if (req.method !== 'POST') return res.s
   try {
         {
           role: 'system',
+=======
+}
+  if (!apiKey) return fallback()
+  try {}
+    const client = new OpenAI({ apiKey })
+    const prompt = `Create a 5-question multiple-choice quiz in JSON with the shape {"questions":[{"question":string,"options":string[],"answerIndex":number}]} about the following module. Keep questions practical for founders. Respond with JSON only.\n\nTitle: ${moduleTitle}\nContent:\n${moduleContent}`
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
           content: 'You are an expert course designer for founders.',
         },
         { role: 'user', content: prompt },

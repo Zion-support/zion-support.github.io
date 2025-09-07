@@ -305,6 +305,7 @@ text
       .map(([phrase, count]) => ({ phrase, count })),
 
     // Language detection (simplified - assume English for demo)
+<<<<<<< HEAD
     const isEnglish = /^[a-zA-Z\s.,!?,:'"()-]+$/.test($2);
     const detectedLanguage = $2;
     const confidence = $2;
@@ -317,6 +318,15 @@ text
         paragraphs,
         syllables,
         readingTime,
+=======
+    const isEnglish = /^[a-zA-Z\s.,!?;:'"()-]+$/.test(text);    const detectedLanguage = isEnglish ? 'en' : 'unknown';
+    const confidence = isEnglish ? 0.95 : 0.5;
+    const result: TextAnalysisResult = {
+      text,    const isEnglish = /^[a-zA-Z\s.,!?,:'"()-]+$/.test(text);
+    const detectedLanguage = isEnglish ? 'en' : 'unknown';
+    const confidence = isEnglish ? 0.95 : 0.5;
+    const result: TextAnalysisResult = {
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
       text
         characters
         charactersNoSpaces
@@ -326,6 +336,7 @@ text
         syllables
         readingTime
         speakingTime
+<<<<<<< HEAD
       }
         speakingTime},
       readability: {
@@ -426,6 +437,13 @@ text
   }
   }
 }
+=======
+      sentiment: {
+        score: sentimentScore
+label: sentimentLabel
+positiveWords: textWords.filter(word => positiveWords.includes(word))}
+        negativeWords: textWords.filter(word => negativeWords.includes(word))}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 
 
 

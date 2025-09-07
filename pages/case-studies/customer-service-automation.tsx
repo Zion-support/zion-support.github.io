@@ -1,10 +1,12 @@
 import React from 'react';
 import Head from 'next/head';
-import Link from 'next/link';
-export default function CaseStudyPage() {
+import Layout from '../../components/layout/Layout';
+
+export default function customerserviceautomation() {
   return (
-    <>
+    <Layout>
       <Head>
+<<<<<<< HEAD
         <title>Intelligent Customer Service Automation - Case Study | Zion Tech Group</title>
         <meta name="description" content="Discover how a Financial Services Provider achieved 80% reduction in response time with AI-powered chatbots and automated ticket routing. Read our detailed case study." />
         <meta name="keywords" content="customer service automation, chatbots, AI automation, ticket routing, sentiment analysis" />
@@ -237,4 +239,20 @@ export default function CaseStudyPage() {
       </div>
     </>
   )
+=======
+        <title>Customer Service Automation - Zion Tech Group</title>
+        <meta name="description" content="Customer Service Automation solutions and services." />
+      </Head>
+      
+      <div className="min-h-screen bg-gray-50">
+        <div className="container mx-auto px-6 py-16">
+          <h1 className="text-4xl font-bold text-gray-900 mb-8">Customer Service Automation</h1>
+          <p className="text-lg text-gray-600">
+            Professional customer service automation solutions tailored to your business needs.
+          </p>
+        </div>
+      </div>
+    </Layout>
+  );
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 }

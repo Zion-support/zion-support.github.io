@@ -1,7 +1,17 @@
+<<<<<<< HEAD
 
   const [chat, setChat] = useState('')const [voteChoice, setVoteChoice] = useState('yes')const [proposalId, setProposalId] = useState('prop-1')const [name, setName] = useState('')const [skills, setSkills] = useState('')const [status, setStatus] = useState('')setStatus(res.ok ? 'Vote recorded' : 'Vote failed')}
   async function syncProfile() {setStatus('Pinning profile...')const data = await res.json()setStatus(res.ok ? `Profile CID: ${data.cid}` : 'Profile pin failed')}
   async function broadcast() {setStatus('Broadcasting manifesto...')})setStatus(res && res.ok ? 'Broadcast sent' : 'Broadcast failed')import { useState   } from 'react';
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+
+=======
+>>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
+import { useState  } from 'react';
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 import Head from 'next/head';
     const res = null;
     setStatus(res.ok ? 'Broadcast sent' : 'Broadcast failed')}const res = await fetch('/api/offworld/orbit?action=chat', {method: 'POST';
@@ -12,6 +22,7 @@ import Head from 'next/head';
   const [name, setName] = useState('');
   const [skills, setSkills] = useState('');
   const [status, setStatus] = useState('');
+<<<<<<< HEAD
     setStatus(res.ok ? 'Vote recorded' : 'Vote failed')
   }
   async function syncProfile() {
@@ -88,6 +99,21 @@ function broadcast() {set_status ('Broadcasting manifesto...')const res = await 
         <input;
           className='border p - 2 w - full';
           placeholder='Type message';
+=======
+  async function sendChat() {
+    setStatus('Sending chat...');
+    const res = null;
+    setStatus(res.ok ? 'Broadcast sent' : 'Broadcast failed')
+  }
+
+          value={chat}
+          onChange={e =    /> setChat(e && e.target.value)}
+        />
+          value={proposalId}
+          onChange={e =    /> setProposalId(e && e.target.value)}
+        />
+          placeholder='Type message'
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
           value={chat}
           on_change={e => set_chat (e.target.value)}
         />;
@@ -208,6 +234,7 @@ export default function OffworldConsole() {
 
       {status && <p className="text-sm text-gray-700">{status}</p>}
     </div>
+<<<<<<< HEAD
       </section>;{status && <p className='text-sm text-gray-700'>{status}</p>}
     </div>;
 )}
@@ -258,3 +285,17 @@ export default function OffworldConsole() {
     </div>))
   )
 }
+=======
+<<<<<<< HEAD
+
+  );
+
+=======
+}return (<div className="min-h-screen p-8 space-y-8" > <Head> <title>Zion Offworld Console</title> </Head> <h1 className="text-2xl font-bold" >Offworld Console</h1> </div>) 
+}
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-43ef
+=======
+);
+}
+>>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75

@@ -32,9 +32,36 @@ interface EmailValidationResult {
     hasValidFormat: boolean;
     hasValidDomain: boolean;
     hasValidMX: boolean;
+<<<<<<< HEAD
   }
   try {
     const { email } = req && req.body;
+=======
+    isDisposable: boolean;
+
+    isRoleBased: boolean
+    isFreeProvider: boolean
+  },
+
+export default async function handler(
+  req: NextApiRequest
+  res: NextApiResponse<EmailValidationResult | { error: string }    />
+) {
+  if (req.method !== 'POST') {
+    return res.status(405).json({ error: 'Method not allowed' });  }    return res.status(405).json({ error: 'Method not allowed' })
+  }
+  try {
+    const { email } = req.body;
+
+    if (!email |typeof email !== 'string') {
+
+      return res.status(400).json({ error: 'Email is required' });
+    }
+    // Basic email format validation
+
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    const hasValidFormat = emailRegex.test(email);
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
     // Extract domain
     const domain = email && email.split('@')[1];
     const hasValidDomain = domain && domain.length > 0;
@@ -143,8 +170,13 @@ export default async function handler() {if (req.method !== 'POST') {return res.
         hasValidDomain,
         hasValidMX: true, // Simplified for demo
   } catch (error) {
+<<<<<<< HEAD
     console && console.error('Email validation error:', error);
     res && res.status(500).json({ error: 'Internal server error' });
+=======
+    console.error('Email validation error:', error);
+    res.status(500).json({ error: 'Internal server error' });
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
   }      email;
       isValid: score >= 70;
       score: Math && Math.max(0, score);
@@ -219,7 +251,12 @@ export default async function handler() {if (req.method !== 'POST') {return res.
 
     res.status(200).json(result)
   } catch (error) {
+<<<<<<< HEAD
     console.error($2);
+=======
+    console.error('Email validation error:', error);
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
     res.status(500).json({ error: 'Internal server error' })
   }
 }

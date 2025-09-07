@@ -1,3 +1,6 @@
+<<<<<<< HEAD
+<Head> <title>Leadership | Zion Tech Group</title> <meta name="description" content="Meet the leadership team guiding Zion Tech Group's vision and execution." /> <link rel="canonical" href="https://ziontechgroup.com/leadership" /> </Head> </div> </div> <div className="mt-10 text-slate-300" >Contact: <a className="text-cyan-400" href="mailto:kleber@ziontechgroup.com" >kleber@ziontechgroup.com</a> • <a className="text-cyan-400" href="tel:+13024640950" >+1 302 464 0950</a></div> </div> </div>
+=======
 import React from 'react';
         <meta;
           name='description';
@@ -149,3 +152,4 @@ export default function LeadershipPage() {
 		</div>
 	)
 }
+>>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 export type OnboardingStep = {;
   id: string;
   label: string;
@@ -13,6 +14,98 @@ export type OnboardingStep = any;label: string;
   highlightColorClass?: string;
   if (!steps |steps.length === 0) return 0;
   const completedCount = steps.filter(s => s.completed).length;
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+
+import React from 'react';,
+import Link from 'next/link';
+=======
+>>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
+import { CheckCircle2, Circle, PartyPopper } from 'lucide-react';
+export type OnboardingStep = any;
+import Link from 'next/link';
+
+import {CheckCircle2, Circle, PartyPopper} from 'lucide-react';
+export type OnboardingStep = {
+  id: string;
+  label: string;
+  completed: boolean;
+<<<<<<< HEAD
+=======
+<div className= {
+  `h-2 rounded-full bg-gradient-to-r $ {
+  highlightColorClass 
+}` 
+}style= {
+  {
+  width: `$ {
+  percentage 
+}%` 
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-43ef
+=======
+  ctaLabel?: string;
+  ctaHref?: string;
+}
+export type OnboardingProgressCardProps = {
+  title: string;
+  steps: OnboardingStep[];
+  highlightColorClass?: string;}
+function computePercentage(steps: OnboardingStep[]): number {
+  if (!steps |steps.length === 0) return 0;
+  const completedCount = steps.filter(s => s.completed).length;
+  return Math.round((completedCount / steps.length) * 100);  ctaLabel?: string;
+  ctaHref?: string
+}
+export type OnboardingProgressCardProps = {
+  title: string
+  steps: OnboardingStep[]
+  highlightColorClass?: string
+>>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
+}
+
+  if (!steps || steps.length = == 0)
+  return 0
+const completedCount = steps.filter(s => s.completed).length
+  return Math.round((completedCount / steps.length) * 100)
+  title
+steps}
+highlightColorClass = 'from-neon-green to-neon-blue'}
+}: OnboardingProgressCardProps) {
+  title,
+  steps}
+  highlightColorClass = 'from-neon-green to-neon-blue'}
+}: OnboardingProgressCardProps) {
+const percentage = computePercentage(steps)
+const allDone = percentage === 100
+const firstIncomplete = steps.find(
+    s => !s.completed && s.ctaHref && s.ctaLabel
+  )
+  return (
+    <div className = 'rounded-xl border border-gray-200 dark: border-gray-800 bg-white/70 dark:bg-black/40 p-5 shadow-sm'    />}
+      <div className='flex items-center justify-between'    />}
+        <h3 className='text-lg font-semibold'    />{title}</h3>
+        <div className='text-sm opacity-75'    />{percentage}% complete</div>
+      </div>
+      {/* Progress Bar */}'
+      <div className='mt-3 h-2 w-full rounded-full bg-gray-200 dark:bg-gray-800 overflow-hidden'>
+
+}
+function computePercentage(steps: OnboardingStep[]): number {}
+  if (!steps || steps.length === 0) return 0
+function computePercentage(): any (steps: OnboardingStep[]): number {
+  if (!steps || steps && steps.length === 0) return 0
+  const completedCount = steps && steps.filter(s => s && s.completed).length
+  return Math && Math.round((completedCount / steps && steps.length) * 100);  ctaLabel?: string
+  ctaHref?: string
+}
+export type OnboardingProgressCardProps = {
+  title: string,
+  steps: OnboardingStep[],
+  highlightColorClass?: string;
+};
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 
 function computePercentage(steps: OnboardingStep[]): number {
   if (!steps |steps.length === 0) return 0;
@@ -231,6 +324,7 @@ export default function OnboardingProgressCard({ title, steps, highlightColorCla
         <h3 className="text-lg font-semibold">{title}</h3>
         <div className="text-sm opacity-75">{percentage}% complete</div>
       </div>
+<<<<<<< HEAD
 
       {/* Progress Bar */}
       <div className="mt-3 h-2 w-full rounded-full bg-gray-200 dark:bg-gray-800 overflow-hidden">
@@ -294,6 +388,8 @@ export default function OnboardingProgressCard({ title, steps, highlightColorCla
             {!step.completed && step.ctaHref && step.ctaLabel ? (
               <Link href={step.ctaHref}>
                 <a className="text-xs px-3 py-1.5 rounded-md border border-gray-300 dark:border-gray-700 hover:bg-gray-50 dark: hover: bg-gray-900 transition">
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
                   {step.ctaLabel}
                 </a>
               </Link>

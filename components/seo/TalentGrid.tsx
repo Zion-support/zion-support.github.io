@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 import React from "react";
 import { TALENT_PROFILES } from "../../data/talent";
@@ -66,6 +67,21 @@ function matchesRegion(): any (profile: TalentProfile, region?: string) {;
 import React from './react';
 import { TALENT_PROFILES  } from '../../data / talent';
 import type { TalentProfile } from "../../data / talent";
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+
+=======
+import React from 'react';
+import { TALENT_PROFILES } from '../../data/talent';
+import type { TalentProfile } from '../../data/talent';
+type Props = any;
+import React from "react";
+import { TALENT_PROFILES } from "../../data/talent";
+import type { TalentProfile } from "../../data/talent";
+>>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 type Props = {
   region?: string;
   service?: string;
@@ -111,6 +127,7 @@ if ( {) {
       </div>);
   }
   return (
+<<<<<<< HEAD
     <div className="grid grid - cols - 1 sm:grid - cols - 2 lg:grid - cols - 3 gap - 4">;
       {items.map ((p) => (
         <div;
@@ -226,6 +243,23 @@ if ( {) {$2;
             ))}
           </div>;
           <div className="mt-3 text-sm">;
+=======
+      <div className='text-sm text-gray-400'    />
+        No matching talent found. Try broadening filters.
+      </div>}
+    );}
+
+                {sk}
+              </span>))}
+          </div>;"
+          <div className="mt - 3 text - sm">
+              </span>
+
+            )
+
+          </div>;"
+          <div className=\"mt-3 text-sm\"    />
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
             ${p.hourlyRateUsd}/hr • {p.availability}
           </div>;
         </div>;
@@ -274,3 +308,37 @@ export default function TalentGrid({ region, service }: Props) {
     </div>
   )
 }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+"
+=======
+}return (<div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4" > {
+  items.map ( (p) => (<div key= {
+  p.slug 
+}className="rounded-lg border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-900 p-4" > <div className="flex items-start justify-between" > <div> <div className="font-semibold" > {
+  p.name 
+}</div> <div className="text-sm text-gray-500 dark:text-gray-400" > {
+  p.title 
+}</div> </div> <div className="text-xs px-2 py-1 rounded bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-300" > {
+  p.location 
+}</div> </div> <div className="mt-3 text-sm text-gray-700 dark:text-gray-300" > {
+  p.bio 
+}</div> <div className="mt-3 flex flex-wrap gap-2" > {
+  p.skills.slice (0, 6) .map ( (sk) => (<span key= {
+  sk 
+}className="text-xs px-2 py-1 rounded bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-300" > {
+  sk 
+}</span>) ) 
+}</div> <div className="mt-3 text-sm" >$ {
+  p.hourlyRateUsd 
+}/hr • {
+  p.availability 
+}</div> 
+}</div>) 
+}
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-43ef
+=======
+>>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75

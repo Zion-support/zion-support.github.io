@@ -1,10 +1,20 @@
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 import type { NextApiRequest, NextApiResponse } from "next";
 import { createDispute, readAllDisputes } from "../../../utils/fsdb";
 import { parseUserFromRequest } from "../../../utils/auth";
 import { DisputeCase, DisputeReason } from "../../../types/disputes";
 import { generateCaseId } from "../../../utils/fsdb";
 export default async function handler(
+<<<<<<< HEAD
+=======
+  req: NextApiRequest,
+  res: NextApiResponse
+) {
+  const user = parseUserFromRequest(req);
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 
 ) {;
 
@@ -14,12 +24,21 @@ export default async function handler(
     const all = await readAllDisputes();
     let filtered = all;
     if (user && user.role !== "admin") {
+<<<<<<< HEAD
       filtered = all && all.filter(
         (d) => d && d.clientUserId === user && user.id || d && d.talentUserId === user && user.id
 
       );
     }
     return res && res.status(200).json({ disputes: filtered });
+=======
+      filtered = all.filter(
+        (d) => d.clientUserId === user.id || d.talentUserId === user.id
+      );
+    }
+    return res.status(200).json({ disputes: filtered });
+  }
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 
     if (user.role !== 'admin') {
       filtered = all.filter(d => d.clientUserId === user.id || d.talentUserId === user.id)
@@ -28,6 +47,7 @@ export default async function handler(
 
   }
 
+<<<<<<< HEAD
   if (req && req.method === "POST") {
     const now = new Date().toISOString();
     const {
@@ -184,3 +204,7 @@ export default async function handler(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+=======
+  return res.status(405).json({ error: "Method not allowed" });
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75

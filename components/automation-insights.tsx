@@ -1,4 +1,15 @@
+<<<<<<< HEAD
 import React from 'react';
+=======
+<<<<<<< HEAD
+return (<> <Head> <title>Automation Insights | Zion Tech Group - AI Automation Expertise</title> </Head> <div className="min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 text-white" > <main className="container mx-auto px-6 py-12" > <section className="text-center mb-16" > <h1 className="text-5xl font-extrabold mb-6 bg-gradient-to-r from-cyan-400 to-fuchsia-400 bg-clip-text text-transparent" > Automation Insights </h1> </div>) ) 
+}</div> </div> > Read More <span className="ml-1" >→</span> </a> </div>) ) 
+}</div> </div> </div> </div>) ) 
+}</div> </div> Let our experts help you build the automation systems of the future </p> <div className="flex flex-wrap justify-center gap-4" > <Link > Get Started </a> <Link href="/case-studies" className="px-8 py-3 bg-white/10 text-white font-bold rounded-lg border border-white/20 hover:bg-white/20 transition-all duration-200" > View Case Studies </a> </div> </div> </section> </main> </div> </>) 
+}
+=======
+import React from 'react',
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 import Head from 'next/head';
 import Link from 'next/link';
 export default function AutomationInsightsPage() {
@@ -492,3 +503,4 @@ export default function AutomationInsightsPage() {const automationTrends = [;
   )}
   )
 }
+>>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7

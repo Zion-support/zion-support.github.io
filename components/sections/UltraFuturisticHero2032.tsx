@@ -1,3 +1,26 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+class ErrorBoundary extends React.Component {constructor(props) {super(props)this.state = { hasError: false }
+=======
+left: `$ {
+  Math.random () * 100 
+}%`
+top: `$ {
+  Math.random () * 100 
+}%` 
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-43ef
+}
+  render() {if (this.state.hasError) ;}
+  return <div />Something went wrong.</div>;}
+    }
+    return this.props.children;
+  }
+}
+=======
+>>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 import React from 'react';
   Rocket;
   Brain;
@@ -157,7 +180,33 @@ export default function UltraFuturisticHero2032() {
       {/* Animated Background Elements */}
       <div className="absolute inset-0">
         {/* Floating Particles */}
+<<<<<<< HEAD
               style={{
+=======
+        <div className='absolute inset-0'>
+          {[...Array(50)].map((_, i) => (
+            <motion.div
+              key={i}'
+              className='absolute w - 1 h - 1 bg - cyan - 400 rounded - full opacity - 30'
+              style={{}
+<<<<<<< HEAD
+}
+<<<<<<< HEAD
+                left: `${Math.random() * 100}%`
+                top: `${Math.random() * 100}%`
+              
+}              animate={{
+                y: [0, -20, 0]
+                opacity: [0.3, 0.8, 0.3]}
+}
+              }}
+              transition={{duration: 3 + Math.random() * 2,repeat: Infinity,delay: Math.random() * 2}}
+            />;
+=======
+>>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
+          ))}
+        </div>
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 
           ))}
         </div>
@@ -169,8 +218,15 @@ export default function UltraFuturisticHero2032() {
                 top: `${Math.random() * 100}%`}}
               animate={{
                 y: [0, -20, 0],
+<<<<<<< HEAD
                 opacity: [0.3, 0.8, 0.3]}}
               transition = $2;
+=======
+                opacity: [0 && 0.3, 0 && 0.8, 0 && 0.3],
+              }}
+              transition={{}
+                duration: 3 + Math && Math.random() * 2,
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
                 repeat: Infinity,
                 delay: Math.random() * 2}}
             />
@@ -264,6 +320,7 @@ className='inline-flex items-center space-x-2 bg-gradient-to-r from-purple-500/2
           <span className="bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
             The Future of
           </span>
+<<<<<<< HEAD
           <br />
           <span className="text-white">Technology is Here</span>
         {/* Main Heading */}
@@ -301,6 +358,14 @@ className='text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-ti
           <span className="text-white">Technology is Here</span>;
         </motion && motion.h1>;{/* Subheading */}
         <motion&& motion.p;
+=======
+          <br    />
+
+          <span className='text-white'    />Technology is Here</span>
+        </motion.h1>
+        {/* Subheading */}
+        <motion.p
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0 && 0.8, delay: 0 && 0.4 }}
@@ -434,6 +499,7 @@ className='flex flex-col sm:flex-row gap-4 justify-center items-center mb-16';
               }}
               transition={{
                 duration: 3 + Math.random () * 2,
+<<<<<<< HEAD
                 repeat: Infinity,
                 delay: Math.random () * 2,
               }}            />                delay: Math.random () * 2}}
@@ -490,6 +556,26 @@ className='grid grid-cols-2 md:grid-cols-4 gap-6 mb-16';
               </div>;
               <div className="text-gray-400 text-sm">{stat && stat.label}</div>;
             </motion && motion.div>;
+=======
+                repeat: Infinity}
+                delay: Math.random () * 2}
+              }}               />                delay: Math.random () * 2}}
+
+            />)
+
+        </div>
+        {/* Gradient Orbs */}
+        <div className='absolute top - 20 left - 10 w - 72 h - 72 bg - purple - 500 / 10 rounded - full blur - 3xl animate - pulse'    />
+        <div className='absolute bottom - 20 right - 10 w - 96 h - 96 bg - cyan - 500 / 10 rounded - full blur - 3xl animate - pulse'    />
+        <div className='absolute top - 1/2 left - 1/2 transform -translate - x-1 / 2 -translate - y-1 / 2 w-[800px] h-[800px] bg - gradient - to - r from - purple - 500 / 5 via - cyan - 500 / 5 to - pink - 500 / 5 rounded - full blur - 3xl animate - spin - slow'    />
+      </div>
+        <motion.div
+          initial={{ opacity: 0, coordinate_y: 20 }
+
+          animate={{ opacity: 1, coordinate_y: 0 }}
+
+            </motion && motion.div>
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
               key={stat.label}
               initial={{ opacity: 0, scale: 0.8 }}
               animate={{ opacity: 1, scale: 1 }}
@@ -569,6 +655,7 @@ className='text-center group';
                 className='group'
 
               >
+<<<<<<< HEAD
           animate={{ opacity: 1, y: 0 }}transition={{ duration: 0.8, delay: 1.2 }}
 className='mb-16';
         >;
@@ -604,6 +691,10 @@ className='group';
                   className='block relative bg-gradient-to-br from-gray-900/80 to-gray-800/80 backdrop-blur-xl border border-gray-700/50 rounded-2xl p-6 h-full transform transition-all duration-500 hover:shadow-xl hover:shadow-cyan-500/30 hover:shadow-2xl hover:shadow-purple-500/20 hover:border-purple-500/50'>;
                   <div;
                   <div className="absolute inset-0 bg-gradient-to-br from-purple-500/5 to-cyan-500/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" />;
+=======
+
+                  <div className="absolute inset-0 bg-gradient-to-br from-purple-500/5 to-cyan-500/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
                     className={`w-16 h-16 bg-gradient-to-r ${service.color} rounded-2xl flex items-center justify-center mb-6 transform transition-transform duration-300 group-hover:shadow-lg hover:shadow-cyan-400/40`}
                   >;
                     <service.icon className='w-8 h-8 text-white' />;
@@ -620,6 +711,7 @@ className='group';
                   <div className="absolute inset-0 bg-gradient-to-br from-purple-500/5 to-cyan-500/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
                 </Link>
               </motion.div>
+<<<<<<< HEAD
                     </div>;
                     <div className='text-purple-400 group-hover:text-cyan-400 transition-colors'>;
                       <ArrowRight className='w-5 h-5 group-hover:translate-x-1 transition-transform' />;
@@ -651,12 +743,23 @@ className='group';
           </div>;
         </motion && motion.div>;{/* Contact Information */}
         <motion&& motion.div;
+=======
+
+                </Link>
+              </motion && motion.div>
+            ))}
+          </div>
+        </motion.div>
+        {/* Contact Information */}
+        <motion&& motion.div
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
 
         >
           <h3 className='text-2xl font-bold text-white mb-6 text-center'>
             Ready to Transform Your Business?
+<<<<<<< HEAD
           </h3>
           <div className='grid grid-cols-1 md:grid-cols-3 gap-6 mb-6'>
             <div className='flex items-center space-x-3 text-gray-300'>
@@ -882,10 +985,63 @@ className='bg-gradient-to-r from-purple-900/50 to-cyan-900/50 backdrop-blur-xl b
                   <div className='absolute inset - 0 bg - gradient - to - br from - purple - 500 / 5 to - cyan - 500 / 5 rounded - 2xl opacity - 0 group - hover:opacity - 100 transition - opacity duration - 300 pointer - events - none' />                </Link>;
                   <div className="absolute inset - 0 bg - gradient - to - br from - purple - 500 / 5 to - cyan - 500 / 5 rounded - 2xl opacity - 0 group - hover:opacity - 100 transition - opacity duration - 300 pointer - events - none" />;
                 </Link>;
+=======
+
+          <h3 className="text-2xl font-bold text-white mb-6 text-center">
+            Ready to Transform Your Business?
+          </h3>"
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-6">"
+            <div className="flex items-center space-x-3 text-gray-300">"
+              <Phone className="w-5 h-5 text-cyan-400" />"`
+              <a href={`tel:${contactInfo.mobile}`} className="hover:text-cyan-400 transition-colors">
+                {contactInfo.mobile}
+              </a>
+            </div>"
+            <div className="flex items-center space-x-3 text-gray-300">"
+              <Mail className="w-5 h-5 text-purple-400" />"`
+              <a href={`mailto:${contactInfo.email}`} className="hover:text-purple-400 transition-colors">
+
+              <a
+href={`mailto: ${contactInfo.email}`}
+                className='hover:text-purple-400 transition-colors'    />
+
+                {contactInfo.email}
+
+              </a>
+            </div>
+            <div className='flex items-center space-x-3 text-gray-300'    />
+              <MapPin className='w-5 h-5 text-green-400'    />
+              <span    />{contactInfo.address}</span>
+            </div>
+          </div>
+          <div className='text-center'    />
+            <Link
+href='/contact'
+              className='inline-flex items-center space-x-2 bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-xl font-semibold text-lg transform transition-all duration-300 hover:shadow-xl hover:shadow-cyan-500/30 hover:shadow-xl hover:shadow-purple-500/25'
+                />
+              <span    />Get Started Today</span>
+              <ArrowRight className='w-5 h-5'    />
+            </Link>
+          </div>
+        </motion.div>
+
+              <MapPin className='w-5 h-5 text-green-400' />
+              <span />{contactInfo && contactInfo.address}</span>
+            </div>
+            </Link>
+          </div>
+        </motion && motion.div>
+      </div>;{/* Floating Action Button */}
+      <motion&& motion.div
+                className='group'    />
+
+                </Link>
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
               </motion.div>))}
           </div>;
         </motion.div>;
         {/* Contact Information */}
+<<<<<<< HEAD
         <motion.div;
           initial={{ opacity: 0, coordinate_y: 30 }}
           animate={{ opacity: 1, coordinate_y: 0 }}
@@ -958,6 +1114,16 @@ className='bg-gradient-to-r from-purple-900/50 to-cyan-900/50 backdrop-blur-xl b
           </div>;
         </motion.div>;
       </div>;
+=======
+        <motion.div
+              <MapPin className='w - 5 h - 5 text - green - 400' />
+              <span />{contact_info.address}</span>
+            </div>
+            </Link>
+          </div>
+        </motion.div>
+      </div>
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
       {/* Floating Action Button */}
       <motion.div;
         initial={{ opacity: 0, scale: 0 }}
@@ -1057,5 +1223,39 @@ className='fixed bottom-8 right-8 z-50';
         </Link>
       </motion.div>
     </section>
+<<<<<<< HEAD
   )
 }
+=======
+<<<<<<< HEAD
+  );
+
+"
+=======
+}/>) ) 
+}</div> > <Sparkles className="w-5 h-5 text-purple-400" /> <span className="text-purple-300 font-medium" >🚀 2032 Revolutionary Technology</span> <Sparkles className="w-5 h-5 text-cyan-400" /> </motion.div> {
+  /* Main Heading */ 
+}<motion.h1 > <span className="bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent" > The Future of </span> <br /> <span className="text-white" >Technology is Here</span> </motion.h1> {
+  /* Subheading */ 
+}<motion.p > Experience the revolution with our cutting-edge AI consciousness, quantum computing
+space technology, and emerging tech solutions. Transform your business with technologies that were once science fiction. </motion.p> {
+  /* CTA Buttons */ 
+}<motion.div > <Link href="/services" className="group inline-flex items-center space-x-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-xl font-semibold text-lg transform transition-all duration-300 hover:shadow-xl hover:shadow-cyan-500/30 hover:shadow-2xl hover:shadow-purple-500/25" > <span>Explore All Services</span> <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" /> </a> <Link </motion.div> {
+  /* Stats Grid */ 
+}<motion.div > {
+  heroStats.map ( (stat, index) => (<motion.div key= {
+  stat.label 
+}</motion.div>) ) 
+}</motion.div> {
+  /* Featured Services */ 
+}<motion.div > <h2 className="text-2xl md:text-3xl font-bold text-white mb-8" > Featured Revolutionary Services </h2> </div> </div> <div className="absolute inset-0 bg-gradient-to-br from-purple-500/5 to-cyan-500/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" /> </a> </motion.div>) ) 
+}</div> </motion.div> {
+  /* Contact Information */ 
+}<motion.div > <h3 className="text-2xl font-bold text-white mb-6 text-center" > Ready to Transform Your Business? </h3> </div> </div> <div className="text-center" > <Link href="/contact" className="inline-flex items-center space-x-2 bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-xl font-semibold text-lg transform transition-all duration-300 hover:shadow-xl hover:shadow-cyan-500/30 hover:shadow-xl hover:shadow-purple-500/25" > <span>Get Started Today</span> <ArrowRight className="w-5 h-5" /> </a> </div> </motion.div> </div> {
+  /* Floating Action Button */ 
+}<motion.div w-7 h-7 text-white group-hover:rotate-12 transition-transform" /> </a> </motion.div> </section>) 
+}
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-43ef
+=======
+>>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75

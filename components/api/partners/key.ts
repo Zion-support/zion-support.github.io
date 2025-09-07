@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 import type { NextApiRequest, NextApiResponse } from "next";
 import type { NextApiRequest, NextApiResponse } from 'next';
 import {
@@ -45,7 +48,25 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   const auth = await authenticateRequest(req);
   const auth = await authenticateRequest($2);
   if (!auth) {
+<<<<<<< HEAD
     return res.status(401).json({ error: "Unauthorized" })
+=======
+    return res.status(401).json({ error: "Unauthorized" });
+  const { apiKey } = auth;
+  const keys = await listApiKeys();
+  // Deactivate old key
+  const existing = keys.find(k => k.id === apiKey.id);  const existing = keys.find((k) => k.id === apiKey.id);
+  if (existing) existing.active = false;
+  // Create new key
+  const now = new Date().toISOString();
+  const newKey = {
+    id: uuidv4()
+    partnerId: auth.partner.id
+    key: uuidv4()
+    active: true
+    createdAt: now
+    rateLimitPerMinute: apiKey.rateLimitPerMinute ?? 60
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
   }
   const { apiKey } = auth,
   const keys = await listApiKeys($2);

@@ -1,4 +1,21 @@
+<<<<<<< HEAD
 import React, { useEffect, useRef } from 'react';
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+
+=======
+>>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
+import React, { useEffect, useRef } from 'react';
+canvas.width = window.innerWidth * (window.devicePixelRatio |1);
+canvas.height = window.innerHeight * (window.devicePixelRatio |1);
+if (ctx) {
+export default function UltraFuturisticBackground2035({
+  children
+}: UltraFuturisticBackground2035Props) {  const canvasRef = useRef<HTMLCanvasElement>(null);import React, { useEffect, useRef } from 'react';
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 import { motion } from 'framer-motion';
 interface UltraFuturisticBackground2035Props {
   children: React.ReactNode
@@ -580,11 +597,59 @@ cancelAnimationFrame(animationFrameId);
             repeat: Infinity,
             ease: 'easeInOut'
           }}
+<<<<<<< HEAD
         {/* Holographic grid effect */}
         <div className='absolute inset-0 opacity-20'>;
           <div
             className='h-full w-full'
             style={{
+=======
+<<<<<<< HEAD
+
+        />
+{/* Holographic grid effect *,}
+=======
+canvas.width = window.innerWidth * (window.devicePixelRatio || 1)
+canvas.height = window.innerHeight * (window.devicePixelRatio || 1)
+if (ctx) {
+  
+}
+}
+// Get color based on particle type const getColorForType = (type: string) => {
+  switch (type) {
+  case 'quantum': particles.forEach ( (particle, index) => {
+  // Update particle life particle.life--
+if (particle.life <= 0) {
+  // Update position particle.x += particle.vx
+particle.y += particle.vy
+// Wrap around edges if (particle.x < 0) particle.x = canvas.width / (window.devicePixelRatio || 1)
+if (particle.x > canvas.width / (window.devicePixelRatio || 1) ) particle.x = 0
+if (particle.y < 0) particle.y = canvas.height / (window.devicePixelRatio || 1)
+if (particle.y > canvas.height / (window.devicePixelRatio || 1) ) particle.y = 0
+// Calculate opacity based on life // Draw particle based on type drawParticle (ctx, particle, currentOpacity)
+// Draw connections with enhanced effects ctx.restore () 
+}
+// Quantum particle with wave-like effects // Enhanced connection drawing with different effects const drawConnections = (ctx: CanvasRenderingContext2D, particles: unknown[], currentIndex: number, maxDistance: number, opacity: number) => {
+  particles.forEach ( (otherParticle, otherIndex) => {
+  if (currentIndex !== otherIndex) {
+  // Different connection styles based on particle types if (particles[currentIndex].type === otherParticle.type) {
+  // Same type - stronger connection ctx.beginPath ()
+ctx.moveTo (particles[currentIndex].x, particles[currentIndex].y)
+ctx.lineTo (otherParticle.x, otherParticle.y)
+ctx.stroke () 
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-43ef
+}
+        <div className='absolute inset-0 opacity-20' />
+          <div;
+className='h-full w-full'
+            style={{
+=======
+        {/* Holographic grid effect */}'
+        <div className='absolute inset-0 opacity-20'>
+            className='h-full w-full'
+            style={{}
+>>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
               backgroundImage: `
               linear-gradient(90deg, rgba(139, 92, 246, 0.1) 1px, transparent 1px)
             `
@@ -638,13 +703,27 @@ cancelAnimationFrame(animationFrameId);
             backgroundSize: '50px 50px'
           }} />
         </div>
+<<<<<<< HEAD
 
         {/* Canvas for animated particles */}
         <canvas
+=======
+<<<<<<< HEAD
+
+        {/* Canvas for animated particles *,}
+}
+<<<<<<< HEAD
+        <canvas;
+=======
+        {/* Canvas for animated particles */}
+        <canvas
+>>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
           ref={canvasRef}
           className="absolute inset-0 w-full h-full"
           style={{ filter: 'blur(0.5px)' }}
         />
+<<<<<<< HEAD
 
         {/* Floating neon orbs */}
         <motion.div
@@ -669,6 +748,29 @@ cancelAnimationFrame(animationFrameId);
           }}
           transition = $2;
             repeat: Infinity,
+=======
+<<<<<<< HEAD
+
+        {/* Floating neon orbs *,}
+=======
+}) 
+}
+// Handle window resize window.addEventListener ('resize', handleResize)
+initParticles ()
+updateParticles ()
+{
+  /* Animated gradient overlay */ 
+}<motion.div backgroundImage: ` linear-gradient (rgba (139, 92, 246, 0.1) 1px, transparent 1px), linear-gradient (90deg, rgba (139, 92, 246, 0.1) 1px, transparent 1px) `, backgroundSize: '50px 50px' 
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-43ef
+}
+
+        <motion.div;
+=======
+        {/* Floating neon orbs */}
+        <motion.div
+>>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
+className='absolute top-1/4 left-1/4 w-32 h-32 rounded-full bg-gradient-to-r from-cyan-400 to-blue-500 opacity-20'
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
           animate={{
             rotate: [0, 180, 360],          }}
           transition={{

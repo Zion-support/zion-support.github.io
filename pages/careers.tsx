@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <<<<<<< HEAD:pages_backup/careers.tsx
 import React from 'react';
 import { motion } from 'framer-motion';
@@ -359,12 +360,23 @@ import Layout from '../components/Layout';
 
 export default function CareersPage() {
   
+=======
+import React from 'react'
+import Head from 'next/head'
+import Layout from '../components/Layout'
+export default function CareersPage() {
+  return (
+    <Layout 
+      title="Careers - Zion Tech Group"
+      description="Join our team of innovative developers, engineers, and designers building the future of technology."
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
     >
       <div className="min-h-screen bg-gray-50">
         <section className="bg-gradient-to-r from-blue-600 to-purple-600 py-20">
           <div className="container mx-auto px-4">
             <div className="text-center text-white">
               <h1 className="text-4xl md:text-6xl font-bold mb-6">
+<<<<<<< HEAD
         <section className="relative bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20 overflow-hidden">;
           <div className="absolute inset-0">;
             <div className="absolute top-20 left-10 w-72 h-72 bg-blue-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse"></div>;
@@ -792,3 +804,17 @@ ursor/integrate-build-improve-and-re-verify-8f7d
 
 
 
+=======
+                Careers
+              </h1>
+              <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
+                Join our team of innovative developers, engineers, and designers
+              </p>
+            </div>
+          </div>
+        </section>
+      </div>
+    </Layout>
+  )
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75

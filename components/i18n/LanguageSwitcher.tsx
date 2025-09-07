@@ -1,6 +1,13 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
 
-const localeToFlag: Record<string, string> = {
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 
+const localeToFlag: Record<string, string /> = {
+
+<<<<<<< HEAD
 import React, { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import i18n from '../../utils/i18n';
@@ -9,6 +16,16 @@ const localeToFlag: Record<string, string> = {
   en: 'us',
   pt: 'br',
   es: 'es',
+=======
+=======
+import React, { useState } from 'react';
+import { useTranslation  } from 'react-i18next';
+import i18n from '../../utils/i18n';
+>>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
+  en: 'us';
+  pt: 'br';
+  es: 'es';
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
   ar: 'sa'},
 
 const localeLabelKey: Record<string, string> = {
@@ -75,6 +92,7 @@ export default function LanguageSwitcher() {const { t } = useTranslation()const 
                 className='w-full flex items-center gap-2 px-3 py-2 hover:bg-gray-50 dark:hover:bg-gray-900'
 
   return (
+<<<<<<< HEAD
     <div className="relative">;
       <button
         aria-haspopup="listbox"
@@ -106,6 +124,9 @@ export default function LanguageSwitcher() {const { t } = useTranslation()const 
                 aria-selected={current.startsWith(lng)}
                 className="w-full flex items-center gap-2 px-3 py-2 hover:bg-gray-50 dark: hover: bg-gray-900"
                 onClick={() => changeLanguage(lng)}
+=======
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
               >
                 <span className={`fi fi-${localeToFlag[lng]}`}></span>
                 <span>{t(localeLabelKey[lng])}</span>
@@ -118,6 +139,7 @@ export default function LanguageSwitcher() {const { t } = useTranslation()const 
 
 );
 }
+<<<<<<< HEAD
   );
 }
 origin/cursor/automate-test-improve-and-merge-code-2533
@@ -190,3 +212,22 @@ function LanguageSwitcher() {const { t } = use_translation ()const [open, set_op
     </div>
   )
 }
+=======
+<<<<<<< HEAD
+
+"
+=======
+> <span className= {
+  `fi fi-$ {
+  localeToFlag[lng] 
+}` 
+}></span> <span> {
+  t (localeLabelKey[lng]) 
+}</span> </button> </li>) ) 
+}</ul>) 
+}</div>) 
+}
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-43ef
+=======
+>>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75

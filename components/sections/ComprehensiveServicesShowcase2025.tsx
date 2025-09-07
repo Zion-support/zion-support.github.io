@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
   CheckCircle;
   ArrowRight;
@@ -70,6 +71,14 @@ import { fintechFinancial2025  } from '../../data/fintech-financial-2025';
   Award,;
   Phone,;
 } from 'lucide-react';import { advancedAIAutomation2025 } from '../../data/advanced-ai-automation-2025';import { CheckCircle, ArrowRight, Star, TrendingUp, Zap, Shield, Globe, Brain, Database, Cloud, Lock, Rocket, Users, DollarSign, Target, Award, Phone } from 'lucide-react';
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+
+=======
+>>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 import React from 'react';
 import { motion } from 'framer-motion';
 import { CheckCircle, ArrowRight, Star, TrendingUp, Zap, Shield, Globe, Brain, Database, Cloud, Lock, Rocket, Users, DollarSign, Target, Award, Phone } from 'lucide-react';
@@ -129,9 +138,31 @@ const ComprehensiveServicesShowcase2025 = $2;
       gradient: 'from-amber-600 via-yellow-600 to-orange-600',
       description: 'Advanced learning and educational technology'
     }
+<<<<<<< HEAD
   ],
 
   const containerVariants = $2;
+=======
+  ];
+<<<<<<< HEAD
+
+const containerVariants = {}
+    hidden: { opacity: 0}
+=======
+const containerVariants = {
+  hidden: {
+  opacity: 0 
+}
+visible: {
+  opacity: 1, transition: {
+  staggerChildren: 0.1 
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-43ef
+}
+=======
+  const containerVariants = {
+    hidden: { opacity: 0 }
+>>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
     visible: {
       opacity: 1,
       transition: {
@@ -140,15 +171,31 @@ const ComprehensiveServicesShowcase2025 = $2;
     }
   },
 
+<<<<<<< HEAD
   const itemVariants = {
     hidden: { y: 20, opacity: 0},
+=======
+  }
+const itemVariants = {}
+    hidden: { y: 20, opacity: 0}
+<<<<<<< HEAD
+}
+<<<<<<< HEAD
+=======
+
+>>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
     visible: {
       y: 0,
       opacity: 1,
       transition: {
 
   return (
+<<<<<<< HEAD
     <section className="relative py-20 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 overflow-hidden">;
+=======
+    <section className=\"relative py-20 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 overflow-hidden\"    />
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
       {/* Animated Background Elements */}
 
         {/* Header */}
@@ -164,7 +211,40 @@ const ComprehensiveServicesShowcase2025 = $2;
         <div className="absolute -top-40 -right-40 w-80 h-80 bg-purple-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-blob"></div>
         <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-yellow-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-blob animation-delay-2000"></div>
         <div className="absolute top-40 left-40 w-80 h-80 bg-pink-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-blob animation-delay-4000"></div>
+<<<<<<< HEAD
       </div>
+=======
+      </div>"
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        {/* Header */}
+      <div className='relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>        {/* Header */}
+
+        {/* Header *}
+<<<<<<< HEAD
+=======
+}
+const itemVariants = {
+  hidden: {
+  y: 20, opacity: 0 
+}
+visible: {
+  y: 0, opacity: 1, transition: {
+  duration: 0.5 
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-43ef
+}
+
+        <motion.div;
+initial={{ opacity: 0, y: 30 }
+}
+<<<<<<< HEAD
+=======
+
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+>>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
           className='text-center mb-16'
 
 
@@ -178,6 +258,7 @@ const ComprehensiveServicesShowcase2025 = $2;
             your business and drive success in the digital age.
           </p>
         </motion.div>
+<<<<<<< HEAD
     {title: 'Cybersecurity & Security',icon: Shield,services: advancedCybersecurity2025,gradient: 'from-red-600 via-orange-600 to-yellow-600',description: 'Advanced security solutions for the digital age',},{title: 'Blockchain & Web3',icon: Globe,services: blockchainWeb32025,gradient: 'from-green-600 via-teal-600 to-cyan-600',description: 'Next-generation blockchain and decentralized solutions',},{title: 'IoT & Edge Computing',icon: Cloud,services: iotEdgeComputing2025,gradient: 'from-blue-600 via-indigo-600 to-purple-600',description: 'Smart connected solutions for the Internet of Things',},{title: 'Healthcare & Biotechnology',icon: Target,services: healthcareBiotech2025,gradient: 'from-pink-600 via-rose-600 to-red-600',description: 'Innovative healthcare and biotech solutions',},{title: 'Fintech & Financial',icon: DollarSign,services: fintechFinancial2025,gradient: 'from-emerald-600 via-green-600 to-teal-600',description: 'Revolutionary financial technology solutions',},{title: 'Education & E-Learning',icon: Award,services: educationElearning2025,gradient: 'from-amber-600 via-yellow-600 to-orange-600',description: 'Advanced learning and educational technology',},];
   const containerVariants = {hidden: { opacity: 0 }
     visible: {opacity: 1;
@@ -273,6 +354,8 @@ className='relative';
                     {category.title}</h3>;
                   <p className="text - gray - 400 text - lg">;</h3>;
                   <p className='text-gray-400 text-lg'>;
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
@@ -341,7 +424,11 @@ className='relative';
               </div>
 
               {/* Services Grid */}
+<<<<<<< HEAD
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+=======
+              <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>                {category.services.map((service, serviceIndex) => (              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
                 {category.services.map((service, serviceIndex) => (
                   <motion.div
                     key={service.id}
@@ -398,6 +485,7 @@ className='relative';
                         {service.description}
                       </p>
                     </div>
+<<<<<<< HEAD
                       </h4>;
                       <p className='text-gray-400 text-sm leading-relaxed'>                        {service.description}<p className='text-gray-400 text-sm leading-relaxed'>;
                         {service.description}</p>;
@@ -407,6 +495,14 @@ className='relative';
                         {service && service.name}
                       </h4>;
                       <p className="text-gray-400 text-sm leading-relaxed">;
+=======
+"
+                    <div className=\"mb-4\"    />;"
+                      <h4 className=\"text-xl font-semibold text-white mb-2 group-hover:text-purple-300 transition-colors\"    />
+                        {service && service.name}
+                      </h4>;"
+                      <p className=\"text-gray-400 text-sm leading-relaxed\"    />
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
                         {service && service.description}
                       </p>;
                     </div>;{/* Features */}<p className='text-gray-400 text-sm leading-relaxed'>                        {service.description}{service.description}</p>;
@@ -672,6 +768,28 @@ className='relative';
                     {/* Hover Effect Overlay */}
                     <div className="absolute inset-0 bg-gradient-to-r from-purple-600/10 to-pink-600/10 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
                   </motion.div>
+<<<<<<< HEAD
+=======
+
+                    {/* Hover Effect Overlay *}
+
+<div className='absolute inset-0 bg-gradient-to-r from-purple-600/10 to-pink-600/10 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none'    />
+                  </motion.div>
+                        href={service && service.link}
+                        className='inline-flex items-center justify-center w-full px-4 py-2 bg-gradient-to-r from-purple-600 to-pink-600 text-white text-sm font-medium rounded-lg hover:from-purple-700 hover:to-pink-700 transition-all duration-200 transform hover:shadow-xl hover:shadow-cyan-500/30'>
+                        Learn More
+                        <ArrowRight className='w-4 h-4 ml-2'    />                      </a>
+                    </div>;{/* Hover Effect Overlay */}
+                    <div className='absolute inset-0 bg-gradient-to-r from-purple-600/10 to-pink-600/10 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none'    />                  </motion && motion.div>                      <a
+                        href={service && service.link}"
+                        className=\"inline-flex items-center justify-center w-full px-4 py-2 bg-gradient-to-r from-purple-600 to-pink-600 text-white text-sm font-medium rounded-lg hover:from-purple-700 hover:to-pink-700 transition-all duration-200 transform hover:shadow-xl hover:shadow-cyan-500/30\"    />
+                        Learn More;"
+                        <ArrowRight className=\"w-4 h-4 ml-2\"    />
+                      </a>
+                    </div>;{/* Hover Effect Overlay */}"
+                    <div className='absolute inset-0 bg-gradient-to-r from-purple-600/10 to-pink-600/10 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none'    />                    <div className=\"absolute inset-0 bg-gradient-to-r from-purple-600/10 to-pink-600/10 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none\"    />
+                  </motion && motion.div>
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
                 ))}
               </div>
             </motion.div>
@@ -936,8 +1054,39 @@ export default ComprehensiveServicesShowcase2025;
 export default ComprehensiveServicesShowcase2025;  )
 }
 export default ComprehensiveServicesShowcase2025;
+<<<<<<< HEAD
 
 export default ComprehensiveServicesShowcase2025;
 )}export default ComprehensiveServicesShowcase2025;
             <div className = $2;
 export default ComprehensiveServicesShowcase2025,
+=======
+<<<<<<< HEAD
+
+"
+=======
+}
+> <h2 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-white via-purple-200 to-pink-200 bg-clip-text text-transparent mb-6" > Revolutionary 2025 Services </h2> </p> </motion.div> {
+  /* Service Categories */ 
+}<motion.div > {
+  serviceCategories.map ( (category, categoryIndex) => (<motion.div key= {
+  category.title 
+}</p> </div> </div> + {
+  service.features.length - 3 
+}more features </li>) 
+}</ul> </div> </div> </div> </div> <span key= {
+  useCaseIndex 
+}className="px-2 py-1 bg-slate-700/50 text-xs text-gray-300 rounded-full" > {
+  useCase 
+}</span>) ) 
+}</div> </div> > Learn More <ArrowRight className="w-4 h-4 ml-2" /> </a> </div> </motion.div>) ) 
+}</div> </motion.div>) ) 
+}</motion.div> {
+  /* Call to Action */ 
+}<motion.div > <div className="bg-gradient-to-r from-purple-600/20 to-pink-600/20 backdrop-blur-xl rounded-3xl p-8 border border-purple-500/30" > <h3 className="text-3xl font-bold text-white mb-4" > Ready to Transform Your Business? </h3> <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto" > Join thousands of businesses already leveraging our cutting-edge solutions to drive innovation, efficiency, and growth. </p> <a href="https://ziontechgroup.com/contact" className="inline-flex items-center justify-center px-8 py-3 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold rounded-xl hover:from-purple-700 hover:to-pink-700 transition-all duration-200 transform hover:shadow-xl hover:shadow-cyan-500/30" > Get Started Today <Rocket className="w-5 h-5 ml-2" /> </a> <a href="tel:+13024640950" className="inline-flex items-center justify-center px-8 py-3 bg-slate-700/50 text-white font-semibold rounded-xl hover:bg-slate-600/50 transition-all duration-200 border border-slate-600" > Call +1 302 464 0950 <Phone className="w-5 h-5 ml-2" /> </a> </div> </div> </motion.div> </div> </section>) 
+}
+export default ComprehensiveServicesShowcase2025
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-43ef
+=======
+>>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75

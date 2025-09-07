@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 ;
@@ -206,6 +207,13 @@ export default function SitemapPage() {;
 		{ name: 'Contact', href: '/contact' }
 	];
 
+=======
+<<<<<<< HEAD
+return (<div className="min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8" > <Head> <title>Sitemap | Zion Tech Group</title> <meta name="description" content="Quick links to the main routes and pages." /> <link rel="canonical" href="https://ziontechgroup.com/sitemap" /> </Head>) ) 
+}</ul> </div> </div>) 
+}
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 import React from 'react';
 import Head from 'next/head';
 export default function SitemapPage() {
@@ -473,6 +481,7 @@ function SitemapPage() {const links = [;
     </div>
   );
 }
+<<<<<<< HEAD
   );
 
 }
@@ -621,3 +630,6 @@ function SitemapPage() {
 
 origin/cursor/automate-test-improve-and-merge-code-2533
 
+=======
+>>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75

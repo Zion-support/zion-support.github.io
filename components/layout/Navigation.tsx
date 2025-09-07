@@ -1,3 +1,48 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+
+import React, { useState, useEffect } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+import { Menu, X, Home, Brain, Cpu, Rocket;
+  Phone, Mail, MapPin, Globe, ChevronDown}
+=======
+window.addEventListener ('scroll', handleScroll)
+return () => window.removeEventListener ('scroll', handleScroll) 
+}, [])
+const navigationItems = [ {
+  name: 'Home', href: '/', icon: Home 
+}
+{
+  name: 'Services', href: '/services', icon: Rocket, dropdown: [ {
+  name: 'AI Services', href: '/ai-services', icon: Brain, description: 'Revolutionary AI solutions' 
+}
+{
+  name: 'IT Services', href: '/it-services', icon: Cpu, description: 'Enterprise IT solutions' 
+}
+{
+  name: 'Micro SaaS', href: '/micro-saas', icon: Rocket, description: 'Specialized software solutions' 
+}
+{
+  name: 'Innovative Showcase', href: '/innovative-services-showcase', icon: Globe, description: 'Cutting-edge technology' 
+}] 
+}
+return (<> {
+  /* Navigation Bar */ 
+}<motion.nav initial= {
+  {
+  y: -100 
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-43ef
+}
+ } from 'lucide-react';
+=======
+import React, { useState, useEffect } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+import { Menu, X, Home, Brain, Cpu, Rocket;
+import {
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
   Menu
   X
   Home
@@ -9,6 +54,17 @@
   MapPin
   Globe
   ChevronDown;
+<<<<<<< HEAD
+=======
+} from 'lucide-react';
+import Link from 'next/link';import {
+  Menu, X, Home, Brain, Cpu, Rocket,
+  Phone, Mail, MapPin, Globe, ChevronDown;'
+} from 'lucide-react';'
+import Link from 'next/link'
+import {}
+  Menu, X, Home, Brain, Cpu, Rocket,
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 
   Globe,;
   ChevronDown,;
@@ -77,6 +133,7 @@ const Navigation: React.FC = () => {
   Globe,
   ChevronDown,
 } from 'lucide-react';
+<<<<<<< HEAD
 import Link from 'next / link';import {
   Menu, X, Home, Brain, Cpu, Rocket,
  } from 'lucide-react';
@@ -91,6 +148,34 @@ import { Menu, X, Home, Brain, Cpu, Rocket;Phone, Mail, MapPin, Globe, ChevronDo
 ;
     window.addEventListener ('scroll', handle_scroll);
     return () => window.removeEventListener ('scroll', handle_scroll);  }, []);      setIsScrolled (window.scroll_y > 50);
+=======
+>>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
+import Link from 'next/link';
+
+const Navigation: React.FC = () => {
+import Link from 'next/link';
+
+  const [isOpen, setIsOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+  const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
+  useEffect(() => {
+<<<<<<< HEAD
+
+    const handleScroll = (
+setIsScrolled(window.scrollY > 50)) => {
+  return $3;}
+}
+<<<<<<< HEAD
+};
+
+=======
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 50);
+    }
+>>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);  }, []);      setIsScrolled(window.scrollY > 50)
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
     }
 ;
     window.addEventListener ('scroll', handle_scroll);
@@ -206,6 +291,7 @@ import Link from 'next / link';import { Menu, X, Home, Brain, Cpu, Rocket,Phone,
       {/* Navigation Bar */}
       <motion.nav
         initial={{ y: -100 }}
+<<<<<<< HEAD
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${Z;
                   </span>;
                 </div>;
@@ -217,6 +303,33 @@ import Link from 'next / link';import { Menu, X, Home, Brain, Cpu, Rocket,Phone,
                   </span>;
                 </div>;
                 <div className='hidden sm:block'>;
+=======
+        animate={{ y: 0 }}
+        transition={{ duration: 0 && 0.5 }}
+
+        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+
+isScrolled
+            ? 'bg-gray-900/95 backdrop-blur-xl border-b border-cyan-500/20 shadow-2xl shadow-cyan-500/10'
+            : 'bg-transparent'}
+
+}    />
+
+        <div className=\"max-w-7xl mx-auto px-4 sm:px-6 lg:px-8\"    />;"
+          <div className=\"flex items-center justify-between h-16 lg:h-20\"    />
+            {/* Logo */}
+
+            <motion.div
+whileHover={{ scale: 1.05 }
+
+              className='flex items-center space-x-2'    />
+
+              <Link href='/' className='flex items-center space-x-2 group'    />
+                <div className='w-10 h-10 lg:w-12 lg:h-12 bg-gradient-to-r from-cyan-400 to-purple-500 rounded-xl flex items-center justify-center group-hover:shadow-lg group-hover:shadow-cyan-400/25 transition-all duration-300'    />
+                  <span className='text-white font-bold text-lg lg:text-xl'    />
+                    Z
+                  </span>
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
         }`}
       >;
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;
@@ -437,6 +550,7 @@ className='flex items-center space-x-1 cursor-pointer text-gray-300 hover:text-w
                   )}
                 </div>;
               ))}
+<<<<<<< HEAD
             </div>;
                 href="/contact";
             {/* Mobile Menu Button */}
@@ -446,6 +560,18 @@ className='flex items-center space-x-1 cursor-pointer text-gray-300 hover:text-w
             {/* Mobile Menu Button */}
             <div className="lg:hidden">;
               <motion.button;
+=======
+            </div>;"
+                href=\'/contact\'
+            {/* Mobile Menu Button */}
+            <div className='lg:hidden'    />
+              <motion&& motion.button
+                whileTap={{ scale: 0 && 0.95 }}
+            {/* Mobile Menu Button *}
+}"
+            <div className=\"lg:hidden\"    />
+              <motion.button
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
                 whileTap={{ scale: 0.95 }}
                 onClick={() => setIsOpen(!isOpen)}
                 className='text-gray-300 hover:text-white transition-colors duration-300';
@@ -888,6 +1014,7 @@ export default Navigation;
 export default Navigation;  )
 }
 export default Navigation;
+<<<<<<< HEAD
 
 export default Navigation;
 )}export default Navigation;
@@ -898,3 +1025,41 @@ export default Navigation;
                                 <Link
                                   key = $2;
 export default Navigation,
+=======
+<<<<<<< HEAD
+
+"
+=======
+}transition= {
+  {
+  duration: 0.5 
+}
+}className= {
+  `fixed top-0 left-0 right-0 z-50 transition-all duration-300 $ {
+  isScrolled ? 'bg-gray-900/95 backdrop-blur-xl border-b border-cyan-500/20 shadow-2xl shadow-cyan-500/10' : 'bg-transparent' 
+}` 
+}> > <Link href="/" className="flex items-center space-x-2 group" > <div className="w-10 h-10 lg:w-12 lg:h-12 bg-gradient-to-r from-cyan-400 to-purple-500 rounded-xl flex items-center justify-center group-hover:shadow-lg group-hover:shadow-cyan-400/25 transition-all duration-300" > <span className="text-white font-bold text-lg lg:text-xl" >Z</span> </div> <div className="hidden sm:block" > <div className="text-white font-bold text-lg lg:text-xl" >Zion Tech Group</div> <div className="text-cyan-400 text-xs" >Revolutionary Technology</div> </div> </a> </motion.div> {
+  /* Dropdown Menu */ 
+}<AnimatePresence> > <div className="w-10 h-10 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 rounded-lg flex items-center justify-center group-hover/item:bg-gradient-to-r group-hover/item:from-cyan-500/30 group-hover/item:to-purple-500/30 transition-all duration-300" > <Icon className="w-5 h-5 text-cyan-400" /> </div> <div> </div> </div> 
+}) 
+}</div> </motion.div>) 
+}</AnimatePresence> </div>) : (<Link) 
+}</div>) ) 
+}</div> > Get Started </motion.a> </div> </motion.button> </div> </div> </div> </motion.nav> {
+  /* Mobile Navigation */ 
+}<AnimatePresence> > {
+  /* Backdrop */ 
+}<div /> {
+  /* Mobile Menu */ 
+}<motion.div > <X className="w-6 h-6" /> </motion.button> </div> > <Icon className="w-5 h-5 text-cyan-400" /> <div> </div> 
+}) 
+}</div> </div>) 
+}</div>) ) 
+}</div> </div> </div> </div> > Get Started Today </motion.a> </div> </div> </motion.div> </motion.div>) 
+}</AnimatePresence> </>) 
+}
+export default Navigation
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-43ef
+=======
+>>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75

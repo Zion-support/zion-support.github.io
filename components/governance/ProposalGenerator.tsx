@@ -1,3 +1,18 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+class ErrorBoundary extends React.Component {constructor(props) {super(props)this.state = { hasError: false }}static getDerivedStateFromError(error) {return { hasError: true ,}
+}componentDidCatch(error, errorInfo) {console.error('Error caught by boundary:', error, errorInfo)}
+  render() {if (this.state.hasError) ;}
+  return <div />Something went wrong.</div>;}
+    }
+    return this.props.children;
+  }
+}
+=======
+>>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 import React, { useState } from 'react';
 export type ProposalForm = {export type ProposalForm = {import EnhancedLayout from '../layout/EnhancedLayout';
 export type ProposalType = 'Workforce Dev' | 'AI Ethics' | 'Digital ID' | 'Education';
@@ -94,15 +109,42 @@ export default function ProposalGenerator() {
   const [draftJson, setDraftJson] = useState<any>(null);
   const [exportLinks, setExportLinks] = useState<{ pdfUrl?: string, jsonUrl?: string, mdUrl?: string } | null>(null);
   const [statusMessage, setStatusMessage] = useState('');
+<<<<<<< HEAD
         body: JSON.stringify(form)}),
       const data = await res.json($2);
       setDraftMarkdown($2);
       setDraftJson($2);
+=======
+  function handleChange<K extends keyof ProposalForm>(key: K, value: ProposalForm[K]) {
+    setForm((prev) => ({ ...prev, [key]: value }))
+  }
+  async function handleGenerate() {
+    setIsGenerating(true);
+    setStatusMessage('Generating draft...');
+    try {
+      const res = await fetch('/api/proposals/generate', {
+        method: 'POST'
+        headers: { 'Content-Type': 'application/json' }
+        body: JSON.stringify(form)
+      });
+      const data = await res.json();
+      setDraftMarkdown(data.markdown |'');
+      setDraftJson(data.json |null);
+      setStatusMessage('Draft ready. You can edit and export.');
+    } catch (e: any) {
+      console.error(e);
+      setStatusMessage('Failed to generate. You can edit manually and export.');
+    } finally {
+      setIsGenerating(false);    }      const data = await res.json();
+      setDraftMarkdown(data.markdown |'');
+      setDraftJson(data.json |null);
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
       setStatusMessage('Draft ready. You can edit and export.')
     } catch (e: any) {
       console.error($2);
       setStatusMessage('Failed to generate. You can edit manually and export.')
     } finally {
+<<<<<<< HEAD
       setStatusMessage('Exported. Files saved.')
     } catch (e) {
       console.error(e);
@@ -181,6 +223,28 @@ export type ProposalForm = {targetInstitution: string,custom_prompt?: string;}ex
         pdfUrl: data && data.pdfUrl,;
         jsonUrl: data && data.jsonUrl,;
         mdUrl: data && data.mdUrl,;
+=======
+      setIsGenerating(false)
+    }
+  }
+  async function handleExport() {
+    setStatusMessage('Exporting to PDF/Markdown/JSON...');
+    try {
+      const res = await fetch('/api/proposals/export', {
+        method: 'POST'
+        headers: { 'Content-Type': 'application/json' }
+        body: JSON.stringify({
+          markdown: draftMarkdown
+          json: draftJson
+          meta: form
+        })
+      });
+      const data = await res.json();
+      setExportLinks({
+        pdfUrl: data.pdfUrl
+        jsonUrl: data.jsonUrl
+        mdUrl: data.mdUrl
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
       });
       setStatusMessage('Exported. Files saved.');
     } catch (e) {;
@@ -682,6 +746,7 @@ className='px-4 py-2 bg-emerald-600 text-white rounded';
         </div>
       </div>
     </div>
+<<<<<<< HEAD
 
 
   );
@@ -1012,3 +1077,31 @@ function handleSubmitBridge() {setStatusMessage ('Submitting via bridge (email /
     </div>)}
   )
 }
+=======
+);
+}
+}
+<<<<<<< HEAD
+
+=======
+<div> <label className="block text-sm font-medium" >Target institution</label> <input /> </div> <div> <label className="block text-sm font-medium" >Type</label> <select > <option>Workforce Dev</option> <option>AI Ethics</option> <option>Digital ID</option> <option>Education</option> </select> </div> <div> <label className="block text-sm font-medium" >Regional scope</label> <input /> </div> <div> <label className="block text-sm font-medium" >Budget / Resolution goals</label> <textarea block text-sm font-medium">Supporting multiverse (s) </label> <input /> </div> <div className=" grid grid-cols-1 md:grid-cols-2 gap-4"> <div> <label className=" block text-sm font-medium">Language</label> <input /> </div> <div> <label className=" block text-sm font-medium">GPT Prompt Assist</label> <textarea /> </div> </div> <div className=" flex gap-2"> <button > {
+  isGenerating ? 'Generating...' : 'Generate Draft' 
+}</button> <button > Export (PDF/JSON/MD) </button> <button > Submit Bridge </button> </div> {
+  exportLinks.pdfUrl && (<div> <a className=" text-blue-600 underline"href= {
+  exportLinks.pdfUrl 
+}target=" blank"rel=" noreferrer">PDF</a> </div>) 
+}{
+  exportLinks.mdUrl && (<div> <a className=" text-blue-600 underline"href= {
+  exportLinks.mdUrl 
+}target=" blank"rel=" noreferrer">Markdown</a> </div>) 
+}{
+  exportLinks.jsonUrl && (<div> <a className=" text-blue-600 underline"href= {
+  exportLinks.jsonUrl 
+}target=" blank"rel=" noreferrer">JSON</a> </div>) 
+}</div>) 
+}</div> <div className=" space-y-2"> <label className=" block text-sm font-medium" >Draft (Markdown) </label> <textarea /> </div> </div> </div>) 
+}
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-43ef
+=======
+>>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75

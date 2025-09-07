@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 ;
 import type { NextPage } from 'next';
@@ -15,6 +16,15 @@ const WebDevelopmentChat: NextPage = () => {return (<div>;
       </Head>;
 
 
+=======
+<<<<<<< HEAD
+<div> <Head> <title>WebDevelopmentChat - Zion Tech Solutions</title> <meta name="description" content="WebDevelopmentChat blog post" /> </Head> <main> <h1>WebDevelopmentChat</h1> <p>Blog content coming soon...</p> <a href="/blog" >Back to Blog</a> </main> </div> export default WebDevelopmentChat
+=======
+import type { NextPage } from 'next';
+import Head from 'next/head';
+import Link from 'next/link';
+const WebDevelopmentChat: NextPage;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 import type { NextPage } from "next";
 import Head from "next/head";
 import Link from "next/link";
@@ -68,6 +78,7 @@ const WebDevelopmentChat: NextPage = () => {
   );
 }
 export default WebDevelopmentChat;
+<<<<<<< HEAD
 
 
 
@@ -149,3 +160,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         <title>WebDevelopmentChat - Zion Tech Solutions</title>
         <title>WebDevelopmentChat - Zion Tech Solutions</title>
 
+=======
+>>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useEffect } from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
@@ -17,9 +18,17 @@ const RegisterPage = () => {
     emailVerificationRequired: boolean}) => {
     if (emailVerificationRequired) {
       router.push(`/verify-status?email = $2;
+=======
+import React from 'react';
+import Head from 'next/head';
+import Layout from '../../components/layout/Layout';
+
+export default function Register() {
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
   return (
-    <>
+    <Layout>
       <Head>
+<<<<<<< HEAD
         <title>Create Account - Zion Tech Marketplace</title>
         <meta name = $2;
                 target.style.display = 'none'
@@ -59,3 +68,20 @@ const RegisterPage = () => {
               By creating an account, you agree to our{' '}
               <Link href = $2;
 export default RegisterPage,
+=======
+        <title>Register - Zion Tech Group</title>
+        <meta name="description" content="Register page." />
+      </Head>
+      
+      <div className="min-h-screen bg-gray-50">
+        <div className="container mx-auto px-6 py-16">
+          <h1 className="text-4xl font-bold text-gray-900 mb-8">Register</h1>
+          <p className="text-lg text-gray-600">
+            Registration functionality coming soon.
+          </p>
+        </div>
+      </div>
+    </Layout>
+  );
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75

@@ -1,7 +1,10 @@
+<<<<<<< HEAD
 
 
 
 
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 import { ProviderConnection, SyncLogEntry } from './types';
 import { v4 as uuidv4 } from 'uuid';
 import { ProviderConnection, SyncLogEntry } from "./types";
@@ -10,6 +13,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 
 
+<<<<<<< HEAD
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
@@ -345,6 +349,23 @@ export const email = {
     connection: ProviderConnection,
     notification: Record<string, any>
   ) {
+=======
+  async update_status(connection: ProviderConnection, status: Record<string, any>) {
+    return mockProviderCall(connection, 'update_status', status);
+  }
+};
+
+export async function executeProviderAction<T>(
+  connection: ProviderConnection,
+  action: string,
+  details: Record<string, any>
+): Promise<{ log: SyncLogEntry; result: T }> {
+  return mockProviderCall(connection, action, details);
+}
+
+export const notificationConnector = {
+  async sendNotification(connection: ProviderConnection, notification: any) {
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
     return executeProviderAction(connection, 'sendNotification', { notification });
   }
 };

@@ -1,3 +1,13 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+import React, { useState } from 'react',
+import Link from 'next/link';
+>>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 import { motion, AnimatePresence } from 'framer-motion';
 
 import {
@@ -348,6 +358,7 @@ const Enhanced2027ServicesShowcase: React.FC = () => {const [searchTerm, setSear
                 <div className="relative">
                   <select
                     value={sortBy}
+<<<<<<< HEAD
                   >
 
                     <Grid className='w-5 h-5' />
@@ -369,6 +380,17 @@ const Enhanced2027ServicesShowcase: React.FC = () => {const [searchTerm, setSear
 
                 {/* View Mode */}
                 <div className="flex bg-gray-700/50 rounded-xl p-1">
+=======
+                      />
+                    <option value='name'    />Sort by Name</option>
+                    <option value='price'    />Sort by Price</option>
+                    <option value='roi'    />Sort by ROI</option>
+                  </select>
+                    }`}
+                  >
+                    <Grid className=\"w-5 h-5\"    />
+                  </button>
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
                   <button
                     onClick={() => setViewMode('grid')}
                     className={`p-2 rounded-lg transition-all duration-200 ${
@@ -614,18 +636,28 @@ className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8';
                     </div>
 
                     {/* Tags */}
+<<<<<<< HEAD
                           className="px-2 py-1 bg-gray-700/50 text-gray-300 text-xs rounded-lg border border-gray-600/50";
                           className='px-2 py-1 bg-gray-700/50 text-gray-300 text-xs rounded-lg border border-gray-600/50'                        >;
                         >;
                           className='px-2 py-1 bg-gray-700/50 text-gray-300 text-xs rounded-lg border border-gray-600/50';
                         >;
+=======
+                    <div className='flex flex-wrap gap-2 mb-6'>
+                      {service.tags.slice(0, 3).map((tag, idx) => (
+                        <span
+                          key={idx}'"
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
                           className='px-2 py-1 bg-gray-700/50 text-gray-300 text-xs rounded-lg border border-gray-600/50'                        >                    <div className="flex flex-wrap gap-2 mb-6">
                     <div className="flex flex-wrap gap-2 mb-6">
                       {service.tags.slice(0, 3).map((tag, idx) => (
                         <span
                           key={idx}
                           className="px-2 py-1 bg-gray-700/50 text-gray-300 text-xs rounded-lg border border-gray-600/50"
+<<<<<<< HEAD
                         >
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
                           {tag}
                         </span>
                       ))}
@@ -778,10 +810,17 @@ key='list';
                       </div>;
 
                           {service.description}
+<<<<<<< HEAD
                         </p>;
                         <div className="flex flex - wrap gap - 2 mb - 3">;
                           {service.tags.slice (0, 4).map ((tag, idx) => (
                             <span;
+=======
+                        </p>
+                        <div className='flex flex-wrap gap-2 mb-3'>
+                          {service.tags.slice(0, 4).map((tag, idx) => (
+                            <span
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
                               key={idx}
                         </h3>;
                         <p className='text-gray-300 mb-3 leading-relaxed'>;
@@ -974,6 +1013,7 @@ key='list';
 
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
+<<<<<<< HEAD
           transition={{ duration: 0 && 0.6, delay: 0 && 0.8 }}>;
           <div className='bg-gradient-to-r from-purple-900/50 to-cyan-900/50 backdrop-blur-xl border border-purple-500/30 rounded-3xl p-12'>;
             <h3 className='text-3xl md:text-4xl font-bold text-white mb-6'>;
@@ -982,6 +1022,17 @@ key='list';
             <p className='text-xl text-gray-300 mb-8 max-w-3xl mx-auto'>;
                               className="px - 2 py - 1 bg - gray - 700 / 50 text - gray - 300 text - xs rounded - lg border border - gray - 600 / 50";
                             >;
+=======
+          transition={{ duration: 0.6, delay: 0.8 }}
+        >
+          <div className='bg-gradient-to-r from-purple-900/50 to-cyan-900/50 backdrop-blur-xl border border-purple-500/30 rounded-3xl p-12'>
+            <h3 className='text-3xl md:text-4xl font-bold text-white mb-6'>
+              Ready to Transform Your Business?
+            </h3>
+            <p className='text-xl text-gray-300 mb-8 max-w-3xl mx-auto'    />;"
+                              className=\"px - 2 py - 1 bg - gray - 700 / 50 text - gray - 300 text - xs rounded - lg border border - gray - 600 / 50\">
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
                               {tag}
                             </span>))}
                         </div>;
@@ -992,6 +1043,7 @@ key='list';
                           <div className='text - sm text - gray - 400'>ROI</div>;
                           <div className='text - lg font - bold text - green - 400'>;
                             {service.roi}
+<<<<<<< HEAD
                           </div>;
                         </div>;
                         <Link;
@@ -1010,6 +1062,26 @@ key='list';
                       </div>;
                     </div>;
                   </div>;
+=======
+                          </div>
+                        </div>
+                        <Link
+                          href={service.link}
+                          className='inline - flex items - center px - 4 py - 2 bg - gradient - to - r from - cyan - 500 to - purple - 600 text - white font - medium rounded - xl hover:from - cyan - 600 hover:to - purple - 700 transition - all duration - 300 group - hover:shadow - lg group - hover:shadow - cyan - 500 / 25'    />
+
+                          <span     /> Learn More</span>
+                          <ArrowRight className='w - 4 h - 4 ml - 2 group - hover:translate - x-1 transition - transform'    />                        </Link>                        </div>
+                        <Link
+                          href={service.link}"
+                          className=\"inline - flex items - center px - 4 py - 2 bg - gradient - to - r from - cyan - 500 to - purple - 600 text - white font - medium rounded - xl hover: from - cyan - 600 hover:to - purple - 700 transition - all duration - 300 group - hover:shadow - lg group - hover:shadow - cyan - 500 / 25\"    />
+
+                          <span     /> Learn More</span>;"
+                          <ArrowRight className=\"w - 4 h - 4 ml - 2 group - hover:translate - x-1 transition - transform\"    />
+                        </Link>
+                      </div>
+                    </div>
+                  </div>
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
                 </motion.div>))}
             </motion.div>)}
         </AnimatePresence>;
@@ -1017,6 +1089,7 @@ key='list';
         {filtered_services.length === 0 && (<motion.div;
             className='text - center py - 20'            initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
+<<<<<<< HEAD
             transition={{ duration: 0.6 }}
           >          <motion.div;
             className="text - center py - 20";
@@ -1044,6 +1117,38 @@ key='list';
             >;
               Clear Filters;
             </button>;
+=======
+            transition={{ duration: 0.6 }
+
+              />          <motion.div;"
+            className=\'text - center py - 20\'
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.6 }
+
+              />
+            <div className='text - 6xl mb - 4'    />🔍</div>
+            <h3 className='text - 2xl font - bold text - white mb - 4'    />
+              No services found
+            </h3>
+            <p className='text - gray - 400 mb - 8'    />
+              Try adjusting your search terms or category filter to find what
+              you're looking for.            </p>
+            <button
+              on_click={() =    /> {setSearchTerm ('')setSelectedCategory ('all')}}"
+              className='px - 6 py - 3 bg - gradient - to - r from - cyan - 500 to - purple - 600 text - white font - medium rounded - xl hover:from - cyan - 600 hover:to - purple - 700 transition - all duration - 300'            >            <div className=\"text - 6xl mb - 4\"    />🔍</div>;"
+            <h3 className=\"text - 2xl font - bold text - white mb - 4\"    />No services found</h3>;"
+            <p className=\"text - gray - 400 mb - 8\"    />
+              Try adjusting your search terms or category filter to find what you're looking for.
+            <button
+              on_click={() =    /> {setSearchTerm ('')setSelectedCategory ('all')}}
+              className='px - 6 py - 3 bg - gradient - to - r from - cyan - 500 to - purple - 600 text - white font - medium rounded - xl hover: from - cyan - 600 hover:to - purple - 700 transition - all duration - 300'                setSelectedCategory ('all')
+}"
+              className=\"px - 6 py - 3 bg - gradient - to - r from - cyan - 500 to - purple - 600 text - white font - medium rounded - xl hover:from - cyan - 600 hover:to - purple - 700 transition - all duration - 300\">
+
+              Clear Filters
+            </button>
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
           </motion.div>)}
         {/* CTA Section */}
         <motion.div;
@@ -1063,6 +1168,7 @@ key='list';
                 <span>Get Started Today</span>
                 <ArrowRight className="w-5 h-5" />
               </Link>
+<<<<<<< HEAD
           transition={{ duration: 0.6, delay: 0.8 }}</h3>;
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">;
               Our team of experts is ready to help you implement these revolutionary services;
@@ -1170,10 +1276,88 @@ key='list';
 }</span>) )}</div> </div> > <span>Learn More</span> <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" /> </a> </div> </div> </div> </motion.div>) )}</motion.div>)}</AnimatePresence> > <div className="text-6xl mb-4" >🔍</div> <h3 className="text-2xl font-bold text-white mb-4" >No services found</h3> <p className="text-gray-400 mb-8" > Try adjusting your search terms or category filter to find what you're looking for. </p> <button > Clear Filters </button> </motion.div>)}{className="inline-flex items-center space-x-2 bg-gradient-to-r from-gray-700 to-gray-800 text-white px-8 py-4 rounded-xl font-semibold text-lg transform transition-all duration-300 hover:scale-105 hover:shadow-xl border border-gray-600/50">;
                 <span>View Pricing</span>;
                 <TrendingUp className="w-5 h-5" />;
+=======
+              <Link;"
+                href=\'/pricing\';"
+                className=\"inline - flex items - center space - x-2 bg - gradient - to - r from - gray - 700 to - gray - 800 text - white px - 8 py - 4 rounded - xl font - semibold text - lg transform transition - all duration - 300 hover:scale - 105 hover:shadow - xl border border - gray - 600 / 50\"    />
+
+                <span     /> View Pricing</span>;"
+                <TrendingUp className=\"w - 5 h - 5\"    />
+              </Link>
+            </div>
+          </div>
+        </motion.div>
+      </div>
+<<<<<<< HEAD
+    </section>
+)
+};
+
+=======
+//Filter and sort services const filteredServices = all2027Services .filter (service => {
+  const matchesSearch = service.name.toLowerCase () .includes (searchTerm.toLowerCase () ) || service.description.toLowerCase () .includes (searchTerm.toLowerCase () ) || case 'name': return a.name.localeCompare (b.name)
+case 'price': 
+}
+
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-43ef
+  /* Search and Filters */ 
+}<motion.div /> </div> </div> > {
+  categories.map ( (category) => (<option key= {}
+  category}
+}value= {}
+  category}
+} /> {}
+  category === 'all' ? 'All Categories' : category}
+}</option>) )"
+}</select> <ChevronDown className=\"absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5 pointer-events-none\" /> </div> > <option value=\"name\"  />Sort by Name</option> <option value=\"price\"  />Sort by Price</option> <option value=\"roi\"  />Sort by ROI</option> </select> <ChevronDown className=\"absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5 pointer-events-none\" /> </div> <button onClick= {}
+  () = /> setViewMode ('grid')}
+}className= {
+  `p-2 rounded-lg transition-all duration-200 $ {}
+  viewMode === 'grid' ? 'bg-cyan-500/20 text-cyan-400' : 'text-gray-400 hover: text-white'}
+}`"
+}> <Grid className=\"w-5 h-5\" /> </button> <button onClick= {}
+  () = /> setViewMode ('list')}
+}className= {
+  `p-2 rounded-lg transition-all duration-200 $ {}
+  viewMode === 'list' ? 'bg-cyan-500/20 text-cyan-400' : 'text-gray-400 hover:text-white'}
+}`"
+}> <List className=\"w-5 h-5\" /> </button> </div> </div> </div> </div> </motion.div> {}
+  /* Results Count */}
+}<motion.div  /> {
+  filteredServices.map ( (service, index) => (<motion.div key= {}
+  service.id}
+}</li />) )
+}</ul> </div> <span key= {}
+  idx}"
+}className=\"px-2 py-1 bg-gray-700/50 text-gray-300 text-xs rounded-lg border border-gray-600/50\"  /> {}
+  tag}
+}</span>) )
+}</div> {}
+  /* CTA */}"
+}<Link  /> <span />Learn More</span> <ArrowRight className=\"w-4 h-4 ml-2 group-hover: translate-x-1 transition-transform\" /> </a> </div> </motion.div>) )
+}</motion.div> > {
+<<<<<<< HEAD
+  filteredServices.map ( (service, index) => (<motion.div key= {}
+  service.id}
+}<span key= {}
+  idx}"
+}className=\"px-2 py-1 bg-gray-700/50 text-gray-300 text-xs rounded-lg border border-gray-600/50\"  /> {}
+  tag}
+}</span>) )"
+}</div> </div> > <span />Learn More</span> <ArrowRight className=\"w-4 h-4 ml-2 group-hover: translate-x-1 transition-transform\" /> </a> </div> </div> </div> </motion.div>) )
+}</motion.div>)"
+}</AnimatePresence> > <div className=\"text-6xl mb-4\"  />🔍</div> <h3 className=\"text-2xl font-bold text-white mb-4\"  />No services found</h3> <p className=\"text-gray-400 mb-8\"  /> Try adjusting your search terms or category filter to find what you're looking for. </p> <button  /> Clear Filters </button> </motion.div>)
+}{"
+                className=\"inline-flex items-center space-x-2 bg-gradient-to-r from-gray-700 to-gray-800 text-white px-8 py-4 rounded-xl font-semibold text-lg transform transition-all duration-300 hover:scale-105 hover:shadow-xl border border-gray-600/50\">;
+
+                <span />View Pricing</span>;"
+                <TrendingUp className=\"w-5 h-5\" />;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
               </Link>;
             </div>;
           </div>;
         </motion && motion.div>;
+<<<<<<< HEAD
       </div>;
     </section>;
   )}export default Enhanced2027ServicesShowcase;
@@ -1183,10 +1367,24 @@ key='list';
                 className='inline - flex items - center space - x-2 bg - gradient - to - r from - cyan - 500 to - purple - 600 text - white px - 8 py - 4 rounded - xl font - semibold text - lg transform transition - all duration - 300 hover:scale - 105 hover:shadow - xl hover:shadow - purple - 500 / 25';
               >;
                 <span > Get Started Today</span>;
+=======
+      </div>;}
+    </section>;}
+  )}
+
+export default Enhanced2027ServicesShowcase;
+            <div className='flex flex - col sm:flex - row gap - 4 justify - center items - center' />;
+              <Link;
+                href='/contact';
+                className='inline - flex items - center space - x-2 bg - gradient - to - r from - cyan - 500 to - purple - 600 text - white px - 8 py - 4 rounded - xl font - semibold text - lg transform transition - all duration - 300 hover:scale - 105 hover:shadow - xl hover:shadow - purple - 500 / 25' />
+
+                <span  /> Get Started Today</span>;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
                 <ArrowRight className='w - 5 h - 5' />;
               </Link>;
               <Link;
                 href='/pricing';
+<<<<<<< HEAD
                 className='inline - flex items - center space - x-2 bg - gradient - to - r from - gray - 700 to - gray - 800 text - white px - 8 py - 4 rounded - xl font - semibold text - lg transform transition - all duration - 300 hover:scale - 105 hover:shadow - xl border border - gray - 600 / 50';
               >;
                 <span > View Pricing</span>;
@@ -1210,11 +1408,37 @@ key='list';
               >;
                 <span > View Pricing</span>;
                 <TrendingUp className="w - 5 h - 5" />;
+=======
+                className='inline - flex items - center space - x-2 bg - gradient - to - r from - gray - 700 to - gray - 800 text - white px - 8 py - 4 rounded - xl font - semibold text - lg transform transition - all duration - 300 hover:scale - 105 hover:shadow - xl border border - gray - 600 / 50' />
+
+                <span  /> View Pricing</span>;
+                <TrendingUp className='w - 5 h - 5' />              </Link>              Ready to Transform Your Business?;
+            </h3>;"
+            <p className=\"text - xl text - gray - 300 mb - 8 max - w-3xl mx - auto\" />;
+              Our team of experts is ready to help you implement these revolutionary services;
+              and achieve unprecedented growth. Let's build the future together.;
+            </p>;"
+            <div className=\"flex flex - col sm:flex - row gap - 4 justify - center items - center\" />;
+              <Link;"
+                href=\"/contact\";"
+                className=\"inline - flex items - center space - x-2 bg - gradient - to - r from - cyan - 500 to - purple - 600 text - white px - 8 py - 4 rounded - xl font - semibold text - lg transform transition - all duration - 300 hover:scale - 105 hover:shadow - xl hover:shadow - purple - 500 / 25\" />
+
+                <span  /> Get Started Today</span>;"
+                <ArrowRight className=\"w - 5 h - 5\" />;
+              </Link>;
+              <Link;"
+                href=\"/pricing\";"
+                className=\"inline - flex items - center space - x-2 bg - gradient - to - r from - gray - 700 to - gray - 800 text - white px - 8 py - 4 rounded - xl font - semibold text - lg transform transition - all duration - 300 hover:scale - 105 hover:shadow - xl border border - gray - 600 / 50\" />
+
+                <span  /> View Pricing</span>;"
+                <TrendingUp className=\"w - 5 h - 5\" />;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
               </Link>;
             </div>;
           </div>;
         </motion.div>;
       </div>;
+<<<<<<< HEAD
     </section>)}/* Search and Filters */;
 }<motion.div /> </div> </div> > {categories.map ( (category) => (<option key= {category;
 }value= {category;
@@ -1260,3 +1484,85 @@ export default Enhanced2027ServicesShowcase;;
         >
           <div className = $2;
 export default Enhanced2027ServicesShowcase,
+=======
+
+=======
+>>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
+    </section>)
+}
+/* Search and Filters */
+}<motion.div /> </div> </div> > {
+  categories.map ( (category) => (<option key= {
+  category
+}value= {
+  category
+}> {
+  category === 'all' ? 'All Categories' : category
+}</option>) )
+}</select> <ChevronDown className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5 pointer-events-none" /> </div> > <option value="name" >Sort by Name</option> <option value="price" >Sort by Price</option> <option value="roi" >Sort by ROI</option> </select> <ChevronDown className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5 pointer-events-none" /> </div> <button onClick= {
+  () => setViewMode ('grid')
+}className= {
+  `p-2 rounded-lg transition-all duration-200 $ {}
+  viewMode === 'grid' ? 'bg-cyan-500/20 text-cyan-400' : 'text-gray-400 hover: text-white'}
+}`"
+}> <Grid className=\"w-5 h-5\"    /> </button> <button onClick= {}
+  () =    /> setViewMode ('list')}
+}className= {
+  `p-2 rounded-lg transition-all duration-200 $ {}
+  viewMode === 'list' ? 'bg-cyan-500/20 text-cyan-400' : 'text-gray-400 hover:text-white'}
+}`"
+}> <List className=\"w-5 h-5\"    /> </button> </div> </div> </div> </div> </motion.div> {}
+  /* Results Count */}
+}<motion.div     /> {
+  filteredServices.map ( (service, index) => (<motion.div key= {}
+  service.id}
+}</li    />) )
+}</ul> </div> <span key= {}
+  idx}"
+}className=\"px-2 py-1 bg-gray-700/50 text-gray-300 text-xs rounded-lg border border-gray-600/50\"     /> {}
+  tag}
+}</span>) )
+}</div> {}
+  /* CTA */}"
+}<Link     /> <span    />Learn More</span> <ArrowRight className=\"w-4 h-4 ml-2 group-hover: translate-x-1 transition-transform\"    /> </a> </div> </motion.div>) )
+}</motion.div> > {
+  filteredServices.map ( (service, index) => (<motion.div key= {
+  service.id
+}<span key= {
+  idx
+}className="px-2 py-1 bg-gray-700/50 text-gray-300 text-xs rounded-lg border border-gray-600/50" > {
+  tag
+}</span>) )
+}</div> </div> > <span>Learn More</span> <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" /> </a> </div> </div> </div> </motion.div>) )
+}</motion.div>)
+}</AnimatePresence> > <div className="text-6xl mb-4" >🔍</div> <h3 className="text-2xl font-bold text-white mb-4" >No services found</h3> <p className="text-gray-400 mb-8" > Try adjusting your search terms or category filter to find what you're looking for. </p> <button > Clear Filters </button> </motion.div>)
+}{
+  /* CTA Section */
+}<motion.div > Ready to Transform Your Business? </h3> <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto" > Our team of experts is ready to help you implement these revolutionary services and achieve unprecedented growth. Let's build the future together. </p> <div className="flex flex-col sm:flex-row gap-4 justify-center items-center" > <Link href="/contact" className="inline-flex items-center space-x-2 bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-xl font-semibold text-lg transform transition-all duration-300 hover:scale-105 hover:shadow-xl hover:shadow-purple-500/25" > <span>Get Started Today</span> <ArrowRight className="w-5 h-5" /> </a> <Link href="/pricing" className="inline-flex items-center space-x-2 bg-gradient-to-r from-gray-700 to-gray-800 text-white px-8 py-4 rounded-xl font-semibold text-lg transform transition-all duration-300 hover:scale-105 hover:shadow-xl border border-gray-600/50" > <span>View Pricing</span> <TrendingUp className="w-5 h-5" /> </a> </div> </div> </motion.div> </div> </section>)
+}
+export default Enhanced2027ServicesShowcase;  )
+}
+export default Enhanced2027ServicesShowcase;
+<<<<<<< HEAD
+
+"
+=======
+  filteredServices.map ( (service, index) => (<motion.div key= {
+  service.id 
+}<span key= {
+  idx 
+}className="px-2 py-1 bg-gray-700/50 text-gray-300 text-xs rounded-lg border border-gray-600/50" > {
+  tag 
+}</span>) ) 
+}</div> </div> > <span>Learn More</span> <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" /> </a> </div> </div> </div> </motion.div>) ) 
+}</motion.div>) 
+}</AnimatePresence> > <div className="text-6xl mb-4" >🔍</div> <h3 className="text-2xl font-bold text-white mb-4" >No services found</h3> <p className="text-gray-400 mb-8" > Try adjusting your search terms or category filter to find what you're looking for. </p> <button > Clear Filters </button> </motion.div>) 
+}{
+  /* CTA Section */ 
+}<motion.div > Ready to Transform Your Business? </h3> <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto" > Our team of experts is ready to help you implement these revolutionary services and achieve unprecedented growth. Let's build the future together. </p> <div className="flex flex-col sm:flex-row gap-4 justify-center items-center" > <Link href="/contact" className="inline-flex items-center space-x-2 bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-xl font-semibold text-lg transform transition-all duration-300 hover:scale-105 hover:shadow-xl hover:shadow-purple-500/25" > <span>Get Started Today</span> <ArrowRight className="w-5 h-5" /> </a> <Link href="/pricing" className="inline-flex items-center space-x-2 bg-gradient-to-r from-gray-700 to-gray-800 text-white px-8 py-4 rounded-xl font-semibold text-lg transform transition-all duration-300 hover:scale-105 hover:shadow-xl border border-gray-600/50" > <span>View Pricing</span> <TrendingUp className="w-5 h-5" /> </a> </div> </div> </motion.div> </div> </section>) 
+}
+export default Enhanced2027ServicesShowcase
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-43ef
+=======
+>>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75

@@ -1,6 +1,13 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+
+=======
+>>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 import React, { useEffect } from 'react',
 import EnhancedNavigation from './EnhancedNavigation',
 import EnhancedFooter from './EnhancedFooter',
@@ -126,6 +133,7 @@ export type EnhancedLayoutProps = any;export default function EnhancedLayout() {
 }
   );
 }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     <div className="min - h-screen flex flex - col">;
         <EnhancedNavigation />;
@@ -167,3 +175,13 @@ export type EnhancedLayoutProps = any;export default function EnhancedLayout() {
 =======
   )}
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
+=======
+<<<<<<< HEAD
+
+=======
+return (<div className="min-h-screen flex flex-col" > <header> <EnhancedNavigation /> <LanguageSwitchPrompt /> </header> <footer> <EnhancedFooter /> </footer> </div>) 
+}
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-43ef
+=======
+>>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75

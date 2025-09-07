@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 ;
@@ -13,6 +14,44 @@ import type { GetServerSideProps, NextPage } from 'next';
 
 import type { GetServerSideProps, NextPage } from 'next';
 
+=======
+<<<<<<< HEAD
+const TopicPage: NextPage<Props> = ({
+  topic, posts 
+}) => {
+  return (<div> <Head> <title> {
+  topic 
+}- Zion Blog</title> <PageShareButtons title= {
+  `$ {
+  topic 
+}- Zion Blog` 
+}url= {
+  typeof window === 'undefined' ? `https://zion.app/categories/$ {
+  encodeURIComponent (topic) 
+}` : window.location.href 
+}description= {
+  `Articles about $ {
+  topic 
+}` 
+}onShare= {
+  (network) => fetch ('/api/analytics/share', {
+  method: 'POST', headers: {
+  'Content-Type': 'application/json' 
+}, body: JSON.stringify ({
+  url: window.location.href, title: `$ {
+  topic 
+}- Zion Blog`, network, utm: 'utm source=' + network + '&utm medium=share&utm campaign=category' 
+}) 
+}) .catch ( () => {
+  
+}) 
+}/> </div>) ) 
+}</div> <div className="mt-6" ><Link href="/blog" className="underline" >Back to Blog</a></div> </div> </div>) 
+}
+export default TopicPage
+=======
+import type { GetServerSideProps, NextPage } from 'next',
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 import Head from 'next/head';
 import Link from 'next/link';
 import { BlogPost } from '@/utils/types/blog';
@@ -471,6 +510,7 @@ export default TopicPage;      </Head>;
             title={`${topic} - Zion Blog`}
             url={typeof window === 'undefined' ? `https://zion.app/categories/${encodeURIComponent(topic)}` : window.location.href}
             description={`Articles about ${topic}`}
+<<<<<<< HEAD
             onShare={(network) => fetch('/api/analytics/share', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ url: window.location.href, title: `${topic} - Zion Blog`, network, utm: 'utm_source = $2;
 export const getServerSideProps: GetServerSideProps = async (ctx) => {
   const topic = String($2);
@@ -485,3 +525,17 @@ export const getServerSideProps: GetServerSideProps = async (ctx) => {
 
 export default TopicPage;
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+            onShare={(network) => fetch('/api/analytics/share', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ url: window.location.href, title: `${topic} - Zion Blog`, network, utm: 'utm_source=' + network + '&utm_medium=share&utm_campaign=category' }) }).catch(() => {})}
+          />
+        </div>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          {posts.map((p) => (
+            <BlogCard key={p.id} post={p} />
+          ))}
+        </div>
+        <div className="mt-6"><Link href="/blog" className="underline">Back to Blog</Link></div>
+      </div>
+    </div>
+>>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75

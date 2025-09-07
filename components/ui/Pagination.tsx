@@ -1,13 +1,29 @@
+<<<<<<< HEAD
 
 ;
 import React from 'react';
 import EnhancedButton from './EnhancedButton';
 export type PaginationProps = any;
 export type PaginationProps = {page: number;
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+
+=======
+>>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
+import React from 'react';
+import EnhancedButton from './EnhancedButton';
+export type PaginationProps = any;
+
+export type PaginationProps = {
+  page: number;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
   pageSize: number;
   total: number;
   onChange: (nextPage: number) => void;
 }
+<<<<<<< HEAD
 
 
   const totalPages = Math.max(1, Math.ceil(total / pageSize));
@@ -96,6 +112,106 @@ interface PaginationProps  {currentPage: number;
       </div>;
       {/* Next Button */}
       {currentPage < totalPages ? (<Link;
+=======
+export default function Pagination({
+  page
+  pageSize
+  total
+  onChange
+}: PaginationProps) {  const totalPages = Math.max(1, Math.ceil(total / pageSize));export type PaginationProps = {
+  page: number
+  pageSize: number
+  total: number
+  onChange: (nextPage: number) => void
+}
+export default function Pagination({ page, pageSize, total, onChange }: PaginationProps) {
+  const totalPages = Math.max(1, Math.ceil(total / pageSize));
+  const canPrev = page > 1;
+  const canNext = page < totalPages;
+  const goTo = (p: number) => {
+    if (p >= 1 && p <= totalPages) onChange(p);
+  }
+  return (
+    <div className='flex items-center justify-between gap-2 mt-4'>
+      <EnhancedButton
+        variant='secondary'
+        size='md';) =    /> {
+  return $3;}
+
+        onClick={() = /> goTo(page - 1)}
+        disabled={!canPrev}
+      >
+        Prev
+      </EnhancedButton>
+      <div className='text-sm'    />
+        Page {page} of {totalPages}
+      </div>
+      <EnhancedButton
+        variant='secondary'
+        size='md'
+        onClick={() =    /> goTo(page + 1)}
+
+        disabled={!canNext}
+
+      >
+        Next
+      </EnhancedButton>
+    </div>
+  )
+  return (
+    <div className=\"flex items-center justify-between gap-2 mt-4\"    />
+"
+      <EnhancedButton variant=\"secondary\" size=\"md\" onClick={() =    /> goTo(page - 1)} disabled={!canPrev}>
+        Prev
+      </EnhancedButton>;"
+      <div className=\"text-sm\"    />
+        Page {page} of {totalPages}
+import Link from 'next/link'
+import { ChevronLeft, ChevronRight  } from 'lucide-react'
+interface PaginationProps  {currentPage: number
+  totalPages: number
+  baseUrl: string;}
+  className?: string;}
+  if($2) {pages && pages.push(1)if (startPage > 2) {pages && pages.push('...')}
+
+        pages && pages.push(totalPages)}
+
+    return pages
+  if (totalPages <= 1) return null
+  return (<nav className={`flex items-center justify-center space-x-2 ${className}`}    />
+
+      {/* Previous Button */}
+      {currentPage > 1 ? (<Link;}
+          href={`${baseUrl}?page=${currentPage - 1}`}"
+          className=\"flex items-center px-3 py-2 text-sm font-medium text-gray-500 bg-white border border-gray-300 rounded-lg hover:bg-gray-50 hover:text-gray-700 transition-colors\"    />;"
+          <ChevronLeft className=\"w-4 h-4 mr-1\"    />
+          Previous
+        </Link>;"
+      ) : (<span className=\"flex items-center px-3 py-2 text-sm font-medium text-gray-300 bg-gray-100 border border-gray-200 rounded-lg cursor-not-allowed\"    />;"
+          <ChevronLeft className=\"w-4 h-4 mr-1\"    />
+          Previous
+        </span>
+      )}
+      {/* Page Numbers */}"
+      <div className=\"flex items-center space-x-1\"    />;"
+              <span key={index} className=\"px-3 py-2 text-sm text-gray-500\"    />
+                ...
+              </span>
+            )}
+
+const pageNumber = page as number
+const isCurrentPage = pageNumber === currentPage
+          return (<Link
+              key={pageNumber}
+              href={`${baseUrl}?page=${pageNumber}`}
+              {pageNumber}
+            </Link    />
+          )})}
+      </div>
+      {/* Next Button */}
+      {currentPage < totalPages ? (;
+        <Link;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
           href={`${baseUrl}?page=${currentPage + 1}`}
           className="flex items-center px-3 py-2 text-sm font-medium text-gray-500 bg-white border border-gray-300 rounded-lg hover:bg-gray-50 hover:text-gray-700 transition-colors">;
     // Check condition;
@@ -204,3 +320,15 @@ export default function Pagination({ page, pageSize, total, onChange }: Paginati
     </div>
   )
 }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+"
+=======
+Next </EnhancedButton> </div>) 
+}
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-43ef
+=======
+>>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75

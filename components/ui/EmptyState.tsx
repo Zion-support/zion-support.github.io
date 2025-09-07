@@ -1,10 +1,18 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+
+
+import React from 'react';,
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 import React from 'react',
+>>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
 import Link from 'next/link';
 import EnhancedButton from './EnhancedButton';
 export type EmptyStateProps = any;
@@ -86,6 +94,7 @@ function EmptyState() {
   icon?: React.ReactNode;
   secondaryAction?: { label: string, href: string }
 }
+<<<<<<< HEAD
 
 export default function EmptyState(): any ({ title, description, icon, primaryAction, secondaryAction }: EmptyStateProps) {;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
@@ -186,3 +195,20 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       )}}</div>;
   )}
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
+=======
+<<<<<<< HEAD
+
+"
+=======
+</a> </a>) 
+}{
+  secondaryAction && (<Link href= {
+  secondaryAction.href 
+}> <a> </a> </a>) 
+}</div>) 
+}</div>) 
+}
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-43ef
+=======
+>>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75

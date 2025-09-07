@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 export default function FeaturesPage() {;
 
@@ -102,6 +103,13 @@ export default function FeaturesPage() {_return (
           <p className="mt-1 text-sm opacity-80">Instantly surface best-fit candidates for your role.</p>
         </div>
         <div className="rounded-2xl border border-gray-200 dark:border-gray-800 p-6 bg-white dark:bg-gray-950">
+=======
+<<<<<<< HEAD
+export default function FeaturesPage () {
+  return (<EnhancedLayout> </div> <div className="rounded-2xl border border-gray-200 dark:border-gray-800 p-6 bg-white dark:bg-gray-950" > <Bot className="h-6 w-6 text-indigo-500" /> <div className="mt-3 text-lg font-semibold" >AI Matching</div> <p className="mt-1 text-sm opacity-80" >Instantly surface best-fit candidates for your role.</p> </div> <div className="rounded-2xl border border-gray-200 dark:border-gray-800 p-6 bg-white dark:bg-gray-950" > <MonitorSmartphone className="h-6 w-6 text-indigo-500" /> <div className="mt-3 text-lg font-semibold" >Mobile Milestones</div> <p className="mt-1 text-sm opacity-80" >Track deliverables and approvals anywhere.</p> </div> </div> </EnhancedLayout>
+=======
+import EnhancedLayout from '../components/layout/EnhancedLayout';
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 import { Bot, Globe2, MonitorSmartphone } from 'lucide-react';
 
 
@@ -141,6 +149,7 @@ export default function FeaturesPage() {
     </EnhancedLayout>
   );
 }
+<<<<<<< HEAD
 
 
 
@@ -175,3 +184,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   );
   );
 
+=======
+>>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75

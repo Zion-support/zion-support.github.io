@@ -1,9 +1,15 @@
+<<<<<<< HEAD
+=======
+import React from 'react';
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 import Head from 'next/head';
-import Link from 'next/link';
-export default function GovernanceTrustPage() {
+import Layout from '../../components/layout/Layout';
+
+export default function trust() {
   return (
-    <>
+    <Layout>
       <Head>
+<<<<<<< HEAD
         <title>Zion Governance & Trust</title>
         <meta name="description" content="Governance, legal registry options, and public trust commitments for the Zion Protocol." />
       </Head>
@@ -61,4 +67,20 @@ export default function GovernanceTrustPage() {
       </div>
     </>
   )
+=======
+        <title>Trust - Zion Tech Group</title>
+        <meta name="description" content="Trust solutions and services." />
+      </Head>
+      
+      <div className="min-h-screen bg-gray-50">
+        <div className="container mx-auto px-6 py-16">
+          <h1 className="text-4xl font-bold text-gray-900 mb-8">Trust</h1>
+          <p className="text-lg text-gray-600">
+            Professional trust solutions tailored to your business needs.
+          </p>
+        </div>
+      </div>
+    </Layout>
+  );
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 }

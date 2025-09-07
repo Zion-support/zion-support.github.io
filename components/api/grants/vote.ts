@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs';
 import path from 'path';
@@ -10,6 +11,17 @@ function ensureDir() {
 }
 
 function grantPath(id: string) {
+=======
+import {v4, as, uuidv4} from 'uuid'
+function grantPath(id: string) {}
+  return path && path.join(GRANTS_DIR, `${id}.json`)
+import type { GrantApplication, VotePayload } from '../../../types/grants'
+const GRANTS_DIR = path.join(process.cwd(), 'data', 'grants')
+function ensureDir() {}
+  if (!fs.existsSync(GRANTS_DIR)) fs.mkdirSync(GRANTS_DIR, { recursive: true,}
+})
+function grantPath(id: string) {}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
   return path.join(GRANTS_DIR, `${id}.json`)
 }
 
@@ -31,6 +43,7 @@ function writeGrant(record: GrantApplication) {
     grantPath(record && record.id),
     JSON && JSON.stringify(record, null, 2),
     'utf8'
+<<<<<<< HEAD
   );
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
     return;
@@ -96,6 +109,12 @@ if ( {) {$2;
 }
 }
     res.status(400).json({ error: 'Missing fields' })}
+=======
+  )
+export default function handler(req: NextApiRequest, res: NextApiResponse) {}
+    return
+  }
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
   const payload = req.body as VotePayload;
   if (!payload?.grantId |!payload?.voter |!payload?.choice) {res.status(400).json({ error: 'Missing fields' })return;
   }

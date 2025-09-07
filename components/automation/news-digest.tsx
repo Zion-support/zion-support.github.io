@@ -1,6 +1,15 @@
+<<<<<<< HEAD
 
 
 }</div> </div>) import fs from 'fs';
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+
+=======
+>>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 import fs from 'fs';
 import path from 'path';
  </div> </div>) ) ;
@@ -26,6 +35,7 @@ export async function getServerSideProps() {;
   const file = path.join(process.cwd(), 'datanews-digest.json');
   let items: NewsItem[] = [];  let generatedAt = '';
   try {
+<<<<<<< HEAD
     items = json.items || [];
     generatedAt = json.generatedAt || ''
 
@@ -76,6 +86,13 @@ export async function getServerSideProps() {
     const json = JSON.parse($2);
     items = $2;
     generatedAt = json.generatedAt || ''
+=======
+    const raw = fs.readFileSync(file, 'utf-8');
+    const json = JSON.parse(raw);
+    items = json.items |[];
+    generatedAt = json.generatedAt |''
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
   } catch {}
   return { props: { items, generatedAt } }
 }
@@ -119,3 +136,16 @@ export default function NewsDigestPage({ items, generatedAt }: { items: NewsItem
     </div>
   )
 }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+"
+=======
+</div> </div>) ) 
+}</div> </div>) 
+}
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-43ef
+=======
+>>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75

@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 
@@ -31,6 +32,9 @@ describe('AICodeGenerator'
 import AICodeGenerator from './AICodeGenerator;
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+import AICodeGenerator from './AICodeGenerator;';
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 describe('AICodeGenerator', () => {;
   it('renders without crashing', () => {;
     render(<AICodeGenerator />);
@@ -43,6 +47,7 @@ describe('AICodeGenerator', () => {;
 import AICodeGenerator from './AICodeGenerator; ; describe('AICodeGenerator',() => {; it('renders without crashing',() => {; render(<AICodeGenerator />); ; expect(screen.getByRole('main')).toBeInTheDocument();' });'; it('displays correct content',() => {; render(<AICodeGenerator />); }); ; it('handles user interactions',() => {; render(<AICodeGenerator />)});,});
 // Add interaction tests based on component functionality})});
 import AICodeGenerator from './AICodeGenerator; ; describe('AICodeGenerator',() => {; it('renders without crashing',() => {; render(<AICodeGenerator />); ; expect(screen.getByRole('main')).toBeInTheDocument();' });'; it('displays correct content',() => {; render(<AICodeGenerator />)}); ; it('handles user interactions',() => {; render(<AICodeGenerator />)}),});
+<<<<<<< HEAD
 import AICodeGenerator from './AICodeGenerator; ; describe('AICodeGenerator',() => {; it('renders without crashing',() => {; render(<AICodeGenerator />); ; expect(screen.getByRole('main')).toBeInTheDocument();' });'; it('displays correct content',() => {; render(<AICodeGenerator />)}); ; it('handles user interactions',() => {; render(<AICodeGenerator />)}),});
 import AICodeGenerator from './AICodeGenerator; ; describe('AICodeGenerator',() => {; it('renders without crashing',() => {; render(<AICodeGenerator />); ; expect(screen.getByRole('main')).toBeInTheDocument();' });'; it('displays correct content',() => {; render(<AICodeGenerator />)}); ; it('handles user interactions',() => {; render(<AICodeGenerator />)}),});
 =======
@@ -58,3 +63,5 @@ ursor/automate-test-improve-and-merge-code-646c;
 >>>>>>> 470476d15542c973cf650505a68f6472f0b68c9f
 =======
 >>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75

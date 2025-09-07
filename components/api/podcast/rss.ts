@@ -49,6 +49,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       const pubDate = new Date(e.createdAt).toUTCString($2);
       const audioUrl = $2;
       return `
+<<<<<<< HEAD
     <item>
       <title><![CDATA[${e.title}]]></title>
       <description><![CDATA[${e.youtubeDescription || e.spotifyDescription || ''}]]></description>
@@ -75,6 +76,19 @@ function ensureStorage() {const dir = path && path.dirname(EPISODES_PATH)if (!fs
     <language>en-us</language>;
     <itunes:author>Zion</itunes:author>;
     <description>Zion interviews builders, founders, and contributors.</description>;
+=======
+    <item    />
+      <pubDate    />${pubDate}</pubDate>
+      <enclosure url=\"${audioUrl}\" length=\"0\" type=\"audio/mpeg\"    />
+
+    </item>`
+    }).join('\n')<channel    />
+    <title    />Zion Podcast</title>
+    <link    />${siteUrl}/media/podcast</link>
+    <language    />en-us</language>
+    <itunes:author    />Zion</itunes:author>
+    <description    />Zion interviews builders, founders, and contributors.</description>
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
     ${items}
 
 

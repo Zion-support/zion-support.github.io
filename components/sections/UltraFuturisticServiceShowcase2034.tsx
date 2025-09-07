@@ -1,4 +1,13 @@
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+
+=======
+>>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Star, CheckCircle, ArrowRight, TrendingUp, Users;
@@ -82,16 +91,63 @@ import { aiEmergingTechServices } from '../../data/2024-ai-emerging-tech-service
  } from 'lucide-react';
 import { realMarketServices  } from '../../data/2024-real-market-services';
 import { aiEmergingTechServices } from '../../data/2024-ai-emerging-tech-services';
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+const contactInfo = null;
+=======
+const containerVariants = {
+  hidden: {
+  opacity: 0 
+}
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-43ef
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
   mobile: '+1 302 464 0950'
   email: 'kleber@ziontechgroup.com'
   address: '364 E Main St STE 1008 Middletown DE 19709'
   website: 'https://ziontechgroup.com'
 }
+<<<<<<< HEAD
+=======
+>>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 visible: {
   opacity: 1, transition: {
   staggerChildren: 0.1
 }
 }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+> <h2 className=\"text-4xl md:text-5xl lg:text-6xl font-bold bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400 bg-clip-text text-transparent mb-6\"  /> Revolutionary Technology Services </h2> <p className=\"text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed\"  /> Discover our comprehensive suite of cutting-edge AI, quantum computing, and emerging technology solutions. Each service is designed to transform your business and propel you into the future. </p> </motion.div>) )
+}</div> </motion.div> {}
+  /* Search and Filter */}"
+}<motion.div /> <Search className=\"absolute right-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400\" /> </div> {}
+  /* Category Filter */}
+}<select </option />) )
+}</select> </div> </motion.div> {}
+  /* Service Categories */}
+}<motion.div key= {}
+  category.id }
+=======
+}
+> <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400 bg-clip-text text-transparent mb-6" > Revolutionary Technology Services </h2> <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed" > Discover our comprehensive suite of cutting-edge AI, quantum computing, and emerging technology solutions. Each service is designed to transform your business and propel you into the future. </p> </motion.div>) ) 
+}</div> </motion.div> {
+  /* Search and Filter */ 
+}<motion.div /> <Search className="absolute right-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400" /> </div> {
+  /* Category Filter */ 
+}<select </option>) ) 
+}</select> </div> </motion.div> {
+  /* Service Categories */ 
+}<motion.div key= {
+  category.id 
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-43ef
+}initial= {
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 > <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400 bg-clip-text text-transparent mb-6" > Revolutionary Technology Services </h2> <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed" > Discover our comprehensive suite of cutting-edge AI, quantum computing, and emerging technology solutions. Each service is designed to transform your business and propel you into the future. </p> </motion.div>) )
 }</div> </motion.div> {
   /* Search and Filter */
@@ -101,8 +157,15 @@ visible: {
 }</select> </div> </motion.div> {
   /* Service Categories */
 }<motion.div key= {
+<<<<<<< HEAD
   category.id 
 }initial= {
+=======
+  category.id
+}initial= {  {}
+const serviceCategories = [
+>>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
   {
     id: 'ai-services',
   website: 'https://ziontechgroup.com'
@@ -518,6 +581,7 @@ className='text-center mb-16'
           <div className='grid grid - cols - 2 md:grid - cols - 4 gap - 6 mt - 12'>;
             {[;
               {
+<<<<<<< HEAD
           viewport={{ once: true }}className='text-center mb-16';
         >;
           <h2 className='text-4xl md:text-5xl lg:text-6xl font-bold bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400 bg-clip-text text-transparent mb-6'>;
@@ -537,17 +601,40 @@ className='text-center mb-16'
           viewport={{ once: true}}
           className="text-center mb-16"
         >
+=======
+                label: 'Total Services'
+                value: allServices.length.toString()
+                icon: Rocket
+              }
+              { label: 'Happy Customers', value: '50K+', icon: Users }
+              { label: 'Success Rate', value: '99.9%', icon: CheckCircle }
+              { label: 'Global Reach', value: '45+ Countries', icon: Globe },            ].map((stat, index) => (        >
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400 bg-clip-text text-transparent mb-6">
             Revolutionary Technology Services
           </h2>
           <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
+<<<<<<< HEAD
               { label: 'Total Services', value: allServices && allServices.length.toString(), icon: Rocket },;
               { label: 'Happy Customers', value: '50K+', icon: Users },;
               { label: 'Success Rate', value: '99 && 99.9%', icon: CheckCircle },;
+=======
+            Discover our comprehensive suite of cutting-edge AI, quantum computing, and emerging technology solutions.
+            Each service is designed to transform your business and propel you into the future.
+          </p>
+          {/* Stats */}
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-12">
+            {[
+              { label: 'Total Services', value: allServices.length.toString(), icon: Rocket }
+              { label: 'Happy Customers', value: '50K+', icon: Users }
+              { label: 'Success Rate', value: '99.9%', icon: CheckCircle }
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
               { label: 'Global Reach', value: '45+ Countries', icon: Globe }
 
 
             ].map((stat, index) => (
+<<<<<<< HEAD
               <motion.div
 
             ].map((stat, index) => (;
@@ -581,6 +668,8 @@ className='text-center mb-16'
               { label: 'Success Rate', value: '99.9%', icon: CheckCircle},
               { label: 'Global Reach', value: '45+ Countries', icon: Globe}
             ].map((stat, index) => (
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
               <motion.div
                 key={stat.label}
                 initial={{ opacity: 0, scale: 0.8 }}
@@ -804,6 +893,7 @@ className='mb-16'
             <motion.div
               key={service.id}
               variants={itemVariants}
+<<<<<<< HEAD
               className="group relative p-6 rounded-xl bg-white/5 backdrop-blur-sm border border-white/10 hover:border-cyan-500/50 hover:bg-cyan-500/5 transition-all duration-300 hover:scale-105"
             >
               {/* Popular Badge */}
@@ -893,6 +983,10 @@ className='mb-16'
               variants={itemVariants}
               className='group relative p-6 rounded-xl bg-white/5 backdrop-blur-sm border border-white/10 hover:border-cyan-500/50 hover:bg-cyan-500/5 transition-all duration-300 hover:scale-105';
             >;
+=======
+              className='group relative p-6 rounded-xl bg-white/5 backdrop-blur-sm border border-white/10 hover:border-cyan-500/50 hover:bg-cyan-500/5 transition-all duration-300 hover:scale-105'
+            >
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
               {/* Popular Badge */}
               {service.popular && (<div className='absolute -top-3 -right-3 bg-gradient-to-r from-yellow-500 to-orange-500 text-white text-xs px-3 py-1 rounded-full font-semibold'>                  Popular;
                   Popular;
@@ -1037,12 +1131,19 @@ className='mb-16'
                   </div>
                 )}
               </div>
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
               {/* Service Meta */}
               <div className="grid grid-cols-2 gap-4 mb-6 text-sm">
                 <div className="flex items-center space-x-2 text-gray-400">
                   <Clock className="w-4 h-4" />
                   <span>{service.setupTime}</span>
+<<<<<<< HEAD
+=======
+                </div>                  <span>{service.setupTime}</span>
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
                 </div>
                 <div className="flex items-center space-x-2 text-gray-400">
                   <Users className="w-4 h-4" />
@@ -1052,6 +1153,19 @@ className='mb-16'
                   <Star className="w-4 h-4 text-yellow-400" />
                   <span>{service.rating}/5</span>
                 </div>
+<<<<<<< HEAD
+=======
+                <div className='flex items-center space-x-2 text-gray-400'>
+                  <Users className='w-4 h-4' />
+                  <span>{service.customers.toLocaleString()}</span>
+                </div>
+                <div className='flex items-center space-x-2 text-gray-400'>
+                  <Star className='w-4 h-4 text-yellow-400' />
+                  <span>{service.rating}/5</span>
+                </div>
+                <div className='flex items-center space-x-2 text-gray-400'>
+                  <TrendingUp className='w-4 h-4 text-green-400' />                  <span>{service.growthRate}</span>                <div className="flex items-center space-x-2 text-gray-400">
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
                   <TrendingUp className="w-4 h-4 text-green-400" />
                   <span>{service.growthRate}</span>
                 </div>
@@ -1226,9 +1340,14 @@ className='mb-16'
                   {service.roi}
                 </div>
               </div>
+<<<<<<< HEAD
 
               {/* Action Buttons */}
               <div className="flex space-x-3">
+=======
+              {/* Action Buttons */}
+              <div className='flex space-x-3'>
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
                 <a
                   href={service.link}
                   className="flex-1 bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-4 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-600 transition-all duration-200 text-center group"

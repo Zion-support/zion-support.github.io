@@ -1,3 +1,16 @@
+<<<<<<< HEAD
+{
+  generatedAt && (<p className="mt-2 text-sm text-gray-600" >Generated: {
+  generatedAt 
+}</p>) 
+}{
+  content 
+}</pre>) : (<div className="mt-6 rounded-xl border border-gray-200 bg-white p-6 text-gray-600" > No changelog generated yet. </div>) 
+}</main>) 
+}
+}
+}
+=======
 import fs from 'fs';
 import path from 'path';
 
@@ -99,6 +112,7 @@ export async function getStaticProps() {
     return { props: { content: null, generatedAt: null }, revalidate: 300 }
 }
 }
+<<<<<<< HEAD
 }}
   } catch {return { props: { content: null, generatedAt: null }, revalidate: 300 }
 }
@@ -112,3 +126,6 @@ export async function getStaticProps() {
     return { props: { content: null, generatedAt: null}, revalidate: 300}
   }
 }
+=======
+>>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75

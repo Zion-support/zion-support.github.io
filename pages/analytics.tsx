@@ -1,5 +1,6 @@
 import React from 'react';
 import Head from 'next/head';
+<<<<<<< HEAD
 import { BarChart3, TrendingUp, PieChart, Activity, ArrowRight, Check, Eye } from 'lucide-react';
 export default function AnalyticsPage() {
   const features = $2;
@@ -24,12 +25,18 @@ export default function AnalyticsPage() {
   ],
 
   const benefits = $2;
+=======
+import Layout from '../components/layout/Layout';
+
+export default function AnalyticsPage() {
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
   return (
-    <>
+    <Layout>
       <Head>
         <title>Analytics - Zion Tech Group</title>
         <meta name="description" content="Comprehensive analytics platform with real-time insights, predictive analytics, and custom reporting capabilities." />
       </Head>
+<<<<<<< HEAD
 
       <div className="min-h-screen bg-black">
         {/* Hero Section */}
@@ -164,4 +171,17 @@ export default function AnalyticsPage() {
       </div>
     </>
   )
+=======
+      
+      <div className="min-h-screen bg-gray-50">
+        <div className="container mx-auto px-6 py-16">
+          <h1 className="text-4xl font-bold text-gray-900 mb-8">Analytics Platform</h1>
+          <p className="text-lg text-gray-600">
+            Professional analytics solutions tailored to your business needs.
+          </p>
+        </div>
+      </div>
+    </Layout>
+  );
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 }

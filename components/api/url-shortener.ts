@@ -82,6 +82,7 @@ function isValidUrl(url: string): boolean {
 export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse<UrlShortenerResponse>
+<<<<<<< HEAD
 ) {
   if (req.method === 'POST') {
     // Create short URL
@@ -263,6 +264,25 @@ if ( {) {
 }
     return {
       not_found: true,    }      not_found: true;
+=======
+) {}
+    } catch (error) {'
+      console.error ('URL shortening error:', error)
+      res.status (500).json ({}
+        success: false,
+      success: false,'
+      error: 'Method not allowed',
+    })
+  params,
+}: {
+  params: { shortCode: string }
+}) {  const shortCode = params.shortCode;export async function getServerSideProps({ params }: { params: { shortCode: string } }) {
+  const shortCode = params.shortCode;
+  const shortUrl = urlStorage.get(shortCode);
+  if (!shortUrl |!shortUrl.isActive) {
+    return {
+      notFound: true,    };      notFound: true
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
     }
   }
   // Increment click count;

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 import React, {createContext;
   useContext;
@@ -19,12 +20,25 @@ export type UserRole = any;
 export type UserRole = 'client' | 'talent';
 type RoleContextValue = {role: UserRole;
   setRole: (role: UserRole) => void;
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+
+=======
+>>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
+import React, { createContext, useContext, useEffect, useMemo, useState } from 'react';
+export type UserRole = any;
+  return ctx
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 import React, {
   createContext
   useContext
   useEffect
   useMemo
   useState;
+<<<<<<< HEAD
   createContext,
   useContext,
   useEffect,
@@ -79,6 +93,29 @@ export const RoleProvider: React.FC<{ children: React.ReactNode }> = ({
 
   children,
 }) => {export const RoleProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {;
+=======
+} from 'react';
+export type UserRole = 'client' | 'talent';
+type RoleContextValue = {
+  role: UserRole;
+  setRole: (role: UserRole) => void;}
+const RoleContext = createContext<RoleContextValue | undefined>(undefined);
+export const RoleProvider: React.FC<{ children: React.ReactNode }> = ({
+  children
+}) => {  const [role, setRole] = useState<UserRole>('client');
+  useEffect(() => {
+    try {import React, { createContext, useContext, useEffect, useMemo, useState } from 'react';
+export type UserRole = 'client' | 'talent';
+type RoleContextValue = {
+  role: UserRole;
+  setRole: (role: UserRole) => void;  role: UserRole
+  setRole: (role: UserRole) => void
+}
+const RoleContext = createContext<RoleContextValue | undefined>(undefined);
+export const RoleProvider: React.FC<{ children: React.ReactNode }> = ({
+  children
+}) => {export const RoleProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
   const [role, setRole] = useState<UserRole>('client');
   useEffect(() => {
     try {
@@ -173,6 +210,7 @@ export function useRole(): any (): RoleContextValue {;
   if (!ctx) throw new Error('useRole must be used within RoleProvider');
   return ctx;  return ctx
 }
+<<<<<<< HEAD
 
   if (!ctx) throw new Error('useRole must be used within RoleProvider');
   return ctx;  return ctx;
@@ -230,3 +268,27 @@ const ctx = useContext (RoleContext);
   if (!ctx) throw new Error($2);
   return ctx
 }
+=======
+<<<<<<< HEAD
+}
+=======
+export type UserRole = 'client' | 'talent'
+useEffect ( () => {
+  try {
+  
+}catch {
+  
+}
+}, [])
+useEffect ( () => {
+  try {
+  if (typeof window !== 'undefined') {
+  
+}catch {
+  
+}
+}, [role])
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-43ef
+=======
+>>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75

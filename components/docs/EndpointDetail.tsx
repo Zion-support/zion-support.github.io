@@ -1,5 +1,15 @@
+<<<<<<< HEAD
 import React from 'react';
 import CodeSamples from './CodeSamples';
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+import React from 'react',
+import CodeSamples from './CodeSamples',
+>>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 import TryItConsole from './TryItConsole';
 import { EndpointSpec } from '../../data/api-docs/types';
 export default function EndpointDetail({ endpoint }: { endpoint: EndpointSpec}) {
@@ -12,9 +22,12 @@ export default function EndpointDetail({ endpoint }: { endpoint: EndpointSpec}) 
 
   endpoint: EndpointSpec;
 }) {
+<<<<<<< HEAD
 
   return (
 
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
     <div className='space-y-4'>
   endpoint,}: {import { EndpointSpec  } from '../../data/api-docs/types';
 export default function EndpointDetail() {return (<div className="space-y-4">;
@@ -120,6 +133,7 @@ export default function EndpointDetail() {return (<div className='space-y-4'>;
     </div>
   );
 }
+<<<<<<< HEAD
             {endpoint.visibility}<div>;
         <div className='font-medium mb-2'>Code Examples</div>        <CodeSamples samples={endpoint.samples} />;
       </div>;
@@ -256,3 +270,28 @@ export default function EndpointDetail() {return (<div className='space-y-4'>;
     </div>)}}
   )
 }
+=======
+<<<<<<< HEAD
+
+"
+=======
+</div> </div> <div>) ) 
+}</ul> </div>) 
+}{
+  endpoint.errors.map ( (e) => (<li key= {
+  e.code 
+}><strong> {
+  e.code 
+}</strong> ({
+  e.httpStatus 
+}) - {
+  e.message 
+}</li>) ) 
+}</ul> </div>) 
+}</div>) 
+}
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-43ef
+=======
+}
+>>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75

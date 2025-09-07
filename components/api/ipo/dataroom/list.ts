@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 
@@ -12,6 +13,16 @@
 
 
 
+=======
+import type { NextApiRequest, NextApiResponse } from 'next';
+import fs from 'fs';
+import path from 'path';
+import { appendAuditLog, resolveDataPath } from '../../../../utils/api/storage';
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  const section = null;
+  res.status(200).json(files)
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 import type { NextApiRequest, NextApiResponse } from "next";
 import fs from "fs";
 import path from "path";
@@ -28,6 +39,7 @@ import { appendAuditLog, resolveDataPath } from "../../../../utils/api/storage";
   const files = fs.readdirSync(dir).map((name) => ({ name }));
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const section = String(req.query.section |"General");
+<<<<<<< HEAD
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {;
   const section = String(req.query.section || "General");
@@ -118,6 +130,12 @@ ursor/fix-website-loading-errors-and-merge-6662
   if (!fs.existsSync(dir)) return res.status(200).json([]);
 const files = fs.readdirSync(dir).map(name => ({ name }));
   appendAuditLog({ type: 'file_list', section });
+=======
+  const dir = resolveDataPath(path.join("dataroom", section));
+  if (!fs.existsSync(dir)) return res.status(200).json([]);
+  const files = fs.readdirSync(dir).map((name) => ({ name }));
+  appendAuditLog({ type: "file_list", section });
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
   res.status(200).json(files);
 
 

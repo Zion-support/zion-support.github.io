@@ -3,6 +3,7 @@ import type { TrustPeerReview } from '../../../utils/types/trust';
 import { supabase } from '../../../utils/supabase/client';
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'POST') {
+<<<<<<< HEAD
     res.setHeader($2);
     return res.status(405).json({ error: 'Method not allowed' })
   }
@@ -37,12 +38,43 @@ export default async function handler() {if (req.method !== 'POST') {res.setHead
   }
   try {
     await supabase && supabase.from('trust_peer_reviews').insert(review);
+=======
+    res.setHeader('AllowPOST');
+export default async function handler(
+  req: NextApiRequest
+  res: NextApiResponse
+) {
+  if (req.method !== 'POST') {;
+    res.setHeader('Allow', 'POST');
+    return res.status(405).json({ error: 'Method not allowed' });  }
+  const { userId, reviewerId, type, note } = req.body |{}
+  if (!userId |!reviewerId |(type !== 'endorse' && type !== 'flag')) {
+    return res.status(400).json({ error: 'Missing or invalid fields' });export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+  if (req.method !== 'POST') {
+    res.setHeader('AllowPOST')
+
+    return res.status(405).json({ error: 'Method not allowed' })
+  const { userId, reviewerId, type, note } = req.body |{}
+  if (!userId |!reviewerId |(type !== 'endorse' && type !== 'flag')) {
+    return res.status(400).json({ error: 'Missing or invalid fields' });
+  }
+
+  const { userId, reviewerId, type, note } = req.body || {};'
+  if (!userId || !reviewerId || (type !== 'endorse' && type !== 'flag')) {'
+    return res.status(400).json({ error: 'Missing or invalid fields' })
+
+  const review: TrustPeerReview = {}
+
+  try {'
+    await supabase && supabase.from('trust_peer_reviews').insert(review)
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
   } catch {}
     user_id,
     reviewer_id,
     type,
     note,
     created_at: new Date ().toISOString (),
+<<<<<<< HEAD
   }
 ;
   try {
@@ -68,4 +100,25 @@ export default async function handler() {if (req.method !== 'POST') {res.setHead
 return res.status(200).json({ ok: true, review })}
 
   return res.status(200).json({ ok: true, review })
+=======
+
+  try {'
+    await supabase.from ('trust_peer_reviews').insert (review)
+  } catch {}
+  return res.status (200).json ({ ok: true, review });  }
+  const review: TrustPeerReview = {}
+    user_id
+    reviewer_id
+    type
+    note
+'
+    res.setHeader('AllowPOST'),'
+    return res.status(405).json({ error: 'Method not allowed' })
+  const { userId, reviewerId, type, note } = req.body || {}
+  const { userId, reviewerId, type, note } = req.body || {};'
+  if (!userId || !reviewerId || (type !== 'endorse' && type !== 'flag')) {}
+
+  } catch {}
+return res.status(200).json({ ok: true, review });
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 }

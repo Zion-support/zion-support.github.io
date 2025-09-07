@@ -1,5 +1,6 @@
 import React from 'react';
 import Head from 'next/head';
+<<<<<<< HEAD
 import { motion } from 'framer-motion';
 import { 
   Atom, Cpu, Shield, Rocket, Zap, Database, 
@@ -48,9 +49,15 @@ export default function QuantumServicesPage() {
     { number: "24/7", label: "Quantum Support", icon: Clock}
   ],
 
+=======
+import Layout from '../components/layout/Layout';
+
+export default function quantum() {
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white">
+    <Layout>
       <Head>
+<<<<<<< HEAD
         <title>Quantum Computing Services - Zion Tech Group</title>
         <meta name="description" content="Revolutionary quantum computing solutions from Zion Tech Group. Quantum algorithms, security, and AI integration for the future of computing." />
         <meta property="og:title" content="Quantum Computing Services - Zion Tech Group" />
@@ -200,4 +207,20 @@ export default function QuantumServicesPage() {
       <EnhancedFooter />
     </div>
   )
+=======
+        <title>Quantum - Zion Tech Group</title>
+        <meta name="description" content="Quantum solutions and services." />
+      </Head>
+      
+      <div className="min-h-screen bg-gray-50">
+        <div className="container mx-auto px-6 py-16">
+          <h1 className="text-4xl font-bold text-gray-900 mb-8">Quantum</h1>
+          <p className="text-lg text-gray-600">
+            Professional quantum solutions tailored to your business needs.
+          </p>
+        </div>
+      </div>
+    </Layout>
+  );
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 }

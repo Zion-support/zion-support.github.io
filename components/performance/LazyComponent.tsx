@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { Suspense } from 'react';
 ursor/automate-test-improve-and-merge-code-646c;
 import React from 'react';
@@ -31,6 +32,13 @@ const LazyComponent: React.FC<LazyComponentProps> = ({
       {children}
     </Suspense>
   );
+=======
+<<<<<<< HEAD
+import React, { useState, useEffect } from 'react'
+}
+=======
+import React from 'react';
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 };
 
 export default LazyComponent;
@@ -40,6 +48,7 @@ import React from 'react'
 }
 import React, { Suspense, lazy } from 'react';
 
+<<<<<<< HEAD
 
 import React from 'react'
 }
@@ -55,3 +64,6 @@ interface LazyComponentProps {
 
   return (
 
+=======
+>>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75

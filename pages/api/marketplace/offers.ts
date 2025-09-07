@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from "next";
 import { v4 as uuidv4 } from "uuid";
 import { assertClient, assertTalentOrClientForOffer, getDemoUser } from "../../../utils/marketplace/auth";
@@ -104,4 +105,15 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     const status = $2;
     return res.status(status).json({ ok: false, error: e ?.message || "Server error" })
   }
+=======
+import { NextApiRequest, NextApiResponse } from 'next';
+
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  if (req.method !== 'GET') {
+    res.setHeader('Allow', ['GET']);
+    return res.status(405).end('Method Not Allowed');
+  }
+  
+  res.status(200).json({ message: 'Endpoint working' });
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 }

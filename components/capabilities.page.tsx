@@ -1,3 +1,8 @@
+<<<<<<< HEAD
+</div>) ) 
+}</div> </EnhancedLayout>) 
+}
+=======
 import EnhancedLayout from '../components/layout/EnhancedLayout';
 const CAPABILITIES = $2;
 export default function CapabilitiesPage() {
@@ -137,6 +142,7 @@ export default function CapabilitiesPage() {return (<EnhancedLayout>;
     </EnhancedLayout>;
 );
 }
+<<<<<<< HEAD
   );
 }
     </EnhancedLayout>;
@@ -148,3 +154,6 @@ export default function CapabilitiesPage() {return (<EnhancedLayout>;
     </EnhancedLayout>
   )
 }
+=======
+>>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75

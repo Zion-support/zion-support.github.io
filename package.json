@@ -7,7 +7,13 @@
     "ci:preflight": "node -e \"try{require('fs').accessSync('dist');console.log('dist exists')}catch(e){process.exit(0)}\" && echo prebuilt || echo building",
     "ci:build-test": "npm run build && npm run test:smoke",
     "dev": "next dev",
+<<<<<<< HEAD
     "build": "node --max-old-space-size=8192 ./node_modules/.bin/next build",
+=======
+    "build": "next build",
+    "clean": "rm -rf .next && rm -rf out",
+    "export": "next build && next export",
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
     "start": "next start",
     "build:netlify": "node scripts/build-with-error-handling.js",
     "prebuild": "echo \"Starting build...\"",
@@ -25,6 +31,7 @@
     "clean": "rm -rf .next out dist",
     "precommit": "npm run check",
     "prepare": "echo 'Husky prepare script disabled'",
+<<<<<<< HEAD
     "autonomous": "node automation/launch-enhanced-autonomous-system.js",
     "autonomous:dev": "nodemon automation/launch-enhanced-autonomous-system.js",
     "autonomous:status": "node automation/launch-autonomous-systems-clean.js status",
@@ -268,6 +275,45 @@
   },
   "dependencies": {
     "@supabase/supabase-js": "^2.57.2",
+=======
+    "sitemap": "node scripts/generate-sitemap.js",
+    "build:analyze": "npm run build && npx @next/bundle-analyzer"
+  },
+  "dependencies": {
+    "@babel/core": "^7.28.4",
+    "@fastify/cors": "^11.1.0",
+    "@fastify/rate-limit": "^10.3.0",
+    "@google-analytics/data": "^5.2.0",
+    "@google/generative-ai": "^0.24.1",
+    "@heroicons/react": "^2.2.0",
+    "@hookform/resolvers": "^5.2.1",
+    "@next/swc-linux-x64-gnu": "^15.5.2",
+    "@radix-ui/react-accordion": "^1.1.2",
+    "@radix-ui/react-alert-dialog": "^1.0.5",
+    "@radix-ui/react-avatar": "^1.0.4",
+    "@radix-ui/react-checkbox": "^1.0.4",
+    "@radix-ui/react-dialog": "^1.0.5",
+    "@radix-ui/react-dropdown-menu": "^2.0.6",
+    "@radix-ui/react-hover-card": "^1.0.7",
+    "@radix-ui/react-label": "^2.0.2",
+    "@radix-ui/react-navigation-menu": "^1.1.4",
+    "@radix-ui/react-popover": "^1.0.7",
+    "@radix-ui/react-progress": "^1.0.3",
+    "@radix-ui/react-radio-group": "^1.1.3",
+    "@radix-ui/react-scroll-area": "^1.0.5",
+    "@radix-ui/react-select": "^2.0.0",
+    "@radix-ui/react-separator": "^1.0.3",
+    "@radix-ui/react-slot": "^1.0.2",
+    "@radix-ui/react-switch": "^1.0.3",
+    "@radix-ui/react-tabs": "^1.0.4",
+    "@radix-ui/react-toast": "^1.1.5",
+    "@radix-ui/react-toggle": "^1.0.3",
+    "@radix-ui/react-tooltip": "^1.0.7",
+    "@reduxjs/toolkit": "^2.9.0",
+    "@stripe/stripe-js": "^7.9.0",
+    "@supabase/ssr": "^0.6.1",
+    "@supabase/supabase-js": "^2.39.0",
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
     "@tailwindcss/aspect-ratio": "^0.4.2",
     "@tailwindcss/forms": "^0.5.10",
     "@tailwindcss/typography": "^0.5.16",
@@ -305,6 +351,7 @@
     "import-fresh": "^3.3.1",
     "jszip": "^3.10.1",
     "lucide-react": "^0.536.0",
+<<<<<<< HEAD
     "next": "^14.0.0",
     "react": "^18.0.0",
     "react-dom": "^18.0.0"
@@ -322,4 +369,96 @@
     "tailwindcss": "^3.4.0",
     "typescript": "^5.0.0"
   }
+=======
+    "mongodb": "^6.19.0",
+    "next": "^15.5.2",
+    "react": "^18.3.1",
+    "react-datepicker": "^8.4.0",
+    "react-day-picker": "^8.9.1",
+    "react-dom": "^18.3.1",
+    "react-error-boundary": "^6.0.0",
+    "react-helmet-async": "^2.0.5",
+    "react-router-dom": "^7.8.2",
+    "sharp": "^0.34.3",
+    "tailwind-merge": "^3.3.1",
+    "tailwindcss-animate": "^1.0.7",
+    "uuid": "^11.1.0",
+    "web-vitals": "^5.1.0"
+  },
+  "devDependencies": {
+    "@axe-core/cli": "^4.10.2",
+    "@axe-core/react": "^4.10.2",
+    "@babel/plugin-transform-class-properties": "^7.27.1",
+    "@babel/preset-env": "^7.28.3",
+    "@babel/preset-react": "^7.27.1",
+    "@babel/preset-typescript": "^7.27.1",
+    "@eslint/js": "^9.35.0",
+    "@next/eslint-plugin-next": "^15.5.2",
+    "@playwright/test": "^1.55.0",
+    "@rollup/rollup-linux-x64-gnu": "^4.50.0",
+    "@testing-library/dom": "^10.4.1",
+    "@testing-library/jest-dom": "^6.6.4",
+    "@testing-library/react": "^16.3.0",
+    "@testing-library/user-event": "^14.6.1",
+    "@types/jest": "^29.5.8",
+    "@types/next": "^8.0.7",
+    "@types/node": "^18.0.0",
+    "@types/node-cron": "^3.0.11",
+    "@types/react": "^18.3.24",
+    "@types/react-dom": "^18.3.7",
+    "@types/react-router-dom": "^5.3.3",
+    "@typescript-eslint/eslint-plugin": "^8.42.0",
+    "@typescript-eslint/parser": "^8.42.0",
+    "@vitejs/plugin-react": "^5.0.2",
+    "autoprefixer": "^10.4.21",
+    "axe-core": "^4.10.3",
+    "eslint": "^9.35.0",
+    "eslint-config-next": "^14.2.32",
+    "eslint-formatter-junit": "^8.40.0",
+    "eslint-plugin-jsx-a11y": "^6.10.2",
+    "eslint-plugin-react": "^7.37.5",
+    "eslint-plugin-react-hooks": "^5.2.0",
+    "eslint-plugin-react-refresh": "^0.4.20",
+    "identity-obj-proxy": "^3.0.0",
+    "jest": "^30.1.3",
+    "jest-environment-jsdom": "^30.1.2",
+    "jsdom": "^24.0.0",
+    "lighthouse": "^12.8.2",
+    "pm2": "^6.0.8",
+    "postcss": "^8.5.6",
+    "prettier": "^3.6.2",
+    "rollup": "^4.50.0",
+    "tailwindcss": "^3.4.17",
+    "terser": "^5.43.1",
+    "ts-jest": "^29.2.5",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.9.2",
+    "vite": "^7.1.4"
+  },
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=10.0.0"
+  },
+  "postcss": {
+    "plugins": {
+      "tailwindcss": {},
+      "autoprefixer": {}
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Zion-Holdings/zion.app.git"
+  },
+  "keywords": [
+    "nextjs",
+    "react",
+    "typescript",
+    "tailwindcss",
+    "ai",
+    "automation",
+    "zion-tech-group"
+  ],
+  "author": "Zion Tech Group",
+  "license": "MIT"
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 }

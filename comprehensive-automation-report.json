@@ -1,4 +1,5 @@
 {
+<<<<<<< HEAD
 
 
 
@@ -95,20 +96,39 @@ ursor/automate-test-improve-and-merge-code-e883
 origin/cursor/automate-test-improve-and-merge-code-2533
 
       "duration": 7952,
+=======
+  "timestamp": "2025-09-07T08:40:25.996Z",
+  "totalDuration": 14874,
+  "successfulTasks": 3,
+  "totalTasks": 8,
+  "results": {
+    "dependencyFix": {
+      "success": true,
+      "duration": 5337,
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
       "errors": [],
       "warnings": []
     },
     "codeQuality": {
       "success": false,
+<<<<<<< HEAD
       "success": false,
       "duration": 27333,
 origin/cursor/automate-test-improve-and-merge-code-2533
 
       "errors": [],
+=======
+      "duration": 3372,
+      "errors": [
+        "spawnSync /bin/sh ENOBUFS",
+        "Command failed: npx eslint . --max-warnings 1000\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\n(node:3834) ESLintIgnoreWarning: The \".eslintignore\" file is no longer supported. Switch to using the \"ignores\" property in \"eslint.config.js\": https://eslint.org/docs/latest/use/configure/migration-guide#ignoring-files\n(Use `node --trace-warnings ...` to show where the warning was created)\n\nOops! Something went wrong! :(\n\nESLint: 9.35.0\n\nSyntaxError: Unexpected token '<<'\n    at compileSourceTextModule (node:internal/modules/esm/utils:344:16)\n    at ModuleLoader.moduleStrategy (node:internal/modules/esm/translators:105:18)\n    at #translate (node:internal/modules/esm/loader:534:12)\n    at ModuleLoader.loadAndTranslate (node:internal/modules/esm/loader:581:27)\n    at async ModuleJob._link (node:internal/modules/esm/module_job:116:19)\n"
+      ],
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
       "warnings": []
     },
     "securityAudit": {
       "success": true,
+<<<<<<< HEAD
       "duration": 1683,
 ursor/automate-test-improve-and-merge-code-e883
       "duration": 1450,
@@ -121,6 +141,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 ursor/automate-test-improve-and-merge-code-e883
       "duration": 1450,
       "duration": 1719,
+=======
+      "duration": 1651,
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
       "errors": [],
       "duration": 6380,
       "errors": [
@@ -138,6 +161,7 @@ ursor/automate-test-improve-and-merge-code-e883
       "warnings": []
     },
     "buildOptimization": {
+<<<<<<< HEAD
       "success": true,
       "duration": 6198,
 ursor/automate-test-improve-and-merge-code-e883
@@ -172,10 +196,26 @@ ursor/automate-test-improve-and-merge-code-e883
       "errors": [],
 origin/cursor/automate-test-improve-and-merge-code-2533
 
+=======
+      "success": false,
+      "duration": 822,
+      "errors": [
+        "Command failed: npm run build\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\n\n> Build error occurred\n[Error: Conflicting public and page file was found. https://nextjs.org/docs/messages/conflicting-public-file-page\n/sitemap.xml]\n"
+      ],
+      "warnings": []
+    },
+    "seoOptimization": {
+      "success": false,
+      "duration": 48,
+      "errors": [
+        "Command failed: node scripts/generate-sitemap.cjs\n/workspace/scripts/generate-sitemap.cjs:8\n<<<<<<< HEAD\n^^\n\nSyntaxError: Unexpected token '<<'\n    at wrapSafe (node:internal/modules/cjs/loader:1662:18)\n    at Module._compile (node:internal/modules/cjs/loader:1704:20)\n    at Object..js (node:internal/modules/cjs/loader:1895:10)\n    at Module.load (node:internal/modules/cjs/loader:1465:32)\n    at Function._load (node:internal/modules/cjs/loader:1282:12)\n    at TracingChannel.traceSync (node:diagnostics_channel:322:14)\n    at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)\n    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:171:5)\n    at node:internal/main/run_main_module:36:49\n\nNode.js v22.16.0\n"
+      ],
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
       "warnings": []
     },
     "accessibilityImprovements": {
       "success": false,
+<<<<<<< HEAD
       "duration": 9692,
 ursor/automate-test-improve-and-merge-code-e883
       "duration": 0,
@@ -192,10 +232,16 @@ ursor/automate-test-improve-and-merge-code-e883
       "duration": 3078,
       "errors": [
         "Command failed: npx eslint . --rule \"jsx-a11y/alt-text: warn\" --rule \"jsx-a11y/aria-role: warn\"\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\nWarning: React version not specified in eslint-plugin-react settings. See https://github.com/jsx-eslint/eslint-plugin-react#configuration .\n"
+=======
+      "duration": 669,
+      "errors": [
+        "Command failed: npx eslint . --rule \"jsx-a11y/alt-text: warn\" --rule \"jsx-a11y/aria-role: warn\"\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\n(node:4044) ESLintIgnoreWarning: The \".eslintignore\" file is no longer supported. Switch to using the \"ignores\" property in \"eslint.config.js\": https://eslint.org/docs/latest/use/configure/migration-guide#ignoring-files\n(Use `node --trace-warnings ...` to show where the warning was created)\n\nOops! Something went wrong! :(\n\nESLint: 9.35.0\n\nSyntaxError: Unexpected token '<<'\n    at compileSourceTextModule (node:internal/modules/esm/utils:344:16)\n    at ModuleLoader.moduleStrategy (node:internal/modules/esm/translators:105:18)\n    at #translate (node:internal/modules/esm/loader:534:12)\n    at ModuleLoader.loadAndTranslate (node:internal/modules/esm/loader:581:27)\n    at async ModuleJob._link (node:internal/modules/esm/module_job:116:19)\n"
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
       ],
       "warnings": []
     },
     "performanceOptimization": {
+<<<<<<< HEAD
       "success": true,
       "success": true,
       "duration": 6736,
@@ -203,10 +249,18 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
       "duration": 18997,
       "errors": [],
+=======
+      "success": false,
+      "duration": 1353,
+      "errors": [
+        "Command failed: npm run build:analyze\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\n\n> Build error occurred\n[Error: Conflicting public and page file was found. https://nextjs.org/docs/messages/conflicting-public-file-page\n/sitemap.xml]\n"
+      ],
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
       "warnings": []
     },
     "deployment": {
       "success": true,
+<<<<<<< HEAD
     "totalErrors": 6
 ursor/automate-test-improve-and-merge-code-646c
     "totalErrors": 6
@@ -220,10 +274,14 @@ origin/cursor/automate-test-improve-and-merge-code-646c
       "success": false,
       "duration": 0,
       "duration": 1444,
+=======
+      "duration": 1619,
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
       "errors": [],
       "warnings": []
     }
   },
+<<<<<<< HEAD
   }
   "timestamp": "2025-09-06T22:31:53.549Z",
   "totalDuration": 106111,
@@ -243,6 +301,12 @@ origin/cursor/automate-test-improve-and-merge-code-646c
   "recommendations": [
     "Review and fix code quality issues",
     "Address security vulnerabilities",
+=======
+  "recommendations": [
+    "Review and fix code quality issues",
+    "Optimize application performance",
+    "Improve SEO optimization",
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
     "Enhance accessibility features"
   ]
 }

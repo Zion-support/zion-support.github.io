@@ -40,6 +40,7 @@ ursor/fix-website-loading-errors-and-merge-6662
   const id = String(req.query.id |"");
   const updates = readJsonFile("updates.json", [] as any[]);
   const u = updates.find((x: any) => x.id === id);
+<<<<<<< HEAD
   if (!u) return res.status(404).json({ error: "Not found" });
   res.status(200).json({ opens: u.opens |0 });
   res.status(200).json({ opens: u.opens |0 });
@@ -138,10 +139,13 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const id = String(req.query.id |"");
   const updates = readJsonFile("updates.json", [] as any[]);
   const u = updates.find((x: any) => x.id === id);
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
   if (!u) return res.status(404).json({ error: "Not found" });
   res.status(200).json({ opens: u.opens |0 });
   res.status(200).json({ opens: u.opens |0 });
 }
+<<<<<<< HEAD
 
   if (!u) return res.status(404).json({ error: 'Not found' });
 
@@ -191,3 +195,5 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 }
 
 
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75

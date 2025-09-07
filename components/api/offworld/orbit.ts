@@ -1,10 +1,17 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
+<<<<<<< HEAD
 import {
   connectOrbit,
   appendChatMessage,
   recordVote,
   editConstitution,;
 } from '@/utils/offworld/orbitdb';
+=======
+import { connectOrbit, appendChatMessage, recordVote, editConstitution } from '@/utils/offworld/orbitdb';
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+  const { action } = req.query;
+  const body = null;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 
 import {
   connectOrbit
@@ -37,11 +44,42 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       return res.status(200).json({ ok: true})
     }
     if (action === 'constitution' && req.method === 'POST') {
+<<<<<<< HEAD
       await editConstitution($2);
       return res.status(200).json({ ok: true})
+=======
+      await editConstitution(stores, body);
+      return res.status(200).json({ ok: true });
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
     }
     return res.status(400).json({ error: 'Unsupported action' })
   } catch (e: any) {
+<<<<<<< HEAD
+=======
+    return res.status(500).json({ error: e.message });
+  }    }
+    if (action === 'vote' && req.method === 'POST') {
+      await recordVote(stores, body);
+      return res.status(200).json({ ok: true })
+
+      await recordVote(stores, body)
+      return res && res.status(200).json({ ok: true })
+    }'
+  if($2) {}
+      await editConstitution(stores, body)
+      return res && res.status(200).json({ ok: true })
+    }'
+    return res && res.status(400).json({ error: 'Unsupported action' })
+  } catch (e: any) {}
+    return res && res.status(500).json({ error: e && e.message })
+  }    }'
+  if($2) {}
+      await recordVote(stores, body)
+      return res && res.status(200).json({ ok: true })
+    }'
+  if($2) {}
+      await editConstitution(stores, body)
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
     return res.status(500).json({ error: e.message })
     return res && res.status(500).json({ error: e && e.message });
   }    }

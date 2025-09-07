@@ -82,6 +82,7 @@ export default function ResearchPage() {
             ))}
           </div>
         </div>
+<<<<<<< HEAD
 
         {/* Research Papers */}
         <div className="mb-16">
@@ -168,3 +169,9 @@ export default function ResearchPage() {
     </div>
   )
 }
+=======
+      </div>
+    </div>
+  )
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75

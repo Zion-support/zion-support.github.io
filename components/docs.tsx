@@ -1,3 +1,32 @@
+<<<<<<< HEAD
+const sections = [ {
+  title: 'Getting Started', links: [ {
+  name: 'Overview', href: '/enhanced-services-showcase' 
+}
+{
+  name: 'Pricing & Market Benchmarks', href: '/market-pricing' 
+}
+{
+  name: 'Contact Sales', href: '/contact' 
+}] 
+}
+{
+  title: 'AI Services Docs', links: [ {
+  name: 'AI Guardrails', href: '/ai-guardrails' 
+}
+{
+  name: 'AI Evals', href: '/ai-evals' 
+}
+{
+  name: 'Agentic RAG', href: '/agentic-rag' 
+}] 
+}
+return (<UltraAdvancedFuturisticBackground> <Head> <title>Documentation | Zion Tech Group</title> </li>) ) 
+}</ul> </Card>) ) 
+}</div>) ) 
+}</ul> </Card> </div> </Card> </div> </div> </UltraAdvancedFuturisticBackground>) 
+}
+=======
 import Head from 'next/head';
 
     address: '364 E Main St STE 1008 Middletown DE 19709',{ name: 'Overview', href: '/enhanced-services-showcase' },{ name: 'Pricing & Market Benchmarks', href: '/market-pricing' },{ name: 'Contact Sales', href: '/contact' }];
@@ -532,6 +561,7 @@ export default function DocsPage() {;
     </UltraAdvancedFuturisticBackground>
   )
 }
+<<<<<<< HEAD
                 {contact.email}</a>            </div>          <Card className="p - 6 bg - black / 40 border border - gray - 700 / 50">;
                 {contact.email}
               </a>            </div>          <Card className="p - 6 bg - black / 40 border border - gray - 700 / 50">;
@@ -565,3 +595,6 @@ export default function DocsPage() {;
             </ul>
           </Card>
   )}
+=======
+>>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75

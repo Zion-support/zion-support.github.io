@@ -1,7 +1,18 @@
+<<<<<<< HEAD
 import { useEffect  } from 'react';
 const DEEP_LINK_URL = process.env.NEXT_PUBLIC_DEEP_LINK_URL |'zion://open';export default function OpenApp() {const IOS_APP_URL = null;
 const IOS_APP_URL =;
   process.env.NEXT_PUBLIC_IOS_APP_URL |;
+=======
+<<<<<<< HEAD
+return (<div className="min-h-[50vh] flex items-center justify-center" > <div className="text-center" > <div className="text-lg font-semibold" >Opening the Zion app…</div> <div className="mt-2 text-sm opacity-70" >If nothing happens, you’ll be redirected to the store.</div> </div> </div>) 
+}
+=======
+import { useEffect } from 'react';
+const IOS_APP_URL = null;
+const IOS_APP_URL =
+  process.env.NEXT_PUBLIC_IOS_APP_URL |
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
   'https://apps.apple.com/app/id0000000000';
 const ANDROID_APP_URL =;
   process.env.NEXT_PUBLIC_ANDROID_APP_URL |;
@@ -69,6 +80,7 @@ window.location.href = isIOS ? IOS_APP_URL : ANDROID_APP_URL;
     </div>
   )
 }
+<<<<<<< HEAD
 const DEEP_LINK_URL  = process.env.NEXT_PUBLIC_DEEP_LINK_URL || 'zion://open';export default function OpenApp() {useEffect(() => {const DEEP_LINK_URL = process.env.NEXT_PUBLIC_DEEP_LINK_URL || 'zion://open';export default function OpenApp() {useEffect(() => {useEffect(() => {const isIOS = /iPhone|iPad|iPod/i.test(navigator.userAgent)const isAndroid = /Android/i.test(navigator.userAgent)const now = Date.now()const timeout = setTimeout(() => {const elapsed = Date.now() - now;
       if (elapsed < 2000) {window.location.href = isIOS ? IOS_APP_URL : ANDROID_APP_URL;}
     }, 1200)// Try to open the deep link;
@@ -103,3 +115,6 @@ const DEEP_LINK_URL  = process.env.NEXT_PUBLIC_DEEP_LINK_URL || 'zion://open';ex
   );  }, []);
 
   )}
+=======
+>>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75

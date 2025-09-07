@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 
@@ -31,6 +32,9 @@ describe('AIChatbot'
 import AIChatbot from './AIChatbot;
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+import AIChatbot from './AIChatbot;';
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 describe('AIChatbot', () => {;
   it('renders without crashing', () => {;
     render(<AIChatbot />);
@@ -43,6 +47,7 @@ describe('AIChatbot', () => {;
 import AIChatbot from './AIChatbot; ; describe('AIChatbot',() => {; it('renders without crashing',() => {; render(<AIChatbot />); ; expect(screen.getByRole('main')).toBeInTheDocument();' });'; it('displays correct content',() => {; render(<AIChatbot />); }); ; it('handles user interactions',() => {; render(<AIChatbot />)});,});
 // Add interaction tests based on component functionality})});
 import AIChatbot from './AIChatbot; ; describe('AIChatbot',() => {; it('renders without crashing',() => {; render(<AIChatbot />); ; expect(screen.getByRole('main')).toBeInTheDocument();' });'; it('displays correct content',() => {; render(<AIChatbot />)}); ; it('handles user interactions',() => {; render(<AIChatbot />)}),});
+<<<<<<< HEAD
 import AIChatbot from './AIChatbot; ; describe('AIChatbot',() => {; it('renders without crashing',() => {; render(<AIChatbot />); ; expect(screen.getByRole('main')).toBeInTheDocument();' });'; it('displays correct content',() => {; render(<AIChatbot />)}); ; it('handles user interactions',() => {; render(<AIChatbot />)}),});
 import AIChatbot from './AIChatbot; ; describe('AIChatbot',() => {; it('renders without crashing',() => {; render(<AIChatbot />); ; expect(screen.getByRole('main')).toBeInTheDocument();' });'; it('displays correct content',() => {; render(<AIChatbot />)}); ; it('handles user interactions',() => {; render(<AIChatbot />)}),});
 =======
@@ -58,3 +63,5 @@ ursor/automate-test-improve-and-merge-code-646c;
 >>>>>>> 470476d15542c973cf650505a68f6472f0b68c9f
 =======
 >>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
