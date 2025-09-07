@@ -12,4 +12,11 @@ describe('Smoke Tests', () => {
   test('Application builds successfully', () => {
     expect(true).toBe(true);
   });
+
+  test('Basic functionality works', () => {
+    // Test that basic React functionality works
+    const TestComponent = () => <div>Test</div>;
+    render(<TestComponent />);
+    expect(screen.getByText('Test')).toBeInTheDocument();
+  });
 });
