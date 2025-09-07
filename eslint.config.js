@@ -1,18 +1,26 @@
-import { FlatCompat } from '@eslint/eslintrc';
-import js from '@eslint/js';
-import typescript from '@typescript-eslint/eslint-plugin';
-import typescriptParser from '@typescript-eslint/parser';
-import react from 'eslint-plugin-react';
-import reactHooks from 'eslint-plugin-react-hooks';
-import globals from 'globals';
+<<<<<<< HEAD
+const { FlatCompat } = require('@eslint/eslintrc');
+const js = require('@eslint/js');
 
 const compat = new FlatCompat({
-  baseDirectory: import.meta.dirname,
+  baseDirectory: __dirname,
   recommendedConfig: js.configs.recommended,
-  allConfig: js.configs.all,
 });
 
+module.exports = [
+  ...compat.extends('next/core-web-vitals'),
+  {
+=======
+import { FlatCompat } from '@eslint/eslintrc';
+import js from '@eslint/js';
+import react from 'eslint-plugin-react';
+import reactHooks from 'eslint-plugin-react-hooks';
+import typescript from '@typescript-eslint/eslint-plugin';
+import tsparser from '@typescript-eslint/parser';
+import globals from 'globals';
+
 export default [
+  js.configs.recommended,
   {
     ignores: [
       'node_modules/**',
@@ -80,42 +88,7 @@ export default [
       'structural-*.js',
       'system-*.js',
       'ultimate-*.js',
-      '*.js',
-      'src_backup_temp/**',
-      'temp-backup/**',
-      'temp_exclude/**',
-      'temp_components/**',
-      'temp_broken_files/**',
-      'temp_working/**',
-      'zion-os.disabled/**',
-      'zion-ai-assistant/**',
-      'tools/**',
-      'utils/**',
-      'recovered-branches/**',
-      'pages._archive_corrupted/**',
-      'pages.bak/**',
-      'pages.disabled_full/**',
-      'pages_api.disabled/**',
-      'pages_backup_conflicts/**',
-      'pages_disabled/**',
-      'src.pages.disabled/**',
-      'vite.config-backup.ts',
-      'apps.backup/**',
-      'automation_backup/**',
-      'backup-merge-conflicts/**',
-      'components/apps/**',
-      'dao/**',
-      'deployments/**',
-      'lib.broken/**',
-      'middleware/**',
-      'netlify/**',
-      'pm2-automation/**',
-      'public/**',
-      'src.broken/**',
-      'src/components.disabled/**',
-      'src/__tests__/**',
-      'corrupted_backup/**',
-      'lib.disabled/**'
+      '*.js'
     ],
   },
   {
@@ -135,7 +108,7 @@ export default [
         beforeAll: 'readonly',
         afterAll: 'readonly',
       },
-      parser: typescriptParser,
+      parser: tsparser,
       parserOptions: {
         ecmaVersion: 'latest',
         sourceType: 'module',
@@ -149,41 +122,32 @@ export default [
       'react': react,
       'react-hooks': reactHooks,
     },
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
     rules: {
-      ...typescript.configs.recommended.rules,
-      ...react.configs.recommended.rules,
-      ...reactHooks.configs.recommended.rules,
-      'react/prop-types': 'off',
-      'react/react-in-jsx-scope': 'off',
-      'react/display-name': 'off',
-      '@typescript-eslint/no-explicit-any': 'warn',
-      '@typescript-eslint/ban-ts-comment': 'off',
-      '@typescript-eslint/no-unused-vars': ['warn', { argsIgnorePattern: '^_' }],
-      'no-unused-vars': 'off',
-      'no-console': ['warn', { allow: ['warn', 'error'] }],
-      'prefer-const': 'error',
-      'no-debugger': 'warn',
-      'react-hooks/rules-of-hooks': 'error',
-      'react-hooks/exhaustive-deps': 'warn',
+      'no-unused-vars': 'warn',
+      'no-console': 'warn',
+      'prefer-const': 'warn'
     },
-    settings: {
-      react: {
-        version: 'detect',
-      },
-    },
-  },
-  {
-    files: ['**/*.js'],
     languageOptions: {
+      ecmaVersion: 'latest',
+      sourceType: 'module',
       globals: {
+        window: 'readonly',
+        document: 'readonly',
         console: 'readonly',
         process: 'readonly',
         Buffer: 'readonly',
+        global: 'readonly',
         __dirname: 'readonly',
         __filename: 'readonly',
-        global: 'readonly',
         module: 'readonly',
         require: 'readonly',
+<<<<<<< HEAD
+        exports: 'readonly'
+      }
+    }
+  }
+=======
         exports: 'readonly',
       },
     },
@@ -191,4 +155,5 @@ export default [
       'no-console': 'off',
     },
   },
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 ];

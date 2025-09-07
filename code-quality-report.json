@@ -1022,13 +1022,8 @@
       "type": "any",
       "message": "TypeScript any type used - consider more specific typing"
     }
-
   ]
 }
-
-  ]
-}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
   ],
   "summary": {
     "consoleLogs": 8,
@@ -1036,10 +1031,8 @@
     "anyTypes": 193
   }
 }
+<<<<<<< HEAD
+=======
   ]
 }
->>>>>>> main
-ursor/automate-test-improve-and-merge-code-646c
-  ]
-}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452

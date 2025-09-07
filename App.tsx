@@ -1,3 +1,18 @@
+<<<<<<< HEAD
+import React from 'react';
+
+function App() {
+  return (
+    <div className="min-h-screen bg-gray-50">
+      <h1 className="text-4xl font-bold text-center py-20">
+        Zion Tech Group
+      </h1>
+      <p className="text-center text-gray-600">
+        This is a Next.js application. Please navigate to the appropriate pages using the Next.js routing system.
+      </p>
+    </div>
+=======
+import React, { JSX } from 'react';
 import React from 'react';
 import Header from './src/components/Header';
 import Footer from './src/components/Footer';
@@ -11,7 +26,7 @@ import ChatAssistant from './src/components/ChatAssistant';
 import ScrollToTop from './src/components/ScrollToTop';
 import ParticleBackground from './src/components/ParticleBackground';
 
-export default function App(): React.JSX.Element {
+export default function App() {
   const services = [
     {
       title: 'AI Solutions',
@@ -51,9 +66,21 @@ export default function App(): React.JSX.Element {
     },
   ];
 
+export default function App(): JSX.Element {
+export default function App(): React.JSX.Element {
+export default function App(): React.JSX.Element {
+export default function App(): JSX.Element {
   return (
     <main>
       <h1>Hello App</h1>
     </main>
+
+  return (
+    <main>
+
+    </main>
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
   );
 }
+
+export default App;

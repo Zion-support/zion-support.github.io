@@ -3,16 +3,22 @@
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
+<<<<<<< HEAD
+=======
 
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 /**
  * Comprehensive Automation Runner
  * Runs all automation scripts and provides comprehensive testing and improvement
  */
+<<<<<<< HEAD
+=======
 
 const { execSync, spawn } = require('child_process');
 const fs = require('fs');
 const path = require('path');
 
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 class ComprehensiveAutomationRunner {
   constructor() {
     this.logDir = path.join(__dirname, 'automation', 'logs');
@@ -125,7 +131,10 @@ class ComprehensiveAutomationRunner {
     this.log('🚀 Starting comprehensive automation...', 'PROGRESS');
     
     try {
+<<<<<<< HEAD
+=======
 
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
       await this.runSyntaxFixes();
       await this.runBuildProcess();
       await this.runTests();
@@ -164,4 +173,14 @@ class ComprehensiveAutomationRunner {
 // Run if called directly
 if (require.main === module) {
   const runner = new ComprehensiveAutomationRunner();
+<<<<<<< HEAD
+  runner.runAllAutomations().catch(error => {
+    console.error('Comprehensive automation runner failed:', error);
+    process.exit(1);
+  });
+}
 
+module.exports = ComprehensiveAutomationRunner;
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452

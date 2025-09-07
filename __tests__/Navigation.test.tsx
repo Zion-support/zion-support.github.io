@@ -1,11 +1,47 @@
-import React from 'react'; import { render,screen } from '@testing-library/react'; import '@testing-library/jest-dom'; import Navigation from '../components/Navigation'; describe('Navigation',() => { test('renders without crashing',() => { render(<Navigation />)expect(screen.getByRole('main')).toBeInTheDocument()})test('displays correct content',() => { render(<Navigation />)expect(screen.getByText(/Zion Tech Group/i)).toBeInTheDocument()})})ursor/automate-test-improve-and-merge-code-646c;
+import _React from 'react'; import { render,screen } from '@testing-library/react'; import '@testing-library/jest-dom'; import Navigation from '../components/Navigation'; describe('Navigation',() => { test('renders without crashing',() => { render(<Navigation />); expect(screen.getByRole('main')).toBeInTheDocument()}); test('displays correct content',() => { render(<Navigation />); expect(screen.getByText(/Zion Tech Group/i)).toBeInTheDocument()})});
+import _React from 'react'; import { render,screen } from '@testing-library/react'; import '@testing-library/jest-dom'; import Navigation from '../components/Navigation'; describe('Navigation',() => { test('renders without crashing',() => { render(<Navigation />); expect(screen.getByRole('main')).toBeInTheDocument()}); test('displays correct content',() => { render(<Navigation />); expect(screen.getByText(/Zion Tech Group/i)).toBeInTheDocument()})});
+
+
 import React from 'react';
-describe('Navigation', () => {test('renders without crashing', () => {render(<Navigation />)';
-    expect(screen.getByRole('main')).toBeInTheDocument()describe('Navigation', () => {test('renders without crashing', () => {render(<Navigation />)expect(screen.getByRole('main')).toBeInTheDocument()ursor/automate-test-improve-and-merge-code-646c;
-  })ursor/automate-test-improve-and-merge-code-646c;
-  test('displays correct content', () => {expect(screen.getByText(/Zion Tech Group/i)).toBeInTheDocument()test('displays correct content', () => {expect(screen.getByText(/Zion Tech Group/i)).toBeInTheDocument()})ursor/fix-website-loading-errors-and-merge-6662;
-ursor/automate-test-improve-and-merge-code-646c;
-import { render, screen  } from '@testing-library/react';
+
+
+
+describe('Navigation', () => {
+  test('renders without crashing', () => {
+    render(<Navigation />);
+    expect(screen.getByRole('main')).toBeInTheDocument();
+  });
+
+
+
+
+
+
+  test('displays correct content', () => {
+    expect(screen.getByText(/Zion Tech Group/i)).toBeInTheDocument();
+
+
+
+
+
+  test('displays correct content', () => {
+    expect(screen.getByText(/Zion Tech Group/i)).toBeInTheDocument();
+});
+import React from 'react'
+import { render, screen } from '@testing-library/react'
+import '@testing-library/jest-dom'
+import Navigation from '../components/Navigation'
+describe('Navigation'
+  test('renders without crashing'
+    expect(screen.getByRole('main'
+  test('displays correct content'
+import React from \'react\'; import { render,screen } from \'@testing-library/react\'; import \'@testing-library/jest-dom\'; import Navigation from \'../components/Navigation\'; describe(\'Navigation\',() => { test(\'renders without crashing\',() => { render(<Navigation />); expect(screen.getByRole(\'main\')).toBeInTheDocument()}); test(\'displays correct content\',() => { render(<Navigation />); expect(screen.getByText(/Zion Tech Group/i)).toBeInTheDocument()})});
+const React from "react"; import { render,screen } from "@testing-library/react"; import "@testing-library/jest-dom"; import Navigation from "./components/Navigation"; describe('Navigation', () => { test("renders without crashing",() => { render(<Navigation />); expect(screen.getByRole("main")).toBeInTheDocument()}); test("displays correct content"
+import _React from 'react'; import { render,screen } from '@testing-library/react'; import '@testing-library/jest-dom'; import Navigation from '../components/Navigation'; describe('Navigation',() => { test('renders without crashing',() => { render(<Navigation />); expect(screen.getByRole('main')).toBeInTheDocument()}); test('displays correct content',() => { render(<Navigation />); expect(screen.getByText(/Zion Tech Group/i)).toBeInTheDocument()})});
+ursor/fix-syntax-push-and-merge-to-main-40de
+origin/main
+import React from 'react';
+import { render, screen } from '@testing-library/react';
 import '@testing-library/jest-dom';
 import Navigation from '../components/Navigation';
 describe('Navigation', () => {
@@ -26,6 +62,8 @@ describe('Navigation', () => {
 });
 
 origin/main
+<<<<<<< HEAD
+=======
 
 
 
@@ -34,6 +72,7 @@ origin/main
   test('displays correct content', () => {
     expect(screen.getByText(/Zion Tech Group/i)).toBeInTheDocument();
 });
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 import React from 'react'
 import { render, screen } from '@testing-library/react'
 import '@testing-library/jest-dom'
@@ -47,43 +86,41 @@ const React from "react"; import { render,screen } from "@testing-library/react"
 });
 describe('Navigation';
   test('renders without crashing';
-    expect(screen.getByRole('main';
-  test('displays correct content';
-import React from \'react\'; import { render,screen } from \'@testing-library/react\'; import \'@testing-library/jest-dom\'; import Navigation from \'../components/Navigation\'; describe(\'Navigation\',() => { test(\'renders without crashing\',() => { render(<Navigation />)expect(screen.getByRole(\'main\')).toBeInTheDocument()})test(\'displays correct content\',() => { render(<Navigation />)expect(screen.getByText(/Zion Tech Group/i)).toBeInTheDocument()})})const React from "react"; import { render,screen } from "@testing-library/react"; import '@testing-library/jest-dom'; import Navigation from "./components/Navigation"; describe('Navigation', () => { test('renders without crashing', () => { render(<Navigation />)expect(screen.getByRole("main")).toBeInTheDocument()})test("displays correct content";
-ursor/fix-syntax-push-and-merge-to-main-40de;
-origin/main;
-describe('Navigation', () => {test('renders without crashing', () => {render(<Navigation />)';
-    expect(screen.getByRole('main')).toBeInTheDocument()})test('displays correct content', () => {expect(screen.getByText(/Zion Tech Group/i)).toBeInTheDocument()})})})origin/main;
-ursor/fix-website-loading-errors-and-merge-6662;
-ursor/automate-test-improve-and-merge-code-646c;
-})test('displays correct content', () => {expect(screen.getByText(/Zion Tech Group/i)).toBeInTheDocument()})})origin/main;
-  test('displays correct content', () => {expect(screen.getByText(/Zion Tech Group/i)).toBeInTheDocument()})ursor/fix-website-loading-errors-and-merge-6662;
-describe('Navigation';
-  test('renders without crashing';
-    expect(screen.getByRole('main';
-  test('displays correct content';
-const React from "react"; import { render,screen } from "@testing-library/react"; import '@testing-library/jest-dom'; import Navigation from "./components/Navigation"; describe('Navigation', () => { test('renders without crashing', () => { render(<Navigation />)expect(screen.getByRole("main")).toBeInTheDocument()})test("displays correct content";
-})ursor/automate-test-improve-and-merge-code-646c;
-})describe('Navigation';
-  test('renders without crashing';
     expect(screen && screen.getByRole('main';
   test('displays correct content';
-import React from \'react\'; import { render,screen } from \'@testing-library/react\'; import \'@testing-library/jest-dom\'; import Navigation from \'../components/Navigation\'; describe(\'Navigation\',() => { test(\'renders without crashing\',() => { render(<Navigation />)expect(screen && screen.getByRole(\'main\')).toBeInTheDocument()})test(\'displays correct content\',() => { render(<Navigation />)expect(screen && screen.getByText(/Zion Tech Group/i)).toBeInTheDocument()})})const React from "react"; import { render,screen } from "@testing-library/react"; import '@testing-library/jest-dom'; import Navigation from "./components/Navigation"; describe('Navigation', () => { test('renders without crashing', () => { render(<Navigation />)expect(screen && screen.getByRole("main")).toBeInTheDocument()})test("displays correct content";
-})';
-describe('Navigation';';
-  test('renders without crashing';';
-    expect(screen && screen.getByRole('main';';
-  test('displays correct content';';
-import React from \'react\'; import { render,screen } from \'@testing-library/react\'; import \'@testing-library/jest-dom\'; import Navigation from \'../components/Navigation\'; describe(\'Navigation\',() => { test(\'renders without crashing\',() => { render(<Navigation />)expect(screen && screen.getByRole(\'main\')).toBeInTheDocument()})test(\'displays correct content\',() => { render(<Navigation />)expect(screen && screen.getByText(/Zion Tech Group/i)).toBeInTheDocument()})})'";
-const React from "react"; import { render,screen } from "@testing-library/react"; import '@testing-library/jest-dom'; import Navigation from "./components/Navigation"; describe('Navigation', () => { test('renders without crashing', () => { render(<Navigation />)expect(screen && screen.getByRole("main")).toBeInTheDocument()})test("displays correct content"';
-ursor/automate-test-improve-and-merge-code-646c;
-  test('displays correct content', () => {render(<Navigation />)expect(screen.getByText(/Zion Tech Group/i)).toBeInTheDocument()})})';
-import { render, screen } from '@testing - library / react';';
-import '@testing - library / jest - dom';';
-import Navigation from '../components / Navigation';';
-describe ('Navigation', () => {';
-  test ('renders without crashing', () => {render (<Navigation />)';
-    expect (screen.getByRole ('main')).toBeInTheDocument ()})';
-  test ('displays correct content', () => {expect (screen.getByText (/Zion Tech Group / i)).toBeInTheDocument ()})'";
-})test('displays correct content', () => {expect(screen.getByText(/Zion Tech Group/i)).toBeInTheDocument()})origin/automation-improvements-final;
-})ursor/automate-test-improve-and-merge-code-646c;
+import React from \'react\'; import { render,screen } from \'@testing-library/react\'; import \'@testing-library/jest-dom\'; import Navigation from \'../components/Navigation\'; describe(\'Navigation\',() => { test(\'renders without crashing\',() => { render(<Navigation />); expect(screen && screen.getByRole(\'main\')).toBeInTheDocument()}); test(\'displays correct content\',() => { render(<Navigation />); expect(screen && screen.getByText(/Zion Tech Group/i)).toBeInTheDocument()})});
+const React from "react"; import { render,screen } from "@testing-library/react"; import "@testing-library/jest-dom"; import Navigation from "./components/Navigation"; describe('Navigation', () => { test("renders without crashing",() => { render(<Navigation />); expect(screen && screen.getByRole("main")).toBeInTheDocument()}); test("displays correct content"
+});'
+describe('Navigation';'
+  test('renders without crashing';'
+    expect(screen && screen.getByRole('main';'
+  test('displays correct content';'
+import React from \'react\'; import { render,screen } from \'@testing-library/react\'; import \'@testing-library/jest-dom\'; import Navigation from \'../components/Navigation\'; describe(\'Navigation\',() => { test(\'renders without crashing\',() => { render(<Navigation />); expect(screen && screen.getByRole(\'main\')).toBeInTheDocument()}); test(\'displays correct content\',() => { render(<Navigation />); expect(screen && screen.getByText(/Zion Tech Group/i)).toBeInTheDocument()})});'"
+const React from "react"; import { render,screen } from "@testing-library/react"; import "@testing-library/jest-dom"; import Navigation from "./components/Navigation"; describe('Navigation', () => { test("renders without crashing",() => { render(<Navigation />); expect(screen && screen.getByRole("main")).toBeInTheDocument()}); test("displays correct content"'
+  test('displays correct content', () => {
+    render(<Navigation />);
+    expect(screen.getByText(/Zion Tech Group/i)).toBeInTheDocument();
+  });
+});'
+import { render, screen } from '@testing - library / react';'
+import '@testing - library / jest - dom';'
+import Navigation from '../components / Navigation';'
+describe ('Navigation', () => {'
+  test ('renders without crashing', () => {
+    render (<Navigation />);'
+    expect (screen.getByRole ('main')).toBeInTheDocument ();
+  });'
+  test ('displays correct content', () => {
+    expect (screen.getByText (/Zion Tech Group / i)).toBeInTheDocument ();
+});'"
+
+});
+
+  test('displays correct content', () => {
+    expect(screen.getByText(/Zion Tech Group/i)).toBeInTheDocument();
+});
+
+origin/automation-improvements-final
+});
+import _React from 'react'; import { render,screen } from '@testing-library/react'; import '@testing-library/jest-dom'; import Navigation from '../components/Navigation'; describe('Navigation',() => { test('renders without crashing',() => { render(<Navigation />); expect(screen.getByRole('main')).toBeInTheDocument()}); test('displays correct content',() => { render(<Navigation />); expect(screen.getByText(/Zion Tech Group/i)).toBeInTheDocument()})});
+import _React from 'react'; import { render,screen } from '@testing-library/react'; import '@testing-library/jest-dom'; import Navigation from '../components/Navigation'; describe('Navigation',() => { test('renders without crashing',() => { render(<Navigation />); expect(screen.getByRole('main')).toBeInTheDocument()}); test('displays correct content',() => { render(<Navigation />); expect(screen.getByText(/Zion Tech Group/i)).toBeInTheDocument()})});

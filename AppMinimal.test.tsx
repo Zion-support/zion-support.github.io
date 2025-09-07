@@ -17,6 +17,9 @@ describe('AppMinimal', () => {
     render(<AppMinimal />);
     // Add interaction tests here
   });
+<<<<<<< HEAD
+});
+=======
 });
 import { render, screen, describe, it, expect } from 'lucide-react'; import AppMinimal from './AppMinimal'; describe('AppMinimal',() => { it('renders without crashing',() => { render(<AppMinimal />); expect(screen.getByRole('main')).toBeInTheDocument()}
 }); it('displays correct content',() => { render(<AppMinimal />)}
@@ -37,3 +40,4 @@ const { render,screen } from "@testing-library/react"; import { describe,it,expe
 });
 });
 </AppMinimal>'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452

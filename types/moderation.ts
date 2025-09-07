@@ -1,16 +1,14 @@
-
-export interface ModerationResult  {id: string;
+export interface ModerationResult {
+  id: string;
   content: string;
   status: 'approved' | 'rejected' | 'pending';
-  reason?: string;moderatedBy?: string;
-  moderatedAt: Date;
-  flagId: string;
-  action: ModerationStatus;
-  adminNotes?: string;
-  adminId: string;
   reason?: string;
-  createdAt: string;export type ModerationStatus  = 'pending' | 'approved' | 'removed' | 'warned' | 'banned';export interface ModerationAction  {id: string;
+  moderatedBy?: string;
+  moderatedAt: Date;
+<<<<<<< HEAD
+=======
 
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 ;
 export interface ModerationAction {
   id: string;
@@ -20,11 +18,16 @@ export interface ModerationAction {
   adminId: string;
   reason?: string;
   createdAt: string;
-  created_at: string;
+<<<<<<< HEAD
+=======
 
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 }
 }
-export interface ModerationFlag  {export interface ModerationFlag  {id: string;
+export interface ModerationFlag {
+
+export interface ModerationFlag {;
+  id: string;
   type: "spam" | "inappropriate" | "harassment" | "other";
   content: string;
   reporterId: string;
@@ -34,17 +37,16 @@ export interface ModerationFlag  {export interface ModerationFlag  {id: string;
   createdAt: string;
   updatedAt: string;
   adminNotes?: string;
-}}
-export interface ModerationFlag  {}
-export interface ModerationFlag {}export interface ModerationRule  {id: string;
+}
+
+}
+export interface ModerationFlag {
+}
+
+export interface ModerationRule {
+  id: string;
   name: string;
   pattern: string;
   action: 'approve' | 'reject' | 'flag';
   severity: 'low' | 'medium' | 'high';
-}type: 'spam' | 'inappropriate' | 'harassment' | 'other';
-  content: string;
-  reporter_id: string;
-  target_id: string;
-  target_type: 'post' | 'comment' | 'user';
-  status: ModerationStatus;ursor/fix-website-loading-errors-and-merge-6662;
-ursor/automate-test-improve-and-merge-code-646c;
+}

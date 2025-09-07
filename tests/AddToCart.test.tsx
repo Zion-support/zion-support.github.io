@@ -1,19 +1,21 @@
 import React from 'react';
-import { render, screen  } from '@testing-library/react';
-import '@testing-library/jest-dom';
-import AddToCart from '../components/AddToCart';
-describe('AddToCart', () => {test('renders without crashing', () => {render(<AddToCart />)expect(screen.getByTestId('addtocart')).toBeInTheDocument()})test('displays correct content', () => {render(<AddToCart />)// Add specific content tests here;
-  })test('handles user interactions', () => {render(<AddToCart />)// Add interaction tests here;
-  })test('applies correct styling', () => {render(<AddToCart />)// Add styling tests here;
-  })})
 interface AddToCart.testProps {
   // Add props here as needed
 }
+<<<<<<< HEAD
+export default function AddToCart.test({ }: AddToCart.testProps) {
+<=
 }
 
-export default function AddToCart.test({}: AddToCart.testProps) {
-export default function AddToCart.test({}: AddToCart.testProps) {
+>export default function AddToCart.test({ }: AddToCart.testProps) {
+<
+=======
+}
 
+export default function AddToCart.test({ }: AddToCart.testProps) {
+export default function AddToCart.test({ }: AddToCart.testProps) {
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -36,22 +38,37 @@ class ErrorBoundary extends React.Component {
     return this.props.children;
   }
 }
+import React from 'react';
 interface FiveGSolutionsProps {
   // Add props here as needed
 
 
 
-export default function FiveGSolutions({}: FiveGSolutionsProps) {
+export default function FiveGSolutions({ }: FiveGSolutionsProps) {
+<<<<<<< HEAD
+=
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+import React from 'react';
 interface AddToCart.testProps {
   // Add props here as needed
 }
-export default function AddToCart.test({}: AddToCart.testProps) {
+export default function AddToCart.test({ }: AddToCart.testProps) {
+<<<<<<< HEAD
+>  return (
+=======
   return (
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
     <div>
       <h1>AddToCart.test</h1>
       <p>This component is currently under development.</p>
     </div>
   );
+<<<<<<< HEAD
+}
+}
+=
+=======
 
 
 }
@@ -59,11 +76,20 @@ export default function AddToCart.test({}: AddToCart.testProps) {
 
 
 }
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 
+
+>}
+><
 
 
 }
 
+<<<<<<< HEAD
+=======
+}
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 :src.pages.disabled/FiveGSolutions.jsx
 }
 }
@@ -71,9 +97,14 @@ export default function AddToCart.test({}: AddToCart.testProps) {
 }
 }
 :temp_exclude/src.pages.disabled/FiveGSolutions.jsx
+<<<<<<< HEAD
+=
+>}
+=======
 }
 
 }
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 
 
 
@@ -82,7 +113,16 @@ export default function AddToCart.test({}: AddToCart.testProps) {
 
 :src.pages.disabled/FiveGSolutions.jsx
 }
+<<<<<<< HEAD
+<}
+}
+}
+}
+=
+>
+=======
 }
 }
 }
 }
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452

@@ -2,7 +2,31 @@
 #!/usr/bin/env node
 const fs = require('fs');
 const path = require('path');
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+>>>>>>> origin/automation-improvements-final
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> main
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
 
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 const { execSync, spawn } = require('child_process');
 
 class MasterAutomationOrchestrator {
@@ -34,7 +58,7 @@ class MasterAutomationOrchestrator {
       const duration = Date.now() - startTime;
       this.log(`✅ ${scriptName} completed successfully in ${duration}ms`);
       return {
-        success: true,
+        "success": true,
         duration,
 
       };
@@ -47,7 +71,7 @@ class MasterAutomationOrchestrator {
       this.log(`❌ ${scriptName} "failed": ${error.message}`, 'ERROR');
 
       return {
-        success: false,
+        "success": false,
         duration,
 
     }
@@ -186,7 +210,10 @@ class MasterAutomationOrchestrator {
     };
 
     // Save report to file
-    const reportPath = path.join(this.projectRoot, 'master-automation-report.json');
+    const reportPath = path.join(
+      this.projectRoot,
+      'master-automation-report.json'
+    );
     fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
 
     // Display report
@@ -200,7 +227,9 @@ class MasterAutomationOrchestrator {
     this.log('\n📋 Phase "Results": ');
 
     this.log(`Total Duration: ${report.totalDuration}`);
-    this.log(`Phases Completed: ${report.summary.successfulPhases}/${report.summary.totalPhases}`);
+    this.log(
+      `Phases Completed: ${report.summary.successfulPhases}/${report.summary.totalPhases}`
+    );
     this.log(`Overall Success: ${report.summary.overallSuccess ? '✅' : '❌'}`);
     this.log('\n📋 Phase Results:');
 
@@ -381,9 +410,31 @@ async function main() {
     const report = generateReport(results);
 
     console.log('\n📊 AUTOMATION SUMMARY');
+<<<<<<< HEAD
+<<<<<<< HEAD
+    console.log('======');
+    console.log('====================');
+    console.log('====================');
+=======
+<<<<<<< HEAD
+    console.log('======');
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+    console.log('====================');
+    console.log('====================');
+<<<<<<< HEAD
+=======
+>>>>>>> origin/automation-improvements-final
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
 
     console.log('
 
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
     console.log(`Total Tasks: ${report.summary.totalTasks}`);
     console.log(`Successful: ${report.summary.successful}`);
     console.log(`Failed: ${report.summary.failed}`);
@@ -394,7 +445,33 @@ async function main() {
       results.results
         .filter(r => r.status === 'failed')
         .forEach(r => console.log(`  - ${r.task}: ${r.error}`));
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+=======
+>>>>>>> origin/main
+=======
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+=======
+>>>>>>> origin/main
+=======
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> origin/automation-improvements-final
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
 
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
     }
 
     console.log('\n✅ Master automation orchestration completed');
@@ -418,7 +495,44 @@ async function main() {
     process.exit(1);
   }
 }
+<<<<<<< HEAD
+<<<<<<< HEAD
+main();
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+main();
+=======
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+main();
+=======
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
+<<<<<<< HEAD
+=======
+main();
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+=======
+>>>>>>> main
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 // Run the orchestrator
 const orchestrator = new MasterAutomationOrchestrator();
 
@@ -442,5 +556,33 @@ const { execSync, spawn } = require('child_process')
     this.log('\n� Phase "Results")
         this.log(`    "Errors"`)
 
+<<<<<<< HEAD
+main();
+
+main();
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/main
+=======
+>>>>>>> origin/automation-improvements-final
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
       this.log(`� Fatal error in "orchestrator"`)
 
+<<<<<<< HEAD
+main();
+
+main();
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+=======
+>>>>>>> main
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452

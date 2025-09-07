@@ -1,19 +1,21 @@
 import React from 'react';
-import { render, screen  } from '@testing-library/react';
-import '@testing-library/jest-dom';
-import performance from '../components/performance';
-describe('performance', () => {test('renders without crashing', () => {render(<performance />)expect(screen.getByTestId('performance')).toBeInTheDocument()})test('displays correct content', () => {render(<performance />)// Add specific content tests here;
-  })test('handles user interactions', () => {render(<performance />)// Add interaction tests here;
-  })test('applies correct styling', () => {render(<performance />)// Add styling tests here;
-  })})
 interface Performance.testProps {
   // Add props here as needed
 }
+<<<<<<< HEAD
+export default function Performance.test({ }: Performance.testProps) {
+<=
 }
 
-export default function Performance.test({}: Performance.testProps) {
-export default function Performance.test({}: Performance.testProps) {
+>export default function Performance.test({ }: Performance.testProps) {
+<
+=======
+}
 
+export default function Performance.test({ }: Performance.testProps) {
+export default function Performance.test({ }: Performance.testProps) {
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -36,22 +38,37 @@ class ErrorBoundary extends React.Component {
     return this.props.children;
   }
 }
+import React from 'react';
 interface PricingGuidePageProps {
   // Add props here as needed
 
 
 
-export default function PricingGuidePage({}: PricingGuidePageProps) {
+export default function PricingGuidePage({ }: PricingGuidePageProps) {
+<<<<<<< HEAD
+=
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+import React from 'react';
 interface Performance.testProps {
   // Add props here as needed
 }
-export default function Performance.test({}: Performance.testProps) {
+export default function Performance.test({ }: Performance.testProps) {
+<<<<<<< HEAD
+>  return (
+=======
   return (
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
     <div>
       <h1>Performance.test</h1>
       <p>This component is currently under development.</p>
     </div>
   );
+<<<<<<< HEAD
+}
+}
+=
+=======
 
 
 }
@@ -59,11 +76,20 @@ export default function Performance.test({}: Performance.testProps) {
 
 
 }
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 
+
+>}
+><
 
 
 }
 
+<<<<<<< HEAD
+=======
+}
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 :src.pages.disabled/PricingGuidePage.jsx
 }
 }
@@ -71,9 +97,14 @@ export default function Performance.test({}: Performance.testProps) {
 }
 }
 :temp_exclude/src.pages.disabled/PricingGuidePage.jsx
+<<<<<<< HEAD
+=
+>}
+=======
 }
 
 }
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 
 
 
@@ -82,7 +113,16 @@ export default function Performance.test({}: Performance.testProps) {
 
 :src.pages.disabled/PricingGuidePage.jsx
 }
+<<<<<<< HEAD
+<}
+}
+}
+}
+=
+>
+=======
 }
 }
 }
 }
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
