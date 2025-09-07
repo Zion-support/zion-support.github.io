@@ -1,98 +1,103 @@
-<<<<<<< HEAD
 #!/usr/bin/env node
 
-const fs = require('fs')
-const path = require('path')
-
-function fixSyntaxErrors(content) {
-	let next = content
-	next = next.replace(/,\s*;/g, ',')
-	next = next.replace(/;\s*,/g, ',')
-	next = next.replace(/;\s*\]/g, ']')
-	next = next.replace(/;\s*\}/g, '}')
-	return next
-}
-
-function processFile(filePath) {
-	try {
-		const content = fs.readFileSync(filePath, 'utf8')
-		const fixed = fixSyntaxErrors(content)
-		if (fixed !== content) {
-			fs.writeFileSync(filePath, fixed, 'utf8')
-			return true
-		}
-		return false
-	} catch (e) {
-		console.error(`Error processing ${filePath}:`, e.message)
-		return false
-	}
-}
-
-function findFiles(dir, exts) {
-	const files = []
-	for (const entry of fs.readdirSync(dir)) {
-		const full = path.join(dir, entry)
-		const st = fs.statSync(full)
-		if (st.isDirectory()) {
-			if (entry === 'node_modules' || entry.startsWith('.')) continue
-			files.push(...findFiles(full, exts))
-		} else if (exts.some(ext => full.endsWith(ext))) {
-			files.push(full)
-		}
-	}
-	return files
-}
-
-const files = findFiles('.', ['.js', '.ts', '.cjs', '.mjs'])
-let count = 0
-for (const f of files) if (processFile(f)) count++
-=======
-<<<<<<< HEAD
-#!/usr/bin/env node/usr/bin/env nodeconst fs = require("fs")"const path = require("path")function fixSyntaxErrors(content) {let next = content"next = next.replace(/,\s*;/g, ",")"next = next.replace(/;\s*,/g, ",")"next = next.replace(/;\s*\]/g, "]")"next = next.replace(/;\s*\}/g, "}")return next}function processFile(filePath) {try {"const content = fs.readFileSync(filePath, "utf8")const fixed = fixSyntaxErrors(content)if (fixed !== content) {"fs.writeFileSync(filePath, fixed, "utf8")console.log(`Fixed syntax errors in: ${filePath}`)return true}return false} catch (e) {`console.error(`Error processing ${filePath}:`, e.message)return false}}function findFiles(dir, exts) {const files = []for (const entry of fs.readdirSync(dir)) {const full = path.join(dir, entry)const st = fs.statSync(full)if (st.isDirectory()) {"if (entry === "node_modules" | entry.startsWith(".")) continuefiles.push(.findFiles(full, exts))} else if (exts.some(ext => full.endsWith(ext))) {files.push(full)}}return files}"const files = findFiles(".", [".js", ".ts", ".cjs", ".mjs"])let count = 0for (const f of files) if (processFile(f)) count++`console.log(`Fixed syntax errors in ${count} files.`)""`"`
-=======
-#!/usr/bin/env node;
 const fs = require('fs');
 const path = require('path');
-function fixSyntaxErrors(content) {}
-	let next = content;
-	next = next.replace(/,\s*;/g, ',');
-	next = next.replace(/;\s*,/g, ',');
-	next = next.replace(/;\s*\]/g, ']');
-	next = next.replace(/;\s*\}/g, '}');
-	return next;
-};
-function processFile(filePath) {}
-	try {}
-		const content = fs.readFileSync(filePath, 'utf8');
-		const fixed = fixSyntaxErrors(content);
-		if (fixed !== content) {}
-			fs.writeFileSync(filePath, fixed, 'utf8');
-			console.log(`Fixed syntax errors "in": ${filePath}`);
-			return true;
-		};
-		return false;
-	} catch (e) {}
-		console.error(`Error processing ${filePath}:`, e.message);
-		return false;
-	};
-};
-function findFiles(dir, exts) {}
-	const files = [];
-	for (const entry of fs.readdirSync(dir)) {}
-		const full = path.join(dir, entry);
-		const st = fs.statSync(full);
-		if (st.isDirectory()) {}
-			if (entry === 'node_modules' || entry.startsWith('.')) continue;
-			files.push(...findFiles(full, exts));
-		} else if (exts.some(ext => full.endsWith(ext))) {}
-			files.push(full);
-		};
-	};
-	return files;
-};
-const files = findFiles('.', ['.js', '.ts', '.cjs', '.mjs']);
-let count = 0;
-for (const f of files) if (processFile(f)) count++
-console.log(`Fixed syntax errors in ${count} files.`);
->>>>>>> main
->>>>>>> main
+const { execSync } = require('child_process');
+
+console.log('🔧 Fixing all syntax errors...\n');
+
+// Function to fix common syntax errors
+function fixSyntaxErrors(filePath) {
+  try {
+    let content = fs.readFileSync(filePath, 'utf8');
+    let fixed = false;
+
+    // Fix unterminated strings
+    content = content.replace(/\"[^"]*$/gm, (match) => {
+      if (!match.endsWith('"')) {
+        fixed = true;
+        return match + '"';
+      }
+      return match;
+    });
+
+    // Fix trailing commas in objects/arrays
+    content = content.replace(/,(\s*[}\]])/g, '$1');
+
+    // Fix malformed JSX
+    content = content.replace(/className=\"[^"]*\"\s*\/>/g, (match) => {
+      return match.replace(/\/>$/, '></div>');
+    });
+
+    // Fix broken import statements
+    content = content.replace(/import\s+React\s+from\s+"react";/g, 'import React from "react";');
+
+    // Fix broken metadata objects
+    content = content.replace(/export\s+const\s+metadata\s*=\s*\{[^}]*\},?\s*\}/g, (match) => {
+      return match.replace(/,\s*}/g, '}');
+    });
+
+    // Fix broken JSX elements
+    content = content.replace(/<(\w+)\s+className="[^"]*"\s*\/>/g, '<$1 className="$2"></$1>');
+
+    // Fix broken function declarations
+    content = content.replace(/function\s+(\w+)\s*\(\s*\)\s*\{[^}]*\},?\s*\}/g, (match) => {
+      return match.replace(/,\s*}/g, '}');
+    });
+
+    if (fixed) {
+      fs.writeFileSync(filePath, content);
+      console.log(`✅ Fixed syntax errors in ${filePath}`);
+      return true;
+    }
+  } catch (error) {
+    console.log(`❌ Error fixing ${filePath}: ${error.message}`);
+  }
+  return false;
+}
+
+// Function to find and fix all TypeScript/JavaScript files
+function fixAllFiles() {
+  const patterns = [
+    'app/**/*.tsx',
+    'app/**/*.ts',
+    'pages/**/*.tsx',
+    'pages/**/*.ts',
+    'components/**/*.tsx',
+    'components/**/*.ts',
+    'src/**/*.tsx',
+    'src/**/*.ts'
+  ];
+
+  let totalFixed = 0;
+
+  for (const pattern of patterns) {
+    try {
+      const files = execSync(`find . -path "./${pattern}" -type f 2>/dev/null || true`, { 
+        cwd: '/workspace', 
+        encoding: 'utf8' 
+      }).trim().split('\n').filter(f => f);
+
+      for (const file of files) {
+        if (fs.existsSync(file)) {
+          if (fixSyntaxErrors(file)) {
+            totalFixed++;
+          }
+        }
+      }
+    } catch (error) {
+      console.log(`⚠️  Error processing pattern ${pattern}: ${error.message}`);
+    }
+  }
+
+  return totalFixed;
+}
+
+// Main execution
+try {
+  const totalFixed = fixAllFiles();
+  console.log(`\n🎉 Fixed syntax errors in ${totalFixed} files`);
+} catch (error) {
+  console.error('💥 Error during syntax fixing:', error.message);
+  process.exit(1);
+}

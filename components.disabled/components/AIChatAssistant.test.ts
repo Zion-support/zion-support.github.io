@@ -1,29 +1,44 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import { render, screen  } from "@testing-library/react";
-    render(<AIChatAssistant />);
-    expect(screen.getByRole("main")).toBeInTheDocument()});
-  it("displays correct content", () => {;
-=======
-const { render, screen } from "@testing-library/react"; render(<AIChatAssistant />);" expect(screen.getByRole("main")).toBeInTheDocument()});" it("displays correct content", () => {; render(<AIChatAssistant />); / Add specific content checks based on component functionality});" it("handles user interactions", () => {; render(<AIChatAssistant />); / Add interaction tests based on component functionality})})""
-=======
-import { render, screen  } from "@testing-library/react";",
+const { render, screen } from \"@testing-library/react\"; render(<AIChatAssistant />);\" expect(screen.getByRole(\"main\")).toBeInTheDocument()});\" it(\"displays correct content\", () => {; render(<AIChatAssistant />); / Add specific content checks based on component functionality});\" it(\"handles user interactions\", () => {; render(<AIChatAssistant />); / Add interaction tests based on component functionality})})\"\"
+import { render, screen  } from \"@testing-library/react\"
+    expect(screen.getByRole(\"main\"
+  it(\"displays correct content\"
+const { render, screen } from \"@testing-library/react\"; render(<AIChatAssistant />);\" expect(screen.getByRole(\"main\")).toBeInTheDocument()});\" it('displays correct content', () => {; render(<AIChatAssistant />); / Add specific content checks based on component functionality});\" it('handles user interactions', () => {; render(<AIChatAssistant />); / Add interaction tests based on component functionality})})\"\"
+import { render, screen  } from \"@testing-library/react\";
+    expect(screen.getByRole(\"main\")).toBeInTheDocument()});
+  it(\"displays correct content\", () => {;}
+const { render, screen } from \"@testing-library/react\"; render(<AIChatAssistant />);\" expect(screen.getByRole(\"main\")).toBeInTheDocument()});\" it(\"displays correct content\", () => {; render(<AIChatAssistant />); / Add specific content checks based on component functionality});\" it(\"handles user interactions\", () => {; render(<AIChatAssistant />); / Add interaction tests based on component functionality})})\"\"
+import { render, screen  } from \"@testing-library/react\";\",
     render(<AIChatAssistant />);,
-    expect(screen.getByRole("main")).toBeInTheDocument()});",
-  it("displays correct content", () => {;"}
->>>>>>> main
+    expect(screen.getByRole(\"main\")).toBeInTheDocument()});\",
+  it(\"displays correct content\", () => {;\"}
 
     render(<AIChatAssistant />);
     // Add specific content checks based on component functionality});,
-  it("handles user interactions", () => {;"}
+  it(\"handles user interactions\", () => {;\"}
 
     render(<AIChatAssistant />);
-<<<<<<< HEAD
-    // Add interaction tests based on component functionality})})
-=======
-import { render,screen } from "@testing-library/react"; render(<AIChatAssistant />); expect(screen.getByRole("main")).toBeInTheDocument()}); it("displays correct content",() => {; render(<AIChatAssistant />); it("handles user interactions",() => {; render(<AIChatAssistant />)})
->>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
-=======
+import { render,screen } from \"@testing-library/react\"; render(<AIChatAssistant />); expect(screen.getByRole(\"main\")).toBeInTheDocument()}); it(\"displays correct content\",() => {; render(<AIChatAssistant />); it(\"handles user interactions\",() => {; render(<AIChatAssistant />)})
     // Add interaction tests based on component functionality})});
->>>>>>> main
->>>>>>> main
+
+const { render, screen } from \"@testing-library/react\"; render(<AIChatAssistant />)\" expect(screen.getByRole(\"main\")).toBeInTheDocument()})\" it(\"displays correct content\", () => {render(<AIChatAssistant />)/ Add specific content checks based on component functionality})\" it(\"handles user interactions\", () => {render(<AIChatAssistant />)/ Add interaction tests based on component functionality})})\"\";
+import { render, screen   } from '@testing-library/react';
+    expect(screen.getByRole(\"main\";
+  it(\"displays correct content\";
+const { render, screen } from \"@testing-library/react\"; render(<AIChatAssistant />)\" expect(screen.getByRole(\"main\")).toBeInTheDocument()})\" it('displays correct content', () => {render(<AIChatAssistant />)/ Add specific content checks based on component functionality})\" it('handles user interactions', () => {render(<AIChatAssistant />)/ Add interaction tests based on component functionality})})\"\";
+    expect(screen.getByRole(\"main\")).toBeInTheDocument()})it(\"displays correct content\", () => {;}
+const { render, screen } from \"@testing-library/react\"; render(<AIChatAssistant />)\" expect(screen.getByRole(\"main\")).toBeInTheDocument()})\" it(\"displays correct content\", () => {render(<AIChatAssistant />)/ Add specific content checks based on component functionality})\" it(\"handles user interactions\", () => {render(<AIChatAssistant />)/ Add interaction tests based on component functionality})})\"\";
+import { render, screen  } from \"@testing-library/react\";\",render(<AIChatAssistant />),expect(screen.getByRole(\"main\")).toBeInTheDocument()})\",it(\"displays correct content\", () => {\"}render(<AIChatAssistant />)// Add specific content checks based on component functionality}),it(\"handles user interactions\", () => {\"}render(<AIChatAssistant />)// Add interaction tests based on component functionality})})import { render,screen } from \"@testing-library/react\"; render(<AIChatAssistant />)expect(screen.getByRole(\"main\")).toBeInTheDocument()})it('displays correct content', () => {render(<AIChatAssistant />)it('handles user interactions', () => {render(<AIChatAssistant />)})it('displays correct content', () => {it('handles user interactions', () => {import { render,screen } from \"@testing-library/react\"; render(<AIChatAssistant />)expect(screen.getByRole(\"main\")).toBeInTheDocument()})it('displays correct content', () => {render(<AIChatAssistant />)it(\"handles user interactions\";}
+    // Add interaction tests based on component functionality})})render(<AIChatAssistant />);
+    // Add interaction tests based on component functionality})})
+
+const { render, screen } from \"@testing-library/react\"; render(<AIChatAssistant />)\" expect(screen.getByRole(\"main\")).toBeInTheDocument()})\" it(\"displays correct content\", () => {render(<AIChatAssistant />)/ Add specific content checks based on component functionality})\" it(\"handles user interactions\", () => {render(<AIChatAssistant />)/ Add interaction tests based on component functionality})})\"\";
+import { render, screen   } from '@testing-library/react';
+    expect(screen.getByRole(\"main\";
+  it(\"displays correct content\";
+const { render, screen } from \"@testing-library/react\"; render(<AIChatAssistant />)\" expect(screen.getByRole(\"main\")).toBeInTheDocument()})\" it('displays correct content', () => {render(<AIChatAssistant />)/ Add specific content checks based on component functionality})\" it('handles user interactions', () => {render(<AIChatAssistant />)/ Add interaction tests based on component functionality})})\"\";
+    expect(screen.getByRole(\"main\")).toBeInTheDocument()})it(\"displays correct content\", () => {;}
+const { render, screen } from \"@testing-library/react\"; render(<AIChatAssistant />)\" expect(screen.getByRole(\"main\")).toBeInTheDocument()})\" it(\"displays correct content\", () => {render(<AIChatAssistant />)/ Add specific content checks based on component functionality})\" it(\"handles user interactions\", () => {render(<AIChatAssistant />)/ Add interaction tests based on component functionality})})\"\";
+import { render, screen  } from \"@testing-library/react\";\",render(<AIChatAssistant />),expect(screen.getByRole(\"main\")).toBeInTheDocument()})\",it(\"displays correct content\", () => {\"}render(<AIChatAssistant />)// Add specific content checks based on component functionality}),it(\"handles user interactions\", () => {\"}render(<AIChatAssistant />)// Add interaction tests based on component functionality})})import { render,screen } from \"@testing-library/react\"; render(<AIChatAssistant />)expect(screen.getByRole(\"main\")).toBeInTheDocument()})it('displays correct content', () => {render(<AIChatAssistant />)it('handles user interactions', () => {render(<AIChatAssistant />)})it('displays correct content', () => {it('handles user interactions', () => {import { render,screen } from \"@testing-library/react\"; render(<AIChatAssistant />)expect(screen.getByRole(\"main\")).toBeInTheDocument()})it('displays correct content', () => {render(<AIChatAssistant />)it(\"handles user interactions\";}
+    // Add interaction tests based on component functionality})})render(<AIChatAssistant />);
+    // Add interaction tests based on component functionality})})
+

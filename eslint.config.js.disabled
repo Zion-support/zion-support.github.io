@@ -1,486 +1,216 @@
-module.exports = {
-  extends: [
-    'next/core-web-vitals',
-    'eslint:recommended',
-    '@typescript-eslint/recommended',
-  ],
-  parser: '@typescript-eslint/parser',
-  plugins: ['@typescript-eslint'],
-  rules: {
-    // Performance rules
-    'no-console': 'warn',
-    'no-debugger': 'error',
-    
-    // Code quality rules
-    '@typescript-eslint/no-unused-vars': 'error',
-    '@typescript-eslint/no-explicit-any': 'warn',
-    '@typescript-eslint/prefer-const': 'error',
-    
-    // React rules
-    'react-hooks/exhaustive-deps': 'warn',
-    'react/no-unescaped-entities': 'off',
-    
-    // Accessibility rules
-    'jsx-a11y/alt-text': 'error',
-    'jsx-a11y/aria-props': 'error',
-    'jsx-a11y/aria-proptypes': 'error',
-    'jsx-a11y/aria-unsupported-elements': 'error',
-    'jsx-a11y/role-has-required-aria-props': 'error',
-    'jsx-a11y/role-supports-aria-props': 'error',
-  },
+import { FlatCompat } from '@eslint/eslintrc';
+import js from '@eslint/js';
+import { fileURLToPath } from 'url';
+import { dirname } from 'path';
+import typescript from '@typescript-eslint/eslint-plugin';
+import typescriptParser from '@typescript-eslint/parser';
+import react from 'eslint-plugin-react';
+import reactHooks from 'eslint-plugin-react-hooks';
+import globals from 'globals';
+
+export default [
+  js.configs.recommended,
   {
-    files: ['**/*.{ts,tsx}'],
+    files: ['**/*.{js,jsx}'],
     languageOptions: {
-      ecmaVersion: 2021,
+      ecmaVersion: 2022,
       sourceType: 'module',
-      parser: tsparser,
       parserOptions: {
         ecmaFeatures: {
-          jsx: true,
-        },
-      },
+          jsx: true
+        }
+      }
+    },
+    rules: {
+      'no-unused-vars': 'warn',
+      'no-console': 'warn',
+      'prefer-const': 'warn'
+    }
+  },
+  {
+    ignores: [
+      'node_modules/**',
+      '.next/**',
+      'dist/**',
+      'build/**',
+      '*.config.js',
+      '*.config.cjs',
+      '*.config.mjs',
+      'scripts/**',
+      'automation/**',
+      'automation_backup/**',
+      'apps.backup/**',
+      'backup-problematic-files/**',
+      'backup-merge-conflicts/**',
+      'corrupted_backup/**',
+      'corrupted-files-backup/**',
+      'src.disabled/**',
+      'components.disabled/**',
+      'pages.disabled/**',
+      'pages_backup/**',
+      'pages_backup_*/**',
+      'pages_backup_conflict/**',
+      'pages_backup_conflicts/**',
+      'pages_minimal/**',
+      'pages.broken/**',
+      'pages.corrupted.*/**',
+      'pages.disabled*/**',
+      'pages.disabled_*/**',
+      'pages.disabled_full/**',
+      'pages.old/**',
+      'pages_api.disabled/**',
+      'pages_disabled/**',
+      'pages.__backup/**',
+      'pages._archive_corrupted/**',
+      'pages._quarantine/**',
+      'pages.bak/**',
+      'pages.blog.disabled/**',
+      'solutions.disabled/**',
+      'src.corrupted/**',
+      'src.pages.disabled/**',
+      'src_backup/**',
+      'temp-backup/**',
+      'tests.disabled/**',
+      'zion-os/**',
+      'zion-website/**',
+      'zion_academy/**',
+      'zion-ai-assistant/**',
+      'zion-os.disabled/**',
+      'api/**',
+      'api-backup/**',
+      'api-disabled/**',
+      'api.disabled/**',
+      'backup/**',
+      'backups/**',
+      'broken_files_backup/**',
+      'cypress_backup/**',
+      'data_backup/**',
+      'deployment/**',
+      'deployments/**',
+      'dao/**',
+      'e2e/**',
+      'server/**',
+      'temp_*/**',
+      'test_build/**',
+      'tests/**',
+      '__tests__/**',
+      'components/apps/extension/**',
+      'lib.broken/**',
+      'middleware/**',
+      'netlify/**',
+      'pm2-automation/**',
+      'pm2-backups/**',
+      'recovered-branches/**',
+      'src.broken/**',
+      'src_backup_temp/**',
+      'test-next/**',
+      'tools/**',
+      'utils/**',
+      '*.cjs',
+      '*.mjs',
+      'supabase/**',
+      'ultimate-*.cjs',
+      'advanced-*.js',
+      'comprehensive-*.js',
+      'enhanced-*.js',
+      'fix-*.js',
+      'merge-*.js',
+      'run-*.js',
+      'test-*.js',
+      '*.test.js',
+      '*.spec.js',
+      'aggressive-*.js',
+      'batch-*.js',
+      'clean-*.js',
+      'critical-*.js',
+      'execute-*.js',
+      'final-*.js',
+      'health-*.js',
+      'improve-*.js',
+      'maintenance-*.js',
+      'monitoring-*.js',
+      'optimized-*.js',
+      'performance-*.js',
+      'resolve-*.js',
+      'seo-*.js',
+      'simple-*.js',
+      'structural-*.js',
+      'system-*.js',
+      'ultimate-*.js',
+      '*.js',
+    ]
+  },
+  {
+    files: ['src/**/*.{js,jsx,ts,tsx}', 'app/**/*.{js,jsx,ts,tsx}'],
+    languageOptions: {
+      ecmaVersion: 2020,
       globals: {
-        window: 'readonly',
-        document: 'readonly',
-        navigator: 'readonly',
-        localStorage: 'readonly',
-        sessionStorage: 'readonly',
-        console: 'readonly',
-        setTimeout: 'readonly',
-        setInterval: 'readonly',
-        clearTimeout: 'readonly',
-        clearInterval: 'readonly',
-        requestAnimationFrame: 'readonly',
-        cancelAnimationFrame: 'readonly',
-        fetch: 'readonly',
-        URL: 'readonly',
-        URLSearchParams: 'readonly',
-        Blob: 'readonly',
-        CustomEvent: 'readonly',
-        Intl: 'readonly',
-        performance: 'readonly',
-        caches: 'readonly',
-        Notification: 'readonly',
-        ServiceWorker: 'readonly',
-        ServiceWorkerRegistration: 'readonly',
-        PushSubscription: 'readonly',
-        NotificationPermission: 'readonly',
-        process: 'readonly',
-        global: 'readonly',
+        ...globals.browser,
+        ...globals.node,
         jest: 'readonly',
         describe: 'readonly',
         it: 'readonly',
         test: 'readonly',
         expect: 'readonly',
-        vi: 'readonly',
-        Deno: 'readonly',
-        React: 'readonly',
+        beforeEach: 'readonly',
+        afterEach: 'readonly',
+        beforeAll: 'readonly',
+        afterAll: 'readonly'
       },
+      parser: typescriptParser,
+      parserOptions: {
+        ecmaVersion: 'latest',
+        sourceType: 'module',
+        ecmaFeatures: {
+          jsx: true
+        }
+      }
     },
     plugins: {
-      react,
-      'react-hooks': reactHooks,
-      '@typescript-eslint': tseslint,
+      '@typescript-eslint': typescript,
+      'react': react,
+      'react-hooks': reactHooks
     },
     rules: {
-      'react/react-in-jsx-scope': 'off',
+      ...typescript.configs.recommended.rules,
+      ...react.configs.recommended.rules,
+      ...reactHooks.configs.recommended.rules,
       'react/prop-types': 'off',
-      '@typescript-eslint/no-unused-vars': [
-        'warn',
-        { argsIgnorePattern: '^_' }
-      ],
-      '@typescript-eslint/explicit-function-return-type': 'off',
-      '@typescript-eslint/explicit-module-boundary-types': 'off',
+      'react/react-in-jsx-scope': 'off',
+      'react/display-name': 'off',
+      '@typescript-eslint/no-unused-vars': ['warn', { argsIgnorePattern: '^_' }],
+      '@typescript-eslint/no-explicit-any': 'warn',
+      '@typescript-eslint/ban-ts-comment': 'off',
       'no-unused-vars': 'off',
-      'no-console': 'warn',
-      'no-undef': 'off',
+      'no-console': ['warn', { allow: ['warn', 'error'] }],
+      'prefer-const': 'error',
+      'no-debugger': 'warn',
+      'react-hooks/rules-of-hooks': 'error',
+      'react-hooks/exhaustive-deps': 'warn'
     },
     settings: {
       react: {
-        version: 'detect',
-      },
-    },
+        version: 'detect'
+      }
+    }
   },
   {
-    ignores: [
-      'src/**',
-      'components/**',
-      'backup-pages/**',
-      'pages-backup/**',
-      'pages.__backup/**',
-      'broken_files_backup/**',
-      'api/**',
-      'api-backup/**',
-      'automation_backup/**',
-      'ai-optimization-backups/**',
-      'ai-optimization-reports/**',
-      'ai-analysis-reports/**',
-      '__tests__/**',
-      'tests/**',
-      '*.test.*',
-      '.eslintrc.*',
-      'mcp*.*',
-      'fix_*.*',
-      'fix-*.js',
-      'fix-*.jsx',
-      'fix-variable-names.jsx',
-      'health-endpoint.js',
-      'services/**',
-      'data/**',
-      'temp_working/**',
-      'supabase/**',
-      'ecosystem*.js',
-      'jest.*',
-      'node_modules/',
-      '.next/',
-      'out/',
-      'dist/',
-      'build/',
-      '*.config.js',
-      '*.config.ts',
-      'scripts/',
-      'automation/',
-      'public/reports/**',
-      'netlify/',
-      'ecosystem*.cjs',
-      '**/*.cjs',
-      '**/*.disabled/**',
-      '**/tests.disabled/**',
-      '**/typechain-types.disabled/**',
-      '**/types.disabled/**',
-      '**/utils.disabled/**',
-      '**/zion-os.disabled/**',
-      '**/zion_academy/**',
-      '**/src_backup/**',
-      '**/src_disabled/**',
-      '**/services.disabled.temp/**',
-      'test-*.js',
-      'workbox-config.js',
-      '*.backup.*',
-      '**/data/*.ts',
-      '**/pages/*.tsx',
-      '**/public/*.js',
-      '**/*.mjs',
-      '**/server.mjs',
-      '**/seed.js',
-      '**/jest.setup.js',
-      '**/extractFailingCode.js',
-      '**/fix-corrupted-files.js',
-      '**/fix-corruption.js',
-      '**/fix-merge-conflicts.js',
-      '**/fix-syntax-errors.js',
-      '**/mcp-automation-system.js',
-      '**/run-cursor-memory-automation.js',
-      '**/script.js',
-      '**/simple-mcp-test.js',
-      '**/simple-server.js',
-      '**/start-all-automations.js',
-      '**/backup/**',
-      '**/.temp_backup_components/**',
-      '**/src.broken/**',
-      '**/data.temp/**',
-      '**/contracts/**',
-      '**/cypress/**',
-      '**/src/components/disabled/**',
-      '**/src/components/header/**',
-      '**/src/components/ui/Futuristic*.tsx',
-      '**/src/components/ui/accordion.tsx',
-      '**/src/components/ui/alert.tsx',
-      '**/src/components/ui/avatar.tsx',
-      '**/src/components/ui/badge.tsx',
-      '**/src/components/ui/button.tsx',
-      '**/src/components/ui/card.tsx',
-      '**/src/components/ui/floating-action-button.tsx',
-      '**/src/components/ui/input.tsx',
-      '**/src/components/ui/loading-spinner.tsx',
-      '**/src/components/ui/loading.tsx',
-      '**/src/components/ui/select.jsx',
-      '**/src/components/ui/separator.jsx',
-      '**/src/components/ui/skeleton.jsx',
-      '**/src/components/ui/steps.jsx',
-      '**/src/components/ui/tabs.jsx',
-      '**/src/components/ui/textarea.jsx',
-      '**/src/components/ui/use-toast.jsx',
-      '**/src/hooks/use-toast.js',
-      '**/src/hooks/usePerformance.js',
-      '**/src/lib/utils.js',
-      '**/src/main.jsx',
-      '**/src/types/listings.js',
-      '**/src/components/AccessibilityEnhancer.jsx',
-      '**/src/components/Breadcrumb.jsx',
-      '**/src/components/ErrorBoundary.jsx',
-      '**/src/components/GradientHeading.jsx',
-      '**/src/components/LazyImage.jsx',
-      '**/src/components/LoadingSkeleton.jsx',
-      '**/src/components/SEO.jsx',
-      '**/src/components/SecurityHeaders.jsx',
-      '**/src/components/Sidebar.jsx',
-      '**/src/components/TrustIndicators.jsx',
-      '**/auto-fix-watcher.js',
-      '**/auto-run-all.js',
-      '**/comprehensive-automation-test.js',
-      '**/debug-paths.js',
-      '**/pages/**',
-      'test*.js',
-      'test*.ts',
-      'test*.tsx'
-    ]
-import js from,;
-  @eslint/js';
-import react from;
-  'eslint-plugin-react';
-import reactHooks from;
-  'eslint-plugin-react-hooks';
-import tseslint from;
-  '@typescript-eslint/eslint-plugin';
-import tsparser from;
-  '@typescript-eslint/parser';
-;
-export default [;
-  js.configs.recommended,;
-  {;
-    files: ['**/*.{js,jsx}'],;
-    languageOptions: {;
-      ecmaVersion: 2021,;
-      sourceType: 'module',;
-      globals: {;
-        window: 'readonly',;
-        document: 'readonly',;
-        navigator: 'readonly',;
-        localStorage: 'readonly',;
-        sessionStorage: 'readonly',;
-        console: 'readonly',;
-        setTimeout: 'readonly',;
-        setInterval: 'readonly',;
-        clearTimeout: 'readonly',;
-        clearInterval: 'readonly',;
-        requestAnimationFrame: 'readonly',;
-        cancelAnimationFrame: 'readonly',;
-        fetch: 'readonly',;
-        URL: 'readonly',;
-        URLSearchParams: 'readonly',;
-        Blob: 'readonly',;
-        CustomEvent: 'readonly',;
-        Intl: 'readonly',;
-        performance: 'readonly',;
-        caches: 'readonly',;
-        Notification: 'readonly',;
-        ServiceWorker: 'readonly',;
-        ServiceWorkerRegistration: 'readonly',;
-        PushSubscription: 'readonly',;
-        NotificationPermission: 'readonly',;
-        process: 'readonly',;
-        global: 'readonly',;
-        jest: 'readonly',;
-        describe: 'readonly',;
-        it: 'readonly',;
-        test: 'readonly',;
-        expect: 'readonly',;
-        vi: 'readonly',;
-        Deno: 'readonly',;
-        React: 'readonly'}},;
-    plugins: {;
-      react,;
-      'react-hooks': reactHooks},;
-    rules: {;
-      ...react.configs.recommended.rules,;
-      ...reactHooks.configs.recommended.rules,;
-      'react/react-in-jsx-scope': 'off',;
-      'react/prop-types': 'off',;
-      'no-console': 'warn'}},;
-  {;
-    files: ['**/*.{ts,tsx}'],;
-    languageOptions: {;
-      ecmaVersion: 2021,;
-      sourceType: 'module',;
-      parser: tsparser,;
-      parserOptions: {;
-        ecmaFeatures: {;
-          jsx: true}},;
-      globals: {;
-        window: 'readonly',;
-        document: 'readonly',;
-        navigator: 'readonly',;
-        localStorage: 'readonly',;
-        sessionStorage: 'readonly',;
-        console: 'readonly',;
-        setTimeout: 'readonly',;
-        setInterval: 'readonly',;
-        clearTimeout: 'readonly',;
-        clearInterval: 'readonly',;
-        requestAnimationFrame: 'readonly',;
-        cancelAnimationFrame: 'readonly',;
-        fetch: 'readonly',;
-        URL: 'readonly',;
-        URLSearchParams: 'readonly',;
-        Blob: 'readonly',;
-        CustomEvent: 'readonly',;
-        Intl: 'readonly',;
-        performance: 'readonly',;
-        caches: 'readonly',;
-        Notification: 'readonly',;
-        ServiceWorker: 'readonly',;
-        ServiceWorkerRegistration: 'readonly',;
-        PushSubscription: 'readonly',;
-        NotificationPermission: 'readonly',;
-        process: 'readonly',;
-        global: 'readonly',;
-        jest: 'readonly',;
-        describe: 'readonly',;
-        it: 'readonly',;
-        test: 'readonly',;
-        expect: 'readonly',;
-        vi: 'readonly',;
-        Deno: 'readonly',;
-        React: 'readonly'}},;
-    plugins: {;
-      react,;
-      'react-hooks': reactHooks,;
-      '@typescript-eslint': tseslint},;
-    rules: {,;
-  react/react-in-jsx-scope': 'off,;
-,;
-  react/prop-types': 'off,;
-,;
-  @typescript-eslint/no-unused-vars': [;
-  'warn, { argsIgnorePattern:,;
-  ^_' }],;
-  '@typescript-eslint/explicit-function-return-type': 'off,;
-,;
-  @typescript-eslint/explicit-module-boundary-types': 'off,;
-,;
-  no-unused-vars': 'off,;
-,;
-  no-console': 'warn,;
-,;
-  no-undef': 'off},;
-    settings: {;
-      react: {;
-        version:,;
-  detect'}}},;
-  {;
-    ignores: [
-  'src/**,;
-  'components/**',;
-  'backup-pages/**',;
-  'pages-backup/**',;
-  'pages.__backup/**',;
-  'broken_files_backup/**',;
-  'api/**',;
-  'api-backup/**',;
-  'automation_backup/**',;
-  'ai-optimization-backups/**',;
-  'ai-optimization-reports/**',;
-  'ai-analysis-reports/**',;
-  '__tests__/**',;
-  'tests/**',;
-  '*.test.*',;
-  '.eslintrc.*',;
-  'mcp*.*',;
-  'fix_*.*',;
-  'fix-*.js',;
-  'fix-*.jsx',;
-  'fix-variable-names.jsx',;
-  'health-endpoint.js',;
-  'services/**',;
-  'data/**',;
-  'temp_working/**',;
-  'supabase/**',;
-  'ecosystem*.js',;
-  'jest.*',;
-  'node_modules/',;
-  '.next/',;
-  'out/',;
-  'dist/',;
-  'build/',;
-  '*.config.js',;
-  '*.config.ts',;
-  'scripts/',;
-  'automation/',;
-  'public/reports/**',;
-  'netlify/',;
-  'ecosystem*.cjs',;
-  '**/*.cjs',;
-  '**/*.disabled/**',;
-  '**/tests.disabled/**',;
-  '**/typechain-types.disabled/**',;
-  '**/types.disabled/**',;
-  '**/utils.disabled/**',;
-  '**/zion-os.disabled/**',;
-  '**/zion_academy/**',;
-  '**/src_backup/**',;
-  '**/src_disabled/**',;
-  '**/services.disabled.temp/**',;
-  'test-*.js',;
-  'workbox-config.js',;
-  '*.backup.*',;
-  '**/data/*.ts',;
-  '**/pages/*.tsx',;
-  '**/public/*.js',;
-  '**/*.mjs',;
-  '**/server.mjs',;
-  '**/seed.js',;
-  '**/jest.setup.js',;
-  '**/extractFailingCode.js',;
-  '**/fix-corrupted-files.js',;
-  '**/fix-corruption.js',;
-  '**/fix-merge-conflicts.js',;
-  '**/fix-syntax-errors.js',;
-  '**/mcp-automation-system.js',;
-  '**/run-cursor-memory-automation.js',;
-  '**/script.js',;
-  '**/simple-mcp-test.js',;
-  '**/simple-server.js',;
-  '**/start-all-automations.js',;
-  '**/backup/**',;
-  '**/.temp_backup_components/**',;
-  '**/src.broken/**',;
-  '**/data.temp/**',;
-  '**/contracts/**',;
-  '**/cypress/**',;
-  '**/src/components/disabled/**',;
-  '**/src/components/header/**',;
-  '**/src/components/ui/Futuristic*.tsx',;
-  '**/src/components/ui/accordion.tsx',;
-  '**/src/components/ui/alert.tsx',;
-  '**/src/components/ui/avatar.tsx',;
-  '**/src/components/ui/badge.tsx',;
-  '**/src/components/ui/button.tsx',;
-  '**/src/components/ui/card.tsx',;
-  '**/src/components/ui/floating-action-button.tsx',;
-  '**/src/components/ui/input.tsx',;
-  '**/src/components/ui/loading-spinner.tsx',;
-  '**/src/components/ui/loading.tsx',;
-  '**/src/components/ui/select.jsx',;
-  '**/src/components/ui/separator.jsx',;
-  '**/src/components/ui/skeleton.jsx',;
-  '**/src/components/ui/steps.jsx',;
-  '**/src/components/ui/tabs.jsx',;
-  '**/src/components/ui/textarea.jsx',;
-  '**/src/components/ui/use-toast.jsx',;
-  '**/src/hooks/use-toast.js',;
-  '**/src/hooks/usePerformance.js',;
-  '**/src/lib/utils.js',;
-  '**/src/main.jsx',;
-  '**/src/types/listings.js',;
-  '**/src/components/AccessibilityEnhancer.jsx',;
-  '**/src/components/Breadcrumb.jsx',;
-  '**/src/components/ErrorBoundary.jsx',;
-  '**/src/components/GradientHeading.jsx',;
-  '**/src/components/LazyImage.jsx',;
-  '**/src/components/LoadingSkeleton.jsx',;
-  '**/src/components/SEO.jsx',;
-  '**/src/components/SecurityHeaders.jsx',;
-  '**/src/components/Sidebar.jsx',;
-  '**/src/components/TrustIndicators.jsx',;
-  '**/auto-fix-watcher.js',;
-  '**/auto-run-all.js',;
-  '**/comprehensive-automation-test.js',;
-  '**/debug-paths.js',;
-  '**/pages/**',;
-  'test*.js',;
-  'test*.ts',;
-  'test*.tsx';
-    ];
+    files: ['**/*.js'],
+    languageOptions: {
+      globals: {
+        console: 'readonly',
+        process: 'readonly',
+        Buffer: 'readonly',
+        __dirname: 'readonly',
+        __filename: 'readonly',
+        global: 'readonly',
+        module: 'readonly',
+        require: 'readonly',
+        exports: 'readonly'
+      }
+    },
+    rules: {
+      'no-console': 'off'
+    }
   }
 ];

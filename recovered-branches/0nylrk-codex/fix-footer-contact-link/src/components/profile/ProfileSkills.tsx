@@ -1,0 +1,111 @@
+
+import { Badge } from "@/components/ui/badge";""
+import { ProfileSkill } from "@/types/profile";"
+interface ProfileSkillsProps {
+  // TODO: Implement
+}
+  skills: ProfileSkill[];
+}
+
+interface ProfileSkillsProps {
+  // TODO: Implement
+}
+  skills: ProfileSkill[];
+}
+export function ProfileSkills({ skills }: ProfileSkillsProps) {
+  return ("
+    <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 mb-8">"
+</div>"
+      <h3 className="text-xl font-bold text-white mb-4">Skills</h3>""
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">"
+</div>"
+          <div key={index} className="flex flex-col">"
+</div>"
+            <div className="flex justify-between items-center mb-1">"
+</div>"
+              <span className="text-zion-slate-light">{skill.name}</span>""
+                <span className="text-sm text-zion-slate">"
+</span>
+
+                </span>
+            </div>
+
+"
+            <div className="h-2 w-full bg-zion-blue-light rounded-full overflow-hidden">"
+</div>
+              <div;"
+                className="h-full bg-gradient-to-r from-zion-purple to-zion-cyan"")
+
+                style={{ width: `${(skill.level / 5) * 100}%` }}
+              />
+</div>
+            </div>
+          </div>
+      </div>
+
+    </div>"
+    <div className="bg - zion - blue - dark border border - zion - blue - light rounded - lg p - 6 mb - 8">;"
+</div>"
+      <h3 className="text - xl font - bold text - white mb - 4">Skills</h3>;""
+      <div className="grid grid - cols - 1 md:grid - cols - 2 gap - 4">;"
+</div>"
+          <div key={index} className="flex flex - col">;"
+</div>"
+            <div className="flex justify - between items - center mb - 1">;"
+</div>"
+              <span className="text - zion - slate - light">{skill.name}</span>;""
+                <span className="text - sm text - zion - slate">;"
+</span>
+                </span>)}
+            </div>;"
+            <div className="h - 2 w - full bg - zion - blue - light rounded - full overflow - hidden">;"
+</div>
+              <div;"
+                className="h - full bg - gradient - to - r from - zion - purple to - zion - cyan";"
+                style={{ width: `${(skill.level / 5) * 100}%` }}
+              />;
+</div>
+            </div>;
+          </div>))}
+      </div>;
+    </div>);"
+    <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 mb-8">;"
+</div>"
+      <h3 className="text-xl font-bold text-white mb-4">Skills</h3>;"
+              <div;"
+                className="h-full bg-gradient-to-r from-zion-purple to-zion-cyan""
+  )"
+import { Badge } from "@/components/ui/badge",;""
+import { ProfileSkill } from "@/types/profile";"
+interface ProfileSkillsProps {;
+  skills: ProfileSkill[];
+}
+;
+export function ProfileSkills({ skills }: ProfileSkillsProps) {;
+  return (;"
+    <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 mb-8">;"
+</div>"
+      <h3 className="text-xl font-bold text-white mb-4">Skills</h3>;""
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">;"
+</div>"
+          <div key={index} className="flex flex-col">;"
+</div>"
+            <div className="flex justify-between items-center mb-1">;"
+</div>"
+              <span className="text-zion-slate-light">{skill.name}</span>;""
+                <span className="text-sm text-zion-slate">;"
+</span>
+                </span>;
+            </div>;"
+            <div className="h-2 w-full bg-zion-blue-light rounded-full overflow-hidden">;"
+</div>
+              <div;"
+                className="h-full bg-gradient-to-r from-zion-purple to-zion-cyan";")
+                style={{ width: `${(skill.level / 5) * 100}%` }}
+              />;
+</div>
+            </div>;
+          </div>;
+      </div>;
+    </div>;"
+

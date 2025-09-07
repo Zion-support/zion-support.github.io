@@ -1,9 +1,0 @@
-<<<<<<< HEAD
-it(displays expected content\",() => {}; import { render,screen } from &apos;@testing - library/react\",; import SkipLink from &apos;./SkipLink; describe(&apos;SkipLink&apos,() => {}} expect(screen.getByRole(&apos;main&apos) || screen.getByText(/.*/)).toBeInTheDocument()});} it(&apos;displays expected content&apos,() => {}} render(<SkipLink / >)\"; expect(screen.getByRole(\"main\") || screen.getByText(/.*/)).toBeInTheDocument();})\"; \";}}))
-=======
-<<<<<<< HEAD
-it(displays expected content",() => {}; import { render,screen } from &apos;@testing - library/react",; import SkipLink from &apos;./SkipLink; describe(&apos;SkipLink&apos,() => {}} expect(screen.getByRole(&apos;main&apos) | screen.getByText(/.*/)).toBeInTheDocument()});} it(&apos;displays expected content&apos,() => {}} render(<SkipLink / >)"; expect(screen.getByRole("main") | screen.getByText(/.*/)).toBeInTheDocument();})"; ";}}))""
-=======
-it(displays expected content",() => {}; import { render,screen } from &apos;@testing - library/react",; import SkipLink from &apos;./SkipLink; describe(&apos;SkipLink&apos,() => {}} expect(screen.getByRole(&apos;main&apos) || screen.getByText(/.*/)).toBeInTheDocument()})} it(&apos;displays expected content&apos,() => {}} render(<SkipLink / >)"; expect(screen.getByRole("main") || screen.getByText(/.*/)).toBeInTheDocument()})"; "}}))
->>>>>>> main
->>>>>>> main

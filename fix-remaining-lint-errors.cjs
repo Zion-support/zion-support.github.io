@@ -1,131 +1,135 @@
+#!/usr/bin/env node
 const fs = require('fs');
 const path = require('path');
+console.log('🔧 Fixing remaining lint errors...);
+// Fix specific files with known issues;
+const filesToFix = [
+  'apps.backup/api/src/index.ts,apps.backup/api/src/openai.ts,apps.backup/api/src/pg.ts,apps.backup/extension/public/popup.js,apps.backup/extension/scripts/generate-icons.js]
+];
 
-// Function to fix specific syntax errors;
-function fixSyntaxErrors(filePath) {}
-  try {}
-    let content = fs.readFileSync(filePath, 'utf8');
-    let modified = false;
-    
-    // Fix extra semicolons and quotes;
-    if (content.includes("require('@playwright/test')';")) {}
-      content = content.replace(/require\('@playwright\/test'\)';/g, "require('@playwright/test');");
-      modified = true;
-    };
-    // Fix unterminated string constants;
-    if (content.includes("test.describe('Accessibility: Tests', () => {';")) {}
-      content = content.replace(/test\.describe\('Accessibility: Tests', \(\) => \{';/g, "test.describe('Accessibility: Tests', () => {");}
-      modified = true;
-    };
-    // Fix other similar patterns;
-    content = content.replace(/\}';/g, '}');
-    content = content.replace(/\{';/g, '{');}
-    content = content.replace(/\);';/g, ');');
-    content = content.replace(/\);';/g, ');');
-    
-    // Fix extra semicolons;
-    content = content.replace(/;;/g, ';');
-    
-    if (modified) {}
-      fs.writeFileSync(filePath, content);
-      console.log(`Fixed syntax errors in: ${filePath}`);
-      return true;
-    };
-    return false;
-  } catch (error) {}
-    console.error(`Error fixing file ${filePath}:`, error.message);
-    return false;
-  };
-};
-// Function to fix integration test files;
-function fixIntegrationTest(filePath) {}
-  try {}
-    let content = fs.readFileSync(filePath, 'utf8');
-    
-    // Check if it's a malformed integration test;
-    if (content.includes('import { test, expect } from \'@playwright/test" import { test, expect } from \'@playwright/test"')) {}
-      const fileName = path.basename(filePath, '.integration.test.js');
-      
-      const fixedContent = `import { test, expect } from '@playwright/test';
-
-test.describe('${fileName} Integration Tests', () => {}
-  test('should load the page', async ({ page }) => {}
-    await page.goto('/');
-    await expect(page).toHaveTitle(/Zion Tech Group/);
-  }
-});
-
-  test('should have proper navigation', async ({ page }) => {}
-    await page.goto('/');
-    await expect(page.locator('nav')).toBeVisible();
-  }
-});
+function fixFile(filePath) {
+  try {
+  // TODO: Implement
 }
-});
-`;`
-      
-      fs.writeFileSync(filePath, fixedContent);
-      console.log(`Fixed integration test: ${filePath}`);
-      return true;
-    };
-    return false;
-  } catch (error) {}
-    console.error(`Error fixing integration test ${filePath}:`, error.message);
-    return false;
-  };
-};
-// Function to fix TypeScript test files;
-function fixTypeScriptTest(filePath) {}
-  try {}
-    let content = fs.readFileSync(filePath, 'utf8');
+    if (!fs.existsSync(filePath)) {
+      console.log(`⚠️  File not found: ${filePath});
+      return false;
+    }
+'
+    let content = fs.readFileSync(filePath,utf8);
     let modified = false;
-    
-    // Fix missing semicolons;
-    if (content.includes('import { test, expect } from \'@playwright/test"')) {}
-      content = content.replace(/import { test, expect } from '@playwright\/test"/g, "import { test, expect } from '@playwright/test';");
-      modified = true;
-    };
-    // Fix other common issues;
-    content = content.replace(/beforeEach\(/g, 'beforeEach(');
-    
-    if (modified) {}
-      fs.writeFileSync(filePath, content);
-      console.log(`Fixed TypeScript test: ${filePath}`);
-      return true;
-    };
-    return false;
-  } catch (error) {}
-    console.error(`Error fixing TypeScript test ${filePath}:`, error.message);
-    return false;
-  };
-};
-// Get all test files;
-const testDir = path.join(__dirname, '__tests__');
 
-function processDirectory(dir) {}
-  const files = fs.readdirSync(dir);
-  
-  files.forEach(file => {})
-    const filePath = path.join(dir, file);
-    const stat = fs.statSync(filePath);
-    
-    if (stat.isDirectory()) {}
-      processDirectory(filePath);
-    } else if (file.endsWith('.test.js') || file.endsWith('.test.ts') || file.endsWith('.test.tsx')) {}
+    // Fix parsing errors in index.ts;
+    if (filePath.includes('apps.backup/api/src/index.ts')) {
       // Fix syntax errors;
-      fixSyntaxErrors(filePath);
-      
-      // Fix integration tests;
-      if (file.includes('.integration.')) {}
-        fixIntegrationTest(filePath);
-      };
-      // Fix TypeScript tests;
-      if (file.endsWith('.ts') || file.endsWith('.tsx')) {}
-        fixTypeScriptTest(filePath);
-      };
-    };
-  }
+      content = content.replace(/,\s*\)/g,));
+      content = content.replace(/\(\s*,/g,(');
+    }
+
+    // Fix openai.ts;
+    if (filePath.includes('apps.backup/api/src/openai.ts')) {
+      // Add proper imports and fix variable references;
+      content = `import OpenAI from 'openai';
+const _apiKey = process.env.OPENAI_API_KEY;
+const apiKey = _apiKey;
+
+export async function generateText(_openai, _role, _opts) {
+  const _prompt = _opts.prompt;
+  const role = _role;
+  const opts = _opts;
+  
+  const openai = new OpenAI({ apiKey });
+  const prompt = _prompt;
+  
+  const _completion = await openai.chat.completions.create({
+    model: gpt-3.5-turbo,
+    messages: [{ role, content: prompt }],
+    ...opts;)
+  });
+  
+  const completion = _completion;
+  return completion.choices[0]?.message?.content || ;
+}
+`;
+      modified = true;
+    }
+
+    // Fix pg.ts;
+    if (filePath.includes('apps.backup/api/src/pg.ts')) {
+      content = `import { Pool, PoolClient } from 'pg';
+const pool = new Pool({
+  connectionString: process.env.DATABASE_URL;)
 });
-};
-processDirectory(testDir);
-console.log('Finished fixing remaining lint errors');
+
+export const getPool = () => pool;
+
+export async function withTransaction(_userId, _fn) {
+  const _client = await pool.connect();
+  const client = _client;
+  
+  try {
+  // TODO: Implement
+}
+    await client.query('BEGIN');
+    const result = await _fn(client);
+    await client.query('COMMIT');
+    return result;
+  } catch (error) {
+    await client.query('ROLLBACK');
+    throw error;
+  } finally {
+  // TODO: Implement
+}
+    client.release();
+  }
+}
+`;
+      modified = true;
+    }
+
+    // Fix popup.js;
+    if (filePath.includes('apps.backup/extension/public/popup.js')) {
+      content = content.replace(/\bchrome\b/g,window.chrome');
+      content = content.replace(/\bcrypto\b/g,window.crypto');
+      modified = true;
+    }
+
+    // Fix generate-icons.js;
+    if (filePath.includes('apps.backup/extension/scripts/generate-icons.js')) {
+      content = content.replace(/\bURL\b/g,window.URL');
+      modified = true;
+    }
+
+    if (modified) {
+      fs.writeFileSync(filePath, content);
+      console.log(`✅ Fixed: ${filePath});
+      return true;
+    }
+
+    return false;
+  } catch (error) {
+    console.error(`❌ Error fixing ${filePath}:`, error.message);
+    return false;
+  }
+}
+
+// Main execution;
+let fixedCount = 0;
+let errorCount = 0;
+
+for (const file of filesToFix) {
+  try {
+  // TODO: Implement
+}
+    if (fixFile(file)) {
+      fixedCount++;
+    }
+  } catch (error) {
+    errorCount++;
+    console.error(`❌ Error processing ${file}:`, error.message);
+  }
+}
+
+console.log(`\n🎉 Remaining lint fixes complete!`);
+console.log(`✅ Fixed: ${fixedCount} files`);
+console.log(`❌ Errors: ${errorCount} files`);

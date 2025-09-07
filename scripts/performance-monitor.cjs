@@ -1,269 +1,407 @@
-<<<<<<< HEAD
-const fs = require("fs");"const path = require("path");"const { execSync } = require("child_process");class PerformanceMonitor { constructor() { this.projectRoot = process.cwd(); this.metrics = { bundleSize: 0, buildTime: 0, pageCount: 0, totalSize: 0, performanceScore: 0 }; this.recommendations = []; }" log(message, type = "INFO") { const timestamp = new Date().toISOString(); const emoji = {" INFO: ""," SUCCESS: ""," ERROR: ""," WARNING: ""," PERFORMANCE: """ }[type] | ""; console.log(`[${timestamp}] [${type}] ${emoji} ${message}`); } async measureBuildTime() {" this.log("Measuring build time.", "PERFORMANCE"); try { const startTime = Date.now();" execSync("npm run build", { cwd: this.projectRoot," stdio: "pipe"," encoding: "utf8" }); const endTime = Date.now(); this.metrics.buildTime = endTime - startTime;"` this.log(`Build completed in ${this.metrics.buildTime}ms`, "SUCCESS"); } catch (error) {"` this.log(`Build failed: ${error.message}`, "ERROR"); this.metrics.buildTime = -1; } } async analyzeBundleSize() {" this.log("Analyzing bundle size.", "PERFORMANCE"); try {" const buildOutput = execSync("npm run build", { cwd: this.projectRoot," stdio: "pipe"," encoding: "utf8" }).toString(); / Extract bundle size information from build output const sizeMatches = buildOutput.match(/First Load JS shared by all\s+(\d+\.?\d*)\s+kB/g); if (sizeMatches) { this.metrics.bundleSize = parseFloat(sizeMatches[0].match(/(\d+\.?\d*)/)[1]); } / Count pages const pageMatches = buildOutput.match(/Route \(pages\)/g); if (pageMatches) { this.metrics.pageCount = pageMatches.length; } / Calculate total size const totalSizeMatches = buildOutput.match(/Total size:\s+(\d+\.?\d*)\s+kB/g); if (totalSizeMatches) { this.metrics.totalSize = parseFloat(totalSizeMatches[0].match(/(\d+\.?\d*)/)[1]); } "` this.log(`Bundle size: ${this.metrics.bundleSize}kB`, "INFO");"` this.log(`Pages: ${this.metrics.pageCount}`, "INFO"); } catch (error) {"` this.log(`Bundle analysis failed: ${error.message}`, "ERROR"); } } async checkImageOptimization() {" this.log("Checking image optimization.", "PERFORMANCE"); " const imageExtensions = [".jpg", ".jpeg", ".png", ".gif", ".webp", ".svg"];" const publicDir = path.join(this.projectRoot, "public"); let totalImageSize = 0; let imageCount = 0; let unoptimizedImages = []; if (fs.existsSync(publicDir)) { const files = this.getAllFiles(publicDir); files.forEach(file => { const ext = path.extname(file).toLowerCase(); if (imageExtensions.includes(ext)) { const stats = fs.statSync(file); totalImageSize += stats.size; imageCount++; / Check if image is optimized if (stats.size > 500000) { / 500KB unoptimizedImages.push({ file: path.relative(this.projectRoot, file)," size: Math.round(stats.size / 1024) + "KB" }); } } }); } "` this.log(`Found ${imageCount} images (${Math.round(totalImageSize / 1024)}KB total)`, "INFO"); if (unoptimizedImages.length > 0) { this.recommendations.push({" type: "image_optimization"," priority: "high",` message: `Optimize ${unoptimizedImages.length} large images`, details: unoptimizedImages.slice(0, 5) / Show first 5 }); } } async checkCodeSplitting() {" this.log("Checking code splitting.", "PERFORMANCE"); " const pagesDir = path.join(this.projectRoot, "pages"); let totalPages = 0; let largePages = []; if (fs.existsSync(pagesDir)) { const files = this.getAllFiles(pagesDir); files.forEach(file => {" if (file.endsWith(".tsx") | file.endsWith(".jsx")) { totalPages++;" const content = fs.readFileSync(file, "utf8");" const lines = content.split("\n").length; if (lines > 200) { largePages.push({ file: path.relative(this.projectRoot, file), lines: lines }); } } }); } "` this.log(`Analyzed ${totalPages} pages`, "INFO"); if (largePages.length > 0) { this.recommendations.push({" type: "code_splitting"," priority: "medium",` message: `Consider splitting ${largePages.length} large pages`, details: largePages.slice(0, 5) }); } } async checkDependencies() {" this.log("Checking dependencies.", "PERFORMANCE"); try {" const packageJson = JSON.parse(fs.readFileSync(path.join(this.projectRoot, "package.json"), "utf8")); const dependencies = { .packageJson.dependencies, .packageJson.devDependencies }; const largeDependencies = []; const outdatedDependencies = []; / Check for large dependencies" const largeDeps = ["lodash", "moment", "jquery", "bootstrap"]; largeDeps.forEach(dep => { if (dependencies[dep]) { largeDependencies.push(dep); } }); if (largeDependencies.length > 0) { this.recommendations.push({" type: "dependency_optimization"," priority: "medium","` message: `Consider replacing large dependencies: ${largeDependencies.join(", ")}`, details: largeDependencies }); } } catch (error) {"` this.log(`Dependency check failed: ${error.message}`, "ERROR"); } } getAllFiles(dirPath) { let files = []; const items = fs.readdirSync(dirPath); items.forEach(item => { const fullPath = path.join(dirPath, item); const stat = fs.statSync(fullPath); if (stat.isDirectory()) { files = files.concat(this.getAllFiles(fullPath)); } else { files.push(fullPath); } }); return files; } calculatePerformanceScore() { let score = 100; / Bundle size penalty if (this.metrics.bundleSize > 100) { score -= Math.min(30, (this.metrics.bundleSize - 100) * 0.3); } / Build time penalty if (this.metrics.buildTime > 30000) { / 30 seconds score -= Math.min(20, (this.metrics.buildTime - 30000) / 1000 * 0.5); } / Page count penalty if (this.metrics.pageCount > 20) { score -= Math.min(15, (this.metrics.pageCount - 20) * 0.5); } this.metrics.performanceScore = Math.max(0, Math.round(score)); } generateReport() {" this.log("\n Performance Report", "PERFORMANCE");" this.log("=" .repeat(50));` console.log(`\n Performance Score: ${this.metrics.performanceScore}/100`);` console.log(` Bundle Size: ${this.metrics.bundleSize}kB`);` console.log(` Build Time: ${this.metrics.buildTime}ms`);` console.log(` Pages: ${this.metrics.pageCount}`);` console.log(` Total Size: ${this.metrics.totalSize}kB`); if (this.recommendations.length > 0) {" console.log("\n Recommendations:"); this.recommendations.forEach((rec, index) => {" const priority = rec.priority === "high" ? "" : rec.priority === "medium" ? "" : "";` console.log(` ${index + 1}. ${priority} ${rec.message}`); if (rec.details && rec.details.length > 0) {"` console.log(` Details: ${rec.details.map(d => d.file | d).join(", ")}`); } }); } else {" this.log(" No performance issues found!", "SUCCESS"); } / Performance grade" let grade = "A";" if (this.metrics.performanceScore < 90) grade = "B";" if (this.metrics.performanceScore < 80) grade = "C";" if (this.metrics.performanceScore < 70) grade = "D";" if (this.metrics.performanceScore < 60) grade = "F";` console.log(`\n Performance Grade: ${grade}`); } async run() {" this.log(" Starting Performance Monitor", "PERFORMANCE");` this.log(`Project Root: ${this.projectRoot}`); try { await this.measureBuildTime(); await this.analyzeBundleSize(); await this.checkImageOptimization(); await this.checkCodeSplitting(); await this.checkDependencies(); this.calculatePerformanceScore(); this.generateReport(); } catch (error) {"` this.log(`Error during performance monitoring: ${error.message}`, "ERROR"); process.exit(1); } }}/ Run the monitorif (require.main === module) { const monitor = new PerformanceMonitor(); monitor.run().catch(console.error);}module.exports = PerformanceMonitor;"`"`
-=======
+
 const fs = require('fs')
 const path = require('path')
 const { execSync } = require('child_process')
   log(message, type = 'INFO')
-      'INFO': 'ℹ'
-      'SUCCESS': ''
-      'ERROR': ''
-      'WARNING': '⚠'
-      'PERFORMANCE': '⚡'
-<<<<<<< HEAD
-    }[type] || 'ℹ️';
-    
-  }
-
-  async measureBuildTime() {
-    this.log('Measuring build time...', 'PERFORMANCE');
-    
-    try {
-      const startTime = Date.now();
-      execSync('npm run build', {
-        cwd: this.projectRoot,
-        stdio: 'pipe',
-=======
-    }[type] || 'ℹ'
-    this.log('Measuring build time...', 'PERFORMANCE')
+      'INFO: ℹ'
+      'SUCCESS: ERROR: WARNING: ⚠'
+      'PERFORMANCE: ⚡}[type] ||ℹ'
+    this.log('Measuring build time...,PERFORMANCE')
       execSync('npm run build')
-        stdio: 'pipe'
->>>>>>> main
-        encoding: 'utf8'
-      this.log(`Build completed in ${this.metrics.buildTime}ms`, 'SUCCESS'`)
-      this.log(`Build failed: ${error.message}`, 'ERROR'`)
-    this.log('Analyzing bundle size...', 'PERFORMANCE')
+        stdio: pipe,
+  encoding: utf8
+      this.log(`Build completed in ${this.metrics.buildTime}ms`,SUCCESS'`)
+      this.log(`Build failed: ${error.message},ERROR'`)
+    this.log('Analyzing bundle size...,PERFORMANCE')
       const buildOutput = execSync('npm run build')
-        stdio: 'pipe'
-        encoding: 'utf8'
-      this.log(`Bundle size: ${this.metrics.bundleSize}kB`, 'INFO'`)
-      this.log(`Pages: ${this.metrics.pageCount}`, 'INFO'`)
-      this.log(`Bundle analysis failed: ${error.message}`, 'ERROR'`)
-    this.log('Checking image optimization...', 'PERFORMANCE')
-    const imageExtensions = ['.jpg', '.jpeg', '.png', '.gif', '.webp', '.svg']
-    const publicDir = path.join(this.projectRoot, 'public')
-              size: Math.round(stats.size / 1024) + 'KB'
-<<<<<<< HEAD
-            });
-          }
-        }
-      });
-    }
-    
-    this.log(`Found ${imageCount} images (${Math.round(totalImageSize / 1024)}KB total)`, 'INFO');
-    
-    if (unoptimizedImages.length > 0) {
-      this.recommendations.push({
-        type: 'image_optimization',
-        priority: 'high',
-        message: `Optimize ${unoptimizedImages.length} large images`,
-        details: unoptimizedImages.slice(0, 5) // Show first 5
-      });
-    }
-  }
-
-  async checkCodeSplitting() {
-    this.log('Checking code splitting...', 'PERFORMANCE');
-    
-    const pagesDir = path.join(this.projectRoot, 'pages');
-    let totalPages = 0;
-    let largePages = [];
-    
-    if (fs.existsSync(pagesDir)) {
-      const files = this.getAllFiles(pagesDir);
-      
-      files.forEach(file => {
-        if (file.endsWith('.tsx') || file.endsWith('.jsx')) {
-          totalPages++;
-          const content = fs.readFileSync(file, 'utf8');
-          const lines = content.split('\n').length;
-          
-          if (lines > 200) {
-            largePages.push({
-              file: path.relative(this.projectRoot, file),
-              lines: lines
-            });
-          }
-        }
-      });
-    }
-    
-    this.log(`Analyzed ${totalPages} pages`, 'INFO');
-    
-    if (largePages.length > 0) {
-      this.recommendations.push({
-        type: 'code_splitting',
-        priority: 'medium',
-        message: `Consider splitting ${largePages.length} large pages`,
-        details: largePages.slice(0, 5)
-      });
-    }
-  }
-
-  async checkDependencies() {
-    this.log('Checking dependencies...', 'PERFORMANCE');
-    
-    try {
-      const packageJson = JSON.parse(fs.readFileSync(path.join(this.projectRoot, 'package.json'), 'utf8'));
-      const dependencies = { ...packageJson.dependencies, ...packageJson.devDependencies };
-      
-      const largeDependencies = [];
-      const outdatedDependencies = [];
-      
-      // Check for large dependencies
-      const largeDeps = ['lodash', 'moment', 'jquery', 'bootstrap'];
-      largeDeps.forEach(dep => {
-        if (dependencies[dep]) {
-          largeDependencies.push(dep);
-        }
-      });
-      
-      if (largeDependencies.length > 0) {
-        this.recommendations.push({
-          type: 'dependency_optimization',
-          priority: 'medium',
-          message: `Consider replacing large dependencies: ${largeDependencies.join(', ')}`,
-          details: largeDependencies
-        });
-      }
-      
-    } catch (error) {
-      this.log(`Dependency check failed: ${error.message}`, 'ERROR');
-    }
-  }
-
-  getAllFiles(dirPath) {
-    let files = [];
-    const items = fs.readdirSync(dirPath);
-    
-    items.forEach(item => {
-      const fullPath = path.join(dirPath, item);
-      const stat = fs.statSync(fullPath);
-      
-      if (stat.isDirectory()) {
-        files = files.concat(this.getAllFiles(fullPath));
-      } else {
-        files.push(fullPath);
-      }
-    });
-    
-    return files;
-  }
-
-  calculatePerformanceScore() {
-    let score = 100;
-    
-    // Bundle size penalty
-    if (this.metrics.bundleSize > 100) {
-      score -= Math.min(30, (this.metrics.bundleSize - 100) * 0.3);
-    }
-    
-    // Build time penalty
-    if (this.metrics.buildTime > 30000) { // 30 seconds
-      score -= Math.min(20, (this.metrics.buildTime - 30000) / 1000 * 0.5);
-    }
-    
-    // Page count penalty
-    if (this.metrics.pageCount > 20) {
-      score -= Math.min(15, (this.metrics.pageCount - 20) * 0.5);
-    }
-    
-    this.metrics.performanceScore = Math.max(0, Math.round(score));
-  }
-
-  generateReport() {
-    this.log('\n📊 Performance Report', 'PERFORMANCE');
-    this.log('=' .repeat(50));
-    
-    
-    
-    
-    
-    
-    
-    if (this.recommendations.length > 0) {
-      
-      this.recommendations.forEach((rec, index) => {
-        const priority = rec.priority === 'high' ? '🔴' : rec.priority === 'medium' ? '🟡' : '🟢';
-        
-        
-        if (rec.details && rec.details.length > 0) {
-          .join(', ')}`);
-        }
-      });
-    } else {
-      this.log('🎉 No performance issues found!', 'SUCCESS');
-    }
-    
-    // Performance grade
-    let grade = 'A';
-    if (this.metrics.performanceScore < 90) grade = 'B';
-    if (this.metrics.performanceScore < 80) grade = 'C';
-    if (this.metrics.performanceScore < 70) grade = 'D';
-    if (this.metrics.performanceScore < 60) grade = 'F';
-    
-    
-  }
-
-  async run() {
-    this.log('🚀 Starting Performance Monitor', 'PERFORMANCE');
-    this.log(`Project Root: ${this.projectRoot}`);
-    
-    try {
-      await this.measureBuildTime();
-      await this.analyzeBundleSize();
-      await this.checkImageOptimization();
-      await this.checkCodeSplitting();
-      await this.checkDependencies();
-      
-      this.calculatePerformanceScore();
-      this.generateReport();
-      
-    } catch (error) {
-      this.log(`Error during performance monitoring: ${error.message}`, 'ERROR');
-      process.exit(1);
-    }
-  }
-}
-
-// Run the monitor
-if (require.main === module) {
-  const monitor = new PerformanceMonitor();
-  monitor.run().catch(console.error);
-}
-
-module.exports = PerformanceMonitor;
-=======
-    this.log(`Found ${imageCount} images (${Math.round(totalImageSize / 1024)}KB total)`, 'INFO'
-        type: 'image_optimization'
-        priority: 'high'
-    this.log('Checking code splitting...', 'PERFORMANCE')
-    const pagesDir = path.join(this.projectRoot, 'pages')
+        stdio: pipe,
+  encoding: utf8
+      this.log(`Bundle size: ${this.metrics.bundleSize}kB`,INFO'`)
+      this.log(`Pages: ${this.metrics.pageCount},INFO'`)
+      this.log(`Bundle analysis failed: ${error.message},ERROR'`)
+    this.log('Checking image optimization...,PERFORMANCE')
+    const imageExtensions = [.jpg,.jpeg,.png,.gif,.webp,.svg]
+    const publicDir = path.join(this.projectRoot,public')
+              size: Math.round(stats.size / 1024) +KB'
+    this.log(`Found ${imageCount} images (${Math.round(totalImageSize / 1024)}KB total)`,INFO'
+        type: image_optimization,
+  priority: high'
+    this.log('Checking code splitting...,PERFORMANCE')
+    const pagesDir = path.join(this.projectRoot,pages')
         if (file.endsWith('.tsx') || file.endsWith('.jsx')
-          const content = fs.readFileSync(file, 'utf8')
+          const content = fs.readFileSync(file,utf8)
           const lines = content.split('\n')
-    this.log(`Analyzed ${totalPages} pages`, 'INFO'`)
-        type: 'code_splitting'
-        priority: 'medium'
-    this.log('Checking dependencies...', 'PERFORMANCE')
-      const packageJson = JSON.parse(fs.readFileSync(path.join(this.projectRoot, 'package.json'), 'utf8'
-      const largeDeps = ['lodash', 'moment', 'jquery', 'bootstrap']
-          type: 'dependency_optimization'
-          priority: 'medium'
-          message: `Consider replacing large dependencies: ${largeDependencies.join(', '`})
-      this.log(`Dependency check failed: ${error.message}`, 'ERROR'`)
-    this.log('\n Performance Report', 'PERFORMANCE')
+    this.log(`Analyzed ${totalPages} pages`,INFO'`)
+        type: code_splitting,
+  priority: medium'
+    this.log('Checking dependencies...,PERFORMANCE')
+      const packageJson = JSON.parse(fs.readFileSync(path.join(this.projectRoot,package.json'),utf8
+      const largeDeps = [lodash,moment,jquery,bootstrap]
+          type: dependency_optimization,
+  priority: medium'
+          message: `Consider replacing large dependencies: ${largeDependencies.join(,`})
+      this.log(`Dependency check failed: ${error.message},ERROR'`)
+    this.log('\n Performance Report,PERFORMANCE')
     this.log('=')
-      console.log('\n Recommendations:')
-        const priority = rec.priority === 'high' ? '�' : rec.priority === 'medium' ? '�' : '�'
-          console.log(`      Details: ${rec.details.map(d => d.file || d).join(', '`})
-      this.log('� No performance issues found!', 'SUCCESS')
+      console.log('\n Recommendations: )
+        const priority = rec.priority ===high' ? '�: rec.priority ===medium' ? '�: �'
+          console.log(`      Details: ${rec.details.map(d => d.file || d).join(,`})
+      this.log('� No performance issues found!,SUCCESS')
     let grade = 'A'
     if (this.metrics.performanceScore < 90) grade = 'B'
     if (this.metrics.performanceScore < 80) grade = 'C'
     if (this.metrics.performanceScore < 70) grade = 'D'
     if (this.metrics.performanceScore < 60) grade = 'F'
-    this.log(' Starting Performance Monitor', 'PERFORMANCE')
-      this.log(`Error during performance monitoring: ${error.message}`, 'ERROR'`)
->>>>>>> main
->>>>>>> main
+    this.log(' Starting Performance Monitor,PERFORMANCE')
+      this.log(`Error during performance monitoring: ${error.message},ERROR'`)
+const fs = require('fs');
+const path = require('path');
+const { execSync } = require('child_process');
+console.log('⚡ Starting performance monitoring...);
+const performanceMetrics = {
+  timestamp: new Date().toISOString(),
+  bundleSize: {},
+  fileCounts: {},
+  recommendations: []
+};
+
+// Check bundle sizes;
+function getDirectorySize(dirPath) {
+  if (!fs.existsSync(dirPath)) return 0;
+  
+  let totalSize = 0;
+  const files = fs.readdirSync(dirPath, { recursive: true });
+  
+  files.forEach(file => {)
+    if (typeof file ===string') {
+      const filePath = path.join(dirPath, file);
+      try {
+  // TODO: Implement
+}
+        const stats = fs.statSync(filePath);
+        if (stats.isFile()) {
+          totalSize += stats.size;
+        }
+      } catch (error) {
+        // Skip files that can't be accessed;
+      }
+    }
+  });
+  
+  return totalSize;
+}
+
+// Check .next directory;
+const nextDirSize = getDirectorySize('.next');
+performanceMetrics.bundleSize[.next] = {
+  size: nextDirSize,
+  sizeMB: (nextDirSize / 1024 / 1024).toFixed(2)
+};
+
+// Check node_modules;
+const nodeModulesSize = getDirectorySize('node_modules');
+performanceMetrics.bundleSize[node_modules] = {
+  size: nodeModulesSize,
+  sizeMB: (nodeModulesSize / 1024 / 1024).toFixed(2)
+};
+
+// Count files by type;
+const fileCounts = {
+  '.tsx: 0,.ts: 0,.jsx: 0,.js: 0,.css: 0,.json: 0;
+};
+
+function countFiles(dirPath) {
+  if (!fs.existsSync(dirPath)) return;
+  
+  const files = fs.readdirSync(dirPath, { recursive: true });
+  files.forEach(file => {)
+    if (typeof file ===string') {
+      const ext = path.extname(file);
+      if (fileCounts.hasOwnProperty(ext)) {
+        fileCounts[ext]++;
+      }
+    }
+  });
+}
+'
+[components,pages,lib,styles].forEach(dir => countFiles(dir));
+performanceMetrics.fileCounts = fileCounts;
+
+// Performance recommendations;
+if (nextDirSize > 50 * 1024 * 1024) { // 50MB;
+  performanceMetrics.recommendations.push('Consider optimizing bundle size - .next directory is large');
+}
+'
+if (fileCounts[.tsx] + fileCounts[.ts] > 50) {
+  performanceMetrics.recommendations.push('Consider code splitting - many TypeScript files detected');
+}
+'
+if (fileCounts[.css] > 10) {
+  performanceMetrics.recommendations.push('Consider CSS optimization - multiple CSS files detected');
+}
+
+// Check for large images;
+const publicDir = 'public';
+if (fs.existsSync(publicDir)) {
+  const publicFiles = fs.readdirSync(publicDir, { recursive: true });
+  let largeImages = 0;
+  
+  publicFiles.forEach(file => {)
+    if (typeof file ===string' && /\.(jpg|jpeg|png|gif|webp)$/i.test(file)) {
+      try {
+  // TODO: Implement
+}
+        const filePath = path.join(publicDir, file);
+        const stats = fs.statSync(filePath);
+        if (stats.size > 500 * 1024) { // 500KB;
+          largeImages++;
+        }
+      } catch (error) {
+        // Skip files that can't be accessed;
+      }
+    }
+  });
+  
+  if (largeImages > 0) {
+    performanceMetrics.recommendations.push(`Optimize ${largeImages} large images in public directory`);
+  }
+}
+
+// Display results;
+console.log('\n📊 Performance Metrics: );
+console.log(`   - .next bundle size: ${performanceMetrics.bundleSize[.next]?.sizeMB ||0} MB`);
+console.log(`   - node_modules size: ${performanceMetrics.bundleSize[node_modules]?.sizeMB ||0} MB`);
+console.log(`   - TypeScript files: ${fileCounts[.tsx] + fileCounts[.ts]});
+console.log(`   - JavaScript files: ${fileCounts[.jsx] + fileCounts[.js]});
+console.log(`   - CSS files: ${fileCounts[.css]});
+if (performanceMetrics.recommendations.length > 0) {
+  console.log('\n💡 Recommendations: );
+  performanceMetrics.recommendations.forEach(rec => console.log(`   - ${rec}));
+} else {
+  // TODO: Implement
+}
+  console.log('\n✅ No performance issues detected');
+}
+
+// Save report;
+fs.writeFileSync('performance-metrics.json, JSON.stringify(performanceMetrics, null, 2));
+console.log('\n📄 Performance report saved to performance-metrics.json');
+// Exit after a delay to prevent rapid restarts;
+setTimeout(() => {
+  process.exit(0);
+}, 1000);
+
+'
+#!/usr/bin/env node
+
+const fs = require('fs');
+const path = require('path');
+const { execSync } = require('child_process');
+
+class PerformanceMonitor {
+  constructor() {
+    this.workspaceRoot = '/workspace';
+    this.reportFile = path.join(this.workspaceRoot,automation_logs,performance-monitor-report.json');
+    this.ensureLogDirectory();
+  }
+
+  ensureLogDirectory() {
+    const logDir = path.dirname(this.reportFile);
+    if (!fs.existsSync(logDir)) {
+      fs.mkdirSync(logDir, { recursive: true });
+    }
+  }
+
+  log(message) {
+    console.log(`[Performance Monitor] ${message});
+  }
+
+  async runPerformanceMonitoring() {
+    this.log('Starting performance monitoring...);
+    
+    const report = {
+      timestamp: new Date().toISOString(),
+      metrics: {},
+      recommendations: [],
+      score: 0
+    };
+
+    try {
+      // Monitor build performance
+      await this.monitorBuildPerformance(report);
+      
+      // Monitor bundle size
+      await this.monitorBundleSize(report);
+      
+      // Monitor dependencies
+      await this.monitorDependencies(report);
+      
+      // Calculate performance score
+      report.score = this.calculatePerformanceScore(report);
+      
+      // Generate recommendations
+      this.generateRecommendations(report);
+      
+      // Save report
+      fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2));
+      
+      this.log(`Performance monitoring complete. Score: ${report.score}/100`);
+      this.log(`Report saved to: ${this.reportFile});
+      
+      return report;
+    } catch (error) {
+      this.log(`Error during performance monitoring: ${error.message});
+      report.error = error.message;
+      return report;
+    }
+  }
+
+  async monitorBuildPerformance(report) {
+    this.log('Monitoring build performance...);
+    
+    const startTime = Date.now();
+    
+    try {
+      execSync('npm run build, { 
+        encoding: utf8, 
+        cwd: this.workspaceRoot,
+        stdio: pipe});
+      
+      const buildTime = Date.now() - startTime;
+      report.metrics.buildTime = buildTime;
+      report.metrics.buildTimeSeconds = (buildTime / 1000).toFixed(2);
+      
+      if (buildTime > 60000) { // 1 minute
+        report.recommendations.push({
+          priority: high,
+          category: build,
+          message: Build time exceeds 1 minute - consider optimization});
+      }
+      
+    } catch (error) {
+      this.log('Build failed, skipping build performance monitoring');
+      report.metrics.buildTime = 0;
+    }
+  }
+
+  async monitorBundleSize(report) {
+    this.log('Monitoring bundle size...);
+    
+    const distDir = path.join(this.workspaceRoot,dist');
+    if (fs.existsSync(distDir)) {
+      const bundleSize = this.getDirectorySize(distDir);
+      report.metrics.bundleSize = bundleSize;
+      report.metrics.bundleSizeMB = (bundleSize / (1024 * 1024)).toFixed(2);
+      
+      if (bundleSize > 2 * 1024 * 1024) { // 2MB
+        report.recommendations.push({
+          priority: high,
+          category: bundle,
+          message: Bundle size exceeds 2MB - implement code splitting});
+      }
+    } else {
+      report.metrics.bundleSize = 0;
+      report.metrics.bundleSizeMB = '0.00;
+    }
+  }
+
+  async monitorDependencies(report) {
+    this.log('Monitoring dependencies...);
+    
+    const packageJsonPath = path.join(this.workspaceRoot,package.json');
+    if (fs.existsSync(packageJsonPath)) {
+      const packageJson = JSON.parse(fs.readFileSync(packageJsonPath,utf8));
+      const dependencies = { ...packageJson.dependencies, ...packageJson.devDependencies };
+      
+      report.metrics.totalDependencies = Object.keys(dependencies).length;
+      
+      // Check for heavy dependencies
+      const heavyDeps = [lodash,moment,jquery,bootstrap];
+      const foundHeavyDeps = Object.keys(dependencies).filter(dep => heavyDeps.includes(dep));
+      
+      report.metrics.heavyDependencies = foundHeavyDeps.length;
+      
+      if (foundHeavyDeps.length > 0) {
+        report.recommendations.push({
+          priority: medium,
+          category: dependencies,
+          message: `Consider replacing heavy dependencies: ${foundHeavyDeps.join(,)}
+        });
+      }
+    }
+  }
+
+  calculatePerformanceScore(report) {
+    let score = 100;
+    
+    // Deduct for build time
+    if (report.metrics.buildTime > 60000) {
+      score -= 20;
+    } else if (report.metrics.buildTime > 30000) {
+      score -= 10;
+    }
+    
+    // Deduct for bundle size
+    if (report.metrics.bundleSize > 2 * 1024 * 1024) {
+      score -= 30;
+    } else if (report.metrics.bundleSize > 1024 * 1024) {
+      score -= 15;
+    }
+    
+    // Deduct for heavy dependencies
+    if (report.metrics.heavyDependencies > 2) {
+      score -= 15;
+    } else if (report.metrics.heavyDependencies > 0) {
+      score -= 5;
+    }
+    
+    return Math.max(0, Math.min(100, score));
+  }
+
+  generateRecommendations(report) {
+    if (report.metrics.buildTime > 60000) {
+      report.recommendations.push({
+        priority: high,
+        category: build,
+        message: Optimize build process - consider parallel builds});
+    }
+    
+    if (report.metrics.bundleSize > 2 * 1024 * 1024) {
+      report.recommendations.push({
+        priority: high,
+        category: bundle,
+        message: Implement tree shaking and code splitting});
+    }
+    
+    report.recommendations.push({
+      priority: medium,
+      category: general,
+      message: Set up continuous performance monitoring});
+  }
+
+  getDirectorySize(dir) {
+    let size = 0;
+    const items = fs.readdirSync(dir);
+    
+    items.forEach(item => {
+      const fullPath = path.join(dir, item);
+      const stat = fs.statSync(fullPath);
+      
+      if (stat.isDirectory()) {
+        size += this.getDirectorySize(fullPath);
+      } else {
+        size += stat.size;
+      }
+    });
+    
+    return size;
+  }
+}
+
+// CLI interface
+if (require.main === module) {
+  const monitor = new PerformanceMonitor();
+  monitor.runPerformanceMonitoring().catch(console.error);
+}
+
+module.exports = PerformanceMonitor;

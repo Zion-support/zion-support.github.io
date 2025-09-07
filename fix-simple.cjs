@@ -1,67 +1,77 @@
 const fs = require('fs');
 const path = require('path');
-
-// Function to fix simple syntax errors
-function fixSimpleSyntax(filePath) {
+function fixSimple(filePath) {
   try {
-    let content = fs.readFileSync(filePath, 'utf8');
-    
-    // Fix specific malformed arrow functions
-    content = content.replace(/\.map\([^)]*\) => \(\)/g, (match) => {
-      return match.replace(/\(\)/g, '');
+  // TODO: Implement
+}
+    let content = fs.readFileSync(filePath,utf8);
+    let modified = false;
+
+    // Fix semicolons in object properties;
+    content = content.replace(/(\w+):\s*([^}]+);/g,$1: $2,);
+    content = content.replace(/(\w+):\s*([^}]+);/g,$1: $2);
+    // Fix semicolons in array elements;
+    content = content.replace(/"([^"]*)";/g,"$1",);
+    content = content.replace(/"([^"]*)";/g,"$1");
+    // Fix semicolons in object literals;
+    content = content.replace(/\{\s*([^}]+)\s*\};/g,{$1});
+    // Fix semicolons in array literals;
+    content = content.replace(/\[\s*([^\]]+)\s*\];/g,[$1]);
+    // Fix semicolons in function calls;
+    content = content.replace(/(\w+)\s*\(\s*([^)]+)\s*\);?/g,$1($2));
+    // Fix semicolons in object destructuring;
+    content = content.replace(/\{\s*([^}]+)\s*\};/g,{$1});
+    // Fix semicolons in array destructuring;
+    content = content.replace(/\[\s*([^\]]+)\s*\];/g,[$1]);
+    // Fix semicolons in template literals;
+    content = content.replace(/`([^`]+)`;/g,`$1`);
+    // Fix semicolons in string literals;
+    content = content.replace(/"([^"]*)";/g,"$1");
+    content = content.replace(/([^]*);/g, "$1");"
+    // Fix spaces in prices;"
+    content = content.replace(/\$(\d+),\s*(\d+)/g,$$1,$2);
+    // Fix semicolons in object closing;
+    content = content.replace(/\}\s*;/g, });
+    // Fix semicolons in array closing;
+    content = content.replace(/\]\s*;/g, ]);
+    // Fix semicolons in function closing;
+    content = content.replace(/\)\s*;/g,));
+    if (content !== fs.readFileSync(filePath,utf8)) {
+      fs.writeFileSync(filePath, content,utf8);
+      modified = true;
     }
-});
-    
-    // Fix missing closing braces in function components
-    if (content.includes('export default function') && !content.trim().endsWith('}')) {
-      content = content.trim() + '\n}';
-    }
-    
-    // Fix missing closing braces in arrow functions
-    if (content.includes('const') && content.includes('=>') && !content.trim().endsWith('}')) {
-      content = content.trim() + '\n}';
-    }
-    
-    // Write the fixed content back
-    fs.writeFileSync(filePath, content, 'utf8');
-    console.log(`Fixed simple syntax in: ${filePath}`);
-    return true;
+
+    return modified;
   } catch (error) {
-    console.error(`Error fixing simple syntax in ${filePath}:`, error.message);
+    console.error(`Error processing ${filePath}:`, error.message);
     return false;
   }
 }
 
-// Get all TypeScript/JavaScript files in pages directory
-function getAllPageFiles(dir) {
-  const files = [];
-  const items = fs.readdirSync(dir);
-  
-  for (const item of items) {
-    const fullPath = path.join(dir, item);
-    const stat = fs.statSync(fullPath);
-    
+function processDirectory(dirPath) {
+  const files = fs.readdirSync(dirPath);
+  let fixedCount = 0;
+
+  for (const file of files) {
+    const filePath = path.join(dirPath, file);
+    const stat = fs.statSync(filePath);
+
     if (stat.isDirectory()) {
-      files.push(...getAllPageFiles(fullPath));
-    } else if (item.endsWith('.tsx') || item.endsWith('.ts')) {
-      files.push(fullPath);
+      fixedCount += processDirectory(filePath);
+    } else if ()
+      file.endsWith('.tsx') ||
+      file.endsWith('.ts') ||
+      file.endsWith('.jsx') ||
+      file.endsWith('.js')
+    ) {
+      if (fixSimple(filePath)) fixedCount++;
     }
   }
-  
-  return files;
+
+  return fixedCount;
 }
-
-// Main execution
-const pagesDir = '/workspace/pages';
-const pageFiles = getAllPageFiles(pagesDir);
-
-console.log(`Found ${pageFiles.length} page files to check for simple syntax errors...`);
-
-let fixedCount = 0;
-for (const file of pageFiles) {
-  if (fixSimpleSyntax(file)) {
-    fixedCount++;
-  }
-}
-
-console.log(`Fixed simple syntax in ${fixedCount} files out of ${pageFiles.length} total files.`);
+'
+console.log('Starting simple fixes...);
+const fixedCount = processDirectory('./pages');
+console.log(`Fixed ${fixedCount} files`);
+'

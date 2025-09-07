@@ -1,19 +1,139 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> main
-import { PrismaClient } from '@prisma/client';
+
+import { PrismaClient } from '@prisma/client';'
 const globalForPrisma = globalThis as unknown as {
-  "prisma": PrismaClient | undefined};
+  // TODO: Implement
+}'
+  "prisma": PrismaClient | undefined};"
+export const prisma = globalForPrisma.prisma ?? new PrismaClient();"
+if (process.env.NODE_ENV !== 'production') globalForPrisma.prisma = prisma;'
+export default prisma;'
+import { PrismaClient } from '@prisma/client'; const globalForPrisma = globalThis as unknown as { prisma: 'PrismaClient | undefined;' }; export const prisma = globalForPrisma.prisma ?? new PrismaClient(); if (process.env.NODE_ENV !== 'production') globalForPrisma.prisma = prisma; export default prisma;''
+import { PrismaClient } from '@prisma/client'; const globalForPrisma = globalThis as unknown as { prisma: PrismaClient | undefined}; export const prisma = globalForPrisma.prisma ?? new PrismaClient(); if (process.env.NODE_ENV !== 'production') globalForPrisma.prisma = prisma; export default prisma;''
+import { PrismaClient } from '@prisma/client'; const globalForPrisma = globalThis as unknown as { prisma: PrismaClient | undefined}; export const prisma = globalForPrisma.prisma ?? new PrismaClient(); if (process.env.NODE_ENV !== 'production') globalForPrisma.prisma = prisma; export default prisma;''
+import { PrismaClient } from '@prisma/client'; const globalForPrisma = globalThis as unknown as { prisma: PrismaClient | undefined}; export const prisma = globalForPrisma.prisma ?? new PrismaClient(); if (process.env.NODE_ENV !== 'production') globalForPrisma.prisma = prisma; export default prisma;''
+import { PrismaClient } from '@prisma/client'; const globalForPrisma = globalThis as unknown as { prisma: 'PrismaClient | undefined;' }; export const prisma = globalForPrisma && globalForPrisma.prisma ?? new PrismaClient(); if (process && process.env.NODE_ENV !== 'production') globalForPrisma && globalForPrisma.prisma = prisma; export default prisma;''
+import { PrismaClient } from '@prisma/client'; const globalForPrisma = globalThis as unknown as { prisma: PrismaClient | undefined}; export const prisma = globalForPrisma && globalForPrisma.prisma ?? new PrismaClient(); if (process && process.env.NODE_ENV !== 'production') globalForPrisma && globalForPrisma.prisma = prisma; export default prisma;''
+import { PrismaClient } from '@prisma/client'; const globalForPrisma = globalThis as unknown as { prisma: PrismaClient | undefined}; export const prisma = globalForPrisma && globalForPrisma.prisma ?? new PrismaClient(); if (process && process.env.NODE_ENV !== 'production') globalForPrisma && globalForPrisma.prisma = prisma; export default prisma;''
+import { PrismaClient } from '@prisma/client'; const globalForPrisma = globalThis as unknown as { prisma: PrismaClient | undefined}; export const prisma = globalForPrisma && globalForPrisma.prisma ?? new PrismaClient(); if (process && process.env.NODE_ENV !== 'production') globalForPrisma && globalForPrisma.prisma = prisma; export default prisma;''
+import { PrismaClient } from '@prisma/client'; const globalForPrisma = globalThis as unknown as { prisma: PrismaClient | undefined}; export const prisma = globalForPrisma && globalForPrisma.prisma ?? new PrismaClient(); if (process && process.env.NODE_ENV !== 'production') globalForPrisma && globalForPrisma.prisma = prisma; export default prisma;''
+import { PrismaClient } from '@prisma/client'; const globalForPrisma = globalThis as unknown as { prisma: 'PrismaClient | undefined;' }; export const prisma = globalForPrisma.prisma ?? new PrismaClient(); if (process.env.NODE_ENV !== 'production') globalForPrisma.prisma = prisma; export default prisma;''
+import { PrismaClient } from '@prisma/client'; const globalForPrisma = globalThis as unknown as { prisma: PrismaClient | undefined}; export const prisma = globalForPrisma.prisma ?? new PrismaClient(); if (process.env.NODE_ENV !== 'production') globalForPrisma.prisma = prisma; export default prisma;''
+import { PrismaClient } from '@prisma/client'; const globalForPrisma = globalThis as unknown as { prisma: PrismaClient | undefined}; export const prisma = globalForPrisma.prisma ?? new PrismaClient(); if (process.env.NODE_ENV !== 'production') globalForPrisma.prisma = prisma; export default prisma;''
+import { PrismaClient } from '@prisma/client'; const globalForPrisma = globalThis as unknown as { prisma: PrismaClient | undefined}; export const prisma = globalForPrisma.prisma ?? new PrismaClient(); if (process.env.NODE_ENV !== 'production') globalForPrisma.prisma = prisma; export default prisma;''
+import { PrismaClient } from '@prisma/client'; const globalForPrisma = globalThis as unknown as { prisma: PrismaClient | undefined}; export const prisma = globalForPrisma.prisma ?? new PrismaClient(); if (process.env.NODE_ENV !== 'production') globalForPrisma.prisma = prisma; export default prisma;''
+import { PrismaClient } from '@prisma/client'; const globalForPrisma = globalThis as unknown as { prisma: PrismaClient | undefined}; export const prisma = globalForPrisma.prisma ?? new PrismaClient(); if (process.env.NODE_ENV !== 'production') globalForPrisma.prisma = prisma; export default prisma;''
+import { PrismaClient } from '@prisma/client'; const globalForPrisma = globalThis as unknown as { prisma: PrismaClient | undefined}; export const prisma = globalForPrisma.prisma ?? new PrismaClient(); if (process.env.NODE_ENV !== 'production') globalForPrisma.prisma = prisma; export default prisma;''
+
+const globalForPrisma = globalThis as unknown as {\"prisma\": PrismaClient | undefined}
+
+export;
+  const prisma = globalForPrisma.prisma ?? new PrismaClient()if (process.env.NODE_ENV !== 'production') globalForPrisma.prisma = prisma;
+
+export default prisma;
+import { PrismaClient } from '@prisma/client';
+
+const globalForPrisma = globalThis as unknown as { prisma: 'PrismaClient | undefined;' }
+
+export const prisma = globalForPrisma.prisma ?? new PrismaClient()if (process.env.NODE_ENV !== 'production') globalForPrisma.prisma = prisma;
+
+export default prisma;
+import { PrismaClient } from '@prisma/client';
+
+const globalForPrisma = globalThis as unknown as { prisma: PrismaClient | undefine,}
+}
+
+export;
+  const prisma = globalForPrisma.prisma ?? new PrismaClient()if (process.env.NODE_ENV !== 'production') globalForPrisma.prisma = prisma;
+
+export default prisma;import { PrismaClient } from '@prisma/client';
+
+const globalForPrisma = globalThis as unknown as { prisma: 'PrismaClient | undefined;' }
+
+export const prisma = globalForPrisma && globalForPrisma.prisma ?? new PrismaClient()if (process && process.env.NODE_ENV !== 'production') globalForPrisma && globalForPrisma.prisma = prisma;
+
+export default prisma;
+import { PrismaClient } from '@prisma/client';
+
+const globalForPrisma = globalThis as unknown as { prisma: PrismaClient | undefine,}
+}
+
+export;
+  const prisma = globalForPrisma && globalForPrisma.prisma ?? new PrismaClient()if (process && process.env.NODE_ENV !== 'production') globalForPrisma && globalForPrisma.prisma = prisma;
+
+export default prisma;;
+import { PrismaClient } from '@prisma/client';
+
+const globalForPrisma = globalThis as unknown as { prisma: 'PrismaClient | undefined;' }
+
+export const prisma = globalForPrisma.prisma ?? new PrismaClient()if (process.env.NODE_ENV !== 'production') globalForPrisma.prisma = prisma;
+
+export default prisma;import { PrismaClient } from '@prisma/client';
+
+const globalForPrisma = globalThis as unknown as { prisma: 'PrismaClient | undefined;' }
+
+export const prisma = globalForPrisma && globalForPrisma.prisma ?? new PrismaClient()if (process && process.env.NODE_ENV !== 'production') globalForPrisma && globalForPrisma.prisma = prisma;
+
+export default prisma;
+import { PrismaClient } from '@prisma/client';
+
+const globalForPrisma = globalThis as unknown as { prisma: PrismaClient | undefine,}
+}
+
+export;
+  const prisma = globalForPrisma && globalForPrisma.prisma ?? new PrismaClient()if (process && process.env.NODE_ENV !== 'production') globalForPrisma && globalForPrisma.prisma = prisma;
+
+export default prisma;import { PrismaClient } from '@prisma/client';
+
+const globalForPrisma = globalThis as unknown as { prisma: PrismaClient | undefine,}
+}
+
+export;
+  const prisma = globalForPrisma.prisma ?? new PrismaClient()if (process.env.NODE_ENV !== 'production') globalForPrisma.prisma = prisma;
+
+export default prisma;
+
+const globalForPrisma = globalThis as unknown as {\"prisma\": PrismaClient | undefined}
+
+export;
+  const prisma = globalForPrisma && globalForPrisma.prisma ?? new PrismaClient()if (process && process.env.NODE_ENV !== 'production') globalForPrisma && globalForPrisma.prisma = prisma;
+
+export default prisma;;
+import { PrismaClient } from '@prisma/client';
+
+const globalForPrisma = globalThis as unknown as {}
+  \"prisma\": PrismaClient | undefined};
+
 export const prisma = globalForPrisma.prisma ?? new PrismaClient();
 if (process.env.NODE_ENV !== 'production') globalForPrisma.prisma = prisma;
+
 export default prisma;
-<<<<<<< HEAD
-=======
-import { PrismaClient } from '@prisma/client'; const globalForPrisma = globalThis as unknown as { prisma: 'PrismaClient | undefined;' }; export const prisma = globalForPrisma.prisma ?? new PrismaClient(); if (process.env.NODE_ENV !== 'production') globalForPrisma.prisma = prisma; export default prisma;
->>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
-=======
->>>>>>> main
-import { PrismaClient } from '@prisma/client'; const globalForPrisma = globalThis as unknown as { prisma: PrismaClient | undefined}; export const prisma = globalForPrisma.prisma ?? new PrismaClient(); if (process.env.NODE_ENV !== 'production') globalForPrisma.prisma = prisma; export default prisma;
->>>>>>> main
+import { PrismaClient } from '@prisma/client';
+
+const globalForPrisma = globalThis as unknown as { prisma: 'PrismaClient | undefined;' };
+
+export const prisma = globalForPrisma.prisma ?? new PrismaClient(); if (process.env.NODE_ENV !== 'production') globalForPrisma.prisma = prisma;
+
+export default prisma;
+import { PrismaClient } from '@prisma/client';
+
+const globalForPrisma = globalThis as unknown as { prisma: PrismaClient | undefine,}
+};
+
+export const prisma = globalForPrisma.prisma ?? new PrismaClient(); if (process.env.NODE_ENV !== 'production') globalForPrisma.prisma = prisma;
+
+export default prisma;
+import { PrismaClient } from '@prisma/client';
+
+const globalForPrisma = globalThis as unknown as { prisma: 'PrismaClient | undefined;' };
+
+export const prisma = globalForPrisma && globalForPrisma.prisma ?? new PrismaClient(); if (process && process.env.NODE_ENV !== 'production') globalForPrisma && globalForPrisma.prisma = prisma;
+
+export default prisma;
+import { PrismaClient } from '@prisma/client';
+
+const globalForPrisma = globalThis as unknown as { prisma: PrismaClient | undefine,}
+};
+
+export const prisma = globalForPrisma && globalForPrisma.prisma ?? new PrismaClient(); if (process && process.env.NODE_ENV !== 'production') globalForPrisma && globalForPrisma.prisma = prisma;
+
+export default prisma;

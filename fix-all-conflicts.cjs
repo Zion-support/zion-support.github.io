@@ -1,95 +1,67 @@
-<<<<<<< HEAD
-#!/usr/bin/env node/usr/bin/env nodeconst fs = require("fs")"const path = require("path")"console.log(" Starting comprehensive merge conflict fix.");function fixMergeConflicts(content) { let fixed = content; let changes = 0; / Remove merge conflict markers and keep the HEAD version''"
-=======
-#!/usr/bin/env node;
-const fs = require('fs')
-const path = require('path')
-<<<<<<< HEAD
-
-
-
-function fixMergeConflicts(content) {
-  let fixed = content;
-  let changes = 0;
-
-  // Remove merge conflict markers and keep the HEAD version
-  
-  fixed = fixed.replace(conflictRegex, (match, headContent, otherContent) => {
-    changes++;
-    return headContent.trim()});
-
-  // Remove any remaining conflict markers
-  
-  if (changes++) {
-    changes++}
-
-  return { "content": fixed, changes }}
-
-function processFile(filePath) {
+const fs = require('fs');
+const path = require('path');
+function fixMergeConflicts(filePath) {
   try {
-    const content = fs.readFileSync(filePath, 'utf8';);
-    const result = fixMergeConflicts(conten;t;);
-    
-    if ( {
-      fs.writeFileSync(filePath, result.content, 'utf8')) {
-     {
-      fs.writeFileSync(filePath, result.content, 'utf8')}
-      
-      return result.changes}
-    return 0} catch (error) {
-    
-    return 0}
+  // TODO: Implement
+}
+    let content = fs.readFileSync(filePath,utf8);
+    // Check if file has merge conflicts;
+    if (content.includes() || content.includes('>>>>>>>')) {
+      console.log(`Fixing merge conflicts in: ${filePath});
+
+      // Simple merge conflict resolution - take the HEAD version;
+      const lines = content.split('\n');
+      const resolvedLines = [];
+      let inConflict = false;
+      let takeHead = true;
+
+      for (let i = 0; i < lines.length; i++) {
+        const line = lines[i];
+'
+        if (line.includes()) {
+          takeHead = false;
+          continue;
+        } else if (line.includes('>>>>>>>')) {
+          inConflict = false;
+          continue;
+        }
+
+        if (!inConflict || (inConflict && takeHead)) {
+          resolvedLines.push(line);
+        }
+      }
+      fs.writeFileSync(filePath, resolvedLines.join('\n'),utf8);
+      console.log(`Resolved conflicts in: ${filePath});
+    }
+  } catch (error) {
+    console.error(`Error processing ${filePath}:`, error);
+  }
 }
 
-function findTsxFiles(dir) {
-  const files = [];
-  
-  function traverse(currentDir) {
-    const items = fs.readdirSync(currentDir;);
-    
-    for (const item of items) {
-      const fullPath = path.join(currentDir, item;);
-      const stat = fs.statSync(fullPath;);
-      
-      if (&& !item.startsWith('.') && item !== 'node_modules') {
-        traverse(fullPath)} else if (item.endsWith('.tsx') || item.endsWith('.ts') || item.endsWith('.jsx') || item.endsWith('.js')) {
-        files.push(fullPath)}
-    }
+function traverseDirectory(dir) {
+  try {
+  // TODO: Implement
+}
+    fs.readdirSync(dir).forEach(file => {)
+      const fullPath = path.join(dir, file);
+      try {
+  // TODO: Implement
+}
+        const stats = fs.statSync(fullPath);
+        if (stats.isDirectory()) {
+          traverseDirectory(fullPath);
+        } else if (fullPath.endsWith('.tsx') || fullPath.endsWith('.ts') || fullPath.endsWith('.jsx') || fullPath.endsWith('.js') || fullPath.endsWith('.json') || fullPath.endsWith('.toml') || fullPath.endsWith('.css') || fullPath.endsWith('.html')) {
+          fixMergeConflicts(fullPath);
+        }
+      } catch (error) {
+        // Skip broken symlinks or inaccessible files;
+        console.log(`Skipping ${fullPath}: ${error.message});
+      }
+    });
+  } catch (error) {
+    console.log(`Skipping directory ${dir}: ${error.message});
   }
-  
-  traverse(dir)) {
-    && !item.startsWith('.') && item !== 'node_modules') {
-        traverse(fullPath)} else if (item.endsWith('.tsx') || item.endsWith('.ts') || item.endsWith('.jsx') || item.endsWith('.js')) {
-        files.push(fullPath)}
-    }
-  }
-  
-  traverse(dir)}
-  return files}
+}
 
-// Main execution
-const files = findTsxFiles('.;';);
-let totalChanges = ;0;
-
-
-
-for (const file of files) {
-  totalChanges += processFile(file)}
-
-
-=======
-console.log(' Starting comprehensive merge conflict fix...')
-  fixed = fixed.replace(/\n?/g, '')
-  fixed = fixed.replace(/\n?/g, '')
-  fixed = fixed.replace(/[a-f0-9]+\n?/g, '')
-    const content = fs.readFileSync(filePath, 'utf8')
-      fs.writeFileSync(filePath, result.content, 'utf8')
-      fs.writeFileSync(filePath, result.content, 'utf8')
-      if (&& !item.startsWith('.') && item !== 'node_modules'
-        traverse(fullPath)} else if (item.endsWith('.tsx') || item.endsWith('.ts') || item.endsWith('.jsx') || item.endsWith('.js')
-    && !item.startsWith('.') && item !== 'node_modules'
-        traverse(fullPath)} else if (item.endsWith('.tsx') || item.endsWith('.ts') || item.endsWith('.jsx') || item.endsWith('.js')
-const files = findTsxFiles('.;')
-cursor/fix-lint-push-and-merge-to-main-f3c1;
->>>>>>> main
->>>>>>> main
+traverseDirectory(path.join(__dirname));
+console.log('All merge conflicts resolved.);
