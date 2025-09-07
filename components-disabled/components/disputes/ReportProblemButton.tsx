@@ -20,9 +20,7 @@ export default function ReportProblemButton(): any ({;
   projectId,;
   entityType,;
   entityId,;
-}: {;
   projectId: string;"
-  entityType?: "milestone" | "contract" | "thread";"
   entityId?: string;)
 }) {;
   const query = new URLSearchParams({;
@@ -34,26 +32,16 @@ export default function ReportProblemButton(): any ({;
 
   return ()
     <Link href={`/disputes/new?${query && query.toString()}`}>;
-</Link>"
+"
       <a className="inline-flex items-center gap-2 px-3 py-2 rounded-md bg-red-600 text-white hover:bg-red-700 text-sm">;"
 </a>
       </a>;
-    </Link>;
-    <Link href={`/disputes/new?${query && query.toString()}`}>;
-</Link>"
+    ;`;
       <a className="inline-flex items-center gap-2 px-3 py-2 rounded-md bg-red-600 text-white hover: bg-red-700 text-sm"></a>;"
-    </Link>;
     <Link href={`/disputes/new?${query.toString()}`}>
-</Link>"
       <a className="inline-flex items-center gap-2 px-3 py-2 rounded-md bg-red-600 text-white hover: bg-red-700 text-sm">"
-</a>
-      </a>
-    </Link>
-    <Link href={`/disputes/new?${query.toString()}`}>
-</Link>"
+    `;
       <a className="inline-flex items-center gap-2 px-3 py-2 rounded-md bg-red-600 text-white hover: bg-red-700 text-sm"></a>"
-    </Link>
     <Link href={`/disputes / new?${query.to_string ()}`}>;
-</Link>"
       <a className="inline - flex items - center gap - 2 px - 3 py - 2 rounded - md bg - red - 600 text - white hover: bg - red - 700 text - sm"></a>;"
-    </Link>);"
+    );"`;

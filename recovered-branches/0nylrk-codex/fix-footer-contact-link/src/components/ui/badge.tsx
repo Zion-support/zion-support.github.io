@@ -6,8 +6,7 @@ import { cn } from "@/lib/utils"""
 import { badgeVariants } from "@/components/ui/badge-variants""
 export interface BadgeProps;
   extends React.HTMLAttributes<HTMLSpanElement> {
-</HTMLSpanElement>
+
     <span className={cn(badgeVariants({ variant }), className)} {...props} />;
 </span>
-    <span className={cn(badgeVariants({ variant }), className)} {...props} />;
 </span>"

@@ -1,25 +1,20 @@
 
 
     job: {,
-  title: 'AI Dashboard Development'''
-      description: 'Develop dashboards using React and integrate ML models''
+  title: 'AI Dashboard Development
+      description: 'Develop dashboards using React and integrate ML models
     }
-    talent_profile: {,'
-  full_name: 'Alexandra Chen'''
-      professional_title: 'Senior AI Engineer''
-    }
-  }
+    talent_profile: {,
+  full_name: 'Alexandra Chen
+      professional_title: 'Senior AI Engineer
 ];
-    talent_profile: {,'
   full_name: "Alexandra Chen";""
       professional_title: "Senior AI Engineer";","
   professional_title: "Senior AI Engineer""
-    }
-  }
 ];"
 import { Project } from "@/types/projects","
 export const PROJECTS: Project[] = ["
-import { Project } from '@/types/projects';''
+import { Project } from '@/types/projects';
 import { Project } from "@/types/projects","]
 export const PROJECTS: Project[] = [
   {"
@@ -38,16 +33,11 @@ export const PROJECTS: Project[] = [
       description: "Develop dashboards using React and integrate ML models""
     },
     talent_profile: {,"
-  full_name: 'Alexandra Chen',''
-      professional_title: 'Senior AI Engineer','
-    },
+  full_name: 'Alexandra Chen',
+      professional_title: 'Senior AI Engineer',
   },]
-];'
 }];      title: "AI Dashboard Development";","
-  description: "Develop dashboards using React and integrate ML models""
     };
-    talent_profile: {,"
-  full_name: "Alexandra Chen";""
       professional_title: "Senior AI Engineer"","
   full_name: "Alexandra Chen",""
       professional_title: "Senior AI Engineer"""
@@ -69,23 +59,9 @@ export const PROJECTS: Project[] = [;
       description: "Develop dashboards using React and integrate ML models";"
     },;
     talent_profile: {;,"
-  full_name: "Alexandra Chen";""
       professional_title: "Senior AI Engineer";"
-    }
   }]
-];
 
 
-;
-    }
-  }
-];
-    }
-  }
-];"
-      professional_title: "Senior AI Engineer";"
-    }
-  }
-];
 ;
 "

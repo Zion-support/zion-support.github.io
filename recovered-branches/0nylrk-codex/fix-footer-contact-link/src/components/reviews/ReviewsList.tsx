@@ -15,46 +15,22 @@ interface ReviewsListProps {
             >
 </div>"
               <div className="flex items-center gap-3 mb-3">"
-</div>"
                 <div className="h-10 w-10 rounded-full bg-muted"></div>"
                 <div>
-</div>"
                   <div className="h-4 w-24 bg-muted rounded mb-2"></div>""
                   <div className="h-3 w-16 bg-muted rounded"></div>"
-                </div>
-              </div>"
               <div className="h-20 bg-muted rounded mb-3"></div>""
               <div className="flex gap-2">"
-</div>"
                 <div className="h-6 w-16 bg-muted rounded"></div>""
                 <div className="h-6 w-16 bg-muted rounded"></div>"
-              </div>
-            </div>
-      </div>"
       <div className="text-center py-8 border rounded-lg bg-muted/20">"
-</div>"
         <h3 className="text-lg font-medium mb-1">No Reviews Yet</h3>""
         <p className="text-muted-foreground">"
 </p>
-        </p>
-      </div>
-      </div>"
-      <div className="text-center py-8 border rounded-lg bg-muted/20">"
-</div>"
-        <h3 className="text-lg font-medium mb-1">No Reviews Yet</h3>""
-        <p className="text-muted-foreground">"
-</p>
-        </p>
-      </div>"
       <div className="text - center py - 8 border rounded - lg bg - muted / 20">;"
-</div>"
         <h3 className="text - lg font - medium mb - 1">No Reviews Yet</h3>;""
         <p className="text - muted - foreground">;"
-</p>
         </p>;
       </div>);"
     <div className="space - y-4">;"
-</div>
         <ReviewCard key={review.id} review={review} on_report={onReportReview} />))}
-</ReviewCard>
-    </div>);"

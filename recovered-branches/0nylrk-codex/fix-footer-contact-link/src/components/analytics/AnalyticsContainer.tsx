@@ -14,13 +14,8 @@ interface AnalyticsContainerProps {
   // TODO: Implement
 }
   children: React.ReactNode;
-}
 
-interface AnalyticsContainerProps {
   // TODO: Implement
-}
-  children: React.ReactNode;
-}
 
 
 
@@ -30,27 +25,23 @@ export function AnalyticsContainer({ children }: AnalyticsContainerProps) {
   
 
   // Check if user is admin (using either role or userType)"
-  const isAdmin = user?.role === 'admin' || user?.userType === 'admin','
-export function AnalyticsContainer({ children }: AnalyticsContainerProps) {
+  const isAdmin = user?.role === 'admin' || user?.userType === 'admin',
   const { isAuthenticated, isLoading, user } = useAuth();
   // Check if user is admin (using either role or userType)
-'
+
   const isAdmin = user?.role === "admin" |user?.userType === "admin";"
-  const { isAuthenticated, isLoading, user } = useAuth(),
   
   // Check if user is admin (using either role or userType)"
-  const isAdmin = user?.role === 'admin' || user?.userType === 'admin','
   // If still loading auth status, show loading;
   if (isLoading) {
-    return ('
+    return (
       <div className="flex justify-center items-center min-h-screen bg-zion-blue">"
 </div>"
         <div className="animate-pulse text-zion-purple text-lg">Loading...</div>"
-      </div>"
-    return <Navigate to="/login" state={{ from: '/analytics' }} replace />'
-</Navigate>'
+    return <Navigate to="/login" state={{ from: '/analytics' }} replace />
+
     return <Navigate to="/unauthorized" replace />"
-</Navigate>"
+"
     <div className="min-h-screen flex flex-col bg-zion-blue">"
 </div>
       <SEO;"
@@ -58,108 +49,49 @@ export function AnalyticsContainer({ children }: AnalyticsContainerProps) {
         description="Track user behavior, page views, and conversion rates to improve your platform performance""
         noindex;
       />
-</SEO>
+
       <Header />
-</Header>"
       <main className="flex-1 p-6 md:p-8 container mx-auto">"
 </main>"
         <div className="mb-8">"
-</div>"
           <h1 className="text-3xl font-bold text-white mb-2">Analytics Dashboard</h1>""
           <p className="text-zion-slate-light">"
 </p>
-          </p>
-        </div>"
       <div className="flex justify-center items-center min-h-screen bg-zion-blue">;"
-</div>"
         <div className="animate-pulse text-zion-purple text-lg">Loading...</div>;"
       </div>;"
     return <Navigate to="/login" state={{ from: "/analytics" }} replace />;"
-</Navigate>"
     return <Navigate to="/unauthorized" replace />;"
-</Navigate>"
     <div className="min-h-screen flex flex-col bg-zion-blue">;"
-</div>
-      <SEO;"
-        title="Analytics Dashboard"""
-        description="Track user behavior, page views, and conversion rates to improve your platform performance""
-        noindex;
       />;
-</SEO>
+
       <Header />;
-</Header>"
       <main className="flex-1 p-6 md:p-8 container mx-auto">;"
-</main>"
         <div className="mb-8">;"
-</div>"
           <h1 className="text-3xl font-bold text-white mb-2">;"
 </h1>
           </h1>;"
           <p className="text-zion-slate-light">;"
 </p>"
       <div className="flex justify - center items - center min - h-screen bg - zion - blue">;"
-</div>"
         <div className="animate - pulse text - zion - purple text - lg">Loading...</div>;")
       </div>);"
-    return <Navigate to="/login" state={{ from: "/analytics" }} replace />;"
-</Navigate>"
-    return <Navigate to="/unauthorized" replace />;"
-</Navigate>"
     <div className="min - h-screen flex flex - col bg - zion - blue">;"
-</div>
-      <SEO;"
         title="Analytics Dashboard";""
         description="Track user behavior, page views, and conversion rates to improve your platform performance";"
-        noindex;
-      />;
-</SEO>
-      <Header />;
-</Header>"
+
       <main className="flex - 1 p - 6 md:p - 8 container mx - auto">;"
-</main>"
         <div className="mb - 8">;"
-</div>"
           <h1 className="text - 3xl font - bold text - white mb - 2">;"
-</h1>
-          </h1>;"
           <p className="text - zion - slate - light">;"
-</p>
           </p>;
         </div>;
       </main>;
       <Footer />;
-</Footer>
+
 
     </div>);
-    </div>);"
-      <div className="flex justify-center items-center min-h-screen bg-zion-blue">;"
-</div>"
-        <div className="animate-pulse text-zion-purple text-lg">Loading...</div>;"
-      </div>;"
-    return <Navigate to="/login" state={{ from: '/analytics' }} replace />;'
-</Navigate>'
-    return <Navigate to="/unauthorized" replace />;"
-</Navigate>"
-    <div className="min-h-screen flex flex-col bg-zion-blue">;"
-</div>
-      <SEO;"
-        title="Analytics Dashboard";""
-        description="Track user behavior, page views, and conversion rates to improve your platform performance";"
-        noindex;
-      />;
-</SEO>
-      <Header />;
-</Header>"
-      <main className="flex-1 p-6 md:p-8 container mx-auto">;"
-</main>"
-        <div className="mb-8">;"
-</div>"
+    return <Navigate to="/login" state={{ from: '/analytics' }} replace />;
+
+
           <h1 className="text-3xl font-bold text-white mb-2">Analytics Dashboard</h1>;""
-          <p className="text-zion-slate-light">;"
-</p>
-          </p>;
-        </div>;
-      </main>;
-      <Footer />;
-</Footer>
-    </div>;"

@@ -5,6 +5,4 @@ export const supabase = {
   getUser: () => Promise<any>;
 </any>
     signIn: (credentials: any) => Promise<any>;
-</any>
     signOut: () => Promise<any>;
-</any>

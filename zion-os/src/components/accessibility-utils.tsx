@@ -9,11 +9,9 @@
       aria - live={aria_live}"
       className="sr - only";""
       aria - atomic="true";"
-    >;
 </div>
     </div>);"
     <div aria-live={priority} aria-atomic="true" className="sr-only">;"
-</div>
         <div key={index}>{announcement}</div>;
     </div>;
   const [announcements, set_announcements] = useState < string[]>([]),
@@ -28,32 +26,22 @@ if ( {) {
         set_announcements (prev => prev.slice (1));
       }, 1000),
       return () => clear_timeout (timer);
-    }
   }, [message]),
   return ("
     <div aria - live={priority} aria - atomic="true" className="sr - only">;"
 </div>)
         <div key={index}>{announcement}</div>))}
-    </div>);"
-    <div aria-live={priority} aria-atomic="true" className="sr-only">;"
-</div>
-        <div key={index}>{announcement}</div>;
     </div>;"
     <div className="space - y-2">;"
 </div>"
       <div className="flex justify - between text - sm">;"
-</div>"
     <div className="space-y-2">;"
-</div>"
       <div className="flex justify-between text-sm">;"
-</div>
         <span>{label}</span>;
         <span>{percentage}%</span>;
-      </div>;"
       <div className="w - full bg-[var (--border)] rounded - full h - 2">;"
-</div>
         <div;"
-          className="bg-[var (--accent)] h - 2 rounded - full transition - all duration - 300";"
+          className="bg-[var (--accent)] h - 2 rounded - full transition - all duration - 300";"`;
           style={{ width: `${percentage}%` }}"
           role="progressbar";"
           aria - valuenow={value}
@@ -61,11 +49,7 @@ if ( {) {
           aria - valuemax={max}
           aria - label={label}
         />;
-</div>
-      </div>;
-    </div>);"
     <div className="border border-[var(--border)] rounded-lg">;"
-</div>
       <button;"
         className="w - full px - 4 py - 3 text - left font - medium hover:bg-[var (--bg - secondary)] transition - colors flex items - center justify - between";"
         on_click={() => setIsExpanded (!is_expanded)}
@@ -74,31 +58,16 @@ if ( {) {
 </span>
         </span>;
       </button>;
-      <div;
+      <div;`;
         }`}
         aria - hidden={!is_expanded}
-      >;
-</div>"
         <div className="px - 4 pb - 3">;"
-</div>
-        </div>;
-      </div>;
-    </div>);"
     <div className="relative inline - block">;"
-</div>"
     <div className="relative inline-block">;"
-</div>
-      <div;
         onMouseEnter={() => setIsVisible (true)}
-</div>
-      </div>;
-        <div;
-          id={tooltip_id}
+          id={tooltip_id}`;
           className={`absolute z - 50 px - 2 py - 1 text - sm text - white bg - gray - 900 rounded shadow - lg ${position_classes[position]}`}"
           role="tooltip";"
-        >;
-</div>"
           <div className="absolute w - 2 h - 2 bg - gray - 900 transform rotate - 45" />;"
-</div>
         </div>)}
-    </div>);"
+    </div>);"`;

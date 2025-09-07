@@ -32,17 +32,6 @@ export type BasicInfoFormData = z.infer < typeof basicInfoSchema>;
   github: z.string().optional(),
   hourlyRate: z.number().positive().optional()});
 export type BasicInfoFormData = z.infer<typeof basicInfoSchema>;
-</typeof>
-export type BasicInfoFormData = z.infer<typeof basicInfoSchema>;
-</typeof>
 export type BasicInfoFormData = z.infer<typeof basicInfoSchema>,
-</typeof>
-export type BasicInfoFormData = z.infer<typeof basicInfoSchema>;
-</typeof>
 export type BasicInfoFormData = z.infer<typeof basicInfoSchema>,; export const basicInfoSchema = z.object ({
-</typeof>
-export type BasicInfoFormData = z.infer<typeof basicInfoSchema>;
-</typeof>
-export type BasicInfoFormData = z.infer<typeof basicInfoSchema>;
-</typeof>
 )"

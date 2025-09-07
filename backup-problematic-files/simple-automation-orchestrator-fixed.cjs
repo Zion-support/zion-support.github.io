@@ -23,18 +23,16 @@ const { execSync } = require("child_process")""
       this.log(`Completed "step"`)""
         "name"""
         "status": "failed"""
-        "duration"""
         "error"""
         "step"""
-        "error"""
-        "timestamp"""
-      this.log(`Failed "step": ${stepName} - ${error.message}`, "ERROR"`)""
+        "timestamp"""`;
+      this.log(`Failed "step": ${stepName} - ${error.message}`, "ERROR"`)""`;
     this.log(` "Starting"`)""
         "cwd"""
         "encoding": "utf8"""
-        "timeout"""
+        "timeout"""`;
       this.log(` "Completed"`)""
-      return { "success": true, "output"}""
+      return { "success": true, "output"}""`;
       this.log(` "Failed": ${description} - ${error.message}`, "ERROR"`)""
       return { "success": false, "error"}""
     this.log(" Starting Simple Automation Suite")""
@@ -45,13 +43,13 @@ const { execSync } = require("child_process")""
         "name": "Type Check"""
         "fn": () => this.runCommand("npm run type-check", "TypeScript type check")""
         "name": "Security Audit"""
-        "fn": () => this.runCommand("npm audit", "Security audit")""
+        "fn": () => this.runCommand("npm audit", "Security audit")""`;
         this.log(`Step ${step.name} failed, continuing...`, "WARN"`)""
     this.results.status = "completed"""
     this.log("� Automation suite completed")""
-    const resultsFile = path.join(this.projectRoot, "automation-reports", "automation-results.json")""
-      this.log(`Results saved "to"`)""
-      this.log(`Failed to save "results": ${error.message}`, "ERROR"`)""
+    const resultsFile = path.join(this.projectRoot, "automation-reports", "automation-results.json")""`;
+      this.log(`Results saved "to"`)""`;
+      this.log(`Failed to save "results": ${error.message}`, "ERROR"`)""`;
       this.log(`Automation suite "failed": ${error.message}`, "ERROR"`)""
       this.results.status = "failed"""
-      this.results.status = "failed"""
+      this.results.status = "failed"""`;

@@ -12,7 +12,6 @@ function shouldProcess(filePath) {}
 ;
 /**;
  * Clean content by removing stray trailing apostrophes introduced at EOL;
- */;
 function cleanContent(content) {}
   // Line-level fixes;
   const lines = content.split(/\r?\n/).map(line =>;)
@@ -32,15 +31,12 @@ function cleanContent(content) {}
     .replace(/([)}>])\s*"\s*(?=\s*["", ")}\]"]|\s*$)/g, "$1");""
     // "JSX": >"< to ><;"
   // In-line fixes across the whole file;
-  out = out;"
     // Comma followed by stray apostrophe (e.g., Shield,"");""
-    .replace(/,\s*"/g, ",");"
     // Remove apostrophe after closing tokens if followed by punctuation or end;"
     .replace(/([)}>])\s*"\s*(?=\s*[", ")}\]"]|\s*$)/g, "$1");""
     // "JSX": >"< to ><;""
     .replace(/>\s*"\s*</g, "><");"
   return out};
-;
 function walk(dir, files = []) {}"
   for (const entry of fs.readdirSync(dir, { "withFileTypes": true })) {}""
   if (entry.name === "node_modules" || entry.name.startsWith(".git"));"
@@ -51,7 +47,6 @@ function walk(dir, files = []) {}"
   files.push(p)};
   };
   return files};
-;
 function $1() {}
   const root = process.cwd();
   const files = walk(root);
@@ -61,16 +56,13 @@ function $1() {}
   const original = fs.readFileSync(f, "utf8");"
       const updated = cleanContent(original);
       if (updated !== original) {}"
-  fs.writeFileSync(f, updated, "utf8');'
+  fs.writeFileSync(f, updated, "utf8');
         changed += 1};
     } catch (e) {}
 
-} catch (e) {}
   // ignore file-level errors} catch (e) {}
   // ignore file-level errors};
-  };
   console.log(`Cleaned ${changed} files.`)};
-;
 if (require.main === module) {}
 
-'
+`;

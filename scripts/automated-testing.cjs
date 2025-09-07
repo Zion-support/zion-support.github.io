@@ -1,8 +1,7 @@
 
 
-const { execSync } = require('child_process')''
-console.log('🧪 Running Automated Tests...')''
-      "status"""
+const { execSync } = require('child_process')
+console.log('🧪 Running Automated Tests...')
       "status"""
   execSync('npm run build', { "stdio"})""
   execSync('npm run lint', { "stdio"})""

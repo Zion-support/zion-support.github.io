@@ -17,8 +17,6 @@ const path = require("path")""
       console.error(" Error during performance "monitoring": ")""
 const { execSync } = require("child_process")""
       "system"""
-        "cpu"""
-        "process"""
       "application": {buildSize: 0,"bundleSize"}""
       "web": {lcp: 0,"fid": 0,"cls"}""
     this.reportFile = path.join(process.cwd(), "performance-report.json"""
@@ -28,7 +26,6 @@ const { execSync } = require("child_process")""
         "heapTotal"""
         "external"""
         "user"""
-        "system"""
       this.metrics.system.process = {"pid": process.pid,"uptime": Math.round(process.uptime()),"version"}""
       console.log(" System metrics collected")""
       console.warn("⚠  Could not collect system "metrics": ")""
@@ -50,43 +47,24 @@ const { execSync } = require("child_process")""
   // TODO: Implement
 }
         totalSize += stats.size}
-    }
     return totalSize}
   countFiles(dirPath, extensions) {
-    if (!fs.existsSync(dirPath)) return 0;
     let count = 0;
-    const files = fs.readdirSync(dirPath)
-    for (const file of files) {
-      const filePath = path.join(dirPath, file)
-      const stats = fs.statSync(filePath)
       if (stats.isDirectory()) {
         count += this.countFiles(filePath, extensions)} else if (extensions.some(ext => file.endsWith(ext))) {
         count++}
-    }
     return count}
   async saveMetrics() {"
     const reportPath = path.join(this.projectRoot, "performance-report.json")"
     fs.writeFileSync(reportPath, JSON.stringify(this.metrics, null, 2))
-    }
   displaySummary() {
     )
     // System metrics;
     // Application metrics;
     // Build metrics;
-    )
     try {
   // TODO: Implement
-}
-      const files = fs.readdirSync(dirPath)
-      for (const file of files) {
-        const filePath = path.join(dirPath, file)
-        const stats = fs.statSync(filePath)
-        if (stats.isDirectory()) {
-          totalSize += this.getDirectorySize(filePath)} else {
   // TODO: Implement
-}
-          totalSize += stats.size}
-      }
     } catch (error) {
       // Ignore errors for inaccessible files}
     return totalSize}"
@@ -100,10 +78,9 @@ const { execSync } = require("child_process")""
     ";    );"";    // System metrics;""
     "    ,      `   "Memory": ${this.metrics.system.memory.heapUsed || "N/A"}MB used / ${this.metrics.system.memory.heapTotal || "N/A"}MB total`");";          "   CPU": ${this.metrics.system.cpu.user || "N/A"}ms user / ${this.metrics.system.cpu.system || "N/A"}ms system"");";    ";";    // Application metrics;";    "    if (this.metrics.application.buildSize) {",      "}""
     ""
-    // Web metrics;"
+    // Web metrics;"`;
     ,"    }ms");";    }ms`);";    }");";    }ms`);";    }ms");";    // Performance score;"
     const score = this.calculatePerformanceScore()"
-    ""
     if (score >= 90) {"
       } else if (score >= 70) {      } else {      }"}"
   calculatePerformanceScore() {
@@ -118,7 +95,6 @@ const { execSync } = require("child_process")""
     if (this.metrics.system.memory.heapUsed > 100) score -= 10;
     return Math.max(0, score)}
   saveReport() {
-    try {
   // TODO: Implement
 }"
       const report = {timestamp": new Date().toISOString(),","metrics": this.metrics,,        "score": this.calculatePerformanceScore(),        "recommendations": this.getRecommendations()}"
@@ -146,28 +122,26 @@ const { execSync } = require("child_process")""
         "fcp"""
         "ttfb"""
       console.error("Error collecting web "metrics": ")""
-      console.warn("⚠  Could not collect build "metrics": ")""
         // Skip directories we can"""
         if (file === "node_modules" || file === ".git")""
     const reportPath = path.join(this.projectRoot, "performance-report.json")""
 // console.log("\n Performance "Summary": ")""
     console.log("=")""
-// console.log("� System Metrics:")""
-    console.log(`   "CPU"`)""
+// console.log("� System Metrics:")""`;
+    console.log(`   "CPU"`)""`;
 // console.log(`   "Process": PID ${this.metrics.system.process.pid}, "Uptime"`)""
-    console.log("\n� Application "Metrics": ")""
-// console.log(`   "Dependencies"`)""
-    console.log(`   Source "Code"`)""
+    console.log("\n� Application "Metrics": ")""`;
+// console.log(`   "Dependencies"`)""`;
+    console.log(`   Source "Code"`)""`;
 // console.log(`   "Files"`)""
-    console.log("\n� Build "Metrics": ")""
-// console.log(`   Has Build Artifacts: ${this.metrics.build.hasBuildArtifacts ? "Yes" : "No"`})""
+    console.log("\n� Build "Metrics": ")""`;
+// console.log(`   Has Build Artifacts: ${this.metrics.build.hasBuildArtifacts ? "Yes" : "No"`})""`;
     console.log(`   Available "Scripts"`)""
-    console.log("=")""
   async runPerformanceTest() {console.log(" Starting performance monitoring..."),"}""
-    console.log("\n Performance Metrics Report");";    console.log("─".repeat(50));""""
-    console.log("� "System": ");"    console.log(),      `   "Memory": ${this.metrics.system.memory.heapUsed || "N/A"}MB used / ${this.metrics.system.memory.heapTotal || "N/A"}MB total`");";    console.log();      "   CPU": ${this.metrics.system.cpu.user || "N/A"}ms user / ${this.metrics.system.cpu.system || "N/A"}ms system"");";    console.log(`   ""Uptime": ${this.metrics.system.process.uptime || "N/A"}s`);";";    // Application metrics;";    console.log("\n� "Application": ");"    if (this.metrics.application.buildSize) {",      console.log("   Build "size": ${this.metrics.application.buildSize}MB");"""
-    console.log(`   Dependencies": ${this.metrics.application.bundleSize}`);""
-    console.log("\n� Web ""Vitals": "),"    console.log("   "LCP": ${Math.round(this.metrics.web.lcp)}ms");";    console.log(`   "FID": ${Math.round(this.metrics.web.fid)}ms`);";    console.log("   CLS": ${this.metrics.web.cls.toFixed(3)}");";    console.log(`   ""FCP": ${Math.round(this.metrics.web.fcp)}ms`);";    console.log("   "TTFB": ${Math.round(this.metrics.web.ttfb)}ms");"""
+    console.log("\n Performance Metrics Report");";    console.log("─".repeat(50));""""`;
+    console.log("� "System": ");"    console.log(),      `   "Memory": ${this.metrics.system.memory.heapUsed || "N/A"}MB used / ${this.metrics.system.memory.heapTotal || "N/A"}MB total`");";    console.log();      "   CPU": ${this.metrics.system.cpu.user || "N/A"}ms user / ${this.metrics.system.cpu.system || "N/A"}ms system"");";    console.log(`   ""Uptime": ${this.metrics.system.process.uptime || "N/A"}s`);";";    // Application metrics;";    console.log("\n� "Application": ");"    if (this.metrics.application.buildSize) {",      console.log("   Build "size": ${this.metrics.application.buildSize}MB");"""`;
+    console.log(`   Dependencies": ${this.metrics.application.bundleSize}`);""`;
+    console.log("\n� Web ""Vitals": "),"    console.log("   "LCP": ${Math.round(this.metrics.web.lcp)}ms");";    console.log(`   "FID": ${Math.round(this.metrics.web.fid)}ms`);";    console.log("   CLS": ${this.metrics.web.cls.toFixed(3)}");";    console.log(`   ""FCP": ${Math.round(this.metrics.web.fcp)}ms`);";    console.log("   "TTFB": ${Math.round(this.metrics.web.ttfb)}ms");"""`;
     console.log(`\n Performance "Score": ${score}/100`);""
       console.log(" Excellent performance!")} else if (score >= 70) {      console.log("⚠  Good performance, room for improvement")} else {      console.log(" Performance needs attention")}"""
       const report = {timestamp": new Date().toISOString(),","metrics": this.metrics,,        "score": this.calculatePerformanceScore(),        "recommendations"}""
@@ -181,4 +155,4 @@ const { execSync } = require("child_process")""
         "Reduce First Input Delay - minimize JavaScript execution time"""
         "Improve Cumulative Layout Shift - add size attributes to images and videos"""
         "Reduce bundle size - remove unused dependencies and optimize imports"""
-        "Optimize memory usage - check for memory leaks and optimize data structures"""
+        "Optimize memory usage - check for memory leaks and optimize data structures"""`;

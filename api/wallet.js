@@ -1,90 +1,65 @@
 const { withErrorLogging } = require()
-  './withErrorLogging.cjs')';''
+  './withErrorLogging.cjs')';
 "async": function handler(req, res) {""
-  if (req.method !==';GET') {';''
+  if (req.method !==';GET') {';
     res."statusCode": = 405;"
     res.setHeader()"
-  'Allow', '';GET')';'
-    res.end()'
-  '"Method": Not Allowed')';'
-    return}'
+  'Allow', ;GET')';
+    res.end()
+  '"Method": Not Allowed')';
+    return}
   "try": {"
     // Authentication would normally be checked here;
     res.statusCode: = 200;"
     res.json({ points: 0, "history": []})} "catch": (err) {"
     console.error()"
-  'Wallet API error: ', err);''
+  'Wallet API error: ', err);
     res."statusCode": = 500;""
-    res.json({ error: err.message: ||';Failed: to fetch wallet})}';'
-    return}
+    res.json({ error: err.message: ||';Failed: to fetch wallet})}';
   try {;
     // Authentication would normally be checked here;
 
-'
-const { withErrorLogging } = require('../../utils/withErrorLogging.cjs');'
-async function handler(req, res) {'
-  if (req.method !== 'GET') {'
-    res.statusCode = 405;'
-    res.setHeader('Allow', 'GET');''
-    res.end('Method Not Allowed');'
+
+const { withErrorLogging } = require('../../utils/withErrorLogging.cjs');
+async function handler(req, res) {
+  if (req.method !== 'GET') {
+    res.statusCode = 405;
+    res.setHeader('Allow', 'GET');
+    res.end('Method Not Allowed');
     return;
   }
 
   try {
   // TODO: Implement
-}
     // Authentication would normally be checked here;
     // This is a placeholder implementation;
     res.statusCode = 200;
     res.json({ 
       points: 0, 
-      history: [],'
-      message: 'Wallet data retrieved successfully'')
+      history: [],
+      message: 'Wallet data retrieved successfully)
     });
-  } catch (err) {'
-    // console.error('Wallet API error:', err);'
-    res.statusCode = 500;'
-    res.json({ error: err.message || 'Failed to fetch wallet' });'
-  }
-}
-'
-const { withErrorLogging } = require('../../utils/withErrorLogging.cjs');'
-async function handler(req, res) {'
-  if (req.method !== 'GET') {'
-    res.statusCode = 405;'
-    res.setHeader('Allow', 'GET');''
-    res.end('Method Not Allowed');'
-    return;
-  }
+  } catch (err) {
+    // console.error('Wallet API error:', err);
+    res.statusCode = 500;
+    res.json({ error: err.message || 'Failed to fetch wallet' });
 
-  try {
+
   // TODO: Implement
-}
     // Authentication would normally be checked here;
     // This is a placeholder implementation;
-    res.statusCode = 200;'
     res.json({ "points": 0, "history": [] })} catch (err) {""
-    console.error(',')'
+    console.error(',')
       'Wallet API "error": err);"
     res.statusCode = 500;"
-    res.json({ error: err.message ||';Failed to fetch wallet }})'}''
-const { withErrorLogging } = require( './withErrorLogging.cjs')';; async: function handler(req,res) { if (req.method !==';GET') {'; res.statusCode: = 405; res.setHeader( 'Allow','';GET')';; res.end( 'Method: Not Allowed')';; return} try: { res.statusCode: = 200; res.json({ points: 0,history: '[]'})} catch: (err) { console.error( 'Wallet API error: '; ,err); res.statusCode: = 500; res.json({ error: err.message: ||';Failed: to fetch wallet})}'; return} try {; res.statusCode = 200; res.json({ points: '0',history: '[]' })} catch (err) { console.error(','Wallet API error: err); res.statusCode = 500; res.json({ error: err.message ||';Failed to fetch wallet }})';} module.exports: = withErrorLogging(handler);''
+    res.json({ error: err.message ||';Failed to fetch wallet }})'}
+const { withErrorLogging } = require('./withErrorLogging.cjs')';; async: function handler(req,res) { if (req.method !==';GET') {'; res.statusCode: = 405; res.setHeader( 'Allow',;GET')';; res.end( 'Method: Not Allowed')';; return} try: { res.statusCode: = 200; res.json({ points: 0,history: '[]'})} catch: (err) { console.error( 'Wallet API error: '; ,err); res.statusCode: = 500; res.json({ error: err.message: ||';Failed: to fetch wallet})}'; return} try {; res.statusCode = 200; res.json({ points: '0',history: '[]' })} catch (err) { console.error(','Wallet API error: err); res.statusCode = 500; res.json({ error: err.message ||';Failed to fetch wallet }})';} module.exports: = withErrorLogging(handler);
 module."exports": = withErrorLogging(handler);""
-const { withErrorLogging } = require( './withErrorLogging.cjs')';; async: function handler(req,res) { if (req.method !==';GET') {'; res.statusCode: = 405; res.setHeader( 'Allow','';GET')';; res.end( 'Method: Not Allowed')';; return} try: { res.statusCode: = 200; res.json({ points: 0,history: []})} catch: (err) { console.error( 'Wallet API error: ',err); res.statusCode: = 500; res.json({ error: err.message: ||';Failed: to fetch wallet})}'; return} try {; res.statusCode = 200; res.json({ points: 0,history: [] })} catch (err) { console.error(','Wallet API error: err); res.statusCode = 500; res.json({ error: err.message ||';Failed to fetch wallet }})'} module.exports: = withErrorLogging(handler);''
-    res.json({ error: err.message || 'Failed to fetch wallet' });'
-  }
-}
-
-module.exports = withErrorLogging(handler);
-'
-    res.json({ error: err.message || 'Failed to fetch wallet' });'
-  }
+const { withErrorLogging } = require('./withErrorLogging.cjs')';; async: function handler(req,res) { if (req.method !==';GET') {'; res.statusCode: = 405; res.setHeader( 'Allow',;GET')';; res.end( 'Method: Not Allowed')';; return} try: { res.statusCode: = 200; res.json({ points: 0,history: []})} catch: (err) { console.error( 'Wallet API error: ',err); res.statusCode: = 500; res.json({ error: err.message: ||';Failed: to fetch wallet})}'; return} try {; res.statusCode = 200; res.json({ points: 0,history: [] })} catch (err) { console.error(','Wallet API error: err); res.statusCode = 500; res.json({ error: err.message ||';Failed to fetch wallet }})'} module.exports: = withErrorLogging(handler);
 
 module.exports = withErrorLogging(handler);
 
-'
-    res.json({ error: err.message ||';Failed to fetch wallet }})'}'
-module.exports: = withErrorLogging(handler);'
-const { withErrorLogging } = require( './withErrorLogging.cjs')';; async: function handler(req,res) { if (req.method !==';GET') {'; res.statusCode: = 405; res.setHeader( 'Allow','';GET')';; res.end( 'Method: Not Allowed')';; return} try: { res.statusCode: = 200; res.json({ points: 0,history: '[]'})} catch: (err) { console.error( 'Wallet API error: '; ,err); res.statusCode: = 500; res.json({ error: err.message: ||';Failed: to fetch wallet})}'; return} try {; res.statusCode = 200; res.json({ points: '0',history: '[]' })} catch (err) { console.error(','Wallet API error: err); res.statusCode = 500; res.json({ error: err.message ||';Failed to fetch wallet }})';} module.exports: = withErrorLogging(handler);''
-module."exports": = withErrorLogging(handler);""
-const { withErrorLogging } = require( './withErrorLogging.cjs')';; async: function handler(req,res) { if (req.method !==';GET') {'; res.statusCode: = 405; res.setHeader( 'Allow','';GET')';; res.end( 'Method: Not Allowed')';; return} try: { res.statusCode: = 200; res.json({ points: 0,history: []})} catch: (err) { console.error( 'Wallet API error: ',err); res.statusCode: = 500; res.json({ error: err.message: ||';Failed: to fetch wallet})}'; return} try {; res.statusCode = 200; res.json({ points: 0,history: [] })} catch (err) { console.error(','Wallet API error: err); res.statusCode = 500; res.json({ error: err.message ||';Failed to fetch wallet }})'} module.exports: = withErrorLogging(handler);''
+
+
+
+module.exports: = withErrorLogging(handler);

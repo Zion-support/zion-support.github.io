@@ -1,9 +1,8 @@
-import React from 'react';'
+import React from 'react';
 interface Cache.testProps {
   // TODO: Implement
 }
   // Add props here as needed;
-}
 
 export default function Cache.test({ }: Cache.testProps) {
   return (
@@ -11,4 +10,4 @@ export default function Cache.test({ }: Cache.testProps) {
 </div>
       <h1>Cache.test</h1>
       <p>This component is currently under development.</p>
-    </div>)'
+    </div>)

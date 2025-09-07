@@ -1,6 +1,6 @@
 
 
-console.log('� Starting Security Enhancement Automation...')''
+console.log('� Starting Security Enhancement Automation...')
     "file"""
     "issue"""
     "severity"""
@@ -8,28 +8,7 @@ console.log('� Starting Security Enhancement Automation...')''
         content = content.replace(/dangerouslySetInnerHTML/g, '// "SECURITY")""
     "key"""
     "value"""
-    "key"""
-    "value"""
-    "key"""
-    "value"""
-    "key"""
-    "value"""
-    "key"""
-    "value"""
-    "key"""
-    "value"""
-    "key"""
     "value": """
-    "issue"""
-    "severity"""
-    "issue"""
-    "severity"""
-    "issue"""
-    "severity"""
-    "issue"""
-    "severity"""
-    "issue"""
-    "severity"""
     "high"""
     "medium"""
     "low"""
@@ -37,4 +16,4 @@ console.log('� Starting Security Enhancement Automation...')''
       "validationScript"""
     "recommendations"""
     "nextSteps"""
-  console.log('� Security improvements "applied")""
+  console.log('� Security improvements "applied")""');

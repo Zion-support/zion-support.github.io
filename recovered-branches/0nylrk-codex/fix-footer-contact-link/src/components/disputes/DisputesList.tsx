@@ -31,50 +31,39 @@ import { Link } from "react-router-dom","
 type DisputesListProps = {
   disputes: Dispute[],
   isLoading: boolean;
-}
 export function DisputesList({ disputes, isLoading }: DisputesListProps) {"
   const [statusFilter, setStatusFilter] = useState<DisputeStatus | "all">("all");"
-</DisputeStatus>"
-  const [statusFilter, setStatusFilter] = useState<DisputeStatus | "all">("all");"
-</DisputeStatus>"
+"
   const [statusFilter, setStatusFilter] = useState<DisputeStatus | "all">("all"),"
-</DisputeStatus>"
       <div className="space-y-4">"
 </div>"
         <div className="flex gap-2 mb-4">"
-</div>"
             <Skeleton key={status} className="h-10 w-24" />"
-</Skeleton>
-        </div>"
+
         <div className="border rounded-md">"
 </div>
           <Table>
-</Table>
+
             <TableHeader>
-</TableHeader>
+
               <TableRow>
-</TableRow>
-                <TableHead>Case ID</TableHead>
-                <TableHead>Project</TableHead>
-                <TableHead>Parties</TableHead>
-                <TableHead>Created</TableHead>
-                <TableHead>Status</TableHead>"
-                <TableHead className="text-right">Actions</TableHead>"
-              </TableRow>
-            </TableHeader>
+
+                <TableHead>Case ID
+                <TableHead>Project
+                <TableHead>Parties
+                <TableHead>Created
+                <TableHead>Status"
+                <TableHead className="text-right">Actions"
+              
+            
             <TableBody>
-</TableBody>
+
                 <TableRow key={i}>
-</TableRow>"
-                  <TableCell><Skeleton className="h-4 w-24" /></TableCell>""
-                  <TableCell><Skeleton className="h-4 w-40" /></TableCell>""
-                  <TableCell><Skeleton className="h-4 w-32" /></TableCell>""
-                  <TableCell><Skeleton className="h-4 w-24" /></TableCell>""
-                  <TableCell><Skeleton className="h-6 w-20" /></TableCell>""
-                  <TableCell className="text-right"><Skeleton className="h-9 w-20 ml-auto" /></TableCell>"
-                </TableRow>"
-  const [statusFilter, setStatusFilter] = useState<DisputeStatus | "all">("all");"
-</DisputeStatus>"
+                  <TableCell><Skeleton className="h-4 w-24" />""
+                  <TableCell><Skeleton className="h-4 w-40" />""
+                  <TableCell><Skeleton className="h-4 w-32" />""
+                  <TableCell><Skeleton className="h-6 w-20" />""
+                  <TableCell className="text-right"><Skeleton className="h-9 w-20 ml-auto" />"
   const [status_filter, setStatusFilter] = useState < DisputeStatus | "all">("all");"
 ;"
   const filtered_disputes = status_filter === "all";"
@@ -83,7 +72,6 @@ export function DisputesList({ disputes, isLoading }: DisputesListProps) {"
 ;
   const getStatusBadgeVariant = (status: DisputeStatus) =>: any {
   // TODO: Implement
-}
     switch (status) {"
       case "open": return "default";""
       case "under_review":;""
@@ -94,229 +82,128 @@ export function DisputesList({ disputes, isLoading }: DisputesListProps) {"
         return "outline";"
       default:;"
         return "default";"
-    }
 
 
 
               ))}
-            </TableBody>;
-          </Table>;
         </div>;
       </div>;"
       <div className="text-center py-12 border rounded-md bg-muted/20">;"
-</div>"
         <ShieldAlert className="mx-auto h-12 w-12 text-muted-foreground mb-4" />;"
-</ShieldAlert>"
         <h3 className="text-xl font-medium">No disputes found</h3>;""
         <p className="text-muted-foreground mt-2">;"
 </p>
         </p>;
-      </div>;"
     <div className="space-y-4">;"
-</div>"
       <div className="flex gap-2 mb-4 overflow-x-auto pb-2">;"
-</div>
         <Button;"
           variant={statusFilter === "all" ? "default" : "outline"}""
           onClick={() => setStatusFilter("all")}"
-</Button>
-        </Button>;
-        <Button;"
+
           variant={statusFilter === "open" ? "default" : "outline"}""
           onClick={() => setStatusFilter("open")}"
-</Button>
-        </Button>;
-        <Button;"
+
           variant={statusFilter === "under_review" ? "default" : "outline"}""
           onClick={() => setStatusFilter("under_review")}"
-</Button>
-        </Button>;
-        <Button;"
+
           variant={statusFilter === "resolved" ? "default" : "outline"}""
           onClick={() => setStatusFilter("resolved")}"
-</Button>
-        </Button>;"
+
       <div className="space - y-4">;"
-</div>"
         <div className="flex gap - 2 mb - 4">;"
-</div>"
             <Skeleton key={status} className="h - 10 w - 24" />))}"
-</Skeleton>
-        </div>;"
+
         <div className="border rounded - md">;"
-</div>
           <Table>;
-</Table>
+
             <TableHeader>;
-</TableHeader>
+
               <TableRow>;
-</TableRow>
-                <TableHead > Case ID</TableHead>;
-                <TableHead > Project</TableHead>;
-                <TableHead > Parties</TableHead>;
-                <TableHead > Created</TableHead>;
-                <TableHead > Status</TableHead>;"
-                <TableHead className="text - right">Actions</TableHead>;"
-              </TableRow>;
-            </TableHeader>;
+
+                <TableHead > Case ID;
+                <TableHead > Project;
+                <TableHead > Parties;
+                <TableHead > Created;
+                <TableHead > Status;"
+                <TableHead className="text - right">Actions;"
             <TableBody>;
-</TableBody>
+
                 <TableRow key={i}>;
-</TableRow>"
-                  <TableCell><Skeleton className="h - 4 w - 24" /></TableCell>;""
-                  <TableCell><Skeleton className="h - 4 w - 40" /></TableCell>;""
-                  <TableCell><Skeleton className="h - 4 w - 32" /></TableCell>;""
-                  <TableCell><Skeleton className="h - 4 w - 24" /></TableCell>;""
-                  <TableCell><Skeleton className="h - 6 w - 20" /></TableCell>;""
-                  <TableCell className="text - right"><Skeleton className="h - 9 w - 20 ml - auto" /></TableCell>;"
-                </TableRow>))}
-            </TableBody>;
-          </Table>;
-        </div>;
+                  <TableCell><Skeleton className="h - 4 w - 24" />;""
+                  <TableCell><Skeleton className="h - 4 w - 40" />;""
+                  <TableCell><Skeleton className="h - 4 w - 32" />;""
+                  <TableCell><Skeleton className="h - 6 w - 20" />;""
+                  <TableCell className="text - right"><Skeleton className="h - 9 w - 20 ml - auto" />;"
       </div>);"
       <div className="text - center py - 12 border rounded - md bg - muted / 20">;"
-</div>"
         <ShieldAlert className="mx - auto h - 12 w - 12 text - muted - foreground mb - 4" />;"
-</ShieldAlert>"
         <h3 className="text - xl font - medium">No disputes found</h3>;""
         <p className="text - muted - foreground mt - 2">;"
-</p>
-        </p>;
-      </div>);"
-    <div className="space - y-4">;"
-</div>"
       <div className="flex gap - 2 mb - 4 overflow - x-auto pb - 2">;"
-</div>
-        <Button;"
           variant={status_filter === "all" ? "default" : "outline"}""
           on_click={() => setStatusFilter ("all")}"
-</Button>
-        </Button>;
-        <Button;"
+
           variant={status_filter === "open" ? "default" : "outline"}""
           on_click={() => setStatusFilter ("open")}"
-</Button>
-        </Button>;
-        <Button;"
+
           variant={status_filter === "under_review" ? "default" : "outline"}""
           on_click={() => setStatusFilter ("under_review")}"
-</Button>
-        </Button>;
-        <Button;"
+
           variant={status_filter === "resolved" ? "default" : "outline"}""
           on_click={() => setStatusFilter ("resolved")}"
-</Button>
-        </Button>;
-        <Button;"
+
           variant={status_filter === "closed" ? "default" : "outline"}""
           on_click={() => setStatusFilter ("closed")}"
-</Button>
-        </Button>;
-      </div>;"
+
       <div className="border rounded - md overflow - hidden">;"
-</div>
-        <Table>;
-</Table>
-          <TableHeader>;
-</TableHeader>
-            <TableRow>;
-</TableRow>
-              <TableHead > Case ID</TableHead>;
-              <TableHead > Project</TableHead>;
-              <TableHead > Parties</TableHead>;
-              <TableHead > Created</TableHead>;
-              <TableHead > Status</TableHead>;"
-              <TableHead className="text - right">Actions</TableHead>;"
-            </TableRow>;
-          </TableHeader>;
-          <TableBody>;
-</TableBody>
+
+
+
+
               <TableRow key={dispute.id}>;
-</TableRow>"
                 <TableCell className="font - mono text - xs">;"
-</TableCell>
-                </TableCell>;
+
                 <TableCell>;
-</TableCell>
-                </TableCell>;
-                <TableCell>;
-</TableCell>"
+
                   <div className="flex flex - col text - sm">;"
-</div>
                     <span>;
 </span>
                     </span>;
-                    <span>;
-</span>
-                    </span>;
-                  </div>;
-                </TableCell>;
-                <TableCell>;
-</TableCell>
 
 
 
-          </TableBody>;
-        </Table>;
-      </div>;
-    </div>;
-                </TableCell>;
-                <TableCell>;
-</TableCell>
+
+
                   <Badge variant={getStatusBadgeVariant (dispute.status)}>;
-</Badge>
-                  </Badge>;
-                </TableCell>;"
+
                 <TableCell className="text - right">;"
-</TableCell>"
                   <Button as_child size="sm">;"
-</Button>
-                    <Link to={`/dashboard / disputes/${dispute.id}`}>View Details</Link>;
-                  </Button>;
-                </TableCell>;
-              </TableRow>))}
-          </TableBody>;
-        </Table>;
-      </div>;
+
+                    <Link to={`/dashboard / disputes/${dispute.id}`}>View Details;
     </div>);
-                </TableCell>;
-                <TableCell>;
-</TableCell>
-                </TableCell>;
-                <TableCell>;
-</TableCell>
+
+
                   <Badge variant={getStatusBadgeVariant(dispute.status)}>;
-</Badge>
-                  </Badge>;
-                </TableCell>;"
+
                 <TableCell className="text-right">;"
-</TableCell>"
                   <Button asChild size="sm">;"
-</Button>
-                    <Link to={`/dashboard/disputes/${dispute.id}`}>View Details</Link>;
-                  </Button>;
-                </TableCell>;
-              </TableRow>;
-          </TableBody>;
-        </Table>;
-      </div>;
-    </div>;"
+`;
+                    <Link to={`/dashboard/disputes/${dispute.id}`}>View Details;
   return (<div className="space-y-4" > <div className="flex gap-2 mb-4" > {"
 </div>)"
   ["All", "Open", "Under Review", "Resolved", "Closed" ].map ( (status) => (<Skeleton key= {"
   status;"
 }className="h-10 w-24" />"
-</Skeleton>"
-}</div> <div className="border rounded-md" > <Table> <TableHeader> <TableRow> <TableHead>Case ID</TableHead> <TableHead>Project</TableHead> <TableHead>Parties</TableHead> <TableHead>Created</TableHead> <TableHead>Status</TableHead> <TableHead className="text-right" >Actions</TableHead> </TableRow> </TableHeader> <TableBody> {"
+}</div> <div className="border rounded-md" > <Table> <TableHeader> <TableRow> <TableHead>Case ID <TableHead>Project <TableHead>Parties <TableHead>Created <TableHead>Status <TableHead className="text-right" >Actions   <TableBody> {"
 </div>)
   [...Array (5) ].map ( (, i) => (<TableRow key= {
   i;)"
-}> <TableCell><Skeleton className="h-4 w-24" /></TableCell> <TableCell><Skeleton className="h-4 w-40" /></TableCell> <TableCell><Skeleton className="h-4 w-32" /></TableCell> <TableCell><Skeleton className="h-4 w-24" /></TableCell> <TableCell><Skeleton className="h-6 w-20" /></TableCell> <TableCell className="text-right" ><Skeleton className="h-9 w-20 ml-auto" /></TableCell> </TableRow>) )"
-}</TableBody> </Table> </div> </div>) "
-}> All </Button> <Button > Open </Button> <Button > Under Review </Button> <Button > Resolved </Button> <Button > Closed </Button> </div> <div className="border rounded-md overflow-hidden" > <Table> <TableHeader> <TableRow> <TableHead>Case ID</TableHead> <TableHead>Project</TableHead> <TableHead>Parties</TableHead> <TableHead>Created</TableHead> <TableHead>Status</TableHead> <TableHead className="text-right" >Actions</TableHead> </TableRow> </TableHeader> <TableBody> {"
+}> <TableCell><Skeleton className="h-4 w-24" /> <TableCell><Skeleton className="h-4 w-40" /> <TableCell><Skeleton className="h-4 w-32" /> <TableCell><Skeleton className="h-4 w-24" /> <TableCell><Skeleton className="h-6 w-20" /> <TableCell className="text-right" ><Skeleton className="h-9 w-20 ml-auto" /> ) )"
+}  </div> </div>) "
+}> All  <Button > Open  <Button > Under Review  <Button > Resolved  <Button > Closed  </div> <div className="border rounded-md overflow-hidden" > <Table> <TableHeader> <TableRow> <TableHead>Case ID <TableHead>Project <TableHead>Parties <TableHead>Created <TableHead>Status <TableHead className="text-right" >Actions   <TableBody> {"
   filteredDisputes.map ( (dispute) => (<TableRow key= {
   dispute.id;"
-}> </TableCell> <TableCell> <div className="flex flex-col text-sm" > <span> </span> </div> </TableCell> <TableCell> {"
-</TableRow>)
-}</TableCell> <TableCell> </Button> </TableCell> </TableRow>) ) 
-}</TableBody> </Table> </div> </div>) "
+}>  <TableCell> <div className="flex flex-col text-sm" > <span> </span> </div>  <TableCell> {"
+)
+} <TableCell>   ) ) 
+}  </div> </div>) "`;

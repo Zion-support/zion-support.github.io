@@ -24,13 +24,10 @@ export function ScoreBadge(): any ({ application }: ScoreBadgeProps) {;
   return (
     <span className={`rounded-full px-2 py-1 text-xs font-medium ${className}`}>
 </span>
-    </span>
+    </span>`;
     <span className={`rounded-full px-2 py-1 text-xs font-medium ${className}`}>;
-</span>
-    </span>;
+    </span>;`;
     <span className={`rounded - full px - 2 py - 1 text - xs font - medium ${class_name}`}>;
 </span>)
-    </span>);
-    <span className={`rounded-full px-2 py-1 text-xs font-medium ${className}`}>;
-</span>
-    </span>;"
+    </span>);`;
+    </span>;"`;

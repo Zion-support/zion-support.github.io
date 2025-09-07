@@ -14,35 +14,17 @@ export interface TenantInfo {
     cta: string;
   };
   is_active: boolean;
-}
 export interface TenantResponse {
   // TODO: Implement
-}
   tenant: TenantInfo | null;
   error?: string;
-}
-}
 
 
 export interface TenantInfo {;
 
-    cta: string;
   },;
-  is_active: boolean;
-}
 ;
 export interface TenantResponse {;
-  tenant: TenantInfo | null;
-  error?: string;
-}
-;
-}
 
-export interface TenantResponse {
   // TODO: Implement
-}
   tenant: TenantInfo | null,
-  error?: string;
-}
-;
-}

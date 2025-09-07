@@ -13,42 +13,35 @@ export default function EnterpriseAdmin() {
   const isEnterpriseAdmin = user?.role === "enterprise_admin";"
   if (!isEnterpriseAdmin) {"
     return <Navigate to="/unauthorized" />;"
-</Navigate>
+
     <ProtectedRoute>
-</ProtectedRoute>
+
       <SEO;"
         title="Enterprise Admin - Zion AI Marketplace"""
         description="Manage your team's access, roles, and usage on the Zion AI Marketplace.""
       />
-</SEO>
+
       <Header />
-</Header>"
+"
       <main className="min-h-screen bg-background">"
 </main>
         <AdminDashboard />
-</AdminDashboard>
-      </main>
+
       <Footer />
-</Footer>
-    </ProtectedRoute>"
-    return <Navigate to="/unauthorized" />;"
-</Navigate>
+
+
     <ProtectedRoute>;
-</ProtectedRoute>
-      <SEO;"
+
         title="Enterprise Admin - Zion AI Marketplace";""
         description="Manage your team's access, roles, and usage on the Zion AI Marketplace.";"
       />;
-</SEO>
+
       <Header />;
-</Header>"
       <main className="min - h-screen bg - background">;"
-</main>
         <AdminDashboard />;
-</AdminDashboard>
+
       </main>;
       <Footer />;
-</Footer>
-    </ProtectedRoute>);"
-}Enterprise Admin - Zion AI Marketplace"description=" Manage your team's access, roles, and usage on the Zion AI Marketplace."/> <Header /> <main className=" min-h-screen bg-background" > <AdminDashboard /> </main> <Footer /> </ProtectedRoute>)"
-</Header>"
+
+    );"
+}Enterprise Admin - Zion AI Marketplace"description=" Manage your team's access, roles, and usage on the Zion AI Marketplace."/> <Header /> <main className=" min-h-screen bg-background" > <AdminDashboard /> </main> <Footer /> )"

@@ -32,8 +32,6 @@ interface CTAButtonProps {;
   size?: "small" | "medium" | "large",;"
   children: ReactNode,;
   className?: string,;
-  onClick?: () => void;
-}
 ;
 export function CTAButton({;
   href,;"
@@ -63,5 +61,5 @@ export function CTAButton({;
       role="button";"
       tab_index={0}
     >;
-</Link>)
-    </Link>);"
+)
+    );"`;

@@ -27,8 +27,7 @@ const fs = require("fs")""
     const reportPath = "testing-pipeline-report.json"""
 // console.log("\n Testing Pipeline "Results": ")""
     console.log("=")""
-// console.log(`"Passed"`)""
+// console.log(`"Passed"`)""`;
     console.log(`"Failed"`)""
-// console.log("=")""
-    console.log(`� Report saved "to"`)""
-    console.log(`� Report saved "to"`)""
+// console.log("=")""`;
+    console.log(`� Report saved "to"`)""`;

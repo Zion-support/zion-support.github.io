@@ -7,9 +7,8 @@ import { EmptyResumeProps } from "./types",;"
 export const EmptyResumeState = ({ onCreateClick } EmptyResumeProps) => {;
   return (;"
     <Card className="w-full max-w-2xl mx-auto">;"
-</Card>"
+"
       <CardContent className="py-8">;"
-</CardContent>"
         <div className="text-center">;"
 </div>"
           <h2 className="text-2xl font-bold mb-2">Create Your Resume</h2>;""
@@ -18,10 +17,7 @@ export const EmptyResumeState = ({ onCreateClick } EmptyResumeProps) => {;
             onClick={onCreateClick}"
             className="gap-2";"
           >;
-</Button>"
             <FilePlus className="h-4 w-4" />;"
-</FilePlus>
-          </Button>;
+
         </div>;
-      </CardContent>;
-    </Card>;)"
+    ;)"

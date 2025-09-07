@@ -22,12 +22,9 @@ console.log(" Starting lint error fixes...")""
     content = content.replace(/[\s\S]*?[\s\S]*?[^\n]*/g, "")""
     content = content.replace(/[^\n]*[\s\S]*?[\s\S]*?[^\n]*/g, "")""
     content = content.replace(/^.*$/gm, "")""
-    content = content.replace(/^.*$/gm, "")""
-    content = content.replace(/^.*$/gm, "")""
-    content = content.replace(/\n\s*\n\s*\n/g, "\n\n")""
+    content = content.replace(/\n\s*\n\s*\n/g, "\n\n")""`;
     console.log(` Resolved conflicts "in"`)""
-    let content = fs.readFileSync(filePath, "utf8")""
-      if (line.includes('from "lucide-react"') || line.includes(')''
-        const importMatch = line.match(/import\s*{([^}]+)}\s*from\s*["']lucide-react[']'
+      if (line.includes('from "lucide-react"') || line.includes(')
+        const importMatch = line.match(/import\s*{([^}]+)}\s*from\s*["']lucide-react[']
 cursor/fix-lint-push-and-merge-to-main-f3c1;
-'
+`;

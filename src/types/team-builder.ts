@@ -7,11 +7,9 @@ export interface ProjectBrief {
   budget: string;
   techStack?: string[];
   talentFilters?: { verifiedOnly?: boolean; regions?: string[] };
-}
 
   projectName: string, goals: string,
   timeline: string, budget: string,;
-  techStack?: string[];
   talentFilters?: { verifiedOnly?: boolean; regions?: string[] }
 
 export interface ProjectBrief {;
@@ -19,10 +17,6 @@ export interface ProjectBrief {;
   goal: s: string,;
   timelin: e: string,;
   budge: t: string,;
-  techStack?: string[];
   talentFilters?: { verifiedOnly?: boolean, regions?: string[] }
 
 
-}
-  talentFilters?: { verifiedOnly?: boolean; regions?: string[] };
-}

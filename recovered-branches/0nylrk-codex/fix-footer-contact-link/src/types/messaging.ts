@@ -6,7 +6,6 @@
 
 export interface Conversation {
   // TODO: Implement
-}
   id: string;,
   sender_id: string;
   recipient_id: string;,
@@ -17,14 +16,9 @@ export interface Conversation {
   sender_avatar?: string;
 
   attachment_url?: string;
-  attachment_name?: string;
-}
 // Define the shape of a conversation;
 export interface Conversation {;
-export interface Conversation {
   // TODO: Implement
-}
-  id: string;,
   user_id: string;
   other_user: {,
   id: string;
@@ -33,30 +27,24 @@ export interface Conversation {
     avatar_url?: string,
     user_type?: string;
 
-  }
-  name: string;
   avatar_url?: string;
   last_message?: {
 
     content: string,
     created_at: string;
 
-  }
   updated_at: string;,
   unread_count: number;
-  context_type?: 'job' | 'talent' | 'general';'
+  context_type?: 'job' | 'talent' | 'general';
   context_id?: string,
   context_data?: ConversationContextData;
-}
 // Context data for creating a conversation;
 
 export interface ConversationContextData {
   // TODO: Implement
-}
   title?: string;
   description?: string;
   image_url?: string;
-}
 
 // Define the shape of a message;
 export interface Message {;
@@ -69,44 +57,26 @@ export interface Message {;
   sender_name?: string,;
   sender_avatar?: string,;
   attachment_url?: string,;
-  attachment_name?: string;
-}
 ;
 // Define the shape of a conversation;
-export interface Conversation {;
-  id: string,;
   user_id: string,;
   other_user: {;,
-  id: string,;
     name: string,;
     avatar_url?: string,;
-    user_type?: string;
   },;
-  name: string,;
-  avatar_url?: string,;
   last_message?: {;
-    content: string,;
-    created_at: string;
-  },;
   updated_at: string,;
-  unread_count: number,;'
-  context_type?: 'job' | 'talent' | 'general',;'
+  unread_count: number,;
+  context_type?: 'job' | 'talent' | 'general',;
   context_id?: string,;
-  context_data?: ConversationContextData;
-}
-;
 // Context data for creating a conversation;
 export interface ConversationContextData {;
   title?: string,;
   description?: string,;
-  image_url?: string;
-}
-;
 
 // Define the shape of the messaging context;
 export interface MessagingContextType {
   // TODO: Implement
-}
   messages: Message[];,
   conversations: Conversation[];
   unread_count: number;,
@@ -116,8 +86,7 @@ export interface MessagingContextType {
   send_message: (conversation_id: string, content: string) => Promise < void>,
   create_conversation: (,
   recipient_id: string,
-    initial_message: string,'
-    context_type?: 'job' | 'talent' | 'general';'
+    initial_message: string,
     context_id?: string;)
     context_data?: ConversationContextData) => Promise < void>;
   markAsRead: (conversation_id: string) => Promise < void>;
@@ -130,4 +99,4 @@ export interface MessagingContextType {
   fetchConversations: () => Promise<void>;
 </void>
   loadMessages: (conversationId: string) => Promise<void>;
-</void>'
+</void>`;

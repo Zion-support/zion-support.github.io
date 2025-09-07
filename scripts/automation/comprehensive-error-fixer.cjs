@@ -13,18 +13,9 @@ class $1 {
 }
   constructor() {
   /**;
- * Comprehensive Error Fixer Automation;
- * Fixes multiple types of errors comprehensively;
- * Runs every 30 minutes;
  */;"
-const fs = require("fs");""
-const path = require("path");""
-const { execSync } = require("child_process");""
-const glob = require("glob");"
 class ComprehensiveErrorFixer {
   // TODO: Implement
-}
-  constructor() {
   this.projectRoot = process.cwd();"
     this.logFile = path.join(this.projectRoot, "automation/logs/comprehensive-error-fixer.log");"
     this.ensureLogDirectory();
@@ -43,13 +34,9 @@ class ComprehensiveErrorFixer {
   const logDir = path.dirname(this.logFile);
     if (!fs.existsSync(logDir)) {"
   fs.mkdirSync(logDir, { "recursive": true })}"
-  }
-;
   log(message) {"
   console.log("[${new Date().toISOString()}] ${message}");"
-  log(message) {"
   console.log("[${new Date().toISOString()}] ${message}")}"
-;
   async fixTypeScriptErrors() {
   let fixes = 0;
     // Fix common TypeScript syntax errors;"
@@ -62,10 +49,6 @@ class ComprehensiveErrorFixer {
     // Fix common TypeScript syntax errors;
     const filesToFix = ["
   "src/components/MobileExperienceEnhancer.tsx",""
-      "src/components/ModernUIEnhancer.tsx",""
-      "src/components/NotificationSystem.tsx",""
-      "src/context/auth/AuthContext.tsx",""
-      "src/context/auth/profileMapper.ts",""
       "src/context/auth/useAuthEventHandlers.ts","]
     ]];
 for (const filePath of filesToFix) {
@@ -87,11 +70,7 @@ for (const filePath of filesToFix) {
             /"logout": \s*any\(\)\s*=>\s*Promise<any>;/g,"
 </any>"
             ""logout": () => Promise<any>;";"
-</any>"
-            /"logout": \s*any\(\)\s*=>\s*Promise<any>;/g,"
-</any>"
             ""logout": () => Promise<any>;"
-</any>"
           content = content.replace(/<\/>div>/g, "</div>");""
           content = content.replace(/<\/>header>/g, "</header>");""
           content = content.replace(/<\/>;/g, "</>");"

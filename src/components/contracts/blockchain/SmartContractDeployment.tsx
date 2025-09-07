@@ -1,7 +1,7 @@
 isDeploying;
 }: SmartContractDeploymentProps) {
   const [deploymentOptions, setDeploymentOptions] = useState<DeploymentOptions>({
-</DeploymentOptions>)
+)
   on_deploy: (options: DeploymentOptions, ) => Promise < void>,
   is_deploying: boolean;
 }
@@ -10,34 +10,28 @@ export /**
  */
 function SmartContractDeployment() {
   const [deployment_options, setDeploymentOptions] = useState < DeploymentOptions>({
-    network: 'none','
+    network: 'none',
     use_escrow: true,
-    deployToChain: false,'
-    wallet_address: '';')
+    deployToChain: false,
+    wallet_address: ;')
   });
 
   const handleDeployContract = async () => {
     // Check condition;
 if ( {) {
   $2;
-}'
       toast.error ("Please enter a wallet address for blockchain deployment");"
       return;
-    }
     try {
   // TODO: Implement
-}
       await on_deploy (deployment_options);
     } catch (error) {"
-      logErrorToProduction ('Deployment error:', { data: error });'
-    }
-  }
+      logErrorToProduction ('Deployment error:', { data: error });
 
 
   }),
 
-  const handleDeployContract = async () => {
-    if (deploymentOptions.deployToChain && !deploymentOptions.walletAddress) {'
+    if (deploymentOptions.deployToChain && !deploymentOptions.walletAddress) {
       toast.error("Please enter a wallet address for blockchain deployment"),"
       return;"
 import React, { useState } from "react",;""
@@ -48,55 +42,42 @@ import { Label } from "@/components/ui/label",;""
 import { Input } from "@/components/ui/input",;""
 import { Switch } from "@/components/ui/switch",;""
 import { BlockchainNetwork, DeploymentOptions } from "@/types/smart-contracts",;""
-import { Loader2, ShieldCheck, Download } from 'lucide-react';''
+import { Loader2, ShieldCheck, Download } from 'lucide-react';
 import { toast } from "sonner",;""
-import {logErrorToProduction} from '@/utils/productionLogger',;'
+import {logErrorToProduction} from '@/utils/productionLogger',;
 interface SmartContractDeploymentProps {;
   solidityCode: string,;
   onDeploy: (options: DeploymentOptions) => Promise<void>,;
 </void>
   const [deploymentOptions, setDeploymentOptions] = useState<DeploymentOptions>({;
-</DeploymentOptions>'
+
     <Card className="w-full">"
-</Card>
+
       <CardHeader>
-</CardHeader>"
+"
         <CardTitle className="flex items-center gap-2">"
-</CardTitle>"
           <ShieldCheck className="h-5 w-5 text-primary" />"
-</ShieldCheck>
-        </CardTitle>
+
+        
         <CardDescription>
-</CardDescription>
-        </CardDescription>
-      </CardHeader>)
+
+        
   onDeploy: (options: DeploymentOptions,) => Promise<void>,;
-</void>
-  const [deploymentOptions, setDeploymentOptions] = useState<DeploymentOptions>({;
-</DeploymentOptions>"
     <Card className="w-full">;"
-</Card>
+
       <CardHeader>;
-</CardHeader>"
         <CardTitle className="flex items-center gap-2">;"
-</CardTitle>"
           <ShieldCheck className="h-5 w-5 text-primary" />;"
-</ShieldCheck>"
     <Card className="w - full">;"
-</Card>
-      <CardHeader>;
-</CardHeader>"
+
         <CardTitle className="flex items - center gap - 2">;"
-</CardTitle>"
           <ShieldCheck className="h - 5 w - 5 text - primary" />;"
-</ShieldCheck>
-        </CardTitle>;
+
+        ;
         <CardDescription>;
-</CardDescription>
-        </CardDescription>;
-      </CardHeader>;"
+
+      ;"
       <CardContent className="space-y-6">"
-</CardContent>"
         <div className="space-y-4">"
 </div>"
           <div className="flex items-center space-x-2">"
@@ -112,262 +93,149 @@ interface SmartContractDeploymentProps {;
 
           {deploymentOptions.deployToChain && (
             <>
-</Switch>"
               <div className="space-y-2">"
-</div>
-                <Label>Select blockchain network</Label>
+                <Label>Select blockchain network
 
 
                 <RadioGroup;
                   defaultValue={deploymentOptions.network})
                   onValueChange={(value) => setDeploymentOptions({;
-</RadioGroup>"
-                  <div className="flex items-center space-x-2">"
-</div>"
                     <RadioGroupItem value="ethereum" id="ethereum" />"
-</RadioGroupItem>)"
-                    <Label htmlFor="ethereum">Ethereum (higher fees, more secure)</Label>"
-                  </div>"
-                  <div className="flex items-center space-x-2">"
-</div>"
+)"
+                    <Label htmlFor="ethereum">Ethereum (higher fees, more secure)"
                     <RadioGroupItem value="polygon" id="polygon" />"
-</RadioGroupItem>"
-                    <Label htmlFor="polygon">Polygon (lower fees, faster)</Label>"
-                  </div>
-                </RadioGroup>
-              </div>
+                    <Label htmlFor="polygon">Polygon (lower fees, faster)"
+                
 
 
 
               
-"
-              <div className="space-y-2">"
-</div>"
-                <Label htmlFor="wallet-address">Wallet address for transactions</Label>"
+                <Label htmlFor="wallet-address">Wallet address for transactions"
                 <Input;"
                   id="wallet-address"""
                   placeholder="0x..."""
-                  value={deploymentOptions.walletAddress || ''}''
-              <div className="flex items-center space-x-2">"
-</Input>
-                <Switch;"
+                  value={deploymentOptions.walletAddress || }
+
                   id="use-escrow"""
                   aria-label="Use escrow""
                   checked={deploymentOptions.useEscrow}
 
             />;
-</Switch>"
-            <Label htmlFor="deploy-blockchain">Deploy to blockchain</Label>;"
+            <Label htmlFor="deploy-blockchain">Deploy to blockchain;"
           </div>;
             <>;"
               <div className="space-y-2">;"
-</div>
-                <Label>Select blockchain network</Label>;
-                <RadioGroup;
+                <Label>Select blockchain network;
                   defaultValue={deploymentOptions && deploymentOptions.network}
-                  onValueChange={(value) => setDeploymentOptions({;
-</RadioGroup>"
                   <div className="flex items-center space-x-2">;"
-</div>"
                     <RadioGroupItem value="ethereum" id="ethereum" />;"
-</RadioGroupItem>)"
-                    <Label htmlFor="ethereum">Ethereum (higher fees, more secure)</Label>;"
+                    <Label htmlFor="ethereum">Ethereum (higher fees, more secure);"
                   </div>;"
-                  <div className="flex items-center space-x-2">;"
-</div>"
                     <RadioGroupItem value="polygon" id="polygon" />;"
-</RadioGroupItem>"
-                    <Label htmlFor="polygon">Polygon (lower fees, faster)</Label>;"
-                  </div>;
-                </RadioGroup>;
-              </div>;"
-              <div className="space-y-2">;"
-</div>"
-                <Label htmlFor="wallet-address">Wallet address for transactions</Label>;"
-                <Input;"
-                  id="wallet-address"""
-                  placeholder="0x..."""
-                  value={deploymentOptions && deploymentOptions.walletAddress || ''}'
+                    <Label htmlFor="polygon">Polygon (lower fees, faster);"
+                <Label htmlFor="wallet-address">Wallet address for transactions;"
+                  value={deploymentOptions && deploymentOptions.walletAddress || }
                   onChange={(e) => setDeploymentOptions({;
-</Input>
-              </div>;'
-              <div className="flex items-center space-x-2">;"
-</div>
-                <Switch;"
-                  id="use-escrow"""
-                  aria-label="Use escrow""
+
                   checked={deploymentOptions && deploymentOptions.useEscrow})
                   onCheckedChange={(checked) => setDeploymentOptions({;
-</Switch>"
-                <Label htmlFor="use-escrow">Use escrow for payments</Label>;"
-              </div>;
+                <Label htmlFor="use-escrow">Use escrow for payments;"
             </>;)
           )}
 
 
           
 
-"
           <div className="rounded-md bg-muted p-4">"
-</div>"
             <h4 className="text-sm font-medium mb-2">Smart Contract Preview</h4>""
             <div className="max-h-52 overflow-y-auto bg-background p-3 rounded text-xs font-mono">"
-</div>
               <pre>{solidityCode.slice(0, 500)}...</pre>
-            </div>
-          </div>
-        </div>
-      </CardContent>
+      
 
 
       
 
-"
       <CardFooter className="flex justify-between">"
-</CardFooter>"
         <Button variant="outline" onClick={handleDownloadSolidity}>"
-</Button>"
           <Download className="mr-2 h-4 w-4" />"
-</Download>
-        </Button>
+
+        
 
 
         
 
 
         <Button onClick={handleDeployContract} disabled={isDeploying}>
-</Button>
+
             <>"
               <Loader2 className="mr-2 h-4 w-4 animate-spin" />"
 </Loader2>
             </>
           ) : ("
-            'Deploy Contract'')
-          )}
+            'Deploy Contract)
 
-'
+
           <div className="rounded-md bg-muted p-4">;"
-</div>"
             <h4 className="text-sm font-medium mb-2">Smart Contract Preview</h4>;""
             <div className="max-h-52 overflow-y-auto bg-background p-3 rounded text-xs font-mono">;"
-</div>
               <pre>{solidityCode && solidityCode.slice(0, 500)}...</pre>;
-            </div>;
-          </div>;
-        </div>;
-      </CardContent>;"
       <CardFooter className="flex justify-between">;"
-</CardFooter>"
         <Button variant="outline" onClick={handleDownloadSolidity}>;"
-</Button>"
           <Download className="mr-2 h-4 w-4" />;"
-</Download>
-        </Button>;
+
         <Button onClick={handleDeployContract} disabled={isDeploying}>;
-</Button>
-            <>;"
+
               <Loader2 className="mr-2 h-4 w-4 animate-spin" />;"
-</Loader2>
             </>;
           ) : (;"
             'Deploy Contract';')
-          )}
 
 
-        </Button>;
-      </CardFooter>;
-    </Card>;'
       <CardContent className="space - y-6">;"
-</CardContent>"
         <div className="space - y-4">;"
-</div>"
           <div className="flex items - center space - x-2">;"
-</div>
-            <Switch;"
               id="deploy - blockchain";""
               aria - label="Deploy to blockchain";"
               checked={deployment_options.deployToChain}
               onCheckedChange={(checked) => setDeploymentOptions ({
-</Switch>"
-            <Label html_for="deploy - blockchain">Deploy to blockchain</Label>;"
-          </div>;
-            <>;"
+            <Label html_for="deploy - blockchain">Deploy to blockchain;"
               <div className="space - y-2">;"
-</div>
-                <Label > Select blockchain network</Label>;
-                <RadioGroup;
+                <Label > Select blockchain network;
                   default_value={deployment_options.network})
                   onValueChange={(value) => setDeploymentOptions ({
-</RadioGroup>"
-                  <div className="flex items - center space - x-2">;"
-</div>"
-                    <RadioGroupItem value="ethereum" id="ethereum" />;"
-</RadioGroupItem>)"
-                    <Label html_for="ethereum">Ethereum (higher fees, more secure)</Label>;"
-                  </div>;"
-                  <div className="flex items - center space - x-2">;"
-</div>"
-                    <RadioGroupItem value="polygon" id="polygon" />;"
-</RadioGroupItem>"
-                    <Label html_for="polygon">Polygon (lower fees, faster)</Label>;"
-                  </div>;
-                </RadioGroup>;
-              </div>;"
-              <div className="space - y-2">;"
-</div>"
-                <Label html_for="wallet - address">Wallet address for transactions</Label>;"
-                <Input;"
+                    <Label html_for="ethereum">Ethereum (higher fees, more secure);"
+                    <Label html_for="polygon">Polygon (lower fees, faster);"
+                <Label html_for="wallet - address">Wallet address for transactions;"
                   id="wallet - address";""
                   placeholder="0x...";""
-                  value={deployment_options.wallet_address || ''}'
+                  value={deployment_options.wallet_address || }
                   on_change={(e) => setDeploymentOptions ({
-</Input>
-              </div>;'
-              <div className="flex items - center space - x-2">;"
-</div>
-                <Switch;"
+
                   id="use - escrow";""
                   aria - label="Use escrow";"
                   checked={deployment_options.use_escrow})
-                  onCheckedChange={(checked) => setDeploymentOptions ({
-</Switch>"
-                <Label html_for="use - escrow">Use escrow for payments</Label>;"
+                <Label html_for="use - escrow">Use escrow for payments;"
               </div>;)
             </>)}"
           <div className="rounded - md bg - muted p - 4">;"
-</div>"
             <h4 className="text - sm font - medium mb - 2">Smart Contract Preview</h4>;""
             <div className="max - h-52 overflow - y-auto bg - background p - 3 rounded text - xs font - mono">;"
-</div>
               <pre>{solidity_code.slice (0, 500)}...</pre>;
-            </div>;
-          </div>;
-        </div>;
-      </CardContent>;"
       <CardFooter className="flex justify - between">;"
-</CardFooter>"
         <Button variant="outline" on_click={handleDownloadSolidity}>;"
-</Button>"
           <Download className="mr - 2 h - 4 w - 4" />;"
-</Download>
-        </Button>;
+
         <Button on_click={handleDeployContract} disabled={is_deploying}>;
-</Button>
-            <>;"
+
               <Loader2 className="mr - 2 h - 4 w - 4 animate - spin" />;"
-</Loader2>
             </>) : ()"
-            'Deploy Contract')}'
-        </Button>;
-      </CardFooter>;
-    </Card>);'
-<CardHeader> <CardTitle className="flex items - center gap - 2" > <ShieldCheck className="h - 5 w - 5 text - primary" /> Smart Contract Deployment </CardTitle> <CardDescription> Deploy your agreement as a smart contract for enhanced security and automation </CardDescription> </CardHeader> <CardContent className="space - y-6" > <div className="space - y-4" > <div className="flex items - center space - x-2" > <Switch /> <Label html_for="deploy - blockchain" >Deploy to blockchain</Label> </div> > <div className="flex items - center space - x-2" > <RadioGroupItem value="ethereum" id="ethereum" /> <Label html_for="ethereum" >Ethereum (higher fees, more secure) </Label> </div> <div className="flex items - center space - x-2" > <RadioGroupItem value="polygon" id="polygon" /> <Label html_for="polygon" >Polygon (lower fees, faster) </Label> </div> </RadioGroup> </div> <div className="space - y-2" > <Label html_for="wallet - address" >Wallet address for transactions</Label> <Input /> </div> <div className="flex items - center space - x-2" > <Switch /> <Label html_for="use - escrow" >Use escrow for payments</Label> </div> </>);"
-}</div> </div> </div> </CardContent> Download .sol File </Button> <Button on_click={
+            'Deploy Contract')}
+    );
+<CardHeader> <CardTitle className="flex items - center gap - 2" > <ShieldCheck className="h - 5 w - 5 text - primary" /> Smart Contract Deployment  <CardDescription> Deploy your agreement as a smart contract for enhanced security and automation   <CardContent className="space - y-6" > <div className="space - y-4" > <div className="flex items - center space - x-2" > <Switch /> <Label html_for="deploy - blockchain" >Deploy to blockchain </div> > <div className="flex items - center space - x-2" > <RadioGroupItem value="ethereum" id="ethereum" /> <Label html_for="ethereum" >Ethereum (higher fees, more secure)  </div> <div className="flex items - center space - x-2" > <RadioGroupItem value="polygon" id="polygon" /> <Label html_for="polygon" >Polygon (lower fees, faster)  </div>  </div> <div className="space - y-2" > <Label html_for="wallet - address" >Wallet address for transactions <Input /> </div> <div className="flex items - center space - x-2" > <Switch /> <Label html_for="use - escrow" >Use escrow for payments </div> </>);"
+}</div> </div> </div>  Download .sol File  <Button on_click={
   handleDeployContract;
 }disabled= {
   is_deploying;"
 }> {'";"
-</Button>"
-  is_deploying ? (<> <Loader2 className="mr - 2 h - 4 w - 4 animate - spin" /> Deploying... </>) : ('Deploy Contract');'
-</Loader2>
-}</Button> </CardFooter> </Card>);'
+  is_deploying ? (<> <Loader2 className="mr - 2 h - 4 w - 4 animate - spin" /> Deploying... </>) : ('Deploy Contract');
+}  );

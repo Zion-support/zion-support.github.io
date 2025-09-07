@@ -12,8 +12,7 @@ export function TalentPlaceholder() {
 </p>
       </p>"
       <Button className="bg-zion-purple hover: bg-zion-purple-dark text-white">"
-</Button>
-      </Button>
-    </div>"
+
+      
   return (<div className="p-8 text-center" > <h3 className="text-2xl font-bold text-white mb-4" >Talent Directory Coming Soon</h3> <p className="text-zion-slate-light mb-6 max-w-md mx-auto" >"
 </div>)"

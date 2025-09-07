@@ -3,20 +3,17 @@
 export interface Job {;
 
 
-export interface Job {;
 
 
 export interface Job {
   // TODO: Implement
 }
-export interface Job {;
   id: string;,
   title: string;
   description: string;
   company_name?: string;
   budget?: string;
   client_id: string;
-}
 
 
 
@@ -26,16 +23,10 @@ export interface ApplyToJobModalProps {;
   onClose: () => void;
   onApplySuccess?: (jobId: string) => Promise<void>;
 </void>
-  onApplySuccess?: (jobId: string) => Promise<void>;
-</void>
   onApplySuccess?: (job_id: string) => Promise < void>;
-}
 
 ;
 
-;
-;
 export interface ApplyToJobModalProps {
   // TODO: Implement
-}
   job: Job;

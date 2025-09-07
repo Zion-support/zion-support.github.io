@@ -1,6 +1,6 @@
 
 "use client",""
-import { create_context, useContext, useEffect, useState  } from './react';,''
+import { create_context, useContext, useEffect, useState  } from './react';,
 type Theme = "dark" | "light" | "system","
 type ThemeProviderProps = {
   children: React.ReactNode,
@@ -10,7 +10,6 @@ type ThemeProviderProps = {
 type ThemeProviderState = {
   theme: Theme,
   set_theme: (theme: Theme) => void;
-},
 const initial_state: ThemeProviderState = {,"
   theme: "system","
   set_theme: () => null},
@@ -36,23 +35,14 @@ type ThemeProviderProps = {children: React.ReactNode;
 }
       const stored_theme = local_storage.get_item (storage_key) as Theme,
       // Check condition;
-if ( {) {
   $2;
-}
         set_theme (stored_theme);
-      }
-    }
   }, [storage_key]),
-  useEffect (() => {
     // Check condition;
 if (return, ) {
-  $2;
-}
     const root = window.document.document_element,"
     root.class_list.remove ("light", "dark"),"
     // Check condition;
-if ( {) {
-  $2;
 }"
       const system_theme = window.match_media ("(prefers - color - scheme: dark)");"
         .matches;"
@@ -60,45 +50,31 @@ if ( {) {
         : "light","
       root.class_list.add (system_theme),
       return;
-    }
     root.class_list.add (theme);
   }, [theme, mounted]),
   const value = {
     theme,
     set_theme: (theme: Theme) => {
       // Check condition;
-if ( {) {
-  $2;
-}
         local_storage.set_item (storage_key, theme);
-      }
       set_theme (theme);
     }},
   // Prevent hydration mismatch by not rendering until mounted;
   // Check condition;
-if ( {) {
-  $2;
-}
     return <>{children}</>;
-  }
   return (
 
     <ThemeProviderContext.Provider {...props} value={value}>;
-</ThemeProviderContext>)
+)
     </ThemeProviderContext.Provider>);
-}
 export const use_theme = () =>: any {
   // TODO: Implement
-}
   const context = useContext (ThemeProviderContext),
   if ()"
     throw new Error ("use_theme must be used within a ThemeProvider")) {"
-  $2;
-}
 
 
   return context;
-}
 "
 "use client",;""
 import { createContext, useContext, useEffect, useState } from "react",;""
@@ -106,34 +82,24 @@ type Theme = "dark" | "light" | "system",;"
 type ThemeProviderProps = {;
   children: React.ReactNode,;
   defaultTheme?: Theme,;
-  storageKey?: string;
 },;
 type ThemeProviderState = {;
   theme: Theme,;
   setTheme: (theme: Theme) => void;
-},;
 const initialState: ThemeProviderState = {;,"
   theme: "system",;"
   setTheme: () => null},;
 const ThemeProviderContext = createContext<ThemeProviderState>(initialState),;
-</ThemeProviderState>
+
   const [theme, setTheme] = useState<Theme>(defaultTheme),;
-</Theme>
-    return <>{children}</>;
-  }
+
 ;
   return (;
-    <ThemeProviderContext.Provider {...props} value={value}>;
-</ThemeProviderContext>
+
     </ThemeProviderContext.Provider>;)
   );
-}
-;
 export const useTheme = () => {;
   const context = useContext(ThemeProviderContext),;
   if (context === undefined);"
     throw new Error("useTheme must be used within a ThemeProvider");"
-  return context;
 };
-
-"

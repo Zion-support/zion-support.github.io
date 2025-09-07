@@ -24,17 +24,15 @@ const fs = require("fs")";const path = require("path")";const { execSync } = req
     console.log(" Optimizing SEO...");""""
     const seoComponent = "import Head from "next/head"";";interface SEOProps {"}""
 export const "SEO": React.FC<SEOProps> = ({";  title = "Zion Tech Group - Advanced AI Solutions", ";  description = "Leading provider of AI-powered solutions, cloud infrastructure, and digital transformation services.", ";  keywords = "AI, artificial intelligence, cloud computing, digital transformation, automation", ";  image = "/og-image.jpg", ";  url = ""https"://ziontechgroup.com", ";  type = "website""}) => {"}"
-</SEOProps>"
+"
       <meta name="description" content={description} />";      <meta name="keywords" content={keywords} />";      <meta name="viewport" content="width=device-width, initial-scale=1" />";""
 </meta>"
       <meta property=""og":title" content={title} />";      <meta property=""og":description" content={description} />";      <meta property=""og":image" content={image} />";      <meta property=""og":url" content={url} />";      <meta property=""og":type" content={type} />";""
-</meta>"
       <meta name=""twitter":card" content="summary_large_image" />";      <meta name=""twitter":title" content={title} />";      <meta name=""twitter":description" content={description} />";      <meta name=""twitter":image" content={image} />";""
-</meta>"
-      <link rel="canonical" href={url} />";      <meta name="robots" content="index, follow" />";      <meta name="author" content="Zion Tech Group" />";    </Head>;"),,};";""
+      <link rel="canonical" href={url} />";      <meta name="robots" content="index, follow" />";      <meta name="author" content="Zion Tech Group" />";    ;"),,};";""
 </link>"
 export const "LoadingSpinner": React.FC<LoadingSpinnerProps> = ({";  size = "md", ";  color = "currentColor", ";  className = """}) => {"}"
-</LoadingSpinnerProps>
+
   return();    <div className={\`animate-spin \${sizeClasses[size]} \${className}\`}>
 </div>"
-    </div>),,};";"""
+    </div>),,};";"""`;

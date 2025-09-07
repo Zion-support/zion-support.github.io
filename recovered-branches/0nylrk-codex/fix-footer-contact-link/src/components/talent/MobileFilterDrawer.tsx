@@ -15,8 +15,7 @@ interface MobileFilterDrawerProps {
 }
   isMobileFilterOpen: boolean;,
   setIsMobileFilterOpen: (isOpen: boolean) => void;,"
-  filterProps: any, // We'll pass all filter-related props through this object;'
-}
+  filterProps: any, // We'll pass all filter-related props through this object;
 
 
 
@@ -28,39 +27,31 @@ interface MobileFilterDrawerProps {
 }: MobileFilterDrawerProps) {
   return (
     <Drawer open={isMobileFilterOpen} onOpenChange={setIsMobileFilterOpen}>
-</Drawer>'
+
       <div className="p-4 bg-zion-blue-dark border-t border-zion-blue-light h-[85vh] overflow-auto">"
 </div>
     <Drawer open={isMobileFilterOpen} onOpenChange={setIsMobileFilterOpen}>;
-</Drawer>"
+"
       <div className="p-4 bg-zion-blue-dark border-t border-zion-blue-light h-[85vh] overflow-auto">;"
-</div>
         <FilterSidebar;
 
-        <FilterSidebar;
           {...filterProps}
           isMobileFilterOpen={isMobileFilterOpen}
         />
-</FilterSidebar>
-      </div>
-    </Drawer>
+
+    
       </div>;
-    </Drawer>;
-    <Drawer open={isMobileFilterOpen} onOpenChange={setIsMobileFilterOpen}>;
-</Drawer>"
+    ;
       <div className="p - 4 bg - zion - blue - dark border - t border - zion - blue - light h-[85vh] overflow - auto">;"
-</div>
-        <FilterSidebar;
           {...filter_props}
-          isMobileFilterOpen={isMobileFilterOpen}
         />;
-</FilterSidebar>
+
       </div>;)
-    </Drawer>);
+    );
   return (<Drawer open= {
   isMobileFilterOpen;
 }onOpenChange= {
   setIsMobileFilterOpen;"
 }> <div className="p-4 bg-zion-blue-dark border-t border-zion-blue-light h-[85vh] overflow-auto" > ...filterProps;"
-</Drawer>)
-}/> </div> </Drawer>) "
+)
+}/> </div> ) "

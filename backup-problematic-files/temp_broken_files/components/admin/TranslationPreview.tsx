@@ -1,10 +1,10 @@
-import React, { useState } from 'react';''
-import { useAutoTranslate } from '../../hooks/useAutoTranslate';''
-const defaultTargets = ['enptesar']'
-export default function TranslationPreview() {'
-  const [text, setText] = useState('')'
+import React, { useState } from 'react';
+import { useAutoTranslate } from '../../hooks/useAutoTranslate';
+const defaultTargets = ['enptesar']
+export default function TranslationPreview() {
+  const [text, setText] = useState()
   const [targets, setTargets] = useState<string[]>(defaultTargets)
-</string>'
+</string>
     <div className="space-y-4">"
 </div>"
       <h2 className="text-lg font-semibold">Translation Preview</h2>"
@@ -14,10 +14,7 @@ export default function TranslationPreview() {'
         value={text}
         onChange={(e) => setText(e.target.value)}
 </textarea>"
-      <div className="text-sm text-gray-500">{loading ? 'Translating' : error ? `Error: ${error}` : 'Ready'}</div>''
+      <div className="text-sm text-gray-500">{loading ? 'Translating' : error ? `Error: ${error}` : 'Ready'}</div>
       <div className="grid md:grid-cols-2 gap-4">"
 </div>
-          </div>
-      </div>
-    </div>
-"
+"`;

@@ -21,28 +21,18 @@ jest.mock("next/router", () => ({
       },
       isFallback: false,
     };
-  },
 }));
 
 // Mock Next.js navigation
 jest.mock("next/navigation", () => ({
-  useRouter() {
-    return {
-      push: jest.fn(),
       replace: jest.fn(),
       prefetch: jest.fn(),
-      back: jest.fn(),
       forward: jest.fn(),
       refresh: jest.fn(),
-    };
-  },
   useSearchParams() {
     return new URLSearchParams();
-  },
   usePathname() {
     return "/";
-  },
-}));
 
 // Mock window.matchMedia
 Object.defineProperty(window, 'matchMedia', {
@@ -65,17 +55,10 @@ global.IntersectionObserver = class IntersectionObserver {
   disconnect() {}
   observe() {}
   unobserve() {}
-};
 
 // Mock ResizeObserver
 global.ResizeObserver = class ResizeObserver {
-  constructor() {}
-  disconnect() {}
-  observe() {}
-  unobserve() {}
-};
 
 // Global test setup
 beforeEach(() => {
   jest.clearAllMocks();
-});

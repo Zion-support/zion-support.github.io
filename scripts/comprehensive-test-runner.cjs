@@ -1,7 +1,7 @@
 #!/usr/bin/env node;
-const fs = require('fs')''
-const { execSync } = require('child_process')''
-console.log('🧪 Starting Comprehensive Test Runner...')''
+const fs = require('fs')
+const { execSync } = require('child_process')
+console.log('🧪 Starting Comprehensive Test Runner...')
   "overall"""
     const output = execSync(command, { "encoding": 'utf8', "stdio"})""
     execSync('npx jest --version', { "stdio"})""

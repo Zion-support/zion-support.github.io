@@ -9,87 +9,61 @@ import { toast } from "sonner",;"
 interface ScreenshotManagerProps {;
   platform:AppPlatform;
 }
-;
 type Screenshot = {;
   id:string,;
   url:string,;
   file:File;
 },;
-;
 export const ScreenshotManager:React.FC<ScreenshotManagerProps> = ({ platform }) => {;
-</ScreenshotManagerProps>
+
   const [screenshots, setScreenshots] = useState<Screenshot[]>([]),;
-</Screenshot>
+
   const fileInputRef = useRef<HTMLInputElement>(null),;
-</HTMLInputElement>
+
   const handleFileSelect = (e:React.ChangeEvent<HTMLInputElement>) => {;
-</HTMLInputElement>
+
     if (availableSlots <= 0) {;"
       toast.error(`Maximum ${maxScreenshots} screenshots allowed for ${platform === "ios" ? "iOS" :"Android"}`),;"
       return,;
-    }
-    ;
     const filesToAdd = imageFiles.slice(0, availableSlots),;
-    ;
     const newScreenshots = filesToAdd.map(file => ({;)
       id:Math.random().toString(36).substring(2, 9),;
       url:URL.createObjectURL(file),;
       file;
     })),;
-    ;
     setScreenshots(prev => [...prev, ...newScreenshots]),;
-    ;
-    if (filesToAdd.length < imageFiles.length) {;
+    if (filesToAdd.length < imageFiles.length) {;`;
       toast.warning(`Only added ${filesToAdd.length} screenshots. Maximum is ${maxScreenshots}.`),;
-    }
-  },;
-  ;
   const removeScreenshot = (id:string) => {;
     setScreenshots(prev => {;)
       const filtered = prev.filter(screenshot => screenshot.id !== id),;
-      ;
       // Revoke object URL to avoid memory leaks;
       const removed = prev.find(screenshot => screenshot.id === id),;
       if (removed) {;
         URL.revokeObjectURL(removed.url);
-      }
-      ;
       return filtered,;
     }),;
-  },;
-  ;
   const handleDragOver = (e:React.DragEvent) => {;
     e.preventDefault(),;
     setIsDragging(true);
-  },;
-  ;
   const handleDragLeave = () => {;
     setIsDragging(false),;
-  },;
-  ;
   const handleDrop = (e:React.DragEvent) => {;
-    e.preventDefault(),;
-    setIsDragging(false),;
-    ;
     if (e.dataTransfer.files) {;
       addScreenshots(Array.from(e.dataTransfer.files));
-    }
-  },;
-  ;
   return (;"
     <Card className="bg-zion-blue border-zion-purple/30">;"
-</Card>
+
       <CardHeader>;
-</CardHeader>"
-        <CardTitle className="text-lg">App Screenshots</CardTitle>;"
-      </CardHeader>;
+"
+        <CardTitle className="text-lg">App Screenshots;"
       <CardContent>;
-</CardContent>
-        <div ;
+
+        <div ;`;
           className={`border-2 border-dashed rounded-lg p-4 mb-4 text-center transition-colors ${;
             isDragging ;"
               ? "border-zion-cyan bg-zion-cyan/10" ;""
-              :"border-zion-purple/30";"
+              :"border-zion-purple/30";"`;
           }`}
           onDragOver={handleDragOver}
           onDragLeave={handleDragLeave}
@@ -97,7 +71,6 @@ export const ScreenshotManager:React.FC<ScreenshotManagerProps> = ({ platform })
         >;
 </div>"
           <Upload className="mx-auto h-8 w-8 text-gray-400 mb-2" />;"
-</Upload>"
           <p className="text-sm mb-2">Drag & drop screenshots here</p>;"
           <input;
             ref={fileInputRef}"
@@ -111,23 +84,17 @@ export const ScreenshotManager:React.FC<ScreenshotManagerProps> = ({ platform })
           <Button ;"
             variant="outline" ;")
             onClick={() => fileInputRef.current?.click()}
-</Button>"
             <Plus className="mr-2 h-4 w-4" />;"
-</Plus>
-          </Button>;
+
         </div>;"
         <div className="text-xs text-gray-400 mb-4">;"
 </div>
-        </div>;"
         <div className="grid grid-cols-2 gap-3">;"
-</div>"
             <div key={screenshot.id} className="relative group">;"
-</div>
               <img ;
                 src={screenshot.url}"
                 alt="App screenshot";""
                 className="w-full h-auto rounded border border-zion-purple/20";"
-              />;
 </img>
               <button;
                 onClick={() => removeScreenshot(screenshot.id)}
@@ -136,12 +103,9 @@ export const ScreenshotManager:React.FC<ScreenshotManagerProps> = ({ platform })
 </Trash2>
               </button>;
             </div>;
-        </div>;
-      </CardContent>;
-    </Card>;
 export const ScreenshotManager: React.FC<ScreenshotManagerProps> = ({
-</ScreenshotManagerProps>)
+)
   const [screenshots, setScreenshots] = useState<Screenshot[]> ([]);
-</Screenshot>
+
 const fileInputRef = useRef<HTMLInputElement> (null);
-</HTMLInputElement>"
+"`;

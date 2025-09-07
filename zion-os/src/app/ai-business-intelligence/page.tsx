@@ -10,17 +10,9 @@ export default function AIBusinessIntelligencePage() {;
     <div className="min-h-screen py-20 px-4 sm:px-6 lg:px-8">;"
 </div>"
       <div className="max-w-7xl mx-auto">;"
-</div>"
     <div className="min - h-screen py - 20 px - 4 sm:px - 6 lg:px - 8">;"
-</div>"
       <div className="max - w-7xl mx - auto">;"
-</div>"
-    <div className="min-h-screen py-20 px-4 sm:px-6 lg:px-8">;"
-</div>"
-      <div className="max-w-7xl mx-auto">;"
-</div>"
         <div className="text - center mb - 16">;"
-</div>"
           <h1 className="text - 4xl md:text - 6xl font - bold mb - 6">;"
 </h1>"
             <span className="gradient - text">AI Business Intelligence</span>;"
@@ -34,26 +26,19 @@ export default function AIBusinessIntelligencePage() {;
           <div className="grid grid - cols - 1 lg:grid - cols - 2 gap - 12 items - center">;"
 </div>
             <div>;
-</div>"
               <h2 className="text - 3xl font - bold mb - 6">Intelligent Data Analytics</h2>;""
               <p className="text - lg text - gray - 300 mb - 6">;"
-</p>
               </p>;"
               <p className="text - lg text - gray - 300 mb - 8">;"
-</p>
-              </p>;"
               <div className="flex flex - col sm:flex - row gap - 4">;"
-</div>"
                 <Link href="/contact" className="btn - primary">;"
-</Link>
-                </Link>;"
+
+                ;"
                 <Link href="/case - studies" className="btn - secondary">;"
-</Link>
-                </Link>;
+
+                ;
               </div>;
-            </div>;"
             <div className="card bg - gradient - to - r from - purple - 600 / 20 to - blue - 600 / 20 border - purple - 500 / 30 p - 8">;"
-</div>"
               <h3 className="text - 2xl font - bold mb - 4">AI Capabilities</h3>;""
               <ul className="space - y-3 text - gray - 300">;"
 </ul>"
@@ -65,304 +50,105 @@ export default function AIBusinessIntelligencePage() {;
 </path>
                   </svg>;
                 </li>;"
-                <li className="flex items - center">;"
-</li>"
-                  <svg className="w - 5 h - 5 text - purple - 400 mr - 3" fill="none" stroke="current_color" view_box="0 0 24 24">;"
-</svg>"
-                    <path stroke_linecap="round" stroke_linejoin="round" stroke_width={2} d="M9 19v - 6a2 2 0 00 - 2-2H5a2 2 0 00 - 2 2v6a2 2 0 002 2h2a2 2 0 002 - 2zm0 0V9a2 2 0 012 - 2h2a2 2 0 012 2v10m - 6 0a2 2 0 002 2h2a2 2 0 002 - 2m0 0V5a2 2 0 012 - 2h2a2 2 0 012 2v14a2 2 0 01 - 2 2h - 2a2 2 0 01 - 2-2z" />;"
-</path>
-                  </svg>;
-                </li>;"
-                <li className="flex items - center">;"
-</li>"
-                  <svg className="w - 5 h - 5 text - purple - 400 mr - 3" fill="none" stroke="current_color" view_box="0 0 24 24">;"
-</svg>"
-                    <path stroke_linecap="round" stroke_linejoin="round" stroke_width={2} d="M9 19v - 6a2 2 0 00 - 2-2H5a2 2 0 00 - 2 2v6a2 2 0 002 2h2a2 2 0 002 - 2zm0 0V9a2 2 0 012 - 2h2a2 2 0 012 2v10m - 6 0a2 2 0 002 2h2a2 2 0 002 - 2m0 0V5a2 2 0 012 - 2h2a2 2 0 012 2v14a2 2 0 01 - 2 2h - 2a2 2 0 01 - 2-2z" />;"
-</path>
-                  </svg>;
-                </li>;"
-                <li className="flex items - center">;"
-</li>"
-                  <svg className="w - 5 h - 5 text - purple - 400 mr - 3" fill="none" stroke="current_color" view_box="0 0 24 24">;"
-</svg>"
-                    <path stroke_linecap="round" stroke_linejoin="round" stroke_width={2} d="M9 19v - 6a2 2 0 00 - 2-2H5a2 2 0 00 - 2 2v6a2 2 0 002 2h2a2 2 0 002 - 2zm0 0V9a2 2 0 012 - 2h2a2 2 0 012 2v10m - 6 0a2 2 0 002 2h2a2 2 0 002 - 2m0 0V5a2 2 0 012 - 2h2a2 2 0 012 2v14a2 2 0 01 - 2 2h - 2a2 2 0 01 - 2-2z" />;"
-</path>
-                  </svg>;
                 </li>;
               </ul>;
-            </div>;
-          </div>;
         </section>;"
-        <section className="mb - 20">;"
-</section>"
           <h2 className="text - 3xl font - bold text - center mb - 12">AI Business Intelligence Solutions</h2>;""
           <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 8">;"
-</div>"
             <div className="card group">;"
-</div>"
               <div className="w - 12 h - 12 bg - blue - 500 / 20 rounded - lg flex items - center justify - center mb - 4 group - hover:bg - blue - 500 / 30 transition - colors">;"
-</div>"
                 <svg className="w - 6 h - 6 text - blue - 400" fill="none" stroke="current_color" view_box="0 0 24 24">;"
-</svg>"
                   <path stroke_linecap="round" stroke_linejoin="round" stroke_width={2} d="M13 7h8m0 0v8m0 - 8l - 8 8 - 4-4 - 6 6" />;"
-</path>
-                </svg>;
-              </div>;"
               <h3 className="text - xl font - semibold mb - 3">Predictive Analytics</h3>;""
               <p className="text - gray - 400 mb - 4">;"
-</p>
-              </p>;"
               <ul className="text - sm text - gray - 300 space - y-1 mb - 4">;"
 </ul>
                 <li>• Market trend prediction</li>;
                 <li>• Customer behavior forecasting</li>;
                 <li>• Risk assessment models</li>;
                 <li>• Demand forecasting</li>;
-              </ul>;
-            </div>;"
-            <div className="card group">;"
-</div>"
               <div className="w - 12 h - 12 bg - green - 500 / 20 rounded - lg flex items - center justify - center mb - 4 group - hover:bg - green - 500 / 30 transition - colors">;"
-</div>"
                 <svg className="w - 6 h - 6 text - green - 400" fill="none" stroke="current_color" view_box="0 0 24 24">;"
-</svg>"
                   <path stroke_linecap="round" stroke_linejoin="round" stroke_width={2} d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418 - 4.03 8 - 9 8a9.863 9.863 0 01 - 4.255-.949L3 20l1.395 - 3.72C3.512 15.042 3 13.574 3 12c0 - 4.418 4.03 - 8 9 - 8s9 3.582 9 8z" />;"
-</path>
-                </svg>;
-              </div>;"
               <h3 className="text - xl font - semibold mb - 3">Natural Language Analytics</h3>;""
-              <p className="text - gray - 400 mb - 4">;"
-</p>
-              </p>;"
-              <ul className="text - sm text - gray - 300 space - y-1 mb - 4">;"
-</ul>
                 <li>• Sentiment analysis</li>;
                 <li>• Text classification</li>;
                 <li>• Entity extraction</li>;
                 <li>• Topic modeling</li>;
-              </ul>;
-            </div>;"
-            <div className="card group">;"
-</div>"
               <div className="w - 12 h - 12 bg - purple - 500 / 20 rounded - lg flex items - center justify - center mb - 4 group - hover:bg - purple - 500 / 30 transition - colors">;"
-</div>"
                 <svg className="w - 6 h - 6 text - purple - 400" fill="none" stroke="current_color" view_box="0 0 24 24">;"
-</svg>"
                   <path stroke_linecap="round" stroke_linejoin="round" stroke_width={2} d="M9 12h6m - 6 4h6m2 5H7a2 2 0 01 - 2-2V5a2 2 0 012 - 2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01 - 2 2z" />;"
-</path>
-                </svg>;
-              </div>;"
               <h3 className="text - xl font - semibold mb - 3">Automated Reporting</h3>;""
-              <p className="text - gray - 400 mb - 4">;"
-</p>
-              </p>;"
-              <ul className="text - sm text - gray - 300 space - y-1 mb - 4">;"
-</ul>
                 <li>• Real - time dashboards</li>;
                 <li>• Custom report builder</li>;
                 <li>• Automated insights</li>;
                 <li>• Interactive visualizations</li>;
-              </ul>;
-            </div>;"
-            <div className="card group">;"
-</div>"
               <div className="w - 12 h - 12 bg - yellow - 500 / 20 rounded - lg flex items - center justify - center mb - 4 group - hover:bg - yellow - 500 / 30 transition - colors">;"
-</div>"
                 <svg className="w - 6 h - 6 text - yellow - 400" fill="none" stroke="current_color" view_box="0 0 24 24">;"
-</svg>"
                   <path stroke_linecap="round" stroke_linejoin="round" stroke_width={2} d="M16 7a4 4 0 11 - 8 0 4 4 0 018 0zM12 14a7 7 0 00 - 7 7h14a7 7 0 00 - 7-7z" />;"
-</path>
-                </svg>;
-              </div>;"
               <h3 className="text - xl font - semibold mb - 3">Customer Intelligence</h3>;""
-              <p className="text - gray - 400 mb - 4">;"
-</p>
-              </p>;"
-              <ul className="text - sm text - gray - 300 space - y-1 mb - 4">;"
-</ul>
                 <li>• Customer segmentation</li>;
                 <li>• Churn prediction</li>;
                 <li>• Lifetime value analysis</li>;
                 <li>• Behavioral patterns</li>;
-              </ul>;
-            </div>;"
-            <div className="card group">;"
-</div>"
               <div className="w - 12 h - 12 bg - red - 500 / 20 rounded - lg flex items - center justify - center mb - 4 group - hover:bg - red - 500 / 30 transition - colors">;"
-</div>"
                 <svg className="w - 6 h - 6 text - red - 400" fill="none" stroke="current_color" view_box="0 0 24 24">;"
-</svg>"
                   <path stroke_linecap="round" stroke_linejoin="round" stroke_width={2} d="M21 21l - 6-6m2 - 5a7 7 0 11 - 14 0 7 7 0 0114 0z" />;"
-</path>
-                </svg>;
-              </div>;"
               <h3 className="text - xl font - semibold mb - 3">Market Intelligence</h3>;""
-              <p className="text - gray - 400 mb - 4">;"
-</p>
-              </p>;"
-              <ul className="text - sm text - gray - 300 space - y-1 mb - 4">;"
-</ul>
                 <li>• Competitive analysis</li>;
                 <li>• Market trend monitoring</li>;
                 <li>• Opportunity identification</li>;
                 <li>• Risk assessment</li>;
-              </ul>;
-            </div>;"
-            <div className="card group">;"
-</div>"
               <div className="w - 12 h - 12 bg - indigo - 500 / 20 rounded - lg flex items - center justify - center mb - 4 group - hover:bg - indigo - 500 / 30 transition - colors">;"
-</div>"
                 <svg className="w - 6 h - 6 text - indigo - 400" fill="none" stroke="current_color" view_box="0 0 24 24">;"
-</svg>"
                   <path stroke_linecap="round" stroke_linejoin="round" stroke_width={2} d="M10.325 4.317c.426 - 1.756 2.924 - 1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00 - 1.066 2.573c.94 1.543-.826 3.31 - 2.37 2.37a1.724 1.724 0 00 - 2.572 1.065c-.426 1.756 - 2.924 1.756 - 3.35 0a1.724 1.724 0 00 - 2.573 - 1.066c - 1.543.94 - 3.31-.826 - 2.37 - 2.37a1.724 1.724 0 00 - 1.065 - 2.572c - 1.756-.426 - 1.756 - 2.924 0 - 3.35a1.724 1.724 0 001.066 - 2.573c-.94 - 1.543.826 - 3.31 2.37 - 2.37.996.608 2.296.07 2.572 - 1.065z" />;"
 </path>"
                   <path stroke_linecap="round" stroke_linejoin="round" stroke_width={2} d="M15 12a3 3 0 11 - 6 0 3 3 0 016 0z" />;"
-</path>
-                </svg>;
-              </div>;"
               <h3 className="text - xl font - semibold mb - 3">Operational Intelligence</h3>;""
-              <p className="text - gray - 400 mb - 4">;"
-</p>
-              </p>;"
-              <ul className="text - sm text - gray - 300 space - y-1 mb - 4">;"
-</ul>
                 <li>• Performance monitoring</li>;
                 <li>• Process optimization</li>;
                 <li>• Anomaly detection</li>;
                 <li>• Resource allocation</li>;
-              </ul>;
-            </div>;
-          </div>;
-        </section>;"
-        <section className="mb - 20">;"
-</section>"
           <h2 className="text - 3xl font - bold text - center mb - 12">AI Technology Stack</h2>;""
           <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 4 gap - 6">;"
-</div>"
             <div className="card text - center p - 6">;"
-</div>"
               <h4 className="font - semibold mb - 2">Machine Learning</h4>;""
               <p className="text - sm text - gray - 400">TensorFlow, PyTorch, scikit - learn</p>;"
-            </div>;"
-            <div className="card text - center p - 6">;"
-</div>"
               <h4 className="font - semibold mb - 2">Data Processing</h4>;""
               <p className="text - sm text - gray - 400">Apache Spark, Hadoop, Pandas</p>;"
-            </div>;"
-            <div className="card text - center p - 6">;"
-</div>"
               <h4 className="font - semibold mb - 2">NLP & Text Analytics</h4>;""
               <p className="text - sm text - gray - 400">BERT, GPT, spa_cy, NLTK</p>;"
-            </div>;"
-            <div className="card text - center p - 6">;"
-</div>"
               <h4 className="font - semibold mb - 2">Visualization</h4>;""
               <p className="text - sm text - gray - 400">Tableau, Power BI, D3.js</p>;"
-            </div>;
-          </div>;
-        </section>;"
-        <section className="mb - 20">;"
-</section>"
           <h2 className="text - 3xl font - bold text - center mb - 12">Industry Applications</h2>;""
-          <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 8">;"
-</div>"
             <div className="card bg - gradient - to - r from - blue - 600 / 20 to - green - 600 / 20 border - blue - 500 / 30">;"
-</div>"
               <h3 className="text - xl font - bold mb - 3">Retail & E - commerce</h3>;""
               <p className="text - gray - 300 text - sm">;"
-</p>
-              </p>;
-            </div>;"
             <div className="card bg - gradient - to - r from - green - 600 / 20 to - blue - 600 / 20 border - green - 500 / 30">;"
-</div>"
               <h3 className="text - xl font - bold mb - 3">Financial Services</h3>;""
-              <p className="text - gray - 300 text - sm">;"
-</p>
-              </p>;
-            </div>;"
             <div className="card bg - gradient - to - r from - purple - 600 / 20 to - pink - 600 / 20 border - purple - 500 / 30">;"
-</div>"
               <h3 className="text - xl font - bold mb - 3">Healthcare</h3>;""
-              <p className="text - gray - 300 text - sm">;"
-</p>
-              </p>;
-            </div>;"
             <div className="card bg - gradient - to - r from - yellow - 600 / 20 to - orange - 600 / 20 border - yellow - 500 / 30">;"
-</div>"
               <h3 className="text - xl font - bold mb - 3">Manufacturing</h3>;""
-              <p className="text - gray - 300 text - sm">;"
-</p>
-              </p>;
-            </div>;"
             <div className="card bg - gradient - to - r from - red - 600 / 20 to - pink - 600 / 20 border - red - 500 / 30">;"
-</div>"
               <h3 className="text - xl font - bold mb - 3">Marketing & Advertising</h3>;""
-              <p className="text - gray - 300 text - sm">;"
-</p>
-              </p>;
-            </div>;"
             <div className="card bg - gradient - to - r from - indigo - 600 / 20 to - purple - 600 / 20 border - indigo - 500 / 30">;"
-</div>"
               <h3 className="text - xl font - bold mb - 3">Logistics & Transportation</h3>;""
-              <p className="text - gray - 300 text - sm">;"
-</p>
-              </p>;
-            </div>;
-          </div>;
-        </section>;"
-        <section className="mb - 20">;"
-</section>"
           <h2 className="text - 3xl font - bold text - center mb - 12">Why Choose AI Business Intelligence?</h2>;""
           <div className="grid grid - cols - 1 md:grid - cols - 2 gap - 8">;"
-</div>"
             <div className="card">;"
-</div>"
               <h3 className="text - xl font - bold mb - 4">Data - Driven Decisions</h3>;""
               <p className="text - gray - 300">;"
-</p>
-              </p>;
-            </div>;"
-            <div className="card">;"
-</div>"
               <h3 className="text - xl font - bold mb - 4">Predictive Capabilities</h3>;""
-              <p className="text - gray - 300">;"
-</p>
-              </p>;
-            </div>;"
-            <div className="card">;"
-</div>"
               <h3 className="text - xl font - bold mb - 4">Real - Time Insights</h3>;""
-              <p className="text - gray - 300">;"
-</p>
-              </p>;
-            </div>;"
-            <div className="card">;"
-</div>"
               <h3 className="text - xl font - bold mb - 4">Cost Reduction</h3>;""
-              <p className="text - gray - 300">;"
-</p>
-              </p>;
-            </div>;
-          </div>;
-        </section>;"
         <section className="text - center">;"
-</section>"
           <div className="card bg - gradient - to - r from - purple - 600 / 20 to - blue - 600 / 20 border - purple - 500 / 30 max - w-4xl mx - auto">;"
-</div>"
             <h2 className="text - 3xl font - bold mb - 4">Ready to Transform Your Business Intelligence?</h2>;""
             <p className="text - xl text - gray - 300 mb - 8">;"
-</p>
-            </p>;"
             <div className="flex flex - col sm: flex - row gap - 4 justify - center">;"
-</div>"
-              <Link href="/contact" className="btn - primary">;"
-</Link>
-              </Link>;"
-              <Link href="/case - studies" className="btn - secondary">;"
-</Link>
-              </Link>;
-            </div>;
-          </div>;
+
+
         </section>;
       </div>;)
     </div>);"

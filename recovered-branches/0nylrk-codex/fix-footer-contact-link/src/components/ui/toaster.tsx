@@ -16,4 +16,4 @@ export function Toaster() {
         descriptionClassName: "text-zion-slate-light","
       }}
     />
-</SonnerToaster>)"
+)"

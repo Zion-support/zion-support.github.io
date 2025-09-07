@@ -13,18 +13,14 @@ export interface Integration {
   status: IntegrationStatus;
   lastSync?: string;
   type: IntegrationType;
-}
 
 export interface SyncLog {
   // TODO: Implement
-}
-  id: string;,
   integration: string;
   event: string;,"
   status: "success" | "error" | "warning";"
   timestamp: string;,
   details: string;
-}
 
 export type CrmIntegrationEvents ="
   | "contact_synced"""
@@ -37,8 +33,4 @@ export type AtsIntegrationEvents ="
   | "resume_uploaded"""
   | "resume_uploaded";""
   | "job_posted";"
-;"
-  | "resume_uploaded";""
-  | "job_posted";""
-  | "resume_uploaded";""
   | "job_posted";""

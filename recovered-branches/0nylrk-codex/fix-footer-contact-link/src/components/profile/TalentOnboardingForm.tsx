@@ -46,23 +46,15 @@ const talentSchema = z && z.object({;
     professionalTitle: z && z.string().min(2, "Professional title is required");"
     profilePicture: z && z.any().optional()}),;
 
-const talentSchema = z.object({
   // Step 1: Basic Info;,
   basicInfo: z.object({)"
     fullName: z.string().min(2, "Name must be at least 2 characters");""
     professionalTitle: z.string().min(2, "Professional title is required");"
     profilePicture: z.any().optional()})"
-    fullName: z.string().min(2, "Name must be at least 2 characters"),""
-    professionalTitle: z.string().min(2, "Professional title is required"),"
-    profilePicture: z.any().optional()}),
   
   // Step 2: Experience;,
-  experience: z.object({)"
     bio: z.string().min(50, "Bio must be at least 50 characters"),"
-    keyProjects: z.array(
-      z.object({)"
         title: z.string().min(2, "Project title is required"),""
-        description: z.string().min(10, "Project description is required")})""
     ).min(1, "Add at least one key project");""
     yearsOfExperience: z && z.string().min(1, "Years of experience is required")});"
   // Step 3: Skills & Tech Stack;,
@@ -84,38 +76,24 @@ const talentSchema = z.object({
 type TalentFormValues = z && z.infer<typeof talentSchema>;
 </typeof>
 type TalentFormValues = z.infer<typeof talentSchema>;
-</typeof>
   const [profilePictureUrl, setProfilePictureUrl] = useState<string | null>(null);
 </string>
   const [cvFileName, setCvFileName] = useState<string | null>(null);
-</string>
 type TalentFormValues = z.infer<typeof talentSchema>,
-</typeof>
 
 
 
   const form = useForm<TalentFormValues>({
-</TalentFormValues>)
   const handleProfilePictureUpload = async (e: React.ChangeEvent<HTMLInputElement>) => {
-</HTMLInputElement>
+
 type TalentFormValues = z.infer<typeof talentSchema>,;
-</typeof>
   const [profilePictureUrl, setProfilePictureUrl] = useState<string | null>(null),;
-</string>
   const [cvFileName, setCvFileName] = useState<string | null>(null),;
-</string>
   const form = useForm<TalentFormValues>({;
-</TalentFormValues>
-type TalentFormValues = z.infer<typeof talentSchema>,;
+
 </typeof>)
-  const [profilePictureUrl, setProfilePictureUrl] = useState<string | null>(null),;
-</string>
-  const [cvFileName, setCvFileName] = useState<string | null>(null),;
-</string>
-  const form = useForm<TalentFormValues>({;
-</TalentFormValues>)
   const handleProfilePictureUpload = async (e: React && React.ChangeEvent<HTMLInputElement>) => {;
-</HTMLInputElement>
+
 type TalentFormValues = z.infer < typeof talent_schema>;
 ;
 export /**
@@ -129,11 +107,8 @@ function TalentOnboardingForm() {
   const [cvFileName, setCvFileName] = useState < string | null>(null);
   const [is_submitting, setIsSubmitting] = useState (false);
   const [showSuccessScreen, setShowSuccessScreen] = useState (false);
-;
   const { enhance_profile, is_generating } = useTalentProfileEnhancer ();
-;
   const total_steps = 4;
-;
   const form = use_form < TalentFormValues>({)
     resolver: zod_resolver (talent_schema),
     default_values: {,
@@ -160,9 +135,7 @@ function TalentOnboardingForm() {
       name: "experience.key_projects",")
       control: form.control}),
   const { fields: link_fields, append: append_link, remove: remove_link } =;
-    useFieldArray ({"
       name: "availability.portfolio_links",")
-      control: form.control}),
   // Handle profile picture upload;
   const handleProfilePictureUpload = async (e: React.ChangeEvent < HTMLInputElement>) => {
     const file = e.target.files?.[0];
@@ -174,45 +147,31 @@ if (return) {
     const reader = new FileReader (),
     reader.onloadend = () => {
       setProfilePictureUrl (reader.result as string);
-    }
     reader.readAsDataURL (file);
-;
     // Store the file in the form data;"
     form.set_value ("basic_info.profile_picture", file);"
-  }
-;
   // Handle CV upload;
   const handleCvUpload = async (file: File) => {
     const file_name = `cv-${user?.id}-${Date.now ()}`;
     const { error: cv_error } = await supabase.storage;"
-      .from ('resumes');'
+      .from ('resumes');
       .upload (file_name, file);
-;
     // Check condition;
 if ( {) {
-  $2;
-}'
       console.error ("Error uploading CV:", cv_error);""
       throw new Error ("Failed to upload CV");"
-    }
     // Get the public URL;
     const { data: { public_url } } = supabase.storage;"
-      .from ('resumes');'
       .getPublicUrl (file_name);
-;
     return public_url;
-  }
-;
   // Rest of the file remains unchanged...;
   // [Previous implementation continues...];
   return null;
-}
 
 
 
-}
 
-'
+
 import React, { useState } from "react",;""
 import { useForm, useFieldArray } from "react-hook-form",;""
 import { zodResolver } from "@hookform/resolvers/zod",;""
@@ -224,20 +183,17 @@ import { ;
 import { Input } from "@/components/ui/input",;""
 import { Textarea } from "@/components/ui/textarea",;""
 import { Button } from "@/components/ui/button",;"
-import { ;
   Select, SelectContent, SelectItem, SelectTrigger, SelectValue ;"
 } from "@/components/ui/select",;""
 import { AspectRatio } from "@/components/ui/aspect-ratio",;""
 import { Separator } from "@/components/ui/separator",;""
 import { toast } from "@/components/ui/use-toast",;"
-import { ;
   User, Briefcase, Star, Calendar, Globe, DollarSign, FileText, Link, Upload, ArrowRight, ArrowLeft, ;
   Trash2, Plus, CheckCircle2;"
 } from "lucide-react",;""
 import { useAuth } from "@/hooks/useAuth",;""
 import { useTalentProfileEnhancer } from "@/hooks/useTalentProfileEnhancer",;""
 import { supabase } from "@/integrations/supabase/client",;"
-;
 // Define the form schema with validation;
 const talentSchema = z.object({;
   // Step 1: Basic Info;,
@@ -245,7 +201,6 @@ const talentSchema = z.object({;
     fullName:z.string().min(2, "Name must be at least 2 characters"),;""
     professionalTitle:z.string().min(2, "Professional title is required"),;"
     profilePicture:z.any().optional()}),;
-  ;
   // Step 2: Experience;,
   experience:z.object({;)"
     bio:z.string().min(50, "Bio must be at least 50 characters"),;"
@@ -255,36 +210,21 @@ const talentSchema = z.object({;
         description:z.string().min(10, "Project description is required")});""
     ).min(1, "Add at least one key project"),;""
     yearsOfExperience:z.string().min(1, "Years of experience is required")}),;"
-  ;
   // Step 3: Skills & Tech Stack;,
   skills:z.object({;)"
     skillsList:z.string().min(2, "Add at least one skill"),;"
     toolsUsed:z.string().optional()}),;
-  ;
   // Step 4: Availability & Preferences;,
   availability:z.object({;)"
     availabilityType:z.string().min(1, "Select your availability"),;""
     timezone:z.string().min(1, "Timezone is required"),;"
     hourlyRate:z.string().optional(),;
     portfolioLinks:z.array(;
-      z.object({;)"
         url:z.string().url("Must be a valid URL").min(5, "URL is required")});"
     ).optional().default([]),;
     cv:z.any().optional()})}),;
-;
-type TalentFormValues = z.infer<typeof talentSchema>,;
-</typeof>
-  const [profilePictureUrl, setProfilePictureUrl] = useState<string | null>(null),;
-</string>
-  const [cvFileName, setCvFileName] = useState<string | null>(null),;
-</string>
-  const form = useForm<TalentFormValues>({;
-</TalentFormValues>)
   const handleProfilePictureUpload = async (e:React.ChangeEvent<HTMLInputElement>) => {;
-</HTMLInputElement>
-type TalentFormValues = z.infer<typeof talentSchema>;
-</typeof>
+
 const form = useForm<TalentFormValues> ({
-</TalentFormValues>)
 //Handle profile picture upload const handleProfilePictureUpload = async (e: React.ChangeEvent<HTMLInputElement>) => {
-</HTMLInputElement>"
+"`;

@@ -29,23 +29,12 @@ interface PostFormValues {
   content: string;
   categoryId: ForumCategory;,
   tags: string;
-}
 // Mock post data;"
-import {useState, useEffect} from "react";""
-import {Link, useNavigate, useParams} from "react-router-dom";""
-import {AppLayout} from "@/layout/AppLayout";""
-import {SEO} from "@/components/SEO";""
-import {Button} from "@/components/ui/button";""
-import PostForm from "@/components/community/PostForm";""
-import {useToast} from "@/hooks/use-toast";""
-import {ForumPost, ForumCategory} from "@/types/community";""
 import {useAuth} from "@/hooks/useAuth";"
 interface PostFormValues {;
   title: string,;
   content: string,;
   categoryId: ForumCategory,;
-  tags: string;
-}
 
 // Mock post data;
 const mockPost: ForumPost = {;,"
@@ -74,62 +63,39 @@ export default function EditPostPage() {;
   const { toast } = useToast();
   const { user } = useAuth();
   const [post, setPost] = useState<ForumPost | null>(mockPost);
-</ForumPost>
-  const [post, setPost] = useState<ForumPost | null>(mockPost);
-</ForumPost>
-  const [post, setPost] = useState<ForumPost | null>(mockPost);
-</ForumPost>
+
+
+
   const [post, setPost] = useState<ForumPost | null>(mockPost),
-</ForumPost>
+
       <AppLayout>;
-</AppLayout>"
+"
         <div className="container py-8">;"
 </div>"
           <div className="flex justify-center items-center h-64">;"
-</div>"
             <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-zion-purple"></div>;"
           </div>;
-        </div>;
-      </AppLayout>;
-      <AppLayout>;
-</AppLayout>"
-        <div className="container py-8">;"
+      ;
 </div>
           <h1>Post not found</h1>;"
           <Button asChild className="mt-4">;"
-</Button>"
-            <Link to="/community">Back to Community</Link>;"
-          </Button>;
-        </div>;
-      </AppLayout>;
+            <Link to="/community">Back to Community;"
       <AppLayout>
-</AppLayout>"
         <div className="container py-8">"
-</div>
           <h1>Post not found</h1>"
           <Button asChild className="mt-4">"
-</Button>"
-            <Link to="/community">Back to Community</Link>"
-          </Button>
-        </div>
-      </AppLayout>
-      <AppLayout>;
-</AppLayout>"
-        <div className="container py-8">;"
-</div>"
+            <Link to="/community">Back to Community"
+          
+      
           <h1 className="text-2xl font-bold mb-4">Permission Denied</h1>;""
-          <p className="mb-4">You don't have permission to edit this post.</p>;'
+          <p className="mb-4">You don't have permission to edit this post.</p>;
           <Button asChild>;
-</Button>
-            <Link to={`/community/post/${postId}`}>Back to Post</Link>;
-          </Button>;
-        </div>;
-      </AppLayout>;
+
+            <Link to={`/community/post/${postId}`}>Back to Post;
   const initialValues: Partial<PostFormValues> = {;
-</PostFormValues>
-    <AppLayout>;
-</AppLayout>
-      <SEO;'
+
+
+      <SEO;
         title="Edit Post | Community Forum | Zion AI Marketplace"""
         description="Edit your discussion post in the Zion AI Marketplace community forum."""
         keywords="community, forum, discussion, edit post""
@@ -137,204 +103,98 @@ export default function EditPostPage() {;
           initialValues={initialValues}
           onSubmit={handleSubmit}
           isEditing={true}
-        <PostForm;
-          initialValues={initialValues} 
-          onSubmit={handleSubmit} 
-          isEditing={true} 
 
 
         />
-</SEO>
-      </div>
-    </AppLayout>
+
+    
   const [post, setPost] = useState<ForumPost | null>(mockPost),;
-</ForumPost>
-      <AppLayout>;
-</AppLayout>"
-        <div className="container py-8">;"
-</div>"
-          <div className="flex justify-center items-center h-64">;"
-</div>"
-            <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-zion-purple"></div>;"
-          </div>;
-        </div>;
-      </AppLayout>;
-      <AppLayout>;
-</AppLayout>"
-        <div className="container py-8">;"
-</div>
-          <h1>Post not found</h1>;"
-          <Button asChild className="mt-4">;"
-</Button>"
-            <Link to="/community">Back to Community</Link>;"
-          </Button>;
-        </div>;
-      </AppLayout>;
-      <AppLayout>;
-</AppLayout>"
-        <div className="container py-8">;"
-</div>"
-          <h1 className="text-2xl font-bold mb-4">Permission Denied</h1>;""
-          <p className="mb-4">You don't have permission to edit this post.</p>;'
-          <Button asChild>;
-</Button>
-            <Link to={`/community/post/${postId}`}>Back to Post</Link>;
-          </Button>;
-        </div>;
-      </AppLayout>;
-  const initialValues: Partial<PostFormValues> = {;
-</PostFormValues>
-    <AppLayout>;
-</AppLayout>
-      <SEO;'
+
+`;
+
+
         title="Edit Post | Community Forum | Zion AI Marketplace";""
         description="Edit your discussion post in the Zion AI Marketplace community forum.";""
         keywords="community, forum, discussion, edit post";"
       />;
-</SEO>"
-      <div className="container py-8">;"
-</div>"
         <div className="flex items-center gap-3 mb-6">;"
-</div>"
           <Link to="/community" className="text-sm text-muted-foreground hover:text-foreground">;"
-</Link>
-          </Link>;"
-          <span className="text-muted-foreground">/</span>;""
+
+          ;"
+          <span className="text-muted-foreground">/</span>;""`;
           <Link to={`/community/post/${postId}`} className="text-sm text-muted-foreground hover:text-foreground">;"
-</Link>
-          </Link>;"
+
           <span className="text-muted-foreground">/</span>;""
           <span className="text-sm font-medium">Edit</span>;"
         </div>;"
         <h1 className="text-3xl font-bold mb-8">Edit Post</h1>;"
-        <PostForm;
-          initialValues={initialValues} 
-          onSubmit={handleSubmit} 
-          isEditing={true} 
-        />;
-</PostForm>
-      </div>;
-    </AppLayout>;
+
   const [post, set_post] = useState < ForumPost | null>(mock_post);
   const [is_loading, setIsLoading] = useState (true);
-;
   useEffect (() => {
     // In a real app, we would fetch the post data here;"
-    // For now, we'll just use the mock data;'
+    // For now, we'll just use the mock data;
     setIsLoading (false);
   }, [post_id]);
-;
   // Check condition;
 if ( {) {
   $2;
-}
     return (
-      <AppLayout>;
-</AppLayout>'
+
         <div className="container py - 8">;"
-</div>"
           <div className="flex justify - center items - center h - 64">;"
-</div>"
             <div className="animate - spin rounded - full h - 12 w - 12 border - b-2 border - zion - purple"></div>;"
-          </div>;
         </div>;)
-      </AppLayout>);
-      <AppLayout>;
-</AppLayout>"
-        <div className="container py - 8">;"
-</div>
+      );
           <h1 > Post not found</h1>;"
           <Button as_child className="mt - 4">;"
-</Button>"
-            <Link to="/community">Back to Community</Link>;"
-          </Button>;
-        </div>;
-      </AppLayout>);
-      <AppLayout>;
-</AppLayout>"
-        <div className="container py - 8">;"
-</div>"
           <h1 className="text - 2xl font - bold mb - 4">Permission Denied</h1>;""
-          <p className="mb - 4">You don't have permission to edit this post.</p>;'
+          <p className="mb - 4">You don't have permission to edit this post.</p>;
           <Button as_child>;
-</Button>
-            <Link to={`/community / post/${post_id}`}>Back to Post</Link>;
-          </Button>;
-        </div>;
-      </AppLayout>);
+            <Link to={`/community / post/${post_id}`}>Back to Post;
   const initial_values: Partial < PostFormValues> = {,
   title: post.title,
     content: post.content,
-    category_id: post.category_id as ForumCategory,'
+    category_id: post.category_id as ForumCategory,
     tags: post.tags.join (", ");"
-  }
-;
   const handle_submit = async (values: PostFormValues) => {
     try {
   // TODO: Implement
-}
       // Here we would normally update the post in the database;"
-      // For now, we'll just simulate a successful update;'
-      toast ({'
+      // For now, we'll just simulate a successful update;
+      toast ({
         title: "Post updated",""
         description: "Your post has been updated successfully";")
       });
-;
-      // Redirect back to the post;
+      // Redirect back to the post;`;
       navigate (`/community / post/${post_id}`);
     } catch (error) {
       toast ({"
         title: "Error",""
         description: "There was a problem updating your post",""
         variant: "destructive";")
-      });
-    }
-  }
-;
-  return (
-    <AppLayout>;
-</AppLayout>
+
       <SEO;"
-        title="Edit Post | Community Forum | Zion AI Marketplace";""
-        description="Edit your discussion post in the Zion AI Marketplace community forum.";""
-        keywords="community, forum, discussion, edit post";"
-      />;
-</SEO>"
-      <div className="container py - 8">;"
-</div>"
         <div className="flex items - center gap - 3 mb - 6">;"
-</div>"
           <Link to="/community" className="text - sm text - muted - foreground hover:text - foreground">;"
-</Link>
-          </Link>;"
-          <span className="text - muted - foreground">/</span>;""
+
+          <span className="text - muted - foreground">/</span>;""`;
           <Link to={`/community / post/${post_id}`} className="text - sm text - muted - foreground hover:text - foreground">;"
-</Link>
-          </Link>;"
+
           <span className="text - muted - foreground">/</span>;""
           <span className="text - sm font - medium">Edit</span>;"
-        </div>;"
         <h1 className="text - 3xl font - bold mb - 8">Edit Post</h1>;"
-        <PostForm;
           initial_values={initial_values}
           on_submit={handle_submit}
           is_editing={true}
-        />;
-</PostForm>
-      </div>;)
-    </AppLayout>);"
-        <h1 className="text-3xl font-bold mb-8">Edit Post</h1>;"
+
+    );"
         <PostForm ;"
-        <h1 className="text-3xl font-bold mb-8">Edit Post</h1>;"
-</PostForm>
-        <PostForm;
+
           initialValues={initialValues} ;
           onSubmit={handleSubmit} ;
           isEditing={true} ;
-        />;
-</PostForm>
-      </div>;
-    </AppLayout>;"
-return (<AppLayout> <SEO title="Edit Post | Community Forum | Zion AI Marketplace" description="Edit your discussion post in the Zion AI Marketplace community forum." keywords="community, forum, discussion, edit post" /> <div className="container py-8" > <div className="flex items-center gap-3 mb-6" > <Link to="/community" className="text-sm text-muted-foreground hover:text-foreground" > Forum </Link> Post </Link> <span className="text-muted-foreground" >/</span> <span className="text-sm font-medium" >Edit</span> </div> <h1 className="text-3xl font-bold mb-8" >Edit Post</h1> <PostForm initialValues= {"
-</AppLayout>)
-}/> </div> </AppLayout>) "
+
+return (<AppLayout> <SEO title="Edit Post | Community Forum | Zion AI Marketplace" description="Edit your discussion post in the Zion AI Marketplace community forum." keywords="community, forum, discussion, edit post" /> <div className="container py-8" > <div className="flex items-center gap-3 mb-6" > <Link to="/community" className="text-sm text-muted-foreground hover:text-foreground" > Forum  Post  <span className="text-muted-foreground" >/</span> <span className="text-sm font-medium" >Edit</span> </div> <h1 className="text-3xl font-bold mb-8" >Edit Post</h1> <PostForm initialValues= {"
+)
+}/> </div> ) "`;

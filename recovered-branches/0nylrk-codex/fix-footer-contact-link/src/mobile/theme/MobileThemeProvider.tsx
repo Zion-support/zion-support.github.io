@@ -4,7 +4,6 @@ interface MobileThemeProviderProps {
   // TODO: Implement
 }
   children: React.ReactNode;
-}
 
 
 
@@ -17,19 +16,13 @@ export function MobileThemeProvider({ children }: MobileThemeProviderProps) {;
   return ("
     <div className={`mobile-app ${theme === "dark" ? "dark" : "light"}`}>"
 </div>
-    </div>"
-    <div className={`mobile-app ${theme === 'dark' ? 'dark' : 'light'}`}>;'
-</div>'
-    <div className={`mobile-app ${theme === 'dark' ? 'dark' : 'light'}`}>;'
-</div>
-    </div>;'
-    <div className={`mobile - app ${theme === 'dark' ? 'dark' : 'light'}`}>;'
+    </div>"`;
+    <div className={`mobile-app ${theme === 'dark' ? 'dark' : 'light'}`}>;
+</div>`;
+    </div>;`;
+    <div className={`mobile - app ${theme === 'dark' ? 'dark' : 'light'}`}>;
 </div>)
-    </div>);'
-    <div className={`mobile-app ${theme === 'dark' ? 'dark' :'light'}`}>;'
-</div>
+    </div>);`;
+    <div className={`mobile-app ${theme === 'dark' ? 'dark' :'light'}`}>;
     </div>;
-}</div>) '
-    <div className={`mobile-app ${theme === 'dark' ? 'dark' : 'light'}`}>;'
-</div>
-    </div>'
+}</div>) `;

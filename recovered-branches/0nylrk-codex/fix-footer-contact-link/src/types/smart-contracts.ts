@@ -17,11 +17,8 @@ export interface SmartContractInfo {;
 
 export interface EscrowContractDetails {;
 
-}
 export interface EscrowContractDetails {
   // TODO: Implement
-}
-export interface EscrowContractDetails {;
   client: string;,
   talent: string;
   amount: number;,
@@ -29,7 +26,6 @@ export interface EscrowContractDetails {;
   deliverables: string;,
   completionDeadline: string;
   arbitrator?: string;
-}
 
 
 
@@ -40,29 +36,15 @@ export interface DeploymentOptions {;
   walletAddress?: string;
   useEscrow: boolean;,
   deployToChain: boolean;
-}
 export interface DeploymentOptions {
   // TODO: Implement
-}
-  network: BlockchainNetwork;
   wallet_address?: string;
   use_escrow: boolean,
-  deployToChain: boolean;
 
-}
 ;
 
 
 
-  arbitrator?: string;
-}
-;
-export interface DeploymentOptions {;
   network: BlockchainNetwork,;
   walletAddress?: string,;
-  useEscrow: boolean;,
-  deployToChain: boolean;
-}
-;
-}
 "

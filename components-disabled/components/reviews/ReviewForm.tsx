@@ -16,33 +16,31 @@ class ErrorBoundary extends React.Component {
     return { hasError: true };
 
   componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);'
+    console.error('Error caught by boundary:', error, errorInfo);
   render() {
     if (this.state.hasError) {
-      return <div>Something went wrong.</div>;'
+      return <div>Something went wrong.</div>;
  </div> <div> <label className="block text-sm font-medium mb-2" >Your Review</label> <textarea required /> </div> </div> <span className="pill" >Optional</span> </div> </div> <span className="pill" >Optional</span> </div> </div> <span className="pill" >Optional</span> </div> </div> <span className="pill" >Optional</span> </div> </div> <button > {;""
-  submitting ? 'Submitting...' : 'Submit Review' ;'
-}</button> </form>) ;'
-  initial: Pick<ReviewFormValues, 'projectId' | 'fromRole' | 'fromId'>;};import React, { useState } from 'react';'
-</ReviewFormValues>'
-  initial: Pick<ReviewFormValues, 'projectId' | 'fromRole' | 'fromId'>;'
-</ReviewFormValues>
+  submitting ? 'Submitting...' : 'Submit Review' ;
+}</button> </form>) ;
+  initial: Pick<ReviewFormValues, 'projectId' | 'fromRole' | 'fromId'>;};import React, { useState } from 'react';
+
+  initial: Pick<ReviewFormValues, 'projectId' | 'fromRole' | 'fromId'>;
+
 const ReviewForm: React.FC<Props> = ({ initial }) => {;
-</Props>
+
   const [communication, setCommunication] = useState<number | undefined>();
 </number>
   const [qualityOfWork, setQualityOfWork] = useState<number | undefined>();
-</number>
   const [timeliness, setTimeliness] = useState<number | undefined>();
-</number>
   const [wouldWorkWithAgain, setWouldWorkWithAgain] = useState<boolean>(false);
 </boolean>
   const [message, setMessage] = useState<string | null>(null);
-</string>'
-  initial: Pick < ReviewFormValues, 'project_id' | 'from_role' | 'from_id'>;'
+</string>
+  initial: Pick < ReviewFormValues, 'project_id' | 'from_role' | 'from_id'>;
 const ReviewForm: React.FC < Props> = ({ initial }) => {
-  const [rating, set_rating] = useState (0);'
-  const [text, set_text] = useState ('');'
+  const [rating, set_rating] = useState (0);
+  const [text, set_text] = useState ();
   const [anonymous, set_anonymous] = useState (false);
   const [communication, set_communication] = useState < number | undefined>();
   const [qualityOfWork, setQualityOfWork] = useState < number | undefined>();
@@ -60,10 +58,9 @@ function handle_submit() {
     set_message (null),
     try {
   // TODO: Implement
-}'
-      const res = await fetch ('/api / reviews / submit', {''
-        method: 'POST',''
-        headers: { 'Content - Type': 'application / json' },'
+      const res = await fetch ('/api / reviews / submit', {
+        method: 'POST',
+        headers: { 'Content - Type': 'application / json' },
         body: JSON.stringify ({,
   project_id: initial.project_id,
           from_role: initial.from_role,
@@ -84,10 +81,10 @@ function handle_submit() {
     e && e.preventDefault();
     setSubmitting(true);
     setMessage(null),;
-    try {;'
-      const res = await fetch('/api/reviews/submit', {;''
-        method: 'POST',;''
-        headers: { 'Content-Type': 'application/json' },;'
+    try {;
+      const res = await fetch('/api/reviews/submit', {;
+        method: 'POST',;
+        headers: { 'Content-Type': 'application/json' },;
         body: JSON && JSON.stringify({;,
   projectId: initial && initial.projectId,;
           fromRole: initial && initial.fromRole,;
@@ -102,168 +99,95 @@ function handle_submit() {
             wouldWorkWithAgain,;
           },;)
         }),;
-      });
-      const data = await res && res.json();'
-      if (!res && res.ok) throw new Error(data && data.error || 'Failed to submit');''
-      setMessage('Review submitted! Pending admin approval.');'
+      const data = await res && res.json();
+      if (!res && res.ok) throw new Error(data && data.error || 'Failed to submit');
+      setMessage('Review submitted! Pending admin approval.');
     } catch (err: any) {;
       setMessage(err && err.message);
     } finally {;
       setSubmitting(false);    }
   return (
-'
-    <form onSubmit={handleSubmit} className='space-y-6'>;'
+
+    <form onSubmit={handleSubmit} className='space-y-6'>;
 </form>
       <div>;
-</div>'
-        <label className='block text-sm font-medium mb-2'>Overall Rating</label>        <StarRating value={rating} onChange={setRating} />;'
+</div>
+        <label className='block text-sm font-medium mb-2'>Overall Rating</label>        <StarRating value={rating} onChange={setRating} />;
       </div>;
-      <div>;
-</div>'
-        <label className='block text-sm font-medium mb-2'>Your Review</label>          categories: {;''
-    <form on_submit={handle_submit} className='space - y-6'>;'
-</form>
-      <div>;
-</div>'
-        <label className='block text - sm font - medium mb - 2'>Overall Rating</label>        <StarRating value={rating} on_change={set_rating} />;'
-      </div>;
-      <div>;
-</div>'
-        <label className='block text - sm font - medium mb - 2'>Your Review</label>          categories: {'
+        <label className='block text-sm font-medium mb-2'>Your Review</label>          categories: {;
+    <form on_submit={handle_submit} className='space - y-6'>;
+        <label className='block text - sm font - medium mb - 2'>Overall Rating</label>        <StarRating value={rating} on_change={set_rating} />;
+        <label className='block text - sm font - medium mb - 2'>Your Review</label>          categories: {
       <div>
-</div>'
         <label className="block text-sm font-medium mb-2" htmlFor="input-Overall Rating">Overall Rating</label>"
         <StarRating value={rating} onChange={setRating} />
-</StarRating>
-      </div>
-      <div>
+
 </div>"
-    <form onSubmit={handleSubmit} className='space-y-6'>;'
-</form>
-      <div>;
-</div>'
         <label className='block text-sm font-medium mb-2'>Overall Rating</label>    <form onSubmit={handleSubmit} className="space-y-6">;"
-      <div>;
-</div>"
         <label className="block text-sm font-medium mb-2" htmlFor="input-Overall Rating">Overall Rating</label>;"
         <StarRating value={rating} onChange={setRating} />;
-</StarRating>
-      </div>;
-      <div>;
-</div>"
-        <label className='block text-sm font-medium mb-2'>Your Review</label>;'
-        <textarea;'
-          className='w-full rounded-md border border-gray-300 p-3 focus:outline-none focus:ring-2 focus:ring-blue-500''
+
+        <label className='block text-sm font-medium mb-2'>Your Review</label>;
+        <textarea;
+          className='w-full rounded-md border border-gray-300 p-3 focus:outline-none focus:ring-2 focus:ring-blue-500
           rows={5}
           value={text})
           onChange={e => setText(e && e.target.value)}          required;
 </textarea>
-      </div>;
-        <textarea;'
           className="w-full rounded-md border border-gray-300 p-3 focus: outline-none focus:ring-2 focus:ring-blue-500""
-          rows={5}
           value={text}
         <input;"
-          id='anonymous'''
-          type='checkbox''
+          id='anonymous
+          type='checkbox
           checked={anonymous}
           onChange={e => setAnonymous(e && e.target.checked)}
-</textarea>'
-        <label htmlFor='anonymous'>Submit anonymously</label>;''
-      <div className='grid md:grid-cols-2 gap-4'>;'
-</div>'
-        <div className='enhanced-card'>;'
-</div>'
-          <div className='flex items-center justify-between mb-2'>;'
-</div>'
-            <span className='text-sm'>Communication</span>;'
+        <label htmlFor='anonymous'>Submit anonymously</label>;
+      <div className='grid md:grid-cols-2 gap-4'>;
+        <div className='enhanced-card'>;
+          <div className='flex items-center justify-between mb-2'>;
+            <span className='text-sm'>Communication</span>;
             <StarRating;
               value={communication |0}
               onChange={v => setCommunication(v)}
-</StarRating>'
-    <form on_submit={handle_submit} className='space - y-6'>;'
-</form>
-      <div>;
-</div>'
+
         <label className='block text - sm font - medium mb - 2'>Overall Rating</label>    <form on_submit={handle_submit} className="space - y-6">;"
-      <div>;
-</div>"
         <label className="block text - sm font - medium mb - 2" html_for="input - Overall Rating">Overall Rating</label>;"
         <StarRating value={rating} on_change={set_rating} />;
-</StarRating>
-      </div>;
-      <div>;
-</div>"
-        <label className='block text - sm font - medium mb - 2'>Your Review</label>;'
-        <textarea;'
-          className='w - full rounded - md border border - gray - 300 p - 3 focus:outline - none focus:ring - 2 focus:ring - blue - 500';'
-          rows={5}
-          value={text}
+
+        <label className='block text - sm font - medium mb - 2'>Your Review</label>;
+          className='w - full rounded - md border border - gray - 300 p - 3 focus:outline - none focus:ring - 2 focus:ring - blue - 500';
           on_change={e => set_text (e.target.value)}          required;
-</textarea>
-      </div>;
-        <textarea;'
           className="w - full rounded - md border border - gray - 300 p - 3 focus: outline - none focus:ring - 2 focus:ring - blue - 500";"
-          rows={5}
-          value={text}
           on_change={(e) => set_text (e.target.value)}
-</textarea>
       </div>;"
-      <div className='flex items - center gap - 3'>;'
-</div>
-        <input;'
-          id='anonymous';''
-          type='checkbox';'
-          checked={anonymous}
+      <div className='flex items - center gap - 3'>;
+        <input;
+          id='anonymous';
+          type='checkbox';
           on_change={e => set_anonymous (e.target.checked)}
-</input>'
-        <label html_for='anonymous'>Submit anonymously</label>;''
-      <div className='grid md:grid - cols - 2 gap - 4'>;'
-</div>'
-        <div className='enhanced - card'>;'
-</div>'
-          <div className='flex items - center justify - between mb - 2'>;'
-</div>'
-            <span className='text - sm'>Communication</span>;'
-            <StarRating;
+</input>
+        <label html_for='anonymous'>Submit anonymously</label>;
+      <div className='grid md:grid - cols - 2 gap - 4'>;
+        <div className='enhanced - card'>;
+          <div className='flex items - center justify - between mb - 2'>;
+            <span className='text - sm'>Communication</span>;
               value={communication || 0}
               on_change={v => set_communication (v)}
-</StarRating>
-          </div>;'
-          <span className='pill'>Optional</span>;'
-        </div>;'
-        <div className='enhanced - card'>;'
-</div>'
-          <div className='flex items - center justify - between mb - 2'>;'
-</div>'
-            <span className='text - sm'>Quality of Work</span>;'
-            <StarRating;
+
+          <span className='pill'>Optional</span>;
+            <span className='text - sm'>Quality of Work</span>;
               value={qualityOfWork || 0}
               on_change={v => setQualityOfWork (v)}
-</StarRating>
-          </div>;'
-          <span className='pill'>Optional</span>;'
-        </div>;'
-        <div className='enhanced - card'>;'
-</div>'
-          <div className='flex items - center justify - between mb - 2'>;'
-</div>'
-            <span className='text - sm'>Timeliness</span>;'
-            <StarRating;
+
+            <span className='text - sm'>Timeliness</span>;
               value={timeliness || 0}
               on_change={v => set_timeliness (v)}
-</StarRating>
-          </div>;'
-          <span className='pill'>Optional</span>;'
-        </div>;
-          </div>;'
-          <span className='pill'>Optional</span>        </div>;'
-      </div>;
-      </button>;'
-      {message && <p className='text-sm'>{message}</p>}'
+
+          <span className='pill'>Optional</span>        </div>;
+      </button>;
+      {message && <p className='text-sm'>{message}</p>}
     </form>;
 export default ReviewForm;    </form>;
-      </button>;'
-      {message && <p className='text - sm'>{message}</p>}'
+      {message && <p className='text - sm'>{message}</p>}
     </form>);
-export default ReviewForm;    </form>);'
+export default ReviewForm;    </form>);

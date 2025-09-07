@@ -1,11 +1,11 @@
 #!/usr/bin/env node;
-const fs = require('fs')''
-console.log(' Applying ultimate final fixes...')''
-const seoContent = fs.readFileSync('src/components/SEO.tsx', 'utf8')''
-const seoFixed = seoContent.split('  );')[0] + '  );'''
-fs.writeFileSync('src/components/SEO.tsx', seoFixed, 'utf8')''
-console.log(' Fixed SEO.tsx')''
-const talentContent = fs.readFileSync('src/components/talent/TalentCard.jsx', 'utf8')''
+const fs = require('fs')
+console.log(' Applying ultimate final fixes...')
+const seoContent = fs.readFileSync('src/components/SEO.tsx', 'utf8')
+const seoFixed = seoContent.split('  );')[0] + '  );
+fs.writeFileSync('src/components/SEO.tsx', seoFixed, 'utf8')
+console.log(' Fixed SEO.tsx')
+const talentContent = fs.readFileSync('src/components/talent/TalentCard.jsx', 'utf8')
   .replace(/>")""
   .replace(/")""
   .replace(/loading="lazy/g, 'loading="lazy")""
@@ -34,5 +34,4 @@ const talentContent = fs.readFileSync('src/components/talent/TalentCard.jsx', 'u
   .replace(/featured: tru e/g, '"featured")""
   .replace(/"isAuthenticated": tru e/g, '"isAuthenticated")""
   .replace(/isLoading: fals e/g, '"isLoading")""
-  .replace(/user: nul l/g, '"user")""
   .replace(/user: nul l/g, '"user")""

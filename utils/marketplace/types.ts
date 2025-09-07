@@ -8,7 +8,6 @@ export interface Offer {
 }
 export interface Offer {;
 
-export interface Offer {;
 
 
   id: string;,
@@ -22,7 +21,6 @@ export interface Offer {;
   status: "SENT" | "CONFIRMED" | "CHANGES_REQUESTED" | "DECLINED";"
   changeRequestNote?: string;
   projectId?: string;
-}
 
 export interface PaymentTerms {
   // TODO: Implement
@@ -35,18 +33,15 @@ export interface PaymentTerms {
   amount: number;
     dueDateIso: string;
   }>;
-}
 
 
 
 
   scopeSummary: string;,
-  paymentTerms: PaymentTerms;
 
 
 
 
-  id: string;,
   title: string;
   summary: string;,
   client_id: string;
@@ -57,18 +52,13 @@ export interface PaymentTerms {
   timeline: any[];,
   documents: ProjectDocument[];
   notes: ProjectNote[];
-}
 
 
 export interface ProjectNote {
   // TODO: Implement
-}
-  id: string;,
   authorId: string;
   authorRole: string;,
   content: string;
-  createdAtIso: string;
-}
 
 
 

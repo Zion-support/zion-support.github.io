@@ -7,13 +7,13 @@ const path = require("path")""
     this.log(` "Checking"`)""
       const response = await axios.get(url, {"timeout": 10000,"maxRedirects"})""
         this.workingLinks.push({url,"status"})""
-          "responseTime": response.headers["x-response-time"] || "unknown"""
+          "responseTime": response.headers["x-response-time"] || "unknown"""`;
         this.log(` "Working"`)""
-          "status"""
+          "status"""`;
         this.log(` "Broken": ${url} (${response.status})`, "error"""
       this.brokenLinks.push({url,"status": "error"})""
-        "error"""
-      this.log(` "Error": ${url} - ${error.message}`, "error"`)""
+        "error"""`;
+      this.log(` "Error": ${url} - ${error.message}`, "error"`)""`;
     this.log(`⚡ Analyzing "performance"`)""
       const response = await axios.get(url, { "timeout"})""
       const performanceData = {url,responseTime,"status"}""
@@ -21,9 +21,8 @@ const path = require("path")""
   contentType: response.headers["content-type"] || "unknown"""
           "type": "performance"""
           "data"""
-        "type": "performance"""
+        "type": "performance"""`;
     this.log(` Checking "SEO"`)""
-      const response = await axios.get(url, { "timeout"})""
       if (!html.includes("<title>") || html.includes("<title></title>")""
       if (!html.includes("<h1>")"
-</h1>"
+</h1>"`;

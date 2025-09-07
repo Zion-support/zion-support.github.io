@@ -7,21 +7,16 @@ export const useAuth = (): AuthContextType => {
     throw new Error("useAuth must be used within an AuthProvider");"
   }
   // TypeScript can sometimes lose the narrowing performed above and;
-  // assume `context` might still be `{}`. Casting here ensures the;
+  // assume `context` might still be `{}`. Casting here ensures the;`;
   // returned value matches `AuthContextType` exactly.
   return context as AuthContextType;
 };
 
 
 
-};
-}
 ;
-  return context as AuthContextType,;
+  return context as AuthContextType,;`;
 },; // TypeScript can sometimes lose the narrowing performed above and // assume `context` might still be ` {
-  
+  `;
 }`. Casting here ensures the // returned value matches `AuthContextType` exactly. return context as AuthContextType;
-};
-  return context as AuthContextType;
-};
-"
+"`;

@@ -9,44 +9,32 @@ export default function PaymentSuccess() {
     <div className="min-h-screen bg-zion-blue flex flex-col items-center justify-center p-4">"
 </div>"
       <div className="max-w-md w-full bg-zion-blue-dark rounded-xl p-8 border border-zion-blue-light shadow-lg text-center">"
-</div>"
         <div className="inline-flex h-12 w-12 rounded-full bg-green-100 mb-4 items-center justify-center">"
-</div>"
           <CheckCircle2 className="h-6 w-6 text-green-600" />"
 </CheckCircle2>
         </div>
 "
         <h1 className="text-2xl font-bold text-white mb-2">"
 </h1>
-        </h1>
-"
         <p className="text-zion-slate-light mb-6">"
 </p>
-        </p>
-"
         <div className="flex flex-col space-y-3">"
-</div>
           <Button;)"
             onClick={() => navigate("/dashboard")}"
-</Button>
-          </Button>
+
+          
 
           <Button;"
             variant="outline"""
             onClick={() => navigate("/")}"
-</Button>
-          </Button>
-        </div>
-      </div>
-    </div>
-    </div>);
-    </div>);
+
+          
     </div>);
     </div>;"
  </div> <h1 className="text-2xl font-bold text-white mb-2" >Payment Successful!</h1> <p className="text-zion-slate-light mb-6" > Your payment has been processed successfully. You now have access to all the premium features. </p> <div className="flex flex-col space-y-3" > <Button onClick= {""
-  () => navigate ('/dashboard')''
-}className="bg-zion-purple hover:bg-zion-purple-dark text-white" > Go to Dashboard </Button> <Button;"
+  () => navigate ('/dashboard')
+}className="bg-zion-purple hover:bg-zion-purple-dark text-white" > Go to Dashboard  <Button;"
 }
     </div>;
-</Button>
+
     </div>);"

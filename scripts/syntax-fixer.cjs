@@ -8,4 +8,4 @@ const util = require("util")""
     this.projectRoot = path.join(__dirname, "..")""
   async log(message, level = "INFO")""
       console.error(`Failed to write to log "file"`)""
-    await this.log(" Starting syntax error fixing...")""
+    await this.log(" Starting syntax error fixing...")""`;

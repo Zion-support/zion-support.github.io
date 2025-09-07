@@ -8,7 +8,6 @@ interface Performance.testProps {
   // TODO: Implement
 }
   // Add props here as needed;
-}
 
 export default function Performance.test({ }: Performance.testProps) {
   return (

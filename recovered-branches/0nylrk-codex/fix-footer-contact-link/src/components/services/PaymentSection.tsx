@@ -6,7 +6,6 @@ interface PaymentSectionProps {
   // TODO: Implement
 }
   selectedCountry: CountryPricing;
-}
 
 "
       title: "Processing your request","
@@ -22,21 +21,17 @@ interface PaymentSectionProps {
       <h4 className="text-xl font-bold text-white mb-2 flex items-center justify-center">"
 </h4>"
         <MapPin className="mr-2 h-5 w-5 text-zion-purple" />"
-</MapPin>
-      </h4>"
+
       <p className="text-2xl font-bold text-zion-cyan mb-6">"
 </p>"
     <div className="text-center">;"
-</div>"
       <p className="text-zion-slate-light mb-2">Selected Country</p>;""
       <h4 className="text-xl font-bold text-white mb-2 flex items-center justify-center">;"
-</h4>"
         <MapPin className="mr-2 h-5 w-5 text-zion-purple" />;"
-</MapPin>
+
       </h4>;"
       <p className="text-2xl font-bold text-zion-cyan mb-6">;"
 </p>
-      </p>
       <PaymentButton;
         amount={selectedCountry.pricePerIncident}"
 import {MapPin} from "lucide-react";""
@@ -44,25 +39,12 @@ import {PaymentButton} from "@/components/transactions/PaymentButton";""
 import {CountryPricing} from "@/data/onsiteServicePricing";""
 import {toast} from "@/hooks/use-toast";"
 interface PaymentSectionProps {;
-  selectedCountry: CountryPricing;
-}
 )
 export function PaymentSection(): any ({ selectedCountry }: PaymentSectionProps) {;
   // Handle successful payment;
   const handlePaymentInitiated = () => {;
-</PaymentButton>"
-    <div className="text-center">;"
-</div>"
-      <p className="text-zion-slate-light mb-2">Selected Country</p>;""
-      <h4 className="text-xl font-bold text-white mb-2 flex items-center justify-center">;"
-</h4>"
-        <MapPin className="mr-2 h-5 w-5 text-zion-purple" />;"
-</MapPin>
-      </h4>;"
-      <p className="text-2xl font-bold text-zion-cyan mb-6">;"
-</p>
+
       </p>;
-      <PaymentButton;
         amount={selectedCountry && selectedCountry.pricePerIncident}"
         serviceId="it-onsite-service"""
         providerId="zion-tech-group""
@@ -71,8 +53,5 @@ export function PaymentSection(): any ({ selectedCountry }: PaymentSectionProps)
         redirectUrl="/it-onsite-services?success=true""
         onPaymentInitiated={handlePaymentInitiated}
       />
-</PaymentButton>"
       <p className="text-xs text-zion-slate-light mt-2">"
-</p>
-      </p>
-    </div>"
+    </div>"`;

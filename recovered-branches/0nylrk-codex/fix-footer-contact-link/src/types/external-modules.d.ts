@@ -9,15 +9,14 @@ declare module "react - resizable - panels";""
 declare module "@radix - ui / react - toggle - group";""
 declare module "@radix - ui / react - toggle";"
 ;"
-declare module '@tanstack / react - query';''
-declare module 'react - day - picker' {''
-declare module '@tanstack/react-query';'
+declare module '@tanstack / react - query';
+declare module 'react - day - picker' {
+declare module '@tanstack/react-query';
   export interface DateRange {
   // TODO: Implement
 }
     from?: Date;
     to?: Date;
-  }
 
   // Minimal placeholder for the DayPicker component used in the app;
   // The actual library provides full typings but we stub them here so the;
@@ -26,9 +25,7 @@ declare module '@tanstack/react-query';'
   // eslint - disable - next - line @typescript - eslint / no - explicit - any;
   export const DayPicker: any;
 
-}
 
-}'
 declare module "cmdk",""
 declare module "@radix-ui/react-context-menu",""
 declare module "vaul",""
@@ -40,10 +37,8 @@ declare module "@radix-ui/react-navigation-menu",""
 declare module "react-resizable-panels",""
 declare module "@radix-ui/react-toggle-group",""
 declare module "@radix-ui/react-toggle",""
-declare module '@tanstack/react-query',''
-declare module 'react-day-picker' {''
-declare module '@tanstack/react-query',''
-declare module 'react-day-picker' {''
+declare module '@tanstack/react-query',
+declare module 'react-day-picker' {
 declare module "cmdk",;""
 declare module "@radix-ui/react-context-menu",;""
 declare module "vaul",;""
@@ -55,38 +50,24 @@ declare module "@radix-ui/react-navigation-menu",;""
 declare module "react-resizable-panels",;""
 declare module "@radix-ui/react-toggle-group",;""
 declare module "@radix-ui/react-toggle",;""
-declare module '@tanstack/react-query',;''
-declare module 'react-day-picker' {;'
+declare module '@tanstack/react-query',;
+declare module 'react-day-picker' {;
   export interface DateRange {;
     from?: Date,;
-    to?: Date;
 
 };
-'
-declare module 'sonner';''
-declare module 'lucide-react' {''
-import {FC, SVGProps} from 'react';'
+
+declare module 'sonner';
+declare module 'lucide-react' {
+import {FC, SVGProps} from 'react';
   export type LucideProps = SVGProps < SVGSVGElement>;
   export type LucideIcon = FC < LucideProps>;
 ;
-  export interface DateRange {;
-    from?: Date;
-    to?: Date;
-  }
   // Minimal placeholder for the DayPicker component used in the app;
   // The actual library provides full typings but we stub them here so the;
   // TypeScript compiler can understand the imports without requiring the real;
   // type definitions.
   // eslint-disable-next-line @typescript-eslint/no-explicit-any;
-  export const DayPicker: any;
-}
-};'
-declare module 'sonner';''
-declare module 'lucide-react' {''
-import {FC, SVGProps} from 'react';'
-  export type LucideProps = SVGProps < SVGSVGElement>;
-  export type LucideIcon = FC < LucideProps>;
-;
 
   export const AlertCircle: LucideIcon;
   export const AlertTriangle: LucideIcon;
@@ -227,7 +208,6 @@ import {FC, SVGProps} from 'react';'
   export const Recycle: LucideIcon;
   export const RefreshCcw: LucideIcon;
   export const RefreshCw: LucideIcon;
-  export const Recycle: LucideIcon;
   export const RotateCcw: LucideIcon;
   export const Save: LucideIcon;
   export const Search: LucideIcon;
@@ -288,57 +268,48 @@ import {FC, SVGProps} from 'react';'
   export default icons;
   export const Zap: LucideIcon,
   const icons: { [key: string]: LucideIcon }
-  export default icons;
-  export const Zap: LucideIcon,
-  const icons: { [key: string]: LucideIcon }
-  export default icons;
-}'
-declare module 'child_process';''
-declare module 'date - fns';''
-declare module 'jspdf' {'
+declare module 'child_process';
+declare module 'date - fns';
+declare module 'jspdf' {
   export const jsPDF: any,
   export default jsPDF;
 
-}'
-declare module '@hookform / resolvers / zod';''
-declare module '@radix - ui / react - accordion';''
-declare module '@radix - ui / react - alert - dialog';''
-declare module '@radix - ui / react - aspect - ratio';''
-declare module '@radix - ui / react - avatar';''
-declare module '@radix - ui / react - checkbox';''
-declare module '@radix - ui / react - collapsible';''
-declare module '@radix - ui / react - dialog';''
-declare module '@radix - ui / react - dropdown - menu';''
-declare module '@radix - ui / react - label';''
-declare module '@radix - ui / react - popover';''
-declare module '@radix - ui / react - progress';''
-declare module '@radix - ui / react - radio - group';''
-declare module '@radix - ui / react - scroll - area';''
-declare module '@radix - ui / react - select';''
-declare module '@radix - ui / react - separator';''
-declare module '@radix - ui / react - slider';''
-declare module '@radix - ui / react - slot';''
-declare module '@radix - ui / react - switch';''
-declare module '@radix - ui / react - tabs';''
-declare module '@radix - ui / react - toast';''
-declare module '@radix - ui / react - tooltip';''
-declare module '@supabase / supabase - js';''
-declare module 'class - variance - authority' {'
+declare module '@hookform / resolvers / zod';
+declare module '@radix - ui / react - accordion';
+declare module '@radix - ui / react - alert - dialog';
+declare module '@radix - ui / react - aspect - ratio';
+declare module '@radix - ui / react - avatar';
+declare module '@radix - ui / react - checkbox';
+declare module '@radix - ui / react - collapsible';
+declare module '@radix - ui / react - dialog';
+declare module '@radix - ui / react - dropdown - menu';
+declare module '@radix - ui / react - label';
+declare module '@radix - ui / react - popover';
+declare module '@radix - ui / react - progress';
+declare module '@radix - ui / react - radio - group';
+declare module '@radix - ui / react - scroll - area';
+declare module '@radix - ui / react - select';
+declare module '@radix - ui / react - separator';
+declare module '@radix - ui / react - slider';
+declare module '@radix - ui / react - slot';
+declare module '@radix - ui / react - switch';
+declare module '@radix - ui / react - tabs';
+declare module '@radix - ui / react - toast';
+declare module '@radix - ui / react - tooltip';
+declare module '@supabase / supabase - js';
+declare module 'class - variance - authority' {
   export function cva (...inputs: any[]): any;
   export type VariantProps < T extends (...args: any) => any> = any;
-}'
-declare module 'clsx' {'
+declare module 'clsx' {
   export type ClassValue = any;
   export default function clsx (...classes: ClassValue[]): string;
-}'
-declare module 'embla - carousel - react';''
-declare module 'framer-motion';''
-declare module 'i18next';''
-declare module 'i18next - browser - languagedetector';''
-declare module 'react - helmet - async';''
-declare module 'react - hook - form' {''
-  import type { ComponentType, ReactElement, ReactNode } from 'react';'
-;
+declare module 'embla - carousel - react';
+declare module 'framer-motion';
+declare module 'i18next';
+declare module 'i18next - browser - languagedetector';
+declare module 'react - helmet - async';
+declare module 'react - hook - form' {
+  import type { ComponentType, ReactElement, ReactNode } from 'react';
   // Minimal generic typings to satisfy local usage without full type defs;
   export type FieldValues = Record < string, any>;
   export type FieldPath < TFieldValues extends FieldValues> =;
@@ -353,270 +324,163 @@ declare module 'react - hook - form' {''
     register: any;,
   form_state: any;
     [key: string]: any;
-  }
 
 
   export const Zap: LucideIcon;
-  const icons: { [key: string]: LucideIcon }
-  export const Zap: LucideIcon,;
-  const icons: { [key: string]: LucideIcon };
-  export default icons;
-};'
-declare module 'child_process';''
-declare module 'date-fns';''
-declare module 'jspdf' {'
+declare module 'date-fns';
   export const jsPDF: any;
-  export default jsPDF;
-};'
-declare module '@hookform/resolvers/zod';''
-declare module '@radix-ui/react-accordion';''
-declare module '@radix-ui/react-alert-dialog';''
-declare module '@radix-ui/react-aspect-ratio';''
-declare module '@radix-ui/react-avatar';''
-declare module '@radix-ui/react-checkbox';''
-declare module '@radix-ui/react-collapsible';''
-declare module '@radix-ui/react-dialog';''
-declare module '@radix-ui/react-dropdown-menu';''
-declare module '@radix-ui/react-label';''
-declare module '@radix-ui/react-popover';''
-declare module '@radix-ui/react-progress';''
-declare module '@radix-ui/react-radio-group';''
-declare module '@radix-ui/react-scroll-area';''
-declare module '@radix-ui/react-select';''
-declare module '@radix-ui/react-separator';''
-declare module '@radix-ui/react-slider';''
-declare module '@radix-ui/react-slot';''
-declare module '@radix-ui/react-switch';''
-declare module '@radix-ui/react-tabs';''
-declare module '@radix-ui/react-toast';''
-declare module '@radix-ui/react-tooltip';''
-declare module '@supabase/supabase-js';''
-declare module 'class-variance-authority' {'
+declare module '@hookform/resolvers/zod';
+declare module '@radix-ui/react-accordion';
+declare module '@radix-ui/react-alert-dialog';
+declare module '@radix-ui/react-aspect-ratio';
+declare module '@radix-ui/react-avatar';
+declare module '@radix-ui/react-checkbox';
+declare module '@radix-ui/react-collapsible';
+declare module '@radix-ui/react-dialog';
+declare module '@radix-ui/react-dropdown-menu';
+declare module '@radix-ui/react-label';
+declare module '@radix-ui/react-popover';
+declare module '@radix-ui/react-progress';
+declare module '@radix-ui/react-radio-group';
+declare module '@radix-ui/react-scroll-area';
+declare module '@radix-ui/react-select';
+declare module '@radix-ui/react-separator';
+declare module '@radix-ui/react-slider';
+declare module '@radix-ui/react-slot';
+declare module '@radix-ui/react-switch';
+declare module '@radix-ui/react-tabs';
+declare module '@radix-ui/react-toast';
+declare module '@radix-ui/react-tooltip';
+declare module '@supabase/supabase-js';
+declare module 'class-variance-authority' {
   export function cva(...inputs: any[]): any;
   export type VariantProps<T extends (...args: any) => any> = any;
-</T>
+
   export type FieldValues = Record<string, any>
 </string>
   export type FieldPath<TFieldValues extends FieldValues> =
-</TFieldValues>
+
   export type Control<TFieldValues extends FieldValues = FieldValues> = any;
-</TFieldValues>
+
   export interface UseFormReturn<
 
-  export interface UseFormReturn<;
-    TFieldValues extends FieldValues = FieldValues;
-  > {
     control: Control<TFieldValues>
-</TFieldValues>
+
   export function useForm<
-    TFieldValues extends FieldValues = FieldValues;
   >(options?: any): UseFormReturn<TFieldValues>
-</TFieldValues>
+
   export function useFieldArray<
-    TFieldValues extends FieldValues = FieldValues;
   >(options: any): any;
   export interface ControllerProps<
 
   export function useForm<;
-    TFieldValues extends FieldValues = FieldValues;
-  >(options?: any): UseFormReturn<TFieldValues>
-</TFieldValues>
+
   export function useFieldArray<;
-    TFieldValues extends FieldValues = FieldValues;
-  >(options: any): any;
   export interface ControllerProps<;
 
 
-    TFieldValues extends FieldValues = FieldValues;
     TName extends FieldPath<TFieldValues> = FieldPath<TFieldValues>
-</TFieldValues>
-    TName extends FieldPath<TFieldValues> = FieldPath<TFieldValues>
-</TFieldValues>
+
+
     control?: Control<TFieldValues>
-</TFieldValues>
+
   export const Controller: ComponentType<ControllerProps<any, any>>
-</ControllerProps>
+
   export interface FormProviderProps<
 
   export interface FormProviderProps<;
-    TFieldValues extends FieldValues = FieldValues;
-  > {
     children?: ReactNode;
-    [key: string]: any;
-  }
   export const FormProvider: ComponentType<FormProviderProps<any>>
-</FormProviderProps>
-  export function useFormContext<
-    TFieldValues extends FieldValues = FieldValues;
-  >(): UseFormReturn<TFieldValues>
-</TFieldValues>
-  export type FieldValues = Record < string, any>;
-  export type FieldPath < TFieldValues extends FieldValues> =;
-    keyof TFieldValues & string;
-  export type Control < TFieldValues extends FieldValues = FieldValues> = any;
-  export interface UseFormReturn<;
 
-    TFieldValues extends FieldValues = FieldValues;
-  > {
-    control: Control<TFieldValues>
-</TFieldValues>
-    TName extends FieldPath<TFieldValues> = FieldPath<TFieldValues>
-</TFieldValues>
-    control?: Control<TFieldValues>
-</TFieldValues>
-  export const Controller: ComponentType<ControllerProps<any, any>>
-</ControllerProps>
-  export const FormProvider: ComponentType<FormProviderProps<any>>
-</FormProviderProps>
   export function useFormContext<
-    TFieldValues extends FieldValues = FieldValues;
   >(): UseFormReturn<TFieldValues>
-</TFieldValues>
+
+
+
+
+
+
+
+
   export type LucideProps = SVGProps<SVGSVGElement>,;
-</SVGSVGElement>
-  export type LucideIcon = FC<LucideProps>,;
-</LucideProps>
-  export type VariantProps<T extends (...args: any) => any> = any;
-</T>
-  export type FieldValues = Record<string any>;
-</string>
-  export type FieldPath<TFieldValues extends FieldValues> =;
-</TFieldValues>
-  export type Control<TFieldValues extends FieldValues = FieldValues> = any;
-</TFieldValues>
-  export interface UseFormReturn<;
 
-    TFieldValues extends FieldValues = FieldValues;
-  > {
-    control: Control < TFieldValues>;,
-  handle_submit: any;
-    register: any;,
-  form_state: any;
-    [key: string]: any;
-  }
+  export type LucideIcon = FC<LucideProps>,;
+
+
+  export type FieldValues = Record<string any>;
+  export type FieldPath<TFieldValues extends FieldValues> =;
+
+
+
   export function use_form<;
-    TFieldValues extends FieldValues = FieldValues;
   >(options?: any): UseFormReturn < TFieldValues>;
-  export function useFieldArray<;
-    TFieldValues extends FieldValues = FieldValues;
-  >(options: any): any;
-  export interface ControllerProps<;
-    TFieldValues extends FieldValues = FieldValues;
     TName extends FieldPath < TFieldValues> = FieldPath < TFieldValues>,
-  > {
     name: TName;
     control?: Control < TFieldValues>;
     rules?: any;
     default_value?: any;
     render: (props: any) => ReactElement;
-  }
 
   export const Controller: ComponentType < ControllerProps < any, any>>;
-  export interface FormProviderProps<;
-
-  export const Controller: ComponentType<ControllerProps<any, any>>
-</ControllerProps>
 
 
-  export interface FormProviderProps<;
 
-  export const Controller: ComponentType < ControllerProps < any, any>>;
-  export interface FormProviderProps<;
-    TFieldValues extends FieldValues = FieldValues;
-  > {
-    children?: ReactNode;
-    [key: string]: any;
-  }
+
+
 
   export const FormProvider: ComponentType < FormProviderProps < any>>;
   export function useFormContext<;
     TFieldValues extends FieldValues = FieldValues,
   >(): UseFormReturn < TFieldValues>;
 
-}'
-declare module 'react - i18next';''
-declare module 'react-dom / client';''
-declare module 'react-dom';''
-declare module 'react - beautiful - dnd';''
-declare module 'react - redux';''
-declare module 'semver';''
-declare module 'ws';''
-declare module 'recharts';'
-}'
-declare module 'react - i18next';''
-declare module 'react-dom / client';'
+declare module 'react - i18next';
+declare module 'react-dom / client';
+declare module 'react-dom';
+declare module 'react - beautiful - dnd';
+declare module 'react - redux';
+declare module 'semver';
+declare module 'ws';
+declare module 'recharts';
   // eslint-disable-next-line @typescript-eslint/no-explicit-any;
   export const DayPicker:any;
-}'
-declare module 'sonner',;''
-declare module 'lucide-react' {;''
-  import { FC, SVGProps } from 'react',;'
-  export type LucideProps = SVGProps<SVGSVGElement>,;
-</SVGSVGElement>
-  export type LucideIcon = FC<LucideProps>,;
-</LucideProps>
+declare module 'sonner',;
+declare module 'lucide-react' {;
+  import { FC, SVGProps } from 'react',;
+
+
   export type VariantProps<T extends (...args:any) => any> = any;
-</T>
-  export type FieldValues = Record<string any>;
-</string>
-  export type FieldPath<TFieldValues extends FieldValues> =;
-</TFieldValues>
-  export type Control<TFieldValues extends FieldValues = FieldValues> = any;
-</TFieldValues>
-  export interface UseFormReturn<;
+
+
+
     TFieldValues extends FieldValues = FieldValues> {;
     control:Control<TFieldValues>;
-</TFieldValues>
-  export function useForm<;
+
     TFieldValues extends FieldValues = FieldValues>(options?:any):UseFormReturn<TFieldValues>;
-</TFieldValues>
-  export function useFieldArray<;
+
     TFieldValues extends FieldValues = FieldValues>(options:any):any;
-;
-  export interface ControllerProps<;
     TFieldValues extends FieldValues = FieldValues,;
     TName extends FieldPath<TFieldValues> = FieldPath<TFieldValues>> {;
-</TFieldValues>
+
     control?:Control<TFieldValues>;
-</TFieldValues>
+
   export const Controller:ComponentType<ControllerProps<any any>>;
-</ControllerProps>
-  export interface FormProviderProps<;
-    TFieldValues extends FieldValues = FieldValues> {;
+
     children?:ReactNode;
     [key:string]:any;
-  }
-;
   export const FormProvider:ComponentType<FormProviderProps<any>>;
-</FormProviderProps>
-  export function useFormContext<;
+
     TFieldValues extends FieldValues = FieldValues>():UseFormReturn<TFieldValues>;}
-</TFieldValues>
-  export interface UseFormReturn<;
-    TFieldValues extends FieldValues = FieldValues> {;
+
     control: Control<TFieldValues>;
-</TFieldValues>
-  export function useForm<;
+
     TFieldValues extends FieldValues = FieldValues>(options?: any): UseFormReturn<TFieldValues>;
-</TFieldValues>
-  export function useFieldArray<;
+
     TFieldValues extends FieldValues = FieldValues>(options: any): any;
-  export interface ControllerProps<;
-    TFieldValues extends FieldValues = FieldValues,;
-    TName extends FieldPath<TFieldValues> = FieldPath<TFieldValues>> {;
-</TFieldValues>
+
     control?: Control<TFieldValues>;
-</TFieldValues>
+
   export const Controller: ComponentType<ControllerProps<any any>>;
-</ControllerProps>
-  export interface FormProviderProps<;
-    TFieldValues extends FieldValues = FieldValues> {;
-    children?: ReactNode;
-    [key: string]: any;
-  }
-;
+
   export const FormProvider: ComponentType<FormProviderProps<any>>;
-</FormProviderProps>
-  export function useFormContext<;
+
     TFieldValues extends FieldValues = FieldValues>(): UseFormReturn<TFieldValues>;
-</TFieldValues>'

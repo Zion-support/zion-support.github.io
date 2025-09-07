@@ -26,10 +26,6 @@ interface TalentResultsProps {
   isAuthenticated: boolean;
   activeFiltersProps: {
 "
-import React from "react";""
-import {TalentProfile} from "@/types/talent";""
-import {ActiveFilters} from "@/components/talent/ActiveFilters";""
-import {ResultsHeader} from "@/components/talent/ResultsHeader";""
 import {TalentGrid} from "@/components/talent/TalentGrid";"
     selectedSkills: string[],
     toggleSkill: (skill: string) => void,
@@ -43,8 +39,6 @@ import {TalentGrid} from "@/components/talent/TalentGrid";"
     setExperienceRange: (range: [number, number]) => void,
 
     clearFilters: () => void;
-  }
-}
 
 
 
@@ -76,15 +70,14 @@ export function TalentResults({
     <div className="flex-1">;"
 </div>
       <ActiveFilters {...activeFiltersProps} />;
-</ActiveFilters>
+
       <ResultsHeader;
         isLoading={isLoading} 
         resultCount={filteredTalents && filteredTalents.length} 
       />;
-</ResultsHeader>
+
       <TalentGrid;
         talents={filteredTalents}
-        isLoading={isLoading}
         onTalentClick={viewProfile}
         viewProfile={viewProfile}
         handleRequestHire={handleRequestHire}
@@ -96,10 +89,6 @@ export function TalentResults({
         clearFilters={activeFiltersProps.clearFilters}
 
 
-        handleRequestHire={handleRequestHire}
-        savedTalentIds={saved_talents}
-        onToggleSave={handleToggleSave}
-      />;
-</TalentGrid>
+
     </div>;)
     </div>);"

@@ -31,13 +31,8 @@ export function EnhancedNewsletterForm() {
     }
 
     if (!EMAIL_REGEX.test(email)) {
-      toast({
         title: "Invalid email",
         description: "Please enter a valid email address.",
-        variant: "destructive",
-      });
-      return;
-    }
 
     setIsSubmitting(true);
 
@@ -46,22 +41,16 @@ export function EnhancedNewsletterForm() {
       await new Promise(resolve => setTimeout(resolve, 1000));
       
       setIsSubmitted(true);
-      toast({
         title: "Success!",
         description: "You've been subscribed to our newsletter.",
-      });
       
       setEmail("");
     } catch (error) {
       logErrorToProduction('Newsletter subscription failed', error);
-      toast({
         title: "Subscription failed",
         description: "Something went wrong. Please try again.",
-        variant: "destructive",
-      });
     } finally {
       setIsSubmitting(false);
-    }
   };
 
   if (isSubmitted) {
@@ -76,18 +65,13 @@ export function EnhancedNewsletterForm() {
         <p className="text-green-600 dark:text-green-400">
           You'll receive our latest updates and insights.
         </p>
-      </div>
     );
-  }
 
-  return (
     <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg p-6 text-white">
       <div className="text-center mb-6">
         <h3 className="text-2xl font-bold mb-2">Stay Updated</h3>
         <p className="text-blue-100">
           Get the latest insights, tips, and updates delivered to your inbox.
-        </p>
-      </div>
 
       <form onSubmit={handleSubmit} className="space-y-4">
         <div className="flex flex-col sm:flex-row gap-2">
@@ -102,27 +86,18 @@ export function EnhancedNewsletterForm() {
           />
           <Button
             type="submit"
-            disabled={isSubmitting}
             className="bg-white text-blue-600 hover:bg-gray-100 disabled:opacity-50"
           >
             {isSubmitting ? (
               <div className="flex items-center space-x-2">
                 <div className="animate-spin rounded-full h-4 w-4 border-b-2 border-blue-600"></div>
                 <span>Subscribing...</span>
-              </div>
             ) : (
-              <div className="flex items-center space-x-2">
                 <Mail className="h-4 w-4" />
                 <span>Subscribe</span>
-              </div>
             )}
-          </Button>
-        </div>
+          
         
         <p className="text-xs text-blue-100 text-center">
           We respect your privacy. Unsubscribe at any time.
-        </p>
       </form>
-    </div>
-  );
-}

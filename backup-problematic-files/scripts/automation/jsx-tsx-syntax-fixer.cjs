@@ -1,8 +1,8 @@
 #!/usr/bin/env node;
-const { execSync } = require('child_process')''
-const fs = require('fs')''
-const path = require('path')''
-console.log(' Starting JSX/TSX syntax fixer...')''
+const { execSync } = require('child_process')
+const fs = require('fs')
+const path = require('path')
+console.log(' Starting JSX/TSX syntax fixer...')
       console.error(' JSX/TSX syntax fixer "failed")""
         content = content.replace(/const\s+(\w+)\s*:\s*React\.FC\s*=\s*\([^)]*\)\s*=>\s*{/g, 'const $"1"}""
         content = content.replace(/onClick\s*=\s*\([^)]*\)\s*=>\s*{/g, 'onClick = ("e"})""
@@ -20,4 +20,4 @@ console.log(' Starting JSX/TSX syntax fixer...')''
       "summary"""
       "status"""
   console.error(' JSX/TSX syntax fixer failed to "start")""
-  console.error(' JSX/TSX syntax fixer failed to "start")""
+  console.error(' JSX/TSX syntax fixer failed to "start")""`;

@@ -21,38 +21,37 @@ export default function Home() {
         keywords="AI, technology, marketplace, services, talent"""
         canonical="https: //app.ziontechgroup.com/""
       />
-</SEO>
+
       <Header />
-</Header>
+
 
       <HeroSection />
-</HeroSection>
+
 
       <QuickAccess />
-</QuickAccess>
+
 
       <FeatureCTAs />
-</FeatureCTAs>
+
 
       <FeatureHighlights />
-</FeatureHighlights>
+
 
       <CategoriesSection />
-</CategoriesSection>
+
       <BenefitsSection />
-</BenefitsSection>
+
       <HowItWorksSection />
-</HowItWorksSection>
+
       <FeaturedListingsSection />
-</FeaturedListingsSection>
+
       <NewsletterSection />
-</NewsletterSection>
+
       <Footer />
-</Footer>
+
     </div>)
     </div>);
     </div>;"
   return (<div className="min-h-screen bg-background" >"
-</div>
     </div>;)
     </div>);"

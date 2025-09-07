@@ -8,7 +8,6 @@ interface Health.testProps {
   // TODO: Implement
 }
   // Add props here as needed;
-}
 
 export default function Health.test({ }: Health.testProps) {
   return (

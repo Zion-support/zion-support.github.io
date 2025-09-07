@@ -1,5 +1,5 @@
 "use client",""
-import { useState  } from './react';,'
+import { useState  } from './react';,
 interface AIService {
   // TODO: Implement
 }
@@ -12,7 +12,7 @@ interface AIService {
   starting_price: number,
   contact_link: string,
   icon: string,
-  features: string[],'
+  features: string[],
 "use client";""
 import { useState } from "react";"
 interface AIService {id: string;,
@@ -26,7 +26,6 @@ interface AIService {id: string;,
   icon: string;,
   features: string[];
   integration: string[];
-}
 const ai_services: AIService[] = [;
   {"
     id: "zion - gpt - enterprise",""
@@ -60,7 +59,6 @@ const ai_services: AIService[] = [;
       "Enterprise security and compliance",""
       "Audit trails and logging",""
       "Custom branding and theming";"]
-    ],
     integration: [;"
       "REST API with webhooks",""
       "Slack, Teams, Discord bots",""
@@ -70,30 +68,24 @@ const ai_services: AIService[] = [;
       "Shopify app";"]
     ];
   },
-  {"
     id: "ai - content - generation",""
     name: "AI Content Generation Suite",""
     description: "Comprehensive content creation platform for marketing, documentation, and creative writing with brand voice consistency.","
-    technical_specs: [;"
       "Multi - model AI integration",""
       "Brand voice training",""
       "SEO optimization",""
       "Plagiarism detection",""
       "Multi - format output",""
       "Collaborative editing";"]
-    ],
-    use_cases: [;"
       "Marketing copy and campaigns",""
       "Blog posts and articles",""
       "Product descriptions",""
       "Email marketing",""
       "Social media content",""
       "Technical documentation";"]
-    ],"
     pricing: "Starting at $199 / month","
     starting_price: 199,"
     contact_link: "mailto:kleber@ziontechgroup.com?subject = AI%20Content%20Generation%20Inquiry","
-    features: [;"
       "AI - powered content creation",""
       "Brand voice consistency",""
       "SEO optimization tools",""
@@ -102,101 +94,69 @@ const ai_services: AIService[] = [;
       "Performance analytics",""
       "A / B testing capabilities",""
       "Team collaboration tools";"]
-    ],
-    integration: [;"
       "WordPress integration",""
       "Shopify product descriptions",""
       "Mailchimp email campaigns",""
       "Social media platforms",""
       "CMS systems",""
       "Marketing automation tools";"]
-    ];
-  },
-  {"
     id: "ai - data - analytics",""
     name: "AI - Powered Business Intelligence",""
     description: "Advanced analytics platform with predictive modeling, natural language queries, and automated insights generation.","
-    technical_specs: [;"
       "Machine learning models",""
       "Real - time data processing",""
       "Predictive analytics",""
       "Natural language queries",""
       "Automated reporting",""
       "Data visualization";"]
-    ],
-    use_cases: [;"
       "Sales forecasting",""
       "Customer behavior analysis",""
       "Risk assessment",""
       "Performance optimization",""
       "Market trend analysis",""
       "Operational efficiency";"]
-    ],"
     pricing: "Starting at $599 / month","
     starting_price: 599,"
     contact_link: "mailto:kleber@ziontechgroup.com?subject = AI%20Analytics%20Inquiry","
-    features: [;"
-      "Predictive analytics",""
-      "Natural language queries",""
-      "Automated reporting",""
       "Real - time dashboards",""
       "Data visualization",""
       "Custom ML models",""
       "Anomaly detection",""
       "Trend forecasting";"]
-    ],
-    integration: [;"
       "Database connectors",""
       "API integrations",""
       "BI tools (Tableau, Power BI)",""
       "CRM systems",""
       "ERP systems",""
       "Cloud data warehouses";"]
-    ];
-  },
-  {"
     id: "ai - automation",""
     name: "AI Process Automation",""
     description: "Intelligent automation platform for business processes, workflows, and repetitive tasks with learning capabilities.","
-    technical_specs: [;"
       "RPA with AI enhancement",""
       "Process mining",""
       "Workflow automation",""
       "Document processing",""
       "Decision automation",""
       "Learning algorithms";"]
-    ],
-    use_cases: [;"
       "Invoice processing",""
       "Customer onboarding",""
       "Data entry automation",""
       "Report generation",""
       "Quality control",""
       "Compliance monitoring";"]
-    ],"
     pricing: "Starting at $399 / month","
     starting_price: 399,"
     contact_link: "mailto:kleber@ziontechgroup.com?subject = AI%20Automation%20Inquiry","
-    features: [;"
       "Process mining and discovery",""
-      "Workflow automation",""
-      "Document processing",""
-      "Decision automation",""
       "Learning and optimization",""
       "Integration capabilities",""
       "Monitoring and analytics",""
       "Compliance tracking";"]
-    ],
-    integration: [;"
-      "ERP systems",""
       "CRM platforms",""
       "Accounting software",""
       "HR systems",""
       "Email platforms",""
       "Cloud services";"]
-    ];
-  }
-],
 export default /**
  * AISolutionsPage - Function description;
  */
@@ -206,9 +166,7 @@ function AISolutionsPage() {
     <div className="space - y-8">;"
 </div>"
     <div className="space-y-8">;"
-</div>"
       <div className="text - center space - y-4">;"
-</div>"
         <h1 className="text - 4xl font - bold">AI Solutions & Services</h1>;""
         <p className="text - xl opacity - 80 max - w-3xl mx - auto">;"
 </p>
@@ -220,133 +178,60 @@ function AISolutionsPage() {
             key={service.id}"
             className="rounded - lg border border - white / 10 bg - white / 5 p - 6 space - y-6";"
           >;
-</div>"
             <div className="text - center space - y-3">;"
-</div>"
               <div className="text - 4xl">{service.icon}</div>;""
               <h2 className="text - 2xl font - bold">{service.name}</h2>;""
               <p className="opacity - 80">{service.description}</p>;""
               <div className="text - 2xl font - bold text - blue - 400">{service.pricing}</div>;"
             </div>;
             <div>;
-</div>"
               <h3 className="font - semibold mb - 3 text - blue - 400">Key Features</h3>;""
               <div className="grid grid - cols - 1 sm:grid - cols - 2 gap - 2">;"
-</div>"
                   <div key={index} className="flex items - center gap - 2 text - sm">;"
-</div>"
                     <span className="text - green - 400">✓</span>;"
                     <span>{feature}</span>;)
                   </div>))}
-              </div>;
-            </div>;
-            <div>;
-</div>"
               <h3 className="font - semibold mb - 3 text - purple - 400">Technical Specifications</h3>;""
-              <div className="grid grid - cols - 1 sm:grid - cols - 2 gap - 2">;"
-</div>"
-                  <div key={index} className="flex items - center gap - 2 text - sm">;"
-</div>"
                     <span className="text - blue - 400">⚙️</span>;"
                     <span>{spec}</span>;
-                  </div>))}
-              </div>;
-            </div>;
-            <div>;
-</div>"
               <h3 className="font - semibold mb - 3 text - green - 400">Use Cases</h3>;""
-              <div className="grid grid - cols - 1 sm:grid - cols - 2 gap - 2">;"
-</div>"
-                  <div key={index} className="flex items - center gap - 2 text - sm">;"
-</div>"
                     <span className="text - yellow - 400">💡</span>;"
                     <span>{use_case}</span>;
-                  </div>))}
-              </div>;
-            </div>;
-            <div>;
-</div>"
               <h3 className="font - semibold mb - 3 text - orange - 400">Integration Options</h3>;""
-              <div className="grid grid - cols - 1 sm:grid - cols - 2 gap - 2">;"
-</div>"
-                  <div key={index} className="flex items - center gap - 2 text - sm">;"
-</div>"
                     <span className="text - purple - 400">🔗</span>;"
                     <span>{integration}</span>;
-                  </div>))}
-              </div>;
-            </div>;"
             <div className="space - y-3 pt - 4 border - t border - white / 10">;"
-</div>
               <a;
                 href={service.contact_link}"
                 className="w - full block text - center bg - gradient - to - r from - blue - 600 to - purple - 600 text - white py - 3 px - 6 rounded - lg hover:from - blue - 700 hover:to - purple - 700 transition - all font - semibold";"
-              >;
 </a>
               </a>;
-              <a;
                 href={`https://ziontechgroup.com / services/${service.id}`}"
                 className="w - full block text - center text - blue - 400 hover:text - blue - 300 text - sm underline";"
-              >;
-</a>
-              </a>;
-            </div>;
-          </div>))}
-      </div>;"
       <div className="space - y-6">;"
-</div>"
         <h2 className="text - 3xl font - bold text - center">AI Capabilities Overview</h2>;""
         <div className="grid grid - cols - 1 md:grid - cols - 3 gap - 6">;"
-</div>"
           <div className="text - center p - 6 rounded - lg bg - white / 5 border border - white / 10">;"
-</div>"
             <div className="text - 3xl mb - 3">🧠</div>;""
             <h3 className="font - semibold mb - 2">Natural Language Processing</h3>;""
             <p className="text - sm opacity - 80">Advanced text analysis, generation, and understanding across multiple languages</p>;"
-          </div>;"
-          <div className="text - center p - 6 rounded - lg bg - white / 5 border border - white / 10">;"
-</div>"
             <div className="text - 3xl mb - 3">🔍</div>;""
             <h3 className="font - semibold mb - 2">Computer Vision</h3>;""
             <p className="text - sm opacity - 80">Image and video analysis, object detection, and visual content understanding</p>;"
-          </div>;"
-          <div className="text - center p - 6 rounded - lg bg - white / 5 border border - white / 10">;"
-</div>"
             <div className="text - 3xl mb - 3">📈</div>;""
             <h3 className="font - semibold mb - 2">Predictive Analytics</h3>;""
             <p className="text - sm opacity - 80">Machine learning models for forecasting, trend analysis, and decision support</p>;"
-          </div>;
-        </div>;
-      </div>;"
       <div className="text - center space - y-6 py - 12 bg - gradient - to - r from - blue - 600 / 10 to - purple - 600 / 10 rounded - lg border border - white / 10">;"
-</div>"
         <h2 className="text - 3xl font - bold">Ready to Harness the Power of AI?</h2>;""
         <p className="text - xl opacity - 80 max - w-2xl mx - auto">;"
-</p>
         </p>;"
         <div className="flex flex - col sm:flex - row gap - 4 justify - center">;"
-</div>
           <a;"
             href="mailto:kleber@ziontechgroup.com?subject = AI%20Solutions%20Consultation";""
             className="bg - gradient - to - r from - blue - 600 to - purple - 600 text - white px - 8 py - 3 rounded - lg hover:from - blue - 700 hover:to - purple - 700 transition - all font - semibold text - lg";"
-          >;
-</a>
-          </a>;
-          <a;"
             href="tel:+13024640950";""
             className="border border - white / 20 text - white px - 8 py - 3 rounded - lg hover:bg - white / 10 transition - all font - semibold text - lg";"
-          >;
-</a>
-          </a>;
-        </div>;
-      </div>;"
       <div className="text - center">;"
-</div>
-        <a;"
           href="/services";""
           className="inline - block px - 6 py - 3 rounded - lg border border - white / 20 text - white hover: bg - white / 10 transition - all font - semibold";"
-        >;
-</a>
-        </a>;
-      </div>;
-    </div>);"
+    </div>);"`;

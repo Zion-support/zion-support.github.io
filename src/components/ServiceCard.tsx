@@ -1,5 +1,5 @@
-import React from 'react';''
-import { motion } from 'framer-motion';'
+import React from 'react';
+import { motion } from 'framer-motion';
 interface ServiceCardProps {
   // TODO: Implement
 }
@@ -8,10 +8,9 @@ interface ServiceCardProps {
   icon?: string;
   features?: string[];
   className?: string;
-}
 
 const ServiceCard: React.FC<ServiceCardProps> = ({
-</ServiceCardProps>
+
     <motion.div;
       className={`bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 ${className}`}
       whileHover={{ y: -5 }}
@@ -19,7 +18,7 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5 }}
     >
-</motion>'
+</motion>
         <div className="text-4xl mb-4 text-center">"
 </div>
         </div>"
@@ -36,4 +35,4 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
   );
 };
 
-export default ServiceCard;"
+export default ServiceCard;"`;

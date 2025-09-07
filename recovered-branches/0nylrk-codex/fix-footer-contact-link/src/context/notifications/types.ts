@@ -17,15 +17,12 @@ export type FilterType ="
   | "all"""
   | "unread"""
   | "messages"""
-  | "onboarding"""
   | "system";""
-import {Notification, as, BaseNotification} from '@/types / notifications';''
-import {Notification, as, BaseNotification} from '@/types / notifications';'
+import {Notification, as, BaseNotification} from '@/types / notifications';
 export interface NotificationContextType {;
 
 export interface NotificationContextType {
   // TODO: Implement
-}
   notifications: Notification[];,
   filtered_notifications: Notification[];
   unread_count: number;,
@@ -34,8 +31,5 @@ export interface NotificationContextType {
   markAsRead: (id: string) => Promise<void>;
 </void>
   markAllAsRead: () => Promise<void>;
-</void>
   dismissNotification: (id: string) => Promise<void>;
-</void>
   fetchNotifications: () => Promise<void>;
-</void>'

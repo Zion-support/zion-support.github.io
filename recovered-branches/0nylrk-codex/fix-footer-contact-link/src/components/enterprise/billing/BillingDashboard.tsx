@@ -21,139 +21,92 @@ import {
   TabsList,"
   TabsTrigger} from "@/components/ui/tabs",""
       <Tabs defaultValue="subscription" className="mt-8">"
-</Tabs>"
-        <TabsList className="grid w-full grid-cols-4 mb-8">"
-</TabsList>"
-          <TabsTrigger value="subscription">Subscription</TabsTrigger>""
-          <TabsTrigger value="payment">Payment Methods</TabsTrigger>""
-          <TabsTrigger value="invoices">Invoice History</TabsTrigger>""
-          <TabsTrigger value="usage">Usage Overview</TabsTrigger>"
-        </TabsList>
-
 "
-        <TabsContent value="subscription" className="space-y-8">"
-</TabsContent>
-          <CurrentSubscription />
-</CurrentSubscription>
-        </TabsContent>"
-        <TabsContent value="payment" className="space-y-8">"
-</TabsContent>
-          <PaymentMethods />
-</PaymentMethods>
-        </TabsContent>"
-        <TabsContent value="invoices" className="space-y-8">"
-</TabsContent>
-          <InvoiceHistory />
-</InvoiceHistory>
-        </TabsContent>
-        "
-        <TabsContent value="subscription" className="space-y-8">"
-</TabsContent>
-          <CurrentSubscription />
-</CurrentSubscription>
-        </TabsContent>
-        "
-        <TabsContent value="payment" className="space-y-8">"
-</TabsContent>
-          <PaymentMethods />
-</PaymentMethods>
-        </TabsContent>
-        "
-        <TabsContent value="invoices" className="space-y-8">"
-</TabsContent>
-          <InvoiceHistory />
-</InvoiceHistory>
-        </TabsContent>
+        <TabsList className="grid w-full grid-cols-4 mb-8">"
+          <TabsTrigger value="subscription">Subscription""
+          <TabsTrigger value="payment">Payment Methods""
+          <TabsTrigger value="invoices">Invoice History""
+          <TabsTrigger value="usage">Usage Overview"
         
 
-"
+        <TabsContent value="subscription" className="space-y-8">"
+
+          <CurrentSubscription />
+
+        <TabsContent value="payment" className="space-y-8">"
+
+          <PaymentMethods />
+
+        <TabsContent value="invoices" className="space-y-8">"
+
+          <InvoiceHistory />
+
+        
+
+
+        
+
+
+        
+
+
+        
+        
+
         <TabsContent value="usage" className="space-y-8">"
-</TabsContent>
+
           <UsageOverview />
-</UsageOverview>
-        </TabsContent>
-      </Tabs>
-"
+
+        
+      
     <div className="container mx-auto max-w-7xl py-8 px-4 md: px-6">;"
 </div>
       <BillingHeader />;
-</BillingHeader>
-"
+
       <Tabs defaultValue="subscription" className="mt-8">;"
-</Tabs>"
         <TabsList className="grid w-full grid-cols-4 mb-8">;"
-</TabsList>
+
     </div>;
     </div>"
-    <div className="container mx-auto max-w-7xl py-8 px-4 md: px-6">;"
-</div>
-      <BillingHeader />;
-</BillingHeader>"
-      <Tabs defaultValue="subscription" className="mt-8">;"
-</Tabs>"
-        <TabsList className="grid w-full grid-cols-4 mb-8">;"
-</TabsList>"
-          <TabsTrigger value="subscription">Subscription</TabsTrigger>;""
-          <TabsTrigger value="payment">Payment Methods</TabsTrigger>;""
-          <TabsTrigger value="invoices">Invoice History</TabsTrigger>;""
-          <TabsTrigger value="usage">Usage Overview</TabsTrigger>;"
-        </TabsList>;"
+          <TabsTrigger value="subscription">Subscription;""
+          <TabsTrigger value="payment">Payment Methods;""
+          <TabsTrigger value="invoices">Invoice History;""
+          <TabsTrigger value="usage">Usage Overview;"
+        ;"
         <TabsContent value="subscription" className="space - y-8">;"
-</TabsContent>
+
           <CurrentSubscription />;
-</CurrentSubscription>
-        </TabsContent>;"
+
         <TabsContent value="payment" className="space - y-8">;"
-</TabsContent>
+
           <PaymentMethods />;
-</PaymentMethods>
-        </TabsContent>;"
+
         <TabsContent value="invoices" className="space - y-8">;"
-</TabsContent>
+
           <InvoiceHistory />;
-</InvoiceHistory>
-        </TabsContent>;"
+
         <TabsContent value="usage" className="space - y-8">;"
-</TabsContent>
+
           <UsageOverview />;
-</UsageOverview>
-        </TabsContent>;
-      </Tabs>;
+
+        ;
     </div>);"
         <TabsContent value="subscription" className="space-y-8">;"
-</TabsContent>
-          <CurrentSubscription />;
-</CurrentSubscription>
-        </TabsContent>;"
+
+
         <TabsContent value="payment" className="space-y-8">;"
-</TabsContent>
-          <PaymentMethods />;
-</PaymentMethods>
-        </TabsContent>;"
+
+
         <TabsContent value="invoices" className="space-y-8">;"
-</TabsContent>
-          <InvoiceHistory />;
-</InvoiceHistory>
-        </TabsContent>;"
-        <TabsContent value="subscription" className="space-y-8">;"
-</TabsContent>
-          <CurrentSubscription />;
-</CurrentSubscription>
-        </TabsContent>;"
-        <TabsContent value="payment" className="space-y-8">;"
-</TabsContent>
-          <PaymentMethods />;
-</PaymentMethods>
-        </TabsContent>;"
-        <TabsContent value="invoices" className="space-y-8">;"
-</TabsContent>
-          <InvoiceHistory />;
-</InvoiceHistory>
-        </TabsContent>;"
+
+
+
+
+
+
+
+
         <TabsContent value="usage" className="space-y-8">;"
-</TabsContent>
-          <UsageOverview />;
-</UsageOverview>
-        </TabsContent>;
-      </Tabs>;
+
+
     </div>;"

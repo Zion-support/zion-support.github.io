@@ -1,8 +1,8 @@
- // Mock window.scrollTo global.window.scrollTo = vi.fn (), // vi should be globally available // Ensure React Testing Library cleans up and mocks are restored between tests // ----------------------------------------------------------------------------- // Jest-compatibility shim ------------------------------------------------------ // ----------------------------------------------------------------------------- // A lot of legacy test files still call `jest.fn () `, `jest.mock () ` etc. Rather // than refactor them all at once we map those calls to Vitest's equivalent // (`vi`) . The shim only runs in the test environment and has no effect on // production bundles. // deliberately attaching to global for test environment setup // We expose it so imports compile even if we don't use it. SnapshotSerializer: () => {'
-}'
-import '@testing-library/jest-dom';''
-import { cleanup } from '@testing-library/react';''
-import { vi, afterEach } from 'vitest';'
+ // Mock window.scrollTo global.window.scrollTo = vi.fn (), // vi should be globally available // Ensure React Testing Library cleans up and mocks are restored between tests // ----------------------------------------------------------------------------- // Jest-compatibility shim ------------------------------------------------------ // ----------------------------------------------------------------------------- // A lot of legacy test files still call `jest.fn () `, `jest.mock () ` etc. Rather // than refactor them all at once we map those calls to Vitest's equivalent // (`vi`) . The shim only runs in the test environment and has no effect on // production bundles. // deliberately attaching to global for test environment setup // We expose it so imports compile even if we don't use it. SnapshotSerializer: () => {
+}
+import '@testing-library/jest-dom';
+import { cleanup } from '@testing-library/react';
+import { vi, afterEach } from 'vitest';
 ;
 // Mock ResizeObserver;
 global.ResizeObserver = class ResizeObserver {;
@@ -10,21 +10,17 @@ global.ResizeObserver = class ResizeObserver {;
   unobserve() { /* do nothing */ }
   disconnect() { /* do nothing */ }
 };
-;
 // Mock window.scrollTo;
 global.window.scrollTo = vi.fn(); // vi should be globally available;
-;
 // Ensure React Testing Library cleans up and mocks are restored between tests;
 afterEach(() => {;
   cleanup();
   vi.restoreAllMocks(); // Changed from jest to vi;
 });
-;
-// -----------------------------------------------------------------------------;'
-// than refactor them all at once we map those calls to Vitest's equivalent;'
+// -----------------------------------------------------------------------------;
+// than refactor them all at once we map those calls to Vitest's equivalent;`;
 // (`vi`).  The shim only runs in the test environment and has no effect on;
 // production bundles.;
-;
 // deliberately attaching to global for test environment setup;
 // eslint-disable-next-line @typescript-eslint/no-explicit-any;
 (globalThis as any).jest = {;
@@ -41,9 +37,8 @@ afterEach(() => {;
   resetAllMocks:vi.resetAllMocks.bind(vi),;
   restoreAllMocks:vi.restoreAllMocks.bind(vi),;
   clearAllMocks:vi.clearAllMocks.bind(vi),;
-  // Snapshot placeholder (no-op)  Vitest has its own snapshot system.;'
-  // We expose it so imports compile even if we don't use it.;'
-   ;
+  // Snapshot placeholder (no-op)  Vitest has its own snapshot system.;
+  // We expose it so imports compile even if we don't use it.;
   SnapshotSerializer:() => {}};
 export default function Setup({ }: SetupProps) {
   return (
@@ -51,4 +46,4 @@ export default function Setup({ }: SetupProps) {
 </div>
       <h1>Setup</h1>
       <p>This component is currently under development.</p>
-    </div>)'
+    </div>)`;

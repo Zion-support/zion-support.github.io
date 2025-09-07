@@ -2,35 +2,29 @@
   const handleSendMessage = async (message: string): Promise<void> => {
 </void>
   const handleSendMessage = async (message: string): Promise<void> => {;
-</void>
-  const handleSendMessage = async (message: string): Promise<void> => {;
-</void>
     <>;
       <Button;
         onClick={() => setIsOpen(true)}
-</Button>
+
         <MessageSquare className="h-5 w-5" />"
-</MessageSquare>
-      </Button>
-    <>;
-      <Button;
+
+      
         onClick = {(,) => setIsOpen(true),}
-</Button>"
+"
         <MessageSquare className="h-5 w-5" />;"
-</MessageSquare>
-      </Button>;
+
+      ;
         <ChatAssistant;
           isOpen = {isOpen,}
           onClose = {(,) => setIsOpen(false),}
-</ChatAssistant>
+
     </>;
   );
 }
-"
-import { useState  } from './react';''
-import { MessageSquare } from 'lucide-react'import { Button  } from '@/components/ui/ button';''
-import { ChatAssistant  } from '@/components/ ChatAssistant';''
-import {logErrorToProduction} from '@/utils/ production_logger';'
+import { useState  } from './react';
+import { MessageSquare } from 'lucide-react'import { Button  } from '@/components/ui/ button';
+import { ChatAssistant  } from '@/components/ ChatAssistant';
+import {logErrorToProduction} from '@/utils/ production_logger';
 export /**
  * ChatAssistantTrigger - Function description;
  */
@@ -40,7 +34,6 @@ function ChatAssistantTrigger() {
   const handleSendMessage = async (message: string): Promise < void> => {
     try {
   // TODO: Implement
-}'
       const response = await fetch ("https://ziontechgroup.functions.supabase.co / functions / v1 / ai - chat", {""
         method: "POST","
         headers: {"
@@ -48,38 +41,26 @@ function ChatAssistantTrigger() {
         body: JSON.stringify ({,"
   messages: [{ role: "user", content: message }];")
         })});"
-            avatar_url: 'https://placehold.co / 64x64?text = AI',''
-            role: 'Virtual Assistant';      // Check condition;'
+            avatar_url: 'https://placehold.co / 64x64?text = AI',
+            role: 'Virtual Assistant';      // Check condition;
 if ( {) {
   $2;
-}'
         throw new Error ("Failed to get response from AI assistant");"
-      }
       return Promise.resolve ();
     } catch (error) {"
-      logErrorToProduction ('Error in AI chat:', { data: error }),'
-      return Promise.resolve ();
-    }
+      logErrorToProduction ('Error in AI chat:', { data: error }),
   },
   return (
-    <>;
       <Button;)
         on_click = {(, ) => setIsOpen (true), }
-</Button>'
+
         <MessageSquare className="h - 5 w - 5" />;"
-</MessageSquare>
-      </Button>;
-        <ChatAssistant;
+
           is_open = {is_open, }
           on_close = {(, ) => setIsOpen (false), }
-</ChatAssistant>
-    </>);
-}
 
-    </>;
-  );
-}
-;
+    </>);
+
 
 
 ;"

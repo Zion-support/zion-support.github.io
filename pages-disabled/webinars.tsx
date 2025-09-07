@@ -1,63 +1,50 @@
-import React from 'react';''
-import MainLayout from '../components/layout/MainLayout';'
+import React from 'react';
+import MainLayout from '../components/layout/MainLayout';
 const Page = () => {
   return (
-    <MainLayout;'
+    <MainLayout;
       title="Webinars - Zion Tech Group"""
       description="Upcoming webinars and events""
     >
-</MainLayout>"
+"
       <div className="min-h-screen bg-gray-50">"
 </div>"
         <div className="container mx-auto px-4 py-16">"
-</div>"
           <h1 className="text-4xl font-bold text-gray-900 mb-6">Webinars</h1>""
           <p className="text-xl text-gray-600">Coming soon...</p>"
         </div>
-      </div>
-    </MainLayout>
+    
     <>
       <SEO;"
-        title='Webinars | Zion Tech Group'''
-        description='Upcoming webinars and on-demand sessions.'''
-        canonical='/webinars''
+        title='Webinars | Zion Tech Group
+        description='Upcoming webinars and on-demand sessions.
+        canonical='/webinars
       />
-</SEO>'
-      <div className='container mx-auto px-4 py-16'>'
-</div>'
-        <h1 className='text-4xl font-bold mb-4'>Webinars</h1>''
-        <p className='text-gray-300'>'
+
+      <div className='container mx-auto px-4 py-16'>
+        <h1 className='text-4xl font-bold mb-4'>Webinars</h1>
+        <p className='text-gray-300'>
 </p>
-        </p>
-      </div>
     </>)
   );
-'
+
  <> <SEO title="Webinars | Zion Tech Group" description="Upcoming webinars and on-demand sessions." canonical="/webinars" /> <div className="container mx-auto px-4 py-16" > <h1 className="text-4xl font-bold mb-4" >Webinars</h1> <p className="text-gray-300" >No upcoming webinars at this time. Check back soon.</p> </div> </>"
-</SEO>
+
 		<>"
 			<SEO title="Webinars | Zion Tech Group" description="Upcoming webinars and on-demand sessions." canonical="/webinars" />"
-</SEO>"
-			<div className="container mx-auto px-4 py-16">"
-</div>"
 				<h1 className="text-4xl font-bold mb-4">Webinars</h1>""
 				<p className="text-gray-300">No upcoming webinars at this time. Check back soon.</p>"
-			</div>
 		</>
 	)
-"
-import React from 'react',''
-import SEO from '../components / SEO','
+import React from 'react',
+import SEO from '../components / SEO',
 export default /**
  * WebinarsPage - Function description;
  */
 function WebinarsPage() {
-return (
-  <>;'
+  <>;
   <SEO title="Webinars | Zion Tech Group" description="Upcoming webinars and on - demand sessions." canonical="/webinars" />;"
-</SEO>"
   <div className="container mx - auto px - 4 py - 16">;"
-</div>"
     <h1 className="text - 4xl font - bold mb - 4">Webinars</h1>;""
     <p className="text - gray - 300">No upcoming webinars at this time. Check back soon.</p>;"
   </div>;)
@@ -70,4 +57,3 @@ origin/automation-improvements-final;
     console.error("Error:", error);""
     return res.status(500).json({ error: "Internal server error" });"
 ;
-"

@@ -19,7 +19,6 @@ function StructuredData() {
     "provider": {""
       "@type": "Organization",""
       "name": "Zion Tech Group",""
-      "url": "https://ziontechgroup.com",""
       "logo": "https://ziontechgroup.com / logo.png",""
       "same_as": [;""
         "https://twitter.com / ziontechgroup",""
@@ -41,14 +40,12 @@ export function StructuredData() {const structuredData = {;"
     }"
     "provider": {"@type": "Organization";""
       "name": "Zion Tech Group";""
-      "url": "https://ziontechgroup.com";""
       "logo": "https://ziontechgroup.com/logo.png";""
       "sameAs": [;""
         "https://twitter.com/ziontechgroup";""
         "https://github.com/ziontechgroup";""
         "https://linkedin.com/company/ziontechgroup";"]
       ];
-    },"
     "feature_list": [;""
       "Marketplace & Jobs",""
       "AI Governance",""
@@ -66,13 +63,9 @@ export function StructuredData() {const structuredData = {;"
       "rating_count": "150",""
       "best_rating": "5",""
       "worst_rating": "1";"
-    },"
     "author": {""
-      "@type": "Organization",""
-      "name": "Zion Tech Group",""
       "url": "https://ziontechgroup.com";"
     }
-  }
   return (
   return (;
     <script;"

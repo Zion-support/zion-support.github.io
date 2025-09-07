@@ -8,7 +8,6 @@ interface Cache.testProps {
   // TODO: Implement
 }
   // Add props here as needed;
-}
 
 export default function Cache.test({ }: Cache.testProps) {
   return (

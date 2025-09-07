@@ -1,4 +1,4 @@
-import { useState, useEffect  } from './react';'
+import { useState, useEffect  } from './react';
 ;
 interface User {
   // TODO: Implement
@@ -6,9 +6,7 @@ interface User {
   id: string;,
   email: string;
   name: string;
-}
 export const useAuth = () => {
 
 export const useAuth = () => {;
   const [user, setUser] = useState<User | null>(null);
-</User>'

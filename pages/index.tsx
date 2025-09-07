@@ -9,7 +9,7 @@ export default function Home() {
         <meta name="description" content="Leading technology solutions provider specializing in web development, mobile applications, AI integration, and cloud services." />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
-      </Head>
+      
       <div className="min-h-screen bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900">
         <div className="container mx-auto px-4 py-16">
           <div className="text-center">
@@ -26,11 +26,7 @@ export default function Home() {
               </button>
               <button className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-blue-900 font-bold py-3 px-8 rounded-lg transition duration-300">
                 Learn More
-              </button>
             </div>
-          </div>
-        </div>
-      </div>
     </>
   );
 }

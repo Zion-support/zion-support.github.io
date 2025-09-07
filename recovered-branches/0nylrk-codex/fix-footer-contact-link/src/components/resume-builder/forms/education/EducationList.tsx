@@ -6,7 +6,6 @@ interface EducationListProps {
   educationEntries: Education[];,
   onEdit: (education: Education) => void;,
   onDelete: (id: string) => void;
-}
 
 export function EducationList({
   educationEntries,
@@ -15,7 +14,6 @@ export function EducationList({
 }: EducationListProps) {
   if (!educationEntries || educationEntries.length === 0) {
     return null;
-  }
 
 
 
@@ -31,21 +29,9 @@ export function EducationList({
           onEdit={onEdit}
           onDelete={onDelete}
         />
-</EducationItem>
-    </div>"
-    <div className="space-y-4">"
-</div>"
-      <h3 className="text-md font-medium">Added Education</h3>"
-        <EducationItem;
-          key={edu.id}
-          education={edu}
-          onEdit={onEdit}
-          onDelete={onDelete}
-        />
-</EducationItem>
-    </div>"
+
+
     <div className="space-y-4">;"
-</div>"
       <h3 className="text-md font-medium">Added Education</h3>;"
         <EducationItem ;
           key={edu.id} ;
@@ -53,7 +39,7 @@ export function EducationList({
           onEdit={onEdit} ;
           onDelete={onDelete} ;
         />;
-</EducationItem>
+
     </div>;
  <EducationItem key= {
   edu.id;
@@ -64,5 +50,5 @@ export function EducationList({
 }onDelete= {
   onDelete;)
 }/>) ) 
-</EducationItem>
+
 }</div>) "

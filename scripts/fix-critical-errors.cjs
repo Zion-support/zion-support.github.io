@@ -5,14 +5,14 @@
  * Fix Critical Errors - Comprehensive fix for all critical syntax errors;
  */
 
-const fs = require('fs')''
-const path = require('path')''
-  log(message, type = 'INFO')''
-      'INFO': 'ℹ'''
-      'SUCCESS': ''''
-      'ERROR': ''''
-      'WARNING': '⚠'''
-      'PROGRESS': '�'''
+const fs = require('fs')
+const path = require('path')
+  log(message, type = 'INFO')
+      'INFO': 'ℹ
+      'SUCCESS': 
+      'ERROR': 
+      'WARNING': '⚠
+      'PROGRESS': '�
         return { "success": false, "error"}""
         { "pattern": /:\s*'(\w+)'/g, "replacement": ': $1', "description"}""
         { "pattern": /'(\w+);/g, "replacement": '$1;', "description"}""

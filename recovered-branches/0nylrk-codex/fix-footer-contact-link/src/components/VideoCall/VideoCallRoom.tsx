@@ -9,7 +9,6 @@ interface VideoCallRoomProps {
   serverUrl?: string;
   onDisconnect?: () => void;
   className?: string;
-}
 
 export function VideoCallRoom({
   room,
@@ -20,73 +19,44 @@ export function VideoCallRoom({
 }: VideoCallRoomProps) {
   return ("
     <Card className={className || "w-full max-w-3xl mx-auto"}>"
-</Card>
+
       <CardHeader>
-</CardHeader>
-        <CardTitle>Video Call</CardTitle>
-      </CardHeader>"
+
+        <CardTitle>Video Call
+      "
       <CardContent className="flex flex-col items-center justify-center p-8">"
-</CardContent>"
         <p className="text-center mb-4">"
 </p>
         </p>"
         <div className="flex gap-2">"
 </div>
-          <Button onClick={onDisconnect}>Close</Button>
-        </div>
-      </CardContent>
-    </Card>"
+          <Button onClick={onDisconnect}>Close
+      
     <Card className={className || "w-full max-w-3xl mx-auto"}>;"
-</Card>
+
       <CardHeader>;
-</CardHeader>
-        <CardTitle>Video Call</CardTitle>;
-      </CardHeader>;"
+
+        <CardTitle>Video Call;
+      ;"
       <CardContent className="flex flex-col items-center justify-center p-8">;"
-</CardContent>"
         <p className="text-center mb-4">;"
-</p>
         </p>;"
         <div className="flex gap-2">;"
-</div>
-          <Button onClick={onDisconnect}>Close</Button>;
+          <Button onClick={onDisconnect}>Close;
         </div>;
-      </CardContent>;
-    </Card>;"
+      ;
     <Card className={class_name || "w - full max - w-3xl mx - auto"}>;"
-</Card>
-      <CardHeader>;
-</CardHeader>
-        <CardTitle > Video Call</CardTitle>;
-      </CardHeader>;"
+
+
+        <CardTitle > Video Call;
       <CardContent className="flex flex - col items - center justify - center p - 8">;"
-</CardContent>"
         <p className="text - center mb - 4">;"
-</p>
-        </p>;"
         <div className="flex gap - 2">;"
-</div>
-          <Button on_click={on_disconnect}>Close</Button>;
-        </div>;
-      </CardContent>;)
-    </Card>);"
-    <Card className={className || "w-full max-w-3xl mx-auto"}>;"
-</Card>
-      <CardHeader>;
-</CardHeader>
-        <CardTitle>Video Call</CardTitle>;
-      </CardHeader>;"
-      <CardContent className="flex flex-col items-center justify-center p-8">;"
-</CardContent>"
-        <p className="text-center mb-4">;"
-</p>
-        </p>;"
-        <div className="flex gap-2">;"
-</div>
-          <Button onClick={onDisconnect}>Close</Button>;
-        </div>;
-      </CardContent>;
-    </Card>;
+          <Button on_click={on_disconnect}>Close;
+      ;)
+    );"
+
+
   return (<Card className= {"
   className || "w-full max-w-3xl mx-auto"")"
-}> flex flex-col items-center justify-center p-8"> <p className=" text-center mb-4" > Video calling functionality is currently unavailable. Please check back later or use an alternative communication method. </p> </div> </CardContent> </Card>)""
+}> flex flex-col items-center justify-center p-8"> <p className=" text-center mb-4" > Video calling functionality is currently unavailable. Please check back later or use an alternative communication method. </p> </div>  )""

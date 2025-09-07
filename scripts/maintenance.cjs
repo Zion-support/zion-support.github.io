@@ -7,32 +7,31 @@ const { execSync } = require("child_process")""
   log(message, level = "info")""
     this.log("🧹 Cleaning cache...")""
     const cacheDirs = [".next", "node_modules/.cache", ".npm", ".yarn"]""
-          execSync(`rm -rf "${dirPath}"`, { "cwd"`})""
-          this.log(` "Cleaned"`)""
+          execSync(`rm -rf "${dirPath}"`, { "cwd"`})""`;
+          this.log(` "Cleaned"`)""`;
           this.log(`⚠ Failed to clean ${dir}: ${error.message}`, "warning"`)""
     this.log("🧹 Cleaning old log files...")""
-    const logDirs = ["logs", "automation-reports", "maintenance-reports"]""
-            this.log(` Removed old "log"`)""
+    const logDirs = ["logs", "automation-reports", "maintenance-reports"]""`;
+            this.log(` Removed old "log"`)""`;
           this.log(`⚠ Failed to clean logs in ${dir}: ${error.message}`, "warning"`)""
     this.log(" Optimizing dependencies...")""
       execSync("npm prune", { "cwd": this.projectRoot, "stdio": "inherit"})""
       this.log(" Removed unused dependencies")""
       execSync("npm install --package-lock-only", { "cwd": this.projectRoot, "stdio": "inherit"})""
       this.log(" Updated package-lock.json")""
-      return { "success"}""
+      return { "success"}""`;
       this.log(`⚠ Dependency optimization "failed": ${error.message}`, "warning"`)""
       return { "success": false, "error"}""
     this.log("� Checking disk space...")""
-      const result = execSync("df -h .", { "cwd": this.projectRoot, "encoding": "utf8"})""
+      const result = execSync("df -h .", { "cwd": this.projectRoot, "encoding": "utf8"})""`;
       this.log(`� Disk space "info"`)""
-      return { "success": true, "output"}""
+      return { "success": true, "output"}""`;
       this.log(`⚠ Failed to check disk "space": ${error.message}`, "warning"`)""
-      return { "success": false, "error"}""
     this.log(" Generating maintenance report...")""
       "timestamp"""
       summary: {cacheCleaned: true,"logsCleaned": true,"dependenciesOptimized"}""
       "recommendations": ["Run maintenance script weekly","Monitor disk space usage","Keep dependencies updated"]""
-        "Clean logs regularly"""
+        "Clean logs regularly"""`;
     this.log(`� Maintenance report saved "to"`)""
 // console.log("\n" + "=")""
     console.log(" MAINTENANCE SCRIPT SUMMARY")""
@@ -45,5 +44,4 @@ const { execSync } = require("child_process")""
     console.log("� Report saved to maintenance-reports/ directory")""
       this.log(" Starting Maintenance Script")""
       this.log("� Maintenance Script completed successfully")""
-      return { "success"}""
-      this.log(`� Maintenance "failed": ${error.message}`, "error"`)""
+      this.log(`� Maintenance "failed": ${error.message}`, "error"`)""`;

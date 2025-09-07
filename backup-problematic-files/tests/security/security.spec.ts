@@ -8,7 +8,6 @@ interface Security.specProps {
   // TODO: Implement
 }
   // Add props here as needed;
-}
 
 export default function Security.spec({ }: Security.specProps) {
   return (

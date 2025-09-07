@@ -13,7 +13,7 @@ const Card: React.FC<CardProps> = ({
   children, 
   title, 
   description, 
-  className = '', 
+  className = , 
   onClick 
 }) => {
   return (
@@ -28,10 +28,9 @@ const Card: React.FC<CardProps> = ({
       )}
       {description && (
         <p className="text-gray-300 mb-4">{description}</p>
-      )}
       {children}
     </motion.div>
   );
 };
 
-export default Card;
+export default Card;`;

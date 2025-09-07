@@ -5,114 +5,30 @@ export function ServiceIncludes() {
 </div>"
       <h2 className="text-2xl font-bold text-white text-center mb-8">"
 </h2>
-      </h2>
 "
       <div className="grid grid-cols-1 md: grid-cols-2 gap-6">"
-</div>"
         <div className="space-y-4">"
-</div>"
           <div className="flex items-start">"
-</div>"
             <div className="mt-1 mr-4">"
-</div>"
               <Check className="h-5 w-5 text-zion-cyan" />"
-</Check>
+
             </div>
             <div>
-</div>"
               <h3 className="text-white font-medium">Transportation to Site</h3>""
               <p className="text-zion-slate-light">"
 </p>
-              </p>
-            </div>
-          </div>
-"
-          <div className="flex items-start">"
-</div>"
-            <div className="mt-1 mr-4">"
-</div>"
-              <Check className="h-5 w-5 text-zion-cyan" />"
-</Check>
-            </div>
-            <div>
-</div>"
+
               <h3 className="text-white font-medium">First Hour of Service</h3>""
-              <p className="text-zion-slate-light">"
-</p>
-              </p>
-            </div>
-          </div>
-"
-          <div className="flex items-start">"
-</div>"
-            <div className="mt-1 mr-4">"
-</div>"
-              <Check className="h-5 w-5 text-zion-cyan" />"
-</Check>
-            </div>
-            <div>
-</div>"
+
               <h3 className="text-white font-medium">Technical Assessment</h3>""
-              <p className="text-zion-slate-light">"
-</p>
-              </p>
-            </div>
-          </div>
-        </div>
-"
-        <div className="space-y-4">"
-</div>"
-          <div className="flex items-start">"
-</div>"
-            <div className="mt-1 mr-4">"
-</div>"
-              <Check className="h-5 w-5 text-zion-cyan" />"
-</Check>
-            </div>
-            <div>
-</div>"
+
               <h3 className="text-white font-medium">"
 </h3>
               </h3>"
-              <p className="text-zion-slate-light">"
-</p>
-              </p>
-            </div>
-          </div>
-"
-          <div className="flex items-start">"
-</div>"
-            <div className="mt-1 mr-4">"
-</div>"
-              <Check className="h-5 w-5 text-zion-cyan" />"
-</Check>
-            </div>
-            <div>
-</div>"
+
               <h3 className="text-white font-medium">Network Connectivity</h3>""
-              <p className="text-zion-slate-light">"
-</p>
-              </p>
-            </div>
-          </div>
-"
-          <div className="flex items-start">"
-</div>"
-            <div className="mt-1 mr-4">"
-</div>"
-              <Check className="h-5 w-5 text-zion-cyan" />"
-</Check>
-            </div>
-            <div>
-</div>"
+
               <h3 className="text-white font-medium">Service Documentation</h3>""
-              <p className="text-zion-slate-light">"
-</p>
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
     </div>)
     </div>);
     </div>;"

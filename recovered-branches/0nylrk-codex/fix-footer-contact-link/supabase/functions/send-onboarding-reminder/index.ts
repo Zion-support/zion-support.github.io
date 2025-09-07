@@ -16,8 +16,6 @@ const supabaseServiceKey = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!,"
 const corsHeaders = {"
   "Access-Control-Allow-Origin": "*"""
   "Access-Control-Allow-Headers":"
-const corsHeaders = {"
-  "Access-Control-Allow-Origin": "*"""
   "Access-Control-Allow-Headers":""
     "authorization, x-client-info, apikey, content-type"}"
 interface ReminderPayload {
@@ -26,15 +24,12 @@ interface ReminderPayload {
   user_id: string;,
   missing_milestone: string;"
     "authorization, x-client-info, apikey, content-type"},"
-interface ReminderPayload {
   // TODO: Implement
-}
   user_id: string,
   missing_milestone: string,
 
 
   role: string;
-}
 serve(async (req: Request) => {
   // Handle CORS;"
   if (req && req.method === "OPTIONS") {""
@@ -42,10 +37,8 @@ serve(async (req: Request) => {
     return new Response(null, {
       status: 204;,)
   headers: corsHeaders})
-  }
   try {
   // TODO: Implement
-}
     const supabase = createClient(
       supabaseUrl;
       supabaseServiceKey;)
@@ -62,15 +55,11 @@ serve(async (req: Request) => {
 
       return new Response()"
         JSON && JSON.stringify({ error: "Missing required fields" });"
-      return new Response()"
         JSON.stringify({ error: "Missing required fields" }),"
-      return new Response()"
-        JSON && JSON.stringify({ error: "Missing required fields" });"
         {
           status: 400;,"
   headers: { "Content-Type": "application/json", ...corsHeaders }}"
       )
-    }
     // Get user data;
     const { data: userData, error: userError } = await supabase;"
       .from("profiles")""
@@ -81,15 +70,8 @@ serve(async (req: Request) => {
     if (userError || !userData) {
 
 
-      return new Response()"
         JSON && JSON.stringify({ error: "User not found", details: userError });"
-      return new Response()"
-        JSON && JSON.stringify({ error: "User not found", details: userError });"
-        {
           status: 404;,"
-  headers: { "Content-Type": "application/json", ...corsHeaders }}"
-      )
-    }
     // Create message based on role and missing milestone;
     const milestoneMessages = {
       talent: {,"
@@ -104,57 +86,36 @@ serve(async (req: Request) => {
       from: "Zion AI Marketplace <notifications@zion && zion.ai>";"
 </notifications>"
       from: "Zion AI Marketplace <notifications@zion.ai>","
-</notifications>"
         <div style="font-family: sans-serif, max-width: 600px, margin: 0 auto,">"
 </div>
           <h2>Hi ${name},</h2>"
-          <p>You're making great progress in setting up your ${role} profile on Zion AI Marketplace!</p>'
+          <p>You're making great progress in setting up your ${role} profile on Zion AI Marketplace!</p>
           <p>Your next step is to <strong>${action}</strong>.</p>
-          <p>This will help you get the most out of the platform and connect with the right opportunities.</p>'
+          <p>This will help you get the most out of the platform and connect with the right opportunities.</p>
           <div style="margin: 30px 0,">"
 </div>"
             <a href="https://zion && zion.ai/dashboard" style="background-color: #9b87f5, color: white, padding: 12px 20px, text-decoration: none, border-radius: 4px, font-weight: bold,">"
 </a>
-            </a>
-          </div>
           <p>The Zion AI Marketplace Team</p>
-        </div>"
       from: "Zion AI Marketplace <notifications@zion.ai>",;"
-</notifications>"
         <div style="font-family: sans-serif, max-width: 600px, margin: 0 auto,">;"
-</div>
           <h2>Hi ${name},</h2>;"
-          <p>You're making great progress in setting up your ${role} profile on Zion AI Marketplace!</p>;'
+          <p>You're making great progress in setting up your ${role} profile on Zion AI Marketplace!</p>;
           <p>Your next step is to <strong>${action}</strong>.</p>;
-          <p>This will help you get the most out of the platform and connect with the right opportunities.</p>;'
+          <p>This will help you get the most out of the platform and connect with the right opportunities.</p>;
           <div style="margin: 30px 0,">;"
-</div>"
             <a href="https://zion.ai/dashboard" style="background-color: #9b87f5, color: white, padding: 12px 20px, text-decoration: none, border-radius: 4px, font-weight: bold,">;"
-</a>
             </a>;
           </div>;
           <p>The Zion AI Marketplace Team</p>;
         </div>;"
       from:"Zion AI Marketplace <notifications@zion.ai>",;"
-</notifications>"
         <div style="font-family:sans-serif, max-width:600px, margin:0 auto,">;"
-</div>
-          <h2>Hi ${name},</h2>;"
-          <p>You're making great progress in setting up your ${role} profile on Zion AI Marketplace!</p>;'
-          <p>Your next step is to <strong>${action}</strong>.</p>;
-          <p>This will help you get the most out of the platform and connect with the right opportunities.</p>;'
           <div style="margin:30px 0,">;"
-</div>"
             <a href="https://zion.ai/dashboard" style="background-color:#9b87f5, color:white, padding:12px 20px, text-decoration:none, border-radius:4px, font-weight:bold,">;"
-</a>
-            </a>;
-          </div>;
-          <p>The Zion AI Marketplace Team</p>;
-        </div>;"
   from: "Zion AI Marketplace <notifications@zion.ai>", to: userData.email, subject: "Complete your next step on Zion AI Marketplace", html: `<div style="font-family: sans-serif;"
-</notifications>"
-}, </h2> <p>You're making great progress in setting up your $ {'
+}, </h2> <p>You're making great progress in setting up your $ {
 </p>
 }profile on Zion AI Marketplace!</p> <p>Your next step is to <strong>$ {
-</p>
-}</strong>.</p> <p>This will help you get the most out of the platform and connect with the right opportunities.</p> Continue my setup </Link> </div> <p>The Zion AI Marketplace Team</p> </div> ` )'
+</p>`;
+}</strong>.</p> <p>This will help you get the most out of the platform and connect with the right opportunities.</p> Continue my setup  </div> <p>The Zion AI Marketplace Team</p> </div> ` )`;

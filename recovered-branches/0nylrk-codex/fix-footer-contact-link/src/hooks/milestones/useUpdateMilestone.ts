@@ -1,22 +1,22 @@
 
 
-import {useState} from 'react';''
-import {supabase} from '@/integrations / supabase / client';''
-import {use_auth} from '@/hooks / use_auth';''
-import {toast} from 'sonner';''
-import {Milestone, MilestoneStatus} from './types';''
-import {useRecordActivity} from './useRecordActivity';'
+import {useState} from 'react';
+import {supabase} from '@/integrations / supabase / client';
+import {use_auth} from '@/hooks / use_auth';
+import {toast} from 'sonner';
+import {Milestone, MilestoneStatus} from './types';
+import {useRecordActivity} from './useRecordActivity';
 export const useUpdateMilestone = () => {;
   const { user } = useAuth();
   const [isSubmitting, setIsSubmitting] = useState(false);
   const { recordMilestoneActivity } = useRecordActivity();
-'
-import { useState } from 'react',''
-import { supabase } from '@/integrations/supabase/client',''
-import { useAuth } from '@/hooks/useAuth',''
-import { toast } from 'sonner',''
-import { Milestone, MilestoneStatus } from './types',''
-import { useRecordActivity } from './useRecordActivity','
+
+import { useState } from 'react',
+import { supabase } from '@/integrations/supabase/client',
+import { useAuth } from '@/hooks/useAuth',
+import { toast } from 'sonner',
+import { Milestone, MilestoneStatus } from './types',
+import { useRecordActivity } from './useRecordActivity',
 export const useUpdateMilestone = () => {
   const { user } = useAuth(),
   const [isSubmitting, setIsSubmitting] = useState(false),
@@ -33,10 +33,10 @@ export const useUpdateMilestone = () => {
       
       
       // Get the current status;
-      const { data: milestoneData, error: fetchError } = await supabase;'
-        .from('project_milestones')''
-        .select('status')''
-        .eq('id', milestoneId)'
+      const { data: milestoneData, error: fetchError } = await supabase;
+        .from('project_milestones')
+        .select('status')
+        .eq('id', milestoneId)
         .single(),
 
       
@@ -48,110 +48,59 @@ export const useUpdateMilestone = () => {
 
 
       // Update the milestone status;
-      const { error } = await supabase;'
-        .from('project_milestones')'
+      const { error } = await supabase;
         .update({ status: newStatus })
 
       return false;
     } finally {
   // TODO: Implement
-}
       setIsSubmitting(false)
-    }
-  }
   },
   
   const updateMilestone = async (milestoneId: string, data: Partial<Milestone>) => {
-</Milestone>
+
   const update_milestone = async (milestone_id: string, data: Partial < Milestone>) => {
     // Check condition;
 if (return false) {
   $2;
-}
-    try {
   // TODO: Implement
-}
       setIsSubmitting (true),
-      const { error } = await supabase;'
-        .from ('project_milestones');'
-        .update (data);'
-        .eq ('id', milestone_id);'
+        .from ('project_milestones');
+        .update (data);
+        .eq ('id', milestone_id);
 ;
       // Check condition;
 if (throw error) {
-  $2;
-}
-      // Create activity record;'
-      await recordMilestoneActivity (milestone_id, 'updated', null, 'updated_milestone details updated');'
-;'
+      // Create activity record;
+      await recordMilestoneActivity (milestone_id, 'updated', null, 'updated_milestone details updated');
       toast.success ("Milestone updated successfully");"
-;
       return true;
     } catch (err: any) {"
       console.error ("Error updating milestone:", err);""
       toast.error ("Failed to update milestone: " + err.message),"
-      return false;
-    } finally {
   // TODO: Implement
-}
       setIsSubmitting (false);
-    }
 
 
-  },
   
-  const updateMilestone = async (milestoneId: string, data: Partial<Milestone>) => {
-</Milestone>
+
   const updateMilestone = async (milestoneId: string, data: Partial<Milestone>) => {;
-</Milestone>
-  const update_milestone = async (milestone_id: string, data: Partial < Milestone>) => {
+
     // Check condition;
-if (return false) {
-  $2;
-}
-    try {
   // TODO: Implement
-}
-      setIsSubmitting (true),
       const { error } = await supabase;"
-        .from ('project_milestones');'
-        .update (data);'
-        .eq ('id', milestone_id);'
-;
       // Check condition;
-if (throw error) {
-  $2;
-}
-      // Create activity record;'
-      await recordMilestoneActivity (milestone_id, 'updated', null, 'updated_milestone details updated');'
-;'
-      toast.success ("Milestone updated successfully");"
-;
-      return true;
-    } catch (err: any) {"
-      console.error ("Error updating milestone:", err);""
-      toast.error ("Failed to update milestone: " + err.message),"
-      return false;
-    } finally {
+      // Create activity record;
   // TODO: Implement
-}
-;
 
   return {
   // TODO: Implement
-}
     updateMilestoneStatus;
     update_milestone;
     is_submitting;
-      setIsSubmitting(false)
 
-  }
-}
 
-;
 
-  }
 };
-;
 
 "

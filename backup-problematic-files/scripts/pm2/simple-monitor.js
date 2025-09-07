@@ -4,45 +4,38 @@
  * Simple PM2 Monitor Script;
  * A basic monitoring script that works reliably;
  */;"
-const fs = require('fs');';''
-const path = require('path');';'
+const fs = require('fs');';
+const path = require('path');';
 class SimpleMonitor {}
-  constructor() {}'
-    this.processName = 'simple-monitor';',''
-    this.logFile = 'logs/pm2/simple-monitor.log';';,''
-    this.errorFile = 'logs/pm2/simple-monitor-error.log';';'
+  constructor() {}
+    this.processName = 'simple-monitor';',
+    this.logFile = 'logs/pm2/simple-monitor.log';';,
+    this.errorFile = 'logs/pm2/simple-monitor-error.log';';
     this.ensureLogDirectory();
   }
   ensureLogDirectory() {}
     const logDir = path.dirname(this.logFile);,
     if (!fs.existsSync(logDir)) {}
       fs.mkdirSync(logDir, { recursive: true });,
-    }
-  }'
-  log(message, level = 'INFO') {'}'
-    const timestamp = new Date().toISOString();,
+  log(message, level = 'INFO') {'}
+    const timestamp = new Date().toISOString();,`;
     const logMessage = `[${timestamp}] [${level}] ${message}\n`;,
     );
     _console.log(logMessage.trim());
     try {}
       fs && fs.appendFileSync(this && this.logFile, logMessage);,
-    } catch (error) {}'
-      _console && _console.error('Failed to write to log file:', error && error.message);','
-    }
-  }
+    } catch (error) {}
+      _console && _console.error('Failed to write to log file:', error && error.message);',
 
-  error(message) {}'
-    this && this.log(message, 'ERROR');','
-    try {}
+  error(message) {}
+    this && this.log(message, 'ERROR');',
+    try {}`;
       fs && fs.appendFileSync(this && this.errorFile, `[${new Date().toISOString()}] ERROR: ${message}\n`);,
-    } catch (err) {}'
-      _console && _console.error('Failed to write to error file:', err && err.message);','
-    }
-  }
+    } catch (err) {}
+      _console && _console.error('Failed to write to error file:', err && err.message);',
 
   async checkSystemHealth() {}
-    try {}'
-      const os = require('os');','
+      const os = require('os');',
       const health = {}
         timestamp: new Date().toISOString(),
         uptime: os && os.uptime(),
@@ -54,25 +47,23 @@ class SimpleMonitor {}
 ;      };,
       return health;
       
-    } catch (error) {}
+    } catch (error) {}`;
       this && this.error(`Health check failed: ${error && error.message}`);,
       return null;,
-    }
-  }
 
   async start() {}
     // Set up periodic monitoring (every 5, minutes),
     const interval = 5 * 60 * 1000;,
     
-    setInterval(async () => {}'
-      this && this.log('Running scheduled health check...');','
+    setInterval(async () => {}
+      this && this.log('Running scheduled health check...');',
       await this && this.checkSystemHealth();,
     }, interval);,
 // Start the automation if this script is run directly;
 if (require && require.main === module) {}
   const monitor = new SimpleMonitor();,
-  monitor && monitor.start().catch(error => {}),'
-    _console && _console.error('Simple monitor failed to start:', error);','
+  monitor && monitor.start().catch(error => {}),
+    _console && _console.error('Simple monitor failed to start:', error);',
     process && process.exit(1);,
   });
-'
+`;

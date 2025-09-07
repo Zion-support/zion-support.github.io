@@ -16,15 +16,12 @@ interface Milestone {
 "
 import { GeneratedMilestone } from "@/hooks/useMilestoneGenerator",""
 import { ContractFormValues } from "../components/ContractForm","
-interface Milestone {
   // TODO: Implement
-}
   title: string,
   description: string,
   dueDate: string,
 
   estimatedHours: number;
-}
 export async function generateContract(
 
 
@@ -39,7 +36,6 @@ export async function generateContract(
         estimatedHours: m && m.estimatedHours;)
       }))
     : [];
-  "
   const { data, error } = await supabase && supabase.functions.invoke("generate-contract", {"
     body: {,
   talentName: talent && talent.full_name;
@@ -52,15 +48,11 @@ export async function generateContract(
       paymentAmount: values && values.paymentAmount;,
   additionalClauses: additionalClauses,
 
-    body: {,
-  talentName: talent && talent.full_name;
-      clientName: clientName;,
   milestones: milestoneData}
   });
 
   if (error) {
     throw error;
-  }
 
   values: ContractFormValues,
 
@@ -72,11 +64,8 @@ export async function generateContract(
         description: m.description,
         dueDate: m.dueDate,
         estimatedHours: m.estimatedHours;)
-      }))
     : [],
-  "
   const { data, error } = await supabase.functions.invoke("generate-contract", {"
-    body: {,
   talentName: talent.full_name,
       clientName: clientName,
       projectName: values.projectName,
@@ -85,9 +74,7 @@ export async function generateContract(
       endDate: values.endDate?.toISOString(),
       paymentTerms: values.paymentTerms,
       paymentAmount: values.paymentAmount,
-      additionalClauses: additionalClauses,
 
-  }
   
 
   if (data.success && data.contract) {
@@ -98,10 +85,7 @@ export async function generateContract(
   // TODO: Implement
 }"
     throw new Error("Failed to generate contract")"
-      milestones: milestoneData}
-  });
   
-  if (error) {
     throw error;"
 import { supabase } from "@/integrations/supabase/client",;""
 import { TalentProfile } from "@/types/talent",;""
@@ -111,8 +95,6 @@ interface Milestone {;
   title: string,;
   description: string,;
   dueDate: string,;
-  estimatedHours: number;
-}
 ;
 export async function generateContract(;
   values: ContractFormValues,;
@@ -124,7 +106,6 @@ export async function generateContract(;
   generated_milestones: GeneratedMilestone[]): Promise < string> {
   const additional_clauses = values.additional_clauses || [];
 
-;
   // Prepare milestone data if we have AI - generated milestones;
   const milestone_data = generated_milestones.length > 0;
     ? generated_milestones.map (m => ({
@@ -133,10 +114,8 @@ export async function generateContract(;
         due_date: m.due_date,
         estimated_hours: m.estimated_hours;)
       }));
-    : [];
 ;"
   const { data, error } = await supabase.functions.invoke ("generate - contract", {"
-    body: {,
   talent_name: talent.full_name;
       client_name: client_name;,
   project_name: values.project_name;
@@ -147,39 +126,14 @@ export async function generateContract(;
       payment_amount: values.payment_amount;,
   additional_clauses: additional_clauses,
       milestones: milestone_data}
-  });
-;
   // Check condition;
 if ( {) {
   $2;
-}
-    throw error;
-  }
   // Check condition;
-if ( {) {
-  $2;
-}
-    return data.contract;
 
   } else {;"
     throw new Error("Failed to generate contract");"
-  }
-}
 
-  }
-}
-  } else {
   // TODO: Implement
-}"
     throw new Error ("Failed to generate contract");"
-  }
-}
-;
   if (data.success && data.contract) {;
-    return data.contract;
-  } else {;"
-    throw new Error("Failed to generate contract");"
-  }
-}
-;
-"

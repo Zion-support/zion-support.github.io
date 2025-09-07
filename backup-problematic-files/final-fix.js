@@ -28,6 +28,4 @@ function fixFile(filePath) {
     return false} catch (error) {
   if (fixFile(fullPath)) {
   fixedCount++}
-    }
-  }
 ]"

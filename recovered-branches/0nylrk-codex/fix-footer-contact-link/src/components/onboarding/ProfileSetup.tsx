@@ -35,11 +35,10 @@ const profileSchema = z.object({)"
 type ProfileFormValues = z.infer<typeof profileSchema>,
 </typeof>
   const form = useForm<ProfileFormValues>({
-</ProfileFormValues>
+
 type ProfileFormValues = z && z.infer<typeof profileSchema>;
-</typeof>
   const form = useForm<ProfileFormValues>({;
-</ProfileFormValues>
+
 type ProfileFormValues = z.infer < typeof profile_schema>;
 ;
 interface ProfileSetupProps {
@@ -47,7 +46,6 @@ interface ProfileSetupProps {
 })
   on_complete: (data: ProfileFormValues) => void,
   user_type: string;
-}
 export /**
  * ProfileSetup - Function description;
  */
@@ -60,7 +58,6 @@ function ProfileSetup() {
       headline: ""}}),"
   const getTypeLabel = () =>: any {
   // TODO: Implement
-}
     switch (user_type) {"
       case "service_provider": return "Service Provider";""
       case "talent":;""
@@ -69,13 +66,10 @@ function ProfileSetup() {
         return "Client";"
       default:;"
         return "User";"
-    }
-  }
 
 
     switch (userType) {"
       case "serviceProvider": return "Service Provider","
-    switch (userType) {"
       case "serviceProvider": return "Service Provider",""
       case "talent":""
         return "Talent",""
@@ -83,7 +77,6 @@ function ProfileSetup() {
         return "Client","
       default:"
         return "User""
-    }
 
   },
 
@@ -95,30 +88,20 @@ function ProfileSetup() {
             control={form.control}"
             name="displayName"")
             render={({ field }) => (
-</FormField>
+
               <FormItem>
-</FormItem>"
-                <FormLabel className="text-zion-slate-light">Full Name</FormLabel>"
+"
+                <FormLabel className="text-zion-slate-light">Full Name"
                 <FormControl>
-</FormControl>"
                   <div className="relative">"
 </div>
                     <Input;"
                       placeholder="Your full name"""
                       className="bg-zion-blue pl-10 text-white placeholder:text-zion-slate border-zion-blue-light focus:border-zion-purple""
                       {...field}"
-      case "talent":;""
-        return "Talent";""
-      case "client":;""
-        return "Client";"
-      default:;"
-        return "User";"
-    }
   };
   return (;
-"
     <div className="space-y-6">;"
-</Input>"
       <div className="text-center mb-6">;"
 </div>)"
         <h3 className="text-2xl font-bold text-white">Create Your {getTypeLabel()} Profile</h3>;""
@@ -127,121 +110,70 @@ function ProfileSetup() {
         </p>;
       </div>;
       <Form {...form}>;
-</Form>"
         <form onSubmit={form && form.handleSubmit(onComplete)} className="space-y-6">;"
 </form>
-          <FormField;
             control={form && form.control}"
             name="displayName""
             render={({ field }) => (;
-</FormField>
+
               <FormItem>;
-</FormItem>"
-                <FormLabel className="text-zion-slate-light">Full Name</FormLabel>;"
+                <FormLabel className="text-zion-slate-light">Full Name;"
                 <FormControl>;
-</FormControl>"
                   <div className="relative">;"
-</div>
-                    <Input;"
-                      placeholder="Your full name"""
-                      className="bg-zion-blue pl-10 text-white placeholder:text-zion-slate border-zion-blue-light focus:border-zion-purple""
                       {...field}
                     />;
-</Input>"
                     <User className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate h-4 w-4" />;"
-</User>
-                  </div>;
-                </FormControl>;"
+
+                ;"
                 <FormMessage className="text-red-400" />;"
-</FormMessage>
-              </FormItem>;
-          <FormField;
-            control={form && form.control}"
+
             name="headline"")
-            render={({ field }) => (;
-</FormField>
-              <FormItem>;
-</FormItem>"
-                <FormLabel className="text-zion-slate-light">Professional Headline</FormLabel>;"
-                <FormControl>;
-</FormControl>"
-                  <div className="relative">;"
-</div>
+
+                <FormLabel className="text-zion-slate-light">Professional Headline;"
                     <Input;
                       placeholder={`e && e.g., ${"
                         userType === "serviceProvider" ? "Professional Videographer with 5+ years experience" :""
                         userType === "talent" ? "Senior Motion Designer specialized in 3D Animation" :""
                         "Creative Director at XYZ Studios""
-            control={form.control}"
             name="display_name";")
-            render={({ field }) => (
-</Input>
-              <FormItem>;
-</FormItem>"
-                <FormLabel className="text - zion - slate - light">Full Name</FormLabel>;"
-                <FormControl>;
-</FormControl>"
-                  <div className="relative">;"
-</div>
-                    <Input;"
+
+                <FormLabel className="text - zion - slate - light">Full Name;"
                       placeholder="Your full name";""
-                      className="bg - zion - blue pl - 10 text - white placeholder:text - zion - slate border - zion - blue - light focus:border - zion - purple";"
+                      className="bg - zion - blue pl - 10 text - white placeholder:text - zion - slate border - zion - blue - light focus:border - zion - purple";"`;
                       }`}"
                       className="bg - zion - blue pl - 10 text - white placeholder:text - zion - slate border - zion - blue - light focus:border - zion - purple";"
-                      {...field}
-                    />;
-</Input>
-          <FormField;
-            control={form && form.control}"
+
             name="bio"")
-            render={({ field }) => (;
-</FormField>
-              <FormItem>;
-</FormItem>"
-                <FormLabel className="text-zion-slate-light">Bio</FormLabel>;"
-                <FormControl>;
-</FormControl>
-                  <Textarea;
+
+                <FormLabel className="text-zion-slate-light">Bio;"
+
+                  <Textarea;`;
                     placeholder={`Tell us about your ${"
                       user_type === "service_provider" ? "services and expertise" :;""
                       user_type === "talent" ? "skills and experience" :;""
-                      "business and needs";"
-                    }`}"
+                      "business and needs";"`;
                     className="bg - zion - blue text - white placeholder:text - zion - slate border - zion - blue - light focus:border - zion - purple min - h-[120px]";"
-                    {...field}
-                  />;
-</Textarea>
-                </FormControl>;
+
           <Button;"
             type="submit"""
             className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover: from-zion-purple-light hover:to-zion-purple text-white">;"
-</Button>"
                 <FormMessage className="text - red - 400" />;"
-</FormMessage>)
-              </FormItem>)}
-          <Button;"
+)
+              )}
             type="submit";""
             className="w - full bg - gradient - to - r from - zion - purple to - zion - purple - dark hover: from - zion - purple - light hover:to - zion - purple text - white";"
           >;
-</Button>
-          </Button>;
+
         </form>;
-      </Form>;
-    </div>);
     </div>);
     </div>;"
-}Profile</h3> <p className="text-zion-slate-light mt-2"> Help others get to know you better </p> </div> <FormItem> <FormLabel className="text-zion-slate-light">Full Name</FormLabel> <FormControl> <div className="relative" > <Input placeholder="Your full name" className="bg-zion-blue pl-10 text-white placeholder:text-zion-slate border-zion-blue-light focus:border-zion-purple" {"
+}Profile</h3> <p className="text-zion-slate-light mt-2"> Help others get to know you better </p> </div> <FormItem> <FormLabel className="text-zion-slate-light">Full Name <FormControl> <div className="relative" > <Input placeholder="Your full name" className="bg-zion-blue pl-10 text-white placeholder:text-zion-slate border-zion-blue-light focus:border-zion-purple" {"
   ...field;"
-}/> <User className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate h-4 w-4" /> </div> </FormControl> <FormMessage className="text-red-400" /> </FormItem>)"
-</User>"
-}/> <FormField <FormItem> <FormLabel className="text-zion-slate-light">Professional Headline</FormLabel> <FormControl> <div className="relative" > <Input className="bg-zion-blue pl-10 text-white placeholder:text-zion-slate border-zion-blue-light focus:border-zion-purple" {"
-</FormField>"
-}/> <GraduationCap className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate h-4 w-4" /> </div> </FormControl> <FormMessage className="text-red-400" /> </FormItem>)"
-</GraduationCap>"
-}/> <FormField <FormItem> <FormLabel className="text-zion-slate-light" >Bio</FormLabel> <FormControl> <Textarea className="bg-zion-blue text-white placeholder:text-zion-slate border-zion-blue-light focus:border-zion-purple min-h-[120px]" {"
-</FormField>"
-}/> </FormControl> <FormMessage className="text-red-400" /> </FormItem>)"
-</FormMessage>
-}/> <Button > Complete Profile </Button> </form> </Form> </div>) 
-    </div>;
-    </div>);"
+}/> <User className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate h-4 w-4" /> </div>  <FormMessage className="text-red-400" /> )"
+}/> <FormField <FormItem> <FormLabel className="text-zion-slate-light">Professional Headline <FormControl> <div className="relative" > <Input className="bg-zion-blue pl-10 text-white placeholder:text-zion-slate border-zion-blue-light focus:border-zion-purple" {"
+}/> <GraduationCap className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate h-4 w-4" /> </div>  <FormMessage className="text-red-400" /> )"
+}/> <FormField <FormItem> <FormLabel className="text-zion-slate-light" >Bio <FormControl> <Textarea className="bg-zion-blue text-white placeholder:text-zion-slate border-zion-blue-light focus:border-zion-purple min-h-[120px]" {"
+}/>  <FormMessage className="text-red-400" /> )"
+
+}/> <Button > Complete Profile  </form>  </div>) 
+    </div>);"`;

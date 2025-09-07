@@ -29,6 +29,4 @@ class AutomationManager {,"}),"})""
   restart <process>        - Restart specific process,"}),"})"
 </process>
   logs <process>           - Show logs for specific process;
-</process>
   restart <process>        - Restart specific process;
-</process>"

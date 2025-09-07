@@ -9,54 +9,29 @@ export interface ListingItem {
   title: string;
   category: string;
   image?: string;
-}
 export interface ContactInfo {
   // TODO: Implement
-}
 export interface ListingItem {;
-  id: string;,
-  title: string;
   category: string,
-  image?: string;
-}
 
 export interface ContactInfo {;
   name: string;,
   email: string;
   phone: string;,
   company: string;
-}
 
 ;
-export interface ListingItem {
   // TODO: Implement
-}
-export interface ListingItem {;
-
-  id: string;,
-  title: string;
-  category: string;
-  image?: string;
-}
 
 
-export interface ContactInfo {;
-  name: string;,
-  email: string;
-  phone: string;,
-  company: string;
-}
+
 
   phone: string,
-  company: string;
-}
 export interface Budget {
   // TODO: Implement
-}
   amount: number;
   maxAmount?: number;
   type: BudgetType;
-}
 
 
 export interface QuoteFormData {;
@@ -71,7 +46,6 @@ export interface QuoteFormData {;
   timeline: TimelineType;,
   budget: Budget;
   contactInfo: ContactInfo;
-}
 
 export type QuoteStatus ="
   | "new"""
@@ -82,15 +56,10 @@ export type QuoteStatus ="
   | "archived";"
 export interface QuoteRequest {
   // TODO: Implement
-}
 export interface QuoteRequest {;
 
   timeline: TimelineType;
-export interface QuoteRequest {
   // TODO: Implement
-}
-export interface QuoteRequest {;
-  id: string;,
   talent_id: string;
   talent_name?: string;
   requester_id?: string;
@@ -110,5 +79,4 @@ export interface QuoteRequest {;
   replied_at?: string;
   created_at: string;,
   updated_at: string;
-}
 "

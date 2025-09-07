@@ -1,5 +1,5 @@
-import React, { SVGProps } from 'react'''
-import { logWarn } from '@/utils/productionLogger''
+import React, { SVGProps } from 'react
+import { logWarn } from '@/utils/productionLogger
 import {
   // TODO: Implement
 }
@@ -295,8 +295,8 @@ import {
   ZapOff as LucideZapOff,
   Zap as LucideZap,
   ZoomIn as LucideZoomIn,
-  ZoomOut as LucideZoomOut,'
-} from 'lucide-react''
+  ZoomOut as LucideZoomOut,
+} from 'lucide-react
 export const Home = LucideHome;
 export const Bot = LucideBot;
 export const Sparkles = LucideSparkles;
@@ -600,38 +600,36 @@ export const ZoomIn = LucideZoomIn;
 export const ZoomOut = LucideZoomOut;
 // Define the props for your Icon component;
 export type IconProps = SVGProps<SVGSVGElement> & {
-</SVGSVGElement>
-export type IconProps = SVGProps<SVGSVGElement> & {
-</SVGSVGElement>
+
+
 export const Icon: React.FC<IconProps> = ({
-</IconProps>
+
       return <div>Something went wrong.</div>;
 export type IconProps = SVGProps<SVGSVGElement> & {;
-</SVGSVGElement>
+
 export const Icon: React.FC<IconProps> = ({;
-</IconProps>
+
   return <LucideIconComponent size={size} className={className} {...props} />;
-</LucideIconComponent>
+
 export type IconProps = SVGProps < SVGSVGElement> & {
   name: keyof typeof icon_map;
   size?: number | string;
   class_name?: string;
-}
 // Create a map of icon names to component references;
 const icon_map = {
-  home: LucideHome,'
-  'bot - message - square': LucideBot, // Assuming Bot is used for bot - message - square;'
+  home: LucideHome,
+  'bot - message - square': LucideBot, // Assuming Bot is used for bot - message - square;
   sparkles: LucideSparkles,
   user: LucideUser,
   briefcase: LucideBriefcase,
   server: LucideServer,
   bell: LucideBell,
   calendar: LucideCalendar,
-  check: LucideCheck,'
-  'chevron - down': LucideChevronDown,''
-  'chevron - up': LucideChevronUp,''
-  'chevron - left': LucideChevronLeft,''
-  'chevron - right': LucideChevronRight,'
+  check: LucideCheck,
+  'chevron - down': LucideChevronDown,
+  'chevron - up': LucideChevronUp,
+  'chevron - left': LucideChevronLeft,
+  'chevron - right': LucideChevronRight,
   plus: LucidePlus,
   minus: LucideMinus,
   coordinate_x: LucideX,
@@ -639,80 +637,80 @@ const icon_map = {
   trash: LucideTrash,
   settings: LucideSettings,
   search: LucideSearch,
-  filter: LucideFilter,'
-  'upload - cloud': LucideUploadCloud,''
-  'download - cloud': LucideDownloadCloud,'
-  copy: LucideCopy,'
-  'external - link': LucideExternalLink,'
-  link: LucideLink,'
-  'message - square': LucideMessageSquare,'
-  users: LucideUsers,'
-  'file - text': LucideFileText,'
-  image: LucideImage,'
-  'alert - triangle': LucideAlertTriangle,'
+  filter: LucideFilter,
+  'upload - cloud': LucideUploadCloud,
+  'download - cloud': LucideDownloadCloud,
+  copy: LucideCopy,
+  'external - link': LucideExternalLink,
+  link: LucideLink,
+  'message - square': LucideMessageSquare,
+  users: LucideUsers,
+  'file - text': LucideFileText,
+  image: LucideImage,
+  'alert - triangle': LucideAlertTriangle,
   info: LucideInfo,
   mail: LucideMail,
-  lock: LucideLock,'
-  'log - out': LucideLogOut,''
-  'log - in': LucideLogIn,''
-  'shopping - cart': LucideShoppingCart,''
-  'credit - card': LucideCreditCard,''
-  'dollar - sign': LucideDollarSign,'
+  lock: LucideLock,
+  'log - out': LucideLogOut,
+  'log - in': LucideLogIn,
+  'shopping - cart': LucideShoppingCart,
+  'credit - card': LucideCreditCard,
+  'dollar - sign': LucideDollarSign,
   percent: LucidePercent,
   award: LucideAward,
   activity: LucideActivity,
-  airplay: LucideAirplay,'
-  'align - center': LucideAlignCenter,''
-  'align - justify': LucideAlignJustify,''
-  'align - left': LucideAlignLeft,''
-  'align - right': LucideAlignRight,'
+  airplay: LucideAirplay,
+  'align - center': LucideAlignCenter,
+  'align - justify': LucideAlignJustify,
+  'align - left': LucideAlignLeft,
+  'align - right': LucideAlignRight,
   anchor: LucideAnchor,
   aperture: LucideAperture,
-  archive: LucideArchive,'
-  'arrow - down - circle': LucideArrowDownCircle,''
-  'arrow - down - left': LucideArrowDownLeft,''
-  'arrow - down - right': LucideArrowDownRight,''
-  'arrow - left - circle': LucideArrowLeftCircle,''
-  'arrow - right': LucideArrowRight,''
-  'arrow - right - circle': LucideArrowRightCircle,''
-  'arrow - up - circle': LucideArrowUpCircle,''
-  'arrow - up - left': LucideArrowUpLeft,''
-  'arrow - up - right': LucideArrowUpRight,''
-  'at - sign': LucideAtSign,''
-  'bar - chart': LucideBarChart,''
-  'bar - chart - 2': LucideBarChart2,''
-  'bar - chart - 3': LucideBarChart3,''
-  'battery - charging': LucideBatteryCharging,'
-  battery: LucideBattery,'
-  'bell - off': LucideBellOff,'
+  archive: LucideArchive,
+  'arrow - down - circle': LucideArrowDownCircle,
+  'arrow - down - left': LucideArrowDownLeft,
+  'arrow - down - right': LucideArrowDownRight,
+  'arrow - left - circle': LucideArrowLeftCircle,
+  'arrow - right': LucideArrowRight,
+  'arrow - right - circle': LucideArrowRightCircle,
+  'arrow - up - circle': LucideArrowUpCircle,
+  'arrow - up - left': LucideArrowUpLeft,
+  'arrow - up - right': LucideArrowUpRight,
+  'at - sign': LucideAtSign,
+  'bar - chart': LucideBarChart,
+  'bar - chart - 2': LucideBarChart2,
+  'bar - chart - 3': LucideBarChart3,
+  'battery - charging': LucideBatteryCharging,
+  battery: LucideBattery,
+  'bell - off': LucideBellOff,
   bluetooth: LucideBluetooth,
-  bold: LucideBold,'
-  'book - open': LucideBookOpen,'
+  bold: LucideBold,
+  'book - open': LucideBookOpen,
   book: LucideBook,
   bookmark: LucideBookmark,
-  box: LucideBox,'
-  'camera - off': LucideCameraOff,'
+  box: LucideBox,
+  'camera - off': LucideCameraOff,
   camera: LucideCamera,
-  cast: LucideCast,'
-  'check - circle': LucideCheckCircle,''
-  'check - square': LucideCheckSquare,''
-  'chevron - down - square': LucideChevronDownSquare,''
-  'chevron - left - square': LucideChevronLeftSquare,''
-  'chevron - right - square': LucideChevronRightSquare,''
-  'chevron - up - square': LucideChevronUpSquare,''
-  'chevrons - down': LucideChevronsDown,''
-  'chevrons - left': LucideChevronsLeft,''
-  'chevrons - right': LucideChevronsRight,''
-  'chevrons - up': LucideChevronsUp,'
+  cast: LucideCast,
+  'check - circle': LucideCheckCircle,
+  'check - square': LucideCheckSquare,
+  'chevron - down - square': LucideChevronDownSquare,
+  'chevron - left - square': LucideChevronLeftSquare,
+  'chevron - right - square': LucideChevronRightSquare,
+  'chevron - up - square': LucideChevronUpSquare,
+  'chevrons - down': LucideChevronsDown,
+  'chevrons - left': LucideChevronsLeft,
+  'chevrons - right': LucideChevronsRight,
+  'chevrons - up': LucideChevronsUp,
   chrome: LucideChrome,
   circle: LucideCircle,
   clipboard: LucideClipboard,
-  clock: LucideClock,'
-  'cloud - drizzle': LucideCloudDrizzle,''
-  'cloud - lightning': LucideCloudLightning,''
-  'cloud - off': LucideCloudOff,''
-  'cloud - rain': LucideCloudRain,''
-  'cloud - snow': LucideCloudSnow,'
+  clock: LucideClock,
+  'cloud - drizzle': LucideCloudDrizzle,
+  'cloud - lightning': LucideCloudLightning,
+  'cloud - off': LucideCloudOff,
+  'cloud - rain': LucideCloudRain,
+  'cloud - snow': LucideCloudSnow,
   cloud: LucideCloud,
   code: LucideCode,
   codepen: LucideCodepen,
@@ -722,137 +720,137 @@ const icon_map = {
   command: LucideCommand,
   compass: LucideCompass,
   copyleft: LucideCopyleft,
-  copyright: LucideCopyright,'
-  'corner - down - left': LucideCornerDownLeft,''
-  'corner - down - right': LucideCornerDownRight,''
-  'corner - left - down': LucideCornerLeftDown,''
-  'corner - left - up': LucideCornerLeftUp,''
-  'corner - right - down': LucideCornerRightDown,''
-  'corner - right - up': LucideCornerRightUp,''
-  'corner - up - left': LucideCornerUpLeft,''
-  'corner - up - right': LucideCornerUpRight,'
+  copyright: LucideCopyright,
+  'corner - down - left': LucideCornerDownLeft,
+  'corner - down - right': LucideCornerDownRight,
+  'corner - left - down': LucideCornerLeftDown,
+  'corner - left - up': LucideCornerLeftUp,
+  'corner - right - down': LucideCornerRightDown,
+  'corner - right - up': LucideCornerRightUp,
+  'corner - up - left': LucideCornerUpLeft,
+  'corner - up - right': LucideCornerUpRight,
   cpu: LucideCpu,
   crop: LucideCrop,
   crosshair: LucideCrosshair,
   database: LucideDatabase,
   delete: LucideDelete,
-  disc: LucideDisc,'
-  'divide - circle': LucideDivideCircle,''
-  'divide - square': LucideDivideSquare,'
+  disc: LucideDisc,
+  'divide - circle': LucideDivideCircle,
+  'divide - square': LucideDivideSquare,
   divide: LucideDivide,
   download: LucideDownload,
   dribbble: LucideDribbble,
-  droplet: LucideDroplet,'
-  'edit - 2': LucideEdit2,''
-  'edit - 3': LucideEdit3,''
-  'eye - off': LucideEyeOff,'
+  droplet: LucideDroplet,
+  'edit - 2': LucideEdit2,
+  'edit - 3': LucideEdit3,
+  'eye - off': LucideEyeOff,
   eye: LucideEye,
-  facebook: LucideFacebook,'
-  'fast - forward': LucideFastForward,'
+  facebook: LucideFacebook,
+  'fast - forward': LucideFastForward,
   feather: LucideFeather,
-  figma: LucideFigma,'
-  'file - minus': LucideFileMinus,''
-  'file - plus': LucideFilePlus,'
+  figma: LucideFigma,
+  'file - minus': LucideFileMinus,
+  'file - plus': LucideFilePlus,
   file: LucideFile,
   film: LucideFilm,
-  flag: LucideFlag,'
-  'folder - minus': LucideFolderMinus,''
-  'folder - plus': LucideFolderPlus,'
+  flag: LucideFlag,
+  'folder - minus': LucideFolderMinus,
+  'folder - plus': LucideFolderPlus,
   folder: LucideFolder,
   framer: LucideFramer,
   frown: LucideFrown,
-  gift: LucideGift,'
-  'git - branch': LucideGitBranch,''
-  'git - commit': LucideGitCommit,''
-  'git - merge': LucideGitMerge,''
-  'git - pull - request': LucideGitPullRequest,'
+  gift: LucideGift,
+  'git - branch': LucideGitBranch,
+  'git - commit': LucideGitCommit,
+  'git - merge': LucideGitMerge,
+  'git - pull - request': LucideGitPullRequest,
   github: LucideGithub,
   gitlab: LucideGitlab,
   globe: LucideGlobe,
-  grid: LucideGrid,'
-  'hard - drive': LucideHardDrive,'
+  grid: LucideGrid,
+  'hard - drive': LucideHardDrive,
   hash: LucideHash,
   headphones: LucideHeadphones,
-  heart: LucideHeart,'
-  'help - circle': LucideHelpCircle,'
+  heart: LucideHeart,
+  'help - circle': LucideHelpCircle,
   hexagon: LucideHexagon,
   inbox: LucideInbox,
   instagram: LucideInstagram,
   italic: LucideItalic,
   key: LucideKey,
   layers: LucideLayers,
-  layout: LucideLayout,'
-  'life - buoy': LucideLifeBuoy,''
-  'link - 2': LucideLink2,'
+  layout: LucideLayout,
+  'life - buoy': LucideLifeBuoy,
+  'link - 2': LucideLink2,
   linkedin: LucideLinkedin,
   list: LucideList,
-  loader: LucideLoader,'
-  'loader - 2': LucideLoader2,''
-  'map - pin': LucideMapPin,'
-  map: LucideMap,'
-  'maximize - 2': LucideMaximize2,'
+  loader: LucideLoader,
+  'loader - 2': LucideLoader2,
+  'map - pin': LucideMapPin,
+  map: LucideMap,
+  'maximize - 2': LucideMaximize2,
   maximize: LucideMaximize,
   meh: LucideMeh,
-  menu: LucideMenu,'
-  'message - circle': LucideMessageCircle,''
-  'mic - off': LucideMicOff,'
-  mic: LucideMic,'
-  'minimize - 2': LucideMinimize2,'
+  menu: LucideMenu,
+  'message - circle': LucideMessageCircle,
+  'mic - off': LucideMicOff,
+  mic: LucideMic,
+  'minimize - 2': LucideMinimize2,
   minimize: LucideMinimize,
   monitor: LucideMonitor,
-  moon: LucideMoon,'
-  'more - horizontal': LucideMoreHorizontal,''
-  'more - vertical': LucideMoreVertical,''
-  'mouse - pointer': LucideMousePointer,'
+  moon: LucideMoon,
+  'more - horizontal': LucideMoreHorizontal,
+  'more - vertical': LucideMoreVertical,
+  'mouse - pointer': LucideMousePointer,
   move: LucideMove,
   music: LucideMusic,
-  megaphone: LucideMegaphone,'
-  'navigation - 2': LucideNavigation2,'
+  megaphone: LucideMegaphone,
+  'navigation - 2': LucideNavigation2,
   navigation: LucideNavigation,
   network: LucideNetwork,
   octagon: LucideOctagon,
   package: LucidePackage,
-  paperclip: LucidePaperclip,'
-  'pause - circle': LucidePauseCircle,'
-  pause: LucidePause,'
-  'pen - tool': LucidePenTool,''
-  'phone - call': LucidePhoneCall,''
-  'phone - forwarded': LucidePhoneForwarded,''
-  'phone - incoming': LucidePhoneIncoming,''
-  'phone - missed': LucidePhoneMissed,''
-  'phone - off': LucidePhoneOff,''
-  'phone - outgoing': LucidePhoneOutgoing,'
-  phone: LucidePhone,'
-  'pie - chart': LucidePieChart,''
-  'play - circle': LucidePlayCircle,'
+  paperclip: LucidePaperclip,
+  'pause - circle': LucidePauseCircle,
+  pause: LucidePause,
+  'pen - tool': LucidePenTool,
+  'phone - call': LucidePhoneCall,
+  'phone - forwarded': LucidePhoneForwarded,
+  'phone - incoming': LucidePhoneIncoming,
+  'phone - missed': LucidePhoneMissed,
+  'phone - off': LucidePhoneOff,
+  'phone - outgoing': LucidePhoneOutgoing,
+  phone: LucidePhone,
+  'pie - chart': LucidePieChart,
+  'play - circle': LucidePlayCircle,
   play: LucidePlay,
   pocket: LucidePocket,
-  power: LucidePower,'
-  'power - off': LucidePowerOff,'
+  power: LucidePower,
+  'power - off': LucidePowerOff,
   printer: LucidePrinter,
-  radio: LucideRadio,'
-  'refresh - ccw': LucideRefreshCcw,''
-  'refresh - cw': LucideRefreshCw,'
+  radio: LucideRadio,
+  'refresh - ccw': LucideRefreshCcw,
+  'refresh - cw': LucideRefreshCw,
   repeat: LucideRepeat,
-  rewind: LucideRewind,'
-  'rotate - ccw': LucideRotateCcw,''
-  'rotate - cw': LucideRotateCw,'
+  rewind: LucideRewind,
+  'rotate - ccw': LucideRotateCcw,
+  'rotate - cw': LucideRotateCw,
   recycle: LucideRecycle,
   rss: LucideRss,
   save: LucideSave,
-  scissors: LucideScissors,'
-  'screen - share': LucideScreenShare,''
-  'screen - share - off': LucideScreenShareOff,'
+  scissors: LucideScissors,
+  'screen - share': LucideScreenShare,
+  'screen - share - off': LucideScreenShareOff,
   send: LucideSend,
   share2: LucideShare2,
-  share: LucideShare,'
-  'shield - off': LucideShieldOff,'
-  shield: LucideShield,'
-  'shopping - bag': LucideShoppingBag,'
+  share: LucideShare,
+  'shield - off': LucideShieldOff,
+  shield: LucideShield,
+  'shopping - bag': LucideShoppingBag,
   shuffle: LucideShuffle,
-  sidebar: LucideSidebar,'
-  'skip - back': LucideSkipBack,''
-  'skip - forward': LucideSkipForward,'
+  sidebar: LucideSidebar,
+  'skip - back': LucideSkipBack,
+  'skip - forward': LucideSkipForward,
   slack: LucideSlack,
   slash: LucideSlash,
   sliders: LucideSliders,
@@ -860,8 +858,8 @@ const icon_map = {
   smile: LucideSmile,
   speaker: LucideSpeaker,
   square: LucideSquare,
-  star: LucideStar,'
-  'stop - circle': LucideStopCircle,'
+  star: LucideStar,
+  'stop - circle': LucideStopCircle,
   sun: LucideSun,
   sunrise: LucideSunrise,
   sunset: LucideSunset,
@@ -869,15 +867,15 @@ const icon_map = {
   tablet: LucideTablet,
   tag: LucideTag,
   target: LucideTarget,
-  terminal: LucideTerminal,'
-  'thumbs - down': LucideThumbsDown,''
-  'thumbs - up': LucideThumbsUp,''
-  'toggle - left': LucideToggleLeft,''
-  'toggle - right': LucideToggleRight,''
-  'trash - 2': LucideTrash2,'
-  trello: LucideTrello,'
-  'trending - down': LucideTrendingDown,''
-  'trending - up': LucideTrendingUp,'
+  terminal: LucideTerminal,
+  'thumbs - down': LucideThumbsDown,
+  'thumbs - up': LucideThumbsUp,
+  'toggle - left': LucideToggleLeft,
+  'toggle - right': LucideToggleRight,
+  'trash - 2': LucideTrash2,
+  trello: LucideTrello,
+  'trending - down': LucideTrendingDown,
+  'trending - up': LucideTrendingUp,
   triangle: LucideTriangle,
   truck: LucideTruck,
   tv: LucideTv,
@@ -887,32 +885,31 @@ const icon_map = {
   umbrella: LucideUmbrella,
   underline: LucideUnderline,
   unlock: LucideUnlock,
-  upload: LucideUpload,'
-  'user - check': LucideUserCheck,''
-  'user - minus': LucideUserMinus,''
-  'user - plus': LucideUserPlus,''
-  'user - x': LucideUserX,''
-  'video - off': LucideVideoOff,'
+  upload: LucideUpload,
+  'user - check': LucideUserCheck,
+  'user - minus': LucideUserMinus,
+  'user - plus': LucideUserPlus,
+  'user - x': LucideUserX,
+  'video - off': LucideVideoOff,
   video: LucideVideo,
   voicemail: LucideVoicemail,
-  wallet: LucideWallet,'
-  'volume - 1': LucideVolume1,''
-  'volume - 2': LucideVolume2,''
-  'volume - x': LucideVolumeX,'
+  wallet: LucideWallet,
+  'volume - 1': LucideVolume1,
+  'volume - 2': LucideVolume2,
+  'volume - x': LucideVolumeX,
   volume: LucideVolume,
-  watch: LucideWatch,'
-  'wifi - off': LucideWifiOff,'
+  watch: LucideWatch,
+  'wifi - off': LucideWifiOff,
   wifi: LucideWifi,
-  wind: LucideWind,'
-  'x - circle': LucideXCircle,''
-  'x - octagon': LucideXOctagon,''
-  'x - square': LucideXSquare,'
-  youtube: LucideYoutube,'
-  'zap - off': LucideZapOff,'
-  zap: LucideZap,'
-  'zoom - in': LucideZoomIn,''
-  'zoom - out': LucideZoomOut,'
-}
+  wind: LucideWind,
+  'x - circle': LucideXCircle,
+  'x - octagon': LucideXOctagon,
+  'x - square': LucideXSquare,
+  youtube: LucideYoutube,
+  'zap - off': LucideZapOff,
+  zap: LucideZap,
+  'zoom - in': LucideZoomIn,
+  'zoom - out': LucideZoomOut,
 export const Icon: React.FC < IconProps> = ({
   name,
   size = 24, // Default size;
@@ -923,10 +920,8 @@ export const Icon: React.FC < IconProps> = ({
   // Check condition;
 if ( {) {
   $2;
-}'
     log_warn (`Icon "${name}" not found.`);"
     return null;
-  }
   // Render the dynamically selected Lucide icon component;
   return <LucideIconComponent size={size} className={class_name} {...props} />;
-</LucideIconComponent>"
+"`;

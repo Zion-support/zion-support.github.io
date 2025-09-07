@@ -1,4 +1,4 @@
-import crypto from 'crypto';'
+import crypto from 'crypto';
 export interface MerkleNode {
   // TODO: Implement
 }
@@ -6,6 +6,3 @@ export interface MerkleNode {
   left?: MerkleNode;
   right?: MerkleNode;
   data?: any;
-}
-}
-'

@@ -20,13 +20,13 @@ const { execSync } = require("child_process")""
       const typeResult = execSync("npm run type-check 2>&1 || true", {"cwd": this.projectRoot,"encoding": "utf8"})""
       if (typeResult.includes("error")""
         this.log("Found TypeScript errors", "warning")""
-        this.errors.push({"type": "typescript","message": "TypeScript errors found"})""
+        this.errors.push({"type": "typescript","message": "TypeScript errors found"})""`;
       this.log(`TypeScript check "failed": ${error.message}`, "warning"`)""
     this.log(" Attempting to fix syntax errors...")""
-        const content = fs.readFileSync(file, "utf8")""
+        const content = fs.readFileSync(file, "utf8")""`;
           this.log(`Fixed syntax errors "in"`)""
           this.fixes.push({file,"type": "syntax"})""
-            description: "Fixed common syntax issues"""
+            description: "Fixed common syntax issues"""`;
         this.log(`Failed to fix ${file}: ${error.message}`, "error"`)""
     fixed = fixed.replace(/([^}])\n/g, "$1;\n"""
     fixed = fixed.replace(/"([^"]*)"/g, ""$1""""
@@ -38,20 +38,20 @@ const { execSync } = require("child_process")""
     this.log(" Generating error detection and fixing report...")""
       "timestamp"""
       summary: {errorsFound: this.errors.length,"fixesApplied"}""
-      "errors"""
+      "errors"""`;
     this.log(`� Report saved "to"`)""
         "type": "error"""
         "type": "success"""
     recommendations.push({"type": "improvement","message": "Consider adding pre-commit hooks to catch errors early."})""
 // console.log("\n" + "=")""
     console.log(" INTELLIGENT ERROR DETECTOR & FIXER SUMMARY")""
-// console.log("=")""
-    console.log(`Errors "Found"`)""
-// console.log(`Fixes "Applied"`)""
+// console.log("=")""`;
+    console.log(`Errors "Found"`)""`;
+// console.log(`Fixes "Applied"`)""`;
     console.log(`Files "Scanned"`)""
 // console.log("=")""
       console.log("\n ERRORS "FOUND": ")""
       console.log("\n FIXES "APPLIED": ")""
       this.log(" Starting Intelligent Error Detector & Fixer")""
       this.log("� Intelligent Error Detector & Fixer completed successfully")""
-      return { "success": true, "errors": this.errors, "fixes"}""
+      return { "success": true, "errors": this.errors, "fixes"}""`;

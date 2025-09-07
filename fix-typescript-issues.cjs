@@ -11,7 +11,6 @@ class TypeScriptIssueFixer {
 
   log(message) {
     console.log(`[${new Date().toISOString()}] ${message}`);
-  }
 
   async findProblematicFiles() {
     this.log('🔍 Scanning for problematic TypeScript files...');
@@ -21,18 +20,15 @@ class TypeScriptIssueFixer {
       'pages',
       'src',
       'app',
-      'api'
+      'api
     ];
 
     for (const dir of directoriesToScan) {
       if (fs.existsSync(dir)) {
         this.scanDirectory(dir);
-      }
-    }
-
+`;
     this.log(`📊 Found ${this.problematicFiles.length} potentially problematic files`);
     return this.problematicFiles;
-  }
 
   scanDirectory(dir) {
     try {
@@ -46,15 +42,10 @@ class TypeScriptIssueFixer {
           this.scanDirectory(fullPath);
         } else if (item.endsWith('.ts') || item.endsWith('.tsx')) {
           this.checkFile(fullPath);
-        }
-      }
     } catch (error) {
       // Skip directories that can't be read
-    }
-  }
 
   checkFile(filePath) {
-    try {
       const content = fs.readFileSync(filePath, 'utf8');
       
       // Check for common issues that cause TypeScript problems
@@ -62,19 +53,15 @@ class TypeScriptIssueFixer {
       
       if (content.length > 50000) {
         issues.push('Very large file');
-      }
       
       if (content.includes('<<<<<<< HEAD') || content.includes('>>>>>>>')) {
         issues.push('Merge conflict markers');
-      }
       
       if (content.includes('export * from') && content.split('export * from').length > 10) {
         issues.push('Too many wildcard exports');
-      }
       
       if (content.includes('any') && content.split('any').length > 20) {
         issues.push('Too many any types');
-      }
       
       if (issues.length > 0) {
         this.problematicFiles.push({
@@ -82,11 +69,7 @@ class TypeScriptIssueFixer {
           issues: issues,
           size: content.length
         });
-      }
-    } catch (error) {
       // Skip files that can't be read
-    }
-  }
 
   async createExcludeList() {
     this.log('📝 Creating TypeScript exclude list...');
@@ -101,18 +84,14 @@ class TypeScriptIssueFixer {
       'corrupted*',
       '**/*.backup.*',
       '**/*.temp.*',
-      '**/*.conflict.*'
-    ];
+      '**/*.conflict.*
 
     // Add specific problematic files
     for (const file of this.problematicFiles) {
       if (file.issues.includes('Very large file') || file.issues.includes('Merge conflict markers')) {
         excludePatterns.push(file.file);
-      }
-    }
 
     return excludePatterns;
-  }
 
   async updateTsConfig(excludePatterns) {
     this.log('🔧 Updating TypeScript configuration...');
@@ -135,12 +114,10 @@ class TypeScriptIssueFixer {
     
     fs.writeFileSync(tsConfigPath, JSON.stringify(tsConfig, null, 2));
     this.log('✅ TypeScript configuration updated');
-  }
 
   async run() {
     this.log('🚀 Starting TypeScript Issue Fixer...');
     
-    try {
       await this.findProblematicFiles();
       const excludePatterns = await this.createExcludeList();
       await this.updateTsConfig(excludePatterns);
@@ -155,24 +132,19 @@ class TypeScriptIssueFixer {
           'Updated TypeScript configuration',
           'Added exclude patterns for problematic files',
           'Disabled strict type checking for problematic files',
-          'Added memory optimization options'
+          'Added memory optimization options
         ]
-      };
       
       fs.writeFileSync('typescript-fix-report.json', JSON.stringify(report, null, 2));
       this.log('📊 Report saved to typescript-fix-report.json');
       
-    } catch (error) {
+    } catch (error) {`;
       this.log(`❌ Error fixing TypeScript issues: ${error.message}`);
       throw error;
-    }
-  }
-}
 
 // Run the fixer
 if (require.main === module) {
   const fixer = new TypeScriptIssueFixer();
   fixer.run().catch(console.error);
-}
 
-module.exports = TypeScriptIssueFixer;
+module.exports = TypeScriptIssueFixer;`;

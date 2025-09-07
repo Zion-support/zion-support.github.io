@@ -21,23 +21,16 @@ export interface TalentProfile {
     title: string;,
   description: string;
   }[];
-}
 export interface TalentProfileFilters {
   // TODO: Implement
-}
   search?: string;
-  skills?: string[];
   availabilities?: string[];
   regions?: string[];
   priceRange?: [number, number];
   experienceRange?: [number, number];
-}
 
-}
 export interface HireRequest {
   // TODO: Implement
-}
-  id: string;,
   client_id: string;
   talent_id: string;,
   project_title: string;
@@ -51,19 +44,14 @@ export interface HireRequest {
   startDate: string;
     endDate?: string;
     estimatedDuration?: string;
-  };
   status: "pending" | "accepted" | "rejected" | "completed";",
   createdAt: string;
-}
 
 
 export interface TalentProfile {;
 
-}
 ;
-}
 
-export interface TalentProfile {;
   id:string,;
   user_id:string,;
   full_name:string,;
@@ -84,19 +72,13 @@ export interface TalentProfile {;
     title:string,;
     description:string;
   }[],;
-}
-;
 export interface TalentProfileFilters {;
   search?:string,;
-  skills?:string[],;
   availabilities?:string[],;
   regions?:string[],;
   priceRange?:[number, number],;
   experienceRange?:[number, number],;
-}
-;
 export interface HireRequest {;
-  id:string,;
   clientId:string,;
   talentId:string,;
   projectTitle:string,;
@@ -111,13 +93,5 @@ export interface HireRequest {;
     endDate?:string,;
     estimatedDuration?:string;
   },;"
-  status:'pending' | 'accepted' | 'rejected' | 'completed',;'
+  status:'pending' | 'accepted' | 'rejected' | 'completed',;
   createdAt:string;
-} 
-}
-}
-;
-}
-;
-}
-'

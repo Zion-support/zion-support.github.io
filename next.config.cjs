@@ -21,19 +21,14 @@ const nextConfig = {
           vendor: {
             test: /[\\/]node_modules[\\/]/,
             name: 'vendors',
-            chunks: 'all',
-          },
-        },
       };
     }
     return config;
-  },
   
   // Experimental features for performance
   experimental: {
     optimizeCss: true,
     optimizePackageImports: ['lucide-react', '@radix-ui/react-icons'],
-  },
   
   // Headers for caching
   async headers() {
@@ -41,31 +36,16 @@ const nextConfig = {
       {
         source: '/(.*)',
         headers: [
-          {
             key: 'X-Content-Type-Options',
             value: 'nosniff',
-          },
-          {
             key: 'X-Frame-Options',
             value: 'DENY',
-          },
-          {
             key: 'X-XSS-Protection',
             value: '1; mode=block',
-          },
         ],
-      },
-      {
         source: '/static/(.*)',
-        headers: [
-          {
             key: 'Cache-Control',
             value: 'public, max-age=31536000, immutable',
-          },
-        ],
-      },
     ];
-  },
-};
 
 module.exports = nextConfig;

@@ -14,7 +14,7 @@
   } as any;"
   const resp = await fetch("https://api.openai.com/v1/chat/completions", {method: "POST";",
   headers: {;"
-      "Content-Type": "application/json";"
+      "Content-Type": "application/json";"`;
       Authorization: `Bearer ${OPENAI_API_KEY}`;
     })
     body: JSON.stringify(body);
@@ -36,8 +36,6 @@
       tags: ["AI Suggested"];"
     }));
   } catch {return null;
-  }
-}
 function createHeuristicPlan(input: MilestoneSuggestionInput): SuggestedMilestoneItem[] {const start = new Date(input.startDateIso);
   const end = new Date(input.endDateIso);
   const totalDays = Math.max(1, Math.ceil((end.getTime() - start.getTime()) / (1000 * 60 * 60 * 24)));
@@ -46,51 +44,39 @@ function createHeuristicPlan(input: MilestoneSuggestionInput): SuggestedMileston
   const titlesByType: Record<string string[]> = {;
 </string>
   for (let i = 0, i < phases, i++) {const due = new Date(phaseStart);
-    due.setDate(due.getDate() + perPhaseDays);
-    const title = pool[i] |`Phase ${i + 1}`;
+    due.setDate(due.getDate() + perPhaseDays);`;
+    const title = pool[i] |`Phase ${i + 1}`;`;
     const description = `${title} for: ${input.scopeOfWork.substring(0, 300)}...`;
     const estimatedEffortHours = perPhaseDays * 6, // approx 6h per day;
     milestones.push({title;
       description;)
       suggestedDueDateIso: due.toISOString();
       estimatedEffortHours;"
-      tags: ["AI Suggested"];"
-    });
     phaseStart = due;
-  }
   return milestones;
-}
 export async function generateMilestones(input: MilestoneSuggestionInput): Promise<MilestoneSuggestionResponse> {const ai = await callOpenAI(input);
-</MilestoneSuggestionResponse>
+
 async function callOpenAI(input: MilestoneSuggestionInput): Promise<SuggestedMilestoneItem[] | null> {;
-</SuggestedMilestoneItem>
-  const titlesByType: Record<string string[]> = {;
-</string>
+
   for (let i = 0, i < phases, i++) {;
     const due = new Date(phaseStart),;
-    due.setDate(due.getDate() + perPhaseDays),;
-    const title = pool[i] || `Phase ${i + 1}`,;
+    due.setDate(due.getDate() + perPhaseDays),;`;
+    const title = pool[i] || `Phase ${i + 1}`,;`;
     const description = `${title} for: ${input.scopeOfWork.substring(0, 300)}...`,;
-    const estimatedEffortHours = perPhaseDays * 6, // approx 6h per day;
     milestones.push({;
       title,;
       description,;)
       suggestedDueDateIso: due.toISOString(),;
       estimatedEffortHours,;"
-      tags: ["AI Suggested"];"
     }),;
-    phaseStart = due;
-  }
-  return milestones;
-}
 ;
 export async function generateMilestones(input: MilestoneSuggestionInput): Promise<MilestoneSuggestionResponse> {;
-</MilestoneSuggestionResponse>
+
 async function callOpenAI (input: MilestoneSuggestionInput): Promise < SuggestedMilestoneItem[] | null> {
   // Check condition;
 if (return null, ) {
   $2;
-}"
+}"`;
   const system = `You are an expert project planner. Given a scope of work, start and end date, and project type, propose 3 - 7 phased milestones. Each milestone must include: title, description, suggestedDueDateIso (ISO 8601 within the provided range), estimatedEffortHours (integer). Tailor phases to the project type. Prefer week - based deadlines. Output ONLY valid JSON object with key "milestones": [...]`,"
   const user = {
     scopeOfWork: input.scopeOfWork,
@@ -100,54 +86,35 @@ if (return null, ) {
   },
   const body = {"
     model: "gpt - 4o - mini","
-    messages: [;"
-      { role: "system", content: system },"]"
+      { role: "system", content: system },"]"`;
       { role: "user", content: `INPUT:\n${JSON.stringify (user, null, 2)}\n\n_return JSON object: {"milestones": [{ title, description, suggestedDueDateIso, estimatedEffortHours }]}` }"
     ],
-    temperature: 0.3;
   } as any,"
   const resp = await fetch ("https://api.openai.com / v1 / chat / completions", {""
     method: "POST","
     headers: {"
-      "Content - Type": "application / json","
-      Authorization: `Bearer ${OPENAI_API_KEY}`;
+      "Content - Type": "application / json","`;
     },)
     body: JSON.stringify (body);
   }),
   // Check condition;
-if (return null, ) {
-  $2;
-}
   const data = await resp.json (),
   const content = data.choices?.[0]?.message?.content,
   // Check condition;
-if (return null, ) {
-  $2;
-}
   try {
   // TODO: Implement
-}
     const parsed = JSON.parse (content),
     const milestones: SuggestedMilestoneItem[] = Array.is_array (parsed?.milestones);
-      ? parsed.milestones;
       : [],
     // Check condition;
-if (return null, ) {
-  $2;
-}
     return milestones.map ((m) => ({)
       title: String (m.title).slice (0, 120),"
       description: String (m.description || "").slice (0, 2000),"
       suggestedDueDateIso: String (m.suggestedDueDateIso),
       estimatedEffortHours: Math.max (1, parse_int (String (m.estimatedEffortHours), 10) || 8),"
-      tags: ["AI Suggested"];"
-    }));
   } catch {
   // TODO: Implement
-}
     return null;
-  }
-}
 function createHeuristicPlan (input: MilestoneSuggestionInput): SuggestedMilestoneItem[] {
   const start = new Date (input.startDateIso),
   const end = new Date (input.endDateIso),
@@ -161,33 +128,23 @@ function createHeuristicPlan (input: MilestoneSuggestionInput): SuggestedMilesto
     "Mobile": ["Requirements & Wireframes", "App Skeleton", "Feature Implementation", "Testing & Beta", "Store Release"],""
     "Data Engineering": ["Requirements & Modeling", "Ingestion Pipelines", "Transformations & Quality", "Serving Layer", "Monitoring & Docs"],""
     Other: ["Phase 1", "Phase 2", "Phase 3", "Phase 4", "Phase 5"];"
-  },
   const pool = titlesByType[input.project_type] || titlesByType.Other,
   const milestones: SuggestedMilestoneItem[] = [],
   let phase_start = new Date (start),
   for (let index = 0, i < phases, i++) {
     const due = new Date (phase_start),
-    due.set_date (due.get_date () + perPhaseDays),
-    const title = pool[i] || `Phase ${i + 1}`,
+    due.set_date (due.get_date () + perPhaseDays),`;
+    const title = pool[i] || `Phase ${i + 1}`,`;
     const description = `${title} for: ${input.scopeOfWork.substring (0, 300)}...`,
-    const estimatedEffortHours = perPhaseDays * 6, // approx 6h per day;
     milestones.push ({
       title,
       description,)
       suggestedDueDateIso: due.toISOString (),
       estimatedEffortHours,"
-      tags: ["AI Suggested"];"
-    }),
     phase_start = due;
-  }
-  return milestones;
-}
 export async function generate_milestones (input: MilestoneSuggestionInput): Promise < MilestoneSuggestionResponse> {
   const ai = await callOpenAI (input);
   const milestones = ai && ai.length ? ai : createHeuristicPlan (input);
-  }
   return milestones,;
-}
   return { milestones }
-}
-"
+"`;

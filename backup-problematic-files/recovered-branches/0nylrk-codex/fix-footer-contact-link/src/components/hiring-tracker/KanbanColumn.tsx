@@ -12,7 +12,6 @@ interface KanbanColumnProps {;
   applications:JobApplication[],;
   count:number;
 }
-;
 export function KanbanColumn({;
   id,;
   title,;
@@ -34,13 +33,8 @@ export function KanbanColumn({;
         return "destructive",;"
       default:;"
         return "outline";"
-    }
   },;
-  ;
   const getColumnBgColor = (columnId:string) => {;
-    switch (columnId) {;"
       case "hired":return "bg-green-50",;""
-      case "rejected":;""
         return "bg-red-50",;"
-      default:;"
         return "bg-muted/30";""

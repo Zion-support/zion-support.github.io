@@ -30,55 +30,36 @@ const customJestConfig = {
     '<rootDir>/backup*/',
     '<rootDir>/corrupted_backup/',
     '<rootDir>/temp_*/',
-  ],
   collectCoverageFrom: [
     'src/**/*.{js,jsx,ts,tsx}',
     '!src/**/*.d.ts',
     '!src/**/*.stories.{js,jsx,ts,tsx}',
     '!src/**/*.test.{js,jsx,ts,tsx}',
     '!src/**/*.spec.{js,jsx,ts,tsx}',
-  ],
   coveragePathIgnorePatterns: [
-    '<rootDir>/node_modules/',
-    '<rootDir>/.next/',
-    '<rootDir>/dist/',
-    '<rootDir>/build/',
-  ],
   coverageThreshold: {
     global: {
       branches: 70,
       functions: 70,
       lines: 70,
       statements: 70,
-    },
-  },
 };
 
 module.exports = createJestConfig(customJestConfig);
 =======
 module.exports = {
   preset: 'ts-jest',
-  testEnvironment: 'jsdom',
   roots: ['<rootDir>/src'],
-  testMatch: [
     '**/__tests__/**/*.+(ts|tsx|js)',
-    '**/*.(test|spec).+(ts|tsx|js)'
-  ],
+    '**/*.(test|spec).+(ts|tsx|js)
   transform: {
-    '^.+\\.(ts|tsx)$': 'ts-jest'
-  },
-  collectCoverageFrom: [
+    '^.+\\.(ts|tsx)$': 'ts-jest
     'src/**/*.{ts,tsx}',
-    '!src/**/*.d.ts',
     '!src/main.tsx',
-    '!src/vite-env.d.ts'
-  ],
+    '!src/vite-env.d.ts
   coverageDirectory: 'coverage',
   coverageReporters: ['text', 'lcov', 'html'],
   setupFilesAfterEnv: ['<rootDir>/src/setupTests.ts'],
-  moduleNameMapping: {
-    '^@/(.*)$': '<rootDir>/src/$1'
-  },
+    '^@/(.*)$': '<rootDir>/src/$1
   testTimeout: 10000
-};
 >>>>>>> cursor/automate-test-improve-and-merge-code-6b26

@@ -10,7 +10,7 @@ import type { UserProfile } from "@/types/auth","
 export function useAuthState() {
 
   const [user, setUser] = useState<UserProfile | null>(null),
-</UserProfile>
+
   const [isLoading, setIsLoading] = useState<boolean>(true),
 </boolean>
   const [onboardingStep, setOnboardingStep] = useState<string | null>(null),
@@ -19,8 +19,7 @@ export function useAuthState() {
   const [is_loading, setIsLoading] = useState < boolean>(true);
   const [onboarding_step, setOnboardingStep] = useState < string | null>(null);
   const [user, setUser] = useState<UserProfile | null>(null),;
-</UserProfile>
+
   const [isLoading, setIsLoading] = useState<boolean>(true),;
-</boolean>
   const [onboardingStep, setOnboardingStep] = useState<string | null>(null),;
 </string>"

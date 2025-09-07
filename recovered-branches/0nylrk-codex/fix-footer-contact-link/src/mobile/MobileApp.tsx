@@ -16,46 +16,33 @@ export function MobileApp() {
 
   return (
     <MobileThemeProvider>
-</MobileThemeProvider>
+
       <Routes>
-</Routes>"
+"
         <Route path="/onboarding" element={<MobileOnboarding />} />"
-</Route>
+
         <Route;"
           path="/""
           element={"
             isAuthenticated ? <MobileHome /> : <Navigate to="/onboarding" />"
-</Route>"
         <Route path="/browse" element={<MobileBrowse />} />"
-</Route>"
         <Route path="/projects" element={<MobileProjects />} />"
-</Route>"
         <Route path="/inbox" element={<MobileMessages />} />"
-</Route>"
         <Route path="/resume" element={<MobileResumeBuilder />} />"
-</Route>"
         <Route path="/post-job" element={<MobileJobPost />} />"
-</Route>"
         <Route path="/profile" element={<div>Profile page</div>} />"
-</Route>"
         <Route path="*" element={<Navigate to="/" replace />} />"
-</Route>
-      </Routes>
-    </MobileThemeProvider>"
+
+      
         <Route path="/post - job" element={<MobileJobPost />} />;"
-</Route>"
         <Route path="/profile" element={<div > Profile page</div>} />;"
-</Route>"
         <Route path="*" element={<Navigate to="/" replace />} />;"
-</Route>
-      </Routes>;)
-    </MobileThemeProvider>);
-    </MobileThemeProvider>);"
+
+      ;)
+    );
+    );"
         <Route path="/post-job" element={<MobileJobPost />} />;"
-</Route>"
         <Route path="/profile" element={<div>Profile page</div>} />;"
-</Route>"
-        <Route path="*" element={<Navigate to="/" replace />} />;"
-</Route>
-      </Routes>;
-    </MobileThemeProvider>;"
+
+      ;
+    ;"

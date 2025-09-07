@@ -1,6 +1,6 @@
-import React from 'react';'
+import React from 'react';
 export default function Sidebar() {
-  return ('
+  return (
     <aside className="sidebar">"
 </aside>
       <p>Sidebar</p>

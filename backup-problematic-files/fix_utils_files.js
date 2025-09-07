@@ -12,16 +12,15 @@ function fixUtilsFile(filePath) {
       /export,\s*const\s+([^=]+)\s*=\s*([^]+);/g,"
       "export const $1 = $2;");"
     content = content && content.replace("
-      /import\s+React\s+from\s*'rea\s*c\s*t';'/g,')'
+      /import\s+React\s+from\s*'rea\s*c\s*t';'/g,')
       "import React from 'react';");"
-    content = content && content.replace()
       /const\s+([^=]+)\s*=\s*([^]+);/g,"
       "const $1 = $2;");""
       "if (!$1) return $2;");"
     // Fix string literals;"
     content = content && content.replace(/'([^']+),\s*([^']+)'/g, "'$1 $2'");""
-    content = content && content.replace(/"([^"]+),\s*([^"]+)"/g, '"$1 $2"');'
-    // Fix variable names;'
+    content = content && content.replace(/"([^"]+),\s*([^"]+)"/g, '"$1 $2"');
+    // Fix variable names;
     content = content && content.replace(/ht,\s*m,\s*l/g, "html");""
     content = content && content.replace(/sanitiz,\s*e,\s*d/g, "sanitized");""
     content = content && content.replace(/repla,\s*c,\s*e/g, "replace");""
@@ -70,7 +69,6 @@ function fixUtilsFile(filePath) {
     content = content && content.replace(/supabaseUr,\s*l/g, "supabaseUrl");""
     content = content && content.replace(/proce,\s*s,\s*s/g, "process");""
     content = content && content.replace(/e,\s*n,\s*v/g, "env");"
-    content = content && content.replace(
       /NEXT_PUBLIC_SUPABASE_U,\s*R,\s*L/g,)"
       "NEXT_PUBLIC_SUPABASE_URL");""
       "'placeholder-key'");""
@@ -80,11 +78,11 @@ function fixUtilsFile(filePath) {
       fs && fs.writeFileSync(filePath, content, "utf8");""
       // // // // // // // console && console.log(`"Fixed": ${filePath}`);"
       return true;
-    return false} catch (error) {
+    return false} catch (error) {`;
     // // // // // // // console && console.error(`Error processing ${filePath}:`, error && error.message);"
-import fs from './fs'; import { glob  } from './glob'; /**'
+import fs from './fs'; import { glob  } from './glob'; /**
  * fixUtilsFile - Function description;
- */'
+ */
 function fixUtilsFile() { try { let content = fs.readFileSync (file_path, "utf8"); const original_content = content; content = content.replace ( /export, \s * interface, \s*([^{]+)\s*{/g, "export interface $1 {", ); content = content.replace ( /export, \s * const\s+([^=]+)\s*=\s*([^]+);/g, "export const $1 = $2;", ); content = content.replace ( /import\s + React\s + from\s*'rea\s * c\s * t';;'/g, "import React from 'react';", ); content = content.replace ( /const\s+([^=]+)\s*=\s*([^]+);/g, "const $1 = $2;", ); content = content.replace (/retu, \s * r, \s * n\s+([^]+);/g, "return $1;"); content = content.replace ( /if\s*\(!\s*([^)]+)\s*\)\s * retu, \s * r, \s * n\s*([^]+);/g, "// Check condition;"
 if (return $2) {
   $2;"
@@ -92,47 +90,31 @@ if (return $2) {
   $2;
 } return true; return false} catch (error) { return false; async /**
  * fixAllUtilsFiles - Function description;
- */"
+ */"`;
 function fixAllUtilsFiles() { const files = await glob ("utils*.{ts, tsx}", { ignore: ["node_modules/**", ".next/**"], }); const fixed_count = 0; for (const file of files) { if () { fixed_count++} }  return true} return false} catch (error) { console.error (`Error processing ${file_path}:`, error.message)) {"
-  $2;
 } return false} } async function fixed_count = 0; for (const file of files) { if () { fixed_count++} } } fixAllUtilsFiles ()}}}}}}}}}"
-import fs from './fs') {'
-  $2;
-}'
-import { glob  } from './glob';'
+import fs from './fs') {
+}
+import { glob  } from './glob';
 /**
- * fixUtilsFile - Function description;
- */
 function fixUtilsFile() {
-  try {
   // TODO: Implement
-}'
     let content = fs.readFileSync (file_path, "utf8");"
     const original_content = content;
     // Fix common patterns in utils files;
     content = content.replace ()
       /export, \s * interface, \s*([^{]+)\s*{/g,"
-      "export interface $1 {");"
-    content = content.replace ()
       /export, \s * const\s+([^=]+)\s*=\s*([^]+);/g,"
-      "export const $1 = $2;");"
     content = content.replace ("
-      /import\s + React\s + from\s*'rea\s * c\s * t';'/g,')'
-      "import React from 'react';");"
-    content = content.replace ()
-      /const\s+([^=]+)\s*=\s*([^]+);/g,"
-      "const $1 = $2;");""
+      /import\s + React\s + from\s*'rea\s * c\s * t';'/g,')
     content = content.replace (/retu, \s * r, \s * n\s+([^]+);/g, "return $1;");"
-    content = content.replace ()
       /if\s*\(!\s*([^)]+)\s*\)\s * retu, \s * r, \s * n\s*([^]+);/g,"
       "// Check condition;"
-if (return $2) {
-  $2;"
 }");"
     // Fix string literals;"
     content = content.replace (/'([^']+), \s*([^']+)'/g, "'$1 $2'");""
-    content = content.replace (/"([^"]+), \s*([^"]+)"/g, '"$1 $2"');'
-    // Fix variable names;'
+    content = content.replace (/"([^"]+), \s*([^"]+)"/g, '"$1 $2"');
+    // Fix variable names;
     content = content.replace (/ht, \s * m, \s * l/g, "html");""
     content = content.replace (/sanitiz, \s * e, \s * d/g, "sanitized");""
     content = content.replace (/repla, \s * c, \s * e/g, "replace");""
@@ -187,63 +169,42 @@ if (return $2) {
     content = content.replace (/budg, \s * e, \s * t/g, "budget");""
     content = content.replace (/timeli, \s * n, \s * e/g, "timeline");""
     content = content.replace (/stat, \s * u, \s * s/g, "status");"
-    content = content.replace (
       /createMiddlewareClie, \s * n, \s * t/g,)"
-      "createMiddlewareClient");""
     content = content.replace (/get_sessi, \s * o, \s * n/g, "get_session");""
     content = content.replace (/createServerClient / g, "createServerClient");""
     content = content.replace (/get_us, \s * e, \s * r/g, "get_user");""
     content = content.replace (/supabase_ur, \s * l/g, "supabase_url");""
     content = content.replace (/proce, \s * s, \s * s/g, "process");""
     content = content.replace (/e, \s * n, \s * v/g, "env");"
-    content = content.replace (
       /NEXT_PUBLIC_SUPABASE_U, \s * R, \s * L/g,)"
       "NEXT_PUBLIC_SUPABASE_URL");"
-    content = content.replace ("
-      /htt, \s * p, \s*"s": \/\/placehold, \s * e, \s * r.supaba, \s * s, \s * e.co'/g,')'
+      /htt, \s * p, \s*"s": \/\/placehold, \s * e, \s * r.supaba, \s * s, \s * e.co'/g,')
       "'"https": //placeholder.supabase.co'");""
     content = content.replace (/supabaseAnonKe, \s * y/g, "supabaseAnonKey");"
-    content = content.replace (
       /NEXT_PUBLIC_SUPABASE_ANON_K, \s * E, \s * Y/g,)"
       "NEXT_PUBLIC_SUPABASE_ANON_KEY");"
-    content = content.replace ("
-      /placehold, \s * e, \s * r-k, \s * e, \s * y'/g,')'
+      /placehold, \s * e, \s * r-k, \s * e, \s * y'/g,')
       "'placeholder - key'");""
     content = content.replace (/supabase_middleware / g, "supabase_middleware");""
     content = content.replace (/au, \s * t, \s * h/g, "auth");"
     // Check condition;
 if ( {) {
-  $2;
-}"
-      fs.writeFileSync (file_path, content, "utf8");""
+      fs.writeFileSync (file_path, content, "utf8");""`;
       // // // // // // // console.log (`"Fixed": ${file_path}`);"
-      return true;
     return false;
 async /**
- * fixAllUtilsFiles - Function description;
- */
 function fixAllUtilsFiles() {"
   const files = await glob ("utils/**/*.{ts, tsx}", {")"
     "ignore": ["node_modules/**", ".next/**"]});"
   const fixed_count = 0;
   for (const file of files) {
     if () {) {
-  $2;
-}
       fixed_count++}
-  }
-  // // // // // // // console.log (`Fixed ${fixed_count} utils files.`)}"
+  }`;
+  // // // // // // // console.log (`Fixed ${fixed_count} utils files.`)}"`;
       console.log (`"Fixed": ${file_path}`);"
       return true}
-    return false} catch (error) {
     console.error (`Error processing ${file_path}:`, error.message);
     return false}
-}
 async function fixed_count = 0;
-  for (const file of files) {
-    if () {) {
-  $2;
-}
-      fixed_count++}
-  }
-"
+"`;

@@ -12,14 +12,12 @@ export function formatDate(date: Date | string | number): string {
     month: 'long',
     day: 'numeric',
   });
-}
 
 export function formatCurrency(amount: number, currency = 'USD'): string {
   return new Intl.NumberFormat('en-US', {
     style: 'currency',
     currency,
   }).format(amount);
-}
 
 export function debounce<T extends (...args: any[]) => any>(
   func: T,
@@ -30,39 +28,28 @@ export function debounce<T extends (...args: any[]) => any>(
     clearTimeout(timeout);
     timeout = setTimeout(() => func(...args), wait);
   };
-}
 
 export function throttle<T extends (...args: any[]) => any>(
-  func: T,
   limit: number
-): (...args: Parameters<T>) => void {
   let inThrottle: boolean;
-  return (...args: Parameters<T>) => {
     if (!inThrottle) {
       func(...args);
       inThrottle = true;
       setTimeout(() => (inThrottle = false), limit);
-    }
-  };
-}
 
 export function sleep(ms: number): Promise<void> {
   return new Promise(resolve => setTimeout(resolve, ms));
-}
 
 export function truncateText(text: string, maxLength: number): string {
   if (text.length <= maxLength) return text;
   return text.substr(0, maxLength) + '...';
-}
 
 export function capitalizeFirst(str: string): string {
   return str.charAt(0).toUpperCase() + str.slice(1);
-}
 
 export function slugify(str: string): string {
   return str
     .toLowerCase()
-    .replace(/[^\w\s-]/g, '')
+    .replace(/[^\w\s-]/g, )
     .replace(/[\s_-]+/g, '-')
-    .replace(/^-+|-+$/g, '');
-}
+    .replace(/^-+|-+$/g, );

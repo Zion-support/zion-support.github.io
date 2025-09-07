@@ -33,21 +33,19 @@ const { execSync } = require("child_process")""
         uncommittedFiles: status.split("\n")""
         "error"""
     this.log(" Checking performance metrics...")""
-    const buildDir = path.join(this.projectRoot, ".next")""
     const checks = {"buildSize": 0,"staticAssets"}""
         const buildSize = execSync(`du -sh ${buildDir}`, { "encoding": "utf8"`})""
         checks.buildSize = buildSize.split("\t")""
-        const staticDir = path.join(buildDir, "static")""
+        const staticDir = path.join(buildDir, "static")""`;
           const staticSize = execSync(`du -sh ${staticDir}`, { "encoding": "utf8"`})""
           checks.staticAssets = staticSize.split("\t")""
         checks.hasManifest = fs.existsSync(path.join(buildDir, "build-manifest.json")""
     this.log(" Starting Deployment Checker")""
     const results = {"timestamp": new Date().toISOString(),"buildOutput": this.checkBuildOutput(),"environmentVariables"}""
-    const reportFile = path.join(this.reportsDir, "deployment-check-report.json")""
+    const reportFile = path.join(this.reportsDir, "deployment-check-report.json")""`;
     this.log(` Deployment check report "generated"`)""
-// console.log("\n� Deployment Check "Summary": ")""
-    console.log(` Environment variables "configured"`)""
-// console.log(` Package.json "scripts": ${Object.values(results.packageJson).filter(v => typeof v === "boolean"`})""
-    console.log(` Netlify "config"`)""
-    console.log(` Git status "clean"`)""
-    console.log(` Git status "clean"`)""
+// console.log("\n� Deployment Check "Summary": ")""`;
+    console.log(` Environment variables "configured"`)""`;
+// console.log(` Package.json "scripts": ${Object.values(results.packageJson).filter(v => typeof v === "boolean"`})""`;
+    console.log(` Netlify "config"`)""`;
+    console.log(` Git status "clean"`)""`;

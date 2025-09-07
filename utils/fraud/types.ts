@@ -11,10 +11,7 @@ export interface AdminAction {
   // TODO: Implement
 }
 export interface AdminAction {;
-export interface AdminAction {
   // TODO: Implement
-}
-export interface AdminAction {;
 
   id: string;,
   case_id: string;
@@ -24,16 +21,10 @@ export interface AdminAction {;
   details: Record<string, any>;
 </string>
   metadata: Record<string, any>;
-</string>
-  metadata: Record<string, any>;
-</string>
   metadata: Record < string, any>;
 
-}
 export interface FraudDetectionConfig {
   // TODO: Implement
-}
-}
 
 
 export interface FraudDetectionConfig {;
@@ -45,32 +36,15 @@ export interface FraudDetectionConfig {;
 
 
       threshold: number,
-    }
     fake_profile: {,
-  enabled: boolean;
       threshold: number;
     };
     fakeProfile: {,
-  enabled: boolean;
-      threshold: number;
-    };
     paymentFraud: {,
-  enabled: boolean;
-      threshold: number;
-    };
     spam: {,
-  enabled: boolean;
-      threshold: number;
-    };
-  };
   autoActions: {,
-  enabled: boolean;
     actions: AdminActionType[];,
   confidenceThreshold: number;
-  };
     confidenceThreshold: number,
-  };
 
-}
-}
 "

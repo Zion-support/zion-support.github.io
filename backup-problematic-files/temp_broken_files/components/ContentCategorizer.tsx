@@ -1,39 +1,36 @@
   BarChart3, Globe, Database, Cpu, Rocket, Brain;
-} from 'lucide-react';'
+} from 'lucide-react';
 interface ContentItem {id: string;,
   title: string;
   href: string;,
   desc: string;
   category: string;
   subcategory?: string;
-  date: string;,'
-  relevance: 'high' | 'medium' | 'low';'
+  date: string;,
+  relevance: 'high' | 'medium' | 'low';
   tags: string[];,
-  source: string;'
-  type: 'report' | 'update' | 'insight' | 'guide' | 'security' | 'feature';''
-import React, { useState, useEffect, useMemo } from 'react','
+  source: string;
+  type: 'report' | 'update' | 'insight' | 'guide' | 'security' | 'feature';
+import React, { useState, useEffect, useMemo } from 'react',
 import {
   // TODO: Implement
 }
   Search, Filter, Calendar, Tag, TrendingUp, Shield, Code,
   BookOpen, Zap, AlertTriangle, Lightbulb, Settings,
-  BarChart3, Globe, Database, Cpu, Rocket, Brain;'
-} from 'lucide-react','
+} from 'lucide-react',
 interface ContentItem {
   // TODO: Implement
-}
   id: string,
   title: string,
   href: string,
   desc: string,
   category: string,
   subcategory?: string,
-  date: string,'
-  relevance: 'high' | 'medium' | 'low','
+  date: string,
+  relevance: 'high' | 'medium' | 'low',
   tags: string[],
-  source: string,'
-  type: 'report' | 'update' | 'insight' | 'guide' | 'security' | 'feature''
-}
+  source: string,
+  type: 'report' | 'update' | 'insight' | 'guide' | 'security' | 'feature
 interface ContentCategory {id: string;,
   name: string;
   icon: any;,
@@ -41,255 +38,211 @@ interface ContentCategory {id: string;,
   color: string;,
   count: number;
   subcategories?: string[];
-}
   // Sample content data - in a real implementation, this would come from an API;
   const contentItems: ContentItem[] = [;
-    {;'
-      id: '1';','
-  title: 'Structured Data Audit Report';''
-      href: '/reports/structured-data-audit.json';','
-  desc: 'Comprehensive JSON-LD coverage analysis and optimization recommendations.';''
-      category: 'seo';','
-  subcategory: 'structured-data';''
-      date: '2025-08-19';','
-  relevance: 'high';']'
-      tags: ['seojson-ldschemaaudit'];','
-  source: 'autonomous-auditor';''
-      type: 'report';'
-const ContentCategorizer: React.FC = () => {'
-  const [searchTerm, setSearchTerm] = useState(''),''
-  const [selectedCategory, setSelectedCategory] = useState('all'),''
-  const [selectedSubcategory, setSelectedSubcategory] = useState('all'),''
-  const [selectedType, setSelectedType] = useState('all'),''
-  const [selectedDateRange, setSelectedDateRange] = useState('all'),''
-  const [selectedRelevance, setSelectedRelevance] = useState('all'),''
-  const [sortBy, setSortBy] = useState<'date' | 'relevance' | 'title'>('date'),''
-  const [sortOrder, setSortOrder] = useState<'asc' | 'desc'>('desc'),'
+    {;
+      id: '1';',
+  title: 'Structured Data Audit Report';
+      href: '/reports/structured-data-audit.json';',
+  desc: 'Comprehensive JSON-LD coverage analysis and optimization recommendations.';
+      category: 'seo';',
+  subcategory: 'structured-data';
+      date: '2025-08-19';',
+  relevance: 'high';']
+      tags: ['seojson-ldschemaaudit'];',
+  source: 'autonomous-auditor';
+      type: 'report';
+const ContentCategorizer: React.FC = () => {
+  const [searchTerm, setSearchTerm] = useState(),
+  const [selectedCategory, setSelectedCategory] = useState('all'),
+  const [selectedSubcategory, setSelectedSubcategory] = useState('all'),
+  const [selectedType, setSelectedType] = useState('all'),
+  const [selectedDateRange, setSelectedDateRange] = useState('all'),
+  const [selectedRelevance, setSelectedRelevance] = useState('all'),
+  const [sortBy, setSortBy] = useState<'date' | 'relevance' | 'title'>('date'),
+  const [sortOrder, setSortOrder] = useState<'asc' | 'desc'>('desc'),
   // Sample content data - in a real implementation, this would come from an API,
 const contentItems: ContentItem[] = [
-    {'
-      id: '1',''
-      title: 'Structured Data Audit Report',''
-      href: '/reports/structured-data-audit.json',''
-      desc: 'Comprehensive JSON-LD coverage analysis and optimization recommendations.',''
-      category: 'seo',''
-      subcategory: 'structured-data',''
-      date: '2025-08-19',''
-      relevance: 'high',']'
-      tags: ['seojson-ldschemaaudit'],''
-      source: 'autonomous-auditor',''
-      type: 'report''
+    {
+      id: '1',
+      title: 'Structured Data Audit Report',
+      href: '/reports/structured-data-audit.json',
+      desc: 'Comprehensive JSON-LD coverage analysis and optimization recommendations.',
+      category: 'seo',
+      subcategory: 'structured-data',
+      date: '2025-08-19',
+      relevance: 'high',']
+      tags: ['seojson-ldschemaaudit'],
+      source: 'autonomous-auditor',
+      type: 'report
     },
-    {'
-      id: '2',''
-      title: 'Security Vulnerability Scan Results',''
-      href: '/reports/security-scan-2025-08-19',''
-      desc: 'Automated security assessment revealing potential vulnerabilities and remediation steps.',''
-      category: 'security',''
-      subcategory: 'vulnerability-scan',''
-      date: '2025-08-19',''
-      relevance: 'high',''
-      tags: ['securityvulnerabilityscanremediation'],''
-      source: 'security-scanner',''
-      type: 'security''
-    },
-    {'
-      id: '3',''
-      title: 'AI Model Performance Update',''
-      href: '/reports/ai-model-performance-2025-08-19',''
-      desc: 'Latest performance metrics and optimization insights for deployed AI models.',''
-      category: 'ai',''
-      subcategory: 'performance',''
-      date: '2025-08-19',''
-      relevance: 'high',''
-      tags: ['aiperformanceoptimizationmetrics'],''
-      source: 'ai-monitor',''
-      type: 'update''
-    },
-    {'
-      id: '4',''
-      title: 'Feature Deployment Summary',''
-      href: '/reports/feature-deployment-2025-08-19',''
-      desc: 'Overview of newly deployed features and their impact on user experience.',''
-      category: 'features',''
-      subcategory: 'deployment',''
-      date: '2025-08-19',''
-      relevance: 'medium',''
-      tags: ['featuresdeploymentuximpact'],''
-      source: 'deployment-tracker',''
-      type: 'feature''
-    },
-    {'
-      id: '5',''
-      title: 'System Health Dashboard',''
-      href: '/reports/system-health-2025-08-19',''
-      desc: 'Real-time system performance metrics and infrastructure health status.',''
-      category: 'monitoring',''
-      subcategory: 'system-health',''
-      date: '2025-08-19',''
-      relevance: 'medium',''
-      tags: ['monitoringperformanceinfrastructurehealth'],''
-      source: 'health-monitor',''
-      type: 'report''
-    },
-    {'
-      id: '6',''
-      title: 'User Behavior Insights',''
-      href: '/reports/user-behavior-2025-08-19',''
-      desc: 'Analysis of user interaction patterns and engagement optimization opportunities.',''
-      category: 'analytics',''
-      subcategory: 'user-behavior',''
-      date: '2025-08-19',''
-      relevance: 'high',''
-      tags: ['analyticsuser-behaviorengagementoptimization'],''
-      source: 'behavior-analyzer',''
-      type: 'insight''
-    }'
-    {id: '2';','
-  title: 'Security Vulnerability Scan Results';''
-      href: '/reports/security-scan-2025-08-19';','
-  desc: 'Automated security assessment revealing potential vulnerabilities and remediation steps.';''
-      category: 'security';','
-  subcategory: 'vulnerability-scan';''
-      date: '2025-08-19';','
-  relevance: 'high';''
-      tags: ['securityvulnerabilityscanremediation'];','
-  source: 'security-scanner';''
-      type: 'security';'
-    }'
-    {id: '3';','
-  title: 'AI Model Performance Update';''
-      href: '/reports/ai-model-performance-2025-08-19';','
-  desc: 'Latest performance metrics and optimization insights for deployed AI models.';''
-      category: 'ai';','
-  subcategory: 'performance';''
-      date: '2025-08-19';','
-  relevance: 'high';''
-      tags: ['aiperformanceoptimizationmetrics'];','
-  source: 'ai-monitor';''
-      type: 'update';'
-    }'
-    {id: '4';','
-  title: 'Feature Deployment Summary';''
-      href: '/reports/feature-deployment-2025-08-19';','
-  desc: 'Overview of newly deployed features and their impact on user experience.';''
-      category: 'features';','
-  subcategory: 'deployment';''
-      date: '2025-08-19';','
-  relevance: 'medium';''
-      tags: ['featuresdeploymentuximpact'];','
-  source: 'deployment-tracker';''
-      type: 'feature';'
-    }'
-    {id: '5';','
-  title: 'System Health Dashboard';''
-      href: '/reports/system-health-2025-08-19';','
-  desc: 'Real-time system performance metrics and infrastructure health status.';''
-      category: 'monitoring';','
-  subcategory: 'system-health';''
-      date: '2025-08-19';','
-  relevance: 'medium';''
-      tags: ['monitoringperformanceinfrastructurehealth'];','
-  source: 'health-monitor';''
-      type: 'report';'
-    }'
-    {id: '6';','
-  title: 'User Behavior Insights';''
-      href: '/reports/user-behavior-2025-08-19';','
-  desc: 'Analysis of user interaction patterns and engagement optimization opportunities.';''
-      category: 'analytics';','
-  subcategory: 'user-behavior';''
-      date: '2025-08-19';','
-  relevance: 'high';''
-      tags: ['analyticsuser-behaviorengagementoptimization'];','
-  source: 'behavior-analyzer';''
-      type: 'insight';'
-    }
+      id: '2',
+      title: 'Security Vulnerability Scan Results',
+      href: '/reports/security-scan-2025-08-19',
+      desc: 'Automated security assessment revealing potential vulnerabilities and remediation steps.',
+      category: 'security',
+      subcategory: 'vulnerability-scan',
+      relevance: 'high',
+      tags: ['securityvulnerabilityscanremediation'],
+      source: 'security-scanner',
+      type: 'security
+      id: '3',
+      title: 'AI Model Performance Update',
+      href: '/reports/ai-model-performance-2025-08-19',
+      desc: 'Latest performance metrics and optimization insights for deployed AI models.',
+      category: 'ai',
+      subcategory: 'performance',
+      tags: ['aiperformanceoptimizationmetrics'],
+      source: 'ai-monitor',
+      type: 'update
+      id: '4',
+      title: 'Feature Deployment Summary',
+      href: '/reports/feature-deployment-2025-08-19',
+      desc: 'Overview of newly deployed features and their impact on user experience.',
+      category: 'features',
+      subcategory: 'deployment',
+      relevance: 'medium',
+      tags: ['featuresdeploymentuximpact'],
+      source: 'deployment-tracker',
+      type: 'feature
+      id: '5',
+      title: 'System Health Dashboard',
+      href: '/reports/system-health-2025-08-19',
+      desc: 'Real-time system performance metrics and infrastructure health status.',
+      category: 'monitoring',
+      subcategory: 'system-health',
+      tags: ['monitoringperformanceinfrastructurehealth'],
+      source: 'health-monitor',
+      id: '6',
+      title: 'User Behavior Insights',
+      href: '/reports/user-behavior-2025-08-19',
+      desc: 'Analysis of user interaction patterns and engagement optimization opportunities.',
+      category: 'analytics',
+      subcategory: 'user-behavior',
+      tags: ['analyticsuser-behaviorengagementoptimization'],
+      source: 'behavior-analyzer',
+      type: 'insight
+    {id: '2';',
+  title: 'Security Vulnerability Scan Results';
+      href: '/reports/security-scan-2025-08-19';',
+  desc: 'Automated security assessment revealing potential vulnerabilities and remediation steps.';
+      category: 'security';',
+  subcategory: 'vulnerability-scan';
+  relevance: 'high';
+      tags: ['securityvulnerabilityscanremediation'];',
+  source: 'security-scanner';
+      type: 'security';
+    {id: '3';',
+  title: 'AI Model Performance Update';
+      href: '/reports/ai-model-performance-2025-08-19';',
+  desc: 'Latest performance metrics and optimization insights for deployed AI models.';
+      category: 'ai';',
+  subcategory: 'performance';
+      tags: ['aiperformanceoptimizationmetrics'];',
+  source: 'ai-monitor';
+      type: 'update';
+    {id: '4';',
+  title: 'Feature Deployment Summary';
+      href: '/reports/feature-deployment-2025-08-19';',
+  desc: 'Overview of newly deployed features and their impact on user experience.';
+      category: 'features';',
+  subcategory: 'deployment';
+  relevance: 'medium';
+      tags: ['featuresdeploymentuximpact'];',
+  source: 'deployment-tracker';
+      type: 'feature';
+    {id: '5';',
+  title: 'System Health Dashboard';
+      href: '/reports/system-health-2025-08-19';',
+  desc: 'Real-time system performance metrics and infrastructure health status.';
+      category: 'monitoring';',
+  subcategory: 'system-health';
+      tags: ['monitoringperformanceinfrastructurehealth'];',
+  source: 'health-monitor';
+    {id: '6';',
+  title: 'User Behavior Insights';
+      href: '/reports/user-behavior-2025-08-19';',
+  desc: 'Analysis of user interaction patterns and engagement optimization opportunities.';
+      category: 'analytics';',
+  subcategory: 'user-behavior';
+      tags: ['analyticsuser-behaviorengagementoptimization'];',
+  source: 'behavior-analyzer';
+      type: 'insight';
   ];
-  const categories: ContentCategory[] = [;'
-    {id: 'all';','
-  name: 'All Content';'
-      icon: Globe;,'
-  description: 'Complete collection of autonomous content';''
+  const categories: ContentCategory[] = [;
+    {id: 'all';',
+  name: 'All Content';
+      icon: Globe;,
+  description: 'Complete collection of autonomous content';
       color: 'from-blue-500 to-cyan-500';',
   count: contentItems.length;
-    }'
-    {id: 'seo';','
-  name: 'SEO & Analytics';'
-      icon: BarChart3;,'
-  description: 'Search optimization and performance analytics';''
-      color: 'from-green-500 to-emerald-500';','
-  count: contentItems.filter(item => item.category === 'seo').length;']'
-      subcategories: ['structured-dataperformancetechnical-seo'];'
-    }'
-    {id: 'security';','
-  name: 'Security & Compliance';'
-      icon: Shield;,'
-  description: 'Security assessments and compliance reports';''
-      color: 'from-red-500 to-orange-500';','
-  count: contentItems.filter(item => item.category === 'security').length;''
-      subcategories: ['vulnerability-scancompliancethreat-detection'];'
-    }'
-    {id: 'ai';','
-  name: 'AI & Machine Learning';'
-      icon: Brain;,'
-  description: 'AI model performance and insights';''
-      color: 'from-purple-500 to-pink-500';','
-  count: contentItems.filter(item => item.category === 'ai').length;''
-      subcategories: ['performancetrainingdeployment'];'
-    }'
-    {id: 'features';','
-  name: 'Feature Updates';'
-      icon: Zap;,'
-  description: 'New features and system updates';''
-      color: 'from-yellow-500 to-orange-500';','
-  count: contentItems.filter(item => item.category === 'features').length;''
-      subcategories: ['deploymentenhancementsroadmap'];'
-    }'
-    {id: 'monitoring';','
-  name: 'System Monitoring';'
-      icon: Cpu;,'
-  description: 'Infrastructure and system health';''
-      color: 'from-indigo-500 to-purple-500';','
-  count: contentItems.filter(item => item.category === 'monitoring').length;''
-      subcategories: ['system-healthperformanceinfrastructure'];'
-    }'
-    {id: 'analytics';','
-  name: 'User Analytics';'
-      icon: TrendingUp;,'
-  description: 'User behavior and engagement insights';''
-      color: 'from-teal-500 to-cyan-500';','
-  count: contentItems.filter(item => item.category === 'analytics').length;''
-      subcategories: ['user-behaviorengagementconversion'];'
-    }
-  ];
-  const contentTypes = [;'
-    { id: 'all', name: 'All Types', icon: Globe }''
-    { id: 'report', name: 'Reports', icon: BookOpen }''
-    { id: 'update', name: 'Updates', icon: Zap }''
-    { id: 'insight', name: 'Insights', icon: Lightbulb }''
-    { id: 'guide', name: 'Guides', icon: Code }''
-    { id: 'security', name: 'Security', icon: Shield }''
+    {id: 'seo';',
+  name: 'SEO & Analytics';
+      icon: BarChart3;,
+  description: 'Search optimization and performance analytics';
+      color: 'from-green-500 to-emerald-500';',
+  count: contentItems.filter(item => item.category === 'seo').length;']
+      subcategories: ['structured-dataperformancetechnical-seo'];
+    {id: 'security';',
+  name: 'Security & Compliance';
+      icon: Shield;,
+  description: 'Security assessments and compliance reports';
+      color: 'from-red-500 to-orange-500';',
+  count: contentItems.filter(item => item.category === 'security').length;
+      subcategories: ['vulnerability-scancompliancethreat-detection'];
+    {id: 'ai';',
+  name: 'AI & Machine Learning';
+      icon: Brain;,
+  description: 'AI model performance and insights';
+      color: 'from-purple-500 to-pink-500';',
+  count: contentItems.filter(item => item.category === 'ai').length;
+      subcategories: ['performancetrainingdeployment'];
+    {id: 'features';',
+  name: 'Feature Updates';
+      icon: Zap;,
+  description: 'New features and system updates';
+      color: 'from-yellow-500 to-orange-500';',
+  count: contentItems.filter(item => item.category === 'features').length;
+      subcategories: ['deploymentenhancementsroadmap'];
+    {id: 'monitoring';',
+  name: 'System Monitoring';
+      icon: Cpu;,
+  description: 'Infrastructure and system health';
+      color: 'from-indigo-500 to-purple-500';',
+  count: contentItems.filter(item => item.category === 'monitoring').length;
+      subcategories: ['system-healthperformanceinfrastructure'];
+    {id: 'analytics';',
+  name: 'User Analytics';
+      icon: TrendingUp;,
+  description: 'User behavior and engagement insights';
+      color: 'from-teal-500 to-cyan-500';',
+  count: contentItems.filter(item => item.category === 'analytics').length;
+      subcategories: ['user-behaviorengagementconversion'];
+  const contentTypes = [;
+    { id: 'all', name: 'All Types', icon: Globe }
+    { id: 'report', name: 'Reports', icon: BookOpen }
+    { id: 'update', name: 'Updates', icon: Zap }
+    { id: 'insight', name: 'Insights', icon: Lightbulb }
+    { id: 'guide', name: 'Guides', icon: Code }
+    { id: 'security', name: 'Security', icon: Shield }
     { id: 'feature', name: 'Features', icon: TrendingUp }']
-  ];
-  const dateRanges = [;'
-    { id: 'all', name: 'All Time' }''
-    { id: 'today', name: 'Today' }''
-    { id: 'week', name: 'This Week' }''
-    { id: 'month', name: 'This Month' }''
+  const dateRanges = [;
+    { id: 'all', name: 'All Time' }
+    { id: 'today', name: 'Today' }
+    { id: 'week', name: 'This Week' }
+    { id: 'month', name: 'This Month' }
     { id: 'quarter', name: 'This Quarter' }']
-  ];
-  const relevanceLevels = [;'
-    { id: 'all', name: 'All Relevance', color: 'text-gray-400' }''
-    { id: 'high', name: 'High Priority', color: 'text-green-400' }''
-    { id: 'medium', name: 'Medium Priority', color: 'text-yellow-400' }''
-    { id: 'low', name: 'Low Priority', color: 'text-red-400' }'
+  const relevanceLevels = [;
+    { id: 'all', name: 'All Relevance', color: 'text-gray-400' }
+    { id: 'high', name: 'High Priority', color: 'text-green-400' }
+    { id: 'medium', name: 'Medium Priority', color: 'text-yellow-400' }
+    { id: 'low', name: 'Low Priority', color: 'text-red-400' }
       return matchesSearch && matchesCategory && matchesSubcategory && matchesType && matchesRelevance;
     });
     // Sort items;
     filtered.sort((a, b) => {let comparison = 0;
-      switch (sortBy) {;'
-        case 'date':;'
+      switch (sortBy) {;
+        case 'date':;
           comparison = new Date(a.date).getTime() - new Date(b.date).getTime();
           break;]
   ],
@@ -298,77 +251,63 @@ const contentItems: ContentItem[] = [
     const filtered = contentItems.filter(item => {)
       const matchesSearch = item.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
                            item.desc.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                           item.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase())),'
-      const matchesCategory = selectedCategory === 'all' || item.category === selectedCategory,''
-      const matchesSubcategory = selectedSubcategory === 'all' || item.subcategory === selectedSubcategory,''
-      const matchesType = selectedType === 'all' || item.type === selectedType,''
-      const matchesRelevance = selectedRelevance === 'all' || item.relevance === selectedRelevance,'
-      return matchesSearch && matchesCategory && matchesSubcategory && matchesType && matchesRelevance;
+                           item.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase())),
+      const matchesCategory = selectedCategory === 'all' || item.category === selectedCategory,
+      const matchesSubcategory = selectedSubcategory === 'all' || item.subcategory === selectedSubcategory,
+      const matchesType = selectedType === 'all' || item.type === selectedType,
+      const matchesRelevance = selectedRelevance === 'all' || item.relevance === selectedRelevance,
     }),
 
     // Sort items,
 filtered.sort((a, b) => {
-      let comparison = 0,      switch (sortBy) {'
-        case 'date':'
+      let comparison = 0,      switch (sortBy) {
+        case 'date':
           comparison = new Date(a.date).getTime() - new Date(b.date).getTime(),
-          break,'
-        case 'relevance':'
+          break,
+        case 'relevance':
           const relevanceOrder = { high: 3, medium: 2, low: 1 },
-          comparison = relevanceOrder[a.relevance] - relevanceOrder[b.relevance],'
-          break,        case 'title':'
+          comparison = relevanceOrder[a.relevance] - relevanceOrder[b.relevance],
+          break,        case 'title':
           comparison = a.title.localeCompare(b.title),
           break;
-      }'
-      return sortOrder === 'asc' ? comparison : -comparison;'
-    });
+      return sortOrder === 'asc' ? comparison : -comparison;
     return filtered;
   }, [searchTerm, selectedCategory, selectedSubcategory, selectedType, selectedRelevance, sortBy, sortOrder]);
   const getCategoryIcon = (category: string) => {const cat = categories.find(c => c.id === category);
     return cat ? cat.icon : Globe;
-  }
-  const getRelevanceColor = (relevance: string) => {switch (relevance) {;'
-      case 'high': return 'text-green-400';''
-      case 'medium': return 'text-yellow-400';''
-      case 'low': return 'text-red-400';''
-      default: return 'text-gray-400';'
-    }
-}
+  const getRelevanceColor = (relevance: string) => {switch (relevance) {;
+      case 'high': return 'text-green-400';
+      case 'medium': return 'text-yellow-400';
+      case 'low': return 'text-red-400';
+      default: return 'text-gray-400';
   const getTypeIcon = (type: string) => {
     const typeInfo = contentTypes.find(t => t.id === type)
     return typeInfo ? typeInfo.icon : Globe;
-  }
-  const clearAllFilters = () => {'
-    setSearchTerm('')''
-    setSelectedCategory('all')''
-    setSelectedSubcategory('all')''
-    setSelectedType('all')''
-    setSelectedDateRange('all')''
-    setSelectedRelevance('all')'
-  }
+  const clearAllFilters = () => {
+    setSearchTerm()
+    setSelectedCategory('all')
+    setSelectedSubcategory('all')
+    setSelectedType('all')
+    setSelectedDateRange('all')
+    setSelectedRelevance('all')
   return (
     <div className=&quot;space-y-6&quot;>
 </div>
       <div className=&quot;space-y-4&quot;>
-</div>
         <div className=&quot;relative&quot;>
-</div>
           <Search className=&quot;absolute left-3 top-1/2 transform -translate-y-1/2 text-white/50 w-5 h-5&quot; />
-</Search>
+
           <input,
 type=&quot;text&quot;
             placeholder=&quot;Search content by title, description, tags, or keywords...&quot;
             value={searchTerm})
             onChange={(e) => setSearchTerm(e.target.value)}
 </input>
-        </div>
         <div className=&quot;grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4&quot;>
-</div>
           {/* Category Filter */}          <div>
-</div>
             <label className=&quot;block text-sm font-medium text-white/70 mb-2&quot;>Category</label>
                 <option key={category.id} value={category.id}>
 </option>
-                </option>
             <label className=&quot;block text-sm font-medium text-white/70 mb-2&quot;>Subcategory</label>
             <select,
 value={selectedSubcategory}
@@ -376,130 +315,74 @@ value={selectedSubcategory}
 </select>
               <option value=&quot;all&quot;>All Subcategories</option>
                 <option key={sub} value={sub}>
-</option>
             <label className=&quot;block text-sm font-medium text-white/70 mb-2&quot;>Content Type</label>
-            <select,
 value={selectedType}
               onChange={(e) => setSelectedType(e.target.value)}
-</select>
                 <option key={type.id} value={type.id}>
-</option>
                 </option>;
             <label className=&quot;block text-sm font-medium text-white/70 mb-2&quot;>Relevance</label>
-            <select,
 value={selectedRelevance}
               onChange={(e) => setSelectedRelevance(e.target.value)}
-</select>
                 <option key={level.id} value={level.id}>
-</option>
-                </option>;
             </select>;
           </div>;
-        </div>;
 <div className=&quot;flex flex-wrap items-center justify-between gap-4&quot;>
-</div>
           <div className=&quot;flex items-center gap-4&quot;>
-</div>
             <div className=&quot;flex items-center gap-2&quot;>
-</div>
               <label className=&quot;text-sm text-white/70&quot;>Sort by:</label>
-              <select,
-value={sortBy}'
-                onChange={(e) => setSortBy(e.target.value as 'date' | 'relevance' | 'title')}'
-</select>
+value={sortBy}
+                onChange={(e) => setSortBy(e.target.value as 'date' | 'relevance' | 'title')}
                 <option value=&quot;date&quot;>Date</option>
                 <option value=&quot;relevance&quot;>Relevance</option>
                 <option value=&quot;title&quot;>Title</option>
-              </select>
-              <button,'
-onClick={() => setSortOrder(sortOrder === 'asc' ? 'desc' : 'asc')}'
+              <button,
+onClick={() => setSortOrder(sortOrder === 'asc' ? 'desc' : 'asc')}
 </button>
-          </button>
-        </div>
-      </div>
       <div>
-</div>
         <div className=&quot;flex flex-wrap gap-2&quot;>
-</div>
             <button;
               key={category.id}
               onClick={() => setSelectedCategory(category.id)}
-</button>
               <category.icon className=&quot;w-4 h-4&quot; />
 </category>
               <span className=&quot;text-xs bg-white/10 px-2 py-1 rounded-full&quot;>
 </span>
               </span>;
             </button>;
-        </div>;
-      </div>;
 <div className=&quot;text-sm text-white/60&quot;>
-</div>
-      </div>;
-                </div>;
-              </div>;'
       <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-6">        {filteredItems.map((item) => {"
 </div>"
       <div className="text-sm text-white/60">"
-</div>
-      </div>"
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">"
-</div>
             <div key={item.id} className=&quot;group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 to-white/10 p-6 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300 transform hover:scale-105&quot;>
-</div>
               <div className=&quot;pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100&quot; />
-</div>
               <div className=&quot;flex items-center justify-between mb-3&quot;>
-</div>
-                <div className=&quot;flex items-center gap-2&quot;>
-</div>"
-                  <div className={`w-8 h-8 rounded-lg bg-gradient-to-br ${category?.color || 'from-gray-500 to-gray-600'} p-2 flex items-center justify-center`}>'
-</div>
+                  <div className={`w-8 h-8 rounded-lg bg-gradient-to-br ${category?.color || 'from-gray-500 to-gray-600'} p-2 flex items-center justify-center`}>
                     <CategoryIcon className=&quot;w-4 h-4 text-white&quot; />
-</CategoryIcon>
-                  </div>
+
                   <span className=&quot;text-xs text-white/60 uppercase tracking-wider&quot;>
-</span>
-                  </span>
-                </div>
                 <div className=&quot;flex items-center gap-1 text-xs text-white/50&quot;>
-</div>
                   <TypeIcon className=&quot;w-3 h-3&quot; />
-</TypeIcon>
-                </div>;
-              </div>;
+
 <h3 className=&quot;text-lg font-semibold text-white mb-2 group-hover:text-cyan-300 transition-colors duration-200&quot;>
 </h3>
-              </h3>
               <p className=&quot;text-sm text-white/75 mb-4 leading-relaxed&quot;>
 </p>
               </p>;
 <div className=&quot;flex flex-wrap gap-1 mb-4&quot;>
-</div>
                   <span key={index} className=&quot;px-2 py-1 bg-white/5 border border-white/10 rounded text-xs text-white/60&quot;>
-</span>
-                  </span>;
 <div className=&quot;flex items-center justify-between text-xs text-white/50 mb-4&quot;>
-</div>
                 <span className=&quot;flex items-center gap-1&quot;>
-</span>
                   <Calendar className=&quot;w-3 h-3&quot; />
-</Calendar>
-                </span>
+
+                </span>`;
                 <span className={`flex items-center gap-1 ${getRelevanceColor(item.relevance)}`}>
-</span>
                   <TrendingUp className=&quot;w-3 h-3&quot; />
-</TrendingUp>
-                </span>
-              </div>
+
               <div className=&quot;flex items-center justify-between&quot;>
-</div>
                 <span className=&quot;text-xs text-white/40&quot;>
-</span>
-                </span>
-      </div>;
                 <a,
-href={item.href} '
+href={item.href} 
                   target="blank"""
                   rel="noopener noreferrer"""
                   className="inline-flex items-center gap-2 text-cyan-300 hover: text-cyan-200 transition-colors duration-200 text-sm font-medium""
@@ -509,22 +392,10 @@ href={item.href} '
                 >
 </a>
                   <span aria-hidden></span>
-                </a>
-              </div>
-            </div>
-      </div>;
         <div className=&quot;text-center py-12&quot;>
-</div>
           <div className=&quot;text-white/40 text-6xl mb-4&quot;></div>
           <h3 className=&quot;text-xl font-semibold text-white/70 mb-2&quot;>No content found</h3>"
-          <p className=&quot;text-white/50 mb-4&quot;>            Try adjusting your search terms or filters to find what you're looking for.'
-</p>
-          </p>
-          <button,
+          <p className=&quot;text-white/50 mb-4&quot;>            Try adjusting your search terms or filters to find what you're looking for.
 onClick={clearAllFilters}
             className=&quot;px-6 py-2 bg-cyan-500/20 border border-cyan-500/50 rounded-lg text-cyan-300 hover:bg-cyan-500/30 transition-all duration-200&quot;
-          >
-</button>
-          </button>
-        </div>
-    </div>;'
+    </div>;`;

@@ -21,14 +21,12 @@ class PerformanceMonitor {
     if (fs.existsSync(buildDir)) {
       const buildSize = this.getDirectorySize(buildDir);
       metrics.buildSize = buildSize;
-    }
 
     // Check node_modules size
     const nodeModulesDir = path.join(this.projectRoot, "node_modules");
     if (fs.existsSync(nodeModulesDir)) {
       const nodeModulesSize = this.getDirectorySize(nodeModulesDir);
       metrics.nodeModulesSize = nodeModulesSize;
-    }
 
     console.log("📊 Performance metrics:", JSON.stringify(metrics, null, 2));
     
@@ -37,13 +35,11 @@ class PerformanceMonitor {
     fs.writeFileSync(metricsFile, JSON.stringify(metrics, null, 2));
     
     return metrics;
-  }
 
   getDirectorySize(dir) {
     let size = 0;
     if (!fs.existsSync(dir)) {
       return size;
-    }
 
     const items = fs.readdirSync(dir);
     for (const item of items) {
@@ -54,12 +50,7 @@ class PerformanceMonitor {
         size += this.getDirectorySize(fullPath);
       } else {
         size += stat.size;
-      }
-    }
 
-    return size;
-  }
-}
 
 const monitor = new PerformanceMonitor();
 monitor.monitorPerformance();

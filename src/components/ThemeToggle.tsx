@@ -19,9 +19,9 @@ const ThemeToggle: React.FC = () => {
           onClick={() => setTheme(value as 'light' | 'dark' | 'system')}
           className={`flex items-center space-x-1 px-3 py-1.5 rounded-md text-sm font-medium transition-colors ${
             theme === value
-              ? 'bg-background text-foreground shadow-sm'
-              : 'text-muted-foreground hover:text-foreground'
-          }`}
+              ? 'bg-background text-foreground shadow-sm
+              : 'text-muted-foreground hover:text-foreground`;
+          }`}`;
           title={`Switch to ${label} theme`}
         >
           <Icon size={16} />
@@ -32,4 +32,4 @@ const ThemeToggle: React.FC = () => {
   );
 };
 
-export default ThemeToggle;
+export default ThemeToggle;`;

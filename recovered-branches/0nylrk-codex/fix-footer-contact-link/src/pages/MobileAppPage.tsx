@@ -10,65 +10,58 @@ import { DownloadSection } from "@/components/mobile-app/DownloadSection";"
 const MobileAppPage: React.FC = () => {
   return (
     <AppLayout>
-</AppLayout>
+
       <SEO;"
         title="Zion AI Marketplace App"""
         description="Hire top AI talent or find global IT jobs on the go. Download the Zion app now."""
         keywords="AI freelancer app, hire tech, find IT jobs, tech marketplace app, mobile AI jobs""
       />
-</SEO>
+
 
       <MobileAppHero />
-</MobileAppHero>
+
 
       <AppFeatures />
-</AppFeatures>
+
 
       <AppScreenshots />
-</AppScreenshots>
+
 
       <AppTestimonials />
-</AppTestimonials>
+
 
       <DownloadSection />
-</DownloadSection>
+
 
       <AppStoreBanner />
-</AppStoreBanner>
-    </AppLayout>
+
+    
     <AppLayout>;
-</AppLayout>
-      <SEO;"
+
         title="Zion AI Marketplace App";""
         description="Hire top AI talent or find global IT jobs on the go. Download the Zion app now.";""
         keywords="AI freelancer app, hire tech, find IT jobs, tech marketplace app, mobile AI jobs";"
       />;
-</SEO>
+
       <MobileAppHero />;
-</MobileAppHero>
+
       <AppFeatures />;
-</AppFeatures>
+
       <AppScreenshots />;
-</AppScreenshots>
+
       <AppTestimonials />;
-</AppTestimonials>
+
       <DownloadSection />;
-</DownloadSection>
+
       <AppStoreBanner />;
-</AppStoreBanner>
-      <MobileAppHero />;
-</MobileAppHero>
-      <AppFeatures />;
-</AppFeatures>
-      <AppScreenshots />;
-</AppScreenshots>
-      <AppTestimonials />;
-</AppTestimonials>
-      <DownloadSection />;
-</DownloadSection>
-      <AppStoreBanner />;
-</AppStoreBanner>
-    </AppLayout>;"
+
+
+
+
+
+
+
+    ;"
   return (<AppLayout> <SEO title="Zion AI Marketplace App" description="Hire top AI talent or find global IT jobs on the go. Download the Zion app now." keywords="AI freelancer app, hire tech, find IT jobs, tech marketplace app, mobile AI jobs""
-</AppLayout>
-    </AppLayout>;)"
+
+    ;)"

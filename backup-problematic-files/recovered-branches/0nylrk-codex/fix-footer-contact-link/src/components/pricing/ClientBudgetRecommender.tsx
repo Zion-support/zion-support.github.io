@@ -19,15 +19,13 @@ interface ClientBudgetRecommenderProps {;
   experienceLevel?:string,;
   onSuggestionApplied:(minValue:number, maxValue:number) => void;
 }
-;
 export const ClientBudgetRecommender:React.FC<ClientBudgetRecommenderProps> = ({;
-</ClientBudgetRecommenderProps>)
+)
   const [suggestion, setSuggestion] = useState<PricingSuggestion | null>(null),;
-</PricingSuggestion>"
+"
     <div className="space-y-4">;"
 </div>
       <div>;
-</div>
           <Button;"
             type="button";""
             variant="outline";"
@@ -35,20 +33,15 @@ export const ClientBudgetRecommender:React.FC<ClientBudgetRecommenderProps> = ({
             disabled={!jobTitle || !category}"
             className="w-full";"
           >;
-</Button>"
             <Sparkles className="h-4 w-4 mr-2" /> Get Budget Recommendation;"
-</Sparkles>
-          </Button>;
+
           <PricingSuggestionBox;
             suggestion={suggestion}
             isLoading={isLoading}
             onApplySuggestion={handleApplySuggestion}"
             rateType="hourly";"
           />;
-</PricingSuggestionBox>
+
       </div>;
-    </div>;
 }export const ClientBudgetRecommender: React.FC<ClientBudgetRecommenderProps> = ({
-</ClientBudgetRecommenderProps>)
 const [suggestion, setSuggestion] = useState<PricingSuggestion | null> (null);
-</PricingSuggestion>"

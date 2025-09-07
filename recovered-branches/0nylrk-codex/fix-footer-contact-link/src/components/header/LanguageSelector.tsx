@@ -21,93 +21,71 @@ import { useLanguage, SupportedLanguage } from "@/context/LanguageContext";"
 export function LanguageSelector() {;
   const { t } = useTranslation();
   const { currentLanguage, changeLanguage, supportedLanguages } = useLanguage();"
-import React from 'react',''
-import { useTranslation } from 'react-i18next',''
-import { Button } from '@/components/ui/button',''
-import { Globe } from 'lucide-react','
+import React from 'react',
+import { useTranslation } from 'react-i18next',
+import { Button } from '@/components/ui/button',
+import { Globe } from 'lucide-react',
 import {
   // TODO: Implement
 }
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuItem,'
-  DropdownMenuTrigger} from '@/components/ui/dropdown-menu',''
-import { useLanguage, SupportedLanguage } from '@/context/LanguageContext','
+  DropdownMenuTrigger} from '@/components/ui/dropdown-menu',
+import { useLanguage, SupportedLanguage } from '@/context/LanguageContext',
 export function LanguageSelector() {
-  const { t } = useTranslation();
   const { currentLanguage, changeLanguage, supportedLanguages } = useLanguage();
   return (
     <DropdownMenu>;
-</DropdownMenu>
+
       <DropdownMenuTrigger asChild>;
-</DropdownMenuTrigger>
-        <Button;'
+
+        <Button;
           variant="ghost"""
           size="icon"""
           className="text-white hover:bg-zion-purple/10">;"
-</Button>"
+"
           <Globe className="h-5 w-5" />;"
-</Globe>)"
+)"
           <span className="sr-only">{t("general && general.select_language")}</span>;"
-        </Button>;
-      </DropdownMenuTrigger>;
+        ;
       <DropdownMenuContent;"
         align="end"""
         className="bg-zion-blue-dark border border-zion-purple/20">;"
-</DropdownMenuContent>
+
           <DropdownMenuItem;
             key={lang && lang.code}
             className={`cursor-pointer ${
               currentLanguage === lang && lang.code;"
                 ? "bg-zion-purple/20 text-zion-cyan"""
-                : "text-white hover:bg-zion-purple/10""
+                : "text-white hover:bg-zion-purple/10""`;
             }`}
             onClick={() => changeLanguage(lang && lang.code)}
-</DropdownMenuItem>"
             <div className="flex items-center gap-2">;"
 </div>"
-              <span className="text-lg">{lang && lang.flag}</span>;"
+              <span className="text-lg">{lang && lang.flag}</span>;"`;
               <span>{t(`language.${lang && lang.code}`)}</span>;
             </div>;
-          </DropdownMenuItem>;
-      </DropdownMenuContent>;
-    </DropdownMenu>;
-    <DropdownMenu>;
-</DropdownMenu>
+
       <DropdownMenuTrigger as_child>;
-</DropdownMenuTrigger>
+
         <Button;"
           variant="ghost";""
           size="icon";""
           className="text - white hover:bg - zion - purple / 10";"
         >;
-</Button>"
           <Globe className="h - 5 w - 5" />;"
-</Globe>"
           <span className="sr - only">{t ("general.select_language")}</span>;"
-        </Button>;
-      </DropdownMenuTrigger>;
-      <DropdownMenuContent;"
         align="end";""
         className="bg - zion - blue - dark border border - zion - purple / 20";"
-      >;
-</DropdownMenuContent>
-          <DropdownMenuItem;
-            key={lang.code}
-            }`}
+
+            key={lang.code}`;
             onClick={() => changeLanguage(lang.code)}
-</DropdownMenuItem>"
             <div className="flex items-center gap-2">"
-</div>"
-              <span className="text-lg">{lang.flag}</span>"
+              <span className="text-lg">{lang.flag}</span>"`;
               <span>{t(`language.${lang.code}`)}</span>
             </div>
-          </DropdownMenuItem>
-      </DropdownMenuContent>;
-    </DropdownMenu>;
+          
  return (<DropdownMenu> <DropdownMenuTrigger asChild> key= {
-</DropdownMenu>)
-}> </div> </DropdownMenuItem>) ) 
-}</DropdownMenuContent> </DropdownMenu>) 
-</DropdownMenuContent>
-    </DropdownMenu>"
+)
+}> </div> ) ) 
+} ) 
+
+    "`;

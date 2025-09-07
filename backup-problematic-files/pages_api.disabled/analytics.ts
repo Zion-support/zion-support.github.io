@@ -1,7 +1,7 @@
-import { NextApiRequest, NextApiResponse } from 'next';'
+import { NextApiRequest, NextApiResponse } from 'next';
 interface AnalyticsEvent {
   // TODO: Implement
-}'
+}
   "name": string;"
   category: string;
   action?: string;

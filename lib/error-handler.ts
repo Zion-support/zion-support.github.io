@@ -15,8 +15,6 @@ export class AppError extends Error implements ApiError {
     this.isOperational = true;
 
     Error.captureStackTrace(this, this.constructor);
-  }
-}
 
 export const errorHandler = (err: ApiError, req: NextApiRequest, res: NextApiResponse) => {
   const { statusCode = 500, message } = err;
@@ -35,10 +33,8 @@ export const errorHandler = (err: ApiError, req: NextApiRequest, res: NextApiRes
       message: process.env.NODE_ENV === 'production' ? 'Internal Server Error' : message,
       statusCode,
       timestamp: new Date().toISOString()
-    }
-  });
 };
 
 export const asyncHandler = (fn: Function) => (req: NextApiRequest, res: NextApiResponse, next: Function) => {
   Promise.resolve(fn(req, res, next)).catch((error: any) => next(error));
-};
+};`;

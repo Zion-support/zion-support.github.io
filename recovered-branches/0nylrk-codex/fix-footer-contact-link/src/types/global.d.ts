@@ -9,17 +9,12 @@ declare module "@/components/FeatureCard" {"
     icon: ReactNode;
     className?: string;
     key?: number | string;
-  }
-}
 // Extend ListingScoreCardProps to include key for mapping;"
-declare module '@/components / ListingScoreCard' {'
-// Extend ListingScoreCardProps to include key for mapping;'
+declare module '@/components / ListingScoreCard' {
+// Extend ListingScoreCardProps to include key for mapping;
 declare module "@/components/ListingScoreCard" {"
   export interface ListingScoreCardProps {
   // TODO: Implement
-}
-    title: string;,
-  description: string;
     category: string;
     image?: string;
     tags?: string[];
@@ -30,8 +25,6 @@ declare module "@/components/ListingScoreCard" {"
     reviewCount?: number;
     key?: string | number;
     variant?: string;
-  }
-}
 
 // Extend ChatMessageProps to include key for mapping;"
 declare module "@/components/ChatAssistant/ChatMessage" {"
@@ -41,24 +34,12 @@ declare module "@/components/ChatAssistant/ChatMessage" {"
     role: "user" | "assistant";",
   message: string;
     timestamp?: Date;
-    key?: string | number;
-  }
-}
 
 // Extend ProductListingCardProps to include key for mapping;"
 declare module "@/components/ProductListingCard" {"
   export interface ProductListingCardProps {
   // TODO: Implement
-}
     listing: any;,
   view: any;
     onRequestQuote: (listingId: string) => void;
-    key?: string | number;
-  }
-}
-    author_image?: string;
-    ai_score?: number;
-    rating?: number;
-  }
-}
 "

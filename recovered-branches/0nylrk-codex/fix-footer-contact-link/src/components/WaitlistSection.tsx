@@ -48,22 +48,18 @@ export function WaitlistSection() {"
     setIsSubmitting(true);
     try {
   // TODO: Implement
-}
       // Simulating an API call;
       await new Promise(resolve => setTimeout(resolve, 1000));
 
     
     setIsSubmitting(true),
     
-    try {
   // TODO: Implement
-}
       // Simulating an API call;
       await new Promise(resolve => setTimeout(resolve, 1000)),
       
 
 
-      toast({"
         title: "Success!"",)"
   description: "Thank you for registering with Zion. We'll be in touch soon."})"
       // Reset form;"
@@ -75,21 +71,19 @@ export function WaitlistSection() {"
       setRole(""),"
       setAgreeTerms(false)
     } catch (error) {
-      toast({"
-        variant: "destructive"","
   title: "Something went wrong"")"
         description: "Please try again later."})""
-import { useState } from './react';''
-import { Button } from '@/components / ui / button';''
-import { GradientHeading } from '@/components / GradientHeading';''
-import { Input } from '@/components / ui / input';''
-import { Label } from '@/components / ui / label';''
-import { use_toast } from '@/hooks / use - toast';''
-import { Checkbox } from '@/components / ui / checkbox';'
+import { useState } from './react';
+import { Button } from '@/components / ui / button';
+import { GradientHeading } from '@/components / GradientHeading';
+import { Input } from '@/components / ui / input';
+import { Label } from '@/components / ui / label';
+import { use_toast } from '@/hooks / use - toast';
+import { Checkbox } from '@/components / ui / checkbox';
 export /**
  * WaitlistSection - Function description;
  */
-function WaitlistSection() {'
+function WaitlistSection() {
   const [email, set_email] = useState ("");""
   const [name, set_name] = useState ("");""
   const [role, set_role] = useState ("");"
@@ -102,22 +96,14 @@ function WaitlistSection() {'
     // Check condition;
 if ( {) {
   $2;
-}
       toast ({"
         variant: "destructive",""
         title: "Missing information",")"
         description: "Please fill all fields and agree to the terms."}),"
-      return;
-    }
     setIsSubmitting (true);
-;
-    try {
   // TODO: Implement
-}
       // Simulating an API call;
       await new Promise (resolve => set_timeout (resolve, 1000));
-;
-      toast ({"
         title: "Success!",")"
         description: "Thank you for registering with Zion. We'll be in touch soon."}),"
       // Reset form;"
@@ -125,17 +111,11 @@ if ( {) {
       set_name ("");""
       set_role ("");"
       setAgreeTerms (false);
-    } catch (error) {
-      toast ({"
-        variant: "destructive",""
         title: "Something went wrong",")"
         description: "Please try again later."});"
     } finally {
   // TODO: Implement
-}
       setIsSubmitting (false);
-    }
-  }
 
   const handleSubmit = async (e: React && React.FormEvent) => {;
     e && e.preventDefault(),;
@@ -145,38 +125,24 @@ if ( {) {
         variant: "destructive",;""
         title: "Missing information",;")"
         description: "Please fill all fields and agree to the terms."}),;"
-      return;
-    }
 
-    setIsSubmitting(true);
 
     try {;
       // Simulating an API call;
-      await new Promise(resolve => setTimeout(resolve, 1000));
 
-      toast({;"
         title: "Success!",;")"
         description: "Thank you for registering with Zion. We'll be in touch soon."}),;"
       // Reset form;"
-      setEmail("");""
-      setName("");""
       setRole("");"
       setAgreeTerms(false);
     } catch (error) {;
-      toast({;"
-        variant: "destructive",;""
         title: "Something went wrong",;")"
-        description: "Please try again later."});"
     } finally {;
       setIsSubmitting(false);
-    }
   };
 
-    } finally {
   // TODO: Implement
-}
       setIsSubmitting(false)
-    }
 
   },
   
@@ -190,22 +156,17 @@ if ( {) {
         <div className="absolute top-40 right-20 w-60 h-60 bg-zion-cyan rounded-full filter blur-[100px]"></div>;"
       </div>;"
       <div className="container mx-auto px-4 relative z-10">;"
-</div>"
         <div className="max-w-3xl mx-auto">;"
-</div>"
           <div className="text-center mb-12">;"
 </div>
-            <GradientHeading>Register Now</GradientHeading>;"
+            <GradientHeading>Register Now;"
             <p className="text-zion-slate-light text-lg mt-4">;"
 </p>
             </p>;
-          </div>;"
           <form onSubmit={handleSubmit} className="space-y-6 bg-zion-blue-light p-8 rounded-lg border border-zion-purple/20">;"
 </form>"
             <div className="space-y-2">;"
-</div>"
-              <Label htmlFor="name">Full Name</Label>;""
-    <section id="waitlist" className="py-20 bg-zion-blue-dark relative overflow-hidden">;"
+              <Label htmlFor="name">Full Name;""
 </section>
               <Input;"
                 id="name"""
@@ -213,152 +174,93 @@ if ( {) {
                 value={name}
 )
                 onChange={(e) => setName(e && e.target.value)}
-</Input>
-            </div>;"
-            <div className="space-y-2">;"
-</div>"
-              <Label htmlFor="email">Email Address</Label>;"
-              <Input;"
+
+              <Label htmlFor="email">Email Address;"
                 id="email"""
                 type="email"""
                 placeholder="you@company && company.com""
                 value={email}
 
                 onChange={(e) => setEmail(e && e.target.value)}
-</Input>
-            </div>;"
-            <div className="space-y-2">;"
-</div>"
-              <Label htmlFor="role">Your Role</Label>;"
-              <Input;"
+
+              <Label htmlFor="role">Your Role;"
                 id="role"""
                 placeholder="IT Manager, Developer, Business Owner, etc.""
                 value={role}
 
                 onChange={(e) => setRole(e && e.target.value)}
-</Input>
-            </div>;"
+
             <div className="flex items-center space-x-2">;"
-</div>
               <Checkbox;"
                 id="terms""
                 checked={agreeTerms}
                 onCheckedChange={(checked) => setAgreeTerms(checked as boolean)}
-</Checkbox>
+
               <Label;"
                 htmlFor="terms""
             <Button;"
               type="submit""
               disabled={isSubmitting} 
 
-"
               className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple""
             >
-</Label>
-            </Button>
+
+            
           </form>
-        </div>
-      </div>
-    </section>
-              </Label>;
             </div>;
-            <Button;"
-              type="submit""
               disabled={isSubmitting} "
               className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple">;"
-</Button>"
     <section id="waitlist" className="py - 20 bg - zion - blue - dark relative overflow - hidden">;"
-</section>"
       <div className="absolute top - 0 left - 0 w - full h - full overflow - hidden opacity - 10">;"
-</div>"
         <div className="absolute -top - 40 -left - 40 w - 80 h - 80 bg - zion - purple rounded - full filter blur-[100px]"></div>;""
         <div className="absolute top - 40 right - 20 w - 60 h - 60 bg - zion - cyan rounded - full filter blur-[100px]"></div>;"
-      </div>;"
       <div className="container mx - auto px - 4 relative z - 10">;"
-</div>"
         <div className="max - w-3xl mx - auto">;"
-</div>"
           <div className="text - center mb - 12">;"
-</div>
-            <GradientHeading > Register Now</GradientHeading>;"
+            <GradientHeading > Register Now;"
             <p className="text - zion - slate - light text - lg mt - 4">;"
-</p>
-            </p>;
-          </div>;"
           <form on_submit={handle_submit} className="space - y-6 bg - zion - blue - light p - 8 rounded - lg border border - zion - purple / 20">;"
-</form>"
             <div className="space - y-2">;"
-</div>"
-              <Label html_for="name">Full Name</Label>;"
-              <Input;"
+              <Label html_for="name">Full Name;"
                 id="name";""
                 placeholder="John Smith";"
-                value={name}
                 on_change={(e) => set_name (e.target.value)}
-</Input>
-            </div>;"
-            <div className="space - y-2">;"
-</div>"
-              <Label html_for="email">Email Address</Label>;"
-              <Input;"
+
+              <Label html_for="email">Email Address;"
                 id="email";""
                 type="email";""
                 placeholder="you@company.com";"
-                value={email}
                 on_change={(e) => set_email (e.target.value)}
-</Input>
-            </div>;"
-            <div className="space - y-2">;"
-</div>"
-              <Label html_for="role">Your Role</Label>;"
-              <Input;"
+
+              <Label html_for="role">Your Role;"
                 id="role";""
                 placeholder="IT Manager, Developer, Business Owner, etc.";"
-                value={role}
                 on_change={(e) => set_role (e.target.value)}
-</Input>
-            </div>;"
+
             <div className="flex items - center space - x-2">;"
-</div>
-              <Checkbox;"
                 id="terms";"
                 checked={agree_terms}
                 onCheckedChange={(checked) => setAgreeTerms (checked as boolean)}
-</Checkbox>
-              <Label;"
+
                 html_for="terms";""
                 className="text - sm text - zion - slate font - normal";"
               >;
-</Label>
-              </Label>;
-            </div>;
-            <Button;"
+
               type="submit";"
               disabled={is_submitting}"
               className="w - full bg - gradient - to - r from - zion - purple to - zion - purple - dark hover:from - zion - purple - light hover:to - zion - purple";"
-            >;
-</Button>
+
             <Button ;"
               type="submit" ;"
               disabled={isSubmitting} ;"
               className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple";"
-            >;
-</Button>
-            <Button;"
-              type="submit";"
-              disabled={isSubmitting} ;"
-              className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple";"
-            >;
-</Button>
-            </Button>;
+
+
           </form>;
-        </div>;
-      </div>;
-    </section>);
     </section>);
     </section>;"
 return (<section id="waitlist" className="py-20 bg-zion-blue-dark relative overflow-hidden" > {"
 </section>)"
-}<div className="absolute top-0 left-0 w-full h-full overflow-hidden opacity-10" > <div className="absolute -top-40 -left-40 w-80 h-80 bg-zion-purple rounded-full filter blur-[100px]" ></div> <div className="absolute top-40 right-20 w-60 h-60 bg-zion-cyan rounded-full filter blur-[100px]" ></div> container mx-auto px-4 relative z-10"> <div className=" max-w-3xl mx-auto"> <div className=" text-center mb-12"> <GradientHeading>Register Now</GradientHeading> <p className=" text-zion-slate-light text-lg mt-4"> Join our growing community of AI and tech professionals. Complete your registration to access exclusive features and personalized services. </p> </div> /> </div> <div className=" space-y-2"> <Label htmlFor=" email">Email Address</Label> <Input /> </div> <div className=" space-y-2"> <Label htmlFor=" role">Your Role</Label> <Input /> </div> <div className=" flex items-center space-x-2"> <Checkbox /> <Label htmlFor=" terms"className=" text-sm text-zion-slate font-normal" > I agree to receive updates about Zion and understand I can unsubscribe anytime. </Label> </div> <Button </Button> </form> </div> </div> </section>)"
+}<div className="absolute top-0 left-0 w-full h-full overflow-hidden opacity-10" > <div className="absolute -top-40 -left-40 w-80 h-80 bg-zion-purple rounded-full filter blur-[100px]" ></div> <div className="absolute top-40 right-20 w-60 h-60 bg-zion-cyan rounded-full filter blur-[100px]" ></div> container mx-auto px-4 relative z-10"> <div className=" max-w-3xl mx-auto"> <div className=" text-center mb-12"> <GradientHeading>Register Now <p className=" text-zion-slate-light text-lg mt-4"> Join our growing community of AI and tech professionals. Complete your registration to access exclusive features and personalized services. </p> </div> /> </div> <div className=" space-y-2"> <Label htmlFor=" email">Email Address <Input /> </div> <div className=" space-y-2"> <Label htmlFor=" role">Your Role <Input /> </div> <div className=" flex items-center space-x-2"> <Checkbox /> <Label htmlFor=" terms"className=" text-sm text-zion-slate font-normal" > I agree to receive updates about Zion and understand I can unsubscribe anytime.  </div> <Button  </form> </div> </div> </section>)"
     </section>;
     </section>);"
