@@ -1,14 +1,11 @@
-import { NextApiRequest, NextApiResponse } from 'next';'
+import { NextApiRequest, NextApiResponse } from 'next';
+
 export interface ApiError extends Error {
-  // TODO: Implement
-}
   statusCode?: number;
   isOperational?: boolean;
 }
 
 export class AppError extends Error implements ApiError {
-  // TODO: Implement
-}
   public statusCode: number;
   public isOperational: boolean;
 
@@ -24,19 +21,19 @@ export class AppError extends Error implements ApiError {
 export const errorHandler = (err: ApiError, req: NextApiRequest, res: NextApiResponse) => {
   const { statusCode = 500, message } = err;
 
-  // Log error for monitoring;
+  // Log error for monitoring
   console.error(`API Error [${statusCode}]: ${message}`, {
     url: req.url,
-    method: req.method,)
-    timestamp: new Date().toISOString(),'
-    userAgent: req.headers['user-agent'],''
-    ip: req.headers['x-forwarded-for'] || req.connection.remoteAddress;'
+    method: req.method,
+    timestamp: new Date().toISOString(),
+    userAgent: req.headers['user-agent'],
+    ip: req.headers['x-forwarded-for'] || req.connection.remoteAddress
   });
 
   res.status(statusCode).json({
-    error: {,'
-  message: process.env.NODE_ENV === 'production' ? 'Internal Server Error' : message,'
-      statusCode,)
+    error: {
+      message: process.env.NODE_ENV === 'production' ? 'Internal Server Error' : message,
+      statusCode,
       timestamp: new Date().toISOString()
     }
   });
@@ -44,4 +41,4 @@ export const errorHandler = (err: ApiError, req: NextApiRequest, res: NextApiRes
 
 export const asyncHandler = (fn: Function) => (req: NextApiRequest, res: NextApiResponse, next: Function) => {
   Promise.resolve(fn(req, res, next)).catch((error: any) => next(error));
-};'
+};

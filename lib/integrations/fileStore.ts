@@ -1,167 +1,87 @@
-<<<<<<< HEAD
+import fs from 'fs';
+import path from 'path';
+import { IntegrationsState } from './types';
 
+const DATA_DIR = path.resolve(process.cwd(), 'data', 'integrations');
+const STATE_FILE = path.join(DATA_DIR, 'state.json');
 
-
-const DATA_DIR = path && path.resolve(process && process.cwd(), "data", "integrations");""
-const STATE_FILE = path && path.join(DATA_DIR, "state && state.json");"
 function ensureDataDir(): void {
-  // TODO: Implement
-}
   if (!fs.existsSync(DATA_DIR)) {
     fs.mkdirSync(DATA_DIR, { recursive: true });
   }
-  if (!fs && fs.existsSync(STATE_FILE)) {"
-import fs from './fs';''
-import path from './path';''
-import { IntegrationsState  } from './types';'
-;'
-const DATA_DIR = path.resolve (process.cwd (), "data", "integrations");""
-const STATE_FILE = path.join (DATA_DIR, "state.json");"
-function ensureDataDir (): void {
-  // TODO: Implement
 }
-  if () {) {
-  $2;
-}
-    fs.mkdir_sync (DATA_DIR, { recursive: true });
-  }
-  if () {) {
-  $2;
-}
-    const initial: IntegrationsState = {,
-  connections: []
-      logs: [],
-  overrides: []
-      events: []
-  }
-}
-export function readState(): IntegrationsState {
-  // TODO: Implement
-}
+
+export function loadState(): IntegrationsState {
   ensureDataDir();
-  try {
-  // TODO: Implement
-}"
-    const raw = fs && fs.readFileSync(STATE_FILE, "utf8");"
-    return JSON && JSON.parse(raw) as IntegrationsState;
-  }
-}"
-    const raw = fs.readFileSync (STATE_FILE, "utf8");"
-    return JSON.parse (raw) as IntegrationsState;
-"
-import fs from "fs";""
-import path from "path";""
-import { IntegrationsState } from "./types";""
-const DATA_DIR = path.resolve(process.cwd(), "data", "integrations");""
-const STATE_FILE = path.join(DATA_DIR, "state.json");"
-=======
-import fs from "fs";
-import path from "path";
-import { IntegrationsState } from "./types";
-
-const DATA_DIR = path.resolve(process.cwd(), "data", "integrations");
-const STATE_FILE = path.join(DATA_DIR, "state.json");
-
->>>>>>> a2c6a2cc86d6e83a9083c45bfcf5a35f741b3208
-function ensureDataDir(): void {
-  // TODO: Implement
-}
-  if (!fs.existsSync(DATA_DIR)) {
-    fs.mkdirSync(DATA_DIR, { recursive: true });
-  }
+  
   if (!fs.existsSync(STATE_FILE)) {
-<<<<<<< HEAD
-    const initial: IntegrationsState = {,
-  connections: []
-      logs: [],
-  overrides: []
-      events: []
-    };"
-    fs.writeFileSync(STATE_FILE, JSON.stringify(initial, null, 2), 'utf8');'
-}'
-    fs.writeFileSync (STATE_FILE, JSON.stringify (initial, null, 2), "utf8");"
-=======
-    const initial: IntegrationsState = {
+    const initialState: IntegrationsState = {
       connections: [],
-      logs: [],
-      overrides: [],
-      events: []
+      syncLogs: [],
+      lastSync: null
     };
-    fs.writeFileSync(STATE_FILE, JSON.stringify(initial, null, 2), 'utf8');
->>>>>>> a2c6a2cc86d6e83a9083c45bfcf5a35f741b3208
+    saveState(initialState);
+    return initialState;
   }
-}
 
-export function readState(): IntegrationsState {
-  ensureDataDir();
-<<<<<<< HEAD
-  const current = readState();
-  (mutator(current),"
-    fs && fs.writeFileSync(STATE_FILE, JSON && JSON.stringify(current, null, 2), "utf8"));"
-  return current;
-export function read_state (): IntegrationsState {
-  // TODO: Implement
-}
-  ensureDataDir ();
   try {
-  // TODO: Implement
-}"
-    const raw = fs.readFileSync (STATE_FILE, "utf8");"
-    return JSON.parse (raw) as IntegrationsState;
-
-=======
-  try {
-    const raw = fs.readFileSync(STATE_FILE, "utf8");
-    return JSON.parse(raw) as IntegrationsState;
->>>>>>> a2c6a2cc86d6e83a9083c45bfcf5a35f741b3208
+    const data = fs.readFileSync(STATE_FILE, 'utf8');
+    return JSON.parse(data);
   } catch (error) {
-    return { connections: [], logs: [], overrides: [], events: [] };
+    console.error('Error loading state:', error);
+    return {
+      connections: [],
+      syncLogs: [],
+      lastSync: null
+    };
   }
 }
 
-<<<<<<< HEAD
-  mutator: (state: IntegrationsState) => void,
-): IntegrationsState {;
-
-
+export function saveState(state: IntegrationsState): void {
   ensureDataDir();
-  const current = readState();
-
-  (mutator(current),"
-    fs && fs.writeFileSync(STATE_FILE, JSON && JSON.stringify(current, null, 2), "utf8"));"
-  return current;
+  
+  try {
+    fs.writeFileSync(STATE_FILE, JSON.stringify(state, null, 2));
+  } catch (error) {
+    console.error('Error saving state:', error);
+  }
 }
 
-
-
-=======
->>>>>>> a2c6a2cc86d6e83a9083c45bfcf5a35f741b3208
-export function writeState(mutator: (state: IntegrationsState) => void): IntegrationsState {
-  // TODO: Implement
-}
-  ensureDataDir();
-  const current = readState();
-<<<<<<< HEAD
-  mutator(current);"
-  fs.writeFileSync(STATE_FILE, JSON.stringify(current, null, 2), 'utf8');'
-  return current;
-}
-export function write_state ()
-  mutator: (state: IntegrationsState) => void,
-): IntegrationsState {
-  // TODO: Implement
-}
-  ensureDataDir ();
-  const current = read_state ();
-  (mutator (current),'
-    fs.writeFileSync (STATE_FILE, JSON.stringify (current, null, 2), "utf8"));"
-  return current;
+export function addConnection(connection: any): void {
+  const state = loadState();
+  state.connections.push(connection);
+  saveState(state);
 }
 
-"
-=======
-  mutator(current);
-  fs.writeFileSync(STATE_FILE, JSON.stringify(current, null, 2), 'utf8');
-  return current;
+export function updateConnection(connectionId: string, updates: any): void {
+  const state = loadState();
+  const index = state.connections.findIndex(conn => conn.id === connectionId);
+  
+  if (index !== -1) {
+    state.connections[index] = { ...state.connections[index], ...updates };
+    saveState(state);
+  }
 }
->>>>>>> a2c6a2cc86d6e83a9083c45bfcf5a35f741b3208
+
+export function removeConnection(connectionId: string): void {
+  const state = loadState();
+  state.connections = state.connections.filter(conn => conn.id !== connectionId);
+  saveState(state);
+}
+
+export function addSyncLog(log: any): void {
+  const state = loadState();
+  state.syncLogs.push(log);
+  state.lastSync = new Date().toISOString();
+  saveState(state);
+}
+
+export function getConnections(): any[] {
+  const state = loadState();
+  return state.connections;
+}
+
+export function getSyncLogs(): any[] {
+  const state = loadState();
+  return state.syncLogs;
+}

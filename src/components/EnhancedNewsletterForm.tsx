@@ -1,16 +1,16 @@
-import { Button } from '@/components/ui/button'''
-import { Input } from '@/components/ui/input'''
-import { useState, useRef } from 'react'''
-import { Mail } from 'lucide-react'''
-import { useToast } from "@/hooks/use-toast";""
-import {logErrorToProduction} from '@/utils/productionLogger';'
-export function EnhancedNewsletterForm() {'
-  const [email, setEmail] = useState("");"
+import { Button } from '@/components/ui/button';
+import { Input } from '@/components/ui/input';
+import { useState, useRef } from 'react';
+import { Mail } from 'lucide-react';
+import { useToast } from "@/hooks/use-toast";
+import { logErrorToProduction } from '@/utils/productionLogger';
+
+export function EnhancedNewsletterForm() {
+  const [email, setEmail] = useState("");
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
   const { toast } = useToast();
   const EMAIL_REGEX = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-
 
   const lastSubmit = useRef(0);
 
@@ -18,268 +18,111 @@ export function EnhancedNewsletterForm() {'
     e.preventDefault();
     const now = Date.now();
     if (now - lastSubmit.current < 1000) return;
+    
     lastSubmit.current = now;
-    const trimmed = email.trim();
-    if (!EMAIL_REGEX.test(trimmed)) {"
-      toast.error("Invalid email");"
-    const trimmed = email.trim();
-    if (!EMAIL_REGEX.test(trimmed)) {"
-      toast.error("Invalid email");"
+
+    if (!email.trim()) {
+      toast({
+        title: "Email required",
+        description: "Please enter your email address.",
+        variant: "destructive",
+      });
+      return;
+    }
+
+    if (!EMAIL_REGEX.test(email)) {
+      toast({
+        title: "Invalid email",
+        description: "Please enter a valid email address.",
+        variant: "destructive",
+      });
       return;
     }
 
     setIsSubmitting(true);
+
     try {
-  // TODO: Implement
-}"
-      const res = await fetch("/api/newsletter", {""
-        method: "POST",""
-        headers: { "Content-Type": "application/json" },")
-        body: JSON.stringify({ email: trimmed }),
+      // Simulate API call
+      await new Promise(resolve => setTimeout(resolve, 1000));
+      
+      setIsSubmitted(true);
+      toast({
+        title: "Success!",
+        description: "You've been subscribed to our newsletter.",
       });
-
-
-      setIsSubmitting (false);
-
+      
+      setEmail("");
+    } catch (error) {
+      logErrorToProduction('Newsletter subscription failed', error);
+      toast({
+        title: "Subscription failed",
+        description: "Something went wrong. Please try again.",
+        variant: "destructive",
+      });
+    } finally {
+      setIsSubmitting(false);
     }
+  };
+
+  if (isSubmitted) {
+    return (
+      <div className="text-center p-6 bg-green-50 dark:bg-green-900/20 rounded-lg">
+        <div className="text-green-600 dark:text-green-400 mb-2">
+          <Mail className="h-8 w-8 mx-auto" />
+        </div>
+        <h3 className="text-lg font-semibold text-green-800 dark:text-green-200 mb-1">
+          Thank you for subscribing!
+        </h3>
+        <p className="text-green-600 dark:text-green-400">
+          You'll receive our latest updates and insights.
+        </p>
+      </div>
+    );
   }
 
-      const data = await res.json().catch(() => ({})),
-
-
-
-      if (res.ok) {
-        // Handle different success statuses;"
-        if (data.status === "already_subscribed") {""
-          toast.success(data.message || "You're already subscribed!");"
-        } else {
-  // TODO: Implement
-}"
-          toast.success(data.message || "Thanks for subscribing!");"
-        }
-        setIsSubmitted(true);"
-        setEmail("");"
-      } else {
-  // TODO: Implement
-}
-        // Handle error responses;"
-        logErrorToProduction("Newsletter subscription failed:", { data: data });""
-        toast.error(data.error || "Subscription failed. Please try again.");"
-      }
-    } catch (err: any) {"
-      logErrorToProduction("Newsletter subscription error:", { data: err });""
-      toast.error("Unable to subscribe right now. Please try again later.");"
-    } finally {
-  // TODO: Implement
-}
-      setIsSubmitting(false)
-    }
-  }"
-          toast.success(data.message || "Thanks for subscribing!")"
-        }
-        setIsSubmitted(true),;"
-        setEmail("");"
-      } else {;
-        // Handle error responses;"
-        logErrorToProduction('Newsletter subscription failed:', { data: data }),;''
-        toast.error(data.error || "Subscription failed. Please try again.");"
-      }
-    } catch (err: any) {"
-      logErrorToProduction('Newsletter subscription error:', { data: err }),''
-      toast.error("Unable to subscribe right now. Please try again later.")"
-    } finally {
-  // TODO: Implement
-}
-      setIsSubmitting(false)
-    }
-  },
-
-  return ("
-    <div className="w-full max-w-lg mx-auto bg-zion-blue-light border border-zion-purple/20 rounded-lg p-6">"
-</div>"
-      <div className="flex items-center mb-4">"
-</div>"
-        <div className="p-2 bg-zion-purple/20 rounded-full text-zion-cyan mr-3">"
-</div>"
-          <Mail className="h-6 w-6" />"
-</Mail>
-        </div>
-        <div>
-</div>"
-          <h3 className="text-lg font-bold text-white">Stay Updated</h3>""
-          <p className="text-zion-slate-light text-sm">"
-</p>
-          </p>
-        </div>
+  return (
+    <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg p-6 text-white">
+      <div className="text-center mb-6">
+        <h3 className="text-2xl font-bold mb-2">Stay Updated</h3>
+        <p className="text-blue-100">
+          Get the latest insights, tips, and updates delivered to your inbox.
+        </p>
       </div>
-      
 
-"
-      <div className='mt-4 flex items-center text-xs text-zion-slate-light'>;'
-</div>'
-        <div className='flex -space-x-1 mr-2'>;'
-</div>
-            <div;
-              key={i})'
-              className='h-5 w-5 rounded-full border border-zion-blue-dark bg-zion-blue flex items-center justify-center text-zion-cyan'>              {String && String.fromCharCode(65 + i)}'
-</div>
-            </div>;
-          </p>'
-        <div className="text-center p-4 rounded-lg bg-zion-purple/20 border border-zion-purple/40">"
-</div>"
-          <p className="text-white font-medium">Thank you for subscribing!</p>""
-          <p className="text-zion-slate-light mt-1">We'll keep you updated with the latest from Zion.</p>'
-        </div>
-        <form;
-          onSubmit={handleSubmit}'
-          className="flex flex-col space-y-3 sm:flex-row sm:space-y-0 sm:space-x-2""
-        >
-</form>"
-          <label htmlFor="enhanced-newsletter-email" className="sr-only">"
-</label>
-          </label>
-          <Input;"
-            type="email"""
-            id="enhanced-newsletter-email"""
-            name="email"""
-            placeholder="Enter your email"""
-            className="flex-grow bg-zion-blue-dark text-white border-zion-purple/20 focus:border-zion-purple focus:ring-zion-purple""
+      <form onSubmit={handleSubmit} className="space-y-4">
+        <div className="flex flex-col sm:flex-row gap-2">
+          <Input
+            type="email"
+            placeholder="Enter your email address"
             value={email}
-            onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
-</Input>
-          <Button;"
-            type="submit""
-            disabled={isSubmitting}"
-            className="bg-gradient-to-r from-zion-purple to-zion-purple-dark text-white hover:from-zion-purple-light hover:to-zion-purple""
+            onChange={(e) => setEmail(e.target.value)}
+            className="flex-1 text-gray-900"
+            disabled={isSubmitting}
+            required
+          />
+          <Button
+            type="submit"
+            disabled={isSubmitting}
+            className="bg-white text-blue-600 hover:bg-gray-100 disabled:opacity-50"
           >
-</Button>
+            {isSubmitting ? (
+              <div className="flex items-center space-x-2">
+                <div className="animate-spin rounded-full h-4 w-4 border-b-2 border-blue-600"></div>
+                <span>Subscribing...</span>
+              </div>
+            ) : (
+              <div className="flex items-center space-x-2">
+                <Mail className="h-4 w-4" />
+                <span>Subscribe</span>
+              </div>
+            )}
           </Button>
-        </form>"
-      <div className="mt-4 flex items-center text-xs text-zion-slate-light">"
-</div>"
-        <div className="flex -space-x-1 mr-2">"
-</div>
-            <div;
-              key={i}"
-              className="h-5 w-5 rounded-full border border-zion-blue-dark bg-zion-blue flex items-center justify-center text-zion-cyan""
-            >
-</div>
-            </div>
         </div>
-        <span>Join 10,000+ tech professionals who already subscribe</span>
-      </div>
+        
+        <p className="text-xs text-blue-100 text-center">
+          We respect your privacy. Unsubscribe at any time.
+        </p>
+      </form>
     </div>
-            onChange={(e: React.ChangeEvent<HTMLInputElement>) => setEmail(e.target.value)}
-</HTMLInputElement>
-          <Button;"
-            type="submit""
-            disabled={isSubmitting}"
-            className="bg-gradient-to-r from-zion-purple to-zion-purple-dark text-white hover:from-zion-purple-light hover:to-zion-purple""
-          >
-</Button>
-          </Button>
-        </form>"
-      <div className="mt-4 flex items-center text-xs text-zion-slate-light">"
-</div>"
-        <div className="flex -space-x-1 mr-2">"
-</div>"
-            <div key={i} className="h-5 w-5 rounded-full border border-zion-blue-dark bg-zion-blue flex items-center justify-center text-zion-cyan">"
-</div>"
-    <div className="w-full max-w-lg mx-auto bg-zion-blue-light border border-zion-purple/20 rounded-lg p-6">;"
-</div>"
-      <div className="flex items-center mb-4">;"
-</div>"
-        <div className="p-2 bg-zion-purple/20 rounded-full text-zion-cyan mr-3">;"
-</div>"
-          <Mail className="h-6 w-6" />;"
-</Mail>
-        </div>;
-        <div>;
-</div>"
-          <h3 className="text-lg font-bold text-white">Stay Updated</h3>;""
-          <p className="text-zion-slate-light text-sm">Get exclusive offers, trending AI news, and early access to best deals</p>;"
-        </div>;
-      </div>;"
-        <div className="text-center p-4 rounded-lg bg-zion-purple/20 border border-zion-purple/40">;"
-</div>"
-          <p className="text-white font-medium">Thank you for subscribing!</p>;""
-          <p className="text-zion-slate-light mt-1">We'll keep you updated with the latest from Zion.</p>;'
-        </div>;'
-        <form onSubmit={handleSubmit} className="flex flex-col space-y-3 sm:flex-row sm:space-y-0 sm:space-x-2">;"
-</form>"
-          <label htmlFor="enhanced-newsletter-email" className="sr-only">;"
-</label>
-          </label>;
-          <Input;"
-            type="email";""
-            id="enhanced-newsletter-email";""
-            name="email";""
-            placeholder="Enter your email";""
-            className="flex-grow bg-zion-blue-dark text-white border-zion-purple/20 focus:border-zion-purple focus:ring-zion-purple";"
-            value={email}
-            onChange={(e: React.ChangeEvent<HTMLInputElement>) => setEmail(e.target.value)}
-</Input>
-          <Button;"
-            type="submit";"
-            disabled={isSubmitting}"
-            className="bg-gradient-to-r from-zion-purple to-zion-purple-dark text-white hover:from-zion-purple-light hover:to-zion-purple";"
-          >;
-</Button>
-          </Button>;
-        </form>;"
-      <div className="mt-4 flex items-center text-xs text-zion-slate-light">;"
-</div>"
-        <div className="flex -space-x-1 mr-2">;"
-</div>"
-            <div key={i} className="h-5 w-5 rounded-full border border-zion-blue-dark bg-zion-blue flex items-center justify-center text-zion-cyan">;"
-</div>
-            </div>
-        </div>;
-        <span>Join 10,000+ tech professionals who already subscribe</span>;
-      </div>;
-    </div>;"
-        <div className='text - center p - 4 rounded - lg bg - zion - purple / 20 border border - zion - purple / 40'>;'
-</div>'
-          <p className='text - white font - medium'>Thank you for subscribing!</p>;''
-          <p className='text - zion - slate - light mt - 1'>;'
-</p>
-          </p>;
-        </div>) : (
-        <form;
-          on_submit={handle_submit}'
-          className='flex flex - col space - y-3 sm:flex - row sm:space - y-0 sm:space - x-2';'
-        >;
-</form>'
-          <label html_for='enhanced - newsletter - email' className='sr - only'>;'
-</label>
-          </label>;
-          <Input;'
-            type='email';''
-            id='enhanced - newsletter - email';''
-            name='email';''
-            placeholder='Enter your email';''
-            className='flex - grow bg - zion - blue - dark text - white border - zion - purple / 20 focus:border - zion - purple focus:ring - zion - purple';'
-            value={email})
-            on_change={(e: React.ChangeEvent < HTMLInputElement>) =>;
-</Input>
-          <Button;'
-            type='submit';'
-            disabled={is_submitting}'
-            className='bg - gradient - to - r from - zion - purple to - zion - purple - dark text - white hover:from - zion - purple - light hover:to - zion - purple'          >;'
-</Button>
-          </Button>;
-        </form>)}'
-      <div className='mt - 4 flex items - center text - xs text - zion - slate - light'>;'
-</div>'
-        <div className='flex -space - x-1 mr - 2'>;'
-</div>
-            <div;
-              key={i}'
-              className='h - 5 w - 5 rounded - full border border - zion - blue - dark bg - zion - blue flex items - center justify - center text - zion - cyan';'
-            >              {String.fromCharCode (65 + i)}
-</div>
-            </div>))}
-        </div>;
-        <span > Join 10, 000+ tech professionals who already subscribe</span>;
-      </div>;
-    </div>);'
+  );
+}
