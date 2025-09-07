@@ -2,90 +2,6 @@ export interface ComprehensiveITService {
   id: string;
   title: string;
   description: string;
-=======
-  id: string;
-  title: string;
-  description: string;
-  category: string;
-  subcategory: string;
-  description: string;
-  pricing: string;
-  price: number;
-  pricingModel: string;
-  features: string[];
-  benefits: string[];
-  targetAudience: string[];
-  tags: string[];
-  contactInfo: {
-    phone: string;
-    email: string;
-    website: string;
-    address: string;
-  };
-  technology: string[];
-  integrations: string[];
-  compliance: string[];
-  roi: string;
-  competitors: string[];
-  demoUrl?: string;
-  caseStudies?: string[];
-  websiteUrl?: string;
-  marketTrend: string;
-  industryFocus: string[];
-  scalability: string;
-  customizationLevel: string;
-  serviceLevel: string;
-}
-export const comprehensiveITServices2025: ComprehensiveITService[] = [
-=======
-export const COMPREHENSIVE_IT_SERVICES_2025: ComprehensiveITService[] = [
-  // Cloud Infrastructure & Migration Services
-  {
-    id: "cloud-infrastructure-migration-services",
-    title: "Cloud Infrastructure & Migration Services - Seamless Cloud Transformation",
-    description: "Comprehensive cloud infrastructure and migration services that help businesses transition to the cloud, optimize cloud performance, and manage multi-cloud environments for improved scalability and cost efficiency.",
-    category: "Cloud Services",
-    subcategory: "Infrastructure & Migration",
-    price: 2499,
-    currency: "$",
-    pricingModel: "monthly",
-    features: [
-      "Cloud strategy and planning",
-      "Infrastructure assessment and design",
-      "Multi-cloud migration services",
-      "Cloud cost optimization",
-      "Performance monitoring and optimization",
-      "Security and compliance implementation",
-      "Disaster recovery and backup",
-      "24/7 cloud infrastructure management",
-      "Scalability planning and implementation",
-      "Cloud governance and best practices"
-    ],
-    benefits: [
-      "Reduce infrastructure costs by 40%",
-      "Improve system scalability by 300%",
-      "Enhance disaster recovery capabilities",
-      "Increase operational efficiency by 50%",
-      "Enable global business expansion"
-    ],
-    useCases: [
-      "Legacy system modernization",
-      "Business expansion and scaling",
-      "Cost optimization initiatives",
-      "Disaster recovery planning",
-      "Global infrastructure deployment"
-    ],
-    targetAudience: [
-      "Enterprise IT leaders",
-      "Technology directors",
-      "Operations managers",
-      "Business owners",
-      "Digital transformation consultants"
-    ],
-    tags: ["Cloud Computing", "Infrastructure", "Migration", "AWS", "Azure", "Google Cloud"],
-    estimatedDelivery: "8-12 weeks",
-    supportLevel: "enterprise",
-    marketPrice: "$2,499 - $10,000/month",
     contactInfo: {
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
@@ -645,6 +561,8 @@ export const COMPREHENSIVE_IT_SERVICES_2025: ComprehensiveITService[] = [
     support: "Network automation expert support",
     certifications: ["Cisco", "Juniper", "VMware", "Network Automation"]
   },
+
+  // IT Consulting & Strategy Services
   {
     id: 7,
     name: "Digital Workplace Platform",
@@ -708,6 +626,8 @@ export const COMPREHENSIVE_IT_SERVICES_2025: ComprehensiveITService[] = [
     support: "Digital workplace expert support",
     certifications: ["Microsoft 365", "Google Workspace", "Change Management", "Digital Transformation"]
   },
+
+  // Managed IT Services
   {
     id: 8,
     name: "API Management Platform",
@@ -1473,7 +1393,6 @@ export const COMPREHENSIVE_IT_SERVICES_2025: ComprehensiveITService[] = [
   }
 ];
 export default COMPREHENSIVE_IT_SERVICES_2025;
-=======
   }
 ];
 export default COMPREHENSIVE_IT_SERVICES_2025;
