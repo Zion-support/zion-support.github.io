@@ -17,9 +17,39 @@ import {
   Star,
   CheckCircle,
   ArrowRight,
+  Star,
+  Award,
+  Globe,
+  Database,
+  Lock,
+  Cpu,
+  Network,
+  Smartphone,
+  BarChart3,
+  Code,
+  Server,
+  Chip,
+  Wifi,
+  ShieldCheck,
+  Bot,
+  GitFork,
+  Eye,
+  Sparkles,
   Phone,
   Mail,
   MapPin,
+  MessageSquare,
+  FileText,
+  Search,
+  Clock,
+  Atom,
+  Target,
+  Building,
+  Heart,
+  Activity,
+  Briefcase,
+  DollarSign,
+  ChevronRight,
   ExternalLink,
   Search,
   Filter,
@@ -43,7 +73,8 @@ import {
   ChevronDown,
   ChevronUp
 } from 'lucide-react';
-import { ULTIMATE_REAL_SERVICES_2025, ULTIMATE_SERVICE_CATEGORIES_2025, ULTIMATE_SERVICE_SUBCATEGORIES_2025, ULTIMATE_PRICING_TIERS_2025, ULTIMATE_CONTACT_INFO_2025, ULTIMATE_SERVICE_GUARANTEES_2025 } from '@/data/ultimateRealServices2025';
+import { allUltimateZionServices2025 } from '../data/ultimateZionServices2025';
+import { allUltimateZionPricing2025 } from '../data/ultimateZionPricingGuide2025';
 
 export default function UltimateServicesShowcase2025() {
   const [selectedCategory, setSelectedCategory] = useState('all');
@@ -51,7 +82,12 @@ export default function UltimateServicesShowcase2025() {
   const [priceRange, setPriceRange] = useState('all');
   const [sortBy, setSortBy] = useState('featured');
 
-  const categories = ['all', ...Object.keys(ULTIMATE_SERVICE_CATEGORIES_2025)];
+  const categories = [
+    { id: 'all', name: 'All Services', icon: Sparkles, color: 'from-purple-500 to-pink-500' },
+    { id: 'micro-saas', name: 'Micro SAAS', icon: Rocket, color: 'from-blue-500 to-cyan-500' },
+    { id: 'it-infrastructure', name: 'IT Infrastructure', icon: Server, color: 'from-green-500 to-emerald-500' },
+    { id: 'ai', name: 'AI Services', icon: Brain, color: 'from-orange-500 to-red-500' }
+  ];
 
   const filteredServices = ULTIMATE_REAL_SERVICES_2025.filter(service => {
     const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
