@@ -4,5 +4,5 @@ import App from './App';
 
 it('renders without crashing', () => {
   render(<App />);
-  expect(screen.getByText('Welcome to Zion Tech Group')).toBeInTheDocument();
+  expect(screen.getByText('Zion Tech Group')).toBeInTheDocument();
 });
