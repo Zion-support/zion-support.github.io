@@ -4,11 +4,6 @@ import React, { useState } from 'react';
 import { EnvelopeIcon, PhoneIcon, MapPinIcon, ArrowRightIcon, CheckCircleIcon } from '@heroicons/react/24/outline';
 import Link from 'next/link';
 
-export const metadata = {
-  title: 'Contact Us | Zion Tech Group',
-  description: 'Get in touch with Zion Tech Group for AI, Micro SaaS, and Enterprise IT solutions. We are here to help you transform your business.',
-  keywords: 'contact, support, AI services, micro SaaS, IT services, consulting'
-};
 
 export default function ContactPage() {
   const [formData, setFormData] = useState({
