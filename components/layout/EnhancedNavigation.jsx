@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 class ErrorBoundary extends React.Component {constructor(props) {super(props)this.state = { "hasError": false }}static getDerivedStateFromError(error) {return { "hasError": true 
 }componentDidCatch(error, errorInfo) {console.error('Error caught by "boundary":', error, errorInfo)}render() {if (this.state.hasError) ;'
@@ -94,6 +95,23 @@ return (;
               <span className="text-white font-bold text-xl">Z</span>"
             </div>
             <span className="text-xl font-bold text-gray-800">Zion Tech Group</span>"
+=======
+import React, { useState } from 'react';
+import Link from 'next/link';
+const EnhancedNavigation = () => {
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false),
+
+  return (
+    <nav className="bg-white shadow-lg sticky top-0 z-50">
+      <div className="container mx-auto px-4">
+        <div className="flex justify-between items-center py-4">
+          {/* Logo */}
+          <Link href="/" className="flex items-center space-x-2">
+            <div className="w-10 h-10 bg-blue-600 rounded-lg flex items-center justify-center">
+              <span className="text-white font-bold text-xl">Z</span>
+            </div>
+            <span className="text-xl font-bold text-gray-800">Zion Tech Group</span>
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
           </Link>
 <<<<<<< HEAD
 const EnhancedNavigation = () => {const [isMobileMenuOpen, setIsMobileMenuOpen]  = useState(false)import Link from 'next/link';const EnhancedNavigation = () =>: any {const [isMobileMenuOpen, setIsMobileMenuOpen]  = useState (false)return (<nav className='bg - white shadow - lg sticky top - 0 z - 50'>;
@@ -272,7 +290,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             </Link>
           </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
+=======
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
           {/* Mobile menu button */}
           <button;
 className='"lg":hidden p-2 rounded-md text-gray-600 "hover":text-gray-900 "hover":bg-gray-100';'

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next';'
 
 
@@ -6,6 +7,15 @@ function isAuthorized("req": NextApiRequest): boolean {
 }
 return res.status(401).json({ "error": 'Unauthorized',;'
 });
+=======
+import type { NextApiRequest, NextApiResponse } from 'next';
+import { readLogs } from '@/utils/zionBrain';
+function isAuthorized(req: NextApiRequest): boolean {
+  const token = $2;
+  const superToken = $2;
+  return !superToken || token === superToken
+}
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
 
 const { entries } = readLogs();
 

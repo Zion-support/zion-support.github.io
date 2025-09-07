@@ -1,4 +1,4 @@
-import { motion     } from 'framer-motion';"";
+import { motion     } from 'framer-motion';\"\";
 import { CheckCircle, TrendingUp, Users, DollarSign      } from 'lucide-react';
 import { motion      } from 'framer-motion';
 interface CaseStudy  {id: string title: string description: string industry: string results: { metric: string value: string icon: React.ReactNode;
@@ -127,4 +127,8 @@ export default function CaseStudies() {return (<section className='py-24 sm: py-
         </motion.div>;
       </div>;
     </section>;
+<<<<<<< HEAD:src_backup/components/CaseStudies.tsx
   )}
+=======
+  )}"
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91:temp-disabled/src/components/CaseStudies.tsx

@@ -1,9 +1,21 @@
+<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next';'
+=======
+import type { NextApiRequest, NextApiResponse } from 'next';
+import { authenticateRequest } from '@/utils/auth';
+import { createTenant, getTenants, rotateTenantApiKey, updateTenant } from '@/utils/tenant';
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  const method = (req.method || 'GET').toUpperCase($2);
+  if (method === 'GET') {
+    return res.status(200).json({ tenants: getTenants() })
+  }
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
 
 
 import { authenticateRequest } from '@/utils/auth';'
 import { createTenant, getTenants, rotateTenantApiKey, updateTenant } from '@/utils/tenant';'
 
+<<<<<<< HEAD
 export default function handler() {
   }
   const method = null;
@@ -231,4 +243,15 @@ return res.status(200).json({ "tenant": result });
   }
 return res.status(405).json({ "error": 'Method not allowed',;'
 });
+=======
+  if (method === 'PATCH') {
+    const { tenantId, rotateKey } = req.body || {},
+    if (!tenantId || !rotateKey) return res.status(400).json($2);
+    const result = rotateTenantApiKey($2);
+    if (!result) return res.status(404).json($2);
+    return res.status(200).json({ tenant: result})
+  }
+
+  return res.status(405).json({ error: 'Method not allowed' })
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
 }

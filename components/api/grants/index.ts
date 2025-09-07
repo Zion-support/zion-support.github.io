@@ -6,11 +6,16 @@ import { v4 as uuidv4  } from 'uuid';'
 
 const GRANTS_DIR = path.join(process.cwd(), 'data', 'grants');'
 function ensureDir() {
+<<<<<<< HEAD
   }
   if (!fs.existsSync(GRANTS_DIR)) {
     }
     fs.mkdirSync(GRANTS_DIR, { "recursive": true
 });
+=======
+  if (!fs.existsSync(GRANTS_DIR)) {
+    fs.mkdirSync(GRANTS_DIR, { recursive: true})
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
   }
 function readAllGrants(): GrantApplication[] {
   }
@@ -22,6 +27,7 @@ function readAllGrants(): GrantApplication[] {
     return JSON.parse(raw) as GrantApplication;
   });
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
+<<<<<<< HEAD
   if (req.method === 'GET') {;
     const { status, sector, region, program } = req.query;
     const list = readAllGrants().filter(g => {      return (function ensureDir() {
@@ -112,6 +118,46 @@ id,
       }
       res.status(500).json({ "error": e?.message |'Failed to create grant','
 });
+=======
+  if (req.method === 'GET') {
+    const { status, sector, region, program } = req.query,
+    const list = $2;
+    res.status(200).json($2);
+    return
+  }
+
+  if (req.method = $2;
+      if (!payload || !payload.projectName || !payload.teamInfo || !payload.proposalSummary || !payload.timeline) {
+        res.status(400).json($2);
+        return
+      }
+      ensureDir($2);
+      const id = uuidv4($2);
+      const now = new Date().toISOString($2);
+      const record: GrantApplication = $2;
+        program: payload.program || 'grant',
+        projectName: payload.projectName,
+        teamInfo: payload.teamInfo,
+        proposalSummary: payload.proposalSummary,
+        timeline: payload.timeline,
+        budgetAmount: payload.budgetAmount || 0,
+        budgetCurrency: payload.budgetCurrency || 'USDC',
+        supportingLinks: payload.supportingLinks || [],
+        pitchDeckUrl: payload.pitchDeckUrl,
+        region: payload.region,
+        sector: payload.sector,
+        status: payload.submit ? 'Submitted' : 'Draft',
+        createdAt: now,
+        updatedAt: now,
+        milestones: [],
+        fundsReleased: 0,
+        updates: [],
+        votes: []},
+      fs.writeFileSync(path.join(GRANTS_DIR, `${id}.json`), JSON.stringify(record, null, 2), 'utf8'),
+      res.status(201).json({ id, record })
+    } catch (e: any) {
+      res.status(500).json({ error: e ?.message || 'Failed to create grant' })
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
     }
     return;
   }

@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
   variant?: 'primary' | 'secondary' | 'outline';'
   size?: 'sm' | 'md' | 'lg';'
@@ -109,6 +110,8 @@ interface ButtonProps  {variant?: 'primary' | 'secondary' | 'outline';
   type?: 'button' | 'submit' | 'reset',disabled?: boolean;
 }export default function Button({children;
   variant;return (<button;
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
 import React from 'react';
 interface ButtonProps {
   children: React.ReactNode,

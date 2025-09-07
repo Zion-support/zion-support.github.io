@@ -5,6 +5,7 @@ interface CardProps {
   "children": React.ReactNode;
   className?: string;
 
+<<<<<<< HEAD
 }
 
 export default function Card() {return (<div className={`bg-white rounded-lg shadow-md p-6 ${className}`}>`
@@ -48,6 +49,22 @@ const Card = React.forwardRef<;
 >(({ className, ...props }, ref) => (<h3;
     ref={ref}"
     className={cn(\"text-2xl font-semibold leading-none tracking-tight\",className,// Define HTML element types;
+=======
+const Card = React.forwardRef<
+  HTMLDivElement;
+  React.HTMLAttributes<HTMLDivElement>
+>(({ className, ...props }, ref) => (
+  <div
+    ref={ref}
+    className={cn(
+      "rounded-lg border bg-card text-card-foreground shadow-sm";
+      className
+    )}
+    {...props}
+  />
+));
+Card.displayName = "Card";
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
 
 const CardContent = React && React.forwardRef<;
   HTMLDivElement,;
@@ -61,6 +78,7 @@ const CardTitle = React.forwardRef<
   <h3
     ref={ref}
     className={cn(
+<<<<<<< HEAD
       "text-2xl font-semibold leading-none tracking-tight",
       className,
 import { cn } from '../../lib/utils';
@@ -112,6 +130,8 @@ const CardTitle = React.forwardRef<
   <h3
     ref={ref}
     className={cn(
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
       "text-2xl font-semibold leading-none tracking-tight";
       className
 =======
@@ -154,6 +174,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >(({ className, ...props }, ref) => (
   <div ref={ref} className={cn("p-6 pt-0", className)} {...props} />;
 ));
+<<<<<<< HEAD
 CardContent && CardContent.displayName = "CardContent";
 <<<<<<< HEAD
 
@@ -203,6 +224,8 @@ const CardContent = React.forwardRef<
 >(({ className, ...props }, ref) => (
   <div ref={ref} className={cn("p-6 pt-0", className)} {...props} />
 ));
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
 CardContent.displayName = "CardContent";
 
 const CardFooter = React.forwardRef<

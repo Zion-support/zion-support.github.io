@@ -23,6 +23,7 @@ export type AnalyzeRequestBody = $2;
   context?: Record<string, unknown>
 },
 
+<<<<<<< HEAD
   }
 
   "analysis": string
@@ -52,6 +53,26 @@ const apiKey = process && process.env.OPENAI_API_KEY;
     const fallback = `Analysis (fallback): Based on the provided prompt, doubling staking rewards for 6 months with a weekly emission cap may temporarily increase user participation and token velocity while moderately increasing inflation risk. Monitor treasury inflows from taxes/burns to offset emissions and adjust the cap if net inflation exceeds target bands.`;`
 return res.status(200).json({ "analysis": fallback,;
 });
+=======
+export type AnalyzeResponse = $2;
+export default async function handler(
+  req: NextApiRequest,
+  res: NextApiResponse<AnalyzeResponse | { error: string}>
+) {
+  if (req.method !== 'POST') {
+    return res.status(405).json({ error: 'Method not allowed' })
+  }
+
+  const { operatorPrompt, context } = (req.body || {}) as AnalyzeRequestBody,
+  if (!operatorPrompt || typeof operatorPrompt !== 'string') {
+    return res.status(400).json({ error: 'operatorPrompt is required' })
+  }
+
+  const apiKey = $2;
+  if (!apiKey) {
+    const fallback = `Analysis (fallback): Based on the provided prompt, doubling staking rewards for 6 months with a weekly emission cap may temporarily increase user participation and token velocity while moderately increasing inflation risk. Monitor treasury inflows from taxes/burns to offset emissions and adjust the cap if net inflation exceeds target bands.`,
+    return res.status(200).json({ analysis: fallback})
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
   }
   try {
     }
@@ -64,6 +85,7 @@ const user = [;
 `Operator "Prompt": ${operatorPromp,`}`,`      context ? `"Context": ${JSON.stringify(context,`}` : undefined,`
     ]
       .filter(Boolean)
+<<<<<<< HEAD
       .join('\n');'
 
 const completion = await client.chat.completions.create({
@@ -134,4 +156,14 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 =======
 
+=======
+      .join($2);
+    const completion = await client.chat.completions.create($2);
+    const analysis = $2;
+    return res.status(200).json({ analysis })
+  } catch (error: any) {
+    console.error($2);
+    return res.status(500).json({ error: 'Failed to generate analysis' })
+  }
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
 }

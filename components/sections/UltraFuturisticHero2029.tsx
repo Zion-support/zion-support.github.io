@@ -168,6 +168,7 @@ quantum space mining, we're building tomorrow's solutions today.'
           </p>
         </motion.div>
 <<<<<<< HEAD
+<<<<<<< HEAD
       <div className='relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>;
         {/* Main Heading */}<motion.div;
           initial={{ opacity: 0, y: 30 }}
@@ -319,6 +320,10 @@ className='mb-8';
 
         {/* CTA Buttons */}
 <<<<<<< HEAD
+=======
+
+        {/* CTA Buttons */}
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
         <motion.div
           initial={{ opacity: 0, y: 30}}
           animate={{ opacity: 1, y: 0}}
@@ -619,6 +624,7 @@ className='w-1 h-3 bg-cyan-400 rounded-full mt-2'' />
         </motion.div>
       </div>
 
+<<<<<<< HEAD
 
 
 
@@ -706,6 +712,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     </section>)}}/>;
     </section>;
   )
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
       {/* Floating Elements */}
       <motion.div
         animate={{ rotate: 360}}

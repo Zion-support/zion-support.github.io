@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import React from "react";
 import Image from "next/image";
@@ -78,11 +79,15 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
 >>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
   return (
+=======
+return (
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
     <Image
       src={src}
       alt={alt}
       width={width}
       height={height}
+<<<<<<< HEAD
       className={className}
       priority={priority}
 <<<<<<< HEAD
@@ -113,3 +118,5 @@ export default OptimizedImage
 export default OptimizedImage;
 >>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91

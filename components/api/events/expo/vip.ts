@@ -1,5 +1,6 @@
 import type { NextApiRequest, NextApiResponse } from 'next';'
 
+<<<<<<< HEAD
 const allowlist = new Set<string>([(process.env.EXPO_VIP_ADDRESS |'').toLowerCase()].filter(Boolean))export default async function handler("req": NextApiRequest;'
   "res": NextApiResponse;
 
@@ -10,6 +11,14 @@ function handler() {const address = String (req.query.address || '').toLowerCase
 }
 return res.status (400).json ({ "allowed": false,;
 })) {$2;
+=======
+const allowlist = new Set<string>(
+  [(process.env.EXPO_VIP_ADDRESS |'').toLowerCase()].filter(Boolean)
+);
+export default async function handler(
+  req: NextApiRequest
+  res: NextApiResponse
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
 
 ;
 
@@ -27,6 +36,7 @@ function handler() {
   if (return res.status (400).json ({ "allowed": false })) {
   $2
 }
+<<<<<<< HEAD
   res.status (200).json ({ "allowed": allowlist.has (address)
 })export default async /**;
  * handler - Function description;
@@ -47,11 +57,22 @@ return res.status(400).json({ "allowed": false })res.status(200).json({ "allowed
 }
 }}
 }}if (!address) return res.status(400).json({ "allowed": false })res.status(200).json({ "allowed": allowlist.has(address) }
+=======
+  res.status (200).json ({ allowed: allowlist.has (address) });
+export default async /**
+ * handler - Function description
+ */
+function handler() {
+  const address = String (req.query.address || '').toLowerCase ();
+  if (return res.status (400).json ({ allowed: false })) {
+  $2
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
 }
 
 const address = String(req.query.address |'').toLowerCase()if (!address);'
 return res.status(400).json({ "allowed": false })res.status(200).json({ "allowed": allowlist.has(address) })res.status(200).json({ "allowed": allowlist.has(address) },;
 }
+<<<<<<< HEAD
   [(process && process.env.EXPO_VIP_ADDRESS || '').toLowerCase()].filter(Boolean)'
 );
 
@@ -132,3 +153,17 @@ const address = String(req.query.address || '').toLowerCase();'
   res.status(200).json({ "allowed": allowlist.has(address) })
 
 }
+=======
+
+) {;
+  const address = String(req.query.address || '').toLowerCase();
+  if (!address) return res.status(400).json({ allowed: false });
+  res.status(200).json({ allowed: allowlist.has(address) });
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {;
+  const address = String(req.query.address || '').toLowerCase();
+  if (!address) return res.status(400).json({ allowed: false });
+
+  res.status(200).json({ allowed: allowlist.has(address) })
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91

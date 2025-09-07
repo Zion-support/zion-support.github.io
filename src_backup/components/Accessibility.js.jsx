@@ -1,4 +1,12 @@
+<<<<<<< HEAD:src_backup/components/Accessibility.js.jsx
  const AccessibilityContext = createContext (null)  export const useAccessibility = () => { const context = useContext (AccessibilityContext)  if (!context) { throw new Error (' 'useAccessibility must be used within an AccessibilityProvider')  } return context }';'';import React, { useState, useEffect, createContext, useContext } from 'react''';
+=======
+const AccessibilityContext = createContext (null)  export const useAccessibility = (;) => {
+  return $3;}
+}
+  const context = useContext (AccessibilityContext)  if (!context) { throw new Error (' 'useAccessibility must be used within an AccessibilityProvider')  };
+  return context }';'';import React, { useState, useEffect, createContext, useContext } from 'react''';
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91:temp-disabled/src/components/Accessibility.js.jsx
 import { motion, AnimatePresence  } from 'framer-motion';
 import { Eye, EyeOff, Volume2, VolumeX, Keyboard, Accessibility, X  } from 'lucide-react';
 const AccessibilityContext = createContext(null)export const useAccessibility = () => {}
@@ -115,8 +123,15 @@ export const AccessibilityPanel = () => {}
       <AnimatePresence>;
         {isOpen && (<motion.div;
             initial={{ opacity: 0 }}
+<<<<<<< HEAD:src_backup/components/Accessibility.js.jsx
             animate={{ opacity: 1 }}'''';
             exit={{ opacity: 0 }}'''';
+=======
+            animate={{ opacity: 1 ,}
+}'''';
+            exit={{ opacity: 0 ,}
+}'''';
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91:temp-disabled/src/components/Accessibility.js.jsx
             className='fixed inset-0 bg-black/50 backdrop-blur-sm z-50 flex items-center justify-center p-4''';
             onClick={() => setIsOpen(false)}
           >;
@@ -330,4 +345,4 @@ export const useFocusTrap = isActive => {}
 export const SrOnly = ({ children }) => ('''';
   <span className='sr-only'>{children}</span>;
 )export default AccessibilityPanel'';'';
-'''''"'";
+'''''\"'\";

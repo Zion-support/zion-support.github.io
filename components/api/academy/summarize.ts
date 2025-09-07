@@ -1,6 +1,7 @@
 import type { NextApiRequest, NextApiResponse } from 'next';'
 import OpenAI from 'openai';'
 
+<<<<<<< HEAD
 export default async function handler() {
   }
   if (req.method !== 'POST')'
@@ -39,6 +40,16 @@ const completion = await client.chat.completions.create({
 const text = completion.choices?.[0]?.message?.content ?? '';'
 return res.status (200).json ({ "summary": text.trim (),;
 });
+=======
+  if (!apiKey) return fallback($2);
+  try {
+    const client = new OpenAI($2);
+    const prompt = `Summarize the following module for a founder preparing to deploy a Zion instance. Provide a concise, actionable summary with 4-6 bullet points.\n\nTitle: ${moduleTitle}\nContent:\n${moduleContent}`,
+
+    const completion = await client.chat.completions.create($2);
+    const text = $2;
+    return res.status(200).json({ summary: text.trim() })
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
   } catch (err) {
   }
 

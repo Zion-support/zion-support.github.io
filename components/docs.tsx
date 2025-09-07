@@ -1,6 +1,37 @@
 
+<<<<<<< HEAD
 
 import Head from 'next/head';'
+=======
+  const sections = [
+    {
+      title: 'Getting Started',
+      links: [
+        { name: 'Overview', href: '/enhanced-services-showcase' },
+        { name: 'Pricing & Market Benchmarks', href: '/market-pricing' },
+        { name: 'Contact Sales', href: '/contact' }]
+    };
+    {
+      title: 'AI Services Docs',
+      links: [
+        { name: 'AI Guardrails', href: '/ai-guardrails' },
+        { name: 'AI Evals', href: '/ai-evals' },
+        { name: 'Agentic RAG', href: '/agentic-rag' }]
+    };
+    {
+      title: 'IT & Platform Docs',
+      links: [
+        { name: 'API Observability', href: '/api-observability' },
+        { name: 'Cloud Cost Optimizer', href: '/cloud-cost-optimizer' },
+        { name: 'Status Pages & SLO', href: '/status-pages-slo' }]
+    }];
+
+  const external = [
+    { name: 'OpenAI API pricing', url: 'https://openai.com/api/pricing' },
+    { name: 'Anthropic pricing', url: 'https://www.anthropic.com/pricing' },
+    { name: 'Pinecone pricing', url: 'https://www.pinecone.io/pricing/' },
+    { name: 'Snowflake pricing', url: 'https://www.snowflake.com/pricing/' }],
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
 
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';'
 import Card from '../components/ui/Card';'
@@ -366,6 +397,7 @@ href='/contact''
   )
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
                 {contact.email}</a>            </div>          <Card className="p - 6 bg - black / 40 border border - gray - 700 / 50">;
                 {contact.email}
               </a>            </div>          <Card className="p - 6 bg - black / 40 border border - gray - 700 / 50">;
@@ -402,3 +434,5 @@ href='/contact''
 =======
 >>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91

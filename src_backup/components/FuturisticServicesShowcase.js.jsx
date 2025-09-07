@@ -1,8 +1,19 @@
 import React, { useState, useEffect } from 'react''';
 import { motion, AnimatePresence  } from 'framer-motion';
 import { ADVANCED_MICRO_SERVICES  } from '../data/advancedMicroServices.jsx';
+<<<<<<< HEAD:src_backup/components/FuturisticServicesShowcase.js.jsx
 const ServiceCard = ({ service, index, isVisible }) => {    const [isHovered, setIsHovered] = useState(false)return (<motion.div initial = {}
   { opacity: 0, y: 50, scale: 0.9;
+=======
+
+const ServiceCard = (
+
+   ;) => {
+  return $3;}
+}
+  const [isHovered, setIsHovered] = useState(false)return (<motion.div initial = {}
+  { opacity: 0, y: 50, scale: 0.9;}
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91:temp-disabled/src/components/FuturisticServicesShowcase.js.jsx
 }} animate = {}
   isVisible ? { opacity: 1, y: 0, scale: 1;
 } : {}} transition = {}
@@ -166,11 +177,20 @@ export const FuturisticServicesShowcase = () => {}
         <motion.div initial = {}
   { opacity: 0, y: -50;
 }} animate = {}
+<<<<<<< HEAD:src_backup/components/FuturisticServicesShowcase.js.jsx
   { opacity: 1, y: 0 '''';
 '''';
 }} transition={{ duration: 0.8 }} className='text-center mb-16'>'''';
           <h1 className='text-5xl lg:text-7xl font-bold mb-6'>'''';
             <span className='bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400 bg-clip-text text-transparent'>;
+=======
+  { opacity: 1, y: 0 '''';}
+'''';}
+}} transition={{ duration: 0.8 ,}
+} className='text-center mb-16' />'''';
+          <h1 className='text-5xl lg:text-7xl font-bold mb-6' />'''';
+            <span className='bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400 bg-clip-text text-transparent' />;
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91:temp-disabled/src/components/FuturisticServicesShowcase.js.jsx
               Advanced Micro SAAS;
             </span>'''';
           </h1>'''';
@@ -231,6 +251,14 @@ export const FuturisticServicesShowcase = () => {}
             </div>;
           </div>;
         </motion.div>;
+<<<<<<< HEAD:src_backup/components/FuturisticServicesShowcase.js.jsx
       </div>;
     </div>)}''`;
 ''`'"`'";
+=======
+      </div>
+    </div>
+  );
+}''`;
+''`'\"`'\";
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91:temp-disabled/src/components/FuturisticServicesShowcase.js.jsx

@@ -1,4 +1,8 @@
+<<<<<<< HEAD:src/components/ExpensiveComponent.js.jsx
  export default function ExpensiveComponent() { const [data, setData] = useState ([])  const [loading, setLoading] = useState (true)  useEffect ( () => {'';import React, { useState, useEffect } from 'react';'
+=======
+export default function ExpensiveComponent () { const [data, setData] = useState ([])  const [loading, setLoading] = useState (true)  useEffect ( () => {'';import React, { useState, useEffect } from 'react';
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91:temp-disabled/src/components/ExpensiveComponent.js.jsx
 
 const [data, setData] = useState([]);
   const [loading, setLoading] = useState(true)useEffect(() => {
@@ -7,7 +11,11 @@ const [data, setData] = useState([]);
 
 const timer = setTimeout(() => {}
 ;
+<<<<<<< HEAD:src/components/ExpensiveComponent.js.jsx
 const expensiveData = Array.from(){ "length": 10000,;
+=======
+  const expensiveData = Array.from(){ length: 10000,}
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91:temp-disabled/src/components/ExpensiveComponent.js.jsx
 }, (_, i) => Math.sqrt(i) * Math.PI * Math.random())setData(expensiveData)setLoading(false)}, 2000)return () => clearTimeout(timer)}, [])if(loading) {}
    ;
   return()<div className='text-center p-8'>'''';'

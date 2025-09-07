@@ -809,6 +809,7 @@ className='absolute inset-0 bg-gradient-to-br from-black via-cyan-900/20 to-purp
             'linear-gradient(45deg, rgba(0,0,0,1) 0%, rgba(6,182,212,0.2) 50%, rgba(139,92,246,0.3) 100%)linear-gradient(45deg, rgba(0,0,0,1) 0%, rgba(139,92,246,0.3) 50%, rgba(6,182,212,0.2) 100%)linear-gradient(45deg, rgba(0,0,0,1) 0%, rgba(6,182,212,0.2) 50%, rgba(139,92,246,0.3) 100%)'
           ]
         }}
+<<<<<<< HEAD
       {/* Canvas for particle effects *
 }
       <canvas;
@@ -909,6 +910,16 @@ className='absolute inset-0 bg-gradient-to-br from-black via-cyan-900/20 to-purp
         }} />;
 {/* Canvas for particle effects */}
       <canvas;
+=======
+        transition = $2;
+          repeat: Infinity,
+          ease: 'easeInOut'
+        }}
+      />
+      
+      {/* Canvas for particle effects */}
+      <canvas
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
         ref={canvasRef}
         className='absolute inset-0 w-full h-full';'
         style={{ "filter": 'blur(0.5px)' ,'

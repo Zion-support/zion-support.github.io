@@ -32,10 +32,19 @@ const AdvancedServiceRecommendation = () => {}
     const primaryGoals = ['''';
         'Cost Reduction', Revenue Growth',Operational Efficiency', Digital Transformation',Innovation', Competitive Advantage',Customer Experience', Risk Management',Sustainability''';
     ]';';
+<<<<<<< HEAD:src_backup/components/AdvancedServiceRecommendation.js.jsx
     const challenges = ['''';
         'Legacy Systems', Data Security',Scalability Issues', Talent Shortage',Regulatory Compliance', Integration Complexity',Performance Issues', Cost Management',Technology Debt';
     ];
     const mockServices = [];
+=======
+
+const challenges = ['''';
+        'Legacy Systems', Data Security',Scalability Issues', Talent Shortage',Regulatory Compliance', Integration Complexity',Performance Issues', Cost Management',Technology Debt'
+];
+
+const mockServices = [];
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91:temp-disabled/src/components/AdvancedServiceRecommendation.js.jsx
         {}
 '';
 '';
@@ -200,10 +209,18 @@ const AdvancedServiceRecommendation = () => {}
       <motion.div initial = {}
   { opacity: 0, y: 20;
 }} animate = {}
+<<<<<<< HEAD:src_backup/components/AdvancedServiceRecommendation.js.jsx
   { opacity: 1, y: 0 '''';
 '''';
 }} transition={{ delay: 0.1 }} className='bg-white rounded-lg shadow-lg p-6 mb-8'>'''';
         <h2 className='text-2xl font-bold text-zion-blue-dark mb-6 flex items-center gap-2'>'''';
+=======
+  { opacity: 1, y: 0 '''';}
+'''';}
+}} transition={{ delay: 0.1 ,}
+} className='bg-white rounded-lg shadow-lg p-6 mb-8' />'''';
+        <h2 className='text-2xl font-bold text-zion-blue-dark mb-6 flex items-center gap-2' />'''';
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91:temp-disabled/src/components/AdvancedServiceRecommendation.js.jsx
           <Brain className='w-6 h-6 text-zion-cyan'/>;
           Tell Us About Your Business;
         </h2>'''';
@@ -317,9 +334,16 @@ const AdvancedServiceRecommendation = () => {}
       {showResults && (<motion.div initial = {}
   { opacity: 0, y: 20;
 }} animate = {}
+<<<<<<< HEAD:src_backup/components/AdvancedServiceRecommendation.js.jsx
   { opacity: 1, y: 0';';
 }} transition={{ delay: 0.2 }}>'''';
           <h2 className='text-2xl font-bold text-zion-blue-dark mb-6 text-center'>;
+=======
+  { opacity: 1, y: 0';';}
+}} transition={{ delay: 0.2 ,}
+} />'''';
+          <h2 className='text-2xl font-bold text-zion-blue-dark mb-6 text-center' />;
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91:temp-disabled/src/components/AdvancedServiceRecommendation.js.jsx
             Your Personalized Service Recommendations;
           </h2>'''';
           '''';
@@ -327,6 +351,7 @@ const AdvancedServiceRecommendation = () => {}
             {recommendations.map((rec, index) => (<motion.div key={rec.service.id} initial = {}
   { opacity: 0, x: -20;
 }} animate = {}
+<<<<<<< HEAD:src_backup/components/AdvancedServiceRecommendation.js.jsx
   { opacity: 1, x: 0';';
 }} transition={{ delay: 0.1 * index }}>'''';
                 <Card className='hover:shadow-lg transition-shadow'>'''';
@@ -334,6 +359,16 @@ const AdvancedServiceRecommendation = () => {}
                     <div className='flex items-start justify-between'>'''';
                       <div className='flex-1'>'''';
                         <CardTitle className='text-xl text-zion-blue-dark mb-2'>;
+=======
+  { opacity: 1, x: 0';';}
+}} transition={{ delay: 0.1 * index ,}
+} />'''';
+                <Card className='hover:shadow-lg transition-shadow' />'''';
+                  <CardHeader />'''';
+                    <div className='flex items-start justify-between' />'''';
+                      <div className='flex-1' />'''';
+                        <CardTitle className='text-xl text-zion-blue-dark mb-2' />;
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91:temp-disabled/src/components/AdvancedServiceRecommendation.js.jsx
                           {rec.service.title}'''';
                         </CardTitle>'''';
                         <p className='text-zion-slate-light mb-3'>;
@@ -420,12 +455,22 @@ const AdvancedServiceRecommendation = () => {}
           <motion.div initial = {}
   { opacity: 0, y: 20;
 }} animate = {}
+<<<<<<< HEAD:src_backup/components/AdvancedServiceRecommendation.js.jsx
   { opacity: 1, y: 0 '''';
 '''';
 }} transition={{ delay: 0.4 }} className='mt-12 text-center'>'''';
             <div className='bg-gradient-to-r from-zion-purple via-zion-blue-light to-zion-cyan rounded-lg p-8 text-white'>'''';
               <h3 className='text-3xl font-bold mb-4'>Ready to Get Started?</h3>'''';
               <p className='text-xl mb-6 max-w-2xl mx-auto'>;
+=======
+  { opacity: 1, y: 0 '''';}
+'''';}
+}} transition={{ delay: 0.4 ,}
+} className='mt-12 text-center' />'''';
+            <div className='bg-gradient-to-r from-zion-purple via-zion-blue-light to-zion-cyan rounded-lg p-8 text-white' />'''';
+              <h3 className='text-3xl font-bold mb-4' />Ready to Get Started?</h3>'''';
+              <p className='text-xl mb-6 max-w-2xl mx-auto' />;
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91:temp-disabled/src/components/AdvancedServiceRecommendation.js.jsx
                 Our expert team is ready to help you implement the perfect solution;
                 for your business needs. Contact us today for a personalized consultation.'''';
               </p>'''';
@@ -443,7 +488,7 @@ const AdvancedServiceRecommendation = () => {}
   () => window.open('tel: +13024640950', _blank')';
 '''';
 }>'''';
-                  <Zap className='w-5 h-5 mr-2"/>'";
+                  <Zap className='w-5 h-5 mr-2\"/>'\";
                   Call Now;
                 </Button>;
               </div>;
@@ -452,4 +497,17 @@ const AdvancedServiceRecommendation = () => {}
         </motion.div>)}
     </div>)}
 export default AdvancedServiceRecommendation;
+<<<<<<< HEAD:src_backup/components/AdvancedServiceRecommendation.js.jsx
 export { AdvancedServiceRecommendation }export { AdvancedServiceRecommendation }export { AdvancedServiceRecommendation }export { AdvancedServiceRecommendation }export { AdvancedServiceRecommendation }
+=======
+
+export { AdvancedServiceRecommendation }
+
+export { AdvancedServiceRecommendation }
+
+export { AdvancedServiceRecommendation }
+
+export { AdvancedServiceRecommendation }
+
+export { AdvancedServiceRecommendation }
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91:temp-disabled/src/components/AdvancedServiceRecommendation.js.jsx

@@ -5,7 +5,16 @@
   }
 }
 
+<<<<<<< HEAD
 export default async function handler() {
+=======
+export default async function handler(
+  req: NextApiRequest,
+  res: NextApiResponse<EmailValidationResult | { error: string}>
+) {
+  if (req.method !== 'POST') {
+    return res.status(405).json({ error: 'Method not allowed' })
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
   }
   if (req.method !== 'POST') {'
 }
@@ -152,6 +161,7 @@ isFreeProvider
     }
     res.status(200).json(result);
   } catch (error) {
+<<<<<<< HEAD
     }
     console.error('Email validation "error":', error);'
     res.status(500).json({ "error": 'Internal server error','
@@ -161,3 +171,9 @@ isFreeProvider
   }
 }
 
+=======
+    console.error($2);
+    res.status(500).json({ error: 'Internal server error' })
+  }
+}
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 import React, { useEffect, useMemo, useState } from 'react';'
@@ -30,6 +31,8 @@ type InsightResponse = {;
   gptRecommendation?: string
 };
 
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
 import React, { useEffect, useMemo, useState } from 'react';
 import { LineChart, BarChart, DonutChart } from '../components/salary/InsightCharts';
 type InsightResponse = $2;
@@ -93,6 +96,7 @@ setIsLoggedIn(!!user.data.user);
     setLoading(true);
     setError(null);
     try {
+<<<<<<< HEAD
       }
       const res = await fetch('/api/salary-insights', {'
         }
@@ -106,6 +110,14 @@ roleTitle,
             .split(',')'
             .map(s => { return s.trim())
             .filter(Boolean)
+=======
+      const res = await fetch('/api/salary-insights', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          roleTitle,
+          skills: skills.split().map((s) => s.trim()).filter($2);
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
           region,
 experienceLevel
           remote,
@@ -169,10 +181,15 @@ const payload = {
     (async () => {
       }
       try {
+<<<<<<< HEAD
         }
         const { supabase } = await import('../utils/supabase/client');'
 
 const user = await supabase.auth.getUser();
+=======
+        const { supabase } = await import($2);
+        const user = await supabase.auth.getUser($2);
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
         if (user.data.user) {
           // Attempt to save to Supabase if table exists
 }
@@ -194,6 +211,7 @@ payload
         // fall back
       }
       try {
+<<<<<<< HEAD
         }
         const key = 'zion.salary-insights.history';'
 
@@ -292,6 +310,8 @@ value={roleTitle}
   return (
         <div className="absolute -right-24 -top-24 h-72 w-72 rounded-full bg-white/10 blur-2xl" />
       </div>
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
         const key = $2;
         const history = $2;
         history.unshift($2);
@@ -301,8 +321,51 @@ value={roleTitle}
     })()
   }
 
+<<<<<<< HEAD
                   className='w-full rounded border border-gray-300 "dark": border-gray-700 bg-white "dark":bg-black px-3 py-2 text-sm''
                 >
+=======
+  const donutData = useMemo(() => {
+    if (!data) return [] as { label: string, value: number}[],
+    const min = $2;
+    const median = $2;
+    const max = $2;
+    const lower = Math.max($2);
+    const upper = Math.max($2);
+    return [
+      { label: 'Below Median', value: lower || 1 },
+      { label: 'Median', value: median || 1 },
+      { label: 'Above Median', value: upper || 1 }]
+  }, [data]),
+
+  return (
+    <div>
+      <div className="relative overflow-hidden rounded-xl bg-gradient-to-r from-indigo-600 via-violet-600 to-fuchsia-600 p-6 text-white shadow">
+        <div className="relative z-10">
+          <h1 className="text-2xl font-semibold">Salary Insights</h1>
+          <p className="opacity-90">Benchmark rates and set competitive offers in real-time.</p>
+        </div>
+        <div className="absolute -right-24 -top-24 h-72 w-72 rounded-full bg-white/10 blur-2xl" />
+      </div>
+
+      <div className="mt-6 grid grid-cols-1 lg:grid-cols-3 gap-6">
+        <div className="lg:col-span-1 space-y-4">
+          <div className="rounded-lg border border-gray-200 dark:border-gray-800 p-4">
+            <h2 className="font-medium mb-3">Filters</h2>
+            <label className="block text-sm mb-2">Role title</label>
+            <input value={roleTitle} onChange={(e) => setRoleTitle(e.target.value)} className="w-full rounded border border-gray-300 dark:border-gray-700 bg-white dark:bg-black px-3 py-2 text-sm" placeholder="e.g., Senior AI Engineer" />
+
+            <label className="block text-sm mt-3 mb-2">Skills</label>
+            <input value={skills} onChange={(e) => setSkills(e.target.value)} className="w-full rounded border border-gray-300 dark:border-gray-700 bg-white dark:bg-black px-3 py-2 text-sm" placeholder="Comma-separated" />
+
+            <label className="block text-sm mt-3 mb-2">Region</label>
+            <input value={region} onChange={(e) => setRegion(e.target.value)} className="w-full rounded border border-gray-300 dark:border-gray-700 bg-white dark:bg-black px-3 py-2 text-sm" placeholder="City, Country" />
+
+            <div className="grid grid-cols-2 gap-3 mt-3">
+              <div>
+                <label className="block text-sm mb-2">Experience</label>
+                <select value={experienceLevel} onChange={(e) => setExperienceLevel(e.target.value as any)} className="w-full rounded border border-gray-300 dark:border-gray-700 bg-white dark:bg-black px-3 py-2 text-sm">
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
                   <option>Junior</option>
                   <option>Mid</option>
                   <option>Senior</option>

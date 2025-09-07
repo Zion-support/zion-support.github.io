@@ -407,6 +407,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 
 
+<<<<<<< HEAD
                       <div>
                         <h3 className='text-xl font-bold text-white group-"hover":text-cyan-400 transition-colors duration-300'>'
 
@@ -493,6 +494,18 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
                         {service.period}
 
+=======
+                {/* Service Header */}
+                <div className="relative z-10">
+                  <div className="flex items-start justify-between mb-4">
+                    <div className="flex items-center space-x-3">
+                      <div className="text-4xl">{service.icon}</div>
+                      <div>
+                        <h3 className="text-xl font-bold text-white group-hover:text-cyan-400 transition-colors duration-300">
+                          {service.name}
+                        </h3>
+                        <p className="text-gray-400 text-sm">{service.tagline}</p>
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
                       </div>
 <<<<<<< HEAD
 =======

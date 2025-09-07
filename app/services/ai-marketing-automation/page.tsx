@@ -1,3 +1,5 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';'
 import Link from 'next/link';'
 import { ArrowRightIcon } from '@heroicons/react/24/outline';'
@@ -30,6 +32,16 @@ export const metadata = {
   "description": 'Professional AI marketing automation services for your business needs.','
   "keywords": 'ai-marketing-automation, services, business, technology''
 };
+=======
+import React from 'react'
+import { Metadata } from 'next'
+
+export const metadata: Metadata = {
+  title: 'Ai Marketing Automation | Zion Tech Group',
+  description: 'Professional ai marketing automation services for your business needs.',
+  keywords: 'ai marketing automation, services, business, technology'
+}
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
 
 function PricingCard({ name, price, period, description, features, popular }: {
   name: string;
@@ -40,12 +52,24 @@ function PricingCard({ name, price, period, description, features, popular }: {
   popular: boolean;
 }) {
   return (
+<<<<<<< HEAD
     <div className={`relative p-8 rounded-lg border-2 ${popular ? 'border-blue-500 bg-blue-50' : 'border-gray-200 bg-white'} shadow-lg`}>
       {popular && (
         <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
           <span className="bg-blue-500 text-white px-4 py-1 rounded-full text-sm font-semibold">
             Most Popular
           </span>
+=======
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+      <div className="container mx-auto px-4 py-16">
+        <div className="text-center mb-16">
+          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+            Ai Marketing Automation
+          </h1>
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            Professional ai marketing automation services for your business needs.
+          </p>
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
         </div>
       )}
 
@@ -110,6 +134,7 @@ function CaseStudy({ company, industry, result, description, metrics }: {
         </div>
       </div>
     </div>
+<<<<<<< HEAD
   );
 }
 
@@ -233,6 +258,73 @@ href=""mailto":kleber@ziontechgroup.com?subject=AI Marketing Automation - {name}
         }`}`      >
         Get Started
       </a>
+=======
+import React from 'react';
+
+export const metadata = {
+  title: 'Ai Marketing Automation | Zion Tech Group',
+  description: 'Professional ai marketing automation solutions for modern businesses. Transform your operations with our advanced ai marketing automation technology.'
+};
+
+export default function ServicePage() {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100">
+      <div className="container mx-auto px-4 py-16">
+        <div className="text-center mb-16">
+          <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
+            Ai Marketing Automation
+          </h1>
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            Professional ai marketing automation solutions for modern businesses. Transform your operations with our advanced ai marketing automation technology.
+          </p>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+          <div className="bg-white rounded-xl p-8 shadow-lg">
+            <h3 className="text-2xl font-bold text-gray-900 mb-4">Feature 1</h3>
+            <ul className="space-y-2 text-gray-600">
+              <li>• Feature 1.1</li>
+              <li>• Feature 1.2</li>
+              <li>• Feature 1.3</li>
+              <li>• Feature 1.4</li>
+            </ul>
+          </div>
+
+          <div className="bg-white rounded-xl p-8 shadow-lg">
+            <h3 className="text-2xl font-bold text-gray-900 mb-4">Feature 2</h3>
+            <ul className="space-y-2 text-gray-600">
+              <li>• Feature 2.1</li>
+              <li>• Feature 2.2</li>
+              <li>• Feature 2.3</li>
+              <li>• Feature 2.4</li>
+            </ul>
+          </div>
+
+          <div className="bg-white rounded-xl p-8 shadow-lg">
+            <h3 className="text-2xl font-bold text-gray-900 mb-4">Feature 3</h3>
+            <ul className="space-y-2 text-gray-600">
+              <li>• Feature 3.1</li>
+              <li>• Feature 3.2</li>
+              <li>• Feature 3.3</li>
+              <li>• Feature 3.4</li>
+            </ul>
+          </div>
+        </div>
+
+        <div className="bg-blue-50 rounded-2xl p-8 text-center">
+          <h2 className="text-3xl font-bold text-gray-900 mb-4">Ready to Get Started?</h2>
+          <p className="text-xl text-gray-600 mb-8">
+            Let's discuss how our ai marketing automation can help your business
+          </p>
+          <a
+            href="/contact"
+            className="inline-block bg-blue-600 text-white px-8 py-4 rounded-xl font-semibold hover:bg-blue-700 transition-colors"
+          >
+            Get Started Today
+          </a>
+        </div>
+      </div>
+>>>>>>> cursor/automate-test-improve-and-merge-code-9862
     </div>
   );
 }
@@ -843,3 +935,7 @@ company="FinanceFlow""
     </div>
   );
 }
+=======
+  )
+}
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91

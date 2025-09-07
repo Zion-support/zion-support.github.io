@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 
 
+<<<<<<< HEAD
 ;
 ursor/automate-test-improve-and-merge-code-646c;
 'use client';import React, { Component, ErrorInfo, ReactNode } from 'react';'
@@ -16,6 +17,9 @@ interface Props  {"children": ReactNode;
   }
   fallback?: ReactNode;
   onError?: ("error": Error, "errorInfo": ErrorInfo) => void;
+=======
+'use client';
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
 
 interface Props  {"children": ReactNode;
   }
@@ -463,6 +467,7 @@ interface State {
   error?: Error;
   errorInfo?: ErrorInfo;
 
+<<<<<<< HEAD
 class ErrorBoundary extends Component<Props, State> {
   }
   constructor("props": Props) {
@@ -484,6 +489,8 @@ class ErrorBoundary extends Component<Props, State> {
     this.setState({
       }
       error,
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
       errorInfo
     });
 
@@ -504,6 +511,7 @@ if (process.env.NODE_ENV === 'development') {'
   render() {
     }
     if (this.state.hasError) {
+<<<<<<< HEAD
 }
 return this.props.fallback || (;
         <div className="min-h-screen bg-slate-950 flex items-center justify-center">"
@@ -511,6 +519,15 @@ return this.props.fallback || (;
             <div className="mb-6">"
               <div className="w-16 h-16 bg-red-600 rounded-full flex items-center justify-center mx-auto mb-4">"
                 <span className="text-2xl">⚠️</span>"
+=======
+
+      return this.props.fallback || (
+        <div className="min-h-screen bg-slate-950 flex items-center justify-center">
+          <div className="text-center text-white max-w-md mx-auto p-6">
+            <div className="mb-6">
+              <div className="w-16 h-16 bg-red-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                <span className="text-2xl">⚠️</span>
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
               </div>
               <h1 className="text-2xl font-bold mb-2">Something went wrong</h1>"
               <p className="text-slate-300 mb-6">"
@@ -525,14 +542,20 @@ onClick={() => typeof window !== 'undefined' && window.location.reload()} '
                 <RefreshCw className="w-4 h-4 mr-2" />
                 Refresh Page
               </button>
+<<<<<<< HEAD
               <button,
 onClick={() => this.setState({ "hasError": false })} 
                 className="w-full px-6 py-3 bg-slate-700 rounded-lg "hover":bg-slate-600 transition-colors font-semibold""
+=======
+
+                className="w-full px-6 py-3 bg-slate-700 rounded-lg hover:bg-slate-600 transition-colors font-semibold"
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
               >
                 <Home className="w-4 h-4 mr-2" />
                 Go Home
               </button>
             </div>
+<<<<<<< HEAD
             {process.env.NODE_ENV === 'development' && this.state.error && ('
               <details className="mt-6 text-left">"
                 <summary className="cursor-pointer text-sm text-slate-400 "hover":text-slate-300">"
@@ -540,6 +563,15 @@ onClick={() => this.setState({ "hasError": false })}
                   Error Details (Development)
                 </summary>
                 <pre className="mt-2 p-4 bg-slate-800 rounded text-xs overflow-auto">"
+=======
+            {process.env.NODE_ENV === 'development' && this.state.error && (
+
+              <details className="mt-6 text-left">
+                <summary className="cursor-pointer text-sm text-slate-400 hover:text-slate-300">
+                  Error Details (Development)
+                </summary>
+                <pre className="mt-2 p-4 bg-slate-800 rounded text-xs overflow-auto">
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
                   {this.state.error.stack}
 
                 </pre>
@@ -603,12 +635,22 @@ main
 }
   handleRetry = () => {this.setState({ "hasError": false, "error": undefined, "errorInfo": undefined }
 }
+<<<<<<< HEAD
         <div className="min-h-screen bg-gray-900 flex items-center justify-center px-4">;"
           <div className="max-w-md w-full bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8 text-center">;"
             <div className="w-16 h-16 bg-red-500/20 rounded-full flex items-center justify-center mx-auto mb-6">;"
               <AlertTriangle className="w-8 h-8 text-red-400" />;"
             <details style={{ "margin_top": '20px', "text_align": 'left' ,'
 }>;
+=======
+  handleRetry = () => {this.setState({ hasError: false, error: undefined, errorInfo: undefined });
+}
+        <div className="min-h-screen bg-gray-900 flex items-center justify-center px-4">;
+          <div className="max-w-md w-full bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8 text-center">;
+            <div className="w-16 h-16 bg-red-500/20 rounded-full flex items-center justify-center mx-auto mb-6">;
+              <AlertTriangle className="w-8 h-8 text-red-400" />;
+            <details style={{ margin_top: '20px', text_align: 'left' }}>;
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
               <summary > Error Details (Development)</summary>;
               <pre style={{"background_color": '#f5f5f5',"padding": '10px',"border_radius": '4px',"overflow": 'auto',"font_size": '12px';'
               }}>;

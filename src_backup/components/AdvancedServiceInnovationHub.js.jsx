@@ -141,6 +141,7 @@ const AdvancedServiceInnovationHub = () => {}
             case 'green-tech': return <Leaf className='w-5 h-5'/>'';'''';
             case 'biotech-ai': return <Dna className='w-5 h-5'/>';''';
             default: return <Cpu className='w-5 h-5'/>}
+<<<<<<< HEAD:src_backup/components/AdvancedServiceInnovationHub.js.jsx
     }'';'';
     const categories = ['''''';
         { id: 'all', name: 'All Categories', icon: <Globe className='w-4 h-4'/> }, '''''';
@@ -149,6 +150,30 @@ const AdvancedServiceInnovationHub = () => {}
         { id: 'space-tech', name: 'Space Technology', icon: <Satellite className='w-4 h-4'/> },'''''';
         { id: 'green-tech', name: 'Green Technology', icon: <Leaf className='w-4 h-4'/> }, '''''';
         { id: 'biotech-ai', name: 'Biotech AI', icon: <Dna className='w-4 h-4'/> }'''';
+=======
+   ,
+}'';'';
+
+const categories = ['''''';
+        { id: 'all',}
+  name: 'All Categories', icon: <Globe className='w-4 h-4'/>,}
+}, '''''';
+        { id: 'quantum',}
+  name: 'Quantum Technology', icon: <Atom className='w-4 h-4'/>,}
+},'''''';
+        { id: 'ai',}
+  name: 'Artificial Intelligence', icon: <Brain className='w-4 h-4'/>,}
+}, '''''';
+        { id: 'space-tech',}
+  name: 'Space Technology', icon: <Satellite className='w-4 h-4'/>,}
+},'''''';
+        { id: 'green-tech',}
+  name: 'Green Technology', icon: <Leaf className='w-4 h-4'/>,}
+}, '''''';
+        { id: 'biotech-ai',}
+  name: 'Biotech AI', icon: <Dna className='w-4 h-4'/>,}
+}'''';
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91:temp-disabled/src/components/AdvancedServiceInnovationHub.js.jsx
     ]';''';
     return (<div className='max-w-7xl mx-auto p-6'>;
       {/* Header */}
@@ -185,6 +210,7 @@ const AdvancedServiceInnovationHub = () => {}
           <motion.div initial = {}
   { opacity: 0, y: 20;
 }} animate = {}
+<<<<<<< HEAD:src_backup/components/AdvancedServiceInnovationHub.js.jsx
   { opacity: 1, y: 0 '''';
 '''';
 }} transition={{ delay: 0.1 }} className='bg-white rounded-lg shadow-lg p-6 mb-8'>'''';
@@ -193,6 +219,17 @@ const AdvancedServiceInnovationHub = () => {}
                 <label className='block text-sm font-medium text-zion-slate-dark mb-2'>Category</label>'''';
                 <select value={selectedCategory} onChange={(e) => setSelectedCategory(e.target.value)} className='w-full p-2 border border-zion-slate-light rounded-md'>;
                   {categories.map(category => (<option key={category.id} value={category.id}>;
+=======
+  { opacity: 1, y: 0 '''';}
+'''';}
+}} transition={{ delay: 0.1 ,}
+} className='bg-white rounded-lg shadow-lg p-6 mb-8' />'''';
+            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4' />'''';
+              <div />'''';
+                <label className='block text-sm font-medium text-zion-slate-dark mb-2' />Category</label>'''';
+                <select value={selectedCategory} onChange={(e) = /> setSelectedCategory(e.target.value)} className='w-full p-2 border border-zion-slate-light rounded-md'>;
+                  {categories.map(category => (<option key={category.id} value={category.id} />;
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91:temp-disabled/src/components/AdvancedServiceInnovationHub.js.jsx
                       {category.name}
                     </option>) ) }
                 </select>;
@@ -229,12 +266,20 @@ const AdvancedServiceInnovationHub = () => {}
           <motion.div initial = {}
   { opacity: 0, y: 20;
 }} animate = {}
+<<<<<<< HEAD:src_backup/components/AdvancedServiceInnovationHub.js.jsx
   { opacity: 1, y: 0 '''';
 '''';
 }} transition={{ delay: 0.2 }} className='grid grid-cols-1 lg:grid-cols-2 gap-6 mb-8'>;
+=======
+  { opacity: 1, y: 0 '''';}
+'''';}
+}} transition={{ delay: 0.2 ,}
+} className='grid grid-cols-1 lg:grid-cols-2 gap-6 mb-8' />;
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91:temp-disabled/src/components/AdvancedServiceInnovationHub.js.jsx
             {filteredTrends.map((trend, index) => (<motion.div key={trend.id} initial = {}
   { opacity: 0, x: index % 2 === 0 ? -20 : 20;
 }} animate = {}
+<<<<<<< HEAD:src_backup/components/AdvancedServiceInnovationHub.js.jsx
   { opacity: 1, x: 0';';
 }} transition={{ delay: 0.1 * index }}>'''';
                 <Card className='h-full hover:shadow-lg transition-shadow'>'''';
@@ -242,6 +287,16 @@ const AdvancedServiceInnovationHub = () => {}
                     <div className='flex items-start justify-between mb-4'>'''';
                       <div className='flex items-center gap-3'>'''';
                         <div className='w-10 h-10 bg-zion-blue-light/10 rounded-lg flex items-center justify-center'>;
+=======
+  { opacity: 1, x: 0';';}
+}} transition={{ delay: 0.1 * index ,}
+} />'''';
+                <Card className='h-full hover:shadow-lg transition-shadow' />'''';
+                  <CardHeader />'''';
+                    <div className='flex items-start justify-between mb-4' />'''';
+                      <div className='flex items-center gap-3' />'''';
+                        <div className='w-10 h-10 bg-zion-blue-light/10 rounded-lg flex items-center justify-center' />;
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91:temp-disabled/src/components/AdvancedServiceInnovationHub.js.jsx
                           {getCategoryIcon(trend.category)}
                         </div>'''';
                         <div>'''';
@@ -313,12 +368,20 @@ const AdvancedServiceInnovationHub = () => {}
       {viewMode === 'roadmap' && (<motion.div initial = {}
   { opacity: 0, y: 20;
 }} animate = {}
+<<<<<<< HEAD:src_backup/components/AdvancedServiceInnovationHub.js.jsx
   { opacity: 1, y: 0 '''';
 '''';
 }} transition={{ delay: 0.1 }} className='space-y-6'>;
+=======
+  { opacity: 1, y: 0 '''';}
+'''';}
+}} transition={{ delay: 0.1 ,}
+} className='space-y-6' />;
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91:temp-disabled/src/components/AdvancedServiceInnovationHub.js.jsx
           {futureRoadmap.map((roadmap, index) => (<motion.div key={roadmap.id} initial = {}
   { opacity: 0, x: -20;
 }} animate = {}
+<<<<<<< HEAD:src_backup/components/AdvancedServiceInnovationHub.js.jsx
   { opacity: 1, x: 0';';
 }} transition={{ delay: 0.1 * index }}>'''';
               <Card className='hover:shadow-lg transition-shadow'>'''';
@@ -327,6 +390,17 @@ const AdvancedServiceInnovationHub = () => {}
                     <div className='flex-1'>'''';
                       <div className='flex items-center gap-3 mb-3'>'''';
                         <div className='w-12 h-12 bg-gradient-to-r from-zion-purple to-zion-cyan rounded-lg flex items-center justify-center text-white'>;
+=======
+  { opacity: 1, x: 0';';}
+}} transition={{ delay: 0.1 * index ,}
+} />'''';
+              <Card className='hover:shadow-lg transition-shadow' />'''';
+                <CardHeader />'''';
+                  <div className='flex items-start justify-between' />'''';
+                    <div className='flex-1' />'''';
+                      <div className='flex items-center gap-3 mb-3' />'''';
+                        <div className='w-12 h-12 bg-gradient-to-r from-zion-purple to-zion-cyan rounded-lg flex items-center justify-center text-white' />;
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91:temp-disabled/src/components/AdvancedServiceInnovationHub.js.jsx
                           {getCategoryIcon(roadmap.category)}
                         </div>'''';
                         <div>'''';
@@ -400,6 +474,7 @@ const AdvancedServiceInnovationHub = () => {}
       {viewMode === 'insights' && (<motion.div initial = {}
   { opacity: 0, y: 20;
 }} animate = {}
+<<<<<<< HEAD:src_backup/components/AdvancedServiceInnovationHub.js.jsx
   { opacity: 1, y: 0 '''';
 '''';
 }} transition={{ delay: 0.1 }} className='space-y-6'>'''';
@@ -407,6 +482,16 @@ const AdvancedServiceInnovationHub = () => {}
             <Card>'''';
               <CardHeader>'''';
                 <CardTitle className='flex items-center gap-2'>'''';
+=======
+  { opacity: 1, y: 0 '''';}
+'''';}
+}} transition={{ delay: 0.1 ,}
+} className='space-y-6' />'''';
+          <div className='grid grid-cols-1 lg:grid-cols-2 gap-6' />;
+            <Card />'''';
+              <CardHeader />'''';
+                <CardTitle className='flex items-center gap-2' />'''';
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91:temp-disabled/src/components/AdvancedServiceInnovationHub.js.jsx
                   <TrendingUp className='w-5 h-5 text-zion-green'/>;
                   Investment Trends;
                 </CardTitle>;
@@ -417,32 +502,56 @@ const AdvancedServiceInnovationHub = () => {}
                     <span className='text-zion-slate-light'>Quantum Technology</span>'''';
                     <span className='font-semibold text-zion-cyan'>$150B+</span>'''';
                   </div>'''''';
+<<<<<<< HEAD:src_backup/components/AdvancedServiceInnovationHub.js.jsx
                   <div className='w-full bg-zion-slate-light/20 rounded-full h-2'>'''''';
                     <div className='bg-zion-cyan h-2 rounded-full' style={{ width: '85%' }}></div>;
+=======
+                  <div className='w-full bg-zion-slate-light/20 rounded-full h-2' />'''''';
+                    <div className='bg-zion-cyan h-2 rounded-full' style={{ width: '85%' ,}
+} /></div>;
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91:temp-disabled/src/components/AdvancedServiceInnovationHub.js.jsx
                   </div>'''';
                   '''';
                   <div className='flex justify-between items-center'>'''';
                     <span className='text-zion-slate-light'>AI & Machine Learning</span>'''';
                     <span className='font-semibold text-zion-purple'>$300B+</span>'''';
                   </div>'''''';
+<<<<<<< HEAD:src_backup/components/AdvancedServiceInnovationHub.js.jsx
                   <div className='w-full bg-zion-slate-light/20 rounded-full h-2'>'''''';
                     <div className='bg-zion-purple h-2 rounded-full' style={{ width: '95%' }}></div>;
+=======
+                  <div className='w-full bg-zion-slate-light/20 rounded-full h-2' />'''''';
+                    <div className='bg-zion-purple h-2 rounded-full' style={{ width: '95%' ,}
+} /></div>;
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91:temp-disabled/src/components/AdvancedServiceInnovationHub.js.jsx
                   </div>'''';
                   '''';
                   <div className='flex justify-between items-center'>'''';
                     <span className='text-zion-slate-light'>Space Technology</span>'''';
                     <span className='font-semibold text-zion-blue'>$200B+</span>'''';
                   </div>'''''';
+<<<<<<< HEAD:src_backup/components/AdvancedServiceInnovationHub.js.jsx
                   <div className='w-full bg-zion-slate-light/20 rounded-full h-2'>'''''';
                     <div className='bg-zion-blue h-2 rounded-full' style={{ width: '70%' }}></div>;
+=======
+                  <div className='w-full bg-zion-slate-light/20 rounded-full h-2' />'''''';
+                    <div className='bg-zion-blue h-2 rounded-full' style={{ width: '70%' ,}
+} /></div>;
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91:temp-disabled/src/components/AdvancedServiceInnovationHub.js.jsx
                   </div>'''';
                   '''';
                   <div className='flex justify-between items-center'>'''';
                     <span className='text-zion-slate-light'>Biotech AI</span>'''';
                     <span className='font-semibold text-zion-green'>$100B+</span>'''';
                   </div>'''''';
+<<<<<<< HEAD:src_backup/components/AdvancedServiceInnovationHub.js.jsx
                   <div className='w-full bg-zion-slate-light/20 rounded-full h-2'>'''''';
                     <div className='bg-zion-green h-2 rounded-full' style={{ width: '60%' }}></div>;
+=======
+                  <div className='w-full bg-zion-slate-light/20 rounded-full h-2' />'''''';
+                    <div className='bg-zion-green h-2 rounded-full' style={{ width: '60%' ,}
+} /></div>;
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91:temp-disabled/src/components/AdvancedServiceInnovationHub.js.jsx
                   </div>;
                 </div>;
               </CardContent>;
@@ -460,32 +569,56 @@ const AdvancedServiceInnovationHub = () => {}
                     <span className='text-zion-slate-light'>Early Adopters</span>'''';
                     <span className='font-semibold text-zion-cyan'>15%</span>'''';
                   </div>'''''';
+<<<<<<< HEAD:src_backup/components/AdvancedServiceInnovationHub.js.jsx
                   <div className='w-full bg-zion-slate-light/20 rounded-full h-2'>'''''';
                     <div className='bg-zion-cyan h-2 rounded-full' style={{ width: '15%' }}></div>;
+=======
+                  <div className='w-full bg-zion-slate-light/20 rounded-full h-2' />'''''';
+                    <div className='bg-zion-cyan h-2 rounded-full' style={{ width: '15%' ,}
+} /></div>;
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91:temp-disabled/src/components/AdvancedServiceInnovationHub.js.jsx
                   </div>'''';
                   '''';
                   <div className='flex justify-between items-center'>'''';
                     <span className='text-zion-slate-light'>Growing Market</span>'''';
                     <span className='font-semibold text-zion-purple'>35%</span>'''';
                   </div>'''''';
+<<<<<<< HEAD:src_backup/components/AdvancedServiceInnovationHub.js.jsx
                   <div className='w-full bg-zion-slate-light/20 rounded-full h-2'>'''''';
                     <div className='bg-zion-purple h-2 rounded-full' style={{ width: '35%' }}></div>;
+=======
+                  <div className='w-full bg-zion-slate-light/20 rounded-full h-2' />'''''';
+                    <div className='bg-zion-purple h-2 rounded-full' style={{ width: '35%' ,}
+} /></div>;
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91:temp-disabled/src/components/AdvancedServiceInnovationHub.js.jsx
                   </div>'''';
                   '''';
                   <div className='flex justify-between items-center'>'''';
                     <span className='text-zion-slate-light'>Mainstream</span>'''';
                     <span className='font-semibold text-zion-blue'>40%</span>'''';
                   </div>'''''';
+<<<<<<< HEAD:src_backup/components/AdvancedServiceInnovationHub.js.jsx
                   <div className='w-full bg-zion-slate-light/20 rounded-full h-2'>'''''';
                     <div className='bg-zion-blue h-2 rounded-full' style={{ width: '40%' }}></div>;
+=======
+                  <div className='w-full bg-zion-slate-light/20 rounded-full h-2' />'''''';
+                    <div className='bg-zion-blue h-2 rounded-full' style={{ width: '40%' ,}
+} /></div>;
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91:temp-disabled/src/components/AdvancedServiceInnovationHub.js.jsx
                   </div>'''';
                   '''';
                   <div className='flex justify-between items-center'>'''';
                     <span className='text-zion-slate-light'>Mature Market</span>'''';
                     <span className='font-semibold text-zion-green'>10%</span>'''';
                   </div>'''''';
+<<<<<<< HEAD:src_backup/components/AdvancedServiceInnovationHub.js.jsx
                   <div className='w-full bg-zion-slate-light/20 rounded-full h-2'>'''''';
                     <div className='bg-zion-green h-2 rounded-full' style={{ width: '10%' }}></div>;
+=======
+                  <div className='w-full bg-zion-slate-light/20 rounded-full h-2' />'''''';
+                    <div className='bg-zion-green h-2 rounded-full' style={{ width: '10%' ,}
+} /></div>;
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91:temp-disabled/src/components/AdvancedServiceInnovationHub.js.jsx
                   </div>;
                 </div>;
               </CardContent>;
@@ -542,12 +675,22 @@ const AdvancedServiceInnovationHub = () => {}
       <motion.div initial = {}
   { opacity: 0, y: 20;
 }} animate = {}
+<<<<<<< HEAD:src_backup/components/AdvancedServiceInnovationHub.js.jsx
   { opacity: 1, y: 0 '''';
 '''';
 }} transition={{ delay: 0.4 }} className='mt-12 text-center'>'''';
         <div className='bg-gradient-to-r from-zion-purple via-zion-blue-light to-zion-cyan rounded-lg p-8 text-white'>'''';
           <h3 className='text-3xl font-bold mb-4'>Ready to Shape the Future?</h3>'''';
           <p className='text-xl mb-6 max-w-2xl mx-auto'>;
+=======
+  { opacity: 1, y: 0 '''';}
+'''';}
+}} transition={{ delay: 0.4 ,}
+} className='mt-12 text-center' />'''';
+        <div className='bg-gradient-to-r from-zion-purple via-zion-blue-light to-zion-cyan rounded-lg p-8 text-white' />'''';
+          <h3 className='text-3xl font-bold mb-4' />Ready to Shape the Future?</h3>'''';
+          <p className='text-xl mb-6 max-w-2xl mx-auto' />;
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91:temp-disabled/src/components/AdvancedServiceInnovationHub.js.jsx
             Our innovation hub provides the insights and strategies you need to stay ahead;
             of emerging technologies and capitalize on future opportunities.'''';
           </p>'''';
@@ -565,7 +708,7 @@ const AdvancedServiceInnovationHub = () => {}
   () => window.open('tel: +13024640950', _blank')';
 '''';
 }>'''';
-              <Zap className='w-5 h-5 mr-2"/>'";
+              <Zap className='w-5 h-5 mr-2\"/>'\";
               Speak with an Expert;
             </Button>;
           </div>;
@@ -573,4 +716,17 @@ const AdvancedServiceInnovationHub = () => {}
       </motion.div>;
     </div>)}
 export default AdvancedServiceInnovationHub;
+<<<<<<< HEAD:src_backup/components/AdvancedServiceInnovationHub.js.jsx
 export { AdvancedServiceInnovationHub }export { AdvancedServiceInnovationHub }export { AdvancedServiceInnovationHub }export { AdvancedServiceInnovationHub }export { AdvancedServiceInnovationHub }
+=======
+
+export { AdvancedServiceInnovationHub }
+
+export { AdvancedServiceInnovationHub }
+
+export { AdvancedServiceInnovationHub }
+
+export { AdvancedServiceInnovationHub }
+
+export { AdvancedServiceInnovationHub }
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91:temp-disabled/src/components/AdvancedServiceInnovationHub.js.jsx

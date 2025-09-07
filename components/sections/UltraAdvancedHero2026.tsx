@@ -401,6 +401,9 @@ href='/contact''
             </Link>
           </motion.div>
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
 
 
             className="flex flex-col "sm":flex-row items-center justify-center space-y-4 "sm":space-y-0 "sm":space-x-6">"
@@ -742,6 +745,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               </div>
             </div>
           </motion.div>
+<<<<<<< HEAD
 
             className='mt-12 p-6 bg-gradient-to-r from-purple-900/20 via-pink-900/20 to-cyan-900/20 backdrop-blur-xl border border-purple-500/20 rounded-2xl max-w-4xl mx-auto'>;'
             <h3 className='text-2xl font-bold text-white mb-6'>;'
@@ -959,6 +963,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               </div>;
             </div>;
           </motion && motion.div>;
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
 
 <motion.div,
 variants={itemVariants}
@@ -1080,6 +1086,7 @@ animate={{
 <<<<<<< HEAD
             rotate: [0, -3, 0]
           }}
+<<<<<<< HEAD
           transition={{
             }
             "duration": 9,
@@ -1216,6 +1223,14 @@ animate={{
 
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 >>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
+=======
+          transition = $2;
+            repeat: Infinity,
+            ease: "easeInOut"
+          }}
+          className="absolute bottom-1/3 right-10 text-5xl opacity-20"
+        >
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
           🌐
         </motion.div>
       </div>

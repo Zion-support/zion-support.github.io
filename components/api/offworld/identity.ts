@@ -13,6 +13,7 @@ export default async function handler() {
   }
 
   try {
+<<<<<<< HEAD
 }
 const { address } = req.query as { address?: string,;
 };
@@ -73,3 +74,12 @@ const profile = await buildIdentityProfile(address);
 return res.status(500).json({ "error": e.message,;
 });
   }
+=======
+    const { address } = req.query as { address?: string },
+    const profile = await buildIdentityProfile($2);
+    return res.status(200).json(profile)
+  } catch (e: any) {
+    return res.status(500).json({ error: e.message })
+  }
+}
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91

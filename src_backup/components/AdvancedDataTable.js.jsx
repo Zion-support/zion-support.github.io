@@ -108,9 +108,19 @@ export const AdvancedDataTable = ({ data, columns, height = 500, enableSearch = 
 '';
 '';
 '''';
+<<<<<<< HEAD:src_backup/components/AdvancedDataTable.js.jsx
         const blob = new Blob([content], { type: 'text/csv' })'';
         const url = window.URL.createObjectURL(blob)';';
         const a = document.createElement('a')a.href = url;
+=======
+
+const blob = new Blob([content], { type: 'text/csv',}
+})'';
+
+const url = window.URL.createObjectURL(blob)';';
+
+const a = document.createElement('a')a.href = url;
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91:temp-disabled/src/components/AdvancedDataTable.js.jsx
         a.download = filename;
         a.click()window.URL.revokeObjectURL(url)}
     // Get sort icon;
@@ -200,9 +210,17 @@ export const AdvancedDataTable = ({ data, columns, height = 500, enableSearch = 
                 <input type='checkbox' checked={selectedItems.size === paginatedData.length && paginatedData.length > 0} onChange={(e) => handleSelectAll(e.target.checked)} className='w-4 h-4 text-blue-600 border-gray-300 rounded focus: ring-blue-500'/>;
               </div>)}'`';
             '`'`;
+<<<<<<< HEAD:src_backup/components/AdvancedDataTable.js.jsx
             {columns.map(column => (<div key={String(column.key)} className={`flex-1 px-2 py-1 ${column.width ? `w-${column.width}` : ''}`} style={{ width: column.width }}>'`''`';
                 <button onClick={() => handleSort(column.key)} disabled={!enableSorting || !column.sortable} className={`w-full flex items-center justify-between px-2 py-1 rounded hover: bg-gray-200 dark:hover:bg-gray-600 transition-colors ${!enableSorting || !column.sortable ? 'cursor-default' : 'cursor-pointer'}`}>'''';
                   <span className='font-medium text-gray-700 dark:text-gray-300 text-sm'>;
+=======
+            {columns.map(column => (<div key={String(column.key)} className={`flex-1 px-2 py-1 ${column.width ? `w-${column.width}` : ''}`} style={{ width: column.width ,}
+} />'`''`';
+                <button onClick={() = /> handleSort(column.key)} disabled={!enableSorting || !column.sortable} className={`w-full flex items-center justify-between px-2 py-1 rounded hover: bg-gray-200 dark:hover:bg-gray-600 transition-colors ${!enableSorting || !column.sortable ? 'cursor-default' : 'cursor-pointer'},
+}>'''';
+                  <span className='font-medium text-gray-700 dark:text-gray-300 text-sm' />;
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91:temp-disabled/src/components/AdvancedDataTable.js.jsx
                     {column.header}
                   </span>;
                   {column.sortable !== false && getSortIcon(column.key) }
@@ -233,7 +251,12 @@ export const AdvancedDataTable = ({ data, columns, height = 500, enableSearch = 
 } onClick={(e) => e.stopPropagation()} className='w-4 h-4 text-blue-600 border-gray-300 rounded focus: ring-blue-500'/>;
                   </div>)}'`';
                 '`'`;
+<<<<<<< HEAD:src_backup/components/AdvancedDataTable.js.jsx
                 {columns.map(column => (<div key={String(column.key)} className={`flex-1 px-2 py-1 ${column.width ? `w-${column.width}` : ''}`} style={{ width: column.width }}>;
+=======
+                {columns.map(column => (<div key={String(column.key)} className={`flex-1 px-2 py-1 ${column.width ? `w-${column.width}` : ''}`} style={{ width: column.width ,}
+} />;
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91:temp-disabled/src/components/AdvancedDataTable.js.jsx
                     {renderCell(column, item, index)}
                   </div>))}'''';
                 '''';
@@ -286,4 +309,4 @@ export const AdvancedDataTable = ({ data, columns, height = 500, enableSearch = 
           </div>;
         </div>)}
     </div>)}''`;
-''`'"`'";
+''`'\"`'\";

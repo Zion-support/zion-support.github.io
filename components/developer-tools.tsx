@@ -427,6 +427,7 @@ reliability, and real-world developer usage.
             {developerTools.map((tool, index) => (
 
       {/* Developer Tools Grid */}
+<<<<<<< HEAD
 <section className='section-padding bg-gradient-cursor'>;'
         <div className='container-cursor'>;'
           <div className='text-center mb-20'>;'
@@ -463,6 +464,22 @@ reliability, and real-world developer usage.
             </p>;
           </div>;
               <Card;
+=======
+      <section className="section-padding bg-gradient-cursor">
+        <div className="container-cursor">
+          <div className="text-center mb-20">
+            <h2 className="text-responsive-lg font-bold mb-8 gradient-text text-shadow">
+              Curated Developer Tools & Services
+            </h2>
+            <p className="text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed">
+              Each tool has been carefully selected based on performance, reliability, and real-world developer usage.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            {developerTools.map((tool, index) => (
+              <Card
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
                 key={index}
 
                 className={`card-hover group border-gradient-blue relative ${`                  }

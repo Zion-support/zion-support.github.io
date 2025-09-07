@@ -510,6 +510,7 @@ href='/contact''
               <motion&& motion.div;
                 variants={staggerContainer}
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 initial='initial''
                 animate='animate''
@@ -520,6 +521,15 @@ initial='initial''
                   <motion.div
 }
 key={index}
+=======
+                initial="initial"
+                animate="animate"
+                className="grid grid-cols-2 md:grid-cols-4 gap-6"
+              >
+                {stats.map((stat, index) => (
+                  <motion.div
+                    key={index}
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
                     variants={fadeInUp}
 
 className='text-center''
@@ -627,6 +637,7 @@ className='relative''
 
                         </span>
                       </div>
+<<<<<<< HEAD
                       <div className='flex items-center justify-between text-sm'>'
                         <span className='text-gray-400'>Market "Size": </span>'
                         <span className='text-blue-400 font-medium'>'
@@ -762,6 +773,39 @@ className='relative''
             transition={{ "duration": 0.8 
 }
 className='text-center mb-16''
+=======
+                      <div className="flex items-center justify-between text-sm">
+                        <span className="text-gray-400">Market Size:</span>
+                        <span className="text-blue-400 font-medium">
+                          {featuredServices[currentServiceIndex]?.marketSize}
+                        </span>
+                      </div>
+                    </div>
+                    
+                    <Link
+                      href={featuredServices[currentServiceIndex]?.slug || '#'}
+                      className="w-full bg-gradient-to-r from-cyan-500 to-blue-500 text-white py-3 rounded-xl font-medium text-center hover:from-cyan-600 hover:to-blue-600 transition-all duration-200 hover:scale-105 block"
+                    >
+                      Learn More
+                    </Link>
+                  </div>
+                </motion.div>
+              </AnimatePresence>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
+      {/* Services Overview */}
+      <section className="relative py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8 }}
+            className="text-center mb-16"
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
           >
             <h2 className='text-4xl "md":text-5xl font-bold text-white mb-6'>'
               Revolutionary Service Categories
@@ -770,6 +814,7 @@ className='text-center mb-16''
 
             </p>
           </motion.div>
+<<<<<<< HEAD
 
             transition={{ "duration": 0 && 0.8 
 }
@@ -787,6 +832,8 @@ className='text-center mb-16''
             </p>;
           </motion && motion.div>;
 
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
 
           {/* Category Cards */}
 <<<<<<< HEAD
@@ -807,6 +854,7 @@ key={category.id}
                 variants={fadeInUp}
 className='group relative'>'
 
+<<<<<<< HEAD
                 <Link;
                   href={category.id === 'all';'
                       ? '/2025-innovative-services-showcase-v2';'
@@ -900,6 +948,17 @@ className='group relative'>'
 
             transition={{ "duration": 0.8 }}
 className='text-center mb-16''
+=======
+      {/* Featured Services Grid */}
+      <section className="relative py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8 }}
+            className="text-center mb-16"
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
           >
             <h2 className='text-4xl "md":text-5xl font-bold text-white mb-6'>'
               Featured Innovative Services
@@ -909,6 +968,7 @@ className='text-center mb-16''
 solutions
             </p>
           </motion.div>
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 
             transition={{ "duration": 0 && 0.8 
@@ -928,6 +988,8 @@ solutions
             </p>;
           </motion && motion.div>;
 
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
 
           {/* Services Grid */}
 <<<<<<< HEAD
@@ -970,6 +1032,7 @@ className='group relative'>'
                   </div>
                 </Link>
               </motion.div>
+<<<<<<< HEAD
 
             )
 }
@@ -990,6 +1053,10 @@ className='group relative'>'
               </motion && motion.div>;
             ))}
           </motion && motion.div>;
+=======
+            ))}
+          </motion.div>
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
 
           {/* View All Services CTA */}
           <motion.div;
@@ -1019,6 +1086,7 @@ href='/2025-innovative-services-showcase-v2''
         </div>
       </section>
 
+<<<<<<< HEAD
       {/* CTA Section *
 }
 <section className='relative py-20 px-4 "sm":px-6 "lg":px-8'>;'
@@ -1037,6 +1105,16 @@ href='/2025-innovative-services-showcase-v2''
 
             transition={{ "duration": 0.8 
 }
+=======
+      {/* CTA Section */}
+      <section className="relative py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-4xl mx-auto text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8 }}
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
           >
 <h2 className='text-4xl "md":text-5xl font-bold text-white mb-6'>'
               Ready to Transform Your Business?
@@ -1063,6 +1141,7 @@ href='/2025-innovative-services-showcase-v2''
           </motion.div>
         </div>
       </section>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -1276,6 +1355,8 @@ export default Homepage2047)
 };
 export default Homepage2047;
 ;
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
 
       {/* Footer */}
       <UltraFuturisticFooter2047 />

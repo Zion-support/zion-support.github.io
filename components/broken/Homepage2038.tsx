@@ -324,6 +324,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         {/* Featured AI Services *
 }
 
+<<<<<<< HEAD
 <section className='py-24 px-4'>'
           <div className='max-w-7xl mx-auto'>'
             <motion.div,
@@ -410,6 +411,8 @@ variant='consciousness';' />
           </div>
         </section>
 
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
         {/* Featured AI Services */}
         <section className="py-24 px-4">
           <div className="max-w-7xl mx-auto">
@@ -475,6 +478,7 @@ key={service.id}
                   <UltraFuturisticServiceCard2038
                     service={service}
                     variant="consciousness"
+<<<<<<< HEAD
 =======
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">;
               {featuredAI && featuredAI.map((service, index) => (;
@@ -493,10 +497,13 @@ key={service.id}
 variant='consciousness'
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
                   />
                 </motion.div>
               ))}
             </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -773,10 +780,32 @@ variant='consciousness';
           <div className=\"max - w-7xl mx - auto\"    />
             <motion.div
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
+=======
+
+            <div className="text-center">
+              <Link href="/ai-services">
+                <motion.button
+                  className="px-8 py-4 border-2 border-purple-400 text-purple-400 font-semibold rounded-xl hover:bg-purple-400 hover:text-black transition-all duration-300 transform hover:scale-105 text-lg"
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                >
+                  View All AI Services
+                </motion.button>
+              </Link>
+            </div>
+          </div>
+        </section>
+
+        {/* Featured Micro SAAS Services */}
+        <section className="py-24 px-4 bg-black/20">
+          <div className="max-w-7xl mx-auto">
+            <motion.div
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
+<<<<<<< HEAD
 <<<<<<< HEAD
               className='grid grid - cols - 2 md:grid - cols - 4 gap - 8 text - center';
             >;
@@ -1041,10 +1070,36 @@ key={service.id}
 service={service}
 
 variant='automation';' />
+=======
+              className="text-center mb-20"
+            >
+              <h2 className="text-5xl md:text-6xl font-bold mb-8 bg-gradient-to-r from-emerald-400 to-cyan-500 bg-clip-text text-transparent">
+                Innovative Micro SAAS
+              </h2>
+              <p className="text-xl text-gray-300 max-w-4xl mx-auto">
+                Transform your business with our cutting-edge micro SAAS solutions designed for the future
+              </p>
+            </motion.div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+              {featuredMicroSaas.map((service, index) => (
+                <motion.div
+                  key={service.id}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  viewport={{ once: true }}
+                >
+                  <UltraFuturisticServiceCard2038
+                    service={service}
+                    variant="automation"
+                  />
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
                 </motion.div>
               ))}
             </div>
 
+<<<<<<< HEAD
 
 <div className='text-center'>'
               <Link href='/services'>'
@@ -1157,10 +1212,22 @@ variant='automation';
             </div>;
           </div>;
         </section>;
+=======
+            <div className="text-center">
+              <Link href="/services">
+                <motion.button
+                  className="px-8 py-4 border-2 border-emerald-400 text-emerald-400 font-semibold rounded-xl hover:bg-emerald-400 hover:text-black transition-all duration-300 transform hover:scale-105 text-lg"
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                >
+                  Explore All Services
+                </motion.button>
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
               </Link>
             </div>
           </div>
         </section>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
         {/* Featured IT Services */}
@@ -1292,6 +1359,28 @@ variant='quantum';' />
               ))}
 
                     variant="quantum"
+=======
+
+        {/* Featured IT Services */}
+        <section className="py-24 px-4">
+          <div className="max-w-7xl mx-auto">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
+              className="text-center mb-20"
+            >
+              <h2 className="text-5xl md:text-6xl font-bold mb-8 bg-gradient-to-r from-blue-400 to-indigo-500 bg-clip-text text-transparent">
+                Advanced IT Infrastructure
+              </h2>
+              <p className="text-xl text-gray-300 max-w-4xl mx-auto">
+                Build the future with our quantum cloud infrastructure and AI-powered DevOps automation
+              </p>
+            </motion.div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
               {featuredIT.map((service, index) => (
                 <motion.div
                   key={service.id}
@@ -1303,6 +1392,7 @@ variant='quantum';' />
                   <UltraFuturisticServiceCard2038
                     service={service}
                     variant="quantum"
+<<<<<<< HEAD
 =======
                   <UltraFuturisticServiceCard2038;
                     service={service}
@@ -1313,10 +1403,13 @@ variant='quantum';' />
 variant='quantum'
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
                   />
                 </motion.div>
               ))}
             </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -1438,6 +1531,23 @@ variant='quantum';
             </div>;
           </div>;
         </section>;
+=======
+
+            <div className="text-center">
+              <Link href="/it-services">
+                <motion.button
+                  className="px-8 py-4 border-2 border-blue-400 text-blue-400 font-semibold rounded-xl hover:bg-blue-400 hover:text-black transition-all duration-300 transform hover:scale-105 text-lg"
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                >
+                  View All IT Services
+                </motion.button>
+              </Link>
+            </div>
+          </div>
+        </section>
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
         {/* Why Choose Us */}
 <section className='py-24 px-4 bg-black/30'>;'
           <div className='max-w-7xl mx-auto'>;'
@@ -1463,6 +1573,7 @@ className='text-center mb-20''
             <div className='grid grid-cols-1 "md":grid-cols-2 "lg":grid-cols-3 gap-8'>'
               {[
                 {
+<<<<<<< HEAD
                   }
                   "icon": <Brain className='w-12 h-12' />'
                   "title": 'AI Consciousness Evolution''
@@ -1546,6 +1657,42 @@ className='text-center mb-20''
 
                     'Track record of delivering transformative solutions to leading organizations','
                   "color": 'from-yellow-500 to-orange-500','
+=======
+                  icon: <Brain className="w-12 h-12" />,
+                  title: "AI Consciousness Evolution",
+                  description: "Leading the development of artificial consciousness and emotional intelligence",
+                  color: "from-purple-500 to-pink-500"
+                };
+                {
+                  icon: <Atom className="w-12 h-12" />,
+                  title: "Quantum Computing Power",
+                  description: "Access to the most advanced quantum computing capabilities available",
+                  color: "from-blue-500 to-cyan-500"
+                };
+                {
+                  icon: <Shield className="w-12 h-12" />,
+                  title: "Future-Proof Security",
+                  description: "Quantum-resistant encryption and zero-trust security frameworks",
+                  color: "from-red-500 to-orange-500"
+                };
+                {
+                  icon: <Rocket className="w-12 h-12" />,
+                  title: "Innovation First",
+                  description: "Constantly pushing the boundaries of what's possible in technology",
+                  color: "from-green-500 to-emerald-500"
+                };
+                {
+                  icon: <Users className="w-12 h-12" />,
+                  title: "Global Expertise",
+                  description: "World-class team with experience across cutting-edge technologies",
+                  color: "from-indigo-500 to-purple-500"
+                };
+                {
+                  icon: <Award className="w-12 h-12" />,
+                  title: "Proven Results",
+                  description: "Track record of delivering transformative solutions to leading organizations",
+                  color: "from-yellow-500 to-orange-500"
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
                 }
               ].map((feature, index) => (
                 <motion.div,
@@ -1588,6 +1735,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     <div className='text-white'>{feature.icon}</div>
                   </p>                </motion.div>
 
+<<<<<<< HEAD
                   </div>
                   <h3 className='text-xl font-bold text-white mb-4'>
                     {feature.title}
@@ -1662,6 +1810,17 @@ initial={{ "opacity": 0, "y": 20
 }
 
 className='space-y-8''
+=======
+        {/* CTA Section */}
+        <section className="py-24 px-4">
+          <div className="max-w-4xl mx-auto text-center">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
+              className="space-y-8"
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
             >
               <h2 className='text-5xl "md":text-6xl font-bold bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent'>'
                 Ready to Shape the Future?

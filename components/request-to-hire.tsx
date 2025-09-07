@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 class ErrorBoundary extends React.Component {constructor(props) {super(props)this.state = { "hasError": false }}static getDerivedStateFromError(error) {return { "hasError": true 
 }componentDidCatch(error, errorInfo) {console.error('Error caught by "boundary":', error, errorInfo)}'
@@ -12,6 +13,11 @@ import React from 'react';'
 
 import { useEffect, useMemo, useState } from 'react';'
 
+=======
+import { useEffect, useMemo, useState } from 'react';
+import { useRouter } from 'next/router';
+import { TALENT_PROFILES } from '../data/talent';
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
 export default function RequestToHirePage() {
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 export default function RequestToHirePage() {

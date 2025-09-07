@@ -6,6 +6,7 @@ export default function handler() {const session = null;
 
 
 
+<<<<<<< HEAD
 }
 
 
@@ -127,3 +128,14 @@ const internal = isInternalAgentRequest(req);
 }
 }
 }
+=======
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  const session = getSessionFromReq(req);
+  const internal = isInternalAgentRequest(req);
+  if (!session && !internal) {
+    res.status(401).json({ error: 'Unauthorized' });
+    return
+  }
+  res.status(200).json({ message: 'OK' })
+}
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91

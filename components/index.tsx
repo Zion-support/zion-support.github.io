@@ -182,9 +182,151 @@ href="#services""
     return () => clearInterval(interval)
   }, []),
 
+<<<<<<< HEAD
               <a,
 href=""mailto": kleber@ziontechgroup.com""
                 className="px-8 py-4 border border-white/20 "hover":border-white/40 rounded-full font-semibold text-lg transition-all duration-300 transform "hover":scale-105 backdrop-blur-sm bg-white/5 "hover":bg-white/10""
+=======
+  const features = $2;
+      title: "AI Autonomous Ecosystem",
+      description: "Revolutionary autonomous AI solutions that adapt and evolve",
+      color: "from-purple-500 to-pink-500"
+    },
+    {
+      icon: Atom,
+      title: "Quantum AI Neural Networks",
+      description: "Quantum-powered AI with advanced consciousness capabilities",
+      color: "from-blue-500 to-cyan-500"
+    },
+    {
+      icon: Shield,
+      title: "Quantum Cybersecurity",
+      description: "Quantum-resistant security with AI-powered threat detection",
+      color: "from-red-500 to-orange-500"
+    },
+    {
+      icon: Rocket,
+      title: "Space Resource Intelligence",
+      description: "AI-powered space resource discovery and optimization",
+      color: "from-indigo-500 to-purple-500"
+    },
+    {
+      icon: Cpu,
+      title: "Autonomous DevOps",
+      description: "AI-powered DevOps optimization and automation",
+      color: "from-emerald-500 to-teal-500"
+    },
+    {
+      icon: Database,
+      title: "Edge Computing Orchestration",
+      description: "Advanced edge computing optimization platform",
+      color: "from-yellow-500 to-orange-500"
+    }
+  ],
+
+  const services = $2;
+      description: "Custom AI solutions, neural networks, and autonomous systems",
+      icon: Brain,
+      color: "from-purple-500 to-pink-500"
+    },
+    {
+      title: "Quantum Computing",
+      description: "Quantum algorithms, cryptography, and quantum AI integration",
+      icon: Atom,
+      color: "from-blue-500 to-cyan-500"
+    },
+    {
+      title: "Cybersecurity",
+      description: "Advanced threat detection, quantum-resistant encryption",
+      icon: Shield,
+      color: "from-red-500 to-orange-500"
+    },
+    {
+      title: "Cloud Infrastructure",
+      description: "Scalable cloud solutions, edge computing, and DevOps",
+      icon: Cloud,
+      color: "from-emerald-500 to-teal-500"
+    },
+    {
+      title: "Data Analytics",
+      description: "Big data processing, predictive analytics, and insights",
+      icon: BarChart3,
+      color: "from-indigo-500 to-purple-500"
+    },
+    {
+      title: "Digital Transformation",
+      description: "End-to-end digital transformation and modernization",
+      icon: Rocket,
+      color: "from-yellow-500 to-orange-500"
+    }
+  ],
+
+  const stats = [
+    { number: "500+", label: "Projects Delivered", icon: CheckCircle},
+    { number: "50+", label: "Enterprise Clients", icon: Users},
+    { number: "99.9%", label: "Uptime Guarantee", icon: Shield},
+    { number: "24/7", label: "Support Available", icon: Clock}
+  ],
+
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white overflow-hidden">
+      <Head>
+        <title>Zion Tech Group — Leading-Edge Technology Solutions & Autonomous Innovation Platform</title>
+        <meta name="description" content="Zion Tech Group delivers cutting-edge AI, quantum computing, cybersecurity, and digital transformation solutions. Leading the future of autonomous innovation." />
+        <meta property="og:title" content="Zion Tech Group — Leading-Edge Technology Solutions" />
+        <meta property="og:description" content="Cutting-edge AI, quantum computing, cybersecurity, and digital transformation solutions. Leading the future of autonomous innovation." />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="keywords" content="AI, quantum computing, cybersecurity, digital transformation, autonomous systems, technology solutions" />
+        <link rel="canonical" href="https://ziontechgroup.com" />
+      </Head>
+
+      <EnhancedNavigation />
+
+      {/* Hero Section */}
+      <section className="relative min-h-screen flex items-center justify-center px-6 py-20">
+        {/* Animated Background */}
+        <div className="absolute inset-0 bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950">
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(59,130,246,0.1),transparent_50%)]" />
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(168,85,247,0.1),transparent_50%)]" />
+        </div>
+
+        <div className="relative z-10 text-center max-w-6xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 30}}
+            animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 30 }}
+            transition={{ duration: 0.8 }}
+            className="mb-8"
+          >
+            <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-white via-blue-100 to-cyan-100 bg-clip-text text-transparent mb-6">
+              Zion Tech Group
+            </h1>
+            <p className="text-xl md:text-2xl text-white/80 max-w-3xl mx-auto leading-relaxed">
+              Leading-edge technology solutions and autonomous innovation platform
+            </p>
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 30}}
+            animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 30 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+            className="mb-12"
+          >
+            <p className="text-lg text-white/70 max-w-2xl mx-auto mb-8">
+              Empowering businesses with cutting-edge AI, quantum computing, cybersecurity, 
+              and digital transformation solutions that drive innovation and growth.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <a
+                href="#services"
+                className="px-8 py-4 bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-2xl flex items-center justify-center gap-2"
+              >
+                Explore Services
+                <ArrowRight className="w-5 h-5" />
+              </a>
+              <a
+                href="mailto:kleber@ziontechgroup.com"
+                className="px-8 py-4 border border-white/20 hover:border-white/40 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105 backdrop-blur-sm bg-white/5 hover:bg-white/10"
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
               >
                 Schedule Consultation
               </a>
@@ -272,6 +414,7 @@ industries and driving the future of technology
           <div className='grid grid-cols-1 "md":grid-cols-2 "lg":grid-cols-3 gap-8'>'
             {services.map((service, index) => (
               <motion.div
+<<<<<<< HEAD
 }
 key={service.title}
             className='text-center mb-16'>;'
@@ -609,6 +752,8 @@ className='text-center''
             ))}
             {services.map((service, index) => (
               <motion.div
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
                 key={service.title}
                 initial={{ opacity: 0, y: 30}}
                 whileInView={{ opacity: 1, y: 0}}
@@ -670,12 +815,20 @@ initial={{ "opacity": 0, "y": 30
 
 className='text-center mb-16''
           >
+<<<<<<< HEAD
             <h2 className='text-4xl "md":text-5xl font-bold mb-6 bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent'>'
               Latest Autonomous Updates
             </h2>
             <p className='text-xl text-white/70 max-w-3xl mx-auto'>'
               Stay updated with our latest innovations and autonomous system,
 developments
+=======
+            <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent">
+              Latest Autonomous Updates
+            </h2>
+            <p className="text-xl text-white/70 max-w-3xl mx-auto">
+              Stay updated with our latest innovations and autonomous system developments
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
             </p>
           </motion.div>
           <div className='grid grid-cols-1 "md":grid-cols-2 "lg":grid-cols-3 gap-6'>'
@@ -768,6 +921,7 @@ className='text-center mb-16''
 
       <EnhancedFooter />
     </div>
+<<<<<<< HEAD
             <a;
               href='/reports/updates/update-2025-08-15-0457';
         <div className="max-w-7xl mx-auto">;
@@ -825,3 +979,7 @@ and digital transformation solutions that drive innovation and growth. </p> <div
   /* Enhanced Testimonials Section */ 
 }<EnhancedTestimonialsSection /> > <h2 className="text-4xl "md":text-5xl font-bold mb-6 bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent" > Latest Autonomous Updates </h2> <p className="text-xl text-white/70 max-w-3xl mx-auto" > Stay updated with our latest innovations and autonomous system developments </p> </motion.div> <div className="grid grid-cols-1 "md":grid-cols-2 "lg":grid-cols-3 gap-6" > <a href="/reports/updates/update-2025-08-15-0508" className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl "hover":border-cyan-400/30 transition-all duration-300 transform "hover":scale-105" > <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-"hover":opacity-100" /> <h3 className="text-lg font-semibold text-white" >Autonomous Update — "2025": "08": "15": 0508</h3> <p className="mt-1 text-sm text-white/75" >Freshly published by autonomous agents.</p> <div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90 group-"hover":text-cyan-200 transition-colors duration-300" > Open <span aria-hidden>→</span> </div> </a> <a href="/reports/updates/update-2025-08-15-0507" className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl "hover":border-cyan-400/30 transition-all duration-300 transform "hover":scale-105" > <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-"hover":opacity-100" /> <h3 className="text-lg font-semibold text-white" >Autonomous Update — "2025": "08": "15": 0507</h3> <p className="mt-1 text-sm text-white/75" >Freshly published by autonomous agents.</p> <div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90 group-"hover":text-cyan-200 transition-colors duration-300" > Open <span aria-hidden>→</span> </div> </a> <a href="/reports/updates/update-2025-08-15-0457" className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl "hover":border-cyan-400/30 transition-all duration-300 transform "hover":scale-105" > <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-"hover":opacity-100" /> <h3 className="text-lg font-semibold text-white" >Autonomous Update — "2025": "08": "15": 0457</h3> <p className="mt-1 text-sm text-white/75" >Freshly published by autonomous agents.</p> <div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90 group-"hover":text-cyan-200 transition-colors duration-300" > Open <span aria-hidden>→</span> </div> </a> </div> </div> </section> > Ready to Get Started? </h2> <p className="text-xl text-white/70 max-w-3xl mx-auto" > Let's discuss your project and explore how our cutting-edge technology solutions can transform your business </p> </motion.div> <EnhancedContactForm /> </div> </section> <EnhancedFooter /> </div>)'
 
+=======
+  )
+}
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91

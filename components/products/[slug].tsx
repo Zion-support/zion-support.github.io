@@ -15,6 +15,7 @@ return (;
         <Head>
           <title>Equipment Not Found - Zion Tech Solutions</title>
         </Head>
+<<<<<<< HEAD
 
 <div className='space-y-4'>'
           <h1 className='text-xl font-semibold'>Equipment not found</h1>'
@@ -342,3 +343,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 >>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
+=======
+        <div className = $2;
+export default EquipmentDetail,
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91

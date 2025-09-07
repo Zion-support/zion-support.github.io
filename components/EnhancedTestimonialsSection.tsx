@@ -55,6 +55,7 @@ interface Testimonial  {interface Testimonial  {"id": string;
 }
 
 interface Testimonial {
+<<<<<<< HEAD
   }
   interface Testimonial  {"id": string;
   }
@@ -79,6 +80,16 @@ const "EnhancedTestimonialsSection": React.FC;"category": string;  "id": string;
   "category": string;  "id": string,"name": string,"title": string,"company": string,"content": string,"rating": number,"avatar": string}
 const "EnhancedTestimonialsSection": React.FC = () => {const "testimonials": Testimonial[] = [;
 
+=======
+  id: string,
+  name: string,
+  title: string,
+  company: string,
+  content: string,
+  rating: number,
+  avatar: string,
+  category: string
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
 }
 
 const "EnhancedTestimonialsSection": React.FC = () => ;
@@ -93,6 +104,7 @@ const "EnhancedTestimonialsSection": React.FC = () => ;
     { "number": '500+', "label": 'Projects Delivered', "icon": CheckCircle },{ "number": '50+', "label": 'Enterprise Clients', "icon": Users },{ "number": '99.9%', "label": 'Client Satisfaction', "icon": Award },{ "number": '4.9/5', "label": 'Average Rating', "icon": Star }];'
   const renderStars = ("rating": number) => {return Array.from({ "length": 5 }, (_, i) => (<Star;
         key={i}
+<<<<<<< HEAD
         className={`w - 4 h - 4 ${i < rating ? 'text - yellow - 400 fill - current' : 'text - gray - 400';'        }`}{/* Stats Section */}`        <div className='grid grid-cols-2 "md":grid-cols-4 gap-8 mb-16'>  }'
         "Implementing Zion Tech Group's AI business intelligence suite revolutionized our decision-making process. We now have real-time insights across all departments, leading to 35% faster market response and 28% cost optimization.","rating": 5,"avatar": 'RK',"category": 'AI & Analytics'}];'
 
@@ -158,6 +170,17 @@ return Array.from({ "length": 5,;
         <div className='grid grid-cols-1 "md":grid-cols-2 "lg":grid-cols-3 gap-8'>;'
       />;
 ))}return (<section className='py-24 px-6 relative overflow-hidden'>;'
+=======
+        className={`w-4 h-4 ${
+          i < rating ? 'text-yellow-400 fill-current' : 'text-gray-400'
+        }`}
+      />
+    ))
+  };
+
+  return (
+    <section className="py-24 px-6 relative overflow-hidden">
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
       {/* Background */}
       <div className='absolute inset-0 bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950'>;'
         <div className='absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(59,130,246,0.1),transparent_50%)]' />;'

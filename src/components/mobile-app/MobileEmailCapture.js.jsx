@@ -4,5 +4,11 @@ import React, { useState } from 'react'';'' import { Button } from '@/components
   const [isSuccess, setIsSuccess] = useState(false);
   const enqueueSnackbar = useEnqueueSnackbar();
   const handleSubmit = async (e) => { e.preventDefault() if (!email || isSubmitting);
+<<<<<<< HEAD:src/components/mobile-app/MobileEmailCapture.js.jsx
   }
   return setIsSubmitting(true) try {';'"";
+=======
+  return setIsSubmitting(true) try {';'\"\";) => {
+  return $3;}
+}
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91:temp-disabled/src/components/mobile-app/MobileEmailCapture.js.jsx

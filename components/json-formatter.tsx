@@ -175,6 +175,7 @@ const loadSampleJSON = () => {
     URL.revokeObjectURL(url)
   },
 
+<<<<<<< HEAD
     setErrorMessage('')'
 };
 
@@ -185,6 +186,37 @@ const getLineNumbers = ("text": string) => {
   const lines = text.split('\n');'
 return lines.map((_, index) => index + 1).join('\n')'
 };
+=======
+  const loadSampleJSON = $2;
+      "age": 30,
+      "email": "john.doe@example.com",
+      "address": {
+        "street": "123 Main St",
+        "city": "Anytown",
+        "state": "CA",
+        "zipCode": "12345"
+      },
+      "phoneNumbers": [
+        {
+          "type": "home",
+          "number": "555-123-4567"
+        },
+        {
+          "type": "work",
+          "number": "555-987-6543"
+        }
+      ],
+      "interests": ["programming", "reading", "hiking"],
+      "active": true,
+      "lastLogin": "2024-01-15T10: 30: 00Z"
+    },
+    
+    setInputJson(JSON.stringify(sample, null, 2)),
+    setFormattedJson($2);
+    setIsValid($2);
+    setErrorMessage('')
+  },
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
 
   const getLineNumbers = (text: string) => {
     const lines = text.split($2);
@@ -356,6 +388,7 @@ variant='outline';'
                     <div className='absolute left-0 top-0 bottom-0 w-12 bg-gray-700 border-r border-gray-600 text-xs text-gray-400 p-2 font-mono overflow-hidden'>'
                       {getLineNumbers(inputJson)}
                     </div>
+<<<<<<< HEAD
                     <div className='absolute left-0 top-0 bottom-0 w-12 bg-gray-700 border-r border-gray-600 text-xs text-gray-400 p-2 font-mono overflow-hidden'>                      {getLineNumbers(inputJson)}'
 
                       {getLineNumbers(inputJson)}
@@ -375,6 +408,8 @@ variant='outline';'
                 <div className="relative">;"
                   {showLineNumbers && (<div className="absolute left-0 top-0 bottom-0 w-12 bg-gray-700 border-r border-gray-600 text-xs text-gray-400 p-2 font-mono overflow-hidden">;"
                     </div>;
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
                   )}
 
                   <textarea,

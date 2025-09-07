@@ -45,6 +45,7 @@ const jobsData = jobs.length;
             "status": 'posted''
             "posted_at": '2025-01-01''
 
+<<<<<<< HEAD
          
 }
           {"id": 12;
@@ -137,4 +138,30 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         { label: 'Hire',}
   value: 2 }]})
   },
+=======
+    const funnel = [
+      { label: 'Post', value: jobsData.length },
+      { label: 'Invite', value: Math.max(shortlisted, Math.floor(jobsData.length * 0.8)) },
+      { label: 'Hire', value: filled.length }],
+
+    res.status(200).json({
+      jobsPosted,
+      quotesReceived,
+      timeToHireDays,
+      talentViewed,
+      shortlisted,
+      funnel})
+  } catch (e) {
+    res.status(200).json({
+      jobsPosted: 3,
+      quotesReceived: 2,
+      timeToHireDays: 3.1,
+      talentViewed: 12,
+      shortlisted: 5,
+      funnel: [
+        { label: 'Post', value: 3},
+        { label: 'Invite', value: 2},
+        { label: 'Hire', value: 2}]})
+  }
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
 }

@@ -21,6 +21,7 @@ import {
   ArrowRight, Phone, Mail, MapPin, Globe as GlobeIcon
  } from 'lucide-react';'
 
+<<<<<<< HEAD
 const contactInfo = null;
 ];
 
@@ -55,6 +56,40 @@ const contactInfo = null;
       "This is the most advanced consciousness development tool I've ever encountered. The AI integration makes personal growth accessible to everyone.","
     "rating": 5,
     "avatar": '👩‍🔬','
+=======
+const contactInfo = $2;
+  email: 'kleber@ziontechgroup.com',
+  address: '364 E Main St STE 1008 Middletown DE 19709',
+  website: 'https://ziontechgroup.com'
+},
+
+const features = $2;
+const useCases = $2;
+const technology = $2;
+const integrations = $2;
+const testimonials = $2;
+    role: 'Clinical Psychologist',
+    company: 'Mindful Wellness Center',
+    content: 'The AI Consciousness Evolution platform has revolutionized how we approach emotional intelligence training. Our clients show remarkable improvements in self-awareness and empathy.',
+    rating: 5,
+    avatar: '👩‍⚕️'
+  },
+  {
+    name: 'Michael Rodriguez',
+    role: 'CEO',
+    company: 'InnovateTech Solutions',
+    content: 'Implementing this platform in our leadership development program has transformed our company culture. Our executives are more emotionally intelligent and effective leaders.',
+    rating: 5,
+    avatar: '👨‍💼'
+  },
+  {
+    name: 'Dr. Emily Watson',
+    role: 'Research Director',
+    company: 'Consciousness Research Institute',
+    content: 'This is the most advanced consciousness development tool I\'ve ever encountered. The AI integration makes personal growth accessible to everyone.',
+    rating: 5,
+    avatar: '👩‍🔬'
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
   }
 ];
 
@@ -191,6 +226,7 @@ name='keywords''
           ))}
         </div>
 
+<<<<<<< HEAD
 <div className='relative z-10 text-center px-4 "sm":px-6 "lg":px-8 max-w-6xl mx-auto'>'
           <motion.div,
 initial={{ "opacity": 0, "y": 30 
@@ -198,6 +234,14 @@ initial={{ "opacity": 0, "y": 30
             animate={{ "opacity": 1, "y": 0 }}
             transition={{ "duration": 0 && 0.8 
 }>;
+=======
+        <div className="relative z-10 text-center px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 30}}
+            animate={{ opacity: 1, y: 0}}
+            transition={{ duration: 0.8 }}
+          >
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
             {/* Badge */}
 
             <motion.div,
@@ -212,8 +256,14 @@ className='inline-flex items-center px-4 py-2 bg-gradient-to-r from-purple-500/2
               <Sparkles className='w-4 h-4 mr-2' />'
               Revolutionary AI Technology
             </motion.div>
+<<<<<<< HEAD
             <h1 className='text-4xl "sm":text-5xl "lg":text-7xl font-bold text-white mb-6'>'
               <span className='bg-gradient-to-r from-purple-400 via-pink-400 to-purple-600 bg-clip-text text-transparent'>'
+=======
+
+            <h1 className="text-4xl sm:text-5xl lg:text-7xl font-bold text-white mb-6">
+              <span className="bg-gradient-to-r from-purple-400 via-pink-400 to-purple-600 bg-clip-text text-transparent">
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
                 AI Consciousness
               </span>
               <br />
@@ -227,6 +277,7 @@ your full potential.
             </p>
 
             {/* Key Stats */}
+<<<<<<< HEAD
               style={{left: `${Math && Math.random() * 100}%`,top: `${Math && Math.random() * 100}%`,}}            />;
           ))}
         </div>;
@@ -291,6 +342,16 @@ className='inline-flex items-center px-4 py-2 bg-gradient-to-r from-purple-500/2
                   "icon": <TrendingUp className='w-8 h-8' />;'
                 }
                 {"label": 'Satisfaction',"value": '4.9/5',"icon": <Star className='w-8 h-8' />}].map((stat, index) => (<motion.div;'
+=======
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12">
+              {[
+                { label: 'Success Rate', value: '94%', icon: <Award className = $2;
+                { label: 'Active Users', value: '12.5K+', icon: <Users className = $2;
+                { label: 'Improvement', value: '300%', icon: <TrendingUp className = $2;
+                { label: 'Satisfaction', value: '4.9/5', icon: <Star className="w-8 h-8" /> }
+              ].map((stat, index) => (
+                <motion.div
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
                   key={stat.label}
                   initial={{ "opacity": 0, "y": 20 
 }
@@ -337,6 +398,7 @@ className='bg-gradient-to-r from-purple-500 to-pink-600 "hover":from-purple-600 
               >
                 Start Free Trial
               </motion.button>
+<<<<<<< HEAD
               <motion.button,
 initial={{ "opacity": 0, "scale": 0.9 }}
               ))}
@@ -399,6 +461,8 @@ className='text-center mb-16''
                 {' ,'
 }
 
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
               <motion.button
                 initial={{ opacity: 0, scale: 0.9 }}
                 animate={{ opacity: 1, scale: 1}}
@@ -596,6 +660,7 @@ className='text-center''
         </div>
       </section>
 
+<<<<<<< HEAD
                 </h3>;
                 <p className='text-gray-300 leading-relaxed'>;
                   {step.description}</p>              </motion.div>;
@@ -674,6 +739,54 @@ className='text-center mb-16''
               <span className='bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent'>'
                 {' ,'
 }
+=======
+      {/* How It Works Section */}
+      <section className="py-20 bg-gradient-to-b from-black to-purple-900/20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+            initial={{ opacity: 0, y: 30}}
+            whileInView={{ opacity: 1, y: 0}}
+            transition = $2;
+                title: 'AI Assessment',
+                description: 'Our AI analyzes your current consciousness level and creates a personalized development plan.',
+                icon: <Brain className = $2;
+              {
+                step: '02',
+                title: 'Personalized Training',
+                description: 'AI-generated exercises and experiences tailored to your specific needs and goals.',
+                icon: <Target className = $2;
+              {
+                step: '03',
+                title: 'Continuous Evolution',
+                description: 'Real-time feedback and adaptation ensure continuous growth and development.',
+                icon: <TrendingUp className="w-12 h-12" />
+              }
+            ].map((step, index) => (
+              <motion.div
+                key={step.step}
+                initial={{ opacity: 0, y: 30}}
+                whileInView={{ opacity: 1, y: 0}}
+                transition={{ duration: 0.6, delay: index * 0.2 }}
+                viewport={{ once: true}}
+                className="text-center"
+              >
+                <div className="relative mb-8">
+                  <div className="w-24 h-24 bg-gradient-to-r from-purple-500 to-pink-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <div className="text-white font-bold text-2xl">{step.step}</div>
+                  </div>
+                  <div className="absolute inset-0 bg-gradient-to-r from-purple-500 to-pink-600 rounded-full blur-xl opacity-30"></div>
+                </div>
+                <div className="w-20 h-20 bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-full flex items-center justify-center mx-auto mb-4 text-purple-400">
+                  {step.icon}
+                </div>
+                <h3 className="text-2xl font-bold text-white mb-4">{step.title}</h3>
+                <p className="text-gray-300 leading-relaxed">{step.description}</p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
 
       {/* Use Cases Section */}
       <section className="py-20 bg-black">
@@ -698,6 +811,7 @@ serves diverse needs across multiple domains.
           <div className='grid grid-cols-1 "md":grid-cols-2 "lg":grid-cols-3 gap-8'>'
             {useCases.map((useCase, index) => (
               <motion.div
+<<<<<<< HEAD
 }
 AI Consciousness;
               </span>;
@@ -718,6 +832,8 @@ AI Consciousness;
               across multiple domains.;
             </p>;
           </motion && motion.div>;
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
                 key={useCase}
                 initial={{ "opacity": 0, "y": 20 
 }
@@ -729,6 +845,7 @@ AI Consciousness;
 
 className='group bg-gradient-to-br from-gray-900/50 to-black/50 backdrop-blur-lg border border-purple-500/20 rounded-2xl p-6 "hover":border-purple-400/40 "hover":shadow-xl "hover":shadow-purple-500/20 transition-all duration-300''
               >
+<<<<<<< HEAD
                 <div className='w-16 h-16 bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-xl flex items-center justify-center mb-4 group-"hover":scale-110 transition-transform duration-300'>'
                   <Lightbulb className='w-8 h-8 text-purple-400' />'
                 </div>
@@ -752,6 +869,19 @@ className='group bg-gradient-to-br from-gray-900/50 to-black/50 backdrop-blur-lg
 
           <motion&& motion.div
 
+=======
+                <div className="w-16 h-16 bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
+                  <Lightbulb className="w-8 h-8 text-purple-400" />
+                </div>
+                <h3 className="text-xl font-bold text-white mb-3 group-hover:text-purple-300 transition-colors duration-200">
+                  {useCase}
+                </h3>
+                <p className="text-gray-400">
+                  Leverage AI-powered consciousness development for enhanced personal and professional growth.
+                </p>
+              </motion.div>
+            ))}
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
           </div>
         </div>
       </section>
@@ -854,6 +984,7 @@ with our AI consciousness platform.
           <div className='grid grid-cols-1 "md":grid-cols-3 gap-8'>'
             {testimonials.map((testimonial, index) => (
               <motion.div
+<<<<<<< HEAD
 }
 key={testimonial.name}
                 Say;
@@ -887,10 +1018,19 @@ key={testimonial.name}
                 viewport={{ "once": true }}
 
 className='bg-gradient-to-br from-gray-900/50 to-black/50 backdrop-blur-lg border border-purple-500/20 rounded-2xl p-6''
+=======
+                key={testimonial.name}
+                initial={{ opacity: 0, y: 30}}
+                whileInView={{ opacity: 1, y: 0}}
+                transition={{ duration: 0.6, delay: index * 0.2 }}
+                viewport={{ once: true}}
+                className="bg-gradient-to-br from-gray-900/50 to-black/50 backdrop-blur-lg border border-purple-500/20 rounded-2xl p-6"
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
               >
                 <div className='flex items-center mb-4'>'
                   <div className='text-3xl mr-3'>{testimonial.avatar}</div>'
                   <div>
+<<<<<<< HEAD
                     <h4 className='text-lg font-bold text-white'>'
 
                       {testimonial.nam
@@ -910,10 +1050,21 @@ className='bg-gradient-to-br from-gray-900/50 to-black/50 backdrop-blur-lg borde
                       key={i}
 
                       className='w-5 h-5 text-yellow-400 fill-current'' />
+=======
+                    <h4 className="text-lg font-bold text-white">{testimonial.name}</h4>
+                    <p className="text-sm text-purple-300">{testimonial.role}</p>
+                    <p className="text-xs text-gray-400">{testimonial.company}</p>
+                  </div>
+                </div>
+                <div className="flex items-center mb-4">
+                  {[...Array(testimonial.rating)].map((_, i) => (
+                    <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
                   ))}
                 </div>
                 <p className='text-gray-300 italic'>"{testimonial.content}"</p>"
               </motion.div>
+<<<<<<< HEAD
                 <p className='text-gray-300 italic'>"{testimonial.content}"</p>              </motion.div>"
 
               </motion.div>
@@ -933,6 +1084,8 @@ className='bg-gradient-to-br from-gray-900/50 to-black/50 backdrop-blur-lg borde
         </div>;
       </section>;
             ))}
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
             ))}
           </div>
         </div>
@@ -1025,6 +1178,7 @@ accessible to everyone.
                 "popular": false
               }
             ].map((plan, index) => (
+<<<<<<< HEAD
               <motion.div,
 key={plan.name}
                 initial={{ "opacity": 0, "y": 30 
@@ -1059,6 +1213,20 @@ plan.popular
                     : 'border - purple - 500 / 20';'
                 }`}`              >;
 
+=======
+              <motion.div
+                key={plan.name}
+                initial={{ opacity: 0, y: 30}}
+                whileInView={{ opacity: 1, y: 0}}
+                transition={{ duration: 0.6, delay: index * 0.2 }}
+                viewport={{ once: true}}
+                className={`relative bg-gradient-to-br from-gray-900/50 to-black/50 backdrop-blur-lg border rounded-2xl p-8 ${
+                  plan.popular 
+                    ? 'border-purple-500/50 shadow-2xl shadow-purple-500/20' 
+                    : 'border-purple-500/20'
+                }`}
+              >
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
                 {plan.popular && (
 
 <div className='absolute -top-4 left-1/2 transform -translate-x-1/2'>'
@@ -1128,6 +1296,7 @@ className={`w-full py-3 px-6 rounded-xl font-bold transition-all duration-200 ${
                 </button>
               </motion.div>
             ))}
+<<<<<<< HEAD
       {/* CTA Section *
 }
       <section className='py-20 bg-gradient-to-r from-purple-500/10 to-pink-500/10 border-t border-purple-500/20'>;'
@@ -1157,6 +1326,20 @@ className={`w-full py-3 px-6 rounded-xl font-bold transition-all duration-200 ${
             transition={{ "duration": 0.8 }}
             viewport={{ "once": true }}
 
+=======
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-20 bg-gradient-to-r from-purple-500/10 to-pink-500/10 border-t border-purple-500/20">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 30}}
+            whileInView={{ opacity: 1, y: 0}}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true}}
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
           >
 
 <h2 className='text-4xl font-bold text-white mb-6'>'
@@ -1179,6 +1362,7 @@ evolution journey today.
                 Schedule Demo
               </button>
             </div>
+<<<<<<< HEAD
             {/* Contact Info */}
 
 <div className='mt-12 grid grid-cols-1 "md":grid-cols-3 gap-6'>'
@@ -1292,6 +1476,23 @@ className='text-center''
                     {contact.label}
                   viewport={{ once: true }}
 
+=======
+
+            {/* Contact Info */}
+            <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-6">
+              {[
+                { icon: <Phone className="w-6 h-6" />, label: 'Call Us', value: contactInfo.mobile },
+                { icon: <Mail className="w-6 h-6" />, label: 'Email Us', value: contactInfo.email },
+                { icon: <MapPin className="w-6 h-6" />, label: 'Visit Us', value: contactInfo.address }
+              ].map((contact, index) => (
+                <motion.div
+                  key={contact.label}
+                  initial={{ opacity: 0, y: 20}}
+                  whileInView={{ opacity: 1, y: 0}}
+                  transition={{ duration: 0.6, delay: 0.4 + index * 0.1 }}
+                  viewport={{ once: true}}
+                  className="text-center"
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
                 >
                   <div className='inline-flex items-center justify-center w-12 h-12 bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-full mb-3 text-purple-400'>
                     {contact.icon}

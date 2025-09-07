@@ -1,4 +1,5 @@
 {
+<<<<<<< HEAD
   "startTime": "2025-09-07T03:35:26.863Z",
   "endTime": "2025-09-07T03:38:18.337Z",
   "success": false,
@@ -9,9 +10,22 @@
       "message": "Installing dependencies...",
       "success": true,
       "details": null
-    },
-    "typescriptFix": {
+=======
+  "timestamp": "2025-09-07T11:25:07.671Z",
+  "totalDuration": 32087,
+  "successfulTasks": 5,
+  "totalTasks": 9,
+  "results": {
+    "syntaxFix": {
       "success": true,
+      "duration": 24,
+      "errors": [],
+      "warnings": []
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
+    },
+    "dependencyCheck": {
+      "success": true,
+<<<<<<< HEAD
       "duration": 12508,
       "errors": []
   "timestamp": "2025-09-05T01:24:11.708Z",
@@ -42,6 +56,35 @@
       "message": "Fixing syntax errors...",
       "success": true,
       "details": null
+=======
+      "duration": 2213,
+      "errors": [],
+      "warnings": []
+    },
+    "typeCheck": {
+      "success": false,
+      "duration": 18116,
+      "errors": [
+        "spawnSync /bin/sh ENOBUFS"
+      ],
+      "warnings": []
+    },
+    "linting": {
+      "success": false,
+      "duration": 2072,
+      "errors": [
+        "Command failed: npx eslint app/ --max-warnings 1000\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\n(node:8338) ESLintIgnoreWarning: The \".eslintignore\" file is no longer supported. Switch to using the \"ignores\" property in \"eslint.config.js\": https://eslint.org/docs/latest/use/configure/migration-guide#ignoring-files\n(Use `node --trace-warnings ...` to show where the warning was created)\nWarning: React version not specified in eslint-plugin-react settings. See https://github.com/jsx-eslint/eslint-plugin-react#configuration .\n"
+      ],
+      "warnings": []
+    },
+    "securityAudit": {
+      "success": false,
+      "duration": 1507,
+      "errors": [
+        "Command failed: npm audit --audit-level moderate\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\n"
+      ],
+      "warnings": []
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
     },
     {
       "timestamp": "2025-09-07T03:37:17.725Z",
@@ -69,6 +112,7 @@
       "step": "TYPES",
       "message": "Running type checking...",
       "success": true,
+<<<<<<< HEAD
       "duration": 20538,
       "errors": []
       "errors": ["Command failed: npm run build"]
@@ -84,3 +128,37 @@
     "overallSuccess": false
   }
 }
+=======
+      "duration": 255,
+      "errors": [],
+      "warnings": []
+    },
+    "testSuite": {
+      "success": false,
+      "duration": 5963,
+      "errors": [
+        "spawnSync /bin/sh ENOBUFS"
+      ],
+      "warnings": []
+    },
+    "performanceCheck": {
+      "success": true,
+      "duration": 43,
+      "errors": [],
+      "warnings": []
+    },
+    "gitOperations": {
+      "success": true,
+      "duration": 1891,
+      "errors": [],
+      "warnings": []
+    }
+  },
+  "recommendations": [
+    "Address TypeScript type errors",
+    "Fix ESLint issues",
+    "Address security vulnerabilities",
+    "Fix failing tests"
+  ]
+}
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91

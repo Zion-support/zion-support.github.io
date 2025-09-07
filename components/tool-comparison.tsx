@@ -592,6 +592,7 @@ variant='ghost';'
                     </td>;
                   </tr>;
                 ))}
+<<<<<<< HEAD
           )}
         </div>;
       </section>;
@@ -642,6 +643,8 @@ variant='ghost';'
 
           <div className='grid grid-cols-1 "lg":grid-cols-2 gap-8'>;'
             {sortedTools && sortedTools.slice(0, 6).map((tool, index) => (;
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
               </tbody>
             </table>
           </div>

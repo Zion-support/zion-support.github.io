@@ -33,6 +33,7 @@ return (;
       {onJoin && (
         <button onClick={onJoin} disabled={!canJoin} className={`px-3 py-2 rounded ${canJoin ? 'bg-cyan-600 text-white' : 'bg-gray-700 text-gray-400'}`}>`
           Join Meeting
+<<<<<<< HEAD
         </button>
       )}
 
@@ -99,6 +100,8 @@ Join Meeting </button>)
         <button onClick={onJoin} disabled={!canJoin} className={`px-3 py-2 rounded ${canJoin ? 'bg-cyan-600 text-white' : 'bg-gray-700 text-gray-400'}`} />
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
           Join Meeting;
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
         </button>
       )}
     </div>;

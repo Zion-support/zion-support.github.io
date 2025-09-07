@@ -4,6 +4,7 @@ import path from \"path\";"
 import { authenticateRequest, enforceRateLimit, recordRequest } from \"../../utils/api/partnerAuth\";"
 import { v4 as uuidv4 } from \"uuid\";
 
+<<<<<<< HEAD
 const REDEMPTIONS_FILE = null;
   return res.status(200).json({ ok: true });
 }
@@ -331,6 +332,32 @@ redeemed_at: now,
     await recordRequest(req, res, auth.partner, auth.apiKey, started, 400);
 
     await recordRequest(req, res, auth.partner, auth.apiKey, started, 400)records.push(record)await fs.writeJSON(REDEMPTIONS_FILE, records, { spaces: 2 })await recordRequest(req, res, auth.partner, auth.apiKey, started, 201)return res.status(201).json({ id: record.id, redeemedAt: now })
+=======
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+  const started = Date.now($2);
+  const auth = await authenticateRequest($2);
+  if (!auth) {
+    return res.status(401).json({ error: "Unauthorized" })
+  }
+  if (!(await enforceRateLimit(auth.apiKey))) {
+    await recordRequest($2);
+    return res.status(429).json({ error: "Rate limit exceeded" })
+  }
+  if (req.method !== "POST") {
+    res.setHeader($2);
+    await recordRequest($2);
+    return res.status(405).json({ error: "Method Not Allowed" })
+  }
+  const { studentEmail, grantCode, courseId } = req.body || {},
+  if (!studentEmail || !grantCode || !courseId) {
+    await recordRequest($2);
+    return res.status(400).json({ error: "Missing required fields" })
+  }
+  await fs.ensureDir(path.dirname(REDEMPTIONS_FILE)),
+  const records = $2;
+  const now = new Date().toISOString($2);
+  const record = {
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
     id: uuidv4($2);
     partnerId: auth.partner.id,
     studentEmail,
@@ -341,6 +368,7 @@ redeemed_at: now,
   await fs.writeJSON($2);
   await recordRequest($2);
   return res.status(201).json({ id: record.id, redeemedAt: now})
+<<<<<<< HEAD
 }
 =======
   return res.status(201).json({ id: record.id;, redeemedAt: now ;})
@@ -348,3 +376,6 @@ redeemed_at: now,
 
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 >>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
+=======
+}
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91

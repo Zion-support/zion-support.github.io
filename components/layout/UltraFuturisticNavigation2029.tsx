@@ -1265,6 +1265,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                                 <span className="text-sm text-gray-300">{service.name}</span>
                                 <span className="text-xs text-cyan-400 font-mono">{service.price}</span>
 <<<<<<< HEAD
+<<<<<<< HEAD
                                 </span>;
                                 <span className='text-xs text-cyan-400 font-mono'>;
                                   {service.price}</span>                              </div>                              className="block p-2 rounded bg-black/30 hover:bg-cyan-500/20 transition-all duration-200";
@@ -1371,6 +1372,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                               </div>
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
+=======
+                              </div>
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
                             </Link>
                           ))}
                         </div>

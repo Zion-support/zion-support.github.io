@@ -7,6 +7,7 @@ const createJestConfig = nextJest({
 
 module.exports = {
 
+<<<<<<< HEAD
   moduleNameMapper: {
     '^@/(.*)$': '<rootDir>/src/$1',
     '\\.(css|less|scss|sass)$': 'identity-obj-proxy'
@@ -32,6 +33,8 @@ module.exports = {
     '!**/node_modules/**',
     '!**/*.d.ts'
   ],
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
 // Add any custom config to be passed to Jest
 const customJestConfig = {
   setupFilesAfterEnv: ['<rootDir>/jest.setup.js'],
@@ -145,4 +148,8 @@ module.exports = {
   passWithNoTests: true}
 
 // createJestConfig is exported this way to ensure that next/jest can load the Next.js config which is async
+<<<<<<< HEAD
 module.exports = createJestConfig(customJestConfig)
+=======
+module.exports = createJestConfig(customJestConfig)
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91

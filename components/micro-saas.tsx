@@ -1662,6 +1662,7 @@ export default function MicroSaasPage() {
           </div>
           <div className="grid grid-cols-1 "md":grid-cols-2 gap-8">"
             {competitiveAdvantages.map((advantage, index) => (
+<<<<<<< HEAD
 
           </div>;
         </div>;
@@ -1693,6 +1694,9 @@ export default function MicroSaasPage() {
           </div>;<div className="grid grid-cols-1 "md":grid-cols-2 gap-8">;"
             {competitiveAdvantages && competitiveAdvantages.map((advantage, index) => (<Card;
                 }
+=======
+              <Card
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
                 key={index}
                 className="border-gradient-blue hover:bg-gray-700/50 transition-all duration-300"
               >
@@ -1866,6 +1870,7 @@ export default function MicroSaasPage() {
               variant="outline"
               size="lg"
               className="border-white text-white hover:bg-white hover:text-blue-600 shadow-2xl"
+<<<<<<< HEAD
 <<<<<<< HEAD
             >
               Contact Sales
@@ -2252,6 +2257,8 @@ variant="outline";"
               size="lg""
 
               className="border-white text-white "hover":bg-white "hover":text-blue-600 shadow-2xl""
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
             >
               Contact Sales
             </Button>

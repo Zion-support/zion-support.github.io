@@ -1,5 +1,6 @@
 
 
+<<<<<<< HEAD
 import fs from 'fs';'
 import path from 'path';'
 
@@ -59,6 +60,9 @@ export default /**
  * DepRadarPage - Function description
  */
 function DepRadarPage() {
+=======
+export default function DepRadarPage({ outdated, generatedAt }: { outdated: Outdated[], generatedAt: string}) {
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
   return (
     <div className="space-y-6">;
       <h1 className="text-2xl font-semibold">AI Automation: Dependency Radar</h1>;
@@ -76,6 +80,7 @@ function DepRadarPage() {
                 <th className="text-left p-2">Current</th>
                 <th className="text-left p-2">Latest</th>
                 <th className="text-left p-2">Type</th>
+<<<<<<< HEAD
 "
         <div className=\"text-sm text-gray-600\" />All dependencies up to date.</div>
       ) : ("
@@ -96,6 +101,17 @@ function DepRadarPage() {
                   <td className=\"p-2\" />{o.current}</td>"
                   <td className=\"p-2\" />{o.latest}</td>"
                   <td className=\"p-2\" />{o.type}</td>
+=======
+              </tr>
+            </thead>
+            <tbody>
+              {outdated.map(o => (
+                <tr key={o.name} className="border-t">
+                  <td className="p-2">{o.name}</td>
+                  <td className="p-2">{o.current}</td>
+                  <td className="p-2">{o.latest}</td>
+                  <td className="p-2">{o.type}</td>
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
                 </tr>
 >>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
 

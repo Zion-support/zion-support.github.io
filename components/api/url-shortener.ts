@@ -156,10 +156,16 @@ try {
       if (!isValidUrl(originalUrl)) {
         }
         return res.status(400).json({
+<<<<<<< HEAD
           }
           "success": false,
 "error": 'Invalid URL format','
         });
+=======
+          success: false;
+          error: 'Invalid URL format'
+        })
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
       }
       // Check if URL already exists,
 const existingUrl = Array.from(urlStorage.values()).find(;
@@ -168,6 +174,7 @@ const existingUrl = Array.from(urlStorage.values()).find(;
       if (existingUrl) {
         }
         return res.status(200).json({
+<<<<<<< HEAD
           }
           "success": true,
 "data": existingUrl
@@ -179,6 +186,11 @@ let shortCode = customCode || generateShortCode();
 while (urlStorage.has(shortCode)) {
         }
         shortCode = generateShortCode();
+=======
+          success: true;
+          data: existingUrl
+        })
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
       }
 
 const "shortUrl": ShortUrl = {
@@ -195,6 +207,7 @@ const "shortUrl": ShortUrl = {
       urlStorage.set(shortCode, shortUrl);
 
       res.status(201).json({
+<<<<<<< HEAD
         }
         "success": true,
 "data": shortUrl
@@ -208,9 +221,21 @@ const "shortUrl": ShortUrl = {
 "error": 'Internal server error','
       });
 >>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
+=======
+        success: true;
+        data: shortUrl
+      })
+    } catch (error) {
+      console.error('URL shortening error:', error);
+      res.status(500).json({
+        success: false;
+        error: 'Internal server error'
+      })
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
     }
   } else if (req.method = == 'GET') {'
     // Get all URLs (for demo purposes)
+<<<<<<< HEAD
    ;
   }
   const urls = Array.from(urlStorage.values());
@@ -275,6 +300,24 @@ export async function getServerSideProps() {
 // Handle redirects for short URLs,
 export async function getServerSideProps() {
   }
+=======
+    const urls = Array.from(urlStorage.values());
+    res.status(200).json({
+      success: true;
+      data: urls as any
+    })
+  } else {
+    res.status(405).json({
+      success: false;
+      error: 'Method not allowed'
+    })
+  }
+}
+
+// Handle redirects for short URLs
+export async function getServerSideProps({ params }: { params: { shortCode: string } }) {
+  const shortCode = params.shortCode;
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
   const shortUrl = urlStorage.get(shortCode);
 
   if (!shortUrl || !shortUrl.isActive) {
@@ -289,11 +332,15 @@ export async function getServerSideProps() {
 
   // Increment click count
   shortUrl.clicks++;
+<<<<<<< HEAD
 =======
 // Handle redirects for short URLs;
 export async function getServerSideProps({ params }: { params: { shortCode: string } }) {};
   const shortCode = params.shortCode;
   const shortUrl = urlStorage.get(shortCode);
+=======
+  urlStorage.set(shortCode, shortUrl);
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
 
   if (!shortUrl || !shortUrl.isActive) {}
     return {}

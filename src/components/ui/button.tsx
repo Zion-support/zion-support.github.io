@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 ;
 import React from 'react';'
@@ -37,11 +38,96 @@ interface ButtonProps {
   disabled?: boolean;
   style?: React.CSSProperties;
 
+=======
+children,
+  href,
+  onClick,
+  type = "button",
+  variant = "primary",
+  size = "md",
+  className = "",
+  disabled = false,
+  style,
+}) => {
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    return this.props.children;
+  }
+}
+import React from "react";
+import Link from "next/link";
+interface ButtonProps {
+  children: React.ReactNode;
+  href?: string;
+  onClick?: () => void;
+  type?: "button" | "submit" | "reset";
+  variant?: "primary" | "secondary" | "outline";
+  size?: "sm" | "md" | "lg";
+  className?: string;
+  disabled?: boolean;
+  style?: React && React.CSSProperties;
+}
+const Button: React.FC<ButtonProps> = ({
+  children,
+  href,
+  onClick,
+  type = "button",
+  variant = "primary",
+  size = "md",
+  className = "",
+  disabled = false,
+  style,
+}) => {
+  const baseClasses =
+    "px-4 py-2 rounded-md font-medium transition-colors duration-200";
+  const sizeClasses = {
+    sm: "px-3 py-1.5 text-sm",
+    md: "px-4 py-2 text-base",
+    lg: "px-6 py-3 text-lg",
+  };
+  const variantClasses = {
+    primary: "bg-blue-600 text-white hover:bg-blue-700 disabled:bg-gray-400",
+    secondary: "bg-gray-600 text-white hover:bg-gray-700 disabled:bg-gray-400",
+  };
+  const classes = `${baseClasses} ${sizeClasses[size]} ${variantClasses[variant]} ${className}`;
+  const content = <>{children}</>;
+  }
+  return (
+    <button
+      type={type}
+      className={classes}
+      onClick={onClick}
+      disabled={disabled}
+    </button>;
+      style={style}
+    >
+      {content}
+    </button>
+  );
+};
+=======
+import * as React from "react";
+import { cn } from "@/lib/utils";
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
 export interface ButtonProps
   extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   variant?: "default" | "destructive" | "outline" | "secondary" | "ghost" | "link";
   size?: "default" | "sm" | "lg" | "icon";
 }
+<<<<<<< HEAD
 
 const "Button": React.FC<ButtonProps> = ({ children,href,onClick,type = "button",variant = "primary",size = "md",className = "",disabled = false,style;"
    }) => {
@@ -182,3 +268,35 @@ export default Button;
 
 export default Button;ursor/automate-test-improve-and-merge-code-646c;
   )}
+=======
+const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
+  ({ className, variant = "default", size = "default", ...props }, ref) => {
+    return (
+      <button
+        className={cn(
+          "inline-flex items-center justify-center rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50",
+          {
+            "bg-primary text-primary-foreground hover:bg-primary/90": variant === "default",
+            "bg-destructive text-destructive-foreground hover:bg-destructive/90": variant === "destructive",
+            "border border-input bg-background hover:bg-accent hover:text-accent-foreground": variant === "outline",
+            "bg-secondary text-secondary-foreground hover:bg-secondary/80": variant === "secondary",
+            "hover:bg-accent hover:text-accent-foreground": variant === "ghost",
+            "text-primary underline-offset-4 hover:underline": variant === "link",
+          },
+          {
+            "h-10 px-4 py-2": size === "default",
+            "h-9 rounded-md px-3": size === "sm",
+            "h-11 rounded-md px-8": size === "lg",
+            "h-10 w-10": size === "icon",
+          },
+          className
+        )}
+        ref={ref}
+        {...props}
+      />
+    );
+  }
+);
+Button.displayName = "Button";
+export { Button };
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91

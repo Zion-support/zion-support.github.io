@@ -12,6 +12,7 @@ export default function AIContentGeneratorPage() {
 
 const pricingPlans = [;
     {
+<<<<<<< HEAD
       }
       "name": 'Starter''
       "price": '$29''
@@ -197,6 +198,92 @@ const integrations = [;
           content='Advanced AI-powered content creation with real-time generation, SEO optimization, and multi-language support.';' />;
         <meta name='"twitter":card' content='summary_large_image' />;'
       </Head>;
+=======
+      name: 'Starter',
+      price: '$29',
+      period: '/month',
+      description: 'Perfect for individuals and small blogs',
+      features: [
+        '1,000 words per month5 content templatesBasic SEO optimizationEmail supportAPI access (100 calls/month)Content analytics dashboard'
+      ];
+      popular: false,
+      color: 'border-gray-600',
+      buttonColor: 'bg-gray-600 hover:bg-gray-700'
+    };
+    {
+      name: 'Professional',
+      price: '$99',
+      period: '/month',
+      description: 'Ideal for growing businesses and agencies',
+      features: [
+        '10,000 words per month25+ content templatesAdvanced SEO toolsPriority supportAPI access (1,000 calls/month)Advanced analyticsTeam collaborationCustom branding'
+      ];
+      popular: true,
+      color: 'border-blue-500',
+      buttonColor: 'bg-blue-600 hover:bg-blue-700'
+    };
+    {
+      name: 'Enterprise',
+      price: '$299',
+      period: '/month',
+      description: 'For large organizations and enterprises',
+      features: [
+        'Unlimited wordsAll templates + customFull SEO suiteDedicated supportUnlimited API accessAdvanced analyticsWhite-label solutionCustom integrations';
+        'SLA guarantee'
+      ];
+      popular: false,
+      color: 'border-purple-600',
+      buttonColor: 'bg-purple-600 hover:bg-purple-700'
+    }
+  ];
+
+  const useCases = [
+    {
+      title: 'Blog Writing',
+      description: 'Generate engaging blog posts, articles, and long-form content in minutes.';
+      icon: '📝',
+      examples: ['Tech reviewsHow-to guidesIndustry insightsProduct comparisons']
+    };
+    {
+      title: 'Marketing Copy',
+      description: 'Create compelling ad copy, landing pages, and marketing materials.';
+      icon: '🎯',
+      examples: ['Facebook adsGoogle adsLanding pagesEmail campaigns']
+    };
+    {
+      title: 'Social Media',
+      description: 'Generate engaging social media posts, captions, and hashtag suggestions.';
+      icon: '📱',
+      examples: ['Instagram postsTwitter threadsLinkedIn articlesTikTok captions']
+    };
+    {
+      title: 'E-commerce',
+      description: 'Write product descriptions, category pages, and promotional content.';
+      icon: '🛍️',
+      examples: ['Product descriptionsCategory pagesPromotional emailsFAQ sections']
+    }
+  ];
+
+  const integrations = [
+    { name: 'WordPress', icon: '🔌', description: 'Direct plugin integration' },
+    { name: 'Shopify', icon: '🛒', description: 'E-commerce content automation' },
+    { name: 'HubSpot', icon: '📊', description: 'Marketing automation sync' },
+    { name: 'Mailchimp', icon: '📧', description: 'Email campaign content' },
+    { name: 'Slack', icon: '💬', description: 'Team collaboration' },
+    { name: 'Zapier', icon: '⚡', description: '500+ app integrations' }
+  ];
+
+  return (
+    <>
+      <Head>
+        <title>AI Content Generator | Zion Tech Group - Advanced AI-Powered Content Creation</title>
+        <meta name="description" content="Generate high-quality, SEO-optimized content in seconds with our advanced AI content generator. Support for 50+ languages, plagiarism-free writing, and real-time generation." />
+        <meta property="og:title" content="AI Content Generator | Zion Tech Group" />
+        <meta property="og:description" content="Advanced AI-powered content creation with real-time generation, SEO optimization, and multi-language support." />
+        <meta name="twitter:card" content="summary_large_image" />
+      </Head>
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
       {/* Hero Section */}
 
       <section className='relative min-h-screen flex items-center justify-center overflow-hidden bg-black'>'
@@ -382,6 +469,7 @@ key={exampleIndex}
                 </div>
               </Card>
             ))}
+<<<<<<< HEAD
       {/* Pricing Section */}<section id="pricing" className="py-24 bg-gray-900 relative overflow-hidden">;"
         <div className="max-w-7xl mx-auto px-4 "sm":px-6 "lg":px-8 relative z-10">;"
           <div className="text-center mb-20">;"
@@ -390,6 +478,11 @@ key={exampleIndex}
             </h2>;
             <p className="text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed">;"
       {/* Pricing Section */}
+=======
+          </div>
+        </div>
+      </section>
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
 
 
 <section,

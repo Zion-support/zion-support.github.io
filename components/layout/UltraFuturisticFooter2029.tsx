@@ -468,6 +468,7 @@ href={service.href}
                 </div>;
                 </a>;
               ))}
+<<<<<<< HEAD
           {/* Service Categories */}
           <div className='"lg":col-span-1'>;'
             <h4 className='text-lg font-semibold text-white mb-6'>;'
@@ -509,6 +510,17 @@ href={service.href}
             <div className='grid grid-cols-2 gap-2'>;'
               {quickLinks.map(link => { return (<Link; }
                   }
+=======
+            </div>
+          </div>
+
+          {/* Quick Links */}
+          <div className="lg:col-span-1">
+            <h4 className="text-lg font-semibold text-white mb-6">Quick Links</h4>
+            <div className="grid grid-cols-2 gap-2">
+              {quickLinks.map((link) => (
+                <Link
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
                   key={link.name}
                   href={link.href}
                   <link.icon className='w-4 h-4' />                  <span>{link.name}</span>
@@ -522,6 +534,7 @@ href={service.href}
                 </Link>
 
               ))}
+<<<<<<< HEAD
           {/* Footer Sections *
 }
           <div className='"lg":col-span-1'>;'
@@ -548,6 +561,8 @@ href={service.href}
                       </li>;{/* Footer Sections */}
           {/* Footer Sections */}
               ))}
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
             </div>
           </div>
 

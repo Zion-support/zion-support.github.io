@@ -250,8 +250,11 @@ const fadeInUp  = null;IT infrastructure, AI services, industry solutions, and e
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
+<<<<<<< HEAD
 <<<<<<< HEAD:components/2025-comprehensive-services-showcase-v2.tsx
           >;
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
             initial={{ opacity: 0, y: 20 ,}
 }
             whileInView={{ opacity: 1, y: 0 }}
@@ -265,14 +268,20 @@ const fadeInUp  = null;IT infrastructure, AI services, industry solutions, and e
             className="grid md:grid-cols-3 gap-8";
 <motion.div;
             className='grid md:grid-cols-3 gap-8';
+<<<<<<< HEAD
 <<<<<<< HEAD:components/2025-comprehensive-services-showcase-v2.tsx
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.2 }}
+<<<<<<< HEAD
 <<<<<<< HEAD:components/2025-comprehensive-services-showcase-v2.tsx
           >;
             <div className="text-center">;
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
            />;
             <div className="text-center" />;
               <Phone className="w-12 h-12 text-cyan-400 mx-auto mb-4" />;
@@ -318,13 +327,19 @@ const fadeInUp  = null;IT infrastructure, AI services, industry solutions, and e
         <div className='max-w-7xl mx-auto' />;
           <motion.h2;
             className='text-4xl md:text-5xl font-bold text-white text-center mb-16';
+<<<<<<< HEAD
 <<<<<<< HEAD:components/2025-comprehensive-services-showcase-v2.tsx
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
+<<<<<<< HEAD
 <<<<<<< HEAD:components/2025-comprehensive-services-showcase-v2.tsx
           >;
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
             initial={{ opacity: 0, y: 20 ,}
 }
             whileInView={{ opacity: 1, y: 0 }}
@@ -500,7 +515,10 @@ const fadeInUp  = null;IT infrastructure, AI services, industry solutions, and e
                 </div>;
               </motion.div>;
             ))}
+<<<<<<< HEAD
 <<<<<<< HEAD:components/2025-comprehensive-services-showcase-v2.tsx
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
           </motion.div>;
         </div>;
       </section>;
@@ -512,13 +530,19 @@ const fadeInUp  = null;IT infrastructure, AI services, industry solutions, and e
         <div className='max-w-7xl mx-auto' />;
           <motion.h2;
             className='text-4xl md:text-5xl font-bold text-white text-center mb-16';
+<<<<<<< HEAD
 <<<<<<< HEAD:components/2025-comprehensive-services-showcase-v2.tsx
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
+<<<<<<< HEAD
 <<<<<<< HEAD:components/2025-comprehensive-services-showcase-v2.tsx
           >;
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
             initial={{ opacity: 0, y: 20 ,}
 }
             whileInView={{ opacity: 1, y: 0 }}
@@ -532,16 +556,22 @@ const fadeInUp  = null;IT infrastructure, AI services, industry solutions, and e
             className="grid md:grid-cols-2 lg:grid-cols-4 gap-8";
 <motion.div;
             className='grid md:grid-cols-2 lg:grid-cols-4 gap-8';
+<<<<<<< HEAD
 <<<<<<< HEAD:components/2025-comprehensive-services-showcase-v2.tsx
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.2 }}
+<<<<<<< HEAD
 <<<<<<< HEAD:components/2025-comprehensive-services-showcase-v2.tsx
           >;
             <div className="text-center">;
               <div className="text-4xl md:text-5xl font-bold text-cyan-400 mb-2">25+</div>;
               <div className="text-white text-lg">New Services Added</div>;
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
             initial={{ opacity: 0, y: 20 ,}
 }
             whileInView={{ opacity: 1, y: 0 }}
@@ -602,13 +632,19 @@ const fadeInUp  = null;IT infrastructure, AI services, industry solutions, and e
         <div className='max-w-4xl mx-auto text-center' />;
           <motion.h2;
             className='text-4xl md:text-5xl font-bold text-white mb-6';
+<<<<<<< HEAD
 <<<<<<< HEAD:components/2025-comprehensive-services-showcase-v2.tsx
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
+<<<<<<< HEAD
 <<<<<<< HEAD:components/2025-comprehensive-services-showcase-v2.tsx
           >;
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
             initial={{ opacity: 0, y: 20 ,}
 }
             whileInView={{ opacity: 1, y: 0 }}
@@ -622,13 +658,19 @@ const fadeInUp  = null;IT infrastructure, AI services, industry solutions, and e
             className="text-xl text-gray-300 mb-8";
 <motion.p;
             className='text-xl text-gray-300 mb-8';
+<<<<<<< HEAD
 <<<<<<< HEAD:components/2025-comprehensive-services-showcase-v2.tsx
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.2 }}
+<<<<<<< HEAD
 <<<<<<< HEAD:components/2025-comprehensive-services-showcase-v2.tsx
           >;
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
             initial={{ opacity: 0, y: 20 ,}
 }
             whileInView={{ opacity: 1, y: 0 }}
@@ -648,7 +690,10 @@ Join thousands of businesses already transforming their operations;
           </motion.p />;
           <motion.div;
             className='flex flex-col sm:flex-row gap-4 justify-center';
+<<<<<<< HEAD
 <<<<<<< HEAD:components/2025-comprehensive-services-showcase-v2.tsx
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -681,6 +726,7 @@ Join thousands of businesses already transforming their operations;
               href="https://ziontechgroup.com";
               className="px-8 py-4 border-2 border-cyan-500 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-500 hover:text-white transition-all duration-200";
 <a;
+<<<<<<< HEAD
               href={`mailto:${contactInfo.email}`}
           >;
             <a;
@@ -693,6 +739,8 @@ Join thousands of businesses already transforming their operations;
               href="https://ziontechgroup.com";
               className="px-8 py-4 border-2 border-cyan-500 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-500 hover:text-white transition-all duration-200";
 <a;
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
               href={`mailto:${contactInfo.email}`}
               className='px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-200 hover:scale-105 shadow-lg';
 <<<<<<< HEAD:components/2025-comprehensive-services-showcase-v2.tsx

@@ -1052,6 +1052,7 @@ className='w-12 h-12 bg-gradient-to-br from-cyan-500 via-purple-500 to-pink-500 
                       transition={{ "duration": 0.2 }}
 className='absolute top-full left-0 mt-2 w-96 bg-gray-900/95 backdrop-blur-xl border border-gray-700/50 rounded-2xl shadow-2xl shadow-cyan-500/20 overflow-hidden''
                     >
+<<<<<<< HEAD
                       <div className='p-4'>'
                         <div className='flex items-center space-x-3 mb-4'>'
                           <div
@@ -1122,6 +1123,10 @@ className='absolute top-full left-0 mt-2 w-96 bg-gray-900/95 backdrop-blur-xl bo
                                   {child.price}"
                       <div className="p-4">"
                         <div className="flex items-center space-x-3 mb-4">`
+=======
+                      <div className="p-4">
+                        <div className="flex items-center space-x-3 mb-4">
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
                           <div className={`p-3 rounded-xl bg-gradient-to-br ${item.color} shadow-lg`}>
                             {item.icon}
                           </div>
@@ -1373,6 +1378,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 <div className='flex items-center space-x-4'>
 origin/cursor/automate-test-improve-and-merge-code-2533
             {/* Contact Info */}
+<<<<<<< HEAD
 =======
             {/* Contact Info */}'
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
@@ -1404,6 +1410,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
               >'
                 <Mail className='w-4 h-4' />                <span>{contactInfo.email}</span>            {/* Contact Info */}"
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
             <div className="hidden lg:flex items-center space-x-4 text-sm">
               <a;`
                 href={`tel:${contactInfo.mobile}`}"
@@ -1770,6 +1778,7 @@ href='/contact''
       </AnimatePresence>
     </header>
   )
+<<<<<<< HEAD
 };
 
   `fixed top-0 left-0 right-0 z-50 transition-all duration-500 $ {`  }
@@ -1813,6 +1822,8 @@ href='/contact''
 }</div> </div> <div> <h3 className="text-lg font-semibold text-white mb-4" >Contact Info</h3> <div className="space-y-3" > <a </div> </div> </div> </div> </div> <Link href="/contact" className="inline-flex items-center justify-center w-full px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-medium rounded-xl shadow-lg shadow-cyan-500/30 transition-all duration-300" > <Rocket className="w-4 h-4 mr-2" /> Get Started Today </a> </div> </div> </motion.div>) "
 }</AnimatePresence> </header>) 
 <<<<<<< HEAD
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
 };
 export default UltraFuturisticNavigation2027;
 origin/cursor/automate-test-improve-and-merge-code-2533

@@ -1,6 +1,9 @@
 /// <reference types="next" />
 /// <reference types="next/image-types/global" />
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-9862
 /// <reference path="./.next/types/routes.d.ts" />
 =======
 // Reference to routes types is handled by Next.js automatically

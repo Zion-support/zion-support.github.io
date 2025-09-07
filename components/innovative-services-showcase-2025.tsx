@@ -135,6 +135,7 @@ property='"og":url''
           <div className='absolute bottom-32 left-32 w-28 h-28 bg-gradient-to-r from-green-500/20 to-emerald-500/20 rounded-full blur-3xl animate-pulse delay-500'></div>'
         </div>
 
+<<<<<<< HEAD
         <div className='relative z-10 text-center px-4 "sm":px-6 "lg":px-8 max-w-7xl mx-auto'>'
           <motion.div,
 initial={{ "opacity": 0, "y": 30 
@@ -143,6 +144,14 @@ initial={{ "opacity": 0, "y": 30
             transition={{ "duration": 0.8 
 }
 className='mb-8''
+=======
+        <div className="relative z-10 text-center px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 30}}
+            animate={{ opacity: 1, y: 0}}
+            transition={{ duration: 0.8 }}
+            className="mb-8"
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
           >
             <div className='inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500/10 to-blue-500/10 border border-cyan-500/20 text-cyan-400 text-sm font-medium mb-6'>'
               <Star className='w-4 h-4 mr-2' />'
@@ -491,6 +500,7 @@ className='text-center py-20''
         </div>
       </section>
 
+<<<<<<< HEAD
               animate={{ opacity: 1 }}className='text-center py-20';
             >;
               <div className='text-gray-400 text-xl mb-4'>;
@@ -534,6 +544,19 @@ initial={{ "opacity": 0, "y": 30
 className='text-center mb-16''
           >
             <h2 className='text-3xl "md":text-5xl font-bold text-white mb-6'>'
+=======
+      {/* Contact Section */}
+      <section className="py-20 bg-gradient-to-b from-slate-900 to-black">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+            initial={{ opacity: 0, y: 30}}
+            whileInView={{ opacity: 1, y: 0}}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true}}
+            className="text-center mb-16"
+          >
+            <h2 className="text-3xl md:text-5xl font-bold text-white mb-6">
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
               Ready to Transform Your Business?
             </h2>
             <p className='text-xl text-gray-300 max-w-3xl mx-auto'>'
@@ -542,6 +565,7 @@ can revolutionize your operations and drive growth.
             </p>
           </motion.div>
 
+<<<<<<< HEAD
 
           <div className='grid grid-cols-1 "md":grid-cols-3 gap-8'>'
             <motion.div,
@@ -632,6 +656,29 @@ className='text-center'>;'
               viewport={{ "once": true }}
 
 className='text-center''
+=======
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <motion.div
+              initial={{ opacity: 0, y: 30}}
+              whileInView={{ opacity: 1, y: 0}}
+              transition={{ duration: 0.8, delay: 0.1 }}
+              viewport={{ once: true}}
+              className="text-center"
+            >
+              <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                <Phone className="w-8 h-8 text-white" />
+              </div>
+              <h3 className="text-xl font-semibold text-white mb-2">Phone</h3>
+              <p className="text-gray-300">{contactInfo.mobile}</p>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 30}}
+              whileInView={{ opacity: 1, y: 0}}
+              transition={{ duration: 0.8, delay: 0.2 }}
+              viewport={{ once: true}}
+              className="text-center"
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
             >
               <div className='w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-2xl flex items-center justify-center mx-auto mb-4'>'
                 <MapPin className='w-8 h-8 text-white' />'

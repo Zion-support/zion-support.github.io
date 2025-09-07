@@ -80,12 +80,32 @@ const AdvancedAnalyticsDashboard = () => {}
       name: 'IoT Platform', performance: 85, growth: 8.7, clients: 67, revenue: 340000, '';
       status: 'stable'}
   ]'';
+<<<<<<< HEAD:src_backup/components/AdvancedAnalyticsDashboard.js.jsx
   const categoryDistribution = ['';
     { label: 'AI & ML', value: 35, color: 'from-purple-500 to-pink-600' }, '';
     { label: 'Quantum', value: 20, color: 'from-blue-500 to-cyan-600' },'';
     { label: 'Blockchain', value: 25, color: 'from-green-500 to-emerald-600' }, '';
     { label: 'Cybersecurity', value: 15, color: 'from-red-500 to-pink-600' },'';
     { label: 'IoT', value: 5, color: 'from-orange-500 to-yellow-600' }
+=======
+
+const categoryDistribution = ['';
+    { label: 'AI & ML',}
+  value: 35, color: 'from-purple-500 to-pink-600',}
+}, '';
+    { label: 'Quantum',}
+  value: 20, color: 'from-blue-500 to-cyan-600',}
+},'';
+    { label: 'Blockchain',}
+  value: 25, color: 'from-green-500 to-emerald-600',}
+}, '';
+    { label: 'Cybersecurity',}
+  value: 15, color: 'from-red-500 to-pink-600',}
+},'';
+    { label: 'IoT',}
+  value: 5, color: 'from-orange-500 to-yellow-600',}
+}
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91:temp-disabled/src/components/AdvancedAnalyticsDashboard.js.jsx
   ];
   const getStatusIcon = status => {}
     switch (status) {}
@@ -148,19 +168,39 @@ const AdvancedAnalyticsDashboard = () => {}
       </motion.div>;
       {/* Metrics Cards */}
       <motion.div;
+<<<<<<< HEAD:src_backup/components/AdvancedAnalyticsDashboard.js.jsx
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}'''';
         transition={{ delay: 0.1 }}'''';
         className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8 '>;
         {metrics.map((metric, index) => (<motion.div;
+=======
+        initial={{ opacity: 0, y: 20 ,}
+}
+        animate={{ opacity: 1, y: 0 ,}
+}'''';
+        transition={{ delay: 0.1 ,}
+}'''';
+        className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8 ' />;
+        {metrics.map((metric, index) => (<motion.div;}
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91:temp-disabled/src/components/AdvancedAnalyticsDashboard.js.jsx
             key={index}
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
+<<<<<<< HEAD:src_backup/components/AdvancedAnalyticsDashboard.js.jsx
             transition={{ delay: 0.1 * index }}'''';
           >'''';
             <Card className='h-full hover:shadow-lg transition-shadow'>'''';
               <CardHeader className='pb-3'>'''';
                 <div className='flex items-center justify-between'>;
+=======
+            transition={{ delay: 0.1 * index ,}
+}'''';
+           />'''';
+            <Card className='h-full hover:shadow-lg transition-shadow' />'''';
+              <CardHeader className='pb-3' />'''';
+                <div className='flex items-center justify-between' />;
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91:temp-disabled/src/components/AdvancedAnalyticsDashboard.js.jsx
                   <div;
                     className={`w-12 h-12 bg-gradient-to-r ${metric.color} rounded-lg flex items-center justify-center text-white`}
                   >;
@@ -192,6 +232,7 @@ const AdvancedAnalyticsDashboard = () => {}
       </motion.div>;
       {/* Service Performance Table */}
       <motion.div;
+<<<<<<< HEAD:src_backup/components/AdvancedAnalyticsDashboard.js.jsx
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}'''';
         transition={{ delay: 0.2 }}'''';
@@ -199,6 +240,18 @@ const AdvancedAnalyticsDashboard = () => {}
         <Card>'''';
           <CardHeader>'''';
             <CardTitle className='flex items-center gap-2'>'''';
+=======
+        initial={{ opacity: 0, y: 20 ,}
+}
+        animate={{ opacity: 1, y: 0 ,}
+}'''';
+        transition={{ delay: 0.2 ,}
+}'''';
+        className='mb-8 ' />;
+        <Card />'''';
+          <CardHeader />'''';
+            <CardTitle className='flex items-center gap-2' />'''';
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91:temp-disabled/src/components/AdvancedAnalyticsDashboard.js.jsx
               <BarChart3 className='w-5 h-5 text-zion-cyan' />;
               Service Performance Overview;
             </CardTitle>;
@@ -231,9 +284,18 @@ const AdvancedAnalyticsDashboard = () => {}
                 <tbody>;
                   {servicePerformance.map((service, index) => (<motion.tr;
                       key={index}
+<<<<<<< HEAD:src_backup/components/AdvancedAnalyticsDashboard.js.jsx
                       initial={{ opacity: 0, x: -20 }}
                       animate={{ opacity: 1, x: 0 }}'''';
                       transition={{ delay: 0.1 * index }}'''';
+=======
+                      initial={{ opacity: 0, x: -20 ,}
+}
+                      animate={{ opacity: 1, x: 0 ,}
+}'''';
+                      transition={{ delay: 0.1 * index ,}
+}'''';
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91:temp-disabled/src/components/AdvancedAnalyticsDashboard.js.jsx
                       className='border-b border-zion-slate-light/10 hover:bg-zion-blue-light/5''''';
                     >'''';
                       <td className='py-3 px-4'>'''';
@@ -288,10 +350,20 @@ const AdvancedAnalyticsDashboard = () => {}
       </motion.div>;
       {/* Charts and Insights */}
       <motion.div;
+<<<<<<< HEAD:src_backup/components/AdvancedAnalyticsDashboard.js.jsx
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}'''';
         transition={{ delay: 0.3 }}'''';
         className='grid grid-cols-1 lg:grid-cols-2 gap-6 mb-8 '>;
+=======
+        initial={{ opacity: 0, y: 20 ,}
+}
+        animate={{ opacity: 1, y: 0 ,}
+}'''';
+        transition={{ delay: 0.3 ,}
+}'''';
+        className='grid grid-cols-1 lg:grid-cols-2 gap-6 mb-8 ' />;
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91:temp-disabled/src/components/AdvancedAnalyticsDashboard.js.jsx
         {/* Category Distribution */}
         <Card>'''';
           <CardHeader>'''';
@@ -304,9 +376,18 @@ const AdvancedAnalyticsDashboard = () => {}
             <div className='space-y-3'>;
               {categoryDistribution.map((category, index) => (<motion.div;
                   key={index}
+<<<<<<< HEAD:src_backup/components/AdvancedAnalyticsDashboard.js.jsx
                   initial={{ opacity: 0, x: -20 }}
                   animate={{ opacity: 1, x: 0 }}'''';
                   transition={{ delay: 0.1 * index }}'''';
+=======
+                  initial={{ opacity: 0, x: -20 ,}
+}
+                  animate={{ opacity: 1, x: 0 ,}
+}'''';
+                  transition={{ delay: 0.1 * index ,}
+}'''';
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91:temp-disabled/src/components/AdvancedAnalyticsDashboard.js.jsx
                   className='flex items-center justify-between''''';
                 >'''';
                   <div className='flex items-center gap-3'>`;
@@ -385,9 +466,18 @@ const AdvancedAnalyticsDashboard = () => {}
       </motion.div>;
       {/* CTA Section */}
       <motion.div;
+<<<<<<< HEAD:src_backup/components/AdvancedAnalyticsDashboard.js.jsx
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}'''';
         transition={{ delay: 0.4 }}'''';
+=======
+        initial={{ opacity: 0, y: 20 ,}
+}
+        animate={{ opacity: 1, y: 0 ,}
+}'''';
+        transition={{ delay: 0.4 ,}
+}'''';
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91:temp-disabled/src/components/AdvancedAnalyticsDashboard.js.jsx
         className='text-center''''';
       >'''';
         <div className='bg-gradient-to-r from-zion-purple via-zion-blue-light to-zion-cyan rounded-lg p-8 text-white'>'''';
@@ -421,4 +511,17 @@ const AdvancedAnalyticsDashboard = () => {}
       </motion.div>;
     </div>)}
 export default AdvancedAnalyticsDashboard;
+<<<<<<< HEAD:src_backup/components/AdvancedAnalyticsDashboard.js.jsx
 export { AdvancedAnalyticsDashboard }export { AdvancedAnalyticsDashboard }export { AdvancedAnalyticsDashboard }export { AdvancedAnalyticsDashboard }export { AdvancedAnalyticsDashboard }
+=======
+
+export { AdvancedAnalyticsDashboard }
+
+export { AdvancedAnalyticsDashboard }
+
+export { AdvancedAnalyticsDashboard }
+
+export { AdvancedAnalyticsDashboard }
+
+export { AdvancedAnalyticsDashboard }
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91:temp-disabled/src/components/AdvancedAnalyticsDashboard.js.jsx

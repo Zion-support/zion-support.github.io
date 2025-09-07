@@ -23,6 +23,9 @@ import type { NextApiRequest, NextApiResponse } from 'next';'
   const { status, topic, tag, author, limit, offset } = req && req.query;
     let posts = readPosts();
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
     if (status && typeof status === 'string') posts = posts.filter((p) => p.status === status);
     if (topic && typeof topic === 'string') posts = posts.filter((p) => (p.topics || []).includes(topic));
     if (tag && typeof tag === 'string') posts = posts.filter((p) => (p.tags || []).includes(tag));
@@ -65,6 +68,7 @@ import type { NextApiRequest, NextApiResponse } from 'next';'
   }
 =======
 
+<<<<<<< HEAD
       posts = posts && posts.filter(p => { return (p && p.topics || []).includes(topic)); }
     if (tag && typeof tag === 'string')'
       posts = posts && posts.filter(p => { return (p && p.tags || []).includes(tag)); }
@@ -515,3 +519,7 @@ return res.status(405).end();
 }
 }
   return res.status(405).end();
+=======
+  return res.status(405).end()
+}
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91

@@ -103,6 +103,7 @@ const [priceRange, setPriceRange] = useState('All');'
 
 const [searchQuery, setSearchQuery] = useState('');'
 
+<<<<<<< HEAD
 const [sortBy, setSortBy] = useState('price');'
 
 const allServices = [;
@@ -156,6 +157,21 @@ const [min, max] = priceRange;
   const price = parseFloat(service.price.replace('$', '').replace(',', ''));'
       return price >= min && (max === Infinity || price <= max);
     });
+=======
+  const sortOptions = [
+    { value: 'price', label: 'Price Low-High' },
+    { value: 'name', label: 'Name A-Z' },
+    { value: 'popularity', label: 'Most Popular' },
+    { value: 'category', label: 'Category' },
+    { value: 'roi', label: 'Highest ROI' }
+  ],
+
+  // Filter and sort services
+  let filteredServices = $2;
+  // Category filter
+  if (selectedCategory !== 'All') {
+    filteredServices = filteredServices.filter(service => service.category === selectedCategory)
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
   }
 
   // Search filter,
@@ -287,6 +303,7 @@ const marketStats = [;
       description: 'Combined market value of all services',
       icon: <ChartBar className = $2;
     {
+<<<<<<< HEAD
       }
       "metric": '400+','
       "label": 'Services Available','
@@ -321,6 +338,27 @@ const containerVariants = {
 }
 
 "staggerChildren": 0.1
+=======
+      metric: '400+',
+      label: 'Services Available',
+      description: 'Comprehensive micro SaaS portfolio',
+      icon: <Database className = $2;
+    {
+      metric: '99.99%',
+      label: 'Uptime Guarantee',
+      description: 'Enterprise-grade reliability',
+      icon: <Shield className = $2;
+    {
+      metric: '2000%+',
+      label: 'Average ROI',
+      description: 'Proven business value',
+      icon: <TrendingUp className = $2;
+  const containerVariants = $2;
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.1
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
       }
     }
   };
@@ -372,6 +410,7 @@ rel='canonical''
             href='"https"://ziontechgroup.com/comprehensive-pricing'' />
         </Head>
 
+<<<<<<< HEAD
         {/* Hero Section *
 }
         <section className='relative py-20 overflow-hidden'>;'
@@ -385,6 +424,17 @@ rel='canonical''
                 transition={{ "duration": 0.8 
 }
 
+=======
+        {/* Hero Section */}
+        <section className="relative py-20 overflow-hidden">
+          <div className="container mx-auto px-4 text-center">
+            <div className="max-w-5xl mx-auto">
+              <motion.h1 
+                className="text-6xl md:text-8xl font-bold mb-8 futuristic-glow"
+                initial={{ opacity: 0, y: 30}}
+                animate={{ opacity: 1, y: 0}}
+                transition={{ duration: 0.8 }}
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
               >
 <span className='bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent'>'
                   Comprehensive
@@ -435,6 +485,7 @@ className='grid grid-cols-2 "md":grid-cols-4 gap-6 mb-16''
                     <div className="text-gray-400 text-sm">{stat.label}</div>
                     <div className="text-gray-500 text-xs">{stat.description}</div>
 
+<<<<<<< HEAD
                     </div>
                     <div className='text-gray-400 text-sm'>{stat.label}</div>'
                     <div className='text-gray-500 text-xs'>'
@@ -534,6 +585,27 @@ className='flex flex-col "sm":flex-row gap-4 justify-center items-center''
                   onClick={() => document.getElementById('services-pricing')?.scrollIntoView({ "behavior": 'smooth' })}'
 
                   <Search className='ml-2 w-5 h-5' />
+=======
+              {/* CTA Buttons */}
+              <motion.div 
+                className="flex flex-col sm:flex-row gap-4 justify-center items-center"
+                initial={{ opacity: 0, y: 20}}
+                animate={{ opacity: 1, y: 0}}
+                transition={{ duration: 0.8, delay: 0.6 }}
+              >
+                <Button 
+                  variant="primary" 
+                  size="lg"
+                  onClick={() => document.getElementById('pricing-tiers')?.scrollIntoView({ behavior: 'smooth' })}
+                >
+                  View Pricing Tiers
+                  <DollarSign className="ml-2 w-5 h-5" />
+                </Button>
+                <Button 
+                  variant="futuristic" 
+                  size="lg"
+                  onClick={() => document.getElementById('services-pricing')?.scrollIntoView({ behavior: 'smooth' })}
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
                 >
                   Browse All Services
 
@@ -587,6 +659,7 @@ className='text-center mb-16''
 plans include our 21-day free trial and ROI guarantee.
               </p>
             </motion.div>
+<<<<<<< HEAD
             <motion.div,
 className='grid grid-cols-1 "md":grid-cols-3 gap-8 max-w-6xl mx-auto''
 
@@ -615,6 +688,33 @@ variant={tier.popular ? 'holographic-advanced' : 'quantum-advanced';'
                           Most Popular;
                         </div>;
                       </div>;
+=======
+
+            <motion.div 
+              className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto"
+              variants={containerVariants}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true}}
+            >
+              {pricingTiers.map((tier, index) => (
+                <motion.div
+                  key={tier.name}
+                  variants={itemVariants}
+                  whileHover={{ y: -10 }}
+                >
+                  <UltraFuturisticCard
+                    variant={tier.popular ? 'holographic-advanced' : 'quantum-advanced'}
+                    size="large"
+                    className={`h-full relative ${tier.popular ? 'ring-2 ring-purple-400' : ''}`}
+                  >
+                    {tier.popular && (
+                      <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
+                        <div className="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-4 py-2 rounded-full text-sm font-bold">
+                          Most Popular
+                        </div>
+                      </div>
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
                     )}
 <div className='text-center mb-8'>;'
                       <div;
@@ -680,6 +780,7 @@ className='mb-8'              initial={{ "opacity": 0, "y": 20 ,'
 
           <div className="container mx-auto px-4">;"
             {/* Filters and Controls */}
+<<<<<<< HEAD
             <motion&& motion.div;
               className='mb-8'              initial={{ "opacity": 0, "y": 20 ,'
 }        <section id="services-pricing" className="py-20">;"
@@ -698,6 +799,14 @@ className='mb-8''
               viewport={{ "once": true }}
               transition={{ "duration": 0.6 }}
 
+=======
+            <motion.div 
+              className="mb-8"
+              initial={{ opacity: 0, y: 20}}
+              whileInView={{ opacity: 1, y: 0}}
+              viewport={{ once: true}}
+              transition={{ duration: 0.6 }}
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
             >
 <div className='flex flex-col "lg":flex-row gap-6 items-center justify-between'>'
                 <div className='flex flex-wrap gap-4'>'
@@ -781,10 +890,23 @@ type='text''
               </div>
             </motion.div>
 
+<<<<<<< HEAD
               initial='hidden''
               whileInView='visible''
               viewport={{ "once": true 
 }
+=======
+            {/* Services Display */}
+            <motion.div 
+              className={viewMode === 'grid' 
+                ? "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+                : "space-y-6"
+              }
+              variants={containerVariants}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true}}
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
             >
               {filteredServices.map((service, index) => (
                 <motion.div
@@ -805,12 +927,20 @@ variant={(service.variant as any) || 'quantum-advanced'}'
               {filteredServices.map((service, index) => (<motion.div;
                   key={service.id}
                   variants={itemVariants}
+<<<<<<< HEAD
                   whileHover={{ y: -5 }}>;
                   <UltraFuturisticCard;
                     variant={(service.variant as any) |'quantum-advanced'}                    size={viewMode === 'grid' ? 'large' : 'medium'}                    variant={service.variant as any |'quantum-advanced'}
                     variant={(service.variant as any) || 'quantum-advanced'}                    size={viewMode === 'grid' ? 'large' : 'medium'}variant={(service.variant as any) || 'quantum-advanced'}                    size={viewMode === 'grid' ? 'large' : 'medium'}                    variant={service.variant as any || 'quantum-advanced'}
                     variant={(service.variant as any) || 'quantum-advanced'}                    size={viewMode === 'grid' ? 'large' : 'medium'}variant={service.variant as any || 'quantum-advanced'}variant={(service.variant as any) || 'quantum-advanced'}                    size={viewMode === 'grid' ? 'large' : 'medium'}variant={(service.variant as any) || 'quantum-advanced'}                    size={viewMode === 'grid' ? 'large' : 'medium'}                    variant={service.variant as any || 'quantum-advanced'}
                     variant={(service.variant as any) || 'quantum-advanced'}                    size={viewMode === 'grid' ? 'large' : 'medium'}variant={(service.variant as any) || 'quantum-advanced'}size={viewMode === 'grid' ? 'large' : 'medium'}
+=======
+                  whileHover={{ y: -5 }}
+                >
+                  <UltraFuturisticCard
+                    variant={service.variant as any || 'quantum-advanced'}
+                    size={viewMode === 'grid' ? 'large' : 'medium'}
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
                     className={`h-full cursor-pointer ${viewMode === 'list' ? 'flex flex-col md:flex-row' : ''}`}
                   >;
                     {viewMode === 'grid' ? (// Grid View;

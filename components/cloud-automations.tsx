@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 export default function CloudAutomationsPage() {
 
@@ -50,6 +51,8 @@ key={key}
               "Started": {value.startedAt |'—,'
 }
 =======
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
 import React, { useEffect, useState } from 'react';
 export default function CloudAutomationsPage() {
   const [data, setData] = useState<any>(null),

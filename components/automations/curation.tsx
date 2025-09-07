@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from \"react\","
 import fs from \"fs\";"
 import path from \"path\";
@@ -21,6 +22,8 @@ hypothesis?: string;
 metric?: string;
 effort?: number;impact?: number;
 }
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
 import React from "react";
 import fs from "fs";
 import path from "path";
@@ -33,6 +36,7 @@ type Experiment = $2;
 
 type Props = {
 
+<<<<<<< HEAD
   }
 
   "updatedAt": string | null;
@@ -165,6 +169,17 @@ return (;
             }
             Nothing to show yet.;
           </div>;
+=======
+export default function CurationPage({ updatedAt, items }: Props) {
+  return (
+    <main className="mx-auto max-w-4xl px-4 py-12">
+      <h1 className="text-2xl font-bold text-gray-900">AI Curated Growth Experiments</h1>
+      {updatedAt ? (
+        <p className="mt-2 text-sm text-gray-600">Last updated: {updatedAt}</p>
+      ) : (
+        <p className="mt-2 text-sm text-gray-600">No curated output yet. It will appear here automatically after the next run.</p>
+      )}
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
 
 export default function CurationPage() {return (<main className="mx-auto max-w-4xl px-4 py-12">;"
       <h1 className="text-2xl font-bold text-gray-900">AI Curated Growth Experiments</h1>;"
@@ -207,6 +222,7 @@ export async function getStaticProps() {
 
 }
 
+<<<<<<< HEAD
 const filePath = path.join(process.cwd(), "data", "ai-curation", "growth-experiments.json");"
 
 const raw = fs.readFileSync(filePath, "utf8");"
@@ -217,6 +233,13 @@ const parsed = JSON.parse(raw);
 const raw = fs.readFileSync(filePath, 'utf8');'
 
 const parsed = JSON.parse(raw);
+=======
+export async function getStaticProps() {
+  try {
+    const filePath = path.join(process.cwd(), "data", "ai-curation", "growth-experiments.json"),
+    const raw = fs.readFileSync($2);
+    const parsed = JSON.parse($2);
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
     return {
       }
       "props": {

@@ -21,6 +21,7 @@ export default async function handler() {
     try {
       }
       if (hasSupabase) {
+<<<<<<< HEAD
        ;
 }
 const { data, error } = await supabaseClient;
@@ -101,6 +102,14 @@ if (throw error) {
       }
       // Fallback: return the slug as if saved;
       return res.status (201).json ({ slug: item.slug });
+=======
+        const { data, error } = await supabaseClient.from('talent_profiles').select('*').order($2);
+        if (error) throw error,
+        return res.status(200).json({ items: data as TalentProfile[] })
+      }
+      return res.status(200).json({ items: LOCAL})
+    } catch (e: any) {
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
       return res.status(500).json({ error: e.message })
     }
   }
@@ -140,6 +149,7 @@ if (throw error) {
       item.originalLanguage = $2;
       item.translations = $2;
       if (hasSupabase) {
+<<<<<<< HEAD
         }
         const { error } = await supabaseClient.from('talent_profiles').insert({'
 }
@@ -183,6 +193,19 @@ return res.status (500).json ({ "error": e.message,;
     .end('Method Not Allowed');  return res.setHeader('AllowGET, POST').status(405).end('Method Not Allowed');
 }
 }
+=======
+        const { error } = await supabaseClient.from('talent_profiles').insert($2);
+        if (error) throw error,
+        return res.status(201).json({ slug: item.slug })
+      }
+
+      // Fallback: return the slug as if saved
+      return res.status(201).json({ slug: item.slug })
+    } catch (e: any) {
+      return res.status(500).json({ error: e.message })
+    }
+  }
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
 
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   }

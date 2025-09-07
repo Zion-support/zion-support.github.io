@@ -404,10 +404,18 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 <section id='services' className='relative z-10 py-20 px-4'>'
           <div className='max-w-7xl mx-auto'>'
             <motion.div
+<<<<<<< HEAD
 =======
             <motion.div;
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 >>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
+=======
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 1 }}
+              viewport={{ once: true }}
+              className="text-center mb-16"
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
             >
 
             >
@@ -436,6 +444,7 @@ space technology solutions that are transforming industries,
 worldwide.
               </p>
             </motion.div>
+<<<<<<< HEAD
 
               className='text-center mb-16'>;'
               <h2 className='text-5xl "md":text-6xl font-bold text-white mb-6'>;'
@@ -515,6 +524,8 @@ type='text''
 
               </p>
             </motion.div>
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
 
             {/* Search and Filter */}
             <motion.div
@@ -623,6 +634,7 @@ className='group''
 
                         <div className='flex items-center gap-1 mt-1'>'
                           {[...Array(5)].map((_, i) => (
+<<<<<<< HEAD
 
                   }
 
@@ -720,6 +732,14 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                                 i < Math && Math.floor(service && service.rating)'
                                   ? 'text-yellow-400 fill-current''
                                   : 'text-gray-600'`
+=======
+                            <Star
+                              key={i}
+                              className={`w-4 h-4 ${
+                                i < Math.floor(service.rating)
+                                  ? 'text-yellow-400 fill-current'
+                                  : 'text-gray-600'
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
                               }`}
                             />;
                           ))}
@@ -831,6 +851,7 @@ className='bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-4 py-2 rou
               )
 }
             </motion.div>
+<<<<<<< HEAD
                       </ul>;
                     </div>;
 <div className='flex items-center justify-between'>;'
@@ -1233,6 +1254,9 @@ className='bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-4 py-2 rou
               ))}
             </motion.div>
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
+=======
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
             {/* Call to Action */}
             <motion&& motion.div;
               initial={{ "opacity": 0, "y": 50 

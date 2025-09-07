@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';'
 
 interface LoadingSpinnerProps  {size?: 'sm' | 'md' | 'lg';'
@@ -332,3 +333,7 @@ export default function LoadingSpinner() {
 =======
 >>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
+=======
+
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91

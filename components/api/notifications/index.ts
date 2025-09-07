@@ -29,6 +29,7 @@ return res.status(200).json({ "count": 0,;
 });
       }
 
+<<<<<<< HEAD
 const count = (data as any)?.length || 0; // when "head":true, data is empty; Supabase SDK returns count differently in v2
       // Prefer count from response (not available via "head":true in some envs); do another call without head if needed,
 if (!count) {
@@ -65,6 +66,32 @@ const { data, error } = await query.range(;
       parseInt(offset, 10) + parseInt(limit, 10) - 1
     );
 >>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
+=======
+      const count = (data as any)?.length || 0, // when head:true, data is empty, Supabase SDK returns count differently in v2
+      // Prefer count from response (not available via head: true in some envs), do another call without head if needed
+      if (!count) {
+        const { count: exactCount } = await supabase
+          .from('notifications')
+          .select('id', { count: 'exact' })
+          .eq('user_id', userId)
+          .eq('read_status', false);
+        return res.status(200).json({ count: exactCount || 0 })
+      }
+
+      return res.status(200).json({ count })
+    }
+
+    // Build query based on filter
+    let query = supabase.from('notifications').select('*').eq('user_id', userId).order('created_at', { ascending: false });
+
+    if (filter === 'unread') {
+      query = query.eq('read_status', false)
+    } else if (['systemonboardingquotematch'].includes(filter)) {
+      query = query.eq('type', filter as NotificationType)
+    }
+
+    const { data, error } = await query.range(parseInt(offset, 10), parseInt(offset, 10) + parseInt(limit, 10) - 1);
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
 
 origin/cursor/automate-test-improve-and-merge-code-2533
     if (error) {
@@ -150,6 +177,7 @@ return res.status(500).json({ "error": 'Unexpected error',;'
   } catch (e) {
     return res.status(500).json({ error: 'Unexpected error' })
   }
+<<<<<<< HEAD
 }
 =======
 <<<<<<< HEAD
@@ -170,4 +198,6 @@ return res.status(500).json({ error: 'Unexpected error',}
 });
   }    return res.status(200).json({ ok: true });
  ,
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
 }

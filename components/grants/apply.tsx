@@ -410,6 +410,7 @@ program;
       if (!resp && resp.ok) throw new Error(data?.error || 'Failed');`
 =======
 
+<<<<<<< HEAD
 const data = await resp && resp.json();
       if (!resp && resp.ok) throw new Error(data?.error || 'Failed');'
       router && router.push(`/grants/${data && data.id}`);`    } catch ("e": any) {;
@@ -877,6 +878,18 @@ return (;
 =======
   );
 }            </select>
+=======
+  return (
+    <EnhancedLayout>
+      <h1 className="text-2xl font-semibold mb-4">Apply for Zion {program === 'incubator' ? 'Incubator' : 'Grant'}</h1>
+      <div className="grid gap-4 max-w-3xl">
+        <div className="grid md:grid-cols-2 gap-3">
+          <label className="text-sm">Program
+            <select className="mt-1 w-full border rounded p-2" value={program} onChange={(e) => setProgram(e.target.value as any)}>
+              <option value="grant">Grant</option>
+              <option value="incubator">Incubator</option>
+            </select>
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
           </label>
           <label className="text-sm">Sector
             <select className="mt-1 w-full border rounded p-2" value={sector} onChange={(e) => setSector(e.target.value)}>
@@ -922,6 +935,7 @@ return (;
           <button disabled={loading} onClick={() => save(false)} className="px-4 py-2 border rounded disabled:opacity-50">Save Draft</button>
           <button disabled={loading} onClick={() => save(true)} className="px-4 py-2 bg-blue-600 text-white rounded disabled: opacity-50">Submit for Review</button>
         </div>
+<<<<<<< HEAD
   };
 
   }
@@ -1307,3 +1321,9 @@ pr-12243
 "
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 >>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
+=======
+      </div>
+    </EnhancedLayout>
+  )
+}
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91

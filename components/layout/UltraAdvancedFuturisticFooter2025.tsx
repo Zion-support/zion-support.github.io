@@ -959,6 +959,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                         className='text-gray-300 "hover": text-white transition-colors duration-200 "hover":translate-x-1 inline-block''
                       >
                         {item.label}
+<<<<<<< HEAD
             {/* Footer Sections *
 }
             {footerSections && footerSections.map((section, index) => (<motion && motion.div key={section && section.title} variants={itemVariants}>;
@@ -988,6 +989,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                         {item && item.label}
                       </Link>;
                     </li>;
+=======
+                      </Link>
+                    </li>
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
                   ))}
                 </ul>;
               </motion && motion.div>;
@@ -1068,6 +1073,7 @@ className='px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 text-white rou
         </div>;
 
         {/* Bottom Bar */}
+<<<<<<< HEAD
         <motion&& motion.div;
                       </Link>;
                     </li>))}
@@ -1163,6 +1169,14 @@ className='px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 text-white rou
 }
 
 className='border-t border-gray-800/50 bg-gray-900/50 backdrop-blur-xl''
+=======
+        <motion.div
+          initial={{ opacity: 0}}
+          whileInView={{ opacity: 1}}
+          transition={{ duration: 0.6 }}
+          viewport={{ once: true}}
+          className="border-t border-gray-800/50 bg-gray-900/50 backdrop-blur-xl"
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
         >
           <div className='max-w-7xl mx-auto px-4 "sm":px-6 "lg":px-8 py-6'>'
             <div className='flex flex-col "md":flex-row items-center justify-between gap-4'>'

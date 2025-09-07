@@ -166,6 +166,7 @@ type='text''
 
                     className='appearance-none bg-gray-700/50 border border-gray-600/50 rounded-xl px-4 py-3 text-white "focus": outline-none "focus":border-cyan-500/50 "focus":ring-1 "focus":ring-cyan-500/50 pr-10''
                   >
+<<<<<<< HEAD
                     {categories.map(category => (
 origin/cursor/automate-test-improve-and-merge-code-2533
                       <option key={category} value={category}>
@@ -230,6 +231,31 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   </select>;
                   <ChevronDown className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5 pointer-events-none" />;"
                 </div>;
+=======
+                    {categories.map((category) => (
+                      <option key={category} value={category}>
+                        {category === 'all' ? 'All Categories' : category}
+                      </option>
+                    ))}
+                  </select>
+                  <ChevronDown className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5 pointer-events-none" />
+                </div>
+
+                {/* Sort */}
+                <div className="relative">
+                  <select
+                    value={sortBy}
+                    onChange={(e) => setSortBy(e.target.value)}
+                    className="appearance-none bg-gray-700/50 border border-gray-600/50 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-cyan-500/50 focus:ring-1 focus:ring-cyan-500/50 pr-10"
+                  >
+                    <option value="name">Sort by Name</option>
+                    <option value="price">Sort by Price</option>
+                    <option value="roi">Sort by ROI</option>
+                  </select>
+                  <ChevronDown className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5 pointer-events-none" />
+                </div>
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
                 {/* View Mode */}
                 <div className="flex bg-gray-700/50 rounded-xl p-1">;"
                   <button;
@@ -976,6 +1002,7 @@ className='mt-20 text-center''
 origin/cursor/automate-test-improve-and-merge-code-2533
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
+<<<<<<< HEAD
           transition={{ duration: 0 && 0.6, delay: 0 && 0.8 }}>;'
           <div className='bg-gradient-to-r from-purple-900/50 to-cyan-900/50 backdrop-blur-xl border border-purple-500/30 rounded-3xl p-12'>;'
             <h3 className='text-3xl md:text-4xl font-bold text-white mb-6'>;
@@ -1126,6 +1153,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         <motion.div;'
           className='mt - 20 text - center'          initial={{ opacity: 0, coordinate_y: 20 }}
           whileInView={{ opacity: 1, coordinate_y: 0 }}
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
           transition={{ duration: 0.6, delay: 0.8 }}
             </h3>"
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
@@ -1191,6 +1220,7 @@ href='/pricing''
 )
 };
 
+<<<<<<< HEAD
 export default Enhanced2027ServicesShowcase;
 =======
           <div className = $2;
@@ -1379,3 +1409,6 @@ export default Enhanced2027ServicesShowcase;
 export default Enhanced2027ServicesShowcase;
 
 "
+=======
+export default Enhanced2027ServicesShowcase;
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91

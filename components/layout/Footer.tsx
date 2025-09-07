@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';'
 import Link from 'next/link';'
 import { Mail, Phone, MapPin, Facebook, Twitter, Linkedin, Instagram } from 'lucide-react';'
@@ -951,6 +952,53 @@ return (;
             <p className="text-gray-300 mb-4">"
               Leading provider of AI services, IT solutions, and micro SaaS development. 
               Transform your business with cutting-edge technology solutions.
+=======
+import React from 'react';
+import Link from 'next/link';
+import { Mail, Phone, MapPin, Linkedin, Twitter, Github } from 'lucide-react';
+const Footer: React.FC = () => {
+  const currentYear = new Date().getFullYear();
+  const services = [
+    { name: 'AI Development', href: '/services/ai-development' },
+    { name: 'Cloud Solutions', href: '/services/cloud-solutions' },
+    { name: 'Web Development', href: '/services/web-development' },
+    { name: 'Mobile Apps', href: '/services/mobile-development' },
+    { name: 'Blockchain Solutions', href: '/services/blockchain' },
+    { name: 'IoT Platforms', href: '/services/iot-platforms' },
+    { name: 'Data Analytics', href: '/services/data-analytics' },
+    { name: 'Cybersecurity', href: '/services/cybersecurity' },
+  ];
+  const company = [
+    { name: 'About Us', href: '/about' },
+    { name: 'Our Team', href: '/about#team' },
+    { name: 'Careers', href: '/careers' },
+    { name: 'News & Updates', href: '/blog' },
+    { name: 'Privacy Policy', href: '/privacy' },
+    { name: 'Terms of Service', href: '/terms' },
+  ];
+  const resources = [
+    { name: 'Blog', href: '/blog' },
+    { name: 'Case Studies', href: '/case-studies' },
+    { name: 'Documentation', href: '/docs' },
+    { name: 'Support', href: '/support' },
+    { name: 'FAQ', href: '/faq' },
+  ];
+  const socialLinks = [
+    { name: 'LinkedIn', href: 'https://linkedin.com/company/zion-tech-group', icon: Linkedin },
+    { name: 'Twitter', href: 'https://twitter.com/ziontechgroup', icon: Twitter },
+    { name: 'GitHub', href: 'https://github.com/zion-tech-group', icon: Github },
+  ];
+  return (
+    <footer className="bg-gray-900 text-white">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          {/* Company Info */}
+          <div className="lg:col-span-1">
+            <div className="text-2xl font-bold text-blue-400 mb-4">Zion Tech Group</div>
+            <p className="text-gray-300 mb-6">
+              Leading technology solutions provider helping businesses transform their digital presence;
+              with cutting-edge AI, cloud architecture, and innovative development services.
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
             </p>
             <div className="flex space-x-4">"
               {socialLinks.map((social) => (
@@ -968,7 +1016,10 @@ key={social.name}
               ))}
             </div>
           </div>
+<<<<<<< HEAD
 
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
           {/* Services */}
           <div>
             <h3 className="text-lg font-semibold mb-4">Services</h3>"
@@ -1092,6 +1143,7 @@ return (;
             </div>
           </div>
         </div>
+<<<<<<< HEAD
 
         {/* Bottom Section */}
         <div className="border-t border-gray-800 mt-8 pt-8">"
@@ -1124,11 +1176,34 @@ return (;
           <p className="text-gray-400">"
             © {new Date().getFullYear()} Zion Tech Group. All rights reserved.
           </p>
+=======
+        {/* Bottom Section */}
+        <div className="border-t border-gray-700 mt-8 pt-8">
+          <div className="flex flex-col md:flex-row justify-between items-center">
+            <p className="text-gray-300 text-sm">
+              &copy; {currentYear} Zion Tech Group. All rights reserved.
+            </p>
+            <div className="flex space-x-6 mt-4 md:mt-0">
+              <Link href="/privacy" className="text-gray-300 hover:text-blue-400 text-sm">
+                Privacy Policy
+              </Link>
+              <Link href="/terms" className="text-gray-300 hover:text-blue-400 text-sm">
+                Terms of Service
+              </Link>
+              <Link href="/sitemap" className="text-gray-300 hover:text-blue-400 text-sm">
+                Sitemap
+              </Link>
+            </div>
+          </div>
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
         </div>
       </div>
     </footer>
   )
 };
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
 export default Footer;

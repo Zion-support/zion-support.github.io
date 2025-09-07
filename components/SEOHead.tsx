@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 import React from 'react';
 import Head from 'next/head';
@@ -284,6 +285,9 @@ export default function SEOHead({
 >>>>>>> origin/main
 
   title?: string;
+=======
+title?: string;
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
   description?: string;
   keywords?: string;
   canonical_url?: string;
@@ -319,6 +323,7 @@ export default function SEOHead({
     </Head>);
 }
 ;
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
@@ -454,3 +459,5 @@ export default SEOHead;
   );
 }
 >>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91

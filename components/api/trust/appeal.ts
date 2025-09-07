@@ -2,6 +2,7 @@ import type { NextApiRequest, NextApiResponse } from 'next';'
 import type { TrustAppeal } from '../../../utils/types/trust';'
 import { supabase  } from '../../../utils/supabase/client';'
 
+<<<<<<< HEAD
 export default async function handler() {if (req.method !== 'POST') {res.setHeader('AllowPOST')return res.status(405).json({ "error": 'Method not allowed' },'
 }
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
@@ -152,6 +153,13 @@ return res.status(200).json({ "ok": true, appeal })}return res.status(200).json(
 }
   const appeal: TrustAppeal = {}
     user_id;
+=======
+  const { userId, message, contactEmail } = req.body || {};
+  if (!userId || !message) return res.status(400).json({ error: 'Missing userId or message' });
+
+  const appeal: TrustAppeal = {
+    userId;
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
     message;
     contact_email;
     created_at: new Date ().toISOString ()}

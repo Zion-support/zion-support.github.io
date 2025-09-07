@@ -1,5 +1,8 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -100,6 +103,7 @@ const navigation = {
     { name: 'Quantum Computing', href: '/quantum-computing' },
     { name: 'Blockchain', href: '/blockchain' },
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
     { name: 'IoT Solutions', href: '/iot-solutions' }
   ],
@@ -147,8 +151,9 @@ const quickLinks = [
 ];
 >>>>>>> origin/main
 
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
     { name: 'IoT Solutions', href: '/iot-solutions' }
-
   ];
   'Solutions': [
     { name: 'Enterprise Solutions', href: '/solutions/enterprise' },
@@ -187,23 +192,22 @@ const quickLinks = [
     { name: 'Privacy Policy', href: '/privacy' }
   ]
 };
-
 const quickLinks = [
   { name: 'Free Consultation', href: '/consultation' },
   { name: 'Get Quote', href: '/quote' },
   { name: 'Support', href: '/support' }
-
 ];
-
 interface SidebarProps {
   isOpen: boolean,
   onClose: () => void,
 }
+<<<<<<< HEAD
 
 <<<<<<< HEAD
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
 export function Sidebar({ isOpen, onClose }: SidebarProps) {
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
-
   useEffect(() => {
     if (isOpen) {
       document.body.style.overflow = 'hidden';
@@ -214,7 +218,6 @@ export function Sidebar({ isOpen, onClose }: SidebarProps) {
       document.body.style.overflow = 'unset';
     };
   }, [isOpen]);
-
   const handleDropdownToggle = (item: string) => {
     setActiveDropdown(activeDropdown === item ? null : item);
 =======
@@ -254,7 +257,6 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
     );
 >>>>>>> origin/main
   };
-
   return (
     <AnimatePresence>
       {isOpen && (
@@ -268,8 +270,6 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
             className="fixed inset-0 bg-black bg-opacity-50 z-40"
             onClick={onClose}
           />
-
-          
           {/* Sidebar */}
           <motion.div
             initial={{ x: -300 }}
@@ -339,6 +339,7 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
                       onClick={() => handleDropdownToggle(title)}
 <<<<<<< HEAD
                       className="flex items-center justify-between w-full text-left text-lg font-semibold text-gray-900 py-2 hover:text-blue-600 transition-colors"
+<<<<<<< HEAD
 =======
                             key={link.name}
                             href={link.href}
@@ -424,8 +425,9 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
               </nav>
 >>>>>>> origin/main
 
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
                     >;
-
                       <span>{title}</span>
                       <ChevronDown className={`w-5 h-5 transition-transform ${
                         activeDropdown === title ? 'rotate-180' : ''
@@ -510,6 +512,7 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
     </AnimatePresence>
   );
 };
+<<<<<<< HEAD
 
 export default Sidebar;
 
@@ -973,3 +976,5 @@ export default Sidebar;
 >>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 >>>>>>> origin/main
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91

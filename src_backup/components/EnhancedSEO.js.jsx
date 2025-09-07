@@ -1,4 +1,4 @@
- export default function EnhancedSEO ({ title = 'Zion Tech Group - Advanced AI, Quantum Computing & Enterprise Technology Solutions', description = 'Leading provider of advanced AI automation, quantum computing, autonomous business operations, and enterprise technology solutions. Transform your business with cutting - edge technology services.', keywords = 'AI automation, quantum computing, enterprise technology, autonomous business operations, AI consulting, machine learning, cloud computing, cybersecurity, digital transformation', canonical, ogImage = 'https: '''';import { Helmet } from 'react-helmet-async'';
+export default function EnhancedSEO ({ title = 'Zion Tech Group - Advanced AI, Quantum Computing & Enterprise Technology Solutions', description = 'Leading provider of advanced AI automation, quantum computing, autonomous business operations, and enterprise technology solutions. Transform your business with cutting - edge technology services.', keywords = 'AI automation, quantum computing, enterprise technology, autonomous business operations, AI consulting, machine learning, cloud computing, cybersecurity, digital transformation', canonical, ogImage = 'https: '''';import { Helmet } from 'react-helmet-async'';
 '';
 '';
 '''';
@@ -108,5 +108,20 @@
       <meta httpEquiv='X-Content-Type-Options' content='nosniff'/>'''';
       <meta httpEquiv='X-Frame-Options' content='DENY'/>'''';
       <meta httpEquiv='X-XSS-Protection' content='1 mode=block'/>'''';
+<<<<<<< HEAD:src_backup/components/EnhancedSEO.js.jsx
       <meta httpEquiv='Referrer-Policy' content='strict-origin-when-cross-origin"/>'";
     </Helmet>)}export { EnhancedSEO }export { EnhancedSEO }export { EnhancedSEO }export { EnhancedSEO }export { EnhancedSEO }
+=======
+      <meta httpEquiv='Referrer-Policy' content='strict-origin-when-cross-origin\"/>'\";
+    </Helmet>)}
+
+export { EnhancedSEO }
+
+export { EnhancedSEO }
+
+export { EnhancedSEO }
+
+export { EnhancedSEO }
+
+export { EnhancedSEO }
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91:temp-disabled/src/components/EnhancedSEO.js.jsx

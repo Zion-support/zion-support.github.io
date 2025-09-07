@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 import React, { useEffect, useMemo, useState } from "react";"
@@ -46,6 +47,29 @@ const data = await res.json();
 setSummary(data);
   }
   useEffect(() => {
+=======
+import React, { useEffect, useMemo, useState } from "react";
+import Badges from "./Badges";
+type Tx = $2;
+  type: "earn" | "burn" | "issue" | "revoke" | "redeem",
+  amount: number,
+  reason: string,
+  createdAt: string},
+
+type Summary = {
+  wallet: { userId: string, balance: number},
+  transactions: Tx[],
+  config: { usdPerToken: number, symbol: string}
+},
+
+function getUserId(): string {
+  if (typeof window = $2;
+  const fromStorage = window.localStorage.getItem($2);
+  if (fromStorage) return fromStorage,
+  const generated = $2;
+  window.localStorage.setItem($2);
+  return generated
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
 }
 
     }

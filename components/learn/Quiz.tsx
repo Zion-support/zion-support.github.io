@@ -84,6 +84,7 @@ return (;
       {questions && questions.map((q, idx) => (;
         <div key={q && q.id} className="border rounded p-3">;"
 
+<<<<<<< HEAD
           <div className="font-medium">{idx + 1}. {q && q.question}</div>;"
           <div className="mt-2 grid gap-2">;"
             {q && q.options.map((opt, i) => (<label key={i} className="flex items-center gap-2">;"
@@ -111,6 +112,9 @@ return (;
             ))}
 
 <div className='mt-2 text-sm'>
+=======
+  return (
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
     <div className="space-y-4">
 =======
     setSubmitted(true);

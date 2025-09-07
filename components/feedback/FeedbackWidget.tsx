@@ -44,6 +44,7 @@ const [comment, setComment] = useState('');'
       {submitted ? (
         <div className="text-sm text-emerald-700 dark:text-emerald-300">Thanks for your feedback!</div>
       ) : (
+<<<<<<< HEAD
     }
     setError(null)setSubmitting(true)try {const res = await fetch('/api/feedback/submit', {method: 'POST';
         headers: { 'Content-Type': 'application/json' }
@@ -433,6 +434,8 @@ if ( {) {$2;
 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
               aria-pressed={_rating === 'up'}
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
         <div className="space-y-3">
           <div className="flex items-center gap-2">
             <button

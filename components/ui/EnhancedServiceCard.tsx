@@ -174,6 +174,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       )}
 
       {/* Card Content */}
+<<<<<<< HEAD
 
 <div className='relative p-6'>'
 
@@ -201,6 +202,16 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             variants={iconVariants}"
             initial="hidden""
             animate="visible""
+=======
+      <div className="relative p-6">
+        {/* Header */}
+        <div className="flex items-start justify-between mb-4">
+          <motion.div
+            className={`text-4xl ${service.textColor}`}
+            variants={iconVariants}
+            initial="hidden"
+            animate="visible"
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
             whileHover="hover"
           >
             {service.icon}
@@ -309,6 +320,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 key={index}"
                 className="flex items-center gap-2 text-sm text-gray-300"
                 initial={{ opacity: 0, x: -20 }}
+<<<<<<< HEAD
                 animate={{ opacity: 1, x: 0 }}
         {/* Features Preview */}
 <div className='mb-6'>'
@@ -644,3 +656,8 @@ export default EnhancedServiceCard
 
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 >>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
+=======
+                animate={{ opacity: 1, x: 0}}
+                transition = $2;
+export default EnhancedServiceCard,
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91

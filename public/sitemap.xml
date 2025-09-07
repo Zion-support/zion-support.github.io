@@ -1,777 +1,1457 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+<<<<<<< HEAD
     <loc>https://zion.appabout</loc>
+<<<<<<< HEAD
     <lastmod>2025-09-07T10:49:08.048Z</lastmod>
+=======
+    <lastmod>2025-09-07T11:13:51.384Z</lastmod>
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://zion.appblog</loc>
+<<<<<<< HEAD
     <lastmod>2025-09-07T10:49:08.048Z</lastmod>
+=======
+    <lastmod>2025-09-07T11:13:51.384Z</lastmod>
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://zion.appcontact</loc>
+<<<<<<< HEAD
     <lastmod>2025-09-07T10:49:08.049Z</lastmod>
+=======
+    <lastmod>2025-09-07T11:13:51.384Z</lastmod>
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://zion.apppage.tsx</loc>
+<<<<<<< HEAD
     <lastmod>2025-09-07T10:49:08.049Z</lastmod>
+=======
+    <lastmod>2025-09-07T11:13:51.385Z</lastmod>
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://zion.appresearch</loc>
+<<<<<<< HEAD
     <lastmod>2025-09-07T10:49:08.049Z</lastmod>
+=======
+    <lastmod>2025-09-07T11:13:51.385Z</lastmod>
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://zion.appservices/ai-analytics-dashboard</loc>
+<<<<<<< HEAD
     <lastmod>2025-09-07T10:49:08.049Z</lastmod>
+=======
+    <lastmod>2025-09-07T11:13:51.385Z</lastmod>
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://zion.appservices/ai-analytics-platform</loc>
+<<<<<<< HEAD
     <lastmod>2025-09-07T10:49:08.049Z</lastmod>
+=======
+    <lastmod>2025-09-07T11:13:51.385Z</lastmod>
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://zion.appservices/ai-chatbot</loc>
+<<<<<<< HEAD
     <lastmod>2025-09-07T10:49:08.049Z</lastmod>
+=======
+    <lastmod>2025-09-07T11:13:51.385Z</lastmod>
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://zion.appservices/ai-chatbot-builder</loc>
+<<<<<<< HEAD
     <lastmod>2025-09-07T10:49:08.049Z</lastmod>
+=======
+    <lastmod>2025-09-07T11:13:51.385Z</lastmod>
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://zion.appservices/ai-chatbot-platform</loc>
+<<<<<<< HEAD
     <lastmod>2025-09-07T10:49:08.049Z</lastmod>
+=======
+    <lastmod>2025-09-07T11:13:51.385Z</lastmod>
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://zion.appservices/ai-code-assistant</loc>
+<<<<<<< HEAD
     <lastmod>2025-09-07T10:49:08.049Z</lastmod>
+=======
+    <lastmod>2025-09-07T11:13:51.385Z</lastmod>
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://zion.appservices/ai-code-reviewer</loc>
+<<<<<<< HEAD
     <lastmod>2025-09-07T10:49:08.049Z</lastmod>
+=======
+    <lastmod>2025-09-07T11:13:51.385Z</lastmod>
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://zion.appservices/ai-content-generation</loc>
+<<<<<<< HEAD
     <lastmod>2025-09-07T10:49:08.049Z</lastmod>
+=======
+    <lastmod>2025-09-07T11:13:51.385Z</lastmod>
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://zion.appservices/ai-content-generator</loc>
+<<<<<<< HEAD
     <lastmod>2025-09-07T10:49:08.049Z</lastmod>
+=======
+    <lastmod>2025-09-07T11:13:51.385Z</lastmod>
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://zion.appservices/ai-content-optimizer</loc>
+<<<<<<< HEAD
     <lastmod>2025-09-07T10:49:08.049Z</lastmod>
+=======
+    <lastmod>2025-09-07T11:13:51.385Z</lastmod>
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://zion.appservices/ai-content-writer</loc>
+<<<<<<< HEAD
     <lastmod>2025-09-07T10:49:08.049Z</lastmod>
+=======
+    <lastmod>2025-09-07T11:13:51.385Z</lastmod>
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://zion.appservices/ai-copilots</loc>
+<<<<<<< HEAD
     <lastmod>2025-09-07T10:49:08.049Z</lastmod>
+=======
+    <lastmod>2025-09-07T11:13:51.385Z</lastmod>
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://zion.appservices/ai-customer-insights</loc>
+<<<<<<< HEAD
     <lastmod>2025-09-07T10:49:08.049Z</lastmod>
+=======
+    <lastmod>2025-09-07T11:13:51.385Z</lastmod>
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://zion.appservices/ai-customer-support</loc>
+<<<<<<< HEAD
     <lastmod>2025-09-07T10:49:08.049Z</lastmod>
+=======
+    <lastmod>2025-09-07T11:13:51.385Z</lastmod>
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://zion.appservices/ai-customer-support-automation</loc>
+<<<<<<< HEAD
     <lastmod>2025-09-07T10:49:08.049Z</lastmod>
+=======
+    <lastmod>2025-09-07T11:13:51.385Z</lastmod>
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://zion.appservices/ai-data-analysis</loc>
+<<<<<<< HEAD
     <lastmod>2025-09-07T10:49:08.049Z</lastmod>
+=======
+    <lastmod>2025-09-07T11:13:51.385Z</lastmod>
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://zion.appservices/ai-data-analytics</loc>
+<<<<<<< HEAD
     <lastmod>2025-09-07T10:49:08.049Z</lastmod>
+=======
+    <lastmod>2025-09-07T11:13:51.385Z</lastmod>
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://zion.appservices/ai-documentation-generator</loc>
+<<<<<<< HEAD
     <lastmod>2025-09-07T10:49:08.049Z</lastmod>
+=======
+    <lastmod>2025-09-07T11:13:51.385Z</lastmod>
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://zion.appservices/ai-email-optimizer</loc>
+<<<<<<< HEAD
     <lastmod>2025-09-07T10:49:08.049Z</lastmod>
+=======
+    <lastmod>2025-09-07T11:13:51.386Z</lastmod>
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://zion.appservices/ai-expense-tracker</loc>
+<<<<<<< HEAD
     <lastmod>2025-09-07T10:49:08.049Z</lastmod>
+=======
+    <lastmod>2025-09-07T11:13:51.386Z</lastmod>
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://zion.appservices/ai-finance-analyzer</loc>
+<<<<<<< HEAD
     <lastmod>2025-09-07T10:49:08.049Z</lastmod>
+=======
+    <lastmod>2025-09-07T11:13:51.386Z</lastmod>
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://zion.appservices/ai-financial-analytics</loc>
+<<<<<<< HEAD
     <lastmod>2025-09-07T10:49:08.050Z</lastmod>
+=======
+    <lastmod>2025-09-07T11:13:51.386Z</lastmod>
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://zion.appservices/ai-financial-analyzer</loc>
+<<<<<<< HEAD
     <lastmod>2025-09-07T10:49:08.050Z</lastmod>
+=======
+    <lastmod>2025-09-07T11:13:51.386Z</lastmod>
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://zion.appservices/ai-fintech-solutions</loc>
+<<<<<<< HEAD
     <lastmod>2025-09-07T10:49:08.050Z</lastmod>
+=======
+    <lastmod>2025-09-07T11:13:51.386Z</lastmod>
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://zion.appservices/ai-healthcare-analytics</loc>
+<<<<<<< HEAD
     <lastmod>2025-09-07T10:49:08.050Z</lastmod>
+=======
+    <lastmod>2025-09-07T11:13:51.386Z</lastmod>
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://zion.appservices/ai-healthcare-assistant</loc>
+<<<<<<< HEAD
     <lastmod>2025-09-07T10:49:08.050Z</lastmod>
+=======
+    <lastmod>2025-09-07T11:13:51.386Z</lastmod>
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://zion.appservices/ai-hr-management</loc>
+<<<<<<< HEAD
     <lastmod>2025-09-07T10:49:08.050Z</lastmod>
+=======
+    <lastmod>2025-09-07T11:13:51.386Z</lastmod>
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://zion.appservices/ai-inventory-management</loc>
+<<<<<<< HEAD
     <lastmod>2025-09-07T10:49:08.050Z</lastmod>
+=======
+    <lastmod>2025-09-07T11:13:51.386Z</lastmod>
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://zion.appservices/ai-invoice-generator</loc>
+<<<<<<< HEAD
     <lastmod>2025-09-07T10:49:08.050Z</lastmod>
+=======
+    <lastmod>2025-09-07T11:13:51.386Z</lastmod>
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://zion.appservices/ai-marketing-automation</loc>
+<<<<<<< HEAD
     <lastmod>2025-09-07T10:49:08.050Z</lastmod>
+=======
+    <lastmod>2025-09-07T11:13:51.386Z</lastmod>
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://zion.appservices/ai-meeting-assistant</loc>
+<<<<<<< HEAD
     <lastmod>2025-09-07T10:49:08.050Z</lastmod>
+=======
+    <lastmod>2025-09-07T11:13:51.386Z</lastmod>
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://zion.appservices/ai-meeting-transcriber</loc>
+<<<<<<< HEAD
     <lastmod>2025-09-07T10:49:08.050Z</lastmod>
+=======
+    <lastmod>2025-09-07T11:13:51.386Z</lastmod>
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://zion.appservices/ai-powered-crm</loc>
+<<<<<<< HEAD
     <lastmod>2025-09-07T10:49:08.050Z</lastmod>
+=======
+    <lastmod>2025-09-07T11:13:51.386Z</lastmod>
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://zion.appservices/ai-powered-tools</loc>
+<<<<<<< HEAD
     <lastmod>2025-09-07T10:49:08.050Z</lastmod>
+=======
+    <lastmod>2025-09-07T11:13:51.386Z</lastmod>
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://zion.appservices/ai-predictive-analytics</loc>
+<<<<<<< HEAD
     <lastmod>2025-09-07T10:49:08.050Z</lastmod>
+=======
+    <lastmod>2025-09-07T11:13:51.386Z</lastmod>
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://zion.appservices/ai-project-management</loc>
+<<<<<<< HEAD
     <lastmod>2025-09-07T10:49:08.050Z</lastmod>
+=======
+    <lastmod>2025-09-07T11:13:51.386Z</lastmod>
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://zion.appservices/ai-project-management-suite</loc>
+<<<<<<< HEAD
     <lastmod>2025-09-07T10:49:08.050Z</lastmod>
+=======
+    <lastmod>2025-09-07T11:13:51.386Z</lastmod>
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://zion.appservices/ai-project-manager</loc>
+<<<<<<< HEAD
     <lastmod>2025-09-07T10:49:08.050Z</lastmod>
+=======
+    <lastmod>2025-09-07T11:13:51.386Z</lastmod>
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://zion.appservices/ai-services</loc>
+<<<<<<< HEAD
     <lastmod>2025-09-07T10:49:08.050Z</lastmod>
+=======
+    <lastmod>2025-09-07T11:13:51.386Z</lastmod>
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://zion.appservices/ai-social-media-scheduler</loc>
+<<<<<<< HEAD
     <lastmod>2025-09-07T10:49:08.050Z</lastmod>
+=======
+    <lastmod>2025-09-07T11:13:51.386Z</lastmod>
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://zion.appservices/ai-social-scheduler</loc>
+<<<<<<< HEAD
     <lastmod>2025-09-07T10:49:08.050Z</lastmod>
+=======
+    <lastmod>2025-09-07T11:13:51.386Z</lastmod>
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://zion.appservices/ai-testing-automation</loc>
+<<<<<<< HEAD
     <lastmod>2025-09-07T10:49:08.050Z</lastmod>
+=======
+    <lastmod>2025-09-07T11:13:51.386Z</lastmod>
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://zion.appservices/ai-video-generator</loc>
+<<<<<<< HEAD
     <lastmod>2025-09-07T10:49:08.050Z</lastmod>
+=======
+    <lastmod>2025-09-07T11:13:51.386Z</lastmod>
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://zion.appservices/analytics-dashboard</loc>
+<<<<<<< HEAD
     <lastmod>2025-09-07T10:49:08.050Z</lastmod>
+=======
+    <lastmod>2025-09-07T11:13:51.386Z</lastmod>
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://zion.appservices/api-development</loc>
+<<<<<<< HEAD
     <lastmod>2025-09-07T10:49:08.050Z</lastmod>
+=======
+    <lastmod>2025-09-07T11:13:51.386Z</lastmod>
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://zion.appservices/api-testing-suite</loc>
+<<<<<<< HEAD
     <lastmod>2025-09-07T10:49:08.050Z</lastmod>
+=======
+    <lastmod>2025-09-07T11:13:51.386Z</lastmod>
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://zion.appservices/automated-workflow-builder</loc>
+<<<<<<< HEAD
     <lastmod>2025-09-07T10:49:08.050Z</lastmod>
+=======
+    <lastmod>2025-09-07T11:13:51.386Z</lastmod>
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://zion.appservices/automation</loc>
+<<<<<<< HEAD
     <lastmod>2025-09-07T10:49:08.050Z</lastmod>
+=======
+    <lastmod>2025-09-07T11:13:51.386Z</lastmod>
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://zion.appservices/automation-solutions</loc>
+<<<<<<< HEAD
     <lastmod>2025-09-07T10:49:08.050Z</lastmod>
+=======
+    <lastmod>2025-09-07T11:13:51.386Z</lastmod>
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://zion.appservices/automation-tools</loc>
+<<<<<<< HEAD
     <lastmod>2025-09-07T10:49:08.050Z</lastmod>
+=======
+    <lastmod>2025-09-07T11:13:51.386Z</lastmod>
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://zion.appservices/blockchain</loc>
+<<<<<<< HEAD
     <lastmod>2025-09-07T10:49:08.050Z</lastmod>
+=======
+    <lastmod>2025-09-07T11:13:51.386Z</lastmod>
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://zion.appservices/blockchain-development</loc>
+<<<<<<< HEAD
     <lastmod>2025-09-07T10:49:08.050Z</lastmod>
+=======
+    <lastmod>2025-09-07T11:13:51.386Z</lastmod>
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://zion.appservices/blockchain-solutions</loc>
+<<<<<<< HEAD
     <lastmod>2025-09-07T10:49:08.050Z</lastmod>
+=======
+    <lastmod>2025-09-07T11:13:51.386Z</lastmod>
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://zion.appservices/business-automation</loc>
+<<<<<<< HEAD
     <lastmod>2025-09-07T10:49:08.050Z</lastmod>
+=======
+    <lastmod>2025-09-07T11:13:51.386Z</lastmod>
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://zion.appservices/chatbot-development</loc>
+<<<<<<< HEAD
     <lastmod>2025-09-07T10:49:08.050Z</lastmod>
+=======
+    <lastmod>2025-09-07T11:13:51.386Z</lastmod>
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://zion.appservices/ci-cd-pipeline-builder</loc>
+<<<<<<< HEAD
     <lastmod>2025-09-07T10:49:08.050Z</lastmod>
+=======
+    <lastmod>2025-09-07T11:13:51.386Z</lastmod>
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://zion.appservices/cloud-migration</loc>
+<<<<<<< HEAD
     <lastmod>2025-09-07T10:49:08.050Z</lastmod>
+=======
+    <lastmod>2025-09-07T11:13:51.386Z</lastmod>
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://zion.appservices/cloud-optimization</loc>
+<<<<<<< HEAD
     <lastmod>2025-09-07T10:49:08.050Z</lastmod>
+=======
+    <lastmod>2025-09-07T11:13:51.386Z</lastmod>
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://zion.appservices/cloud-security-audit</loc>
+<<<<<<< HEAD
     <lastmod>2025-09-07T10:49:08.050Z</lastmod>
+=======
+    <lastmod>2025-09-07T11:13:51.386Z</lastmod>
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://zion.appservices/cloud-services</loc>
+<<<<<<< HEAD
     <lastmod>2025-09-07T10:49:08.050Z</lastmod>
+=======
+    <lastmod>2025-09-07T11:13:51.386Z</lastmod>
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://zion.appservices/computer-vision-solutions</loc>
+<<<<<<< HEAD
     <lastmod>2025-09-07T10:49:08.050Z</lastmod>
+=======
+    <lastmod>2025-09-07T11:13:51.386Z</lastmod>
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://zion.appservices/consulting</loc>
+<<<<<<< HEAD
     <lastmod>2025-09-07T10:49:08.050Z</lastmod>
+=======
+    <lastmod>2025-09-07T11:13:51.386Z</lastmod>
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://zion.appservices/crm-platform</loc>
+<<<<<<< HEAD
     <lastmod>2025-09-07T10:49:08.050Z</lastmod>
+=======
+    <lastmod>2025-09-07T11:13:51.386Z</lastmod>
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://zion.appservices/crm-solution</loc>
+<<<<<<< HEAD
     <lastmod>2025-09-07T10:49:08.050Z</lastmod>
+=======
+    <lastmod>2025-09-07T11:13:51.386Z</lastmod>
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://zion.appservices/customer-feedback-analyzer</loc>
+<<<<<<< HEAD
     <lastmod>2025-09-07T10:49:08.050Z</lastmod>
+=======
+    <lastmod>2025-09-07T11:13:51.387Z</lastmod>
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://zion.appservices/customer-support-automation</loc>
+<<<<<<< HEAD
     <lastmod>2025-09-07T10:49:08.051Z</lastmod>
+=======
+    <lastmod>2025-09-07T11:13:51.387Z</lastmod>
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://zion.appservices/cybersecurity</loc>
+<<<<<<< HEAD
     <lastmod>2025-09-07T10:49:08.051Z</lastmod>
+=======
+    <lastmod>2025-09-07T11:13:51.387Z</lastmod>
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://zion.appservices/cybersecurity-consulting</loc>
+<<<<<<< HEAD
     <lastmod>2025-09-07T10:49:08.051Z</lastmod>
+=======
+    <lastmod>2025-09-07T11:13:51.387Z</lastmod>
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://zion.appservices/cybersecurity-suite</loc>
+<<<<<<< HEAD
     <lastmod>2025-09-07T10:49:08.051Z</lastmod>
+=======
+    <lastmod>2025-09-07T11:13:51.387Z</lastmod>
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://zion.appservices/data-analytics</loc>
+<<<<<<< HEAD
     <lastmod>2025-09-07T10:49:08.051Z</lastmod>
+=======
+    <lastmod>2025-09-07T11:13:51.387Z</lastmod>
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://zion.appservices/database-optimization</loc>
+<<<<<<< HEAD
     <lastmod>2025-09-07T10:49:08.051Z</lastmod>
+=======
+    <lastmod>2025-09-07T11:13:51.387Z</lastmod>
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://zion.appservices/devops-automation</loc>
+<<<<<<< HEAD
     <lastmod>2025-09-07T10:49:08.051Z</lastmod>
+=======
+    <lastmod>2025-09-07T11:13:51.387Z</lastmod>
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://zion.appservices/digital-transformation</loc>
+<<<<<<< HEAD
     <lastmod>2025-09-07T10:49:08.051Z</lastmod>
+=======
+    <lastmod>2025-09-07T11:13:51.387Z</lastmod>
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://zion.appservices/document-processing-automation</loc>
+<<<<<<< HEAD
     <lastmod>2025-09-07T10:49:08.051Z</lastmod>
+=======
+    <lastmod>2025-09-07T11:13:51.387Z</lastmod>
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://zion.appservices/e-commerce-solutions</loc>
+<<<<<<< HEAD
     <lastmod>2025-09-07T10:49:08.051Z</lastmod>
+=======
+    <lastmod>2025-09-07T11:13:51.387Z</lastmod>
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://zion.appservices/ecommerce-platform</loc>
+<<<<<<< HEAD
     <lastmod>2025-09-07T10:49:08.051Z</lastmod>
+=======
+    <lastmod>2025-09-07T11:13:51.387Z</lastmod>
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://zion.appservices/edtech</loc>
+<<<<<<< HEAD
     <lastmod>2025-09-07T10:49:08.051Z</lastmod>
+=======
+    <lastmod>2025-09-07T11:13:51.387Z</lastmod>
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://zion.appservices/email-automation</loc>
+<<<<<<< HEAD
     <lastmod>2025-09-07T10:49:08.051Z</lastmod>
+=======
+    <lastmod>2025-09-07T11:13:51.387Z</lastmod>
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://zion.appservices/email-automation-suite</loc>
+<<<<<<< HEAD
     <lastmod>2025-09-07T10:49:08.051Z</lastmod>
+=======
+    <lastmod>2025-09-07T11:13:51.387Z</lastmod>
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://zion.appservices/email-campaign-manager</loc>
+<<<<<<< HEAD
     <lastmod>2025-09-07T10:49:08.051Z</lastmod>
+=======
+    <lastmod>2025-09-07T11:13:51.387Z</lastmod>
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://zion.appservices/email-marketing-automation</loc>
+<<<<<<< HEAD
     <lastmod>2025-09-07T10:49:08.051Z</lastmod>
+=======
+    <lastmod>2025-09-07T11:13:51.387Z</lastmod>
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://zion.appservices/erp-solutions</loc>
+<<<<<<< HEAD
     <lastmod>2025-09-07T10:49:08.051Z</lastmod>
+=======
+    <lastmod>2025-09-07T11:13:51.387Z</lastmod>
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://zion.appservices/expense-tracker</loc>
+<<<<<<< HEAD
     <lastmod>2025-09-07T10:49:08.051Z</lastmod>
+=======
+    <lastmod>2025-09-07T11:13:51.387Z</lastmod>
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://zion.appservices/fintech</loc>
+<<<<<<< HEAD
     <lastmod>2025-09-07T10:49:08.051Z</lastmod>
+=======
+    <lastmod>2025-09-07T11:13:51.387Z</lastmod>
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://zion.appservices/fintech-solutions</loc>
+<<<<<<< HEAD
     <lastmod>2025-09-07T10:49:08.051Z</lastmod>
+=======
+    <lastmod>2025-09-07T11:13:51.387Z</lastmod>
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://zion.appservices/healthcare-solutions</loc>
+<<<<<<< HEAD
     <lastmod>2025-09-07T10:49:08.051Z</lastmod>
+=======
+    <lastmod>2025-09-07T11:13:51.387Z</lastmod>
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://zion.appservices/healthtech</loc>
+<<<<<<< HEAD
     <lastmod>2025-09-07T10:49:08.051Z</lastmod>
+=======
+    <lastmod>2025-09-07T11:13:51.387Z</lastmod>
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://zion.appservices/helpdesk-platform</loc>
+<<<<<<< HEAD
     <lastmod>2025-09-07T10:49:08.051Z</lastmod>
+=======
+    <lastmod>2025-09-07T11:13:51.387Z</lastmod>
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://zion.appservices/industry-solutions/finance</loc>
+<<<<<<< HEAD
     <lastmod>2025-09-07T10:49:08.051Z</lastmod>
+=======
+    <lastmod>2025-09-07T11:13:51.387Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://zion.appservices/industry-solutions/healthcare</loc>
+    <lastmod>2025-09-07T11:13:51.387Z</lastmod>
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://zion.appservices/industry-solutions</loc>
+<<<<<<< HEAD
     <lastmod>2025-09-07T10:49:08.051Z</lastmod>
+=======
+    <lastmod>2025-09-07T11:13:51.387Z</lastmod>
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://zion.appservices/invoice-automation</loc>
+<<<<<<< HEAD
     <lastmod>2025-09-07T10:49:08.051Z</lastmod>
+=======
+    <lastmod>2025-09-07T11:13:51.387Z</lastmod>
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://zion.appservices/iot-solutions</loc>
+<<<<<<< HEAD
     <lastmod>2025-09-07T10:49:08.051Z</lastmod>
+=======
+    <lastmod>2025-09-07T11:13:51.387Z</lastmod>
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://zion.appservices/it-services</loc>
+<<<<<<< HEAD
     <lastmod>2025-09-07T10:49:08.051Z</lastmod>
+=======
+    <lastmod>2025-09-07T11:13:51.387Z</lastmod>
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://zion.appservices/lead-generation-tool</loc>
+<<<<<<< HEAD
     <lastmod>2025-09-07T10:49:08.051Z</lastmod>
+=======
+    <lastmod>2025-09-07T11:13:51.387Z</lastmod>
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://zion.appservices/micro-saas</loc>
+<<<<<<< HEAD
     <lastmod>2025-09-07T10:49:08.051Z</lastmod>
+=======
+    <lastmod>2025-09-07T11:13:51.387Z</lastmod>
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://zion.appservices/mobile-app-development</loc>
+<<<<<<< HEAD
     <lastmod>2025-09-07T10:49:08.051Z</lastmod>
+=======
+    <lastmod>2025-09-07T11:13:51.387Z</lastmod>
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://zion.appservices/mobile-development</loc>
+<<<<<<< HEAD
     <lastmod>2025-09-07T10:49:08.051Z</lastmod>
+=======
+    <lastmod>2025-09-07T11:13:51.387Z</lastmod>
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://zion.appservices/natural-language-processing</loc>
+<<<<<<< HEAD
     <lastmod>2025-09-07T10:49:08.051Z</lastmod>
+=======
+    <lastmod>2025-09-07T11:13:51.387Z</lastmod>
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://zion.appservices</loc>
+<<<<<<< HEAD
     <lastmod>2025-09-07T10:49:08.051Z</lastmod>
+=======
+    <lastmod>2025-09-07T11:13:51.387Z</lastmod>
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://zion.appservices/predictive-analytics</loc>
+<<<<<<< HEAD
     <lastmod>2025-09-07T10:49:08.051Z</lastmod>
+=======
+    <lastmod>2025-09-07T11:13:51.387Z</lastmod>
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://zion.appservices/project-management</loc>
+<<<<<<< HEAD
     <lastmod>2025-09-07T10:49:08.051Z</lastmod>
+=======
+    <lastmod>2025-09-07T11:13:51.387Z</lastmod>
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://zion.appservices/project-management-suite</loc>
+<<<<<<< HEAD
     <lastmod>2025-09-07T10:49:08.051Z</lastmod>
+=======
+    <lastmod>2025-09-07T11:13:51.387Z</lastmod>
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://zion.appservices/qa-testing</loc>
+<<<<<<< HEAD
     <lastmod>2025-09-07T10:49:08.051Z</lastmod>
+=======
+    <lastmod>2025-09-07T11:13:51.387Z</lastmod>
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://zion.appservices/real-time-data-processing</loc>
+<<<<<<< HEAD
     <lastmod>2025-09-07T10:49:08.051Z</lastmod>
+=======
+    <lastmod>2025-09-07T11:13:51.387Z</lastmod>
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://zion.appservices/seo-analyzer</loc>
+<<<<<<< HEAD
     <lastmod>2025-09-07T10:49:08.051Z</lastmod>
+=======
+    <lastmod>2025-09-07T11:13:51.387Z</lastmod>
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://zion.appservices/smart-invoice-generator</loc>
+<<<<<<< HEAD
     <lastmod>2025-09-07T10:49:08.051Z</lastmod>
+=======
+    <lastmod>2025-09-07T11:13:51.387Z</lastmod>
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://zion.appservices/social-media-automation</loc>
+<<<<<<< HEAD
     <lastmod>2025-09-07T10:49:08.051Z</lastmod>
+=======
+    <lastmod>2025-09-07T11:13:51.387Z</lastmod>
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://zion.appservices/social-media-management</loc>
+<<<<<<< HEAD
     <lastmod>2025-09-07T10:49:08.051Z</lastmod>
+=======
+    <lastmod>2025-09-07T11:13:51.387Z</lastmod>
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://zion.appservices/social-media-scheduler</loc>
+<<<<<<< HEAD
     <lastmod>2025-09-07T10:49:08.051Z</lastmod>
+=======
+    <lastmod>2025-09-07T11:13:51.387Z</lastmod>
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://zion.appservices/software-development</loc>
+<<<<<<< HEAD
     <lastmod>2025-09-07T10:49:08.051Z</lastmod>
+=======
+    <lastmod>2025-09-07T11:13:51.388Z</lastmod>
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://zion.appservices/team-collaboration-hub</loc>
+<<<<<<< HEAD
     <lastmod>2025-09-07T10:49:08.052Z</lastmod>
+=======
+    <lastmod>2025-09-07T11:13:51.388Z</lastmod>
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://zion.appservices/voice-recognition</loc>
+<<<<<<< HEAD
     <lastmod>2025-09-07T10:49:08.052Z</lastmod>
+=======
+    <lastmod>2025-09-07T11:13:51.388Z</lastmod>
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://zion.appservices/vulnerability-scanner</loc>
+<<<<<<< HEAD
     <lastmod>2025-09-07T10:49:08.052Z</lastmod>
+=======
+    <lastmod>2025-09-07T11:13:51.388Z</lastmod>
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://zion.appservices/web-application-development</loc>
+<<<<<<< HEAD
     <lastmod>2025-09-07T10:49:08.052Z</lastmod>
+=======
+    <lastmod>2025-09-07T11:13:51.388Z</lastmod>
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://zion.appservices/web-development</loc>
+<<<<<<< HEAD
     <lastmod>2025-09-07T10:49:08.052Z</lastmod>
+=======
+    <lastmod>2025-09-07T11:13:51.388Z</lastmod>
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://zion.appservices/website-analyzer</loc>
+<<<<<<< HEAD
     <lastmod>2025-09-07T10:49:08.052Z</lastmod>
+=======
+    <lastmod>2025-09-07T11:13:51.388Z</lastmod>
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://zion.appsolutions</loc>
+<<<<<<< HEAD
     <lastmod>2025-09-07T10:49:08.052Z</lastmod>
+=======
+    <lastmod>2025-09-07T11:13:51.388Z</lastmod>
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://zion.app/</loc>
+<<<<<<< HEAD
     <lastmod>2025-09-07T10:49:08.052Z</lastmod>
+=======
+    <lastmod>2025-09-07T11:13:51.388Z</lastmod>
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
     <changefreq>daily</changefreq>
     <priority>1</priority>
   </url>
   <url>
     <loc>https://zion.app/about</loc>
+<<<<<<< HEAD
     <lastmod>2025-09-07T10:49:08.052Z</lastmod>
+=======
+    <lastmod>2025-09-07T11:13:51.388Z</lastmod>
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://zion.app/services</loc>
+<<<<<<< HEAD
     <lastmod>2025-09-07T10:49:08.052Z</lastmod>
+=======
+    <lastmod>2025-09-07T11:13:51.388Z</lastmod>
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://zion.app/contact</loc>
+<<<<<<< HEAD
     <lastmod>2025-09-07T10:49:08.052Z</lastmod>
+=======
+    <lastmod>2025-09-07T11:13:51.388Z</lastmod>
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://zion.app/blog</loc>
+<<<<<<< HEAD
     <lastmod>2025-09-07T10:49:08.052Z</lastmod>
+=======
+    <lastmod>2025-09-07T11:13:51.388Z</lastmod>
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://zion.app/privacy</loc>
+<<<<<<< HEAD
     <lastmod>2025-09-07T10:49:08.052Z</lastmod>
+=======
+    <lastmod>2025-09-07T11:13:51.388Z</lastmod>
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
   <url>
     <loc>https://zion.app/terms</loc>
+<<<<<<< HEAD
     <lastmod>2025-09-07T10:49:08.052Z</lastmod>
+=======
+    <lastmod>2025-09-07T11:13:51.388Z</lastmod>
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
+=======
+    <loc>https://ziontechgroup.com</loc>
+    <lastmod>2025-09-07T08:47:49.983Z</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://ziontechgroup.com/about</loc>
+    <lastmod>2025-09-07T08:47:49.983Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ziontechgroup.com/services</loc>
+    <lastmod>2025-09-07T08:47:49.983Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ziontechgroup.com/solutions</loc>
+    <lastmod>2025-09-07T08:47:49.983Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ziontechgroup.com/products</loc>
+    <lastmod>2025-09-07T08:47:49.983Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ziontechgroup.com/pricing</loc>
+    <lastmod>2025-09-07T08:47:49.983Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ziontechgroup.com/contact</loc>
+    <lastmod>2025-09-07T08:47:49.983Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ziontechgroup.com/privacy</loc>
+    <lastmod>2025-09-07T08:47:49.983Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ziontechgroup.com/terms</loc>
+    <lastmod>2025-09-07T08:47:49.983Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ziontechgroup.com/cookies</loc>
+    <lastmod>2025-09-07T08:47:49.983Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ziontechgroup.com/careers</loc>
+    <lastmod>2025-09-07T08:47:49.983Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ziontechgroup.com/blog</loc>
+    <lastmod>2025-09-07T08:47:49.983Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ziontechgroup.com/case-studies</loc>
+    <lastmod>2025-09-07T08:47:49.983Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ziontechgroup.com/whitepapers</loc>
+    <lastmod>2025-09-07T08:47:49.983Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ziontechgroup.com/webinars</loc>
+    <lastmod>2025-09-07T08:47:49.983Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ziontechgroup.com/events</loc>
+    <lastmod>2025-09-07T08:47:49.983Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ziontechgroup.com/news</loc>
+    <lastmod>2025-09-07T08:47:49.983Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ziontechgroup.com/support</loc>
+    <lastmod>2025-09-07T08:47:49.983Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ziontechgroup.com/docs</loc>
+    <lastmod>2025-09-07T08:47:49.983Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ziontechgroup.com/api</loc>
+    <lastmod>2025-09-07T08:47:49.983Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ziontechgroup.com/ai-services</loc>
+    <lastmod>2025-09-07T08:47:49.983Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ziontechgroup.com/it-services</loc>
+    <lastmod>2025-09-07T08:47:49.983Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ziontechgroup.com/micro-saas</loc>
+    <lastmod>2025-09-07T08:47:49.983Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ziontechgroup.com/cybersecurity</loc>
+    <lastmod>2025-09-07T08:47:49.983Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ziontechgroup.com/cloud-services</loc>
+    <lastmod>2025-09-07T08:47:49.983Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ziontechgroup.com/digital-transformation</loc>
+    <lastmod>2025-09-07T08:47:49.983Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+>>>>>>> cursor/automate-test-improve-and-merge-code-9862
 </urlset>

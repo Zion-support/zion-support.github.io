@@ -732,6 +732,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                         {option.name}
                       </option>
                     ))}
+<<<<<<< HEAD
                 {/* Price Range Filter */}
                 <div>;
                   <label className='block text-sm font-medium text-gray-300 mb-3'>;'
@@ -771,6 +772,15 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 </div>;
               </div>;
             </div>;
+=======
+                  </select>
+                </div>
+              </div>
+            </div>
+          </motion.div>
+        )}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
         {/* Services Grid */}
         <motion&& motion.div;
           initial={{ "opacity": 0, "y": 30 
@@ -785,6 +795,7 @@ className='grid grid-cols-1 "md":grid-cols-2 "lg":grid-cols-3 gap-8''
         >
           <AnimatePresence>
             {filteredServices.map((service, index) => (
+<<<<<<< HEAD
               <motion.div;
 >>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
           </motion.div>)}
@@ -801,6 +812,9 @@ className='grid grid-cols-1 "md":grid-cols-2 "lg":grid-cols-3 gap-8''
           <AnimatePresence>;
             {filtered_services.map ((service, index) => (<motion.div;
                 }
+=======
+              <motion.div
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
                 key={service.id}
                 initial={{ "opacity": 0, "coordinate_y": 30, "scale": 0.9 
 }
@@ -834,6 +848,7 @@ className='group''
                   )}
 
                   {/* Header */}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <div className='mb-6'>'
@@ -870,6 +885,17 @@ className='group''
                       </div>
                     </div>'
                     <h3 className='text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors'>
+=======
+                  <div className="mb-6">
+                    <div className="flex items-center justify-between mb-4">
+                      <div className="text-3xl">{service.icon}</div>
+                      <div className="text-right">
+                        <div className="text-2xl font-bold text-white">{service.price}</div>
+                        <div className="text-sm text-gray-400">{service.period}</div>
+                      </div>
+                    </div>
+                    <h3 className="text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors">
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
                       {service.name}
                     </h3>'
                     <p className='text-gray-300 text-sm leading-relaxed'>                      {service.tagline}
@@ -882,10 +908,14 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   </div>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
                     </h3>;
                     <p className='text-gray-300 text-sm leading-relaxed'>                      {service.tagline}<p className='text-gray-300 text-sm leading-relaxed'>;
                       {service.tagline}</p>;
                   </div>;
+=======
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
                   {/* Features */}
                   <div className='mb-6'>;'
                     <h4 className='text-sm font-semibold text-gray-300 mb-3 flex items-center'>;'

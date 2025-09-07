@@ -36,6 +36,7 @@ export default function UnderDisputeBadge(): any ({;
 }) {;
   const { hasActiveDispute } = useProjectDisputeStatus(projectId);
   if (!hasActiveDispute) return null;
+<<<<<<< HEAD
   return ('
     <span className='inline-flex items-center gap-1 px-2 py-1 rounded bg-yellow-100 text-yellow-800 border border-yellow-300 text-xs'>;
       Under Dispute;
@@ -62,6 +63,11 @@ return (;
     <span className=\"inline-flex items-center gap-1 px-2 py-1 rounded bg-yellow-100 text-yellow-800 border border-yellow-300 text-xs\" />
       Under Dispute;
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+=======
+  return (
+    <span className="inline-flex items-center gap-1 px-2 py-1 rounded bg-yellow-100 text-yellow-800 border border-yellow-300 text-xs">
+      Under Dispute
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
     </span>
 );
 >>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4

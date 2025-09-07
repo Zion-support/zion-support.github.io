@@ -424,6 +424,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           <span className='text-white'>Technology is Here</span>
 origin/cursor/automate-test-improve-and-merge-code-2533
         </motion.h1>
+<<<<<<< HEAD
           transition={{ duration: 0 && 0.8, delay: 0 && 0.2 }}'
           className='text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight'>;'
           <span className='bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent'>;
@@ -486,6 +487,8 @@ className='text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto mb-12 leading-rel
           animate={{ opacity: 1, y: 0 }}
 
         </motion.h1>
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
 
         {/* Subheading */}
         <motion.p
@@ -592,6 +595,7 @@ href={`"tel": ${contactInfo.mobile}`}`            className='group inline-flex i
 className='grid grid-cols-2 "md":grid-cols-4 gap-6 mb-16''
         >
           {heroStats.map((stat, index) => (
+<<<<<<< HEAD
 <<<<<<< HEAD
             <motion.div
 }
@@ -793,6 +797,58 @@ className={`w-16 h-16 bg-gradient-to-r ${service.color} rounded-2xl flex items-c
 }
                   </h3>;
                   <p className='text-gray-400 text-sm mb-4 leading-relaxed'>;'
+=======
+            <motion.div
+              key={stat.label}
+              initial={{ opacity: 0, scale: 0.8 }}
+              animate={{ opacity: 1, scale: 1}}
+              transition={{ duration: 0.6, delay: 1 + index * 0.1 }}
+              className="text-center group"
+            >
+              <div className={`w-16 h-16 mx-auto mb-4 flex items-center justify-center bg-gradient-to-r ${stat.color} rounded-2xl transform transition-all duration-300 group-hover:shadow-lg hover:shadow-cyan-400/40 group-hover:shadow-lg`}>
+                <stat.icon className="w-8 h-8 text-white" />
+              </div>
+              <div className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent mb-2">
+                {stat.number}
+              </div>
+              <div className="text-gray-400 text-sm">{stat.label}</div>
+            </motion.div>
+          ))}
+        </motion.div>
+
+        {/* Featured Services */}
+        <motion.div
+          initial={{ opacity: 0, y: 30}}
+          animate={{ opacity: 1, y: 0}}
+          transition={{ duration: 0.8, delay: 1.2 }}
+          className="mb-16"
+        >
+          <h2 className="text-2xl md:text-3xl font-bold text-white mb-8">
+            Featured Revolutionary Services
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {featuredServices.map((service, index) => (
+              <motion.div
+                key={service.name}
+                initial={{ opacity: 0, y: 20}}
+                animate={{ opacity: 1, y: 0}}
+                transition={{ duration: 0.6, delay: 1.4 + index * 0.1 }}
+                className="group"
+              >
+                <Link
+                  href={service.href}
+                  className="block relative bg-gradient-to-br from-gray-900/80 to-gray-800/80 backdrop-blur-xl border border-gray-700/50 rounded-2xl p-6 h-full transform transition-all duration-500 hover:shadow-xl hover:shadow-cyan-500/30 hover:shadow-2xl hover:shadow-purple-500/20 hover:border-purple-500/50"
+                >
+                  <div className={`w-16 h-16 bg-gradient-to-r ${service.color} rounded-2xl flex items-center justify-center mb-6 transform transition-transform duration-300 group-hover:shadow-lg hover:shadow-cyan-400/40`}>
+                    <service.icon className="w-8 h-8 text-white" />
+                  </div>
+                  
+                  <h3 className="text-xl font-bold text-white mb-3 group-hover:text-transparent group-hover:bg-gradient-to-r group-hover:from-cyan-400 group-hover:to-purple-400 group-hover:bg-clip-text transition-all duration-300">
+                    {service.name}
+                  </h3>
+                  
+                  <p className="text-gray-400 text-sm mb-4 leading-relaxed">
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
                     {service.description}
                   </p>;
                   <div className='flex items-center justify-between'>;'
@@ -818,6 +874,7 @@ className={`w-16 h-16 bg-gradient-to-r ${service.color} rounded-2xl flex items-c
 <<<<<<< HEAD
             ))}
           </div>
+<<<<<<< HEAD
         </motion.div>`
                     className={`w-16 h-16 bg-gradient-to-r ${service && service.color} rounded-2xl flex items-center justify-center mb-6 transform transition-transform duration-300 group-hover:shadow-lg hover:shadow-cyan-400/40`}>;'
                     <service && service.icon className='w-8 h-8 text-white' />;
@@ -983,6 +1040,8 @@ href={`"mailto": ${contactInfo.email}`}`                className='"hover":text-
               </motion.div>
             ))}
           </div>
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
         </motion.div>
 
         {/* Contact Information */}
@@ -1031,6 +1090,7 @@ href='/contact''
         </motion.div>
       </div>
 
+<<<<<<< HEAD
                 href={`"mailto":${contactInfo && contactInfo.email},`}
                 className='"hover":text-purple-400 transition-colors'>;'
                 {contactInfo && contactInfo.email}
@@ -1384,6 +1444,8 @@ href={`"tel":${contactInfo.mobile},`
 
   )
 
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
       {/* Floating Action Button */}
       <motion.div
         initial={{ opacity: 0, scale: 0}}

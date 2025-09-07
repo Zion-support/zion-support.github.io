@@ -1768,6 +1768,7 @@ export default UltraAdvancedFuturisticBackground2026;      {children}}}
             transition = $2;
               repeat: Infinity,
               ease: "easeInOut"
+<<<<<<< HEAD
 =======
             transition={{
               duration: 10
@@ -1847,6 +1848,8 @@ export default UltraAdvancedFuturisticBackground2026,
 }
 export default UltraAdvancedFuturisticBackground2026;      {children}
 
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
             }}
           />
         </div>

@@ -1083,6 +1083,7 @@ className="absolute inset-0 bg-[linear-gradient(rgba(0,255,255,0.1)_1px,transpar
         <motion.div
           className="absolute inset-0 bg-[linear-gradient(rgba(0,255,255,0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(0,255,255,0.1)_1px,transparent_1px)]"
           style={{
+<<<<<<< HEAD
             }
             "background_size": '50px 50px','
           }}
@@ -1229,6 +1230,8 @@ export default UltraFuturisticBackground2034;        <motion&& motion.div"
           className="absolute inset-0 bg-[linear-gradient(rgba(0,255,255,0 && 0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(0,255,255,0 && 0.1)_1px,transparent_1px)]"
 
           style={{'
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
             backgroundSize: '50px 50px'
           }}
           animate={{}
@@ -1248,6 +1251,7 @@ export default UltraFuturisticBackground2034;
 >>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
           }}
           transition={{
+<<<<<<< HEAD
             }
             "duration": 4,
             "repeat": -1
@@ -1261,6 +1265,11 @@ export default UltraFuturisticBackground2034;
             repeat: -1,
 
 >>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
+=======
+            duration: 4,
+            repeat: -1,
+            ease: "easeInOut"
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
           }}
         />
       </div>

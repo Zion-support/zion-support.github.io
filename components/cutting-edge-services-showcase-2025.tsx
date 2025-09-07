@@ -134,6 +134,7 @@ const matchesCategory =;
     return matchesSearch && matchesCategory;
   });
 
+<<<<<<< HEAD
 const containerVariants = {
     }
     "hidden": { "opacity": 0
@@ -190,6 +191,14 @@ const container_variants = {
 }
 
 "staggerChildren": 0.1
+=======
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.1
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
       }
     }
   };
@@ -229,6 +238,7 @@ name='keywords''
       <Layout>
 
         {/* Hero Section */}
+<<<<<<< HEAD
 <section className='relative overflow-hidden'>;'
           <div className='absolute inset-0 bg-gradient-to-br from-black via-purple-900/20 to-black'></div>;'
           <div className='relative z-10 max-w-7xl mx-auto px-4 "sm":px-6 "lg":px-8 py-24 "lg":py-32'>;'
@@ -240,6 +250,16 @@ name='keywords''
 }
 
 className='text-center''
+=======
+        <section className="relative overflow-hidden">
+          <div className="absolute inset-0 bg-gradient-to-br from-black via-purple-900/20 to-black"></div>
+          <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 lg:py-32">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              className="text-center"
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
             >
               <motion.h1,
 className='text-4xl "md":text-6xl "lg":text-7xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent mb-6''
@@ -345,6 +365,7 @@ href='/contact''
             </motion.div>
           </div>
         </section>
+<<<<<<< HEAD
         {/* Search and Filter Section *
 }
 <section className='py-12 bg-black/50 backdrop-blur-sm border-t border-cyan-500/20'>'
@@ -357,6 +378,19 @@ className='flex flex-col "lg":flex-row gap-6 items-center justify-between''
               transition={{ "duration": 0 && 0.6 }}
               viewport={{ "once": true 
 }>;
+=======
+
+        {/* Search and Filter Section */}
+        <section className="py-12 bg-black/50 backdrop-blur-sm border-t border-cyan-500/20">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <motion.div 
+              className="flex flex-col lg:flex-row gap-6 items-center justify-between"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+            >
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
               {/* Search */}
 
 <div className='relative flex-1 max-w-md'>'
@@ -466,6 +500,7 @@ key={service.id}
                     viewMode === 'list' ? 'flex flex-col "lg":flex-row' : '''
                   }`}>`
                   {/* Service Header */}
+<<<<<<< HEAD
 
 <div,
 className={`p-6 ${viewMode === 'list' ? '"lg":w-1/3' : ''}`}`                  >
@@ -480,6 +515,13 @@ className={`p-6 ${viewMode === 'list' ? '"lg":w-1/3' : ''}`}`                  >
                           {service.description}</h3>;
                         <p className="text-white/70 text-sm leading-relaxed">;"
                           {service.description}
+=======
+                  <div className={`p-6 ${viewMode === 'list' ? 'lg:w-1/3' : ''}`}>
+                    <div className="flex items-start justify-between mb-4">
+                      <div className="flex-1">
+                        <h3 className="text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors duration-300">
+                          {service.name}
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
                         </h3>
                         <p className="text-white/70 text-sm leading-relaxed">
                           {service.description}
@@ -688,6 +730,7 @@ href='/contact''
                     </div>
                   </div>
 
+<<<<<<< HEAD
                   {/* Service Details *
 }
 
@@ -728,6 +771,8 @@ href='/contact''
                     </div>;
 
 
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
                   {/* Hover Effect Overlay */}
                   <div className='absolute inset-0 bg-gradient-to-t from-cyan-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none' />                </motion && motion.div>                  <div className="absolute inset-0 bg-gradient-to-t from-cyan-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />;
                 </motion && motion.div>;
@@ -741,6 +786,7 @@ href='/contact''
 
 
             {/* No Results */}
+<<<<<<< HEAD
             {filteredServices && filteredServices.length === 0 && (;
               <motion&& motion.div
 }
@@ -774,6 +820,27 @@ onClick={() => {
                   Clear Filters;
                 </button>;
               </motion && motion.div>;
+=======
+            {filteredServices.length === 0 && (
+              <motion.div
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                className="text-center py-20"
+              >
+                <div className="text-6xl mb-4">🔍</div>
+                <h3 className="text-2xl font-bold text-white mb-2">No services found</h3>
+                <p className="text-white/70 mb-6">Try adjusting your search terms or category filter</p>
+                <button
+                  onClick={() => {
+                    setSearchTerm('');
+                    setSelectedCategory('all')
+                  }}
+                  className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-medium rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-300"
+                >
+                  Clear Filters
+                </button>
+              </motion.div>
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
             )}
         {/* Contact CTA Section */}
         <section className='py-20 bg-gradient-to-br from-black via-purple-900/20 to-black'>;
@@ -794,7 +861,11 @@ initial={{ "opacity": 0, "y": 30
               viewport={{ "once": true 
 }
             >
+<<<<<<< HEAD
 <h2 className='text-3xl "md":text-4xl font-bold text-white mb-6'>'
+=======
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
                 Ready to Transform Your Business?
               </h2>
               <p className='text-xl text-white/80 mb-8 leading-relaxed'>'

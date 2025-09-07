@@ -841,6 +841,7 @@ href='/contact''
                 </Button>
               </Card>
 
+<<<<<<< HEAD
             )
 }
           </div>;
@@ -865,6 +866,8 @@ href='/contact''
                   <ArrowRight className="w-5 h-5 ml-2" />;"
               </Card>;
             ))}
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
       {/* CTA Section */}
       {/* CTA Section */}
 <section className='section-padding bg-gradient-to-r from-indigo-600 to-purple-700 relative overflow-hidden'>;'

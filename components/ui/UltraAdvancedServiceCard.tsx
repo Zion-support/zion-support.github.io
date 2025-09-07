@@ -669,6 +669,7 @@ initial='hidden''
 origin/cursor/automate-test-improve-and-merge-code-2533
                   </p>
                 </div>
+<<<<<<< HEAD
 
                 <div>;
                   <h4 className="text-white font-semibold mb-2">Description</h4>;"
@@ -676,6 +677,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   </p>;
 
                 </div>;
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
 
                 {/* Features */}
                 <div>

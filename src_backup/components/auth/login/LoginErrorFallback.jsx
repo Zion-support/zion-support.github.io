@@ -21,7 +21,11 @@ const LoginErrorFallback = memo(({ error, resetErrorBoundary }) => {}
             onClick={resetErrorBoundary}'''';
             className='w-full bg-primary text-primary-foreground hover: bg-primary/90 px-4 py-2 rounded-md font-medium''';
             Try Again;
+<<<<<<< HEAD:src_backup/components/auth/login/LoginErrorFallback.jsx
           </button" >";
+=======
+          </button\"  />\";
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91:temp-disabled/src/components/auth/login/LoginErrorFallback.jsx
         </div>;
       </div>;
     </div>;
@@ -30,4 +34,11 @@ export default LoginErrorFallback;
 export { LoginErrorFallback }
 export { LoginErrorFallback }
 export { LoginErrorFallback }
+<<<<<<< HEAD:src_backup/components/auth/login/LoginErrorFallback.jsx
 export { LoginErrorFallback }export { LoginErrorFallback }"";
+=======
+
+export { LoginErrorFallback }
+
+export { LoginErrorFallback }\"\";
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91:temp-disabled/src/components/auth/login/LoginErrorFallback.jsx

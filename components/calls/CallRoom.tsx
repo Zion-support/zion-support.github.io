@@ -99,6 +99,7 @@ const connect = useCallback(async () => {
 let "localTracks": any[] = [];
     if (startMode === 'video') {'
 
+<<<<<<< HEAD
 }
 
 localTracks = await createLocalTracks({
@@ -165,6 +166,16 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 <<<<<<< HEAD
   const handleLeave = () => {
     if (room) {
+=======
+    // create local tracks per start mode
+    let localTracks: any[] = [],
+    if (startMode === 'video') {
+      localTracks = await createLocalTracks({ audio: true, video: VideoPresets.h720 })
+    } else {
+      localTracks = await createLocalTracks({ audio: true, video: false })
+    }
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
     await r.connect(serverUrl, token, {
       }
       "autoSubscribe": true

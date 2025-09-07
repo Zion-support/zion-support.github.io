@@ -32,6 +32,7 @@ return (;
   async function saveProfile() {
     }
     e.preventDefault();
+<<<<<<< HEAD
 
 const formData = new FormData(e.currentTarget);
 
@@ -52,6 +53,21 @@ const updated = {
     // For MVP, update via direct API not implemented; keep local preview only,
 setActiveVendor(updated);
   }
+=======
+    const formData = new FormData(e.currentTarget);
+    const updated = {
+      ...activeVendor;
+      name: String(formData.get('name') || activeVendor.name),
+      about: String(formData.get('about') || activeVendor.about || ''),
+      servicesOffered: String(formData.get('servicesOffered') || activeVendor.servicesOffered?.join() || '')
+        .split()
+        .map(s => s.trim())
+        .filter(Boolean)} as Vendor;
+    // For MVP, update via direct API not implemented, keep local preview only
+    setActiveVendor(updated)
+  }
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
   function addPackage() {
     }
     if (!pkgTitle || !pkgPrice || !activeVendor) return;
@@ -156,6 +172,7 @@ name='servicesOffered''
         </form>
       </section>
 
+<<<<<<< HEAD
 <section className='space-y-3'>'
         <h2 className='text-lg font-medium'>Publish Packages</h2>'
         <div className='grid grid-cols-1 "md":grid-cols-3 gap-4'>'
@@ -193,6 +210,17 @@ name='servicesOffered''
               <div className='text-sm text-gray-500'>{p && p.description}</div>;'
               <div className='mt-2 text-sm'>${p && p.priceUsd}</div>;'
             </div>;
+=======
+      <section className="space-y-3">
+        <h2 className="text-lg font-medium">Publish Packages</h2>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+          {(activeVendor.packages || []).map(p => (
+            <div key={p.id} className="border border-gray-200 dark:border-gray-800 rounded p-4">
+              <div className="font-medium">{p.title}</div>
+              <div className="text-sm text-gray-500">{p.description}</div>
+              <div className="mt-2 text-sm">${p.priceUsd}</div>
+            </div>
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
           ))}
         </div>;
         <div className='grid grid-cols-1 "md":grid-cols-3 gap-2 items-end'>;'
@@ -233,24 +261,38 @@ onClick={addPackage}
         <Pipeline vendorId={activeVendor.i
 } />
       </section>
+<<<<<<< HEAD
       <div className='text-center text-xs text-gray-500'>Powered by Zion</div>'
+=======
+
+      <div className="text-center text-xs text-gray-500">Powered by Zion</div>
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
     </div>
   )
 }
 
+<<<<<<< HEAD
 function Pipeline() {
   }
+=======
+function Pipeline({ vendorId }: { vendorId: string }) {
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
   const [items, setItems] = useState<any[]>([]);
 
 
     const res = await fetch(`/api/vendors/pipeline?vendorId=${encodeURIComponent(vendorId)}`);
     const data = await res.json();
     setItems(data.items || [])
+<<<<<<< HEAD
+=======
+  }
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
 
   async function fetchItems() {
 
 }
 
+<<<<<<< HEAD
 const res = await fetch(;
       `/api/vendors/pipeline?vendorId=${encodeURIComponent(vendorId)}``
     );
@@ -329,6 +371,24 @@ return { "props": { vendor } }})defaultValue={item.statu,;
             <option value='in_progress'>In Progress</option>'
             <option value='complete'>Complete</option>'
             <option value='lost'>Lost</option>'
+=======
+  return (
+    <div className="space-y-2">
+      {items.length === 0 && <div className="text-sm text-gray-500">No leads yet.</div>}
+      {items.map(item => (
+        <div key={item.id} className="border border-gray-200 dark:border-gray-800 rounded p-3 flex items-center justify-between">
+          <div>
+            <div className="font-medium">{item.title}</div>
+            <div className="text-xs text-gray-500">{new Date(item.createdAt).toLocaleString()} • {item.status}</div>
+          </div>
+          <select defaultValue={item.status} onChange={e => changeStatus(item.id, e.target.value)} className="border rounded px-2 py-1 bg-transparent text-sm">
+            <option value="lead">Lead</option>
+            <option value="qualified">Qualified</option>
+            <option value="proposal">Proposal</option>
+            <option value="in_progress">In Progress</option>
+            <option value="complete">Complete</option>
+            <option value="lost">Lost</option>
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
           </select>
         </div>
       ))}

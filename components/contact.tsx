@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 
@@ -18,6 +19,37 @@ import { innovativeAIServices2029   } from '../data/2029-innovative-ai-services'
 import { quantumSpaceInnovations2029   } from '../data/2029-quantum-space-innovations';'
 import { enterpriseITInnovations2029   } from '../data/2029-enterprise-it-innovations';'
 import { innovativeMicroSaas2029  } from '../data/2029-innovative-micro-saas';'
+=======
+export default function Page(){return null}
+import React from 'react';
+import React, { useState } from 'react';
+import Head from 'next/head';
+import { motion } from 'framer-motion';
+import { 
+  Phone, Mail, MapPin, Globe, Clock, Users, 
+  MessageSquare, Send, CheckCircle, Star, 
+  Rocket, Brain, Atom, Shield, Zap
+} from 'lucide-react',
+import UltraFuturisticBackground2029 from '../components/backgrounds/UltraFuturisticBackground2029';
+import UltraFuturisticNavigation2029 from '../components/layout/UltraFuturisticNavigation2029';
+import UltraFuturisticFooter2029 from '../components/layout/UltraFuturisticFooter2029';
+// Import service data for showcase
+import { innovativeAIServices2029 } from '../data/2029-innovative-ai-services';
+import { quantumSpaceInnovations2029 } from '../data/2029-quantum-space-innovations';
+import { enterpriseITInnovations2029 } from '../data/2029-enterprise-it-innovations';
+import { innovativeMicroSaas2029 } from '../data/2029-innovative-micro-saas';
+export default function ContactPage() {
+  const [formData, setFormData] = useState($2);
+  const [isSubmitting, setIsSubmitting] = useState($2);
+  const [submitSuccess, setSubmitSuccess] = useState($2);
+  const contactInfo = $2;
+    email: 'kleber@ziontechgroup.com',
+    address: '364 E Main St STE 1008 Middletown DE 19709',
+    website: 'https://ziontechgroup.com',
+    hours: '24/7 Support Available',
+    timezone: 'Eastern Time (ET)'
+  },
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
 
 export default function ContactPage() {const [formData, setFormData] = useState({"name": '';'
     }
@@ -47,7 +79,10 @@ return (;
         <meta property=""og":type" content="website" />"
         <link rel="canonical" href=""https"://ziontechgroup.com/contact" />"
       </Head>
+<<<<<<< HEAD
 ;
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
 
 const [submitSuccess, setSubmitSuccess] = useState (false);
 //Get popular services for showcase const popularServices = [ ...innovativeAIServices2029 && innovativeAIServices2029.filter (s => { return s && s.popular); }
@@ -84,14 +119,40 @@ setSubmitSuccess (true);
   }
   "opacity": 0, "x": -30 
 
+<<<<<<< HEAD
 }whileInView= {
   {
   }
   "opacity": 1, "x": 0 
+=======
+      <main className="relative z-10 pt-20">
+        {/* Hero Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8 text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 20}}
+            animate={{ opacity: 1, y: 0}}
+            transition={{ duration: 0.8 }}
+            className="max-w-4xl mx-auto"
+          >
+            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
+              <span className="bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
+                Get In Touch
+              </span>
+              <br />
+              <span className="text-white">Transform Your Business</span>
+            </h1>
+            <p className="text-xl text-gray-300 mb-8">
+              Ready to revolutionize your business with cutting-edge 2029 technology? 
+              Our team of experts is here to help you implement the future today.
+            </p>
+          </motion.div>
+        </section>
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
 
 }transition= {
   {
 
+<<<<<<< HEAD
   }
 
   "duration": 0.8 
@@ -101,6 +162,26 @@ setSubmitSuccess (true);
   }
   "once": true 
 
+=======
+              {/* Email Contact */}
+              <motion.div
+                initial={{ opacity: 0, y: 20}}
+                whileInView={{ opacity: 1, y: 0}}
+                transition={{ duration: 0.6, delay: 0.1 }}
+                viewport={{ once: true}}
+                className="group cursor-pointer"
+              >
+                <div className="p-8 rounded-2xl bg-gradient-to-br from-gray-900/50 to-gray-800/50 border border-purple-500/20 hover:border-purple-400/40 transition-all duration-300 backdrop-blur-sm hover:transform hover:scale-105">
+                  <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+                    <Mail className="w-8 h-8 text-white" />
+                  </div>
+                  <h3 className="text-xl font-semibold text-white mb-3">Email Support</h3>
+                  <p className="text-gray-300 mb-4">Quick response guaranteed within 2 hours</p>
+                  <div className="text-lg font-semibold text-purple-400 mb-2 break-all">{contactInfo.email}</div>
+                  <p className="text-sm text-gray-400">Response time: &lt,2 hours</p>
+                </div>
+              </motion.div>
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
 
 }> <div className="bg-gradient-to-br from-gray-900/80 to-gray-800/80 backdrop-blur-sm border border-gray-700/50 rounded-2xl p-8" > <h2 className="text-3xl font-bold bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent mb-6" > Get Free Consultation </h2> {"
   }

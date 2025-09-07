@@ -97,6 +97,7 @@ export const AICodeGenerator = () => {const { trackEvent } = useAnalytics({     
       <div className='border-b border-gray-200 dark:border-gray-700'>'''';
         <nav className='flex space-x-8 px-6'>'';
           {['';
+<<<<<<< HEAD:src_backup/components/AICodeGenerator.js.jsx
             { id: 'generate', label: 'Generate', icon: Sparkles }, '';
             { id: 'analyze', label: 'Analyze', icon: Eye },'';
             { id: 'optimize', label: 'Optimize', icon: Zap }, '';
@@ -105,6 +106,28 @@ export const AICodeGenerator = () => {const { trackEvent } = useAnalytics({     
         ].map(({ id, label, icon: Icon }) => (<button key={id} onClick={() => setActiveTab(id)} className={`flex items-center gap-2 py-4 px-1 border-b-2 font-medium text-sm transition-colors ${activeTab === id''`;
                 ? 'border-purple-500 text-purple-600 dark: text-purple-400''`''`';
                 : 'border-transparent text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-300'}`}>'''';
+=======
+            { id: 'generate',}
+  label: 'Generate', icon: Sparkles,}
+}, '';
+            { id: 'analyze',}
+  label: 'Analyze', icon: Eye,}
+},'';
+            { id: 'optimize',}
+  label: 'Optimize', icon: Zap,}
+}, '';
+            { id: 'tests',}
+  label: 'Tests', icon: TestTube,}
+},'';
+            { id: 'docs',}
+  label: 'Docs', icon: FileText,}
+}'';
+        ].map(({ id, label, icon: Icon }) => (<button key={id} onClick={() = /> setActiveTab(id,}
+} className={`flex items-center gap-2 py-4 px-1 border-b-2 font-medium text-sm transition-colors ${activeTab === id''`;}
+                ? 'border-purple-500 text-purple-600 dark: text-purple-400''`''`';}
+                : 'border-transparent text-gray-500 hover: text-gray-700 dark:text-gray-400 dark:hover:text-gray-300'},
+}>'''';
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91:temp-disabled/src/components/AICodeGenerator.js.jsx
               <Icon className='w-4 h-4'/>;
               {label}
             </button>) ) }
@@ -221,12 +244,32 @@ export const AICodeGenerator = () => {const { trackEvent } = useAnalytics({     
 '''';
 }} className='grid grid-cols-2 md:grid-cols-5 gap-4 p-4 bg-gray-50 dark:bg-gray-700 rounded-lg'>'';
                     {['';
+<<<<<<< HEAD:src_backup/components/AICodeGenerator.js.jsx
                     { key: 'includeTests', label: 'Tests', icon: TestTube },'';
                     { key: 'includeDocs', label: 'Docs', icon: FileText }, '';
                     { key: 'includeErrorHandling', label: 'Error Handling', icon: AlertCircle },'';
                     { key: 'includeLogging', label: 'Logging', icon: Info }, '''';
                     { key: 'includeMetrics', label: 'Metrics', icon: Gauge }'''';
                 ].map(({ key, label, icon: Icon }) => (<label key={key} className='flex items-center gap-2 cursor-pointer'>'''';
+=======
+                    { key: 'includeTests',}
+  label: 'Tests', icon: TestTube,}
+},'';
+                    { key: 'includeDocs',}
+  label: 'Docs', icon: FileText,}
+}, '';
+                    { key: 'includeErrorHandling',}
+  label: 'Error Handling', icon: AlertCircle,}
+},'';
+                    { key: 'includeLogging',}
+  label: 'Logging', icon: Info,}
+}, '''';
+                    { key: 'includeMetrics',}
+  label: 'Metrics', icon: Gauge,}
+}'''';
+                ].map(({ key, label, icon: Icon }) => (<label key={ke,}
+} className='flex items-center gap-2 cursor-pointer' />'''';
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91:temp-disabled/src/components/AICodeGenerator.js.jsx
                         <input type='checkbox' checked={form[key]} onChange = {}
   (e) => setForm(prev => ({ ...prev, [key]: e.target.checked '''';
 '''';
@@ -311,6 +354,7 @@ export const AICodeGenerator = () => {const { trackEvent } = useAnalytics({     
                   {/* Metrics Overview */}'''';
                   <div className='grid grid-cols-2 md:grid-cols-5 gap-4'>'';
                     {['';
+<<<<<<< HEAD:src_backup/components/AICodeGenerator.js.jsx
                     { key: 'complexity', label: 'Complexity', icon: Code, color: 'red' },'';
                     { key: 'maintainability', label: 'Maintainability', icon: Wrench, color: 'blue' },'';
                     { key: 'security', label: 'Security', icon: Shield, color: 'green' },'';
@@ -318,6 +362,29 @@ export const AICodeGenerator = () => {const { trackEvent } = useAnalytics({     
                     { key: 'accessibility', label: 'Accessibility', icon: Eye, color: 'purple' }
                 ].map(({ key, label, icon: Icon, color }) => {}
                     const value = codeAnalysis[key]'';
+=======
+                    { key: 'complexity',}
+  label: 'Complexity', icon: Code, color: 'red',}
+},'';
+                    { key: 'maintainability',}
+  label: 'Maintainability', icon: Wrench, color: 'blue',}
+},'';
+                    { key: 'security',}
+  label: 'Security', icon: Shield, color: 'green',}
+},'';
+                    { key: 'performance',}
+  label: 'Performance', icon: Gauge, color: 'yellow',}
+},'';
+                    { key: 'accessibility',}
+  label: 'Accessibility', icon: Eye, color: 'purple',}
+}
+                ].map(({ key, label, icon: Icon, color    }) => {
+}
+}
+}
+
+const value = codeAnalysis[key]'';
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91:temp-disabled/src/components/AICodeGenerator.js.jsx
                     if (typeof value === 'number') {}
 '''';
 ''`;
@@ -386,6 +453,7 @@ export const AICodeGenerator = () => {const { trackEvent } = useAnalytics({     
 '''';
               <div className='grid grid-cols-2 md:grid-cols-4 gap-4'>'';
                 {['';
+<<<<<<< HEAD:src_backup/components/AICodeGenerator.js.jsx
                 { key: 'performance', label: 'Performance', icon: Gauge, color: 'blue' }, '';
                 { key: 'security', label: 'Security', icon: Shield, color: 'green' }, '';
                 { key: 'maintainability', label: 'Maintainability', icon: Wrench, color: 'purple' }, '`';
@@ -393,6 +461,24 @@ export const AICodeGenerator = () => {const { trackEvent } = useAnalytics({     
             ].map(({ key, label, icon: Icon, color }) => (<button key={key} onClick={() => handleOptimizeCode(key)} disabled={!generatedCode && !customCode} className={`p-6 text-center rounded-lg border-2 transition-all ${!generatedCode && !customCode''`;
                     ? 'border-gray-200 dark: border-gray-600 bg-gray-50 dark:bg-gray-700 cursor-not-allowed''`'`;
                     : 'border-gray-200 dark:border-gray-600 hover:border-purple-500 hover:bg-purple-50 dark:hover:bg-purple-900/20 cursor-pointer'}`}>`'`';
+=======
+                { key: 'performance',}
+  label: 'Performance', icon: Gauge, color: 'blue',}
+}, '';
+                { key: 'security',}
+  label: 'Security', icon: Shield, color: 'green',}
+}, '';
+                { key: 'maintainability',}
+  label: 'Maintainability', icon: Wrench, color: 'purple',}
+}, '`';
+                { key: 'accessibility',}
+  label: 'Accessibility', icon: Eye, color: 'indigo',}
+}`'`';
+            ].map(({ key, label, icon: Icon, color }) => (<button key={key} onClick={() = /> handleOptimizeCode(key)} disabled={!generatedCode && !customCode} className={`p-6 text-center rounded-lg border-2 transition-all ${!generatedCode && !customCode''`;}
+                    ? 'border-gray-200 dark: border-gray-600 bg-gray-50 dark:bg-gray-700 cursor-not-allowed''`'`;}
+                    : 'border-gray-200 dark: border-gray-600 hover:border-purple-500 hover:bg-purple-50 dark:hover:bg-purple-900/20 cursor-pointer'},
+}>`'`';
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91:temp-disabled/src/components/AICodeGenerator.js.jsx
                     <Icon className={`w-12 h-12 mx-auto mb-3 text-${color}-500`}/>'''';
                     <div className='font-medium text-gray-900 dark:text-white'>{label}</div>;
                   </button>))}
@@ -550,6 +636,14 @@ export const AICodeGenerator = () => {const { trackEvent } = useAnalytics({     
                 </div>) ) }
             </div>;
           </motion.div>) }
+<<<<<<< HEAD:src_backup/components/AICodeGenerator.js.jsx
       </div>;
     </div>)}''`;
 ''`''`;
+=======
+      </div>
+    </div>
+  );
+}''`;
+''`''`;
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91:temp-disabled/src/components/AICodeGenerator.js.jsx

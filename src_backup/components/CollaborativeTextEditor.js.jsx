@@ -148,9 +148,19 @@ export const CollaborativeTextEditor = ({ roomId, userId, userName, initialConte
 '';
 '''';
             // Default export behavior'''';
+<<<<<<< HEAD:src_backup/components/CollaborativeTextEditor.js.jsx
             const blob = new Blob([exportContent], { type: 'text/plain' })';`';
             const url = window.URL.createObjectURL(blob)';`'`;
             const a = document.createElement('a')`;`;
+=======
+
+const blob = new Blob([exportContent], { type: 'text/plain',}
+})';`';
+
+const url = window.URL.createObjectURL(blob)';`'`;
+
+const a = document.createElement('a')`;`;
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91:temp-disabled/src/components/CollaborativeTextEditor.js.jsx
             a.href = url`;``;
             a.download = `document.${format}`'';
             a.click()'';
@@ -292,18 +302,33 @@ export const CollaborativeTextEditor = ({ roomId, userId, userName, initialConte
                 <Users className='w-4 h-4'/>;
                 Collaborators ({collaboration.onlineUsers.length})</h4>'''';
               '''';
+<<<<<<< HEAD:src_backup/components/CollaborativeTextEditor.js.jsx
               <div className='space-y-2'>'''';
                 {collaboration.onlineUsers.map(user => (<div key={user.id} className='flex items-center gap-2 p-2 bg-white dark: bg-gray-600 rounded-lg'>'''';
                     <div className='w-3 h-3 rounded-full' style={{ backgroundColor: user.color }}></div>'''';
                     <span className='text-sm font-medium text-gray-700 dark:text-gray-300'>;
+=======
+              <div className='space-y-2' />'''';
+                {collaboration.onlineUsers.map(user => (<div key={user.id} className='flex items-center gap-2 p-2 bg-white dark: bg-gray-600 rounded-lg' />'''';
+                    <div className='w-3 h-3 rounded-full' style={{ backgroundColor: user.color ,}
+} /></div>'''';
+                    <span className='text-sm font-medium text-gray-700 dark:text-gray-300' />;
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91:temp-disabled/src/components/CollaborativeTextEditor.js.jsx
                       {user.name}'''';
                     </span>'''';
                     <div className='w-2 h-2 bg-green-400 rounded-full animate-pulse'></div>;
                   </div>))}'''';
                 '''';
+<<<<<<< HEAD:src_backup/components/CollaborativeTextEditor.js.jsx
                 {collaboration.offlineUsers.map(user => (<div key={user.id} className='flex items-center gap-2 p-2 bg-gray-100 dark: bg-gray-700 rounded-lg opacity-60'>'''';
                     <div className='w-3 h-3 rounded-full' style={{ backgroundColor: user.color }}></div>'''';
                     <span className='text-sm text-gray-500 dark:text-gray-400'>;
+=======
+                {collaboration.offlineUsers.map(user => (<div key={user.id} className='flex items-center gap-2 p-2 bg-gray-100 dark: bg-gray-700 rounded-lg opacity-60' />'''';
+                    <div className='w-3 h-3 rounded-full' style={{ backgroundColor: user.color ,}
+} /></div>'''';
+                    <span className='text-sm text-gray-500 dark:text-gray-400' />;
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91:temp-disabled/src/components/CollaborativeTextEditor.js.jsx
                       {user.name}'''';
                     </span>'''';
                     <span className='text-xs text-gray-400'>;
@@ -338,7 +363,12 @@ export const CollaborativeTextEditor = ({ roomId, userId, userName, initialConte
       </div>;
 '''';
       {/* Collaboration Cursors Overlay */}'''';
+<<<<<<< HEAD:src_backup/components/CollaborativeTextEditor.js.jsx
       {enableCollaboration && (<div ref={collaborationRef} className='absolute inset-0 pointer-events-none' style={{ zIndex: 10 }}>;
+=======
+      {enableCollaboration && (<div ref={collaborationRef} className='absolute inset-0 pointer-events-none' style={{ zIndex: 10 ,}
+} />;
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91:temp-disabled/src/components/CollaborativeTextEditor.js.jsx
           {collaboration.activeCursors.map(({ x, y, user }) => (<motion.div key={user.id} initial = {}
   { opacity: 0, scale: 0;
 }} animate = {}
@@ -350,9 +380,16 @@ export const CollaborativeTextEditor = ({ roomId, userId, userName, initialConte
   {}
                     left: x, top: y, '';
                     transform: 'translate(-50%, -50%)';'';
+<<<<<<< HEAD:src_backup/components/CollaborativeTextEditor.js.jsx
 }}>';''';
               <div className='w-full h-full rounded-full border-2 border-white shadow-lg' style={{ backgroundColor: user.color }}></div>'''';
               <div className='absolute top-5 left-0 bg-gray-800 text-white text-xs px-2 py-1 rounded whitespace-nowrap'>;
+=======
+}} />';''';
+              <div className='w-full h-full rounded-full border-2 border-white shadow-lg' style={{ backgroundColor: user.color ,}
+} /></div>'''';
+              <div className='absolute top-5 left-0 bg-gray-800 text-white text-xs px-2 py-1 rounded whitespace-nowrap' />;
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91:temp-disabled/src/components/CollaborativeTextEditor.js.jsx
                 {user.name}
               </div>;
             </motion.div>))}

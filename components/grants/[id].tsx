@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 
 import { useEffect, useState  } from 'react';'
 import { useRouter  } from 'next/router';'
@@ -53,6 +54,14 @@ const resp = await fetch(`/api/grants/${id}/updates`, {`      }
         prev ? { ...prev, "updates": [...(prev.updates |[]), u.update] } : prev
       );
       setUpdateContent('');'
+=======
+  const addUpdate = $2;
+    const resp = await fetch(`/api/grants/${id}/updates`, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ content: updateContent}) }),
+    if (resp.ok) {
+      const u = await resp.json($2);
+      setItem((prev) => prev ? { ...prev, updates: [...(prev.updates || []), u.update] } : prev),
+      setUpdateContent('')
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
     }
 
 ;

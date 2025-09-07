@@ -2,6 +2,12 @@ import { useEffect, useRef, useState } from 'react' export function usePerforman
 });
   const [observers, setObservers] = useState([]);
   const observerRef = useRef(null);
+<<<<<<< HEAD:src/hooks/usePerformance.jsx
   useEffect(() => {
 "";"
 }}
+=======
+  useEffect(() => {}
+\"\";}
+}}
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91:temp-disabled/src/hooks/usePerformance.jsx

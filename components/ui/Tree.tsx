@@ -3,6 +3,7 @@
 import React, { useState } from 'react';'
 
 export interface TreeNode {
+<<<<<<< HEAD
   }
   "name": string;
   "path": string;
@@ -146,6 +147,54 @@ const deploy = () =>: any on_deploy && on_deploy (node.path;
         <span;
           className={`font - mono text - sm ${node.exists ? 'text - green - 600' : 'text - gray - 500'}`}>`
 
+=======
+  name: string,
+  path: string,
+  type: "folder" | "file",
+  exists?: boolean;
+  children?: TreeNode[]
+}
+
+interface TreeProps {
+  nodes: TreeNode[],
+  onDeploy?: (path: string) => void
+}
+
+function NodeItem({ node, depth, onDeploy }: { node: TreeNode, depth: number, onDeploy?: (path: string) => void }) {
+  const [open, setOpen] = useState<boolean>(false);
+
+  const hasChildren = Array.isArray(node.children) && node.children.length > 0;
+  const toggle = () => setOpen((v) => !v);
+
+  const copyPath = async () => {
+    await navigator.clipboard.writeText(node.path)
+  };
+
+  const clonePath = async () => {
+    const url = `${window.location.origin}/api/dev/source-map`;
+    await fetch(url, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json";
+        // Expect an admin token in local storage, fall back to prompt
+        "x-admin-token": localStorage.getItem("ADMIN_TOKEN") || ""} as any;
+      body: JSON.stringify({ path: node.path })})
+  };
+
+  const deploy = () => onDeploy && onDeploy(node.path);
+
+  return (
+    <div className="ml-2">
+      <div className="flex items-center gap-2 py-1">
+        {hasChildren ? (
+          <button className="text-sm" onClick={toggle} aria-label="Toggle">
+            {open ? "▾" : "▸"}
+          </button>
+        ) : (
+          <span className="inline-block w-4" />
+        )}
+        <span className={`font-mono text-sm ${node.exists ? "text-green-600" : "text-gray-500"}`}>
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
           {node.path}
         </span>;
         <div className='ml - auto flex gap - 2'>;'

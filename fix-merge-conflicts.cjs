@@ -1,4 +1,7 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
 
 
 =======
@@ -212,6 +215,7 @@ if (require.main === module) {
 }
 
 module.exports = MergeConflictFixer;
+<<<<<<< HEAD
 =======
 
 console.log('🔧 Fixing merge conflicts in TypeScript files...');
@@ -266,3 +270,5 @@ filesToFix.forEach(fixMergeConflicts);
 
 console.log('🎉 Merge conflict fixing completed!');
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91

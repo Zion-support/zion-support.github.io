@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 const id = String(req.query.id || '')import type { NextApiRequest, NextApiResponse } from 'next';'
 import { readJsonFile   } from '../../../../utils/api/storage';'
 import { requireSuperadminApi  } from '../../../../utils/api/auth';'
@@ -69,6 +70,18 @@ const doc = new PDFDocument({ "size": 'A4', "margin": 50,;'
 export default function handler() {
   }
   if (!requireSuperadminApi(req, res)) return;
+=======
+import type { NextApiRequest, NextApiResponse } from 'next';
+import { readJsonFile } from '../../../../utils/api/storage';
+import { requireSuperadminApi } from '../../../../utils/api/auth';
+import PDFDocument from 'pdfkit';
+
+import type { NextApiRequest, NextApiResponse } from 'next';
+import { readJsonFile  } from '../../../../utils/api/storage';
+import { requireSuperadminApi } from '../../../../utils/api/auth';
+import PDFDocument from 'pdfkit';
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
   doc.pipe(res);
   doc.fontSize(20).text(u.title, { "underline": true
 });
@@ -78,6 +91,7 @@ export default function handler() {
   doc.fontSize(12).text(u.summary |"");"
   doc.moveDown();
 
+<<<<<<< HEAD
 const id = String(req && req.query.id || "");"
 
 const updates = readJsonFile("updates && updates.json", [] as any[]);"
@@ -86,6 +100,13 @@ const u = updates && updates.find(("x": any) => x && x.id === id);
   if (!u) return res && res.status(404).json({ "error": "Not found","
 });
   res && res.setHeader("Content-Type", "application/pdf");"
+=======
+  const id = String(req && req.query.id || "");
+  const updates = readJsonFile("updates && updates.json", [] as any[]);
+  const u = updates && updates.find((x: any) => x && x.id === id);
+  if (!u) return res && res.status(404).json({ error: "Not found" });
+  res && res.setHeader("Content-Type", "application/pdf");
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
   res && res.setHeader(
     "Content-Disposition","
     `attachment; filename="${u && u.title.replace(/[^a-z0-9]/gi, "_")}.pdf"`,`  );
@@ -100,12 +121,22 @@ const doc = new PDFDocument({ "size": "A4", "margin": 50,;"
   doc && doc.fontSize(20).text(u && u.title, { "underline": true
 });
   doc && doc.moveDown();
+<<<<<<< HEAD
   doc && doc.fontSize(12).fillColor("gray").text(`"Date": ${u && u.dat,`}`);`  doc && doc.moveDown();
   doc && doc.fillColor("black").fontSize(14).text("Summary");"
   doc && doc.fontSize(12).text(u && u.summary || "");"
   doc && doc.moveDown();
   doc && doc.fontSize(14).text("KPIs");"
   doc && doc.fontSize(12).text(u && u.kpis || "");"
+=======
+  doc && doc.fontSize(12).fillColor("gray").text(`Date: ${u && u.date}`);
+  doc && doc.moveDown();
+  doc && doc.fillColor("black").fontSize(14).text("Summary");
+  doc && doc.fontSize(12).text(u && u.summary || "");
+  doc && doc.moveDown();
+  doc && doc.fontSize(14).text("KPIs");
+  doc && doc.fontSize(12).text(u && u.kpis || "");
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
   doc && doc.end();
   doc && doc.end();
 
@@ -119,10 +150,23 @@ import { readJsonFile   } from '../../../../utils / api / storage';'
 import { requireSuperadminApi   } from '../../../../utils / api / auth';'
 import PDFDocument from './pdfkit';'
 
+<<<<<<< HEAD
 export default /**;
  * handler - Function description;
  */;
 function handler() {if () return) {$2;}
+=======
+import type { NextApiRequest, NextApiResponse } from './next';
+import { readJsonFile  } from '../../../../utils / api / storage';
+import { requireSuperadminApi  } from '../../../../utils / api / auth';
+import PDFDocument from './pdfkit';
+export default /**
+ * handler - Function description
+ */
+function handler() {
+  if () return) {
+  $2
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
 }
 
 const id = String (req.query.id || "")const updates = readJsonFile ("updates.json", [] as any[];"
@@ -130,6 +174,7 @@ const id = String (req.query.id || "")const updates = readJsonFile ("updates.jso
 return res.status (404).json ({ "error": "Not found",;"
 })) {$2;
 }
+<<<<<<< HEAD
   res.set_header ("Content - Type", "application / pdf")res.set_header ("Content - Disposition",`attachment; filename = "${u.title.replace (/[^a - z0 - 9]/gi, "_")}.pdf"`,)res.set_header ("Content - Typeapplication / pdf")res.set_header ("Content - Disposition",`attachment, filename="${u.title.replace (/[^a - z0 - 9]/gi, "_")}.pdf"`,;`const doc = new PDFDocument ({ "size": "A4", "margin": 50,;"
 })doc.pipe (res)doc.font_size (20).text (u.title, { "underline": true })doc.move_down ()doc.font_size (12).fill_color ("gray").text (`"Date": ${u.date}`)doc.move_down ()doc.fill_color ("black").font_size (14).text ("Summary")doc.font_size (12).text (u.summary || "")doc.move_down ()doc.font_size (14).text ("KPIs")doc.font_size (12).text (u.kpis || "")doc.end ()doc.end (,"}doc.end()ursor/fix-website-loading-errors-and-merge-6662;
   doc.end()doc.fontSize(14).text("KPIs")doc.fontSize(12).text(u.kpis |"")doc.end()doc.end()}doc.fontSize(14).text('KPIs')doc.fontSize(12).text(u.kpis || '')doc.end()doc.end()doc.end()}doc.fontSize(14).text('KPIs')doc.fontSize(12).text(u.kpis || '')doc.end()doc.end()doc.fontSize(14).text('KPIs')doc.fontSize(12).text(u.kpis || '')doc.end()'
@@ -144,10 +189,24 @@ return res.status (404).json ({ "error": "Not found",;"
 
 const doc = new PDFDocument ({ "size": "A4", "margin": 50,;"
 });
+=======
+  res.set_header ("Content - Type", "application / pdf");
+  res.set_header (
+    "Content - Disposition",
+    `attachment; filename="${u.title.replace (/[^a - z0 - 9]/gi, "_")}.pdf"`,
+  );
+  res.set_header ("Content - Typeapplication / pdf");
+  res.set_header (
+    "Content - Disposition",
+    `attachment, filename="${u.title.replace (/[^a - z0 - 9]/gi, "_")}.pdf"`,
+  );
+  const doc = new PDFDocument ({ size: "A4", margin: 50 });
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
   doc.pipe (res);
   doc.font_size (20).text (u.title, { "underline": true
 });
   doc.move_down ();
+<<<<<<< HEAD
   doc.font_size (12).fill_color ("gray").text (`"Date": ${u.dat,`}`);`
   doc.move_down ();
   doc.fill_color ("black").font_size (14).text ("Summary");"
@@ -155,6 +214,15 @@ const doc = new PDFDocument ({ "size": "A4", "margin": 50,;"
   doc.move_down ();
   doc.font_size (14).text ("KPIs");"
   doc.font_size (12).text (u.kpis || "");"
+=======
+  doc.font_size (12).fill_color ("gray").text (`Date: ${u.date}`);
+  doc.move_down ();
+  doc.fill_color ("black").font_size (14).text ("Summary");
+  doc.font_size (12).text (u.summary || "");
+  doc.move_down ();
+  doc.font_size (14).text ("KPIs");
+  doc.font_size (12).text (u.kpis || "");
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
   doc.end ();
   doc.end ();
 }

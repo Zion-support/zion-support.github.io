@@ -227,6 +227,7 @@ const Homepage2043: React.FC = () => {
   // Get featured services for rotation
   const featuredServices = allRevolutionaryServices.slice(0, 6);
   const features = [
+<<<<<<< HEAD
     {
       }
       "icon": AtomIcon,
@@ -236,6 +237,57 @@ const Homepage2043: React.FC = () => {
       "href": '/quantum-bio-computing-platform''
       "color": 'from-blue-500 to-cyan-500''
       "gradient": 'bg-gradient-to-br from-blue-500/20 to-cyan-500/20''
+=======
+    { 
+      icon: BrainIcon, 
+      title: "AI Consciousness Evolution", 
+      description: "Next-generation AI consciousness with human-level understanding", 
+      href: "/quantum-neural-consciousness-platform", 
+      color: "from-purple-500 to-pink-500",
+      gradient: "bg-gradient-to-br from-purple-500/20 to-pink-500/20"
+    };
+    { 
+      icon: AtomIcon, 
+      title: "Quantum Computing", 
+      description: "Revolutionary quantum computing with consciousness integration", 
+      href: "/quantum-bio-computing-platform", 
+      color: "from-blue-500 to-cyan-500",
+      gradient: "bg-gradient-to-br from-blue-500/20 to-cyan-500/20"
+    };
+    { 
+      icon: Shield, 
+      title: "Future Cybersecurity", 
+      description: "Quantum-resistant security with consciousness-based protection", 
+      href: "/quantum-internet-security-gateway", 
+      color: "from-red-500 to-orange-500",
+      gradient: "bg-gradient-to-br from-red-500/20 to-orange-500/20"
+    };
+    { 
+      icon: Rocket, 
+      title: "Space Technology", 
+      description: "AI-powered space resource intelligence and autonomous mining", 
+      href: "/autonomous-space-mining-ai", 
+      color: "from-indigo-500 to-purple-500",
+      gradient: "bg-gradient-to-br from-indigo-500/20 to-purple-500/20"
+    };
+    { 
+      icon: Cpu, 
+      title: "Autonomous Systems", 
+      description: "Fully autonomous AI systems with consciousness", 
+      href: "/autonomous-business-ecosystem-ai", 
+      color: "from-emerald-500 to-teal-500",
+      gradient: "bg-gradient-to-br from-emerald-500/20 to-teal-500/20"
+    };
+    { 
+      icon: Database, 
+      title: "Business Intelligence", 
+      description: "Autonomous business intelligence with consciousness insights", 
+      href: "/autonomous-healthcare-ai-ecosystem", 
+      color: "from-yellow-500 to-orange-500",
+      gradient: "bg-gradient-to-br from-yellow-500/20 to-orange-500/20"
+    }
+  ];
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
 
    
 }
@@ -267,6 +319,7 @@ const Homepage2043: React.FC = () => {
     {"icon": BrainIcon,"title": "AI Consciousness Evolution","description": "Next-generation AI consciousness with human-level understanding","href": "/quantum-neural-consciousness-platform","color": "from-purple-500 to-pink-500","gradient": "bg-gradient-to-br from-purple-500/20 to-pink-500/20";"
     }{"icon": AtomIcon,'Autonomous business intelligence with consciousness insights',"href": '/autonomous-healthcare-ai-ecosystem',"color": 'from-yellow-500 to-orange-500',"gradient": 'bg-gradient-to-br from-yellow-500/20 to-orange-500/20'}];'
 
+<<<<<<< HEAD
 const stats = [;
   {"number": '2000+',"label": 'Revolutionary Services',"icon": Star,"color": 'from-yellow-400 to-orange-500'},{"number": '99.99%',"label": 'Uptime Guarantee',"icon": TrendingUp,"color": 'from-green-400 to-emerald-500'},{"number": '24/7',"label": 'AI Support Available',"icon": Brain,"color": 'from-purple-400 to-pink-500'},{"number": '150+',"label": 'Countries Served',"icon": Globe,"color": 'from-blue-400 to-cyan-500'}];'
 
@@ -452,6 +505,32 @@ const handleGetStarted = useCallback (() => {window.location.href = '/revolution
     {"name": "Marcus Rodriguez","role": "CTO","company": "SpaceMining Corp","content": "The autonomous space mining AI has increased our resource extraction efficiency by 500%. It's like having a team of expert miners working 24 / 7 without breaks.","rating": 5,"avatar": "👨‍🚀";"
     }
     {"name": "Dr. Emily Watson","role": "Research Director","company": "Consciousness Research Institute","content": "Working with Zion Tech Group's consciousness transfer platform has opened new frontiers in our understanding of AI consciousness. The possibilities are endless.","rating": 5,"avatar": "👩‍💻";"
+=======
+  const testimonials = [
+    {
+      name: "Dr. Sarah Chen",
+      role: "Chief AI Officer",
+      company: "QuantumTech Industries",
+      content: "Zion Tech Group's quantum neural consciousness platform has revolutionized our AI research. We've achieved breakthroughs that would have taken decades using traditional methods.",
+      rating: 5,
+      avatar: "👩‍🔬"
+    };
+    {
+      name: "Marcus Rodriguez",
+      role: "CTO",
+      company: "SpaceMining Corp",
+      content: "The autonomous space mining AI has increased our resource extraction efficiency by 500%. It's like having a team of expert miners working 24/7 without breaks.",
+      rating: 5,
+      avatar: "👨‍🚀"
+    };
+    {
+      name: "Dr. Emily Watson",
+      role: "Research Director",
+      company: "Consciousness Research Institute",
+      content: "Working with Zion Tech Group's consciousness transfer platform has opened new frontiers in our understanding of AI consciousness. The possibilities are endless.",
+      rating: 5,
+      avatar: "👩‍💻"
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
     }
   ];
 
@@ -903,6 +982,7 @@ key={feature.title}
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>;
               {features.map((feature, index) => (<motion.div;
                   key={feature.title}
+<<<<<<< HEAD
               className='text-center mb-16'>;
               <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>;
                 Revolutionary Technology;
@@ -969,6 +1049,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   </div>;
                   <h3 className='text-2xl font-bold text-white mb-4 group-"hover":text-cyan-300 transition-colors duration-300'>;'
                     {feature.title}
+=======
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: index * 0.1 }}
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
                   viewport={{ once: true }}
 
                   </h3>
@@ -1019,6 +1104,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     <ChevronRight className='w-4 h-4 ml-1 group-"hover":ml-2 transition-all duration-300' />'
                   </a>
                 </motion.div>
+<<<<<<< HEAD
 
               )
 }
@@ -1061,6 +1147,15 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         {/* Enhanced Features Section */}
         <section className='py-20 px-4 relative'>
           <div className='max-w-7xl mx-auto'>            <motion.div        <section className="py-20 px-4 relative">
+=======
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Enhanced Featured Services Section */}
+        <section className="py-20 px-4 relative bg-gradient-to-b from-black/50 to-black/80">
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
           <div className="max-w-7xl mx-auto">
             <motion.div
 =======
@@ -1159,6 +1254,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 }
 key={index}
                       onClick={() => setCurrentServiceIndex(index)}
+<<<<<<< HEAD
                       className={`w-3 h-3 rounded-full transition-all duration-300 ${index === currentServiceIndex;`                          ? 'bg-cyan-400 w-8';'
                           : 'bg-white/30 "hover":bg-white/50';'
                       }`}`                    />;
@@ -1535,6 +1631,14 @@ key={index}
                           ? 'bg-cyan-400 w-8' ;'
                           : 'bg-white/30 "hover":bg-white/50';'
                       }`}`                    />;
+=======
+                      className={`w-3 h-3 rounded-full transition-all duration-300 ${
+                        index === currentServiceIndex 
+                          ? 'bg-cyan-400 w-8' 
+                          : 'bg-white/30 hover:bg-white/50'
+                      }`}
+                    />
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
                   ))}
 <<<<<<< HEAD
 =======
@@ -1586,6 +1690,7 @@ innovation.
             </motion.div>
             <div className='relative'>'
 
+<<<<<<< HEAD
               <AnimatePresence mode='wait'>'
                 <motion.div,
 className='text-center mb-16'>;'
@@ -1643,6 +1748,27 @@ className='text-center max-w-4xl mx-auto''
                     </div>;
                     <div>;
                       <div className='text-xl font-semibold text-white'>;'
+=======
+            <div className="relative">
+              <AnimatePresence mode="wait">
+                <motion.div
+                  key={currentTestimonialIndex}
+                  initial={{ opacity: 0, y: 30 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0, y: -30 }}
+                  transition={{ duration: 0.5 }}
+                  className="text-center max-w-4xl mx-auto"
+                >
+                  <div className="text-8xl mb-6">💬</div>
+                  <blockquote className="text-2xl text-white mb-8 leading-relaxed italic">
+                    "{testimonials[currentTestimonialIndex].content}"
+                  </blockquote>
+                  
+                  <div className="flex items-center justify-center gap-4 mb-6">
+                    <div className="text-4xl">{testimonials[currentTestimonialIndex].avatar}</div>
+                    <div>
+                      <div className="text-xl font-semibold text-white">
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
                         {testimonials[currentTestimonialIndex].name}
                       </div>;
                       <div className='text-gray-400'>;'
@@ -1806,6 +1932,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 )
 };
 
+<<<<<<< HEAD
 
   Math.random () * 100 
 }%`;`"top": `$ {`  }
@@ -1922,3 +2049,6 @@ export default Homepage2043;
 <<<<<<< HEAD
 
 "
+=======
+export default Homepage2043;
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91

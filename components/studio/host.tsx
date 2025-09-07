@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 
@@ -65,6 +66,32 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     } finally {
       setGenerating(false);    }      const data = await res.json();
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
+=======
+import React, { useState } from 'react';
+type PersonaConfig = $2;
+  language: string,
+  cloneStyleText?: string
+},
+
+export default function StudioHostPage() {
+  const [persona, setPersona] = useState<PersonaConfig>({ voice: 'Visionary', language: 'English' }),
+  const [inviteeName, setInviteeName] = useState($2);
+  const [inviteeBio, setInviteeBio] = useState($2);
+  const [topic, setTopic] = useState($2);
+  const [operatorPrompt, setOperatorPrompt] = useState($2);
+  const [generating, setGenerating] = useState($2);
+  const [episode, setEpisode] = useState<any>(null),
+  const [synthesizing, setSynthesizing] = useState($2);
+  const [publishing, setPublishing] = useState($2);
+  const handleGenerate = async () => {
+    setGenerating($2);
+    try {
+      const res = await fetch('/api/podcast/generate', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ persona, invitee: { name: inviteeName, bio: inviteeBio}, topic, operatorPrompt })}),
+      const data = await res.json($2);
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
       setEpisode(data.episode)
     } catch (e) {
       console.error($2);
@@ -86,6 +113,7 @@ const handleSynthesize = async () => {
   return;
     setSynthesizing(true);
     try {
+<<<<<<< HEAD
       }
       const res = await fetch('/api/podcast/synthesize', {'
         }
@@ -96,6 +124,14 @@ const handleSynthesize = async () => {
       });
       const data = await res.json();
       setEpisode(data.episode);
+=======
+      const res = await fetch('/api/podcast/synthesize', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ episodeId: episode.id, persona })}),
+      const data = await res.json($2);
+      setEpisode(data.episode)
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
     } catch (e) {
       }
       console.error(e);
@@ -104,6 +140,7 @@ const handleSynthesize = async () => {
       }
       setSynthesizing(false);
     }
+<<<<<<< HEAD
 >>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
   }
 
@@ -118,6 +155,16 @@ const res = await fetch('/api/podcast/rss', { "method": 'POST',;'
 });
       await res.json();
       alert('RSS feed updated. Platforms will pull on next refresh.');'
+=======
+  },
+
+  const handlePublishRss = $2;
+    setPublishing($2);
+    try {
+      const res = await fetch($2);
+      await res.json($2);
+      alert('RSS feed updated. Platforms will pull on next refresh.')
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
     } catch (e) {
       }
       console.error(e);

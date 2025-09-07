@@ -139,6 +139,7 @@ return (;
       <div className='relative container mx-auto px-4'>'
 
         {/* Section Header */}
+<<<<<<< HEAD
       }
     }
  ;
@@ -199,6 +200,14 @@ const cardVariants = {"hidden": { "opacity": 0, "y": 20,;
 }
 
 className='text-center mb-16''
+=======
+        <motion.div
+          initial={{ opacity: 0, y: 30}}
+          whileInView={{ opacity: 1, y: 0}}
+          transition={{ duration: 0.8 }}
+          viewport={{ once: true}}
+          className="text-center mb-16"
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
         >
           <motion.div,
 initial={{ "opacity": 0, "scale": 0.8 
@@ -227,6 +236,7 @@ className='inline-flex items-center space-x-2 bg-blue-600/20 border border-blue-
             efficiency, and growth for businesses across all industries.
           </p>
         </motion.div>
+<<<<<<< HEAD
 
             <Zap className='w-5 h-5 text-blue-400' />;'
             <span className='text-blue-400 font-medium'>Our Services</span>;'
@@ -244,6 +254,8 @@ className='inline-flex items-center space-x-2 bg-blue-600/20 border border-blue-
             for businesses across all industries.;
         </motion && motion.div>;
 
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
 
         {/* Services Grid */}
 <<<<<<< HEAD
@@ -340,6 +352,7 @@ className='inline-flex items-center space-x-2 text-blue-400 "hover":text-blue-30
                 <div className='absolute inset-0 border-2 border-transparent rounded-2xl group-"hover": border-blue-500/30 transition-colors duration-300' />'
               </div>
             </motion.div>
+<<<<<<< HEAD
 
           )
 }
@@ -359,6 +372,11 @@ className='inline-flex items-center space-x-2 text-blue-400 "hover":text-blue-30
           ))}
         </motion.div>
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
+=======
+          ))}
+        </motion.div>
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
         {/* Bottom CTA */}
         <motion&& motion.div;
           initial={{ "opacity": 0, "y": 30 

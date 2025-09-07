@@ -1,20 +1,22 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
 import React, { Suspense, lazy } from 'react';
-
 interface LazyComponentProps {
   component: () => Promise<{ default: React.ComponentType<unknown> }>,
   fallback?: React.ReactNode;
   [key: string]: unknown,
 }
-
 export const LazyComponent: React.FC<LazyComponentProps> = ({
   component;
   fallback = <div>Loading...</div>;
   ...props
 }) => {
   const LazyLoadedComponent = lazy(component);
+<<<<<<< HEAD
 =======
 import React, { Suspense } from 'react';
 ursor/automate-test-improve-and-merge-code-646c;
@@ -77,22 +79,24 @@ interface LazyComponentProps {
 }
 >>>>>>> origin/main
 
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
   return (
     <Suspense fallback={fallback}>
       <LazyLoadedComponent {...props} />
     </Suspense>
   );
 };
+<<<<<<< HEAD
 
 <<<<<<< HEAD
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
 export default LazyComponent;
 =======
 import React from 'react';
-};
->>>>>>> pr-11992
-=======
-import React from 'react';
 },
+<<<<<<< HEAD
 >>>>>>> origin/merge-automation-changes
 =======
 
@@ -102,3 +106,5 @@ import React from 'react';
 >>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 >>>>>>> origin/main
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91

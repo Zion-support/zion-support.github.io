@@ -284,6 +284,7 @@ safer, and more maintainable code.
             >
               {isAnalyzing ? (
                 <>
+<<<<<<< HEAD
 <div className='animate-spin rounded-full h-5 w-5 border-b-2 border-white mr-2' />'
           </p>
 
@@ -317,6 +318,16 @@ safer, and more maintainable code.
 <Play className='w-5 h-5 mr-2' />;'
                   Analyze Code Quality;
                 </>;
+=======
+                  <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white mr-2" />
+                  Analyzing Code...
+                </>
+              ) : (
+                <>
+                  <Play className="w-5 h-5 mr-2" />
+                  Analyze Code Quality
+                </>
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
               )}
 
             </Button>
@@ -1039,6 +1050,13 @@ href='/contact''
                 </Button>
               </Card>
             ))}
+<<<<<<< HEAD
+=======
+          </div>
+        </div>
+      </section>
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
       {/* CTA Section */}
       {/* CTA Section */}
 <section className='section-padding bg-gradient-to-r from-teal-600 to-cyan-700 relative overflow-hidden'>;'

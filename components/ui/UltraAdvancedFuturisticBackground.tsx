@@ -623,6 +623,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           }
         }
       }
+<<<<<<< HEAD
     }
     };
 
@@ -957,6 +958,18 @@ export default UltraAdvancedFuturisticBackground
 =======
 export default UltraAdvancedFuturisticBackground;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
+=======
+      
+      animationFrameId = $2;
+    initParticles($2);
+    animate($2);
+    return () => {
+      window.removeEventListener($2);
+      cancelAnimationFrame(animationFrameId)
+    }
+  }, [intensity, colorScheme, particleCount, animationSpeed, enableHolographic, enableQuantumEffects]),
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
   return (
     <div ref={containerRef} className="relative w-full h-full overflow-hidden">
       <canvas

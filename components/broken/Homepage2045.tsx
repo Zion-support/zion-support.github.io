@@ -1229,6 +1229,7 @@ standards in technology innovation.
               viewport={{ once: true }}
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 className='text-center mb-16'
 origin/cursor/automate-test-improve-and-merge-code-2533
             >
@@ -1300,6 +1301,45 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     initial={{ opacity: 0, x: index % 2 === 0 ? -30 : 30 }}
                     whileInView={{ opacity: 1, x: 0 }}
 =======
+=======
+            {/* Featured New Services */}
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+              {revolutionary2043AdvancedServices.slice(0, 4).map((service, index) => (
+                <motion.div
+                  key={service.id}
+                  initial={{ opacity: 0, x: index % 2 === 0 ? -30 : 30 }}
+                  whileInView={{ opacity: 1, x: 0}}
+                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  viewport={{ once: true}}
+                  className="group"
+                >
+                  <Link href={service.link}>
+                    <div className="relative p-6 bg-black/50 backdrop-blur-sm border border-gray-700/50 rounded-xl hover:border-cyan-400/50 transition-all duration-300 hover:scale-105">
+                      <div className="flex items-start justify-between mb-4">
+                        <div className="text-3xl">{service.icon}</div>
+                        {service.popular && (
+                          <span className="px-3 py-1 text-xs bg-gradient-to-r from-cyan-500 to-purple-500 text-white rounded-full">
+                            New
+                          </span>
+                        )}
+                      </div>
+                      <h3 className="text-xl font-bold text-white mb-2">{service.name}</h3>
+                      <p className="text-gray-400 text-sm mb-4">{service.description}</p>
+                      <div className="flex items-center justify-between">
+                        <div className="text-cyan-400 font-semibold">
+                          {service.price}{service.period}
+                        </div>
+                        <div className="flex items-center text-cyan-400 group-hover:text-cyan-300 transition-colors">
+                          <span className="mr-2 text-sm">Learn More</span>
+                          <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                        </div>
+                      </div>
+                    </div>
+                  </Link>
+                </motion.div>
+              ))}
+            </div>
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
 
               className='text-center mb-16'>
               <h2 className='text-4xl md:text-5xl font-bold mb-6'    />
@@ -1664,6 +1704,7 @@ export default Homepage2045;
               whileInView={{ opacity: 1, y: 0}}
               transition = $2;
 export default Homepage2045,
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 
@@ -1889,3 +1930,5 @@ import { revolutionary2044FuturisticServices } from '../data/revolutionary-2044-
 
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 >>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91

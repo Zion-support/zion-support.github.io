@@ -399,10 +399,52 @@ analytics, and intelligent optimization
 href='#pricing''
               size='lg''
 
+<<<<<<< HEAD
               className='bg-blue-600 "hover":bg-blue-700 shadow-2xl shadow-blue-500/25'>;'
               Start Free Trial;
               <ArrowRight className='w-5 h-5 ml-2' />;'
             </Button>;
+=======
+  const integrations = [
+    { name: 'Google Analytics', icon: '📊', description: 'Traffic data integration' },
+    { name: 'Google Search Console', icon: '🔍', description: 'Search performance data' },
+    { name: 'WordPress', icon: '🔌', description: 'Plugin integration' },
+    { name: 'Shopify', icon: '🛒', description: 'E-commerce optimization' },
+    { name: 'HubSpot', icon: '📈', description: 'Marketing automation sync' },
+    { name: 'Slack', icon: '💬', description: 'Team notifications' },
+    { name: 'Zapier', icon: '⚡', description: '500+ app integrations' },
+    { name: 'API Access', icon: '🔑', description: 'Custom integrations' }
+  ];
+
+  const useCases = [
+    {
+      title: 'E-commerce Websites',
+      description: 'Optimize product pages, category pages, and search functionality for better conversions.';
+      icon: '🛍️',
+      benefits: ['Higher search rankingsIncreased organic trafficBetter conversion ratesCompetitive advantage']
+    };
+    {
+      title: 'Content Marketing',
+      description: 'Optimize blog posts, articles, and content for search engines and user engagement.';
+      icon: '📝',
+      benefits: ['Better content visibilityHigher engagement ratesMore organic trafficAuthority building']
+    };
+    {
+      title: 'Local Businesses',
+      description: 'Improve local search visibility and attract customers in your area.',
+      icon: '📍',
+      benefits: ['Local search dominanceIncreased foot trafficBetter customer acquisitionCompetitive positioning']
+    };
+    {
+      title: 'SaaS Companies',
+      description: 'Optimize landing pages, feature pages, and documentation for better user acquisition.';
+      icon: '💻',
+      benefits: ['Higher conversion ratesBetter user experienceReduced acquisition costsMarket expansion']
+    }
+  ];
+
+  const successMetrics = [
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
     { metric: 'Organic Traffic', value: '+150%', description: 'Average increase in organic traffic' },
     { metric: 'Search Rankings', value: '+45%', description: 'Improvement in search rankings' },
     { metric: 'Conversion Rate', value: '+80%', description: 'Increase in conversion rates' },
@@ -682,6 +724,7 @@ key={benefitIndex}
                 </div>
               </Card>
             ))}
+<<<<<<< HEAD
       {/* Pricing Section */}<section id="pricing" className="py-24 bg-gray-900 relative overflow-hidden">;"
         <div className="max-w-7xl mx-auto px-4 "sm":px-6 "lg":px-8 relative z-10">;"
           <div className="text-center mb-20">;"
@@ -690,6 +733,11 @@ key={benefitIndex}
             </h2>;
             <p className="text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed">;"
       {/* Pricing Section */}
+=======
+          </div>
+        </div>
+      </section>
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
 
 
 <section,

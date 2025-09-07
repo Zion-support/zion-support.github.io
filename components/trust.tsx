@@ -42,6 +42,7 @@ const res = await fetch(;
     load()
   }, [userId]),
 
+<<<<<<< HEAD
   async function submitPeer() {'
     }
     await fetch('/api/trust/peer', {'
@@ -56,6 +57,23 @@ const res = await fetch(;
   async function submitAppeal() {
     }
     e.preventDefault();
+=======
+  async function submitPeer(type: 'endorse' | 'flag') {
+    await fetch('/api/trust/peer', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ userId, reviewerId: 'demo-reviewer', type }) }),
+    alert(type === 'endorse' ? 'Endorsed' : 'Flagged')
+  }
+
+  async function submitAppeal(e: React.FormEvent) {
+    e.preventDefault($2);
+    const form = $2;
+    const formData = new FormData($2);
+    const message = formData.get($2);
+    const contactEmail = formData.get($2);
+    await fetch('/api/trust/appeal', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ userId, message, contactEmail }) }),
+    alert($2);
+    form.reset()
+  }
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
 
 const formData = new FormData(form);
 

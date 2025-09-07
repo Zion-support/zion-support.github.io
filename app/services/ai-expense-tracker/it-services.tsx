@@ -2,21 +2,21 @@ import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-import { 
-  Server, 
-  Shield, 
-  Cloud, 
-  Database, 
-  Smartphone, 
-  Globe, 
-  Lock, 
-  CheckCircle, 
-  ArrowRight, 
-  Phone, 
-  Mail, 
-  MapPin, 
-  DollarSign, 
-  Clock, 
+import {
+  Server,
+  Shield,
+  Cloud,
+  Database,
+  Smartphone,
+  Globe,
+  Lock,
+  CheckCircle,
+  ArrowRight,
+  Phone,
+  Mail,
+  MapPin,
+  DollarSign,
+  Clock,
   Award,
   Users,
   Building,
@@ -33,13 +33,11 @@ import {
   HardDrive,
   Network
 } from 'lucide-react';
-
 const contactInfo = {
   phone: "+1 302 464 0950",
   email: "kleber@ziontechgroup.com",
   address: "364 E Main St STE 1008 Middletown DE 19709"
 };
-
 const itServices = [
   {
     id: 1,
@@ -274,7 +272,6 @@ const itServices = [
     popular: false
   }
 ];
-
 const industries = [
   {
     title: "Healthcare & Medical",
@@ -313,7 +310,6 @@ const industries = [
     useCases: ["Citizen services", "Document management", "Security compliance", "Digital transformation"]
   }
 ];
-
 export default function ITServicesPage() {
   return (
     <>
@@ -323,32 +319,31 @@ export default function ITServicesPage() {
         <meta name="keywords" content="IT services, cloud migration, cybersecurity, network management, DevOps, IT consulting, infrastructure, managed services" />
         <link rel="canonical" href="https://ziontechgroup.com/it-services" />
       </Head>
-      
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-indigo-900">
         {/* Hero Section */}
         <section className="bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-600 text-white py-20">
           <div className="container mx-auto px-4">
             <motion.div
               className="text-center max-w-4xl mx-auto"
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
+              initial={{ opacity: 0, y: 30 }
+              animate={{ opacity: 1, y: 0 }
+              transition={{ duration: 0.8 }
             >
               <h1 className="text-4xl md:text-6xl font-bold mb-6">
                 IT Services & Solutions
               </h1>
               <p className="text-xl md:text-2xl mb-8 text-blue-100">
-                Comprehensive IT services to modernize your infrastructure, enhance security, and drive digital transformation. 
+                Comprehensive IT services to modernize your infrastructure, enhance security, and drive digital transformation.
                 From cloud migration to cybersecurity, we deliver enterprise-grade solutions at competitive prices.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Link 
+                <Link
                   href="/contact"
                   className="bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors text-lg"
                 >
                   Get IT Consultation
                 </Link>
-                <a 
+                <a
                   href={`tel:${contactInfo.phone}`}
                   className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors text-lg"
                 >
@@ -358,16 +353,15 @@ export default function ITServicesPage() {
             </motion.div>
           </div>
         </section>
-
         {/* Services Grid */}
         <section className="py-20 bg-gray-50">
           <div className="container mx-auto px-4">
             <motion.div
               className="text-center mb-16"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
+              initial={{ opacity: 0, y: 30 }
+              whileInView={{ opacity: 1, y: 0 }
+              transition={{ duration: 0.8 }
+              viewport={{ once: true }
             >
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
                 Our IT Services
@@ -376,17 +370,16 @@ export default function ITServicesPage() {
                 End-to-end IT solutions designed to modernize your infrastructure, enhance security, and drive business growth.
               </p>
             </motion.div>
-
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               {itServices.map((service, index) => (
                 <motion.div
                   key={service.id}
                   className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100 relative"
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8, delay: index * 0.1 }}
-                  viewport={{ once: true }}
-                  whileHover={{ y: -5 }}
+                  initial={{ opacity: 0, y: 30 }
+                  whileInView={{ opacity: 1, y: 0 }
+                  transition={{ duration: 0.8, delay: index * 0.1 }
+                  viewport={{ once: true }
+                  whileHover={{ y: -5 }
                 >
                   {service.popular && (
                     <div className="absolute -top-3 -right-3 bg-yellow-400 text-yellow-900 px-3 py-1 rounded-full text-sm font-semibold flex items-center gap-1">
@@ -394,7 +387,6 @@ export default function ITServicesPage() {
                       Popular
                     </div>
                   )}
-                  
                   <div className="flex items-center mb-4">
                     <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mr-4">
                       <service.icon className="w-8 h-8 text-blue-600" />
@@ -407,9 +399,7 @@ export default function ITServicesPage() {
                       </div>
                     </div>
                   </div>
-                  
                   <p className="text-gray-600 mb-4">{service.description}</p>
-                  
                   <div className="mb-4">
                     <div className="flex items-center gap-2 mb-2">
                       <span className="text-2xl font-bold text-blue-600">{service.price}</span>
@@ -419,7 +409,6 @@ export default function ITServicesPage() {
                       Save up to 50% vs market rate
                     </div>
                   </div>
-
                   {/* ROI and Popularity */}
                   <div className="flex items-center justify-between mb-4">
                     <div className="text-sm">
@@ -435,7 +424,6 @@ export default function ITServicesPage() {
                       </div>
                     )}
                   </div>
-
                   <div className="mb-4">
                     <h4 className="font-semibold text-gray-900 mb-2">Key Features:</h4>
                     <ul className="space-y-1">
@@ -447,7 +435,6 @@ export default function ITServicesPage() {
                       ))}
                     </ul>
                   </div>
-
                   <div className="mb-4">
                     <h4 className="font-semibold text-gray-900 mb-2">Benefits:</h4>
                     <ul className="space-y-1">
@@ -459,12 +446,12 @@ export default function ITServicesPage() {
                       ))}
                     </ul>
                   </div>
-
                   <div className="mb-4">
                     <div className="text-sm text-gray-600">
                       <strong>Target Users:</strong> {service.targetUsers}
                     </div>
                   </div>
+<<<<<<< HEAD
                   </motion.div>
                 );
               })}
@@ -699,7 +686,11 @@ export default function ITServicesPage() {
       category: 'High-Performance Computing'
     }
   ];
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
 
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-9862
                   <div className="flex flex-col sm:flex-row gap-2">
                     <Link
                       href="/contact"
@@ -719,16 +710,15 @@ export default function ITServicesPage() {
             </div>
           </div>
         </section>
-
         {/* Industries Section */}
         <section className="py-20 bg-white">
           <div className="container mx-auto px-4">
             <motion.div
               className="text-center mb-16"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
+              initial={{ opacity: 0, y: 30 }
+              whileInView={{ opacity: 1, y: 0 }
+              transition={{ duration: 0.8 }
+              viewport={{ once: true }
             >
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
                 Industries We Serve
@@ -737,16 +727,15 @@ export default function ITServicesPage() {
                 Our IT services are tailored to meet the unique requirements and compliance needs of various industries.
               </p>
             </motion.div>
-
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               {industries.map((industry, index) => (
                 <motion.div
                   key={index}
                   className="bg-gray-50 p-8 rounded-xl hover:bg-gray-100 transition-colors"
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8, delay: index * 0.1 }}
-                  viewport={{ once: true }}
+                  initial={{ opacity: 0, y: 30 }
+                  whileInView={{ opacity: 1, y: 0 }
+                  transition={{ duration: 0.8, delay: index * 0.1 }
+                  viewport={{ once: true }
                 >
                   <div className="text-4xl mb-4">{industry.icon}</div>
                   <h3 className="text-xl font-semibold mb-2 text-gray-900">{industry.title}</h3>
@@ -767,16 +756,15 @@ export default function ITServicesPage() {
             </div>
           </div>
         </section>
-
         {/* Why Choose Us */}
         <section className="py-20 bg-gray-50">
           <div className="container mx-auto px-4">
             <motion.div
               className="text-center mb-16"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
+              initial={{ opacity: 0, y: 30 }
+              whileInView={{ opacity: 1, y: 0 }
+              transition={{ duration: 0.8 }
+              viewport={{ once: true }
             >
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
                 Why Choose Our IT Services?
@@ -785,7 +773,6 @@ export default function ITServicesPage() {
                 We combine deep technical expertise with business acumen to deliver IT solutions that drive real business value.
               </p>
             </motion.div>
-
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
               {[
                 {
@@ -812,10 +799,10 @@ export default function ITServicesPage() {
                 <motion.div
                   key={index}
                   className="text-center"
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8, delay: index * 0.1 }}
-                  viewport={{ once: true }}
+                  initial={{ opacity: 0, y: 30 }
+                  whileInView={{ opacity: 1, y: 0 }
+                  transition={{ duration: 0.8, delay: index * 0.1 }
+                  viewport={{ once: true }
                 >
                   <div className="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
                     <item.icon className="w-8 h-8 text-blue-600" />
@@ -827,38 +814,36 @@ export default function ITServicesPage() {
             </div>
           </div>
         </section>
-
         {/* CTA Section */}
         <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
           <div className="container mx-auto px-4 text-center">
             <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
+              initial={{ opacity: 0, y: 30 }
+              whileInView={{ opacity: 1, y: 0 }
+              transition={{ duration: 0.8 }
+              viewport={{ once: true }
             >
               <h2 className="text-3xl md:text-4xl font-bold mb-6">
                 Ready to Modernize Your IT Infrastructure?
               </h2>
               <p className="text-xl mb-8 text-blue-100 max-w-3xl mx-auto">
-                Transform your technology infrastructure with our comprehensive IT services. From cloud migration to cybersecurity, 
+                Transform your technology infrastructure with our comprehensive IT services. From cloud migration to cybersecurity,
                 we'll help you build a robust, secure, and scalable IT environment.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
-                <Link 
+                <Link
                   href="/contact"
                   className="bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors text-lg"
                 >
                   Get IT Assessment
                 </Link>
-                <a 
+                <a
                   href={`tel:${contactInfo.phone}`}
                   className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors text-lg"
                 >
                   Call {contactInfo.phone}
                 </a>
               </div>
-              
               {/* Contact Information */}
               <div className="grid md:grid-cols-3 gap-8 mt-12">
                 <div className="flex items-center justify-center">

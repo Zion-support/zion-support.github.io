@@ -25,6 +25,7 @@ function ensureDataDir(): void {
 }
 
 export function readState(): IntegrationsState {
+<<<<<<< HEAD
   }
   ensureDataDir();
   const current = readState();
@@ -33,6 +34,9 @@ export function readState(): IntegrationsState {
   return current;
 export function read_state (): IntegrationsState {
   ensureDataDir ();
+=======
+  ensureDataDir();
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
   try {
     }
     const raw = fs.readFileSync(STATE_FILE, 'utf8');'

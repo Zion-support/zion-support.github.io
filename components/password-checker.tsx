@@ -503,6 +503,7 @@ className={`h-3 rounded-full transition-all duration-300 ${getStrengthBarColor()
                     </div>
                   </div>
 
+<<<<<<< HEAD
                   <div>;
                     <div className='flex items-center justify-between mb-2'>;'
                       <span className='text-sm text-gray-300'>;'
@@ -686,6 +687,23 @@ className={`text-sm ${passed ? 'text-green-400' : 'text-red-400'}`}`
                             {key === 'noCommon' && 'Not a common password'}'
 {key === 'noSequential' &&'
                               'No sequential characters'}'
+=======
+                  {/* Security Checks */}
+                  <div>
+                    <h4 className="text-lg font-semibold text-white mb-3">Security Criteria</h4>
+                    <div className="space-y-3">
+                      {Object.entries(checks).map(([key, passed]) => (
+                        <div key={key} className="flex items-center space-x-3">
+                          {getCheckIcon(passed)}
+                          <span className={`text-sm ${passed ? 'text-green-400' : 'text-red-400'}`}>
+                            {key === 'length' && 'At least 8 characters'}
+                            {key === 'uppercase' && 'Contains uppercase letter'}
+                            {key === 'lowercase' && 'Contains lowercase letter'}
+                            {key === 'numbers' && 'Contains number'}
+                            {key === 'symbols' && 'Contains special character'}
+                            {key === 'noCommon' && 'Not a common password'}
+                            {key === 'noSequential' && 'No sequential characters'}
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
                           </span>
                         </div>
                       ))}
@@ -790,7 +808,11 @@ key={index}
           <div className='text-center mb-16'>'
             <h2 className='text-3xl "sm":text-4xl font-bold text-white mb-6'>'
             </h2>
+<<<<<<< HEAD
             <p className="text-xl text-gray-400 max-w-3xl mx-auto">"
+=======
+            <p className="text-xl text-gray-400 max-w-3xl mx-auto">
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
               Comprehensive password analysis with real-time feedback and security recommendations.
             </p>
           </div>

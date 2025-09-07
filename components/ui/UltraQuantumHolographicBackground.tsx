@@ -59,7 +59,21 @@ className = '''
 
 }
 
+<<<<<<< HEAD
 const canvasRef = useRef<HTMLCanvasElement>(null);
+=======
+export default function UltraQuantumHolographicBackground({
+  children;
+  intensity = 'high';
+  colorScheme = 'quantum';
+  particleCount = 300;
+  animationSpeed = 1.5;
+  className = ''
+}: UltraQuantumHolographicBackgroundProps) {
+  const canvasRef = useRef<HTMLCanvasElement>(null);
+  const [dimensions, setDimensions] = useState({ width: 0, height: 0 }),
+  const [isVisible, setIsVisible] = useState(false);
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
 
 const [dimensions, setDimensions] = useState({ "width": 0, "height": 0,;
 });

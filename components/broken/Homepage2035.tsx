@@ -835,6 +835,7 @@ className='border border-cyan-400 text-cyan-400 "hover":bg-cyan-400 "hover":text
 )
 };
 
+<<<<<<< HEAD
 =======
 > <div className="relative" > <Loader2 className="w-16 h-16 text-cyan-400 animate-spin mx-auto mb-4" /> <div className="absolute inset-0 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-full blur-xl opacity-20 animate-pulse" ></div> </div> <p className="text-xl text-gray-300 mb-2" >Loading Zion Tech Group...</p> <p className="text-sm text-gray-500" >Preparing your digital transformation journey</p> </motion.div> </div>)
 return () => clearTimeout (timer) 
@@ -1213,3 +1214,6 @@ export default Homepage2035;
 =======
 
 "
+=======
+export default Homepage2035;
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91

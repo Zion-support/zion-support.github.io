@@ -1,6 +1,11 @@
+<<<<<<< HEAD
 import React from 'react';'
 import Link from 'next/link';'
 
+=======
+import React from 'react';
+import Link from 'next/link';
+>>>>>>> cursor/automate-test-improve-and-merge-code-9862
 export default function NotFound() {
 }
 return (;
@@ -18,6 +23,7 @@ return (;
             The page you're looking for doesn't exist or has been moved. Let's get you back on track.'
           </p>
         </div>
+<<<<<<< HEAD
 
         <div className="space-y-4">"
           <Link,
@@ -30,13 +36,30 @@ href="/""
           <Link,
 href="/services""
             className="block w-full border-2 border-gray-300 text-gray-700 px-6 py-3 rounded-lg font-semibold "hover":border-blue-400 "hover":text-blue-600 transition-colors text-center "focus":outline-none "focus":ring-2 "focus":ring-gray-500 "focus":ring-offset-2""
+=======
+        <div className="space-y-4">
+          <Link
+            href="/"
+            className="block w-full bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
+          >
+            Go Home
+          </Link>
+          <Link
+            href="/services"
+            className="block w-full border-2 border-gray-300 text-gray-700 px-6 py-3 rounded-lg font-semibold hover:border-blue-400 hover:text-blue-600 transition-colors text-center focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2"
+>>>>>>> cursor/automate-test-improve-and-merge-code-9862
           >
             Explore Services
           </Link>
         </div>
+<<<<<<< HEAD
 
         <div className="mt-8 text-sm text-gray-500">"
           <p>Need help? <Link href="/contact" className="text-blue-600 "hover":text-blue-700 underline">Contact us</Link></p>"
+=======
+        <div className="mt-8 text-sm text-gray-500">
+          <p>Need help? <Link href="/contact" className="text-blue-600 hover:text-blue-700 underline">Contact us</Link></p>
+>>>>>>> cursor/automate-test-improve-and-merge-code-9862
         </div>
       </div>
     </div>

@@ -559,6 +559,7 @@ const rec = new Speech();
     rec.lang = 'en-US';'
     rec.onresult = ("e": any) => {
         <button
+<<<<<<< HEAD
 }
 type='button''
           onClick={startVoic
@@ -611,6 +612,20 @@ type='button''
                   type="button";"
                   onClick={() => {setQuery(s)setOpen(false)className='w-full text-left px-3 py-2 "hover":bg-gray-50 "dark":"hover":bg-gray-800'                >>'
 
+=======
+          type='button'
+          onClick={startVoice}
+          className='inline-flex sm:hidden text-gray-500 hover:text-gray-800 dark:hover:text-gray-200'
+
+                <button
+                  type="button"
+                  onClick={() => {;
+                    setQuery(s);
+                    setOpen(false);
+                  className='w-full text-left px-3 py-2 hover:bg-gray-50 dark:hover:bg-gray-800'                >
+
+                  className="w-full text-left px-3 py-2 hover:bg-gray-50 dark:hover:bg-gray-800";
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
                 >;
                     }
                     router && router.push(`/search?q=${encodeURIComponent(s)}`)}}>;`                  className="w-full text-left px-3 py-2 "hover": bg-gray-50 "dark":"hover":bg-gray-800">"
@@ -700,6 +715,7 @@ if ( {) {$2;
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 =======
 
@@ -742,6 +758,8 @@ pr-12243
 =======
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 >>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
                 </button>
               </li>
             ))}
@@ -947,7 +965,11 @@ const rec = new Speech ()rec.lang = 'en - US';'
               <li key={i}>;
                 <button;'
                   type='button';
+<<<<<<< HEAD
                   on_click={() => {}
+=======
+                  on_click={() => {
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
                     set_query (s);
                     set_open (false);`
                     router.push (`/search?q=${encodeURIComponent (s)}`);
@@ -985,6 +1007,7 @@ const rec = new Speech ()rec.lang = 'en - US';'
                   className="w - full text - left px - 3 py - 2 hover:bg - gray - 50 dark:hover:bg - gray - 800";
                 >;
                   {s}
+<<<<<<< HEAD
 =======
         on_change={e = /> set_query (e.target.value)}
 >>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
@@ -1042,6 +1065,8 @@ const rec = new Speech ()rec.lang = 'en - US';'
 }
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 >>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
                 </button>;
 =======
 const Speech: any =

@@ -81,6 +81,7 @@ product.
         </section>
       </div>
     </EnhancedLayout>
+<<<<<<< HEAD
 
 
 }        <section id="ai" className="rounded-2xl border border-gray-200 "dark":border-gray-800 p-6 bg-white "dark":bg-gray-950">;"
@@ -164,3 +165,7 @@ function ServicesPage() {
   )
 }
 >>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
+=======
+  )
+}
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91

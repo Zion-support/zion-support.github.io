@@ -102,6 +102,7 @@ const navigationItems = [;
       { "name": 'About', "href": '/about','
 },
 
+<<<<<<< HEAD
       { "name": 'Contact', "href": '/contact','
 },
 
@@ -233,6 +234,18 @@ className='flex items-center space-x-3''
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;
         <div className="flex items-center justify-between h-20">;
           <motion.div;
+=======
+  return (
+    <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
+      isScrolled 
+        ? 'bg-gray-900/95 backdrop-blur-xl border-b border-gray-700/50 shadow-2xl' 
+        : 'bg-transparent'
+    } ${className}`}>
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex items-center justify-between h-20">
+          {/* Logo */}
+          <motion.div
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6 }}className='flex items-center space-x-3';
@@ -367,6 +380,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 href={item.href}
 className='text-gray-300 "hover": text-white transition-colors duration-300 py-2 px-3 rounded-lg "hover":bg-gray-800/50''
                   >
+<<<<<<< HEAD
 
                     {item.nam
 }
@@ -470,6 +484,14 @@ className='text-gray-300 "hover": text-white transition-colors duration-300 py-2
 }
           </div>;
           </div>;
+=======
+                    {item.name}
+                  </Link>
+                )}
+              </div>
+            ))}
+          </div>
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
 
           {/* Contact Info & CTA */}
 
@@ -748,6 +770,7 @@ className='block text-gray-300 "hover": text-white transition-colors duration-30
               </div>;
               ))}
 
+<<<<<<< HEAD
               <div className='pt-6 border-t border-gray-700/50 space-y-3'>;'
                 <div className='flex items-center space-x-3 text-gray-300'>;'
                   <Phone className='w-4 h-4 text-cyan-400' />;'
@@ -964,6 +987,24 @@ href='/contact''
   )}
 
 <<<<<<< HEAD
+=======
+              {/* Mobile Contact Info */}
+              <div className="pt-6 border-t border-gray-700/50 space-y-3">
+                <div className="flex items-center space-x-3 text-gray-300">
+                  <Phone className="w-4 h-4 text-cyan-400" />
+                  <span>{contactInfo.mobile}</span>
+                </div>
+                <div className="flex items-center space-x-3 text-gray-300">
+                  <Mail className="w-4 h-4 text-purple-400" />
+                  <span>{contactInfo.email}</span>
+                </div>
+                <div className="flex items-center space-x-3 text-gray-300">
+                  <MapPin className="w-4 h-4 text-green-400" />
+                  <span className="text-sm">{contactInfo.address}</span>
+                </div>
+              </div>
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
               {/* Mobile CTA */}
               <div className="pt-4">
                 <Link

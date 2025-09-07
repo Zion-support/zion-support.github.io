@@ -21,6 +21,7 @@ function fixMergeConflicts(filePath) {
     return false
   }
 }
+<<<<<<< HEAD
 
 /**
  * getAllFiles - Function description
@@ -97,6 +98,8 @@ function getAllFiles(dir, extensions) {;
     for (const item of items) {;
       const fullPath = path.join(dir, item),;
       const stat = fs.statSync(fullPath),;
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
 // Function to get all files recursively
 function getAllFiles(dir, extensions) {
   let files = $2;
@@ -115,7 +118,6 @@ function getAllFiles(dir, extensions) {
   }
   return files
 }
-
 // Main execution
 async function main() {
   try {
@@ -126,7 +128,6 @@ async function main() {
     console.error($2);
     process.exit(1)
   }
-
   try {
     // Ensure clean working directory
     const status = execSync($2);
@@ -134,7 +135,6 @@ async function main() {
       console.log($2);
       execSync('git stash push -m "Auto-stash before merge process"')
     }
-
     // Fetch latest changes
     console.log($2);
     execSync($2);
@@ -151,7 +151,6 @@ async function main() {
       const conflictFiles = execSync($2);
       if (conflictFiles.trim()) {
         console.log('Found merge conflicts in:', conflictFiles.trim()),
-        
         // Resolve conflicts by accepting our version
         const files = conflictFiles.trim().split($2);
         for (const file of files) {
@@ -165,16 +164,26 @@ async function main() {
             execSync(`git add "${file}"`)
           }
         }
-        
         // Commit the merge
         execSync('git commit -m "feat: resolve merge conflicts automatically\n\n- Resolved merge conflicts by accepting appropriate versions\n- Integrated latest changes from main branch\n- All services and improvements preserved"')
       }
     }
+<<<<<<< HEAD
     let fixedCount = 0;
     for (const file of files) {;
       try {;
         const content = fs.readFileSync(file, 'utf8'),;
           if (fixMergeConflicts(file)) {;
+=======
+    // Now scan for and fix any remaining merge conflicts in files
+    console.log($2);
+    const files = getAllFiles(process.cwd(), ['.tsx.ts.jsx.js.json.md.css']),
+    let fixedCount = $2;
+    for (const file of files) {
+      try {
+        const content = fs.readFileSync($2);
+        if (content.includes('<<<<<<< HEAD') || content.includes('=======') || content.includes('>>>>>>>')) {
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
           if (fixMergeConflicts(file)) {
             fixedCount++;
           }
@@ -183,13 +192,11 @@ async function main() {
         // Skip files that can't be read
       }
     }
-
     if (fixedCount > 0) {
       console.log($2);
       execSync($2);
       execSync('git commit -m "fix: resolve remaining merge conflicts in files\n\n- Fixed merge conflict markers in source files\n- Ensured clean codebase without conflicts"')
     }
-
     // Get all branches
     console.log($2);
     const branches = execSync($2);
@@ -212,7 +219,6 @@ async function main() {
         // Continue with other branches
       }
     }
-
     // Push all changes
     console.log($2);
     execSync($2);
@@ -220,11 +226,9 @@ async function main() {
     console.log($2);
     console.log($2);
     console.log('✅ Repository is now clean and up to date')
-
   } catch (error) {
     console.error($2);
     process.exit(1)
   }
 }
-
 main().catch($2);

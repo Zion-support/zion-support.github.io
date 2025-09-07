@@ -1,5 +1,6 @@
 {
 <<<<<<< HEAD
+<<<<<<< HEAD
   "timestamp": "2025-09-06T04:25:47.740Z",
   "stats": {
     "totalFiles": 8,
@@ -67,3 +68,19 @@ ursor/automate-test-improve-and-merge-code-646c
 }
   ]
 }
+=======
+  "timestamp": "2025-09-07T08:52:54.051Z",
+  "issues": [
+    {
+      "type": "typescript",
+      "severity": "error",
+      "message": "TypeScript compilation errors found"
+    }
+  ],
+  "summary": {
+    "totalIssues": 1,
+    "errors": 1,
+    "warnings": 0
+  }
+}
+>>>>>>> cursor/automate-test-improve-and-merge-code-9862

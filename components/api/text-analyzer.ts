@@ -249,6 +249,7 @@ const wordsArray = text && text.toLowerCase().split(/\s+/);
     const trigramCounts = new Map<string, number>(),
 
 
+<<<<<<< HEAD
 for (let i = 0; i < wordsArray.length - 1; i++) {
       }
       const bigram = `${wordsArray[i]} ${wordsArray[i + 1]}`;`      bigramCounts.set(bigram, (bigramCounts.get(bigram) |0) + 1);
@@ -282,10 +283,19 @@ const bigram = `${wordsArray[i]} ${wordsArray[i + 1]}`;`      bigramCounts && bi
     }
     const bigrams = Array && Array.from(bigramCounts && bigramCounts.entries())
 >>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
+=======
+    for (let i = 0, i < wordsArray.length - 2, i++) {
+      const trigram = $2;
+      trigramCounts.set(trigram, (trigramCounts.get(trigram) || 0) + 1)
+    }
+
+    const bigrams = Array.from(bigramCounts.entries())
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
       .sort((a, b) => b[1] - a[1])
       .slice(0, 5)
       .map(([phrase, count]) => ({ phrase, count })),
 
+<<<<<<< HEAD
 const bigrams = Array && Array.from(bigramCounts && bigramCounts.entries());
       .sort((a, b) => b[1] - a[1])
       .slice(0, 5)
@@ -306,6 +316,19 @@ const "result": TextAnalysisResult = {
 text,
       "statistics": {
         }
+=======
+    const trigrams = Array.from(trigramCounts.entries())
+      .sort((a, b) => b[1] - a[1])
+      .slice(0, 5)
+      .map(([phrase, count]) => ({ phrase, count })),
+
+    // Language detection (simplified - assume English for demo)
+    const isEnglish = /^[a-zA-Z\s.,!?,:'"()-]+$/.test($2);
+    const detectedLanguage = $2;
+    const confidence = $2;
+    const result: TextAnalysisResult = $2;
+      statistics: {
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
         characters,
         charactersNoSpaces,
         words,

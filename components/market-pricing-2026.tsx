@@ -111,12 +111,47 @@ export default function MarketPricing2026() {
     }
   ];
 
+<<<<<<< HEAD
 const contactInfo = {
     }
     "mobile": '+1 302 464 0950','
     "email": 'kleber@ziontechgroup.com','
     "address": '364 E Main St STE 1008 Middletown DE 19709','
 "website": '"https"://ziontechgroup.com','
+=======
+  // Filter services based on selection
+  const filteredServices = allServices.filter(service => {
+    const matchesCategory = selectedCategory === 'all' || service.category.includes(selectedCategory);
+    const matchesPrice = priceRange === 'all' || 
+      (priceRange === 'budget' && parseFloat(service.price.replace(/[^0-9.]/g, '')) < 5000) ||
+      (priceRange === 'mid' && parseFloat(service.price.replace(/[^0-9.]/g, '')) >= 5000 && parseFloat(service.price.replace(/[^0-9.]/g, '')) < 15000) ||
+      (priceRange === 'premium' && parseFloat(service.price.replace(/[^0-9.]/g, '')) >= 15000);
+    return matchesCategory && matchesPrice
+  });
+
+  const categories = [
+    { id: 'all', name: 'All Categories', icon: BarChart3, count: allServices.length },
+    { id: 'AI', name: 'AI & Machine Learning', icon: Brain, count: allServices.filter(s => s.category.includes('AI')).length },
+    { id: 'Quantum', name: 'Quantum Computing', icon: Atom, count: allServices.filter(s => s.category.includes('Quantum')).length },
+    { id: 'Emerging', name: 'Emerging Technology', icon: Sparkles, count: allServices.filter(s => s.category.includes('Emerging')).length },
+    { id: 'IT', name: 'IT & Infrastructure', icon: Shield, count: allServices.filter(s => s.category.includes('IT') || s.category.includes('Infrastructure')).length },
+    { id: 'Autonomous', name: 'Autonomous Systems', icon: Target, count: allServices.filter(s => s.category.includes('Autonomous')).length },
+    { id: 'Cloud', name: 'Cloud & DevOps', icon: Cloud, count: allServices.filter(s => s.category.includes('Cloud') || s.category.includes('DevOps')).length }
+  ];
+
+  const priceRanges = [
+    { id: 'all', name: 'All Prices', range: 'All price ranges' },
+    { id: 'budget', name: 'Budget ($0 - $5K)', range: 'Affordable solutions for startups and small businesses' },
+    { id: 'mid', name: 'Mid-Range ($5K - $15K)', range: 'Professional solutions for growing companies' },
+    { id: 'premium', name: 'Premium ($15K+)', range: 'Enterprise-grade solutions for large organizations' }
+  ];
+
+  const contactInfo = {
+    mobile: '+1 302 464 0950',
+    email: 'kleber@ziontechgroup.com',
+    address: '364 E Main St STE 1008 Middletown DE 19709',
+    website: 'https://ziontechgroup.com'
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
   };
 
   // Calculate pricing statistics,
@@ -145,6 +180,7 @@ const pricingStats = {
     >
       <div className='min-h-screen'>'
         <Head>
+<<<<<<< HEAD
           <title>
             Zion Tech Group - 2026 Market Pricing & Competitive Analysis | 1500+
             Solutions
@@ -231,6 +267,8 @@ rel='canonical''
                   <div className='text-gray-400 text-sm'>Total Customers</div>'
                 quantum computing, and emerging technology services
               </p>
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
           <title>Zion Tech Group - 2026 Market Pricing & Competitive Analysis | 1500+ Solutions</title>
           <meta name="description" content="Comprehensive market pricing analysis for Zion Tech Group's revolutionary 2026 services. Compare prices, ROI, and competitive positioning. Contact: +1 302 464 0950" />
           <meta name="keywords" content="2026 pricing, AI services pricing, quantum computing pricing, emerging technology pricing, IT solutions pricing, competitive analysis, market positioning, ROI analysis" />
@@ -348,6 +386,7 @@ key={range && range.id}
                       </button>
 
                     ))}
+<<<<<<< HEAD
                   </div>;
                 </div>;
               </div>;
@@ -565,6 +604,40 @@ evolving technology landscape
 }
 
 className='bg-gray-800/30 rounded-2xl p-6 border border-gray-700/50 backdrop-blur-sm''
+=======
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Market Analysis Section */}
+        <section className="relative z-10 py-16 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8 }}
+              className="text-center mb-12"
+            >
+              <h2 className="text-4xl font-bold text-white mb-4">Market Analysis & Competitive Positioning</h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Our services are strategically positioned to provide maximum value while maintaining competitive pricing 
+                in the rapidly evolving technology landscape
+              </p>
+            </motion.div>
+
+            {/* Market Insights Grid */}
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+              <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: 0.1 }}
+                className="bg-gray-800/30 rounded-2xl p-6 border border-gray-700/50 backdrop-blur-sm"
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
               >
                 <div className='text-4xl mb-4'>📊</div>'
                 <h3 className='text-xl font-bold text-white mb-3'>'
@@ -589,7 +662,16 @@ initial={{ "opacity": 0, "y": 30
                 transition={{ "duration": 0.6, "delay": 0.2 
 }
 
+<<<<<<< HEAD
 className='bg-gray-800/30 rounded-2xl p-6 border border-gray-700/50 backdrop-blur-sm''
+=======
+              <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: 0.2 }}
+                className="bg-gray-800/30 rounded-2xl p-6 border border-gray-700/50 backdrop-blur-sm"
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
               >
                 <div className='text-4xl mb-4'>🎯</div>'
                 <h3 className='text-xl font-bold text-white mb-3'>'
@@ -614,7 +696,16 @@ initial={{ "opacity": 0, "y": 30
                 transition={{ "duration": 0.6, "delay": 0.3 
 }
 
+<<<<<<< HEAD
 className='bg-gray-800/30 rounded-2xl p-6 border border-gray-700/50 backdrop-blur-sm''
+=======
+              <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: 0.3 }}
+                className="bg-gray-800/30 rounded-2xl p-6 border border-gray-700/50 backdrop-blur-sm"
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
               >
                 <div className='text-4xl mb-4'>🚀</div>'
                 <h3 className='text-xl font-bold text-white mb-3'>'
@@ -633,6 +724,7 @@ will remain relevant and competitive for years to come
           </div>
         </section>
 
+<<<<<<< HEAD
 
 
               initial={{ "opacity": 0, "y": 30 
@@ -728,6 +820,8 @@ will remain relevant and competitive for years to come
             </div>;
           </div>;
         </section>;
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
         {/* Services Pricing Grid */}
 
 <section className='relative z-10 py-16 px-4 "sm":px-6 "lg":px-8'>'
@@ -750,6 +844,7 @@ className='text-center mb-12''
               </p>
             </motion.div>
 
+<<<<<<< HEAD
 <div className='grid grid-cols-1 "md":grid-cols-2 "lg":grid-cols-3 gap-8'>'
               {filteredServices.map((service, index) => (
                 <motion.div
@@ -782,6 +877,16 @@ key={service.id}
 
                   transition={{ "duration": 0.6, "delay": index * 0.1 }}
 className='group''
+=======
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {filteredServices.map((service, index) => (
+                <motion.div
+                  key={service.id}
+                  initial={{ opacity: 0, y: 30 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  className="group"
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
                 >
                   <div className='bg-gray-800/30 rounded-2xl p-6 border border-gray-700/50 backdrop-blur-sm "hover":border-cyan-500/50 transition-all duration-300 "hover":transform "hover":scale-105'>'
                     {/* Service Header */}
@@ -1011,6 +1116,7 @@ className='w-full bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-s
                   </div>
                 </motion.div>
 
+<<<<<<< HEAD
               )
 }
             </div>;
@@ -1047,6 +1153,8 @@ className='w-full bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-s
                   </div>;
                 </motion && motion.div>;
               ))}
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
             {/* No Results */}
             {filteredServices && filteredServices.length === 0 && (<motion&& motion.div;
                 }
@@ -1083,6 +1191,7 @@ className='text-center py-16''
           </div>;
         </section>;
         {/* Contact Section */}
+<<<<<<< HEAD
 <section className='relative z-10 py-20 px-4 "sm":px-6 "lg":px-8'>;'
           <div className='max-w-4xl mx-auto text-center'>;'
             <motion.div;
@@ -1230,6 +1339,16 @@ className='text-center py-16''
               transition={{ "duration": 0.8 
 }
 className='bg-gradient-to-r from-gray-800/50 to-gray-900/50 rounded-2xl p-8 border border-gray-700/50 backdrop-blur-sm''
+=======
+        <section className="relative z-10 py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto text-center">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8 }}
+              className="bg-gradient-to-r from-gray-800/50 to-gray-900/50 rounded-2xl p-8 border border-gray-700/50 backdrop-blur-sm"
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
             >
               <h2 className='text-3xl font-bold text-white mb-6'>'
                 Ready to Get Started?

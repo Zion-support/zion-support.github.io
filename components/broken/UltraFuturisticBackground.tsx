@@ -303,6 +303,7 @@ className='absolute top-40 right-32 w-24 h-24 border border-purple-400/30''
 
         />
 
+<<<<<<< HEAD
             }
 
             "rotate": [360, 0],
@@ -314,6 +315,13 @@ className='absolute top-40 right-32 w-24 h-24 border border-purple-400/30''
             "duration": 15,
             "repeat": Infinity,
 "ease": 'linear','
+=======
+        {/* Triangle */}
+        <motion.div
+          className="absolute top-40 right-32 w-24 h-24 border border-purple-400/30"
+          style={{
+            clipPath: 'polygon(50% 0%, 0% 100%, 100% 100%)'
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
           }}
         {/* Circle */}
 

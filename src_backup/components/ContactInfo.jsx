@@ -70,7 +70,11 @@ import { Mail, Phone, MapPin, Globe, Clock, MessageSquare, ExternalLink, Star ex
                     <p className='text-white font-medium'>Address</p>'''';
                     <p className='text-zion-slate-light'>;
                       364 E Main St STE 1008;
+<<<<<<< HEAD:src_backup/components/ContactInfo.jsx
                       <br /" >";
+=======
+                      <br /\"  />\";
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91:temp-disabled/src/components/ContactInfo.jsx
                       Middletown DE 19709;
                     </p>;
                   </div>;
@@ -88,7 +92,11 @@ import { Mail, Phone, MapPin, Globe, Clock, MessageSquare, ExternalLink, Star ex
                       rel='noopener noreferrer'''';';
                       className='text-zion-cyan hover: text-zion-cyan-light transition-colors flex items-center gap-1 '>''';';
                       ziontechgroup.com'''';
+<<<<<<< HEAD:src_backup/components/ContactInfo.jsx
                       <ExternalLink className='h-4 w-4' /" >";
+=======
+                      <ExternalLink className='h-4 w-4' /\"  />\";
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91:temp-disabled/src/components/ContactInfo.jsx
                     </a>;
                   </div>;
                 </div>;
@@ -178,9 +186,15 @@ import { Mail, Phone, MapPin, Globe, Clock, MessageSquare, ExternalLink, Star ex
                   <p className='text-zion-slate-light text-sm mb-3'>;
                     Need immediate assistance?'''';
                   </p>'''';
+<<<<<<< HEAD:src_backup/components/ContactInfo.jsx
                   <div className='flex items-center gap-2'>'''';
                     <Phone className='h-4 w-4 text-zion-cyan' /" >''''";
                     <span className='text-zion-cyan font-medium'>;
+=======
+                  <div className='flex items-center gap-2' />'''';
+                    <Phone className='h-4 w-4 text-zion-cyan' /\"  />''''\";
+                    <span className='text-zion-cyan font-medium' />;
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91:temp-disabled/src/components/ContactInfo.jsx
                       Call us now: +1 302 464 0950;
                     </span>;
                   </div>;
@@ -256,7 +270,7 @@ import { Mail, Phone, MapPin, Globe, Clock, MessageSquare, ExternalLink, Star ex
         </div>;
       </div>;
     </section>;
-  )}'"""'";
+  )}'\"\"\"'\";
 }'''';
 '''''';
-"";
+\"\";

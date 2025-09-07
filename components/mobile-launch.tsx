@@ -155,11 +155,35 @@ const [idx, setIdx] = useState(0);
 
 }
 
+<<<<<<< HEAD
 const t = setInterval(;
       () => setIdx(i => { return (i + 1) % testimonials.length),
       4000
     ); }
     return () => clearInterval(t);
+=======
+const IOS_APP_URL = process.env.NEXT_PUBLIC_IOS_APP_URL || 'https: //apps.apple.com/app/id0000000000',
+const ANDROID_APP_URL = process.env.NEXT_PUBLIC_ANDROID_APP_URL || 'https://play.google.com/store/apps/details?id=com.zion.app';
+const DEEP_LINK_URL = process.env.NEXT_PUBLIC_DEEP_LINK_URL || 'zion://open';
+
+const SITE_BASE_URL = process.env.NEXT_PUBLIC_SITE_URL || '';
+
+const testimonials = [
+  { name: 'Priya K.', role: 'Startup Founder', quote: 'We filled a remote role in 48 hours. The app made it effortless.' },
+  { name: 'Marco V.', role: 'CTO', quote: 'AI matches were scarily accurate. Huge time-saver on sourcing.' },
+  { name: 'Amira H.', role: 'Project Lead', quote: 'I love tracking milestones on the go. Clear visibility and fewer meetings.' }],
+
+export default function MobileLaunchPage() {
+  const [email, setEmail] = useState('');
+  const [status, setStatus] = useState<'idle'|'loading'|'success'|'error'>('idle');
+  const [error, setError] = useState('');
+
+  // Auto-rotate testimonial index
+  const [idx, setIdx] = useState(0);
+  useEffect(() => {
+    const t = setInterval(() => setIdx((i) => (i + 1) % testimonials.length), 4000);
+    return () => clearInterval(t)
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
   }, []);
 
 const qrHref = useMemo(() => {;
@@ -180,6 +204,7 @@ return `"https": //chart.googleapis.com/chart?cht=qr&chs=260x260&chl=${encode,;`
     setStatus('loading');'
     setError('')'
     try {
+<<<<<<< HEAD
 }
 const res = await fetch('/api/subscribe', {'
         }
@@ -212,6 +237,8 @@ const res = await fetch('/api/subscribe', { "method": 'POST', "headers": { 'Cont
     }
   }
 
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
       const res = await fetch('/api/subscribe', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ email }) }),
       if (!res.ok) throw new Error(await res.text());
       setStatus('success');
@@ -315,6 +342,7 @@ src={qrHre
         </div>
       </section>
 
+<<<<<<< HEAD
           />;
           <div className='text-sm opacity-90'>;'
             Scan to open this page on your phone;
@@ -327,6 +355,8 @@ src={qrHre
 
       </section>;
 
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
       {/* Key features */}
 
 <section className='mt-10 grid "md":grid-cols-3 gap-6'>'
@@ -458,6 +488,7 @@ type='submit''
         {status === 'error' && <div className="mt-2 text-sm text-rose-600">{error || 'Please try again later.'}</div>}
       </section>
 
+<<<<<<< HEAD
       <section className='mt-10 text-sm opacity-80'>'
         <div className='flex flex-wrap items-center gap-4'>'
           <Link href='/open-app'>'
@@ -490,3 +521,16 @@ type='submit''
   status === 'loading' ? 'Submitting…' : 'Notify me' ,'
 }</button> </form> <span>•</span> <Link href="/download" ><a className="underline" >Shareable "link": /download</a></a> </div> </section> </EnhancedLayout>)"
 
+=======
+      {/* Helper links */}
+      <section className="mt-10 text-sm opacity-80">
+        <div className="flex flex-wrap items-center gap-4">
+          <Link href="/open-app"><a className="underline">Deep link: /open-app</a></Link>
+          <span>•</span>
+          <Link href="/download"><a className="underline">Shareable link: /download</a></Link>
+        </div>
+      </section>
+    </EnhancedLayout>
+  )
+}
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91

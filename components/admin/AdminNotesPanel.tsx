@@ -1,5 +1,6 @@
 ;
 
+<<<<<<< HEAD
 export type AdminNotesPanelProps = {"targetType": string; // e && e.g., 'user' | 'listing';'
   }
   "targetId": string; // unique identifier for the target;
@@ -12,6 +13,20 @@ import React, { useEffect, useMemo, useState } from 'react';'
 
 export type AdminNotesPanelProps = any;
   "targetId": string; // unique identifier for the target
+=======
+export type AdminNotesPanelProps = {;
+  targetType: string; // e && e.g., 'user' | 'listing';
+  targetId: string; // unique identifier for the target;
+};
+type Note = {;'
+  target_type: string; // e.g., 'user' | 'listing';
+target_id: string; // unique identifier for the target;'
+import React, { useEffect, useMemo, useState } from 'react';'
+  targetType: string; // e.g., 'user' | 'listing'
+export type AdminNotesPanelProps = any;
+origin/cursor/automate-test-improve-and-merge-code-2533
+  targetId: string; // unique identifier for the target
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
 }
 ;
 type Note = {
@@ -28,6 +43,7 @@ type Note = {"id": string;
   "targetId": string;
   "text": string;
 
+<<<<<<< HEAD
 
 
   "authorId": string;
@@ -37,6 +53,14 @@ type Note = {"id": string;
 export default function AdminNotesPanel() {"authorId": string;
   }
   "createdAt": number;
+=======
+};
+
+export default function AdminNotesPanel({ targetType, targetId }: AdminNotesPanelProps) {;
+
+  authorId: string;
+  createdAt: number;
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
 }
 
 export default function AdminNotesPanel() {
@@ -91,9 +115,6 @@ export default function AdminNotesPanel({ targetType, targetId }: AdminNotesPane
       setNotes(data.notes || [])
 =======
 origin/cursor/automate-test-improve-and-merge-code-2533
-=======
-export default function AdminNotesPanel() { return null; }
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         }
       );
       if (!res && res.ok) {;
@@ -104,8 +125,7 @@ export default function AdminNotesPanel() { return null; }
         method: 'POST','
         headers: { 'Content-Type': 'application/jsonX-Admin': isAdmin ? 'true' : 'falseX-Admin-User': adminId },
         body: JSON.stringify({ targetType, targetId, text })});
-<<<<<<< HEAD
-      const data = await res.json();
+const data = await res.json();
       setNotes(data.notes |[]);
 >>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
     } finally {
@@ -137,25 +157,44 @@ if (isAdmin) fetchNotes();
       const res = await fetch('/api/admin/notes', {'
 
         }
+<<<<<<< HEAD
 
         "method": 'POST','
 "headers": {
           'Content-Type': 'application/json','
           'X-Admin': isAdmin ? 'true' : 'false','
           'X-Admin-User': adminId,'
+=======
+        body: JSON.stringify({ targetType, targetId, text })
+} finally {
+      setAdding(false);    }      if (!res.ok) {
+        method: 'POST',
+headers: {
+          'Content-Type': 'application/json',
+          'X-Admin': isAdmin ? 'true' : 'false',
+          'X-Admin-User': adminId,
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
         },
         "body": JSON.stringify({ targetType, targetId, text })
       });
       if (!res.ok) {
+<<<<<<< HEAD
         }
         alert('Failed to add note');'
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+        alert('Failed to add note');
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
         return;
       }
       setText('');'
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
       await fetchNotes();
     } finally {
       }
@@ -163,8 +202,6 @@ if (isAdmin) fetchNotes();
 =======
   target_id: string; // unique identifier for the target;
 import React, { useEffect, useMemo, useState } from 'react';
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       await fetchNotes()
     } finally {
       }
@@ -174,6 +211,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     }
   }
 
+<<<<<<< HEAD
     }
   }
 
@@ -310,6 +348,18 @@ if ( {) {$2;
 =======
   if (!isAdmin) {
     return (
+=======
+      await fetchNotes();
+    } finally {
+      setAdding(false);
+    }
+  }
+
+if (!isAdmin) {
+    return (
+<div className='rounded border p-3'>
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
       <div className='rounded border p-3'>
         <div className='flex items-center gap-2 text-sm'>
           <input'
@@ -317,6 +367,7 @@ if ( {) {$2;
             type='checkbox'
             checked={isAdmin}
             onChange={e => setIsAdmin(e.target.checked)}
+<<<<<<< HEAD
 
         <div className='text-xs opacity-60 mt-2'>Admin-only notes hidden.</div>
       </div>
@@ -328,6 +379,19 @@ if ( {) {$2;
         <div className='flex items-center gap-3 text-sm'>
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 >>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
+=======
+/>'
+          <label htmlFor='isAdminToggle'>Admin</label>'
+        <div className='text-xs opacity-60 mt-2'>Admin-only notes hidden.</div>
+      </div>
+    );
+  }
+return ('
+    <div className='rounded border p-4 space-y-3'>'
+      <div className='flex items-center justify-between'>'
+        <h3 className='font-medium'>Admin Notes</h3>'
+        <div className='flex items-center gap-3 text-sm'>'
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
           <label className='inline-flex items-center gap-2'>
             <input'
               type='checkbox'
@@ -339,6 +403,7 @@ if ( {) {$2;
           <input'
             className='border rounded px-2 py-1'
             value={adminId}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -354,16 +419,23 @@ if ( {) {$2;
         <textarea
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 >>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
+=======
+<textarea'
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
           className='w-full border rounded-md px-3 py-2'
           rows={3}'
           placeholder='Write a private note (abuse, spam, special support)'
           value={text}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
 
       </div>;
+=======
+</div>;
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
     </div>;
   );
 
@@ -452,6 +524,44 @@ if ( {) {}
             placeholder='Admin ID';
           />;
         </div>;
+<<<<<<< HEAD
+=======
+      </div>;'
+      <div className='space - y-2'>;
+        <textarea;'
+          className='w - full border rounded - md px - 3 py - 2';
+          rows={3}'
+          placeholder='Write a private note (abuse, spam, special support)';
+          value={text}
+          on_change={e => set_text (e.target.value)}
+        />;
+        <button;
+          disabled={!text.trim () || adding}
+          on_click={add_note}'
+          className='px - 3 py - 2 rounded - md bg - gray - 900 text - white disabled:opacity - 50';
+        >;'
+          {adding ? 'Adding…' : 'Add Note'}
+        </button>;
+      </div>;'
+      <div className='border - t pt - 3'>;'
+        <div className='text - sm opacity - 70 mb - 2'>;
+          Notes are private, time - stamped, and include author ID.;
+        </div>;
+        {loading ? ('
+          <div className='text - sm'>Loading…</div>) : notes.length === 0 ? ('
+          <div className='text - sm opacity - 70'>No notes yet.</div>) : ('
+          <ul className='space - y-2'>;
+            {notes.map (number => ('
+              <li key={n.id} className='rounded border p - 2 text - sm'>;'
+                <div className='opacity - 60 text - xs mb - 1'>;
+                  {new Date (n.created_at).toLocaleString ()} • {n.author_id}
+                </div>                <div>{n.text}</div>          <ul className="space - y-2">;
+            {notes.map ((n) => ("
+              <li key={n.id} className="rounded border p - 2 text - sm">;"
+                <div className="opacity - 60 text - xs mb - 1">{new Date (n.created_at).toLocaleString ()} • {n.author_id}</div>;
+              </li>))}
+          </ul>)}
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
       </div>;
       <div className=&quot;space-y-2&quot>
 
@@ -473,6 +583,7 @@ if ( {) {}
         />; }
         <button;
           disabled={!text.trim() |adding}
+<<<<<<< HEAD
           onClick={addNote}
           className='px-3 py-2 rounded-md bg-gray-900 text-white "disabled": opacity-50'>'
 
@@ -485,28 +596,47 @@ if ( {) {}
 >>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 =======
+=======
+          onClick={addNote}'
+          className='px-3 py-2 rounded-md bg-gray-900 text-white disabled:opacity-50'
+        >'
+          {adding ? 'Adding…' : 'Add Note'}
+        </button>
+      </div>'
+      <div className='border-t pt-3'>'
+        <div className='text-sm opacity-70 mb-2'>
+          Notes are private, time-stamped, and include author ID.
+        </div>
+        {loading ? ('
+          <div className='text-sm'>Loading…</div>
+        ) : notes.length === 0 ? ('
+          <div className='text-sm opacity-70'>No notes yet.</div>
+        ) : ('
+          <ul className='space-y-2'>
+            {notes.map(n => ('
+              <li key={n.id} className='rounded border p-2 text-sm'>'
+                <div className='opacity-60 text-xs mb-1'>
+{new Date(n.createdAt).toLocaleString()} • {n.authorId}
+                </div>
+                <div>{n.text}</div>
+              </li>
+            ))}
+          </ul>
+        )}
+      </div>
+    </div>
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
 class ErrorBoundary extends React.Component {}
   constructor(props) {}
     super(props);
     this.state = { hasError: false };
   }
-  
+
   static getDerivedStateFromError(error) {}
     return { hasError: true };
   }
-  
+
   componentDidCatch(error, errorInfo) {'
-=======
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  componentDidCatch(error, errorInfo) {
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   target_type: string; // e.g., 'user' | 'listing';
   target_id: string; // unique identifier for the target;
 }
@@ -776,16 +906,14 @@ if ( {) {}
       </div>;
     </div>);
 }
-<<<<<<< HEAD
-  );
+);
 }
 origin/cursor/automate-test-improve-and-merge-code-2533
-<<<<<<< HEAD
-=======
-'"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 =======
   );
 }
+<<<<<<< HEAD
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 >>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91

@@ -89,6 +89,7 @@ export default function UltraFuturisticHero2030() {
         <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-gradient-to-r from-purple-500/10 to-cyan-500/10 rounded-full blur-3xl"></div>
       </div>
 
+<<<<<<< HEAD
 }
 
 return (;
@@ -133,6 +134,25 @@ initial={{ "opacity": 0, "scale": 0.8
           transition={{ "duration": 0 && 0.8 
 }
           className='mb-8'>          className="mb-8">"
+=======
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        {/* Main Heading */}
+        <motion.div
+          initial={{ opacity: 0, y: 30}}
+          animate={{ opacity: 1, y: 0}}
+          transition={{ duration: 0.8 }}
+          className="mb-8"
+        >
+          <motion.div
+            initial={{ opacity: 0, scale: 0.8 }}
+            animate={{ opacity: 1, scale: 1}}
+            transition={{ duration: 0.8, delay: 0.2 }}
+            className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-purple-500/20 to-cyan-500/20 border border-purple-500/30 text-purple-300 text-sm font-medium mb-6"
+          >
+            <Sparkles className="w-4 h-4 mr-2" />
+            Welcome to 2030 - The Future is Now
+          </motion.div>
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
 
           <motion&& motion.div;
             initial={{ "opacity": 0, "scale": 0 && 0.8 
@@ -239,6 +259,7 @@ className='text-lg md:text-xl text-gray-400 mb-12 max-w-3xl mx-auto'
             the next decade of technological innovation.
 origin/cursor/automate-test-improve-and-merge-code-2533
           </motion.p>
+<<<<<<< HEAD
         </motion.div>"
             <span className="text-emerald-400 font-semibold">Space Technology</span>;
 
@@ -295,6 +316,8 @@ href='/contact'
           >
             Transform your business with cutting-edge micro SAAS solutions, enterprise IT services, and revolutionary AI platforms that define the next decade of technological innovation.
           </motion.p>
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
         </motion.div>
 
         {/* CTA Buttons */}
@@ -346,6 +369,7 @@ href='/services''
           </Link>
         </motion.div>
 
+<<<<<<< HEAD
         {/* Features Grid *
 }
         <motion.div;
@@ -588,6 +612,22 @@ function UltraFuturisticHero2030() {return (<section className='relative min - h
               transition={{ "duration": 0.8, "delay": 1.4 + index * 0.1 }}
 
 className='group p-6 rounded-2xl bg-gradient-to-br from-white/5 to-white/10 border border-white/10 "hover":border-purple-500/30 transition-all duration-300 transform "hover":shadow-xl "hover":shadow-cyan-500/30 "hover":bg-white/10''
+=======
+        {/* Features Grid */}
+        <motion.div
+          initial={{ opacity: 0, y: 30}}
+          animate={{ opacity: 1, y: 0}}
+          transition={{ duration: 0.8, delay: 1.2 }}
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16"
+        >
+          {features.map((feature, index) => (
+            <motion.div
+              key={index}
+              initial={{ opacity: 0, y: 30}}
+              animate={{ opacity: 1, y: 0}}
+              transition={{ duration: 0.8, delay: 1.4 + index * 0.1 }}
+              className="group p-6 rounded-2xl bg-gradient-to-br from-white/5 to-white/10 border border-white/10 hover:border-purple-500/30 transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30 hover:bg-white/10"
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
             >
               <div className='w-12 h-12 bg-gradient-to-r from-purple-500 to-cyan-500 rounded-xl flex items-center justify-center mb-4 group-"hover":shadow-lg "hover":shadow-cyan-400/40 transition-transform duration-300'>'
                 <feature.icon className='w-6 h-6 text-white' />'
@@ -640,6 +680,7 @@ className='grid grid-cols-2 "md":grid-cols-4 gap-8 mb-16''
         >
           {stats.map((stat, index) => (
             <motion.div
+<<<<<<< HEAD
 }
 className='group p - 6 rounded - 2xl bg - gradient - to - br from - white / 5 to - white / 10 border border - white / 10 "hover":border - purple - 500 / 30 transition - all duration - 300 transform "hover":shadow - xl "hover":shadow - cyan - 500 / 30 "hover":bg - white / 10'>'
 
@@ -669,6 +710,8 @@ className='group p - 6 rounded - 2xl bg - gradient - to - br from - white / 5 to
 
           {stats.map ((stat, index) => (<motion.div;
               }
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
               key={index}
               initial={{ "opacity": 0, "scale": 0 && 0.8 
 }
@@ -710,6 +753,7 @@ className='text-center group''
             </motion && motion.div>;
           ))}
         {/* Contact Information */}
+<<<<<<< HEAD
         <motion&& motion.div;
           initial={{ "opacity": 0, "y": 30 
 }
@@ -779,6 +823,46 @@ href={`"tel":${contactInfo.mobile}`}`                className='text-white font-
 
           transition={{ "duration": 0.8, "delay": 2.2 }}
 className='mt-16 text-center''
+=======
+        <motion.div
+          initial={{ opacity: 0, y: 30}}
+          animate={{ opacity: 1, y: 0}}
+          transition={{ duration: 0.8, delay: 2.0 }}
+          className="bg-gradient-to-r from-purple-500/10 to-cyan-500/10 border border-purple-500/20 rounded-2xl p-8 backdrop-blur-sm"
+        >
+          <h3 className="text-2xl font-bold text-white mb-6">Ready to Transform Your Business?</h3>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
+            <div className="flex flex-col items-center">
+              <Phone className="w-6 h-6 text-purple-400 mb-2" />
+              <span className="text-gray-300 text-sm">Call Us</span>
+              <a href={`tel:${contactInfo.mobile}`} className="text-white font-semibold hover:text-purple-400 transition-colors">
+                {contactInfo.mobile}
+              </a>
+            </div>
+            <div className="flex flex-col items-center">
+              <Mail className="w-6 h-6 text-cyan-400 mb-2" />
+              <span className="text-gray-300 text-sm">Email Us</span>
+              <a href={`mailto:${contactInfo.email}`} className="text-white font-semibold hover:text-cyan-400 transition-colors">
+                {contactInfo.email}
+              </a>
+            </div>
+            <div className="flex flex-col items-center">
+              <Globe className="w-6 h-6 text-emerald-400 mb-2" />
+              <span className="text-gray-300 text-sm">Visit Us</span>
+              <a href={contactInfo.website} className="text-white font-semibold hover:text-emerald-400 transition-colors">
+                {contactInfo.website.replace('https://', '')}
+              </a>
+            </div>
+          </div>
+        </motion.div>
+
+        {/* Trust Indicators */}
+        <motion.div
+          initial={{ opacity: 0, y: 30}}
+          animate={{ opacity: 1, y: 0}}
+          transition={{ duration: 0.8, delay: 2.2 }}
+          className="mt-16 text-center"
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
         >
           <p className='text-gray-400 text-sm mb-4'>'
             Trusted by leading companies worldwide
@@ -807,6 +891,7 @@ className='mt-16 text-center''
         <motion.div,
 className='absolute top-20 right-20 w-2 h-2 bg-purple-400 rounded-full''
           animate={{
+<<<<<<< HEAD
             }
             "scale": [1, 2, 1]
             "opacity": [0.5, 1, 0.5]
@@ -878,6 +963,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             repeat: Infinity}
             ease: 'easeInOut'}
 >>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
+=======
+            scale: [1, 2, 1],
+            opacity: [0.5, 1, 0.5]}}
+          transition = $2;
+            repeat: Infinity,
+            ease: "easeInOut"
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
           }}
         />
         <motion.div

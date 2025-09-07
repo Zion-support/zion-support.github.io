@@ -14,6 +14,7 @@ const formData = new FormData(form);
 const title = String(formData.get('title') |'New lead');'
     setLoading(true);
     setMessage(null);
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
     e.preventDefault($2);
@@ -40,6 +41,18 @@ const title = String(formData.get('title') |'New lead');'
     } catch ("e": any) {
       }
       setMessage(e.message);
+=======
+    try {
+      const res = await fetch('/api/vendors/lead', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ vendorId: vendor.id, title })});
+      if (!res.ok) throw new Error('Failed to submit');
+      setMessage('Thanks! We will contact you soon.');
+      form.reset()
+    } catch (e: any) {
+      setMessage(e.message)
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
     } finally {
       }
       setLoading(false);

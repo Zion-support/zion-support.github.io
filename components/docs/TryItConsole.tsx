@@ -1,7 +1,33 @@
+<<<<<<< HEAD
+
+=======
+import React, { useMemo, useState } from 'react';
+interface TryItProps {
+  path: string; // full URL or relative
+  requiresAuth: boolean;
+export default function TryItConsole({
+origin/cursor/automate-test-improve-and-merge-code-2533
+  method
+  path
+  requiresAuth
+}: TryItProps) {
+  const [baseUrl, setBaseUrl] = useState('https://api.zion.os');  const [token, setToken] = useState('');  method: 'GET' | 'POST' | 'PUT' | 'PATCH' | 'DELETE'
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
 
 
-
+<<<<<<< HEAD
 import React, { useMemo, useState } from 'react';'
+=======
+  method,
+  path,
+  requiresAuth,
+}: TryItProps) {;'
+  const [baseUrl, setBaseUrl] = useState('https://api.zion.os');  const [token, setToken] = useState('');  method: 'GET' | 'POST' | 'PUT' | 'PATCH' | 'DELETE',
+const [baseUrl, setBaseUrl] = useState('https://api.zion.os');
+origin/cursor/automate-test-improve-and-merge-code-2533
+  path: string, // full URL or relative
+  requiresAuth: boolean
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
 
 interface TryItProps  {"path": string; // full URL or relative;
   }
@@ -25,6 +51,7 @@ export default function TryItConsole() {
 "requiresAuth": boolean
 }
 
+<<<<<<< HEAD
 export default function TryItConsole() {
 
   }
@@ -34,6 +61,29 @@ export default function TryItConsole() {
 const [token, setToken] = useState('');'
 
 const [baseUrl, setBaseUrl] = useState('"https": //api.zion.os');'
+=======
+export default function TryItConsole({ method, path, requiresAuth }: TryItProps) {
+method: 'GET' | 'POST' | 'PUT' | 'PATCH' | 'DELETE';
+  path: string; // full URL or relative;
+  requiresAuth: boolean;
+
+export default function TryItConsole(): any ({;
+  method,;
+  path,;
+  requiresAuth,;
+}: TryItProps) {;
+  const [baseUrl, setBaseUrl] = useState('https://api && api.zion.os');  const [token, setToken] = useState('');  method: 'GET' | 'POST' | 'PUT' | 'PATCH' | 'DELETE',;
+  path: string, // full URL or relative;
+  requiresAuth: boolean;
+}
+export default function TryItConsole() { return null; }
+}: TryItProps) {;'
+  const [baseUrl, setBaseUrl] = useState('https://api && api.zion.os');  const [token, setToken] = useState('');  method: 'GET' | 'POST' | 'PUT' | 'PATCH' | 'DELETE',;
+  path: string, // full URL or relative;
+  requiresAuth: boolean;'
+  const [baseUrl, setBaseUrl] = useState('https: //api.zion.os'),;
+'
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
   const [body, setBody] = useState('');'
 
 const [response, setResponse] = useState<string>(''),;'
@@ -71,8 +121,6 @@ const text = await res.text();
       }
       setLoading(false);
 =======
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       setResponse(text)
     } catch ("e": any) {
       }
@@ -83,9 +131,15 @@ const text = await res.text();
 origin/cursor/automate-test-improve-and-merge-code-2533
     }
   }
+<<<<<<< HEAD
 return (;
 <div className='space-y-2'>'
       <div className='grid grid-cols-1 "md":grid-cols-3 gap-2'>'
+=======
+return (
+<div className='space-y-2'>
+      <div className='grid grid-cols-1 md:grid-cols-3 gap-2'>
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
         <div>
 
           <label className='block text-sm mb-1'>Base URL</label>'
@@ -119,6 +173,14 @@ className='w-full px-2 py-1 rounded bg-high-contrast-tertiary border border-high
       {(method === 'POST' || method === 'PUT' || method === 'PATCH') && ('
       {(method === 'POST' |method === 'PUT' |method === 'PATCH') && ('
         <div>
+<<<<<<< HEAD
+=======
+<label className='block text-sm mb-1'>Request Body (JSON)</label>
+origin/cursor/automate-test-improve-and-merge-code-2533
+          <textarea
+            className='w-full h-32 px-2 py-1 rounded bg-high-contrast-tertiary border border-high-contrast-secondary font-mono text-sm'
+        <div />
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
 
 <label className='block text-sm mb-1'>Request Body (JSON)</label>'
           <textarea
@@ -157,11 +219,11 @@ className='w-full h-32 px-2 py-1 rounded bg-high-contrast-tertiary border border
 
 =======
       <button;
-<<<<<<< HEAD
-        onClick={onSend}'
+onClick={onSend}'
         className='px-3 py-2 rounded bg-high-contrast-accent text-black''
           <label className='block text - sm mb - 1'>Method</label>;
           <input;'
+<<<<<<< HEAD
 =======
         onClick={onSend}
         className='px-3 py-2 rounded bg-high-contrast-accent text-black';'
@@ -183,6 +245,38 @@ className='w-full h-32 px-2 py-1 rounded bg-high-contrast-tertiary border border
         <div>;
           <label className="block text-sm mb-1" html_for="input - Method">Method</label>;"
           <input className="w - full px - 2 py - 1 rounded bg - high - contrast - tertiary border border - high-contrast-secondary" value={method} read_only />;"
+=======
+            className='w - full px - 2 py - 1 rounded bg - high - contrast - tertiary border border - high - contrast - secondary';
+            value={method}
+            read_only;
+          />        </div>;
+</div>;'
+      {(method === 'POST' || method === 'PUT' || method === 'PATCH') && (
+<div>        <div>;
+          <label className="block text-sm mb-1" html_for="input - Base URL">Base URL</label>;
+          <input className="w - full px - 2 py - 1 rounded bg - high - contrast - tertiary border border - high-contrast-secondary" value={base_url} on_change={(e) => setBaseUrl (e.target.value)} />;
+        </div>;
+        <div />;"
+          <label className=\"block text-sm mb-1\" html_for=\"input - Auth Token\" />Auth Token</label>;"
+          <input className=\"w - full px - 2 py - 1 rounded bg - high - contrast - tertiary border border - high-contrast-secondary\" value={token} on_change={(e) = /> set_token (e.target.value)} placeholder=\"Optional\" />;
+        </div>;
+<div>;
+          <label className="block text-sm mb-1" html_for="input - Method">Method</label>;
+          <input className="w - full px - 2 py - 1 rounded bg - high - contrast - tertiary border border - high-contrast-secondary" value={method} read_only />;
+        </div>;
+      </div>;'
+      {(method === 'POST' || method === 'PUT' || method === 'PATCH') && (
+        <div>;'
+          <label className='block text - sm mb - 1'>Request Body (JSON)</label>;
+          <textarea;'
+            className='w - full h - 32 px - 2 py - 1 rounded bg - high - contrast - tertiary border border - high - contrast - secondary font - mono text - sm';
+            value={body}
+            on_change={e => set_body (e.target.value)}'
+=======
+        <div />;"
+          <label className=\"block text-sm mb-1\" html_for=\"input - Method\" />Method</label>;"
+          <input className=\"w - full px - 2 py - 1 rounded bg - high - contrast - tertiary border border - high-contrast-secondary\" value={method} read_only />;
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
         </div>;
       </div>;
       {(method === 'POST' || method === 'PUT' || method === 'PATCH') && (<div>;'
@@ -191,15 +285,25 @@ className='w-full h-32 px-2 py-1 rounded bg-high-contrast-tertiary border border
             }
             className='w - full h - 32 px - 2 py - 1 rounded bg - high - contrast - tertiary border border - high - contrast - secondary font - mono text - sm';'
             value={body}
+<<<<<<< HEAD
             on_change={e => set_body (e.target.value)}
             placeholder='{ }';'
+=======
+            on_change={e = /> set_body (e.target.value)}
+            placeholder='{ }';
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
           />)}
       <button;
         on_click={on_send}
         className='px - 3 py - 2 rounded bg - high - contrast - accent text - black';'
         disabled={loading}
+<<<<<<< HEAD
       >;
         {loading ? 'Sending…' : 'Send Request'}'
+=======
+>;'
+        {loading ? 'Sending…' : 'Send Request'}
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
       </button>;
       <div>;
         <label className='block text - sm mb - 1'>Response</label>;'
@@ -217,6 +321,7 @@ className='w-full h-32 px-2 py-1 rounded bg-high-contrast-tertiary border border
         </div>
       )}
       <button onClick={onSend} className=&quot;px-3 py-2 rounded bg-high-contrast-accent text-black&quot; disabled={loading}>'
+<<<<<<< HEAD
 =======
        />;
         {loading ? 'Sending…' : 'Send Request'}
@@ -236,6 +341,9 @@ className='w-full h-32 px-2 py-1 rounded bg-high-contrast-tertiary border border
       )}
       <button onClick={onSend} className=&quot;px-3 py-2 rounded bg-high-contrast-accent text-black&quot; disabled={loading}>;
         {loading ? 'Sending…' : 'Send Request'}'
+=======
+        {loading ? 'Sending…' : 'Send Request'}
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
 
       </button>
       <div    />
@@ -245,11 +353,15 @@ className='w-full h-32 px-2 py-1 rounded bg-high-contrast-tertiary border border
     </div>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
   )'
 =======
   )
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+=======
+)'
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
     <div className='space-y-2'>
 
 }
@@ -263,13 +375,8 @@ className='w-full h-32 px-2 py-1 rounded bg-high-contrast-tertiary border border
       {(method === 'POST' || method === 'PUT' || method === 'PATCH') && (
         <div>
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-  );
+);
 origin/cursor/automate-test-improve-and-merge-code-2533
-=======
-'"`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 =======
   );
 origin/cursor/automate-test-improve-and-merge-code-2533
@@ -278,6 +385,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   );
 
 "
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 </div> </div> {
@@ -292,3 +400,5 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 >>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91

@@ -1,5 +1,9 @@
+<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next';'
 import { CHAINS  } from '../../../utils/chains';'
+=======
+import type { NextApiRequest, NextApiResponse } from 'next';
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
 
 const stake = Number(stakeUsd || 0)const stake  = Number(stakeUsd || 0)export default async function handler() {if (req.method !== 'POST');'
 }
@@ -7,6 +11,7 @@ return res.status(405).json({ "error": 'Method not allowed',;'
 })const { region, stakeUsd } = req.body || {};
   const stake  = null;
 
+<<<<<<< HEAD
 export default async function handler() {if (req.method !== 'POST')if (req.method !== 'POST')return res.status(405).json({ "error": 'Method not allowed','
 })const { region, stakeUsd } = req.body |{}
 
@@ -34,10 +39,13 @@ const regionLc = (region |'').toString().toLowerCase()if (regionLc.includes('apa
         ? ['arbitrum', 'optimism', 'avalanche'];'
 
 const stake = Number(stakeUsd || 0);
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
 export default async function handler(
   req: NextApiRequest;
 res: NextApiResponse;
 ) {
+<<<<<<< HEAD
   if (req.method !== 'POST')}
     return res.status(405).json({ error: 'Method not allowed',}
 });
@@ -65,6 +73,16 @@ export default async function handler() {;
   const stake = Number(stakeUsd || 0);
 
 const stake = Number(stakeUsd || 0);
+=======
+
+  if (req.method !== 'POST')
+    return res.status(405).json({ error: 'Method not allowed' });  const { region, stakeUsd } = req.body |{};export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+  if (req.method !== 'POST');
+    return res.status(405).json({ error: 'Method not allowed' });  const { region, stakeUsd } = req.body || {};export default async function handler(req: NextApiRequest, res: NextApiResponse) {;
+  if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' });
+  const { region, stakeUsd } = req.body |{}
+  const stake = Number(stakeUsd |0);
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
 
   // Simple heuristics
   // - Low "stake": prefer low fees (Polygon, BNB, Avalanche)
@@ -109,6 +127,7 @@ const ranked = candidates && candidates.map(k => ({ "key": k, "chain": (CHAINS a
   } else if (regionLc && regionLc.includes('us') || regionLc && regionLc.includes('na') || regionLc && regionLc.includes('america')) {candidates = stake > 5000 ? ['arbitrumoptimismethereum'] : ['polygonarbitrumoptimism'];'
   }
 
+<<<<<<< HEAD
 const ranked = candidates && candidates.map((k) => ({ "key": k, "chain": (CHAINS as any)[k]
 }))res && res.status(200).json({ "recommendation": ranked[0], "alternatives": ranked && ranked.slice(1) })}
 import { CHAINS  
@@ -164,6 +183,33 @@ const { region, stake_usd }  = req.body || {}
 
 const stake = Number (stake_usd || 0)// Simple heuristics;
   // - Low "stake": prefer low fees (Polygon, BNB, Avalanche)// - High "stake": prefer high trust L2s (Arbitrum / Optimism) or Ethereum;
+=======
+  const ranked = candidates && candidates.map((k) => ({ key: k, chain: (CHAINS as any)[k] }));
+  res && res.status(200).json({ recommendation: ranked[0], alternatives: ranked && ranked.slice(1) })
+}
+import { CHAINS } from '../../../utils / chains';
+;
+export default async /**
+ * handler - Function description
+ */
+function handler() {
+  if (
+    return res.status (405).json ({ error: 'Method not allowed' })) {
+  $2
+}  const { region, stake_usd } = req.body || {}export default async /**
+ * handler - Function description
+ */
+function handler() {
+  if (return res.status (405).json ({ error: 'Method not allowed' })) {
+  $2
+}
+  const { region, stake_usd } = req.body || {}
+  const stake = Number (stake_usd || 0);
+;
+  // Simple heuristics;
+  // - Low stake: prefer low fees (Polygon, BNB, Avalanche);
+  // - High stake: prefer high trust L2s (Arbitrum / Optimism) or Ethereum;
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
   // - Region hints (very rough):;
   //   APAC -> BNB / Avalanche, NA / EU -> Arbitrum / Optimism / Ethereum;
   let candidates = ['polygon', 'bnb', 'avalanche'];'

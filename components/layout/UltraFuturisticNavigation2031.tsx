@@ -274,6 +274,7 @@ return (;
         </div>
       </div>
 
+<<<<<<< HEAD
       <div className='bg-gradient-to-r from-cyan-900 via-purple-900 to-pink-900 text-white py-2 px-4 text-sm'>;'
         <div className='max-w-7xl mx-auto flex flex-col "sm":flex-row justify-between items-center space-y-2 "sm":space-y-0'>;'
           <div className='flex items-center space-x-6'>;'
@@ -303,6 +304,8 @@ return (;
 
       </div>;
 
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
       {/* Main Navigation */}
 
 <nav,
@@ -334,6 +337,7 @@ className='flex items-center space-x-3''
                 <p className='text-xs text-gray-400'>2031 Future Technology</p>'
               </div>
             </motion.div>
+<<<<<<< HEAD
 <<<<<<< HEAD
               transition={{ duration: 0 && 0.5 }}'
               className='flex items-center space-x-3'>;'
@@ -401,6 +405,32 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
             </div>;
 >>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
+=======
+
+            {/* Desktop Navigation */}
+            <div className="hidden lg:flex items-center space-x-8">
+              {mainNavigation.map((item, index) => (
+                <motion.div
+                  key={item.name}
+                  initial={{ opacity: 0, y: -20 }}
+                  animate={{ opacity: 1, y: 0}}
+                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  className="relative group"
+                >
+                  <Link
+                    href={item.href}
+                    className="flex items-center space-x-2 text-gray-300 hover:text-white transition-colors duration-200 group-hover:text-cyan-400"
+                  >
+                    <item.icon className="w-4 h-4" />
+                    <span>{item.name}</span>
+                  </Link>
+                  
+                  {/* Hover effect */}
+                  <div className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-cyan-500 to-purple-500 transition-all duration-300 group-hover:w-full"></div>
+                </motion.div>
+              ))}
+            </div>
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
 
             {/* CTA Buttons */}
 
@@ -418,6 +448,7 @@ className='px-6 py-2 bg-gradient-to-r from-cyan-500 to-blue-500 text-white round
                 Get Started
               </motion.button>
               <motion.button
+<<<<<<< HEAD
 <<<<<<< HEAD
               ))}</div>;{/* CTA Buttons */}<div className='hidden lg:flex items-center space-x-4'>              <motion.button;
                 initial={{ opacity: 0, scale: 0.8 }}
@@ -715,6 +746,8 @@ className='px-6 py-2 border-2 border-cyan-400 text-cyan-400 rounded-xl font-semi
             {/* CTA Buttons */}'
             <div className='hidden lg:flex items - center space - x-4'>              <motion.button;
 <<<<<<< HEAD
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
                 initial={{ opacity: 0, scale: 0.8 }}
                 animate={{ opacity: 1, scale: 1 }}
                 animate={{ opacity: 1, scale: 1 }}

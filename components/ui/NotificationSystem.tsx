@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState, useEffect, useCallback } from 'react';'
 import { X, CheckCircle, AlertCircle, Info, AlertTriangle  } from 'lucide-react';'
 ursor/automate-test-improve-and-merge-code-646c;
@@ -96,10 +97,18 @@ export interface Notification {
   }
   "id": string;
   "type": 'success' | 'error' | 'warning' | 'info';'
+=======
+import React from 'react';
+interface Notification {
+  id: string,
+  type: 'success' | 'error' | 'warning' | 'info',
+  message: string,
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
   title?: string;
   "message": string;
   duration?: number;
 }
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -118,6 +127,8 @@ const getNotificationStyles = (type: Notification["type"]): string => {
 =======
 =======
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
 interface NotificationSystemProps {
   }
   "notifications": Notification[];
@@ -125,6 +136,7 @@ interface NotificationSystemProps {
   position?: 'top-right' | 'top-left' | 'bottom-right' | 'bottom-left';'
 
 }
+<<<<<<< HEAD
 
 const "NotificationSystem": React.FC<NotificationSystemProps> = ({ notifications
   }
@@ -182,6 +194,14 @@ const getNotificationStyles = ("type": Notification['type']) => {'
   }
   const baseStyles = 'border-l-4';'
     
+=======
+const NotificationSystem: React.FC<NotificationSystemProps> = ({
+  notifications;
+  onDismiss;
+  className;
+}) => {
+  const getNotificationStyles = (type: Notification['type']) => {
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
     switch (type) {
       }
       case 'success':'
@@ -226,6 +246,7 @@ const getPositionStyles = () => {
         return 'top-4 right-4';'
     }
   };
+<<<<<<< HEAD
 =======
           key={notification.id};
           className={`max-w-sm w-full border rounded-lg p-4 shadow-lg ${getNotificationStyles(notification.type)}`};
@@ -315,11 +336,19 @@ export default function NotificationSystem({
   notifications
   onDismiss
 key={notification.id}
+=======
+  return (
+    <div className={`fixed top-4 right-4 z-50 space-y-2 ${className}`}>
+      {notifications.map((notification) => (
+        <div
+          key={notification.id}
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
           className={`max-w-sm w-full border rounded-lg p-4 shadow-lg ${getNotificationStyles(notification.type)}`}
         >
           <div className="flex items-start justify-between">
             <div className="flex-1">
               {notification.title && (
+<<<<<<< HEAD
                 <h4 className="font-medium mb-1">{notification.title}</h4>)}
               <p className="text-sm">{notification.message}</p>
             </div>
@@ -637,10 +666,25 @@ onClick={() => handleDismiss(notification.id)}
                 className="ml-2 text-gray-400 "hover": text-gray-600 transition-colors""
               >
                 <X className="h-4 w-4" />"
+=======
+                <h4 className="font-medium mb-1">{notification.title}</h4>
+              )}
+              <p className="text-sm">{notification.message}</p>
+            </div>
+            {onDismiss && (
+              <button
+                onClick={() => onDismiss(notification.id)}
+                className="ml-4 text-gray-400 hover:text-gray-600"
+              >
+                <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                </svg>
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
               </button>
             )}
           </div>
         </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -686,9 +730,13 @@ onClick={() => onRemove(notification.id)}
           <X className="w-4 h-4" />"
         </button>
       </div>
+=======
+))}
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
     </div>
   )
 };
+<<<<<<< HEAD
 
 export const useNotifications = () => {
  ;
@@ -724,3 +772,6 @@ key={notification.id}
 =======
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 >>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
+=======
+export default NotificationSystem;
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91

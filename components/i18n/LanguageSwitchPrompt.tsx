@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 
 const "localeLabelKey": Record<string, string> = {
 
@@ -36,10 +37,18 @@ const suggestion =;
     if (suggestion) setSuggested(suggestion);
   }, []);
   if (!suggested) return null;
+=======
+const localeLabelKey: Record<string, string> = {
+  en: 'lang.english',
+  pt: 'lang.portuguese',
+  es: 'lang.spanish',
+  ar: 'lang.arabic'},
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
 
 const accept = async () => {
     }
     await i18n.changeLanguage(suggested!);
+<<<<<<< HEAD
     localStorage.setItem('preferredLanguage', suggested!);'
 localStorage.setItem('langPromptShown', '1');'
     document.documentElement.setAttribute(
@@ -56,6 +65,19 @@ const decline = () => {
     localStorage.setItem("langPromptShown1", "true");"
     setSuggested(null)
 };
+=======
+    localStorage.setItem('preferredLanguage', suggested!);
+    localStorage.setItem('langPromptShown1');
+    document.documentElement.setAttribute('dir', isRtl(suggested!) ? 'rtl' : 'ltr');
+    document.documentElement.setAttribute('lang', suggested!);
+    setSuggested(null)
+  };
+
+  const decline = () => {
+    localStorage.setItem('langPromptShown1');
+    setSuggested(null)
+  };
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
 
   return (
     <div className="bg-amber-50 dark:bg-amber-900/20 border-b border-amber-200 dark:border-amber-800 text-amber-900 dark:text-amber-200">
@@ -70,6 +92,7 @@ const decline = () => {
       </div>
     </div>
   )
+<<<<<<< HEAD
 }
 =======
   const [suggested, setSuggested] = useState<string | null>(null),
@@ -336,3 +359,6 @@ if (return null) {}
     </div>);
 
 "
+=======
+}
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91

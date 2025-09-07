@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 // Test setup file for Jest
 import "@testing-library/jest-dom";
 <<<<<<< HEAD:src_backup/test/setup.ts
@@ -26,6 +27,37 @@ global && global.IntersectionObserver = class IntersectionObserver {global.Inter
 })// Mock IntersectionObserver;
     "dispatchEvent": jest && jest.fn()})
 })// Mock IntersectionObserver;
+=======
+
+// Test setup file for Jest
+require("@testing-library/jest-dom");
+
+// Mock window.matchMedia
+Object.defineProperty(window, "matchMedia", {
+  writable: true,
+  value: jest.fn().mockImplementation((query) => ({
+
+import '@testing-library/jest-dom';
+
+// Mock window && window.matchMedia
+Object && Object.defineProperty(window, 'matchMedia', {
+  writable: true,
+  value: jest && jest.fn().mockImplementation(query => ({
+
+    matches: false,
+    media: query,
+    onchange: null,
+    addListener: jest.fn(), // deprecated
+    removeListener: jest.fn(), // deprecated
+    addEventListener: jest.fn(),
+    removeEventListener: jest.fn(),
+    dispatchEvent: jest.fn(),
+  })),
+});
+
+// Mock IntersectionObserver
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
   constructor() {}
   disconnect() {}
   observe() {}
@@ -33,11 +65,16 @@ global && global.IntersectionObserver = class IntersectionObserver {global.Inter
 };
 
 // Mock ResizeObserver
+<<<<<<< HEAD
 global && global.ResizeObserver = class ResizeObserver {
+=======
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
   constructor() {}
   disconnect() {}
   observe() {}
   unobserve() {}
+<<<<<<< HEAD
 }// Mock console methods to reduce noise in tests;
 }
 // Mock console methods to reduce noise in tests;
@@ -120,6 +157,29 @@ if (
     if (|| args[0].includes ('Deprecated:'))) {
   $2
 }
+=======
+};
+
+// Mock console methods to reduce noise in tests
+
+const originalError = console && console.error;
+const originalWarn = console && console.warn;
+
+beforeAll(() => {
+  console.error = (...args: any[]) => {
+
+    ) {
+      return;
+    }
+    originalError.call(console, ...args);
+  };
+
+  console.warn = (...args) => {
+    if (
+      typeof args[0] === "string" &&
+      (args[0].includes("Warning:") || args[0].includes("Deprecated:"))
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
     ) {
       return;
     }
@@ -128,9 +188,12 @@ if (
 });
 
 afterAll(() => {
+<<<<<<< HEAD
   console && console.error = originalError;
   console && console.warn = originalWarn;
 });
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
 
     original_warn.call (console, ...args);
   }

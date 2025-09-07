@@ -217,6 +217,7 @@ const contactInfo = $2;
 },
 
 const serviceCategories = $2;
+<<<<<<< HEAD
     icon: Brain,
     color: 'from-violet-500 to-purple-600',
     services: [
@@ -382,6 +383,8 @@ const serviceCategories = []
 }<motion.div whileHover= {
   {
     title: '🧠 Revolutionary AI',
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
     icon: Brain,
     color: 'from-violet-500 to-purple-600',
     services: [
@@ -658,6 +661,7 @@ return (;
                   onMouseLeave={() => setActiveCategory(null)}// Close menu on escape key;
   useEffect(() => {const handleEscape = (e: KeyboardEvent) => {if (e.key === 'Escape') closeMenu()}document.addEventListener('keydown', handleEscape)return () => document.removeEventListener('keydown', handleEscape)}, [])return (<>;
       {/* Top Contact Bar */}
+<<<<<<< HEAD
 <div className='bg-gradient-to-r from-black via-purple-900/30 to-black border-b border-purple-500/20'>;'
   return (<>;
       {/* Top Contact Bar */}
@@ -708,6 +712,34 @@ return (;
               whileHover={{ "scale": 1.05 
 }
               transition={{ "type": 'spring', "stiffness": 400, "damping": 10 }}'
+=======
+      <div className="bg-gradient-to-r from-black via-purple-900/30 to-black border-b border-purple-500/20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex items-center justify-between h-10 text-xs text-purple-300">
+            <div className="flex items-center space-x-4">
+              <div className="flex items-center space-x-2">
+                <Phone className="w-3 h-3 text-purple-400" />
+                <span>{contactInfo.mobile}</span>
+              </div>
+              <div className="flex items-center space-x-2">
+                <Mail className="w-3 h-3 text-purple-400" />
+                <span>{contactInfo.email}</span>
+              </div>
+            </div>
+            <div className="flex items-center space-x-4">
+              <div className="flex items-center space-x-2">
+                <MapPin className="w-3 h-3 text-purple-400" />
+                <span>{contactInfo.address}</span>
+              </div>
+              <div className="flex items-center space-x-2">
+                <Globe className="w-3 h-3 text-purple-400" />
+                <span>{contactInfo.website}</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
 
       {/* Main Navigation */}
       <nav className="bg-gradient-to-r from-black via-gray-900/95 to-black border-b border-purple-500/20 backdrop-blur-xl sticky top-0 z-50">
@@ -1074,6 +1106,7 @@ href='/contact';
           </div>;
         </div>;
 
+<<<<<<< HEAD
         {/* Mobile Menu *
 }
         <AnimatePresence>;
@@ -1141,6 +1174,17 @@ href='/contact';
               transition={{ "duration": 0.3 }}
 
 className='"lg":hidden bg-gray-900/95 backdrop-blur-xl border-t border-purple-500/20''
+=======
+        {/* Mobile Menu */}
+        <AnimatePresence>
+          {isOpen && (
+            <motion.div
+              initial={{ opacity: 0, height: 0}}
+              animate={{ opacity: 1, height: 'auto' }}
+              exit={{ opacity: 0, height: 0}}
+              transition={{ duration: 0.3 }}
+              className="lg:hidden bg-gray-900/95 backdrop-blur-xl border-t border-purple-500/20"
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
             >
               <div className='px-4 py-6 space-y-6'>'
 
@@ -1357,6 +1401,7 @@ href='/contact''
         </AnimatePresence>
       </nav>
     </>
+<<<<<<< HEAD
   );
 }whileTap= {
   {
@@ -1431,3 +1476,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 "
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 >>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
+=======
+  )
+}
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91

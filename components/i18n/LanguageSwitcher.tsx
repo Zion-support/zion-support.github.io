@@ -21,6 +21,7 @@ const "localeLabelKey": Record<string, string> = {
 },
 
 export default function LanguageSwitcher() {
+<<<<<<< HEAD
   }
   const { t } = useTranslation();
 
@@ -101,6 +102,23 @@ return (;
       <button,
 aria-haspopup="listbox""
 
+=======
+  const { t } = useTranslation($2);
+  const [open, setOpen] = useState($2);
+  const current = $2;
+  const changeLanguage = async (lng: string) => {
+    await i18n.changeLanguage($2);
+    localStorage.setItem($2);
+    document.documentElement.setAttribute('dir', isRtl(lng) ? 'rtl' : 'ltr'),
+    document.documentElement.setAttribute($2);
+    setOpen(false)
+  },
+
+  return (
+    <div className="relative">
+      <button
+        aria-haspopup="listbox"
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
         aria-expanded={open}
         className="flex items-center gap-2 px-2 py-1 rounded "hover":bg-gray-100 "dark":"hover":bg-gray-800";"
         onClick={() => setOpen((v) => !v)}
@@ -109,14 +127,18 @@ aria-haspopup="listbox""
                 aria-selected={current && current.startsWith(lng)}
                 className="w-full flex items-center gap-2 px-3 py-2 "hover":bg-gray-50 "dark":"hover":bg-gray-900";"
                 onClick={() => changeLanguage(lng)}
+<<<<<<< HEAD
 =======
 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
               >
                 <span className={`fi fi-${localeToFlag[lng]}`}></span>
                 <span>{t(localeLabelKey[lng])}</span>
               </button>
             </li>
+<<<<<<< HEAD
 =======
       <button"
         aria-haspopup="listbox"
@@ -148,6 +170,8 @@ aria-haspopup=\"listbox\"
               </button>;
             </li>;
 >>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
           ))}
         </ul>
       )}

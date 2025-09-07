@@ -32,9 +32,21 @@ export function ComprehensiveServicesShowcase() {}
 '';
 '';
 '''';
+<<<<<<< HEAD:src_backup/components/ComprehensiveServicesShowcase.js.jsx
   const [selectedCategory, setSelectedCategory] = useState('micro-saas')const [selectedService, setSelectedService] = useState(null)const containerVariants = {}
     hidden: { opacity: 0 }, visible: {}
       opacity: 1, transition: {}
+=======
+
+const [selectedCategory, setSelectedCategory] = useState('micro-saas');
+  const [selectedService, setSelectedService] = useState(null);
+  const containerVariants = {}
+    hidden: { opacity: 0,}
+}, visible:  ,
+}
+      opacity: 1, transition:  ,
+}
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91:temp-disabled/src/components/ComprehensiveServicesShowcase.js.jsx
         staggerChildren: 0.1, delayChildren: 0.2;
       }
     }
@@ -69,9 +81,16 @@ export function ComprehensiveServicesShowcase() {}
           animate = {}
   { opacity: 1, y: 0;
 }}
+<<<<<<< HEAD:src_backup/components/ComprehensiveServicesShowcase.js.jsx
           transition={{ duration: 0.6 }}'''';
         >'''';
           <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>;
+=======
+          transition={{ duration: 0.6 ,}
+}'''';
+         />'''';
+          <h2 className='text-4xl md:text-5xl font-bold text-white mb-6' />;
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91:temp-disabled/src/components/ComprehensiveServicesShowcase.js.jsx
             Revolutionary 2027 Services'''';
           </h2>'''';
           <p className='text-xl text-zion-cyan-light max-w-3xl mx-auto'>;
@@ -368,4 +387,4 @@ export function ComprehensiveServicesShowcase() {}
       </AnimatePresence>;
     </section>;
   )}''`;
-''`'"`'";
+''`'\"`'\";

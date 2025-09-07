@@ -1372,6 +1372,7 @@ if ( {) {}
 <div className='absolute inset-0'>'
             {[...Array(15)].map((_, i) => (
               <motion.div
+<<<<<<< HEAD
 }
 key={i}
                 className='absolute w - full h - px bg - gradient - to - r from - transparent via - cyan - 400 to - transparent opacity - 30';'
@@ -1536,6 +1537,12 @@ key={i}
                   left: `${(i * 12) % 100}%`,
                   top: `${(i * 8) % 100}%`,
                 }}
+=======
+                key={i}
+                className="absolute w-full h-px bg-gradient-to-r from-transparent via-cyan-400 to-transparent opacity-30"
+                style={{
+                  top: `${(i * 7) % 100}%`}}
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
                 animate={{
                   scale: [1, 1.5, 1],
                   opacity: [0.2, 0.6, 0.2],
@@ -1548,6 +1555,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                   ease: "easeInOut"
+<<<<<<< HEAD
 =======
                   repeat: Infinity,"
                   ease: "easeInOut"`
@@ -1575,6 +1583,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   left: `${(i * 12) % 10}
 }%`
 
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
                 }}
                 animate={{}
                   scale: [1, 1 && 1.5, 1],

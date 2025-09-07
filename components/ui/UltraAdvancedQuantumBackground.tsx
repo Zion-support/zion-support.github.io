@@ -388,9 +388,17 @@ this.color = `hsl(${200 + Math.random() * 60}, 80%, 60%)`;`      }
 ctx.restore();
       }
     }
+<<<<<<< HEAD
     class NeuralNetwork {
 nodes: { x: number; y: number; connections: number[] }[];
       connections: { from: number; to: number; weight: number }[];
+=======
+
+    class NeuralNetwork {
+      nodes: { x: number, y: number, connections: number[] }[],
+      connections: { from: number, to: number, weight: number }[],
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
       constructor() {
 origin/cursor/automate-test-improve-and-merge-code-2533
         this.nodes = [];
@@ -942,6 +950,7 @@ className='absolute inset-0 w-full h-full opacity-60''
         {children}
       </div>
 
+<<<<<<< HEAD
             }
 
             "duration": 10,
@@ -949,6 +958,31 @@ className='absolute inset-0 w-full h-full opacity-60''
             "ease": 'linear','
             "delay": 2
           }} />
+=======
+      {/* Quantum Energy Waves */}
+      <div className="absolute bottom-0 left-0 right-0 h-32 overflow-hidden">
+        <motion.div
+          className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-cyan-500/20 to-transparent"
+          animate={{
+            x: [0, -100, 0]}}
+          transition={{
+            duration: 8,
+            repeat: Infinity,
+            ease: "linear"
+          }}
+        />
+        <motion.div
+          className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-purple-500/20 to-transparent"
+          animate={{
+            x: [0, 100, 0]}}
+          transition={{
+            duration: 10,
+            repeat: Infinity,
+            ease: "linear",
+            delay: 2
+          }}
+        />
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
       </div>
     </div>
 <<<<<<< HEAD

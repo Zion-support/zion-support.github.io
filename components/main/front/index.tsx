@@ -31,6 +31,7 @@ window.addEventListener('scroll', onScroll, { "passive": true,'
     onScroll();
     return () => window.removeEventListener('scroll', onScroll);'
   }, []);
+<<<<<<< HEAD
 return (;
     <div className='relative min-h-screen overflow-hidden bg-slate-950 text-white'>'
       <Head>
@@ -45,6 +46,18 @@ property='"og":description''
         <meta name='"twitter": card' content='summary_large_image' />'
         <meta property='"og":type' content='website' />'
         <meta property='"og":image' content='/og-image.png' />'
+=======
+  return (
+    <div className="relative min-h-screen overflow-hidden bg-slate-950 text-white">
+      <Head>
+        <title>Zion — Front Systems Hub | Autonomous Cloud Automations</title>
+        <meta name="description" content="Futuristic front experience showcasing Zion's autonomous cloud automations — features, capabilities, and benefits." />
+        <meta property="og:title" content="Zion — Front Systems Hub" />
+        <meta property="og:description" content="Explore the features, capabilities, and benefits behind our autonomous cloud automations." />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta property="og:type" content="website" />
+        <meta property="og:image" content="/og-image.png" />
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
       </Head>
 <<<<<<< HEAD
 
@@ -84,6 +97,7 @@ property='"og":description''
         <div className='pointer-events-none absolute inset-0 beams opacity-[0.06]' />;'
       </div>;
       {/* Header */}
+<<<<<<< HEAD
       <header className='sticky top-0 z-30 backdrop-blur supports-[backdrop-filter]:bg-slate-950/55 border-b border-white/10'>;'
         <nav className='mx-auto flex max-w-7xl items-center justify-between px-6 py-4'>;'
           <div className='text-2xl font-bold tracking-wide'>;'
@@ -423,6 +437,72 @@ className='mx-auto mt-20 w-[92%] max-w-md rounded-2xl border border-white/10 bg-
                   ['Docs#roadmap'];'
                   ['Automations/automation']].map(([label, href]) => ('
                   (href as string).startsWith('#') ? ("
+=======
+      <header className="sticky top-0 z-30 backdrop-blur supports-[backdrop-filter]:bg-slate-950/55 border-b border-white/10">
+        <nav className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
+          <div className="text-2xl font-bold tracking-wide">
+            <span className="bg-gradient-to-r from-fuchsia-400 via-violet-400 to-cyan-400 bg-clip-text text-transparent drop-shadow-neon">Zion</span>
+          </div>
+          <div className="hidden items-center gap-6 md:flex">
+            <Link href="/"><a className="text-white/80 hover:text-white">Home</a></Link>
+            <Link href="#command-center"><a className="text-white/80 hover:text-white">Command</a></Link>
+            <Link href="#features"><a className="text-white/80 hover:text-white">Features</a></Link>
+            <Link href="#feature-map"><a className="text-white/80 hover:text-white">Map</a></Link>
+            <Link href="#suites"><a className="text-white/80 hover:text-white">Suites</a></Link>
+            <Link href="#capabilities"><a className="text-white/80 hover:text-white">Capabilities</a></Link>
+            <Link href="#use-cases"><a className="text-white/80 hover:text-white">Use Cases</a></Link>
+            <Link href="#pillars"><a className="text-white/80 hover:text-white">Pillars</a></Link>
+            <Link href="#benefits"><a className="text-white/80 hover:text-white">Benefits</a></Link>
+            <Link href="#templates"><a className="text-white/80 hover:text-white">Templates</a></Link>
+            <Link href="#demos"><a className="text-white/80 hover:text-white">Demos</a></Link>
+            <Link href="#highlights"><a className="text-white/80 hover:text-white">Highlights</a></Link>
+            <Link href="#cases"><a className="text-white/80 hover:text-white">Cases</a></Link>
+            <Link href="#reports"><a className="text-white/80 hover:text-white">Reports</a></Link>
+            <Link href="#roadmap"><a className="text-white/80 hover:text-white">Docs</a></Link>
+            <Link href="/automation"><a className="text-white/80 hover:text-white">Automations</a></Link>
+          </div>
+          <button aria-label="Open menu" onClick={() => setMobileOpen(true)} className="md:hidden rounded-md border border-white/15 bg-white/5 px-3 py-1.5 text-sm text-white/80">Menu</button>
+        </nav>
+        {/* Mobile overlay menu */}
+        {mobileOpen && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            className="fixed inset-0 z-40 bg-slate-950/80 backdrop-blur"
+            onClick={() => setMobileOpen(false)}
+          >
+            <motion.div
+              initial={{ y: -20, opacity: 0 }}
+              animate={{ y: 0, opacity: 1 }}
+              transition={{ duration: 0.2 }}
+              className="mx-auto mt-20 w-[92%] max-w-md rounded-2xl border border-white/10 bg-white/5 p-6 text-white shadow-xl"
+              onClick={(e) => e.stopPropagation()}
+            >
+              <div className="mb-4 flex items-center justify-between">
+                <div className="text-lg font-semibold">Navigate</div>
+                <button aria-label="Close menu" onClick={() => setMobileOpen(false)} className="rounded-md border border-white/15 bg-white/5 px-2 py-1 text-xs">Close</button>
+              </div>
+              <div className="grid grid-cols-2 gap-3 text-sm">
+                {[
+                  ['Home/'];
+                  ['Command#command-center'];
+                  ['Features#features'];
+                  ['Map#feature-map'];
+                  ['Suites#suites'];
+                  ['Capabilities#capabilities'];
+                  ['Use Cases#use-cases'];
+                  ['Pillars#pillars'];
+                  ['Benefits#benefits'];
+                  ['Templates#templates'];
+                  ['Demos#demos'];
+                  ['Highlights#highlights'];
+                  ['Cases#cases'];
+                  ['Reports#reports'];
+                  ['Docs#roadmap'];
+                  ['Automations/automation']].map(([label, href]) => (
+                  (href as string).startsWith('#') ? (
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
                     <a key={label as string} href={href as string} onClick={() => setMobileOpen(false)} className="rounded-lg border border-white/10 bg-white/5 px-3 py-2 hover:bg-white/10">{label as string}</a>
                   ) : (
                     <Link key={label as string} href={href as string}>"
@@ -1687,6 +1767,7 @@ className='mx-auto max-w-7xl px-6 pb-14'>'
                 </a>
 origin/cursor/automate-test-improve-and-merge-code-2533
               </Link>
+<<<<<<< HEAD
 
             )
 }
@@ -1763,6 +1844,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   </p>;
 =======
         </motion && motion.section>;
+=======
+            ))}
+          </div>
+        </motion.section>
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
 
 
 
@@ -2118,6 +2204,9 @@ happen.
           className="mx-auto max-w-7xl px-6 pb-14"
         >
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
           <h2 className="text-center text-2xl font-bold tracking-wide text-white/90">Outcome‑Focused Benefits</h2>
           <p className="mx-auto mt-2 max-w-3xl text-center text-sm text-white/70">Choose an outcome and jump to the relevant systems that make it happen.</p>
           <div className="mt-6 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
@@ -2132,6 +2221,7 @@ happen.
                 <a className="group flex items-start gap-3 rounded-2xl border border-white/10 bg-white/5 p-5 backdrop-blur-xl hover:border-fuchsia-400/30">
                   <span className="mt-1 inline-block h-2.5 w-2.5 rounded-full bg-emerald-400 shadow-[0_0_12px_rgba(52,211,153,0.9)]" />
                   <span className="text-sm text-white/80"><span className="font-semibold text-white">{b.label}</span> — {b.desc} <span className="ml-1 text-cyan-300/90">→</span></span>
+<<<<<<< HEAD
                     — {b.desc} <span className='ml-1 text-cyan-300/90'>→</span>;
                   </span>;
                 </a>;
@@ -2181,6 +2271,13 @@ happen.
         </motion && motion.section>;
 
 
+=======
+                </a>
+              </Link>
+            ))}
+          </div>
+        </motion.section>
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
 
         {/* Suites */}
 
@@ -2430,6 +2527,7 @@ className='mx-auto max-w-7xl px-6 pb-14''
                 <p className="mt-1 text-xs text-white/75">See live autonomous suites and workflows.</p>
               </a>
 <<<<<<< HEAD
+<<<<<<< HEAD
             </Link>
             <Link href="/reports/seo">"
               <a className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl "hover":border-cyan-400/30 tilt-on-hover">"
@@ -2457,6 +2555,27 @@ className='mx-auto max-w-7xl px-6 pb-14''
               <a className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 tilt-on-hover">"
                 <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" />"
                 <div className="flex items-center gap-2"><Globe className="h-5 w-5 text-cyan-300" /><span className="text-sm font-semibold">4. Track AI Trends</span></div>"
+=======
+            </Link>
+            <Link href="/reports/seo">
+              <a className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 tilt-on-hover">
+                <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" />
+                <div className="flex items-center gap-2"><Search className="h-5 w-5 text-cyan-300" /><span className="text-sm font-semibold">2. Run SEO Audit</span></div>
+                <p className="mt-1 text-xs text-white/75">Get prioritized improvements and artifacts.</p>
+              </a>
+            </Link>
+            <Link href="/site-health">
+              <a className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 tilt-on-hover">
+                <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" />
+                <div className="flex items-center gap-2"><Gauge className="h-5 w-5 text-cyan-300" /><span className="text-sm font-semibold">3. Check Site Health</span></div>
+                <p className="mt-1 text-xs text-white/75">A11y, performance, and link health dashboards.</p>
+              </a>
+            </Link>
+            <Link href="/reports/ai-trends">
+              <a className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 tilt-on-hover">
+                <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" />
+                <div className="flex items-center gap-2"><Globe className="h-5 w-5 text-cyan-300" /><span className="text-sm font-semibold">4. Track AI Trends</span></div>
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
                 <p className="mt-1 text-xs text-white/75">Stay ahead with intelligence signals.</p>
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
             </Link>
@@ -3230,6 +3349,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     <div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90">Open <span aria-hidden>→</span></div>
                   </a>
                 </Link>
+<<<<<<< HEAD
               )'
                 desc: 'Impact at a glance','
                 href: '/site - health',
@@ -3647,6 +3767,9 @@ id='modules'          id="feature-map""
                   </a>;
                 </Link>;
               );
+=======
+              )
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
             ))}
           </div>;
         </motion && motion.section>;
@@ -3663,6 +3786,7 @@ id='modules'          id="feature-map""
            id="modules"
            initial={{ opacity: 0, y: 24 }}
            whileInView={{ opacity: 1, y: 0 }}
+<<<<<<< HEAD
 >>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
                 </a>
 
@@ -3836,6 +3960,38 @@ className='mx-auto max-w-7xl px-6 pb-14'>'
               {label: 'Automation Hub'
                 desc: 'Factories, agents, workflows';}
                 href: '/automation';}
+=======
+           viewport={{ once: true, amount: 0.2 }}
+           transition={{ duration: 0.5 }}
+           className="mx-auto max-w-7xl px-6 pb-16"
+         >
+           <h2 className="text-center text-2xl font-bold tracking-wide text-white/90">Platform Modules</h2>
+          <div className="mt-6 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
+            {[
+              { Icon: Rocket, title: 'Autonomous Factories', desc: 'Composable, domain‑specific automation factories.', href: '/automation' },
+              { Icon: ShieldCheck, title: 'Guardrails', desc: 'Defense‑in‑depth validations and policy enforcement.', href: '/site-health' },
+              { Icon: Gauge, title: 'Observability', desc: 'Dashboards, artifacts, and live CI telemetry.', href: '/site-health' },
+              { Icon: Activity, title: 'SEO Ops', desc: 'Continuous audits and safe, suggested diffs.', href: '/reports/seo' },
+              { Icon: Globe, title: 'AI Intelligence', desc: 'Trends radar to guide new automation ideas.', href: '/reports/ai-trends' },
+              { Icon: Layers, title: 'Workflow Composer', desc: 'Chain factories into higher‑order systems.', href: '/automation' },
+              { Icon: GitBranch, title: 'Main Sync Engine', desc: 'Small, reviewable edits merged continuously.', href: '/automation' },
+              { Icon: Cpu, title: 'Zero‑Ops Runtime', desc: 'Cloud‑native execution with no servers to manage.', href: '/automation' },
+              { Icon: BarChart3, title: 'Impact Analytics', desc: 'Track outcomes and ROI from automations.', href: '/site-health' }].map(({ Icon, title, desc, href }) => (
+              <Link key={title} href={href}>
+                <a className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 tilt-on-hover neon-ring">
+                  <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" />
+                  <div className="flex items-center gap-3">
+                    <Icon className="h-5 w-5 text-cyan-300" />
+                    <h3 className="text-lg font-semibold">{title}</h3>
+                  </div>
+                  <p className="mt-2 text-sm text-white/75">{desc}</p>
+                  <div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90">Open <Link2 className="h-3.5 w-3.5" /></div>
+                </a>
+              </Link>
+            ))}
+          </div>
+        </motion.section>
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
 
               {label: 'Main Sync Engine'
                 desc: 'Safe diffs to main';}
@@ -4815,6 +4971,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           </div>
         </motion.section>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
                   className='rounded-2xl border border-white/10 bg-white/5 p-5 text-center backdrop-blur hover:border-cyan-400/30'>
                   <div className='text-2xl font-extrabold tracking-tight'    />
@@ -4893,6 +5050,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           </div>
         </motion.section>
 
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
 
         {/* Capabilities *
 }
@@ -4999,6 +5158,7 @@ className='mx-auto max-w-7xl px-6 pb-14''
           </div>
         </motion.section>
 
+<<<<<<< HEAD
                 }
 
                 "Icon": Gauge,
@@ -5183,6 +5343,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 <<<<<<< HEAD
         {/* Value Pillars */}<motion&& motion.section;
           id='pillars'          initial={{ opacity: 0, y: 24 }}
+=======
+        {/* Why Zion */}
+        <motion.section
+          initial={{ opacity: 0, y: 24 }}
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
           whileInView={{ opacity: 1, y: 0 }}
           initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}<motion.section;
@@ -5331,6 +5496,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           </div>
         </motion.section>
 
+<<<<<<< HEAD
             )
 }
           </div>;
@@ -5379,6 +5545,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           </div>;
         <motion&& motion.section
           id='benefits'          initial={{ opacity: 0, y: 24 }}
+=======
+        {/* Benefits */}
+        <motion.section
+          id="benefits"
+          initial={{ opacity: 0, y: 24 }}
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
           whileInView={{ opacity: 1, y: 0 }}
                 </a>
               </Link>
@@ -5808,6 +5980,7 @@ className='mx-auto max-w-7xl px-6 pb-16''
           </div>
         </motion.section>
 
+<<<<<<< HEAD
           <h2 className='text-center text-2xl font-bold tracking-wide text-white/90'>;'
             Quality Gates & Guardrails;
           </h2>;
@@ -5868,6 +6041,15 @@ className='mx-auto max-w-7xl px-6 pb-16''
           transition={{ "duration": 0.5 }}
 
 className='mx-auto max-w-7xl px-6 pb-16''
+=======
+        {/* Tech */}
+        <motion.section
+          initial={{ opacity: 0, y: 24 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.2 }}
+          transition={{ duration: 0.5 }}
+          className="mx-auto max-w-7xl px-6 pb-16"
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
         >
           <div className='rounded-2xl border border-white/10 bg-white/5 p-6 text-center backdrop-blur-md'>'
             <p className='text-white/70'>'
@@ -6648,6 +6830,7 @@ to a live system.
                 </a>
               </Link>
 <<<<<<< HEAD
+<<<<<<< HEAD
               {<h2 className="text-center text-2xl font-bold tracking-wide text-white/90">AI Agents Gallery</h2>;
           <p className="mx-auto mt-2 max-w-3xl text-center text-sm text-white/70">Meet the autonomous agents powering your outcomes. Each card links to a live system.</p>;
           <div className="mt-6 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">;
@@ -6986,6 +7169,57 @@ className='mx-auto max-w-7xl px-6 pb-16'>'
 
           </div>
         </motion.section>
+=======
+            ))}
+          </div>
+        </motion.section>
+
+        {/* Capabilities Matrix */}
+        <motion.section
+          id="capability-matrix"
+          initial={{ opacity: 0, y: 24 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.2 }}
+          transition={{ duration: 0.5 }}
+          className="mx-auto max-w-7xl px-6 pb-16"
+        >
+          <h2 className="text-center text-2xl font-bold tracking-wide text-white/90">Capabilities Matrix</h2>
+          <p className="mx-auto mt-2 max-w-3xl text-center text-sm text-white/70">Explore a broader catalog of Zion capabilities. Each tile links to a live hub, report, or workflow.</p>
+          <div className="mt-6 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+            {[
+              { title: 'Autonomous Agents', desc: 'Self‑improving cloud workers', href: '/automation' },
+              { title: 'Repo Sync to Main', desc: 'Safe, continuous delivery', href: '/automation' },
+              { title: 'AI SEO Auditor', desc: 'On‑site improvements daily', href: '/reports/seo' },
+              { title: 'AI Trends Radar', desc: 'Signals for new factories', href: '/reports/ai-trends' },
+              { title: 'Site Health', desc: 'A11y, performance, links', href: '/site-health' },
+              { title: 'Guardrails', desc: 'Defense‑in‑depth quality', href: '/site-health' },
+              { title: 'Design Evolution', desc: 'Cohesive futuristic UI', href: '/newsroom' },
+              { title: 'Observability', desc: 'Dashboards & artifacts', href: '/site-health' },
+              { title: 'Analytics', desc: 'Outcomes & insights', href: '/site-health' },
+              { title: 'Link Integrity', desc: 'Broken link healing', href: '/site-health' },
+              { title: 'Factory Composer', desc: 'Higher‑order workflows', href: '/automation' },
+              { title: 'Docs & Changelog', desc: 'Technical notes & AI log', href: '/reports/seo', external: true }].map((item) => (
+              item.external ? (
+                <a key={item.title} href={item.href as string} target="_blank" rel="noopener noreferrer" className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 tilt-on-hover holo">
+                  <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" />
+                  <div className="text-base font-semibold">{item.title}</div>
+                  <div className="mt-1 text-sm text-white/75">{item.desc}</div>
+                  <div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90">Open <span aria-hidden>↗</span></div>
+                </a>
+              ) : (
+                <Link key={item.title} href={item.href as string}>
+                  <a className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 tilt-on-hover holo">
+                    <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" />
+                    <div className="text-base font-semibold">{item.title}</div>
+                    <div className="mt-1 text-sm text-white/75">{item.desc}</div>
+                    <div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90">Open <span aria-hidden>→</span></div>
+                  </a>
+                </Link>
+              )
+            ))}
+          </div>
+        </motion.section>
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
 
         {/* Benefits Directory */}
 <<<<<<< HEAD
@@ -7544,6 +7778,7 @@ benefits.
           {/* existing reports content */}
         </section>
 
+<<<<<<< HEAD
               { "title": 'Revenue Ideas Promoter', "href": '/.netlify/functions/revenue-ideas-promoter' }].map((tool) => ('
               <a key={tool.title} href={tool.href} className="rounded-xl border border-white/10 bg-white/5 p-4 text-sm text-white/80 "hover":border-cyan-400/30 "hover":text-white transition-colors">"
                 <div className="text-base font-semibold text-white">{tool.titl,"
@@ -7880,6 +8115,31 @@ benefits.
 </section>;'
           onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}"
           className="fixed bottom-24 right-4 z-40 rounded-full bg-gradient-to-r from-fuchsia-500 to-cyan-500 px-3 py-2 text-xs font-semibold shadow-[0_0_30px_rgba(34,211,238,0.35)] hover:shadow-[0_0_40px_rgba(34,211,238,0.6)]""
+=======
+        {/* New Intelligent Automations */}
+        <section id="automations" className="mx-auto max-w-7xl px-6 pb-20">
+          <h2 className="text-2xl font-bold tracking-wide text-white/90 text-center">New Intelligent Automations</h2>
+          <div className="mt-6 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
+            {[
+              { title: 'SEO Audit Runner', href: '/.netlify/functions/seo-audit-runner' },
+              { title: 'AI Trends Radar', href: '/.netlify/functions/ai-trends-radar-runner' },
+              { title: 'Front Index Directory Builder', href: '/.netlify/functions/front-index-directory-builder' },
+              { title: 'Revenue Ideas Promoter', href: '/.netlify/functions/revenue-ideas-promoter' }].map((tool) => (
+              <a key={tool.title} href={tool.href} className="rounded-xl border border-white/10 bg-white/5 p-4 text-sm text-white/80 hover:border-cyan-400/30 hover:text-white transition-colors">
+                <div className="text-base font-semibold text-white">{tool.title}</div>
+                <div className="mt-1 text-xs text-white/70">Open ↗</div>
+              </a>
+            ))}
+          </div>
+        </section>
+
+      </div>
+      {/* Back to top */}
+      {showToTop && (
+        <button
+          onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+          className="fixed bottom-24 right-4 z-40 rounded-full bg-gradient-to-r from-fuchsia-500 to-cyan-500 px-3 py-2 text-xs font-semibold shadow-[0_0_30px_rgba(34,211,238,0.35)] hover:shadow-[0_0_40px_rgba(34,211,238,0.6)]"
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
           aria-label="Scroll to top"
           className='fixed bottom-24 right-4 z-40 rounded-full bg-gradient-to-r from-fuchsia-500 to-cyan-500 px-3 py-2 text-xs font-semibold shadow-[0_0_30px_rgba(34,211,238,0.35)] hover:shadow-[0_0_40px_rgba(34,211,238,0.6)]'
 =======
@@ -8076,6 +8336,7 @@ href='"https"://github.com/Zion-Holdings/zion/actions/workflows/diverse-agent-ma
       </div>
     </a>
   </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 </section>;
 =======
@@ -8996,3 +9257,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 >>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
+=======
+</section>
+/* AUTO-GENERATED: FRONT_ACTIONS_END */
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91

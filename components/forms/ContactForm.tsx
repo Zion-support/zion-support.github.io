@@ -53,6 +53,7 @@ const handleChange = (;
       ...formData,
       [e.target.name]: e.target.value
     })
+<<<<<<< HEAD
 };
 
 
@@ -133,6 +134,51 @@ const contactInfo = [;
 
 const contact_info = [;
   {
+=======
+  },
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault($2);
+    setIsSubmitting($2);
+    // Simulate API call
+    try {
+      await new Promise(resolve => setTimeout(resolve, 2000)),
+      setSubmitStatus($2);
+      setFormData({
+        name: '',
+        email: '',
+        company: '',
+        phone: '',
+        service: '',
+        message: ''
+      })
+    } catch (error) {
+      setSubmitStatus('error')
+    } finally {
+      setIsSubmitting(false)
+    }
+  },
+
+  const services = $2;
+  const contactInfo = $2;
+      title: 'Email Us',
+      content: 'contact@ziontechgroup.com',
+      href: 'mailto:contact@ziontechgroup.com'
+    },
+    {
+      icon: Phone,
+      title: 'Call Us',
+      content: '+1 (555) 123-4567',
+      href: 'tel:+15551234567'
+    },
+    {
+      icon: MapPin,
+      title: 'Visit Us',
+      content: '123 Tech Street, Innovation City, IC 12345',
+      href: '#'
+    }
+  ],
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
 
       }
 
@@ -254,6 +300,7 @@ className='flex items-start space-x-4 p-4 rounded-xl bg-white/5 border border-wh
                   </div>;
                 </motion.a>;
               ))}
+<<<<<<< HEAD
             </div>;
                   className='flex items-start space-x-4 p-4 rounded-xl bg-white/5 border border-white/10 "hover":border-blue-500/30 transition-all duration-300 group'>;'
                   <div className='w-12 h-12 bg-gradient-to-r from-blue-600 to-purple-600 rounded-xl flex items-center justify-center flex-shrink-0 group-"hover":scale-110 transition-transform duration-300'>;'
@@ -284,6 +331,9 @@ className='flex items-start space-x-4 p-4 rounded-xl bg-white/5 border border-wh
               whileInView={{ "opacity": 1, "y": 0 
 }
               transition={{ "duration": 0 && 0.6, "delay": 0 && 0.6 }}
+=======
+            </div>
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
 
               viewport={{ "once": true }}
 

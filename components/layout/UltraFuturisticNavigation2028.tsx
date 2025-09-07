@@ -1026,6 +1026,7 @@ href='/services''
                         className='px-4 py-2 bg-gradient-to-r from-purple-600 to-blue-600 text-white rounded-lg "hover":from-purple-700 "hover":to-blue-700 transition-all duration-300 transform "hover":shadow-xl "hover":shadow-cyan-500/30''
                       >
                         View All Services
+<<<<<<< HEAD
                                 </span>;
                               </div>;
                             </Link>;
@@ -1119,6 +1120,14 @@ href='/services'
 }
             <div className="relative">;"
               <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-purple-400" />;"
+=======
+                      </Link>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
 
             {/* Company Links */}
             {companyLinks.slice(1, 5).map((link) => (
@@ -1623,6 +1632,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   }
                   key={service.name}
                   href={service.href}
+<<<<<<< HEAD
                   className='block p-3 rounded-lg bg-purple-900/20 "hover":bg-purple-900/40 transition-colors'>'
 
                   <div className='flex items-center justify-between'>;'
@@ -1786,6 +1796,16 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   href={service && service.href}"
 
 <<<<<<< HEAD
+=======
+                  className="block p-3 rounded-lg bg-purple-900/20 hover:bg-purple-900/40 transition-colors"
+                >
+                  <div className="flex items-center justify-between">
+                    <div>
+                      <h4 className="text-sm font-medium text-white">{service.name}</h4>
+                      <p className="text-xs text-purple-300">{service.description}</p>
+                    </div>
+                    <span className="text-xs text-purple-400 font-medium">{service.price}</span>
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
                   </div>
                 </Link>
               ))}

@@ -7,6 +7,7 @@ import Button from '../components/ui/Button';'
 import { Shield, Zap, BarChart3, Code, ArrowRight, Copy, RefreshCw, CheckCircle, AlertTriangle } from 'lucide-react';'
 
 export default function APIRateLimiterPage() {
+<<<<<<< HEAD
   }
   Shield,
   Zap,
@@ -42,6 +43,36 @@ return { "hasError": true,;
       }
       return <div>Something went wrong.</div>;
     }
+=======
+  const [endpoint, setEndpoint] = useState('');
+  const [rateLimit, setRateLimit] = useState('100');
+  const [timeWindow, setTimeWindow] = useState('1m');
+  const [testResults, setTestResults] = useState<any[]>([]);
+  const [isTesting, setIsTesting] = useState(false);
+  const [apiKey, setApiKey] = useState('');
+
+  const timeWindows = [
+    { value: '1s', label: '1 Second', description: 'Per second rate limiting' },
+    { value: '1m', label: '1 Minute', description: 'Per minute rate limiting' },
+    { value: '1h', label: '1 Hour', description: 'Per hour rate limiting' },
+    { value: '1d', label: '1 Day', description: 'Per day rate limiting' }
+  ];
+
+  const rateLimits = [
+    { value: '10', label: '10 requests', description: 'Very strict' },
+    { value: '100', label: '100 requests', description: 'Standard' },
+    { value: '1000', label: '1000 requests', description: 'High volume' },
+    { value: '10000', label: '10000 requests', description: 'Enterprise' }
+  ];
+
+  const generateApiKey = () => {
+    const key = 'zt_' + Math.random().toString(36).substr(2, 9) + '_' + Date.now().toString(36);
+    setApiKey(key)
+  };
+
+  const testRateLimiting = async () => {
+    if (!endpoint.trim() || !rateLimit || !timeWindow) return;
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
     
     setIsTesting(true);
     setTestResults([]);
@@ -584,12 +615,19 @@ limit of {rateLimit} requests per {timeWindow}
                   ))}
                 </div>
               ) : (
+<<<<<<< HEAD
 
 <div className = 'bg-gray-900 p-6 rounded-lg border border-gray-700 text-center'>'
                   <div className='text-6xl mb-4'>📊</div>'
                   <p className='text-gray-400'>'
                     Test results will appear here. Configure your settings and,
 click "Test Rate Limiting" to see how it works."
+=======
+                <div className="bg-gray-900 p-6 rounded-lg border border-gray-700 text-center">
+                  <div className="text-6xl mb-4">📊</div>
+                  <p className="text-gray-400">
+                    Test results will appear here. Configure your settings and click "Test Rate Limiting" to see how it works.
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
                   </p>
                 </div>
               )}
@@ -796,6 +834,7 @@ headers = {
     'X-RateLimit-Limit': '${rateLimit}','
     'X-RateLimit-Window': '${timeWindow}''
 response = requests.get(
+<<<<<<< HEAD
     f'"https": //api.zion.tech{endpoin,'
 }','
     headers=headers
@@ -836,6 +875,16 @@ endpoint = '${endpoint || '/api/users'}';'
 print($2);
     'remaining': response.headers.get($2);
 >>>>>>> origin/main
+=======
+    f'https://api.zion.tech{endpoint}';
+    headers=headers
+)
+
+print('Response:', response.json())
+print('Rate Limit Info:', {
+    'limit': response.headers.get('x-ratelimit-limit');
+    'remaining': response.headers.get('x-ratelimit-remaining');
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
     'reset': response.headers.get('x-ratelimit-reset')
 })`}
                 </pre>

@@ -27,6 +27,7 @@ export default function Dashboard() {
     async function fetchBranding() {
       }
       try {
+<<<<<<< HEAD
         }
         const resp = await fetch('/api/tenants');'
 
@@ -39,6 +40,14 @@ const t = (data.tenants || []).find(("x": any) => x.id === tenantId);
         }
         setBranding({ "name": 'Zion Hire AI','
 });
+=======
+        const resp = await fetch($2);
+        const data = await resp.json($2);
+        const t = $2;
+        setBranding(t?.branding || { name: 'Zion Hire AI' })
+      } catch {
+        setBranding({ name: 'Zion Hire AI' })
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
       }
     }
     fetchBranding();
@@ -119,6 +128,7 @@ type='button''
         </section>
       </main>
     </div>
+<<<<<<< HEAD
             <button;
               type='button';
               className='bg-gray-900 text-white rounded px-3 py-2 md:col-span-2'>;
@@ -269,3 +279,7 @@ function fetch_branding() {try {const resp = await fetch ('/api / tenants')const
   const params =
 >>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
+=======
+  )
+}
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91

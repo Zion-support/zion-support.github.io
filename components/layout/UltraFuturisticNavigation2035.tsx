@@ -1252,9 +1252,36 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       { "name": 'Community', "href": '/community', "description": 'User community','
 }
     ]
+<<<<<<< HEAD
   }
 ];
 <<<<<<< HEAD
+=======
+  },
+  {
+    name: 'Industry Solutions',
+    href: '/industry-solutions',
+    icon: <Building className = $2;
+    description: 'Industry-specific technology solutions',
+    badge: 'Industry',
+    children: [
+      { name: 'Healthcare AI', href: '/healthcare-ai-solutions', description: 'AI-powered healthcare' },
+      { name: 'Financial Technology', href: '/fintech-solutions', description: 'Next-gen fintech' },
+      { name: 'Manufacturing AI', href: '/manufacturing-ai-solutions', description: 'Smart manufacturing' },
+      { name: 'Retail Technology', href: '/innovative-business-solutions', description: 'Digital retail transformation' },
+      { name: 'Education Technology', href: '/training', description: 'AI-powered learning' },
+      { name: 'Government Solutions', href: '/enterprise-solutions-showcase', description: 'Public sector innovation' },
+      { name: 'Energy & Utilities', href: '/quantum-energy', description: 'Sustainable energy tech' },
+      { name: 'Biotech AI Research', href: '/biotech-ai', description: 'AI-driven biotech' }
+    ]
+  },
+  {
+    name: 'Resources',
+    href: '/resources',
+    icon: <BookOpen className = $2;
+    description: 'Documentation, support, and learning resources',
+    children: [
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
       { name: 'Documentation', href: '/docs', description: 'Technical documentation' },
       { name: 'API Reference', href: '/api-documentation', description: 'API documentation' },
       { name: 'Case Studies', href: '/case-studies', description: 'Success stories' },
@@ -1493,6 +1520,7 @@ className={`px-2 py-1 text-xs rounded-full ${`                          }
                     {activeDropdown === item.name && (
 <<<<<<< HEAD
                       <motion.div
+<<<<<<< HEAD
 }
 initial={{ "opacity": 0, "y": 10, "scale": 0.95 
 }
@@ -1785,6 +1813,29 @@ key={child && child.name}
                           <div className='space-y-2'>;'
                             {item.children?.map(child => { return (                              <Link; }
                                 }
+=======
+                        initial={{ opacity: 0, y: 10, scale: 0.95 }}
+                        animate={{ opacity: 1, y: 0, scale: 1}}
+                        exit={{ opacity: 0, y: 10, scale: 0.95 }}
+                        transition={{ duration: 0.2 }}
+                        className="absolute top-full left-0 mt-2 w-80 bg-gray-900/95 backdrop-blur-xl border border-gray-800/50 rounded-2xl shadow-2xl shadow-black/50 overflow-hidden"
+                        onMouseLeave={closeDropdowns}
+                      >
+                        <div className="p-6">
+                          <div className="flex items-center gap-3 mb-4">
+                            {item.icon}
+                            <div>
+                              <h3 className="font-semibold text-white">{item.title || item.name}</h3>
+                              {item.description && (
+                                <p className="text-sm text-gray-400">{item.description}</p>
+                              )}
+                            </div>
+                          </div>
+                          
+                          <div className="space-y-2">
+                            {item.children?.map((child) => (
+                              <Link
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
                                 key={child.name}
                                 href={child.href}
                                 className={`flex items-center gap-3 p-3 rounded-xl transition-all duration-200 ${<Link;`                                }
@@ -2234,6 +2285,7 @@ export default UltraFuturisticNavigation2035;
                             animate={{ opacity: 1, height: 'auto' }}
                             exit={{ opacity: 0, height: 0}}
                             transition = $2;
+<<<<<<< HEAD
 export default UltraFuturisticNavigation2035,
 =======
                         {activeDropdown === item && item.name && (
@@ -2520,3 +2572,6 @@ export default UltraFuturisticNavigation2035;
 export default UltraFuturisticNavigation2035;  )}
 export default UltraFuturisticNavigation2035;
 export default UltraFuturisticNavigation2035;"
+=======
+export default UltraFuturisticNavigation2035,
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91

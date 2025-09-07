@@ -1,4 +1,8 @@
+<<<<<<< HEAD:src_backup/components/EnhancedLoadingSpinner.tsx
 interface EnhancedLoadingSpinnerProps {"";
+=======
+interface EnhancedLoadingSpinnerProps {\"\";}
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91:temp-disabled/src/components/EnhancedLoadingSpinner.tsx
 import { motion      } from 'framer-motion';
 interface EnhancedLoadingSpinnerProps  {size?: 'sm' | 'md' | 'lg' text?: string className?: string;
 }export default function EnhancedLoadingSpinner() {const sizeClasses = { sm: 'w-8 h-8', md: 'w-12 h-12', lg: 'w-16 h-16';
@@ -47,4 +51,8 @@ interface EnhancedLoadingSpinnerProps  {size?: 'sm' | 'md' | 'lg' text?: string 
         ))}
       </div>;
     </div>;
+<<<<<<< HEAD:src_backup/components/EnhancedLoadingSpinner.tsx
   )}
+=======
+  )}"
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91:temp-disabled/src/components/EnhancedLoadingSpinner.tsx

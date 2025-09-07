@@ -5,6 +5,11 @@ import path from 'path';'
 
 const GRANTS_DIR = path.join(process.cwd(), 'data', 'grants');'
 function ensureDir() {
+<<<<<<< HEAD
+=======
+  if (!fs.existsSync(GRANTS_DIR)) {
+    fs.mkdirSync(GRANTS_DIR, { recursive: true})
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
   }
   if (!fs.existsSync(GRANTS_DIR)) {
     }
@@ -21,6 +26,7 @@ function readGrant("id": string): GrantApplication | null {
 
 return JSON.parse(fs.readFileSync(file, 'utf8')) as GrantApplication;'
 
+<<<<<<< HEAD
 function writeGrant() {
   }
   ensureDir();
@@ -29,19 +35,31 @@ function writeGrant() {
     JSON.stringify(record, null, 2)
     'utf8''
   );
+=======
+function writeGrant(record: GrantApplication) {
+  ensureDir($2);
+  fs.writeFileSync(grantPath(record.id), JSON.stringify(record, null, 2), 'utf8')
+}
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
 
 export default function handler() {
   }
   const { id } = req.query as { "id": string }
   if (!id) {
+<<<<<<< HEAD
     }
     res.status(400).json({ "error": 'Missing id','
 });
 return;
+=======
+    res.status(400).json($2);
+    return
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
   }
 
 const g = readGrant(id);
     if (!g) {
+<<<<<<< HEAD
 
       }
 
@@ -138,4 +156,28 @@ if ( {) {}
   res.status(405).end('Method Not Allowed');'
   res.status(405).end('Method Not Allowed')'
 }
+=======
+      res.status(404).json($2);
+      return
+    }
+    res.status(200).json($2);
+    return
+  }
+
+  if (req.method === 'PUT') {
+    const existing = readGrant($2);
+    if (!existing) {
+      res.status(404).json($2);
+      return
+    }
+    const payload = $2;
+    const next: GrantApplication = $2;
+      ...payload,
+      status: payload.submit ? 'Submitted' : existing.status,
+      updatedAt: new Date().toISOString()} as GrantApplication,
+    writeGrant($2);
+    res.status(200).json($2);
+    return
+  }
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
 

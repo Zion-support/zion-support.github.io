@@ -6,8 +6,17 @@ import path from 'path';'
 
 const REQUESTS_PATH = path.join(process.cwd(), 'datarequests.json');'
 async function loadRequests(): Promise<any[]> {
+<<<<<<< HEAD
+=======
+  try {
+    const raw = fs.readFileSync($2);
+    return JSON.parse(raw)
+  } catch {
+    return []
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
   }
   try {
+<<<<<<< HEAD
     }
     const raw = null;
 <<<<<<< HEAD
@@ -60,6 +69,19 @@ export default async function handler() {const typeMatch = content.match(/type\s
 return { "summary": description.slice(0, 280), "type": 'unknown',;'
 }
  ;
+=======
+    if (!process.env.OPENAI_API_KEY) return { summary: description.slice(0, 280), type: 'unknown' },
+    const { OpenAI } = await import($2);
+    const client = new OpenAI($2);
+    const prompt = `Summarize the following project description in 2-3 sentences and classify the request type (e.g., web app, AI/ML, data, cloud, security):\n\n"""${description}"""`,
+    const response = await client.chat.completions.create($2);
+    const content = $2;
+    const typeMatch = $2;
+    return { summary: content.trim(), type: typeMatch ? typeMatch[1].trim() : 'unknown' }
+  } catch (err) {
+    return { summary: description.slice(0, 280), type: 'unknown' }
+  }
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
 }
 
 export default async function handler() {

@@ -492,6 +492,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           </div>
 
 <<<<<<< HEAD
+<<<<<<< HEAD
           {/* Additional Links */}
 
 <div className='grid grid-cols-1 "md": grid-cols-3 gap-8 mt-12 pt-8 border-t border-gray-800/50'>'
@@ -627,6 +628,15 @@ key={link.name}
               <div className='space-y-2'>'
                 {legalLinks.map(link => (
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+          {/* Additional Links */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12 pt-8 border-t border-gray-800/50">
+            {/* Company Links */}
+            <div>
+              <h4 className="text-white font-semibold mb-4">Company</h4>
+              <div className="space-y-2">
+                {companyLinks.map((link) => (
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
                   <Link
 }
 key={link.name}
@@ -740,6 +750,7 @@ className='text-2xl "md":text-3xl font-bold text-white mb-4''
               >
                 Stay Ahead of the Future
               </motion.h3>
+<<<<<<< HEAD
               <motion.p,
 initial={{ "opacity": 0, "y": 20 
 }
@@ -755,6 +766,14 @@ className='text-gray-400 mb-6 max-w-2xl mx-auto''
 technologies delivered to your inbox.
               </motion.p>
                 className="text-gray-400 mb-6 max-w-2xl mx-auto""
+=======
+              <motion.p
+                initial={{ opacity: 0, y: 20}}
+                whileInView={{ opacity: 1, y: 0}}
+                transition={{ duration: 0.6, delay: 0.1 }}
+                viewport={{ once: true}}
+                className="text-gray-400 mb-6 max-w-2xl mx-auto"
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
               >
                 Get the latest insights on AI, quantum computing, and emerging technologies delivered to your inbox.
               </motion.p>

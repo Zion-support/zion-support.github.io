@@ -50,6 +50,7 @@ export default function GrantsPage() {const [items, setItems] = useState<GrantAp
   }, [filters]);
 
   return (
+<<<<<<< HEAD
 
     <EnhancedLayout>      .then((r) => r && r.json());
       .then((d) => setItems(d && d.items || []));
@@ -834,6 +835,37 @@ origin/cursor/automate-test-improve-and-merge-code-382a
                     Incubated by Zion
                   </span>
 >>>>>>> origin/main
+=======
+    <EnhancedLayout>
+      <div className="flex items-center justify-between mb-6">
+        <h1 className="text-2xl font-semibold">Zion Grants & Incubator</h1>
+        <div className="flex gap-2">
+          <Link href="/grants/apply"><a className="px-3 py-2 bg-blue-600 text-white rounded">Apply</a></Link>
+          <Link href="/incubator"><a className="px-3 py-2 bg-purple-600 text-white rounded">Incubator</a></Link>
+        </div>
+      </div>
+
+      <div className="grid md:grid-cols-4 gap-4 mb-6">
+        <select className="border rounded p-2" value={filters.sector || ''} onChange={(e) => setFilters((f) => ({ ...f, sector: e.target.value || undefined }))}>
+          <option value="">All Sectors</option>
+          {categories.map((c) => (
+            <option key={c} value={c}>{c}</option>
+          ))}
+        </select>
+        <select className="border rounded p-2" value={filters.status || ''} onChange={(e) => setFilters((f) => ({ ...f, status: e.target.value || undefined }))}>
+          <option value="">All Stages</option>
+          {statuses.map((s) => (
+            <option key={s} value={s}>{s}</option>
+          ))}
+        </select>
+        <input className="border rounded p-2" placeholder="Region" value={filters.region || ''} onChange={(e) => setFilters((f) => ({ ...f, region: e.target.value || undefined }))} />
+        <select className="border rounded p-2" value={filters.program || ''} onChange={(e) => setFilters((f) => ({ ...f, program: e.target.value || undefined }))}>
+          <option value="">All Programs</option>
+          <option value="grant">Grant</option>
+          <option value="incubator">Incubator</option>
+        </select>
+      </div>
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
 
       <div className="grid gap-4">
         {items.map((g) => (
@@ -852,6 +884,7 @@ origin/cursor/automate-test-improve-and-merge-code-382a
             <p className="mt-2 text-sm text-gray-700 dark:text-gray-300 line-clamp-3">{g.proposalSummary}</p>
             <div className="mt-3 text-sm text-gray-600 dark:text-gray-400">Budget: {g.budgetAmount} {g.budgetCurrency}</div>
           </div>
+<<<<<<< HEAD
 =======
 <span className='px-2 py-1 text-xs rounded bg-purple-100 text-purple-700'>
                     Incubated by Zion
@@ -897,6 +930,8 @@ pr-12243
 }
             </div>;
           </div>;
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
         ))}
         {items && items.length === 0 && (<div className='text-sm text-gray-600'>No grants found.</div>;'
         )}}</div>;

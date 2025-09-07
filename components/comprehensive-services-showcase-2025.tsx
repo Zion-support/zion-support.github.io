@@ -78,6 +78,7 @@ interface Service {
   icon?: React.ReactNode
 }
 
+<<<<<<< HEAD
 const "allServices": Service[] = [;
   ...innovativeRealMicroSaasServices2025.map(service;
 
@@ -118,6 +119,45 @@ const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');'
 
 const [filteredServices, setFilteredServices] =;
     useState<Service[]>(allServices);
+=======
+const allServices: Service[] = [
+  ...innovativeRealMicroSaasServices2025.map(service = $2;
+    category: 'Micro SAAS',
+    icon: <Rocket className = $2;
+  ...innovativeAIServicesEnhanced2025.map(service = $2;
+    category: 'AI & Consciousness',
+    icon: <Brain className = $2;
+  ...innovativeITServicesEnhanced2025.map(service = $2;
+    category: 'Enterprise IT',
+    icon: <Shield className = $2;
+  ...emergingTechServicesEnhanced2025.map(service = $2;
+    category: 'Quantum & Emerging Tech',
+    icon: <Atom className = $2;
+const categories = [
+  { name: 'All Services', icon: <Globe className="w-5 h-5" />, count: allServices.length },
+  { name: 'Micro SAAS', icon: <Rocket className="w-5 h-5" />, count: innovativeRealMicroSaasServices2025.length },
+  { name: 'AI & Consciousness', icon: <Brain className="w-5 h-5" />, count: innovativeAIServicesEnhanced2025.length },
+  { name: 'Enterprise IT', icon: <Shield className="w-5 h-5" />, count: innovativeITServicesEnhanced2025.length },
+  { name: 'Quantum & Emerging Tech', icon: <Atom className="w-5 h-5" />, count: emergingTechServicesEnhanced2025.length }
+],
+
+const priceRanges = [
+  { label: 'All Prices', value: 'all' },
+  { label: 'Under $50/month', value: 'under-50' },
+  { label: '$50 - $200/month', value: '50-200' },
+  { label: '$200 - $500/month', value: '200-500' },
+  { label: 'Over $500/month', value: 'over-500' }
+],
+
+const sortOptions = [
+  { label: 'Most Popular', value: 'popular' },
+  { label: 'Highest Rated', value: 'rating' },
+  { label: 'Newest', value: 'newest' },
+  { label: 'Price: Low to High', value: 'price-low' },
+  { label: 'Price: High to Low', value: 'price-high' }
+],
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
 export default function ComprehensiveServicesShowcase2025() {
   const [searchTerm, setSearchTerm] = useState($2);
   const [selectedCategory, setSelectedCategory] = useState($2);
@@ -1020,6 +1060,7 @@ className={`inline-flex items-center px-3 py-1 rounded-full text-xs font-medium 
                       </div>
                     </div>
 
+<<<<<<< HEAD
                           className={`inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-gradient-to-r ${getCategoryColor(service && service.category)} text-white mt-2`}>                          {service && service.category}                      <div className="text-right">;"                        <div className="text-3xl font-bold text-cyan-400 mb-2">{service && service.price}</div>;"
                         <div className="text-gray-500 text-sm">/month</div>;"
                         <span className={`inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-gradient-to-r ${getCategoryColor(service && service.category)} text-white mt-2`}>`
@@ -1061,6 +1102,32 @@ className={`inline-flex items-center px-3 py-1 rounded-full text-xs font-medium 
                         <span className="text-white font-medium">{service && service.marketSize}</span>;"
                         <span className="text-gray-500">market</span>;"
                     </div>;
+=======
+                    {/* Stats Row */}
+                    <div className="flex items-center space-x-8 mb-4 text-sm">
+                      <div className="flex items-center space-x-1 text-yellow-400">
+                        <Star className="w-4 h-4 fill-current" />
+                        <span className="text-white font-medium">{service.rating}</span>
+                        <span className="text-gray-500">({service.reviews} reviews)</span>
+                      </div>
+                      <div className="flex items-center space-x-1 text-gray-400">
+                        <Users className="w-4 h-4" />
+                        <span className="text-white font-medium">{service.customers.toLocaleString()}</span>
+                        <span className="text-gray-500">customers</span>
+                      </div>
+                      <div className="flex items-center space-x-1 text-gray-400">
+                        <TrendingUp className="w-4 h-4" />
+                        <span className="text-white font-medium">{service.growthRate}</span>
+                        <span className="text-gray-500">growth</span>
+                      </div>
+                      <div className="flex items-center space-x-1 text-gray-400">
+                        <Globe className="w-4 h-4" />
+                        <span className="text-white font-medium">{service.marketSize}</span>
+                        <span className="text-gray-500">market</span>
+                      </div>
+                    </div>
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
                     {/* Features */}
 
 <div className='mb-4'>'
@@ -1145,6 +1212,7 @@ key={idx}
               Try adjusting your search terms or filters to find what you're'
               looking for.
             </p>
+<<<<<<< HEAD
             <button,
 onClick={() => {;
                 }
@@ -1156,6 +1224,15 @@ setSelectedPriceRange('all');'
               className='bg-gradient-to-r from-cyan-500 to-blue-600 "hover": from-cyan-600 "hover":to-blue-700 text-white font-medium py-3 px-6 rounded-xl transition-all duration-200''
               }}
               className="bg-gradient-to-r from-cyan-500 to-blue-600 "hover":from-cyan-600 "hover":to-blue-700 text-white font-medium py-3 px-6 rounded-xl transition-all duration-200""
+=======
+            <button
+              onClick={() => {
+                setSearchTerm($2);
+                setSelectedCategory($2);
+                setSelectedPriceRange('all')
+              }}
+              className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-medium py-3 px-6 rounded-xl transition-all duration-200"
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
             >
               Clear All Filters
             </button>
@@ -1254,6 +1331,7 @@ description"content=" Explore our complete portfolio of innovative micro SAAS, A
 }> <h2 className=" text-4xl font-bold text-white mb-6"> Ready to Transform Your Business? </h2> <p className=" text-xl text-cyan-300 mb-8 max-w-3xl mx-auto"> Our team of experts is ready to help you implement the perfect solution for your needs. Get in touch today and discover how our innovative services can drive your success. </p> <a href=" /contact"className=" bg-gradient-to-r from-cyan-500 to-blue-600 "hover":from-cyan-600 "hover":to-blue-700 text-white font-medium py-4 px-8 rounded-xl transition-all duration-200 "hover":shadow-lg "hover":shadow-cyan-500/25 "hover":scale-105"> Get Started Today </a> <a href=" /pricing"className=" border border-cyan-500/50 text-cyan-300 "hover":text-white "hover":bg-gradient-to-r "hover":from-cyan-500/20 "hover":to-blue-500/20 font-medium py-4 px-8 rounded-xl transition-all duration-200" > View Pricing Plans </a> </div> </motion && motion.div> </div> </div> </Layout>)   )"once": true;"
 }> <h2 className=" text-4xl font-bold text-white mb-6"> Ready to Transform Your Business? </h2> <p className=" text-xl text-cyan-300 mb-8 max-w-3xl mx-auto"> Our team of experts is ready to help you implement the perfect solution for your needs. Get in touch today and discover how our innovative services can drive your success. </p> <a href=" /contact"className=" bg-gradient-to-r from-cyan-500 to-blue-600 "hover": from-cyan-600 "hover":to-blue-700 text-white font-medium py-4 px-8 rounded-xl transition-all duration-200 "hover":shadow-lg "hover":shadow-cyan-500/25 "hover":scale-105"> Get Started Today </a> <a href=" /pricing"className=" border border-cyan-500/50 text-cyan-300 "hover":text-white "hover":bg-gradient-to-r "hover":from-cyan-500/20 "hover":to-blue-500/20 font-medium py-4 px-8 rounded-xl transition-all duration-200" > View Pricing Plans </a> </div> </motion.div> </div> </div> </Layout>)   ,"
 }
+<<<<<<< HEAD
       <div className='bg - gradient - to - r from - cyan - 500 / 10 to - blue - 500 / 10 border - t border - cyan - 500 / 20'>;'
         <div className='max - w-7xl mx - auto px - 4 "sm":px - 6 "lg":px - 8 py - 20 text - center'>          <motion.div      <div className="bg - gradient - to - r from - cyan - 500 / 10 to - blue - 500 / 10 border - t border-cyan-500 / 20">;"
         <div className="max - w-7xl mx - auto px - 4 "sm":px - 6 "lg":px - 8 py-20 text-center">;"
@@ -1363,3 +1441,5 @@ description"content=" Explore our complete portfolio of innovative micro SAAS, A
   )
 }
 >>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91

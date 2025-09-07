@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from \"next\";"
 import fs from \"fs-extra\";"
 import path from \"path\";
@@ -17,6 +18,12 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     return res && res.status(405).json({ error: 'Method Not Allowed' });
 =======
 
+=======
+import type { NextApiRequest, NextApiResponse } from "next";
+import fs from "fs-extra";
+import path from "path";
+const CERTS_FILE = path.join(process.cwd(), "data", "certifications", "certifications.json"),
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
 
 import type { NextApiRequest, NextApiResponse } from "next";"
 import fs from "fs-extra";"
@@ -41,6 +48,7 @@ return res.status(405).json({ "error": 'Method Not Allowed',;'
 });
   }
   try {
+<<<<<<< HEAD
     }
     const certifications = (await fs.pathExists(CERTS_FILE))
       ? await fs.readJSON(CERTS_FILE)
@@ -172,6 +180,8 @@ return res.status(405).json({ "error": "Method Not Allowed"},;"
 }
     return res.status(200).json({ certifications})} catch (e) {_return res.status(500).json({ error: "Failed to load certifications"})}}
 }}
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
     const certifications = $2;
     return res.status(200).json({ certifications })
   } catch (e) {

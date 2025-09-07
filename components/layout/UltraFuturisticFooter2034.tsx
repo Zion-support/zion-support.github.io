@@ -896,11 +896,14 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             </div>
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 
             {/* Services *
 }
             <div className=""lg":col-span-2">;"
               <motion.div;
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
             {/* Services */}
 <div className='"lg":col-span-2'>;'
               <motion.div;
@@ -949,6 +952,7 @@ className='space-y-4''
 
                             <span className='text-gray-300 group-"hover":text-cyan-400 transition-colors text-sm'>;'
                               {service.name}
+<<<<<<< HEAD
                             </span>;
                             <span className='text-xs text-gray-500 group-"hover":text-cyan-400 transition-colors'>;'
                               {service.price}
@@ -998,12 +1002,17 @@ className='space-y-4''
                               {service.name}
                             </span>;
                             <span className="text - xs text - gray - 500 group - "hover":text - cyan - 400 transition - colors">;"
+=======
+                            </span>
+                            <span className="text-xs text-gray-500 group-hover:text-cyan-400 transition-colors">
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
                               {service.price}
                         ))}
                       </div>;
                     </motion && motion.div>;
 
                   ))}
+<<<<<<< HEAD
 
 <<<<<<< HEAD
             {/* Quick Links & Social */}"
@@ -1031,6 +1040,11 @@ className='space-y-4''
                 transition={{ "duration": 0 && 0.6, "delay": 0 && 0.4 }}
 
                 viewport={{ "once": true }}
+=======
+                </div>
+              </motion.div>
+            </div>
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
 
 className='space-y-8''
               >
@@ -1137,6 +1151,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                         key={social.name}
                         href={social.href}
 
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
@@ -1217,6 +1232,8 @@ key={social.name}
                     ))}
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
           {/* Certifications */}
           <motion&& motion.div;
             initial={{ "opacity": 0, "y": 20 

@@ -1,36 +1,52 @@
 import React, { useState, useEffect, createContext, useContext } from, react' import { motion, AnimatePresence } from;';
   'framer-motion'  import { Eye, EyeOff, Volume2, VolumeX, Keyboard, Accessibility, X import { Button } from;
+<<<<<<< HEAD:src_backup/components/disabled/Accessibility.jsx
   '../ui/button' const AccessibilityContext = createContext(undefined) export const useAccessibility = () => { const context = useContext(AccessibilityContext) if (!context) { throw new Error('useAccessibility must be used within an AccessibilityProvider')  return context }import React, { useState, useEffect, createContext, useContext } from;"";
+=======
+  '../ui/button' const AccessibilityContext = createContext(undefined) export const useAccessibility = (;
+  const context = useContext(AccessibilityContext) if (!context) { throw new Error('useAccessibility must be used within an AccessibilityProvider') ;) => {
+  return $3;}
+}
+  return context }import React, {;}
+  useState,;}
+  useEffect, createContext, useContext } from;\"\";
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91:temp-disabled/src/components/disabled/Accessibility.jsx
   'react';
-import { motion, AnimatePresence } from;"";
+import { motion, AnimatePresence } from;\"\";
   'framer-motion';
-import { Eye, EyeOff, Volume2, VolumeX, Keyboard, Accessibility, X import { Button } from;"";
+import { Eye, EyeOff, Volume2, VolumeX, Keyboard, Accessibility, X import { Button } from;\"\";
   '../ui/button';
+<<<<<<< HEAD:src_backup/components/disabled/Accessibility.jsx
 const AccessibilityContext = createContext(undefined)export const useAccessibility = () => {const context = useContext(AccessibilityContext)if (!context) {throw new Error("";
+=======
+
+const AccessibilityContext = createContext(undefined)export const useAccessibility = () => ;
+  const context = useContext(AccessibilityContext)if (!context) {throw new Error(\"\";}
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91:temp-disabled/src/components/disabled/Accessibility.jsx
   'useAccessibility must be used within an AccessibilityProvider')return context}// Accessibility Provider Component;
 export const AccessibilityProvider = memo(({ children }) => {const [highContrast, setHighContrast] = useState(false)ursor/automate-test-fix-improve-and-merge-code-48f3}, [])    // Save settings to localStorage;
     useEffect(() => {const settings = {highContrast, reducedMotion,fontSize, colorBlindMode;
 ursor/automate-test-fix-improve-and-merge-code-48f3;
     useEffect(() => {const root = document.documentElement;
         // High contrast mode;
-        if (highContrast) {root.classList.add("";
-  'high-contrast')else {root.classList.remove("";
+        if (highContrast) {root.classList.add(\"\";
+  'high-contrast')else {root.classList.remove(\"\";
   'high-contrast')// Reduced motion;
-        if (reducedMotion) {root.classList.add("";
-  'reduced-motion')else {root.classList.remove("";
+        if (reducedMotion) {root.classList.add(\"\";
+  'reduced-motion')else {root.classList.remove(\"\";
   'reduced-motion')// Font size;
-        root.style.fontSize = fontSize ===;"";
-  'small' ?;"";
-  '14px': fontSize ===;"";
-  'large' ?;"";
-  '18px' :;"";
+        root.style.fontSize = fontSize ===;\"\";
+  'small' ?;\"\";
+  '14px': fontSize ===;\"\";
+  'large' ?;\"\";
+  '18px' :;\"\";
   '16px';
         // Color blind mode;
-        root.style.filter = colorBlindMode ===;"";
-  'none' ?;"";
+        root.style.filter = colorBlindMode ===;\"\";
+  'none' ?;\"\";
   'none' :;
-            colorBlindMode ===;"";
-  'protanopia' ?;"";
+            colorBlindMode ===;\"\";
+  'protanopia' ?;\"\";
   'url(#protanopia)' :;
                 colorBlindMode ===;
   'deuteranopia' ?;
@@ -44,9 +60,15 @@ ursor/automate-test-fix-improve-and-merge-code-48f3;
 export const AccessibilityPanel = () => {const [isOpen, setIsOpen] = useState(false)const { highContrast, reducedMotion, fontSize, colorBlindMode, toggleHighContrast, toggleReducedMotion, setFontSize, setColorBlindMode } = useAccessibility()// Keyboard shortcuts;
     useEffect(() => {const handleKeyDown = (event) => {ursor/automate-test-fix-improve-and-merge-code-48f3;
                 event.preventDefault()setIsOpen(!isOpen)// Ctrl/Cmd + Shift + H to toggle high contrast;
-            if ((event.ctrlKey || event.metaKey) && event.shiftKey && event.key ===;"";
+            if ((event.ctrlKey || event.metaKey) && event.shiftKey && event.key ===;\"\";
   'H') {event.preventDefault()toggleHighContrast()// Ctrl/Cmd + Shift + M to toggle reduced motion;
+<<<<<<< HEAD:src_backup/components/disabled/Accessibility.jsx
             if ((event.ctrlKey || event.metaKey) && event.shiftKey && event.key ===;"";
+=======
+            if ((event.ctrlKey || event.metaKey) && event.shiftKey && event.key ===;\"\";) => {
+  return $3;}
+}
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91:temp-disabled/src/components/disabled/Accessibility.jsx
   'M') {event.preventDefault()toggleReducedMotion()}';';
         window.addEventListener('keydown', handleKeyDown)';';
         return () => window.removeEventListener('keydown', handleKeyDown)}, [isOpen, toggleHighContrast, toggleReducedMotion])'';
@@ -143,6 +165,22 @@ ursor/automate-test-fix-improve-and-merge-code-48f3;
         document.addEventListener('keydown', handleTabKey)';';
         return () => document.removeEventListener('keydown', handleTabKey)}, [isActive])}';';
 // Screen Reader Only Text'';'';
+<<<<<<< HEAD:src_backup/components/disabled/Accessibility.jsx
 export const SrOnly = ({ children }) => (<span className='sr-only'>{children}</span>)';';
 export default AccessibilityPanel';'}}}}}}}}}}}}}}}'';"import React, { useState, useEffect, createContext, useContext } from 'react' import { motion, AnimatePresence    } from 'framer-motion'  import { Eye, EyeOff, Volume2, VolumeX, Keyboard, Accessibility, X import { Button } from '../ui/button' const AccessibilityContext = createContext(undefined) export const useAccessibility = () => { const context = useContext(AccessibilityContext) if(!context) { throw new Error('useAccessibility must be used within an AccessibilityProvider')  return context }";
 import { Accessibility, Eye, EyeOff, High, Keyboard, Minimize, Open, Save, Settings, Skip, Volume2, VolumeX, X } from 'lucide-react'; import { Button } from '../ui/button' const AccessibilityContext = createContext(null) export const useAccessibility = () => { const context = useContext(AccessibilityContext) if(!context) { throw new Error('useAccessibility must be used within an AccessibilityProvider')} return context}
+=======
+
+export const SrOnly = ({ children }) => (<span className='sr-only' />{children}</span>)';';
+
+export default AccessibilityPanel';'}}}}}}}}}}}}}}}'';\"import React, { useState, useEffect, createContext, useContext } from 'react' import { motion, AnimatePresence    } from 'framer-motion'  import { Eye, EyeOff, Volume2, VolumeX, Keyboard, Accessibility, X import { Button } from '../ui/button' const AccessibilityContext = createContext(undefined) export const useAccessibility = (;
+  const context = useContext(AccessibilityContext) if(!context) { throw new Error('useAccessibility must be used within an AccessibilityProvider') ;) => {
+  return $3;}
+}
+  return context }\";
+import { Accessibility, Eye, EyeOff, High, Keyboard, Minimize, Open, Save, Settings, Skip, Volume2, VolumeX, X } from 'lucide-react'; import { Button } from '../ui/button' const AccessibilityContext = createContext(null) export const useAccessibility = (;) => {
+  return $3;}
+}
+  const context = useContext(AccessibilityContext) if(!context) { throw new Error('useAccessibility must be used within an AccessibilityProvider')};
+  return context}
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91:temp-disabled/src/components/disabled/Accessibility.jsx

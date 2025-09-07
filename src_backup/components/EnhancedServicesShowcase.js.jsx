@@ -4,6 +4,7 @@ import { motion } from 'framer-motion''';
 import { enhancedServices2025  } from '../data/enhanced-services-2025';
 const EnhancedServicesShowcase = () => {}
 '';
+<<<<<<< HEAD:src_backup/components/EnhancedServicesShowcase.js.jsx
   const [selectedCategory, setSelectedCategory] = useState('all')'';
   const [searchTerm, setSearchTerm] = useState('')'';
   const categories = ['';
@@ -12,6 +13,29 @@ const EnhancedServicesShowcase = () => {}
     { id: 'it-services', name: 'IT Services', icon: '🖥️' }, '';
     { id: 'ai-services', name: 'AI Services', icon: '🤖' },'';
     { id: 'emerging-tech', name: 'Emerging Tech', icon: '🚀' }
+=======
+
+const [selectedCategory, setSelectedCategory] = useState('all')'';
+
+const [searchTerm, setSearchTerm] = useState('')'';
+
+const categories = ['';
+    { id: 'all',}
+  name: 'All Services', icon: '🌟',}
+}, '';
+    { id: 'micro-saas',}
+  name: 'Micro SAAS', icon: '💻',}
+},'';
+    { id: 'it-services',}
+  name: 'IT Services', icon: '🖥️',}
+}, '';
+    { id: 'ai-services',}
+  name: 'AI Services', icon: '🤖',}
+},'';
+    { id: 'emerging-tech',}
+  name: 'Emerging Tech', icon: '🚀',}
+}
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91:temp-disabled/src/components/EnhancedServicesShowcase.js.jsx
   ];
   const filteredServices = enhancedServices2025.filter(service => {}
     const matchesSearch =;
@@ -19,9 +43,20 @@ const EnhancedServicesShowcase = () => {}
       service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||;
       service.tagline.toLowerCase().includes(searchTerm.toLowerCase())return matchesCategory && matchesSearch;
   })const containerVariants = {}
+<<<<<<< HEAD:src_backup/components/EnhancedServicesShowcase.js.jsx
     hidden: { opacity: 0 }, visible: {}
       opacity: 1, transition: {}
         staggerChildren: 0.1, delayChildren: 0.2}}}
+=======
+    hidden: { opacity: 0,}
+}, visible:  ,
+}
+      opacity: 1, transition:  ,
+}
+        staggerChildren: 0.1, delayChildren: 0.2},
+}
+;
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91:temp-disabled/src/components/EnhancedServicesShowcase.js.jsx
   const itemVariants = {}
     hidden: { opacity: 0, y: 20 }, visible: {}
       opacity: 1, y: 0, transition: { duration: 0.5 }}}
@@ -33,8 +68,14 @@ const EnhancedServicesShowcase = () => {}
             className='text-4xl md:text-6xl font-bold mb-6''';
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
+<<<<<<< HEAD:src_backup/components/EnhancedServicesShowcase.js.jsx
             transition={{ duration: 0.6 }}
           >'''';
+=======
+            transition={{ duration: 0.6 ,}
+}
+           />'''';
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91:temp-disabled/src/components/EnhancedServicesShowcase.js.jsx
             Comprehensive'''';
             <span className='text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400'>'';
               {' '}
@@ -113,9 +154,16 @@ const EnhancedServicesShowcase = () => {}
             variants={containerVariants}'''';
             initial='hidden''''';
             whileInView='visible''';
+<<<<<<< HEAD:src_backup/components/EnhancedServicesShowcase.js.jsx
             viewport={{ once: true }}
           >;
             {filteredServices.map((service, index) => (<motion.div;
+=======
+            viewport={{ once: true ,}
+}
+           />;
+            {filteredServices.map((service, index) => (<motion.div;}
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91:temp-disabled/src/components/EnhancedServicesShowcase.js.jsx
                 key={service.id}'''';
                 variants={itemVariants}'''';
                 className='bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20 hover: border-white/40 transition-all duration-300 hover:transform hover:scale-105 group '>'''';
@@ -228,9 +276,16 @@ const EnhancedServicesShowcase = () => {}
             <motion.div'''';
               className='text-center py-12''';
               initial={{ opacity: 0 }}
+<<<<<<< HEAD:src_backup/components/EnhancedServicesShowcase.js.jsx
               animate={{ opacity: 1 }}'''';
             >'''';
               <p className='text-gray-400 text-lg'>;
+=======
+              animate={{ opacity: 1 ,}
+}'''';
+             />'''';
+              <p className='text-gray-400 text-lg' />;
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91:temp-disabled/src/components/EnhancedServicesShowcase.js.jsx
                 No services found matching your criteria.</p>;
               <button;
                 onClick={() => {}
@@ -253,8 +308,14 @@ const EnhancedServicesShowcase = () => {}
             className='text-3xl md: text-4xl font-bold text-white mb-6''';
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
+<<<<<<< HEAD:src_backup/components/EnhancedServicesShowcase.js.jsx
             transition={{ duration: 0.6 }}
           >;
+=======
+            transition={{ duration: 0.6 ,}
+}
+           />;
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91:temp-disabled/src/components/EnhancedServicesShowcase.js.jsx
             Ready to Transform Your Business?;
           </motion.h2>'''';
           <motion.p'''';
@@ -317,6 +378,7 @@ const EnhancedServicesShowcase = () => {}
           <motion.div'''';
             className='mt-8 text-sm text-gray-400''';
             initial={{ opacity: 0 }}
+<<<<<<< HEAD:src_backup/components/EnhancedServicesShowcase.js.jsx
             whileInView={{ opacity: 1 }}
             transition={{ duration: 0.6, delay: 0.8 }}
           >;
@@ -324,6 +386,18 @@ const EnhancedServicesShowcase = () => {}
             <p>Address: 364 E Main St STE 1008, Middletown DE 19709</p>;
             <p>'';
               Website: {' '}'''';
+=======
+            whileInView={{ opacity: 1 ,}
+}
+            transition={{ duration: 0.6, delay: 0.8 ,}
+}
+           />;
+            <p />Email: kleber@ziontechgroup.com</p>;
+            <p />Address: 364 E Main St STE 1008, Middletown DE 19709</p>;
+            <p />'';
+              Website: {' ,}
+}'''';
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91:temp-disabled/src/components/EnhancedServicesShowcase.js.jsx
               <a'''';
                 href='https://ziontechgroup.com''''';
                 className='text-blue-400 hover:text-blue-300 '>;
@@ -335,4 +409,17 @@ const EnhancedServicesShowcase = () => {}
       </section>;
     </div>)}
 export default EnhancedServicesShowcase;
+<<<<<<< HEAD:src_backup/components/EnhancedServicesShowcase.js.jsx
 export { EnhancedServicesShowcase }export { EnhancedServicesShowcase }export { EnhancedServicesShowcase }export { EnhancedServicesShowcase }export { EnhancedServicesShowcase }
+=======
+
+export { EnhancedServicesShowcase }
+
+export { EnhancedServicesShowcase }
+
+export { EnhancedServicesShowcase }
+
+export { EnhancedServicesShowcase }
+
+export { EnhancedServicesShowcase }
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91:temp-disabled/src/components/EnhancedServicesShowcase.js.jsx

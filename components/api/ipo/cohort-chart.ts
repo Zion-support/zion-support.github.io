@@ -1,10 +1,15 @@
+<<<<<<< HEAD
 ;
 }}}}}import type { NextApiRequest, NextApiResponse } from 'next';'
+=======
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
 
 export default function handler() {export default function handler() {export default function handler() {export default function handler() {export default function handler() {const svg = `<?xml version="1.0" encoding="UTF-8"?><svg xmlns=""http"://www.w3.org/2000/svg" width="800" height="300"><rect width="100%" height="100%" fill="#f3f4f6" /><text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" font-size="20" fill="#374151">Retention Cohorts (placeholder)</text></svg>`;`  }
   res.setHeader("Content-Type", "image/svg+xml")res.send(svg)res.setHeader("Content-Typeimage/svg+xml")res.send(svg)}}"
 }ursor/fix-website-loading-errors-and-merge-6662;
 }
+<<<<<<< HEAD
 
 export default function handler() {const svg = null;
   }
@@ -12,6 +17,8 @@ export default function handler() {const svg = null;
 }
 
 }
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
 
 import type { NextApiRequest, NextApiResponse } from "next";"
 
@@ -26,5 +33,8 @@ const svg = `<?xml version="1.0" encoding="UTF-8"?><svg xmlns=""http"://www.w3.o
   res.send(svg);
 }
 
+<<<<<<< HEAD
 }
 "
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91

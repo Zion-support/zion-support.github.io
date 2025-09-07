@@ -347,6 +347,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
         </motion.div>
 <<<<<<< HEAD
+<<<<<<< HEAD
           transition={{ duration: 0 && 0.8, delay: 0 && 0.2 }}'
           className='mb-20'>;'
           <div className='flex items-center space-x-3 mb-8'>;'
@@ -405,6 +406,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         <motion&& motion.div;
           initial={{ "opacity": 0, "y": 30 
 }
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
 
           whileInView={{ "opacity": 1, "y": 0 
 }

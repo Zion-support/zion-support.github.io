@@ -78,6 +78,7 @@ const whitepapers = [;
 return (;
     <>
       <Head>
+<<<<<<< HEAD
 <title>
           Technology Insights | Zion Tech Group - Research & Innovation
         </title>
@@ -91,6 +92,13 @@ property='"og":title''
 property='"og":description''
           content='Research insights, technology trends, and thought leadership in AI and automation.'' />
         <meta name='"twitter":card' content='summary_large_image' />'
+=======
+        <title>Technology Insights | Zion Tech Group - Research & Innovation</title>
+        <meta name="description" content="Explore Zion Tech Group's technology insights, research, and thought leadership in AI, automation, and emerging technologies." />
+        <meta property="og:title" content="Technology Insights | Zion Tech Group" />
+        <meta property="og:description" content="Research insights, technology trends, and thought leadership in AI and automation." />
+        <meta name="twitter:card" content="summary_large_image" />
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
       </Head>
       <div className='min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 text-white'>'
         <main className='container mx-auto px-6 py-12'>'
@@ -233,6 +241,7 @@ AI, automation, and emerging technologies
                     </Link>
                   </div>
 
+<<<<<<< HEAD
                 )
 }
               </div>;
@@ -269,6 +278,8 @@ AI, automation, and emerging technologies
                 ))}
               </div>;
             </div>;
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
             {/* Research Areas */}
             {/* Research Areas */}
 <div className='mb-16'>;'
@@ -305,6 +316,7 @@ key={focusIndex}
                           {focus}
                         </li>;
                       ))}
+<<<<<<< HEAD
                     </ul>;
                   </div>;
                 ))}</div>;
@@ -393,6 +405,9 @@ href={paper.downloadUrl}
 
                     </Link>
 
+=======
+                    </ul>
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
                   </div>
                 ))}
               </div>
@@ -447,10 +462,14 @@ AI ethics, and human-AI collaboration. We work with,
 leading institutions and industry partners to advance the,
 state of the art.
                     </p>
+<<<<<<< HEAD
 
                     <ul className='space-y-2 text-white/70'>'
                     </p>
                     <ul className="space-y-2 text-white/70">"
+=======
+                    <ul className="space-y-2 text-white/70">
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
                       <li>• Advanced AI research and development</li>
                       <li>• Autonomous system prototyping</li>
                       <li>• Ethical AI framework development</li>

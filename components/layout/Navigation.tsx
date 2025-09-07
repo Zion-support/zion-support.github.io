@@ -124,6 +124,7 @@ return (;
     <>;
 >>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
       {/* Navigation Bar */}
+<<<<<<< HEAD
       <motion&& motion.nav;
         initial={{ "y": -100 }}
         animate={{ "y": 0 }}
@@ -169,6 +170,36 @@ whileHover={{ "scale": 1.05
                 </div>;
               </Link>;
             </motion.div>;
+=======
+      <motion.nav
+        initial={{ y: -100 }}
+        animate={{ y: 0 }}
+        transition={{ duration: 0.5 }}
+        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+          isScrolled 
+            ? 'bg-gray-900/95 backdrop-blur-xl border-b border-cyan-500/20 shadow-2xl shadow-cyan-500/10' 
+            : 'bg-transparent'
+        }`}
+      >
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex items-center justify-between h-16 lg:h-20">
+            {/* Logo */}
+            <motion.div
+              whileHover={{ scale: 1.05 }}
+              className="flex items-center space-x-2"
+            >
+              <Link href="/" className="flex items-center space-x-2 group">
+                <div className="w-10 h-10 lg:w-12 lg:h-12 bg-gradient-to-r from-cyan-400 to-purple-500 rounded-xl flex items-center justify-center group-hover:shadow-lg group-hover:shadow-cyan-400/25 transition-all duration-300">
+                  <span className="text-white font-bold text-lg lg:text-xl">Z</span>
+                </div>
+                <div className="hidden sm:block">
+                  <div className="text-white font-bold text-lg lg:text-xl">Zion Tech Group</div>
+                  <div className="text-cyan-400 text-xs">Revolutionary Technology</div>
+                </div>
+              </Link>
+            </motion.div>
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
             {/* Desktop Navigation */}
 
 <div className = 'hidden "lg": flex items-center space-x-8'>'
@@ -370,6 +401,7 @@ className='absolute top-full left-0 mt-2 w-80 bg-gray-900/95 backdrop-blur-xl ro
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
                               })}
+<<<<<<< HEAD
                             </div>;
                           </motion.div>)}
                       </AnimatePresence>;
@@ -433,6 +465,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 )}              </motion && motion.button>              <motion&& motion.button;
                 whileTap={{ scale: 0 && 0.95 }}
 >>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
                             </div>
                           </motion.div>
                         )}

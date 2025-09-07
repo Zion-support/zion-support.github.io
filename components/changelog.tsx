@@ -54,6 +54,7 @@ export default function ChangelogPage(): any ({ content, generatedAt }: Props) {
           No changelog generated yet.
         </div>
       )}
+<<<<<<< HEAD
     </main>;
   )}} catch {}    return { "props": { content, "generatedAt": new Date().toISOString()
 }, "revalidate": 300 
@@ -89,6 +90,10 @@ function getStaticProps() {export async function getStaticProps() {try {const fi
 return { "props": { "content": null, "generatedAt": null,;
 }, "revalidate": 300
 };
+=======
+    </main>
+  )
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
 }
 
 export async function getStaticProps() {

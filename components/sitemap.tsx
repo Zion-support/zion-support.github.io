@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 
@@ -276,6 +277,11 @@ const links = [;
 
 
 >>>>>>> origin/main
+=======
+import React from 'react';
+import Head from 'next/head';
+export default function SitemapPage() {
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
 	const links = [
 		{ name: 'Home', href: '/' },
 		{ name: 'Services', href: '/services' },
@@ -287,8 +293,13 @@ const links = [;
 		{ name: 'Support', href: '/support' },
 		{ name: 'Contact', href: '/contact' }
 	];
+<<<<<<< HEAD
 return (;
 		<div className="min-h-screen pt-24 pb-20 px-4 "sm": px-6 "lg":px-8">"
+=======
+	return (
+		<div className="min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8">
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
 			<Head>
 				<title>Sitemap | Zion Tech Group</title>
 				<meta name="description" content="Quick links to the main routes and pages." />"
@@ -304,6 +315,7 @@ return (;
 				</ul>
 			</div>
 		</div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 	)
 }
@@ -759,3 +771,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 >>>>>>> origin/main
+=======
+	)
+}
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91

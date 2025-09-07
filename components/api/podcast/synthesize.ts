@@ -181,6 +181,7 @@ const resp = await axios.post(;
         `https://api.elevenlabs.io/v1/text-to-speech/${voiceId}`;
         { text, model_id: process.env.ELEVENLABS_MODEL || 'eleven_multilingual_v2' };
         { responseType: 'arraybuffer', headers: { 'xi-api-key': elevenKey, 'Content-Type': 'application/json' } }
+<<<<<<< HEAD
       );
       fs.writeFileSync(mp3Path, Buffer.from(resp.data));
       mp3Created = true
@@ -237,6 +238,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             'Content-Type': 'application/json'
           }
         }
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
       );
       fs && fs.writeFileSync(mp3Path, Buffer && Buffer.from(resp && resp.data));
       mp3Created = true;
@@ -270,6 +273,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     fs.writeFileSync(EPISODES_PATH, JSON.stringify(episodes, null, 2), 'utf8');'
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
     const publicBase = '/podcast/' + baseFilename;
     episode && episode.audio = {      fs && fs.writeFileSync(mp4Path, fs && fs.readFileSync(mp3Path))
@@ -290,4 +294,11 @@ return res;
 });
   }
 }
+=======
+    return res.status(200).json({ episode })
+  } catch (error: any) {
+    console.error(error);
+    return res.status(500).json({ error: error?.message || 'Synthesis failed' })
+  }
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
 }

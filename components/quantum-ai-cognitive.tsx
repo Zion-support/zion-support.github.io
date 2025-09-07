@@ -23,6 +23,7 @@ return (;
     <UltraAdvancedFuturisticBackground>
       <Head>
         <title>{service.name} - Zion Tech Group</title>
+<<<<<<< HEAD
         <meta name="description" content={service.description} />"
         <link rel="canonical" href={service.link} />"
       </Head>
@@ -46,6 +47,20 @@ return (;
                     <span>{feat}</span>;
                   </li>;
                 ))}
+=======
+        <meta name="description" content={service.description} />
+        <link rel="canonical" href={service.link} />
+      </Head>
+
+      <div className="min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center mb-10">
+            <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-purple-400 via-cyan-400 to-pink-400 bg-clip-text text-transparent">
+              {service.name}
+            </h1>
+            <p className="mt-4 text-xl text-slate-300 max-w-3xl mx-auto">{service.tagline}</p>
+          </div>
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
 
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-12">
             <div className="lg:col-span-2 bg-black/30 rounded-2xl border border-purple-500/30 p-6">
@@ -60,8 +75,14 @@ return (;
                 ))}
               </ul>
             </div>
+<<<<<<< HEAD
             <div className="bg-black/30 rounded-2xl border border-purple-500/30 p-6 h-fit">"
               <div className="flex items-end justify-between mb-3">"
+=======
+
+            <div className="bg-black/30 rounded-2xl border border-purple-500/30 p-6 h-fit">
+              <div className="flex items-end justify-between mb-3">
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
                 <div>
                   <div className="text-3xl font-bold text-white">{service.price}<span className="text-slate-400 text-base">{service.period}</span></div>"
                   <div className="text-slate-400">{service.trialDays}-day free trial • "Setup": {service.setupTime}</div>"

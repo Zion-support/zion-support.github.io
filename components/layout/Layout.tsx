@@ -26,6 +26,7 @@ export default function Layout() {return (<div className="min-h-screen bg-white"
 
 }
 
+<<<<<<< HEAD
 export default /**;
  * Layout - Function description;
  */;
@@ -182,6 +183,14 @@ return (;
         {children}
       </main>
       <Footer />
+=======
+export default function Layout({
+  children;
+}: LayoutProps) {
+  return (
+    <div className="min-h-screen bg-gray-50">
+      {children}
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
     </div>
   );
 }

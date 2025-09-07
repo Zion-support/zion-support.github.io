@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 import type { NextApiRequest, NextApiResponse } from "next";"
@@ -6,6 +7,14 @@ import type { NextApiRequest, NextApiResponse } from 'next';'
 import { findPartnerByApiKey, signJwt } from '../../../utils/api/partnerAuth';'
 
 export default async function handler() {
+=======
+import type { NextApiRequest, NextApiResponse } from "next";
+import { findPartnerByApiKey, signJwt } from "../../../utils/api/partnerAuth";
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+  if (req.method !== "POST") {
+    res.setHeader($2);
+    return res.status(405).json({ error: "Method Not Allowed" })
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
   }
   if (req.method !== 'POST') {;'
     }

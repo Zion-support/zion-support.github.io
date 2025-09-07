@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 import React, { useState } from 'react';'
@@ -86,6 +87,31 @@ const serviceCategories = [
     "color": 'from-violet-500 to-purple-500','
     "services": aiEmergingTechServices.filter(s => s.category.includes('AI')),'
 "gradient": 'from-violet-500/20 to-indigo-500/20','
+=======
+import React, { useState } from 'react';
+import { motion } from 'framer-motion';
+import { 
+  Star, CheckCircle, ArrowRight, TrendingUp, Users, 
+  Award, Clock, Zap, Shield, Brain, Atom, Rocket,
+  ShoppingCart, Cpu, Globe, Lock, Video, Palette,
+  BarChart, UserCheck, FileText, Heart, Eye, Search, Phone
+} from 'lucide-react',
+import { realMarketServices } from '../../data/2024-real-market-services';
+import { aiEmergingTechServices } from '../../data/2024-ai-emerging-tech-services';
+const contactInfo = $2;
+  email: 'kleber@ziontechgroup.com',
+  address: '364 E Main St STE 1008 Middletown DE 19709',
+  website: 'https://ziontechgroup.com'
+},
+
+const serviceCategories = $2;
+    title: '🧠 Revolutionary AI Services',
+    description: 'Next-generation AI consciousness and creativity',
+    icon: Brain,
+    color: 'from-violet-500 to-purple-500',
+    services: aiEmergingTechServices.filter(s = $2;
+    gradient: 'from-violet-500/20 to-indigo-500/20'
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
   },
   {
     }
@@ -334,6 +360,7 @@ designed to transform your business and propel you into the future.
           </h2>
           <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
 <<<<<<< HEAD
+<<<<<<< HEAD
               { label: 'Total Services', value: allServices && allServices.length.toString(), icon: Rocket },;
               { label: 'Happy Customers', value: '50K+', icon: Users },;
               { label: 'Success Rate', value: '99 && 99.9%', icon: CheckCircle },;
@@ -388,6 +415,21 @@ key={stat && stat.label}
                 <stat && stat.icon className="w-8 h-8 text-cyan-400 mx-auto mb-2" />;"
                 <div className="text-2xl font-bold text-white">{stat && stat.value}</div>;"
                 <div className="text-sm text-gray-400">{stat && stat.label}</div>;"
+=======
+            Discover our comprehensive suite of cutting-edge AI, quantum computing, and emerging technology solutions. 
+            Each service is designed to transform your business and propel you into the future.
+          </p>
+          
+          {/* Stats */}
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-12">
+            {[
+              { label: 'Total Services', value: allServices.length.toString(), icon: Rocket},
+              { label: 'Happy Customers', value: '50K+', icon: Users},
+              { label: 'Success Rate', value: '99.9%', icon: CheckCircle},
+              { label: 'Global Reach', value: '45+ Countries', icon: Globe}
+            ].map((stat, index) => (
+              <motion.div
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
                 key={stat.label}
                 initial={{ "opacity": 0, "scale": 0.8 
 }
@@ -653,12 +695,17 @@ className='group relative p-6 rounded-xl bg-white/5 backdrop-blur-sm border bord
 
               {/* Popular Badge */}
               {service.popular && (
+<<<<<<< HEAD
                 <div className='absolute -top-3 -right-3 bg-gradient-to-r from-yellow-500 to-orange-500 text-white text-xs px-3 py-1 rounded-full font-semibold'>'
                   }
+=======
+                <div className="absolute -top-3 -right-3 bg-gradient-to-r from-yellow-500 to-orange-500 text-white text-xs px-3 py-1 rounded-full font-semibold">
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
                   Popular
                 </div>
               )}
 
+<<<<<<< HEAD
 
               {/* Service Icon *
 }
@@ -909,6 +956,8 @@ variants={containerVariants}
               </div>;
               {/* Service Meta */}
 
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
               {/* Service Icon */}
               <div className="flex items-center justify-between mb-4">
                 <div className={`w-16 h-16 rounded-xl bg-gradient-to-r ${service.color} flex items-center justify-center text-2xl`}>
@@ -1009,6 +1058,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   <div className="text-sm text-cyan-400">
                     +{service.features.length - 3} more features
                   </div>
+<<<<<<< HEAD
                 )}
               </div>
 <<<<<<< HEAD
@@ -1100,6 +1150,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     +{service.features.length - 3} more features;
                   </div>;
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
                 )}
               </div>;
               {/* Service Meta */}
@@ -1109,17 +1161,23 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 >>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
 
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
               {/* Service Meta */}
               <div className="grid grid-cols-2 gap-4 mb-6 text-sm">
                 <div className="flex items-center space-x-2 text-gray-400">
                   <Clock className="w-4 h-4" />
                   <span>{service.setupTime}</span>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
                 </div>                  <span>{service.setupTime}</span>
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
                 </div>
                 <div className="flex items-center space-x-2 text-gray-400">"
                   <Users className="w-4 h-4" />"
@@ -1341,6 +1399,9 @@ href={service.link}
                 </div>
               </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
 
               {/* Action Buttons */}
               <div className="flex space-x-3">

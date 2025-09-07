@@ -269,6 +269,7 @@ className='absolute top-1/2 left-1/2 w-64 h-64 bg-gradient-to-r from-emerald-500
         <motion.div,
 className='absolute top-3/4 left-1/3 w-48 h-48 bg-gradient-to-r from-yellow-500/10 to-orange-500/10 rounded-full blur-3xl''
           animate={{
+<<<<<<< HEAD
             }
             "scale": [1.3, 1, 1.3],
             "opacity": [0.3, 0.6, 0.3]
@@ -282,6 +283,18 @@ className='absolute top-3/4 left-1/3 w-48 h-48 bg-gradient-to-r from-yellow-500/
           }} />
         <motion.div,
 className='absolute top-1/3 right-1/3 w-56 h-56 bg-gradient-to-r from-red-500/10 to-pink-500/10 rounded-full blur-3xl''
+=======
+            scale: [1.3, 1, 1.3],
+            opacity: [0.3, 0.6, 0.3]}}
+          transition = $2;
+            repeat: Infinity,
+            ease: "easeInOut",
+            delay: 1}}
+        />
+
+        <motion.div
+          className="absolute top-1/3 right-1/3 w-56 h-56 bg-gradient-to-r from-red-500/10 to-pink-500/10 rounded-full blur-3xl"
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
           animate={{
             }
             "scale": [1, 1.4, 1]

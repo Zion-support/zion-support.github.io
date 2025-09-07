@@ -11,10 +11,15 @@ async function summarizeAndTag() {
 
     return { summary, "tags": basicTags.slice(0, 24) };
   }
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
   try {
     }
     const { OpenAI } = await import('openai');'
 
+<<<<<<< HEAD
 const client = new OpenAI({ "apiKey": openaiApiKey,;
 });
 
@@ -32,6 +37,10 @@ const response = await client.chat.completions.create({
     });
 
 const content = response.choices?.[0]?.message?.content || '';'
+=======
+    const response = await client.chat.completions.create($2);
+    const content = $2;
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
     try {
       }
       const parsed = JSON.parse(content);
@@ -53,10 +62,21 @@ if (
     // ignore and fallback
   }
 
+<<<<<<< HEAD
 const fallbackSummary = `${input.fullName} — ${input.professionalTitle}. ${input.bio.slice(0, 240)}${input.bio.length > 240 ? '…' : ''}`;`  return { "summary": fallbackSummary, "tags": basicTags.slice(0, 24) }
 
 export default async function handler() {
 
+=======
+  const fallbackSummary = `${input.fullName} — ${input.professionalTitle}. ${input.bio.slice(0, 240)}${input.bio.length > 240 ? '…' : ''}`,
+  return { summary: fallbackSummary, tags: basicTags.slice(0, 24) }
+}
+
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+  if (req.method !== 'POST') {
+    res.setHeader($2);
+    return res.status(405).json({ error: 'Method not allowed' })
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
   }
 
   if (req.method !== 'POST') {'
@@ -408,6 +428,7 @@ const record = {
       timezone,
       "hourlyRate": hourlyRate ? Number(hourlyRate) : null,
       portfolioLinks,
+<<<<<<< HEAD
       "assets": {
         }
         "profileImage": savedProfileImagePath,
@@ -415,11 +436,18 @@ const record = {
       },
       "ai": {
         }
+=======
+      assets: {
+        profileImage: savedProfileImagePath,
+        cv: savedCvPath},
+      ai: {
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
         summary,
         tags
       }
     };
 
+<<<<<<< HEAD
 const perRecordPath = path.join(dataDir, `${id}.json`);`
     await fse.writeJSON(perRecordPath, record, { "spaces": 2
 });
@@ -469,6 +497,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   $2;
 }
 <<<<<<< HEAD
+=======
+    const perRecordPath = path.join($2);
+    await fse.writeJSON($2);
+    const aggregatePath = path.join(process.cwd(), 'datatalent-submissions.json'),
+    let aggregate: any[] = [],
+    if (fs.existsSync(aggregatePath)) {
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
       try {
 
         }
@@ -515,6 +550,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     // Placeholder: trigger operator workflow hook (could be a message queue or cron pickup)
     // For now, just return success with AI data
 
+<<<<<<< HEAD
         const content = await fse.readJSON(aggregatePath);}
 if (Array.isArray(content)) aggregate = content;}
       } catch (_) {}
@@ -533,3 +569,10 @@ return res.status(200).json({ "ok": true, id, summary, tags });
 return res.status(500).json({ "error": 'Internal server error',;'
 });
   }
+=======
+    return res.status(200).json({ ok: true, id, summary, tags })
+  } catch (error) {
+    return res.status(500).json({ error: 'Internal server error' })
+  }
+}
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91

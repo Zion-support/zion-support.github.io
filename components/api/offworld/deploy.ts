@@ -67,6 +67,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     }
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 const { cid, provider } = await addDirectory(outDir);
     if (!cid) return res.status(500).json({ "error": 'IPFS upload failed','
 });
@@ -134,6 +135,18 @@ const { cid, provider } = await add_directory (out_dir)if (return res.status (50
     return res.status(500).json({ "error": error?.message || 'Unknown error' })}}'
 }
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+=======
+    if (!fs.existsSync(outDir)) {
+      return res.status(500).json({ error: 'Export failed, no out/ directory found' })
+    }
+
+    const { cid, provider } = await addDirectory(outDir);
+    if (!cid) return res.status(500).json({ error: 'IPFS upload failed' });
+
+    return res.status(200).json({ cid, provider })
+  } catch (error: any) {
+    return res.status(500).json({ error: error?.message || 'Unknown error' })
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
   }
 }}
 }

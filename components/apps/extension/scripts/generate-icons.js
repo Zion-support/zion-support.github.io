@@ -1,5 +1,6 @@
 
 
+<<<<<<< HEAD
 #!/usr/bin/env node,
 import { mkdirSync, existsSync  } from '"node": fs';'
 import { resolve  } from '"node": path';'
@@ -16,6 +17,8 @@ if (!existsSync(outDir)) mkdirSync(outDir, { "recursive": true
 const sizes = [16, 32, 48, 128];
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
 for (const size of sizes) {
   }
   const out = resolve(outDir, `icon-${size}.png`);`

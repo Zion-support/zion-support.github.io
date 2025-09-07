@@ -22,4 +22,8 @@ export function AnalyticsDashboard({ showPanel = true, autoRefresh = true, refre
   const [lastUpdate, setLastUpdate] = useState<Date />(new Date()) ;}
   const [analyticsData, setAnalyticsData] = useState<AnalyticsData />({ pageViews: 0, uniqueVisitors: 0, bounceRate: 0, avgSessionDuration: 0, topPages: [], trafficSources: [], deviceTypes: [], geographicData: [], hourlyTraffic: [], weeklyTrends: []}
 })"";
+<<<<<<< HEAD
 }"
+=======
+}"
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91

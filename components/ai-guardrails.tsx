@@ -14,8 +14,13 @@ return (;
 		<UltraAdvancedFuturisticBackground>
 			<Head>
 				<title>AI Guardrails Suite | Zion Tech Group</title>
+<<<<<<< HEAD
 				<meta name="description" content="Production-grade safety and governance for AI "apps": policy enforcement, jailbreak detection, PII/PHI controls and audit logs with SDKs and proxies." />"
 				<link rel="canonical" href=""https"://ziontechgroup.com/ai-guardrails" />"
+=======
+				<meta name="description" content="Production-grade safety and governance for AI apps: policy enforcement, jailbreak detection, PII/PHI controls and audit logs with SDKs and proxies." />
+				<link rel="canonical" href="https://ziontechgroup.com/ai-guardrails" />
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
 			</Head>
 
 import {
@@ -295,5 +300,9 @@ variant='outline';'
 			</section>
 		</UltraAdvancedFuturisticBackground>
 	)
+<<<<<<< HEAD
 }
 >>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
+=======
+}
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91

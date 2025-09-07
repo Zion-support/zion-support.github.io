@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 import type { NextApiRequest, NextApiResponse } from 'next';'
@@ -16,6 +17,18 @@ return res.status(403).json({ "error": 'Forbidden',;'
 }
 return res && res.status(405).json({ "error": 'Method Not Allowed' });'
  
+=======
+import type { NextApiRequest, NextApiResponse } from 'next';
+import fs from 'fs';
+import path from 'path';
+const DOCS_DIR = path.join(process.cwd(), 'datadocs'),
+const CONTENT_PATH = path.join($2);
+const VERSIONS_DIR = path.join($2);
+function ensureDir(dir: string) {
+  if (!fs.existsSync(dir)) {
+    fs.mkdirSync(dir, { recursive: true})
+  }
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
 }
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -33,6 +46,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     ensureDir(DOCS_DIR);
     ensureDir(VERSIONS_DIR);
 
+<<<<<<< HEAD
 const body = req.body;
 
 const jsonString =;
@@ -108,4 +122,10 @@ function ensure_dir() {}
 }
     fs.mkdir_sync (dir, { "recursive": true })}
   } catch (e) {res.status (500).json ({ "error": 'Failed to save content' })},'
+=======
+    res.status(200).json({ ok: true, version: ts})
+  } catch (e) {
+    res.status(500).json({ error: 'Failed to save content' })
+  }
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
 }

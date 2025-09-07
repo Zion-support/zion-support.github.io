@@ -7,6 +7,7 @@ const aiSolutions = null;
 return (;
     <>
       <Head>
+<<<<<<< HEAD
 <title>
           AI Solutions | Zion Tech Group - Advanced AI & Machine Learning
         </title>
@@ -18,6 +19,13 @@ name='description''
 property='"og":description''
           content='Advanced AI solutions for machine learning, natural language processing, computer vision, and autonomous systems.'' />
         <meta name='"twitter": card' content='summary_large_image' />'
+=======
+        <title>AI Solutions | Zion Tech Group - Advanced AI & Machine Learning</title>
+        <meta name="description" content="Explore Zion Tech Group's comprehensive AI solutions including machine learning, NLP, computer vision, and autonomous systems." />
+        <meta property="og:title" content="AI Solutions | Zion Tech Group" />
+        <meta property="og:description" content="Advanced AI solutions for machine learning, natural language processing, computer vision, and autonomous systems." />
+        <meta name="twitter:card" content="summary_large_image" />
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
       </Head>
       <div className='min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 text-white'>'
         <main className='container mx-auto px-6 py-12'>'
@@ -30,6 +38,7 @@ property='"og":description''
 businesses and drive innovation
             </p>
           </section>
+<<<<<<< HEAD
           <section className='mx-auto max-w-7xl'>'
 
             {/* AI Solutions Grid *
@@ -171,6 +180,34 @@ key={solutionIndex}
 key={index}
 
                       className='px-4 py-2 bg-gradient-to-r from-cyan-400/20 to-fuchsia-400/20 text-white rounded-lg border border-white/20''
+=======
+
+          <section className="mx-auto max-w-7xl">
+            {/* AI Solutions Grid */}
+            <div className="mb-16">
+              <h2 className="text-3xl font-bold mb-8 text-center text-cyan-400">Our AI Solutions</h2>
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                {aiSolutions.map((solution, index) => (
+                  <div key={index} className="bg-white/10 backdrop-blur-xl rounded-2xl p-6 hover:bg-white/15 transition-all duration-300">
+                    <div className="text-4xl mb-4">{solution.icon}</div>
+                    <div className="flex items-center gap-2 mb-3">
+                      <span className="px-3 py-1 bg-fuchsia-400/20 text-fuchsia-400 text-sm rounded-full">{solution.category}</span>
+                      <span className="px-3 py-1 bg-blue-400/20 text-blue-400 text-sm rounded-full">{solution.complexity}</span>
+                    </div>
+                    <h3 className="text-xl font-bold mb-3 text-white">{solution.title}</h3>
+                    <p className="text-white/70 mb-4">{solution.description}</p>
+                    <ul className="space-y-1 mb-4">
+                      {solution.features.map((feature, featureIndex) => (
+                        <li key={featureIndex} className="text-sm text-white/60 flex items-center">
+                          <span className="text-cyan-400 mr-2">•</span>
+                          {feature}
+                        </li>
+                      ))}
+                    </ul>
+                    <Link 
+                      href={`/services#${solution.id}`}
+                      className="inline-flex items-center text-cyan-400 hover:text-cyan-300 transition-colors"
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
                     >
                       Learn More <span className="ml-1">→</span>
                     </Link>
@@ -179,6 +216,7 @@ key={index}
               </div>
             </div>
 
+<<<<<<< HEAD
 <div className='mb-16'>;
               <h2 className='text-3xl font-bold mb-8 text-center text-green-400'>;
                 Technologies We Use;
@@ -189,6 +227,8 @@ key={index}
                       key={index}className='px-4 py-2 bg-gradient-to-r from-cyan-400/20 to-fuchsia-400/20 text-white rounded-lg border border-white/20'                    >;
                       className='px-4 py-2 bg-gradient-to-r from-cyan-400/20 to-fuchsia-400/20 text-white rounded-lg border border-white/20';
                     >;
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
             {/* Industry Use Cases */}
             <div className="mb-16">
               <h2 className="text-3xl font-bold mb-8 text-center text-fuchsia-400">Industry Applications</h2>

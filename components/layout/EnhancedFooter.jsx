@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 const EnhancedFooter = (
 
  ;
@@ -22,6 +23,28 @@ return (;
             <p className="text-gray-300 mb-6 max-w-md">"
               Leading technology solutions provider helping businesses transform their digital presence,
 with cutting-edge AI, cloud architecture, and innovative development services.
+=======
+import React from 'react';
+import Link from 'next/link';
+const EnhancedFooter = () => {
+  const currentYear = new Date().getFullYear($2);
+  return (
+    <footer className="bg-gray-900 text-white">
+      {/* Main Footer Content */}
+      <div className="container mx-auto px-4 py-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          {/* Company Info */}
+          <div className="lg:col-span-2">
+            <div className="flex items-center space-x-2 mb-4">
+              <div className="w-10 h-10 bg-blue-600 rounded-lg flex items-center justify-center">
+                <span className="text-white font-bold text-xl">Z</span>
+              </div>
+              <span className="text-xl font-bold">Zion Tech Group</span>
+            </div>
+            <p className="text-gray-300 mb-6 max-w-md">
+              Leading technology solutions provider helping businesses transform their digital presence 
+              with cutting-edge AI, cloud architecture, and innovative development services.
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
             </p>
           </div>
 

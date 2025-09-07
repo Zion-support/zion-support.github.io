@@ -2,5 +2,10 @@ import React, { useState, useRef, useEffect } from 'react' import { Button } fro
   }
   useState('');'
   const inputRef = useRef(null);
+<<<<<<< HEAD:src/components/ChatAssistant/ChatInput.js.jsx
   useEffect(() => {
 ';"";
+=======
+  useEffect(() => {}
+';\"\";}
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91:temp-disabled/src/components/ChatAssistant/ChatInput.js.jsx

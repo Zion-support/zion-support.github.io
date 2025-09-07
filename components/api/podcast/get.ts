@@ -10,6 +10,7 @@ const EPISODES_PATH = path.join(;
 );
 
 function ensureStorage() {
+<<<<<<< HEAD
   }
   const dir = path.dirname(EPISODES_PATH);
   if (!fs.existsSync(dir)) fs.mkdirSync(dir, { "recursive": true
@@ -83,5 +84,18 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 =======
 
+=======
+  const dir = path.dirname($2);
+  if (!fs.existsSync(dir)) fs.mkdirSync($2);
+  if (!fs.existsSync(EPISODES_PATH)) fs.writeFileSync(EPISODES_PATH, '[]utf8')
+}
+
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  ensureStorage($2);
+  const { id } = req.query as { id?: string },
+  const episodes = JSON.parse(fs.readFileSync(EPISODES_PATH, 'utf8')) as any[],
+  const episode = $2;
+  if (!episode) return res.status(404).json($2);
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
   return res.status(200).json({ episode })
 }

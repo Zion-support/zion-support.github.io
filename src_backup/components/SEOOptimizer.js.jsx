@@ -1,4 +1,12 @@
+<<<<<<< HEAD:src_backup/components/SEOOptimizer.js.jsx
  const SEOOptimizer = () => { const [isOpen, setIsOpen] = useState (false)  const [isAnalyzing, setIsAnalyzing] = useState (false)  const [report, setReport] = useState (null)  const [selectedPage, setSelectedPage] = useState (null)  const analyzeSEO = useCallback (async () => { setIsAnalyzing (true)  try {'';import React, { useState, useEffect, useCallback } from 'react''';
+=======
+const SEOOptimizer = ( const [isOpen, setIsOpen] = useState (false)  const [isAnalyzing, setIsAnalyzing] = useState (false)  const [report, setReport] = useState (null)  const [selectedPage, setSelectedPage] =;
+  useState (null) ;) => {
+  return $3;}
+}
+  const analyzeSEO = useCallback (async () => { setIsAnalyzing (true)  try {'';import React, { useState, useEffect, useCallback } from 'react''';
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91:temp-disabled/src/components/SEOOptimizer.js.jsx
 import { Search, TrendingUp, Zap, AlertTriangle, RefreshCw, Download  } from 'lucide-react';
 const SEOOptimizer = () => {}
     const [isOpen, setIsOpen] = useState (false)const [isAnalyzing, setIsAnalyzing] = useState (false)const [report, setReport] = useState (null)const [selectedPage, setSelectedPage] = useState (null)const analyzeSEO = useCallback (async () => {}
@@ -214,9 +222,19 @@ const SEOOptimizer = () => {}
                 page.recommendations.join(')'`'`'`;
             ])'`'`'`'`;
         ].map(row => row.map(cell => `'${cell}'`).join(',)).join('\n')';'';
+<<<<<<< HEAD:src_backup/components/SEOOptimizer.js.jsx
         const blob = new Blob([csvContent], { type: 'text/csv' })'';
         const url = window.URL.createObjectURL(blob)';';
         const a = document.createElement('a')'';
+=======
+
+const blob = new Blob([csvContent], { type: 'text/csv',}
+})'';
+
+const url = window.URL.createObjectURL(blob)';';
+
+const a = document.createElement('a')'';
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91:temp-disabled/src/components/SEOOptimizer.js.jsx
         a.href = url';';
         a.download = 'seo-optimization-report.csv';
         a.click()window.URL.revokeObjectURL(url)}
@@ -412,4 +430,17 @@ const SEOOptimizer = () => {}
         </div>)}
     </div>)}
 export default SEOOptimizer;
+<<<<<<< HEAD:src_backup/components/SEOOptimizer.js.jsx
 export { SEOOptimizer }export { SEOOptimizer }export { SEOOptimizer }export { SEOOptimizer }export { SEOOptimizer }
+=======
+
+export { SEOOptimizer }
+
+export { SEOOptimizer }
+
+export { SEOOptimizer }
+
+export { SEOOptimizer }
+
+export { SEOOptimizer }
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91:temp-disabled/src/components/SEOOptimizer.js.jsx

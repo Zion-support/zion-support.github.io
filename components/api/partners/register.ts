@@ -20,6 +20,7 @@ return res.status(400).json({ "error": "Missing required fields" });"
  
 }
   try {
+<<<<<<< HEAD
     }
     const { partner, apiKey } = await createPartner({
       }
@@ -55,6 +56,21 @@ const { name, entityType, pointOfContact, useCaseType, brand } = req.body || {};
    ;
 }
 return res.status(500).json({ "error": "Failed to create partner" });"
+=======
+    const { partner, apiKey } = await createPartner($2);
+    return res.status(201).json({
+      partner: {
+        id: partner.id,
+        name: partner.name,
+        status: partner.status,
+        entityType: partner.entityType,
+        useCaseType: partner.useCaseType,
+        createdAt: partner.createdAt},
+      apiKey: apiKey.key,
+      dashboardUrl: `/partners/dashboard?pid=${partner.id}`})
+  } catch (e) {
+    return res.status(500).json({ error: "Failed to create partner" })
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
   }
 }
 

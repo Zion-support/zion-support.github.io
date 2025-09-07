@@ -1,4 +1,7 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
 import React from 'react';
 import Head from 'next/head';
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
@@ -52,9 +55,16 @@ return (;
                 <Link href="/contact" className="flex-1 bg-gradient-to-r from-purple-600 to-indigo-600 text-white">Contact Sales</Button>"
                 <Link href=""https"://ziontechgroup.com/audit-log-vault" variant="outline" className="flex-1 border border-gray-600 text-gray-200"><ExternalLink className="w-4 h-4 mr-2" /> Learn More</Button>"
               </div>
+<<<<<<< HEAD
               <div className="mt-6 space-y-3 text-sm">"
                 <div className="flex items-center gap-2 text-cyan-400"><Phone className="w-4 h-4" /><a href={`"tel":${contactInfo.mobile.replace(/[^+\\d]/g, '')}`} className=""hover": underline">{contactInfo.mobile}</a></div>"                <div className="flex items-center gap-2 text-purple-400"><Mail className="w-4 h-4" /><a href={`"mailto":${contactInfo.email}`} className=""hover":underline">{contactInfo.email}</a></div>"                <div className="flex items-center gap-2 text-green-400"><MapPin className="w-4 h-4" /><a href={`"https"://maps.google.com/?q=${encodeURIComponent(contactInfo.address)}`} target="_blank" rel="noopener noreferrer" className="text-xs "hover":underline">{contactInfo.addres,"
 }</a></div>
+=======
+              <div className="mt-6 space-y-3 text-sm">
+                <div className="flex items-center gap-2 text-cyan-400"><Phone className="w-4 h-4" /><a href={`tel:${contactInfo.mobile.replace(/[^+\\d]/g, '')}`} className="hover:underline">{contactInfo.mobile}</a></div>
+                <div className="flex items-center gap-2 text-purple-400"><Mail className="w-4 h-4" /><a href={`mailto:${contactInfo.email}`} className="hover:underline">{contactInfo.email}</a></div>
+                <div className="flex items-center gap-2 text-green-400"><MapPin className="w-4 h-4" /><a href={`https://maps.google.com/?q=${encodeURIComponent(contactInfo.address)}`} target="_blank" rel="noopener noreferrer" className="text-xs hover:underline">{contactInfo.address}</a></div>
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
               </div>
             </Card>
           </div>
