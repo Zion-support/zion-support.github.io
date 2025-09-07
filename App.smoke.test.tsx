@@ -1,8 +1,8 @@
 import { render, screen } from '@testing-library/react';
 import '@testing-library/jest-dom';
-import App from './App';
+import HomePage from './app/page';
 
 it('renders without crashing', () => {
-  render(<App />);
+  render(<HomePage />);
   expect(screen.getByText('Welcome to Zion Tech Group')).toBeInTheDocument();
 });
