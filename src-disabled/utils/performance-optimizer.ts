@@ -5,24 +5,52 @@ const images = document && document.querySelectorAll('img');
     }
     if (!img && img.decoding) {
       img && img.decoding = 'async';
-
     }
   });
 };
-
     link.rel = 'preload';
     link.href = resource;
-    link.as = resource.endsWith('.css') ? 'style' : 'font';
+    link.as = resource.endsWith('.woff2') ? 'font' : 'image';
+    if (resource.endsWith('.woff2')) {
+      link.crossOrigin = 'anonymous';
+    }
     document.head.appendChild(link);
-
   });
 };
-
+export const measurePerformance = () => {
+  if (typeof window !== 'undefined' && 'performance' in window) {
+    const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
+    const paint = performance.getEntriesByType('paint');
+    return {
+      domContentLoaded: navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart,
+      loadComplete: navigation.loadEventEnd - navigation.loadEventStart,
+      firstPaint: paint.find(entry => entry.name === 'first-paint')?.startTime || 0,
+      firstContentfulPaint: paint.find(entry => entry.name === 'first-contentful-paint')?.startTime || 0
+    };
+  }
+  return null;
+};
+export const optimizeLazyLoading = () => {
+  if ('IntersectionObserver' in window) {
+    const imageObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const img = entry.target as HTMLImageElement;
+          if (img.dataset.src) {
+            img.src = img.dataset.src;
+            img.removeAttribute('data-src');
+            imageObserver.unobserve(img);
+          }
+        }
+      });
+    });
+    const lazyImages = document.querySelectorAll('img[data-src]');
+    lazyImages.forEach(img => imageObserver.observe(img));
+  }
+};
 export const optimizeBundleSize = () => {
   // Dynamic imports for non-critical components
-
   };
-
 // Performance optimization utilities;
 export const optimize_images = () =>: any {';
   const images = document.querySelectorAll ('img');
@@ -34,53 +62,19 @@ if ( {) {}
 }'
       img.loading = 'lazy';
     }
-    // Check condition;
-if ( {) {}
-  $2;
-}'
-      img.decoding = 'async';
-    }
-  });
-}
-export const preloadCriticalResources = () =>: any {';
-  const critical_resources = ['/fonts / main.woff2 / css / critical.css'];'
-  critical_resources.for_each (resource => {    const link = document.create_element ('link');'
-    link.rel = 'preload';
-    link.href = resource;'
-    link.as = resource.ends_with ('.css') ? 'style' : 'font';
-    document.head.append_child (link);
-  });
-}
-export const optimizeBundleSize = () =>: any {};
-  // Dynamic imports for non - critical components;
-  const load_component = component_name => {    return import (`./components/${component_name}`);
-
   }
-  return { load_component }
-}
-`
-  const loadComponent = componentName => {    return import(`./components/${componentName}`);
-
-export const lazyLoadComponents = () => {';
-  console.log('Lazy loading components...');
-
 };
-
 '
     link.href = resource, link.as = resource.endsWith('.css') ? 'style' : 'font';
 ;
   });
 };
-
 export const lazyLoadComponents = () => {'
   console.log('Lazy loading components...')
 }
-
 export const optimizeBundleSize = () => {};
   // Dynamic imports for non-critical components;
   const loadComponent = componentName => {}`
     return import(`./components/${componentName}`);
-
   };
-
   return { loadComponent };

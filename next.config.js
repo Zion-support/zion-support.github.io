@@ -35,7 +35,6 @@ const nextConfig = {
         /hardhat/,
       ],
     });
-
     // Add fallback for problematic modules
     config.resolve.fallback = {
       ...config.resolve.fallback,
@@ -43,10 +42,8 @@ const nextConfig = {
       net: false,
       tls: false,
     };
-
     return config;
   },
   pageExtensions: ['tsx', 'ts', 'jsx', 'js'],
 };
-
 module.exports = nextConfig;
